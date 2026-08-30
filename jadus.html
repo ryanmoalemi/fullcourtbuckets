@@ -1,0 +1,1330 @@
+﻿﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QP9M28W4W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2QP9M28W4W');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JADU Builder San Diego | Junior ADU Design &amp; Construction</title>
+    <meta name="description" content="Convert existing space into a Junior Accessory Dwelling Unit in San Diego. Learn about JADU size, kitchens, bathrooms, owner occupancy, permits, costs and design." />
+    <link rel="canonical" href="https://sandiegoadubuilder.com/jadus.html" />
+    <link rel="stylesheet" href="styles.css?v=20260710-1" />
+    <style>
+      :root {
+        --jadu-ink: #17211d;
+        --jadu-muted: #5c6661;
+        --jadu-cream: #f4f0e8;
+        --jadu-soft: #faf8f3;
+        --jadu-line: rgba(23, 33, 29, 0.14);
+        --jadu-accent: #bd6e42;
+        --jadu-green: #526c5d;
+        --jadu-white: #ffffff;
+        --jadu-radius: 22px;
+        --jadu-shadow: 0 22px 60px rgba(23, 33, 29, 0.12);
+      }
+
+      .jadu-page {
+        overflow: hidden;
+        color: var(--jadu-ink);
+        background: var(--jadu-white);
+      }
+
+      .jadu-page *,
+      .jadu-page *::before,
+      .jadu-page *::after {
+        box-sizing: border-box;
+      }
+
+      .jadu-container {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .jadu-narrow {
+        width: min(820px, 100%);
+        margin-inline: auto;
+      }
+
+      .jadu-eyebrow {
+        margin: 0 0 16px;
+        color: var(--jadu-accent);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        line-height: 1.4;
+        text-transform: uppercase;
+      }
+
+      .jadu-page h1,
+      .jadu-page h2,
+      .jadu-page h3 {
+        color: var(--jadu-ink);
+        letter-spacing: -0.035em;
+        text-wrap: balance;
+      }
+
+      .jadu-page h1 {
+        max-width: 880px;
+        margin: 0;
+        font-size: clamp(2.9rem, 6vw, 5.8rem);
+        line-height: 0.98;
+      }
+
+      .jadu-page h2 {
+        max-width: 850px;
+        margin: 0 0 24px;
+        font-size: clamp(2rem, 4vw, 3.65rem);
+        line-height: 1.04;
+      }
+
+      .jadu-page h3 {
+        margin: 0 0 12px;
+        font-size: clamp(1.18rem, 2vw, 1.55rem);
+        line-height: 1.16;
+      }
+
+      .jadu-page p,
+      .jadu-page li {
+        color: var(--jadu-muted);
+        font-size: 1.04rem;
+        line-height: 1.78;
+      }
+
+      .jadu-page a {
+        color: inherit;
+      }
+
+      .jadu-hero {
+        position: relative;
+        min-height: 760px;
+        display: grid;
+        align-items: end;
+        isolation: isolate;
+        background: linear-gradient(90deg, rgba(13, 21, 17, 0.91) 0%, rgba(13, 21, 17, 0.69) 47%, rgba(13, 21, 17, 0.20) 100%), url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=2000&q=86") center / cover no-repeat;
+      }
+
+      .jadu-hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 160px;
+        z-index: -1;
+        background: linear-gradient(to top, rgba(13, 21, 17, 0.58), transparent);
+      }
+
+      .jadu-hero-inner {
+        padding: 125px 0 80px;
+      }
+
+      .jadu-hero h1,
+      .jadu-hero p {
+        color: var(--jadu-white);
+      }
+
+      .jadu-hero-copy {
+        max-width: 700px;
+        margin: 28px 0 0;
+        color: rgba(255, 255, 255, 0.86) !important;
+        font-size: clamp(1.08rem, 1.6vw, 1.28rem) !important;
+      }
+
+      .jadu-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .jadu-btn {
+        min-height: 54px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 24px;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+      }
+
+      .jadu-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .jadu-btn-primary {
+        background: var(--jadu-accent);
+        color: var(--jadu-white) !important;
+      }
+
+      .jadu-btn-light {
+        border-color: rgba(255, 255, 255, 0.52);
+        background: rgba(255, 255, 255, 0.10);
+        color: var(--jadu-white) !important;
+        backdrop-filter: blur(12px);
+      }
+
+      .jadu-facts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.18);
+        margin-top: 62px;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        border-radius: 18px;
+        overflow: hidden;
+        backdrop-filter: blur(16px);
+      }
+
+      .jadu-fact {
+        padding: 25px;
+        background: rgba(13, 21, 17, 0.38);
+      }
+
+      .jadu-fact strong {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--jadu-white);
+        font-size: 1.18rem;
+      }
+
+      .jadu-fact span {
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.88rem;
+        line-height: 1.5;
+      }
+
+      .jadu-section {
+        padding: 105px 0;
+      }
+
+      .jadu-section-soft {
+        background: var(--jadu-soft);
+      }
+
+      .jadu-section-dark {
+        background: var(--jadu-ink);
+      }
+
+      .jadu-section-dark h2,
+      .jadu-section-dark h3,
+      .jadu-section-dark strong {
+        color: var(--jadu-white);
+      }
+
+      .jadu-section-dark p,
+      .jadu-section-dark li {
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .jadu-intro {
+        display: grid;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: clamp(45px, 8vw, 100px);
+        align-items: start;
+      }
+
+      .jadu-lead {
+        margin: 0;
+        color: var(--jadu-ink) !important;
+        font-size: clamp(1.25rem, 2.3vw, 1.72rem) !important;
+        line-height: 1.55 !important;
+      }
+
+      .jadu-source-note {
+        margin-top: 28px;
+        padding: 20px 22px;
+        border-left: 4px solid var(--jadu-accent);
+        background: var(--jadu-cream);
+        border-radius: 0 14px 14px 0;
+      }
+
+      .jadu-source-note p {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+
+      .jadu-kicker-grid,
+      .jadu-card-grid,
+      .jadu-three-grid {
+        display: grid;
+        gap: 22px;
+      }
+
+      .jadu-kicker-grid {
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 55px;
+      }
+
+      .jadu-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 44px;
+      }
+
+      .jadu-three-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 44px;
+      }
+
+      .jadu-kicker,
+      .jadu-card {
+        border: 1px solid var(--jadu-line);
+        border-radius: var(--jadu-radius);
+        background: var(--jadu-white);
+      }
+
+      .jadu-kicker {
+        padding: 27px 24px;
+      }
+
+      .jadu-kicker-number {
+        display: block;
+        margin-bottom: 26px;
+        color: var(--jadu-accent);
+        font-size: 0.82rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+
+      .jadu-kicker p,
+      .jadu-card p {
+        margin-bottom: 0;
+      }
+
+      .jadu-card {
+        padding: 34px;
+        box-shadow: 0 12px 36px rgba(23, 33, 29, 0.04);
+      }
+
+      .jadu-card-icon {
+        width: 47px;
+        height: 47px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 25px;
+        border-radius: 14px;
+        background: var(--jadu-cream);
+        color: var(--jadu-accent);
+        font-weight: 900;
+      }
+
+      .jadu-photo-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 650px;
+        background: var(--jadu-ink);
+      }
+
+      .jadu-photo {
+        min-height: 520px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .jadu-photo-kitchen {
+        background-image: linear-gradient(rgba(23, 33, 29, 0.08), rgba(23, 33, 29, 0.08)), url("https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&w=1600&q=86");
+      }
+
+      .jadu-photo-bedroom {
+        background-image: linear-gradient(rgba(23, 33, 29, 0.08), rgba(23, 33, 29, 0.08)), url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=86");
+      }
+
+      .jadu-photo-bath {
+        background-image: linear-gradient(rgba(23, 33, 29, 0.08), rgba(23, 33, 29, 0.08)), url("https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1600&q=86");
+      }
+
+      .jadu-split-copy {
+        display: flex;
+        align-items: center;
+        padding: clamp(55px, 7vw, 110px);
+      }
+
+      .jadu-split-copy-inner {
+        max-width: 570px;
+      }
+
+      .jadu-list {
+        display: grid;
+        gap: 14px;
+        padding: 0;
+        margin: 30px 0 0;
+        list-style: none;
+      }
+
+      .jadu-list li {
+        position: relative;
+        padding-left: 31px;
+      }
+
+      .jadu-list li::before {
+        content: "\2713";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: var(--jadu-accent);
+        font-weight: 900;
+      }
+
+      .jadu-table-wrap {
+        margin-top: 45px;
+        overflow-x: auto;
+        border: 1px solid var(--jadu-line);
+        border-radius: var(--jadu-radius);
+        background: var(--jadu-white);
+        box-shadow: var(--jadu-shadow);
+      }
+
+      .jadu-table {
+        width: 100%;
+        min-width: 760px;
+        border-collapse: collapse;
+      }
+
+      .jadu-table th,
+      .jadu-table td {
+        padding: 21px 24px;
+        border-bottom: 1px solid var(--jadu-line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .jadu-table th {
+        background: var(--jadu-ink);
+        color: var(--jadu-white);
+        font-size: 0.83rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+      }
+
+      .jadu-table td {
+        color: var(--jadu-muted);
+        font-size: 0.95rem;
+        line-height: 1.55;
+      }
+
+      .jadu-table tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .jadu-compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 45px;
+      }
+
+      .jadu-compare-card {
+        padding: 38px;
+        border-radius: var(--jadu-radius);
+        background: var(--jadu-cream);
+      }
+
+      .jadu-compare-card:not(.is-featured) h3 {
+        color: var(--jadu-ink) !important;
+      }
+
+      .jadu-compare-card:not(.is-featured) p,
+      .jadu-compare-card:not(.is-featured) li {
+        color: var(--jadu-muted) !important;
+      }
+
+      .jadu-compare-card.is-featured {
+        background: var(--jadu-green);
+      }
+
+      .jadu-compare-card.is-featured h3,
+      .jadu-compare-card.is-featured p,
+      .jadu-compare-card.is-featured li {
+        color: var(--jadu-white);
+      }
+
+      .jadu-compare-card ul {
+        margin: 24px 0 0;
+        padding-left: 20px;
+      }
+
+      .jadu-process {
+        margin-top: 52px;
+        border-top: 1px solid var(--jadu-line);
+      }
+
+      .jadu-process-row {
+        display: grid;
+        grid-template-columns: 95px 0.8fr 1.2fr;
+        gap: 30px;
+        padding: 35px 0;
+        border-bottom: 1px solid var(--jadu-line);
+        align-items: start;
+      }
+
+      .jadu-process-number {
+        color: var(--jadu-accent);
+        font-size: 0.88rem;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+
+      .jadu-process-row p {
+        margin: 0;
+      }
+
+      .jadu-band {
+        padding: 110px 0;
+        background: linear-gradient(90deg, rgba(20, 29, 25, 0.88), rgba(20, 29, 25, 0.46)), url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=86") center / cover no-repeat;
+      }
+
+      .jadu-band-content {
+        max-width: 720px;
+      }
+
+      .jadu-band h2,
+      .jadu-band p {
+        color: var(--jadu-white);
+      }
+
+      .jadu-faq {
+        display: grid;
+        gap: 13px;
+        margin-top: 45px;
+      }
+
+      .jadu-faq details {
+        border: 1px solid var(--jadu-line);
+        border-radius: 16px;
+        background: var(--jadu-white);
+        overflow: hidden;
+      }
+
+      .jadu-faq summary {
+        position: relative;
+        padding: 23px 64px 23px 24px;
+        color: var(--jadu-ink);
+        font-size: 1.03rem;
+        font-weight: 800;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .jadu-faq summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .jadu-faq summary::after {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+        color: var(--jadu-accent);
+        font-size: 1.55rem;
+        font-weight: 500;
+      }
+
+      .jadu-faq details[open] summary::after {
+        content: "\2212";
+      }
+
+      .jadu-faq details p {
+        max-width: 900px;
+        margin: 0;
+        padding: 0 24px 25px;
+      }
+
+      .jadu-final {
+        padding: 115px 0;
+        text-align: center;
+        background: var(--jadu-cream);
+      }
+
+      .jadu-final h2 {
+        margin-inline: auto;
+      }
+
+      .jadu-final p {
+        max-width: 690px;
+        margin: 0 auto;
+      }
+
+      .jadu-final .jadu-actions {
+        justify-content: center;
+      }
+
+      .jadu-final .jadu-btn-light {
+        border-color: var(--jadu-line);
+        color: var(--jadu-ink) !important;
+        background: var(--jadu-white);
+      }
+
+      .jadu-caption {
+        padding: 13px 17px;
+        color: rgba(255, 255, 255, 0.75);
+        background: var(--jadu-ink);
+        font-size: 0.78rem;
+        line-height: 1.45;
+      }
+
+      @media (max-width: 960px) {
+        .jadu-facts,
+        .jadu-kicker-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .jadu-three-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .jadu-photo-split,
+        .jadu-intro {
+          grid-template-columns: 1fr;
+        }
+
+        .jadu-photo-split .jadu-photo {
+          min-height: 470px;
+        }
+
+        .jadu-process-row {
+          grid-template-columns: 65px 1fr;
+        }
+
+        .jadu-process-row p {
+          grid-column: 2;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .jadu-container {
+          width: min(100% - 28px, 1180px);
+        }
+
+        .jadu-hero {
+          min-height: 760px;
+          background-position: 61% center;
+        }
+
+        .jadu-hero-inner {
+          padding: 105px 0 45px;
+        }
+
+        .jadu-facts,
+        .jadu-kicker-grid,
+        .jadu-card-grid,
+        .jadu-compare {
+          grid-template-columns: 1fr;
+        }
+
+        .jadu-facts {
+          margin-top: 42px;
+        }
+
+        .jadu-section {
+          padding: 78px 0;
+        }
+
+        .jadu-photo-split .jadu-photo {
+          min-height: 370px;
+        }
+
+        .jadu-split-copy {
+          padding: 65px 26px;
+        }
+
+        .jadu-process-row {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .jadu-process-row p {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand"><span class="brand-logo">SD</span><span>SAN DIEGO<br><small>ADU BUILDER</small></span></a>
+        <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+        <nav class="site-nav" id="site-nav">
+          <details class="nav-dropdown">
+            <summary>Services</summary>
+            <div class="nav-submenu" role="list">
+              <a href="detached-adus.html">Detached ADUs</a>
+              <a href="adu-garage-conversions.html">ADU garage conversions</a>
+              <a href="attached-adus.html">Attached ADUs</a>
+              <a href="jadus.html">JADUs</a>
+              <a href="adu-permitting.html">ADU permitting</a>
+              <a href="adu-feasibility-studies.html">ADU feasibility studies</a>
+              <a href="pre-approved-adu-plans.html">pre-approved ADU plans</a>
+              <a href="adu-financing.html">ADU financing</a>
+              <a href="adu-cost.html">ADU cost</a>
+              <a href="adu-rental-income.html">ADU rental income</a>
+            </div>
+          </details>
+          <a href="index.html#process">Process</a>
+          <a href="san-diego-adus.html">San Diego ADUs</a>
+          <a href="adu-handbook.html">ADU Handbook</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact" class="btn btn-sm">Book a Call</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="jadu-page">
+      <section class="jadu-hero">
+        <div class="jadu-container jadu-hero-inner">
+          <p class="jadu-eyebrow">Junior Accessory Dwelling Units</p>
+          <h1>Make more room inside the home you already own.</h1>
+          <p class="jadu-hero-copy">
+            A Junior Accessory Dwelling Unit, or JADU, can transform an existing bedroom, attached garage or underused part of a San Diego home into a compact independent living space of up to 500 square feet.
+          </p>
+          <div class="jadu-actions">
+            <a class="jadu-btn jadu-btn-primary" href="book-a-call.html">Schedule a JADU consultation</a>
+            <a class="jadu-btn jadu-btn-light" href="adu-feasibility-studies.html">Check your property's feasibility</a>
+          </div>
+          <div class="jadu-facts" aria-label="JADU quick facts">
+            <div class="jadu-fact">
+              <strong>150 to 500 sq. ft.</strong>
+              <span>City of San Diego minimum and maximum gross floor area</span>
+            </div>
+            <div class="jadu-fact">
+              <strong>Inside the home</strong>
+              <span>Created within a single-family residence or attached garage</span>
+            </div>
+            <div class="jadu-fact">
+              <strong>Efficiency kitchen</strong>
+              <span>Cooking appliances, preparation counter and storage</span>
+            </div>
+            <div class="jadu-fact">
+              <strong>Bathroom flexibility</strong>
+              <span>May have a private bathroom or share one with the main home</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section">
+        <div class="jadu-container">
+          <div class="jadu-intro">
+            <div>
+              <p class="jadu-eyebrow">A smaller ADU option</p>
+              <h2>What is a JADU?</h2>
+            </div>
+            <div>
+              <p class="jadu-lead">
+                A JADU is a compact residential unit contained within an existing or proposed single-family home. It offers more independence than a standard bedroom without requiring a new detached backyard building.
+              </p>
+              <p>
+                In San Diego, a JADU may be created within the primary residence or an attached garage. It must include a separate exterior entrance and an efficiency kitchen. The unit may have its own bathroom or share sanitation facilities with the primary home.
+              </p>
+              <p>
+                JADUs are especially useful for aging parents, adult children, caregivers, guests or long-term tenants when homeowners want to use existing square footage efficiently.
+              </p>
+              <div class="jadu-source-note">
+                <p>
+                  <strong>2026 planning note:</strong> JADU rules have changed in recent years, including owner-occupancy treatment when the unit has separate sanitation facilities. Final requirements should be verified for the property's jurisdiction and permit date. See our <a href="san-diego-adus.html">San Diego ADU rules page</a> for current local requirements, or the <a href="adu-handbook.html">ADU handbook</a> for a full planning overview.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="jadu-kicker-grid">
+            <article class="jadu-kicker">
+              <span class="jadu-kicker-number">01</span>
+              <h3>Bedroom conversion</h3>
+              <p>
+                Rework an existing bedroom or suite with a private entrance, efficiency kitchen and code-compliant separation.
+              </p>
+            </article>
+            <article class="jadu-kicker">
+              <span class="jadu-kicker-number">02</span>
+              <h3>Attached garage JADU</h3>
+              <p>
+                Convert all or part of an attached garage while coordinating floor height, insulation, fire separation, parking and utilities.
+              </p>
+            </article>
+            <article class="jadu-kicker">
+              <span class="jadu-kicker-number">03</span>
+              <h3>Primary-suite rework</h3>
+              <p>
+                Reconfigure an oversized primary suite or underused wing into a small independent unit with better privacy.
+              </p>
+            </article>
+            <article class="jadu-kicker">
+              <span class="jadu-kicker-number">04</span>
+              <h3>Planned with a new home</h3>
+              <p>
+                Include the JADU in a proposed single-family home so the structure, access and utilities are coordinated from the beginning.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-photo-split">
+        <div>
+          <div class="jadu-photo jadu-photo-kitchen" role="img" aria-label="Compact studio interior illustrating efficient JADU space planning"></div>
+          <div class="jadu-caption">
+            Compact kitchenette and living-space inspiration. Final JADU appliance and ventilation requirements depend on the permitted design.
+          </div>
+        </div>
+        <div class="jadu-split-copy">
+          <div class="jadu-split-copy-inner">
+            <p class="jadu-eyebrow">Smart use of existing space</p>
+            <h2>When a JADU makes more sense than a full ADU</h2>
+            <p>
+              A JADU is often the strongest option when the property has limited yard area, the owner does not need a large rental unit, or an existing part of the house can be converted without compromising the main floor plan.
+            </p>
+            <ul class="jadu-list">
+              <li>Less new foundation, framing and roofing than new construction</li>
+              <li>Potentially shorter utility routes inside the existing home</li>
+              <li>Preserves the backyard for outdoor living or a separate ADU</li>
+              <li>Keeps family members close while creating daily independence</li>
+              <li>Can be paired with an ADU on an eligible single-family lot</li>
+              <li>May be easier to heat, cool and maintain due to its compact size</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section jadu-section-soft">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">Property screening</p>
+          <h2>Is your San Diego home a good JADU candidate?</h2>
+          <p class="jadu-narrow" style="margin-left:0;">
+            The best JADU projects start with space that already has a logical exterior entrance, natural light and a practical route to plumbing and electrical systems. The conversion should also leave the primary home functional after the space is separated.
+          </p>
+          <div class="jadu-card-grid">
+            <article class="jadu-card">
+              <span class="jadu-card-icon">01</span>
+              <h3>An underused bedroom near an exterior wall</h3>
+              <p>
+                A bedroom with an existing exterior door or a practical location for a new entrance can reduce circulation conflicts inside the home.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">02</span>
+              <h3>An attached garage with suitable dimensions</h3>
+              <p>
+                Garages can offer a defined footprint, but the slab, ceiling, waterproofing, fire separation, natural light and utility conditions need careful review.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">03</span>
+              <h3>A large suite near existing plumbing</h3>
+              <p>
+                A bathroom or laundry wall near the proposed kitchenette may reduce plumbing work, provided the existing systems have adequate capacity.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">04</span>
+              <h3>A floor plan with two distinct living zones</h3>
+              <p>
+                Homes with a rear wing, side suite or separated hallway often adapt more naturally than homes where every route passes through the main living room.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">San Diego JADU requirements</p>
+          <h2>Important rules to understand before design begins</h2>
+          <p class="jadu-narrow" style="margin-left:0;">
+            The table below summarizes major City of San Diego planning points. Incorporated cities and unincorporated San Diego County may use different forms, procedures and local standards.
+          </p>
+
+          <div class="jadu-table-wrap">
+            <table class="jadu-table">
+              <thead>
+                <tr>
+                  <th>Planning item</th>
+                  <th>General JADU standard</th>
+                  <th>Design implication</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Location</strong></td>
+                  <td>Contained within an existing or proposed single-family residence, including qualifying space in an attached garage.</td>
+                  <td>A detached garage or freestanding backyard building is generally evaluated as an ADU, not a JADU.</td>
+                </tr>
+                <tr>
+                  <td><strong>Floor area</strong></td>
+                  <td>The City of San Diego identifies a minimum of 150 square feet and a maximum of 500 square feet.</td>
+                  <td>Every wall, cabinet, appliance and circulation path must be planned carefully in a compact footprint.</td>
+                </tr>
+                <tr>
+                  <td><strong>Exterior entrance</strong></td>
+                  <td>A separate exterior entry is required from the primary dwelling.</td>
+                  <td>The entrance should also provide privacy, lighting, address visibility and safe access.</td>
+                </tr>
+                <tr>
+                  <td><strong>Kitchen</strong></td>
+                  <td>A cooking facility with appliances, a reasonable food-preparation counter and reasonable storage cabinets.</td>
+                  <td>The kitchenette must be designed as a legal cooking area, not merely a wet bar or temporary appliance station.</td>
+                </tr>
+                <tr>
+                  <td><strong>Bathroom</strong></td>
+                  <td>A JADU may have separate sanitation facilities or share sanitation facilities with the main residence.</td>
+                  <td>A private bathroom improves independence but takes valuable floor area and adds plumbing and ventilation work.</td>
+                </tr>
+                <tr>
+                  <td><strong>Owner occupancy</strong></td>
+                  <td>Under current state law, owner occupancy is generally tied to a JADU that shares sanitation facilities with the primary residence.</td>
+                  <td>Confirm the current deed-restriction and owner-occupancy language before making rental or financing assumptions.</td>
+                </tr>
+                <tr>
+                  <td><strong>Parking</strong></td>
+                  <td>Additional parking is generally not required solely for a JADU.</td>
+                  <td>Converting an attached garage may still affect practical household parking and storage.</td>
+                </tr>
+                <tr>
+                  <td><strong>Separate sale</strong></td>
+                  <td>A JADU is not ordinarily sold separately from the primary residence.</td>
+                  <td>Treat it as part of the same real property when evaluating long-term use.</td>
+                </tr>
+                <tr>
+                  <td><strong>Rental duration</strong></td>
+                  <td>Current state law requires a JADU rental term to be longer than 30 days.</td>
+                  <td>A JADU should be planned for family occupancy or longer-term housing, not nightly vacation rental use.</td>
+                </tr>
+                <tr>
+                  <td><strong>Impact fees</strong></td>
+                  <td>A compliant JADU of 500 square feet or less is protected from specified impact fees under current state law.</td>
+                  <td>Building permit, plan review and project-specific costs may still apply.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="jadu-source-note">
+            <p>
+              This content is a planning overview, not a permit determination. Coastal, historic, fire-hazard, environmentally sensitive and other property conditions can add review requirements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section jadu-section-dark">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">JADU or standard ADU?</p>
+          <h2 style="color:#fff;">Choose the unit type around your actual goal.</h2>
+          <div class="jadu-compare">
+            <article class="jadu-compare-card is-featured">
+              <p class="jadu-eyebrow" style="color:#e9b08f;">Junior ADU</p>
+              <h3>Best for compact living inside a single-family home</h3>
+              <ul>
+                <li>Maximum 500-square-foot format</li>
+                <li>Uses space within the home or attached garage</li>
+                <li>Efficiency kitchen rather than a large full kitchen</li>
+                <li>Private or shared sanitation may be possible</li>
+                <li>Strong fit for relatives, caregivers or one occupant</li>
+                <li>Preserves yard space for other uses</li>
+              </ul>
+            </article>
+            <article class="jadu-compare-card">
+              <p class="jadu-eyebrow">Standard ADU</p>
+              <h3>Best when greater independence and space are priorities</h3>
+              <ul>
+                <li>May be <a href="attached-adus.html">attached</a>, <a href="detached-adus.html">detached</a> or created through <a href="adu-garage-conversions.html">garage conversion</a></li>
+                <li>Can support larger kitchens and multiple bedrooms</li>
+                <li>Includes its own sanitation facilities</li>
+                <li>May offer stronger rental flexibility and separation</li>
+                <li>Usually requires a larger project budget</li>
+                <li>Can involve more extensive site and utility work</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-photo-split">
+        <div class="jadu-split-copy" style="background:#f4f0e8;">
+          <div class="jadu-split-copy-inner">
+            <p class="jadu-eyebrow">Designing 500 square feet well</p>
+            <h2>A JADU should feel compact, not improvised.</h2>
+            <p>
+              Successful small-space design depends on clear circulation, correctly sized furniture, useful storage and separation between sleeping, cooking and entry areas. A poorly positioned bathroom door or oversized cabinet can consume a surprising amount of usable space.
+            </p>
+            <ul class="jadu-list">
+              <li>Use built-in storage where freestanding furniture would block circulation</li>
+              <li>Place plumbing fixtures near viable drain and water routes</li>
+              <li>Protect daylight when adding interior separation walls</li>
+              <li>Use durable flooring across the compact open-plan area</li>
+              <li>Provide a practical location for clothes, cleaning supplies and luggage</li>
+              <li>Coordinate appliance clearances before ordering cabinets</li>
+              <li>Create sound separation from bedrooms and living rooms in the main home</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div class="jadu-photo jadu-photo-bedroom" role="img" aria-label="Warm compact bedroom and living area inspiration for a JADU"></div>
+          <div class="jadu-caption">
+            Small-space bedroom and living-area inspiration. Furnishings are shown for design context and are not a specific completed project.
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section jadu-section-soft">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">Systems and construction</p>
+          <h2>What usually needs to change during a JADU conversion</h2>
+          <div class="jadu-three-grid">
+            <article class="jadu-card">
+              <span class="jadu-card-icon">A</span>
+              <h3>Exterior entrance and separation</h3>
+              <p>
+                The design may require a new exterior door, landing, path, lighting, weather protection, locks and interior wall or door modifications.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">B</span>
+              <h3>Kitchen electrical and plumbing</h3>
+              <p>
+                Cooking appliances, refrigeration, receptacles, lighting, sink plumbing, ventilation and cabinetry must be coordinated within a narrow kitchen zone.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">C</span>
+              <h3>Bathroom work</h3>
+              <p>
+                A private bathroom may require drain connections, venting, supply lines, waterproofing, exhaust and enough space around every fixture.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">D</span>
+              <h3>Heating, cooling and ventilation</h3>
+              <p>
+                The unit needs a compliant comfort and ventilation strategy that accounts for the smaller enclosed floor area and available equipment locations.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">E</span>
+              <h3>Garage upgrades</h3>
+              <p>
+                Garage projects often need slab evaluation, moisture protection, insulation, wall and ceiling upgrades, window changes and removal or modification of the vehicle door.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <span class="jadu-card-icon">F</span>
+              <h3>Life safety</h3>
+              <p>
+                Smoke and carbon monoxide alarms, emergency escape, safe electrical work, fire-resistance details and permitted egress must be addressed in the plans.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-photo-split">
+        <div>
+          <div class="jadu-photo jadu-photo-bath" role="img" aria-label="Modern compact bathroom design suitable for a small dwelling unit"></div>
+          <div class="jadu-caption">
+            Compact bathroom inspiration showing how lighter finishes and a glass enclosure can help a small space feel more open.
+          </div>
+        </div>
+        <div class="jadu-split-copy">
+          <div class="jadu-split-copy-inner">
+            <p class="jadu-eyebrow">Private or shared bathroom</p>
+            <h2>One bathroom decision changes the entire project.</h2>
+            <p>
+              Sharing the primary home's bathroom can preserve more JADU living space and reduce plumbing work. A private bathroom creates a more independent unit but can consume roughly a fifth or more of a very compact floor plan once walls, fixtures and circulation are included.
+            </p>
+            <p>
+              The decision may also affect owner-occupancy treatment under current state law. It should be made after reviewing the intended occupant, rental plans, available plumbing, privacy and long-term property goals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">Budget planning</p>
+          <h2>What determines the cost of a JADU in San Diego?</h2>
+          <p class="jadu-narrow" style="margin-left:0;">
+            JADUs use existing space, but they are still permitted residential construction projects. Cost is driven by the condition of that space and how many residential systems must be added or relocated.
+          </p>
+          <div class="jadu-card-grid">
+            <article class="jadu-card">
+              <h3>Existing bedroom conversion</h3>
+              <p>
+                Often the least structurally intensive option when the room already has finished walls, compliant windows, insulation and nearby plumbing. Kitchen, entrance, separation and electrical work remain important.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <h3>Attached garage conversion</h3>
+              <p>
+                May require substantial enclosure and building-envelope work. Slab conditions, floor level, garage-door replacement, fire separation, moisture and ceiling height can materially affect cost.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <h3>JADU with a private bathroom</h3>
+              <p>
+                Adds plumbing, waterproofing, tile, fixtures, exhaust and finish work. Cost rises further when the sewer connection is distant or below-slab work is required.
+              </p>
+            </article>
+            <article class="jadu-card">
+              <h3>JADU within a larger remodel</h3>
+              <p>
+                Combining the JADU with a kitchen renovation, addition or whole-home remodel can improve the final layout but requires a broader plan set and more coordination.
+              </p>
+            </article>
+          </div>
+
+          <h3 style="margin-top:55px;">Common cost drivers</h3>
+          <ul class="jadu-list" style="grid-template-columns:repeat(2,minmax(0,1fr));">
+            <li>New exterior door, landing, walkway and lighting</li>
+            <li>Kitchen cabinets, countertop, sink and appliances</li>
+            <li>Electrical panel capacity and new circuits</li>
+            <li>Private bathroom and sewer routing</li>
+            <li>Heating, cooling and ventilation equipment</li>
+            <li>Garage slab, moisture and insulation corrections</li>
+            <li>Fire and sound separation from the primary home</li>
+            <li>Window, egress and natural-light changes</li>
+            <li>Relocation of laundry or household storage</li>
+            <li>Plans, engineering, energy documents and permits</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="jadu-band">
+        <div class="jadu-container">
+          <div class="jadu-band-content">
+            <p class="jadu-eyebrow" style="color:#f0b38f;">Multigenerational living</p>
+            <h2>A private space can keep family closer.</h2>
+            <p>
+              A well-designed JADU can give a parent, adult child or caregiver a secure entrance, personal kitchen area and defined living space while maintaining immediate access to the household when help is needed.
+            </p>
+            <div class="jadu-actions">
+              <a class="jadu-btn jadu-btn-primary" href="book-a-call.html">Discuss your JADU project</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section jadu-section-soft">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">From idea to final inspection</p>
+          <h2>Our San Diego JADU process</h2>
+          <div class="jadu-process">
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">01</span>
+              <h3>Property and floor-plan review</h3>
+              <p>
+                We evaluate the property's jurisdiction, existing home, proposed conversion area, entrances, windows, utilities and how the remaining primary residence will function.
+              </p>
+            </article>
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">02</span>
+              <h3>Feasibility and code strategy</h3>
+              <p>
+                We confirm the likely JADU classification, floor area, kitchen, bathroom, egress, parking, owner-occupancy and property-specific review issues.
+              </p>
+            </article>
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">03</span>
+              <h3>Space planning and design</h3>
+              <p>
+                The concept is tested with real cabinet depths, appliance clearances, bathroom fixtures, furniture, storage and circulation rather than relying on an empty outline.
+              </p>
+            </article>
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">04</span>
+              <h3>Plans and permit coordination</h3>
+              <p>
+                Architectural, structural and supporting documents are prepared for the applicable agency, followed by responses to plan-review comments. See our <a href="adu-permitting.html">ADU permitting guide</a> for how the permit process works in San Diego.
+              </p>
+            </article>
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">05</span>
+              <h3>Construction</h3>
+              <p>
+                Demolition, framing, rough utilities, insulation, drywall, cabinetry, finishes and fixtures are sequenced to minimize disruption to the occupied home.
+              </p>
+            </article>
+            <article class="jadu-process-row">
+              <span class="jadu-process-number">06</span>
+              <h3>Inspections and completion</h3>
+              <p>
+                Required inspections are coordinated through final approval, with project details, equipment and finishes checked before handover.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-section">
+        <div class="jadu-container jadu-narrow">
+          <p class="jadu-eyebrow">Frequently asked questions</p>
+          <h2>San Diego JADU FAQs</h2>
+          <div class="jadu-faq">
+            <details>
+              <summary>What does JADU stand for?</summary>
+              <p>
+                JADU stands for Junior Accessory Dwelling Unit. It is a compact unit of no more than 500 square feet that is created within an existing or proposed single-family residence.
+              </p>
+            </details>
+            <details>
+              <summary>Can a JADU be built in a detached garage?</summary>
+              <p>
+                A JADU must be contained within the qualifying single-family residence. The City of San Diego identifies an attached garage as a possible location. A detached garage conversion is generally treated as an ADU rather than a JADU.
+              </p>
+            </details>
+            <details>
+              <summary>Does a JADU need its own bathroom?</summary>
+              <p>
+                No. A JADU may include separate sanitation facilities or share sanitation facilities with the primary residence. A private bathroom generally provides greater independence but uses valuable floor area.
+              </p>
+            </details>
+            <details>
+              <summary>Does a JADU need a kitchen?</summary>
+              <p>
+                Yes. It must provide an efficiency kitchen that includes a cooking facility with appliances, a food-preparation counter and storage cabinets reasonably sized for the unit.
+              </p>
+            </details>
+            <details>
+              <summary>Can I rent out a JADU in San Diego?</summary>
+              <p>
+                A permitted JADU may generally be used for longer-term housing, subject to current state law, local regulations and the recorded restrictions for the property. Current state law requires the rental term to be longer than 30 days.
+              </p>
+            </details>
+            <details>
+              <summary>Do I have to live on the property?</summary>
+              <p>
+                Under current California law, owner occupancy is generally required when the JADU shares sanitation facilities with the primary residence. Owner occupancy is not generally required when the JADU has separate sanitation facilities, subject to current law and recorded documents.
+              </p>
+            </details>
+            <details>
+              <summary>Can a JADU have an interior connection to the house?</summary>
+              <p>
+                The permitted configuration should be reviewed for the specific design. The JADU must have its own exterior entrance, while any interior connection must comply with applicable code and separation requirements.
+              </p>
+            </details>
+            <details>
+              <summary>Can I build both a JADU and an ADU?</summary>
+              <p>
+                On an eligible single-family property, California law and City of San Diego rules may allow a JADU together with qualifying ADU development. The exact combination should be verified during feasibility review.
+              </p>
+            </details>
+            <details>
+              <summary>Is a JADU cheaper than a detached ADU?</summary>
+              <p>
+                It is often less expensive because it uses existing space and avoids much of the new foundation, exterior wall and roof construction. Costs can still be significant when converting a garage or adding a private bathroom and major utility work.
+              </p>
+            </details>
+            <details>
+              <summary>How long does a JADU permit take?</summary>
+              <p>
+                Timing depends on the jurisdiction, completeness of the plans and property-specific issues. Current California law includes application processing protections, but corrections and specialized review can extend the overall timeline.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="jadu-final">
+        <div class="jadu-container">
+          <p class="jadu-eyebrow">Start with the existing floor plan</p>
+          <h2>Find out where a JADU could fit in your San Diego home.</h2>
+          <p>
+            We will review your property, conversion area, bathroom options, kitchenette location, utilities, entrance and permit path before you commit to a layout or construction budget.
+          </p>
+          <div class="jadu-actions">
+            <a class="jadu-btn jadu-btn-primary" href="book-a-call.html">Book a JADU consultation</a>
+            <a class="jadu-btn jadu-btn-light" href="adu-cost.html">Review ADU cost factors</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "JADU Design, Permitting and Construction in San Diego",
+        "serviceType": "Junior Accessory Dwelling Unit design and construction",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "San Diego ADU Builder",
+          "url": "https://sandiegoadubuilder.com/"
+        },
+        "areaServed": {
+          "@type": "AdministrativeArea",
+          "name": "San Diego County"
+        },
+        "url": "https://sandiegoadubuilder.com/jadus.html",
+        "description": "JADU planning, design, permitting and construction for San Diego homeowners."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does JADU stand for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "JADU stands for Junior Accessory Dwelling Unit. It is a compact unit of no more than 500 square feet that is created within an existing or proposed single-family residence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a JADU need its own bathroom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. A JADU may include separate sanitation facilities or share sanitation facilities with the primary residence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does a JADU need a kitchen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. A JADU must provide an efficiency kitchen with a cooking facility and appliances, a food-preparation counter and storage cabinets reasonably sized for the unit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I build both a JADU and an ADU?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On an eligible single-family property, California law and City of San Diego rules may allow a JADU together with qualifying ADU development. The exact combination should be verified during feasibility review."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a JADU cheaper than a detached ADU?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A JADU is often less expensive because it uses existing space and avoids much of the new foundation, exterior wall and roof construction required for a detached ADU."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> San Diego ADU Builder</p>
+        <p>Serving San Diego County</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
