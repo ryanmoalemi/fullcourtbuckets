@@ -1,0 +1,21 @@
+﻿{
+  "updatedAt": "2026-08-30T17:42:00-07:00",
+  "teams": [
+    {"rank":1,"name":"Minnesota Lynx","wins":31,"losses":9,"pct":0.775,"gamesBack":0,"home":"14-6","road":"17-3","streak":"W2","last10":"7-3","conference":"Western"},
+    {"rank":2,"name":"Golden State Valkyries","wins":29,"losses":11,"pct":0.725,"gamesBack":2.5,"home":"16-4","road":"13-7","streak":"W4","last10":"8-2","conference":"Western"},
+    {"rank":3,"name":"Las Vegas Aces","wins":28,"losses":12,"pct":0.7,"gamesBack":4.0,"home":"15-5","road":"13-7","streak":"W3","last10":"7-3","conference":"Western"},
+    {"rank":4,"name":"Seattle Storm","wins":26,"losses":14,"pct":0.65,"gamesBack":6.5,"home":"14-6","road":"12-8","streak":"L1","last10":"6-4","conference":"Western"},
+    {"rank":5,"name":"Phoenix Mercury","wins":24,"losses":16,"pct":0.6,"gamesBack":9.0,"home":"12-8","road":"12-8","streak":"W1","last10":"5-5","conference":"Western"},
+    {"rank":6,"name":"Los Angeles Sparks","wins":21,"losses":19,"pct":0.525,"gamesBack":12.5,"home":"11-9","road":"10-10","streak":"L2","last10":"4-6","conference":"Western"},
+    {"rank":7,"name":"Dallas Wings","wins":19,"losses":21,"pct":0.475,"gamesBack":15.0,"home":"10-10","road":"9-11","streak":"W1","last10":"5-5","conference":"Western"},
+    {"rank":8,"name":"Chicago Sky","wins":17,"losses":23,"pct":0.425,"gamesBack":17.5,"home":"9-11","road":"8-12","streak":"L3","last10":"3-7","conference":"Eastern"},
+    {"rank":9,"name":"New York Liberty","wins":17,"losses":23,"pct":0.425,"gamesBack":17.5,"home":"10-10","road":"7-13","streak":"W2","last10":"6-4","conference":"Eastern"},
+    {"rank":10,"name":"Connecticut Sun","wins":15,"losses":25,"pct":0.375,"gamesBack":20.0,"home":"8-12","road":"7-13","streak":"L1","last10":"4-6","conference":"Eastern"},
+    {"rank":11,"name":"Indiana Fever","wins":14,"losses":26,"pct":0.35,"gamesBack":21.5,"home":"9-11","road":"5-15","streak":"L2","last10":"3-7","conference":"Eastern"},
+    {"rank":12,"name":"Washington Mystics","wins":13,"losses":27,"pct":0.325,"gamesBack":23.0,"home":"8-12","road":"5-15","streak":"W1","last10":"4-6","conference":"Eastern"},
+    {"rank":13,"name":"Atlanta Dream","wins":11,"losses":29,"pct":0.275,"gamesBack":25.5,"home":"6-14","road":"5-15","streak":"L4","last10":"2-8","conference":"Eastern"},
+    {"rank":14,"name":"Los Angeles Sparks","wins":10,"losses":30,"pct":0.25,"gamesBack":27.0,"home":"5-15","road":"5-15","streak":"L5","last10":"1-9","conference":"Western"},
+    {"rank":15,"name":"Chicago Sky","wins":9,"losses":31,"pct":0.225,"gamesBack":28.5,"home":"4-16","road":"5-15","streak":"L6","last10":"1-9","conference":"Eastern"},
+    {"rank":16,"name":"Washington Mystics","wins":9,"losses":31,"pct":0.225,"gamesBack":28.5,"home":"4-16","road":"5-15","streak":"L4","last10":"2-8","conference":"Eastern"}
+  ]
+}

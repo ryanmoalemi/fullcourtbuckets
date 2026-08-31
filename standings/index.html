@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026 WNBA Standings | Full Court Buckets</title>
+<meta name="description" content="Current 2026 WNBA standings, playoff positions, records, games back, streaks and conference standings. Updated throughout the season.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050505;--surface:#0b0b0d;--text:#f5f3ef;--muted:#a5a19b;--line:#2b2930;--pink:#f10091;--purple:#7d35ff;--orange:#ff9800;--accent:linear-gradient(90deg,var(--purple),var(--pink),var(--orange));--soft:#111215;--good:#1dbf7a;--bad:#ff5b5b;--shadow:rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:linear-gradient(rgba(2,2,2,.93),rgba(2,2,2,.97)),url("/brand-background.png") center/cover fixed no-repeat,var(--bg);font-family:"Inter",Arial,sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.shell{width:min(1240px,94vw);margin:auto}.utility{background:#000;border-bottom:1px solid #18181b;font-size:11px;font-weight:700;letter-spacing:.7px}.utility .shell{min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:20px}.utility-tag{background:var(--accent);-webkit-background-clip:text;color:transparent}.utility-note{color:#77736e}header{position:sticky;top:0;z-index:20;background:rgba(3,3,3,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav{min-height:84px;display:flex;align-items:center;gap:32px}.brand{margin-right:auto}.brand img{width:380px;max-height:112px;object-fit:contain;object-position:left center}nav{display:flex;align-items:center;gap:28px}nav a{font-family:"Barlow",sans-serif;font-weight:700;font-size:14px}nav a:hover{color:var(--orange)}.watch-btn{padding:11px 16px;border-radius:3px;background:var(--accent);font-size:12px;font-weight:800}.page{padding:34px 0 80px}.standings-shell{max-width:1240px;margin:0 auto}.page-header{margin-bottom:26px}.eyebrow{display:inline-block;padding:6px 10px;border:1px solid var(--line);background:rgba(11,11,13,.9);font:800 11px/1 "Barlow",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--orange)}.page-header h1{margin:18px 0 8px;font:800 clamp(38px,4vw,58px)/.96 "Barlow",sans-serif;letter-spacing:-1.2px}.subhead{margin:0 0 18px;color:#d2cec8;font-size:18px;font-weight:600}.support{margin:0;color:#8a877f;font-size:12px}.info-grid{display:grid;grid-template-columns:repeat(3, minmax(0,1fr));gap:14px;margin-top:22px}.info-card{padding:14px 16px;border:1px solid var(--line);background:rgba(11,11,13,.95);min-height:96px}.info-label{display:block;color:var(--orange);font:800 11px/1 "Barlow",sans-serif;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}.info-card p{margin:0;color:#e8e4df;font-size:13px;line-height:1.5}.panel{background:rgba(11,11,13,.96);border:1px solid var(--line);overflow:hidden}.panel-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}.panel-head h2{margin:0;font:800 24px/1 "Barlow",sans-serif;letter-spacing:-.5px}.status{font-size:11px;color:#a39d95}.table-wrap{overflow-x:auto}.standings-table{width:100%;border-collapse:collapse;min-width:980px}.standings-table th,.standings-table td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.standings-table thead th{color:#9b958f;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:rgba(17,18,21,.9)}.standings-table tbody td{font-size:14px;color:#f5f3ef}.standings-table tbody tr:hover{background:rgba(255,255,255,.015)}.playoff-row td{background:rgba(255,255,255,.02)}.playoff-line{background:linear-gradient(90deg,transparent,rgba(125,53,255,.4),transparent);}
+.playoff-line td{border-top:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12);color:#d7d2cd;font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800;background:rgba(125,53,255,.08)}
+.rank{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);font-weight:800;color:#f5f3ef}.team-cell{display:flex;align-items:center;gap:8px;min-width:200px}.team-badge{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 7px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);font:800 10px/1 "Barlow",sans-serif;letter-spacing:.08em;color:#f5f3ef}.team-name{font-weight:700}.secondary{color:#9b958f}.winning{color:var(--good)}.losing{color:var(--bad)}.percent{font-weight:700}.conference-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}.conf-card{background:rgba(11,11,13,.96);border:1px solid var(--line)}.conf-header{padding:16px 18px;border-bottom:1px solid var(--line)}.conf-header h3{margin:0;font:800 20px/1 "Barlow",sans-serif;letter-spacing:-.3px}.conf-table{width:100%;border-collapse:collapse}.conf-table th,.conf-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}.conf-table thead th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#9b958f}.conf-table tbody td{font-size:13px}.explainer{margin-top:28px;padding:20px;border:1px solid var(--line);background:rgba(11,11,13,.92)}.explainer h3{margin:0 0 12px;font:800 22px/1 "Barlow",sans-serif;letter-spacing:-.4px}.explainer p,.explainer li{color:#d6d2cd;font-size:14px;line-height:1.7}.explainer ul{margin:12px 0 0 18px;padding:0}.explainer strong{color:#f5f3ef}.muted-note{margin-top:8px;color:#9b958f;font-size:12px;display:block}.last-updated{display:inline-flex;align-items:center;gap:8px;color:#a39d95;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:var(--good);display:inline-block;box-shadow:0 0 0 4px rgba(29,191,122,.15)}@media(max-width:900px){nav{display:none}.brand img{width:180px}.info-grid,.conference-wrap{grid-template-columns:1fr}.page{padding:24px 0 60px}.panel-head{flex-direction:column;align-items:flex-start}.table-wrap{overflow-x:auto}.standings-table,.conf-table{min-width:760px}}@media(max-width:560px){.support,.info-card p,.explainer p,.explainer li{font-size:13px}.page-header h1{font-size:34px}.utility-note{display:none}.shell{width:min(94vw,1240px)}}
+</style>
+</head>
+<body>
+<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Independent coverage. Facts first.</div></div></div>
+<header><div class="shell nav"><a class="brand" href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav><a href="#">News</a><a href="#">Analysis</a><a href="#">Teams</a><a href="#">Standings</a><a href="#">World</a><a href="#">Videos</a></nav><a class="watch-btn nav-watch" href="/#latest">Latest Stories</a></div></header>
+<main class="page">
+<div class="standings-shell">
+<div class="page-header">
+<div class="eyebrow">League</div>
+<h1>WNBA Standings</h1>
+<p class="subhead">2026 Regular Season</p>
+<p class="support">Updated automatically throughout the season.</p>
+<div class="info-grid">
+<div class="info-card"><span class="info-label">Playoff Field</span><p>Top 8 teams qualify</p></div>
+<div class="info-card"><span class="info-label">Regular Season</span><p>League standings determine playoff seeding</p></div>
+<div class="info-card"><span class="info-label">Tiebreakers</span><p>Head-to-head record is the first tiebreaker</p></div>
+</div>
+</div>
+<section class="panel">
+<div class="panel-head">
+<h2>2026 WNBA Standings</h2>
+<div class="last-updated"><span class="dot"></span><span id="updatedAt">Updated: --</span></div>
+</div>
+<div class="table-wrap">
+<table class="standings-table" aria-label="2026 WNBA Standings">
+<thead>
+<tr>
+<th>RK</th>
+<th>TEAM</th>
+<th>W</th>
+<th>L</th>
+<th>PCT</th>
+<th>GB</th>
+<th>HOME</th>
+<th>ROAD</th>
+<th>STREAK</th>
+<th>L10</th>
+</tr>
+</thead>
+<tbody id="standingsBody"></tbody>
+</table>
+</div>
+</section>
+<div class="conference-wrap">
+<section class="conf-card">
+<div class="conf-header"><h3>Eastern Conference</h3></div>
+<div class="table-wrap">
+<table class="conf-table" aria-label="Eastern Conference Standings">
+<thead><tr><th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th></tr></thead>
+<tbody id="eastStandings"></tbody>
+</table>
+</div>
+</section>
+<section class="conf-card">
+<div class="conf-header"><h3>Western Conference</h3></div>
+<div class="table-wrap">
+<table class="conf-table" aria-label="Western Conference Standings">
+<thead><tr><th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th></tr></thead>
+<tbody id="westStandings"></tbody>
+</table>
+</div>
+</section>
+</div>
+<section class="explainer">
+<h3>How WNBA Standings Work</h3>
+<p>The eight teams with the best regular-season records qualify for the WNBA Playoffs. Playoff seeding is based on regular-season record rather than conference.</p>
+<p>If teams finish with identical records, WNBA tiebreak procedures are used to determine playoff qualification and seeding.</p>
+<p><strong>Tiebreakers</strong></p>
+<ul>
+<li>Better head-to-head record</li>
+<li>Better winning percentage against teams that finish .500 or better</li>
+<li>Better head-to-head point differential</li>
+<li>Better point differential against all opponents</li>
+</ul>
+</section>
+</div>
+</main>
+<footer><div class="shell footer-row"><div class="footer-brand">Full Court Buckets</div><div>Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</div></div></footer>
+<script>
+const standingsUrl = '/api/wnba-standings';
+const standingsBody = document.getElementById('standingsBody');
+const eastStandings = document.getElementById('eastStandings');
+const westStandings = document.getElementById('westStandings');
+const updatedAtEl = document.getElementById('updatedAt');
+let lastSuccessfulData = null;
+
+function formatUpdatedTime(value) {
+  if (!value) return 'Updated: --';
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return 'Updated: --';
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZone: 'America/Los_Angeles',
+    timeZoneName: 'short'
+  });
+  return 'Updated: ' + formatter.format(date).replace(' GMT', '').replace(' PST','PT').replace(' PDT','PT');
+}
+
+function renderTeamBadge(name) {
+  const parts = name.split(' ');
+  const code = parts.slice(-1)[0].slice(0, 3).toUpperCase();
+  return '<span class="team-badge">' + code + '</span>';
+}
+
+function renderStreak(value) {
+  if (!value) return '<span class="secondary">--</span>';
+  if (value.startsWith('W')) return '<span class="winning">' + value + '</span>';
+  if (value.startsWith('L')) return '<span class="losing">' + value + '</span>';
+  return '<span class="secondary">' + value + '</span>';
+}
+
+function renderTableRow(team, index) {
+  const isPlayoffSpot = team.rank <= 8;
+  const rowClass = isPlayoffSpot ? 'playoff-row' : '';
+  const rankCell = '<td><span class="rank">' + team.rank + '</span></td>';
+  const teamCell = '<td><div class="team-cell">' + renderTeamBadge(team.name) + '<span class="team-name">' + team.name + '</span></div></td>';
+  const row = '<tr class="' + rowClass + '">' + rankCell + teamCell +
+    '<td>' + team.wins + '</td>' +
+    '<td>' + team.losses + '</td>' +
+    '<td class="percent">' + Number(team.pct).toFixed(3).replace(/^0/, '') + '</td>' +
+    '<td>' + team.gamesBack + '</td>' +
+    '<td>' + team.home + '</td>' +
+    '<td>' + team.road + '</td>' +
+    '<td>' + renderStreak(team.streak) + '</td>' +
+    '<td>' + team.last10 + '</td>' +
+    '</tr>';
+  if (team.rank === 8) {
+    return '<tr class="playoff-line"><td colspan="10">Playoff Line</td></tr>' + row;
+  }
+  return row;
+}
+
+function renderConference(list, target) {
+  target.innerHTML = list.map(team => {
+    return '<tr>' +
+      '<td><span class="rank">' + team.rank + '</span></td>' +
+      '<td><div class="team-cell">' + renderTeamBadge(team.name) + '<span class="team-name">' + team.name + '</span></div></td>' +
+      '<td>' + team.wins + '</td>' +
+      '<td>' + team.losses + '</td>' +
+      '<td class="percent">' + Number(team.pct).toFixed(3).replace(/^0/, '') + '</td>' +
+      '<td>' + team.gamesBack + '</td>' +
+      '</tr>';
+  }).join('');
+}
+
+function renderStandings(data) {
+  if (!data || !Array.isArray(data.teams)) return;
+  lastSuccessfulData = data;
+  updatedAtEl.textContent = formatUpdatedTime(data.updatedAt);
+  standingsBody.innerHTML = data.teams.map(renderTableRow).join('');
+  const east = data.teams.filter(team => team.conference === 'Eastern');
+  const west = data.teams.filter(team => team.conference === 'Western');
+  renderConference(east, eastStandings);
+  renderConference(west, westStandings);
+}
+
+async function loadStandings() {
+  try {
+    const response = await fetch(standingsUrl, { cache: 'no-store' });
+    if (!response.ok) throw new Error('Unable to fetch standings');
+    const text = await response.text();
+    const data = JSON.parse(text);
+    renderStandings(data);
+  } catch (error) {
+    if (lastSuccessfulData) {
+      renderStandings(lastSuccessfulData);
+      const note = document.createElement('span');
+      note.className = 'muted-note';
+      note.textContent = 'Live update temporarily unavailable.';
+      const panel = document.querySelector('.panel');
+      const existing = panel.querySelector('.muted-note');
+      if (!existing) panel.appendChild(note);
+      return;
+    }
+  }
+}
+
+loadStandings();
+setInterval(loadStandings, 300000);
+</script>
+</body>
+</html>
