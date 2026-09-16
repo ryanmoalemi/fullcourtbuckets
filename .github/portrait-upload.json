@@ -1,6 +1,17 @@
 {
-  "request_id": "468-461b1b7ed968ea95-20260916-approved",
-  "slug": "breanna-stewart",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351"
+  "request_id": "591-175db8b183881d68-20260916-authorized-live-review",
+  "slug": "sabrina-ionescu",
+  "player_id": 591,
+  "player_name": "Sabrina Ionescu",
+  "approved": true,
+  "status": "ready_for_upload",
+  "sha256": "175db8b183881d682c416aed07f1603eb4f3cd4eddc026f4a427ffaa8cebac20",
+  "bytes": 1706620,
+  "dimensions": [1254, 1254],
+  "format": "PNG",
+  "generation_id": "58abc198-1889-4972-b900-46f6d73a923a",
+  "authorization_context": "Owner explicitly instructed: make the next player's image, update the live page, then ping for review. This authorizes Sabrina publication before review for this one player only.",
+  "master_drive_file_id": "14H-AOl5r__q8yiQ0mF19o2yuau8hmhss",
+  "master_filename": "FCB-591-sabrina-ionescu-approved-175db8b183881d68.png",
+  "download_url": "https://sdmntprsoutheastus3.oaiusercontent.com/files/00000000-1864-820c-8680-2db12d25e4c5/raw?se=2026-09-16T23%3A50%3A12Z&sp=r&sv=2026-02-06&sr=b&scid=04127e61-abc4-51dd-ba2d-57e7f36e8481&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A05%3A54Z&ske=2026-09-17T20%3A05%3A54Z&sks=b&skv=2026-02-06&sig=tepa%2BYO9sSt9e/dCNmfu0DGHKGM1I%2B7bEDHtqn4DNXQ%3D"
 }
