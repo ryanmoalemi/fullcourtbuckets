@@ -1,0 +1,108 @@
+name: Upload approved player portrait
+on:
+  push:
+    branches: [main]
+    paths: ['.github/portrait-upload.json']
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: fcb-wnba-main
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip -q install 'pillow>=11.3,<13'
+      - name: Receive and validate the complete approved original
+        id: upload
+        env:
+          REQUEST_COMMIT: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import hashlib,io,json,os,re,subprocess,sys,urllib.request
+          from pathlib import Path
+          from urllib.parse import urlparse
+          from PIL import Image
+          sys.path.insert(0,'automation')
+          from portrait_folders import record_for
+          root=Path.cwd()
+          request_path=Path('.github/portrait-upload.json')
+          raw_request=subprocess.check_output(['git','show',os.environ['REQUEST_COMMIT']+':'+str(request_path)])
+          request=json.loads(raw_request)
+          latest=json.loads(request_path.read_text())
+          if latest.get('request_id')!=request.get('request_id'):
+              raise SystemExit('Upload superseded by a newer request; no files changed.')
+          slug=request.get('slug','')
+          if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',slug) or request.get('approved') is not True:
+              raise SystemExit('A safe player slug and explicit owner approval are required.')
+          profile=json.loads((root/'data/wnba/players'/f'{slug}.json').read_text())
+          name=' '.join(str(profile['player'].get(k) or '').strip() for k in ('first_name','last_name')).strip()
+          if profile['player']['id']!=request['player_id'] or name!=request['player_name'] or profile['slug']!=slug:
+              raise SystemExit('The approval does not match the player ID, name and slug.')
+          digest=request.get('sha256','')
+          if not re.fullmatch(r'[a-f0-9]{64}',digest):
+              raise SystemExit('Missing approved original checksum.')
+          folder=root/'images/players'/slug
+          if folder.is_symlink(): raise SystemExit('Unsafe image folder.')
+          folder.mkdir(parents=True,exist_ok=True)
+          target=folder/'portrait.png'
+          if target.is_symlink(): raise SystemExit('Unsafe target file.')
+          if any((folder/('portrait'+ext)).exists() for ext in ['.webp','.avif']):
+              raise SystemExit('Another portrait format exists; do not create ambiguous image choices.')
+          url=request.get('download_url','')
+          parsed=urlparse(url)
+          if parsed.scheme!='https' or not parsed.hostname or not parsed.hostname.endswith('.oaiusercontent.com') or parsed.username or parsed.password or parsed.port:
+              raise SystemExit('Only the approved temporary whole-file handoff is accepted.')
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,*args,**kwargs):
+                  raise ValueError('Unexpected download redirect.')
+          try:
+              opener=urllib.request.build_opener(NoRedirect())
+              with opener.open(url,timeout=60) as response:
+                  raw=response.read(12_000_001)
+          except Exception:
+              raise SystemExit('Whole-file download failed or expired; live pages were not changed.')
+          if len(raw)>12_000_000 or len(raw)!=request['bytes'] or hashlib.sha256(raw).hexdigest()!=digest:
+              raise SystemExit('Approved original byte count/checksum did not match; nothing published.')
+          image=Image.open(io.BytesIO(raw)); image.load()
+          if image.format!='PNG' or list(image.size)!=request['dimensions']:
+              raise SystemExit('Original image dimensions/format do not match approval.')
+          if min(image.size)<1024 or image.width*image.height>25_000_000 or image.convert('RGBA').getchannel('A').getextrema()!=(0,255):
+              raise SystemExit('Use a full-resolution original with visible artwork and transparency.')
+          temporary=folder/'portrait.png.tmp'
+          temporary.write_bytes(raw)
+          # Decode/validate before the atomic replacement. Never resample or recompress.
+          temporary.replace(target)
+          record=record_for(root,target)
+          receipt={k:v for k,v in request.items() if k!='download_url'}
+          receipt.update(status='uploaded_pending_live_verification',path=str(target.relative_to(root)),
+                         original_bytes_preserved=True,github_blob_sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest())
+          receipt_path=root/'content/portrait-upload-receipts'/f'{slug}.json'
+          receipt_path.parent.mkdir(parents=True,exist_ok=True)
+          receipt_path.write_text(json.dumps(receipt,indent=2)+'\n')
+          request_path.write_text(json.dumps({'request_id':request['request_id'],'slug':slug,'status':'uploaded_pending_live_verification','sha256':digest},indent=2)+'\n')
+          subprocess.run(['git','config','user.name','Full Court Buckets updater'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','add','--',str(target.relative_to(root)),str(receipt_path.relative_to(root)),str(request_path)],check=True)
+          if subprocess.run(['git','diff','--cached','--quiet']).returncode:
+              subprocess.run(['git','commit','-m','Upload approved full-resolution portrait: '+slug],check=True)
+              subprocess.run(['git','pull','--rebase','origin','main'],check=True)
+              subprocess.run(['git','push','origin','HEAD:main'],check=True)
+          print('Uploaded exact approved original:',slug,record['width'],record['height'],digest)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write('uploaded=true\n')
+          PY
+      - name: Run the existing page publisher and live verification
+        if: steps.upload.outputs.uploaded == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: gh api --method POST "repos/$REPO/actions/workflows/fcb-wnba.yml/dispatches" -f ref=main -F inputs[force]=false
