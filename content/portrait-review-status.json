@@ -53,7 +53,7 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/breanna-stewart.json",
-    "instruction": "Breanna's previously approved original is now uploaded and verified. The owner requested a live review link. Do not regenerate it, repeat its upload, or revert to the old 256px version."
+    "instruction": "Breanna's previously approved original is uploaded and verified. Do not regenerate it, repeat its upload, or revert to the old 256px version."
   },
   "previous_completed": {
     "player_id": 535,
@@ -73,9 +73,16 @@
     "instruction": "Preserve Aja's latest owner-approved white-top portrait. Older black-top and missing-source notes are superseded."
   },
   "approved_next_source": null,
-  "awaiting_owner_review": {
-    "slug": "breanna-stewart",
-    "live_url": "https://fullcourtbuckets.com/wnba/breanna-stewart/?v=approved-461b1b7e",
-    "instruction": "Provide the live page and verified screenshots for the owner's review. No additional player artwork was generated or published in this request."
+  "awaiting_owner_review": null,
+  "next_draft": {
+    "player_id": 591,
+    "slug": "sabrina-ionescu",
+    "player_name": "Sabrina Ionescu",
+    "status": "generation_failed_quality_review",
+    "approved": false,
+    "replacement_published": false,
+    "reason": "Image-generation retries returned poster/page graphics rather than the requested single-player transparent Sabrina portrait. All six outputs were rejected. None were uploaded to a player page, recorded as approved, or substituted for the existing originals.",
+    "rejected_generation_ids": ["9b84f3cb-1520-4ee1-8056-db83242555d6","4c8e5672-0b01-47a2-b6ef-780f5366830c","8b133f61-c25c-4b3c-a7c6-1a94e446d02b","7e65998e-1636-427e-9c94-45bdca176898","fabf99b1-03c7-40a5-9ee6-89fe5ab6655f","576ef29a-45df-47ff-83a4-ddfb1e8f7cbc"],
+    "instruction": "The next intended player is Sabrina Ionescu. Do not generate Aja again, make a poster, or embed any text. Generate one sharp original transparent head-and-shoulders illustration, plain white top with black trim; show the correct draft for user approval, preserve its full-resolution master under a unique filename, and only then upload through the existing reusable uploader. Keep completed player pages unchanged."
   }
 }
