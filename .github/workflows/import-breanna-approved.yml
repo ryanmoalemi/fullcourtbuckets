@@ -1,0 +1,150 @@
+name: Import approved sharp Breanna portrait
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/import-breanna-approved.yml']
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: fcb-wnba-main
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Transfer only the owner-approved public portrait export
+        env:
+          PORTRAIT_TRANSFER_URL: 'https://sdmntprwestus3.oaiusercontent.com/files/00000000-b84c-81fd-ac60-7aed2f85a3e9/raw?se=2026-09-16T20%3A04%3A41Z&sp=r&sv=2026-02-06&sr=b&scid=0349a42a-86af-5e36-a4e6-1892035f33b7&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T18%3A07%3A25Z&ske=2026-09-17T18%3A07%3A25Z&sks=b&skv=2026-02-06&sig=hJtKET9pMQm9mNYLFRg7Jge1BU%2BwPpxytLT1WhA9v0s%3D'
+        run: |
+          python - <<'PY'
+          import hashlib,os,urllib.request
+          from pathlib import Path
+          expected='e96b854d7e619379e3e721f687c94e01dbda3cc0a418d57100da988981034f96'
+          output=Path(os.environ['RUNNER_TEMP'])/'breanna-approved.webp'
+          existing=Path('images/players/breanna-stewart-approved-v2.webp')
+          if existing.is_file() and hashlib.sha256(existing.read_bytes()).hexdigest()==expected:
+              raw=existing.read_bytes()
+          else:
+              with urllib.request.urlopen(os.environ['PORTRAIT_TRANSFER_URL'],timeout=30) as response:
+                  raw=response.read(1_000_001)
+          assert len(raw)==101200, 'Unexpected transfer size'
+          assert hashlib.sha256(raw).hexdigest()==expected, 'Transfer checksum mismatch'
+          output.write_bytes(raw)
+          print('Verified complete approved image transfer:',len(raw),'bytes')
+          PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install actual image decoder and layout browser
+        run: |
+          python -m pip -q install 'pillow>=11.3,<13' 'playwright>=1.50,<2'
+          python -m playwright install --with-deps chromium > /dev/null
+      - name: Replace only the exact Breanna ID and preserve other portraits
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,sys
+          from pathlib import Path
+          from PIL import Image
+          root=Path.cwd()
+          source=Path(os.environ['RUNNER_TEMP'])/'breanna-approved.webp'
+          image=Image.open(source); image.load()
+          assert image.size==(640,650) and image.mode=='RGBA'
+          assert image.getchannel('A').getextrema()==(0,255)
+          manifest_path=Path('content/player-illustrations.json')
+          manifest=json.loads(manifest_path.read_text())
+          matches=[r for r in manifest['portraits'] if r['player_id']==468]
+          assert len(matches)==1
+          record=matches[0]
+          assert record['slug']=='breanna-stewart' and record['player_name']=='Breanna Stewart'
+          assert record['src'] in ['/images/players/breanna-stewart-portrait-v1.webp','/images/players/breanna-stewart-approved-v2.webp'], 'Concurrent replacement detected'
+          before={r['player_id']:json.dumps(r,sort_keys=True) for r in manifest['portraits'] if r['player_id']!=468}
+          asset=Path('images/players/breanna-stewart-approved-v2.webp')
+          asset.write_bytes(source.read_bytes())
+          digest=hashlib.sha256(asset.read_bytes()).hexdigest()
+          master='461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351'
+          record.update(src='/'+asset.as_posix(),width=640,height=650,asset_sha256=digest,
+            quality_standard='fcb-portrait-640x650-v2',source_sha256=master,
+            source='Owner-approved replacement exported from the preserved 1254x1254 original master, never upscaled from the previous 256x256 thumbnail.',
+            display='Approved compact Caitlin desktop/mobile layout unchanged. Transparent head-and-shoulders image, purple gradient and circles, no square card or caption; all names and statistics remain HTML.',
+            export_settings={'format':'WEBP','width':640,'height':650,'quality':95,'method':6,'exact':True,
+                             'source_width':1254,'source_height':1254,'source_sha256':master,'upscaled':False,
+                             'resampling':'LANCZOS','geometry':'uniform fit, center crop, no stretch'})
+          assert before=={r['player_id']:json.dumps(r,sort_keys=True) for r in manifest['portraits'] if r['player_id']!=468}
+          def save(path,data):
+              Path(path).parent.mkdir(parents=True,exist_ok=True)
+              Path(path).write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          save(manifest_path,manifest)
+          policy_path=Path('content/portrait-quality.json'); policy=json.loads(policy_path.read_text())
+          policy['unchanged_legacy_assets'].pop('/images/players/breanna-stewart-portrait-v1.webp',None)
+          save(policy_path,policy)
+          review_path=Path('content/portrait-review-status.json'); review=json.loads(review_path.read_text())
+          approved=review.get('approved_next_source',{})
+          assert approved.get('player_id')==468 and approved.get('source_sha256')==master
+          approved.update(export_asset=record['src'],export_sha256=digest,export_width=640,export_height=650,
+                          replacement_published=False,status='export_ready_pending_live_verification')
+          save(review_path,review)
+          save('content/portrait-repairs/breanna-stewart.json',{
+            'player_id':468,'slug':'breanna-stewart','player_name':'Breanna Stewart',
+            'status':'prepared_pending_live_verification','approved':True,'live_verified':False,
+            'replaced_asset':'/images/players/breanna-stewart-portrait-v1.webp','previous_dimensions':[256,256],
+            'asset':record['src'],'asset_sha256':digest,'dimensions':[640,650],
+            'source_sha256':master,'source_dimensions':[1254,1254],'upscaled':False,
+            'layout_changed':False,'approval':'Owner approved the replacement illustration and requested the live blur correction.'})
+          sys.path.insert(0,str(root/'automation'))
+          from verify_portraits import make_plan
+          make_plan(root)
+          print('Actual files, exact provider ID, transparency and approval hashes passed.')
+          PY
+      - name: Run tests and regenerate existing pages without changing sports data
+        run: |
+          python -m unittest discover -s automation -p 'test_*.py' -v
+          python automation/build_players.py
+          python automation/apply_portraits.py
+          python automation/rollout_player_design.py
+      - name: Verify the new portrait locally at desktop and both phone sizes
+        run: |
+          python automation/verify_portraits.py --create-plan --plan "$RUNNER_TEMP/breanna-plan-all.json"
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          path=Path(os.environ['RUNNER_TEMP'])/'breanna-plan-all.json'; plan=json.loads(path.read_text())
+          plan['records']=[r for r in plan['records'] if r['slug'] in ['breanna-stewart','caitlin-clark','angel-reese']]
+          assert len(plan['records'])==3
+          (path.parent/'breanna-plan.json').write_text(json.dumps(plan))
+          PY
+          python -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/breanna-server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          sleep 1
+          python automation/verify_portraits.py --plan "$RUNNER_TEMP/breanna-plan.json" --origin http://127.0.0.1:8765 --output "$RUNNER_TEMP/breanna-local-check"
+      - name: Commit the verified asset, its mapping and only Breanna's generated page
+        run: |
+          git config user.name 'Full Court Buckets updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- images/players/breanna-stewart-approved-v2.webp content/player-illustrations.json content/portrait-quality.json content/portrait-review-status.json content/portrait-repairs/breanna-stewart.json wnba/breanna-stewart/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m 'Replace blurry Breanna thumbnail with approved 640x650 full-master export'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          git rev-parse HEAD >> "$GITHUB_STEP_SUMMARY"
+      - name: Run the established deployment and public-image verification pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$REPO/actions/workflows/fcb-wnba.yml/dispatches" -f ref=main -F inputs[force]=false
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: breanna-before-publication-check
+          path: ${{ runner.temp }}/breanna-local-check
+          if-no-files-found: ignore
+          retention-days: 7
