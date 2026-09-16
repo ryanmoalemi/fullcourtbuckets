@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "reconciling_approved_asset",
+  "status": "in_progress_single_player",
   "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
   "user_authorization": "User approved the compact Caitlin desktop/mobile sample, authorized live publication without per-player approval, and on 2026-09-16 directed the rollout to generate one player at a time after composite batch generation failed.",
   "batch_size": 1,
@@ -27,28 +27,17 @@
     {
       "player_id": 721,
       "slug": "angel-reese",
-      "live_verified": false,
-      "verification": "A user mobile screenshot at 2026-09-16 around 02:02 America/Los_Angeles showed the Angel Reese image element falling back to alt text, so the earlier live verification was invalidated. This run is reconciling the approved portrait by replacing the failing AVIF path with a separately validated transparent WebP encoding of the existing generated portrait.",
+      "live_verified": true,
+      "verification": "The user mobile screenshot invalidated the original AVIF deployment. The existing generated portrait was re-encoded to a validated transparent WebP blob (c30cef850d05f116e7fa6076e11fa61bba6ba0b6) and committed in af369fb4ccbb0c5e1da86e3d77732a6debfed9cb. GitHub Actions run 35078189030 completed successfully: tests, data import, build_players.py, apply_portraits.py, rollout_player_design.py, generated-page validation, Pages artifact upload and deploy all passed. The generated page commit is 735a9413546d4b211b5965f5f717c26203a5e465. Live browser verification showed ANGEL REESE, exactly one rendered player illustration using /images/players/angel-reese-portrait-v1.webp?v=12fd081a86ce, img.complete=true in the primary verification, no visible broken-image fallback, compact side-by-side hero and the stats strip directly below. A second mobile-width browser check also visibly rendered the WebP with the name and portrait side by side. Repository HTML contains no number-card token and uses hero-stats directly below hero-main.",
       "url": "https://fullcourtbuckets.com/wnba/angel-reese/",
       "asset": "/images/players/angel-reese-portrait-v1.webp",
-      "commit": "e924d20ff9fa7676566dbc2d28dff6894f1264a7",
-      "deployment_run_id": 35076422963
+      "commit": "af369fb4ccbb0c5e1da86e3d77732a6debfed9cb",
+      "generated_page_commit": "735a9413546d4b211b5965f5f717c26203a5e465",
+      "deployment_run_id": 35078189030,
+      "asset_blob_sha": "c30cef850d05f116e7fa6076e11fa61bba6ba0b6"
     }
   ],
-  "current_batch": {
-    "batch_number": 2,
-    "state": "reconciling_approved_asset",
-    "claimed_at": "2026-09-16T09:04:30Z",
-    "lease_expires_at": "2026-09-16T09:34:30Z",
-    "lease_owner": "FCB portrait rollout scheduled executor",
-    "last_attempt_at": "2026-09-16T09:04:30Z",
-    "generation_attempts": 4,
-    "bad_outputs_discarded": true,
-    "player_ids": [721],
-    "players": [
-      {"player_id": 721, "slug": "angel-reese", "player_name": "Angel Reese"}
-    ]
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -60,6 +49,19 @@
       "completed_at": "2026-09-16T08:55:27Z",
       "live_verification_invalidated_at": "2026-09-16T09:02:00Z",
       "invalidation_reason": "User mobile screenshot showed broken image/alt text."
+    },
+    {
+      "batch_number": 2,
+      "mode": "scheduled_asset_reconciliation",
+      "player_ids": [721],
+      "published_count": 1,
+      "asset": "/images/players/angel-reese-portrait-v1.webp",
+      "asset_blob_sha": "c30cef850d05f116e7fa6076e11fa61bba6ba0b6",
+      "commit": "af369fb4ccbb0c5e1da86e3d77732a6debfed9cb",
+      "generated_page_commit": "735a9413546d4b211b5965f5f717c26203a5e465",
+      "deployment_run_id": 35078189030,
+      "completed_at": "2026-09-16T09:16:00Z",
+      "live_verified": true
     }
   ],
   "blocked": [],
@@ -82,8 +84,8 @@
     "No per-player approval is required. Self-check image quality, identity, transparency, crop and the live deployment.",
     "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait.",
     "The first unattended scheduled attempt failed because a multi-player generation request produced composite UI grids.",
-    "Angel Reese generation succeeded one-player-at-a-time, but a later user mobile screenshot proved the AVIF asset was not actually rendering. The live-verified flag was revoked and the existing portrait is being re-encoded to transparent WebP rather than regenerated.",
-    "scheduled_execution_verified remains false until a scheduled run completes an end-to-end verified publication cycle.",
+    "Angel Reese generation succeeded one-player-at-a-time, but the first AVIF publication was later proven broken by the user's mobile screenshot. The scheduled reconciliation replaced that asset path with a validated transparent WebP and re-verified the live page on desktop and mobile-width browser checks.",
+    "scheduled_execution_verified remains false because this scheduled execution repaired and republished an already-generated portrait; it did not perform a fresh scheduled image-generation cycle. It should become true only after a later scheduled run generates a new player's portrait and completes the full upload/deploy/live-verification cycle.",
     "The independent WNBA statistics updater remains active."
   ]
 }
