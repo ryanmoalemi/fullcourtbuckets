@@ -51,7 +51,17 @@
       "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 4,
+    "state": "claimed_generating",
+    "claimed_at": "2026-09-16T11:04:06Z",
+    "lease_expires_at": "2026-09-16T11:44:06Z",
+    "lease_owner": "FCB portrait rollout scheduled executor",
+    "player_ids": [468],
+    "players": [
+      {"player_id": 468, "slug": "breanna-stewart", "player_name": "Breanna Stewart"}
+    ]
+  },
   "batches": [
     {
       "batch_number": 1,
