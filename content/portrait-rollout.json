@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "scheduled",
+  "status": "running",
   "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
   "user_authorization": "User approved the compact Caitlin desktop/mobile sample and explicitly authorized generating batches of ten and publishing without further approvals.",
   "batch_size": 10,
@@ -24,12 +24,32 @@
       "asset": "/images/players/caitlin-clark-portrait-v2.avif"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 1,
+    "state": "claimed",
+    "claimed_at": "2026-09-16T08:00:48Z",
+    "lease_expires_at": "2026-09-16T10:00:48Z",
+    "lease_owner": "FCB portrait rollout scheduled executor",
+    "player_ids": [721, 535, 468, 591, 573, 741, 488, 676, 552, 533],
+    "players": [
+      {"player_id": 721, "slug": "angel-reese", "player_name": "Angel Reese"},
+      {"player_id": 535, "slug": "aja-wilson", "player_name": "A'ja Wilson"},
+      {"player_id": 468, "slug": "breanna-stewart", "player_name": "Breanna Stewart"},
+      {"player_id": 591, "slug": "sabrina-ionescu", "player_name": "Sabrina Ionescu"},
+      {"player_id": 573, "slug": "napheesa-collier", "player_name": "Napheesa Collier"},
+      {"player_id": 741, "slug": "paige-bueckers", "player_name": "Paige Bueckers"},
+      {"player_id": 488, "slug": "kelsey-plum", "player_name": "Kelsey Plum"},
+      {"player_id": 676, "slug": "aliyah-boston", "player_name": "Aliyah Boston"},
+      {"player_id": 552, "slug": "arike-ogunbowale", "player_name": "Arike Ogunbowale"},
+      {"player_id": 533, "slug": "kelsey-mitchell", "player_name": "Kelsey Mitchell"}
+    ]
+  },
   "batches": [],
   "blocked": [],
   "notes": [
     "Only verified live portraits count as published. A scheduled task or placeholder is not a completed illustration.",
     "No per-player approval is required. Self-check image quality, identity, transparency, crop and the live deployment.",
-    "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait."
+    "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait.",
+    "Batch 1 selected by automation/portrait_queue.py priority logic from the current index; all ten selected IDs are active in the provider feed."
   ]
 }
