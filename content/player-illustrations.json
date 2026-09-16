@@ -157,6 +157,32 @@
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, exactly one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA Aaliyah Edwards profile only for identity context. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
       "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
       "asset_sha256": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420"
+    },
+    {
+      "player_id": 535,
+      "slug": "aja-wilson",
+      "player_name": "A'ja Wilson",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/aja-wilson/portrait.png",
+      "width": 1244,
+      "height": 1264,
+      "asset_sha256": "925c2dbc0c01e26b8ccbff0fea9090c608c6be35c84dde4b9a40ad08a1363554",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1244,
+        "height": 1264,
+        "source_width": 1244,
+        "source_height": 1264,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
