@@ -8,13 +8,23 @@
   "generation_id": "9b2f6eff-adfa-4b61-9bcb-75220432908c",
   "sha256": "925c2dbc0c01e26b8ccbff0fea9090c608c6be35c84dde4b9a40ad08a1363554",
   "bytes": 1583575,
-  "dimensions": [
-    1244,
-    1264
-  ],
+  "dimensions": [1244,1264],
   "master_file_id": "1vBeqdbTQxqYN1nTl0FAeFZ2XwGt_N8Od",
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "path": "images/players/aja-wilson/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "4ec072d05ae1fc4700a0d7f091e8f28b3834384c"
+  "github_blob_sha": "4ec072d05ae1fc4700a0d7f091e8f28b3834384c",
+  "upload_commit": "b6c0afed62de7f1a4c9129d61b2363b4a38ef7b0",
+  "upload_run": 35150035606,
+  "publication_run": 35150053814,
+  "live_url": "https://fullcourtbuckets.com/wnba/aja-wilson/",
+  "live_image_url": "https://fullcourtbuckets.com/images/players/aja-wilson/portrait.png?v=925c2dbc0c01",
+  "live_asset_checksum_matched": true,
+  "live_browser_checks_passed": 6,
+  "browsers": ["chromium","webkit"],
+  "viewports": [[1365,850],[390,844],[320,568]],
+  "screenshots_visually_reviewed": ["aja-wilson-chromium-desktop.png","aja-wilson-chromium-mobile-390.png"],
+  "evidence_artifact_id": 10468828598,
+  "evidence_artifact_name": "portrait-live-verification",
+  "note": "Original PNG uploaded intact. Existing compact layout and all stats preserved. The entire stats strip is above the fold at 1365x850 and 390x844, but not fully within 320x568. Do not claim otherwise."
 }
