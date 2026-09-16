@@ -27,3 +27,11 @@ The owner approved a sharper replacement for Angel Reese after the published 192
 Future portraits must originate from full-resolution generated art, normally at least 1024 pixels on each side, and must not be published as 160px, 192px, 256px, or other undersized hero thumbnails. Upscaling a thumbnail does not satisfy this rule. Use real alpha transparency and a well-encoded image format; verify actual decoded dimensions, alpha, and file hashes rather than trusting the filename or manifest. Do not simplify quality merely to make binary transport shorter. Verify that the deployed asset is the approved replacement and that the compact desktop/mobile layout is unchanged.
 
 Do not describe old under-resolution portraits as fixed merely because this policy exists. Update each actual asset and verify it. Follow the owner's latest request about inspecting one player at a time before expanding a rollout.
+
+## Latest approval loop and mandatory browser evidence
+
+Read `automation/PORTRAIT_PUBLISHING.md` and `content/portrait-review-status.json` before continuing any portraits. The latest instruction is one user-approved image at a time, followed by verified publication, then the next approval. This supersedes the older unattended-rollout instructions. Keep that bulk task paused.
+
+The old Aja file was corrupt despite HTTP 200 and img.complete=true. It was quarantined, not replaced by the newly approved artwork. The source for that exact replacement must be reattached; do not substitute Breanna's image, which reused the same temporary filename. The new Breanna master has been preserved privately under a unique player-ID/slug/checksum filename, with its retrievable Drive reference in the review-status record.
+
+Every portrait publication must pass `automation/verify_portraits.py`: decode the real bytes, enforce the approved player-ID/name/slug/checksum mapping, and check actual public image decoding and hashes in Chromium and WebKit at desktop and phone viewports. Inspect the live screenshots in that run's `portrait-live-verification` artifact. A GitHub commit, green deployment step, HTTP 200, or manifest dimensions alone is not sufficient. A valid placeholder is not a completed portrait. Never advance the approval loop by claiming a missing approved replacement is live.

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "approval_mode": "show_one_image_then_user_approval_then_publish_then_live_verify_then_next",
+  "bulk_generation_paused": true,
+  "publication_checks": {
+    "script": "automation/verify_portraits.py",
+    "workflow_run_id": 35142594886,
+    "implementation_commit": "1e9c0000ea9d31c6f7f216f2a3af8492752b54ea",
+    "generated_page_commit": "9ec6924e9bb16c5585acc3f4b1619eda7447e43b",
+    "live_result": "passed",
+    "live_checks": 72,
+    "portrait_pages_checked": 11,
+    "intentional_placeholder_pages_checked": 1,
+    "engines": ["chromium", "webkit"],
+    "viewports": [[1365, 850], [390, 844], [320, 568]],
+    "evidence_artifact_id": 10466461026,
+    "evidence_artifact_name": "portrait-live-verification",
+    "scope_note": "File identity, decoding and compact-layout checks passed. This does not mean the old low-resolution portraits were upgraded or that Aja's missing approved replacement was published."
+  },
+  "awaiting_source": {
+    "player_id": 535,
+    "slug": "aja-wilson",
+    "player_name": "A'ja Wilson",
+    "status": "approved_replacement_master_needs_reattachment",
+    "original_attachment_id": "file_000000002e4081fdb8115e7e95a0dee9",
+    "original_generation_id": "b1ef57a3-b342-4675-9d28-065d19583bdc",
+    "reason": "The approved source filename was reused by a subsequent generation. Exact original bytes were not recoverable from the active runtime or connected storage.",
+    "live_state": "Corrupt previous file removed from page; existing gradient and outline-number placeholder retained.",
+    "approved_replacement_published": false,
+    "image_elements_on_live_page": 0,
+    "instruction": "Use the exact reattached approved master. Do not regenerate, substitute another player, or mark the placeholder as the completed replacement."
+  },
+  "approved_next_source": {
+    "player_id": 468,
+    "slug": "breanna-stewart",
+    "player_name": "Breanna Stewart",
+    "approved": true,
+    "replacement_published": false,
+    "filename": "FCB-468-breanna-stewart-approved-master-461b1b7ed968ea95.png",
+    "source_sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
+    "source_width": 1254,
+    "source_height": 1254,
+    "source_bytes": 1782648,
+    "master_storage": "private_connected_google_drive",
+    "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
+    "master_download_checksum_verified": true,
+    "instruction": "Retrieve through the connected Drive fetch action and compare the source checksum before export. This is NOT the Aja image."
+  }
+}
