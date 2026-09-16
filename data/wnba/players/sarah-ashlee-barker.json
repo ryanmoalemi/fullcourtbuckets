@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 745,
+    "first_name": "Sarah",
+    "last_name": "Ashlee Barker",
+    "position": "G",
+    "position_abbreviation": "G",
+    "height": "6' 0\"",
+    "weight": "Alabama",
+    "jersey_number": "3",
+    "college": null,
+    "team": {
+      "id": 31,
+      "full_name": "Fire",
+      "abbreviation": "POR",
+      "city": "",
+      "name": "Fire",
+      "conference": null
+    }
+  },
+  "slug": "sarah-ashlee-barker",
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 31,
+    "full_name": "Fire",
+    "abbreviation": "POR",
+    "city": "",
+    "name": "Fire",
+    "conference": null
+  },
+  "season_stats": [
+    {
+      "player_id": 745,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "games_played": 26,
+      "min": 24.69,
+      "fgm": 4.15,
+      "fga": 8.27,
+      "fg_pct": 50.2,
+      "fg3m": 1.38,
+      "fg3a": 3.46,
+      "fg3_pct": 40.0,
+      "ftm": 1.0,
+      "fta": 1.35,
+      "ft_pct": 74.3,
+      "oreb": null,
+      "dreb": null,
+      "reb": 4.5,
+      "ast": 2.38,
+      "stl": 0.88,
+      "blk": 0.35,
+      "turnover": 2.0,
+      "pts": 10.69
+    },
+    {
+      "player_id": 745,
+      "season": 2025,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 34,
+      "min": 14.15,
+      "fgm": 1.03,
+      "fga": 3.06,
+      "fg_pct": 33.7,
+      "fg3m": 0.53,
+      "fg3a": 1.79,
+      "fg3_pct": 29.5,
+      "ftm": 0.5,
+      "fta": 0.71,
+      "ft_pct": 70.8,
+      "oreb": null,
+      "dreb": null,
+      "reb": 1.94,
+      "ast": 0.91,
+      "stl": 0.32,
+      "blk": 0.12,
+      "turnover": 1.09,
+      "pts": 3.09
+    }
+  ],
+  "recent_completed_games": [
+    {
+      "game_id": 25038,
+      "player_id": 745,
+      "date": "2026-08-26T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_score": 96,
+      "away_score": 78,
+      "minutes": "0",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    },
+    {
+      "game_id": 25013,
+      "player_id": 745,
+      "date": "2026-08-16T23:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_score": 85,
+      "away_score": 88,
+      "minutes": "--",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    }
+  ],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

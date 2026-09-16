@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 67109,
+    "first_name": "Azzi",
+    "last_name": "Fudd",
+    "position": "G",
+    "position_abbreviation": "G",
+    "height": "5' 11\"",
+    "weight": "UConn",
+    "jersey_number": "35",
+    "college": null,
+    "team": {
+      "id": 11,
+      "full_name": "Dallas Wings",
+      "abbreviation": "DAL",
+      "city": "Dallas",
+      "name": "Wings",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "azzi-fudd",
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 11,
+    "full_name": "Dallas Wings",
+    "abbreviation": "DAL",
+    "city": "Dallas",
+    "name": "Wings",
+    "conference": "Western Conference"
+  },
+  "season_stats": [
+    {
+      "player_id": 67109,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "games_played": 30,
+      "min": 31.67,
+      "fgm": 5.2,
+      "fga": 11.4,
+      "fg_pct": 45.6,
+      "fg3m": 2.07,
+      "fg3a": 5.2,
+      "fg3_pct": 39.7,
+      "ftm": 0.63,
+      "fta": 0.77,
+      "ft_pct": 82.6,
+      "oreb": null,
+      "dreb": null,
+      "reb": 1.73,
+      "ast": 1.83,
+      "stl": 1.73,
+      "blk": 0.83,
+      "turnover": 1.1,
+      "pts": 13.1
+    }
+  ],
+  "recent_completed_games": [
+    {
+      "game_id": 25007,
+      "player_id": 67109,
+      "date": "2026-08-14T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "home_score": 98,
+      "away_score": 87,
+      "minutes": "0",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    }
+  ],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

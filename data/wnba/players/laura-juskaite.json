@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 67169,
+    "first_name": "Laura",
+    "last_name": "Juskaite",
+    "position": "F",
+    "position_abbreviation": "F",
+    "height": "6' 4\"",
+    "weight": "--",
+    "jersey_number": "2",
+    "college": null,
+    "team": {
+      "id": 30,
+      "full_name": "Tempo",
+      "abbreviation": "TOR",
+      "city": "",
+      "name": "Tempo",
+      "conference": null
+    }
+  },
+  "slug": "laura-juskaite",
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 30,
+    "full_name": "Tempo",
+    "abbreviation": "TOR",
+    "city": "",
+    "name": "Tempo",
+    "conference": null
+  },
+  "season_stats": [
+    {
+      "player_id": 67169,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "games_played": 40,
+      "min": 24.93,
+      "fgm": 3.63,
+      "fga": 7.8,
+      "fg_pct": 46.5,
+      "fg3m": 0.98,
+      "fg3a": 3.08,
+      "fg3_pct": 31.7,
+      "ftm": 2.03,
+      "fta": 2.55,
+      "ft_pct": 79.4,
+      "oreb": null,
+      "dreb": null,
+      "reb": 4.28,
+      "ast": 1.7,
+      "stl": 1.15,
+      "blk": 0.25,
+      "turnover": 2.05,
+      "pts": 10.25
+    }
+  ],
+  "recent_completed_games": [
+    {
+      "game_id": 25049,
+      "player_id": 67169,
+      "date": "2026-08-30T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 101,
+      "away_score": 69,
+      "minutes": "27",
+      "pts": 10.0,
+      "ast": 1.0,
+      "reb": 4.0,
+      "stl": null,
+      "blk": null,
+      "turnover": 3.0
+    },
+    {
+      "game_id": 25046,
+      "player_id": 67169,
+      "date": "2026-08-29T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 93,
+      "away_score": 73,
+      "minutes": "28",
+      "pts": 14.0,
+      "ast": 2.0,
+      "reb": 8.0,
+      "stl": 2.0,
+      "blk": 1.0,
+      "turnover": 2.0
+    },
+    {
+      "game_id": 25041,
+      "player_id": 67169,
+      "date": "2026-08-27T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 90,
+      "away_score": 78,
+      "minutes": "29",
+      "pts": 14.0,
+      "ast": 3.0,
+      "reb": 9.0,
+      "stl": null,
+      "blk": null,
+      "turnover": 1.0
+    },
+    {
+      "game_id": 25034,
+      "player_id": 67169,
+      "date": "2026-08-23T23:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "home_score": 78,
+      "away_score": 88,
+      "minutes": "29",
+      "pts": 11.0,
+      "ast": 2.0,
+      "reb": 6.0,
+      "stl": null,
+      "blk": null,
+      "turnover": 7.0
+    },
+    {
+      "game_id": 25027,
+      "player_id": 67169,
+      "date": "2026-08-22T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_score": 82,
+      "away_score": 79,
+      "minutes": "30",
+      "pts": 15.0,
+      "ast": 4.0,
+      "reb": 7.0,
+      "stl": 2.0,
+      "blk": 1.0,
+      "turnover": 6.0
+    },
+    {
+      "game_id": 25020,
+      "player_id": 67169,
+      "date": "2026-08-19T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 93,
+      "away_score": 82,
+      "minutes": "29",
+      "pts": 12.0,
+      "ast": 4.0,
+      "reb": 2.0,
+      "stl": 1.0,
+      "blk": null,
+      "turnover": 1.0
+    },
+    {
+      "game_id": 25017,
+      "player_id": 67169,
+      "date": "2026-08-18T23:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 95,
+      "away_score": 101,
+      "minutes": "20",
+      "pts": 2.0,
+      "ast": null,
+      "reb": 6.0,
+      "stl": null,
+      "blk": null,
+      "turnover": 2.0
+    },
+    {
+      "game_id": 25001,
+      "player_id": 67169,
+      "date": "2026-08-13T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 94,
+      "away_score": 88,
+      "minutes": "32",
+      "pts": 18.0,
+      "ast": null,
+      "reb": 7.0,
+      "stl": 3.0,
+      "blk": null,
+      "turnover": 2.0
+    },
+    {
+      "game_id": 24996,
+      "player_id": 67169,
+      "date": "2026-08-11T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_score": 107,
+      "away_score": 95,
+      "minutes": "14",
+      "pts": null,
+      "ast": null,
+      "reb": 1.0,
+      "stl": null,
+      "blk": null,
+      "turnover": 2.0
+    }
+  ],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

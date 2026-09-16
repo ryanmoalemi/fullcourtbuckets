@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 538,
+    "first_name": "Jaime",
+    "last_name": "Nared",
+    "position": "G",
+    "position_abbreviation": "G",
+    "height": "6' 2\"",
+    "weight": "160 lbs",
+    "jersey_number": "14",
+    "college": "Tennessee",
+    "team": {
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "jaime-nared",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 538,
+      "season": 2018,
+      "season_type": 2,
+      "team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "games_played": 31,
+      "min": 9.13,
+      "fgm": 0.77,
+      "fga": 2.58,
+      "fg_pct": 30.0,
+      "fg3m": 0.23,
+      "fg3a": 1.0,
+      "fg3_pct": 22.6,
+      "ftm": 0.77,
+      "fta": 0.9,
+      "ft_pct": 85.7,
+      "oreb": null,
+      "dreb": null,
+      "reb": 1.48,
+      "ast": 0.45,
+      "stl": 0.42,
+      "blk": 0.06,
+      "turnover": 0.55,
+      "pts": 2.55
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

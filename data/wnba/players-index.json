@@ -1,0 +1,6526 @@
+{
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "players": [
+    {
+      "id": 345,
+      "slug": "adia-mathies",
+      "name": "A'dia Mathies",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/adia-mathies/",
+      "data_path": "/data/wnba/players/adia-mathies.json"
+    },
+    {
+      "id": 535,
+      "slug": "aja-wilson",
+      "name": "A'ja Wilson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/aja-wilson/",
+      "data_path": "/data/wnba/players/aja-wilson.json"
+    },
+    {
+      "id": 714,
+      "slug": "aaliyah-edwards",
+      "name": "Aaliyah Edwards",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/aaliyah-edwards/",
+      "data_path": "/data/wnba/players/aaliyah-edwards.json"
+    },
+    {
+      "id": 750,
+      "slug": "aaliyah-nye",
+      "name": "Aaliyah Nye",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/aaliyah-nye/",
+      "data_path": "/data/wnba/players/aaliyah-nye.json"
+    },
+    {
+      "id": 627,
+      "slug": "aari-mcdonald",
+      "name": "Aari McDonald",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/aari-mcdonald/",
+      "data_path": "/data/wnba/players/aari-mcdonald.json"
+    },
+    {
+      "id": 270,
+      "slug": "abby-bishop",
+      "name": "Abby Bishop",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/abby-bishop/",
+      "data_path": "/data/wnba/players/abby-bishop.json"
+    },
+    {
+      "id": 567,
+      "slug": "ad-durr",
+      "name": "AD Durr",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ad-durr/",
+      "data_path": "/data/wnba/players/ad-durr.json"
+    },
+    {
+      "id": 551,
+      "slug": "adaora-elonu",
+      "name": "Adaora Elonu",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/adaora-elonu/",
+      "data_path": "/data/wnba/players/adaora-elonu.json"
+    },
+    {
+      "id": 452,
+      "slug": "aerial-powers",
+      "name": "Aerial Powers",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/aerial-powers/",
+      "data_path": "/data/wnba/players/aerial-powers.json"
+    },
+    {
+      "id": 67023,
+      "slug": "aicha-coulibaly",
+      "name": "Aicha Coulibaly",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/aicha-coulibaly/",
+      "data_path": "/data/wnba/players/aicha-coulibaly.json"
+    },
+    {
+      "id": 637,
+      "slug": "aisha-sheppard",
+      "name": "Aisha Sheppard",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/aisha-sheppard/",
+      "data_path": "/data/wnba/players/aisha-sheppard.json"
+    },
+    {
+      "id": 520,
+      "slug": "alaina-coates",
+      "name": "Alaina Coates",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alaina-coates/",
+      "data_path": "/data/wnba/players/alaina-coates.json"
+    },
+    {
+      "id": 60,
+      "slug": "alana-beard",
+      "name": "Alana Beard",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alana-beard/",
+      "data_path": "/data/wnba/players/alana-beard.json"
+    },
+    {
+      "id": 556,
+      "slug": "alanna-smith",
+      "name": "Alanna Smith",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/alanna-smith/",
+      "data_path": "/data/wnba/players/alanna-smith.json"
+    },
+    {
+      "id": 349,
+      "slug": "alex-bentley",
+      "name": "Alex Bentley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alex-bentley/",
+      "data_path": "/data/wnba/players/alex-bentley.json"
+    },
+    {
+      "id": 414,
+      "slug": "alex-harden",
+      "name": "Alex Harden",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alex-harden/",
+      "data_path": "/data/wnba/players/alex-harden.json"
+    },
+    {
+      "id": 302,
+      "slug": "alex-montgomery",
+      "name": "Alex Montgomery",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alex-montgomery/",
+      "data_path": "/data/wnba/players/alex-montgomery.json"
+    },
+    {
+      "id": 67018,
+      "slug": "alex-wilson",
+      "name": "Alex Wilson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alex-wilson/",
+      "data_path": "/data/wnba/players/alex-wilson.json"
+    },
+    {
+      "id": 278,
+      "slug": "alexis-gray-lawson",
+      "name": "Alexis Gray-Lawson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alexis-gray-lawson/",
+      "data_path": "/data/wnba/players/alexis-gray-lawson.json"
+    },
+    {
+      "id": 21,
+      "slug": "alexis-hornbuckle",
+      "name": "Alexis Hornbuckle",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alexis-hornbuckle/",
+      "data_path": "/data/wnba/players/alexis-hornbuckle.json"
+    },
+    {
+      "id": 497,
+      "slug": "alexis-jones",
+      "name": "Alexis Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alexis-jones/",
+      "data_path": "/data/wnba/players/alexis-jones.json"
+    },
+    {
+      "id": 504,
+      "slug": "alexis-prince",
+      "name": "Alexis Prince",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alexis-prince/",
+      "data_path": "/data/wnba/players/alexis-prince.json"
+    },
+    {
+      "id": 99338,
+      "slug": "alicia-florez",
+      "name": "Alicia Florez",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alicia-florez/",
+      "data_path": "/data/wnba/players/alicia-florez.json"
+    },
+    {
+      "id": 245094,
+      "slug": "alicia-florez-245094",
+      "name": "Alicia Florez",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/alicia-florez-245094/",
+      "data_path": "/data/wnba/players/alicia-florez-245094.json"
+    },
+    {
+      "id": 716,
+      "slug": "alissa-pili",
+      "name": "Alissa Pili",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/alissa-pili/",
+      "data_path": "/data/wnba/players/alissa-pili.json"
+    },
+    {
+      "id": 676,
+      "slug": "aliyah-boston",
+      "name": "Aliyah Boston",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/aliyah-boston/",
+      "data_path": "/data/wnba/players/aliyah-boston.json"
+    },
+    {
+      "id": 48,
+      "slug": "allie-quigley",
+      "name": "Allie Quigley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/allie-quigley/",
+      "data_path": "/data/wnba/players/allie-quigley.json"
+    },
+    {
+      "id": 498,
+      "slug": "allisha-gray",
+      "name": "Allisha Gray",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/allisha-gray/",
+      "data_path": "/data/wnba/players/allisha-gray.json"
+    },
+    {
+      "id": 253,
+      "slug": "allison-hightower",
+      "name": "Allison Hightower",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/allison-hightower/",
+      "data_path": "/data/wnba/players/allison-hightower.json"
+    },
+    {
+      "id": 407,
+      "slug": "ally-malott",
+      "name": "Ally Malott",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ally-malott/",
+      "data_path": "/data/wnba/players/ally-malott.json"
+    },
+    {
+      "id": 311,
+      "slug": "alysha-clark",
+      "name": "Alysha Clark",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/alysha-clark/",
+      "data_path": "/data/wnba/players/alysha-clark.json"
+    },
+    {
+      "id": 373,
+      "slug": "alyssa-thomas",
+      "name": "Alyssa Thomas",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/alyssa-thomas/",
+      "data_path": "/data/wnba/players/alyssa-thomas.json"
+    },
+    {
+      "id": 430,
+      "slug": "amanda-zahui-b",
+      "name": "Amanda Zahui B.",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/amanda-zahui-b/",
+      "data_path": "/data/wnba/players/amanda-zahui-b.json"
+    },
+    {
+      "id": 281,
+      "slug": "amber-harris",
+      "name": "Amber Harris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/amber-harris/",
+      "data_path": "/data/wnba/players/amber-harris.json"
+    },
+    {
+      "id": 114,
+      "slug": "amber-holt",
+      "name": "Amber Holt",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/amber-holt/",
+      "data_path": "/data/wnba/players/amber-holt.json"
+    },
+    {
+      "id": 639,
+      "slug": "amy-atwell",
+      "name": "Amy Atwell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/amy-atwell/",
+      "data_path": "/data/wnba/players/amy-atwell.json"
+    },
+    {
+      "id": 783,
+      "slug": "amy-okonkwo",
+      "name": "Amy Okonkwo",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/amy-okonkwo/",
+      "data_path": "/data/wnba/players/amy-okonkwo.json"
+    },
+    {
+      "id": 444,
+      "slug": "ana-dabovic",
+      "name": "Ana Dabovic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ana-dabovic/",
+      "data_path": "/data/wnba/players/ana-dabovic.json"
+    },
+    {
+      "id": 739,
+      "slug": "anastasiia-olairi-kosu",
+      "name": "Anastasiia Olairi Kosu",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/anastasiia-olairi-kosu/",
+      "data_path": "/data/wnba/players/anastasiia-olairi-kosu.json"
+    },
+    {
+      "id": 263,
+      "slug": "andrea-riley",
+      "name": "Andrea Riley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/andrea-riley/",
+      "data_path": "/data/wnba/players/andrea-riley.json"
+    },
+    {
+      "id": 757,
+      "slug": "aneesah-morrow",
+      "name": "Aneesah Morrow",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/aneesah-morrow/",
+      "data_path": "/data/wnba/players/aneesah-morrow.json"
+    },
+    {
+      "id": 313,
+      "slug": "aneika-henry-morello",
+      "name": "Aneika Henry-Morello",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/aneika-henry-morello/",
+      "data_path": "/data/wnba/players/aneika-henry-morello.json"
+    },
+    {
+      "id": 244,
+      "slug": "anete-jekabsone-zogota",
+      "name": "Anete Jekabsone-Zogota",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/anete-jekabsone-zogota/",
+      "data_path": "/data/wnba/players/anete-jekabsone-zogota.json"
+    },
+    {
+      "id": 347,
+      "slug": "angel-goodrich",
+      "name": "Angel Goodrich",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/angel-goodrich/",
+      "data_path": "/data/wnba/players/angel-goodrich.json"
+    },
+    {
+      "id": 219,
+      "slug": "angel-mccoughtry",
+      "name": "Angel McCoughtry",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/angel-mccoughtry/",
+      "data_path": "/data/wnba/players/angel-mccoughtry.json"
+    },
+    {
+      "id": 721,
+      "slug": "angel-reese",
+      "name": "Angel Reese",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/angel-reese/",
+      "data_path": "/data/wnba/players/angel-reese.json"
+    },
+    {
+      "id": 395,
+      "slug": "angel-robinson",
+      "name": "Angel Robinson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/angel-robinson/",
+      "data_path": "/data/wnba/players/angel-robinson.json"
+    },
+    {
+      "id": 67006,
+      "slug": "angela-dugalic",
+      "name": "Angela Dugalic",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/angela-dugalic/",
+      "data_path": "/data/wnba/players/angela-dugalic.json"
+    },
+    {
+      "id": 82,
+      "slug": "ann-wauters",
+      "name": "Ann Wauters",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ann-wauters/",
+      "data_path": "/data/wnba/players/ann-wauters.json"
+    },
+    {
+      "id": 371,
+      "slug": "anna-cruz",
+      "name": "Anna Cruz",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/anna-cruz/",
+      "data_path": "/data/wnba/players/anna-cruz.json"
+    },
+    {
+      "id": 642,
+      "slug": "anneli-maley",
+      "name": "Anneli Maley",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/anneli-maley/",
+      "data_path": "/data/wnba/players/anneli-maley.json"
+    },
+    {
+      "id": 67043,
+      "slug": "antonia-delaere",
+      "name": "Antonia Delaere",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/antonia-delaere/",
+      "data_path": "/data/wnba/players/antonia-delaere.json"
+    },
+    {
+      "id": 310,
+      "slug": "april-sykes",
+      "name": "April Sykes",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/april-sykes/",
+      "data_path": "/data/wnba/players/april-sykes.json"
+    },
+    {
+      "id": 623,
+      "slug": "arella-guirantes",
+      "name": "Arella Guirantes",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/arella-guirantes/",
+      "data_path": "/data/wnba/players/arella-guirantes.json"
+    },
+    {
+      "id": 544,
+      "slug": "ariel-atkins",
+      "name": "Ariel Atkins",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/ariel-atkins/",
+      "data_path": "/data/wnba/players/ariel-atkins.json"
+    },
+    {
+      "id": 552,
+      "slug": "arike-ogunbowale",
+      "name": "Arike Ogunbowale",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/arike-ogunbowale/",
+      "data_path": "/data/wnba/players/arike-ogunbowale.json"
+    },
+    {
+      "id": 155,
+      "slug": "armintie-herrington",
+      "name": "Armintie Herrington",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/armintie-herrington/",
+      "data_path": "/data/wnba/players/armintie-herrington.json"
+    },
+    {
+      "id": 134,
+      "slug": "ashley-robinson",
+      "name": "Ashley Robinson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ashley-robinson/",
+      "data_path": "/data/wnba/players/ashley-robinson.json"
+    },
+    {
+      "id": 224,
+      "slug": "ashley-walker",
+      "name": "Ashley Walker",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ashley-walker/",
+      "data_path": "/data/wnba/players/ashley-walker.json"
+    },
+    {
+      "id": 67147,
+      "slug": "ashlon-jackson",
+      "name": "Ashlon Jackson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/ashlon-jackson/",
+      "data_path": "/data/wnba/players/ashlon-jackson.json"
+    },
+    {
+      "id": 74886,
+      "slug": "ashten-prechtel",
+      "name": "Ashten Prechtel",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/ashten-prechtel/",
+      "data_path": "/data/wnba/players/ashten-prechtel.json"
+    },
+    {
+      "id": 380,
+      "slug": "asia-taylor",
+      "name": "Asia Taylor",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/asia-taylor/",
+      "data_path": "/data/wnba/players/asia-taylor.json"
+    },
+    {
+      "id": 113,
+      "slug": "asjha-jones",
+      "name": "Asjha Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/asjha-jones/",
+      "data_path": "/data/wnba/players/asjha-jones.json"
+    },
+    {
+      "id": 404,
+      "slug": "astou-ndour-fall",
+      "name": "Astou Ndour-Fall",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/astou-ndour-fall/",
+      "data_path": "/data/wnba/players/astou-ndour-fall.json"
+    },
+    {
+      "id": 67044,
+      "slug": "aubrey-griffin",
+      "name": "Aubrey Griffin",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/aubrey-griffin/",
+      "data_path": "/data/wnba/players/aubrey-griffin.json"
+    },
+    {
+      "id": 325,
+      "slug": "avery-warley-talbert",
+      "name": "Avery Warley-Talbert",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/avery-warley-talbert/",
+      "data_path": "/data/wnba/players/avery-warley-talbert.json"
+    },
+    {
+      "id": 67076,
+      "slug": "awa-fam",
+      "name": "Awa Fam",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/awa-fam/",
+      "data_path": "/data/wnba/players/awa-fam.json"
+    },
+    {
+      "id": 621,
+      "slug": "awak-kuier",
+      "name": "Awak Kuier",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/awak-kuier/",
+      "data_path": "/data/wnba/players/awak-kuier.json"
+    },
+    {
+      "id": 742,
+      "slug": "aziaha-james",
+      "name": "Aziaha James",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/aziaha-james/",
+      "data_path": "/data/wnba/players/aziaha-james.json"
+    },
+    {
+      "id": 525,
+      "slug": "azura-stevens",
+      "name": "Azura Stevens",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/azura-stevens/",
+      "data_path": "/data/wnba/players/azura-stevens.json"
+    },
+    {
+      "id": 67109,
+      "slug": "azzi-fudd",
+      "name": "Azzi Fudd",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/azzi-fudd/",
+      "data_path": "/data/wnba/players/azzi-fudd.json"
+    },
+    {
+      "id": 45,
+      "slug": "barbara-farris",
+      "name": "Barbara Farris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/barbara-farris/",
+      "data_path": "/data/wnba/players/barbara-farris.json"
+    },
+    {
+      "id": 597,
+      "slug": "beatrice-mompremier",
+      "name": "Beatrice Mompremier",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/beatrice-mompremier/",
+      "data_path": "/data/wnba/players/beatrice-mompremier.json"
+    },
+    {
+      "id": 79,
+      "slug": "becky-hammon",
+      "name": "Becky Hammon",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/becky-hammon/",
+      "data_path": "/data/wnba/players/becky-hammon.json"
+    },
+    {
+      "id": 239,
+      "slug": "belinda-snell",
+      "name": "Belinda Snell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/belinda-snell/",
+      "data_path": "/data/wnba/players/belinda-snell.json"
+    },
+    {
+      "id": 603,
+      "slug": "bella-alarie",
+      "name": "Bella Alarie",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/bella-alarie/",
+      "data_path": "/data/wnba/players/bella-alarie.json"
+    },
+    {
+      "id": 57,
+      "slug": "bernice-mosby",
+      "name": "Bernice Mosby",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/bernice-mosby/",
+      "data_path": "/data/wnba/players/bernice-mosby.json"
+    },
+    {
+      "id": 419,
+      "slug": "betnijah-laney-hamilton",
+      "name": "Betnijah Laney-Hamilton",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/betnijah-laney-hamilton/",
+      "data_path": "/data/wnba/players/betnijah-laney-hamilton.json"
+    },
+    {
+      "id": 102,
+      "slug": "betty-lennox",
+      "name": "Betty Lennox",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/betty-lennox/",
+      "data_path": "/data/wnba/players/betty-lennox.json"
+    },
+    {
+      "id": 469,
+      "slug": "blake-dietrick",
+      "name": "Blake Dietrick",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/blake-dietrick/",
+      "data_path": "/data/wnba/players/blake-dietrick.json"
+    },
+    {
+      "id": 468,
+      "slug": "breanna-stewart",
+      "name": "Breanna Stewart",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/breanna-stewart/",
+      "data_path": "/data/wnba/players/breanna-stewart.json"
+    },
+    {
+      "id": 777,
+      "slug": "bree-hall",
+      "name": "Bree Hall",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/bree-hall/",
+      "data_path": "/data/wnba/players/bree-hall.json"
+    },
+    {
+      "id": 384,
+      "slug": "bria-hartley",
+      "name": "Bria Hartley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/bria-hartley/",
+      "data_path": "/data/wnba/players/bria-hartley.json"
+    },
+    {
+      "id": 475,
+      "slug": "bria-holmes",
+      "name": "Bria Holmes",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/bria-holmes/",
+      "data_path": "/data/wnba/players/bria-holmes.json"
+    },
+    {
+      "id": 333,
+      "slug": "briana-butler",
+      "name": "Briana Butler",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/briana-butler/",
+      "data_path": "/data/wnba/players/briana-butler.json"
+    },
+    {
+      "id": 216,
+      "slug": "briann-january",
+      "name": "Briann January",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/briann-january/",
+      "data_path": "/data/wnba/players/briann-january.json"
+    },
+    {
+      "id": 431,
+      "slug": "brianna-kiesel",
+      "name": "Brianna Kiesel",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/brianna-kiesel/",
+      "data_path": "/data/wnba/players/brianna-kiesel.json"
+    },
+    {
+      "id": 555,
+      "slug": "brianna-turner",
+      "name": "Brianna Turner",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/brianna-turner/",
+      "data_path": "/data/wnba/players/brianna-turner.json"
+    },
+    {
+      "id": 562,
+      "slug": "bridget-carleton",
+      "name": "Bridget Carleton",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/bridget-carleton/",
+      "data_path": "/data/wnba/players/bridget-carleton.json"
+    },
+    {
+      "id": 495,
+      "slug": "brionna-jones",
+      "name": "Brionna Jones",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/brionna-jones/",
+      "data_path": "/data/wnba/players/brionna-jones.json"
+    },
+    {
+      "id": 266,
+      "slug": "brittainey-raven",
+      "name": "Brittainey Raven",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/brittainey-raven/",
+      "data_path": "/data/wnba/players/brittainey-raven.json"
+    },
+    {
+      "id": 423,
+      "slug": "brittany-boyd-jones",
+      "name": "Brittany Boyd-Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/brittany-boyd-jones/",
+      "data_path": "/data/wnba/players/brittany-boyd-jones.json"
+    },
+    {
+      "id": 341,
+      "slug": "brittney-griner",
+      "name": "Brittney Griner",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/brittney-griner/",
+      "data_path": "/data/wnba/players/brittney-griner.json"
+    },
+    {
+      "id": 494,
+      "slug": "brittney-sykes",
+      "name": "Brittney Sykes",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/brittney-sykes/",
+      "data_path": "/data/wnba/players/brittney-sykes.json"
+    },
+    {
+      "id": 553,
+      "slug": "brooke-mccarty-williams",
+      "name": "Brooke McCarty-Williams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/brooke-mccarty-williams/",
+      "data_path": "/data/wnba/players/brooke-mccarty-williams.json"
+    },
+    {
+      "id": 731,
+      "slug": "caitlin-bickle",
+      "name": "Caitlin Bickle",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/caitlin-bickle/",
+      "data_path": "/data/wnba/players/caitlin-bickle.json"
+    },
+    {
+      "id": 708,
+      "slug": "caitlin-clark",
+      "name": "Caitlin Clark",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/caitlin-clark/",
+      "data_path": "/data/wnba/players/caitlin-clark.json"
+    },
+    {
+      "id": 719,
+      "slug": "cameron-brink",
+      "name": "Cameron Brink",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/cameron-brink/",
+      "data_path": "/data/wnba/players/cameron-brink.json"
+    },
+    {
+      "id": 107,
+      "slug": "camille-little",
+      "name": "Camille Little",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/camille-little/",
+      "data_path": "/data/wnba/players/camille-little.json"
+    },
+    {
+      "id": 780,
+      "slug": "camryn-taylor",
+      "name": "Camryn Taylor",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/camryn-taylor/",
+      "data_path": "/data/wnba/players/camryn-taylor.json"
+    },
+    {
+      "id": 27,
+      "slug": "candace-parker",
+      "name": "Candace Parker",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/candace-parker/",
+      "data_path": "/data/wnba/players/candace-parker.json"
+    },
+    {
+      "id": 151,
+      "slug": "candice-dupree",
+      "name": "Candice Dupree",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/candice-dupree/",
+      "data_path": "/data/wnba/players/candice-dupree.json"
+    },
+    {
+      "id": 182,
+      "slug": "candice-wiggins",
+      "name": "Candice Wiggins",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/candice-wiggins/",
+      "data_path": "/data/wnba/players/candice-wiggins.json"
+    },
+    {
+      "id": 42,
+      "slug": "cappie-pondexter",
+      "name": "Cappie Pondexter",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/cappie-pondexter/",
+      "data_path": "/data/wnba/players/cappie-pondexter.json"
+    },
+    {
+      "id": 450,
+      "slug": "carla-cortijo",
+      "name": "Carla Cortijo",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/carla-cortijo/",
+      "data_path": "/data/wnba/players/carla-cortijo.json"
+    },
+    {
+      "id": 748,
+      "slug": "carla-leite",
+      "name": "Carla Leite",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/carla-leite/",
+      "data_path": "/data/wnba/players/carla-leite.json"
+    },
+    {
+      "id": 284,
+      "slug": "carolyn-swords",
+      "name": "Carolyn Swords",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/carolyn-swords/",
+      "data_path": "/data/wnba/players/carolyn-swords.json"
+    },
+    {
+      "id": 67016,
+      "slug": "cassandre-prosper",
+      "name": "Cassandre Prosper",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/cassandre-prosper/",
+      "data_path": "/data/wnba/players/cassandre-prosper.json"
+    },
+    {
+      "id": 139,
+      "slug": "cathrine-kraayeveld",
+      "name": "Cathrine Kraayeveld",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/cathrine-kraayeveld/",
+      "data_path": "/data/wnba/players/cathrine-kraayeveld.json"
+    },
+    {
+      "id": 413,
+      "slug": "cayla-george",
+      "name": "Cayla George",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/cayla-george/",
+      "data_path": "/data/wnba/players/cayla-george.json"
+    },
+    {
+      "id": 524,
+      "slug": "cecilia-zandalasini",
+      "name": "Cecilia Zandalasini",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/cecilia-zandalasini/",
+      "data_path": "/data/wnba/players/cecilia-zandalasini.json"
+    },
+    {
+      "id": 709,
+      "slug": "celeste-taylor",
+      "name": "Celeste Taylor",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/celeste-taylor/",
+      "data_path": "/data/wnba/players/celeste-taylor.json"
+    },
+    {
+      "id": 400,
+      "slug": "celine-dumerc",
+      "name": "Celine Dumerc",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/celine-dumerc/",
+      "data_path": "/data/wnba/players/celine-dumerc.json"
+    },
+    {
+      "id": 218,
+      "slug": "chamique-holdsclaw",
+      "name": "Chamique Holdsclaw",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/chamique-holdsclaw/",
+      "data_path": "/data/wnba/players/chamique-holdsclaw.json"
+    },
+    {
+      "id": 67131,
+      "slug": "chance-gray",
+      "name": "Chance Gray",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/chance-gray/",
+      "data_path": "/data/wnba/players/chance-gray.json"
+    },
+    {
+      "id": 235,
+      "slug": "chante-black",
+      "name": "Chante Black",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/chante-black/",
+      "data_path": "/data/wnba/players/chante-black.json"
+    },
+    {
+      "id": 181,
+      "slug": "charde-houston",
+      "name": "Charde Houston",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/charde-houston/",
+      "data_path": "/data/wnba/players/charde-houston.json"
+    },
+    {
+      "id": 618,
+      "slug": "charli-collier",
+      "name": "Charli Collier",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/charli-collier/",
+      "data_path": "/data/wnba/players/charli-collier.json"
+    },
+    {
+      "id": 66951,
+      "slug": "charlisse-leger-walker",
+      "name": "Charlisse Leger-Walker",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/charlisse-leger-walker/",
+      "data_path": "/data/wnba/players/charlisse-leger-walker.json"
+    },
+    {
+      "id": 619,
+      "slug": "chelsea-dungee",
+      "name": "Chelsea Dungee",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/chelsea-dungee/",
+      "data_path": "/data/wnba/players/chelsea-dungee.json"
+    },
+    {
+      "id": 410,
+      "slug": "chelsea-gray",
+      "name": "Chelsea Gray",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/chelsea-gray/",
+      "data_path": "/data/wnba/players/chelsea-gray.json"
+    },
+    {
+      "id": 605,
+      "slug": "chennedy-carter",
+      "name": "Chennedy Carter",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/chennedy-carter/",
+      "data_path": "/data/wnba/players/chennedy-carter.json"
+    },
+    {
+      "id": 14,
+      "slug": "cheryl-ford",
+      "name": "Cheryl Ford",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/cheryl-ford/",
+      "data_path": "/data/wnba/players/cheryl-ford.json"
+    },
+    {
+      "id": 418,
+      "slug": "cheyenne-parker-tyus",
+      "name": "Cheyenne Parker-Tyus",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/cheyenne-parker-tyus/",
+      "data_path": "/data/wnba/players/cheyenne-parker-tyus.json"
+    },
+    {
+      "id": 372,
+      "slug": "chiney-ogwumike",
+      "name": "Chiney Ogwumike",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/chiney-ogwumike/",
+      "data_path": "/data/wnba/players/chiney-ogwumike.json"
+    },
+    {
+      "id": 774,
+      "slug": "chloe-bibby",
+      "name": "Chloe Bibby",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/chloe-bibby/",
+      "data_path": "/data/wnba/players/chloe-bibby.json"
+    },
+    {
+      "id": 707,
+      "slug": "christyn-williams",
+      "name": "Christyn Williams",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/christyn-williams/",
+      "data_path": "/data/wnba/players/christyn-williams.json"
+    },
+    {
+      "id": 442,
+      "slug": "cierra-burdick",
+      "name": "Cierra Burdick",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/cierra-burdick/",
+      "data_path": "/data/wnba/players/cierra-burdick.json"
+    },
+    {
+      "id": 421,
+      "slug": "clarissa-dos-santos",
+      "name": "Clarissa dos Santos",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/clarissa-dos-santos/",
+      "data_path": "/data/wnba/players/clarissa-dos-santos.json"
+    },
+    {
+      "id": 55,
+      "slug": "coco-miller",
+      "name": "Coco Miller",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/coco-miller/",
+      "data_path": "/data/wnba/players/coco-miller.json"
+    },
+    {
+      "id": 67123,
+      "slug": "costanza-verona",
+      "name": "Costanza Verona",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/costanza-verona/",
+      "data_path": "/data/wnba/players/costanza-verona.json"
+    },
+    {
+      "id": 67013,
+      "slug": "cotie-mcmahon",
+      "name": "Cotie McMahon",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/cotie-mcmahon/",
+      "data_path": "/data/wnba/players/cotie-mcmahon.json"
+    },
+    {
+      "id": 348,
+      "slug": "courtney-clements",
+      "name": "Courtney Clements",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/courtney-clements/",
+      "data_path": "/data/wnba/players/courtney-clements.json"
+    },
+    {
+      "id": 227,
+      "slug": "courtney-paris",
+      "name": "Courtney Paris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/courtney-paris/",
+      "data_path": "/data/wnba/players/courtney-paris.json"
+    },
+    {
+      "id": 285,
+      "slug": "courtney-vandersloot",
+      "name": "Courtney Vandersloot",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/courtney-vandersloot/",
+      "data_path": "/data/wnba/players/courtney-vandersloot.json"
+    },
+    {
+      "id": 456,
+      "slug": "courtney-williams",
+      "name": "Courtney Williams",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/courtney-williams/",
+      "data_path": "/data/wnba/players/courtney-williams.json"
+    },
+    {
+      "id": 445,
+      "slug": "crystal-bradford",
+      "name": "Crystal Bradford",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/crystal-bradford/",
+      "data_path": "/data/wnba/players/crystal-bradford.json"
+    },
+    {
+      "id": 599,
+      "slug": "crystal-dangerfield",
+      "name": "Crystal Dangerfield",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/crystal-dangerfield/",
+      "data_path": "/data/wnba/players/crystal-dangerfield.json"
+    },
+    {
+      "id": 58,
+      "slug": "crystal-langhorne",
+      "name": "Crystal Langhorne",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/crystal-langhorne/",
+      "data_path": "/data/wnba/players/crystal-langhorne.json"
+    },
+    {
+      "id": 379,
+      "slug": "damiris-dantas",
+      "name": "Damiris Dantas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/damiris-dantas/",
+      "data_path": "/data/wnba/players/damiris-dantas.json"
+    },
+    {
+      "id": 620,
+      "slug": "dana-evans",
+      "name": "Dana Evans",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/dana-evans/",
+      "data_path": "/data/wnba/players/dana-evans.json"
+    },
+    {
+      "id": 293,
+      "slug": "danielle-adams",
+      "name": "Danielle Adams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/danielle-adams/",
+      "data_path": "/data/wnba/players/danielle-adams.json"
+    },
+    {
+      "id": 300,
+      "slug": "danielle-mccray",
+      "name": "Danielle McCray",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/danielle-mccray/",
+      "data_path": "/data/wnba/players/danielle-mccray.json"
+    },
+    {
+      "id": 294,
+      "slug": "danielle-robinson",
+      "name": "Danielle Robinson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/danielle-robinson/",
+      "data_path": "/data/wnba/players/danielle-robinson.json"
+    },
+    {
+      "id": 67012,
+      "slug": "darianna-littlepage-buggs",
+      "name": "Darianna Littlepage-Buggs",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/darianna-littlepage-buggs/",
+      "data_path": "/data/wnba/players/darianna-littlepage-buggs.json"
+    },
+    {
+      "id": 338,
+      "slug": "davellyn-whyte",
+      "name": "Davellyn Whyte",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/davellyn-whyte/",
+      "data_path": "/data/wnba/players/davellyn-whyte.json"
+    },
+    {
+      "id": 17,
+      "slug": "deanna-nolan",
+      "name": "Deanna Nolan",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/deanna-nolan/",
+      "data_path": "/data/wnba/players/deanna-nolan.json"
+    },
+    {
+      "id": 411,
+      "slug": "dearica-hamby",
+      "name": "Dearica Hamby",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/dearica-hamby/",
+      "data_path": "/data/wnba/players/dearica-hamby.json"
+    },
+    {
+      "id": 26,
+      "slug": "delisha-milton-jones",
+      "name": "DeLisha Milton-Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/delisha-milton-jones/",
+      "data_path": "/data/wnba/players/delisha-milton-jones.json"
+    },
+    {
+      "id": 203,
+      "slug": "demya-chakheia-walker",
+      "name": "DeMya Chakheia Walker",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/demya-chakheia-walker/",
+      "data_path": "/data/wnba/players/demya-chakheia-walker.json"
+    },
+    {
+      "id": 647,
+      "slug": "destanni-henderson",
+      "name": "Destanni Henderson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/destanni-henderson/",
+      "data_path": "/data/wnba/players/destanni-henderson.json"
+    },
+    {
+      "id": 630,
+      "slug": "destiny-slocum",
+      "name": "Destiny Slocum",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/destiny-slocum/",
+      "data_path": "/data/wnba/players/destiny-slocum.json"
+    },
+    {
+      "id": 326,
+      "slug": "devereaux-peters",
+      "name": "Devereaux Peters",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/devereaux-peters/",
+      "data_path": "/data/wnba/players/devereaux-peters.json"
+    },
+    {
+      "id": 242,
+      "slug": "dewanna-bonner",
+      "name": "DeWanna Bonner",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/dewanna-bonner/",
+      "data_path": "/data/wnba/players/dewanna-bonner.json"
+    },
+    {
+      "id": 529,
+      "slug": "diamond-deshields",
+      "name": "Diamond DeShields",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/diamond-deshields/",
+      "data_path": "/data/wnba/players/diamond-deshields.json"
+    },
+    {
+      "id": 683,
+      "slug": "diamond-miller",
+      "name": "Diamond Miller",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/diamond-miller/",
+      "data_path": "/data/wnba/players/diamond-miller.json"
+    },
+    {
+      "id": 41,
+      "slug": "diana-taurasi",
+      "name": "Diana Taurasi",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/diana-taurasi/",
+      "data_path": "/data/wnba/players/diana-taurasi.json"
+    },
+    {
+      "id": 616,
+      "slug": "didi-richards",
+      "name": "DiDi Richards",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/didi-richards/",
+      "data_path": "/data/wnba/players/didi-richards.json"
+    },
+    {
+      "id": 626,
+      "slug": "dijonai-carrington",
+      "name": "DiJonai Carrington",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/dijonai-carrington/",
+      "data_path": "/data/wnba/players/dijonai-carrington.json"
+    },
+    {
+      "id": 153,
+      "slug": "dominique-canty",
+      "name": "Dominique Canty",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/dominique-canty/",
+      "data_path": "/data/wnba/players/dominique-canty.json"
+    },
+    {
+      "id": 758,
+      "slug": "dominique-malonga",
+      "name": "Dominique Malonga",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/dominique-malonga/",
+      "data_path": "/data/wnba/players/dominique-malonga.json"
+    },
+    {
+      "id": 207,
+      "slug": "doneeka-lewis",
+      "name": "Doneeka Lewis",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/doneeka-lewis/",
+      "data_path": "/data/wnba/players/doneeka-lewis.json"
+    },
+    {
+      "id": 684,
+      "slug": "dorka-juhasz",
+      "name": "Dorka Juhasz",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/dorka-juhasz/",
+      "data_path": "/data/wnba/players/dorka-juhasz.json"
+    },
+    {
+      "id": 685,
+      "slug": "dulcy-fankam-mendjiadeu",
+      "name": "Dulcy Fankam Mendjiadeu",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/dulcy-fankam-mendjiadeu/",
+      "data_path": "/data/wnba/players/dulcy-fankam-mendjiadeu.json"
+    },
+    {
+      "id": 65,
+      "slug": "ebony-hoffman",
+      "name": "Ebony Hoffman",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ebony-hoffman/",
+      "data_path": "/data/wnba/players/ebony-hoffman.json"
+    },
+    {
+      "id": 219303,
+      "slug": "elena-buenavida",
+      "name": "Elena Buenavida",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/elena-buenavida/",
+      "data_path": "/data/wnba/players/elena-buenavida.json"
+    },
+    {
+      "id": 339,
+      "slug": "elena-delle-donne",
+      "name": "Elena Delle Donne",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/elena-delle-donne/",
+      "data_path": "/data/wnba/players/elena-delle-donne.json"
+    },
+    {
+      "id": 67045,
+      "slug": "eliska-joklova",
+      "name": "Eliska Joklova",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/eliska-joklova/",
+      "data_path": "/data/wnba/players/eliska-joklova.json"
+    },
+    {
+      "id": 67163,
+      "slug": "elizabeth-balogun",
+      "name": "Elizabeth Balogun",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/elizabeth-balogun/",
+      "data_path": "/data/wnba/players/elizabeth-balogun.json"
+    },
+    {
+      "id": 749,
+      "slug": "elizabeth-kitley",
+      "name": "Elizabeth Kitley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/elizabeth-kitley/",
+      "data_path": "/data/wnba/players/elizabeth-kitley.json"
+    },
+    {
+      "id": 409,
+      "slug": "elizabeth-williams",
+      "name": "Elizabeth Williams",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/elizabeth-williams/",
+      "data_path": "/data/wnba/players/elizabeth-williams.json"
+    },
+    {
+      "id": 99367,
+      "slug": "emese-hof",
+      "name": "Emese Hof",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/emese-hof/",
+      "data_path": "/data/wnba/players/emese-hof.json"
+    },
+    {
+      "id": 648,
+      "slug": "emily-engstler",
+      "name": "Emily Engstler",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/emily-engstler/",
+      "data_path": "/data/wnba/players/emily-engstler.json"
+    },
+    {
+      "id": 503,
+      "slug": "emma-cannon",
+      "name": "Emma Cannon",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/emma-cannon/",
+      "data_path": "/data/wnba/players/emma-cannon.json"
+    },
+    {
+      "id": 67040,
+      "slug": "emma-cechova",
+      "name": "Emma Cechova",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/emma-cechova/",
+      "data_path": "/data/wnba/players/emma-cechova.json"
+    },
+    {
+      "id": 352,
+      "slug": "emma-meesseman",
+      "name": "Emma Meesseman",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/emma-meesseman/",
+      "data_path": "/data/wnba/players/emma-meesseman.json"
+    },
+    {
+      "id": 249,
+      "slug": "epiphanny-prince",
+      "name": "Epiphanny Prince",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/epiphanny-prince/",
+      "data_path": "/data/wnba/players/epiphanny-prince.json"
+    },
+    {
+      "id": 512,
+      "slug": "erica-mccall",
+      "name": "Erica McCall",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/erica-mccall/",
+      "data_path": "/data/wnba/players/erica-mccall.json"
+    },
+    {
+      "id": 425,
+      "slug": "erica-wheeler",
+      "name": "Erica Wheeler",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/erica-wheeler/",
+      "data_path": "/data/wnba/players/erica-wheeler.json"
+    },
+    {
+      "id": 190,
+      "slug": "erika-de-souza",
+      "name": "Erika de Souza",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/erika-de-souza/",
+      "data_path": "/data/wnba/players/erika-de-souza.json"
+    },
+    {
+      "id": 206,
+      "slug": "erin-phillips",
+      "name": "Erin Phillips",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/erin-phillips/",
+      "data_path": "/data/wnba/players/erin-phillips.json"
+    },
+    {
+      "id": 141,
+      "slug": "erin-thorn",
+      "name": "Erin Thorn",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/erin-thorn/",
+      "data_path": "/data/wnba/players/erin-thorn.json"
+    },
+    {
+      "id": 145,
+      "slug": "erlana-larkins",
+      "name": "Erlana Larkins",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/erlana-larkins/",
+      "data_path": "/data/wnba/players/erlana-larkins.json"
+    },
+    {
+      "id": 144,
+      "slug": "essence-carson",
+      "name": "Essence Carson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/essence-carson/",
+      "data_path": "/data/wnba/players/essence-carson.json"
+    },
+    {
+      "id": 470,
+      "slug": "evgeniia-belyakova",
+      "name": "Evgeniia Belyakova",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/evgeniia-belyakova/",
+      "data_path": "/data/wnba/players/evgeniia-belyakova.json"
+    },
+    {
+      "id": 304,
+      "slug": "ewelina-kobryn",
+      "name": "Ewelina Kobryn",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ewelina-kobryn/",
+      "data_path": "/data/wnba/players/ewelina-kobryn.json"
+    },
+    {
+      "id": 590,
+      "slug": "ezi-magbegor",
+      "name": "Ezi Magbegor",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/ezi-magbegor/",
+      "data_path": "/data/wnba/players/ezi-magbegor.json"
+    },
+    {
+      "id": 732,
+      "slug": "ezinne-kalu",
+      "name": "Ezinne Kalu",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ezinne-kalu/",
+      "data_path": "/data/wnba/players/ezinne-kalu.json"
+    },
+    {
+      "id": 344,
+      "slug": "farhiya-abdi",
+      "name": "Farhiya Abdi",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/farhiya-abdi/",
+      "data_path": "/data/wnba/players/farhiya-abdi.json"
+    },
+    {
+      "id": 67080,
+      "slug": "flaujae-johnson",
+      "name": "Flau'jae Johnson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/flaujae-johnson/",
+      "data_path": "/data/wnba/players/flaujae-johnson.json"
+    },
+    {
+      "id": 67186,
+      "slug": "frieda-buhner",
+      "name": "Frieda Buhner",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/frieda-buhner/",
+      "data_path": "/data/wnba/players/frieda-buhner.json"
+    },
+    {
+      "id": 528,
+      "slug": "gabby-williams",
+      "name": "Gabby Williams",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/gabby-williams/",
+      "data_path": "/data/wnba/players/gabby-williams.json"
+    },
+    {
+      "id": 67027,
+      "slug": "gabriela-jaquez",
+      "name": "Gabriela Jaquez",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/gabriela-jaquez/",
+      "data_path": "/data/wnba/players/gabriela-jaquez.json"
+    },
+    {
+      "id": 387,
+      "slug": "gennifer-brandon",
+      "name": "Gennifer Brandon",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/gennifer-brandon/",
+      "data_path": "/data/wnba/players/gennifer-brandon.json"
+    },
+    {
+      "id": 738,
+      "slug": "georgia-amoore",
+      "name": "Georgia Amoore",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/georgia-amoore/",
+      "data_path": "/data/wnba/players/georgia-amoore.json"
+    },
+    {
+      "id": 66949,
+      "slug": "gianna-kneepkens",
+      "name": "Gianna Kneepkens",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/gianna-kneepkens/",
+      "data_path": "/data/wnba/players/gianna-kneepkens.json"
+    },
+    {
+      "id": 322,
+      "slug": "glory-johnson",
+      "name": "Glory Johnson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/glory-johnson/",
+      "data_path": "/data/wnba/players/glory-johnson.json"
+    },
+    {
+      "id": 678,
+      "slug": "grace-berger",
+      "name": "Grace Berger",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/grace-berger/",
+      "data_path": "/data/wnba/players/grace-berger.json"
+    },
+    {
+      "id": 67088,
+      "slug": "grace-vanslooten",
+      "name": "Grace VanSlooten",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/grace-vanslooten/",
+      "data_path": "/data/wnba/players/grace-vanslooten.json"
+    },
+    {
+      "id": 752,
+      "slug": "hailey-van-lith",
+      "name": "Hailey Van Lith",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/hailey-van-lith/",
+      "data_path": "/data/wnba/players/hailey-van-lith.json"
+    },
+    {
+      "id": 689,
+      "slug": "haley-jones",
+      "name": "Haley Jones",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/haley-jones/",
+      "data_path": "/data/wnba/players/haley-jones.json"
+    },
+    {
+      "id": 477,
+      "slug": "haley-peters",
+      "name": "Haley Peters",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/haley-peters/",
+      "data_path": "/data/wnba/players/haley-peters.json"
+    },
+    {
+      "id": 566,
+      "slug": "han-xu",
+      "name": "Han Xu",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/han-xu/",
+      "data_path": "/data/wnba/players/han-xu.json"
+    },
+    {
+      "id": 66999,
+      "slug": "holly-winterburn",
+      "name": "Holly Winterburn",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/holly-winterburn/",
+      "data_path": "/data/wnba/players/holly-winterburn.json"
+    },
+    {
+      "id": 672,
+      "slug": "iliana-rupert",
+      "name": "Iliana Rupert",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/iliana-rupert/",
+      "data_path": "/data/wnba/players/iliana-rupert.json"
+    },
+    {
+      "id": 467,
+      "slug": "imani-mcgee-stafford",
+      "name": "Imani McGee-Stafford",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/imani-mcgee-stafford/",
+      "data_path": "/data/wnba/players/imani-mcgee-stafford.json"
+    },
+    {
+      "id": 66990,
+      "slug": "indya-nivar",
+      "name": "Indya Nivar",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/indya-nivar/",
+      "data_path": "/data/wnba/players/indya-nivar.json"
+    },
+    {
+      "id": 455,
+      "slug": "isabelle-harrison",
+      "name": "Isabelle Harrison",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/isabelle-harrison/",
+      "data_path": "/data/wnba/players/isabelle-harrison.json"
+    },
+    {
+      "id": 66980,
+      "slug": "isobel-borlase",
+      "name": "Isobel Borlase",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/isobel-borlase/",
+      "data_path": "/data/wnba/players/isobel-borlase.json"
+    },
+    {
+      "id": 688,
+      "slug": "ivana-dojkic",
+      "name": "Ivana Dojkic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ivana-dojkic/",
+      "data_path": "/data/wnba/players/ivana-dojkic.json"
+    },
+    {
+      "id": 109,
+      "slug": "ivory-latta",
+      "name": "Ivory Latta",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ivory-latta/",
+      "data_path": "/data/wnba/players/ivory-latta.json"
+    },
+    {
+      "id": 103,
+      "slug": "iziane-castro",
+      "name": "Iziane Castro",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/iziane-castro/",
+      "data_path": "/data/wnba/players/iziane-castro.json"
+    },
+    {
+      "id": 441,
+      "slug": "jacki-gemelos",
+      "name": "Jacki Gemelos",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jacki-gemelos/",
+      "data_path": "/data/wnba/players/jacki-gemelos.json"
+    },
+    {
+      "id": 570,
+      "slug": "jackie-young",
+      "name": "Jackie Young",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jackie-young/",
+      "data_path": "/data/wnba/players/jackie-young.json"
+    },
+    {
+      "id": 725,
+      "slug": "jacy-sheldon",
+      "name": "Jacy Sheldon",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/jacy-sheldon/",
+      "data_path": "/data/wnba/players/jacy-sheldon.json"
+    },
+    {
+      "id": 687,
+      "slug": "jade-melbourne",
+      "name": "Jade Melbourne",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jade-melbourne/",
+      "data_path": "/data/wnba/players/jade-melbourne.json"
+    },
+    {
+      "id": 722,
+      "slug": "jaelyn-brown",
+      "name": "Jaelyn Brown",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jaelyn-brown/",
+      "data_path": "/data/wnba/players/jaelyn-brown.json"
+    },
+    {
+      "id": 538,
+      "slug": "jaime-nared",
+      "name": "Jaime Nared",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jaime-nared/",
+      "data_path": "/data/wnba/players/jaime-nared.json"
+    },
+    {
+      "id": 389,
+      "slug": "jamierra-faulkner",
+      "name": "Jamierra Faulkner",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jamierra-faulkner/",
+      "data_path": "/data/wnba/players/jamierra-faulkner.json"
+    },
+    {
+      "id": 140,
+      "slug": "janel-mccarville",
+      "name": "Janel McCarville",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/janel-mccarville/",
+      "data_path": "/data/wnba/players/janel-mccarville.json"
+    },
+    {
+      "id": 770,
+      "slug": "janelle-salaun",
+      "name": "Janelle Salaun",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/janelle-salaun/",
+      "data_path": "/data/wnba/players/janelle-salaun.json"
+    },
+    {
+      "id": 282,
+      "slug": "jantel-lavender",
+      "name": "Jantel Lavender",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jantel-lavender/",
+      "data_path": "/data/wnba/players/jantel-lavender.json"
+    },
+    {
+      "id": 660,
+      "slug": "jasmine-dickey",
+      "name": "Jasmine Dickey",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jasmine-dickey/",
+      "data_path": "/data/wnba/players/jasmine-dickey.json"
+    },
+    {
+      "id": 335,
+      "slug": "jasmine-hassell",
+      "name": "Jasmine Hassell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jasmine-hassell/",
+      "data_path": "/data/wnba/players/jasmine-hassell.json"
+    },
+    {
+      "id": 365,
+      "slug": "jasmine-james",
+      "name": "Jasmine James",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jasmine-james/",
+      "data_path": "/data/wnba/players/jasmine-james.json"
+    },
+    {
+      "id": 298,
+      "slug": "jasmine-thomas",
+      "name": "Jasmine Thomas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jasmine-thomas/",
+      "data_path": "/data/wnba/players/jasmine-thomas.json"
+    },
+    {
+      "id": 622,
+      "slug": "jasmine-walker",
+      "name": "Jasmine Walker",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jasmine-walker/",
+      "data_path": "/data/wnba/players/jasmine-walker.json"
+    },
+    {
+      "id": 730,
+      "slug": "jaylyn-sherrod",
+      "name": "Jaylyn Sherrod",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jaylyn-sherrod/",
+      "data_path": "/data/wnba/players/jaylyn-sherrod.json"
+    },
+    {
+      "id": 268,
+      "slug": "jayne-appel-marinelli",
+      "name": "Jayne Appel-Marinelli",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jayne-appel-marinelli/",
+      "data_path": "/data/wnba/players/jayne-appel-marinelli.json"
+    },
+    {
+      "id": 596,
+      "slug": "jazmine-jones",
+      "name": "Jazmine Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jazmine-jones/",
+      "data_path": "/data/wnba/players/jazmine-jones.json"
+    },
+    {
+      "id": 478,
+      "slug": "jazmon-gwathmey",
+      "name": "Jazmon Gwathmey",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jazmon-gwathmey/",
+      "data_path": "/data/wnba/players/jazmon-gwathmey.json"
+    },
+    {
+      "id": 287,
+      "slug": "jeanette-pohlen-mavunga",
+      "name": "Jeanette Pohlen-Mavunga",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jeanette-pohlen-mavunga/",
+      "data_path": "/data/wnba/players/jeanette-pohlen-mavunga.json"
+    },
+    {
+      "id": 471,
+      "slug": "jelena-dubljevic",
+      "name": "Jelena Dubljevic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jelena-dubljevic/",
+      "data_path": "/data/wnba/players/jelena-dubljevic.json"
+    },
+    {
+      "id": 256,
+      "slug": "jene-morris",
+      "name": "Jene Morris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jene-morris/",
+      "data_path": "/data/wnba/players/jene-morris.json"
+    },
+    {
+      "id": 283,
+      "slug": "jenna-ohea",
+      "name": "Jenna O'Hea",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jenna-ohea/",
+      "data_path": "/data/wnba/players/jenna-ohea.json"
+    },
+    {
+      "id": 492,
+      "slug": "jennie-simms",
+      "name": "Jennie Simms",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jennie-simms/",
+      "data_path": "/data/wnba/players/jennie-simms.json"
+    },
+    {
+      "id": 435,
+      "slug": "jennifer-hamson",
+      "name": "Jennifer Hamson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jennifer-hamson/",
+      "data_path": "/data/wnba/players/jennifer-hamson.json"
+    },
+    {
+      "id": 101,
+      "slug": "jennifer-lacy",
+      "name": "Jennifer Lacy",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jennifer-lacy/",
+      "data_path": "/data/wnba/players/jennifer-lacy.json"
+    },
+    {
+      "id": 277,
+      "slug": "jessica-adair",
+      "name": "Jessica Adair",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jessica-adair/",
+      "data_path": "/data/wnba/players/jessica-adair.json"
+    },
+    {
+      "id": 301,
+      "slug": "jessica-breland",
+      "name": "Jessica Breland",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jessica-breland/",
+      "data_path": "/data/wnba/players/jessica-breland.json"
+    },
+    {
+      "id": 146,
+      "slug": "jessica-davenport",
+      "name": "Jessica Davenport",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jessica-davenport/",
+      "data_path": "/data/wnba/players/jessica-davenport.json"
+    },
+    {
+      "id": 31,
+      "slug": "jessica-moore",
+      "name": "Jessica Moore",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jessica-moore/",
+      "data_path": "/data/wnba/players/jessica-moore.json"
+    },
+    {
+      "id": 574,
+      "slug": "jessica-shepard",
+      "name": "Jessica Shepard",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jessica-shepard/",
+      "data_path": "/data/wnba/players/jessica-shepard.json"
+    },
+    {
+      "id": 437,
+      "slug": "jewell-loyd",
+      "name": "Jewell Loyd",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jewell-loyd/",
+      "data_path": "/data/wnba/players/jewell-loyd.json"
+    },
+    {
+      "id": 536,
+      "slug": "ji-su-park",
+      "name": "Ji-Su Park",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ji-su-park/",
+      "data_path": "/data/wnba/players/ji-su-park.json"
+    },
+    {
+      "id": 154,
+      "slug": "jia-perkins",
+      "name": "Jia Perkins",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jia-perkins/",
+      "data_path": "/data/wnba/players/jia-perkins.json"
+    },
+    {
+      "id": 67134,
+      "slug": "jihyun-park",
+      "name": "Jihyun Park",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jihyun-park/",
+      "data_path": "/data/wnba/players/jihyun-park.json"
+    },
+    {
+      "id": 743,
+      "slug": "jj-quinerly",
+      "name": "JJ Quinerly",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jj-quinerly/",
+      "data_path": "/data/wnba/players/jj-quinerly.json"
+    },
+    {
+      "id": 595,
+      "slug": "jocelyn-willoughby",
+      "name": "Jocelyn Willoughby",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jocelyn-willoughby/",
+      "data_path": "/data/wnba/players/jocelyn-willoughby.json"
+    },
+    {
+      "id": 118,
+      "slug": "jolene-anderson",
+      "name": "Jolene Anderson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jolene-anderson/",
+      "data_path": "/data/wnba/players/jolene-anderson.json"
+    },
+    {
+      "id": 465,
+      "slug": "jonquel-jones",
+      "name": "Jonquel Jones",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/jonquel-jones/",
+      "data_path": "/data/wnba/players/jonquel-jones.json"
+    },
+    {
+      "id": 75085,
+      "slug": "jordan-harrison",
+      "name": "Jordan Harrison",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/jordan-harrison/",
+      "data_path": "/data/wnba/players/jordan-harrison.json"
+    },
+    {
+      "id": 392,
+      "slug": "jordan-hooper",
+      "name": "Jordan Hooper",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/jordan-hooper/",
+      "data_path": "/data/wnba/players/jordan-hooper.json"
+    },
+    {
+      "id": 686,
+      "slug": "jordan-horston",
+      "name": "Jordan Horston",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jordan-horston/",
+      "data_path": "/data/wnba/players/jordan-horston.json"
+    },
+    {
+      "id": 547,
+      "slug": "jordin-canada",
+      "name": "Jordin Canada",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/jordin-canada/",
+      "data_path": "/data/wnba/players/jordin-canada.json"
+    },
+    {
+      "id": 369,
+      "slug": "joslyn-tinkle",
+      "name": "Joslyn Tinkle",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/joslyn-tinkle/",
+      "data_path": "/data/wnba/players/joslyn-tinkle.json"
+    },
+    {
+      "id": 74884,
+      "slug": "jovana-nogic",
+      "name": "Jovana Nogic",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/jovana-nogic/",
+      "data_path": "/data/wnba/players/jovana-nogic.json"
+    },
+    {
+      "id": 594,
+      "slug": "joyner-holmes",
+      "name": "Joyner Holmes",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/joyner-holmes/",
+      "data_path": "/data/wnba/players/joyner-holmes.json"
+    },
+    {
+      "id": 587,
+      "slug": "julie-allemand",
+      "name": "Julie Allemand",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/julie-allemand/",
+      "data_path": "/data/wnba/players/julie-allemand.json"
+    },
+    {
+      "id": 715,
+      "slug": "julie-vanloo",
+      "name": "Julie Vanloo",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/julie-vanloo/",
+      "data_path": "/data/wnba/players/julie-vanloo.json"
+    },
+    {
+      "id": 67148,
+      "slug": "juste-jocyte",
+      "name": "Juste Jocyte",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/juste-jocyte/",
+      "data_path": "/data/wnba/players/juste-jocyte.json"
+    },
+    {
+      "id": 66973,
+      "slug": "justine-pissott",
+      "name": "Justine Pissott",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/justine-pissott/",
+      "data_path": "/data/wnba/players/justine-pissott.json"
+    },
+    {
+      "id": 694,
+      "slug": "kadi-sissoko",
+      "name": "Kadi Sissoko",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kadi-sissoko/",
+      "data_path": "/data/wnba/players/kadi-sissoko.json"
+    },
+    {
+      "id": 499,
+      "slug": "kaela-davis",
+      "name": "Kaela Davis",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kaela-davis/",
+      "data_path": "/data/wnba/players/kaela-davis.json"
+    },
+    {
+      "id": 462,
+      "slug": "kahleah-copper",
+      "name": "Kahleah Copper",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kahleah-copper/",
+      "data_path": "/data/wnba/players/kahleah-copper.json"
+    },
+    {
+      "id": 598,
+      "slug": "kaila-charles",
+      "name": "Kaila Charles",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kaila-charles/",
+      "data_path": "/data/wnba/players/kaila-charles.json"
+    },
+    {
+      "id": 775,
+      "slug": "kaitlyn-chen",
+      "name": "Kaitlyn Chen",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kaitlyn-chen/",
+      "data_path": "/data/wnba/players/kaitlyn-chen.json"
+    },
+    {
+      "id": 269,
+      "slug": "kalana-greene",
+      "name": "Kalana Greene",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kalana-greene/",
+      "data_path": "/data/wnba/players/kalana-greene.json"
+    },
+    {
+      "id": 568,
+      "slug": "kalani-brown",
+      "name": "Kalani Brown",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kalani-brown/",
+      "data_path": "/data/wnba/players/kalani-brown.json"
+    },
+    {
+      "id": 439,
+      "slug": "kaleena-mosqueda-lewis",
+      "name": "Kaleena Mosqueda-Lewis",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kaleena-mosqueda-lewis/",
+      "data_path": "/data/wnba/players/kaleena-mosqueda-lewis.json"
+    },
+    {
+      "id": 359,
+      "slug": "kamiko-williams",
+      "name": "Kamiko Williams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kamiko-williams/",
+      "data_path": "/data/wnba/players/kamiko-williams.json"
+    },
+    {
+      "id": 726,
+      "slug": "kamilla-cardoso",
+      "name": "Kamilla Cardoso",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/kamilla-cardoso/",
+      "data_path": "/data/wnba/players/kamilla-cardoso.json"
+    },
+    {
+      "id": 15,
+      "slug": "kara-braxton",
+      "name": "Kara Braxton",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kara-braxton/",
+      "data_path": "/data/wnba/players/kara-braxton.json"
+    },
+    {
+      "id": 67096,
+      "slug": "kara-dunn",
+      "name": "Kara Dunn",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kara-dunn/",
+      "data_path": "/data/wnba/players/kara-dunn.json"
+    },
+    {
+      "id": 90,
+      "slug": "kara-lawson",
+      "name": "Kara Lawson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kara-lawson/",
+      "data_path": "/data/wnba/players/kara-lawson.json"
+    },
+    {
+      "id": 755,
+      "slug": "kariata-diaby",
+      "name": "Kariata Diaby",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kariata-diaby/",
+      "data_path": "/data/wnba/players/kariata-diaby.json"
+    },
+    {
+      "id": 296,
+      "slug": "karima-christmas-kelly",
+      "name": "Karima Christmas-Kelly",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/karima-christmas-kelly/",
+      "data_path": "/data/wnba/players/karima-christmas-kelly.json"
+    },
+    {
+      "id": 541,
+      "slug": "karlie-samuelson",
+      "name": "Karlie Samuelson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/karlie-samuelson/",
+      "data_path": "/data/wnba/players/karlie-samuelson.json"
+    },
+    {
+      "id": 710,
+      "slug": "kate-martin",
+      "name": "Kate Martin",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kate-martin/",
+      "data_path": "/data/wnba/players/kate-martin.json"
+    },
+    {
+      "id": 589,
+      "slug": "kathleen-doyle",
+      "name": "Kathleen Doyle",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kathleen-doyle/",
+      "data_path": "/data/wnba/players/kathleen-doyle.json"
+    },
+    {
+      "id": 764,
+      "slug": "kathryn-westbeld",
+      "name": "Kathryn Westbeld",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kathryn-westbeld/",
+      "data_path": "/data/wnba/players/kathryn-westbeld.json"
+    },
+    {
+      "id": 68,
+      "slug": "katie-douglas",
+      "name": "Katie Douglas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/katie-douglas/",
+      "data_path": "/data/wnba/players/katie-douglas.json"
+    },
+    {
+      "id": 571,
+      "slug": "katie-lou-samuelson",
+      "name": "Katie Lou Samuelson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/katie-lou-samuelson/",
+      "data_path": "/data/wnba/players/katie-lou-samuelson.json"
+    },
+    {
+      "id": 16,
+      "slug": "katie-smith",
+      "name": "Katie Smith",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/katie-smith/",
+      "data_path": "/data/wnba/players/katie-smith.json"
+    },
+    {
+      "id": 337,
+      "slug": "kayla-alexander",
+      "name": "Kayla Alexander",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kayla-alexander/",
+      "data_path": "/data/wnba/players/kayla-alexander.json"
+    },
+    {
+      "id": 374,
+      "slug": "kayla-mcbride",
+      "name": "Kayla McBride",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kayla-mcbride/",
+      "data_path": "/data/wnba/players/kayla-mcbride.json"
+    },
+    {
+      "id": 289,
+      "slug": "kayla-pedersen",
+      "name": "Kayla Pedersen",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kayla-pedersen/",
+      "data_path": "/data/wnba/players/kayla-pedersen.json"
+    },
+    {
+      "id": 406,
+      "slug": "kayla-thornton",
+      "name": "Kayla Thornton",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kayla-thornton/",
+      "data_path": "/data/wnba/players/kayla-thornton.json"
+    },
+    {
+      "id": 458,
+      "slug": "keisha-hampton",
+      "name": "Keisha Hampton",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/keisha-hampton/",
+      "data_path": "/data/wnba/players/keisha-hampton.json"
+    },
+    {
+      "id": 360,
+      "slug": "kelly-faris",
+      "name": "Kelly Faris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kelly-faris/",
+      "data_path": "/data/wnba/players/kelly-faris.json"
+    },
+    {
+      "id": 40,
+      "slug": "kelly-miller",
+      "name": "Kelly Miller",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kelly-miller/",
+      "data_path": "/data/wnba/players/kelly-miller.json"
+    },
+    {
+      "id": 133,
+      "slug": "kelly-santos",
+      "name": "Kelly Santos",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kelly-santos/",
+      "data_path": "/data/wnba/players/kelly-santos.json"
+    },
+    {
+      "id": 358,
+      "slug": "kelsey-bone",
+      "name": "Kelsey Bone",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kelsey-bone/",
+      "data_path": "/data/wnba/players/kelsey-bone.json"
+    },
+    {
+      "id": 252,
+      "slug": "kelsey-griffin",
+      "name": "Kelsey Griffin",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kelsey-griffin/",
+      "data_path": "/data/wnba/players/kelsey-griffin.json"
+    },
+    {
+      "id": 533,
+      "slug": "kelsey-mitchell",
+      "name": "Kelsey Mitchell",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/kelsey-mitchell/",
+      "data_path": "/data/wnba/players/kelsey-mitchell.json"
+    },
+    {
+      "id": 488,
+      "slug": "kelsey-plum",
+      "name": "Kelsey Plum",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kelsey-plum/",
+      "data_path": "/data/wnba/players/kelsey-plum.json"
+    },
+    {
+      "id": 576,
+      "slug": "kennedy-burke",
+      "name": "Kennedy Burke",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/kennedy-burke/",
+      "data_path": "/data/wnba/players/kennedy-burke.json"
+    },
+    {
+      "id": 119,
+      "slug": "ketia-swanier",
+      "name": "Ketia Swanier",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ketia-swanier/",
+      "data_path": "/data/wnba/players/ketia-swanier.json"
+    },
+    {
+      "id": 546,
+      "slug": "kia-nurse",
+      "name": "Kia Nurse",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/kia-nurse/",
+      "data_path": "/data/wnba/players/kia-nurse.json"
+    },
+    {
+      "id": 243,
+      "slug": "kia-vaughn",
+      "name": "Kia Vaughn",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kia-vaughn/",
+      "data_path": "/data/wnba/players/kia-vaughn.json"
+    },
+    {
+      "id": 422,
+      "slug": "kiah-stokes",
+      "name": "Kiah Stokes",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kiah-stokes/",
+      "data_path": "/data/wnba/players/kiah-stokes.json"
+    },
+    {
+      "id": 631,
+      "slug": "kiana-williams",
+      "name": "Kiana Williams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kiana-williams/",
+      "data_path": "/data/wnba/players/kiana-williams.json"
+    },
+    {
+      "id": 561,
+      "slug": "kiara-leslie",
+      "name": "Kiara Leslie",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kiara-leslie/",
+      "data_path": "/data/wnba/players/kiara-leslie.json"
+    },
+    {
+      "id": 636,
+      "slug": "kierstan-bell",
+      "name": "Kierstan Bell",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kierstan-bell/",
+      "data_path": "/data/wnba/players/kierstan-bell.json"
+    },
+    {
+      "id": 735,
+      "slug": "kiki-iriafen",
+      "name": "Kiki Iriafen",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/kiki-iriafen/",
+      "data_path": "/data/wnba/players/kiki-iriafen.json"
+    },
+    {
+      "id": 67178,
+      "slug": "kiki-rice",
+      "name": "Kiki Rice",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/kiki-rice/",
+      "data_path": "/data/wnba/players/kiki-rice.json"
+    },
+    {
+      "id": 560,
+      "slug": "kim-mestdagh",
+      "name": "Kim Mestdagh",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kim-mestdagh/",
+      "data_path": "/data/wnba/players/kim-mestdagh.json"
+    },
+    {
+      "id": 767,
+      "slug": "kitija-laksa",
+      "name": "Kitija Laksa",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kitija-laksa/",
+      "data_path": "/data/wnba/players/kitija-laksa.json"
+    },
+    {
+      "id": 106,
+      "slug": "kristen-mann",
+      "name": "Kristen Mann",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kristen-mann/",
+      "data_path": "/data/wnba/players/kristen-mann.json"
+    },
+    {
+      "id": 228,
+      "slug": "kristi-toliver",
+      "name": "Kristi Toliver",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kristi-toliver/",
+      "data_path": "/data/wnba/players/kristi-toliver.json"
+    },
+    {
+      "id": 563,
+      "slug": "kristine-anigwe",
+      "name": "Kristine Anigwe",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kristine-anigwe/",
+      "data_path": "/data/wnba/players/kristine-anigwe.json"
+    },
+    {
+      "id": 656,
+      "slug": "kristy-wallace",
+      "name": "Kristy Wallace",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kristy-wallace/",
+      "data_path": "/data/wnba/players/kristy-wallace.json"
+    },
+    {
+      "id": 280,
+      "slug": "krystal-thomas",
+      "name": "Krystal Thomas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/krystal-thomas/",
+      "data_path": "/data/wnba/players/krystal-thomas.json"
+    },
+    {
+      "id": 747,
+      "slug": "kyara-linskens",
+      "name": "Kyara Linskens",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/kyara-linskens/",
+      "data_path": "/data/wnba/players/kyara-linskens.json"
+    },
+    {
+      "id": 593,
+      "slug": "kylee-shook",
+      "name": "Kylee Shook",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/kylee-shook/",
+      "data_path": "/data/wnba/players/kylee-shook.json"
+    },
+    {
+      "id": 690,
+      "slug": "laeticia-amihere",
+      "name": "Laeticia Amihere",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/laeticia-amihere/",
+      "data_path": "/data/wnba/players/laeticia-amihere.json"
+    },
+    {
+      "id": 47,
+      "slug": "latoya-sanders",
+      "name": "LaToya Sanders",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/latoya-sanders/",
+      "data_path": "/data/wnba/players/latoya-sanders.json"
+    },
+    {
+      "id": 94,
+      "slug": "laura-harper",
+      "name": "Laura Harper",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/laura-harper/",
+      "data_path": "/data/wnba/players/laura-harper.json"
+    },
+    {
+      "id": 67169,
+      "slug": "laura-juskaite",
+      "name": "Laura Juskaite",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/laura-juskaite/",
+      "data_path": "/data/wnba/players/laura-juskaite.json"
+    },
+    {
+      "id": 67002,
+      "slug": "lauren-betts",
+      "name": "Lauren Betts",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/lauren-betts/",
+      "data_path": "/data/wnba/players/lauren-betts.json"
+    },
+    {
+      "id": 126,
+      "slug": "lauren-jackson",
+      "name": "Lauren Jackson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lauren-jackson/",
+      "data_path": "/data/wnba/players/lauren-jackson.json"
+    },
+    {
+      "id": 61,
+      "slug": "laurie-koehn",
+      "name": "Laurie Koehn",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/laurie-koehn/",
+      "data_path": "/data/wnba/players/laurie-koehn.json"
+    },
+    {
+      "id": 336,
+      "slug": "layshia-clarendon",
+      "name": "Layshia Clarendon",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/layshia-clarendon/",
+      "data_path": "/data/wnba/players/layshia-clarendon.json"
+    },
+    {
+      "id": 46,
+      "slug": "lecoe-willingham",
+      "name": "Le'coe Willingham",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lecoe-willingham/",
+      "data_path": "/data/wnba/players/lecoe-willingham.json"
+    },
+    {
+      "id": 592,
+      "slug": "leaonna-odom",
+      "name": "Leaonna Odom",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/leaonna-odom/",
+      "data_path": "/data/wnba/players/leaonna-odom.json"
+    },
+    {
+      "id": 675,
+      "slug": "leigha-brown",
+      "name": "Leigha Brown",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/leigha-brown/",
+      "data_path": "/data/wnba/players/leigha-brown.json"
+    },
+    {
+      "id": 773,
+      "slug": "leila-lacan",
+      "name": "Leila Lacan",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/leila-lacan/",
+      "data_path": "/data/wnba/players/leila-lacan.json"
+    },
+    {
+      "id": 147,
+      "slug": "leilani-mitchell",
+      "name": "Leilani Mitchell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/leilani-mitchell/",
+      "data_path": "/data/wnba/players/leilani-mitchell.json"
+    },
+    {
+      "id": 712,
+      "slug": "leonie-fiebich",
+      "name": "Leonie Fiebich",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/leonie-fiebich/",
+      "data_path": "/data/wnba/players/leonie-fiebich.json"
+    },
+    {
+      "id": 549,
+      "slug": "leticia-romero",
+      "name": "Leticia Romero",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/leticia-romero/",
+      "data_path": "/data/wnba/players/leticia-romero.json"
+    },
+    {
+      "id": 766,
+      "slug": "lexi-held",
+      "name": "Lexi Held",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/lexi-held/",
+      "data_path": "/data/wnba/players/lexi-held.json"
+    },
+    {
+      "id": 539,
+      "slug": "lexie-brown",
+      "name": "Lexie Brown",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lexie-brown/",
+      "data_path": "/data/wnba/players/lexie-brown.json"
+    },
+    {
+      "id": 649,
+      "slug": "lexie-hull",
+      "name": "Lexie Hull",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/lexie-hull/",
+      "data_path": "/data/wnba/players/lexie-hull.json"
+    },
+    {
+      "id": 679,
+      "slug": "li-meng",
+      "name": "Li Meng",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/li-meng/",
+      "data_path": "/data/wnba/players/li-meng.json"
+    },
+    {
+      "id": 668,
+      "slug": "li-yueru",
+      "name": "Li Yueru",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/li-yueru/",
+      "data_path": "/data/wnba/players/li-yueru.json"
+    },
+    {
+      "id": 768,
+      "slug": "liatu-king",
+      "name": "Liatu King",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/liatu-king/",
+      "data_path": "/data/wnba/players/liatu-king.json"
+    },
+    {
+      "id": 521,
+      "slug": "lindsay-allen",
+      "name": "Lindsay Allen",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lindsay-allen/",
+      "data_path": "/data/wnba/players/lindsay-allen.json"
+    },
+    {
+      "id": 115,
+      "slug": "lindsay-whalen",
+      "name": "Lindsay Whalen",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lindsay-whalen/",
+      "data_path": "/data/wnba/players/lindsay-whalen.json"
+    },
+    {
+      "id": 223,
+      "slug": "lindsay-wisdom-hylton",
+      "name": "Lindsay Wisdom-Hylton",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lindsay-wisdom-hylton/",
+      "data_path": "/data/wnba/players/lindsay-wisdom-hylton.json"
+    },
+    {
+      "id": 183,
+      "slug": "lindsey-harding",
+      "name": "Lindsey Harding",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lindsey-harding/",
+      "data_path": "/data/wnba/players/lindsey-harding.json"
+    },
+    {
+      "id": 362,
+      "slug": "lindsey-moore",
+      "name": "Lindsey Moore",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lindsey-moore/",
+      "data_path": "/data/wnba/players/lindsey-moore.json"
+    },
+    {
+      "id": 530,
+      "slug": "linnae-harper",
+      "name": "Linnae Harper",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/linnae-harper/",
+      "data_path": "/data/wnba/players/linnae-harper.json"
+    },
+    {
+      "id": 290,
+      "slug": "liz-cambage",
+      "name": "Liz Cambage",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/liz-cambage/",
+      "data_path": "/data/wnba/players/liz-cambage.json"
+    },
+    {
+      "id": 142,
+      "slug": "loree-moore",
+      "name": "Loree Moore",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/loree-moore/",
+      "data_path": "/data/wnba/players/loree-moore.json"
+    },
+    {
+      "id": 655,
+      "slug": "lorela-cubaj",
+      "name": "Lorela Cubaj",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lorela-cubaj/",
+      "data_path": "/data/wnba/players/lorela-cubaj.json"
+    },
+    {
+      "id": 737,
+      "slug": "lucy-olsen",
+      "name": "Lucy Olsen",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/lucy-olsen/",
+      "data_path": "/data/wnba/players/lucy-olsen.json"
+    },
+    {
+      "id": 744,
+      "slug": "luisa-geiselsoder",
+      "name": "Luisa Geiselsoder",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/luisa-geiselsoder/",
+      "data_path": "/data/wnba/players/luisa-geiselsoder.json"
+    },
+    {
+      "id": 321,
+      "slug": "lynetta-kizer",
+      "name": "Lynetta Kizer",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/lynetta-kizer/",
+      "data_path": "/data/wnba/players/lynetta-kizer.json"
+    },
+    {
+      "id": 776,
+      "slug": "mackenzie-holmes",
+      "name": "Mackenzie Holmes",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/mackenzie-holmes/",
+      "data_path": "/data/wnba/players/mackenzie-holmes.json"
+    },
+    {
+      "id": 691,
+      "slug": "maddy-siegrist",
+      "name": "Maddy Siegrist",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/maddy-siegrist/",
+      "data_path": "/data/wnba/players/maddy-siegrist.json"
+    },
+    {
+      "id": 751,
+      "slug": "maddy-westbeld",
+      "name": "Maddy Westbeld",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/maddy-westbeld/",
+      "data_path": "/data/wnba/players/maddy-westbeld.json"
+    },
+    {
+      "id": 66991,
+      "slug": "madina-okot",
+      "name": "Madina Okot",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/madina-okot/",
+      "data_path": "/data/wnba/players/madina-okot.json"
+    },
+    {
+      "id": 781,
+      "slug": "madison-scott",
+      "name": "Madison Scott",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/madison-scott/",
+      "data_path": "/data/wnba/players/madison-scott.json"
+    },
+    {
+      "id": 386,
+      "slug": "maggie-lucas",
+      "name": "Maggie Lucas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/maggie-lucas/",
+      "data_path": "/data/wnba/players/maggie-lucas.json"
+    },
+    {
+      "id": 188326,
+      "slug": "mai-yamamoto",
+      "name": "Mai Yamamoto",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/mai-yamamoto/",
+      "data_path": "/data/wnba/players/mai-yamamoto.json"
+    },
+    {
+      "id": 554,
+      "slug": "maite-cazorla",
+      "name": "Maite Cazorla",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/maite-cazorla/",
+      "data_path": "/data/wnba/players/maite-cazorla.json"
+    },
+    {
+      "id": 753,
+      "slug": "makayla-timpson",
+      "name": "Makayla Timpson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/makayla-timpson/",
+      "data_path": "/data/wnba/players/makayla-timpson.json"
+    },
+    {
+      "id": 779,
+      "slug": "mamignan-toure",
+      "name": "Mamignan Toure",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/mamignan-toure/",
+      "data_path": "/data/wnba/players/mamignan-toure.json"
+    },
+    {
+      "id": 61809,
+      "slug": "maria-conde",
+      "name": "Maria Conde",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/maria-conde/",
+      "data_path": "/data/wnba/players/maria-conde.json"
+    },
+    {
+      "id": 542,
+      "slug": "maria-kliundikova",
+      "name": "Maria Kliundikova",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/maria-kliundikova/",
+      "data_path": "/data/wnba/players/maria-kliundikova.json"
+    },
+    {
+      "id": 434,
+      "slug": "marianna-tolo",
+      "name": "Marianna Tolo",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marianna-tolo/",
+      "data_path": "/data/wnba/players/marianna-tolo.json"
+    },
+    {
+      "id": 28,
+      "slug": "marie-ferdinand-harris",
+      "name": "Marie Ferdinand-Harris",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marie-ferdinand-harris/",
+      "data_path": "/data/wnba/players/marie-ferdinand-harris.json"
+    },
+    {
+      "id": 526,
+      "slug": "marie-guelich",
+      "name": "Marie Guelich",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marie-guelich/",
+      "data_path": "/data/wnba/players/marie-guelich.json"
+    },
+    {
+      "id": 67145,
+      "slug": "mariella-fasoula",
+      "name": "Mariella Fasoula",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/mariella-fasoula/",
+      "data_path": "/data/wnba/players/mariella-fasoula.json"
+    },
+    {
+      "id": 569,
+      "slug": "marina-mabrey",
+      "name": "Marina Mabrey",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/marina-mabrey/",
+      "data_path": "/data/wnba/players/marina-mabrey.json"
+    },
+    {
+      "id": 74551,
+      "slug": "marine-fauthoux",
+      "name": "Marine Fauthoux",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/marine-fauthoux/",
+      "data_path": "/data/wnba/players/marine-fauthoux.json"
+    },
+    {
+      "id": 582,
+      "slug": "marine-johannes",
+      "name": "Marine Johannes",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/marine-johannes/",
+      "data_path": "/data/wnba/players/marine-johannes.json"
+    },
+    {
+      "id": 233,
+      "slug": "marissa-coleman",
+      "name": "Marissa Coleman",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marissa-coleman/",
+      "data_path": "/data/wnba/players/marissa-coleman.json"
+    },
+    {
+      "id": 388,
+      "slug": "markeisha-gatling",
+      "name": "Markeisha Gatling",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/markeisha-gatling/",
+      "data_path": "/data/wnba/players/markeisha-gatling.json"
+    },
+    {
+      "id": 713,
+      "slug": "marquesha-davis",
+      "name": "Marquesha Davis",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marquesha-davis/",
+      "data_path": "/data/wnba/players/marquesha-davis.json"
+    },
+    {
+      "id": 67157,
+      "slug": "marta-suarez",
+      "name": "Marta Suarez",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/marta-suarez/",
+      "data_path": "/data/wnba/players/marta-suarez.json"
+    },
+    {
+      "id": 416,
+      "slug": "marta-xargay",
+      "name": "Marta Xargay",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/marta-xargay/",
+      "data_path": "/data/wnba/players/marta-xargay.json"
+    },
+    {
+      "id": 8,
+      "slug": "matee-ajavon",
+      "name": "Matee Ajavon",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/matee-ajavon/",
+      "data_path": "/data/wnba/players/matee-ajavon.json"
+    },
+    {
+      "id": 671,
+      "slug": "maya-caldwell",
+      "name": "Maya Caldwell",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/maya-caldwell/",
+      "data_path": "/data/wnba/players/maya-caldwell.json"
+    },
+    {
+      "id": 275,
+      "slug": "maya-moore",
+      "name": "Maya Moore",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/maya-moore/",
+      "data_path": "/data/wnba/players/maya-moore.json"
+    },
+    {
+      "id": 579,
+      "slug": "megan-dileo",
+      "name": "Megan DiLeo",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/megan-dileo/",
+      "data_path": "/data/wnba/players/megan-dileo.json"
+    },
+    {
+      "id": 240,
+      "slug": "megan-frazee",
+      "name": "Megan Frazee",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/megan-frazee/",
+      "data_path": "/data/wnba/players/megan-frazee.json"
+    },
+    {
+      "id": 771,
+      "slug": "megan-mcconnell",
+      "name": "Megan McConnell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/megan-mcconnell/",
+      "data_path": "/data/wnba/players/megan-mcconnell.json"
+    },
+    {
+      "id": 608,
+      "slug": "megan-walker",
+      "name": "Megan Walker",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/megan-walker/",
+      "data_path": "/data/wnba/players/megan-walker.json"
+    },
+    {
+      "id": 474,
+      "slug": "meighan-simmons",
+      "name": "Meighan Simmons",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/meighan-simmons/",
+      "data_path": "/data/wnba/players/meighan-simmons.json"
+    },
+    {
+      "id": 545,
+      "slug": "mercedes-russell",
+      "name": "Mercedes Russell",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/mercedes-russell/",
+      "data_path": "/data/wnba/players/mercedes-russell.json"
+    },
+    {
+      "id": 615,
+      "slug": "michaela-onyenwere",
+      "name": "Michaela Onyenwere",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/michaela-onyenwere/",
+      "data_path": "/data/wnba/players/michaela-onyenwere.json"
+    },
+    {
+      "id": 340,
+      "slug": "michelle-campbell",
+      "name": "Michelle Campbell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/michelle-campbell/",
+      "data_path": "/data/wnba/players/michelle-campbell.json"
+    },
+    {
+      "id": 74559,
+      "slug": "michelle-onyiah",
+      "name": "Michelle Onyiah",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/michelle-onyiah/",
+      "data_path": "/data/wnba/players/michelle-onyiah.json"
+    },
+    {
+      "id": 2,
+      "slug": "michelle-snow",
+      "name": "Michelle Snow",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/michelle-snow/",
+      "data_path": "/data/wnba/players/michelle-snow.json"
+    },
+    {
+      "id": 67155,
+      "slug": "miela-sowah",
+      "name": "Miela Sowah",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/miela-sowah/",
+      "data_path": "/data/wnba/players/miela-sowah.json"
+    },
+    {
+      "id": 601,
+      "slug": "mikiah-herbert-harrigan",
+      "name": "Mikiah Herbert Harrigan",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/mikiah-herbert-harrigan/",
+      "data_path": "/data/wnba/players/mikiah-herbert-harrigan.json"
+    },
+    {
+      "id": 7,
+      "slug": "mistie-mccray-bass",
+      "name": "Mistie McCray Bass",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/mistie-mccray-bass/",
+      "data_path": "/data/wnba/players/mistie-mccray-bass.json"
+    },
+    {
+      "id": 257,
+      "slug": "monica-wright",
+      "name": "Monica Wright",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/monica-wright/",
+      "data_path": "/data/wnba/players/monica-wright.json"
+    },
+    {
+      "id": 765,
+      "slug": "monique-akoa-makani",
+      "name": "Monique Akoa Makani",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/monique-akoa-makani/",
+      "data_path": "/data/wnba/players/monique-akoa-makani.json"
+    },
+    {
+      "id": 540,
+      "slug": "monique-billings",
+      "name": "Monique Billings",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/monique-billings/",
+      "data_path": "/data/wnba/players/monique-billings.json"
+    },
+    {
+      "id": 54,
+      "slug": "monique-currie",
+      "name": "Monique Currie",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/monique-currie/",
+      "data_path": "/data/wnba/players/monique-currie.json"
+    },
+    {
+      "id": 680,
+      "slug": "morgan-bertsch",
+      "name": "Morgan Bertsch",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/morgan-bertsch/",
+      "data_path": "/data/wnba/players/morgan-bertsch.json"
+    },
+    {
+      "id": 74882,
+      "slug": "morgan-maly",
+      "name": "Morgan Maly",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/morgan-maly/",
+      "data_path": "/data/wnba/players/morgan-maly.json"
+    },
+    {
+      "id": 464,
+      "slug": "morgan-tuck",
+      "name": "Morgan Tuck",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/morgan-tuck/",
+      "data_path": "/data/wnba/players/morgan-tuck.json"
+    },
+    {
+      "id": 476,
+      "slug": "moriah-jefferson",
+      "name": "Moriah Jefferson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/moriah-jefferson/",
+      "data_path": "/data/wnba/players/moriah-jefferson.json"
+    },
+    {
+      "id": 769,
+      "slug": "murjanatu-musa",
+      "name": "Murjanatu Musa",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/murjanatu-musa/",
+      "data_path": "/data/wnba/players/murjanatu-musa.json"
+    },
+    {
+      "id": 543,
+      "slug": "myisha-hines-allen",
+      "name": "Myisha Hines-Allen",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/myisha-hines-allen/",
+      "data_path": "/data/wnba/players/myisha-hines-allen.json"
+    },
+    {
+      "id": 140035,
+      "slug": "nadia-fingall",
+      "name": "Nadia Fingall",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/nadia-fingall/",
+      "data_path": "/data/wnba/players/nadia-fingall.json"
+    },
+    {
+      "id": 354,
+      "slug": "nadirah-mckenith",
+      "name": "Nadirah McKenith",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nadirah-mckenith/",
+      "data_path": "/data/wnba/players/nadirah-mckenith.json"
+    },
+    {
+      "id": 53,
+      "slug": "nakia-sanford",
+      "name": "Nakia Sanford",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nakia-sanford/",
+      "data_path": "/data/wnba/players/nakia-sanford.json"
+    },
+    {
+      "id": 645,
+      "slug": "nalyssa-smith",
+      "name": "NaLyssa Smith",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/nalyssa-smith/",
+      "data_path": "/data/wnba/players/nalyssa-smith.json"
+    },
+    {
+      "id": 573,
+      "slug": "napheesa-collier",
+      "name": "Napheesa Collier",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/napheesa-collier/",
+      "data_path": "/data/wnba/players/napheesa-collier.json"
+    },
+    {
+      "id": 417,
+      "slug": "natalie-achonwa",
+      "name": "Natalie Achonwa",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/natalie-achonwa/",
+      "data_path": "/data/wnba/players/natalie-achonwa.json"
+    },
+    {
+      "id": 317,
+      "slug": "natalie-novosel",
+      "name": "Natalie Novosel",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/natalie-novosel/",
+      "data_path": "/data/wnba/players/natalie-novosel.json"
+    },
+    {
+      "id": 408,
+      "slug": "natasha-cloud",
+      "name": "Natasha Cloud",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/natasha-cloud/",
+      "data_path": "/data/wnba/players/natasha-cloud.json"
+    },
+    {
+      "id": 385,
+      "slug": "natasha-howard",
+      "name": "Natasha Howard",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/natasha-howard/",
+      "data_path": "/data/wnba/players/natasha-howard.json"
+    },
+    {
+      "id": 261,
+      "slug": "natasha-lacy",
+      "name": "Natasha Lacy",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/natasha-lacy/",
+      "data_path": "/data/wnba/players/natasha-lacy.json"
+    },
+    {
+      "id": 633,
+      "slug": "natasha-mack",
+      "name": "Natasha Mack",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/natasha-mack/",
+      "data_path": "/data/wnba/players/natasha-mack.json"
+    },
+    {
+      "id": 580,
+      "slug": "natisha-hiedeman",
+      "name": "Natisha Hiedeman",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/natisha-hiedeman/",
+      "data_path": "/data/wnba/players/natisha-hiedeman.json"
+    },
+    {
+      "id": 489,
+      "slug": "nayo-raincock-ekunwe",
+      "name": "Nayo Raincock-Ekunwe",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nayo-raincock-ekunwe/",
+      "data_path": "/data/wnba/players/nayo-raincock-ekunwe.json"
+    },
+    {
+      "id": 658,
+      "slug": "naz-hillmon",
+      "name": "Naz Hillmon",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/naz-hillmon/",
+      "data_path": "/data/wnba/players/naz-hillmon.json"
+    },
+    {
+      "id": 67151,
+      "slug": "ndjakalenga-mwenentanda",
+      "name": "Ndjakalenga Mwenentanda",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ndjakalenga-mwenentanda/",
+      "data_path": "/data/wnba/players/ndjakalenga-mwenentanda.json"
+    },
+    {
+      "id": 66941,
+      "slug": "nell-angloma",
+      "name": "Nell Angloma",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/nell-angloma/",
+      "data_path": "/data/wnba/players/nell-angloma.json"
+    },
+    {
+      "id": 653,
+      "slug": "nia-clouden",
+      "name": "Nia Clouden",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nia-clouden/",
+      "data_path": "/data/wnba/players/nia-clouden.json"
+    },
+    {
+      "id": 487,
+      "slug": "nia-coffey",
+      "name": "Nia Coffey",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/nia-coffey/",
+      "data_path": "/data/wnba/players/nia-coffey.json"
+    },
+    {
+      "id": 175,
+      "slug": "nicky-anosike",
+      "name": "Nicky Anosike",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nicky-anosike/",
+      "data_path": "/data/wnba/players/nicky-anosike.json"
+    },
+    {
+      "id": 93,
+      "slug": "nicole-powell",
+      "name": "Nicole Powell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nicole-powell/",
+      "data_path": "/data/wnba/players/nicole-powell.json"
+    },
+    {
+      "id": 397,
+      "slug": "nikki-greene",
+      "name": "Nikki Greene",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nikki-greene/",
+      "data_path": "/data/wnba/players/nikki-greene.json"
+    },
+    {
+      "id": 652,
+      "slug": "nikolina-milic",
+      "name": "Nikolina Milic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nikolina-milic/",
+      "data_path": "/data/wnba/players/nikolina-milic.json"
+    },
+    {
+      "id": 309,
+      "slug": "nneka-ogwumike",
+      "name": "Nneka Ogwumike",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/nneka-ogwumike/",
+      "data_path": "/data/wnba/players/nneka-ogwumike.json"
+    },
+    {
+      "id": 177,
+      "slug": "noelle-quinn",
+      "name": "Noelle Quinn",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/noelle-quinn/",
+      "data_path": "/data/wnba/players/noelle-quinn.json"
+    },
+    {
+      "id": 67092,
+      "slug": "noemie-brochant",
+      "name": "Noemie Brochant",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/noemie-brochant/",
+      "data_path": "/data/wnba/players/noemie-brochant.json"
+    },
+    {
+      "id": 61828,
+      "slug": "nyadiew-puoch",
+      "name": "Nyadiew Puoch",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/nyadiew-puoch/",
+      "data_path": "/data/wnba/players/nyadiew-puoch.json"
+    },
+    {
+      "id": 697,
+      "slug": "nyara-sabally",
+      "name": "Nyara Sabally",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/nyara-sabally/",
+      "data_path": "/data/wnba/players/nyara-sabally.json"
+    },
+    {
+      "id": 393,
+      "slug": "odyssey-sims",
+      "name": "Odyssey Sims",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/odyssey-sims/",
+      "data_path": "/data/wnba/players/odyssey-sims.json"
+    },
+    {
+      "id": 717,
+      "slug": "olivia-epoupa",
+      "name": "Olivia Epoupa",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/olivia-epoupa/",
+      "data_path": "/data/wnba/players/olivia-epoupa.json"
+    },
+    {
+      "id": 67053,
+      "slug": "olivia-miles",
+      "name": "Olivia Miles",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/olivia-miles/",
+      "data_path": "/data/wnba/players/olivia-miles.json"
+    },
+    {
+      "id": 641,
+      "slug": "olivia-nelson-ododa",
+      "name": "Olivia Nelson-Ododa",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/olivia-nelson-ododa/",
+      "data_path": "/data/wnba/players/olivia-nelson-ododa.json"
+    },
+    {
+      "id": 165049,
+      "slug": "ornella-bankole",
+      "name": "Ornella Bankole",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/ornella-bankole/",
+      "data_path": "/data/wnba/players/ornella-bankole.json"
+    },
+    {
+      "id": 741,
+      "slug": "paige-bueckers",
+      "name": "Paige Bueckers",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/paige-bueckers/",
+      "data_path": "/data/wnba/players/paige-bueckers.json"
+    },
+    {
+      "id": 66925,
+      "slug": "pauline-astier",
+      "name": "Pauline Astier",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/pauline-astier/",
+      "data_path": "/data/wnba/players/pauline-astier.json"
+    },
+    {
+      "id": 245,
+      "slug": "penny-taylor",
+      "name": "Penny Taylor",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/penny-taylor/",
+      "data_path": "/data/wnba/players/penny-taylor.json"
+    },
+    {
+      "id": 75095,
+      "slug": "peyton-williams",
+      "name": "Peyton Williams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/peyton-williams/",
+      "data_path": "/data/wnba/players/peyton-williams.json"
+    },
+    {
+      "id": 20,
+      "slug": "plenette-pierson",
+      "name": "Plenette Pierson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/plenette-pierson/",
+      "data_path": "/data/wnba/players/plenette-pierson.json"
+    },
+    {
+      "id": 230,
+      "slug": "quanitra-hollingsworth",
+      "name": "Quanitra Hollingsworth",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/quanitra-hollingsworth/",
+      "data_path": "/data/wnba/players/quanitra-hollingsworth.json"
+    },
+    {
+      "id": 646,
+      "slug": "queen-egbo",
+      "name": "Queen Egbo",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/queen-egbo/",
+      "data_path": "/data/wnba/players/queen-egbo.json"
+    },
+    {
+      "id": 74872,
+      "slug": "quionche-carter",
+      "name": "Quionche Carter",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/quionche-carter/",
+      "data_path": "/data/wnba/players/quionche-carter.json"
+    },
+    {
+      "id": 466,
+      "slug": "rachel-banham",
+      "name": "Rachel Banham",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rachel-banham/",
+      "data_path": "/data/wnba/players/rachel-banham.json"
+    },
+    {
+      "id": 473,
+      "slug": "rachel-hollivay",
+      "name": "Rachel Hollivay",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/rachel-hollivay/",
+      "data_path": "/data/wnba/players/rachel-hollivay.json"
+    },
+    {
+      "id": 361,
+      "slug": "rachel-jarry",
+      "name": "Rachel Jarry",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/rachel-jarry/",
+      "data_path": "/data/wnba/players/rachel-jarry.json"
+    },
+    {
+      "id": 640,
+      "slug": "rae-burrell",
+      "name": "Rae Burrell",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/rae-burrell/",
+      "data_path": "/data/wnba/players/rae-burrell.json"
+    },
+    {
+      "id": 67218,
+      "slug": "raegan-beers",
+      "name": "Raegan Beers",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/raegan-beers/",
+      "data_path": "/data/wnba/players/raegan-beers.json"
+    },
+    {
+      "id": 438,
+      "slug": "ramu-tokashiki",
+      "name": "Ramu Tokashiki",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ramu-tokashiki/",
+      "data_path": "/data/wnba/players/ramu-tokashiki.json"
+    },
+    {
+      "id": 66926,
+      "slug": "raquel-carrera",
+      "name": "Raquel Carrera",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/raquel-carrera/",
+      "data_path": "/data/wnba/players/raquel-carrera.json"
+    },
+    {
+      "id": 66969,
+      "slug": "raven-johnson",
+      "name": "Raven Johnson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/raven-johnson/",
+      "data_path": "/data/wnba/players/raven-johnson.json"
+    },
+    {
+      "id": 754,
+      "slug": "rayah-marshall",
+      "name": "Rayah Marshall",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rayah-marshall/",
+      "data_path": "/data/wnba/players/rayah-marshall.json"
+    },
+    {
+      "id": 424,
+      "slug": "rebecca-allen",
+      "name": "Rebecca Allen",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rebecca-allen/",
+      "data_path": "/data/wnba/players/rebecca-allen.json"
+    },
+    {
+      "id": 663,
+      "slug": "rebekah-gardner",
+      "name": "Rebekah Gardner",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rebekah-gardner/",
+      "data_path": "/data/wnba/players/rebekah-gardner.json"
+    },
+    {
+      "id": 88,
+      "slug": "rebekkah-brunson",
+      "name": "Rebekkah Brunson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/rebekkah-brunson/",
+      "data_path": "/data/wnba/players/rebekkah-brunson.json"
+    },
+    {
+      "id": 231,
+      "slug": "renee-montgomery",
+      "name": "Renee Montgomery",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/renee-montgomery/",
+      "data_path": "/data/wnba/players/renee-montgomery.json"
+    },
+    {
+      "id": 433,
+      "slug": "reshanda-gray",
+      "name": "Reshanda Gray",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/reshanda-gray/",
+      "data_path": "/data/wnba/players/reshanda-gray.json"
+    },
+    {
+      "id": 657,
+      "slug": "rhyne-howard",
+      "name": "Rhyne Howard",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rhyne-howard/",
+      "data_path": "/data/wnba/players/rhyne-howard.json"
+    },
+    {
+      "id": 720,
+      "slug": "rickea-jackson",
+      "name": "Rickea Jackson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rickea-jackson/",
+      "data_path": "/data/wnba/players/rickea-jackson.json"
+    },
+    {
+      "id": 320,
+      "slug": "riquna-williams",
+      "name": "Riquna Williams",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/riquna-williams/",
+      "data_path": "/data/wnba/players/riquna-williams.json"
+    },
+    {
+      "id": 681,
+      "slug": "robyn-parks",
+      "name": "Robyn Parks",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/robyn-parks/",
+      "data_path": "/data/wnba/players/robyn-parks.json"
+    },
+    {
+      "id": 201,
+      "slug": "roneeka-hodges",
+      "name": "Roneeka Hodges",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/roneeka-hodges/",
+      "data_path": "/data/wnba/players/roneeka-hodges.json"
+    },
+    {
+      "id": 67007,
+      "slug": "rori-harmon",
+      "name": "Rori Harmon",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/rori-harmon/",
+      "data_path": "/data/wnba/players/rori-harmon.json"
+    },
+    {
+      "id": 651,
+      "slug": "rui-machida",
+      "name": "Rui Machida",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/rui-machida/",
+      "data_path": "/data/wnba/players/rui-machida.json"
+    },
+    {
+      "id": 78,
+      "slug": "ruth-riley",
+      "name": "Ruth Riley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ruth-riley/",
+      "data_path": "/data/wnba/players/ruth-riley.json"
+    },
+    {
+      "id": 584,
+      "slug": "ruthy-hebard",
+      "name": "Ruthy Hebard",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ruthy-hebard/",
+      "data_path": "/data/wnba/players/ruthy-hebard.json"
+    },
+    {
+      "id": 591,
+      "slug": "sabrina-ionescu",
+      "name": "Sabrina Ionescu",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/sabrina-ionescu/",
+      "data_path": "/data/wnba/players/sabrina-ionescu.json"
+    },
+    {
+      "id": 638,
+      "slug": "sam-thomas",
+      "name": "Sam Thomas",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sam-thomas/",
+      "data_path": "/data/wnba/players/sam-thomas.json"
+    },
+    {
+      "id": 323,
+      "slug": "samantha-prahalis",
+      "name": "Samantha Prahalis",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/samantha-prahalis/",
+      "data_path": "/data/wnba/players/samantha-prahalis.json"
+    },
+    {
+      "id": 483,
+      "slug": "sami-whitcomb",
+      "name": "Sami Whitcomb",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/sami-whitcomb/",
+      "data_path": "/data/wnba/players/sami-whitcomb.json"
+    },
+    {
+      "id": 6,
+      "slug": "sancho-lyttle",
+      "name": "Sancho Lyttle",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sancho-lyttle/",
+      "data_path": "/data/wnba/players/sancho-lyttle.json"
+    },
+    {
+      "id": 193,
+      "slug": "sandrine-gruda",
+      "name": "Sandrine Gruda",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sandrine-gruda/",
+      "data_path": "/data/wnba/players/sandrine-gruda.json"
+    },
+    {
+      "id": 746,
+      "slug": "sania-feagin",
+      "name": "Sania Feagin",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/sania-feagin/",
+      "data_path": "/data/wnba/players/sania-feagin.json"
+    },
+    {
+      "id": 500,
+      "slug": "saniya-chong",
+      "name": "Saniya Chong",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/saniya-chong/",
+      "data_path": "/data/wnba/players/saniya-chong.json"
+    },
+    {
+      "id": 756,
+      "slug": "saniya-rivers",
+      "name": "Saniya Rivers",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/saniya-rivers/",
+      "data_path": "/data/wnba/players/saniya-rivers.json"
+    },
+    {
+      "id": 745,
+      "slug": "sarah-ashlee-barker",
+      "name": "Sarah Ashlee Barker",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/sarah-ashlee-barker/",
+      "data_path": "/data/wnba/players/sarah-ashlee-barker.json"
+    },
+    {
+      "id": 315,
+      "slug": "sasha-goodlett",
+      "name": "Sasha Goodlett",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sasha-goodlett/",
+      "data_path": "/data/wnba/players/sasha-goodlett.json"
+    },
+    {
+      "id": 602,
+      "slug": "satou-sabally",
+      "name": "Satou Sabally",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/satou-sabally/",
+      "data_path": "/data/wnba/players/satou-sabally.json"
+    },
+    {
+      "id": 95,
+      "slug": "scholanda-dorrell",
+      "name": "Scholanda Dorrell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/scholanda-dorrell/",
+      "data_path": "/data/wnba/players/scholanda-dorrell.json"
+    },
+    {
+      "id": 176,
+      "slug": "seimone-augustus",
+      "name": "Seimone Augustus",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/seimone-augustus/",
+      "data_path": "/data/wnba/players/seimone-augustus.json"
+    },
+    {
+      "id": 9,
+      "slug": "sequoia-holmes",
+      "name": "Sequoia Holmes",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sequoia-holmes/",
+      "data_path": "/data/wnba/players/sequoia-holmes.json"
+    },
+    {
+      "id": 67200,
+      "slug": "serah-williams",
+      "name": "Serah Williams",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/serah-williams/",
+      "data_path": "/data/wnba/players/serah-williams.json"
+    },
+    {
+      "id": 723,
+      "slug": "sevgi-uzun",
+      "name": "Sevgi Uzun",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sevgi-uzun/",
+      "data_path": "/data/wnba/players/sevgi-uzun.json"
+    },
+    {
+      "id": 447,
+      "slug": "shae-kelley",
+      "name": "Shae Kelley",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shae-kelley/",
+      "data_path": "/data/wnba/players/shae-kelley.json"
+    },
+    {
+      "id": 650,
+      "slug": "shakira-austin",
+      "name": "Shakira Austin",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/shakira-austin/",
+      "data_path": "/data/wnba/players/shakira-austin.json"
+    },
+    {
+      "id": 138,
+      "slug": "shameka-christon",
+      "name": "Shameka Christon",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shameka-christon/",
+      "data_path": "/data/wnba/players/shameka-christon.json"
+    },
+    {
+      "id": 399,
+      "slug": "shanece-mckinney",
+      "name": "Shanece McKinney",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shanece-mckinney/",
+      "data_path": "/data/wnba/players/shanece-mckinney.json"
+    },
+    {
+      "id": 32,
+      "slug": "shannon-bobbitt",
+      "name": "Shannon Bobbitt",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shannon-bobbitt/",
+      "data_path": "/data/wnba/players/shannon-bobbitt.json"
+    },
+    {
+      "id": 493,
+      "slug": "shatori-walker-kimbrough",
+      "name": "Shatori Walker-Kimbrough",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/shatori-walker-kimbrough/",
+      "data_path": "/data/wnba/players/shatori-walker-kimbrough.json"
+    },
+    {
+      "id": 221,
+      "slug": "shavonte-zellous",
+      "name": "Shavonte Zellous",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shavonte-zellous/",
+      "data_path": "/data/wnba/players/shavonte-zellous.json"
+    },
+    {
+      "id": 67094,
+      "slug": "shay-ciezki",
+      "name": "Shay Ciezki",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/shay-ciezki/",
+      "data_path": "/data/wnba/players/shay-ciezki.json"
+    },
+    {
+      "id": 180,
+      "slug": "shay-murphy",
+      "name": "Shay Murphy",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shay-murphy/",
+      "data_path": "/data/wnba/players/shay-murphy.json"
+    },
+    {
+      "id": 312,
+      "slug": "shekinna-stricklen",
+      "name": "Shekinna Stricklen",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shekinna-stricklen/",
+      "data_path": "/data/wnba/players/shekinna-stricklen.json"
+    },
+    {
+      "id": 319,
+      "slug": "shenise-johnson",
+      "name": "Shenise Johnson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shenise-johnson/",
+      "data_path": "/data/wnba/players/shenise-johnson.json"
+    },
+    {
+      "id": 19,
+      "slug": "sheri-sam",
+      "name": "Sheri Sam",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sheri-sam/",
+      "data_path": "/data/wnba/players/sheri-sam.json"
+    },
+    {
+      "id": 577,
+      "slug": "shey-peddy",
+      "name": "Shey Peddy",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shey-peddy/",
+      "data_path": "/data/wnba/players/shey-peddy.json"
+    },
+    {
+      "id": 376,
+      "slug": "shoni-schimmel",
+      "name": "Shoni Schimmel",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shoni-schimmel/",
+      "data_path": "/data/wnba/players/shoni-schimmel.json"
+    },
+    {
+      "id": 132,
+      "slug": "shyra-ely-gash",
+      "name": "Shyra Ely-Gash",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/shyra-ely-gash/",
+      "data_path": "/data/wnba/players/shyra-ely-gash.json"
+    },
+    {
+      "id": 682,
+      "slug": "sika-kone",
+      "name": "Sika Kone",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/sika-kone/",
+      "data_path": "/data/wnba/players/sika-kone.json"
+    },
+    {
+      "id": 346,
+      "slug": "skylar-diggins",
+      "name": "Skylar Diggins",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/skylar-diggins/",
+      "data_path": "/data/wnba/players/skylar-diggins.json"
+    },
+    {
+      "id": 736,
+      "slug": "sonia-citron",
+      "name": "Sonia Citron",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/sonia-citron/",
+      "data_path": "/data/wnba/players/sonia-citron.json"
+    },
+    {
+      "id": 316,
+      "slug": "sonja-petrovic",
+      "name": "Sonja Petrovic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sonja-petrovic/",
+      "data_path": "/data/wnba/players/sonja-petrovic.json"
+    },
+    {
+      "id": 77,
+      "slug": "sophia-young-malcolm",
+      "name": "Sophia Young-Malcolm",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sophia-young-malcolm/",
+      "data_path": "/data/wnba/players/sophia-young-malcolm.json"
+    },
+    {
+      "id": 558,
+      "slug": "sophie-cunningham",
+      "name": "Sophie Cunningham",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/sophie-cunningham/",
+      "data_path": "/data/wnba/players/sophie-cunningham.json"
+    },
+    {
+      "id": 383,
+      "slug": "stefanie-dolson",
+      "name": "Stefanie Dolson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/stefanie-dolson/",
+      "data_path": "/data/wnba/players/stefanie-dolson.json"
+    },
+    {
+      "id": 624,
+      "slug": "stephanie-jones",
+      "name": "Stephanie Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/stephanie-jones/",
+      "data_path": "/data/wnba/players/stephanie-jones.json"
+    },
+    {
+      "id": 531,
+      "slug": "stephanie-mavunga",
+      "name": "Stephanie Mavunga",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/stephanie-mavunga/",
+      "data_path": "/data/wnba/players/stephanie-mavunga.json"
+    },
+    {
+      "id": 502,
+      "slug": "stephanie-talbot",
+      "name": "Stephanie Talbot",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/stephanie-talbot/",
+      "data_path": "/data/wnba/players/stephanie-talbot.json"
+    },
+    {
+      "id": 127,
+      "slug": "sue-bird",
+      "name": "Sue Bird",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sue-bird/",
+      "data_path": "/data/wnba/players/sue-bird.json"
+    },
+    {
+      "id": 610,
+      "slug": "sug-sutton",
+      "name": "Sug Sutton",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/sug-sutton/",
+      "data_path": "/data/wnba/players/sug-sutton.json"
+    },
+    {
+      "id": 363,
+      "slug": "sugar-rodgers",
+      "name": "Sugar Rodgers",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sugar-rodgers/",
+      "data_path": "/data/wnba/players/sugar-rodgers.json"
+    },
+    {
+      "id": 225,
+      "slug": "suzy-batkovic",
+      "name": "Suzy Batkovic",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/suzy-batkovic/",
+      "data_path": "/data/wnba/players/suzy-batkovic.json"
+    },
+    {
+      "id": 212,
+      "slug": "svetlana-abrosimova",
+      "name": "Svetlana Abrosimova",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/svetlana-abrosimova/",
+      "data_path": "/data/wnba/players/svetlana-abrosimova.json"
+    },
+    {
+      "id": 131,
+      "slug": "swin-cash",
+      "name": "Swin Cash",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/swin-cash/",
+      "data_path": "/data/wnba/players/swin-cash.json"
+    },
+    {
+      "id": 328,
+      "slug": "sydney-carter",
+      "name": "Sydney Carter",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sydney-carter/",
+      "data_path": "/data/wnba/players/sydney-carter.json"
+    },
+    {
+      "id": 303,
+      "slug": "sydney-colson",
+      "name": "Sydney Colson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sydney-colson/",
+      "data_path": "/data/wnba/players/sydney-colson.json"
+    },
+    {
+      "id": 67033,
+      "slug": "sydney-taylor",
+      "name": "Sydney Taylor",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/sydney-taylor/",
+      "data_path": "/data/wnba/players/sydney-taylor.json"
+    },
+    {
+      "id": 485,
+      "slug": "sydney-wiese",
+      "name": "Sydney Wiese",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sydney-wiese/",
+      "data_path": "/data/wnba/players/sydney-wiese.json"
+    },
+    {
+      "id": 152,
+      "slug": "sylvia-fowles",
+      "name": "Sylvia Fowles",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/sylvia-fowles/",
+      "data_path": "/data/wnba/players/sylvia-fowles.json"
+    },
+    {
+      "id": 67135,
+      "slug": "taniya-latson",
+      "name": "Ta'Niya Latson",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/taniya-latson/",
+      "data_path": "/data/wnba/players/taniya-latson.json"
+    },
+    {
+      "id": 67082,
+      "slug": "taina-mair",
+      "name": "Taina Mair",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/taina-mair/",
+      "data_path": "/data/wnba/players/taina-mair.json"
+    },
+    {
+      "id": 52,
+      "slug": "taj-mcwilliams-franklin",
+      "name": "Taj McWilliams-Franklin",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/taj-mcwilliams-franklin/",
+      "data_path": "/data/wnba/players/taj-mcwilliams-franklin.json"
+    },
+    {
+      "id": 108,
+      "slug": "tamera-young",
+      "name": "Tamera Young",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tamera-young/",
+      "data_path": "/data/wnba/players/tamera-young.json"
+    },
+    {
+      "id": 70,
+      "slug": "tamika-catchings",
+      "name": "Tamika Catchings",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tamika-catchings/",
+      "data_path": "/data/wnba/players/tamika-catchings.json"
+    },
+    {
+      "id": 66,
+      "slug": "tammy-sutton-brown",
+      "name": "Tammy Sutton-Brown",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tammy-sutton-brown/",
+      "data_path": "/data/wnba/players/tammy-sutton-brown.json"
+    },
+    {
+      "id": 69,
+      "slug": "tan-white",
+      "name": "Tan White",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tan-white/",
+      "data_path": "/data/wnba/players/tan-white.json"
+    },
+    {
+      "id": 39,
+      "slug": "tangela-smith",
+      "name": "Tangela Smith",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tangela-smith/",
+      "data_path": "/data/wnba/players/tangela-smith.json"
+    },
+    {
+      "id": 128,
+      "slug": "tanisha-wright",
+      "name": "Tanisha Wright",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tanisha-wright/",
+      "data_path": "/data/wnba/players/tanisha-wright.json"
+    },
+    {
+      "id": 351,
+      "slug": "tayler-hill",
+      "name": "Tayler Hill",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tayler-hill/",
+      "data_path": "/data/wnba/players/tayler-hill.json"
+    },
+    {
+      "id": 699,
+      "slug": "taylor-soule",
+      "name": "Taylor Soule",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/taylor-soule/",
+      "data_path": "/data/wnba/players/taylor-soule.json"
+    },
+    {
+      "id": 734,
+      "slug": "taylor-thierry",
+      "name": "Taylor Thierry",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/taylor-thierry/",
+      "data_path": "/data/wnba/players/taylor-thierry.json"
+    },
+    {
+      "id": 586,
+      "slug": "tea-cooper",
+      "name": "Te'a Cooper",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tea-cooper/",
+      "data_path": "/data/wnba/players/tea-cooper.json"
+    },
+    {
+      "id": 733,
+      "slug": "te-hina-paopao",
+      "name": "Te-Hina Paopao",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/te-hina-paopao/",
+      "data_path": "/data/wnba/players/te-hina-paopao.json"
+    },
+    {
+      "id": 564,
+      "slug": "teaira-mccowan",
+      "name": "Teaira McCowan",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/teaira-mccowan/",
+      "data_path": "/data/wnba/players/teaira-mccowan.json"
+    },
+    {
+      "id": 75090,
+      "slug": "teja-oblak",
+      "name": "Teja Oblak",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/teja-oblak/",
+      "data_path": "/data/wnba/players/teja-oblak.json"
+    },
+    {
+      "id": 29,
+      "slug": "temeka-johnson",
+      "name": "Temeka Johnson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/temeka-johnson/",
+      "data_path": "/data/wnba/players/temeka-johnson.json"
+    },
+    {
+      "id": 496,
+      "slug": "temi-fagbenle",
+      "name": "Temi Fagbenle",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/temi-fagbenle/",
+      "data_path": "/data/wnba/players/temi-fagbenle.json"
+    },
+    {
+      "id": 67171,
+      "slug": "teonni-key",
+      "name": "Teonni Key",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/teonni-key/",
+      "data_path": "/data/wnba/players/teonni-key.json"
+    },
+    {
+      "id": 394,
+      "slug": "theresa-plaisance",
+      "name": "Theresa Plaisance",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/theresa-plaisance/",
+      "data_path": "/data/wnba/players/theresa-plaisance.json"
+    },
+    {
+      "id": 343,
+      "slug": "tianna-hawkins",
+      "name": "Tianna Hawkins",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tianna-hawkins/",
+      "data_path": "/data/wnba/players/tianna-hawkins.json"
+    },
+    {
+      "id": 89,
+      "slug": "ticha-penicheiro",
+      "name": "Ticha Penicheiro",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ticha-penicheiro/",
+      "data_path": "/data/wnba/players/ticha-penicheiro.json"
+    },
+    {
+      "id": 353,
+      "slug": "tierra-ruffin-pratt",
+      "name": "Tierra Ruffin-Pratt",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tierra-ruffin-pratt/",
+      "data_path": "/data/wnba/players/tierra-ruffin-pratt.json"
+    },
+    {
+      "id": 396,
+      "slug": "tiffany-bias",
+      "name": "Tiffany Bias",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tiffany-bias/",
+      "data_path": "/data/wnba/players/tiffany-bias.json"
+    },
+    {
+      "id": 314,
+      "slug": "tiffany-hayes",
+      "name": "Tiffany Hayes",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/tiffany-hayes/",
+      "data_path": "/data/wnba/players/tiffany-hayes.json"
+    },
+    {
+      "id": 143,
+      "slug": "tiffany-jackson-jones",
+      "name": "Tiffany Jackson-Jones",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tiffany-jackson-jones/",
+      "data_path": "/data/wnba/players/tiffany-jackson-jones.json"
+    },
+    {
+      "id": 453,
+      "slug": "tiffany-mitchell",
+      "name": "Tiffany Mitchell",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tiffany-mitchell/",
+      "data_path": "/data/wnba/players/tiffany-mitchell.json"
+    },
+    {
+      "id": 251,
+      "slug": "tina-charles",
+      "name": "Tina Charles",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tina-charles/",
+      "data_path": "/data/wnba/players/tina-charles.json"
+    },
+    {
+      "id": 1,
+      "slug": "tina-thompson",
+      "name": "Tina Thompson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tina-thompson/",
+      "data_path": "/data/wnba/players/tina-thompson.json"
+    },
+    {
+      "id": 357,
+      "slug": "toni-young",
+      "name": "Toni Young",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/toni-young/",
+      "data_path": "/data/wnba/players/toni-young.json"
+    },
+    {
+      "id": 67029,
+      "slug": "tonie-morgan",
+      "name": "Tonie Morgan",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/tonie-morgan/",
+      "data_path": "/data/wnba/players/tonie-morgan.json"
+    },
+    {
+      "id": 381,
+      "slug": "tricia-liston",
+      "name": "Tricia Liston",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tricia-liston/",
+      "data_path": "/data/wnba/players/tricia-liston.json"
+    },
+    {
+      "id": 67,
+      "slug": "tully-bevilaqua",
+      "name": "Tully Bevilaqua",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/tully-bevilaqua/",
+      "data_path": "/data/wnba/players/tully-bevilaqua.json"
+    },
+    {
+      "id": 604,
+      "slug": "tyasha-harris",
+      "name": "Tyasha Harris",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/tyasha-harris/",
+      "data_path": "/data/wnba/players/tyasha-harris.json"
+    },
+    {
+      "id": 448,
+      "slug": "valeriane-ayayi",
+      "name": "Valeriane Ayayi",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/valeriane-ayayi/",
+      "data_path": "/data/wnba/players/valeriane-ayayi.json"
+    },
+    {
+      "id": 659,
+      "slug": "veronica-burton",
+      "name": "Veronica Burton",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/veronica-burton/",
+      "data_path": "/data/wnba/players/veronica-burton.json"
+    },
+    {
+      "id": 391,
+      "slug": "vicki-baugh",
+      "name": "Vicki Baugh",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/vicki-baugh/",
+      "data_path": "/data/wnba/players/vicki-baugh.json"
+    },
+    {
+      "id": 80,
+      "slug": "vickie-johnson",
+      "name": "Vickie Johnson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/vickie-johnson/",
+      "data_path": "/data/wnba/players/vickie-johnson.json"
+    },
+    {
+      "id": 677,
+      "slug": "victaria-saxton",
+      "name": "Victaria Saxton",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/victaria-saxton/",
+      "data_path": "/data/wnba/players/victaria-saxton.json"
+    },
+    {
+      "id": 297,
+      "slug": "victoria-dunlap",
+      "name": "Victoria Dunlap",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/victoria-dunlap/",
+      "data_path": "/data/wnba/players/victoria-dunlap.json"
+    },
+    {
+      "id": 534,
+      "slug": "victoria-vivians",
+      "name": "Victoria Vivians",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/victoria-vivians/",
+      "data_path": "/data/wnba/players/victoria-vivians.json"
+    },
+    {
+      "id": 273,
+      "slug": "yelena-leuchanka",
+      "name": "Yelena Leuchanka",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/yelena-leuchanka/",
+      "data_path": "/data/wnba/players/yelena-leuchanka.json"
+    },
+    {
+      "id": 44,
+      "slug": "yuko-oga",
+      "name": "Yuko Oga",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/yuko-oga/",
+      "data_path": "/data/wnba/players/yuko-oga.json"
+    },
+    {
+      "id": 654,
+      "slug": "yvonne-anderson",
+      "name": "Yvonne Anderson",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/yvonne-anderson/",
+      "data_path": "/data/wnba/players/yvonne-anderson.json"
+    },
+    {
+      "id": 505,
+      "slug": "yvonne-turner",
+      "name": "Yvonne Turner",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/yvonne-turner/",
+      "data_path": "/data/wnba/players/yvonne-turner.json"
+    },
+    {
+      "id": 218289,
+      "slug": "zaay-green",
+      "name": "Zaay Green",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/zaay-green/",
+      "data_path": "/data/wnba/players/zaay-green.json"
+    },
+    {
+      "id": 695,
+      "slug": "zia-cooke",
+      "name": "Zia Cooke",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/zia-cooke/",
+      "data_path": "/data/wnba/players/zia-cooke.json"
+    },
+    {
+      "id": 318,
+      "slug": "ziomara-morrison",
+      "name": "Ziomara Morrison",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/ziomara-morrison/",
+      "data_path": "/data/wnba/players/ziomara-morrison.json"
+    }
+  ]
+}

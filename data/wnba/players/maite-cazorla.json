@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 554,
+    "first_name": "Maite",
+    "last_name": "Cazorla",
+    "position": "G",
+    "position_abbreviation": "G",
+    "height": "5' 10\"",
+    "weight": "155 lbs",
+    "jersey_number": "5",
+    "college": "Oregon",
+    "team": {
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
+    }
+  },
+  "slug": "maite-cazorla",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 554,
+      "season": 2019,
+      "season_type": 2,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 31,
+      "min": 15.39,
+      "fgm": 0.94,
+      "fga": 3.0,
+      "fg_pct": 31.2,
+      "fg3m": 0.42,
+      "fg3a": 1.77,
+      "fg3_pct": 23.6,
+      "ftm": 0.68,
+      "fta": 0.77,
+      "ft_pct": 87.5,
+      "oreb": null,
+      "dreb": null,
+      "reb": 0.68,
+      "ast": 1.58,
+      "stl": 0.58,
+      "blk": 0.03,
+      "turnover": 0.94,
+      "pts": 2.97
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

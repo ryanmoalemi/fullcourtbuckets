@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 694,
+    "first_name": "Kadi",
+    "last_name": "Sissoko",
+    "position": "Forward",
+    "position_abbreviation": "F",
+    "height": null,
+    "weight": null,
+    "jersey_number": "30",
+    "college": null,
+    "team": {
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "kadi-sissoko",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 694,
+      "season": 2023,
+      "season_type": 2,
+      "team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "games_played": 40,
+      "min": 8.4,
+      "fgm": 0.58,
+      "fga": 1.55,
+      "fg_pct": 37.1,
+      "fg3m": 0.08,
+      "fg3a": 0.45,
+      "fg3_pct": 16.7,
+      "ftm": 0.25,
+      "fta": 0.4,
+      "ft_pct": 62.5,
+      "oreb": null,
+      "dreb": null,
+      "reb": 1.55,
+      "ast": 0.2,
+      "stl": 0.08,
+      "blk": 0.13,
+      "turnover": 0.65,
+      "pts": 1.48
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

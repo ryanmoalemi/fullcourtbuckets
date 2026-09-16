@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 359,
+    "first_name": "Kamiko",
+    "last_name": "Williams",
+    "position": "Guard",
+    "position_abbreviation": "G",
+    "height": null,
+    "weight": null,
+    "jersey_number": "4",
+    "college": null,
+    "team": {
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
+      "conference": "Eastern Conference"
+    }
+  },
+  "slug": "kamiko-williams",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 359,
+      "season": 2013,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 34,
+      "min": 13.32,
+      "fgm": 1.15,
+      "fga": 3.56,
+      "fg_pct": 32.2,
+      "fg3m": 0.18,
+      "fg3a": 0.68,
+      "fg3_pct": 26.1,
+      "ftm": 0.12,
+      "fta": 0.21,
+      "ft_pct": 57.1,
+      "oreb": null,
+      "dreb": null,
+      "reb": 2.15,
+      "ast": 0.94,
+      "stl": 0.71,
+      "blk": 0.24,
+      "turnover": 0.88,
+      "pts": 2.59
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

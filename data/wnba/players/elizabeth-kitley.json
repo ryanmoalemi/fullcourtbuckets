@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 749,
+    "first_name": "Elizabeth",
+    "last_name": "Kitley",
+    "position": "Center",
+    "position_abbreviation": "C",
+    "height": null,
+    "weight": null,
+    "jersey_number": "33",
+    "college": null,
+    "team": {
+      "id": 8,
+      "full_name": "Las Vegas Aces",
+      "abbreviation": "LV",
+      "city": "Las Vegas",
+      "name": "Aces",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "elizabeth-kitley",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 749,
+      "season": 2025,
+      "season_type": 2,
+      "team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "games_played": 12,
+      "min": 8.17,
+      "fgm": 0.58,
+      "fga": 1.92,
+      "fg_pct": 30.4,
+      "fg3m": 0.0,
+      "fg3a": 0.08,
+      "fg3_pct": 0.0,
+      "ftm": 0.08,
+      "fta": 0.17,
+      "ft_pct": 50.0,
+      "oreb": null,
+      "dreb": null,
+      "reb": 1.42,
+      "ast": 0.08,
+      "stl": 0.33,
+      "blk": 0.5,
+      "turnover": 0.58,
+      "pts": 1.25
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-16T05:48:36+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 44,
+    "first_name": "Yuko",
+    "last_name": "Oga",
+    "position": "Forward",
+    "position_abbreviation": "F",
+    "height": null,
+    "weight": null,
+    "jersey_number": null,
+    "college": null,
+    "team": {
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "yuko-oga",
+  "active_in_provider_feed": false,
+  "current_team": null,
+  "season_stats": [
+    {
+      "player_id": 44,
+      "season": 2008,
+      "season_type": 2,
+      "team": {
+        "id": 27,
+        "full_name": "Japan",
+        "abbreviation": "JAPAN",
+        "city": "",
+        "name": "Japan",
+        "conference": null
+      },
+      "games_played": 23,
+      "min": 7.83,
+      "fgm": 0.87,
+      "fga": 2.48,
+      "fg_pct": 35.1,
+      "fg3m": 0.0,
+      "fg3a": 0.43,
+      "fg3_pct": 0.0,
+      "ftm": 0.7,
+      "fta": 0.74,
+      "ft_pct": 94.1,
+      "oreb": null,
+      "dreb": null,
+      "reb": 0.74,
+      "ast": 0.61,
+      "stl": 0.3,
+      "blk": 0.0,
+      "turnover": 0.96,
+      "pts": 2.43
+    }
+  ],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-11",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}
