@@ -1,5 +1,5 @@
 {
-  "request_id": "535-925c2dbc0c01e26b-20260916",
+  "request_id": "535-925c2dbc0c01e26b-20260916-direct",
   "player_id": 535,
   "player_name": "A'ja Wilson",
   "slug": "aja-wilson",
@@ -10,5 +10,5 @@
   "bytes": 1583575,
   "dimensions": [1244,1264],
   "master_file_id": "1vBeqdbTQxqYN1nTl0FAeFZ2XwGt_N8Od",
-  "download_url": "https://sdmntprwestus3.oaiusercontent.com/files/00000000-c294-81fd-94f9-3872b5a45f2d/raw?se=2026-09-16T21%3A02%3A27Z&sp=r&sv=2026-02-06&sr=b&scid=2421a614-5177-59df-9aa2-21c6384d4796&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A11%3A50Z&ske=2026-09-17T20%3A11%3A50Z&sks=b&skv=2026-02-06&sig=SbLwG7wG5It0YClWGMeNKbv6ZB9itFdjEqHZ6g99v2o%3D"
+  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-3b3c-81fd-9b0a-727371475f80/raw?se=2026-09-16T21%3A05%3A20Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ac00-c37e-7c11-ab0c-cb330662fe84&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A19%3A07Z&ske=2026-09-17T20%3A19%3A07Z&sks=b&skv=2026-02-06&sig=bGQBFjTA25rV445vSG/D4DHWlxeQxDotkxUsijvF10Y%3D"
 }
