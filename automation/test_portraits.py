@@ -24,15 +24,28 @@ class PortraitTests(unittest.TestCase):
         assets = self.root / 'images/players'; assets.mkdir(parents=True)
         (assets/'test.avif').write_bytes(b'synthetic image fixture')
         (assets/'test.svg').write_text('<svg></svg>')
-    def test_image_and_caption_are_html(self):
+    def test_image_and_name_remain_html_without_hero_caption(self):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertIn('<img class="player-illustration"', page)
         self.assertIn('alt="Caitlin Clark illustrated portrait"', page)
-        self.assertIn('<figcaption', page)
-        self.assertIn('AI-generated illustration', page)
+        self.assertNotIn('<figcaption', page)
+        self.assertNotIn('illustration-caption', page)
+        self.assertNotIn('AI-generated', portraits.APPLIED.search(page).group())
+        self.assertIn('AI-generated illustration', page)  # Metadata retains provenance.
         self.assertNotIn('ghost-number', page)
         self.assertIn(STATS, page)
         self.assertEqual(page.count('<h1 '), 1)
+    def test_portrait_has_no_bottom_gap_on_desktop_or_mobile(self):
+        self.assertIn('padding:16px 14px 0;', portraits.CSS)
+        self.assertIn('min-height:0;padding:0 16px 0}', portraits.CSS)
+        self.assertIn('align-items:flex-end;', portraits.CSS)
+        self.assertIn('align-self:flex-end;margin:0;', portraits.CSS)
+        self.assertNotIn('padding:16px 14px 28px', portraits.CSS)
+        self.assertNotIn('padding:0 16px 29px', portraits.CSS)
+    def test_removes_previous_caption_when_reapplying(self):
+        page = portraits.render(PAGE, PROFILE, RECORD, self.root)
+        old = page.replace('</figure>', '<figcaption class="illustration-caption">AI-generated illustration</figcaption></figure>')
+        self.assertEqual(page, portraits.render(old, PROFILE, RECORD, self.root))
     def test_idempotent(self):
         first = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertEqual(first, portraits.render(first, PROFILE, RECORD, self.root))

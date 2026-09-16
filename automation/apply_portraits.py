@@ -23,14 +23,13 @@ CSS = '''
 /* Portrait-only overrides. All names, labels, and statistics remain HTML. */
 .hero.has-player-portrait{background:#000}
 .has-player-portrait .hero-main{grid-template-columns:55% 45%;background:#000}
-.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:flex;align-items:flex-end;justify-content:center;opacity:1;pointer-events:auto;background:#000;min-height:420px;padding:16px 14px 28px;overflow:hidden}
+.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:flex;align-items:flex-end;justify-content:center;opacity:1;pointer-events:auto;background:#000;min-height:420px;padding:16px 14px 0;overflow:hidden}
 .has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{display:none}
-.portrait-art .player-illustration{display:block;width:100%;max-width:560px;height:auto;aspect-ratio:640/596;object-fit:contain;object-position:center bottom;-webkit-mask-image:var(--portrait-mask);mask-image:var(--portrait-mask);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
-.portrait-art .illustration-caption{position:absolute;bottom:6px;left:12px;right:12px;text-align:center;font-size:9px;line-height:1.5;letter-spacing:.3px;color:#bfb8c6}
+.portrait-art .player-illustration{display:block;align-self:flex-end;margin:0;width:100%;max-width:560px;height:auto;aspect-ratio:640/596;object-fit:contain;object-position:center bottom;-webkit-mask-image:var(--portrait-mask);mask-image:var(--portrait-mask);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 @media(max-width:780px){
  .has-player-portrait .hero-main{grid-template-columns:1fr}
  .has-player-portrait .hero-copy{width:100%;min-height:0;padding-bottom:15px}
- .has-player-portrait .hero-art.portrait-art{min-height:0;padding:0 16px 29px}
+ .has-player-portrait .hero-art.portrait-art{min-height:0;padding:0 16px 0}
  .has-player-portrait .player-illustration{width:min(100%,410px)}
 }
 @media(prefers-reduced-motion:reduce){.portrait-art *{animation:none!important;transition:none!important}}
@@ -70,6 +69,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         raise ValueError('Invalid portrait dimensions.')
     src = asset_url(root, record['src'])
     mask = asset_url(root, record['mask'])
+    # Keep provenance in structured metadata and source notes, not below the portrait.
     caption = 'AI-generated illustration · Full Court Buckets'
     figure = (
         '<!-- FCB:approved-portrait:start -->'
@@ -77,7 +77,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         f'<img class="player-illustration" src="{esc(src)}" '
         f'alt="{esc(name)} illustrated portrait" width="{width}" height="{height}" '
         f'style="--portrait-mask:url(\'{esc(mask)}\')" fetchpriority="high" decoding="async">'
-        f'<figcaption class="illustration-caption">{caption}</figcaption></figure>'
+        '</figure>'
         '<!-- FCB:approved-portrait:end -->'
     )
     if APPLIED.search(page):
