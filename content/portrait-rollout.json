@@ -37,7 +37,18 @@
       "asset_blob_sha": "c30cef850d05f116e7fa6076e11fa61bba6ba0b6"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 3,
+    "state": "claimed_generation",
+    "claimed_at": "2026-09-16T10:04:26Z",
+    "lease_expires_at": "2026-09-16T10:34:26Z",
+    "lease_owner": "FCB portrait rollout scheduled executor",
+    "generation_attempts": 0,
+    "player_ids": [535],
+    "players": [
+      {"player_id": 535, "slug": "aja-wilson", "player_name": "A'ja Wilson"}
+    ]
+  },
   "batches": [
     {
       "batch_number": 1,
