@@ -19,18 +19,44 @@ SLOT = re.compile(r'<div class="hero-art" aria-hidden="true">.*?</small></div>',
 APPLIED = re.compile(r'<!-- FCB:approved-portrait:start -->.*?<!-- FCB:approved-portrait:end -->', re.S)
 
 CSS = '''
-/* Keep the original hero gradient and decoration; artwork is an overlay. */
-.has-player-portrait .hero-main{grid-template-columns:55% 45%}
-.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:flex;align-items:flex-end;justify-content:flex-end;opacity:1;pointer-events:auto;background:transparent;min-height:420px;padding:16px 0 0;overflow:hidden;isolation:isolate}
+/* Compact shoulder crop; keep the original gradient, circles and outline number. */
+.has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
+.has-player-portrait .hero-copy{padding-top:30px;padding-bottom:30px}
+.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:block;opacity:1;pointer-events:auto;background:transparent;min-height:0;min-width:0;padding:0;overflow:hidden;isolation:isolate}
 .has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{z-index:0;pointer-events:none}
 .portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
-.portrait-art .number-card{position:absolute;top:24%;right:9%;width:76%;min-width:0;max-width:350px;min-height:224px;transform:rotate(-7deg)}
-.portrait-art .player-illustration{position:relative;z-index:2;display:block;align-self:flex-end;margin:0;width:100%;max-width:none;height:auto;object-fit:contain;object-position:right bottom;-webkit-mask-image:var(--portrait-mask,none);mask-image:var(--portrait-mask,none);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.portrait-art .portrait-crop{position:absolute;inset:12px 0 0;z-index:2;overflow:hidden}
+.portrait-art .player-illustration{position:absolute;top:0;left:6%;display:block;margin:0;width:100%;max-width:none;height:130%;object-fit:cover;object-position:center top;-webkit-mask-image:var(--portrait-mask,none);mask-image:var(--portrait-mask,none);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 @media(max-width:780px){
- .has-player-portrait .hero-main{grid-template-columns:1fr}
- .has-player-portrait .hero-copy{width:100%;min-height:0;padding-bottom:15px}
- .has-player-portrait .hero-art.portrait-art{min-height:0;padding:0}
- .has-player-portrait .player-illustration{width:min(100%,410px)}
+ .has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
+ .has-player-portrait .hero-copy{width:auto;min-height:0;padding:24px 18px}
+ .has-player-portrait .hero-kicker{align-items:flex-start;flex-direction:column;gap:5px;font-size:8px;letter-spacing:.7px}
+ .has-player-portrait h1{margin:14px 0 12px}
+ .has-player-portrait h1>span{font-size:clamp(30px,6vw,46px)}
+ .has-player-portrait h1>b{font-size:clamp(44px,8vw,64px)}
+ .has-player-portrait .hero-meta{margin:12px 0 16px;font-size:11px;line-height:1.65}
+ .has-player-portrait .actions{gap:6px;flex-wrap:wrap;min-height:36px}
+ .has-player-portrait .actions .button{min-height:36px;padding:8px 10px;gap:12px;font-size:10px}
+ .has-player-portrait .text-button{font-size:10px;padding:8px 4px}
+ .has-player-portrait .portrait-crop{inset:10px 0 0}
+ .has-player-portrait .player-illustration{left:0;width:100%;height:130%}
+}
+@media(max-width:480px){
+ .has-player-portrait .hero-copy{padding:20px 8px 20px 12px}
+ .has-player-portrait h1{line-height:1;margin:12px 0 10px}
+ .has-player-portrait h1>span{font-size:30px}
+ .has-player-portrait h1>b{font-size:clamp(36px,11.5vw,46px)}
+ .has-player-portrait .hero-meta{font-size:10px;margin:10px 0 12px}
+ .has-player-portrait .hero-kicker{font-size:7px;letter-spacing:.4px}
+ .has-player-portrait .status{font-size:7px;padding:3px 6px}
+}
+@media(max-width:360px){
+ .has-player-portrait .actions{flex-wrap:nowrap;gap:4px}
+ .has-player-portrait .actions .button{gap:7px;padding:7px 8px;font-size:9px;white-space:nowrap}
+ .has-player-portrait .text-button{padding:7px 2px;white-space:nowrap;flex:0 0 auto}
+ .has-player-portrait #share-status:empty{display:none}
+ .has-player-portrait .metric{padding-top:12px;padding-bottom:12px}
+ .has-player-portrait .stat-context{padding-top:8px;padding-bottom:8px}
 }
 @media(prefers-reduced-motion:reduce){.portrait-art *{animation:none!important;transition:none!important}}
 '''.strip()
@@ -75,20 +101,18 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     number = str(player.get('jersey_number') if player.get('jersey_number') is not None else '')
     if not re.fullmatch(r'\d{1,2}', number):
         number = 'FCB'
-    surname = player.get('last_name') or name
-    # Decorative text is HTML and hidden only from assistive technology.
+    # Retain the outline number and CSS circles, not the square number card.
     backdrop = ('<div class="portrait-backdrop" aria-hidden="true">'
-                f'<span class="ghost-number">{esc(number)}</span>'
-                f'<div class="number-card"><span>{esc(surname)}</span>'
-                f'<strong class="gradient">{esc(number)}</strong></div></div>')
+                f'<span class="ghost-number">{esc(number)}</span></div>')
     caption = 'AI-generated illustration · Full Court Buckets'
     figure = (
         '<!-- FCB:approved-portrait:start -->'
         '<figure class="hero-art portrait-art" aria-label="Player illustration">' + backdrop +
+        '<div class="portrait-crop">'
         f'<img class="player-illustration" src="{esc(src)}" '
         f'alt="{esc(name)} illustrated portrait" width="{width}" height="{height}"'
         f'{mask_style} fetchpriority="high" decoding="async">'
-        '</figure><!-- FCB:approved-portrait:end -->'
+        '</div></figure><!-- FCB:approved-portrait:end -->'
     )
     if APPLIED.search(page):
         page, count = APPLIED.subn(lambda _: figure, page)

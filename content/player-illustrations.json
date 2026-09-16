@@ -10,8 +10,8 @@
       "src": "/images/players/caitlin-clark-portrait-v2.avif",
       "width": 640,
       "height": 650,
-      "source": "User-approved AI-generated illustration from the Full Court Buckets chat, reframed to a chest-up portrait.",
-      "display": "Native transparent artwork over the original gradient, circles and number-card background. Bottom-right aligned, with a straight chest/upper-arm crop at the statistics divider. No visible caption. Names and statistics remain HTML."
+      "source": "User-approved AI-generated illustration from the Full Court Buckets chat.",
+      "display": "Compact head-and-shoulders CSS crop over the original gradient, circles and outline number. Square number card removed. Portrait and name share one row on mobile so the statistics stay high on the page. Straight crop meets the statistics divider. No visible caption. Names and statistics remain HTML."
     }
   ]
 }

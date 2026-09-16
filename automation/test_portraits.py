@@ -34,21 +34,28 @@ class PortraitTests(unittest.TestCase):
         self.assertIn('AI-generated illustration', page)
         self.assertIn(STATS, page)
         self.assertEqual(page.count('<h1 '), 1)
-    def test_portrait_has_no_bottom_or_right_gap(self):
-        self.assertIn('padding:16px 0 0;', portraits.CSS)
-        self.assertIn('min-height:0;padding:0}', portraits.CSS)
-        self.assertIn('align-items:flex-end;justify-content:flex-end;', portraits.CSS)
-        self.assertIn('align-self:flex-end;margin:0;', portraits.CSS)
-        self.assertIn('object-position:right bottom;', portraits.CSS)
-    def test_original_background_and_decorations_retained(self):
+    def test_crop_reaches_bottom_and_right_without_padding(self):
+        self.assertIn('min-height:0;min-width:0;padding:0;', portraits.CSS)
+        self.assertIn('.portrait-crop{position:absolute;inset:12px 0 0;', portraits.CSS)
+        self.assertIn('.has-player-portrait .portrait-crop{inset:10px 0 0}', portraits.CSS)
+        self.assertIn('height:130%;object-fit:cover;', portraits.CSS)
+        self.assertNotIn('min-height:420px', portraits.CSS)
+    def test_original_gradient_circles_and_outline_retained_without_square(self):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertNotIn('background:#000', portraits.CSS)
         self.assertIn('background:transparent;', portraits.CSS)
+        self.assertIn('.portrait-art:before', portraits.CSS)
+        self.assertIn('.portrait-art:after', portraits.CSS)
         figure = portraits.APPLIED.search(page).group()
         self.assertIn('<div class="portrait-backdrop" aria-hidden="true">', figure)
         self.assertIn('<span class="ghost-number">22</span>', figure)
-        self.assertIn('<div class="number-card">', figure)
+        self.assertNotIn('number-card', figure)
         self.assertEqual(figure.count('class="ghost-number"'), 1)
+    def test_mobile_portrait_does_not_stack_a_full_body_row(self):
+        mobile = portraits.CSS.split('@media(max-width:780px){', 1)[1]
+        self.assertIn('grid-template-columns:55% 45%', mobile)
+        self.assertNotIn('grid-template-columns:1fr', mobile)
+        self.assertIn('<div class="portrait-crop">', portraits.render(PAGE, PROFILE, RECORD, self.root))
     def test_native_alpha_needs_no_old_silhouette_mask(self):
         record = dict(RECORD, height=650); record.pop('mask')
         (self.root/'images/players/test.svg').unlink()
@@ -67,6 +74,10 @@ class PortraitTests(unittest.TestCase):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
         old = page.replace('</figure>', '<figcaption class="illustration-caption">AI-generated illustration</figcaption></figure>')
         self.assertEqual(page, portraits.render(old, PROFILE, RECORD, self.root))
+    def test_removes_old_square_when_reapplying(self):
+        page = portraits.render(PAGE, PROFILE, RECORD, self.root)
+        old = page.replace('<div class="portrait-crop">', '<div class="number-card"><strong>22</strong></div><div class="portrait-crop">')
+        self.assertEqual(page, portraits.render(old, PROFILE, RECORD, self.root))
     def test_idempotent(self):
         first = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertEqual(first, portraits.render(first, PROFILE, RECORD, self.root))
@@ -79,7 +90,7 @@ class PortraitTests(unittest.TestCase):
     def test_unapproved_rejected(self):
         with self.assertRaises(ValueError): portraits.render(PAGE, PROFILE, dict(RECORD, approved=False), self.root)
     def test_remote_or_unsafe_asset_rejected(self):
-        for path in ['https://example.org/test.avif', '/images/players/../secret', '/images/players/test.avif\"']:
+        for path in ['https://example.org/test.avif', '/images/players/../secret', '/images/players/test.avif"']:
             with self.assertRaises(ValueError): portraits.render(PAGE, PROFILE, dict(RECORD, src=path), self.root)
     def test_missing_asset_rejected(self):
         (self.root/'images/players/test.avif').unlink()
