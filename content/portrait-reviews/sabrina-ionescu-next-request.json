@@ -3,20 +3,26 @@
   "player_id": 591,
   "slug": "sabrina-ionescu",
   "player_name": "Sabrina Ionescu",
-  "owner_instruction": "The owner reported that their earlier next message after A'ja Wilson was lost. Continue to the next player rather than generating A'ja again.",
+  "owner_instruction": "Make the next player's image, update the live page, then notify the owner for review. This authorizes publishing a correct Sabrina portrait before this review; it does not restart the bulk rollout.",
   "next_request_received": true,
-  "approval_mode": "generate_one_image_then_owner_approves_then_upload_original_then_live_verify",
-  "status": "generation_blocked_wrong_subject_and_format",
+  "approval_mode": "generate_one_correct_portrait_then_upload_original_then_live_verify_then_owner_review",
+  "status": "isolated_single_run_queued",
   "approved": false,
+  "publication_authorized_by_owner": true,
   "replacement_uploaded": false,
   "website_changes_in_this_attempt": false,
-  "requested_artwork": "Exactly one original Sabrina Ionescu head-and-shoulders illustration, sharp full-resolution transparent cutout, plain white basketball top with black trim, no text, logos, poster, background or page layout. Preserve original bytes for approval and later upload.",
+  "requested_artwork": "One Sabrina Ionescu head-and-shoulders editorial illustration, sharp full-resolution transparent cutout, plain white top with black trim, no text, logos, poster, background or page layout. Preserve original image bytes.",
   "rejected_generation_ids": [
     "8ff28c7e-caaa-4b98-b24c-c0aafb8e0db6",
     "cbcea7c8-4d70-4aa6-b74c-f8fbb24f3968",
     "14048450-ec57-4f57-8e5f-f4146ffac3da",
-    "ae1bdc24-a392-47cb-80b4-d63b70ae8446"
+    "ae1bdc24-a392-47cb-80b4-d63b70ae8446",
+    "0d83f0a5-b485-488f-bd17-f5aa75e0c999",
+    "09069169-38b1-4d36-b07a-1737ce030ada"
   ],
-  "reason": "Outputs did not match the requested next-player portrait. All were rejected. No generated file was uploaded to the production image folders or added to the approved manifest.",
-  "instruction": "Sabrina remains next for review. Do not present any listed rejected output as Sabrina or as approved. Do not regenerate completed A'ja or Breanna portraits. Leave the live website and approved originals unchanged until a correct Sabrina draft is approved."
+  "reason": "The current-context generation attempts failed subject/format checks. No rejected output was added to production image folders or the approved manifest. A single separate run was scheduled with a self-contained Sabrina-only brief; scheduling is not evidence of successful generation or publication.",
+  "scheduled_task_title": "Sabrina portrait review",
+  "scheduled_start_utc": "2026-09-16T23:40:20Z",
+  "scheduled_run_limit": 1,
+  "instruction": "Generate Sabrina only, preserve full-resolution PNG, use the existing .github/PORTRAIT_UPLOAD.md whole-file uploader to images/players/sabrina-ionescu/portrait.png, then check the actual public image, checksum and desktop/mobile screenshots. Notify the owner with the review link only after live verification. Do not create new infrastructure, publish incorrect artwork, claim queueing is completion, or move to another player. Keep existing live artwork intact if generation or verification fails."
 }
