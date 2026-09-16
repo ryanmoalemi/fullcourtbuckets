@@ -72,6 +72,18 @@
       "height": 192,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA player portrait only for likeness review. The final 192x192 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
       "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+    },
+    {
+      "player_id": 741,
+      "slug": "paige-bueckers",
+      "player_name": "Paige Bueckers",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/paige-bueckers-portrait-v1.webp",
+      "width": 160,
+      "height": 160,
+      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
     }
   ]
 }
