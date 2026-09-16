@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 5,
-  "remaining_count": 557,
+  "verified_published_count": 6,
+  "remaining_count": 556,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -77,6 +77,20 @@
       "asset_blob_sha": "683953e2a0ee9b122cee714f78d661094ee8d93a",
       "asset_sha256": "5549ceed0e6ac56343077a679b72c113ea3dc7d401cb848f52e56df2a190a271",
       "browser_verification_run_id": "764107f1-de6e-4174-8147-72d3ae439718"
+    },
+    {
+      "player_id": 573,
+      "slug": "napheesa-collier",
+      "live_verified": true,
+      "verification": "Fresh scheduled single-player generation required three generation attempts; the first two were discarded after likeness review and the third was accepted after comparison with the official WNBA player portrait for visual facts only. The accepted image was resized to 192x192 WebP and decoded locally as RGBA with alpha extrema 0-255. Local Git blob SHA 099f461ad8206fb33473314a8a77b28b5f34759b exactly matched the GitHub create_blob result. Asset and manifest were committed atomically in b9f15561ea293c6c6d9df6d2325a1376415fe70a. GitHub Actions run 35100700086 completed successfully; tests, data import, build_players.py, apply_portraits.py, rollout_player_design.py, page validation, artifact upload and Pages deployment all passed. Generated player-page commit 23001a68fc4f7ad0b99f373e3cb19e0d03d2256d followed the asset commit. Live rendered-page verification returned title Napheesa Collier WNBA Stats, Teams & Player Profile, a hero with classes hero has-player-portrait fcb-player-compact, the expected cache-busted image /images/players/napheesa-collier-portrait-v1.webp?v=78559d1a5a6f, and Napheesa Collier page text. Repository HTML confirms exactly one player-illustration element, no number-card element, the 55%/45% compact desktop/mobile grid including the max-width 780px rule, and hero-stats immediately after hero-main. Interactive browser automation could not start because strict agent mode was unavailable in the browser provider, so the live verification used the provider's rendered-page fetch instead.",
+      "url": "https://fullcourtbuckets.com/wnba/napheesa-collier/",
+      "asset": "/images/players/napheesa-collier-portrait-v1.webp",
+      "commit": "b9f15561ea293c6c6d9df6d2325a1376415fe70a",
+      "generated_page_commit": "23001a68fc4f7ad0b99f373e3cb19e0d03d2256d",
+      "deployment_run_id": 35100700086,
+      "asset_blob_sha": "099f461ad8206fb33473314a8a77b28b5f34759b",
+      "asset_sha256": "78559d1a5a6fdb1aabbb9e36d1db2af2ce96677fe5a0eddd921ae66814a70415",
+      "live_verification_method": "rendered_page_fetch"
     }
   ],
   "current_batch": null,
@@ -153,6 +167,24 @@
       "completed_at": "2026-09-16T12:07:30Z",
       "live_verified": true,
       "browser_verification_run_id": "764107f1-de6e-4174-8147-72d3ae439718"
+    },
+    {
+      "batch_number": 6,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [573],
+      "published_count": 1,
+      "generation_attempts": 3,
+      "discarded_generation_outputs": 2,
+      "asset": "/images/players/napheesa-collier-portrait-v1.webp",
+      "asset_blob_sha": "099f461ad8206fb33473314a8a77b28b5f34759b",
+      "asset_sha256": "78559d1a5a6fdb1aabbb9e36d1db2af2ce96677fe5a0eddd921ae66814a70415",
+      "commit": "b9f15561ea293c6c6d9df6d2325a1376415fe70a",
+      "generated_page_commit": "23001a68fc4f7ad0b99f373e3cb19e0d03d2256d",
+      "deployment_run_id": 35100700086,
+      "completed_at": "2026-09-16T13:15:30Z",
+      "live_verified": true,
+      "live_verification_method": "rendered_page_fetch",
+      "lease_write_attempt": "The pre-generation content/portrait-rollout.json lease write was attempted but blocked by the runtime safety gate. Main was reread and confirmed unchanged with current_batch null before the asset/manifest commit, so no overlapping executor was observed."
     }
   ],
   "blocked": [],
@@ -179,6 +211,7 @@
     "A'ja Wilson completed the first fully scheduled fresh-generation/upload/deployment/live-verification cycle, so scheduled_execution_verified is now true.",
     "Breanna Stewart required three discarded incorrect generation outputs before a fourth single-player generation succeeded. The first binary publication was proactively replaced after upload-byte verification showed it did not exactly match the locally decoded source. The final replacement blob matched the local Git blob SHA exactly and was re-deployed and re-verified live.",
     "Sabrina Ionescu completed successfully on the first generation attempt. The final transparent WebP's local Git blob SHA exactly matched GitHub before publication, and the live page rendered the portrait without a broken-image fallback after a successful Pages deployment.",
+    "Napheesa Collier completed after two likeness drafts were discarded. The final transparent WebP matched its uploaded Git blob SHA exactly; the full Actions pipeline and Pages deployment succeeded, and the live rendered page exposed the expected compact portrait hero and cache-busted asset path.",
     "The independent WNBA statistics updater remains active."
   ]
 }
