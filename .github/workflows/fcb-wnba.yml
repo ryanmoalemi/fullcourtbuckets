@@ -1,0 +1,123 @@
+name: Full Court Buckets WNBA updater
+
+on:
+  schedule:
+    - cron: '17 4 * * *'
+      timezone: America/Los_Angeles
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Refresh even if the normal daily/weekly interval has not elapsed
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - 'automation/**'
+      - '.github/workflows/fcb-wnba.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fcb-wnba-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  dispatch-to-production:
+    # The default branch is currently master; the actual site is main.
+    # Keep this same workflow on both branches. Never deploy the old master tree.
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: Run the updater on the real website branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$REPO/actions/workflows/fcb-wnba.yml/dispatches" \
+            -f ref=main -F inputs[force]=false
+
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    outputs:
+      publish: ${{ steps.sync.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test safety checks without live credentials
+        run: python -m unittest discover -s automation -p 'test_*.py' -v
+      - name: Check for the private API secret
+        id: key
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: |
+          if [ -n "$BALLDONTLIE_API_KEY" ]; then
+            echo 'ready=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ready=false' >> "$GITHUB_OUTPUT"
+            echo 'Setup pending: add the repository Actions secret BALLDONTLIE_API_KEY. No live data was imported.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Import and validate WNBA data
+        id: sync
+        if: steps.key.outputs.ready == 'true'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+          FORCE_REFRESH: ${{ inputs.force || false }}
+        run: |
+          if [ "$FORCE_REFRESH" = true ]; then
+            python automation/wnba_sync.py --force
+          else
+            python automation/wnba_sync.py
+          fi
+      - name: Commit validated public data
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name 'Full Court Buckets updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/wnba
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh validated WNBA player data'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Prepare the existing site with refreshed data
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/fcb-site"
+          git archive HEAD | tar -xf - -C "$RUNNER_TEMP/fcb-site"
+          rm -rf "$RUNNER_TEMP/fcb-site/.github" "$RUNNER_TEMP/fcb-site/automation"
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.sync.outputs.changed == 'true'
+        with:
+          path: ${{ runner.temp }}/fcb-site
+      - name: Report failed update without publishing partial data
+        if: failure()
+        run: echo 'WNBA update failed. Check this run. No partial data was deployed; an earlier valid site remains online.' >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Explicit deployment is necessary: GITHUB_TOKEN commits do not trigger branch Pages builds.
+      - name: Publish the existing site and refreshed public data
+        id: deployment
+        uses: actions/deploy-pages@v4
