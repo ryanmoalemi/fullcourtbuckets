@@ -1,0 +1,30 @@
+name: Check approved artwork transfer
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/angel-transfer-check.yml']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          python - <<'PY'
+          import urllib.request, urllib.error
+          urls = [
+            'https://sdmntprwestus.oaiusercontent.com/files/00000000-a5a4-8230-a4ed-19b168f6b7ad/raw?se=2026-09-16T19%3A24%3A47Z&sp=r&sv=2026-02-06&sr=b&scid=1f4157ac-d88d-518f-942d-37be464baa14&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-15T22%3A09%3A40Z&ske=2026-09-16T22%3A09%3A40Z&sks=b&skv=2026-02-06&sig=UL3l9gSQ1OLzCzTvKCDu9YbkbV6W0KT4AL3fNMOqSjM%3D',
+            'https://drive.usercontent.google.com/download?id=1mFC7hhWeAfRgv2gbJhQcrZdW8lKYU-iq&export=download',
+            'https://drive.google.com/uc?export=download&id=1mFC7hhWeAfRgv2gbJhQcrZdW8lKYU-iq'
+          ]
+          for i,url in enumerate(urls):
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      b=r.read(200000)
+                      print(i, r.status, r.headers.get('Content-Type'), len(b), b[:20].hex())
+              except urllib.error.HTTPError as e:
+                  print(i, type(e).__name__, e.code, e.read(600).decode(errors='replace'))
+              except Exception as e:
+                  print(i, type(e).__name__, str(e)[:200])
+          PY
