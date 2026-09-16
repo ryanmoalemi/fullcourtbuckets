@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
-  "status": "paused_blocked",
+  "status": "in_progress_single_player",
   "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
-  "user_authorization": "User approved the compact Caitlin desktop/mobile sample and explicitly authorized generating batches of ten and publishing without further approvals.",
-  "batch_size": 10,
+  "user_authorization": "User approved the compact Caitlin desktop/mobile sample, authorized live publication without per-player approval, and on 2026-09-16 directed the rollout to generate one player at a time after composite batch generation failed.",
+  "batch_size": 1,
   "automation_title": "FCB portrait rollout",
   "scheduled_start": "2026-09-16T01:00:00-07:00",
-  "cadence": "hourly, flexible timing, at most 72 scheduled runs",
+  "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": false,
   "generation_attempted": true,
   "initial_profile_count": 562,
@@ -23,20 +23,29 @@
       "verification": "Existing approved live sample verified in the originating chat; GitHub deployment run 35067075291 succeeded.",
       "url": "https://fullcourtbuckets.com/wnba/caitlin-clark/",
       "asset": "/images/players/caitlin-clark-portrait-v2.avif"
+    },
+    {
+      "player_id": 721,
+      "slug": "angel-reese",
+      "live_verified": true,
+      "verification": "Generated as a separate transparent single-player portrait, optimized to 640x640 AVIF, committed in e924d20ff9fa7676566dbc2d28dff6894f1264a7. GitHub Actions run 35076422963 passed tests, build, portrait application, compact-layout rollout, validation and Pages deploy. Live browser verification observed Angel Reese, a single rendered portrait, src /images/players/angel-reese-portrait-v1.avif?v=3c205a4c8b2b, no div.number-card, the stats strip directly below the hero, and the compact side-by-side layout.",
+      "url": "https://fullcourtbuckets.com/wnba/angel-reese/",
+      "asset": "/images/players/angel-reese-portrait-v1.avif",
+      "commit": "e924d20ff9fa7676566dbc2d28dff6894f1264a7",
+      "deployment_run_id": 35076422963
     }
   ],
   "current_batch": {
-    "batch_number": 1,
-    "state": "blocked_runtime_image_generation",
-    "claimed_at": "2026-09-16T08:00:48Z",
-    "lease_expires_at": "2026-09-16T08:41:42Z",
-    "lease_owner": "FCB portrait rollout scheduled executor",
-    "last_attempt_at": "2026-09-16T08:41:42Z",
-    "generation_attempts": 3,
+    "batch_number": 2,
+    "state": "ready_single_player_resume",
+    "claimed_at": null,
+    "lease_expires_at": null,
+    "lease_owner": null,
+    "last_attempt_at": "2026-09-16T08:55:27Z",
+    "generation_attempts": 4,
     "bad_outputs_discarded": true,
-    "player_ids": [721, 535, 468, 591, 573, 741, 488, 676, 552, 533],
+    "player_ids": [535, 468, 591, 573, 741, 488, 676, 552, 533],
     "players": [
-      {"player_id": 721, "slug": "angel-reese", "player_name": "Angel Reese"},
       {"player_id": 535, "slug": "aja-wilson", "player_name": "A'ja Wilson"},
       {"player_id": 468, "slug": "breanna-stewart", "player_name": "Breanna Stewart"},
       {"player_id": 591, "slug": "sabrina-ionescu", "player_name": "Sabrina Ionescu"},
@@ -48,27 +57,39 @@
       {"player_id": 533, "slug": "kelsey-mitchell", "player_name": "Kelsey Mitchell"}
     ]
   },
-  "batches": [],
+  "batches": [
+    {
+      "batch_number": 1,
+      "mode": "interactive_single_player_recovery",
+      "player_ids": [721],
+      "published_count": 1,
+      "commit": "e924d20ff9fa7676566dbc2d28dff6894f1264a7",
+      "deployment_run_id": 35076422963,
+      "completed_at": "2026-09-16T08:55:27Z"
+    }
+  ],
   "blocked": [],
   "execution_blockers": [
     {
       "blocked_at": "2026-09-16T08:41:42Z",
-      "scope": "all portrait batches in the scheduled runtime",
-      "capability": "single-player transparent portrait generation",
-      "retryable": false,
-      "requires_capability_change": true,
+      "resolved_at": "2026-09-16T08:55:27Z",
+      "scope": "multi-player image generation in one request",
+      "capability": "separate transparent portrait generation",
+      "retryable": true,
+      "requires_capability_change": false,
       "attempts": 3,
-      "result": "The available image generator repeatedly returned a 2x5 composite grid containing all ten batch players with baked website UI, text, statistics and background, including after an explicit single-player Angel Reese request and an edit request to isolate only Angel Reese. Those outputs fail the approved requirement for separate transparent player cutouts and were discarded.",
+      "result": "Multi-player generation repeatedly returned a 2x5 composite grid with baked UI. Switching to exactly one player per generation request produced a valid separate transparent portrait and the Angel Reese live publication cycle succeeded.",
       "reference_asset_access": "GitHub reference asset exists and returned valid AVIF/base64 content; GitHub read/write capability is available.",
-      "publication": "No new portrait assets or manifest entries were committed, and the live site was intentionally left unchanged rather than publishing incorrect artwork."
+      "publication": "Resolved for single-player execution mode. Multi-player generation remains disabled."
     }
   ],
   "notes": [
     "Only verified live portraits count as published. A scheduled task or placeholder is not a completed illustration.",
     "No per-player approval is required. Self-check image quality, identity, transparency, crop and the live deployment.",
     "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait.",
-    "Batch 1 selected by automation/portrait_queue.py priority logic from the current index; all ten selected IDs are active in the provider feed.",
-    "First scheduled execution attempted image generation but could not obtain separate transparent portraits; three composite UI-grid outputs were rejected and no incorrect assets were published.",
-    "The portrait rollout is paused until a runtime can reliably generate or edit one player portrait at a time. The independent WNBA statistics updater is unaffected."
+    "The first unattended scheduled attempt failed because a multi-player generation request produced composite UI grids.",
+    "An interactive one-player-at-a-time recovery succeeded for Angel Reese on 2026-09-16, including binary upload, tests, build, layout pipeline, deploy and live browser verification.",
+    "scheduled_execution_verified remains false until the re-enabled scheduled automation itself completes the same end-to-end cycle successfully.",
+    "The independent WNBA statistics updater remains active."
   ]
 }
