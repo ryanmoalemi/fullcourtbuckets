@@ -20,7 +20,7 @@
       "player_name": "Angel Reese",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/angel-reese-approved-v2.webp",
+      "src": "/images/players/angel-reese/portrait.webp",
       "width": 640,
       "height": 650,
       "source": "The replacement Angel Reese illustration explicitly approved by the owner in chat. Exported from the 1254x1254 RGBA master, not enlarged from the previous 192px thumbnail.",
@@ -37,7 +37,9 @@
         "source_width": 1254,
         "source_height": 1254,
         "upscaled": false
-      }
+      },
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true
     },
     {
       "player_id": 468,
