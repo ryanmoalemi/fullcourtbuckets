@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "approval_mode": "show_one_image_then_user_approval_then_publish_then_live_verify_then_next",
+  "approval_mode": "generate_one_image_then_owner_approves_then_upload_whole_file_to_player_folder_then_auto_render_and_verify",
   "bulk_generation_paused": true,
   "publication_checks": {
     "script": "automation/verify_portraits.py",
@@ -15,20 +15,47 @@
     "viewports": [[1365, 850], [390, 844], [320, 568]],
     "evidence_artifact_id": 10466461026,
     "evidence_artifact_name": "portrait-live-verification",
-    "scope_note": "File identity, decoding and compact-layout checks passed. This does not mean the old low-resolution portraits were upgraded or that Aja's missing approved replacement was published."
+    "scope_note": "Historical initial verification run. This did not upgrade old low-resolution portraits or publish Aja's replacement. See folder_uploads for the newer successful folder-based verification."
+  },
+  "folder_uploads": {
+    "enabled": true,
+    "path_pattern": "images/players/<exact-page-slug>/portrait.png",
+    "alternative_filenames": ["portrait.webp", "portrait.avif"],
+    "exactly_one_portrait_per_folder": true,
+    "original_file_bytes_preserved": true,
+    "per_player_code_or_manifest_edits_required": false,
+    "code_commit": "686fcee874c705d523060c9694cd6090a7eb5745",
+    "workflow_run_id": 35147048660,
+    "live_result": "passed",
+    "live_checks": 72,
+    "live_failures": 0,
+    "evidence_artifact_id": 10466788864,
+    "evidence_artifact_name": "portrait-live-verification",
+    "proof_player_id": 721,
+    "proof_slug": "angel-reese",
+    "proof_src": "/images/players/angel-reese/portrait.webp",
+    "proof_asset_sha256": "647a143bf181503f2ac3aa14df6d68f2a917e9d95f6349aac4029879dc72d450",
+    "proof_note": "The existing approved Angel file was copied inside GitHub unchanged, automatically discovered from its folder, rendered and verified live in Chromium and WebKit at desktop and both mobile widths. This proves folder-to-page handling, not a fresh binary upload from chat.",
+    "whole_file_chat_to_github_upload_verified": false,
+    "upload_connection": "Dropbox connector suggested as a whole-file handoff; not yet tested or integrated. Do not claim the transfer step is complete. No more chunked image transfers or per-player transfer workflows."
   },
   "awaiting_source": {
     "player_id": 535,
     "slug": "aja-wilson",
     "player_name": "A'ja Wilson",
-    "status": "approved_replacement_master_needs_reattachment",
-    "original_attachment_id": "file_000000002e4081fdb8115e7e95a0dee9",
-    "original_generation_id": "b1ef57a3-b342-4675-9d28-065d19583bdc",
-    "reason": "The approved source filename was reused by a subsequent generation. Exact original bytes were not recoverable from the active runtime or connected storage.",
+    "approved": true,
+    "status": "source_reattached_and_preserved_waiting_whole_file_upload",
+    "reattached_attachment_id": "file_00000000da1881fd836dbf8f021c2415",
+    "filename": "FCB-535-aja-wilson-approved-master-b08315052479ac5d.png",
+    "source_sha256": "b08315052479ac5d1bf8eb055573252963f6398055975e96c9f3e875692ca65a",
+    "source_width": 1254,
+    "source_height": 1254,
+    "master_storage": "private_connected_google_drive",
+    "master_file_id": "1pW1hB--IL3GcsXCZYk8gotcy-WMyYSiC",
     "live_state": "Corrupt previous file removed from page; existing gradient and outline-number placeholder retained.",
     "approved_replacement_published": false,
     "image_elements_on_live_page": 0,
-    "instruction": "Use the exact reattached approved master. Do not regenerate, substitute another player, or mark the placeholder as the completed replacement."
+    "instruction": "The owner already reattached and approved this source. Retrieve through the connected Drive fetch action, compare its checksum, then upload the whole original unchanged to images/players/aja-wilson/portrait.png. Do not ask for reattachment or approval again. Do not regenerate or substitute another player."
   },
   "approved_next_source": {
     "player_id": 468,
@@ -44,6 +71,6 @@
     "master_storage": "private_connected_google_drive",
     "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
     "master_download_checksum_verified": true,
-    "instruction": "Retrieve through the connected Drive fetch action and compare the source checksum before export. This is NOT the Aja image."
+    "instruction": "Already approved. Retrieve through connected Drive, compare the source checksum, then upload the whole original unchanged to images/players/breanna-stewart/portrait.png. No conversion or new approval is needed. This is not the Aja image. The live page still uses the old 256px file until this upload and verification complete."
   }
 }
