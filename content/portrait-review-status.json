@@ -4,21 +4,21 @@
   "bulk_generation_paused": true,
   "publication_checks": {
     "script": "automation/verify_portraits.py",
-    "workflow_run_id": 35150053814,
+    "workflow_run_id": 35153489499,
     "live_result": "passed",
     "live_checks": 72,
     "portrait_pages_checked": 12,
     "intentional_placeholder_pages_checked": 0,
-    "engines": ["chromium","webkit"],
+    "engines": ["chromium", "webkit"],
     "viewports": [[1365,850],[390,844],[320,568]],
-    "evidence_artifact_id": 10468828598,
+    "evidence_artifact_id": 10469952315,
     "evidence_artifact_name": "portrait-live-verification",
-    "scope_note": "Exact Aja replacement verified live. Other low-resolution legacy images were not upgraded in this run. Image decoding and layout checks are not independent facial identification."
+    "scope_note": "Exact full-resolution Breanna replacement verified live in six player-specific browser checks. Other legacy low-resolution images were not upgraded in this run. Hash checks bind the approved artwork to the player record; they are not independent facial identification."
   },
   "folder_uploads": {
     "enabled": true,
     "path_pattern": "images/players/<exact-page-slug>/portrait.png",
-    "alternative_filenames": ["portrait.webp","portrait.avif"],
+    "alternative_filenames": ["portrait.webp", "portrait.avif"],
     "exactly_one_portrait_per_folder": true,
     "original_file_bytes_preserved": true,
     "per_player_code_or_manifest_edits_required": false,
@@ -26,18 +26,36 @@
     "whole_file_chat_to_github_upload_verified": true,
     "upload_workflow": ".github/workflows/portrait-upload.yml",
     "upload_request": ".github/portrait-upload.json",
-    "upload_run_id": 35150035606,
-    "publication_run_id": 35150053814,
+    "upload_run_id": 35153469638,
+    "publication_run_id": 35153489499,
     "instructions": ".github/PORTRAIT_UPLOAD.md",
-    "proof_player_id": 535,
-    "proof_slug": "aja-wilson",
-    "proof_src": "/images/players/aja-wilson/portrait.png",
-    "proof_asset_sha256": "925c2dbc0c01e26b8ccbff0fea9090c608c6be35c84dde4b9a40ad08a1363554",
-    "proof_note": "All 1,583,575 bytes of the approved 1244x1264 PNG transferred intact into GitHub. The existing folder mapper rendered it, and actual public PNG hashes and dimensions passed in both browsers at all three widths.",
-    "upload_connection": "Connected Drive preserves the master. A temporary Docs inline-image handoff exposes the exact original sourceUri for the reusable GitHub uploader. Use sourceUri, not Google's resampled contentUri; exact checksum required. Temporary doc deleted after successful transfer. No Dropbox connection is needed. No image chunking or per-player transfer workflow."
+    "proof_player_id": 468,
+    "proof_slug": "breanna-stewart",
+    "proof_src": "/images/players/breanna-stewart/portrait.png",
+    "proof_asset_sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
+    "proof_note": "All 1,782,648 bytes of the approved 1254x1254 PNG transferred intact through the existing uploader. Folder mapping, publication and live verification succeeded without changing template code or the original image.",
+    "upload_connection": "Connected Drive preserves the master. A temporary Docs inline-image handoff exposes the exact original sourceUri for the reusable GitHub uploader. Use sourceUri, not Google's resampled contentUri; exact checksum required. Delete only the temporary handoff document after successful transfer. No Dropbox, image chunking, or new per-player workflow is needed."
   },
   "awaiting_source": null,
   "last_completed": {
+    "player_id": 468,
+    "slug": "breanna-stewart",
+    "player_name": "Breanna Stewart",
+    "approved": true,
+    "status": "published_live_verified",
+    "generation_id": "9708e048-b33f-46d4-8a0e-30c468774ba9",
+    "filename": "FCB-468-breanna-stewart-approved-master-461b1b7ed968ea95.png",
+    "source_sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
+    "source_width": 1254,
+    "source_height": 1254,
+    "source_bytes": 1782648,
+    "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
+    "approved_replacement_published": true,
+    "image_elements_on_live_page": 1,
+    "receipt": "content/portrait-upload-receipts/breanna-stewart.json",
+    "instruction": "Breanna's previously approved original is now uploaded and verified. The owner requested a live review link. Do not regenerate it, repeat its upload, or revert to the old 256px version."
+  },
+  "previous_completed": {
     "player_id": 535,
     "slug": "aja-wilson",
     "player_name": "A'ja Wilson",
@@ -52,22 +70,12 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/aja-wilson.json",
-    "instruction": "Aja is COMPLETE with the latest owner-approved white-top portrait. Older black-top source and missing-source notes are superseded. Do not regenerate or overwrite this approved published version."
+    "instruction": "Preserve Aja's latest owner-approved white-top portrait. Older black-top and missing-source notes are superseded."
   },
-  "approved_next_source": {
-    "player_id": 468,
+  "approved_next_source": null,
+  "awaiting_owner_review": {
     "slug": "breanna-stewart",
-    "player_name": "Breanna Stewart",
-    "approved": true,
-    "replacement_published": false,
-    "filename": "FCB-468-breanna-stewart-approved-master-461b1b7ed968ea95.png",
-    "source_sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
-    "source_width": 1254,
-    "source_height": 1254,
-    "source_bytes": 1782648,
-    "master_storage": "private_connected_google_drive",
-    "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
-    "master_download_checksum_verified": true,
-    "instruction": "Already approved. Retrieve through connected Drive, compare checksum, upload the whole original unchanged to images/players/breanna-stewart/portrait.png using the reusable workflow. No conversion or new approval needed. This is not Aja's image. Verify live before marking complete."
+    "live_url": "https://fullcourtbuckets.com/wnba/breanna-stewart/?v=approved-461b1b7e",
+    "instruction": "Provide the live page and verified screenshots for the owner's review. No additional player artwork was generated or published in this request."
   }
 }
