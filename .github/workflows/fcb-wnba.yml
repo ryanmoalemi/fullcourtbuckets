@@ -50,6 +50,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install portrait verification dependencies
+        run: |
+          python -m pip -q install 'pillow>=11.3,<13' 'playwright>=1.50,<2'
+          python -m playwright install --with-deps chromium > /dev/null
+      - name: Quarantine the audited corrupt portrait and bind existing approvals
+        run: python automation/portrait_migration_20260916.py
       - name: Test data safety and page builder without credentials
         run: |
           python -m unittest discover -s automation -p 'test_*.py' -v
@@ -113,12 +119,36 @@ jobs:
           assert Path('wnba/assets/players.css').stat().st_size>1000
           print(f'Validated {len(entries)} compact profiles, approved artwork and sitemap.')
           PY
+      - name: Verify decoded portrait bytes and local desktop/mobile rendering
+        if: steps.key.outputs.ready == 'true'
+        run: |
+          mkdir -p "$RUNNER_TEMP/portrait-publish-plan"
+          python automation/verify_portraits.py --create-plan --plan "$RUNNER_TEMP/portrait-publish-plan/plan.json"
+          python -m http.server 8765 --bind 127.0.0.1 > "$RUNNER_TEMP/portrait-server.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          sleep 1
+          python automation/verify_portraits.py --plan "$RUNNER_TEMP/portrait-publish-plan/plan.json" --origin http://127.0.0.1:8765 --output "$RUNNER_TEMP/portrait-local-qa"
+          cp automation/verify_portraits.py "$RUNNER_TEMP/portrait-publish-plan/verify_portraits.py"
+      - uses: actions/upload-artifact@v4
+        if: success() && steps.key.outputs.ready == 'true'
+        with:
+          name: portrait-publish-plan
+          path: ${{ runner.temp }}/portrait-publish-plan
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portrait-local-verification
+          path: ${{ runner.temp }}/portrait-local-qa
+          if-no-files-found: ignore
+          retention-days: 7
       - name: Commit validated data and generated player pages
         if: steps.key.outputs.ready == 'true'
         run: |
           git config user.name 'Full Court Buckets updater'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml
+          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh WNBA data and generated player profiles'
             git pull --rebase origin main
@@ -151,3 +181,30 @@ jobs:
       - name: Publish the verified website and player pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: portrait-publish-plan
+          path: ${{ runner.temp }}/portrait-publish-plan
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install real desktop and Safari-engine browsers
+        run: |
+          python -m pip -q install 'playwright>=1.50,<2'
+          python -m playwright install --with-deps chromium webkit > /dev/null
+      - name: Verify approved files on the actual public player pages
+        run: |
+          python "$RUNNER_TEMP/portrait-publish-plan/verify_portraits.py" --plan "$RUNNER_TEMP/portrait-publish-plan/plan.json" --origin https://fullcourtbuckets.com --output "$RUNNER_TEMP/portrait-live-qa" --engines chromium,webkit --retries 4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portrait-live-verification
+          path: ${{ runner.temp }}/portrait-live-qa
+          if-no-files-found: error
+          retention-days: 14
+      - name: Report verified publication
+        if: success()
+        run: echo 'Live portrait byte hashes, player IDs, image decoding, and desktop/mobile layout checks passed in Chromium and WebKit. Evidence is in portrait-live-verification.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Report unverified publication
+        if: failure()
+        run: echo 'Do not mark this publication verified. At least one live portrait check failed. Inspect portrait-live-verification before proceeding to the next player.' >> "$GITHUB_STEP_SUMMARY"
