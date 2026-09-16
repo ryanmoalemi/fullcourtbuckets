@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "scheduled",
+  "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
+  "user_authorization": "User approved the compact Caitlin desktop/mobile sample and explicitly authorized generating batches of ten and publishing without further approvals.",
+  "batch_size": 10,
+  "automation_title": "FCB portrait rollout",
+  "scheduled_start": "2026-09-16T01:00:00-07:00",
+  "cadence": "hourly, flexible timing, at most 72 scheduled runs",
+  "scheduled_execution_verified": false,
+  "initial_profile_count": 562,
+  "initial_active_feed_count": 209,
+  "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
+  "reference_page": "https://fullcourtbuckets.com/wnba/caitlin-clark/",
+  "reference_asset": "/images/players/caitlin-clark-portrait-v2.avif",
+  "approved_layout": "fcb-compact-player-v1",
+  "published": [
+    {
+      "player_id": 708,
+      "slug": "caitlin-clark",
+      "live_verified": true,
+      "verification": "Existing approved live sample verified in the originating chat; GitHub deployment run 35067075291 succeeded.",
+      "url": "https://fullcourtbuckets.com/wnba/caitlin-clark/",
+      "asset": "/images/players/caitlin-clark-portrait-v2.avif"
+    }
+  ],
+  "current_batch": null,
+  "batches": [],
+  "blocked": [],
+  "notes": [
+    "Only verified live portraits count as published. A scheduled task or placeholder is not a completed illustration.",
+    "No per-player approval is required. Self-check image quality, identity, transparency, crop and the live deployment.",
+    "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait."
+  ]
+}
