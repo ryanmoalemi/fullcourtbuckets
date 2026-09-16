@@ -148,7 +148,14 @@
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 11,
+    "mode": "scheduled_single_player_generation",
+    "player_ids": [533],
+    "claimed_at": "2026-09-16T18:03:15Z",
+    "lease_expires_at": "2026-09-16T18:48:15Z",
+    "status": "claimed"
+  },
   "batches": [
     {
       "batch_number": 1,
