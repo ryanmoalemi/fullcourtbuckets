@@ -4,16 +4,16 @@
   "bulk_generation_paused": true,
   "publication_checks": {
     "script": "automation/verify_portraits.py",
-    "workflow_run_id": 35153489499,
+    "workflow_run_id": 35164206510,
     "live_result": "passed",
     "live_checks": 72,
     "portrait_pages_checked": 12,
     "intentional_placeholder_pages_checked": 0,
     "engines": ["chromium", "webkit"],
     "viewports": [[1365,850],[390,844],[320,568]],
-    "evidence_artifact_id": 10469952315,
+    "evidence_artifact_id": 10473888869,
     "evidence_artifact_name": "portrait-live-verification",
-    "scope_note": "Exact full-resolution Breanna replacement verified live in six player-specific browser checks. Other legacy low-resolution images were not upgraded in this run. Hash checks bind the approved artwork to the player record; they are not independent facial identification."
+    "scope_note": "The exact owner-approved Sabrina original passed six player-specific browser checks, including the original checksum and 1254x1254 natural dimensions. Desktop and 390px screenshots were inspected. No template code changed. Other legacy low-resolution portraits were not upgraded. At 320x568 the entire stats strip does not fit above the fold; do not claim otherwise."
   },
   "folder_uploads": {
     "enabled": true,
@@ -26,18 +26,40 @@
     "whole_file_chat_to_github_upload_verified": true,
     "upload_workflow": ".github/workflows/portrait-upload.yml",
     "upload_request": ".github/portrait-upload.json",
-    "upload_run_id": 35153469638,
-    "publication_run_id": 35153489499,
+    "upload_run_id": 35164190769,
+    "publication_run_id": 35164206510,
     "instructions": ".github/PORTRAIT_UPLOAD.md",
-    "proof_player_id": 468,
-    "proof_slug": "breanna-stewart",
-    "proof_src": "/images/players/breanna-stewart/portrait.png",
-    "proof_asset_sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
-    "proof_note": "All 1,782,648 bytes of the approved 1254x1254 PNG transferred intact through the existing uploader. Folder mapping, publication and live verification succeeded without changing template code or the original image.",
-    "upload_connection": "Connected Drive preserves the master. A temporary Docs inline-image handoff exposes the exact original sourceUri for the reusable GitHub uploader. Use sourceUri, not Google's resampled contentUri; exact checksum required. Delete only the temporary handoff document after successful transfer. No Dropbox, image chunking, or new per-player workflow is needed."
+    "proof_player_id": 591,
+    "proof_slug": "sabrina-ionescu",
+    "proof_src": "/images/players/sabrina-ionescu/portrait.png",
+    "proof_asset_sha256": "46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104",
+    "proof_note": "All 1,510,842 bytes of the owner-approved 1254x1254 PNG transferred intact using the existing uploader. Mapping, publication and live verification succeeded without changing the template or original image.",
+    "upload_connection": "Connected Drive preserves the master. A temporary Docs insertInlineImage with the real local path in image_uris returns imageProperties.sourceUri through get_document. Use that exact original sourceUri immediately, never the resampled contentUri or oaiusercontent gateway URL. Existing uploader verifies exact checksum and byte count. Delete only the temporary handoff document after successful transfer. No Dropbox, image chunking, or per-player workflow is needed.",
+    "github_write_access_verified": true,
+    "write_access_evidence_commit": "4c182837d01822308d59e2416c2979d98ddf5814",
+    "permission_note": "No new account permission was needed. Discover and use existing GitHub write tools before claiming read-only access; this record does not grant permissions."
   },
   "awaiting_source": null,
   "last_completed": {
+    "player_id": 591,
+    "slug": "sabrina-ionescu",
+    "player_name": "Sabrina Ionescu",
+    "approved": true,
+    "status": "published_live_verified",
+    "generation_id": "2edb4f3d-de45-479c-bf84-192f8cb8879b",
+    "source_attachment_id": "file_00000000be4881fd934df86c13b10569",
+    "filename": "FCB-591-sabrina-ionescu-approved-46585337fdfbda99.png",
+    "source_sha256": "46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104",
+    "source_width": 1254,
+    "source_height": 1254,
+    "source_bytes": 1510842,
+    "master_file_id": "1hPuZg8opc7_uy8HmWJk93PB7IY0DLzIp",
+    "approved_replacement_published": true,
+    "image_elements_on_live_page": 1,
+    "receipt": "content/portrait-upload-receipts/sabrina-ionescu.json",
+    "instruction": "This is the exact uniform transparent white-top portrait approved by the owner. It is uploaded and verified. Do not regenerate or repeat the upload. Earlier wrong posters and the other blocked scheduled draft are superseded."
+  },
+  "previous_completed": {
     "player_id": 468,
     "slug": "breanna-stewart",
     "player_name": "Breanna Stewart",
@@ -53,9 +75,9 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/breanna-stewart.json",
-    "instruction": "Breanna's previously approved original is uploaded and verified. Do not regenerate it, repeat its upload, or revert to the old 256px version."
+    "instruction": "Preserve Breanna's approved full-resolution original; do not regenerate it or revert to the old 256px version."
   },
-  "previous_completed": {
+  "completed_before_previous": {
     "player_id": 535,
     "slug": "aja-wilson",
     "player_name": "A'ja Wilson",
@@ -73,26 +95,21 @@
     "instruction": "Preserve Aja's latest owner-approved white-top portrait. Older black-top and missing-source notes are superseded."
   },
   "approved_next_source": null,
-  "awaiting_owner_review": null,
-  "next_draft": {
+  "awaiting_owner_review": {
     "player_id": 591,
     "slug": "sabrina-ionescu",
-    "player_name": "Sabrina Ionescu",
-    "status": "generated_master_preserved_upload_blocked",
-    "approved": true,
-    "authorization_context": "Owner explicitly instructed publication before review for this Sabrina replacement only.",
-    "replacement_published": false,
+    "status": "published_waiting_owner_live_inspection",
+    "live_url": "https://fullcourtbuckets.com/wnba/sabrina-ionescu/?v=46585337fdfb",
+    "source_already_approved": true,
+    "instruction": "Owner may inspect the verified live result. Do not regenerate Sabrina; proceed only on the owner's next-player instruction."
+  },
+  "next_draft": null,
+  "superseded_sabrina_attempt": {
     "generation_id": "58abc198-1889-4972-b900-46f6d73a923a",
-    "filename": "FCB-591-sabrina-ionescu-approved-175db8b183881d68.png",
     "source_sha256": "175db8b183881d682c416aed07f1603eb4f3cd4eddc026f4a427ffaa8cebac20",
-    "source_width": 1254,
-    "source_height": 1254,
-    "source_bytes": 1706620,
-    "native_alpha": true,
     "master_drive_file_id": "14H-AOl5r__q8yiQ0mF19o2yuau8hmhss",
     "failed_upload_run_id": 35163721021,
-    "blocker": "The existing reusable GitHub portrait uploader returned HTTP 403 while fetching the temporary whole-file handoff URL, before any replacement portrait bytes were written. The source URL was scrubbed from the repository after failure.",
-    "live_state_verified_after_failure": "The existing 192x192 Sabrina portrait remains live at /images/players/sabrina-ionescu-portrait-v1.webp; the new PNG was not published.",
-    "instruction": "Do not claim Sabrina's replacement is live. Preserve the generated full-resolution master and the existing live page unchanged until the supported whole-file handoff can be completed and verified. Do not move to the next player."
+    "status": "superseded_by_owner_approved_46585337fdfbda99",
+    "instruction": "Do not publish this earlier scheduled draft. The later owner-approved original is already live."
   }
 }
