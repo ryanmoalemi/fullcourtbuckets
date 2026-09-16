@@ -1,51 +1,52 @@
-# Full Court Buckets: Chat-managed WNBA data integration
+# Full Court Buckets: chat-managed WNBA website
 
-## Current phase
+## Verified operating status
 
-The server-side BALLDONTLIE GOAT importer, offline tests, and daily/weekly scheduling are being installed. A private API key and a successful live run are still required. This phase publishes the shared data feed; it does not yet publish or wire the earlier downloadable player-page template. Do not describe the profile pages, licensed news, confirmed transactions, or complete career totals as connected.
+The private BALLDONTLIE Actions secret is connected. The first authenticated import and GitHub Pages deployment succeeded on 2026-09-16 UTC (September 15 Pacific). It returned 562 player records with available season statistics spanning 2008-2026.
 
-## One-time private credential
+The static player-page builder is connected and deployed. The public directory at https://fullcourtbuckets.com/wnba/ and sample profiles /wnba/caitlin-clark/ and /wnba/sue-bird/ were fetched from the live domain and verified after deployment. Snapshot counts can change; inspect data/wnba/status.json and data/wnba/site-build.json for the current status. This does not certify every statistic independently of the provider or guarantee every historical player is covered.
 
-In this repository, open Settings > Secrets and variables > Actions > New repository secret.
-Name: `BALLDONTLIE_API_KEY`. Value: the API key from the user's BALLDONTLIE dashboard.
-Never paste the key into chat, source files, frontend JavaScript, issue comments, logs, or a public URL.
-The GitHub integration can read/write repository files but cannot retrieve the private secret's value. The Actions runner consumes it privately.
+## Safe repository layout
 
-## Important repository layout
+Production: branch `main`, GitHub Pages, fullcourtbuckets.com. Default branch: `master`, containing obsolete unrelated ADU content. Never overwrite main with master, change CNAME, delete unrelated content, or migrate hosting without authorization.
 
-Production website: branch `main`, GitHub Pages, domain fullcourtbuckets.com.
-Default branch at installation: `master`, containing obsolete unrelated ADU content.
-Do not overwrite main with master, change CNAME, delete the repository, or migrate hosting.
-The identical `.github/workflows/fcb-wnba.yml` must exist on both branches. The default-branch scheduled run dispatches execution on main, so Pages deployments originate from the correct source branch. If main becomes the default later, its workflow runs directly.
+The workflow `.github/workflows/fcb-wnba.yml` exists on both branches. The default-branch scheduled job dispatches main's workflow. If main becomes the default later, its workflow runs directly.
 
-## Schedule
+## Daily/weekly automation
 
-GitHub Actions checks at about 04:17 America/Los_Angeles, daily. The importer uses current-year league schedule data, not fixed season months. Full refresh is daily during the season and every seven days after the previous successful refresh in the offseason. A short schedule check still runs daily in the offseason. Season inference includes a 28-day playoff scheduling grace period. A missing schedule is treated conservatively as daily, never silently as offseason. Scheduling is best effort, not an exact-time SLA.
+GitHub Actions checks the league schedule at approximately 04:17 America/Los_Angeles daily. Statistics and listed team data refresh daily in-season and every seven days after the previous successful refresh in the offseason. A short schedule check still runs daily in the offseason. Season inference uses the current-year schedule with seven days before the first game and 28 days after the last scheduled game; this grace accommodates incomplete playoff scheduling. Missing schedule data conservatively keeps daily refreshes. Scheduling is best effort, not an exact-time SLA.
 
-The first valid run imports the available 2008-current season statistics with explicit year and competition filters. Later runs refresh current and previous seasons, plus one rotating historical year. Trial rate limits are handled by backing off on 429 responses. No extra paid services are created.
+The importer refreshes current and previous seasons and one rotating historical year. It retries rate limits and temporary server errors. Only validated imports are committed. Missing keys, failed tests, unsafe data, or failed page validation prevent that run's publication. The last deployed site remains available. Review Actions failures; no separate maintenance or alert-delivery service is connected.
 
-## Public outputs
+After a successful importer step, the builder regenerates pages from the verified local snapshot, even when an API refresh is not yet due. This supports code changes and recovery from failed deployments. Explicit Pages deployment is required because commits made with GITHUB_TOKEN do not trigger normal branch builds.
 
-- `data/wnba/status.json`: actual last successful refresh, scope, health.
-- `data/wnba/players-index.json`: stable player IDs and URLs.
-- `data/wnba/players/{slug}.json`: profile data, source season averages, separate recent completed games.
-- `data/wnba/id-map.json`: permanent provider ID-to-slug mapping.
-- `data/wnba/seasons/{year}.json`: source season records.
-- `data/wnba/teams.json`: team reference data.
+## Editing through chat
 
-The profile template must consume these JSON files or build static HTML from them. The source can be inspected from this chat using GitHub reads. It must never call BALLDONTLIE directly from the visitor's browser.
+- `automation/wnba_sync.py`: API importer and permanent provider-ID mapping.
+- `automation/build_players.py`: shared static page generator and directory.
+- `automation/players.css`, `automation/players.js`: shared presentation sources.
+- `wnba/{slug}/index.html`: generated output; do not hand-edit.
+- `/wnba/`: searchable player directory. Homepage has a Players navigation link.
+- `/player-sitemap.xml`: generated profile sitemap, referenced in robots.txt.
 
-## Data rules
+Use the GitHub connection in this chat to edit sources on main, inspect Actions runs, and verify deployed output. A commit changing an automation file triggers tests/build/deployment. Unchanged data will keep its original source-check timestamp rather than pretending a new import happened.
 
-Missing values remain null. Regular season and playoffs are separate. Do not turn rounded season averages into exact totals or average them to invent career statistics. Team stints are retained separately; never sum a combined row and its stints. Statistics before 2008 are out of scope. An inactive-feed absence does not prove retirement. A changed team field does not establish the transaction type or effective date. No player images, birthdays, draft details, awards, news, or trade stories are fabricated.
+## Credentials
 
-Partial imports and suspicious feed drops stop before git commit/deployment. HTTP failures are retried; credentials are not logged. Last successful output is retained. Recent logs contain only games explicitly marked final and cover a labeled 35-day window, not all historical games. Successful weekly commits provide repository activity; monitor GitHub's public-repository schedule inactivity rules.
+`BALLDONTLIE_API_KEY` is already saved as a private repository Actions secret. Do not request it again unless the workflow actually reports a credential problem. Never paste its value in chat, code, issues, public URLs, browser JavaScript, or logs. The Actions runner uses it privately; the chat connector cannot retrieve the secret value.
 
-## Operating from chat
+## Data boundaries
 
-Use GitHub tools to modify files on main and inspect Actions runs. To trigger a fresh test without the editor, modify an `automation/` file such as `automation/run-request.json`, or run the workflow with `workflow_dispatch`. That write is not a substitute for credential setup.
+Coverage starts in 2008. Regular season and playoffs are separate. Missing values are not zero. Team stints are not summed with combined rows. Rounded season averages are not used to invent exact career totals or career averages. Source-check timestamps are not guaranteed game-data cutoffs.
 
-Before calling the integration live, verify: secret accepted, 2008+ import succeeds, field mappings match actual output, Pages deployment succeeds, public JSON is reachable, and a player-page adapter is connected and tested. Preserve the approved template design and existing site content when doing that next phase.
+Not listed active does not mean retired. A changed team field does not establish a trade, signing, waiver claim, or effective date. Invalid biography fields are hidden instead of guessed; the initial provider response included a college name in a weight field. Recent game logs contain explicitly completed games in a labeled 35-day window, not complete career game histories.
 
-Tests: `python -m unittest discover -s automation -p 'test_*.py' -v`
-Documentation: https://wnba.balldontlie.io/ and https://www.balldontlie.io/openapi/wnba.yml
+News and confirmed transaction feeds are NOT connected. Player photographs, additional verified biographies, awards, and pre-2008 statistics are not supplied by this implementation. The player header uses jersey-number artwork, not a player photograph.
+
+## Tests and public health
+
+Run `python -m unittest discover -s automation -p 'test_*.py' -v` and `node --check automation/players.js`. There are 26 importer tests and 14 builder tests. The production workflow's test step and 562-page/sitemap validation succeeded. Local Chromium checks covered 360, 390, 768, and 1440 pixel widths with synthetic data, search, active/archive filtering, and season selection.
+
+Data health: `/data/wnba/status.json`. Page-build health: `/data/wnba/site-build.json`. Additional implementation notes: `automation/PLAYER_PAGES.md`.
+
+Provider docs: https://wnba.balldontlie.io/ and https://www.balldontlie.io/openapi/wnba.yml
