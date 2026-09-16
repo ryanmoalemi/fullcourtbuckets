@@ -82,6 +82,7 @@ jobs:
         run: |
           python automation/build_players.py
           python automation/apply_portraits.py
+          python automation/rollout_player_design.py
       - name: Check generated pages and sitemap before publication
         if: steps.key.outputs.ready == 'true'
         run: |
@@ -96,14 +97,21 @@ jobs:
               assert text.count('<h1 ')==1, p['slug']
               assert 'BALLDONTLIE_API_KEY' not in text, p['slug']
               assert f'https://fullcourtbuckets.com/wnba/{p["slug"]}/' in text, p['slug']
-          for portrait in json.loads(Path('content/player-illustrations.json').read_text())['portraits']:
+              assert 'fcb-player-compact' in text, p['slug']
+              assert '<div class="number-card">' not in text, p['slug']
+          portraits=json.loads(Path('content/player-illustrations.json').read_text())['portraits']
+          for portrait in portraits:
               text=(Path('wnba')/portrait['slug']/'index.html').read_text()
               assert 'class="player-illustration"' in text
               assert portrait['src'] in text
               assert 'AI-generated illustration' in text
+          rollout=json.loads(Path('data/wnba/illustration-rollout.json').read_text())
+          assert rollout['profile_count']==len(entries)
+          assert rollout['profiles_with_approved_illustrations']==len(portraits)
+          assert rollout['profiles_awaiting_illustrations']==len(entries)-len(portraits)
           assert len(ET.parse('player-sitemap.xml').getroot())==len(entries)+1
           assert Path('wnba/assets/players.css').stat().st_size>1000
-          print(f'Validated {len(entries)} generated profiles, approved artwork and sitemap.')
+          print(f'Validated {len(entries)} compact profiles, approved artwork and sitemap.')
           PY
       - name: Commit validated data and generated player pages
         if: steps.key.outputs.ready == 'true'
