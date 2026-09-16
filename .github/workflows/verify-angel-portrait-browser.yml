@@ -1,0 +1,68 @@
+name: Verify live Angel portrait in browser
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-angel-portrait-browser.yml']
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install the screenshot browser
+        run: |
+          python -m pip -q install playwright
+          python -m playwright install --with-deps chromium > /dev/null
+      - name: Verify actual live artwork and compact layout
+        run: |
+          mkdir -p portrait-qa
+          python - <<'PY'
+          import hashlib,json,time
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          expected='647a143bf181503f2ac3aa14df6d68f2a917e9d95f6349aac4029879dc72d450'
+          report=[]
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              for width,height,label in [(1365,850,'desktop'),(390,844,'mobile-390'),(320,568,'mobile-320')]:
+                  page=browser.new_page(viewport={'width':width,'height':height},device_scale_factor=1)
+                  for attempt in range(40):
+                      page.goto('https://fullcourtbuckets.com/wnba/angel-reese/?verify=sharp-'+str(time.time_ns()),wait_until='networkidle')
+                      image=page.locator('img.player-illustration')
+                      if image.count()==1 and 'angel-reese-approved-v2.webp' in (image.get_attribute('src') or ''):
+                          break
+                      time.sleep(3)
+                  else:
+                      raise AssertionError('Live page still uses the old portrait')
+                  page.evaluate('document.fonts.ready')
+                  image.evaluate('(el)=>el.decode()')
+                  measurements=page.evaluate('''() => {
+                    const img=document.querySelector('.player-illustration');
+                    const box=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom,top:r.top}};
+                    return {innerWidth,scrollWidth:document.documentElement.scrollWidth,heading:document.querySelector('h1').innerText,src:img.currentSrc,naturalWidth:img.naturalWidth,naturalHeight:img.naturalHeight,portrait:box(document.querySelector('.portrait-art')),hero:box(document.querySelector('.hero-main')),stats:box(document.querySelector('.hero-stats')),numberCards:document.querySelectorAll('.hero .number-card').length,captions:document.querySelectorAll('.hero figcaption').length,statsRows:document.querySelectorAll('#stats tbody tr').length};
+                  }''')
+                  assert measurements['naturalWidth']==640 and measurements['naturalHeight']==650
+                  assert measurements['scrollWidth']<=width
+                  assert measurements['numberCards']==0 and measurements['captions']==0
+                  assert abs(measurements['portrait']['bottom']-measurements['stats']['top'])<1.1
+                  assert measurements['statsRows']>0
+                  response=page.request.get(measurements['src'])
+                  assert response.ok and hashlib.sha256(response.body()).hexdigest()==expected
+                  measurements.update(viewportHeight=height,label=label,asset_sha256=expected,stats_above_fold=measurements['stats']['bottom']<=height)
+                  page.screenshot(path='portrait-qa/'+label+'.png',full_page=False)
+                  page.locator('.hero').screenshot(path='portrait-qa/'+label+'-hero.png')
+                  report.append(measurements)
+                  page.close()
+              browser.close()
+          Path('portrait-qa/live-layout.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: angel-live-desktop-mobile
+          path: portrait-qa
