@@ -12,6 +12,18 @@
       "height": 650,
       "source": "User-approved AI-generated illustration from the Full Court Buckets chat.",
       "display": "Compact head-and-shoulders CSS crop over the original gradient, circles and outline number. Square number card removed. Portrait and name share one row on mobile so the statistics stay high on the page. Straight crop meets the statistics divider. No visible caption. Names and statistics remain HTML."
+    },
+    {
+      "player_id": 721,
+      "slug": "angel-reese",
+      "player_name": "Angel Reese",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/angel-reese-portrait-v1.avif",
+      "width": 640,
+      "height": 640,
+      "source": "AI-generated original illustration created in the Full Court Buckets chat on 2026-09-16 using the approved Caitlin Clark portrait only as style direction; generated one player at a time.",
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
     }
   ]
 }
