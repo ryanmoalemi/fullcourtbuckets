@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 9,
-  "remaining_count": 553,
+  "verified_published_count": 10,
+  "remaining_count": 552,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -132,15 +132,23 @@
       "deployment_run_id": 35120860493,
       "asset_blob_sha": "f9cfe3d0e9f4b967197037b1eb8cd4736a2a7b47",
       "browser_verification_run_id": "6f780a6c-7b27-4a67-9cba-5a70534bfe32"
+    },
+    {
+      "player_id": 552,
+      "slug": "arike-ogunbowale",
+      "live_verified": true,
+      "verification": "Fresh single-player generation succeeded on the first likeness attempt. The generated source decoded as RGBA; the final 160x160 WebP decoded as RGBA with alpha extrema 0-255. Local Git blob SHA 1eebb84c3a827e879145f7ac03507a00e3b1e7c9 exactly matched the uploaded GitHub blob. Asset and manifest were committed atomically in b677d94f885a4d7cf2ae1abf74054b7fd610a20f. GitHub Actions run 35126957550 completed successfully: tests, WNBA data handling, player build, portrait application/layout generation, page validation, Pages artifact upload and deploy all passed; generated page commit 65a2aaf82345033c1c0476aef61b8f55f02e4156 followed. A fresh browser-rendered fetch of the live page returned the Arike Ogunbowale hero and exactly one image URL at /images/players/arike-ogunbowale-portrait-v1.webp?v=c5a925ecd980. The generated live-page markup contains one approved portrait figure, no div.number-card, a faint ghost-number backdrop, the hero-stats block immediately after hero-main, and the approved 55%/45% side-by-side grid through the max-width 780px rule. Interactive strict-mode browser verification was unavailable because that provider account is not beta-enabled; this did not block the rendered-browser fetch or publication verification.",
+      "url": "https://fullcourtbuckets.com/wnba/arike-ogunbowale/",
+      "asset": "/images/players/arike-ogunbowale-portrait-v1.webp",
+      "commit": "b677d94f885a4d7cf2ae1abf74054b7fd610a20f",
+      "generated_page_commit": "65a2aaf82345033c1c0476aef61b8f55f02e4156",
+      "deployment_run_id": 35126957550,
+      "asset_blob_sha": "1eebb84c3a827e879145f7ac03507a00e3b1e7c9",
+      "asset_sha256": "c5a925ecd98059666e2e276c90ccf4225ed9f901afa5b148f7f0c8543277442a",
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
-  "current_batch": {
-    "player_ids": [552],
-    "slugs": ["arike-ogunbowale"],
-    "mode": "scheduled_single_player_generation",
-    "claimed_at": "2026-09-16T17:00:45Z",
-    "lease_expires_at": "2026-09-16T17:45:45Z"
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -280,6 +288,26 @@
       "live_verified": true,
       "browser_verification_run_id": "6f780a6c-7b27-4a67-9cba-5a70534bfe32",
       "lease_write_attempt": "No new generation occurred because an approved Aliyah Boston asset was already in the manifest. The existing claimed current_batch was resumed and reconciled instead of regenerating the player."
+    },
+    {
+      "batch_number": 10,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [552],
+      "published_count": 1,
+      "generation_attempts": 1,
+      "discarded_generation_outputs": 0,
+      "binary_publication_attempts": 2,
+      "discarded_unreferenced_blob_sha": "f139f99c29fb3901aa8706a26fb51d6376ae2331",
+      "asset": "/images/players/arike-ogunbowale-portrait-v1.webp",
+      "asset_blob_sha": "1eebb84c3a827e879145f7ac03507a00e3b1e7c9",
+      "asset_sha256": "c5a925ecd98059666e2e276c90ccf4225ed9f901afa5b148f7f0c8543277442a",
+      "commit": "b677d94f885a4d7cf2ae1abf74054b7fd610a20f",
+      "generated_page_commit": "65a2aaf82345033c1c0476aef61b8f55f02e4156",
+      "deployment_run_id": 35126957550,
+      "completed_at": "2026-09-16T17:15:08Z",
+      "live_verified": true,
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification",
+      "browser_note": "Interactive strict agent mode was unavailable because the connected browser account is not beta-enabled; the free rendered-browser fetch succeeded and the live page exposed the expected portrait asset and hero structure."
     }
   ],
   "blocked": [],
@@ -310,6 +338,7 @@
     "Paige Bueckers completed on the first generation attempt. The final transparent WebP matched its uploaded Git blob SHA exactly; the full Actions pipeline and Pages deployment succeeded. Browser verification confirmed the live portrait and hero structure. Exact 390px computed-layout measurement was unavailable from the browser provider, while repository HTML retains the approved mobile 55%/45% portrait rules.",
     "Kelsey Plum was reconciled from an approved-but-not-yet-ledgered asset. The asset/manifest commit and subsequent generated-page commit were both on main, the full Actions/Pages deployment succeeded, and a live browser check confirmed the portrait, no square number card, and stats directly below the hero. Exact 390px viewport resizing was unavailable; repository CSS retains the approved mobile 55%/45% rule.",
     "Aliyah Boston was reconciled from an already-approved transparent WebP rather than regenerated. The full Actions/Pages pipeline succeeded and live browser verification confirmed the asset renders, with no number card and stats directly below; the repository-generated portrait CSS retains the approved 55%/45% phone grid.",
+    "Arike Ogunbowale completed on the first image-generation attempt. A first binary blob upload was discarded before commit because its uploaded Git blob SHA did not match the local file; the corrected 160x160 WebP matched exactly and was committed atomically with the manifest. The full updater workflow and its deploy job succeeded, and a fresh rendered-browser fetch confirmed the live Arike page exposes the expected portrait asset while generated markup confirms one portrait, no square number card, stats immediately below hero-main, and the approved 55%/45% compact grid.",
     "The independent WNBA statistics updater remains active."
   ]
 }
