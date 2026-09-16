@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "running",
+  "status": "paused_blocked",
   "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
   "user_authorization": "User approved the compact Caitlin desktop/mobile sample and explicitly authorized generating batches of ten and publishing without further approvals.",
   "batch_size": 10,
@@ -8,6 +8,7 @@
   "scheduled_start": "2026-09-16T01:00:00-07:00",
   "cadence": "hourly, flexible timing, at most 72 scheduled runs",
   "scheduled_execution_verified": false,
+  "generation_attempted": true,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -26,10 +27,13 @@
   ],
   "current_batch": {
     "batch_number": 1,
-    "state": "claimed",
+    "state": "blocked_runtime_image_generation",
     "claimed_at": "2026-09-16T08:00:48Z",
-    "lease_expires_at": "2026-09-16T10:00:48Z",
+    "lease_expires_at": "2026-09-16T08:41:42Z",
     "lease_owner": "FCB portrait rollout scheduled executor",
+    "last_attempt_at": "2026-09-16T08:41:42Z",
+    "generation_attempts": 3,
+    "bad_outputs_discarded": true,
     "player_ids": [721, 535, 468, 591, 573, 741, 488, 676, 552, 533],
     "players": [
       {"player_id": 721, "slug": "angel-reese", "player_name": "Angel Reese"},
@@ -46,10 +50,25 @@
   },
   "batches": [],
   "blocked": [],
+  "execution_blockers": [
+    {
+      "blocked_at": "2026-09-16T08:41:42Z",
+      "scope": "all portrait batches in the scheduled runtime",
+      "capability": "single-player transparent portrait generation",
+      "retryable": false,
+      "requires_capability_change": true,
+      "attempts": 3,
+      "result": "The available image generator repeatedly returned a 2x5 composite grid containing all ten batch players with baked website UI, text, statistics and background, including after an explicit single-player Angel Reese request and an edit request to isolate only Angel Reese. Those outputs fail the approved requirement for separate transparent player cutouts and were discarded.",
+      "reference_asset_access": "GitHub reference asset exists and returned valid AVIF/base64 content; GitHub read/write capability is available.",
+      "publication": "No new portrait assets or manifest entries were committed, and the live site was intentionally left unchanged rather than publishing incorrect artwork."
+    }
+  ],
   "notes": [
     "Only verified live portraits count as published. A scheduled task or placeholder is not a completed illustration.",
     "No per-player approval is required. Self-check image quality, identity, transparency, crop and the live deployment.",
     "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait.",
-    "Batch 1 selected by automation/portrait_queue.py priority logic from the current index; all ten selected IDs are active in the provider feed."
+    "Batch 1 selected by automation/portrait_queue.py priority logic from the current index; all ten selected IDs are active in the provider feed.",
+    "First scheduled execution attempted image generation but could not obtain separate transparent portraits; three composite UI-grid outputs were rejected and no incorrect assets were published.",
+    "The portrait rollout is paused until a runtime can reliably generate or edit one player portrait at a time. The independent WNBA statistics updater is unaffected."
   ]
 }
