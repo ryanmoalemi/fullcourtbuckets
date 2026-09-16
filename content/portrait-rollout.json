@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 3,
-  "remaining_count": 559,
+  "verified_published_count": 4,
+  "remaining_count": 558,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -49,19 +49,23 @@
       "generated_page_commit": "e33c60e386eeb8c806372d4a0a8db529be163b90",
       "deployment_run_id": 35083506435,
       "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba"
+    },
+    {
+      "player_id": 468,
+      "slug": "breanna-stewart",
+      "live_verified": true,
+      "verification": "Fresh scheduled single-player generation completed after three incorrect generation outputs were discarded and a fourth prompt produced a Breanna Stewart likeness suitable for review. The final artwork was resized to 256x256 WebP and decoded locally as RGBA with alpha extrema 0-255. Its local Git blob SHA fee158bde3bca561914e3fa698b74521841e8936 exactly matched the GitHub create_blob result, proving the uploaded binary matched the locally decoded bytes. The verified asset and corrected 256x256 manifest record were committed in d9d249ce15af8e9e06db1f23028793f0b74c9cca. GitHub Actions run 35089728894 completed successfully: tests, data import, build_players.py, apply_portraits.py, rollout_player_design.py, generated-page validation, Pages artifact upload and deploy all passed. The generated player-page commit is 163aa70ae10781235116b304e88583ecc8d0f29e. Live browser re-verification showed BREANNA STEWART, exactly one loaded portrait from /images/players/breanna-stewart-portrait-v1.webp?v=a7672d4f6455, no broken-image fallback, no div.number-card, compact side-by-side hero and stats directly below. A ~390 CSS pixel browser check confirmed the name and portrait remained side by side and the stats strip remained immediately below.",
+      "url": "https://fullcourtbuckets.com/wnba/breanna-stewart/",
+      "asset": "/images/players/breanna-stewart-portrait-v1.webp",
+      "commit": "d9d249ce15af8e9e06db1f23028793f0b74c9cca",
+      "generated_page_commit": "163aa70ae10781235116b304e88583ecc8d0f29e",
+      "deployment_run_id": 35089728894,
+      "asset_blob_sha": "fee158bde3bca561914e3fa698b74521841e8936",
+      "asset_sha256": "a7672d4f64559b57f0707a55859a6aee2da1c77eeff519afa2eeff4c97a4cfbb",
+      "browser_verification_run_id": "8c456e65-a21f-4db4-931e-f6531d087cfb"
     }
   ],
-  "current_batch": {
-    "batch_number": 4,
-    "state": "claimed_generating",
-    "claimed_at": "2026-09-16T11:04:06Z",
-    "lease_expires_at": "2026-09-16T11:44:06Z",
-    "lease_owner": "FCB portrait rollout scheduled executor",
-    "player_ids": [468],
-    "players": [
-      {"player_id": 468, "slug": "breanna-stewart", "player_name": "Breanna Stewart"}
-    ]
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -100,6 +104,25 @@
       "deployment_run_id": 35083506435,
       "completed_at": "2026-09-16T10:15:41Z",
       "live_verified": true
+    },
+    {
+      "batch_number": 4,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [468],
+      "published_count": 1,
+      "generation_attempts": 4,
+      "discarded_generation_outputs": 3,
+      "binary_publication_attempts": 2,
+      "initial_asset_commit": "080abb371a8e28841b3a45c3ebbbdc0f404615c4",
+      "asset": "/images/players/breanna-stewart-portrait-v1.webp",
+      "asset_blob_sha": "fee158bde3bca561914e3fa698b74521841e8936",
+      "asset_sha256": "a7672d4f64559b57f0707a55859a6aee2da1c77eeff519afa2eeff4c97a4cfbb",
+      "commit": "d9d249ce15af8e9e06db1f23028793f0b74c9cca",
+      "generated_page_commit": "163aa70ae10781235116b304e88583ecc8d0f29e",
+      "deployment_run_id": 35089728894,
+      "completed_at": "2026-09-16T11:20:24Z",
+      "live_verified": true,
+      "browser_verification_run_id": "8c456e65-a21f-4db4-931e-f6531d087cfb"
     }
   ],
   "blocked": [],
@@ -124,6 +147,7 @@
     "The first unattended scheduled attempt failed because a multi-player generation request produced composite UI grids.",
     "Angel Reese generation succeeded one-player-at-a-time, but the first AVIF publication was later proven broken by the user's mobile screenshot. The scheduled reconciliation replaced that asset path with a validated transparent WebP and re-verified the live page on desktop and mobile-width browser checks.",
     "A'ja Wilson completed the first fully scheduled fresh-generation/upload/deployment/live-verification cycle, so scheduled_execution_verified is now true.",
+    "Breanna Stewart required three discarded incorrect generation outputs before a fourth single-player generation succeeded. The first binary publication was proactively replaced after upload-byte verification showed it did not exactly match the locally decoded source. The final replacement blob matched the local Git blob SHA exactly and was re-deployed and re-verified live.",
     "The independent WNBA statistics updater remains active."
   ]
 }
