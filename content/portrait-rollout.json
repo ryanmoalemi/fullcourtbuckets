@@ -164,7 +164,14 @@
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 12,
+    "mode": "scheduled_single_player_generation",
+    "player_ids": [714],
+    "player_slugs": ["aaliyah-edwards"],
+    "claimed_at": "2026-09-16T18:55:04Z",
+    "lease_expires_at": "2026-09-16T19:25:04Z"
+  },
   "batches": [
     {
       "batch_number": 1,
