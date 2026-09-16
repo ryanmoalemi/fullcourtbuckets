@@ -134,7 +134,13 @@
       "browser_verification_run_id": "6f780a6c-7b27-4a67-9cba-5a70534bfe32"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "player_ids": [552],
+    "slugs": ["arike-ogunbowale"],
+    "mode": "scheduled_single_player_generation",
+    "claimed_at": "2026-09-16T17:00:45Z",
+    "lease_expires_at": "2026-09-16T17:45:45Z"
+  },
   "batches": [
     {
       "batch_number": 1,
