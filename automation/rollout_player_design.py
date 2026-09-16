@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 import re
 
-from apply_portraits import CSS as APPROVED_CSS
+from apply_portraits import CSS as APPROVED_CSS, ASSET
 
 BASE = 'https://fullcourtbuckets.com'
 VERSION = 'fcb-compact-player-v1'
@@ -84,7 +84,6 @@ def render_layout(page: str, profile: dict, has_portrait: bool) -> str:
     if not has_portrait:
         number = str(p.get('jersey_number') or '')
         number = number if re.fullmatch(r'\d{1,2}', number) else 'FCB'
-        # No invented likeness and no square number card while art is pending.
         art = ('<div class="hero-art portrait-art" aria-hidden="true">'
                '<div class="portrait-backdrop"><span class="ghost-number">'
                + html.escape(number) + '</span></div></div>')
@@ -133,7 +132,7 @@ def rollout(root: Path) -> dict:
             if record.get('slug') != slug or record.get('player_name') != name:
                 raise ValueError('Approved artwork belongs to a different player.')
             src = record.get('src', '')
-            if not re.fullmatch(r'/images/players/[a-z0-9][a-z0-9._-]*', src):
+            if not ASSET.fullmatch(src):
                 raise ValueError('Artwork must use a safe local asset.')
             asset = root/src.lstrip('/')
             if not asset.is_file() or asset.is_symlink() or asset.stat().st_size == 0:
@@ -164,7 +163,6 @@ def rollout(root: Path) -> dict:
         'schema_version':1, 'layout_version':VERSION,
         'status':'awaiting_image_generation_setup', 'generation_started':False,
         'brief':BRIEF, 'entries':queue}, ensure_ascii=False, indent=2)+'\n'
-    # All identity and asset checks finish before the first output is replaced.
     changed = 0
     for path, content in outputs.items():
         if path.exists() and path.read_text(encoding='utf-8') == content:
