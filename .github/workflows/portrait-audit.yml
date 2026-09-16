@@ -1,0 +1,75 @@
+name: Portrait integrity audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/portrait-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image decoder and browser
+        run: |
+          python -m pip -q install 'pillow>=11.3,<13' 'playwright>=1.50,<2'
+          python -m playwright install --with-deps chromium > /dev/null
+      - name: Decode every current portrait and inspect live Aja page
+        run: |
+          mkdir -p portrait-audit
+          python - <<'PY'
+          import hashlib,io,json,tarfile
+          from pathlib import Path
+          from PIL import Image
+          from playwright.sync_api import sync_playwright
+          rows=[]
+          manifest=json.loads(Path('content/player-illustrations.json').read_text())
+          for record in manifest['portraits']:
+              row={'slug':record['slug'],'src':record['src'],'declared':[record['width'],record['height']]}
+              try:
+                  raw=Path(record['src'].lstrip('/')).read_bytes()
+                  row.update(bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest(),header=raw[:16].hex())
+                  im=Image.open(io.BytesIO(raw)); im.load()
+                  row.update(actual=list(im.size),mode=im.mode,alpha=im.convert('RGBA').getchannel('A').getextrema(),decoded=True)
+              except Exception as e:
+                  row.update(decoded=False,error=str(e))
+              rows.append(row)
+          with sync_playwright() as p:
+              browser=p.chromium.launch()
+              for width,height,label in [(1365,850,'desktop'),(390,844,'mobile')]:
+                  page=browser.new_page(viewport={'width':width,'height':height})
+                  page.goto('https://fullcourtbuckets.com/wnba/aja-wilson/',wait_until='networkidle')
+                  image=page.locator('img.player-illustration')
+                  row={'browser':label}
+                  if image.count()==1:
+                      row.update(image.evaluate('(el)=>({src:el.currentSrc,complete:el.complete,width:el.naturalWidth,height:el.naturalHeight})'))
+                      try: image.evaluate('(el)=>el.decode()'); row['decode']=True
+                      except Exception as e: row['decode']=False; row['error']=str(e)
+                      response=page.request.get(row['src']); body=response.body()
+                      row.update(http_status=response.status,content_type=response.headers.get('content-type'),bytes=len(body),sha256=hashlib.sha256(body).hexdigest())
+                  page.locator('.hero').screenshot(path='portrait-audit/'+label+'.png')
+                  rows.append(row); page.close()
+              browser.close()
+          Path('portrait-audit/report.json').write_text(json.dumps(rows,indent=2))
+          with tarfile.open('portrait-audit/site-inputs.tar.gz','w:gz') as tar:
+              for name in ['automation','content','images/players','.github/workflows/fcb-wnba.yml','AGENTS.md','wnba/assets','logo.png','favicon.svg']:
+                  tar.add(name,arcname=name)
+              for slug in ['aja-wilson','breanna-stewart','angel-reese','caitlin-clark','sabrina-ionescu']:
+                  for prefix,suffix in [('wnba','/index.html'),('data/wnba/players','.json')]:
+                      name=prefix+'/'+slug+suffix; tar.add(name,arcname=name)
+          print(json.dumps(rows,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portrait-integrity-audit
+          path: portrait-audit
+          retention-days: 3
