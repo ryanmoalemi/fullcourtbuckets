@@ -108,6 +108,18 @@
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA material only for identity review. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
       "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+    },
+    {
+      "player_id": 552,
+      "slug": "arike-ogunbowale",
+      "player_name": "Arike Ogunbowale",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/arike-ogunbowale-portrait-v1.webp",
+      "width": 160,
+      "height": 160,
+      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA headshot/profile only for likeness review. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
     }
   ]
 }
