@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Apply approved, ID-matched artwork after the statistics page generator.
 
-Artwork is kept outside the API snapshot. No network calls or secrets are used.
-Only explicitly approved profiles are changed; statistics and other pages stay intact.
+Artwork stays outside the API snapshot. This module uses no network or secrets.
+Only explicitly approved profiles change; other profiles and statistics stay intact.
 """
 from __future__ import annotations
-
 import argparse
 import hashlib
 import html
@@ -20,16 +19,17 @@ SLOT = re.compile(r'<div class="hero-art" aria-hidden="true">.*?</small></div>',
 APPLIED = re.compile(r'<!-- FCB:approved-portrait:start -->.*?<!-- FCB:approved-portrait:end -->', re.S)
 
 CSS = '''
-/* Portrait-only overrides. All names, labels, and statistics remain HTML. */
-.hero.has-player-portrait{background:#000}
-.has-player-portrait .hero-main{grid-template-columns:55% 45%;background:#000}
-.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:flex;align-items:flex-end;justify-content:center;opacity:1;pointer-events:auto;background:#000;min-height:420px;padding:16px 14px 0;overflow:hidden}
-.has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{display:none}
-.portrait-art .player-illustration{display:block;align-self:flex-end;margin:0;width:100%;max-width:560px;height:auto;aspect-ratio:640/596;object-fit:contain;object-position:center bottom;-webkit-mask-image:var(--portrait-mask);mask-image:var(--portrait-mask);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+/* Keep the original hero gradient and decoration; artwork is an overlay. */
+.has-player-portrait .hero-main{grid-template-columns:55% 45%}
+.has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:flex;align-items:flex-end;justify-content:flex-end;opacity:1;pointer-events:auto;background:transparent;min-height:420px;padding:16px 0 0;overflow:hidden;isolation:isolate}
+.has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{z-index:0;pointer-events:none}
+.portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
+.portrait-art .number-card{position:absolute;top:24%;right:9%;width:76%;min-width:0;max-width:350px;min-height:224px;transform:rotate(-7deg)}
+.portrait-art .player-illustration{position:relative;z-index:2;display:block;align-self:flex-end;margin:0;width:100%;max-width:none;height:auto;object-fit:contain;object-position:right bottom;-webkit-mask-image:var(--portrait-mask,none);mask-image:var(--portrait-mask,none);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 @media(max-width:780px){
  .has-player-portrait .hero-main{grid-template-columns:1fr}
  .has-player-portrait .hero-copy{width:100%;min-height:0;padding-bottom:15px}
- .has-player-portrait .hero-art.portrait-art{min-height:0;padding:0 16px 0}
+ .has-player-portrait .hero-art.portrait-art{min-height:0;padding:0}
  .has-player-portrait .player-illustration{width:min(100%,410px)}
 }
 @media(prefers-reduced-motion:reduce){.portrait-art *{animation:none!important;transition:none!important}}
@@ -51,8 +51,7 @@ def asset_url(root: Path, path: str) -> str:
 
 def render(page: str, profile: dict, record: dict, root: Path) -> str:
     player = profile.get('player', {})
-    pid = record.get('player_id')
-    slug = record.get('slug', '')
+    pid, slug = record.get('player_id'), record.get('slug', '')
     if isinstance(pid, bool) or not isinstance(pid, int) or pid <= 0 or player.get('id') != pid:
         raise ValueError('Illustration does not match the permanent player ID.')
     if not SLUG.fullmatch(slug) or profile.get('slug') != slug:
@@ -68,17 +67,28 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     if not all(isinstance(n, int) and not isinstance(n, bool) and 1 <= n <= 10000 for n in (width, height)):
         raise ValueError('Invalid portrait dimensions.')
     src = asset_url(root, record['src'])
-    mask = asset_url(root, record['mask'])
-    # Keep provenance in structured metadata and source notes, not below the portrait.
+    # Native-alpha images need no silhouette mask. Preserve support for older assets.
+    mask_style = ''
+    if record.get('mask'):
+        mask = asset_url(root, record['mask'])
+        mask_style = f' style="--portrait-mask:url(\'{esc(mask)}\')"'
+    number = str(player.get('jersey_number') if player.get('jersey_number') is not None else '')
+    if not re.fullmatch(r'\d{1,2}', number):
+        number = 'FCB'
+    surname = player.get('last_name') or name
+    # Decorative text is HTML and hidden only from assistive technology.
+    backdrop = ('<div class="portrait-backdrop" aria-hidden="true">'
+                f'<span class="ghost-number">{esc(number)}</span>'
+                f'<div class="number-card"><span>{esc(surname)}</span>'
+                f'<strong class="gradient">{esc(number)}</strong></div></div>')
     caption = 'AI-generated illustration · Full Court Buckets'
     figure = (
         '<!-- FCB:approved-portrait:start -->'
-        '<figure class="hero-art portrait-art" aria-label="Player illustration">'
+        '<figure class="hero-art portrait-art" aria-label="Player illustration">' + backdrop +
         f'<img class="player-illustration" src="{esc(src)}" '
-        f'alt="{esc(name)} illustrated portrait" width="{width}" height="{height}" '
-        f'style="--portrait-mask:url(\'{esc(mask)}\')" fetchpriority="high" decoding="async">'
-        '</figure>'
-        '<!-- FCB:approved-portrait:end -->'
+        f'alt="{esc(name)} illustrated portrait" width="{width}" height="{height}"'
+        f'{mask_style} fetchpriority="high" decoding="async">'
+        '</figure><!-- FCB:approved-portrait:end -->'
     )
     if APPLIED.search(page):
         page, count = APPLIED.subn(lambda _: figure, page)
@@ -97,7 +107,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         page = page.replace('</head>', style + '</head>', 1)
     page = page.replace('The number artwork is a design element, not a player photograph.',
                         'The portrait is an AI-generated editorial illustration, not a photograph. Names, team information and statistics are separate HTML text.')
-    # Add image metadata without changing the existing name, URL, or statistics.
+    # Provenance stays in source notes and metadata, not below the portrait.
     def update_schema(match):
         schema = json.loads(match.group(1))
         for entity in schema.get('@graph', []):
@@ -106,8 +116,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
                                    'caption': f'{name}. {caption}.', 'width': width, 'height': height}
         encoded = json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
         return '<script type="application/ld+json">' + encoded + '</script>'
-    page = re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, page, flags=re.S)
-    return page
+    return re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, page, flags=re.S)
 
 
 def apply(root: Path) -> int:
@@ -124,7 +133,6 @@ def apply(root: Path) -> int:
         profile = json.loads((root / 'data/wnba/players' / (slug + '.json')).read_text(encoding='utf-8'))
         page = root / 'wnba' / slug / 'index.html'
         outputs[page] = render(page.read_text(encoding='utf-8'), profile, record, root)
-    # Validate all mapped artwork before replacing any output file.
     for page, content in outputs.items():
         if page.read_text(encoding='utf-8') != content:
             temp = page.with_suffix('.html.tmp')

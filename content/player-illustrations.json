@@ -7,12 +7,11 @@
       "player_name": "Caitlin Clark",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/caitlin-clark-illustration.avif",
-      "mask": "/images/players/caitlin-clark-mask.svg",
+      "src": "/images/players/caitlin-clark-portrait-v2.avif",
       "width": 640,
-      "height": 596,
-      "source": "AI-generated illustration supplied and approved in the Full Court Buckets chat. No third-party photograph was added.",
-      "display": "Plain black hero. CSS silhouette mask. No embedded name, statistics, team name or logo."
+      "height": 650,
+      "source": "User-approved AI-generated illustration from the Full Court Buckets chat, reframed to a chest-up portrait.",
+      "display": "Native transparent artwork over the original gradient, circles and number-card background. Bottom-right aligned, with a straight chest/upper-arm crop at the statistics divider. No visible caption. Names and statistics remain HTML."
     }
   ]
 }

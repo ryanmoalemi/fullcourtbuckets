@@ -6,7 +6,7 @@ import tempfile
 import unittest
 import apply_portraits as portraits
 
-PROFILE = {'slug': 'caitlin-clark', 'player': {'id': 708, 'first_name': 'Caitlin', 'last_name': 'Clark'}}
+PROFILE = {'slug': 'caitlin-clark', 'player': {'id': 708, 'first_name': 'Caitlin', 'last_name': 'Clark', 'jersey_number': '22'}}
 RECORD = {'player_id': 708, 'slug': 'caitlin-clark', 'player_name': 'Caitlin Clark', 'approved': True,
           'kind': 'illustration', 'src': '/images/players/test.avif', 'mask': '/images/players/test.svg',
           'width': 640, 'height': 596}
@@ -31,17 +31,38 @@ class PortraitTests(unittest.TestCase):
         self.assertNotIn('<figcaption', page)
         self.assertNotIn('illustration-caption', page)
         self.assertNotIn('AI-generated', portraits.APPLIED.search(page).group())
-        self.assertIn('AI-generated illustration', page)  # Metadata retains provenance.
-        self.assertNotIn('ghost-number', page)
+        self.assertIn('AI-generated illustration', page)
         self.assertIn(STATS, page)
         self.assertEqual(page.count('<h1 '), 1)
-    def test_portrait_has_no_bottom_gap_on_desktop_or_mobile(self):
-        self.assertIn('padding:16px 14px 0;', portraits.CSS)
-        self.assertIn('min-height:0;padding:0 16px 0}', portraits.CSS)
-        self.assertIn('align-items:flex-end;', portraits.CSS)
+    def test_portrait_has_no_bottom_or_right_gap(self):
+        self.assertIn('padding:16px 0 0;', portraits.CSS)
+        self.assertIn('min-height:0;padding:0}', portraits.CSS)
+        self.assertIn('align-items:flex-end;justify-content:flex-end;', portraits.CSS)
         self.assertIn('align-self:flex-end;margin:0;', portraits.CSS)
-        self.assertNotIn('padding:16px 14px 28px', portraits.CSS)
-        self.assertNotIn('padding:0 16px 29px', portraits.CSS)
+        self.assertIn('object-position:right bottom;', portraits.CSS)
+    def test_original_background_and_decorations_retained(self):
+        page = portraits.render(PAGE, PROFILE, RECORD, self.root)
+        self.assertNotIn('background:#000', portraits.CSS)
+        self.assertIn('background:transparent;', portraits.CSS)
+        figure = portraits.APPLIED.search(page).group()
+        self.assertIn('<div class="portrait-backdrop" aria-hidden="true">', figure)
+        self.assertIn('<span class="ghost-number">22</span>', figure)
+        self.assertIn('<div class="number-card">', figure)
+        self.assertEqual(figure.count('class="ghost-number"'), 1)
+    def test_native_alpha_needs_no_old_silhouette_mask(self):
+        record = dict(RECORD, height=650); record.pop('mask')
+        (self.root/'images/players/test.svg').unlink()
+        page = portraits.render(PAGE, PROFILE, record, self.root)
+        figure = portraits.APPLIED.search(page).group()
+        self.assertIn('width="640" height="650"', figure)
+        self.assertNotIn('--portrait-mask:', figure)
+        self.assertNotIn('test.svg', figure)
+        self.assertIn('mask-image:var(--portrait-mask,none)', portraits.CSS)
+        self.assertNotIn('aspect-ratio:640/596', portraits.CSS)
+    def test_old_mask_remains_supported(self):
+        page = portraits.render(PAGE, PROFILE, RECORD, self.root)
+        self.assertIn('/images/players/test.svg?v=', page)
+        self.assertIn('--portrait-mask:url(', page)
     def test_removes_previous_caption_when_reapplying(self):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
         old = page.replace('</figure>', '<figcaption class="illustration-caption">AI-generated illustration</figcaption></figure>')
