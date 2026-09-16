@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 11,
-  "remaining_count": 551,
+  "verified_published_count": 12,
+  "remaining_count": 550,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -162,16 +162,27 @@
       "asset_sha256": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824",
       "generation_attempts": 1,
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
+    },
+    {
+      "player_id": 714,
+      "slug": "aaliyah-edwards",
+      "live_verified": true,
+      "verification": "Fresh single-player generation succeeded on the first image-generation attempt. The generated source decoded as RGBA; the final 160x160 WebP decoded as RGBA with alpha extrema 0-255. Local Git blob SHA 06a0cef9eb7ab7c18daea828bc3c8566c3aebaa3 exactly matched the corrected uploaded GitHub blob. Asset and manifest were committed atomically in 801f6326f666c98b0ed969d1fd4792878cf51d42. GitHub Actions run 35138544742 completed successfully, including tests, data handling, build_players.py, apply_portraits.py, rollout_player_design.py, generated-page validation, Pages artifact upload and deploy; generated player-page commit 1b993a19cf3e9c57620c873f8d0cb6cccd48f350 followed. A fresh rendered-browser fetch of the live page showed AALIYAH EDWARDS and exactly one portrait URL at /images/players/aaliyah-edwards-portrait-v1.webp?v=db8bc25e438b. Live hero HTML has hero-main immediately followed by hero-stats; repository-generated markup contains no square number-card and retains the approved max-width 780px 55%/45% side-by-side grid.",
+      "url": "https://fullcourtbuckets.com/wnba/aaliyah-edwards/",
+      "asset": "/images/players/aaliyah-edwards-portrait-v1.webp",
+      "commit": "801f6326f666c98b0ed969d1fd4792878cf51d42",
+      "generated_page_commit": "1b993a19cf3e9c57620c873f8d0cb6cccd48f350",
+      "deployment_run_id": 35138544742,
+      "deployment_job_id": 104937083721,
+      "asset_blob_sha": "06a0cef9eb7ab7c18daea828bc3c8566c3aebaa3",
+      "asset_sha256": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420",
+      "generation_attempts": 1,
+      "binary_publication_attempts": 2,
+      "discarded_unreferenced_blob_sha": "03ab080d5d85d312658f43dc040e9c17d073b889",
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
-  "current_batch": {
-    "batch_number": 12,
-    "mode": "scheduled_single_player_generation",
-    "player_ids": [714],
-    "player_slugs": ["aaliyah-edwards"],
-    "claimed_at": "2026-09-16T18:55:04Z",
-    "lease_expires_at": "2026-09-16T19:25:04Z"
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -351,6 +362,26 @@
       "live_verified": true,
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification",
       "browser_note": "Interactive viewport automation was attempted once but rejected before a run ID because the account is not enabled for custom max steps. Browser-backed fetch and live generated markup verification succeeded; the page retains the approved max-width 780px 55%/45% side-by-side portrait grid."
+    },
+    {
+      "batch_number": 12,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [714],
+      "published_count": 1,
+      "generation_attempts": 1,
+      "discarded_generation_outputs": 0,
+      "binary_publication_attempts": 2,
+      "discarded_unreferenced_blob_sha": "03ab080d5d85d312658f43dc040e9c17d073b889",
+      "asset": "/images/players/aaliyah-edwards-portrait-v1.webp",
+      "asset_blob_sha": "06a0cef9eb7ab7c18daea828bc3c8566c3aebaa3",
+      "asset_sha256": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420",
+      "commit": "801f6326f666c98b0ed969d1fd4792878cf51d42",
+      "generated_page_commit": "1b993a19cf3e9c57620c873f8d0cb6cccd48f350",
+      "deployment_run_id": 35138544742,
+      "deployment_job_id": 104937083721,
+      "completed_at": "2026-09-16T19:09:06Z",
+      "live_verified": true,
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
   "blocked": [],
@@ -383,6 +414,7 @@
     "Aliyah Boston was reconciled from an already-approved transparent WebP rather than regenerated. The full Actions/Pages pipeline succeeded and live browser verification confirmed the asset renders, with no number card and stats directly below; the repository-generated portrait CSS retains the approved 55%/45% phone grid.",
     "Arike Ogunbowale completed on the first image-generation attempt. A first binary blob upload was discarded before commit because its uploaded Git blob SHA did not match the local file; the corrected 160x160 WebP matched exactly and was committed atomically with the manifest. The full updater workflow and its deploy job succeeded, and a fresh rendered-browser fetch confirmed the live Arike page exposes the expected portrait asset while generated markup confirms one portrait, no square number card, stats immediately below hero-main, and the approved 55%/45% compact grid.",
     "Kelsey Mitchell completed on the first generation attempt. A timestamped lease was written before generation; the final 160x160 RGBA WebP matched its uploaded Git blob SHA exactly; the asset and manifest were committed atomically on main; workflow 35133076021 and its Pages deploy job succeeded; a fresh browser-backed fetch confirmed one Kelsey Mitchell portrait and the expected live asset path, while deployed markup confirms no square number-card, stats immediately after hero-main, and the approved 55%/45% mobile grid. Interactive viewport automation was unavailable because the browser account rejected custom max-step configuration before creating a run.",
+    "Aaliyah Edwards completed on the first image-generation attempt. A timestamped lease was written before generation. The first binary blob upload was discarded before commit because its Git blob SHA did not match the locally verified WebP; the corrected 160x160 RGBA WebP matched exactly. The asset and manifest were committed atomically on main, workflow 35138544742 and its Pages deploy job succeeded, and fresh rendered-browser verification confirmed the Aaliyah Edwards name and expected portrait URL. Live hero markup has hero-main immediately followed by hero-stats; generated markup confirms no square number-card and the approved 55%/45% responsive grid.",
     "The independent WNBA statistics updater remains active."
   ]
 }
