@@ -7,8 +7,10 @@
   "automation_title": "FCB portrait rollout",
   "scheduled_start": "2026-09-16T01:00:00-07:00",
   "cadence": "hourly, flexible timing, one player per execution",
-  "scheduled_execution_verified": false,
+  "scheduled_execution_verified": true,
   "generation_attempted": true,
+  "verified_published_count": 3,
+  "remaining_count": 559,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -35,20 +37,21 @@
       "generated_page_commit": "735a9413546d4b211b5965f5f717c26203a5e465",
       "deployment_run_id": 35078189030,
       "asset_blob_sha": "c30cef850d05f116e7fa6076e11fa61bba6ba0b6"
+    },
+    {
+      "player_id": 535,
+      "slug": "aja-wilson",
+      "live_verified": true,
+      "verification": "Fresh scheduled single-player generation succeeded. The generated portrait was self-reviewed, resized to 480x480 and decoded as RGBA WebP with alpha extrema 0-255 before upload. Asset blob b91f7c20f2731debc6cd24910864e5a571a2d5ba and manifest were committed atomically in 4e99105f9ad27255cfebe7e2b2ecab02c1145dea. GitHub Actions run 35083506435 completed successfully: tests, data import, build_players.py, apply_portraits.py, rollout_player_design.py, generated-page validation, Pages artifact upload and deploy all passed. Generated player-page commit e33c60e386eeb8c806372d4a0a8db529be163b90 followed the asset commit. Live browser verification showed A'JA WILSON, exactly one loaded portrait from /images/players/aja-wilson-portrait-v1.webp, no broken-image fallback, no div.number-card, compact side-by-side hero and stats immediately below. A second browser run successfully resized to 390 CSS pixels and verified the name and portrait remained side by side, the portrait remained visibly loaded, and the stats strip remained immediately below the hero.",
+      "url": "https://fullcourtbuckets.com/wnba/aja-wilson/",
+      "asset": "/images/players/aja-wilson-portrait-v1.webp",
+      "commit": "4e99105f9ad27255cfebe7e2b2ecab02c1145dea",
+      "generated_page_commit": "e33c60e386eeb8c806372d4a0a8db529be163b90",
+      "deployment_run_id": 35083506435,
+      "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba"
     }
   ],
-  "current_batch": {
-    "batch_number": 3,
-    "state": "claimed_generation",
-    "claimed_at": "2026-09-16T10:04:26Z",
-    "lease_expires_at": "2026-09-16T10:34:26Z",
-    "lease_owner": "FCB portrait rollout scheduled executor",
-    "generation_attempts": 0,
-    "player_ids": [535],
-    "players": [
-      {"player_id": 535, "slug": "aja-wilson", "player_name": "A'ja Wilson"}
-    ]
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -73,6 +76,20 @@
       "deployment_run_id": 35078189030,
       "completed_at": "2026-09-16T09:16:00Z",
       "live_verified": true
+    },
+    {
+      "batch_number": 3,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [535],
+      "published_count": 1,
+      "generation_attempts": 1,
+      "asset": "/images/players/aja-wilson-portrait-v1.webp",
+      "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba",
+      "commit": "4e99105f9ad27255cfebe7e2b2ecab02c1145dea",
+      "generated_page_commit": "e33c60e386eeb8c806372d4a0a8db529be163b90",
+      "deployment_run_id": 35083506435,
+      "completed_at": "2026-09-16T10:15:41Z",
+      "live_verified": true
     }
   ],
   "blocked": [],
@@ -96,7 +113,7 @@
     "Do not purchase new services, expose keys, change statistics or alter the approved reference portrait.",
     "The first unattended scheduled attempt failed because a multi-player generation request produced composite UI grids.",
     "Angel Reese generation succeeded one-player-at-a-time, but the first AVIF publication was later proven broken by the user's mobile screenshot. The scheduled reconciliation replaced that asset path with a validated transparent WebP and re-verified the live page on desktop and mobile-width browser checks.",
-    "scheduled_execution_verified remains false because this scheduled execution repaired and republished an already-generated portrait; it did not perform a fresh scheduled image-generation cycle. It should become true only after a later scheduled run generates a new player's portrait and completes the full upload/deploy/live-verification cycle.",
+    "A'ja Wilson completed the first fully scheduled fresh-generation/upload/deployment/live-verification cycle, so scheduled_execution_verified is now true.",
     "The independent WNBA statistics updater remains active."
   ]
 }
