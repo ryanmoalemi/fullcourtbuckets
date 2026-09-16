@@ -13,7 +13,7 @@ from pathlib import Path
 import re
 
 BASE = 'https://fullcourtbuckets.com'
-ASSET = re.compile(r'/images/players/[a-z0-9][a-z0-9._-]*\Z')
+ASSET = re.compile(r'/images/players/(?:[a-z0-9][a-z0-9._-]*|[a-z0-9]+(?:-[a-z0-9]+)*/portrait\.(?:png|webp|avif))\Z')
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 SLOT = re.compile(r'<div class="hero-art" aria-hidden="true">.*?</small></div>', re.S)
 APPLIED = re.compile(r'<!-- FCB:approved-portrait:start -->.*?<!-- FCB:approved-portrait:end -->', re.S)
@@ -93,7 +93,6 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     if not all(isinstance(n, int) and not isinstance(n, bool) and 1 <= n <= 10000 for n in (width, height)):
         raise ValueError('Invalid portrait dimensions.')
     src = asset_url(root, record['src'])
-    # Native-alpha images need no silhouette mask. Preserve support for older assets.
     mask_style = ''
     if record.get('mask'):
         mask = asset_url(root, record['mask'])
@@ -101,7 +100,6 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     number = str(player.get('jersey_number') if player.get('jersey_number') is not None else '')
     if not re.fullmatch(r'\d{1,2}', number):
         number = 'FCB'
-    # Retain the outline number and CSS circles, not the square number card.
     backdrop = ('<div class="portrait-backdrop" aria-hidden="true">'
                 f'<span class="ghost-number">{esc(number)}</span></div>')
     caption = 'AI-generated illustration · Full Court Buckets'
@@ -131,7 +129,6 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         page = page.replace('</head>', style + '</head>', 1)
     page = page.replace('The number artwork is a design element, not a player photograph.',
                         'The portrait is an AI-generated editorial illustration, not a photograph. Names, team information and statistics are separate HTML text.')
-    # Provenance stays in source notes and metadata, not below the portrait.
     def update_schema(match):
         schema = json.loads(match.group(1))
         for entity in schema.get('@graph', []):
@@ -144,6 +141,8 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
 
 
 def apply(root: Path) -> int:
+    from portrait_folders import sync
+    sync(root)
     manifest = root / 'content' / 'player-illustrations.json'
     if not manifest.exists():
         return 0

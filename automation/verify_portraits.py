@@ -44,7 +44,6 @@ def decode_asset(raw: bytes, record: dict, legacy: dict) -> dict:
     require(fmt in ('WEBP', 'AVIF', 'PNG'), 'Unsupported image format')
     require(size == (record.get('width'), record.get('height')), 'Actual dimensions differ from manifest')
     require(alpha[0] < 255 and alpha[1] > 0, 'Image must contain visible artwork and real transparency')
-    # Legacy size exceptions NEVER bypass decoding, identity or checksum checks.
     exempt = legacy.get(record['src']) == digest
     if not exempt:
         require(size[0] >= 640 and size[1] >= 650, 'New portrait is below 640x650')
@@ -56,6 +55,7 @@ def decode_asset(raw: bytes, record: dict, legacy: dict) -> dict:
             'format': fmt, 'bytes': len(raw), 'legacy_resolution': exempt and (size[0] < 640 or size[1] < 650)}
 
 def make_plan(root: Path) -> dict:
+    from portrait_folders import matches_player_path
     records = json.loads((root/'content/player-illustrations.json').read_text())['portraits']
     legacy = json.loads((root/'content/portrait-quality.json').read_text()).get('unchanged_legacy_assets', {})
     ids, slugs, hashes = set(), set(), set()
@@ -65,8 +65,7 @@ def make_plan(root: Path) -> dict:
         require(isinstance(slug, str) and SLUG.fullmatch(slug), 'Unsafe slug')
         require(type(pid) is int and pid > 0 and pid not in ids and slug not in slugs, 'Duplicate or invalid ID')
         require(record.get('approved') is True, f'{slug}: unapproved image')
-        require(re.fullmatch(r'/images/players/[a-z0-9._-]+\.(?:webp|avif|png)', src), 'Unsafe image path')
-        require(Path(src).name.startswith(slug+'-'), f'{slug}: filename belongs to another player')
+        require(matches_player_path(src, slug), f'{slug}: unsafe image path or different player folder')
         path = root/src.lstrip('/')
         require(path.is_file() and not path.is_symlink(), f'{slug}: missing image')
         profile = json.loads((root/'data/wnba/players'/f'{slug}.json').read_text())
@@ -123,7 +122,6 @@ def verify_pages(plan: dict, origin: str, output: Path, engines: list[str], retr
                         failure=None
                         for attempt in range(retries):
                             try:
-                                # Unique query bypasses cached HTML; currentSrc includes a byte-hash token.
                                 url=f'{origin}/wnba/{slug}/?portrait_verify={time.time_ns()}'
                                 response=page.goto(url,wait_until='domcontentloaded',timeout=45000)
                                 require(response is not None and response.status==200, 'Player page did not return HTTP 200')
