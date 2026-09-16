@@ -19,11 +19,24 @@
       "player_name": "Angel Reese",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/angel-reese-portrait-v1.webp",
-      "width": 192,
-      "height": 192,
-      "source": "AI-generated original illustration created in the Full Court Buckets chat on 2026-09-16 using the approved Caitlin Clark portrait only as style direction; generated one player at a time. Re-encoded as transparent WebP after live AVIF decoding failed on the user's mobile browser.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "src": "/images/players/angel-reese-approved-v2.webp",
+      "width": 640,
+      "height": 650,
+      "source": "The replacement Angel Reese illustration explicitly approved by the owner in chat. Exported from the 1254x1254 RGBA master, not enlarged from the previous 192px thumbnail.",
+      "display": "Approved compact Caitlin layout, unchanged. Native transparent head-and-shoulders image, original purple gradient and circles, no square card or visible caption; all names and statistics remain HTML.",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "asset_sha256": "647a143bf181503f2ac3aa14df6d68f2a917e9d95f6349aac4029879dc72d450",
+      "export_settings": {
+        "format": "WEBP",
+        "width": 640,
+        "height": 650,
+        "quality": 95,
+        "method": 6,
+        "exact": true,
+        "source_width": 1254,
+        "source_height": 1254,
+        "upscaled": false
+      }
     },
     {
       "player_id": 535,

@@ -1,0 +1,31 @@
+{
+  "version": "fcb-portrait-640x650-v2",
+  "minimum_width": 640,
+  "minimum_height": 650,
+  "preferred_width": 640,
+  "preferred_height": 650,
+  "preferred_format": "WEBP",
+  "export_quality": 95,
+  "export_method": 6,
+  "native_alpha_required": true,
+  "no_upscaling": true,
+  "minimum_master_width": 1024,
+  "minimum_master_height": 1024,
+  "layout_reference": "/wnba/caitlin-clark/",
+  "portrait_rollout_paused_for_quality_review": true,
+  "next_user_approved_replacement": "aja-wilson",
+  "unchanged_legacy_assets": {
+    "/images/players/caitlin-clark-portrait-v2.avif": "a8edabd7eb3a83244feb805b2dd8ae0d2360b2a74c311c3e4fdf881b3a8af9be",
+    "/images/players/aja-wilson-portrait-v1.webp": "be8434386e754bc5a1375b69a147a253076285e851a5d01307eb765cd1afb5b2",
+    "/images/players/breanna-stewart-portrait-v1.webp": "a7672d4f64559b57f0707a55859a6aee2da1c77eeff519afa2eeff4c97a4cfbb",
+    "/images/players/sabrina-ionescu-portrait-v1.webp": "5549ceed0e6ac56343077a679b72c113ea3dc7d401cb848f52e56df2a190a271",
+    "/images/players/napheesa-collier-portrait-v1.webp": "78559d1a5a6fdb1aabbb9e36d1db2af2ce96677fe5a0eddd921ae66814a70415",
+    "/images/players/paige-bueckers-portrait-v1.webp": "3d9a8d28fb0742230294900d1d64b68cd9b496044c02e49b8bfa624f229c9782",
+    "/images/players/kelsey-plum-portrait-v1.webp": "fdff03ecb6a66d7052a085576b5130029dddeaedc999b7e20e040e065723280c",
+    "/images/players/aliyah-boston-portrait-v1.webp": "eca56e8331b7a085fedc470fc7e86fa1b6ad4336cd274e0fd4f6664f3dd54371",
+    "/images/players/arike-ogunbowale-portrait-v1.webp": "c5a925ecd98059666e2e276c90ccf4225ed9f901afa5b148f7f0c8543277442a",
+    "/images/players/kelsey-mitchell-portrait-v1.webp": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824",
+    "/images/players/aaliyah-edwards-portrait-v1.webp": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420"
+  },
+  "legacy_note": "These already-published bytes are exempt only to avoid blocking statistics refreshes. They are not the standard for new portraits; undersized assets need separate replacements."
+}
