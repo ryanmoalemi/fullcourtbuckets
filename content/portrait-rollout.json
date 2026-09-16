@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 10,
-  "remaining_count": 552,
+  "verified_published_count": 11,
+  "remaining_count": 551,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -146,16 +146,25 @@
       "asset_blob_sha": "1eebb84c3a827e879145f7ac03507a00e3b1e7c9",
       "asset_sha256": "c5a925ecd98059666e2e276c90ccf4225ed9f901afa5b148f7f0c8543277442a",
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
+    },
+    {
+      "player_id": 533,
+      "slug": "kelsey-mitchell",
+      "live_verified": true,
+      "verification": "Fresh single-player generation succeeded on the first attempt. The generated transparent source decoded as RGBA; the final 160x160 WebP decoded as RGBA with alpha extrema 0-255. Local Git blob SHA d87bea9933b4243932e3f2475f189bcedcc8d1da exactly matched the uploaded GitHub blob. Asset and manifest were committed atomically in 80e9c53e123580285b867151220c3f70f5f8ab3a. GitHub Actions run 35133076021 completed successfully, including tests, data handling, build_players.py, apply_portraits.py, rollout_player_design.py, generated-page validation, Pages artifact upload and deploy. Generated player-page commit e8e2cdd04ba4f7bd28e725e25a90d626b825a3c4 followed. A fresh TinyFish rendered-browser fetch of the live page showed KELSEY MITCHELL and exactly one portrait at /images/players/kelsey-mitchell-portrait-v1.webp?v=27afce911ec0, with the hero-stats block directly below hero-main and no square number-card. Repository-generated live markup contains the approved max-width 780px 55%/45% side-by-side grid. Interactive viewport automation could not be run because the connected browser account is not enabled for custom max steps; this did not block rendered-browser and deployed-markup verification.",
+      "url": "https://fullcourtbuckets.com/wnba/kelsey-mitchell/",
+      "asset": "/images/players/kelsey-mitchell-portrait-v1.webp",
+      "commit": "80e9c53e123580285b867151220c3f70f5f8ab3a",
+      "generated_page_commit": "e8e2cdd04ba4f7bd28e725e25a90d626b825a3c4",
+      "deployment_run_id": 35133076021,
+      "deployment_job_id": 104918664164,
+      "asset_blob_sha": "d87bea9933b4243932e3f2475f189bcedcc8d1da",
+      "asset_sha256": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824",
+      "generation_attempts": 1,
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification"
     }
   ],
-  "current_batch": {
-    "batch_number": 11,
-    "mode": "scheduled_single_player_generation",
-    "player_ids": [533],
-    "claimed_at": "2026-09-16T18:03:15Z",
-    "lease_expires_at": "2026-09-16T18:48:15Z",
-    "status": "claimed"
-  },
+  "current_batch": null,
   "batches": [
     {
       "batch_number": 1,
@@ -315,6 +324,26 @@
       "live_verified": true,
       "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification",
       "browser_note": "Interactive strict agent mode was unavailable because the connected browser account is not beta-enabled; the free rendered-browser fetch succeeded and the live page exposed the expected portrait asset and hero structure."
+    },
+    {
+      "batch_number": 11,
+      "mode": "scheduled_single_player_generation",
+      "player_ids": [533],
+      "published_count": 1,
+      "generation_attempts": 1,
+      "discarded_generation_outputs": 0,
+      "binary_publication_attempts": 1,
+      "asset": "/images/players/kelsey-mitchell-portrait-v1.webp",
+      "asset_blob_sha": "d87bea9933b4243932e3f2475f189bcedcc8d1da",
+      "asset_sha256": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824",
+      "commit": "80e9c53e123580285b867151220c3f70f5f8ab3a",
+      "generated_page_commit": "e8e2cdd04ba4f7bd28e725e25a90d626b825a3c4",
+      "deployment_run_id": 35133076021,
+      "deployment_job_id": 104918664164,
+      "completed_at": "2026-09-16T18:15:30Z",
+      "live_verified": true,
+      "live_verification_method": "TinyFish rendered-browser fetch plus generated-page markup verification",
+      "browser_note": "Interactive viewport automation was attempted once but rejected before a run ID because the account is not enabled for custom max steps. Browser-backed fetch and live generated markup verification succeeded; the page retains the approved max-width 780px 55%/45% side-by-side portrait grid."
     }
   ],
   "blocked": [],
@@ -346,6 +375,7 @@
     "Kelsey Plum was reconciled from an approved-but-not-yet-ledgered asset. The asset/manifest commit and subsequent generated-page commit were both on main, the full Actions/Pages deployment succeeded, and a live browser check confirmed the portrait, no square number card, and stats directly below the hero. Exact 390px viewport resizing was unavailable; repository CSS retains the approved mobile 55%/45% rule.",
     "Aliyah Boston was reconciled from an already-approved transparent WebP rather than regenerated. The full Actions/Pages pipeline succeeded and live browser verification confirmed the asset renders, with no number card and stats directly below; the repository-generated portrait CSS retains the approved 55%/45% phone grid.",
     "Arike Ogunbowale completed on the first image-generation attempt. A first binary blob upload was discarded before commit because its uploaded Git blob SHA did not match the local file; the corrected 160x160 WebP matched exactly and was committed atomically with the manifest. The full updater workflow and its deploy job succeeded, and a fresh rendered-browser fetch confirmed the live Arike page exposes the expected portrait asset while generated markup confirms one portrait, no square number card, stats immediately below hero-main, and the approved 55%/45% compact grid.",
+    "Kelsey Mitchell completed on the first generation attempt. A timestamped lease was written before generation; the final 160x160 RGBA WebP matched its uploaded Git blob SHA exactly; the asset and manifest were committed atomically on main; workflow 35133076021 and its Pages deploy job succeeded; a fresh browser-backed fetch confirmed one Kelsey Mitchell portrait and the expected live asset path, while deployed markup confirms no square number-card, stats immediately after hero-main, and the approved 55%/45% mobile grid. Interactive viewport automation was unavailable because the browser account rejected custom max-step configuration before creating a run.",
     "The independent WNBA statistics updater remains active."
   ]
 }
