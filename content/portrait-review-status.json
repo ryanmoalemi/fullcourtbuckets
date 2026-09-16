@@ -78,11 +78,21 @@
     "player_id": 591,
     "slug": "sabrina-ionescu",
     "player_name": "Sabrina Ionescu",
-    "status": "generation_failed_quality_review",
-    "approved": false,
+    "status": "generated_master_preserved_upload_blocked",
+    "approved": true,
+    "authorization_context": "Owner explicitly instructed publication before review for this Sabrina replacement only.",
     "replacement_published": false,
-    "reason": "Image-generation retries returned poster/page graphics rather than the requested single-player transparent Sabrina portrait. All six outputs were rejected. None were uploaded to a player page, recorded as approved, or substituted for the existing originals.",
-    "rejected_generation_ids": ["9b84f3cb-1520-4ee1-8056-db83242555d6","4c8e5672-0b01-47a2-b6ef-780f5366830c","8b133f61-c25c-4b3c-a7c6-1a94e446d02b","7e65998e-1636-427e-9c94-45bdca176898","fabf99b1-03c7-40a5-9ee6-89fe5ab6655f","576ef29a-45df-47ff-83a4-ddfb1e8f7cbc"],
-    "instruction": "The next intended player is Sabrina Ionescu. Do not generate Aja again, make a poster, or embed any text. Generate one sharp original transparent head-and-shoulders illustration, plain white top with black trim; show the correct draft for user approval, preserve its full-resolution master under a unique filename, and only then upload through the existing reusable uploader. Keep completed player pages unchanged."
+    "generation_id": "58abc198-1889-4972-b900-46f6d73a923a",
+    "filename": "FCB-591-sabrina-ionescu-approved-175db8b183881d68.png",
+    "source_sha256": "175db8b183881d682c416aed07f1603eb4f3cd4eddc026f4a427ffaa8cebac20",
+    "source_width": 1254,
+    "source_height": 1254,
+    "source_bytes": 1706620,
+    "native_alpha": true,
+    "master_drive_file_id": "14H-AOl5r__q8yiQ0mF19o2yuau8hmhss",
+    "failed_upload_run_id": 35163721021,
+    "blocker": "The existing reusable GitHub portrait uploader returned HTTP 403 while fetching the temporary whole-file handoff URL, before any replacement portrait bytes were written. The source URL was scrubbed from the repository after failure.",
+    "live_state_verified_after_failure": "The existing 192x192 Sabrina portrait remains live at /images/players/sabrina-ionescu-portrait-v1.webp; the new PNG was not published.",
+    "instruction": "Do not claim Sabrina's replacement is live. Preserve the generated full-resolution master and the existing live page unchanged until the supported whole-file handoff can be completed and verified. Do not move to the next player."
   }
 }
