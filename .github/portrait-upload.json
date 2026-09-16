@@ -1,18 +1,18 @@
 {
-  "request_id": "591-175db8b183881d68-20260916-authorized-live-review",
+  "request_id": "591-46585337fdfbda99-owner-approved-cutout",
   "slug": "sabrina-ionescu",
   "player_id": 591,
   "player_name": "Sabrina Ionescu",
   "approved": true,
-  "status": "upload_blocked_http_403",
-  "sha256": "175db8b183881d682c416aed07f1603eb4f3cd4eddc026f4a427ffaa8cebac20",
-  "bytes": 1706620,
+  "status": "approved_pending_upload",
+  "sha256": "46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104",
+  "bytes": 1510842,
   "dimensions": [1254, 1254],
   "format": "PNG",
-  "generation_id": "58abc198-1889-4972-b900-46f6d73a923a",
-  "master_drive_file_id": "14H-AOl5r__q8yiQ0mF19o2yuau8hmhss",
-  "master_filename": "FCB-591-sabrina-ionescu-approved-175db8b183881d68.png",
-  "failed_upload_run_id": 35163721021,
-  "blocker": "The reusable portrait uploader could not fetch the whole-file handoff URL from the GitHub runner; it returned HTTP 403 before writing any portrait bytes. The signed URL was scrubbed instead of being left in the repository.",
-  "live_replacement_published": false
+  "generation_id": "2edb4f3d-de45-479c-bf84-192f8cb8879b",
+  "source_attachment_id": "file_00000000be4881fd934df86c13b10569",
+  "master_drive_file_id": "1hPuZg8opc7_uy8HmWJk93PB7IY0DLzIp",
+  "master_filename": "FCB-591-sabrina-ionescu-approved-46585337fdfbda99.png",
+  "approval_context": "Owner approved this exact transparent white-top cutout and said approved update her live page, then requested GitHub write access. Preserve all original image bytes and the existing page template. Do not use the earlier rejected posters or another generation.",
+  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-5a0c-81fd-945e-e7b1c311240b/raw?se=2026-09-16T23%3A56%3A48Z&sp=r&sv=2026-02-06&sr=b&scid=01a0aca0-9316-73fa-8dd1-f73646c5f11b&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A16%3A41Z&ske=2026-09-17T20%3A16%3A41Z&sks=b&skv=2026-02-06&sig=7X3ogQqd45nQ4JQ5%2BvSZjjaKFYWkyliYAtnulltnwpY%3D"
 }
