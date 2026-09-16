@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "portraits": [
+    {
+      "player_id": 708,
+      "slug": "caitlin-clark",
+      "player_name": "Caitlin Clark",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/caitlin-clark-illustration.avif",
+      "mask": "/images/players/caitlin-clark-mask.svg",
+      "width": 640,
+      "height": 596,
+      "source": "AI-generated illustration supplied and approved in the Full Court Buckets chat. No third-party photograph was added.",
+      "display": "Plain black hero. CSS silhouette mask. No embedded name, statistics, team name or logo."
+    }
+  ]
+}

@@ -13,6 +13,8 @@ on:
     branches: [main]
     paths:
       - 'automation/**'
+      - 'content/player-illustrations.json'
+      - 'images/players/**'
       - '.github/workflows/fcb-wnba.yml'
 permissions:
   contents: read
@@ -77,7 +79,9 @@ jobs:
           fi
       - name: Build every player page from the verified local data
         if: steps.key.outputs.ready == 'true'
-        run: python automation/build_players.py
+        run: |
+          python automation/build_players.py
+          python automation/apply_portraits.py
       - name: Check generated pages and sitemap before publication
         if: steps.key.outputs.ready == 'true'
         run: |
@@ -92,9 +96,14 @@ jobs:
               assert text.count('<h1 ')==1, p['slug']
               assert 'BALLDONTLIE_API_KEY' not in text, p['slug']
               assert f'https://fullcourtbuckets.com/wnba/{p["slug"]}/' in text, p['slug']
+          for portrait in json.loads(Path('content/player-illustrations.json').read_text())['portraits']:
+              text=(Path('wnba')/portrait['slug']/'index.html').read_text()
+              assert 'class="player-illustration"' in text
+              assert portrait['src'] in text
+              assert 'AI-generated illustration' in text
           assert len(ET.parse('player-sitemap.xml').getroot())==len(entries)+1
           assert Path('wnba/assets/players.css').stat().st_size>1000
-          print(f'Validated {len(entries)} generated profiles and sitemap.')
+          print(f'Validated {len(entries)} generated profiles, approved artwork and sitemap.')
           PY
       - name: Commit validated data and generated player pages
         if: steps.key.outputs.ready == 'true'
