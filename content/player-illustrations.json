@@ -48,6 +48,18 @@
       "height": 256,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA visual facts only for likeness review. The final 256x256 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its Git blob SHA was matched against the uploaded GitHub blob before publication.",
       "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+    },
+    {
+      "player_id": 591,
+      "slug": "sabrina-ionescu",
+      "player_name": "Sabrina Ionescu",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/sabrina-ionescu-portrait-v1.webp",
+      "width": 192,
+      "height": 192,
+      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final 192x192 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its Git blob SHA was matched against the uploaded GitHub blob before publication.",
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
     }
   ]
 }
