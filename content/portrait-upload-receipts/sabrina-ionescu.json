@@ -1,0 +1,23 @@
+{
+  "request_id": "591-46585337fdfbda99-owner-approved-cutout",
+  "slug": "sabrina-ionescu",
+  "player_id": 591,
+  "player_name": "Sabrina Ionescu",
+  "approved": true,
+  "status": "uploaded_pending_live_verification",
+  "sha256": "46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104",
+  "bytes": 1510842,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "generation_id": "2edb4f3d-de45-479c-bf84-192f8cb8879b",
+  "source_attachment_id": "file_00000000be4881fd934df86c13b10569",
+  "master_drive_file_id": "1hPuZg8opc7_uy8HmWJk93PB7IY0DLzIp",
+  "master_filename": "FCB-591-sabrina-ionescu-approved-46585337fdfbda99.png",
+  "approval_context": "Owner approved this exact transparent white-top cutout and said approved update her live page, then requested GitHub write access. Preserve all original image bytes and the existing page template. Do not use the earlier rejected posters or another generation.",
+  "path": "images/players/sabrina-ionescu/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "8f94d48f703faf9a67ef0922a15673093db6cc32"
+}
