@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "player_id": 591,
+  "slug": "sabrina-ionescu",
+  "player_name": "Sabrina Ionescu",
+  "owner_instruction": "The owner reported that their earlier next message after A'ja Wilson was lost. Continue to the next player rather than generating A'ja again.",
+  "next_request_received": true,
+  "approval_mode": "generate_one_image_then_owner_approves_then_upload_original_then_live_verify",
+  "status": "generation_blocked_wrong_subject_and_format",
+  "approved": false,
+  "replacement_uploaded": false,
+  "website_changes_in_this_attempt": false,
+  "requested_artwork": "Exactly one original Sabrina Ionescu head-and-shoulders illustration, sharp full-resolution transparent cutout, plain white basketball top with black trim, no text, logos, poster, background or page layout. Preserve original bytes for approval and later upload.",
+  "rejected_generation_ids": [
+    "8ff28c7e-caaa-4b98-b24c-c0aafb8e0db6",
+    "cbcea7c8-4d70-4aa6-b74c-f8fbb24f3968",
+    "14048450-ec57-4f57-8e5f-f4146ffac3da",
+    "ae1bdc24-a392-47cb-80b4-d63b70ae8446"
+  ],
+  "reason": "Outputs did not match the requested next-player portrait. All were rejected. No generated file was uploaded to the production image folders or added to the approved manifest.",
+  "instruction": "Sabrina remains next for review. Do not present any listed rejected output as Sabrina or as approved. Do not regenerate completed A'ja or Breanna portraits. Leave the live website and approved originals unchanged until a correct Sabrina draft is approved."
+}
