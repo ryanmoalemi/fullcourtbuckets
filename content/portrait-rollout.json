@@ -65,7 +65,18 @@
       "browser_verification_run_id": "8c456e65-a21f-4db4-931e-f6531d087cfb"
     }
   ],
-  "current_batch": null,
+  "current_batch": {
+    "batch_number": 5,
+    "state": "claimed_single_player_generation",
+    "claimed_at": "2026-09-16T11:56:41Z",
+    "lease_expires_at": "2026-09-16T12:26:41Z",
+    "lease_owner": "FCB portrait rollout scheduled executor",
+    "generation_attempts": 0,
+    "player_ids": [591],
+    "players": [
+      {"player_id": 591, "slug": "sabrina-ionescu", "player_name": "Sabrina Ionescu"}
+    ]
+  },
   "batches": [
     {
       "batch_number": 1,
