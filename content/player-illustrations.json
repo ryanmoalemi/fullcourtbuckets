@@ -11,7 +11,8 @@
       "width": 640,
       "height": 650,
       "source": "User-approved AI-generated illustration from the Full Court Buckets chat.",
-      "display": "Compact head-and-shoulders CSS crop over the original gradient, circles and outline number. Square number card removed. Portrait and name share one row on mobile so the statistics stay high on the page. Straight crop meets the statistics divider. No visible caption. Names and statistics remain HTML."
+      "display": "Compact head-and-shoulders CSS crop over the original gradient, circles and outline number. Square number card removed. Portrait and name share one row on mobile so the statistics stay high on the page. Straight crop meets the statistics divider. No visible caption. Names and statistics remain HTML.",
+      "asset_sha256": "a8edabd7eb3a83244feb805b2dd8ae0d2360b2a74c311c3e4fdf881b3a8af9be"
     },
     {
       "player_id": 721,
@@ -39,18 +40,6 @@
       }
     },
     {
-      "player_id": 535,
-      "slug": "aja-wilson",
-      "player_name": "A'ja Wilson",
-      "approved": true,
-      "kind": "illustration",
-      "src": "/images/players/aja-wilson-portrait-v1.webp",
-      "width": 480,
-      "height": 480,
-      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final asset was decoded and verified as transparent WebP before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
-    },
-    {
       "player_id": 468,
       "slug": "breanna-stewart",
       "player_name": "Breanna Stewart",
@@ -60,7 +49,8 @@
       "width": 256,
       "height": 256,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA visual facts only for likeness review. The final 256x256 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its Git blob SHA was matched against the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "a7672d4f64559b57f0707a55859a6aee2da1c77eeff519afa2eeff4c97a4cfbb"
     },
     {
       "player_id": 591,
@@ -72,7 +62,8 @@
       "width": 192,
       "height": 192,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final 192x192 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its Git blob SHA was matched against the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "5549ceed0e6ac56343077a679b72c113ea3dc7d401cb848f52e56df2a190a271"
     },
     {
       "player_id": 573,
@@ -84,7 +75,8 @@
       "width": 192,
       "height": 192,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA player portrait only for likeness review. The final 192x192 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "78559d1a5a6fdb1aabbb9e36d1db2af2ce96677fe5a0eddd921ae66814a70415"
     },
     {
       "player_id": 741,
@@ -96,7 +88,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "3d9a8d28fb0742230294900d1d64b68cd9b496044c02e49b8bfa624f229c9782"
     },
     {
       "player_id": 488,
@@ -108,7 +101,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA imagery only for visual identity review. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "fdff03ecb6a66d7052a085576b5130029dddeaedc999b7e20e040e065723280c"
     },
     {
       "player_id": 676,
@@ -120,7 +114,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA material only for identity review. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "eca56e8331b7a085fedc470fc7e86fa1b6ad4336cd274e0fd4f6664f3dd54371"
     },
     {
       "player_id": 552,
@@ -132,7 +127,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction and official WNBA headshot/profile only for likeness review. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "c5a925ecd98059666e2e276c90ccf4225ed9f901afa5b148f7f0c8543277442a"
     },
     {
       "player_id": 533,
@@ -144,7 +140,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, exactly one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA Kelsey Mitchell profile only for identity context. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824"
     },
     {
       "player_id": 714,
@@ -156,7 +153,8 @@
       "width": 160,
       "height": 160,
       "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, exactly one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA Aaliyah Edwards profile only for identity context. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML."
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420"
     }
   ]
 }

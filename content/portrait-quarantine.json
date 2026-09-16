@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "portraits": [
+    {
+      "player_id": 535,
+      "slug": "aja-wilson",
+      "player_name": "A'ja Wilson",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/aja-wilson-portrait-v1.webp",
+      "width": 480,
+      "height": 480,
+      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final asset was decoded and verified as transparent WebP before publication.",
+      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
+      "asset_sha256": "be8434386e754bc5a1375b69a147a253076285e851a5d01307eb765cd1afb5b2",
+      "status": "quarantined_corrupt_file",
+      "live_verified": false,
+      "reason": "Live HTTP 200 response cannot be decoded. Chromium desktop and mobile both report naturalWidth=0; Pillow also rejects repository bytes.",
+      "audit_run_id": 35142043492,
+      "replacement_source_status": "Exact owner-approved Aja replacement master is unavailable in active runtime after a subsequent image reused its filename. Await original file. Do not substitute or regenerate."
+    }
+  ]
+}

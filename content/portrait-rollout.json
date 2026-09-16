@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "in_progress_single_player",
+  "status": "paused_for_individual_approval_and_repair",
   "scope": "Illustrate existing 2008-onward WNBA player pages, active players first, then prominent archive players, then remaining archive profiles.",
   "user_authorization": "User approved the compact Caitlin desktop/mobile sample, authorized live publication without per-player approval, and on 2026-09-16 directed the rollout to generate one player at a time after composite batch generation failed.",
   "batch_size": 1,
@@ -9,8 +9,8 @@
   "cadence": "hourly, flexible timing, one player per execution",
   "scheduled_execution_verified": true,
   "generation_attempted": true,
-  "verified_published_count": 12,
-  "remaining_count": 550,
+  "verified_published_count": 11,
+  "remaining_count": 551,
   "initial_profile_count": 562,
   "initial_active_feed_count": 209,
   "initial_index_blob_sha": "5251ff7809710a8b160b189cb4f4d8a8b55c3dfb",
@@ -41,14 +41,16 @@
     {
       "player_id": 535,
       "slug": "aja-wilson",
-      "live_verified": true,
+      "live_verified": false,
       "verification": "Single-player generation succeeded. Transparent WebP blob b91f7c20f2731debc6cd24910864e5a571a2d5ba and manifest were committed in 4e99105f9ad27255cfebe7e2b2ecab02c1145dea. GitHub Actions run 35083506435 and deploy succeeded; generated page commit e33c60e386eeb8c806372d4a0a8db529be163b90. Live desktop and narrow-browser checks showed one portrait, no number-card, compact hero and stats immediately below.",
       "url": "https://fullcourtbuckets.com/wnba/aja-wilson/",
       "asset": "/images/players/aja-wilson-portrait-v1.webp",
       "commit": "4e99105f9ad27255cfebe7e2b2ecab02c1145dea",
       "generated_page_commit": "e33c60e386eeb8c806372d4a0a8db529be163b90",
       "deployment_run_id": 35083506435,
-      "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba"
+      "asset_blob_sha": "b91f7c20f2731debc6cd24910864e5a571a2d5ba",
+      "status": "invalidated_corrupt_image",
+      "verification_invalidated_by_audit_run": 35142043492
     },
     {
       "player_id": 468,
@@ -187,7 +189,9 @@
     {
       "batch_number": 1,
       "mode": "interactive_single_player_recovery",
-      "player_ids": [721],
+      "player_ids": [
+        721
+      ],
       "published_count": 1,
       "commit": "e924d20ff9fa7676566dbc2d28dff6894f1264a7",
       "deployment_run_id": 35076422963,
@@ -198,7 +202,9 @@
     {
       "batch_number": 2,
       "mode": "scheduled_asset_reconciliation",
-      "player_ids": [721],
+      "player_ids": [
+        721
+      ],
       "published_count": 1,
       "asset": "/images/players/angel-reese-portrait-v1.webp",
       "asset_blob_sha": "c30cef850d05f116e7fa6076e11fa61bba6ba0b6",
@@ -211,7 +217,9 @@
     {
       "batch_number": 3,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [535],
+      "player_ids": [
+        535
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "asset": "/images/players/aja-wilson-portrait-v1.webp",
@@ -225,7 +233,9 @@
     {
       "batch_number": 4,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [468],
+      "player_ids": [
+        468
+      ],
       "published_count": 1,
       "generation_attempts": 4,
       "discarded_generation_outputs": 3,
@@ -244,7 +254,9 @@
     {
       "batch_number": 5,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [591],
+      "player_ids": [
+        591
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "asset": "/images/players/sabrina-ionescu-portrait-v1.webp",
@@ -260,7 +272,9 @@
     {
       "batch_number": 6,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [573],
+      "player_ids": [
+        573
+      ],
       "published_count": 1,
       "generation_attempts": 3,
       "discarded_generation_outputs": 2,
@@ -278,7 +292,9 @@
     {
       "batch_number": 7,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [741],
+      "player_ids": [
+        741
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "asset": "/images/players/paige-bueckers-portrait-v1.webp",
@@ -296,7 +312,9 @@
     {
       "batch_number": 8,
       "mode": "scheduled_asset_reconciliation",
-      "player_ids": [488],
+      "player_ids": [
+        488
+      ],
       "published_count": 1,
       "asset": "/images/players/kelsey-plum-portrait-v1.webp",
       "asset_blob_sha": "bb3dd2c59b15fb5cae7a2894672683543b24ca1c",
@@ -311,7 +329,9 @@
     {
       "batch_number": 9,
       "mode": "scheduled_asset_reconciliation",
-      "player_ids": [676],
+      "player_ids": [
+        676
+      ],
       "published_count": 1,
       "generation_attempts": 0,
       "asset": "/images/players/aliyah-boston-portrait-v1.webp",
@@ -326,7 +346,9 @@
     {
       "batch_number": 10,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [552],
+      "player_ids": [
+        552
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "discarded_generation_outputs": 0,
@@ -346,7 +368,9 @@
     {
       "batch_number": 11,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [533],
+      "player_ids": [
+        533
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "discarded_generation_outputs": 0,
@@ -366,7 +390,9 @@
     {
       "batch_number": 12,
       "mode": "scheduled_single_player_generation",
-      "player_ids": [714],
+      "player_ids": [
+        714
+      ],
       "published_count": 1,
       "generation_attempts": 1,
       "discarded_generation_outputs": 0,
@@ -416,5 +442,6 @@
     "Kelsey Mitchell completed on the first generation attempt. A timestamped lease was written before generation; the final 160x160 RGBA WebP matched its uploaded Git blob SHA exactly; the asset and manifest were committed atomically on main; workflow 35133076021 and its Pages deploy job succeeded; a fresh browser-backed fetch confirmed one Kelsey Mitchell portrait and the expected live asset path, while deployed markup confirms no square number-card, stats immediately after hero-main, and the approved 55%/45% mobile grid. Interactive viewport automation was unavailable because the browser account rejected custom max-step configuration before creating a run.",
     "Aaliyah Edwards completed on the first image-generation attempt. A timestamped lease was written before generation. The first binary blob upload was discarded before commit because its Git blob SHA did not match the locally verified WebP; the corrected 160x160 RGBA WebP matched exactly. The asset and manifest were committed atomically on main, workflow 35138544742 and its Pages deploy job succeeded, and fresh rendered-browser verification confirmed the Aaliyah Edwards name and expected portrait URL. Live hero markup has hero-main immediately followed by hero-stats; generated markup confirms no square number-card and the approved 55%/45% responsive grid.",
     "The independent WNBA statistics updater remains active."
-  ]
+  ],
+  "approval_mode": "owner_approves_each_image_then_publish_verify_then_show_next"
 }

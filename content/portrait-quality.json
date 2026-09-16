@@ -16,7 +16,6 @@
   "next_user_approved_replacement": "aja-wilson",
   "unchanged_legacy_assets": {
     "/images/players/caitlin-clark-portrait-v2.avif": "a8edabd7eb3a83244feb805b2dd8ae0d2360b2a74c311c3e4fdf881b3a8af9be",
-    "/images/players/aja-wilson-portrait-v1.webp": "be8434386e754bc5a1375b69a147a253076285e851a5d01307eb765cd1afb5b2",
     "/images/players/breanna-stewart-portrait-v1.webp": "a7672d4f64559b57f0707a55859a6aee2da1c77eeff519afa2eeff4c97a4cfbb",
     "/images/players/sabrina-ionescu-portrait-v1.webp": "5549ceed0e6ac56343077a679b72c113ea3dc7d401cb848f52e56df2a190a271",
     "/images/players/napheesa-collier-portrait-v1.webp": "78559d1a5a6fdb1aabbb9e36d1db2af2ce96677fe5a0eddd921ae66814a70415",
@@ -27,5 +26,5 @@
     "/images/players/kelsey-mitchell-portrait-v1.webp": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824",
     "/images/players/aaliyah-edwards-portrait-v1.webp": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420"
   },
-  "legacy_note": "These already-published bytes are exempt only to avoid blocking statistics refreshes. They are not the standard for new portraits; undersized assets need separate replacements."
+  "legacy_note": "Legacy size exemptions never bypass decoding, checksum, player-ID or live-browser checks."
 }
