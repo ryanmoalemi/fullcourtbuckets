@@ -1,14 +1,6 @@
 {
   "request_id": "468-461b1b7ed968ea95-20260916-approved",
-  "player_id": 468,
-  "player_name": "Breanna Stewart",
   "slug": "breanna-stewart",
-  "approved": true,
-  "approval": "Owner approved this illustration in chat and requested publication with a live review link. Upload the exact original unchanged.",
-  "generation_id": "9708e048-b33f-46d4-8a0e-30c468774ba9",
-  "sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
-  "bytes": 1782648,
-  "dimensions": [1254, 1254],
-  "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
-  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-f614-81fd-87a0-4503da7dec81/raw?se=2026-09-16T21%3A42%3A53Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ac26-71af-7a32-8a4b-22a854e72b66&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A16%3A41Z&ske=2026-09-17T20%3A16%3A41Z&sks=b&skv=2026-02-06&sig=LAHGJPezfCwlCH3yVnrV%2BrywnKtlPWNWA9arEmgeK6Y%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351"
 }

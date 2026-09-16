@@ -1,0 +1,20 @@
+{
+  "request_id": "468-461b1b7ed968ea95-20260916-approved",
+  "player_id": 468,
+  "player_name": "Breanna Stewart",
+  "slug": "breanna-stewart",
+  "approved": true,
+  "approval": "Owner approved this illustration in chat and requested publication with a live review link. Upload the exact original unchanged.",
+  "generation_id": "9708e048-b33f-46d4-8a0e-30c468774ba9",
+  "sha256": "461b1b7ed968ea9502d2e63e1f830537d37264cbb9f40083b0b4ca0c3e77c351",
+  "bytes": 1782648,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "master_file_id": "10jahADQlXRn_MiVVLLppAM4cw6NwVNiv",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/breanna-stewart/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "77cd5b14a0c71df955ef30448509aedc8077913c"
+}
