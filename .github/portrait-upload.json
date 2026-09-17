@@ -1,6 +1,17 @@
 {
-  "request_id": "373-26c0471eb6c1-blobalias-20260917T1645Z",
-  "slug": "alyssa-thomas",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687"
+  "request_id": "757-918a939b360b-recovery-20260917T2148Z",
+  "player_id": 757,
+  "player_name": "Aneesah Morrow",
+  "slug": "aneesah-morrow",
+  "approved": true,
+  "approval_context": "Owner-delegated autonomous quality review and publication. Recovery of the exact previously generated Aneesah Morrow original after the file-reference transport issue was diagnosed; no regeneration, resizing, recompression, permission change, or paid service.",
+  "generation_id": "54c74ba2-4250-4651-b072-08b33101e565",
+  "sha256": "918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad",
+  "bytes": 1768281,
+  "dimensions": [1285, 1224],
+  "format": "PNG",
+  "master_drive_file_id": "14fU8rsA03Vnj6QQCtZLie1oDIYBmzi5d",
+  "master_filename": "FCB-757-aneesah-morrow-918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad.png",
+  "identity_mapping": "content/portrait-generation-maps/757-aneesah-morrow-20260917T1904Z.json",
+  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-cda0-81fd-935e-64b453ceddb2/raw?se=2026-09-17T21%3A51%3A51Z&sp=r&sv=2026-02-06&sr=b&scid=01a0b154-5f0e-7343-80a1-ee773d55affe&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T18%3A06%3A39Z&ske=2026-09-18T18%3A06%3A39Z&sks=b&skv=2026-02-06&sig=Xh%2B3tGqq/JOyzKpiEvZ1QT2Z26qdOUAK2mgnEftFV2s%3D"
 }
