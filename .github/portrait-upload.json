@@ -1,6 +1,16 @@
 {
-  "request_id": "533-8da6f315255a-handoff-20260917T0919Z",
-  "slug": "kelsey-mitchell",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d"
+  "request_id": "714-7fab8b380b2c-handoff-20260917T0930Z",
+  "player_id": 714,
+  "player_name": "Aaliyah Edwards",
+  "slug": "aaliyah-edwards",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed publishing to continue until all existing player pages have verified full-quality illustrations. Generated one selected player only; no resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "f32e0daf-c640-4cf3-a41f-8bf136eedfd8",
+  "sha256": "7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e",
+  "bytes": 1764794,
+  "dimensions": [1254, 1254],
+  "format": "PNG",
+  "master_drive_file_id": "1qlo_aOa4EGjxTKRqCU92mBbitPJfdTzW",
+  "master_filename": "FCB-714-aaliyah-edwards-7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e.png",
+  "download_url": "https://oaisdmntprwestus.blob.core.windows.net/files/00000000-2d64-8230-95ca-46f9e7683b70/raw?se=2026-09-17T09%3A33%3A54Z&sp=r&sv=2026-02-06&sr=b&scid=01a0aea8-0d78-7954-887e-fab4529f62ad&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A16%3A37Z&ske=2026-09-17T20%3A16%3A37Z&sks=b&skv=2026-02-06&sig=UEDHureHyxVx%2BFkuxRmKOhndkCRnX%2B4ioAgE3dtH87Y%3D"
 }
