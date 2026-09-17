@@ -1,0 +1,13 @@
+{
+  "player_id": 642,
+  "player_name": "Anneli Maley",
+  "slug": "anneli-maley",
+  "destination": "images/players/anneli-maley/portrait.png",
+  "profile_path": "data/wnba/players/anneli-maley.json",
+  "profile_active": true,
+  "team": "New York Liberty",
+  "selection_reason": "Next eligible active player in illustration queue after Angela Dugalic; no existing receipt or portrait asset was found.",
+  "generation_stage": "mapped_before_generation",
+  "mapped_at": "2026-09-17T22:02:00Z",
+  "artwork_brief": "Exactly one recognizable Anneli Maley, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+}
