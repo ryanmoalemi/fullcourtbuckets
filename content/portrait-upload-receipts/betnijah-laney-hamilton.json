@@ -1,0 +1,22 @@
+{
+  "request_id": "419-2913f154cca8-blobalias-20260917T1617Z",
+  "player_id": 419,
+  "player_name": "Betnijah Laney-Hamilton",
+  "slug": "betnijah-laney-hamilton",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "b7325219-d5df-49d6-b041-be8c16b27db1",
+  "sha256": "2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c",
+  "bytes": 1691619,
+  "dimensions": [
+    1283,
+    1226
+  ],
+  "format": "PNG",
+  "master_drive_file_id": "1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0",
+  "master_filename": "FCB-419-betnijah-laney-hamilton-2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/betnijah-laney-hamilton/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "db5b113cf402f7a85542bf2cd573436476a0cb11"
+}
