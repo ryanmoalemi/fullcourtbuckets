@@ -1,7 +1,15 @@
 {
-  "request_id": "67023-655bd92245c7-gateway-20260917T1117Z",
+  "request_id": "67023-655bd92245c7-rematerialized-20260917T1203Z",
+  "player_id": 67023,
+  "player_name": "Aicha Coulibaly",
   "slug": "aicha-coulibaly",
-  "status": "transport_failed",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review/publication and explicitly instructed the rollout not to stop for recoverable transport problems. Reusing the already-selected preserved Aicha Coulibaly original without regeneration, resizing, recompression, paid services, credential changes or permission changes.",
+  "generation_id": "6b8994d1-4124-4278-a4f4-21c9a1b370d7",
   "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
-  "error": "Temporary whole-file gateway handoff returned HTTP 403; selected original remains preserved in connected Drive and was not published."
+  "bytes": 1913622,
+  "dimensions": [1254, 1254],
+  "master_drive_file_id": "1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
+  "master_filename": "FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
+  "download_url": "https://sdmntprwestus2.oaiusercontent.com/files/00000000-b4b8-81f8-aeec-838eb599c9ef/raw?se=2026-09-17T12%3A08%3A16Z&sp=r&sv=2026-02-06&sr=b&scid=c374f525-b56d-5a2f-bc36-26686925996d&skoid=30ec2761-8f41-44db-b282-7a0f8809659b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A04%3A56Z&ske=2026-09-17T20%3A04%3A56Z&sks=b&skv=2026-02-06&sig=qngjQlEfkGduIBctnUC2Q8F906u4Ur6viYkVLQDDXZs%3D"
 }
