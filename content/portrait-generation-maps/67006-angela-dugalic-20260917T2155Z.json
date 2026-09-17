@@ -1,0 +1,13 @@
+{
+  "player_id": 67006,
+  "player_name": "Angela Dugalic",
+  "slug": "angela-dugalic",
+  "destination": "images/players/angela-dugalic/portrait.png",
+  "profile_path": "data/wnba/players/angela-dugalic.json",
+  "profile_active": true,
+  "team": "Washington Mystics",
+  "selection_reason": "Next eligible active player in the illustration queue after parked players and the newly completed Aneesah Morrow portrait.",
+  "generation_stage": "mapped_before_generation",
+  "mapped_at": "2026-09-17T21:55:36Z",
+  "artwork_brief": "Exactly one recognizable Angela Dugalic, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+}
