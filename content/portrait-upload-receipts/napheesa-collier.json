@@ -4,13 +4,10 @@
   "player_id": 573,
   "player_name": "Napheesa Collier",
   "approved": true,
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
   "bytes": 1466696,
-  "dimensions": [
-    1254,
-    1254
-  ],
+  "dimensions": [1254, 1254],
   "format": "PNG",
   "generation_id": "1d9c50ca-84e0-4630-9dcc-3773c03820ab",
   "source_attachment_id": "file_00000000e43c81fd812f4bb0b7a3ddc0",
@@ -19,5 +16,24 @@
   "approval_context": "Owner reviewed the Napheesa Collier transparent white-top draft c33a15398cf74f2e and explicitly instructed update live page. Upload this exact original unchanged. Preserve the existing compact desktop/mobile template and all other players.",
   "path": "images/players/napheesa-collier/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "fc491d5a2c7cdf0c45cf6f3bc530f09952650791"
+  "github_blob_sha": "fc491d5a2c7cdf0c45cf6f3bc530f09952650791",
+  "upload_commit": "9757aef74ae0729eb446d8619cfe3ba24d9b1da6",
+  "live_verified": true,
+  "verification": {
+    "workflow_run_id": 35177450193,
+    "artifact_id": 10478552519,
+    "artifact_name": "portrait-live-verification",
+    "result": "passed",
+    "player_specific_checks": 6,
+    "engines": ["chromium", "webkit"],
+    "viewports": [[1365,850],[390,844],[320,568]],
+    "exact_approved_hash_matches_live_bytes": true,
+    "decoded_natural_dimensions": [1254,1254],
+    "image_count": 1,
+    "desktop_and_390px_screenshots_inspected": true,
+    "followup_public_page_fetch_matches": true,
+    "live_url": "https://fullcourtbuckets.com/wnba/napheesa-collier/?v=c33a15398cf7",
+    "live_image": "https://fullcourtbuckets.com/images/players/napheesa-collier/portrait.png?v=c33a15398cf7",
+    "note": "Original PNG is unchanged and the compact layout remains. The complete stats strip fits at 1365x850 and 390x844 but not 320x568. No resizing, recompression, reupload or new generation was needed during this reconciliation."
+  }
 }
