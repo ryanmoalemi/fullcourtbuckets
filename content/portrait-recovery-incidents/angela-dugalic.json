@@ -5,9 +5,9 @@
   "stage": "drive_master_preservation",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "error_message": "Google Drive rejected the exact image-generation runtime file reference as unavailable for connector egress.",
-  "attempt_count": 1,
+  "attempt_count": 2,
   "first_seen_at": "2026-09-17T21:58:00Z",
-  "last_attempt_at": "2026-09-17T21:58:00Z",
+  "last_attempt_at": "2026-09-17T23:03:48Z",
   "next_retry_at": null,
   "preserved_master_id": null,
   "source_sha256": "ae91394ec443bcb06a9de9506972b8ed34164cb25de8e03583c1f34aaf490e6d",
@@ -20,9 +20,9 @@
   "identity_mapping": "content/portrait-generation-maps/67006-angela-dugalic-20260917T2155Z.json",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/angela-dugalic/",
   "public_page_impact": "No website file changed; no portrait was uploaded or published.",
-  "resolution_status": "blocked_connector_egress_for_this_generated_file",
-  "recovery_action": "Validated the generated source as native PNG/RGBA 1147x1371 with alpha extrema 0-255 and exact SHA256, then attempted the destination schema's exact runtime file reference once. Because the connector still returned explicit BLOCKED_FILE_REFERENCE, the denied Drive-preservation operation was stopped without copying, renaming, rehosting, URL rewriting, endpoint switching, resizing or regeneration.",
-  "notified_status": "new_incident_this_run",
+  "resolution_status": "blocked_binding_connector_egress_waiting_platform_capability_change",
+  "recovery_action": "A scheduled recovery-only capability check retried the exact same image-generation runtime file reference after more than one hour. Google Drive again returned explicit BLOCKED_FILE_REFERENCE before any master could be created. No copy, rename, rehost, URL rewrite, endpoint switch, resizing, recompression or regeneration was attempted. Because this is now a repeated explicit connector-egress denial for the exact source, further immediate retries are suppressed pending a real capability change.",
+  "notified_status": "previously_reported_no_duplicate_retry_alert",
   "help_needed": false,
-  "notes": "Player-specific incident. Continue independent eligible players; do not treat this as proof that every future generated file is blocked. If the same explicit egress denial repeats across the remaining unpublished-master limit, switch to recovery-only runs."
+  "notes": "The exact source remains locally identified by generation ID and SHA256, but no durable Drive master exists because the connector denies egress for this runtime file reference. The public page remains unchanged. Keep the rollout recovery schedule enabled; do not generate additional portraits solely to probe this same capability while the existing unpublished backlog remains blocked."
 }
