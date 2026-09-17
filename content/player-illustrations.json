@@ -326,6 +326,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 525,
+      "slug": "azura-stevens",
+      "player_name": "Azura Stevens",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/azura-stevens/portrait.png",
+      "width": 1254,
+      "height": 1254,
+      "asset_sha256": "5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1254,
+        "height": 1254,
+        "source_width": 1254,
+        "source_height": 1254,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
