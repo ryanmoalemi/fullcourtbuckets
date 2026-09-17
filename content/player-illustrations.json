@@ -229,12 +229,25 @@
       "player_name": "Kelsey Mitchell",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/kelsey-mitchell-portrait-v1.webp",
-      "width": 160,
-      "height": 160,
-      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, exactly one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA Kelsey Mitchell profile only for identity context. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
-      "asset_sha256": "27afce911ec0d6d7c662b7890eed8813fbb15aac12043fa1e60d4052d44fe824"
+      "src": "/images/players/kelsey-mitchell/portrait.png",
+      "width": 1274,
+      "height": 1234,
+      "asset_sha256": "8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1274,
+        "height": 1234,
+        "source_width": 1274,
+        "source_height": 1234,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     },
     {
       "player_id": 714,

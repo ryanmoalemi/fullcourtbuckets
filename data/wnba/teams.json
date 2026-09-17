@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-16T05:48:36+00:00",
+  "checked_at": "2026-09-17T09:20:30+00:00",
   "teams": [
     {
       "id": 34,
@@ -16,14 +16,6 @@
       "city": "Team Spoon",
       "name": "TEAM SPOON",
       "conference": null
-    },
-    {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
     },
     {
       "id": 14,
@@ -154,6 +146,30 @@
       "conference": null
     },
     {
+      "id": 32,
+      "full_name": "TBD",
+      "abbreviation": "TBD",
+      "city": "TBD",
+      "name": "TBD",
+      "conference": null
+    },
+    {
+      "id": 33,
+      "full_name": "TBD",
+      "abbreviation": "TBD",
+      "city": "TBD",
+      "name": "TBD",
+      "conference": null
+    },
+    {
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
+    },
+    {
       "id": 6,
       "full_name": "Chicago Sky",
       "abbreviation": "CHI",
@@ -170,20 +186,28 @@
       "conference": "Eastern Conference"
     },
     {
-      "id": 32,
-      "full_name": "TBD",
-      "abbreviation": "TBD",
-      "city": "TBD",
-      "name": "TBD",
-      "conference": null
+      "id": 11,
+      "full_name": "Dallas Wings",
+      "abbreviation": "DAL",
+      "city": "Dallas",
+      "name": "Wings",
+      "conference": "Western Conference"
     },
     {
-      "id": 33,
-      "full_name": "TBD",
-      "abbreviation": "TBD",
-      "city": "TBD",
-      "name": "TBD",
-      "conference": null
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
+    },
+    {
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
+      "conference": "Eastern Conference"
     },
     {
       "id": 8,
@@ -255,30 +279,6 @@
       "abbreviation": "WSH",
       "city": "Washington",
       "name": "Mystics",
-      "conference": "Eastern Conference"
-    },
-    {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
       "conference": "Eastern Conference"
     }
   ]
