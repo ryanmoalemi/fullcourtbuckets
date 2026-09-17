@@ -4,6 +4,34 @@
   "slug": "azura-stevens",
   "destination": "images/players/azura-stevens/portrait.png",
   "authorization": "owner_delegated_quality_review_and_publication",
-  "status": "generation_target_claimed",
-  "created_at": "2026-09-17T12:12:00Z"
+  "created_at": "2026-09-17T12:12:00Z",
+  "status": "approved_original_preserved_publication_blocked",
+  "live_page_changed": false,
+  "generation_id": "559f6b5a-2b6a-43bf-a9bd-3e497bfb868e",
+  "sha256": "5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a",
+  "bytes": 1751571,
+  "dimensions": [1254, 1254],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "master_drive_file_id": "1FBYu8Hw40vOP2R38Dm3IEACwzl8raZtk",
+  "master_filename": "FCB-525-azura-stevens-5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a.png",
+  "do_not_regenerate": true,
+  "reference_notes": "Current WNBA identity/profile checked; Wikimedia Commons has reusable Azura Stevens photography for likeness review. Generation used the clean FCB portrait brief, not a copyrighted team-photo input.",
+  "publication_attempts": [
+    {
+      "method": "fresh Drive rematerialization + local image_uris",
+      "result": "BLOCKED_FILE_REFERENCE"
+    },
+    {
+      "method": "fresh signed whole-file URL inserted into temporary native Google Doc",
+      "result": "insert_succeeded_but_sourceUri_remained_signed_OAI_URL"
+    },
+    {
+      "method": "existing portrait-upload.yml with exact signed sourceUri",
+      "run_id": 35220290609,
+      "result": "failure_receiving_original"
+    }
+  ],
+  "reason": "Portrait passed the likeness/format/transparency gate and exact original is preserved in Drive, but the current connector transport path cannot deliver the exact bytes to GitHub. Keep the live page intact and retry publication only; do not regenerate."
 }
