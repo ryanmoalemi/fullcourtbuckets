@@ -1,0 +1,23 @@
+{
+  "request_id": "741-c4b68851366ecdc8-three-player-approval",
+  "player_id": 741,
+  "slug": "paige-bueckers",
+  "player_name": "Paige Bueckers",
+  "approved": true,
+  "status": "uploaded_pending_live_verification",
+  "sha256": "c4b68851366ecdc836e942f04ae299123ebffbeadd54180fe8d15729170fd0e0",
+  "bytes": 1730766,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "generation_id": "16d936c9-6ccf-4369-844f-1e05d07296ac",
+  "source_attachment_id": "file_00000000c76c81fd98383293ae0e6449",
+  "master_drive_file_id": "19bAJb4DeK8eMP-hGYCjwLiF1wtnOTKLG",
+  "master_filename": "FCB-741-paige-bueckers-approved-c4b68851366ecdc8.png",
+  "approval_context": "Owner approved all three latest portraits (Paige Bueckers, Kelsey Plum, Aliyah Boston) and instructed: all 3 are good you can work on your own now. Upload this exact approved original unchanged. It supersedes any older unpublished Paige draft. No template edits or image resizing.",
+  "path": "images/players/paige-bueckers/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "9c8aa4ef8de9183a28a1d2787f26856b53dcfedf"
+}
