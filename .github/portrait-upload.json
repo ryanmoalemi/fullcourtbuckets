@@ -1,16 +1,6 @@
 {
   "request_id": "311-df8fd5e1f814-blobalias-20260917T1644Z",
-  "player_id": 311,
-  "player_name": "Alysha Clark",
   "slug": "alysha-clark",
-  "approved": true,
-  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
-  "generation_id": "7cc00d48-c10f-4499-8d69-1256c5e89edb",
-  "sha256": "df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d",
-  "bytes": 1444727,
-  "dimensions": [1254, 1254],
-  "format": "PNG",
-  "master_drive_file_id": "1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi",
-  "master_filename": "FCB-311-alysha-clark-df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d.png",
-  "download_url": "https://oaisdmntprcentralus.blob.core.windows.net/files/00000000-a1a0-81f5-9be2-3788cba6b3cb/raw?se=2026-09-17T16%3A43%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=ad8dc2ed-96fc-525c-aa77-18673302452f&skoid=864daabb-d06a-46b3-a747-d35075313a83&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T02%3A43%3A10Z&ske=2026-09-18T02%3A43%3A10Z&sks=b&skv=2026-02-06&sig=CkDWLATzxG%2Bplyb3x8KBXjs7CVXJo2hLR9VL3NMqkLs%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d"
 }
