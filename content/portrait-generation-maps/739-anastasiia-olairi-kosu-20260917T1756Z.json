@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-17T17:56:13Z",
+  "player_id": 739,
+  "player_name": "Anastasiia Olairi Kosu",
+  "slug": "anastasiia-olairi-kosu",
+  "provider": "BALLDONTLIE",
+  "source_player_record": "data/wnba/players/anastasiia-olairi-kosu.json",
+  "destination": "images/players/anastasiia-olairi-kosu/portrait.png",
+  "planned_master_filename": "FCB-739-anastasiia-olairi-kosu-<sha256>.png",
+  "generation_target_locked": true,
+  "one_person_per_generation_call": true,
+  "brief": "Exactly one recognizable Anastasiia Olairi Kosu portrait, frontal head-and-shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent alpha background, no lettering/logos/numbers/scenery/frame/poster/webpage mockup, native PNG at least 1024 pixels per side.",
+  "status": "mapped_before_generation"
+}
