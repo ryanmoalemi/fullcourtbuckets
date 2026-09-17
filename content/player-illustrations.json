@@ -125,12 +125,25 @@
       "player_name": "Paige Bueckers",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/paige-bueckers-portrait-v1.webp",
-      "width": 160,
-      "height": 160,
-      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, one player at a time, using the approved Caitlin Clark portrait only as style direction. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
-      "asset_sha256": "3d9a8d28fb0742230294900d1d64b68cd9b496044c02e49b8bfa624f229c9782"
+      "src": "/images/players/paige-bueckers/portrait.png",
+      "width": 1254,
+      "height": 1254,
+      "asset_sha256": "c4b68851366ecdc836e942f04ae299123ebffbeadd54180fe8d15729170fd0e0",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1254,
+        "height": 1254,
+        "source_width": 1254,
+        "source_height": 1254,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     },
     {
       "player_id": 488,
