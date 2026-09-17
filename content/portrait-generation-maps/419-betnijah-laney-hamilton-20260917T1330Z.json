@@ -3,9 +3,46 @@
   "player_name": "Betnijah Laney-Hamilton",
   "slug": "betnijah-laney-hamilton",
   "source_record": "data/wnba/players/betnijah-laney-hamilton.json",
-  "planned_local_output": "/mnt/data/FCB-419-betnijah-laney-hamilton-generated.png",
   "repository_destination": "images/players/betnijah-laney-hamilton/portrait.png",
-  "status": "identity_bound_before_generation",
+  "status": "selected_full_quality_master_preserved_publication_transport_blocked",
   "created_at_utc": "2026-09-17T13:30:00Z",
-  "note": "Permanent provider ID 419 was verified from the current player JSON; an older progress priority entry incorrectly listed 571 and must not be used. Exactly one player may be generated in this call."
+  "identity_mapping_saved_before_generation": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "3a7e9415-88ac-4e5a-ac4e-86b6904a936a",
+      "sha256": "65acd5c0ee7495cf73a9ae05b2075671d1b78973d2c857755480b167799b5675",
+      "bytes": 2043075,
+      "dimensions": [1283, 1226],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "19F_cld-k6w353usErwX7nrRnL2lmD6_M",
+      "master_filename": "FCB-419-betnijah-laney-hamilton-65acd5c0ee7495cf73a9ae05b2075671d1b78973d2c857755480b167799b5675.png",
+      "disposition": "superseded_by_closer_likeness_attempt"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "b7325219-d5df-49d6-b041-be8c16b27db1",
+      "sha256": "2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c",
+      "bytes": 1691619,
+      "dimensions": [1283, 1226],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0",
+      "master_filename": "FCB-419-betnijah-laney-hamilton-2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c.png",
+      "disposition": "selected_for_publication"
+    }
+  ],
+  "publication_attempts": [
+    {
+      "method": "fresh Drive master fetch + local image_uris into temporary native Google Doc",
+      "temp_doc_id": "11tgyHbgZ4X9zADnoGSAIAwQD76UOAcXLpLndzQh-52c",
+      "result": "BLOCKED_FILE_REFERENCE"
+    }
+  ],
+  "live_verified": false,
+  "do_not_regenerate": true,
+  "note": "Permanent provider ID 419 was verified from the current player JSON; an older progress priority entry incorrectly listed 571 and was not used. Both original generated PNG byte streams are preserved in connected Google Drive. The second attempt was selected after comparing its facial structure and smile against current public player references. No website file changed because connector egress blocked the temporary-Doc whole-file handoff."
 }
