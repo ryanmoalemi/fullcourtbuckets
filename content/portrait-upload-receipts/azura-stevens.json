@@ -1,0 +1,22 @@
+{
+  "request_id": "525-5b92dc1cd3e6-blobalias-20260917T1612Z",
+  "player_id": 525,
+  "player_name": "Azura Stevens",
+  "slug": "azura-stevens",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "559f6b5a-2b6a-43bf-a9bd-3e497bfb868e",
+  "sha256": "5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a",
+  "bytes": 1751571,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "master_drive_file_id": "1FBYu8Hw40vOP2R38Dm3IEACwzl8raZtk",
+  "master_filename": "FCB-525-azura-stevens-5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/azura-stevens/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "b5693dcd40888a5ee150614d1b359dda4679c3a1"
+}
