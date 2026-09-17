@@ -1,43 +1,46 @@
 # Full Court Buckets: repository working instructions
 
+## Latest portrait authorization
+
+The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliyah Boston), then said: "all 3 are good you can work on your own now". The earlier per-player approval pause is therefore superseded for this rollout. Read `.github/PORTRAIT_AUTOPILOT.md` and `content/portrait-autopilot.json` FIRST. Generate one player at a time, quality-check, publish the original, verify the live page, and save progress without routine owner approval requests. The FCB portrait rollout task is enabled for approximately hourly continuation. Older paused/review-pending records are historical unless the latest owner instruction changes this again. No new paid services, credential changes, account-privilege changes or unrelated website edits are authorized.
+
 ## Authorized website work
 
-The owner manages fullcourtbuckets.com through ChatGPT and has authorized implementing requested website changes, committing to this repository, and publishing them. Do the authorized work through the connected GitHub tools instead of handing the owner code to paste into an editor. This document records the working process; it does not grant or alter account permissions, override a later owner instruction, or bypass platform confirmations.
+The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default branch may be `master`, which contains obsolete unrelated content. Never merge or deploy that content.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated content. Never merge or deploy it.
 
 ## Standing owner instruction: handle the complete publication
 
-The owner explicitly directed: "remember always get your github write publish permissions don't ask me to post anything". For each authorized website task, discover the connected GitHub read/write tools, read the current target files, and perform the upload, commit, publication and live verification here. Do not send the owner code, filenames or steps to post manually when the connected tools can do the work. Do not ask them to resend an approved original already available in the conversation or preserved Drive master.
+The owner directed: "remember always get your github write publish permissions don't ask me to post anything". Discover and use the connected read/write tools, read the current target files, and perform uploads, commits, publication and live verification here. Do not ask the owner to post code, manually upload approved files, or resend originals already in the conversation or preserved Drive storage.
 
-Missing tools from an initial tool list are not evidence of read-only access. Discover the appropriate action and attempt the authorized write before making any access claim. A failed image download is a transport error, not proof of missing GitHub permission. Use the established whole-file uploader in `.github/PORTRAIT_UPLOAD.md`; do not rebuild it per player. Do not claim permanent privileges or attempt to grant yourself account permissions. Request owner intervention only after an actual tool error establishes an authorization step that cannot be completed with available tools.
+Missing tools in the initial list are not proof of read-only access. Discover and attempt the appropriate authorized write before making an access claim. A file-download failure is a transport error, not a GitHub permission error. Use `.github/PORTRAIT_UPLOAD.md`, not new per-player infrastructure. Never claim permanent privileges or grant yourself permissions. Request owner intervention only when an actual error establishes a necessary authorization step unavailable through the connected tools.
 
 ## Read, write, and verify
 
-1. Discover the connected GitHub read and write tools at the start of a website task. Missing tools in the initial tool list do not establish read-only access. Do not claim that writes are unavailable without attempting an appropriate authorized write and checking its actual error.
-2. Read the current main branch and relevant files. Use `update_file` with the current blob SHA for a text replacement, or `create_blob`, `create_tree`, `create_commit`, and `update_ref` for an atomic multi-file change. Never force-push or discard concurrent edits.
-3. Preserve domain settings, credentials, unrelated content, valid player IDs, statistics, and the separate statistics updater. Do not purchase services or change account privileges without authorization.
-4. Run relevant tests. Verify the deployment and the actual live page and image before reporting a change as live. Generating an image, saving a local file, making an unreferenced Git blob, and committing code are not the same as publishing.
-5. Report the actual blocker if a write or deployment fails. Do not ask the owner to reconnect GitHub when existing write access works. Do not claim that repository instructions create permanent permissions or guarantee future tool availability.
+1. Discover current tools and read current main and the relevant records. Use update_file with the current blob SHA, or create_blob/create_tree/create_commit/update_ref for atomic multi-file edits. Never force-push or discard concurrent changes.
+2. Preserve domain, hosting, credentials, unrelated content, permanent IDs, sports data and the daily/weekly statistics updater. Do not buy additional services.
+3. Run relevant existing tests. Verify deployment and actual public pages/images. Generation, local saves, Git blobs, commits, successful HTTP responses and deployment steps alone are not proof of publication.
+4. Report real blockers accurately. Do not request reconnection when existing writes work, or claim repository notes guarantee future tool availability.
 
-## Approved player-page design
+## Approved uniform artwork and page design
 
-The current Caitlin Clark page is the approved compact desktop/mobile layout. Preserve its purple gradient, circles, faint outlined number, side-by-side mobile name and portrait, and statistics directly beneath the hero. No square number card behind the head and no visible caption below the portrait. Names, team information, jersey numbers, and statistics remain HTML. Keep image provenance in metadata and source notes.
+Use one recognizable editorial head-and-shoulders/upper-chest illustration, natural expression, realistic proportions, crisp polished shading, plain WHITE basketball top with BLACK trim, and genuine transparent background. No lettering, logos, jersey numbers, poster, scenery, webpage graphics or frame within the image. Generate one person per call, not grids. Preserve recent approved source files as style references, never copy their faces to other identities. Self-review the intended likeness and format; park bad results instead of publishing a wrong person or repeatedly generating posters.
 
-Read the existing implementation before changing it. The established pipeline is `automation/build_players.py`, `automation/apply_portraits.py`, then `automation/rollout_player_design.py`. Do not create a competing layout implementation.
+The approved compact desktop/mobile template stays unchanged: purple gradient, circles, faint outlined number, side-by-side mobile name and portrait, and stats directly below. No square number card or visible portrait caption. Names, teams, jersey numbers and statistics remain HTML; provenance remains in source notes/metadata. Do not create a competing page-layout implementation.
 
-## Portrait quality and original-file handling
+## Full-resolution original handling
 
-The owner approved a sharper replacement for Angel Reese after the published 192x192 thumbnail appeared blurry. Caitlin's approved asset is 640x650, but that is a historical export size, not a reason to shrink new originals. The latest owner-approved process is to keep the full-resolution PNG unchanged in `images/players/<exact-page-slug>/portrait.png`. The folder mapper handles metadata; the existing responsive CSS supplies the compact proportional crop. No per-player template edits, resizing, recompression, stretching, embedded text or background graphics.
+Preserve every generated master immediately under a unique player-ID/slug/SHA256 filename and in connected Drive. Require a genuine transparent PNG normally at least 1024px on both sides. Publish the whole original unchanged to `images/players/<exact-slug>/portrait.png`; the existing folder mapper and responsive crop handle it. No resizing, recompression, stretching, thumbnail export or upscaling. Caitlin's historical 640x650 export is not an instruction to shrink new originals.
 
-Future portraits must originate from full-resolution generated art, normally at least 1024 pixels on each side, and must not be published as 160px, 192px, 256px, or other undersized hero thumbnails. Upscaling a thumbnail does not satisfy this rule. Use real alpha transparency; verify actual decoded dimensions, alpha and file hashes rather than trusting a filename or manifest. Do not reduce quality to fit tool arguments. Preserve each master under a unique player-ID/slug/checksum filename so later generations cannot overwrite it.
+The old 160/192/256/480px portraits remain unfinished under the improved quality standard even when a historical exception allows them to render. Replace them next for active players, then finish other active players and the archive. Preserve already verified full-quality artwork. Reconcile receipts/live files before repeating work; a stale pending record is not proof of failure.
 
-Do not describe old under-resolution portraits as fixed merely because this policy exists. Update each actual asset and verify it. Follow the owner's latest request about inspecting one player at a time before expanding a rollout.
+## Existing whole-file upload and mandatory checks
 
-## Latest approval loop and mandatory browser evidence
+Read `.github/PORTRAIT_UPLOAD.md` and the current upload request/workflow. Use the existing Drive/temporary-native-Doc sourceUri handoff and portrait-upload.yml. Do not use a resampled Google contentUri, expired/guessed URLs, manual base64 chunks or a new workflow per player. Preserve the master and delete only the temporary handoff Doc after transfer. Serialize uploads and reconcile publication before submitting the next request.
 
-Read `automation/PORTRAIT_PUBLISHING.md`, `.github/PORTRAIT_UPLOAD.md`, `content/portrait-review-status.json` and that player's review/upload receipt before continuing. The normal process is one generated image, owner approval, upload the unchanged original, verify publication, then the next image. Keep the older bulk task paused unless the owner explicitly changes that instruction.
+The existing pipeline is build_players.py, apply_portraits.py with folder mapping, then rollout_player_design.py. Every publication must pass verify_portraits.py with actual image decoding, approved ID/name/slug/checksum binding, public file hashes, and Chromium/WebKit desktop/mobile checks. Inspect actual selected-player screenshots in the portrait-live-verification artifact. A placeholder is not a completed portrait. Record precise results and do not claim the whole stats strip fits on all phones when it does not.
 
-Earlier Aja missing-source and corruption notes are historical: her later approved white-top original, Breanna's approved original and Sabrina's approved original were uploaded and verified. Do not request them again or regenerate completed images. Reconcile current receipts and actual live pages before repeating any upload. A stale pending status alone is not proof that a file failed to publish.
+## Autonomous progress
 
-Every portrait publication must pass `automation/verify_portraits.py`: decode the real bytes, enforce the approved player-ID/name/slug/checksum mapping, and check actual public image decoding and hashes in Chromium and WebKit at desktop and phone viewports. Inspect the live screenshots in that run's `portrait-live-verification` artifact. A GitHub commit, green deployment step, HTTP 200, or manifest dimensions alone is not sufficient. A valid placeholder is not a completed portrait. Never advance the approval loop by claiming a missing approved replacement is live.
+Save results, leases and blockers in content/portrait-autopilot.json and per-player upload receipts. Up to three players per scheduled run, generated and published sequentially. Notify after ten newly verified portraits, completion, or an actionable blocker, not for routine approval. If a capability is actually unavailable, keep live pages intact, record the error and pause when it blocks all progress. Disable the portrait task when the existing queue is complete; leave the statistics updater running.
