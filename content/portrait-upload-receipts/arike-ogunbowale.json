@@ -4,19 +4,46 @@
   "player_name": "Arike Ogunbowale",
   "slug": "arike-ogunbowale",
   "approved": true,
-  "approval_context": "Owner delegated autonomous quality review and publication: all 3 are good you can work on your own now. Resume the existing preserved Arike master after the transfer blocker; no new generation, resizing or recompression.",
+  "approval_context": "Owner delegated autonomous quality review and publication: all 3 are good you can work on your own now. Resumed the preserved Arike master after the transfer blocker; no new generation, resizing or recompression.",
   "generation_id": "76ea800d-0180-4681-8b50-cdfb6aced699",
   "sha256": "990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009",
   "bytes": 1757003,
-  "dimensions": [
-    1226,
-    1283
-  ],
+  "dimensions": [1226,1283],
   "format": "PNG",
   "master_drive_file_id": "1Xm4c1TjqQsFHm3v-8vUMDJRdNVFL6a1W",
   "master_filename": "FCB-552-arike-ogunbowale-990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "path": "images/players/arike-ogunbowale/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "f6ffef2ef8affc5981f6dc721c1e3ff881fb1bd5"
+  "github_blob_sha": "f6ffef2ef8affc5981f6dc721c1e3ff881fb1bd5",
+  "upload_request_commit": "13546b4c847f840ccd1feeba12fdd74967cd8fdd",
+  "upload_commit": "07ee9c7060daf68dfced87a913d9cdbed97b6f14",
+  "upload_run_id": 35191669179,
+  "live_verified": true,
+  "verification": {
+    "workflow_run_id": 35191684655,
+    "artifact_id": 10484301889,
+    "artifact_name": "portrait-live-verification",
+    "result": "passed",
+    "all_portrait_checks": 72,
+    "player_specific_checks": 6,
+    "engines": ["chromium","webkit"],
+    "viewports": [[1365,850],[390,844],[320,568]],
+    "exact_original_hash_matches_live_bytes": true,
+    "natural_dimensions": [1226,1283],
+    "image_count": 1,
+    "source_and_desktop_and_390px_screenshots_inspected": true,
+    "fresh_public_page_fetch_matches": true,
+    "live_url": "https://fullcourtbuckets.com/wnba/arike-ogunbowale/?v=990fc4f727d3",
+    "template_changed": false,
+    "note": "Compact layout preserved. Surname wraps at the existing mobile breakpoint without page overflow. The whole stats strip fits at desktop and 390x844, but not at 320x568. Do not claim all viewports keep statistics above the fold."
+  },
+  "transfer_recovery": {
+    "prior_failed_run_id": 35188175814,
+    "method": "Fetched the preserved original from connected Drive into the active runtime, checked its exact hash and decoding, then used the documented temporary Docs insertInlineImage handoff with that actual local path in image_uris. SourceUri was accepted by the existing uploader. Temporary Doc deleted after confirmed transfer; master retained.",
+    "github_write_succeeded": true,
+    "permissions_changed": false,
+    "recovery_verified_in_interactive_session": true,
+    "subsequent_scheduled_transfer_verified": false
+  }
 }
