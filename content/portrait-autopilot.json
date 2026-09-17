@@ -142,6 +142,34 @@
       ],
       "live_verified":false,
       "do_not_regenerate":true
+    },
+    {
+      "player_id":373,
+      "slug":"alyssa-thomas",
+      "player_name":"Alyssa Thomas",
+      "status":"approved_original_preserved_publication_blocked",
+      "selected_source_attempt":2,
+      "generation_id":"9140f04e-c4a5-440f-8f18-13eea45fa537",
+      "source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687",
+      "source_bytes":1528699,
+      "dimensions":[1254,1254],
+      "format":"PNG",
+      "mode":"RGBA",
+      "alpha_extrema":[0,255],
+      "master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F",
+      "master_filename":"FCB-373-alyssa-thomas-26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687.png",
+      "destination":"images/players/alyssa-thomas/portrait.png",
+      "identity_mapping":"content/portrait-generation-maps/373-alyssa-thomas-20260917T1507Z.json",
+      "attempts":[
+        {"attempt":1,"generation_id":"9726648e-ffba-4199-803e-6ba8fc62649d","disposition":"rejected_generic_glam_likeness"},
+        {"attempt":2,"generation_id":"9140f04e-c4a5-440f-8f18-13eea45fa537","sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","bytes":1528699,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F","disposition":"selected_for_publication"}
+      ],
+      "publication_attempts":[
+        {"method":"fresh generated local PNG + temporary native Doc local image_uris","temp_doc_id":"16ziu05IUMUVAq2UxMFj5-s07F6lupKvBIWxZt2txF0k","result":"BLOCKED_FILE_REFERENCE"},
+        {"method":"exact master Files Google Drive upload + Google_Drive.fetch rematerialization + fresh native Doc local image_uris","temp_doc_id":"15parOkaaCKpopDO1jIvPp6W-QQ-uPqJRcEU_JvJXhu4","result":"BLOCKED_FILE_REFERENCE"}
+      ],
+      "live_verified":false,
+      "do_not_regenerate":true
     }
   ],
   "parked": [
@@ -151,7 +179,8 @@
     {"player_id":498,"slug":"allisha-gray","player_name":"Allisha Gray","reason":"Two allowed full-resolution generations passed technical checks but not the recognizable-player likeness gate. Neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"17146f19-2a0d-4237-b62e-52ce25b6a4f2","sha256":"5da114b236e8bfa7cdfc1a489dc5f79a855250b0ced3513374fe09187ee86c75","bytes":1878847,"dimensions":[1300,1210],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1Zl1iXpCgRCzT_n_imFeGaQP95qzMepmb","disposition":"rejected_generic_wrong_likeness"},{"attempt":2,"generation_id":"2863f1e4-7204-4778-924f-734f7b2e71c8","sha256":"df432639ffa0c73c4a127c3c746632f2d40f6ecdc50a2f8ea6141f5a860bce4e","bytes":1812756,"dimensions":[1304,1206],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1eS7N3g90H78AoN18k006N9v5ozbPbUs5","disposition":"rejected_unverified_generic_likeness"}],"live_page_changed":false},
     {"player_id":750,"slug":"aaliyah-nye","player_name":"Aaliyah Nye","reason":"Two allowed generations passed file checks but not the recognizable-likeness gate because hair/identity mismatched. Neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"ed0291d6-6521-4a10-904d-c1d5ce8f737f","sha256":"743b653859b367a4e180a1ef9db3ee8420086c2580a4eff83ce433e3784e3188","bytes":1733737,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1HPIAOmsUaATDTTuJMiCLqS0EmKIH4Ko8","disposition":"rejected_likeness_hair_mismatch"},{"attempt":2,"generation_id":"e44bb384-1b8e-4b77-9069-abe1427da103","sha256":"f704db21a725dac412176a72b83f2d298f3f98e80b6cdf5da3d0b59a58c90ddd","bytes":1883083,"dimensions":[1136,1385],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"12ezK-g6gKA8YC1R745JE9iwjEWrvw0gI","disposition":"rejected_likeness_hair_mismatch"}],"live_page_changed":false},
     {"player_id":556,"slug":"alanna-smith","player_name":"Alanna Smith","reason":"Both allowed generations returned the wrong subject identity and were not published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"f0f045f6-b724-4d5b-b5e9-6f0e9a8e962a","sha256":"e0fe5f48f46e8f35cb9b33c197f16baa4e07fd3e28bc3b0b41e7eed98c31a8b8","bytes":1945454,"dimensions":[1150,1367],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1LmI9QBLWZiUB4b046tdpKm8-OuL2nGAk","disposition":"rejected_wrong_subject"},{"attempt":2,"generation_id":"b9b8d9fe-c083-4936-afa4-1dd7af4decab","sha256":"79b1da4cc4c33cb4eb1500db645105df5ae6a5d7bf35d9222f2e6cf65c8a4f34","bytes":2004085,"dimensions":[1136,1384],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1a23DeIetMtLT8x0R2LrKY4rc8AKhcnBZ","disposition":"rejected_wrong_subject"}],"live_page_changed":false},
-    {"player_id":245094,"slug":"alicia-florez-245094","player_name":"Alicia Florez","reason":"Two allowed generations passed PNG/RGBA/transparency/native-resolution checks but converged on the same generic face rather than a confidently recognizable Alicia Florez likeness. Both rejected originals were preserved in connected Drive and neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"f38b5edd-4ee7-4d60-bedb-dec2bb5e47e3","sha256":"dfbc664ee08a6ef3e3e613e78dc8fb45bde63347b04b286ec66136b35eefbece","bytes":1781456,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1LppfX8f1xKCEjWWxMpdy00ctz33Dstno","disposition":"rejected_generic_likeness"},{"attempt":2,"generation_id":"9b310912-d50a-4a6a-b6e9-5672a41f0a6a","sha256":"2ea23b4189b42eb2e18b47baad6461c115c067d109845da201181c4fff18b65f","bytes":1639390,"dimensions":[1270,1239],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1GatKgPjIn_TznjvBA0eXJ3maolAj3EpZ","disposition":"rejected_near_duplicate_generic_likeness"}],"live_page_changed":false}
+    {"player_id":245094,"slug":"alicia-florez-245094","player_name":"Alicia Florez","reason":"Two allowed generations passed PNG/RGBA/transparency/native-resolution checks but converged on the same generic face rather than a confidently recognizable Alicia Florez likeness. Both rejected originals were preserved in connected Drive and neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"f38b5edd-4ee7-4d60-bedb-dec2bb5e47e3","sha256":"dfbc664ee08a6ef3e3e613e78dc8fb45bde63347b04b286ec66136b35eefbece","bytes":1781456,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1LppfX8f1xKCEjWWxMpdy00ctz33Dstno","disposition":"rejected_generic_likeness"},{"attempt":2,"generation_id":"9b310912-d50a-4a6a-b6e9-5672a41f0a6a","sha256":"2ea23b4189b42eb2e18b47baad6461c115c067d109845da201181c4fff18b65f","bytes":1639390,"dimensions":[1270,1239],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1GatKgPjIn_TznjvBA0eXJ3maolAj3EpZ","disposition":"rejected_near_duplicate_generic_likeness"}],"live_page_changed":false},
+    {"player_id":783,"slug":"amy-okonkwo","player_name":"Amy Okonkwo","reason":"Two allowed full-resolution attempts passed PNG/RGBA/transparency/native-resolution and anatomy checks but remained too generic to confidently publish as Amy Okonkwo. Both exact originals were preserved in connected Google Drive and neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"e53db911-b65d-4bc7-aad3-00780052967e","sha256":"8bd27f722c71bbf401d0ff803a0a7d14b27331dede2ccbdae5cc832e572730de","bytes":1763396,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1opAo1Ehb4Vgx15VoQHnuWCELvs9cxlgK","disposition":"rejected_generic_likeness"},{"attempt":2,"generation_id":"3b2dd4f2-b50a-4e5f-9169-428bb6f7ad62","sha256":"b812e056700aa4a31a753a99bc543b15e32afc60667e145b8d040144de1df3fd","bytes":1636150,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"14c0PjoERzbYty8LXJ3HB2gTzTmnFfqvP","disposition":"rejected_unverified_generic_likeness"}],"live_page_changed":false}
   ],
   "verification_summary": {
     "player_specific_checks":36,
@@ -161,7 +190,7 @@
     "desktop_and_390px_screenshots_inspected_for_each":true,
     "template_changed":false,
     "originals_resized_or_recompressed":false,
-    "note":"Six full-quality portraits remain newly verified since renewed authorization. This run reconciled Sabrina Ionescu as an already-published full-quality portrait using her existing exact-hash Chromium/WebKit verification artifact; this did not increment the post-authorization newly-verified counter. Aicha Coulibaly's preserved master was retried through fresh Drive fetch, exact-byte copy, Files materialization, fresh Docs and an alternate Slides handoff; connector egress still returned BLOCKED_FILE_REFERENCE and her live page was left intact. Alysha Clark (permanent ID 311) was selected from current provider data, generated in one one-person call, passed PNG/RGBA/native-alpha/native-resolution and anatomy/layout checks, and the exact original was preserved in connected Drive. Alysha's fresh Doc handoff also hit BLOCKED_FILE_REFERENCE, so no unverified image was published."
+    "note":"Six full-quality portraits remain newly verified since renewed authorization. No new live verification completed in this run. Aicha Coulibaly's exact preserved master was retried from connected Drive and again hit connector BLOCKED_FILE_REFERENCE without changing her live page. Alyssa Thomas (ID 373) was generated in two one-person calls; the first generic/glam attempt was rejected and the second 1254x1254 RGBA PNG was selected, exact-byte preserved in connected Google Drive, but both direct and Drive-rematerialized temporary-Doc handoffs returned BLOCKED_FILE_REFERENCE. Amy Okonkwo (ID 783) received two technically valid full-resolution attempts; both were parked for insufficient recognizable likeness and preserved in Drive."
   },
   "blocked": [],
   "resolved_blockers": [
@@ -173,18 +202,19 @@
     {"player_id":67023,"slug":"aicha-coulibaly","action":"retry_preserved_master_publication_only"},
     {"player_id":525,"slug":"azura-stevens","action":"retry_preserved_master_publication_only"},
     {"player_id":419,"slug":"betnijah-laney-hamilton","action":"retry_preserved_master_publication_only"},
-    {"player_id":311,"slug":"alysha-clark","action":"retry_preserved_master_publication_only"}
+    {"player_id":311,"slug":"alysha-clark","action":"retry_preserved_master_publication_only"},
+    {"player_id":373,"slug":"alyssa-thomas","action":"retry_preserved_master_publication_only"}
   ],
-  "do_not_regenerate":["caitlin-clark","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aja-wilson","sabrina-ionescu","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark"],
+  "do_not_regenerate":["caitlin-clark","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aja-wilson","sabrina-ionescu","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas"],
   "last_run": {
-    "timestamp_utc":"2026-09-17T14:16:00Z",
+    "timestamp_utc":"2026-09-17T15:20:00Z",
     "players_touched":[
-      {"player_id":67023,"slug":"aicha-coulibaly","result":"preserved_master_retried_multiple_authorized_handoffs_blocked","source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","live_page_changed":false},
-      {"player_id":311,"slug":"alysha-clark","result":"selected_full_quality_master_preserved_publication_handoff_blocked","source_sha256":"df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d","master_drive_file_id":"1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi","mapping":"content/portrait-generation-maps/311-alysha-clark-20260917T1406Z.json","live_page_changed":false},
-      {"player_id":591,"slug":"sabrina-ionescu","result":"reconciled_preexisting_full_quality_live_verified","source_sha256":"46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104","publication_run_id":35164206510,"evidence_artifact_id":10473888869}
+      {"player_id":67023,"slug":"aicha-coulibaly","result":"preserved_master_retried_current_runtime_handoff_blocked","source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","live_page_changed":false},
+      {"player_id":373,"slug":"alyssa-thomas","result":"selected_full_quality_master_preserved_publication_handoff_blocked","source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F","mapping":"content/portrait-generation-maps/373-alyssa-thomas-20260917T1507Z.json","live_page_changed":false},
+      {"player_id":783,"slug":"amy-okonkwo","result":"two_full_resolution_attempts_parked_likeness_gate","mapping":"content/portrait-generation-maps/783-amy-okonkwo-20260917T1517Z.json","live_page_changed":false}
     ],
     "newly_verified":0,
     "owner_notification_due":false
   },
-  "scope_note":"Autonomous authorization remains valid and the rollout stays active. Exact-byte connector handoff is still blocking publication of preserved pending masters, but the overall queue is not paused. This run preserved Alysha Clark's selected 1254x1254 RGBA master in connected Drive and reconciled Sabrina Ionescu's already-live exact-hash 1254x1254 portrait. Continue other eligible players in later runs while periodically retrying preserved Aicha Coulibaly, Azura Stevens, Betnijah Laney-Hamilton and Alysha Clark masters. Sports data and the approved shared layout remain unchanged."
+  "scope_note":"Autonomous authorization remains valid and the rollout stays active. Exact-byte connector handoff remains the publication bottleneck for preserved pending masters, so the queue was not paused: Aicha Coulibaly was retried, Alyssa Thomas now has a selected 1254x1254 RGBA original preserved in connected Google Drive for later publication, and Amy Okonkwo was parked after two insufficient-likeness attempts with both originals preserved. Sports data and the approved shared layout remain unchanged."
 }
