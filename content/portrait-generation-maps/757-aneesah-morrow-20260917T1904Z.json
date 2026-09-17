@@ -3,7 +3,7 @@
   "player_name": "Aneesah Morrow",
   "slug": "aneesah-morrow",
   "destination": "images/players/aneesah-morrow/portrait.png",
-  "stage": "identity_mapping_before_generation",
+  "stage": "generated_transport_blocked",
   "source": "data/wnba/players/aneesah-morrow.json",
   "active_in_provider_feed": true,
   "worker": "portrait-rollout",
@@ -11,5 +11,24 @@
   "lease_expires_at": "2026-09-17T20:34:41Z",
   "owner_delegated_publication": true,
   "new_generation_minimum": [1024, 1024],
-  "artwork_requirements": "Exactly one recognizable Aneesah Morrow portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup."
+  "artwork_requirements": "Exactly one recognizable Aneesah Morrow portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup.",
+  "generation_id": "54c74ba2-4250-4651-b072-08b33101e565",
+  "source_sha256": "918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad",
+  "source_bytes": 1768281,
+  "dimensions": [1285, 1224],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "quality_review": {
+    "format_ok": true,
+    "resolution_ok": true,
+    "transparency_ok": true,
+    "anatomy_ok": true,
+    "single_subject_ok": true,
+    "uniform_brief_ok": true
+  },
+  "drive_master_file_id": null,
+  "publication_status": "not_uploaded",
+  "incident": "content/portrait-recovery-incidents/aneesah-morrow.json",
+  "public_page_changed": false
 }
