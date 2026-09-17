@@ -5,9 +5,9 @@
   "stage": "drive_master_preservation",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "error_message": "Google Drive rejected the generated portrait file reference because the file is unavailable for connector egress.",
-  "attempt_count": 1,
+  "attempt_count": 2,
   "first_seen_at": "2026-09-17T19:04:41Z",
-  "last_attempt_at": "2026-09-17T19:04:41Z",
+  "last_attempt_at": "2026-09-17T20:03:30Z",
   "next_retry_at": null,
   "preserved_master_id": null,
   "source_sha256": "918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad",
@@ -21,8 +21,8 @@
   "affected_live_page": "https://fullcourtbuckets.com/wnba/aneesah-morrow/",
   "public_page_impact": "No website file changed; no replacement was uploaded or published.",
   "resolution_status": "blocked_security_egress_waiting_capability_change",
-  "recovery_action": "Stopped the denied connector-egress operation. Did not rename/copy/rehost/rewrite URLs/use another endpoint or reduce quality. Preserve the generated source mapping and retry only after the connector allows this exact file reference to egress through an authorized route.",
-  "notified_status": "reported_once_in_detecting_run",
+  "recovery_action": "Stopped the denied connector-egress operation. Did not rename/copy/rehost/rewrite URLs/use another endpoint or reduce quality. A single later capability check using the exact same generated file reference returned the same BLOCKED_FILE_REFERENCE, so no further retry or new generation was attempted in that run.",
+  "notified_status": "reported_once_in_detecting_run_no_duplicate_retry_alert",
   "help_needed": false,
-  "notes": "This BLOCKED_FILE_REFERENCE explicitly states that the generated file is unavailable for connector egress, so PORTRAIT_RECOVERY.md treats it as a binding access/security boundary rather than an ordinary stale file reference. Do not generate additional unsent portraits solely to work around this denial."
+  "notes": "This BLOCKED_FILE_REFERENCE explicitly states that the generated file is unavailable for connector egress, so PORTRAIT_RECOVERY.md treats it as a binding access/security boundary rather than an ordinary stale file reference. The exact local source was revalidated before the capability check: SHA256, PNG/RGBA, 1285x1224 dimensions and alpha extrema all matched the incident record. Do not generate additional unsent portraits solely to work around this denial."
 }
