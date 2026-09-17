@@ -8,15 +8,18 @@
   "generation_id": "6b8994d1-4124-4278-a4f4-21c9a1b370d7",
   "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
   "bytes": 1913622,
-  "dimensions": [
-    1254,
-    1254
-  ],
+  "dimensions": [1254, 1254],
   "format": "PNG",
   "master_drive_file_id": "1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
   "master_filename": "FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "path": "images/players/aicha-coulibaly/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "ff1d20fd0bf741127c1427f175c19b408c45a534"
+  "github_blob_sha": "ff1d20fd0bf741127c1427f175c19b408c45a534",
+  "live_verified": true,
+  "upload_run_id": 35247128428,
+  "publication_run_id": 35247147335,
+  "evidence_artifact_id": 10508232314,
+  "live_url": "https://fullcourtbuckets.com/wnba/aicha-coulibaly/?v=655bd92245c7",
+  "live_asset_sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a"
 }
