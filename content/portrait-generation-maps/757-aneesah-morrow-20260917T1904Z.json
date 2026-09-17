@@ -1,0 +1,15 @@
+{
+  "player_id": 757,
+  "player_name": "Aneesah Morrow",
+  "slug": "aneesah-morrow",
+  "destination": "images/players/aneesah-morrow/portrait.png",
+  "stage": "identity_mapping_before_generation",
+  "source": "data/wnba/players/aneesah-morrow.json",
+  "active_in_provider_feed": true,
+  "worker": "portrait-rollout",
+  "claimed_at": "2026-09-17T19:04:41Z",
+  "lease_expires_at": "2026-09-17T20:34:41Z",
+  "owner_delegated_publication": true,
+  "new_generation_minimum": [1024, 1024],
+  "artwork_requirements": "Exactly one recognizable Aneesah Morrow portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup."
+}
