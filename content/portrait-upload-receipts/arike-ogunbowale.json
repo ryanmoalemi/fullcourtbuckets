@@ -1,0 +1,22 @@
+{
+  "request_id": "552-990fc4f727d3-recovered-handoff-20260917T0650Z",
+  "player_id": 552,
+  "player_name": "Arike Ogunbowale",
+  "slug": "arike-ogunbowale",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication: all 3 are good you can work on your own now. Resume the existing preserved Arike master after the transfer blocker; no new generation, resizing or recompression.",
+  "generation_id": "76ea800d-0180-4681-8b50-cdfb6aced699",
+  "sha256": "990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009",
+  "bytes": 1757003,
+  "dimensions": [
+    1226,
+    1283
+  ],
+  "format": "PNG",
+  "master_drive_file_id": "1Xm4c1TjqQsFHm3v-8vUMDJRdNVFL6a1W",
+  "master_filename": "FCB-552-arike-ogunbowale-990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/arike-ogunbowale/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "f6ffef2ef8affc5981f6dc721c1e3ff881fb1bd5"
+}
