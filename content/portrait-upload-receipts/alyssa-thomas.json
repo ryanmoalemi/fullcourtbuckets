@@ -8,15 +8,18 @@
   "generation_id": "9140f04e-c4a5-440f-8f18-13eea45fa537",
   "sha256": "26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687",
   "bytes": 1528699,
-  "dimensions": [
-    1254,
-    1254
-  ],
+  "dimensions": [1254, 1254],
   "format": "PNG",
   "master_drive_file_id": "15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F",
   "master_filename": "FCB-373-alyssa-thomas-26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "path": "images/players/alyssa-thomas/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "72145b8bac4a2440b981ce3f6784505920728c19"
+  "github_blob_sha": "72145b8bac4a2440b981ce3f6784505920728c19",
+  "live_verified": true,
+  "upload_run_id": 35248495385,
+  "publication_run_id": 35248517582,
+  "evidence_artifact_id": 10508274577,
+  "live_url": "https://fullcourtbuckets.com/wnba/alyssa-thomas/?v=26c0471eb6c1",
+  "live_asset_sha256": "26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687"
 }
