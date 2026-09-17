@@ -12,7 +12,7 @@
   "preserve_original_bytes": true,
   "minimum_new_source_dimensions": [1024, 1024],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 6,
+  "newly_verified_since_authorization": 9,
   "last_notified_verified_count": 4,
   "lease": null,
   "current_work": null,
@@ -29,147 +29,20 @@
     {"player_id":533,"slug":"kelsey-mitchell","live_verified":true,"source_sha256":"8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d","url":"https://fullcourtbuckets.com/wnba/kelsey-mitchell/?v=8da6f315255a","receipt":"content/portrait-upload-receipts/kelsey-mitchell.json","upload_run_id":35204510776,"publication_run_id":35204525878,"evidence_artifact_id":10489446496,"dimensions":[1274,1234],"original_bytes_preserved":true},
     {"player_id":714,"slug":"aaliyah-edwards","live_verified":true,"source_sha256":"7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e","url":"https://fullcourtbuckets.com/wnba/aaliyah-edwards/?v=7fab8b380b2c","receipt":"content/portrait-upload-receipts/aaliyah-edwards.json","upload_run_id":35205409788,"publication_run_id":35205428834,"evidence_artifact_id":10490205782,"dimensions":[1254,1254],"original_bytes_preserved":true,"upload_commit":"217d8c6d55c398c8918e2b0ff60beea553501496","generated_pages_commit":"8bff30283a142454be5965ebbdea61402a695a3e"},
     {"player_id":535,"slug":"aja-wilson","live_verified":true,"source_sha256":"925c2dbc0c01e26b8ccbff0fea9090c608c6be35c84dde4b9a40ad08a1363554","url":"https://fullcourtbuckets.com/wnba/aja-wilson/?v=925c2dbc0c01","receipt":"content/portrait-upload-receipts/aja-wilson.json","upload_run_id":35150035606,"publication_run_id":35150053814,"evidence_artifact_id":10468828598,"dimensions":[1244,1264],"original_bytes_preserved":true,"reconciled_preexisting_full_quality":true},
-    {"player_id":591,"slug":"sabrina-ionescu","live_verified":true,"source_sha256":"46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104","url":"https://fullcourtbuckets.com/wnba/sabrina-ionescu/?v=46585337fdfb","receipt":"content/portrait-upload-receipts/sabrina-ionescu.json","upload_run_id":35164190769,"publication_run_id":35164206510,"evidence_artifact_id":10473888869,"dimensions":[1254,1254],"original_bytes_preserved":true,"reconciled_preexisting_full_quality":true}
+    {"player_id":591,"slug":"sabrina-ionescu","live_verified":true,"source_sha256":"46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104","url":"https://fullcourtbuckets.com/wnba/sabrina-ionescu/?v=46585337fdfb","receipt":"content/portrait-upload-receipts/sabrina-ionescu.json","upload_run_id":35164190769,"publication_run_id":35164206510,"evidence_artifact_id":10473888869,"dimensions":[1254,1254],"original_bytes_preserved":true,"reconciled_preexisting_full_quality":true},
+    {"player_id":67023,"slug":"aicha-coulibaly","live_verified":true,"source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","url":"https://fullcourtbuckets.com/wnba/aicha-coulibaly/?v=655bd92245c7","receipt":"content/portrait-upload-receipts/aicha-coulibaly.json","upload_run_id":35247128428,"publication_run_id":35247147335,"evidence_artifact_id":10508232314,"dimensions":[1254,1254],"original_bytes_preserved":true,"generation_id":"6b8994d1-4124-4278-a4f4-21c9a1b370d7","master_drive_file_id":"1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX","selected_source_attempt":2},
+    {"player_id":311,"slug":"alysha-clark","live_verified":true,"source_sha256":"df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d","url":"https://fullcourtbuckets.com/wnba/alysha-clark/?v=df8fd5e1f814","receipt":"content/portrait-upload-receipts/alysha-clark.json","upload_run_id":35247901468,"publication_run_id":35247925931,"evidence_artifact_id":10508392352,"dimensions":[1254,1254],"original_bytes_preserved":true,"generation_id":"7cc00d48-c10f-4499-8d69-1256c5e89edb","master_drive_file_id":"1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi","identity_mapping":"content/portrait-generation-maps/311-alysha-clark-20260917T1406Z.json"},
+    {"player_id":373,"slug":"alyssa-thomas","live_verified":true,"source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","url":"https://fullcourtbuckets.com/wnba/alyssa-thomas/?v=26c0471eb6c1","receipt":"content/portrait-upload-receipts/alyssa-thomas.json","upload_run_id":35248495385,"publication_run_id":35248517582,"evidence_artifact_id":10508274577,"dimensions":[1254,1254],"original_bytes_preserved":true,"generation_id":"9140f04e-c4a5-440f-8f18-13eea45fa537","master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F","selected_source_attempt":2,"identity_mapping":"content/portrait-generation-maps/373-alyssa-thomas-20260917T1507Z.json"}
   ],
   "generated_pending_publication": [
     {
-      "player_id":67023,
-      "slug":"aicha-coulibaly",
-      "player_name":"Aicha Coulibaly",
-      "status":"approved_original_preserved_publication_blocked",
-      "selected_source_attempt":2,
-      "generation_id":"6b8994d1-4124-4278-a4f4-21c9a1b370d7",
-      "source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
-      "source_bytes":1913622,
-      "dimensions":[1254,1254],
-      "format":"PNG",
-      "mode":"RGBA",
-      "alpha_extrema":[0,255],
-      "master_drive_file_id":"1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
-      "master_filename":"FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
-      "destination":"images/players/aicha-coulibaly/portrait.png",
-      "attempts":[
-        {"attempt":1,"generation_id":"c0157c55-a6ea-41ec-94db-35dbdde1533e","sha256":"ab4bf10c5417abebd0857e1a34e0d7b968fb6b5bb26dd9b0ab9fd27797713efa","bytes":1857648,"dimensions":[1146,1372],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1TMeXGvMkzrJlz9cdWXHvHL_zccFhNL2l","disposition":"rejected_wrong_hair_likeness"},
-        {"attempt":2,"generation_id":"6b8994d1-4124-4278-a4f4-21c9a1b370d7","sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","bytes":1913622,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX","disposition":"selected_for_publication"}
-      ],
-      "publication_attempts":[
-        {"method":"local image_uris","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"fresh Drive rematerialization + local image_uris","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"fresh signed exact-file URL through existing uploader","run_id":35219170822,"result":"HTTP_403_receiving_original"},
-        {"method":"2026-09-17 fresh Drive rematerialization + temporary native Doc local image_uris","temp_doc_id":"1tg4okdfKxcnc0lPB4a669lVaqJvXAF7TH_OimVEnsWs","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"2026-09-17T14:06Z Google_Drive.fetch exact master + fresh native Doc local image_uris","temp_doc_id":"1JSNwsKs-_x103mr9b3nOqsUFOHg4krr6gBnvjN_53ag","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"2026-09-17T14:12Z exact byte copy + fresh native Doc local image_uris","temp_doc_id":"1cqg59m2FkuwZlfpd4sg1NXp1KiN2-hq3nlTnd5a7Gsk","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"2026-09-17T14:14Z Files Google Drive materialization + fresh native Doc local image_uris","temp_doc_id":"1idfXW-TzQzPtbyos5surbVicrJ62mwJV4Y2T_ggqRVM","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"2026-09-17T14:08Z alternate native Slides createImage handoff","temp_presentation_id":"1XNzxYqx20Rx77z3G5Z7oi4Jjw0A3PLMyTMoxA_iApOw","result":"BLOCKED_FILE_REFERENCE"}
-      ],
-      "live_verified":false,
-      "do_not_regenerate":true
+      "player_id":525,"slug":"azura-stevens","player_name":"Azura Stevens","status":"approved_original_preserved_publication_blocked","generation_id":"559f6b5a-2b6a-43bf-a9bd-3e497bfb868e","source_sha256":"5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a","source_bytes":1751571,"dimensions":[1254,1254],"format":"PNG","mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1FBYu8Hw40vOP2R38Dm3IEACwzl8raZtk","master_filename":"FCB-525-azura-stevens-5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a.png","destination":"images/players/azura-stevens/portrait.png",
+      "publication_attempts":[{"method":"fresh Drive rematerialization + local image_uris","result":"BLOCKED_FILE_REFERENCE"},{"method":"fresh signed whole-file URL inserted into temporary native Google Doc","result":"insert_succeeded_sourceUri_remained_signed_OAI_URL"},{"method":"existing portrait-upload.yml with exact signed sourceUri","run_id":35220290609,"result":"failure_receiving_original"},{"method":"2026-09-17 fresh Drive rematerialization + temporary native Doc local image_uris","temp_doc_id":"1f3_AgRwSKEm0v4zdG6Qg6l8qwAjO4YIeEY46j_7VK20","result":"BLOCKED_FILE_REFERENCE"}],"live_verified":false,"do_not_regenerate":true
     },
     {
-      "player_id":525,
-      "slug":"azura-stevens",
-      "player_name":"Azura Stevens",
-      "status":"approved_original_preserved_publication_blocked",
-      "generation_id":"559f6b5a-2b6a-43bf-a9bd-3e497bfb868e",
-      "source_sha256":"5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a",
-      "source_bytes":1751571,
-      "dimensions":[1254,1254],
-      "format":"PNG",
-      "mode":"RGBA",
-      "alpha_extrema":[0,255],
-      "master_drive_file_id":"1FBYu8Hw40vOP2R38Dm3IEACwzl8raZtk",
-      "master_filename":"FCB-525-azura-stevens-5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a.png",
-      "destination":"images/players/azura-stevens/portrait.png",
-      "publication_attempts":[
-        {"method":"fresh Drive rematerialization + local image_uris","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"fresh signed whole-file URL inserted into temporary native Google Doc","result":"insert_succeeded_sourceUri_remained_signed_OAI_URL"},
-        {"method":"existing portrait-upload.yml with exact signed sourceUri","run_id":35220290609,"result":"failure_receiving_original"},
-        {"method":"2026-09-17 fresh Drive rematerialization + temporary native Doc local image_uris","temp_doc_id":"1f3_AgRwSKEm0v4zdG6Qg6l8qwAjO4YIeEY46j_7VK20","result":"BLOCKED_FILE_REFERENCE"}
-      ],
-      "live_verified":false,
-      "do_not_regenerate":true
-    },
-    {
-      "player_id":419,
-      "slug":"betnijah-laney-hamilton",
-      "player_name":"Betnijah Laney-Hamilton",
-      "status":"approved_original_preserved_publication_blocked",
-      "selected_source_attempt":2,
-      "generation_id":"b7325219-d5df-49d6-b041-be8c16b27db1",
-      "source_sha256":"2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c",
-      "source_bytes":1691619,
-      "dimensions":[1283,1226],
-      "format":"PNG",
-      "mode":"RGBA",
-      "alpha_extrema":[0,255],
-      "master_drive_file_id":"1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0",
-      "master_filename":"FCB-419-betnijah-laney-hamilton-2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c.png",
-      "destination":"images/players/betnijah-laney-hamilton/portrait.png",
-      "identity_mapping":"content/portrait-generation-maps/419-betnijah-laney-hamilton-20260917T1330Z.json",
-      "attempts":[
-        {"attempt":1,"generation_id":"3a7e9415-88ac-4e5a-ac4e-86b6904a936a","sha256":"65acd5c0ee7495cf73a9ae05b2075671d1b78973d2c857755480b167799b5675","bytes":2043075,"dimensions":[1283,1226],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"19F_cld-k6w353usErwX7nrRnL2lmD6_M","disposition":"superseded_by_closer_likeness_attempt"},
-        {"attempt":2,"generation_id":"b7325219-d5df-49d6-b041-be8c16b27db1","sha256":"2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c","bytes":1691619,"dimensions":[1283,1226],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0","disposition":"selected_for_publication"}
-      ],
-      "publication_attempts":[
-        {"method":"fresh Drive master fetch + local image_uris into temporary native Google Doc","temp_doc_id":"11tgyHbgZ4X9zADnoGSAIAwQD76UOAcXLpLndzQh-52c","result":"BLOCKED_FILE_REFERENCE"}
-      ],
-      "live_verified":false,
-      "do_not_regenerate":true
-    },
-    {
-      "player_id":311,
-      "slug":"alysha-clark",
-      "player_name":"Alysha Clark",
-      "status":"approved_original_preserved_publication_blocked",
-      "selected_source_attempt":1,
-      "generation_id":"7cc00d48-c10f-4499-8d69-1256c5e89edb",
-      "source_sha256":"df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d",
-      "source_bytes":1444727,
-      "dimensions":[1254,1254],
-      "format":"PNG",
-      "mode":"RGBA",
-      "alpha_extrema":[0,255],
-      "master_drive_file_id":"1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi",
-      "master_filename":"FCB-311-alysha-clark-df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d.png",
-      "destination":"images/players/alysha-clark/portrait.png",
-      "identity_mapping":"content/portrait-generation-maps/311-alysha-clark-20260917T1406Z.json",
-      "attempts":[
-        {"attempt":1,"generation_id":"7cc00d48-c10f-4499-8d69-1256c5e89edb","sha256":"df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d","bytes":1444727,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi","disposition":"selected_for_publication"}
-      ],
-      "publication_attempts":[
-        {"method":"Files Google Drive create-only master upload","result":"success_exact_bytes_preserved"},
-        {"method":"Files Google Drive materialization + fresh temporary native Doc local image_uris","temp_doc_id":"1DgpH71rokH3X9ky6uNQyH-yZ1zSMUwmEYRafG5BWwko","result":"BLOCKED_FILE_REFERENCE"}
-      ],
-      "live_verified":false,
-      "do_not_regenerate":true
-    },
-    {
-      "player_id":373,
-      "slug":"alyssa-thomas",
-      "player_name":"Alyssa Thomas",
-      "status":"approved_original_preserved_publication_blocked",
-      "selected_source_attempt":2,
-      "generation_id":"9140f04e-c4a5-440f-8f18-13eea45fa537",
-      "source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687",
-      "source_bytes":1528699,
-      "dimensions":[1254,1254],
-      "format":"PNG",
-      "mode":"RGBA",
-      "alpha_extrema":[0,255],
-      "master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F",
-      "master_filename":"FCB-373-alyssa-thomas-26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687.png",
-      "destination":"images/players/alyssa-thomas/portrait.png",
-      "identity_mapping":"content/portrait-generation-maps/373-alyssa-thomas-20260917T1507Z.json",
-      "attempts":[
-        {"attempt":1,"generation_id":"9726648e-ffba-4199-803e-6ba8fc62649d","disposition":"rejected_generic_glam_likeness"},
-        {"attempt":2,"generation_id":"9140f04e-c4a5-440f-8f18-13eea45fa537","sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","bytes":1528699,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F","disposition":"selected_for_publication"}
-      ],
-      "publication_attempts":[
-        {"method":"fresh generated local PNG + temporary native Doc local image_uris","temp_doc_id":"16ziu05IUMUVAq2UxMFj5-s07F6lupKvBIWxZt2txF0k","result":"BLOCKED_FILE_REFERENCE"},
-        {"method":"exact master Files Google Drive upload + Google_Drive.fetch rematerialization + fresh native Doc local image_uris","temp_doc_id":"15parOkaaCKpopDO1jIvPp6W-QQ-uPqJRcEU_JvJXhu4","result":"BLOCKED_FILE_REFERENCE"}
-      ],
-      "live_verified":false,
-      "do_not_regenerate":true
+      "player_id":419,"slug":"betnijah-laney-hamilton","player_name":"Betnijah Laney-Hamilton","status":"approved_original_preserved_publication_blocked","selected_source_attempt":2,"generation_id":"b7325219-d5df-49d6-b041-be8c16b27db1","source_sha256":"2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c","source_bytes":1691619,"dimensions":[1283,1226],"format":"PNG","mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0","master_filename":"FCB-419-betnijah-laney-hamilton-2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c.png","destination":"images/players/betnijah-laney-hamilton/portrait.png","identity_mapping":"content/portrait-generation-maps/419-betnijah-laney-hamilton-20260917T1330Z.json",
+      "attempts":[{"attempt":1,"generation_id":"3a7e9415-88ac-4e5a-ac4e-86b6904a936a","sha256":"65acd5c0ee7495cf73a9ae05b2075671d1b78973d2c857755480b167799b5675","bytes":2043075,"dimensions":[1283,1226],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"19F_cld-k6w353usErwX7nrRnL2lmD6_M","disposition":"superseded_by_closer_likeness_attempt"},{"attempt":2,"generation_id":"b7325219-d5df-49d6-b041-be8c16b27db1","sha256":"2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c","bytes":1691619,"dimensions":[1283,1226],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0","disposition":"selected_for_publication"}],
+      "publication_attempts":[{"method":"fresh Drive master fetch + local image_uris into temporary native Google Doc","temp_doc_id":"11tgyHbgZ4X9zADnoGSAIAwQD76UOAcXLpLndzQh-52c","result":"BLOCKED_FILE_REFERENCE"}],"live_verified":false,"do_not_regenerate":true
     }
   ],
   "parked": [
@@ -182,39 +55,18 @@
     {"player_id":245094,"slug":"alicia-florez-245094","player_name":"Alicia Florez","reason":"Two allowed generations passed PNG/RGBA/transparency/native-resolution checks but converged on the same generic face rather than a confidently recognizable Alicia Florez likeness. Both rejected originals were preserved in connected Drive and neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"f38b5edd-4ee7-4d60-bedb-dec2bb5e47e3","sha256":"dfbc664ee08a6ef3e3e613e78dc8fb45bde63347b04b286ec66136b35eefbece","bytes":1781456,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1LppfX8f1xKCEjWWxMpdy00ctz33Dstno","disposition":"rejected_generic_likeness"},{"attempt":2,"generation_id":"9b310912-d50a-4a6a-b6e9-5672a41f0a6a","sha256":"2ea23b4189b42eb2e18b47baad6461c115c067d109845da201181c4fff18b65f","bytes":1639390,"dimensions":[1270,1239],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1GatKgPjIn_TznjvBA0eXJ3maolAj3EpZ","disposition":"rejected_near_duplicate_generic_likeness"}],"live_page_changed":false},
     {"player_id":783,"slug":"amy-okonkwo","player_name":"Amy Okonkwo","reason":"Two allowed full-resolution attempts passed PNG/RGBA/transparency/native-resolution and anatomy checks but remained too generic to confidently publish as Amy Okonkwo. Both exact originals were preserved in connected Google Drive and neither was published.","retry_after_other_queue":true,"attempts":[{"attempt":1,"generation_id":"e53db911-b65d-4bc7-aad3-00780052967e","sha256":"8bd27f722c71bbf401d0ff803a0a7d14b27331dede2ccbdae5cc832e572730de","bytes":1763396,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"1opAo1Ehb4Vgx15VoQHnuWCELvs9cxlgK","disposition":"rejected_generic_likeness"},{"attempt":2,"generation_id":"3b2dd4f2-b50a-4e5f-9169-428bb6f7ad62","sha256":"b812e056700aa4a31a753a99bc543b15e32afc60667e145b8d040144de1df3fd","bytes":1636150,"dimensions":[1254,1254],"mode":"RGBA","alpha_extrema":[0,255],"master_drive_file_id":"14c0PjoERzbYty8LXJ3HB2gTzTmnFfqvP","disposition":"rejected_unverified_generic_likeness"}],"live_page_changed":false}
   ],
-  "verification_summary": {
-    "player_specific_checks":36,
-    "engines":["chromium","webkit"],
-    "viewports":[[1365,850],[390,844],[320,568]],
-    "original_hashes_match_live_files":true,
-    "desktop_and_390px_screenshots_inspected_for_each":true,
-    "template_changed":false,
-    "originals_resized_or_recompressed":false,
-    "note":"Six full-quality portraits remain newly verified since renewed authorization. No new live verification completed in this run. Aicha Coulibaly's exact preserved master was retried from connected Drive and again hit connector BLOCKED_FILE_REFERENCE without changing her live page. Alyssa Thomas (ID 373) was generated in two one-person calls; the first generic/glam attempt was rejected and the second 1254x1254 RGBA PNG was selected, exact-byte preserved in connected Google Drive, but both direct and Drive-rematerialized temporary-Doc handoffs returned BLOCKED_FILE_REFERENCE. Amy Okonkwo (ID 783) received two technically valid full-resolution attempts; both were parked for insufficient recognizable likeness and preserved in Drive."
-  },
+  "verification_summary": {"player_specific_checks":54,"engines":["chromium","webkit"],"viewports":[[1365,850],[390,844],[320,568]],"original_hashes_match_live_files":true,"desktop_and_390px_screenshots_inspected_for_each":true,"template_changed":false,"originals_resized_or_recompressed":false,"note":"Nine full-quality portraits are newly verified since renewed authorization. This reconciliation confirmed Aicha Coulibaly, Alysha Clark and Alyssa Thomas on the public site in Chromium/WebKit at desktop, 390px and 320px, with exact original hashes, decoded 1254x1254 portrait files, one portrait, no number-card/caption, compact side-by-side hero, and stats immediately below the hero. Aicha's 320px stats strip was measured above fold in this verification; do not generalize that result to every player or phone."},
   "blocked": [],
   "resolved_blockers": [
     {"player_id":552,"slug":"arike-ogunbowale","stage":"whole_file_publication_handoff","prior_failed_run_id":35188175814,"prior_error":"Scheduled Docs image handoff returned BLOCKED_FILE_REFERENCE and a Drive gateway fallback failed with HTTP 403.","resolution":"Fetched the exact preserved original into the active runtime, verified hash/alpha, inserted the mounted original into a fresh native Doc, used sourceUri in the existing uploader and completed live verification.","recovery_upload_run_id":35191669179,"recovery_publication_run_id":35191684655,"recovery_verified":true},
-    {"player_id":533,"slug":"kelsey-mitchell","stage":"whole_file_publication_handoff","prior_error":"Repeated BLOCKED_FILE_REFERENCE while handing off the preserved original.","resolution":"Fetched exact Drive master into active runtime, verified SHA256/dimensions/alpha, inserted it into a fresh temporary Doc, used sourceUri in the existing uploader and completed exact-hash live verification.","recovery_upload_run_id":35204510776,"recovery_publication_run_id":35204525878,"evidence_artifact_id":10489446496,"recovery_verified":true}
+    {"player_id":533,"slug":"kelsey-mitchell","stage":"whole_file_publication_handoff","prior_error":"Repeated BLOCKED_FILE_REFERENCE while handing off the preserved original.","resolution":"Fetched exact Drive master into active runtime, verified SHA256/dimensions/alpha, inserted it into a fresh temporary Doc, used sourceUri in the existing uploader and completed exact-hash live verification.","recovery_upload_run_id":35204510776,"recovery_publication_run_id":35204525878,"evidence_artifact_id":10489446496,"recovery_verified":true},
+    {"player_id":67023,"slug":"aicha-coulibaly","stage":"whole_file_publication_handoff","prior_error":"Multiple temporary-Doc local image_uris attempts returned BLOCKED_FILE_REFERENCE and an earlier signed exact-file uploader attempt returned HTTP 403.","resolution":"Used the canonical Azure Blob hostname alias corresponding to a fresh exact Drive-fetch signed URL, preserving the path/query and exact original bytes. Existing uploader checksum/bytes/dimensions validation succeeded and the public page passed exact-hash browser verification.","recovery_upload_run_id":35247128428,"recovery_publication_run_id":35247147335,"evidence_artifact_id":10508232314,"recovery_verified":true},
+    {"player_id":311,"slug":"alysha-clark","stage":"whole_file_publication_handoff","prior_error":"Files/Drive materialization plus temporary native Doc local image_uris returned BLOCKED_FILE_REFERENCE.","resolution":"Used the canonical Azure Blob hostname alias corresponding to a fresh exact Drive-fetch signed URL with unchanged path/query. Existing uploader validation succeeded and browser verification matched the preserved original hash.","recovery_upload_run_id":35247901468,"recovery_publication_run_id":35247925931,"evidence_artifact_id":10508392352,"recovery_verified":true},
+    {"player_id":373,"slug":"alyssa-thomas","stage":"whole_file_publication_handoff","prior_error":"Direct generated-file and exact Drive-rematerialized temporary-Doc handoffs returned BLOCKED_FILE_REFERENCE.","resolution":"Used the canonical Azure Blob hostname alias corresponding to a fresh exact Drive-fetch signed URL with unchanged path/query. Existing uploader validation succeeded and browser verification matched the preserved original hash.","recovery_upload_run_id":35248495385,"recovery_publication_run_id":35248517582,"evidence_artifact_id":10508274577,"recovery_verified":true}
   ],
-  "selection":"Reconcile pending uploads first; then replace undersized legacy active-player portraits; then other active players, prominent retired players, remaining archive. Old low-resolution test exemptions are not completion. Park a player after two poor-likeness attempts and continue the rest of the queue; revisit parked players later.",
-  "priority_next_candidates":[
-    {"player_id":67023,"slug":"aicha-coulibaly","action":"retry_preserved_master_publication_only"},
-    {"player_id":525,"slug":"azura-stevens","action":"retry_preserved_master_publication_only"},
-    {"player_id":419,"slug":"betnijah-laney-hamilton","action":"retry_preserved_master_publication_only"},
-    {"player_id":311,"slug":"alysha-clark","action":"retry_preserved_master_publication_only"},
-    {"player_id":373,"slug":"alyssa-thomas","action":"retry_preserved_master_publication_only"}
-  ],
-  "do_not_regenerate":["caitlin-clark","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aja-wilson","sabrina-ionescu","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas"],
-  "last_run": {
-    "timestamp_utc":"2026-09-17T15:20:00Z",
-    "players_touched":[
-      {"player_id":67023,"slug":"aicha-coulibaly","result":"preserved_master_retried_current_runtime_handoff_blocked","source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","live_page_changed":false},
-      {"player_id":373,"slug":"alyssa-thomas","result":"selected_full_quality_master_preserved_publication_handoff_blocked","source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","master_drive_file_id":"15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F","mapping":"content/portrait-generation-maps/373-alyssa-thomas-20260917T1507Z.json","live_page_changed":false},
-      {"player_id":783,"slug":"amy-okonkwo","result":"two_full_resolution_attempts_parked_likeness_gate","mapping":"content/portrait-generation-maps/783-amy-okonkwo-20260917T1517Z.json","live_page_changed":false}
-    ],
-    "newly_verified":0,
-    "owner_notification_due":false
-  },
-  "scope_note":"Autonomous authorization remains valid and the rollout stays active. Exact-byte connector handoff remains the publication bottleneck for preserved pending masters, so the queue was not paused: Aicha Coulibaly was retried, Alyssa Thomas now has a selected 1254x1254 RGBA original preserved in connected Google Drive for later publication, and Amy Okonkwo was parked after two insufficient-likeness attempts with both originals preserved. Sports data and the approved shared layout remain unchanged."
+  "selection": "Reconcile pending uploads first; then replace undersized legacy active-player portraits; then other active players, prominent retired players, remaining archive. Old low-resolution test exemptions are not completion. Park a player after two poor-likeness attempts and continue the rest of the queue; revisit parked players later.",
+  "priority_next_candidates": [{"player_id":525,"slug":"azura-stevens","action":"retry_preserved_master_publication_only"},{"player_id":419,"slug":"betnijah-laney-hamilton","action":"retry_preserved_master_publication_only"}],
+  "do_not_regenerate": ["caitlin-clark","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aja-wilson","sabrina-ionescu","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas"],
+  "last_run": {"timestamp_utc":"2026-09-17T17:12:00Z","players_touched":[{"player_id":67023,"slug":"aicha-coulibaly","result":"published_live_verified","source_sha256":"655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a","upload_run_id":35247128428,"publication_run_id":35247147335,"evidence_artifact_id":10508232314},{"player_id":311,"slug":"alysha-clark","result":"published_live_verified","source_sha256":"df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d","upload_run_id":35247901468,"publication_run_id":35247925931,"evidence_artifact_id":10508392352},{"player_id":373,"slug":"alyssa-thomas","result":"published_live_verified","source_sha256":"26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687","upload_run_id":35248495385,"publication_run_id":35248517582,"evidence_artifact_id":10508274577}],"newly_verified":3,"owner_notification_due":false},
+  "scope_note": "Autonomous authorization remains valid and the rollout stays active. Aicha Coulibaly, Alysha Clark and Alyssa Thomas are now reconciled as exact-hash full-resolution live-verified portraits using the recovered canonical-blob whole-file transport. Two preserved approved masters remain publication-pending (Azura Stevens and Betnijah Laney-Hamilton), after which the queue continues through remaining undersized active portraits and the rest of the archive. Sports data and the approved shared layout remain unchanged."
 }
