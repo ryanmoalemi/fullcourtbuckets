@@ -9,5 +9,34 @@
   "provider": "BALLDONTLIE",
   "active_in_provider_feed": true,
   "selection_reason": "Next eligible active-player queue entry after Alyssa Thomas; earlier active candidates are completed, pending-publication, or parked after allowed likeness attempts.",
-  "brief": "Exactly one recognizable Amy Okonkwo portrait. Frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+  "brief": "Exactly one recognizable Amy Okonkwo portrait. Frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "e53db911-b65d-4bc7-aad3-00780052967e",
+      "sha256": "8bd27f722c71bbf401d0ff803a0a7d14b27331dede2ccbdae5cc832e572730de",
+      "bytes": 1763396,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "drive_master_file_id": "1opAo1Ehb4Vgx15VoQHnuWCELvs9cxlgK",
+      "disposition": "rejected_generic_likeness"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "3b2dd4f2-b50a-4e5f-9169-428bb6f7ad62",
+      "sha256": "b812e056700aa4a31a753a99bc543b15e32afc60667e145b8d040144de1df3fd",
+      "bytes": 1636150,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "drive_master_file_id": "14c0PjoERzbYty8LXJ3HB2gTzTmnFfqvP",
+      "disposition": "rejected_unverified_generic_likeness"
+    }
+  ],
+  "publication_status": "not_published_likeness_gate",
+  "live_verified": false,
+  "retry_after_other_queue": true
 }
