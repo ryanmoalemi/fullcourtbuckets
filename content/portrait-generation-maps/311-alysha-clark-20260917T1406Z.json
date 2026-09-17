@@ -7,5 +7,34 @@
   "source_record": "data/wnba/players/alysha-clark.json",
   "active_in_provider_feed": true,
   "generation_policy": "exactly_one_person_per_call_full_resolution_transparent_png",
-  "status": "selected_before_generation"
+  "status": "selected_master_preserved_publication_handoff_blocked",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "7cc00d48-c10f-4499-8d69-1256c5e89edb",
+      "sha256": "df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d",
+      "bytes": 1444727,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi",
+      "master_filename": "FCB-311-alysha-clark-df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d.png",
+      "disposition": "selected_for_publication"
+    }
+  ],
+  "publication_attempts": [
+    {
+      "method": "Files Google Drive create-only master upload",
+      "result": "success_exact_bytes_preserved",
+      "master_drive_file_id": "1U9IhI6ZGBb1tfeiEh_qjxb0ex0fN9oGi"
+    },
+    {
+      "method": "Google Drive materialize + fresh temporary Doc insertInlineImage via image_uris",
+      "temp_doc_id": "1DgpH71rokH3X9ky6uNQyH-yZ1zSMUwmEYRafG5BWwko",
+      "result": "BLOCKED_FILE_REFERENCE"
+    }
+  ],
+  "live_verified": false,
+  "do_not_regenerate": true
 }
