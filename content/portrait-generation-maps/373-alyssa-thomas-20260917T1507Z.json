@@ -9,5 +9,33 @@
   "provider": "BALLDONTLIE",
   "active_in_provider_feed": true,
   "selection_reason": "Next eligible active player after retrying preserved pending publication masters; current earlier queue candidates are completed, pending-publication, or parked after likeness failures.",
-  "brief": "Exactly one recognizable Alyssa Thomas portrait. Frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+  "brief": "Exactly one recognizable Alyssa Thomas portrait. Frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "9726648e-ffba-4199-803e-6ba8fc62649d",
+      "disposition": "rejected_generic_glam_likeness"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "9140f04e-c4a5-440f-8f18-13eea45fa537",
+      "sha256": "26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687",
+      "bytes": 1528699,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "drive_master_file_id": "15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F",
+      "master_filename": "FCB-373-alyssa-thomas-26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687.png",
+      "disposition": "selected_for_publication"
+    }
+  ],
+  "selected_attempt": 2,
+  "publication_status": "blocked_connector_egress",
+  "publication_attempts": [
+    {"method": "fresh generated local PNG + temporary native Doc local image_uris", "result": "BLOCKED_FILE_REFERENCE"},
+    {"method": "exact master preserved to Google Drive via Files + Google_Drive.fetch rematerialization + fresh native Doc local image_uris", "result": "BLOCKED_FILE_REFERENCE"}
+  ],
+  "live_verified": false,
+  "do_not_regenerate": true
 }
