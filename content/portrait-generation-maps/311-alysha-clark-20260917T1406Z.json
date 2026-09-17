@@ -1,0 +1,11 @@
+{
+  "player_id": 311,
+  "player_name": "Alysha Clark",
+  "slug": "alysha-clark",
+  "destination": "images/players/alysha-clark/portrait.png",
+  "selected_at_utc": "2026-09-17T14:06:00Z",
+  "source_record": "data/wnba/players/alysha-clark.json",
+  "active_in_provider_feed": true,
+  "generation_policy": "exactly_one_person_per_call_full_resolution_transparent_png",
+  "status": "selected_before_generation"
+}
