@@ -21,5 +21,17 @@
   "owner_context": "Owner accepted Sabrina's verified live result and said Great next. This is the next portrait draft only; wait for approval before publishing.",
   "format": "Single head-and-shoulders/upper-chest illustration. Curly high bun. Plain white basketball top with black trim. Transparent background. No lettering, logos, frame or poster design.",
   "rejected_generations": ["58034276-5660-46c5-991d-9bdc6d26ad3a", "c3fb9958-f421-46f7-92a8-dbb292a91ce7"],
+  "latest_owner_request": "next player and check github write access since it's been a few hours",
+  "source_reverified_for_review": {
+    "retrieved_original_from_preserved_drive_master": true,
+    "sha256_matches_preserved_record": true,
+    "bytes": 1466696,
+    "decoded_dimensions": [1254, 1254],
+    "decoded_mode": "RGBA",
+    "alpha_extrema": [0, 255],
+    "visually_checked": true,
+    "regenerated": false,
+    "resized_or_recompressed": false
+  },
   "instruction": "Only the final white-top draft with the checksum above is awaiting approval. The first two outputs contained the wrong jersey and do not represent approved next-player artwork. On approval retrieve the preserved original through Drive, compare its checksum, upload unchanged to images/players/napheesa-collier/portrait.png through the existing .github/portrait-upload.json route, and verify the actual live page before proceeding. No template edits, thumbnails, resizing, recompression, new workflow, or new permission request. Keep all current player pages unchanged until this draft is approved."
 }
