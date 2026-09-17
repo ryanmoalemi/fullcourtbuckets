@@ -6,6 +6,12 @@ The owner manages fullcourtbuckets.com through ChatGPT and has authorized implem
 
 Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default branch may be `master`, which contains obsolete unrelated content. Never merge or deploy that content.
 
+## Standing owner instruction: handle the complete publication
+
+The owner explicitly directed: "remember always get your github write publish permissions don't ask me to post anything". For each authorized website task, discover the connected GitHub read/write tools, read the current target files, and perform the upload, commit, publication and live verification here. Do not send the owner code, filenames or steps to post manually when the connected tools can do the work. Do not ask them to resend an approved original already available in the conversation or preserved Drive master.
+
+Missing tools from an initial tool list are not evidence of read-only access. Discover the appropriate action and attempt the authorized write before making any access claim. A failed image download is a transport error, not proof of missing GitHub permission. Use the established whole-file uploader in `.github/PORTRAIT_UPLOAD.md`; do not rebuild it per player. Do not claim permanent privileges or attempt to grant yourself account permissions. Request owner intervention only after an actual tool error establishes an authorization step that cannot be completed with available tools.
+
 ## Read, write, and verify
 
 1. Discover the connected GitHub read and write tools at the start of a website task. Missing tools in the initial tool list do not establish read-only access. Do not claim that writes are unavailable without attempting an appropriate authorized write and checking its actual error.
@@ -20,18 +26,18 @@ The current Caitlin Clark page is the approved compact desktop/mobile layout. Pr
 
 Read the existing implementation before changing it. The established pipeline is `automation/build_players.py`, `automation/apply_portraits.py`, then `automation/rollout_player_design.py`. Do not create a competing layout implementation.
 
-## Portrait quality: September 16, 2026 correction
+## Portrait quality and original-file handling
 
-The owner approved a sharper replacement for Angel Reese after the published 192x192 thumbnail appeared blurry. Use the actual user-approved full-resolution image, not the existing thumbnail and not a newly guessed replacement. Caitlin's approved asset is 640x650. Match that export canvas and existing CSS crop without stretching the face. A higher-resolution equivalent may be retained for high-density displays, but do not lower image dimensions to fit tool arguments.
+The owner approved a sharper replacement for Angel Reese after the published 192x192 thumbnail appeared blurry. Caitlin's approved asset is 640x650, but that is a historical export size, not a reason to shrink new originals. The latest owner-approved process is to keep the full-resolution PNG unchanged in `images/players/<exact-page-slug>/portrait.png`. The folder mapper handles metadata; the existing responsive CSS supplies the compact proportional crop. No per-player template edits, resizing, recompression, stretching, embedded text or background graphics.
 
-Future portraits must originate from full-resolution generated art, normally at least 1024 pixels on each side, and must not be published as 160px, 192px, 256px, or other undersized hero thumbnails. Upscaling a thumbnail does not satisfy this rule. Use real alpha transparency and a well-encoded image format; verify actual decoded dimensions, alpha, and file hashes rather than trusting the filename or manifest. Do not simplify quality merely to make binary transport shorter. Verify that the deployed asset is the approved replacement and that the compact desktop/mobile layout is unchanged.
+Future portraits must originate from full-resolution generated art, normally at least 1024 pixels on each side, and must not be published as 160px, 192px, 256px, or other undersized hero thumbnails. Upscaling a thumbnail does not satisfy this rule. Use real alpha transparency; verify actual decoded dimensions, alpha and file hashes rather than trusting a filename or manifest. Do not reduce quality to fit tool arguments. Preserve each master under a unique player-ID/slug/checksum filename so later generations cannot overwrite it.
 
 Do not describe old under-resolution portraits as fixed merely because this policy exists. Update each actual asset and verify it. Follow the owner's latest request about inspecting one player at a time before expanding a rollout.
 
 ## Latest approval loop and mandatory browser evidence
 
-Read `automation/PORTRAIT_PUBLISHING.md` and `content/portrait-review-status.json` before continuing any portraits. The latest instruction is one user-approved image at a time, followed by verified publication, then the next approval. This supersedes the older unattended-rollout instructions. Keep that bulk task paused.
+Read `automation/PORTRAIT_PUBLISHING.md`, `.github/PORTRAIT_UPLOAD.md`, `content/portrait-review-status.json` and that player's review/upload receipt before continuing. The normal process is one generated image, owner approval, upload the unchanged original, verify publication, then the next image. Keep the older bulk task paused unless the owner explicitly changes that instruction.
 
-The old Aja file was corrupt despite HTTP 200 and img.complete=true. It was quarantined, not replaced by the newly approved artwork. The source for that exact replacement must be reattached; do not substitute Breanna's image, which reused the same temporary filename. The new Breanna master has been preserved privately under a unique player-ID/slug/checksum filename, with its retrievable Drive reference in the review-status record.
+Earlier Aja missing-source and corruption notes are historical: her later approved white-top original, Breanna's approved original and Sabrina's approved original were uploaded and verified. Do not request them again or regenerate completed images. Reconcile current receipts and actual live pages before repeating any upload. A stale pending status alone is not proof that a file failed to publish.
 
 Every portrait publication must pass `automation/verify_portraits.py`: decode the real bytes, enforce the approved player-ID/name/slug/checksum mapping, and check actual public image decoding and hashes in Chromium and WebKit at desktop and phone viewports. Inspect the live screenshots in that run's `portrait-live-verification` artifact. A GitHub commit, green deployment step, HTTP 200, or manifest dimensions alone is not sufficient. A valid placeholder is not a completed portrait. Never advance the approval loop by claiming a missing approved replacement is live.
