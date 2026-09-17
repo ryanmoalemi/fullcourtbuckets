@@ -1,18 +1,6 @@
 {
   "request_id": "676-9902c6e799e1fc91-three-player-approval",
-  "player_id": 676,
   "slug": "aliyah-boston",
-  "player_name": "Aliyah Boston",
-  "approved": true,
-  "status": "ready_for_upload",
-  "sha256": "9902c6e799e1fc9126b2bb40c5caf41b0ee7ee42eed6240b07f158a4365acd03",
-  "bytes": 2117358,
-  "dimensions": [1254,1254],
-  "format": "PNG",
-  "generation_id": "c926578c-c5a7-4803-b87f-9a029bc4e222",
-  "source_attachment_id": "file_00000000c6cc8230972dbea946ba1ff0",
-  "master_drive_file_id": "1D9lgZNnJ7PKGCOLoMIgPm3vrXiSbm5sq",
-  "master_filename": "FCB-676-aliyah-boston-approved-9902c6e799e1fc91.png",
-  "approval_context": "Owner approved all three latest portraits and authorized autonomous continuation. This is the exact approved Aliyah Boston original. Preserve its bytes and the existing compact template; do not resize or recompress.",
-  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-d424-81fd-bd58-e2b7f3a48186/raw?se=2026-09-17T04%3A55%3A11Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ada8-a7d7-7de8-8316-036883ae71e6&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T02%3A09%3A32Z&ske=2026-09-18T02%3A09%3A32Z&sks=b&skv=2026-02-06&sig=nIk2W0iMcM8ToPWhGfGMMJE5h9dpMhPOixVhtgearac%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "9902c6e799e1fc9126b2bb40c5caf41b0ee7ee42eed6240b07f158a4365acd03"
 }
