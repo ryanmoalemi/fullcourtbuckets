@@ -3,7 +3,7 @@
   "authorization": "all 3 are good you can work on your own now",
   "approval_mode": "owner_delegated_quality_review_and_publication",
   "instructions": ".github/PORTRAIT_AUTOPILOT.md",
-  "status": "resuming_after_verified_transfer_recovery",
+  "status": "working",
   "scheduled_task_title": "FCB portrait rollout",
   "scheduled_continuation_enabled": true,
   "cadence": "approximately hourly; up to 3 portraits per run, generated and published one at a time",
@@ -14,7 +14,21 @@
   "notify_after_newly_verified": 10,
   "newly_verified_since_authorization": 4,
   "last_notified_verified_count": 4,
-  "lease": null,
+  "lease": {
+    "holder": "scheduled-portrait-rollout-20260917T0703Z",
+    "claimed_at": "2026-09-17T07:03:07Z",
+    "expires_at": "2026-09-17T07:48:07Z"
+  },
+  "current_work": {
+    "player_id": 533,
+    "slug": "kelsey-mitchell",
+    "player_name": "Kelsey Mitchell",
+    "reason": "replace undersized legacy active-player portrait",
+    "identity_mapping_saved_before_generation": true,
+    "expected_master_pattern": "FCB-533-kelsey-mitchell-<sha256>.png",
+    "destination": "images/players/kelsey-mitchell/portrait.png",
+    "generation_status": "selected_not_generated"
+  },
   "initial_approved": [
     {"player_id":741,"slug":"paige-bueckers","player_name":"Paige Bueckers","approved":true,"generation_id":"16d936c9-6ccf-4369-844f-1e05d07296ac","source_sha256":"c4b68851366ecdc836e942f04ae299123ebffbeadd54180fe8d15729170fd0e0","source_bytes":1730766,"dimensions":[1254,1254],"master_file_id":"19bAJb4DeK8eMP-hGYCjwLiF1wtnOTKLG","master_filename":"FCB-741-paige-bueckers-approved-c4b68851366ecdc8.png","status":"published_live_verified","live_verified":true,"upload_run_id":35182879976,"publication_run_id":35182892859,"evidence_artifact_id":10480254074,"receipt":"content/portrait-upload-receipts/paige-bueckers.json"},
     {"player_id":488,"slug":"kelsey-plum","player_name":"Kelsey Plum","approved":true,"generation_id":"9fce897e-cd60-4b23-bf90-7cfa852ea34c","source_sha256":"b46c4f2ba0a9912697e39009a81cf3307fd7c85ebdbb238583e78ef52052c144","source_bytes":1364567,"dimensions":[1254,1254],"master_file_id":"1rh5Ugf0ZNEcFqfewmoaR9mMFE9d-AVwa","master_filename":"FCB-488-kelsey-plum-approved-b46c4f2ba0a99126.png","status":"published_live_verified","live_verified":true,"upload_run_id":35183196114,"publication_run_id":35183214137,"evidence_artifact_id":10481506073,"receipt":"content/portrait-upload-receipts/kelsey-plum.json"},
