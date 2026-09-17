@@ -7,7 +7,18 @@
   "profile_active": true,
   "team": "Washington Mystics",
   "selection_reason": "Next eligible active player in the illustration queue after parked players and the newly completed Aneesah Morrow portrait.",
-  "generation_stage": "mapped_before_generation",
+  "generation_stage": "generated_technical_checks_passed_drive_preservation_blocked",
   "mapped_at": "2026-09-17T21:55:36Z",
-  "artwork_brief": "Exactly one recognizable Angela Dugalic, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+  "artwork_brief": "Exactly one recognizable Angela Dugalic, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "generation_id": "8bdaca32-bf3d-4491-8fcc-22d081ed4d62",
+  "source_sha256": "ae91394ec443bcb06a9de9506972b8ed34164cb25de8e03583c1f34aaf490e6d",
+  "source_bytes": 1584781,
+  "dimensions": [1147, 1371],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "local_unique_filename": "FCB-67006-angela-dugalic-ae91394ec443bcb06a9de9506972b8ed34164cb25de8e03583c1f34aaf490e6d.png",
+  "runtime_file_reference": "file_0000000001908209a1c6c2c45d4fbd49",
+  "quality_review": "technical_pass; one-person clean portrait format/anatomy/alpha/sharpness accepted for transport; final live likeness review still required before completion",
+  "drive_preservation": "blocked"
 }
