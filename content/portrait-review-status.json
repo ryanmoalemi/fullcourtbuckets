@@ -2,23 +2,24 @@
   "schema_version": 1,
   "approval_mode": "generate_one_image_then_owner_approves_then_upload_whole_file_to_player_folder_then_auto_render_and_verify",
   "bulk_generation_paused": true,
+  "owner_operating_instruction": "For each authorized website task discover and use connected GitHub write/publish tools. Handle uploads, commits and live verification here. Do not ask the owner to post code or upload approved images manually. Never claim read-only access without discovery and an actual authorized write attempt. See AGENTS.md; this does not grant account privileges.",
   "publication_checks": {
     "script": "automation/verify_portraits.py",
-    "workflow_run_id": 35164206510,
+    "workflow_run_id": 35177450193,
     "live_result": "passed",
     "live_checks": 72,
     "portrait_pages_checked": 12,
     "intentional_placeholder_pages_checked": 0,
-    "engines": ["chromium", "webkit"],
+    "engines": ["chromium","webkit"],
     "viewports": [[1365,850],[390,844],[320,568]],
-    "evidence_artifact_id": 10473888869,
+    "evidence_artifact_id": 10478552519,
     "evidence_artifact_name": "portrait-live-verification",
-    "scope_note": "The exact owner-approved Sabrina original passed six player-specific browser checks, including the original checksum and 1254x1254 natural dimensions. Desktop and 390px screenshots were inspected. No template code changed. Other legacy low-resolution portraits were not upgraded. At 320x568 the entire stats strip does not fit above the fold; do not claim otherwise."
+    "scope_note": "The exact owner-approved Napheesa original passed six player-specific browser checks, including its source checksum and 1254x1254 natural dimensions. Desktop and 390px screenshots were inspected, and a fresh public-page fetch confirmed the same image path. No template change, reupload or new generation was needed during reconciliation. Other legacy low-resolution portraits were not upgraded. The entire stats strip does not fit above the fold at 320x568."
   },
   "folder_uploads": {
     "enabled": true,
     "path_pattern": "images/players/<exact-page-slug>/portrait.png",
-    "alternative_filenames": ["portrait.webp", "portrait.avif"],
+    "alternative_filenames": ["portrait.webp","portrait.avif"],
     "exactly_one_portrait_per_folder": true,
     "original_file_bytes_preserved": true,
     "per_player_code_or_manifest_edits_required": false,
@@ -27,20 +28,41 @@
     "upload_workflow": ".github/workflows/portrait-upload.yml",
     "upload_request": ".github/portrait-upload.json",
     "upload_run_id": 35164190769,
-    "publication_run_id": 35164206510,
+    "upload_run_id_context": "Previously verified Sabrina upload; Napheesa upload commit is recorded below.",
+    "publication_run_id": 35177450193,
+    "upload_commit": "9757aef74ae0729eb446d8619cfe3ba24d9b1da6",
     "instructions": ".github/PORTRAIT_UPLOAD.md",
-    "proof_player_id": 591,
-    "proof_slug": "sabrina-ionescu",
-    "proof_src": "/images/players/sabrina-ionescu/portrait.png",
-    "proof_asset_sha256": "46585337fdfbda99c754e666471ed386ede56fd69c240e1ad1dc4338d7877104",
-    "proof_note": "All 1,510,842 bytes of the owner-approved 1254x1254 PNG transferred intact using the existing uploader. Mapping, publication and live verification succeeded without changing the template or original image.",
+    "proof_player_id": 573,
+    "proof_slug": "napheesa-collier",
+    "proof_src": "/images/players/napheesa-collier/portrait.png",
+    "proof_asset_sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
+    "proof_note": "The approved 1254x1254 PNG is live byte-for-byte unchanged. The actual original is 1,466,696 bytes. The existing reusable pipeline handled the image without changing the page design.",
     "upload_connection": "Connected Drive preserves the master. A temporary Docs insertInlineImage with the real local path in image_uris returns imageProperties.sourceUri through get_document. Use that exact original sourceUri immediately, never the resampled contentUri or oaiusercontent gateway URL. Existing uploader verifies exact checksum and byte count. Delete only the temporary handoff document after successful transfer. No Dropbox, image chunking, or per-player workflow is needed.",
     "github_write_access_verified": true,
-    "write_access_evidence_commit": "4c182837d01822308d59e2416c2979d98ddf5814",
-    "permission_note": "No new account permission was needed. Discover and use existing GitHub write tools before claiming read-only access; this record does not grant permissions."
+    "write_access_evidence_commit": "1dcfc1ffe03c1a5877900567992d71c275fd335d",
+    "permission_note": "Actual GitHub update_file writes succeeded in this task. No new permission or reconnection was needed. Discover and attempt existing tools before making access claims."
   },
   "awaiting_source": null,
   "last_completed": {
+    "player_id": 573,
+    "slug": "napheesa-collier",
+    "player_name": "Napheesa Collier",
+    "approved": true,
+    "status": "published_live_verified",
+    "generation_id": "1d9c50ca-84e0-4630-9dcc-3773c03820ab",
+    "filename": "FCB-573-napheesa-collier-draft-c33a15398cf74f2e.png",
+    "source_sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
+    "source_width": 1254,
+    "source_height": 1254,
+    "source_bytes": 1466696,
+    "master_file_id": "1tLawf5KdQA81NlSdYFpbAEVZ5VAtXPrp",
+    "approved_replacement_published": true,
+    "image_elements_on_live_page": 1,
+    "receipt": "content/portrait-upload-receipts/napheesa-collier.json",
+    "review_record": "content/portrait-reviews/573-napheesa-collier-c33a15398cf74f2e.json",
+    "instruction": "Completed and verified. Preserve the unchanged original. Do not regenerate or repeat the upload."
+  },
+  "previous_completed": {
     "player_id": 591,
     "slug": "sabrina-ionescu",
     "player_name": "Sabrina Ionescu",
@@ -57,9 +79,9 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/sabrina-ionescu.json",
-    "instruction": "This is the exact uniform transparent white-top portrait approved by the owner. It is uploaded and verified. Do not regenerate or repeat the upload. Earlier wrong posters and the other blocked scheduled draft are superseded."
+    "instruction": "Preserve the uniform transparent white-top original. Do not regenerate or repeat the upload. Earlier wrong posters and the blocked scheduled draft are superseded."
   },
-  "previous_completed": {
+  "completed_before_previous": {
     "player_id": 468,
     "slug": "breanna-stewart",
     "player_name": "Breanna Stewart",
@@ -75,9 +97,9 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/breanna-stewart.json",
-    "instruction": "Preserve Breanna's approved full-resolution original; do not regenerate it or revert to the old 256px version."
+    "instruction": "Preserve the approved full-resolution original; do not regenerate or revert to the old 256px version."
   },
-  "completed_before_previous": {
+  "earlier_completed": {
     "player_id": 535,
     "slug": "aja-wilson",
     "player_name": "A'ja Wilson",
@@ -92,16 +114,16 @@
     "approved_replacement_published": true,
     "image_elements_on_live_page": 1,
     "receipt": "content/portrait-upload-receipts/aja-wilson.json",
-    "instruction": "Preserve Aja's latest owner-approved white-top portrait. Older black-top and missing-source notes are superseded."
+    "instruction": "Preserve the latest owner-approved white-top portrait. Older black-top and missing-source notes are superseded."
   },
   "approved_next_source": null,
   "awaiting_owner_review": {
-    "player_id": 591,
-    "slug": "sabrina-ionescu",
+    "player_id": 573,
+    "slug": "napheesa-collier",
     "status": "published_waiting_owner_live_inspection",
-    "live_url": "https://fullcourtbuckets.com/wnba/sabrina-ionescu/?v=46585337fdfb",
+    "live_url": "https://fullcourtbuckets.com/wnba/napheesa-collier/?v=c33a15398cf7",
     "source_already_approved": true,
-    "instruction": "Owner may inspect the verified live result. Do not regenerate Sabrina; proceed only on the owner's next-player instruction."
+    "instruction": "Owner may inspect the verified live result. Do not regenerate Napheesa. Before the next generation inspect saved portrait-reviews for an existing unpublished draft; do not duplicate existing work."
   },
   "next_draft": null,
   "superseded_sabrina_attempt": {
@@ -110,6 +132,6 @@
     "master_drive_file_id": "14H-AOl5r__q8yiQ0mF19o2yuau8hmhss",
     "failed_upload_run_id": 35163721021,
     "status": "superseded_by_owner_approved_46585337fdfbda99",
-    "instruction": "Do not publish this earlier scheduled draft. The later owner-approved original is already live."
+    "instruction": "Do not publish the earlier scheduled draft. The later owner-approved original is already live."
   }
 }
