@@ -1,18 +1,6 @@
 {
   "request_id": "573-c33a15398cf74f2e-owner-approved-cutout",
   "slug": "napheesa-collier",
-  "player_id": 573,
-  "player_name": "Napheesa Collier",
-  "approved": true,
-  "status": "awaiting_upload",
-  "sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
-  "bytes": 1466696,
-  "dimensions": [1254, 1254],
-  "format": "PNG",
-  "generation_id": "1d9c50ca-84e0-4630-9dcc-3773c03820ab",
-  "source_attachment_id": "file_00000000e43c81fd812f4bb0b7a3ddc0",
-  "master_drive_file_id": "1tLawf5KdQA81NlSdYFpbAEVZ5VAtXPrp",
-  "master_filename": "FCB-573-napheesa-collier-draft-c33a15398cf74f2e.png",
-  "approval_context": "Owner reviewed the Napheesa Collier transparent white-top draft c33a15398cf74f2e and explicitly instructed update live page. Upload this exact original unchanged. Preserve the existing compact desktop/mobile template and all other players.",
-  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-81e0-81fd-bd64-7346b4cdad2c/raw?se=2026-09-17T03%3A19%3A20Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ad5a-649c-7de6-a0fc-f507a1962d4d&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A06%3A56Z&ske=2026-09-17T20%3A06%3A56Z&sks=b&skv=2026-02-06&sig=%2BJhcpES6/jxxevP0ZtRCSNO5vdAwblDgxoW1i481SLw%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596"
 }

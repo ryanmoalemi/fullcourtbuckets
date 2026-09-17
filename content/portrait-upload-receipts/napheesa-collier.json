@@ -1,0 +1,23 @@
+{
+  "request_id": "573-c33a15398cf74f2e-owner-approved-cutout",
+  "slug": "napheesa-collier",
+  "player_id": 573,
+  "player_name": "Napheesa Collier",
+  "approved": true,
+  "status": "uploaded_pending_live_verification",
+  "sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
+  "bytes": 1466696,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "generation_id": "1d9c50ca-84e0-4630-9dcc-3773c03820ab",
+  "source_attachment_id": "file_00000000e43c81fd812f4bb0b7a3ddc0",
+  "master_drive_file_id": "1tLawf5KdQA81NlSdYFpbAEVZ5VAtXPrp",
+  "master_filename": "FCB-573-napheesa-collier-draft-c33a15398cf74f2e.png",
+  "approval_context": "Owner reviewed the Napheesa Collier transparent white-top draft c33a15398cf74f2e and explicitly instructed update live page. Upload this exact original unchanged. Preserve the existing compact desktop/mobile template and all other players.",
+  "path": "images/players/napheesa-collier/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "fc491d5a2c7cdf0c45cf6f3bc530f09952650791"
+}
