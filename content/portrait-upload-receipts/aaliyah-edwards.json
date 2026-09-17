@@ -1,0 +1,22 @@
+{
+  "request_id": "714-7fab8b380b2c-handoff-20260917T0930Z",
+  "player_id": 714,
+  "player_name": "Aaliyah Edwards",
+  "slug": "aaliyah-edwards",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed publishing to continue until all existing player pages have verified full-quality illustrations. Generated one selected player only; no resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "f32e0daf-c640-4cf3-a41f-8bf136eedfd8",
+  "sha256": "7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e",
+  "bytes": 1764794,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG",
+  "master_drive_file_id": "1qlo_aOa4EGjxTKRqCU92mBbitPJfdTzW",
+  "master_filename": "FCB-714-aaliyah-edwards-7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/aaliyah-edwards/portrait.png",
+  "original_bytes_preserved": true,
+  "github_blob_sha": "82ac93a5a2d67fa384a345c0a88e833f092d7b03"
+}
