@@ -1,6 +1,18 @@
 {
-  "request_id": "741-c4b68851366ecdc8-three-player-approval",
-  "slug": "paige-bueckers",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "c4b68851366ecdc836e942f04ae299123ebffbeadd54180fe8d15729170fd0e0"
+  "request_id": "488-b46c4f2ba0a99126-three-player-approval",
+  "player_id": 488,
+  "slug": "kelsey-plum",
+  "player_name": "Kelsey Plum",
+  "approved": true,
+  "status": "ready_for_upload",
+  "sha256": "b46c4f2ba0a9912697e39009a81cf3307fd7c85ebdbb238583e78ef52052c144",
+  "bytes": 1364567,
+  "dimensions": [1254,1254],
+  "format": "PNG",
+  "generation_id": "9fce897e-cd60-4b23-bf90-7cfa852ea34c",
+  "source_attachment_id": "file_00000000cf2081fd9b849dc4e97ab6f0",
+  "master_drive_file_id": "1rh5Ugf0ZNEcFqfewmoaR9mMFE9d-AVwa",
+  "master_filename": "FCB-488-kelsey-plum-approved-b46c4f2ba0a99126.png",
+  "approval_context": "Owner approved all three latest portraits and authorized autonomous continuation. This is the exact approved Kelsey Plum original. Preserve its bytes and the existing compact template; do not resize or recompress.",
+  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-18d8-81fd-a027-bee040abe784/raw?se=2026-09-17T04%3A51%3A13Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ada8-a7d7-7de8-8316-036883ae71e6&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A19%3A07Z&ske=2026-09-17T20%3A19%3A07Z&sks=b&skv=2026-02-06&sig=/uCAupvITkPLWLr07Y6ncmhYr2lhVjz3KmqqKn8QPqI%3D"
 }
