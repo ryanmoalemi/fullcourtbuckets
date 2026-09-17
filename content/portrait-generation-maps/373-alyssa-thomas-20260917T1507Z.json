@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "saved_before_generation": true,
+  "timestamp_utc": "2026-09-17T15:07:00Z",
+  "player_id": 373,
+  "player_name": "Alyssa Thomas",
+  "slug": "alyssa-thomas",
+  "destination": "images/players/alyssa-thomas/portrait.png",
+  "provider": "BALLDONTLIE",
+  "active_in_provider_feed": true,
+  "selection_reason": "Next eligible active player after retrying preserved pending publication masters; current earlier queue candidates are completed, pending-publication, or parked after likeness failures.",
+  "brief": "Exactly one recognizable Alyssa Thomas portrait. Frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+}
