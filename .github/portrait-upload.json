@@ -1,6 +1,16 @@
 {
-  "request_id": "525-5b92dc1cd3e6-blobalias-20260917T1612Z",
-  "slug": "azura-stevens",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a"
+  "request_id": "419-2913f154cca8-blobalias-20260917T1617Z",
+  "player_id": 419,
+  "player_name": "Betnijah Laney-Hamilton",
+  "slug": "betnijah-laney-hamilton",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "b7325219-d5df-49d6-b041-be8c16b27db1",
+  "sha256": "2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c",
+  "bytes": 1691619,
+  "dimensions": [1283, 1226],
+  "format": "PNG",
+  "master_drive_file_id": "1Qvaj--zXSRKdadTYRaIQZK6e8EzBf2D0",
+  "master_filename": "FCB-419-betnijah-laney-hamilton-2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c.png",
+  "download_url": "https://oaisdmntprwestcentralus.blob.core.windows.net/files/00000000-047c-81fb-9621-3fb4de9077f9/raw?se=2026-09-17T16%3A22%3A38Z&sp=r&sv=2026-02-06&sr=b&scid=262691a3-b809-59e4-8222-431b79fa3f39&skoid=732f244e-db13-47c3-bcc7-7ee02a9397bc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T02%3A43%3A32Z&ske=2026-09-18T02%3A43%3A32Z&sks=b&skv=2026-02-06&sig=1eYyjbpVlvDkv0QZzeSfRNrBZj8bWnmFcHfEVuwQr4E%3D"
 }
