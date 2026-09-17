@@ -1,30 +1,22 @@
 {
-  "request_id": "67023-655bd92245c7-blobalias-20260917T1602Z",
+  "request_id": "67023-655bd92245c7-blobalias-20260917T1629Z",
   "player_id": 67023,
   "player_name": "Aicha Coulibaly",
   "slug": "aicha-coulibaly",
   "approved": true,
-  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery used the Azure Blob canonical host corresponding to the fresh Drive-fetch signed whole-file URL, with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
   "generation_id": "6b8994d1-4124-4278-a4f4-21c9a1b370d7",
   "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
   "bytes": 1913622,
-  "dimensions": [1254, 1254],
+  "dimensions": [
+    1254,
+    1254
+  ],
   "format": "PNG",
   "master_drive_file_id": "1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
   "master_filename": "FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
-  "status": "published_live_verified",
+  "status": "uploaded_pending_live_verification",
   "path": "images/players/aicha-coulibaly/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "ff1d20fd0bf741127c1427f175c19b408c45a534",
-  "upload_request_commit": "d3db35a65585acbf70aea252e7aff6447abcde28",
-  "upload_commit": "15932db0ee495b67f793b503a6d1716dc2bca344",
-  "generated_pages_commit": "d820d8f8dd688c4c7a3abfa943a6ad09035a7da6",
-  "upload_run_id": 35244590385,
-  "publication_run_id": 35244616796,
-  "evidence_artifact_id": 10507221018,
-  "live_sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
-  "live_natural_dimensions": [1254, 1254],
-  "live_verified": true,
-  "live_url": "https://fullcourtbuckets.com/wnba/aicha-coulibaly/",
-  "verification": "Repository verifier passed Chromium and WebKit at desktop, 390px mobile and 320px mobile. Exactly one portrait rendered; currentSrc decoded at 1254x1254 with exact original SHA256; no number card/caption/placeholder; compact side-by-side hero and stats-below-hero checks passed. Desktop and 390px Chromium screenshots were inspected after deployment."
+  "github_blob_sha": "ff1d20fd0bf741127c1427f175c19b408c45a534"
 }

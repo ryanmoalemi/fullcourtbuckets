@@ -1,16 +1,6 @@
 {
   "request_id": "67023-655bd92245c7-blobalias-20260917T1629Z",
-  "player_id": 67023,
-  "player_name": "Aicha Coulibaly",
   "slug": "aicha-coulibaly",
-  "approved": true,
-  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
-  "generation_id": "6b8994d1-4124-4278-a4f4-21c9a1b370d7",
-  "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
-  "bytes": 1913622,
-  "dimensions": [1254, 1254],
-  "format": "PNG",
-  "master_drive_file_id": "1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
-  "master_filename": "FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
-  "download_url": "https://oaisdmntprsouthcentralus.blob.core.windows.net/files/00000000-6da8-81f7-a6b9-cf7b918845c7/raw?se=2026-09-17T16%3A36%3A16Z&sp=r&sv=2026-02-06&sr=b&scid=da42414e-f3fb-52d4-8ea0-616ad17c6cf9&skoid=864daabb-d06a-46b3-a747-d35075313a83&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T02%3A41%3A17Z&ske=2026-09-18T02%3A41%3A17Z&sks=b&skv=2026-02-06&sig=GkKe1oy36VW7/RmkaGElfASRpvVppJJG7X8ItMJ3VwM%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a"
 }
