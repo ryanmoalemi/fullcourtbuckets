@@ -1,16 +1,6 @@
 {
   "request_id": "533-8da6f315255a-handoff-20260917T0919Z",
-  "player_id": 533,
-  "player_name": "Kelsey Mitchell",
   "slug": "kelsey-mitchell",
-  "approved": true,
-  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed publishing to continue until all existing player pages have illustrations. Resumed the preserved Kelsey Mitchell master after a prior connector handoff failure; no regeneration, resizing, recompression, paid service, credential change or permission change.",
-  "generation_id": "3130a4a6-20f1-4016-9e4e-083b7c83be36",
-  "sha256": "8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d",
-  "bytes": 1906457,
-  "dimensions": [1274, 1234],
-  "format": "PNG",
-  "master_drive_file_id": "1h7ne1HzXoxaS1j0ko72TAdA2BhAXMPLY",
-  "master_filename": "FCB-533-kelsey-mitchell-8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d.png",
-  "download_url": "https://oaisdmntprwestus.blob.core.windows.net/files/00000000-7450-8230-80f5-418be8adae08/raw?se=2026-09-17T09%3A23%3A47Z&sp=r&sv=2026-02-06&sr=b&scid=01a0aea8-0d78-7954-887e-fab4529f62ad&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T05%3A40%3A25Z&ske=2026-09-18T05%3A40%3A25Z&sks=b&skv=2026-02-06&sig=7cjds5G4P/btBjPGk8t9R0inEhbINGyXU6LdqCsudAU%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "8da6f315255a6a63a6291d06338efd066509201752817323754dbb7b0645936d"
 }
