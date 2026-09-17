@@ -255,12 +255,25 @@
       "player_name": "Aaliyah Edwards",
       "approved": true,
       "kind": "illustration",
-      "src": "/images/players/aaliyah-edwards-portrait-v1.webp",
-      "width": 160,
-      "height": 160,
-      "source": "AI-generated original illustration created in the Full Court Buckets scheduled rollout on 2026-09-16, exactly one player at a time, using the approved Caitlin Clark portrait only as style direction and the official WNBA Aaliyah Edwards profile only for identity context. The final 160x160 RGBA WebP was decoded locally, verified with alpha extrema 0-255, and its local Git blob SHA matched the uploaded GitHub blob before publication.",
-      "display": "Compact head-and-shoulders transparent cutout for the shared fcb-compact-player-v1 layout. All names, team information, numbers and statistics remain HTML.",
-      "asset_sha256": "db8bc25e438b78c59a3d87b8f1cac1b5fde810aaff667321753d9665499c0420"
+      "src": "/images/players/aaliyah-edwards/portrait.png",
+      "width": 1254,
+      "height": 1254,
+      "asset_sha256": "7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1254,
+        "height": 1254,
+        "source_width": 1254,
+        "source_height": 1254,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     },
     {
       "player_id": 535,
