@@ -7,7 +7,18 @@
   "profile_active": true,
   "team": "New York Liberty",
   "selection_reason": "Next eligible active player in illustration queue after Angela Dugalic; no existing receipt or portrait asset was found.",
-  "generation_stage": "mapped_before_generation",
+  "generation_stage": "generated_technical_checks_passed_drive_preservation_blocked",
   "mapped_at": "2026-09-17T22:02:00Z",
-  "artwork_brief": "Exactly one recognizable Anneli Maley, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side."
+  "artwork_brief": "Exactly one recognizable Anneli Maley, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression and realistic proportions, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "generation_id": "3fa7d7f8-6993-47e4-954f-f6303df05683",
+  "source_sha256": "4e5749013bdc56dd6cce793bf432731e70c76ef7aac03c39f7d7250c699fcc50",
+  "source_bytes": 1580597,
+  "dimensions": [1141, 1379],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "local_unique_filename": "FCB-642-anneli-maley-4e5749013bdc56dd6cce793bf432731e70c76ef7aac03c39f7d7250c699fcc50.png",
+  "runtime_file_reference": "file_000000000b188209be2c0269bc011925",
+  "quality_review": "technical_pass; one-person clean portrait format/anatomy/alpha/sharpness accepted for transport; final live likeness review still required before completion",
+  "drive_preservation": "blocked"
 }
