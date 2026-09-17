@@ -8,16 +8,32 @@
   "generation_id": "54c74ba2-4250-4651-b072-08b33101e565",
   "sha256": "918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad",
   "bytes": 1768281,
-  "dimensions": [
-    1285,
-    1224
-  ],
+  "dimensions": [1285, 1224],
   "format": "PNG",
   "master_drive_file_id": "14fU8rsA03Vnj6QQCtZLie1oDIYBmzi5d",
   "master_filename": "FCB-757-aneesah-morrow-918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad.png",
   "identity_mapping": "content/portrait-generation-maps/757-aneesah-morrow-20260917T1904Z.json",
-  "status": "uploaded_pending_live_verification",
+  "status": "published_live_verified",
   "path": "images/players/aneesah-morrow/portrait.png",
   "original_bytes_preserved": true,
-  "github_blob_sha": "36d844bd24147ad88b034c80042f80f641680bac"
+  "github_blob_sha": "36d844bd24147ad88b034c80042f80f641680bac",
+  "live_verified": true,
+  "public_url": "https://fullcourtbuckets.com/wnba/aneesah-morrow/?v=918a939b360b",
+  "upload_run_id": 35278599939,
+  "publication_run_id": 35278619171,
+  "evidence_artifact_id": 10521259189,
+  "upload_commit": "969c2b39312edc47075c0fc11a33fa804e1bae60",
+  "generated_pages_commit": "1f8e7479c16ca0981196cd0ac363188ec9c9aa28",
+  "verified_at": "2026-09-17T21:51:01Z",
+  "verification": {
+    "status": "passed",
+    "engines": ["chromium", "webkit"],
+    "viewports": [[1365, 850], [390, 844], [320, 568]],
+    "natural_dimensions": [1285, 1224],
+    "public_sha256": "918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad",
+    "image_count": 1,
+    "number_cards": 0,
+    "captions": 0,
+    "stats_below_hero": true
+  }
 }
