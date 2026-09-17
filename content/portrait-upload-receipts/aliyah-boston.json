@@ -1,23 +1,16 @@
 {
-  "request_id": "676-9902c6e799e1fc91-three-player-approval",
-  "player_id": 676,
-  "slug": "aliyah-boston",
-  "player_name": "Aliyah Boston",
-  "approved": true,
-  "status": "uploaded_pending_live_verification",
-  "sha256": "9902c6e799e1fc9126b2bb40c5caf41b0ee7ee42eed6240b07f158a4365acd03",
-  "bytes": 2117358,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "format": "PNG",
-  "generation_id": "c926578c-c5a7-4803-b87f-9a029bc4e222",
-  "source_attachment_id": "file_00000000c6cc8230972dbea946ba1ff0",
-  "master_drive_file_id": "1D9lgZNnJ7PKGCOLoMIgPm3vrXiSbm5sq",
-  "master_filename": "FCB-676-aliyah-boston-approved-9902c6e799e1fc91.png",
-  "approval_context": "Owner approved all three latest portraits and authorized autonomous continuation. This is the exact approved Aliyah Boston original. Preserve its bytes and the existing compact template; do not resize or recompress.",
-  "path": "images/players/aliyah-boston/portrait.png",
-  "original_bytes_preserved": true,
-  "github_blob_sha": "849b5e146ff081949b36eccb2cb20a4f25cfabfe"
+  "request_id":"676-9902c6e799e1fc91-three-player-approval",
+  "player_id":676,"slug":"aliyah-boston","player_name":"Aliyah Boston",
+  "approved":true,"status":"published_live_verified","live_verified":true,
+  "sha256":"9902c6e799e1fc9126b2bb40c5caf41b0ee7ee42eed6240b07f158a4365acd03",
+  "bytes":2117358,"dimensions":[1254,1254],"format":"PNG",
+  "generation_id":"c926578c-c5a7-4803-b87f-9a029bc4e222",
+  "source_attachment_id":"file_00000000c6cc8230972dbea946ba1ff0",
+  "master_drive_file_id":"1D9lgZNnJ7PKGCOLoMIgPm3vrXiSbm5sq",
+  "master_filename":"FCB-676-aliyah-boston-approved-9902c6e799e1fc91.png",
+  "approval_context":"Owner approved all three latest portraits and authorized autonomous continuation. This is the exact approved Aliyah Boston original. No resizing, recompression or template changes.",
+  "path":"images/players/aliyah-boston/portrait.png","original_bytes_preserved":true,
+  "github_blob_sha":"849b5e146ff081949b36eccb2cb20a4f25cfabfe",
+  "upload_commit":"4ed8163e5e58004a8e51634eef0582ad45855265","upload_run_id":35183566894,
+  "verification":{"workflow_run_id":35183580775,"artifact_id":10481392146,"artifact_name":"portrait-live-verification","result":"passed","player_specific_checks":6,"engines":["chromium","webkit"],"viewports":[[1365,850],[390,844],[320,568]],"original_hash_matches_live_bytes":true,"natural_dimensions":[1254,1254],"image_count":1,"desktop_and_390px_screenshots_inspected":true,"followup_public_page_fetch_matches":true,"live_url":"https://fullcourtbuckets.com/wnba/aliyah-boston/?v=9902c6e799e1","note":"Original PNG unchanged and actual live screenshots show the approved illustration in the compact template. The full stats strip fit each tested Aliyah viewport. This does not establish that every other player's stats fit the smallest phone."}
 }
