@@ -3,9 +3,9 @@
   "authorization": "all 3 are good you can work on your own now",
   "approval_mode": "owner_delegated_quality_review_and_publication",
   "instructions": ".github/PORTRAIT_AUTOPILOT.md",
-  "status": "initial_three_verified_ready_for_autonomous_continuation",
+  "status": "paused_blocked_publication_handoff",
   "scheduled_task_title": "FCB portrait rollout",
-  "scheduled_continuation_enabled": true,
+  "scheduled_continuation_enabled": false,
   "cadence": "approximately hourly; up to 3 portraits per run, generated and published one at a time",
   "per_player_approval_required": false,
   "new_paid_services_authorized": false,
@@ -14,12 +14,7 @@
   "notify_after_newly_verified": 10,
   "newly_verified_since_authorization": 3,
   "last_notified_verified_count": 3,
-  "lease": {
-    "holder": "fcb-portrait-rollout-automation",
-    "claimed_at": "2026-09-17T05:55:13Z",
-    "expires_at": "2026-09-17T06:25:13Z",
-    "scope": "up_to_three_sequential_players"
-  },
+  "lease": null,
   "initial_approved": [
     {"player_id":741,"slug":"paige-bueckers","player_name":"Paige Bueckers","approved":true,"generation_id":"16d936c9-6ccf-4369-844f-1e05d07296ac","source_sha256":"c4b68851366ecdc836e942f04ae299123ebffbeadd54180fe8d15729170fd0e0","source_bytes":1730766,"dimensions":[1254,1254],"master_file_id":"19bAJb4DeK8eMP-hGYCjwLiF1wtnOTKLG","master_filename":"FCB-741-paige-bueckers-approved-c4b68851366ecdc8.png","status":"published_live_verified","live_verified":true,"upload_run_id":35182879976,"publication_run_id":35182892859,"evidence_artifact_id":10480254074,"receipt":"content/portrait-upload-receipts/paige-bueckers.json"},
     {"player_id":488,"slug":"kelsey-plum","player_name":"Kelsey Plum","approved":true,"generation_id":"9fce897e-cd60-4b23-bf90-7cfa852ea34c","source_sha256":"b46c4f2ba0a9912697e39009a81cf3307fd7c85ebdbb238583e78ef52052c144","source_bytes":1364567,"dimensions":[1254,1254],"master_file_id":"1rh5Ugf0ZNEcFqfewmoaR9mMFE9d-AVwa","master_filename":"FCB-488-kelsey-plum-approved-b46c4f2ba0a99126.png","status":"published_live_verified","live_verified":true,"upload_run_id":35183196114,"publication_run_id":35183214137,"evidence_artifact_id":10481506073,"receipt":"content/portrait-upload-receipts/kelsey-plum.json"},
@@ -30,10 +25,38 @@
     {"player_id":488,"slug":"kelsey-plum","live_verified":true,"source_sha256":"b46c4f2ba0a9912697e39009a81cf3307fd7c85ebdbb238583e78ef52052c144","url":"https://fullcourtbuckets.com/wnba/kelsey-plum/?v=b46c4f2ba0a9","receipt":"content/portrait-upload-receipts/kelsey-plum.json","publication_run_id":35183214137},
     {"player_id":676,"slug":"aliyah-boston","live_verified":true,"source_sha256":"9902c6e799e1fc9126b2bb40c5caf41b0ee7ee42eed6240b07f158a4365acd03","url":"https://fullcourtbuckets.com/wnba/aliyah-boston/?v=9902c6e799e1","receipt":"content/portrait-upload-receipts/aliyah-boston.json","publication_run_id":35183580775}
   ],
-  "verification_summary": {"player_specific_checks":18,"engines":["chromium","webkit"],"viewports":[[1365,850],[390,844],[320,568]],"original_hashes_match_live_files":true,"desktop_and_390px_screenshots_inspected_for_each":true,"template_changed":false,"originals_resized_or_recompressed":false,"note":"Original file identity, decoding and layout verified. The full stats strip did not fit Kelsey's Chromium 320x568 viewport; do not generalize above-fold success across all pages."},
-  "blocked": [],
+  "generated_pending_publication": [
+    {
+      "player_id": 552,
+      "slug": "arike-ogunbowale",
+      "player_name": "Arike Ogunbowale",
+      "generation_id": "76ea800d-0180-4681-8b50-cdfb6aced699",
+      "source_sha256": "990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009",
+      "source_bytes": 1757003,
+      "dimensions": [1226, 1283],
+      "format": "PNG",
+      "alpha_extrema": [0, 255],
+      "master_file_id": "1Xm4c1TjqQsFHm3v-8vUMDJRdNVFL6a1W",
+      "master_filename": "FCB-552-arike-ogunbowale-990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009.png",
+      "github_upload_request_commit": "3910aa66b871f7154b992b0d3270ba6535d6bfd5",
+      "upload_run_id": 35188175814,
+      "status": "generated_master_preserved_publication_blocked",
+      "live_verified": false
+    }
+  ],
+  "verification_summary": {"player_specific_checks":18,"engines":["chromium","webkit"],"viewports":[[1365,850],[390,844],[320,568]],"original_hashes_match_live_files":true,"desktop_and_390px_screenshots_inspected_for_each":true,"template_changed":false,"originals_resized_or_recompressed":false,"note":"Original file identity, decoding and layout verified for completed players. The full stats strip did not fit Kelsey's Chromium 320x568 viewport; do not generalize above-fold success across all pages."},
+  "blocked": [
+    {
+      "player_id": 552,
+      "slug": "arike-ogunbowale",
+      "stage": "whole_file_publication_handoff",
+      "error": "GitHub uploader run 35188175814 failed with 'Approved-file download returned HTTP 403'. The required Google Docs insertInlineImage handoff could not be created from the exact generated PNG because batch_update_document rejected the local/generated image with BLOCKED_FILE_REFERENCE. A fresh temporary Doc retry produced the same BLOCKED_FILE_REFERENCE before upload. The fallback Drive fetch URL was intentionally tested once and reproduced the documented HTTP 403, so it cannot be used as the publication sourceUri.",
+      "impact": "No repository portrait file was changed and no live page was modified. The exact 1226x1283 transparent PNG master is preserved in connected Drive. This same handoff capability is required for every remaining newly generated portrait, so autonomous publication is paused until connector egress for insertInlineImage is available again.",
+      "retry_policy": "Resume with the preserved Arike master first; do not regenerate. Use the required temporary Google Doc insertInlineImage route with exact original bytes, then serialize uploader and fcb-wnba verification before any next player."
+    }
+  ],
   "selection": "Reconcile any newly pending uploads first, then remaining undersized legacy active-player portraits, other active players, prominent retired players, remaining archive. Preserve completed full-quality originals. Reconcile receipts with live files; an old exempt low-resolution image is not complete.",
   "priority_next_candidates": [{"player_id":552,"slug":"arike-ogunbowale"},{"player_id":533,"slug":"kelsey-mitchell"},{"player_id":714,"slug":"aaliyah-edwards"}],
-  "do_not_regenerate": ["caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston"],
-  "scope_note": "The three latest owner-approved originals are verified live. Scheduled continuation is enabled; future portraits are not complete until generated, uploaded and verified. Record only actual results. Never change sports statistics or the approved shared layout."
+  "do_not_regenerate": ["caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale"],
+  "scope_note": "Autonomous authorization remains valid, but scheduled continuation is paused on a publication transport blocker. Arike's new full-quality original is preserved and must be resumed without regeneration when the required whole-file handoff becomes available. Never change sports statistics or the approved shared layout."
 }
