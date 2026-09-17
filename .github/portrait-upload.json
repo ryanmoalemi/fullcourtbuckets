@@ -1,6 +1,16 @@
 {
-  "request_id": "311-df8fd5e1f814-blobalias-20260917T1644Z",
-  "slug": "alysha-clark",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "df8fd5e1f814ecd3ac8471d549c3c3d479befa58042f0b82d0de05d9592ffe0d"
+  "request_id": "373-26c0471eb6c1-blobalias-20260917T1645Z",
+  "player_id": 373,
+  "player_name": "Alyssa Thomas",
+  "slug": "alyssa-thomas",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed the rollout to continue until all existing player pages have verified full-quality illustrations. Exact preserved approved original; transport recovery uses the canonical Azure Blob host corresponding to the fresh Drive-fetch signed whole-file URL with unchanged path/query and uploader-enforced checksum/byte/dimension validation. No resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "9140f04e-c4a5-440f-8f18-13eea45fa537",
+  "sha256": "26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687",
+  "bytes": 1528699,
+  "dimensions": [1254, 1254],
+  "format": "PNG",
+  "master_drive_file_id": "15dtFzvt_LNXA9-iQWzpfUPZtZsR5zm5F",
+  "master_filename": "FCB-373-alyssa-thomas-26c0471eb6c121c659cd6157ec0934ed475c69235335934cbf20e906d97b5687.png",
+  "download_url": "https://oaisdmntprsoutheastus3.blob.core.windows.net/files/00000000-5668-820c-9713-f54887d966e3/raw?se=2026-09-17T16%3A49%3A40Z&sp=r&sv=2026-02-06&sr=b&scid=a56fd76a-4738-5a66-a283-3d17f2aa255f&skoid=864daabb-d06a-46b3-a747-d35075313a83&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T13%3A12%3A26Z&ske=2026-09-18T13%3A12%3A26Z&sks=b&skv=2026-02-06&sig=TsBqw6dNFfVDR1CchhxalxPlJSjMyJoiWu8lAX6dL08%3D"
 }
