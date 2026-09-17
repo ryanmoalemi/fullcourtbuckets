@@ -1,17 +1,17 @@
 {
-  "request_id": "552-990fc4f727d3dc8e-autopilot-20260917T0603Z",
+  "request_id": "552-990fc4f727d3-recovered-handoff-20260917T0650Z",
   "player_id": 552,
   "player_name": "Arike Ogunbowale",
   "slug": "arike-ogunbowale",
   "approved": true,
-  "approval_context": "owner delegated autonomous quality review and publication per .github/PORTRAIT_AUTOPILOT.md",
+  "approval_context": "Owner delegated autonomous quality review and publication: all 3 are good you can work on your own now. Resume the existing preserved Arike master after the transfer blocker; no new generation, resizing or recompression.",
   "generation_id": "76ea800d-0180-4681-8b50-cdfb6aced699",
-  "generated_filename": "FCB-552-arike-ogunbowale-990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009.png",
   "sha256": "990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009",
   "bytes": 1757003,
-  "dimensions": [1226, 1283],
-  "master_file_id": "1Xm4c1TjqQsFHm3v-8vUMDJRdNVFL6a1W",
+  "dimensions": [1226,1283],
+  "format": "PNG",
+  "master_drive_file_id": "1Xm4c1TjqQsFHm3v-8vUMDJRdNVFL6a1W",
   "master_filename": "FCB-552-arike-ogunbowale-990fc4f727d3dc8ec7d3f284ee495d45608b99f8d8ae74637a75ceae49642009.png",
-  "download_url": "https://sdmntpritalynorth.oaiusercontent.com/files/00000000-dc28-8246-81af-80963d4f1888/raw?se=2026-09-17T06%3A07%3A08Z&sp=r&sv=2026-02-06&sr=b&scid=904b45c6-c34b-5853-9201-8aa25e7c68d2&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T02%3A17%3A11Z&ske=2026-09-18T02%3A17%3A11Z&sks=b&skv=2026-02-06&sig=uA3cTJP2lg5uKPtkjsI4JVIguZM1ytz%2Bx%2BY1NWf2WxY%3D",
-  "status": "approved_ready_for_upload"
+  "status": "approved_ready_for_upload",
+  "download_url": "https://oaisdmntprwestus3.blob.core.windows.net/files/00000000-b424-81fd-8736-d1939cc5f107/raw?se=2026-09-17T06%3A54%3A52Z&sp=r&sv=2026-02-06&sr=b&scid=01a0ae1f-9e39-7766-a768-236a0ef3ae2d&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A14%3A03Z&ske=2026-09-17T20%3A14%3A03Z&sks=b&skv=2026-02-06&sig=KNZd1CslmU8I%2B7gLHybOsHpxLmWHQ3Y92buNutWF88k%3D"
 }
