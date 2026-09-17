@@ -4,6 +4,35 @@
   "slug": "alicia-florez-245094",
   "destination": "images/players/alicia-florez-245094/portrait.png",
   "authorization": "owner_delegated_quality_review_and_publication",
-  "status": "generation_target_claimed",
-  "created_at": "2026-09-17T12:06:00Z"
+  "created_at": "2026-09-17T12:06:00Z",
+  "status": "parked_likeness_gate",
+  "live_page_changed": false,
+  "reference_notes": "Identity/profile checked against current WNBA records. Reuse-rights review source available at Wikimedia Commons under CC BY-SA 4.0; no copyrighted team photo was supplied to generation.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "f38b5edd-4ee7-4d60-bedb-dec2bb5e47e3",
+      "sha256": "dfbc664ee08a6ef3e3e613e78dc8fb45bde63347b04b286ec66136b35eefbece",
+      "bytes": 1781456,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1LppfX8f1xKCEjWWxMpdy00ctz33Dstno",
+      "disposition": "rejected_generic_likeness"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "9b310912-d50a-4a6a-b6e9-5672a41f0a6a",
+      "sha256": "2ea23b4189b42eb2e18b47baad6461c115c067d109845da201181c4fff18b65f",
+      "bytes": 1639390,
+      "dimensions": [1270, 1239],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1GatKgPjIn_TznjvBA0eXJ3maolAj3EpZ",
+      "disposition": "rejected_near_duplicate_generic_likeness"
+    }
+  ],
+  "reason": "Both allowed generations passed native PNG/RGBA/transparency/resolution checks but converged on the same generic face rather than a confidently recognizable Alicia Florez likeness. Neither was published."
 }
