@@ -1,6 +1,16 @@
 {
-  "request_id": "714-7fab8b380b2c-handoff-20260917T0930Z",
-  "slug": "aaliyah-edwards",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "7fab8b380b2c2fdb2e02a146dae56570e26e2853e317cc5d7e553b2634fef22e"
+  "request_id": "67023-655bd92245c7-gateway-20260917T1117Z",
+  "player_id": 67023,
+  "player_name": "Aicha Coulibaly",
+  "slug": "aicha-coulibaly",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review and publication and explicitly instructed publishing to continue until all existing player pages have verified full-quality illustrations. Two attempts maximum observed; selected the second recognizable Aicha Coulibaly likeness. Exact original PNG preserved in connected Drive; no resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "6b8994d1-4124-4278-a4f4-21c9a1b370d7",
+  "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
+  "bytes": 1913622,
+  "dimensions": [1254, 1254],
+  "format": "PNG",
+  "master_drive_file_id": "1wzxP-TMD-9Hc4b71r5rLemOLUgiAtOsX",
+  "master_filename": "FCB-67023-aicha-coulibaly-655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a.png",
+  "download_url": "https://sdmntpreastus2.oaiusercontent.com/files/00000000-6f5c-81f6-adf5-411cf8f92785/raw?se=2026-09-17T11%3A22%3A27Z&sp=r&sv=2026-02-06&sr=b&scid=17b6b09c-465d-51cc-85e9-76235c6312fb&skoid=6658dbdd-f305-4d30-8f6b-d62218202cb9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-17T07%3A19%3A56Z&ske=2026-09-18T07%3A19%3A56Z&sks=b&skv=2026-02-06&sig=jb8ueOqxNKd2u4m/SvKDpm1IB8KG7M8omcxg/aCRYss%3D"
 }
