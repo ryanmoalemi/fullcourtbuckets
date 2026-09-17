@@ -1,7 +1,15 @@
 {
-  "request_id": "67023-655bd92245c7-rematerialized-20260917T1203Z",
-  "slug": "aicha-coulibaly",
-  "status": "transport_failed",
-  "sha256": "655bd92245c794824aedebe75b28cfa21d7d20a08c7d4b0006ec3d3385db6b9a",
-  "error": "Fresh exact-file Drive rematerialization still returned HTTP 403 in GitHub Actions. No live file changed; preserved master remains intact."
+  "request_id": "525-5b92dc1cd3e6-rematerialized-20260917T1218Z",
+  "player_id": 525,
+  "player_name": "Azura Stevens",
+  "slug": "azura-stevens",
+  "approved": true,
+  "approval_context": "Owner delegated autonomous quality review/publication. Selected original passed the likeness/technical gate and was preserved in connected Drive. No resizing, recompression, paid service, credential change or permission change.",
+  "generation_id": "559f6b5a-2b6a-43bf-a9bd-3e497bfb868e",
+  "sha256": "5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a",
+  "bytes": 1751571,
+  "dimensions": [1254, 1254],
+  "master_drive_file_id": "1FBYu8Hw40vOP2R38Dm3IEACwzl8raZtk",
+  "master_filename": "FCB-525-azura-stevens-5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a.png",
+  "download_url": "https://sdmntprwestus2.oaiusercontent.com/files/00000000-07e0-81f8-a7ff-8d625535ce07/raw?se=2026-09-17T12%3A19%3A19Z&sp=r&sv=2026-02-06&sr=b&scid=6eaa4c5a-0c16-5f77-b019-7afcd1659bd7&skoid=30ec2761-8f41-44db-b282-7a0f8809659b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-16T20%3A08%3A06Z&ske=2026-09-17T20%3A08%3A06Z&sks=b&skv=2026-02-06&sig=RsRxFtPQdPem/R6L4vV7lD/3MOA1/jQiXKznJmaBBlc%3D"
 }
