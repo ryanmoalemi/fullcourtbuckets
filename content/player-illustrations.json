@@ -352,6 +352,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 419,
+      "slug": "betnijah-laney-hamilton",
+      "player_name": "Betnijah Laney-Hamilton",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/betnijah-laney-hamilton/portrait.png",
+      "width": 1283,
+      "height": 1226,
+      "asset_sha256": "2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1283,
+        "height": 1226,
+        "source_width": 1283,
+        "source_height": 1226,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
