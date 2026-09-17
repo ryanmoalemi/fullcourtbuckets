@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "player_id": 741,
+  "slug": "paige-bueckers",
+  "player_name": "Paige Bueckers",
+  "previous_player": "napheesa-collier",
+  "owner_request": "Owner confirmed Napheesa's live page is already updated and said you have write access ok next player.",
+  "status": "correct_portrait_not_yet_generated",
+  "approved": false,
+  "replacement_uploaded": false,
+  "replacement_published": false,
+  "requested_format": "One original recognizable Paige Bueckers head-and-shoulders illustration, uniform plain white basketball top with black trim, genuine transparent background, full-resolution original PNG. No text, logos, frame, poster or webpage design.",
+  "rejected_generation_ids": ["73b9aba6-0b84-444c-9cfd-09201bc18b73", "0f3a7e34-0cbd-43c6-a557-85d0f8808478"],
+  "generation_blocker": "Two outputs failed the intended-likeness review. A subsequent image tool call did not start generation and returned a request-validation error. No candidate is approved or ready for upload.",
+  "previous_publication": {
+    "player_id": 573,
+    "slug": "napheesa-collier",
+    "upload_run_id": 35177437239,
+    "publication_run_id": 35177450193,
+    "workflow_and_live_browser_checks": "success",
+    "owner_confirmed_live_update": true,
+    "sha256": "c33a15398cf74f2e8f4d363ffb3d819da835ea9619473295562d3785bad9b596",
+    "path": "images/players/napheesa-collier/portrait.png"
+  },
+  "instruction": "Paige remains next. Do not ask to reconnect GitHub, regenerate Napheesa, or publish either rejected output. Produce a correct Paige portrait and show it for approval, preserve the exact original, then use the existing whole-file upload workflow. Keep current live pages unchanged."
+}
