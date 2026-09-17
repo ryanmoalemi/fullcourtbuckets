@@ -11,5 +11,34 @@
   "generation_target_locked": true,
   "one_person_per_generation_call": true,
   "brief": "Exactly one recognizable Anastasiia Olairi Kosu portrait, frontal head-and-shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent alpha background, no lettering/logos/numbers/scenery/frame/poster/webpage mockup, native PNG at least 1024 pixels per side.",
-  "status": "mapped_before_generation"
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "65c10379-3c29-4d35-a864-820dc9a75505",
+      "sha256": "ab9a75c0b06e1318236d71bbbfd8812f71c2447da88021051db9ca54274a7153",
+      "bytes": 1902760,
+      "dimensions": [1263, 1246],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1GWptjkB8QViA8Tt7OvbodHEsNF8vykrV",
+      "master_filename": "FCB-739-anastasiia-olairi-kosu-ab9a75c0b06e1318236d71bbbfd8812f71c2447da88021051db9ca54274a7153-attempt1.png",
+      "disposition": "rejected_wrong_likeness"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "a4707996-1788-4a1f-9adf-688f7837b69a",
+      "sha256": "8e0bdfed848bfe40ff5faa548f6f6e4c37c971922081c08e266d51aad7df4182",
+      "bytes": 1448567,
+      "dimensions": [1254, 1254],
+      "format": "PNG",
+      "mode": "RGBA",
+      "alpha_extrema": [0, 255],
+      "master_drive_file_id": "1fWmoTTm3OanYRH8_lqvfvLNnq-QmK0_b",
+      "master_filename": "FCB-739-anastasiia-olairi-kosu-8e0bdfed848bfe40ff5faa548f6f6e4c37c971922081c08e266d51aad7df4182-attempt2.png",
+      "disposition": "rejected_insufficient_likeness_confidence"
+    }
+  ],
+  "quality_review": "Both files decode as native transparent PNGs at full resolution with clean anatomy, edges and no embedded text/logos. Attempt 1 materially mismatched the player's known appearance. Attempt 2 corrected the broad appearance cues but remained too generic to publish confidently as Anastasiia Olairi Kosu. Neither was published.",
+  "status": "parked_after_two_likeness_failures"
 }
