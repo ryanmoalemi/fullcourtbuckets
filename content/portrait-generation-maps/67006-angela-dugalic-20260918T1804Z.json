@@ -1,0 +1,22 @@
+{
+  "player_id": 67006,
+  "player_name": "Angela Dugalic",
+  "slug": "angela-dugalic",
+  "destination": "images/players/angela-dugalic/portrait.png",
+  "profile_path": "data/wnba/players/angela-dugalic.json",
+  "profile_active": true,
+  "team": "Washington Mystics",
+  "selection_reason": "Corrective likeness attempt after the prior technically valid portrait was compared against current public Angela Dugalic headshots and rejected as the wrong likeness before publication.",
+  "generation_stage": "corrective_attempt_2_planned",
+  "mapped_at": "2026-09-18T18:04:00Z",
+  "prior_attempt": {
+    "generation_id": "8bdaca32-bf3d-4491-8fcc-22d081ed4d62",
+    "sha256": "ae91394ec443bcb06a9de9506972b8ed34164cb25de8e03583c1f34aaf490e6d",
+    "drive_master_id": "1coYVh516s7xd02b000yrSZL2q6FbCoX0",
+    "disposition": "rejected_wrong_likeness_before_publication"
+  },
+  "identity_cues": "Current public headshots show Angela with dark brown hair, brown eyes, a broad warm smile, a softer oval/round facial structure and dark defined brows. Do not reproduce the prior blonde long-faced generic subject.",
+  "artwork_brief": "Exactly one recognizable Angela Dugalic, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression, realistic proportions, dark brown hair, brown eyes, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "attempt_limit": 2,
+  "attempt_number": 2
+}
