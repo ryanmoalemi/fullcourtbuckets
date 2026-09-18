@@ -1,0 +1,22 @@
+{
+  "player_id": 642,
+  "player_name": "Anneli Maley",
+  "slug": "anneli-maley",
+  "destination": "images/players/anneli-maley/portrait.png",
+  "profile_path": "data/wnba/players/anneli-maley.json",
+  "profile_active": true,
+  "team": "New York Liberty",
+  "selection_reason": "Corrective likeness attempt after the prior technically valid portrait was compared against current public Anneli Maley headshots and rejected as the wrong likeness before publication.",
+  "generation_stage": "corrective_attempt_2_planned",
+  "mapped_at": "2026-09-18T18:10:00Z",
+  "prior_attempt": {
+    "generation_id": "3fa7d7f8-6993-47e4-954f-f6303df05683",
+    "sha256": "4e5749013bdc56dd6cce793bf432731e70c76ef7aac03c39f7d7250c699fcc50",
+    "drive_master_id": "1-1TN4UqDny9JDm1wfxe1RGe11nYg8PU_",
+    "disposition": "rejected_wrong_likeness_before_publication"
+  },
+  "identity_cues": "Current public headshots show Anneli with dark brown hair pulled back or braided, light blue-green eyes, a softer oval face, dark brows, small hoop earrings and a subtle nose piercing. Do not reproduce the prior blonde generic subject.",
+  "artwork_brief": "Exactly one recognizable Anneli Maley, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression, realistic proportions, dark brown hair pulled back, light blue-green eyes, subtle nose piercing, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
+  "attempt_limit": 2,
+  "attempt_number": 2
+}
