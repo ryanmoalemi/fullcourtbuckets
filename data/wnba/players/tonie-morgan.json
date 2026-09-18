@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -36,6 +36,46 @@
   },
   "season_stats": [],
   "recent_completed_games": [
+    {
+      "game_id": 25056,
+      "player_id": 67029,
+      "date": "2026-09-18T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "home_score": 97,
+      "away_score": 77,
+      "minutes": "20",
+      "pts": 7.0,
+      "ast": 4.0,
+      "reb": null,
+      "stl": 3.0,
+      "blk": null,
+      "turnover": 2.0
+    },
     {
       "game_id": 25051,
       "player_id": 67029,
@@ -357,7 +397,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-13",
+  "game_log_window_start": "2026-08-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

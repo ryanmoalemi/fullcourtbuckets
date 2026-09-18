@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Wings",
         "conference": "Western Conference"
       },
-      "games_played": 38,
-      "min": 33.05,
+      "games_played": 39,
+      "min": 32.85,
       "fgm": 7.79,
-      "fga": 15.39,
-      "fg_pct": 50.6,
-      "fg3m": 1.82,
-      "fg3a": 4.58,
-      "fg3_pct": 39.7,
-      "ftm": 3.08,
-      "fta": 3.53,
-      "ft_pct": 87.3,
+      "fga": 15.33,
+      "fg_pct": 50.8,
+      "fg3m": 1.79,
+      "fg3a": 4.59,
+      "fg3_pct": 39.1,
+      "ftm": 3.05,
+      "fta": 3.49,
+      "ft_pct": 87.5,
       "oreb": null,
       "dreb": null,
-      "reb": 4.05,
-      "ast": 5.92,
-      "stl": 0.84,
-      "blk": 0.39,
-      "turnover": 2.13,
-      "pts": 20.47
+      "reb": 4.1,
+      "ast": 5.85,
+      "stl": 0.87,
+      "blk": 0.38,
+      "turnover": 2.18,
+      "pts": 20.44
     },
     {
       "player_id": 741,
@@ -101,6 +101,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 25056,
+      "player_id": 741,
+      "date": "2026-09-18T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "home_score": 97,
+      "away_score": 77,
+      "minutes": "26",
+      "pts": 19.0,
+      "ast": 3.0,
+      "reb": 6.0,
+      "stl": 2.0,
+      "blk": null,
+      "turnover": 4.0
+    },
     {
       "game_id": 25053,
       "player_id": 741,
@@ -340,49 +380,9 @@
       "stl": 2.0,
       "blk": null,
       "turnover": 2.0
-    },
-    {
-      "game_id": 25001,
-      "player_id": 741,
-      "date": "2026-08-13T00:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 30,
-        "full_name": "Tempo",
-        "abbreviation": "TOR",
-        "city": "",
-        "name": "Tempo",
-        "conference": null
-      },
-      "home_score": 94,
-      "away_score": 88,
-      "minutes": "34",
-      "pts": 22.0,
-      "ast": 8.0,
-      "reb": 3.0,
-      "stl": 3.0,
-      "blk": null,
-      "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-13",
+  "game_log_window_start": "2026-08-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

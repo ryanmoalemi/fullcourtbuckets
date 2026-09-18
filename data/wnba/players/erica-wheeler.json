@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Sparks",
         "conference": "Western Conference"
       },
-      "games_played": 39,
-      "min": 27.03,
-      "fgm": 3.31,
-      "fga": 8.33,
-      "fg_pct": 39.7,
-      "fg3m": 1.36,
-      "fg3a": 4.36,
-      "fg3_pct": 31.2,
-      "ftm": 1.05,
-      "fta": 1.21,
+      "games_played": 40,
+      "min": 26.63,
+      "fgm": 3.25,
+      "fga": 8.18,
+      "fg_pct": 39.8,
+      "fg3m": 1.35,
+      "fg3a": 4.3,
+      "fg3_pct": 31.4,
+      "ftm": 1.03,
+      "fta": 1.18,
       "ft_pct": 87.2,
       "oreb": null,
       "dreb": null,
-      "reb": 1.95,
-      "ast": 5.15,
-      "stl": 0.92,
+      "reb": 1.9,
+      "ast": 5.13,
+      "stl": 0.93,
       "blk": 0.1,
-      "turnover": 1.92,
-      "pts": 9.03
+      "turnover": 1.9,
+      "pts": 8.88
     },
     {
       "player_id": 425,
@@ -486,6 +486,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25056,
+      "player_id": 425,
+      "date": "2026-09-18T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "home_score": 97,
+      "away_score": 77,
+      "minutes": "12",
+      "pts": 3.0,
+      "ast": 4.0,
+      "reb": null,
+      "stl": 1.0,
+      "blk": null,
+      "turnover": 1.0
+    },
+    {
       "game_id": 25051,
       "player_id": 425,
       "date": "2026-08-30T21:00:00.000Z",
@@ -806,7 +846,7 @@
       "turnover": 4.0
     }
   ],
-  "game_log_window_start": "2026-08-13",
+  "game_log_window_start": "2026-08-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "players": [
     {
       "id": 345,
@@ -1335,6 +1335,22 @@
       "data_path": "/data/wnba/players/charde-houston.json"
     },
     {
+      "id": 727,
+      "slug": "charisma-osborne",
+      "name": "Charisma Osborne",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "path": "/wnba/charisma-osborne/",
+      "data_path": "/data/wnba/players/charisma-osborne.json"
+    },
+    {
       "id": 618,
       "slug": "charli-collier",
       "name": "Charli Collier",
@@ -2636,8 +2652,15 @@
       "id": 730,
       "slug": "jaylyn-sherrod",
       "name": "Jaylyn Sherrod",
-      "active_in_provider_feed": false,
-      "current_team": null,
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
       "path": "/wnba/jaylyn-sherrod/",
       "data_path": "/data/wnba/players/jaylyn-sherrod.json"
     },
@@ -3559,8 +3582,15 @@
       "id": 767,
       "slug": "kitija-laksa",
       "name": "Kitija Laksa",
-      "active_in_provider_feed": false,
-      "current_team": null,
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
       "path": "/wnba/kitija-laksa/",
       "data_path": "/data/wnba/players/kitija-laksa.json"
     },
@@ -5540,6 +5570,22 @@
       "data_path": "/data/wnba/players/satou-sabally.json"
     },
     {
+      "id": 67054,
+      "slug": "saylor-poffenbarger",
+      "name": "Saylor Poffenbarger",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/saylor-poffenbarger/",
+      "data_path": "/data/wnba/players/saylor-poffenbarger.json"
+    },
+    {
       "id": 95,
       "slug": "scholanda-dorrell",
       "name": "Scholanda Dorrell",
@@ -5737,6 +5783,22 @@
       "current_team": null,
       "path": "/wnba/shoni-schimmel/",
       "data_path": "/data/wnba/players/shoni-schimmel.json"
+    },
+    {
+      "id": 67118,
+      "slug": "shyanne-sellers",
+      "name": "Shyanne Sellers",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "path": "/wnba/shyanne-sellers/",
+      "data_path": "/data/wnba/players/shyanne-sellers.json"
     },
     {
       "id": 132,

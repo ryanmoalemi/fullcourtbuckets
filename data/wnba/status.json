@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "last_success": "2026-09-17T09:20:30+00:00",
+  "last_success": "2026-09-18T11:25:44+00:00",
   "provider": "BALLDONTLIE",
   "coverage_start": 2008,
   "seasons": [
@@ -24,7 +24,7 @@
     2025,
     2026
   ],
-  "player_count": 562,
+  "player_count": 565,
   "cadence": "daily",
   "in_season": true,
   "source_data_through": null,

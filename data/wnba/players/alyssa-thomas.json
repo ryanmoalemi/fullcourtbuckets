@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Mercury",
         "conference": "Western Conference"
       },
-      "games_played": 38,
-      "min": 33.5,
-      "fgm": 5.45,
-      "fga": 10.63,
-      "fg_pct": 51.2,
+      "games_played": 39,
+      "min": 33.44,
+      "fgm": 5.46,
+      "fga": 10.56,
+      "fg_pct": 51.7,
       "fg3m": 0.03,
       "fg3a": 0.08,
       "fg3_pct": 33.3,
-      "ftm": 3.32,
-      "fta": 4.76,
-      "ft_pct": 69.6,
+      "ftm": 3.38,
+      "fta": 4.9,
+      "ft_pct": 69.1,
       "oreb": null,
       "dreb": null,
-      "reb": 7.68,
-      "ast": 8.42,
-      "stl": 1.39,
-      "blk": 0.45,
-      "turnover": 3.53,
-      "pts": 14.24
+      "reb": 7.69,
+      "ast": 8.36,
+      "stl": 1.38,
+      "blk": 0.44,
+      "turnover": 3.56,
+      "pts": 14.33
     },
     {
       "player_id": 373,
@@ -910,7 +910,7 @@
       "turnover": 5.0
     }
   ],
-  "game_log_window_start": "2026-08-13",
+  "game_log_window_start": "2026-08-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

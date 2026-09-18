@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-17T09:20:30+00:00",
+  "checked_at": "2026-09-18T11:25:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Dream",
         "conference": "Eastern Conference"
       },
-      "games_played": 39,
-      "min": 31.54,
-      "fgm": 3.82,
-      "fga": 8.77,
-      "fg_pct": 43.6,
-      "fg3m": 0.92,
+      "games_played": 40,
+      "min": 31.28,
+      "fgm": 3.78,
+      "fga": 8.68,
+      "fg_pct": 43.5,
+      "fg3m": 0.9,
       "fg3a": 3.1,
-      "fg3_pct": 29.8,
-      "ftm": 3.03,
-      "fta": 3.95,
-      "ft_pct": 76.6,
+      "fg3_pct": 29.0,
+      "ftm": 2.98,
+      "fta": 3.9,
+      "ft_pct": 76.3,
       "oreb": null,
       "dreb": null,
-      "reb": 3.69,
-      "ast": 7.38,
+      "reb": 3.6,
+      "ast": 7.23,
       "stl": 1.9,
       "blk": 0.28,
-      "turnover": 2.59,
-      "pts": 11.59
+      "turnover": 2.53,
+      "pts": 11.43
     },
     {
       "player_id": 547,
@@ -486,6 +486,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25054,
+      "player_id": 547,
+      "date": "2026-09-17T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 103,
+      "away_score": 59,
+      "minutes": "21",
+      "pts": 5.0,
+      "ast": 1.0,
+      "reb": null,
+      "stl": 2.0,
+      "blk": null,
+      "turnover": null
+    },
+    {
       "game_id": 25050,
       "player_id": 547,
       "date": "2026-08-30T19:00:00.000Z",
@@ -764,49 +804,9 @@
       "stl": null,
       "blk": null,
       "turnover": null
-    },
-    {
-      "game_id": 25004,
-      "player_id": 547,
-      "date": "2026-08-13T23:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 69,
-      "away_score": 104,
-      "minutes": "27",
-      "pts": 9.0,
-      "ast": 4.0,
-      "reb": 2.0,
-      "stl": 1.0,
-      "blk": null,
-      "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-08-13",
+  "game_log_window_start": "2026-08-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

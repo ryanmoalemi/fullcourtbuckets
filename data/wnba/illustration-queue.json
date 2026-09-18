@@ -258,6 +258,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 727,
+      "slug": "charisma-osborne",
+      "player_name": "Charisma Osborne",
+      "listed_active": true,
+      "profile_path": "/wnba/charisma-osborne/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 66951,
       "slug": "charlisse-leger-walker",
       "player_name": "Charlisse Leger-Walker",
@@ -654,6 +663,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 730,
+      "slug": "jaylyn-sherrod",
+      "player_name": "Jaylyn Sherrod",
+      "listed_active": true,
+      "profile_path": "/wnba/jaylyn-sherrod/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 574,
       "slug": "jessica-shepard",
       "player_name": "Jessica Shepard",
@@ -893,6 +911,15 @@
       "player_name": "Kiki Rice",
       "listed_active": true,
       "profile_path": "/wnba/kiki-rice/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
+      "player_id": 767,
+      "slug": "kitija-laksa",
+      "player_name": "Kitija Laksa",
+      "listed_active": true,
+      "profile_path": "/wnba/kitija-laksa/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1491,6 +1518,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 67054,
+      "slug": "saylor-poffenbarger",
+      "player_name": "Saylor Poffenbarger",
+      "listed_active": true,
+      "profile_path": "/wnba/saylor-poffenbarger/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 67200,
       "slug": "serah-williams",
       "player_name": "Serah Williams",
@@ -1523,6 +1559,15 @@
       "player_name": "Shay Ciezki",
       "listed_active": true,
       "profile_path": "/wnba/shay-ciezki/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
+      "player_id": 67118,
+      "slug": "shyanne-sellers",
+      "player_name": "Shyanne Sellers",
+      "listed_active": true,
+      "profile_path": "/wnba/shyanne-sellers/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -3003,15 +3048,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 730,
-      "slug": "jaylyn-sherrod",
-      "player_name": "Jaylyn Sherrod",
-      "listed_active": false,
-      "profile_path": "/wnba/jaylyn-sherrod/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 268,
       "slug": "jayne-appel-marinelli",
       "player_name": "Jayne Appel-Marinelli",
@@ -3458,15 +3494,6 @@
       "player_name": "Kim Mestdagh",
       "listed_active": false,
       "profile_path": "/wnba/kim-mestdagh/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 767,
-      "slug": "kitija-laksa",
-      "player_name": "Kitija Laksa",
-      "listed_active": false,
-      "profile_path": "/wnba/kitija-laksa/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
