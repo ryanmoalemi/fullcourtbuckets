@@ -7,7 +7,7 @@
   "profile_active": true,
   "team": "New York Liberty",
   "selection_reason": "Corrective likeness attempt after the prior technically valid portrait was compared against current public Anneli Maley headshots and rejected as the wrong likeness before publication.",
-  "generation_stage": "corrective_attempt_2_planned",
+  "generation_stage": "corrective_attempt_2_rejected_likeness",
   "mapped_at": "2026-09-18T18:10:00Z",
   "prior_attempt": {
     "generation_id": "3fa7d7f8-6993-47e4-954f-f6303df05683",
@@ -18,5 +18,17 @@
   "identity_cues": "Current public headshots show Anneli with dark brown hair pulled back or braided, light blue-green eyes, a softer oval face, dark brows, small hoop earrings and a subtle nose piercing. Do not reproduce the prior blonde generic subject.",
   "artwork_brief": "Exactly one recognizable Anneli Maley, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression, realistic proportions, dark brown hair pulled back, light blue-green eyes, subtle nose piercing, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
   "attempt_limit": 2,
-  "attempt_number": 2
+  "attempt_number": 2,
+  "generation_id": "05d4a296-e3ba-41c8-a89e-dc79a26e839e",
+  "source_sha256": "9b2dca073de409c4a7d678abed3f98fed9242f896b873eb24fe22df73e715bd6",
+  "source_bytes": 1829835,
+  "dimensions": [1122, 1402],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "runtime_file_reference": "file_0000000030d4823096769ec36e9b76e7",
+  "drive_preservation": "blocked_runtime_file_reference",
+  "quality_review": "technical_pass_but_rejected_wrong_generic_likeness; output ignored key identity cues including light blue-green eyes, pulled-back/braided hair and subtle nose piercing and closely resembled the generic Angela corrective attempt rather than Anneli Maley",
+  "disposition": "park_after_two_likeness_failures",
+  "live_page_changed": false
 }
