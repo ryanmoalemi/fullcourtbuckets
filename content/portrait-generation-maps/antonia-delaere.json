@@ -1,0 +1,14 @@
+{
+  "player_id": 67043,
+  "player_name": "Antonia Delaere",
+  "slug": "antonia-delaere",
+  "destination": "images/players/antonia-delaere/portrait.png",
+  "provider": "BALLDONTLIE",
+  "source_player_record": "data/wnba/players/antonia-delaere.json",
+  "status": "generation_claimed",
+  "claimed_at": "2026-09-18T20:03:50Z",
+  "owner_delegated_publication": true,
+  "minimum_dimensions": [1024, 1024],
+  "required_format": "PNG with genuine alpha transparency",
+  "artwork_spec": "frontal head/shoulders/upper-chest editorial basketball portrait; recognizable Antonia Delaere likeness; natural expression; realistic proportions; crisp polished shading; plain white basketball top with black trim; no text/logos/numbers/scenery/frame/poster/webpage mockup"
+}
