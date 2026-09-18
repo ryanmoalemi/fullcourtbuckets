@@ -7,7 +7,7 @@
   "profile_active": true,
   "team": "Washington Mystics",
   "selection_reason": "Corrective likeness attempt after the prior technically valid portrait was compared against current public Angela Dugalic headshots and rejected as the wrong likeness before publication.",
-  "generation_stage": "corrective_attempt_2_planned",
+  "generation_stage": "corrective_attempt_2_rejected_likeness",
   "mapped_at": "2026-09-18T18:04:00Z",
   "prior_attempt": {
     "generation_id": "8bdaca32-bf3d-4491-8fcc-22d081ed4d62",
@@ -18,5 +18,17 @@
   "identity_cues": "Current public headshots show Angela with dark brown hair, brown eyes, a broad warm smile, a softer oval/round facial structure and dark defined brows. Do not reproduce the prior blonde long-faced generic subject.",
   "artwork_brief": "Exactly one recognizable Angela Dugalic, frontal head-and-shoulders/upper-chest polished editorial basketball illustration, natural expression, realistic proportions, dark brown hair, brown eyes, plain white basketball top with black trim, genuine transparent background, no lettering, logos, numbers, scenery, frame, poster or webpage mockup. Native PNG at least 1024 pixels per side.",
   "attempt_limit": 2,
-  "attempt_number": 2
+  "attempt_number": 2,
+  "generation_id": "b442acc3-497b-417c-a55b-e54beaf1a06e",
+  "source_sha256": "ea9469947670aa4bb159e7191c2aaf08a98a11c602d2e3999943774caeab4609",
+  "source_bytes": 1852774,
+  "dimensions": [1123, 1401],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "runtime_file_reference": "file_00000000d9c482309259d8cd177a8c8f",
+  "drive_preservation": "blocked_runtime_file_reference",
+  "quality_review": "technical_pass_but_rejected_insufficient_recognizable_likeness; face remained generic and did not confidently match Angela Dugalic when compared with current public headshots",
+  "disposition": "park_after_two_likeness_failures",
+  "live_page_changed": false
 }
