@@ -1,0 +1,21 @@
+{
+  "player_id": 67043,
+  "player_name": "Antonia Delaere",
+  "slug": "antonia-delaere",
+  "stage": "master_preservation_and_temporary_doc_handoff",
+  "error_code": "BLOCKED_FILE_REFERENCE",
+  "attempt_count": 1,
+  "first_seen_at": "2026-09-18T20:06:00Z",
+  "last_attempt_at": "2026-09-18T20:07:00Z",
+  "next_retry_at": "2026-09-18T21:07:00Z",
+  "preserved_master_id": null,
+  "source_sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
+  "source_generation_id": "3e992e02-cd99-4840-b5a7-68af5c1ab4b4",
+  "source_dimensions": [1225, 1284],
+  "source_bytes": 1573098,
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/antonia-delaere/",
+  "public_page_impact": "none; no portrait upload or page publication occurred",
+  "resolution_status": "deferred_capability_retry",
+  "notification_status": "new_error_report_due",
+  "details": "Exact runtime file reference was rejected by Google Drive upload_file. The documented temporary Google Doc insertInlineImage handoff using the mounted original path in image_uris was also rejected with BLOCKED_FILE_REFERENCE. No alternate endpoint, URL rewrite, copy/rename bypass, recompression, or base64 transport was attempted."
+}
