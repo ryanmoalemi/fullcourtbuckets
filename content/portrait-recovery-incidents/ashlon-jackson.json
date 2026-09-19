@@ -1,5 +1,5 @@
 {
-  "player_id": 857,
+  "player_id": 67147,
   "player_name": "Ashlon Jackson",
   "slug": "ashlon-jackson",
   "stage": "live_verified",
@@ -21,5 +21,5 @@
   "upload_run_id": 35473176718,
   "publication_run_id": 35473185147,
   "evidence_artifact_id": 10593651919,
-  "details": "Initial exact-runtime transport attempts returned BLOCKED_FILE_REFERENCE. A later supported handoff succeeded without regenerating the accepted source. The uploader preserved identical bytes in the public player folder and GitHub portrait-masters path. Chromium and WebKit verification passed at desktop and mobile viewports with matching SHA-256, correct player mapping/canonical/currentSrc, decoded 1147x1372 image and intact compact layout."
+  "details": "Provider player ID reconciled to 67147 from the current player data and upload receipt. Initial exact-runtime transport attempts returned BLOCKED_FILE_REFERENCE. A later supported handoff succeeded without regenerating the accepted source. The uploader preserved identical bytes in the public player folder and GitHub portrait-masters path. Chromium and WebKit verification passed at desktop and mobile viewports with matching SHA-256, correct player mapping/canonical/currentSrc, decoded 1147x1372 image and intact compact layout."
 }
