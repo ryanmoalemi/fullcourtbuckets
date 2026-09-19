@@ -6,16 +6,33 @@
   "approved": true,
   "sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
   "bytes": 1573098,
-  "dimensions": [
-    1225,
-    1284
-  ],
+  "dimensions": [1225, 1284],
   "generation_id": "3e992e02-cd99-4840-b5a7-68af5c1ab4b4",
   "master_reference": "runtime:file_00000000dcfc81f6b017e58213ab0634",
   "authorization": "owner_delegated_quality_review_and_publication",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/antonia-delaere/portrait.png",
   "original_bytes_preserved": true,
   "github_master_path": "portrait-masters/67043-antonia-delaere-93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858.png",
-  "github_blob_sha": "dc537401e2bb2e2b4f80bf33fe3d303419db7340"
+  "github_blob_sha": "dc537401e2bb2e2b4f80bf33fe3d303419db7340",
+  "upload_run_id": 35464903578,
+  "publication_run_id": 35464912886,
+  "publication_commit": "2474834fde5cce3f4552cc7f307ffac96f0fcf66",
+  "evidence_artifact_id": 10591230275,
+  "verified_url": "https://fullcourtbuckets.com/wnba/antonia-delaere/?v=93afdad4f6cf",
+  "live_verification": {
+    "status": "passed",
+    "engines": ["chromium", "webkit"],
+    "viewports": [[1365, 850], [390, 844], [320, 568]],
+    "current_src": "https://fullcourtbuckets.com/images/players/antonia-delaere/portrait.png?v=93afdad4f6cf",
+    "natural_dimensions": [1225, 1284],
+    "public_sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
+    "canonical": "https://fullcourtbuckets.com/wnba/antonia-delaere/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "antonia-delaere-chromium-desktop.png",
+      "antonia-delaere-chromium-mobile-320.png"
+    ]
+  }
 }
