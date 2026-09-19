@@ -1,0 +1,21 @@
+{
+  "request_id": "67147-23db58ae84a6-upload-20260919T2221Z",
+  "player_id": 67147,
+  "player_name": "Ashlon Jackson",
+  "slug": "ashlon-jackson",
+  "approved": true,
+  "sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+  "bytes": 1843032,
+  "dimensions": [
+    1147,
+    1372
+  ],
+  "generation_id": "9dc88257-085a-4c1e-9dc1-b50c1ec3fd41",
+  "master_reference": "runtime:file_00000000073881f7a66bb44be2f98e16",
+  "authorization": "owner_delegated_quality_review_and_publication",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/ashlon-jackson/portrait.png",
+  "original_bytes_preserved": true,
+  "github_master_path": "portrait-masters/67147-ashlon-jackson-23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d.png",
+  "github_blob_sha": "69c012d02a70979786b16ad868d283ae22509ed3"
+}
