@@ -6,19 +6,19 @@
   "error_code": null,
   "attempt_count": 2,
   "first_seen_at": "2026-09-18T20:06:00Z",
-  "last_attempt_at": "2026-09-19T19:37:00Z",
+  "last_attempt_at": "2026-09-19T19:41:41Z",
   "next_retry_at": null,
   "preserved_master_id": "portrait-masters/67043-antonia-delaere-93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858.png",
   "source_sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
   "source_generation_id": "3e992e02-cd99-4840-b5a7-68af5c1ab4b4",
-  "source_dimensions": [
-    1225,
-    1284
-  ],
+  "source_dimensions": [1225, 1284],
   "source_bytes": 1573098,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/antonia-delaere/",
-  "public_page_impact": "portrait upload succeeded; public deployment/live verification in progress",
-  "resolution_status": "transport_recovered_upload_succeeded_live_verification_in_progress",
-  "notification_status": "recovery_followup_due",
-  "details": "Root cause isolated: the temporary Google Doc handoff succeeds when the exact runtime file_... reference is passed in both insertInlineImage.uri and image_uris. Using the mounted /mnt/data path had produced BLOCKED_FILE_REFERENCE. Exact sourceUri handoff then completed uploader validation and GitHub master preservation successfully in upload run 35464903578. Live verification run 35464912886 is still in progress."
+  "public_page_impact": "recovered; exact approved portrait is live and verified",
+  "resolution_status": "resolved_live_verified",
+  "notification_status": "recovery_followup_reported",
+  "upload_run_id": 35464903578,
+  "publication_run_id": 35464912886,
+  "evidence_artifact_id": 10591230275,
+  "details": "Root cause isolated and fixed: the temporary Google Doc handoff succeeds when the exact runtime file_... reference is passed in both insertInlineImage.uri and image_uris. The exact sourceUri handoff completed uploader validation, GitHub master preservation, deployment, and Chromium/WebKit public verification. Live SHA256 and dimensions match the original."
 }
