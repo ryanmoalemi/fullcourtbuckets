@@ -482,6 +482,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 67147,
+      "slug": "ashlon-jackson",
+      "player_name": "Ashlon Jackson",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/ashlon-jackson/portrait.png",
+      "width": 1147,
+      "height": 1372,
+      "asset_sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1147,
+        "height": 1372,
+        "source_width": 1147,
+        "source_height": 1372,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
