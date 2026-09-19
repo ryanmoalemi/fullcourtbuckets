@@ -1,0 +1,22 @@
+{
+  "player_id": 857,
+  "player_name": "Ashlon Jackson",
+  "slug": "ashlon-jackson",
+  "stage": "master_preservation_and_temporary_doc_handoff",
+  "error_code": "BLOCKED_FILE_REFERENCE",
+  "attempt_count": 1,
+  "first_seen_at": "2026-09-19T21:05:00Z",
+  "last_attempt_at": "2026-09-19T21:05:30Z",
+  "next_retry_at": "2026-09-19T22:06:00Z",
+  "preserved_master_id": null,
+  "source_sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+  "source_generation_id": "9dc88257-085a-4c1e-9dc1-b50c1ec3fd41",
+  "source_dimensions": [1147, 1372],
+  "source_bytes": 1843032,
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/ashlon-jackson/",
+  "public_page_impact": "none; no portrait upload or page publication occurred",
+  "resolution_status": "deferred_capability_retry",
+  "notification_status": "new_error_report_due",
+  "help_needed": false,
+  "details": "The exact runtime-generated file reference was rejected once by Google Drive upload_file with BLOCKED_FILE_REFERENCE. The documented temporary native Google Doc insertInlineImage handoff then used that same exact runtime file reference in both the request uri and image_uris and was also rejected with BLOCKED_FILE_REFERENCE. No URL rewrite, endpoint substitution, copy/rename bypass, mounted-path substitution, recompression, screenshot, or base64 transport was attempted. The generated source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject and uniform-format review before transport."
+}
