@@ -1,6 +1,17 @@
 {
-  "request_id": "67043-93afdad4f6cf-recovery-20260919T1937Z",
-  "slug": "antonia-delaere",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858"
+  "request_id": "67147-23db58ae84a6-upload-20260919T2221Z",
+  "player_id": 67147,
+  "player_name": "Ashlon Jackson",
+  "slug": "ashlon-jackson",
+  "approved": true,
+  "sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+  "bytes": 1843032,
+  "dimensions": [
+    1147,
+    1372
+  ],
+  "generation_id": "9dc88257-085a-4c1e-9dc1-b50c1ec3fd41",
+  "master_reference": "runtime:file_00000000073881f7a66bb44be2f98e16",
+  "authorization": "owner_delegated_quality_review_and_publication",
+  "download_url": "https://oaisdmntprsouthcentralus.blob.core.windows.net/files/00000000-0738-81f7-a66b-b44be2f98e16/raw?se=2026-09-19T22%3A25%3A03Z&sp=r&sv=2026-02-06&sr=b&scid=01a0bbc0-a614-7e6e-a518-6ecc624c0e80&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-19T19%3A18%3A53Z&ske=2026-09-20T19%3A18%3A53Z&sks=b&skv=2026-02-06&sig=WihpX1wS6fopYT1uW7zC3hQyLY4h9fYPAGncHUNCdbk%3D"
 }
