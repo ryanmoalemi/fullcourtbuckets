@@ -6,7 +6,32 @@
   "profile_path": "data/wnba/players/aari-mcdonald.json",
   "destination": "images/players/aari-mcdonald/portrait.png",
   "permanent_master_pattern": "portrait-masters/627-aari-mcdonald-<sha256>.png",
-  "status": "mapped_before_generation",
+  "status": "parked_after_two_likeness_failures",
   "mapped_at": "2026-09-19T20:03:35Z",
-  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Aari McDonald; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side."
+  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Aari McDonald; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "5ff68995-0cb9-458e-8fd1-3e5f822ab312",
+      "runtime_file_id": "file_00000000d8ac8230a2ad3a6db4322026",
+      "sha256": "77cf0ddb928f1946a70c828d24ab0cda0de3748c7c02dec6864b949f7df626b4",
+      "dimensions": [1293, 1217],
+      "bytes": 1293659,
+      "format_checks_passed": true,
+      "disposition": "rejected_wrong_subject_identity"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "d6d921fa-76a6-4220-83c0-44811ba235b0",
+      "runtime_file_id": "file_0000000046788230ab2290f8196e2e0d",
+      "sha256": "77a83619c6d956816a2319748fce9490f3f7f36e4a69f10573ccf6ef452e866e",
+      "dimensions": [1212, 1297],
+      "bytes": 1587750,
+      "format_checks_passed": true,
+      "disposition": "rejected_insufficient_recognizable_likeness"
+    }
+  ],
+  "reference_review": "Compared against the official WNBA Aari McDonald profile/headshot. Neither generated face met the recognizable-likeness gate. No upload or publication was attempted.",
+  "live_page_changed": false,
+  "retry_after_other_queue": true
 }
