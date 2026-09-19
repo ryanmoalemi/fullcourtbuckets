@@ -3,7 +3,7 @@
   "player_name": "Ashten Prechtel",
   "slug": "ashten-prechtel",
   "destination": "images/players/ashten-prechtel/portrait.png",
-  "stage": "claimed_pre_generation",
+  "stage": "generated_transport_blocked",
   "source": "data/wnba/players/ashten-prechtel.json",
   "active_in_provider_feed": true,
   "worker": "portrait-rollout",
@@ -11,5 +11,27 @@
   "lease_expires_at": "2026-09-20T00:27:00Z",
   "owner_delegated_publication": true,
   "new_generation_minimum": [1024, 1024],
-  "artwork_requirements": "Exactly one recognizable Ashten Prechtel portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup."
+  "artwork_requirements": "Exactly one recognizable Ashten Prechtel portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup.",
+  "generation_id": "b3bbaf66-9d95-4746-a0bf-83bbe822647a",
+  "runtime_file_reference": "file_0000000029dc82308386a053b5e7a11f",
+  "source_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+  "source_bytes": 2196715,
+  "dimensions": [1183, 1329],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "quality_review": {
+    "format_ok": true,
+    "resolution_ok": true,
+    "transparency_ok": true,
+    "anatomy_ok": true,
+    "single_subject_ok": true,
+    "uniform_brief_ok": true,
+    "likeness_reviewed_against_public_headshots": true
+  },
+  "drive_master_file_id": null,
+  "temporary_doc_id": "15htcLhZ8L6YQepAJljpiPKNO2znU6Fi94q3ZYAoMSKs",
+  "publication_status": "not_uploaded",
+  "incident": "content/portrait-recovery-incidents/ashten-prechtel.json",
+  "public_page_changed": false
 }
