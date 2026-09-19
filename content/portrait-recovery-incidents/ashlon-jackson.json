@@ -16,7 +16,7 @@
   "affected_live_page": "https://fullcourtbuckets.com/wnba/ashlon-jackson/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
   "resolution_status": "deferred_capability_retry",
-  "notification_status": "new_error_report_due",
+  "notification_status": "reported",
   "help_needed": false,
   "details": "The exact runtime-generated file reference was rejected once by Google Drive upload_file with BLOCKED_FILE_REFERENCE. The documented temporary native Google Doc insertInlineImage handoff then used that same exact runtime file reference in both the request uri and image_uris and was also rejected with BLOCKED_FILE_REFERENCE. No URL rewrite, endpoint substitution, copy/rename bypass, mounted-path substitution, recompression, screenshot, or base64 transport was attempted. The generated source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject and uniform-format review before transport."
 }
