@@ -33,7 +33,9 @@
     {"player_id":757,"slug":"aneesah-morrow","sha256":"918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad","url":"https://fullcourtbuckets.com/wnba/aneesah-morrow/?v=918a939b360b","upload_run_id":35278599939,"publication_run_id":35278619171,"evidence_artifact_id":10521259189,"receipt":"content/portrait-upload-receipts/aneesah-morrow.json","master_drive_file_id":"14fU8rsA03Vnj6QQCtZLie1oDIYBmzi5d"},
     {"player_id":67043,"slug":"antonia-delaere","sha256":"93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858","url":"https://fullcourtbuckets.com/wnba/antonia-delaere/?v=93afdad4f6cf","upload_run_id":35464903578,"publication_run_id":35464912886,"evidence_artifact_id":10591230275,"receipt":"content/portrait-upload-receipts/antonia-delaere.json","github_master_path":"portrait-masters/67043-antonia-delaere-93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858.png"}
   ],
-  "generated_pending_publication": [],
+  "generated_pending_publication": [
+    {"player_id":857,"slug":"ashlon-jackson","generation_id":"9dc88257-085a-4c1e-9dc1-b50c1ec3fd41","sha256":"23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d","bytes":1843032,"dimensions":[1147,1372],"runtime_file_reference":"file_00000000073881f7a66bb44be2f98e16","transport_status":"blocked","incident":"content/portrait-recovery-incidents/ashlon-jackson.json","public_page_changed":false}
+  ],
   "parked": [
     {"player_id":721,"slug":"angel-reese","reason":"Protected historical live portrait remains; two replacement attempts rejected for likeness.","retry_after_other_queue":true},
     {"player_id":719,"slug":"cameron-brink","reason":"Two attempts rejected for wrong subject/likeness.","retry_after_other_queue":true},
@@ -57,9 +59,11 @@
     "original_hashes_match_live_files": true,
     "template_changed": false,
     "originals_resized_or_recompressed": false,
-    "note": "Thirteen full-quality portraits are newly verified since renewed authorization. Antonia Delaere recovered from the file-reference blocker and passed six public Chromium/WebKit checks with exact source hash and dimensions. Aari McDonald and Ariel Atkins were each parked after two wrong/insufficient-likeness attempts; no live page changed for either."
+    "note": "Thirteen full-quality portraits remain newly verified since renewed authorization. Ashlon Jackson generated source passed local PNG/resolution/transparency/anatomy/single-subject/uniform checks but was not published because both exact-runtime-reference transport paths returned BLOCKED_FILE_REFERENCE."
   },
-  "blocked": [],
+  "blocked": [
+    {"player_id":857,"slug":"ashlon-jackson","stage":"master_preservation_and_temporary_doc_handoff","error_code":"BLOCKED_FILE_REFERENCE","next_retry_at":"2026-09-19T22:06:00Z","incident":"content/portrait-recovery-incidents/ashlon-jackson.json","public_page_changed":false}
+  ],
   "resolved_blockers": [
     {"player_id":552,"slug":"arike-ogunbowale","recovery_verified":true,"upload_run_id":35191669179,"publication_run_id":35191684655},
     {"player_id":533,"slug":"kelsey-mitchell","recovery_verified":true,"upload_run_id":35204510776,"publication_run_id":35204525878},
@@ -75,20 +79,18 @@
   ],
   "selection": "Reconcile due preserved retries first; then replace undersized legacy active-player portraits; then other active players, prominent retired players and remaining archive. Park only a player after two poor-likeness attempts.",
   "priority_next_candidates": [
-    {"player_id":67147,"slug":"ashlon-jackson","action":"generate and quality-check next eligible active-player portrait"}
+    {"player_id":857,"slug":"ashlon-jackson","action":"retry the accepted generated source transport at or after next_retry_at; do not regenerate for this transport failure"}
   ],
   "do_not_regenerate": [
-    "caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas","aneesah-morrow","angela-dugalic","anneli-maley","antonia-delaere","aari-mcdonald","ariel-atkins"
+    "caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas","aneesah-morrow","angela-dugalic","anneli-maley","antonia-delaere","aari-mcdonald","ariel-atkins","ashlon-jackson"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-19T20:03:35Z",
+    "timestamp_utc": "2026-09-19T21:06:00Z",
     "players_touched": [
-      {"player_id":67043,"slug":"antonia-delaere","result":"recovered_and_live_verified","live_page_changed":true},
-      {"player_id":627,"slug":"aari-mcdonald","result":"parked_after_two_likeness_failures","live_page_changed":false},
-      {"player_id":544,"slug":"ariel-atkins","result":"parked_after_two_likeness_failures","live_page_changed":false}
+      {"player_id":857,"slug":"ashlon-jackson","result":"generated_quality_pass_transport_blocked","live_page_changed":false}
     ],
-    "newly_verified": 1,
+    "newly_verified": 0,
     "owner_notification_due": true
   },
-  "scope_note": "Antonia Delaere is now fully live-verified with exact original bytes and six browser checks. The transport recovery procedure is confirmed working. Aari McDonald and Ariel Atkins each failed the likeness gate twice and were parked without publication, so their existing public pages are unchanged. Next eligible active candidate is Ashlon Jackson. Sports data and the approved shared layout remain unchanged."
+  "scope_note": "Ashlon Jackson's accepted new source is 1147x1372 RGBA PNG with exact SHA-256 23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d. Drive upload_file rejected the exact runtime file reference once, and the documented temporary Google Doc handoff using the same exact runtime reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. No upload or live page change occurred. The rollout is waiting for the due recovery check rather than generating more unusable work in this run. Sports data and the approved shared layout remain unchanged."
 }
