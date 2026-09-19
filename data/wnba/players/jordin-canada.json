@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -520,10 +520,10 @@
       "minutes": "21",
       "pts": 5.0,
       "ast": 1.0,
-      "reb": null,
+      "reb": 0.0,
       "stl": 2.0,
-      "blk": null,
-      "turnover": null
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25050,
@@ -561,7 +561,7 @@
       "pts": 16.0,
       "ast": 10.0,
       "reb": 4.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
       "turnover": 2.0
     },
@@ -601,7 +601,7 @@
       "pts": 11.0,
       "ast": 6.0,
       "reb": 1.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 2.0,
       "turnover": 5.0
     },
@@ -642,7 +642,7 @@
       "ast": 4.0,
       "reb": 4.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -722,7 +722,7 @@
       "ast": 11.0,
       "reb": 5.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -762,8 +762,8 @@
       "ast": 5.0,
       "reb": 6.0,
       "stl": 3.0,
-      "blk": null,
-      "turnover": null
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25014,
@@ -806,7 +806,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

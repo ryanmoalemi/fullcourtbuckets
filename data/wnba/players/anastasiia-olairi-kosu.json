@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -134,6 +134,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25060,
+      "player_id": 739,
+      "date": "2026-09-18T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 81,
+      "away_score": 93,
+      "minutes": "0",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    },
+    {
       "game_id": 25050,
       "player_id": 739,
       "date": "2026-08-30T19:00:00.000Z",
@@ -166,12 +206,12 @@
       "home_score": 89,
       "away_score": 81,
       "minutes": "1",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25035,
@@ -206,12 +246,12 @@
       "home_score": 66,
       "away_score": 80,
       "minutes": "7",
-      "pts": null,
+      "pts": 0.0,
       "ast": 1.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25025,
@@ -246,12 +286,12 @@
       "home_score": 84,
       "away_score": 94,
       "minutes": "2",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25021,
@@ -334,7 +374,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -201,8 +201,8 @@
       "pts": 12.0,
       "ast": 4.0,
       "reb": 1.0,
-      "stl": null,
-      "blk": null,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -242,7 +242,7 @@
       "ast": 3.0,
       "reb": 4.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 4.0
     },
     {
@@ -282,7 +282,7 @@
       "ast": 3.0,
       "reb": 3.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -401,7 +401,7 @@
       "pts": 19.0,
       "ast": 6.0,
       "reb": 1.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 2.0,
       "turnover": 3.0
     },
@@ -441,52 +441,12 @@
       "pts": 20.0,
       "ast": 3.0,
       "reb": 3.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
       "turnover": 2.0
-    },
-    {
-      "game_id": 25005,
-      "player_id": 640,
-      "date": "2026-08-14T00:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_score": 85,
-      "away_score": 81,
-      "minutes": "33",
-      "pts": 28.0,
-      "ast": 3.0,
-      "reb": 3.0,
-      "stl": 1.0,
-      "blk": 1.0,
-      "turnover": 4.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

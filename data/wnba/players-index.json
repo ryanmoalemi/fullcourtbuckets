@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "players": [
     {
       "id": 345,
@@ -62,8 +62,15 @@
       "id": 627,
       "slug": "aari-mcdonald",
       "name": "Aari McDonald",
-      "active_in_provider_feed": false,
-      "current_team": null,
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
       "path": "/wnba/aari-mcdonald/",
       "data_path": "/data/wnba/players/aari-mcdonald.json"
     },

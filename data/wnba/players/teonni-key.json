@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,28 +47,68 @@
         "name": "Tempo",
         "conference": null
       },
-      "games_played": 35,
-      "min": 10.0,
-      "fgm": 0.8,
-      "fga": 2.14,
-      "fg_pct": 37.3,
-      "fg3m": 0.09,
-      "fg3a": 0.54,
+      "games_played": 36,
+      "min": 10.28,
+      "fgm": 0.81,
+      "fga": 2.11,
+      "fg_pct": 38.2,
+      "fg3m": 0.08,
+      "fg3a": 0.53,
       "fg3_pct": 15.8,
-      "ftm": 0.29,
-      "fta": 0.54,
-      "ft_pct": 52.6,
+      "ftm": 0.28,
+      "fta": 0.56,
+      "ft_pct": 50.0,
       "oreb": null,
       "dreb": null,
-      "reb": 1.83,
-      "ast": 0.49,
-      "stl": 0.4,
-      "blk": 0.51,
-      "turnover": 0.51,
+      "reb": 1.86,
+      "ast": 0.47,
+      "stl": 0.42,
+      "blk": 0.5,
+      "turnover": 0.53,
       "pts": 1.97
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 25059,
+      "player_id": 67171,
+      "date": "2026-09-18T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 85,
+      "away_score": 103,
+      "minutes": "20",
+      "pts": 2.0,
+      "ast": 0.0,
+      "reb": 3.0,
+      "stl": 1.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
     {
       "game_id": 25049,
       "player_id": 67171,
@@ -103,11 +143,11 @@
       "away_score": 69,
       "minutes": "20",
       "pts": 5.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 8.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
-      "turnover": null
+      "turnover": 0.0
     },
     {
       "game_id": 25046,
@@ -145,7 +185,7 @@
       "pts": 3.0,
       "ast": 3.0,
       "reb": 6.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
       "turnover": 1.0
     },
@@ -183,7 +223,7 @@
       "away_score": 78,
       "minutes": "17",
       "pts": 2.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 1.0,
       "stl": 1.0,
       "blk": 1.0,
@@ -263,11 +303,11 @@
       "away_score": 79,
       "minutes": "13",
       "pts": 4.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 1.0,
       "stl": 1.0,
-      "blk": null,
-      "turnover": null
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25020,
@@ -306,7 +346,7 @@
       "ast": 1.0,
       "reb": 2.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 1.0
     },
     {
@@ -350,7 +390,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

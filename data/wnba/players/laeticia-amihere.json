@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Valkyries",
         "conference": "Western Conference"
       },
-      "games_played": 35,
-      "min": 11.51,
-      "fgm": 1.29,
-      "fga": 2.66,
-      "fg_pct": 48.4,
-      "fg3m": 0.14,
-      "fg3a": 0.37,
-      "fg3_pct": 38.5,
-      "ftm": 0.69,
-      "fta": 1.29,
-      "ft_pct": 53.3,
+      "games_played": 36,
+      "min": 11.81,
+      "fgm": 1.42,
+      "fga": 2.86,
+      "fg_pct": 49.5,
+      "fg3m": 0.19,
+      "fg3a": 0.47,
+      "fg3_pct": 41.2,
+      "ftm": 0.75,
+      "fta": 1.39,
+      "ft_pct": 54.0,
       "oreb": null,
       "dreb": null,
-      "reb": 3.09,
-      "ast": 0.97,
-      "stl": 0.43,
-      "blk": 0.74,
-      "turnover": 0.8,
-      "pts": 3.4
+      "reb": 3.11,
+      "ast": 1.03,
+      "stl": 0.47,
+      "blk": 0.78,
+      "turnover": 0.81,
+      "pts": 3.78
     },
     {
       "player_id": 690,
@@ -198,6 +198,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25061,
+      "player_id": 690,
+      "date": "2026-09-19T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "home_score": 82,
+      "away_score": 66,
+      "minutes": "22",
+      "pts": 17.0,
+      "ast": 3.0,
+      "reb": 4.0,
+      "stl": 2.0,
+      "blk": 2.0,
+      "turnover": 1.0
+    },
+    {
       "game_id": 25052,
       "player_id": 690,
       "date": "2026-08-30T23:00:00.000Z",
@@ -234,7 +274,7 @@
       "ast": 1.0,
       "reb": 2.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 3.0
     },
     {
@@ -270,12 +310,12 @@
       "home_score": 60,
       "away_score": 79,
       "minutes": "2",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25040,
@@ -313,7 +353,7 @@
       "pts": 4.0,
       "ast": 1.0,
       "reb": 3.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 2.0,
       "turnover": 1.0
     },
@@ -350,10 +390,10 @@
       "home_score": 66,
       "away_score": 80,
       "minutes": "5",
-      "pts": null,
-      "ast": null,
+      "pts": 0.0,
+      "ast": 0.0,
       "reb": 2.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
       "turnover": 1.0
     },
@@ -394,8 +434,8 @@
       "ast": 1.0,
       "reb": 6.0,
       "stl": 1.0,
-      "blk": null,
-      "turnover": null
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25021,
@@ -470,15 +510,15 @@
       "home_score": 78,
       "away_score": 70,
       "minutes": "3",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

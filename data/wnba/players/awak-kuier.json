@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -265,7 +265,7 @@
       "pts": 7.0,
       "ast": 1.0,
       "reb": 5.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 6.0,
       "turnover": 3.0
     },
@@ -305,9 +305,9 @@
       "pts": 4.0,
       "ast": 1.0,
       "reb": 8.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 3.0,
-      "turnover": null
+      "turnover": 0.0
     },
     {
       "game_id": 25038,
@@ -343,7 +343,7 @@
       "away_score": 78,
       "minutes": "34",
       "pts": 12.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 12.0,
       "stl": 3.0,
       "blk": 5.0,
@@ -427,7 +427,7 @@
       "reb": 8.0,
       "stl": 1.0,
       "blk": 7.0,
-      "turnover": null
+      "turnover": 0.0
     },
     {
       "game_id": 25015,
@@ -463,54 +463,14 @@
       "away_score": 70,
       "minutes": "20",
       "pts": 3.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 7.0,
       "stl": 1.0,
       "blk": 3.0,
-      "turnover": null
-    },
-    {
-      "game_id": 25007,
-      "player_id": 621,
-      "date": "2026-08-14T23:30:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "home_score": 98,
-      "away_score": 87,
-      "minutes": "28",
-      "pts": 8.0,
-      "ast": 4.0,
-      "reb": 6.0,
-      "stl": null,
-      "blk": 3.0,
-      "turnover": 2.0
+      "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -42,6 +42,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 627,
+      "slug": "aari-mcdonald",
+      "player_name": "Aari McDonald",
+      "listed_active": true,
+      "profile_path": "/wnba/aari-mcdonald/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 556,
       "slug": "alanna-smith",
       "player_name": "Alanna Smith",
@@ -1766,15 +1775,6 @@
       "player_name": "A'dia Mathies",
       "listed_active": false,
       "profile_path": "/wnba/adia-mathies/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 627,
-      "slug": "aari-mcdonald",
-      "player_name": "Aari McDonald",
-      "listed_active": false,
-      "profile_path": "/wnba/aari-mcdonald/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

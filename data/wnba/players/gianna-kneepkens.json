@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -102,12 +102,12 @@
       "home_score": 103,
       "away_score": 59,
       "minutes": "20",
-      "pts": null,
+      "pts": 0.0,
       "ast": 1.0,
       "reb": 2.0,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25053,
@@ -143,11 +143,11 @@
       "away_score": 71,
       "minutes": "12",
       "pts": 2.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 3.0,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25045,
@@ -183,11 +183,11 @@
       "away_score": 91,
       "minutes": "14",
       "pts": 5.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 2.0,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25040,
@@ -222,7 +222,7 @@
       "home_score": 64,
       "away_score": 89,
       "minutes": "16",
-      "pts": null,
+      "pts": 0.0,
       "ast": 1.0,
       "reb": 3.0,
       "stl": 1.0,
@@ -262,12 +262,12 @@
       "home_score": 87,
       "away_score": 81,
       "minutes": "8",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25029,
@@ -306,7 +306,7 @@
       "ast": 1.0,
       "reb": 3.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 1.0
     },
     {
@@ -343,11 +343,11 @@
       "away_score": 78,
       "minutes": "11",
       "pts": 2.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 1.0,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25016,
@@ -382,12 +382,12 @@
       "home_score": 85,
       "away_score": 77,
       "minutes": "2",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25009,
@@ -422,15 +422,15 @@
       "home_score": 75,
       "away_score": 82,
       "minutes": "4",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

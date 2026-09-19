@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Mercury",
         "conference": "Western Conference"
       },
-      "games_played": 38,
-      "min": 15.05,
-      "fgm": 1.74,
-      "fga": 4.58,
-      "fg_pct": 37.9,
-      "fg3m": 0.82,
-      "fg3a": 2.32,
-      "fg3_pct": 35.2,
-      "ftm": 0.63,
-      "fta": 0.71,
-      "ft_pct": 88.9,
+      "games_played": 39,
+      "min": 15.1,
+      "fgm": 1.77,
+      "fga": 4.64,
+      "fg_pct": 38.1,
+      "fg3m": 0.85,
+      "fg3a": 2.33,
+      "fg3_pct": 36.3,
+      "ftm": 0.72,
+      "fta": 0.79,
+      "ft_pct": 90.3,
       "oreb": null,
       "dreb": null,
       "reb": 1.08,
-      "ast": 1.34,
-      "stl": 0.45,
-      "blk": 0.11,
-      "turnover": 0.82,
-      "pts": 4.92
+      "ast": 1.33,
+      "stl": 0.44,
+      "blk": 0.1,
+      "turnover": 0.87,
+      "pts": 5.1
     },
     {
       "player_id": 766,
@@ -134,6 +134,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25057,
+      "player_id": 766,
+      "date": "2026-09-18T02:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 31,
+        "full_name": "Fire",
+        "abbreviation": "POR",
+        "city": "",
+        "name": "Fire",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "home_score": 91,
+      "away_score": 94,
+      "minutes": "17",
+      "pts": 12.0,
+      "ast": 1.0,
+      "reb": 1.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 3.0
+    },
+    {
       "game_id": 25049,
       "player_id": 766,
       "date": "2026-08-30T02:00:00.000Z",
@@ -168,10 +208,10 @@
       "minutes": "21",
       "pts": 11.0,
       "ast": 3.0,
-      "reb": null,
+      "reb": 0.0,
       "stl": 3.0,
-      "blk": null,
-      "turnover": null
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25043,
@@ -210,7 +250,7 @@
       "ast": 1.0,
       "reb": 1.0,
       "stl": 3.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 1.0
     },
     {
@@ -248,10 +288,10 @@
       "minutes": "10",
       "pts": 3.0,
       "ast": 1.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25030,
@@ -288,9 +328,9 @@
       "minutes": "12",
       "pts": 8.0,
       "ast": 1.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -329,12 +369,12 @@
       "pts": 3.0,
       "ast": 1.0,
       "reb": 1.0,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

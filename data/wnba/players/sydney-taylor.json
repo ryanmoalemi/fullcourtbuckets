@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Sky",
         "conference": "Eastern Conference"
       },
-      "games_played": 33,
-      "min": 20.3,
-      "fgm": 4.88,
-      "fga": 11.21,
-      "fg_pct": 43.5,
+      "games_played": 34,
+      "min": 20.29,
+      "fgm": 4.85,
+      "fga": 11.24,
+      "fg_pct": 43.2,
       "fg3m": 2.0,
-      "fg3a": 5.94,
-      "fg3_pct": 33.7,
+      "fg3a": 5.97,
+      "fg3_pct": 33.5,
       "ftm": 2.06,
-      "fta": 2.55,
-      "ft_pct": 81.0,
+      "fta": 2.59,
+      "ft_pct": 79.5,
       "oreb": null,
       "dreb": null,
-      "reb": 1.55,
-      "ast": 1.76,
-      "stl": 0.73,
+      "reb": 1.5,
+      "ast": 1.82,
+      "stl": 0.71,
       "blk": 0.21,
-      "turnover": 1.48,
-      "pts": 13.82
+      "turnover": 1.5,
+      "pts": 13.76
     }
   ],
   "recent_completed_games": [
@@ -104,9 +104,9 @@
       "minutes": "20",
       "pts": 12.0,
       "ast": 4.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -145,8 +145,8 @@
       "pts": 13.0,
       "ast": 1.0,
       "reb": 3.0,
-      "stl": null,
-      "blk": null,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -184,10 +184,10 @@
       "minutes": "20",
       "pts": 4.0,
       "ast": 4.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
     },
     {
       "game_id": 25032,
@@ -224,9 +224,9 @@
       "minutes": "17",
       "pts": 4.0,
       "ast": 2.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 1.0
     },
     {
@@ -266,7 +266,7 @@
       "ast": 1.0,
       "reb": 2.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -306,7 +306,7 @@
       "ast": 3.0,
       "reb": 2.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -350,7 +350,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

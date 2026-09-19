@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -166,7 +166,7 @@
       "home_score": 97,
       "away_score": 77,
       "minutes": "26",
-      "pts": null,
+      "pts": 0.0,
       "ast": 2.0,
       "reb": 2.0,
       "stl": 1.0,
@@ -209,7 +209,7 @@
       "pts": 6.0,
       "ast": 2.0,
       "reb": 3.0,
-      "stl": null,
+      "stl": 0.0,
       "blk": 1.0,
       "turnover": 3.0
     },
@@ -248,10 +248,10 @@
       "minutes": "21",
       "pts": 10.0,
       "ast": 4.0,
-      "reb": null,
+      "reb": 0.0,
       "stl": 1.0,
       "blk": 2.0,
-      "turnover": null
+      "turnover": 0.0
     },
     {
       "game_id": 25036,
@@ -287,10 +287,10 @@
       "away_score": 78,
       "minutes": "19",
       "pts": 2.0,
-      "ast": null,
+      "ast": 0.0,
       "reb": 1.0,
       "stl": 2.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -329,8 +329,8 @@
       "pts": 2.0,
       "ast": 1.0,
       "reb": 2.0,
-      "stl": null,
-      "blk": null,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 1.0
     },
     {
@@ -368,9 +368,9 @@
       "minutes": "15",
       "pts": 3.0,
       "ast": 2.0,
-      "reb": null,
-      "stl": null,
-      "blk": null,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -452,49 +452,9 @@
       "stl": null,
       "blk": null,
       "turnover": null
-    },
-    {
-      "game_id": 25005,
-      "player_id": 765,
-      "date": "2026-08-14T00:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_score": 85,
-      "away_score": 81,
-      "minutes": "0",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

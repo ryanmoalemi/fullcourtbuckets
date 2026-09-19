@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-18T11:25:44+00:00",
+  "checked_at": "2026-09-19T11:23:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Fever",
         "conference": "Eastern Conference"
       },
-      "games_played": 36,
-      "min": 31.28,
+      "games_played": 37,
+      "min": 31.35,
       "fgm": 7.19,
-      "fga": 15.78,
+      "fga": 15.76,
       "fg_pct": 45.6,
-      "fg3m": 2.94,
+      "fg3m": 2.92,
       "fg3a": 7.89,
-      "fg3_pct": 37.3,
-      "ftm": 5.14,
-      "fta": 6.17,
-      "ft_pct": 83.3,
+      "fg3_pct": 37.0,
+      "ftm": 5.32,
+      "fta": 6.32,
+      "ft_pct": 84.2,
       "oreb": null,
       "dreb": null,
-      "reb": 3.86,
-      "ast": 8.39,
-      "stl": 0.97,
-      "blk": 0.5,
-      "turnover": 4.61,
-      "pts": 22.47
+      "reb": 3.92,
+      "ast": 8.54,
+      "stl": 0.95,
+      "blk": 0.49,
+      "turnover": 4.65,
+      "pts": 22.62
     },
     {
       "player_id": 708,
@@ -166,6 +166,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25059,
+      "player_id": 708,
+      "date": "2026-09-18T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 85,
+      "away_score": 103,
+      "minutes": "34",
+      "pts": 28.0,
+      "ast": 14.0,
+      "reb": 6.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 6.0
+    },
+    {
       "game_id": 25045,
       "player_id": 708,
       "date": "2026-08-28T23:30:00.000Z",
@@ -202,7 +242,7 @@
       "ast": 12.0,
       "reb": 5.0,
       "stl": 3.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 5.0
     },
     {
@@ -242,7 +282,7 @@
       "ast": 10.0,
       "reb": 3.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 5.0
     },
     {
@@ -282,7 +322,7 @@
       "ast": 7.0,
       "reb": 4.0,
       "stl": 1.0,
-      "blk": null,
+      "blk": 0.0,
       "turnover": 2.0
     },
     {
@@ -361,8 +401,8 @@
       "pts": 24.0,
       "ast": 7.0,
       "reb": 3.0,
-      "stl": null,
-      "blk": null,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 7.0
     },
     {
@@ -401,52 +441,12 @@
       "pts": 26.0,
       "ast": 9.0,
       "reb": 3.0,
-      "stl": null,
-      "blk": null,
+      "stl": 0.0,
+      "blk": 0.0,
       "turnover": 5.0
-    },
-    {
-      "game_id": 25007,
-      "player_id": 708,
-      "date": "2026-08-14T23:30:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "home_score": 98,
-      "away_score": 87,
-      "minutes": "34",
-      "pts": 29.0,
-      "ast": 10.0,
-      "reb": 3.0,
-      "stl": 1.0,
-      "blk": null,
-      "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-14",
+  "game_log_window_start": "2026-08-15",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
