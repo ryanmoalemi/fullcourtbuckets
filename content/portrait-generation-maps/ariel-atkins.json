@@ -6,7 +6,32 @@
   "profile_path": "data/wnba/players/ariel-atkins.json",
   "destination": "images/players/ariel-atkins/portrait.png",
   "permanent_master_pattern": "portrait-masters/544-ariel-atkins-<sha256>.png",
-  "status": "mapped_before_generation",
+  "status": "parked_after_two_likeness_failures",
   "mapped_at": "2026-09-19T20:03:35Z",
-  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Ariel Atkins; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side."
+  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Ariel Atkins; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "79576613-a47e-47b5-9323-ebde3c14345d",
+      "runtime_file_id": "file_00000000b66c8230914c5485daac0eb5",
+      "sha256": "cfdd93943dea8cd082beebd6f7ac6d0627d24c9536d14eda158d6508d697268a",
+      "dimensions": [1120, 1404],
+      "bytes": 1600219,
+      "format_checks_passed": true,
+      "disposition": "rejected_wrong_subject_identity"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "ca2451b6-8c98-42f8-87b6-c165cec53f50",
+      "runtime_file_id": "file_00000000341c82309a1aa2885e2f2c4d",
+      "sha256": "8bff9d02dc9f283c0043172a4f3b52ca3e1a77a044de1e36586ae25b52561ef1",
+      "dimensions": [1148, 1371],
+      "bytes": 1415350,
+      "format_checks_passed": true,
+      "disposition": "rejected_wrong_subject_identity"
+    }
+  ],
+  "reference_review": "Compared against the official WNBA Ariel Atkins profile/headshot. Both generations depicted a materially different person, so neither met the recognizable-likeness gate. No upload or publication was attempted.",
+  "live_page_changed": false,
+  "retry_after_other_queue": true
 }
