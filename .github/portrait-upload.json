@@ -1,17 +1,6 @@
 {
   "request_id": "67043-93afdad4f6cf-recovery-20260919T1937Z",
-  "player_id": 67043,
-  "player_name": "Antonia Delaere",
   "slug": "antonia-delaere",
-  "approved": true,
-  "sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
-  "bytes": 1573098,
-  "dimensions": [
-    1225,
-    1284
-  ],
-  "generation_id": "3e992e02-cd99-4840-b5a7-68af5c1ab4b4",
-  "master_reference": "runtime:file_00000000dcfc81f6b017e58213ab0634",
-  "authorization": "owner_delegated_quality_review_and_publication",
-  "download_url": "https://oaisdmntpreastus2.blob.core.windows.net/files/00000000-dcfc-81f6-b017-e58213ab0634/raw?se=2026-09-19T19%3A41%3A43Z&sp=r&sv=2026-02-06&sr=b&scid=01a0bb2b-1e44-7207-a631-f516fc627248&skoid=4b04981f-b1dc-41e0-a770-8ce0d5c8f411&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-19T15%3A09%3A34Z&ske=2026-09-20T15%3A09%3A34Z&sks=b&skv=2026-02-06&sig=jpc62go4/LN341MsajFstEC/CsXHVEcf9sHnKu/kB60%3D"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858"
 }
