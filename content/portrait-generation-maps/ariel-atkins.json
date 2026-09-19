@@ -1,0 +1,12 @@
+{
+  "player_id": 544,
+  "player_name": "Ariel Atkins",
+  "slug": "ariel-atkins",
+  "provider": "BALLDONTLIE",
+  "profile_path": "data/wnba/players/ariel-atkins.json",
+  "destination": "images/players/ariel-atkins/portrait.png",
+  "permanent_master_pattern": "portrait-masters/544-ariel-atkins-<sha256>.png",
+  "status": "mapped_before_generation",
+  "mapped_at": "2026-09-19T20:03:35Z",
+  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Ariel Atkins; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side."
+}
