@@ -41,5 +41,13 @@
     "repository_path_created": false,
     "note": "No binary handoff was created. The connected create_blob action exposes only inline content plus encoding and no file-reference parameter; the original PNG remains available only in the generating runtime for this run. No base64 chunking, URL rewriting, screenshot, recompression, or regeneration was used."
   },
-  "details": "A newly generated Awak Kuier source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format, and likeness review against current public headshots. Google Drive upload_file rejected the exact fresh runtime file reference with BLOCKED_FILE_REFERENCE. A fresh native Google Doc insertInlineImage using that same exact reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. Per current recovery policy, do not retry this same runtime reference on an hourly timer and do not generate a larger unusable backlog until an authorized byte handoff is available."
+  "drive_file_uri_schema_probe": {
+    "result": "client_schema_rejected",
+    "provider_contacted": false,
+    "error_code": "INVALID_ARGUMENT",
+    "tested_shape": "structured file_uri object containing the exact runtime file id, image/png mime type, and intended filename",
+    "schema_observed": "upload_file validates file_uri as a string even though its description mentions a structured file_uri object",
+    "note": "The structured form was rejected before any Google provider call. Do not repeat it. The previously denied bare runtime file reference also must not be timer-retried."
+  },
+  "details": "A newly generated Awak Kuier source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format, and likeness review against current public headshots. Google Drive upload_file rejected the exact fresh runtime file reference with BLOCKED_FILE_REFERENCE. A fresh native Google Doc insertInlineImage using that same exact reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. A later schema-only distinguishing test confirmed that a manually supplied structured file_uri object is rejected client-side because the live upload_file schema requires a string; no provider request occurred. Per current recovery policy, do not retry this same runtime reference on an hourly timer and do not generate a larger unusable backlog until an authorized byte handoff is available."
 }
