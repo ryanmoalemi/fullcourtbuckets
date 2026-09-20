@@ -62,11 +62,26 @@
     "ChatGPT did not retry, use Docs/sourceUri, write GitHub, or start publication",
     "In-thread recovery for Dearica and DiJonai already forbids Drive/Docs retries; Nneka uses the same GitHub-only drop",
     "Identifiers are not preserved bytes",
-    "Brittney Griner was parked for likeness and has no accepted original"
+    "Brittney Griner was parked for likeness and has no accepted original",
+    "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication."
   ],
   "unknown": [
     "Whether GitHub create_blob accepts whole-file base64 without a file_uri in this ChatGPT run"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not resize or re-export.",
-  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not retry Drive or Docs. Cursor owns portrait-upload.json and live verification. Do not regenerate."
+  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not retry Drive or Docs. Cursor owns portrait-upload.json and live verification. Do not regenerate.",
+  "standing_exception": {
+    "authorized_at": "2026-09-20T23:05:00Z",
+    "scope": "these_three_accepted_originals_only",
+    "chatgpt_may": "write unchanged PNG bytes only to the exact portrait-handoff paths on main via create_blob or create_or_update_file with content+encoding=base64 and no file_uri",
+    "chatgpt_may_not": [
+      "retry Drive upload_file or Docs/sourceUri",
+      "use GitHub file_... / file_uri binding",
+      "write .github/portrait-upload.json",
+      "write images/players or portrait-masters",
+      "run the publisher",
+      "regenerate"
+    ],
+    "future_players": "Drive-first standing rule remains. This exception is recovery-only because Drive connector binding is denied and Cursor cannot fetch ChatGPT-local bytes."
+  }
 }

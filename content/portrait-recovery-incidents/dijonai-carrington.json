@@ -63,11 +63,26 @@
     "Aneesah Morrow class: mounted-path BLOCKED_FILE_REFERENCE can later succeed with the runtime file_... form",
     "Identifiers are not preserved bytes",
     "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved",
-    "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby"
+    "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby",
+    "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication."
   ],
   "unknown": [
     "Whether GitHub create_blob accepts whole-file base64 without a file_uri in the generating ChatGPT run"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
-  "details": "Initial Drive call used mounted_path and returned BLOCKED_FILE_REFERENCE. In-thread recovery now forbids any Drive upload_file retry, including runtime file_..., and Docs/sourceUri. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Cursor owns portrait-upload.json and live verification. Do not regenerate."
+  "details": "Initial Drive call used mounted_path and returned BLOCKED_FILE_REFERENCE. In-thread recovery now forbids any Drive upload_file retry, including runtime file_..., and Docs/sourceUri. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Cursor owns portrait-upload.json and live verification. Do not regenerate.",
+  "standing_exception": {
+    "authorized_at": "2026-09-20T23:05:00Z",
+    "scope": "these_three_accepted_originals_only",
+    "chatgpt_may": "write unchanged PNG bytes only to the exact portrait-handoff paths on main via create_blob or create_or_update_file with content+encoding=base64 and no file_uri",
+    "chatgpt_may_not": [
+      "retry Drive upload_file or Docs/sourceUri",
+      "use GitHub file_... / file_uri binding",
+      "write .github/portrait-upload.json",
+      "write images/players or portrait-masters",
+      "run the publisher",
+      "regenerate"
+    ],
+    "future_players": "Drive-first standing rule remains. This exception is recovery-only because Drive connector binding is denied and Cursor cannot fetch ChatGPT-local bytes."
+  }
 }

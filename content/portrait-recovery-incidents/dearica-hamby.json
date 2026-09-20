@@ -57,12 +57,27 @@
     "No Drive file was created; this is not a Portrait ready handoff",
     "ChatGPT did not retry the blocked reference, use Docs/sourceUri, or start a competing publication path",
     "Identifiers (player/slug/sha256/bytes/dimensions) are not preserved bytes",
-    "BLOCKED_FILE_REFERENCE is not classified as fixed because Chelsea Gray later reached Drive"
+    "BLOCKED_FILE_REFERENCE is not classified as fixed because Chelsea Gray later reached Drive",
+    "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication."
   ],
   "unknown": [
     "Whether the denial happened before Google was contacted",
     "Whether GitHub create_blob accepts whole-file base64 without a file_uri in this ChatGPT run"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 411-dearica-hamby-6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb.png. Do not resize or re-export.",
-  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) into portrait-handoff/411-dearica-hamby-<sha256>.png. Cursor owns portrait-upload.json and live verification. Do not regenerate. Do not block unrelated players."
+  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) into portrait-handoff/411-dearica-hamby-<sha256>.png. Cursor owns portrait-upload.json and live verification. Do not regenerate. Do not block unrelated players.",
+  "standing_exception": {
+    "authorized_at": "2026-09-20T23:05:00Z",
+    "scope": "these_three_accepted_originals_only",
+    "chatgpt_may": "write unchanged PNG bytes only to the exact portrait-handoff paths on main via create_blob or create_or_update_file with content+encoding=base64 and no file_uri",
+    "chatgpt_may_not": [
+      "retry Drive upload_file or Docs/sourceUri",
+      "use GitHub file_... / file_uri binding",
+      "write .github/portrait-upload.json",
+      "write images/players or portrait-masters",
+      "run the publisher",
+      "regenerate"
+    ],
+    "future_players": "Drive-first standing rule remains. This exception is recovery-only because Drive connector binding is denied and Cursor cannot fetch ChatGPT-local bytes."
+  }
 }
