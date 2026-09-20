@@ -4,10 +4,10 @@
   "slug": "ashten-prechtel",
   "stage": "master_preservation_and_temporary_doc_handoff",
   "error_code": "BLOCKED_FILE_REFERENCE",
-  "attempt_count": 2,
+  "attempt_count": 3,
   "first_seen_at": "2026-09-19T22:58:00Z",
-  "last_attempt_at": "2026-09-20T00:04:30Z",
-  "next_retry_at": "2026-09-20T02:04:30Z",
+  "last_attempt_at": "2026-09-20T03:05:00Z",
+  "next_retry_at": "2026-09-20T07:05:00Z",
   "preserved_master_id": null,
   "source_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
   "source_generation_id": "b3bbaf66-9d95-4746-a0bf-83bbe822647a",
@@ -19,6 +19,10 @@
   "resolution_status": "deferred_capability_retry",
   "notification_status": "reported_unchanged",
   "help_needed": false,
-  "temporary_doc_ids": ["15htcLhZ8L6YQepAJljpiPKNO2znU6Fi94q3ZYAoMSKs", "1tOhZKnKjsXYU4apLXupvyJOPZz_YZZslW5__LXp4ix8"],
-  "details": "The generated source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format and likeness review against current public headshots. Google Drive upload_file rejected the exact runtime-generated file reference again when the due retry ran, and a fresh temporary native Google Doc insertInlineImage using that same exact runtime reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression or base64 transport was attempted. Per recovery policy, the denied connector-egress operation is deferred for two hours without regenerating this approved source; unrelated eligible work may continue."
+  "temporary_doc_ids": [
+    "15htcLhZ8L6YQepAJljpiPKNO2znU6Fi94q3ZYAoMSKs",
+    "1tOhZKnKjsXYU4apLXupvyJOPZz_YZZslW5__LXp4ix8",
+    "1zrZ1esXYtjvTafyJkD6-74y13lTsFFSEKhM9JYf9FVM"
+  ],
+  "details": "Third bounded capability retry used the exact preserved runtime file reference. Google Drive upload_file again returned BLOCKED_FILE_REFERENCE, and a newly created temporary native Google Doc insertInlineImage using that same exact reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. The failed temporary Doc was deleted. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression, base64 transport, regeneration, or live-page change occurred. Per recovery policy, back off four hours and do not create additional unsent portrait backlog while the shared transfer capability remains unavailable."
 }
