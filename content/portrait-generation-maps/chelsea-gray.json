@@ -6,7 +6,7 @@
   "provider": "BALLDONTLIE",
   "player_record": "data/wnba/players/chelsea-gray.json",
   "player_record_sha": "1cb38c49631a1410a9ba1b5506b7b87893ac0911",
-  "status": "drive_verified_slack_notification_pending",
+  "status": "live_verified",
   "authorization": "owner_delegated_quality_review; owner_requested_one_image_drive_slack_test",
   "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
@@ -27,7 +27,10 @@
       "source_file_reference": "file_0000000003a881fda743c3ab96fbb92a",
       "format": "PNG",
       "mode": "RGBA",
-      "dimensions": [1254, 1254],
+      "dimensions": [
+        1254,
+        1254
+      ],
       "bytes": 1442328,
       "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
       "disposition": "accepted_for_drive_slack_handoff"
@@ -36,10 +39,16 @@
   "original_integrity": {
     "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
     "bytes": 1442328,
-    "dimensions": [1254, 1254],
+    "dimensions": [
+      1254,
+      1254
+    ],
     "format": "PNG",
     "mode": "RGBA",
-    "alpha_extrema": [0, 255],
+    "alpha_extrema": [
+      0,
+      255
+    ],
     "drive_roundtrip_byte_equality": true,
     "original_bytes_preserved": true,
     "resized_or_recompressed": false,
@@ -59,10 +68,10 @@
   },
   "preflight": {
     "global_worker_lease": null,
-    "existing_player_receipt": "not_found",
-    "existing_player_image_folder": "not_found",
+    "existing_player_receipt": "content/portrait-upload-receipts/chelsea-gray.json",
+    "existing_player_image_folder": "images/players/chelsea-gray/portrait.png",
     "existing_drive_portrait_search": "no_matches",
-    "already_approved_or_queued": false
+    "already_approved_or_queued": true
   },
   "brief": "One recognizable original Chelsea Gray frontal head-and-shoulders/upper-chest editorial illustration. Natural expression, realistic athletic proportions, crisp polished illustrative shading. Plain white basketball top with black trim. Genuine transparent PNG at least 1024 pixels per side. No lettering, logos, numbers, scenery, frame, poster, webpage mockup or other person. Preserve exact original bytes.",
   "identity_reference_sources": [
@@ -70,11 +79,11 @@
     "https://www.usab.com/players/chelsea-gray"
   ],
   "slack_notification": {
-    "status": "pending_send_after_durable_save",
+    "status": "posted",
     "deduplicate_by": "chelsea-gray:edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
     "message": "Portrait ready\nPlayer: Chelsea Gray\nFile: chelsea-gray-portrait.png\nDrive folder: FCB portrait-handoff (for Cursor)\nSHA-256: edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b\nRepo: ryanmoalemi/fullcourtbuckets\nBranch: main\nHandoff path: portrait-handoff/chelsea-gray-portrait.png",
     "reconciliation_rule": "Read actual Slack channel before sending any retry. A matching posted message completes the handoff; never regenerate, re-upload or duplicate a ready ping based only on a stale pending status. Stop this workflow after the Slack post; Cursor owns import and publication."
   },
-  "publication_status": "not_submitted_by_chatgpt",
-  "live_completion_increment": 0
+  "publication_status": "live_verified",
+  "live_completion_increment": 1
 }

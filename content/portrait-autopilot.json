@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 17,
+  "newly_verified_since_authorization": 18,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -195,6 +195,18 @@
       "receipt": "content/portrait-upload-receipts/awak-kuier.json",
       "github_master_path": "portrait-masters/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
       "drive_master_file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh"
+    },
+    {
+      "player_id": 410,
+      "slug": "chelsea-gray",
+      "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+      "url": "https://fullcourtbuckets.com/wnba/chelsea-gray/?v=edf21fda72de",
+      "upload_run_id": 35534097597,
+      "publication_run_id": 35534109718,
+      "evidence_artifact_id": 10611424084,
+      "receipt": "content/portrait-upload-receipts/chelsea-gray.json",
+      "github_master_path": "portrait-masters/410-chelsea-gray-edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b.png",
+      "drive_master_file_id": "1EJy389bcwoqwd36dzpdFoqdfYr-SRLCe"
     }
   ],
   "generated_pending_publication": [],
@@ -548,34 +560,23 @@
     "ashlon-jackson",
     "ashten-prechtel",
     "awa-fam",
-    "awak-kuier"
+    "awak-kuier",
+    "chelsea-gray"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-20T09:17:55Z",
+    "timestamp_utc": "2026-09-20T20:04:52Z",
     "players_touched": [
       {
-        "player_id": 67076,
-        "slug": "awa-fam",
-        "result": "live_verified_repository_path_handoff",
-        "live_page_changed": true
-      },
-      {
-        "player_id": 74886,
-        "slug": "ashten-prechtel",
-        "result": "live_verified_repository_path_handoff",
-        "live_page_changed": true
-      },
-      {
-        "player_id": 621,
-        "slug": "awak-kuier",
+        "player_id": 410,
+        "slug": "chelsea-gray",
         "result": "live_verified_repository_path_handoff",
         "live_page_changed": true
       }
     ],
-    "newly_verified": 3,
+    "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "Awa Fam, Ashten Prechtel and Awak Kuier are live_verified via portrait-handoff + repository_path. BLOCKED_FILE_REFERENCE is not claimed fixed: the ChatGPT connector still denied the historical file_... references. Hourly scheduled retries of those historical file_... references remain stopped. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Chelsea Gray is live_verified via Drive PNG + Slack Portrait ready ping + portrait-handoff repository_path. Awa Fam, Ashten Prechtel and Awak Kuier remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",

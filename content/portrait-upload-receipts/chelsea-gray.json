@@ -11,10 +11,50 @@
     1254
   ],
   "repository_path": "portrait-handoff/410-chelsea-gray-edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/chelsea-gray/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/410-chelsea-gray-edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b.png",
-  "github_blob_sha": "d4877dc05debf96caff50f538875979666721c72"
+  "github_blob_sha": "d4877dc05debf96caff50f538875979666721c72",
+  "drive_master_file_id": "1EJy389bcwoqwd36dzpdFoqdfYr-SRLCe",
+  "upload_run_id": 35534097597,
+  "publication_run_id": 35534109718,
+  "publication_commit": "dc436c6d00c159915cc1ebcfd01970493b837503",
+  "evidence_artifact_id": 10611424084,
+  "verified_url": "https://fullcourtbuckets.com/wnba/chelsea-gray/?v=edf21fda72de",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/chelsea-gray/portrait.png?v=edf21fda72de",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+    "canonical": "https://fullcourtbuckets.com/wnba/chelsea-gray/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "chelsea-gray-chromium-desktop.png",
+      "chelsea-gray-chromium-mobile-320.png"
+    ]
+  }
 }
