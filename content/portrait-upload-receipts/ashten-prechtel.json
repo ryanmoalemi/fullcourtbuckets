@@ -1,0 +1,20 @@
+{
+  "request_id": "74886-d8891e1e8b31-upload-20260920T0900Z",
+  "player_id": 74886,
+  "player_name": "Ashten Prechtel",
+  "slug": "ashten-prechtel",
+  "approved": true,
+  "sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+  "bytes": 2196715,
+  "dimensions": [
+    1183,
+    1329
+  ],
+  "repository_path": "portrait-handoff/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/ashten-prechtel/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png",
+  "github_blob_sha": "233e695ba0f3099d4dff90b4cb8937de2bdb7d31"
+}
