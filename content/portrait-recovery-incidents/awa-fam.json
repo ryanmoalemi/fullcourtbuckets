@@ -4,10 +4,10 @@
   "slug": "awa-fam",
   "stage": "master_preservation_and_temporary_doc_handoff",
   "error_code": "BLOCKED_FILE_REFERENCE",
-  "attempt_count": 1,
+  "attempt_count": 2,
   "first_seen_at": "2026-09-20T00:12:00Z",
-  "last_attempt_at": "2026-09-20T00:12:00Z",
-  "next_retry_at": "2026-09-20T01:12:00Z",
+  "last_attempt_at": "2026-09-20T02:03:12Z",
+  "next_retry_at": "2026-09-20T04:03:12Z",
   "preserved_master_id": null,
   "source_sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
   "source_generation_id": "75d091b1-576f-4949-bbbb-51380544877a",
@@ -17,8 +17,11 @@
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awa-fam/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
   "resolution_status": "deferred_capability_retry",
-  "notification_status": "new_broad_transport_signal",
+  "notification_status": "reported_unchanged",
   "help_needed": false,
-  "temporary_doc_ids": ["17-0Sh73liErajh4znQ6qDkokvH8UiSnQfLVz5XAqUU0"],
-  "details": "This was a fresh newly generated runtime file reference, not a stale reference from a prior run. The source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format and likeness review against the current official WNBA headshot. Google Drive upload_file rejected the exact fresh runtime-generated file reference with BLOCKED_FILE_REFERENCE, and a fresh temporary native Google Doc insertInlineImage using that exact same reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. This confirms the current connector-egress problem is broader than the previously deferred Ashten Prechtel source. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression or base64 transport was attempted. Per recovery policy, do not build a larger unusable generated backlog while the fresh-reference capability test is failing; retain this exact source tuple and retry the supported transport later."
+  "temporary_doc_ids": [
+    "17-0Sh73liErajh4znQ6qDkokvH8UiSnQfLVz5XAqUU0",
+    "12er4D6onVd3nXQKn7eoyQsnifmITm9R-3d3WjXsGXt8"
+  ],
+  "details": "Second bounded capability retry used the exact preserved runtime file reference. Google Drive upload_file again returned BLOCKED_FILE_REFERENCE, and a newly created temporary native Google Doc insertInlineImage using that same exact reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. The failed temporary Doc was deleted. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression, base64 transport, regeneration, or live-page change occurred. Per recovery policy, back off two hours and do not create additional unsent portrait backlog while the shared transfer capability remains unavailable."
 }
