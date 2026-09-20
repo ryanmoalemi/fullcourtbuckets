@@ -3,7 +3,7 @@
   "player_name": "Awa Fam",
   "slug": "awa-fam",
   "destination": "images/players/awa-fam/portrait.png",
-  "stage": "generated_pending_transport",
+  "stage": "generated_transport_blocked",
   "source": "data/wnba/players/awa-fam.json",
   "active_in_provider_feed": true,
   "worker": "portrait-rollout",
@@ -31,6 +31,8 @@
     "reference": "https://cdn.wnba.com/sites/4/2026/03/AwaFam.png"
   },
   "drive_master_file_id": null,
+  "temporary_doc_id": "17-0Sh73liErajh4znQ6qDkokvH8UiSnQfLVz5XAqUU0",
   "publication_status": "not_uploaded",
+  "incident": "content/portrait-recovery-incidents/awa-fam.json",
   "public_page_changed": false
 }
