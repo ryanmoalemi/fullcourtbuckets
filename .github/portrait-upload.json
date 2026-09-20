@@ -1,11 +1,6 @@
 {
   "request_id": "621-046d55fa0641-upload-20260920T0914Z",
-  "player_id": 621,
-  "player_name": "Awak Kuier",
   "slug": "awak-kuier",
-  "approved": true,
-  "sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
-  "bytes": 2053542,
-  "dimensions": [1145, 1374],
-  "repository_path": "portrait-handoff/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021"
 }
