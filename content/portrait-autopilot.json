@@ -12,7 +12,7 @@
   "preserve_original_bytes": true,
   "minimum_new_source_dimensions": [1024, 1024],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 13,
+  "newly_verified_since_authorization": 14,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -31,10 +31,12 @@
     {"player_id":525,"slug":"azura-stevens","sha256":"5b92dc1cd3e647c82f9e12771c6ca13909728ba82f5d672878245610160cb47a","url":"https://fullcourtbuckets.com/wnba/azura-stevens/?v=5b92dc1cd3e6","publication_run_id":35245241044,"receipt":"content/portrait-upload-receipts/azura-stevens.json","reconciled_stale_pending":true},
     {"player_id":419,"slug":"betnijah-laney-hamilton","sha256":"2913f154cca8c1538589b8030935609f676007b2af8d2f7dedf46dae1691430c","url":"https://fullcourtbuckets.com/wnba/betnijah-laney-hamilton/?v=2913f154cca8","publication_run_id":35245748908,"receipt":"content/portrait-upload-receipts/betnijah-laney-hamilton.json","reconciled_stale_pending":true},
     {"player_id":757,"slug":"aneesah-morrow","sha256":"918a939b360bb1ac72d39cb7eab6654ffed1250c9a5ce84867f3faac5ad463ad","url":"https://fullcourtbuckets.com/wnba/aneesah-morrow/?v=918a939b360b","upload_run_id":35278599939,"publication_run_id":35278619171,"evidence_artifact_id":10521259189,"receipt":"content/portrait-upload-receipts/aneesah-morrow.json","master_drive_file_id":"14fU8rsA03Vnj6QQCtZLie1oDIYBmzi5d"},
-    {"player_id":67043,"slug":"antonia-delaere","sha256":"93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858","url":"https://fullcourtbuckets.com/wnba/antonia-delaere/?v=93afdad4f6cf","upload_run_id":35464903578,"publication_run_id":35464912886,"evidence_artifact_id":10591230275,"receipt":"content/portrait-upload-receipts/antonia-delaere.json","github_master_path":"portrait-masters/67043-antonia-delaere-93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858.png"}
+    {"player_id":67043,"slug":"antonia-delaere","sha256":"93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858","url":"https://fullcourtbuckets.com/wnba/antonia-delaere/?v=93afdad4f6cf","upload_run_id":35464903578,"publication_run_id":35464912886,"evidence_artifact_id":10591230275,"receipt":"content/portrait-upload-receipts/antonia-delaere.json","github_master_path":"portrait-masters/67043-antonia-delaere-93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858.png"},
+    {"player_id":67147,"slug":"ashlon-jackson","sha256":"23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d","url":"https://fullcourtbuckets.com/wnba/ashlon-jackson/?v=23db58ae84a6","upload_run_id":35473176718,"publication_run_id":35473185147,"evidence_artifact_id":10593651919,"receipt":"content/portrait-upload-receipts/ashlon-jackson.json","github_master_path":"portrait-masters/67147-ashlon-jackson-23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d.png","reconciled_stale_pending":true}
   ],
   "generated_pending_publication": [
-    {"player_id":857,"slug":"ashlon-jackson","generation_id":"9dc88257-085a-4c1e-9dc1-b50c1ec3fd41","sha256":"23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d","bytes":1843032,"dimensions":[1147,1372],"runtime_file_reference":"file_00000000073881f7a66bb44be2f98e16","transport_status":"blocked","incident":"content/portrait-recovery-incidents/ashlon-jackson.json","public_page_changed":false}
+    {"player_id":74886,"slug":"ashten-prechtel","generation_id":"b3bbaf66-9d95-4746-a0bf-83bbe822647a","sha256":"d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da","bytes":2196715,"dimensions":[1183,1329],"runtime_file_reference":"file_0000000029dc82308386a053b5e7a11f","transport_status":"blocked","incident":"content/portrait-recovery-incidents/ashten-prechtel.json","public_page_changed":false},
+    {"player_id":67076,"slug":"awa-fam","generation_id":"75d091b1-576f-4949-bbbb-51380544877a","sha256":"3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4","bytes":1976438,"dimensions":[1185,1327],"runtime_file_reference":"file_000000007b8481f88be021d71ff42316","transport_status":"blocked","incident":"content/portrait-recovery-incidents/awa-fam.json","public_page_changed":false}
   ],
   "parked": [
     {"player_id":721,"slug":"angel-reese","reason":"Protected historical live portrait remains; two replacement attempts rejected for likeness.","retry_after_other_queue":true},
@@ -53,16 +55,17 @@
   ],
   "history_note": "Detailed prior attempt hashes, Drive IDs and dispositions remain recoverable from earlier main-branch revisions and the corresponding generation maps/receipts. This compact ledger retains current routing state and completion evidence.",
   "verification_summary": {
-    "player_specific_checks": 78,
+    "player_specific_checks": 84,
     "engines": ["chromium", "webkit"],
     "viewports": [[1365,850],[390,844],[320,568]],
     "original_hashes_match_live_files": true,
     "template_changed": false,
     "originals_resized_or_recompressed": false,
-    "note": "Thirteen full-quality portraits remain newly verified since renewed authorization. Ashlon Jackson generated source passed local PNG/resolution/transparency/anatomy/single-subject/uniform checks but was not published because both exact-runtime-reference transport paths returned BLOCKED_FILE_REFERENCE."
+    "note": "Fourteen full-quality portraits are newly verified since renewed authorization. Ashlon Jackson is reconciled as live_verified with exact original hash, correct player mapping and Chromium/WebKit desktop/mobile checks. Ashten Prechtel and Awa Fam have accepted full-resolution RGBA sources waiting for supported connector egress recovery; neither live page changed."
   },
   "blocked": [
-    {"player_id":857,"slug":"ashlon-jackson","stage":"master_preservation_and_temporary_doc_handoff","error_code":"BLOCKED_FILE_REFERENCE","next_retry_at":"2026-09-19T22:06:00Z","incident":"content/portrait-recovery-incidents/ashlon-jackson.json","public_page_changed":false}
+    {"player_id":67076,"slug":"awa-fam","stage":"master_preservation_and_temporary_doc_handoff","error_code":"BLOCKED_FILE_REFERENCE","next_retry_at":"2026-09-20T01:12:00Z","incident":"content/portrait-recovery-incidents/awa-fam.json","public_page_changed":false},
+    {"player_id":74886,"slug":"ashten-prechtel","stage":"master_preservation_and_temporary_doc_handoff","error_code":"BLOCKED_FILE_REFERENCE","next_retry_at":"2026-09-20T02:04:30Z","incident":"content/portrait-recovery-incidents/ashten-prechtel.json","public_page_changed":false}
   ],
   "resolved_blockers": [
     {"player_id":552,"slug":"arike-ogunbowale","recovery_verified":true,"upload_run_id":35191669179,"publication_run_id":35191684655},
@@ -75,22 +78,26 @@
     {"player_id":757,"slug":"aneesah-morrow","recovery_verified":true,"upload_run_id":35278599939,"publication_run_id":35278619171,"evidence_artifact_id":10521259189},
     {"player_id":67006,"slug":"angela-dugalic","drive_master_preservation_recovered":true,"master_drive_file_id":"1coYVh516s7xd02b000yrSZL2q6FbCoX0","publication_skipped_likeness":true},
     {"player_id":642,"slug":"anneli-maley","drive_master_preservation_recovered":true,"master_drive_file_id":"1-1TN4UqDny9JDm1wfxe1RGe11nYg8PU_","publication_skipped_likeness":true},
-    {"player_id":67043,"slug":"antonia-delaere","recovery_verified":true,"upload_run_id":35464903578,"publication_run_id":35464912886,"evidence_artifact_id":10591230275,"recovery":"runtime file reference used in both temporary Doc URI placeholder and image_uris; exact sourceUri then accepted by uploader"}
+    {"player_id":67043,"slug":"antonia-delaere","recovery_verified":true,"upload_run_id":35464903578,"publication_run_id":35464912886,"evidence_artifact_id":10591230275,"recovery":"runtime file reference used in both temporary Doc URI placeholder and image_uris; exact sourceUri then accepted by uploader"},
+    {"player_id":67147,"slug":"ashlon-jackson","recovery_verified":true,"upload_run_id":35473176718,"publication_run_id":35473185147,"evidence_artifact_id":10593651919,"recovery":"stale blocked ledger reconciled against live_verified receipt; exact original bytes and browser checks passed"}
   ],
   "selection": "Reconcile due preserved retries first; then replace undersized legacy active-player portraits; then other active players, prominent retired players and remaining archive. Park only a player after two poor-likeness attempts.",
   "priority_next_candidates": [
-    {"player_id":857,"slug":"ashlon-jackson","action":"retry the accepted generated source transport at or after next_retry_at; do not regenerate for this transport failure"}
+    {"player_id":67076,"slug":"awa-fam","action":"retry accepted generated source transport at or after next_retry_at; do not regenerate"},
+    {"player_id":74886,"slug":"ashten-prechtel","action":"retry accepted generated source transport at or after next_retry_at; do not regenerate"}
   ],
   "do_not_regenerate": [
-    "caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas","aneesah-morrow","angela-dugalic","anneli-maley","antonia-delaere","aari-mcdonald","ariel-atkins","ashlon-jackson"
+    "caitlin-clark","angel-reese","aja-wilson","breanna-stewart","sabrina-ionescu","napheesa-collier","paige-bueckers","kelsey-plum","aliyah-boston","arike-ogunbowale","kelsey-mitchell","aaliyah-edwards","aicha-coulibaly","azura-stevens","betnijah-laney-hamilton","alysha-clark","alyssa-thomas","aneesah-morrow","angela-dugalic","anneli-maley","antonia-delaere","aari-mcdonald","ariel-atkins","ashlon-jackson","ashten-prechtel","awa-fam"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-19T21:06:00Z",
+    "timestamp_utc": "2026-09-20T00:55:42Z",
     "players_touched": [
-      {"player_id":857,"slug":"ashlon-jackson","result":"generated_quality_pass_transport_blocked","live_page_changed":false}
+      {"player_id":67147,"slug":"ashlon-jackson","result":"reconciled_live_verified","live_page_changed":true},
+      {"player_id":74886,"slug":"ashten-prechtel","result":"premature_capability_probe_blocked_no_state_change_backoff_preserved","live_page_changed":false},
+      {"player_id":67076,"slug":"awa-fam","result":"reconciled_prior_generated_quality_pass_transport_blocked_waiting_for_due_retry","live_page_changed":false}
     ],
     "newly_verified": 0,
-    "owner_notification_due": true
+    "owner_notification_due": false
   },
-  "scope_note": "Ashlon Jackson's accepted new source is 1147x1372 RGBA PNG with exact SHA-256 23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d. Drive upload_file rejected the exact runtime file reference once, and the documented temporary Google Doc handoff using the same exact runtime reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. No upload or live page change occurred. The rollout is waiting for the due recovery check rather than generating more unusable work in this run. Sports data and the approved shared layout remain unchanged."
+  "scope_note": "Ashlon Jackson is now reconciled from the stale blocked ledger into completed live_verified state using the existing receipt and evidence. Ashten Prechtel and Awa Fam each have an accepted full-resolution transparent RGBA source with exact player-ID/slug/hash mapping and must not be regenerated for transport failures. Their current BLOCKED_FILE_REFERENCE incidents remain under backoff. No additional portrait was generated because the fresh-reference connector-egress capability is still failing and the unsent backlog is already two. Sports data, statistics updater and the approved shared layout remain unchanged."
 }
