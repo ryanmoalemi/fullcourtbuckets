@@ -1,0 +1,68 @@
+{
+  "player_id": 411,
+  "player_name": "Dearica Hamby",
+  "slug": "dearica-hamby",
+  "stage": "drive_preserve",
+  "error_code": "BLOCKED_FILE_REFERENCE",
+  "action_name": "upload_file",
+  "reference_form": "runtime_file_reference",
+  "provider_contacted": null,
+  "provider_http_status": null,
+  "correlation_id": null,
+  "execution_context": "interactive",
+  "error_envelope_redacted": {
+    "action_name": "upload_file",
+    "argument_keys": [
+      "generated-file reference"
+    ],
+    "error": "BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress.",
+    "reference_form": "runtime_file_reference"
+  },
+  "raw_error_envelope_captured": false,
+  "classification": {
+    "class": "connector_file_binding_denied",
+    "confidence": "hypothesis",
+    "denied_layer": "unknown",
+    "retry_same_reference": false,
+    "schedule_retry": false,
+    "next_action": "google_independent_github_handoff",
+    "disable_hourly_task": false,
+    "do_not_regenerate": true,
+    "already_retried_same_reference": false
+  },
+  "bytes_preserved": false,
+  "preserved_master_id": null,
+  "source_sha256": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb",
+  "next_retry_at": null,
+  "help_needed": true,
+  "disable_hourly_task": false,
+  "source_bytes": 2130389,
+  "source_dimensions": [
+    1101,
+    1428
+  ],
+  "intended_filename": "dearica-hamby-portrait.png",
+  "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "attempt_count": 1,
+  "first_seen_at": "2026-09-20T20:06:50Z",
+  "last_attempt_at": "2026-09-20T20:06:50Z",
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/dearica-hamby/",
+  "public_page_impact": "no replacement published; live page still has no folder portrait",
+  "resolution_status": "open_bytes_not_preserved",
+  "notification_status": "reported_in_slack_handoff_channel",
+  "known": [
+    "Image generation succeeded and ChatGPT reports the original still intact locally",
+    "Drive upload_file with a fresh runtime generated-file reference returned BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress",
+    "No Drive file was created; this is not a Portrait ready handoff",
+    "ChatGPT did not retry the blocked reference, use Docs/sourceUri, or start a competing publication path",
+    "Identifiers (player/slug/sha256/bytes/dimensions) are not preserved bytes",
+    "BLOCKED_FILE_REFERENCE is not classified as fixed because Chelsea Gray later reached Drive"
+  ],
+  "unknown": [
+    "Whether the denial happened before Google was contacted",
+    "Whether GitHub create_blob accepts whole-file base64 without a file_uri in this ChatGPT run"
+  ],
+  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 411-dearica-hamby-6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb.png. Do not resize or re-export.",
+  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) into portrait-handoff/411-dearica-hamby-<sha256>.png. Cursor owns portrait-upload.json and live verification. Do not regenerate. Do not block unrelated players."
+}
