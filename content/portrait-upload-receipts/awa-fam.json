@@ -1,0 +1,20 @@
+{
+  "request_id": "67076-3c7c49fb1e36-upload-20260920T0900Z",
+  "player_id": 67076,
+  "player_name": "Awa Fam",
+  "slug": "awa-fam",
+  "approved": true,
+  "sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
+  "bytes": 1976438,
+  "dimensions": [
+    1185,
+    1327
+  ],
+  "repository_path": "portrait-handoff/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/awa-fam/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png",
+  "github_blob_sha": "d04970e4f4d68b6b449bb9361f07e5bb0565742e"
+}
