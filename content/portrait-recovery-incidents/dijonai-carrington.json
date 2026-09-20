@@ -25,8 +25,10 @@
     "confidence": "observed",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "retry_once_with_runtime_file_reference",
-    "disable_hourly_task": false
+    "next_action": "google_independent_github_handoff",
+    "disable_hourly_task": false,
+    "drive_retry_superseded": true,
+    "supersede_reason": "In-thread Cursor recovery: skip Drive upload_file for both /mnt/data and file_...; GitHub portrait-handoff drop only."
   },
   "bytes_preserved": false,
   "preserved_master_id": null,
@@ -47,7 +49,7 @@
   "last_attempt_at": "2026-09-20T21:08:39Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
   "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_bytes_not_preserved_schema_mismatch",
+  "resolution_status": "open_bytes_not_preserved_github_handoff",
   "notification_status": "reported_in_slack_handoff_channel",
   "related_open_originals": [
     "dearica-hamby"
@@ -60,11 +62,12 @@
     "ChatGPT did not retry, use Docs/sourceUri, write GitHub, or start publication",
     "Aneesah Morrow class: mounted-path BLOCKED_FILE_REFERENCE can later succeed with the runtime file_... form",
     "Identifiers are not preserved bytes",
-    "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved"
+    "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved",
+    "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby"
   ],
   "unknown": [
-    "Whether a single retry with the runtime file_... reference will bind for this original"
+    "Whether GitHub create_blob accepts whole-file base64 without a file_uri in the generating ChatGPT run"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
-  "details": "schema_mismatch on Drive preserve (mounted_path vs runtime_file_reference). Permitted next action is one retry of Drive upload_file using the current runtime file_... for this same original. Do not retry /mnt/data, Docs, or regenerate. If that runtime reference is also denied, switch to google-independent GitHub create_blob (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-<sha256>.png. Cursor owns portrait-upload.json and live verification."
+  "details": "Initial Drive call used mounted_path and returned BLOCKED_FILE_REFERENCE. In-thread recovery now forbids any Drive upload_file retry, including runtime file_..., and Docs/sourceUri. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Cursor owns portrait-upload.json and live verification. Do not regenerate."
 }
