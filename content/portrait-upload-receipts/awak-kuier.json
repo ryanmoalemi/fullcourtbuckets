@@ -11,10 +11,50 @@
     1374
   ],
   "repository_path": "portrait-handoff/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/awak-kuier/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
-  "github_blob_sha": "5e10b1806c83cd5b5c19ad8de08aefdb804480cb"
+  "github_blob_sha": "5e10b1806c83cd5b5c19ad8de08aefdb804480cb",
+  "drive_master_file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh",
+  "upload_run_id": 35501811242,
+  "publication_run_id": 35501820887,
+  "publication_commit": "851cc72eec6cca6f33484adaee7cf297a8b7a240",
+  "evidence_artifact_id": 10602563033,
+  "verified_url": "https://fullcourtbuckets.com/wnba/awak-kuier/?v=046d55fa0641",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/awak-kuier/portrait.png?v=046d55fa0641",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+    "canonical": "https://fullcourtbuckets.com/wnba/awak-kuier/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "awak-kuier-chromium-desktop.png",
+      "awak-kuier-chromium-mobile-320.png"
+    ]
+  }
 }

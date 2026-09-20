@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 16,
+  "newly_verified_since_authorization": 17,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -183,6 +183,18 @@
       "evidence_artifact_id": 10602068369,
       "receipt": "content/portrait-upload-receipts/ashten-prechtel.json",
       "github_master_path": "portrait-masters/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png"
+    },
+    {
+      "player_id": 621,
+      "slug": "awak-kuier",
+      "sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+      "url": "https://fullcourtbuckets.com/wnba/awak-kuier/?v=046d55fa0641",
+      "upload_run_id": 35501811242,
+      "publication_run_id": 35501820887,
+      "evidence_artifact_id": 10602563033,
+      "receipt": "content/portrait-upload-receipts/awak-kuier.json",
+      "github_master_path": "portrait-masters/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
+      "drive_master_file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh"
     }
   ],
   "generated_pending_publication": [],
@@ -364,7 +376,7 @@
   ],
   "history_note": "Detailed prior attempt hashes, Drive IDs and dispositions remain recoverable from earlier main-branch revisions and the corresponding generation maps/receipts. This compact ledger retains current routing state and completion evidence.",
   "verification_summary": {
-    "player_specific_checks": 96,
+    "player_specific_checks": 102,
     "engines": [
       "chromium",
       "webkit"
@@ -386,7 +398,7 @@
     "original_hashes_match_live_files": true,
     "template_changed": false,
     "originals_resized_or_recompressed": false,
-    "note": "Sixteen full-quality portraits are newly verified since renewed authorization. Awa Fam and Ashten Prechtel are live_verified with exact original hashes and Chromium/WebKit desktop/mobile checks. BLOCKED_FILE_REFERENCE is not classified as fixed; both used the GitHub repository_path handoff instead of retrying historical file_... references. Hourly task remains enabled."
+    "note": "Seventeen full-quality portraits are newly verified since renewed authorization. Awa Fam, Ashten Prechtel and Awak Kuier are live_verified with exact original hashes and Chromium/WebKit desktop/mobile checks. BLOCKED_FILE_REFERENCE is not classified as fixed; all three used the GitHub repository_path handoff instead of retrying historical file_... references. Hourly task remains enabled."
   },
   "blocked": [],
   "resolved_blockers": [
@@ -496,6 +508,15 @@
       "publication_run_id": 35501543400,
       "evidence_artifact_id": 10602068369,
       "recovery": "Google-independent portrait-handoff + repository_path published exact original bytes; live Chromium/WebKit checks passed. BLOCKED_FILE_REFERENCE is not claimed fixed."
+    },
+    {
+      "player_id": 621,
+      "slug": "awak-kuier",
+      "recovery_verified": true,
+      "upload_run_id": 35501811242,
+      "publication_run_id": 35501820887,
+      "evidence_artifact_id": 10602563033,
+      "recovery": "Google-independent portrait-handoff + repository_path published exact Drive-verified original bytes; live Chromium/WebKit checks passed. BLOCKED_FILE_REFERENCE is not claimed fixed."
     }
   ],
   "selection": "Reconcile due preserved retries first; then replace undersized legacy active-player portraits; then other active players, prominent retired players and remaining archive. Park only a player after two poor-likeness attempts.",
@@ -526,10 +547,11 @@
     "ariel-atkins",
     "ashlon-jackson",
     "ashten-prechtel",
-    "awa-fam"
+    "awa-fam",
+    "awak-kuier"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-20T09:12:05Z",
+    "timestamp_utc": "2026-09-20T09:17:55Z",
     "players_touched": [
       {
         "player_id": 67076,
@@ -542,12 +564,18 @@
         "slug": "ashten-prechtel",
         "result": "live_verified_repository_path_handoff",
         "live_page_changed": true
+      },
+      {
+        "player_id": 621,
+        "slug": "awak-kuier",
+        "result": "live_verified_repository_path_handoff",
+        "live_page_changed": true
       }
     ],
-    "newly_verified": 2,
+    "newly_verified": 3,
     "owner_notification_due": false
   },
-  "scope_note": "Awa Fam and Ashten Prechtel are live_verified via portrait-handoff + repository_path. BLOCKED_FILE_REFERENCE is not claimed fixed: the ChatGPT connector still denied the historical file_... references. Hourly scheduled retries of those historical file_... references remain stopped. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Awa Fam, Ashten Prechtel and Awak Kuier are live_verified via portrait-handoff + repository_path. BLOCKED_FILE_REFERENCE is not claimed fixed: the ChatGPT connector still denied the historical file_... references. Hourly scheduled retries of those historical file_... references remain stopped. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
