@@ -1,6 +1,11 @@
 {
-  "request_id": "67076-3c7c49fb1e36-upload-20260920T0900Z",
-  "slug": "awa-fam",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4"
+  "request_id": "74886-d8891e1e8b31-upload-20260920T0900Z",
+  "player_id": 74886,
+  "player_name": "Ashten Prechtel",
+  "slug": "ashten-prechtel",
+  "approved": true,
+  "sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+  "bytes": 2196715,
+  "dimensions": [1183, 1329],
+  "repository_path": "portrait-handoff/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png"
 }
