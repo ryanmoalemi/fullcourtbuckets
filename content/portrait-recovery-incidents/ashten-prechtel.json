@@ -2,7 +2,7 @@
   "player_id": 74886,
   "player_name": "Ashten Prechtel",
   "slug": "ashten-prechtel",
-  "stage": "master_preservation_and_temporary_doc_handoff",
+  "stage": "cursor_drive_handoff_waiting_for_publication",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "action_name": "upload_file_and_insertInlineImage",
   "reference_form": "runtime_file_reference",
@@ -19,7 +19,7 @@
     "denied_layer": "unknown",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "google_independent_github_handoff",
+    "next_action": "await_cursor_publication_and_live_verification",
     "disable_hourly_task": false,
     "do_not_regenerate": true,
     "already_retried_same_reference": true
@@ -28,18 +28,20 @@
   "first_seen_at": "2026-09-19T22:58:00Z",
   "last_attempt_at": "2026-09-20T03:05:00Z",
   "next_retry_at": null,
-  "bytes_preserved": false,
-  "preserved_master_id": null,
+  "bytes_preserved": true,
+  "preserved_master_id": "1V34Zon2wRanffySFgw9L2lLtJnvveC0l",
+  "preserved_master_store": "google_drive_cursor_handoff",
+  "preserved_master_filename": "74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png",
   "source_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
   "source_generation_id": "b3bbaf66-9d95-4746-a0bf-83bbe822647a",
   "source_runtime_file_reference": "file_0000000029dc82308386a053b5e7a11f",
   "source_dimensions": [1183, 1329],
   "source_bytes": 2196715,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/ashten-prechtel/",
-  "public_page_impact": "none; no portrait upload or page publication occurred",
-  "resolution_status": "awaiting_google_independent_handoff",
-  "notification_status": "reported_unchanged",
-  "help_needed": true,
+  "public_page_impact": "none yet; storage handoff is verified but publication is not",
+  "resolution_status": "drive_handoff_preserved_waiting_for_cursor_publication",
+  "notification_status": "owner_handoff_override_recorded",
+  "help_needed": false,
   "disable_hourly_task": false,
   "temporary_doc_ids": [
     "15htcLhZ8L6YQepAJljpiPKNO2znU6Fi94q3ZYAoMSKs",
@@ -47,17 +49,16 @@
     "1zrZ1esXYtjvTafyJkD6-74y13lTsFFSEKhM9JYf9FVM"
   ],
   "known": [
-    "Exact runtime file_... was rejected by Drive upload_file and Docs insertInlineImage",
-    "Three bounded retries of the same runtime reference all returned BLOCKED_FILE_REFERENCE",
-    "No GitHub portrait or master was written",
-    "Generation ID and hash are not preserved original bytes",
-    "Ashlon Jackson later publishing does not resolve this incident"
+    "Exact runtime file_... was rejected by Drive upload_file and Docs insertInlineImage in earlier attempts",
+    "The exact original PNG was later uploaded directly as image/png to the owner-approved Cursor Drive handoff folder",
+    "Drive file 1V34Zon2wRanffySFgw9L2lLtJnvveC0l was downloaded back and checked byte-for-byte against SHA256 d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+    "Storage preservation is not publication and does not increment the completed-player count",
+    "Do not regenerate, re-upload, create Docs for, or retry the historical runtime reference"
   ],
   "unknown": [
-    "Whether the Google provider was contacted",
-    "Runtime attachment resolution vs connector rewrite vs auth/egress vs provider",
-    "Whether the historical file_... remains readable in the generating ChatGPT conversation"
+    "Whether Cursor has completed GitHub transfer and publication",
+    "Whether full live Chromium/WebKit verification has passed"
   ],
-  "owner_action_if_chatgpt_cannot_carry_bytes": "Download the original PNG from the generating ChatGPT conversation (not a screenshot), upload it unchanged to portrait-handoff/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png, then submit the existing portrait-upload.json with repository_path. Do not regenerate.",
-  "details": "Third bounded capability retry used the exact preserved runtime file reference. Google Drive upload_file again returned BLOCKED_FILE_REFERENCE, and a newly created temporary native Google Doc insertInlineImage using that same exact reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. The failed temporary Doc was deleted. Raw tool envelopes were not captured. Scheduled retries of this historical file_... are stopped. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression, base64 transport, regeneration, or live-page change occurred."
+  "owner_action_if_chatgpt_cannot_carry_bytes": "none; owner-approved Cursor handoff is already complete",
+  "details": "Owner override handed this exact preserved PNG to Cursor through Drive folder 1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo. ChatGPT must not start a competing publication or retry the historical runtime reference. Reconcile this player only after a current receipt and full live verification prove Cursor publication."
 }
