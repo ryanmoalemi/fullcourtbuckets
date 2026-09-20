@@ -2,7 +2,7 @@
   "player_id": 67076,
   "player_name": "Awa Fam",
   "slug": "awa-fam",
-  "stage": "cursor_drive_handoff_waiting_for_publication",
+  "stage": "live_verified",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "action_name": "upload_file_and_insertInlineImage",
   "reference_form": "runtime_file_reference",
@@ -35,12 +35,15 @@
   "source_sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
   "source_generation_id": "75d091b1-576f-4949-bbbb-51380544877a",
   "source_runtime_file_reference": "file_000000007b8481f88be021d71ff42316",
-  "source_dimensions": [1185, 1327],
+  "source_dimensions": [
+    1185,
+    1327
+  ],
   "source_bytes": 1976438,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awa-fam/",
-  "public_page_impact": "none yet; storage handoff is verified but publication is not",
-  "resolution_status": "drive_handoff_preserved_waiting_for_cursor_publication",
-  "notification_status": "owner_handoff_override_recorded",
+  "public_page_impact": "live; exact original verified via repository_path handoff",
+  "resolution_status": "resolved_live_verified",
+  "notification_status": "live_verified",
   "help_needed": false,
   "disable_hourly_task": false,
   "temporary_doc_ids": [
@@ -52,12 +55,16 @@
     "The exact original PNG was later uploaded directly as image/png to the owner-approved Cursor Drive handoff folder",
     "Drive file 1Zzx5kRG616Lgl1RmAWcaWe2BD8JNRvSK was downloaded back and checked byte-for-byte against SHA256 3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
     "Storage preservation is not publication and does not increment the completed-player count",
-    "Do not regenerate, re-upload, create Docs for, or retry the historical runtime reference"
+    "Do not regenerate, re-upload, create Docs for, or retry the historical runtime reference",
+    "GitHub repository_path handoff published identical bytes to images/players/awa-fam/portrait.png",
+    "Live Chromium/WebKit verification passed; public SHA-256 3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
+    "BLOCKED_FILE_REFERENCE is not classified as fixed; publication used the Google-independent GitHub handoff"
   ],
-  "unknown": [
-    "Whether Cursor has completed GitHub transfer and publication",
-    "Whether full live Chromium/WebKit verification has passed"
-  ],
+  "unknown": [],
   "owner_action_if_chatgpt_cannot_carry_bytes": "none; owner-approved Cursor handoff is already complete",
-  "details": "Owner override handed this exact preserved PNG to Cursor through Drive folder 1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo. ChatGPT must not start a competing publication or retry the historical runtime reference. Reconcile this player only after a current receipt and full live verification prove Cursor publication."
+  "details": "Published via portrait-handoff + repository_path on the existing uploader. Historical ChatGPT connector BLOCKED_FILE_REFERENCE is unchanged and not claimed fixed. Live page https://fullcourtbuckets.com/wnba/awa-fam/ shows the approved portrait; do not regenerate.",
+  "github_master_path": "portrait-masters/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png",
+  "upload_run_id": 35501169878,
+  "publication_run_id": 35501292733,
+  "evidence_artifact_id": 10602526429
 }

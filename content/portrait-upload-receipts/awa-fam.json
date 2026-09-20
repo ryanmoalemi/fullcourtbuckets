@@ -11,10 +11,49 @@
     1327
   ],
   "repository_path": "portrait-handoff/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/awa-fam/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png",
-  "github_blob_sha": "d04970e4f4d68b6b449bb9361f07e5bb0565742e"
+  "github_blob_sha": "d04970e4f4d68b6b449bb9361f07e5bb0565742e",
+  "upload_run_id": 35501169878,
+  "publication_run_id": 35501292733,
+  "publication_commit": "5941093790ddd12dec511892395621da77532ccd",
+  "evidence_artifact_id": 10602526429,
+  "verified_url": "https://fullcourtbuckets.com/wnba/awa-fam/?v=3c7c49fb1e36",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/awa-fam/portrait.png?v=3c7c49fb1e36",
+    "natural_dimensions": [
+      1185,
+      1327
+    ],
+    "public_sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
+    "canonical": "https://fullcourtbuckets.com/wnba/awa-fam/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "awa-fam-chromium-desktop.png",
+      "awa-fam-chromium-mobile-320.png"
+    ]
+  }
 }
