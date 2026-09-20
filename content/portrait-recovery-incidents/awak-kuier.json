@@ -17,7 +17,7 @@
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awak-kuier/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
   "resolution_status": "connector_file_binding_denied_waiting_for_google_independent_byte_handoff",
-  "notification_status": "new_incident",
+  "notification_status": "reported_once",
   "help_needed": true,
   "temporary_doc_ids": ["1Pzi6ttgQxu-CC99xSZbiJP2DnGgDO_E7YAtGf359dBM"],
   "action_name": "Google_Drive.upload_file then Google_Drive.batch_update_document insertInlineImage",
