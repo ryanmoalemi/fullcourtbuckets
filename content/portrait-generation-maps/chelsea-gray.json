@@ -6,24 +6,56 @@
   "provider": "BALLDONTLIE",
   "player_record": "data/wnba/players/chelsea-gray.json",
   "player_record_sha": "1cb38c49631a1410a9ba1b5506b7b87893ac0911",
-  "status": "reserved_for_generation",
+  "status": "drive_verified_slack_notification_pending",
   "authorization": "owner_delegated_quality_review; owner_requested_one_image_drive_slack_test",
   "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
   "destination_filename": "chelsea-gray-portrait.png",
+  "drive_file_id": "1EJy389bcwoqwd36dzpdFoqdfYr-SRLCe",
   "handoff_path": "portrait-handoff/chelsea-gray-portrait.png",
   "slack_channel_id": "C0C39020XEG",
   "slack_channel_name": "fcb-portrait-handoff",
   "publisher": "Cursor",
   "publication_by_chatgpt_authorized": false,
-  "generation_attempts": [],
-  "approved": false,
+  "approved": true,
   "do_not_generate_duplicate": true,
-  "lease": {
-    "owner": "chatgpt-one-image-slack-test-20260920",
-    "scope": "chelsea-gray_generation_and_drive_slack_handoff_only",
-    "claimed_at": "2026-09-20T09:31:00Z",
-    "expires_at": "2026-09-20T10:01:00Z"
+  "lease": null,
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "ebf4077e-924e-41ac-b321-9a473f925111",
+      "source_file_reference": "file_0000000003a881fda743c3ab96fbb92a",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [1254, 1254],
+      "bytes": 1442328,
+      "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+      "disposition": "accepted_for_drive_slack_handoff"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+    "bytes": 1442328,
+    "dimensions": [1254, 1254],
+    "format": "PNG",
+    "mode": "RGBA",
+    "alpha_extrema": [0, 255],
+    "drive_roundtrip_byte_equality": true,
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "upload_action": "files.manage_library create-only upload to verified Google Drive mount",
+    "download_verification_action": "Google_Drive.fetch original raw file; independently decoded and hashed in Python",
+    "drive_mime_type": "image/png",
+    "drive_parent_id_verified": true
+  },
+  "quality_review": {
+    "single_subject": true,
+    "frontal_head_shoulders_upper_chest": true,
+    "plain_white_top_black_trim": true,
+    "no_text_logos_numbers_scenery": true,
+    "recognizable_illustrated_likeness_review": "accepted",
+    "anatomy_and_edges": "accepted",
+    "scope": "Artwork review only; not public-page verification"
   },
   "preflight": {
     "global_worker_lease": null,
@@ -37,6 +69,12 @@
     "https://www.wnba.com/player/203833/chelsea-gray/profile",
     "https://www.usab.com/players/chelsea-gray"
   ],
-  "publication_status": "not_submitted",
+  "slack_notification": {
+    "status": "pending_send_after_durable_save",
+    "deduplicate_by": "chelsea-gray:edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+    "message": "Portrait ready\nPlayer: Chelsea Gray\nFile: chelsea-gray-portrait.png\nDrive folder: FCB portrait-handoff (for Cursor)\nSHA-256: edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b\nRepo: ryanmoalemi/fullcourtbuckets\nBranch: main\nHandoff path: portrait-handoff/chelsea-gray-portrait.png",
+    "reconciliation_rule": "Read actual Slack channel before sending any retry. A matching posted message completes the handoff; never regenerate, re-upload or duplicate a ready ping based only on a stale pending status. Stop this workflow after the Slack post; Cursor owns import and publication."
+  },
+  "publication_status": "not_submitted_by_chatgpt",
   "live_completion_increment": 0
 }
