@@ -3,7 +3,7 @@
   "player_name": "Awak Kuier",
   "slug": "awak-kuier",
   "destination": "images/players/awak-kuier/portrait.png",
-  "stage": "claimed_before_generation",
+  "stage": "generated_transport_blocked",
   "source": "data/wnba/players/awak-kuier.json",
   "active_in_provider_feed": true,
   "worker": "portrait-rollout",
@@ -17,5 +17,29 @@
     "secondary_headshot": "https://a.espncdn.com/combiner/i?img=%2Fi%2Fheadshots%2Fwnba%2Fplayers%2Ffull%2F4790266.png",
     "identity_cues": "Dark complexion; long micro-braids, center/near-center part, some loose/wavy braid ends; long oval face; broad high forehead; almond-shaped dark eyes; medium-broad nose; full lips; soft closed-mouth smile."
   },
-  "publication_status": "not_generated"
+  "generation_id": "fbea41d8-b1b1-459c-8bc2-b65a1d920d1b",
+  "runtime_file_reference": "file_000000000a9c81f5a93290666405e856",
+  "source_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+  "source_bytes": 2053542,
+  "dimensions": [1145, 1374],
+  "format": "PNG",
+  "mode": "RGBA",
+  "alpha_extrema": [0, 255],
+  "quality_review": {
+    "format_ok": true,
+    "resolution_ok": true,
+    "transparency_ok": true,
+    "anatomy_ok": true,
+    "single_subject_ok": true,
+    "uniform_brief_ok": true,
+    "likeness_reviewed_against_public_headshot": true,
+    "reference": "https://a.espncdn.com/combiner/i?img=%2Fi%2Fheadshots%2Fwnba%2Fplayers%2Ffull%2F4790266.png"
+  },
+  "drive_master_file_id": null,
+  "temporary_doc_id": "1Pzi6ttgQxu-CC99xSZbiJP2DnGgDO_E7YAtGf359dBM",
+  "github_repository_handoff_status": "not_created",
+  "github_create_blob_schema": "content string plus encoding utf-8/base64; no runtime file-reference parameter",
+  "publication_status": "not_uploaded",
+  "incident": "content/portrait-recovery-incidents/awak-kuier.json",
+  "public_page_changed": false
 }
