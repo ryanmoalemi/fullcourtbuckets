@@ -11,10 +11,49 @@
     1329
   ],
   "repository_path": "portrait-handoff/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/ashten-prechtel/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png",
-  "github_blob_sha": "233e695ba0f3099d4dff90b4cb8937de2bdb7d31"
+  "github_blob_sha": "233e695ba0f3099d4dff90b4cb8937de2bdb7d31",
+  "upload_run_id": 35501530731,
+  "publication_run_id": 35501543400,
+  "publication_commit": "6e1b75e08046ba57c8470d770e5b9cfa563c0274",
+  "evidence_artifact_id": 10602068369,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ashten-prechtel/?v=d8891e1e8b31",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/ashten-prechtel/portrait.png?v=d8891e1e8b31",
+    "natural_dimensions": [
+      1183,
+      1329
+    ],
+    "public_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+    "canonical": "https://fullcourtbuckets.com/wnba/ashten-prechtel/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "ashten-prechtel-chromium-desktop.png",
+      "ashten-prechtel-chromium-mobile-320.png"
+    ]
+  }
 }
