@@ -123,15 +123,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 67076,
-      "slug": "awa-fam",
-      "player_name": "Awa Fam",
-      "listed_active": true,
-      "profile_path": "/wnba/awa-fam/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 621,
       "slug": "awak-kuier",
       "player_name": "Awak Kuier",
@@ -798,6 +789,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 266905,
+      "slug": "kamila-borkowska",
+      "player_name": "Kamila Borkowska",
+      "listed_active": true,
+      "profile_path": "/wnba/kamila-borkowska/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 726,
       "slug": "kamilla-cardoso",
       "player_name": "Kamilla Cardoso",
@@ -1082,6 +1082,15 @@
       "player_name": "Maria Conde",
       "listed_active": true,
       "profile_path": "/wnba/maria-conde/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
+      "player_id": 266908,
+      "slug": "maria-gakdeng",
+      "player_name": "Maria Gakdeng",
+      "listed_active": true,
+      "profile_path": "/wnba/maria-gakdeng/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

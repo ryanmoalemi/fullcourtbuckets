@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-19T11:23:57+00:00",
+  "checked_at": "2026-09-20T09:04:50+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -1052,49 +1052,9 @@
       "stl": 0.0,
       "blk": 0.0,
       "turnover": 1.0
-    },
-    {
-      "game_id": 25010,
-      "player_id": 309,
-      "date": "2026-08-15T23:30:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_score": 80,
-      "away_score": 70,
-      "minutes": "30",
-      "pts": 15.0,
-      "ast": 3.0,
-      "reb": 7.0,
-      "stl": 4.0,
-      "blk": 0.0,
-      "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-08-15",
+  "game_log_window_start": "2026-08-16",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

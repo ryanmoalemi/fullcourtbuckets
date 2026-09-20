@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-19T11:23:57+00:00",
+  "checked_at": "2026-09-20T09:04:50+00:00",
   "players": [
     {
       "id": 345,
@@ -3164,6 +3164,22 @@
       "data_path": "/data/wnba/players/kamiko-williams.json"
     },
     {
+      "id": 266905,
+      "slug": "kamila-borkowska",
+      "name": "Kamila Borkowska",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/kamila-borkowska/",
+      "data_path": "/data/wnba/players/kamila-borkowska.json"
+    },
+    {
       "id": 726,
       "slug": "kamilla-cardoso",
       "name": "Kamilla Cardoso",
@@ -4192,6 +4208,22 @@
       },
       "path": "/wnba/maria-conde/",
       "data_path": "/data/wnba/players/maria-conde.json"
+    },
+    {
+      "id": 266908,
+      "slug": "maria-gakdeng",
+      "name": "Maria Gakdeng",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "path": "/wnba/maria-gakdeng/",
+      "data_path": "/data/wnba/players/maria-gakdeng.json"
     },
     {
       "id": 542,

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-19T11:23:57+00:00",
+  "checked_at": "2026-09-20T09:04:50+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -133,6 +133,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 25063,
+      "player_id": 725,
+      "date": "2026-09-19T23:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 106,
+      "away_score": 81,
+      "minutes": "24",
+      "pts": 9.0,
+      "ast": 4.0,
+      "reb": 1.0,
+      "stl": 2.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
     {
       "game_id": 25055,
       "player_id": 725,
@@ -414,7 +454,7 @@
       "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-08-15",
+  "game_log_window_start": "2026-08-16",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -1,11 +1,11 @@
 {
   "layout_version": "fcb-compact-player-v1",
-  "profile_count": 565,
-  "profiles_with_approved_illustrations": 20,
-  "profiles_awaiting_illustrations": 545,
+  "profile_count": 567,
+  "profiles_with_approved_illustrations": 21,
+  "profiles_awaiting_illustrations": 546,
   "illustration_generation_started": false,
   "automatic_paid_generation_enabled": false,
-  "data_snapshot_checked_at": "2026-09-19T11:23:57+00:00",
+  "data_snapshot_checked_at": "2026-09-20T09:04:50+00:00",
   "approved_layout_source": "/wnba/caitlin-clark/",
   "approved_css_sha256": "1e46a773d2c9e6d492016900609f7c054e483a569e998f8a01f4f5bef110db25",
   "scope": "All current player pages; design only. No statistics or player identities changed."
