@@ -1,0 +1,17 @@
+{
+  "player_id": 67076,
+  "player_name": "Awa Fam",
+  "slug": "awa-fam",
+  "destination": "images/players/awa-fam/portrait.png",
+  "stage": "claimed_pre_generation",
+  "source": "data/wnba/players/awa-fam.json",
+  "active_in_provider_feed": true,
+  "worker": "portrait-rollout",
+  "claimed_at": "2026-09-20T00:08:00Z",
+  "lease_expires_at": "2026-09-20T01:38:00Z",
+  "owner_delegated_publication": true,
+  "new_generation_minimum": [1024, 1024],
+  "artwork_requirements": "Exactly one recognizable Awa Fam portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup.",
+  "publication_status": "not_generated",
+  "public_page_changed": false
+}
