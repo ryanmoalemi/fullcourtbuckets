@@ -1,0 +1,70 @@
+{
+  "player_id": 626,
+  "player_name": "DiJonai Carrington",
+  "slug": "dijonai-carrington",
+  "stage": "drive_preserve",
+  "error_code": "BLOCKED_FILE_REFERENCE",
+  "action_name": "upload_file",
+  "reference_form": "mounted_path",
+  "provider_contacted": null,
+  "provider_http_status": null,
+  "correlation_id": null,
+  "execution_context": "interactive",
+  "error_envelope_redacted": {
+    "action_name": "upload_file",
+    "argument_keys": [
+      "mounted original path"
+    ],
+    "error": "BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress.",
+    "reference_form": "mounted_path",
+    "path_class": "/mnt/data/[redacted]"
+  },
+  "raw_error_envelope_captured": false,
+  "classification": {
+    "class": "schema_mismatch",
+    "confidence": "observed",
+    "retry_same_reference": false,
+    "schedule_retry": false,
+    "next_action": "retry_once_with_runtime_file_reference",
+    "disable_hourly_task": false
+  },
+  "bytes_preserved": false,
+  "preserved_master_id": null,
+  "source_sha256": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243",
+  "next_retry_at": null,
+  "help_needed": true,
+  "disable_hourly_task": false,
+  "source_bytes": 1859250,
+  "source_dimensions": [
+    1129,
+    1393
+  ],
+  "intended_filename": "dijonai-carrington-portrait.png",
+  "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "attempt_count": 1,
+  "first_seen_at": "2026-09-20T21:08:39Z",
+  "last_attempt_at": "2026-09-20T21:08:39Z",
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
+  "public_page_impact": "no replacement published; live page still has no folder portrait",
+  "resolution_status": "open_bytes_not_preserved_schema_mismatch",
+  "notification_status": "reported_in_slack_handoff_channel",
+  "related_open_originals": [
+    "dearica-hamby"
+  ],
+  "known": [
+    "Image generation succeeded and ChatGPT reports the original still intact locally",
+    "Drive upload_file was called with the mounted path /mnt/data/dijonai-carrington-portrait.png",
+    "That call returned BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress",
+    "No Drive file was created; this is not a Portrait ready handoff",
+    "ChatGPT did not retry, use Docs/sourceUri, write GitHub, or start publication",
+    "Aneesah Morrow class: mounted-path BLOCKED_FILE_REFERENCE can later succeed with the runtime file_... form",
+    "Identifiers are not preserved bytes",
+    "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved"
+  ],
+  "unknown": [
+    "Whether a single retry with the runtime file_... reference will bind for this original"
+  ],
+  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
+  "details": "schema_mismatch on Drive preserve (mounted_path vs runtime_file_reference). Permitted next action is one retry of Drive upload_file using the current runtime file_... for this same original. Do not retry /mnt/data, Docs, or regenerate. If that runtime reference is also denied, switch to google-independent GitHub create_blob (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-<sha256>.png. Cursor owns portrait-upload.json and live verification."
+}
