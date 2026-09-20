@@ -2,13 +2,13 @@
   "player_id": 621,
   "player_name": "Awak Kuier",
   "slug": "awak-kuier",
-  "stage": "master_preservation_and_handoff",
+  "stage": "drive_master_preserved_docs_handoff_blocked",
   "error_code": "BLOCKED_FILE_REFERENCE",
-  "attempt_count": 1,
+  "attempt_count": 2,
   "first_seen_at": "2026-09-20T03:58:00Z",
-  "last_attempt_at": "2026-09-20T03:59:00Z",
+  "last_attempt_at": "2026-09-20T09:00:00Z",
   "next_retry_at": null,
-  "preserved_master_id": null,
+  "preserved_master_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh",
   "source_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
   "source_generation_id": "fbea41d8-b1b1-459c-8bc2-b65a1d920d1b",
   "source_runtime_file_reference": "file_000000000a9c81f5a93290666405e856",
@@ -16,12 +16,15 @@
   "source_bytes": 2053542,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awak-kuier/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
-  "resolution_status": "connector_file_binding_denied_waiting_for_google_independent_byte_handoff",
-  "notification_status": "reported_once",
+  "resolution_status": "drive_master_preserved_waiting_for_google_independent_github_handoff_or_other_authorized_publication_path",
+  "notification_status": "material_recovery_change",
   "help_needed": true,
-  "temporary_doc_ids": ["1Pzi6ttgQxu-CC99xSZbiJP2DnGgDO_E7YAtGf359dBM"],
-  "action_name": "Google_Drive.upload_file then Google_Drive.batch_update_document insertInlineImage",
-  "reference_form": "exact runtime file_ reference",
+  "temporary_doc_ids": [
+    "1Pzi6ttgQxu-CC99xSZbiJP2DnGgDO_E7YAtGf359dBM",
+    "1RygRDv6S6Yxfkqa4lWTxfJDtZrXSceMjiqK17jrh1y8"
+  ],
+  "action_name": "Google_Drive.batch_update_document insertInlineImage after exact Drive-master recovery",
+  "reference_form": "fresh file reference returned by downloading the byte-identical preserved Drive master",
   "execution_context": "scheduled",
   "provider_contacted": null,
   "provider_http_status": null,
@@ -33,13 +36,28 @@
     "message": "this file is unavailable for connector egress"
   },
   "classification": "connector_file_binding_denied",
-  "bytes_preserved": false,
+  "bytes_preserved": true,
+  "drive_master": {
+    "file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh",
+    "folder_id": "1uDq21eO-67xHBzhEWO4or20NQYJkzjDD",
+    "folder_name": "FCB Portrait Masters",
+    "file_name": "FCB-621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
+    "bytes": 2053542,
+    "sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+    "verified_byte_identical_to_original": true
+  },
+  "fresh_drive_fetch_handoff_probe": {
+    "fresh_runtime_file_reference": "file_00000000dd4081f6aec3a39ac48c76cc",
+    "result": "BLOCKED_FILE_REFERENCE",
+    "do_not_timer_retry": true,
+    "note": "The Drive master was downloaded back through the connected Drive action and compared byte-for-byte with the original before this one Docs handoff attempt. The fresh downloaded file reference was still denied for connector egress."
+  },
   "github_handoff_probe": {
     "create_blob_schema_discovered": true,
     "schema_accepts_runtime_file_reference": false,
     "schema_accepts_content_encoding_base64": true,
     "repository_path_created": false,
-    "note": "No binary handoff was created. The connected create_blob action exposes only inline content plus encoding and no file-reference parameter; the original PNG remains available only in the generating runtime for this run. No base64 chunking, URL rewriting, screenshot, recompression, or regeneration was used."
+    "note": "No binary GitHub handoff was created. The connected create_blob action exposes inline content plus encoding but no file-reference parameter. The approved PNG is now durably preserved in Drive, so do not regenerate it."
   },
   "drive_file_uri_schema_probe": {
     "result": "client_schema_rejected",
@@ -47,7 +65,7 @@
     "error_code": "INVALID_ARGUMENT",
     "tested_shape": "structured file_uri object containing the exact runtime file id, image/png mime type, and intended filename",
     "schema_observed": "upload_file validates file_uri as a string even though its description mentions a structured file_uri object",
-    "note": "The structured form was rejected before any Google provider call. Do not repeat it. The previously denied bare runtime file reference also must not be timer-retried."
+    "note": "The structured form was rejected before any Google provider call. Do not repeat it."
   },
-  "details": "A newly generated Awak Kuier source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format, and likeness review against current public headshots. Google Drive upload_file rejected the exact fresh runtime file reference with BLOCKED_FILE_REFERENCE. A fresh native Google Doc insertInlineImage using that same exact reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. A later schema-only distinguishing test confirmed that a manually supplied structured file_uri object is rejected client-side because the live upload_file schema requires a string; no provider request occurred. Per current recovery policy, do not retry this same runtime reference on an hourly timer and do not generate a larger unusable backlog until an authorized byte handoff is available."
+  "details": "The original accepted Awak Kuier PNG remained available in the generating conversation and was re-verified locally at exactly 2,053,542 bytes, 1145x1374 RGBA, SHA-256 046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021. It was preserved byte-for-byte as a raw PNG in the existing FCB Portrait Masters Drive folder through the authorized Google Drive library mount. A Drive download of that master produced identical bytes (cmp equality and matching SHA-256). One supported temporary-Doc handoff using the fresh downloaded Drive-master file reference then returned BLOCKED_FILE_REFERENCE again. No URL rewrite, contentUri use, screenshot, recompression, regeneration, force-push, or competing Awa/Ashten publication was attempted. The live Awak page remains unchanged."
 }
