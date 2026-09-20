@@ -1,0 +1,21 @@
+{
+  "player_id": 621,
+  "player_name": "Awak Kuier",
+  "slug": "awak-kuier",
+  "destination": "images/players/awak-kuier/portrait.png",
+  "stage": "claimed_before_generation",
+  "source": "data/wnba/players/awak-kuier.json",
+  "active_in_provider_feed": true,
+  "worker": "portrait-rollout",
+  "claimed_at": "2026-09-20T03:56:00Z",
+  "lease_expires_at": "2026-09-20T05:26:00Z",
+  "owner_delegated_publication": true,
+  "new_generation_minimum": [1024, 1024],
+  "artwork_requirements": "Exactly one recognizable Awak Kuier portrait, frontal head and shoulders/upper chest, natural expression, realistic proportions, crisp polished illustrated shading, plain white basketball top with black trim, genuine transparent background, no lettering/logos/numbers/scenery/frame/poster/mockup.",
+  "reference_review": {
+    "official_profile": "https://www.wnba.com/webview/player/1630386",
+    "secondary_headshot": "https://a.espncdn.com/combiner/i?img=%2Fi%2Fheadshots%2Fwnba%2Fplayers%2Ffull%2F4790266.png",
+    "identity_cues": "Dark complexion; long micro-braids, center/near-center part, some loose/wavy braid ends; long oval face; broad high forehead; almond-shaped dark eyes; medium-broad nose; full lips; soft closed-mouth smile."
+  },
+  "publication_status": "not_generated"
+}
