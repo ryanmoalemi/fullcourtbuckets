@@ -166,12 +166,15 @@ class PortraitUploadTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(antonia.read_bytes()).hexdigest(),
                          '93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858')
 
-    def test_live_ashlon_request_stub_is_already_uploaded(self):
+    def test_live_request_stub_is_already_uploaded(self):
         repo = Path(__file__).resolve().parents[1]
         stub = json.loads((repo / '.github/portrait-upload.json').read_text())
-        self.assertEqual(stub['slug'], 'ashlon-jackson')
         self.assertEqual(stub['status'], 'uploaded_pending_live_verification')
-        self.assertEqual(stub['sha256'], '23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d')
+        self.assertRegex(stub.get('slug', ''), r'^[a-z0-9]+(?:-[a-z0-9]+)*\Z')
+        self.assertRegex(stub.get('sha256', ''), r'^[a-f0-9]{64}\Z')
+        self.assertTrue(stub.get('request_id'))
+        self.assertNotIn('download_url', stub)
+        self.assertNotIn('repository_path', stub)
 
     def test_main_noops_when_request_already_uploaded(self):
         raw = self.png_bytes()

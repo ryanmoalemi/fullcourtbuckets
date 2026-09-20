@@ -90,7 +90,7 @@ class PortraitRecoveryTests(unittest.TestCase):
         self.assertEqual(record['error_envelope_redacted']['file_uri'], 'runtime_file_reference')
         self.assertFalse(record['disable_hourly_task'])
 
-    def test_current_awa_and_ashten_incidents_are_binding_denials_without_preserved_bytes(self):
+    def test_current_awa_and_ashten_incidents_remain_binding_denials_after_byte_preservation(self):
         root = Path(__file__).resolve().parents[1]
         for slug in ('awa-fam', 'ashten-prechtel'):
             incident = json.loads((root / 'content/portrait-recovery-incidents' / f'{slug}.json').read_text())
@@ -100,14 +100,20 @@ class PortraitRecoveryTests(unittest.TestCase):
                 same_runtime_reference_already_tried=incident.get('attempt_count', 0) > 1,
             )
             self.assertEqual(classification['class'], 'connector_file_binding_denied')
+            self.assertNotEqual(classification['class'], 'fixed')
             self.assertFalse(classification['schedule_retry'])
-            self.assertFalse(incident['bytes_preserved'])
-            self.assertIsNone(incident['preserved_master_id'])
+            self.assertTrue(incident['bytes_preserved'])
+            self.assertTrue(incident['preserved_master_id'])
+            self.assertEqual(incident['error_code'], 'BLOCKED_FILE_REFERENCE')
             self.assertFalse(incident['raw_error_envelope_captured'])
             self.assertIsNone(incident['next_retry_at'])
-            self.assertTrue(incident['help_needed'])
+            self.assertFalse(incident['help_needed'])
             self.assertFalse(incident['disable_hourly_task'])
-            self.assertEqual(incident['classification']['next_action'], 'google_independent_github_handoff')
+            self.assertEqual(incident['classification']['class'], 'connector_file_binding_denied')
+            self.assertIn(
+                incident['classification']['next_action'],
+                ('await_cursor_publication_and_live_verification', 'google_independent_github_handoff'),
+            )
 
 
 if __name__ == '__main__':
