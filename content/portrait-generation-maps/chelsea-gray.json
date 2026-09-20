@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "player_id": 410,
+  "player_name": "Chelsea Gray",
+  "slug": "chelsea-gray",
+  "provider": "BALLDONTLIE",
+  "player_record": "data/wnba/players/chelsea-gray.json",
+  "player_record_sha": "1cb38c49631a1410a9ba1b5506b7b87893ac0911",
+  "status": "reserved_for_generation",
+  "authorization": "owner_delegated_quality_review; owner_requested_one_image_drive_slack_test",
+  "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "destination_filename": "chelsea-gray-portrait.png",
+  "handoff_path": "portrait-handoff/chelsea-gray-portrait.png",
+  "slack_channel_id": "C0C39020XEG",
+  "slack_channel_name": "fcb-portrait-handoff",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "generation_attempts": [],
+  "approved": false,
+  "do_not_generate_duplicate": true,
+  "lease": {
+    "owner": "chatgpt-one-image-slack-test-20260920",
+    "scope": "chelsea-gray_generation_and_drive_slack_handoff_only",
+    "claimed_at": "2026-09-20T09:31:00Z",
+    "expires_at": "2026-09-20T10:01:00Z"
+  },
+  "preflight": {
+    "global_worker_lease": null,
+    "existing_player_receipt": "not_found",
+    "existing_player_image_folder": "not_found",
+    "existing_drive_portrait_search": "no_matches",
+    "already_approved_or_queued": false
+  },
+  "brief": "One recognizable original Chelsea Gray frontal head-and-shoulders/upper-chest editorial illustration. Natural expression, realistic athletic proportions, crisp polished illustrative shading. Plain white basketball top with black trim. Genuine transparent PNG at least 1024 pixels per side. No lettering, logos, numbers, scenery, frame, poster, webpage mockup or other person. Preserve exact original bytes.",
+  "identity_reference_sources": [
+    "https://www.wnba.com/player/203833/chelsea-gray/profile",
+    "https://www.usab.com/players/chelsea-gray"
+  ],
+  "publication_status": "not_submitted",
+  "live_completion_increment": 0
+}
