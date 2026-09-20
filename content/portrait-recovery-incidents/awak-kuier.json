@@ -2,7 +2,7 @@
   "player_id": 621,
   "player_name": "Awak Kuier",
   "slug": "awak-kuier",
-  "stage": "drive_master_preserved_docs_handoff_blocked",
+  "stage": "cursor_handoff_queued",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "attempt_count": 2,
   "first_seen_at": "2026-09-20T03:58:00Z",
@@ -15,10 +15,10 @@
   "source_dimensions": [1145, 1374],
   "source_bytes": 2053542,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awak-kuier/",
-  "public_page_impact": "none; no portrait upload or page publication occurred",
-  "resolution_status": "drive_master_preserved_waiting_for_google_independent_github_handoff_or_other_authorized_publication_path",
-  "notification_status": "material_recovery_change",
-  "help_needed": true,
+  "public_page_impact": "No ChatGPT portrait upload or publication in this acknowledgment. Cursor publication has not been verified here.",
+  "resolution_status": "handed_off_to_cursor_awaiting_serialized_publication",
+  "notification_status": "owner_confirmed_cursor_handoff",
+  "help_needed": false,
   "temporary_doc_ids": [
     "1Pzi6ttgQxu-CC99xSZbiJP2DnGgDO_E7YAtGf359dBM",
     "1RygRDv6S6Yxfkqa4lWTxfJDtZrXSceMjiqK17jrh1y8"
@@ -67,5 +67,23 @@
     "schema_observed": "upload_file validates file_uri as a string even though its description mentions a structured file_uri object",
     "note": "The structured form was rejected before any Google provider call. Do not repeat it."
   },
-  "details": "The original accepted Awak Kuier PNG remained available in the generating conversation and was re-verified locally at exactly 2,053,542 bytes, 1145x1374 RGBA, SHA-256 046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021. It was preserved byte-for-byte as a raw PNG in the existing FCB Portrait Masters Drive folder through the authorized Google Drive library mount. A Drive download of that master produced identical bytes (cmp equality and matching SHA-256). One supported temporary-Doc handoff using the fresh downloaded Drive-master file reference then returned BLOCKED_FILE_REFERENCE again. No URL rewrite, contentUri use, screenshot, recompression, regeneration, force-push, or competing Awa/Ashten publication was attempted. The live Awak page remains unchanged."
+  "details": "The original accepted Awak Kuier PNG remained available in the generating conversation and was re-verified locally at exactly 2,053,542 bytes, 1145x1374 RGBA, SHA-256 046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021. It was preserved byte-for-byte as a raw PNG in the existing FCB Portrait Masters Drive folder through the authorized Google Drive library mount. A Drive download of that master produced identical bytes (cmp equality and matching SHA-256). One supported temporary-Doc handoff using the fresh downloaded Drive-master file reference then returned BLOCKED_FILE_REFERENCE again. No URL rewrite, contentUri use, screenshot, recompression, regeneration, force-push, or competing Awa/Ashten publication was attempted. The live Awak page remained unchanged by those attempts. Latest owner message confirms Cursor has independently validated the same Drive master and owns publication through portrait-handoff plus repository_path after Awa Fam and Ashten Prechtel finish. No further ChatGPT file binding attempts or competing publication are authorized for this master.",
+  "cursor_handoff": {
+    "confirmation_source": "owner_message_reporting_cursor_validation",
+    "publisher": "Cursor",
+    "status": "queued_after_awa_fam_and_ashten_prechtel",
+    "route": "GitHub portrait-handoff plus repository_path",
+    "master_drive_file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh",
+    "confirmed_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+    "confirmed_bytes": 2053542,
+    "confirmed_dimensions": [1145, 1374],
+    "confirmed_mode": "RGBA",
+    "chatgpt_regeneration_allowed": false,
+    "chatgpt_reupload_or_copy_allowed": false,
+    "chatgpt_docs_or_drive_file_reference_retry_allowed": false,
+    "chatgpt_competing_publication_allowed": false,
+    "reconcile_only_with_current_receipts_and_full_live_evidence": true,
+    "live_completion_claimed": false,
+    "milestone_increment": 0
+  }
 }
