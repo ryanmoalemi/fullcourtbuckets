@@ -1,0 +1,20 @@
+{
+  "request_id": "410-edf21fda72de-upload-20260920T2000Z",
+  "player_id": 410,
+  "player_name": "Chelsea Gray",
+  "slug": "chelsea-gray",
+  "approved": true,
+  "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b",
+  "bytes": 1442328,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "repository_path": "portrait-handoff/410-chelsea-gray-edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/chelsea-gray/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/410-chelsea-gray-edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b.png",
+  "github_blob_sha": "d4877dc05debf96caff50f538875979666721c72"
+}
