@@ -4,10 +4,31 @@
   "slug": "ashten-prechtel",
   "stage": "master_preservation_and_temporary_doc_handoff",
   "error_code": "BLOCKED_FILE_REFERENCE",
+  "action_name": "upload_file_and_insertInlineImage",
+  "reference_form": "runtime_file_reference",
+  "schema_expected": "runtime_file_reference",
+  "provider_contacted": null,
+  "provider_http_status": null,
+  "correlation_id": null,
+  "execution_context": "unknown",
+  "error_envelope_redacted": null,
+  "raw_error_envelope_captured": false,
+  "classification": {
+    "class": "connector_file_binding_denied",
+    "confidence": "hypothesis",
+    "denied_layer": "unknown",
+    "retry_same_reference": false,
+    "schedule_retry": false,
+    "next_action": "google_independent_github_handoff",
+    "disable_hourly_task": false,
+    "do_not_regenerate": true,
+    "already_retried_same_reference": true
+  },
   "attempt_count": 2,
   "first_seen_at": "2026-09-19T22:58:00Z",
   "last_attempt_at": "2026-09-20T00:04:30Z",
-  "next_retry_at": "2026-09-20T02:04:30Z",
+  "next_retry_at": null,
+  "bytes_preserved": false,
   "preserved_master_id": null,
   "source_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
   "source_generation_id": "b3bbaf66-9d95-4746-a0bf-83bbe822647a",
@@ -16,9 +37,22 @@
   "source_bytes": 2196715,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/ashten-prechtel/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
-  "resolution_status": "deferred_capability_retry",
+  "resolution_status": "awaiting_google_independent_handoff",
   "notification_status": "reported_unchanged",
-  "help_needed": false,
+  "help_needed": true,
+  "disable_hourly_task": false,
   "temporary_doc_ids": ["15htcLhZ8L6YQepAJljpiPKNO2znU6Fi94q3ZYAoMSKs", "1tOhZKnKjsXYU4apLXupvyJOPZz_YZZslW5__LXp4ix8"],
-  "details": "The generated source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format and likeness review against current public headshots. Google Drive upload_file rejected the exact runtime-generated file reference again when the due retry ran, and a fresh temporary native Google Doc insertInlineImage using that same exact runtime reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression or base64 transport was attempted. Per recovery policy, the denied connector-egress operation is deferred for two hours without regenerating this approved source; unrelated eligible work may continue."
+  "known": [
+    "Exact runtime file_... was rejected by Drive upload_file and Docs insertInlineImage",
+    "No GitHub portrait or master was written",
+    "Generation ID and hash are not preserved original bytes",
+    "Ashlon Jackson later publishing does not resolve this incident"
+  ],
+  "unknown": [
+    "Whether the Google provider was contacted",
+    "Runtime attachment resolution vs connector rewrite vs auth/egress vs provider",
+    "Whether the historical file_... remains readable in the generating ChatGPT conversation"
+  ],
+  "owner_action_if_chatgpt_cannot_carry_bytes": "Download the original PNG from the generating ChatGPT conversation (not a screenshot), upload it unchanged to portrait-handoff/74886-ashten-prechtel-d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da.png, then submit the existing portrait-upload.json with repository_path. Do not regenerate.",
+  "details": "The generated source passed PNG, native-resolution, RGBA transparency, anatomy, single-subject, uniform-format and likeness review against current public headshots. Google Drive upload_file rejected the exact runtime-generated file reference, and a fresh temporary native Google Doc insertInlineImage using that same exact runtime reference in both uri and image_uris was also rejected with BLOCKED_FILE_REFERENCE. Raw tool envelopes were not captured. Scheduled retries of this historical file_... are stopped. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression or base64 transport was attempted."
 }

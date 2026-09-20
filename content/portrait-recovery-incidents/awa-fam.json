@@ -4,10 +4,31 @@
   "slug": "awa-fam",
   "stage": "master_preservation_and_temporary_doc_handoff",
   "error_code": "BLOCKED_FILE_REFERENCE",
+  "action_name": "upload_file_and_insertInlineImage",
+  "reference_form": "runtime_file_reference",
+  "schema_expected": "runtime_file_reference",
+  "provider_contacted": null,
+  "provider_http_status": null,
+  "correlation_id": null,
+  "execution_context": "unknown",
+  "error_envelope_redacted": null,
+  "raw_error_envelope_captured": false,
+  "classification": {
+    "class": "connector_file_binding_denied",
+    "confidence": "hypothesis",
+    "denied_layer": "unknown",
+    "retry_same_reference": false,
+    "schedule_retry": false,
+    "next_action": "google_independent_github_handoff",
+    "disable_hourly_task": false,
+    "do_not_regenerate": true,
+    "already_retried_same_reference": true
+  },
   "attempt_count": 2,
   "first_seen_at": "2026-09-20T00:12:00Z",
   "last_attempt_at": "2026-09-20T02:03:12Z",
-  "next_retry_at": "2026-09-20T04:03:12Z",
+  "next_retry_at": null,
+  "bytes_preserved": false,
   "preserved_master_id": null,
   "source_sha256": "3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4",
   "source_generation_id": "75d091b1-576f-4949-bbbb-51380544877a",
@@ -16,12 +37,25 @@
   "source_bytes": 1976438,
   "affected_live_page": "https://fullcourtbuckets.com/wnba/awa-fam/",
   "public_page_impact": "none; no portrait upload or page publication occurred",
-  "resolution_status": "deferred_capability_retry",
+  "resolution_status": "awaiting_google_independent_handoff",
   "notification_status": "reported_unchanged",
-  "help_needed": false,
+  "help_needed": true,
+  "disable_hourly_task": false,
   "temporary_doc_ids": [
     "17-0Sh73liErajh4znQ6qDkokvH8UiSnQfLVz5XAqUU0",
     "12er4D6onVd3nXQKn7eoyQsnifmITm9R-3d3WjXsGXt8"
   ],
-  "details": "Second bounded capability retry used the exact preserved runtime file reference. Google Drive upload_file again returned BLOCKED_FILE_REFERENCE, and a newly created temporary native Google Doc insertInlineImage using that same exact reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. The failed temporary Doc was deleted. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression, base64 transport, regeneration, or live-page change occurred. Per recovery policy, back off two hours and do not create additional unsent portrait backlog while the shared transfer capability remains unavailable."
+  "known": [
+    "Exact runtime file_... was rejected by Drive upload_file and Docs insertInlineImage in this run",
+    "No GitHub portrait or master was written",
+    "Generation ID and hash are not preserved original bytes",
+    "A later successful portrait for a different player does not fix this incident"
+  ],
+  "unknown": [
+    "Whether the Google provider was contacted",
+    "Runtime attachment resolution vs connector rewrite vs auth/egress vs provider",
+    "Whether the historical file_... remains readable in the generating ChatGPT conversation"
+  ],
+  "owner_action_if_chatgpt_cannot_carry_bytes": "Download the original PNG from the generating ChatGPT conversation (not a screenshot), upload it unchanged to portrait-handoff/67076-awa-fam-3c7c49fb1e36d27fabc3fd95fb7f432f6635ebe90318d855e34f7c13abe5f4c4.png, then submit the existing portrait-upload.json with repository_path. Do not regenerate.",
+  "details": "Second bounded capability retry used the exact preserved runtime file reference. Google Drive upload_file again returned BLOCKED_FILE_REFERENCE, and a newly created temporary native Google Doc insertInlineImage using that same exact reference in both uri and image_uris also returned BLOCKED_FILE_REFERENCE. Raw tool envelopes were not captured. Scheduled retries of this historical file_... are stopped. No URL rewrite, contentUri use, mounted-path substitution, screenshot, recompression, base64 transport, regeneration, or live-page change occurred."
 }

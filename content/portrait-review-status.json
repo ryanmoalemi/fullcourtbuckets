@@ -31,7 +31,7 @@
     "upload_workflow":".github/workflows/portrait-upload.yml",
     "upload_request":".github/portrait-upload.json",
     "instructions":".github/PORTRAIT_UPLOAD.md",
-    "upload_connection":"Preserve master in connected Drive. Temporary native Doc insertInlineImage accepts the actual local original through image_uris. Get imageProperties.sourceUri, not resampled contentUri. Submit the sourceUri promptly through the existing uploader; confirm byte equality and publication; delete only the temporary Doc. No Dropbox, base64 chunking, resizing, recompression, or new workflow.",
+    "upload_connection":"Prefer Drive master, then temporary Doc sourceUri into the existing uploader. If connector file-reference binding fails, use portrait-handoff/<player_id>-<slug>-<sha256>.png with repository_path on the same uploader. Get imageProperties.sourceUri, not resampled contentUri. Confirm byte equality and live verification. No Dropbox, base64 chunking, resizing, recompression, or new per-player workflow.",
     "github_write_access_verified":true,
     "write_access_evidence_commit":"4c2a4b1f709f6b92c46400e34b6d168cfddc11ba",
     "permission_note":"Existing GitHub writes succeeded. A transfer error does not establish missing GitHub permission."
