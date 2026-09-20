@@ -534,6 +534,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 74886,
+      "slug": "ashten-prechtel",
+      "player_name": "Ashten Prechtel",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/ashten-prechtel/portrait.png",
+      "width": 1183,
+      "height": 1329,
+      "asset_sha256": "d8891e1e8b318cec99205a09762d677b43eff32faa49cbd688d3c457e725b6da",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1183,
+        "height": 1329,
+        "source_width": 1183,
+        "source_height": 1329,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
