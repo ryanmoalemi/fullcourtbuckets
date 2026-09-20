@@ -1,0 +1,72 @@
+{
+  "player_id": 309,
+  "player_name": "Nneka Ogwumike",
+  "slug": "nneka-ogwumike",
+  "stage": "drive_preserve",
+  "error_code": "BLOCKED_FILE_REFERENCE",
+  "action_name": "upload_file",
+  "reference_form": "runtime_file_reference",
+  "provider_contacted": null,
+  "provider_http_status": null,
+  "correlation_id": null,
+  "execution_context": "interactive",
+  "error_envelope_redacted": {
+    "action_name": "upload_file",
+    "argument_keys": [
+      "generated-file reference"
+    ],
+    "error": "BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress.",
+    "reference_form": "runtime_file_reference"
+  },
+  "raw_error_envelope_captured": false,
+  "classification": {
+    "class": "connector_file_binding_denied",
+    "confidence": "hypothesis",
+    "denied_layer": "unknown",
+    "retry_same_reference": false,
+    "schedule_retry": false,
+    "next_action": "google_independent_github_handoff",
+    "disable_hourly_task": false,
+    "do_not_regenerate": true,
+    "already_retried_same_reference": false
+  },
+  "bytes_preserved": false,
+  "preserved_master_id": null,
+  "source_sha256": "2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9",
+  "next_retry_at": null,
+  "help_needed": true,
+  "disable_hourly_task": false,
+  "source_bytes": 2142870,
+  "source_dimensions": [
+    1114,
+    1412
+  ],
+  "intended_filename": "nneka-ogwumike-portrait.png",
+  "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "attempt_count": 1,
+  "first_seen_at": "2026-09-20T22:14:51Z",
+  "last_attempt_at": "2026-09-20T22:14:51Z",
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/",
+  "public_page_impact": "no replacement published; live page still has no folder portrait",
+  "resolution_status": "open_bytes_not_preserved",
+  "notification_status": "reported_in_slack_handoff_channel",
+  "related_open_originals": [
+    "dearica-hamby",
+    "dijonai-carrington"
+  ],
+  "known": [
+    "Corrective generation passed ChatGPT self-review and the original is reported intact locally",
+    "Drive upload_file with a fresh runtime generated-file reference returned BLOCKED_FILE_REFERENCE",
+    "No Drive file was created in FCB portrait-handoff (for Cursor); Illustration Production folder 309-nneka-ogwumike is empty",
+    "ChatGPT did not retry, use Docs/sourceUri, write GitHub, or start publication",
+    "In-thread recovery for Dearica and DiJonai already forbids Drive/Docs retries; Nneka uses the same GitHub-only drop",
+    "Identifiers are not preserved bytes",
+    "Brittney Griner was parked for likeness and has no accepted original"
+  ],
+  "unknown": [
+    "Whether GitHub create_blob accepts whole-file base64 without a file_uri in this ChatGPT run"
+  ],
+  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not resize or re-export.",
+  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not retry Drive or Docs. Cursor owns portrait-upload.json and live verification. Do not regenerate."
+}
