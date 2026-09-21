@@ -1,6 +1,11 @@
 {
-  "request_id": "590-2e9393266b9c-upload-20260921T0723Z",
-  "slug": "ezi-magbegor",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3"
+  "request_id": "758-e5977d471b3b-upload-20260921T0737Z",
+  "player_id": 758,
+  "player_name": "Dominique Malonga",
+  "slug": "dominique-malonga",
+  "approved": true,
+  "sha256": "e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d",
+  "bytes": 1533394,
+  "dimensions": [1145, 1374],
+  "repository_path": "portrait-handoff/758-dominique-malonga-e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d.png"
 }
