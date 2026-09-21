@@ -1,11 +1,6 @@
 {
   "request_id": "544-f66cb14c1260-upload-20260921T0632Z",
-  "player_id": 544,
-  "player_name": "Ariel Atkins",
   "slug": "ariel-atkins",
-  "approved": true,
-  "sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
-  "bytes": 1740475,
-  "dimensions": [1145, 1374],
-  "repository_path": "portrait-handoff/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305"
 }
