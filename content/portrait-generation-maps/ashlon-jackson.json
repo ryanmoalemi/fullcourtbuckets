@@ -10,11 +10,12 @@
   "authorization": "owner_delegated_quality_review; owner_supplied_slack_png_replacement",
   "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
-  "destination_filename": "857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+  "destination_filename": "857-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
   "drive_file_id": null,
-  "slack_file_id": "F0C329CEZGB",
-  "handoff_path": "portrait-handoff/857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
-  "uploader_handoff_path": "portrait-handoff/67147-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+  "slack_file_id": "F0C36NGV41L",
+  "slack_file_id_duplicate": "F0C38JFJG82",
+  "handoff_path": "portrait-handoff/857-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
+  "uploader_handoff_path": "portrait-handoff/67147-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
   "slack_channel_id": "C0C39020XEG",
   "slack_channel_name": "fcb-portrait-handoff",
   "publisher": "Cursor",
@@ -51,12 +52,31 @@
         0,
         255
       ],
+      "disposition": "previous_live_portrait_replaced"
+    },
+    {
+      "attempt": 3,
+      "source": "owner_slack_png",
+      "slack_file_id": "F0C36NGV41L",
+      "slack_file_id_duplicate": "F0C38JFJG82",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "bytes": 2045931,
+      "sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a",
+      "alpha_extrema": [
+        0,
+        255
+      ],
       "disposition": "accepted_owner_slack_png_replacement"
     }
   ],
   "original_integrity": {
-    "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
-    "bytes": 2042674,
+    "sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a",
+    "bytes": 2045931,
     "dimensions": [
       1145,
       1374
@@ -69,7 +89,7 @@
     ],
     "original_bytes_preserved": true,
     "resized_or_recompressed": false,
-    "transport": "owner Slack PNG F0C329CEZGB copied unchanged into portrait-handoff on main"
+    "transport": "owner Slack PNG F0C36NGV41L (dup F0C38JFJG82) copied unchanged into portrait-handoff on main"
   },
   "quality_review": {
     "single_subject": true,
@@ -86,7 +106,7 @@
     "existing_player_image_folder": "images/players/ashlon-jackson/portrait.png",
     "already_approved_or_queued": true
   },
-  "brief": "Replacement Full Court Buckets Ashlon Jackson portrait from owner Slack original F0C329CEZGB. Preserve exact original bytes. Do not regenerate.",
+  "brief": "Replacement Full Court Buckets Ashlon Jackson portrait from owner Slack original F0C36NGV41L (dup F0C38JFJG82). Preserve exact original bytes. Do not regenerate.",
   "publication_status": "live_verified",
   "live_completion_increment": 0
 }

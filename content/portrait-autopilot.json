@@ -153,15 +153,15 @@
     {
       "player_id": 67147,
       "slug": "ashlon-jackson",
-      "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
-      "url": "https://fullcourtbuckets.com/wnba/ashlon-jackson/?v=4f160758563b",
-      "upload_run_id": 35564006397,
-      "publication_run_id": 35564130407,
-      "evidence_artifact_id": 10624075139,
+      "sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a",
+      "url": "https://fullcourtbuckets.com/wnba/ashlon-jackson/?v=8b972223aa85",
+      "upload_run_id": 35566546203,
+      "publication_run_id": 35566769860,
+      "evidence_artifact_id": 10623264745,
       "receipt": "content/portrait-upload-receipts/ashlon-jackson.json",
-      "github_master_path": "portrait-masters/67147-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+      "github_master_path": "portrait-masters/67147-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
       "source": "owner_slack_png",
-      "replaced_sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d"
+      "replaced_sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4"
     },
     {
       "player_id": 67076,
@@ -535,10 +535,10 @@
       "player_id": 67147,
       "slug": "ashlon-jackson",
       "recovery_verified": true,
-      "upload_run_id": 35564006397,
-      "publication_run_id": 35564130407,
-      "evidence_artifact_id": 10624075139,
-      "recovery": "Owner Slack PNG F0C329CEZGB replaced the previous live portrait via portrait-handoff + repository_path. Public SHA-256 4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4. Old hash 23db58ae… is gone. Chromium/WebKit live checks passed."
+      "upload_run_id": 35566546203,
+      "publication_run_id": 35566769860,
+      "evidence_artifact_id": 10623264745,
+      "recovery": "Owner Slack PNG F0C36NGV41L (dup F0C38JFJG82) replaced the previous live portrait via portrait-handoff + repository_path. Public SHA-256 8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a. Old hash 4f160758\u2026 is gone. Chromium/WebKit live checks passed."
     },
     {
       "player_id": 67076,
@@ -604,7 +604,7 @@
     "nneka-ogwumike"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T05:24:00Z",
+    "timestamp_utc": "2026-09-21T06:05:00Z",
     "players_touched": [
       {
         "player_id": 67147,
@@ -616,7 +616,7 @@
     "newly_verified": 0,
     "owner_notification_due": false
   },
-  "scope_note": "Ashlon Jackson replacement is live_verified via owner Slack PNG F0C329CEZGB + portrait-handoff repository_path. Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Ashlon Jackson replacement is live_verified via owner Slack PNG F0C36NGV41L (dup F0C38JFJG82) + portrait-handoff repository_path. Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",

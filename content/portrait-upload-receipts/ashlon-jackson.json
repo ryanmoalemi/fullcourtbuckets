@@ -11,13 +11,56 @@
     1374
   ],
   "repository_path": "portrait-handoff/67147-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
-  "slack_file_id": "F0C36NGV41L",
-  "replaced_sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
-  "note": "Replacement from Slack F0C36NGV41L (dup F0C38JFJG82); differs from live 4f160758563b",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/ashlon-jackson/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67147-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
-  "github_blob_sha": "5e510c4edbc63a30a1df10f7d8c137ec60f4aca9"
+  "github_blob_sha": "5e510c4edbc63a30a1df10f7d8c137ec60f4aca9",
+  "upload_run_id": 35566546203,
+  "publication_run_id": 35566769860,
+  "publication_commit": "a59c94dc9406d4983879ad05d97aae863f7cbe4e",
+  "evidence_artifact_id": 10623264745,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ashlon-jackson/?v=8b972223aa85",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/ashlon-jackson/portrait.png?v=8b972223aa85",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a",
+    "canonical": "https://fullcourtbuckets.com/wnba/ashlon-jackson/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "ashlon-jackson-chromium-desktop.png",
+      "ashlon-jackson-chromium-mobile-320.png"
+    ]
+  },
+  "slack_file_id": "F0C36NGV41L",
+  "slack_file_id_duplicate": "F0C38JFJG82",
+  "replaced_sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+  "handoff_landing_path": "portrait-handoff/857-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
+  "note": "Replacement from Slack F0C36NGV41L (dup F0C38JFJG82); differs from live 4f160758563b"
 }
