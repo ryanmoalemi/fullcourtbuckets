@@ -690,6 +690,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 544,
+      "slug": "ariel-atkins",
+      "player_name": "Ariel Atkins",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/ariel-atkins/portrait.png",
+      "width": 1145,
+      "height": 1374,
+      "asset_sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1145,
+        "height": 1374,
+        "source_width": 1145,
+        "source_height": 1374,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
