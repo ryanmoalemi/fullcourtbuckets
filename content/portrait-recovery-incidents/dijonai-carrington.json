@@ -25,7 +25,7 @@
     "confidence": "observed",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "google_independent_github_handoff",
+    "next_action": "originating_conversation_or_owner_download_fallback",
     "disable_hourly_task": false,
     "drive_retry_superseded": true,
     "supersede_reason": "In-thread Cursor recovery: skip Drive upload_file for both /mnt/data and file_...; GitHub portrait-handoff drop only."
@@ -49,7 +49,7 @@
   "last_attempt_at": "2026-09-20T21:08:39Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
   "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_bytes_not_preserved_github_handoff",
+  "resolution_status": "open_bytes_lost_from_scheduled_worker",
   "notification_status": "reported_in_slack_handoff_channel",
   "related_open_originals": [
     "dearica-hamby"
@@ -64,10 +64,11 @@
     "Identifiers are not preserved bytes",
     "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved",
     "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby",
-    "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication."
+    "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
+    "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback."
   ],
   "unknown": [
-    "Whether GitHub create_blob accepts whole-file base64 without a file_uri in the generating ChatGPT run"
+    "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
   "details": "Initial Drive call used mounted_path and returned BLOCKED_FILE_REFERENCE. In-thread recovery now forbids any Drive upload_file retry, including runtime file_..., and Docs/sourceUri. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Cursor owns portrait-upload.json and live verification. Do not regenerate.",
