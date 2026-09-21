@@ -1,6 +1,14 @@
 {
-  "request_id": "67147-4f160758563b-upload-20260921T0515Z",
+  "request_id": "67147-4f160758563b-upload-20260921T0518Z",
+  "player_id": 67147,
+  "player_name": "Ashlon Jackson",
   "slug": "ashlon-jackson",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4"
+  "approved": true,
+  "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+  "bytes": 2042674,
+  "dimensions": [
+    1145,
+    1374
+  ],
+  "repository_path": "portrait-handoff/857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png"
 }
