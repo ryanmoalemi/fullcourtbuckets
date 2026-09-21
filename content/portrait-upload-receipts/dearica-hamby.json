@@ -11,10 +11,49 @@
     1254
   ],
   "repository_path": "portrait-handoff/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/dearica-hamby/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
-  "github_blob_sha": "393958043efce388afcbb05d394d2b1e661f9421"
+  "github_blob_sha": "393958043efce388afcbb05d394d2b1e661f9421",
+  "upload_run_id": 35562834862,
+  "publication_run_id": 35562853476,
+  "publication_commit": "36f4cbf9b5a2f1f43eeb8ea9dfeed76e1b4bbc39",
+  "evidence_artifact_id": 10622479404,
+  "verified_url": "https://fullcourtbuckets.com/wnba/dearica-hamby/?v=ba5c6244662b",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/dearica-hamby/portrait.png?v=ba5c6244662b",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4",
+    "canonical": "https://fullcourtbuckets.com/wnba/dearica-hamby/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "screenshots_reviewed": [
+      "dearica-hamby-chromium-desktop.png",
+      "dearica-hamby-chromium-mobile-320.png"
+    ]
+  }
 }

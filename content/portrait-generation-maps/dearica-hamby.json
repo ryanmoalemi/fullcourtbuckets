@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "player_id": 411,
+  "player_name": "Dearica Hamby",
+  "slug": "dearica-hamby",
+  "provider": "BALLDONTLIE",
+  "player_record": "data/wnba/players/dearica-hamby.json",
+  "player_record_sha": "dfa3d444d4acc3de6b3c1db62ce10fbf0a618cf5",
+  "status": "live_verified",
+  "authorization": "owner_delegated_quality_review; owner_supplied_slack_png_after_lost_originals",
+  "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "destination_filename": "411-dearica-hamby.png",
+  "drive_file_id": null,
+  "handoff_path": "portrait-handoff/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
+  "slack_channel_id": "C0C39020XEG",
+  "slack_channel_name": "fcb-portrait-handoff",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "approved": true,
+  "do_not_generate_duplicate": true,
+  "lease": null,
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "generation_id": "02bfba2c-16b9-4fcd-8717-a4987b4c6d1c",
+      "disposition": "rejected_interface_graphic"
+    },
+    {
+      "attempt": 2,
+      "generation_id": "bdcaa94f-3320-463a-b26e-c3cc9e502549",
+      "disposition": "rejected_interface_graphic"
+    },
+    {
+      "attempt": 3,
+      "source": "owner_slack_png",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "bytes": 1372561,
+      "sha256": "ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "disposition": "accepted_owner_slack_png"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4",
+    "bytes": 1372561,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "transport": "owner Slack PNG copied unchanged into portrait-handoff on main"
+  },
+  "quality_review": {
+    "single_subject": true,
+    "frontal_head_shoulders_upper_chest": true,
+    "plain_white_top_black_trim": true,
+    "no_text_logos_numbers_scenery": true,
+    "recognizable_illustrated_likeness_review": "owner_supplied_and_accepted",
+    "anatomy_and_edges": "accepted",
+    "scope": "Artwork review only; not public-page verification"
+  },
+  "preflight": {
+    "global_worker_lease": null,
+    "existing_player_receipt": "content/portrait-upload-receipts/dearica-hamby.json",
+    "existing_player_image_folder": "images/players/dearica-hamby/portrait.png",
+    "existing_drive_portrait_search": "no_matches",
+    "already_approved_or_queued": true
+  },
+  "brief": "One recognizable original Dearica Hamby frontal head-and-shoulders/upper-chest editorial illustration. Natural expression, realistic athletic proportions, crisp polished illustrative shading. Plain white basketball top with black trim. Genuine transparent PNG at least 1024 pixels per side. No lettering, logos, numbers, scenery, frame, poster, webpage mockup or other person. Preserve exact original bytes.",
+  "publication_status": "live_verified",
+  "live_completion_increment": 1
+}

@@ -2,7 +2,7 @@
   "player_id": 411,
   "player_name": "Dearica Hamby",
   "slug": "dearica-hamby",
-  "stage": "drive_preserve",
+  "stage": "resolved_live_verified",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "action_name": "upload_file",
   "reference_form": "runtime_file_reference",
@@ -25,32 +25,32 @@
     "denied_layer": "unknown",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "park_player_continue_others",
+    "next_action": "none_player_live_verified",
     "disable_hourly_task": false,
     "do_not_regenerate": true,
     "already_retried_same_reference": false
   },
-  "bytes_preserved": false,
+  "bytes_preserved": true,
   "preserved_master_id": null,
-  "source_sha256": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb",
+  "source_sha256": "ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4",
   "next_retry_at": null,
   "help_needed": false,
   "disable_hourly_task": false,
-  "source_bytes": 2130389,
+  "source_bytes": 1372561,
   "source_dimensions": [
-    1101,
-    1428
+    1254,
+    1254
   ],
-  "intended_filename": "dearica-hamby-portrait.png",
+  "intended_filename": "411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
   "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
   "attempt_count": 1,
   "first_seen_at": "2026-09-20T20:06:50Z",
-  "last_attempt_at": "2026-09-20T20:06:50Z",
+  "last_attempt_at": "2026-09-21T04:58:56Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dearica-hamby/",
-  "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "parked_after_two_rejected_generations",
-  "notification_status": "reported_in_slack_handoff_channel",
+  "public_page_impact": "folder portrait live-verified; public SHA-256 matches owner Slack original",
+  "resolution_status": "live_verified",
+  "notification_status": "will_report_live_link_in_slack_handoff_channel",
   "known": [
     "Image generation succeeded and ChatGPT reports the original still intact locally",
     "Drive upload_file with a fresh runtime generated-file reference returned BLOCKED_FILE_REFERENCE: this file is unavailable for connector egress",
@@ -61,13 +61,13 @@
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
     "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
     "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs.",
-    "2026-09-21T04:49Z ChatGPT rejected two Dearica replacement generations as interface graphics, not standalone portraits. No Slack attach. Park Dearica; continue DiJonai and Nneka."
+    "2026-09-21T04:49Z ChatGPT rejected two Dearica replacement generations as interface graphics, not standalone portraits. No Slack attach. Park Dearica; continue DiJonai and Nneka.",
+    "2026-09-21T04:56Z owner attached Dearica PNG in Slack and ordered upload to her player page.",
+    "2026-09-21T05:03Z live-verified at https://fullcourtbuckets.com/wnba/dearica-hamby/?v=ba5c6244662b ; Chromium/WebKit desktop/mobile passed; public PNG bytes match the Slack original."
   ],
-  "unknown": [
-    "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
-  ],
-  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 411-dearica-hamby-6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb.png. Do not resize or re-export.",
-  "details": "Parked after two rejected replacement generations (interface graphics). Owner Slack-drop path remains for DiJonai and Nneka. Do not publish rejected graphics.",
+  "unknown": [],
+  "owner_action_if_chatgpt_cannot_carry_bytes": null,
+  "details": "Owner dropped Dearica PNG in Slack. Cursor published exact bytes via portrait-handoff + repository_path. Upload run 35562834862; publication run 35562853476; public SHA-256 ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4. BLOCKED_FILE_REFERENCE is not claimed fixed. DiJonai and Nneka remain undelivered.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -94,5 +94,9 @@
       "generation_id": "bdcaa94f-3320-463a-b26e-c3cc9e502549",
       "disposition": "rejected_interface_graphic"
     }
-  ]
+  ],
+  "github_master_path": "portrait-masters/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
+  "verified_url": "https://fullcourtbuckets.com/wnba/dearica-hamby/?v=ba5c6244662b",
+  "upload_run_id": 35562834862,
+  "publication_run_id": 35562853476
 }
