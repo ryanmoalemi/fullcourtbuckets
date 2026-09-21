@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "player_id": 590,
+  "player_name": "Ezi Magbegor",
+  "slug": "ezi-magbegor",
+  "provider": "BALLDONTLIE",
+  "profile_path": "data/wnba/players/ezi-magbegor.json",
+  "player_record": "data/wnba/players/ezi-magbegor.json",
+  "player_record_sha": "6f9a5e0f6d515c99502675cac3f4b8510f166f73",
+  "destination": "images/players/ezi-magbegor/portrait.png",
+  "permanent_master_pattern": "portrait-masters/590-ezi-magbegor-<sha256>.png",
+  "status": "live_verified",
+  "authorization": "owner_delegated_quality_review; owner_supplied_approved_png",
+  "handoff_path": "portrait-handoff/590-ezi-magbegor-2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3.png",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "approved": true,
+  "do_not_generate_duplicate": true,
+  "mapped_at": "2026-09-21T07:23:00Z",
+  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Ezi Magbegor; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "source": "owner_approved_png_repository_path",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [1145, 1374],
+      "bytes": 2002352,
+      "sha256": "2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3",
+      "disposition": "accepted_owner_approved_png"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3",
+    "bytes": 2002352,
+    "dimensions": [1145, 1374],
+    "format": "PNG",
+    "mode": "RGBA",
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "transport": "owner-approved PNG copied unchanged into portrait-handoff on main"
+  },
+  "reference_review": "Owner-approved original published unchanged via portrait-handoff + repository_path. Public SHA-256 2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3. Chromium/WebKit live checks passed.",
+  "live_page_changed": true,
+  "retry_after_other_queue": false,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ezi-magbegor/?v=2e9393266b9c",
+  "publication_status": "live_verified",
+  "live_completion_increment": 1
+}

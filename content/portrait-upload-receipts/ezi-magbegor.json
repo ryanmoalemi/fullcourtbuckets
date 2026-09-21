@@ -11,10 +11,51 @@
     1374
   ],
   "repository_path": "portrait-handoff/590-ezi-magbegor-2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/ezi-magbegor/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/590-ezi-magbegor-2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3.png",
-  "github_blob_sha": "6963839270bc9308aa5b96df8f2b50362a3ad51d"
+  "github_blob_sha": "6963839270bc9308aa5b96df8f2b50362a3ad51d",
+  "upload_run_id": 35573530005,
+  "publication_run_id": 35573545033,
+  "publication_commit": "f71535e48c7bc17a6178e1cb54f5e799fd4f77e4",
+  "evidence_artifact_id": 10627427169,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ezi-magbegor/?v=2e9393266b9c",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/ezi-magbegor/portrait.png?v=2e9393266b9c",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3",
+    "canonical": "https://fullcourtbuckets.com/wnba/ezi-magbegor/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "ezi-magbegor-chromium-desktop.png",
+      "ezi-magbegor-chromium-mobile-320.png"
+    ]
+  }
 }
