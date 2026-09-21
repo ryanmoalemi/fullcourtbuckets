@@ -1,0 +1,20 @@
+{
+  "request_id": "590-2e9393266b9c-upload-20260921T0723Z",
+  "player_id": 590,
+  "player_name": "Ezi Magbegor",
+  "slug": "ezi-magbegor",
+  "approved": true,
+  "sha256": "2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3",
+  "bytes": 2002352,
+  "dimensions": [
+    1145,
+    1374
+  ],
+  "repository_path": "portrait-handoff/590-ezi-magbegor-2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/ezi-magbegor/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/590-ezi-magbegor-2e9393266b9ce2c3921f842350adfd3979332da635bb120d2cf2dae6de24b0d3.png",
+  "github_blob_sha": "6963839270bc9308aa5b96df8f2b50362a3ad51d"
+}
