@@ -1,11 +1,6 @@
 {
   "request_id": "758-e5977d471b3b-upload-20260921T0737Z",
-  "player_id": 758,
-  "player_name": "Dominique Malonga",
   "slug": "dominique-malonga",
-  "approved": true,
-  "sha256": "e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d",
-  "bytes": 1533394,
-  "dimensions": [1145, 1374],
-  "repository_path": "portrait-handoff/758-dominique-malonga-e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d"
 }
