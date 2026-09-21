@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -70,6 +70,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25065,
+      "player_id": 768,
+      "date": "2026-09-20T17:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_score": 89,
+      "away_score": 101,
+      "minutes": "1",
+      "pts": 2.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    },
+    {
       "game_id": 25050,
       "player_id": 768,
       "date": "2026-08-30T19:00:00.000Z",
@@ -110,7 +150,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -1084,49 +1084,9 @@
       "stl": 1.0,
       "blk": 0.0,
       "turnover": 0.0
-    },
-    {
-      "game_id": 25012,
-      "player_id": 285,
-      "date": "2026-08-16T21:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 80,
-      "away_score": 82,
-      "minutes": "30",
-      "pts": 15.0,
-      "ast": 5.0,
-      "reb": 5.0,
-      "stl": 4.0,
-      "blk": 0.0,
-      "turnover": 3.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

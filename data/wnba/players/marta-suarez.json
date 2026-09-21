@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -275,49 +275,9 @@
       "stl": null,
       "blk": null,
       "turnover": null
-    },
-    {
-      "game_id": 25013,
-      "player_id": 67157,
-      "date": "2026-08-16T23:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 31,
-        "full_name": "Fire",
-        "abbreviation": "POR",
-        "city": "",
-        "name": "Fire",
-        "conference": null
-      },
-      "home_score": 85,
-      "away_score": 88,
-      "minutes": "3",
-      "pts": 1.0,
-      "ast": 0.0,
-      "reb": 2.0,
-      "stl": 0.0,
-      "blk": 0.0,
-      "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

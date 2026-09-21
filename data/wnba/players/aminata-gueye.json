@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "provider": "BALLDONTLIE",
+  "source": "https://wnba.balldontlie.io/",
+  "checked_at": "2026-09-21T07:20:30+00:00",
+  "coverage_start": 2008,
+  "career_totals_complete": false,
+  "player": {
+    "id": 267772,
+    "first_name": "Aminata",
+    "last_name": "Gueye",
+    "position": "C",
+    "position_abbreviation": "C",
+    "height": "6' 2\"",
+    "weight": "--",
+    "jersey_number": "31",
+    "college": null,
+    "team": {
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
+    }
+  },
+  "slug": "aminata-gueye",
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 13,
+    "full_name": "Golden State Valkyries",
+    "abbreviation": "GS",
+    "city": "Golden State",
+    "name": "Valkyries",
+    "conference": "Western Conference"
+  },
+  "season_stats": [],
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-17",
+  "notes": [
+    "Statistics from 2008 onward; not complete all-time career totals.",
+    "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
+    "Team stints and aggregate rows must never be summed together.",
+    "Not listed active does not establish retirement, a trade, or free agency.",
+    "News and confirmed transaction feeds are not included in this API integration."
+  ]
+}

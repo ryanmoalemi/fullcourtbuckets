@@ -69,6 +69,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 267772,
+      "slug": "aminata-gueye",
+      "player_name": "Aminata Gueye",
+      "listed_active": true,
+      "profile_path": "/wnba/aminata-gueye/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 783,
       "slug": "amy-okonkwo",
       "player_name": "Amy Okonkwo",
@@ -317,15 +326,6 @@
       "player_name": "DeWanna Bonner",
       "listed_active": true,
       "profile_path": "/wnba/dewanna-bonner/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 683,
-      "slug": "diamond-miller",
-      "player_name": "Diamond Miller",
-      "listed_active": true,
-      "profile_path": "/wnba/diamond-miller/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1005,6 +1005,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 781,
+      "slug": "madison-scott",
+      "player_name": "Madison Scott",
+      "listed_active": true,
+      "profile_path": "/wnba/madison-scott/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 188326,
       "slug": "mai-yamamoto",
       "player_name": "Mai Yamamoto",
@@ -1167,15 +1176,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 140035,
-      "slug": "nadia-fingall",
-      "player_name": "Nadia Fingall",
-      "listed_active": true,
-      "profile_path": "/wnba/nadia-fingall/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 645,
       "slug": "nalyssa-smith",
       "player_name": "NaLyssa Smith",
@@ -1226,6 +1226,15 @@
       "player_name": "Naz Hillmon",
       "listed_active": true,
       "profile_path": "/wnba/naz-hillmon/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
+      "player_id": 67151,
+      "slug": "ndjakalenga-mwenentanda",
+      "player_name": "Ndjakalenga Mwenentanda",
+      "listed_active": true,
+      "profile_path": "/wnba/ndjakalenga-mwenentanda/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -3678,15 +3687,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 781,
-      "slug": "madison-scott",
-      "player_name": "Madison Scott",
-      "listed_active": false,
-      "profile_path": "/wnba/madison-scott/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 386,
       "slug": "maggie-lucas",
       "player_name": "Maggie Lucas",
@@ -3989,15 +3989,6 @@
       "player_name": "Nayo Raincock-Ekunwe",
       "listed_active": false,
       "profile_path": "/wnba/nayo-raincock-ekunwe/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67151,
-      "slug": "ndjakalenga-mwenentanda",
-      "player_name": "Ndjakalenga Mwenentanda",
-      "listed_active": false,
-      "profile_path": "/wnba/ndjakalenga-mwenentanda/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

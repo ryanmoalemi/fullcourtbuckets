@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -69,6 +69,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 25067,
+      "player_id": 67088,
+      "date": "2026-09-20T20:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 77,
+      "away_score": 93,
+      "minutes": "0",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    },
     {
       "game_id": 25059,
       "player_id": 67088,
@@ -308,49 +348,9 @@
       "stl": null,
       "blk": null,
       "turnover": null
-    },
-    {
-      "game_id": 25014,
-      "player_id": 67088,
-      "date": "2026-08-16T21:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 91,
-      "away_score": 95,
-      "minutes": "0",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

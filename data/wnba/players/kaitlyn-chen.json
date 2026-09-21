@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Valkyries",
         "conference": "Western Conference"
       },
-      "games_played": 41,
-      "min": 15.0,
-      "fgm": 2.8,
-      "fga": 5.24,
-      "fg_pct": 53.5,
-      "fg3m": 0.66,
-      "fg3a": 1.54,
-      "fg3_pct": 42.9,
-      "ftm": 0.73,
-      "fta": 1.02,
+      "games_played": 42,
+      "min": 15.31,
+      "fgm": 2.83,
+      "fga": 5.4,
+      "fg_pct": 52.4,
+      "fg3m": 0.69,
+      "fg3a": 1.62,
+      "fg3_pct": 42.6,
+      "ftm": 0.71,
+      "fta": 1.0,
       "ft_pct": 71.4,
       "oreb": null,
       "dreb": null,
-      "reb": 1.1,
+      "reb": 1.12,
       "ast": 1.95,
-      "stl": 0.27,
+      "stl": 0.29,
       "blk": 0.02,
       "turnover": 1.17,
-      "pts": 7.0
+      "pts": 7.07
     },
     {
       "player_id": 775,
@@ -494,7 +494,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

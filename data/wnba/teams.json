@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "teams": [
     {
       "id": 34,
@@ -16,30 +16,6 @@
       "city": "Team Spoon",
       "name": "TEAM SPOON",
       "conference": null
-    },
-    {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
-    },
-    {
-      "id": 6,
-      "full_name": "Chicago Sky",
-      "abbreviation": "CHI",
-      "city": "Chicago",
-      "name": "Sky",
-      "conference": "Eastern Conference"
-    },
-    {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
-      "conference": "Eastern Conference"
     },
     {
       "id": 14,
@@ -184,6 +160,30 @@
       "city": "TBD",
       "name": "TBD",
       "conference": null
+    },
+    {
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
+    },
+    {
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
+      "conference": "Eastern Conference"
+    },
+    {
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     {
       "id": 11,

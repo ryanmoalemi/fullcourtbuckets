@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Sky",
         "conference": "Eastern Conference"
       },
-      "games_played": 34,
-      "min": 20.29,
-      "fgm": 4.85,
-      "fga": 11.24,
-      "fg_pct": 43.2,
-      "fg3m": 2.0,
-      "fg3a": 5.97,
-      "fg3_pct": 33.5,
-      "ftm": 2.06,
-      "fta": 2.59,
-      "ft_pct": 79.5,
+      "games_played": 35,
+      "min": 20.37,
+      "fgm": 4.74,
+      "fga": 11.14,
+      "fg_pct": 42.6,
+      "fg3m": 1.94,
+      "fg3a": 5.94,
+      "fg3_pct": 32.7,
+      "ftm": 2.0,
+      "fta": 2.57,
+      "ft_pct": 77.8,
       "oreb": null,
       "dreb": null,
-      "reb": 1.5,
-      "ast": 1.82,
-      "stl": 0.71,
-      "blk": 0.21,
-      "turnover": 1.5,
-      "pts": 13.76
+      "reb": 1.57,
+      "ast": 1.86,
+      "stl": 0.69,
+      "blk": 0.23,
+      "turnover": 1.54,
+      "pts": 13.43
     }
   ],
   "recent_completed_games": [
@@ -348,49 +348,9 @@
       "stl": 2.0,
       "blk": 0.0,
       "turnover": 2.0
-    },
-    {
-      "game_id": 25012,
-      "player_id": 67033,
-      "date": "2026-08-16T21:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 80,
-      "away_score": 82,
-      "minutes": "0",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

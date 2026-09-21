@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -12,21 +12,28 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 2\"",
-    "weight": "--",
-    "jersey_number": "24",
-    "college": "Ole Miss",
+    "weight": "Ole Miss",
+    "jersey_number": "10",
+    "college": null,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
       "conference": "Eastern Conference"
     }
   },
   "slug": "madison-scott",
-  "active_in_provider_feed": false,
-  "current_team": null,
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 1,
+    "full_name": "New York Liberty",
+    "abbreviation": "NY",
+    "city": "New York",
+    "name": "Liberty",
+    "conference": "Eastern Conference"
+  },
   "season_stats": [
     {
       "player_id": 781,
@@ -61,8 +68,49 @@
       "pts": 1.56
     }
   ],
-  "recent_completed_games": [],
-  "game_log_window_start": "2026-08-16",
+  "recent_completed_games": [
+    {
+      "game_id": 25066,
+      "player_id": 781,
+      "date": "2026-09-20T19:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 30,
+        "full_name": "Tempo",
+        "abbreviation": "TOR",
+        "city": "",
+        "name": "Tempo",
+        "conference": null
+      },
+      "visitor_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 69,
+      "away_score": 106,
+      "minutes": "4",
+      "pts": 4.0,
+      "ast": 1.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    }
+  ],
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

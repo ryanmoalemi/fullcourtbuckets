@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Mercury",
         "conference": "Western Conference"
       },
-      "games_played": 33,
-      "min": 22.36,
-      "fgm": 3.58,
-      "fga": 5.94,
-      "fg_pct": 60.2,
+      "games_played": 34,
+      "min": 22.56,
+      "fgm": 3.68,
+      "fga": 6.09,
+      "fg_pct": 60.4,
       "fg3m": 0.06,
-      "fg3a": 0.24,
-      "fg3_pct": 25.0,
-      "ftm": 1.27,
-      "fta": 1.61,
-      "ft_pct": 79.2,
+      "fg3a": 0.26,
+      "fg3_pct": 22.2,
+      "ftm": 1.29,
+      "fta": 1.62,
+      "ft_pct": 80.0,
       "oreb": null,
       "dreb": null,
       "reb": 6.76,
-      "ast": 1.21,
+      "ast": 1.18,
       "stl": 0.85,
-      "blk": 1.21,
+      "blk": 1.24,
       "turnover": 0.91,
-      "pts": 8.48
+      "pts": 8.71
     },
     {
       "player_id": 633,
@@ -436,49 +436,9 @@
       "stl": 0.0,
       "blk": 1.0,
       "turnover": 1.0
-    },
-    {
-      "game_id": 25013,
-      "player_id": 633,
-      "date": "2026-08-16T23:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 31,
-        "full_name": "Fire",
-        "abbreviation": "POR",
-        "city": "",
-        "name": "Fire",
-        "conference": null
-      },
-      "home_score": 85,
-      "away_score": 88,
-      "minutes": "18",
-      "pts": 7.0,
-      "ast": 1.0,
-      "reb": 4.0,
-      "stl": 0.0,
-      "blk": 1.0,
-      "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

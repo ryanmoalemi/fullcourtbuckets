@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-20T09:04:50+00:00",
+  "checked_at": "2026-09-21T07:20:30+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Wings",
         "conference": "Western Conference"
       },
-      "games_played": 36,
-      "min": 11.75,
-      "fgm": 2.25,
-      "fga": 5.69,
-      "fg_pct": 39.5,
-      "fg3m": 0.42,
-      "fg3a": 1.67,
+      "games_played": 37,
+      "min": 11.89,
+      "fgm": 2.22,
+      "fga": 5.73,
+      "fg_pct": 38.7,
+      "fg3m": 0.41,
+      "fg3a": 1.62,
       "fg3_pct": 25.0,
-      "ftm": 1.33,
+      "ftm": 1.35,
       "fta": 1.81,
-      "ft_pct": 73.8,
+      "ft_pct": 74.6,
       "oreb": null,
       "dreb": null,
-      "reb": 2.36,
+      "reb": 2.38,
       "ast": 1.22,
-      "stl": 0.83,
-      "blk": 0.25,
-      "turnover": 0.72,
-      "pts": 6.25
+      "stl": 0.95,
+      "blk": 0.24,
+      "turnover": 0.76,
+      "pts": 6.19
     },
     {
       "player_id": 742,
@@ -222,7 +222,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-16",
+  "game_log_window_start": "2026-08-17",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
