@@ -638,6 +638,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 626,
+      "slug": "dijonai-carrington",
+      "player_name": "DiJonai Carrington",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/dijonai-carrington/portrait.png",
+      "width": 1247,
+      "height": 1261,
+      "asset_sha256": "7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1247,
+        "height": 1261,
+        "source_width": 1247,
+        "source_height": 1261,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
