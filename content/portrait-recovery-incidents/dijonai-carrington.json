@@ -2,7 +2,7 @@
   "player_id": 626,
   "player_name": "DiJonai Carrington",
   "slug": "dijonai-carrington",
-  "stage": "drive_preserve",
+  "stage": "resolved_live_verified",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "action_name": "upload_file",
   "reference_form": "mounted_path",
@@ -25,35 +25,33 @@
     "confidence": "observed",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "chatgpt_generate_and_attach_original_png_in_slack",
+    "next_action": "none_player_live_verified",
     "disable_hourly_task": false,
     "drive_retry_superseded": true,
     "supersede_reason": "In-thread Cursor recovery: skip Drive upload_file for both /mnt/data and file_...; GitHub portrait-handoff drop only."
   },
-  "bytes_preserved": false,
+  "bytes_preserved": true,
   "preserved_master_id": null,
-  "source_sha256": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243",
+  "source_sha256": "7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95",
   "next_retry_at": null,
   "help_needed": false,
   "disable_hourly_task": false,
-  "source_bytes": 1859250,
+  "source_bytes": 1589003,
   "source_dimensions": [
-    1129,
-    1393
+    1247,
+    1261
   ],
-  "intended_filename": "dijonai-carrington-portrait.png",
+  "intended_filename": "626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
   "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
   "attempt_count": 1,
   "first_seen_at": "2026-09-20T21:08:39Z",
-  "last_attempt_at": "2026-09-20T21:08:39Z",
+  "last_attempt_at": "2026-09-21T05:07:07Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
-  "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_owner_authorized_slack_drop_regeneration",
-  "notification_status": "reported_in_slack_handoff_channel",
-  "related_open_originals": [
-    "dearica-hamby"
-  ],
+  "public_page_impact": "folder portrait live-verified; public SHA-256 matches owner Slack original",
+  "resolution_status": "live_verified",
+  "notification_status": "will_report_live_link_in_slack_handoff_channel",
+  "related_open_originals": [],
   "known": [
     "Image generation succeeded and ChatGPT reports the original still intact locally",
     "Drive upload_file was called with the mounted path /mnt/data/dijonai-carrington-portrait.png",
@@ -66,13 +64,13 @@
     "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby",
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
     "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
-    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs."
+    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs.",
+    "2026-09-21T04:59Z owner attached DiJonai PNG in Slack as F0C3C4P8G2G (file_0000000009bc81fd9209319b6f8edaef.png, 1,589,003 bytes).",
+    "2026-09-21T05:12Z live-verified at https://fullcourtbuckets.com/wnba/dijonai-carrington/?v=7378ff9cbfcc ; public PNG bytes match SHA-256 7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95 (1247x1261)."
   ],
-  "unknown": [
-    "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
-  ],
-  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
-  "details": "Lost original bytes. Owner authorized new generation plus Slack PNG drop. Do not retry Drive/Docs. Cursor publishes after Slack ingest and hash/dimension checks.",
+  "unknown": [],
+  "owner_action_if_chatgpt_cannot_carry_bytes": null,
+  "details": "Owner dropped DiJonai PNG in Slack (F0C3C4P8G2G). Cursor published exact bytes via portrait-handoff + repository_path. Upload run 35563392207; publication run 35563403815; public SHA-256 7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95. BLOCKED_FILE_REFERENCE is not claimed fixed.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -89,5 +87,9 @@
   },
   "owner_authorized_regeneration": true,
   "owner_authorized_slack_transport": true,
-  "prior_sha256_void": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243"
+  "prior_sha256_void": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243",
+  "github_master_path": "portrait-masters/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
+  "verified_url": "https://fullcourtbuckets.com/wnba/dijonai-carrington/?v=7378ff9cbfcc",
+  "upload_run_id": 35563392207,
+  "publication_run_id": 35563403815
 }

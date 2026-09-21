@@ -11,10 +11,47 @@
     1261
   ],
   "repository_path": "portrait-handoff/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/dijonai-carrington/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
-  "github_blob_sha": "56c1ef739b970ec547425d7fca3f85f4b3c4166d"
+  "github_blob_sha": "56c1ef739b970ec547425d7fca3f85f4b3c4166d",
+  "upload_run_id": 35563392207,
+  "publication_run_id": 35563403815,
+  "publication_commit": "c7f3678ad63dc4483053c92946719152863abc6a",
+  "evidence_artifact_id": 10622439367,
+  "verified_url": "https://fullcourtbuckets.com/wnba/dijonai-carrington/?v=7378ff9cbfcc",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/dijonai-carrington/portrait.png?v=7378ff9cbfcc",
+    "natural_dimensions": [
+      1247,
+      1261
+    ],
+    "public_sha256": "7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95",
+    "canonical": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200
+  }
 }

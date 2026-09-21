@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 19,
+  "newly_verified_since_authorization": 20,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -218,6 +218,18 @@
       "evidence_artifact_id": 10622479404,
       "receipt": "content/portrait-upload-receipts/dearica-hamby.json",
       "github_master_path": "portrait-masters/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png",
+      "source": "owner_slack_png"
+    },
+    {
+      "player_id": 626,
+      "slug": "dijonai-carrington",
+      "sha256": "7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95",
+      "url": "https://fullcourtbuckets.com/wnba/dijonai-carrington/?v=7378ff9cbfcc",
+      "upload_run_id": 35563392207,
+      "publication_run_id": 35563403815,
+      "evidence_artifact_id": 10622439367,
+      "receipt": "content/portrait-upload-receipts/dijonai-carrington.json",
+      "github_master_path": "portrait-masters/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
       "source": "owner_slack_png"
     }
   ],
@@ -574,14 +586,15 @@
     "awa-fam",
     "awak-kuier",
     "chelsea-gray",
-    "dearica-hamby"
+    "dearica-hamby",
+    "dijonai-carrington"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T05:03:26Z",
+    "timestamp_utc": "2026-09-21T05:12:00Z",
     "players_touched": [
       {
-        "player_id": 411,
-        "slug": "dearica-hamby",
+        "player_id": 626,
+        "slug": "dijonai-carrington",
         "result": "live_verified_owner_slack_png_repository_path",
         "live_page_changed": true
       }
@@ -589,7 +602,7 @@
     "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "Dearica Hamby is live_verified via owner Slack PNG + portrait-handoff repository_path. Chelsea Gray, Awa Fam, Ashten Prechtel and Awak Kuier remain live_verified. DiJonai Carrington and Nneka Ogwumike still have no original PNG. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "DiJonai Carrington is live_verified via owner Slack PNG + portrait-handoff repository_path. Dearica Hamby, Chelsea Gray, Awa Fam, Ashten Prechtel and Awak Kuier remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
