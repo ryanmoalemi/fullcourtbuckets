@@ -11,10 +11,54 @@
     1374
   ],
   "repository_path": "portrait-handoff/67147-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/ashlon-jackson/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67147-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
-  "github_blob_sha": "822566c85738f58b4c98d12c820f86ab9f070a56"
+  "github_blob_sha": "822566c85738f58b4c98d12c820f86ab9f070a56",
+  "upload_run_id": 35564006397,
+  "publication_run_id": 35564130407,
+  "publication_commit": "ed99096506355a8ce78a8e674f4a7ef52f210e32",
+  "evidence_artifact_id": 10624075139,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ashlon-jackson/?v=4f160758563b",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/ashlon-jackson/portrait.png?v=4f160758563b",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+    "canonical": "https://fullcourtbuckets.com/wnba/ashlon-jackson/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "ashlon-jackson-chromium-desktop.png",
+      "ashlon-jackson-chromium-mobile-320.png"
+    ]
+  },
+  "slack_file_id": "F0C329CEZGB",
+  "replaced_sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+  "handoff_landing_path": "portrait-handoff/857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png"
 }

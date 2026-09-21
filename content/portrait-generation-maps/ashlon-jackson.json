@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "player_id": 67147,
+  "player_name": "Ashlon Jackson",
+  "slug": "ashlon-jackson",
+  "provider": "BALLDONTLIE",
+  "player_record": "data/wnba/players/ashlon-jackson.json",
+  "player_record_sha": "77b5c44aec6e33df9e65a4ef557dbdbbb7007770",
+  "status": "live_verified",
+  "authorization": "owner_delegated_quality_review; owner_supplied_slack_png_replacement",
+  "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "destination_filename": "857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+  "drive_file_id": null,
+  "slack_file_id": "F0C329CEZGB",
+  "handoff_path": "portrait-handoff/857-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+  "uploader_handoff_path": "portrait-handoff/67147-ashlon-jackson-4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4.png",
+  "slack_channel_id": "C0C39020XEG",
+  "slack_channel_name": "fcb-portrait-handoff",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "approved": true,
+  "do_not_generate_duplicate": true,
+  "lease": null,
+  "slack_filename_player_id": 857,
+  "provider_player_id": 67147,
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "sha256": "23db58ae84a633670083527a4061ade363932f6dca5d1adc4e5dc3417fd4473d",
+      "bytes": 1843032,
+      "dimensions": [
+        1147,
+        1372
+      ],
+      "disposition": "previous_live_portrait_replaced"
+    },
+    {
+      "attempt": 2,
+      "source": "owner_slack_png",
+      "slack_file_id": "F0C329CEZGB",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "bytes": 2042674,
+      "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "disposition": "accepted_owner_slack_png_replacement"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+    "bytes": 2042674,
+    "dimensions": [
+      1145,
+      1374
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "transport": "owner Slack PNG F0C329CEZGB copied unchanged into portrait-handoff on main"
+  },
+  "quality_review": {
+    "single_subject": true,
+    "frontal_head_shoulders_upper_chest": true,
+    "plain_white_top_black_trim": true,
+    "no_text_logos_numbers_scenery": true,
+    "recognizable_illustrated_likeness_review": "owner_supplied_and_accepted",
+    "anatomy_and_edges": "accepted",
+    "scope": "Artwork review only; not public-page verification"
+  },
+  "preflight": {
+    "global_worker_lease": null,
+    "existing_player_receipt": "content/portrait-upload-receipts/ashlon-jackson.json",
+    "existing_player_image_folder": "images/players/ashlon-jackson/portrait.png",
+    "already_approved_or_queued": true
+  },
+  "brief": "Replacement Full Court Buckets Ashlon Jackson portrait from owner Slack original F0C329CEZGB. Preserve exact original bytes. Do not regenerate.",
+  "publication_status": "live_verified",
+  "live_completion_increment": 0
+}
