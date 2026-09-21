@@ -1,6 +1,17 @@
 {
-  "request_id": "67147-4f160758563b-upload-20260921T0515Z",
+  "request_id": "67147-8b972223aa85-upload-20260921T0555Z",
+  "player_id": 67147,
+  "player_name": "Ashlon Jackson",
   "slug": "ashlon-jackson",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4"
+  "approved": true,
+  "sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a",
+  "bytes": 2045931,
+  "dimensions": [
+    1145,
+    1374
+  ],
+  "repository_path": "portrait-handoff/67147-ashlon-jackson-8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a.png",
+  "slack_file_id": "F0C36NGV41L",
+  "replaced_sha256": "4f160758563b84c17fc14cd9ef4e235d2a88689079f91b00d45faadd1697a8f4",
+  "note": "Replacement from Slack F0C36NGV41L (dup F0C38JFJG82); differs from live 4f160758563b"
 }
