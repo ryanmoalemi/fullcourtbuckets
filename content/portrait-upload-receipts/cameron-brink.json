@@ -11,10 +11,51 @@
     1254
   ],
   "repository_path": "portrait-handoff/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/cameron-brink/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png",
-  "github_blob_sha": "66221689077f790a9611c978f079944b53c3d7d7"
+  "github_blob_sha": "66221689077f790a9611c978f079944b53c3d7d7",
+  "upload_run_id": 35583799607,
+  "publication_run_id": 35583823431,
+  "publication_commit": "ee1e042b3128083cb316119ff62a027f45005411",
+  "evidence_artifact_id": 10630898372,
+  "verified_url": "https://fullcourtbuckets.com/wnba/cameron-brink/?v=832405ec7820",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/cameron-brink/portrait.png?v=832405ec7820",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf",
+    "canonical": "https://fullcourtbuckets.com/wnba/cameron-brink/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "cameron-brink-chromium-desktop.png",
+      "cameron-brink-chromium-mobile-320.png"
+    ]
+  }
 }

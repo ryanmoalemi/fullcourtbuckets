@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 25,
+  "newly_verified_since_authorization": 26,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -293,6 +293,18 @@
       "github_master_path": "portrait-masters/758-dominique-malonga-e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d.png",
       "source": "owner_slack_png_repository_path",
       "drive_master_file_id": "1YL8Uaqwk3CE_GxBTNuJIvaapY4RyTK5-"
+    },
+    {
+      "player_id": 719,
+      "slug": "cameron-brink",
+      "sha256": "832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf",
+      "url": "https://fullcourtbuckets.com/wnba/cameron-brink/?v=832405ec7820",
+      "upload_run_id": 35583799607,
+      "publication_run_id": 35583823431,
+      "evidence_artifact_id": 10630898372,
+      "receipt": "content/portrait-upload-receipts/cameron-brink.json",
+      "github_master_path": "portrait-masters/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png",
+      "source": "owner_slack_png_repository_path"
     }
   ],
   "generated_pending_publication": [],
@@ -301,12 +313,6 @@
       "player_id": 721,
       "slug": "angel-reese",
       "reason": "Protected historical live portrait remains; two replacement attempts rejected for likeness.",
-      "retry_after_other_queue": true
-    },
-    {
-      "player_id": 719,
-      "slug": "cameron-brink",
-      "reason": "Two attempts rejected for wrong subject/likeness.",
       "retry_after_other_queue": true
     },
     {
@@ -624,22 +630,23 @@
     "nneka-ogwumike",
     "diamond-miller",
     "ezi-magbegor",
-    "dominique-malonga"
+    "dominique-malonga",
+    "cameron-brink"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T09:20:00Z",
+    "timestamp_utc": "2026-09-21T09:37:00Z",
     "players_touched": [
       {
-        "player_id": 758,
-        "slug": "dominique-malonga",
-        "result": "live_verified_existing_upload_no_competing_upload",
+        "player_id": 719,
+        "slug": "cameron-brink",
+        "result": "live_verified_repository_path_upload",
         "live_page_changed": true
       }
     ],
     "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "Dominique Malonga is live_verified from the existing uploaded original (Slack F0C3CU1425S, SHA-256 e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d). No competing upload was started. Ezi Magbegor, Diamond Miller, Ariel Atkins, Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Cameron Brink is live_verified from the owner-approved original (Slack F0C334BHVTM, SHA-256 832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf) published via repository_path. Dominique Malonga, Ezi Magbegor, Diamond Miller, Ariel Atkins, Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
