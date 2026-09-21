@@ -1,11 +1,6 @@
 {
   "request_id": "683-e8735dd79d7c-upload-20260921T0717Z",
-  "player_id": 683,
-  "player_name": "Diamond Miller",
   "slug": "diamond-miller",
-  "approved": true,
-  "sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de",
-  "bytes": 1911559,
-  "dimensions": [1145, 1374],
-  "repository_path": "portrait-handoff/683-diamond-miller-e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de"
 }
