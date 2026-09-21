@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 20,
+  "newly_verified_since_authorization": 21,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -231,6 +231,18 @@
       "receipt": "content/portrait-upload-receipts/dijonai-carrington.json",
       "github_master_path": "portrait-masters/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png",
       "source": "owner_slack_png"
+    },
+    {
+      "player_id": 309,
+      "slug": "nneka-ogwumike",
+      "sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+      "url": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/?v=e648f8de3ef0",
+      "upload_run_id": 35563717041,
+      "publication_run_id": 35563741785,
+      "evidence_artifact_id": 10623625089,
+      "receipt": "content/portrait-upload-receipts/nneka-ogwumike.json",
+      "github_master_path": "portrait-masters/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
+      "source": "owner_approved_png_repository_path"
     }
   ],
   "generated_pending_publication": [],
@@ -587,22 +599,23 @@
     "awak-kuier",
     "chelsea-gray",
     "dearica-hamby",
-    "dijonai-carrington"
+    "dijonai-carrington",
+    "nneka-ogwumike"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T05:12:00Z",
+    "timestamp_utc": "2026-09-21T05:17:00Z",
     "players_touched": [
       {
-        "player_id": 626,
-        "slug": "dijonai-carrington",
-        "result": "live_verified_owner_slack_png_repository_path",
+        "player_id": 309,
+        "slug": "nneka-ogwumike",
+        "result": "live_verified_approved_png_repository_path",
         "live_page_changed": true
       }
     ],
     "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "DiJonai Carrington is live_verified via owner Slack PNG + portrait-handoff repository_path. Dearica Hamby, Chelsea Gray, Awa Fam, Ashten Prechtel and Awak Kuier remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Nneka Ogwumike is live_verified via approved original + portrait-handoff repository_path. DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",

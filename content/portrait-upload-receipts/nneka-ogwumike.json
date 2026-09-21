@@ -11,10 +11,51 @@
     1374
   ],
   "repository_path": "portrait-handoff/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/nneka-ogwumike/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
-  "github_blob_sha": "b9d6e81198eff6539c1e6ceca0afc1e4e5a14162"
+  "github_blob_sha": "b9d6e81198eff6539c1e6ceca0afc1e4e5a14162",
+  "upload_run_id": 35563717041,
+  "publication_run_id": 35563741785,
+  "publication_commit": "f7b758087d048f877ee2eca5686f3d5742c69ebf",
+  "evidence_artifact_id": 10623625089,
+  "verified_url": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/?v=e648f8de3ef0",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/nneka-ogwumike/portrait.png?v=e648f8de3ef0",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+    "canonical": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "nneka-ogwumike-chromium-desktop.png",
+      "nneka-ogwumike-chromium-mobile-320.png"
+    ]
+  }
 }

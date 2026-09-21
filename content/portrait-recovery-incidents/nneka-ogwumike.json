@@ -2,7 +2,7 @@
   "player_id": 309,
   "player_name": "Nneka Ogwumike",
   "slug": "nneka-ogwumike",
-  "stage": "drive_preserve",
+  "stage": "resolved_live_verified",
   "error_code": "BLOCKED_FILE_REFERENCE",
   "action_name": "upload_file",
   "reference_form": "runtime_file_reference",
@@ -25,36 +25,35 @@
     "denied_layer": "unknown",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "chatgpt_generate_and_attach_original_png_in_slack",
+    "next_action": "none_player_live_verified",
     "disable_hourly_task": false,
     "do_not_regenerate": true,
-    "already_retried_same_reference": false
+    "already_retried_same_reference": false,
+    "drive_retry_superseded": true,
+    "supersede_reason": "Owner-approved original published via GitHub portrait-handoff + repository_path. Drive upload_file is not claimed fixed."
   },
-  "bytes_preserved": false,
+  "bytes_preserved": true,
   "preserved_master_id": null,
-  "source_sha256": "2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9",
+  "source_sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
   "next_retry_at": null,
   "help_needed": false,
   "disable_hourly_task": false,
-  "source_bytes": 2142870,
+  "source_bytes": 2143682,
   "source_dimensions": [
-    1114,
-    1412
+    1145,
+    1374
   ],
-  "intended_filename": "nneka-ogwumike-portrait.png",
+  "intended_filename": "309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
   "intended_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
   "intended_drive_folder_name": "FCB portrait-handoff (for Cursor)",
   "attempt_count": 1,
   "first_seen_at": "2026-09-20T22:14:51Z",
-  "last_attempt_at": "2026-09-20T22:14:51Z",
+  "last_attempt_at": "2026-09-21T05:12:10Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/",
-  "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_owner_authorized_slack_drop_regeneration",
-  "notification_status": "reported_in_slack_handoff_channel",
-  "related_open_originals": [
-    "dearica-hamby",
-    "dijonai-carrington"
-  ],
+  "public_page_impact": "folder portrait live-verified; public SHA-256 matches approved original",
+  "resolution_status": "live_verified",
+  "notification_status": "will_report_live_link_in_slack_handoff_channel",
+  "related_open_originals": [],
   "known": [
     "Corrective generation passed ChatGPT self-review and the original is reported intact locally",
     "Drive upload_file with a fresh runtime generated-file reference returned BLOCKED_FILE_REFERENCE",
@@ -65,13 +64,12 @@
     "Brittney Griner was parked for likeness and has no accepted original",
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
     "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
-    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs."
+    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs.",
+    "2026-09-21T05:17Z live-verified at https://fullcourtbuckets.com/wnba/nneka-ogwumike/?v=e648f8de3ef0 ; public PNG bytes match SHA-256 e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1 (1145x1374)."
   ],
-  "unknown": [
-    "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
-  ],
-  "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 309-nneka-ogwumike-2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9.png. Do not resize or re-export.",
-  "details": "Lost original bytes. Owner authorized new generation plus Slack PNG drop. Do not retry Drive/Docs. Cursor publishes after Slack ingest and hash/dimension checks.",
+  "unknown": [],
+  "owner_action_if_chatgpt_cannot_carry_bytes": null,
+  "details": "Approved original published via portrait-handoff + repository_path. Upload run 35563717041; publication run 35563741785; public SHA-256 e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1. BLOCKED_FILE_REFERENCE is not claimed fixed.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -88,5 +86,9 @@
   },
   "owner_authorized_regeneration": true,
   "owner_authorized_slack_transport": true,
-  "prior_sha256_void": "2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9"
+  "prior_sha256_void": "2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9",
+  "github_master_path": "portrait-masters/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
+  "verified_url": "https://fullcourtbuckets.com/wnba/nneka-ogwumike/?v=e648f8de3ef0",
+  "upload_run_id": 35563717041,
+  "publication_run_id": 35563741785
 }
