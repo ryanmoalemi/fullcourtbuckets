@@ -1,6 +1,11 @@
 {
-  "request_id": "758-e5977d471b3b-upload-20260921T0737Z",
-  "slug": "dominique-malonga",
-  "status": "live_verified",
-  "sha256": "e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d"
+  "request_id": "719-832405ec7820-upload-20260921T0929Z",
+  "player_id": 719,
+  "player_name": "Cameron Brink",
+  "slug": "cameron-brink",
+  "approved": true,
+  "sha256": "832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf",
+  "bytes": 1997002,
+  "dimensions": [1254, 1254],
+  "repository_path": "portrait-handoff/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png"
 }
