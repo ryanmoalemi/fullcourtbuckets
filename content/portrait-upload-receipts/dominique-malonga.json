@@ -11,10 +11,51 @@
     1374
   ],
   "repository_path": "portrait-handoff/758-dominique-malonga-e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/dominique-malonga/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/758-dominique-malonga-e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d.png",
-  "github_blob_sha": "8ba14ba2446a93ce8fa2ecb0e605eb4ce9f9303c"
+  "github_blob_sha": "8ba14ba2446a93ce8fa2ecb0e605eb4ce9f9303c",
+  "upload_run_id": 35574036863,
+  "publication_run_id": 35574055916,
+  "publication_commit": "f69324a56e1e9fd80a8b6d012dfa601912fcee20",
+  "evidence_artifact_id": 10626978982,
+  "verified_url": "https://fullcourtbuckets.com/wnba/dominique-malonga/?v=e5977d471b3b",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/dominique-malonga/portrait.png?v=e5977d471b3b",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "e5977d471b3b165e0a701611fb73c940446fc4483d2e0a2a02472553ff79ce1d",
+    "canonical": "https://fullcourtbuckets.com/wnba/dominique-malonga/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "dominique-malonga-chromium-desktop.png",
+      "dominique-malonga-chromium-mobile-320.png"
+    ]
+  }
 }
