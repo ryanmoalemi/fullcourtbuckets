@@ -1,0 +1,20 @@
+{
+  "request_id": "309-e648f8de3ef0-upload-20260921T0510Z",
+  "player_id": 309,
+  "player_name": "Nneka Ogwumike",
+  "slug": "nneka-ogwumike",
+  "approved": true,
+  "sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+  "bytes": 2143682,
+  "dimensions": [
+    1145,
+    1374
+  ],
+  "repository_path": "portrait-handoff/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/nneka-ogwumike/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
+  "github_blob_sha": "b9d6e81198eff6539c1e6ceca0afc1e4e5a14162"
+}
