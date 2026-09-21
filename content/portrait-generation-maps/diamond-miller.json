@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "player_id": 683,
+  "player_name": "Diamond Miller",
+  "slug": "diamond-miller",
+  "provider": "BALLDONTLIE",
+  "profile_path": "data/wnba/players/diamond-miller.json",
+  "player_record": "data/wnba/players/diamond-miller.json",
+  "player_record_sha": "843108e089bd5fefcb97c1b5da038b5ff72434bc",
+  "destination": "images/players/diamond-miller/portrait.png",
+  "permanent_master_pattern": "portrait-masters/683-diamond-miller-<sha256>.png",
+  "status": "live_verified",
+  "authorization": "owner_delegated_quality_review; owner_supplied_slack_png",
+  "slack_file_id": "F0C374TRMAA",
+  "handoff_path": "portrait-handoff/683-diamond-miller-e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de.png",
+  "slack_channel_id": "C0C39020XEG",
+  "slack_channel_name": "fcb-portrait-handoff",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "approved": true,
+  "do_not_generate_duplicate": true,
+  "mapped_at": "2026-09-21T07:17:00Z",
+  "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Diamond Miller; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "source": "owner_slack_png_repository_path",
+      "slack_file_id": "F0C374TRMAA",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [1145, 1374],
+      "bytes": 1911559,
+      "sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de",
+      "disposition": "accepted_owner_approved_png"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de",
+    "bytes": 1911559,
+    "dimensions": [1145, 1374],
+    "format": "PNG",
+    "mode": "RGBA",
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "transport": "owner Slack PNG F0C374TRMAA copied unchanged into portrait-handoff on main"
+  },
+  "reference_review": "Owner-approved original published unchanged via portrait-handoff + repository_path. Public SHA-256 e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de. Chromium/WebKit live checks passed.",
+  "live_page_changed": true,
+  "retry_after_other_queue": false,
+  "verified_url": "https://fullcourtbuckets.com/wnba/diamond-miller/?v=e8735dd79d7c",
+  "publication_status": "live_verified",
+  "live_completion_increment": 1
+}

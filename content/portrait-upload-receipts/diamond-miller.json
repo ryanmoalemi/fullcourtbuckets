@@ -11,10 +11,51 @@
     1374
   ],
   "repository_path": "portrait-handoff/683-diamond-miller-e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/diamond-miller/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/683-diamond-miller-e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de.png",
-  "github_blob_sha": "5ad16e0e4a4a0650ee8bf9dd62ef64739b23b191"
+  "github_blob_sha": "5ad16e0e4a4a0650ee8bf9dd62ef64739b23b191",
+  "upload_run_id": 35572414668,
+  "publication_run_id": 35572429982,
+  "publication_commit": "41ca44cf7c7613885b2dbce5ab68fff524ebd0d9",
+  "evidence_artifact_id": 10626971002,
+  "verified_url": "https://fullcourtbuckets.com/wnba/diamond-miller/?v=e8735dd79d7c",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/diamond-miller/portrait.png?v=e8735dd79d7c",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de",
+    "canonical": "https://fullcourtbuckets.com/wnba/diamond-miller/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "diamond-miller-chromium-desktop.png",
+      "diamond-miller-chromium-mobile-320.png"
+    ]
+  }
 }

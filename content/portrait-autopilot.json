@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 22,
+  "newly_verified_since_authorization": 23,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -255,6 +255,18 @@
       "evidence_artifact_id": 10625587873,
       "receipt": "content/portrait-upload-receipts/ariel-atkins.json",
       "github_master_path": "portrait-masters/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png",
+      "source": "owner_approved_png_repository_path"
+    },
+    {
+      "player_id": 683,
+      "slug": "diamond-miller",
+      "sha256": "e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de",
+      "url": "https://fullcourtbuckets.com/wnba/diamond-miller/?v=e8735dd79d7c",
+      "upload_run_id": 35572414668,
+      "publication_run_id": 35572429982,
+      "evidence_artifact_id": 10626971002,
+      "receipt": "content/portrait-upload-receipts/diamond-miller.json",
+      "github_master_path": "portrait-masters/683-diamond-miller-e8735dd79d7c603344f108a87e97fcfd06d3a6fc7e8584e42c45835678e773de.png",
       "source": "owner_approved_png_repository_path"
     }
   ],
@@ -584,14 +596,15 @@
     "chelsea-gray",
     "dearica-hamby",
     "dijonai-carrington",
-    "nneka-ogwumike"
+    "nneka-ogwumike",
+    "diamond-miller"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T06:52:00Z",
+    "timestamp_utc": "2026-09-21T07:25:00Z",
     "players_touched": [
       {
-        "player_id": 544,
-        "slug": "ariel-atkins",
+        "player_id": 683,
+        "slug": "diamond-miller",
         "result": "live_verified_approved_png_repository_path",
         "live_page_changed": true
       }
@@ -599,7 +612,7 @@
     "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "Ariel Atkins is live_verified via approved original + portrait-handoff repository_path. Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Diamond Miller is live_verified via approved original + portrait-handoff repository_path (Slack F0C374TRMAA). Ariel Atkins, Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
