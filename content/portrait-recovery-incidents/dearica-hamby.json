@@ -25,7 +25,7 @@
     "denied_layer": "unknown",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "originating_conversation_or_owner_download_fallback",
+    "next_action": "chatgpt_generate_and_attach_original_png_in_slack",
     "disable_hourly_task": false,
     "do_not_regenerate": true,
     "already_retried_same_reference": false
@@ -34,7 +34,7 @@
   "preserved_master_id": null,
   "source_sha256": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb",
   "next_retry_at": null,
-  "help_needed": true,
+  "help_needed": false,
   "disable_hourly_task": false,
   "source_bytes": 2130389,
   "source_dimensions": [
@@ -49,7 +49,7 @@
   "last_attempt_at": "2026-09-20T20:06:50Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dearica-hamby/",
   "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_bytes_lost_from_scheduled_worker",
+  "resolution_status": "open_owner_authorized_slack_drop_regeneration",
   "notification_status": "reported_in_slack_handoff_channel",
   "known": [
     "Image generation succeeded and ChatGPT reports the original still intact locally",
@@ -59,13 +59,14 @@
     "Identifiers (player/slug/sha256/bytes/dimensions) are not preserved bytes",
     "BLOCKED_FILE_REFERENCE is not classified as fixed because Chelsea Gray later reached Drive",
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
-    "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback."
+    "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
+    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs."
   ],
   "unknown": [
     "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 411-dearica-hamby-6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb.png. Do not resize or re-export.",
-  "details": "connector_file_binding_denied on Drive preserve. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) into portrait-handoff/411-dearica-hamby-<sha256>.png. Cursor owns portrait-upload.json and live verification. Do not regenerate. Do not block unrelated players.",
+  "details": "Lost original bytes. Owner authorized new generation plus Slack PNG drop. Do not retry Drive/Docs. Cursor publishes after Slack ingest and hash/dimension checks.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -79,5 +80,8 @@
       "regenerate"
     ],
     "future_players": "Drive-first standing rule remains. This exception is recovery-only because Drive connector binding is denied and Cursor cannot fetch ChatGPT-local bytes."
-  }
+  },
+  "owner_authorized_regeneration": true,
+  "owner_authorized_slack_transport": true,
+  "prior_sha256_void": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb"
 }

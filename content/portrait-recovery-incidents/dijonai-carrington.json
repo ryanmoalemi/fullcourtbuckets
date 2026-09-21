@@ -25,7 +25,7 @@
     "confidence": "observed",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "originating_conversation_or_owner_download_fallback",
+    "next_action": "chatgpt_generate_and_attach_original_png_in_slack",
     "disable_hourly_task": false,
     "drive_retry_superseded": true,
     "supersede_reason": "In-thread Cursor recovery: skip Drive upload_file for both /mnt/data and file_...; GitHub portrait-handoff drop only."
@@ -34,7 +34,7 @@
   "preserved_master_id": null,
   "source_sha256": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243",
   "next_retry_at": null,
-  "help_needed": true,
+  "help_needed": false,
   "disable_hourly_task": false,
   "source_bytes": 1859250,
   "source_dimensions": [
@@ -49,7 +49,7 @@
   "last_attempt_at": "2026-09-20T21:08:39Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dijonai-carrington/",
   "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_bytes_lost_from_scheduled_worker",
+  "resolution_status": "open_owner_authorized_slack_drop_regeneration",
   "notification_status": "reported_in_slack_handoff_channel",
   "related_open_originals": [
     "dearica-hamby"
@@ -65,13 +65,14 @@
     "Dearica Hamby remains a separate connector_file_binding_denied incident with bytes still unpreserved",
     "2026-09-20T21:10:51Z in-thread Cursor recovery superseded the mounted-path file_... distinguishing test; DiJonai now uses the same GitHub-only drop as Dearica Hamby",
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
-    "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback."
+    "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
+    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs."
   ],
   "unknown": [
     "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Do not resize or re-export.",
-  "details": "Initial Drive call used mounted_path and returned BLOCKED_FILE_REFERENCE. In-thread recovery now forbids any Drive upload_file retry, including runtime file_..., and Docs/sourceUri. Next action is google-independent GitHub create_blob of the same original (content + encoding=base64, no file_uri) at portrait-handoff/626-dijonai-carrington-2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243.png. Cursor owns portrait-upload.json and live verification. Do not regenerate.",
+  "details": "Lost original bytes. Owner authorized new generation plus Slack PNG drop. Do not retry Drive/Docs. Cursor publishes after Slack ingest and hash/dimension checks.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -85,5 +86,8 @@
       "regenerate"
     ],
     "future_players": "Drive-first standing rule remains. This exception is recovery-only because Drive connector binding is denied and Cursor cannot fetch ChatGPT-local bytes."
-  }
+  },
+  "owner_authorized_regeneration": true,
+  "owner_authorized_slack_transport": true,
+  "prior_sha256_void": "2fe699f1018572e8463b4a6db8f4d4547366f573a56ec980ee2fdab86371f243"
 }
