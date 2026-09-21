@@ -1,6 +1,11 @@
 {
-  "request_id": "67147-8b972223aa85-upload-20260921T0555Z",
-  "slug": "ashlon-jackson",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "8b972223aa85803c80587bb038767c43d30d3e91f1e3e3a9178d17e7cb08a14a"
+  "request_id": "544-f66cb14c1260-upload-20260921T0632Z",
+  "player_id": 544,
+  "player_name": "Ariel Atkins",
+  "slug": "ariel-atkins",
+  "approved": true,
+  "sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
+  "bytes": 1740475,
+  "dimensions": [1145, 1374],
+  "repository_path": "portrait-handoff/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png"
 }
