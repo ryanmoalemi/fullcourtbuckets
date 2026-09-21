@@ -1,6 +1,11 @@
 {
-  "request_id": "410-edf21fda72de-upload-20260920T2000Z",
-  "slug": "chelsea-gray",
-  "status": "uploaded_pending_live_verification",
-  "sha256": "edf21fda72debfa94750ce2490fda994407eb4fce59aaad398b38971165e7e5b"
+  "request_id": "411-ba5c6244662b-upload-20260921T0458Z",
+  "player_id": 411,
+  "player_name": "Dearica Hamby",
+  "slug": "dearica-hamby",
+  "approved": true,
+  "sha256": "ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4",
+  "bytes": 1372561,
+  "dimensions": [1254, 1254],
+  "repository_path": "portrait-handoff/411-dearica-hamby-ba5c6244662befd1f9e9ab6dfa07035c61d7ca5df17ae3e7663c650a05cbc7f4.png"
 }
