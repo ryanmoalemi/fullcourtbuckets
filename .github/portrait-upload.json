@@ -1,14 +1,11 @@
 {
-  "request_id": "626-7378ff9cbfcc-upload-20260921T0505Z",
-  "player_id": 626,
-  "player_name": "DiJonai Carrington",
-  "slug": "dijonai-carrington",
+  "request_id": "309-e648f8de3ef0-upload-20260921T0510Z",
+  "player_id": 309,
+  "player_name": "Nneka Ogwumike",
+  "slug": "nneka-ogwumike",
   "approved": true,
-  "sha256": "7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95",
-  "bytes": 1589003,
-  "dimensions": [
-    1247,
-    1261
-  ],
-  "repository_path": "portrait-handoff/626-dijonai-carrington-7378ff9cbfccd06a647fd7a3b597aca892ae83ce4de190c8ed20ec6434148d95.png"
+  "sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+  "bytes": 2143682,
+  "dimensions": [1145, 1374],
+  "repository_path": "portrait-handoff/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png"
 }
