@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "player_id": 309,
+  "player_name": "Nneka Ogwumike",
+  "slug": "nneka-ogwumike",
+  "provider": "BALLDONTLIE",
+  "player_record": "data/wnba/players/nneka-ogwumike.json",
+  "player_record_sha": "1701b45b76138d6b4bed6bfd471a43226837a460",
+  "status": "live_verified",
+  "authorization": "owner_delegated_quality_review; owner_supplied_slack_png_after_lost_originals",
+  "destination_drive_folder_id": "1I4lHSswRnEoIlHcGDrlNtTmnBS5EdcTo",
+  "destination_drive_folder_name": "FCB portrait-handoff (for Cursor)",
+  "destination_filename": "309-nneka-ogwumike.png",
+  "drive_file_id": null,
+  "slack_file_id": "F0C38CK8W4A",
+  "handoff_path": "portrait-handoff/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
+  "slack_channel_id": "C0C39020XEG",
+  "slack_channel_name": "fcb-portrait-handoff",
+  "publisher": "Cursor",
+  "publication_by_chatgpt_authorized": false,
+  "approved": true,
+  "do_not_generate_duplicate": true,
+  "lease": null,
+  "generation_attempts": [
+    {
+      "attempt": 1,
+      "sha256": "2d95d1ee5ca9f0de952de793f9a0818f46a6342522ea7d6f2c3c67873a8e08c9",
+      "bytes": 2142870,
+      "dimensions": [
+        1114,
+        1412
+      ],
+      "disposition": "accepted_then_lost_bytes_void"
+    },
+    {
+      "attempt": 2,
+      "source": "owner_slack_png",
+      "slack_file_id": "F0C38CK8W4A",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [
+        1145,
+        1374
+      ],
+      "bytes": 2143682,
+      "sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "disposition": "accepted_owner_slack_png"
+    }
+  ],
+  "original_integrity": {
+    "sha256": "e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1",
+    "bytes": 2143682,
+    "dimensions": [
+      1145,
+      1374
+    ],
+    "format": "PNG",
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "original_bytes_preserved": true,
+    "resized_or_recompressed": false,
+    "transport": "owner Slack PNG F0C38CK8W4A copied unchanged into portrait-handoff on main"
+  },
+  "quality_review": {
+    "single_subject": true,
+    "frontal_head_shoulders_upper_chest": true,
+    "plain_white_top_black_trim": true,
+    "no_text_logos_numbers_scenery": true,
+    "recognizable_illustrated_likeness_review": "owner_supplied_and_accepted",
+    "anatomy_and_edges": "accepted",
+    "scope": "Artwork review only; not public-page verification"
+  },
+  "preflight": {
+    "global_worker_lease": null,
+    "existing_player_receipt": "content/portrait-upload-receipts/nneka-ogwumike.json",
+    "existing_player_image_folder": "images/players/nneka-ogwumike/portrait.png",
+    "already_approved_or_queued": true
+  },
+  "brief": "One recognizable original Nneka Ogwumike frontal head-and-shoulders/upper-chest editorial illustration. Natural expression, realistic athletic proportions, crisp polished illustrative shading. Plain white basketball top with black trim. Genuine transparent PNG at least 1024 pixels per side. No lettering, logos, numbers, scenery, frame, poster, webpage mockup or other person. Preserve exact original bytes.",
+  "publication_status": "live_verified",
+  "live_completion_increment": 1
+}
