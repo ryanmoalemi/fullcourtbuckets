@@ -1,0 +1,20 @@
+{
+  "request_id": "719-832405ec7820-upload-20260921T0929Z",
+  "player_id": 719,
+  "player_name": "Cameron Brink",
+  "slug": "cameron-brink",
+  "approved": true,
+  "sha256": "832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf",
+  "bytes": 1997002,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "repository_path": "portrait-handoff/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/cameron-brink/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/719-cameron-brink-832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf.png",
+  "github_blob_sha": "66221689077f790a9611c978f079944b53c3d7d7"
+}
