@@ -25,7 +25,7 @@
     "denied_layer": "unknown",
     "retry_same_reference": false,
     "schedule_retry": false,
-    "next_action": "chatgpt_generate_and_attach_original_png_in_slack",
+    "next_action": "park_player_continue_others",
     "disable_hourly_task": false,
     "do_not_regenerate": true,
     "already_retried_same_reference": false
@@ -49,7 +49,7 @@
   "last_attempt_at": "2026-09-20T20:06:50Z",
   "affected_live_page": "https://fullcourtbuckets.com/wnba/dearica-hamby/",
   "public_page_impact": "no replacement published; live page still has no folder portrait",
-  "resolution_status": "open_owner_authorized_slack_drop_regeneration",
+  "resolution_status": "parked_after_two_rejected_generations",
   "notification_status": "reported_in_slack_handoff_channel",
   "known": [
     "Image generation succeeded and ChatGPT reports the original still intact locally",
@@ -60,13 +60,14 @@
     "BLOCKED_FILE_REFERENCE is not classified as fixed because Chelsea Gray later reached Drive",
     "2026-09-20T23:05Z explicit thread exception: ChatGPT may place only these three unchanged originals on GitHub portrait-handoff/ via whole-file base64. Cursor still owns publication.",
     "2026-09-21T00:08Z scheduled ChatGPT worker confirmed create_blob(content, encoding=base64) works but no longer has the PNG bytes. Identifiers cannot reconstruct files. Next recovery is the originating ChatGPT run if attachments remain, else owner download fallback.",
-    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs."
+    "2026-09-21T04:33Z owner: do not stop production; generate the three missing portraits and drop originals in Slack if easier. Old hashes are void. Cursor will ingest Slack PNGs.",
+    "2026-09-21T04:49Z ChatGPT rejected two Dearica replacement generations as interface graphics, not standalone portraits. No Slack attach. Park Dearica; continue DiJonai and Nneka."
   ],
   "unknown": [
     "Whether the originating ChatGPT generating conversation still has the original PNG attachment available for download"
   ],
   "owner_action_if_chatgpt_cannot_carry_bytes": "In the generating ChatGPT conversation, download the exact original PNG. Upload it unchanged to FCB portrait-handoff (for Cursor) as 411-dearica-hamby-6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb.png. Do not resize or re-export.",
-  "details": "Lost original bytes. Owner authorized new generation plus Slack PNG drop. Do not retry Drive/Docs. Cursor publishes after Slack ingest and hash/dimension checks.",
+  "details": "Parked after two rejected replacement generations (interface graphics). Owner Slack-drop path remains for DiJonai and Nneka. Do not publish rejected graphics.",
   "standing_exception": {
     "authorized_at": "2026-09-20T23:05:00Z",
     "scope": "these_three_accepted_originals_only",
@@ -83,5 +84,15 @@
   },
   "owner_authorized_regeneration": true,
   "owner_authorized_slack_transport": true,
-  "prior_sha256_void": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb"
+  "prior_sha256_void": "6a61f15f5f65626c59597217228e8c18f5ee571363e170c43dad6dd9643630bb",
+  "generation_attempts": [
+    {
+      "generation_id": "02bfba2c-16b9-4fcd-8717-a4987b4c6d1c",
+      "disposition": "rejected_interface_graphic"
+    },
+    {
+      "generation_id": "bdcaa94f-3320-463a-b26e-c3cc9e502549",
+      "disposition": "rejected_interface_graphic"
+    }
+  ]
 }
