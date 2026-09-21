@@ -6,7 +6,7 @@
   "profile_path": "data/wnba/players/ariel-atkins.json",
   "destination": "images/players/ariel-atkins/portrait.png",
   "permanent_master_pattern": "portrait-masters/544-ariel-atkins-<sha256>.png",
-  "status": "parked_after_two_likeness_failures",
+  "status": "live_verified",
   "mapped_at": "2026-09-19T20:03:35Z",
   "brief": "Exactly one recognizable frontal head/shoulders/upper-chest illustration of Ariel Atkins; natural expression, realistic proportions and crisp polished shading; plain white basketball top with black trim; genuine transparent background; no lettering, logos, numbers, scenery, frame, poster or webpage mockup; native PNG at least 1024px per side.",
   "attempts": [
@@ -29,9 +29,20 @@
       "bytes": 1415350,
       "format_checks_passed": true,
       "disposition": "rejected_wrong_subject_identity"
+    },
+    {
+      "attempt": 3,
+      "source": "owner_approved_png_repository_path",
+      "format": "PNG",
+      "mode": "RGBA",
+      "dimensions": [1145, 1374],
+      "bytes": 1740475,
+      "sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
+      "disposition": "accepted_owner_approved_png"
     }
   ],
-  "reference_review": "Compared against the official WNBA Ariel Atkins profile/headshot. Both generations depicted a materially different person, so neither met the recognizable-likeness gate. No upload or publication was attempted.",
-  "live_page_changed": false,
-  "retry_after_other_queue": true
+  "reference_review": "Earlier generations were parked for wrong-subject identity. The owner-approved original was published unchanged via portrait-handoff + repository_path. Public SHA-256 f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305. Chromium/WebKit live checks passed.",
+  "live_page_changed": true,
+  "retry_after_other_queue": false,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ariel-atkins/?v=f66cb14c1260"
 }

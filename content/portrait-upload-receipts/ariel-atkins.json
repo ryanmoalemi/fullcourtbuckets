@@ -11,10 +11,51 @@
     1374
   ],
   "repository_path": "portrait-handoff/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/ariel-atkins/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png",
-  "github_blob_sha": "30b6c9519d3713a1346412757d970145204a9e73"
+  "github_blob_sha": "30b6c9519d3713a1346412757d970145204a9e73",
+  "upload_run_id": 35570000706,
+  "publication_run_id": 35570013564,
+  "publication_commit": "ca961a3b700bc2160003521b45980a52720de0d5",
+  "evidence_artifact_id": 10625587873,
+  "verified_url": "https://fullcourtbuckets.com/wnba/ariel-atkins/?v=f66cb14c1260",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/ariel-atkins/portrait.png?v=f66cb14c1260",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
+    "canonical": "https://fullcourtbuckets.com/wnba/ariel-atkins/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "screenshots_reviewed": [
+      "ariel-atkins-chromium-desktop.png",
+      "ariel-atkins-chromium-mobile-320.png"
+    ]
+  }
 }

@@ -15,7 +15,7 @@
     1024
   ],
   "notify_after_newly_verified": 10,
-  "newly_verified_since_authorization": 21,
+  "newly_verified_since_authorization": 22,
   "last_notified_verified_count": 11,
   "lease": null,
   "current_work": null,
@@ -244,6 +244,18 @@
       "receipt": "content/portrait-upload-receipts/nneka-ogwumike.json",
       "github_master_path": "portrait-masters/309-nneka-ogwumike-e648f8de3ef0ccd2088185aa337c448ddf7474f2613c8e8ca08d300b0cd99af1.png",
       "source": "owner_approved_png_repository_path"
+    },
+    {
+      "player_id": 544,
+      "slug": "ariel-atkins",
+      "sha256": "f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305",
+      "url": "https://fullcourtbuckets.com/wnba/ariel-atkins/?v=f66cb14c1260",
+      "upload_run_id": 35570000706,
+      "publication_run_id": 35570013564,
+      "evidence_artifact_id": 10625587873,
+      "receipt": "content/portrait-upload-receipts/ariel-atkins.json",
+      "github_master_path": "portrait-masters/544-ariel-atkins-f66cb14c1260e8f7e66ee199ffe63470b055d8dfae575e84687849966835f305.png",
+      "source": "owner_approved_png_repository_path"
     }
   ],
   "generated_pending_publication": [],
@@ -389,35 +401,6 @@
             1297
           ],
           "disposition": "rejected_insufficient_recognizable_likeness"
-        }
-      ],
-      "live_page_changed": false
-    },
-    {
-      "player_id": 544,
-      "slug": "ariel-atkins",
-      "reason": "Two native full-resolution attempts passed format checks but depicted a materially different person than the official WNBA Ariel Atkins profile; neither was published.",
-      "retry_after_other_queue": true,
-      "attempts": [
-        {
-          "attempt": 1,
-          "generation_id": "79576613-a47e-47b5-9323-ebde3c14345d",
-          "sha256": "cfdd93943dea8cd082beebd6f7ac6d0627d24c9536d14eda158d6508d697268a",
-          "dimensions": [
-            1120,
-            1404
-          ],
-          "disposition": "rejected_wrong_subject_identity"
-        },
-        {
-          "attempt": 2,
-          "generation_id": "ca2451b6-8c98-42f8-87b6-c165cec53f50",
-          "sha256": "8bff9d02dc9f283c0043172a4f3b52ca3e1a77a044de1e36586ae25b52561ef1",
-          "dimensions": [
-            1148,
-            1371
-          ],
-          "disposition": "rejected_wrong_subject_identity"
         }
       ],
       "live_page_changed": false
@@ -604,19 +587,19 @@
     "nneka-ogwumike"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T06:05:00Z",
+    "timestamp_utc": "2026-09-21T06:52:00Z",
     "players_touched": [
       {
-        "player_id": 67147,
-        "slug": "ashlon-jackson",
-        "result": "live_verified_owner_slack_png_replacement",
+        "player_id": 544,
+        "slug": "ariel-atkins",
+        "result": "live_verified_approved_png_repository_path",
         "live_page_changed": true
       }
     ],
-    "newly_verified": 0,
+    "newly_verified": 1,
     "owner_notification_due": false
   },
-  "scope_note": "Ashlon Jackson replacement is live_verified via owner Slack PNG F0C36NGV41L (dup F0C38JFJG82) + portrait-handoff repository_path. Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Ariel Atkins is live_verified via approved original + portrait-handoff repository_path. Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
