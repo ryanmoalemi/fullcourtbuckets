@@ -1,14 +1,6 @@
 {
   "request_id": "524-04f9fc1e8d98-upload-20260922T0558Z",
-  "player_id": 524,
-  "player_name": "Cecilia Zandalasini",
   "slug": "cecilia-zandalasini",
-  "approved": true,
-  "sha256": "04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc",
-  "bytes": 1491740,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "repository_path": "portrait-handoff/524-cecilia-zandalasini-04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc"
 }
