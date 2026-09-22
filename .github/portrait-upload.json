@@ -1,11 +1,6 @@
 {
   "request_id": "67016-fcf49f7624b1-upload-20260922T0554Z",
-  "player_id": 67016,
-  "player_name": "Cassandre Prosper",
   "slug": "cassandre-prosper",
-  "approved": true,
-  "sha256": "fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b",
-  "bytes": 1531848,
-  "dimensions": [1254, 1254],
-  "repository_path": "portrait-handoff/67016-cassandre-prosper-fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b"
 }
