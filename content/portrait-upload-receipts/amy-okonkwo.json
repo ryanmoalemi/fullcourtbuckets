@@ -1,0 +1,20 @@
+{
+  "request_id": "783-693d787d650a-upload-20260922T0616Z",
+  "player_id": 783,
+  "player_name": "Amy Okonkwo",
+  "slug": "amy-okonkwo",
+  "approved": true,
+  "sha256": "693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e",
+  "bytes": 2149373,
+  "dimensions": [
+    1122,
+    1402
+  ],
+  "repository_path": "portrait-handoff/783-amy-okonkwo-693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/amy-okonkwo/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/783-amy-okonkwo-693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e.png",
+  "github_blob_sha": "19a90295ed0355d1015032919c686c03b3b28ae3"
+}
