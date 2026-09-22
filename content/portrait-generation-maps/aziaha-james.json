@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "player_id": 742,
+  "player_name": "Aziaha James",
+  "slug": "aziaha-james",
+  "provider": "BALLDONTLIE",
+  "player_record": "data/wnba/players/aziaha-james.json",
+  "player_record_blob_sha": "d1d0e241301dad9eddb2b77df475ab9bca6ec131",
+  "destination": "images/players/aziaha-james/portrait.png",
+  "requested_seo_filename": "aziaha-james-portrait.png",
+  "public_page": "https://fullcourtbuckets.com/wnba/aziaha-james/",
+  "status": "generation_reserved",
+  "publication_status": "not_submitted_pending_composite_likeness_validation",
+  "count_as_live_completion": false,
+  "lease": {
+    "owner": "chatgpt-interactive-aziaha-james-20260922T045727Z",
+    "claimed_at": "2026-09-22T04:57:27Z",
+    "expires_at": "2026-09-22T05:27:27Z"
+  },
+  "reference_study": {
+    "method": "Study multiple explicitly captioned views of this player for stable facial traits; create a new drawn composition, not a photo edit, trace, face swap or reproduction.",
+    "sources": [
+      {"url": "https://www.wnba.com/player/1642793/aziaha-james/profile", "view": "Official frontal headshot; hair up; smile"},
+      {"url": "https://gopack.com/sports/womens-basketball/roster/james-aziaha/13124", "view": "Official NC State roster portrait; three-quarter view; shoulder-length locs"},
+      {"url": "https://www.wnba.com/draft/2025/board", "view": "Captioned Aziaha James draft entry; on-court view"}
+    ],
+    "reference_images_to_publish": false
+  },
+  "composite_identity_brief": "Preserve warm medium-brown complexion without bleaching or an orange cast; oval face with high cheekbones, naturally tapering jaw and rounded chin; dark almond-shaped eyes and arched brows; natural nose width and rounded tip; full lips and a relaxed genuine smile. Shoulder-length substantial textured black locs swept to one side, not long microbraids or another player's hairstyle. Visible braces when smiling as supported by the reviewed references. No facial slimming, generic beauty filter or feature substitution.",
+  "presentation_brief": "Exactly one Aziaha James. Original clearly illustrated editorial head, shoulders and upper-chest portrait with crisp drawn contours and polished painted shading, not a photographic cutout. New frontal composition with modest hair headroom, realistic athletic proportions, plain white sleeveless basketball top with black trim. Genuine transparent alpha background, no checkerboard drawn into image, text, names, numbers, logos, jewelry, props, scenery, border or poster. Do not reproduce any reference pose, lighting, uniform, background or exact tattoo artwork. Native PNG at least 1024px per side. Name must be stated in chat immediately before the image.",
+  "quality_gate": ["complexion", "face_width_and_jaw", "hair_silhouette", "eyes_nose_and_lips", "smile", "overall_likeness", "original_illustration_not_photo_copy", "native_png_and_alpha"],
+  "reconciliation": "No player upload receipt, prior generation map or player image folder returned (404). Player not in the completed/protected or parked lists at ledger blob 5083bb7025d4fa874f22a9c76fad03b7ac3c7e81. Global worker lease was null.",
+  "created_at": "2026-09-22T04:57:27Z"
+}
