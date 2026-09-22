@@ -1,14 +1,6 @@
 {
   "request_id": "67131-d04bfe35c0ce-upload-20260922T0610Z",
-  "player_id": 67131,
-  "player_name": "Chance Gray",
   "slug": "chance-gray",
-  "approved": true,
-  "sha256": "d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939",
-  "bytes": 1739917,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "repository_path": "portrait-handoff/67131-chance-gray-d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939"
 }
