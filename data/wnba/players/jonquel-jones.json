@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Liberty",
         "conference": "Eastern Conference"
       },
-      "games_played": 40,
-      "min": 28.48,
-      "fgm": 4.98,
-      "fga": 10.08,
-      "fg_pct": 49.4,
+      "games_played": 41,
+      "min": 28.27,
+      "fgm": 4.95,
+      "fga": 10.0,
+      "fg_pct": 49.5,
       "fg3m": 1.83,
-      "fg3a": 4.63,
-      "fg3_pct": 39.5,
-      "ftm": 2.88,
-      "fta": 3.48,
-      "ft_pct": 82.7,
+      "fg3a": 4.61,
+      "fg3_pct": 39.7,
+      "ftm": 2.83,
+      "fta": 3.44,
+      "ft_pct": 82.3,
       "oreb": null,
       "dreb": null,
-      "reb": 9.03,
-      "ast": 2.6,
-      "stl": 0.63,
-      "blk": 1.13,
-      "turnover": 2.13,
-      "pts": 14.65
+      "reb": 8.88,
+      "ast": 2.56,
+      "stl": 0.61,
+      "blk": 1.15,
+      "turnover": 2.15,
+      "pts": 14.56
     },
     {
       "player_id": 465,
@@ -614,6 +614,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25070,
+      "player_id": 465,
+      "date": "2026-09-22T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 84,
+      "away_score": 95,
+      "minutes": "35",
+      "pts": 18.0,
+      "ast": 4.0,
+      "reb": 12.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 3.0
+    },
+    {
       "game_id": 25066,
       "player_id": 465,
       "date": "2026-09-20T19:00:00.000Z",
@@ -854,7 +894,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

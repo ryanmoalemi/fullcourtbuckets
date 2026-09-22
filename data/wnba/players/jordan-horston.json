@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Storm",
         "conference": "Western Conference"
       },
-      "games_played": 35,
-      "min": 17.4,
-      "fgm": 1.83,
-      "fga": 4.89,
-      "fg_pct": 37.4,
-      "fg3m": 0.37,
-      "fg3a": 1.66,
-      "fg3_pct": 22.4,
-      "ftm": 0.71,
-      "fta": 1.06,
+      "games_played": 36,
+      "min": 17.44,
+      "fgm": 1.78,
+      "fga": 4.81,
+      "fg_pct": 37.0,
+      "fg3m": 0.36,
+      "fg3a": 1.64,
+      "fg3_pct": 22.0,
+      "ftm": 0.69,
+      "fta": 1.03,
       "ft_pct": 67.6,
       "oreb": null,
       "dreb": null,
-      "reb": 3.57,
+      "reb": 3.53,
       "ast": 1.31,
-      "stl": 1.06,
-      "blk": 0.51,
-      "turnover": 1.2,
-      "pts": 4.74
+      "stl": 1.03,
+      "blk": 0.5,
+      "turnover": 1.22,
+      "pts": 4.61
     },
     {
       "player_id": 686,
@@ -406,7 +406,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

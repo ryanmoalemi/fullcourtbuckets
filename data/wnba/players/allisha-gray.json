@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -582,6 +582,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 25070,
+      "player_id": 498,
+      "date": "2026-09-22T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 84,
+      "away_score": 95,
+      "minutes": "32",
+      "pts": 14.0,
+      "ast": 1.0,
+      "reb": 3.0,
+      "stl": 2.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
+    {
       "game_id": 25063,
       "player_id": 498,
       "date": "2026-09-19T23:00:00.000Z",
@@ -902,7 +942,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

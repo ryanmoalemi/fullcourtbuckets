@@ -978,6 +978,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 269348,
+      "slug": "matilde-villa",
+      "player_name": "Matilde Villa",
+      "listed_active": true,
+      "profile_path": "/wnba/matilde-villa/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 671,
       "slug": "maya-caldwell",
       "player_name": "Maya Caldwell",

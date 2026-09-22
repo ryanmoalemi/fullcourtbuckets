@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Fever",
         "conference": "Eastern Conference"
       },
-      "games_played": 40,
-      "min": 19.23,
-      "fgm": 2.3,
-      "fga": 4.43,
+      "games_played": 41,
+      "min": 18.85,
+      "fgm": 2.24,
+      "fga": 4.32,
       "fg_pct": 52.0,
-      "fg3m": 0.13,
-      "fg3a": 0.45,
+      "fg3m": 0.12,
+      "fg3a": 0.44,
       "fg3_pct": 27.8,
-      "ftm": 1.93,
-      "fta": 2.58,
+      "ftm": 1.88,
+      "fta": 2.51,
       "ft_pct": 74.8,
       "oreb": null,
       "dreb": null,
-      "reb": 4.73,
-      "ast": 1.0,
-      "stl": 0.88,
-      "blk": 0.48,
+      "reb": 4.63,
+      "ast": 0.98,
+      "stl": 0.85,
+      "blk": 0.46,
       "turnover": 0.8,
-      "pts": 6.65
+      "pts": 6.49
     },
     {
       "player_id": 540,
@@ -670,7 +670,7 @@
       "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

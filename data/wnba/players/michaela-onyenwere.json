@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Mystics",
         "conference": "Eastern Conference"
       },
-      "games_played": 37,
-      "min": 25.05,
-      "fgm": 2.97,
-      "fga": 6.78,
-      "fg_pct": 43.8,
-      "fg3m": 1.41,
-      "fg3a": 3.57,
-      "fg3_pct": 39.4,
-      "ftm": 1.62,
-      "fta": 1.95,
+      "games_played": 38,
+      "min": 25.0,
+      "fgm": 2.95,
+      "fga": 6.76,
+      "fg_pct": 43.6,
+      "fg3m": 1.42,
+      "fg3a": 3.58,
+      "fg3_pct": 39.7,
+      "ftm": 1.58,
+      "fta": 1.89,
       "ft_pct": 83.3,
       "oreb": null,
       "dreb": null,
-      "reb": 2.68,
-      "ast": 1.76,
-      "stl": 0.43,
+      "reb": 2.63,
+      "ast": 1.71,
+      "stl": 0.42,
       "blk": 0.16,
-      "turnover": 1.62,
-      "pts": 8.97
+      "turnover": 1.68,
+      "pts": 8.89
     },
     {
       "player_id": 615,
@@ -614,7 +614,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Fire",
         "conference": null
       },
-      "games_played": 30,
-      "min": 15.83,
-      "fgm": 1.4,
-      "fga": 3.73,
-      "fg_pct": 37.5,
+      "games_played": 31,
+      "min": 15.94,
+      "fgm": 1.42,
+      "fga": 3.84,
+      "fg_pct": 37.0,
       "fg3m": 1.0,
-      "fg3a": 3.13,
-      "fg3_pct": 31.9,
-      "ftm": 1.0,
-      "fta": 1.1,
-      "ft_pct": 90.9,
+      "fg3a": 3.23,
+      "fg3_pct": 31.0,
+      "ftm": 1.06,
+      "fta": 1.19,
+      "ft_pct": 89.2,
       "oreb": null,
       "dreb": null,
-      "reb": 1.5,
-      "ast": 0.8,
-      "stl": 0.57,
+      "reb": 1.52,
+      "ast": 0.81,
+      "stl": 0.55,
       "blk": 0.1,
-      "turnover": 0.33,
-      "pts": 4.8
+      "turnover": 0.35,
+      "pts": 4.9
     },
     {
       "player_id": 541,
@@ -518,7 +518,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

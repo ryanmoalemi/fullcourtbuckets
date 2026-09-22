@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Aces",
         "conference": "Western Conference"
       },
-      "games_played": 39,
-      "min": 26.15,
-      "fgm": 2.51,
-      "fga": 7.1,
-      "fg_pct": 35.4,
-      "fg3m": 1.64,
-      "fg3a": 5.08,
-      "fg3_pct": 32.3,
+      "games_played": 40,
+      "min": 26.08,
+      "fgm": 2.48,
+      "fga": 7.05,
+      "fg_pct": 35.1,
+      "fg3m": 1.63,
+      "fg3a": 5.05,
+      "fg3_pct": 32.2,
       "ftm": 1.03,
-      "fta": 1.26,
-      "ft_pct": 81.6,
+      "fta": 1.28,
+      "ft_pct": 80.4,
       "oreb": null,
       "dreb": null,
-      "reb": 2.33,
-      "ast": 1.46,
-      "stl": 1.08,
+      "reb": 2.3,
+      "ast": 1.43,
+      "stl": 1.1,
       "blk": 0.13,
-      "turnover": 0.92,
-      "pts": 7.69
+      "turnover": 0.9,
+      "pts": 7.6
     },
     {
       "player_id": 437,
@@ -950,7 +950,7 @@
       "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

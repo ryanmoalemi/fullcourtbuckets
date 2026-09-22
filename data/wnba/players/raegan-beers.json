@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Sun",
         "conference": "Eastern Conference"
       },
-      "games_played": 35,
+      "games_played": 36,
       "min": 11.83,
-      "fgm": 1.37,
-      "fga": 2.89,
-      "fg_pct": 47.5,
+      "fgm": 1.44,
+      "fga": 2.94,
+      "fg_pct": 49.1,
       "fg3m": 0.06,
-      "fg3a": 0.14,
-      "fg3_pct": 40.0,
-      "ftm": 1.03,
-      "fta": 1.54,
-      "ft_pct": 66.7,
+      "fg3a": 0.17,
+      "fg3_pct": 33.3,
+      "ftm": 1.08,
+      "fta": 1.61,
+      "ft_pct": 67.2,
       "oreb": null,
       "dreb": null,
       "reb": 3.06,
       "ast": 0.83,
-      "stl": 0.46,
-      "blk": 0.26,
-      "turnover": 0.91,
-      "pts": 3.83
+      "stl": 0.44,
+      "blk": 0.25,
+      "turnover": 0.94,
+      "pts": 4.03
     }
   ],
   "recent_completed_games": [
@@ -430,7 +430,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

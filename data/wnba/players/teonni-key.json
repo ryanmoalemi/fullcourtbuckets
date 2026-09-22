@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Tempo",
         "conference": null
       },
-      "games_played": 36,
-      "min": 10.28,
-      "fgm": 0.81,
-      "fga": 2.11,
-      "fg_pct": 38.2,
+      "games_played": 37,
+      "min": 10.57,
+      "fgm": 0.84,
+      "fga": 2.24,
+      "fg_pct": 37.3,
       "fg3m": 0.08,
-      "fg3a": 0.53,
-      "fg3_pct": 15.8,
-      "ftm": 0.28,
-      "fta": 0.56,
+      "fg3a": 0.54,
+      "fg3_pct": 15.0,
+      "ftm": 0.3,
+      "fta": 0.59,
       "ft_pct": 50.0,
       "oreb": null,
       "dreb": null,
-      "reb": 1.86,
-      "ast": 0.47,
-      "stl": 0.42,
-      "blk": 0.5,
-      "turnover": 0.53,
-      "pts": 1.97
+      "reb": 1.95,
+      "ast": 0.49,
+      "stl": 0.43,
+      "blk": 0.49,
+      "turnover": 0.51,
+      "pts": 2.05
     }
   ],
   "recent_completed_games": [
@@ -430,7 +430,7 @@
       "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

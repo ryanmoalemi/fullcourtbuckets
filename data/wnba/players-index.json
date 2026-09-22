@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "players": [
     {
       "id": 345,
@@ -4401,6 +4401,22 @@
       "current_team": null,
       "path": "/wnba/matee-ajavon/",
       "data_path": "/data/wnba/players/matee-ajavon.json"
+    },
+    {
+      "id": 269348,
+      "slug": "matilde-villa",
+      "name": "Matilde Villa",
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "path": "/wnba/matilde-villa/",
+      "data_path": "/data/wnba/players/matilde-villa.json"
     },
     {
       "id": 671,

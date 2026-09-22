@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-21T07:20:30+00:00",
+  "checked_at": "2026-09-22T07:01:21+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -47,25 +47,25 @@
         "name": "Lynx",
         "conference": "Western Conference"
       },
-      "games_played": 41,
-      "min": 29.17,
-      "fgm": 6.02,
-      "fga": 10.22,
-      "fg_pct": 59.0,
+      "games_played": 42,
+      "min": 28.98,
+      "fgm": 6.07,
+      "fga": 10.21,
+      "fg_pct": 59.4,
       "fg3m": 0.07,
-      "fg3a": 0.39,
+      "fg3a": 0.38,
       "fg3_pct": 18.8,
-      "ftm": 2.66,
-      "fta": 3.68,
-      "ft_pct": 72.2,
+      "ftm": 2.64,
+      "fta": 3.69,
+      "ft_pct": 71.6,
       "oreb": null,
       "dreb": null,
-      "reb": 7.61,
-      "ast": 3.34,
-      "stl": 1.68,
+      "reb": 7.69,
+      "ast": 3.31,
+      "stl": 1.67,
       "blk": 0.98,
-      "turnover": 2.54,
-      "pts": 14.78
+      "turnover": 2.55,
+      "pts": 14.86
     },
     {
       "player_id": 385,
@@ -982,7 +982,7 @@
       "turnover": 7.0
     }
   ],
-  "game_log_window_start": "2026-08-17",
+  "game_log_window_start": "2026-08-18",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
