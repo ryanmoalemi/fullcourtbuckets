@@ -188,14 +188,15 @@
     {
       "player_id": 621,
       "slug": "awak-kuier",
-      "sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
-      "url": "https://fullcourtbuckets.com/wnba/awak-kuier/?v=046d55fa0641",
-      "upload_run_id": 35501811242,
-      "publication_run_id": 35501820887,
-      "evidence_artifact_id": 10602563033,
+      "sha256": "077e6140527bf487911ac565c61443932f9ced82e728b53206e733f152d37a5f",
+      "url": "https://fullcourtbuckets.com/wnba/awak-kuier/?v=077e6140527b",
+      "upload_run_id": 35688468459,
+      "publication_run_id": 35688601633,
+      "evidence_artifact_id": 10677966731,
       "receipt": "content/portrait-upload-receipts/awak-kuier.json",
-      "github_master_path": "portrait-masters/621-awak-kuier-046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021.png",
-      "drive_master_file_id": "1vZCV9cvO0aBbgeAzaIfXl_FURCEOTmJh"
+      "github_master_path": "portrait-masters/621-awak-kuier-077e6140527bf487911ac565c61443932f9ced82e728b53206e733f152d37a5f.png",
+      "replaced_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021",
+      "source": "owner_approved_png_repository_path"
     },
     {
       "player_id": 410,
@@ -588,10 +589,10 @@
       "player_id": 621,
       "slug": "awak-kuier",
       "recovery_verified": true,
-      "upload_run_id": 35501811242,
-      "publication_run_id": 35501820887,
-      "evidence_artifact_id": 10602563033,
-      "recovery": "Google-independent portrait-handoff + repository_path published exact Drive-verified original bytes; live Chromium/WebKit checks passed. BLOCKED_FILE_REFERENCE is not claimed fixed."
+      "upload_run_id": 35688468459,
+      "publication_run_id": 35688601633,
+      "evidence_artifact_id": 10677966731,
+      "recovery": "Owner-approved replacement published via portrait-handoff + repository_path. Public SHA-256 077e6140527bf487911ac565c61443932f9ced82e728b53206e733f152d37a5f, 2023338 bytes, 1122x1402. Previous live hash 046d55fa… was replaced. Chromium/WebKit live checks passed. BLOCKED_FILE_REFERENCE is not claimed fixed."
     }
   ],
   "selection": "Reconcile due preserved retries first; then replace undersized legacy active-player portraits; then other active players, prominent retired players and remaining archive. Park only a player after two poor-likeness attempts.",
@@ -634,19 +635,20 @@
     "cameron-brink"
   ],
   "last_run": {
-    "timestamp_utc": "2026-09-21T09:37:00Z",
+    "timestamp_utc": "2026-09-22T04:59:00Z",
     "players_touched": [
       {
-        "player_id": 719,
-        "slug": "cameron-brink",
-        "result": "live_verified_repository_path_upload",
-        "live_page_changed": true
+        "player_id": 621,
+        "slug": "awak-kuier",
+        "result": "live_verified_repository_path_replacement",
+        "live_page_changed": true,
+        "replaced_sha256": "046d55fa0641a2da32cca8eac15ecaa813f0a9f8f4efefe5c8577cfbee0ec021"
       }
     ],
-    "newly_verified": 1,
+    "newly_verified": 0,
     "owner_notification_due": false
   },
-  "scope_note": "Cameron Brink is live_verified from the owner-approved original (Slack F0C334BHVTM, SHA-256 832405ec782035ce0949a04df18c74d452a71cd7b1427d852f1f09eae4f9e3cf) published via repository_path. Dominique Malonga, Ezi Magbegor, Diamond Miller, Ariel Atkins, Ashlon Jackson, Nneka Ogwumike, DiJonai Carrington and Dearica Hamby remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
+  "scope_note": "Awak Kuier replacement is live_verified from the owner-approved original (SHA-256 077e6140527bf487911ac565c61443932f9ced82e728b53206e733f152d37a5f, 2023338 bytes, 1122x1402) published via repository_path. The previous live file 046d55fa… was replaced and must not be republished. Cameron Brink and the prior verified portraits remain live_verified. BLOCKED_FILE_REFERENCE is not claimed fixed. Sports data, statistics updater and the approved shared layout remain unchanged.",
   "transport_policy": {
     "blocked_file_reference_same_runtime_reference": "do_not_schedule_retry",
     "google_independent_handoff": "portrait-handoff + repository_path on existing portrait-upload.yml",
