@@ -11,10 +11,52 @@
     1254
   ],
   "repository_path": "portrait-handoff/495-brionna-jones-e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/brionna-jones/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/495-brionna-jones-e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7.png",
-  "github_blob_sha": "7fb3f4dfb093d39098e506e2becea2f059702bf1"
+  "github_blob_sha": "7fb3f4dfb093d39098e506e2becea2f059702bf1",
+  "upload_run_id": 35691594345,
+  "publication_run_id": 35691648345,
+  "publication_commit": "45d70578dabf52e269d412c47ad8538ff3b6ec46",
+  "evidence_artifact_id": 10679480367,
+  "verified_url": "https://fullcourtbuckets.com/wnba/brionna-jones/?v=e8b880cf11da",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/brionna-jones/portrait.png?v=e8b880cf11da",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7",
+    "public_bytes": 1443064,
+    "canonical": "https://fullcourtbuckets.com/wnba/brionna-jones/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "screenshots_reviewed": [
+      "brionna-jones-chromium-desktop.png",
+      "brionna-jones-chromium-mobile-320.png"
+    ]
+  }
 }
