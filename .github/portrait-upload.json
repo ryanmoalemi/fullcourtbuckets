@@ -1,1 +1,14 @@
-{}
+{
+  "request_id": "727-90641d480021-upload-20260922T0622Z",
+  "player_id": 727,
+  "player_name": "Charisma Osborne",
+  "slug": "charisma-osborne",
+  "approved": true,
+  "sha256": "90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312",
+  "bytes": 1697863,
+  "dimensions": [
+    1230,
+    1278
+  ],
+  "repository_path": "portrait-handoff/727-charisma-osborne-90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312.png"
+}
