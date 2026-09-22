@@ -11,10 +11,53 @@
     1374
   ],
   "repository_path": "portrait-handoff/267772-aminata-gueye-71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/aminata-gueye/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/267772-aminata-gueye-71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21.png",
-  "github_blob_sha": "31a0960c4afa1b1cdee04f77fc95fdc913f3bba3"
+  "github_blob_sha": "31a0960c4afa1b1cdee04f77fc95fdc913f3bba3",
+  "upload_run_id": 35688674096,
+  "publication_run_id": 35688922308,
+  "publication_commit": "2de115589e11db3823878c5b8544436e88578091",
+  "evidence_artifact_id": 10677917288,
+  "verified_url": "https://fullcourtbuckets.com/wnba/aminata-gueye/?v=71b5c58684ff",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/aminata-gueye/portrait.png?v=71b5c58684ff",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21",
+    "public_bytes": 1968602,
+    "canonical": "https://fullcourtbuckets.com/wnba/aminata-gueye/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "screenshots_reviewed": [
+      "aminata-gueye-chromium-desktop.png",
+      "aminata-gueye-chromium-mobile-320.png"
+    ]
+  }
 }
