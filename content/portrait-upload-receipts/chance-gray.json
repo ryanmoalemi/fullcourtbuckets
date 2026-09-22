@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/67131-chance-gray-d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/chance-gray/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67131-chance-gray-d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939.png",
-  "github_blob_sha": "808d78b87e500135cf26a913d4b423d3037c1217"
+  "github_blob_sha": "808d78b87e500135cf26a913d4b423d3037c1217",
+  "live_verified": true,
+  "upload_run_id": 35693648110,
+  "publication_run_id": 35693664184,
+  "publication_commit": "a42d6dd043e517b1e8baa9fcc13018023293e9f9",
+  "verified_url": "https://fullcourtbuckets.com/wnba/chance-gray/?v=d04bfe35c0ce",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/chance-gray/portrait.png?v=d04bfe35c0ce",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "d04bfe35c0ceca81d29d7808defa0ea6df1efd79abd9fc6d43cc0adc59cb6939",
+    "public_bytes": 1739917,
+    "canonical": "https://fullcourtbuckets.com/wnba/chance-gray/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "d04bfe35c0ce"
+  }
 }
