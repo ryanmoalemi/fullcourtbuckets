@@ -1,11 +1,6 @@
 {
   "request_id": "495-e8b880cf11da-upload-20260922T0539Z",
-  "player_id": 495,
-  "player_name": "Brionna Jones",
   "slug": "brionna-jones",
-  "approved": true,
-  "sha256": "e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7",
-  "bytes": 1443064,
-  "dimensions": [1254, 1254],
-  "repository_path": "portrait-handoff/495-brionna-jones-e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "e8b880cf11da6e29ace5fad74cba14de228fff6af41a28ea2f8a85bd35aac4a7"
 }
