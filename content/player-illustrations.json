@@ -1002,6 +1002,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 727,
+      "slug": "charisma-osborne",
+      "player_name": "Charisma Osborne",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/charisma-osborne/portrait.png",
+      "width": 1230,
+      "height": 1278,
+      "asset_sha256": "90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1230,
+        "height": 1278,
+        "source_width": 1230,
+        "source_height": 1278,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
