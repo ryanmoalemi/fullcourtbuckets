@@ -11,10 +11,30 @@
     1402
   ],
   "repository_path": "portrait-handoff/783-amy-okonkwo-693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/amy-okonkwo/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/783-amy-okonkwo-693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e.png",
-  "github_blob_sha": "19a90295ed0355d1015032919c686c03b3b28ae3"
+  "github_blob_sha": "19a90295ed0355d1015032919c686c03b3b28ae3",
+  "live_verified": true,
+  "upload_run_id": 35694126231,
+  "publication_run_id": 35694230365,
+  "publication_commit": "7640152b775e2b176386fcb21f7a24a3fe5524c1",
+  "verified_url": "https://fullcourtbuckets.com/wnba/amy-okonkwo/?v=693d787d650a",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/amy-okonkwo/portrait.png?v=693d787d650a",
+    "natural_dimensions": [
+      1122,
+      1402
+    ],
+    "public_sha256": "693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e",
+    "public_bytes": 2149373,
+    "canonical": "https://fullcourtbuckets.com/wnba/amy-okonkwo/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "693d787d650a"
+  }
 }
