@@ -11,10 +11,53 @@
     1254
   ],
   "repository_path": "portrait-handoff/748-carla-leite-2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/carla-leite/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/748-carla-leite-2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f.png",
-  "github_blob_sha": "666d8fca92e68818c783cd790e410ea3fb340c3a"
+  "github_blob_sha": "666d8fca92e68818c783cd790e410ea3fb340c3a",
+  "upload_run_id": 35692052524,
+  "publication_run_id": 35692066945,
+  "publication_commit": "774cd266e41e76d77ae81bce44a4f616321b2e19",
+  "evidence_artifact_id": 10679027495,
+  "verified_url": "https://fullcourtbuckets.com/wnba/carla-leite/?v=2e74f7ad0ec0",
+  "live_verification": {
+    "status": "passed",
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        1365,
+        850
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        320,
+        568
+      ]
+    ],
+    "current_src": "https://fullcourtbuckets.com/images/players/carla-leite/portrait.png?v=2e74f7ad0ec0",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f",
+    "public_bytes": 2091969,
+    "canonical": "https://fullcourtbuckets.com/wnba/carla-leite/",
+    "browser_decode": true,
+    "horizontal_overflow": false,
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "screenshots_reviewed": [
+      "carla-leite-chromium-desktop.png",
+      "carla-leite-chromium-mobile-320.png"
+    ]
+  }
 }
