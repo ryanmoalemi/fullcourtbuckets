@@ -9,23 +9,29 @@
   "destination": "images/players/aziaha-james/portrait.png",
   "requested_seo_filename": "aziaha-james-portrait.png",
   "public_page": "https://fullcourtbuckets.com/wnba/aziaha-james/",
-  "status": "draft_preserved_pending_composite_likeness_validation",
-  "publication_status": "not_submitted_pending_composite_likeness_validation",
+  "status": "owner_rejected_draft_corrective_illustration_pending",
+  "publication_status": "held_for_explicit_owner_likeness_review",
   "count_as_live_completion": false,
   "lease": null,
   "reference_study": {
-    "method": "Study multiple explicitly captioned views of this player for stable facial traits; create a new drawn composition, not a photo edit, trace, face swap or reproduction.",
+    "method": "Study multiple views for stable facial traits; create a new drawn composition, not a photo edit, trace, face swap or reproduction. Historical reference descriptions below are retained for audit, not treated as verified likeness evidence after owner rejection.",
     "sources": [
       {"url": "https://www.wnba.com/player/1642793/aziaha-james/profile", "view": "Official frontal headshot; hair up; smile"},
       {"url": "https://gopack.com/sports/womens-basketball/roster/james-aziaha/13124", "view": "Official NC State roster portrait; three-quarter view; shoulder-length locs"},
       {"url": "https://www.wnba.com/draft/2025/board", "view": "Captioned Aziaha James draft entry; on-court view"}
     ],
-    "reference_images_to_publish": false
+    "reference_images_to_publish": false,
+    "owner_supplied_correction_reference_ids": [
+      "file_0000000089148230992b38d1c9dcc70c",
+      "file_00000000c95481fdae4f7d6e9df8edcf",
+      "file_00000000b8e881fd9ce26d3abdeafaf0"
+    ],
+    "correction_source": "Three images supplied by the owner in the latest Aziaha draft rejection. Use together as visual guidance, without identifying unfamiliar people or copying a photograph."
   },
-  "composite_identity_brief": "Preserve warm medium-brown complexion without bleaching or an orange cast; oval face with high cheekbones, naturally tapering jaw and rounded chin; dark almond-shaped eyes and arched brows; natural nose width and rounded tip; full lips and a relaxed genuine smile. Shoulder-length substantial textured black locs swept to one side, not long microbraids or another player's hairstyle. Visible braces when smiling as supported by the reviewed references. No facial slimming, generic beauty filter or feature substitution.",
-  "presentation_brief": "Exactly one Aziaha James. Original clearly illustrated editorial head, shoulders and upper-chest portrait with crisp drawn contours and polished painted shading, not a photographic cutout. New frontal composition with modest hair headroom, realistic athletic proportions, plain white sleeveless basketball top with black trim. Genuine transparent alpha background, no checkerboard drawn into image, text, names, numbers, logos, jewelry, props, scenery, border or poster. Do not reproduce any reference pose, lighting, uniform, background or exact tattoo artwork. Native PNG at least 1024px per side. Name must be stated in chat immediately before the image.",
+  "composite_identity_brief": "Original Aziaha James illustration using the owner's latest reference set: natural medium-brown complexion without lightening or orange cast; fuller cheeks and a broad rounded lower face, gently rounded chin rather than a pointed narrow jaw; dark eyes with natural spacing, defined brows, natural broad rounded nose, full upper and lower lips. Substantial textured locs, not microbraids. Use a new relaxed expression and arrangement of pulled-back locs with some falling beside the shoulders. Do not invent braces, lengthen the face, slim the cheeks, reshape the nose or apply generic model beautification. The previous braces claim was not supported by the latest supplied reference set.",
+  "presentation_brief": "Exactly one Aziaha James. Clearly drawn original sports-editorial illustration with visible ink contours, controlled painted shading and realistic facial proportions, not a photographic cutout. Newly composed frontal head, shoulders and upper chest; modest headroom; white sleeveless basketball top with black trim; genuine transparent alpha. No text, names, logos, numbers, jewelry, headband, props, scenery, frame or drawn checkerboard. Do not trace, face-swap, recolor or reproduce any reference photograph's exact pose, lighting, clothing, backdrop or tattoo artwork. Native PNG at least 1024 pixels per side. State the player name in a real chat message immediately before image generation. Show one corrective draft for owner review; do not publish it automatically.",
   "quality_gate": ["complexion", "face_width_and_jaw", "hair_silhouette", "eyes_nose_and_lips", "smile", "overall_likeness", "original_illustration_not_photo_copy", "native_png_and_alpha"],
-  "reconciliation": "No player upload receipt, prior generation map or player image folder returned (404). Player not in the completed/protected or parked lists at ledger blob 5083bb7025d4fa874f22a9c76fad03b7ac3c7e81. Global worker lease was null.",
+  "reconciliation": "Current global and generation-map leases were null. No upload receipt was returned for this slug on main (404). Only this generation map is being changed; no live asset, statistics, uploader request or milestone count is changed.",
   "created_at": "2026-09-22T04:57:27Z",
   "generation": {
     "generation_id": "f571e918-0c4c-45db-8461-4b7e25636fac",
@@ -37,7 +43,8 @@
     "mode": "RGBA",
     "alpha_extrema": [0, 255],
     "original_bytes_changed": false,
-    "generation_attempt": 1
+    "generation_attempt": 1,
+    "disposition": "owner_rejected_likeness_do_not_publish"
   },
   "preservation": {
     "bytes_preserved": true,
@@ -46,16 +53,27 @@
     "mime_type": "image/png",
     "downloaded_back": true,
     "downloaded_bytes_equal_original": true,
-    "downloaded_sha256": "f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142"
+    "downloaded_sha256": "f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142",
+    "disposition": "retain_rejected_original_for_audit_not_publication"
   },
   "review": {
     "native_png_dimensions_alpha_verified": true,
     "single_subject_plain_uniform_no_text": true,
     "publication_approved": false,
-    "likeness_status": "pending_validation_not_claimed_accurate",
-    "visual_review_notes": "Do not infer likeness acceptance from technical format success. Review loc length/volume, facial proportions and warm skin rendering against the studied sources; the rendering also remains closer to photorealism than the requested clearly drawn editorial treatment. Draft shown to the owner for the requested composite-process validation, not submitted for publication.",
-    "player_name_in_chat_before_image": true,
+    "owner_review_required": true,
+    "likeness_status": "owner_rejected",
+    "owner_feedback": "really bad on the photo again too, overall trash work",
+    "visual_review_notes": "Technical image checks did not establish likeness. The owner rejected the draft and supplied three corrective references. Reassess facial proportions, fuller cheeks and jaw, lips, natural nose width and complexion. Omit unsupported braces. Make a visibly drawn original, not a generic photorealistic portrait.",
+    "player_name_in_chat_before_image": false,
+    "name_audit_note": "The previous record incorrectly stated that the player name was supplied before generation; the owner explicitly reported its omission.",
     "live_page_changed": false
   },
-  "next_action": "Validate this preserved draft rather than generating a duplicate or automatically publishing it. Do not count it toward live milestones."
+  "corrective_attempt": {
+    "attempt": 2,
+    "status": "planned_not_generated_at_time_of_this_record",
+    "generation_id": null,
+    "publication_approved": false,
+    "owner_review_required": true
+  },
+  "next_action": "Create one original corrective illustration from the latest owner reference set and show it with the player name in chat immediately before generation. Do not publish the rejected original or any correction without owner likeness approval. Do not count a draft as a live milestone."
 }
