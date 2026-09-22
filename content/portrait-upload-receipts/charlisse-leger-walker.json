@@ -11,10 +11,30 @@
     1230
   ],
   "repository_path": "portrait-handoff/66951-charlisse-leger-walker-a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/charlisse-leger-walker/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/66951-charlisse-leger-walker-a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15.png",
-  "github_blob_sha": "791749ebef8af22d3080d5e9e02a16ad6eb6d495"
+  "github_blob_sha": "791749ebef8af22d3080d5e9e02a16ad6eb6d495",
+  "live_verified": true,
+  "upload_run_id": 35695127248,
+  "publication_run_id": 35695148880,
+  "publication_commit": "5bcbed3df5ac28c533d7c533c2886db6108b82a1",
+  "verified_url": "https://fullcourtbuckets.com/wnba/charlisse-leger-walker/?v=a43c3a61bc56",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/charlisse-leger-walker/portrait.png?v=a43c3a61bc56",
+    "natural_dimensions": [
+      1278,
+      1230
+    ],
+    "public_sha256": "a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15",
+    "public_bytes": 2464188,
+    "canonical": "https://fullcourtbuckets.com/wnba/charlisse-leger-walker/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "a43c3a61bc56"
+  }
 }
