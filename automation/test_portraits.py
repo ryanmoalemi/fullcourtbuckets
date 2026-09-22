@@ -38,7 +38,10 @@ class PortraitTests(unittest.TestCase):
         self.assertIn('min-height:0;min-width:0;padding:0;', portraits.CSS)
         self.assertIn('.portrait-crop{position:absolute;inset:12px 0 0;', portraits.CSS)
         self.assertIn('.has-player-portrait .portrait-crop{inset:10px 0 0}', portraits.CSS)
-        self.assertIn('height:130%;object-fit:cover;', portraits.CSS)
+        self.assertIn('height:100%;object-fit:cover;object-position:center top;', portraits.CSS)
+        self.assertIn('min-height:570px', portraits.CSS)
+        self.assertNotIn('height:130%', portraits.CSS)
+        self.assertNotIn('object-fit:contain', portraits.CSS)
         self.assertNotIn('min-height:420px', portraits.CSS)
     def test_original_gradient_circles_and_outline_retained_without_square(self):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
@@ -81,6 +84,14 @@ class PortraitTests(unittest.TestCase):
     def test_idempotent(self):
         first = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertEqual(first, portraits.render(first, PROFILE, RECORD, self.root))
+    def test_reapply_after_compact_layout_updates_crop(self):
+        page = portraits.render(PAGE, PROFILE, RECORD, self.root)
+        compact = page.replace('class="hero has-player-portrait"',
+                               'class="hero has-player-portrait fcb-player-compact"', 1)
+        again = portraits.render(compact, PROFILE, RECORD, self.root)
+        self.assertIn('class="hero has-player-portrait fcb-player-compact"', again)
+        self.assertIn('height:100%;object-fit:cover;', again)
+        self.assertNotIn('height:130%', again)
     def test_id_mismatch_rejected(self):
         bad = copy.deepcopy(PROFILE); bad['player']['id'] = 709
         with self.assertRaises(ValueError): portraits.render(PAGE, bad, RECORD, self.root)

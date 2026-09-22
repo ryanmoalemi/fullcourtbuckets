@@ -28,6 +28,8 @@ class FolderPipelineTests(unittest.TestCase):
             self.assertIn('/images/players/test-player/portrait.png?v='+hashlib.sha256(before).hexdigest()[:12],text)
             self.assertIn('width="1254" height="1254"',text)
             self.assertIn('object-fit:cover',text)
+            self.assertIn('height:100%',text)
+            self.assertNotIn('height:130%',text)
             self.assertIn(TABLE,text)
             self.assertNotIn('<figcaption',text)
             self.assertNotIn('class="number-card"',text)

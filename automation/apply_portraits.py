@@ -19,14 +19,15 @@ SLOT = re.compile(r'<div class="hero-art" aria-hidden="true">.*?</small></div>',
 APPLIED = re.compile(r'<!-- FCB:approved-portrait:start -->.*?<!-- FCB:approved-portrait:end -->', re.S)
 
 CSS = '''
-/* Compact shoulder crop; keep the original gradient, circles and outline number. */
+/* Show the full illustration, including shoulders and upper chest. Keep the original gradient, circles and outline number. */
 .has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
 .has-player-portrait .hero-copy{padding-top:30px;padding-bottom:30px}
 .has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:block;opacity:1;pointer-events:auto;background:transparent;min-height:0;min-width:0;padding:0;overflow:hidden;isolation:isolate}
+@media(min-width:781px){.has-player-portrait .portrait-art:has(.player-illustration){min-height:570px}}
 .has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{z-index:0;pointer-events:none}
 .portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
 .portrait-art .portrait-crop{position:absolute;inset:12px 0 0;z-index:2;overflow:hidden}
-.portrait-art .player-illustration{position:absolute;top:0;left:6%;display:block;margin:0;width:100%;max-width:none;height:130%;object-fit:cover;object-position:center top;-webkit-mask-image:var(--portrait-mask,none);mask-image:var(--portrait-mask,none);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.portrait-art .player-illustration{position:absolute;top:0;left:0;display:block;margin:0;width:100%;max-width:none;height:100%;object-fit:cover;object-position:center top;-webkit-mask-image:var(--portrait-mask,none);mask-image:var(--portrait-mask,none);-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 @media(max-width:780px){
  .has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
  .has-player-portrait .hero-copy{width:auto;min-height:0;padding:24px 18px}
@@ -39,7 +40,7 @@ CSS = '''
  .has-player-portrait .actions .button{min-height:36px;padding:8px 10px;gap:12px;font-size:10px}
  .has-player-portrait .text-button{font-size:10px;padding:8px 4px}
  .has-player-portrait .portrait-crop{inset:10px 0 0}
- .has-player-portrait .player-illustration{left:0;width:100%;height:130%}
+ .has-player-portrait .player-illustration{left:0;width:100%;height:100%}
 }
 @media(max-width:480px){
  .has-player-portrait .hero-copy{padding:20px 8px 20px 12px}
@@ -120,7 +121,9 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         raise ValueError('Expected exactly one portrait slot; no page was changed.')
     page = page.replace('<section class="hero" aria-labelledby="player-name">',
                         '<section class="hero has-player-portrait" aria-labelledby="player-name">', 1)
-    if 'class="hero has-player-portrait"' not in page:
+    # Rollout appends fcb-player-compact after the portrait class, so the attribute
+    # no longer ends at has-player-portrait. Accept that already-published hero.
+    if not re.search(r'class="hero has-player-portrait(?: |")', page):
         raise ValueError('Portrait hero wrapper was not found.')
     style = '<style id="fcb-portrait-styles">' + CSS + '</style>'
     if '<style id="fcb-portrait-styles">' in page:
