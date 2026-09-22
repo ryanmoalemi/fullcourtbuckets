@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/67016-cassandre-prosper-fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/cassandre-prosper/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67016-cassandre-prosper-fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b.png",
-  "github_blob_sha": "2697a0883bf718bdb27f0fc180307d789eaf8cc2"
+  "github_blob_sha": "2697a0883bf718bdb27f0fc180307d789eaf8cc2",
+  "live_verified": true,
+  "upload_run_id": 35692558980,
+  "publication_run_id": 35692569784,
+  "publication_commit": "5051f9f7d088ae3c4c509ec88b40f1df7adf92c8",
+  "verified_url": "https://fullcourtbuckets.com/wnba/cassandre-prosper/?v=fcf49f7624b1",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/cassandre-prosper/portrait.png?v=fcf49f7624b1",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "fcf49f7624b1c8f615d3208717561aec1b08031fb04256f845032ba7e47c3b6b",
+    "public_bytes": 1531848,
+    "canonical": "https://fullcourtbuckets.com/wnba/cassandre-prosper/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "fcf49f7624b1"
+  }
 }
