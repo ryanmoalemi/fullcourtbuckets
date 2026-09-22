@@ -976,6 +976,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 783,
+      "slug": "amy-okonkwo",
+      "player_name": "Amy Okonkwo",
+      "approved": true,
+      "kind": "illustration",
+      "src": "/images/players/amy-okonkwo/portrait.png",
+      "width": 1122,
+      "height": 1402,
+      "asset_sha256": "693d787d650af9abb705fa2b5583f4f48f3f7cee43a8e6fcb3b3f13dfb2a878e",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "PNG",
+        "width": 1122,
+        "height": 1402,
+        "source_width": 1122,
+        "source_height": 1402,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
+      "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
