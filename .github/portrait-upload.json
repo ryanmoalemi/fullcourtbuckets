@@ -1,11 +1,6 @@
 {
   "request_id": "748-2e74f7ad0ec0-upload-20260922T0546Z",
-  "player_id": 748,
-  "player_name": "Carla Leite",
   "slug": "carla-leite",
-  "approved": true,
-  "sha256": "2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f",
-  "bytes": 2091969,
-  "dimensions": [1254, 1254],
-  "repository_path": "portrait-handoff/748-carla-leite-2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "2e74f7ad0ec03b25bbb62cb7ac0d92b72d880728f7e94c0899542d9e5462401f"
 }
