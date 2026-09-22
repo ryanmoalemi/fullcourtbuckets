@@ -1,0 +1,58 @@
+{
+  "player_id": 742,
+  "player_name": "Aziaha James",
+  "slug": "aziaha-james",
+  "stage": "corrective_artwork_quality_review",
+  "error_code": "GENERATED_ARTWORK_VIOLATES_BRIEF",
+  "classification": "wrong_format_and_unrelated_name_text",
+  "first_seen_at": "2026-09-22T05:07:23Z",
+  "last_attempt_at": "2026-09-22T05:07:23Z",
+  "timestamp_note": "Time recorded during review of the returned outputs, not a claimed generation-service timestamp.",
+  "attempt_count": 3,
+  "attempt_count_basis": "Three image outputs returned in the current corrective turn; all were rejected. No additional corrective generations are authorized automatically for this incident.",
+  "next_retry_at": null,
+  "resolution_status": "parked_pending_owner_review_no_automatic_publication",
+  "notification_status": "owner_told_prior_draft_rejected_and_publication_on_hold",
+  "preserved_master_id": "1noyqNGXMvzrm9XvBn8fCatWqUwWlenwW",
+  "source_sha256": "f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142",
+  "preserved_master_disposition": "Previous draft is retained for audit only and explicitly rejected by the owner. Not an approved publication master.",
+  "affected_live_page": "https://fullcourtbuckets.com/wnba/aziaha-james/",
+  "public_page_impact": "No live asset, upload request or page publication was changed in this correction turn.",
+  "count_as_live_completion": false,
+  "publication_approved": false,
+  "owner_review_required": true,
+  "help_needed": false,
+  "returned_outputs": [
+    {
+      "generation_id": "011eb4f6-6eed-482f-91ae-6fb6fa0585c3",
+      "runtime_file_reference": "file_000000001ee88230b7b780c4618fe16e",
+      "sha256": "a69176e798a00c3105730e25f27e5d4a2a7d0f278ed61205a8eb79275852ef72",
+      "bytes": 1660122,
+      "dimensions": [1137, 1383],
+      "disposition": "rejected",
+      "reason": "Forbidden name banner reading DIJONAI CARRINGTON; photographic treatment and accessories conflict with the Aziaha portrait-only brief. On-image lettering is observed text, not an identification of the pictured person.",
+      "durably_preserved": false
+    },
+    {
+      "generation_id": "f471fc73-63c7-4f03-902e-724ed261af11",
+      "runtime_file_reference": "file_00000000c18c81fdb4bbc28ca8e2fad4",
+      "sha256": "3a4d53534f5c8d82ac7f1f0d2f42a5e18ab6880a2fbcfdf71258700a3b829d42",
+      "bytes": 1726676,
+      "dimensions": [1145, 1373],
+      "disposition": "rejected",
+      "reason": "Forbidden name banner reading ARIKE OGUNBOWALE, with photographic treatment and accessories. Does not satisfy the Aziaha portrait-only brief.",
+      "durably_preserved": false
+    },
+    {
+      "generation_id": "68343263-2ab0-4472-9a32-ed89dd965dd3",
+      "runtime_file_reference": "file_0000000055c481fdbc655a36ba725412",
+      "sha256": "b3dd2b971fd86e60f2bcc94b195ab3c750b91ddc7cb74dca915f0ba6fe353c20",
+      "bytes": 2717913,
+      "dimensions": [1024, 1536],
+      "disposition": "rejected",
+      "reason": "Forbidden top-of-image text, visible background treatment, photographic rendering and unsupported braces. RGBA extrema alone do not establish a clean transparent portrait.",
+      "durably_preserved": false
+    }
+  ],
+  "details": "Owner rejected the previous Aziaha draft and supplied three references. Corrective instructions explicitly requested original drawn artwork, no text/banner, no braces, no accessories and no copied photographic composition. Returned outputs did not follow that brief. None is approved, uploaded or counted. Do not relabel an unrelated name banner, crop it away as a transport fix, or regenerate indefinitely. No claim is made about the internal cause of the generation failure. Existing site artwork and the separate statistics updater are untouched."
+}
