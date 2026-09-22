@@ -1,40 +1,20 @@
 {
-  "request_id": "727-90641d480021-upload-20260922T0622Z",
+  "request_id": "727-d1b95e26c963-upload-20260922T0654Z",
   "player_id": 727,
   "player_name": "Charisma Osborne",
   "slug": "charisma-osborne",
   "approved": true,
-  "sha256": "90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312",
-  "bytes": 1697863,
+  "sha256": "d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1",
+  "bytes": 1663942,
   "dimensions": [
     1230,
     1278
   ],
-  "repository_path": "portrait-handoff/727-charisma-osborne-90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312.png",
-  "status": "live_verified",
+  "repository_path": "portrait-handoff/727-charisma-osborne-d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1.png",
+  "status": "uploaded_pending_live_verification",
   "path": "images/players/charisma-osborne/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
-  "github_master_path": "portrait-masters/727-charisma-osborne-90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312.png",
-  "github_blob_sha": "2325816538eca211ade5a9d4cfe3ac13621cc410",
-  "live_verified": true,
-  "upload_run_id": 35694529472,
-  "publication_run_id": 35694660317,
-  "publication_commit": "03901e9f38c2ef8164828f92be2c8de6603d4c6c",
-  "verified_url": "https://fullcourtbuckets.com/wnba/charisma-osborne/?v=90641d480021",
-  "live_verification": {
-    "status": "passed",
-    "current_src": "https://fullcourtbuckets.com/images/players/charisma-osborne/portrait.png?v=90641d480021",
-    "natural_dimensions": [
-      1230,
-      1278
-    ],
-    "public_sha256": "90641d480021c881c23213bef2a563848d29172fe7a0e8b7c3f9a49a0d319312",
-    "public_bytes": 1697863,
-    "canonical": "https://fullcourtbuckets.com/wnba/charisma-osborne/",
-    "http_status_page": 200,
-    "http_status_png": 200,
-    "has_player_portrait": true,
-    "cache_bust": "90641d480021"
-  }
+  "github_master_path": "portrait-masters/727-charisma-osborne-d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1.png",
+  "github_blob_sha": "15c05294e18bcc5fece8dc417f22002303b07274"
 }
