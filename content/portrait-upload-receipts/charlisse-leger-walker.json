@@ -1,0 +1,20 @@
+{
+  "request_id": "66951-a43c3a61bc56-upload-20260922T0629Z",
+  "player_id": 66951,
+  "player_name": "Charlisse Leger-Walker",
+  "slug": "charlisse-leger-walker",
+  "approved": true,
+  "sha256": "a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15",
+  "bytes": 2464188,
+  "dimensions": [
+    1278,
+    1230
+  ],
+  "repository_path": "portrait-handoff/66951-charlisse-leger-walker-a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/charlisse-leger-walker/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/66951-charlisse-leger-walker-a43c3a61bc56cf9120073a925fa6f5ef1ca65e591e23b4f7b1ad3d49b63bfe15.png",
+  "github_blob_sha": "791749ebef8af22d3080d5e9e02a16ad6eb6d495"
+}
