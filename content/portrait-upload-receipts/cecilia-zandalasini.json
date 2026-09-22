@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/524-cecilia-zandalasini-04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/cecilia-zandalasini/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/524-cecilia-zandalasini-04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc.png",
-  "github_blob_sha": "46d82b513f4587cf7f43411c66e08e54b1c4425c"
+  "github_blob_sha": "46d82b513f4587cf7f43411c66e08e54b1c4425c",
+  "live_verified": true,
+  "upload_run_id": 35692821958,
+  "publication_run_id": 35692989054,
+  "publication_commit": "f636008373301cc6feb79ba86decf1cee83396ee",
+  "verified_url": "https://fullcourtbuckets.com/wnba/cecilia-zandalasini/?v=04f9fc1e8d98",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/cecilia-zandalasini/portrait.png?v=04f9fc1e8d98",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "04f9fc1e8d98915ebcac787a41457d5843d9e0520e7b20d287233e327d1208cc",
+    "public_bytes": 1491740,
+    "canonical": "https://fullcourtbuckets.com/wnba/cecilia-zandalasini/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "04f9fc1e8d98"
+  }
 }
