@@ -1,11 +1,6 @@
 {
   "request_id": "267772-71b5c58684ff-upload-20260922T0450Z",
-  "player_id": 267772,
-  "player_name": "Aminata Gueye",
   "slug": "aminata-gueye",
-  "approved": true,
-  "sha256": "71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21",
-  "bytes": 1968602,
-  "dimensions": [1145, 1374],
-  "repository_path": "portrait-handoff/267772-aminata-gueye-71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "71b5c58684fff067ef3591f145568e32fb523f8dff9ed1c9e50a6fafb7badf21"
 }
