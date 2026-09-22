@@ -9,7 +9,7 @@
   "destination": "images/players/aziaha-james/portrait.png",
   "requested_seo_filename": "aziaha-james-portrait.png",
   "public_page": "https://fullcourtbuckets.com/wnba/aziaha-james/",
-  "status": "owner_rejected_draft_corrective_illustration_pending",
+  "status": "parked_owner_rejection_and_invalid_corrective_outputs",
   "publication_status": "held_for_explicit_owner_likeness_review",
   "count_as_live_completion": false,
   "lease": null,
@@ -31,7 +31,7 @@
   "composite_identity_brief": "Original Aziaha James illustration using the owner's latest reference set: natural medium-brown complexion without lightening or orange cast; fuller cheeks and a broad rounded lower face, gently rounded chin rather than a pointed narrow jaw; dark eyes with natural spacing, defined brows, natural broad rounded nose, full upper and lower lips. Substantial textured locs, not microbraids. Use a new relaxed expression and arrangement of pulled-back locs with some falling beside the shoulders. Do not invent braces, lengthen the face, slim the cheeks, reshape the nose or apply generic model beautification. The previous braces claim was not supported by the latest supplied reference set.",
   "presentation_brief": "Exactly one Aziaha James. Clearly drawn original sports-editorial illustration with visible ink contours, controlled painted shading and realistic facial proportions, not a photographic cutout. Newly composed frontal head, shoulders and upper chest; modest headroom; white sleeveless basketball top with black trim; genuine transparent alpha. No text, names, logos, numbers, jewelry, headband, props, scenery, frame or drawn checkerboard. Do not trace, face-swap, recolor or reproduce any reference photograph's exact pose, lighting, clothing, backdrop or tattoo artwork. Native PNG at least 1024 pixels per side. State the player name in a real chat message immediately before image generation. Show one corrective draft for owner review; do not publish it automatically.",
   "quality_gate": ["complexion", "face_width_and_jaw", "hair_silhouette", "eyes_nose_and_lips", "smile", "overall_likeness", "original_illustration_not_photo_copy", "native_png_and_alpha"],
-  "reconciliation": "Current global and generation-map leases were null. No upload receipt was returned for this slug on main (404). Only this generation map is being changed; no live asset, statistics, uploader request or milestone count is changed.",
+  "reconciliation": "Current global and generation-map leases were null. No upload receipt was returned for this slug on main (404). Only this generation map and its recovery incident were changed; no live asset, statistics, uploader request or milestone count was changed.",
   "created_at": "2026-09-22T04:57:27Z",
   "generation": {
     "generation_id": "f571e918-0c4c-45db-8461-4b7e25636fac",
@@ -63,17 +63,24 @@
     "owner_review_required": true,
     "likeness_status": "owner_rejected",
     "owner_feedback": "really bad on the photo again too, overall trash work",
-    "visual_review_notes": "Technical image checks did not establish likeness. The owner rejected the draft and supplied three corrective references. Reassess facial proportions, fuller cheeks and jaw, lips, natural nose width and complexion. Omit unsupported braces. Make a visibly drawn original, not a generic photorealistic portrait.",
+    "visual_review_notes": "Technical image checks did not establish likeness. Owner rejected the initial draft. All returned corrections in this turn were also rejected for violating the requested portrait-only format. Complete per-output hashes and observable failures are in the linked recovery incident. No output is accepted or published.",
     "player_name_in_chat_before_image": false,
-    "name_audit_note": "The previous record incorrectly stated that the player name was supplied before generation; the owner explicitly reported its omission.",
+    "name_audit_note": "This false value corrects the original draft record: the owner explicitly reported its missing pre-generation name. The present correction turn did include real Aziaha James headings before generation, but the tool outputs introduced prohibited text and remain rejected.",
     "live_page_changed": false
   },
   "corrective_attempt": {
     "attempt": 2,
-    "status": "planned_not_generated_at_time_of_this_record",
-    "generation_id": null,
+    "status": "failed_all_returned_outputs_rejected",
+    "generation_id": "011eb4f6-6eed-482f-91ae-6fb6fa0585c3",
+    "additional_returned_generation_ids": [
+      "f471fc73-63c7-4f03-902e-724ed261af11",
+      "68343263-2ab0-4472-9a32-ed89dd965dd3"
+    ],
+    "returned_output_count": 3,
     "publication_approved": false,
-    "owner_review_required": true
+    "owner_review_required": true,
+    "further_automatic_generation_allowed": false,
+    "incident": "content/portrait-recovery-incidents/aziaha-james.json"
   },
-  "next_action": "Create one original corrective illustration from the latest owner reference set and show it with the player name in chat immediately before generation. Do not publish the rejected original or any correction without owner likeness approval. Do not count a draft as a live milestone."
+  "next_action": "Do not publish the initial draft or any of the rejected corrections. Do not automatically regenerate this player again. Retain the publication hold while the owner reviews how to proceed. No live-completion increment."
 }
