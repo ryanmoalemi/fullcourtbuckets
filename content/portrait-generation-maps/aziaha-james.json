@@ -9,14 +9,10 @@
   "destination": "images/players/aziaha-james/portrait.png",
   "requested_seo_filename": "aziaha-james-portrait.png",
   "public_page": "https://fullcourtbuckets.com/wnba/aziaha-james/",
-  "status": "generation_reserved",
+  "status": "draft_preserved_pending_composite_likeness_validation",
   "publication_status": "not_submitted_pending_composite_likeness_validation",
   "count_as_live_completion": false,
-  "lease": {
-    "owner": "chatgpt-interactive-aziaha-james-20260922T045727Z",
-    "claimed_at": "2026-09-22T04:57:27Z",
-    "expires_at": "2026-09-22T05:27:27Z"
-  },
+  "lease": null,
   "reference_study": {
     "method": "Study multiple explicitly captioned views of this player for stable facial traits; create a new drawn composition, not a photo edit, trace, face swap or reproduction.",
     "sources": [
@@ -30,5 +26,36 @@
   "presentation_brief": "Exactly one Aziaha James. Original clearly illustrated editorial head, shoulders and upper-chest portrait with crisp drawn contours and polished painted shading, not a photographic cutout. New frontal composition with modest hair headroom, realistic athletic proportions, plain white sleeveless basketball top with black trim. Genuine transparent alpha background, no checkerboard drawn into image, text, names, numbers, logos, jewelry, props, scenery, border or poster. Do not reproduce any reference pose, lighting, uniform, background or exact tattoo artwork. Native PNG at least 1024px per side. Name must be stated in chat immediately before the image.",
   "quality_gate": ["complexion", "face_width_and_jaw", "hair_silhouette", "eyes_nose_and_lips", "smile", "overall_likeness", "original_illustration_not_photo_copy", "native_png_and_alpha"],
   "reconciliation": "No player upload receipt, prior generation map or player image folder returned (404). Player not in the completed/protected or parked lists at ledger blob 5083bb7025d4fa874f22a9c76fad03b7ac3c7e81. Global worker lease was null.",
-  "created_at": "2026-09-22T04:57:27Z"
+  "created_at": "2026-09-22T04:57:27Z",
+  "generation": {
+    "generation_id": "f571e918-0c4c-45db-8461-4b7e25636fac",
+    "runtime_file_reference": "file_00000000527881fdbe1a61e5599558a7",
+    "sha256": "f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142",
+    "bytes": 2080890,
+    "dimensions": [1254, 1254],
+    "format": "PNG",
+    "mode": "RGBA",
+    "alpha_extrema": [0, 255],
+    "original_bytes_changed": false,
+    "generation_attempt": 1
+  },
+  "preservation": {
+    "bytes_preserved": true,
+    "drive_file_id": "1noyqNGXMvzrm9XvBn8fCatWqUwWlenwW",
+    "file_name": "742-aziaha-james-f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142.png",
+    "mime_type": "image/png",
+    "downloaded_back": true,
+    "downloaded_bytes_equal_original": true,
+    "downloaded_sha256": "f83afb0e159b957e43af38005c182a3dec5bf3981a388bc1d099e58a55050142"
+  },
+  "review": {
+    "native_png_dimensions_alpha_verified": true,
+    "single_subject_plain_uniform_no_text": true,
+    "publication_approved": false,
+    "likeness_status": "pending_validation_not_claimed_accurate",
+    "visual_review_notes": "Do not infer likeness acceptance from technical format success. Review loc length/volume, facial proportions and warm skin rendering against the studied sources; the rendering also remains closer to photorealism than the requested clearly drawn editorial treatment. Draft shown to the owner for the requested composite-process validation, not submitted for publication.",
+    "player_name_in_chat_before_image": true,
+    "live_page_changed": false
+  },
+  "next_action": "Validate this preserved draft rather than generating a duplicate or automatically publishing it. Do not count it toward live milestones."
 }
