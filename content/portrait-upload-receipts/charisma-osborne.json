@@ -11,10 +11,30 @@
     1278
   ],
   "repository_path": "portrait-handoff/727-charisma-osborne-d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/charisma-osborne/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/727-charisma-osborne-d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1.png",
-  "github_blob_sha": "15c05294e18bcc5fece8dc417f22002303b07274"
+  "github_blob_sha": "15c05294e18bcc5fece8dc417f22002303b07274",
+  "live_verified": true,
+  "upload_run_id": 35697027533,
+  "publication_run_id": 35697472016,
+  "publication_commit": "7a5475a59d25c9db0545e3185b359f46f89e71ba",
+  "verified_url": "https://fullcourtbuckets.com/wnba/charisma-osborne/?v=d1b95e26c963",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/charisma-osborne/portrait.png?v=d1b95e26c963",
+    "natural_dimensions": [
+      1230,
+      1278
+    ],
+    "public_sha256": "d1b95e26c96377ee395005997a8f53cc031d346b89937df44c8400554c87fbc1",
+    "public_bytes": 1663942,
+    "canonical": "https://fullcourtbuckets.com/wnba/charisma-osborne/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "d1b95e26c963"
+  }
 }
