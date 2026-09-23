@@ -1,0 +1,55 @@
+{
+  "slug": "leila-lacan",
+  "player_name": "Leila Lacan",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Leila Lacan's stats / points per game?",
+      "answer": "In the 2026 regular season, Leila Lacan averaged 11.6 points, 1.9 rebounds, and 4.6 assists in 27 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leila lacan stats",
+      "approx_monthly_volume": 4400
+    },
+    {
+      "question": "How tall is Leila Lacan?",
+      "answer": "Leila Lacan is listed at 5' 11\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Le%C3%AFla_Lacan"
+      ],
+      "google_keyword": "leila lacan height",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What is Leila Lacan's contract?",
+      "answer": "Contract length and guarantees for Leila Lacan are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "leila lacan contract",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Leila Lacan injured?",
+      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "leila lacan injury",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "Who are Leila Lacan's parents?",
+      "answer": "Public profiles share limited verified detail about Leila Lacan's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Le%C3%AFla_Lacan"
+      ],
+      "google_keyword": "leila lacan parents",
+      "approx_monthly_volume": 20
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "serah-williams",
+  "player_name": "Serah Williams",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Serah Williams's stats / points per game?",
+      "answer": "In the 2026 regular season, Serah Williams averaged 4.4 points, 2.8 rebounds, and 0.5 assists in 38 games for Fire. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "serah williams stats",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "How much does Serah Williams make?",
+      "answer": "A precise public salary or net worth figure for Serah Williams is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "serah williams salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Serah Williams?",
+      "answer": "Serah Williams is listed at 6' 4\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Serah_Williams"
+      ],
+      "google_keyword": "serah williams height",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What college did Serah Williams attend?",
+      "answer": "Williams played college basketball at UConn.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Serah_Williams"
+      ],
+      "google_keyword": "uconn serah williams",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "Is Serah Williams injured?",
+      "answer": "Injury status changes during the season. Check the latest Fire reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "serah williams injury",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Who are Serah Williams's parents?",
+      "answer": "Public profiles share limited verified detail about Serah Williams's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Serah_Williams"
+      ],
+      "google_keyword": "serah williams parents",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
