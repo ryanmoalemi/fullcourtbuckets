@@ -1,0 +1,55 @@
+{
+  "slug": "liatu-king",
+  "player_name": "Liatu King",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Liatu King's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Liatu King averaged 3.0 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "liatu king stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Liatu King?",
+      "answer": "Liatu King is listed at 5' 11\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liatu_King"
+      ],
+      "google_keyword": "liatu king height",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Liatu King injured?",
+      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "liatu king injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Liatu King's parents?",
+      "answer": "Public profiles share limited verified detail about Liatu King's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liatu_King"
+      ],
+      "google_keyword": "liatu king parents",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Liatu King?",
+      "answer": "Liatu King is an American professional basketball player for the Minnesota Lynx of the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liatu_King"
+      ],
+      "google_keyword": "liatu king wikipedia",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "miela-sowah",
+  "player_name": "Miela Sowah",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Miela Sowah's stats / points per game?",
+      "answer": "In the 2026 regular season, Miela Sowah averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "miela sowah stats",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How tall is Miela Sowah?",
+      "answer": "Miela Sowah is listed at 5' 10\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Miela_Sowah"
+      ],
+      "google_keyword": "miela sowah height",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What is Miela Sowah's contract?",
+      "answer": "Contract length and guarantees for Miela Sowah are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "miela sowah contract",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Miela Sowah married?",
+      "answer": "There is no widely reported public record of Miela Sowah being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Miela_Sowah"
+      ],
+      "google_keyword": "miela sowah husband",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Is Miela Sowah injured?",
+      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "miela sowah injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Miela Sowah attend?",
+      "answer": "Sowah played college basketball at Duke.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Miela_Sowah"
+      ],
+      "google_keyword": "miela sowah duke",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

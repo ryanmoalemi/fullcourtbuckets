@@ -1,0 +1,37 @@
+{
+  "slug": "marine-fauthoux",
+  "player_name": "Marine Fauthoux",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How tall is Marine Fauthoux?",
+      "answer": "Marine Fauthoux is listed at 5' 9\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marine_Fauthoux"
+      ],
+      "google_keyword": "marine fauthoux height",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Is Marine Fauthoux married?",
+      "answer": "There is no widely reported public record of Marine Fauthoux being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marine_Fauthoux"
+      ],
+      "google_keyword": "marine fauthoux husband",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Is Marine Fauthoux injured?",
+      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "marine fauthoux injury",
+      "approx_monthly_volume": 20
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

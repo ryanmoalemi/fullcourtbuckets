@@ -1,0 +1,75 @@
+{
+  "slug": "amy-okonkwo",
+  "player_name": "Amy Okonkwo",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Amy Okonkwo's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Amy Okonkwo averaged 11.0 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "amy okonkwo stats",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How much does Amy Okonkwo make?",
+      "answer": "A precise public salary or net worth figure for Amy Okonkwo is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "amy okonkwo net worth",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Amy Okonkwo?",
+      "answer": "Amy Okonkwo is listed at 6' 2\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+      ],
+      "google_keyword": "amy okonkwo height",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Is Amy Okonkwo married?",
+      "answer": "There is no widely reported public record of Amy Okonkwo being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+      ],
+      "google_keyword": "amy okonkwo husband",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What position does Amy Okonkwo play?",
+      "answer": "Amy Okonkwo is listed as a F for the Fire.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "amy okonkwo position",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Amy Okonkwo's parents?",
+      "answer": "Public profiles share limited verified detail about Amy Okonkwo's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+      ],
+      "google_keyword": "amy okonkwo parents",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Amy Okonkwo?",
+      "answer": "Amy Nnenna Okonkwo is an American-Nigerian professional basketball player for the Portland Fire of the WNBA and Beşiktaş of the Turkish Super League.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+      ],
+      "google_keyword": "amy okonkwo biography",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
