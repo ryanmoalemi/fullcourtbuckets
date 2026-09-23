@@ -102,6 +102,14 @@
       ],
       "google_keyword": "who is natasha cloud",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "Is Natasha Cloud injured?",
+      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "natasha cloud injury",
+      "approx_monthly_volume": 390
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -96,6 +96,55 @@
       ],
       "google_keyword": "who is jackie young",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What are Jackie Young's college stats?",
+      "answer": "Across her college career at Notre Dame, Jackie Young averaged 12.4 points, 6.3 rebounds, and 3.5 assists per game.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.sports-reference.com/cbb/players/jackie-young-1.html",
+        "https://en.wikipedia.org/wiki/Jackie_Young"
+      ],
+      "google_keyword": "jackie young college stats",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Jackie Young attend?",
+      "answer": "Jackie Young played college basketball at Notre Dame.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jackie_Young"
+      ],
+      "google_keyword": "jackie young notre dame",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "Who is Jackie Young dating?",
+      "answer": "As of late 2026, Jackie Young has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jackie_Young"
+      ],
+      "google_keyword": "jackie young partner",
+      "approx_monthly_volume": 1600
+    },
+    {
+      "question": "Is Jackie Young married?",
+      "answer": "There is no widely reported public record of Jackie Young being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jackie_Young"
+      ],
+      "google_keyword": "jackie young husband",
+      "approx_monthly_volume": 3600
+    },
+    {
+      "question": "Is Jackie Young injured?",
+      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "jackie young injury",
+      "approx_monthly_volume": 110
     }
   ],
   "notes": "Reader-facing sports copy only."

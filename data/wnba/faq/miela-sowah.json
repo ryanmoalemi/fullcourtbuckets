@@ -59,6 +59,17 @@
       ],
       "google_keyword": "miela sowah duke",
       "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Miela Sowah?",
+      "answer": "Miela Sowah was born June 4, 2000. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Miela_Sowah"
+      ],
+      "google_keyword": "miela sowah age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2000-06-04"
     }
   ],
   "notes": "Reader-facing sports copy only."

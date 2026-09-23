@@ -108,6 +108,45 @@
       ],
       "google_keyword": "who is paige bueckers",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What are Paige Bueckers's college stats?",
+      "answer": "Across her college career at UConn, Paige Bueckers averaged 19.8 points, 4.7 rebounds, and 4.6 assists per game.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.sports-reference.com/cbb/players/paige-bueckers-1.html",
+        "https://en.wikipedia.org/wiki/Paige_Bueckers"
+      ],
+      "google_keyword": "paige bueckers ncaa stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Paige Bueckers attend?",
+      "answer": "Paige Bueckers played college basketball at UConn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Paige_Bueckers"
+      ],
+      "google_keyword": "paige bueckers uconn",
+      "approx_monthly_volume": 1000
+    },
+    {
+      "question": "Is Paige Bueckers injured?",
+      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "paige bueckers injury",
+      "approx_monthly_volume": 5400
+    },
+    {
+      "question": "Does Paige Bueckers have a signature shoe?",
+      "answer": "Public search interest ties Paige Bueckers to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Paige_Bueckers"
+      ],
+      "google_keyword": "paige bueckers shoes",
+      "approx_monthly_volume": 4400
     }
   ],
   "notes": "Reader-facing sports copy only."

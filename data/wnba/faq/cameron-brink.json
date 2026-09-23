@@ -92,6 +92,44 @@
       ],
       "google_keyword": "where is cameron brink from",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Cameron Brink attend?",
+      "answer": "Cameron Brink played college basketball at Stanford.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cameron_Brink"
+      ],
+      "google_keyword": "cameron brink stanford",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "Is Cameron Brink married?",
+      "answer": "There is no widely reported public record of Cameron Brink being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cameron_Brink"
+      ],
+      "google_keyword": "cameron brink husband",
+      "approx_monthly_volume": 4400
+    },
+    {
+      "question": "Is Cameron Brink injured?",
+      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "cameron brink injury",
+      "approx_monthly_volume": 2400
+    },
+    {
+      "question": "Does Cameron Brink have a signature shoe?",
+      "answer": "Public search interest ties Cameron Brink to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cameron_Brink"
+      ],
+      "google_keyword": "cameron brink shoe size",
+      "approx_monthly_volume": 210
     }
   ],
   "notes": "Reader-facing sports copy only."

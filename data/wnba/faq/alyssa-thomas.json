@@ -118,6 +118,24 @@
       ],
       "google_keyword": "who is alyssa thomas",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "Is Alyssa Thomas injured?",
+      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "alyssa thomas injury",
+      "approx_monthly_volume": 720
+    },
+    {
+      "question": "How many championships does Alyssa Thomas have?",
+      "answer": "Public biographical sources cover Alyssa Thomas's WNBA title history when she won championships.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
+      ],
+      "google_keyword": "has alyssa thomas won a championship",
+      "approx_monthly_volume": 110
     }
   ],
   "notes": "Reader-facing sports copy only."

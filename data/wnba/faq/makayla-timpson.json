@@ -89,6 +89,17 @@
       ],
       "google_keyword": "makayla timpson wikipedia",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Makayla Timpson?",
+      "answer": "Makayla Timpson was born September 20, 2002 in Edison. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Makayla_Timpson"
+      ],
+      "google_keyword": "makayla timpson age",
+      "approx_monthly_volume": 140,
+      "birthdate": "2002-09-20"
     }
   ],
   "notes": "Reader-facing sports copy only."

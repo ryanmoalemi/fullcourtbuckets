@@ -61,6 +61,17 @@
       ],
       "google_keyword": "who is emma cannon",
       "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Emma Cannon?",
+      "answer": "Emma Cannon was born June 1, 1989 in Rochester. As of late 2026 that puts her at 37 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Emma_Cannon"
+      ],
+      "google_keyword": "emma cannon age",
+      "approx_monthly_volume": 590,
+      "birthdate": "1989-06-01"
     }
   ],
   "notes": "Reader-facing sports copy only."

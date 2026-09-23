@@ -131,6 +131,27 @@
       ],
       "google_keyword": "aari mcdonald wiki",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Aari McDonald?",
+      "answer": "Aari McDonald was born August 20, 1998 in Fresno. As of late 2026 that puts her at 28 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aari_McDonald"
+      ],
+      "google_keyword": "aari mcdonald age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1998-08-20"
+    },
+    {
+      "question": "Where is Aari McDonald from?",
+      "answer": "Aari McDonald is from Fresno.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aari_McDonald"
+      ],
+      "google_keyword": "where is aari mcdonald from",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

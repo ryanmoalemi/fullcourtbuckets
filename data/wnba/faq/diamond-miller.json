@@ -79,6 +79,27 @@
       ],
       "google_keyword": "diamond miller maryland",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Diamond Miller?",
+      "answer": "Diamond Miller was born February 11, 2001 in Montclair. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Diamond_Miller"
+      ],
+      "google_keyword": "diamond miller age",
+      "approx_monthly_volume": 30,
+      "birthdate": "2001-02-11"
+    },
+    {
+      "question": "Where is Diamond Miller from?",
+      "answer": "Diamond Miller is from Montclair.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Diamond_Miller"
+      ],
+      "google_keyword": "where is diamond miller from",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

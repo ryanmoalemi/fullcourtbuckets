@@ -75,6 +75,27 @@
       ],
       "google_keyword": "cotie mcmahon parents",
       "approx_monthly_volume": 320
+    },
+    {
+      "question": "How old is Cotie McMahon?",
+      "answer": "Cotie McMahon was born May 4, 2004 in Centerville. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cotie_McMahon"
+      ],
+      "google_keyword": "cotie mcmahon age",
+      "approx_monthly_volume": 50,
+      "birthdate": "2004-05-04"
+    },
+    {
+      "question": "Where is Cotie McMahon from?",
+      "answer": "Cotie McMahon is from Centerville.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cotie_McMahon"
+      ],
+      "google_keyword": "where is cotie mcmahon from",
+      "approx_monthly_volume": 30
     }
   ],
   "notes": "Reader-facing sports copy only."

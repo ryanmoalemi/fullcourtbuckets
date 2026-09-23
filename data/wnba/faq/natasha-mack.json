@@ -87,6 +87,17 @@
       ],
       "google_keyword": "natasha mack family",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Natasha Mack?",
+      "answer": "Natasha Mack was born November 3, 1997 in Lufkin. As of late 2026 that puts her at 28 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Natasha_Mack"
+      ],
+      "google_keyword": "natasha mack age",
+      "approx_monthly_volume": 30,
+      "birthdate": "1997-11-03"
     }
   ],
   "notes": "Reader-facing sports copy only."

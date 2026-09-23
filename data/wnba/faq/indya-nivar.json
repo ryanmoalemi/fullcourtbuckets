@@ -69,6 +69,17 @@
       ],
       "google_keyword": "indya nivar parents",
       "approx_monthly_volume": 90
+    },
+    {
+      "question": "How old is Indya Nivar?",
+      "answer": "Indya Nivar was born January 16, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Indya_Nivar"
+      ],
+      "google_keyword": "indya nivar age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2004-01-16"
     }
   ],
   "notes": "Reader-facing sports copy only."

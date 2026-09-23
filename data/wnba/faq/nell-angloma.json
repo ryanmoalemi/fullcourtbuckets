@@ -41,6 +41,17 @@
       ],
       "google_keyword": "nell angloma parents",
       "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Nell Angloma?",
+      "answer": "Nell Angloma was born June 12, 2006. As of late 2026 that puts her at 20 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nell_Angloma"
+      ],
+      "google_keyword": "nell angloma age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2006-06-12"
     }
   ],
   "notes": "Reader-facing sports copy only."

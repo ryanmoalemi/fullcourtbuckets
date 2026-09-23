@@ -133,6 +133,17 @@
       ],
       "google_keyword": "raven johnson",
       "approx_monthly_volume": 49500
+    },
+    {
+      "question": "How old is Raven Johnson?",
+      "answer": "Raven Johnson was born March 4, 2003. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Raven_Johnson"
+      ],
+      "google_keyword": "raven johnson age",
+      "approx_monthly_volume": 480,
+      "birthdate": "2003-03-04"
     }
   ],
   "notes": "Reader-facing sports copy only."

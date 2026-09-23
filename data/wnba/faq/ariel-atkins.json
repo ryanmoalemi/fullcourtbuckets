@@ -134,6 +134,16 @@
       ],
       "google_keyword": "ariel atkins wiki",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Ariel Atkins attend?",
+      "answer": "Ariel Atkins played college basketball at University of Texas at Austin.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ariel_Atkins"
+      ],
+      "google_keyword": "ariel atkins texas",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -96,6 +96,16 @@
       ],
       "google_keyword": "maddy siegrist family",
       "approx_monthly_volume": 50
+    },
+    {
+      "question": "What college did Maddy Siegrist attend?",
+      "answer": "Maddy Siegrist played college basketball at Villanova University.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
+      ],
+      "google_keyword": "maddy siegrist villanova",
+      "approx_monthly_volume": 50
     }
   ],
   "notes": "Reader-facing sports copy only."

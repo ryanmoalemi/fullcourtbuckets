@@ -103,6 +103,27 @@
       ],
       "google_keyword": "awa fam parents",
       "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Awa Fam?",
+      "answer": "Awa Fam was born June 17, 2006 in Elche. As of late 2026 that puts her at 20 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Awa_Fam"
+      ],
+      "google_keyword": "awa fam age",
+      "approx_monthly_volume": 210,
+      "birthdate": "2006-06-17"
+    },
+    {
+      "question": "What college did Awa Fam attend?",
+      "answer": "Awa Fam played college basketball at Valencia Basket of the Liga Femenina de Baloncesto.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Awa_Fam"
+      ],
+      "google_keyword": "awa fam lsu",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

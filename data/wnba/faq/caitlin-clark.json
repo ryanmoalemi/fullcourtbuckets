@@ -139,6 +139,14 @@
       ],
       "google_keyword": "who is caitlin clark",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "Is Caitlin Clark injured?",
+      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "caitlin clark injured",
+      "approx_monthly_volume": 49500
     }
   ],
   "notes": "Reader-facing sports copy only."

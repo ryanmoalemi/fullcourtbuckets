@@ -69,6 +69,17 @@
       "sources": [],
       "google_keyword": "rebekah gardner injury",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Rebekah Gardner?",
+      "answer": "Rebekah Gardner was born July 9, 1990 in Palm Springs. As of late 2026 that puts her at 36 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
+      ],
+      "google_keyword": "rebekah gardner age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1990-07-09"
     }
   ],
   "notes": "Reader-facing sports copy only."

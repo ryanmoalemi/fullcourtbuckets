@@ -87,6 +87,17 @@
       ],
       "google_keyword": "anneli maley oregon",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Anneli Maley?",
+      "answer": "Anneli Maley was born September 1, 1998 in East Melbourne. As of late 2026 that puts her at 28 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Anneli_Maley"
+      ],
+      "google_keyword": "anneli maley age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1998-09-01"
     }
   ],
   "notes": "Reader-facing sports copy only."

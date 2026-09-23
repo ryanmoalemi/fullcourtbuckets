@@ -77,6 +77,17 @@
       ],
       "google_keyword": "grace vanslooten oregon",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Grace VanSlooten?",
+      "answer": "Grace VanSlooten was born June 16, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
+      ],
+      "google_keyword": "grace vanslooten age",
+      "approx_monthly_volume": 70,
+      "birthdate": "2004-06-16"
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -59,6 +59,27 @@
       ],
       "google_keyword": "serah williams parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Serah Williams?",
+      "answer": "Serah Williams was born January 17, 2004 in Brooklyn. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Serah_Williams"
+      ],
+      "google_keyword": "serah williams age",
+      "approx_monthly_volume": 40,
+      "birthdate": "2004-01-17"
+    },
+    {
+      "question": "Where is Serah Williams from?",
+      "answer": "Serah Williams is from Brooklyn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Serah_Williams"
+      ],
+      "google_keyword": "where is serah williams from",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

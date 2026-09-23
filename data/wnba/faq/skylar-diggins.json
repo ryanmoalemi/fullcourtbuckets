@@ -112,6 +112,34 @@
       ],
       "google_keyword": "where is skylar diggins from",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Skylar Diggins attend?",
+      "answer": "Skylar Diggins played college basketball at Notre Dame.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+      ],
+      "google_keyword": "skylar diggins notre dame",
+      "approx_monthly_volume": 720
+    },
+    {
+      "question": "Who is Skylar Diggins dating?",
+      "answer": "In June 2016, Diggins got engaged to her longtime boyfriend Daniel Smith who is a former Clay High School and Notre Dame wide receiver.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+      ],
+      "google_keyword": "skylar diggins partner",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "Is Skylar Diggins injured?",
+      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "skylar diggins injury",
+      "approx_monthly_volume": 590
     }
   ],
   "notes": "Reader-facing sports copy only."

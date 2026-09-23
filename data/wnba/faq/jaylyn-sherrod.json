@@ -79,6 +79,17 @@
       ],
       "google_keyword": "jaylyn sherrod wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Jaylyn Sherrod?",
+      "answer": "Jaylyn Sherrod was born October 21, 2001. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
+      ],
+      "google_keyword": "jaylyn sherrod birthday",
+      "approx_monthly_volume": 10,
+      "birthdate": "2001-10-21"
     }
   ],
   "notes": "Reader-facing sports copy only."

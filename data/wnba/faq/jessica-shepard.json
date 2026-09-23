@@ -97,6 +97,37 @@
       ],
       "google_keyword": "jessica shepard parents",
       "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Jessica Shepard?",
+      "answer": "Jessica Shepard was born September 11, 1996 in Fremont. As of late 2026 that puts her at 30 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jessica_Shepard"
+      ],
+      "google_keyword": "jessica shepard age",
+      "approx_monthly_volume": 170,
+      "birthdate": "1996-09-11"
+    },
+    {
+      "question": "What college did Jessica Shepard attend?",
+      "answer": "Jessica Shepard played college basketball at Fremont Senior High School.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jessica_Shepard"
+      ],
+      "google_keyword": "jessica shepard notre dame",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "Where is Jessica Shepard from?",
+      "answer": "Jessica Shepard is from Fremont.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jessica_Shepard"
+      ],
+      "google_keyword": "where is jessica shepard from",
+      "approx_monthly_volume": 40
     }
   ],
   "notes": "Reader-facing sports copy only."

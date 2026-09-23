@@ -133,6 +133,27 @@
       ],
       "google_keyword": "lucy olsen wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Lucy Olsen?",
+      "answer": "Lucy Olsen was born May 26, 2003 in Collegeville. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lucy_Olsen"
+      ],
+      "google_keyword": "lucy olsen age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2003-05-26"
+    },
+    {
+      "question": "Where is Lucy Olsen from?",
+      "answer": "Lucy Olsen is from Collegeville.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lucy_Olsen"
+      ],
+      "google_keyword": "where did lucy olsen transfer from",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

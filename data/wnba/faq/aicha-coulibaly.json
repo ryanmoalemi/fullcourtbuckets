@@ -39,6 +39,17 @@
       ],
       "google_keyword": "aicha coulibaly wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Aicha Coulibaly?",
+      "answer": "Aicha Coulibaly was born October 18, 2001. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aicha_Coulibaly"
+      ],
+      "google_keyword": "aicha coulibaly age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2001-10-18"
     }
   ],
   "notes": "Reader-facing sports copy only."

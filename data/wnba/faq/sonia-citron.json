@@ -118,6 +118,16 @@
       ],
       "google_keyword": "sonia citron",
       "approx_monthly_volume": 60500
+    },
+    {
+      "question": "What college did Sonia Citron attend?",
+      "answer": "Sonia Citron played college basketball at University of Notre Dame.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sonia_Citron"
+      ],
+      "google_keyword": "sonia citron notre dame",
+      "approx_monthly_volume": 110
     }
   ],
   "notes": "Reader-facing sports copy only."

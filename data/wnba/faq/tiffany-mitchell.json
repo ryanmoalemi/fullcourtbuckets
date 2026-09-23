@@ -78,6 +78,44 @@
       ],
       "google_keyword": "where is tiffany mitchell from",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What is Tiffany Mitchell's WNBA salary?",
+      "answer": "Public salary databases list Tiffany Mitchell's reported 2025 WNBA salary near $101,123. Endorsements and overseas pay are separate from that figure.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/free-agents/signed/_/year/2025"
+      ],
+      "google_keyword": "tiffany mitchell wnba salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Tiffany Mitchell dating?",
+      "answer": "As of late 2026, Tiffany Mitchell has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
+      ],
+      "google_keyword": "tiffany mitchell partner",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Tiffany Mitchell married?",
+      "answer": "There is no widely reported public record of Tiffany Mitchell being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
+      ],
+      "google_keyword": "mark mitchell tiffany derry husband",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "Is Tiffany Mitchell injured?",
+      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "tiffany mitchell injury",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

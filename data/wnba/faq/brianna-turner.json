@@ -90,6 +90,16 @@
       ],
       "google_keyword": "brianna turner parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Brianna Turner attend?",
+      "answer": "Brianna Turner played college basketball at Manvel High School.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Brianna_Turner"
+      ],
+      "google_keyword": "brianna turner notre dame",
+      "approx_monthly_volume": 20
     }
   ],
   "notes": "Reader-facing sports copy only."

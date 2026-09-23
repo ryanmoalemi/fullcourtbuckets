@@ -71,6 +71,17 @@
       ],
       "google_keyword": "kaila charles maryland",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Kaila Charles?",
+      "answer": "Kaila Charles was born March 23, 1998 in Glenn Dale. As of late 2026 that puts her at 28 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kaila_Charles"
+      ],
+      "google_keyword": "kaila charles age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1998-03-23"
     }
   ],
   "notes": "Reader-facing sports copy only."

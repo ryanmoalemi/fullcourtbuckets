@@ -78,6 +78,16 @@
       "sources": [],
       "google_keyword": "lindsay allen injury",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Lindsay Allen attend?",
+      "answer": "Lindsay Allen played college basketball at Notre Dame.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lindsay_Allen"
+      ],
+      "google_keyword": "lindsay allen notre dame",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

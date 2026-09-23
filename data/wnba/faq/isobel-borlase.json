@@ -69,6 +69,17 @@
       ],
       "google_keyword": "isobel borlase parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Isobel Borlase?",
+      "answer": "Isobel Borlase was born September 12, 2004 in Sandringham. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Isobel_Borlase"
+      ],
+      "google_keyword": "isobel borlase age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2004-09-12"
     }
   ],
   "notes": "Reader-facing sports copy only."

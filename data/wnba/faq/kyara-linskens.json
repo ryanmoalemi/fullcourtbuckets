@@ -41,6 +41,17 @@
       ],
       "google_keyword": "kyara linskens height",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Kyara Linskens?",
+      "answer": "Kyara Linskens was born November 13, 1996 in Bruges. As of late 2026 that puts her at 29 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kyara_Linskens"
+      ],
+      "google_keyword": "kyara linskens age",
+      "approx_monthly_volume": 10,
+      "birthdate": "1996-11-13"
     }
   ],
   "notes": "Reader-facing sports copy only."

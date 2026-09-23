@@ -51,6 +51,17 @@
       ],
       "google_keyword": "holly winterburn parents",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Holly Winterburn?",
+      "answer": "Holly Winterburn was born October 1, 2000 in Northampton. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Holly_Winterburn"
+      ],
+      "google_keyword": "holly winterburn age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2000-10-01"
     }
   ],
   "notes": "Reader-facing sports copy only."

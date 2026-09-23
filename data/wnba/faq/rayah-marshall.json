@@ -67,6 +67,27 @@
       ],
       "google_keyword": "rayah marshall wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Rayah Marshall?",
+      "answer": "Rayah Marshall was born November 15, 2003 in Los Angeles. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rayah_Marshall"
+      ],
+      "google_keyword": "rayah marshall age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2003-11-15"
+    },
+    {
+      "question": "What college did Rayah Marshall attend?",
+      "answer": "Rayah Marshall played college basketball at the Dallas Wings.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rayah_Marshall"
+      ],
+      "google_keyword": "rayah marshall usc",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

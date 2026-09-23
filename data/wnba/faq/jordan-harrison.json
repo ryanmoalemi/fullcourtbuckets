@@ -41,6 +41,17 @@
       ],
       "google_keyword": "jordan harrison",
       "approx_monthly_volume": 3600
+    },
+    {
+      "question": "How old is Jordan Harrison?",
+      "answer": "Jordan Harrison was born April 26, 2004 in Oklahoma City. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+      ],
+      "google_keyword": "jordan harrison age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2004-04-26"
     }
   ],
   "notes": "Reader-facing sports copy only."

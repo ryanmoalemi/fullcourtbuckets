@@ -49,6 +49,16 @@
       ],
       "google_keyword": "liatu king wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Liatu King attend?",
+      "answer": "Liatu King played college basketball at the Pittsburgh Panthers and Notre Dame Fighting Irish.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Liatu_King"
+      ],
+      "google_keyword": "liatu king notre dame",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

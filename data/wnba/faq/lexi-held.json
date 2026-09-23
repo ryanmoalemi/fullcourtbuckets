@@ -47,6 +47,17 @@
       "sources": [],
       "google_keyword": "lexi held injury",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Lexi Held?",
+      "answer": "Lexi Held was born December 28, 1999. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lexi_Held"
+      ],
+      "google_keyword": "lexi held age",
+      "approx_monthly_volume": 30,
+      "birthdate": "1999-12-28"
     }
   ],
   "notes": "Reader-facing sports copy only."

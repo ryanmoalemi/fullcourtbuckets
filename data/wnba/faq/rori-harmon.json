@@ -99,6 +99,27 @@
       ],
       "google_keyword": "rori harmon wiki",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Rori Harmon?",
+      "answer": "Rori Harmon was born January 29, 2003. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rori_Harmon"
+      ],
+      "google_keyword": "rori harmon age",
+      "approx_monthly_volume": 140,
+      "birthdate": "2003-01-29"
+    },
+    {
+      "question": "What college did Rori Harmon attend?",
+      "answer": "Rori Harmon played college basketball at the Texas Longhorns.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rori_Harmon"
+      ],
+      "google_keyword": "rori harmon texas",
+      "approx_monthly_volume": 140
     }
   ],
   "notes": "Reader-facing sports copy only."

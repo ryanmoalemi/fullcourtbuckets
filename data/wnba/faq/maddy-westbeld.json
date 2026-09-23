@@ -95,6 +95,27 @@
       ],
       "google_keyword": "maddy westbeld wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Maddy Westbeld?",
+      "answer": "Maddy Westbeld was born February 10, 2002. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+      ],
+      "google_keyword": "maddy westbeld age",
+      "approx_monthly_volume": 90,
+      "birthdate": "2002-02-10"
+    },
+    {
+      "question": "What college did Maddy Westbeld attend?",
+      "answer": "Maddy Westbeld played college basketball at Fairmont High School in Kettering, Ohio where she classified as a five-star recruit by ESPN.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+      ],
+      "google_keyword": "maddy westbeld notre dame",
+      "approx_monthly_volume": 20
     }
   ],
   "notes": "Reader-facing sports copy only."

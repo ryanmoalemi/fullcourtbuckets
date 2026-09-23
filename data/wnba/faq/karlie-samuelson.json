@@ -97,6 +97,17 @@
       ],
       "google_keyword": "karlie samuelson",
       "approx_monthly_volume": 5400
+    },
+    {
+      "question": "How old is Karlie Samuelson?",
+      "answer": "Karlie Samuelson was born May 10, 1995 in Fullerton. As of late 2026 that puts her at 31 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
+      ],
+      "google_keyword": "karlie samuelson age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1995-05-10"
     }
   ],
   "notes": "Reader-facing sports copy only."
