@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/67013-cotie-mcmahon-c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/cotie-mcmahon/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67013-cotie-mcmahon-c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5.png",
-  "github_blob_sha": "577bb33f696702dc1cfa825f25b03e1c6408a275"
+  "github_blob_sha": "577bb33f696702dc1cfa825f25b03e1c6408a275",
+  "live_verified": true,
+  "upload_run_id": 35824735178,
+  "publication_run_id": 35824884711,
+  "publication_commit": "c102810713165350259c02f233de864a9cea8aeb",
+  "verified_url": "https://fullcourtbuckets.com/wnba/cotie-mcmahon/?v=c6e4f0c74af7",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/cotie-mcmahon/portrait.png?v=c6e4f0c74af7",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5",
+    "public_bytes": 2000029,
+    "canonical": "https://fullcourtbuckets.com/wnba/cotie-mcmahon/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "c6e4f0c74af7"
+  }
 }
