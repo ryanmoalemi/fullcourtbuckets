@@ -1,14 +1,6 @@
 {
   "request_id": "418-8d5025ef086d-upload-20260923T0510Z",
-  "player_id": 418,
-  "player_name": "Cheyenne Parker-Tyus",
   "slug": "cheyenne-parker-tyus",
-  "approved": true,
-  "sha256": "8d5025ef086d91013824368f2fa049833c61f411761ff431be59e410931295e7",
-  "bytes": 2210963,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "repository_path": "portrait-handoff/418-cheyenne-parker-tyus-8d5025ef086d91013824368f2fa049833c61f411761ff431be59e410931295e7.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "8d5025ef086d91013824368f2fa049833c61f411761ff431be59e410931295e7"
 }
