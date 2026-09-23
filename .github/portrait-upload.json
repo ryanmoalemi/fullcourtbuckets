@@ -1,1 +1,14 @@
-{}
+{
+  "request_id": "774-97a14da631b3-upload-20260923T0525Z",
+  "player_id": 774,
+  "player_name": "Chloe Bibby",
+  "slug": "chloe-bibby",
+  "approved": true,
+  "sha256": "97a14da631b30ba2a6d17ccf70f9d02dd40eaf61e887588927bbed03ad30424e",
+  "bytes": 1973545,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "repository_path": "portrait-handoff/774-chloe-bibby-97a14da631b30ba2a6d17ccf70f9d02dd40eaf61e887588927bbed03ad30424e.png"
+}
