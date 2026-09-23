@@ -1,0 +1,69 @@
+{
+  "slug": "tina-thompson",
+  "player_name": "Tina Thompson",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Tina Thompson's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2013), Tina Thompson averaged 14.1 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tina thompson stats",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "Who is Tina Thompson dating?",
+      "answer": "As of late 2026, Tina Thompson has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "tina thompson partner",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How much does Tina Thompson make?",
+      "answer": "A precise public salary or net worth figure for Tina Thompson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "tina thompson net worth",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What is Tina Thompson's contract?",
+      "answer": "Contract length and guarantees for Tina Thompson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "tina thompson contract",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Tina Thompson married?",
+      "answer": "There is no widely reported public record of Tina Thompson being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "tina thompson husband",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "Does Tina Thompson have kids?",
+      "answer": "There is no widely reported public information that Tina Thompson has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "tina thompson son",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What team does Tina Thompson play for?",
+      "answer": "Her most recent WNBA team on record is the Houston Comets. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tina thompson teammates",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

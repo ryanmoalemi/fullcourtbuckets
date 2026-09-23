@@ -1,0 +1,88 @@
+{
+  "slug": "swin-cash",
+  "player_name": "Swin Cash",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Swin Cash's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Swin Cash averaged 5.3 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "swin cash stats",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How much does Swin Cash make?",
+      "answer": "A precise public salary or net worth figure for Swin Cash is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "swin cash net worth",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Swin Cash?",
+      "answer": "Public profiles list Swin Cash as born in 1979. As of late 2026 that puts her around 47 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "swin cash age",
+      "approx_monthly_volume": 50,
+      "birthdate": "1979-01-01"
+    },
+    {
+      "question": "Is Swin Cash married?",
+      "answer": "There is no widely reported public record of Swin Cash being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "swin cash husband",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "Who is Swin Cash?",
+      "answer": "Swintayla Marie Cash Canal is an American former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "who is swin cash",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "Does Swin Cash have kids?",
+      "answer": "There is no widely reported public information that Swin Cash has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "swin cash son",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "Who are Swin Cash's parents?",
+      "answer": "Public profiles share limited verified detail about Swin Cash's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "swin cash family",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How many championships does Swin Cash have?",
+      "answer": "Public biographical sources cover Swin Cash's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Swin_Cash"
+      ],
+      "google_keyword": "swin cash bring it on",
+      "approx_monthly_volume": 20
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

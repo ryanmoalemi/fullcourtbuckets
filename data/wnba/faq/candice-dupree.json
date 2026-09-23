@@ -1,0 +1,68 @@
+{
+  "slug": "candice-dupree",
+  "player_name": "Candice Dupree",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Candice Dupree's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2020), Candice Dupree averaged 12.6 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "candice dupree stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Candice Dupree dating?",
+      "answer": "As of late 2026, Candice Dupree has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candice_Dupree"
+      ],
+      "google_keyword": "candice dupree partner",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Candice Dupree make?",
+      "answer": "A precise public salary or net worth figure for Candice Dupree is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "candice dupree net worth",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Candice Dupree?",
+      "answer": "Public profiles list Candice Dupree as born in 1984. As of late 2026 that puts her around 42 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candice_Dupree"
+      ],
+      "google_keyword": "candice dupree age",
+      "approx_monthly_volume": 10,
+      "birthdate": "1984-01-01"
+    },
+    {
+      "question": "Is Candice Dupree married?",
+      "answer": "There is no widely reported public record of Candice Dupree being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candice_Dupree"
+      ],
+      "google_keyword": "candice dupree wife",
+      "approx_monthly_volume": 260
+    },
+    {
+      "question": "Who are Candice Dupree's parents?",
+      "answer": "Public profiles share limited verified detail about Candice Dupree's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candice_Dupree"
+      ],
+      "google_keyword": "candice dupree family",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "jasmine-thomas",
+  "player_name": "Jasmine Thomas",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Jasmine Thomas make?",
+      "answer": "A precise public salary or net worth figure for Jasmine Thomas is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "jasmine thomas wnba salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Jasmine Thomas?",
+      "answer": "Public profiles list Jasmine Thomas as born in 1989. As of late 2026 that puts her around 37 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jasmine_Thomas_(basketball)"
+      ],
+      "google_keyword": "jasmine thomas age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1989-01-01"
+    },
+    {
+      "question": "Is Jasmine Thomas married?",
+      "answer": "There is no widely reported public record of Jasmine Thomas being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jasmine_Thomas_(basketball)"
+      ],
+      "google_keyword": "jasmine thomas wife",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "Is Jasmine Thomas injured?",
+      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "jasmine thomas injury",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

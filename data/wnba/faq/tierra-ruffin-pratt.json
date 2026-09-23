@@ -1,0 +1,40 @@
+{
+  "slug": "tierra-ruffin-pratt",
+  "player_name": "Tierra Ruffin-Pratt",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Tierra Ruffin-Pratt make?",
+      "answer": "A precise public salary or net worth figure for Tierra Ruffin-Pratt is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "tierra ruffin pratt salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Tierra Ruffin-Pratt married?",
+      "answer": "There is no widely reported public record of Tierra Ruffin-Pratt being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tierra_Ruffin-Pratt"
+      ],
+      "google_keyword": "tierra ruffin-pratt wife",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Tierra Ruffin-Pratt?",
+      "answer": "Public profiles list Tierra Ruffin-Pratt as born in 1991. As of late 2026 that puts her around 35 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tierra_Ruffin-Pratt"
+      ],
+      "google_keyword": "tierra ruffin pratt marriage",
+      "approx_monthly_volume": 10,
+      "birthdate": "1991-01-01"
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

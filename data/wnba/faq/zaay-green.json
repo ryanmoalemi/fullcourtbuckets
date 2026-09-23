@@ -1,0 +1,35 @@
+{
+  "slug": "zaay-green",
+  "player_name": "Zaay Green",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How tall is Zaay Green?",
+      "answer": "Zaay Green is listed at 6' 2\".",
+      "answer_kind": "bio",
+      "sources": [],
+      "google_keyword": "zaay green height",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What is Zaay Green's contract?",
+      "answer": "Contract length and guarantees for Zaay Green are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "zaay green wnba contract",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Zaay Green injured?",
+      "answer": "Injury status changes during the season. Check the latest Tempo reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "zaay green injury",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
