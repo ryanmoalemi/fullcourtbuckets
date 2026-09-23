@@ -63,6 +63,38 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(before,(root/'wnba/example-player/index.html').read_bytes())
     def test_no_synthetic_career_totals(self):
         result=b.profile_page(P);self.assertIn('Statistics since 2008',result);self.assertNotIn('<h2>Career totals',result)
+
+    def test_reader_copy_avoids_internal_jargon(self):
+        p = copy.deepcopy(P)
+        p['game_log_window_start'] = '2026-08-18'
+        p['recent_completed_games'] = [{
+            'player_id': 1, 'date': '2026-09-20T03:00:00+00:00', 'postseason': False,
+            'team': {'id': 1, 'full_name': 'Example Team'},
+            'home_team': {'id': 1, 'full_name': 'Example Team'},
+            'visitor_team': {'id': 2, 'full_name': 'Other Team'},
+            'home_score': 90, 'away_score': 80, 'minutes': '30',
+            'pts': 10, 'reb': 4, 'ast': 5, 'stl': 1, 'blk': 0, 'turnover': 2,
+        }]
+        page = b.profile_page(p)
+        for banned in (
+            'imported log', 'imported window', 'Imported window', 'imported statistics',
+            'imported data', "provider's active-player feed", 'active-player feed',
+            'Provider status', 'BALLDONTLIE', 'this dataset', "View this player's imported data",
+            'Source snapshot', 'API snapshot',
+        ):
+            self.assertNotIn(banned, page)
+        self.assertIn('Current team:', page)
+        self.assertIn('Recent games: 2026-08-18 onward.', page)
+        self.assertIn('Last updated', page)
+        self.assertIn('>View player data</a>', page)
+        self.assertIn('Most recent completed game:', page)
+        self.assertIn('<dt>Current team</dt><dd>Example Team</dd>', page)
+        inactive = copy.deepcopy(P)
+        inactive['active_in_provider_feed'] = False
+        archive = b.profile_page(inactive)
+        self.assertIn('not on a current roster', archive)
+        self.assertNotIn('active-player', archive)
+        self.assertNotIn('Provider status', archive)
     def test_no_browser_api_key_or_provider_fetch(self):
         js=(ROOT/'players.js').read_text();self.assertNotIn('api.balldontlie.io',js);self.assertNotIn('Authorization',js)
 
@@ -172,6 +204,12 @@ class BuildTests(unittest.TestCase):
         self.assertIn('What did A&#x27;ja Wilson score in her last game?', html)
         self.assertNotIn('regular-season averages', html)
         self.assertNotIn('google_keyword', html)
+        self.assertNotIn('\u2014', faq_path.read_text())
+        self.assertNotIn('\u2014', html)
+        answers = ' '.join(item['answer'] for item in faq['items'])
+        for banned in ('imported log', 'imported window', 'BALLDONTLIE', 'tracked on Full Court Buckets', "in our imported"):
+            self.assertNotIn(banned, answers)
+            self.assertNotIn(banned, html)
 
     def test_build_publishes_curated_faq_only(self):
         items = [{'question': f'Q{i}?', 'answer': f'A{i}.'} for i in range(12)]
