@@ -169,9 +169,13 @@ class PortraitUploadTests(unittest.TestCase):
     def test_live_request_stub_is_already_uploaded(self):
         repo = Path(__file__).resolve().parents[1]
         stub = json.loads((repo / '.github/portrait-upload.json').read_text())
-        self.assertEqual(stub['status'], 'uploaded_pending_live_verification')
-        self.assertRegex(stub.get('slug', ''), r'^[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-        self.assertRegex(stub.get('sha256', ''), r'^[a-f0-9]{64}\Z')
+        # {} is a released upload slot. A request still in the file must already
+        # be uploaded, and a missing status must not raise KeyError.
+        if not stub:
+            return
+        self.assertEqual(stub.get('status'), 'uploaded_pending_live_verification')
+        self.assertRegex(stub.get('slug') or '', r'^[a-z0-9]+(?:-[a-z0-9]+)*\Z')
+        self.assertRegex(stub.get('sha256') or '', r'^[a-f0-9]{64}\Z')
         self.assertTrue(stub.get('request_id'))
         self.assertNotIn('download_url', stub)
         self.assertNotIn('repository_path', stub)
