@@ -60,6 +60,16 @@
       ],
       "google_keyword": "queen egbo parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Queen Egbo attend?",
+      "answer": "Queen Egbo played college basketball at Baylor.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Queen_Egbo"
+      ],
+      "google_keyword": "queen egbo baylor",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

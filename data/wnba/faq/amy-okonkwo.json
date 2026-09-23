@@ -69,6 +69,17 @@
       ],
       "google_keyword": "amy okonkwo biography",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Amy Okonkwo?",
+      "answer": "Amy Okonkwo was born August 26, 1996 in Fontana. As of late 2026 that puts her at 30 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+      ],
+      "google_keyword": "amy okonkwo age",
+      "approx_monthly_volume": 10,
+      "birthdate": "1996-08-26"
     }
   ],
   "notes": "Reader-facing sports copy only."

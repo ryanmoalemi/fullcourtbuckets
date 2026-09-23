@@ -106,6 +106,54 @@
       ],
       "google_keyword": "who is nneka ogwumike",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Nneka Ogwumike attend?",
+      "answer": "Nneka Ogwumike played college basketball at Stanford.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nneka_Ogwumike"
+      ],
+      "google_keyword": "nneka ogwumike stanford",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "Who is Nneka Ogwumike dating?",
+      "answer": "As of late 2026, Nneka Ogwumike has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nneka_Ogwumike"
+      ],
+      "google_keyword": "nneka ogwumike partner",
+      "approx_monthly_volume": 590
+    },
+    {
+      "question": "Is Nneka Ogwumike married?",
+      "answer": "There is no widely reported public record of Nneka Ogwumike being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nneka_Ogwumike"
+      ],
+      "google_keyword": "nneka ogwumike wife",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "Is Nneka Ogwumike injured?",
+      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "nneka ogwumike injury",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How many MVPs does Nneka Ogwumike have?",
+      "answer": "Ogwumike spent her first 12 seasons with the Sparks and was named WNBA MVP for the 2016 WNBA season and won the WNBA Finals the same year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nneka_Ogwumike"
+      ],
+      "google_keyword": "nneka ogwumike mvp",
+      "approx_monthly_volume": 20
     }
   ],
   "notes": "Reader-facing sports copy only."

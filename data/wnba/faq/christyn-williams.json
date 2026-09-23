@@ -89,6 +89,17 @@
       ],
       "google_keyword": "christyn williams parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Christyn Williams?",
+      "answer": "Christyn Williams was born May 20, 2000 in Little Rock. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Christyn_Williams"
+      ],
+      "google_keyword": "christyn williams age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2000-05-20"
     }
   ],
   "notes": "Reader-facing sports copy only."

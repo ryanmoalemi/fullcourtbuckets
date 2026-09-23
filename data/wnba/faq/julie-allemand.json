@@ -105,6 +105,17 @@
       ],
       "google_keyword": "julie allemand wiki",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Julie Allemand?",
+      "answer": "Julie Allemand was born July 7, 1996 in Liège. As of late 2026 that puts her at 30 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Julie_Allemand"
+      ],
+      "google_keyword": "julie allemand age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1996-07-07"
     }
   ],
   "notes": "Reader-facing sports copy only."

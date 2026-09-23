@@ -33,6 +33,17 @@
       ],
       "google_keyword": "ta'niya latson",
       "approx_monthly_volume": 18100
+    },
+    {
+      "question": "How old is Ta'Niya Latson?",
+      "answer": "Ta'Niya Latson was born October 20, 2003. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ta'Niya_Latson"
+      ],
+      "google_keyword": "how old is ta'niya latson",
+      "approx_monthly_volume": 10,
+      "birthdate": "2003-10-20"
     }
   ],
   "notes": "Reader-facing sports copy only."

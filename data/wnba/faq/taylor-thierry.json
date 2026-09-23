@@ -69,6 +69,17 @@
       ],
       "google_keyword": "taylor thierry wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Taylor Thierry?",
+      "answer": "Taylor Thierry was born January 8, 2003. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taylor_Thierry"
+      ],
+      "google_keyword": "taylor thierry birthday",
+      "approx_monthly_volume": 10,
+      "birthdate": "2003-01-08"
     }
   ],
   "notes": "Reader-facing sports copy only."

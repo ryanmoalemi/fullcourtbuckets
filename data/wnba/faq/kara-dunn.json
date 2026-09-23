@@ -33,6 +33,27 @@
       ],
       "google_keyword": "kara dunn wikipedia",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Kara Dunn?",
+      "answer": "Kara Dunn was born July 9, 1978 in Queens. As of late 2026 that puts her at 48 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kara_Goucher"
+      ],
+      "google_keyword": "kara dunn age",
+      "approx_monthly_volume": 30,
+      "birthdate": "1978-07-09"
+    },
+    {
+      "question": "What college did Kara Dunn attend?",
+      "answer": "Kara Dunn played college basketball at University of Colorado.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kara_Goucher"
+      ],
+      "google_keyword": "kara dunn usc",
+      "approx_monthly_volume": 170
     }
   ],
   "notes": "Reader-facing sports copy only."

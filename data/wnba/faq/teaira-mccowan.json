@@ -138,6 +138,16 @@
       ],
       "google_keyword": "teaira mccowan parents",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "What college did Teaira McCowan attend?",
+      "answer": "Teaira McCowan played college basketball at Mississippi State.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+      ],
+      "google_keyword": "teaira mccowan mississippi state",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

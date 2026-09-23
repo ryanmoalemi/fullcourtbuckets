@@ -31,6 +31,48 @@
       ],
       "google_keyword": "madison scott wnba",
       "approx_monthly_volume": 320
+    },
+    {
+      "question": "What is Madison Scott's WNBA salary?",
+      "answer": "Public salary databases such as Spotrac list Madison Scott's WNBA career earnings at about $16,103 through 2026. Her original rookie deal was reported around $217,640 over multiple seasons before later roster moves. Exact current salary on a developmental or short-term deal is not always published in full.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/player/_/id/97717/madison-scott"
+      ],
+      "google_keyword": "madison scott wnba salary",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "How old is Madison Scott?",
+      "answer": "Madison Scott was born December 27, 2001 in Indian Head, Maryland. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madison_Scott"
+      ],
+      "google_keyword": "madison scott age",
+      "approx_monthly_volume": 50,
+      "birthdate": "2001-12-27"
+    },
+    {
+      "question": "What are Madison Scott's college stats?",
+      "answer": "Across her college career at Ole Miss, Madison Scott averaged 11.1 points, 6.7 rebounds, and 2.4 assists per game in 155 games. In her final college season she averaged 11.8 points, 5.1 rebounds, and 3.7 assists.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madison_Scott",
+        "https://www.sports-reference.com/cbb/players/madison-scott-2.html"
+      ],
+      "google_keyword": "madison scott ole miss stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Madison Scott attend?",
+      "answer": "Madison Scott played college basketball at Ole Miss.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madison_Scott"
+      ],
+      "google_keyword": "madison scott ole miss basketball",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

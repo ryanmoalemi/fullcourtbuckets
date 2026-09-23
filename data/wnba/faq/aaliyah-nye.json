@@ -97,6 +97,17 @@
       ],
       "google_keyword": "aaliyah nye wikipedia",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Aaliyah Nye?",
+      "answer": "Aaliyah Nye was born August 14, 2002. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
+      ],
+      "google_keyword": "aaliyah nye age",
+      "approx_monthly_volume": 90,
+      "birthdate": "2002-08-14"
     }
   ],
   "notes": "Reader-facing sports copy only."

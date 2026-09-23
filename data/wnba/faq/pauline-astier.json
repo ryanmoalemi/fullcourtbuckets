@@ -71,6 +71,17 @@
       ],
       "google_keyword": "pauline astier wiki",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Pauline Astier?",
+      "answer": "Pauline Astier was born February 15, 2002 in Tarbes. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pauline_Astier"
+      ],
+      "google_keyword": "pauline astier age",
+      "approx_monthly_volume": 70,
+      "birthdate": "2002-02-15"
     }
   ],
   "notes": "Reader-facing sports copy only."

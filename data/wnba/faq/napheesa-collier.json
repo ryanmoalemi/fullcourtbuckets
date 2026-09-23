@@ -118,6 +118,72 @@
       ],
       "google_keyword": "who is napheesa collier",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Napheesa Collier attend?",
+      "answer": "Napheesa Collier played college basketball at UConn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Napheesa_Collier"
+      ],
+      "google_keyword": "napheesa collier uconn",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "Who is Napheesa Collier dating?",
+      "answer": "As of late 2026, Napheesa Collier has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Napheesa_Collier"
+      ],
+      "google_keyword": "napheesa collier boyfriend",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What position does Napheesa Collier play?",
+      "answer": "Napheesa Collier is listed as a F for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "napheesa collier position",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "Is Napheesa Collier injured?",
+      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "napheesa collier injury",
+      "approx_monthly_volume": 9900
+    },
+    {
+      "question": "Did Napheesa Collier retire?",
+      "answer": "As of late 2026, Napheesa Collier is still listed among WNBA players and has not been widely reported as retired.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Napheesa_Collier"
+      ],
+      "google_keyword": "did napheesa collier retire",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "Does Napheesa Collier have a signature shoe?",
+      "answer": "Public search interest ties Napheesa Collier to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Napheesa_Collier"
+      ],
+      "google_keyword": "napheesa collier shoes",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "What is Napheesa Collier's nationality?",
+      "answer": "Napheesa Collier is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Napheesa_Collier"
+      ],
+      "google_keyword": "napheesa collier parents nationality",
+      "approx_monthly_volume": 210
     }
   ],
   "notes": "Reader-facing sports copy only."

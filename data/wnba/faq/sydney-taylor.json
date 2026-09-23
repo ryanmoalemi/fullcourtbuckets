@@ -99,6 +99,17 @@
       ],
       "google_keyword": "sydney taylor american born chinese",
       "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Sydney Taylor?",
+      "answer": "Sydney Taylor was born June 21, 2001. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sydney_Taylor_(basketball)"
+      ],
+      "google_keyword": "sydney taylor age",
+      "approx_monthly_volume": 260,
+      "birthdate": "2001-06-21"
     }
   ],
   "notes": "Reader-facing sports copy only."

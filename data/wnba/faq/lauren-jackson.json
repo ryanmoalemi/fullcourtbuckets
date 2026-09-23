@@ -90,6 +90,34 @@
       ],
       "google_keyword": "who is lauren jackson",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What is Lauren Jackson's net worth?",
+      "answer": "A precise public WNBA salary figure for Lauren Jackson is not consistently published. When available, single-season salaries appear on public databases such as Spotrac.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "lauren jackson net worth",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Lauren Jackson married?",
+      "answer": "There is no widely reported public record of Lauren Jackson being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "lauren jackson husband",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What are Lauren Jackson's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), Lauren Jackson averaged 10.0 points, 7.7 rebounds, and 0.3 assists in 3 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "lauren jackson stats",
+      "approx_monthly_volume": 50
     }
   ],
   "notes": "Reader-facing sports copy only."

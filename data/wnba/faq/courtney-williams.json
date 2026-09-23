@@ -136,6 +136,16 @@
       ],
       "google_keyword": "courtney sanderson",
       "approx_monthly_volume": 8100
+    },
+    {
+      "question": "What college did Courtney Williams attend?",
+      "answer": "Courtney Williams played college basketball at Charlton County High School.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Courtney_Williams"
+      ],
+      "google_keyword": "courtney williams north carolina",
+      "approx_monthly_volume": 140
     }
   ],
   "notes": "Reader-facing sports copy only."

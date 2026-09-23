@@ -90,6 +90,44 @@
       ],
       "google_keyword": "who is marina mabrey",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Marina Mabrey attend?",
+      "answer": "Marina Mabrey played college basketball at Notre Dame.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marina_Mabrey"
+      ],
+      "google_keyword": "marina mabrey notre dame",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Who is Marina Mabrey dating?",
+      "answer": "As of late 2026, Marina Mabrey has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marina_Mabrey"
+      ],
+      "google_keyword": "marina mabrey partner",
+      "approx_monthly_volume": 3600
+    },
+    {
+      "question": "Is Marina Mabrey married?",
+      "answer": "There is no widely reported public record of Marina Mabrey being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Marina_Mabrey"
+      ],
+      "google_keyword": "marina mabrey wife",
+      "approx_monthly_volume": 2400
+    },
+    {
+      "question": "Is Marina Mabrey injured?",
+      "answer": "Injury status changes during the season. Check the latest Tempo reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "marina mabrey injury",
+      "approx_monthly_volume": 480
     }
   ],
   "notes": "Reader-facing sports copy only."

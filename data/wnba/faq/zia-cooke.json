@@ -126,6 +126,16 @@
       ],
       "google_keyword": "zia cooke parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Zia Cooke attend?",
+      "answer": "Zia Cooke played college basketball at the South Carolina Gamecocks.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Zia_Cooke"
+      ],
+      "google_keyword": "zia cooke south carolina",
+      "approx_monthly_volume": 50
     }
   ],
   "notes": "Reader-facing sports copy only."

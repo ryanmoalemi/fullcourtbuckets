@@ -79,6 +79,17 @@
       ],
       "google_keyword": "madina okot wikipedia",
       "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Madina Okot?",
+      "answer": "Madina Okot was born August 23, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madina_Okot"
+      ],
+      "google_keyword": "madina okot age",
+      "approx_monthly_volume": 170,
+      "birthdate": "2004-08-23"
     }
   ],
   "notes": "Reader-facing sports copy only."

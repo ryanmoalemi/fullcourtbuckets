@@ -59,6 +59,17 @@
       ],
       "google_keyword": "teonni key wikipedia",
       "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Teonni Key?",
+      "answer": "Teonni Key was born July 10, 2003 in Cary. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teonni_Key"
+      ],
+      "google_keyword": "teonni key age",
+      "approx_monthly_volume": 50,
+      "birthdate": "2003-07-10"
     }
   ],
   "notes": "Reader-facing sports copy only."

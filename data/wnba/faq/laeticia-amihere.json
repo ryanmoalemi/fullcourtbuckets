@@ -87,6 +87,17 @@
       ],
       "google_keyword": "laeticia amihere parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Laeticia Amihere?",
+      "answer": "Laeticia Amihere was born July 10, 2001 in Mississauga. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
+      ],
+      "google_keyword": "laeticia amihere age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2001-07-10"
     }
   ],
   "notes": "Reader-facing sports copy only."

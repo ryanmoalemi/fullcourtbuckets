@@ -59,6 +59,17 @@
       ],
       "google_keyword": "mackenzie holmes parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Mackenzie Holmes?",
+      "answer": "Mackenzie Holmes was born November 1, 2000 in Gorham. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mackenzie_Holmes"
+      ],
+      "google_keyword": "mackenzie holmes age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2000-11-01"
     }
   ],
   "notes": "Reader-facing sports copy only."

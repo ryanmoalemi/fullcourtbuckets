@@ -49,6 +49,17 @@
       ],
       "google_keyword": "cassandre prosper parents",
       "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Cassandre Prosper?",
+      "answer": "Cassandre Prosper was born June 25, 2005 in Montreal. As of late 2026 that puts her at 21 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Cassandre_Prosper"
+      ],
+      "google_keyword": "cassandre prosper age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2005-06-25"
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -61,6 +61,17 @@
       ],
       "google_keyword": "maya caldwell parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Maya Caldwell?",
+      "answer": "Maya Caldwell was born December 15, 1998 in Charlotte. As of late 2026 that puts her at 27 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Maya_Caldwell"
+      ],
+      "google_keyword": "maya caldwell age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1998-12-15"
     }
   ],
   "notes": "Reader-facing sports copy only."

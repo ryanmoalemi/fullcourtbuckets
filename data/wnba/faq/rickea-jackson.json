@@ -92,6 +92,52 @@
       ],
       "google_keyword": "who is rickea jackson",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Rickea Jackson attend?",
+      "answer": "Rickea Jackson played college basketball at Tennessee.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+      ],
+      "google_keyword": "rickea jackson tennessee",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Is Rickea Jackson married?",
+      "answer": "There is no widely reported public record of Rickea Jackson being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+      ],
+      "google_keyword": "rickea jackson husband",
+      "approx_monthly_volume": 720
+    },
+    {
+      "question": "What position does Rickea Jackson play?",
+      "answer": "Rickea Jackson is listed as a F for the Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rickea jackson position",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "Is Rickea Jackson injured?",
+      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "rickea jackson injury",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "Does Rickea Jackson have a signature shoe?",
+      "answer": "Public search interest ties Rickea Jackson to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+      ],
+      "google_keyword": "rickea jackson shoes",
+      "approx_monthly_volume": 50
     }
   ],
   "notes": "Reader-facing sports copy only."

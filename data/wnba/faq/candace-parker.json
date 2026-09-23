@@ -84,6 +84,54 @@
       ],
       "google_keyword": "who is candace parker",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What is Candace Parker's WNBA salary?",
+      "answer": "Public salary databases list Candace Parker's reported 2024 WNBA salary near $100,000. Endorsements and overseas pay are separate from that figure. She has since been reported as retired from the WNBA.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/player/_/id/29890/candace-parker"
+      ],
+      "google_keyword": "candace parker wnba salary",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What are Candace Parker's college stats?",
+      "answer": "Across her college career at Tennessee, Candace Parker averaged 17.4 points, 9.2 rebounds, and 3.8 assists per game in 66 games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candace_Parker"
+      ],
+      "google_keyword": "candace parker tennessee stats",
+      "approx_monthly_volume": 720
+    },
+    {
+      "question": "What is Candace Parker's contract?",
+      "answer": "Contract length and guarantees for Candace Parker are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "candace parker contract",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What are Candace Parker's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2022), Candace Parker averaged 13.2 points, 8.6 rebounds, and 4.5 assists in 32 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "candace parker stats",
+      "approx_monthly_volume": 720
+    },
+    {
+      "question": "Does Candace Parker have a signature shoe?",
+      "answer": "Public search interest ties Candace Parker to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Candace_Parker"
+      ],
+      "google_keyword": "candace parker basketball shoes",
+      "approx_monthly_volume": 320
     }
   ],
   "notes": "Reader-facing sports copy only."

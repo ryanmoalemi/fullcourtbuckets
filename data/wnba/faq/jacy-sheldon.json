@@ -141,6 +141,17 @@
       ],
       "google_keyword": "what did sophie cunningham say to jacy sheldon during fight",
       "approx_monthly_volume": 50
+    },
+    {
+      "question": "How old is Jacy Sheldon?",
+      "answer": "Jacy Sheldon was born August 23, 2000 in Dublin. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
+      ],
+      "google_keyword": "jacy sheldon age",
+      "approx_monthly_volume": 170,
+      "birthdate": "2000-08-23"
     }
   ],
   "notes": "Reader-facing sports copy only."

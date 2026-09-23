@@ -51,6 +51,17 @@
       ],
       "google_keyword": "jihyun park family",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Jihyun Park?",
+      "answer": "Jihyun Park was born April 7, 2000 in Seongnam. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Park_Ji-hyun_(basketball)"
+      ],
+      "google_keyword": "park jihyun age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2000-04-07"
     }
   ],
   "notes": "Reader-facing sports copy only."

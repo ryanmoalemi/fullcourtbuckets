@@ -113,6 +113,17 @@
       ],
       "google_keyword": "gabriela jaquez wikipedia",
       "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Gabriela Jaquez?",
+      "answer": "Gabriela Jaquez was born November 19, 2003 in Camarillo. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+      ],
+      "google_keyword": "gabriela jaquez age",
+      "approx_monthly_volume": 480,
+      "birthdate": "2003-11-19"
     }
   ],
   "notes": "Reader-facing sports copy only."

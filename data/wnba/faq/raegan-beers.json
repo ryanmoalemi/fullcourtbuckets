@@ -93,6 +93,17 @@
       ],
       "google_keyword": "raegan beers oregon state",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Raegan Beers?",
+      "answer": "Raegan Beers was born July 23, 2003 in Littleton. As of late 2026 that puts her at 23 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Raegan_Beers"
+      ],
+      "google_keyword": "raegan beers age",
+      "approx_monthly_volume": 70,
+      "birthdate": "2003-07-23"
     }
   ],
   "notes": "Reader-facing sports copy only."

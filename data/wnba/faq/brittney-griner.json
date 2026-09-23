@@ -92,6 +92,45 @@
       ],
       "google_keyword": "brittney griner contract",
       "approx_monthly_volume": 590
+    },
+    {
+      "question": "What are Brittney Griner's college stats?",
+      "answer": "Across her college career at Baylor, Brittney Griner averaged 22.2 points, 8.8 rebounds, and 1.6 assists per game.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.sports-reference.com/cbb/players/brittney-griner-1.html",
+        "https://en.wikipedia.org/wiki/Brittney_Griner"
+      ],
+      "google_keyword": "brittney griner college stats",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Brittney Griner attend?",
+      "answer": "Brittney Griner played college basketball at Baylor.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Brittney_Griner"
+      ],
+      "google_keyword": "brittney griner baylor",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "Is Brittney Griner injured?",
+      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "brittney griner injury",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "Does Brittney Griner have a signature shoe?",
+      "answer": "Public search interest ties Brittney Griner to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Brittney_Griner"
+      ],
+      "google_keyword": "brittney griner shoe size",
+      "approx_monthly_volume": 390
     }
   ],
   "notes": "Reader-facing sports copy only."

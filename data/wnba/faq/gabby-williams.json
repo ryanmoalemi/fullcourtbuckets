@@ -116,6 +116,62 @@
       ],
       "google_keyword": "who is gabby williams",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What college did Gabby Williams attend?",
+      "answer": "Gabby Williams played college basketball at UConn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gabby_Williams"
+      ],
+      "google_keyword": "gabby williams uconn",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "When was Gabby Williams drafted?",
+      "answer": "She was drafted 4th overall by the Chicago Sky in the 2018 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gabby_Williams"
+      ],
+      "google_keyword": "gabby williams draft pick",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "Is Gabby Williams married?",
+      "answer": "There is no widely reported public record of Gabby Williams being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gabby_Williams"
+      ],
+      "google_keyword": "gabby williams wife",
+      "approx_monthly_volume": 2400
+    },
+    {
+      "question": "What is Gabby Williams's jersey number?",
+      "answer": "Gabby Williams wears number 1 for the Golden State Valkyries.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "gabby williams jersey number",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "Is Gabby Williams injured?",
+      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "gabby williams injury",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What awards has Gabby Williams won?",
+      "answer": "Award history for Gabby Williams is covered in public biographical sources such as her Wikipedia profile.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gabby_Williams"
+      ],
+      "google_keyword": "gabby williams all-star",
+      "approx_monthly_volume": 70
     }
   ],
   "notes": "Reader-facing sports copy only."

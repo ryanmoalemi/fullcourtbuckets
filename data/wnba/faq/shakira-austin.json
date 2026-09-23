@@ -134,6 +134,16 @@
       ],
       "google_keyword": "shakira austin parents",
       "approx_monthly_volume": 480
+    },
+    {
+      "question": "What college did Shakira Austin attend?",
+      "answer": "Shakira Austin played college basketball at University of Mississippi.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shakira_Austin"
+      ],
+      "google_keyword": "shakira austin ole miss",
+      "approx_monthly_volume": 40
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -97,6 +97,17 @@
       ],
       "google_keyword": "sarah ashlee barker personal loss",
       "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Sarah Ashlee Barker?",
+      "answer": "Sarah Ashlee Barker was born September 10, 2001. As of late 2026 that puts her at 25 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
+      ],
+      "google_keyword": "sarah ashlee barker age",
+      "approx_monthly_volume": 90,
+      "birthdate": "2001-09-10"
     }
   ],
   "notes": "Reader-facing sports copy only."

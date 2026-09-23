@@ -51,6 +51,27 @@
       ],
       "google_keyword": "ndjakalenga mwenentanda wikipedia",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Ndjakalenga Mwenentanda?",
+      "answer": "Ndjakalenga Mwenentanda was born November 24, 2003 in Sioux Falls. As of late 2026 that puts her at 22 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
+      ],
+      "google_keyword": "ndjakalenga mwenentanda age",
+      "approx_monthly_volume": 20,
+      "birthdate": "2003-11-24"
+    },
+    {
+      "question": "Where is Ndjakalenga Mwenentanda from?",
+      "answer": "Ndjakalenga Mwenentanda is from Sioux Falls.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
+      ],
+      "google_keyword": "where is ndjakalenga mwenentanda from",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

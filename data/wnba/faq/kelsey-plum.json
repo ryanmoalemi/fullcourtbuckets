@@ -102,6 +102,53 @@
       ],
       "google_keyword": "where is kelsey plum from",
       "approx_monthly_volume": 0
+    },
+    {
+      "question": "What are Kelsey Plum's college stats?",
+      "answer": "Across her college career at Washington, Kelsey Plum averaged 25.4 points, 4.3 rebounds, and 3.8 assists per game.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.sports-reference.com/cbb/players/kelsey-plum-1.html",
+        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+      ],
+      "google_keyword": "kelsey plum college stats",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Who is Kelsey Plum dating?",
+      "answer": "As of late 2026, Kelsey Plum has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+      ],
+      "google_keyword": "kelsey plum boyfriend",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What is Kelsey Plum's jersey number?",
+      "answer": "Kelsey Plum wears number 0 for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kelsey plum jersey",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "Is Kelsey Plum injured?",
+      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "kelsey plum injury",
+      "approx_monthly_volume": 2900
+    },
+    {
+      "question": "Does Kelsey Plum have a signature shoe?",
+      "answer": "Public search interest ties Kelsey Plum to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+      ],
+      "google_keyword": "kelsey plum shoes",
+      "approx_monthly_volume": 480
     }
   ],
   "notes": "Reader-facing sports copy only."
