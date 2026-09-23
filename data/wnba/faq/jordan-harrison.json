@@ -1,0 +1,47 @@
+{
+  "slug": "jordan-harrison",
+  "player_name": "Jordan Harrison",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Jordan Harrison's stats / points per game?",
+      "answer": "In the 2026 regular season, Jordan Harrison averaged 4.0 points, 0.0 rebounds, and 4.0 assists in 1 games for Fire. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jordan harrison stats",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "Does Jordan Harrison have a signature shoe?",
+      "answer": "Jordan Harrison has a public association with Jordan footwear or apparel. A dedicated signature sneaker is not always confirmed in every source.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+      ],
+      "google_keyword": "jordan harrison",
+      "approx_monthly_volume": 3600
+    },
+    {
+      "question": "How tall is Jordan Harrison?",
+      "answer": "Jordan Harrison is listed at 5' 6\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+      ],
+      "google_keyword": "jordan harrison height",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "Does Jordan Harrison have kids?",
+      "answer": "There is no widely reported public information that Jordan Harrison has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+      ],
+      "google_keyword": "jordan harrison",
+      "approx_monthly_volume": 3600
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

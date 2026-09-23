@@ -1,0 +1,25 @@
+{
+  "slug": "bree-hall",
+  "player_name": "Bree Hall",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Bree Hall?",
+      "answer": "Bree Hall is a G with the Indiana Fever listed at 6' 1\".",
+      "answer_kind": "bio",
+      "sources": [],
+      "google_keyword": "bree hall",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What team does Bree Hall play for?",
+      "answer": "Bree Hall plays for the Indiana Fever.",
+      "answer_kind": "team",
+      "sources": [],
+      "google_keyword": "bree hall wnba",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "rayah-marshall",
+  "player_name": "Rayah Marshall",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Rayah Marshall's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Rayah Marshall averaged 1.7 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rayah marshall stats",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "How tall is Rayah Marshall?",
+      "answer": "Rayah Marshall is listed at 6' 4\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rayah_Marshall"
+      ],
+      "google_keyword": "rayah marshall height",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What is Rayah Marshall's contract?",
+      "answer": "Contract length and guarantees for Rayah Marshall are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "rayah marshall contract",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What position does Rayah Marshall play?",
+      "answer": "Rayah Marshall is listed as a C for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rayah marshall position",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Rayah Marshall injured?",
+      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "rayah marshall injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Rayah Marshall's parents?",
+      "answer": "Public profiles share limited verified detail about Rayah Marshall's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rayah_Marshall"
+      ],
+      "google_keyword": "rayah marshall parents",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Rayah Marshall?",
+      "answer": "Rayah Marshall is an American professional basketball player for the Connecticut Sun of the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rayah_Marshall"
+      ],
+      "google_keyword": "rayah marshall wikipedia",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

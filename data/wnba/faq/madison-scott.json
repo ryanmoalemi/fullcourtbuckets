@@ -1,0 +1,37 @@
+{
+  "slug": "madison-scott",
+  "player_name": "Madison Scott",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Madison Scott's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Madison Scott averaged 1.6 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "madison scott stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Madison Scott?",
+      "answer": "Madison Scott is listed at 6' 2\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madison_Scott"
+      ],
+      "google_keyword": "madison scott height",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Does Madison Scott have kids?",
+      "answer": "There is no widely reported public information that Madison Scott has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Madison_Scott"
+      ],
+      "google_keyword": "madison scott wnba",
+      "approx_monthly_volume": 320
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

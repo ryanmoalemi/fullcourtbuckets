@@ -1,0 +1,67 @@
+{
+  "slug": "jovana-nogic",
+  "player_name": "Jovana Nogic",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Jovana Nogic's stats / points per game?",
+      "answer": "In the 2026 regular season, Jovana Nogic averaged 10.4 points, 1.1 rebounds, and 1.6 assists in 16 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jovana nogic stats",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "How much does Jovana Nogic make?",
+      "answer": "A precise public salary or net worth figure for Jovana Nogic is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "jovana nogic salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Jovana Nogic?",
+      "answer": "Jovana Nogic is listed at 6' 0\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
+      ],
+      "google_keyword": "jovana nogic height",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What is Jovana Nogic's contract?",
+      "answer": "Contract length and guarantees for Jovana Nogic are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "jovana nogic contract",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Is Jovana Nogic married?",
+      "answer": "There is no widely reported public record of Jovana Nogic being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
+      ],
+      "google_keyword": "jovana nogic husband",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "Who is Jovana Nogic?",
+      "answer": "Jovana Nogić is a Serbian professional basketball player and member of Serbia national team.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
+      ],
+      "google_keyword": "jovana nogic wikipedia",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

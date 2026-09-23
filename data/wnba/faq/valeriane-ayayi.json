@@ -1,0 +1,27 @@
+{
+  "slug": "valeriane-ayayi",
+  "player_name": "Valeriane Ayayi",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Valeriane Ayayi's stats / points per game?",
+      "answer": "In the 2026 regular season, Valeriane Ayayi averaged 6.4 points, 2.8 rebounds, and 1.2 assists in 34 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "valeriane ayayi stats",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "How tall is Valeriane Ayayi?",
+      "answer": "Valeriane Ayayi is listed at 6' 1\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Val%C3%A9riane_Ayayi"
+      ],
+      "google_keyword": "valeriane ayayi height",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
