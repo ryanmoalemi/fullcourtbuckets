@@ -1,0 +1,74 @@
+{
+  "slug": "betty-lennox",
+  "player_name": "Betty Lennox",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Betty Lennox's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2009), Betty Lennox averaged 10.2 points, 4.5 rebounds, and 1.8 assists in 30 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "betty lennox stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Betty Lennox make?",
+      "answer": "A precise public salary or net worth figure for Betty Lennox is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "betty lennox salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Betty Lennox?",
+      "answer": "Betty Bernice Lennox is an American retired professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Betty_Lennox"
+      ],
+      "google_keyword": "betty lennox",
+      "approx_monthly_volume": 260
+    },
+    {
+      "question": "What team does Betty Lennox play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "betty lennox",
+      "approx_monthly_volume": 260
+    },
+    {
+      "question": "What position does Betty Lennox play?",
+      "answer": "Betty Lennox is listed as a Guard for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "betty lennox",
+      "approx_monthly_volume": 260
+    },
+    {
+      "question": "How old is Betty Lennox?",
+      "answer": "Public profiles list Betty Lennox as born in 1976. As of late 2026 that puts her around 50 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Betty_Lennox"
+      ],
+      "google_keyword": "betty lennox",
+      "approx_monthly_volume": 260,
+      "birthdate": "1976-01-01"
+    },
+    {
+      "question": "What is Betty Lennox's nationality?",
+      "answer": "Betty Lennox is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Betty_Lennox"
+      ],
+      "google_keyword": "betty lennox",
+      "approx_monthly_volume": 260
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

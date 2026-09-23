@@ -1,0 +1,64 @@
+{
+  "slug": "loree-moore",
+  "player_name": "Loree Moore",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Loree Moore?",
+      "answer": "Loree Marlowe Moore is a former professional basketball player for the New York Liberty in the WNBA.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Loree_Moore"
+      ],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What team does Loree Moore play for?",
+      "answer": "Her most recent WNBA team on record is the New York Liberty. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What are Loree Moore's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2009), Loree Moore averaged 6.3 points, 3.7 rebounds, and 3.9 assists in 34 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What position does Loree Moore play?",
+      "answer": "Loree Moore is listed as a Guard for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Loree Moore?",
+      "answer": "Public profiles list Loree Moore as born in 1983. As of late 2026 that puts her around 43 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Loree_Moore"
+      ],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30,
+      "birthdate": "1983-01-01"
+    },
+    {
+      "question": "What is Loree Moore's nationality?",
+      "answer": "Loree Moore is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Loree_Moore"
+      ],
+      "google_keyword": "loree moore",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

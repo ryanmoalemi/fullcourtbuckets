@@ -1,0 +1,64 @@
+{
+  "slug": "chante-black",
+  "player_name": "Chante Black",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Chante Black?",
+      "answer": "Chante L’amour Black is an American professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chante_Black"
+      ],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What team does Chante Black play for?",
+      "answer": "Her most recent WNBA team on record is the Connecticut Sun. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What are Chante Black's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), Chante Black averaged 3.2 points, 2.7 rebounds, and 0.3 assists in 29 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What position does Chante Black play?",
+      "answer": "Chante Black is listed as a Center for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Chante Black?",
+      "answer": "Public profiles list Chante Black as born in 1985. As of late 2026 that puts her around 41 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chante_Black"
+      ],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30,
+      "birthdate": "1985-01-01"
+    },
+    {
+      "question": "What is Chante Black's nationality?",
+      "answer": "Chante Black is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Chante_Black"
+      ],
+      "google_keyword": "chante black",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

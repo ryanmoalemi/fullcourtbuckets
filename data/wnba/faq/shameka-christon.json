@@ -1,0 +1,64 @@
+{
+  "slug": "shameka-christon",
+  "player_name": "Shameka Christon",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Shameka Christon?",
+      "answer": "Shameka Delynn Christon is an American retired professional women's basketball player who most recently played with the Phoenix Mercury in the WNBA.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shameka_Christon"
+      ],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What team does Shameka Christon play for?",
+      "answer": "Her most recent WNBA team on record is the New York Liberty. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What are Shameka Christon's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2015), Shameka Christon averaged 4.0 points, 0.5 rebounds, and 1.0 assists in 2 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What position does Shameka Christon play?",
+      "answer": "Shameka Christon is listed as a Forward for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How old is Shameka Christon?",
+      "answer": "Public profiles list Shameka Christon as born in 1982. As of late 2026 that puts her around 44 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shameka_Christon"
+      ],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90,
+      "birthdate": "1982-01-01"
+    },
+    {
+      "question": "What is Shameka Christon's nationality?",
+      "answer": "Shameka Christon is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shameka_Christon"
+      ],
+      "google_keyword": "shameka christon",
+      "approx_monthly_volume": 90
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
