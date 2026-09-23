@@ -1,0 +1,106 @@
+{
+  "slug": "elena-delle-donne",
+  "player_name": "Elena Delle Donne",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Elena Delle Donne married?",
+      "answer": "Yes. Delle Donne married Amanda Clifton in 2017.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "elena delle donne wife",
+      "approx_monthly_volume": 1000
+    },
+    {
+      "question": "Did Elena Delle Donne retire?",
+      "answer": "Delle Donne retired from the WNBA (announced in 2025 after years limited by injury and back issues).",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "elena delle donne retired",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Does Elena Delle Donne have a signature shoe?",
+      "answer": "Nike released her signature Air Deldon line; she later stepped away from playing after injury-limited seasons and retirement.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.sneakerfreaker.com/performance/features/the-active-wnba-signature-sneaker-lines-you-need-to-know"
+      ],
+      "google_keyword": "elena delle donne basketball shoes",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How old is Elena Delle Donne?",
+      "answer": "She was born September 5, 1989 in Wilmington, Delaware, U.S. As of late 2026 that puts her at 37 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "elena delle donne age",
+      "approx_monthly_volume": 90,
+      "birthdate": "1989-09-05"
+    },
+    {
+      "question": "How many championships does Elena Delle Donne have?",
+      "answer": "WNBA championship in 2019.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "elena delle donne championship",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How many MVPs does Elena Delle Donne have?",
+      "answer": "She is a two-time WNBA MVP (2015 with Chicago, 2019 with Washington).",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "elena delle donne mvp",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Who is Elena Delle Donne?",
+      "answer": "Elena Delle Donne is an American former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "who is elena delle donne",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What position does Elena Delle Donne play?",
+      "answer": "Elena Delle Donne is listed as a Forward for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "elena delle donne position",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What team does Elena Delle Donne play for?",
+      "answer": "Her most recent WNBA team on record is the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "elena delle donne team",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Where is Elena Delle Donne from?",
+      "answer": "She is from Wilmington, Delaware, U.S.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+      ],
+      "google_keyword": "where is elena delle donne from",
+      "approx_monthly_volume": 0
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
