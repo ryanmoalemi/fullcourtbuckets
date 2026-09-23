@@ -1,14 +1,6 @@
 {
   "request_id": "707-f3daf3eb3d23-upload-20260923T0536Z",
-  "player_id": 707,
-  "player_name": "Christyn Williams",
   "slug": "christyn-williams",
-  "approved": true,
-  "sha256": "f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73",
-  "bytes": 1998854,
-  "dimensions": [
-    1145,
-    1374
-  ],
-  "repository_path": "portrait-handoff/707-christyn-williams-f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73"
 }
