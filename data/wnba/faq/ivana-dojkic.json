@@ -1,0 +1,27 @@
+{
+  "slug": "ivana-dojkic",
+  "player_name": "Ivana Dojkic",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Ivana Dojkic's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2024), Ivana Dojkic averaged 1.5 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ivana dojkic stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Ivana Dojkic dating?",
+      "answer": "As of late 2026, Ivana Dojkic has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ivana_Dojki%C4%87"
+      ],
+      "google_keyword": "ivana dojkić partner",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

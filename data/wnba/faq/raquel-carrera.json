@@ -1,0 +1,27 @@
+{
+  "slug": "raquel-carrera",
+  "player_name": "Raquel Carrera",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How tall is Raquel Carrera?",
+      "answer": "Raquel Carrera is listed at 6' 3\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Raquel_Carrera"
+      ],
+      "google_keyword": "raquel carrera height",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "Is Raquel Carrera injured?",
+      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "raquel carrera injury",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

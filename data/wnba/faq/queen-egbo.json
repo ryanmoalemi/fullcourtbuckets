@@ -1,0 +1,66 @@
+{
+  "slug": "queen-egbo",
+  "player_name": "Queen Egbo",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Queen Egbo's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2024), Queen Egbo averaged 0.0 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "queen egbo stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Queen Egbo dating?",
+      "answer": "As of late 2026, Queen Egbo has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Queen_Egbo"
+      ],
+      "google_keyword": "queen egbo partner",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Queen Egbo make?",
+      "answer": "A precise public salary or net worth figure for Queen Egbo is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "queen egbo salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Queen Egbo?",
+      "answer": "She was born June 29, 2000 in Houston. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Queen_Egbo"
+      ],
+      "google_keyword": "queen egbo age",
+      "approx_monthly_volume": 10,
+      "birthdate": "2000-06-29"
+    },
+    {
+      "question": "What team does Queen Egbo play for?",
+      "answer": "Her most recent WNBA team on record is the Indiana Fever. She wears No. 4. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "queen egbo team",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Queen Egbo's parents?",
+      "answer": "Public profiles share limited verified detail about Queen Egbo's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Queen_Egbo"
+      ],
+      "google_keyword": "queen egbo parents",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
