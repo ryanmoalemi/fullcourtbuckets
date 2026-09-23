@@ -1,0 +1,20 @@
+{
+  "request_id": "67013-c6e4f0c74af7-upload-20260923T0559Z",
+  "player_id": 67013,
+  "player_name": "Cotie McMahon",
+  "slug": "cotie-mcmahon",
+  "approved": true,
+  "sha256": "c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5",
+  "bytes": 2000029,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "repository_path": "portrait-handoff/67013-cotie-mcmahon-c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/cotie-mcmahon/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/67013-cotie-mcmahon-c6e4f0c74af7c2465faeaba0999dd18284fbf7e23623007a70d25e1e391953f5.png",
+  "github_blob_sha": "577bb33f696702dc1cfa825f25b03e1c6408a275"
+}
