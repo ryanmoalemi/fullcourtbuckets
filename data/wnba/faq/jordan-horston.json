@@ -98,6 +98,16 @@
       ],
       "google_keyword": "jordan horston tennessee",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "When was Jordan Horston drafted?",
+      "answer": "Horston was selected 9th overall by the Storm in the 2023 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jordan_Horston"
+      ],
+      "google_keyword": "jordan horston draft",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."
