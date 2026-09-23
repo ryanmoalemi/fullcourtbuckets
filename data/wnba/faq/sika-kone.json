@@ -1,0 +1,37 @@
+{
+  "slug": "sika-kone",
+  "player_name": "Sika Kone",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Sika Kone's stats / points per game?",
+      "answer": "In the 2026 regular season, Sika Kone averaged 1.9 points, 1.1 rebounds, and 0.2 assists in 34 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sika kone stats",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "How much does Sika Kone make?",
+      "answer": "A precise public salary or net worth figure for Sika Kone is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "sika kone salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Sika Kone?",
+      "answer": "Sika Kone is listed at 6' 3\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sika_Kon%C3%A9"
+      ],
+      "google_keyword": "sika kone height",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

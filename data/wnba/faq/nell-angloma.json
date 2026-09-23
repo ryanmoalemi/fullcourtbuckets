@@ -1,0 +1,47 @@
+{
+  "slug": "nell-angloma",
+  "player_name": "Nell Angloma",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Nell Angloma's stats / points per game?",
+      "answer": "In the 2026 regular season, Nell Angloma averaged 4.2 points, 1.9 rebounds, and 0.8 assists in 38 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "nell angloma stats",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How tall is Nell Angloma?",
+      "answer": "Nell Angloma is listed at 6' 1\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nell_Angloma"
+      ],
+      "google_keyword": "nell angloma height",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What is Nell Angloma's nationality?",
+      "answer": "Nell Angloma is French.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nell_Angloma"
+      ],
+      "google_keyword": "nell angloma parents nationality",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Nell Angloma's parents?",
+      "answer": "Public profiles share limited verified detail about Nell Angloma's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Nell_Angloma"
+      ],
+      "google_keyword": "nell angloma parents",
+      "approx_monthly_volume": 70
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

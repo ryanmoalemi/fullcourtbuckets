@@ -1,0 +1,65 @@
+{
+  "slug": "awak-kuier",
+  "player_name": "Awak Kuier",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Awak Kuier's stats / points per game?",
+      "answer": "In the 2026 regular season, Awak Kuier averaged 6.1 points, 3.9 rebounds, and 1.0 assists in 40 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "awak kuier stats",
+      "approx_monthly_volume": 1300
+    },
+    {
+      "question": "How much does Awak Kuier make?",
+      "answer": "A precise public salary or net worth figure for Awak Kuier is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "awak kuier salary",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How tall is Awak Kuier?",
+      "answer": "Awak Kuier is listed at 6' 6\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Awak_Kuier"
+      ],
+      "google_keyword": "awak kuier height",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What position does Awak Kuier play?",
+      "answer": "Awak Kuier is listed as a F for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "awak kuier position",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "When was Awak Kuier drafted?",
+      "answer": "Selected by the Wings with the second overall pick in the 2021 WNBA draft, she was the second Finnish player in the history of the league after Taru Tuukkanen to be drafted, and she became the first Finnish player to play in the WNBA in May 2021.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Awak_Kuier"
+      ],
+      "google_keyword": "awak kuier draft",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Who are Awak Kuier's parents?",
+      "answer": "Public profiles share limited verified detail about Awak Kuier's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Awak_Kuier"
+      ],
+      "google_keyword": "awak kuier parents",
+      "approx_monthly_volume": 40
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

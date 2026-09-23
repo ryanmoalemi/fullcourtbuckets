@@ -1,0 +1,65 @@
+{
+  "slug": "teonni-key",
+  "player_name": "Teonni Key",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Teonni Key's stats / points per game?",
+      "answer": "In the 2026 regular season, Teonni Key averaged 2.0 points, 1.9 rebounds, and 0.5 assists in 37 games for Tempo. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "teonni key stats",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How tall is Teonni Key?",
+      "answer": "Teonni Key is listed at 6' 5\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teonni_Key"
+      ],
+      "google_keyword": "teonni key height",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What college did Teonni Key attend?",
+      "answer": "Key played college basketball at the North Carolina Tar Heels and Kentucky Wildcats.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teonni_Key"
+      ],
+      "google_keyword": "teonni key tennessee",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Teonni Key injured?",
+      "answer": "Injury status changes during the season. Check the latest Tempo reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "teonni key injury",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "Who are Teonni Key's parents?",
+      "answer": "Public profiles share limited verified detail about Teonni Key's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teonni_Key"
+      ],
+      "google_keyword": "teonni key family",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Who is Teonni Key?",
+      "answer": "Teonni Key is an American professional basketball player for the Toronto Tempo of the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Teonni_Key"
+      ],
+      "google_keyword": "teonni key wikipedia",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
