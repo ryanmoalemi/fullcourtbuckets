@@ -11,10 +11,30 @@
     1374
   ],
   "repository_path": "portrait-handoff/707-christyn-williams-f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/christyn-williams/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/707-christyn-williams-f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73.png",
-  "github_blob_sha": "90e33826acb880ceb031ed1c6ad641a17b3f28ed"
+  "github_blob_sha": "90e33826acb880ceb031ed1c6ad641a17b3f28ed",
+  "live_verified": true,
+  "upload_run_id": 35823118482,
+  "publication_run_id": 35823133227,
+  "publication_commit": "7d2895b616222c75964bead14e04bd76a6ccc8f9",
+  "verified_url": "https://fullcourtbuckets.com/wnba/christyn-williams/?v=f3daf3eb3d23",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/christyn-williams/portrait.png?v=f3daf3eb3d23",
+    "natural_dimensions": [
+      1145,
+      1374
+    ],
+    "public_sha256": "f3daf3eb3d23c479bbfaf5e49e081c16a57b2cc6f1bfa79e62325b6932604f73",
+    "public_bytes": 1998854,
+    "canonical": "https://fullcourtbuckets.com/wnba/christyn-williams/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "f3daf3eb3d23"
+  }
 }
