@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/67123-costanza-verona-eab0ed060aaa05a0522eb9ae7cabdf74c5a5b04a924f51005b6b7b33d5a4a772.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/costanza-verona/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/67123-costanza-verona-eab0ed060aaa05a0522eb9ae7cabdf74c5a5b04a924f51005b6b7b33d5a4a772.png",
-  "github_blob_sha": "c05c315264d068e4494d598f2282715e4c55466e"
+  "github_blob_sha": "c05c315264d068e4494d598f2282715e4c55466e",
+  "live_verified": true,
+  "upload_run_id": 35823896442,
+  "publication_run_id": 35823910541,
+  "publication_commit": "c4657a307122722dfebab4427046b54d9e4435f8",
+  "verified_url": "https://fullcourtbuckets.com/wnba/costanza-verona/?v=eab0ed060aaa",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/costanza-verona/portrait.png?v=eab0ed060aaa",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "eab0ed060aaa05a0522eb9ae7cabdf74c5a5b04a924f51005b6b7b33d5a4a772",
+    "public_bytes": 1923840,
+    "canonical": "https://fullcourtbuckets.com/wnba/costanza-verona/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "eab0ed060aaa"
+  }
 }
