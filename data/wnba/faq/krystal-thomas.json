@@ -1,0 +1,64 @@
+{
+  "slug": "krystal-thomas",
+  "player_name": "Krystal Thomas",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Krystal Thomas?",
+      "answer": "Krystal Thomas is an American former professional basketball player in the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Krystal_Thomas"
+      ],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What team does Krystal Thomas play for?",
+      "answer": "Her most recent WNBA team on record is the Seattle Storm. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What are Krystal Thomas's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2018), Krystal Thomas averaged 1.8 points, 2.5 rebounds, and 0.2 assists in 24 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What position does Krystal Thomas play?",
+      "answer": "Krystal Thomas is listed as a Center for the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "How old is Krystal Thomas?",
+      "answer": "Public profiles list Krystal Thomas as born in 1989. As of late 2026 that puts her around 37 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Krystal_Thomas"
+      ],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170,
+      "birthdate": "1989-01-01"
+    },
+    {
+      "question": "What is Krystal Thomas's nationality?",
+      "answer": "Krystal Thomas is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Krystal_Thomas"
+      ],
+      "google_keyword": "krystal thomas",
+      "approx_monthly_volume": 170
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

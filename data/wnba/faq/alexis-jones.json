@@ -1,0 +1,92 @@
+{
+  "slug": "alexis-jones",
+  "player_name": "Alexis Jones",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What college did Alexis Jones attend?",
+      "answer": "Jones played college basketball at Duke University, then transferred to Baylor University.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Jones_(basketball)"
+      ],
+      "google_keyword": "alexis jones duke",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Alexis Jones?",
+      "answer": "Alexis Jones is an American professional basketball player who played for the Charlotte Crown in the UpShot League.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Jones_(basketball)"
+      ],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What team does Alexis Jones play for?",
+      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 12. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What are Alexis Jones's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2019), Alexis Jones averaged 3.3 points, 1.0 rebounds, and 0.7 assists in 3 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What is Alexis Jones's jersey number?",
+      "answer": "Alexis Jones wears number 12 for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What position does Alexis Jones play?",
+      "answer": "Alexis Jones is listed as a Guard for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "How old is Alexis Jones?",
+      "answer": "Public profiles list Alexis Jones as born in 1994. As of late 2026 that puts her around 32 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Jones_(basketball)"
+      ],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900,
+      "birthdate": "1994-01-01"
+    },
+    {
+      "question": "When was Alexis Jones drafted?",
+      "answer": "She was drafted in 2017 by the Lynx.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Jones_(basketball)"
+      ],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    },
+    {
+      "question": "What is Alexis Jones's nationality?",
+      "answer": "Alexis Jones is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Jones_(basketball)"
+      ],
+      "google_keyword": "alexis jones",
+      "approx_monthly_volume": 1900
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "ann-wauters",
+  "player_name": "Ann Wauters",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Ann Wauters?",
+      "answer": "Ann Hilde Willy Wauters is a Belgian former professional basketball player and coach, most recently serving as an assistant coach for the Chicago Sky in the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ann_Wauters"
+      ],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What team does Ann Wauters play for?",
+      "answer": "Her most recent WNBA team on record is the Las Vegas Aces. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What are Ann Wauters's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Ann Wauters averaged 1.0 points, 1.0 rebounds, and 0.0 assists in 2 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What position does Ann Wauters play?",
+      "answer": "Ann Wauters is listed as a Center for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Ann Wauters?",
+      "answer": "Public profiles list Ann Wauters as born in 1980. As of late 2026 that puts her around 46 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ann_Wauters"
+      ],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70,
+      "birthdate": "1980-01-01"
+    },
+    {
+      "question": "What is Ann Wauters's nationality?",
+      "answer": "Ann Wauters is Belgian.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ann_Wauters"
+      ],
+      "google_keyword": "ann wauters",
+      "approx_monthly_volume": 70
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

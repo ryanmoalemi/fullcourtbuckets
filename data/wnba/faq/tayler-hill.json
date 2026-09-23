@@ -1,0 +1,82 @@
+{
+  "slug": "tayler-hill",
+  "player_name": "Tayler Hill",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What college did Tayler Hill attend?",
+      "answer": "Hill played college basketball at Ohio State Buckeyes.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tayler_Hill"
+      ],
+      "google_keyword": "tayler hill ohio state",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Tayler Hill?",
+      "answer": "Tayler Hill is an American former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tayler_Hill"
+      ],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What team does Tayler Hill play for?",
+      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 4. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What are Tayler Hill's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Tayler Hill averaged 15.4 points, 2.6 rebounds, and 2.9 assists in 32 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What is Tayler Hill's jersey number?",
+      "answer": "Tayler Hill wears number 4 for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What position does Tayler Hill play?",
+      "answer": "Tayler Hill is listed as a Guard for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Tayler Hill?",
+      "answer": "Public profiles list Tayler Hill as born in 1990. As of late 2026 that puts her around 36 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tayler_Hill"
+      ],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70,
+      "birthdate": "1990-01-01"
+    },
+    {
+      "question": "What is Tayler Hill's nationality?",
+      "answer": "Tayler Hill is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tayler_Hill"
+      ],
+      "google_keyword": "tayler hill wnba",
+      "approx_monthly_volume": 70
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

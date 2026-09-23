@@ -1,0 +1,64 @@
+{
+  "slug": "sandrine-gruda",
+  "player_name": "Sandrine Gruda",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Sandrine Gruda?",
+      "answer": "Sandrine Gruda is a French former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sandrine_Gruda"
+      ],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What team does Sandrine Gruda play for?",
+      "answer": "Her most recent WNBA team on record is the Connecticut Sun. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What are Sandrine Gruda's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2017), Sandrine Gruda averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What position does Sandrine Gruda play?",
+      "answer": "Sandrine Gruda is listed as a Forward for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Sandrine Gruda?",
+      "answer": "Public profiles list Sandrine Gruda as born in 1987. As of late 2026 that puts her around 39 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sandrine_Gruda"
+      ],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40,
+      "birthdate": "1987-01-01"
+    },
+    {
+      "question": "What is Sandrine Gruda's nationality?",
+      "answer": "Sandrine Gruda is French.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sandrine_Gruda"
+      ],
+      "google_keyword": "sandrine gruda",
+      "approx_monthly_volume": 40
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

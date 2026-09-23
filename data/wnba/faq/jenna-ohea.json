@@ -1,0 +1,74 @@
+{
+  "slug": "jenna-ohea",
+  "player_name": "Jenna O'Hea",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Did Jenna O'Hea retire?",
+      "answer": "As of late 2026, Jenna O'Hea has a public WNBA playing career; check her bio for current status.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jenna_O'Hea"
+      ],
+      "google_keyword": "jenna o'hea retirement",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Who is Jenna O'Hea?",
+      "answer": "Jenna O'Hea is an Australian former professional basketball player and former captain of Australia's national team, the Opals.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jenna_O'Hea"
+      ],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What team does Jenna O'Hea play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What are Jenna O'Hea's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2015), Jenna O'Hea averaged 5.9 points, 1.9 rebounds, and 2.4 assists in 34 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What position does Jenna O'Hea play?",
+      "answer": "Jenna O'Hea is listed as a Guard for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Jenna O'Hea?",
+      "answer": "Public profiles list Jenna O'Hea as born in 1987. As of late 2026 that puts her around 39 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jenna_O'Hea"
+      ],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70,
+      "birthdate": "1987-01-01"
+    },
+    {
+      "question": "What is Jenna O'Hea's nationality?",
+      "answer": "Jenna O'Hea is Australian.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jenna_O'Hea"
+      ],
+      "google_keyword": "jenna o'hea",
+      "approx_monthly_volume": 70
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

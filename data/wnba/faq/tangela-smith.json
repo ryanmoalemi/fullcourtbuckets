@@ -1,0 +1,64 @@
+{
+  "slug": "tangela-smith",
+  "player_name": "Tangela Smith",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Tangela Smith?",
+      "answer": "Tangela Nicole Smith is an American former basketball player in the WNBA.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tangela_Smith"
+      ],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590
+    },
+    {
+      "question": "What team does Tangela Smith play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590
+    },
+    {
+      "question": "What are Tangela Smith's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), Tangela Smith averaged 1.0 points, 0.5 rebounds, and 0.5 assists in 2 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590
+    },
+    {
+      "question": "What position does Tangela Smith play?",
+      "answer": "Tangela Smith is listed as a Center for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590
+    },
+    {
+      "question": "How old is Tangela Smith?",
+      "answer": "Public profiles list Tangela Smith as born in 1977. As of late 2026 that puts her around 49 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tangela_Smith"
+      ],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590,
+      "birthdate": "1977-01-01"
+    },
+    {
+      "question": "What is Tangela Smith's nationality?",
+      "answer": "Tangela Smith is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tangela_Smith"
+      ],
+      "google_keyword": "tangela smith mercury assistant coach",
+      "approx_monthly_volume": 590
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

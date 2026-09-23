@@ -1,0 +1,64 @@
+{
+  "slug": "erika-de-souza",
+  "player_name": "Erika de Souza",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Erika de Souza?",
+      "answer": "Érika Cristina de Souza is a Brazilian professional basketball player for BC Castors Braine of the EuroLeague.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C3%89rika_de_Souza"
+      ],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What team does Erika de Souza play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What are Erika de Souza's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2017), Erika de Souza averaged 3.6 points, 2.6 rebounds, and 0.7 assists in 27 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What position does Erika de Souza play?",
+      "answer": "Erika de Souza is listed as a Forward for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "How old is Erika de Souza?",
+      "answer": "Public profiles list Erika de Souza as born in 1982. As of late 2026 that puts her around 44 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C3%89rika_de_Souza"
+      ],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110,
+      "birthdate": "1982-01-01"
+    },
+    {
+      "question": "What is Erika de Souza's nationality?",
+      "answer": "Erika de Souza is Brazilian.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/%C3%89rika_de_Souza"
+      ],
+      "google_keyword": "erika de souza",
+      "approx_monthly_volume": 110
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

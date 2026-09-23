@@ -1,0 +1,62 @@
+{
+  "slug": "ji-su-park",
+  "player_name": "Ji-Su Park",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Ji-Su Park?",
+      "answer": "Park Ji-su is a South Korean female professional basketball player for the Cheongju KB Stars of the Women's Korean Basketball League (WKBL).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Park_Ji-su"
+      ],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What team does Ji-Su Park play for?",
+      "answer": "Her most recent WNBA team on record is the Las Vegas Aces. She wears No. 19. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What are Ji-Su Park's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2021), Ji-Su Park averaged 2.0 points, 1.8 rebounds, and 0.8 assists in 25 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What is Ji-Su Park's jersey number?",
+      "answer": "Ji-Su Park wears number 19 for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What position does Ji-Su Park play?",
+      "answer": "Ji-Su Park is listed as a Center for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How old is Ji-Su Park?",
+      "answer": "Public profiles list Ji-Su Park as born in 1998. As of late 2026 that puts her around 28 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Park_Ji-su"
+      ],
+      "google_keyword": "park ji-su",
+      "approx_monthly_volume": 90,
+      "birthdate": "1998-01-01"
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
