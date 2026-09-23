@@ -1,0 +1,37 @@
+{
+  "slug": "shavonte-zellous",
+  "player_name": "Shavonte Zellous",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Shavonte Zellous make?",
+      "answer": "A precise public salary or net worth figure for Shavonte Zellous is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "shavonte zellous salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Shavonte Zellous married?",
+      "answer": "There is no widely reported public record of Shavonte Zellous being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shavonte_Zellous"
+      ],
+      "google_keyword": "shavonte zellous married",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Shavonte Zellous injured?",
+      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "shavonte zellous injury",
+      "approx_monthly_volume": 0
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

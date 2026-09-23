@@ -1,0 +1,70 @@
+{
+  "slug": "taina-mair",
+  "player_name": "Taina Mair",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How tall is Taina Mair?",
+      "answer": "Taina Mair is listed at 5' 9\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair height",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Taina Mair?",
+      "answer": "Public profiles list Taina Mair as born in 2003. As of late 2026 that puts her around 23 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair age",
+      "approx_monthly_volume": 40,
+      "birthdate": "2003-01-01"
+    },
+    {
+      "question": "What is Taina Mair's nationality?",
+      "answer": "Taina Mair is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair parents nationality",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Taina Mair's parents?",
+      "answer": "Public profiles share limited verified detail about Taina Mair's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair parents",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What college did Taina Mair attend?",
+      "answer": "Mair played college basketball at Duke.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair duke",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Who is Taina Mair?",
+      "answer": "Taina Mair is an American professional basketball player for the Seattle Storm of the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Taina_Mair"
+      ],
+      "google_keyword": "taina mair wikipedia",
+      "approx_monthly_volume": 40
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

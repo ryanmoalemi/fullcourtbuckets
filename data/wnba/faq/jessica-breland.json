@@ -1,0 +1,29 @@
+{
+  "slug": "jessica-breland",
+  "player_name": "Jessica Breland",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Jessica Breland make?",
+      "answer": "A precise public salary or net worth figure for Jessica Breland is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "jessica breland net worth",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Jessica Breland married?",
+      "answer": "There is no widely reported public record of Jessica Breland being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jessica_Breland"
+      ],
+      "google_keyword": "jessica breland married",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

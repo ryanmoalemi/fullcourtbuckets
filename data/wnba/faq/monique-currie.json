@@ -1,0 +1,39 @@
+{
+  "slug": "monique-currie",
+  "player_name": "Monique Currie",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Monique Currie make?",
+      "answer": "A precise public salary or net worth figure for Monique Currie is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "monique currie salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Monique Currie married?",
+      "answer": "There is no widely reported public record of Monique Currie being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monique_Currie"
+      ],
+      "google_keyword": "monique currie husband",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Monique Currie's parents?",
+      "answer": "Public profiles share limited verified detail about Monique Currie's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monique_Currie"
+      ],
+      "google_keyword": "monique currie family",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

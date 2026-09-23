@@ -1,0 +1,40 @@
+{
+  "slug": "kelsey-griffin",
+  "player_name": "Kelsey Griffin",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Kelsey Griffin dating?",
+      "answer": "As of late 2026, Kelsey Griffin has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kelsey_Griffin"
+      ],
+      "google_keyword": "kelsey griffin partner",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Kelsey Griffin?",
+      "answer": "Public profiles list Kelsey Griffin as born in 1987. As of late 2026 that puts her around 39 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kelsey_Griffin"
+      ],
+      "google_keyword": "kelsey griffin age",
+      "approx_monthly_volume": 10,
+      "birthdate": "1987-01-01"
+    },
+    {
+      "question": "Is Kelsey Griffin married?",
+      "answer": "There is no widely reported public record of Kelsey Griffin being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kelsey_Griffin"
+      ],
+      "google_keyword": "kelsey griffin wife",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

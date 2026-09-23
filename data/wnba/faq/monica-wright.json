@@ -1,0 +1,58 @@
+{
+  "slug": "monica-wright",
+  "player_name": "Monica Wright",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Monica Wright's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2014), Monica Wright averaged 5.8 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "monica wright stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Monica Wright make?",
+      "answer": "A precise public salary or net worth figure for Monica Wright is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "monica wright net worth",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Monica Wright?",
+      "answer": "Public profiles list Monica Wright as born in 1988. As of late 2026 that puts her around 38 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monica_Wright"
+      ],
+      "google_keyword": "monica wright age",
+      "approx_monthly_volume": 30,
+      "birthdate": "1988-01-01"
+    },
+    {
+      "question": "Is Monica Wright married?",
+      "answer": "There is no widely reported public record of Monica Wright being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monica_Wright"
+      ],
+      "google_keyword": "monica wright husband",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "Who is Monica Wright?",
+      "answer": "Monica Ashante Wright Rogers is an American basketball executive and former player and coach.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Monica_Wright"
+      ],
+      "google_keyword": "who is monica wright",
+      "approx_monthly_volume": 50
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

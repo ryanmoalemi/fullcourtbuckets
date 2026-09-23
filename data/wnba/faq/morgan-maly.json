@@ -1,0 +1,19 @@
+{
+  "slug": "morgan-maly",
+  "player_name": "Morgan Maly",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How tall is Morgan Maly?",
+      "answer": "Morgan Maly is listed at 6' 1\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/List_of_current_WNBA_team_rosters"
+      ],
+      "google_keyword": "morgan maly height",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

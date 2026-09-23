@@ -1,0 +1,43 @@
+{
+  "slug": "sugar-rodgers",
+  "player_name": "Sugar Rodgers",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Sugar Rodgers make?",
+      "answer": "A precise public salary or net worth figure for Sugar Rodgers is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "sugar rodgers salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What is Sugar Rodgers's jersey number?",
+      "answer": "Sugar Rodgers wears number 15 for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sugar rodgers jersey",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Sugar Rodgers married?",
+      "answer": "There is no widely reported public record of Sugar Rodgers being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "sugar rodgers husband",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Sugar Rodgers?",
+      "answer": "Sugar Rodgers is a professional basketball player for the Minnesota Lynx.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "sugar rodgers bio",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "kara-braxton",
+  "player_name": "Kara Braxton",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Kara Braxton's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2013), Kara Braxton averaged 8.7 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kara braxton stats",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How much does Kara Braxton make?",
+      "answer": "A precise public salary or net worth figure for Kara Braxton is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "kara braxton net worth",
+      "approx_monthly_volume": 260
+    },
+    {
+      "question": "Is Kara Braxton married?",
+      "answer": "There is no widely reported public record of Kara Braxton being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "kara braxton husband",
+      "approx_monthly_volume": 1000
+    },
+    {
+      "question": "Does Kara Braxton have kids?",
+      "answer": "There is no widely reported public information that Kara Braxton has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "kara braxton son",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "Who are Kara Braxton's parents?",
+      "answer": "Public profiles share limited verified detail about Kara Braxton's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [],
+      "google_keyword": "kara braxton family",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "Who is Kara Braxton?",
+      "answer": "Kara Braxton is a professional basketball player for the Dallas Wings.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "kara braxton wikipedia",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

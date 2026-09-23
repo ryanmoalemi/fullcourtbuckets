@@ -1,0 +1,78 @@
+{
+  "slug": "tamera-young",
+  "player_name": "Tamera Young",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Tamera Young's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2019), Tamera Young averaged 5.3 points,",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "tamera young stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Tamera Young dating?",
+      "answer": "As of late 2026, Tamera Young has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tamera_Young"
+      ],
+      "google_keyword": "tamera young dating",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Tamera Young make?",
+      "answer": "A precise public salary or net worth figure for Tamera Young is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "tamera young net worth",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Tamera Young?",
+      "answer": "Public profiles list Tamera Young as born in 1986. As of late 2026 that puts her around 40 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tamera_Young"
+      ],
+      "google_keyword": "tamera young age",
+      "approx_monthly_volume": 30,
+      "birthdate": "1986-01-01"
+    },
+    {
+      "question": "Is Tamera Young married?",
+      "answer": "There is no widely reported public record of Tamera Young being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tamera_Young"
+      ],
+      "google_keyword": "tamera young wife",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "Who is Tamera Young?",
+      "answer": "Tamera \"Ty\" Young is an American former basketball player and assistant coach with the Chicago Sky.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tamera_Young"
+      ],
+      "google_keyword": "who is tamera young",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Tamera Young's parents?",
+      "answer": "Public profiles share limited verified detail about Tamera Young's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Tamera_Young"
+      ],
+      "google_keyword": "tamera young parents",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "essence-carson",
+  "player_name": "Essence Carson",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Essence Carson married?",
+      "answer": "There is no widely reported public record of Essence Carson being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Essence_Carson"
+      ],
+      "google_keyword": "essence carson married",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Essence Carson injured?",
+      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "essence carson injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Does Essence Carson have kids?",
+      "answer": "There is no widely reported public information that Essence Carson has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Essence_Carson"
+      ],
+      "google_keyword": "essence carson",
+      "approx_monthly_volume": 210
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

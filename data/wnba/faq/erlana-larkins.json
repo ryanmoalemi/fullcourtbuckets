@@ -1,0 +1,27 @@
+{
+  "slug": "erlana-larkins",
+  "player_name": "Erlana Larkins",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Erlana Larkins make?",
+      "answer": "A precise public salary or net worth figure for Erlana Larkins is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "erlana larkins salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Erlana Larkins injured?",
+      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "erlana larkins injury",
+      "approx_monthly_volume": 0
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
