@@ -98,6 +98,16 @@
       ],
       "google_keyword": "carla leite wiki",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "When was Carla Leite drafted?",
+      "answer": "She was selected ninth overall by the Dallas Wings in the 2024 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Carla_Leite"
+      ],
+      "google_keyword": "carla leite draft",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

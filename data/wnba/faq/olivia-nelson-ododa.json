@@ -137,6 +137,17 @@
       ],
       "google_keyword": "olivia nelson-ododa",
       "approx_monthly_volume": 12100
+    },
+    {
+      "question": "How old is Olivia Nelson-Ododa?",
+      "answer": "Olivia Nelson-Ododa was born August 17, 2000 in Lansing. As of late 2026 that puts her at 26 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Olivia_Nelson-Ododa"
+      ],
+      "google_keyword": "olivia nelson-ododa age",
+      "approx_monthly_volume": 50,
+      "birthdate": "2000-08-17"
     }
   ],
   "notes": "Reader-facing sports copy only."

@@ -42,6 +42,16 @@
       ],
       "google_keyword": "li meng chinese basketball",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "How tall is Li Meng?",
+      "answer": "Li Meng is listed at 5' 11\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Li_Meng_%28basketball%29"
+      ],
+      "google_keyword": "li meng height",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

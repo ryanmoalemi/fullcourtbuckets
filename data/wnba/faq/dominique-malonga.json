@@ -116,6 +116,16 @@
       ],
       "google_keyword": "dominique malonga parents",
       "approx_monthly_volume": 50
+    },
+    {
+      "question": "When was Dominique Malonga drafted?",
+      "answer": "She was selected second overall by the Storm in the 2025 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dominique_Malonga_(basketball)"
+      ],
+      "google_keyword": "dominique malonga draft",
+      "approx_monthly_volume": 20
     }
   ],
   "notes": "Reader-facing sports copy only."

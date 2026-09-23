@@ -118,6 +118,16 @@
       ],
       "google_keyword": "dorka juhasz parents",
       "approx_monthly_volume": 10
+    },
+    {
+      "question": "When was Dorka Juhasz drafted?",
+      "answer": "She was selected 16th overall by the Lynx in the 2023 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
+      ],
+      "google_keyword": "dorka juhasz draft pick",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

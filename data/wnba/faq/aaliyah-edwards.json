@@ -144,6 +144,16 @@
       "sources": [],
       "google_keyword": "aaliyah edwards injury",
       "approx_monthly_volume": 320
+    },
+    {
+      "question": "When was Aaliyah Edwards drafted?",
+      "answer": "She played college basketball at UConn before being selected sixth overall by the Mystics in the 2024 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+      ],
+      "google_keyword": "aaliyah edwards draft pick",
+      "approx_monthly_volume": 30
     }
   ],
   "notes": "Reader-facing sports copy only."

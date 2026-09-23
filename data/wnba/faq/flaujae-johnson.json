@@ -100,6 +100,16 @@
       ],
       "google_keyword": "flau'jae johnson dad",
       "approx_monthly_volume": 1600
+    },
+    {
+      "question": "What college did Flau'jae Johnson attend?",
+      "answer": "Flau'jae Johnson played college basketball at LSU.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Flau'jae_Johnson"
+      ],
+      "google_keyword": "flau'jae johnson lsu",
+      "approx_monthly_volume": 210
     }
   ],
   "notes": "Reader-facing sports copy only."

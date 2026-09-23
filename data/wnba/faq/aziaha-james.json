@@ -78,6 +78,16 @@
       ],
       "google_keyword": "aziaha james parents",
       "approx_monthly_volume": 30
+    },
+    {
+      "question": "When was Aziaha James drafted?",
+      "answer": "She was selected 12th overall by the Wings in the 2025 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Aziaha_James"
+      ],
+      "google_keyword": "aziaha james draft",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."

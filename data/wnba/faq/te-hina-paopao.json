@@ -79,6 +79,27 @@
       ],
       "google_keyword": "te-hina paopao wikipedia",
       "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Te-Hina Paopao?",
+      "answer": "Te-Hina Paopao was born August 21, 2002. As of late 2026 that puts her at 24 years old.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Te-Hina_Paopao"
+      ],
+      "google_keyword": "te hina paopao age",
+      "approx_monthly_volume": 40,
+      "birthdate": "2002-08-21"
+    },
+    {
+      "question": "What college did Te-Hina Paopao attend?",
+      "answer": "She played college basketball at South Carolina and Oregon.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Te-Hina_Paopao"
+      ],
+      "google_keyword": "te-hina paopao south carolina",
+      "approx_monthly_volume": 10
     }
   ],
   "notes": "Reader-facing sports copy only."
