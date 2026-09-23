@@ -1,0 +1,20 @@
+{
+  "request_id": "774-97a14da631b3-upload-20260923T0525Z",
+  "player_id": 774,
+  "player_name": "Chloe Bibby",
+  "slug": "chloe-bibby",
+  "approved": true,
+  "sha256": "97a14da631b30ba2a6d17ccf70f9d02dd40eaf61e887588927bbed03ad30424e",
+  "bytes": 1973545,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "repository_path": "portrait-handoff/774-chloe-bibby-97a14da631b30ba2a6d17ccf70f9d02dd40eaf61e887588927bbed03ad30424e.png",
+  "status": "uploaded_pending_live_verification",
+  "path": "images/players/chloe-bibby/portrait.png",
+  "original_bytes_preserved": true,
+  "source": "repository_file",
+  "github_master_path": "portrait-masters/774-chloe-bibby-97a14da631b30ba2a6d17ccf70f9d02dd40eaf61e887588927bbed03ad30424e.png",
+  "github_blob_sha": "4e572e4eac9c1f2ed4e600d8acabb4756909c01e"
+}
