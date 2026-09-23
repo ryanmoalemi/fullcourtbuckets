@@ -1,0 +1,96 @@
+{
+  "slug": "lauren-jackson",
+  "player_name": "Lauren Jackson",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How many championships does Lauren Jackson have?",
+      "answer": "Jackson won two WNBA titles with the Seattle Storm (2004 and 2010) during her Hall of Fame-caliber career.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "lauren jackson championships",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How many MVPs does Lauren Jackson have?",
+      "answer": "Lauren Jackson is a three-time WNBA MVP (2003, 2007, 2010) and one of the greatest international players in league history.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "lauren jackson mvp",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Lauren Jackson?",
+      "answer": "She was born May 11, 1981 in Albury, New South Wales, Australia. As of late 2026 that puts her at 45 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "lauren jackson age",
+      "approx_monthly_volume": 20,
+      "birthdate": "1981-05-11"
+    },
+    {
+      "question": "Did Lauren Jackson retire?",
+      "answer": "Jackson's primary WNBA career ended years ago after injury; she has since been associated with Australian basketball and occasional comebacks abroad rather than a full modern WNBA starring role.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "why did lauren jackson retire",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What position does Lauren Jackson play?",
+      "answer": "Lauren Jackson is listed as a Forward for the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "lauren jackson position",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What college did Lauren Jackson attend?",
+      "answer": "Jackson entered the WNBA out of Australia rather than a traditional U.S. college path and starred internationally from a young age.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "lauren jackson college",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What team does Lauren Jackson play for?",
+      "answer": "Her most recent WNBA team on record is the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "lauren jackson team",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Where is Lauren Jackson from?",
+      "answer": "She is from Albury, New South Wales, Australia.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "where is lauren jackson from",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Who is Lauren Jackson?",
+      "answer": "Lauren Elizabeth Jackson is an Australian former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Lauren_Jackson"
+      ],
+      "google_keyword": "who is lauren jackson",
+      "approx_monthly_volume": 0
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
