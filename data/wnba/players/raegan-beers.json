@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-22T07:01:21+00:00",
+  "checked_at": "2026-09-23T05:55:18+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -69,6 +69,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 25072,
+      "player_id": 67218,
+      "date": "2026-09-22T23:30:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 79,
+      "away_score": 69,
+      "minutes": "24",
+      "pts": 11.0,
+      "ast": 1.0,
+      "reb": 5.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
     {
       "game_id": 25065,
       "player_id": 67218,

@@ -627,6 +627,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 710,
+      "slug": "kate-martin",
+      "player_name": "Kate Martin",
+      "listed_active": true,
+      "profile_path": "/wnba/kate-martin/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 571,
       "slug": "katie-lou-samuelson",
       "player_name": "Katie Lou Samuelson",
@@ -942,11 +951,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 269348,
-      "slug": "matilde-villa",
+      "player_id": 270867,
+      "slug": "matilde-villa-270867",
       "player_name": "Matilde Villa",
       "listed_active": true,
-      "profile_path": "/wnba/matilde-villa/",
+      "profile_path": "/wnba/matilde-villa-270867/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -3134,15 +3143,6 @@
       "player_name": "Karima Christmas-Kelly",
       "listed_active": false,
       "profile_path": "/wnba/karima-christmas-kelly/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 710,
-      "slug": "kate-martin",
-      "player_name": "Kate Martin",
-      "listed_active": false,
-      "profile_path": "/wnba/kate-martin/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-22T07:01:21+00:00",
+  "checked_at": "2026-09-23T05:55:18+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -11,7 +11,7 @@
     "last_name": "Gueye",
     "position": "C",
     "position_abbreviation": "C",
-    "height": "6' 2\"",
+    "height": "6' 4\"",
     "weight": "--",
     "jersey_number": "31",
     "college": null,

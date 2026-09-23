@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-22T07:01:21+00:00",
+  "checked_at": "2026-09-23T05:55:18+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -13,20 +13,27 @@
     "position_abbreviation": "G",
     "height": "6' 0\"",
     "weight": "Iowa",
-    "jersey_number": "21",
+    "jersey_number": "20",
     "college": null,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
+      "conference": "Eastern Conference"
     }
   },
   "slug": "kate-martin",
-  "active_in_provider_feed": false,
-  "current_team": null,
+  "active_in_provider_feed": true,
+  "current_team": {
+    "id": 6,
+    "full_name": "Chicago Sky",
+    "abbreviation": "CHI",
+    "city": "Chicago",
+    "name": "Sky",
+    "conference": "Eastern Conference"
+  },
   "season_stats": [
     {
       "player_id": 710,

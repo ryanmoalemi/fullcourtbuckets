@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-22T07:01:21+00:00",
+  "checked_at": "2026-09-23T05:55:18+00:00",
   "players": [
     {
       "id": 345,
@@ -3283,8 +3283,15 @@
       "id": 710,
       "slug": "kate-martin",
       "name": "Kate Martin",
-      "active_in_provider_feed": false,
-      "current_team": null,
+      "active_in_provider_feed": true,
+      "current_team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
       "path": "/wnba/kate-martin/",
       "data_path": "/data/wnba/players/kate-martin.json"
     },
@@ -4403,8 +4410,8 @@
       "data_path": "/data/wnba/players/matee-ajavon.json"
     },
     {
-      "id": 269348,
-      "slug": "matilde-villa",
+      "id": 270867,
+      "slug": "matilde-villa-270867",
       "name": "Matilde Villa",
       "active_in_provider_feed": true,
       "current_team": {
@@ -4415,8 +4422,8 @@
         "name": "Dream",
         "conference": "Eastern Conference"
       },
-      "path": "/wnba/matilde-villa/",
-      "data_path": "/data/wnba/players/matilde-villa.json"
+      "path": "/wnba/matilde-villa-270867/",
+      "data_path": "/data/wnba/players/matilde-villa-270867.json"
     },
     {
       "id": 671,
