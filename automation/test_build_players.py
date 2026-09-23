@@ -53,6 +53,7 @@ class BuildTests(unittest.TestCase):
             homepage=(root/'index.html').read_text();self.assertEqual(homepage.count('href="/wnba/"'),1);self.assertIn('Keep the homepage.',homepage)
             output=(root/'wnba/example-player/index.html').read_text();self.assertEqual(output.count('<h1 '),1)
             self.assertIn('<td>12.3</td>',output);self.assertNotIn('BALLDONTLIE_API_KEY',output)
+            self.assertNotIn('id="faq"',output);self.assertNotIn('FAQPage',output)
     def test_invalid_input_leaves_existing_page(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);data=setup(root);b.build(root)
@@ -65,33 +66,24 @@ class BuildTests(unittest.TestCase):
     def test_no_browser_api_key_or_provider_fetch(self):
         js=(ROOT/'players.js').read_text();self.assertNotIn('api.balldontlie.io',js);self.assertNotIn('Authorization',js)
 
-    def test_faq_between_sources_and_archive(self):
-        result = b.profile_page(P)
-        sources = result.find('id="sources"')
-        faq = result.find('id="faq"')
-        archive = result.find('archive-band')
-        self.assertGreater(sources, 0)
-        self.assertGreater(faq, sources)
-        self.assertGreater(archive, faq)
-        self.assertIn('"@type": "FAQPage"', result)
-        self.assertIn("What are Example Player's 2026 regular-season averages?", result)
-        self.assertNotIn('How tall is Example Player?', result)
+    def _write_faq(self, root, slug, items, slug_field=None):
+        faq_dir = root / 'data/wnba/faq'
+        faq_dir.mkdir(parents=True, exist_ok=True)
+        payload = {'slug': slug if slug_field is None else slug_field, 'items': items}
+        (faq_dir / f'{slug}.json').write_text(json.dumps(payload))
+        return root
 
-    def test_faq_omitted_when_fewer_than_three_answers(self):
-        p = copy.deepcopy(P)
-        p['season_stats'] = []
-        p['recent_completed_games'] = []
-        p['current_team'] = None
-        p['active_in_provider_feed'] = False
-        p['player'] = {'id': 1, 'first_name': 'Sparse', 'last_name': 'Player', 'position': None, 'height': None, 'jersey_number': None, 'college': None, 'weight': None}
-        html, entity = b.faq_section(p)
+    def test_no_faq_file_omits_section(self):
+        html, entity = b.faq_section(P)
         self.assertEqual(html, '')
         self.assertIsNone(entity)
-        page = b.profile_page(p)
+        page = b.profile_page(P)
         self.assertNotIn('id="faq"', page)
         self.assertNotIn('FAQPage', page)
+        self.assertNotIn("What are Example Player's 2026 regular-season averages?", page)
+        self.assertNotIn('How tall is Example Player?', page)
 
-    def test_faq_prefers_stats_over_hero_bio_restatements(self):
+    def test_rich_stats_do_not_generate_template_faq(self):
         p = copy.deepcopy(P)
         p['season_stats'] = [
             {'player_id': 1, 'season': 2026, 'season_type': 2, 'team': {'id': 1, 'full_name': 'Example Team'}, 'games_played': 10, 'pts': 12.3, 'reb': 4.5, 'ast': 6.7},
@@ -101,31 +93,102 @@ class BuildTests(unittest.TestCase):
         ]
         p['recent_completed_games'] = [
             {'date': '2026-09-20', 'pts': 18, 'reb': 5, 'ast': 7, 'team': {'id': 1}, 'home_team': {'id': 1}, 'visitor_team': {'id': 2}},
-            {'date': '2026-09-18', 'pts': 10, 'reb': 4, 'ast': 3, 'team': {'id': 1}, 'home_team': {'id': 2}, 'visitor_team': {'id': 1}},
-            {'date': '2026-09-15', 'pts': 22, 'reb': 8, 'ast': 6, 'team': {'id': 1}, 'home_team': {'id': 1}, 'visitor_team': {'id': 3}},
         ]
-        p['game_log_window_start'] = '2026-08-18'
-        html, entity = b.faq_section(p)
-        questions = [q['name'] for q in entity['mainEntity']]
-        self.assertTrue(any('regular-season averages' in q for q in questions))
-        self.assertTrue(any('playoff averages compare' in q for q in questions))
-        self.assertTrue(any('teams has Example Player played for' in q for q in questions))
-        self.assertTrue(any('scoring trends' in q for q in questions))
-        self.assertTrue(any('recent games' in q for q in questions))
-        self.assertFalse(any(q.startswith('How tall') for q in questions))
-        self.assertFalse(any('jersey number' in q for q in questions))
-        self.assertFalse(any('college' in q.lower() for q in questions))
-        joined = ' '.join(questions)
-        self.assertNotIn('Iowa', html)  # invalid weight must not become college FAQ
-
-    def test_faq_never_uses_invalid_weight_as_college(self):
-        p = copy.deepcopy(P)
         p['player']['college'] = None
         p['player']['weight'] = 'South Carolina'
         html, entity = b.faq_section(p)
-        blob = html + json.dumps(entity)
-        self.assertNotIn('South Carolina', blob)
-        self.assertNotIn('college', blob.lower())
+        self.assertEqual(html, '')
+        self.assertIsNone(entity)
+        page = b.profile_page(p)
+        self.assertNotIn('id="faq"', page)
+        self.assertNotIn('FAQPage', page)
+        self.assertNotIn('South Carolina', page)
+        self.assertNotIn('regular-season averages', page)
+        self.assertNotIn('playoff averages', page)
+
+    def test_curated_faq_renders_every_item_between_sources_and_archive(self):
+        items = [{'question': f'Question {i}?', 'answer': f'Answer {i} about <b>facts</b>.'} for i in range(15)]
+        items[0]['answer'] = "A'ja is listed at 6 feet 4 inches."
+        with tempfile.TemporaryDirectory() as d:
+            root = self._write_faq(Path(d), 'example-player', items)
+            html, entity = b.faq_section(P, root)
+            self.assertEqual(len(entity['mainEntity']), 15)
+            self.assertEqual([q['name'] for q in entity['mainEntity']], [f'Question {i}?' for i in range(15)])
+            self.assertEqual(entity['@type'], 'FAQPage')
+            self.assertEqual(entity['@id'], 'https://fullcourtbuckets.com/wnba/example-player/#faq')
+            self.assertIn("A'ja is listed at 6 feet 4 inches.", entity['mainEntity'][0]['acceptedAnswer']['text'])
+            self.assertEqual(html.count('class="faq-item"'), 15)
+            self.assertIn('A&#x27;ja is listed at 6 feet 4 inches.', html)
+            self.assertIn('Answer 14 about &lt;b&gt;facts&lt;/b&gt;.', html)
+            self.assertNotIn('<b>facts</b>', html)
+            page = b.profile_page(P, root)
+            sources = page.find('id="sources"')
+            faq = page.find('id="faq"')
+            archive = page.find('archive-band')
+            self.assertGreater(sources, 0)
+            self.assertGreater(faq, sources)
+            self.assertGreater(archive, faq)
+            self.assertEqual(page.count('"@type": "Question"'), 15)
+            self.assertIn('"@type": "FAQPage"', page)
+            self.assertNotIn('regular-season averages', page)
+            self.assertNotIn('google_keyword', page)
+
+    def test_empty_faq_file_omits_section(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = self._write_faq(Path(d), 'example-player', [])
+            html, entity = b.faq_section(P, root)
+            self.assertEqual(html, '')
+            self.assertIsNone(entity)
+
+    def test_mismatched_or_broken_faq_file_fails_closed(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            self._write_faq(root, 'example-player', [{'question': 'Q?', 'answer': 'A.'}], slug_field='someone-else')
+            with self.assertRaises(b.BuildError):
+                b.faq_section(P, root)
+            path = root / 'data/wnba/faq/example-player.json'
+            path.write_text('{not json')
+            with self.assertRaises(b.BuildError):
+                b.faq_section(P, root)
+            path.write_text(json.dumps({'slug': 'example-player', 'items': [{'question': 'Q?'}]}))
+            with self.assertRaises(b.BuildError):
+                b.faq_section(P, root)
+
+    def test_aja_wilson_curated_faq_file(self):
+        faq_path = ROOT.parent / 'data/wnba/faq/aja-wilson.json'
+        faq = json.loads(faq_path.read_text())
+        self.assertEqual(faq['slug'], 'aja-wilson')
+        self.assertGreaterEqual(len(faq['items']), 15)
+        profile = {'slug': 'aja-wilson', 'player': {'first_name': "A'ja", 'last_name': 'Wilson'}}
+        html, entity = b.faq_section(profile)
+        self.assertEqual(len(entity['mainEntity']), len(faq['items']))
+        self.assertEqual([q['name'] for q in entity['mainEntity']], [item['question'] for item in faq['items']])
+        self.assertEqual(
+            [q['acceptedAnswer']['text'] for q in entity['mainEntity']],
+            [item['answer'] for item in faq['items']],
+        )
+        self.assertIn('How tall is A&#x27;ja Wilson?', html)
+        self.assertIn('How many MVPs does A&#x27;ja Wilson have?', html)
+        self.assertIn('What did A&#x27;ja Wilson score in her last game?', html)
+        self.assertNotIn('regular-season averages', html)
+        self.assertNotIn('google_keyword', html)
+
+    def test_build_publishes_curated_faq_only(self):
+        items = [{'question': f'Q{i}?', 'answer': f'A{i}.'} for i in range(12)]
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            setup(root)
+            self._write_faq(root, 'example-player', items)
+            self.assertEqual(b.build(root), 1)
+            page = (root / 'wnba/example-player/index.html').read_text()
+            self.assertEqual(page.count('class="faq-item"'), 12)
+            self.assertEqual(page.count('"@type": "Question"'), 12)
+            sources = page.find('id="sources"')
+            faq = page.find('id="faq"')
+            archive = page.find('archive-band')
+            self.assertGreater(faq, sources)
+            self.assertGreater(archive, faq)
+            self.assertNotIn('regular-season averages', page)
 
 
 if __name__=='__main__':unittest.main()

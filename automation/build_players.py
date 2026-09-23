@@ -139,195 +139,49 @@ def game_table(profile):
     return f'''<section id="games" class="section"><p class="eyebrow">Completed games</p><h2>Recent game log</h2><p class="muted small">Imported window: {esc(profile.get('game_log_window_start'))} onward. Dates shown in Pacific time. This is not a complete career game log.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Recent completed game statistics"><table><caption>Regular-season and playoff games are labeled separately.</caption><thead><tr><th scope="col">DATE</th><th scope="col">OPPONENT</th><th scope="col">TYPE</th><th scope="col">RESULT</th><th scope="col">MIN</th><th scope="col">PTS</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">STL</th><th scope="col">BLK</th><th scope="col">TO</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
 
 
-def _unambiguous_row(rows):
-    """Return a single season line only when the provider row is unambiguous."""
-    if len(rows) == 1:
-        return rows[0]
-    aggregate = [r for r in rows if not (r.get('team') or {}).get('id')]
-    if len(aggregate) == 1:
-        return aggregate[0]
-    return None
-
-def _rows_for(profile, season=None, season_type=None):
-    rows = profile.get('season_stats') or []
-    if season is not None:
-        rows = [r for r in rows if r.get('season') == season]
-    if season_type is not None:
-        rows = [r for r in rows if r.get('season_type') == season_type]
-    return rows
-
-def _latest_row(profile, season_type):
-    selected = _rows_for(profile, season_type=season_type)
-    if not selected:
-        return None
-    year = max(r['season'] for r in selected)
-    return _unambiguous_row(_rows_for(profile, season=year, season_type=season_type))
-
-def _fmt_avg(n):
-    if isinstance(n, bool) or not isinstance(n, (int, float)):
-        return None
-    return f'{n:.1f}'
-
-def _fmt_gp(n):
-    if isinstance(n, bool) or not isinstance(n, (int, float)):
-        return None
-    return str(int(n)) if float(n) == int(n) else f'{n:.1f}'
-
-def _averages_sentence(name, row, label):
-    pts, reb, ast = _fmt_avg(row.get('pts')), _fmt_avg(row.get('reb')), _fmt_avg(row.get('ast'))
-    gp = _fmt_gp(row.get('games_played'))
-    if not (pts and reb and ast and gp):
-        return None
-    return (
-        f'In the {row["season"]} {label}, {name} averaged {pts} points, {reb} rebounds '
-        f'and {ast} assists per game over {gp} games.'
-    )
-
-def faq_section(profile):
-    """Build up to six PAA-style Q&As from imported stats. Omit the block if fewer than three answers exist.
-    Prefer value beyond the hero bio card: season averages, playoff comparison, teams, trends, recent games.
-    Never invent draft, college, height, jersey, or weight when those fields are missing or invalid.
-    """
-    p = profile.get('player') or {}
-    name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip() or 'This player'
-    fields = bio_fields(p)
-    active = profile.get('active_in_provider_feed') is True
-    team = profile.get('current_team') if active else None
-    stats = profile.get('season_stats') or []
-    games = profile.get('recent_completed_games') or []
+def curated_faq_pairs(profile, root: Path):
+    """Load rewritten Q&As from data/wnba/faq/{slug}.json. A missing file means no FAQ."""
+    slug = profile.get('slug') or ''
+    path = Path(root) / 'data' / 'wnba' / 'faq' / f'{slug}.json'
+    if not path.is_file():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise BuildError(f'Unreadable curated FAQ for {slug}.') from exc
+    if not isinstance(data, dict):
+        raise BuildError(f'Curated FAQ for {slug} must be a JSON object.')
+    file_slug = data.get('slug')
+    if file_slug not in (None, '') and file_slug != slug:
+        raise BuildError(f'Curated FAQ slug does not match {slug}.')
+    items = data.get('items') or []
+    if not isinstance(items, list):
+        raise BuildError(f'Curated FAQ items for {slug} must be a list.')
     pairs = []
-    seen_q = set()
+    for item in items:
+        if not isinstance(item, dict):
+            raise BuildError(f'Invalid curated FAQ item for {slug}.')
+        question = item.get('question')
+        answer = item.get('answer')
+        if not isinstance(question, str) or not question.strip() or not isinstance(answer, str) or not answer.strip():
+            raise BuildError(f'Curated FAQ item for {slug} is missing a question or answer.')
+        pairs.append((question.strip(), answer.strip()))
+    return pairs
 
-    def add(question, answer):
-        if not question or not answer or question in seen_q or len(pairs) >= 6:
-            return
-        seen_q.add(question)
-        pairs.append((question, answer))
-
-    # 1) Latest regular-season averages (detail beyond hero strip context)
-    rs = _latest_row(profile, 2)
-    if rs:
-        ans = _averages_sentence(name, rs, 'regular season')
-        if ans:
-            add(f"What are {name}'s {rs['season']} regular-season averages?", ans)
-
-    # 2) Playoff vs regular-season comparison when both exist (prefer same season)
-    compare_rs = compare_po = None
-    years = sorted({r['season'] for r in stats}, reverse=True)
-    for year in years:
-        a = _unambiguous_row(_rows_for(profile, season=year, season_type=2))
-        b = _unambiguous_row(_rows_for(profile, season=year, season_type=3))
-        if a and b and all(_fmt_avg(a.get(k)) and _fmt_avg(b.get(k)) for k in ('pts', 'reb', 'ast')):
-            compare_rs, compare_po = a, b
-            break
-    if compare_rs and compare_po:
-        add(
-            f"How do {name}'s {compare_rs['season']} playoff averages compare to the regular season?",
-            f"In {compare_rs['season']}, {name} averaged {_fmt_avg(compare_rs.get('pts'))}/{_fmt_avg(compare_rs.get('reb'))}/{_fmt_avg(compare_rs.get('ast'))} "
-            f"(PTS/REB/AST) in the regular season and {_fmt_avg(compare_po.get('pts'))}/{_fmt_avg(compare_po.get('reb'))}/{_fmt_avg(compare_po.get('ast'))} "
-            f"in the playoffs."
-        )
-    else:
-        po = _latest_row(profile, 3)
-        if rs and po and rs['season'] != po['season'] and all(_fmt_avg(rs.get(k)) and _fmt_avg(po.get(k)) for k in ('pts', 'reb', 'ast')):
-            add(
-                f"How do {name}'s playoff averages compare to the regular season?",
-                f"The latest regular-season line in this dataset is {_fmt_avg(rs.get('pts'))}/{_fmt_avg(rs.get('reb'))}/{_fmt_avg(rs.get('ast'))} "
-                f"in {rs['season']}; the latest playoff line is {_fmt_avg(po.get('pts'))}/{_fmt_avg(po.get('reb'))}/{_fmt_avg(po.get('ast'))} "
-                f"in {po['season']}."
-            )
-
-    # 3) Teams played for (from season lines only)
-    team_names = []
-    for r in sorted(stats, key=lambda r: -r.get('season', 0)):
-        label = tname(r.get('team'))
-        if label and label != 'Team not supplied' and label not in team_names:
-            team_names.append(label)
-    if team_names:
-        if len(team_names) == 1:
-            ans = f"In the imported statistics, {name} is listed with the {team_names[0]}."
-        else:
-            ans = (
-                f"In the imported statistics, {name} has been listed with "
-                f"{', '.join(team_names[:-1])} and {team_names[-1]}."
-            )
-        add(f"Which WNBA teams has {name} played for?", ans)
-
-    # 4) Multi-year scoring trends (list season PPG; do not invent career means)
-    trend = []
-    years = sorted({r['season'] for r in stats if r.get('season_type') == 2}, reverse=True)
-    for year in years:
-        row = _unambiguous_row(_rows_for(profile, season=year, season_type=2))
-        pts = _fmt_avg((row or {}).get('pts'))
-        if row and pts:
-            trend.append((year, pts))
-        if len(trend) >= 4:
-            break
-    if len(trend) >= 2:
-        parts = [f"{pts} points per game in {year}" for year, pts in trend]
-        if len(parts) == 2:
-            detail = f"{parts[0]} and {parts[1]}"
-        else:
-            detail = f"{', '.join(parts[:-1])} and {parts[-1]}"
-        add(
-            f"What are {name}'s recent regular-season scoring trends?",
-            f"Across recent regular seasons in this dataset, {name} averaged {detail}. "
-            f"These are separate season lines, not a calculated career average."
-        )
-
-    # 5) Recent game-log window
-    usable = [
-        g for g in games
-        if all(isinstance(g.get(k), (int, float)) and not isinstance(g.get(k), bool) for k in ('pts', 'reb', 'ast'))
-    ]
-    if usable:
-        ordered = sorted(usable, key=lambda g: str(g.get('date') or ''), reverse=True)
-        sample = ordered[:5]
-        n = len(sample)
-        pts = sum(g['pts'] for g in sample) / n
-        reb = sum(g['reb'] for g in sample) / n
-        ast = sum(g['ast'] for g in sample) / n
-        window = profile.get('game_log_window_start')
-        window_note = f" Imported game-log window starts {window}." if window else ""
-        best = max(sample, key=lambda g: g['pts'])
-        best_date = timestamp(best.get('date'), True)
-        add(
-            f"How did {name} perform in recent games?",
-            f"Over the {n} most recent completed games in this imported log, {name} averaged "
-            f"{pts:.1f} points, {reb:.1f} rebounds and {ast:.1f} assists per game."
-            f"{window_note} The highest scoring game in that sample is {best['pts']:.0f} points on {best_date}."
-        )
-
-    # 6+) Fillers only if still under 6 — prefer combined role/team over repeating hero bio cards
-    if len(pairs) < 6:
-        pos = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(fields.get('position'), fields.get('position'))
-        if pos and team:
-            add(
-                f"What position does {name} play and for whom?",
-                f"{name} is listed as a {pos} for the {tname(team)} in the provider's active-player feed."
-            )
-        elif pos and team_names:
-            add(
-                f"What position does {name} play and for whom?",
-                f"{name} is listed as a {pos}. The most recent team label in the imported statistics is the {team_names[0]}."
-            )
-
-    # Bio-card restatements only to clear the 3-answer minimum when richer stats are unavailable.
-    if len(pairs) < 3 and 'height' in fields:
-        add(f"How tall is {name}?", f"{name} is listed at {fields['height']}.")
-    if len(pairs) < 3 and 'jersey_number' in fields:
-        add(f"What is {name}'s jersey number?", f"{name} wears number {fields['jersey_number']}.")
-    if len(pairs) < 3 and 'college' in fields:
-        add(f"What college did {name} attend?", f"{name} attended {fields['college']}.")
-
-    if len(pairs) < 3:
+def faq_section(profile, root=None):
+    """Render every curated FAQ item. Do not invent template or stats-generated questions.
+    Players without data/wnba/faq/{slug}.json, or with an empty items list, get no FAQ block.
+    """
+    if root is None:
+        root = Path(__file__).resolve().parents[1]
+    pairs = curated_faq_pairs(profile, root)
+    if not pairs:
         return '', None
-
     items = ''.join(
         f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>'
         for q, a in pairs
     )
-    html = (
+    block = (
         f'<section class="section" id="faq">'
         f'<p class="eyebrow">Player FAQ</p>'
         f'<h2>Frequently asked questions</h2>'
@@ -347,9 +201,9 @@ def faq_section(profile):
             for q, a in pairs
         ],
     }
-    return html, entity
+    return block, entity
 
-def profile_page(profile):
+def profile_page(profile, root=None):
     p=profile['player']; name=(str(p.get('first_name') or '')+' '+str(p.get('last_name') or '')).strip()
     slug=profile['slug']; fields=bio_fields(p); active=profile.get('active_in_provider_feed') is True
     team=profile.get('current_team') if active else None
@@ -394,7 +248,7 @@ def profile_page(profile):
     last_game=f'<p>Most recent completed game in this imported log: <b>{esc(latest_label)}</b>.</p>' if latest_label else ''
     nav='<a href="#overview">Overview</a>'+('<a href="#stats">Stats</a>' if stats else '')+('<a href="#games">Game log</a>' if latest else '')+('<a href="#teams">Teams</a>' if timeline else '')+'<a href="#sources">Sources</a>'
     hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Provider per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
-    faq_html, faq_entity = faq_section(profile)
+    faq_html, faq_entity = faq_section(profile, root)
     sources=f'''<details class="sources section" id="sources"><summary>Data, sources &amp; coverage notes</summary><p>Data source: <a href="{SOURCE}" target="_blank" rel="noopener noreferrer">BALLDONTLIE WNBA API ↗</a>. Provider player ID: {p['id']}.</p><p>API snapshot checked {esc(checked)}. A successful refresh does not guarantee that the provider includes every subsequent game or correction.</p>{last_game}<p>Available coverage begins in 2008. Regular-season and playoff statistics are separate. Career totals and career averages are not calculated from rounded season averages. Missing values are displayed as a dash, never silently converted to zero.</p><p>Some provider biography fields can be missing or incorrectly formatted. Invalid fields are omitted rather than guessed. Absence from the active-player feed is not proof of retirement. A changed team field is not evidence of a particular trade or signing.</p><p>Automatic news and confirmed transaction feeds are not connected. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json">View this player's imported data</a></details>'''
     body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons in this dataset</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Scheduled data updates</p><h3>Source snapshot</h3><p>Checked {esc(checked)}.</p>{last_game}<p class="small">Daily during the season. Every seven days in the offseason.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
     route=f'/wnba/{slug}/'
@@ -429,7 +283,7 @@ def build(root: Path):
         validate(profile,slug)
         if profile['player']['id']!=entry['id']:
             raise BuildError('Profile does not match its directory identity.')
-        files[f'wnba/{slug}/index.html']=profile_page(profile)
+        files[f'wnba/{slug}/index.html']=profile_page(profile, root)
     files['wnba/index.html']=directory_page(index)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()
