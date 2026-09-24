@@ -1,0 +1,92 @@
+{
+  "slug": "stephanie-jones",
+  "player_name": "Stephanie Jones",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Stephanie Jones?",
+      "answer": "Stephanie Jones is an American basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stephanie_Jones_(basketball)"
+      ],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What team does Stephanie Jones play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. She wears No. 24. Her listed position is F.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What are Stephanie Jones's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2021), Stephanie Jones averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What is Stephanie Jones's jersey number?",
+      "answer": "Stephanie Jones wears number 24 for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What position does Stephanie Jones play?",
+      "answer": "Stephanie Jones is listed as a F for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "How tall is Stephanie Jones?",
+      "answer": "Stephanie Jones is listed at 6' 2\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stephanie_Jones_(basketball)"
+      ],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "How old is Stephanie Jones?",
+      "answer": "Public profiles list Stephanie Jones as born in 1998. As of late 2026 that puts her around 28 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stephanie_Jones_(basketball)"
+      ],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170,
+      "birthdate": "1998-01-01"
+    },
+    {
+      "question": "What college did Stephanie Jones attend?",
+      "answer": "Jones played college basketball at Maryland.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stephanie_Jones_(basketball)"
+      ],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What is Stephanie Jones's nationality?",
+      "answer": "Stephanie Jones is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Stephanie_Jones_(basketball)"
+      ],
+      "google_keyword": "stephanie jones wnba",
+      "approx_monthly_volume": 170
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
