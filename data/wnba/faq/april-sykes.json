@@ -1,0 +1,74 @@
+{
+  "slug": "april-sykes",
+  "player_name": "April Sykes",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does April Sykes make?",
+      "answer": "A precise public salary or net worth figure for April Sykes is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "april sykes wnba salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is April Sykes?",
+      "answer": "April L.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/April_Sykes"
+      ],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What team does April Sykes play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What are April Sykes's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), April Sykes averaged 3.1 points, 1.1 rebounds, and 0.6 assists in 30 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What position does April Sykes play?",
+      "answer": "April Sykes is listed as a Guard for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is April Sykes?",
+      "answer": "Public profiles list April Sykes as born in 1990. As of late 2026 that puts her around 36 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/April_Sykes"
+      ],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210,
+      "birthdate": "1990-01-01"
+    },
+    {
+      "question": "What is April Sykes's nationality?",
+      "answer": "April Sykes is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/April_Sykes"
+      ],
+      "google_keyword": "april sykes",
+      "approx_monthly_volume": 210
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

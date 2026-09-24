@@ -1,0 +1,90 @@
+{
+  "slug": "kadi-sissoko",
+  "player_name": "Kadi Sissoko",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Kadi Sissoko injured?",
+      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "kadi sissoko injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Kadi Sissoko?",
+      "answer": "Kadiatou \"Kadi\" Sissoko is a French professional basketball player for Villeneuve d'Ascq of the La Boulangère Wonderligue.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kadi_Sissoko"
+      ],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What team does Kadi Sissoko play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 30. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What are Kadi Sissoko's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2023), Kadi Sissoko averaged 1.5 points, 1.6 rebounds, and 0.2 assists in 40 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What is Kadi Sissoko's jersey number?",
+      "answer": "Kadi Sissoko wears number 30 for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What position does Kadi Sissoko play?",
+      "answer": "Kadi Sissoko is listed as a Forward for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Kadi Sissoko?",
+      "answer": "Public profiles list Kadi Sissoko as born in 1999. As of late 2026 that puts her around 27 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kadi_Sissoko"
+      ],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40,
+      "birthdate": "1999-01-01"
+    },
+    {
+      "question": "What college did Kadi Sissoko attend?",
+      "answer": "Sissoko played college basketball at Syracuse.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kadi_Sissoko"
+      ],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What is Kadi Sissoko's nationality?",
+      "answer": "Kadi Sissoko is French.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kadi_Sissoko"
+      ],
+      "google_keyword": "kadi sissoko",
+      "approx_monthly_volume": 40
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

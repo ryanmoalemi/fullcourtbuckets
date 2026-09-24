@@ -1,0 +1,82 @@
+{
+  "slug": "asia-taylor",
+  "player_name": "Asia Taylor",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Asia Taylor's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2017), Asia Taylor averaged 1.9 points, 1.8 rebounds, and 0.4 assists in 24 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "asia taylor stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Asia Taylor make?",
+      "answer": "A precise public salary or net worth figure for Asia Taylor is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "asia taylor net worth",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Asia Taylor?",
+      "answer": "Asia Taylor is an American professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Asia_Taylor"
+      ],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880
+    },
+    {
+      "question": "What team does Asia Taylor play for?",
+      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 31. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880
+    },
+    {
+      "question": "What is Asia Taylor's jersey number?",
+      "answer": "Asia Taylor wears number 31 for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880
+    },
+    {
+      "question": "What position does Asia Taylor play?",
+      "answer": "Asia Taylor is listed as a Forward for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880
+    },
+    {
+      "question": "How old is Asia Taylor?",
+      "answer": "Public profiles list Asia Taylor as born in 1991. As of late 2026 that puts her around 35 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Asia_Taylor"
+      ],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880,
+      "birthdate": "1991-01-01"
+    },
+    {
+      "question": "What is Asia Taylor's nationality?",
+      "answer": "Asia Taylor is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Asia_Taylor"
+      ],
+      "google_keyword": "asia taylor",
+      "approx_monthly_volume": 880
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

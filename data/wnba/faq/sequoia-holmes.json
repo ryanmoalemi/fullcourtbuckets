@@ -1,0 +1,74 @@
+{
+  "slug": "sequoia-holmes",
+  "player_name": "Sequoia Holmes",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Sequoia Holmes married?",
+      "answer": "There is no widely reported public record of Sequoia Holmes being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sequoia_Holmes"
+      ],
+      "google_keyword": "sequoia holmes husband",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "Who is Sequoia Holmes?",
+      "answer": "Sequoia Antrice Holmes is an American professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sequoia_Holmes"
+      ],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What team does Sequoia Holmes play for?",
+      "answer": "Her most recent WNBA team on record is the Houston Comets. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What are Sequoia Holmes's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2017), Sequoia Holmes averaged 3.3 points, 0.9 rebounds, and 0.9 assists in 27 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What position does Sequoia Holmes play?",
+      "answer": "Sequoia Holmes is listed as a Guard for the Houston Comets.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "How old is Sequoia Holmes?",
+      "answer": "Public profiles list Sequoia Holmes as born in 1986. As of late 2026 that puts her around 40 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sequoia_Holmes"
+      ],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320,
+      "birthdate": "1986-01-01"
+    },
+    {
+      "question": "What is Sequoia Holmes's nationality?",
+      "answer": "Sequoia Holmes is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sequoia_Holmes"
+      ],
+      "google_keyword": "sequoia holmes",
+      "approx_monthly_volume": 320
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

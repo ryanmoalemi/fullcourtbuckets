@@ -1,0 +1,74 @@
+{
+  "slug": "victoria-dunlap",
+  "player_name": "Victoria Dunlap",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Victoria Dunlap married?",
+      "answer": "There is no widely reported public record of Victoria Dunlap being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Victoria_Dunlap"
+      ],
+      "google_keyword": "victoria dunlap husband",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Victoria Dunlap?",
+      "answer": "Victoria Dunlap is an American basketball player who most recently played for the Seattle Storm of the Women's National Basketball Association.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Victoria_Dunlap"
+      ],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What team does Victoria Dunlap play for?",
+      "answer": "Her most recent WNBA team on record is the Washington Mystics. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What are Victoria Dunlap's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2011), Victoria Dunlap averaged 2.3 points, 1.6 rebounds, and 0.4 assists in 26 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "What position does Victoria Dunlap play?",
+      "answer": "Victoria Dunlap is listed as a Forward for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170
+    },
+    {
+      "question": "How old is Victoria Dunlap?",
+      "answer": "Public profiles list Victoria Dunlap as born in 1989. As of late 2026 that puts her around 37 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Victoria_Dunlap"
+      ],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170,
+      "birthdate": "1989-01-01"
+    },
+    {
+      "question": "What is Victoria Dunlap's nationality?",
+      "answer": "Victoria Dunlap is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Victoria_Dunlap"
+      ],
+      "google_keyword": "victoria dunlap",
+      "approx_monthly_volume": 170
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

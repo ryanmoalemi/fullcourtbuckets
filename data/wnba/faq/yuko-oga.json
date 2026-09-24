@@ -1,0 +1,64 @@
+{
+  "slug": "yuko-oga",
+  "player_name": "Yuko Oga",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Yuko Oga?",
+      "answer": "Yuko Oga is a Japanese basketball coach and former professional basketball player who is the head coach for the Toyota Antelopes of the Women's Japan Basketball League (WJBL).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yuko_Oga"
+      ],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What team does Yuko Oga play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What are Yuko Oga's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2008), Yuko Oga averaged 2.4 points, 0.7 rebounds, and 0.6 assists in 23 games for Japan. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What position does Yuko Oga play?",
+      "answer": "Yuko Oga is listed as a Forward for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "How old is Yuko Oga?",
+      "answer": "Public profiles list Yuko Oga as born in 1982. As of late 2026 that puts her around 44 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yuko_Oga"
+      ],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20,
+      "birthdate": "1982-01-01"
+    },
+    {
+      "question": "What is Yuko Oga's nationality?",
+      "answer": "Yuko Oga is Japanese.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yuko_Oga"
+      ],
+      "google_keyword": "yuko oga",
+      "approx_monthly_volume": 20
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "rui-machida",
+  "player_name": "Rui Machida",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Rui Machida's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2022), Rui Machida averaged 1.8 points, 1.1 rebounds, and 2.6 assists in 36 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rui machida stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What is Rui Machida's jersey number?",
+      "answer": "Rui Machida wears number 13 for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rui machida jersey",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Who is Rui Machida?",
+      "answer": "Rui Machida is a Japanese basketball player who plays for the Fujitsu Red Wave of the Women's Japan Basketball League (WJBL).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rui_Machida"
+      ],
+      "google_keyword": "rui machida",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What team does Rui Machida play for?",
+      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 13. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rui machida",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What position does Rui Machida play?",
+      "answer": "Rui Machida is listed as a Guard for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "rui machida",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Rui Machida?",
+      "answer": "Public profiles list Rui Machida as born in 1993. As of late 2026 that puts her around 33 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rui_Machida"
+      ],
+      "google_keyword": "rui machida",
+      "approx_monthly_volume": 210,
+      "birthdate": "1993-01-01"
+    },
+    {
+      "question": "What is Rui Machida's nationality?",
+      "answer": "Rui Machida is Japanese.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Rui_Machida"
+      ],
+      "google_keyword": "rui machida",
+      "approx_monthly_volume": 210
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

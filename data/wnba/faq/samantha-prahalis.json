@@ -1,0 +1,84 @@
+{
+  "slug": "samantha-prahalis",
+  "player_name": "Samantha Prahalis",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "How much does Samantha Prahalis make?",
+      "answer": "A precise public salary or net worth figure for Samantha Prahalis is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "samantha prahalis salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Samantha Prahalis married?",
+      "answer": "There is no widely reported public record of Samantha Prahalis being married as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Samantha_Prahalis"
+      ],
+      "google_keyword": "samantha prahalis husband",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "Who is Samantha Prahalis?",
+      "answer": "Samantha Prahalis is an American basketball player who last played for the Los Angeles Sparks of the WNBA and currently for the Sardinian team CUS Cagliari.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Samantha_Prahalis"
+      ],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What team does Samantha Prahalis play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What are Samantha Prahalis's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), Samantha Prahalis averaged 11.6 points, 3.2 rebounds, and 4.5 assists in 28 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What position does Samantha Prahalis play?",
+      "answer": "Samantha Prahalis is listed as a Guard for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Samantha Prahalis?",
+      "answer": "Public profiles list Samantha Prahalis as born in 1990. As of late 2026 that puts her around 36 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Samantha_Prahalis"
+      ],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210,
+      "birthdate": "1990-01-01"
+    },
+    {
+      "question": "What is Samantha Prahalis's nationality?",
+      "answer": "Samantha Prahalis is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Samantha_Prahalis"
+      ],
+      "google_keyword": "samantha prahalis",
+      "approx_monthly_volume": 210
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

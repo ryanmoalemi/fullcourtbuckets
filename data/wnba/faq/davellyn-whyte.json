@@ -1,0 +1,61 @@
+{
+  "slug": "davellyn-whyte",
+  "player_name": "Davellyn Whyte",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Davellyn Whyte?",
+      "answer": "Davellyn LaRae Whyte is an American professional basketball player who last played for the San Antonio Stars of the WNBA.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Davellyn_Whyte"
+      ],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What team does Davellyn Whyte play for?",
+      "answer": "Her most recent WNBA team on record is the Las Vegas Aces. She wears No. 0. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What are Davellyn Whyte's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2013), Davellyn Whyte averaged 4.5 points, 1.9 rebounds, and 1.8 assists in 29 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What is Davellyn Whyte's jersey number?",
+      "answer": "Davellyn Whyte wears number 0 for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What position does Davellyn Whyte play?",
+      "answer": "Davellyn Whyte is listed as a Guard for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    },
+    {
+      "question": "What is Davellyn Whyte's nationality?",
+      "answer": "Davellyn Whyte is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Davellyn_Whyte"
+      ],
+      "google_keyword": "davellyn whyte",
+      "approx_monthly_volume": 20
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "kariata-diaby",
+  "player_name": "Kariata Diaby",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Kariata Diaby?",
+      "answer": "Kariata Diaby is an Ivorian professional basketball player for Tango Bourges Basket of the La Boulangère Wonderligue.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kariata_Diaby"
+      ],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What team does Kariata Diaby play for?",
+      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 23. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What are Kariata Diaby's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Kariata Diaby averaged 1.9 points, 1.0 rebounds, and 0.4 assists in 13 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What is Kariata Diaby's jersey number?",
+      "answer": "Kariata Diaby wears number 23 for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "What position does Kariata Diaby play?",
+      "answer": "Kariata Diaby is listed as a Center for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70
+    },
+    {
+      "question": "How old is Kariata Diaby?",
+      "answer": "Public profiles list Kariata Diaby as born in 1995. As of late 2026 that puts her around 31 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Kariata_Diaby"
+      ],
+      "google_keyword": "kariata diaby",
+      "approx_monthly_volume": 70,
+      "birthdate": "1995-01-01"
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

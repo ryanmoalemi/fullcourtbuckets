@@ -1,0 +1,64 @@
+{
+  "slug": "briana-butler",
+  "player_name": "Briana Butler",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Briana Butler?",
+      "answer": "Briana Renee Gilbreath-Butler is an American former professional basketball guard who played for the Phoenix Mercury, Connecticut Sun, and Indiana Fever of the Women's National Basketball Association (WNBA).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Briana_Gilbreath-Butler"
+      ],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What team does Briana Butler play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What are Briana Butler's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2013), Briana Butler averaged 4.3 points, 3.2 rebounds, and 1.5 assists in 34 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What position does Briana Butler play?",
+      "answer": "Briana Butler is listed as a Guard for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "How old is Briana Butler?",
+      "answer": "Public profiles list Briana Butler as born in 1990. As of late 2026 that puts her around 36 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Briana_Gilbreath-Butler"
+      ],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140,
+      "birthdate": "1990-01-01"
+    },
+    {
+      "question": "What is Briana Butler's nationality?",
+      "answer": "Briana Butler is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Briana_Gilbreath-Butler"
+      ],
+      "google_keyword": "briana butler",
+      "approx_monthly_volume": 140
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

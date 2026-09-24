@@ -1,0 +1,82 @@
+{
+  "slug": "meighan-simmons",
+  "player_name": "Meighan Simmons",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What college did Meighan Simmons attend?",
+      "answer": "Simmons played college basketball at University of Tennessee.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Meighan_Simmons"
+      ],
+      "google_keyword": "meighan simmons tennessee",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Meighan Simmons?",
+      "answer": "Meighan Sharee Simmons is a professional basketball Guard.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Meighan_Simmons"
+      ],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What team does Meighan Simmons play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. She wears No. 0. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What are Meighan Simmons's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Meighan Simmons averaged 3.1 points, 0.4 rebounds, and 0.3 assists in 25 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What is Meighan Simmons's jersey number?",
+      "answer": "Meighan Simmons wears number 0 for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "What position does Meighan Simmons play?",
+      "answer": "Meighan Simmons is listed as a Guard for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    },
+    {
+      "question": "How old is Meighan Simmons?",
+      "answer": "Public profiles list Meighan Simmons as born in 1992. As of late 2026 that puts her around 34 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Meighan_Simmons"
+      ],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140,
+      "birthdate": "1992-01-01"
+    },
+    {
+      "question": "What is Meighan Simmons's nationality?",
+      "answer": "Meighan Simmons is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Meighan_Simmons"
+      ],
+      "google_keyword": "meighan simmons",
+      "approx_monthly_volume": 140
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

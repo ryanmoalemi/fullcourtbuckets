@@ -1,0 +1,82 @@
+{
+  "slug": "bella-alarie",
+  "player_name": "Bella Alarie",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Did Bella Alarie retire?",
+      "answer": "She is the daughter of Mark Alarie, a retired professional basketball player who played in the NBA for the 1986-1991 seasons.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bella_Alarie"
+      ],
+      "google_keyword": "bella alarie retirement",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Bella Alarie?",
+      "answer": "Isabella Augustine Alarie is an American former professional basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bella_Alarie"
+      ],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "What team does Bella Alarie play for?",
+      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 32. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "What are Bella Alarie's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2021), Bella Alarie averaged 2.6 points, 3.3 rebounds, and 0.5 assists in 31 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "What is Bella Alarie's jersey number?",
+      "answer": "Bella Alarie wears number 32 for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "What position does Bella Alarie play?",
+      "answer": "Bella Alarie is listed as a Center for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    },
+    {
+      "question": "How old is Bella Alarie?",
+      "answer": "Public profiles list Bella Alarie as born in 1998. As of late 2026 that puts her around 28 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bella_Alarie"
+      ],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390,
+      "birthdate": "1998-01-01"
+    },
+    {
+      "question": "What is Bella Alarie's nationality?",
+      "answer": "Bella Alarie is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Bella_Alarie"
+      ],
+      "google_keyword": "bella alarie",
+      "approx_monthly_volume": 390
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

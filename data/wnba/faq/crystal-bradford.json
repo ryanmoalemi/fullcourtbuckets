@@ -1,0 +1,92 @@
+{
+  "slug": "crystal-bradford",
+  "player_name": "Crystal Bradford",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Crystal Bradford's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Crystal Bradford averaged 1.0 points, 1.2 rebounds, and 0.2 assists in 4 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "crystal bradford stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How much does Crystal Bradford make?",
+      "answer": "A precise public salary or net worth figure for Crystal Bradford is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.spotrac.com/wnba/"
+      ],
+      "google_keyword": "crystal bradford salary",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Crystal Bradford?",
+      "answer": "Crystal Bradford is an American professional basketball player who is currently a free agent.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Crystal_Bradford"
+      ],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What team does Crystal Bradford play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. She wears No. 15. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What is Crystal Bradford's jersey number?",
+      "answer": "Crystal Bradford wears number 15 for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What position does Crystal Bradford play?",
+      "answer": "Crystal Bradford is listed as a Forward for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "How old is Crystal Bradford?",
+      "answer": "Public profiles list Crystal Bradford as born in 1993. As of late 2026 that puts her around 33 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Crystal_Bradford"
+      ],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480,
+      "birthdate": "1993-01-01"
+    },
+    {
+      "question": "When was Crystal Bradford drafted?",
+      "answer": "A star college player at Central Michigan University, she made history being the first player in the CMU program to ever be drafted to the WNBA.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Crystal_Bradford"
+      ],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What is Crystal Bradford's nationality?",
+      "answer": "Crystal Bradford is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Crystal_Bradford"
+      ],
+      "google_keyword": "crystal bradford",
+      "approx_monthly_volume": 480
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
