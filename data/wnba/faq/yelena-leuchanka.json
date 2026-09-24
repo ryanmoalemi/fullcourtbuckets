@@ -1,0 +1,84 @@
+{
+  "slug": "yelena-leuchanka",
+  "player_name": "Yelena Leuchanka",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Yelena Leuchanka?",
+      "answer": "Yelena Leuchanka is a Belarusian professional women's basketball player who last played for Panathinaikos.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yelena_Leuchanka"
+      ],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What team does Yelena Leuchanka play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What are Yelena Leuchanka's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2010), Yelena Leuchanka averaged 4.2 points, 2.6 rebounds, and 0.4 assists in 32 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "What position does Yelena Leuchanka play?",
+      "answer": "Yelena Leuchanka is listed as a Center for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How tall is Yelena Leuchanka?",
+      "answer": "Yelena Leuchanka is listed at 6' 5\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yelena_Leuchanka"
+      ],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "How old is Yelena Leuchanka?",
+      "answer": "She was born April 30, 1983 in Gomel, Belarus. As of late 2026 that puts her at 43 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yelena_Leuchanka"
+      ],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40,
+      "birthdate": "1983-04-30"
+    },
+    {
+      "question": "What college did Yelena Leuchanka attend?",
+      "answer": "Leuchanka played college basketball at West Virginia University.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yelena_Leuchanka"
+      ],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    },
+    {
+      "question": "Where is Yelena Leuchanka from?",
+      "answer": "She is from Gomel, Belarus.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Yelena_Leuchanka"
+      ],
+      "google_keyword": "yelena leuchanka",
+      "approx_monthly_volume": 40
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

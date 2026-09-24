@@ -1,0 +1,94 @@
+{
+  "slug": "matilde-villa",
+  "player_name": "Matilde Villa",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Matilde Villa?",
+      "answer": "Matilde Villa is an Italian basketball player for the Atlanta Dream of the Women's National Basketball Association (WNBA) and Umana Reyer Venezia of the Lega Basket Femminile.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What team does Matilde Villa play for?",
+      "answer": "Her most recent WNBA team on record is the Atlanta Dream. She wears No. 0. Her listed position is G.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What is Matilde Villa's jersey number?",
+      "answer": "Matilde Villa wears number 0 for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What position does Matilde Villa play?",
+      "answer": "Matilde Villa is listed as a G for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "How tall is Matilde Villa?",
+      "answer": "Matilde Villa is listed at 5' 7\".",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "How old is Matilde Villa?",
+      "answer": "She was born December 9, 2004 in Lissone, Carate Brianza, Lombardy, Italy. As of late 2026 that puts her at 21 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110,
+      "birthdate": "2004-12-09"
+    },
+    {
+      "question": "Where is Matilde Villa from?",
+      "answer": "She is from Lissone, Carate Brianza, Lombardy, Italy.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "When was Matilde Villa drafted?",
+      "answer": "She was drafted by the Atlanta Dream of the Women's National Basketball Association (WNBA) with the 32nd pick in the 2024 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What is Matilde Villa's nationality?",
+      "answer": "Matilde Villa is Italian.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Matilde_Villa"
+      ],
+      "google_keyword": "matilde villa",
+      "approx_monthly_volume": 110
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
