@@ -1,0 +1,100 @@
+{
+  "slug": "morgan-bertsch",
+  "player_name": "Morgan Bertsch",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Morgan Bertsch's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2023), Morgan Bertsch averaged 4.4 points, 1.7 rebounds, and 0.7 assists in 28 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "morgan bertsch stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Is Morgan Bertsch injured?",
+      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "morgan bertsch injury",
+      "approx_monthly_volume": 0
+    },
+    {
+      "question": "Who is Morgan Bertsch?",
+      "answer": "Morgan Bertsch is an American professional basketball player who is currently a free agent.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Morgan_Bertsch"
+      ],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What team does Morgan Bertsch play for?",
+      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 25. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What is Morgan Bertsch's jersey number?",
+      "answer": "Morgan Bertsch wears number 25 for the Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What position does Morgan Bertsch play?",
+      "answer": "Morgan Bertsch is listed as a Forward for the Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "How old is Morgan Bertsch?",
+      "answer": "Public profiles list Morgan Bertsch as born in 1997. As of late 2026 that puts her around 29 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Morgan_Bertsch"
+      ],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210,
+      "birthdate": "1997-01-01"
+    },
+    {
+      "question": "What college did Morgan Bertsch attend?",
+      "answer": "Bertsch played college basketball at UC Davis.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Morgan_Bertsch"
+      ],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "When was Morgan Bertsch drafted?",
+      "answer": "She was drafted by the Dallas Wings in the 2019 WNBA draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Morgan_Bertsch"
+      ],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    },
+    {
+      "question": "What is Morgan Bertsch's nationality?",
+      "answer": "Morgan Bertsch is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Morgan_Bertsch"
+      ],
+      "google_keyword": "morgan bertsch",
+      "approx_monthly_volume": 210
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "jasmine-walker",
+  "player_name": "Jasmine Walker",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Jasmine Walker?",
+      "answer": "Jasmine Walker is an American professional basketball player who plays for the Jacksonville Waves of the UpShot League, an American women's developmental league.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jasmine_Walker"
+      ],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What team does Jasmine Walker play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. She wears No. 40. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What are Jasmine Walker's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2022), Jasmine Walker averaged 1.6 points, 1.5 rebounds, and 0.2 assists in 32 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What is Jasmine Walker's jersey number?",
+      "answer": "Jasmine Walker wears number 40 for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "What position does Jasmine Walker play?",
+      "answer": "Jasmine Walker is listed as a Forward for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    },
+    {
+      "question": "How old is Jasmine Walker?",
+      "answer": "Public profiles list Jasmine Walker as born in 1998. As of late 2026 that puts her around 28 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jasmine_Walker"
+      ],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480,
+      "birthdate": "1998-01-01"
+    },
+    {
+      "question": "What is Jasmine Walker's nationality?",
+      "answer": "Jasmine Walker is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jasmine_Walker"
+      ],
+      "google_keyword": "jasmine walker",
+      "approx_monthly_volume": 480
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

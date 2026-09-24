@@ -1,0 +1,92 @@
+{
+  "slug": "jennifer-hamson",
+  "player_name": "Jennifer Hamson",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who are Jennifer Hamson's parents?",
+      "answer": "Public profiles share limited verified detail about Jennifer Hamson's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jennifer_Hamson"
+      ],
+      "google_keyword": "jennifer hamson family",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Does Jennifer Hamson have kids?",
+      "answer": "There is no widely reported public information that Jennifer Hamson has children as of late 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jennifer_Hamson"
+      ],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "Who is Jennifer Hamson?",
+      "answer": "Jennifer Hamson is an American professional volleyball player and former basketball player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jennifer_Hamson"
+      ],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What team does Jennifer Hamson play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. She wears No. 5. Her listed position is Center.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What are Jennifer Hamson's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2015), Jennifer Hamson averaged 1.6 points, 1.5 rebounds, and 0.2 assists in 25 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What is Jennifer Hamson's jersey number?",
+      "answer": "Jennifer Hamson wears number 5 for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What position does Jennifer Hamson play?",
+      "answer": "Jennifer Hamson is listed as a Center for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "How old is Jennifer Hamson?",
+      "answer": "Public profiles list Jennifer Hamson as born in 1992. As of late 2026 that puts her around 34 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jennifer_Hamson"
+      ],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110,
+      "birthdate": "1992-01-01"
+    },
+    {
+      "question": "What is Jennifer Hamson's nationality?",
+      "answer": "Jennifer Hamson is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Jennifer_Hamson"
+      ],
+      "google_keyword": "jennifer hamson",
+      "approx_monthly_volume": 110
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "anna-cruz",
+  "player_name": "Anna Cruz",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Anna Cruz?",
+      "answer": "Anna Cruz Lebrato is a Spanish professional basketball player, currently playing for Spanish team Barça CBS (F.C.Barcelona).",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Anna_Cruz"
+      ],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What team does Anna Cruz play for?",
+      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 51. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What are Anna Cruz's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Anna Cruz averaged 1.2 points, 1.0 rebounds, and 1.2 assists in 6 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What is Anna Cruz's jersey number?",
+      "answer": "Anna Cruz wears number 51 for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "What position does Anna Cruz play?",
+      "answer": "Anna Cruz is listed as a Guard for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    },
+    {
+      "question": "How old is Anna Cruz?",
+      "answer": "Public profiles list Anna Cruz as born in 1986. As of late 2026 that puts her around 40 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Anna_Cruz"
+      ],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320,
+      "birthdate": "1986-01-01"
+    },
+    {
+      "question": "What is Anna Cruz's nationality?",
+      "answer": "Anna Cruz is Spanish.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Anna_Cruz"
+      ],
+      "google_keyword": "anna cruz",
+      "approx_monthly_volume": 320
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

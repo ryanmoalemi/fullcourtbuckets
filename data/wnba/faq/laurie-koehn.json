@@ -1,0 +1,64 @@
+{
+  "slug": "laurie-koehn",
+  "player_name": "Laurie Koehn",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Laurie Koehn?",
+      "answer": "Laurie Koehn is a former professional basketball player, who is currently the associate coach for the Washington State Cougars women's basketball team.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Laurie_Koehn"
+      ],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "What team does Laurie Koehn play for?",
+      "answer": "Her most recent WNBA team on record is the Washington Mystics. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "What are Laurie Koehn's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2012), Laurie Koehn averaged 1.8 points, 0.4 rebounds, and 0.1 assists in 23 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "What position does Laurie Koehn play?",
+      "answer": "Laurie Koehn is listed as a Guard for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50
+    },
+    {
+      "question": "How old is Laurie Koehn?",
+      "answer": "Public profiles list Laurie Koehn as born in 1982. As of late 2026 that puts her around 44 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Laurie_Koehn"
+      ],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50,
+      "birthdate": "1982-01-01"
+    },
+    {
+      "question": "What is Laurie Koehn's nationality?",
+      "answer": "Laurie Koehn is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Laurie_Koehn"
+      ],
+      "google_keyword": "laurie koehn",
+      "approx_monthly_volume": 50
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

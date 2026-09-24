@@ -1,0 +1,72 @@
+{
+  "slug": "ana-dabovic",
+  "player_name": "Ana Dabovic",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Ana Dabovic?",
+      "answer": "Ana Dabović is a Serbian professional basketball player for the BLMA of the French Ligue 1 and EuroLeague Women.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ana_Dabovi%C4%87"
+      ],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What team does Ana Dabovic play for?",
+      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. She wears No. 23. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What are Ana Dabovic's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2016), Ana Dabovic averaged 0.8 points, 0.3 rebounds, and 2.0 assists in 6 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What is Ana Dabovic's jersey number?",
+      "answer": "Ana Dabovic wears number 23 for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What position does Ana Dabovic play?",
+      "answer": "Ana Dabovic is listed as a Guard for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Ana Dabovic?",
+      "answer": "Public profiles list Ana Dabovic as born in 1989. As of late 2026 that puts her around 37 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ana_Dabovi%C4%87"
+      ],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30,
+      "birthdate": "1989-01-01"
+    },
+    {
+      "question": "What is Ana Dabovic's nationality?",
+      "answer": "Ana Dabovic is Serbian.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ana_Dabovi%C4%87"
+      ],
+      "google_keyword": "ana dabovic wnba",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
