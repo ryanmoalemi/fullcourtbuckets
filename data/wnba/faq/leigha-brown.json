@@ -1,0 +1,80 @@
+{
+  "slug": "leigha-brown",
+  "player_name": "Leigha Brown",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Is Leigha Brown injured?",
+      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
+      "answer_kind": "mixed",
+      "sources": [],
+      "google_keyword": "leigha brown injury",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Leigha Brown?",
+      "answer": "Leigha Brown is an American professional basketball player for the Elitzur Holon of the Israeli League.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leigha_Brown"
+      ],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What team does Leigha Brown play for?",
+      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 32. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What are Leigha Brown's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2023), Leigha Brown averaged 0.0 points, 0.5 rebounds, and 0.5 assists in 2 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What is Leigha Brown's jersey number?",
+      "answer": "Leigha Brown wears number 32 for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "What position does Leigha Brown play?",
+      "answer": "Leigha Brown is listed as a Guard for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    },
+    {
+      "question": "How old is Leigha Brown?",
+      "answer": "Public profiles list Leigha Brown as born in 2000. As of late 2026 that puts her around 26 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leigha_Brown"
+      ],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110,
+      "birthdate": "2000-01-01"
+    },
+    {
+      "question": "What is Leigha Brown's nationality?",
+      "answer": "Leigha Brown is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leigha_Brown"
+      ],
+      "google_keyword": "leigha brown",
+      "approx_monthly_volume": 110
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

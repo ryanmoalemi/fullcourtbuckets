@@ -1,0 +1,72 @@
+{
+  "slug": "shae-kelley",
+  "player_name": "Shae Kelley",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Shae Kelley?",
+      "answer": "Shae Kelley is a professional women's basketball player who recently played for the Minnesota Lynx of the Women's National Basketball Association for the 2015 season.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shae_Kelley"
+      ],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What team does Shae Kelley play for?",
+      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 1. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What are Shae Kelley's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2015), Shae Kelley averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What is Shae Kelley's jersey number?",
+      "answer": "Shae Kelley wears number 1 for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "What position does Shae Kelley play?",
+      "answer": "Shae Kelley is listed as a Forward for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "How old is Shae Kelley?",
+      "answer": "Public profiles list Shae Kelley as born in 1991. As of late 2026 that puts her around 35 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shae_Kelley"
+      ],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10,
+      "birthdate": "1991-01-01"
+    },
+    {
+      "question": "What is Shae Kelley's nationality?",
+      "answer": "Shae Kelley is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Shae_Kelley"
+      ],
+      "google_keyword": "shae kelley wnba",
+      "approx_monthly_volume": 10
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

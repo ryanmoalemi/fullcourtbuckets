@@ -1,0 +1,82 @@
+{
+  "slug": "alexis-prince",
+  "player_name": "Alexis Prince",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "What are Alexis Prince's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2025), Alexis Prince averaged 2.0 points, 8.0 rebounds, and 1.0 assists in 1 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis prince stats",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who are Alexis Prince's parents?",
+      "answer": "Public profiles share limited verified detail about Alexis Prince's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Prince"
+      ],
+      "google_keyword": "alexis prince family",
+      "approx_monthly_volume": 10
+    },
+    {
+      "question": "Who is Alexis Prince?",
+      "answer": "Alexis Prince is an American professional basketball player for Athinaikos from Greek League.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Prince"
+      ],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What team does Alexis Prince play for?",
+      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 15. Her listed position is Forward.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What is Alexis Prince's jersey number?",
+      "answer": "Alexis Prince wears number 15 for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "What position does Alexis Prince play?",
+      "answer": "Alexis Prince is listed as a Forward for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30
+    },
+    {
+      "question": "How old is Alexis Prince?",
+      "answer": "Public profiles list Alexis Prince as born in 1994. As of late 2026 that puts her around 32 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Prince"
+      ],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30,
+      "birthdate": "1994-01-01"
+    },
+    {
+      "question": "What is Alexis Prince's nationality?",
+      "answer": "Alexis Prince is American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Alexis_Prince"
+      ],
+      "google_keyword": "alexis prince wnba",
+      "approx_monthly_volume": 30
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}

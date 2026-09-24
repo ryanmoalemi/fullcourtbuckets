@@ -1,0 +1,72 @@
+{
+  "slug": "leticia-romero",
+  "player_name": "Leticia Romero",
+  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
+  "verified_at": "2026-09-23",
+  "items": [
+    {
+      "question": "Who is Leticia Romero?",
+      "answer": "Leticia Romero González is a Spanish basketball player from Agüimes who plays for Valencia Basket and the Spain women's national basketball team.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leticia_Romero"
+      ],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What team does Leticia Romero play for?",
+      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 10. Her listed position is Guard.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What are Leticia Romero's stats / points per game?",
+      "answer": "In her most recent WNBA season on record (2018), Leticia Romero averaged 2.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What is Leticia Romero's jersey number?",
+      "answer": "Leticia Romero wears number 10 for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "What position does Leticia Romero play?",
+      "answer": "Leticia Romero is listed as a Guard for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    },
+    {
+      "question": "How old is Leticia Romero?",
+      "answer": "Public profiles list Leticia Romero as born in 1995. As of late 2026 that puts her around 31 years old.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leticia_Romero"
+      ],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90,
+      "birthdate": "1995-01-01"
+    },
+    {
+      "question": "What is Leticia Romero's nationality?",
+      "answer": "Leticia Romero is Spanish.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Leticia_Romero"
+      ],
+      "google_keyword": "leticia romero",
+      "approx_monthly_volume": 90
+    }
+  ],
+  "notes": "Reader-facing sports copy only."
+}
