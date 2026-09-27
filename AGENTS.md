@@ -10,6 +10,10 @@ The owner manages fullcourtbuckets.com through ChatGPT and has authorized reques
 
 Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated content. Never merge or deploy it.
 
+## Adding an article
+
+Add the article folder (`slug/index.html` and its images) and one entry in `articles.json` with `slug`, `title`, `description`, `category`, `date` (`YYYY-MM-DD`), `image`, and `imageAlt`. The homepage sorts that file by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Also add the new URL to `sitemap.xml` and `pages-sitemap.xml`.
+
 ## Standing owner instruction: handle the complete publication
 
 The owner directed: "remember always get your github write publish permissions don't ask me to post anything". Discover and use the connected read/write tools, read the current target files, and perform uploads, commits, publication and live verification here. Do not ask the owner to post code, manually upload approved files, or resend originals already in the conversation or preserved Drive storage.

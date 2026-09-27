@@ -43,6 +43,7 @@ main{padding:34px 0 80px}.feature-grid{display:grid;grid-template-columns:minmax
 .article-copy{padding:28px;display:flex;flex-direction:column;justify-content:center}.article-copy .cat{color:var(--orange);font-size:11px;font-weight:800}
 .article-copy h3{margin:9px 0 11px;font:800 34px/1.04 "Barlow",sans-serif;letter-spacing:-.6px}
 .article-copy p{margin:0;color:var(--muted);font-size:14px;line-height:1.55}.article-copy .date{margin-top:15px;color:#77726d;font-size:11px}
+.story-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:18px}
 .side-promo{background:linear-gradient(150deg,rgba(125,53,255,.16),rgba(241,0,145,.08)),#0b0b0d;border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:center}
 .side-promo img{width:340px;margin:0 auto 22px}.side-promo h3{font:800 28px/1.05 "Barlow",sans-serif;margin:0 0 10px}.side-promo p{color:var(--muted);font-size:13px;line-height:1.55;margin:0}
 .coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.coverage-card{min-height:220px;padding:25px;border:1px solid var(--line);background:rgba(10,10,12,.95);position:relative;overflow:hidden}
@@ -59,8 +60,8 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
 <header><div class="shell nav"><a class="brand" href="#"><img src="logo.png" alt="Full Court Buckets"></a><nav><a href="#">News</a><a href="#">Analysis</a><a href="#">Teams</a><a href="#">Standings</a><a href="#">World</a><a href="#">Videos</a><a href="/wnba/">Players</a></nav><a class="watch-btn nav-watch" href="#latest">Latest Stories</a></div></header>
 <div class="ticker"><div class="shell"><div class="ticker-label">Now</div><div class="ticker-text">The WNBA pauses after August 30 as players head to Berlin for the 2026 FIBA Women�s Basketball World Cup.</div></div></div>
 <main class="shell">
-<section class="feature-grid">
-<a class="feature feature-link" href="/fiba-womens-basketball-world-cup-2026/"><div class="feature-content"><div class="label">Featured</div><h1>This Is the Olympics of the WNBA</h1><p>The league pauses as Team USA heads to Berlin with Caitlin Clark, Angel Reese, Paige Bueckers, A�ja Wilson and a roster carrying 58 combined WNBA All-Star selections.</p><div class="meta">World Cup � August 30, 2026</div><span class="read-link">Read the story <span>?</span></span></div></a>
+<section class="feature-grid" id="latest">
+<a class="feature feature-link" id="featured-story" href="#"><div class="feature-content"><div class="label">Featured</div><h1 id="featured-title"></h1><p id="featured-dek"></p><div class="meta" id="featured-meta"></div><span class="read-link">Read the story <span>&rarr;</span></span></div></a>
 <aside class="rail">
 <div class="rail-card"><div class="eyebrow">Our Coverage</div><h2>WNBA News. Given to You Straight.</h2><p>Fast reporting without filler or manufactured debate.</p></div>
 <div class="rail-card"><div class="eyebrow">Analysis</div><h2>What Happened and Why</h2><p>Matchups, spacing, rebounding, rotations, shot creation and game context.</p></div>
@@ -68,11 +69,8 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
 <div class="rail-card"><div class="eyebrow">Full Court Buckets</div><h2>WNBA Coverage Every Day</h2><p>League news, players, teams, international basketball and major stories.</p></div>
 </aside>
 </section>
-<section class="section" id="latest"><div class="section-head"><h2 class="section-title">Latest Story</h2></div>
-<div class="latest-grid">
-<a class="article-card" href="/liberty-lynx-game-1-ionescu-stewart/"><div class="article-visual"><img src="images/articles/liberty-lynx-game-1-ionescu-stewart/sabrina-ionescu-liberty-target-center-2026.jpg" alt="Sabrina Ionescu of the New York Liberty"></div><div class="article-copy"><div class="cat">WNBA Playoffs</div><h3>Ionescu to Stewart Sinks the No. 1 Lynx in Game 1</h3><p>Sabrina Ionescu assisted Breanna Stewart five times as the No. 8 Liberty beat the No. 1 Lynx 91-75. Stewart finished with 34 points and 12 rebounds.</p><div class="date">September 27, 2026</div></div></a>
-<aside class="side-promo"><img src="logo.png" alt="Full Court Buckets"><h3>WNBA News. Analysis. Commentary.</h3><p>No filler. No manufactured hot takes. The news, the numbers and the basketball behind the story.</p></aside>
-</div></section>
+<section class="section" id="more-stories" hidden><div class="section-head"><h2 class="section-title">More Stories</h2></div>
+<div class="story-list" id="older-stories"></div></section>
 <section class="section"><div class="section-head"><h2 class="section-title">What We Cover</h2></div><div class="coverage-grid">
 <div class="coverage-card"><b>News</b><p>Roster moves, injuries, schedules, standings, transactions, league developments and major stories across the WNBA.</p></div>
 <div class="coverage-card"><b>Analysis</b><p>Lineups, matchups, spacing, pace, shot selection, rebounding, defensive coverage and the numbers behind the result.</p></div>
@@ -81,4 +79,41 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
 <section class="cta"><div><h2>Full Court Buckets</h2><p>Independent WNBA coverage built around facts, basketball and the stories that matter.</p></div><a class="watch-btn" href="#">Follow the Coverage</a></section>
 </main>
 <footer><div class="shell footer-row"><div class="footer-brand">Full Court Buckets</div><div>Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</div></div></footer>
+<script>
+(function () {
+  function formatDate(iso) {
+    var p = String(iso).split("-");
+    return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).toLocaleDateString("en-US", {month: "long", day: "numeric", year: "numeric", timeZone: "UTC"});
+  }
+  fetch("/articles.json").then(function (r) {
+    if (!r.ok) throw new Error(String(r.status));
+    return r.json();
+  }).then(function (articles) {
+    articles.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+    var featured = articles[0];
+    if (!featured) return;
+    var link = document.getElementById("featured-story");
+    link.href = "/" + featured.slug + "/";
+    document.getElementById("featured-title").textContent = featured.title;
+    document.getElementById("featured-dek").textContent = featured.description;
+    document.getElementById("featured-meta").textContent = featured.category + " \u00b7 " + formatDate(featured.date);
+    var list = document.getElementById("older-stories");
+    articles.slice(1).forEach(function (a) {
+      var card = document.createElement("a");
+      card.className = "article-card";
+      card.href = "/" + a.slug + "/";
+      card.innerHTML = '<div class="article-visual"><img alt=""></div><div class="article-copy"><div class="cat"></div><h3></h3><p></p><div class="date"></div></div>';
+      var img = card.querySelector("img");
+      img.src = a.image;
+      img.alt = a.imageAlt || a.title;
+      card.querySelector(".cat").textContent = a.category;
+      card.querySelector("h3").textContent = a.title;
+      card.querySelector("p").textContent = a.description;
+      card.querySelector(".date").textContent = formatDate(a.date);
+      list.appendChild(card);
+    });
+    if (articles.length > 1) document.getElementById("more-stories").hidden = false;
+  });
+})();
+</script>
 </body></html>
