@@ -22,17 +22,6 @@ concurrency:
   group: fcb-wnba-${{ github.ref_name }}
   cancel-in-progress: false
 jobs:
-  dispatch-roster-update:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      actions: write
-    steps:
-      - name: Dispatch the roster updater once the fail-safe tests pass
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPO: ${{ github.repository }}
-        run: gh api --method POST "repos/$REPO/actions/workflows/roster-update.yml/dispatches" -f ref=main
   dispatch-to-production:
     if: github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
