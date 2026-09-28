@@ -180,7 +180,7 @@ class RosterTests(unittest.TestCase):
             root = Path(tmp)
             (root / 'players' / 'aja-wilson').mkdir(parents=True)
             (root / 'players.json').write_text(json.dumps([PLAYER]), encoding='utf-8')
-            style = (Path('/workspace/players/aja-wilson/index.html').read_text(encoding='utf-8'))
+            style = (Path(__file__).resolve().parents[1] / 'players' / 'aja-wilson' / 'index.html').read_text(encoding='utf-8')
             match_style = style[style.index('<style>'):style.index('</style>') + len('</style>')]
             (root / 'players' / 'aja-wilson' / 'index.html').write_text(f'<html>{match_style}</html>', encoding='utf-8')
             (root / 'players' / 'index.html').write_text('<div class="player-list">old</div>', encoding='utf-8')
