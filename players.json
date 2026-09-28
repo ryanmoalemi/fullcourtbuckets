@@ -1,0 +1,3159 @@
+[
+  {
+    "slug": "pauline-astier",
+    "name": "Pauline Astier",
+    "espnId": "5345320",
+    "espnName": "Pauline Astier",
+    "team": "New York Liberty",
+    "position": "Guard",
+    "jersey": "18",
+    "height": "5' 11\"",
+    "weight": null,
+    "age": 24,
+    "born": "15/2/2002",
+    "birthPlace": null,
+    "college": null,
+    "draft": null,
+    "experience": "Rookie",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "39",
+      "MIN": "23.3",
+      "PTS": "9.3",
+      "REB": "2.7",
+      "AST": "3.3",
+      "STL": "0.8",
+      "BLK": "0.1",
+      "TO": "1.7",
+      "FG%": "54.6",
+      "3P%": "33.3",
+      "FT%": "87.5"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "29.0",
+      "PTS": "7.0",
+      "REB": "8.0",
+      "AST": "5.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "4.0",
+      "FG%": "50.0",
+      "3P%": "100.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "29",
+        "PTS": "7",
+        "REB": "8",
+        "AST": "5",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "4"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "shakira-austin",
+    "name": "Shakira Austin",
+    "espnId": "4398911",
+    "espnName": "Shakira Austin",
+    "team": "Washington Mystics",
+    "position": "Center",
+    "jersey": "0",
+    "height": "6' 5\"",
+    "weight": "190 lbs",
+    "age": 26,
+    "born": "25/7/2000",
+    "birthPlace": "Fredericksburg, VA",
+    "college": "Ole Miss",
+    "draft": "2022: Rd 1, Pk 3 (WSH)",
+    "experience": "5th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "29.4",
+      "PTS": "17.0",
+      "REB": "9.5",
+      "AST": "2.6",
+      "STL": "0.8",
+      "BLK": "1.2",
+      "TO": "2.8",
+      "FG%": "48.3",
+      "3P%": "31.5",
+      "FT%": "72.5"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "34.0",
+      "PTS": "12.0",
+      "REB": "16.0",
+      "AST": "2.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "4.0",
+      "FG%": "36.4",
+      "3P%": "0.0",
+      "FT%": "66.7"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Atlanta Dream",
+      "atVs": "at",
+      "result": "L",
+      "score": "92-77",
+      "line": {
+        "MIN": "34",
+        "PTS": "12",
+        "REB": "16",
+        "AST": "2",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "4"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "dewanna-bonner",
+    "name": "DeWanna Bonner",
+    "espnId": "869",
+    "espnName": "DeWanna Bonner",
+    "team": "Atlanta Dream",
+    "position": "Forward",
+    "jersey": "24",
+    "height": "6' 4\"",
+    "weight": "140 lbs",
+    "age": 39,
+    "born": "21/8/1987",
+    "birthPlace": "Fairfield, AL",
+    "college": "Auburn",
+    "draft": null,
+    "experience": "17th Season",
+    "active": true,
+    "season2026": {
+      "GP": "37",
+      "GS": "26",
+      "MIN": "27.6",
+      "PTS": "10.6",
+      "REB": "6.1",
+      "AST": "1.5",
+      "STL": "1.2",
+      "BLK": "0.8",
+      "TO": "0.8",
+      "FG%": "39.4",
+      "3P%": "26.2",
+      "FT%": "84.8"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "22.0",
+      "PTS": "13.0",
+      "REB": "4.0",
+      "AST": "2.0",
+      "STL": "2.0",
+      "BLK": "1.0",
+      "TO": "1.0",
+      "FG%": "50.0",
+      "3P%": "25.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "W",
+      "score": "92-77",
+      "line": {
+        "MIN": "22",
+        "PTS": "13",
+        "REB": "4",
+        "AST": "2",
+        "STL": "2",
+        "BLK": "1",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "aliyah-boston",
+    "name": "Aliyah Boston",
+    "espnId": "4432831",
+    "espnName": "Aliyah Boston",
+    "team": "Indiana Fever",
+    "position": "Center",
+    "jersey": "7",
+    "height": "6' 5\"",
+    "weight": "220 lbs",
+    "age": 24,
+    "born": "11/12/2001",
+    "birthPlace": "St. Thomas, Virgin Islands",
+    "college": "South Carolina",
+    "draft": "2023: Rd 1, Pk 1 (IND)",
+    "experience": "4th Season",
+    "active": true,
+    "season2026": {
+      "GP": "40",
+      "GS": "40",
+      "MIN": "27.1",
+      "PTS": "16.1",
+      "REB": "8.0",
+      "AST": "3.0",
+      "STL": "1.5",
+      "BLK": "1.2",
+      "TO": "2.3",
+      "FG%": "52.8",
+      "3P%": "40.6",
+      "FT%": "81.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "25.0",
+      "PTS": "18.0",
+      "REB": "8.0",
+      "AST": "4.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "58.3",
+      "3P%": "50.0",
+      "FT%": "50.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Las Vegas Aces",
+      "atVs": "at",
+      "result": "L",
+      "score": "102-85",
+      "line": {
+        "MIN": "25",
+        "PTS": "18",
+        "REB": "8",
+        "AST": "4",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "nia-brodie",
+    "name": "Nia Brodie",
+    "espnId": "3054590",
+    "espnName": "Nia Brodie",
+    "team": "Minnesota Lynx",
+    "position": "Forward",
+    "jersey": "12",
+    "height": "6' 1\"",
+    "weight": "182 lbs",
+    "age": 31,
+    "born": "11/6/1995",
+    "birthPlace": "Saint Paul, MN",
+    "college": "Northwestern",
+    "draft": null,
+    "experience": "10th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "28",
+      "MIN": "22.3",
+      "PTS": "6.2",
+      "REB": "4.3",
+      "AST": "1.8",
+      "STL": "0.9",
+      "BLK": "1.0",
+      "TO": "0.7",
+      "FG%": "43.2",
+      "3P%": "38.2",
+      "FT%": "58.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "19.0",
+      "PTS": "16.0",
+      "REB": "1.0",
+      "AST": "0.0",
+      "STL": "0.0",
+      "BLK": "1.0",
+      "TO": "0.0",
+      "FG%": "85.7",
+      "3P%": "80.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "New York Liberty",
+      "atVs": "vs",
+      "result": "L",
+      "score": "91-75",
+      "line": {
+        "MIN": "19",
+        "PTS": "16",
+        "REB": "1",
+        "AST": "0",
+        "STL": "0",
+        "BLK": "1",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "paige-bueckers",
+    "name": "Paige Bueckers",
+    "espnId": "4433730",
+    "espnName": "Paige Bueckers",
+    "team": "Dallas Wings",
+    "position": "Guard",
+    "jersey": "5",
+    "height": "6' 0\"",
+    "weight": null,
+    "age": 24,
+    "born": "20/10/2001",
+    "birthPlace": "Hopkins, MN",
+    "college": "UConn",
+    "draft": "2025: Rd 1, Pk 1 (DAL)",
+    "experience": "2nd Season",
+    "active": true,
+    "season2026": {
+      "GP": "42",
+      "GS": "42",
+      "MIN": "32.8",
+      "PTS": "20.9",
+      "REB": "4.1",
+      "AST": "5.9",
+      "STL": "1.0",
+      "BLK": "0.4",
+      "TO": "2.2",
+      "FG%": "51.2",
+      "3P%": "41.0",
+      "FT%": "87.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "25.0",
+      "PTS": "21.0",
+      "REB": "6.0",
+      "AST": "2.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "1.0",
+      "FG%": "90.0",
+      "3P%": "100.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Golden State Valkyries",
+      "atVs": "at",
+      "result": "L",
+      "score": "104-80",
+      "line": {
+        "MIN": "25",
+        "PTS": "21",
+        "REB": "6",
+        "AST": "2",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "veronica-burton",
+    "name": "Veronica Burton",
+    "espnId": "4398935",
+    "espnName": "Veronica Burton",
+    "team": "Golden State Valkyries",
+    "position": "Guard",
+    "jersey": "22",
+    "height": "5' 9\"",
+    "weight": "155 lbs",
+    "age": 26,
+    "born": "12/7/2000",
+    "birthPlace": "Newton, MA",
+    "college": "Northwestern",
+    "draft": "2022: Rd 1, Pk 7 (DAL)",
+    "experience": "5th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "28.6",
+      "PTS": "12.2",
+      "REB": "3.6",
+      "AST": "5.7",
+      "STL": "1.6",
+      "BLK": "0.5",
+      "TO": "1.5",
+      "FG%": "42.2",
+      "3P%": "35.5",
+      "FT%": "83.6"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "23.0",
+      "PTS": "10.0",
+      "REB": "3.0",
+      "AST": "5.0",
+      "STL": "0.0",
+      "BLK": "1.0",
+      "TO": "0.0",
+      "FG%": "42.9",
+      "3P%": "100.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Dallas Wings",
+      "atVs": "vs",
+      "result": "W",
+      "score": "104-80",
+      "line": {
+        "MIN": "23",
+        "PTS": "10",
+        "REB": "3",
+        "AST": "5",
+        "STL": "0",
+        "BLK": "1",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "jordin-canada",
+    "name": "Jordin Canada",
+    "espnId": "3142250",
+    "espnName": "Jordin Canada",
+    "team": "Atlanta Dream",
+    "position": "Guard",
+    "jersey": "3",
+    "height": "5' 6\"",
+    "weight": "135 lbs",
+    "age": 31,
+    "born": "11/8/1995",
+    "birthPlace": "Los Angeles, CA",
+    "college": "UCLA",
+    "draft": "2018: Rd 1, Pk 5 (SEA)",
+    "experience": "9th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "31.1",
+      "PTS": "11.6",
+      "REB": "3.5",
+      "AST": "7.3",
+      "STL": "1.9",
+      "BLK": "0.3",
+      "TO": "2.4",
+      "FG%": "43.1",
+      "3P%": "29.2",
+      "FT%": "78.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "36.0",
+      "PTS": "10.0",
+      "REB": "3.0",
+      "AST": "10.0",
+      "STL": "2.0",
+      "BLK": "0.0",
+      "TO": "3.0",
+      "FG%": "36.4",
+      "3P%": "0.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "W",
+      "score": "92-77",
+      "line": {
+        "MIN": "36",
+        "PTS": "10",
+        "REB": "3",
+        "AST": "10",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "3"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.jpg",
+      "alt": "Jordin Canada of the Atlanta Dream",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:260527_Lynx_Dream_JohnMc210_(55298398176).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "sonia-citron",
+    "name": "Sonia Citron",
+    "espnId": "4433524",
+    "espnName": "Sonia Citron",
+    "team": "Washington Mystics",
+    "position": "Guard",
+    "jersey": "22",
+    "height": "6' 1\"",
+    "weight": null,
+    "age": 22,
+    "born": "22/10/2003",
+    "birthPlace": "Eastchester, NY",
+    "college": "Notre Dame",
+    "draft": "2025: Rd 1, Pk 3 (WSH)",
+    "experience": "2nd Season",
+    "active": true,
+    "season2026": {
+      "GP": "40",
+      "GS": "40",
+      "MIN": "33.0",
+      "PTS": "16.8",
+      "REB": "3.8",
+      "AST": "4.4",
+      "STL": "1.2",
+      "BLK": "0.6",
+      "TO": "2.4",
+      "FG%": "48.3",
+      "3P%": "34.2",
+      "FT%": "87.7"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "35.0",
+      "PTS": "25.0",
+      "REB": "6.0",
+      "AST": "3.0",
+      "STL": "0.0",
+      "BLK": "2.0",
+      "TO": "3.0",
+      "FG%": "53.3",
+      "3P%": "50.0",
+      "FT%": "77.8"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Atlanta Dream",
+      "atVs": "at",
+      "result": "L",
+      "score": "92-77",
+      "line": {
+        "MIN": "35",
+        "PTS": "25",
+        "REB": "6",
+        "AST": "3",
+        "STL": "0",
+        "BLK": "2",
+        "TO": "3"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "caitlin-clark",
+    "name": "Caitlin Clark",
+    "espnId": "4433403",
+    "espnName": "Caitlin Clark",
+    "team": "Indiana Fever",
+    "position": "Guard",
+    "jersey": "22",
+    "height": "6' 0\"",
+    "weight": "157 lbs",
+    "age": 24,
+    "born": "22/1/2002",
+    "birthPlace": "West Des Moines, IA",
+    "college": "Iowa",
+    "draft": "2024: Rd 1, Pk 1 (IND)",
+    "experience": "3rd Season",
+    "active": true,
+    "season2026": {
+      "GP": "40",
+      "GS": "40",
+      "MIN": "31.1",
+      "PTS": "22.3",
+      "REB": "4.0",
+      "AST": "8.3",
+      "STL": "1.1",
+      "BLK": "0.5",
+      "TO": "4.6",
+      "FG%": "44.6",
+      "3P%": "36.1",
+      "FT%": "85.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "34.0",
+      "PTS": "15.0",
+      "REB": "3.0",
+      "AST": "10.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "6.0",
+      "FG%": "35.3",
+      "3P%": "30.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Las Vegas Aces",
+      "atVs": "at",
+      "result": "L",
+      "score": "102-85",
+      "line": {
+        "MIN": "34",
+        "PTS": "15",
+        "REB": "3",
+        "AST": "10",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "6"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/aces-fever-game-1-aja-wilson-38/caitlin-clark-fever-2026.jpg",
+      "alt": "Caitlin Clark of the Indiana Fever",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Caitlin_Clark_Fever_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "napheesa-collier",
+    "name": "Napheesa Collier",
+    "espnId": "3917450",
+    "espnName": "Napheesa Collier",
+    "team": "Minnesota Lynx",
+    "position": "Forward",
+    "jersey": "24",
+    "height": "6' 1\"",
+    "weight": "179 lbs",
+    "age": 30,
+    "born": "23/9/1996",
+    "birthPlace": "O' Fallon, MO",
+    "college": "UConn",
+    "draft": "2019: Rd 1, Pk 6 (MIN)",
+    "experience": "8th Season",
+    "active": true,
+    "season2026": {
+      "GP": "16",
+      "GS": "16",
+      "MIN": "29.3",
+      "PTS": "16.8",
+      "REB": "6.9",
+      "AST": "2.6",
+      "STL": "1.3",
+      "BLK": "0.9",
+      "TO": "2.2",
+      "FG%": "50.0",
+      "3P%": "44.4",
+      "FT%": "85.7"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "33.0",
+      "PTS": "12.0",
+      "REB": "5.0",
+      "AST": "3.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "3.0",
+      "FG%": "42.9",
+      "3P%": "0.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "New York Liberty",
+      "atVs": "vs",
+      "result": "L",
+      "score": "91-75",
+      "line": {
+        "MIN": "33",
+        "PTS": "12",
+        "REB": "5",
+        "AST": "3",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "3"
+      }
+    },
+    "photo": {
+      "src": "/images/players/napheesa-collier.jpg",
+      "alt": "Napheesa Collier of the Minnesota Lynx",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Napheesa_Collier_vs_Indiana_Fever_(August_2,_2026).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kahleah-copper",
+    "name": "Kahleah Copper",
+    "espnId": "2998938",
+    "espnName": "Kahleah Copper",
+    "team": "Phoenix Mercury",
+    "position": "Guard",
+    "jersey": "2",
+    "height": "6' 1\"",
+    "weight": "165 lbs",
+    "age": 32,
+    "born": "28/8/1994",
+    "birthPlace": "Philadelphia, PA",
+    "college": "Rutgers",
+    "draft": null,
+    "experience": "11th Season",
+    "active": true,
+    "season2026": {
+      "GP": "40",
+      "GS": "40",
+      "MIN": "32.9",
+      "PTS": "21.5",
+      "REB": "3.7",
+      "AST": "1.9",
+      "STL": "0.8",
+      "BLK": "0.1",
+      "TO": "2.4",
+      "FG%": "44.9",
+      "3P%": "29.8",
+      "FT%": "78.9"
+    },
+    "playoffs2026": null,
+    "lastGame": {
+      "date": "2026-09-24",
+      "displayDate": "September 24, 2026",
+      "opponent": "Las Vegas Aces",
+      "atVs": "vs",
+      "result": "L",
+      "score": "100-82",
+      "line": {
+        "MIN": "31",
+        "PTS": "18",
+        "REB": "6",
+        "AST": "3",
+        "STL": "3",
+        "BLK": "0",
+        "TO": "4"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "leonie-fiebich",
+    "name": "Leonie Fiebich",
+    "espnId": "4683006",
+    "espnName": "Leonie Fiebich",
+    "team": "New York Liberty",
+    "position": "Forward",
+    "jersey": "13",
+    "height": "6' 4\"",
+    "weight": null,
+    "age": 26,
+    "born": "10/1/2000",
+    "birthPlace": "Landsberg am Lech, Germany",
+    "college": null,
+    "draft": "2020: Rd 2, Pk 22 (LA)",
+    "experience": "3rd Season",
+    "active": true,
+    "season2026": {
+      "GP": "21",
+      "GS": "21",
+      "MIN": "28.7",
+      "PTS": "8.8",
+      "REB": "3.0",
+      "AST": "2.1",
+      "STL": "1.1",
+      "BLK": "0.1",
+      "TO": "1.8",
+      "FG%": "43.2",
+      "3P%": "41.2",
+      "FT%": "85.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "34.0",
+      "PTS": "16.0",
+      "REB": "8.0",
+      "AST": "3.0",
+      "STL": "1.0",
+      "BLK": "1.0",
+      "TO": "3.0",
+      "FG%": "85.7",
+      "3P%": "80.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "34",
+        "PTS": "16",
+        "REB": "8",
+        "AST": "3",
+        "STL": "1",
+        "BLK": "1",
+        "TO": "3"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "allisha-gray",
+    "name": "Allisha Gray",
+    "espnId": "3058901",
+    "espnName": "Allisha Gray",
+    "team": "Atlanta Dream",
+    "position": "Guard",
+    "jersey": "15",
+    "height": "6' 0\"",
+    "weight": "167 lbs",
+    "age": 31,
+    "born": "12/1/1995",
+    "birthPlace": "Greenwood, SC",
+    "college": "South Carolina",
+    "draft": "2017: Rd 1, Pk 4 (DAL)",
+    "experience": "10th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "32.6",
+      "PTS": "19.0",
+      "REB": "3.5",
+      "AST": "2.6",
+      "STL": "1.4",
+      "BLK": "0.4",
+      "TO": "1.5",
+      "FG%": "46.3",
+      "3P%": "33.9",
+      "FT%": "81.0"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "35.0",
+      "PTS": "22.0",
+      "REB": "3.0",
+      "AST": "0.0",
+      "STL": "1.0",
+      "BLK": "1.0",
+      "TO": "1.0",
+      "FG%": "50.0",
+      "3P%": "25.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "W",
+      "score": "92-77",
+      "line": {
+        "MIN": "35",
+        "PTS": "22",
+        "REB": "3",
+        "AST": "0",
+        "STL": "1",
+        "BLK": "1",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "chelsea-gray",
+    "name": "Chelsea Gray",
+    "espnId": "2529122",
+    "espnName": "Chelsea Gray",
+    "team": "Las Vegas Aces",
+    "position": "Guard",
+    "jersey": "12",
+    "height": "5' 11\"",
+    "weight": "170 lbs",
+    "age": 33,
+    "born": "8/10/1992",
+    "birthPlace": "Hayward, CA",
+    "college": "Duke",
+    "draft": "2014: Rd 1, Pk 11 (CON)",
+    "experience": "12th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "32.7",
+      "PTS": "12.0",
+      "REB": "3.3",
+      "AST": "6.7",
+      "STL": "1.4",
+      "BLK": "0.3",
+      "TO": "2.8",
+      "FG%": "44.1",
+      "3P%": "36.5",
+      "FT%": "93.0"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "34.0",
+      "PTS": "14.0",
+      "REB": "5.0",
+      "AST": "8.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "5.0",
+      "FG%": "50.0",
+      "3P%": "0.0",
+      "FT%": "85.7"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Indiana Fever",
+      "atVs": "vs",
+      "result": "W",
+      "score": "102-85",
+      "line": {
+        "MIN": "34",
+        "PTS": "14",
+        "REB": "5",
+        "AST": "8",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "5"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "becky-hammon",
+    "name": "Becky Hammon",
+    "espnId": "14",
+    "espnName": "Becky Hammon",
+    "team": "San Antonio Stars",
+    "position": "Guard",
+    "jersey": "25",
+    "height": "5' 6\"",
+    "weight": "136 lbs",
+    "age": 49,
+    "born": "11/3/1977",
+    "birthPlace": null,
+    "college": "Colorado State",
+    "draft": null,
+    "experience": "15th Season",
+    "active": false,
+    "season2026": null,
+    "playoffs2026": null,
+    "lastGame": null,
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": {
+      "date": "2014-08-23",
+      "displayDate": "August 23, 2014",
+      "opponent": "Minnesota Lynx",
+      "atVs": "vs",
+      "result": "L",
+      "score": "94-89",
+      "line": {
+        "MIN": "26",
+        "PTS": "12",
+        "REB": "2",
+        "AST": "4",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "3"
+      }
+    }
+  },
+  {
+    "slug": "tiffany-hayes",
+    "name": "Tiffany Hayes",
+    "espnId": "1054",
+    "espnName": "Tiffany Hayes",
+    "team": "Golden State Valkyries",
+    "position": "Guard",
+    "jersey": "15",
+    "height": "5' 10\"",
+    "weight": "155 lbs",
+    "age": 37,
+    "born": "20/9/1989",
+    "birthPlace": "Lakeland, FL",
+    "college": "UConn",
+    "draft": null,
+    "experience": "14th Season",
+    "active": true,
+    "season2026": {
+      "GP": "42",
+      "GS": "4",
+      "MIN": "17.0",
+      "PTS": "9.0",
+      "REB": "2.0",
+      "AST": "2.5",
+      "STL": "0.8",
+      "BLK": "0.2",
+      "TO": "1.2",
+      "FG%": "46.0",
+      "3P%": "28.3",
+      "FT%": "78.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "19.0",
+      "PTS": "21.0",
+      "REB": "1.0",
+      "AST": "4.0",
+      "STL": "2.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "70.0",
+      "3P%": "60.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Dallas Wings",
+      "atVs": "vs",
+      "result": "W",
+      "score": "104-80",
+      "line": {
+        "MIN": "19",
+        "PTS": "21",
+        "REB": "1",
+        "AST": "4",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "natasha-howard",
+    "name": "Natasha Howard",
+    "espnId": "2529130",
+    "espnName": "Natasha Howard",
+    "team": "Minnesota Lynx",
+    "position": "Forward",
+    "jersey": "1",
+    "height": "6' 2\"",
+    "weight": "175 lbs",
+    "age": 35,
+    "born": "2/9/1991",
+    "birthPlace": null,
+    "college": "Florida State",
+    "draft": null,
+    "experience": "13th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "28.4",
+      "PTS": "14.8",
+      "REB": "7.6",
+      "AST": "3.3",
+      "STL": "1.6",
+      "BLK": "1.0",
+      "TO": "2.5",
+      "FG%": "59.8",
+      "3P%": "18.8",
+      "FT%": "72.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "18.0",
+      "PTS": "8.0",
+      "REB": "2.0",
+      "AST": "2.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "2.0",
+      "FG%": "60.0",
+      "3P%": "0.0",
+      "FT%": "50.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "New York Liberty",
+      "atVs": "vs",
+      "result": "L",
+      "score": "91-75",
+      "line": {
+        "MIN": "18",
+        "PTS": "8",
+        "REB": "2",
+        "AST": "2",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "2"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "rhyne-howard",
+    "name": "Rhyne Howard",
+    "espnId": "4398674",
+    "espnName": "Rhyne Howard",
+    "team": "Atlanta Dream",
+    "position": "Guard",
+    "jersey": "10",
+    "height": "6' 2\"",
+    "weight": "175 lbs",
+    "age": 26,
+    "born": "29/4/2000",
+    "birthPlace": "Chattanooga, TN",
+    "college": "Kentucky",
+    "draft": "2022: Rd 1, Pk 1 (ATL)",
+    "experience": "5th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "34.2",
+      "PTS": "17.7",
+      "REB": "3.8",
+      "AST": "3.7",
+      "STL": "2.3",
+      "BLK": "0.9",
+      "TO": "1.3",
+      "FG%": "40.5",
+      "3P%": "35.5",
+      "FT%": "86.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "39.0",
+      "PTS": "26.0",
+      "REB": "1.0",
+      "AST": "1.0",
+      "STL": "5.0",
+      "BLK": "1.0",
+      "TO": "0.0",
+      "FG%": "38.9",
+      "3P%": "28.6",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "W",
+      "score": "92-77",
+      "line": {
+        "MIN": "39",
+        "PTS": "26",
+        "REB": "1",
+        "AST": "1",
+        "STL": "5",
+        "BLK": "1",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "sabrina-ionescu",
+    "name": "Sabrina Ionescu",
+    "espnId": "4066533",
+    "espnName": "Sabrina Ionescu",
+    "team": "New York Liberty",
+    "position": "Guard",
+    "jersey": "20",
+    "height": "5' 11\"",
+    "weight": "165 lbs",
+    "age": 28,
+    "born": "6/12/1997",
+    "birthPlace": "Walnut Creek, CA",
+    "college": "Oregon",
+    "draft": "2020: Rd 1, Pk 1 (NY)",
+    "experience": "7th Season",
+    "active": true,
+    "season2026": {
+      "GP": "31",
+      "GS": "30",
+      "MIN": "29.8",
+      "PTS": "14.6",
+      "REB": "3.8",
+      "AST": "4.7",
+      "STL": "0.7",
+      "BLK": "0.3",
+      "TO": "2.8",
+      "FG%": "38.8",
+      "3P%": "29.5",
+      "FT%": "89.6"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "28.0",
+      "PTS": "13.0",
+      "REB": "0.0",
+      "AST": "6.0",
+      "STL": "2.0",
+      "BLK": "0.0",
+      "TO": "2.0",
+      "FG%": "28.6",
+      "3P%": "37.5",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "28",
+        "PTS": "13",
+        "REB": "0",
+        "AST": "6",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "2"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/liberty-lynx-game-1-ionescu-stewart/sabrina-ionescu-liberty-target-center-2026.jpg",
+      "alt": "Sabrina Ionescu of the New York Liberty",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:260711_Lynx_Liberty_JohnMc328_(55386995272).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kiki-iriafen",
+    "name": "Kiki Iriafen",
+    "espnId": "4898384",
+    "espnName": "Kiki Iriafen",
+    "team": "Washington Mystics",
+    "position": "Forward",
+    "jersey": "44",
+    "height": "6' 3\"",
+    "weight": null,
+    "age": 23,
+    "born": "26/8/2003",
+    "birthPlace": "Los Angeles, CA",
+    "college": "USC",
+    "draft": "2025: Rd 1, Pk 4 (WSH)",
+    "experience": "2nd Season",
+    "active": true,
+    "season2026": {
+      "GP": "41",
+      "GS": "41",
+      "MIN": "28.1",
+      "PTS": "15.3",
+      "REB": "9.6",
+      "AST": "1.5",
+      "STL": "0.7",
+      "BLK": "0.4",
+      "TO": "1.8",
+      "FG%": "51.3",
+      "3P%": "33.3",
+      "FT%": "65.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "23.0",
+      "PTS": "15.0",
+      "REB": "14.0",
+      "AST": "0.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "3.0",
+      "FG%": "50.0",
+      "3P%": "0.0",
+      "FT%": "50.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Atlanta Dream",
+      "atVs": "at",
+      "result": "L",
+      "score": "92-77",
+      "line": {
+        "MIN": "23",
+        "PTS": "15",
+        "REB": "14",
+        "AST": "0",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "3"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "raven-johnson",
+    "name": "Raven Johnson",
+    "espnId": "4433797",
+    "espnName": "Raven Johnson",
+    "team": "Indiana Fever",
+    "position": "Guard",
+    "jersey": "3",
+    "height": "5' 8\"",
+    "weight": null,
+    "age": 23,
+    "born": "4/3/2003",
+    "birthPlace": "Atlanta, GA",
+    "college": "South Carolina",
+    "draft": "2026: Rd 1, Pk 10 (IND)",
+    "experience": "Rookie",
+    "active": true,
+    "season2026": {
+      "GP": "39",
+      "GS": "0",
+      "MIN": "10.9",
+      "PTS": "3.1",
+      "REB": "1.7",
+      "AST": "1.2",
+      "STL": "0.4",
+      "BLK": "0.2",
+      "TO": "0.7",
+      "FG%": "40.8",
+      "3P%": "23.4",
+      "FT%": "69.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "22.0",
+      "PTS": "14.0",
+      "REB": "0.0",
+      "AST": "1.0",
+      "STL": "2.0",
+      "BLK": "0.0",
+      "TO": "2.0",
+      "FG%": "85.7",
+      "3P%": "100.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Las Vegas Aces",
+      "atVs": "at",
+      "result": "L",
+      "score": "102-85",
+      "line": {
+        "MIN": "22",
+        "PTS": "14",
+        "REB": "0",
+        "AST": "1",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "2"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "jonquel-jones",
+    "name": "Jonquel Jones",
+    "espnId": "2999101",
+    "espnName": "Jonquel Jones",
+    "team": "New York Liberty",
+    "position": "Center",
+    "jersey": "35",
+    "height": "6' 6\"",
+    "weight": "215 lbs",
+    "age": 32,
+    "born": "5/1/1994",
+    "birthPlace": "Freeport, GB",
+    "college": "George Washington",
+    "draft": null,
+    "experience": "10th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "28.2",
+      "PTS": "14.5",
+      "REB": "9.1",
+      "AST": "2.6",
+      "STL": "0.6",
+      "BLK": "1.1",
+      "TO": "2.1",
+      "FG%": "49.5",
+      "3P%": "39.2",
+      "FT%": "81.2"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "26.0",
+      "PTS": "8.0",
+      "REB": "5.0",
+      "AST": "3.0",
+      "STL": "1.0",
+      "BLK": "1.0",
+      "TO": "1.0",
+      "FG%": "40.0",
+      "3P%": "66.7",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "26",
+        "PTS": "8",
+        "REB": "5",
+        "AST": "3",
+        "STL": "1",
+        "BLK": "1",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kitija-laksa",
+    "name": "Kitija Laksa",
+    "espnId": "3920741",
+    "espnName": "Kitija Laksa",
+    "team": "Dallas Wings",
+    "position": "Guard",
+    "jersey": "33",
+    "height": "6' 1\"",
+    "weight": null,
+    "age": 30,
+    "born": "21/5/1996",
+    "birthPlace": "Riga, Latvia",
+    "college": "South Florida",
+    "draft": "2020: Rd 1, Pk 11 (SEA)",
+    "experience": "1st Season",
+    "active": true,
+    "season2026": {
+      "GP": "4",
+      "GS": "0",
+      "MIN": "10.0",
+      "PTS": "3.0",
+      "REB": "1.8",
+      "AST": "0.0",
+      "STL": "0.0",
+      "BLK": "0.3",
+      "TO": "1.0",
+      "FG%": "25.0",
+      "3P%": "16.7",
+      "FT%": "0.0"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "15.0",
+      "PTS": "11.0",
+      "REB": "1.0",
+      "AST": "0.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "80.0",
+      "3P%": "75.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Golden State Valkyries",
+      "atVs": "at",
+      "result": "L",
+      "score": "104-80",
+      "line": {
+        "MIN": "15",
+        "PTS": "11",
+        "REB": "1",
+        "AST": "0",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kara-lawson",
+    "name": "Kara Lawson",
+    "espnId": "485",
+    "espnName": "Kara Lawson",
+    "team": "Washington Mystics",
+    "position": "Guard",
+    "jersey": "20",
+    "height": "5' 9\"",
+    "weight": "150 lbs",
+    "age": 45,
+    "born": "14/2/1981",
+    "birthPlace": null,
+    "college": "Tennessee",
+    "draft": null,
+    "experience": "13th Season",
+    "active": false,
+    "season2026": null,
+    "playoffs2026": null,
+    "lastGame": null,
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": {
+      "date": "2015-09-22",
+      "displayDate": "September 22, 2015",
+      "opponent": "New York Liberty",
+      "atVs": "at",
+      "result": "L",
+      "score": "79-74",
+      "line": {
+        "MIN": "14",
+        "PTS": "5",
+        "REB": "1",
+        "AST": "1",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "3"
+      }
+    }
+  },
+  {
+    "slug": "jewell-loyd",
+    "name": "Jewell Loyd",
+    "espnId": "2987869",
+    "espnName": "Jewell Loyd",
+    "team": "Las Vegas Aces",
+    "position": "Guard",
+    "jersey": "24",
+    "height": "5' 11\"",
+    "weight": "175 lbs",
+    "age": 32,
+    "born": "5/10/1993",
+    "birthPlace": "Lincolnwood, IL",
+    "college": "Notre Dame",
+    "draft": "2015: Rd 1, Pk 1 (SEA)",
+    "experience": "12th Season",
+    "active": true,
+    "season2026": {
+      "GP": "42",
+      "GS": "3",
+      "MIN": "25.9",
+      "PTS": "8.0",
+      "REB": "2.3",
+      "AST": "1.4",
+      "STL": "1.0",
+      "BLK": "0.1",
+      "TO": "0.9",
+      "FG%": "36.5",
+      "3P%": "33.6",
+      "FT%": "79.6"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "28.0",
+      "PTS": "10.0",
+      "REB": "2.0",
+      "AST": "0.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "1.0",
+      "FG%": "66.7",
+      "3P%": "66.7",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Indiana Fever",
+      "atVs": "vs",
+      "result": "W",
+      "score": "102-85",
+      "line": {
+        "MIN": "28",
+        "PTS": "10",
+        "REB": "2",
+        "AST": "0",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kayla-mcbride",
+    "name": "Kayla McBride",
+    "espnId": "2529205",
+    "espnName": "Kayla McBride",
+    "team": "Minnesota Lynx",
+    "position": "Guard",
+    "jersey": "21",
+    "height": "5' 11\"",
+    "weight": "187 lbs",
+    "age": 34,
+    "born": "25/6/1992",
+    "birthPlace": "Erie, PA",
+    "college": "Notre Dame",
+    "draft": null,
+    "experience": "13th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "32.0",
+      "PTS": "17.6",
+      "REB": "3.0",
+      "AST": "2.2",
+      "STL": "1.6",
+      "BLK": "0.2",
+      "TO": "1.3",
+      "FG%": "45.7",
+      "3P%": "41.2",
+      "FT%": "92.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "38.0",
+      "PTS": "14.0",
+      "REB": "2.0",
+      "AST": "6.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "2.0",
+      "FG%": "41.7",
+      "3P%": "28.6",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "New York Liberty",
+      "atVs": "vs",
+      "result": "L",
+      "score": "91-75",
+      "line": {
+        "MIN": "38",
+        "PTS": "14",
+        "REB": "2",
+        "AST": "6",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "2"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "olivia-miles",
+    "name": "Olivia Miles",
+    "espnId": "4433791",
+    "espnName": "Olivia Miles",
+    "team": "Minnesota Lynx",
+    "position": "Guard",
+    "jersey": "5",
+    "height": "5' 10\"",
+    "weight": null,
+    "age": 23,
+    "born": "29/1/2003",
+    "birthPlace": "Phillipsburg, NJ",
+    "college": "TCU",
+    "draft": "2026: Rd 1, Pk 2 (MIN)",
+    "experience": "Rookie",
+    "active": true,
+    "season2026": {
+      "GP": "40",
+      "GS": "40",
+      "MIN": "31.0",
+      "PTS": "19.8",
+      "REB": "4.7",
+      "AST": "6.0",
+      "STL": "1.3",
+      "BLK": "0.6",
+      "TO": "3.1",
+      "FG%": "49.2",
+      "3P%": "38.8",
+      "FT%": "87.0"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "30.0",
+      "PTS": "11.0",
+      "REB": "8.0",
+      "AST": "1.0",
+      "STL": "0.0",
+      "BLK": "1.0",
+      "TO": "4.0",
+      "FG%": "25.0",
+      "3P%": "25.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "New York Liberty",
+      "atVs": "vs",
+      "result": "L",
+      "score": "91-75",
+      "line": {
+        "MIN": "30",
+        "PTS": "11",
+        "REB": "8",
+        "AST": "1",
+        "STL": "0",
+        "BLK": "1",
+        "TO": "4"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kelsey-mitchell",
+    "name": "Kelsey Mitchell",
+    "espnId": "3142191",
+    "espnName": "Kelsey Mitchell",
+    "team": "Indiana Fever",
+    "position": "Guard",
+    "jersey": "0",
+    "height": "5' 8\"",
+    "weight": "155 lbs",
+    "age": 30,
+    "born": "12/11/1995",
+    "birthPlace": "Cincinnati, OH",
+    "college": "Ohio State",
+    "draft": "2018: Rd 1, Pk 2 (IND)",
+    "experience": "9th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "32.5",
+      "PTS": "24.7",
+      "REB": "1.7",
+      "AST": "2.8",
+      "STL": "1.0",
+      "BLK": "0.1",
+      "TO": "1.6",
+      "FG%": "50.9",
+      "3P%": "45.0",
+      "FT%": "85.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "30.0",
+      "PTS": "12.0",
+      "REB": "0.0",
+      "AST": "3.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "3.0",
+      "FG%": "25.0",
+      "3P%": "16.7",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Las Vegas Aces",
+      "atVs": "at",
+      "result": "L",
+      "score": "102-85",
+      "line": {
+        "MIN": "30",
+        "PTS": "12",
+        "REB": "0",
+        "AST": "3",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "3"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "arike-ogunbowale",
+    "name": "Arike Ogunbowale",
+    "espnId": "3904577",
+    "espnName": "Arike Ogunbowale",
+    "team": "Dallas Wings",
+    "position": "Guard",
+    "jersey": "24",
+    "height": "5' 8\"",
+    "weight": "165 lbs",
+    "age": 29,
+    "born": "2/3/1997",
+    "birthPlace": "Milwaukee, WI",
+    "college": "Notre Dame",
+    "draft": "2019: Rd 1, Pk 5 (DAL)",
+    "experience": "8th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "30.0",
+      "PTS": "15.3",
+      "REB": "3.0",
+      "AST": "3.3",
+      "STL": "1.0",
+      "BLK": "0.1",
+      "TO": "1.5",
+      "FG%": "40.6",
+      "3P%": "32.5",
+      "FT%": "89.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "25.0",
+      "PTS": "10.0",
+      "REB": "1.0",
+      "AST": "4.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "1.0",
+      "FG%": "28.6",
+      "3P%": "0.0",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Golden State Valkyries",
+      "atVs": "at",
+      "result": "L",
+      "score": "104-80",
+      "line": {
+        "MIN": "25",
+        "PTS": "10",
+        "REB": "1",
+        "AST": "4",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kelsey-plum",
+    "name": "Kelsey Plum",
+    "espnId": "3065570",
+    "espnName": "Kelsey Plum",
+    "team": "Phoenix Mercury",
+    "position": "Guard",
+    "jersey": "0",
+    "height": "5' 8\"",
+    "weight": "145 lbs",
+    "age": 32,
+    "born": "24/8/1994",
+    "birthPlace": "Poway, CA",
+    "college": "Washington",
+    "draft": null,
+    "experience": "9th Season",
+    "active": true,
+    "season2026": {
+      "GP": "12",
+      "GS": "12",
+      "MIN": "34.5",
+      "PTS": "23.9",
+      "REB": "2.2",
+      "AST": "6.4",
+      "STL": "1.2",
+      "BLK": "0.0",
+      "TO": "3.1",
+      "FG%": "52.7",
+      "3P%": "38.3",
+      "FT%": "80.6"
+    },
+    "playoffs2026": null,
+    "lastGame": {
+      "date": "2026-08-25",
+      "displayDate": "August 25, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "L",
+      "score": "94-84",
+      "line": {
+        "MIN": "17",
+        "PTS": "10",
+        "REB": "0",
+        "AST": "1",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "angel-reese",
+    "name": "Angel Reese",
+    "espnId": "4433402",
+    "espnName": "Angel Reese",
+    "team": "Atlanta Dream",
+    "position": "Forward",
+    "jersey": "5",
+    "height": "6' 4\"",
+    "weight": "165 lbs",
+    "age": 24,
+    "born": "6/5/2002",
+    "birthPlace": "Baltimore, MD",
+    "college": "LSU",
+    "draft": "2024: Rd 1, Pk 7 (CHI)",
+    "experience": "3rd Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "31.0",
+      "PTS": "16.4",
+      "REB": "12.1",
+      "AST": "2.8",
+      "STL": "1.8",
+      "BLK": "0.7",
+      "TO": "3.1",
+      "FG%": "45.1",
+      "3P%": "19.3",
+      "FT%": "72.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "30.0",
+      "PTS": "13.0",
+      "REB": "12.0",
+      "AST": "1.0",
+      "STL": "2.0",
+      "BLK": "1.0",
+      "TO": "1.0",
+      "FG%": "26.7",
+      "3P%": "50.0",
+      "FT%": "80.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "vs",
+      "result": "W",
+      "score": "92-77",
+      "line": {
+        "MIN": "30",
+        "PTS": "13",
+        "REB": "12",
+        "AST": "1",
+        "STL": "2",
+        "BLK": "1",
+        "TO": "1"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "dream-mystics-game-1-howard-reese",
+        "title": "Dream Rally From 11 Down to Beat Mystics in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "jessica-shepard",
+    "name": "Jessica Shepard",
+    "espnId": "3906949",
+    "espnName": "Jessica Shepard",
+    "team": "Dallas Wings",
+    "position": "Forward",
+    "jersey": "32",
+    "height": "6' 4\"",
+    "weight": "186 lbs",
+    "age": 30,
+    "born": "11/9/1996",
+    "birthPlace": "Fremont, NE",
+    "college": "Notre Dame",
+    "draft": "2019: Rd 2, Pk 16 (MIN)",
+    "experience": "6th Season",
+    "active": true,
+    "season2026": {
+      "GP": "42",
+      "GS": "42",
+      "MIN": "31.7",
+      "PTS": "14.5",
+      "REB": "11.1",
+      "AST": "5.3",
+      "STL": "0.7",
+      "BLK": "0.1",
+      "TO": "1.9",
+      "FG%": "57.5",
+      "3P%": "9.1",
+      "FT%": "67.7"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "24.0",
+      "PTS": "0.0",
+      "REB": "3.0",
+      "AST": "3.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "3.0",
+      "FG%": "0.0",
+      "3P%": "0.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Golden State Valkyries",
+      "atVs": "at",
+      "result": "L",
+      "score": "104-80",
+      "line": {
+        "MIN": "24",
+        "PTS": "0",
+        "REB": "3",
+        "AST": "3",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "3"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "maddy-siegrist",
+    "name": "Maddy Siegrist",
+    "espnId": "4399415",
+    "espnName": "Maddy Siegrist",
+    "team": "Dallas Wings",
+    "position": "Forward",
+    "jersey": "20",
+    "height": "6' 2\"",
+    "weight": "175 lbs",
+    "age": 26,
+    "born": "22/5/2000",
+    "birthPlace": "Poughkeepsie, NY",
+    "college": "Villanova",
+    "draft": "2023: Rd 1, Pk 3 (DAL)",
+    "experience": "4th Season",
+    "active": true,
+    "season2026": {
+      "GP": "41",
+      "GS": "10",
+      "MIN": "14.9",
+      "PTS": "6.5",
+      "REB": "2.7",
+      "AST": "0.9",
+      "STL": "0.4",
+      "BLK": "0.4",
+      "TO": "0.3",
+      "FG%": "47.7",
+      "3P%": "42.2",
+      "FT%": "83.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "21.0",
+      "PTS": "11.0",
+      "REB": "3.0",
+      "AST": "0.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "44.4",
+      "3P%": "50.0",
+      "FT%": "66.7"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Golden State Valkyries",
+      "atVs": "at",
+      "result": "L",
+      "score": "104-80",
+      "line": {
+        "MIN": "21",
+        "PTS": "11",
+        "REB": "3",
+        "AST": "0",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "breanna-stewart",
+    "name": "Breanna Stewart",
+    "espnId": "2998928",
+    "espnName": "Breanna Stewart",
+    "team": "New York Liberty",
+    "position": "Forward",
+    "jersey": "30",
+    "height": "6' 4\"",
+    "weight": "170 lbs",
+    "age": 32,
+    "born": "27/8/1994",
+    "birthPlace": "North Syracuse, NY",
+    "college": "UConn",
+    "draft": "2016: Rd 1, Pk 1 (SEA)",
+    "experience": "10th Season",
+    "active": true,
+    "season2026": {
+      "GP": "42",
+      "GS": "42",
+      "MIN": "33.0",
+      "PTS": "20.8",
+      "REB": "8.3",
+      "AST": "3.3",
+      "STL": "1.4",
+      "BLK": "1.3",
+      "TO": "2.0",
+      "FG%": "47.4",
+      "3P%": "25.4",
+      "FT%": "84.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "38.0",
+      "PTS": "34.0",
+      "REB": "12.0",
+      "AST": "6.0",
+      "STL": "2.0",
+      "BLK": "2.0",
+      "TO": "5.0",
+      "FG%": "61.1",
+      "3P%": "66.7",
+      "FT%": "83.3"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "38",
+        "PTS": "34",
+        "REB": "12",
+        "AST": "6",
+        "STL": "2",
+        "BLK": "2",
+        "TO": "5"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "liberty-lynx-game-1-ionescu-stewart",
+        "title": "Ionescu to Stewart Sinks the No. 1 Lynx in Game 1",
+        "date": "2026-09-27"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "kayla-thornton",
+    "name": "Kayla Thornton",
+    "espnId": "2529622",
+    "espnName": "Kayla Thornton",
+    "team": "Golden State Valkyries",
+    "position": "Forward",
+    "jersey": "5",
+    "height": "6' 1\"",
+    "weight": "190 lbs",
+    "age": 33,
+    "born": "20/10/1992",
+    "birthPlace": "El Paso, TX",
+    "college": "UTEP",
+    "draft": null,
+    "experience": "11th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "44",
+      "MIN": "24.3",
+      "PTS": "7.7",
+      "REB": "4.5",
+      "AST": "0.7",
+      "STL": "0.7",
+      "BLK": "0.3",
+      "TO": "0.7",
+      "FG%": "36.1",
+      "3P%": "34.7",
+      "FT%": "90.3"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "19.0",
+      "PTS": "10.0",
+      "REB": "5.0",
+      "AST": "1.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "66.7",
+      "3P%": "50.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Dallas Wings",
+      "atVs": "vs",
+      "result": "W",
+      "score": "104-80",
+      "line": {
+        "MIN": "19",
+        "PTS": "10",
+        "REB": "5",
+        "AST": "1",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "courtney-vandersloot",
+    "name": "Courtney Vandersloot",
+    "espnId": "981",
+    "espnName": "Courtney Vandersloot",
+    "team": "Chicago Sky",
+    "position": "Guard",
+    "jersey": "22",
+    "height": "5' 8\"",
+    "weight": "137 lbs",
+    "age": 37,
+    "born": "8/2/1989",
+    "birthPlace": "Kent, WA",
+    "college": "Gonzaga",
+    "draft": null,
+    "experience": "16th Season",
+    "active": true,
+    "season2026": {
+      "GP": "27",
+      "GS": "24",
+      "MIN": "22.4",
+      "PTS": "9.6",
+      "REB": "2.9",
+      "AST": "5.4",
+      "STL": "1.1",
+      "BLK": "0.3",
+      "TO": "2.1",
+      "FG%": "45.5",
+      "3P%": "40.9",
+      "FT%": "78.5"
+    },
+    "playoffs2026": null,
+    "lastGame": {
+      "date": "2026-09-24",
+      "displayDate": "September 24, 2026",
+      "opponent": "Washington Mystics",
+      "atVs": "at",
+      "result": "L",
+      "score": "101-93",
+      "line": {
+        "MIN": "27",
+        "PTS": "16",
+        "REB": "3",
+        "AST": "7",
+        "STL": "2",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "stephanie-white",
+    "name": "Stephanie White",
+    "espnId": "524",
+    "espnName": "Stephanie White",
+    "team": "Indiana Fever",
+    "position": "Guard",
+    "jersey": null,
+    "height": "5' 9\"",
+    "weight": "155 lbs",
+    "age": 49,
+    "born": "20/6/1977",
+    "birthPlace": "Danville, IL",
+    "college": null,
+    "draft": null,
+    "experience": null,
+    "active": false,
+    "season2026": null,
+    "playoffs2026": null,
+    "lastGame": null,
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "gabby-williams",
+    "name": "Gabby Williams",
+    "espnId": "3142328",
+    "espnName": "Gabby Williams",
+    "team": "Golden State Valkyries",
+    "position": "Forward",
+    "jersey": "1",
+    "height": "5' 11\"",
+    "weight": "170 lbs",
+    "age": 30,
+    "born": "9/9/1996",
+    "birthPlace": "Sparks, NV",
+    "college": "UConn",
+    "draft": null,
+    "experience": "8th Season",
+    "active": true,
+    "season2026": {
+      "GP": "39",
+      "GS": "39",
+      "MIN": "25.1",
+      "PTS": "14.4",
+      "REB": "3.3",
+      "AST": "2.2",
+      "STL": "1.6",
+      "BLK": "0.2",
+      "TO": "1.5",
+      "FG%": "40.4",
+      "3P%": "34.2",
+      "FT%": "73.6"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "27.0",
+      "PTS": "20.0",
+      "REB": "3.0",
+      "AST": "4.0",
+      "STL": "1.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "50.0",
+      "3P%": "40.0",
+      "FT%": "66.7"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Dallas Wings",
+      "atVs": "vs",
+      "result": "W",
+      "score": "104-80",
+      "line": {
+        "MIN": "27",
+        "PTS": "20",
+        "REB": "3",
+        "AST": "4",
+        "STL": "1",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/valkyries-wings-game-1-zandalasini/gabby-williams-valkyries-2026.jpg",
+      "alt": "Gabby Williams of the Golden State Valkyries",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc300_(55486705669).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "aja-wilson",
+    "name": "A'ja Wilson",
+    "espnId": "3149391",
+    "espnName": "A'ja Wilson",
+    "team": "Las Vegas Aces",
+    "position": "Center",
+    "jersey": "22",
+    "height": "6' 4\"",
+    "weight": "195 lbs",
+    "age": 30,
+    "born": "8/8/1996",
+    "birthPlace": "Hopkins, SC",
+    "college": "South Carolina",
+    "draft": "2018: Rd 1, Pk 1 (LV)",
+    "experience": "9th Season",
+    "active": true,
+    "season2026": {
+      "GP": "41",
+      "GS": "41",
+      "MIN": "32.0",
+      "PTS": "26.2",
+      "REB": "9.4",
+      "AST": "3.2",
+      "STL": "1.4",
+      "BLK": "1.9",
+      "TO": "2.4",
+      "FG%": "52.7",
+      "3P%": "40.4",
+      "FT%": "86.4"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "35.0",
+      "PTS": "38.0",
+      "REB": "16.0",
+      "AST": "2.0",
+      "STL": "2.0",
+      "BLK": "4.0",
+      "TO": "3.0",
+      "FG%": "78.9",
+      "3P%": "100.0",
+      "FT%": "85.7"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Indiana Fever",
+      "atVs": "vs",
+      "result": "W",
+      "score": "102-85",
+      "line": {
+        "MIN": "35",
+        "PTS": "38",
+        "REB": "16",
+        "AST": "2",
+        "STL": "2",
+        "BLK": "4",
+        "TO": "3"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2026.jpg",
+      "alt": "A'ja Wilson of the Las Vegas Aces",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:A%27ja_Wilson_vs._Napheesa_Collier_of_the_Minnesota_Lynx_(August_8,_2026).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "han-xu",
+    "name": "Han Xu",
+    "espnId": "4337216",
+    "espnName": "Han Xu",
+    "team": "New York Liberty",
+    "position": "Center",
+    "jersey": "21",
+    "height": "6' 11\"",
+    "weight": "203 lbs",
+    "age": 26,
+    "born": "31/10/1999",
+    "birthPlace": "Hebei, China",
+    "college": null,
+    "draft": "2019: Rd 2, Pk 14 (NY)",
+    "experience": "4th Season",
+    "active": true,
+    "season2026": {
+      "GP": "44",
+      "GS": "2",
+      "MIN": "13.7",
+      "PTS": "6.3",
+      "REB": "2.5",
+      "AST": "0.7",
+      "STL": "0.3",
+      "BLK": "0.6",
+      "TO": "0.5",
+      "FG%": "50.0",
+      "3P%": "39.1",
+      "FT%": "86.1"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "0",
+      "MIN": "12.0",
+      "PTS": "5.0",
+      "REB": "1.0",
+      "AST": "0.0",
+      "STL": "1.0",
+      "BLK": "2.0",
+      "TO": "0.0",
+      "FG%": "100.0",
+      "3P%": "100.0",
+      "FT%": "0.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Minnesota Lynx",
+      "atVs": "at",
+      "result": "W",
+      "score": "91-75",
+      "line": {
+        "MIN": "12",
+        "PTS": "5",
+        "REB": "1",
+        "AST": "0",
+        "STL": "1",
+        "BLK": "2",
+        "TO": "0"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/liberty-lynx-game-1-full-recap/han-xu-liberty-barclays-2026.jpg",
+      "alt": "Han Xu of the New York Liberty",
+      "credit": "Nicholas A. Nichols",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:NIcNichols_EDITS-1.jpg",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "liberty-lynx-game-1-full-recap",
+        "title": "Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "jackie-young",
+    "name": "Jackie Young",
+    "espnId": "4065870",
+    "espnName": "Jackie Young",
+    "team": "Las Vegas Aces",
+    "position": "Guard",
+    "jersey": "0",
+    "height": "6' 0\"",
+    "weight": "165 lbs",
+    "age": 29,
+    "born": "16/9/1997",
+    "birthPlace": "Princeton, IN",
+    "college": "Notre Dame",
+    "draft": "2019: Rd 1, Pk 1 (LV)",
+    "experience": "8th Season",
+    "active": true,
+    "season2026": {
+      "GP": "43",
+      "GS": "43",
+      "MIN": "32.3",
+      "PTS": "18.9",
+      "REB": "4.4",
+      "AST": "6.8",
+      "STL": "0.9",
+      "BLK": "0.3",
+      "TO": "2.4",
+      "FG%": "48.8",
+      "3P%": "38.3",
+      "FT%": "92.8"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "34.0",
+      "PTS": "21.0",
+      "REB": "2.0",
+      "AST": "10.0",
+      "STL": "3.0",
+      "BLK": "0.0",
+      "TO": "6.0",
+      "FG%": "57.1",
+      "3P%": "42.9",
+      "FT%": "100.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Indiana Fever",
+      "atVs": "vs",
+      "result": "W",
+      "score": "102-85",
+      "line": {
+        "MIN": "34",
+        "PTS": "21",
+        "REB": "2",
+        "AST": "10",
+        "STL": "3",
+        "BLK": "0",
+        "TO": "6"
+      }
+    },
+    "photo": null,
+    "faq": [],
+    "related": [
+      {
+        "slug": "aces-fever-game-1-aja-wilson-38",
+        "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
+        "date": "2026-09-28"
+      },
+      {
+        "slug": "fiba-womens-basketball-world-cup-2026",
+        "title": "This Is the Olympics of the WNBA",
+        "date": "2026-08-30"
+      }
+    ],
+    "lastGameOnRecord": null
+  },
+  {
+    "slug": "cecilia-zandalasini",
+    "name": "Cecilia Zandalasini",
+    "espnId": "4257500",
+    "espnName": "Cecilia Zandalasini",
+    "team": "Golden State Valkyries",
+    "position": "Forward",
+    "jersey": "24",
+    "height": "6' 2\"",
+    "weight": "175 lbs",
+    "age": 30,
+    "born": "16/3/1996",
+    "birthPlace": "Milan, Italy",
+    "college": null,
+    "draft": null,
+    "experience": "5th Season",
+    "active": true,
+    "season2026": {
+      "GP": "37",
+      "GS": "34",
+      "MIN": "19.0",
+      "PTS": "8.6",
+      "REB": "2.1",
+      "AST": "1.7",
+      "STL": "0.9",
+      "BLK": "0.2",
+      "TO": "1.4",
+      "FG%": "39.3",
+      "3P%": "32.4",
+      "FT%": "82.6"
+    },
+    "playoffs2026": {
+      "GP": "1",
+      "GS": "1",
+      "MIN": "16.0",
+      "PTS": "22.0",
+      "REB": "0.0",
+      "AST": "1.0",
+      "STL": "0.0",
+      "BLK": "0.0",
+      "TO": "0.0",
+      "FG%": "63.6",
+      "3P%": "80.0",
+      "FT%": "80.0"
+    },
+    "lastGame": {
+      "date": "2026-09-27",
+      "displayDate": "September 27, 2026",
+      "opponent": "Dallas Wings",
+      "atVs": "vs",
+      "result": "W",
+      "score": "104-80",
+      "line": {
+        "MIN": "16",
+        "PTS": "22",
+        "REB": "0",
+        "AST": "1",
+        "STL": "0",
+        "BLK": "0",
+        "TO": "0"
+      }
+    },
+    "photo": {
+      "src": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.jpg",
+      "alt": "Cecilia Zandalasini of the Golden State Valkyries",
+      "credit": "John McClellan",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "faq": [],
+    "related": [
+      {
+        "slug": "valkyries-wings-game-1-zandalasini",
+        "title": "Valkyries Blow Out Wings 104-80 in Game 1",
+        "date": "2026-09-28"
+      }
+    ],
+    "lastGameOnRecord": null
+  }
+]

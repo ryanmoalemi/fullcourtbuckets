@@ -16,6 +16,10 @@ Add the article folder (`slug/index.html` and its images) and one entry in `arti
 
 Every link on fullcourtbuckets.com opens in a new tab. Put `target="_blank" rel="noopener"` on every `<a>`, including article body text, photo captions, nav, footer, and the homepage story cards rendered from `articles.json`.
 
+## Player pages
+
+Link the first body-text mention of each player in every article to `/players/<first-last-slug>/` on this site, with `target="_blank" rel="noopener"`. Do not link player names to WNBA.com. If that page does not exist, create it. Add one object to `players.json` and generate `players/<slug>/index.html` from it: bio, team, position, 2026 season stats, a last-game or playoff line when ESPN has one, a free-use Wikimedia photo in the current uniform or no photo, related Full Court Buckets stories, and an `faq` array. Add the page to `/players/` and to both sitemaps. Stats come from the ESPN WNBA athlete endpoints only. Never invent a number. Leave `faq` empty until questions are provided, and write answers only from the verified stats and bio.
+
 ## Standing owner instruction: handle the complete publication
 
 The owner directed: "remember always get your github write publish permissions don't ask me to post anything". Discover and use the connected read/write tools, read the current target files, and perform uploads, commits, publication and live verification here. Do not ask the owner to post code, manually upload approved files, or resend originals already in the conversation or preserved Drive storage.
