@@ -134,7 +134,7 @@ def verify_pages(plan: dict, origin: str, output: Path, engines: list[str], retr
                                 m=page.evaluate(MEASURE)
                                 require(normal_name(m['heading'])==normal_name(record['name']), 'Wrong player name')
                                 require(m['canonical']==f'{BASE}/wnba/{slug}/', 'Wrong canonical player URL')
-                                require(f"Provider player ID: {record['player_id']}." in m['sourceText'], 'Wrong provider ID')
+                                require(f"Player ID: {record['player_id']}." in m['sourceText'], 'Wrong player ID')
                                 if record['expected_image']:
                                     require(m['complete'] and m['naturalWidth']==record['width'] and m['naturalHeight']==record['height'], 'Browser image decode/dimensions failed')
                                     require(urlparse(m['src']).path==record['src'], 'Wrong or outdated portrait URL')
