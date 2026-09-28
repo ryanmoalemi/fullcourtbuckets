@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-23T05:55:18+00:00",
+  "checked_at": "2026-09-28T23:54:24+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -518,6 +518,86 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 1392661,
+      "player_id": 493,
+      "date": "2026-09-27T23:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 92,
+      "away_score": 77,
+      "minutes": "0",
+      "pts": null,
+      "ast": null,
+      "reb": null,
+      "stl": null,
+      "blk": null,
+      "turnover": null
+    },
+    {
+      "game_id": 25077,
+      "player_id": 493,
+      "date": "2026-09-24T00:00:00.000Z",
+      "season": 2026,
+      "postseason": false,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 65,
+      "away_score": 83,
+      "minutes": "1",
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 1.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    },
+    {
       "game_id": 25070,
       "player_id": 493,
       "date": "2026-09-22T00:00:00.000Z",
@@ -756,129 +836,9 @@
       "stl": null,
       "blk": null,
       "turnover": null
-    },
-    {
-      "game_id": 25030,
-      "player_id": 493,
-      "date": "2026-08-23T02:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 89,
-      "away_score": 99,
-      "minutes": "0",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
-    },
-    {
-      "game_id": 25024,
-      "player_id": 493,
-      "date": "2026-08-21T02:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 88,
-      "away_score": 124,
-      "minutes": "7",
-      "pts": 5.0,
-      "ast": 4.0,
-      "reb": 1.0,
-      "stl": 1.0,
-      "blk": 0.0,
-      "turnover": 0.0
-    },
-    {
-      "game_id": 25019,
-      "player_id": 493,
-      "date": "2026-08-19T01:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
-      },
-      "home_score": 82,
-      "away_score": 97,
-      "minutes": "0",
-      "pts": null,
-      "ast": null,
-      "reb": null,
-      "stl": null,
-      "blk": null,
-      "turnover": null
     }
   ],
-  "game_log_window_start": "2026-08-18",
+  "game_log_window_start": "2026-08-24",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

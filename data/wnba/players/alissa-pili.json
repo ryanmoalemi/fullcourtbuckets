@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-23T05:55:18+00:00",
+  "checked_at": "2026-09-28T23:54:24+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -93,49 +93,8 @@
       "pts": 0.0
     }
   ],
-  "recent_completed_games": [
-    {
-      "game_id": 25016,
-      "player_id": 716,
-      "date": "2026-08-18T23:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
-      },
-      "visitor_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "home_score": 85,
-      "away_score": 77,
-      "minutes": "15",
-      "pts": 0.0,
-      "ast": 2.0,
-      "reb": 4.0,
-      "stl": 1.0,
-      "blk": 0.0,
-      "turnover": 1.0
-    }
-  ],
-  "game_log_window_start": "2026-08-18",
+  "recent_completed_games": [],
+  "game_log_window_start": "2026-08-24",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

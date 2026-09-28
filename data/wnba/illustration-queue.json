@@ -186,6 +186,15 @@
       "reference_and_likeness_review_required": true
     },
     {
+      "player_id": 272223,
+      "slug": "deja-kelly",
+      "player_name": "Deja Kelly",
+      "listed_active": true,
+      "profile_path": "/wnba/deja-kelly/",
+      "state": "awaiting_illustration",
+      "reference_and_likeness_review_required": true
+    },
+    {
       "player_id": 242,
       "slug": "dewanna-bonner",
       "player_name": "DeWanna Bonner",
