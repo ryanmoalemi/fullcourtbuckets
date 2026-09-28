@@ -57,11 +57,11 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
 </head>
 <body>
 <div class="utility"><div class="shell"><div class="utility-tag">WNBA News � Analysis � Commentary</div><div class="utility-note">Independent coverage. Facts first.</div></div></div>
-<header><div class="shell nav"><a class="brand" href="#"><img src="logo.png" alt="Full Court Buckets"></a><nav><a href="#">News</a><a href="#">Analysis</a><a href="#">Teams</a><a href="#">Standings</a><a href="#">World</a><a href="#">Videos</a><a href="/wnba/">Players</a></nav><a class="watch-btn nav-watch" href="#latest">Latest Stories</a></div></header>
+<header><div class="shell nav"><a class="brand" href="#" target="_blank" rel="noopener"><img src="logo.png" alt="Full Court Buckets"></a><nav><a href="#" target="_blank" rel="noopener">News</a><a href="#" target="_blank" rel="noopener">Analysis</a><a href="#" target="_blank" rel="noopener">Teams</a><a href="#" target="_blank" rel="noopener">Standings</a><a href="#" target="_blank" rel="noopener">World</a><a href="#" target="_blank" rel="noopener">Videos</a><a href="/wnba/" target="_blank" rel="noopener">Players</a></nav><a class="watch-btn nav-watch" href="#latest" target="_blank" rel="noopener">Latest Stories</a></div></header>
 <div class="ticker"><div class="shell"><div class="ticker-label">Now</div><div class="ticker-text">The WNBA pauses after August 30 as players head to Berlin for the 2026 FIBA Women�s Basketball World Cup.</div></div></div>
 <main class="shell">
 <section class="feature-grid" id="latest">
-<a class="feature feature-link" id="featured-story" href="#"><div class="feature-content"><div class="label">Featured</div><h1 id="featured-title"></h1><p id="featured-dek"></p><div class="meta" id="featured-meta"></div><span class="read-link">Read the story <span>&rarr;</span></span></div></a>
+<a class="feature feature-link" id="featured-story" href="#" target="_blank" rel="noopener"><div class="feature-content"><div class="label">Featured</div><h1 id="featured-title"></h1><p id="featured-dek"></p><div class="meta" id="featured-meta"></div><span class="read-link">Read the story <span>&rarr;</span></span></div></a>
 <aside class="rail">
 <div class="rail-card"><div class="eyebrow">Our Coverage</div><h2>WNBA News. Given to You Straight.</h2><p>Fast reporting without filler or manufactured debate.</p></div>
 <div class="rail-card"><div class="eyebrow">Analysis</div><h2>What Happened and Why</h2><p>Matchups, spacing, rebounding, rotations, shot creation and game context.</p></div>
@@ -76,7 +76,7 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
 <div class="coverage-card"><b>Analysis</b><p>Lineups, matchups, spacing, pace, shot selection, rebounding, defensive coverage and the numbers behind the result.</p></div>
 <div class="coverage-card"><b>Commentary</b><p>Direct coverage of what happened, supported by verified facts and basketball context instead of forced narratives.</p></div>
 </div></section>
-<section class="cta"><div><h2>Full Court Buckets</h2><p>Independent WNBA coverage built around facts, basketball and the stories that matter.</p></div><a class="watch-btn" href="#">Follow the Coverage</a></section>
+<section class="cta"><div><h2>Full Court Buckets</h2><p>Independent WNBA coverage built around facts, basketball and the stories that matter.</p></div><a class="watch-btn" href="#" target="_blank" rel="noopener">Follow the Coverage</a></section>
 </main>
 <footer><div class="shell footer-row"><div class="footer-brand">Full Court Buckets</div><div>Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</div></div></footer>
 <script>
@@ -94,6 +94,8 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
     if (!featured) return;
     var link = document.getElementById("featured-story");
     link.href = "/" + featured.slug + "/";
+    link.target = "_blank";
+    link.rel = "noopener";
     document.getElementById("featured-title").textContent = featured.title;
     document.getElementById("featured-dek").textContent = featured.description;
     document.getElementById("featured-meta").textContent = featured.category + " \u00b7 " + formatDate(featured.date);
@@ -102,6 +104,8 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
       var card = document.createElement("a");
       card.className = "article-card";
       card.href = "/" + a.slug + "/";
+      card.target = "_blank";
+      card.rel = "noopener";
       card.innerHTML = '<div class="article-visual"><img alt=""></div><div class="article-copy"><div class="cat"></div><h3></h3><p></p><div class="date"></div></div>';
       var img = card.querySelector("img");
       img.src = a.image;
