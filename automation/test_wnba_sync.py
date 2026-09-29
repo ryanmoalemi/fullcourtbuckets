@@ -29,6 +29,17 @@ class FakeClient:
         if endpoint == 'player_season_stats': return [stat(params['season'], params['season_type'])]
         raise AssertionError(endpoint)
 
+class TeamClient(FakeClient):
+    def __init__(self, team):
+        super().__init__()
+        self.team = team
+    def all(self, endpoint, params=None):
+        if endpoint in ('players', 'players/active'):
+            player = copy.deepcopy(P)
+            player['team'] = copy.deepcopy(self.team)
+            return [player]
+        return super().all(endpoint, params)
+
 class Tests(unittest.TestCase):
     def test_missing_key(self):
         with self.assertRaises(s.SyncError): s.Client('')
@@ -95,6 +106,34 @@ class Tests(unittest.TestCase):
             self.assertIsNone(output['season_stats'][0]['reb'])
             self.assertEqual(len(output['recent_completed_games']),1)
             self.assertNotIn('synthetic-key',str(output))
+    def test_team_change_between_syncs(self):
+        team_a = {"id": 1, "full_name": "Example Team"}
+        team_b = {"id": 2, "full_name": "Other Team"}
+        team_c = {"id": 3, "full_name": "Third Team"}
+        # 06:30 UTC is still the previous evening in Pacific Time.
+        observed = dt.datetime(2009, 7, 21, 6, 30, tzinfo=dt.timezone.utc)
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            path = root / 'data/wnba/players/example-player.json'
+            self.assertTrue(s.run(root, TeamClient(team_a), NOW))
+            self.assertNotIn('team_changes', json.loads(path.read_text()))
+            self.assertTrue(s.run(root, TeamClient(team_b), observed, force=True))
+            moved = json.loads(path.read_text())
+            self.assertEqual(moved['team_changes'], [
+                {"from": "Example Team", "to": "Other Team", "date": "2009-07-20"}])
+            self.assertTrue(s.run(root, TeamClient(team_c), observed + dt.timedelta(days=2), force=True))
+            again = json.loads(path.read_text())
+            self.assertEqual(again['team_changes'], [
+                {"from": "Other Team", "to": "Third Team", "date": "2009-07-22"},
+                {"from": "Example Team", "to": "Other Team", "date": "2009-07-20"}])
+            self.assertTrue(s.run(root, TeamClient(team_c), observed + dt.timedelta(days=3), force=True))
+            self.assertEqual(json.loads(path.read_text())['team_changes'], again['team_changes'])
+        kept = [{"from": "Old Team", "to": "Example Team", "date": "2009-06-01"}]
+        previous = {"current_team": team_a, "team_changes": kept}
+        self.assertEqual(s.merge_team_changes(previous, None, NOW), kept)
+        self.assertEqual(s.merge_team_changes({"current_team": None, "team_changes": kept}, team_b, NOW), kept)
+        self.assertEqual(s.merge_team_changes({"current_team": team_a}, {"id": 1, "full_name": "Renamed Team"}, NOW), [])
+        self.assertEqual(s.merge_team_changes(None, team_b, NOW), [])
     def test_outage_does_not_replace_successful_snapshot(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); s.run(root,FakeClient(),NOW)

@@ -20,6 +20,8 @@ Every link on fullcourtbuckets.com opens in a new tab. Put `target="_blank" rel=
 
 Link the first body-text mention of each player in every article to the existing page at `/wnba/<slug>/`, with `target="_blank" rel="noopener"`. Do not link player names to WNBA.com. Do not create a separate `/players/` system. Use the slug already published in `wnba/<slug>/index.html` and `data/wnba/players-index.json`. If that page does not exist, leave the name as plain text. Do not create a new player page for an article mention.
 
+When a player's saved `current_team` changes from one non-null team to a different non-null team, `automation/wnba_sync.py` prepends a `team_changes` entry on `data/wnba/players/<slug>.json`: `from`, `to`, and `date` (the America/Los_Angeles calendar date, `YYYY-MM-DD`). Newest stays first. The player page says `Moved from <From Team> to <To Team> on <Mon D, YYYY>`. Use Moved. The feed does not say whether it was a trade, a signing, or a waiver claim. Do not record a null transition, including a player leaving or returning to the active feed. Keep earlier entries. Do not loosen the active-player shrink guard for this.
+
 ## Standing owner instruction: handle the complete publication
 
 The owner directed: "remember always get your github write publish permissions don't ask me to post anything". Discover and use the connected read/write tools, read the current target files, and perform uploads, commits, publication and live verification here. Do not ask the owner to post code, manually upload approved files, or resend originals already in the conversation or preserved Drive storage.

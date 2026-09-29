@@ -217,6 +217,53 @@ def should_refresh(last_success, today: dt.date, active: bool, force=False) -> b
     last = date_of(last_success)
     return force or last is None or (today - last).days >= (1 if active else 7)
 
+def team_key(team):
+    """Identity of a non-null team. Same id is the same team even if the name changes."""
+    if not isinstance(team, dict):
+        return None
+    raw = team.get("id")
+    if isinstance(raw, int) and not isinstance(raw, bool) and raw > 0:
+        return ("id", raw)
+    if isinstance(raw, str) and raw.isdigit() and int(raw) > 0:
+        return ("id", int(raw))
+    name = str(team.get("full_name") or team.get("name") or "").strip()
+    return ("name", name.casefold()) if name else None
+
+def team_label(team) -> str:
+    if not isinstance(team, dict):
+        return ""
+    return str(team.get("full_name") or team.get("name") or "").strip()
+
+def pt_date(now: dt.datetime) -> str:
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=dt.timezone.utc)
+    return now.astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
+
+def prior_team_changes(profile) -> list:
+    raw = profile.get("team_changes") if isinstance(profile, dict) else None
+    if not isinstance(raw, list):
+        return []
+    kept = []
+    for entry in raw:
+        if not isinstance(entry, dict):
+            continue
+        src, dst, day = entry.get("from"), entry.get("to"), entry.get("date")
+        if src and dst and day:
+            kept.append({"from": str(src), "to": str(dst), "date": str(day)})
+    return kept
+
+def merge_team_changes(previous, current_team, now: dt.datetime) -> list:
+    """Newest-first history. Null transitions are not moves and are not recorded."""
+    history = prior_team_changes(previous)
+    previous_team = previous.get("current_team") if isinstance(previous, dict) else None
+    old_key, new_key = team_key(previous_team), team_key(current_team)
+    if not old_key or not new_key or old_key == new_key:
+        return history
+    src, dst = team_label(previous_team), team_label(current_team)
+    if not src or not dst:
+        return history
+    return [{"from": src, "to": dst, "date": pt_date(now)}, *history]
+
 def guard_shrink(old: list, new: list, label: str) -> None:
     if old and len(new) < len(old) * 0.8:
         raise SyncError(f"Unexpected drop in {label}; keeping the previous published snapshot.")
@@ -306,10 +353,12 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
         # Absence from active feed is NOT evidence of retirement or free agency.
         active = pid in active_players
         current_team = p["team"] if active else None
+        previous = load(data / "players" / f"{slug}.json", None)
+        changes = merge_team_changes(previous, current_team, now)
         item = {"id": pid, "slug": slug, "name": name, "active_in_provider_feed": active,
                 "current_team": current_team, "path": f"/wnba/{slug}/", "data_path": f"/data/wnba/players/{slug}.json"}
         directory.append(item)
-        profiles[slug] = {"schema_version": 1, "provider": "BALLDONTLIE", "source": SOURCE,
+        profile = {"schema_version": 1, "provider": "BALLDONTLIE", "source": SOURCE,
             "checked_at": stamp, "coverage_start": FIRST_YEAR, "career_totals_complete": False,
             "player": p, "slug": slug, "active_in_provider_feed": active, "current_team": current_team,
             "season_stats": stats, "recent_completed_games": sorted(logs[pid], key=lambda r: r["date"], reverse=True),
@@ -319,6 +368,9 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
                       "Team stints and aggregate rows must never be summed together.",
                       "Not listed active does not establish retirement, a trade, or free agency.",
                       "News and confirmed transaction feeds are not included in this API integration."]}
+        if changes:
+            profile["team_changes"] = changes
+        profiles[slug] = profile
     guard_shrink(old_directory, directory, "published player inventory")
     if not directory:
         raise SyncError("No eligible players; refusing empty publication.")

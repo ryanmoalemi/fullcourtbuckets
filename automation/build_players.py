@@ -40,6 +40,23 @@ def timestamp(raw, short=False):
 def tname(team):
     return (team or {}).get('full_name') or (team or {}).get('name') or 'Team not supplied'
 
+def team_change_html(profile):
+    """Newest-first sentences. The feed does not say trade, signing, or waiver."""
+    lines = []
+    for entry in profile.get('team_changes') or []:
+        if not isinstance(entry, dict):
+            continue
+        src, dst, raw = entry.get('from'), entry.get('to'), entry.get('date')
+        if not src or not dst or not raw:
+            continue
+        try:
+            day = dt.date.fromisoformat(str(raw)[:10])
+        except ValueError:
+            continue
+        label = f'{day.strftime("%b")} {day.day}, {day.year}'
+        lines.append(f'<p class="muted">Moved from {esc(src)} to {esc(dst)} on {esc(label)}.</p>')
+    return ''.join(lines)
+
 def bio_fields(player):
     # Some provider biography fields contain shifted text. Do not relabel or guess it.
     clean = {}
@@ -226,6 +243,7 @@ def profile_page(profile, root=None):
         intro=f'{name} averaged {row["pts"]:.1f} points, {row["reb"]:.1f} rebounds and {row["ast"]:.1f} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
     overview=f'<p>{esc(intro)}</p>'
     if team: overview+=f'<p class="muted">Current team: <strong>{esc(tname(team))}</strong>.</p>'
+    overview+=team_change_html(profile)
     if not active: overview+='<p class="muted">This player is not on a current roster. That alone does not establish retirement or free-agent status.</p>'
     tablehtml=stats_table(profile,2)+stats_table(profile,3)
     controls=''

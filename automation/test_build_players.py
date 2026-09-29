@@ -63,6 +63,20 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(before,(root/'wnba/example-player/index.html').read_bytes())
     def test_no_synthetic_career_totals(self):
         result=b.profile_page(P);self.assertIn('Statistics since 2008',result);self.assertNotIn('<h2>Career totals',result)
+    def test_team_change_sentence_newest_first(self):
+        p=copy.deepcopy(P)
+        p['team_changes']=[
+            {'from':'Other Team','to':'Example Team','date':'2009-07-21'},
+            {'from':'<First> Team','to':'Other Team','date':'2009-07-08'},
+        ]
+        page=b.profile_page(p)
+        newer='Moved from Other Team to Example Team on Jul 21, 2009.'
+        older='Moved from &lt;First&gt; Team to Other Team on Jul 8, 2009.'
+        self.assertIn(newer, page)
+        self.assertIn(older, page)
+        self.assertLess(page.index(newer), page.index(older))
+        self.assertNotIn('Traded', page)
+        self.assertNotIn('Moved from', b.profile_page(P))
 
     def test_reader_copy_avoids_internal_jargon(self):
         p = copy.deepcopy(P)
