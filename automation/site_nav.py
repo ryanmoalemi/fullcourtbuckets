@@ -196,13 +196,34 @@ def iter_hrefs(items: list[dict]):
         yield from iter_hrefs(item.get('children') or [])
 
 
-def _list(items: list[dict], current: str) -> str:
+def _submenu_id(label: str) -> str:
+    slug = re.sub(r'[^a-z0-9]+', '-', label.casefold()).strip('-') or 'section'
+    return f'site-nav-sub-{slug}'
+
+
+def _subtoggle(label: str) -> str:
+    """Separate 44px control. The parent item stays an ordinary link."""
+    return (
+        f'<button type="button" class="site-nav-subtoggle" aria-expanded="false" '
+        f'aria-controls="{esc(_submenu_id(label))}" data-section="{esc(label)}">'
+        '<span class="site-nav-chevron" aria-hidden="true"></span>'
+        f'<span class="site-nav-subtoggle-label">Show {esc(label)} menu</span>'
+        '</button>'
+    )
+
+
+def _list(items: list[dict], current: str, nested: bool = False) -> str:
     parts = []
     for item in items:
         current_attr = ' aria-current="page"' if is_current(item['href'], current) else ''
         children = item.get('children') or []
-        sub = _list(children, current) if children else ''
-        parts.append(f'<li><a href="{esc(item["href"])}"{current_attr}>{esc(item["label"])}</a>{sub}</li>')
+        link = f'<a href="{esc(item["href"])}"{current_attr}>{esc(item["label"])}</a>'
+        if children and not nested:
+            sub = _list(children, current, nested=True).replace('<ul>', f'<ul id="{esc(_submenu_id(item["label"]))}">', 1)
+            parts.append(f'<li class="site-nav-branch">{link}{_subtoggle(item["label"])}{sub}</li>')
+        else:
+            sub = _list(children, current, nested=True) if children else ''
+            parts.append(f'<li>{link}{sub}</li>')
     return '<ul>' + ''.join(parts) + '</ul>'
 
 

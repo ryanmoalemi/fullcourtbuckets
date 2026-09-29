@@ -14,7 +14,7 @@ nav.site-nav .site-nav-bars:after{top:6px}
 header,.site-header{z-index:40}
 .site-header{position:relative}
 @media (min-width:901px){
- nav.site-nav .site-nav-toggle{display:none}
+ nav.site-nav .site-nav-toggle,nav.site-nav .site-nav-subtoggle{display:none}
  nav.site-nav>ul{display:flex;align-items:center;gap:2px}
  nav.site-nav>ul>li{position:relative}
  nav.site-nav>ul>li>a{white-space:nowrap}
@@ -33,7 +33,14 @@ header,.site-header{z-index:40}
  nav.site-nav>ul{position:absolute;left:0;right:0;top:100%;width:auto;max-height:calc(100vh - 72px);overflow-x:hidden;overflow-y:auto;background:#0c0c10;border-bottom:1px solid #2b2930;z-index:60;box-sizing:border-box}
  html.site-nav-ready nav.site-nav:not(.is-open)>ul{display:none}
  nav.site-nav a{width:100%;white-space:normal;overflow-wrap:anywhere}
- nav.site-nav li ul{position:static;display:block;visibility:visible;opacity:1;pointer-events:auto;min-width:0;max-height:none;overflow:visible;background:transparent;border:0;box-shadow:none}
+ nav.site-nav>ul>li.site-nav-branch{display:flex;flex-wrap:wrap;align-items:stretch}
+ nav.site-nav>ul>li.site-nav-branch>a{width:auto;flex:1 1 auto;min-width:0}
+ nav.site-nav .site-nav-subtoggle{display:inline-flex;align-items:center;justify-content:center;position:relative;flex:0 0 44px;width:44px;min-width:44px;min-height:44px;margin:0;padding:0;border:0;border-left:1px solid #2b2930;background:transparent;color:#f5f3ef;cursor:pointer}
+ nav.site-nav .site-nav-chevron{display:block;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-top:-4px}
+ nav.site-nav li.is-open .site-nav-chevron{transform:rotate(-135deg);margin-top:4px}
+ nav.site-nav .site-nav-subtoggle-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+ nav.site-nav>ul>li>ul{display:none;flex:1 1 100%;width:100%;position:static;visibility:visible;opacity:1;pointer-events:auto;min-width:0;max-height:none;overflow:visible;background:transparent;border:0;box-shadow:none}
+ nav.site-nav>ul>li.is-open>ul{display:block}
  nav.site-nav li li a{padding-left:22px}
 }
 @media (prefers-reduced-motion:reduce){
