@@ -239,8 +239,7 @@ def header(route='/', menu=None):
     return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" target="_blank" rel="noopener" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
 
 def footer(include_standings=True):
-    standings='<a href="/standings/" target="_blank" rel="noopener">Standings</a>' if include_standings else ''
-    return f'''<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p><p class="footer-links"><a href="/wnba/" target="_blank" rel="noopener">Players</a>{standings}<a href="/about/" target="_blank" rel="noopener">About</a><a href="/contact/" target="_blank" rel="noopener">Contact</a><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener">Terms of Use</a><a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){{googlefc.showRevocationMessage();return false;}}">Privacy and cookie settings</a><a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p><p>&copy; 2026 Full Court Buckets</p></div></footer>'''
+    return site_nav.footer_html(include_standings)
 
 def has_standings(root):
     return root is None or (Path(root)/'standings'/'index.html').is_file()
