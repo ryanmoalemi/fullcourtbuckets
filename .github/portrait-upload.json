@@ -1,14 +1,6 @@
 {
   "request_id": "556-ed46c6f68e81-upload-20260929T0646Z",
-  "player_id": 556,
-  "player_name": "Alanna Smith",
   "slug": "alanna-smith",
-  "approved": true,
-  "sha256": "ed46c6f68e81cd32b4a4a47de1fcdc78dfd03729488b4a61a99bde25fcfb621f",
-  "bytes": 1686320,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "repository_path": "portrait-handoff/556-alanna-smith-ed46c6f68e81cd32b4a4a47de1fcdc78dfd03729488b4a61a99bde25fcfb621f.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "ed46c6f68e81cd32b4a4a47de1fcdc78dfd03729488b4a61a99bde25fcfb621f"
 }
