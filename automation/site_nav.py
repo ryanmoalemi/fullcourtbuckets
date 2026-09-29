@@ -111,11 +111,11 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
     ):
         if (root / relative).is_file():
             planned.add(relative)
+    planned.add('news/index.html')
     for article in links.load_articles(root):
         slug = article.get('slug') or ''
-        relative = f'{slug}/index.html'
-        if slug and (root / relative).is_file():
-            planned.add(relative)
+        if slug:
+            planned.add(f'news/{slug}/index.html')
     return planned
 
 
@@ -165,11 +165,11 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
     for article in articles:
         slug = article.get('slug') or ''
         title = str(article.get('title') or '').strip()
-        href = f'/{slug}/'
+        href = links.article_href(article)
         if slug and title and exists(href):
             news_children.append({'label': title, 'href': href})
-    if news_children:
-        parent = '/#latest' if exists('/') else news_children[0]['href']
+    if exists('/news/') or news_children:
+        parent = '/news/' if exists('/news/') else news_children[0]['href']
         items.append({'label': 'News', 'href': parent, 'children': news_children})
 
     if exists('/about/'):

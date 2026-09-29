@@ -259,12 +259,11 @@ def _format_date(iso: str) -> str:
 
 
 def _story_card(article: dict) -> str:
-    slug = article['slug']
     title = article['title']
     image = article.get('image') or ''
     alt = article.get('imageAlt') or title
     return (
-        f'<a class="article-card" href="/{esc(slug)}/" target="_blank" rel="noopener">'
+        f'<a class="article-card" href="{esc(article_href(article))}" target="_blank" rel="noopener">'
         f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"></div>'
         f'<div class="article-copy"><div class="cat">{esc(article.get("category") or "")}</div>'
         f'<h3>{esc(title)}</h3><p>{esc(article.get("description") or "")}</p>'
@@ -306,7 +305,7 @@ def apply_homepage(text: str, articles: list) -> str:
         featured = ordered[0]
         text = re.sub(
             r'(<a class="feature feature-link" id="featured-story" href=")[^"]*(")',
-            lambda match: match.group(1) + '/' + featured['slug'] + '/' + match.group(2),
+            lambda match: match.group(1) + article_href(featured) + match.group(2),
             text,
             count=1,
         )
@@ -328,6 +327,11 @@ def apply_homepage(text: str, articles: list) -> str:
     guard = 'if (!list.querySelector("a.article-card")) articles.slice(1).forEach(function (a) {'
     if old in text and guard not in text:
         text = text.replace(old, guard, 1)
+    text = text.replace('link.href = "/" + featured.slug + "/";', 'link.href = articlePath(featured);')
+    text = text.replace('card.href = "/" + a.slug + "/";', 'card.href = articlePath(a);')
+    helper = 'function articlePath(a){return (a.url && a.url.charAt(0)==="/") ? a.url : ("/news/" + a.slug + "/");}'
+    if 'function articlePath(' not in text:
+        text = text.replace('fetch("/articles.json")', helper + '\n  fetch("/articles.json")', 1)
     return text
 
 
@@ -584,3 +588,430 @@ def load_articles(root: Path) -> list:
         return []
     data = json.loads(path.read_text(encoding='utf-8'))
     return data if isinstance(data, list) else []
+
+
+BASE = 'https://fullcourtbuckets.com'
+NEWS_HUB = '/news/'
+ARTICLE_SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
+NEWS_INTRO = 'Recaps, notes, and other WNBA stories from Full Court Buckets.'
+JSONLD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
+CANONICAL_RE = re.compile(r'<link\b[^>]*rel="canonical"[^>]*>', re.I)
+OG_URL_RE = re.compile(r'<meta\b[^>]*property="og:url"[^>]*>', re.I)
+
+
+def article_slug(article: dict) -> str:
+    slug = str((article or {}).get('slug') or '').strip().strip('/')
+    if not ARTICLE_SLUG.fullmatch(slug):
+        raise ValueError(f'Article slug is not a single path segment: {slug!r}')
+    return slug
+
+
+def article_href(article: dict) -> str:
+    """Public path for a post. The slug is unchanged; the category is always /news/."""
+    return f'/news/{article_slug(article)}/'
+
+
+def article_absolute(article: dict) -> str:
+    return BASE + article_href(article)
+
+
+def is_redirect_html(text: str) -> bool:
+    lowered = text.lower()
+    return 'http-equiv="refresh"' in lowered or "http-equiv='refresh'" in lowered
+
+
+def ensure_article_urls(root: Path) -> list:
+    """Store /news/<slug>/ on every articles.json entry. The slug itself stays put."""
+    path = root / 'articles.json'
+    articles = load_articles(root)
+    normalized = []
+    changed = False
+    for article in articles:
+        href = article_href(article)
+        ordered = {}
+        for key in ('slug', 'url', 'title', 'description', 'category', 'date', 'image', 'imageAlt'):
+            if key == 'url':
+                ordered['url'] = href
+            elif key in article:
+                ordered[key] = article[key]
+        for key, value in article.items():
+            if key not in ordered:
+                ordered[key] = value
+        if ordered != article:
+            changed = True
+        normalized.append(ordered)
+    if changed and path.is_file():
+        path.write_text(json.dumps(normalized, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    return normalized
+
+
+def _ordered_articles(articles: list) -> list:
+    return sorted(articles, key=lambda article: article.get('date') or '', reverse=True)
+
+
+def _breadcrumb_data(crumbs: list[tuple[str, str]]) -> dict:
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': index, 'name': name, 'item': item}
+            for index, (name, item) in enumerate(crumbs, 1)
+        ],
+    }
+
+
+def _has_type(data, name: str) -> bool:
+    if isinstance(data, dict):
+        kind = data.get('@type')
+        if kind == name or (isinstance(kind, list) and name in kind):
+            return True
+        return any(_has_type(value, name) for value in data.values())
+    if isinstance(data, list):
+        return any(_has_type(item, name) for item in data)
+    return False
+
+
+def _article_node(data):
+    if isinstance(data, dict):
+        kind = data.get('@type')
+        names = kind if isinstance(kind, list) else [kind]
+        if any(name in ('NewsArticle', 'Article', 'BlogPosting') for name in names):
+            return data
+        for value in data.values():
+            found = _article_node(value)
+            if found is not None:
+                return found
+    elif isinstance(data, list):
+        for item in data:
+            found = _article_node(item)
+            if found is not None:
+                return found
+    return None
+
+
+def _jsonld(data: dict) -> str:
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
+
+
+def _upsert_meta(html: str, absolute: str) -> str:
+    canonical = f'<link rel="canonical" href="{esc(absolute)}">'
+    og_url = f'<meta property="og:url" content="{esc(absolute)}">'
+    if CANONICAL_RE.search(html):
+        html = CANONICAL_RE.sub(canonical, html, count=1)
+    elif '</head>' in html:
+        html = html.replace('</head>', canonical + '</head>', 1)
+    if OG_URL_RE.search(html):
+        html = OG_URL_RE.sub(og_url, html, count=1)
+    elif '</head>' in html:
+        html = html.replace('</head>', og_url + '</head>', 1)
+    if 'property="og:type"' not in html and '</head>' in html:
+        html = html.replace('</head>', '<meta property="og:type" content="article"></head>', 1)
+    return html
+
+
+def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
+    found = False
+
+    def sub(match: re.Match) -> str:
+        nonlocal found
+        try:
+            data = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            return match.group(0)
+        if _has_type(data, 'BreadcrumbList'):
+            return ''
+        node = _article_node(data)
+        if node is None:
+            return match.group(0)
+        found = True
+        node['url'] = absolute
+        node['mainEntityOfPage'] = {'@type': 'WebPage', '@id': absolute}
+        return _jsonld(data)
+
+    html = JSONLD_RE.sub(sub, html)
+    if not found:
+        image = str(article.get('image') or '')
+        if image.startswith('/'):
+            image = BASE + image
+        created = {
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            'headline': article.get('title') or '',
+            'description': article.get('description') or '',
+            'url': absolute,
+            'mainEntityOfPage': {'@type': 'WebPage', '@id': absolute},
+            'datePublished': article.get('date') or '',
+            'author': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
+            'publisher': {
+                '@type': 'Organization',
+                'name': 'Full Court Buckets',
+                'logo': {'@type': 'ImageObject', 'url': BASE + '/logo.png'},
+            },
+        }
+        if image:
+            created['image'] = [image]
+        html = html.replace('</head>', _jsonld(created) + '</head>', 1)
+    crumbs = _breadcrumb_data([
+        ('Home', BASE + '/'),
+        ('News', BASE + NEWS_HUB),
+        (str(article.get('title') or ''), absolute),
+    ])
+    return html.replace('</head>', _jsonld(crumbs) + '</head>', 1)
+
+
+def _visible_breadcrumb(title: str) -> str:
+    return (
+        '<nav class="breadcrumbs" aria-label="Breadcrumb">'
+        '<a href="/" target="_blank" rel="noopener">Home</a>'
+        '<span aria-hidden="true">/</span>'
+        f'<a href="{NEWS_HUB}" target="_blank" rel="noopener">News</a>'
+        '<span aria-hidden="true">/</span>'
+        f'<span>{esc(title)}</span></nav>'
+    )
+
+
+def _insert_visible_breadcrumb(html: str, title: str) -> str:
+    crumb = _visible_breadcrumb(title)
+    html = re.sub(r'<nav class="breadcrumbs" aria-label="Breadcrumb">.*?</nav>', '', html, count=1, flags=re.S)
+    marker = '<article'
+    index = html.find(marker)
+    if index == -1:
+        return html
+    if '.breadcrumbs{' not in html:
+        css = '.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;color:#a29f99;font-size:13px;font-weight:600}.breadcrumbs a{color:#d4d0ca;text-decoration:underline}'
+        if '</style>' in html:
+            html = html.replace('</style>', css + '</style>', 1)
+        elif '</head>' in html:
+            html = html.replace('</head>', '<style>' + css + '</style></head>', 1)
+        index = html.find(marker)
+    return html[:index] + crumb + html[index:]
+
+
+def rewrite_legacy_article_urls(text: str, articles: list) -> str:
+    """Point root post URLs at /news/<slug>/. Image folders that contain the slug stay put."""
+    for article in articles:
+        try:
+            slug = article_slug(article)
+        except ValueError:
+            continue
+        new = article_href(article)
+        old_abs = f'{BASE}/{slug}/'
+        new_abs = BASE + new
+        text = text.replace(old_abs, new_abs)
+        text = text.replace(f'href="/{slug}/"', f'href="{new}"')
+        text = text.replace(f"href='/{slug}/'", f"href='{new}'")
+    return text.replace('href="/#latest">News', 'href="/news/">News')
+
+
+def read_article_source(root: Path, slug: str) -> str:
+    candidates = (root / 'news' / slug / 'index.html', root / slug / 'index.html')
+    for path in candidates:
+        if not path.is_file():
+            continue
+        text = path.read_text(encoding='utf-8')
+        if is_redirect_html(text):
+            continue
+        return text
+    raise FileNotFoundError(f'No article HTML for {slug}')
+
+
+def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
+    slug = article_slug(article)
+    html_text = read_article_source(root, slug)
+    html_text = rewrite_legacy_article_urls(html_text, articles if articles is not None else [article])
+    absolute = article_absolute(article)
+    html_text = _upsert_meta(html_text, absolute)
+    html_text = _upsert_article_schema(html_text, article, absolute)
+    html_text = _insert_visible_breadcrumb(html_text, str(article.get('title') or ''))
+    return html_text
+
+
+def redirect_stub(article: dict) -> str:
+    """GitHub Pages has no server redirects. The old root URL refreshes to /news/<slug>/."""
+    target = article_absolute(article)
+    safe = esc(target)
+    return (
+        '<!doctype html>\n'
+        '<html lang="en">\n'
+        '<head>\n'
+        '<meta charset="utf-8">\n'
+        f'<title>Redirect</title>\n'
+        f'<link rel="canonical" href="{safe}">\n'
+        '<meta name="robots" content="noindex">\n'
+        f'<meta http-equiv="refresh" content="0; url={safe}">\n'
+        f'<script>location.replace("{safe}");</script>\n'
+        '</head>\n'
+        '<body>\n'
+        f'<p><a href="{safe}">This page has moved.</a></p>\n'
+        '</body>\n'
+        '</html>\n'
+    )
+
+
+def _news_list_item(article: dict) -> str:
+    title = str(article.get('title') or '')
+    summary = str(article.get('description') or '')
+    image = str(article.get('image') or '')
+    alt = str(article.get('imageAlt') or title)
+    when = str(article.get('date') or '')
+    label = _format_date(when) if when else ''
+    thumb = f'<img src="{esc(image)}" alt="{esc(alt)}">' if image else ''
+    return (
+        '<li><a class="news-item" href="' + esc(article_href(article)) + '" target="_blank" rel="noopener">'
+        + thumb
+        + '<span class="news-copy"><time datetime="' + esc(when) + '">' + esc(label) + '</time>'
+        + '<h2>' + esc(title) + '</h2><p>' + esc(summary) + '</p></span></a></li>'
+    )
+
+
+def render_news_hub(articles: list) -> str:
+    ordered = _ordered_articles(articles)
+    items = []
+    for index, article in enumerate(ordered, 1):
+        items.append({
+            '@type': 'ListItem',
+            'position': index,
+            'url': article_absolute(article),
+            'name': article.get('title') or '',
+        })
+    structured = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'CollectionPage',
+                'name': 'WNBA news',
+                'url': BASE + NEWS_HUB,
+                'description': NEWS_INTRO,
+                'isPartOf': {'@type': 'WebSite', 'name': 'Full Court Buckets', 'url': BASE + '/'},
+                'mainEntity': {
+                    '@type': 'ItemList',
+                    'itemListOrder': 'https://schema.org/ItemListOrderDescending',
+                    'numberOfItems': len(items),
+                    'itemListElement': items,
+                },
+            },
+            _breadcrumb_data([('Home', BASE + '/'), ('News', BASE + NEWS_HUB)]),
+        ],
+    }
+    cards = ''.join(_news_list_item(article) for article in ordered)
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-ZJK92LK3XT');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WNBA news | Full Court Buckets</title>
+<meta name="description" content="{esc(NEWS_INTRO)}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{BASE}{NEWS_HUB}">
+<link rel="icon" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WNBA news">
+<meta property="og:description" content="{esc(NEWS_INTRO)}">
+<meta property="og:url" content="{BASE}{NEWS_HUB}">
+<meta property="og:site_name" content="Full Court Buckets">
+{_jsonld(structured)}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{{margin:0;background:#050506;color:#f5f3ef;font:16px/1.6 Inter,system-ui,sans-serif}}
+a{{color:inherit}}img{{max-width:100%;display:block}}
+.shell{{width:min(980px,94vw);margin:0 auto}}
+header{{border-bottom:1px solid #2b2930;background:#050506}}
+header .shell{{display:flex;align-items:center;gap:24px;min-height:84px}}
+header img{{width:220px;height:auto}}
+main{{padding:28px 0 72px}}
+h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
+.intro{{margin:0 0 8px;color:#d0ccc6;max-width:40rem}}
+.breadcrumbs{{display:flex;gap:8px;align-items:center;color:#a29f99;font-size:13px;font-weight:600}}
+.breadcrumbs a{{color:#d4d0ca;text-decoration:underline}}
+.news-list{{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}}
+.news-item{{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;align-items:center;background:rgba(10,10,12,.96);border:1px solid #2b2930;padding:12px;text-decoration:none}}
+.news-item img{{width:180px;height:120px;object-fit:cover;background:#111}}
+.news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
+.news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
+.news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}
+@media(max-width:700px){{h1{{font-size:40px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}}}
+</style>
+</head>
+<body>
+<header><div class="shell"><a href="/" target="_blank" rel="noopener"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<main class="shell">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/" target="_blank" rel="noopener">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
+<h1>WNBA news</h1>
+<p class="intro">{esc(NEWS_INTRO)}</p>
+<ol class="news-list">{cards}</ol>
+</main>
+</body>
+</html>
+'''
+
+
+def assemble_news_pages(root: Path) -> dict[str, str]:
+    """Article HTML at news/<slug>/, redirect stubs at the old root paths, and the /news/ hub."""
+    articles = ensure_article_urls(root)
+    pages = {}
+    for article in articles:
+        slug = article_slug(article)
+        pages[f'news/{slug}/index.html'] = prepare_article_page(root, article, articles)
+        pages[f'{slug}/index.html'] = redirect_stub(article)
+    pages['news/index.html'] = render_news_hub(articles)
+    return pages
+
+
+def sync_news_sitemap(text: str, articles: list) -> str:
+    """New post URLs and /news/ stay. Old root post URLs go."""
+    if '</urlset>' not in text:
+        return text
+    for article in articles:
+        try:
+            slug = article_slug(article)
+        except ValueError:
+            continue
+        old = f'{BASE}/{slug}/'
+        new = article_absolute(article)
+        text = re.sub(rf'(<loc>\s*){re.escape(old)}(\s*</loc>)', rf'\1{new}\2', text)
+        if new not in text:
+            lastmod = str(article.get('date') or '2026-09-29')
+            block = (
+                '  <url>\n'
+                f'    <loc>{new}</loc>\n'
+                f'    <lastmod>{lastmod}</lastmod>\n'
+                '    <changefreq>weekly</changefreq>\n'
+                '    <priority>0.8</priority>\n'
+                '  </url>\n'
+            )
+            text = text.replace('</urlset>', block + '</urlset>', 1)
+    hub = BASE + NEWS_HUB
+    if not re.search(rf'<loc>\s*{re.escape(hub)}\s*</loc>', text):
+        block = (
+            '  <url>\n'
+            f'    <loc>{hub}</loc>\n'
+            '    <lastmod>2026-09-29</lastmod>\n'
+            '    <changefreq>weekly</changefreq>\n'
+            '    <priority>0.8</priority>\n'
+            '  </url>\n'
+        )
+        text = text.replace('</urlset>', block + '</urlset>', 1)
+    return text
+
+
+def legacy_post_link_pattern(articles: list) -> re.Pattern:
+    slugs = []
+    for article in articles:
+        try:
+            slugs.append(re.escape(article_slug(article)))
+        except ValueError:
+            continue
+    if not slugs:
+        return re.compile(r'(?!x)x')
+    group = '|'.join(slugs)
+    return re.compile(
+        rf'''(?:(?:href|content)\s*=\s*["'](?:https://fullcourtbuckets\.com)?/(?:{group})/["']'''
+        rf'''|<loc>\s*https://fullcourtbuckets\.com/(?:{group})/\s*</loc>)''',
+        re.I,
+    )

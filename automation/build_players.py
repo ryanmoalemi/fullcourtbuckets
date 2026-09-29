@@ -576,18 +576,14 @@ def build(root: Path):
         if text != original:
             files['index.html']=text
     phrases=links.article_phrases(index, linking)
-    for article in links.load_articles(root):
-        slug=article.get('slug') or ''
-        if not SLUG.fullmatch(slug):
+    for relative, content in links.assemble_news_pages(root).items():
+        if links.is_redirect_html(content):
+            files[relative]=content
             continue
-        relative=f'{slug}/index.html'
-        path=root/relative
-        if not path.is_file():
-            continue
-        original=path.read_text(encoding='utf-8')
-        updated=site_nav.install(links.ensure_footer_hubs(links.link_copy(original, phrases)), f'/{slug}/', menu)
-        if updated != original:
-            files[relative]=updated
+        current=page_url(Path(relative))
+        if relative != 'news/index.html':
+            content=links.ensure_footer_hubs(links.link_copy(content, phrases))
+        files[relative]=site_nav.install(content, current, menu)
     standings_path=root/'standings'/'index.html'
     standings_data=root/'api'/'wnba-standings'
     if standings_path.is_file() and standings_data.is_file():
@@ -619,7 +615,7 @@ def build(root: Path):
         if not path.is_file():
             continue
         original=path.read_text(encoding='utf-8')
-        updated=links.ensure_sitemap(original, team_urls, BASE)
+        updated=links.sync_news_sitemap(links.ensure_sitemap(original, team_urls, BASE), links.load_articles(root))
         if updated != original:
             files[name]=updated
     robots=root/'robots.txt'
@@ -629,6 +625,10 @@ def build(root: Path):
         files['robots.txt']=robots_text.rstrip()+'\n'+sitemap+'\n'
     report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':'BALLDONTLIE','coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
+    articles=links.load_articles(root)
+    for relative, content in list(files.items()):
+        if relative.endswith('.html'):
+            files[relative]=links.rewrite_legacy_article_urls(content, articles)
     links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
@@ -644,6 +644,63 @@ def build(root: Path):
         changes+=1
     print(f'Built {len(slugs)} static player profiles and directory; {changes} files changed.')
     return len(slugs)
+
+def refresh_published_news(root: Path | None = None) -> int:
+    """Move posts to /news/<slug>/ and retarget links without rebuilding player profiles."""
+    root = root or Path(__file__).resolve().parents[1]
+    index = json.loads((root / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
+    linking = links.catalog_from_index(index)
+    menu = site_nav.build_menu(root, site_nav.planned_paths(root, index, linking))
+    phrases = links.article_phrases(index, linking)
+    files: dict[str, str] = {}
+    for relative, content in links.assemble_news_pages(root).items():
+        if links.is_redirect_html(content):
+            files[relative] = content
+            continue
+        current = page_url(Path(relative))
+        if relative != 'news/index.html':
+            content = links.ensure_footer_hubs(links.link_copy(content, phrases))
+        files[relative] = site_nav.install(content, current, menu)
+    homepage = root / 'index.html'
+    if homepage.is_file():
+        files['index.html'] = site_nav.install(
+            links.apply_homepage(homepage.read_text(encoding='utf-8'), links.load_articles(root)),
+            '/',
+            menu,
+        )
+    articles = links.load_articles(root)
+    for name in ('sitemap.xml', 'pages-sitemap.xml'):
+        path = root / name
+        if path.is_file():
+            files[name] = links.sync_news_sitemap(path.read_text(encoding='utf-8'), articles)
+    from link_graph import iter_html
+    for path in iter_html(root):
+        rel = path.relative_to(root).as_posix()
+        if rel in files:
+            continue
+        original = path.read_text(encoding='utf-8')
+        updated = site_nav.install(
+            links.rewrite_legacy_article_urls(original, articles),
+            page_url(path.relative_to(root)),
+            menu,
+        )
+        if updated != original:
+            files[rel] = updated
+    for relative, content in list(files.items()):
+        if str(relative).endswith('.html'):
+            files[relative] = links.rewrite_legacy_article_urls(content, articles)
+    changes = 0
+    for relative, content in files.items():
+        reject_removed_adu(relative, content)
+        path = root / relative
+        if path.exists() and path.read_text(encoding='utf-8') == content:
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding='utf-8')
+        changes += 1
+    print(f'Published news paths; {changes} files changed.')
+    return changes
+
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
