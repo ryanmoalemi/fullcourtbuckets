@@ -58,6 +58,8 @@ class SiteNavTests(unittest.TestCase):
         self.assertGreater(len(pages), 100)
         for path in pages:
             html = path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in html.lower():
+                continue
             found = site_nav.extract_main_nav(html)
             self.assertEqual(len(found), 1, path)
             self.assertEqual(site_nav.normalize(found[0]), expected, path)

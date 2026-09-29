@@ -40,7 +40,13 @@ Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`
 
 ## Adding an article
 
-Add the article folder (`slug/index.html` and its images) and one entry in `articles.json` with `slug`, `title`, `description`, `category`, `date` (`YYYY-MM-DD`), `image`, and `imageAlt`. The homepage sorts that file by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Also add the new URL to `sitemap.xml` and `pages-sitemap.xml`.
+Every post is published at `/news/<slug>/`. The slug does not change. Add `news/<slug>/index.html` (and its images) and one `articles.json` entry with `slug`, `url` (`/news/<slug>/`), `title`, `description`, `category`, `date` (`YYYY-MM-DD`), `image`, and `imageAlt`. Do not publish a new post at the site root.
+
+The `/news/` hub lists every article from `articles.json`, newest first, with the date, title, one-line summary, and thumbnail. Link the new post from that hub. The generator rebuilds the hub, so do not hand-edit the list. Breadcrumbs on the post are Home > News > Post, both in the visible trail and in `BreadcrumbList` JSON-LD. The article JSON-LD `url` and `mainEntityOfPage` use the `/news/<slug>/` URL.
+
+The homepage sorts `articles.json` by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Add the new `/news/<slug>/` URL and `/news/` to `sitemap.xml` and `pages-sitemap.xml`. Do not list a root post URL.
+
+GitHub Pages has no server redirects. When a post leaves an old root URL, leave a redirect stub at that old path: meta refresh `0`, `rel=canonical` to the new URL, `noindex`, and `location.replace` to the new URL.
 
 Every link on fullcourtbuckets.com opens in a new tab. Put `target="_blank" rel="noopener"` on every `<a>`, including article body text, photo captions, nav, footer, and the homepage story cards rendered from `articles.json`.
 
