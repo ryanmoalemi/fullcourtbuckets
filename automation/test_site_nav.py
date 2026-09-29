@@ -51,6 +51,8 @@ class SiteNavTests(unittest.TestCase):
             self.assertEqual(site_nav.normalize(found[0]), expected, path)
             self.assertIn('/assets/site-nav.css', html, path)
             self.assertIn('/assets/site-nav.js', html, path)
+            footers = site_nav.FOOTER_RE.findall(html)
+            self.assertEqual(footers, [site_nav.FOOTER_HTML], path)
             current = page_url(path.relative_to(ROOT))
             marked = _current_hrefs(found[0])
             for href in site_nav.iter_hrefs(menu):
@@ -66,5 +68,9 @@ class SiteNavTests(unittest.TestCase):
         self.assertEqual(site_nav.extract_main_nav(missing), [])
         drifted = expected.replace('href="/standings/"', 'href="/standings/extra/"', 1)
         self.assertNotEqual(site_nav.normalize(drifted), expected)
-        sample = site_nav.install('<header><nav><a href="/">Old</a></nav></header></body>', '/', menu)
+        sample = site_nav.install('<header><nav><a href="/">Old</a></nav></header><footer class="site-footer"><p>Different</p></footer></body>', '/', menu)
         self.assertEqual(site_nav.normalize(site_nav.extract_main_nav(sample)[0]), expected)
+        self.assertEqual(site_nav.FOOTER_RE.findall(sample), [site_nav.FOOTER_HTML])
+        bare = '<html><body><p>No footer</p></body></html>'
+        self.assertEqual(site_nav.FOOTER_RE.findall(bare), [])
+        self.assertIn(site_nav.FOOTER_HTML, site_nav.install_footer(bare))

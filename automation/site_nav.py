@@ -33,6 +33,21 @@ STYLESHEET = '<link rel="stylesheet" href="/assets/site-nav.css">'
 SCRIPT = '<script src="/assets/site-nav.js" defer></script>'
 NAV_RE = re.compile(r'<nav\b([^>]*)>.*?</nav>', re.S)
 MAIN_NAV_RE = re.compile(r'<nav\b[^>]*aria-label="Main"[^>]*>.*?</nav>', re.S)
+FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.S)
+# The footer already used on player pages. Do not restyle it.
+FOOTER_HTML = (
+    '<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. '
+    'Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p>'
+    '<p class="footer-links"><a href="/wnba/" target="_blank" rel="noopener">Players</a>'
+    '<a href="/standings/" target="_blank" rel="noopener">Standings</a>'
+    '<a href="/about/" target="_blank" rel="noopener">About</a>'
+    '<a href="/contact/" target="_blank" rel="noopener">Contact</a>'
+    '<a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>'
+    '<a href="/terms/" target="_blank" rel="noopener">Terms of Use</a>'
+    '<a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a>'
+    '<a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p>'
+    '<p>&copy; 2026 Full Court Buckets</p></div></footer>'
+)
 EM_DASH = '\u2014'
 
 
@@ -225,6 +240,22 @@ def ensure_assets(page_html: str) -> str:
     return page_html
 
 
+def footer_html(include_standings: bool = True) -> str:
+    """Same footer everywhere. The standings link is omitted only when that page is absent."""
+    if include_standings:
+        return FOOTER_HTML
+    return FOOTER_HTML.replace('<a href="/standings/" target="_blank" rel="noopener">Standings</a>', '', 1)
+
+
+def install_footer(page_html: str) -> str:
+    """Replace whatever footer is on the page with the shared one. Add it if missing."""
+    if FOOTER_RE.search(page_html):
+        return FOOTER_RE.sub(FOOTER_HTML, page_html, count=1)
+    if '</body>' in page_html:
+        return page_html.replace('</body>', FOOTER_HTML + '</body>', 1)
+    return page_html + FOOTER_HTML
+
+
 def install(page_html: str, current: str, menu: list[dict]) -> str:
     """Replace the first main nav. Leave the on-page section nav alone."""
     rendered = render(menu, current)
@@ -248,7 +279,7 @@ def install(page_html: str, current: str, menu: list[dict]) -> str:
             page_html = page_html.replace('<body>', '<body>' + rendered, 1)
         else:
             page_html = rendered + page_html
-    return ensure_assets(page_html)
+    return install_footer(ensure_assets(page_html))
 
 
 def install_tree(root: Path, menu: list[dict], skip: set[str]) -> dict[str, str]:
