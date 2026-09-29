@@ -134,6 +134,34 @@ class Tests(unittest.TestCase):
         self.assertEqual(s.merge_team_changes({"current_team": None, "team_changes": kept}, team_b, NOW), kept)
         self.assertEqual(s.merge_team_changes({"current_team": team_a}, {"id": 1, "full_name": "Renamed Team"}, NOW), [])
         self.assertEqual(s.merge_team_changes(None, team_b, NOW), [])
+    def test_stats_date_changes_only_when_numbers_change(self):
+        class Mutable(FakeClient):
+            def __init__(self, pts):
+                super().__init__()
+                self.pts = pts
+            def all(self, endpoint, params=None):
+                if endpoint == 'player_season_stats':
+                    row = stat(params['season'], params['season_type'])
+                    row['pts'] = self.pts
+                    return [row]
+                return super().all(endpoint, params)
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            path = root / 'data/wnba/players/example-player.json'
+            self.assertTrue(s.run(root, Mutable(12.3), NOW))
+            first = json.loads(path.read_text())
+            self.assertEqual(first['stats_updated_at'], first['checked_at'])
+            later = NOW + dt.timedelta(days=3)
+            self.assertTrue(s.run(root, Mutable(12.3), later, force=True))
+            same = json.loads(path.read_text())
+            self.assertNotEqual(same['checked_at'], first['checked_at'])
+            self.assertEqual(same['stats_updated_at'], first['stats_updated_at'])
+            self.assertTrue(s.run(root, Mutable(20.0), later + dt.timedelta(days=1), force=True))
+            changed = json.loads(path.read_text())
+            self.assertEqual(changed['stats_updated_at'], changed['checked_at'])
+            self.assertNotEqual(changed['stats_updated_at'], first['stats_updated_at'])
+            self.assertEqual(changed['season_stats'][0]['pts'], 20.0)
+
     def test_outage_does_not_replace_successful_snapshot(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); s.run(root,FakeClient(),NOW)

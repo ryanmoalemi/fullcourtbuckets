@@ -267,5 +267,64 @@ class BuildTests(unittest.TestCase):
             self.assertGreater(archive, faq)
             self.assertNotIn('regular-season averages', page)
 
+    def test_answer_summary_uses_only_real_numbers(self):
+        text = b.answer_summary(P)
+        self.assertEqual(
+            text,
+            'Example Player is a guard for the Example Team. In the 2026 season she averaged 12.3 points, 4.5 rebounds and 6.7 assists in 10 games.',
+        )
+        self.assertNotIn('\u2014', text)
+        self.assertNotIn('\u2013', text)
+        for banned in ('dataset', 'feed', 'imported', 'provider', 'snapshot', 'api'):
+            self.assertNotIn(banned, text.lower())
+        missing = copy.deepcopy(P)
+        missing['season_stats'][0]['pts'] = None
+        missing['season_stats'][0]['reb'] = None
+        partial = b.answer_summary(missing)
+        self.assertIn('6.7 assists', partial)
+        self.assertIn('in 10 games', partial)
+        self.assertNotIn('points', partial)
+        self.assertNotIn('rebounds', partial)
+        self.assertNotIn('0.0', partial)
+        self.assertNotIn('0 assists', partial)
+        self.assertNotIn('\u2014', partial)
+        empty = copy.deepcopy(P)
+        empty['season_stats'] = []
+        empty['active_in_provider_feed'] = False
+        empty['current_team'] = {'id': 9, 'full_name': 'Old Team'}
+        archive = b.answer_summary(empty)
+        self.assertEqual(archive, 'Example Player is a guard and is not on a current roster.')
+        self.assertNotIn('averaged', archive)
+        self.assertNotIn('Old Team', archive)
+        self.assertNotIn('retired', archive.lower())
+        self.assertNotIn('\u2014', archive)
+        split = copy.deepcopy(P)
+        other = copy.deepcopy(split['season_stats'][0])
+        other['team'] = {'id': 2, 'full_name': 'Other Team'}
+        other['pts'] = 99
+        split['season_stats'].append(other)
+        combined = b.answer_summary(split)
+        self.assertNotIn('averaged', combined)
+        self.assertNotIn('99', combined)
+        page = b.profile_page(P)
+        self.assertIn('</h1><p class="answer-summary">', page)
+        self.assertIn('Stats updated September 15, 2026.', page)
+        self.assertIn('Stats from WNBA season averages and game records.', page)
+        self.assertIn('"dateModified": "2026-09-15"', page)
+        self.assertNotIn('\u2014', page[page.find('class="answer-summary"'):page.find('class="hero-meta"')])
+        head, body = page.split('</head>', 1)
+        visible = body.split('<script', 1)[0]
+        self.assertIn('<td>12.3</td>', visible)
+        self.assertLess(visible.find('<table>'), visible.find('</table>'))
+        self.assertIn('<td>12.3</td>', visible[visible.find('<table>'):visible.find('</table>')])
+        held = copy.deepcopy(P)
+        held['checked_at'] = '2026-09-29T00:02:44+00:00'
+        held['stats_updated_at'] = '2026-08-02T18:00:00+00:00'
+        dated = b.profile_page(held)
+        lead = dated[dated.find('class="stats-updated"'):dated.find('class="hero-meta"')]
+        self.assertIn('Stats updated August 2, 2026.', lead)
+        self.assertNotIn('September 28, 2026', lead)
+        self.assertIn('"dateModified": "2026-08-02"', dated)
+
 
 if __name__=='__main__':unittest.main()

@@ -175,6 +175,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+      contents: read
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -189,6 +190,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/checkout@v4
+        continue-on-error: true
+        with:
+          ref: main
+          fetch-depth: 20
+      - name: Submit changed URLs to IndexNow
+        continue-on-error: true
+        env:
+          INDEXNOW_BEFORE: ${{ github.event.before }}
+        run: python automation/indexnow.py || true
       - name: Install real desktop and Safari-engine browsers
         run: |
           python -m pip -q install 'playwright>=1.50,<2'
