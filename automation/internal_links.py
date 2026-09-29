@@ -498,8 +498,23 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
 
 
 def ensure_sitemap(text: str, urls: list[str], base: str) -> str:
+    """Add current team URLs and drop team locations that are no longer published."""
     if '</urlset>' not in text:
         return text
+    wanted = {base + url for url in urls}
+    team_prefix = base + '/wnba/teams/'
+
+    def keep(match: re.Match) -> str:
+        block = match.group(0)
+        loc_match = re.search(r'<loc>\s*([^<]+?)\s*</loc>', block)
+        if not loc_match:
+            return block
+        loc = loc_match.group(1).strip()
+        if loc.startswith(team_prefix) and loc not in wanted:
+            return ''
+        return block
+
+    text = re.sub(r'[ \t]*<url\b[^>]*>.*?</url>[ \t]*\r?\n?', keep, text, flags=re.S)
     for url in urls:
         loc = base + url
         if loc in text:
