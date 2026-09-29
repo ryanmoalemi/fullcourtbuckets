@@ -483,6 +483,30 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
     body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p>{couples_hub_link(root)}<p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
+def redirect_stub(old_route: str, new_route: str, menu) -> str:
+    """HTML redirect. GitHub Pages cannot send a server redirect."""
+    if not old_route.startswith('/wnba/teams/') or not old_route.endswith('/'):
+        raise BuildError('Legacy team address must stay under /wnba/teams/.')
+    if not new_route.startswith('/wnba/teams/') or not new_route.endswith('/') or old_route == new_route:
+        raise BuildError('Team redirect target is not a different team page.')
+    new_url = BASE + new_route
+    page = (
+        '<!doctype html><html lang="en"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1">'
+        '<title>Moved</title>'
+        '<meta name="robots" content="noindex">'
+        f'<link rel="canonical" href="{new_url}">'
+        f'<meta http-equiv="refresh" content="0;url={new_url}">'
+        '<link rel="icon" href="/favicon.svg">'
+        f'<script>location.replace({json.dumps(new_url)});</script>'
+        '</head><body><main>'
+        f'<p>Moved from {esc(old_route)}.</p>'
+        f'<p><a href="{esc(new_url)}">Continue</a></p>'
+        '</main></body></html>'
+    )
+    return site_nav.install(page, old_route, menu)
+
+
 def team_page(slot, include_standings=True, menu=None):
     name=slot['full_name']
     route=links.team_href(slot)
@@ -530,6 +554,12 @@ def build(root: Path):
     include_standings=(root/'standings'/'index.html').is_file()
     for slot in linking['by_id'].values():
         files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu)
+    for team_id, old_slug in team_names.LEGACY_SLUGS.items():
+        slot = linking['by_id'].get(team_id)
+        if not slot or slot['slug'] == old_slug:
+            continue
+        old_route = f'/wnba/teams/{old_slug}/'
+        files[f'wnba/teams/{old_slug}/index.html'] = redirect_stub(old_route, links.team_href(slot), menu)
     files['wnba/index.html']=directory_page(index, linking, include_standings, menu, root)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()

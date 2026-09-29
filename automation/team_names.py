@@ -1,13 +1,21 @@
 """Display names for expansion teams whose provider record omits the city.
 
-Page addresses stay /wnba/teams/fire/ and /wnba/teams/tempo/.
+Page addresses are city-team slugs: /wnba/teams/portland-fire/ and
+/wnba/teams/toronto-tempo/. The short paths stay as redirect stubs.
 """
 from __future__ import annotations
 
 # Provider ids. Abbreviations POR and TOR are Portland and Toronto.
 CORRECTIONS = {
-    31: {'full_name': 'Portland Fire', 'name': 'Fire', 'city': 'Portland', 'slug': 'fire'},
-    30: {'full_name': 'Toronto Tempo', 'name': 'Tempo', 'city': 'Toronto', 'slug': 'tempo'},
+    31: {'full_name': 'Portland Fire', 'name': 'Fire', 'city': 'Portland', 'slug': 'portland-fire'},
+    30: {'full_name': 'Toronto Tempo', 'name': 'Tempo', 'city': 'Toronto', 'slug': 'toronto-tempo'},
+}
+
+# Former short addresses. GitHub Pages has no server redirects, so the builder
+# keeps an HTML stub at each of these slugs.
+LEGACY_SLUGS = {
+    31: 'fire',
+    30: 'tempo',
 }
 
 
@@ -48,3 +56,8 @@ def public_name(name: str) -> str:
 def pinned_slug(team_id: int) -> str | None:
     spec = CORRECTIONS.get(team_id)
     return spec['slug'] if spec else None
+
+
+def legacy_slug(team_id: int) -> str | None:
+    slug = LEGACY_SLUGS.get(team_id)
+    return slug or None

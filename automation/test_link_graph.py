@@ -65,7 +65,7 @@ class GraphTests(unittest.TestCase):
             self.assertEqual(reasons['/404.html'], '404')
             self.assertEqual(reasons['/gone/'], 'redirect')
 
-    def test_expansion_team_pages_keep_their_addresses(self):
+    def test_expansion_team_pages_use_city_team_slugs(self):
         index = {'players': [
             {'id': 1, 'slug': 'one', 'name': 'One Player', 'active_in_provider_feed': True,
              'current_team': {'id': 31, 'full_name': 'Fire', 'name': 'Fire', 'city': ''}},
@@ -76,12 +76,35 @@ class GraphTests(unittest.TestCase):
         fire = linking['by_id'][31]
         tempo = linking['by_id'][30]
         self.assertEqual(fire['full_name'], 'Portland Fire')
-        self.assertEqual(fire['slug'], 'fire')
-        self.assertEqual(links.team_href(fire), '/wnba/teams/fire/')
+        self.assertEqual(fire['slug'], 'portland-fire')
+        self.assertEqual(fire['slug'], links.team_slug(fire['full_name']))
+        self.assertEqual(links.team_href(fire), '/wnba/teams/portland-fire/')
         self.assertEqual(tempo['full_name'], 'Toronto Tempo')
-        self.assertEqual(tempo['slug'], 'tempo')
+        self.assertEqual(tempo['slug'], 'toronto-tempo')
+        self.assertEqual(tempo['slug'], links.team_slug(tempo['full_name']))
+        self.assertEqual(links.team_href(tempo), '/wnba/teams/toronto-tempo/')
         self.assertIs(linking['by_name']['Fire'], fire)
         self.assertIs(linking['by_name']['Portland Fire'], fire)
+
+    def test_sitemap_replaces_legacy_team_urls(self):
+        sample = (
+            '<urlset>\n'
+            '  <url><loc>https://fullcourtbuckets.com/wnba/teams/fire/</loc></url>\n'
+            '  <url><loc>https://fullcourtbuckets.com/about/</loc></url>\n'
+            '  <url><loc>https://fullcourtbuckets.com/wnba/teams/tempo/</loc></url>\n'
+            '</urlset>'
+        )
+        updated = links.ensure_sitemap(
+            sample,
+            ['/wnba/teams/portland-fire/', '/wnba/teams/toronto-tempo/'],
+            'https://fullcourtbuckets.com',
+        )
+        self.assertNotIn('/wnba/teams/fire/', updated)
+        self.assertNotIn('/wnba/teams/tempo/', updated)
+        self.assertIn('https://fullcourtbuckets.com/wnba/teams/portland-fire/', updated)
+        self.assertIn('https://fullcourtbuckets.com/wnba/teams/toronto-tempo/', updated)
+        self.assertIn('https://fullcourtbuckets.com/about/', updated)
+        self.assertEqual(updated, links.ensure_sitemap(updated, ['/wnba/teams/portland-fire/', '/wnba/teams/toronto-tempo/'], 'https://fullcourtbuckets.com'))
 
     def test_normalize_internal_urls(self):
         self.assertEqual(link_graph.normalize_href('https://fullcourtbuckets.com/wnba/aja-wilson/', '/'), '/wnba/aja-wilson/')
@@ -244,6 +267,41 @@ class AnchorTests(unittest.TestCase):
             self.assertEqual(again, standings)
 
 
+class CityTeamSlugTests(unittest.TestCase):
+    def test_build_keeps_legacy_team_urls_as_redirects(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data = root / 'data' / 'wnba'
+            (data / 'players').mkdir(parents=True)
+            (root / 'automation').mkdir()
+            for name in ('players.css', 'players.js'):
+                (root / 'automation' / name).write_text((ROOT / 'automation' / name).read_text(encoding='utf-8'), encoding='utf-8')
+            profile = copy.deepcopy(PROFILE)
+            profile['current_team'] = {'id': 31, 'full_name': 'Fire', 'name': 'Fire', 'city': ''}
+            profile['season_stats'] = [dict(profile['season_stats'][0], team={'id': 31, 'full_name': 'Fire'})]
+            (data / 'players' / 'example-player.json').write_text(json.dumps(profile))
+            index = {'checked_at': profile['checked_at'], 'players': [
+                {'id': 1, 'slug': 'example-player', 'name': 'Example Player', 'current_team': profile['current_team'], 'active_in_provider_feed': True},
+            ]}
+            (data / 'players-index.json').write_text(json.dumps(index))
+            (data / 'status.json').write_text(json.dumps({'status': 'ok'}))
+            (root / 'index.html').write_text('<title>Full Court Buckets</title><nav><a href="/">News</a></nav><p>Keep the homepage.</p>', encoding='utf-8')
+            self.assertEqual(builder.build(root), 1)
+            page = (root / 'wnba' / 'teams' / 'portland-fire' / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('https://fullcourtbuckets.com/wnba/teams/portland-fire/', page)
+            self.assertNotIn('/wnba/teams/fire/', page)
+            stub = (root / 'wnba' / 'teams' / 'fire' / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('content="noindex"', stub)
+            self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/wnba/teams/portland-fire/"', stub)
+            self.assertIn('http-equiv="refresh" content="0;url=https://fullcourtbuckets.com/wnba/teams/portland-fire/"', stub)
+            self.assertIn('location.replace("https://fullcourtbuckets.com/wnba/teams/portland-fire/")', stub)
+            self.assertNotIn('href="/wnba/teams/fire/"', stub)
+            self.assertNotIn('href="https://fullcourtbuckets.com/wnba/teams/fire/"', stub)
+            player = (root / 'wnba' / 'example-player' / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('href="/wnba/teams/portland-fire/"', player)
+            self.assertNotIn('/wnba/teams/fire/', player)
+
+
 class StandingsFreshnessTests(unittest.TestCase):
     def test_server_rendered_lead_replaces_js_placeholder(self):
         page = (
@@ -268,6 +326,26 @@ class StandingsFreshnessTests(unittest.TestCase):
         self.assertNotIn('lead the WNBA standings at', no_record)
         self.assertNotIn('0-0', no_record)
 
+LEGACY_TEAM_PATHS = ('/wnba/teams/fire/', '/wnba/teams/tempo/')
+REDIRECT_STUBS = {
+    'wnba/teams/fire/index.html',
+    'wnba/teams/tempo/index.html',
+}
+
+
+def _published_files():
+    skip = {'.git', 'automation'}
+    allowed = {'.html', '.xml', '.js', '.json', '.css', '.md', '.txt', '.svg'}
+    for path in ROOT.rglob('*'):
+        if not path.is_file() or path.is_symlink():
+            continue
+        if any(part in skip for part in path.relative_to(ROOT).parts):
+            continue
+        if path.suffix.lower() not in allowed:
+            continue
+        yield path
+
+
 class RepoLinkTests(unittest.TestCase):
     def test_published_html_targets_resolve(self):
         report = link_graph.analyze(ROOT)
@@ -278,6 +356,51 @@ class RepoLinkTests(unittest.TestCase):
             self.assertLessEqual(page.count('class="inline-link"'), links.MAX_PLAYER_LINKS)
             self.assertIn('Player ID:', page)
             self.assertIn('BreadcrumbList', page)
+
+    def test_every_team_slug_is_city_team_and_legacy_paths_are_stubs_only(self):
+        index = json.loads((ROOT / 'data' / 'wnba' / 'players-index.json').read_text(encoding='utf-8'))
+        linking = links.catalog_from_index(index)
+        self.assertEqual(len(linking['by_id']), 15)
+        slugs = []
+        for slot in linking['by_id'].values():
+            expected = links.team_slug(slot['full_name'])
+            self.assertEqual(slot['slug'], expected, slot['full_name'])
+            self.assertIn('-', slot['slug'], slot['full_name'])
+            self.assertNotEqual(slot['slug'], links.team_slug(slot['name']), slot['full_name'])
+            slugs.append(slot['slug'])
+        self.assertEqual(len(set(slugs)), 15)
+        self.assertIn('portland-fire', slugs)
+        self.assertIn('toronto-tempo', slugs)
+        self.assertNotIn('fire', slugs)
+        self.assertNotIn('tempo', slugs)
+        leftovers = []
+        for path in _published_files():
+            text = path.read_text(encoding='utf-8')
+            rel = path.relative_to(ROOT).as_posix()
+            for legacy in LEGACY_TEAM_PATHS:
+                if legacy not in text:
+                    continue
+                if rel not in REDIRECT_STUBS:
+                    leftovers.append(f'{rel} still contains {legacy}')
+                    continue
+                if f'href="{legacy}"' in text or f"href='{legacy}'" in text:
+                    leftovers.append(f'{rel} links to {legacy}')
+                absolute = 'https://fullcourtbuckets.com' + legacy
+                if f'href="{absolute}"' in text or f"href='{absolute}'" in text:
+                    leftovers.append(f'{rel} links to {absolute}')
+        self.assertEqual(leftovers, [])
+        for rel, canonical in (
+            ('wnba/teams/fire/index.html', 'https://fullcourtbuckets.com/wnba/teams/portland-fire/'),
+            ('wnba/teams/tempo/index.html', 'https://fullcourtbuckets.com/wnba/teams/toronto-tempo/'),
+        ):
+            stub = (ROOT / rel).read_text(encoding='utf-8')
+            self.assertIn('<meta name="robots" content="noindex">', stub, rel)
+            self.assertIn(f'<link rel="canonical" href="{canonical}">', stub, rel)
+            self.assertIn(f'<meta http-equiv="refresh" content="0;url={canonical}">', stub, rel)
+            self.assertIn(f'location.replace("{canonical}")', stub, rel)
+            page = (ROOT / 'wnba' / 'teams' / canonical.rstrip('/').split('/')[-1] / 'index.html').read_text(encoding='utf-8')
+            self.assertIn(f'<link rel="canonical" href="{canonical}">', page)
+            self.assertNotIn('noindex', page)
 
 
 if __name__ == '__main__':
