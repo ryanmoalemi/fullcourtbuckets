@@ -130,6 +130,8 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
 
     if exists('/wnba/'):
         children = [{'label': 'Player index, A to Z', 'href': '/wnba/'}]
+        if exists('/wnba/couples/'):
+            children.append({'label': 'Couples', 'href': '/wnba/couples/'})
         names = _player_names(root)
         for slug in FEATURED_PLAYERS:
             href = f'/wnba/{slug}/'
