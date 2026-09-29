@@ -70,13 +70,18 @@ class BuildTests(unittest.TestCase):
             {'from':'<First> Team','to':'Other Team','date':'2009-07-08'},
         ]
         page=b.profile_page(p)
-        newer='Moved from Other Team to Example Team on Jul 21, 2009.'
-        older='Moved from &lt;First&gt; Team to Other Team on Jul 8, 2009.'
+        newer='Joined the Example Team from the Other Team on Jul 21, 2009.'
+        older='Joined the Other Team from the &lt;First&gt; Team on Jul 8, 2009.'
+        self.assertIn('<p class="muted small">Team change</p>', page)
         self.assertIn(newer, page)
         self.assertIn(older, page)
+        self.assertLess(page.index('Team change'), page.index(newer))
         self.assertLess(page.index(newer), page.index(older))
+        self.assertNotIn('Moved', page)
         self.assertNotIn('Traded', page)
-        self.assertNotIn('Moved from', b.profile_page(P))
+        plain=b.profile_page(P)
+        self.assertNotIn('Team change', plain)
+        self.assertNotIn('Joined the', plain)
 
     def test_reader_copy_avoids_internal_jargon(self):
         p = copy.deepcopy(P)

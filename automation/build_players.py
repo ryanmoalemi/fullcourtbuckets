@@ -54,8 +54,10 @@ def team_change_html(profile):
         except ValueError:
             continue
         label = f'{day.strftime("%b")} {day.day}, {day.year}'
-        lines.append(f'<p class="muted">Moved from {esc(src)} to {esc(dst)} on {esc(label)}.</p>')
-    return ''.join(lines)
+        lines.append(f'<p class="muted">Joined the {esc(dst)} from the {esc(src)} on {esc(label)}.</p>')
+    if not lines:
+        return ''
+    return '<p class="muted small">Team change</p>' + ''.join(lines)
 
 def bio_fields(player):
     # Some provider biography fields contain shifted text. Do not relabel or guess it.
