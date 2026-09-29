@@ -406,6 +406,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
         overview+=f'<p class="muted">Current team: <strong>{team_label}</strong>.</p>'
     overview+=team_change_html(profile, linking, budget)
     if not active: overview+='<p class="muted">This player is not on a current roster. The page does not call that retirement or free agency.</p>'
+    overview += couple_note(root, slug)
     tablehtml=stats_table(profile,2)+stats_table(profile,3)
     controls=''
     if tablehtml:
@@ -450,7 +451,22 @@ def profile_page(profile, root=None, linking=None, menu=None):
         structured['@graph'].append(faq_entity)
     return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured,has_standings(root),menu)
 
-def directory_page(index, linking=None, include_standings=True, menu=None):
+def couple_note(root, slug):
+    """One sourced relationship line. Empty unless this profile is in the couples data."""
+    if root is None or not slug:
+        return ''
+    try:
+        import build_couples
+    except ImportError:
+        return ''
+    return build_couples.note_for_slug(root, slug)
+
+def couples_hub_link(root):
+    if root is None or not (Path(root) / 'wnba' / 'couples' / 'index.html').is_file():
+        return ''
+    return '<p><a class="inline-link" href="/wnba/couples/" target="_blank" rel="noopener">Confirmed WNBA relationships</a></p>'
+
+def directory_page(index, linking=None, include_standings=True, menu=None, root=None):
     entries=index['players']; cards=[]
     for p in sorted(entries,key=lambda p:p['name'].casefold()):
         state='Listed active' if p.get('active_in_provider_feed') else 'Archive profile'
@@ -464,7 +480,7 @@ def directory_page(index, linking=None, include_standings=True, menu=None):
             for slot in sorted(linking['by_id'].values(), key=lambda slot: slot['full_name'].casefold())
         )
         team_html=f'<section class="section" id="teams"><p class="eyebrow">Current rosters</p><h2>Teams</h2><ul class="team-index">{items}</ul></section>'
-    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
+    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p>{couples_hub_link(root)}<p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
 def team_page(slot, include_standings=True, menu=None):
@@ -514,7 +530,7 @@ def build(root: Path):
     include_standings=(root/'standings'/'index.html').is_file()
     for slot in linking['by_id'].values():
         files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu)
-    files['wnba/index.html']=directory_page(index, linking, include_standings, menu)
+    files['wnba/index.html']=directory_page(index, linking, include_standings, menu, root)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()
     files['assets/site-nav.css']=site_nav.CSS_TEXT
