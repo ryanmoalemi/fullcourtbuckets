@@ -12,6 +12,8 @@ from pathlib import Path
 import re
 from zoneinfo import ZoneInfo
 
+import internal_links as links
+
 BASE = 'https://fullcourtbuckets.com'
 GA4_TAG = (
     '<!-- Google tag (gtag.js) -->\n'
@@ -69,7 +71,7 @@ def timestamp(raw, short=False):
 def tname(team):
     return (team or {}).get('full_name') or (team or {}).get('name') or 'Team not listed'
 
-def team_change_html(profile):
+def team_change_html(profile, linking=None, budget=None):
     """Newest-first sentences. The feed does not say trade, signing, or waiver."""
     lines = []
     for entry in profile.get('team_changes') or []:
@@ -83,7 +85,9 @@ def team_change_html(profile):
         except ValueError:
             continue
         label = f'{day.strftime("%b")} {day.day}, {day.year}'
-        lines.append(f'<p class="muted">Joined the {esc(dst)} from the {esc(src)} on {esc(label)}.</p>')
+        src_html = links.linked_team_name(src, linking, budget)
+        dst_html = links.linked_team_name(dst, linking, budget)
+        lines.append(f'<p class="muted">Joined the {dst_html} from the {src_html} on {esc(label)}.</p>')
     if not lines:
         return ''
     return '<p class="muted small">Team change</p>' + ''.join(lines)
@@ -144,13 +148,17 @@ def validate(profile, slug):
 def header():
     return '''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" target="_blank" rel="noopener" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a><nav aria-label="Main navigation"><a href="/#latest" target="_blank" rel="noopener">News</a><a href="/wnba/" class="selected" target="_blank" rel="noopener">Players</a><a href="/standings/" target="_blank" rel="noopener">Standings</a><a href="/fiba-womens-basketball-world-cup-2026/" target="_blank" rel="noopener">World Cup</a></nav></div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
 
-def footer():
-    return '''<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p><p class="footer-links"><a href="/about/" target="_blank" rel="noopener">About</a><a href="/contact/" target="_blank" rel="noopener">Contact</a><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener">Terms of Use</a><a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a><a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p><p>&copy; 2026 Full Court Buckets</p></div></footer>'''
+def footer(include_standings=True):
+    standings='<a href="/standings/" target="_blank" rel="noopener">Standings</a>' if include_standings else ''
+    return f'''<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p><p class="footer-links"><a href="/wnba/" target="_blank" rel="noopener">Players</a>{standings}<a href="/about/" target="_blank" rel="noopener">About</a><a href="/contact/" target="_blank" rel="noopener">Contact</a><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener">Terms of Use</a><a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){{googlefc.showRevocationMessage();return false;}}">Privacy and cookie settings</a><a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p><p>&copy; 2026 Full Court Buckets</p></div></footer>'''
 
-def document(title, description, route, body, structured=None):
+def has_standings(root):
+    return root is None or (Path(root)/'standings'/'index.html').is_file()
+
+def document(title, description, route, body, structured=None, include_standings=True):
     canonical=BASE+route
     schema=json.dumps(structured or {},ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">\n{GA4_TAG}\n{ADSENSE_TAG}\n<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><script type="application/ld+json">{schema}</script><script src="/wnba/assets/players.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{header()}<main id="content" class="wrap">{body}</main>{footer()}</body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">\n{GA4_TAG}\n{ADSENSE_TAG}\n<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><script type="application/ld+json">{schema}</script><script src="/wnba/assets/players.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{header()}<main id="content" class="wrap">{body}</main>{footer(include_standings)}</body></html>'''
 
 def stats_table(profile, kind):
     rows=sorted([r for r in profile.get('season_stats',[]) if r['season_type']==kind],key=lambda r:-r['season'])
@@ -250,10 +258,37 @@ def faq_section(profile, root=None):
     }
     return block, entity
 
-def profile_page(profile, root=None):
+def teammates_html(profile, linking, budget):
+    """Current teammates only, from the same roster. Partial lists say so."""
+    if not linking or profile.get('active_in_provider_feed') is not True:
+        return ''
+    team = profile.get('current_team') or {}
+    slot = linking['by_id'].get(team.get('id')) if isinstance(team, dict) else None
+    if not slot:
+        return ''
+    others = [player for player in slot['players'] if player['slug'] != profile.get('slug')]
+    chosen = []
+    for player in others:
+        if not budget.take():
+            break
+        chosen.append(player)
+    if not chosen:
+        return ''
+    items = ''.join(
+        f'<li>{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}</li>'
+        for player in chosen
+    )
+    sentence = 'Other players listed on this roster.' if len(chosen) == len(others) else 'Some of the other players listed on this roster.'
+    return (
+        '<section class="section" id="teammates"><p class="eyebrow">Same roster</p><h2>Teammates</h2>'
+        f'<p>{sentence}</p><ul class="teammate-list">{items}</ul></section>'
+    )
+
+def profile_page(profile, root=None, linking=None):
     p=profile['player']; name=(str(p.get('first_name') or '')+' '+str(p.get('last_name') or '')).strip()
     slug=profile['slug']; fields=bio_fields(p); active=profile.get('active_in_provider_feed') is True
     team=profile.get('current_team') if active else None
+    budget=links.Budget() if linking else None
     row=headline(profile); stats=profile.get('season_stats',[])
     years=sorted({r['season'] for r in stats})
     span=f'{years[0]}–{years[-1]}' if len(years)>1 else str(years[0]) if years else 'No season records yet'
@@ -273,8 +308,10 @@ def profile_page(profile, root=None):
     if row:
         intro=f'{name} averaged {row["pts"]:.1f} points, {row["reb"]:.1f} rebounds and {row["ast"]:.1f} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
     overview=f'<p>{esc(intro)}</p>'
-    if team: overview+=f'<p class="muted">Current team: <strong>{esc(tname(team))}</strong>.</p>'
-    overview+=team_change_html(profile)
+    if team:
+        team_label=links.linked_team_name(tname(team), linking, budget)
+        overview+=f'<p class="muted">Current team: <strong>{team_label}</strong>.</p>'
+    overview+=team_change_html(profile, linking, budget)
     if not active: overview+='<p class="muted">This player is not on a current roster. The page does not call that retirement or free agency.</p>'
     tablehtml=stats_table(profile,2)+stats_table(profile,3)
     controls=''
@@ -288,32 +325,69 @@ def profile_page(profile, root=None):
     for r in sorted(stats,key=lambda r:-r['season']):
         item=(r['season'],tname(r.get('team')))
         if item not in all_teams: all_teams.append(item)
-    timeline=''.join(f'<li><strong>{year}</strong><span>{esc(team_name)}</span></li>' for year,team_name in all_teams)
+    latest_year=all_teams[0][0] if all_teams else None
+    timeline_rows=[]
+    for year, team_name in all_teams:
+        label=esc(team_name)
+        if linking and not active and year == latest_year:
+            label=links.linked_team_name(team_name, linking, budget)
+        timeline_rows.append(f'<li><strong>{year}</strong><span>{label}</span></li>')
+    timeline=''.join(timeline_rows)
     history=f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams by season</h2><p class="muted small">The team she played for in each season. This is not every roster move.</p><ul class="timeline">{timeline}</ul></section>' if timeline else ''
+    teammates=teammates_html(profile, linking, budget) if linking else ''
     checked=timestamp(profile.get('checked_at'))
     latest=profile.get('recent_completed_games',[])
     latest_label=timestamp(max(g['date'] for g in latest),True) if latest else None
     last_game=f'<p>Most recent completed game: <b>{esc(latest_label)}</b>.</p>' if latest_label else ''
-    nav='<a href="#overview">Overview</a>'+('<a href="#stats">Stats</a>' if stats else '')+('<a href="#games">Game log</a>' if latest else '')+('<a href="#teams">Teams</a>' if timeline else '')+'<a href="#sources">Sources</a>'
-    hero=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">WNBA players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
+    nav='<a href="#overview">Overview</a>'+('<a href="#stats">Stats</a>' if stats else '')+('<a href="#games">Game log</a>' if latest else '')+('<a href="#teams">Teams</a>' if timeline else '')+('<a href="#teammates">Teammates</a>' if teammates else '')+'<a href="#sources">Sources</a>'
+    hero=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
     faq_html, faq_entity = faq_section(profile, root)
     sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json" target="_blank" rel="noopener">View player data</a></details>'''
-    body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/" target="_blank" rel="noopener">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/" target="_blank" rel="noopener">Browse players →</a></section>'
+    body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}{teammates}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/" target="_blank" rel="noopener">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/" target="_blank" rel="noopener">Browse players →</a></section>'
     route=f'/wnba/{slug}/'
-    structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, {'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'WNBA players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
+    structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, {'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
     if faq_entity:
         structured['@graph'].append(faq_entity)
-    return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured)
+    return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured,has_standings(root))
 
-def directory_page(index):
+def directory_page(index, linking=None, include_standings=True):
     entries=index['players']; cards=[]
     for p in sorted(entries,key=lambda p:p['name'].casefold()):
         state='Listed active' if p.get('active_in_provider_feed') else 'Archive profile'
         team=tname(p['current_team']) if p.get('current_team') else 'Historical player records'
         query=' '.join([p['name'],team,state]).casefold()
         cards.append(f'<a class="player-card" href="/wnba/{p["slug"]}/" target="_blank" rel="noopener" data-search="{esc(query)}" data-active="{str(bool(p.get("active_in_provider_feed"))).lower()}"><span class="eyebrow">{state}</span><h2>{esc(p["name"])}</h2><p>{esc(team)}</p><span class="small">View profile →</span></a>')
-    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>WNBA players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section><div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
-    return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body)
+    team_html=''
+    if linking and linking['by_id']:
+        items=''.join(
+            f'<li>{links.inline_link(slot["full_name"], links.team_href(slot))}</li>'
+            for slot in sorted(linking['by_id'].values(), key=lambda slot: slot['full_name'].casefold())
+        )
+        team_html=f'<section class="section" id="teams"><p class="eyebrow">Current rosters</p><h2>Teams</h2><ul class="team-index">{items}</ul></section>'
+    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
+    return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings)
+
+def team_page(slot, include_standings=True):
+    name=slot['full_name']
+    route=links.team_href(slot)
+    conf=f'<p class="muted">{esc(slot["conference"])}.</p>' if slot.get('conference') else ''
+    standings=f'<p>{links.inline_link("WNBA standings", "/standings/")}</p>' if include_standings else ''
+    roster=''.join(
+        f'<li>{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}</li>'
+        for player in slot['players']
+    )
+    count=len(slot['players'])
+    noun='player' if count == 1 else 'players'
+    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{conf}{standings}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2><ul class="teammate-list">{roster}</ul></section><p>{links.inline_link('All players', '/wnba/')}</p>'''
+    structured={'@context':'https://schema.org','@graph':[
+        {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
+        {'@type':'BreadcrumbList','itemListElement':[
+            {'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},
+            {'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},
+            {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
+        ]},
+    ]}
+    return document(f'{name} Roster | Full Court Buckets', f'{name} current roster with links to each player profile.', route, body, structured, include_standings)
 
 def build(root: Path):
     data=root/'data/wnba'
@@ -321,6 +395,7 @@ def build(root: Path):
     status=json.loads((data/'status.json').read_text())
     if status.get('status')!='ok' or not index.get('players'):
         raise BuildError('No successful nonempty import is available.')
+    linking=links.catalog_from_index(index)
     files={}; ids=set(); slugs=set()
     for entry in index['players']:
         slug=entry.get('slug','')
@@ -331,28 +406,76 @@ def build(root: Path):
         validate(profile,slug)
         if profile['player']['id']!=entry['id']:
             raise BuildError('Profile does not match its directory identity.')
-        files[f'wnba/{slug}/index.html']=profile_page(profile, root)
-    files['wnba/index.html']=directory_page(index)
+        page=profile_page(profile, root, linking)
+        if page.count('class="inline-link"') > links.MAX_PLAYER_LINKS:
+            raise BuildError(f'Too many contextual links on {slug}.')
+        files[f'wnba/{slug}/index.html']=page
+    include_standings=(root/'standings'/'index.html').is_file()
+    for slot in linking['by_id'].values():
+        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings)
+    files['wnba/index.html']=directory_page(index, linking, include_standings)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()
     locations=['/wnba/']+[f'/wnba/{slug}/' for slug in sorted(slugs)]
     files['player-sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE}{loc}</loc></url>' for loc in locations)+'</urlset>\n'
     homepage=root/'index.html'
     if homepage.exists():
-        text=homepage.read_text()
+        original=homepage.read_text()
+        text=original
         match=re.search(r'<nav\b[^>]*>.*?</nav>',text,re.S)
         if 'Full Court Buckets' not in text or not match:
             raise BuildError('Homepage safety check failed; not changing navigation.')
         if not re.search(r'href=[\'\"](?:https://fullcourtbuckets.com)?/wnba/',match.group()):
             text=text[:match.end()-6]+'<a href="/wnba/" target="_blank" rel="noopener">Players</a>'+text[match.end()-6:]
+        articles=links.load_articles(root)
+        text=links.apply_homepage(text, articles)
+        if text != original:
             files['index.html']=text
+    phrases=links.article_phrases(index, linking)
+    for article in links.load_articles(root):
+        slug=article.get('slug') or ''
+        if not SLUG.fullmatch(slug):
+            continue
+        relative=f'{slug}/index.html'
+        path=root/relative
+        if not path.is_file():
+            continue
+        original=path.read_text(encoding='utf-8')
+        updated=links.ensure_footer_hubs(links.link_copy(original, phrases))
+        if updated != original:
+            files[relative]=updated
+    standings_path=root/'standings'/'index.html'
+    standings_data=root/'api'/'wnba-standings'
+    if standings_path.is_file() and standings_data.is_file():
+        original=standings_path.read_text(encoding='utf-8')
+        updated=links.apply_standings(original, linking, json.loads(standings_data.read_text(encoding='utf-8-sig')))
+        if updated != original:
+            files['standings/index.html']=updated
+    for relative in ('about/index.html','contact/index.html','privacy/index.html','terms/index.html'):
+        path=root/relative
+        if not path.is_file():
+            continue
+        original=path.read_text(encoding='utf-8')
+        updated=links.apply_known_page_links(original, relative)
+        if updated != original:
+            files[relative]=updated
+    team_urls=sorted(links.team_href(slot) for slot in linking['by_id'].values())
+    for name in ('sitemap.xml','pages-sitemap.xml'):
+        path=root/name
+        if not path.is_file():
+            continue
+        original=path.read_text(encoding='utf-8')
+        updated=links.ensure_sitemap(original, team_urls, BASE)
+        if updated != original:
+            files[name]=updated
     robots=root/'robots.txt'
     robots_text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'
     sitemap='Sitemap: '+BASE+'/player-sitemap.xml'
     if sitemap not in robots_text:
         files['robots.txt']=robots_text.rstrip()+'\n'+sitemap+'\n'
-    report={'status':'ok','profile_count':len(slugs),'data_checked_at':index.get('checked_at'), 'source':'BALLDONTLIE','coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
+    report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':'BALLDONTLIE','coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
+    links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
     for relative,content in files.items():
