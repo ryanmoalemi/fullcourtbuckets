@@ -12,6 +12,7 @@ import html
 import json
 from pathlib import Path
 import re
+from zoneinfo import ZoneInfo
 
 from link_graph import file_for_url, normalize_href
 
@@ -331,6 +332,59 @@ def _pct(value) -> str:
         return ''
 
 
+def _long_date(raw) -> str:
+    text = str(raw or '').strip()
+    if not text:
+        return ''
+    try:
+        if 'T' in text or text.endswith('Z'):
+            moment = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
+            if moment.tzinfo is None:
+                moment = moment.replace(tzinfo=dt.timezone.utc)
+            day = moment.astimezone(ZoneInfo('America/Los_Angeles')).date()
+        else:
+            day = dt.date.fromisoformat(text[:10])
+    except (ValueError, TypeError):
+        return ''
+    return f'{day.strftime("%B")} {day.day}, {day.year}'
+
+
+def standings_sentence(standings: dict) -> str:
+    """One sentence from the published table. No record is guessed."""
+    teams = [team for team in (standings.get('teams') or []) if isinstance(team, dict)]
+    leader = next((team for team in teams if team.get('rank') == 1), None)
+    name = str((leader or {}).get('name') or '').strip()
+    if not name:
+        return ''
+    wins, losses = leader.get('wins'), leader.get('losses')
+    if isinstance(wins, bool) or isinstance(losses, bool) or not isinstance(wins, int) or not isinstance(losses, int):
+        return ''
+    return f'The {name} lead the WNBA standings at {wins}-{losses}.'
+
+
+def apply_standings_freshness(text: str, standings: dict) -> str:
+    """Replace the JS placeholder date with the date stored in the standings file."""
+    sentence = standings_sentence(standings)
+    when = _long_date(standings.get('updatedAt'))
+    parts = [part for part in (sentence, f'Updated {when}.' if when else '') if part]
+    if parts:
+        block = '<p class="support" id="standings-updated">' + esc(' '.join(parts)) + '</p>'
+        if 'id="standings-updated"' in text:
+            text = re.sub(r'<p class="support" id="standings-updated">.*?</p>', lambda _: block, text, count=1)
+        else:
+            old = '<p class="support">Updated automatically throughout the season.</p>'
+            if old in text:
+                text = text.replace(old, block, 1)
+    if when:
+        text = re.sub(
+            r'(<span id="updatedAt">).*?(</span>)',
+            lambda match: match.group(1) + 'Updated: ' + esc(when) + match.group(2),
+            text,
+            count=1,
+        )
+    return text
+
+
 def apply_standings(text: str, linking: dict, standings: dict) -> str:
     text = ensure_footer_hubs(text)
     by_name = {slot['full_name']: team_href(slot) for slot in linking['by_id'].values()}
@@ -427,7 +481,7 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
         text = text.replace('</div>\n</main>', '</div>\n' + wrapped + '\n</main>', 1)
         if wrapped not in text:
             text = text.replace('</main>', wrapped + '</main>', 1)
-    return text
+    return apply_standings_freshness(text, standings)
 
 
 def ensure_sitemap(text: str, urls: list[str], base: str) -> str:

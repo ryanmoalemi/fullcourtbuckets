@@ -252,6 +252,21 @@ def prior_team_changes(profile) -> list:
             kept.append({"from": str(src), "to": str(dst), "date": str(day)})
     return kept
 
+def stats_fingerprint(stats, games) -> str:
+    """Stable comparison of the numbers a page would show. Ignores check time and roster text."""
+    return json.dumps(
+        {"games": games, "stats": stats},
+        sort_keys=True, ensure_ascii=False, separators=(",", ":"), default=str,
+    )
+
+def stats_updated_stamp(previous, stats, games, stamp: str) -> str:
+    """Keep the previous stats date unless season lines or the game log actually changed."""
+    if isinstance(previous, dict) and stats_fingerprint(previous.get("season_stats"), previous.get("recent_completed_games")) == stats_fingerprint(stats, games):
+        kept = previous.get("stats_updated_at") or previous.get("checked_at")
+        if isinstance(kept, str) and kept.strip():
+            return kept
+    return stamp
+
 def merge_team_changes(previous, current_team, now: dt.datetime) -> list:
     """Newest-first history. Null transitions are not moves and are not recorded."""
     history = prior_team_changes(previous)
@@ -350,6 +365,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
         name = (p["first_name"] + " " + p["last_name"]).strip()
         slug = stable_slug(pid, name, registry)
         stats = sorted(by_player[pid], key=lambda r: (-r["season"], r["season_type"], str((r["team"] or {}).get("id"))))
+        recent = sorted(logs[pid], key=lambda r: str(r.get("date") or ""), reverse=True)
         # Absence from active feed is NOT evidence of retirement or free agency.
         active = pid in active_players
         current_team = p["team"] if active else None
@@ -359,9 +375,10 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
                 "current_team": current_team, "path": f"/wnba/{slug}/", "data_path": f"/data/wnba/players/{slug}.json"}
         directory.append(item)
         profile = {"schema_version": 1, "provider": "BALLDONTLIE", "source": SOURCE,
-            "checked_at": stamp, "coverage_start": FIRST_YEAR, "career_totals_complete": False,
+            "checked_at": stamp, "stats_updated_at": stats_updated_stamp(previous, stats, recent, stamp),
+            "coverage_start": FIRST_YEAR, "career_totals_complete": False,
             "player": p, "slug": slug, "active_in_provider_feed": active, "current_team": current_team,
-            "season_stats": stats, "recent_completed_games": sorted(logs[pid], key=lambda r: r["date"], reverse=True),
+            "season_stats": stats, "recent_completed_games": recent,
             "game_log_window_start": start.isoformat(),
             "notes": ["Statistics from 2008 onward; not complete all-time career totals.",
                       "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

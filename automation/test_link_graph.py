@@ -225,6 +225,30 @@ class AnchorTests(unittest.TestCase):
             self.assertEqual(again, standings)
 
 
+class StandingsFreshnessTests(unittest.TestCase):
+    def test_server_rendered_lead_replaces_js_placeholder(self):
+        page = (
+            '<h1>WNBA Standings</h1><p class="subhead">2026 Regular Season</p>'
+            '<p class="support">Updated automatically throughout the season.</p>'
+            '<span id="updatedAt">Updated: --</span>'
+        )
+        data = {
+            'updatedAt': '2026-08-30T17:42:00-07:00',
+            'teams': [{'rank': 1, 'name': 'Minnesota Lynx', 'wins': 31, 'losses': 9}],
+        }
+        updated = links.apply_standings_freshness(page, data)
+        self.assertNotIn('Updated: --', updated)
+        self.assertIn('The Minnesota Lynx lead the WNBA standings at 31-9.', updated)
+        self.assertIn('Updated August 30, 2026.', updated)
+        self.assertIn('Updated: August 30, 2026', updated)
+        self.assertNotIn('\u2014', updated)
+        again = links.apply_standings_freshness(updated, data)
+        self.assertEqual(again, updated)
+        no_record = links.apply_standings_freshness(page, {'updatedAt': '2026-08-30T17:42:00-07:00', 'teams': [{'rank': 1, 'name': 'Minnesota Lynx'}]})
+        self.assertIn('Updated August 30, 2026.', no_record)
+        self.assertNotIn('lead the WNBA standings at', no_record)
+        self.assertNotIn('0-0', no_record)
+
 class RepoLinkTests(unittest.TestCase):
     def test_published_html_targets_resolve(self):
         report = link_graph.analyze(ROOT)

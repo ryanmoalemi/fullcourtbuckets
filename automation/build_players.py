@@ -43,6 +43,10 @@ REMOVED_ADU_PATHS = frozenset({
 })
 COLUMNS = [('games_played','GP'),('min','MIN'),('pts','PTS'),('reb','REB'),('ast','AST'),
            ('stl','STL'),('blk','BLK'),('turnover','TO'),('fg_pct','FG%'),('fg3_pct','3P%'),('ft_pct','FT%')]
+# Reader-facing source line. Numbers come from WNBA season averages and game
+# lines stored in data/wnba, not from a live box-score page on wnba.com.
+STATS_SOURCE = 'Stats from WNBA season averages and game records.'
+POSITION_WORDS = {'G': 'guard', 'F': 'forward', 'C': 'center', 'Guard': 'guard', 'Forward': 'forward', 'Center': 'center'}
 
 class BuildError(RuntimeError):
     pass
@@ -109,6 +113,87 @@ def bio_fields(player):
             continue
         clean[key] = text
     return clean
+
+def pacific_day(raw):
+    """Calendar day in Pacific time for a stored timestamp. None when the value is not a date."""
+    try:
+        date = dt.datetime.fromisoformat(str(raw).replace('Z', '+00:00'))
+    except (ValueError, TypeError):
+        return None
+    if date.tzinfo is None:
+        date = date.replace(tzinfo=dt.timezone.utc)
+    return date.astimezone(ZoneInfo('America/Los_Angeles')).date()
+
+def long_date(day):
+    if day is None:
+        return ''
+    return f'{day.strftime("%B")} {day.day}, {day.year}'
+
+def stats_day(profile):
+    """Last day the player's numbers changed. Falls back to the last check already stored in the file."""
+    if not isinstance(profile, dict):
+        return None
+    return pacific_day(profile.get('stats_updated_at') or profile.get('checked_at'))
+
+def plain_average(n):
+    if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
+        return None
+    return f'{n:.1f}'
+
+def plain_games(n):
+    if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
+        return None
+    return str(int(n)) if int(n) == n else f'{n:.1f}'
+
+def season_sentence(row):
+    """One sentence from a single season line. Missing numbers are left out, never filled in."""
+    if not isinstance(row, dict):
+        return ''
+    year = row.get('season')
+    if isinstance(year, bool) or not isinstance(year, int):
+        return ''
+    label = 'playoffs' if row.get('season_type') == 3 else 'season'
+    bits = []
+    for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+        num = plain_average(row.get(key))
+        if num is not None:
+            bits.append(f'{num} {word}')
+    games = plain_games(row.get('games_played'))
+    if bits:
+        listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ' and ' + bits[-1]
+        sentence = f'In the {year} {label} she averaged {listed}'
+        if games is not None:
+            sentence += f' in {games} games'
+        return sentence + '.'
+    if games is not None:
+        return f'In the {year} {label} she played {games} games.'
+    return ''
+
+def answer_summary(profile):
+    """One or two plain sentences under the player name. Only facts present on the profile."""
+    p = profile.get('player') or {}
+    name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
+    fields = bio_fields(p)
+    active = profile.get('active_in_provider_feed') is True
+    team = profile.get('current_team') if active and isinstance(profile.get('current_team'), dict) else None
+    team_name = ((team or {}).get('full_name') or (team or {}).get('name') or '').strip()
+    pos = POSITION_WORDS.get(fields.get('position') or '', '')
+    if name and active and pos and team_name:
+        lead = f'{name} is a {pos} for the {team_name}.'
+    elif name and active and team_name:
+        lead = f'{name} plays for the {team_name}.'
+    elif name and active and pos:
+        lead = f'{name} is a {pos}.'
+    elif name and pos:
+        lead = f'{name} is a {pos} and is not on a current roster.'
+    elif name and not active:
+        lead = f'{name} is not on a current roster.'
+    elif name:
+        lead = f'{name} plays in the WNBA.'
+    else:
+        lead = ''
+    stats = season_sentence(headline(profile))
+    return ' '.join(part for part in (lead, stats) if part)
 
 def headline(profile):
     rows = profile.get('season_stats',[])
@@ -335,17 +420,24 @@ def profile_page(profile, root=None, linking=None):
     timeline=''.join(timeline_rows)
     history=f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams by season</h2><p class="muted small">The team she played for in each season. This is not every roster move.</p><ul class="timeline">{timeline}</ul></section>' if timeline else ''
     teammates=teammates_html(profile, linking, budget) if linking else ''
+    summary=answer_summary(profile)
+    summary_html=f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
+    day=stats_day(profile)
+    updated_html=f'<p class="stats-updated">Stats updated {esc(long_date(day))}. {esc(STATS_SOURCE)}</p>' if day else f'<p class="stats-updated">{esc(STATS_SOURCE)}</p>'
     checked=timestamp(profile.get('checked_at'))
     latest=profile.get('recent_completed_games',[])
     latest_label=timestamp(max(g['date'] for g in latest),True) if latest else None
     last_game=f'<p>Most recent completed game: <b>{esc(latest_label)}</b>.</p>' if latest_label else ''
     nav='<a href="#overview">Overview</a>'+('<a href="#stats">Stats</a>' if stats else '')+('<a href="#games">Game log</a>' if latest else '')+('<a href="#teams">Teams</a>' if timeline else '')+('<a href="#teammates">Teammates</a>' if teammates else '')+'<a href="#sources">Sources</a>'
-    hero=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
+    hero=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1>{summary_html}{updated_html}<p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
     faq_html, faq_entity = faq_section(profile, root)
     sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json" target="_blank" rel="noopener">View player data</a></details>'''
     body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}{teammates}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/" target="_blank" rel="noopener">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/" target="_blank" rel="noopener">Browse players →</a></section>'
     route=f'/wnba/{slug}/'
-    structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, {'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
+    webpage={'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}
+    if day:
+        webpage['dateModified']=day.isoformat()
+    structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, webpage, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
     if faq_entity:
         structured['@graph'].append(faq_entity)
     return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured,has_standings(root))
