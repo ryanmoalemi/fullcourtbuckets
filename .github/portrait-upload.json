@@ -1,14 +1,6 @@
 {
   "request_id": "750-3b1b696e6981-upload-20260929T0622Z",
-  "player_id": 750,
-  "player_name": "Aaliyah Nye",
   "slug": "aaliyah-nye",
-  "approved": true,
-  "sha256": "3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2",
-  "bytes": 1692005,
-  "dimensions": [
-    1254,
-    1254
-  ],
-  "repository_path": "portrait-handoff/750-aaliyah-nye-3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2.png"
+  "status": "uploaded_pending_live_verification",
+  "sha256": "3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2"
 }
