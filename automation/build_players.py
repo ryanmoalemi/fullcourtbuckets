@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 import internal_links as links
 import site_nav
+import team_names
 from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
@@ -75,7 +76,10 @@ def timestamp(raw, short=False):
         return 'Not listed'
 
 def tname(team):
-    return (team or {}).get('full_name') or (team or {}).get('name') or 'Team not listed'
+    raw = ((team or {}).get('full_name') or (team or {}).get('name') or '').strip()
+    if not raw:
+        return 'Team not listed'
+    return team_names.public_name(raw)
 
 def team_change_html(profile, linking=None, budget=None):
     """Newest-first sentences. The feed does not say trade, signing, or waiver."""
@@ -178,7 +182,7 @@ def answer_summary(profile):
     fields = bio_fields(p)
     active = profile.get('active_in_provider_feed') is True
     team = profile.get('current_team') if active and isinstance(profile.get('current_team'), dict) else None
-    team_name = ((team or {}).get('full_name') or (team or {}).get('name') or '').strip()
+    team_name = team_names.public_name(((team or {}).get('full_name') or (team or {}).get('name') or '').strip())
     pos = POSITION_WORDS.get(fields.get('position') or '', '')
     if name and active and pos and team_name:
         lead = f'{name} is a {pos} for the {team_name}.'

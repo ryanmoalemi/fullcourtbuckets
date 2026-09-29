@@ -41,6 +41,16 @@ class TeamClient(FakeClient):
         return super().all(endpoint, params)
 
 class Tests(unittest.TestCase):
+    def test_expansion_teams_keep_city_in_the_stored_name(self):
+        fire = s.team({"id": 31, "full_name": "Fire", "abbreviation": "POR", "city": "", "name": "Fire"})
+        tempo = s.team({"id": 30, "full_name": "Tempo", "abbreviation": "TOR", "city": "", "name": "Tempo"})
+        self.assertEqual(fire["full_name"], "Portland Fire")
+        self.assertEqual(fire["name"], "Fire")
+        self.assertEqual(fire["city"], "Portland")
+        self.assertEqual(tempo["full_name"], "Toronto Tempo")
+        self.assertEqual(tempo["city"], "Toronto")
+        self.assertEqual(s.team({"id": 1, "full_name": "Example Team"})["full_name"], "Example Team")
+
     def test_missing_key(self):
         with self.assertRaises(s.SyncError): s.Client('')
     def test_missing_is_not_zero(self): self.assertIsNone(s.number(None))

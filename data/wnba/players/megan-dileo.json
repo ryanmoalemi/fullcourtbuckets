@@ -17,9 +17,9 @@
     "college": null,
     "team": {
       "id": 31,
-      "full_name": "Fire",
+      "full_name": "Portland Fire",
       "abbreviation": "POR",
-      "city": "",
+      "city": "Portland",
       "name": "Fire",
       "conference": null
     }
@@ -28,9 +28,9 @@
   "active_in_provider_feed": true,
   "current_team": {
     "id": 31,
-    "full_name": "Fire",
+    "full_name": "Portland Fire",
     "abbreviation": "POR",
-    "city": "",
+    "city": "Portland",
     "name": "Fire",
     "conference": null
   },
@@ -41,9 +41,9 @@
       "season_type": 2,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -73,9 +73,9 @@
       "season_type": 3,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -365,17 +365,17 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
       "home_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -405,9 +405,9 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -421,9 +421,9 @@
       },
       "visitor_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -445,9 +445,9 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -461,9 +461,9 @@
       },
       "visitor_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -485,17 +485,17 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
       "home_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -525,17 +525,17 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
       "home_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -565,9 +565,9 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -581,9 +581,9 @@
       },
       "visitor_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -605,9 +605,9 @@
       "postseason": false,
       "team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -621,9 +621,9 @@
       },
       "visitor_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },

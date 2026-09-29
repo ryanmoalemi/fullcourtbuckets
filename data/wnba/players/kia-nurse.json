@@ -17,9 +17,9 @@
     "college": null,
     "team": {
       "id": 30,
-      "full_name": "Tempo",
+      "full_name": "Toronto Tempo",
       "abbreviation": "TOR",
-      "city": "",
+      "city": "Toronto",
       "name": "Tempo",
       "conference": null
     }
@@ -28,9 +28,9 @@
   "active_in_provider_feed": true,
   "current_team": {
     "id": 30,
-    "full_name": "Tempo",
+    "full_name": "Toronto Tempo",
     "abbreviation": "TOR",
-    "city": "",
+    "city": "Toronto",
     "name": "Tempo",
     "conference": null
   },
@@ -41,9 +41,9 @@
       "season_type": 2,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -73,9 +73,9 @@
       "season_type": 3,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -365,9 +365,9 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -381,9 +381,9 @@
       },
       "visitor_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -405,9 +405,9 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -421,9 +421,9 @@
       },
       "visitor_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -445,17 +445,17 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
       "home_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -485,17 +485,17 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
       "home_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -525,9 +525,9 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -541,9 +541,9 @@
       },
       "visitor_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -565,9 +565,9 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -581,9 +581,9 @@
       },
       "visitor_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -605,9 +605,9 @@
       "postseason": false,
       "team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },
@@ -621,9 +621,9 @@
       },
       "visitor_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },

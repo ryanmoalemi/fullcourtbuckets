@@ -125,9 +125,9 @@
       },
       "home_team": {
         "id": 30,
-        "full_name": "Tempo",
+        "full_name": "Toronto Tempo",
         "abbreviation": "TOR",
-        "city": "",
+        "city": "Toronto",
         "name": "Tempo",
         "conference": null
       },

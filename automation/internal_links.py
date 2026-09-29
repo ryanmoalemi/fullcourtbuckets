@@ -15,6 +15,7 @@ import re
 from zoneinfo import ZoneInfo
 
 from link_graph import file_for_url, normalize_href
+import team_names
 
 MAX_PLAYER_LINKS = 8
 AMBIGUOUS_NICKNAMES = {
@@ -60,6 +61,7 @@ def catalog_from_index(index: dict) -> dict:
         if not isinstance(team, dict):
             continue
         tid = team.get('id')
+        team = team_names.apply(team)
         full = str(team.get('full_name') or '').strip()
         if isinstance(tid, bool) or not isinstance(tid, int) or not full:
             continue
@@ -70,7 +72,7 @@ def catalog_from_index(index: dict) -> dict:
                 'full_name': full,
                 'name': str(team.get('name') or full).strip() or full,
                 'conference': str(team.get('conference') or '').strip(),
-                'slug': team_slug(full),
+                'slug': team_names.pinned_slug(tid) or team_slug(full),
                 'players': [],
             }
             teams[tid] = slot
@@ -90,6 +92,10 @@ def catalog_from_index(index: dict) -> dict:
     by_name = {slot['full_name']: slot for slot in teams.values()}
     if len(by_name) != len(teams):
         raise ValueError('Two current teams share a full name.')
+    for slot in teams.values():
+        nick = slot['name']
+        if nick and nick.casefold() != slot['full_name'].casefold():
+            by_name.setdefault(nick, slot)
     return {'by_id': teams, 'by_name': by_name}
 
 
@@ -387,7 +393,13 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
 
 def apply_standings(text: str, linking: dict, standings: dict) -> str:
     text = ensure_footer_hubs(text)
-    by_name = {slot['full_name']: team_href(slot) for slot in linking['by_id'].values()}
+    by_name = {}
+    for slot in linking['by_id'].values():
+        href = team_href(slot)
+        by_name[slot['full_name']] = href
+        nick = slot.get('name') or ''
+        if nick and nick.casefold() != slot['full_name'].casefold():
+            by_name.setdefault(nick, href)
     payload = json.dumps(by_name, ensure_ascii=False, separators=(',', ':'))
     script = (
         '/* fcb-team-pages:start */\nconst teamPages = ' + payload + ';\n'
@@ -418,8 +430,9 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
         text = text.replace(old_span, new_span)
 
     def row(team, wide):
-        name = str(team.get('name') or '')
-        href = by_name.get(name)
+        raw = str(team.get('name') or '')
+        name = team_names.public_name(raw)
+        href = by_name.get(raw) or by_name.get(name)
         label = f'<a class="team-name" href="{esc(href)}" target="_blank" rel="noopener">{esc(name)}</a>' if href else f'<span class="team-name">{esc(name)}</span>'
         cells = (
             f'<td><span class="rank">{esc(team.get("rank"))}</span></td>'

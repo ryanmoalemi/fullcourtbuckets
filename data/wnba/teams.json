@@ -251,9 +251,9 @@
     },
     {
       "id": 31,
-      "full_name": "Fire",
+      "full_name": "Portland Fire",
       "abbreviation": "POR",
-      "city": "",
+      "city": "Portland",
       "name": "Fire",
       "conference": null
     },
@@ -267,9 +267,9 @@
     },
     {
       "id": 30,
-      "full_name": "Tempo",
+      "full_name": "Toronto Tempo",
       "abbreviation": "TOR",
-      "city": "",
+      "city": "Toronto",
       "name": "Tempo",
       "conference": null
     },

@@ -22,6 +22,8 @@ import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
 
+import team_names
+
 BASE = "https://api.balldontlie.io/wnba/v1/"
 SOURCE = "https://wnba.balldontlie.io/"
 FIRST_YEAR = 2008
@@ -140,7 +142,7 @@ def team(value):
         return None
     if not isinstance(value, dict):
         raise SyncError("Invalid team object.")
-    return {k: value.get(k) for k in ("id", "full_name", "abbreviation", "city", "name", "conference")}
+    return team_names.apply({k: value.get(k) for k in ("id", "full_name", "abbreviation", "city", "name", "conference")})
 
 def player(value):
     pid = identifier(value.get("id"))

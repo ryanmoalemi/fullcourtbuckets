@@ -261,9 +261,9 @@
       },
       "home_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -349,9 +349,9 @@
       },
       "visitor_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },
@@ -381,9 +381,9 @@
       },
       "home_team": {
         "id": 31,
-        "full_name": "Fire",
+        "full_name": "Portland Fire",
         "abbreviation": "POR",
-        "city": "",
+        "city": "Portland",
         "name": "Fire",
         "conference": null
       },

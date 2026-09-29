@@ -65,6 +65,24 @@ class GraphTests(unittest.TestCase):
             self.assertEqual(reasons['/404.html'], '404')
             self.assertEqual(reasons['/gone/'], 'redirect')
 
+    def test_expansion_team_pages_keep_their_addresses(self):
+        index = {'players': [
+            {'id': 1, 'slug': 'one', 'name': 'One Player', 'active_in_provider_feed': True,
+             'current_team': {'id': 31, 'full_name': 'Fire', 'name': 'Fire', 'city': ''}},
+            {'id': 2, 'slug': 'two', 'name': 'Two Player', 'active_in_provider_feed': True,
+             'current_team': {'id': 30, 'full_name': 'Tempo', 'name': 'Tempo', 'city': ''}},
+        ]}
+        linking = links.catalog_from_index(index)
+        fire = linking['by_id'][31]
+        tempo = linking['by_id'][30]
+        self.assertEqual(fire['full_name'], 'Portland Fire')
+        self.assertEqual(fire['slug'], 'fire')
+        self.assertEqual(links.team_href(fire), '/wnba/teams/fire/')
+        self.assertEqual(tempo['full_name'], 'Toronto Tempo')
+        self.assertEqual(tempo['slug'], 'tempo')
+        self.assertIs(linking['by_name']['Fire'], fire)
+        self.assertIs(linking['by_name']['Portland Fire'], fire)
+
     def test_normalize_internal_urls(self):
         self.assertEqual(link_graph.normalize_href('https://fullcourtbuckets.com/wnba/aja-wilson/', '/'), '/wnba/aja-wilson/')
         self.assertEqual(link_graph.normalize_href('/standings/#top', '/'), '/standings/')
