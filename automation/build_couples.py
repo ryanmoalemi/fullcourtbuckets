@@ -283,6 +283,7 @@ def credit_author(commons_artist: str, data_author: str) -> str:
     if data and data.casefold() in artist.casefold():
         return data
     artist = re.sub(r'^File:[^:]+:\s*', '', artist)
+    artist = re.sub(r'\s+derivative work:', '; derivative work:', artist, count=1)
     return artist or data
 
 
