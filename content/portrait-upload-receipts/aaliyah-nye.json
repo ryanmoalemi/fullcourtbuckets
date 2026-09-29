@@ -11,10 +11,30 @@
     1254
   ],
   "repository_path": "portrait-handoff/750-aaliyah-nye-3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2.png",
-  "status": "uploaded_pending_live_verification",
+  "status": "live_verified",
   "path": "images/players/aaliyah-nye/portrait.png",
   "original_bytes_preserved": true,
   "source": "repository_file",
   "github_master_path": "portrait-masters/750-aaliyah-nye-3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2.png",
-  "github_blob_sha": "4e0b67e3aad99bfd43cb8e0e0917ccd94ac6fa3f"
+  "github_blob_sha": "4e0b67e3aad99bfd43cb8e0e0917ccd94ac6fa3f",
+  "live_verified": true,
+  "upload_run_id": 36530791986,
+  "publication_run_id": 36531044141,
+  "publication_commit": "f775e6e296f9a83b43755dff6bffb565810baacf",
+  "verified_url": "https://fullcourtbuckets.com/wnba/aaliyah-nye/?v=3b1b696e6981",
+  "live_verification": {
+    "status": "passed",
+    "current_src": "https://fullcourtbuckets.com/images/players/aaliyah-nye/portrait.png?v=3b1b696e6981",
+    "natural_dimensions": [
+      1254,
+      1254
+    ],
+    "public_sha256": "3b1b696e6981b1238cf5c07c769712b408e283993cd7f98f4fc8e3f1f7687fd2",
+    "public_bytes": 1692005,
+    "canonical": "https://fullcourtbuckets.com/wnba/aaliyah-nye/",
+    "http_status_page": 200,
+    "http_status_png": 200,
+    "has_player_portrait": true,
+    "cache_bust": "3b1b696e6981"
+  }
 }
