@@ -1,0 +1,41 @@
+/* Shared main menu. Links are in the HTML. This file only shows and hides them. */
+nav.site-nav{display:flex;align-items:center;justify-content:flex-end;flex:1 1 auto;min-width:0;margin:0;position:static}
+nav.site-nav ul{list-style:none;margin:0;padding:0}
+nav.site-nav a{color:#f5f3ef;font-family:"Barlow","Arial Narrow",Impact,sans-serif;font-weight:700;font-size:15px;line-height:1.2;text-decoration:none;margin:0;display:flex;align-items:center;min-height:44px;padding:10px 12px;box-sizing:border-box}
+nav.site-nav a:hover{color:#ff9800}
+nav.site-nav a:focus-visible,nav.site-nav button:focus-visible{outline:2px solid #ff9800;outline-offset:3px}
+nav.site-nav a[aria-current="page"]{color:#ff9800;box-shadow:inset 0 -2px 0 #ff9800}
+nav.site-nav .site-nav-toggle{display:none;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;margin:0;padding:10px 12px;border:1px solid #2b2930;border-radius:3px;background:#0c0c10;color:#f5f3ef;font-family:"Barlow","Arial Narrow",Impact,sans-serif;font-weight:700;font-size:15px;line-height:1;cursor:pointer}
+nav.site-nav .site-nav-bars{display:block;width:18px;height:2px;background:#f5f3ef;position:relative}
+nav.site-nav .site-nav-bars:before,nav.site-nav .site-nav-bars:after{content:"";position:absolute;left:0;width:18px;height:2px;background:#f5f3ef}
+nav.site-nav .site-nav-bars:before{top:-6px}
+nav.site-nav .site-nav-bars:after{top:6px}
+.shell.nav{flex-wrap:wrap}
+header,.site-header{z-index:40}
+.site-header{position:relative}
+@media (min-width:901px){
+ nav.site-nav .site-nav-toggle{display:none}
+ nav.site-nav>ul{display:flex;align-items:center;gap:2px}
+ nav.site-nav>ul>li{position:relative}
+ nav.site-nav>ul>li>a{white-space:nowrap}
+ nav.site-nav li ul{display:block;position:absolute;top:100%;left:0;min-width:260px;max-width:min(360px,80vw);max-height:70vh;overflow:auto;background:#0c0c10;border:1px solid #2b2930;box-shadow:0 12px 28px rgba(0,0,0,.45);z-index:60;visibility:hidden;opacity:0;pointer-events:none}
+ nav.site-nav li:hover>ul,nav.site-nav li:focus-within>ul{visibility:visible;opacity:1;pointer-events:auto}
+ nav.site-nav>ul>li:nth-last-child(-n+2)>ul{left:auto;right:0}
+ nav.site-nav li li a{min-height:44px;padding:10px 14px}
+}
+@media (max-width:1180px) and (min-width:901px){
+ .shell.nav .brand img{width:220px}
+ nav.site-nav a{padding:10px 8px;font-size:14px}
+}
+@media (max-width:900px){
+ nav.site-nav{display:block;width:auto;margin-left:auto;flex:0 0 auto;position:static}
+ nav.site-nav .site-nav-toggle{display:inline-flex}
+ nav.site-nav>ul{position:absolute;left:0;right:0;top:100%;width:auto;max-height:calc(100vh - 72px);overflow-x:hidden;overflow-y:auto;background:#0c0c10;border-bottom:1px solid #2b2930;z-index:60;box-sizing:border-box}
+ html.site-nav-ready nav.site-nav:not(.is-open)>ul{display:none}
+ nav.site-nav a{width:100%;white-space:normal;overflow-wrap:anywhere}
+ nav.site-nav li ul{position:static;display:block;visibility:visible;opacity:1;pointer-events:auto;min-width:0;max-height:none;overflow:visible;background:transparent;border:0;box-shadow:none}
+ nav.site-nav li li a{padding-left:22px}
+}
+@media (prefers-reduced-motion:reduce){
+ nav.site-nav li ul{transition:none}
+}

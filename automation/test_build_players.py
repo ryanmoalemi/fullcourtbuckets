@@ -50,7 +50,7 @@ class BuildTests(unittest.TestCase):
             before={str(p):p.read_bytes() for p in root.rglob('*') if p.is_file()}
             b.build(root);after={str(p):p.read_bytes() for p in root.rglob('*') if p.is_file()}
             self.assertEqual(before,after)
-            homepage=(root/'index.html').read_text();self.assertEqual(homepage.count('href="/wnba/"'),1);self.assertIn('Keep the homepage.',homepage)
+            homepage=(root/'index.html').read_text();self.assertIn('aria-label="Main"',homepage);self.assertIn('Keep the homepage.',homepage);self.assertIn('href="/wnba/"',homepage)
             output=(root/'wnba/example-player/index.html').read_text();self.assertEqual(output.count('<h1 '),1)
             self.assertIn('<td>12.3</td>',output);self.assertNotIn('BALLDONTLIE_API_KEY',output)
             self.assertEqual(output.count("gtag('config','G-ZJK92LK3XT')"),1)

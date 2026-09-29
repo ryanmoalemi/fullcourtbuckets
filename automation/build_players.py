@@ -13,6 +13,8 @@ import re
 from zoneinfo import ZoneInfo
 
 import internal_links as links
+import site_nav
+from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
 GA4_TAG = (
@@ -230,8 +232,11 @@ def validate(profile, slug):
         if game.get('player_id')!=p['id']:
             raise BuildError('Game record belongs to a different player.')
 
-def header():
-    return '''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" target="_blank" rel="noopener" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a><nav aria-label="Main navigation"><a href="/#latest" target="_blank" rel="noopener">News</a><a href="/wnba/" class="selected" target="_blank" rel="noopener">Players</a><a href="/standings/" target="_blank" rel="noopener">Standings</a><a href="/fiba-womens-basketball-world-cup-2026/" target="_blank" rel="noopener">World Cup</a></nav></div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
+def header(route='/', menu=None):
+    if menu is None:
+        menu = site_nav.build_menu(Path(__file__).resolve().parents[1])
+    nav = site_nav.render(menu, route)
+    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" target="_blank" rel="noopener" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
 
 def footer(include_standings=True):
     standings='<a href="/standings/" target="_blank" rel="noopener">Standings</a>' if include_standings else ''
@@ -240,10 +245,10 @@ def footer(include_standings=True):
 def has_standings(root):
     return root is None or (Path(root)/'standings'/'index.html').is_file()
 
-def document(title, description, route, body, structured=None, include_standings=True):
+def document(title, description, route, body, structured=None, include_standings=True, menu=None):
     canonical=BASE+route
     schema=json.dumps(structured or {},ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">\n{GA4_TAG}\n{ADSENSE_TAG}\n<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><script type="application/ld+json">{schema}</script><script src="/wnba/assets/players.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{header()}<main id="content" class="wrap">{body}</main>{footer(include_standings)}</body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">\n{GA4_TAG}\n{ADSENSE_TAG}\n<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><script type="application/ld+json">{schema}</script><script src="/assets/site-nav.js" defer></script><script src="/wnba/assets/players.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{header(route, menu)}<main id="content" class="wrap">{body}</main>{footer(include_standings)}</body></html>'''
 
 def stats_table(profile, kind):
     rows=sorted([r for r in profile.get('season_stats',[]) if r['season_type']==kind],key=lambda r:-r['season'])
@@ -369,7 +374,7 @@ def teammates_html(profile, linking, budget):
         f'<p>{sentence}</p><ul class="teammate-list">{items}</ul></section>'
     )
 
-def profile_page(profile, root=None, linking=None):
+def profile_page(profile, root=None, linking=None, menu=None):
     p=profile['player']; name=(str(p.get('first_name') or '')+' '+str(p.get('last_name') or '')).strip()
     slug=profile['slug']; fields=bio_fields(p); active=profile.get('active_in_provider_feed') is True
     team=profile.get('current_team') if active else None
@@ -440,9 +445,9 @@ def profile_page(profile, root=None, linking=None):
     structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, webpage, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
     if faq_entity:
         structured['@graph'].append(faq_entity)
-    return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured,has_standings(root))
+    return document(name+' WNBA Stats, Teams & Player Profile | Full Court Buckets',f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs. Available coverage from 2008 onward.',route,body,structured,has_standings(root),menu)
 
-def directory_page(index, linking=None, include_standings=True):
+def directory_page(index, linking=None, include_standings=True, menu=None):
     entries=index['players']; cards=[]
     for p in sorted(entries,key=lambda p:p['name'].casefold()):
         state='Listed active' if p.get('active_in_provider_feed') else 'Archive profile'
@@ -457,9 +462,9 @@ def directory_page(index, linking=None, include_standings=True):
         )
         team_html=f'<section class="section" id="teams"><p class="eyebrow">Current rosters</p><h2>Teams</h2><ul class="team-index">{items}</ul></section>'
     body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
-    return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings)
+    return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
-def team_page(slot, include_standings=True):
+def team_page(slot, include_standings=True, menu=None):
     name=slot['full_name']
     route=links.team_href(slot)
     conf=f'<p class="muted">{esc(slot["conference"])}.</p>' if slot.get('conference') else ''
@@ -479,7 +484,7 @@ def team_page(slot, include_standings=True):
             {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
-    return document(f'{name} Roster | Full Court Buckets', f'{name} current roster with links to each player profile.', route, body, structured, include_standings)
+    return document(f'{name} Roster | Full Court Buckets', f'{name} current roster with links to each player profile.', route, body, structured, include_standings, menu)
 
 def build(root: Path):
     data=root/'data/wnba'
@@ -488,6 +493,7 @@ def build(root: Path):
     if status.get('status')!='ok' or not index.get('players'):
         raise BuildError('No successful nonempty import is available.')
     linking=links.catalog_from_index(index)
+    menu=site_nav.build_menu(root, site_nav.planned_paths(root, index, linking))
     files={}; ids=set(); slugs=set()
     for entry in index['players']:
         slug=entry.get('slug','')
@@ -498,29 +504,26 @@ def build(root: Path):
         validate(profile,slug)
         if profile['player']['id']!=entry['id']:
             raise BuildError('Profile does not match its directory identity.')
-        page=profile_page(profile, root, linking)
+        page=profile_page(profile, root, linking, menu)
         if page.count('class="inline-link"') > links.MAX_PLAYER_LINKS:
             raise BuildError(f'Too many contextual links on {slug}.')
         files[f'wnba/{slug}/index.html']=page
     include_standings=(root/'standings'/'index.html').is_file()
     for slot in linking['by_id'].values():
-        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings)
-    files['wnba/index.html']=directory_page(index, linking, include_standings)
+        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu)
+    files['wnba/index.html']=directory_page(index, linking, include_standings, menu)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()
+    files['assets/site-nav.css']=site_nav.CSS_TEXT
+    files['assets/site-nav.js']=site_nav.JS_TEXT
     locations=['/wnba/']+[f'/wnba/{slug}/' for slug in sorted(slugs)]
     files['player-sitemap.xml']='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{BASE}{loc}</loc></url>' for loc in locations)+'</urlset>\n'
     homepage=root/'index.html'
     if homepage.exists():
         original=homepage.read_text()
-        text=original
-        match=re.search(r'<nav\b[^>]*>.*?</nav>',text,re.S)
-        if 'Full Court Buckets' not in text or not match:
+        if 'Full Court Buckets' not in original:
             raise BuildError('Homepage safety check failed; not changing navigation.')
-        if not re.search(r'href=[\'\"](?:https://fullcourtbuckets.com)?/wnba/',match.group()):
-            text=text[:match.end()-6]+'<a href="/wnba/" target="_blank" rel="noopener">Players</a>'+text[match.end()-6:]
-        articles=links.load_articles(root)
-        text=links.apply_homepage(text, articles)
+        text=site_nav.install(links.apply_homepage(original, links.load_articles(root)), '/', menu)
         if text != original:
             files['index.html']=text
     phrases=links.article_phrases(index, linking)
@@ -533,14 +536,23 @@ def build(root: Path):
         if not path.is_file():
             continue
         original=path.read_text(encoding='utf-8')
-        updated=links.ensure_footer_hubs(links.link_copy(original, phrases))
+        updated=site_nav.install(links.ensure_footer_hubs(links.link_copy(original, phrases)), f'/{slug}/', menu)
         if updated != original:
             files[relative]=updated
     standings_path=root/'standings'/'index.html'
     standings_data=root/'api'/'wnba-standings'
     if standings_path.is_file() and standings_data.is_file():
         original=standings_path.read_text(encoding='utf-8')
-        updated=links.apply_standings(original, linking, json.loads(standings_data.read_text(encoding='utf-8-sig')))
+        updated=site_nav.install(
+            links.apply_standings(original, linking, json.loads(standings_data.read_text(encoding='utf-8-sig'))),
+            '/standings/',
+            menu,
+        )
+        if updated != original:
+            files['standings/index.html']=updated
+    elif standings_path.is_file():
+        original=standings_path.read_text(encoding='utf-8')
+        updated=site_nav.install(original, '/standings/', menu)
         if updated != original:
             files['standings/index.html']=updated
     for relative in ('about/index.html','contact/index.html','privacy/index.html','terms/index.html'):
@@ -548,9 +560,10 @@ def build(root: Path):
         if not path.is_file():
             continue
         original=path.read_text(encoding='utf-8')
-        updated=links.apply_known_page_links(original, relative)
+        updated=site_nav.install(links.apply_known_page_links(original, relative), page_url(Path(relative)), menu)
         if updated != original:
             files[relative]=updated
+    files.update(site_nav.install_tree(root, menu, set(files)))
     team_urls=sorted(links.team_href(slot) for slot in linking['by_id'].values())
     for name in ('sitemap.xml','pages-sitemap.xml'):
         path=root/name

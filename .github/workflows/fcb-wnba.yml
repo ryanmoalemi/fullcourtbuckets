@@ -148,7 +148,7 @@ jobs:
         run: |
           git config user.name 'Full Court Buckets updater'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml standings/index.html about/index.html contact/index.html privacy/index.html terms/index.html content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json
+          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml standings/index.html about/index.html contact/index.html privacy/index.html terms/index.html 404.html live-article-current.html live-article-final-check.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json
           python -c "import json; print('\n'.join(a['slug']+'/index.html' for a in json.load(open('articles.json'))))" | xargs -d '\n' git add --
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh WNBA data and generated player profiles'

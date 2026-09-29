@@ -1,0 +1,70 @@
+"""The built site must share one main menu. A missing or drifted nav fails."""
+import unittest
+from pathlib import Path
+
+import site_nav
+from link_graph import iter_html, page_url
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def _current_hrefs(nav_html: str) -> list[str]:
+    import re
+    return re.findall(r'<a href="([^"]+)" aria-current="page">', nav_html)
+
+
+class SiteNavTests(unittest.TestCase):
+    def test_menu_uses_real_pages_and_stays_small(self):
+        menu = site_nav.build_menu(ROOT)
+        hrefs = list(site_nav.iter_hrefs(menu))
+        labels = ' '.join(site_nav.iter_labels(menu))
+        self.assertGreaterEqual(len(hrefs), 30)
+        self.assertLessEqual(len(hrefs), 40)
+        self.assertNotIn('\u2014', labels)
+        self.assertNotIn('adu', labels.casefold())
+        self.assertNotIn('accessory dwelling', labels.casefold())
+        for href in hrefs:
+            target = site_nav.page_path(href)
+            self.assertIsNotNone(site_nav.file_for_url(ROOT, target), href)
+        text = site_nav.render(menu, '/__none__')
+        self.assertIn('<nav class="site-nav" aria-label="Main">', text)
+        self.assertIn('<ul id="site-nav-menu">', text)
+        self.assertIn('<li><a href="/wnba/">Players</a>', text)
+        self.assertIn('Player index, A to Z', text)
+        self.assertIn('href="/standings/"', text)
+        self.assertIn('href="/about/"', text)
+        self.assertIn('href="/contact/"', text)
+        self.assertGreaterEqual(text.count('href="/wnba/teams/'), 15)
+        self.assertNotIn('<script', text)
+        self.assertNotIn('createElement', site_nav.JS_TEXT)
+        self.assertNotIn('innerHTML', site_nav.JS_TEXT)
+
+    def test_every_built_page_has_the_same_nav(self):
+        menu = site_nav.build_menu(ROOT)
+        expected = site_nav.normalize(site_nav.render(menu, '/__none__'))
+        pages = list(iter_html(ROOT))
+        self.assertGreater(len(pages), 100)
+        for path in pages:
+            html = path.read_text(encoding='utf-8')
+            found = site_nav.extract_main_nav(html)
+            self.assertEqual(len(found), 1, path)
+            self.assertEqual(site_nav.normalize(found[0]), expected, path)
+            self.assertIn('/assets/site-nav.css', html, path)
+            self.assertIn('/assets/site-nav.js', html, path)
+            current = page_url(path.relative_to(ROOT))
+            marked = _current_hrefs(found[0])
+            for href in site_nav.iter_hrefs(menu):
+                if site_nav.is_current(href, current):
+                    self.assertIn(href, marked, path)
+                else:
+                    self.assertNotIn(href, marked, path)
+
+    def test_checker_rejects_a_missing_or_different_nav(self):
+        menu = site_nav.build_menu(ROOT)
+        expected = site_nav.normalize(site_nav.render(menu, '/__none__'))
+        missing = '<html><head></head><body><p>No menu</p></body></html>'
+        self.assertEqual(site_nav.extract_main_nav(missing), [])
+        drifted = expected.replace('href="/standings/"', 'href="/standings/extra/"', 1)
+        self.assertNotEqual(site_nav.normalize(drifted), expected)
+        sample = site_nav.install('<header><nav><a href="/">Old</a></nav></header></body>', '/', menu)
+        self.assertEqual(site_nav.normalize(site_nav.extract_main_nav(sample)[0]), expected)

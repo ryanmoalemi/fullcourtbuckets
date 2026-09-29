@@ -214,7 +214,8 @@ class AnchorTests(unittest.TestCase):
             self.assertLessEqual(player.count('class="inline-link"'), 8)
             self.assertIn('Second Player', player)
             homepage = (root / 'index.html').read_text(encoding='utf-8')
-            self.assertEqual(homepage.count('href="/wnba/"'), 1)
+            self.assertIn('aria-label="Main"', homepage)
+            self.assertIn('href="/wnba/"', homepage)
             self.assertIn('Keep the homepage.', homepage)
             standings = (root / 'standings' / 'index.html').read_text(encoding='utf-8')
             again = links.apply_standings(
