@@ -55,6 +55,10 @@ class BuildTests(unittest.TestCase):
             self.assertIn('<td>12.3</td>',output);self.assertNotIn('BALLDONTLIE_API_KEY',output)
             self.assertEqual(output.count("gtag('config','G-ZJK92LK3XT')"),1)
             self.assertEqual((root/'wnba/index.html').read_text().count("gtag('config','G-ZJK92LK3XT')"),1)
+            adsense='adsbygoogle.js?client=ca-pub-6621195315204235'
+            self.assertEqual(output.count(adsense),1)
+            self.assertLess(output.index("gtag('config','G-ZJK92LK3XT')"), output.index(adsense))
+            self.assertEqual((root/'wnba/index.html').read_text().count(adsense),1)
             self.assertNotIn('id="faq"',output);self.assertNotIn('FAQPage',output)
     def test_invalid_input_leaves_existing_page(self):
         with tempfile.TemporaryDirectory() as d:
