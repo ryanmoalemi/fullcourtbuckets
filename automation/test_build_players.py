@@ -106,8 +106,20 @@ class BuildTests(unittest.TestCase):
             'imported data', "provider's active-player feed", 'active-player feed',
             'Provider status', 'BALLDONTLIE', 'this dataset', "View this player's imported data",
             'Source snapshot', 'API snapshot',
+            'Automatic news and confirmed transaction feeds are not connected',
+            'Scheduled data updates',
+            'Team-specific lines are preserved when supplied',
+            'That alone does not establish retirement',
+            'Not a complete transaction history',
+            'Archive status is not a retirement designation',
+            'Player ID:',
         ):
             self.assertNotIn(banned, page)
+        self.assertIn('Each season stays with the team she played for that year.', page)
+        self.assertIn('Page status', page)
+        self.assertIn('This profile does not include news stories or a list of trades and signings.', page)
+        self.assertIn('Privacy Policy', page)
+        self.assertIn('Do not sell or share my personal information', page)
         self.assertIn('Current team:', page)
         self.assertIn('Recent games: 2026-08-18 onward.', page)
         self.assertIn('Last updated', page)
@@ -118,6 +130,8 @@ class BuildTests(unittest.TestCase):
         inactive['active_in_provider_feed'] = False
         archive = b.profile_page(inactive)
         self.assertIn('not on a current roster', archive)
+        self.assertIn('The page does not call that retirement or free agency.', archive)
+        self.assertNotIn('That alone does not establish retirement', archive)
         self.assertNotIn('active-player', archive)
         self.assertNotIn('Provider status', archive)
     def test_no_browser_api_key_or_provider_fetch(self):

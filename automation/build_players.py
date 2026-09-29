@@ -41,10 +41,10 @@ def timestamp(raw, short=False):
             date = date.astimezone(ZoneInfo('America/Los_Angeles'))
         return date.strftime('%b %d, %Y' if short else '%b %d, %Y at %I:%M %p PT')
     except (ValueError, TypeError):
-        return 'Not supplied'
+        return 'Not listed'
 
 def tname(team):
-    return (team or {}).get('full_name') or (team or {}).get('name') or 'Team not supplied'
+    return (team or {}).get('full_name') or (team or {}).get('name') or 'Team not listed'
 
 def team_change_html(profile):
     """Newest-first sentences. The feed does not say trade, signing, or waiver."""
@@ -119,10 +119,10 @@ def validate(profile, slug):
             raise BuildError('Game record belongs to a different player.')
 
 def header():
-    return '''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a><nav aria-label="Main navigation"><a href="/#latest">News</a><a href="/wnba/" class="selected">Players</a><a href="/standings/">Standings</a><a href="/fiba-womens-basketball-world-cup-2026/">World Cup</a></nav></div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent coverage. Facts first.</span></div></div>'''
+    return '''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" target="_blank" rel="noopener" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a><nav aria-label="Main navigation"><a href="/#latest" target="_blank" rel="noopener">News</a><a href="/wnba/" class="selected" target="_blank" rel="noopener">Players</a><a href="/standings/" target="_blank" rel="noopener">Standings</a><a href="/fiba-womens-basketball-world-cup-2026/" target="_blank" rel="noopener">World Cup</a></nav></div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent coverage. Facts first.</span></div></div>'''
 
 def footer():
-    return '''<footer class="site-footer"><div class="wrap"><a class="footer-brand" href="/">FULL COURT <b class="gradient">BUCKETS</b></a><p>Independent WNBA coverage. Not affiliated with the WNBA or its teams.</p><a href="/wnba/">Browse player profiles</a></div></footer>'''
+    return '''<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p><p class="footer-links"><a href="/about/" target="_blank" rel="noopener">About</a><a href="/contact/" target="_blank" rel="noopener">Contact</a><a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a><a href="/terms/" target="_blank" rel="noopener">Terms of Use</a><a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a><a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p><p>&copy; 2026 Full Court Buckets</p></div></footer>'''
 
 def document(title, description, route, body, structured=None):
     canonical=BASE+route
@@ -151,15 +151,15 @@ def game_table(profile):
         home=(g.get('home_team') or {}).get('id')
         away=(g.get('visitor_team') or {}).get('id')
         if tid not in (home,away) or tid is None:
-            opponent='Opponent not supplied'; outcome='&mdash;'
+            opponent='Opponent not listed'; outcome='&mdash;'
         else:
             at_home=tid==home
             opponent=('vs. ' if at_home else '@ ')+tname(g.get('visitor_team' if at_home else 'home_team'))
             ours,theirs=(g.get('home_score'),g.get('away_score')) if at_home else (g.get('away_score'),g.get('home_score'))
             outcome=(('W' if ours>theirs else 'L' if ours<theirs else 'T')+f' {ours}–{theirs}') if isinstance(ours,(int,float)) and isinstance(theirs,(int,float)) else '&mdash;'
-        label='Playoffs' if g.get('postseason') is True else 'Regular' if g.get('postseason') is False else 'Not supplied'
+        label='Playoffs' if g.get('postseason') is True else 'Regular' if g.get('postseason') is False else 'Not listed'
         nums=''.join(f'<td>{value(g.get(k),True)}</td>' for k in ('pts','reb','ast','stl','blk','turnover'))
-        rows.append(f'<tr><th scope="row">{esc(timestamp(g.get("date"),True))}</th><td class="team-cell">{esc(opponent)}</td><td>{label}</td><td>{outcome}</td><td>{esc(g.get("minutes") or "Not supplied")}</td>{nums}</tr>')
+        rows.append(f'<tr><th scope="row">{esc(timestamp(g.get("date"),True))}</th><td class="team-cell">{esc(opponent)}</td><td>{label}</td><td>{outcome}</td><td>{esc(g.get("minutes") or "Not listed")}</td>{nums}</tr>')
     return f'''<section id="games" class="section"><p class="eyebrow">Completed games</p><h2>Recent game log</h2><p class="muted small">Recent games: {esc(profile.get('game_log_window_start'))} onward. Dates shown in Pacific time. This is not a complete career game log.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Recent completed game statistics"><table><caption>Regular-season and playoff games are labeled separately.</caption><thead><tr><th scope="col">DATE</th><th scope="col">OPPONENT</th><th scope="col">TYPE</th><th scope="col">RESULT</th><th scope="col">MIN</th><th scope="col">PTS</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">STL</th><th scope="col">BLK</th><th scope="col">TO</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
 
 
@@ -237,7 +237,7 @@ def profile_page(profile, root=None):
     state='Listed active' if active else 'Archive profile'
     position={'G':'Guard','F':'Forward','C':'Center'}.get(fields.get('position'),fields.get('position',''))
     number=fields.get('jersey_number','')
-    note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No combined season line supplied'
+    note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No single season line for the latest year'
     metrics=''.join(f'<div class="metric"><strong>{value((row or {}).get(k))}</strong><span>{label}<small>PER GAME</small></span></div>' for k,label in [('pts','POINTS'),('ast','ASSISTS'),('reb','REBOUNDS')])
     meta=' / '.join(esc(x) for x in [('#'+number) if number else '',position,tname(team) if team else ''] if x)
     details=[('Roster','On the current roster' if active else 'Not on a current roster'),('Records available',span)]
@@ -252,7 +252,7 @@ def profile_page(profile, root=None):
     overview=f'<p>{esc(intro)}</p>'
     if team: overview+=f'<p class="muted">Current team: <strong>{esc(tname(team))}</strong>.</p>'
     overview+=team_change_html(profile)
-    if not active: overview+='<p class="muted">This player is not on a current roster. That alone does not establish retirement or free-agent status.</p>'
+    if not active: overview+='<p class="muted">This player is not on a current roster. The page does not call that retirement or free agency.</p>'
     tablehtml=stats_table(profile,2)+stats_table(profile,3)
     controls=''
     if tablehtml:
@@ -260,22 +260,22 @@ def profile_page(profile, root=None):
         radios=''.join(f'<button type="button" data-kind="{k}" aria-pressed="false">{"Regular season" if k==2 else "Playoffs"}</button>' for k in kinds)
         opts=''.join(f'<option value="{y}">{y}</option>' for y in sorted(years,reverse=True))
         controls=f'<div class="filters js-only"><div class="segmented" role="group" aria-label="Competition">{radios}<button type="button" data-kind="all" aria-pressed="true">Both</button></div><label>Season <select id="season-filter"><option value="all">All seasons</option>{opts}</select></label></div>'
-    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Team-specific lines are preserved when supplied. They are not added to combined lines or presented as complete career totals.</p></section>' if tablehtml else ''
+    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p></section>' if tablehtml else ''
     all_teams=[]
     for r in sorted(stats,key=lambda r:-r['season']):
         item=(r['season'],tname(r.get('team')))
         if item not in all_teams: all_teams.append(item)
     timeline=''.join(f'<li><strong>{year}</strong><span>{esc(team_name)}</span></li>' for year,team_name in all_teams)
-    history=f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams by season</h2><p class="muted small">Team listed for each season. Not a complete transaction history.</p><ul class="timeline">{timeline}</ul></section>' if timeline else ''
+    history=f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams by season</h2><p class="muted small">The team she played for in each season. This is not every roster move.</p><ul class="timeline">{timeline}</ul></section>' if timeline else ''
     checked=timestamp(profile.get('checked_at'))
     latest=profile.get('recent_completed_games',[])
     latest_label=timestamp(max(g['date'] for g in latest),True) if latest else None
     last_game=f'<p>Most recent completed game: <b>{esc(latest_label)}</b>.</p>' if latest_label else ''
     nav='<a href="#overview">Overview</a>'+('<a href="#stats">Stats</a>' if stats else '')+('<a href="#games">Game log</a>' if latest else '')+('<a href="#teams">Teams</a>' if timeline else '')+'<a href="#sources">Sources</a>'
-    hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
+    hero=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">WNBA players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1><p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
     faq_html, faq_entity = faq_section(profile, root)
-    sources=f'''<details class="sources section" id="sources"><summary>Data, sources &amp; coverage notes</summary><p>Season statistics and recent games on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A refresh does not guarantee that every later game or correction is included yet.</p>{last_game}<p>Available coverage begins in 2008. Regular-season and playoff statistics are separate. Career totals and career averages are not calculated from rounded season averages. Missing values are displayed as a dash, never silently converted to zero.</p><p>Some biography fields can be missing or incorrectly formatted. Invalid fields are omitted rather than guessed. Not appearing on a current roster is not proof of retirement. A changed team is not evidence of a particular trade or signing.</p><p>Automatic news and confirmed transaction feeds are not connected. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json">View player data</a></details>'''
-    body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Scheduled data updates</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Daily during the season. Every seven days in the offseason.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
+    sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json" target="_blank" rel="noopener">View player data</a></details>'''
+    body=hero+f'<div class="content-grid"><div><section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>{statshtml}{game_table(profile)}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/" target="_blank" rel="noopener">Explore WNBA players →</a></aside></div>'+sources+(faq_html or '')+'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>Explore the available records from 2008 onward.</p></div><a class="button" href="/wnba/" target="_blank" rel="noopener">Browse players →</a></section>'
     route=f'/wnba/{slug}/'
     structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, {'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'WNBA players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
     if faq_entity:
@@ -288,8 +288,8 @@ def directory_page(index):
         state='Listed active' if p.get('active_in_provider_feed') else 'Archive profile'
         team=tname(p['current_team']) if p.get('current_team') else 'Historical player records'
         query=' '.join([p['name'],team,state]).casefold()
-        cards.append(f'<a class="player-card" href="/wnba/{p["slug"]}/" data-search="{esc(query)}" data-active="{str(bool(p.get("active_in_provider_feed"))).lower()}"><span class="eyebrow">{state}</span><h2>{esc(p["name"])}</h2><p>{esc(team)}</p><span class="small">View profile →</span></a>')
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>WNBA players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. Archive status is not a retirement designation.</p></section><div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
+        cards.append(f'<a class="player-card" href="/wnba/{p["slug"]}/" target="_blank" rel="noopener" data-search="{esc(query)}" data-active="{str(bool(p.get("active_in_provider_feed"))).lower()}"><span class="eyebrow">{state}</span><h2>{esc(p["name"])}</h2><p>{esc(team)}</p><span class="small">View profile →</span></a>')
+    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><span>WNBA players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p><p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section><div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body)
 
 def build(root: Path):
@@ -321,7 +321,7 @@ def build(root: Path):
         if 'Full Court Buckets' not in text or not match:
             raise BuildError('Homepage safety check failed; not changing navigation.')
         if not re.search(r'href=[\'\"](?:https://fullcourtbuckets.com)?/wnba/',match.group()):
-            text=text[:match.end()-6]+'<a href="/wnba/">Players</a>'+text[match.end()-6:]
+            text=text[:match.end()-6]+'<a href="/wnba/" target="_blank" rel="noopener">Players</a>'+text[match.end()-6:]
             files['index.html']=text
     robots=root/'robots.txt'
     robots_text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'
