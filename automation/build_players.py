@@ -20,11 +20,34 @@ GA4_TAG = (
 )
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
+# Deleted from production so the URLs 404. The builder must not recreate them.
+REMOVED_ADU_PATHS = frozenset({
+    'adu-cost.html',
+    'adu-feasibility-studies.html',
+    'adu-financing.html',
+    'adu-garage-conversions.html',
+    'adu-handbook.html',
+    'adu-permitting.html',
+    'adu-rental-income.html',
+    'attached-adus.html',
+    'detached-adus.html',
+    'entitymap.html',
+    'jadus.html',
+    'pre-approved-adu-plans.html',
+    'projects/craftsman-backyard-cottage.html',
+    'projects/rice-street-east-block.html',
+    'projects/rice-street-west-block.html',
+    'san-diego-adus.html',
+})
 COLUMNS = [('games_played','GP'),('min','MIN'),('pts','PTS'),('reb','REB'),('ast','AST'),
            ('stl','STL'),('blk','BLK'),('turnover','TO'),('fg_pct','FG%'),('fg3_pct','3P%'),('ft_pct','FT%')]
 
 class BuildError(RuntimeError):
     pass
+
+def reject_removed_adu(relative, content):
+    if relative in REMOVED_ADU_PATHS or 'sandiegoadubuilder.com' in content:
+        raise BuildError('Refusing to publish removed ADU content: '+relative)
 
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
@@ -333,6 +356,7 @@ def build(root: Path):
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
     for relative,content in files.items():
+        reject_removed_adu(relative, content)
         path=root/relative
         if path.exists() and path.read_text()==content:
             continue
