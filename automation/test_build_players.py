@@ -112,9 +112,9 @@ class BuildTests(unittest.TestCase):
             'That alone does not establish retirement',
             'Not a complete transaction history',
             'Archive status is not a retirement designation',
-            'Player ID:',
         ):
             self.assertNotIn(banned, page)
+        self.assertIn('Player ID: 1.', page)
         self.assertIn('Each season stays with the team she played for that year.', page)
         self.assertIn('Page status', page)
         self.assertIn('This profile does not include news stories or a list of trades and signings.', page)
