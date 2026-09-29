@@ -1,5 +1,33 @@
 # Full Court Buckets: repository working instructions
 
+## Current owner-required portrait source and style standard (2026-09-28)
+
+The owner approved the latest realistic Aaliyah Nye illustration and instructed ChatGPT to find the real source photograph next time, own source selection and quality review, and ALWAYS use the uploaded Cameron Brink example to remember how every illustration should look. This section supersedes conflicting older portrait-art instructions below. It does not restart autonomous publishing, change existing task schedules, or change the current owner/Cursor publication arrangement.
+
+### Mandatory style reference, every time
+
+Use the actual owner-supplied `Cameron Brink EXAMPLE.png` as the visual STYLE reference before every new player illustration, not just a remembered written description. This specific example controls realism, subtle illustrated finish, natural skin texture, lighting, edge treatment, framing, head/shoulder scale and white jersey with black trim. Do not use the previous rejected cartoon/vector versions or substitute a different Cameron image.
+
+Exact reference identification:
+- Conversation attachment: `file_00000000c17081fd8f8c652cab2353b8`.
+- Original filename: `Cameron Brink EXAMPLE.png`.
+- SHA-256: `3d1710770d628376ef4119d8965b26c34ec91c600061cea66fdb3c49b11409c5`.
+- Original bytes: 2,301,344; PNG, 1254 x 1254, RGBA, alpha extrema 0-255, decoded and hashed on 2026-09-28.
+- The attachment was mounted at `/mnt/data/Cameron Brink EXAMPLE.png` for this instruction update. This is a session path, not a permanent Drive or repository asset. A Drive upload attempt returned a file-reference validation error; no durable Drive image copy was established in this update. Do not invent one or describe a different existing Cameron draft as this example. Retrieve the exact attachment or another verified copy with the same hash when required.
+
+Cameron's example is for STYLE ONLY. Never transfer her face, complexion, eye color, hair or facial proportions onto another player.
+
+### Source, generate, review
+
+1. Find ONE clear real photograph of the requested player before generating, without making the owner find it. Prefer a photo attached to a named official WNBA/team/college player profile. Use a user-supplied real photo as the primary source when provided. Confirm the source's caption/player name and official profile ID; do not guess an unknown person's identity from pixels. Save the actual source URL/reference and inspect the photo, not just its search snippet.
+2. Use that player's real photo for likeness and the exact Cameron example for visual style. Additional official photographs may clarify source attribution or visible details, but do not average unrelated faces or delay a clear one-photo task by rebuilding the publication pipeline. One real-photo source replaces the earlier name-only/generic-face generation process.
+3. Generate one player, head and shoulders/upper chest, with realistic proportions and faithful visible features from the source. Preserve complexion, facial structure and hairstyle rather than inventing generic glamour features. Use natural lighting and subtle realistic illustration, NOT heavy comic outlines, flat vector shading or exaggerated/cartoon anatomy.
+4. Keep the standardized plain white basketball top with black trim, genuine transparent background and high-resolution original PNG. No names, text, team/sponsor/league logos, numbers, scenery, halos or poster graphics inside the image. Remove logos from any retained headband. No added jewelry; follow the established no-jewelry standard unless the owner requests otherwise. Keep a little space above the hair and the same compact shoulder crop as the example. Never stretch, upscale a thumbnail or reduce quality for transport.
+5. Check source attribution against the official WNBA/team profile, then review the output's visible features against the actual source and its rendering/framing against the Cameron example. These are separate source-provenance and visual-quality checks, NOT facial recognition or proof of identity. Do not claim that reference photos were inspected or a check passed unless it actually occurred. Reject obvious departures instead of presenting a generic portrait with a player's name.
+6. When generating in chat, include the requested player's NAME in chat text, not in the image, and no filesystem path. Put the name immediately before the image-generation call when an empty final response is required. Show only the requested accepted illustration; do not repeat previously completed players or publish without the currently applicable authorization.
+
+This is a saved art/source procedure, not a guarantee of likeness or copyright clearance. No live player image, template, sports data or publication configuration was changed by this instruction update.
+
 ## Latest portrait authorization
 
 The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliyah Boston), then said: "all 3 are good you can work on your own now". The earlier per-player approval pause is therefore superseded for this rollout. Read `.github/PORTRAIT_AUTOPILOT.md` and `content/portrait-autopilot.json` FIRST. Generate one player at a time, quality-check, publish the original, verify the live page, and save progress without routine owner approval requests. The FCB portrait rollout task is enabled for approximately hourly continuation. Older paused/review-pending records are historical unless the latest owner instruction changes this again. No new paid services, credential changes, account-privilege changes or unrelated website edits are authorized.
