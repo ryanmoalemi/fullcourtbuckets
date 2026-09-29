@@ -8,7 +8,7 @@ The static player-page builder is connected and deployed. The public directory a
 
 ## Safe repository layout
 
-Production: branch `main`, GitHub Pages, fullcourtbuckets.com. Default branch: `master`, containing obsolete unrelated ADU content. Never overwrite main with master, change CNAME, delete unrelated content, or migrate hosting without authorization.
+Production: branch `main`, GitHub Pages, fullcourtbuckets.com. Default branch: `master`, containing obsolete unrelated ADU content. The ADU redirect stubs were deleted from `main` so those URLs 404. Do not restore them, copy them from `master`, or add them to a sitemap. `automation/build_players.py` refuses to publish those paths. Never overwrite main with master, change CNAME, delete unrelated basketball content, or migrate hosting without authorization.
 
 The workflow `.github/workflows/fcb-wnba.yml` exists on both branches. The default-branch scheduled job dispatches main's workflow. If main becomes the default later, its workflow runs directly.
 

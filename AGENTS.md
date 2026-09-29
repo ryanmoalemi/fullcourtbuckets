@@ -36,7 +36,7 @@ The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliy
 
 The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated content. Never merge or deploy it.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. ADU pages and redirect stubs stay off `main`; those URLs should 404.
 
 ## Adding an article
 
