@@ -20,7 +20,7 @@ body{margin:0;color:var(--text);background:linear-gradient(rgba(2,2,2,.93),rgba(
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.shell{width:min(1240px,94vw);margin:auto}
 .utility{background:#000;border-bottom:1px solid #18181b;font-size:11px;font-weight:700;letter-spacing:.7px}
 .utility .shell{min-height:34px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.utility-tag{background:var(--accent);-webkit-background-clip:text;color:transparent}.utility-note{color:#77736e}
+.utility-tag{background:var(--accent);-webkit-background-clip:text;color:transparent}.utility-note{color:#77736e;letter-spacing:.15px;text-align:right}
 header{position:sticky;top:0;z-index:20;background:rgba(3,3,3,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:84px;display:flex;align-items:center;gap:32px}.brand{margin-right:auto}.brand img{width:380px;max-height:112px;object-fit:contain;object-position:left center}
 nav{display:flex;align-items:center;gap:28px}nav a{font-family:"Barlow",sans-serif;font-weight:700;font-size:14px}nav a:hover{color:var(--orange)}
@@ -56,11 +56,11 @@ main{padding:34px 0 80px}.feature-grid{display:grid;grid-template-columns:minmax
 .cta{margin-top:44px;border:1px solid var(--line);padding:34px;background:radial-gradient(circle at 85% 50%,rgba(241,0,145,.18),transparent 18rem),rgba(7,7,9,.95);display:flex;justify-content:space-between;gap:30px;align-items:center}
 .cta h2{margin:0;font:800 34px/1 "Barlow",sans-serif}.cta p{margin:8px 0 0;color:var(--muted);font-size:13px}
 footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;color:#77736e;font-size:11px}.footer-row{display:flex;justify-content:space-between;gap:25px}.footer-brand{color:#d4d0ca;font-weight:800}
-@media(max-width:900px){nav{display:none}.watch-btn.nav-watch{display:none}.feature-grid,.latest-grid{grid-template-columns:1fr}.feature{min-height:480px}.article-card{grid-template-columns:1fr}.article-visual{min-height:210px}.coverage-grid{grid-template-columns:1fr}.cta{display:block}.cta .watch-btn{margin-top:18px;display:inline-flex}.brand img{width:180px}.utility-note{display:none}.footer-row{display:block}.footer-row>*+*{margin-top:8px}}
+@media(max-width:900px){nav{display:none}.watch-btn.nav-watch{display:none}.feature-grid,.latest-grid{grid-template-columns:1fr}.feature{min-height:480px}.article-card{grid-template-columns:1fr}.article-visual{min-height:210px}.coverage-grid{grid-template-columns:1fr}.cta{display:block}.cta .watch-btn{margin-top:18px;display:inline-flex}.brand img{width:180px}.utility .shell{flex-wrap:wrap;justify-content:center;gap:2px 12px;min-height:0;padding:6px 0}.utility-note{display:block;flex-basis:100%;margin-left:0;text-align:center;letter-spacing:.1px;font-size:10px;line-height:1.35;white-space:normal}.footer-row{display:block}.footer-row>*+*{margin-top:8px}}
 .site-footer{background:#020202;border-top:1px solid #222;padding:28px 0 40px;color:#8b8680;font-size:13px}.site-footer .wrap{width:min(1240px,94vw);margin:0 auto}.site-footer p{margin:0 0 10px}.site-footer b{color:#d4d0ca}.site-footer .footer-links a{color:#d4d0ca;margin-right:16px;display:inline-block;margin-bottom:6px}</style>
 </head>
 <body>
-<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Independent coverage. Facts first.</div></div></div>
+<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Built by the WNBA community, for the WNBA community</div></div></div>
 <header><div class="shell nav"><a class="brand" href="/" target="_blank" rel="noopener"><img src="logo.png" alt="Full Court Buckets"></a><nav><a href="/" target="_blank" rel="noopener">News</a><a href="/#latest" target="_blank" rel="noopener">Analysis</a><a href="/wnba/" target="_blank" rel="noopener">Teams</a><a href="/standings/" target="_blank" rel="noopener">Standings</a><a href="/fiba-womens-basketball-world-cup-2026/" target="_blank" rel="noopener">World</a><a href="/wnba/" target="_blank" rel="noopener">Players</a></nav><a class="watch-btn nav-watch" href="#latest" target="_blank" rel="noopener">Latest Stories</a></div></header>
 <div class="ticker"><div class="shell"><div class="ticker-label">Now</div><div class="ticker-text">WNBA playoffs are underway. Game 1 is complete for the Aces, Liberty, Dream and Valkyries.</div></div></div>
 <main class="shell">
