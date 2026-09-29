@@ -53,6 +53,8 @@ class BuildTests(unittest.TestCase):
             homepage=(root/'index.html').read_text();self.assertEqual(homepage.count('href="/wnba/"'),1);self.assertIn('Keep the homepage.',homepage)
             output=(root/'wnba/example-player/index.html').read_text();self.assertEqual(output.count('<h1 '),1)
             self.assertIn('<td>12.3</td>',output);self.assertNotIn('BALLDONTLIE_API_KEY',output)
+            self.assertEqual(output.count("gtag('config','G-ZJK92LK3XT')"),1)
+            self.assertEqual((root/'wnba/index.html').read_text().count("gtag('config','G-ZJK92LK3XT')"),1)
             self.assertNotIn('id="faq"',output);self.assertNotIn('FAQPage',output)
     def test_invalid_input_leaves_existing_page(self):
         with tempfile.TemporaryDirectory() as d:
