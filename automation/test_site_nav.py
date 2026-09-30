@@ -1,4 +1,5 @@
 """The built site must share one main menu. A missing or drifted nav fails."""
+import re
 import unittest
 from pathlib import Path
 
@@ -88,3 +89,34 @@ class SiteNavTests(unittest.TestCase):
         bare = '<html><body><p>No footer</p></body></html>'
         self.assertEqual(site_nav.FOOTER_RE.findall(bare), [])
         self.assertIn(site_nav.FOOTER_HTML, site_nav.install_footer(bare))
+
+    def test_footer_uses_shared_css_and_chrome_links_stay_in_page(self):
+        css_path = ROOT / 'assets' / 'site-nav.css'
+        css = css_path.read_text(encoding='utf-8')
+        self.assertEqual(css, site_nav.CSS_TEXT)
+        self.assertIn('.site-footer .footer-links{display:flex;flex-wrap:wrap', css)
+        self.assertIn('column-gap:16px', css)
+        self.assertIn('color:#d4d0ca', css)
+        self.assertIn('display:inline-block', css)
+        self.assertIn('min-height:44px', css)
+        self.assertIn('.site-footer .footer-links a:hover{color:#ff9800}', css)
+        menu = site_nav.render(site_nav.build_menu(ROOT), '/news/')
+        self.assertNotIn('target="_blank"', menu)
+        self.assertNotIn('target="_blank"', site_nav.FOOTER_HTML)
+        self.assertNotIn('target="_blank"', site_nav.footer_html(False))
+        pages = [path for path in iter_html(ROOT) if 'http-equiv="refresh"' not in path.read_text(encoding='utf-8').lower()]
+        self.assertGreater(len(pages), 100)
+        offenders = []
+        for path in pages:
+            html = path.read_text(encoding='utf-8')
+            rel = path.relative_to(ROOT).as_posix()
+            if 'class="footer-links"' in html and 'href="/assets/site-nav.css"' not in html:
+                offenders.append(rel + ' missing /assets/site-nav.css')
+            for match in site_nav._CHROME_REGION_RE.finditer(html):
+                for tag in site_nav._ANCHOR_RE.findall(match.group(0)):
+                    href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
+                    if href and not site_nav._is_internal_href(href.group(2)):
+                        continue
+                    if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
+                        offenders.append(f'{rel} {tag[:160]}')
+        self.assertEqual(offenders, [])
