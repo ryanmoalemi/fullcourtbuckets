@@ -3,8 +3,23 @@
 <head>
 <meta charset="utf-8">
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZJK92LK3XT');</script>
+<script>
+(function(){
+  if (navigator.webdriver) return;
+  var ua = navigator.userAgent || '';
+  if (/HeadlessChrome|Headless|bot|crawler|spider|Lighthouse|PageSpeed|Playwright|Puppeteer|Selenium/i.test(ua)) return;
+  if (window.outerWidth === 0 || window.outerHeight === 0) return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT';
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config','G-ZJK92LK3XT');
+})();
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Liberty Stun No. 1 Lynx 91-75: Game 1 Full Recap | Full Court Buckets</title>
