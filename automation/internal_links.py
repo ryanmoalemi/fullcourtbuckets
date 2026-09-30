@@ -615,6 +615,25 @@ def article_absolute(article: dict) -> str:
     return BASE + article_href(article)
 
 
+def team_news_html(root: Path, team_slug: str) -> str:
+    """Newest stories tagged for this team. Empty when the team has none."""
+    items = []
+    for article in _ordered_articles(load_articles(root)):
+        teams = article.get('teams') or []
+        if team_slug not in teams:
+            continue
+        title = str(article.get('title') or '').strip()
+        if not title:
+            continue
+        items.append('<li>' + inline_link(title, article_href(article)) + '</li>')
+    if not items:
+        return ''
+    return (
+        '<section class="section" id="team-news"><p class="eyebrow">News</p><h2>Stories</h2>'
+        '<ul class="teammate-list">' + ''.join(items) + '</ul></section>'
+    )
+
+
 def is_redirect_html(text: str) -> bool:
     lowered = text.lower()
     return 'http-equiv="refresh"' in lowered or "http-equiv='refresh'" in lowered

@@ -1,5 +1,29 @@
 [
   {
+    "slug": "fever-aces-game-2-recap",
+    "url": "/news/fever-aces-game-2-recap/",
+    "title": "Clark Hits Back-to-Back Threes, Fever Even Series with Aces",
+    "description": "Caitlin Clark scored 27 points with 15 assists and Aliyah Boston had 22 as the Fever beat the Aces 99-89 to tie the series 1-1.",
+    "category": "WNBA Playoffs",
+    "date": "2026-09-30",
+    "image": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.jpg",
+    "imageAlt": "Caitlin Clark of the Indiana Fever dribbling in a white jersey."
+  },
+  {
+    "slug": "wnba-expansion-teams",
+    "url": "/news/wnba-expansion-teams/",
+    "title": "WNBA Expansion Teams 2026: Portland Fire and Toronto Tempo",
+    "description": "The WNBA has 15 teams in 2026. Here's how the Portland Fire and Toronto Tempo were built, how their first seasons went, and which new WNBA teams come next.",
+    "category": "WNBA",
+    "date": "2026-09-30",
+    "image": "/images/articles/wnba-expansion-teams/tempo-aces-vancouver.jpg",
+    "imageAlt": "Toronto Tempo players on court against the Las Vegas Aces in Vancouver.",
+    "teams": [
+      "portland-fire",
+      "toronto-tempo"
+    ]
+  },
+  {
     "slug": "aces-fever-game-1-aja-wilson-38",
     "url": "/news/aces-fever-game-1-aja-wilson-38/",
     "title": "A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1",
