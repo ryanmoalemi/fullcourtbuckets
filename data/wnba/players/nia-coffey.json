@@ -2,7 +2,8 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-29T00:02:44+00:00",
+  "checked_at": "2026-09-30T11:27:57+00:00",
+  "stats_updated_at": "2026-09-30T11:27:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -79,25 +80,25 @@
         "name": "Lynx",
         "conference": "Western Conference"
       },
-      "games_played": 1,
-      "min": 19.0,
-      "fgm": 6.0,
+      "games_played": 2,
+      "min": 21.5,
+      "fgm": 4.5,
       "fga": 7.0,
-      "fg_pct": 85.7,
-      "fg3m": 4.0,
-      "fg3a": 5.0,
-      "fg3_pct": 80.0,
-      "ftm": 0.0,
-      "fta": 1.0,
-      "ft_pct": 0.0,
+      "fg_pct": 64.3,
+      "fg3m": 2.5,
+      "fg3a": 4.5,
+      "fg3_pct": 55.6,
+      "ftm": 1.5,
+      "fta": 2.0,
+      "ft_pct": 75.0,
       "oreb": null,
       "dreb": null,
-      "reb": 1.0,
-      "ast": 0.0,
-      "stl": 0.0,
+      "reb": 1.5,
+      "ast": 1.0,
+      "stl": 0.5,
       "blk": 1.0,
-      "turnover": 0.0,
-      "pts": 16.0
+      "turnover": 1.0,
+      "pts": 13.0
     },
     {
       "player_id": 487,
@@ -390,6 +391,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 1392671,
+      "player_id": 487,
+      "date": "2026-09-30T00:30:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_score": 87,
+      "away_score": 71,
+      "minutes": "24",
+      "pts": 10.0,
+      "ast": 2.0,
+      "reb": 2.0,
+      "stl": 1.0,
+      "blk": 1.0,
+      "turnover": 2.0
+    },
+    {
       "game_id": 1392662,
       "player_id": 487,
       "date": "2026-09-27T18:00:00.000Z",
@@ -628,49 +669,9 @@
       "stl": 1.0,
       "blk": 0.0,
       "turnover": 0.0
-    },
-    {
-      "game_id": 25035,
-      "player_id": 487,
-      "date": "2026-08-25T00:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
-      },
-      "home_score": 66,
-      "away_score": 80,
-      "minutes": "15",
-      "pts": 5.0,
-      "ast": 0.0,
-      "reb": 3.0,
-      "stl": 0.0,
-      "blk": 2.0,
-      "turnover": 3.0
     }
   ],
-  "game_log_window_start": "2026-08-24",
+  "game_log_window_start": "2026-08-26",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

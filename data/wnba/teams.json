@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-29T00:02:44+00:00",
+  "checked_at": "2026-09-30T11:27:57+00:00",
   "teams": [
     {
       "id": 34,
@@ -186,22 +186,6 @@
       "conference": null
     },
     {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
-      "conference": "Western Conference"
-    },
-    {
       "id": 3,
       "full_name": "Indiana Fever",
       "abbreviation": "IND",
@@ -272,6 +256,22 @@
       "city": "Toronto",
       "name": "Tempo",
       "conference": null
+    },
+    {
+      "id": 11,
+      "full_name": "Dallas Wings",
+      "abbreviation": "DAL",
+      "city": "Dallas",
+      "name": "Wings",
+      "conference": "Western Conference"
+    },
+    {
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
     },
     {
       "id": 5,

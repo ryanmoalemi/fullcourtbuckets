@@ -2,7 +2,8 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-29T00:02:44+00:00",
+  "checked_at": "2026-09-30T11:27:57+00:00",
+  "stats_updated_at": "2026-09-30T11:27:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -79,25 +80,25 @@
         "name": "Liberty",
         "conference": "Eastern Conference"
       },
-      "games_played": 1,
-      "min": 34.0,
-      "fgm": 6.0,
-      "fga": 7.0,
-      "fg_pct": 85.7,
-      "fg3m": 4.0,
-      "fg3a": 5.0,
-      "fg3_pct": 80.0,
-      "ftm": 0.0,
-      "fta": 0.0,
-      "ft_pct": 0.0,
+      "games_played": 2,
+      "min": 31.5,
+      "fgm": 4.0,
+      "fga": 6.0,
+      "fg_pct": 66.7,
+      "fg3m": 2.5,
+      "fg3a": 4.5,
+      "fg3_pct": 55.6,
+      "ftm": 1.0,
+      "fta": 1.0,
+      "ft_pct": 100.0,
       "oreb": null,
       "dreb": null,
-      "reb": 8.0,
-      "ast": 3.0,
-      "stl": 1.0,
-      "blk": 1.0,
-      "turnover": 3.0,
-      "pts": 16.0
+      "reb": 5.5,
+      "ast": 2.0,
+      "stl": 0.5,
+      "blk": 0.5,
+      "turnover": 1.5,
+      "pts": 11.5
     },
     {
       "player_id": 712,
@@ -229,6 +230,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392671,
+      "player_id": 712,
+      "date": "2026-09-30T00:30:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "home_score": 87,
+      "away_score": 71,
+      "minutes": "29",
+      "pts": 7.0,
+      "ast": 1.0,
+      "reb": 3.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    },
     {
       "game_id": 1392662,
       "player_id": 712,
@@ -510,7 +551,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-24",
+  "game_log_window_start": "2026-08-26",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

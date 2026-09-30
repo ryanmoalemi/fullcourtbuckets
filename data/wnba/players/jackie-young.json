@@ -2,7 +2,8 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-29T00:02:44+00:00",
+  "checked_at": "2026-09-30T11:27:57+00:00",
+  "stats_updated_at": "2026-09-30T11:27:57+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -79,25 +80,25 @@
         "name": "Aces",
         "conference": "Western Conference"
       },
-      "games_played": 1,
-      "min": 34.0,
-      "fgm": 8.0,
-      "fga": 14.0,
-      "fg_pct": 57.1,
-      "fg3m": 3.0,
-      "fg3a": 7.0,
-      "fg3_pct": 42.9,
-      "ftm": 2.0,
-      "fta": 2.0,
+      "games_played": 2,
+      "min": 35.0,
+      "fgm": 7.5,
+      "fga": 16.5,
+      "fg_pct": 45.5,
+      "fg3m": 3.5,
+      "fg3a": 8.0,
+      "fg3_pct": 43.8,
+      "ftm": 7.5,
+      "fta": 7.5,
       "ft_pct": 100.0,
       "oreb": null,
       "dreb": null,
-      "reb": 2.0,
-      "ast": 10.0,
-      "stl": 3.0,
+      "reb": 3.0,
+      "ast": 7.5,
+      "stl": 1.5,
       "blk": 0.0,
-      "turnover": 6.0,
-      "pts": 21.0
+      "turnover": 3.5,
+      "pts": 26.0
     },
     {
       "player_id": 570,
@@ -550,6 +551,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 1392672,
+      "player_id": 570,
+      "date": "2026-09-29T22:30:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "home_score": 99,
+      "away_score": 89,
+      "minutes": "36",
+      "pts": 31.0,
+      "ast": 5.0,
+      "reb": 4.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
+    {
       "game_id": 1392663,
       "player_id": 570,
       "date": "2026-09-27T20:00:00.000Z",
@@ -790,7 +831,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-24",
+  "game_log_window_start": "2026-08-26",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
