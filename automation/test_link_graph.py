@@ -105,6 +105,10 @@ class GraphTests(unittest.TestCase):
         self.assertIn('https://fullcourtbuckets.com/wnba/teams/toronto-tempo/', updated)
         self.assertIn('https://fullcourtbuckets.com/about/', updated)
         self.assertEqual(updated, links.ensure_sitemap(updated, ['/wnba/teams/portland-fire/', '/wnba/teams/toronto-tempo/'], 'https://fullcourtbuckets.com'))
+        with_hub = links.ensure_sitemap(updated, ['/wnba/teams/portland-fire/', '/wnba/teams/toronto-tempo/', '/wnba/teams/'], 'https://fullcourtbuckets.com')
+        self.assertIn('<loc>https://fullcourtbuckets.com/wnba/teams/</loc>', with_hub)
+        self.assertEqual(with_hub.count('<loc>https://fullcourtbuckets.com/wnba/teams/</loc>'), 1)
+        self.assertEqual(with_hub, links.ensure_sitemap(with_hub, ['/wnba/teams/portland-fire/', '/wnba/teams/toronto-tempo/', '/wnba/teams/'], 'https://fullcourtbuckets.com'))
 
     def test_normalize_internal_urls(self):
         self.assertEqual(link_graph.normalize_href('https://fullcourtbuckets.com/wnba/aja-wilson/', '/'), '/wnba/aja-wilson/')

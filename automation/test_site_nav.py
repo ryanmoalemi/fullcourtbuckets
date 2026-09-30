@@ -31,6 +31,8 @@ class SiteNavTests(unittest.TestCase):
         self.assertIn('<nav class="site-nav" aria-label="Main">', text)
         self.assertIn('<ul id="site-nav-menu">', text)
         self.assertIn('<li class="site-nav-branch"><a href="/wnba/">Players</a>', text)
+        self.assertIn('<li class="site-nav-branch"><a href="/wnba/teams/">Teams</a>', text)
+        self.assertNotIn('href="/wnba/#teams"', text)
         self.assertIn('aria-controls="site-nav-sub-players"', text)
         self.assertIn('aria-controls="site-nav-sub-teams"', text)
         self.assertIn('aria-controls="site-nav-sub-news"', text)

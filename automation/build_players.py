@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 import internal_links as links
 import site_nav
+import team_hub
 import team_names
 from link_graph import page_url
 
@@ -479,7 +480,7 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
             f'<li>{links.inline_link(slot["full_name"], links.team_href(slot))}</li>'
             for slot in sorted(linking['by_id'].values(), key=lambda slot: slot['full_name'].casefold())
         )
-        team_html=f'<section class="section" id="teams"><p class="eyebrow">Current rosters</p><h2>Teams</h2><ul class="team-index">{items}</ul></section>'
+        team_html=f'<section class="section" id="teams"><p class="eyebrow">Current rosters</p><h2>Teams</h2><ul class="team-index">{items}</ul><p>{links.inline_link("All teams", "/wnba/teams/")}</p></section>'
     body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p>{couples_hub_link(root)}<p class="muted small">Last updated {esc(timestamp(index.get('checked_at')))}. An archive profile means the player is not on a current roster.</p></section>{team_html}<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div><p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
@@ -518,16 +519,21 @@ def team_page(slot, include_standings=True, menu=None, stories=''):
     )
     count=len(slot['players'])
     noun='player' if count == 1 else 'players'
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{conf}{standings}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2><ul class="teammate-list">{roster}</ul></section>{stories}<p>{links.inline_link('All players', '/wnba/')}</p>'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{conf}{standings}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2><ul class="teammate-list">{roster}</ul></section>{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},
-            {'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},
-            {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
+            {'@type':'ListItem','position':2,'name':'WNBA','item':BASE+'/wnba/'},
+            {'@type':'ListItem','position':3,'name':'Teams','item':BASE+'/wnba/teams/'},
+            {'@type':'ListItem','position':4,'name':name,'item':BASE+route},
         ]},
     ]}
     return document(f'{name} Roster | Full Court Buckets', f'{name} current roster with links to each player profile.', route, body, structured, include_standings, menu)
+
+def teams_hub_page(root, linking, include_standings=True, menu=None):
+    body, structured, title, description = team_hub.hub_parts(root, linking)
+    return document(title, description, team_hub.HUB, body, structured, include_standings, menu)
 
 def build(root: Path):
     data=root/'data/wnba'
@@ -561,6 +567,8 @@ def build(root: Path):
         old_route = f'/wnba/teams/{old_slug}/'
         files[f'wnba/teams/{old_slug}/index.html'] = redirect_stub(old_route, links.team_href(slot), menu)
     files['wnba/index.html']=directory_page(index, linking, include_standings, menu, root)
+    if linking['by_id']:
+        files['wnba/teams/index.html']=teams_hub_page(root, linking, include_standings, menu)
     for name in ('players.css','players.js'):
         files['wnba/assets/'+name]=(root/'automation'/name).read_text()
     files['assets/site-nav.css']=site_nav.CSS_TEXT
@@ -610,6 +618,8 @@ def build(root: Path):
             files[relative]=updated
     files.update(site_nav.install_tree(root, menu, set(files)))
     team_urls=sorted(links.team_href(slot) for slot in linking['by_id'].values())
+    if team_urls:
+        team_urls.append('/wnba/teams/')
     for name in ('sitemap.xml','pages-sitemap.xml'):
         path=root/name
         if not path.is_file():

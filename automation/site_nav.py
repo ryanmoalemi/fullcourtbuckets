@@ -99,6 +99,8 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
         slug = entry.get('slug') or ''
         if slug:
             planned.add(f'wnba/{slug}/index.html')
+    if linking['by_id']:
+        planned.add('wnba/teams/index.html')
     for slot in linking['by_id'].values():
         planned.add(f'wnba/teams/{slot["slug"]}/index.html')
     for relative in (
@@ -150,7 +152,12 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
             if exists(href):
                 team_children.append({'label': slot['full_name'], 'href': href})
     if team_children:
-        parent = '/wnba/#teams' if exists('/wnba/') else team_children[0]['href']
+        if exists('/wnba/teams/'):
+            parent = '/wnba/teams/'
+        elif exists('/wnba/'):
+            parent = '/wnba/#teams'
+        else:
+            parent = team_children[0]['href']
         items.append({'label': 'Teams', 'href': parent, 'children': team_children})
 
     if exists('/standings/'):
