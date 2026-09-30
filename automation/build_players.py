@@ -507,7 +507,7 @@ def redirect_stub(old_route: str, new_route: str, menu) -> str:
     return site_nav.install(page, old_route, menu)
 
 
-def team_page(slot, include_standings=True, menu=None):
+def team_page(slot, include_standings=True, menu=None, stories=''):
     name=slot['full_name']
     route=links.team_href(slot)
     conf=f'<p class="muted">{esc(slot["conference"])}.</p>' if slot.get('conference') else ''
@@ -518,7 +518,7 @@ def team_page(slot, include_standings=True, menu=None):
     )
     count=len(slot['players'])
     noun='player' if count == 1 else 'players'
-    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{conf}{standings}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2><ul class="teammate-list">{roster}</ul></section><p>{links.inline_link('All players', '/wnba/')}</p>'''
+    body=f'''<div class="breadcrumbs"><a href="/" target="_blank" rel="noopener">Home</a><span>/</span><a href="/wnba/" target="_blank" rel="noopener">Players</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{conf}{standings}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2><ul class="teammate-list">{roster}</ul></section>{stories}<p>{links.inline_link('All players', '/wnba/')}</p>'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
@@ -553,7 +553,7 @@ def build(root: Path):
         files[f'wnba/{slug}/index.html']=page
     include_standings=(root/'standings'/'index.html').is_file()
     for slot in linking['by_id'].values():
-        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu)
+        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu, links.team_news_html(root, slot['slug']))
     for team_id, old_slug in team_names.LEGACY_SLUGS.items():
         slot = linking['by_id'].get(team_id)
         if not slot or slot['slug'] == old_slug:

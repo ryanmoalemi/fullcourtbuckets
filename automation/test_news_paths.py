@@ -69,6 +69,16 @@ class NewsPathTests(unittest.TestCase):
             positions.append(hub.find(href))
         self.assertEqual(positions, sorted(positions))
 
+    def test_expansion_story_is_linked_from_both_team_pages(self):
+        for slug in ('portland-fire', 'toronto-tempo'):
+            page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('href="/news/wnba-expansion-teams/"', page)
+            self.assertIn('target="_blank"', page)
+        html_text = links.team_news_html(ROOT, 'portland-fire')
+        self.assertIn('href="/news/wnba-expansion-teams/"', html_text)
+        self.assertIn('target="_blank" rel="noopener"', html_text)
+        self.assertEqual(links.team_news_html(ROOT, 'indiana-fever'), '')
+
     def test_old_root_urls_are_stubs_and_not_linked(self):
         articles = _articles()
         pattern = links.legacy_post_link_pattern(articles)
