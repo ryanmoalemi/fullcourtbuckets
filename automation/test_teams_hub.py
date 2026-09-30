@@ -42,6 +42,22 @@ class TeamsHubTests(unittest.TestCase):
         self.assertEqual(body.count('class="team-card-link" href="'), 15)
         self.assertEqual(body.count('<a class="team-card-link" href="'), body.count('class="team-card-link" href="'))
         self.assertIn('target="_blank" rel="noopener"', body[body.find('class="team-card-link"'):body.find('class="team-card-link"') + 180])
+        cards = body.split('<li class="team-card">')[1:]
+        self.assertEqual(len(cards), 15)
+        for card in cards:
+            link = card.split('</a>', 1)[0]
+            self.assertNotIn('team-card-credit', link)
+            self.assertEqual(link.count('<a '), 1)
+            credit = card.split('class="team-card-credit"', 1)[1].split('</p>', 1)[0]
+            self.assertEqual(credit.count('<a '), 2)
+            self.assertEqual(credit.count('target="_blank" rel="noopener"'), 2)
+            self.assertIn('Wikimedia Commons', credit)
+        css = (ROOT / 'automation' / 'players.css').read_text(encoding='utf-8')
+        self.assertIn('.team-card-credit{position:absolute', css)
+        self.assertIn('pointer-events:none', css)
+        self.assertIn('font-size:11px', css)
+        self.assertIn('.team-card-credit a:hover,.team-card-credit a:focus-visible{text-decoration:underline', css)
+        self.assertNotIn('.team-card-credit a{text-decoration:underline}', css)
         for slot in linking['by_id'].values():
             href = links.team_href(slot)
             self.assertIn(f'href="{href}"', body)
