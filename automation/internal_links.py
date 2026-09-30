@@ -14,6 +14,7 @@ from pathlib import Path
 import re
 from zoneinfo import ZoneInfo
 
+from analytics import GA4_TAG
 from link_graph import file_for_url, normalize_href
 import team_names
 
@@ -845,16 +846,29 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     return html_text
 
 
-def redirect_stub(article: dict) -> str:
-    """GitHub Pages has no server redirects. The old root URL refreshes to /news/<slug>/."""
-    target = article_absolute(article)
+# Published at /players/<slug>/ before profiles moved to /wnba/<slug>/.
+LEGACY_PLAYER_SLUGS = (
+    'aja-wilson', 'aliyah-boston', 'allisha-gray', 'angel-reese', 'arike-ogunbowale',
+    'becky-hammon', 'breanna-stewart', 'caitlin-clark', 'cecilia-zandalasini', 'chelsea-gray',
+    'courtney-vandersloot', 'dewanna-bonner', 'gabby-williams', 'han-xu', 'jackie-young',
+    'jessica-shepard', 'jewell-loyd', 'jonquel-jones', 'jordin-canada', 'kahleah-copper',
+    'kara-lawson', 'kayla-mcbride', 'kayla-thornton', 'kelsey-mitchell', 'kelsey-plum',
+    'kiki-iriafen', 'kitija-laksa', 'leonie-fiebich', 'maddy-siegrist', 'napheesa-collier',
+    'natasha-howard', 'nia-brodie', 'olivia-miles', 'paige-bueckers', 'pauline-astier',
+    'raven-johnson', 'rhyne-howard', 'sabrina-ionescu', 'shakira-austin', 'sonia-citron',
+    'stephanie-white', 'tiffany-hayes', 'veronica-burton',
+)
+
+
+def permanent_redirect(target: str) -> str:
+    """HTML permanent redirect. GitHub Pages cannot send HTTP 301."""
     safe = esc(target)
     return (
         '<!doctype html>\n'
         '<html lang="en">\n'
         '<head>\n'
         '<meta charset="utf-8">\n'
-        f'<title>Redirect</title>\n'
+        '<title>Redirect</title>\n'
         f'<link rel="canonical" href="{safe}">\n'
         '<meta name="robots" content="noindex">\n'
         f'<meta http-equiv="refresh" content="0; url={safe}">\n'
@@ -865,6 +879,20 @@ def redirect_stub(article: dict) -> str:
         '</body>\n'
         '</html>\n'
     )
+
+
+def legacy_player_redirect_files(published_slugs: set) -> dict:
+    """Old /players/ URLs. A slug with no /wnba/ profile goes to the player index."""
+    pages = {'players/index.html': permanent_redirect(BASE + '/wnba/')}
+    for slug in LEGACY_PLAYER_SLUGS:
+        route = f'/wnba/{slug}/' if slug in published_slugs else '/wnba/'
+        pages[f'players/{slug}/index.html'] = permanent_redirect(BASE + route)
+    return pages
+
+
+def redirect_stub(article: dict) -> str:
+    """GitHub Pages has no server redirects. The old root URL refreshes to /news/<slug>/."""
+    return permanent_redirect(article_absolute(article))
 
 
 def _news_list_item(article: dict) -> str:
@@ -917,9 +945,7 @@ def render_news_hub(articles: list) -> str:
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-ZJK92LK3XT');</script>
+{GA4_TAG}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>WNBA news | Full Court Buckets</title>

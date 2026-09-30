@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 from zoneinfo import ZoneInfo
 
+from analytics import GA4_TAG
 import internal_links as links
 import site_nav
 import team_hub
@@ -19,14 +20,9 @@ import team_names
 from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
-GA4_TAG = (
-    '<!-- Google tag (gtag.js) -->\n'
-    '<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT"></script>\n'
-    "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZJK92LK3XT');</script>"
-)
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-# Deleted from production so the URLs 404. The builder must not recreate them.
+# Former ADU articles. The builder may write a redirect stub and must not recreate the page.
 REMOVED_ADU_PATHS = frozenset({
     'adu-cost.html',
     'adu-feasibility-studies.html',
@@ -56,11 +52,41 @@ class BuildError(RuntimeError):
     pass
 
 def reject_removed_adu(relative, content):
+    """Block ADU articles. A noindex stub that only redirects to the same path
+    on sandiegoadubuilder.com is the GitHub Pages stand-in for a 301."""
+    if relative in REMOVED_ADU_PATHS and content == adu_redirect_stub(relative):
+        return
     if relative in REMOVED_ADU_PATHS or 'sandiegoadubuilder.com' in content:
         raise BuildError('Refusing to publish removed ADU content: '+relative)
 
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
+
+def adu_redirect_stub(relative: str) -> str:
+    """Permanent redirect. GitHub Pages cannot send HTTP 301 or 410."""
+    if relative not in REMOVED_ADU_PATHS:
+        raise BuildError('Not a former ADU path: '+relative)
+    target = 'https://sandiegoadubuilder.com/' + relative
+    safe = esc(target)
+    return (
+        '<!doctype html>\n'
+        '<html lang="en">\n'
+        '<head>\n'
+        '<meta charset="utf-8">\n'
+        '<title>Moved</title>\n'
+        '<meta name="robots" content="noindex">\n'
+        f'<link rel="canonical" href="{safe}">\n'
+        f'<meta http-equiv="refresh" content="0; url={safe}">\n'
+        f'<script>location.replace("{safe}");</script>\n'
+        '</head>\n'
+        '<body>\n'
+        f'<p><a href="{safe}">This page has moved.</a></p>\n'
+        '</body>\n'
+        '</html>\n'
+    )
+
+def adu_redirect_files() -> dict:
+    return {relative: adu_redirect_stub(relative) for relative in sorted(REMOVED_ADU_PATHS)}
 
 def value(n, integer=False):
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
@@ -616,6 +642,8 @@ def build(root: Path):
         updated=site_nav.install(links.apply_known_page_links(original, relative), page_url(Path(relative)), menu)
         if updated != original:
             files[relative]=updated
+    files.update(links.legacy_player_redirect_files(slugs))
+    files.update(adu_redirect_files())
     files.update(site_nav.install_tree(root, menu, set(files)))
     team_urls=sorted(links.team_href(slot) for slot in linking['by_id'].values())
     if team_urls:

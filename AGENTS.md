@@ -36,7 +36,7 @@ The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliy
 
 The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. ADU pages and redirect stubs stay off `main`; those URLs should 404.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles. Former ADU URLs that still exist at the same path on sandiegoadubuilder.com are noindex redirect stubs to that site (GitHub Pages cannot send an HTTP 301) and stay out of sitemaps, internal links, and JSON-LD. A former ADU URL that is not on that site stays a real 404.
 
 ## Adding an article
 
@@ -66,7 +66,7 @@ Missing tools in the initial list are not proof of read-only access. Discover an
 
 1. Discover current tools and read current main and the relevant records. Use update_file with the current blob SHA, or create_blob/create_tree/create_commit/update_ref for atomic multi-file edits. Never force-push or discard concurrent changes.
 2. Preserve domain, hosting, credentials, unrelated content, permanent IDs, sports data and the daily/weekly statistics updater. Do not buy additional services.
-3. Run relevant existing tests. Verify deployment and actual public pages/images. Generation, local saves, Git blobs, commits, successful HTTP responses and deployment steps alone are not proof of publication.
+3. Run relevant existing tests. Verify deployment and actual public pages/images. Generation, local saves, Git blobs, commits, successful HTTP responses and deployment steps alone are not proof of publication. Verification scripts must use headless browsers. Those browsers are not counted in Google Analytics: the shared gtag snippet does not load when `navigator.webdriver` is set, the user agent looks like a headless browser or bot, or the window size is 0.
 4. Report real blockers accurately. Do not request reconnection when existing writes work, or claim repository notes guarantee future tool availability.
 
 ## Approved uniform artwork and page design

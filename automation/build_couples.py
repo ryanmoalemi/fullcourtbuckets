@@ -15,6 +15,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+from analytics import GA4_TAG
 import site_nav
 from link_graph import iter_html, page_url
 
@@ -29,11 +30,6 @@ UA = 'FullCourtBuckets/1.0 (https://fullcourtbuckets.com/wnba/couples/; source a
 BROWSER_UA = (
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
     '(KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
-)
-GA4_TAG = (
-    '<!-- Google tag (gtag.js) -->\n'
-    '<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJK92LK3XT"></script>\n'
-    "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZJK92LK3XT');</script>"
 )
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 
