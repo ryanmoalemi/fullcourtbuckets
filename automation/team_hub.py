@@ -347,10 +347,14 @@ def _card(slot: dict, city: str, facts: list[str]) -> str:
         credit = _credit(spec)
     city_html = f'<span class="eyebrow">{esc(city)}</span>' if city else ''
     fact_html = ''.join(f'<p>{esc(fact)}</p>' for fact in facts)
+    # Credit stays a sibling of the card link. An overlay on the photo would nest
+    # anchors if it lived inside the link, and those license links have to work on their own.
+    photo = f'<span class="team-card-photo">{image}</span>' if image else ''
     return (
         '<li class="team-card">'
+        f'{photo}'
         f'<a class="team-card-link" href="{esc(href)}" target="_blank" rel="noopener">'
-        f'{image}<span class="team-card-body">{city_html}<h3>{esc(slot["full_name"])}</h3>{fact_html}</span>'
+        f'<span class="team-card-body">{city_html}<h3>{esc(slot["full_name"])}</h3>{fact_html}</span>'
         '</a>'
         f'{credit}</li>'
     )
