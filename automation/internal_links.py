@@ -521,7 +521,7 @@ def ensure_sitemap(text: str, urls: list[str], base: str) -> str:
     text = re.sub(r'[ \t]*<url\b[^>]*>.*?</url>[ \t]*\r?\n?', keep, text, flags=re.S)
     for url in urls:
         loc = base + url
-        if loc in text:
+        if re.search(rf'<loc>\s*{re.escape(loc)}\s*</loc>', text):
             continue
         block = (
             '  <url>\n'
@@ -564,7 +564,7 @@ def verify_hrefs(root: Path, pages: dict[str, str]) -> None:
     """Raise if a generated contextual href does not match a real file."""
     blob = '\n'.join(value for value in pages.values() if isinstance(value, str))
     hrefs = re.findall(
-        r'<a class="(?:inline-link|team-name|coverage-card|article-card)" href="(/[^"]+|https?://[^"]+)"',
+        r'<a class="(?:inline-link|team-name|coverage-card|article-card|team-card-link)" href="(/[^"]+|https?://[^"]+)"',
         blob,
     )
     for href in hrefs:
