@@ -38,14 +38,14 @@ FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.S)
 FOOTER_HTML = (
     '<footer class="site-footer"><div class="wrap"><p><b>Full Court Buckets</b>. '
     'Independent WNBA news, analysis and commentary. Not affiliated with or endorsed by the WNBA.</p>'
-    '<p class="footer-links"><a href="/wnba/" target="_blank" rel="noopener">Players</a>'
-    '<a href="/standings/" target="_blank" rel="noopener">Standings</a>'
-    '<a href="/about/" target="_blank" rel="noopener">About</a>'
-    '<a href="/contact/" target="_blank" rel="noopener">Contact</a>'
-    '<a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>'
-    '<a href="/terms/" target="_blank" rel="noopener">Terms of Use</a>'
-    '<a href="/privacy/" target="_blank" rel="noopener" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a>'
-    '<a href="/privacy/#us-state-privacy" target="_blank" rel="noopener">Do not sell or share my personal information</a></p>'
+    '<p class="footer-links"><a href="/wnba/">Players</a>'
+    '<a href="/standings/">Standings</a>'
+    '<a href="/about/">About</a>'
+    '<a href="/contact/">Contact</a>'
+    '<a href="/privacy/">Privacy Policy</a>'
+    '<a href="/terms/">Terms of Use</a>'
+    '<a href="/privacy/" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a>'
+    '<a href="/privacy/#us-state-privacy">Do not sell or share my personal information</a></p>'
     '<p>&copy; 2026 Full Court Buckets</p></div></footer>'
 )
 EM_DASH = '\u2014'
@@ -219,6 +219,7 @@ def _list(items: list[dict], current: str, nested: bool = False) -> str:
     for item in items:
         current_attr = ' aria-current="page"' if is_current(item['href'], current) else ''
         children = item.get('children') or []
+        # Site chrome stays in this tab. New tabs are for article-body links only.
         link = f'<a href="{esc(item["href"])}"{current_attr}>{esc(item["label"])}</a>'
         if children and not nested:
             sub = _list(children, current, nested=True).replace('<ul>', f'<ul id="{esc(_submenu_id(item["label"]))}">', 1)
@@ -267,7 +268,7 @@ def footer_html(include_standings: bool = True) -> str:
     """Same footer everywhere. The standings link is omitted only when that page is absent."""
     if include_standings:
         return FOOTER_HTML
-    return FOOTER_HTML.replace('<a href="/standings/" target="_blank" rel="noopener">Standings</a>', '', 1)
+    return FOOTER_HTML.replace('<a href="/standings/">Standings</a>', '', 1)
 
 
 def install_footer(page_html: str) -> str:
@@ -277,6 +278,61 @@ def install_footer(page_html: str) -> str:
     if '</body>' in page_html:
         return page_html.replace('</body>', FOOTER_HTML + '</body>', 1)
     return page_html + FOOTER_HTML
+
+
+_ANCHOR_RE = re.compile(r'<a\b[^>]*>', re.I)
+_CHROME_REGION_RE = re.compile(
+    r'<(header|footer|nav)\b[^>]*>.*?</\1>'
+    r'|<(div|p)\b[^>]*\bclass\s*=\s*(["\'])[^"\']*\b(?:breadcrumb|breadcrumbs)\b[^"\']*\3[^>]*>.*?</\2>',
+    re.I | re.S,
+)
+_SCRIPT_OR_STYLE_RE = re.compile(r'(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)', re.I | re.S)
+_INTERNAL_HOSTS = {'fullcourtbuckets.com', 'www.fullcourtbuckets.com'}
+
+
+def _is_internal_href(href: str) -> bool:
+    """Same-site chrome links. Off-site links may still open in a new tab."""
+    value = (href or '').strip()
+    if value.startswith(('#', '/')) or value == '':
+        return True
+    lowered = value.casefold()
+    if lowered.startswith(('mailto:', 'tel:', 'javascript:')):
+        return False
+    if lowered.startswith(('http://', 'https://', '//')):
+        host = value.split('/')[2].split('@')[-1].split(':')[0].casefold() if '//' in value else ''
+        return host in _INTERNAL_HOSTS
+    return True
+
+
+def _strip_new_tab(tag: str) -> str:
+    href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
+    if href and not _is_internal_href(href.group(2)):
+        return tag
+    if not re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
+        return tag
+    tag = re.sub(r'\s+target\s*=\s*(["\']?)_blank\1', '', tag, count=1, flags=re.I)
+    tag = re.sub(r'\s+rel\s*=\s*(["\'])noopener(?:\s+noreferrer)?\1', '', tag, count=1, flags=re.I)
+    return tag
+
+
+def strip_chrome_new_tabs(page_html: str) -> str:
+    """Nav, header, footer, and breadcrumbs stay in this tab.
+
+    A post-publish pass added target=_blank to site chrome. Article-body links
+    are outside these regions and keep the new-tab behavior.
+    """
+    def region(match: re.Match) -> str:
+        parts = _SCRIPT_OR_STYLE_RE.split(match.group(0))
+        cleaned = []
+        for part in parts:
+            lowered = part[:7].casefold()
+            if lowered.startswith('<script') or lowered.startswith('<style'):
+                cleaned.append(part)
+            else:
+                cleaned.append(_ANCHOR_RE.sub(lambda anchor: _strip_new_tab(anchor.group(0)), part))
+        return ''.join(cleaned)
+
+    return _CHROME_REGION_RE.sub(region, page_html)
 
 
 def install(page_html: str, current: str, menu: list[dict]) -> str:
@@ -302,7 +358,7 @@ def install(page_html: str, current: str, menu: list[dict]) -> str:
             page_html = page_html.replace('<body>', '<body>' + rendered, 1)
         else:
             page_html = rendered + page_html
-    return install_footer(ensure_assets(page_html))
+    return strip_chrome_new_tabs(install_footer(ensure_assets(page_html)))
 
 
 def install_tree(root: Path, menu: list[dict], skip: set[str]) -> dict[str, str]:

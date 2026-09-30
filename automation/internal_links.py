@@ -242,9 +242,9 @@ def ensure_footer_hubs(text: str) -> str:
     block = match.group(0)
     extra = ''
     if 'href="/wnba/"' not in block and "href='/wnba/'" not in block:
-        extra += '<a href="/wnba/" target="_blank" rel="noopener">Players</a>'
+        extra += '<a href="/wnba/">Players</a>'
     if 'href="/standings/"' not in block and "href='/standings/'" not in block:
-        extra += '<a href="/standings/" target="_blank" rel="noopener">Standings</a>'
+        extra += '<a href="/standings/">Standings</a>'
     if not extra:
         return text
     open_end = block.find('>') + 1
@@ -781,9 +781,9 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
 def _visible_breadcrumb(title: str) -> str:
     return (
         '<nav class="breadcrumbs" aria-label="Breadcrumb">'
-        '<a href="/" target="_blank" rel="noopener">Home</a>'
+        '<a href="/">Home</a>'
         '<span aria-hidden="true">/</span>'
-        f'<a href="{NEWS_HUB}" target="_blank" rel="noopener">News</a>'
+        f'<a href="{NEWS_HUB}">News</a>'
         '<span aria-hidden="true">/</span>'
         f'<span>{esc(title)}</span></nav>'
     )
@@ -958,9 +958,9 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 </style>
 </head>
 <body>
-<header><div class="shell"><a href="/" target="_blank" rel="noopener"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
-<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/" target="_blank" rel="noopener">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
 <h1>WNBA news</h1>
 <p class="intro">{esc(NEWS_INTRO)}</p>
 <ol class="news-list">{cards}</ol>
