@@ -77,7 +77,10 @@ class NewsPathTests(unittest.TestCase):
         html_text = links.team_news_html(ROOT, 'portland-fire')
         self.assertIn('href="/news/wnba-expansion-teams/"', html_text)
         self.assertNotIn('target="_blank"', html_text)
-        self.assertEqual(links.team_news_html(ROOT, 'indiana-fever'), '')
+        fever = links.team_news_html(ROOT, 'indiana-fever')
+        self.assertIn('Latest stories', fever)
+        self.assertIn('href="/news/fever-aces-game-2-recap/"', fever)
+        self.assertNotIn('target="_blank"', fever)
 
     def test_old_root_urls_are_stubs_and_not_linked(self):
         articles = _articles()

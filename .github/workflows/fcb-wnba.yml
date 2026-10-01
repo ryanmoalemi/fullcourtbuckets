@@ -83,6 +83,9 @@ jobs:
           else
             python -u automation/wnba_sync.py
           fi
+      - name: Rebuild standings from the ESPN feed
+        if: steps.key.outputs.ready == 'true'
+        run: python automation/build_standings.py
       - name: Build every player page from the verified local data
         if: steps.key.outputs.ready == 'true'
         run: |
@@ -97,14 +100,22 @@ jobs:
           from pathlib import Path
           import xml.etree.ElementTree as ET
           entries=json.loads(Path('data/wnba/players-index.json').read_text())['players']
+          duplicate_ids={99338}
+          indexable=[]
           for p in entries:
               page=Path('wnba')/p['slug']/'index.html'
               text=page.read_text()
+              if p['id'] in duplicate_ids or 'http-equiv="refresh"' in text:
+                  assert 'noindex' in text, p['slug']
+                  assert 'http-equiv="refresh"' in text, p['slug']
+                  continue
               assert text.count('<h1 ')==1, p['slug']
               assert 'BALLDONTLIE_API_KEY' not in text, p['slug']
               assert f'https://fullcourtbuckets.com/wnba/{p["slug"]}/' in text, p['slug']
               assert 'fcb-player-compact' in text, p['slug']
               assert '<div class="number-card">' not in text, p['slug']
+              if 'noindex' not in text:
+                  indexable.append(p)
           portraits=json.loads(Path('content/player-illustrations.json').read_text())['portraits']
           for portrait in portraits:
               text=(Path('wnba')/portrait['slug']/'index.html').read_text()
@@ -115,7 +126,9 @@ jobs:
           assert rollout['profile_count']==len(entries)
           assert rollout['profiles_with_approved_illustrations']==len(portraits)
           assert rollout['profiles_awaiting_illustrations']==len(entries)-len(portraits)
-          assert len(ET.parse('player-sitemap.xml').getroot())==len(entries)+1
+          NS='{http://www.sitemaps.org/schemas/sitemap/0.9}'
+          player_locs={el.find(f'{NS}loc').text for el in ET.parse('player-sitemap.xml').getroot()}
+          assert player_locs=={f'https://fullcourtbuckets.com/wnba/{p["slug"]}/' for p in indexable}
           assert Path('wnba/assets/players.css').stat().st_size>1000
           print(f'Validated {len(entries)} compact profiles, approved artwork and sitemap.')
           PY
@@ -148,7 +161,7 @@ jobs:
         run: |
           git config user.name 'Full Court Buckets updater'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml standings/index.html about/index.html contact/index.html privacy/index.html terms/index.html 404.html live-article-current.html live-article-final-check.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json
+          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml standings/index.html api/wnba-standings about/index.html contact/index.html privacy/index.html terms/index.html 404.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json
           python -c "import json; arts=json.load(open('articles.json')); print('\n'.join(['news/index.html']+[p for a in arts for p in ('news/'+a['slug']+'/index.html', a['slug']+'/index.html')]))" | xargs -d '\n' git add --
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh WNBA data and generated player profiles'

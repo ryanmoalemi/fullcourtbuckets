@@ -15,6 +15,7 @@ from pathlib import Path
 import re
 
 from apply_portraits import CSS as APPROVED_CSS, ASSET
+from build_players import DUPLICATE_PLAYER_IDS
 
 BASE = 'https://fullcourtbuckets.com'
 VERSION = 'fcb-compact-player-v1'
@@ -138,7 +139,10 @@ def rollout(root: Path) -> dict:
             if not asset.is_file() or asset.is_symlink() or asset.stat().st_size == 0:
                 raise ValueError('Approved image is missing.')
         path = root/'wnba'/slug/'index.html'
-        outputs[path] = render_layout(path.read_text(encoding='utf-8'), profile, record is not None)
+        page_text = path.read_text(encoding='utf-8') if path.is_file() else ''
+        stub = pid in DUPLICATE_PLAYER_IDS or 'http-equiv="refresh"' in page_text
+        if not stub:
+            outputs[path] = render_layout(page_text, profile, record is not None)
         if record is None:
             queue.append({'player_id':pid, 'slug':slug, 'player_name':name,
                           'listed_active':entry.get('active_in_provider_feed') is True,
