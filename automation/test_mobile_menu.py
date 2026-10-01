@@ -113,6 +113,7 @@ class MobileMenuTests(unittest.TestCase):
                 browser.close()
         finally:
             server.shutdown()
+            server.server_close()
         self.assertEqual(failures, [])
 
 
