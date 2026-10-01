@@ -29,3 +29,11 @@ a.inline-link{color:#e4afeb;text-decoration:underline;text-underline-offset:3px}
 .team-card:hover{border-color:#c678c5}
 @media(max-width:780px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.team-grid{grid-template-columns:1fr}.team-card{--team-photo:220px}.team-card-credit{font-size:11px;padding:32px 10px 7px}}
+.player-hub{padding-bottom:4px}
+.player-hub h1{margin:8px 0 8px}
+.player-hub>p:not(.eyebrow){margin-bottom:0}
+.directory-updated{margin:8px 0 12px}
+.hub-links{padding:16px 0 8px}
+.hub-links h2{font-size:22px;margin:0 0 8px}
+.hub-links p{margin:8px 0 0}
+.hub-links .team-index{margin-top:4px;gap:6px 14px;font-size:13px}

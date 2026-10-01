@@ -50,3 +50,37 @@ class CouplesPageTests(unittest.TestCase):
         hub = (ROOT / 'wnba' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('href="/wnba/couples/"', hub)
         self.assertIn('Confirmed WNBA relationships', hub)
+        self.assertLess(hub.find('id="player-search"'), hub.find('class="player-grid"'))
+        self.assertLess(hub.find('class="player-grid"'), hub.find('id="teams"'))
+        self.assertLess(hub.find('id="teams"'), hub.find('Confirmed WNBA relationships'))
+        profiles = hub.find('profiles. Available statistics from 2008 onward.')
+        self.assertLess(profiles, hub.find('id="player-search"'))
+        self.assertNotIn(
+            'profiles. Available statistics from 2008 onward.</p><p><a class="inline-link" href="/wnba/couples/">',
+            hub,
+        )
+
+    def test_patch_hub_keeps_couples_link_below_search(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            page = root / 'wnba' / 'index.html'
+            page.parent.mkdir(parents=True)
+            page.write_text(
+                '<p>2 profiles. Available statistics from 2008 onward.</p>'
+                '<div class="directory-filters js-only"><input id="player-search"></div>'
+                '<div class="player-grid"></div>'
+                '<p id="no-players" hidden>No players match your search.</p>'
+                '<section class="section hub-links" id="teams"><h2>Teams</h2>'
+                '<ul class="team-index"></ul>'
+                '<p><a class="inline-link" href="/wnba/teams/">All teams</a></p></section>',
+                encoding='utf-8',
+            )
+            build_couples.patch_hub(root)
+            text = page.read_text(encoding='utf-8')
+            self.assertLess(text.find('id="player-search"'), text.find('Confirmed WNBA relationships'))
+            self.assertLess(text.find('All teams'), text.find('Confirmed WNBA relationships'))
+            self.assertNotIn(
+                'profiles. Available statistics from 2008 onward.</p><p><a class="inline-link" href="/wnba/couples/">',
+                text,
+            )

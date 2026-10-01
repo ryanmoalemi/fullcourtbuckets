@@ -330,4 +330,28 @@ class BuildTests(unittest.TestCase):
         self.assertIn('"dateModified": "2026-08-02"', dated)
 
 
+    def test_directory_search_is_above_teams_and_couples(self):
+        index={'checked_at':'2026-10-01T07:31:00+00:00','players':[{'id':1,'slug':'example-player','name':'Example Player','current_team':{'id':1,'full_name':'Example Team'},'active_in_provider_feed':True}]}
+        linking={'by_id':{1:{'id':1,'slug':'example-team','full_name':'Example Team','players':[]}}}
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            couples=root/'wnba'/'couples'
+            couples.mkdir(parents=True)
+            (couples/'index.html').write_text('<p>couples</p>', encoding='utf-8')
+            page=b.directory_page(index, linking, include_standings=False, root=root)
+        profiles=page.find('profiles. Available statistics from 2008 onward.')
+        search=page.find('id="player-search"')
+        show=page.find('id="active-filter"')
+        updated=page.find('class="muted small directory-updated"')
+        grid=page.find('class="player-grid"')
+        teams=page.find('id="teams"')
+        couples_link=page.find('Confirmed WNBA relationships')
+        self.assertTrue(0 <= profiles < search < show < updated < grid < teams < couples_link)
+        self.assertLess(page.find('</h1>'), search)
+        self.assertNotIn('Current rosters', page)
+        self.assertIn('Find a player', page)
+        self.assertIn('hub-links', page)
+        self.assertNotIn('\u2014', page[profiles:couples_link])
+
+
 if __name__=='__main__':unittest.main()

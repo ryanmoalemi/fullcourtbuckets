@@ -706,20 +706,23 @@ def patch_players(root: Path = ROOT) -> list[str]:
 
 
 def patch_hub(root: Path = ROOT) -> None:
+    """Add the couples link under the player list. Never above the search box."""
     path = root / 'wnba' / 'index.html'
     if not path.is_file():
         return
     text = path.read_text(encoding='utf-8')
     if 'Confirmed WNBA relationships' in text:
         return
-    updated, count = re.subn(
-        r'(<p>\d+ profiles\. Available statistics from 2008 onward\.</p>)',
-        r'\1<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>',
-        text,
-        count=1,
-    )
-    if count:
-        path.write_text(updated, encoding='utf-8')
+    link = '<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>'
+    teams_end = '</ul><p><a class="inline-link" href="/wnba/teams/">All teams</a></p></section>'
+    needle = '<p id="no-players" hidden>No players match your search.</p>'
+    if teams_end in text:
+        updated = text.replace(teams_end, teams_end + link, 1)
+    elif needle in text:
+        updated = text.replace(needle, needle + link, 1)
+    else:
+        return
+    path.write_text(updated, encoding='utf-8')
 
 
 def patch_sitemaps(root: Path = ROOT) -> None:
