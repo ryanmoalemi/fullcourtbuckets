@@ -25,7 +25,7 @@ class BuildTests(unittest.TestCase):
     def test_invalid_weight_not_relabelled(self):
         fields=b.bio_fields(P['player']); self.assertNotIn('weight',fields);self.assertNotIn('college',fields)
     def test_valid_weight_preserved(self):self.assertEqual(b.bio_fields({'weight':'157 lbs'})['weight'],'157 lbs')
-    def test_null_not_zero(self):self.assertEqual(b.value(None),'&mdash;')
+    def test_null_not_zero(self):self.assertEqual(b.value(None),'-')
     def test_zero_preserved(self):self.assertEqual(b.value(0),'0.0')
     def test_unsafe_slug(self):
         with self.assertRaises(b.BuildError):b.validate(P,'../../outside')

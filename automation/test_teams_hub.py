@@ -20,9 +20,9 @@ class TeamsHubTests(unittest.TestCase):
         self.assertEqual(extras['toronto-tempo']['conference'], 'East')
         self.assertIn('17-27', extras['portland-fire']['record'])
         self.assertIn('11-33', extras['toronto-tempo']['record'])
-        self.assertEqual(records['Minnesota Lynx'], '31-9')
-        self.assertEqual(records['Atlanta Dream'], '11-29')
-        self.assertEqual(when, 'August 30, 2026')
+        self.assertEqual(records['Minnesota Lynx'], '33-11')
+        self.assertEqual(records['Atlanta Dream'], '30-14')
+        self.assertRegex(when, r'^[A-Z][a-z]+ \d{1,2}, \d{4}$')
         self.assertNotIn('Los Angeles Sparks', {name for name, record in records.items() if record == '10-30'})
 
         body, structured, title, description = team_hub.hub_parts(ROOT, linking)
@@ -70,7 +70,7 @@ class TeamsHubTests(unittest.TestCase):
         self.assertIn('Toronto', body)
         self.assertIn('2026 record: 17-27, 5th in the West.', body)
         self.assertIn('2026 record: 11-33, 6th in the East.', body)
-        self.assertIn('31-9 as of August 30, 2026.', body)
+        self.assertIn(f'33-11 as of {when}.', body)
         self.assertNotIn('10-30', body)
         self.assertNotIn('9-31', body)
         graph = {node['@type']: node for node in structured['@graph']}

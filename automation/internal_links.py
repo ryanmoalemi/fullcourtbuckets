@@ -458,24 +458,40 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
         name = team_names.public_name(raw)
         href = by_name.get(raw) or by_name.get(name)
         label = f'<a class="team-name" href="{esc(href)}">{esc(name)}</a>' if href else f'<span class="team-name">{esc(name)}</span>'
+        rank = team.get('conferenceRank') if not wide and team.get('conferenceRank') not in (None, '') else team.get('rank')
+        games_back = team.get('gamesBack')
+        if not wide and team.get('conferenceGamesBack') not in (None, ''):
+            games_back = team.get('conferenceGamesBack')
+        badge = str(team.get('abbreviation') or name.split()[-1][:3]).upper()
         cells = (
-            f'<td><span class="rank">{esc(team.get("rank"))}</span></td>'
-            f'<td><div class="team-cell"><span class="team-badge">{esc(name.split()[-1][:3].upper())}</span>{label}</div></td>'
+            f'<td><span class="rank">{esc(rank)}</span></td>'
+            f'<td><div class="team-cell"><span class="team-badge">{esc(badge)}</span>{label}</div></td>'
             f'<td>{esc(team.get("wins"))}</td><td>{esc(team.get("losses"))}</td>'
-            f'<td class="percent">{esc(_pct(team.get("pct")))}</td><td>{esc(team.get("gamesBack"))}</td>'
+            f'<td class="percent">{esc(_pct(team.get("pct")))}</td><td>{esc(games_back)}</td>'
         )
         if wide:
             cells += (
                 f'<td>{esc(team.get("home"))}</td><td>{esc(team.get("road"))}</td>'
                 f'<td>{esc(team.get("streak"))}</td><td>{esc(team.get("last10"))}</td>'
             )
-        line = ''
-        if wide and team.get('rank') == 8:
-            line = '<tr class="playoff-line"><td colspan="10">Playoff Line</td></tr>'
         klass = ' class="playoff-row"' if wide and isinstance(team.get('rank'), int) and team['rank'] <= 8 else ''
-        return line + f'<tr{klass}>{cells}</tr>'
+        html_row = f'<tr{klass}>{cells}</tr>'
+        if wide and team.get('rank') == 8:
+            html_row += '<tr class="playoff-line"><td colspan="10">Playoff Line</td></tr>'
+        return html_row
 
     listed = standings.get('teams') or []
+
+    def conference_rows(name):
+        rows = [team for team in listed if team.get('conference') == name]
+        return sorted(
+            rows,
+            key=lambda team: (
+                team.get('conferenceRank') if isinstance(team.get('conferenceRank'), int) else 99,
+                str(team.get('name') or ''),
+            ),
+        )
+
     text = re.sub(
         r'<tbody id="standingsBody">.*?</tbody>',
         '<tbody id="standingsBody">' + ''.join(row(team, True) for team in listed) + '</tbody>',
@@ -485,14 +501,14 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
     )
     text = re.sub(
         r'<tbody id="eastStandings">.*?</tbody>',
-        '<tbody id="eastStandings">' + ''.join(row(team, False) for team in listed if team.get('conference') == 'Eastern') + '</tbody>',
+        '<tbody id="eastStandings">' + ''.join(row(team, False) for team in conference_rows('Eastern')) + '</tbody>',
         text,
         count=1,
         flags=re.S,
     )
     text = re.sub(
         r'<tbody id="westStandings">.*?</tbody>',
-        '<tbody id="westStandings">' + ''.join(row(team, False) for team in listed if team.get('conference') == 'Western') + '</tbody>',
+        '<tbody id="westStandings">' + ''.join(row(team, False) for team in conference_rows('Western')) + '</tbody>',
         text,
         count=1,
         flags=re.S,
@@ -613,7 +629,7 @@ def load_articles(root: Path) -> list:
 BASE = 'https://fullcourtbuckets.com'
 NEWS_HUB = '/news/'
 ARTICLE_SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-NEWS_INTRO = 'Recaps, notes, and other WNBA stories from Full Court Buckets.'
+NEWS_INTRO = 'WNBA game recaps, roster notes, and other league stories from Full Court Buckets, each with a date and a one-line summary.'
 JSONLD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 CANONICAL_RE = re.compile(r'<link\b[^>]*rel="canonical"[^>]*>', re.I)
 OG_URL_RE = re.compile(r'<meta\b[^>]*property="og:url"[^>]*>', re.I)
@@ -635,12 +651,39 @@ def article_absolute(article: dict) -> str:
     return BASE + article_href(article)
 
 
+def _slot_for_slug(root: Path, team_slug: str) -> dict:
+    path = root / 'data' / 'wnba' / 'players-index.json'
+    if not path.is_file():
+        return {'slug': team_slug, 'full_name': '', 'name': ''}
+    index = json.loads(path.read_text(encoding='utf-8'))
+    for slot in catalog_from_index(index)['by_id'].values():
+        if slot['slug'] == team_slug:
+            return slot
+    return {'slug': team_slug, 'full_name': '', 'name': ''}
+
+
+def article_mentions_team(article: dict, slot: dict) -> bool:
+    """True when articles.json names this team in teams, the title, or the description."""
+    if slot.get('slug') and slot['slug'] in (article.get('teams') or []):
+        return True
+    blob = f"{article.get('title') or ''} {article.get('description') or ''}"
+    names = []
+    for key in ('full_name', 'name'):
+        text = str(slot.get(key) or '').strip()
+        if text and text not in names:
+            names.append(text)
+    for name in names:
+        if re.search(rf'(?<![A-Za-z0-9]){re.escape(name)}(?![A-Za-z0-9])', blob):
+            return True
+    return False
+
+
 def team_news_html(root: Path, team_slug: str) -> str:
-    """Newest stories tagged for this team. Empty when the team has none."""
+    """Newest stories that mention this team. Empty when none do. Same-tab links."""
+    slot = _slot_for_slug(root, team_slug)
     items = []
     for article in _ordered_articles(load_articles(root)):
-        teams = article.get('teams') or []
-        if team_slug not in teams:
+        if not article_mentions_team(article, slot):
             continue
         title = str(article.get('title') or '').strip()
         if not title:
@@ -649,7 +692,7 @@ def team_news_html(root: Path, team_slug: str) -> str:
     if not items:
         return ''
     return (
-        '<section class="section" id="team-news"><p class="eyebrow">News</p><h2>Stories</h2>'
+        '<section class="section" id="team-news"><p class="eyebrow">News</p><h2>Latest stories</h2>'
         '<ul class="teammate-list">' + ''.join(items) + '</ul></section>'
     )
 
@@ -732,7 +775,35 @@ def _jsonld(data: dict) -> str:
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
 
 
-def _upsert_meta(html: str, absolute: str) -> str:
+def cap_meta(text, limit: int = 155) -> str:
+    """Trim a meta description at a word boundary."""
+    cleaned = re.sub(r'\s+', ' ', '' if text is None else str(text)).strip()
+    if len(cleaned) <= limit:
+        return cleaned
+    clipped = cleaned[:limit + 1]
+    if ' ' in clipped:
+        clipped = clipped.rsplit(' ', 1)[0]
+    return clipped.rstrip(' ,;:') or cleaned[:limit].rstrip()
+
+
+def _set_meta_content(html: str, pattern: re.Pattern, content: str) -> str:
+    safe = esc(content)
+
+    def sub(match: re.Match) -> str:
+        tag = match.group(0)
+        if re.search(r'content="', tag, re.I):
+            return re.sub(r'content="[^"]*"', f'content="{safe}"', tag, count=1)
+        return tag
+
+    return pattern.sub(sub, html, count=1)
+
+
+DESC_NAME_RE = re.compile(r'<meta\b[^>]*\bname="description"[^>]*>', re.I)
+OG_DESC_RE = re.compile(r'<meta\b[^>]*\bproperty="og:description"[^>]*>', re.I)
+TW_DESC_RE = re.compile(r'<meta\b[^>]*\bname="twitter:description"[^>]*>', re.I)
+
+
+def _upsert_meta(html: str, absolute: str, description: str | None = None) -> str:
     canonical = f'<link rel="canonical" href="{esc(absolute)}">'
     og_url = f'<meta property="og:url" content="{esc(absolute)}">'
     if CANONICAL_RE.search(html):
@@ -745,6 +816,11 @@ def _upsert_meta(html: str, absolute: str) -> str:
         html = html.replace('</head>', og_url + '</head>', 1)
     if 'property="og:type"' not in html and '</head>' in html:
         html = html.replace('</head>', '<meta property="og:type" content="article"></head>', 1)
+    if description:
+        trimmed = cap_meta(description, 160)
+        html = _set_meta_content(html, DESC_NAME_RE, trimmed)
+        html = _set_meta_content(html, OG_DESC_RE, trimmed)
+        html = _set_meta_content(html, TW_DESC_RE, trimmed)
     return html
 
 
@@ -765,6 +841,9 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
         found = True
         node['url'] = absolute
         node['mainEntityOfPage'] = {'@type': 'WebPage', '@id': absolute}
+        description = cap_meta(article.get('description') or '', 160)
+        if description:
+            node['description'] = description
         return _jsonld(data)
 
     html = JSONLD_RE.sub(sub, html)
@@ -776,7 +855,7 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
             '@context': 'https://schema.org',
             '@type': 'NewsArticle',
             'headline': article.get('title') or '',
-            'description': article.get('description') or '',
+            'description': cap_meta(article.get('description') or '', 160),
             'url': absolute,
             'mainEntityOfPage': {'@type': 'WebPage', '@id': absolute},
             'datePublished': article.get('date') or '',
@@ -854,14 +933,39 @@ def read_article_source(root: Path, slug: str) -> str:
     raise FileNotFoundError(f'No article HTML for {slug}')
 
 
+ESPN_GAME = 'https://www.espn.com/wnba/game/_/gameId/{game_id}'
+
+
+def box_score_html(game_id: str) -> str:
+    """One source line for a recap. Future posts set espnGameId on the articles.json entry."""
+    url = ESPN_GAME.format(game_id=str(game_id).strip())
+    return f'<p class="box-score">Box score: <a href="{esc(url)}" target="_blank" rel="noopener">ESPN</a>.</p>'
+
+
+def ensure_box_score(html_text: str, article: dict) -> str:
+    game_id = str((article or {}).get('espnGameId') or '').strip()
+    if not game_id or not game_id.isdigit():
+        return html_text
+    url = ESPN_GAME.format(game_id=game_id)
+    if url in html_text:
+        return html_text
+    snippet = box_score_html(game_id)
+    if '<p class="brand-sign">' in html_text:
+        return html_text.replace('<p class="brand-sign">', snippet + '<p class="brand-sign">', 1)
+    if '</article>' in html_text:
+        return html_text.replace('</article>', snippet + '</article>', 1)
+    return html_text
+
+
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
     html_text = rewrite_legacy_article_urls(html_text, articles if articles is not None else [article])
     absolute = article_absolute(article)
-    html_text = _upsert_meta(html_text, absolute)
+    html_text = _upsert_meta(html_text, absolute, article.get('description'))
     html_text = _upsert_article_schema(html_text, article, absolute)
     html_text = _insert_visible_breadcrumb(html_text, str(article.get('title') or ''))
+    html_text = ensure_box_score(html_text, article)
     return html_text
 
 

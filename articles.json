@@ -7,7 +7,8 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-30",
     "image": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.jpg",
-    "imageAlt": "Caitlin Clark of the Indiana Fever dribbling in a white jersey."
+    "imageAlt": "Caitlin Clark of the Indiana Fever dribbling in a white jersey.",
+    "espnGameId": "401918018"
   },
   {
     "slug": "wnba-expansion-teams",
@@ -27,11 +28,12 @@
     "slug": "liberty-lynx-game-2-recap",
     "url": "/news/liberty-lynx-game-2-recap/",
     "title": "Johannes Hits the Dagger Three, Liberty Sweep the Lynx 87-71",
-    "description": "Marine Johannes hit a 24-foot three to make it 76-60 Liberty, Jonquel Jones finished the and-one for 79-60, and New York closed out an 87-71 sweep of the No. 1 Lynx.",
+    "description": "Marine Johannes hit a 24-foot three, Jonquel Jones finished the and-one, and New York closed out an 87-71 sweep of the No. 1 Lynx.",
     "category": "WNBA Playoffs",
     "date": "2026-09-30",
     "image": "/images/articles/liberty-lynx-game-1-full-recap/marine-johannes-liberty-2026.jpg",
-    "imageAlt": "Marine Johannes of the New York Liberty dribbling at Target Center"
+    "imageAlt": "Marine Johannes of the New York Liberty dribbling at Target Center",
+    "espnGameId": "401918017"
   },
   {
     "slug": "aces-fever-game-1-aja-wilson-38",
@@ -41,7 +43,8 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
     "image": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2026.jpg",
-    "imageAlt": "A'ja Wilson of the Las Vegas Aces"
+    "imageAlt": "A'ja Wilson of the Las Vegas Aces",
+    "espnGameId": "401918015"
   },
   {
     "slug": "liberty-lynx-game-1-full-recap",
@@ -51,7 +54,8 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
     "image": "/images/articles/liberty-lynx-game-1-full-recap/marine-johannes-liberty-2026.jpg",
-    "imageAlt": "Marine Johannes of the New York Liberty"
+    "imageAlt": "Marine Johannes of the New York Liberty",
+    "espnGameId": "401918014"
   },
   {
     "slug": "dream-mystics-game-1-howard-reese",
@@ -61,7 +65,8 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
     "image": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.jpg",
-    "imageAlt": "Jordin Canada of the Atlanta Dream"
+    "imageAlt": "Jordin Canada of the Atlanta Dream",
+    "espnGameId": "401918013"
   },
   {
     "slug": "valkyries-wings-game-1-zandalasini",
@@ -71,7 +76,8 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
     "image": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.jpg",
-    "imageAlt": "Cecilia Zandalasini of the Golden State Valkyries"
+    "imageAlt": "Cecilia Zandalasini of the Golden State Valkyries",
+    "espnGameId": "401918016"
   },
   {
     "slug": "liberty-lynx-game-1-ionescu-stewart",
@@ -81,13 +87,14 @@
     "category": "WNBA Playoffs",
     "date": "2026-09-27",
     "image": "/images/articles/liberty-lynx-game-1-ionescu-stewart/sabrina-ionescu-liberty-target-center-2026.jpg",
-    "imageAlt": "Sabrina Ionescu of the New York Liberty"
+    "imageAlt": "Sabrina Ionescu of the New York Liberty",
+    "espnGameId": "401918014"
   },
   {
     "slug": "fiba-womens-basketball-world-cup-2026",
     "url": "/news/fiba-womens-basketball-world-cup-2026/",
     "title": "This Is the Olympics of the WNBA",
-    "description": "The league pauses as Team USA heads to Berlin with Caitlin Clark, Angel Reese, Paige Bueckers, A'ja Wilson and a roster carrying 58 combined WNBA All-Star selections.",
+    "description": "The league pauses as Team USA heads to Berlin with Caitlin Clark, Angel Reese, Paige Bueckers, A'ja Wilson and 58 combined All-Star selections.",
     "category": "World Cup",
     "date": "2026-08-30",
     "image": "/images/articles/world-cup-2026/world-cup-2026-hero.png",
