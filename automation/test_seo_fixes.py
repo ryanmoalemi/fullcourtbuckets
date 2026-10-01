@@ -82,6 +82,22 @@ class GeneratorRuleTests(unittest.TestCase):
         self.assertLessEqual(len(description), 155)
         self.assertNotIn('\u2014', description)
 
+    def test_orphan_stub_recovers_the_id_slug_without_a_title(self):
+        target = builder.orphan_player_target(
+            'matilde-villa',
+            '<title>Redirect</title><link rel="canonical" href="https://fullcourtbuckets.com/wnba/">',
+            {},
+            {'matilde-villa-270867'},
+        )
+        self.assertEqual(target, 'https://fullcourtbuckets.com/wnba/matilde-villa-270867/')
+        hub = builder.orphan_player_target(
+            'nadia-fingall',
+            '<title>Redirect</title><link rel="canonical" href="https://fullcourtbuckets.com/wnba/">',
+            {},
+            {'matilde-villa-270867'},
+        )
+        self.assertEqual(hub, 'https://fullcourtbuckets.com/wnba/')
+
     def test_box_score_link_for_a_future_recap(self):
         html_text = '<article><p>Recap.</p><p class="brand-sign">Full Court Buckets</p></article>'
         updated = links.ensure_box_score(html_text, {'espnGameId': '401918017'})
@@ -120,6 +136,7 @@ class GeneratorRuleTests(unittest.TestCase):
                 '<title>Nadia Fingall WNBA Stats | Full Court Buckets</title>',
                 encoding='utf-8',
             )
+            builder.build(root)
             builder.build(root)
             stub = (root / 'wnba/alicia-florez/index.html').read_text(encoding='utf-8')
             self.assertIn('noindex', stub)
