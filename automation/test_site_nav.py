@@ -1,4 +1,5 @@
 """The built site must share one main menu. A missing or drifted nav fails."""
+import json
 import re
 import unittest
 from pathlib import Path
@@ -35,8 +36,19 @@ class SiteNavTests(unittest.TestCase):
         self.assertNotIn('href="/wnba/#teams"', text)
         self.assertIn('aria-controls="site-nav-sub-players"', text)
         self.assertIn('aria-controls="site-nav-sub-teams"', text)
-        self.assertIn('aria-controls="site-nav-sub-news"', text)
+        self.assertIn('aria-controls="site-nav-sub-about"', text)
+        self.assertNotIn('site-nav-sub-news', text)
+        self.assertNotIn('Show News menu', text)
+        self.assertIn('<li><a href="/news/">News</a></li>', text)
+        self.assertIn('<li><a href="/standings/">Standings</a></li>', text)
+        news = next(item for item in menu if item['label'] == 'News')
+        self.assertEqual(news, {'label': 'News', 'href': '/news/'})
+        self.assertTrue(any(item['label'] == 'Players' and item.get('children') for item in menu))
+        self.assertTrue(any(item['label'] == 'Teams' and item.get('children') for item in menu))
+        self.assertTrue(any(item['label'] == 'About' and item.get('children') for item in menu))
         self.assertIn('>Show Players menu</span>', text)
+        for article in json.loads((ROOT / 'articles.json').read_text(encoding='utf-8')):
+            self.assertNotIn(article['title'], text)
         self.assertIn('<ul id="site-nav-sub-teams">', text)
         self.assertIn('class="site-nav-subtoggle" aria-expanded="false"', text)
         self.assertIn('Player index, A to Z', text)

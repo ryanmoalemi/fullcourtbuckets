@@ -3,7 +3,7 @@
 
 Every generator and hand-written page renders this module. Do not add a second
 menu in a template. Submenu links are plain HTML; site_nav.js only toggles the
-mobile panel.
+mobile panel. News is one link to /news/. Do not put posts in the menu.
 """
 from __future__ import annotations
 
@@ -163,21 +163,9 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
     if exists('/standings/'):
         items.append({'label': 'Standings', 'href': '/standings/'})
 
-    news_children = []
-    articles = sorted(
-        links.load_articles(root),
-        key=lambda article: article.get('date') or '',
-        reverse=True,
-    )
-    for article in articles:
-        slug = article.get('slug') or ''
-        title = str(article.get('title') or '').strip()
-        href = links.article_href(article)
-        if slug and title and exists(href):
-            news_children.append({'label': title, 'href': href})
-    if exists('/news/') or news_children:
-        parent = '/news/' if exists('/news/') else news_children[0]['href']
-        items.append({'label': 'News', 'href': parent, 'children': news_children})
+    # One link. Posts stay on /news/ and are never added to this menu.
+    if exists('/news/'):
+        items.append({'label': 'News', 'href': '/news/'})
 
     if exists('/about/'):
         children = []
