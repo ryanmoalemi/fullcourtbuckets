@@ -11,6 +11,11 @@ nav.site-nav .site-nav-bars:before,nav.site-nav .site-nav-bars:after{content:"";
 nav.site-nav .site-nav-bars:before{top:-6px}
 nav.site-nav .site-nav-bars:after{top:6px}
 .shell.nav{flex-wrap:wrap}
+/* The open mobile panel is position:absolute; top:100% of the nearest positioned
+   ancestor. Plain header pages (news hub, about, contact, privacy, terms, 404)
+   set no position, so the panel sat just below the viewport and looked closed.
+   :where() loses to header{position:sticky} on the homepage, standings, and posts. */
+:where(header,.site-header){position:relative}
 header,.site-header{z-index:40}
 .site-header{position:relative}
 @media (min-width:901px){

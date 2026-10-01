@@ -65,6 +65,9 @@ class SiteNavTests(unittest.TestCase):
         self.assertNotIn('<script', text)
         self.assertNotIn('createElement', site_nav.JS_TEXT)
         self.assertNotIn('innerHTML', site_nav.JS_TEXT)
+        self.assertIn("menu.style.maxHeight", site_nav.JS_TEXT)
+        js_path = ROOT / 'assets' / 'site-nav.js'
+        self.assertEqual(js_path.read_text(encoding='utf-8'), site_nav.JS_TEXT)
 
     def test_every_built_page_has_the_same_nav(self):
         menu = site_nav.build_menu(ROOT)
@@ -108,6 +111,7 @@ class SiteNavTests(unittest.TestCase):
         css_path = ROOT / 'assets' / 'site-nav.css'
         css = css_path.read_text(encoding='utf-8')
         self.assertEqual(css, site_nav.CSS_TEXT)
+        self.assertIn(':where(header,.site-header){position:relative}', css)
         self.assertIn('.site-footer .footer-links{display:flex;flex-wrap:wrap', css)
         self.assertIn('column-gap:16px', css)
         self.assertIn('color:#d4d0ca', css)
