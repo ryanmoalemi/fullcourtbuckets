@@ -495,6 +495,34 @@ def _name_from_player_html(text: str) -> str:
     return title
 
 
+def orphan_player_target(directory_slug: str, html_text: str, published_names: dict, published_slugs: set) -> str:
+    """Where an old /wnba/<slug>/ folder should send people.
+
+    A titled page matches the current profile with the same name. A later rebuild
+    only has the redirect stub, so the folder name is also matched to one current
+    slug (matilde-villa -> matilde-villa-270867). Anything else goes to the hub.
+    """
+    name = _name_from_player_html(html_text)
+    owners = published_names.get(name.casefold(), []) if name else []
+    if len(owners) == 1:
+        return f'{BASE}/wnba/{owners[0]}/'
+    prefixed = sorted(
+        slug for slug in published_slugs
+        if slug == directory_slug or slug.startswith(directory_slug + '-')
+    )
+    if len(prefixed) == 1:
+        return f'{BASE}/wnba/{prefixed[0]}/'
+    canonical = re.search(r'rel="canonical" href="([^"]+)"', html_text or '')
+    if canonical:
+        target = canonical.group(1).rstrip('/')
+        marker = f'{BASE}/wnba/'
+        if target.startswith(marker):
+            slug = target[len(marker):]
+            if slug in published_slugs and '/' not in slug:
+                return target + '/'
+    return f'{BASE}/wnba/'
+
+
 def _ordinal(number: int) -> str:
     if 10 <= number % 100 <= 20:
         suffix = 'th'
@@ -951,6 +979,7 @@ def build(root: Path):
     published_names={}
     for entry in published_players:
         published_names.setdefault(str(entry.get('name') or '').casefold(), []).append(entry['slug'])
+    published_slugs={entry['slug'] for entry in published_players}
     wnba_dir=root/'wnba'
     if wnba_dir.is_dir():
         for child in sorted(wnba_dir.iterdir(), key=lambda path: path.name):
@@ -958,9 +987,8 @@ def build(root: Path):
                 continue
             if not (child/'index.html').is_file():
                 continue
-            name=_name_from_player_html((child/'index.html').read_text(encoding='utf-8'))
-            owners=published_names.get(name.casefold(), []) if name else []
-            target=f'{BASE}/wnba/{owners[0]}/' if len(owners)==1 else f'{BASE}/wnba/'
+            html_text=(child/'index.html').read_text(encoding='utf-8')
+            target=orphan_player_target(child.name, html_text, published_names, published_slugs)
             files[f'wnba/{child.name}/index.html']=links.permanent_redirect(target)
     include_standings=(root/'standings'/'index.html').is_file()
     for slot in linking['by_id'].values():
