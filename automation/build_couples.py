@@ -134,7 +134,7 @@ def person_link(name: str, slug: str | None) -> str:
     safe = esc(name)
     if not slug:
         return safe
-    return f'<a href="/wnba/{esc(slug)}/" target="_blank" rel="noopener">{safe}</a>'
+    return f'<a href="/wnba/{esc(slug)}/">{safe}</a>'
 
 
 def note_html(couple: dict, partner: str, partner_slug: str | None) -> str:
@@ -151,7 +151,7 @@ def note_html(couple: dict, partner: str, partner_slug: str | None) -> str:
     href = f"/wnba/couples/#{couple_anchor(couple)}"
     return (
         f'<p class="relationship-note">{sentence} '
-        f'<a href="{esc(href)}" target="_blank" rel="noopener">Couples page</a>.</p>'
+        f'<a href="{esc(href)}">Couples page</a>.</p>'
     )
 
 
@@ -714,7 +714,7 @@ def patch_hub(root: Path = ROOT) -> None:
         return
     updated, count = re.subn(
         r'(<p>\d+ profiles\. Available statistics from 2008 onward\.</p>)',
-        r'\1<p><a class="inline-link" href="/wnba/couples/" target="_blank" rel="noopener">Confirmed WNBA relationships</a></p>',
+        r'\1<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>',
         text,
         count=1,
     )

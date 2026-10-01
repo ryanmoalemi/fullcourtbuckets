@@ -353,7 +353,7 @@ def _card(slot: dict, city: str, facts: list[str]) -> str:
     return (
         '<li class="team-card">'
         f'{photo}'
-        f'<a class="team-card-link" href="{esc(href)}" target="_blank" rel="noopener">'
+        f'<a class="team-card-link" href="{esc(href)}">'
         f'<span class="team-card-body">{city_html}<h3>{esc(slot["full_name"])}</h3>{fact_html}</span>'
         '</a>'
         f'{credit}</li>'

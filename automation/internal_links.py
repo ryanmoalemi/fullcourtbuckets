@@ -104,8 +104,22 @@ def team_href(slot: dict) -> str:
     return f'/wnba/teams/{slot["slug"]}/'
 
 
+def link_target_attrs(href: str) -> str:
+    """Off-site links open in a new tab. On-site links stay in this tab."""
+    value = (href or '').strip()
+    lowered = value.casefold()
+    if lowered.startswith(('mailto:', 'tel:')):
+        return ' target="_blank" rel="noopener"'
+    if lowered.startswith(('http://', 'https://', '//')):
+        rest = value.split('//', 1)[-1]
+        host = rest.split('/')[0].split('@')[-1].split(':')[0].casefold()
+        if host not in {'fullcourtbuckets.com', 'www.fullcourtbuckets.com'}:
+            return ' target="_blank" rel="noopener"'
+    return ''
+
+
 def inline_link(label: str, href: str) -> str:
-    return f'<a class="inline-link" href="{esc(href)}" target="_blank" rel="noopener">{esc(label)}</a>'
+    return f'<a class="inline-link" href="{esc(href)}"{link_target_attrs(href)}>{esc(label)}</a>'
 
 
 def linked_team_name(name: str, linking: dict | None, budget: Budget | None):
@@ -162,7 +176,7 @@ def article_phrases(index: dict, linking: dict) -> list[tuple[str, str]]:
     return compiled
 
 
-def _link_plain(text: str, compiled, used: set[str]) -> str:
+def _link_plain(text: str, compiled, used: set[str], new_tab: bool = False) -> str:
     pieces = []
     rest = text
     while rest:
@@ -181,13 +195,14 @@ def _link_plain(text: str, compiled, used: set[str]) -> str:
             break
         start, end, raw, url = best
         pieces.append(rest[:start])
-        pieces.append(f'<a class="inline-link" href="{url}" target="_blank" rel="noopener">{raw}</a>')
+        attrs = ' target="_blank" rel="noopener"' if new_tab else ''
+        pieces.append(f'<a class="inline-link" href="{url}"{attrs}>{raw}</a>')
         used.add(url)
         rest = rest[end:]
     return ''.join(pieces)
 
 
-def _link_fragment(fragment: str, compiled, used: set[str]) -> str:
+def _link_fragment(fragment: str, compiled, used: set[str], new_tab: bool = False) -> str:
     parts = TAG.split(fragment)
     out = []
     in_anchor = 0
@@ -216,7 +231,7 @@ def _link_fragment(fragment: str, compiled, used: set[str]) -> str:
         elif in_anchor or skip:
             out.append(part)
         else:
-            out.append(_link_plain(part, compiled, used))
+            out.append(_link_plain(part, compiled, used, new_tab=new_tab))
     return ''.join(out)
 
 
@@ -227,9 +242,11 @@ def link_copy(html_text: str, compiled, scope: str = 'article') -> str:
     if not match:
         return html_text
     used: set[str] = set()
+    # Story prose keeps the new-tab pattern. Hub and terms copy stays in this tab.
+    new_tab = scope == 'article'
 
     def region(found: re.Match) -> str:
-        return found.group(1) + _link_fragment(found.group(2), compiled, used) + found.group(3)
+        return found.group(1) + _link_fragment(found.group(2), compiled, used, new_tab=new_tab) + found.group(3)
 
     inner = REGION.sub(region, match.group(2))
     return html_text[:match.start(2)] + inner + html_text[match.end(2):]
@@ -264,7 +281,7 @@ def _story_card(article: dict) -> str:
     image = article.get('image') or ''
     alt = article.get('imageAlt') or title
     return (
-        f'<a class="article-card" href="{esc(article_href(article))}" target="_blank" rel="noopener">'
+        f'<a class="article-card" href="{esc(article_href(article))}">'
         f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"></div>'
         f'<div class="article-copy"><div class="cat">{esc(article.get("category") or "")}</div>'
         f'<h3>{esc(title)}</h3><p>{esc(article.get("description") or "")}</p>'
@@ -284,9 +301,9 @@ HUBS = (
     '<!-- fcb-hubs:start --><section class="section" id="site-hubs">'
     '<div class="section-head"><h2 class="section-title">Players and standings</h2></div>'
     '<div class="coverage-grid">'
-    '<a class="coverage-card" href="/standings/" target="_blank" rel="noopener"><b>Standings</b>'
+    '<a class="coverage-card" href="/standings/"><b>Standings</b>'
     '<p>Current WNBA standings and where each team sits in the playoff race.</p></a>'
-    '<a class="coverage-card" href="/wnba/" target="_blank" rel="noopener"><b>Players</b>'
+    '<a class="coverage-card" href="/wnba/"><b>Players</b>'
     '<p>Season statistics and profiles for WNBA players, past and present.</p></a>'
     '</div></section><!-- fcb-hubs:end -->'
 )
@@ -330,6 +347,8 @@ def apply_homepage(text: str, articles: list) -> str:
         text = text.replace(old, guard, 1)
     text = text.replace('link.href = "/" + featured.slug + "/";', 'link.href = articlePath(featured);')
     text = text.replace('card.href = "/" + a.slug + "/";', 'card.href = articlePath(a);')
+    text = text.replace('    link.target = "_blank";\n    link.rel = "noopener";\n', '')
+    text = text.replace('      card.target = "_blank";\n      card.rel = "noopener";\n', '')
     helper = 'function articlePath(a){return (a.url && a.url.charAt(0)==="/") ? a.url : ("/news/" + a.slug + "/");}'
     if 'function articlePath(' not in text:
         text = text.replace('fetch("/articles.json")', helper + '\n  fetch("/articles.json")', 1)
@@ -412,7 +431,7 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
         "  var href = teamPages[name];\n"
         "  var safe = String(name).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');\n"
         "  if (!href) return '<span class=\"team-name\">' + safe + '</span>';\n"
-        "  return '<a class=\"team-name\" href=\"' + href + '\" target=\"_blank\" rel=\"noopener\">' + safe + '</a>';\n"
+        "  return '<a class=\"team-name\" href=\"' + href + '\">' + safe + '</a>';\n"
         '}\n/* fcb-team-pages:end */'
     )
     if '/* fcb-team-pages:start */' in text:
@@ -438,7 +457,7 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
         raw = str(team.get('name') or '')
         name = team_names.public_name(raw)
         href = by_name.get(raw) or by_name.get(name)
-        label = f'<a class="team-name" href="{esc(href)}" target="_blank" rel="noopener">{esc(name)}</a>' if href else f'<span class="team-name">{esc(name)}</span>'
+        label = f'<a class="team-name" href="{esc(href)}">{esc(name)}</a>' if href else f'<span class="team-name">{esc(name)}</span>'
         cells = (
             f'<td><span class="rank">{esc(team.get("rank"))}</span></td>'
             f'<td><div class="team-cell"><span class="team-badge">{esc(name.split()[-1][:3].upper())}</span>{label}</div></td>'
@@ -481,11 +500,11 @@ def apply_standings(text: str, linking: dict, standings: dict) -> str:
     blocks = []
     for slot in sorted(linking['by_id'].values(), key=lambda item: item['full_name'].casefold()):
         players = ''.join(
-            f'<li><a class="inline-link" href="/wnba/{esc(player["slug"])}/" target="_blank" rel="noopener">{esc(player["name"])}</a></li>'
+            f'<li><a class="inline-link" href="/wnba/{esc(player["slug"])}/">{esc(player["name"])}</a></li>'
             for player in slot['players']
         )
         blocks.append(
-            f'<h3><a href="{esc(team_href(slot))}" target="_blank" rel="noopener">{esc(slot["full_name"])}</a></h3><ul>{players}</ul>'
+            f'<h3><a href="{esc(team_href(slot))}">{esc(slot["full_name"])}</a></h3><ul>{players}</ul>'
         )
     roster = (
         '<section class="explainer" id="rosters"><h3>Current rosters</h3>'
@@ -543,13 +562,13 @@ def apply_known_page_links(text: str, relative: str) -> str:
         if '<b>Players:</b>' in text:
             text = text.replace(
                 '<b>Players:</b>',
-                '<b><a href="/wnba/" target="_blank" rel="noopener">Players</a>:</b>',
+                '<b><a href="/wnba/">Players</a>:</b>',
                 1,
             )
         if '<b>Standings:</b>' in text:
             text = text.replace(
                 '<b>Standings:</b>',
-                '<b><a href="/standings/" target="_blank" rel="noopener">Standings</a>:</b>',
+                '<b><a href="/standings/">Standings</a>:</b>',
                 1,
             )
     if relative == 'terms/index.html':
@@ -904,7 +923,7 @@ def _news_list_item(article: dict) -> str:
     label = _format_date(when) if when else ''
     thumb = f'<img src="{esc(image)}" alt="{esc(alt)}">' if image else ''
     return (
-        '<li><a class="news-item" href="' + esc(article_href(article)) + '" target="_blank" rel="noopener">'
+        '<li><a class="news-item" href="' + esc(article_href(article)) + '">'
         + thumb
         + '<span class="news-copy"><time datetime="' + esc(when) + '">' + esc(label) + '</time>'
         + '<h2>' + esc(title) + '</h2><p>' + esc(summary) + '</p></span></a></li>'

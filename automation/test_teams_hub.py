@@ -41,7 +41,8 @@ class TeamsHubTests(unittest.TestCase):
         self.assertEqual(body.count('class="team-card-link"'), 15)
         self.assertEqual(body.count('class="team-card-link" href="'), 15)
         self.assertEqual(body.count('<a class="team-card-link" href="'), body.count('class="team-card-link" href="'))
-        self.assertIn('target="_blank" rel="noopener"', body[body.find('class="team-card-link"'):body.find('class="team-card-link"') + 180])
+        opening = body[body.find('<a class="team-card-link"'):body.find('>', body.find('<a class="team-card-link"')) + 1]
+        self.assertNotIn('target=', opening)
         cards = body.split('<li class="team-card">')[1:]
         self.assertEqual(len(cards), 15)
         for card in cards:
@@ -99,7 +100,8 @@ class TeamsHubTests(unittest.TestCase):
         self.assertIn('ca-pub-6621195315204235', page)
         crumb = page[page.find('class="breadcrumbs"'):page.find('</div>', page.find('class="breadcrumbs"'))]
         self.assertNotIn('target="_blank"', crumb)
-        self.assertIn('class="inline-link" href="/wnba/teams/" target="_blank" rel="noopener"', page)
+        self.assertIn('class="inline-link" href="/wnba/teams/"', page)
+        self.assertNotIn('href="/wnba/teams/" target="_blank"', page)
 
 
 if __name__ == '__main__':
