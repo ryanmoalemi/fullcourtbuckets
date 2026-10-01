@@ -42,7 +42,7 @@ Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`
 
 Every post is published at `/news/<slug>/`. The slug does not change. Add `news/<slug>/index.html` (and its images) and one `articles.json` entry with `slug`, `url` (`/news/<slug>/`), `title`, `description`, `category`, `date` (`YYYY-MM-DD`), `image`, and `imageAlt`. Do not publish a new post at the site root.
 
-The `/news/` hub lists every article from `articles.json`, newest first, with the date, title, one-line summary, and thumbnail. Link the new post from that hub. The generator rebuilds the hub, so do not hand-edit the list. Breadcrumbs on the post are Home > News > Post, both in the visible trail and in `BreadcrumbList` JSON-LD. The article JSON-LD `url` and `mainEntityOfPage` use the `/news/<slug>/` URL.
+The `/news/` hub lists every article from `articles.json`, newest first, with the date, title, one-line summary, and thumbnail. Link the new post from that hub. The generator rebuilds the hub, so do not hand-edit the list. The main menu links to `/news/` only. Do not list individual posts in the menu. Breadcrumbs on the post are Home > News > Post, both in the visible trail and in `BreadcrumbList` JSON-LD. The article JSON-LD `url` and `mainEntityOfPage` use the `/news/<slug>/` URL.
 
 The homepage sorts `articles.json` by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Add the new `/news/<slug>/` URL and `/news/` to `sitemap.xml` and `pages-sitemap.xml`. Do not list a root post URL.
 
