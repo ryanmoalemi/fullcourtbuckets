@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-30T11:27:57+00:00",
-  "stats_updated_at": "2026-09-29T00:02:44+00:00",
+  "checked_at": "2026-10-01T07:31:35+00:00",
+  "stats_updated_at": "2026-10-01T07:31:35+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -469,49 +469,9 @@
       "stl": 0.0,
       "blk": 0.0,
       "turnover": 0.0
-    },
-    {
-      "game_id": 25038,
-      "player_id": 541,
-      "date": "2026-08-26T00:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 31,
-        "full_name": "Portland Fire",
-        "abbreviation": "POR",
-        "city": "Portland",
-        "name": "Fire",
-        "conference": null
-      },
-      "home_team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 31,
-        "full_name": "Portland Fire",
-        "abbreviation": "POR",
-        "city": "Portland",
-        "name": "Fire",
-        "conference": null
-      },
-      "home_score": 96,
-      "away_score": 78,
-      "minutes": "19",
-      "pts": 14.0,
-      "ast": 0.0,
-      "reb": 1.0,
-      "stl": 2.0,
-      "blk": 0.0,
-      "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-26",
+  "game_log_window_start": "2026-08-27",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

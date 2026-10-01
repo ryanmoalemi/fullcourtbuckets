@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-09-30T11:27:57+00:00",
+  "checked_at": "2026-10-01T07:31:35+00:00",
   "stats_updated_at": "2026-09-29T00:02:44+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
@@ -391,7 +391,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-26",
+  "game_log_window_start": "2026-08-27",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
