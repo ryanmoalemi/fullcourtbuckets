@@ -48,7 +48,7 @@ The homepage sorts `articles.json` by date, features the newest story, and lists
 
 GitHub Pages has no server redirects. When a post leaves an old root URL, leave a redirect stub at that old path: meta refresh `0`, `rel=canonical` to the new URL, `noindex`, and `location.replace` to the new URL.
 
-Every link on fullcourtbuckets.com opens in a new tab. Put `target="_blank" rel="noopener"` on every `<a>`, including article body text, photo captions, nav, footer, and the homepage story cards rendered from `articles.json`.
+On-site navigation opens in the same tab. Do not put `target="_blank"` on menu links, footer links, breadcrumbs, news hub `.news-item` cards, homepage story cards, player cards, team cards, standings links, or other hub and index links. `target="_blank" rel="noopener"` stays on external outbound links and on links inside article body prose, including photo captions and the first player or team mention in a story.
 
 ## Player pages
 

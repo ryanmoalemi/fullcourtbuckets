@@ -138,3 +138,34 @@ class SiteNavTests(unittest.TestCase):
                     if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
                         offenders.append(f'{rel} {tag[:160]}')
         self.assertEqual(offenders, [])
+
+    def test_on_site_links_outside_article_prose_stay_in_page(self):
+        """Hubs, indexes, cards, and profiles stay in this tab. Story prose does not."""
+        offenders = []
+        for path in iter_html(ROOT):
+            rel = path.relative_to(ROOT).as_posix()
+            text = path.read_text(encoding='utf-8')
+            parts = rel.split('/')
+            if len(parts) == 3 and parts[0] == 'news' and parts[2] == 'index.html':
+                continue
+            if 'http-equiv="refresh"' in text.lower():
+                continue
+            for block in site_nav._SCRIPT_OR_STYLE_RE.findall(text):
+                if not block[:7].casefold().startswith('<script'):
+                    continue
+                if '_blank' in block:
+                    offenders.append(rel + ' script still opens a new tab')
+                    break
+            visible = site_nav._SCRIPT_OR_STYLE_RE.sub('', text)
+            for tag in site_nav._ANCHOR_RE.findall(visible):
+                href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
+                if href and not site_nav._is_internal_href(href.group(2)):
+                    continue
+                if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
+                    offenders.append(f'{rel} {tag[:180]}')
+        self.assertEqual(offenders, [])
+        hub = (ROOT / 'news' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('class="news-item"', hub)
+        self.assertNotIn('target="_blank"', hub)
+        story = (ROOT / 'news' / 'liberty-lynx-game-2-recap' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('href="/wnba/breanna-stewart/" target="_blank" rel="noopener"', story)
