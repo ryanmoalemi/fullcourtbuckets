@@ -8,6 +8,7 @@ name that is already written in the copy.
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
 import json
 from pathlib import Path
@@ -639,7 +640,11 @@ def apply_known_page_links(text: str, relative: str) -> str:
     text = ensure_footer_hubs(text)
     if relative == 'about/index.html':
         if 'Follow Full Court Buckets on TikTok at ' not in text:
-            marker = '<p><a href="/authors/ryan-moalemi/">Ryan Moalemi</a> writes the news and game recaps.</p>'
+            marker = (
+                '<p><a href="/authors/ryan-moalemi/">Ryan Moalemi</a> runs Full Court Buckets. '
+                'He comes up with the stories, edits every one, and uses AI tools to help draft them. '
+                '<a href="/how-we-make-full-court-buckets/">Here\'s how that works.</a></p>'
+            )
             if marker in text:
                 text = text.replace(marker, marker + ABOUT_TIKTOK_HTML, 1)
             elif '</main>' in text:
@@ -703,8 +708,22 @@ AUTHOR_NAME = 'Ryan Moalemi'
 AUTHOR_PATH = '/authors/ryan-moalemi/'
 AUTHOR_PAGE = 'authors/ryan-moalemi/index.html'
 AUTHOR_URL = BASE + AUTHOR_PATH
-AUTHOR_IMAGE = '/images/authors/ryan-moalemi.jpg'
+AUTHOR_PHOTO = '/images/authors/ryan-moalemi.jpg'
+BYLINE_PHOTO = '/images/authors/ryan-moalemi-byline.jpg'
+
+
+def versioned_image(path: str) -> str:
+    """Same ?v= cache bust portraits use, so a replaced photo is not stuck in cache."""
+    file = Path(__file__).resolve().parents[1] / path.lstrip('/')
+    if not file.is_file():
+        return path
+    digest = hashlib.sha256(file.read_bytes()).hexdigest()[:12]
+    return f'{path}?v={digest}'
+
+
+AUTHOR_IMAGE = versioned_image(AUTHOR_PHOTO)
 AUTHOR_IMAGE_URL = BASE + AUTHOR_IMAGE
+BYLINE_IMAGE = versioned_image(BYLINE_PHOTO)
 # One line for Person JSON-LD. Visible bio paragraphs stay separate.
 AUTHOR_DESCRIPTION = (
     'Ryan Moalemi has been writing internet content since 2001. '
@@ -727,7 +746,7 @@ AUTHOR_BIO = (
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
 BYLINE_HTML = (
     '<a class="byline" href="/authors/ryan-moalemi/">'
-    '<img src="/images/authors/ryan-moalemi.jpg" alt="Ryan Moalemi" width="40" height="40">'
+    f'<img src="{BYLINE_IMAGE}" alt="Ryan Moalemi" width="40" height="40">'
     '<span>By Ryan Moalemi</span></a>'
 )
 BYLINE_CSS = (
@@ -740,11 +759,6 @@ BYLINE_CSS = (
 )
 BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
 HOW_PAGE = '/how-we-make-full-court-buckets/'
-HOW_MADE_HTML = (
-    '<p class="how-made">How this story was made: drafted with AI tools from the ESPN box score and other linked sources. '
-    'Ryan Moalemi runs the site. '
-    f'<a href="{HOW_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>.</p>'
-)
 HOW_MADE_CSS = (
     '.article .how-made{margin:22px 0 0;color:#a29f99;font-size:13px;line-height:1.55}'
     '.article .how-made a{color:#d4d0ca;text-decoration:underline}'
@@ -1177,20 +1191,6 @@ def ensure_byline(html: str) -> str:
     return html[:end + 1] + BYLINE_HTML + html[end + 1:]
 
 
-def ensure_how_made(html: str) -> str:
-    """Disclosure at the end of every story. Same wording on recaps and other posts."""
-    if '.article .how-made{' not in html:
-        if '</style>' in html:
-            html = html.replace('</style>', HOW_MADE_CSS + '</style>', 1)
-        elif '</head>' in html:
-            html = html.replace('</head>', '<style>' + HOW_MADE_CSS + '</style></head>', 1)
-    if HOW_MADE_RE.search(html):
-        return HOW_MADE_RE.sub(HOW_MADE_HTML, html, count=1)
-    if '</article>' in html:
-        return html.replace('</article>', HOW_MADE_HTML + '</article>', 1)
-    return html + HOW_MADE_HTML
-
-
 def _author_bio_html() -> str:
     parts = [
         '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
@@ -1296,6 +1296,53 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 '''
 
 
+HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
+HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
+HOW_MADE_RECAP = (
+    'How this story was made: drafted with AI tools from the ESPN box score linked above, '
+    'then reviewed and edited by Ryan Moalemi.'
+)
+HOW_MADE_OTHER = (
+    'How this story was made: drafted with AI tools from the sources linked above, '
+    'then reviewed and edited by Ryan Moalemi.'
+)
+HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
+
+
+def story_uses_box_score(html_text: str, article: dict | None) -> bool:
+    """Recaps name an ESPN game id or print a box-score line. Other posts do not."""
+    game_id = str((article or {}).get('espnGameId') or '').strip()
+    if game_id.isdigit():
+        return True
+    return 'class="box-score"' in (html_text or '')
+
+
+def how_made_html(html_text: str, article: dict | None) -> str:
+    sentence = HOW_MADE_RECAP if story_uses_box_score(html_text, article) else HOW_MADE_OTHER
+    return f'<p class="how-made">{sentence} {HOW_MADE_LINK}</p>'
+
+
+def ensure_how_made(html_text: str, article: dict | None = None) -> str:
+    """Disclosure at the end of a post. The box score, when there is one, stays above it."""
+    if '.article .how-made{' not in html_text:
+        if '</style>' in html_text:
+            html_text = html_text.replace('</style>', HOW_MADE_CSS + '</style>', 1)
+        elif '</head>' in html_text:
+            html_text = html_text.replace('</head>', '<style>' + HOW_MADE_CSS + '</style></head>', 1)
+    snippet = how_made_html(html_text, article)
+    if HOW_MADE_RE.search(html_text):
+        return HOW_MADE_RE.sub(snippet, html_text, count=1)
+    box = re.search(r'<p class="box-score">.*?</p>', html_text, re.S)
+    if box and story_uses_box_score(html_text, article):
+        end = box.end()
+        return html_text[:end] + snippet + html_text[end:]
+    if '<p class="brand-sign">' in html_text:
+        return html_text.replace('<p class="brand-sign">', snippet + '<p class="brand-sign">', 1)
+    if '</article>' in html_text:
+        return html_text.replace('</article>', snippet + '</article>', 1)
+    return html_text + snippet
+
+
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
@@ -1306,8 +1353,8 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = _upsert_article_schema(html_text, article, absolute)
     html_text = _insert_visible_breadcrumb(html_text, str(article.get('title') or ''))
     html_text = ensure_box_score(html_text, article)
+    html_text = ensure_how_made(html_text, article)
     html_text = ensure_byline(html_text)
-    html_text = ensure_how_made(html_text)
     return html_text
 
 

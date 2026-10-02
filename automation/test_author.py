@@ -51,7 +51,7 @@ class AuthorPageTests(unittest.TestCase):
     def test_author_page_bio_list_and_sitemap(self):
         page = (ROOT / 'authors' / 'ryan-moalemi' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('<h1>Ryan Moalemi</h1>', page)
-        self.assertIn('src="/images/authors/ryan-moalemi.jpg"', page)
+        self.assertIn('src="/images/authors/ryan-moalemi.jpg', page)
         self.assertIn('alt="Ryan Moalemi"', page)
         self.assertIn('width="320"', page)
         self.assertIn('height="320"', page)
@@ -82,7 +82,8 @@ class AuthorPageTests(unittest.TestCase):
         profile = persons[0]
         self.assertEqual(profile['name'], 'Ryan Moalemi')
         self.assertEqual(profile['url'], AUTHOR['url'])
-        self.assertEqual(profile['image'], 'https://fullcourtbuckets.com/images/authors/ryan-moalemi.jpg')
+        self.assertEqual(profile['image'], links.AUTHOR_IMAGE_URL)
+        self.assertIn(links.AUTHOR_PHOTO, profile['image'])
         self.assertEqual(profile['jobTitle'], 'Editor')
         self.assertIn('since 2001', profile['description'])
         self.assertIn('Full Court Buckets', profile['worksFor']['name'])
@@ -99,7 +100,7 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('href="/authors/ryan-moalemi/"', about)
         self.assertNotIn('href="/authors/ryan-moalemi/" target="_blank"', about)
         self.assertIn('TODO: owner, add the editor', about)
-        self.assertIn('runs Full Court Buckets. He picks the stories, and AI tools help draft them.', about)
+        self.assertIn('runs Full Court Buckets. He comes up with the stories, edits every one, and uses AI tools to help draft them.', about)
         self.assertIn('href="/how-we-make-full-court-buckets/">Here\'s how that works.</a>', about)
         self.assertNotIn('writes the news and game recaps.', about)
         menu = site_nav.render(site_nav.build_menu(ROOT), '/__none__')
@@ -131,7 +132,8 @@ class AuthorPageTests(unittest.TestCase):
             self.assertEqual(node['author'], AUTHOR, article['slug'])
             self.assertEqual(node['publisher']['@type'], 'Organization', article['slug'])
             self.assertEqual(node['publisher']['name'], 'Full Court Buckets', article['slug'])
-            self.assertIn(links.HOW_MADE_HTML, html, article['slug'])
+            expected = links.HOW_MADE_RECAP if links.story_uses_box_score(html, article) else links.HOW_MADE_OTHER
+            self.assertIn(expected, html, article['slug'])
             self.assertEqual(html.count('class="how-made"'), 1, article['slug'])
 
     def test_generator_adds_byline_to_a_new_post(self):
@@ -156,7 +158,7 @@ class AuthorPageTests(unittest.TestCase):
             (root / 'articles.json').write_text(json.dumps([article]), encoding='utf-8')
             html = links.prepare_article_page(root, article, [article])
             self.assertIn(links.BYLINE_HTML, html)
-            self.assertIn(links.HOW_MADE_HTML, html)
+            self.assertIn(links.HOW_MADE_OTHER, html)
             self.assertIn('<meta name="author" content="Ryan Moalemi">', html)
             node = links._article_node(_ld_nodes(html)[0])
             self.assertEqual(node['author'], AUTHOR)

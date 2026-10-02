@@ -66,32 +66,6 @@ def delete_removed_adu(root: Path) -> None:
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
 
-def adu_redirect_stub(relative: str) -> str:
-    """Permanent redirect. GitHub Pages cannot send HTTP 301 or 410."""
-    if relative not in REMOVED_ADU_PATHS:
-        raise BuildError('Not a former ADU path: '+relative)
-    target = 'https://sandiegoadubuilder.com/' + relative
-    safe = esc(target)
-    return (
-        '<!doctype html>\n'
-        '<html lang="en">\n'
-        '<head>\n'
-        '<meta charset="utf-8">\n'
-        '<title>Moved</title>\n'
-        '<meta name="robots" content="noindex">\n'
-        f'<link rel="canonical" href="{safe}">\n'
-        f'<meta http-equiv="refresh" content="0; url={safe}">\n'
-        f'<script>location.replace("{safe}");</script>\n'
-        '</head>\n'
-        '<body>\n'
-        f'<p><a href="{safe}">This page has moved.</a></p>\n'
-        '</body>\n'
-        '</html>\n'
-    )
-
-def adu_redirect_files() -> dict:
-    return {relative: adu_redirect_stub(relative) for relative in sorted(REMOVED_ADU_PATHS)}
-
 def value(n, integer=False):
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
         return '-'
@@ -935,6 +909,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('about/index.html', '/about/'),
         ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('contact/index.html', '/contact/'),
+        ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('privacy/index.html', '/privacy/'),
         ('terms/index.html', '/terms/'),
         ('wnba/index.html', '/wnba/'),
