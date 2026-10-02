@@ -324,7 +324,7 @@ def render_page(root: Path, table: dict) -> str:
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
-<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Built by the WNBA community, for the WNBA community</div></div></div>
+<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Independent WNBA news and analysis</div></div></div>
 <header><div class="shell nav"><a class="brand" href="/"><img src="/logo.png" alt="Full Court Buckets"></a>{nav}<a class="watch-btn nav-watch" href="/#latest">Latest Stories</a></div></header>
 <main class="page">
 <div class="standings-shell">

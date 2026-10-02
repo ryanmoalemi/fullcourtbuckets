@@ -41,6 +41,7 @@ FOOTER_HTML = (
     '<p class="footer-links"><a href="/wnba/">Players</a>'
     '<a href="/standings/">Standings</a>'
     '<a href="/about/">About</a>'
+    '<a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>'
     '<a href="/contact/">Contact</a>'
     '<a href="/privacy/">Privacy Policy</a>'
     '<a href="/terms/">Terms of Use</a>'
@@ -107,6 +108,7 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
     for relative in (
         'standings/index.html',
         'about/index.html',
+        'how-we-make-full-court-buckets/index.html',
         'contact/index.html',
         'privacy/index.html',
         'terms/index.html',

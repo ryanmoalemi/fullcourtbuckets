@@ -23,7 +23,7 @@ from link_graph import page_url
 BASE = 'https://fullcourtbuckets.com'
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-# Former ADU articles. The builder may write a redirect stub and must not recreate the page.
+# Former ADU articles. They stay deleted so those URLs 404. Do not recreate the pages or stubs.
 REMOVED_ADU_PATHS = frozenset({
     'adu-cost.html',
     'adu-feasibility-studies.html',
@@ -53,12 +53,15 @@ class BuildError(RuntimeError):
     pass
 
 def reject_removed_adu(relative, content):
-    """Block ADU articles. A noindex stub that only redirects to the same path
-    on sandiegoadubuilder.com is the GitHub Pages stand-in for a 301."""
-    if relative in REMOVED_ADU_PATHS and content == adu_redirect_stub(relative):
-        return
+    """Block ADU articles and the old sandiegoadubuilder.com redirect stubs."""
     if relative in REMOVED_ADU_PATHS or 'sandiegoadubuilder.com' in content:
         raise BuildError('Refusing to publish removed ADU content: '+relative)
+
+def delete_removed_adu(root: Path) -> None:
+    for relative in REMOVED_ADU_PATHS:
+        path = Path(root) / relative
+        if path.is_file():
+            path.unlink()
 
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
@@ -268,7 +271,7 @@ def header(route='/', menu=None):
     if menu is None:
         menu = site_nav.build_menu(Path(__file__).resolve().parents[1])
     nav = site_nav.render(menu, route)
-    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
+    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent WNBA news and analysis</span></div></div>'''
 
 def footer(include_standings=True):
     html_text = site_nav.footer_html(include_standings)
@@ -930,6 +933,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
     static = [
         ('index.html', '/'),
         ('about/index.html', '/about/'),
+        ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('contact/index.html', '/contact/'),
         ('privacy/index.html', '/privacy/'),
         ('terms/index.html', '/terms/'),
@@ -970,6 +974,7 @@ def contextual_link_count(page: str) -> int:
 
 
 def build(root: Path):
+    delete_removed_adu(root)
     data=root/'data/wnba'
     index=json.loads((data/'players-index.json').read_text())
     status=json.loads((data/'status.json').read_text())
@@ -1068,7 +1073,7 @@ def build(root: Path):
         updated=site_nav.install(original, '/standings/', menu)
         if updated != original:
             files['standings/index.html']=updated
-    for relative in ('about/index.html','contact/index.html','privacy/index.html','terms/index.html'):
+    for relative in ('about/index.html','contact/index.html','privacy/index.html','terms/index.html','how-we-make-full-court-buckets/index.html'):
         path=root/relative
         if not path.is_file():
             continue
@@ -1081,7 +1086,6 @@ def build(root: Path):
     if collection_page:
         files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
-    files.update(adu_redirect_files())
     files.update(site_nav.install_tree(root, menu, set(files)))
     robots=root/'robots.txt'
     robots_text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'
@@ -1117,6 +1121,7 @@ def build(root: Path):
 def refresh_published_news(root: Path | None = None) -> int:
     """Move posts to /news/<slug>/ and retarget links without rebuilding player profiles."""
     root = root or Path(__file__).resolve().parents[1]
+    delete_removed_adu(root)
     index = json.loads((root / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
     linking = links.catalog_from_index(index)
     menu = site_nav.build_menu(root, site_nav.planned_paths(root, index, linking))
@@ -1153,6 +1158,8 @@ def refresh_published_news(root: Path | None = None) -> int:
         if rel in files:
             continue
         original = path.read_text(encoding='utf-8')
+        if links.is_redirect_html(original) and 'site-footer' not in original:
+            continue
         updated = site_nav.install(
             links.rewrite_legacy_article_urls(original, articles),
             page_url(path.relative_to(root)),

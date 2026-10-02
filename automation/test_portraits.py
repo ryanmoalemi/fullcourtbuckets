@@ -32,6 +32,7 @@ class PortraitTests(unittest.TestCase):
         self.assertNotIn('illustration-caption', page)
         self.assertNotIn('AI-generated', portraits.APPLIED.search(page).group())
         self.assertIn('AI-generated illustration', page)
+        self.assertIn('Profile text and FAQs are written with help from AI tools, using the stats and sources on this page.', page)
         self.assertIn(STATS, page)
         self.assertEqual(page.count('<h1 '), 1)
     def test_crop_reaches_bottom_and_right_without_padding(self):

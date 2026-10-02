@@ -131,7 +131,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     else:
         page = page.replace('</head>', style + '</head>', 1)
     page = page.replace('The number artwork is a design element, not a player photograph.',
-                        'The portrait is an AI-generated editorial illustration, not a photograph. Names, team information and statistics are separate HTML text.')
+                        'The portrait is an AI-generated editorial illustration, not a photograph. Names, team information and statistics are separate HTML text. Profile text and FAQs are written with help from AI tools, using the stats and sources on this page.')
     def update_schema(match):
         schema = json.loads(match.group(1))
         for entity in schema.get('@graph', []):

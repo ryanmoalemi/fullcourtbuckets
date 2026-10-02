@@ -739,6 +739,21 @@ BYLINE_CSS = (
     '@media(max-width:900px){.article .byline{font-size:14px;margin-bottom:16px}}'
 )
 BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
+HOW_PAGE = '/how-we-make-full-court-buckets/'
+HOW_MADE_HTML = (
+    '<p class="how-made">How this story was made: drafted with AI tools from the ESPN box score and other linked sources. '
+    'Ryan Moalemi runs the site. '
+    f'<a href="{HOW_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>.</p>'
+)
+HOW_MADE_CSS = (
+    '.article .how-made{margin:22px 0 0;color:#a29f99;font-size:13px;line-height:1.55}'
+    '.article .how-made a{color:#d4d0ca;text-decoration:underline}'
+)
+HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
+# Older post that covers the same game as the kept recap. Both URLs redirect there.
+RETIRED_NEWS = {
+    'liberty-lynx-game-1-ionescu-stewart': '/news/liberty-lynx-game-1-full-recap/',
+}
 AUTHOR_META_RE = re.compile(r'<meta\b[^>]*\bname="author"[^>]*>', re.I)
 JSONLD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 CANONICAL_RE = re.compile(r'<link\b[^>]*rel="canonical"[^>]*>', re.I)
@@ -1162,6 +1177,20 @@ def ensure_byline(html: str) -> str:
     return html[:end + 1] + BYLINE_HTML + html[end + 1:]
 
 
+def ensure_how_made(html: str) -> str:
+    """Disclosure at the end of every story. Same wording on recaps and other posts."""
+    if '.article .how-made{' not in html:
+        if '</style>' in html:
+            html = html.replace('</style>', HOW_MADE_CSS + '</style>', 1)
+        elif '</head>' in html:
+            html = html.replace('</head>', '<style>' + HOW_MADE_CSS + '</style></head>', 1)
+    if HOW_MADE_RE.search(html):
+        return HOW_MADE_RE.sub(HOW_MADE_HTML, html, count=1)
+    if '</article>' in html:
+        return html.replace('</article>', HOW_MADE_HTML + '</article>', 1)
+    return html + HOW_MADE_HTML
+
+
 def _author_bio_html() -> str:
     parts = [
         '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
@@ -1173,6 +1202,7 @@ def _author_bio_html() -> str:
         )
         parts.append(f'<p>{text}</p>')
     parts.append(AUTHOR_TIKTOK_HTML)
+    parts.append(f'<p><a href="{HOW_PAGE}">How we make Full Court Buckets</a></p>')
     return '\n'.join(parts)
 
 
@@ -1277,6 +1307,7 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = _insert_visible_breadcrumb(html_text, str(article.get('title') or ''))
     html_text = ensure_box_score(html_text, article)
     html_text = ensure_byline(html_text)
+    html_text = ensure_how_made(html_text)
     return html_text
 
 
@@ -1434,19 +1465,48 @@ def assemble_news_pages(root: Path) -> dict[str, str]:
     """Article HTML at news/<slug>/, redirect stubs at the old root paths, and the /news/ hub."""
     articles = ensure_article_urls(root)
     pages = {}
+    live = set()
     for article in articles:
         slug = article_slug(article)
+        live.add(slug)
         pages[f'news/{slug}/index.html'] = prepare_article_page(root, article, articles)
         pages[f'{slug}/index.html'] = redirect_stub(article)
+    for slug, href in RETIRED_NEWS.items():
+        if slug in live:
+            continue
+        target = BASE + href
+        pages[f'news/{slug}/index.html'] = permanent_redirect(target)
+        pages[f'{slug}/index.html'] = permanent_redirect(target)
     pages['news/index.html'] = render_news_hub(articles)
     pages[AUTHOR_PAGE] = render_author_page(articles, root)
     return pages
 
 
+def _drop_sitemap_loc(text: str, loc: str) -> str:
+    return re.sub(
+        r'\s*<url>\s*<loc>\s*' + re.escape(loc) + r'\s*</loc>.*?</url>',
+        '',
+        text,
+        count=1,
+        flags=re.S,
+    )
+
+
 def sync_news_sitemap(text: str, articles: list) -> str:
-    """New post URLs and /news/ stay. Old root post URLs go."""
+    """New post URLs and /news/ stay. Old root post URLs and retired duplicates go."""
     if '</urlset>' not in text:
         return text
+    live = set()
+    for article in articles:
+        try:
+            live.add(article_slug(article))
+        except ValueError:
+            continue
+    for slug in RETIRED_NEWS:
+        if slug in live:
+            continue
+        text = _drop_sitemap_loc(text, f'{BASE}/news/{slug}/')
+        text = _drop_sitemap_loc(text, f'{BASE}/{slug}/')
     for article in articles:
         try:
             slug = article_slug(article)
@@ -1484,6 +1544,17 @@ def sync_news_sitemap(text: str, articles: list) -> str:
             '    <lastmod>2026-10-02</lastmod>\n'
             '    <changefreq>weekly</changefreq>\n'
             '    <priority>0.6</priority>\n'
+            '  </url>\n'
+        )
+        text = text.replace('</urlset>', block + '</urlset>', 1)
+    how = BASE + HOW_PAGE
+    if not re.search(rf'<loc>\s*{re.escape(how)}\s*</loc>', text):
+        block = (
+            '  <url>\n'
+            f'    <loc>{how}</loc>\n'
+            '    <lastmod>2026-10-02</lastmod>\n'
+            '    <changefreq>monthly</changefreq>\n'
+            '    <priority>0.5</priority>\n'
             '  </url>\n'
         )
         text = text.replace('</urlset>', block + '</urlset>', 1)
