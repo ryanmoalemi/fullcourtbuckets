@@ -50,6 +50,14 @@ GitHub Pages has no server redirects. When a post leaves an old root URL, leave 
 
 On-site navigation opens in the same tab. Do not put `target="_blank"` on menu links, footer links, breadcrumbs, news hub `.news-item` cards, homepage story cards, player cards, team cards, standings links, or other hub and index links. `target="_blank" rel="noopener"` stays on external outbound links and on links inside article body prose, including photo captions and the first player or team mention in a story.
 
+## Angel Reese card collection
+
+Ryan's personal collection lives at `/authors/ryan-moalemi/ryans-angel-reese-cards/`. It is not an article. Do not add it to `articles.json` or the main menu.
+
+The only source for cards, prices, comps, and notes is `data/reese-cards.json`. To add a card or update a value, edit that file and run `python automation/build_reese_cards.py`. The generator rewrites the collection page, the teaser on `/authors/ryan-moalemi/`, the "See Ryan's Angel Reese cards" line on `/wnba/angel-reese/`, and the sitemap entries. Do not hand-edit the HTML.
+
+`current_value` is a number, or the string `unknown` when no verified sale exists. Unknown cards stay on the page with an asterisk and are left out of paid, value, and change. `price_paid_total` is the eBay order total (item + shipping + tax). Put slab photos in `images/reese-cards/` and point `photo.front` and `photo.back` at those files. Omit `back` when the listing has no back photo. Label those photos "Photo: eBay seller listing of this card". The hero credit (photographer, license, Wikimedia link) is the `HERO` block in `automation/build_reese_cards.py`.
+
 ## Player pages
 
 Link the first body-text mention of each player in every article to the existing page at `/wnba/<slug>/`, with `target="_blank" rel="noopener"`. Do not link player names to WNBA.com. Do not create a separate `/players/` system. Use the slug already published in `wnba/<slug>/index.html` and `data/wnba/players-index.json`. If that page does not exist, leave the name as plain text. Do not create a new player page for an article mention.

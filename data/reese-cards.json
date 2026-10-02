@@ -1,0 +1,393 @@
+{
+  "owner": "Ryan Moalemi",
+  "updated": "2026-10-01",
+  "notes": "Purchase price = eBay order total incl. shipping and sales tax. Certs verified in Ryan's PSA collection on 2026-09-30. Fanatics purchases not yet reviewed. current_value = median of recent comparable sold prices (see value_comps); 'unknown' where no verified sale was found.",
+  "cards": [
+    {
+      "id": "reese-2024-prizm-dp-tiger-38",
+      "year": "2024",
+      "set": "Panini Prizm Draft Picks",
+      "card_number": "38",
+      "parallel": "Tiger Stripe Prizm",
+      "rookie": true,
+      "autograph": false,
+      "grade": "PSA 10",
+      "psa_cert": "112951750",
+      "serial_number": null,
+      "purchase_date": "2026-09-04",
+      "item_price": 225.0,
+      "shipping": 7.0,
+      "tax": 17.44,
+      "price_paid_total": 249.44,
+      "source": "eBay",
+      "ebay_item_id": "187464231452",
+      "current_value": 225.0,
+      "current_value_source": "Single exact comp: eBay best-offer-accepted price (list $1,000) reported by SportsCardsPro PSA 10 tab. Value = that one sale (median of 1).",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-prizm-dp-tiger-38-front.webp",
+          "width": 602,
+          "height": 1000
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2024-prizm-dp-tiger-38-back.webp",
+          "width": 594,
+          "height": 1000
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-09-04",
+          "price": 225.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/187464231452"
+        }
+      ],
+      "value_notes": "Low confidence: only 1 PSA 10 sale found (title says 'pop 1'). Source page: https://www.sportscardspro.com/game/basketball-cards-2024-panini-prizm-draft-picks/angel-reese-tiger-stripe-38 . Closest other data: PSA 9 $46 (2025-09-10), $37 (2025-05-07); PSA 8 $33 (2025-12-01). The separate #38 Tiger Stripe *Variation* card has no PSA 10 sales listed. 130point and eBay direct were blocked (Cloudflare/403).",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2024-prizm-dp-black-color-blast-11",
+      "year": "2024",
+      "set": "Panini Prizm Draft Picks",
+      "card_number": "11",
+      "parallel": "Black Color Blast",
+      "rookie": true,
+      "autograph": false,
+      "grade": "PSA 10",
+      "psa_cert": "112069612",
+      "serial_number": null,
+      "purchase_date": "2026-08-24",
+      "item_price": 350.0,
+      "shipping": 5.24,
+      "tax": 27.13,
+      "price_paid_total": 382.37,
+      "source": "eBay",
+      "ebay_item_id": "147426061509",
+      "current_value": 305.0,
+      "current_value_source": "Median of the 2 PSA 10 sales in the last 12 months (2026-08-25 $350, 2026-07-22 $260). All 4 known PSA 10 sales listed; the 2025 sales are older than 12 months.",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-prizm-dp-black-color-blast-11-front.webp",
+          "width": 646,
+          "height": 1000
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-08-25",
+          "price": 350.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/147426061509"
+        },
+        {
+          "date": "2026-07-22",
+          "price": 260.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/257407147892"
+        },
+        {
+          "date": "2025-07-30",
+          "price": 351.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/226893600046"
+        },
+        {
+          "date": "2025-07-28",
+          "price": 511.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/297472320891"
+        }
+      ],
+      "value_notes": "Median of all 4 PSA 10 sales = $350.50. Recent PSA 9s: $132.50-$153.50 (Apr-Jun 2026). Source: https://www.sportscardspro.com/game/basketball-cards-2024-panini-prizm-draft-picks-black-color-blast/angel-reese-11",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2024-prizm-dp-color-blast-7",
+      "year": "2024",
+      "set": "Panini Prizm Draft Picks",
+      "card_number": "7",
+      "parallel": "Color Blast",
+      "rookie": true,
+      "autograph": false,
+      "grade": "PSA 10",
+      "psa_cert": "122719894",
+      "serial_number": null,
+      "purchase_date": "2026-08-24",
+      "item_price": 248.0,
+      "shipping": 5.17,
+      "tax": 19.22,
+      "price_paid_total": 272.39,
+      "source": "eBay",
+      "ebay_item_id": "188635231023",
+      "current_value": 248.0,
+      "current_value_source": "Median of the 5 most recent exact PSA 10 sales (2026-04-12 to 2026-09-21).",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-prizm-dp-color-blast-7-front.webp",
+          "width": 380,
+          "height": 638
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2024-prizm-dp-color-blast-7-back.webp",
+          "width": 380,
+          "height": 638
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-09-21",
+          "price": 243.5,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/298657132803"
+        },
+        {
+          "date": "2026-08-25",
+          "price": 248.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/188635231023"
+        },
+        {
+          "date": "2026-07-22",
+          "price": 248.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/267728399889"
+        },
+        {
+          "date": "2026-07-10",
+          "price": 225.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/188586596634"
+        },
+        {
+          "date": "2026-04-12",
+          "price": 404.99,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/227292155776"
+        }
+      ],
+      "value_notes": "Left out: 2026-05-30 $367.60 eBay 306962033767 because its title says '#11', which could mean the Black Color Blast. The last 4 sales (Jul-Sep 2026) are tightly grouped at $225-$248. Older PSA 10 sales: $349 (2025-07-28), $399.95 (2025-06-27). Source: https://www.sportscardspro.com/game/basketball-cards-2024-panini-prizm-draft-picks-color-blast/angel-reese-7",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2024-rookie-royalty-kaboom-5",
+      "year": "2024",
+      "set": "Panini Rookie Royalty WNBA",
+      "card_number": "5",
+      "parallel": "Kaboom!",
+      "rookie": true,
+      "autograph": false,
+      "grade": "PSA 10",
+      "psa_cert": "132889701",
+      "serial_number": null,
+      "purchase_date": "2026-08-24",
+      "item_price": 1750.0,
+      "shipping": 30.0,
+      "tax": 135.63,
+      "price_paid_total": 1915.63,
+      "source": "eBay",
+      "ebay_item_id": "267764432888",
+      "current_value": 975,
+      "current_value_source": "Median of the 5 PSA 10 sales in the Fanatics Collect 'Sales History' embedded on a PSA 10 listing page. Sale dates were converted from UTC to PT.",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-rookie-royalty-kaboom-5-front.webp",
+          "width": 657,
+          "height": 1000
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2024-rookie-royalty-kaboom-5-back.webp",
+          "width": 688,
+          "height": 1000
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-09-27",
+          "price": 1500.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint"
+        },
+        {
+          "date": "2026-08-26",
+          "price": 975.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint"
+        },
+        {
+          "date": "2026-08-25",
+          "price": 1499.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint"
+        },
+        {
+          "date": "2026-05-24",
+          "price": 630.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint"
+        },
+        {
+          "date": "2026-01-25",
+          "price": 960.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint"
+        }
+      ],
+      "value_notes": "Fanatics Collect shows a sale price and date for each sale, with no separate page per sale, so every URL points to the listing page that carries the history. It also does not show whether any of these were the same slab resold. SportsCardsPro does not track this set. Other data: PSA 8.5 sold for $288 on Fanatics Collect Weekly (2026-02-22). Big swing: $630 to $1,500.",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2024-select-dss-red-auto",
+      "year": "2024",
+      "set": "Panini Select WNBA Draft Selections Signatures",
+      "card_number": "DSSAR",
+      "parallel": "Red Prizm",
+      "rookie": true,
+      "autograph": true,
+      "grade": "PSA 10 / Auto 10",
+      "psa_cert": "108064675",
+      "serial_number": "45/99",
+      "purchase_date": "2026-08-25",
+      "item_price": 500.0,
+      "shipping": 5.0,
+      "tax": 38.75,
+      "price_paid_total": 543.75,
+      "source": "eBay",
+      "ebay_item_id": "287531284645",
+      "current_value": 230,
+      "current_value_source": "Median of the 3 PSA 10 sales found (eBay via SportsCardsPro plus Fanatics Collect listing sales history).",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-select-dss-red-auto-front.webp",
+          "width": 750,
+          "height": 1000
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2024-select-dss-red-auto-back.webp",
+          "width": 750,
+          "height": 1000
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-09-15",
+          "price": 510.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/237055669896"
+        },
+        {
+          "date": "2026-08-23",
+          "price": 210.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/1e2e714e-798e-48e6-be20-6bd113f79be0/2024-select-wnba-draft-selections-red-prizm-angel-reese-rc-auto-99-psa-10-gem"
+        },
+        {
+          "date": "2026-05-06",
+          "price": 230.0,
+          "venue": "Fanatics Collect (listing sales history)",
+          "url": "https://www.fanaticscollect.com/buy-now/1e2e714e-798e-48e6-be20-6bd113f79be0/2024-select-wnba-draft-selections-red-prizm-angel-reese-rc-auto-99-psa-10-gem"
+        }
+      ],
+      "value_notes": "Auto grade could not be checked: none of the sources shows an auto grade (titles just say 'PSA 10'). The $510 eBay sale (17/99) may be a PSA 10/Auto 10 dual grade, but that is not confirmed. The Fanatics Collect sales ($210-$230) look more like a plain PSA 10. A confirmed Auto 10 could be worth more than $230. Other data: BGS 9 $199.99 (2026-08-27), PSA 9 $100 (2025-12-11), SGC 9.5 $120.50 (2025-09-15). Sources: https://www.sportscardspro.com/game/basketball-cards-2024-panini-select-wnba-draft-selections-signature/angel-reese-red-prizm-dss-ar ; https://www.fanaticscollect.com/buy-now/1e2e714e-798e-48e6-be20-6bd113f79be0/2024-select-wnba-draft-selections-red-prizm-angel-reese-rc-auto-99-psa-10-gem",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2023-bowman-u-chrome-lava-auto",
+      "year": "2023-24",
+      "set": "Bowman University Chrome, Bowman Chrome Prospects Autographs",
+      "card_number": "BCPA-AR",
+      "parallel": "Lava Refractor",
+      "rookie": false,
+      "autograph": true,
+      "grade": "PSA 10 / Auto 8",
+      "psa_cert": "103437584",
+      "serial_number": "053/199",
+      "purchase_date": "2026-08-24",
+      "item_price": 277.5,
+      "shipping": 5.97,
+      "tax": 21.51,
+      "price_paid_total": 304.98,
+      "source": "eBay",
+      "ebay_item_id": "318767072043",
+      "current_value": 226.25,
+      "current_value_source": "Median of the 2 PSA 10 sales in the last 12 months (2026-03-07 $202.50, 2026-01-17 $250). The 2024 sale is listed but not used.",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2023-bowman-u-chrome-lava-auto-front.webp",
+          "width": 750,
+          "height": 1000
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2023-bowman-u-chrome-lava-auto-back.webp",
+          "width": 750,
+          "height": 1000
+        }
+      },
+      "value_comps": [
+        {
+          "date": "2026-03-07",
+          "price": 202.5,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/397666734044"
+        },
+        {
+          "date": "2026-01-17",
+          "price": 250.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/267498637112"
+        },
+        {
+          "date": "2024-06-27",
+          "price": 280.0,
+          "venue": "eBay (via SportsCardsPro sold data)",
+          "url": "https://www.ebay.com/itm/276522937794"
+        }
+      ],
+      "value_notes": "Auto grade does not match: the sale titles say only 'PSA 10', so the auto grade is unknown (likely none or Auto 10). None was confirmed as Auto 8. A PSA 10/Auto 8 usually sells below these comps, so treat this as a ceiling. Other data: PSA 9 $129.99 (2026-06-22), $225 (2025-05-01). Source: https://www.sportscardspro.com/game/basketball-cards-2023-bowman-chrome-university-prospects-autographs/angel-reese-lava-bcpa-ar",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    },
+    {
+      "id": "reese-2023-bowman-u-now-blue-auto",
+      "year": "2023",
+      "set": "Bowman U Now March Madness Autographs",
+      "card_number": "11B",
+      "parallel": "Blue",
+      "rookie": false,
+      "autograph": true,
+      "grade": "PSA 10",
+      "psa_cert": "96218355",
+      "serial_number": "05/49",
+      "purchase_date": "2026-08-24",
+      "item_price": 219.99,
+      "shipping": 6.07,
+      "tax": 17.05,
+      "price_paid_total": 243.11,
+      "source": "eBay",
+      "ebay_item_id": "406748726250",
+      "current_value": "unknown",
+      "current_value_source": "No verified sold comp found for this exact card number, parallel and grade.",
+      "value_checked": "2026-10-01",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2023-bowman-u-now-blue-auto-front.webp",
+          "width": 750,
+          "height": 1000
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2023-bowman-u-now-blue-auto-back.webp",
+          "width": 750,
+          "height": 1000
+        }
+      },
+      "value_comps": [],
+      "value_notes": "SportsCardsPro lists this run as '2024 Bowman U Now NCAA March Madness Autograph', with Reese as #11A (base plus Blue/Gold/Orange/Purple/Red). The Blue #11A page shows 0 sales in any grade, and no #11B exists there. HoodCar has a page titled '2023 BOWMAN U NOW MARCH MADNESS AUTO-BLUE ANGEL REESE ROOKIE RC /49 PSA 10 AUTO' (https://hoodcar.com/card/406748726250) claiming a 'last sold' $841 on Jun 5 (29 bids). Not used: the same $841/Jun 5/29-bid entry also appears on an unrelated HoodCar page (Purple #11 /25 non-auto), so it looks misattributed. That page's current asking price is $220. 130point and eBay sold search were blocked.",
+      "photo_note": "Photo of this exact slab from the eBay listing Ryan bought it from (seller's photo)."
+    }
+  ]
+}
