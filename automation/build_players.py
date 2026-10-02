@@ -964,6 +964,11 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
     return players, pages
 
 
+def contextual_link_count(page: str) -> int:
+    """Auto player links. The collection callout is one fixed link, not part of that budget."""
+    return page.count('class="inline-link"') - page.count('class="reese-cards-link"')
+
+
 def build(root: Path):
     data=root/'data/wnba'
     index=json.loads((data/'players-index.json').read_text())
@@ -991,7 +996,7 @@ def build(root: Path):
             files[f'wnba/{slug}/index.html']=links.permanent_redirect(f'{BASE}/wnba/{target}/')
             continue
         page=profile_page(profile, root, linking, menu)
-        if page.count('class="inline-link"') > links.MAX_PLAYER_LINKS:
+        if contextual_link_count(page) > links.MAX_PLAYER_LINKS:
             raise BuildError(f'Too many contextual links on {slug}.')
         files[f'wnba/{slug}/index.html']=page
         if player_indexable(profile, root):
