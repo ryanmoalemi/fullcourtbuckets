@@ -69,6 +69,49 @@ class NewsPathTests(unittest.TestCase):
             positions.append(hub.find(href))
         self.assertEqual(positions, sorted(positions))
 
+    def test_featured_story_has_a_lead_image(self):
+        articles = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
+        featured = articles[0]
+        image = str(featured.get('image') or '').strip()
+        alt = str(featured.get('imageAlt') or '').strip()
+        self.assertTrue(image.startswith('/images/'), featured.get('slug'))
+        self.assertTrue(alt, featured.get('slug'))
+        photo = ROOT / image.lstrip('/')
+        self.assertTrue(photo.is_file(), image)
+        self.assertGreater(photo.stat().st_size, 1000, image)
+        home = (ROOT / 'index.html').read_text(encoding='utf-8')
+        hero = home.split('id="featured-story"', 1)[1].split('</a>', 1)[0]
+        self.assertIn('id="featured-image"', hero)
+        self.assertIn(f'src="{image}"', hero)
+        self.assertIn(f'alt="{html.escape(alt, quote=True)}"', hero)
+        self.assertIn('id="featured-credit"', hero)
+        for article in articles:
+            lead = str(article.get('image') or '').strip()
+            self.assertTrue(lead.startswith('/images/'), article.get('slug'))
+            self.assertTrue((ROOT / lead.lstrip('/')).is_file(), article.get('slug'))
+        for article in articles[1:]:
+            card = home.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
+            self.assertIn(f'src="{article["image"]}"', card, article['slug'])
+        bare = dict(featured)
+        bare['image'] = ''
+        bare['imageAlt'] = ''
+        rendered = links._apply_featured_media(
+            '<a class="feature feature-link" id="featured-story" href="/news/example/"><div class="feature-content"></div></a>',
+            bare,
+        )
+        self.assertNotIn('id="featured-image"', rendered)
+
+    def test_game_3_recap_is_linked_from_fever_and_aces(self):
+        for slug in ('indiana-fever', 'las-vegas-aces'):
+            page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('href="/news/fever-aces-game-3-recap/"', page)
+            self.assertNotIn('href="/news/fever-aces-game-3-recap/" target="_blank"', page)
+        recap = (ROOT / 'news' / 'fever-aces-game-3-recap' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('https://www.espn.com/wnba/game/_/gameId/401918022', recap)
+        self.assertIn('href="/wnba/aja-wilson/" target="_blank" rel="noopener"', recap)
+        self.assertIn('href="/wnba/teams/las-vegas-aces/" target="_blank" rel="noopener"', recap)
+        self.assertNotIn('\u2014', recap)
+
     def test_expansion_story_is_linked_from_both_team_pages(self):
         for slug in ('portland-fire', 'toronto-tempo'):
             page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')

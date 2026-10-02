@@ -1,5 +1,17 @@
 [
   {
+    "slug": "fever-aces-game-3-recap",
+    "url": "/news/fever-aces-game-3-recap/",
+    "title": "Wilson Scores 36, Aces Close Out the Fever 94-83",
+    "description": "A'ja Wilson scored 36 points with 10 rebounds as the Aces beat the Fever 94-83 to win the first-round series 2-1.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-01",
+    "image": "/images/articles/fever-aces-game-3-recap/aja-wilson-aces-2026.jpg",
+    "imageAlt": "A'ja Wilson of the Las Vegas Aces shooting over a Minnesota Lynx defender",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
+    "espnGameId": "401918022"
+  },
+  {
     "slug": "fever-aces-game-2-recap",
     "url": "/news/fever-aces-game-2-recap/",
     "title": "Clark Hits Back-to-Back Threes, Fever Even Series with Aces",
@@ -8,6 +20,7 @@
     "date": "2026-09-30",
     "image": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.jpg",
     "imageAlt": "Caitlin Clark of the Indiana Fever dribbling in a white jersey.",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918018"
   },
   {
@@ -19,6 +32,7 @@
     "date": "2026-09-30",
     "image": "/images/articles/wnba-expansion-teams/tempo-aces-vancouver.jpg",
     "imageAlt": "Toronto Tempo players on court against the Las Vegas Aces in Vancouver.",
+    "imageCredit": "Photo: Gold Broth / CC BY 4.0",
     "teams": [
       "portland-fire",
       "toronto-tempo"
@@ -33,6 +47,7 @@
     "date": "2026-09-30",
     "image": "/images/articles/liberty-lynx-game-1-full-recap/marine-johannes-liberty-2026.jpg",
     "imageAlt": "Marine Johannes of the New York Liberty dribbling at Target Center",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918017"
   },
   {
@@ -44,6 +59,7 @@
     "date": "2026-09-28",
     "image": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2026.jpg",
     "imageAlt": "A'ja Wilson of the Las Vegas Aces",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918015"
   },
   {
@@ -55,6 +71,7 @@
     "date": "2026-09-28",
     "image": "/images/articles/liberty-lynx-game-1-full-recap/marine-johannes-liberty-2026.jpg",
     "imageAlt": "Marine Johannes of the New York Liberty",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918014"
   },
   {
@@ -66,6 +83,7 @@
     "date": "2026-09-28",
     "image": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.jpg",
     "imageAlt": "Jordin Canada of the Atlanta Dream",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918013"
   },
   {
@@ -77,6 +95,7 @@
     "date": "2026-09-28",
     "image": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.jpg",
     "imageAlt": "Cecilia Zandalasini of the Golden State Valkyries",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918016"
   },
   {
@@ -88,6 +107,7 @@
     "date": "2026-09-27",
     "image": "/images/articles/liberty-lynx-game-1-ionescu-stewart/sabrina-ionescu-liberty-target-center-2026.jpg",
     "imageAlt": "Sabrina Ionescu of the New York Liberty",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918014"
   },
   {

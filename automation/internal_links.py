@@ -309,6 +309,34 @@ HUBS = (
 )
 
 
+def _featured_photo(article: dict) -> str:
+    """Lead image for the homepage hero. Empty when the story has no image."""
+    image = str((article or {}).get('image') or '').strip()
+    if not image:
+        return ''
+    alt = str(article.get('imageAlt') or article.get('title') or '')
+    return f'<img class="feature-photo" id="featured-image" src="{esc(image)}" alt="{esc(alt)}">'
+
+
+def _featured_credit(article: dict) -> str:
+    credit = str((article or {}).get('imageCredit') or '').strip()
+    return f'<span class="feature-credit" id="featured-credit">{esc(credit)}</span>'
+
+
+def _apply_featured_media(text: str, article: dict) -> str:
+    """Put the featured story's lead photo and credit on the hero card."""
+    photo = _featured_photo(article)
+    credit = _featured_credit(article)
+    text = re.sub(r'<img class="feature-photo" id="featured-image"[^>]*>', '', text, count=1)
+    text = re.sub(r'<span class="feature-credit" id="featured-credit">.*?</span>', '', text, count=1, flags=re.S)
+    return re.sub(
+        r'(<a class="feature feature-link" id="featured-story" href="[^"]*">)',
+        lambda match: match.group(1) + photo + credit,
+        text,
+        count=1,
+    )
+
+
 def apply_homepage(text: str, articles: list) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
     if 'id="latest"' not in text or 'id="older-stories"' not in text:
@@ -327,6 +355,7 @@ def apply_homepage(text: str, articles: list) -> str:
             text,
             count=1,
         )
+        text = _apply_featured_media(text, featured)
         text = re.sub(r'(<h1 id="featured-title">).*?(</h1>)', lambda m: m.group(1) + esc(featured['title']) + m.group(2), text, count=1)
         text = re.sub(r'(<p id="featured-dek">).*?(</p>)', lambda m: m.group(1) + esc(featured.get('description') or '') + m.group(2), text, count=1)
         meta = f'{featured.get("category") or ""} · {_format_date(featured["date"])}'
