@@ -651,6 +651,9 @@ def profile_page(profile, root=None, linking=None, menu=None):
     overview+=team_change_html(profile, linking, budget)
     if not active: overview+='<p class="muted">This player is not on a current roster. The page does not call that retirement or free agency.</p>'
     overview += couple_note(root, slug)
+    if slug == 'angel-reese' and root is not None and (Path(root) / 'data' / 'reese-cards.json').is_file():
+        import build_reese_cards
+        overview += build_reese_cards.PLAYER_CALLOUT
     tablehtml=stats_table(profile,2)+stats_table(profile,3)
     controls=''
     if tablehtml:
@@ -933,12 +936,24 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('wnba/index.html', '/wnba/'),
         ('news/index.html', '/news/'),
         ('authors/ryan-moalemi/index.html', '/authors/ryan-moalemi/'),
+        ('authors/ryan-moalemi/ryans-angel-reese-cards/index.html', '/authors/ryan-moalemi/ryans-angel-reese-cards/'),
         ('standings/index.html', '/standings/'),
         ('wnba/teams/index.html', '/wnba/teams/'),
         ('wnba/couples/index.html', '/wnba/couples/'),
     ]
+    collection_route = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
+    collection_day = ''
+    collection_file = root / 'data' / 'reese-cards.json'
+    if collection_file.is_file():
+        import build_reese_cards
+        collection_day = build_reese_cards.value_as_of(root)
     for relative, loc in static:
-        lastmod = standings_day if loc == '/standings/' else newest
+        if loc == '/standings/':
+            lastmod = standings_day
+        elif loc == collection_route and collection_day:
+            lastmod = collection_day
+        else:
+            lastmod = newest
         add_page(relative, loc, lastmod)
     for slot in linking['by_id'].values():
         add_page('wnba/teams/' + slot['slug'] + '/index.html', links.team_href(slot), newest)
@@ -1056,6 +1071,10 @@ def build(root: Path):
         updated=site_nav.install(links.apply_known_page_links(original, relative), page_url(Path(relative)), menu)
         if updated != original:
             files[relative]=updated
+    import build_reese_cards
+    collection_page = build_reese_cards.render_page(root, menu)
+    if collection_page:
+        files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
     files.update(adu_redirect_files())
     files.update(site_nav.install_tree(root, menu, set(files)))

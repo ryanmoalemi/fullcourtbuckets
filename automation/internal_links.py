@@ -1176,7 +1176,14 @@ def _author_bio_html() -> str:
     return '\n'.join(parts)
 
 
-def render_author_page(articles: list) -> str:
+def _collection_teaser(root: Path | None) -> str:
+    if root is None or not (root / 'data' / 'reese-cards.json').is_file():
+        return ''
+    import build_reese_cards
+    return build_reese_cards.author_teaser(root)
+
+
+def render_author_page(articles: list, root: Path | None = None) -> str:
     """Author archive. The article list is the same newest-first feed as /news/."""
     ordered = _ordered_articles(articles)
     crumbs = {
@@ -1234,7 +1241,11 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 .news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
 .news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
 .news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}
-@media(max-width:700px){{h1{{font-size:40px}}.author-photo{{width:120px;height:120px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}}}
+.collection-teaser{{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;align-items:center;margin:8px 0 4px;padding:12px;background:#121016;border:1px solid #3a3428;text-decoration:none}}
+.collection-teaser img{{width:120px;height:160px;object-fit:contain;background:#0a090d}}
+.collection-teaser b{{display:block;font:800 28px/1.1 Barlow,sans-serif}}
+.collection-teaser p{{margin:6px 0 0;color:#a5a19b}}
+@media(max-width:700px){{h1{{font-size:40px}}.author-photo{{width:120px;height:120px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}.collection-teaser{{grid-template-columns:88px 1fr}}.collection-teaser img{{width:88px;height:118px}}}}
 </style>
 </head>
 <body>
@@ -1246,6 +1257,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 <div class="bio">
 {_author_bio_html()}
 </div>
+{_collection_teaser(root)}
 <h2>Stories</h2>
 <ol class="news-list">{cards}</ol>
 </main>
@@ -1427,7 +1439,7 @@ def assemble_news_pages(root: Path) -> dict[str, str]:
         pages[f'news/{slug}/index.html'] = prepare_article_page(root, article, articles)
         pages[f'{slug}/index.html'] = redirect_stub(article)
     pages['news/index.html'] = render_news_hub(articles)
-    pages[AUTHOR_PAGE] = render_author_page(articles)
+    pages[AUTHOR_PAGE] = render_author_page(articles, root)
     return pages
 
 
