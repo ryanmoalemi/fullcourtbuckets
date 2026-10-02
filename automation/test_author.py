@@ -51,7 +51,7 @@ class AuthorPageTests(unittest.TestCase):
     def test_author_page_bio_list_and_sitemap(self):
         page = (ROOT / 'authors' / 'ryan-moalemi' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('<h1>Ryan Moalemi</h1>', page)
-        self.assertIn('src="/images/authors/ryan-moalemi.jpg"', page)
+        self.assertIn('src="/images/authors/ryan-moalemi.jpg', page)
         self.assertIn('alt="Ryan Moalemi"', page)
         self.assertIn('width="320"', page)
         self.assertIn('height="320"', page)

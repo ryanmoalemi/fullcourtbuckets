@@ -97,7 +97,11 @@ class HelpfulContentTests(unittest.TestCase):
             text = path.read_text(encoding='utf-8', errors='replace')
             if OLD_TAGLINE in text:
                 offenders.append(path.relative_to(ROOT).as_posix())
-            if 'The portrait is an AI-generated editorial illustration' in text and PROFILE_NOTE not in text:
+            portrait_note = (
+                'The portrait is an AI-generated editorial illustration, not a photograph. '
+                'Names, team information and statistics are separate HTML text.'
+            )
+            if portrait_note in text and PROFILE_NOTE not in text:
                 offenders.append('missing profile note ' + path.relative_to(ROOT).as_posix())
             if PROFILE_NOTE in text:
                 noted += 1

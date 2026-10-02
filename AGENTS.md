@@ -87,7 +87,7 @@ Use one recognizable editorial head-and-shoulders/upper-chest illustration, natu
 
 The approved compact desktop/mobile template stays unchanged: purple gradient, circles, faint outlined number, side-by-side mobile name and portrait, and stats directly below. No square number card or visible portrait caption. Names, teams, jersey numbers and statistics remain HTML; provenance remains in source notes/metadata. Do not create a competing page-layout implementation.
 
-AI-generated player portrait rasters carry IPTC `DigitalSourceType` `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia`. That includes `images/players/<slug>/portrait.png` (and the matching webp or avif), the older portrait files in `images/players/`, `portrait-masters/*.png`, and `portrait-handoff/*.png`. Set it with exiftool and do not change the pixels. Do not put that tag on Wikimedia photos, team photos, or Ryan's real headshot.
+Published AI player portraits under `images/players/` carry IPTC `DigitalSourceType` `http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia`. Set it with exiftool and do not change the pixels. Leave `portrait-masters/` and `portrait-handoff/` as the exact original bytes: the SHA-256 in those filenames must still match the file. Do not put that tag on Wikimedia photos, team photos, or Ryan's real headshot. Reapply the tag to a published portrait after an exact-byte upload.
 
 ## Full-resolution original handling
 
