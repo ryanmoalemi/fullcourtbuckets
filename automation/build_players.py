@@ -23,7 +23,7 @@ from link_graph import page_url
 BASE = 'https://fullcourtbuckets.com'
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-# Former ADU articles. The builder may write a redirect stub and must not recreate the page.
+# Former ADU articles. They are deleted. The builder must not recreate them.
 REMOVED_ADU_PATHS = frozenset({
     'adu-cost.html',
     'adu-feasibility-studies.html',
@@ -53,41 +53,12 @@ class BuildError(RuntimeError):
     pass
 
 def reject_removed_adu(relative, content):
-    """Block ADU articles. A noindex stub that only redirects to the same path
-    on sandiegoadubuilder.com is the GitHub Pages stand-in for a 301."""
-    if relative in REMOVED_ADU_PATHS and content == adu_redirect_stub(relative):
-        return
+    """Block ADU articles. Those pages are gone from this repo and must stay gone."""
     if relative in REMOVED_ADU_PATHS or 'sandiegoadubuilder.com' in content:
         raise BuildError('Refusing to publish removed ADU content: '+relative)
 
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
-
-def adu_redirect_stub(relative: str) -> str:
-    """Permanent redirect. GitHub Pages cannot send HTTP 301 or 410."""
-    if relative not in REMOVED_ADU_PATHS:
-        raise BuildError('Not a former ADU path: '+relative)
-    target = 'https://sandiegoadubuilder.com/' + relative
-    safe = esc(target)
-    return (
-        '<!doctype html>\n'
-        '<html lang="en">\n'
-        '<head>\n'
-        '<meta charset="utf-8">\n'
-        '<title>Moved</title>\n'
-        '<meta name="robots" content="noindex">\n'
-        f'<link rel="canonical" href="{safe}">\n'
-        f'<meta http-equiv="refresh" content="0; url={safe}">\n'
-        f'<script>location.replace("{safe}");</script>\n'
-        '</head>\n'
-        '<body>\n'
-        f'<p><a href="{safe}">This page has moved.</a></p>\n'
-        '</body>\n'
-        '</html>\n'
-    )
-
-def adu_redirect_files() -> dict:
-    return {relative: adu_redirect_stub(relative) for relative in sorted(REMOVED_ADU_PATHS)}
 
 def value(n, integer=False):
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
@@ -268,7 +239,7 @@ def header(route='/', menu=None):
     if menu is None:
         menu = site_nav.build_menu(Path(__file__).resolve().parents[1])
     nav = site_nav.render(menu, route)
-    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
+    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent WNBA news and analysis</span></div></div>'''
 
 def footer(include_standings=True):
     html_text = site_nav.footer_html(include_standings)
@@ -931,6 +902,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('index.html', '/'),
         ('about/index.html', '/about/'),
         ('contact/index.html', '/contact/'),
+        ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('privacy/index.html', '/privacy/'),
         ('terms/index.html', '/terms/'),
         ('wnba/index.html', '/wnba/'),
@@ -1081,7 +1053,6 @@ def build(root: Path):
     if collection_page:
         files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
-    files.update(adu_redirect_files())
     files.update(site_nav.install_tree(root, menu, set(files)))
     robots=root/'robots.txt'
     robots_text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'

@@ -41,6 +41,7 @@ FOOTER_HTML = (
     '<p class="footer-links"><a href="/wnba/">Players</a>'
     '<a href="/standings/">Standings</a>'
     '<a href="/about/">About</a>'
+    '<a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>'
     '<a href="/contact/">Contact</a>'
     '<a href="/privacy/">Privacy Policy</a>'
     '<a href="/terms/">Terms of Use</a>'

@@ -80,7 +80,8 @@ class AuthorPageTests(unittest.TestCase):
         profile = persons[0]
         self.assertEqual(profile['name'], 'Ryan Moalemi')
         self.assertEqual(profile['url'], AUTHOR['url'])
-        self.assertEqual(profile['image'], 'https://fullcourtbuckets.com/images/authors/ryan-moalemi.jpg')
+        self.assertEqual(profile['image'], links.AUTHOR_IMAGE_URL)
+        self.assertIn(links.AUTHOR_PHOTO, profile['image'])
         self.assertEqual(profile['jobTitle'], 'Editor')
         self.assertIn('since 2001', profile['description'])
         self.assertIn('Full Court Buckets', profile['worksFor']['name'])
