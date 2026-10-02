@@ -24,7 +24,7 @@ ROUTE = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
 RELATIVE = 'authors/ryan-moalemi/ryans-angel-reese-cards/index.html'
 DATA_FILE = Path('data/reese-cards.json')
 BASE = 'https://fullcourtbuckets.com'
-COLLECTION_TITLE = "Ryan's Angel Reese cards"
+COLLECTION_TITLE = "Ryan's Angel Reese card collection"
 PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
 PAGE_DESCRIPTION = (
     "Ryan Moalemi's Angel Reese cards: PSA 10 slabs, the eBay totals he paid, "
@@ -45,7 +45,7 @@ INTRO_PARAGRAPHS = (
 )
 PLAYER_CALLOUT = (
     '<p class="reese-cards-link"><a class="inline-link" '
-    f'href="{ROUTE}">See Ryan\'s Angel Reese cards</a></p>'
+    f'href="{ROUTE}">{COLLECTION_TITLE}</a></p>'
 )
 PHOTO_CREDIT = 'Photo: eBay seller listing of this card'
 HERO = {
@@ -954,7 +954,15 @@ def ensure_player_callout(root: Path) -> None:
     if not page.is_file() or not data_path(root).is_file():
         return
     text = page.read_text(encoding='utf-8')
-    if ROUTE in text:
+    if PLAYER_CALLOUT in text:
+        return
+    existing = re.compile(
+        r'<p class="reese-cards-link"><a class="inline-link" href="'
+        + re.escape(ROUTE) + r'">.*?</a></p>',
+        re.S,
+    )
+    if existing.search(text):
+        page.write_text(existing.sub(PLAYER_CALLOUT, text, count=1), encoding='utf-8')
         return
     needle = '<div class="overview-strip">'
     if needle not in text:
