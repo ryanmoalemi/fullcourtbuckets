@@ -30,6 +30,19 @@ PAGE_DESCRIPTION = (
     "Ryan Moalemi's Angel Reese cards: PSA 10 slabs, the eBay totals he paid, "
     "and current values from recent sold comps."
 )
+# First-person tribute. Curly apostrophes are intentional. The player-page
+# link under these paragraphs is separate and stays put.
+INTRO_PARAGRAPHS = (
+    "Angel Reese is a national treasure. I started watching the WNBA because of her, "
+    "and I\u2019ve been a fan ever since. She\u2019s tough, positive, funny, and completely fearless. "
+    "She actually reminds me a lot of my mom, who\u2019s an athlete too (professional ice skater).",
+    "Angel is having a real moment, but what I like most is what she represents beyond basketball. "
+    "A whole generation of young girls looks up to her, and she brings a lot of energy, personality, "
+    "and positivity to women\u2019s sports.",
+    "Collecting her cards is fun, but for me they also represent something bigger. "
+    "I like owning little pieces from what feels like a defining era for women\u2019s sports, "
+    "and getting to watch it happen in real time.",
+)
 PLAYER_CALLOUT = (
     '<p class="reese-cards-link"><a class="inline-link" '
     f'href="{ROUTE}">See Ryan\'s Angel Reese cards</a></p>'
@@ -601,10 +614,9 @@ def render_body(data: dict) -> str:
     details = ''.join(_detail(card, as_of) for card in cards)
     faq_html, faq_entities = _faq(as_of)
     star = '*' if summary['unknown'] else ''
+    intro_copy = '\n'.join(f'<p>{paragraph}</p>' for paragraph in INTRO_PARAGRAPHS)
     intro = f'''<section class="intro">
-<p>I think Angel Reese is a transcendent talent, the kind of player who rises above her generation.</p>
-<p>I really like the positive impact she is having on women's sports. So many young girls look up to her.</p>
-<p>I got into sports writing after watching her play.</p>
+{intro_copy}
 <p><a href="/wnba/angel-reese/">Angel Reese</a> has a player page on this site.</p>
 </section>'''
     method = (
@@ -768,17 +780,17 @@ header img{width:220px;height:auto}
 .crumb-bar{background:#07060a;border-bottom:1px solid #241f2a}
 .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 0;color:#b7b0a6;font-size:13px;font-weight:700}
 .breadcrumbs a{color:#f6f1e8;text-decoration:underline}
-.hero{position:relative;min-height:92vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#07060a}
-.hero-photo{position:absolute;top:0;left:50%;height:100%;width:auto;max-width:none;transform:translateX(-50%);object-fit:cover}
-.hero-shade{position:absolute;inset:auto 0 0 0;height:62%;background:linear-gradient(180deg,rgba(7,6,10,0) 0%,rgba(7,6,10,.55) 28%,rgba(7,6,10,.94) 70%,#07060a 100%)}
-.hero-copy{position:relative;z-index:1;width:min(1120px,94vw);margin:0 auto;padding:0 0 28px}
-.hero-kicker{margin:0 0 8px;color:#f0c36a;font:700 13px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase}
-.hero h1{margin:0;font:900 clamp(4.4rem,13vw,8.8rem)/.82 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
+.hero{position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#07060a;height:min(72vh,calc(100svh - 13.25rem));max-height:75vh}
+.hero-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center top}
+.hero-shade{position:absolute;inset:auto 0 0 0;height:68%;background:linear-gradient(180deg,rgba(7,6,10,0) 0%,rgba(7,6,10,.55) 28%,rgba(7,6,10,.94) 70%,#07060a 100%)}
+.hero-copy{position:relative;z-index:1;width:min(1120px,94vw);margin:0 auto;padding:8px 0 12px}
+.hero-kicker{margin:0 0 6px;color:#f0c36a;font:700 13px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.hero h1{margin:0;font:900 clamp(3.2rem,min(13vw,18vh),8.2rem)/.84 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
 .hero h1 span{display:block}
 .hero h1 .owner-word{font-size:.38em;letter-spacing:.04em;color:#f6f1e8}
 .hero h1 .cards-word{color:#f0c36a}
-.hero-line{margin:14px 0 0;font:700 clamp(1.15rem,2.4vw,1.7rem)/1.25 "Barlow Condensed",sans-serif;letter-spacing:.02em}
-.hero-credit{margin:14px 0 0;max-width:40rem;color:#d9d1c6;font-size:13px}
+.hero-line{margin:8px 0 0;font:700 clamp(1.05rem,min(2.2vw,3.4vh),1.55rem)/1.2 "Barlow Condensed",sans-serif;letter-spacing:.02em}
+.hero-credit{margin:8px 0 0;max-width:40rem;color:#d9d1c6;font-size:13px;line-height:1.35}
 .hero-credit a{color:#fff}
 main{padding:8px 0 72px}
 .intro{max-width:40rem;margin:28px 0}
@@ -854,8 +866,8 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .value-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .value-line b{font:800 32px/1 "Barlow Condensed",sans-serif}
 @media(max-width:800px){
-.hero{min-height:78vh}
-.hero h1{font-size:clamp(3.4rem,18vw,5.2rem)}
+.hero{height:min(70vh,calc(100svh - 14.75rem));max-height:72vh}
+.hero h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cost{grid-template-columns:1fr 1fr}
 .detail-photos,.detail-photos.solo{grid-template-columns:1fr}
