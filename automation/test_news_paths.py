@@ -89,8 +89,9 @@ class NewsPathTests(unittest.TestCase):
             lead = str(article.get('image') or '').strip()
             self.assertTrue(lead.startswith('/images/'), article.get('slug'))
             self.assertTrue((ROOT / lead.lstrip('/')).is_file(), article.get('slug'))
+        older = home.split('id="older-stories"', 1)[1].split('<!-- fcb-stories:end -->', 1)[0]
         for article in articles[1:]:
-            card = home.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
+            card = older.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
             self.assertIn(f'src="{article["image"]}"', card, article['slug'])
         bare = dict(featured)
         bare['image'] = ''
