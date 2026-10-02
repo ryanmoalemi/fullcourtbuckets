@@ -708,8 +708,8 @@ AUTHOR_NAME = 'Ryan Moalemi'
 AUTHOR_PATH = '/authors/ryan-moalemi/'
 AUTHOR_PAGE = 'authors/ryan-moalemi/index.html'
 AUTHOR_URL = BASE + AUTHOR_PATH
-AUTHOR_PHOTO = '/images/authors/ryan-moalemi.jpg'
-BYLINE_PHOTO = '/images/authors/ryan-moalemi-byline.jpg'
+AUTHOR_PHOTO = '/images/authors/ryan-moalemi-photo.jpg'
+BYLINE_PHOTO = '/images/authors/ryan-moalemi-photo-byline.jpg'
 
 
 def versioned_image(path: str) -> str:
@@ -740,7 +740,7 @@ AUTHOR_BIO = (
         'He started sports writing in 2026 after being impressed by Angel Reese in a WNBA game, '
         'and by the positive effect the league is having on women\'s sports overall.'
     ),
-    'He runs Full Court Buckets, a US WNBA news and analysis site, and writes its game recaps and news.',
+    'He runs Full Court Buckets, a US WNBA news and analysis site. He comes up with the stories, edits every one, and uses AI tools to help draft them.',
     'He hopes Full Court Buckets helps bring new eyes to the movement.',
 )
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
