@@ -51,7 +51,13 @@ class AuthorPageTests(unittest.TestCase):
     def test_author_page_bio_list_and_sitemap(self):
         page = (ROOT / 'authors' / 'ryan-moalemi' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('<h1>Ryan Moalemi</h1>', page)
-        self.assertIn('src="/images/authors/ryan-moalemi.jpg', page)
+        self.assertIn('src="/images/authors/ryan-moalemi-photo.jpg', page)
+        self.assertIn(
+            'He runs Full Court Buckets, a US WNBA news and analysis site. '
+            'He comes up with the stories, edits every one, and uses AI tools to help draft them.',
+            page,
+        )
+        self.assertNotIn('and writes its game recaps and news.', page)
         self.assertIn('alt="Ryan Moalemi"', page)
         self.assertIn('width="320"', page)
         self.assertIn('height="320"', page)
@@ -110,9 +116,13 @@ class AuthorPageTests(unittest.TestCase):
         for name in ('sitemap.xml', 'pages-sitemap.xml'):
             sitemap = (ROOT / name).read_text(encoding='utf-8')
             self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/', sitemap)
-        photo = ROOT / 'images' / 'authors' / 'ryan-moalemi.jpg'
+        photo = ROOT / 'images' / 'authors' / 'ryan-moalemi-photo.jpg'
+        byline = ROOT / 'images' / 'authors' / 'ryan-moalemi-photo-byline.jpg'
         self.assertTrue(photo.is_file())
         self.assertGreater(photo.stat().st_size, 1000)
+        self.assertTrue(byline.is_file())
+        self.assertEqual(byline.read_bytes(), (ROOT / 'images' / 'authors' / 'ryan-moalemi-byline.jpg').read_bytes())
+        self.assertEqual(photo.read_bytes(), (ROOT / 'images' / 'authors' / 'ryan-moalemi.jpg').read_bytes())
 
     def test_every_news_article_has_byline_and_person_author(self):
         articles = _articles()
