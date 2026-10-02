@@ -24,7 +24,8 @@ ROUTE = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
 RELATIVE = 'authors/ryan-moalemi/ryans-angel-reese-cards/index.html'
 DATA_FILE = Path('data/reese-cards.json')
 BASE = 'https://fullcourtbuckets.com'
-PAGE_TITLE = "Ryan's Angel Reese Cards | Full Court Buckets"
+COLLECTION_TITLE = "Ryan's Angel Reese cards"
+PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
 PAGE_DESCRIPTION = (
     "Ryan Moalemi's Angel Reese cards: PSA 10 slabs, the eBay totals he paid, "
     "and current values from recent sold comps."
@@ -495,7 +496,7 @@ def _schema(data: dict, summary: dict, as_of: str, faq_entities: list[dict]) -> 
         'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
             {'@type': 'ListItem', 'position': 2, 'name': 'Ryan Moalemi', 'item': links.AUTHOR_URL},
-            {'@type': 'ListItem', 'position': 3, 'name': 'Angel Reese Cards', 'item': canonical},
+            {'@type': 'ListItem', 'position': 3, 'name': COLLECTION_TITLE, 'item': canonical},
         ],
     }
     listing = []
@@ -535,7 +536,7 @@ def _hero() -> str:
 <div class="hero-shade" aria-hidden="true"></div>
 <div class="hero-copy">
 <p class="hero-kicker">Personal collection</p>
-<h1 id="collection-title"><span>Angel Reese</span><span class="cards-word">Cards</span></h1>
+<h1 id="collection-title"><span class="owner-word">{esc("Ryan's")}</span><span>Angel Reese</span><span class="cards-word">cards</span></h1>
 <p class="hero-line">Ryan's collection of Angel Reese cards</p>
 <p class="hero-credit">{credit}</p>
 </div>
@@ -614,7 +615,7 @@ def render_body(data: dict) -> str:
         f'A card with no verified sale is marked Value unknown{star} and left out of the paid, value, and change totals.</p>'
         '</section>'
     )
-    return f'''<div class="crumb-bar"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/authors/ryan-moalemi/">Ryan Moalemi</a><span aria-hidden="true">/</span><span>Angel Reese Cards</span></nav></div></div>
+    return f'''<div class="crumb-bar"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/authors/ryan-moalemi/">Ryan Moalemi</a><span aria-hidden="true">/</span><span>{esc(COLLECTION_TITLE)}</span></nav></div></div>
 {_hero()}
 <main class="shell" id="content">
 {intro}
@@ -774,6 +775,7 @@ header img{width:220px;height:auto}
 .hero-kicker{margin:0 0 8px;color:#f0c36a;font:700 13px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase}
 .hero h1{margin:0;font:900 clamp(4.4rem,13vw,8.8rem)/.82 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
 .hero h1 span{display:block}
+.hero h1 .owner-word{font-size:.38em;letter-spacing:.04em;color:#f6f1e8}
 .hero h1 .cards-word{color:#f0c36a}
 .hero-line{margin:14px 0 0;font:700 clamp(1.15rem,2.4vw,1.7rem)/1.25 "Barlow Condensed",sans-serif;letter-spacing:.02em}
 .hero-credit{margin:14px 0 0;max-width:40rem;color:#d9d1c6;font-size:13px}
@@ -929,7 +931,7 @@ def author_teaser(root: Path) -> str:
     return (
         f'<a class="collection-teaser" href="{ROUTE}">'
         f'<img src="{image}" alt="{esc(alt)}" width="657" height="1000">'
-        '<span><b>Angel Reese cards</b>'
+        f'<span><b>{esc(COLLECTION_TITLE)}</b>'
         f'<p>{count} Angel Reese {noun} in Ryan\'s collection, with what he paid and the latest values.</p>'
         '</span></a>'
     )
