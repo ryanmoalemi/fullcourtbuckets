@@ -1,4 +1,5 @@
 """Posts live at /news/<slug>/. Root post URLs are redirect stubs, not links."""
+import hashlib
 import html
 import json
 import re
@@ -89,8 +90,9 @@ class NewsPathTests(unittest.TestCase):
             lead = str(article.get('image') or '').strip()
             self.assertTrue(lead.startswith('/images/'), article.get('slug'))
             self.assertTrue((ROOT / lead.lstrip('/')).is_file(), article.get('slug'))
+        older = home.split('id="older-stories"', 1)[1].split('<!-- fcb-stories:end -->', 1)[0]
         for article in articles[1:]:
-            card = home.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
+            card = older.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
             self.assertIn(f'src="{article["image"]}"', card, article['slug'])
         bare = dict(featured)
         bare['image'] = ''
@@ -100,6 +102,31 @@ class NewsPathTests(unittest.TestCase):
             bare,
         )
         self.assertNotIn('id="featured-image"', rendered)
+
+    def test_articles_do_not_share_a_lead_image(self):
+        articles = _articles()
+        paths = {}
+        hashes = {}
+        for article in articles:
+            image = str(article.get('image') or '').strip()
+            slug = article.get('slug')
+            self.assertTrue(image.startswith('/images/'), slug)
+            self.assertNotIn(image, paths, f'{slug} reuses the lead path from {paths.get(image)}')
+            paths[image] = slug
+            photo = ROOT / image.lstrip('/')
+            digest = hashlib.sha256(photo.read_bytes()).hexdigest()
+            self.assertNotIn(digest, hashes, f'{slug} reuses the photo file from {hashes.get(digest)}')
+            hashes[digest] = slug
+        by_slug = {article['slug']: article for article in articles}
+        game_1 = by_slug['liberty-lynx-game-1-full-recap']['image']
+        sweep = by_slug['liberty-lynx-game-2-recap']['image']
+        self.assertIn('breanna-stewart', game_1)
+        self.assertIn('marine-johannes', sweep)
+        self.assertNotEqual(game_1, sweep)
+        page = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn(game_1, page)
+        self.assertIn('CC BY-SA 4.0', page)
+        self.assertNotIn('\u2014', page)
 
     def test_game_3_recap_is_linked_from_fever_and_aces(self):
         for slug in ('indiana-fever', 'las-vegas-aces'):

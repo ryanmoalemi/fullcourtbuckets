@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
 from link_graph import file_for_url, normalize_href
+import homepage_rail
 import team_names
 
 MAX_PLAYER_LINKS = 8
@@ -337,7 +338,7 @@ def _apply_featured_media(text: str, article: dict) -> str:
     )
 
 
-def apply_homepage(text: str, articles: list) -> str:
+def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
     if 'id="latest"' not in text or 'id="older-stories"' not in text:
         return text
@@ -381,6 +382,8 @@ def apply_homepage(text: str, articles: list) -> str:
     helper = 'function articlePath(a){return (a.url && a.url.charAt(0)==="/") ? a.url : ("/news/" + a.slug + "/");}'
     if 'function articlePath(' not in text:
         text = text.replace('fetch("/articles.json")', helper + '\n  fetch("/articles.json")', 1)
+    if rail_html:
+        text = homepage_rail.apply_rail(text, rail_html)
     return text
 
 

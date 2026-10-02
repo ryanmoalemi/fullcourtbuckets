@@ -13,6 +13,7 @@ import re
 from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
+import homepage_rail
 import internal_links as links
 import site_nav
 import team_hub
@@ -1012,7 +1013,11 @@ def build(root: Path):
         original=homepage.read_text()
         if 'Full Court Buckets' not in original:
             raise BuildError('Homepage safety check failed; not changing navigation.')
-        text=site_nav.install(links.apply_homepage(original, links.load_articles(root)), '/', menu)
+        text=site_nav.install(
+            links.apply_homepage(original, links.load_articles(root), homepage_rail.load_rail(root, original)),
+            '/',
+            menu,
+        )
         if text != original:
             files['index.html']=text
     phrases=links.article_phrases(published_index, linking)
@@ -1100,8 +1105,13 @@ def refresh_published_news(root: Path | None = None) -> int:
         files[relative] = site_nav.install(content, current, menu)
     homepage = root / 'index.html'
     if homepage.is_file():
+        homepage_text = homepage.read_text(encoding='utf-8')
         files['index.html'] = site_nav.install(
-            links.apply_homepage(homepage.read_text(encoding='utf-8'), links.load_articles(root)),
+            links.apply_homepage(
+                homepage_text,
+                links.load_articles(root),
+                homepage_rail.load_rail(root, homepage_text),
+            ),
             '/',
             menu,
         )
