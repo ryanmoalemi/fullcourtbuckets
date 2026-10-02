@@ -1,7 +1,9 @@
 """Ryan's Angel Reese cards stay a generated personal page, not a news article."""
 import json
+import threading
 import unittest
 from decimal import Decimal
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
 import build_reese_cards as cards
@@ -55,10 +57,19 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Value unknown*', self.html)
         self.assertIn('left out of paid, value, and change', self.html)
         self.assertNotIn('\u2014', self.html)
-        self.assertIn('transcendent talent', self.html)
-        self.assertIn('positive impact she is having on women', self.html)
-        self.assertIn('young girls look up to her', self.html)
-        self.assertIn('got into sports writing after watching her play', self.html)
+        intro = self.html.split('<section class="intro">', 1)[1].split('</section>', 1)[0]
+        for paragraph in cards.INTRO_PARAGRAPHS:
+            self.assertIn(f'<p>{paragraph}</p>', intro)
+        self.assertEqual(intro.count('<p>'), 4)
+        self.assertIn('href="/wnba/angel-reese/"', intro)
+        self.assertNotIn('transcendent talent', self.html)
+        self.assertNotIn('got into sports writing', self.html)
+        self.assertIn('height:min(72vh,calc(100svh - 13.25rem))', self.html)
+        self.assertIn('max-height:75vh', self.html)
+        self.assertIn('object-fit:cover', self.html)
+        self.assertIn('object-position:center top', self.html)
+        self.assertNotIn('min-height:100svh', self.html)
+        self.assertNotIn('min-height:78vh', self.html)
         self.assertIn('Photo: eBay seller listing of this card', self.html)
         self.assertIn('John McClellan', self.html)
         self.assertIn('CC BY-SA 2.0', self.html)
@@ -130,6 +141,114 @@ class ReeseCardPageTests(unittest.TestCase):
             photo = ROOT / 'images' / 'reese-cards' / name
             self.assertTrue(photo.is_file(), name)
             self.assertLess(photo.stat().st_size, 200_000, name)
+
+
+FOLD_VIEWPORTS = (
+    (1280, 720),
+    (1366, 768),
+    (1024, 760),
+    (1440, 900),
+    (390, 844),
+    (360, 740),
+)
+FOLD_MEASURE = """() => {
+  const hero = document.querySelector('.hero');
+  const name = document.querySelector('#collection-title span:not(.owner-word):not(.cards-word)');
+  const word = document.querySelector('#collection-title .cards-word');
+  const line = document.querySelector('.hero-line');
+  const photo = document.querySelector('.hero-photo');
+  const box = (el) => {
+    const r = el.getBoundingClientRect();
+    return {top: r.top, bottom: r.bottom, height: r.height, width: r.width};
+  };
+  const photoStyle = getComputedStyle(photo);
+  return {
+    scrollY: window.scrollY,
+    vh: window.innerHeight,
+    hero: box(hero),
+    name: box(name),
+    cards: box(word),
+    line: box(line),
+    photo: box(photo),
+    fit: photoStyle.objectFit,
+    position: photoStyle.objectPosition,
+  };
+}"""
+
+
+class ReeseHeroFoldTests(unittest.TestCase):
+    """ANGEL REESE, CARDS, and the subtitle stay above the fold."""
+
+    def test_title_block_is_above_the_fold(self):
+        from playwright.sync_api import sync_playwright
+
+        server = ThreadingHTTPServer(('127.0.0.1', 0), _QuietHandler)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        origin = f'http://127.0.0.1:{server.server_address[1]}'
+        failures = []
+        try:
+            with sync_playwright() as playwright:
+                browser = _launch(playwright)
+                try:
+                    for width, height in FOLD_VIEWPORTS:
+                        page = browser.new_page(viewport={'width': width, 'height': height})
+                        page.goto(origin + ROUTE, wait_until='domcontentloaded')
+                        page.evaluate("() => document.fonts.ready")
+                        measured = page.evaluate(FOLD_MEASURE)
+                        failures.extend(_fold_problems(width, height, measured))
+                        page.close()
+                finally:
+                    browser.close()
+        finally:
+            server.shutdown()
+            server.server_close()
+        self.assertEqual(failures, [])
+
+
+class _QuietHandler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=str(ROOT), **kwargs)
+
+    def log_message(self, format, *args):
+        return
+
+
+def _launch(playwright):
+    args = ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
+    try:
+        return playwright.chromium.launch(args=args)
+    except Exception:
+        return playwright.chromium.launch(channel='chrome', args=args)
+
+
+def _fold_problems(width, height, measured):
+    problems = []
+    label = f'{width}x{height}'
+    if measured['scrollY'] != 0:
+        problems.append(f'{label} scrolled')
+    if measured['fit'] != 'cover':
+        problems.append(f'{label} object-fit is {measured["fit"]}')
+    position = measured['position']
+    if 'top' not in position and not position.endswith('0%'):
+        problems.append(f'{label} object-position is {position}')
+    hero = measured['hero']
+    photo = measured['photo']
+    if hero['bottom'] > measured['vh'] + 1:
+        problems.append(f'{label} hero bottom {hero["bottom"]:.1f} past {measured["vh"]}')
+    if abs(photo['width'] - hero['width']) > 2 or abs(photo['height'] - hero['height']) > 2:
+        problems.append(f'{label} photo does not cover the hero')
+    for name in ('name', 'cards', 'line'):
+        box = measured[name]
+        if box['height'] < 8:
+            problems.append(f'{label} {name} has no height')
+        if box['top'] < -1:
+            problems.append(f'{label} {name} starts above the viewport ({box["top"]:.1f})')
+        if box['bottom'] > measured['vh'] + 1:
+            problems.append(f'{label} {name} ends below the fold ({box["bottom"]:.1f} > {measured["vh"]})')
+        if box['bottom'] > hero['bottom'] + 1:
+            problems.append(f'{label} {name} is clipped by the hero')
+    return problems
 
 
 if __name__ == '__main__':
