@@ -659,6 +659,47 @@ BASE = 'https://fullcourtbuckets.com'
 NEWS_HUB = '/news/'
 ARTICLE_SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 NEWS_INTRO = 'WNBA game recaps, roster notes, and other league stories from Full Court Buckets, each with a date and a one-line summary.'
+AUTHOR_NAME = 'Ryan Moalemi'
+AUTHOR_PATH = '/authors/ryan-moalemi/'
+AUTHOR_PAGE = 'authors/ryan-moalemi/index.html'
+AUTHOR_URL = BASE + AUTHOR_PATH
+AUTHOR_IMAGE = '/images/authors/ryan-moalemi.jpg'
+AUTHOR_IMAGE_URL = BASE + AUTHOR_IMAGE
+# One line for Person JSON-LD. Visible bio paragraphs stay separate.
+AUTHOR_DESCRIPTION = (
+    'Ryan Moalemi has been writing internet content since 2001. '
+    'He started sports writing in 2026 and runs Full Court Buckets, '
+    'hoping it helps bring new eyes to the movement.'
+)
+AUTHOR_META = (
+    'Ryan Moalemi runs Full Court Buckets and writes its WNBA game recaps and news. '
+    'He has been writing internet content since 2001.'
+)
+AUTHOR_BIO = (
+    'Ryan Moalemi has been writing internet content since 2001.',
+    (
+        'He started sports writing in 2026 after being impressed by Angel Reese in a WNBA game, '
+        'and by the positive effect the league is having on women\'s sports overall.'
+    ),
+    'He runs Full Court Buckets, a US WNBA news and analysis site, and writes its game recaps and news.',
+    'He hopes Full Court Buckets helps bring new eyes to the movement.',
+)
+GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
+BYLINE_HTML = (
+    '<a class="byline" href="/authors/ryan-moalemi/">'
+    '<img src="/images/authors/ryan-moalemi.jpg" alt="Ryan Moalemi" width="40" height="40">'
+    '<span>By Ryan Moalemi</span></a>'
+)
+BYLINE_CSS = (
+    '.article .byline{display:flex;align-items:center;gap:10px;margin:0 0 18px;color:#d4d0ca;'
+    'font:600 15px/1.3 Inter,system-ui,sans-serif;letter-spacing:0;text-transform:none;text-decoration:none}'
+    '.article .byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;'
+    'border:1px solid var(--line,#2b2930);flex:0 0 40px;background:#111}'
+    '.article .byline:hover{color:var(--orange,#ff9800)}'
+    '@media(max-width:900px){.article .byline{font-size:14px;margin-bottom:16px}}'
+)
+BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
+AUTHOR_META_RE = re.compile(r'<meta\b[^>]*\bname="author"[^>]*>', re.I)
 JSONLD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re.S)
 CANONICAL_RE = re.compile(r'<link\b[^>]*rel="canonical"[^>]*>', re.I)
 OG_URL_RE = re.compile(r'<meta\b[^>]*property="og:url"[^>]*>', re.I)
@@ -870,6 +911,7 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
         found = True
         node['url'] = absolute
         node['mainEntityOfPage'] = {'@type': 'WebPage', '@id': absolute}
+        node['author'] = article_author()
         description = cap_meta(article.get('description') or '', 160)
         if description:
             node['description'] = description
@@ -888,7 +930,7 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
             'url': absolute,
             'mainEntityOfPage': {'@type': 'WebPage', '@id': absolute},
             'datePublished': article.get('date') or '',
-            'author': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
+            'author': article_author(),
             'publisher': {
                 '@type': 'Organization',
                 'name': 'Full Court Buckets',
@@ -986,15 +1028,159 @@ def ensure_box_score(html_text: str, article: dict) -> str:
     return html_text
 
 
+def article_author() -> dict:
+    """Person credited on every news post. Publisher stays the organization."""
+    return {'@type': 'Person', 'name': AUTHOR_NAME, 'url': AUTHOR_URL}
+
+
+def author_person() -> dict:
+    """Profile markup. jobTitle stays the generic Editor label."""
+    return {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': AUTHOR_NAME,
+        'url': AUTHOR_URL,
+        'image': AUTHOR_IMAGE_URL,
+        'jobTitle': 'Editor',
+        'description': AUTHOR_DESCRIPTION,
+        'worksFor': {
+            '@type': 'Organization',
+            'name': 'Full Court Buckets',
+            'url': BASE + '/',
+        },
+    }
+
+
+def ensure_author_meta(html: str) -> str:
+    tag = f'<meta name="author" content="{esc(AUTHOR_NAME)}">'
+    if AUTHOR_META_RE.search(html):
+        return AUTHOR_META_RE.sub(tag, html, count=1)
+    if '</head>' in html:
+        return html.replace('</head>', tag + '</head>', 1)
+    return html + tag
+
+
+def ensure_byline(html: str) -> str:
+    """Put the linked byline under the headline. Same tab, since it stays on this site."""
+    if '.article .byline{' not in html:
+        if '</style>' in html:
+            html = html.replace('</style>', BYLINE_CSS + '</style>', 1)
+        elif '</head>' in html:
+            html = html.replace('</head>', '<style>' + BYLINE_CSS + '</style></head>', 1)
+    if BYLINE_RE.search(html):
+        return BYLINE_RE.sub(BYLINE_HTML, html, count=1)
+    if '</h1>' in html:
+        return html.replace('</h1>', '</h1>' + BYLINE_HTML, 1)
+    marker = '<article'
+    index = html.find(marker)
+    if index == -1:
+        return html + BYLINE_HTML
+    end = html.find('>', index)
+    return html[:end + 1] + BYLINE_HTML + html[end + 1:]
+
+
+def _author_bio_html() -> str:
+    parts = [
+        '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
+    ]
+    for sentence in AUTHOR_BIO:
+        text = esc(sentence).replace(
+            'Angel Reese',
+            '<a href="/wnba/angel-reese/">Angel Reese</a>',
+        )
+        parts.append(f'<p>{text}</p>')
+    return '\n'.join(parts)
+
+
+def render_author_page(articles: list) -> str:
+    """Author archive. The article list is the same newest-first feed as /news/."""
+    ordered = _ordered_articles(articles)
+    crumbs = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Authors'},
+            {'@type': 'ListItem', 'position': 3, 'name': AUTHOR_NAME, 'item': AUTHOR_URL},
+        ],
+    }
+    cards = ''.join(_news_list_item(article) for article in ordered)
+    return f'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+{GA4_TAG}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(AUTHOR_NAME)} | Full Court Buckets</title>
+<meta name="description" content="{esc(AUTHOR_META)}">
+<meta name="author" content="{esc(AUTHOR_NAME)}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{AUTHOR_URL}">
+<link rel="icon" href="/favicon.svg">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{esc(AUTHOR_NAME)}">
+<meta property="og:description" content="{esc(AUTHOR_META)}">
+<meta property="og:url" content="{AUTHOR_URL}">
+<meta property="og:image" content="{AUTHOR_IMAGE_URL}">
+<meta property="og:site_name" content="Full Court Buckets">
+{_jsonld(author_person())}
+{_jsonld(crumbs)}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{{margin:0;background:#050506;color:#f5f3ef;font:16px/1.6 Inter,system-ui,sans-serif}}
+a{{color:inherit}}img{{max-width:100%;display:block}}
+.shell{{width:min(980px,94vw);margin:0 auto}}
+header{{border-bottom:1px solid #2b2930;background:#050506}}
+header .shell{{display:flex;align-items:center;gap:24px;min-height:84px}}
+header img{{width:220px;height:auto}}
+main{{padding:28px 0 72px}}
+h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
+h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
+.bio p{{margin:0 0 14px;color:#e8e3df;max-width:40rem}}
+.bio a{{color:#ff9800;text-decoration:underline}}
+.author-photo{{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:12px 0 18px;border:1px solid #2b2930;background:#111}}
+.breadcrumbs{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:#a29f99;font-size:13px;font-weight:600}}
+.breadcrumbs a{{color:#d4d0ca;text-decoration:underline}}
+.news-list{{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}}
+.news-item{{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;align-items:center;background:rgba(10,10,12,.96);border:1px solid #2b2930;padding:12px;text-decoration:none}}
+.news-item img{{width:180px;height:120px;object-fit:cover;background:#111;border-radius:0}}
+.news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
+.news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
+.news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}
+@media(max-width:700px){{h1{{font-size:40px}}.author-photo{{width:120px;height:120px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}}}
+</style>
+</head>
+<body>
+<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<main class="shell">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Authors</span><span aria-hidden="true">/</span><span>{esc(AUTHOR_NAME)}</span></nav>
+<h1>{esc(AUTHOR_NAME)}</h1>
+<img class="author-photo" src="{AUTHOR_IMAGE}" alt="{esc(AUTHOR_NAME)}" width="320" height="320">
+<div class="bio">
+{_author_bio_html()}
+</div>
+<h2>Stories</h2>
+<ol class="news-list">{cards}</ol>
+</main>
+</body>
+</html>
+'''
+
+
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
     html_text = rewrite_legacy_article_urls(html_text, articles if articles is not None else [article])
     absolute = article_absolute(article)
     html_text = _upsert_meta(html_text, absolute, article.get('description'))
+    html_text = ensure_author_meta(html_text)
     html_text = _upsert_article_schema(html_text, article, absolute)
     html_text = _insert_visible_breadcrumb(html_text, str(article.get('title') or ''))
     html_text = ensure_box_score(html_text, article)
+    html_text = ensure_byline(html_text)
     return html_text
 
 
@@ -1157,6 +1343,7 @@ def assemble_news_pages(root: Path) -> dict[str, str]:
         pages[f'news/{slug}/index.html'] = prepare_article_page(root, article, articles)
         pages[f'{slug}/index.html'] = redirect_stub(article)
     pages['news/index.html'] = render_news_hub(articles)
+    pages[AUTHOR_PAGE] = render_author_page(articles)
     return pages
 
 
@@ -1191,6 +1378,16 @@ def sync_news_sitemap(text: str, articles: list) -> str:
             '    <lastmod>2026-09-29</lastmod>\n'
             '    <changefreq>weekly</changefreq>\n'
             '    <priority>0.8</priority>\n'
+            '  </url>\n'
+        )
+        text = text.replace('</urlset>', block + '</urlset>', 1)
+    if not re.search(rf'<loc>\s*{re.escape(AUTHOR_URL)}\s*</loc>', text):
+        block = (
+            '  <url>\n'
+            f'    <loc>{AUTHOR_URL}</loc>\n'
+            '    <lastmod>2026-10-02</lastmod>\n'
+            '    <changefreq>weekly</changefreq>\n'
+            '    <priority>0.6</priority>\n'
             '  </url>\n'
         )
         text = text.replace('</urlset>', block + '</urlset>', 1)

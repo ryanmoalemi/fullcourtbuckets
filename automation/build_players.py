@@ -928,6 +928,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('terms/index.html', '/terms/'),
         ('wnba/index.html', '/wnba/'),
         ('news/index.html', '/news/'),
+        ('authors/ryan-moalemi/index.html', '/authors/ryan-moalemi/'),
         ('standings/index.html', '/standings/'),
         ('wnba/teams/index.html', '/wnba/teams/'),
         ('wnba/couples/index.html', '/wnba/couples/'),
@@ -1020,7 +1021,7 @@ def build(root: Path):
             files[relative]=content
             continue
         current=page_url(Path(relative))
-        if relative != 'news/index.html':
+        if relative not in links.GENERATED_LISTING_PAGES:
             content=links.ensure_footer_hubs(links.link_copy(content, phrases))
         files[relative]=site_nav.install(content, current, menu)
     standings_path=root/'standings'/'index.html'
@@ -1094,7 +1095,7 @@ def refresh_published_news(root: Path | None = None) -> int:
             files[relative] = content
             continue
         current = page_url(Path(relative))
-        if relative != 'news/index.html':
+        if relative not in links.GENERATED_LISTING_PAGES:
             content = links.ensure_footer_hubs(links.link_copy(content, phrases))
         files[relative] = site_nav.install(content, current, menu)
     homepage = root / 'index.html'

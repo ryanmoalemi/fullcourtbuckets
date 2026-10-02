@@ -114,6 +114,7 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
         if (root / relative).is_file():
             planned.add(relative)
     planned.add('news/index.html')
+    planned.add(links.AUTHOR_PAGE)
     for article in links.load_articles(root):
         slug = article.get('slug') or ''
         if slug:
