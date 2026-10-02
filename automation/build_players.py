@@ -271,7 +271,10 @@ def header(route='/', menu=None):
     return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Built by the WNBA community, for the WNBA community</span></div></div>'''
 
 def footer(include_standings=True):
-    return site_nav.footer_html(include_standings)
+    html_text = site_nav.footer_html(include_standings)
+    if links.TIKTOK_URL not in html_text or 'Follow us' not in html_text:
+        raise BuildError('Shared footer is missing the TikTok profile.')
+    return html_text
 
 def has_standings(root):
     return root is None or (Path(root)/'standings'/'index.html').is_file()

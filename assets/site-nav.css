@@ -55,6 +55,8 @@ header,.site-header{z-index:40}
 .site-footer .footer-links{display:flex;flex-wrap:wrap;column-gap:16px;row-gap:4px;align-items:center;margin:0 0 10px}
 .site-footer .footer-links a{color:#d4d0ca;display:inline-block;min-height:44px;margin:0;padding:12px 0;box-sizing:border-box;line-height:1.25;text-decoration:none}
 .site-footer .footer-links a:hover{color:#ff9800}
+.site-footer .footer-links a.footer-tiktok{display:inline-flex;align-items:center;gap:6px}
+.site-footer .footer-links a.footer-tiktok svg{width:16px;height:16px;fill:currentColor;flex:0 0 auto}
 @media (max-width:480px){
  .site-footer .footer-links{column-gap:16px;row-gap:0}
  .site-footer .footer-links a{min-height:44px;padding:12px 0}

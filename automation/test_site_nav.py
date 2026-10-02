@@ -120,8 +120,15 @@ class SiteNavTests(unittest.TestCase):
         self.assertIn('.site-footer .footer-links a:hover{color:#ff9800}', css)
         menu = site_nav.render(site_nav.build_menu(ROOT), '/news/')
         self.assertNotIn('target="_blank"', menu)
-        self.assertNotIn('target="_blank"', site_nav.FOOTER_HTML)
-        self.assertNotIn('target="_blank"', site_nav.footer_html(False))
+        self.assertEqual(_blank_internal_anchors(site_nav.FOOTER_HTML), [])
+        self.assertEqual(_blank_internal_anchors(site_nav.footer_html(False)), [])
+        self.assertIn(
+            'href="https://www.tiktok.com/@fullcourtbuckets" target="_blank" rel="noopener me"',
+            site_nav.FOOTER_HTML,
+        )
+        self.assertIn('>Follow us</a>', site_nav.FOOTER_HTML)
+        self.assertIn('<svg', site_nav.FOOTER_HTML)
+        self.assertIn(site_nav.links.TIKTOK_FOOTER_LINK, site_nav.footer_html(False))
         pages = [path for path in iter_html(ROOT) if 'http-equiv="refresh"' not in path.read_text(encoding='utf-8').lower()]
         self.assertGreater(len(pages), 100)
         offenders = []
@@ -166,6 +173,37 @@ class SiteNavTests(unittest.TestCase):
         self.assertEqual(offenders, [])
         hub = (ROOT / 'news' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('class="news-item"', hub)
-        self.assertNotIn('target="_blank"', hub)
+        # Story cards stay in this tab. The footer TikTok profile is the external exception.
+        self.assertNotIn('target="_blank"', hub.split('<footer', 1)[0])
         story = (ROOT / 'news' / 'liberty-lynx-game-2-recap' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('href="/wnba/breanna-stewart/" target="_blank" rel="noopener"', story)
+
+    def test_footer_tiktok_link_exists_on_every_built_page(self):
+        pages = list(iter_html(ROOT))
+        self.assertGreater(len(pages), 100)
+        missing = []
+        for path in pages:
+            html = path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in html.lower():
+                continue
+            footers = site_nav.FOOTER_RE.findall(html)
+            if footers != [site_nav.FOOTER_HTML]:
+                missing.append(path.relative_to(ROOT).as_posix())
+                continue
+            footer = footers[0]
+            if 'href="https://www.tiktok.com/@fullcourtbuckets" target="_blank" rel="noopener me"' not in footer:
+                missing.append(path.relative_to(ROOT).as_posix())
+            elif '>Follow us</a>' not in footer or '<svg' not in footer:
+                missing.append(path.relative_to(ROOT).as_posix() + ' missing icon or label')
+        self.assertEqual(missing, [])
+
+
+def _blank_internal_anchors(html: str) -> list[str]:
+    bad = []
+    for tag in site_nav._ANCHOR_RE.findall(html):
+        href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
+        if href and not site_nav._is_internal_href(href.group(2)):
+            continue
+        if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
+            bad.append(tag)
+    return bad

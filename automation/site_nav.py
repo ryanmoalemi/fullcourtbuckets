@@ -45,7 +45,8 @@ FOOTER_HTML = (
     '<a href="/privacy/">Privacy Policy</a>'
     '<a href="/terms/">Terms of Use</a>'
     '<a href="/privacy/" onclick="if(window.googlefc&amp;&amp;googlefc.showRevocationMessage){googlefc.showRevocationMessage();return false;}">Privacy and cookie settings</a>'
-    '<a href="/privacy/#us-state-privacy">Do not sell or share my personal information</a></p>'
+    '<a href="/privacy/#us-state-privacy">Do not sell or share my personal information</a>'
+    f'{links.TIKTOK_FOOTER_LINK}</p>'
     '<p>&copy; 2026 Full Court Buckets</p></div></footer>'
 )
 EM_DASH = '\u2014'

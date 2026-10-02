@@ -256,6 +256,8 @@ class AnchorTests(unittest.TestCase):
             player = (root / 'wnba' / 'example-player' / 'index.html').read_text(encoding='utf-8')
             self.assertIn('href="/wnba/second-player/"', player)
             self.assertIn('href="/wnba/teams/example-team/"', player)
+            self.assertIn('href="https://www.tiktok.com/@fullcourtbuckets" target="_blank" rel="noopener me"', player)
+            self.assertIn('>Follow us</a>', player)
             self.assertLessEqual(player.count('class="inline-link"'), 8)
             self.assertIn('Second Player', player)
             homepage = (root / 'index.html').read_text(encoding='utf-8')
