@@ -19,6 +19,33 @@ from link_graph import file_for_url, normalize_href
 import homepage_rail
 import team_names
 
+# Official Full Court Buckets profile. rel="me" marks it as this site's account.
+TIKTOK_URL = 'https://www.tiktok.com/@fullcourtbuckets'
+TIKTOK_ICON_SVG = (
+    '<svg class="tiktok-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" '
+    'width="16" height="16" aria-hidden="true" focusable="false">'
+    '<path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 '
+    '1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 '
+    '5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19'
+    '-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 '
+    '1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 '
+    '1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03'
+    '-.01-8.05.02-12.07z"/></svg>'
+)
+TIKTOK_FOOTER_LINK = (
+    f'<a class="footer-tiktok" href="{TIKTOK_URL}" target="_blank" rel="noopener me">'
+    f'{TIKTOK_ICON_SVG}Follow us</a>'
+)
+ABOUT_TIKTOK_HTML = (
+    '<p>Follow Full Court Buckets on TikTok at '
+    f'<a href="{TIKTOK_URL}" target="_blank" rel="noopener me">@fullcourtbuckets</a> '
+    'for WNBA news, analysis and commentary.</p>'
+)
+AUTHOR_TIKTOK_HTML = (
+    '<p>Full Court Buckets on TikTok: '
+    f'<a href="{TIKTOK_URL}" target="_blank" rel="noopener me">@fullcourtbuckets</a>.</p>'
+)
+
 MAX_PLAYER_LINKS = 8
 AMBIGUOUS_NICKNAMES = {
     'sun', 'sky', 'dream', 'fire', 'tempo', 'stars', 'east', 'west', 'usa',
@@ -254,7 +281,7 @@ def link_copy(html_text: str, compiled, scope: str = 'article') -> str:
 
 
 def ensure_footer_hubs(text: str) -> str:
-    """Add crawlable Players and Standings links in an existing footer link row."""
+    """Add crawlable Players, Standings, and TikTok links in an existing footer link row."""
     match = re.search(r'<p class="footer-links">.*?</p>', text, re.S)
     if not match:
         return text
@@ -264,11 +291,14 @@ def ensure_footer_hubs(text: str) -> str:
         extra += '<a href="/wnba/">Players</a>'
     if 'href="/standings/"' not in block and "href='/standings/'" not in block:
         extra += '<a href="/standings/">Standings</a>'
-    if not extra:
+    if extra:
+        open_end = block.find('>') + 1
+        block = block[:open_end] + extra + block[open_end:]
+    if TIKTOK_URL not in block:
+        block = block.replace('</p>', TIKTOK_FOOTER_LINK + '</p>', 1)
+    if block == match.group(0):
         return text
-    open_end = block.find('>') + 1
-    updated = block[:open_end] + extra + block[open_end:]
-    return text[:match.start()] + updated + text[match.end():]
+    return text[:match.start()] + block + text[match.end():]
 
 
 def _format_date(iso: str) -> str:
@@ -340,6 +370,7 @@ def _apply_featured_media(text: str, article: dict) -> str:
 
 def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
+    text = ensure_site_organization_same_as(text)
     if 'id="latest"' not in text or 'id="older-stories"' not in text:
         return text
     text = ensure_footer_hubs(text)
@@ -607,6 +638,12 @@ def apply_known_page_links(text: str, relative: str) -> str:
     """A few hub words already written on static pages. No new claims."""
     text = ensure_footer_hubs(text)
     if relative == 'about/index.html':
+        if 'Follow Full Court Buckets on TikTok at ' not in text:
+            marker = '<p><a href="/authors/ryan-moalemi/">Ryan Moalemi</a> writes the news and game recaps.</p>'
+            if marker in text:
+                text = text.replace(marker, marker + ABOUT_TIKTOK_HTML, 1)
+            elif '</main>' in text:
+                text = text.replace('</main>', ABOUT_TIKTOK_HTML + '</main>', 1)
         if '<b>Players:</b>' in text:
             text = text.replace(
                 '<b>Players:</b>',
@@ -846,6 +883,49 @@ def _article_node(data):
 
 def _jsonld(data: dict) -> str:
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
+
+
+def _stamp_org_same_as(node) -> bool:
+    """Add TikTok to the site Organization node. Leave Person profiles alone."""
+    changed = False
+    if isinstance(node, dict):
+        kind = node.get('@type')
+        names = kind if isinstance(kind, list) else [kind]
+        if 'Organization' in names and node.get('@id') == BASE + '/#organization':
+            current = node.get('sameAs')
+            if current is None:
+                node['sameAs'] = [TIKTOK_URL]
+                changed = True
+            elif isinstance(current, str):
+                if current != TIKTOK_URL:
+                    node['sameAs'] = [current, TIKTOK_URL]
+                    changed = True
+            elif isinstance(current, list) and TIKTOK_URL not in current:
+                current.append(TIKTOK_URL)
+                changed = True
+        for value in node.values():
+            if _stamp_org_same_as(value):
+                changed = True
+    elif isinstance(node, list):
+        for item in node:
+            if _stamp_org_same_as(item):
+                changed = True
+    return changed
+
+
+def ensure_site_organization_same_as(html: str) -> str:
+    """Put the official TikTok URL on the homepage Organization block."""
+    def sub(match: re.Match) -> str:
+        try:
+            data = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            return match.group(0)
+        if not _stamp_org_same_as(data):
+            return match.group(0)
+        payload = json.dumps(data, ensure_ascii=False, separators=(',', ':'))
+        return '<script type="application/ld+json">' + payload + '</script>'
+
+    return JSONLD_RE.sub(sub, html)
 
 
 def cap_meta(text, limit: int = 155) -> str:
@@ -1092,6 +1172,7 @@ def _author_bio_html() -> str:
             '<a href="/wnba/angel-reese/">Angel Reese</a>',
         )
         parts.append(f'<p>{text}</p>')
+    parts.append(AUTHOR_TIKTOK_HTML)
     return '\n'.join(parts)
 
 
