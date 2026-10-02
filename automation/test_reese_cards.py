@@ -102,6 +102,16 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn("See Ryan's Angel Reese cards", player)
         self.assertIn(f'href="{ROUTE}"', player)
         self.assertNotIn(f'href="{ROUTE}" target="_blank"', player)
+        import build_players
+        import internal_links
+        self.assertLessEqual(build_players.contextual_link_count(player), internal_links.MAX_PLAYER_LINKS)
+        index = json.loads((ROOT / 'data' / 'wnba' / 'players-index.json').read_text(encoding='utf-8'))
+        published = [row for row in index['players'] if row.get('id') not in build_players.DUPLICATE_PLAYER_IDS]
+        linking = internal_links.catalog_from_index({**index, 'players': published})
+        profile = json.loads((ROOT / 'data' / 'wnba' / 'players' / 'angel-reese.json').read_text(encoding='utf-8'))
+        rebuilt = build_players.profile_page(profile, ROOT, linking, None)
+        self.assertIn("See Ryan's Angel Reese cards", rebuilt)
+        self.assertLessEqual(build_players.contextual_link_count(rebuilt), internal_links.MAX_PLAYER_LINKS)
         for name in ('sitemap.xml', 'pages-sitemap.xml'):
             sitemap = (ROOT / name).read_text(encoding='utf-8')
             self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/ryans-angel-reese-cards/', sitemap)
