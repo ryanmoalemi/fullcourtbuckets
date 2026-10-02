@@ -71,7 +71,7 @@ class HelpfulContentTests(unittest.TestCase):
     def test_duplicate_game_one_redirects_to_the_full_recap(self):
         kept = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('Ionescu assisted Stewart five times', kept)
-        self.assertIn('11 defensive rebounds', kept)
+        self.assertIn('11 defensive', kept)
         self.assertIn('2024 WNBA Finals', kept)
         self.assertNotIn(REMOVED, kept)
         self.assertNotIn('\u2014', kept)

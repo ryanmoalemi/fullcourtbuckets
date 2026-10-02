@@ -108,6 +108,7 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
     for relative in (
         'standings/index.html',
         'about/index.html',
+        'how-we-make-full-court-buckets/index.html',
         'contact/index.html',
         'privacy/index.html',
         'terms/index.html',

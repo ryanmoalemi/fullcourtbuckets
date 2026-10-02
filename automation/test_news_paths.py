@@ -175,3 +175,23 @@ class NewsPathTests(unittest.TestCase):
             self.assertIn('content="noindex"', stub)
             self.assertIn(f'location.replace("{target}")', stub)
             self.assertIsNone(pattern.search(stub), article['slug'])
+
+    def test_duplicate_liberty_lynx_game_1_redirects_to_the_full_recap(self):
+        kept = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('Ionescu assisted Stewart five times', kept)
+        self.assertIn('2024 WNBA Finals', kept)
+        self.assertNotIn('liberty-lynx-game-1-ionescu-stewart', kept)
+        target = 'https://fullcourtbuckets.com/news/liberty-lynx-game-1-full-recap/'
+        for relative in (
+            'news/liberty-lynx-game-1-ionescu-stewart/index.html',
+            'liberty-lynx-game-1-ionescu-stewart/index.html',
+        ):
+            stub = (ROOT / relative).read_text(encoding='utf-8')
+            self.assertIn(f'rel="canonical" href="{target}"', stub)
+            self.assertIn('http-equiv="refresh" content="0; url=' + target + '"', stub)
+            self.assertNotIn('site-footer', stub)
+        root_stub = (ROOT / 'liberty-lynx-game-1-ionescu-stewart' / 'index.html').read_text(encoding='utf-8')
+        self.assertNotIn('/news/liberty-lynx-game-1-ionescu-stewart/', root_stub)
+        for name in ('sitemap.xml', 'pages-sitemap.xml', 'articles.json'):
+            text = (ROOT / name).read_text(encoding='utf-8')
+            self.assertNotIn('liberty-lynx-game-1-ionescu-stewart', text)

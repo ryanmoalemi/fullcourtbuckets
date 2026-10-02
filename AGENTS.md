@@ -36,7 +36,7 @@ The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliy
 
 The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles. Former ADU pages, including `san-diego-adus.html`, `adu-cost.html`, `entitymap.html`, and the other SDADU copies, are removed from this repo. Do not add them back, do not put them in sitemaps, and do not link them. A request for one of those URLs is a 404.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles or sandiegoadubuilder.com links. Former ADU pages, including `san-diego-adus.html`, `adu-cost.html`, `entitymap.html`, and the other SDADU copies, are removed from this repo. Do not add them back, do not put them in sitemaps, and do not link them. A request for one of those URLs is a 404.
 
 ## Adding an article
 
@@ -49,6 +49,8 @@ Ryan Moalemi approves every story before it goes live. Do not merge a new post t
 End every post with one disclosure, then a link to `/how-we-make-full-court-buckets/` ("How we make Full Court Buckets"). `prepare_article_page` adds it. A recap that links an ESPN box score says: "How this story was made: drafted with AI tools from the ESPN box score linked above, then reviewed and edited by Ryan Moalemi." A post without a box score says: "How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi." Put the note after the box score when the story has one.
 
 The homepage sorts `articles.json` by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Add the new `/news/<slug>/` URL and `/news/` to `sitemap.xml` and `pages-sitemap.xml`. Do not list a root post URL.
+
+`/how-we-make-full-court-buckets/` explains how the site uses AI. It is styled like `/about/`, listed in `sitemap.xml` and `pages-sitemap.xml`, and linked from the footer, from `/about/`, and from `/authors/ryan-moalemi/`. It is not in the main menu. The header tagline is "Independent WNBA news and analysis".
 
 GitHub Pages has no server redirects. When a post leaves an old root URL, leave a redirect stub at that old path: meta refresh `0`, `rel=canonical` to the new URL, `noindex`, and `location.replace` to the new URL.
 
@@ -65,6 +67,8 @@ The only source for cards, prices, comps, and notes is `data/reese-cards.json`. 
 ## Player pages
 
 Link the first body-text mention of each player in every article to the existing page at `/wnba/<slug>/`, with `target="_blank" rel="noopener"`. Do not link player names to WNBA.com. Do not create a separate `/players/` system. Use the slug already published in `wnba/<slug>/index.html` and `data/wnba/players-index.json`. If that page does not exist, leave the name as plain text. Do not create a new player page for an article mention.
+
+Player pages that use a portrait say the portrait is an AI-generated editorial illustration, not a photograph. After that note, the page says: "Profile text and FAQs are written with help from AI tools, using the stats and sources on this page." The player generator adds that sentence. Do not change the byline text "By Ryan Moalemi".
 
 When a player's saved `current_team` changes from one non-null team to a different non-null team, `automation/wnba_sync.py` prepends a `team_changes` entry on `data/wnba/players/<slug>.json`: `from`, `to`, and `date` (the America/Los_Angeles calendar date, `YYYY-MM-DD`). Newest stays first. The player page shows a small label `Team change`, then `Joined the <To Team> from the <From Team> on <Mon D, YYYY>` (for example, `Joined the Sparks from the Liberty on Oct 3, 2026`). Do not write Moved. The feed does not say whether it was a trade, a signing, or a waiver claim. Do not record a null transition, including a player leaving or returning to the active feed. Keep earlier entries. Do not loosen the active-player shrink guard for this.
 

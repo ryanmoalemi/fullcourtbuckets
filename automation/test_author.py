@@ -75,6 +75,8 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('>Home</a>', page)
         self.assertIn('>Authors</span>', page)
         self.assertIn('<h2>Stories</h2>', page)
+        self.assertIn('href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>', page)
+        self.assertNotIn('href="/how-we-make-full-court-buckets/" target="_blank"', page)
         persons = _person(_ld_nodes(page))
         self.assertTrue(persons)
         profile = persons[0]
@@ -98,6 +100,9 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('href="/authors/ryan-moalemi/"', about)
         self.assertNotIn('href="/authors/ryan-moalemi/" target="_blank"', about)
         self.assertIn('TODO: owner, add the editor', about)
+        self.assertIn('runs Full Court Buckets. He comes up with the stories, edits every one, and uses AI tools to help draft them.', about)
+        self.assertIn('href="/how-we-make-full-court-buckets/">Here\'s how that works.</a>', about)
+        self.assertNotIn('writes the news and game recaps.', about)
         menu = site_nav.render(site_nav.build_menu(ROOT), '/__none__')
         self.assertNotIn('/authors/', menu)
         self.assertIn('<li><a href="/news/">News</a></li>', menu)
@@ -127,6 +132,9 @@ class AuthorPageTests(unittest.TestCase):
             self.assertEqual(node['author'], AUTHOR, article['slug'])
             self.assertEqual(node['publisher']['@type'], 'Organization', article['slug'])
             self.assertEqual(node['publisher']['name'], 'Full Court Buckets', article['slug'])
+            expected = links.HOW_MADE_RECAP if links.story_uses_box_score(html, article) else links.HOW_MADE_OTHER
+            self.assertIn(expected, html, article['slug'])
+            self.assertEqual(html.count('class="how-made"'), 1, article['slug'])
 
     def test_generator_adds_byline_to_a_new_post(self):
         slug = 'future-recap'
@@ -150,6 +158,7 @@ class AuthorPageTests(unittest.TestCase):
             (root / 'articles.json').write_text(json.dumps([article]), encoding='utf-8')
             html = links.prepare_article_page(root, article, [article])
             self.assertIn(links.BYLINE_HTML, html)
+            self.assertIn(links.HOW_MADE_OTHER, html)
             self.assertIn('<meta name="author" content="Ryan Moalemi">', html)
             node = links._article_node(_ld_nodes(html)[0])
             self.assertEqual(node['author'], AUTHOR)
