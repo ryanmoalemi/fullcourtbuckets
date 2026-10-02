@@ -36,7 +36,7 @@ The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliy
 
 The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles. Former ADU URLs that still exist at the same path on sandiegoadubuilder.com are noindex redirect stubs to that site (GitHub Pages cannot send an HTTP 301) and stay out of sitemaps, internal links, and JSON-LD. A former ADU URL that is not on that site stays a real 404.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles or sandiegoadubuilder.com links. ADU pages and redirect stubs stay off `main`. Those URLs should 404, and they stay out of sitemaps, internal links, and JSON-LD.
 
 ## Adding an article
 
@@ -45,6 +45,10 @@ Every post is published at `/news/<slug>/`. The slug does not change. Add `news/
 The `/news/` hub lists every article from `articles.json`, newest first, with the date, title, one-line summary, and thumbnail. Link the new post from that hub. The generator rebuilds the hub, so do not hand-edit the list. The same generator adds the byline under the headline on every post: "By Ryan Moalemi", with the headshot linked to `/authors/ryan-moalemi/` in the same tab. It also rebuilds that author page, newest first, from `articles.json`. Article JSON-LD `author` is that Person. `publisher` stays Full Court Buckets. Add `<meta name="author" content="Ryan Moalemi">`. The main menu links to `/news/` only. Do not list individual posts or the author page in the menu. Breadcrumbs on the post are Home > News > Post, both in the visible trail and in `BreadcrumbList` JSON-LD. The article JSON-LD `url` and `mainEntityOfPage` use the `/news/<slug>/` URL.
 
 The homepage sorts `articles.json` by date, features the newest story, and lists older stories below. Do not hand-edit the homepage story cards. Add the new `/news/<slug>/` URL and `/news/` to `sitemap.xml` and `pages-sitemap.xml`. Do not list a root post URL.
+
+The generator adds this note at the end of every post, including future posts: "How this story was made: drafted with AI tools from the ESPN box score and other linked sources. Ryan Moalemi runs the site." Then a link, "How we make Full Court Buckets", to `/how-we-make-full-court-buckets/` with `target="_blank" rel="noopener"`. Do not leave that note off a new post. Use the same wording on recaps and on other stories.
+
+`/how-we-make-full-court-buckets/` explains how the site uses AI. It is styled like `/about/`, listed in `sitemap.xml` and `pages-sitemap.xml`, and linked from the footer, from `/about/`, and from `/authors/ryan-moalemi/`. It is not in the main menu. The header tagline is "Independent WNBA news and analysis".
 
 GitHub Pages has no server redirects. When a post leaves an old root URL, leave a redirect stub at that old path: meta refresh `0`, `rel=canonical` to the new URL, `noindex`, and `location.replace` to the new URL.
 
@@ -61,6 +65,8 @@ The only source for cards, prices, comps, and notes is `data/reese-cards.json`. 
 ## Player pages
 
 Link the first body-text mention of each player in every article to the existing page at `/wnba/<slug>/`, with `target="_blank" rel="noopener"`. Do not link player names to WNBA.com. Do not create a separate `/players/` system. Use the slug already published in `wnba/<slug>/index.html` and `data/wnba/players-index.json`. If that page does not exist, leave the name as plain text. Do not create a new player page for an article mention.
+
+Player pages that use a portrait say the portrait is an AI-generated editorial illustration, not a photograph. After that note, the page says: "Profile text and FAQs are written with help from AI tools, using the stats and sources on this page." The player generator adds that sentence. Do not change the author headshot or the byline text "By Ryan Moalemi" unless Ryan asks.
 
 When a player's saved `current_team` changes from one non-null team to a different non-null team, `automation/wnba_sync.py` prepends a `team_changes` entry on `data/wnba/players/<slug>.json`: `from`, `to`, and `date` (the America/Los_Angeles calendar date, `YYYY-MM-DD`). Newest stays first. The player page shows a small label `Team change`, then `Joined the <To Team> from the <From Team> on <Mon D, YYYY>` (for example, `Joined the Sparks from the Liberty on Oct 3, 2026`). Do not write Moved. The feed does not say whether it was a trade, a signing, or a waiver claim. Do not record a null transition, including a player leaving or returning to the active feed. Keep earlier entries. Do not loosen the active-player shrink guard for this.
 
