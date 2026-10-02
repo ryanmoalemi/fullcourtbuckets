@@ -1,5 +1,20 @@
 [
   {
+    "slug": "aces-fever-series-breakdown",
+    "url": "/news/aces-fever-series-breakdown/",
+    "title": "Aces vs. Fever Series Breakdown: A'ja Wilson Won the Matchup That Mattered",
+    "description": "A'ja Wilson scored 96 points on 64.6% shooting as the Aces beat the Fever 2-1. Indiana won the paint in all three games.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-02",
+    "image": "/images/articles/aces-fever-series-breakdown/chelsea-gray-aces-2023.jpg",
+    "imageAlt": "Chelsea Gray of the Las Vegas Aces dribbling against the Minnesota Lynx",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 2.0",
+    "teams": [
+      "las-vegas-aces",
+      "indiana-fever"
+    ]
+  },
+  {
     "slug": "fever-aces-game-3-recap",
     "url": "/news/fever-aces-game-3-recap/",
     "title": "Wilson Scores 36, Aces Close Out the Fever 94-83",
