@@ -1,8 +1,50 @@
 {
   "owner": "Ryan Moalemi",
-  "updated": "2026-10-01",
-  "notes": "Purchase price = eBay order total incl. shipping and sales tax. Certs verified in Ryan's PSA collection on 2026-09-30. Fanatics purchases not yet reviewed. current_value = median of recent comparable sold prices (see value_comps); 'unknown' where no verified sale was found.",
+  "updated": "2026-10-02",
+  "notes": "Purchase price = eBay order total incl. shipping and sales tax. Certs verified in Ryan's PSA collection on 2026-09-30. Fanatics purchases not yet reviewed. current_value = median of recent comparable sold prices (see value_comps); 'unknown' where no verified sale was found. include_in_paid true keeps an unpriced card in the paid total while value and change still leave it out.",
   "cards": [
+    {
+      "id": "reese-2024-25-flawless-royalty-rpa-ar-gold",
+      "year": "2024-25",
+      "set": "Panini Flawless WNBA, Rookie Royalty Patch Autographs",
+      "card_number": "RPA-AR",
+      "parallel": "Gold",
+      "rookie": true,
+      "autograph": true,
+      "patch": true,
+      "first_on_print": true,
+      "grade": "Raw",
+      "psa_cert": null,
+      "serial_number": "/10",
+      "purchase_date": "2026-10-02",
+      "item_price": 1000.0,
+      "shipping": 7.05,
+      "tax": 77.5,
+      "price_paid_total": 1084.55,
+      "source": "eBay",
+      "ebay_item_id": null,
+      "current_value": "unknown",
+      "value_label": "not enough sales to price yet",
+      "include_in_paid": true,
+      "current_value_source": "Not enough sales of this raw /10 to set a price.",
+      "value_checked": "2026-10-02",
+      "summary": "Rookie card, first on print, autograph, patch. The exact serial is not shown.",
+      "photo": {
+        "front": {
+          "src": "/images/reese-cards/reese-2024-25-flawless-royalty-rpa-ar-gold-front.webp",
+          "width": 1000,
+          "height": 844
+        },
+        "back": {
+          "src": "/images/reese-cards/reese-2024-25-flawless-royalty-rpa-ar-gold-back.webp",
+          "width": 1000,
+          "height": 921
+        }
+      },
+      "value_comps": [],
+      "value_notes": "Raw rookie patch autograph, first on print. Gold parallel numbered /10. The listing photos do not show the exact serial. A /10 with almost no sales is not enough to price, so this card has no current value. It is included in the paid total and left out of value and change.",
+      "photo_note": "Photo of this exact card from the eBay listing Ryan bought it from (seller's photo)."
+    },
     {
       "id": "reese-2024-prizm-dp-tiger-38",
       "year": "2024",

@@ -18,18 +18,25 @@ class ReeseCardMathTests(unittest.TestCase):
     def test_unknown_card_is_left_out_of_the_money_totals(self):
         data = cards.load_collection(ROOT)
         summary = cards.summarize(data)
-        self.assertEqual(summary['count'], 7)
+        self.assertEqual(summary['count'], 8)
         self.assertEqual(summary['valued_count'], 6)
         self.assertEqual(summary['up'], 0)
         self.assertEqual(summary['down'], 6)
-        self.assertEqual(summary['paid'], Decimal('3668.56'))
+        self.assertEqual(summary['paid'], Decimal('4753.11'))
         self.assertEqual(summary['current'], Decimal('2209.25'))
         self.assertEqual(summary['change'], Decimal('-1459.31'))
         self.assertEqual(summary['percent'], Decimal('-39.8'))
         unknown = summary['unknown']
-        self.assertEqual(len(unknown), 1)
-        self.assertEqual(unknown[0]['id'], 'reese-2023-bowman-u-now-blue-auto')
-        self.assertEqual(cards.paid_amount(unknown[0]), Decimal('243.11'))
+        self.assertEqual(len(unknown), 2)
+        bowman = next(card for card in unknown if card['id'] == 'reese-2023-bowman-u-now-blue-auto')
+        flawless = next(card for card in unknown if card['id'] == 'reese-2024-25-flawless-royalty-rpa-ar-gold')
+        self.assertEqual(cards.paid_amount(bowman), Decimal('243.11'))
+        self.assertEqual(cards.paid_amount(flawless), Decimal('1084.55'))
+        self.assertIsNone(cards.card_change(flawless))
+        self.assertEqual(cards.direction(flawless), 'unknown')
+        self.assertEqual(summary['fully_excluded'][0]['id'], bowman['id'])
+        self.assertEqual(summary['paid_unpriced'][0]['id'], flawless['id'])
+        self.assertNotIn(flawless, [card for card in data['cards'] if cards.is_valued(card)])
         tiger = next(card for card in data['cards'] if card['id'] == 'reese-2024-prizm-dp-tiger-38')
         self.assertEqual(cards.card_change(tiger), Decimal('-24.44'))
         self.assertEqual(cards.card_percent(tiger), Decimal('-9.8'))
@@ -53,12 +60,31 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertLessEqual(len(cards.PAGE_DESCRIPTION), 155)
         self.assertGreaterEqual(len(cards.PAGE_DESCRIPTION), 110)
         self.assertIn('Values as of Oct 1, 2026', self.html)
-        self.assertIn('$3,668.56', self.html)
+        self.assertIn('$4,753.11', self.html)
+        self.assertIn('$1,084.55', self.html)
         self.assertIn('$2,209.25', self.html)
         self.assertIn('-$1,459.31', self.html)
         self.assertIn('-39.8%', self.html)
         self.assertIn('Value unknown*', self.html)
+        self.assertIn('Value: not enough sales to price yet', self.html)
         self.assertIn('left out of paid, value, and change', self.html)
+        self.assertIn('left out of value and change', self.html)
+        flawless = self.html.split('data-id="reese-2024-25-flawless-royalty-rpa-ar-gold"', 1)[1].split('</button>', 1)[0]
+        self.assertIn('Value: not enough sales to price yet', flawless)
+        self.assertNotIn('badge up', flawless)
+        self.assertNotIn('badge down', flawless)
+        self.assertNotIn('badge unknown', flawless)
+        self.assertIn('#RPA-AR Gold /10', flawless)
+        self.assertIn('>Raw<', flawless)
+        panel = self.html.split('data-detail="reese-2024-25-flawless-royalty-rpa-ar-gold"', 1)[1].split('</article>', 1)[0]
+        self.assertIn('Value: not enough sales to price yet', panel)
+        self.assertIn('Photo: eBay seller listing of this card', panel)
+        self.assertIn('Rookie card, first on print, autograph, patch.', panel)
+        self.assertIn('The exact serial is not shown.', panel)
+        self.assertNotIn('psacard.com/cert/', panel)
+        self.assertNotIn('badge up', panel)
+        self.assertNotIn('badge down', panel)
+        self.assertEqual(panel.count('<img '), 2)
         self.assertNotIn('\u2014', self.html)
         intro = self.html.split('<section class="intro">', 1)[1].split('</section>', 1)[0]
         for paragraph in cards.INTRO_PARAGRAPHS:
@@ -83,7 +109,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('data-sort="value"', self.html)
         self.assertIn('data-sort="paid"', self.html)
         self.assertIn('Purchase timeline', self.html)
-        self.assertIn('August 24 to September 4, 2026', self.html)
+        self.assertIn('August 24 to October 2, 2026', self.html)
         self.assertIn('How the numbers work', self.html)
         self.assertIn('https://www.psacard.com/cert/112951750', self.html)
         self.assertIn('target="_blank" rel="noopener"', self.html)
@@ -144,6 +170,8 @@ class ReeseCardPageTests(unittest.TestCase):
         for name in (
             'reese-2024-prizm-dp-black-color-blast-11-front.webp',
             'reese-2024-rookie-royalty-kaboom-5-back.webp',
+            'reese-2024-25-flawless-royalty-rpa-ar-gold-front.webp',
+            'reese-2024-25-flawless-royalty-rpa-ar-gold-back.webp',
         ):
             photo = ROOT / 'images' / 'reese-cards' / name
             self.assertTrue(photo.is_file(), name)

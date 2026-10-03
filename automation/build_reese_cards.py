@@ -27,7 +27,7 @@ BASE = 'https://fullcourtbuckets.com'
 COLLECTION_TITLE = "Ryan's Angel Reese card collection"
 PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
 PAGE_DESCRIPTION = (
-    "Ryan Moalemi's Angel Reese cards: PSA 10 slabs, the eBay totals he paid, "
+    "Ryan Moalemi's Angel Reese cards: the eBay totals he paid, raw cards and slabs, "
     "and current values from recent sold comps."
 )
 # First-person tribute. Curly apostrophes are intentional. The player-page
@@ -183,21 +183,80 @@ def month_day(iso: str) -> str:
     return f'{LONG_MONTHS[month - 1]} {day}'
 
 
+def prices_as_of(data: dict) -> str:
+    """Latest check date among cards that have a numeric value."""
+    days = []
+    for card in data.get('cards') or []:
+        if not is_valued(card):
+            continue
+        checked = str(card.get('value_checked') or '')[:10]
+        if len(checked) == 10:
+            days.append(checked)
+    if not days:
+        updated = str(data.get('updated') or '')[:10]
+        return updated if len(updated) == 10 else ''
+    return max(days)
+
+
 def value_as_of(root: Path) -> str:
     data = load_collection(root)
     if not data:
         return ''
-    days = [str(data.get('updated') or '')[:10]]
-    for card in data['cards']:
-        checked = str(card.get('value_checked') or '')[:10]
-        if len(checked) == 10:
-            days.append(checked)
+    return prices_as_of(data)
+
+
+def page_stamp(root: Path) -> str:
+    """Sitemap and schema date. Follows a collection edit even when prices did not move."""
+    data = load_collection(root) or {}
+    days = [value_as_of(root), str(data.get('updated') or '')[:10]]
     days = [day for day in days if len(day) == 10]
     return max(days) if days else ''
 
 
+def card_checked(card: dict, fallback: str) -> str:
+    checked = str(card.get('value_checked') or '')[:10]
+    return checked if len(checked) == 10 else fallback
+
+
 def card_title(card: dict) -> str:
     return f"{card['year']} {card['set']} #{card['card_number']} {card['parallel']}"
+
+
+def photo_kind(card: dict) -> str:
+    grade = str(card.get('grade') or '').strip().lower()
+    if grade in ('', 'raw', 'ungraded'):
+        return 'card'
+    return 'slab'
+
+
+def counts_in_paid(card: dict) -> bool:
+    if card.get('include_in_paid') is True:
+        return True
+    return is_valued(card)
+
+
+def value_label(card: dict) -> str:
+    return str(card.get('value_label') or '').strip()
+
+
+def serial_meta(card: dict) -> str:
+    serial = card.get('serial_number')
+    if not serial:
+        return ''
+    text = str(serial)
+    if text.startswith('/'):
+        return f' {text}'
+    return f' / {text}'
+
+
+def serial_html(card: dict) -> str:
+    serial = card.get('serial_number')
+    if not serial:
+        return ''
+    text = str(serial)
+    if text.startswith('/'):
+        return f'<p>Numbered {esc(text)}</p>'
+    return f'<p>Serial {esc(text)}</p>'
 
 
 def photo_src(photo) -> str:
@@ -218,16 +277,20 @@ def summarize(data: dict) -> dict:
     cards = data['cards']
     valued = [card for card in cards if is_valued(card)]
     unknown = [card for card in cards if not is_valued(card)]
-    paid = sum((paid_amount(card) for card in valued), Decimal('0.00'))
+    paid_cards = [card for card in cards if counts_in_paid(card)]
+    paid = sum((paid_amount(card) for card in paid_cards), Decimal('0.00'))
+    valued_paid = sum((paid_amount(card) for card in valued), Decimal('0.00'))
     current = sum((value_amount(card) for card in valued), Decimal('0.00'))
-    change = (current - paid).quantize(CENT, rounding=ROUND_HALF_UP)
+    change = (current - valued_paid).quantize(CENT, rounding=ROUND_HALF_UP)
     percent = None
-    if paid != 0 and valued:
-        percent = (change / paid * Decimal(100)).quantize(TENTH, rounding=ROUND_HALF_UP)
+    if valued_paid != 0 and valued:
+        percent = (change / valued_paid * Decimal(100)).quantize(TENTH, rounding=ROUND_HALF_UP)
     return {
         'count': len(cards),
         'valued_count': len(valued),
         'unknown': unknown,
+        'paid_unpriced': [card for card in unknown if counts_in_paid(card)],
+        'fully_excluded': [card for card in unknown if not counts_in_paid(card)],
         'paid': paid,
         'current': current,
         'change': change,
@@ -258,6 +321,8 @@ def linkify(text: str) -> str:
 
 def _badge(card: dict) -> str:
     if not is_valued(card):
+        if value_label(card):
+            return ''
         return '<span class="badge unknown">Value unknown*</span>'
     way = direction(card)
     change = card_change(card)
@@ -274,20 +339,7 @@ def _detail(card: dict, as_of: str) -> str:
     photos = card.get('photo') or {}
     front = photos.get('front')
     back = photos.get('back')
-    images = []
-    for side, photo in (('front', front), ('back', back)):
-        src = photo_src(photo)
-        if not src:
-            continue
-        images.append(
-            f'<figure><img src="{esc(src)}" alt="{esc(card_title(card) + ", " + side + " of the slab")}" '
-            f'width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">'
-            f'<figcaption>{esc(side.title())}</figcaption></figure>'
-        )
-    photo_class = 'detail-photos solo' if len(images) == 1 else 'detail-photos'
-    serial = card.get('serial_number')
-    serial_html = f'<p>Serial {esc(serial)}</p>' if serial else ''
-    cert = str(card.get('psa_cert') or '')
+    cert = str(card.get('psa_cert') or '').strip()
     comps = card.get('value_comps') or []
     if comps:
         rows = []
@@ -302,7 +354,10 @@ def _detail(card: dict, as_of: str) -> str:
     else:
         comp_html = '<p>No verified sold comps.</p>'
     value = value_amount(card)
-    if value is None:
+    label = value_label(card)
+    if value is None and label:
+        value_html = f'<p class="value-line"><b class="unpriced">Value: {esc(label)}</b></p>'
+    elif value is None:
         value_html = '<p class="value-line"><b>Value unknown*</b></p>'
     else:
         value_html = (
@@ -310,13 +365,35 @@ def _detail(card: dict, as_of: str) -> str:
         )
     source = str(card.get('current_value_source') or '').strip()
     source_html = f'<p>{linkify(source)}</p>' if source else ''
+    summary = str(card.get('summary') or '').strip()
+    summary_html = f'<p>{esc(summary)}</p>' if summary else ''
+    cert_html = ''
+    if cert:
+        cert_html = (
+            f'<p>PSA cert <a href="https://www.psacard.com/cert/{esc(cert)}" '
+            f'target="_blank" rel="noopener">{esc(cert)}</a></p>'
+        )
+    kind = photo_kind(card)
+    images = []
+    for side, photo in (('front', front), ('back', back)):
+        src = photo_src(photo)
+        if not src:
+            continue
+        images.append(
+            f'<figure><img src="{esc(src)}" alt="{esc(card_title(card) + ", " + side + " of the " + kind)}" '
+            f'width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">'
+            f'<figcaption>{esc(side.title())}</figcaption></figure>'
+        )
+    photo_class = 'detail-photos solo' if len(images) == 1 else 'detail-photos'
+    checked = card_checked(card, as_of)
     return f'''<article class="detail" id="{esc(card["id"])}" data-detail="{esc(card["id"])}" hidden>
 <div class="{photo_class}">{''.join(images)}</div>
 <p class="photo-credit">{esc(PHOTO_CREDIT)}</p>
 <div class="detail-copy">
 <p class="eyebrow">{esc(card.get("grade") or "PSA 10")}</p>
 <h2>{esc(card_title(card))}</h2>
-{serial_html}
+{serial_html(card)}
+{summary_html}
 <p>Bought {esc(long_date(card["purchase_date"]))} on {esc(card.get("source") or "eBay")}.</p>
 <h3>Cost</h3>
 <dl class="cost">
@@ -325,10 +402,10 @@ def _detail(card: dict, as_of: str) -> str:
 {_money_row("Tax", card["tax"])}
 {_money_row("Total paid", card["price_paid_total"])}
 </dl>
-<h3>Value on {esc(short_date(as_of))}</h3>
+<h3>Value on {esc(short_date(checked))}</h3>
 {value_html}
 {source_html}
-<p>PSA cert <a href="https://www.psacard.com/cert/{esc(cert)}" target="_blank" rel="noopener">{esc(cert)}</a></p>
+{cert_html}
 <h3>Sold comps</h3>
 {comp_html}
 <h3>Value notes</h3>
@@ -338,44 +415,67 @@ def _detail(card: dict, as_of: str) -> str:
 </article>'''
 
 
+def _tile_value(card: dict) -> str:
+    value = value_amount(card)
+    if value is not None:
+        return f'<span>Value <b>{esc(format_money(value))}</b></span>'
+    label = value_label(card)
+    if label:
+        return f'<span>Value: {esc(label)}</span>'
+    return '<span>Value <b>Value unknown*</b></span>'
+
+
 def _tile(card: dict, index: int) -> str:
     front = photo_src((card.get('photo') or {}).get('front'))
     photo = (card.get('photo') or {}).get('front')
-    serial = card.get('serial_number')
-    serial_bit = f' / {serial}' if serial else ''
     value = value_amount(card)
-    value_html = 'Value unknown*' if value is None else format_money(value)
     ratio = card_ratio(card)
     gain = '' if ratio is None else format(ratio, 'f')
     current = '' if value is None else format(value, 'f')
+    kind = photo_kind(card)
     return f'''<button type="button" class="tile" data-id="{esc(card["id"])}" data-index="{index}" data-date="{esc(card["purchase_date"])}" data-gain="{esc(gain)}" data-value="{esc(current)}" data-paid="{esc(format(paid_amount(card), "f"))}" data-year="{esc(card["year"])}" data-direction="{direction(card)}">
-<img src="{esc(front)}" alt="{esc(card_title(card) + " slab")}" width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">
+<img src="{esc(front)}" alt="{esc(card_title(card) + " " + kind)}" width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">
 <span class="photo-credit">{esc(PHOTO_CREDIT)}</span>
 <span class="tile-copy">
 <strong>{esc(card["year"])} {esc(card["set"])}</strong>
-<span class="meta">#{esc(card["card_number"])} {esc(card["parallel"])}{esc(serial_bit)}</span>
+<span class="meta">#{esc(card["card_number"])} {esc(card["parallel"])}{esc(serial_meta(card))}</span>
 <span class="grade">{esc(card.get("grade") or "PSA 10")}</span>
 <span class="bought">Bought {esc(long_date(card["purchase_date"]))}</span>
-<span class="figures"><span>Paid <b>{esc(format_money(paid_amount(card)))}</b></span><span>Value <b>{esc(value_html)}</b></span></span>
+<span class="figures"><span>Paid <b>{esc(format_money(paid_amount(card)))}</b></span>{_tile_value(card)}</span>
 {_badge(card)}
 </span>
 </button>'''
 
 
-def _unknown_note(summary: dict) -> str:
-    unknown = summary['unknown']
-    if not unknown:
-        return ''
-    bits = [
+def _listed(cards: list[dict]) -> str:
+    return '; '.join(
         f'{card_title(card)} ({format_money(paid_amount(card))})'
-        for card in unknown
-    ]
-    noun = 'card' if len(unknown) == 1 else 'cards'
-    verb = 'is' if len(unknown) == 1 else 'are'
-    return (
-        f'* {len(unknown)} {noun} with no verified sale {verb} left out of paid, value, and change: '
-        + '; '.join(bits) + '.'
+        for card in cards
     )
+
+
+def _unknown_note(summary: dict) -> str:
+    parts = []
+    priced_out = summary.get('paid_unpriced') or []
+    fully = summary.get('fully_excluded') or []
+    if priced_out:
+        noun = 'card' if len(priced_out) == 1 else 'cards'
+        verb = 'is' if len(priced_out) == 1 else 'are'
+        pronoun = 'it' if len(priced_out) == 1 else 'them'
+        parts.append(
+            f'{len(priced_out)} {noun} {verb} in the paid total and left out of value and change, '
+            f'because there are not enough sales to price {pronoun} yet: {_listed(priced_out)}.'
+        )
+    if fully:
+        noun = 'card' if len(fully) == 1 else 'cards'
+        verb = 'is' if len(fully) == 1 else 'are'
+        parts.append(
+            f'{len(fully)} {noun} with no verified sale {verb} left out of paid, value, and change: '
+            f'{_listed(fully)}.'
+        )
+    if not parts:
+        return ''
+    return '* ' + ' '.join(parts)
 
 
 def _chart(cards: list[dict]) -> str:
@@ -484,6 +584,11 @@ def _faq(as_of: str) -> tuple[str, list[dict]]:
             'Why does a card say value unknown?',
             'No verified sale was found for that exact card number, parallel, and grade. '
             'That card is left out of the paid, value, and change totals.',
+        ),
+        (
+            'Why does a card say not enough sales to price yet?',
+            'There are not enough sold copies to set a price. The card stays in the card count and the paid total. '
+            'It is left out of value and change, with no up or down badge.',
         ),
     ]
     html_items = ''.join(
@@ -603,11 +708,7 @@ def _controls(cards: list[dict]) -> str:
 
 def render_body(data: dict) -> str:
     cards = list(data['cards'])
-    as_of = str(data.get('updated') or '')[:10]
-    checked = [str(card.get('value_checked') or '')[:10] for card in cards]
-    checked.append(as_of)
-    checked = [day for day in checked if len(day) == 10]
-    as_of = max(checked) if checked else as_of
+    as_of = prices_as_of(data)
     summary = summarize(data)
     ordered = sorted(enumerate(cards), key=lambda pair: (pair[1]['purchase_date'], -pair[0]), reverse=True)
     tiles = ''.join(_tile(card, index) for index, card in ordered)
@@ -624,7 +725,8 @@ def render_body(data: dict) -> str:
         '<p>Values are medians of recent sold prices from the sources listed on each card. '
         'Ryan paid the eBay order total, including shipping and tax. '
         'The values get updated over time. '
-        f'A card with no verified sale is marked Value unknown{star} and left out of the paid, value, and change totals.</p>'
+        f'A card with no verified sale is marked Value unknown{star} and left out of the paid, value, and change totals. '
+        'A card that says not enough sales to price yet stays in the paid total and is left out of value and change.</p>'
         '</section>'
     )
     return f'''<div class="crumb-bar"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/authors/ryan-moalemi/">Ryan Moalemi</a><span aria-hidden="true">/</span><span>{esc(COLLECTION_TITLE)}</span></nav></div></div>
@@ -830,7 +932,8 @@ main{padding:8px 0 72px}
 .tile-copy strong{font:800 22px/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
 .tile-copy .meta,.tile-copy .bought{color:#d5cdc2}
 .grade{color:#f0c36a;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:13px}
-.figures{display:flex;justify-content:space-between;gap:8px;margin-top:6px}
+.figures{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:6px}
+.value-line b.unpriced{font:700 22px/1.3 Inter,system-ui,sans-serif}
 .cards.is-list{grid-template-columns:1fr}
 .cards.is-list .tile{display:grid;grid-template-columns:148px minmax(0,1fr);grid-template-areas:"photo credit" "photo copy"}
 .cards.is-list .tile img{grid-area:photo;height:100%;aspect-ratio:auto;max-height:220px}
@@ -922,9 +1025,10 @@ def render_page(root: Path, menu: list | None = None) -> str | None:
         raise ValueError('Card data contains an em dash. Keep the copy plain.')
     summary = summarize(data)
     as_of = value_as_of(root)
+    stamp = page_stamp(root)
     _faq_html, faq_entities = _faq(as_of)
     body = render_body(data)
-    html_text = _head(_schema(data, summary, as_of, faq_entities)) + body + '\n</body>\n</html>\n'
+    html_text = _head(_schema(data, summary, stamp, faq_entities)) + body + '\n</body>\n</html>\n'
     if '\u2014' in html_text:
         raise ValueError('Generated card page contains an em dash.')
     if menu is None:
@@ -971,7 +1075,7 @@ def ensure_player_callout(root: Path) -> None:
 
 
 def ensure_sitemaps(root: Path) -> None:
-    day = value_as_of(root)
+    day = page_stamp(root)
     if not day:
         return
     loc = BASE + ROUTE
