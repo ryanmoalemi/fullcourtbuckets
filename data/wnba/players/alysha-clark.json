@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "BALLDONTLIE",
   "source": "https://wnba.balldontlie.io/",
-  "checked_at": "2026-10-02T07:17:14+00:00",
-  "stats_updated_at": "2026-10-02T07:17:14+00:00",
+  "checked_at": "2026-10-03T12:48:12+00:00",
+  "stats_updated_at": "2026-10-03T12:48:12+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -80,25 +80,25 @@
         "name": "Wings",
         "conference": "Western Conference"
       },
-      "games_played": 2,
+      "games_played": 3,
       "min": 25.0,
-      "fgm": 4.0,
-      "fga": 5.0,
-      "fg_pct": 80.0,
-      "fg3m": 1.5,
-      "fg3a": 2.5,
+      "fgm": 3.0,
+      "fga": 3.67,
+      "fg_pct": 81.8,
+      "fg3m": 1.0,
+      "fg3a": 1.67,
       "fg3_pct": 60.0,
-      "ftm": 3.0,
-      "fta": 3.0,
-      "ft_pct": 100.0,
+      "ftm": 2.33,
+      "fta": 2.67,
+      "ft_pct": 87.5,
       "oreb": null,
       "dreb": null,
-      "reb": 3.5,
-      "ast": 1.5,
+      "reb": 4.67,
+      "ast": 1.0,
       "stl": 0.0,
       "blk": 0.0,
-      "turnover": 0.5,
-      "pts": 12.5
+      "turnover": 0.67,
+      "pts": 9.33
     },
     {
       "player_id": 311,
@@ -807,6 +807,46 @@
   ],
   "recent_completed_games": [
     {
+      "game_id": 1392678,
+      "player_id": 311,
+      "date": "2026-10-03T01:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
+      },
+      "home_score": 77,
+      "away_score": 73,
+      "minutes": "25",
+      "pts": 3.0,
+      "ast": 0.0,
+      "reb": 7.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
+    {
       "game_id": 1392674,
       "player_id": 311,
       "date": "2026-10-01T01:00:00.000Z",
@@ -1087,7 +1127,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-08-28",
+  "game_log_window_start": "2026-08-29",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

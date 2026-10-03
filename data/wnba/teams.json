@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-02T07:17:14+00:00",
+  "checked_at": "2026-10-03T12:48:12+00:00",
   "teams": [
     {
       "id": 34,
@@ -186,30 +186,6 @@
       "conference": null
     },
     {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
-      "conference": "Eastern Conference"
-    },
-    {
       "id": 8,
       "full_name": "Las Vegas Aces",
       "abbreviation": "LV",
@@ -279,6 +255,30 @@
       "abbreviation": "WSH",
       "city": "Washington",
       "name": "Mystics",
+      "conference": "Eastern Conference"
+    },
+    {
+      "id": 11,
+      "full_name": "Dallas Wings",
+      "abbreviation": "DAL",
+      "city": "Dallas",
+      "name": "Wings",
+      "conference": "Western Conference"
+    },
+    {
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
+    },
+    {
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     }
   ]
