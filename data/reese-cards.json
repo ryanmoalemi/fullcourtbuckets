@@ -23,11 +23,9 @@
       "price_paid_total": 1084.55,
       "source": "eBay",
       "ebay_item_id": null,
-      "current_value": "unknown",
-      "value_label": "not enough sales to price yet",
-      "include_in_paid": true,
-      "current_value_source": "Not enough sales of this raw 01/10 to set a price.",
-      "value_checked": "2026-10-02",
+      "current_value": 925,
+      "current_value_source": "last eBay sale, $925 best offer",
+      "value_checked": "2026-10-03",
       "summary": "Rookie card, first on print, autograph, patch.",
       "photo": {
         "front": {
@@ -41,8 +39,15 @@
           "height": 921
         }
       },
-      "value_comps": [],
-      "value_notes": "Raw rookie patch autograph, first on print. Gold parallel, serial 01/10. This 01/10 has almost no sales, so there is no current value. It is included in the paid total and left out of value and change.",
+      "value_comps": [
+        {
+          "date": null,
+          "price": 925.0,
+          "venue": "eBay",
+          "url": ""
+        }
+      ],
+      "value_notes": "Raw rookie patch autograph, first on print. Gold parallel, serial 01/10. The last eBay sale was listed at $995 and closed at $925 when a best offer was accepted. The sale date is unknown. Value is that $925 sale.",
       "photo_note": "Photo of this exact card from the eBay listing Ryan bought it from (seller's photo)."
     },
     {
