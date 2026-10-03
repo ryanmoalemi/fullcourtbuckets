@@ -344,11 +344,15 @@ def _detail(card: dict, as_of: str) -> str:
     if comps:
         rows = []
         for comp in comps:
+            raw_date = str(comp.get('date') or '').strip()
+            when = long_date(raw_date) if len(raw_date) >= 10 else 'Date unknown'
+            url = str(comp.get('url') or '').strip()
+            link = _external(url, 'Sale record') if url else ''
             rows.append(
-                '<li><span>' + esc(long_date(comp['date'])) + '</span> '
+                '<li><span>' + esc(when) + '</span> '
                 '<b>' + esc(format_money(money_amount(comp['price']))) + '</b> '
                 '<span>' + esc(comp.get('venue') or '') + '</span> '
-                + _external(comp['url'], 'Sale record') + '</li>'
+                + link + '</li>'
             )
         comp_html = '<ul class="comps">' + ''.join(rows) + '</ul>'
     else:
