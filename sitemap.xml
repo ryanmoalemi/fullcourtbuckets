@@ -2424,4 +2424,10 @@
     <loc>https://fullcourtbuckets.com/wnba/ziomara-morrison/</loc>
     <lastmod>2026-09-28</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/wings-valkyries-game-3-recap/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

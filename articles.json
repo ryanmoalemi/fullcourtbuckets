@@ -1,5 +1,21 @@
 [
   {
+    "slug": "wings-valkyries-game-3-recap",
+    "url": "/news/wings-valkyries-game-3-recap/",
+    "title": "Valkyries Close Out the Wings 77-73, Win Series 2-1",
+    "description": "Dallas led 44-37 at half. Golden State won the fourth quarter 23-14, finished 77-73, and took the series 2-1.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-03",
+    "image": "/images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.jpg",
+    "imageAlt": "Veronica Burton of the Golden State Valkyries dribbling a basketball in a white jersey against the Minnesota Lynx",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
+    "espnGameId": "401918294",
+    "teams": [
+      "dallas-wings",
+      "golden-state-valkyries"
+    ]
+  },
+  {
     "slug": "valkyries-wings-game-2-recap",
     "url": "/news/valkyries-wings-game-2-recap/",
     "title": "Ogunbowale Scores 45, Wings Beat Valkyries 108-100 in OT",
