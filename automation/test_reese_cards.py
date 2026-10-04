@@ -144,6 +144,22 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Purchase timeline', self.html)
         self.assertIn('August 24 to October 2, 2026', self.html)
         self.assertIn('How the numbers work', self.html)
+        main = self.html.split('<main class="shell" id="content">', 1)[1].split('</main>', 1)[0]
+        order = [
+            '<section class="intro">',
+            'id="collection"',
+            'id="summary"',
+            'id="movers"',
+            'id="paid-vs-value"',
+            'id="timeline"',
+            'id="method"',
+            'id="faq"',
+        ]
+        positions = [main.index(marker) for marker in order]
+        self.assertEqual(positions, sorted(positions))
+        cards_block = main.split('id="collection"', 1)[1].split('id="summary"', 1)[0]
+        self.assertLess(cards_block.index('data-sort="date"'), cards_block.index('id="card-grid"'))
+        self.assertLess(cards_block.index('id="card-filter"'), cards_block.index('id="card-grid"'))
         self.assertIn('https://www.psacard.com/cert/112951750', self.html)
         self.assertIn('target="_blank" rel="noopener"', self.html)
         self.assertIn('only 1 PSA 10 sale', self.html)
