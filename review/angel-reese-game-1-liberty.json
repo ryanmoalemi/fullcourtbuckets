@@ -1,0 +1,105 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Angel Reese Won DPOY and Got Meaner: Her Game 1 Against the Liberty",
+  "meta_description": "Three days after winning DPOY, Angel Reese had four steals from four Liberty players in a 92-82 Dream win.",
+  "hook": "Three days after she was named Defensive Player of the Year, Angel Reese went out and took the ball from four different New York Liberty players in one playoff game. Four steals, three blocks, 17 points, and the Dream won Game 1 92-82. And the play that sealed it wasn't even a bucket of hers. It was the kick-out she threw with 1:30 left.",
+  "summary": "Atlanta Dream 92, New York Liberty 82, on October 4, 2026, at State Farm Arena. Atlanta leads the best-of-five 1-0. Body is Ryan's bot draft, edited against ESPN game 401918295 and the WNBA.com DPOY release of October 1, 2026. The 3:43 basket is a driving layup plus a missed free throw. Subhead 'Reese the best' is now 'Reese's line'.",
+  "url_path": "/news/angel-reese-game-1-liberty/",
+  "files": [
+    "news/angel-reese-game-1-liberty/index.html"
+  ],
+  "hero_image": "images/articles/angel-reese-game-1-liberty/angel-reese-dream-2026.webp",
+  "hero_image_alt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking up with her mouth open at Target Center",
+  "hero_image_credit": "Photo: John McClellan / CC BY-SA 4.0. Wikimedia Commons File:Angel Reese Dream (cropped).jpg. Taken May 9, 2026, at Target Center in Minneapolis.",
+  "photo_commons_file": "File:Angel Reese Dream (cropped).jpg",
+  "photo_author": "John McClellan",
+  "photo_license": "CC BY-SA 4.0",
+  "photo_date": "2026-05-09",
+  "photo_place": "Target Center, Minneapolis, Minnesota",
+  "espn_game_id": "401918295",
+  "espn_box_score": "https://www.espn.com/wnba/boxscore/_/gameId/401918295",
+  "espn_play_by_play": "https://www.espn.com/wnba/playbyplay/_/gameId/401918295",
+  "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918295",
+  "wnba_dpoy_release": "https://www.wnba.com/news/reese-named-2026-defensive-player-of-the-year",
+  "unique": [
+    "Reese's four steals were Marine Johannes in the second quarter (putback and a made free throw), Breanna Stewart at 6:47, Han Xu at 5:49, and Leonie Fiebich at 4:57",
+    "The 3:43 fourth-quarter basket was a driving layup and a missed free throw, leaving the score 82-75",
+    "Those third-quarter steals sat inside a 20-2 Atlanta run that turned a 43-39 deficit into a 59-45 lead",
+    "The October 1 DPOY release (46 votes, 26 more than Gabby Williams, first Dream winner, 521 rebounds) is set next to this Game 1 line"
+  ],
+  "unverified": [
+    "The lines that awards fuel her, that the 1:30 kick-out sealed it, that New York has the shooters to bounce back, and that the series will be short are opinion. New York scored after 87-77. The final was 92-82.",
+    "The lead photo is from May 9, 2026, at Target Center, not from this game. The caption says so.",
+    "The Commons author field says John Mac (Flickr johnmac612). The file description credits John McClellan, and the caption uses that name."
+  ],
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Score, quarters, the 20-2 run from 43-39 to 59-45, the 16-point lead cut to 80-75 at 4:00, the 3:43 layup and missed free throw, the 2:24 Canada assist for 84-77, the 1:30 kick-out for 87-77, Reese's line (17 points, 6-of-10, 7 rebounds, 4 offensive, 4 steals, 3 blocks, 2 assists, 34 minutes, plus-7, 4 turnovers, 4-of-6 free throws), the 24-foot three, and New York's 21 turnovers were checked on ESPN game 401918295. The DPOY date (Oct. 1, 2026), 46 votes, Gabby Williams's 20 (26 fewer), 12.1 rebounds a game, 521 rebounds, 206 offensive rebounds, 32 double-doubles, the 500-rebound first, and the first Dream winner match the WNBA.com release. The linked URL is the right release. The photo is a different game, and the caption says so."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "Wire recaps have the 92-82 final and Reese's 17 and 7. They do not walk the four steals with clocks, the missed free throw at 3:43, or the 20-2 run next to the October 1 vote totals."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 6,
+        "max": 10,
+        "reason": "Every number was checked against the ESPN play-by-play and the WNBA.com release, and the photo license was checked on Commons. There is no original chart, courtside note, or photo from this game, so another editor with the same feeds could rebuild it."
+      },
+      {
+        "name": "Originality",
+        "score": 7,
+        "max": 10,
+        "reason": "The angle is the DPOY announcement three days earlier, then the four steals and the kick-out that made it 87-77. It is not a wire rewrite, and it is still a game story."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Ryan Moalemi's byline links to his real author page, and he edits the site. He was not at State Farm Arena, so this is not a courtside report."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The title and H1 match and do not invent a margin. The hook gives the four steals, the 92-82 final, and the 1:30 kick-out before the photo. The stat line sits under the first subhead. The disclosure is at the bottom. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "The disclosure says AI drafted from the ESPN box score and the sources linked above, and Ryan reviewed it. The box score, play-by-play, game page, and WNBA.com release are linked above that note. The photo credit names John McClellan, the Commons file, CC BY-SA 4.0, May 9, 2026, and Target Center."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Short sentences, no em dashes, and real subheads. In-article links open in a new tab. 'Keep reading.' is now the 1:30 kick-out. 'Reese the best' is now 'Reese's line'."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader gets the finish, who Reese stole from, her line, the award she had just won, and that Atlanta leads 1-0. The page does not tease a section it does not have."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "No stock AI phrases. The voice stays specific ('the part you have to watch twice', 'Fine', 'It fuels her more'). Generic praise was cut: 'simply tougher than anybody' and 'one of the best post players' are gone because no box-score fact sat next to them."
+      }
+    ],
+    "info_gain": "Reese's four steals were Johannes in the second quarter, Stewart at 6:47, Han Xu at 5:49, and Fiebich at 4:57, inside a 20-2 run from 43-39 to 59-45. The 3:43 basket was a layup and a missed free throw. The October 1 DPOY vote (46, 26 more than Williams) sits next to that Game 1 line.",
+    "ai_flags": []
+  }
+}
