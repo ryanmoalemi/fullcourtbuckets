@@ -633,7 +633,7 @@ def schema(cards: list[dict], items: list[tuple[str, str]]) -> str:
             '@type': 'BreadcrumbList',
             'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
-                {'@type': 'ListItem', 'position': 2, 'name': 'WNBA', 'item': BASE + '/wnba/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'News', 'item': BASE + '/news/'},
                 {'@type': 'ListItem', 'position': 3, 'name': 'Couples', 'item': BASE + PAGE_URL},
             ],
         },
@@ -661,7 +661,7 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
     nav = site_nav.render(menu, PAGE_URL)
     body = (
         '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'
-        '<a href="/wnba/">WNBA</a><span>/</span><span>Couples</span></div>'
+        '<a href="/news/">News</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
         '<p class="lede">Confirmed relationships of WNBA players. Each fact links to the article it came from.</p></section>'
         + ''.join(render_card(card) for card in cards)
@@ -705,24 +705,43 @@ def patch_players(root: Path = ROOT) -> list[str]:
     return touched
 
 
+PLAYER_COUPLES_LINK = '<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>'
+
+
 def patch_hub(root: Path = ROOT) -> None:
-    """Add the couples link under the player list. Never above the search box."""
+    """Keep Couples off the player directory. The news hub links it after the story cards."""
     path = root / 'wnba' / 'index.html'
-    if not path.is_file():
+    if path.is_file():
+        text = path.read_text(encoding='utf-8')
+        updated = text.replace(PLAYER_COUPLES_LINK, '')
+        if updated != text:
+            path.write_text(updated, encoding='utf-8')
+    news = root / 'news' / 'index.html'
+    if not news.is_file():
         return
-    text = path.read_text(encoding='utf-8')
-    if 'Confirmed WNBA relationships' in text:
+    text = news.read_text(encoding='utf-8')
+    from internal_links import COUPLES_FEATURE_CSS, COUPLES_FEATURE_HTML
+    if COUPLES_FEATURE_CSS not in text and '</style>' in text:
+        text = text.replace('</style>', COUPLES_FEATURE_CSS + '</style>', 1)
+    if COUPLES_FEATURE_HTML in text:
+        news.write_text(text, encoding='utf-8')
         return
-    link = '<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>'
-    teams_end = '</ul><p><a class="inline-link" href="/wnba/teams/">All teams</a></p></section>'
-    needle = '<p id="no-players" hidden>No players match your search.</p>'
-    if teams_end in text:
-        updated = text.replace(teams_end, teams_end + link, 1)
-    elif needle in text:
-        updated = text.replace(needle, needle + link, 1)
-    else:
+    marker = '<ol class="news-list">'
+    start = text.find(marker)
+    if start < 0:
+        news.write_text(text, encoding='utf-8')
         return
-    path.write_text(updated, encoding='utf-8')
+    end = text.find('</ol>', start)
+    if end < 0:
+        news.write_text(text, encoding='utf-8')
+        return
+    end += len('</ol>')
+    main_end = text.find('</main>', end)
+    region = text[end:main_end if main_end >= 0 else None]
+    if '/wnba/couples/' in region:
+        news.write_text(text, encoding='utf-8')
+        return
+    news.write_text(text[:end] + '\n' + COUPLES_FEATURE_HTML + text[end:], encoding='utf-8')
 
 
 def patch_sitemaps(root: Path = ROOT) -> None:
@@ -745,11 +764,18 @@ def patch_sitemaps(root: Path = ROOT) -> None:
 
 
 def refresh_nav(root: Path = ROOT) -> int:
+    """Rewrite the shared menu. Leave HTML redirect stubs untouched."""
     menu = site_nav.build_menu(root)
     updates = site_nav.install_tree(root, menu, set())
+    written = 0
     for relative, content in updates.items():
-        (root / relative).write_text(content, encoding='utf-8')
-    return len(updates)
+        path = root / relative
+        original = path.read_text(encoding='utf-8')
+        if 'http-equiv="refresh"' in original.lower():
+            continue
+        path.write_text(content, encoding='utf-8')
+        written += 1
+    return written
 
 
 def collect_sources(couples: list[dict]) -> list[str]:
