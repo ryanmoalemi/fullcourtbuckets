@@ -1,0 +1,97 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Reese The Beast is Simply Too Tough for the NY Bench",
+  "meta_description": "With 1:30 left, Canada's step-back three made it 87-77. The Dream beat the Liberty 92-82 to lead 1-0.",
+  "hook": "With 1:30 left and New York still hanging around, Angel Reese kicked it out to Jordin Canada, who stepped back and buried a three to make it 87-77. That was the dagger in a 92-82 Atlanta Dream win in Game 1 of the semis. And get this: the New York Liberty went a perfect 15-of-15 at the line and still lost by 10, because they scored zero fast-break points and coughed it up 21 times. Want to know who kept taking the ball? Reese got steals off four different Liberty players.",
+  "summary": "Atlanta Dream 92, New York Liberty 82, on October 4, 2026, at State Farm Arena. Atlanta leads the best-of-five 1-0. Body is Ryan's bot draft, edited against ESPN game 401918295. One play was wrong: Reese's layup at 3:43 drew a foul, and she missed the free throw, so it was not a made and-one. Subhead 'Reese the best' is now 'Reese's night'.",
+  "url_path": "/news/liberty-dream-semis-game-1-recap/",
+  "files": [
+    "news/liberty-dream-semis-game-1-recap/index.html"
+  ],
+  "hero_image": "images/articles/liberty-dream-semis-game-1-recap/angel-reese-1b.webp",
+  "hero_image_alt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking to her right at Gateway Center Arena",
+  "hero_image_credit": "Photo: Michaelcohnphoto / CC BY-SA 4.0. Wikimedia Commons File:Angel-Reese-1b.jpg. Taken May 22, 2026, at Gateway Center Arena.",
+  "espn_game_id": "401918295",
+  "espn_box_score": "https://www.espn.com/wnba/boxscore/_/gameId/401918295",
+  "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918295",
+  "unique": [
+    "Canada's step-back three at 1:30 made it 87-77, after Reese's layup at 3:43 and a missed free throw",
+    "New York went 15-of-15 at the line, scored 0 fast-break points, and committed 21 turnovers in a 92-82 loss",
+    "Reese's four steals came against Johannes, Stewart, Han Xu, and Fiebich, with the clocks from the play-by-play",
+    "Atlanta's 20-2 third-quarter run ended 59-45 on back-to-back Canada layups at 4:05"
+  ],
+  "unverified": [
+    "The Game 2 prediction and the line that Reese is tougher than anybody on the New York bench are opinion.",
+    "The lead photo is from May 22, 2026, at Gateway Center Arena, not from this game. The caption says so."
+  ],
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Score, quarters, the 20-2 run, the 8-0 burst, clocks, shooting lines, steals, blocks, Gray's 11 minutes and left hand, the Lynx sweep of the No. 1 seed, and Game 2 in Atlanta were checked against the ESPN box score, play-by-play, the Gray story, and the ESPN recap. The draft's made and-one at 3:43 was wrong and is now a layup plus a missed free throw."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "The page keeps the possession-by-possession close, including who Reese stole from and when, the missed free throw, and the 20-2 run ending 59-45. Wire recaps have the final and Canada's 25 points. They do not walk the four steals."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 6,
+        "max": 10,
+        "reason": "Every number was checked against the ESPN feed and one injury story. There is no original chart, courtside note, or photo from this game, so another editor with the same feed could rebuild it."
+      },
+      {
+        "name": "Originality",
+        "score": 7,
+        "max": 10,
+        "reason": "The angle is Reese taking the ball and Canada burying the three, plus a straight Game 2 take. It is not a wire rewrite, and it is still a game recap."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Ryan Moalemi's byline links to his real author page, and he edits the site. He was not at State Farm Arena, so this is not a courtside report."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The title and H1 match and do not oversell the score. The lead photo sits under the headline, and the hook gives the 87-77 three, the 92-82 final, and the perfect free-throw line under the byline. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "The disclosure says AI drafted from the ESPN box score, Ryan reviewed it, and the box score, play-by-play, recap, and Gray story are linked above it. The photo credit names Michaelcohnphoto, the Commons file, and the CC BY-SA 4.0 license."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Short sentences, no em dashes, and real subheads. In-article links open in a new tab. 'Reese the best' was renamed 'Reese's night'."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader gets the finish, how the lead changed, Reese's line, the rest of the box, Gray's injury, and when Game 2 is. The page does not tease a section it does not have."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "No stock AI phrases. The voice is specific and opinionated ('And get this', 'Simple as that', 'My take'). The last paragraph is a group of three, and it was kept because it is the draft's series take."
+      }
+    ],
+    "info_gain": "Canada's 1:30 step-back three made it 87-77, and Reese missed the free throw after her 3:43 layup. New York shot 15-of-15, scored 0 fast-break points, and turned it over 21 times. Reese's four steals were Johannes, Stewart at 6:47, Han Xu at 5:49, and Fiebich at 4:57. The third-quarter 20-2 run ended 59-45 on Canada's layups at 4:05.",
+    "ai_flags": []
+  }
+}

@@ -115,6 +115,21 @@ class SiteNavTests(unittest.TestCase):
         self.assertEqual(site_nav.FOOTER_RE.findall(bare), [])
         self.assertIn(site_nav.FOOTER_HTML, site_nav.install_footer(bare))
 
+    def test_mobile_menu_is_closed_before_the_script_runs(self):
+        """The phone panel is hidden by CSS. Do not wait for html.site-nav-ready."""
+        css = site_nav.CSS_TEXT
+        self.assertEqual((ROOT / 'assets' / 'site-nav.css').read_text(encoding='utf-8'), css)
+        self.assertNotIn('html.site-nav-ready nav.site-nav:not(.is-open)>ul', css)
+        mobile = css.split('@media (max-width:900px){', 1)[1].split('@media', 1)[0]
+        self.assertIn('nav.site-nav:not(.is-open)>ul{display:none}', mobile)
+        self.assertIn('nav.site-nav.is-open>ul{display:block}', mobile)
+        desktop = css.split('@media (min-width:901px){', 1)[1].split('@media', 1)[0]
+        self.assertIn('nav.site-nav>ul{display:flex;align-items:center;gap:2px}', desktop)
+        self.assertNotIn('nav.site-nav:not(.is-open)>ul{display:none}', desktop)
+        self.assertNotIn('nav.site-nav.is-open>ul{display:block}', desktop)
+        builder = (ROOT / 'automation' / 'build_players.py').read_text(encoding='utf-8')
+        self.assertIn("files['assets/site-nav.css']=site_nav.CSS_TEXT", builder)
+
     def test_footer_uses_shared_css_and_chrome_links_stay_in_page(self):
         css_path = ROOT / 'assets' / 'site-nav.css'
         css = css_path.read_text(encoding='utf-8')

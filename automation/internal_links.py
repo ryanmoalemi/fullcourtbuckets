@@ -845,6 +845,37 @@ BYLINE_CSS = (
     '@media(max-width:900px){.article .byline{font-size:14px;margin-bottom:16px}}'
 )
 BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
+# Headline, then the lead photo and credit, then byline and date, then the hook.
+# ESPN, The Athletic, and AP use this order on a 390px screen, and the photo is in view.
+LEAD_CSS = (
+    '.article figure.lead-photo{margin:0 0 14px}'
+    '.article figure.lead-photo img{width:100%;height:auto}'
+    '.article figure.lead-photo figcaption{margin-top:6px;font-size:12px;line-height:1.4}'
+    '.article .byline-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 16px}'
+    '.article .byline-row .byline{margin:0}'
+    '.article .article-date{color:#a29f99;font:600 13px/1.3 Inter,system-ui,sans-serif}'
+    '@media(max-width:900px){'
+    '.article-wrap{padding-top:8px}'
+    '.article{padding-top:12px}'
+    '.article h1{font-size:28px;line-height:1.05;letter-spacing:-.5px;margin-bottom:8px}'
+    '.meta-row{margin-bottom:8px}'
+    '.breadcrumbs{margin-bottom:8px}'
+    '.article figure.lead-photo{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);'
+    'margin-right:calc(50% - 50vw)}'
+    '.article figure.lead-photo figcaption{padding:0 16px}'
+    '.article .byline-row .byline{margin-bottom:0;font-size:14px}'
+    '}'
+)
+LEAD_FIGURE_RE = re.compile(r'<figure\b[^>]*>.*?</figure>', re.S)
+BYLINE_ROW_RE = re.compile(r'<div class="byline-row">.*?</div>', re.S)
+ARTICLE_DATE_RE = re.compile(r'<time class="article-date"[^>]*>.*?</time>', re.S)
+_DATE_MONTHS = (
+    'January|February|March|April|May|June|July|August|September|October|November|December'
+)
+META_DATE_RE = re.compile(
+    r'<span>((?:Published\s+)?(?:' + _DATE_MONTHS + r')\s+\d{1,2},\s+\d{4})</span>'
+)
+META_ROW_RE = re.compile(r'<div class="meta-row">.*?</div>', re.S)
 HOW_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_CSS = (
     '.article .how-made{margin:22px 0 0;color:#a29f99;font-size:13px;line-height:1.55}'
@@ -1265,8 +1296,133 @@ def ensure_author_meta(html: str) -> str:
     return html + tag
 
 
+def _figure_classes(figure: str) -> set[str]:
+    match = re.match(r'<figure\b([^>]*)>', figure, re.I)
+    if not match:
+        return set()
+    classes = re.search(r'class="([^"]*)"', match.group(1))
+    return set(classes.group(1).split()) if classes else set()
+
+
+def _is_lead_figure(figure: str) -> bool:
+    """The story photo, not a chart or a later card in a list."""
+    if '<img' not in figure.lower():
+        return False
+    classes = _figure_classes(figure)
+    if 'chart' in classes:
+        return False
+    return 'lead' in classes or 'lead-photo' in classes or 'fetchpriority="high"' in figure
+
+
+def _mark_lead_figure(figure: str) -> str:
+    """Full-width lead photo. Keep width and height. Hero is eager and high priority."""
+    classes = _figure_classes(figure)
+    if 'lead-photo' not in classes:
+        if classes:
+            figure = re.sub(
+                r'(<figure\b[^>]*class=")',
+                r'\1lead-photo ',
+                figure,
+                count=1,
+            )
+        else:
+            figure = figure.replace('<figure', '<figure class="lead-photo"', 1)
+
+    def _hero(img: re.Match) -> str:
+        tag = re.sub(r'\sloading=(["\']).*?\1', '', img.group(0))
+        if 'fetchpriority=' not in tag.lower():
+            tag = tag.replace('<img', '<img fetchpriority="high"', 1)
+        return tag
+
+    return re.sub(r'<img\b[^>]*>', _hero, figure, count=1)
+
+
+def _article_date_tag(text: str) -> str:
+    shown = text.strip()
+    bare = re.sub(r'^Published\s+', '', shown)
+    try:
+        parsed = dt.datetime.strptime(bare, '%B %d, %Y')
+        iso = f' datetime="{parsed.strftime("%Y-%m-%d")}"'
+    except ValueError:
+        iso = ''
+    return f'<time class="article-date"{iso}>{html.escape(shown)}</time>'
+
+
+def _pull_article_date(article: str) -> tuple[str, str]:
+    """Take the date off the kicker so it sits with the byline. Keep the category."""
+    existing = ARTICLE_DATE_RE.search(article)
+    kept = ''
+    if existing:
+        kept = re.sub(r'<[^>]+>', '', existing.group(0))
+        article = ARTICLE_DATE_RE.sub('', article)
+    meta = META_ROW_RE.search(article)
+    if meta is None:
+        return article, kept
+    date = META_DATE_RE.search(meta.group(0))
+    if date is None:
+        return article, kept
+    inner = meta.group(0)[len('<div class="meta-row">'):-len('</div>')]
+    found = META_DATE_RE.search(inner)
+    inner = inner[:found.start()] + inner[found.end():]
+    inner = re.sub(r'(?:<span class="divider"></span>)+', '<span class="divider"></span>', inner)
+    inner = re.sub(r'^(?:<span class="divider"></span>)+', '', inner)
+    inner = re.sub(r'(?:<span class="divider"></span>)+$', '', inner)
+    article = article[:meta.start()] + f'<div class="meta-row">{inner}</div>' + article[meta.end():]
+    return article, date.group(1)
+
+
+def order_news_lead(html: str) -> str:
+    """Headline, lead photo and credit, byline and date, then the hook and body.
+
+    The lead image keeps its width and height, uses fetchpriority="high", and is not lazy-loaded.
+    """
+    start = html.find('<article')
+    end = html.rfind('</article>')
+    if start < 0 or end < 0:
+        return html
+    article = html[start:end]
+    lead = None
+    fallback = None
+    for match in LEAD_FIGURE_RE.finditer(article):
+        figure = match.group(0)
+        if '<img' not in figure.lower() or 'chart' in _figure_classes(figure):
+            continue
+        if fallback is None:
+            fallback = match
+        if _is_lead_figure(figure):
+            lead = match
+            break
+    if lead is None:
+        lead = fallback
+    if lead is None:
+        return html
+    figure = _mark_lead_figure(lead.group(0))
+    article = article[:lead.start()] + article[lead.end():]
+    byline = BYLINE_RE.search(article)
+    byline_html = byline.group(0) if byline else ''
+    if byline:
+        article = article[:byline.start()] + article[byline.end():]
+    article, date_text = _pull_article_date(article)
+    article = BYLINE_ROW_RE.sub('', article)
+    date_html = _article_date_tag(date_text) if date_text else ''
+    row = ''
+    if byline_html or date_html:
+        row = f'<div class="byline-row">{byline_html}{date_html}</div>'
+    h1 = article.find('</h1>')
+    if h1 < 0:
+        return html
+    article = article[:h1 + len('</h1>')] + figure + row + article[h1 + len('</h1>'):]
+    html = html[:start] + article + html[end:]
+    if '.article figure.lead-photo{' not in html:
+        if '</style>' in html:
+            html = html.replace('</style>', LEAD_CSS + '</style>', 1)
+        elif '</head>' in html:
+            html = html.replace('</head>', '<style>' + LEAD_CSS + '</style></head>', 1)
+    return html
+
+
 def ensure_byline(html: str) -> str:
-    """Put the linked byline under the headline. Same tab, since it stays on this site."""
+    """Put the linked byline on the post. Same tab, since it stays on this site."""
     if '.article .byline{' not in html:
         if '</style>' in html:
             html = html.replace('</style>', BYLINE_CSS + '</style>', 1)
@@ -1572,6 +1728,7 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = ensure_how_made(html_text, article)
     html_text = ensure_byline(html_text)
     html_text = order_article_sections(html_text)
+    html_text = order_news_lead(html_text)
     return html_text
 
 

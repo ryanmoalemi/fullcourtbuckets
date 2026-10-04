@@ -36,7 +36,8 @@ header,.site-header{z-index:40}
  nav.site-nav{display:block;width:auto;margin-left:auto;flex:0 0 auto;position:static}
  nav.site-nav .site-nav-toggle{display:inline-flex}
  nav.site-nav>ul{position:absolute;left:0;right:0;top:100%;width:auto;max-height:calc(100vh - 72px);overflow-x:hidden;overflow-y:auto;background:#0c0c10;border-bottom:1px solid #2b2930;z-index:60;box-sizing:border-box}
- html.site-nav-ready nav.site-nav:not(.is-open)>ul{display:none}
+ nav.site-nav:not(.is-open)>ul{display:none}
+ nav.site-nav.is-open>ul{display:block}
  nav.site-nav a{width:100%;white-space:normal;overflow-wrap:anywhere}
  nav.site-nav>ul>li.site-nav-branch{display:flex;flex-wrap:wrap;align-items:stretch}
  nav.site-nav>ul>li.site-nav-branch>a{width:auto;flex:1 1 auto;min-width:0}

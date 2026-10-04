@@ -70,7 +70,7 @@
         "name": "Main content and layout",
         "score": 8,
         "max": 10,
-        "reason": "The order is the title, the byline, the lead SuperFractor, one hook paragraph, then items 1 through 10. Each item is a heading, a card, one price line, and one to three sentences. After item 10 there is only fine print."
+        "reason": "The order is the title, the lead SuperFractor, the byline and date, one hook paragraph, then items 1 through 10. Each item is a heading, a card, one price line, and one to three sentences. After item 10 there is only fine print."
       },
       {
         "name": "Transparency",
