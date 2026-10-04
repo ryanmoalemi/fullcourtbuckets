@@ -2,9 +2,9 @@
   "site": "fullcourtbuckets.com",
   "title": "Top 10 Women's College Basketball Players to Collect in 2026",
   "meta_description": "JuJu Watkins, Sarah Strong and eight more college stars ranked for card collectors, with specific cards, card images, research links and risks to watch.",
-  "summary": "Ryan's editorial ranking of ten college players, each with one pictured card. The lead is the Goldin 1/1 SuperFractor. Each section photo has a one-line completed sale under it. A thumbnail grid of those sales sits just before the bottom line. Joyce Edwards #80 is left out of the grid because that page had no completed sale.",
+  "summary": "Ryan's editorial ranking of ten college players. The page is a straight list: title, lead SuperFractor, two intro sentences, then items 1 through 10. Each item has a heading, a card image, one sale line, and his text. Joyce Edwards #80 has no completed sale, so her line says so.",
   "uniqueness": {
-    "summary": "Each pictured card with a completed sale has a one-line price, date and source under the photo, and the same sale appears in a thumbnail grid. Edwards #80 is left out of the grid because SportsCardsPro shows no completed sale.",
+    "summary": "Each pictured card with a completed sale has a one-line price, date and source under the photo. Edwards #80 has no price because SportsCardsPro shows no completed sale.",
     "points": [
       "Completed sales with a date, a single price, and the listing title",
       "Joyce Edwards Topps address ending in card-81, with a published print run of 412 and zero sold listings on the #80 page",
@@ -17,14 +17,14 @@
   ],
   "hero_image": "news/top-10-college-womens-basketball-players-to-collect/img/watkins-superfractor-1-1-psa10.webp",
   "unique": [
-    "One-line completed sale under each section photo, plus a thumbnail grid, including the Goldin 1/1 SuperFractor total of $24,404",
+    "One-line completed sale under each section photo, including the Goldin 1/1 SuperFractor total of $24,404 on the lead",
     "Joyce Edwards Topps address ending in card-81, while SportsCardsPro #80 has zero sold listings so no price is cited",
     "Mikayla Blakes Bowman U Now print run of 2,168 set next to the June 18, 2026 ungraded sale at $3.99"
   ],
   "unverified": [
     "No completed JuJu Watkins sale near $40,000 was found on the Goldin lot page, Fanatics Collect, SportsCardsPro/PriceCharting, or news results checked for this update. The article does not claim a $40,000 sale. The lead is the highest completed sale found.",
     "The Purple Lava section photo is the PSA scan tied to certification 122909733. The cert lookup page was not re-opened on this rewrite. The lead image is the Goldin photo of certification 123955080.",
-    "The PSA population report is linked and was not used for a population count. PSA may require sign-in.",
+    "The PSA population-report link left with the five-checks section. It was not used for a population count.",
     "The Topps Edwards page (URL ending in card-81, issue #80, print run 412) was not re-opened on this rewrite. The article uses Ryan's citation of that page.",
     "The Topps Blakes print run of 2,168 was confirmed in the earlier fact-check and was not re-opened on this rewrite."
   ],
@@ -42,9 +42,9 @@
       },
       {
         "name": "Information gain",
-        "score": 8,
+        "score": 7,
         "max": 10,
-        "reason": "The line under each photo and the thumbnail grid keep base cards apart from the 1/1 SuperFractor, and Edwards is left out because that page has a guide price and no completed sale."
+        "reason": "Each section still names one card and one dated sale, and Edwards stays unpaid because that page has a guide price and no completed sale. The ranking board, the buying checklist, and the thumbnail grid are gone, so the at-a-glance layer is thinner."
       },
       {
         "name": "Effort and replication cost",
@@ -62,13 +62,13 @@
         "name": "Experience and expertise",
         "score": 8,
         "max": 10,
-        "reason": "The first-person judgments are Ryan's. The intro links his public Angel Reese card collection and does not invent a story beyond that page."
+        "reason": "The first-person judgments in the ten sections are Ryan's. The intro is two of his sentences. The added collection sentence was trimmed with the rest of the intro."
       },
       {
         "name": "Main content and layout",
         "score": 8,
         "max": 10,
-        "reason": "The title is above the fold on desktop and phone. The lead is the Goldin 1/1 SuperFractor under the byline. Each section photo has a one-line sale directly under it. The sold-price table is gone. A thumbnail grid, five columns on desktop and two on a phone, sits just before the bottom line."
+        "reason": "The title is above the fold on desktop and phone. The lead SuperFractor sits under the byline, two intro sentences follow, and item 1 is next. Each section is a heading, a card, one price line, and his text. After item 10 there is only the short bottom line and fine print."
       },
       {
         "name": "Transparency",
@@ -84,9 +84,9 @@
       },
       {
         "name": "People-first purpose",
-        "score": 8,
+        "score": 7,
         "max": 10,
-        "reason": "A collector can match the pictured card to the dated sale under the photo, open that source from the thumbnail grid, skip a guide price with no buyer, and use the five checks before paying."
+        "reason": "A collector can match the pictured card to the dated sale under the photo and skip a guide price with no buyer. The five buying checks are no longer on the page."
       },
       {
         "name": "Human voice",
@@ -102,7 +102,8 @@
       "Ryan should still read the edited lines before the article is published.",
       "Card photos were moved under the byline and under each section heading. The wording was left for Ryan to edit.",
       "No sale near $40,000 was verified. The lead uses the Goldin 1/1 SuperFractor at a $20,003 winning bid and a $24,404 total. Purple Lava stays in section 1.",
-      "The sold-price table was replaced with a one-line sale under each section photo and a thumbnail grid before the bottom line. Method notes moved to the research note."
+      "The sold-price table was replaced with a one-line sale under each section photo and a thumbnail grid before the bottom line. Method notes moved to the research note.",
+      "List structure now runs title, lead image, two intro sentences, items 1 through 10, then the bottom line and fine print. The quick board, five checks, and sales grid were removed."
     ]
   }
 }
