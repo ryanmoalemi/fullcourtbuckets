@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "provider": "BALLDONTLIE",
-  "source": "https://wnba.balldontlie.io/",
+  "provider": "Full Court Buckets",
+  "source": "Full Court Buckets gathers its own game data and verifies it.",
   "checked_at": "2026-10-04T08:35:56+00:00",
   "stats_updated_at": "2026-10-01T07:31:35+00:00",
   "coverage_start": 2008,

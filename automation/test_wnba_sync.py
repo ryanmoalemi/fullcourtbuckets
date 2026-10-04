@@ -116,6 +116,11 @@ class Tests(unittest.TestCase):
             self.assertIsNone(output['season_stats'][0]['reb'])
             self.assertEqual(len(output['recent_completed_games']),1)
             self.assertNotIn('synthetic-key',str(output))
+            self.assertEqual(output['source'], s.PUBLIC_SOURCE)
+            self.assertNotIn('balldontlie', json.dumps(output).casefold())
+            status=json.loads((root/'data/wnba/status.json').read_text())
+            self.assertEqual(status['provider'], 'Full Court Buckets')
+            self.assertNotIn('balldontlie', json.dumps(status).casefold())
     def test_team_change_between_syncs(self):
         team_a = {"id": 1, "full_name": "Example Team"}
         team_b = {"id": 2, "full_name": "Other Team"}

@@ -56,9 +56,8 @@ REMOVED_ADU_PATHS = frozenset({
 })
 COLUMNS = [('games_played','GP'),('min','MIN'),('pts','PTS'),('reb','REB'),('ast','AST'),
            ('stl','STL'),('blk','BLK'),('turnover','TO'),('fg_pct','FG%'),('fg3_pct','3P%'),('ft_pct','FT%')]
-# Reader-facing source line. Numbers come from WNBA season averages and game
-# lines stored in data/wnba, not from a live box-score page on wnba.com.
-STATS_SOURCE = 'Stats from WNBA season averages and game records.'
+# Reader-facing source line. Published pages do not name or link the data vendor.
+STATS_SOURCE = 'Full Court Buckets gathers its own game data and verifies it.'
 POSITION_WORDS = {'G': 'guard', 'F': 'forward', 'C': 'center', 'Guard': 'guard', 'Forward': 'forward', 'Center': 'center'}
 
 class BuildError(RuntimeError):
@@ -1843,7 +1842,7 @@ def build(root: Path):
         files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
     files.update(site_nav.install_tree(root, menu, set(files)))
-    report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':'BALLDONTLIE','coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
+    report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':STATS_SOURCE,'coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
     articles=links.load_articles(root)
     for relative, content in list(files.items()):
@@ -1861,6 +1860,8 @@ def build(root: Path):
     changes=0
     for relative,content in files.items():
         reject_removed_adu(relative, content)
+        if 'balldontlie' in content.casefold():
+            raise BuildError('Refusing to publish a file that names the data vendor: '+relative)
         path=root/relative
         if path.exists() and path.read_text()==content:
             continue

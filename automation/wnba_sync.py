@@ -26,7 +26,7 @@ import season_teams
 import team_names
 
 BASE = "https://api.balldontlie.io/wnba/v1/"
-SOURCE = "https://wnba.balldontlie.io/"
+PUBLIC_SOURCE = "Full Court Buckets gathers its own game data and verifies it."
 FIRST_YEAR = 2008
 METRICS = ("min", "fgm", "fga", "fg_pct", "fg3m", "fg3a", "fg3_pct",
            "ftm", "fta", "ft_pct", "oreb", "dreb", "reb", "ast", "stl", "blk", "turnover", "pts")
@@ -382,7 +382,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
         item = {"id": pid, "slug": slug, "name": name, "active_in_provider_feed": active,
                 "current_team": current_team, "path": f"/wnba/{slug}/", "data_path": f"/data/wnba/players/{slug}.json"}
         directory.append(item)
-        profile = {"schema_version": 1, "provider": "BALLDONTLIE", "source": SOURCE,
+        profile = {"schema_version": 1, "provider": "Full Court Buckets", "source": PUBLIC_SOURCE,
             "checked_at": stamp, "stats_updated_at": stats_updated_stamp(previous, stats, recent, stamp),
             "coverage_start": FIRST_YEAR, "career_totals_complete": False,
             "player": p, "slug": slug, "active_in_provider_feed": active, "current_team": current_team,
@@ -408,7 +408,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
     write(data / "id-map.json", registry)
     write(data / "teams.json", {"checked_at": stamp, "teams": all_teams})
     write(data / "players-index.json", {"checked_at": stamp, "players": sorted(directory, key=lambda p: p["name"].casefold())})
-    write(data / "status.json", {"status": "ok", "last_success": stamp, "provider": "BALLDONTLIE",
+    write(data / "status.json", {"status": "ok", "last_success": stamp, "provider": "Full Court Buckets",
           "coverage_start": FIRST_YEAR, "seasons": list(seasons), "player_count": len(directory),
           "cadence": "daily" if active_season else "weekly", "in_season": active_season,
           "source_data_through": None, "news_connected": False, "transactions_connected": False})
