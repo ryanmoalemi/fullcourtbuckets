@@ -768,15 +768,15 @@ def render_body(data: dict) -> str:
 {_hero()}
 <main class="shell" id="content">
 {intro}
-{_stats(summary, as_of)}
-{_chart(cards)}
-{_movers(cards, summary)}
 <section class="panel" id="collection">
 <h2>The cards</h2>
 {_controls(cards)}
 <div class="cards" id="card-grid">{tiles}</div>
 <p id="card-empty" class="lede" hidden>No cards match.</p>
 </section>
+{_stats(summary, as_of)}
+{_movers(cards, summary)}
+{_chart(cards)}
 {_timeline(cards)}
 {method}
 {faq_html}
