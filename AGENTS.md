@@ -36,7 +36,7 @@ The owner approved the three latest portraits (Paige Bueckers, Kelsey Plum, Aliy
 
 The owner manages fullcourtbuckets.com through ChatGPT and has authorized requested website changes, repository commits and publication. Do that work through connected GitHub tools instead of handing the owner code or images to post. These instructions document authorization, not account permissions, and do not bypass platform confirmations.
 
-Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles or sandiegoadubuilder.com links. Former ADU pages, including `san-diego-adus.html`, `adu-cost.html`, `entitymap.html`, and the other SDADU copies, are removed from this repo. Do not add them back, do not put them in sitemaps, and do not link them. A request for one of those URLs is a 404.
+Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles. Former ADU paths, including `san-diego-adus.html`, `adu-cost.html`, `entitymap.html`, `jadus.html`, `attached-adus.html`, and the other paths in `REMOVED_ADU_PATHS`, stay as tiny noindex redirect stubs to the matching https://sandiegoadubuilder.com URL (the homepage when that URL is not a live page). Do not put those paths in sitemaps or menus, do not add a Google Analytics tag to the stubs, and do not publish the old article HTML.
 
 ## Page section order
 

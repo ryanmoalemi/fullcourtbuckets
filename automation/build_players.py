@@ -35,7 +35,8 @@ SITEMAP_INDEX_LOCS = (
 )
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
-# Former ADU articles. They stay deleted so those URLs 404. Do not recreate the pages or stubs.
+# Former ADU articles. Full pages stay blocked. Each path publishes only a tiny
+# noindex redirect stub, with no Google Analytics tag, sitemap entry, or menu link.
 REMOVED_ADU_PATHS = frozenset({
     'adu-cost.html',
     'adu-feasibility-studies.html',
@@ -54,6 +55,28 @@ REMOVED_ADU_PATHS = frozenset({
     'projects/rice-street-west-block.html',
     'san-diego-adus.html',
 })
+SDADU_ORIGIN = 'https://sandiegoadubuilder.com'
+SDADU_HOME = SDADU_ORIGIN + '/'
+# Live targets checked on 2026-10-04. Same-path URLs that returned HTTP 200 stay.
+# The three project case studies returned 404, so those stubs use the homepage.
+ADU_REDIRECT_TARGETS = {
+    'adu-cost.html': SDADU_ORIGIN + '/adu-cost.html',
+    'adu-feasibility-studies.html': SDADU_ORIGIN + '/adu-feasibility-studies.html',
+    'adu-financing.html': SDADU_ORIGIN + '/adu-financing.html',
+    'adu-garage-conversions.html': SDADU_ORIGIN + '/adu-garage-conversions.html',
+    'adu-handbook.html': SDADU_ORIGIN + '/adu-handbook.html',
+    'adu-permitting.html': SDADU_ORIGIN + '/adu-permitting.html',
+    'adu-rental-income.html': SDADU_ORIGIN + '/adu-rental-income.html',
+    'attached-adus.html': SDADU_ORIGIN + '/attached-adus.html',
+    'detached-adus.html': SDADU_ORIGIN + '/detached-adus.html',
+    'entitymap.html': SDADU_ORIGIN + '/entitymap.html',
+    'jadus.html': SDADU_ORIGIN + '/jadus.html',
+    'pre-approved-adu-plans.html': SDADU_ORIGIN + '/pre-approved-adu-plans.html',
+    'projects/craftsman-backyard-cottage.html': SDADU_HOME,
+    'projects/rice-street-east-block.html': SDADU_HOME,
+    'projects/rice-street-west-block.html': SDADU_HOME,
+    'san-diego-adus.html': SDADU_ORIGIN + '/san-diego-adus.html',
+}
 COLUMNS = [('games_played','GP'),('min','MIN'),('pts','PTS'),('reb','REB'),('ast','AST'),
            ('stl','STL'),('blk','BLK'),('turnover','TO'),('fg_pct','FG%'),('fg3_pct','3P%'),('ft_pct','FT%')]
 # Reader-facing source line. Published pages do not name or link the data vendor.
@@ -63,16 +86,29 @@ POSITION_WORDS = {'G': 'guard', 'F': 'forward', 'C': 'center', 'Guard': 'guard',
 class BuildError(RuntimeError):
     pass
 
+def adu_redirect_html(relative: str) -> str:
+    """Tiny GitHub Pages redirect. No analytics, menu, or article copy."""
+    return links.permanent_redirect(ADU_REDIRECT_TARGETS[relative])
+
 def reject_removed_adu(relative, content):
-    """Block ADU articles and the old sandiegoadubuilder.com redirect stubs."""
-    if relative in REMOVED_ADU_PATHS or 'sandiegoadubuilder.com' in content:
+    """Allow only the noindex redirect stub. A full ADU page is still refused."""
+    if relative in REMOVED_ADU_PATHS:
+        if content != adu_redirect_html(relative):
+            raise BuildError('Refusing to publish removed ADU content: '+relative)
+        return
+    if 'sandiegoadubuilder.com' in content:
         raise BuildError('Refusing to publish removed ADU content: '+relative)
 
-def delete_removed_adu(root: Path) -> None:
+def publish_adu_redirects(root: Path) -> None:
+    """Write each stub, replacing a full ADU page if one is still on disk."""
+    root = Path(root)
     for relative in REMOVED_ADU_PATHS:
-        path = Path(root) / relative
-        if path.is_file():
-            path.unlink()
+        path = root / relative
+        content = adu_redirect_html(relative)
+        if path.is_file() and path.read_text(encoding='utf-8') == content:
+            continue
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(content, encoding='utf-8')
 
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
@@ -1707,7 +1743,7 @@ def contextual_link_count(page: str) -> int:
 
 
 def build(root: Path):
-    delete_removed_adu(root)
+    publish_adu_redirects(root)
     data=root/'data/wnba'
     index=json.loads((data/'players-index.json').read_text())
     status=json.loads((data/'status.json').read_text())
@@ -1841,13 +1877,17 @@ def build(root: Path):
     if collection_page:
         files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
+    for relative in REMOVED_ADU_PATHS:
+        files[relative] = adu_redirect_html(relative)
     files.update(site_nav.install_tree(root, menu, set(files)))
     report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':STATS_SOURCE,'coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
     articles=links.load_articles(root)
     for relative, content in list(files.items()):
-        if relative.endswith('.html'):
+        if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS:
             files[relative]=links.rewrite_legacy_article_urls(content, articles)
+    for relative in REMOVED_ADU_PATHS:
+        files[relative] = adu_redirect_html(relative)
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)
     files['player-sitemap.xml'] = _sitemap_document(player_rows)
     files['pages-sitemap.xml'] = _sitemap_document(page_rows)
@@ -1879,7 +1919,7 @@ def build(root: Path):
 def refresh_published_news(root: Path | None = None) -> int:
     """Move posts to /news/<slug>/ and retarget links without rebuilding player profiles."""
     root = root or Path(__file__).resolve().parents[1]
-    delete_removed_adu(root)
+    publish_adu_redirects(root)
     index = json.loads((root / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
     linking = links.catalog_from_index(index)
     menu = site_nav.build_menu(root, site_nav.planned_paths(root, index, linking))
