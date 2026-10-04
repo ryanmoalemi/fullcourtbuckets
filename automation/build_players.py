@@ -25,6 +25,7 @@ ROBOTS_TXT = (
     'User-agent: *\n'
     'Allow: /\n'
     'Disallow: /review/\n'
+    'Disallow: /data/games/\n'
     '\n'
     'Sitemap: https://fullcourtbuckets.com/sitemap.xml\n'
 )

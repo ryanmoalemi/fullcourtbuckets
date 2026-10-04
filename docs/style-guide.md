@@ -43,3 +43,9 @@ Every article opens with one short intro paragraph, usually two or three sentenc
 3. Tease something later in the piece so the reader keeps going.
 
 The tease has to be true, and the article has to pay it off. Do not invent a number or hide the subject with a false cliffhanger. Roy Peter Clark calls the lead a flashlight: it shows what is coming. A nut graf can live in the same short paragraph. Leave one real question open, then answer it in the body. Stay on the title. Do not open a side topic. No em dashes.
+
+## Game stats for recaps and posts
+
+Recaps and posts take the score, quarter scores, team totals, and player box from `data/games/<YYYY-MM-DD>-<away>-<home>.json`. Those numbers come from balldontlie. ESPN is the cross-check, stored on the same file under `crosscheck`. The short read is the `.md` file next to the JSON.
+
+Any mismatch must be resolved before review. If `crosscheck.mismatches` is not empty, do not pick the number that sounds better. If `source` is `espn` and `fallback` is true, balldontlie did not supply the game. Say so in the draft, and do not treat that file as a balldontlie box. A file whose cross-check did not run is not ready either.

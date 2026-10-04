@@ -175,7 +175,7 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/fcb-site"
           git archive HEAD | tar -xf - -C "$RUNNER_TEMP/fcb-site"
-          rm -rf "$RUNNER_TEMP/fcb-site/.github" "$RUNNER_TEMP/fcb-site/automation" "$RUNNER_TEMP/fcb-site/portrait-masters" "$RUNNER_TEMP/fcb-site/portrait-handoff"
+          rm -rf "$RUNNER_TEMP/fcb-site/.github" "$RUNNER_TEMP/fcb-site/automation" "$RUNNER_TEMP/fcb-site/portrait-masters" "$RUNNER_TEMP/fcb-site/portrait-handoff" "$RUNNER_TEMP/fcb-site/data/games"
       - uses: actions/upload-pages-artifact@v3
         if: steps.key.outputs.ready == 'true'
         with:
