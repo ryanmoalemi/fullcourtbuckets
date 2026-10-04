@@ -27,7 +27,7 @@ BASE = 'https://fullcourtbuckets.com'
 COLLECTION_TITLE = "Ryan's Angel Reese card collection"
 PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
 PAGE_DESCRIPTION = (
-    "Ryan Moalemi's Angel Reese cards: the eBay totals he paid, raw cards and slabs, "
+    "Ryan Moalemi's Angel Reese cards: the totals he paid, raw cards and slabs, "
     "and current values from recent sold comps."
 )
 # First-person tribute. Curly apostrophes are intentional. The player-page
@@ -48,6 +48,13 @@ PLAYER_CALLOUT = (
     f'href="{ROUTE}">{COLLECTION_TITLE}</a></p>'
 )
 PHOTO_CREDIT = 'Photo: eBay seller listing of this card'
+
+
+def photo_credit(card: dict) -> str:
+    credit = str(card.get('photo_credit') or '').strip()
+    return credit or PHOTO_CREDIT
+
+
 HERO = {
     'src': '/images/reese-cards/angel-reese-hero.webp',
     'width': 1364,
@@ -392,7 +399,7 @@ def _detail(card: dict, as_of: str) -> str:
     checked = card_checked(card, as_of)
     return f'''<article class="detail" id="{esc(card["id"])}" data-detail="{esc(card["id"])}" hidden>
 <div class="{photo_class}">{''.join(images)}</div>
-<p class="photo-credit">{esc(PHOTO_CREDIT)}</p>
+<p class="photo-credit">{esc(photo_credit(card))}</p>
 <div class="detail-copy">
 <p class="eyebrow">{esc(card.get("grade") or "PSA 10")}</p>
 <h2>{esc(card_title(card))}</h2>
@@ -439,7 +446,7 @@ def _tile(card: dict, index: int) -> str:
     kind = photo_kind(card)
     return f'''<button type="button" class="tile" data-id="{esc(card["id"])}" data-index="{index}" data-date="{esc(card["purchase_date"])}" data-gain="{esc(gain)}" data-value="{esc(current)}" data-paid="{esc(format(paid_amount(card), "f"))}" data-year="{esc(card["year"])}" data-direction="{direction(card)}">
 <img src="{esc(front)}" alt="{esc(card_title(card) + " " + kind)}" width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">
-<span class="photo-credit">{esc(PHOTO_CREDIT)}</span>
+<span class="photo-credit">{esc(photo_credit(card))}</span>
 <span class="tile-copy">
 <strong>{esc(card["year"])} {esc(card["set"])}</strong>
 <span class="meta">#{esc(card["card_number"])} {esc(card["parallel"])}{esc(serial_meta(card))}</span>
@@ -582,7 +589,7 @@ def _faq(as_of: str) -> tuple[str, list[dict]]:
         ),
         (
             'What is included in the price paid?',
-            'The eBay order total: the item, shipping, and tax. The detail view lists those three amounts.',
+            'The order total: the item, shipping, and tax. The detail view lists those three amounts.',
         ),
         (
             'Why does a card say value unknown?',
@@ -727,7 +734,7 @@ def render_body(data: dict) -> str:
     method = (
         '<section class="panel method" id="method"><h2>How the numbers work</h2>'
         '<p>Values are medians of recent sold prices from the sources listed on each card. '
-        'Ryan paid the eBay order total, including shipping and tax. '
+        'Ryan paid the order total, including shipping and tax. '
         'The values get updated over time. '
         f'A card with no verified sale is marked Value unknown{star} and left out of the paid, value, and change totals. '
         'A card that says not enough sales to price yet stays in the paid total and is left out of value and change.</p>'
