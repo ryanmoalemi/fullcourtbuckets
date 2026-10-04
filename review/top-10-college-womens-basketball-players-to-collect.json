@@ -67,7 +67,7 @@
         "name": "Main content and layout",
         "score": 8,
         "max": 10,
-        "reason": "The title is above the fold on desktop and phone. The quick board sits under the intro, the sales table follows it, and the how-made note is at the bottom."
+        "reason": "The title is above the fold on desktop and phone. The Watkins lead sits under the byline, before the intro. Each of the ten section photos sits directly under that section heading, and the how-made note stays at the bottom."
       },
       {
         "name": "Transparency",
@@ -98,7 +98,8 @@
     "ai_flags": [
       "The flagged contrast lines were rewritten in plain sentences. Ranking, structure, and the rest of the wording are Ryan's.",
       "Fact-check and formatting edits cite the Watkins $42.01 sale to SportsCardsPro and rename Fulwiley's award to SEC Sixth Woman of the Year.",
-      "Ryan should still read the edited lines before the article is published."
+      "Ryan should still read the edited lines before the article is published.",
+      "Card photos were moved under the byline and under each section heading. The wording was left for Ryan to edit."
     ]
   }
 }
