@@ -1,0 +1,90 @@
+/* Shared lead-photo rules for every /news/ article.
+   Inlined by order_news_lead. The photo is the article column, 16:9. */
+
+.article figure.lead-photo {
+  margin: 0 0 8px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.article figure.lead-photo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.article figure.lead-photo figcaption {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.article .byline-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 0 0 10px;
+}
+
+.article .byline-row .byline {
+  margin: 0;
+}
+
+.article .article-date {
+  color: #a29f99;
+  font: 600 13px/1.3 Inter, system-ui, sans-serif;
+}
+
+@media (max-width: 900px) {
+  .article-wrap {
+    padding-top: 8px;
+  }
+
+  .article {
+    padding-top: 12px;
+  }
+
+  .article h1 {
+    font-size: 26px;
+    line-height: 1.05;
+    letter-spacing: -0.4px;
+    margin-bottom: 6px;
+  }
+
+  .meta-row {
+    margin-bottom: 6px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 6px;
+  }
+
+  .article figure.lead-photo {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 6px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .article figure.lead-photo figcaption {
+    padding: 0;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .article .byline-row {
+    margin-bottom: 8px;
+  }
+
+  .article .byline-row .byline {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}

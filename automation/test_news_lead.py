@@ -39,6 +39,16 @@ class NewsLeadTests(unittest.TestCase):
             self.assertNotIn('loading=', img, article['slug'])
             self.assertIn('width="', img, article['slug'])
             self.assertIn('height="', img, article['slug'])
+            self.assertIn('object-position:', img, article['slug'])
+            self.assertRegex(img, r'/hero-(?:1200|16x9)\.webp', article['slug'])
+            width = int(re.search(r'width="(\d+)"', img).group(1))
+            height = int(re.search(r'height="(\d+)"', img).group(1))
+            self.assertAlmostEqual(width / height, 16 / 9, places=2, msg=article['slug'])
+            self.assertIn('aspect-ratio:16/9', html, article['slug'])
+            self.assertIn('object-fit:cover', html, article['slug'])
+            self.assertNotIn('100vw', html, article['slug'])
+            if str(article.get('imageCredit') or '').strip():
+                self.assertIn('<figcaption', figure, article['slug'])
             self.assertIn('class="article-date"', html, article['slug'])
             self.assertEqual(len(re.findall(r'<figure\b[^>]*\blead-photo\b', html)), 1, article['slug'])
 
@@ -77,5 +87,40 @@ class NewsLeadTests(unittest.TestCase):
             self.assertNotIn('loading=', img)
             self.assertIn('width="1200"', img)
             self.assertIn('height="800"', img)
+            self.assertIn('object-position:center 25%', img)
+            self.assertIn('aspect-ratio:16/9', again)
+            self.assertIn('object-fit:cover', again)
+            self.assertNotIn('100vw', again)
             self.assertIn('datetime="2026-10-02"', again)
             self.assertNotIn('>October 2, 2026</span>', again)
+
+    def test_focal_point_is_written_on_the_lead(self):
+        slug = 'future-photo'
+        article = {
+            'slug': slug,
+            'url': f'/news/{slug}/',
+            'title': 'Future Recap',
+            'description': 'A later game recap.',
+            'date': '2026-10-02',
+            'category': 'WNBA',
+            'imageFocal': 'center 12%',
+            'imageHero': '/images/articles/future/hero-1200.webp',
+            'imageHeroWidth': 1200,
+            'imageHeroHeight': 675,
+            'imageHero2x': '/images/articles/future/hero-2x.webp',
+            'imageHero2xWidth': 1680,
+        }
+        bare = '''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Future Recap</title>
+<style>.article h1{margin:0}</style></head>
+<body><article class="article"><h1>Future Recap</h1><p class="lead">Later.</p><figure><img src="/images/articles/future.webp" alt="A player" width="900" height="1400" loading="lazy"></figure></article></body></html>
+'''
+        html = links.order_news_lead(bare, article)
+        img = re.search(r'<img\b[^>]*>', _lead_figure(html)).group(0)
+        self.assertIn('src="/images/articles/future/hero-1200.webp"', img)
+        self.assertIn('width="1200"', img)
+        self.assertIn('height="675"', img)
+        self.assertIn('object-position:center 12%', img)
+        self.assertIn('hero-2x.webp 1680w', img)
+        self.assertIn('fetchpriority="high"', img)
+        self.assertNotIn('loading=', img)
