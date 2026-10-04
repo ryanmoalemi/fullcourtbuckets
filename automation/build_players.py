@@ -420,32 +420,45 @@ def last_game_answer(profile, name: str) -> str:
     return f'In her most recent completed game ({shown["date"]}, {shown["opponent"]}{kind}), {played}{result}.'
 
 
-def assert_faq_matches_tables(profile, pairs) -> None:
-    """Fail the build when a season, games-played, or last-game FAQ disagrees with the tables."""
+def _faq_quote(answer: str) -> str:
+    """Short page quote so a needs-fix issue can name both texts."""
+    text = re.sub(r'\s+', ' ', '' if answer is None else str(answer)).strip()
+    if len(text) > 180:
+        return text[:177].rstrip() + '...'
+    return text
+
+
+def _faq_conflict(slug: str, detail: str, answer: str) -> str:
+    return f'{slug} FAQ does not match the stats table: {detail}; page says "{_faq_quote(answer)}".'
+
+
+def faq_table_mismatches(profile, pairs) -> list[str]:
+    """Season, games-played, and last-game answers that disagree with the tables."""
     slug = profile.get('slug') or 'player'
     row = headline(profile)
     game = latest_completed_game(profile)
     shown = game_display(game) if game else None
     logged = [item for item in profile.get('recent_completed_games') or [] if isinstance(item, dict)]
+    problems = []
     for question, answer in pairs:
         kind = faq_stat_kind(question)
         if kind == 'season' and row:
             for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
                 num = value(row.get(key))
                 if num != '-' and f'{num} {word}' not in answer:
-                    raise BuildError(f'{slug} FAQ does not match the stats table: {num} {word}.')
+                    problems.append(_faq_conflict(slug, f'table says {num} {word}', answer))
             games = value(row.get('games_played'), True)
             if games != '-' and f'in {games} game' not in answer and f'played {games} game' not in answer:
-                raise BuildError(f'{slug} FAQ games played does not match the stats table: {games}.')
+                problems.append(_faq_conflict(slug, f'table says {games} games played', answer))
             year = row.get('season')
             if year and str(year) not in answer:
-                raise BuildError(f'{slug} FAQ season does not match the stats table: {year}.')
+                problems.append(_faq_conflict(slug, f'table says season {year}', answer))
         elif kind == 'season' and not profile.get('season_stats') and logged:
             noun = 'game' if len(logged) == 1 else 'games'
             if f'{len(logged)} tracked {noun}' not in answer:
-                raise BuildError(f'{slug} FAQ tracked-game count does not match the game log.')
+                problems.append(_faq_conflict(slug, f'game log says {len(logged)} tracked {noun}', answer))
             if len(logged) == 1 and f'{len(logged)} tracked games' in answer:
-                raise BuildError(f'{slug} FAQ uses the plural for one tracked game.')
+                problems.append(_faq_conflict(slug, 'game log says 1 tracked game', answer))
             for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
                 nums = []
                 for item in logged:
@@ -458,20 +471,32 @@ def assert_faq_matches_tables(profile, pairs) -> None:
                     continue
                 shown_avg = value(sum(nums) / len(nums))
                 if f'{shown_avg} {word}' not in answer:
-                    raise BuildError(f'{slug} FAQ tracked average does not match the game log: {shown_avg} {word}.')
+                    problems.append(_faq_conflict(slug, f'game log says {shown_avg} {word}', answer))
         elif kind == 'season' and not row:
             if re.search(r'\d+\.\d+\s+points', answer):
-                raise BuildError(f'{slug} FAQ states an average the stats table does not show as one line.')
+                problems.append(_faq_conflict(slug, 'table does not show one season average', answer))
         elif kind == 'last_game' and shown:
             if shown['date'] not in ('', 'Not listed') and shown['date'] not in answer:
-                raise BuildError(f'{slug} FAQ last-game date does not match the game table: {shown["date"]}.')
+                problems.append(_faq_conflict(slug, f'game table says {shown["date"]}', answer))
             for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
                 num = shown[key]
                 if num not in ('', '-') and f'{num} {word}' not in answer:
-                    raise BuildError(f'{slug} FAQ last game does not match the game table: {num} {word}.')
+                    problems.append(_faq_conflict(slug, f'game table says {num} {word}', answer))
         elif kind == 'last_game':
             if re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b', answer):
-                raise BuildError(f'{slug} FAQ names a last-game date that is not in the game table.')
+                problems.append(_faq_conflict(slug, 'game table has no last-game date', answer))
+    return problems
+
+
+def assert_faq_matches_tables(profile, pairs) -> None:
+    """Raise when a season, games-played, or last-game FAQ disagrees with the tables.
+
+    The message names the table value and the page text. A single page's failure
+    does not stop the site build; heal_stat_text keeps that page and files an issue.
+    """
+    problems = faq_table_mismatches(profile, pairs)
+    if problems:
+        raise BuildError('\n'.join(problems))
 
 
 def curated_faq_pairs(profile, root: Path):
@@ -1189,7 +1214,8 @@ def build(root: Path):
     published_index={**index, 'players': published_players}
     linking=links.catalog_from_index(published_index)
     menu=site_nav.build_menu(root, site_nav.planned_paths(root, published_index, linking))
-    files={}; ids=set(); slugs=set(); indexable_players=[]
+    import heal_stat_text
+    files={}; ids=set(); slugs=set(); indexable_players=[]; held=[]
     for entry in index['players']:
         slug=entry.get('slug','')
         if not SLUG.fullmatch(slug) or slug in slugs or entry.get('id') in ids:
@@ -1205,10 +1231,31 @@ def build(root: Path):
                 raise BuildError('Duplicate player map does not point at a different slug.')
             files[f'wnba/{slug}/index.html']=links.permanent_redirect(f'{BASE}/wnba/{target}/')
             continue
-        page=profile_page(profile, root, linking, menu)
-        if contextual_link_count(page) > links.MAX_PLAYER_LINKS:
-            raise BuildError(f'Too many contextual links on {slug}.')
-        files[f'wnba/{slug}/index.html']=page
+        relative=f'wnba/{slug}/index.html'
+        previous_path=root/relative
+        previous=previous_path.read_text(encoding='utf-8') if previous_path.is_file() else ''
+        try:
+            page=profile_page(profile, root, linking, menu)
+        except BuildError as exc:
+            # A bad FAQ, meta description, or schema on one player must not stop every other page.
+            if not heal_stat_text.is_stat_text_failure(exc):
+                raise
+            held.append(heal_stat_text.needs_fix_issue(slug, [str(exc)]))
+            if not previous:
+                continue
+            page=previous
+        else:
+            if contextual_link_count(page) > links.MAX_PLAYER_LINKS:
+                raise BuildError(f'Too many contextual links on {slug}.')
+            outcome=heal_stat_text.heal_page(profile, page, root, previous=previous or None)
+            if outcome.action=='kept':
+                held.append(heal_stat_text.needs_fix_issue(slug, outcome.mismatches))
+                if not previous:
+                    continue
+                page=previous
+            else:
+                page=outcome.html
+        files[relative]=page
         if player_indexable(profile, root):
             indexable_players.append((slug, _player_lastmod(profile)))
     published_names={}
@@ -1320,6 +1367,9 @@ def build(root: Path):
         temporary.write_text(content)
         temporary.replace(path)
         changes+=1
+    if held:
+        print(f'Held {len(held)} player page(s) on the last published copy.')
+        heal_stat_text.file_needs_fix_issues(held)
     print(f'Built {len(slugs)} static player profiles and directory; {changes} files changed.')
     return len(slugs)
 
