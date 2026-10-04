@@ -1,0 +1,96 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Dream Beat Liberty 92-82 to Lead Semifinals 1-0",
+  "meta_description": "New York led 40-37 at half. Atlanta won the third quarter 32-15 and beat the Liberty 92-82. The Dream lead 1-0.",
+  "hook": "This is the Game 1 recap of the WNBA semifinals, the New York Liberty at the Atlanta Dream. The Liberty led 40-37 at halftime and made all 15 free throws, and Atlanta still won the third quarter 32-15. DeWanna Bonner's night off the bench is in the scoring lines below.",
+  "summary": "Review draft of the WNBA semifinals Game 1 recap. Atlanta Dream 92, New York Liberty 82, on October 4, 2026, at State Farm Arena. Atlanta leads the series 1-0. Stats are from the ESPN box score for game 401918295.",
+  "url_path": "/news/liberty-dream-game-1-recap/",
+  "files": [
+    "news/liberty-dream-game-1-recap/index.html"
+  ],
+  "hero_image": "images/articles/liberty-dream-game-1-recap/angel-reese-dream-2026.webp",
+  "hero_image_alt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking to her right",
+  "hero_image_credit": "Photo: John McClellan / CC BY-SA 4.0. Wikimedia Commons file: Angel Reese Dream (cropped).jpg. Taken May 9, 2026, at Target Center.",
+  "espn_game_id": "401918295",
+  "espn_box_score": "https://www.espn.com/wnba/boxscore/_/gameId/401918295",
+  "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918295",
+  "unique": [
+    "New York led 40-37 at halftime, then Atlanta won the third quarter 32-15",
+    "New York made 15 of 15 free throws and lost by 10",
+    "DeWanna Bonner scored 23 points with 9 rebounds off the bench"
+  ],
+  "unverified": [
+    "No quotes were added. The only injury wording beyond the box score is the ESPN game-page recap line that Allisha Gray went down with a left hand injury in the second quarter.",
+    "The lead photo is from May 9, 2026, at Target Center, not from this game."
+  ],
+  "scorecard": {
+    "overall": null,
+    "max": 10,
+    "stars": null,
+    "grade": "Pending",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Information gain",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Originality",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Experience and expertise",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Main content and layout",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Transparency",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Writing craft",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "People-first purpose",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      },
+      {
+        "name": "Human voice",
+        "score": null,
+        "max": 10,
+        "reason": ""
+      }
+    ],
+    "info_gain": "",
+    "ai_flags": []
+  }
+}

@@ -1,5 +1,23 @@
 [
   {
+    "slug": "liberty-dream-game-1-recap",
+    "url": "/news/liberty-dream-game-1-recap/",
+    "title": "Dream Beat Liberty 92-82 to Lead Semifinals 1-0",
+    "description": "New York led 40-37 at half. Atlanta won the third quarter 32-15 and beat the Liberty 92-82. The Dream lead 1-0.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-04",
+    "image": "/images/articles/liberty-dream-game-1-recap/angel-reese-dream-2026.webp",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking to her right",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
+    "espnGameId": "401918295",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1668,
+    "imageHeight": 2529
+  },
+  {
     "slug": "wings-valkyries-game-3-recap",
     "url": "/news/wings-valkyries-game-3-recap/",
     "title": "Valkyries Close Out the Wings 77-73, Win Series 2-1",
