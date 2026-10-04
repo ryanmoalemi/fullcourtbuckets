@@ -2,7 +2,7 @@
   "site": "fullcourtbuckets.com",
   "title": "Top 10 Women's College Basketball Players to Collect in 2026",
   "meta_description": "JuJu Watkins, Sarah Strong and eight more college stars ranked for card collectors, with specific cards, card images, research links and risks to watch.",
-  "summary": "Ryan's editorial ranking of ten college players. The page is a straight list: title, lead SuperFractor, two intro sentences, then items 1 through 10. Each section photo is the highest completed sale found for that player, with one price line. His paragraphs still discuss the cards he studied.",
+  "summary": "Ryan's editorial ranking of ten college players. The page is a straight list: title, lead SuperFractor, one intro paragraph, then items 1 through 10. The intro names the ranking, the $24,404 Goldin sale on September 26, 2026 Pacific time, and an unnamed national champion. Each section photo is the highest completed sale found for that player.",
   "uniqueness": {
     "summary": "Each section photo is a verified high sale, with the price, date and source on one line under the image.",
     "points": [
@@ -45,7 +45,7 @@
         "name": "Information gain",
         "score": 8,
         "max": 10,
-        "reason": "Each photo is now a higher verified sale than the base card Ryan discusses, with the price and date on one line. The ranking board and buying checklist are still gone, so the page does not also work as a shopping list."
+        "reason": "The intro leads with the verified $24,404 Goldin sale, dated September 26, 2026 Pacific time, and each photo is a higher verified sale than the base card in the text. The ranking board and buying checklist are still gone."
       },
       {
         "name": "Effort and replication cost",
@@ -69,7 +69,7 @@
         "name": "Main content and layout",
         "score": 8,
         "max": 10,
-        "reason": "The title is above the fold on desktop and phone. The lead SuperFractor sits under the byline, two intro sentences follow, and item 1 is next. Each section is a heading, a card, one price line, and his text. After item 10 there is only the short bottom line and fine print."
+        "reason": "The title is above the fold on desktop and phone. The lead SuperFractor sits under the byline, one intro paragraph follows, and item 1 is next. Each section is a heading, a card, one price line, and his text. After item 10 there is only the short bottom line and fine print."
       },
       {
         "name": "Transparency",
@@ -79,9 +79,9 @@
       },
       {
         "name": "Writing craft",
-        "score": 8,
+        "score": 9,
         "max": 10,
-        "reason": "Ryan's section order is intact. The repeated risk label is different on each player, and the closing tells a reader to follow players and learn the cards."
+        "reason": "The opening is one paragraph in Ryan's voice: it says what the ranking is, leads with the verified Goldin sale, and teases the national champion without naming her. His section order and closing are intact."
       },
       {
         "name": "People-first purpose",
@@ -105,7 +105,8 @@
       "No sale near $40,000 was verified. The lead uses the Goldin 1/1 SuperFractor at a $20,003 winning bid and a $24,404 total. Purple Lava stays in section 1.",
       "The sold-price table was replaced with a one-line sale under each section photo and a thumbnail grid before the bottom line. Method notes moved to the research note.",
       "List structure now runs title, lead image, two intro sentences, items 1 through 10, then the bottom line and fine print. The quick board, five checks, and sales grid were removed.",
-      "Section photos were swapped to the highest verified completed sale for each player. Ryan's paragraphs still name the cards he studied."
+      "Section photos were swapped to the highest verified completed sale for each player. Ryan's paragraphs still name the cards he studied.",
+      "The intro is one paragraph that names the ranking, the September 26, 2026 Pacific-time Goldin sale, and an unnamed national champion. The hero caption is one line."
     ]
   }
 }

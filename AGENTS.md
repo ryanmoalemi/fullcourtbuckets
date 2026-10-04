@@ -44,7 +44,7 @@ Put the most engaging block right under the intro or hero. That means card grids
 
 Order the rest from most interesting to least. End with methodology, disclosures, notes, source lists, and fine print. Move existing sections only. Do not rewrite or delete the copy. Use real photos, and keep each photo credit with that photo.
 
-Numbered list articles follow `docs/style-guide.md`. The order is the title, the byline, the lead image, at most two short intro sentences, then items #1 through #10, then a short bottom line and fine print. Do not put a ranking table, a checklist, or a sales grid in that body.
+Numbered list articles follow `docs/style-guide.md`. The order is the title, the byline, the lead image, one short intro paragraph, then items #1 through #10, then a short bottom line and fine print. The intro introduces the article, gives one verified fact, and teases something the body pays off. Do not put a ranking table, a checklist, or a sales grid in that body.
 
 This applies to the homepage, hubs, the author page, the about page, player pages, the article template, and guides. Generated recaps follow the same order. When a disclosure says the sources are linked above, leave that source list above the disclosure so the sentence stays true. `/authors/ryan-moalemi/ryans-angel-reese-cards/` is ordered on its own. Do not reorder it from this rule.
 
