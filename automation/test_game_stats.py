@@ -238,11 +238,15 @@ class Tests(unittest.TestCase):
             self.assertNotIn("\u2014", text)
             self.assertNotIn("synthetic-key", text)
             first = doc["checked_at"]
+            path.with_suffix(".md").write_text(text.replace(g.PUBLIC_SOURCE_NOTE, "Source: vendor."), encoding="utf-8")
             again = g.run(
                 root, NOW + dt.timedelta(hours=2), dates=[DAY], client=FakeBdl(bdl_rows()), fetch=fetch_ok,
                 access={"key_present": True, "endpoints": {}},
             )
             self.assertEqual(again, 0)
+            refreshed = path.with_suffix(".md").read_text(encoding="utf-8")
+            self.assertIn(g.PUBLIC_SOURCE_NOTE, refreshed)
+            self.assertNotIn("Source: vendor.", refreshed)
             self.assertEqual(json.loads(path.read_text(encoding="utf-8"))["checked_at"], first)
 
     def test_fallback_when_balldontlie_is_missing(self):

@@ -1064,6 +1064,9 @@ def save_pair(path: Path, doc, text_md, key) -> bool:
         except (OSError, json.JSONDecodeError):
             previous = None
         if previous is not None and stable(previous) == stable(doc):
+            if md_path.read_text(encoding="utf-8") != text_md:
+                atomic_write(md_path, text_md)
+                return True
             return False
     atomic_write(md_path, text_md)
     atomic_write(path, payload)
