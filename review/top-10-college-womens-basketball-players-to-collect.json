@@ -2,9 +2,9 @@
   "site": "fullcourtbuckets.com",
   "title": "Top 10 Women's College Basketball Players to Collect in 2026",
   "meta_description": "JuJu Watkins, Sarah Strong and eight more college stars ranked for card collectors, with specific cards, card images, research links and risks to watch.",
-  "summary": "Ryan's editorial ranking of ten college players, each with one pictured card. The lead is a different Watkins card: the Goldin 1/1 SuperFractor. A sold-price table gives that auction total plus one dated SportsCardsPro sale for the other pictured cards that had a completed sale. Joyce Edwards #80 is left out because that page had no completed sale.",
+  "summary": "Ryan's editorial ranking of ten college players, each with one pictured card. The lead is the Goldin 1/1 SuperFractor. Each section photo has a one-line completed sale under it. A thumbnail grid of those sales sits just before the bottom line. Joyce Edwards #80 is left out of the grid because that page had no completed sale.",
   "uniqueness": {
-    "summary": "The sold-price table matches each listing title to the card in the photo, separates the Goldin hammer from the buyer's-premium total, and leaves out Edwards #80 because SportsCardsPro shows no completed sale.",
+    "summary": "Each pictured card with a completed sale has a one-line price, date and source under the photo, and the same sale appears in a thumbnail grid. Edwards #80 is left out of the grid because SportsCardsPro shows no completed sale.",
     "points": [
       "Completed sales with a date, a single price, and the listing title",
       "Joyce Edwards Topps address ending in card-81, with a published print run of 412 and zero sold listings on the #80 page",
@@ -17,7 +17,7 @@
   ],
   "hero_image": "news/top-10-college-womens-basketball-players-to-collect/img/watkins-superfractor-1-1-psa10.webp",
   "unique": [
-    "Dated completed-sale table matched to the pictured card, including the Goldin 1/1 SuperFractor total of $24,404",
+    "One-line completed sale under each section photo, plus a thumbnail grid, including the Goldin 1/1 SuperFractor total of $24,404",
     "Joyce Edwards Topps address ending in card-81, while SportsCardsPro #80 has zero sold listings so no price is cited",
     "Mikayla Blakes Bowman U Now print run of 2,168 set next to the June 18, 2026 ungraded sale at $3.99"
   ],
@@ -44,7 +44,7 @@
         "name": "Information gain",
         "score": 8,
         "max": 10,
-        "reason": "The sale table keeps base cards apart from serials and foils, and it drops Edwards because that page has a guide price and no completed sale."
+        "reason": "The line under each photo and the thumbnail grid keep base cards apart from the 1/1 SuperFractor, and Edwards is left out because that page has a guide price and no completed sale."
       },
       {
         "name": "Effort and replication cost",
@@ -68,13 +68,13 @@
         "name": "Main content and layout",
         "score": 8,
         "max": 10,
-        "reason": "The title is above the fold on desktop and phone. The lead is the Goldin 1/1 SuperFractor under the byline. Each section photo, including the Purple Lava scan, sits under that section heading."
+        "reason": "The title is above the fold on desktop and phone. The lead is the Goldin 1/1 SuperFractor under the byline. Each section photo has a one-line sale directly under it. The sold-price table is gone. A thumbnail grid, five columns on desktop and two on a phone, sits just before the bottom line."
       },
       {
         "name": "Transparency",
         "score": 9,
         "max": 10,
-        "reason": "The Goldin row names the auction house, the winning bid, the 22% buyer's premium, and the UTC close time. The other rows name SportsCardsPro, a date, and a listing title. The how-made note says Ryan wrote the article and that AI was used for fact-checking and formatting."
+        "reason": "The lead caption names Goldin, the winning bid, the 22% buyer's premium, and the UTC close time. Each section line names a price, a date, and SportsCardsPro. The how-made note says Ryan wrote the article and that AI was used for fact-checking and formatting."
       },
       {
         "name": "Writing craft",
@@ -86,7 +86,7 @@
         "name": "People-first purpose",
         "score": 8,
         "max": 10,
-        "reason": "A collector can match the pictured card to a dated sale, skip a guide price with no buyer, and use the five checks before paying."
+        "reason": "A collector can match the pictured card to the dated sale under the photo, open that source from the thumbnail grid, skip a guide price with no buyer, and use the five checks before paying."
       },
       {
         "name": "Human voice",
@@ -95,13 +95,14 @@
         "reason": "The body is Ryan's wording, with light edits on the flagged contrast lines. The ranking and the I/my judgments are his."
       }
     ],
-    "info_gain": "A dated sale table that keeps the pictured issue apart from serials and parallels, plus the Edwards #80 page that shows a guide price and zero sales.",
+    "info_gain": "A one-line dated sale under each pictured card, kept apart from serials and parallels, plus the Edwards #80 page that shows a guide price and zero sales.",
     "ai_flags": [
       "The flagged contrast lines were rewritten in plain sentences. Ranking, structure, and the rest of the wording are Ryan's.",
       "Fact-check and formatting edits cite the Watkins $42.01 sale to SportsCardsPro and rename Fulwiley's award to SEC Sixth Woman of the Year.",
       "Ryan should still read the edited lines before the article is published.",
       "Card photos were moved under the byline and under each section heading. The wording was left for Ryan to edit.",
-      "No sale near $40,000 was verified. The lead and the first table row use the Goldin 1/1 SuperFractor at a $20,003 winning bid and a $24,404 total. Purple Lava stays in section 1."
+      "No sale near $40,000 was verified. The lead uses the Goldin 1/1 SuperFractor at a $20,003 winning bid and a $24,404 total. Purple Lava stays in section 1.",
+      "The sold-price table was replaced with a one-line sale under each section photo and a thumbnail grid before the bottom line. Method notes moved to the research note."
     ]
   }
 }
