@@ -70,7 +70,9 @@ class GeneratorRuleTests(unittest.TestCase):
                 'slug': 'thin-player',
                 'items': [{'question': 'Who is this?', 'answer': 'A player with a curated note.'}],
             }), encoding='utf-8')
-            self.assertTrue(builder.player_indexable(thin, root))
+            self.assertFalse(builder.player_indexable(thin, root))
+            thin_faq = builder.profile_page(thin, root, menu=[])
+            self.assertIn('content="noindex"', thin_faq)
         slot = {
             'full_name': 'Minnesota Lynx',
             'conference': 'Western Conference',
@@ -259,7 +261,7 @@ class PublishedPageTests(unittest.TestCase):
             self.assertLessEqual(len(title), 81, entry['slug'])
         darianna = (ROOT / 'wnba/darianna-littlepage-buggs/index.html').read_text(encoding='utf-8')
         self.assertNotIn('Available coverage from 2008 onward.', darianna)
-        self.assertIn('index,follow', darianna)
+        self.assertIn('content="noindex"', darianna)
         expansion = (ROOT / 'news/wnba-expansion-teams/index.html').read_text(encoding='utf-8')
         self.assertNotIn('site.api.espn.com', expansion)
         self.assertIn('https://www.espn.com/wnba/standings', expansion)

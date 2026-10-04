@@ -130,18 +130,23 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         page = re.sub(r'<style id="fcb-portrait-styles">.*?</style>', lambda _: style, page, count=1, flags=re.S)
     else:
         page = page.replace('</head>', style + '</head>', 1)
-    portrait_note = (
+    portrait_bit = 'Portrait is an AI illustration. '
+    note_bit = 'checked against the stats on this page. '
+    if note_bit in page and portrait_bit not in page:
+        page = page.replace(note_bit, note_bit + portrait_bit, 1)
+    legacy = (
         'The portrait is an AI-generated editorial illustration, not a photograph. '
         'Names, team information and statistics are separate HTML text. '
         'Profile text and FAQs are written with help from AI tools, using the stats and sources on this page.'
     )
-    page = page.replace('The number artwork is a design element, not a player photograph.', portrait_note)
     short_note = (
         'The portrait is an AI-generated editorial illustration, not a photograph. '
         'Names, team information and statistics are separate HTML text.'
     )
-    if short_note in page and portrait_note not in page:
-        page = page.replace(short_note, portrait_note)
+    artwork = 'The number artwork is a design element, not a player photograph.'
+    page = page.replace(legacy, artwork)
+    if short_note in page:
+        page = page.replace(short_note, artwork)
     def update_schema(match):
         schema = json.loads(match.group(1))
         for entity in schema.get('@graph', []):

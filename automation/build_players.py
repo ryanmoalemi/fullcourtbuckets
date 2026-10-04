@@ -273,26 +273,205 @@ def stats_table(profile, kind):
     heads=''.join(f'<th scope="col"><abbr title="{esc({"GP":"Games played","MIN":"Minutes per game","PTS":"Points per game","REB":"Rebounds per game","AST":"Assists per game","STL":"Steals per game","BLK":"Blocks per game","TO":"Turnovers per game","FG%":"Field goal percentage","3P%":"Three-point percentage","FT%":"Free throw percentage"}[text])}">{text}</abbr></th>' for _,text in COLUMNS)
     return f'<div class="competition" data-competition="{kind}"><h3>{label}</h3><div class="table-scroll" role="region" aria-label="{label} season statistics" tabindex="0"><table><caption>{label}: per-game averages, except games played and shooting percentages.</caption><thead><tr><th scope="col">YEAR</th><th scope="col">TEAM</th>{heads}</tr></thead><tbody>{"".join(cells)}</tbody></table></div></div>'
 
+def latest_completed_game(profile):
+    """Newest completed game on the page, regular season or playoffs."""
+    games = [game for game in profile.get('recent_completed_games') or [] if isinstance(game, dict)]
+    if not games:
+        return None
+    return max(games, key=lambda game: str(game.get('date') or ''))
+
+
+def game_display(game):
+    """The same date, opponent, result, and counting stats the game table prints."""
+    tid = (game.get('team') or {}).get('id')
+    home = (game.get('home_team') or {}).get('id')
+    away = (game.get('visitor_team') or {}).get('id')
+    if tid not in (home, away) or tid is None:
+        opponent = 'Opponent not listed'
+        outcome = '-'
+    else:
+        at_home = tid == home
+        opponent = ('vs. ' if at_home else '@ ') + tname(game.get('visitor_team' if at_home else 'home_team'))
+        ours, theirs = (game.get('home_score'), game.get('away_score')) if at_home else (game.get('away_score'), game.get('home_score'))
+        outcome = (('W' if ours > theirs else 'L' if ours < theirs else 'T') + f' {ours}-{theirs}') if isinstance(ours, (int, float)) and isinstance(theirs, (int, float)) else '-'
+    kind = 'Playoffs' if game.get('postseason') is True else 'Regular' if game.get('postseason') is False else 'Not listed'
+    return {
+        'date': timestamp(game.get('date'), True),
+        'opponent': opponent,
+        'kind': kind,
+        'outcome': outcome,
+        'pts': value(game.get('pts'), True),
+        'reb': value(game.get('reb'), True),
+        'ast': value(game.get('ast'), True),
+    }
+
+
 def game_table(profile):
     games=profile.get('recent_completed_games',[])
     if not games:
         return ''
     rows=[]
     for g in sorted(games,key=lambda r:str(r.get('date','')),reverse=True):
-        tid=(g.get('team') or {}).get('id')
-        home=(g.get('home_team') or {}).get('id')
-        away=(g.get('visitor_team') or {}).get('id')
-        if tid not in (home,away) or tid is None:
-            opponent='Opponent not listed'; outcome='-'
-        else:
-            at_home=tid==home
-            opponent=('vs. ' if at_home else '@ ')+tname(g.get('visitor_team' if at_home else 'home_team'))
-            ours,theirs=(g.get('home_score'),g.get('away_score')) if at_home else (g.get('away_score'),g.get('home_score'))
-            outcome=(('W' if ours>theirs else 'L' if ours<theirs else 'T')+f' {ours}-{theirs}') if isinstance(ours,(int,float)) and isinstance(theirs,(int,float)) else '-'
-        label='Playoffs' if g.get('postseason') is True else 'Regular' if g.get('postseason') is False else 'Not listed'
+        shown = game_display(g)
         nums=''.join(f'<td>{value(g.get(k),True)}</td>' for k in ('pts','reb','ast','stl','blk','turnover'))
-        rows.append(f'<tr><th scope="row">{esc(timestamp(g.get("date"),True))}</th><td class="team-cell">{esc(opponent)}</td><td>{label}</td><td>{outcome}</td><td>{esc(g.get("minutes") or "Not listed")}</td>{nums}</tr>')
+        rows.append(f'<tr><th scope="row">{esc(shown["date"])}</th><td class="team-cell">{esc(shown["opponent"])}</td><td>{shown["kind"]}</td><td>{shown["outcome"]}</td><td>{esc(g.get("minutes") or "Not listed")}</td>{nums}</tr>')
     return f'''<section id="games" class="section"><p class="eyebrow">Completed games</p><h2>Recent game log</h2><p class="muted small">Recent games: {esc(profile.get('game_log_window_start'))} onward. Dates shown in Pacific time. This is not a complete career game log.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Recent completed game statistics"><table><caption>Regular-season and playoff games are labeled separately.</caption><thead><tr><th scope="col">DATE</th><th scope="col">OPPONENT</th><th scope="col">TYPE</th><th scope="col">RESULT</th><th scope="col">MIN</th><th scope="col">PTS</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">STL</th><th scope="col">BLK</th><th scope="col">TO</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
+
+
+def player_name(profile) -> str:
+    p = profile.get('player') or {}
+    return (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
+
+
+def faq_stat_kind(question: str) -> str:
+    """Season averages, games played, and last-game answers are rebuilt from page data."""
+    text = str(question or '').casefold()
+    if 'college' in text:
+        return ''
+    if 'last game' in text:
+        return 'last_game'
+    if 'points per game' in text or 'tracked game' in text or re.search(r'\bstats\b', text):
+        return 'season'
+    return ''
+
+
+def _listed(bits: list[str]) -> str:
+    if not bits:
+        return ''
+    if len(bits) == 1:
+        return bits[0]
+    return ', '.join(bits[:-1]) + ', and ' + bits[-1]
+
+
+def season_faq_answer(profile, name: str) -> str:
+    """Season averages and games played from the same row as the hero and the stats table."""
+    row = headline(profile)
+    if row:
+        bits = []
+        for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+            num = value(row.get(key))
+            if num != '-':
+                bits.append(f'{num} {word}')
+        games = value(row.get('games_played'), True)
+        year = row.get('season')
+        competition = 'regular season' if row.get('season_type') == 2 else 'playoffs'
+        team = tname(row.get('team'))
+        noun = 'game' if games == '1' else 'games'
+        team_bit = f' for the {team}' if team and team != 'Team not listed' else ''
+        if bits and games != '-':
+            return (
+                f'In the {year} {competition}, {name} averaged {_listed(bits)} in {games} {noun}{team_bit}. '
+                'Her full season-by-season numbers are on this page.'
+            )
+        if games != '-':
+            return f'In the {year} {competition}, {name} played {games} {noun}{team_bit}.'
+    games = [game for game in profile.get('recent_completed_games') or [] if isinstance(game, dict)]
+    if not profile.get('season_stats') and games:
+        return tracked_games_answer(name, games, profile)
+    if profile.get('season_stats'):
+        return f"{name}'s latest season is listed by team on this page, not as one combined average."
+    return 'Season averages are not listed on this page yet.'
+
+
+def tracked_games_answer(name: str, games: list, profile) -> str:
+    """Averages of the games in the log. One game stays singular."""
+    count = len(games)
+    noun = 'game' if count == 1 else 'games'
+
+    def mean(key):
+        nums = []
+        for game in games:
+            num = game.get(key)
+            if isinstance(num, bool) or not isinstance(num, (int, float)) or not math.isfinite(num):
+                return None
+            nums.append(float(num))
+        if not nums:
+            return None
+        return value(sum(nums) / len(nums))
+
+    bits = []
+    for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+        num = mean(key)
+        if num is not None:
+            bits.append(f'{num} {word}')
+    team = tname(profile.get('current_team') if isinstance(profile.get('current_team'), dict) else None)
+    team_bit = f' for the {team}' if team and team != 'Team not listed' else ''
+    if not bits:
+        return f'In her most recent {count} tracked {noun}, a points average is not listed{team_bit}.'
+    return (
+        f'In her most recent {count} tracked {noun}, {name} averaged {_listed(bits)}{team_bit}. '
+        'Full game-by-game numbers are on this page.'
+    )
+
+
+def last_game_answer(profile, name: str) -> str:
+    """Last completed game, including playoffs, using the game table's date and numbers."""
+    game = latest_completed_game(profile)
+    if not game:
+        return 'A completed game is not listed on this page yet.'
+    shown = game_display(game)
+    bits = []
+    for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+        if shown[key] not in ('', '-'):
+            bits.append(f'{shown[key]} {word}')
+    played = f'{name} had {_listed(bits)}' if bits else f'{name} played'
+    kind = f', {shown["kind"]}' if shown['kind'] not in ('', 'Not listed') else ''
+    result = f' in a {shown["outcome"]}' if shown['outcome'] not in ('', '-') else ''
+    return f'In her most recent completed game ({shown["date"]}, {shown["opponent"]}{kind}), {played}{result}.'
+
+
+def assert_faq_matches_tables(profile, pairs) -> None:
+    """Fail the build when a season, games-played, or last-game FAQ disagrees with the tables."""
+    slug = profile.get('slug') or 'player'
+    row = headline(profile)
+    game = latest_completed_game(profile)
+    shown = game_display(game) if game else None
+    logged = [item for item in profile.get('recent_completed_games') or [] if isinstance(item, dict)]
+    for question, answer in pairs:
+        kind = faq_stat_kind(question)
+        if kind == 'season' and row:
+            for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+                num = value(row.get(key))
+                if num != '-' and f'{num} {word}' not in answer:
+                    raise BuildError(f'{slug} FAQ does not match the stats table: {num} {word}.')
+            games = value(row.get('games_played'), True)
+            if games != '-' and f'in {games} game' not in answer and f'played {games} game' not in answer:
+                raise BuildError(f'{slug} FAQ games played does not match the stats table: {games}.')
+            year = row.get('season')
+            if year and str(year) not in answer:
+                raise BuildError(f'{slug} FAQ season does not match the stats table: {year}.')
+        elif kind == 'season' and not profile.get('season_stats') and logged:
+            noun = 'game' if len(logged) == 1 else 'games'
+            if f'{len(logged)} tracked {noun}' not in answer:
+                raise BuildError(f'{slug} FAQ tracked-game count does not match the game log.')
+            if len(logged) == 1 and f'{len(logged)} tracked games' in answer:
+                raise BuildError(f'{slug} FAQ uses the plural for one tracked game.')
+            for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+                nums = []
+                for item in logged:
+                    num = item.get(key)
+                    if isinstance(num, bool) or not isinstance(num, (int, float)) or not math.isfinite(num):
+                        nums = []
+                        break
+                    nums.append(float(num))
+                if not nums:
+                    continue
+                shown_avg = value(sum(nums) / len(nums))
+                if f'{shown_avg} {word}' not in answer:
+                    raise BuildError(f'{slug} FAQ tracked average does not match the game log: {shown_avg} {word}.')
+        elif kind == 'season' and not row:
+            if re.search(r'\d+\.\d+\s+points', answer):
+                raise BuildError(f'{slug} FAQ states an average the stats table does not show as one line.')
+        elif kind == 'last_game' and shown:
+            if shown['date'] not in ('', 'Not listed') and shown['date'] not in answer:
+                raise BuildError(f'{slug} FAQ last-game date does not match the game table: {shown["date"]}.')
+            for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
+                num = shown[key]
+                if num not in ('', '-') and f'{num} {word}' not in answer:
+                    raise BuildError(f'{slug} FAQ last game does not match the game table: {num} {word}.')
+        elif kind == 'last_game':
+            if re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b', answer):
+                raise BuildError(f'{slug} FAQ names a last-game date that is not in the game table.')
 
 
 def curated_faq_pairs(profile, root: Path):
@@ -324,13 +503,32 @@ def curated_faq_pairs(profile, root: Path):
         pairs.append((question.strip(), answer.strip()))
     return pairs
 
+def faq_answer_pairs(profile, root: Path):
+    """Keep curated questions. Rebuild season, games-played, and last-game answers from profile data."""
+    raw = curated_faq_pairs(profile, root)
+    if not raw:
+        return []
+    name = player_name(profile) or 'This player'
+    pairs = []
+    for question, answer in raw:
+        kind = faq_stat_kind(question)
+        if kind == 'season':
+            answer = season_faq_answer(profile, name)
+        elif kind == 'last_game':
+            answer = last_game_answer(profile, name)
+        pairs.append((question, answer))
+    assert_faq_matches_tables(profile, pairs)
+    return pairs
+
+
 def faq_section(profile, root=None):
     """Render every curated FAQ item. Do not invent template or stats-generated questions.
     Players without data/wnba/faq/{slug}.json, or with an empty items list, get no FAQ block.
+    Numeric season, games-played, and last-game answers come from the same profile as the tables.
     """
     if root is None:
         root = Path(__file__).resolve().parents[1]
-    pairs = curated_faq_pairs(profile, root)
+    pairs = faq_answer_pairs(profile, root)
     if not pairs:
         return '', None
     items = ''.join(
@@ -424,12 +622,8 @@ def player_has_records(profile) -> bool:
 
 
 def player_indexable(profile, root) -> bool:
-    """No season rows stay indexable only when a curated FAQ is on file."""
-    if player_has_records(profile):
-        return True
-    if root is None:
-        return False
-    return bool(curated_faq_pairs(profile, root))
+    """Pages with no season stats are noindex and stay out of the sitemap."""
+    return player_has_records(profile)
 
 
 def player_description(profile) -> str:
@@ -595,6 +789,20 @@ def team_description(slot: dict, standing: dict | None) -> str:
     return cap_description(sentence)
 
 
+AI_NOTE = (
+    'Built by Full Court Buckets from ESPN and WNBA data. '
+    'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
+)
+PORTRAIT_SENTENCE = 'Portrait is an AI illustration.'
+
+
+def ai_disclosure_html(include_portrait=False) -> str:
+    """One visible line under the stats. The portrait sentence is only for AI portraits."""
+    portrait = f' {PORTRAIT_SENTENCE}' if include_portrait else ''
+    link = '<a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>'
+    return f'<p class="ai-note">{AI_NOTE}{portrait} {link}</p>'
+
+
 def profile_page(profile, root=None, linking=None, menu=None):
     p=profile['player']; name=(str(p.get('first_name') or '')+' '+str(p.get('last_name') or '')).strip()
     slug=profile['slug']; fields=bio_fields(p); active=profile.get('active_in_provider_feed') is True
@@ -656,8 +864,10 @@ def profile_page(profile, root=None, linking=None, menu=None):
     summary=answer_summary(profile)
     summary_html=f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
     day=stats_day(profile)
-    updated_html=f'<p class="stats-updated">Stats updated {esc(long_date(day))}. {esc(STATS_SOURCE)}</p>' if day else f'<p class="stats-updated">{esc(STATS_SOURCE)}</p>'
-    checked=timestamp(profile.get('checked_at'))
+    fresh=long_date(day)
+    updated_html=f'<p class="stats-updated">Stats updated {esc(fresh)}. {esc(STATS_SOURCE)}</p>' if fresh else f'<p class="stats-updated">{esc(STATS_SOURCE)}</p>'
+    # Visible dates follow the data-hash stamp, not the last time the file was rebuilt.
+    checked=fresh or 'Not listed'
     latest=profile.get('recent_completed_games',[])
     latest_label=timestamp(max(g['date'] for g in latest),True) if latest else None
     last_game=f'<p>Most recent completed game: <b>{esc(latest_label)}</b>.</p>' if latest_label else ''
@@ -670,14 +880,14 @@ def profile_page(profile, root=None, linking=None, menu=None):
     if timeline: nav_links.append('<a href="#teams">Teams</a>')
     nav_links.append('<a href="#sources">Sources</a>')
     nav=''.join(nav_links)
-    hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span><b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1>{summary_html}{updated_html}<p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
+    hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span> <b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1>{summary_html}{updated_html}<p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
     faq_html, faq_entity = faq_section(profile, root)
     numbers_note = 'No season records are listed on this page yet. A missing number is shown as a dash and is not turned into zero.' if not stats else 'Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.'
     archive_line = 'Season records are not on this page yet.' if not stats else 'Explore the available records from 2008 onward.'
     sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>{numbers_note}</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json">View player data</a></details>'''
     overview_html=f'<section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>'
     archive=f'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>{esc(archive_line)}</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
-    body=hero+f'<div class="content-grid"><div>{statshtml}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
+    body=hero+f'<div class="content-grid"><div>{statshtml}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
     route=f'/wnba/{slug}/'
     webpage={'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}
     if day:
@@ -866,7 +1076,11 @@ def _sitemap_document(entries: list) -> str:
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ]
+    seen = set()
     for path, lastmod in entries:
+        if path in seen:
+            continue
+        seen.add(path)
         lines.append('  <url>')
         lines.append(f'    <loc>{BASE}{path}</loc>')
         if lastmod:
@@ -914,7 +1128,6 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('about/index.html', '/about/'),
         ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('contact/index.html', '/contact/'),
-        ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
         ('privacy/index.html', '/privacy/'),
         ('terms/index.html', '/terms/'),
         ('wnba/index.html', '/wnba/'),

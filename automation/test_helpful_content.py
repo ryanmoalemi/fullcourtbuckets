@@ -12,8 +12,10 @@ HOW = '/how-we-make-full-court-buckets/'
 TAGLINE = 'Independent WNBA news and analysis'
 OLD_TAGLINE = 'Built by the WNBA community, for the WNBA community'
 PROFILE_NOTE = (
-    'Profile text and FAQs are written with help from AI tools, using the stats and sources on this page.'
+    'Built by Full Court Buckets from ESPN and WNBA data. '
+    'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
 )
+PORTRAIT_LINE = 'Portrait is an AI illustration.'
 KEPT = '/news/liberty-lynx-game-1-full-recap/'
 REMOVED = 'liberty-lynx-game-1-ionescu-stewart'
 
@@ -97,14 +99,17 @@ class HelpfulContentTests(unittest.TestCase):
             text = path.read_text(encoding='utf-8', errors='replace')
             if OLD_TAGLINE in text:
                 offenders.append(path.relative_to(ROOT).as_posix())
-            portrait_note = (
-                'The portrait is an AI-generated editorial illustration, not a photograph. '
-                'Names, team information and statistics are separate HTML text.'
-            )
-            if portrait_note in text and PROFILE_NOTE not in text:
+            if 'class="ai-note"' in text and PROFILE_NOTE not in text:
                 offenders.append('missing profile note ' + path.relative_to(ROOT).as_posix())
+            if 'has-player-portrait' in text and PORTRAIT_LINE not in text:
+                offenders.append('missing portrait line ' + path.relative_to(ROOT).as_posix())
+            if 'has-player-portrait' not in text and PORTRAIT_LINE in text and 'wnba/' in path.as_posix():
+                offenders.append('portrait line without a portrait ' + path.relative_to(ROOT).as_posix())
             if PROFILE_NOTE in text:
                 noted += 1
+                sources = text.split('id="sources"', 1)
+                if len(sources) > 1 and 'drafted with AI tools' in sources[1].split('</details>', 1)[0]:
+                    offenders.append('ai note still inside sources ' + path.relative_to(ROOT).as_posix())
         self.assertEqual(offenders, [])
         self.assertGreater(noted, 10)
         self.assertIn(TAGLINE, (ROOT / 'index.html').read_text(encoding='utf-8'))

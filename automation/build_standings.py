@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import html
 import json
 from pathlib import Path
@@ -183,6 +184,22 @@ def parse_standings(payload: dict, updated_at: str) -> dict:
     }
 
 
+def standings_hash(table: dict) -> str:
+    """Hash of the table a reader sees. The updatedAt stamp is not part of the data."""
+    payload = {'season': table.get('season'), 'teams': table.get('teams')}
+    raw = json.dumps(payload, sort_keys=True, separators=(',', ':'), default=str)
+    return hashlib.sha256(raw.encode()).hexdigest()
+
+
+def keep_updated_at(previous, table: dict, proposed: str) -> str:
+    """Keep the stored date when the standings hash is unchanged."""
+    if isinstance(previous, dict) and standings_hash(previous) == standings_hash(table):
+        kept = previous.get('updatedAt')
+        if isinstance(kept, str) and kept.strip():
+            return kept
+    return proposed
+
+
 def fetch_standings(url: str = FEED_URL) -> dict:
     request = Request(url, headers={'User-Agent': 'FullCourtBuckets/1.0'})
     with urlopen(request, timeout=30) as response:
@@ -265,6 +282,8 @@ def render_page(root: Path, table: dict) -> str:
     sentence = f'The {leader["name"]} lead the WNBA standings at {leader["wins"]}-{leader["losses"]}.'
     support = f'{sentence} Updated {when}.' if when else sentence
     year = table.get('season') or ''
+    heading = links.standings_title(table)
+    modified = links._iso_day(table.get('updatedAt'))
     def by_conference(name):
         rows = [team for team in teams if team['conference'] == name]
         return sorted(rows, key=lambda team: team.get('conferenceRank') or 99)
@@ -285,6 +304,7 @@ def render_page(root: Path, table: dict) -> str:
                 'name': f'{year} WNBA Standings',
                 'url': BASE + ROUTE,
                 'description': description,
+                'dateModified': modified,
                 'isPartOf': {'@type': 'WebSite', 'name': 'Full Court Buckets', 'url': BASE + '/'},
             },
             {
@@ -330,8 +350,8 @@ def render_page(root: Path, table: dict) -> str:
 <div class="standings-shell">
 <div class="page-header">
 <div class="eyebrow">League</div>
-<h1>WNBA Standings</h1>
-<p class="subhead">{esc(year)} Regular Season</p>
+<h1>{esc(heading)}</h1>
+<p class="subhead">{esc(heading if links.regular_season_is_final(table) else f'{year} Regular Season')}</p>
 <p class="support" id="standings-updated">{esc(support)}</p>
 </div>
 <section class="panel">
@@ -408,6 +428,12 @@ def build(root: Path, payload: dict | None = None, updated_at: str | None = None
         if not updated_at:
             updated_at = dt.datetime.now(ZoneInfo('America/Los_Angeles')).isoformat(timespec='seconds')
         table = parse_standings(payload, updated_at)
+        if data_path.is_file():
+            try:
+                previous = json.loads(data_path.read_text(encoding='utf-8-sig'))
+            except (OSError, json.JSONDecodeError):
+                previous = None
+            table['updatedAt'] = keep_updated_at(previous, table, table.get('updatedAt') or updated_at)
     except Exception as exc:
         print(f'Standings feed failed ({exc}). Keeping the last good page.')
         return False
@@ -429,7 +455,7 @@ def build(root: Path, payload: dict | None = None, updated_at: str | None = None
     temporary.write_text(html_text, encoding='utf-8')
     temporary.replace(page)
     data_path.write_text(json.dumps(table, indent=2) + '\n', encoding='utf-8')
-    print(f'Wrote standings for {len(names)} teams, updated {links._long_date(updated_at)}.')
+    print(f'Wrote standings for {len(names)} teams, updated {links._long_date(table.get("updatedAt"))}.')
     return True
 
 

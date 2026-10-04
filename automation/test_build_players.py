@@ -233,14 +233,16 @@ class BuildTests(unittest.TestCase):
         faq = json.loads(faq_path.read_text())
         self.assertEqual(faq['slug'], 'aja-wilson')
         self.assertGreaterEqual(len(faq['items']), 15)
-        profile = {'slug': 'aja-wilson', 'player': {'first_name': "A'ja", 'last_name': 'Wilson'}}
+        profile = json.loads((ROOT.parent / 'data/wnba/players/aja-wilson.json').read_text())
         html, entity = b.faq_section(profile)
         self.assertEqual(len(entity['mainEntity']), len(faq['items']))
         self.assertEqual([q['name'] for q in entity['mainEntity']], [item['question'] for item in faq['items']])
-        self.assertEqual(
-            [q['acceptedAnswer']['text'] for q in entity['mainEntity']],
-            [item['answer'] for item in faq['items']],
-        )
+        for item, node in zip(faq['items'], entity['mainEntity']):
+            if not b.faq_stat_kind(item['question']):
+                self.assertEqual(node['acceptedAnswer']['text'], item['answer'])
+        b.assert_faq_matches_tables(profile, [
+            (node['name'], node['acceptedAnswer']['text']) for node in entity['mainEntity']
+        ])
         self.assertIn('How tall is A&#x27;ja Wilson?', html)
         self.assertIn('How many MVPs does A&#x27;ja Wilson have?', html)
         self.assertIn('What did A&#x27;ja Wilson score in her last game?', html)
@@ -354,6 +356,110 @@ class BuildTests(unittest.TestCase):
         self.assertIn('Find a player', page)
         self.assertIn('hub-links', page)
         self.assertNotIn('\u2014', page[profiles:updated])
+
+    def test_player_name_has_a_space_between_the_spans(self):
+        page = b.profile_page(P)
+        self.assertIn('<h1 id="player-name"><span>Example</span> <b class="gradient">Player</b></h1>', page)
+        heading = page.split('id="player-name">', 1)[1].split('</h1>', 1)[0]
+        import html as html_lib
+        import re
+        self.assertEqual(re.sub(r'<[^>]+>', '', html_lib.unescape(heading)), 'Example Player')
+
+    def test_faq_numbers_come_from_the_stats_table_including_playoffs(self):
+        profile = copy.deepcopy(P)
+        profile['season_stats'][0]['pts'] = 16.4
+        profile['season_stats'][0]['reb'] = 12.12
+        profile['season_stats'][0]['ast'] = 2.79
+        profile['season_stats'][0]['games_played'] = 43
+        profile['recent_completed_games'] = [
+            {
+                'player_id': 1, 'date': '2026-09-21T02:00:00+00:00', 'postseason': False,
+                'team': {'id': 1, 'full_name': 'Example Team'},
+                'home_team': {'id': 2, 'full_name': 'Other Team'},
+                'visitor_team': {'id': 1, 'full_name': 'Example Team'},
+                'home_score': 80, 'away_score': 90,
+                'pts': 18, 'reb': 10, 'ast': 2,
+            },
+            {
+                'player_id': 1, 'date': '2026-09-30T23:00:00+00:00', 'postseason': True,
+                'team': {'id': 1, 'full_name': 'Example Team'},
+                'home_team': {'id': 2, 'full_name': 'Other Team'},
+                'visitor_team': {'id': 1, 'full_name': 'Example Team'},
+                'home_score': 75, 'away_score': 93,
+                'pts': 15, 'reb': 7, 'ast': 2,
+            },
+        ]
+        items = [
+            {'question': "What are Example Player's stats / points per game?", 'answer': 'She averaged 16.6 points in 42 games.'},
+            {'question': 'What did Example Player score in her last game?', 'answer': 'Her last game was September 21, 2026.'},
+            {'question': 'How tall is Example Player?', 'answer': 'Example Player is listed at 6 feet.'},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            root = self._write_faq(Path(folder), 'example-player', items)
+            html, entity = b.faq_section(profile, root)
+        answers = [node['acceptedAnswer']['text'] for node in entity['mainEntity']]
+        self.assertIn('16.4 points', answers[0])
+        self.assertIn('12.1 rebounds', answers[0])
+        self.assertIn('2.8 assists', answers[0])
+        self.assertIn('in 43 games', answers[0])
+        self.assertNotIn('16.6', answers[0])
+        self.assertNotIn('42 games', answers[0])
+        self.assertIn('Sep 30, 2026', answers[1])
+        self.assertIn('Playoffs', answers[1])
+        self.assertIn('15 points', answers[1])
+        self.assertNotIn('September 21', answers[1])
+        self.assertEqual(answers[2], 'Example Player is listed at 6 feet.')
+        self.assertEqual(entity['mainEntity'][0]['acceptedAnswer']['text'], answers[0])
+        self.assertIn('16.4 points', html)
+        self.assertIn('Sep 30, 2026', html)
+        with self.assertRaises(b.BuildError):
+            b.assert_faq_matches_tables(profile, [(items[0]['question'], items[0]['answer'])])
+
+    def test_one_tracked_game_is_singular_and_empty_stats_stay_noindex(self):
+        profile = copy.deepcopy(P)
+        profile['season_stats'] = []
+        profile['recent_completed_games'] = [{
+            'player_id': 1, 'date': '2026-09-01T03:00:00+00:00', 'postseason': False,
+            'team': {'id': 1, 'full_name': 'Example Team'},
+            'home_team': {'id': 1, 'full_name': 'Example Team'},
+            'visitor_team': {'id': 2, 'full_name': 'Other Team'},
+            'home_score': 70, 'away_score': 60,
+            'pts': 4, 'reb': 1, 'ast': 0,
+        }]
+        items = [{
+            'question': "What are Example Player's stats / points per game?",
+            'answer': 'In her most recent 1 tracked games, Example Player averaged 9.9 points.',
+        }]
+        with tempfile.TemporaryDirectory() as folder:
+            root = self._write_faq(Path(folder), 'example-player', items)
+            _html, entity = b.faq_section(profile, root)
+            self.assertFalse(b.player_indexable(profile, root))
+        answer = entity['mainEntity'][0]['acceptedAnswer']['text']
+        self.assertIn('1 tracked game', answer)
+        self.assertNotIn('1 tracked games', answer)
+        self.assertIn('4.0 points', answer)
+
+    def test_published_faq_matches_angel_reese_caitlin_clark_and_yvonne_turner(self):
+        root = ROOT.parent
+        expected = {
+            'angel-reese': ('16.4 points', 'in 43 games', 'Sep 30, 2026'),
+            'caitlin-clark': ('22.3 points', 'in 40 games', None),
+            'yvonne-turner': ('6.5 points', 'in 29 games', None),
+        }
+        for slug, (points, games, last_date) in expected.items():
+            profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text())
+            _html, entity = b.faq_section(profile, root)
+            answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+            season = next(text for question, text in answers.items() if 'points per game' in question.casefold())
+            self.assertIn(points, season, slug)
+            self.assertIn(games, season, slug)
+            self.assertNotIn('16.6', season)
+            self.assertNotIn('in 42 games', season)
+            if last_date:
+                last = next(text for question, text in answers.items() if 'last game' in question.casefold())
+                self.assertIn(last_date, last, slug)
+                self.assertIn('Playoffs', last, slug)
+            b.assert_faq_matches_tables(profile, list(answers.items()))
 
 
 if __name__=='__main__':unittest.main()

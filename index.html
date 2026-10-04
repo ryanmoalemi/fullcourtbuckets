@@ -129,7 +129,8 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
         photo.hidden = false;
       } else {
         photo.removeAttribute("src");
-        photo.alt = "";
+        photo.removeAttribute("alt");
+        photo.setAttribute("role", "presentation");
         photo.hidden = true;
       }
     }
@@ -140,10 +141,11 @@ footer{background:#020202;border-top:1px solid var(--line);padding:30px 0 40px;c
       var card = document.createElement("a");
       card.className = "article-card";
       card.href = articlePath(a);
-      card.innerHTML = '<div class="article-visual"><img alt=""></div><div class="article-copy"><div class="cat"></div><h3></h3><p></p><div class="date"></div></div>';
-      var img = card.querySelector("img");
-      img.src = a.image;
-      img.alt = a.imageAlt || a.title;
+      card.innerHTML = '<div class="article-visual"></div><div class="article-copy"><div class="cat"></div><h3></h3><p></p><div class="date"></div></div>';
+      var img = document.createElement("img");
+      img.alt = a.imageAlt || a.title || "WNBA story photo";
+      if (a.image) img.src = a.image;
+      card.querySelector(".article-visual").appendChild(img);
       card.querySelector(".cat").textContent = a.category;
       card.querySelector("h3").textContent = a.title;
       card.querySelector("p").textContent = a.description;

@@ -456,6 +456,63 @@ def standings_sentence(standings: dict) -> str:
     return f'The {name} lead the WNBA standings at {wins}-{losses}.'
 
 
+def _iso_day(raw) -> str:
+    """Pacific calendar day for a timestamp. Date-only values stay as written."""
+    text = str(raw or '').strip()
+    if not text:
+        return ''
+    try:
+        if 'T' in text or text.endswith('Z'):
+            moment = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
+            if moment.tzinfo is None:
+                moment = moment.replace(tzinfo=dt.timezone.utc)
+            return moment.astimezone(ZoneInfo('America/Los_Angeles')).date().isoformat()
+        return dt.date.fromisoformat(text[:10]).isoformat()
+    except (ValueError, TypeError):
+        return ''
+
+
+def regular_season_is_final(standings: dict) -> bool:
+    """True once every team has finished the same full regular-season schedule."""
+    teams = [team for team in (standings.get('teams') or []) if isinstance(team, dict)]
+    played = []
+    for team in teams:
+        wins, losses = team.get('wins'), team.get('losses')
+        if isinstance(wins, bool) or isinstance(losses, bool) or not isinstance(wins, int) or not isinstance(losses, int):
+            return False
+        played.append(wins + losses)
+    return len(played) >= 12 and len(set(played)) == 1 and played[0] >= 40
+
+
+def standings_title(standings: dict) -> str:
+    year = standings.get('season') or ''
+    if regular_season_is_final(standings) and year:
+        return f'Final {year} regular-season standings'
+    return 'WNBA Standings'
+
+
+def stamp_webpage_modified(text: str, day: str) -> str:
+    """JSON-LD dateModified follows the data date, not the time the HTML was built."""
+    if not day:
+        return text
+
+    def repl(match):
+        try:
+            data = json.loads(match.group(1))
+        except json.JSONDecodeError:
+            return match.group(0)
+        nodes = data.get('@graph') if isinstance(data, dict) else None
+        if not isinstance(nodes, list):
+            nodes = [data] if isinstance(data, dict) else []
+        for node in nodes:
+            if isinstance(node, dict) and node.get('@type') == 'WebPage':
+                node['dateModified'] = day
+        encoded = json.dumps(data, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+        return '<script type="application/ld+json">' + encoded + '</script>'
+
+    return re.sub(r'<script type="application/ld\+json">(.*?)</script>', repl, text, count=1, flags=re.S)
+
+
 def apply_standings_freshness(text: str, standings: dict) -> str:
     """Replace the JS placeholder date with the date stored in the standings file."""
     sentence = standings_sentence(standings)
@@ -476,7 +533,21 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
             text,
             count=1,
         )
-    return text
+    title = standings_title(standings)
+    text = re.sub(
+        r'<h1>(?:WNBA Standings|Final \d{4} regular-season standings)</h1>',
+        f'<h1>{esc(title)}</h1>',
+        text,
+        count=1,
+    )
+    if regular_season_is_final(standings):
+        text = re.sub(
+            r'<p class="subhead">.*?</p>',
+            f'<p class="subhead">{esc(title)}</p>',
+            text,
+            count=1,
+        )
+    return stamp_webpage_modified(text, _iso_day(standings.get('updatedAt')))
 
 
 def apply_standings(text: str, linking: dict, standings: dict) -> str:
@@ -1315,8 +1386,9 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
 HOW_MADE_RECAP = (
-    'How this story was made: drafted with AI tools from the ESPN box score linked above, '
-    'then reviewed and edited by Ryan Moalemi.'
+    'How this story was made: Ryan Moalemi picked the story and the angle. '
+    'AI tools drafted it from the ESPN box score and the sources linked above '
+    'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
 HOW_MADE_OTHER = (
     'How this story was made: drafted with AI tools from the sources linked above, '
