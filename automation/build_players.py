@@ -24,6 +24,7 @@ BASE = 'https://fullcourtbuckets.com'
 ROBOTS_TXT = (
     'User-agent: *\n'
     'Allow: /\n'
+    'Disallow: /review/\n'
     '\n'
     'Sitemap: https://fullcourtbuckets.com/sitemap.xml\n'
 )

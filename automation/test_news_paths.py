@@ -17,6 +17,11 @@ def _articles():
     return json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
 
 
+def _is_lead_image(image: str) -> bool:
+    """Shared story photos live in /images/. This collecting story keeps its cards beside the article."""
+    return image.startswith('/images/') or image.startswith('/news/')
+
+
 class NewsPathTests(unittest.TestCase):
     def test_every_article_resolves_under_news(self):
         articles = _articles()
@@ -79,7 +84,7 @@ class NewsPathTests(unittest.TestCase):
         featured = articles[0]
         image = str(featured.get('image') or '').strip()
         alt = str(featured.get('imageAlt') or '').strip()
-        self.assertTrue(image.startswith('/images/'), featured.get('slug'))
+        self.assertTrue(_is_lead_image(image), featured.get('slug'))
         self.assertTrue(alt, featured.get('slug'))
         photo = ROOT / image.lstrip('/')
         self.assertTrue(photo.is_file(), image)
@@ -92,7 +97,7 @@ class NewsPathTests(unittest.TestCase):
         self.assertIn('id="featured-credit"', hero)
         for article in articles:
             lead = str(article.get('image') or '').strip()
-            self.assertTrue(lead.startswith('/images/'), article.get('slug'))
+            self.assertTrue(_is_lead_image(lead), article.get('slug'))
             self.assertTrue((ROOT / lead.lstrip('/')).is_file(), article.get('slug'))
         older = home.split('id="older-stories"', 1)[1].split('<!-- fcb-stories:end -->', 1)[0]
         for article in articles[1:]:
@@ -114,7 +119,7 @@ class NewsPathTests(unittest.TestCase):
         for article in articles:
             image = str(article.get('image') or '').strip()
             slug = article.get('slug')
-            self.assertTrue(image.startswith('/images/'), slug)
+            self.assertTrue(_is_lead_image(image), slug)
             self.assertNotIn(image, paths, f'{slug} reuses the lead path from {paths.get(image)}')
             paths[image] = slug
             photo = ROOT / image.lstrip('/')
