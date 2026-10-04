@@ -208,6 +208,9 @@ def _drop_bulky_fallback(path: Path, webp_path: Path, src: str, rel: str,
 def optimize_file(root: Path, path: Path, log: list[str], moves: dict[str, Path],
                   approved: set[str]) -> bool:
     """Return True when the file bytes change. Never raises."""
+    # News heroes are already a 16:9 crop at display size. Do not shrink them.
+    if path.name in ('hero-1200.webp', 'hero-2x.webp', 'hero-16x9.webp'):
+        return False
     rel = path.relative_to(root).as_posix()
     src = '/' + rel
     try:

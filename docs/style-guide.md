@@ -7,11 +7,17 @@ Checked on a 390px-wide phone on October 4, 2026. ESPN, The Athletic, and AP eac
 Every `/news/` article uses that order:
 
 1. Headline (H1). A short category line may sit above it.
-2. Lead photo, full width, with a short credit line under it.
+2. Lead photo, the same width as the headline and the body, with a short credit line under it.
 3. Byline and date.
 4. Hook paragraph, then the body.
 
-The lead photo has to be visible at 390px without scrolling. Keep the image `width` and `height`. The lead image uses `fetchpriority="high"` and is not lazy-loaded. Later images in the story stay lazy. `order_news_lead` in `prepare_article_page` applies this order.
+The lead photo is the article column at every breakpoint, including a lead that also has the `card` class. Later card photos in a list stay narrow. The lead does not grow to the viewport and it does not overflow sideways. Every lead uses one ratio, 16:9, with `aspect-ratio: 16/9` and `object-fit: cover`. The default crop is `object-position: center 25%`, so a face in a portrait photo stays in frame. Set `imageFocal` on that article (a CSS object-position such as `center 12%`) when the crop needs to move.
+
+`automation/news_heroes.py` writes a real 16:9 WebP for the hero: `hero-1200.webp` (1200×675) and `hero-2x.webp` when the source is wide enough to make one without upscaling. A source narrower than 1200 stays at its own 16:9 size (`hero-16x9.webp`). The original file remains `image` for listings. `imageHero` is the lead file. The credit line stays under the photo.
+
+On a 390px-wide phone, the headline, the photo, the byline, and the start of the hook are all on the first screen.
+
+Keep the image `width` and `height` (the hero file's real pixels, 1200 and 675 for the standard file). The lead image uses `fetchpriority="high"` and is not lazy-loaded. Later images in the story stay lazy. The shared rules live in `assets/news-lead.css`. `order_news_lead` in `prepare_article_page` inlines them and applies this order.
 
 ## List articles
 
@@ -20,7 +26,7 @@ A numbered list reads straight through. The reader sees the headline, then the l
 Use this order:
 
 1. Title (H1)
-2. Lead image, full width, with a short credit line under it
+2. Lead image, the same width as the column, 16:9, with a short credit line under it
 3. Byline and date
 4. One short intro paragraph (see Hooks)
 5. Items 1 through 10. Each item is the heading, then the card image, then one price line, then that item's text.

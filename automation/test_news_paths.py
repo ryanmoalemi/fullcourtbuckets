@@ -127,13 +127,16 @@ class NewsPathTests(unittest.TestCase):
             self.assertNotIn(digest, hashes, f'{slug} reuses the photo file from {hashes.get(digest)}')
             hashes[digest] = slug
         by_slug = {article['slug']: article for article in articles}
-        game_1 = by_slug['liberty-lynx-game-1-full-recap']['image']
+        game_1_article = by_slug['liberty-lynx-game-1-full-recap']
+        game_1 = game_1_article['image']
         sweep = by_slug['liberty-lynx-game-2-recap']['image']
         self.assertIn('breanna-stewart', game_1)
         self.assertIn('marine-johannes', sweep)
         self.assertNotEqual(game_1, sweep)
+        # The listing image stays the original Stewart file. The article lead is the 16:9 crop of it.
+        self.assertEqual(game_1_article.get('imageSource'), game_1)
         page = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
-        self.assertIn(game_1, page)
+        self.assertIn(game_1_article['imageHero'], page)
         self.assertIn('CC BY-SA 4.0', page)
         self.assertNotIn('\u2014', page)
 

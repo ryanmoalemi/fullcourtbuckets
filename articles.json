@@ -11,7 +11,12 @@
     "image": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/watkins-superfractor-1-1-psa10.webp",
     "imageAlt": "JuJu Watkins 2024-25 Bowman University Chrome Prospects SuperFractor Autographs number 37, serial 1 of 1, PSA 10, certification 123955080",
     "imageWidth": 1007,
-    "imageHeight": 1691
+    "imageHeight": 1691,
+    "imageSource": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/watkins-superfractor-1-1-psa10.webp",
+    "imageHero": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/hero-16x9.webp",
+    "imageHeroWidth": 992,
+    "imageHeroHeight": 558,
+    "imageFocal": "center 40%"
   },
   {
     "slug": "liberty-dream-semis-game-1-recap",
@@ -29,7 +34,12 @@
       "new-york-liberty"
     ],
     "imageWidth": 1125,
-    "imageHeight": 1500
+    "imageHeight": 1500,
+    "imageSource": "/images/articles/liberty-dream-semis-game-1-recap/angel-reese-1b.webp",
+    "imageHero": "/images/articles/liberty-dream-semis-game-1-recap/hero-16x9.webp",
+    "imageHeroWidth": 1120,
+    "imageHeroHeight": 630,
+    "imageFocal": "center 18%"
   },
   {
     "slug": "wings-valkyries-game-3-recap",
@@ -47,7 +57,14 @@
       "golden-state-valkyries"
     ],
     "imageWidth": 1688,
-    "imageHeight": 2531
+    "imageHeight": 2531,
+    "imageSource": "/images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.webp",
+    "imageHero": "/images/articles/wings-valkyries-game-3-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/wings-valkyries-game-3-recap/hero-2x.webp",
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945
   },
   {
     "slug": "valkyries-wings-game-2-recap",
@@ -65,7 +82,14 @@
       "golden-state-valkyries"
     ],
     "imageWidth": 1688,
-    "imageHeight": 1125
+    "imageHeight": 1125,
+    "imageSource": "/images/articles/valkyries-wings-game-2-recap/arike-ogunbowale-wings-2019.webp",
+    "imageHero": "/images/articles/valkyries-wings-game-2-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/valkyries-wings-game-2-recap/hero-2x.webp",
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945
   },
   {
     "slug": "aces-fever-series-breakdown",
@@ -82,7 +106,12 @@
       "indiana-fever"
     ],
     "imageWidth": 1200,
-    "imageHeight": 1587
+    "imageHeight": 1587,
+    "imageSource": "/images/articles/aces-fever-series-breakdown/chelsea-gray-aces-2023.webp",
+    "imageHero": "/images/articles/aces-fever-series-breakdown/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageFocal": "center 11%"
   },
   {
     "slug": "clark-no-call-aces-game-3",
@@ -95,7 +124,14 @@
     "imageAlt": "Caitlin Clark of the Indiana Fever in a white jersey dribbling the ball with her right hand",
     "imageCredit": "Photo: John Mac / CC BY-SA 4.0",
     "imageWidth": 1688,
-    "imageHeight": 1125
+    "imageHeight": 1125,
+    "imageSource": "/images/articles/clark-no-call-aces-game-3/caitlin-clark-fever-2025-2.webp",
+    "imageHero": "/images/articles/clark-no-call-aces-game-3/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/clark-no-call-aces-game-3/hero-2x.webp",
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945
   },
   {
     "slug": "fever-aces-game-3-recap",
@@ -109,7 +145,14 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918022",
     "imageWidth": 1600,
-    "imageHeight": 1067
+    "imageHeight": 1067,
+    "imageSource": "/images/articles/fever-aces-game-3-recap/aja-wilson-aces-2026.webp",
+    "imageHero": "/images/articles/fever-aces-game-3-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/fever-aces-game-3-recap/hero-2x.webp",
+    "imageHero2xWidth": 1600,
+    "imageHero2xHeight": 900
   },
   {
     "slug": "fever-aces-game-2-recap",
@@ -123,7 +166,14 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918018",
     "imageWidth": 1688,
-    "imageHeight": 2531
+    "imageHeight": 2531,
+    "imageSource": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.webp",
+    "imageHero": "/images/articles/fever-aces-game-2-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/fever-aces-game-2-recap/hero-2x.webp",
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945
   },
   {
     "slug": "wnba-expansion-teams",
@@ -140,7 +190,14 @@
       "toronto-tempo"
     ],
     "imageWidth": 1542,
-    "imageHeight": 2048
+    "imageHeight": 2048,
+    "imageSource": "/images/articles/wnba-expansion-teams/tempo-aces-vancouver.webp",
+    "imageHero": "/images/articles/wnba-expansion-teams/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/wnba-expansion-teams/hero-2x.webp",
+    "imageHero2xWidth": 1536,
+    "imageHero2xHeight": 864
   },
   {
     "slug": "liberty-lynx-game-2-recap",
@@ -154,7 +211,14 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918017",
     "imageWidth": 1600,
-    "imageHeight": 1067
+    "imageHeight": 1067,
+    "imageSource": "/images/articles/liberty-lynx-game-2-recap/marine-johannes-liberty-2026.webp",
+    "imageHero": "/images/articles/liberty-lynx-game-2-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/liberty-lynx-game-2-recap/hero-2x.webp",
+    "imageHero2xWidth": 1600,
+    "imageHero2xHeight": 900
   },
   {
     "slug": "aces-fever-game-1-aja-wilson-38",
@@ -168,7 +232,11 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 2.0",
     "espnGameId": "401918015",
     "imageWidth": 1280,
-    "imageHeight": 1635
+    "imageHeight": 1635,
+    "imageSource": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2023.webp",
+    "imageHero": "/images/articles/aces-fever-game-1-aja-wilson-38/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675
   },
   {
     "slug": "liberty-lynx-game-1-full-recap",
@@ -182,7 +250,11 @@
     "imageCredit": "Photo: Zafer / CC BY-SA 4.0",
     "espnGameId": "401918014",
     "imageWidth": 1280,
-    "imageHeight": 853
+    "imageHeight": 853,
+    "imageSource": "/images/articles/liberty-lynx-game-1-full-recap/breanna-stewart-usa-2026.webp",
+    "imageHero": "/images/articles/liberty-lynx-game-1-full-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675
   },
   {
     "slug": "dream-mystics-game-1-howard-reese",
@@ -196,7 +268,14 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918013",
     "imageWidth": 1600,
-    "imageHeight": 1068
+    "imageHeight": 1068,
+    "imageSource": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.webp",
+    "imageHero": "/images/articles/dream-mystics-game-1-howard-reese/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/dream-mystics-game-1-howard-reese/hero-2x.webp",
+    "imageHero2xWidth": 1600,
+    "imageHero2xHeight": 900
   },
   {
     "slug": "valkyries-wings-game-1-zandalasini",
@@ -210,7 +289,14 @@
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918016",
     "imageWidth": 1600,
-    "imageHeight": 1067
+    "imageHeight": 1067,
+    "imageSource": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.webp",
+    "imageHero": "/images/articles/valkyries-wings-game-1-zandalasini/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/valkyries-wings-game-1-zandalasini/hero-2x.webp",
+    "imageHero2xWidth": 1600,
+    "imageHero2xHeight": 900
   },
   {
     "slug": "fiba-womens-basketball-world-cup-2026",
@@ -223,6 +309,10 @@
     "image": "/images/articles/world-cup-2026/world-cup-2026-hero.webp",
     "imageAlt": "2026 FIBA Women's Basketball World Cup logo with a player silhouette and the Berlin skyline",
     "imageWidth": 1230,
-    "imageHeight": 630
+    "imageHeight": 630,
+    "imageSource": "/images/articles/world-cup-2026/world-cup-2026-hero.webp",
+    "imageHero": "/images/articles/world-cup-2026/hero-16x9.webp",
+    "imageHeroWidth": 1120,
+    "imageHeroHeight": 630
   }
 ]
