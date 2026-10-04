@@ -24,7 +24,7 @@
     "status": "passed",
     "engines": ["chromium", "webkit"],
     "viewports": [[1365, 850], [390, 844], [320, 568]],
-    "current_src": "https://fullcourtbuckets.com/images/players/antonia-delaere/portrait.png?v=93afdad4f6cf",
+    "current_src": "https://fullcourtbuckets.com/images/players/antonia-delaere/portrait.webp?v=fb3079dc11a1",
     "natural_dimensions": [1225, 1284],
     "public_sha256": "93afdad4f6cf041c82afdb8000708d748236b69694946b24bae53f3df0bf0858",
     "canonical": "https://fullcourtbuckets.com/wnba/antonia-delaere/",

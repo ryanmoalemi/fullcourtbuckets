@@ -41,7 +41,7 @@
     "engines": ["chromium","webkit"],
     "viewports": [[1365,850],[390,844],[320,568]],
     "live_url": "https://fullcourtbuckets.com/wnba/napheesa-collier/?v=c33a15398cf7",
-    "asset": "/images/players/napheesa-collier/portrait.png",
+    "asset": "/images/players/napheesa-collier/portrait.webp",
     "receipt": "content/portrait-upload-receipts/napheesa-collier.json",
     "desktop_and_390px_screenshots_inspected": true
   },
