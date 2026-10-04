@@ -621,6 +621,14 @@ def player_has_records(profile) -> bool:
     return bool(profile.get('season_stats'))
 
 
+def player_has_playoff_stats(profile) -> bool:
+    """True only when a playoff season row is on the same profile as the stats table."""
+    return any(
+        isinstance(row, dict) and row.get('season_type') == 3
+        for row in profile.get('season_stats') or []
+    )
+
+
 def player_indexable(profile, root) -> bool:
     """Pages with no season stats are noindex and stay out of the sitemap."""
     return player_has_records(profile)
@@ -630,7 +638,10 @@ def player_description(profile) -> str:
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
     if player_has_records(profile):
-        text = f'{name} WNBA season statistics, regular-season and playoff records, team information and recent game logs.'
+        records = 'regular-season and playoff records' if player_has_playoff_stats(profile) else 'regular-season records'
+        text = f'{name} WNBA season statistics, {records}, team information and recent game logs.'
+        if 'playoff' in text.casefold() and not player_has_playoff_stats(profile):
+            raise BuildError(f'{profile.get("slug") or name} mentions playoffs without playoff stats.')
         years = sorted({r['season'] for r in profile.get('season_stats') or [] if isinstance(r.get('season'), int)})
         if years:
             span = f'{years[0]} to {years[-1]}' if len(years) > 1 else str(years[0])
@@ -889,14 +900,15 @@ def profile_page(profile, root=None, linking=None, menu=None):
     archive=f'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>{esc(archive_line)}</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
     body=hero+f'<div class="content-grid"><div>{statshtml}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
     route=f'/wnba/{slug}/'
-    webpage={'@type':'WebPage','name':name+' WNBA Stats & Player Profile','url':BASE+route,'about':{'@id':BASE+route+'#player'}}
+    title = player_title(name)
+    webpage={'@type':'WebPage','name':title,'url':BASE+route,'about':{'@id':BASE+route+'#player'}}
     if day:
         webpage['dateModified']=day.isoformat()
     structured={'@context':'https://schema.org','@graph':[{'@type':'Person','@id':BASE+route+'#player','name':name,'url':BASE+route}, webpage, {'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},{'@type':'ListItem','position':2,'name':'Players','item':BASE+'/wnba/'},{'@type':'ListItem','position':3,'name':name,'item':BASE+route}]}]}
     if faq_entity:
         structured['@graph'].append(faq_entity)
     robots = 'index,follow,max-image-preview:large' if player_indexable(profile, root) else 'noindex'
-    return document(player_title(name), player_description(profile), route, body, structured, has_standings(root), menu, robots)
+    return document(title, player_description(profile), route, body, structured, has_standings(root), menu, robots)
 
 def couple_note(root, slug):
     """One sourced relationship line. Empty unless this profile is in the couples data."""

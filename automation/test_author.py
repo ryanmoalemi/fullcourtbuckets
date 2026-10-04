@@ -144,8 +144,9 @@ class AuthorPageTests(unittest.TestCase):
             self.assertEqual(node['author'], AUTHOR, article['slug'])
             self.assertEqual(node['publisher']['@type'], 'Organization', article['slug'])
             self.assertEqual(node['publisher']['name'], 'Full Court Buckets', article['slug'])
-            expected = links.HOW_MADE_RECAP if links.story_uses_box_score(html, article) else links.HOW_MADE_OTHER
+            expected = links.how_made_sentence(html, article)
             self.assertIn(expected, html, article['slug'])
+            links.assert_disclosure_matches_sources(html)
             self.assertEqual(html.count('class="how-made"'), 1, article['slug'])
 
     def test_generator_adds_byline_to_a_new_post(self):
@@ -170,7 +171,8 @@ class AuthorPageTests(unittest.TestCase):
             (root / 'articles.json').write_text(json.dumps([article]), encoding='utf-8')
             html = links.prepare_article_page(root, article, [article])
             self.assertIn(links.BYLINE_HTML, html)
-            self.assertIn(links.HOW_MADE_OTHER, html)
+            self.assertIn(links.HOW_MADE_OTHER_UNLINKED, html)
+            self.assertNotIn('sources linked above', html)
             self.assertIn('<meta name="author" content="Ryan Moalemi">', html)
             node = links._article_node(_ld_nodes(html)[0])
             self.assertEqual(node['author'], AUTHOR)

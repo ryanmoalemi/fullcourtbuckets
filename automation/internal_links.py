@@ -13,6 +13,7 @@ import html
 import json
 from pathlib import Path
 import re
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
@@ -1105,6 +1106,9 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
         description = cap_meta(article.get('description') or '', 160)
         if description:
             node['description'] = description
+        modified = str(article.get('dateModified') or '').strip()
+        if modified:
+            node['dateModified'] = modified
         return _jsonld(data)
 
     html = JSONLD_RE.sub(sub, html)
@@ -1127,6 +1131,9 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
                 'logo': {'@type': 'ImageObject', 'url': BASE + '/logo.png'},
             },
         }
+        modified = str(article.get('dateModified') or '').strip()
+        if modified:
+            created['dateModified'] = modified
         if image:
             created['image'] = [image]
         html = html.replace('</head>', _jsonld(created) + '</head>', 1)
@@ -1390,11 +1397,74 @@ HOW_MADE_RECAP = (
     'AI tools drafted it from the ESPN box score and the sources linked above '
     'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
+HOW_MADE_RECAP_BOX_ONLY = (
+    'How this story was made: Ryan Moalemi picked the story and the angle. '
+    'AI tools drafted it from the ESPN box score '
+    'so it could post the same night, then Ryan reviewed and edited it before publishing.'
+)
 HOW_MADE_OTHER = (
     'How this story was made: drafted with AI tools from the sources linked above, '
     'then reviewed and edited by Ryan Moalemi.'
 )
+HOW_MADE_OTHER_UNLINKED = (
+    'How this story was made: drafted with AI tools, '
+    'then reviewed and edited by Ryan Moalemi.'
+)
 HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
+_OWN_HOSTS = frozenset({'fullcourtbuckets.com', 'www.fullcourtbuckets.com'})
+
+
+class DisclosureError(RuntimeError):
+    """The disclosure names a source the page does not actually link."""
+
+
+def outbound_source_links(html_text: str) -> list[str]:
+    """External links in the article, above the disclosure. Site links do not count."""
+    text = html_text or ''
+    start = text.find('<article')
+    if start >= 0:
+        text = text[start:]
+    cut = text.find('class="how-made"')
+    if cut >= 0:
+        text = text[:cut]
+    found = []
+    for href in re.findall(r'href="([^"]+)"', text):
+        if href.startswith(('#', '/', 'mailto:')):
+            continue
+        host = (urlsplit(href).hostname or '').lower()
+        if not host or host in _OWN_HOSTS:
+            continue
+        found.append(href)
+    return found
+
+
+def how_made_sentence(html_text: str, article: dict | None) -> str:
+    """Name sources only when this page links them above the disclosure."""
+    linked = bool(outbound_source_links(html_text))
+    if story_uses_box_score(html_text, article):
+        return HOW_MADE_RECAP if linked else HOW_MADE_RECAP_BOX_ONLY
+    return HOW_MADE_OTHER if linked else HOW_MADE_OTHER_UNLINKED
+
+
+def assert_disclosure_matches_sources(html_text: str) -> None:
+    """Fail when the footer says sources are linked above and none are."""
+    match = HOW_MADE_RE.search(html_text or '')
+    if match is None:
+        return
+    disclosure = match.group(0)
+    if 'sources linked above' in disclosure and not outbound_source_links(html_text):
+        raise DisclosureError(
+            'Disclosure says sources are linked above, but this page has no outbound source links.'
+        )
+    claimed = 'official FIBA' in disclosure or 'USA Basketball announcements' in disclosure
+    if claimed and not any(
+        host in href.casefold()
+        for href in outbound_source_links(html_text)
+        for host in ('fiba.basketball', 'usab.com')
+    ):
+        raise DisclosureError(
+            'Disclosure names official FIBA or USA Basketball announcements, and this page does not link them.'
+        )
 
 
 def story_uses_box_score(html_text: str, article: dict | None) -> bool:
@@ -1406,8 +1476,14 @@ def story_uses_box_score(html_text: str, article: dict | None) -> bool:
 
 
 def how_made_html(html_text: str, article: dict | None) -> str:
-    sentence = HOW_MADE_RECAP if story_uses_box_score(html_text, article) else HOW_MADE_OTHER
-    return f'<p class="how-made">{sentence} {HOW_MADE_LINK}</p>'
+    sentence = how_made_sentence(html_text, article)
+    snippet = f'<p class="how-made">{sentence} {HOW_MADE_LINK}</p>'
+    if HOW_MADE_RE.search(html_text or ''):
+        preview = HOW_MADE_RE.sub(snippet, html_text, count=1)
+    else:
+        preview = (html_text or '') + snippet
+    assert_disclosure_matches_sources(preview)
+    return snippet
 
 
 def ensure_how_made(html_text: str, article: dict | None = None) -> str:
