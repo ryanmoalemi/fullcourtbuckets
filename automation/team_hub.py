@@ -22,7 +22,7 @@ EM_DASH = '\u2014'
 # under images/teams/ for clubs that had no photo in the repo yet.
 VISUALS = {
     'atlanta-dream': {
-        'src': '/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.jpg',
+        'src': '/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.webp',
         'alt': 'Jordin Canada of the Atlanta Dream at the free throw line',
         'width': 1600,
         'height': 1068,
@@ -62,7 +62,7 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     'golden-state-valkyries': {
-        'src': '/images/articles/valkyries-wings-game-1-zandalasini/gabby-williams-valkyries-2026.jpg',
+        'src': '/images/articles/valkyries-wings-game-1-zandalasini/gabby-williams-valkyries-2026.webp',
         'alt': 'Gabby Williams of the Golden State Valkyries',
         'width': 1000,
         'height': 1499,
@@ -72,7 +72,7 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
     'indiana-fever': {
-        'src': '/images/articles/aces-fever-game-1-aja-wilson-38/caitlin-clark-fever-2026.jpg',
+        'src': '/images/articles/aces-fever-game-1-aja-wilson-38/caitlin-clark-fever-2026.webp',
         'alt': 'Caitlin Clark of the Indiana Fever bringing the ball up the floor',
         'width': 1600,
         'height': 1068,
@@ -82,7 +82,7 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
     'las-vegas-aces': {
-        'src': '/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2026.jpg',
+        'src': '/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2026.webp',
         'alt': "A'ja Wilson of the Las Vegas Aces shooting over a Minnesota Lynx defender",
         'width': 1600,
         'height': 1067,
@@ -112,7 +112,7 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     'new-york-liberty': {
-        'src': '/images/articles/liberty-lynx-game-1-full-recap/han-xu-liberty-barclays-2026.jpg',
+        'src': '/images/articles/liberty-lynx-game-1-full-recap/han-xu-liberty-barclays-2026.webp',
         'alt': 'Han Xu of the New York Liberty at Barclays Center',
         'width': 1000,
         'height': 1500,
@@ -132,10 +132,10 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/2.0',
     },
     'portland-fire': {
-        'src': '/images/articles/wnba-expansion-teams/moda-center.jpg',
+        'src': '/images/articles/wnba-expansion-teams/moda-center.webp',
         'alt': 'Exterior of the Moda Center arena in Portland, Oregon',
-        'width': 1920,
-        'height': 1440,
+        'width': 1688,
+        'height': 1266,
         'author': 'CrispyCream27',
         'page': 'https://commons.wikimedia.org/wiki/File:Modacenter2019.jpg',
         'license': 'CC BY-SA 4.0',
@@ -152,7 +152,7 @@ VISUALS = {
         'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
     },
     'toronto-tempo': {
-        'src': '/images/articles/wnba-expansion-teams/tempo-aces-vancouver.jpg',
+        'src': '/images/articles/wnba-expansion-teams/tempo-aces-vancouver.webp',
         'alt': 'Toronto Tempo players on court against the Las Vegas Aces in Vancouver',
         'width': 1542,
         'height': 2048,
