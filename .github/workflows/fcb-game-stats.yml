@@ -30,13 +30,37 @@ on:
         description: Optional ESPN game id.
         required: false
         type: string
+      scheduled:
+        description: Apply the offseason gate. The default-branch schedule sets this when it dispatches main.
+        required: false
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
-  group: fcb-game-stats
+  group: fcb-game-stats-${{ github.ref_name }}
   cancel-in-progress: false
 jobs:
+  dispatch-to-production:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$REPO/actions/workflows/fcb-game-stats.yml/dispatches" \
+            -f ref=main \
+            -f inputs[date]='${{ inputs.date }}' \
+            -f inputs[teams]='${{ inputs.teams }}' \
+            -F inputs[scheduled]=${{ github.event_name == 'schedule' && 'true' || inputs.scheduled }} \
+            -f inputs[espn_game_id]='${{ inputs.espn_game_id }}'
   stats:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -56,7 +80,7 @@ jobs:
           GAME_STATS_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.date || '' }}
           GAME_STATS_TEAMS: ${{ github.event_name == 'workflow_dispatch' && inputs.teams || '' }}
           GAME_STATS_ESPN_ID: ${{ github.event_name == 'workflow_dispatch' && inputs.espn_game_id || '' }}
-          GAME_STATS_SCHEDULED: ${{ github.event_name == 'schedule' && 'yes' || '' }}
+          GAME_STATS_SCHEDULED: ${{ (github.event_name == 'schedule' || inputs.scheduled) && 'yes' || '' }}
         run: python -u automation/game_stats.py
       - name: Scan game files for the secret
         id: audit
