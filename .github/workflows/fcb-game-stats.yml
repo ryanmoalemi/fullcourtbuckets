@@ -1,11 +1,5 @@
 name: WNBA game stats
 on:
-  push:
-    # Editing this file on main starts a pull. GitHub's app token cannot
-    # call workflow_dispatch, and the default branch is master.
-    branches: [main]
-    paths:
-      - '.github/workflows/fcb-game-stats.yml'
   schedule:
     # Evening and night Pacific, plus the next morning, so a final is picked up
     # the night it ends and again the day after if that night run missed it.
