@@ -489,6 +489,9 @@ def lock_logo_slot(html: str) -> str:
     ).replace(
         '.brand img{width:380px;max-height:112px;object-fit:contain;object-position:left center}',
         '.brand img{width:380px;height:112px;object-fit:contain;object-position:left center}',
+    ).replace(
+        'header img{height:34px;vertical-align:middle;margin-right:22px}',
+        'header img{height:34px;width:auto;vertical-align:middle;margin-right:22px}',
     )
 
 
