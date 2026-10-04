@@ -4,8 +4,8 @@
 Every generator and hand-written page renders this module. Do not add a second
 menu in a template. Submenu links are plain HTML; site_nav.js only toggles the
 mobile panel. News is one link to /news/. Do not put posts in the menu.
-Couples is a news feature. There is no News dropdown, so Couples is the next
-main-nav item after News. Never put it under Players or standings.
+Couples is a news feature reached from the News page only. Never make it a
+menu item, and never put it in player or stats navigation.
 """
 from __future__ import annotations
 
@@ -168,13 +168,9 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
         items.append({'label': 'Standings', 'href': '/standings/'})
 
     # One link. Posts stay on /news/ and are never added to this menu.
+    # Couples is a news feature reached from /news/ only. Do not add it here.
     if exists('/news/'):
         items.append({'label': 'News', 'href': '/news/'})
-
-    # Couples is a news feature, not a player or stats page. News has no
-    # dropdown, so the link sits in the main nav immediately after News.
-    if exists('/wnba/couples/'):
-        items.append({'label': 'Couples', 'href': '/wnba/couples/'})
 
     if exists('/about/'):
         children = []

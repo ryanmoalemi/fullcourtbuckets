@@ -704,7 +704,7 @@ BASE = 'https://fullcourtbuckets.com'
 NEWS_HUB = '/news/'
 ARTICLE_SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 NEWS_INTRO = 'WNBA game recaps, roster notes, and other league stories from Full Court Buckets, each with a date and a one-line summary.'
-# After the story cards. Couples is a feature page, not a story card.
+# After the story cards on /news/ only. Couples is a news feature, not a menu item.
 COUPLES_FEATURE_HTML = '<p class="couples-feature"><a href="/wnba/couples/">WNBA couples</a></p>'
 COUPLES_FEATURE_CSS = (
     '.couples-feature{margin:22px 0 0}'
