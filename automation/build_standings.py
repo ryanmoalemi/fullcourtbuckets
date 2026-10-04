@@ -333,11 +333,6 @@ def render_page(root: Path, table: dict) -> str:
 <h1>WNBA Standings</h1>
 <p class="subhead">{esc(year)} Regular Season</p>
 <p class="support" id="standings-updated">{esc(support)}</p>
-<div class="info-grid">
-<div class="info-card"><span class="info-label">Playoff Field</span><p>Top 8 teams qualify</p></div>
-<div class="info-card"><span class="info-label">Regular Season</span><p>League standings determine playoff seeding</p></div>
-<div class="info-card"><span class="info-label">Tiebreakers</span><p>Head-to-head record is the first tiebreaker</p></div>
-</div>
 </div>
 <section class="panel">
 <div class="panel-head">
@@ -354,7 +349,6 @@ def render_page(root: Path, table: dict) -> str:
 <tbody id="standingsBody">{body_rows}</tbody>
 </table>
 </div>
-<p class="source-note">Source: <a href="{ESPN_PAGE}" target="_blank" rel="noopener">ESPN standings</a>.</p>
 </section>
 <div class="conference-wrap">
 <section class="conf-card">
@@ -376,6 +370,12 @@ def render_page(root: Path, table: dict) -> str:
 </div>
 </section>
 </div>
+<!-- fcb-rosters:start --><!-- fcb-rosters:end -->
+<div class="info-grid">
+<div class="info-card"><span class="info-label">Playoff Field</span><p>Top 8 teams qualify</p></div>
+<div class="info-card"><span class="info-label">Regular Season</span><p>League standings determine playoff seeding</p></div>
+<div class="info-card"><span class="info-label">Tiebreakers</span><p>Head-to-head record is the first tiebreaker</p></div>
+</div>
 <section class="explainer">
 <h3>How WNBA Standings Work</h3>
 <p>The eight teams with the best regular-season records qualify for the WNBA Playoffs. Playoff seeding is based on regular-season record rather than conference.</p>
@@ -388,6 +388,7 @@ def render_page(root: Path, table: dict) -> str:
 <li>Better point differential against all opponents</li>
 </ul>
 </section>
+<p class="source-note">Source: <a href="{ESPN_PAGE}" target="_blank" rel="noopener">ESPN standings</a>.</p>
 </div>
 </main>
 {site_nav.footer_html(True)}

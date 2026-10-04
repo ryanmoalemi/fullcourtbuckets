@@ -180,7 +180,7 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('regular-season averages', page)
         self.assertNotIn('playoff averages', page)
 
-    def test_curated_faq_renders_every_item_between_sources_and_archive(self):
+    def test_curated_faq_renders_every_item_before_sources(self):
         items = [{'question': f'Question {i}?', 'answer': f'Answer {i} about <b>facts</b>.'} for i in range(15)]
         items[0]['answer'] = "A'ja is listed at 6 feet 4 inches."
         with tempfile.TemporaryDirectory() as d:
@@ -199,9 +199,9 @@ class BuildTests(unittest.TestCase):
             sources = page.find('id="sources"')
             faq = page.find('id="faq"')
             archive = page.find('archive-band')
-            self.assertGreater(sources, 0)
-            self.assertGreater(faq, sources)
-            self.assertGreater(archive, faq)
+            self.assertGreater(faq, 0)
+            self.assertGreater(sources, faq)
+            self.assertGreater(archive, sources)
             self.assertEqual(page.count('"@type": "Question"'), 15)
             self.assertIn('"@type": "FAQPage"', page)
             self.assertNotIn('regular-season averages', page)
@@ -266,8 +266,8 @@ class BuildTests(unittest.TestCase):
             sources = page.find('id="sources"')
             faq = page.find('id="faq"')
             archive = page.find('archive-band')
-            self.assertGreater(faq, sources)
-            self.assertGreater(archive, faq)
+            self.assertGreater(sources, faq)
+            self.assertGreater(archive, sources)
             self.assertNotIn('regular-season averages', page)
 
     def test_answer_summary_uses_only_real_numbers(self):
@@ -346,7 +346,7 @@ class BuildTests(unittest.TestCase):
         grid=page.find('class="player-grid"')
         teams=page.find('id="teams"')
         couples_link=page.find('Confirmed WNBA relationships')
-        self.assertTrue(0 <= profiles < search < show < updated < grid < teams < couples_link)
+        self.assertTrue(0 <= profiles < search < show < grid < teams < couples_link < updated)
         self.assertLess(page.find('</h1>'), search)
         self.assertNotIn('Current rosters', page)
         self.assertIn('Find a player', page)

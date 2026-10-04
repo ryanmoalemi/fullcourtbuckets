@@ -38,6 +38,14 @@ The owner manages fullcourtbuckets.com through ChatGPT and has authorized reques
 
 Production repository: `ryanmoalemi/fullcourtbuckets`. Production branch: `main`. The default may be `master` with obsolete unrelated ADU content. Never merge or deploy it. Do not republish ADU articles or sandiegoadubuilder.com links. Former ADU pages, including `san-diego-adus.html`, `adu-cost.html`, `entitymap.html`, and the other SDADU copies, are removed from this repo. Do not add them back, do not put them in sitemaps, and do not link them. A request for one of those URLs is a 404.
 
+## Page section order
+
+Put the most engaging block right under the intro or hero. That means card grids, photos, galleries, interactive tools, scores and stats, and the main story. Keep the full hero title above the fold on desktop and mobile. Do not add a banner, note, or explainer above the title.
+
+Order the rest from most interesting to least. End with methodology, disclosures, notes, source lists, and fine print. Move existing sections only. Do not rewrite or delete the copy. Use real photos, and keep each photo credit with that photo.
+
+This applies to the homepage, hubs, the author page, the about page, player pages, the article template, and guides. Generated recaps follow the same order. When a disclosure says the sources are linked above, leave that source list above the disclosure so the sentence stays true. `/authors/ryan-moalemi/ryans-angel-reese-cards/` is ordered on its own. Do not reorder it from this rule.
+
 ## Adding an article
 
 Every post is published at `/news/<slug>/`. The slug does not change. Add `news/<slug>/index.html` (and its images) and one `articles.json` entry with `slug`, `url` (`/news/<slug>/`), `title`, `description`, `category`, `date` (`YYYY-MM-DD`), `image`, and `imageAlt`. Do not publish a new post at the site root.

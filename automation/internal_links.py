@@ -1192,6 +1192,7 @@ def ensure_byline(html: str) -> str:
 
 
 def _author_bio_html() -> str:
+    """Intro only. The TikTok line and the how-we-make link close the page."""
     parts = [
         '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
     ]
@@ -1201,9 +1202,14 @@ def _author_bio_html() -> str:
             '<a href="/wnba/angel-reese/">Angel Reese</a>',
         )
         parts.append(f'<p>{text}</p>')
-    parts.append(AUTHOR_TIKTOK_HTML)
-    parts.append(f'<p><a href="{HOW_PAGE}">How we make Full Court Buckets</a></p>')
     return '\n'.join(parts)
+
+
+def _author_closing_html() -> str:
+    return '\n'.join([
+        AUTHOR_TIKTOK_HTML,
+        f'<p><a href="{HOW_PAGE}">How we make Full Court Buckets</a></p>',
+    ])
 
 
 def _collection_teaser(root: Path | None) -> str:
@@ -1290,6 +1296,9 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 {_collection_teaser(root)}
 <h2>Stories</h2>
 <ol class="news-list">{cards}</ol>
+<div class="bio">
+{_author_closing_html()}
+</div>
 </main>
 </body>
 </html>
@@ -1343,6 +1352,39 @@ def ensure_how_made(html_text: str, article: dict | None = None) -> str:
     return html_text + snippet
 
 
+NOTE_BLOCK_RE = re.compile(r'<p class="(?:source-note|checked)">.*?</p>', re.S)
+
+
+def order_article_sections(html_text: str) -> str:
+    """Move source notes and the last-checked line to the source list.
+
+    The disclosure stays last when it says the sources are linked above.
+    Photo captions stay with their figures.
+    """
+    start = html_text.find('<article')
+    end = html_text.rfind('</article>')
+    if start < 0 or end < 0:
+        return html_text
+    article = html_text[start:end]
+    notes = NOTE_BLOCK_RE.findall(article)
+    if not notes:
+        return html_text
+    stripped = NOTE_BLOCK_RE.sub('', article)
+    sources = stripped.find('<h2 class="section-title">Sources</h2>')
+    how = stripped.find('<p class="how-made">')
+    box = stripped.find('<p class="box-score">')
+    if sources >= 0:
+        at = sources
+    elif how >= 0:
+        at = how
+    elif box >= 0:
+        at = box
+    else:
+        at = len(stripped)
+    moved = stripped[:at] + ''.join(notes) + stripped[at:]
+    return html_text[:start] + moved + html_text[end:]
+
+
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
@@ -1355,6 +1397,7 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = ensure_box_score(html_text, article)
     html_text = ensure_how_made(html_text, article)
     html_text = ensure_byline(html_text)
+    html_text = order_article_sections(html_text)
     return html_text
 
 
