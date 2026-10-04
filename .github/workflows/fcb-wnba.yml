@@ -167,8 +167,13 @@ jobs:
           python -c "import json; arts=json.load(open('articles.json')); print('\n'.join(['news/index.html']+[p for a in arts for p in ('news/'+a['slug']+'/index.html', a['slug']+'/index.html')]))" | xargs -d '\n' git add --
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh WNBA data and generated player profiles'
+            # The builder can leave files outside the commit. Rebase refuses a dirty tree.
+            if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+              git stash push -u -m 'leftover build files'
+            fi
             git pull --rebase origin main
             git push origin HEAD:main
+            git stash drop || true
           fi
       - name: Prepare existing website and generated profiles
         if: steps.key.outputs.ready == 'true'
