@@ -104,7 +104,7 @@ class HelpfulContentTests(unittest.TestCase):
             links.assert_disclosure_matches_sources(bare)
 
     def test_college_collecting_story_credits_ryan_as_the_writer(self):
-        slug = 'top-10-college-womens-basketball-players-to-collect'
+        slug = 'top-10-womens-college-basketball-cards-to-collect-2026'
         html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
         articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
         article = next(item for item in articles if item['slug'] == slug)
