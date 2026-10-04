@@ -709,7 +709,7 @@ PLAYER_COUPLES_LINK = '<p><a class="inline-link" href="/wnba/couples/">Confirmed
 
 
 def patch_hub(root: Path = ROOT) -> None:
-    """Keep Couples off the player directory. The news hub links it after the story cards."""
+    """Keep Couples off the player directory and out of the menu. The news hub links it after the story cards."""
     path = root / 'wnba' / 'index.html'
     if path.is_file():
         text = path.read_text(encoding='utf-8')
