@@ -233,6 +233,8 @@ class Tests(unittest.TestCase):
             self.assertTrue(doc["crosscheck"]["matched"])
             text = path.with_suffix(".md").read_text(encoding="utf-8")
             self.assertIn("Matched.", text)
+            self.assertIn(g.PUBLIC_SOURCE_NOTE, text)
+            self.assertNotIn("balldontlie", text)
             self.assertNotIn("\u2014", text)
             self.assertNotIn("synthetic-key", text)
             first = doc["checked_at"]
@@ -253,7 +255,9 @@ class Tests(unittest.TestCase):
             self.assertTrue(doc["fallback"])
             self.assertIn("not set", doc["fallback_reason"])
             text = (root / "data" / "games" / "2026-10-04-ny-atl.md").read_text(encoding="utf-8")
-            self.assertIn("FLAG: balldontlie did not supply this game. Numbers are from ESPN.", text)
+            self.assertIn("FLAG: the site's own feed did not supply this game. Numbers are from the official box score.", text)
+            self.assertIn(g.PUBLIC_SOURCE_NOTE, text)
+            self.assertNotIn("balldontlie", text)
             self.assertFalse(doc["crosscheck"]["compared"])
 
     def test_both_sources_down_is_not_silent(self):
@@ -318,8 +322,10 @@ class Tests(unittest.TestCase):
     def test_style_guide_and_workflow(self):
         guide = (ROOT / "docs" / "style-guide.md").read_text(encoding="utf-8")
         self.assertIn("data/games/", guide)
-        self.assertIn("balldontlie", guide)
+        self.assertIn(g.PUBLIC_SOURCE_NOTE, guide)
+        self.assertNotIn("balldontlie", guide.lower())
         self.assertIn("ESPN is the cross-check", guide)
+        self.assertIn("ESPN box-score link", guide)
         self.assertIn("mismatch", guide.lower())
         workflow = (ROOT / ".github" / "workflows" / "fcb-game-stats.yml").read_text(encoding="utf-8")
         self.assertIn("BALLDONTLIE_API_KEY", workflow)
