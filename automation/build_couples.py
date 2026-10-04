@@ -663,13 +663,13 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
         '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'
         '<a href="/wnba/">WNBA</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
-        '<p class="lede">Confirmed relationships of WNBA players. Each fact links to the article it came from.</p>'
-        '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. Splits and rumors are left out.</p>'
-        f'<p class="checked">Last checked {CHECKED}.</p></section>'
+        '<p class="lede">Confirmed relationships of WNBA players. Each fact links to the article it came from.</p></section>'
         + ''.join(render_card(card) for card in cards)
+        + render_faq(items)
+        + '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. Splits and rumors are left out.</p>'
         + '<section class="method" id="method"><h2>How this page was built</h2>'
         '<p>Empty fields are skipped. A chip stays only when its source URL still resolves. Photos are Wikimedia Commons files, after the license on the file page was checked. A partner without a photo is shown with initials. Both-WNBA couples come first.</p></section>'
-        + render_faq(items)
+        + f'<p class="checked">Last checked {CHECKED}.</p>'
         + render_credits(cards)
     )
     title = 'WNBA Couples | Full Court Buckets'
