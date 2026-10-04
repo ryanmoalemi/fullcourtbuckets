@@ -15,7 +15,7 @@ PAGE = ('<!doctype html><html><head><link rel="canonical" href="https://fullcour
         '<script type="application/ld+json">{"@graph":[{"@type":"Person","@id":"https://fullcourtbuckets.com/wnba/caitlin-clark/#player","name":"Caitlin Clark"}]}</script></head><body>'
         '<section class="hero" aria-labelledby="player-name"><h1 id="player-name">Caitlin Clark</h1>'
         '<div class="hero-art" aria-hidden="true"><span class="ghost-number">22</span><div class="number-card"><strong>22</strong></div><small>FCB</small></div></section>'
-        + STATS + '<p>The number artwork is a design element, not a player photograph.</p></body></html>')
+        + STATS + '<p class="ai-note">Built by Full Court Buckets from ESPN and WNBA data. Profile text and FAQs drafted with AI tools and checked against the stats on this page. <a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a></p><p>The number artwork is a design element, not a player photograph.</p></body></html>')
 
 class PortraitTests(unittest.TestCase):
     def setUp(self):
@@ -32,7 +32,8 @@ class PortraitTests(unittest.TestCase):
         self.assertNotIn('illustration-caption', page)
         self.assertNotIn('AI-generated', portraits.APPLIED.search(page).group())
         self.assertIn('AI-generated illustration', page)
-        self.assertIn('Profile text and FAQs are written with help from AI tools, using the stats and sources on this page.', page)
+        self.assertIn('Profile text and FAQs drafted with AI tools and checked against the stats on this page. Portrait is an AI illustration.', page)
+        self.assertNotIn('The portrait is an AI-generated editorial illustration', page)
         self.assertIn(STATS, page)
         self.assertEqual(page.count('<h1 '), 1)
     def test_crop_reaches_bottom_and_right_without_padding(self):

@@ -114,6 +114,14 @@ class StandingsFeedTests(unittest.TestCase):
             saved = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
             self.assertEqual(len(saved['teams']), 15)
             self.assertEqual(saved['teams'][0]['name'], 'Minnesota Lynx')
+            self.assertIn('Final 2026 regular-season standings', html_text)
+            self.assertIn('"dateModified": "2026-10-01"', html_text)
+            self.assertTrue(standings.build(root, payload=final_2026_payload(), updated_at='2026-10-04T01:48:18-07:00'))
+            again = page.read_text(encoding='utf-8')
+            self.assertIn('Updated October 1, 2026', again)
+            self.assertNotIn('October 4, 2026', again)
+            kept = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
+            self.assertEqual(kept['updatedAt'], '2026-10-01T12:00:00-07:00')
 
 
 if __name__ == '__main__':

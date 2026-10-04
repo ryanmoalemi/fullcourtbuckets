@@ -689,7 +689,7 @@ def _hero() -> str:
 <div class="hero-shade" aria-hidden="true"></div>
 <div class="hero-copy">
 <p class="hero-kicker">Personal collection</p>
-<h1 id="collection-title"><span class="owner-word">{esc("Ryan's")}</span><span>Angel Reese</span><span class="cards-word">cards</span></h1>
+<h1 id="collection-title"><span class="owner-word">{esc("Ryan's")}</span> <span>Angel Reese</span> <span class="cards-word">cards</span></h1>
 <p class="hero-line">Ryan's collection of Angel Reese cards</p>
 <p class="hero-credit">{credit}</p>
 </div>

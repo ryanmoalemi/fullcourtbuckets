@@ -1,5 +1,7 @@
 """Ryan's Angel Reese cards stay a generated personal page, not a news article."""
+import html as html_lib
 import json
+import re
 import threading
 import unittest
 from decimal import Decimal
@@ -79,7 +81,11 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Ryan&#x27;s Angel Reese card collection | Full Court Buckets', self.html)
         self.assertIn('og:title" content="Ryan&#x27;s Angel Reese card collection | Full Court Buckets"', self.html)
         self.assertNotIn('Ryan&#x27;s Angel Reese cards |', self.html)
-        self.assertIn('<h1 id="collection-title"><span class="owner-word">Ryan&#x27;s</span><span>Angel Reese</span><span class="cards-word">cards</span></h1>', self.html)
+        self.assertIn('<h1 id="collection-title"><span class="owner-word">Ryan&#x27;s</span> <span>Angel Reese</span> <span class="cards-word">cards</span></h1>', self.html)
+        heading = self.html.split('id="collection-title">', 1)[1].split('</h1>', 1)[0]
+        visible = re.sub(r'<[^>]+>', '', heading)
+        self.assertEqual(html_lib.unescape(visible), "Ryan's Angel Reese cards")
+        self.assertIn('Ryan&#x27;s Angel Reese card collection | Full Court Buckets', self.html.split('</title>', 1)[0])
         self.assertIn("Ryan's collection of Angel Reese cards", self.html)
         self.assertLessEqual(len(cards.PAGE_DESCRIPTION), 155)
         self.assertGreaterEqual(len(cards.PAGE_DESCRIPTION), 110)

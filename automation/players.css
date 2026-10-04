@@ -37,3 +37,5 @@ a.inline-link{color:#e4afeb;text-decoration:underline;text-underline-offset:3px}
 .hub-links h2{font-size:22px;margin:0 0 8px}
 .hub-links p{margin:8px 0 0}
 .hub-links .team-index{margin-top:4px;gap:6px 14px;font-size:13px}
+.ai-note{margin:0 0 8px;color:var(--muted);font-size:13px;line-height:1.55}
+.ai-note a{color:inherit;text-decoration:underline;text-underline-offset:3px}
