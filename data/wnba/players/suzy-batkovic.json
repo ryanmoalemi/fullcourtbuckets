@@ -34,12 +34,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 28,
-        "full_name": "Australia",
-        "abbreviation": "AUS",
-        "city": "",
-        "name": "Australia",
-        "conference": null
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 28.67,

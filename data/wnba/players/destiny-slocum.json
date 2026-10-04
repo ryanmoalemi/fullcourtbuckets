@@ -34,11 +34,11 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
         "conference": "Western Conference"
       },
       "games_played": 3,

@@ -279,7 +279,7 @@ class BuildTests(unittest.TestCase):
         )
         self.assertEqual(
             answers['Which teams has Kelsey Plum played for?'],
-            'The regular-season table lists the Los Angeles Sparks for Kelsey Plum. Her current team on this page is the Phoenix Mercury.',
+            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, and the Los Angeles Sparks for Kelsey Plum. Her current team on this page is the Phoenix Mercury.',
         )
         self.assertNotIn('championship', ' '.join(answers).casefold())
         page = b.profile_page(plum, root)

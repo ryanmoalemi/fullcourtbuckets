@@ -34,12 +34,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 23.5,
@@ -66,12 +66,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 19.21,
@@ -98,12 +98,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 16.78,
@@ -130,12 +130,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 15.48,
@@ -162,12 +162,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 3.0,

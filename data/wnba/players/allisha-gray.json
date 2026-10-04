@@ -297,12 +297,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 32.91,
@@ -329,12 +329,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 35.67,
@@ -361,12 +361,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 25,
       "min": 27.76,
@@ -393,12 +393,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 34.0,
@@ -425,12 +425,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 20,
       "min": 26.2,
@@ -457,12 +457,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 30.44,
@@ -489,12 +489,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 26.68,
@@ -521,12 +521,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 37.0,
@@ -553,12 +553,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 27.18,
@@ -585,12 +585,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 16.0,

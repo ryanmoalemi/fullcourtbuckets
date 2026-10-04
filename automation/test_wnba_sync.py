@@ -172,6 +172,24 @@ class Tests(unittest.TestCase):
             self.assertNotEqual(changed['stats_updated_at'], first['stats_updated_at'])
             self.assertEqual(changed['season_stats'][0]['pts'], 20.0)
 
+    def test_per_season_team_replaces_the_provider_club(self):
+        table = {
+            "current_teams": {"other": {"id": 2, "full_name": "Other Team", "abbreviation": "OT", "city": "Other", "name": "Team", "conference": None}},
+            "historical_teams": {},
+            "players": {"1": {"status": "ok", "stints": [
+                {"season": 2009, "season_type": 2, "games_played": 10, "team_slug": "other"},
+            ]}},
+        }
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            self.assertTrue(s.run(root, FakeClient(), NOW, season_team_table=table))
+            output = json.loads((root / "data/wnba/players/example-player.json").read_text())
+            regular = [row for row in output["season_stats"] if row["season"] == 2009 and row["season_type"] == 2]
+            self.assertEqual(regular[0]["team"]["full_name"], "Other Team")
+            older = [row for row in output["season_stats"] if row["season"] == 2008]
+            self.assertTrue(all(row["team"]["id"] == 1 for row in older))
+            self.assertIn("games played matches one stint", " ".join(output["notes"]))
+
     def test_outage_does_not_replace_successful_snapshot(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); s.run(root,FakeClient(),NOW)

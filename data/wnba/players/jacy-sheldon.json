@@ -137,12 +137,12 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 40,
       "min": 23.28,

@@ -169,12 +169,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 28,
       "min": 11.96,
@@ -201,12 +201,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 18.6,
@@ -233,11 +233,11 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
         "conference": "Eastern Conference"
       },
       "games_played": 12,
@@ -265,11 +265,11 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
         "conference": "Eastern Conference"
       },
       "games_played": 30,
@@ -297,12 +297,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 32.75,
@@ -329,12 +329,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 31.85,
@@ -361,12 +361,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 19.0,
@@ -393,12 +393,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 25.56,
@@ -425,12 +425,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 14.5,
@@ -457,12 +457,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 31,
       "min": 24.26,
@@ -489,12 +489,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 8,
       "min": 34.88,
@@ -521,12 +521,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 31.59,
@@ -553,12 +553,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 2,
       "min": 33.5,
@@ -585,12 +585,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 34.38,

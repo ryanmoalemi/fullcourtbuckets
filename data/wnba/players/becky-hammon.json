@@ -34,12 +34,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 32,
       "min": 24.5,
@@ -66,12 +66,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 28.5,
@@ -98,12 +98,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 33,
       "min": 30.24,
@@ -130,12 +130,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 35.0,
@@ -162,12 +162,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 33,
       "min": 31.82,
@@ -194,12 +194,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 3,
       "min": 34.67,
@@ -226,12 +226,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 32,
       "min": 33.56,
@@ -258,12 +258,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 37.0,
@@ -290,12 +290,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 31,
       "min": 33.84,
@@ -322,12 +322,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 3,
       "min": 33.67,
@@ -354,12 +354,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 33,
       "min": 33.36,
@@ -386,12 +386,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 9,
       "min": 36.78,

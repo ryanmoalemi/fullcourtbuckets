@@ -66,12 +66,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 39,
       "min": 24.92,
@@ -98,12 +98,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 30,
       "min": 26.83,
@@ -130,12 +130,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 17.24,
@@ -162,12 +162,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 25.0,
@@ -194,12 +194,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 30.41,

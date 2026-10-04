@@ -137,11 +137,11 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
         "conference": "Western Conference"
       },
       "games_played": 34,
@@ -169,11 +169,11 @@
       "season": 2024,
       "season_type": 3,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
         "conference": "Western Conference"
       },
       "games_played": 1,

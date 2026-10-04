@@ -226,12 +226,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 32.12,
@@ -258,12 +258,12 @@
       "season": 2016,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 9,
       "min": 32.22,
@@ -290,12 +290,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 28,
       "min": 30.86,
@@ -322,12 +322,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 29.67,
@@ -354,12 +354,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 28.52,
@@ -386,12 +386,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 32.5,
@@ -418,12 +418,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 29.97,
@@ -450,12 +450,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 30.33,
@@ -482,12 +482,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 31.5,
@@ -514,12 +514,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 34.25,
@@ -546,12 +546,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 32,
       "min": 23.56,
@@ -578,12 +578,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 20.68,
@@ -610,12 +610,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 22.5,
@@ -642,11 +642,11 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
         "conference": "Eastern Conference"
       },
       "games_played": 27,

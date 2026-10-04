@@ -162,11 +162,11 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
         "conference": "Western Conference"
       },
       "games_played": 1,
@@ -194,11 +194,11 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
+        "id": 11,
+        "full_name": "Dallas Wings",
+        "abbreviation": "DAL",
+        "city": "Dallas",
+        "name": "Wings",
         "conference": "Western Conference"
       },
       "games_played": 34,
@@ -226,12 +226,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 24.97,
@@ -258,12 +258,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 2,
       "min": 21.0,
@@ -290,12 +290,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 27.65,
@@ -322,12 +322,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 23,
       "min": 12.0,
@@ -354,12 +354,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 23,
       "min": 9.65,
@@ -386,12 +386,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 28,
       "min": 9.61,
@@ -418,12 +418,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 5,
       "min": 3.6,

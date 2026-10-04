@@ -98,11 +98,11 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
         "conference": "Eastern Conference"
       },
       "games_played": 16,

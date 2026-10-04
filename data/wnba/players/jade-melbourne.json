@@ -169,12 +169,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 10.59,

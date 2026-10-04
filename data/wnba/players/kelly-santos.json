@@ -34,12 +34,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 22,
       "min": 6.09,
@@ -66,12 +66,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 1.0,
