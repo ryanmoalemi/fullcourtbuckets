@@ -704,6 +704,13 @@ BASE = 'https://fullcourtbuckets.com'
 NEWS_HUB = '/news/'
 ARTICLE_SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 NEWS_INTRO = 'WNBA game recaps, roster notes, and other league stories from Full Court Buckets, each with a date and a one-line summary.'
+# After the story cards. Couples is a feature page, not a story card.
+COUPLES_FEATURE_HTML = '<p class="couples-feature"><a href="/wnba/couples/">WNBA couples</a></p>'
+COUPLES_FEATURE_CSS = (
+    '.couples-feature{margin:22px 0 0}'
+    '.couples-feature a{color:#ff9800;font-weight:700;text-decoration:underline;'
+    'display:inline-flex;align-items:center;min-height:44px}'
+)
 AUTHOR_NAME = 'Ryan Moalemi'
 AUTHOR_PATH = '/authors/ryan-moalemi/'
 AUTHOR_PAGE = 'authors/ryan-moalemi/index.html'
@@ -1535,6 +1542,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 .news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
 .news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
 .news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}
+{COUPLES_FEATURE_CSS}
 @media(max-width:700px){{h1{{font-size:40px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}}}
 </style>
 </head>
@@ -1545,6 +1553,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 <h1>WNBA news</h1>
 <p class="intro">{esc(NEWS_INTRO)}</p>
 <ol class="news-list">{cards}</ol>
+{COUPLES_FEATURE_HTML}
 </main>
 </body>
 </html>

@@ -698,11 +698,6 @@ def couple_note(root, slug):
         return ''
     return build_couples.note_for_slug(root, slug)
 
-def couples_hub_link(root):
-    if root is None or not (Path(root) / 'wnba' / 'couples' / 'index.html').is_file():
-        return ''
-    return '<p><a class="inline-link" href="/wnba/couples/">Confirmed WNBA relationships</a></p>'
-
 def directory_page(index, linking=None, include_standings=True, menu=None, root=None):
     entries=[p for p in index['players'] if p.get('id') not in DUPLICATE_PLAYER_IDS]
     cards=[]
@@ -721,7 +716,7 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
     updated=f'<p class="muted small directory-updated">Last updated {esc(timestamp(index.get("checked_at")))}. An archive profile means the player is not on a current roster.</p>'
     filters='<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div>'
     # Search sits under the title so it is on the first mobile screen. The card grid follows. The update note stays at the end.
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header player-hub"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p></section>{filters}<p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>{team_html}{couples_hub_link(root)}{updated}'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header player-hub"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p></section>{filters}<p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>{team_html}{updated}'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
 def redirect_stub(old_route: str, new_route: str, menu) -> str:

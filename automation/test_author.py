@@ -111,7 +111,7 @@ class AuthorPageTests(unittest.TestCase):
         self.assertNotIn('writes the news and game recaps.', about)
         menu = site_nav.render(site_nav.build_menu(ROOT), '/__none__')
         self.assertNotIn('/authors/', menu)
-        self.assertIn('<li><a href="/news/">News</a></li>', menu)
+        self.assertIn('<li><a href="/news/">News</a></li><li><a href="/wnba/couples/">Couples</a></li>', menu)
         self.assertNotIn('site-nav-sub-news', menu)
         for name in ('sitemap.xml', 'pages-sitemap.xml'):
             sitemap = (ROOT / name).read_text(encoding='utf-8')
