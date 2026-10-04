@@ -1,5 +1,23 @@
 [
   {
+    "slug": "angel-reese-game-1-liberty",
+    "url": "/news/angel-reese-game-1-liberty/",
+    "title": "Angel Reese Won DPOY and Got Meaner: Her Game 1 Against the Liberty",
+    "description": "Three days after winning DPOY, Angel Reese had four steals from four Liberty players in a 92-82 Dream win.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-04",
+    "image": "/images/articles/angel-reese-game-1-liberty/angel-reese-dream-2026.webp",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking up with her mouth open at Target Center",
+    "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
+    "espnGameId": "401918295",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1668,
+    "imageHeight": 2529
+  },
+  {
     "slug": "liberty-dream-semis-game-1-recap",
     "url": "/news/liberty-dream-semis-game-1-recap/",
     "title": "Reese Takes It, Canada Buries It: Dream Grab Game 1 From the Liberty",
