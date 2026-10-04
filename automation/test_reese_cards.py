@@ -42,8 +42,30 @@ class ReeseCardMathTests(unittest.TestCase):
         tiger = next(card for card in data['cards'] if card['id'] == 'reese-2024-prizm-dp-tiger-38')
         self.assertEqual(cards.card_change(tiger), Decimal('-24.44'))
         self.assertEqual(cards.card_percent(tiger), Decimal('-9.8'))
-        self.assertEqual(cards.value_as_of(ROOT), '2026-10-04')
+        self.assertEqual(cards.value_as_of(ROOT), '2026-10-03')
         self.assertEqual(cards.short_date('2026-10-01'), 'Oct 1, 2026')
+        self.assertEqual(cards.short_date('2026-10-03'), 'Oct 3, 2026')
+        self.assertEqual(cards.long_date('2026-09-24'), 'September 24, 2026')
+        self.assertEqual(cards.long_date('2026-09-26'), 'September 26, 2026')
+        self.assertEqual(cards.long_date('2026-09-19'), 'September 19, 2026')
+        kept = {
+            'reese-2024-25-flawless-royalty-rpa-ar-gold': ('2026-10-02', '2026-10-03'),
+            'reese-2024-prizm-dp-tiger-38': ('2026-09-04', '2026-10-01'),
+            'reese-2024-prizm-dp-black-color-blast-11': ('2026-08-24', '2026-10-01'),
+            'reese-2024-prizm-dp-color-blast-7': ('2026-08-24', '2026-10-01'),
+            'reese-2024-rookie-royalty-kaboom-5': ('2026-08-24', '2026-10-01'),
+            'reese-2024-select-dss-red-auto': ('2026-08-25', '2026-10-01'),
+            'reese-2023-bowman-u-chrome-lava-auto': ('2026-08-24', '2026-10-01'),
+            'reese-2023-bowman-u-now-blue-auto': ('2026-08-24', '2026-10-01'),
+        }
+        for card in data['cards']:
+            if card['id'] not in kept:
+                continue
+            bought, checked = kept[card['id']]
+            self.assertEqual(card['purchase_date'], bought)
+            self.assertEqual(card['value_checked'], checked)
+            self.assertNotIn('fees', card)
+            self.assertNotIn('hammer', card)
 
 
 class ReeseCardPageTests(unittest.TestCase):
@@ -61,7 +83,8 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn("Ryan's collection of Angel Reese cards", self.html)
         self.assertLessEqual(len(cards.PAGE_DESCRIPTION), 155)
         self.assertGreaterEqual(len(cards.PAGE_DESCRIPTION), 110)
-        self.assertIn('Values as of Oct 4, 2026', self.html)
+        self.assertIn('Values as of Oct 3, 2026', self.html)
+        self.assertNotIn('Values as of Oct 4, 2026', self.html)
         self.assertIn('$8,634.03', self.html)
         self.assertIn('$1,084.55', self.html)
         self.assertIn('$5,175.25', self.html)
@@ -146,7 +169,14 @@ class ReeseCardPageTests(unittest.TestCase):
         gold_panel = self.html.split('data-detail="reese-2024-rookie-royalty-contenders-season-ticket-gold-2"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Serial 07/10', gold_panel)
         self.assertIn('Low confidence: only 1 PSA 10 sale found, and it is this same slab', gold_panel)
-        self.assertIn('Bought September 25, 2026 on Fanatics Collect.', gold_panel)
+        self.assertIn('Bought September 24, 2026 on Fanatics Collect.', gold_panel)
+        self.assertIn('Value on Oct 3, 2026', gold_panel)
+        self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', gold_panel)
+        self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', gold_panel)
+        self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', gold_panel)
+        self.assertIn('<dt>Fees</dt><dd>$47.60</dd>', gold_panel)
+        self.assertIn('<dt>Total paid</dt><dd>$1,688.85</dd>', gold_panel)
+        self.assertNotIn('Hammer', gold_panel)
         self.assertIn('PSA cert <a href="https://www.psacard.com/cert/139009502"', gold_panel)
         kaboom = self.html.split('data-id="reese-2024-rookie-royalty-kaboom-5-2"', 1)[1].split('</button>', 1)[0]
         self.assertIn('#5 Kaboom! (second copy)', kaboom)
@@ -156,6 +186,14 @@ class ReeseCardPageTests(unittest.TestCase):
         kaboom_panel = self.html.split('data-detail="reese-2024-rookie-royalty-kaboom-5-2"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Kaboom! (second copy)', kaboom_panel)
         self.assertIn('Second copy of the Kaboom! #5.', kaboom_panel)
+        self.assertIn('Bought September 26, 2026 on Fanatics Collect.', kaboom_panel)
+        self.assertIn('Value on Oct 1, 2026', kaboom_panel)
+        self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', kaboom_panel)
+        self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', kaboom_panel)
+        self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', kaboom_panel)
+        self.assertIn('<dt>Fees</dt><dd>$47.60</dd>', kaboom_panel)
+        self.assertIn('<dt>Total paid</dt><dd>$1,688.85</dd>', kaboom_panel)
+        self.assertNotIn('sale at $1,500 is this slab', kaboom_panel)
         self.assertIn('PSA cert <a href="https://www.psacard.com/cert/139128313"', kaboom_panel)
         mojo = self.html.split('data-id="reese-2024-prizm-throwback-mojo-tb-ar"', 1)[1].split('</button>', 1)[0]
         self.assertIn('#TB-AR Mojo /25', mojo)
@@ -165,7 +203,18 @@ class ReeseCardPageTests(unittest.TestCase):
         mojo_panel = self.html.split('data-detail="reese-2024-prizm-throwback-mojo-tb-ar"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Numbered /25', mojo_panel)
         self.assertIn('Exact serial is unknown. Still in the Fanatics vault, waiting to ship.', mojo_panel)
-        self.assertIn('Bought September 20, 2026 on Fanatics Collect.', mojo_panel)
+        self.assertIn('Bought September 19, 2026 on Fanatics Collect.', mojo_panel)
+        self.assertIn('Value on Oct 3, 2026', mojo_panel)
+        self.assertIn('<dt>Hammer</dt><dd>$390.00</dd>', mojo_panel)
+        self.assertIn('<dt>Buyer&#x27;s premium</dt><dd>$78.00</dd>', mojo_panel)
+        self.assertIn('<dt>Shipping</dt><dd>$7.00</dd>', mojo_panel)
+        self.assertIn('<dt>Tax</dt><dd>$0.00</dd>', mojo_panel)
+        self.assertIn('<dt>Fees</dt><dd>$28.22<span class="fee-note">Card fee plus vault retrieval.</span></dd>', mojo_panel)
+        self.assertIn('<dt>Total paid</dt><dd>$503.22</dd>', mojo_panel)
+        self.assertNotIn('$4.99', mojo_panel)
+        self.assertNotIn('$30.23', mojo_panel)
+        self.assertNotIn('$468.00', mojo_panel)
+        self.assertNotIn('<dt>Item</dt>', mojo_panel)
         self.assertIn('Median of the 3 most recent PSA 10 sales on SportsCardsPro', mojo_panel)
         self.assertIn('PSA cert <a href="https://www.psacard.com/cert/117017224"', mojo_panel)
 

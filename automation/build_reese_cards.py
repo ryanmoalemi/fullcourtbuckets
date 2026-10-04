@@ -342,6 +342,32 @@ def _money_row(label: str, amount) -> str:
     return f'<div><dt>{esc(label)}</dt><dd>{esc(format_money(money_amount(amount)))}</dd></div>'
 
 
+def _has_amount(card: dict, key: str) -> bool:
+    return key in card and card.get(key) is not None
+
+
+def _cost_rows(card: dict) -> str:
+    """Render the purchase lines stored on the card. Do not fill in missing lines."""
+    rows = []
+    if _has_amount(card, 'hammer'):
+        rows.append(_money_row('Hammer', card['hammer']))
+    elif _has_amount(card, 'item_price'):
+        rows.append(_money_row('Item', card['item_price']))
+    if _has_amount(card, 'buyers_premium'):
+        rows.append(_money_row("Buyer's premium", card['buyers_premium']))
+    if _has_amount(card, 'shipping'):
+        rows.append(_money_row('Shipping', card['shipping']))
+    if _has_amount(card, 'tax'):
+        rows.append(_money_row('Tax', card['tax']))
+    if _has_amount(card, 'fees'):
+        amount = esc(format_money(money_amount(card['fees'])))
+        note = str(card.get('fees_note') or '').strip()
+        note_html = f'<span class="fee-note">{esc(note)}</span>' if note else ''
+        rows.append(f'<div><dt>Fees</dt><dd>{amount}{note_html}</dd></div>')
+    rows.append(_money_row('Total paid', card['price_paid_total']))
+    return '\n'.join(rows)
+
+
 def _detail(card: dict, as_of: str) -> str:
     photos = card.get('photo') or {}
     front = photos.get('front')
@@ -408,10 +434,7 @@ def _detail(card: dict, as_of: str) -> str:
 <p>Bought {esc(long_date(card["purchase_date"]))} on {esc(card.get("source") or "eBay")}.</p>
 <h3>Cost</h3>
 <dl class="cost">
-{_money_row("Item", card["item_price"])}
-{_money_row("Shipping", card["shipping"])}
-{_money_row("Tax", card["tax"])}
-{_money_row("Total paid", card["price_paid_total"])}
+{_cost_rows(card)}
 </dl>
 <h3>Value on {esc(short_date(checked))}</h3>
 {value_html}
@@ -589,7 +612,8 @@ def _faq(as_of: str) -> tuple[str, list[dict]]:
         ),
         (
             'What is included in the price paid?',
-            'The order total: the item, shipping, and tax. The detail view lists those three amounts.',
+            'The order total. The detail view lists each line stored for that purchase: '
+            'the item or the hammer, shipping, tax, and a buyer\'s premium or fees when they were charged.',
         ),
         (
             'Why does a card say value unknown?',
@@ -734,7 +758,7 @@ def render_body(data: dict) -> str:
     method = (
         '<section class="panel method" id="method"><h2>How the numbers work</h2>'
         '<p>Values are medians of recent sold prices from the sources listed on each card. '
-        'Ryan paid the order total, including shipping and tax. '
+        'Ryan paid the order total. The detail lists shipping, tax, and any buyer\'s premium or fees. '
         'The values get updated over time. '
         f'A card with no verified sale is marked Value unknown{star} and left out of the paid, value, and change totals. '
         'A card that says not enough sales to price yet stays in the paid total and is left out of value and change.</p>'
@@ -974,6 +998,7 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .cost div{background:#191621;padding:8px}
 .cost dt{color:#b7b0a6;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
 .cost dd{margin:4px 0 0;font:800 22px/1 "Barlow Condensed",sans-serif}
+.cost .fee-note{display:block;margin-top:6px;color:#b7b0a6;font:600 13px/1.35 Inter,system-ui,sans-serif;letter-spacing:0;text-transform:none}
 .comps{list-style:none;margin:0;padding:0}
 .comps li{display:flex;flex-wrap:wrap;gap:8px 14px;padding:8px 0;border-top:1px solid #2b2733}
 .notes{color:#e7e0d6}
