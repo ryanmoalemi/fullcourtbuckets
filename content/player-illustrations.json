@@ -53,7 +53,7 @@
       "asset_sha256": "fe020084cd4191fb5316f70e9a06511024659bfcd7af0fca757053c768476655",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -80,7 +80,7 @@
       "asset_sha256": "a91b9353052d36e39860e6a2b498ec57e5c69dd984b5f6b227d63794f43cbeee",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -107,7 +107,7 @@
       "asset_sha256": "05a34d143ce48797e3213c246f7336f5d8f867295b5556a90a7347d9a4646b89",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -134,7 +134,7 @@
       "asset_sha256": "9595362f533b7a3ede22c9e158c97ddff41a577bae09bbfe105d36cd792279f4",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -161,7 +161,7 @@
       "asset_sha256": "a58bfd16fc7bcd0acc6df9000bd9451ab59ae86a1e7418153d29572ede6de56a",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -188,7 +188,7 @@
       "asset_sha256": "881236376e6ab7a4ae56c6df8afdeea556bafdf80c9a927782e628c99a1d20b0",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -215,7 +215,7 @@
       "asset_sha256": "1d5114530ff33d13bb42c3ed93c9652109d59de959a02c8640799f70cd157e68",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1226,
@@ -242,7 +242,7 @@
       "asset_sha256": "2111df6b6b52bfe9e10a2ea9f877f4efb5370d4ec916273f16919f6269881364",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1274,
@@ -269,7 +269,7 @@
       "asset_sha256": "c01ac89406d8a6238f4d589ea7e05b5cf1a8533dbda7398239efa236161ada0e",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -296,7 +296,7 @@
       "asset_sha256": "8a113e22704f6d27e8b4fbabd6e3ee9a9fd446f32cfe7486560329872b458fa7",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1244,
@@ -323,7 +323,7 @@
       "asset_sha256": "778ff28b1466d9f87c82bdb0fbe879c0297cb9e28f76546a431a379fb8d64918",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -350,7 +350,7 @@
       "asset_sha256": "5e95d286c75081f2230046bd8ec1048a49ec207710ff00d546412ea658444e3e",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -377,7 +377,7 @@
       "asset_sha256": "28cb8617a07cdba5fe30a99857e8b1496b6466bae8d232499e1040a8dd008123",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1283,
@@ -404,7 +404,7 @@
       "asset_sha256": "bcba27c3a21750e07eb98e90c785c6312a3410ccb83870ad4848333bc3bf86b2",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -431,7 +431,7 @@
       "asset_sha256": "e24773a5d7e28735d60e408c580a0c4cc23c4e61becbfae5436d67bbc47bc695",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -458,7 +458,7 @@
       "asset_sha256": "d4e540db9776fa9381e2446fda2745762e9987edd7489a33cc2eff73b2ca19ff",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1285,
@@ -485,7 +485,7 @@
       "asset_sha256": "fb3079dc11a168ad644600652cf68b3930b09c6e9d13093613d49ef465e918cf",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1225,
@@ -512,7 +512,7 @@
       "asset_sha256": "de20f29ad29ecee5bf3239b411270ee0e178e231e2c0aa39b67362f09af088b4",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -539,7 +539,7 @@
       "asset_sha256": "d7b635eb91816f5fc9d66b43c69f45b5678b9cd0f4018748a9e811b03cf94e18",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1185,
@@ -566,7 +566,7 @@
       "asset_sha256": "32e13f0fad615674dc1a8f3a4c0e832a81edef073734cd2321737ece633b424b",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1183,
@@ -593,7 +593,7 @@
       "asset_sha256": "dfa2a962eb4cd6bd109aeffbd4e46fd05e87b7786636b6d42836ee65b52f25ec",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1122,
@@ -620,7 +620,7 @@
       "asset_sha256": "aeb6ff932913b0e92749b987562ccf0667e5ed8186bf49a4bd5acc7d9414c27b",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -647,7 +647,7 @@
       "asset_sha256": "24844188372e42d294f9eb3146806ad7e876ed19b0529ec58d8ab3fece3c7102",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -674,7 +674,7 @@
       "asset_sha256": "9a223f6584e13cfa9578aea1fb092841998eb90b1d63470ad85aa611192c3de1",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1247,
@@ -701,7 +701,7 @@
       "asset_sha256": "f61dd092111dbeccde46116fed55e6ebb68bd1568cf67e7a4931ea76c1a110ca",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -728,7 +728,7 @@
       "asset_sha256": "416b47197128b57930d6b76c1c35c2ca9020fffbc37e7f1819eccd2069de36fb",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -755,7 +755,7 @@
       "asset_sha256": "46d8a8a80b88e598fee606d71c44b555719a18bc085acd710c4eb2745f4f94c5",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -782,7 +782,7 @@
       "asset_sha256": "c7fe67cf16b6749eda33624a6db6e8d463625f0c0ced2d4c64dbb2c799117904",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -809,7 +809,7 @@
       "asset_sha256": "2bd743609f2f43f763eb669aca4e1c7a7a3b67d20eea7d0782d3a232b7e5163b",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -836,7 +836,7 @@
       "asset_sha256": "902caebbba5601a63a0876eb4c867b68976b1e2834d91af9a832f00a90561eef",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -863,7 +863,7 @@
       "asset_sha256": "6a1e3d0c8760c7c3833e325bab4a2b5092e3f363509bc5ec7780c18981b05183",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -890,7 +890,7 @@
       "asset_sha256": "0dc0af9d57066d0f3b9ae4fd74b9c57f0cc046c897385ef4b7117e29d73a0bfe",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -917,7 +917,7 @@
       "asset_sha256": "8b286527b9a6ed239fc1350879941f0dd9637ca7cc8b211614037cec4036f5ad",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -944,7 +944,7 @@
       "asset_sha256": "00d843f60b3bc7e51ff0958210ba3d3f7764dae6473356ed89215eb1c3389e7f",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -971,7 +971,7 @@
       "asset_sha256": "e34ec21bbc5a5733ed735c8152dd4124ed208ed8d3a239bf8736136a70c70fce",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -998,7 +998,7 @@
       "asset_sha256": "a546cb291b1e57d531127a0cae0fd5bbe8f2cee31e53b63b6e11ce9bef28f5cf",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1025,7 +1025,7 @@
       "asset_sha256": "d02f0261c6c39150f7502d6d5282c138c6a3269943585da155733a9b21a1af4a",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1122,
@@ -1052,7 +1052,7 @@
       "asset_sha256": "990a72a54882a47a3ca4b9e229b2e125801820a4ad6d24bb2d7efb69ec375b4a",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1230,
@@ -1079,7 +1079,7 @@
       "asset_sha256": "e179f25435554cbaa40a1e2d7ba58f1ecaf000709efa333285025ed694974c9c",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1278,
@@ -1106,7 +1106,7 @@
       "asset_sha256": "05cbbae07e0006e493dcd7a64949c511b88742e0c005ca1168215d60e846a5ab",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1133,7 +1133,7 @@
       "asset_sha256": "222eb5bb6f59888b83e31be5f27107f92325a491539a864f1a7ef172226b17c5",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1160,7 +1160,7 @@
       "asset_sha256": "1182554a6c77fd6f6e166b78dda451ebd716bd879c169f2103ee5c8eacd28ce6",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1145,
@@ -1187,7 +1187,7 @@
       "asset_sha256": "5bd220e0f5785b195b3446e7a53000bbd3a220c846157b8b87ac36c30314bb5a",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1214,7 +1214,7 @@
       "asset_sha256": "181d7bb9b5c290a053f076113af7e7a78662a33715558c110b45fecf9b776ffc",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1241,7 +1241,7 @@
       "asset_sha256": "a033f4cef7473d3f07bb93d49515d58e6d51bed36c70b044cf96f8edc72bd4a4",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
@@ -1268,7 +1268,7 @@
       "asset_sha256": "bc562a23a41431b95c62c0066ab8aba3a7d9a490ec3960983e4f50a2e209389c",
       "quality_standard": "fcb-portrait-640x650-v2",
       "managed_by": "approved-player-folder-v1",
-      "original_bytes_preserved": false,
+      "original_bytes_preserved": true,
       "export_settings": {
         "format": "PNG",
         "width": 1254,
