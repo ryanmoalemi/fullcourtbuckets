@@ -1,0 +1,107 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Top 10 Women's College Basketball Players to Collect in 2026",
+  "meta_description": "JuJu Watkins leads 10 college players to collect in 2026, with dated SportsCardsPro sales.",
+  "summary": "A collecting list of ten college players, each tied to one card and, where a checklist has one, a completed SportsCardsPro sale with a date. The quick board sits under the intro, and the sales table only uses single-price rows.",
+  "uniqueness": {
+    "summary": "The dated sale table matches each listing title to the card in the photo, including parallels that share a checklist page.",
+    "points": [
+      "Completed sales with a date, a single price, and the listing title",
+      "Joyce Edwards card-81 URL versus a #80 page with zero sold listings",
+      "Blakes print run of 2,168 set next to the base sale and a PSA 10 sale"
+    ]
+  },
+  "url_path": "/news/top-10-college-womens-basketball-players-to-collect/",
+  "files": [
+    "news/top-10-college-womens-basketball-players-to-collect/index.html"
+  ],
+  "hero_image": "news/top-10-college-womens-basketball-players-to-collect/img/watkins-purple-lava-psa10.webp",
+  "unique": [
+    "Dated completed-sale table matched to the pictured card, including logo foil, base, and Sapphire titles",
+    "Joyce Edwards Topps address ending in card-81, while SportsCardsPro #80 has zero sold listings so the $4.99 guide is left out",
+    "Mikayla Blakes Bowman U Now print run of 2,168 next to the June 18, 2026 base sale at $3.99"
+  ],
+  "unverified": [
+    "The source HTML did not arrive with the assignment, so the sentences were rebuilt from the fact-check and the linked pages. Ryan should read the wording before it is published.",
+    "The Watkins hero is a PSA 10 slab from a SportsCardsPro listing image. The cert number on that slab was not read off the photo. PSA cert 122909733 is the same card and grade.",
+    "A PSA population page was not opened, so no pop count is used.",
+    "Jazzy Davidson and Raven Johnson have no dated card sale in this draft.",
+    "Mikayla Blakes' full 2025-26 scoring average was not re-opened, so it is not quoted.",
+    "A $1.99 Mikaylah Williams sale on Aug. 1, 2026 was not on the Sapphire #4 sold list. The row used is Aug. 27, 2026 at $1.65.",
+    "An AP or USBWA second-team line for Joyce Edwards was not re-checked. The article uses the school bio and the WBCA coaches' list."
+  ],
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Sales, awards, and season lines in the article were read from the linked pages. Unchecked lines were left out."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "The sale table separates base cards from serials and foils, and it drops the Edwards guide price because that page has no completed sale."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Each pictured card was matched to a SportsCardsPro sold row, with the listing title and date kept."
+      },
+      {
+        "name": "Originality",
+        "score": 7,
+        "max": 10,
+        "reason": "The ranking is a collecting cut, and the card-81 versus #80 note is specific to this draft."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "The intro links Ryan's public Angel Reese card collection. The sentences were rebuilt because the source HTML did not arrive."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The title is above the fold, the quick board sits under the intro, and the how-made note is at the bottom."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Every sale names SportsCardsPro and a date. The how-made note says Ryan wrote it and AI was used for fact-checking and formatting."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentences stay on one card, one sale, and one award. The closing tells a reader what to do with the table."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A collector can compare the pictured card with a dated sale and skip a guide price that has no buyer."
+      },
+      {
+        "name": "Human voice",
+        "score": 7,
+        "max": 10,
+        "reason": "The risk lines use a different label on each player, and the contrast constructions from the scorecard were rewritten in plain sentences."
+      }
+    ],
+    "info_gain": "A dated sale table that keeps base, foil, and serial listings apart, plus the Edwards page that shows a guide price and zero sales.",
+    "ai_flags": [
+      "The source HTML did not arrive, so the prose was rebuilt from the fact-check and the live pages. Ryan should read it before publish.",
+      "The repeated 'The risk:' label was replaced with a different ending on each of the ten players.",
+      "Scorecard lines built as 'not X, Y' were rewritten so the sentence states the collecting point directly."
+    ]
+  }
+}

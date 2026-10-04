@@ -103,6 +103,31 @@ class HelpfulContentTests(unittest.TestCase):
         with self.assertRaises(links.DisclosureError):
             links.assert_disclosure_matches_sources(bare)
 
+    def test_college_collecting_story_credits_ryan_as_the_writer(self):
+        slug = 'top-10-college-womens-basketball-players-to-collect'
+        html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
+        articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
+        article = next(item for item in articles if item['slug'] == slug)
+        self.assertTrue(article.get('authorWrote'))
+        self.assertEqual(article['date'], '2026-10-04')
+        self.assertEqual(article['dateModified'], '2026-10-04')
+        self.assertIn(links.HOW_MADE_RYAN, html)
+        self.assertNotIn('drafted with AI tools', html)
+        self.assertIn('Published October 4, 2026', html)
+        self.assertIn('SEC Sixth Woman of the Year', html)
+        self.assertIn('By Ryan Moalemi', html)
+        self.assertNotIn('\u2014', html)
+        self.assertLess(len(article['description']), 160)
+        node = None
+        for match in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html):
+            data = json.loads(match)
+            node = links._article_node(data)
+            if node is not None:
+                break
+        self.assertEqual(node['datePublished'], '2026-10-04')
+        self.assertEqual(node['dateModified'], '2026-10-04')
+        self.assertEqual(node['author']['url'], links.AUTHOR_URL)
+
     def test_duplicate_game_one_redirects_to_the_full_recap(self):
         kept = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('Ionescu assisted Stewart five times', kept)

@@ -1410,6 +1410,15 @@ HOW_MADE_OTHER_UNLINKED = (
     'How this story was made: drafted with AI tools, '
     'then reviewed and edited by Ryan Moalemi.'
 )
+HOW_MADE_RYAN = (
+    'How this was made: Ryan Moalemi researched and wrote this article himself from the sources linked above '
+    '(Topps, PSA, SportsCardsPro/PriceCharting, and school athletics sites). '
+    'AI tools were used only for fact-checking and formatting edits.'
+)
+HOW_MADE_RYAN_UNLINKED = (
+    'How this was made: Ryan Moalemi researched and wrote this article himself. '
+    'AI tools were used only for fact-checking and formatting edits.'
+)
 HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
 _OWN_HOSTS = frozenset({'fullcourtbuckets.com', 'www.fullcourtbuckets.com'})
 
@@ -1441,6 +1450,8 @@ def outbound_source_links(html_text: str) -> list[str]:
 def how_made_sentence(html_text: str, article: dict | None) -> str:
     """Name sources only when this page links them above the disclosure."""
     linked = bool(outbound_source_links(html_text))
+    if (article or {}).get('authorWrote'):
+        return HOW_MADE_RYAN if linked else HOW_MADE_RYAN_UNLINKED
     if story_uses_box_score(html_text, article):
         return HOW_MADE_RECAP if linked else HOW_MADE_RECAP_BOX_ONLY
     return HOW_MADE_OTHER if linked else HOW_MADE_OTHER_UNLINKED

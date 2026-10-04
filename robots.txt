@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /review/
 
 Sitemap: https://fullcourtbuckets.com/sitemap.xml
 Sitemap: https://fullcourtbuckets.com/player-sitemap.xml
