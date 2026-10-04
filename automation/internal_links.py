@@ -1668,12 +1668,14 @@ HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
 HOW_MADE_RECAP = (
     'How this story was made: Ryan Moalemi picked the story and the angle. '
-    'AI tools drafted it from the ESPN box score and the sources linked above '
+    'Full Court Buckets gathers its own game data and verifies it against official box scores. '
+    'AI tools drafted it from that data and the sources linked above '
     'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
 HOW_MADE_RECAP_BOX_ONLY = (
     'How this story was made: Ryan Moalemi picked the story and the angle. '
-    'AI tools drafted it from the ESPN box score '
+    'Full Court Buckets gathers its own game data and verifies it against official box scores. '
+    'AI tools drafted it from that data '
     'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
 HOW_MADE_OTHER = (
