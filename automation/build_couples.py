@@ -758,7 +758,7 @@ def patch_sitemaps(root: Path = ROOT) -> None:
         if not path.is_file():
             continue
         text = path.read_text(encoding='utf-8')
-        if f'{BASE}{PAGE_URL}' in text:
+        if '</urlset>' not in text or f'{BASE}{PAGE_URL}' in text:
             continue
         path.write_text(text.replace('</urlset>', block + '</urlset>', 1), encoding='utf-8')
 

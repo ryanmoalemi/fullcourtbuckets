@@ -248,6 +248,17 @@ class BuildTests(unittest.TestCase):
         self.assertIn('How tall is A&#x27;ja Wilson?', html)
         self.assertIn('How many MVPs does A&#x27;ja Wilson have?', html)
         self.assertIn('What did A&#x27;ja Wilson score in her last game?', html)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        self.assertEqual(
+            answers["How many years has A'ja Wilson been in the WNBA?"],
+            "A'ja Wilson has 9 regular seasons on this page, from 2018 to 2026.",
+        )
+        self.assertIn(
+            '<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>',
+            answers["Where can I read about A'ja Wilson and the 2026 FIBA World Cup?"],
+        )
+        self.assertIn('How many years has A&#x27;ja Wilson been in the WNBA?', html)
+        self.assertNotIn('target="_blank"', html[html.find('id="faq"'):html.find('id="sources"')])
         self.assertNotIn('regular-season averages', html)
         self.assertNotIn('google_keyword', html)
         self.assertNotIn('\u2014', faq_path.read_text())
@@ -256,6 +267,35 @@ class BuildTests(unittest.TestCase):
         for banned in ('imported log', 'imported window', 'BALLDONTLIE', 'tracked on Full Court Buckets', "in our imported"):
             self.assertNotIn(banned, answers)
             self.assertNotIn(banned, html)
+
+    def test_plum_and_clark_questions_use_page_data(self):
+        root = ROOT.parent
+        plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text())
+        _html, entity = b.faq_section(plum, root)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        self.assertEqual(
+            answers["What was Kelsey Plum's rookie year?"],
+            'The first regular-season row for Kelsey Plum is 2017. She played 31 games in that row. That row is highlighted in the regular-season table.',
+        )
+        self.assertEqual(
+            answers['Which teams has Kelsey Plum played for?'],
+            'The regular-season table lists the Los Angeles Sparks for Kelsey Plum. Her current team on this page is the Phoenix Mercury.',
+        )
+        self.assertNotIn('championship', ' '.join(answers).casefold())
+        page = b.profile_page(plum, root)
+        self.assertIn('<tr class="rookie-year" data-season="2017">', page)
+        clark = json.loads((root / 'data/wnba/players/caitlin-clark.json').read_text())
+        _html, entity = b.faq_section(clark, root)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        self.assertEqual(
+            answers["What is Caitlin Clark's three-point percentage?"],
+            "In the 2026 regular season, Caitlin Clark's three-point percentage on this page is 36.1.",
+        )
+        self.assertEqual(
+            answers['How many years has Caitlin Clark been in the WNBA?'],
+            'Caitlin Clark has 3 regular seasons on this page: 2024, 2025, and 2026.',
+        )
+        self.assertNotIn('card', ' '.join(node['name'] for node in entity['mainEntity']).casefold())
 
     def test_build_publishes_curated_faq_only(self):
         items = [{'question': f'Q{i}?', 'answer': f'A{i}.'} for i in range(12)]

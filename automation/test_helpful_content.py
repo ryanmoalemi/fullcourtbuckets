@@ -36,9 +36,11 @@ class HelpfulContentTests(unittest.TestCase):
         self.assertNotIn(HOW, menu)
         self.assertIn(f'href="{HOW}"', site_nav.FOOTER_HTML)
         self.assertIn(site_nav.FOOTER_HTML, page)
-        for name in ('sitemap.xml', 'pages-sitemap.xml'):
-            text = (ROOT / name).read_text(encoding='utf-8')
-            self.assertIn('https://fullcourtbuckets.com' + HOW, text)
+        pages = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        index = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn('https://fullcourtbuckets.com' + HOW, pages)
+        self.assertIn('https://fullcourtbuckets.com/pages-sitemap.xml', index)
+        self.assertNotIn('https://fullcourtbuckets.com' + HOW, index)
         self.assertNotIn(HOW, (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8'))
 
     def test_about_and_author_explain_the_editing(self):

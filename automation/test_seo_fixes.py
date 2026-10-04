@@ -8,6 +8,7 @@ from pathlib import Path
 
 import build_players as builder
 import internal_links as links
+import site_nav
 from test_build_players import P, setup
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -168,20 +169,32 @@ class GeneratorRuleTests(unittest.TestCase):
             self.assertEqual(len(titles), len(set(titles)))
             player_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (root / 'player-sitemap.xml').read_text(encoding='utf-8')))
             page_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (root / 'pages-sitemap.xml').read_text(encoding='utf-8')))
-            site_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (root / 'sitemap.xml').read_text(encoding='utf-8')))
+            index_text = (root / 'sitemap.xml').read_text(encoding='utf-8')
+            site_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', index_text))
+            union = player_locs | page_locs
             self.assertIn(f'{BASE}/wnba/alicia-florez-245094/', player_locs)
             self.assertIn(f'{BASE}/wnba/example-player/', player_locs)
-            self.assertNotIn(f'{BASE}/wnba/alicia-florez/', site_locs)
-            self.assertNotIn(f'{BASE}/wnba/matilde-villa/', site_locs)
-            self.assertNotIn(f'{BASE}/wnba/nadia-fingall/', site_locs)
-            self.assertNotIn(f'{BASE}/wnba/thin-player/', site_locs)
+            self.assertNotIn(f'{BASE}/wnba/alicia-florez/', union)
+            self.assertNotIn(f'{BASE}/wnba/matilde-villa/', union)
+            self.assertNotIn(f'{BASE}/wnba/nadia-fingall/', union)
+            self.assertNotIn(f'{BASE}/wnba/thin-player/', union)
             self.assertNotIn(f'{BASE}/wnba/', player_locs)
             self.assertIn(f'{BASE}/', page_locs)
             self.assertIn(f'{BASE}/wnba/', page_locs)
-            self.assertEqual(site_locs, player_locs | page_locs)
-            for loc in site_locs:
-                self.assertIn('<lastmod>', (root / 'sitemap.xml').read_text(encoding='utf-8'))
+            self.assertIn(f'{BASE}/sitemap/', page_locs)
+            self.assertIn('<sitemapindex', index_text)
+            self.assertNotIn('<urlset', index_text)
+            self.assertEqual(site_locs, {f'{BASE}/player-sitemap.xml', f'{BASE}/pages-sitemap.xml'})
+            self.assertEqual((root / 'robots.txt').read_text(encoding='utf-8'), builder.ROBOTS_TXT)
+            html_map = (root / 'sitemap' / 'index.html').read_text(encoding='utf-8')
+            self.assertEqual(len(re.findall(r'<h1\b', html_map)), 1)
+            self.assertIn('<h1>Site map</h1>', html_map)
+            self.assertIn('content="index,follow"', html_map)
+            self.assertIn(f'rel="canonical" href="{BASE}/sitemap/"', html_map)
+            for loc in union:
                 self.assertTrue(loc.startswith(BASE))
+                path = loc.removeprefix(BASE)
+                self.assertIn(f'href="{path}"', html_map, loc)
 
 
 class PublishedPageTests(unittest.TestCase):
@@ -271,24 +284,46 @@ class PublishedPageTests(unittest.TestCase):
         self.assertIn('target="_blank" rel="noopener"', recap)
         meta = re.search(r'name="description" content="([^"]*)"', recap).group(1)
         self.assertLessEqual(len(meta), 155)
-        player_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8')))
-        page_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')))
-        site_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', (ROOT / 'sitemap.xml').read_text(encoding='utf-8')))
-        self.assertEqual(site_locs, player_locs | page_locs)
-        self.assertNotIn(f'{BASE}/wnba/alicia-florez/', site_locs)
-        self.assertNotIn(f'{BASE}/wnba/matilde-villa/', site_locs)
+        player_text = (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8')
+        page_text = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        player_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', player_text))
+        page_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', page_text))
+        index_text = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        site_locs = set(re.findall(r'<loc>\s*([^<]+?)\s*</loc>', index_text))
+        union = player_locs | page_locs
+        self.assertIn('<sitemapindex', index_text)
+        self.assertNotIn('<urlset', index_text)
+        self.assertEqual(site_locs, {f'{BASE}/player-sitemap.xml', f'{BASE}/pages-sitemap.xml'})
+        self.assertEqual((ROOT / 'robots.txt').read_text(encoding='utf-8'), builder.ROBOTS_TXT)
+        self.assertNotIn(f'{BASE}/wnba/alicia-florez/', union)
+        self.assertNotIn(f'{BASE}/wnba/matilde-villa/', union)
         self.assertIn(f'{BASE}/wnba/alicia-florez-245094/', player_locs)
         self.assertIn(f'{BASE}/', page_locs)
         self.assertIn(f'{BASE}/standings/', page_locs)
+        self.assertIn(f'{BASE}/wnba/couples/', page_locs)
+        self.assertIn(f'{BASE}/sitemap/', page_locs)
+        self.assertNotIn(f'{BASE}/wnba/couples/', index_text)
         self.assertNotIn(f'{BASE}/wnba/', player_locs)
-        blob = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
-        for loc in site_locs:
+        child_blobs = {
+            loc: player_text if loc in player_locs else page_text
+            for loc in union
+        }
+        html_map = (ROOT / 'sitemap' / 'index.html').read_text(encoding='utf-8')
+        self.assertEqual(len(re.findall(r'<h1\b', html_map)), 1)
+        self.assertIn('<h1>Site map</h1>', html_map)
+        self.assertIn('name="robots" content="index,follow"', html_map)
+        self.assertIn(f'rel="canonical" href="{BASE}/sitemap/"', html_map)
+        self.assertIn('href="/sitemap/">Site map</a>', site_nav.FOOTER_HTML)
+        self.assertLess(site_nav.FOOTER_HTML.find('Terms of Use'), site_nav.FOOTER_HTML.find('>Site map</a>'))
+        self.assertLess(site_nav.FOOTER_HTML.find('>Site map</a>'), site_nav.FOOTER_HTML.find('Privacy and cookie settings'))
+        for loc, blob in child_blobs.items():
             self.assertIn(f'<loc>{loc}</loc>', blob)
             block = blob.split(f'<loc>{loc}</loc>', 1)[1].split('</url>', 1)[0]
             self.assertIn('<lastmod>', block, loc)
             path = loc.removeprefix(BASE)
             page = ROOT / 'index.html' if path in ('', '/') else ROOT / path.strip('/') / 'index.html'
             self.assertTrue(builder.page_indexable(page.read_text(encoding='utf-8')), loc)
+            self.assertIn(f'href="{path}"', html_map, loc)
         for entry in index['players']:
             loc = f'{BASE}/wnba/{entry["slug"]}/'
             text = (ROOT / 'wnba' / entry['slug'] / 'index.html').read_text(encoding='utf-8')

@@ -53,11 +53,15 @@ class NewsPathTests(unittest.TestCase):
         self.assertIn('BreadcrumbList', hub)
         self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/news/"', hub)
         ordered = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
-        for name in ('sitemap.xml', 'pages-sitemap.xml'):
-            sitemap = (ROOT / name).read_text(encoding='utf-8')
-            self.assertRegex(sitemap, r'<loc>\s*https://fullcourtbuckets\.com/news/\s*</loc>')
-            for article in ordered:
-                self.assertIn('https://fullcourtbuckets.com' + links.article_href(article), sitemap)
+        sitemap = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        index = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn('https://fullcourtbuckets.com/pages-sitemap.xml', index)
+        self.assertNotIn('<urlset', index)
+        self.assertRegex(sitemap, r'<loc>\s*https://fullcourtbuckets\.com/news/\s*</loc>')
+        for article in ordered:
+            loc = 'https://fullcourtbuckets.com' + links.article_href(article)
+            self.assertIn(loc, sitemap)
+            self.assertNotIn(loc, index)
         positions = []
         for article in ordered:
             href = links.article_href(article)

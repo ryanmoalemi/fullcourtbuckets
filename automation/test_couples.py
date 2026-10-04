@@ -45,8 +45,21 @@ class CouplesPageTests(unittest.TestCase):
         self.assertLessEqual(page.count('class="inline-link"'), 8)
 
     def test_sitemap_and_hub_link(self):
-        for name in ('sitemap.xml', 'pages-sitemap.xml'):
-            self.assertIn('https://fullcourtbuckets.com/wnba/couples/', (ROOT / name).read_text(encoding='utf-8'))
+        pages = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        index = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn('https://fullcourtbuckets.com/wnba/couples/', pages)
+        self.assertNotIn('https://fullcourtbuckets.com/wnba/couples/', index)
+        self.assertIn('https://fullcourtbuckets.com/pages-sitemap.xml', index)
+        allowed = {'news/index.html', 'sitemap/index.html'}
+        found = []
+        for path in ROOT.rglob('*.html'):
+            if '.git' in path.parts:
+                continue
+            text = path.read_text(encoding='utf-8', errors='replace')
+            if 'href="/wnba/couples/"' not in text:
+                continue
+            found.append(path.relative_to(ROOT).as_posix())
+        self.assertEqual(sorted(found), sorted(allowed))
         hub = (ROOT / 'wnba' / 'index.html').read_text(encoding='utf-8')
         main = hub.split('<main', 1)[1].split('</main>', 1)[0]
         self.assertNotIn('href="/wnba/couples/"', main)

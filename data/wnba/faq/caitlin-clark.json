@@ -147,6 +147,18 @@
       "sources": [],
       "google_keyword": "caitlin clark injured",
       "approx_monthly_volume": 49500
+    },
+    {
+      "question": "What is Caitlin Clark's three-point percentage?",
+      "answer": "Rebuilt from the three-point percentage on the headline season row.",
+      "answer_kind": "stats",
+      "sources": []
+    },
+    {
+      "question": "How many years has Caitlin Clark been in the WNBA?",
+      "answer": "Rebuilt from the regular-season rows on this page.",
+      "answer_kind": "stats",
+      "sources": []
     }
   ],
   "notes": "Reader-facing sports copy only."

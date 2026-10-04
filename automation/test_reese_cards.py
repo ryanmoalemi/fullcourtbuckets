@@ -278,9 +278,11 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn(cards.PLAYER_CALLOUT, rebuilt)
         self.assertNotIn("See Ryan's Angel Reese cards", rebuilt)
         self.assertLessEqual(build_players.contextual_link_count(rebuilt), internal_links.MAX_PLAYER_LINKS)
-        for name in ('sitemap.xml', 'pages-sitemap.xml'):
-            sitemap = (ROOT / name).read_text(encoding='utf-8')
-            self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/ryans-angel-reese-cards/', sitemap)
+        pages = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        index = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/ryans-angel-reese-cards/', pages)
+        self.assertIn('https://fullcourtbuckets.com/pages-sitemap.xml', index)
+        self.assertNotIn('https://fullcourtbuckets.com/authors/ryan-moalemi/ryans-angel-reese-cards/', index)
         players = (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8')
         self.assertNotIn(ROUTE, players)
         hero = ROOT / 'images' / 'reese-cards' / 'angel-reese-hero.webp'

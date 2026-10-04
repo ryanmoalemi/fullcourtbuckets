@@ -13,6 +13,7 @@ import datetime as dt
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
@@ -29,6 +30,8 @@ ROUTE = '/standings/'
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 EXPECTED_TEAMS = 15
 PLAYOFF_SPOTS = 8
+WNBA_STANDINGS_PAGE = 'https://www.wnba.com/standings'
+WNBA_POSTSEASON_FAQ = 'https://www.wnba.com/news/2026-wnba-postseason-faq'
 
 
 def esc(value) -> str:
@@ -256,6 +259,136 @@ def _row(team: dict, href: str, wide: bool) -> str:
     return row
 
 
+def standings_refresh_clock() -> tuple[str, str]:
+    """Clock time from the workflow that rebuilds this page, plus a note when it is not 6:45 AM PT."""
+    workflow = Path(__file__).resolve().parents[1] / '.github' / 'workflows' / 'fcb-wnba.yml'
+    text = workflow.read_text(encoding='utf-8') if workflow.is_file() else ''
+    match = re.search(
+        r"cron:\s*'(\d+)\s+(\d+)\s+\*\s+\*\s\*'\s*\n\s*timezone:\s*America/Los_Angeles",
+        text,
+    )
+    if not match:
+        return '', (
+            'Standings refresh time: .github/workflows/fcb-wnba.yml has no America/Los_Angeles cron, '
+            'so "standings refresh daily at 6:45 AM PT" was not published.'
+        )
+    minute, hour = int(match.group(1)), int(match.group(2))
+    suffix = 'AM' if hour < 12 else 'PM'
+    shown = hour % 12 or 12
+    clock = f'{shown}:{minute:02d} {suffix} PT'
+    note = ''
+    if clock != '6:45 AM PT':
+        note = (
+            'Standings refresh time: the approved line "standings refresh daily at 6:45 AM PT" was not published. '
+            f'.github/workflows/fcb-wnba.yml rebuilds standings at {clock} '
+            f'(cron {minute} {hour} * * * America/Los_Angeles). '
+            'The 6:45 AM PT job is the FAQ consistency check, and it does not rebuild standings.'
+        )
+    return clock, note
+
+
+def season_length_answer(table: dict) -> tuple[str, str]:
+    """Games played from the standings file. Remaining games only when every team has finished the same schedule."""
+    teams = [team for team in (table.get('teams') or []) if isinstance(team, dict)]
+    played = []
+    for team in teams:
+        wins, losses = team.get('wins'), team.get('losses')
+        if isinstance(wins, bool) or isinstance(losses, bool) or not isinstance(wins, int) or not isinstance(losses, int):
+            return '', 'Season length: a standings row is missing a win or loss total, so games remaining were not stated.'
+        played.append(wins + losses)
+    if not played:
+        return '', 'Season length: the standings file has no team rows, so games remaining were not stated.'
+    year = table.get('season') or 'This'
+    if len(set(played)) == 1 and links.regular_season_is_final(table):
+        games = played[0]
+        return (
+            f'The {year} regular season on this page is {games} games. '
+            f'Every team has played {games}, so no regular-season games are left.',
+            '',
+        )
+    if len(set(played)) == 1:
+        games = played[0]
+        return (
+            f'Teams on this page have each played {games} games in {year}. '
+            'Games remaining are not a separate field in the standings file.',
+            'Season length: every team has the same games played, but the schedule is not marked final, so games remaining were not invented.',
+        )
+    return (
+        f'{year} games played on this page run from {min(played)} to {max(played)}. '
+        'Games remaining are not a separate field in the standings file.',
+        'Season length: teams do not show the same games played, and the file has no games-remaining field.',
+    )
+
+
+def standings_faq(table: dict) -> tuple[str, dict | None, list[str]]:
+    """FAQ block, FAQPage node, and notes for facts that were not published."""
+    notes = []
+    tie_plain = (
+        'The WNBA standings page lists this order for playoff eligibility and home-court advantage '
+        f'({WNBA_STANDINGS_PAGE}). '
+        'Step 1: better record in head-to-head games. '
+        'Step 2: better winning percentage against teams that are .500 or better at the end of the season. '
+        'Step 3: better point differential in the head-to-head games, points scored minus points allowed. '
+        'Step 4: better point differential against all opponents, points scored minus points allowed. '
+        'If more than two teams are tied, as many teams as possible are dropped at that step. '
+        'As soon as one or more teams are separated, start again at step 1 with the teams that are still tied.'
+    )
+    tie_html = tie_plain.replace(
+        f'({WNBA_STANDINGS_PAGE})',
+        f'(<a href="{esc(WNBA_STANDINGS_PAGE)}" target="_blank" rel="noopener">WNBA standings</a>)',
+    )
+    format_plain = (
+        'The WNBA says the 2026 playoffs take the top eight teams by regular-season record, regardless of conference '
+        f'({WNBA_POSTSEASON_FAQ}). '
+        'The first round is a best-of-three, played 1-1-1. '
+        'The semifinals are a best-of-five, played 2-2-1. '
+        'The Finals are a best-of-seven, played 2-2-1-1-1.'
+    )
+    format_html = format_plain.replace(
+        f'({WNBA_POSTSEASON_FAQ})',
+        f'(<a href="{esc(WNBA_POSTSEASON_FAQ)}" target="_blank" rel="noopener">WNBA postseason FAQ</a>)',
+    )
+    length_plain, length_note = season_length_answer(table)
+    if length_note:
+        notes.append(length_note)
+    clock, clock_note = standings_refresh_clock()
+    if clock_note:
+        notes.append(clock_note)
+    pairs = [
+        ('How do WNBA playoff tiebreakers work?', tie_plain, tie_html),
+        ('What is the 2026 WNBA playoff format by round?', format_plain, format_html),
+    ]
+    if length_plain:
+        pairs.append(('How long is the WNBA season, and how many games are left?', length_plain, length_plain))
+    if clock:
+        refresh = f'Full Court Buckets refreshes these standings daily at {clock}.'
+        pairs.append(('When do these standings refresh?', refresh, refresh))
+    items = ''.join(
+        f'<div class="faq-item"><h3>{esc(question)}</h3><p>{html_answer}</p></div>'
+        for question, _plain, html_answer in pairs
+    )
+    block = (
+        '<section class="section" id="faq">'
+        '<p class="eyebrow">Standings FAQ</p>'
+        '<h2>Frequently asked questions</h2>'
+        f'{items}'
+        '</section>'
+    )
+    entity = {
+        '@type': 'FAQPage',
+        '@id': BASE + ROUTE + '#faq',
+        'mainEntity': [
+            {
+                '@type': 'Question',
+                'name': question,
+                'acceptedAnswer': {'@type': 'Answer', 'text': plain},
+            }
+            for question, plain, _html in pairs
+        ],
+    }
+    return block, entity, notes
+
+
 def team_hrefs(root: Path) -> dict[str, str]:
     path = root / 'data' / 'wnba' / 'players-index.json'
     if not path.is_file():
@@ -316,6 +449,9 @@ def render_page(root: Path, table: dict) -> str:
             },
         ],
     }
+    faq_html, faq_entity, _notes = standings_faq(table)
+    if faq_entity:
+        structured['@graph'].append(faq_entity)
     schema = json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')
     conf_head = '<tr><th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th></tr>'
     return f'''<!doctype html>
@@ -408,6 +544,7 @@ def render_page(root: Path, table: dict) -> str:
 <li>Better point differential against all opponents</li>
 </ul>
 </section>
+{faq_html}
 <p class="source-note">Source: <a href="{ESPN_PAGE}" target="_blank" rel="noopener">ESPN standings</a>.</p>
 </div>
 </main>

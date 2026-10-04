@@ -115,9 +115,11 @@ class AuthorPageTests(unittest.TestCase):
         self.assertNotIn('/wnba/couples/', menu)
         self.assertNotIn('>Couples</a>', menu)
         self.assertNotIn('site-nav-sub-news', menu)
-        for name in ('sitemap.xml', 'pages-sitemap.xml'):
-            sitemap = (ROOT / name).read_text(encoding='utf-8')
-            self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/', sitemap)
+        pages = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        index = (ROOT / 'sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn('https://fullcourtbuckets.com/authors/ryan-moalemi/', pages)
+        self.assertIn('https://fullcourtbuckets.com/pages-sitemap.xml', index)
+        self.assertNotIn('https://fullcourtbuckets.com/authors/ryan-moalemi/', index)
         photo = ROOT / 'images' / 'authors' / 'ryan-moalemi-photo.jpg'
         byline = ROOT / 'images' / 'authors' / 'ryan-moalemi-photo-byline.jpg'
         self.assertTrue(photo.is_file())

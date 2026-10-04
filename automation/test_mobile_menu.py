@@ -57,6 +57,8 @@ def published_paths():
         text = (ROOT / name).read_text(encoding='utf-8')
         for loc in re.findall(r'<loc>\s*([^<]+?)\s*</loc>', text):
             path = urlsplit(loc).path or '/'
+            if path.endswith('.xml'):
+                continue
             if not path.endswith('/'):
                 path += '/'
             if path not in seen:

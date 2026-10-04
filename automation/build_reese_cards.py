@@ -1121,6 +1121,8 @@ def ensure_sitemaps(root: Path) -> None:
         if not path.is_file():
             continue
         text = path.read_text(encoding='utf-8')
+        if '</urlset>' not in text:
+            continue
         pattern = re.compile(
             rf'  <url>\n    <loc>{re.escape(loc)}</loc>\n    <lastmod>[^<]*</lastmod>\n  </url>'
         )
