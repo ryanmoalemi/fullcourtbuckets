@@ -1,0 +1,100 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Valkyries Own the Glass, Stun the Aces 71-60 in Semis Game 1",
+  "meta_description": "Golden State grabbed 52 rebounds to Vegas's 25 and beat the Aces 71-60 in Game 1. The glass leader did not score.",
+  "hook": "The Golden State Valkyries took Game 1 of the semis 71-60 over the Las Vegas Aces, a team that beat them all three times in the regular season. The wild part? Golden State grabbed 52 rebounds to Vegas's 25. And the player who did the most damage on the glass didn't score a single point.",
+  "summary": "Golden State Valkyries 71, Las Vegas Aces 60, on October 4, 2026, at Chase Center. Golden State leads the best-of-five 1-0. Body is the bot draft, edited against ESPN game 401918296. Both and-ones were real made free throws. Wilson's trip at 2:24 was two misses. The opening was cut to one hook, and 'Wilson was cooking' now has her 10 first-quarter points.",
+  "url_path": "/news/aces-valkyries-semis-game-1-recap/",
+  "files": [
+    "news/aces-valkyries-semis-game-1-recap/index.html"
+  ],
+  "hero_image": "images/articles/aces-valkyries-semis-game-1-recap/valkyries-fever-may-2026.webp",
+  "hero_image_alt": "A Golden State Valkyries player in a white number 22 jersey dribbles against an Indiana Fever defender at Gainbridge Fieldhouse",
+  "hero_image_credit": "Photo: Sarah Stierch / CC0. Wikimedia Commons File:Golden State Valkyries at Indiana Fever - May 2026 - Sarah Stierch 01.jpg. Taken May 22, 2026, at Gainbridge Fieldhouse in Indianapolis.",
+  "espn_game_id": "401918296",
+  "espn_box_score": "https://www.espn.com/wnba/boxscore/_/gameId/401918296",
+  "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918296",
+  "unique": [
+    "Golden State won the glass 52-25, with 17 offensive rebounds to Las Vegas's 2",
+    "Kiah Stokes went 0-of-3 and still had 14 rebounds, 7 offensive, and 4 blocks",
+    "Chen blocked Yamamoto at 2:58, Golden State won the challenge, and Williams scored the other way for 69-58",
+    "Wilson missed both free throws at 2:24, and Vegas then went scoreless until Brown's putback at 53.4 seconds"
+  ],
+  "unverified": [
+    "The Game 2 pick, and the line that Williams's three was the moment Chase Center knew, are opinion.",
+    "The lead photo is from May 22, 2026, at Gainbridge Fieldhouse, not from this game. The caption says so.",
+    "The Commons information template dates the file 2025-05-22. The filename, the category, the Gainbridge coordinates, and the ESPN schedule put the Valkyries at the Fever on May 22, 2026. There was no Valkyries at Fever game on May 22, 2025."
+  ],
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Score, quarters, the 10-0 run, both and-ones, the missed free throws at 2:24, clocks, shooting lines, the 52-25 and 17-2 rebound splits, Stokes's line, the lead time, the regular-season sweep, and Game 2 at 6:30 p.m. PT were checked against the ESPN box score and play-by-play for game 401918296. ESPN prints the Aces' 21-of-62 as 34 percent. No number in the draft was wrong."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "The page keeps the glass split, Stokes's scoreless 14-rebound line, the challenge and block at 2:58, and the two missed free throws that kept the lead at 11. A wire recap has the final and Williams's 25. It does not walk that drought."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 6,
+        "max": 10,
+        "reason": "Every number was checked against the ESPN feed, and the photo was matched to the Commons file. There is no original chart, courtside note, or photo from this game, so another editor with the same feed could rebuild the body."
+      },
+      {
+        "name": "Originality",
+        "score": 7,
+        "max": 10,
+        "reason": "The angle is the glass, not the box score in order, and the close is a straight Game 2 take. It is not a wire rewrite, and it is still a game recap."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Ryan Moalemi's byline links to his real author page, and he edits the site. He was not at Chase Center, so this is not a courtside report."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The title and H1 match and state the score. The lead photo sits under the headline, and the hook gives the 52-25 rebound gap and the scoreless glass player under the byline. The hero is 1680 by 945, a 16:9 frame inside the article column. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "The disclosure says AI drafted from the ESPN box score, Ryan reviewed it, and the box score, play-by-play, and game pages are linked above it. The photo credit names Sarah Stierch, the Commons file, the May 22, 2026 date, Gainbridge Fieldhouse, and the CC0 license."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Short sentences, no em dashes, and real subheads. In-article links open in a new tab. The hook is one paragraph and does not say keep reading. The byline stays on this site, in the same tab."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader gets the finish, how the lead changed, Williams's line, the rebound gap, and when Game 2 is. The page does not tease a section it does not have."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "No stock AI phrases. The voice is specific and opinionated ('The wild part?', 'Like, really cold', 'Game over', 'I'm riding with the Valkyries'). 'Wilson was cooking' had no stat and was rewritten with her 10 first-quarter points. The 'didn't just miss shots' line was kept because it is the draft's series take, and the 52-25 boards are the stat next to it."
+      }
+    ],
+    "info_gain": "Golden State won the glass 52-25 and the offensive glass 17-2. Stokes scored 0 on 0-of-3 with 14 rebounds, 7 offensive, and 4 blocks. Chen's block of Yamamoto at 2:58 survived a coach's challenge, and Williams's layup made it 69-58. Wilson missed both free throws at 2:24, and Vegas did not score again until Brown's putback at 53.4 seconds.",
+    "ai_flags": [
+      "Wilson was cooking with pull-ups and turnarounds: generic praise with no stat. Rewritten to Wilson scored 10 in the first quarter, with pull-ups and turnarounds."
+    ]
+  }
+}
