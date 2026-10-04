@@ -34,12 +34,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 17.24,
@@ -66,12 +66,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 4.6,
@@ -98,12 +98,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 25.7,
@@ -130,12 +130,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 7.78,
@@ -162,12 +162,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 6.0,
@@ -194,12 +194,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 22.29,
@@ -226,12 +226,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 23.29,
@@ -258,12 +258,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 17.61,

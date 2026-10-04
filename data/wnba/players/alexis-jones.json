@@ -34,12 +34,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 9.33,
@@ -66,12 +66,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 26,
       "min": 8.81,
@@ -98,12 +98,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 0.0,
@@ -130,12 +130,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 7.28,
@@ -162,12 +162,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 6.0,

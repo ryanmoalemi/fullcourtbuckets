@@ -34,12 +34,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 25,
       "min": 7.84,
@@ -66,12 +66,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 2.0,

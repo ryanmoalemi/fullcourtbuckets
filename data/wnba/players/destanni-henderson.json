@@ -34,11 +34,11 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
         "conference": "Eastern Conference"
       },
       "games_played": 36,

@@ -66,12 +66,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 9.0,

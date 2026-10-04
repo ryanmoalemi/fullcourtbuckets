@@ -34,12 +34,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 28,
       "min": 13.89,
@@ -66,12 +66,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 4,
       "min": 4.75,
@@ -98,12 +98,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 15.09,
@@ -130,12 +130,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 15.0,

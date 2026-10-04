@@ -41,12 +41,12 @@
       "season": 2026,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": null,
+        "full_name": "Phoenix Mercury and Atlanta Dream",
+        "abbreviation": null,
+        "city": null,
+        "name": "Phoenix Mercury and Atlanta Dream",
+        "conference": null
       },
       "games_played": 42,
       "min": 26.79,
@@ -105,12 +105,12 @@
       "season": 2025,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": null,
+        "full_name": "Indiana Fever and Phoenix Mercury",
+        "abbreviation": null,
+        "city": null,
+        "name": "Indiana Fever and Phoenix Mercury",
+        "conference": null
       },
       "games_played": 33,
       "min": 23.58,
@@ -169,12 +169,12 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 40,
       "min": 31.8,
@@ -201,12 +201,12 @@
       "season": 2024,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 33.43,
@@ -233,12 +233,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 40,
       "min": 30.1,
@@ -265,12 +265,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 36.86,
@@ -297,12 +297,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 30.03,
@@ -329,12 +329,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 12,
       "min": 31.5,
@@ -361,12 +361,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 32,
       "min": 31.94,
@@ -393,12 +393,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 4,
       "min": 35.0,
@@ -425,12 +425,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 22,
       "min": 33.27,
@@ -457,12 +457,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 35.0,

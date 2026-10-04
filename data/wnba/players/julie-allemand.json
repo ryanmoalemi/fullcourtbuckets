@@ -137,12 +137,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 8,
       "min": 11.5,
@@ -169,12 +169,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 22,
       "min": 32.55,

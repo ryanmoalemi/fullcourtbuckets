@@ -34,12 +34,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 11.41,
@@ -66,12 +66,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 7.0,

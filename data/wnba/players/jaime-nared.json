@@ -34,11 +34,11 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
         "conference": "Western Conference"
       },
       "games_played": 31,

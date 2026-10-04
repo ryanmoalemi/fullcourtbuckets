@@ -130,12 +130,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 25.48,
@@ -162,12 +162,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 19.0,
@@ -194,12 +194,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 24.27,
@@ -226,12 +226,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 29.71,

@@ -66,12 +66,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 24,
       "min": 18.33,

@@ -34,12 +34,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 26,
       "min": 6.88,
@@ -66,12 +66,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 4,
       "min": 5.0,
@@ -98,12 +98,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 28,
       "min": 15.82,
@@ -130,12 +130,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 4.5,

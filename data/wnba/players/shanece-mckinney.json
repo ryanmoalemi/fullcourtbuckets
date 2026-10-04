@@ -34,11 +34,11 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 24,

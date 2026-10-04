@@ -34,12 +34,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 33,
       "min": 33.73,
@@ -66,12 +66,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 5,
       "min": 38.0,
@@ -98,12 +98,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 33.65,
@@ -130,12 +130,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 9,
       "min": 38.78,

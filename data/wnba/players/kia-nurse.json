@@ -137,12 +137,12 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 40,
       "min": 20.25,
@@ -169,12 +169,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 40,
       "min": 19.73,
@@ -201,12 +201,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 32,
       "min": 26.09,
@@ -233,12 +233,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 6,
       "min": 21.83,
@@ -265,11 +265,11 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 21,
@@ -297,11 +297,11 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 34,
@@ -329,11 +329,11 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 34,

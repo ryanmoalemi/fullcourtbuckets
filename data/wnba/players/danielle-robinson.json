@@ -98,11 +98,11 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
         "conference": "Eastern Conference"
       },
       "games_played": 31,
@@ -130,11 +130,11 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
         "conference": "Eastern Conference"
       },
       "games_played": 24,
@@ -162,12 +162,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
       },
       "games_played": 22,
       "min": 22.36,
@@ -194,12 +194,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
       },
       "games_played": 8,
       "min": 29.88,
@@ -226,12 +226,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 27.03,
@@ -258,12 +258,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 19.0,
@@ -290,12 +290,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 28,
       "min": 18.61,
@@ -322,12 +322,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 32,
       "min": 23.5,
@@ -354,12 +354,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 10.6,
@@ -386,12 +386,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 30,
       "min": 30.07,
@@ -418,12 +418,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 33,
       "min": 33.06,
@@ -450,12 +450,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 30.5,
@@ -482,12 +482,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 25,
       "min": 32.48,
@@ -514,12 +514,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 28.97,
@@ -546,12 +546,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 32.5,
@@ -578,12 +578,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 23.12,
@@ -610,12 +610,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 3,
       "min": 30.0,

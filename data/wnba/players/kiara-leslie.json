@@ -34,12 +34,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
       },
       "games_played": 19,
       "min": 21.84,
@@ -66,12 +66,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 33.0,

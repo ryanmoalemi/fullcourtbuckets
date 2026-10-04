@@ -34,12 +34,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 1.0,

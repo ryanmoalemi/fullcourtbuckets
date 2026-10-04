@@ -34,12 +34,12 @@
       "season": 2016,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 5,
       "min": 18.4,
@@ -66,12 +66,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 17.55,
@@ -98,12 +98,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 3,
       "min": 7.0,

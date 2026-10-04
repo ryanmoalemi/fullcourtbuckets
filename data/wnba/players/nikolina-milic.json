@@ -66,12 +66,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 39,
       "min": 12.67,
@@ -98,12 +98,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 7.33,
@@ -130,12 +130,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 31,
       "min": 11.74,

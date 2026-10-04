@@ -34,12 +34,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 29,
-        "full_name": "Puerto Rico",
-        "abbreviation": "PUERTORICO",
-        "city": "",
-        "name": "Puerto Rico",
-        "conference": null
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 28,
       "min": 17.07,

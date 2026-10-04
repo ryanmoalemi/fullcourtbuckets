@@ -2436,12 +2436,12 @@
     "season": 2026,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": null,
+      "full_name": "Phoenix Mercury and Atlanta Dream",
+      "abbreviation": null,
+      "city": null,
+      "name": "Phoenix Mercury and Atlanta Dream",
+      "conference": null
     },
     "games_played": 42,
     "min": 26.79,
@@ -2500,12 +2500,12 @@
     "season": 2026,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Toronto Tempo and Phoenix Mercury",
+      "abbreviation": null,
+      "city": null,
+      "name": "Toronto Tempo and Phoenix Mercury",
+      "conference": null
     },
     "games_played": 42,
     "min": 15.36,
@@ -3236,11 +3236,11 @@
     "season": 2026,
     "season_type": 2,
     "team": {
-      "id": 30,
-      "full_name": "Toronto Tempo",
-      "abbreviation": "TOR",
-      "city": "Toronto",
-      "name": "Tempo",
+      "id": null,
+      "full_name": "Connecticut Sun and Toronto Tempo",
+      "abbreviation": null,
+      "city": null,
+      "name": "Connecticut Sun and Toronto Tempo",
       "conference": null
     },
     "games_played": 27,

@@ -98,12 +98,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 2,
       "min": 10.5,
@@ -130,12 +130,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 33.88,
@@ -162,12 +162,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 25,
       "min": 23.72,
@@ -194,12 +194,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 14.56,
@@ -226,12 +226,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 25,
       "min": 19.84,

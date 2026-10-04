@@ -9,7 +9,9 @@
     "dateModified": "2026-10-04",
     "authorWrote": true,
     "image": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/watkins-superfractor-1-1-psa10.webp",
-    "imageAlt": "JuJu Watkins 2024-25 Bowman University Chrome Prospects SuperFractor Autographs number 37, serial 1 of 1, PSA 10, certification 123955080"
+    "imageAlt": "JuJu Watkins 2024-25 Bowman University Chrome Prospects SuperFractor Autographs number 37, serial 1 of 1, PSA 10, certification 123955080",
+    "imageWidth": 1007,
+    "imageHeight": 1691
   },
   {
     "slug": "wings-valkyries-game-3-recap",
@@ -18,14 +20,16 @@
     "description": "Dallas led 44-37 at half. Golden State won the fourth quarter 23-14, finished 77-73, and took the series 2-1.",
     "category": "WNBA Playoffs",
     "date": "2026-10-03",
-    "image": "/images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.jpg",
+    "image": "/images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.webp",
     "imageAlt": "Veronica Burton of the Golden State Valkyries dribbling a basketball in a white jersey against the Minnesota Lynx",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
     "espnGameId": "401918294",
     "teams": [
       "dallas-wings",
       "golden-state-valkyries"
-    ]
+    ],
+    "imageWidth": 1688,
+    "imageHeight": 2531
   },
   {
     "slug": "valkyries-wings-game-2-recap",
@@ -34,14 +38,16 @@
     "description": "Arike Ogunbowale scored 45 points, including the tying three with 4.1 seconds left, and the Wings beat the Valkyries 108-100 in overtime to tie the series 1-1.",
     "category": "WNBA Playoffs",
     "date": "2026-10-02",
-    "image": "/images/articles/valkyries-wings-game-2-recap/arike-ogunbowale-wings-2019.jpg",
+    "image": "/images/articles/valkyries-wings-game-2-recap/arike-ogunbowale-wings-2019.webp",
     "imageAlt": "Arike Ogunbowale of the Dallas Wings shooting a jumper over a Minnesota Lynx defender",
     "imageCredit": "Photo: Lorie Shaull / CC BY-SA 4.0",
     "espnGameId": "401918020",
     "teams": [
       "dallas-wings",
       "golden-state-valkyries"
-    ]
+    ],
+    "imageWidth": 1688,
+    "imageHeight": 1125
   },
   {
     "slug": "aces-fever-series-breakdown",
@@ -50,13 +56,15 @@
     "description": "A'ja Wilson scored 96 points on 64.6% shooting as the Aces beat the Fever 2-1. Indiana won the paint in all three games.",
     "category": "WNBA Playoffs",
     "date": "2026-10-02",
-    "image": "/images/articles/aces-fever-series-breakdown/chelsea-gray-aces-2023.jpg",
+    "image": "/images/articles/aces-fever-series-breakdown/chelsea-gray-aces-2023.webp",
     "imageAlt": "Chelsea Gray of the Las Vegas Aces dribbling against the Minnesota Lynx",
     "imageCredit": "Photo: John McClellan / CC BY-SA 2.0",
     "teams": [
       "las-vegas-aces",
       "indiana-fever"
-    ]
+    ],
+    "imageWidth": 1200,
+    "imageHeight": 1587
   },
   {
     "slug": "clark-no-call-aces-game-3",
@@ -65,9 +73,11 @@
     "description": "Caitlin Clark caught an elbow from Jewell Loyd with about three minutes left in Game 3. No foul was called. The Aces won 94-83.",
     "category": "WNBA Playoffs",
     "date": "2026-10-01",
-    "image": "/images/articles/clark-no-call-aces-game-3/caitlin-clark-fever-2025-2.jpg",
+    "image": "/images/articles/clark-no-call-aces-game-3/caitlin-clark-fever-2025-2.webp",
     "imageAlt": "Caitlin Clark of the Indiana Fever in a white jersey dribbling the ball with her right hand",
-    "imageCredit": "Photo: John Mac / CC BY-SA 4.0"
+    "imageCredit": "Photo: John Mac / CC BY-SA 4.0",
+    "imageWidth": 1688,
+    "imageHeight": 1125
   },
   {
     "slug": "fever-aces-game-3-recap",
@@ -76,10 +86,12 @@
     "description": "A'ja Wilson scored 36 points with 10 rebounds as the Aces beat the Fever 94-83 to win the first-round series 2-1.",
     "category": "WNBA Playoffs",
     "date": "2026-10-01",
-    "image": "/images/articles/fever-aces-game-3-recap/aja-wilson-aces-2026.jpg",
+    "image": "/images/articles/fever-aces-game-3-recap/aja-wilson-aces-2026.webp",
     "imageAlt": "A'ja Wilson of the Las Vegas Aces shooting over a Minnesota Lynx defender",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
-    "espnGameId": "401918022"
+    "espnGameId": "401918022",
+    "imageWidth": 1600,
+    "imageHeight": 1067
   },
   {
     "slug": "fever-aces-game-2-recap",
@@ -88,10 +100,12 @@
     "description": "Caitlin Clark scored 27 points with 15 assists and Aliyah Boston had 22 as the Fever beat the Aces 99-89 to tie the series 1-1.",
     "category": "WNBA Playoffs",
     "date": "2026-09-30",
-    "image": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.jpg",
+    "image": "/images/articles/fever-aces-game-2-recap/caitlin-clark-fever-2026-2.webp",
     "imageAlt": "Caitlin Clark of the Indiana Fever dribbling in a white jersey.",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
-    "espnGameId": "401918018"
+    "espnGameId": "401918018",
+    "imageWidth": 1688,
+    "imageHeight": 2531
   },
   {
     "slug": "wnba-expansion-teams",
@@ -100,13 +114,15 @@
     "description": "The WNBA has 15 teams in 2026. Here's how the Portland Fire and Toronto Tempo were built, how their first seasons went, and which new WNBA teams come next.",
     "category": "WNBA",
     "date": "2026-09-30",
-    "image": "/images/articles/wnba-expansion-teams/tempo-aces-vancouver.jpg",
+    "image": "/images/articles/wnba-expansion-teams/tempo-aces-vancouver.webp",
     "imageAlt": "Toronto Tempo players on court against the Las Vegas Aces in Vancouver.",
     "imageCredit": "Photo: Gold Broth / CC BY 4.0",
     "teams": [
       "portland-fire",
       "toronto-tempo"
-    ]
+    ],
+    "imageWidth": 1542,
+    "imageHeight": 2048
   },
   {
     "slug": "liberty-lynx-game-2-recap",
@@ -115,10 +131,12 @@
     "description": "Marine Johannes hit a 24-foot three, Jonquel Jones finished the and-one, and New York closed out an 87-71 sweep of the No. 1 Lynx.",
     "category": "WNBA Playoffs",
     "date": "2026-09-30",
-    "image": "/images/articles/liberty-lynx-game-2-recap/marine-johannes-liberty-2026.jpg",
+    "image": "/images/articles/liberty-lynx-game-2-recap/marine-johannes-liberty-2026.webp",
     "imageAlt": "Marine Johannes of the New York Liberty dribbling at Target Center",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
-    "espnGameId": "401918017"
+    "espnGameId": "401918017",
+    "imageWidth": 1600,
+    "imageHeight": 1067
   },
   {
     "slug": "aces-fever-game-1-aja-wilson-38",
@@ -127,10 +145,12 @@
     "description": "A'ja Wilson scored 38 points with 16 rebounds as the No. 3 Aces beat the No. 6 Fever 102-85. Las Vegas leads the series 1-0 with Game 2 Tuesday in Indianapolis.",
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
-    "image": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2023.jpg",
+    "image": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2023.webp",
     "imageAlt": "A'ja Wilson of the Las Vegas Aces in a white jersey",
     "imageCredit": "Photo: John McClellan / CC BY-SA 2.0",
-    "espnGameId": "401918015"
+    "espnGameId": "401918015",
+    "imageWidth": 1280,
+    "imageHeight": 1635
   },
   {
     "slug": "liberty-lynx-game-1-full-recap",
@@ -139,10 +159,12 @@
     "description": "Breanna Stewart had 34 points and 12 rebounds, Leonie Fiebich hit 4 of 5 threes, and the No. 8 Liberty beat the No. 1 Lynx 91-75 to take Game 1.",
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
-    "image": "/images/articles/liberty-lynx-game-1-full-recap/breanna-stewart-usa-2026.jpg",
+    "image": "/images/articles/liberty-lynx-game-1-full-recap/breanna-stewart-usa-2026.webp",
     "imageAlt": "Breanna Stewart of the United States shooting a layup",
     "imageCredit": "Photo: Zafer / CC BY-SA 4.0",
-    "espnGameId": "401918014"
+    "espnGameId": "401918014",
+    "imageWidth": 1280,
+    "imageHeight": 853
   },
   {
     "slug": "dream-mystics-game-1-howard-reese",
@@ -151,10 +173,12 @@
     "description": "Rhyne Howard scored 26 with five steals, Angel Reese had 13 and 12 in her playoff debut, and the No. 4 Dream beat the No. 5 Mystics 92-77.",
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
-    "image": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.jpg",
+    "image": "/images/articles/dream-mystics-game-1-howard-reese/jordin-canada-dream-2026.webp",
     "imageAlt": "Jordin Canada of the Atlanta Dream",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
-    "espnGameId": "401918013"
+    "espnGameId": "401918013",
+    "imageWidth": 1600,
+    "imageHeight": 1068
   },
   {
     "slug": "valkyries-wings-game-1-zandalasini",
@@ -163,10 +187,12 @@
     "description": "Cecilia Zandalasini scored 22, Tiffany Hayes and Gabby Williams added 21 and 20, and the No. 2 Valkyries beat the No. 7 Wings 104-80 despite Paige Bueckers' 21.",
     "category": "WNBA Playoffs",
     "date": "2026-09-28",
-    "image": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.jpg",
+    "image": "/images/articles/valkyries-wings-game-1-zandalasini/cecilia-zandalasini-valkyries-2026.webp",
     "imageAlt": "Cecilia Zandalasini of the Golden State Valkyries",
     "imageCredit": "Photo: John McClellan / CC BY-SA 4.0",
-    "espnGameId": "401918016"
+    "espnGameId": "401918016",
+    "imageWidth": 1600,
+    "imageHeight": 1067
   },
   {
     "slug": "fiba-womens-basketball-world-cup-2026",
@@ -176,7 +202,9 @@
     "category": "World Cup",
     "date": "2026-08-30",
     "dateModified": "2026-10-04",
-    "image": "/images/articles/world-cup-2026/world-cup-2026-hero.png",
-    "imageAlt": "2026 FIBA Women's Basketball World Cup logo with a player silhouette and the Berlin skyline"
+    "image": "/images/articles/world-cup-2026/world-cup-2026-hero.webp",
+    "imageAlt": "2026 FIBA Women's Basketball World Cup logo with a player silhouette and the Berlin skyline",
+    "imageWidth": 1230,
+    "imageHeight": 630
   }
 ]

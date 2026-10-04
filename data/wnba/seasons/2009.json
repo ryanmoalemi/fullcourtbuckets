@@ -36,12 +36,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 31,
     "min": 33.84,
@@ -68,12 +68,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 31.62,
@@ -100,11 +100,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
       "conference": "Western Conference"
     },
     "games_played": 34,
@@ -132,12 +132,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 29.41,
@@ -164,12 +164,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 35.12,
@@ -228,12 +228,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
+      "conference": "Western Conference"
     },
     "games_played": 33,
     "min": 32.48,
@@ -292,12 +292,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 33,
     "min": 33.73,
@@ -324,11 +324,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 34,
@@ -356,11 +356,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -420,12 +420,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 27.38,
@@ -452,12 +452,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 34,
     "min": 30.38,
@@ -484,12 +484,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 25.32,
@@ -516,12 +516,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 27,
     "min": 33.11,
@@ -548,12 +548,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
+      "conference": "Eastern Conference"
     },
     "games_played": 32,
     "min": 26.5,
@@ -580,11 +580,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 31,
@@ -612,12 +612,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
     },
     "games_played": 30,
     "min": 29.87,
@@ -644,12 +644,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 32,
     "min": 26.56,
@@ -676,12 +676,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 29.91,
@@ -708,12 +708,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
+      "conference": "Western Conference"
     },
     "games_played": 32,
     "min": 34.19,
@@ -772,12 +772,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 23,
     "min": 31.61,
@@ -804,12 +804,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 32,
     "min": 23.03,
@@ -836,12 +836,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
+      "conference": "Eastern Conference"
     },
     "games_played": 33,
     "min": 20.7,
@@ -868,11 +868,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 34,
@@ -900,11 +900,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 25,
@@ -932,11 +932,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -964,11 +964,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -996,12 +996,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 30,
     "min": 21.97,
@@ -1028,12 +1028,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 31,
     "min": 31.77,
@@ -1060,12 +1060,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 27,
     "min": 23.85,
@@ -1092,12 +1092,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
+      "conference": "Western Conference"
     },
     "games_played": 33,
     "min": 31.61,
@@ -1124,12 +1124,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 22.47,
@@ -1156,12 +1156,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 21.62,
@@ -1188,12 +1188,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 33,
     "min": 22.45,
@@ -1220,12 +1220,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 26,
-      "full_name": "BRAZIL",
-      "abbreviation": "BRAZIL",
-      "city": "",
-      "name": "BRAZIL",
-      "conference": null
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 26.91,
@@ -1252,12 +1252,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 19.85,
@@ -1284,11 +1284,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
       "conference": "Western Conference"
     },
     "games_played": 33,
@@ -1316,12 +1316,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 23,
     "min": 16.52,
@@ -1348,11 +1348,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 27,
@@ -1380,12 +1380,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 34,
     "min": 23.56,
@@ -1412,11 +1412,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 30,
@@ -1476,12 +1476,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
+      "conference": "Eastern Conference"
     },
     "games_played": 32,
     "min": 31.69,
@@ -1508,12 +1508,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 23.29,
@@ -1540,12 +1540,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 33,
     "min": 33.73,
@@ -1572,12 +1572,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 33,
     "min": 11.73,
@@ -1604,11 +1604,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -1636,11 +1636,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -1668,12 +1668,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 27.38,
@@ -1700,12 +1700,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 28,
     "min": 18.0,
@@ -1732,11 +1732,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 24,
@@ -1764,12 +1764,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
-      "conference": "Eastern Conference"
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
+      "conference": "Western Conference"
     },
     "games_played": 33,
     "min": 10.7,
@@ -1796,11 +1796,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -1860,12 +1860,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 30,
     "min": 18.43,
@@ -1892,11 +1892,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 22,
@@ -1924,12 +1924,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 27.29,
@@ -1956,11 +1956,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -1988,12 +1988,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 34,
     "min": 21.0,
@@ -2020,11 +2020,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
       "conference": "Western Conference"
     },
     "games_played": 34,
@@ -2052,12 +2052,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 11.97,
@@ -2084,12 +2084,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 26.12,
@@ -2116,12 +2116,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 31,
     "min": 20.97,
@@ -2148,12 +2148,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 29,
     "min": 26.03,
@@ -2212,12 +2212,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 29.79,
@@ -2308,11 +2308,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
       "conference": "Western Conference"
     },
     "games_played": 34,
@@ -2340,12 +2340,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
+      "conference": "Eastern Conference"
     },
     "games_played": 24,
     "min": 28.83,
@@ -2372,11 +2372,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
       "conference": "Eastern Conference"
     },
     "games_played": 28,
@@ -2404,12 +2404,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 14.56,
@@ -2436,12 +2436,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 19.5,
@@ -2468,11 +2468,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
+      "id": 6,
+      "full_name": "Chicago Sky",
+      "abbreviation": "CHI",
+      "city": "Chicago",
+      "name": "Sky",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -2500,12 +2500,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 29,
     "min": 11.24,
@@ -2532,12 +2532,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 34,
     "min": 14.79,
@@ -2564,11 +2564,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 31,
@@ -2596,11 +2596,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 24,
@@ -2660,11 +2660,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 32,
@@ -2724,11 +2724,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
       "conference": "Eastern Conference"
     },
     "games_played": 34,
@@ -2788,12 +2788,12 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 2,
+      "full_name": "Connecticut Sun",
+      "abbreviation": "CON",
+      "city": "Connecticut",
+      "name": "Sun",
+      "conference": "Eastern Conference"
     },
     "games_played": 33,
     "min": 12.97,
@@ -2852,11 +2852,11 @@
     "season": 2009,
     "season_type": 2,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
       "conference": "Eastern Conference"
     },
     "games_played": 24,
@@ -2948,12 +2948,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
+      "conference": "Western Conference"
     },
     "games_played": 3,
     "min": 32.67,
@@ -2980,12 +2980,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 3,
     "min": 30.0,
@@ -3012,12 +3012,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 26,
-      "full_name": "BRAZIL",
-      "abbreviation": "BRAZIL",
-      "city": "",
-      "name": "BRAZIL",
-      "conference": null
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 25.5,
@@ -3076,11 +3076,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 10,
@@ -3108,12 +3108,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 35.4,
@@ -3140,12 +3140,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 40.5,
@@ -3172,11 +3172,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 6,
@@ -3236,12 +3236,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 11,
     "min": 30.91,
@@ -3332,12 +3332,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 38.0,
@@ -3364,11 +3364,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
       "conference": "Western Conference"
     },
     "games_played": 11,
@@ -3396,12 +3396,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
+      "conference": "Eastern Conference"
     },
     "games_played": 10,
     "min": 22.8,
@@ -3428,12 +3428,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 29.0,
@@ -3460,11 +3460,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 6,
@@ -3492,12 +3492,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 29.0,
@@ -3524,12 +3524,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
+      "conference": "Western Conference"
     },
     "games_played": 6,
     "min": 31.67,
@@ -3556,12 +3556,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 27.0,
@@ -3588,11 +3588,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 2,
@@ -3620,12 +3620,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 3,
     "min": 33.67,
@@ -3652,12 +3652,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
+      "conference": "Eastern Conference"
     },
     "games_played": 10,
     "min": 22.4,
@@ -3684,12 +3684,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 25.5,
@@ -3716,12 +3716,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 3,
     "min": 32.0,
@@ -3748,11 +3748,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 2,
@@ -3780,12 +3780,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 26.8,
@@ -3812,12 +3812,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
+      "conference": "Western Conference"
     },
     "games_played": 3,
     "min": 38.67,
@@ -3876,11 +3876,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 6,
@@ -3908,12 +3908,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 17.5,
@@ -3940,11 +3940,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
       "conference": "Eastern Conference"
     },
     "games_played": 2,
@@ -3972,11 +3972,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
       "conference": "Eastern Conference"
     },
     "games_played": 2,
@@ -4004,12 +4004,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 9,
     "min": 10.11,
@@ -4036,12 +4036,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 19.2,
@@ -4068,12 +4068,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "Detroit Shock",
+      "abbreviation": "TUL",
+      "city": "Detroit",
+      "name": "Shock",
+      "conference": null
     },
     "games_played": 5,
     "min": 29.6,
@@ -4100,12 +4100,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 27.0,
@@ -4132,12 +4132,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 6.5,
@@ -4164,12 +4164,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 1,
     "min": 7.0,
@@ -4196,11 +4196,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
       "conference": "Western Conference"
     },
     "games_played": 3,
@@ -4228,12 +4228,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
+      "conference": "Western Conference"
     },
     "games_played": 11,
     "min": 23.09,
@@ -4260,11 +4260,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
       "conference": "Western Conference"
     },
     "games_played": 11,
@@ -4292,11 +4292,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 10,
@@ -4324,12 +4324,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
-      "conference": "Western Conference"
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 16.5,
@@ -4420,12 +4420,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 2,
     "min": 39.5,
@@ -4484,12 +4484,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 3,
     "min": 14.67,
@@ -4548,11 +4548,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 10,
@@ -4612,11 +4612,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 3,
+      "full_name": "Indiana Fever",
+      "abbreviation": "IND",
+      "city": "Indiana",
+      "name": "Fever",
       "conference": "Eastern Conference"
     },
     "games_played": 4,
@@ -4676,11 +4676,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 1,
@@ -4708,12 +4708,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 28,
-      "full_name": "Australia",
-      "abbreviation": "AUS",
-      "city": "",
-      "name": "Australia",
-      "conference": null
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
+      "conference": "Western Conference"
     },
     "games_played": 3,
     "min": 28.67,
@@ -4772,12 +4772,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": 5,
+      "full_name": "Washington Mystics",
+      "abbreviation": "WSH",
+      "city": "Washington",
+      "name": "Mystics",
+      "conference": "Eastern Conference"
     },
     "games_played": 1,
     "min": 8.0,
@@ -4804,11 +4804,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
       "conference": "Eastern Conference"
     },
     "games_played": 2,
@@ -4836,12 +4836,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
-      "conference": "Eastern Conference"
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
+      "conference": "Western Conference"
     },
     "games_played": 3,
     "min": 3.67,
@@ -4868,11 +4868,11 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
+      "id": 9,
+      "full_name": "Seattle Storm",
+      "abbreviation": "SEA",
+      "city": "Seattle",
+      "name": "Storm",
       "conference": "Western Conference"
     },
     "games_played": 1,
@@ -4900,12 +4900,12 @@
     "season": 2009,
     "season_type": 3,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": 200,
+      "full_name": "San Antonio Silver Stars",
+      "abbreviation": "SAS",
+      "city": "San Antonio",
+      "name": "Silver Stars",
+      "conference": null
     },
     "games_played": 1,
     "min": 7.0,

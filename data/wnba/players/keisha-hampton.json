@@ -34,12 +34,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 27,
       "min": 6.74,
@@ -66,12 +66,12 @@
       "season": 2016,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 2.0,

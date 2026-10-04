@@ -34,12 +34,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 27,
       "min": 12.52,
@@ -66,12 +66,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 16.65,
@@ -98,12 +98,12 @@
       "season": 2016,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 5,
       "min": 10.4,
@@ -130,12 +130,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 3,
       "min": 22.67,
@@ -162,12 +162,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 29.88,
@@ -194,12 +194,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 3,
       "min": 27.67,
@@ -226,12 +226,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 29.88,
@@ -258,12 +258,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 8,
       "min": 30.75,
@@ -290,12 +290,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 3,
       "min": 29.67,
@@ -322,12 +322,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 32,
       "min": 27.41,
@@ -354,12 +354,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 5,
       "min": 33.4,
@@ -386,12 +386,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 25.65,
@@ -418,12 +418,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 25.71,
@@ -450,12 +450,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 27.29,
@@ -482,12 +482,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 27.0,

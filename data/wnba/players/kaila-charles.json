@@ -105,12 +105,12 @@
       "season": 2025,
       "season_type": 2,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": null,
+        "full_name": "Dallas Wings and Golden State Valkyries",
+        "abbreviation": null,
+        "city": null,
+        "name": "Dallas Wings and Golden State Valkyries",
+        "conference": null
       },
       "games_played": 35,
       "min": 17.6,
@@ -169,12 +169,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 30,
       "min": 16.33,
@@ -201,12 +201,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 4,
       "min": 13.25,
@@ -233,12 +233,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 21,
       "min": 17.9,
@@ -265,12 +265,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 11.71,

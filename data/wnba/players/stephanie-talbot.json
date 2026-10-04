@@ -105,12 +105,12 @@
       "season": 2025,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": null,
+        "full_name": "Golden State Valkyries and New York Liberty",
+        "abbreviation": null,
+        "city": null,
+        "name": "Golden State Valkyries and New York Liberty",
+        "conference": null
       },
       "games_played": 38,
       "min": 14.24,
@@ -169,12 +169,12 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 37,
       "min": 16.22,
@@ -201,12 +201,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 16.12,
@@ -233,12 +233,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 6,
       "min": 21.33,
@@ -265,12 +265,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 30,
       "min": 17.93,
@@ -297,12 +297,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 17.0,
@@ -329,12 +329,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 17.0,
@@ -361,12 +361,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 15.0,
@@ -393,12 +393,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 31,
       "min": 14.61,
@@ -425,12 +425,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 27.0,
@@ -457,12 +457,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 17.91,
@@ -489,12 +489,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 5.75,

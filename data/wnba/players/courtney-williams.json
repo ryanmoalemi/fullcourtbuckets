@@ -233,12 +233,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 40,
       "min": 30.1,
@@ -265,12 +265,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 32.5,
@@ -297,12 +297,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 27.94,
@@ -329,12 +329,12 @@
       "season": 2022,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 12,
       "min": 27.08,
@@ -361,12 +361,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 32,
       "min": 34.41,
@@ -393,12 +393,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 20,
       "min": 30.5,
@@ -425,12 +425,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 29.06,
@@ -457,12 +457,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 8,
       "min": 34.38,
@@ -489,12 +489,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 30,
       "min": 27.07,
@@ -521,12 +521,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 33.0,
@@ -553,12 +553,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 26.0,
@@ -585,12 +585,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 31.0,

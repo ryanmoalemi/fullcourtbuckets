@@ -66,12 +66,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 17.76,
@@ -98,12 +98,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 23.0,
@@ -258,12 +258,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 25.52,
@@ -290,12 +290,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 30.88,
@@ -322,12 +322,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 2,
       "min": 35.0,
@@ -354,12 +354,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 32,
       "min": 29.78,
@@ -386,12 +386,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 37.33,
@@ -418,12 +418,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 28.88,
@@ -450,12 +450,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 28.0,
@@ -482,12 +482,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 29.06,
@@ -514,12 +514,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 7,
       "min": 28.71,
@@ -546,12 +546,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 33,
       "min": 32.48,
@@ -578,12 +578,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 32.67,
@@ -610,12 +610,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 34,
       "min": 23.76,
@@ -642,12 +642,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 34.33,

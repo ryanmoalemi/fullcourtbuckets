@@ -169,11 +169,11 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 5,
-        "full_name": "Washington Mystics",
-        "abbreviation": "WSH",
-        "city": "Washington",
-        "name": "Mystics",
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
         "conference": "Eastern Conference"
       },
       "games_played": 35,

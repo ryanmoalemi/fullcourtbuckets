@@ -98,12 +98,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 38,
       "min": 17.74,
@@ -130,12 +130,12 @@
       "season": 2022,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 35,
       "min": 26.86,
@@ -162,12 +162,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 21.32,
@@ -194,12 +194,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 27.06,

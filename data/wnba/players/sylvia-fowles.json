@@ -450,12 +450,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 9,
       "min": 36.11,
@@ -482,12 +482,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 32,
       "min": 31.28,
@@ -514,12 +514,12 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 35.5,
@@ -546,12 +546,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 25,
       "min": 31.12,
@@ -578,12 +578,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 34.56,
@@ -610,12 +610,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 31.97,
@@ -642,12 +642,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
       },
       "games_played": 24,
       "min": 28.83,

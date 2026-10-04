@@ -169,12 +169,12 @@
       "season": 2024,
       "season_type": 3,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 10.0,
@@ -201,12 +201,12 @@
       "season": 2023,
       "season_type": 3,
       "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 3.0,

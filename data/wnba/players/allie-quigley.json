@@ -610,12 +610,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 4.0,

@@ -34,11 +34,11 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
         "conference": "Western Conference"
       },
       "games_played": 28,

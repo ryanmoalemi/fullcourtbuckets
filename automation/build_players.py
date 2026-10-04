@@ -21,6 +21,17 @@ import team_names
 from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
+ROBOTS_TXT = (
+    'User-agent: *\n'
+    'Allow: /\n'
+    'Disallow: /review/\n'
+    '\n'
+    'Sitemap: https://fullcourtbuckets.com/sitemap.xml\n'
+)
+SITEMAP_INDEX_LOCS = (
+    '/player-sitemap.xml',
+    '/pages-sitemap.xml',
+)
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 # Former ADU articles. They stay deleted so those URLs 404. Do not recreate the pages or stubs.
@@ -261,7 +272,7 @@ def document(title, description, route, body, structured=None, include_standings
     schema=json.dumps(structured or {},ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">\n{GA4_TAG}\n{ADSENSE_TAG}\n<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="{esc(robots)}"><link rel="canonical" href="{canonical}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="website"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{canonical}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><script type="application/ld+json">{schema}</script><script src="/assets/site-nav.js" defer></script><script src="/wnba/assets/players.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{header(route, menu)}<main id="content" class="wrap">{body}</main>{footer(include_standings)}</body></html>'''
 
-def stats_table(profile, kind):
+def stats_table(profile, kind, highlight_year=None):
     rows=sorted([r for r in profile.get('season_stats',[]) if r['season_type']==kind],key=lambda r:-r['season'])
     if not rows:
         return ''
@@ -269,7 +280,9 @@ def stats_table(profile, kind):
     cells=[]
     for r in rows:
         cols=''.join(f'<td>{value(r.get(key),key=="games_played")}</td>' for key,_ in COLUMNS)
-        cells.append(f'<tr data-season="{r["season"]}"><th scope="row">{r["season"]}</th><td class="team-cell">{esc(tname(r.get("team")))}</td>{cols}</tr>')
+        mark = kind == 2 and highlight_year is not None and r.get('season') == highlight_year
+        klass = ' class="rookie-year"' if mark else ''
+        cells.append(f'<tr{klass} data-season="{r["season"]}"><th scope="row">{r["season"]}</th><td class="team-cell">{esc(tname(r.get("team")))}</td>{cols}</tr>')
     heads=''.join(f'<th scope="col"><abbr title="{esc({"GP":"Games played","MIN":"Minutes per game","PTS":"Points per game","REB":"Rebounds per game","AST":"Assists per game","STL":"Steals per game","BLK":"Blocks per game","TO":"Turnovers per game","FG%":"Field goal percentage","3P%":"Three-point percentage","FT%":"Free throw percentage"}[text])}">{text}</abbr></th>' for _,text in COLUMNS)
     return f'<div class="competition" data-competition="{kind}"><h3>{label}</h3><div class="table-scroll" role="region" aria-label="{label} season statistics" tabindex="0"><table><caption>{label}: per-game averages, except games played and shooting percentages.</caption><thead><tr><th scope="col">YEAR</th><th scope="col">TEAM</th>{heads}</tr></thead><tbody>{"".join(cells)}</tbody></table></div></div>'
 
@@ -330,9 +343,136 @@ def faq_stat_kind(question: str) -> str:
         return ''
     if 'last game' in text:
         return 'last_game'
+    if 'rookie year' in text:
+        return 'rookie'
+    if 'three-point percentage' in text or '3-point percentage' in text:
+        return 'three_point'
+    if 'how many years' in text and 'wnba' in text:
+        return 'years'
+    if text.startswith('which teams') or 'teams has' in text:
+        return 'teams'
+    if 'fiba' in text:
+        return 'fiba'
     if 'points per game' in text or 'tracked game' in text or re.search(r'\bstats\b', text):
         return 'season'
     return ''
+
+
+def regular_season_years(profile) -> list[int]:
+    years = set()
+    for row in profile.get('season_stats') or []:
+        if not isinstance(row, dict) or row.get('season_type') != 2:
+            continue
+        year = row.get('season')
+        if isinstance(year, bool) or not isinstance(year, int):
+            continue
+        years.add(year)
+    return sorted(years)
+
+
+def years_faq_answer(profile, name: str) -> str:
+    """Count of regular-season rows. A gap is named. This is not a career points total."""
+    years = regular_season_years(profile)
+    if not years:
+        return ''
+    count = len(years)
+    noun = 'regular season' if count == 1 else 'regular seasons'
+    gaps = [year for year in range(years[0], years[-1] + 1) if year not in years]
+    if count <= 4:
+        sentence = f'{name} has {count} {noun} on this page: {_listed([str(year) for year in years])}.'
+    else:
+        sentence = f'{name} has {count} {noun} on this page, from {years[0]} to {years[-1]}.'
+    if gaps:
+        listed = _listed([str(year) for year in gaps])
+        verb = 'is' if len(gaps) == 1 else 'are'
+        sentence += f' {listed} {verb} not listed.'
+    return sentence
+
+
+def three_point_faq_answer(profile, name: str) -> str:
+    """The same 3P% the season table prints for the headline row."""
+    row = headline(profile)
+    if not row:
+        return ''
+    pct = value(row.get('fg3_pct'))
+    year = row.get('season')
+    if pct == '-' or not year:
+        return ''
+    competition = 'regular season' if row.get('season_type') == 2 else 'playoffs'
+    return f"In the {year} {competition}, {name}'s three-point percentage on this page is {pct}."
+
+
+def rookie_faq_answer(profile, name: str) -> str:
+    """First regular-season year after coverage starts, so a pre-2008 career is not guessed."""
+    years = regular_season_years(profile)
+    if not years:
+        return ''
+    first = years[0]
+    coverage = profile.get('coverage_start')
+    if not isinstance(coverage, int) or isinstance(coverage, bool):
+        coverage = 2008
+    if first <= coverage:
+        return ''
+    rows = [
+        row for row in profile.get('season_stats') or []
+        if isinstance(row, dict) and row.get('season') == first and row.get('season_type') == 2
+    ]
+    games = plain_games(rows[0].get('games_played')) if len(rows) == 1 else None
+    sentence = f'The first regular-season row for {name} is {first}.'
+    if games:
+        sentence += f' She played {games} games in that row.'
+    sentence += ' That row is highlighted in the regular-season table.'
+    return sentence
+
+
+def teams_faq_answer(profile, name: str) -> str:
+    """Team names printed on the regular-season rows, plus the current team when it differs."""
+    names = []
+    rows = [row for row in profile.get('season_stats') or [] if isinstance(row, dict) and row.get('season_type') == 2]
+    for row in sorted(rows, key=lambda item: item.get('season') or 0):
+        team = tname(row.get('team'))
+        if team and team != 'Team not listed' and team not in names:
+            names.append(team)
+    if not names:
+        return ''
+    sentence = f'The regular-season table lists {_listed([f"the {team}" for team in names])} for {name}.'
+    current = profile.get('current_team')
+    if profile.get('active_in_provider_feed') is True and isinstance(current, dict):
+        current_name = tname(current)
+        if current_name and current_name != 'Team not listed' and current_name not in names:
+            sentence += f' Her current team on this page is the {current_name}.'
+    return sentence
+
+
+def fiba_faq_answer(profile, name: str, root: Path) -> str:
+    """Link the FIBA story only when that story names this player."""
+    path = Path(root) / 'news' / 'fiba-womens-basketball-world-cup-2026' / 'index.html'
+    if not path.is_file():
+        return ''
+    last = name.split()[-1] if name else ''
+    if not last or last not in path.read_text(encoding='utf-8'):
+        return ''
+    return (
+        f'Full Court Buckets lists {name} on the Team USA roster in '
+        '<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>.'
+    )
+
+
+_FAQ_ANCHOR = re.compile(r'<a href="(/[^"]+)">([^<]+)</a>')
+
+
+def faq_answer_html(answer: str) -> str:
+    """Escape answer text. Keep same-tab links that the builder inserted."""
+    if '<a href="' not in answer:
+        return esc(answer)
+    parts = []
+    pos = 0
+    for match in _FAQ_ANCHOR.finditer(answer):
+        parts.append(esc(answer[pos:match.start()]))
+        parts.append(f'<a href="{esc(match.group(1))}">{esc(match.group(2))}</a>')
+        pos = match.end()
+    parts.append(esc(answer[pos:]))
+    return ''.join(parts)
 
 
 def _listed(bits: list[str]) -> str:
@@ -485,6 +625,13 @@ def faq_table_mismatches(profile, pairs) -> list[str]:
         elif kind == 'last_game':
             if re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\b', answer):
                 problems.append(_faq_conflict(slug, 'game table has no last-game date', answer))
+        elif kind == 'three_point' and row:
+            pct = value(row.get('fg3_pct'))
+            if pct != '-' and pct not in answer:
+                problems.append(_faq_conflict(slug, f'table says {pct} three-point percentage', answer))
+            year = row.get('season')
+            if year and str(year) not in answer:
+                problems.append(_faq_conflict(slug, f'table says season {year}', answer))
     return problems
 
 
@@ -534,6 +681,7 @@ def faq_answer_pairs(profile, root: Path):
     if not raw:
         return []
     name = player_name(profile) or 'This player'
+    slug = profile.get('slug') or 'player'
     pairs = []
     for question, answer in raw:
         kind = faq_stat_kind(question)
@@ -541,6 +689,18 @@ def faq_answer_pairs(profile, root: Path):
             answer = season_faq_answer(profile, name)
         elif kind == 'last_game':
             answer = last_game_answer(profile, name)
+        elif kind == 'years':
+            answer = years_faq_answer(profile, name)
+        elif kind == 'three_point':
+            answer = three_point_faq_answer(profile, name)
+        elif kind == 'rookie':
+            answer = rookie_faq_answer(profile, name)
+        elif kind == 'teams':
+            answer = teams_faq_answer(profile, name)
+        elif kind == 'fiba':
+            answer = fiba_faq_answer(profile, name, root)
+        if kind in {'years', 'three_point', 'rookie', 'teams', 'fiba'} and not answer:
+            raise BuildError(f'{slug} FAQ could not be answered from the page data: {question}')
         pairs.append((question, answer))
     assert_faq_matches_tables(profile, pairs)
     return pairs
@@ -557,7 +717,7 @@ def faq_section(profile, root=None):
     if not pairs:
         return '', None
     items = ''.join(
-        f'<div class="faq-item"><h3>{esc(q)}</h3><p>{esc(a)}</p></div>'
+        f'<div class="faq-item"><h3>{esc(q)}</h3><p>{faq_answer_html(a)}</p></div>'
         for q, a in pairs
     )
     block = (
@@ -773,7 +933,7 @@ def _season_line_2026(profile: dict):
 
 
 def _roster_stats(root, player: dict) -> dict:
-    empty = {'number': '', 'position': '', 'pts': None, 'reb': None, 'ast': None}
+    empty = {'number': '', 'position': '', 'pts': None, 'reb': None, 'ast': None, 'min': None, 'min_raw': None}
     if root is None:
         return empty
     path = Path(root) / 'data' / 'wnba' / 'players' / f'{player["slug"]}.json'
@@ -791,6 +951,8 @@ def _roster_stats(root, player: dict) -> dict:
         'pts': plain_average((line or {}).get('pts')) if line else None,
         'reb': plain_average((line or {}).get('reb')) if line else None,
         'ast': plain_average((line or {}).get('ast')) if line else None,
+        'min': plain_average((line or {}).get('min')) if line else None,
+        'min_raw': (line or {}).get('min') if line and plain_average((line or {}).get('min')) else None,
     }
 
 
@@ -875,7 +1037,16 @@ def profile_page(profile, root=None, linking=None, menu=None):
     if slug == 'angel-reese' and root is not None and (Path(root) / 'data' / 'reese-cards.json').is_file():
         import build_reese_cards
         overview += build_reese_cards.PLAYER_CALLOUT
-    tablehtml=stats_table(profile,2)+stats_table(profile,3)
+    highlight_year = None
+    faq_root = root or Path(__file__).resolve().parents[1]
+    try:
+        raw_faq = curated_faq_pairs(profile, faq_root)
+    except BuildError:
+        raw_faq = []
+    if any(faq_stat_kind(question) == 'rookie' for question, _answer in raw_faq):
+        listed_years = regular_season_years(profile)
+        highlight_year = listed_years[0] if listed_years else None
+    tablehtml=stats_table(profile,2,highlight_year)+stats_table(profile,3)
     controls=''
     if tablehtml:
         kinds=sorted({r['season_type'] for r in stats})
@@ -1012,8 +1183,11 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         record = f'<p>{" ".join(bits)}</p>'
     rows = []
     leaders = []
+    minute_rows = []
     for player in slot['players']:
         stats = _roster_stats(root, player)
+        if isinstance(stats.get('min_raw'), (int, float)) and not isinstance(stats.get('min_raw'), bool):
+            minute_rows.append({'name': player['name'], 'slug': player['slug'], **stats})
         rows.append(
             '<tr>'
             f'<td>{_stat_cell(stats["number"])}</td>'
@@ -1033,22 +1207,35 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         '<th scope="col">PPG</th><th scope="col">RPG</th><th scope="col">APG</th></tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
     )
+    lines = []
+    for key, label in (('pts', 'Points'), ('reb', 'Rebounds'), ('ast', 'Assists')):
+        scored = [row for row in leaders if row.get(key) is not None]
+        if not scored:
+            continue
+        best = max(float(row[key]) for row in scored)
+        tied = [row for row in scored if float(row[key]) == best]
+        names = ', '.join(links.inline_link(row['name'], '/wnba/'+row['slug']+'/') for row in tied)
+        lines.append(f'<li>{label}: {names} ({tied[0][key]} per game).</li>')
+    minute_rows.sort(key=lambda row: (-float(row['min_raw']), row['name'].casefold()))
+    chosen = []
+    for row in minute_rows:
+        if len(chosen) >= 5 and float(row['min_raw']) < float(chosen[-1]['min_raw']):
+            break
+        chosen.append(row)
+    minute_html = ''
+    if chosen:
+        bits = [
+            f'{links.inline_link(row["name"], "/wnba/"+row["slug"]+"/")} ({row["min"]} per game)'
+            for row in chosen
+        ]
+        minute_html = f'<p>Most minutes: {_listed(bits)}.</p>'
     leader_html = ''
-    if leaders:
-        lines = []
-        for key, label in (('pts', 'Points'), ('reb', 'Rebounds'), ('ast', 'Assists')):
-            scored = [row for row in leaders if row.get(key) is not None]
-            if not scored:
-                continue
-            best = max(float(row[key]) for row in scored)
-            tied = [row for row in scored if float(row[key]) == best]
-            names = ', '.join(links.inline_link(row['name'], '/wnba/'+row['slug']+'/') for row in tied)
-            lines.append(f'<li>{label}: {names} ({tied[0][key]} per game).</li>')
-        if lines:
-            leader_html = (
-                '<section class="section" id="leaders"><p class="eyebrow">2026 regular season</p>'
-                f'<h2>Team leaders</h2><ul class="teammate-list">{"".join(lines)}</ul></section>'
-            )
+    if lines or minute_html:
+        list_html = f'<ul class="teammate-list">{"".join(lines)}</ul>' if lines else ''
+        leader_html = (
+            '<section class="section" id="leaders"><p class="eyebrow">2026 regular season</p>'
+            f'<h2>Team leaders</h2>{minute_html}{list_html}</section>'
+        )
     count=len(slot['players'])
     noun='player' if count == 1 else 'players'
     body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
@@ -1127,6 +1314,317 @@ def _sitemap_document(entries: list) -> str:
     return '\n'.join(lines) + '\n'
 
 
+def _sitemap_index() -> str:
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for path in SITEMAP_INDEX_LOCS:
+        lines.append('  <sitemap>')
+        lines.append(f'    <loc>{BASE}{path}</loc>')
+        lines.append('  </sitemap>')
+    lines.append('</sitemapindex>')
+    return '\n'.join(lines) + '\n'
+
+
+def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: list, page_rows: list, player_index: dict) -> str:
+    """HTML sections in the approved order. Every XML loc is linked, with leftovers appended."""
+    page_set = {path for path, _last in page_rows}
+    labels = {}
+
+    def link_list(pairs: list[tuple[str, str]]) -> str:
+        items = []
+        for href, label in pairs:
+            if href not in page_set:
+                continue
+            labels[href] = label
+            items.append(f'<li><a href="{esc(href)}">{esc(label)}</a></li>')
+        return f'<ul class="sitemap-list">{"".join(items)}</ul>' if items else ''
+
+    main = link_list([
+        ('/', 'Home'),
+        ('/standings/', 'Standings'),
+        ('/news/', 'News'),
+        ('/wnba/', 'Players A-Z'),
+        ('/wnba/teams/', 'Teams'),
+    ])
+    sections = []
+    if main:
+        sections.append(f'<section class="section" id="sitemap-main"><h2>Main</h2>{main}</section>')
+
+    ranks = {}
+    standings_path = root / 'api' / 'wnba-standings'
+    if standings_path.is_file():
+        try:
+            table = json.loads(standings_path.read_text(encoding='utf-8-sig'))
+        except (OSError, json.JSONDecodeError):
+            table = {}
+        for team in table.get('teams') or []:
+            if isinstance(team, dict) and team.get('name'):
+                ranks[(str(team.get('conference') or ''), team['name'])] = team.get('conferenceRank') or 99
+    grouped = {'Eastern Conference': [], 'Western Conference': [], 'Other': []}
+    for slot in linking['by_id'].values():
+        href = links.team_href(slot)
+        if href not in page_set:
+            continue
+        group = team_hub.conference_group(slot.get('conference') or '') or 'Other'
+        grouped.setdefault(group, []).append(slot)
+    team_html = []
+    for group in ('Eastern Conference', 'Western Conference', 'Other'):
+        slots = grouped.get(group) or []
+        if not slots:
+            continue
+        conference_key = 'Eastern' if group.startswith('Eastern') else 'Western' if group.startswith('Western') else ''
+
+        def sort_key(slot, conference_key=conference_key):
+            return (ranks.get((conference_key, slot['full_name']), 99), slot['full_name'].casefold())
+
+        slots.sort(key=sort_key)
+        pairs = [(links.team_href(slot), slot['full_name']) for slot in slots]
+        team_html.append(f'<h3>{esc(group)}</h3>{link_list(pairs)}')
+    if team_html:
+        sections.append(f'<section class="section" id="sitemap-teams"><h2>Teams</h2>{"".join(team_html)}</section>')
+
+    news_pairs = []
+    ordered = sorted(articles, key=lambda article: str(article.get('date') or ''), reverse=True)
+    for article in ordered:
+        try:
+            slug = links.article_slug(article)
+        except ValueError:
+            continue
+        href = f'/news/{slug}/'
+        if href not in page_set:
+            continue
+        news_pairs.append((href, str(article.get('title') or slug)))
+    if '/wnba/couples/' in page_set:
+        news_pairs.append(('/wnba/couples/', 'WNBA Couples'))
+    news = link_list(news_pairs)
+    if news:
+        sections.append(f'<section class="section" id="sitemap-news"><h2>News</h2>{news}</section>')
+
+    names = {}
+    for entry in player_index.get('players') or []:
+        slug = entry.get('slug')
+        if slug:
+            names[f'/wnba/{slug}/'] = str(entry.get('name') or slug)
+    players = []
+    for path, _last in player_rows:
+        label = names.get(path) or path.strip('/').split('/')[-1]
+        labels[path] = label
+        players.append((label, path))
+    players.sort(key=lambda item: item[0].casefold())
+    by_letter = {}
+    for label, path in players:
+        letter = next((char.upper() for char in label if char.isalpha()), '#')
+        by_letter.setdefault(letter, []).append((path, label))
+    if by_letter:
+        jump = ''.join(
+            f'<a href="#players-{esc(letter.casefold())}">{esc(letter)}</a>'
+            for letter in by_letter
+        )
+        blocks = []
+        for letter, rows in by_letter.items():
+            items = ''.join(f'<li><a href="{esc(path)}">{esc(label)}</a></li>' for path, label in rows)
+            blocks.append(f'<h3 id="players-{esc(letter.casefold())}">{esc(letter)}</h3><ul class="sitemap-list">{items}</ul>')
+        sections.append(
+            f'<section class="section" id="sitemap-players"><h2>Players A-Z</h2>'
+            f'<p class="sitemap-jump">{jump}</p>{"".join(blocks)}</section>'
+        )
+
+    about = (
+        link_list([
+            ('/about/', 'About'),
+            ('/how-we-make-full-court-buckets/', 'How we make Full Court Buckets'),
+        ])
+        + '<h3>Authors</h3>'
+        + link_list([
+            ('/authors/ryan-moalemi/', 'Ryan Moalemi'),
+            ('/authors/ryan-moalemi/ryans-angel-reese-cards/', "Ryan's Angel Reese cards"),
+        ])
+        + link_list([
+            ('/contact/', 'Contact'),
+            ('/privacy/', 'Privacy'),
+            ('/terms/', 'Terms'),
+        ])
+    )
+    if '<a ' in about:
+        sections.append(f'<section class="section" id="sitemap-about"><h2>About FCB</h2>{about}</section>')
+
+    body = ''.join(sections)
+    linked = set(re.findall(r'href="([^"]+)"', body))
+    missing = []
+    for path, _last in list(player_rows) + list(page_rows):
+        if path not in linked:
+            missing.append(path)
+            labels.setdefault(path, 'Site map' if path == '/sitemap/' else path)
+    if missing:
+        extras = ''.join(f'<li><a href="{esc(path)}">{esc(labels.get(path, path))}</a></li>' for path in missing)
+        body += f'<section class="section" id="also-listed"><h2>Also listed</h2><ul class="sitemap-list">{extras}</ul></section>'
+    return body
+
+
+def html_sitemap_page(root: Path, menu, linking: dict, articles: list, player_rows: list, page_rows: list, player_index: dict) -> str:
+    sections = _sitemap_sections(root, linking, articles, player_rows, page_rows, player_index)
+    body = (
+        '<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Site map</span></div>'
+        '<section class="directory-header"><p class="eyebrow">Full Court Buckets</p>'
+        '<h1>Site map</h1>'
+        '<p>Every indexable page, taken from the same list as the XML sitemaps.</p></section>'
+        + sections
+    )
+    page = document(
+        'Site map | Full Court Buckets',
+        'HTML site map of Full Court Buckets: home, standings, news, teams, WNBA players, and about pages.',
+        '/sitemap/',
+        body,
+        {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'WebPage',
+                    'name': 'Site map',
+                    'url': BASE + '/sitemap/',
+                    'description': 'HTML site map of Full Court Buckets: home, standings, news, teams, WNBA players, and about pages.',
+                    'isPartOf': {'@type': 'WebSite', 'name': 'Full Court Buckets', 'url': BASE + '/'},
+                },
+                {
+                    '@type': 'BreadcrumbList',
+                    'itemListElement': [
+                        {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
+                        {'@type': 'ListItem', 'position': 2, 'name': 'Site map', 'item': BASE + '/sitemap/'},
+                    ],
+                },
+            ],
+        },
+        has_standings(root),
+        menu,
+        robots='index,follow',
+    )
+    return site_nav.install(page, '/sitemap/', menu)
+
+
+def missing_data_markdown(root: Path) -> str:
+    """Facts the approved Q&As did not use because they are not in the files."""
+    lines = [
+        '# Missing data',
+        '',
+        'Approved questions that were skipped, or answered only as far as the files go.',
+        'Nothing here was guessed from memory.',
+        '',
+    ]
+
+    def profile(slug: str) -> dict:
+        path = root / 'data' / 'wnba' / 'players' / f'{slug}.json'
+        if not path.is_file():
+            return {}
+        try:
+            return json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            return {}
+
+    aja = profile('aja-wilson')
+    lines.append("## A'ja Wilson")
+    lines.append('')
+    if aja.get('career_totals_complete') is not True:
+        lines.append(
+            '- Career points total: `career_totals_complete` is false and the season rows are per-game averages. '
+            'Averages were not turned into a career total.'
+        )
+    plum_faq = root / 'data' / 'wnba' / 'faq' / 'kelsey-plum.json'
+    clark_faq = root / 'data' / 'wnba' / 'faq' / 'caitlin-clark.json'
+    injury_sources = False
+    for path in (plum_faq, clark_faq):
+        if not path.is_file():
+            continue
+        try:
+            data = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for item in data.get('items') or []:
+            if 'injured' in str(item.get('question') or '').casefold() and item.get('sources'):
+                injury_sources = True
+    if not injury_sources and 'injury' not in json.dumps(aja).casefold():
+        lines.append(
+            "- Is A'ja Wilson injured?: the Plum and Clark pages ask an injury question, but those items have empty `sources` "
+            "and the player file has no injury status. The question was not copied."
+        )
+    lines.append('')
+    lines.append('## Kelsey Plum')
+    lines.append('')
+    plum = profile('kelsey-plum')
+    lines.append(
+        '- Championships: her player file has no championship field, and the FAQ file has no official citation for a title count. '
+        'The question was skipped.'
+    )
+    games = [game for game in plum.get('recent_completed_games') or [] if isinstance(game, dict)]
+    latest = max(games, key=lambda game: str(game.get('date') or '')) if games else None
+    if not latest or not isinstance(latest.get('pts'), (int, float)) or isinstance(latest.get('pts'), bool):
+        when = (latest or {}).get('date') or 'none on file'
+        lines.append(
+            f'- Last game points: the newest completed game ({when}) does not have a points total. '
+            'The A\'ja Wilson and Caitlin Clark last-game answers are used only when the game table has points. This one was skipped.'
+        )
+    season_teams = []
+    for row in plum.get('season_stats') or []:
+        if isinstance(row, dict) and row.get('season_type') == 2:
+            team = tname(row.get('team'))
+            if team not in season_teams:
+                season_teams.append(team)
+    current = tname(plum.get('current_team') if isinstance(plum.get('current_team'), dict) else None)
+    if season_teams and current and current not in season_teams:
+        listed = ', '.join(season_teams)
+        lines.append(
+            f'- Teams played for: the regular-season rows name only {listed}, while the current team field is {current}. '
+            'The FAQ repeats those names and does not add clubs that are not in the file.'
+        )
+    lines.append('')
+    lines.append('## Caitlin Clark')
+    lines.append('')
+    card_hits = list((root / 'data').glob('*clark*card*')) + list((root / 'content').glob('*clark*card*'))
+    if not card_hits:
+        lines.append(
+            '- Card content: the only card collection on file is `data/reese-cards.json` (Ryan\'s Angel Reese cards). '
+            'No Caitlin Clark card page or card count is stored, so no card link was added.'
+        )
+    lines.append('')
+    lines.append('## Team pages')
+    lines.append('')
+    teams_path = root / 'data' / 'wnba' / 'teams.json'
+    coach = False
+    if teams_path.is_file():
+        try:
+            blob = teams_path.read_text(encoding='utf-8').casefold()
+        except OSError:
+            blob = ''
+        coach = 'head coach' in blob or '"owner"' in blob
+    if not coach:
+        lines.append(
+            '- Head coach and owner: `data/wnba/teams.json` has no coach or owner fields, and no official source file is in the repo. '
+            'Those fields were not added. Most minutes is a separate line, taken from 2026 regular-season minutes on the roster.'
+        )
+    lines.append('')
+    lines.append('## Standings')
+    lines.append('')
+    try:
+        import build_standings
+        _clock, note = build_standings.standings_refresh_clock()
+        _length, length_note = ('', '')
+        data_path = root / 'api' / 'wnba-standings'
+        if data_path.is_file():
+            table = json.loads(data_path.read_text(encoding='utf-8-sig'))
+            _length, length_note = build_standings.season_length_answer(table)
+        if note:
+            lines.append(f'- {note}')
+        if length_note:
+            lines.append(f'- {length_note}')
+        if not note and not length_note:
+            lines.append('- No standings question was skipped.')
+    except Exception as exc:
+        lines.append(f'- Standings notes could not be read: {exc}')
+    lines.append('')
+    return '\n'.join(lines).rstrip() + '\n'
+
+
 def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list, articles: list):
     """One list of indexable players and one list of every other indexable page."""
     newest = ''
@@ -1152,6 +1650,10 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
     pages = []
 
     def add_page(relative, loc, lastmod):
+        # The HTML sitemap is written from these rows, so it cannot be read yet.
+        if loc == '/sitemap/':
+            pages.append((loc, lastmod or newest))
+            return
         if not page_indexable(_stored_html(root, files, relative)):
             return
         pages.append((loc, lastmod or newest))
@@ -1174,6 +1676,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('standings/index.html', '/standings/'),
         ('wnba/teams/index.html', '/wnba/teams/'),
         ('wnba/couples/index.html', '/wnba/couples/'),
+        ('sitemap/index.html', '/sitemap/'),
     ]
     collection_route = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
     collection_day = ''
@@ -1312,14 +1815,14 @@ def build(root: Path):
     standings_path=root/'standings'/'index.html'
     standings_data=root/'api'/'wnba-standings'
     if standings_path.is_file() and standings_data.is_file():
-        original=standings_path.read_text(encoding='utf-8')
-        updated=site_nav.install(
-            links.apply_standings(original, linking, json.loads(standings_data.read_text(encoding='utf-8-sig'))),
+        import build_standings
+        table=json.loads(standings_data.read_text(encoding='utf-8-sig'))
+        rendered=build_standings.render_page(root, table)
+        files['standings/index.html']=site_nav.install(
+            links.apply_standings(rendered, linking, table),
             '/standings/',
             menu,
         )
-        if updated != original:
-            files['standings/index.html']=updated
     elif standings_path.is_file():
         original=standings_path.read_text(encoding='utf-8')
         updated=site_nav.install(original, '/standings/', menu)
@@ -1339,11 +1842,6 @@ def build(root: Path):
         files[build_reese_cards.RELATIVE] = collection_page
     files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
     files.update(site_nav.install_tree(root, menu, set(files)))
-    robots=root/'robots.txt'
-    robots_text=robots.read_text() if robots.exists() else 'User-agent: *\nAllow: /\n'
-    sitemap='Sitemap: '+BASE+'/player-sitemap.xml'
-    if sitemap not in robots_text:
-        files['robots.txt']=robots_text.rstrip()+'\n'+sitemap+'\n'
     report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':'BALLDONTLIE','coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
     articles=links.load_articles(root)
@@ -1353,7 +1851,10 @@ def build(root: Path):
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)
     files['player-sitemap.xml'] = _sitemap_document(player_rows)
     files['pages-sitemap.xml'] = _sitemap_document(page_rows)
-    files['sitemap.xml'] = _sitemap_document(sorted(player_rows + page_rows))
+    files['sitemap.xml'] = _sitemap_index()
+    files['sitemap/index.html'] = html_sitemap_page(root, menu, linking, articles, player_rows, page_rows, published_index)
+    files['docs/missing-data.md'] = missing_data_markdown(root)
+    files['robots.txt'] = ROBOTS_TXT
     links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0

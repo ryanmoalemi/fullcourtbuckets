@@ -41,12 +41,12 @@
       "season": 2026,
       "season_type": 2,
       "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
+        "id": null,
+        "full_name": "Toronto Tempo and Phoenix Mercury",
+        "abbreviation": null,
+        "city": null,
+        "name": "Toronto Tempo and Phoenix Mercury",
+        "conference": null
       },
       "games_played": 42,
       "min": 15.36,

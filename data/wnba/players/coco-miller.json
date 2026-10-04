@@ -34,12 +34,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 17.35,
@@ -66,12 +66,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 8,
       "min": 8.0,
@@ -98,12 +98,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 27,
       "min": 7.33,
@@ -130,12 +130,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 25.57,
@@ -162,12 +162,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 11.97,
@@ -194,12 +194,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 6.5,
@@ -226,12 +226,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 20.88,

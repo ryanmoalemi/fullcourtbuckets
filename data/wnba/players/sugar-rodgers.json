@@ -162,12 +162,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 31,
       "min": 19.61,
@@ -194,12 +194,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 25.58,
@@ -226,12 +226,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 18.0,
@@ -258,12 +258,12 @@
       "season": 2016,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 30.55,
@@ -290,12 +290,12 @@
       "season": 2016,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 1,
       "min": 24.0,
@@ -322,12 +322,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 33,
       "min": 18.73,
@@ -354,12 +354,12 @@
       "season": 2015,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 6,
       "min": 17.0,
@@ -386,12 +386,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 16.59,
@@ -418,11 +418,11 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 28,
@@ -450,11 +450,11 @@
       "season": 2013,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 5,

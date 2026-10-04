@@ -34,12 +34,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 14.69,
@@ -66,12 +66,12 @@
       "season": 2021,
       "season_type": 3,
       "team": {
-        "id": 1,
-        "full_name": "New York Liberty",
-        "abbreviation": "NY",
-        "city": "New York",
-        "name": "Liberty",
-        "conference": "Eastern Conference"
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 7.8,

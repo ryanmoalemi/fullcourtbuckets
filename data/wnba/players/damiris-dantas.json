@@ -130,12 +130,12 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 24,
       "min": 23.83,
@@ -162,12 +162,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 22,
       "min": 26.64,
@@ -194,12 +194,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 34.25,
@@ -226,12 +226,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 26,
       "min": 25.65,
@@ -258,12 +258,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 28.0,
@@ -290,11 +290,11 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
         "conference": "Eastern Conference"
       },
       "games_played": 34,
@@ -322,12 +322,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 30,
       "min": 21.83,
@@ -354,12 +354,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 3,
       "min": 8.33,

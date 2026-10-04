@@ -34,11 +34,11 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 33,
@@ -66,11 +66,11 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 9,
@@ -98,11 +98,11 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 34,
@@ -130,11 +130,11 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
         "conference": "Western Conference"
       },
       "games_played": 8,
@@ -162,12 +162,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 29.24,
@@ -194,12 +194,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
       },
       "games_played": 5,
       "min": 30.4,
@@ -226,12 +226,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 30.38,
@@ -258,12 +258,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 5,
       "min": 26.8,
@@ -290,12 +290,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
       },
       "games_played": 26,
       "min": 33.15,
@@ -322,12 +322,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "Detroit Shock",
+        "abbreviation": "TUL",
+        "city": "Detroit",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 9,
       "min": 32.56,

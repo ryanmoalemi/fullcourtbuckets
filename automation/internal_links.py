@@ -360,7 +360,14 @@ def _apply_featured_media(text: str, article: dict) -> str:
     """Put the featured story's lead photo and credit on the hero card."""
     photo = _featured_photo(article)
     credit = _featured_credit(article)
-    text = re.sub(r'<img class="feature-photo" id="featured-image"[^>]*>', '', text, count=1)
+    text = re.sub(
+        r'(?:<picture>\s*(?:<source\b[^>]*>\s*)*)?'
+        r'<img class="feature-photo" id="featured-image"[^>]*>'
+        r'(?:\s*</picture>)?',
+        '',
+        text,
+        count=1,
+    )
     text = re.sub(r'<span class="feature-credit" id="featured-credit">.*?</span>', '', text, count=1, flags=re.S)
     return re.sub(
         r'(<a class="feature feature-link" id="featured-story" href="[^"]*">)',
@@ -825,7 +832,8 @@ AUTHOR_BIO = (
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
 BYLINE_HTML = (
     '<a class="byline" href="/authors/ryan-moalemi/">'
-    f'<img src="{BYLINE_IMAGE}" alt="Ryan Moalemi" width="40" height="40">'
+    f'<picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp">'
+    f'<img src="{BYLINE_IMAGE}" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture>'
     '<span>By Ryan Moalemi</span></a>'
 )
 BYLINE_CSS = (

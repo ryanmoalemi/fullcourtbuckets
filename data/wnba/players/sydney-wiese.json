@@ -34,11 +34,11 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
         "conference": "Eastern Conference"
       },
       "games_played": 27,
@@ -66,12 +66,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 19,
       "min": 19.11,
@@ -98,12 +98,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 18.0,
@@ -130,12 +130,12 @@
       "season": 2019,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 32,
       "min": 20.59,
@@ -162,12 +162,12 @@
       "season": 2019,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 4,
       "min": 18.75,
@@ -194,12 +194,12 @@
       "season": 2018,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 3.0,
@@ -226,12 +226,12 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 28,
       "min": 7.93,
@@ -258,12 +258,12 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 1.0,

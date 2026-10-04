@@ -516,12 +516,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Washington Mystics and Seattle Storm",
+      "abbreviation": null,
+      "city": null,
+      "name": "Washington Mystics and Seattle Storm",
+      "conference": null
     },
     "games_played": 39,
     "min": 30.59,
@@ -1124,11 +1124,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 1,
@@ -1732,11 +1732,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
+      "id": 10,
+      "full_name": "Phoenix Mercury",
+      "abbreviation": "PHX",
+      "city": "Phoenix",
+      "name": "Mercury",
       "conference": "Western Conference"
     },
     "games_played": 4,
@@ -1860,12 +1860,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 3,
-      "full_name": "Indiana Fever",
-      "abbreviation": "IND",
-      "city": "Indiana",
-      "name": "Fever",
-      "conference": "Eastern Conference"
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
     },
     "games_played": 2,
     "min": 3.5,
@@ -2244,12 +2244,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 1,
-      "full_name": "New York Liberty",
-      "abbreviation": "NY",
-      "city": "New York",
-      "name": "Liberty",
-      "conference": "Eastern Conference"
+      "id": null,
+      "full_name": "Golden State Valkyries and New York Liberty",
+      "abbreviation": null,
+      "city": null,
+      "name": "Golden State Valkyries and New York Liberty",
+      "conference": null
     },
     "games_played": 38,
     "min": 14.24,
@@ -2468,12 +2468,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 7,
-      "full_name": "Minnesota Lynx",
-      "abbreviation": "MIN",
-      "city": "Minnesota",
-      "name": "Lynx",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Dallas Wings and Minnesota Lynx",
+      "abbreviation": null,
+      "city": null,
+      "name": "Dallas Wings and Minnesota Lynx",
+      "conference": null
     },
     "games_played": 31,
     "min": 21.94,
@@ -2852,12 +2852,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 10,
-      "full_name": "Phoenix Mercury",
-      "abbreviation": "PHX",
-      "city": "Phoenix",
-      "name": "Mercury",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Indiana Fever and Phoenix Mercury",
+      "abbreviation": null,
+      "city": null,
+      "name": "Indiana Fever and Phoenix Mercury",
+      "conference": null
     },
     "games_played": 33,
     "min": 23.58,
@@ -2980,12 +2980,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 5,
-      "full_name": "Washington Mystics",
-      "abbreviation": "WSH",
-      "city": "Washington",
-      "name": "Mystics",
-      "conference": "Eastern Conference"
+      "id": null,
+      "full_name": "Seattle Storm and Washington Mystics",
+      "abbreviation": null,
+      "city": null,
+      "name": "Seattle Storm and Washington Mystics",
+      "conference": null
     },
     "games_played": 42,
     "min": 19.71,
@@ -3428,12 +3428,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Minnesota Lynx and Dallas Wings",
+      "abbreviation": null,
+      "city": null,
+      "name": "Minnesota Lynx and Dallas Wings",
+      "conference": null
     },
     "games_played": 40,
     "min": 10.85,
@@ -3460,11 +3460,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
       "conference": "Western Conference"
     },
     "games_played": 16,
@@ -3492,12 +3492,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Dallas Wings and Golden State Valkyries",
+      "abbreviation": null,
+      "city": null,
+      "name": "Dallas Wings and Golden State Valkyries",
+      "conference": null
     },
     "games_played": 35,
     "min": 17.6,
@@ -3556,12 +3556,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Seattle Storm and Dallas Wings",
+      "abbreviation": null,
+      "city": null,
+      "name": "Seattle Storm and Dallas Wings",
+      "conference": null
     },
     "games_played": 31,
     "min": 16.77,
@@ -4036,12 +4036,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 8,
-      "full_name": "Las Vegas Aces",
-      "abbreviation": "LV",
-      "city": "Las Vegas",
-      "name": "Aces",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Dallas Wings and Las Vegas Aces",
+      "abbreviation": null,
+      "city": null,
+      "name": "Dallas Wings and Las Vegas Aces",
+      "conference": null
     },
     "games_played": 45,
     "min": 21.24,
@@ -4196,12 +4196,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 2,
-      "full_name": "Connecticut Sun",
-      "abbreviation": "CON",
-      "city": "Connecticut",
-      "name": "Sun",
-      "conference": "Eastern Conference"
+      "id": null,
+      "full_name": "Washington Mystics and Connecticut Sun",
+      "abbreviation": null,
+      "city": null,
+      "name": "Washington Mystics and Connecticut Sun",
+      "conference": null
     },
     "games_played": 36,
     "min": 14.83,
@@ -4900,12 +4900,12 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 9,
-      "full_name": "Seattle Storm",
-      "abbreviation": "SEA",
-      "city": "Seattle",
-      "name": "Storm",
-      "conference": "Western Conference"
+      "id": null,
+      "full_name": "Las Vegas Aces and Seattle Storm",
+      "abbreviation": null,
+      "city": null,
+      "name": "Las Vegas Aces and Seattle Storm",
+      "conference": null
     },
     "games_played": 39,
     "min": 13.08,
@@ -5060,11 +5060,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
+      "id": 12,
+      "full_name": "Los Angeles Sparks",
+      "abbreviation": "LA",
+      "city": "Los Angeles",
+      "name": "Sparks",
       "conference": "Western Conference"
     },
     "games_played": 12,
@@ -5316,11 +5316,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 12,
-      "full_name": "Los Angeles Sparks",
-      "abbreviation": "LA",
-      "city": "Los Angeles",
-      "name": "Sparks",
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
       "conference": "Western Conference"
     },
     "games_played": 14,
@@ -5444,11 +5444,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 6,
-      "full_name": "Chicago Sky",
-      "abbreviation": "CHI",
-      "city": "Chicago",
-      "name": "Sky",
+      "id": 1,
+      "full_name": "New York Liberty",
+      "abbreviation": "NY",
+      "city": "New York",
+      "name": "Liberty",
       "conference": "Eastern Conference"
     },
     "games_played": 9,
@@ -5508,11 +5508,11 @@
     "season": 2025,
     "season_type": 2,
     "team": {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
+      "id": 8,
+      "full_name": "Las Vegas Aces",
+      "abbreviation": "LV",
+      "city": "Las Vegas",
+      "name": "Aces",
       "conference": "Western Conference"
     },
     "games_played": 12,

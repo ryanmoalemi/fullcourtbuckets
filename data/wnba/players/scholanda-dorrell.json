@@ -34,12 +34,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 26,
       "min": 14.65,
@@ -66,12 +66,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 32,
       "min": 16.19,
@@ -98,12 +98,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 4.5,
@@ -130,12 +130,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
+        "id": 201,
+        "full_name": "Tulsa Shock",
+        "abbreviation": "TUL",
+        "city": "Tulsa",
+        "name": "Shock",
+        "conference": null
       },
       "games_played": 34,
       "min": 24.59,

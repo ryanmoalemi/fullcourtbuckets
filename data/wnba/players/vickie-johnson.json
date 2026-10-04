@@ -34,12 +34,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 32,
       "min": 23.03,
@@ -66,12 +66,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 3,
       "min": 30.0,
@@ -98,12 +98,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 32,
       "min": 27.88,
@@ -130,12 +130,12 @@
       "season": 2008,
       "season_type": 3,
       "team": {
-        "id": 8,
-        "full_name": "Las Vegas Aces",
-        "abbreviation": "LV",
-        "city": "Las Vegas",
-        "name": "Aces",
-        "conference": "Western Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 9,
       "min": 30.44,

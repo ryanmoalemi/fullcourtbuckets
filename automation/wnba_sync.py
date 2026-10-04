@@ -22,6 +22,7 @@ import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
 
+import season_teams
 import team_names
 
 BASE = "https://api.balldontlie.io/wnba/v1/"
@@ -285,7 +286,7 @@ def guard_shrink(old: list, new: list, label: str) -> None:
     if old and len(new) < len(old) * 0.8:
         raise SyncError(f"Unexpected drop in {label}; keeping the previous published snapshot.")
 
-def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
+def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_table=None) -> bool:
     data = root / "data" / "wnba"
     state = load(data / "sync-state.json", {})
     today = now.astimezone(ZoneInfo("America/Los_Angeles")).date()
@@ -325,6 +326,11 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
             seasons[year] = rows
         else:
             seasons[year] = old
+    if season_team_table:
+        seasons = {
+            year: season_teams.correct_rows(rows, season_team_table)[0]
+            for year, rows in seasons.items()
+        }
     # A recent log, not a falsely complete career game archive.
     start = today - dt.timedelta(days=35)
     recent_games = client.all("games", {"start_date": start.isoformat(), "end_date": today.isoformat()})
@@ -385,6 +391,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False) -> bool:
             "notes": ["Statistics from 2008 onward; not complete all-time career totals.",
                       "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
                       "Team stints and aggregate rows must never be summed together.",
+                      "A season row uses the club from that season when games played matches one stint.",
                       "Not listed active does not establish retirement, a trade, or free agency.",
                       "News and confirmed transaction feeds are not included in this API integration."]}
         if changes:
@@ -416,7 +423,10 @@ def main():
     args = parser.parse_args()
     try:
         client = Client(os.environ.get("BALLDONTLIE_API_KEY", ""))
-        changed = run(args.root, client, dt.datetime.now(dt.timezone.utc), args.force)
+        season_team_table = season_teams.load_table(args.root)
+        if season_team_table.get("players"):
+            print(f"Per-season teams loaded for {season_team_table.get('matched_count')} players.")
+        changed = run(args.root, client, dt.datetime.now(dt.timezone.utc), args.force, season_team_table or None)
         if os.environ.get("GITHUB_OUTPUT"):
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:
                 f.write("changed=" + str(changed).lower() + "\n")

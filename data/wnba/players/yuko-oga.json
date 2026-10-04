@@ -34,12 +34,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 27,
-        "full_name": "Japan",
-        "abbreviation": "JAPAN",
-        "city": "",
-        "name": "Japan",
-        "conference": null
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
       },
       "games_played": 23,
       "min": 7.83,

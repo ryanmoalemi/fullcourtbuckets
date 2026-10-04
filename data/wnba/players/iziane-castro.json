@@ -34,12 +34,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
       },
       "games_played": 28,
       "min": 15.75,
@@ -66,12 +66,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 19.76,
@@ -98,12 +98,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 8,
       "min": 25.63,
@@ -130,12 +130,12 @@
       "season": 2010,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 28.94,
@@ -162,12 +162,12 @@
       "season": 2010,
       "season_type": 3,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 7,
       "min": 32.14,
@@ -194,12 +194,12 @@
       "season": 2009,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 34,
       "min": 26.91,
@@ -226,12 +226,12 @@
       "season": 2009,
       "season_type": 3,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 2,
       "min": 25.5,
@@ -258,12 +258,12 @@
       "season": 2008,
       "season_type": 2,
       "team": {
-        "id": 26,
-        "full_name": "BRAZIL",
-        "abbreviation": "BRAZIL",
-        "city": "",
-        "name": "BRAZIL",
-        "conference": null
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
       },
       "games_played": 29,
       "min": 23.14,

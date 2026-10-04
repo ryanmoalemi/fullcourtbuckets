@@ -98,11 +98,11 @@
       "season": 2024,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
         "conference": "Eastern Conference"
       },
       "games_played": 40,
@@ -130,12 +130,12 @@
       "season": 2023,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
       },
       "games_played": 29,
       "min": 24.07,
@@ -162,11 +162,11 @@
       "season": 2021,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
         "conference": "Eastern Conference"
       },
       "games_played": 32,
@@ -194,12 +194,12 @@
       "season": 2020,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
       },
       "games_played": 21,
       "min": 13.52,
@@ -226,12 +226,12 @@
       "season": 2020,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
       },
       "games_played": 5,
       "min": 6.4,
@@ -258,12 +258,12 @@
       "season": 2018,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
       },
       "games_played": 24,
       "min": 14.92,
@@ -290,11 +290,11 @@
       "season": 2017,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 28,
@@ -322,11 +322,11 @@
       "season": 2017,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
         "conference": "Eastern Conference"
       },
       "games_played": 1,

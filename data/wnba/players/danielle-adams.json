@@ -34,12 +34,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 30,
       "min": 16.07,
@@ -66,12 +66,12 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 20.59,
@@ -98,12 +98,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Stars",
+        "abbreviation": "SA",
+        "city": "San Antonio",
+        "name": "Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 30.0,
@@ -130,12 +130,12 @@
       "season": 2013,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 26.44,
@@ -162,12 +162,12 @@
       "season": 2012,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 34,
       "min": 20.38,
@@ -194,12 +194,12 @@
       "season": 2012,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 2,
       "min": 22.0,
@@ -226,12 +226,12 @@
       "season": 2011,
       "season_type": 2,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 23,
       "min": 20.87,
@@ -258,12 +258,12 @@
       "season": 2011,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
       },
       "games_played": 3,
       "min": 23.0,

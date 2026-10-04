@@ -34,12 +34,12 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
       },
       "games_played": 1,
       "min": 3.0,

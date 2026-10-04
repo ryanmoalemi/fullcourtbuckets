@@ -149,6 +149,18 @@
       ],
       "google_keyword": "kelsey plum shoes",
       "approx_monthly_volume": 480
+    },
+    {
+      "question": "What was Kelsey Plum's rookie year?",
+      "answer": "Rebuilt from the first regular-season row on this page.",
+      "answer_kind": "stats",
+      "sources": []
+    },
+    {
+      "question": "Which teams has Kelsey Plum played for?",
+      "answer": "Rebuilt from the team names on the regular-season rows.",
+      "answer_kind": "stats",
+      "sources": []
     }
   ],
   "notes": "Reader-facing sports copy only."

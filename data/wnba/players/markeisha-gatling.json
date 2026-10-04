@@ -66,12 +66,12 @@
       "season": 2015,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
-        "conference": "Eastern Conference"
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
       },
       "games_played": 25,
       "min": 13.68,
@@ -98,11 +98,11 @@
       "season": 2014,
       "season_type": 2,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
         "conference": "Eastern Conference"
       },
       "games_played": 29,
@@ -130,11 +130,11 @@
       "season": 2014,
       "season_type": 3,
       "team": {
-        "id": 4,
-        "full_name": "Atlanta Dream",
-        "abbreviation": "ATL",
-        "city": "Atlanta",
-        "name": "Dream",
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
         "conference": "Eastern Conference"
       },
       "games_played": 5,

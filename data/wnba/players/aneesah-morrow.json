@@ -41,11 +41,11 @@
       "season": 2026,
       "season_type": 2,
       "team": {
-        "id": 30,
-        "full_name": "Toronto Tempo",
-        "abbreviation": "TOR",
-        "city": "Toronto",
-        "name": "Tempo",
+        "id": null,
+        "full_name": "Connecticut Sun and Toronto Tempo",
+        "abbreviation": null,
+        "city": null,
+        "name": "Connecticut Sun and Toronto Tempo",
         "conference": null
       },
       "games_played": 27,
