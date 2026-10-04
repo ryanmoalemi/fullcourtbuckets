@@ -1427,12 +1427,22 @@ def _mark_lead_figure(figure: str, article: dict | None = None) -> str:
     return re.sub(r'<img\b[^>]*>', _hero, figure, count=1)
 
 
+# End of the inlined lead block. install_lead_css uses it to refresh an older copy.
+_LEAD_BLOCK_END = '.article .byline-row .byline{margin-bottom:0;font-size:14px;}}'
+
+
 def install_lead_css(html: str) -> str:
     """Put the shared 16:9 column rules on the page. Drop the old full-bleed block."""
     if OLD_LEAD_CSS in html:
-        return html.replace(OLD_LEAD_CSS, LEAD_CSS)
-    if 'aspect-ratio:16/9' in html and '.article figure.lead-photo' in html:
-        return html
+        html = html.replace(OLD_LEAD_CSS, LEAD_CSS)
+    start = html.find('.article figure.lead-photo{')
+    if start >= 0:
+        end = html.find(_LEAD_BLOCK_END, start)
+        if end > start:
+            end += len(_LEAD_BLOCK_END)
+            if html[start:end] != LEAD_CSS:
+                return html[:start] + LEAD_CSS + html[end:]
+            return html
     if '</style>' in html:
         return html.replace('</style>', LEAD_CSS + '</style>', 1)
     if '</head>' in html:

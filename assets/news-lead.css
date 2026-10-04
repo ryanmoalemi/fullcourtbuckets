@@ -8,7 +8,11 @@
   overflow: hidden;
 }
 
-.article figure.lead-photo img {
+/* card.lead is more specific than lead-photo alone. Repeat it so a
+   list-article lead still fills the column instead of staying at 380px. */
+.article figure.lead-photo img,
+.article figure.lead-photo.card img,
+.article figure.card.lead.lead-photo img {
   display: block;
   width: 100%;
   max-width: 100%;

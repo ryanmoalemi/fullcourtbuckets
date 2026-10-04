@@ -11,7 +11,7 @@ Every `/news/` article uses that order:
 3. Byline and date.
 4. Hook paragraph, then the body.
 
-The lead photo is the article column at every breakpoint. It does not grow to the viewport and it does not overflow sideways. Every lead uses one ratio, 16:9, with `aspect-ratio: 16/9` and `object-fit: cover`. The default crop is `object-position: center 25%`, so a face in a portrait photo stays in frame. Set `imageFocal` on that article (a CSS object-position such as `center 12%`) when the crop needs to move.
+The lead photo is the article column at every breakpoint, including a lead that also has the `card` class. Later card photos in a list stay narrow. The lead does not grow to the viewport and it does not overflow sideways. Every lead uses one ratio, 16:9, with `aspect-ratio: 16/9` and `object-fit: cover`. The default crop is `object-position: center 25%`, so a face in a portrait photo stays in frame. Set `imageFocal` on that article (a CSS object-position such as `center 12%`) when the crop needs to move.
 
 `automation/news_heroes.py` writes a real 16:9 WebP for the hero: `hero-1200.webp` (1200×675) and `hero-2x.webp` when the source is wide enough to make one without upscaling. A source narrower than 1200 stays at its own 16:9 size (`hero-16x9.webp`). The original file remains `image` for listings. `imageHero` is the lead file. The credit line stays under the photo.
 

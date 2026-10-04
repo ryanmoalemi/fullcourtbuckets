@@ -45,6 +45,7 @@ class NewsLeadTests(unittest.TestCase):
             height = int(re.search(r'height="(\d+)"', img).group(1))
             self.assertAlmostEqual(width / height, 16 / 9, places=2, msg=article['slug'])
             self.assertIn('aspect-ratio:16/9', html, article['slug'])
+            self.assertIn('.article figure.card.lead.lead-photo img', html, article['slug'])
             self.assertIn('object-fit:cover', html, article['slug'])
             self.assertNotIn('100vw', html, article['slug'])
             if str(article.get('imageCredit') or '').strip():

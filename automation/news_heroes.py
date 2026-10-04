@@ -28,6 +28,8 @@ CHECKED_FOCALS = {
     'angel-reese-game-1-liberty': 'center 6%',
     'liberty-dream-semis-game-1-recap': 'center 18%',
     'aces-fever-series-breakdown': 'center 11%',
+    # Portrait slab. center 40% keeps JuJu's face; 25% cuts into the label and head.
+    'top-10-womens-college-basketball-cards-to-collect-2026': 'center 40%',
 }
 _FOCAL_WORD = r'(?:left|center|right|top|bottom|\d{1,3}(?:\.\d+)?%)'
 FOCAL_RE = re.compile(rf'^{_FOCAL_WORD}(?:\s+{_FOCAL_WORD})?$', re.I)
