@@ -18,6 +18,24 @@
     "imageHeight": 2529
   },
   {
+    "slug": "liberty-dream-semis-game-1-recap",
+    "url": "/news/liberty-dream-semis-game-1-recap/",
+    "title": "Reese Takes It, Canada Buries It: Dream Grab Game 1 From the Liberty",
+    "description": "With 1:30 left, Canada's step-back three made it 87-77. The Dream beat the Liberty 92-82 to lead 1-0.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-04",
+    "image": "/images/articles/liberty-dream-semis-game-1-recap/angel-reese-1b.webp",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a white jersey, number 5, looking to her right at Gateway Center Arena",
+    "imageCredit": "Photo: Michaelcohnphoto / CC BY-SA 4.0",
+    "espnGameId": "401918295",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1125,
+    "imageHeight": 1500
+  },
+  {
     "slug": "wings-valkyries-game-3-recap",
     "url": "/news/wings-valkyries-game-3-recap/",
     "title": "Valkyries Close Out the Wings 77-73, Win Series 2-1",
