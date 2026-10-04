@@ -1,7 +1,9 @@
 """Synthetic offline fixtures only. These records are never published."""
 import copy
+import html
 import json
 from pathlib import Path
+import re
 import tempfile
 import unittest
 import build_players as b
@@ -460,6 +462,50 @@ class BuildTests(unittest.TestCase):
                 self.assertIn(last_date, last, slug)
                 self.assertIn('Playoffs', last, slug)
             b.assert_faq_matches_tables(profile, list(answers.items()))
+
+    def test_meta_mentions_playoffs_only_when_the_profile_has_them(self):
+        regular = copy.deepcopy(P)
+        self.assertNotIn('playoff', b.player_description(regular).casefold())
+        playoffs = copy.deepcopy(P)
+        playoffs['season_stats'].append({
+            'player_id': 1, 'season': 2026, 'season_type': 3,
+            'team': {'id': 1, 'full_name': 'Example Team'},
+            'games_played': 3, 'pts': 10, 'reb': 4, 'ast': 2,
+        })
+        self.assertIn('regular-season and playoff records', b.player_description(playoffs))
+        with tempfile.TemporaryDirectory() as folder:
+            page = b.profile_page(regular, Path(folder), menu=[])
+        title = html.unescape(re.search(r'<title>(.*?)</title>', page).group(1))
+        data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', page).group(1))
+        webpage = next(node for node in data['@graph'] if node.get('@type') == 'WebPage')
+        self.assertEqual(webpage['name'], title)
+        self.assertEqual(webpage['name'], b.player_title('Example Player'))
+        self.assertNotIn('Stats & Player Profile', webpage['name'])
+
+    def test_published_descriptions_match_playoff_rows_and_titles(self):
+        root = ROOT.parent
+        mismatches = []
+        for path in (root / 'data/wnba/players').glob('*.json'):
+            profile = json.loads(path.read_text())
+            slug = profile.get('slug') or path.stem
+            page_path = root / 'wnba' / slug / 'index.html'
+            if not page_path.is_file():
+                continue
+            text = page_path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in text:
+                continue
+            description = html.unescape(re.search(r'name="description" content="([^"]*)"', text).group(1))
+            mentions = 'playoff' in description.casefold()
+            if mentions != b.player_has_playoff_stats(profile):
+                mismatches.append(slug)
+            title = html.unescape(re.search(r'<title>(.*?)</title>', text).group(1))
+            data = json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>', text).group(1))
+            webpage = next(node for node in data['@graph'] if node.get('@type') == 'WebPage')
+            if webpage.get('name') != title:
+                mismatches.append(slug + ' schema name')
+            if 'Stats & Player Profile' in webpage.get('name', ''):
+                mismatches.append(slug + ' old schema name')
+        self.assertEqual(mismatches, [])
 
 
 if __name__=='__main__':unittest.main()

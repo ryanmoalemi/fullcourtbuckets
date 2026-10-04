@@ -1,5 +1,6 @@
 """Disclosures for the helpful-content update, plus the removed duplicate recap."""
 import json
+import re
 import unittest
 from pathlib import Path
 
@@ -62,13 +63,45 @@ class HelpfulContentTests(unittest.TestCase):
         for article in articles:
             html = (ROOT / 'news' / article['slug'] / 'index.html').read_text(encoding='utf-8')
             self.assertIn(links.HOW_MADE_LINK, html, article['slug'])
+            links.assert_disclosure_matches_sources(html)
+            expected = links.how_made_sentence(html, article)
+            self.assertIn(expected, html, article['slug'])
+            if 'sources linked above' in expected:
+                self.assertTrue(links.outbound_source_links(html), article['slug'])
             if links.story_uses_box_score(html, article):
-                self.assertIn(links.HOW_MADE_RECAP, html, article['slug'])
                 self.assertLess(html.find('class="box-score"'), html.find('class="how-made"'), article['slug'])
-            else:
-                self.assertIn(links.HOW_MADE_OTHER, html, article['slug'])
             self.assertIn(links.BYLINE_HTML, html, article['slug'])
             self.assertIn('By Ryan Moalemi', html, article['slug'])
+
+    def test_fiba_story_does_not_invent_sources_and_names_its_figures(self):
+        slug = 'fiba-womens-basketball-world-cup-2026'
+        html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
+        articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
+        article = next(item for item in articles if item['slug'] == slug)
+        self.assertEqual(links.outbound_source_links(html), [])
+        self.assertIn(links.HOW_MADE_OTHER_UNLINKED, html)
+        self.assertNotIn('sources linked above', html)
+        self.assertNotIn('official FIBA', html)
+        self.assertNotIn('USA Basketball announcements', html)
+        links.assert_disclosure_matches_sources(html)
+        self.assertIn('2026 FIBA Women\'s Basketball World Cup logo', html)
+        self.assertIn('2026 USA Women\'s National Team roster', html)
+        self.assertIn('coaching staff: head coach Kara Lawson', html)
+        self.assertIn('September 4 versus China', html)
+        self.assertNotIn('alt="World Cup hero image"', html)
+        self.assertNotIn('alt="Team USA roster image"', html)
+        node = None
+        for match in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html):
+            data = json.loads(match)
+            node = links._article_node(data)
+            if node is not None:
+                break
+        self.assertEqual(node['datePublished'], '2026-08-30')
+        self.assertEqual(node['dateModified'], article['dateModified'])
+        self.assertEqual(node['dateModified'], '2026-10-04')
+        bare = '<article><p>No links here.</p><p class="how-made">How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi.</p></article>'
+        with self.assertRaises(links.DisclosureError):
+            links.assert_disclosure_matches_sources(bare)
 
     def test_duplicate_game_one_redirects_to_the_full_recap(self):
         kept = (ROOT / 'news' / 'liberty-lynx-game-1-full-recap' / 'index.html').read_text(encoding='utf-8')
