@@ -32,6 +32,7 @@ ESPN_HOSTS = (
 USER_AGENT = "FullCourtBuckets/1.0 (+https://fullcourtbuckets.com/)"
 OPENAPI = "https://www.balldontlie.io/openapi/wnba.yml"
 SERIES_REASON = "The WNBA API has no series endpoint. Series text in the cross-check is from ESPN."
+PUBLIC_SOURCE_NOTE = "Full Court Buckets gathers its own game data and verifies it against official box scores."
 GAME_NAME = re.compile(r"^\d{4}-\d{2}-\d{2}-[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 # Public WNBA paths from the OpenAPI. Item URLs such as games/{id} are the same
@@ -800,7 +801,7 @@ def crosscheck(primary, espn):
             compare(f"period.{period}.away", (left.get(period) or {}).get("away"), (right.get(period) or {}).get("away"))
             compare(f"period.{period}.home", (left.get(period) or {}).get("home"), (right.get(period) or {}).get("home"))
     else:
-        unavailable.append({"field": "periods", "reason": "balldontlie did not return quarter scores"})
+        unavailable.append({"field": "periods", "reason": "Quarter scores were not in the game file."})
     for side in ("away", "home"):
         abbr = primary[side]["abbreviation"]
         for key in TEAM_COMPARE:
@@ -851,12 +852,12 @@ def _crosscheck_result(espn, mismatches, unavailable, players_compared):
     matched = not mismatches and players_compared
     note = "Matched ESPN on the final, quarters, team totals, and each player's points, rebounds, assists, and minutes."
     if mismatches:
-        note = "ESPN disagrees with balldontlie. Resolve every field before review."
+        note = "ESPN disagrees with the game file. Resolve every field before review."
     elif not players_compared:
         note = "Player lines were not cross-checked."
         matched = False
     elif unavailable:
-        note = "Compared fields matched. Some balldontlie fields were not available to compare."
+        note = "Compared fields matched. Some fields in the game file were not available to compare."
     return {
         "source": "espn",
         "espn_game_id": espn.get("espn_game_id"),
@@ -898,7 +899,7 @@ def points_consistent(doc) -> bool:
 def period_phrase(doc) -> str:
     periods = doc.get("periods") or []
     if not periods:
-        return "Quarters were not on balldontlie."
+        return "Quarters were not in the game file."
     away, home = doc["away"]["abbreviation"], doc["home"]["abbreviation"]
     bits = []
     for row in periods:
@@ -927,7 +928,7 @@ def markdown(doc) -> str:
     away, home = doc["away"], doc["home"]
     lines = [f"# {away.get('full_name')} at {home.get('full_name')}", ""]
     if doc.get("fallback"):
-        lines.append("FLAG: balldontlie did not supply this game. Numbers are from ESPN.")
+        lines.append("FLAG: the site's own feed did not supply this game. Numbers are from the official box score.")
         lines.append("")
     flag_lines = []
     for flag in doc.get("flags") or []:
@@ -936,7 +937,7 @@ def markdown(doc) -> str:
         if flag == "espn_crosscheck_unavailable":
             flag_lines.append("FLAG: ESPN cross-check did not run.")
         elif flag == "balldontlie_not_marked_final":
-            flag_lines.append("FLAG: balldontlie has not marked this game final.")
+            flag_lines.append("FLAG: the game file has not marked this game final.")
         elif flag == "player_points_do_not_sum_to_score":
             flag_lines.append("FLAG: player points do not add up to the score.")
         else:
@@ -945,7 +946,8 @@ def markdown(doc) -> str:
         lines.extend(flag_lines)
         lines.append("")
     when = doc.get("date") or ""
-    lines.append(f"{when}. Final. Source: {doc.get('source')}.")
+    lines.append(f"{when}. Final.")
+    lines.append(PUBLIC_SOURCE_NOTE)
     lines.append("")
     lines.append(f"{home.get('full_name')} {home.get('score')}, {away.get('full_name')} {away.get('score')}.")
     lines.append("")
@@ -982,7 +984,7 @@ def markdown(doc) -> str:
         lines.append("FLAG: ESPN cross-check has mismatches. Resolve them before review.")
         lines.append("")
         for row in cross["mismatches"]:
-            lines.append(f"- {row['field']}: balldontlie {row['balldontlie']}, ESPN {row['espn']}")
+            lines.append(f"- {row['field']}: game file {row['balldontlie']}, ESPN {row['espn']}")
     else:
         lines.append(cross.get("note") or "ESPN cross-check did not run.")
     for row in cross.get("unavailable") or []:
@@ -997,7 +999,7 @@ def markdown(doc) -> str:
         bits = []
         for row in standings["teams"]:
             bits.append(f"{row.get('full_name')} {row.get('wins')}-{row.get('losses')}")
-        lines.append("Standings on balldontlie: " + "; ".join(bits) + ".")
+        lines.append("Standings: " + "; ".join(bits) + ".")
     elif standings.get("reason"):
         lines.append("")
         lines.append(f"Standings: {standings['reason']}")
@@ -1195,13 +1197,13 @@ def build_bdl_document(game, players, team_rows, plays, team_advanced, player_ad
 
 def apply_espn(doc, espn):
     if not espn:
-        doc["crosscheck"] = unchecked_crosscheck(None, "No ESPN game matched this balldontlie final.")
+        doc["crosscheck"] = unchecked_crosscheck(None, "No ESPN game matched this final.")
         doc["flags"].append("espn_crosscheck_unavailable")
         return doc
     doc["espn_game_id"] = espn.get("espn_game_id")
     doc["espn_box_score"] = box_url(espn.get("espn_game_id"))
     if not espn.get("from_summary"):
-        doc["crosscheck"] = unchecked_crosscheck(espn, "ESPN summary was unavailable, so this balldontlie box was not cross-checked.")
+        doc["crosscheck"] = unchecked_crosscheck(espn, "ESPN summary was unavailable, so this box was not cross-checked.")
         doc["flags"].append("espn_crosscheck_unavailable")
         return doc
     doc["crosscheck"] = crosscheck(doc, espn)

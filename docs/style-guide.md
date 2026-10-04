@@ -46,6 +46,8 @@ The tease has to be true, and the article has to pay it off. Do not invent a num
 
 ## Game stats for recaps and posts
 
-Recaps and posts take the score, quarter scores, team totals, and player box from `data/games/<YYYY-MM-DD>-<away>-<home>.json`. Those numbers come from balldontlie. ESPN is the cross-check, stored on the same file under `crosscheck`. The short read is the `.md` file next to the JSON.
+Recaps and posts take the score, quarter scores, team totals, and player box from `data/games/<YYYY-MM-DD>-<away>-<home>.json`. ESPN is the cross-check, stored on the same file under `crosscheck`. The short read is the `.md` file next to the JSON. The ESPN box-score link in that file can stay on the article.
 
-Any mismatch must be resolved before review. If `crosscheck.mismatches` is not empty, do not pick the number that sounds better. If `source` is `espn` and `fallback` is true, balldontlie did not supply the game. Say so in the draft, and do not treat that file as a balldontlie box. A file whose cross-check did not run is not ready either.
+The article source note says: Full Court Buckets gathers its own game data and verifies it against official box scores. Do not name or link the data vendor in the article, the source note, or any other published page text.
+
+Any mismatch must be resolved before review. If `crosscheck.mismatches` is not empty, do not pick the number that sounds better. If `source` is `espn` and `fallback` is true, the site's own feed did not supply the game. Say so in the draft, and do not treat that file as the primary box. A file whose cross-check did not run is not ready either.
