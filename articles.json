@@ -1,5 +1,30 @@
 [
   {
+    "slug": "aces-valkyries-semis-game-1-recap",
+    "url": "/news/aces-valkyries-semis-game-1-recap/",
+    "title": "Valkyries Own the Glass, Stun the Aces 71-60 in Semis Game 1",
+    "description": "Golden State grabbed 52 rebounds to Vegas's 25 and beat the Aces 71-60 in Game 1. The glass leader did not score.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-04",
+    "image": "/images/articles/aces-valkyries-semis-game-1-recap/valkyries-fever-may-2026.webp",
+    "imageAlt": "A Golden State Valkyries player in a white number 22 jersey dribbles against an Indiana Fever defender at Gainbridge Fieldhouse",
+    "imageCredit": "Photo: Sarah Stierch / CC0",
+    "espnGameId": "401918296",
+    "teams": [
+      "golden-state-valkyries",
+      "las-vegas-aces"
+    ],
+    "imageWidth": 1680,
+    "imageHeight": 945,
+    "imageSource": "/images/articles/aces-valkyries-semis-game-1-recap/valkyries-fever-may-2026.webp",
+    "imageHero": "/images/articles/aces-valkyries-semis-game-1-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/aces-valkyries-semis-game-1-recap/hero-2x.webp",
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945
+  },
+  {
     "slug": "angel-reese-game-1-liberty",
     "url": "/news/angel-reese-game-1-liberty/",
     "title": "Angel Reese Won DPOY and Got Meaner: Her Game 1 Against the Liberty",
