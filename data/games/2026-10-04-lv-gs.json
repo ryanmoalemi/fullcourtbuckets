@@ -5,7 +5,7 @@
   "flags": [
     "crosscheck_mismatch"
   ],
-  "checked_at": "2026-10-04T23:11:56+00:00",
+  "checked_at": "2026-10-05T01:53:34+00:00",
   "date": "2026-10-04",
   "status": "final",
   "season": 2026,
@@ -765,6 +765,6 @@
         }
       ]
     },
-    "note": "ESPN disagrees with balldontlie. Resolve every field before review."
+    "note": "ESPN disagrees with the game file. Resolve every field before review."
   }
 }
