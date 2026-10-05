@@ -2,7 +2,7 @@
   "player_id": 627,
   "player_name": "Aari McDonald",
   "slug": "aari-mcdonald",
-  "provider": "BALLDONTLIE",
+  "provider": "Full Court Buckets",
   "profile_path": "data/wnba/players/aari-mcdonald.json",
   "destination": "images/players/aari-mcdonald/portrait.png",
   "permanent_master_pattern": "portrait-masters/627-aari-mcdonald-<sha256>.png",

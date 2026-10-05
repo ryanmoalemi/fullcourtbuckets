@@ -846,8 +846,9 @@ BYLINE_CSS = (
 )
 BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
 # Headline, then the lead photo and credit, then byline and date, then the hook.
-# ESPN, The Athletic, and AP use this order on a 390px screen, and the photo is in view.
-LEAD_CSS = (
+# The photo is the article column, never the viewport, at a fixed 16:9 crop.
+# The previous block broke the photo out to 100vw. Replace it wherever it is still inline.
+OLD_LEAD_CSS = (
     '.article figure.lead-photo{margin:0 0 14px}'
     '.article figure.lead-photo img{width:100%;height:auto}'
     '.article figure.lead-photo figcaption{margin-top:6px;font-size:12px;line-height:1.4}'
@@ -866,6 +867,19 @@ LEAD_CSS = (
     '.article .byline-row .byline{margin-bottom:0;font-size:14px}'
     '}'
 )
+NEWS_LEAD_CSS = Path(__file__).resolve().parents[1] / 'assets' / 'news-lead.css'
+
+
+def load_lead_css() -> str:
+    """The shared lead stylesheet, minified so it can sit in the article <style> block."""
+    text = NEWS_LEAD_CSS.read_text(encoding='utf-8')
+    text = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
+    text = re.sub(r'\s+', ' ', text)
+    text = re.sub(r'\s*([{}:;,])\s*', r'\1', text)
+    return text.strip()
+
+
+LEAD_CSS = load_lead_css()
 LEAD_FIGURE_RE = re.compile(r'<figure\b[^>]*>.*?</figure>', re.S)
 BYLINE_ROW_RE = re.compile(r'<div class="byline-row">.*?</div>', re.S)
 ARTICLE_DATE_RE = re.compile(r'<time class="article-date"[^>]*>.*?</time>', re.S)
@@ -1314,8 +1328,61 @@ def _is_lead_figure(figure: str) -> bool:
     return 'lead' in classes or 'lead-photo' in classes or 'fetchpriority="high"' in figure
 
 
-def _mark_lead_figure(figure: str) -> str:
-    """Full-width lead photo. Keep width and height. Hero is eager and high priority."""
+_FOCAL_WORD = r'(?:left|center|right|top|bottom|\d{1,3}(?:\.\d+)?%)'
+_FOCAL_RE = re.compile(rf'^{_FOCAL_WORD}(?:\s+{_FOCAL_WORD})?$', re.I)
+LEAD_SIZES = '(max-width: 900px) calc(94vw - 40px), 842px'
+
+
+def lead_focal(article: dict | None) -> str:
+    """Per-article object-position. The default keeps faces in the top of a portrait."""
+    raw = re.sub(r'\s+', ' ', str((article or {}).get('imageFocal') or '').strip())
+    if raw and _FOCAL_RE.fullmatch(raw):
+        return raw.lower()
+    return 'center 25%'
+
+
+def _upsert_attr(tag: str, name: str, value: str) -> str:
+    pattern = re.compile(rf'\b{name}=("|\')(.*?)\1', re.I)
+    replacement = f'{name}="{value}"'
+    if pattern.search(tag):
+        return pattern.sub(replacement, tag, count=1)
+    return tag[:-1] + f' {replacement}' + tag[-1]
+
+
+def _upsert_style_prop(tag: str, prop: str, value: str) -> str:
+    decl = f'{prop}:{value}'
+    style = re.search(r'\bstyle=("|\')(.*?)\1', tag)
+    if style is None:
+        return tag[:-1] + f' style="{decl}"' + tag[-1]
+    body = style.group(2).strip()
+    if re.search(rf'(?:^|;)\s*{re.escape(prop)}\s*:', body):
+        body = re.sub(rf'{re.escape(prop)}\s*:\s*[^;]+', decl, body)
+    else:
+        body = body.rstrip(';') + ';' + decl
+    quote = style.group(1)
+    return tag[:style.start()] + f'style={quote}{body}{quote}' + tag[style.end():]
+
+
+def _lead_asset(article: dict | None) -> tuple[str, int, int, str] | None:
+    """Hero file when one has been cropped. Otherwise leave the img src alone."""
+    if not article:
+        return None
+    hero = str(article.get('imageHero') or '').strip()
+    if not hero:
+        return None
+    width = int(article.get('imageHeroWidth') or 1200)
+    height = int(article.get('imageHeroHeight') or 675)
+    two = str(article.get('imageHero2x') or '').strip()
+    two_w = article.get('imageHero2xWidth')
+    if two and two_w:
+        srcset = f'{hero} {width}w, {two} {int(two_w)}w'
+    else:
+        srcset = f'{hero} {width}w'
+    return hero, width, height, srcset
+
+
+def _mark_lead_figure(figure: str, article: dict | None = None) -> str:
+    """Column-width 16:9 lead. Keep width and height. Hero is eager and high priority."""
     classes = _figure_classes(figure)
     if 'lead-photo' not in classes:
         if classes:
@@ -1327,20 +1394,67 @@ def _mark_lead_figure(figure: str) -> str:
             )
         else:
             figure = figure.replace('<figure', '<figure class="lead-photo"', 1)
+    asset = _lead_asset(article)
+    focal = lead_focal(article)
+
+    def _source(match: re.Match) -> str:
+        tag = match.group(0)
+        if asset is None:
+            return tag
+        _src, _width, _height, srcset = asset
+        tag = _upsert_attr(tag, 'srcset', srcset)
+        tag = _upsert_attr(tag, 'sizes', LEAD_SIZES)
+        if 'type=' not in tag.lower():
+            tag = _upsert_attr(tag, 'type', 'image/webp')
+        return tag
+
+    figure = re.sub(r'<source\b[^>]*>', _source, figure, count=1)
 
     def _hero(img: re.Match) -> str:
         tag = re.sub(r'\sloading=(["\']).*?\1', '', img.group(0))
         if 'fetchpriority=' not in tag.lower():
             tag = tag.replace('<img', '<img fetchpriority="high"', 1)
+        tag = _upsert_style_prop(tag, 'object-position', focal)
+        if asset is not None:
+            src, width, height, srcset = asset
+            tag = _upsert_attr(tag, 'src', src)
+            tag = _upsert_attr(tag, 'srcset', srcset)
+            tag = _upsert_attr(tag, 'sizes', LEAD_SIZES)
+            tag = _upsert_attr(tag, 'width', str(width))
+            tag = _upsert_attr(tag, 'height', str(height))
         return tag
 
     return re.sub(r'<img\b[^>]*>', _hero, figure, count=1)
 
 
+# End of the inlined lead block. install_lead_css uses it to refresh an older copy.
+_LEAD_BLOCK_END = '.article .byline-row .byline{margin-bottom:0;font-size:14px;}}'
+
+
+def install_lead_css(html: str) -> str:
+    """Put the shared 16:9 column rules on the page. Drop the old full-bleed block."""
+    if OLD_LEAD_CSS in html:
+        html = html.replace(OLD_LEAD_CSS, LEAD_CSS)
+    start = html.find('.article figure.lead-photo{')
+    if start >= 0:
+        end = html.find(_LEAD_BLOCK_END, start)
+        if end > start:
+            end += len(_LEAD_BLOCK_END)
+            if html[start:end] != LEAD_CSS:
+                return html[:start] + LEAD_CSS + html[end:]
+            return html
+    if '</style>' in html:
+        return html.replace('</style>', LEAD_CSS + '</style>', 1)
+    if '</head>' in html:
+        return html.replace('</head>', '<style>' + LEAD_CSS + '</style></head>', 1)
+    return html
+
+
 def _article_date_tag(text: str) -> str:
-    shown = re.sub(r'^Published\s+', '', text.strip())
+    shown = text.strip()
+    bare = re.sub(r'^Published\s+', '', shown)
     try:
-        parsed = dt.datetime.strptime(shown, '%B %d, %Y')
+        parsed = dt.datetime.strptime(bare, '%B %d, %Y')
         iso = f' datetime="{parsed.strftime("%Y-%m-%d")}"'
     except ValueError:
         iso = ''
@@ -1370,11 +1484,13 @@ def _pull_article_date(article: str) -> tuple[str, str]:
     return article, date.group(1)
 
 
-def order_news_lead(html: str) -> str:
+def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, lead photo and credit, byline and date, then the hook and body.
 
-    The lead image keeps its width and height, uses fetchpriority="high", and is not lazy-loaded.
+    The lead matches the article column, uses a 16:9 crop, keeps width and height,
+    uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
     """
+    meta = article
     start = html.find('<article')
     end = html.rfind('</article>')
     if start < 0 or end < 0:
@@ -1395,7 +1511,7 @@ def order_news_lead(html: str) -> str:
         lead = fallback
     if lead is None:
         return html
-    figure = _mark_lead_figure(lead.group(0))
+    figure = _mark_lead_figure(lead.group(0), meta)
     article = article[:lead.start()] + article[lead.end():]
     byline = BYLINE_RE.search(article)
     byline_html = byline.group(0) if byline else ''
@@ -1412,12 +1528,7 @@ def order_news_lead(html: str) -> str:
         return html
     article = article[:h1 + len('</h1>')] + figure + row + article[h1 + len('</h1>'):]
     html = html[:start] + article + html[end:]
-    if '.article figure.lead-photo{' not in html:
-        if '</style>' in html:
-            html = html.replace('</style>', LEAD_CSS + '</style>', 1)
-        elif '</head>' in html:
-            html = html.replace('</head>', '<style>' + LEAD_CSS + '</style></head>', 1)
-    return html
+    return install_lead_css(html)
 
 
 def ensure_byline(html: str) -> str:
@@ -1557,12 +1668,14 @@ HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
 HOW_MADE_RECAP = (
     'How this story was made: Ryan Moalemi picked the story and the angle. '
-    'AI tools drafted it from the ESPN box score and the sources linked above '
+    'Full Court Buckets gathers its own game data and verifies it against official box scores. '
+    'AI tools drafted it from that data and the sources linked above '
     'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
 HOW_MADE_RECAP_BOX_ONLY = (
     'How this story was made: Ryan Moalemi picked the story and the angle. '
-    'AI tools drafted it from the ESPN box score '
+    'Full Court Buckets gathers its own game data and verifies it against official box scores. '
+    'AI tools drafted it from that data '
     'so it could post the same night, then Ryan reviewed and edited it before publishing.'
 )
 HOW_MADE_OTHER = (
@@ -1572,6 +1685,15 @@ HOW_MADE_OTHER = (
 HOW_MADE_OTHER_UNLINKED = (
     'How this story was made: drafted with AI tools, '
     'then reviewed and edited by Ryan Moalemi.'
+)
+HOW_MADE_RYAN = (
+    'How this was made: Ryan Moalemi researched and wrote this article himself from the sources linked above '
+    '(Topps, PSA, SportsCardsPro/PriceCharting, and school athletics sites). '
+    'AI tools were used only for fact-checking and formatting edits.'
+)
+HOW_MADE_RYAN_UNLINKED = (
+    'How this was made: Ryan Moalemi researched and wrote this article himself. '
+    'AI tools were used only for fact-checking and formatting edits.'
 )
 HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
 _OWN_HOSTS = frozenset({'fullcourtbuckets.com', 'www.fullcourtbuckets.com'})
@@ -1604,6 +1726,8 @@ def outbound_source_links(html_text: str) -> list[str]:
 def how_made_sentence(html_text: str, article: dict | None) -> str:
     """Name sources only when this page links them above the disclosure."""
     linked = bool(outbound_source_links(html_text))
+    if (article or {}).get('authorWrote'):
+        return HOW_MADE_RYAN if linked else HOW_MADE_RYAN_UNLINKED
     if story_uses_box_score(html_text, article):
         return HOW_MADE_RECAP if linked else HOW_MADE_RECAP_BOX_ONLY
     return HOW_MADE_OTHER if linked else HOW_MADE_OTHER_UNLINKED
@@ -1716,7 +1840,9 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = ensure_how_made(html_text, article)
     html_text = ensure_byline(html_text)
     html_text = order_article_sections(html_text)
-    html_text = order_news_lead(html_text)
+    import news_heroes
+    news_heroes.ensure_article_hero(root, article)
+    html_text = order_news_lead(html_text, article)
     return html_text
 
 

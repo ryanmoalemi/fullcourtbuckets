@@ -1,0 +1,3 @@
+# Recap source files. git archive (the site artifact) does not publish them as pages.
+data/games export-ignore
+data/games/** export-ignore

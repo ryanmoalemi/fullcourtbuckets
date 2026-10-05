@@ -1,0 +1,113 @@
+name: WNBA game stats
+on:
+  schedule:
+    # Evening and night Pacific, plus the next morning, so a final is picked up
+    # the night it ends and again the day after if that night run missed it.
+    # The script skips the offseason with the same season window as the importer.
+    - cron: '25 18 * * *'
+      timezone: America/Los_Angeles
+    - cron: '25 20 * * *'
+      timezone: America/Los_Angeles
+    - cron: '25 22 * * *'
+      timezone: America/Los_Angeles
+    - cron: '25 0 * * *'
+      timezone: America/Los_Angeles
+    - cron: '55 1 * * *'
+      timezone: America/Los_Angeles
+    - cron: '25 9 * * *'
+      timezone: America/Los_Angeles
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Game date YYYY-MM-DD. Blank uses yesterday and today Pacific.
+        required: false
+        type: string
+      teams:
+        description: Team abbreviations, such as NY,ATL or LV. Blank means every final in the window.
+        required: false
+        type: string
+      espn_game_id:
+        description: Optional ESPN game id.
+        required: false
+        type: string
+      scheduled:
+        description: Apply the offseason gate. The default-branch schedule sets this when it dispatches main.
+        required: false
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: fcb-game-stats-${{ github.ref_name }}
+  cancel-in-progress: false
+jobs:
+  dispatch-to-production:
+    if: github.ref != 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: read
+    steps:
+      - name: Dispatch to main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh api --method POST "repos/$REPO/actions/workflows/fcb-game-stats.yml/dispatches" \
+            -f ref=main \
+            -f inputs[date]='${{ inputs.date }}' \
+            -f inputs[teams]='${{ inputs.teams }}' \
+            -F inputs[scheduled]=${{ github.event_name == 'schedule' && 'true' || inputs.scheduled }} \
+            -f inputs[espn_game_id]='${{ inputs.espn_game_id }}'
+  stats:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test game stats without the API key
+        run: python -m unittest discover -s automation -p 'test_game_stats.py' -v
+      - name: Pull balldontlie boxes and cross-check ESPN
+        id: pull
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+          GAME_STATS_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.date || '' }}
+          GAME_STATS_TEAMS: ${{ github.event_name == 'workflow_dispatch' && inputs.teams || '' }}
+          GAME_STATS_ESPN_ID: ${{ github.event_name == 'workflow_dispatch' && inputs.espn_game_id || '' }}
+          GAME_STATS_SCHEDULED: ${{ (github.event_name == 'schedule' || inputs.scheduled) && 'yes' || '' }}
+        run: python -u automation/game_stats.py
+      - name: Scan game files for the secret
+        id: audit
+        if: steps.pull.outcome == 'success' || steps.pull.outcome == 'failure'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python automation/game_stats.py --audit-secrets
+      - name: Commit game files to main
+        if: steps.audit.outcome == 'success'
+        run: |
+          git config user.name 'Full Court Buckets updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/games
+          if git diff --cached --quiet; then
+            echo 'No game-stat changes to commit.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m 'Record WNBA game stats'
+          for attempt in 1 2 3 4; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo 'Could not push game stats to main.' >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+      - name: Fail the job when a game was not saved or the secret scan failed
+        if: steps.pull.outcome == 'failure' || steps.audit.outcome == 'failure'
+        run: exit 1

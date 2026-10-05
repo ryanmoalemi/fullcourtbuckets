@@ -1,0 +1,104 @@
+{
+  "checked_at": "2026-10-04T23:11:56+00:00",
+  "provider": "balldontlie",
+  "base": "https://api.balldontlie.io/wnba/v1/",
+  "key_present": true,
+  "series_endpoint": false,
+  "series_note": "The WNBA API has no series endpoint. Series text in the cross-check is from ESPN.",
+  "openapi": "https://www.balldontlie.io/openapi/wnba.yml",
+  "used_for_game_files": [
+    "games",
+    "player_game_advanced_stats",
+    "player_stats",
+    "plays",
+    "standings",
+    "team_game_advanced_stats",
+    "team_stats"
+  ],
+  "endpoints": {
+    "teams": {
+      "status": "allowed",
+      "http": 200
+    },
+    "players": {
+      "status": "allowed",
+      "http": 200
+    },
+    "players/active": {
+      "status": "allowed",
+      "http": 200
+    },
+    "games": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "team_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_season_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "team_season_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "standings": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_injuries": {
+      "status": "allowed",
+      "http": 200
+    },
+    "plays": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_game_advanced_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "team_game_advanced_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_season_advanced_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "team_season_advanced_stats": {
+      "status": "allowed",
+      "http": 200
+    },
+    "player_shot_locations": {
+      "status": "allowed",
+      "http": 200
+    },
+    "team_shot_locations": {
+      "status": "allowed",
+      "http": 200
+    },
+    "odds": {
+      "status": "allowed",
+      "http": 400
+    },
+    "odds/opening": {
+      "status": "allowed",
+      "http": 400
+    },
+    "odds/player_props": {
+      "status": "allowed",
+      "http": 200
+    },
+    "odds/player_props/opening": {
+      "status": "allowed",
+      "http": 200
+    }
+  }
+}

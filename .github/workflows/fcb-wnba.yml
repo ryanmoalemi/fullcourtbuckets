@@ -165,17 +165,42 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml sitemap/index.html docs/missing-data.md standings/index.html api/wnba-standings about/index.html authors/ryan-moalemi/index.html how-we-make-full-court-buckets/index.html contact/index.html privacy/index.html terms/index.html 404.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json images logo.png logo.webp articles.json docs/missing-alt.md docs/image-optimize.log
           python -c "import json; arts=json.load(open('articles.json')); print('\n'.join(['news/index.html']+[p for a in arts for p in ('news/'+a['slug']+'/index.html', a['slug']+'/index.html')]))" | xargs -d '\n' git add --
+          python -c "import sys; sys.path.insert(0,'automation'); import build_players as b; print('\n'.join(sorted(b.REMOVED_ADU_PATHS)))" | xargs -d '\n' git add --
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh WNBA data and generated player profiles'
+            # The builder can leave files outside the commit. Rebase refuses a dirty tree.
+            if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
+              git stash push -u -m 'leftover build files'
+            fi
             git pull --rebase origin main
             git push origin HEAD:main
+            git stash drop || true
           fi
       - name: Prepare existing website and generated profiles
         if: steps.key.outputs.ready == 'true'
         run: |
           mkdir -p "$RUNNER_TEMP/fcb-site"
           git archive HEAD | tar -xf - -C "$RUNNER_TEMP/fcb-site"
-          rm -rf "$RUNNER_TEMP/fcb-site/.github" "$RUNNER_TEMP/fcb-site/automation" "$RUNNER_TEMP/fcb-site/portrait-masters" "$RUNNER_TEMP/fcb-site/portrait-handoff"
+          rm -rf "$RUNNER_TEMP/fcb-site/.github" "$RUNNER_TEMP/fcb-site/automation" "$RUNNER_TEMP/fcb-site/portrait-masters" "$RUNNER_TEMP/fcb-site/portrait-handoff" "$RUNNER_TEMP/fcb-site/data/games"
+          python - <<'PY'
+          import os
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'automation')
+          import build_players as builder
+          root = Path(os.environ['RUNNER_TEMP']) / 'fcb-site'
+          bad = []
+          for relative in sorted(builder.REMOVED_ADU_PATHS):
+              path = root / relative
+              text = path.read_text(encoding='utf-8') if path.is_file() else ''
+              if text != builder.adu_redirect_html(relative):
+                  bad.append(relative)
+              if 'googletagmanager' in text or 'gtag(' in text or 'G-ZJK92LK3XT' in text:
+                  bad.append(relative + ' analytics')
+          if bad:
+              raise SystemExit('ADU redirect stubs missing from the Pages artifact: ' + ', '.join(bad))
+          print(f'Pages artifact keeps {len(builder.REMOVED_ADU_PATHS)} ADU redirect stubs.')
+          PY
       - uses: actions/upload-pages-artifact@v3
         if: steps.key.outputs.ready == 'true'
         with:
