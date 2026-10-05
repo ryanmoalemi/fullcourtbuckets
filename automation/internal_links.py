@@ -826,7 +826,10 @@ AUTHOR_BIO = (
         'He started sports writing in 2026 after being impressed by Angel Reese in a WNBA game, '
         'and by the positive effect the league is having on women\'s sports overall.'
     ),
-    'He runs Full Court Buckets, a US WNBA news and analysis site. He comes up with the stories, edits every one, and uses AI tools to help draft them.',
+    (
+        'He runs Full Court Buckets, a US WNBA news and analysis site. '
+        'He writes original content himself, and he also edits AI-assisted drafts.'
+    ),
     'He hopes Full Court Buckets helps bring new eyes to the movement.',
 )
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
@@ -1550,8 +1553,11 @@ def ensure_byline(html: str) -> str:
     return html[:end + 1] + BYLINE_HTML + html[end + 1:]
 
 
+AUTHOR_HOW_LABEL = 'How we make Full Court Buckets content'
+
+
 def _author_bio_html() -> str:
-    """Intro only. The TikTok line and the how-we-make link close the page."""
+    """Intro, then the how-we-make link. The TikTok line closes the page."""
     parts = [
         '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
     ]
@@ -1561,14 +1567,12 @@ def _author_bio_html() -> str:
             '<a href="/wnba/angel-reese/">Angel Reese</a>',
         )
         parts.append(f'<p>{text}</p>')
+    parts.append(f'<p><a href="{HOW_PAGE}">{AUTHOR_HOW_LABEL}</a></p>')
     return '\n'.join(parts)
 
 
 def _author_closing_html() -> str:
-    return '\n'.join([
-        AUTHOR_TIKTOK_HTML,
-        f'<p><a href="{HOW_PAGE}">How we make Full Court Buckets</a></p>',
-    ])
+    return AUTHOR_TIKTOK_HTML
 
 
 def _collection_teaser(root: Path | None) -> str:

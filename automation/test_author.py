@@ -54,9 +54,10 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('src="/images/authors/ryan-moalemi-photo.jpg', page)
         self.assertIn(
             'He runs Full Court Buckets, a US WNBA news and analysis site. '
-            'He comes up with the stories, edits every one, and uses AI tools to help draft them.',
+            'He writes original content himself, and he also edits AI-assisted drafts.',
             page,
         )
+        self.assertNotIn('uses AI tools to help draft them.', page)
         self.assertNotIn('and writes its game recaps and news.', page)
         self.assertIn('alt="Ryan Moalemi"', page)
         self.assertIn('width="320"', page)
@@ -81,6 +82,12 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('>Home</a>', page)
         self.assertIn('>Authors</span>', page)
         self.assertIn('<h2>Stories</h2>', page)
+        bio_link = 'href="/how-we-make-full-court-buckets/">How we make Full Court Buckets content</a>'
+        link_at = page.find(bio_link)
+        teaser_at = page.find('class="collection-teaser"')
+        self.assertGreater(link_at, bio_end)
+        self.assertGreater(teaser_at, link_at)
+        self.assertLess(page.find(bio_link), tiktok_at)
         self.assertIn('href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>', page)
         self.assertNotIn('href="/how-we-make-full-court-buckets/" target="_blank"', page)
         persons = _person(_ld_nodes(page))
@@ -186,6 +193,8 @@ class AuthorPageTests(unittest.TestCase):
             self.assertIn('<h1>Ryan Moalemi</h1>', page)
             self.assertIn('href="/news/future-recap/"', page)
             self.assertIn('since 2001', page)
+            self.assertIn('writes original content himself', page)
+            self.assertIn(links.AUTHOR_HOW_LABEL, page)
             self.assertIn(links.AUTHOR_TIKTOK_HTML, page)
             self.assertNotIn('sameAs', links.author_person())
             self.assertNotIn('\u2014', page)
