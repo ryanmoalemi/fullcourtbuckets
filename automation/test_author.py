@@ -80,7 +80,19 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/authors/ryan-moalemi/"', page)
         self.assertIn('<meta name="author" content="Ryan Moalemi">', page)
         self.assertIn('>Home</a>', page)
-        self.assertIn('>Authors</span>', page)
+        self.assertNotIn('>Authors</span>', page)
+        visible = page.split('aria-label="Breadcrumb"', 1)[1].split('</nav>', 1)[0]
+        self.assertIn('href="/">Home</a>', visible)
+        self.assertIn('>Ryan Moalemi</span>', visible)
+        self.assertNotIn('Authors', visible)
+        crumbs = next(data for data in _ld_nodes(page) if data.get('@type') == 'BreadcrumbList')
+        self.assertEqual(
+            [(item['position'], item['name'], item['item']) for item in crumbs['itemListElement']],
+            [
+                (1, 'Home', 'https://fullcourtbuckets.com/'),
+                (2, 'Ryan Moalemi', 'https://fullcourtbuckets.com/authors/ryan-moalemi/'),
+            ],
+        )
         self.assertIn('<h2>Stories</h2>', page)
         bio_link = 'href="/how-we-make-full-court-buckets/">How we make Full Court Buckets content</a>'
         link_at = page.find(bio_link)
@@ -191,6 +203,16 @@ class AuthorPageTests(unittest.TestCase):
             self.assertEqual(again.count('name="author"'), 1)
             page = links.render_author_page([article])
             self.assertIn('<h1>Ryan Moalemi</h1>', page)
+            self.assertNotIn('>Authors</span>', page)
+            self.assertNotIn('"name": "Authors"', page)
+            generated = next(data for data in _ld_nodes(page) if data.get('@type') == 'BreadcrumbList')
+            self.assertEqual(
+                [(item['position'], item['name'], item.get('item')) for item in generated['itemListElement']],
+                [
+                    (1, 'Home', 'https://fullcourtbuckets.com/'),
+                    (2, 'Ryan Moalemi', 'https://fullcourtbuckets.com/authors/ryan-moalemi/'),
+                ],
+            )
             self.assertIn('href="/news/future-recap/"', page)
             self.assertIn('since 2001', page)
             self.assertIn('writes original content himself', page)

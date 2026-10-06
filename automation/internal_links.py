@@ -1590,8 +1590,7 @@ def render_author_page(articles: list, root: Path | None = None) -> str:
         '@type': 'BreadcrumbList',
         'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
-            {'@type': 'ListItem', 'position': 2, 'name': 'Authors'},
-            {'@type': 'ListItem', 'position': 3, 'name': AUTHOR_NAME, 'item': AUTHOR_URL},
+            {'@type': 'ListItem', 'position': 2, 'name': AUTHOR_NAME, 'item': AUTHOR_URL},
         ],
     }
     cards = ''.join(_news_list_item(article) for article in ordered)
@@ -1650,7 +1649,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 <body>
 <header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
-<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Authors</span><span aria-hidden="true">/</span><span>{esc(AUTHOR_NAME)}</span></nav>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{esc(AUTHOR_NAME)}</span></nav>
 <h1>{esc(AUTHOR_NAME)}</h1>
 <img class="author-photo" src="{AUTHOR_IMAGE}" alt="{esc(AUTHOR_NAME)}" width="320" height="320">
 <div class="bio">
