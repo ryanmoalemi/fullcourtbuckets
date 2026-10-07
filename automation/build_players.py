@@ -739,7 +739,28 @@ def faq_answer_pairs(profile, root: Path):
             raise BuildError(f'{slug} FAQ could not be answered from the page data: {question}')
         pairs.append((question, answer))
     assert_faq_matches_tables(profile, pairs)
+    assert_relationship_faq_matches_couples(slug, pairs, root)
     return pairs
+
+
+def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> None:
+    """Dating and married answers must agree with data/wnba_couples.json when a player is listed."""
+    try:
+        import build_couples
+    except ImportError:
+        return
+    mapped = build_couples.couples_by_slug(root)
+    if slug not in mapped:
+        return
+    partner, couple = mapped[slug]
+    status = couple.get('status') or ''
+    problems = []
+    for question, answer in pairs:
+        reason = build_couples.relationship_faq_conflict(status, partner, question, answer)
+        if reason:
+            problems.append(f'{slug} FAQ contradicts the Couples page ({question}): {reason}.')
+    if problems:
+        raise BuildError('\n'.join(problems))
 
 
 def faq_section(profile, root=None):
