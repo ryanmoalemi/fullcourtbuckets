@@ -1308,6 +1308,32 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 498,
+      "slug": "allisha-gray",
+      "player_name": "Allisha Gray",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/allisha-gray/portrait.webp",
+      "width": 950,
+      "height": 1140,
+      "asset_sha256": "c3947ba8c593eba560121c9a7231e655ebbfefa8a1c02fbef1636d14cfbee862",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 950,
+        "height": 1140,
+        "source_width": 950,
+        "source_height": 1140,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
