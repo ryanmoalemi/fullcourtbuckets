@@ -120,6 +120,7 @@ class PortraitTests(unittest.TestCase):
         self.assertNotIn('Player illustration', figure)
         self.assertNotIn('AI-generated illustration', page)
         self.assertNotIn('Portrait is an AI illustration', page)
+        self.assertIn('Portrait is a photograph.', page)
         self.assertNotIn('The number artwork is a design element, not a player photograph.', page)
         self.assertIn('class="player-illustration"', figure)
         self.assertIn('"caption": "Caitlin Clark"', page)

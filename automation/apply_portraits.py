@@ -146,6 +146,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     else:
         page = page.replace('</head>', style + '</head>', 1)
     portrait_bit = 'Portrait is an AI illustration. '
+    photo_line = 'Portrait is a photograph. '
     note_bit = 'checked against the stats on this page. '
     legacy = (
         'The portrait is an AI-generated editorial illustration, not a photograph. '
@@ -164,6 +165,8 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         page = page.replace(portrait_bit, '')
         page = page.replace(legacy, '')
         page = page.replace(short_note, '')
+        if note_bit in page and photo_line not in page:
+            page = page.replace(note_bit, note_bit + photo_line, 1)
     else:
         if note_bit in page and portrait_bit not in page:
             page = page.replace(note_bit, note_bit + portrait_bit, 1)
