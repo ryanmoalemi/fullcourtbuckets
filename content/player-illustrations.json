@@ -1282,6 +1282,32 @@
       },
       "source": "Owner-approved illustration uploaded to the player publishing folder. Original bytes retained without resizing or recompression.",
       "display": "Existing compact desktop/mobile template. Proportional shoulder crop; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 657,
+      "slug": "rhyne-howard",
+      "player_name": "Rhyne Howard",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/rhyne-howard/portrait.webp",
+      "width": 1040,
+      "height": 760,
+      "asset_sha256": "905de8327e212a0888068e7e4e665fc045378a5b5e670399997cc6484c97e0cf",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 1040,
+        "height": 760,
+        "source_width": 1040,
+        "source_height": 760,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }

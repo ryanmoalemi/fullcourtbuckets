@@ -123,7 +123,13 @@ jobs:
               text=(Path('wnba')/portrait['slug']/'index.html').read_text()
               assert 'class="player-illustration"' in text
               assert portrait['src'] in text
-              assert 'AI-generated illustration' in text
+              if portrait.get('kind') == 'photograph':
+                  assert f'alt="{portrait["player_name"]}"' in text
+                  assert 'illustrated portrait' not in text
+                  assert 'AI-generated illustration' not in text
+                  assert 'The number artwork is a design element, not a player photograph.' not in text
+              else:
+                  assert 'AI-generated illustration' in text
           rollout=json.loads(Path('data/wnba/illustration-rollout.json').read_text())
           assert rollout['profile_count']==len(entries)
           assert rollout['profiles_with_approved_illustrations']==len(portraits)

@@ -65,6 +65,17 @@ class FolderPortraitTests(unittest.TestCase):
         self.image(size=(640,650))
         with self.assertRaises(ValueError): f.sync(self.root)
 
+    def test_photograph_can_publish_below_illustration_master_size(self):
+        self.image(size=(1040, 760))
+        (self.root/'content').mkdir(exist_ok=True)
+        (self.root/'content'/'player-photographs.json').write_text(
+            json.dumps({'slugs': ['example-player']}))
+        self.assertEqual(f.sync(self.root), 1)
+        record = self.records()[0]
+        self.assertEqual(record['kind'], 'photograph')
+        self.assertEqual((record['width'], record['height']), (1040, 760))
+        self.assertIn('photograph', record['source'].lower())
+
     def test_approved_existing_export_can_move_unchanged(self):
         self.image(size=(640,650)); raw=self.file.read_bytes()
         prior={'player_id':1,'slug':'example-player','asset_sha256':hashlib.sha256(raw).hexdigest(),
