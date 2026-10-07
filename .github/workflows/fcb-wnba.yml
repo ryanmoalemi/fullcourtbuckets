@@ -164,6 +164,9 @@ jobs:
           path: ${{ runner.temp }}/portrait-local-qa
           if-no-files-found: ignore
           retention-days: 7
+      - name: Reject git conflict markers in tracked files and built pages
+        if: steps.key.outputs.ready == 'true'
+        run: python automation/test_no_conflict_markers.py
       - name: Commit validated data and generated player pages
         if: steps.key.outputs.ready == 'true'
         run: |
@@ -207,6 +210,9 @@ jobs:
               raise SystemExit('ADU redirect stubs missing from the Pages artifact: ' + ', '.join(bad))
           print(f'Pages artifact keeps {len(builder.REMOVED_ADU_PATHS)} ADU redirect stubs.')
           PY
+      - name: Reject git conflict markers in the Pages artifact
+        if: steps.key.outputs.ready == 'true'
+        run: python automation/test_no_conflict_markers.py "$RUNNER_TEMP/fcb-site"
       - uses: actions/upload-pages-artifact@v3
         if: steps.key.outputs.ready == 'true'
         with:
