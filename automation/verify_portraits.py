@@ -49,8 +49,9 @@ def decode_asset(raw: bytes, record: dict, legacy: dict) -> dict:
         require(size[0] >= 640 and size[1] >= 650, 'New portrait is below 640x650')
         settings = record.get('export_settings', {})
         require(settings.get('upscaled') is False, 'No-upscaling provenance missing')
-        require(settings.get('source_width', 0) >= 1024 and settings.get('source_height', 0) >= 1024,
-                'New portrait must come from a full-resolution master')
+        if record.get('kind') != 'photograph':
+            require(settings.get('source_width', 0) >= 1024 and settings.get('source_height', 0) >= 1024,
+                    'New portrait must come from a full-resolution master')
     return {'asset_sha256': digest, 'width': size[0], 'height': size[1],
             'format': fmt, 'bytes': len(raw), 'legacy_resolution': exempt and (size[0] < 640 or size[1] < 650)}
 

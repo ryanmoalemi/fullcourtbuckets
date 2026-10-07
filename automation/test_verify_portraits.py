@@ -32,6 +32,15 @@ class VerifyPortraitTests(unittest.TestCase):
     def test_native_dimensions_legacy_only(self):
         raw,record=self.sample((192,192))
         self.assertTrue(decode_asset(raw,record,{record['src']:record['asset_sha256']})['legacy_resolution'])
+    def test_photograph_does_not_need_illustration_master(self):
+        raw, record = self.sample((1040, 760))
+        record['kind'] = 'photograph'
+        record['export_settings'] = {'upscaled': False, 'source_width': 1040, 'source_height': 760}
+        self.assertEqual(decode_asset(raw, record, {})['height'], 760)
+    def test_illustration_still_needs_full_master(self):
+        raw, record = self.sample((1040, 760))
+        record['export_settings'] = {'upscaled': False, 'source_width': 1040, 'source_height': 760}
+        with self.assertRaises(VerificationError): decode_asset(raw, record, {})
     def test_upscaled_master_rejected(self):
         raw,record=self.sample(); record['export_settings']['upscaled']=True
         with self.assertRaises(VerificationError): decode_asset(raw,record,{})

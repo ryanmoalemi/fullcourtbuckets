@@ -18,6 +18,20 @@ FORMATS = {'.png': 'PNG', '.webp': 'WEBP', '.avif': 'AVIF'}
 MANAGER = 'approved-player-folder-v1'
 
 
+def photograph_slugs(root: Path) -> set[str]:
+    """Real studio photos, not AI illustrations. Rebuilds must keep that distinction."""
+    path = root / 'content' / 'player-photographs.json'
+    if not path.is_file():
+        return set()
+    data = json.loads(path.read_text(encoding='utf-8'))
+    slugs = data.get('slugs')
+    if not isinstance(slugs, list) or not all(isinstance(item, str) and SLUG.fullmatch(item) for item in slugs):
+        raise ValueError('player-photographs.json must list player slugs')
+    if len(slugs) != len(set(slugs)):
+        raise ValueError('player-photographs.json lists a player twice')
+    return set(slugs)
+
+
 def matches_player_path(src: str, slug: str) -> bool:
     if not isinstance(src, str) or not isinstance(slug, str) or not SLUG.fullmatch(slug):
         return False
@@ -37,6 +51,7 @@ def record_for(root: Path, file: Path, prior: dict | None = None) -> dict:
     player = profile['player']
     if profile['slug'] != slug or type(player['id']) is not int:
         raise ValueError(f'Invalid player record: {slug}')
+    is_photo = slug in photograph_slugs(root)
     raw = file.read_bytes()
     if not 0 < len(raw) <= 12_000_000:
         raise ValueError(f'{slug}: image must be nonempty and at most 12 MB')
@@ -63,7 +78,9 @@ def record_for(root: Path, file: Path, prior: dict | None = None) -> dict:
             and prior.get('asset_sha256') == digest)
     settings = copy.deepcopy(prior.get('export_settings', {})) if same else {}
     if not settings:
-        if min(width, height) < 1024:
+        # Illustration masters stay full-resolution. A finished studio photograph
+        # is already the publishing file, so it only has to meet the 640x650 floor.
+        if not is_photo and min(width, height) < 1024:
             raise ValueError(f'{slug}: new uploads need an original of at least 1024px per side')
         settings = {'format': image.format, 'width': width, 'height': height,
                     'source_width': width, 'source_height': height, 'upscaled': False,
@@ -71,15 +88,22 @@ def record_for(root: Path, file: Path, prior: dict | None = None) -> dict:
     record = copy.deepcopy(prior) if same else {}
     name = ' '.join(str(player.get(k) or '').strip() for k in ('first_name', 'last_name')).strip()
     record.update(player_id=player['id'], slug=slug, player_name=name, approved=True,
-                  kind='illustration', src='/' + file.relative_to(root).as_posix(),
+                  kind='photograph' if is_photo else 'illustration',
+                  src='/' + file.relative_to(root).as_posix(),
                   width=width, height=height, asset_sha256=digest,
                   quality_standard='fcb-portrait-640x650-v2', managed_by=MANAGER,
                   original_bytes_preserved=True, export_settings=settings)
     if not same:
-        record['source'] = ('Owner-approved illustration uploaded to the player publishing folder. '
-                            'Original bytes retained without resizing or recompression.')
-        record['display'] = ('Existing compact desktop/mobile template. Proportional shoulder crop; '
-                             'names and statistics remain HTML. No square card or visible caption.')
+        if is_photo:
+            record['source'] = ('Owner-approved studio photograph in the player publishing folder. '
+                                'Transparent background. Publishing bytes kept without a later resize.')
+            record['display'] = ('Existing compact desktop/mobile template. Real player photograph; '
+                                 'names and statistics remain HTML. No square card or visible caption.')
+        else:
+            record['source'] = ('Owner-approved illustration uploaded to the player publishing folder. '
+                                'Original bytes retained without resizing or recompression.')
+            record['display'] = ('Existing compact desktop/mobile template. Proportional shoulder crop; '
+                                 'names and statistics remain HTML. No square card or visible caption.')
     return record
 
 

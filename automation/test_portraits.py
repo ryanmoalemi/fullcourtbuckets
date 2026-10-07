@@ -110,6 +110,33 @@ class PortraitTests(unittest.TestCase):
         with self.assertRaises(ValueError): portraits.render(PAGE, PROFILE, RECORD, self.root)
     def test_missing_slot_rejected(self):
         with self.assertRaises(ValueError): portraits.render(PAGE.replace('class="hero-art"','class="unexpected"'), PROFILE, RECORD, self.root)
+    def test_photograph_uses_player_name_and_drops_number_disclaimer(self):
+        record = dict(RECORD, kind='photograph')
+        record.pop('mask')
+        page = portraits.render(PAGE, PROFILE, record, self.root)
+        figure = portraits.APPLIED.search(page).group()
+        self.assertIn('alt="Caitlin Clark"', figure)
+        self.assertNotIn('illustrated portrait', figure)
+        self.assertNotIn('Player illustration', figure)
+        self.assertNotIn('AI-generated illustration', page)
+        self.assertNotIn('Portrait is an AI illustration', page)
+        self.assertIn('Portrait is a photograph.', page)
+        self.assertNotIn('The number artwork is a design element, not a player photograph.', page)
+        self.assertIn('class="player-illustration"', figure)
+        self.assertIn('"caption": "Caitlin Clark"', page)
+    def test_compact_number_art_slot_accepts_portrait(self):
+        compact = PAGE.replace(
+            '<section class="hero" aria-labelledby="player-name">',
+            '<section class="hero fcb-player-compact" aria-labelledby="player-name" data-name-size="normal">',
+            1)
+        compact = compact.replace(
+            '<div class="hero-art" aria-hidden="true"><span class="ghost-number">22</span><div class="number-card"><strong>22</strong></div><small>FCB</small></div>',
+            '<div class="hero-art portrait-art" aria-hidden="true"><div class="portrait-backdrop"><span class="ghost-number">22</span></div></div>',
+            1)
+        page = portraits.render(compact, PROFILE, RECORD, self.root)
+        self.assertIn('class="hero has-player-portrait fcb-player-compact"', page)
+        self.assertIn('alt="Caitlin Clark illustrated portrait"', page)
+        self.assertIn(STATS, page)
     def test_structured_image_data(self):
         page = portraits.render(PAGE, PROFILE, RECORD, self.root)
         self.assertIn('"@type": "ImageObject"', page)

@@ -16,6 +16,10 @@ BASE = 'https://fullcourtbuckets.com'
 ASSET = re.compile(r'/images/players/(?:[a-z0-9][a-z0-9._-]*|[a-z0-9]+(?:-[a-z0-9]+)*/portrait\.(?:png|webp|avif))\Z')
 SLUG = re.compile(r'[a-z0-9]+(?:-[a-z0-9]+)*\Z')
 SLOT = re.compile(r'<div class="hero-art" aria-hidden="true">.*?</small></div>', re.S)
+COMPACT_SLOT = re.compile(
+    r'<div class="hero-art portrait-art" aria-hidden="true"><div class="portrait-backdrop"><span class="ghost-number">.*?</span></div></div>',
+    re.S)
+NUMBER_ARTWORK = 'The number artwork is a design element, not a player photograph.'
 APPLIED = re.compile(r'<!-- FCB:approved-portrait:start -->.*?<!-- FCB:approved-portrait:end -->', re.S)
 
 CSS = '''
@@ -83,8 +87,10 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         raise ValueError('Illustration does not match the permanent player ID.')
     if not SLUG.fullmatch(slug) or profile.get('slug') != slug:
         raise ValueError('Illustration does not match the permanent player URL.')
-    if record.get('approved') is not True or record.get('kind') != 'illustration':
-        raise ValueError('Only approved illustrations can be published.')
+    kind = record.get('kind')
+    if record.get('approved') is not True or kind not in ('illustration', 'photograph'):
+        raise ValueError('Only approved illustrations or photographs can be published.')
+    photo = kind == 'photograph'
     name = ' '.join(str(player.get(k) or '').strip() for k in ('first_name', 'last_name')).strip()
     if record.get('player_name') != name:
         raise ValueError('Player name does not match the approved illustration record.')
@@ -103,24 +109,33 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         number = 'FCB'
     backdrop = ('<div class="portrait-backdrop" aria-hidden="true">'
                 f'<span class="ghost-number">{esc(number)}</span></div>')
-    caption = 'AI-generated illustration · Full Court Buckets'
+    caption = name if photo else 'AI-generated illustration · Full Court Buckets'
+    alt = name if photo else f'{name} illustrated portrait'
+    aria = name if photo else 'Player illustration'
     figure = (
         '<!-- FCB:approved-portrait:start -->'
-        '<figure class="hero-art portrait-art" aria-label="Player illustration">' + backdrop +
+        f'<figure class="hero-art portrait-art" aria-label="{esc(aria)}">' + backdrop +
         '<div class="portrait-crop">'
         f'<img class="player-illustration" src="{esc(src)}" '
-        f'alt="{esc(name)} illustrated portrait" width="{width}" height="{height}"'
+        f'alt="{esc(alt)}" width="{width}" height="{height}"'
         f'{mask_style} fetchpriority="high" decoding="async">'
         '</div></figure><!-- FCB:approved-portrait:end -->'
     )
     if APPLIED.search(page):
         page, count = APPLIED.subn(lambda _: figure, page)
-    else:
+    elif SLOT.search(page):
         page, count = SLOT.subn(lambda _: figure, page)
+    else:
+        page, count = COMPACT_SLOT.subn(lambda _: figure, page)
     if count != 1:
         raise ValueError('Expected exactly one portrait slot; no page was changed.')
-    page = page.replace('<section class="hero" aria-labelledby="player-name">',
-                        '<section class="hero has-player-portrait" aria-labelledby="player-name">', 1)
+    if not re.search(r'class="hero has-player-portrait(?: |")', page):
+        updated = page.replace('<section class="hero" aria-labelledby="player-name">',
+                               '<section class="hero has-player-portrait" aria-labelledby="player-name">', 1)
+        if updated == page:
+            updated = page.replace('<section class="hero ',
+                                   '<section class="hero has-player-portrait ', 1)
+        page = updated
     # Rollout appends fcb-player-compact after the portrait class, so the attribute
     # no longer ends at has-player-portrait. Accept that already-published hero.
     if not re.search(r'class="hero has-player-portrait(?: |")', page):
@@ -131,9 +146,8 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     else:
         page = page.replace('</head>', style + '</head>', 1)
     portrait_bit = 'Portrait is an AI illustration. '
+    photo_line = 'Portrait is a photograph. '
     note_bit = 'checked against the stats on this page. '
-    if note_bit in page and portrait_bit not in page:
-        page = page.replace(note_bit, note_bit + portrait_bit, 1)
     legacy = (
         'The portrait is an AI-generated editorial illustration, not a photograph. '
         'Names, team information and statistics are separate HTML text. '
@@ -143,16 +157,29 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         'The portrait is an AI-generated editorial illustration, not a photograph. '
         'Names, team information and statistics are separate HTML text.'
     )
-    artwork = 'The number artwork is a design element, not a player photograph.'
-    page = page.replace(legacy, artwork)
-    if short_note in page:
-        page = page.replace(short_note, artwork)
+    if photo:
+        # A real photograph replaces the number-art disclaimer. Do not call it an illustration.
+        page = page.replace(' ' + NUMBER_ARTWORK, '')
+        page = page.replace(NUMBER_ARTWORK, '')
+        page = page.replace(' ' + portrait_bit, ' ')
+        page = page.replace(portrait_bit, '')
+        page = page.replace(legacy, '')
+        page = page.replace(short_note, '')
+        if note_bit in page and photo_line not in page:
+            page = page.replace(note_bit, note_bit + photo_line, 1)
+    else:
+        if note_bit in page and portrait_bit not in page:
+            page = page.replace(note_bit, note_bit + portrait_bit, 1)
+        page = page.replace(legacy, NUMBER_ARTWORK)
+        if short_note in page:
+            page = page.replace(short_note, NUMBER_ARTWORK)
     def update_schema(match):
         schema = json.loads(match.group(1))
         for entity in schema.get('@graph', []):
             if entity.get('@type') == 'Person' and entity.get('@id') == f'{BASE}/wnba/{slug}/#player':
                 entity['image'] = {'@type': 'ImageObject', 'contentUrl': BASE + src,
-                                   'caption': f'{name}. {caption}.', 'width': width, 'height': height}
+                                   'caption': caption if photo else f'{name}. {caption}.',
+                                   'width': width, 'height': height}
         encoded = json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
         return '<script type="application/ld+json">' + encoded + '</script>'
     return re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, page, flags=re.S)

@@ -17,6 +17,8 @@ PROFILE_NOTE = (
     'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
 )
 PORTRAIT_LINE = 'Portrait is an AI illustration.'
+PHOTOGRAPH_LINE = 'Portrait is a photograph.'
+PORTRAIT_LINES = (PORTRAIT_LINE, PHOTOGRAPH_LINE)
 KEPT = '/news/liberty-lynx-game-1-full-recap/'
 REMOVED = 'liberty-lynx-game-1-ionescu-stewart'
 
@@ -161,9 +163,9 @@ class HelpfulContentTests(unittest.TestCase):
                 offenders.append(path.relative_to(ROOT).as_posix())
             if 'class="ai-note"' in text and PROFILE_NOTE not in text:
                 offenders.append('missing profile note ' + path.relative_to(ROOT).as_posix())
-            if 'has-player-portrait' in text and PORTRAIT_LINE not in text:
+            if 'has-player-portrait' in text and not any(line in text for line in PORTRAIT_LINES):
                 offenders.append('missing portrait line ' + path.relative_to(ROOT).as_posix())
-            if 'has-player-portrait' not in text and PORTRAIT_LINE in text and 'wnba/' in path.as_posix():
+            if 'has-player-portrait' not in text and any(line in text for line in PORTRAIT_LINES) and 'wnba/' in path.as_posix():
                 offenders.append('portrait line without a portrait ' + path.relative_to(ROOT).as_posix())
             if PROFILE_NOTE in text:
                 noted += 1
