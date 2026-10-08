@@ -1,0 +1,40 @@
+name: Dispatch WNBA game stats
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/dispatch-game-stats.json'
+permissions:
+  actions: write
+  contents: read
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Start the game-stats workflow for each requested date
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - << 'PY'
+          import json
+          import os
+          import subprocess
+          doc = json.load(open(".github/dispatch-game-stats.json", encoding="utf-8"))
+          dates = doc.get("dates") or []
+          if not dates or len(dates) > 8:
+              raise SystemExit("Pass 1 to 8 dates.")
+          for day in dates:
+              if not isinstance(day, str) or len(day) != 10:
+                  raise SystemExit("Each date must be YYYY-MM-DD.")
+              subprocess.run([
+                  "gh", "api", "--method", "POST",
+                  f"repos/{os.environ['REPO']}/actions/workflows/fcb-game-stats.yml/dispatches",
+                  "-f", "ref=main",
+                  "-f", f"inputs[date]={day}",
+              ], check=True)
+              print(f"Dispatched game stats for {day}.")
+          PY

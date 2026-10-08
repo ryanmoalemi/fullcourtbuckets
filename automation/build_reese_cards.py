@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Ryan Moalemi's Angel Reese card page, rendered from data/reese-cards.json.
 
-Edit the JSON to add a card or change a price. Then run:
+Live auctions he is bidding on live in data/reese-bids.json. Edit that file
+to add a card, move a bid, or close an auction (status won or lost, plus
+final_price and result). Then run:
 
     python automation/build_reese_cards.py
 
@@ -12,9 +14,11 @@ from __future__ import annotations
 import argparse
 import json
 import re
+from datetime import datetime
 from decimal import Decimal, ROUND_HALF_UP
 from html import escape
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import site_nav
 import internal_links as links
@@ -23,6 +27,10 @@ from analytics import GA4_TAG
 ROUTE = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
 RELATIVE = 'authors/ryan-moalemi/ryans-angel-reese-cards/index.html'
 DATA_FILE = Path('data/reese-cards.json')
+BIDS_FILE = Path('data/reese-bids.json')
+PT = ZoneInfo('America/Los_Angeles')
+BID_TYPES = {'auction', 'buy_it_now'}
+BID_STATUSES = {'live', 'won', 'lost'}
 BASE = 'https://fullcourtbuckets.com'
 COLLECTION_TITLE = "Ryan's Angel Reese card collection"
 PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
@@ -212,10 +220,47 @@ def value_as_of(root: Path) -> str:
     return prices_as_of(data)
 
 
+def load_bids(root: Path) -> dict | None:
+    path = root / BIDS_FILE
+    if not path.is_file():
+        return None
+    data = json.loads(path.read_text(encoding='utf-8'))
+    if not isinstance(data, dict) or not isinstance(data.get('bids'), list):
+        raise ValueError(f'{BIDS_FILE.as_posix()} needs an object with a bids list.')
+    for entry in data['bids']:
+        _check_bid(entry)
+    if '\u2014' in json.dumps(data):
+        raise ValueError('Bid data contains an em dash. Keep the copy plain.')
+    return data
+
+
+def _check_bid(entry: dict) -> None:
+    required = (
+        'id', 'platform', 'url', 'card', 'grade', 'serial', 'type',
+        'as_of', 'estimate_low', 'estimate_high', 'status', 'take', 'image',
+    )
+    missing = [key for key in required if entry.get(key) in (None, '')]
+    if missing:
+        raise ValueError(f"Bid {entry.get('id') or '?'} is missing {', '.join(missing)}.")
+    if entry['type'] not in BID_TYPES:
+        raise ValueError(f"Bid {entry['id']} type must be auction or buy_it_now.")
+    if str(entry['status']).lower() not in BID_STATUSES:
+        raise ValueError(f"Bid {entry['id']} status must be live, won, or lost.")
+    if money_amount(entry['estimate_low']) > money_amount(entry['estimate_high']):
+        raise ValueError(f"Bid {entry['id']} estimate_low is above estimate_high.")
+    if entry['type'] == 'auction' and entry.get('current_bid') is None and entry.get('final_price') is None:
+        raise ValueError(f"Bid {entry['id']} needs current_bid or final_price.")
+    image = entry['image']
+    if not isinstance(image, dict) or not image.get('src') or not image.get('alt'):
+        raise ValueError(f"Bid {entry['id']} needs an image src and alt.")
+
+
 def page_stamp(root: Path) -> str:
     """Sitemap and schema date. Follows a collection edit even when prices did not move."""
     data = load_collection(root) or {}
     days = [value_as_of(root), str(data.get('updated') or '')[:10]]
+    bids = load_bids(root) or {}
+    days.append(str(bids.get('as_of') or '')[:10])
     days = [day for day in days if len(day) == 10]
     return max(days) if days else ''
 
@@ -310,6 +355,11 @@ def summarize(data: dict) -> dict:
 
 def _external(url: str, label: str) -> str:
     return f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(label)}</a>'
+
+
+def _listing_link(url: str, label: str) -> str:
+    """Marketplace listing. nofollow because these are paid third-party auctions."""
+    return f'<a href="{esc(url)}" target="_blank" rel="noopener nofollow">{esc(label)}</a>'
 
 
 def linkify(text: str) -> str:
@@ -741,7 +791,175 @@ def _controls(cards: list[dict]) -> str:
 </div>'''
 
 
-def render_body(data: dict) -> str:
+def format_dollars(amount) -> str:
+    value = money_amount(amount)
+    if value == value.to_integral_value():
+        sign = '-' if value < 0 else ''
+        return f'{sign}${abs(int(value)):,}'
+    return format_money(value)
+
+
+def _pt(iso: str) -> datetime:
+    return datetime.fromisoformat(str(iso)).astimezone(PT)
+
+
+def format_clock(iso: str) -> str:
+    dt = _pt(iso)
+    hour = dt.hour % 12 or 12
+    ampm = 'a.m.' if dt.hour < 12 else 'p.m.'
+    return f'{hour}:{dt.minute:02d} {ampm} PT, {SHORT_MONTHS[dt.month - 1]} {dt.day}, {dt.year}'
+
+
+def format_deadline(iso: str) -> str:
+    dt = _pt(iso)
+    hour = dt.hour % 12 or 12
+    ampm = 'a.m.' if dt.hour < 12 else 'p.m.'
+    return (
+        f'{SHORT_MONTHS[dt.month - 1]} {dt.day}, {dt.year}, '
+        f'{hour}:{dt.minute:02d} {ampm} PT'
+    )
+
+
+def bid_status(entry: dict) -> tuple[str, str]:
+    status = str(entry.get('status') or '').lower()
+    if status == 'won':
+        return 'Won', 'won'
+    if status == 'lost':
+        return 'Lost', 'lost'
+    if str(entry.get('type') or '').lower() == 'buy_it_now':
+        return 'Buy it now', 'bin'
+    return 'Live', 'live'
+
+
+def premium_span(entry: dict) -> str:
+    rate = entry.get('premium_rate')
+    if not isinstance(rate, (int, float)) or isinstance(rate, bool):
+        return ''
+    factor = Decimal('1') + Decimal(str(rate))
+    low = (money_amount(entry['estimate_low']) * factor).quantize(CENT, rounding=ROUND_HALF_UP)
+    high = (money_amount(entry['estimate_high']) * factor).quantize(CENT, rounding=ROUND_HALF_UP)
+    percent = (Decimal(str(rate)) * Decimal(100)).quantize(Decimal('1'), rounding=ROUND_HALF_UP)
+    return (
+        f'About {format_dollars(low)} to {format_dollars(high)} '
+        f"with the {percent}% buyer's premium on this listing."
+    )
+
+
+def _bid_comp(comp: dict) -> str:
+    bits = [short_date(comp['date']) if comp.get('date') else 'Date unknown']
+    if comp.get('price') is not None:
+        bits.append(format_dollars(comp['price']))
+    if comp.get('grade'):
+        bits.append(str(comp['grade']))
+    if comp.get('venue'):
+        bits.append(str(comp['venue']))
+    label = ' · '.join(bits)
+    linked = _external(comp['url'], label) if comp.get('url') else esc(label)
+    title = f' <span>{esc(comp["card"])}</span>' if comp.get('card') else ''
+    note = f' <span>{esc(comp["note"])}</span>' if comp.get('note') else ''
+    return f'<li>{linked}{title}{note}</li>'
+
+
+def _bid_price(entry: dict) -> str:
+    if entry.get('final_price') is not None and str(entry.get('status') or '').lower() in {'won', 'lost'}:
+        label = 'Final price'
+        amount = format_dollars(entry['final_price'])
+    else:
+        label = 'Asking' if str(entry.get('type') or '') == 'buy_it_now' else 'Current bid'
+        amount = format_dollars(entry['current_bid']) if entry.get('current_bid') is not None else 'See listing'
+    return f'<div><dt>{label}</dt><dd>{esc(amount)}</dd></div>'
+
+
+def _bid_ends(entry: dict) -> str:
+    ends = entry.get('ends_at')
+    title = f' title="{esc(entry["ends_note"])}"' if entry.get('ends_note') else ''
+    if ends:
+        stamp = esc(str(ends))
+        label = esc(format_deadline(ends))
+        return f'<div><dt>Ends</dt><dd class="when"{title}><time datetime="{stamp}">{label}</time></dd></div>'
+    return f'<div><dt>Ends</dt><dd class="when"{title}>TBA</dd></div>'
+
+
+def _bid_meta(entry: dict) -> str:
+    bits = [esc(entry['grade']), esc(entry['serial'])]
+    if entry.get('cert'):
+        cert = esc(str(entry['cert']))
+        if entry.get('cert_url'):
+            cert = _external(entry['cert_url'], str(entry['cert']))
+        hint = f' title="{esc(entry["cert_note"])}"' if entry.get('cert_note') else ''
+        bits.append(f'<span{hint}>Cert {cert}</span>')
+    if entry.get('pop_short'):
+        bits.append(esc(entry['pop_short']))
+    if entry.get('lot_short'):
+        lot_title = f' title="{esc(entry["lot"])}"' if entry.get('lot') else ''
+        bits.append(f'<span{lot_title}>{esc(entry["lot_short"])}</span>')
+    return ' · '.join(bits)
+
+
+def _bid_article(entry: dict) -> str:
+    image = entry['image']
+    label, kind = bid_status(entry)
+    bid_count = entry.get('bids')
+    count_title = f' title="{esc(entry["bids_note"])}"' if entry.get('bids_note') else ''
+    count_html = (
+        f'<div><dt>Bids</dt><dd{count_title}>{esc(bid_count)}</dd></div>'
+        if bid_count is not None else ''
+    )
+    result = f'<p class="bid-meta">{esc(entry["result"])}</p>' if entry.get('result') else ''
+    notes = [part for part in (premium_span(entry), entry.get('estimate_line') or '') if part]
+    note_html = f'<p class="bid-note">{esc(" ".join(notes))}</p>' if notes else ''
+    comps = ''.join(_bid_comp(comp) for comp in entry.get('comps') or [])
+    why = f'<p class="bid-why">{esc(entry["estimate_note"])}</p>' if entry.get('estimate_note') else ''
+    comps_html = ''
+    if comps or why:
+        comps_html = (
+            '<details class="bid-comps-details"><summary>Comparable sales</summary>'
+            f'<ul class="bid-comps">{comps}</ul>{why}</details>'
+        )
+    credit = entry['image'].get('credit') or f'Image: {entry["platform"]}'
+    estimate = (
+        f'{esc(format_dollars(entry["estimate_low"]))} to '
+        f'{esc(format_dollars(entry["estimate_high"]))}'
+    )
+    listing = entry['url']
+    return f'''<article class="bid" id="{esc(entry["id"])}">
+<div class="bid-photo">
+<a class="bid-photo-link" href="{esc(listing)}" target="_blank" rel="noopener nofollow"><img src="{esc(image["src"])}" alt="{esc(image["alt"])}" width="{int(image.get("width") or 760)}" height="{int(image.get("height") or 1200)}" decoding="async" loading="eager"></a>
+<p class="photo-credit">{esc(credit.split(":", 1)[0])}: {_listing_link(listing, credit.split(":", 1)[-1].strip())}</p>
+</div>
+<div class="bid-copy">
+<div class="bid-top"><span class="status status-{kind}">{esc(label)}</span>{_external(entry["url"], entry["platform"])}</div>
+<h3 class="bid-name">{esc(entry["card"])}</h3>
+<p class="bid-meta">{_bid_meta(entry)}</p>
+{result}
+<dl class="bid-stats">
+{_bid_price(entry)}
+{count_html}
+{_bid_ends(entry)}
+<div><dt>FCB estimate</dt><dd>{estimate}</dd></div>
+</dl>
+{note_html}
+<p class="bid-take">{esc(entry["take"])}</p>
+{comps_html}
+</div>
+</article>'''
+
+
+def render_bids(root: Path) -> str:
+    data = load_bids(root)
+    if not data or not data.get('bids'):
+        return ''
+    articles = ''.join(_bid_article(entry) for entry in data['bids'])
+    checked = format_clock(data['as_of']) if data.get('as_of') else ''
+    stamp = f'<p class="as-of">Bids as of {esc(checked)}</p>' if checked else ''
+    return f'''<section class="panel" id="bidding">
+<h2>Cards I&#x27;m bidding on</h2>
+{stamp}
+<div class="bids">{articles}</div>
+</section>'''
+
+
+def render_body(data: dict, root: Path | None = None) -> str:
     cards = list(data['cards'])
     as_of = prices_as_of(data)
     summary = summarize(data)
@@ -774,6 +992,7 @@ def render_body(data: dict) -> str:
 <div class="cards" id="card-grid">{tiles}</div>
 <p id="card-empty" class="lede" hidden>No cards match.</p>
 </section>
+{render_bids(root) if root is not None else ''}
 {_stats(summary, as_of)}
 {_movers(cards, summary)}
 {_chart(cards)}
@@ -853,6 +1072,7 @@ PAGE_JS = r'''
   }
 
   grid.addEventListener('click', function (event) {
+    if (event.target.closest('a')) return;
     var tile = event.target.closest('.tile');
     if (!tile) return;
     openCard(tile.getAttribute('data-id'));
@@ -1004,6 +1224,34 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .notes{color:#e7e0d6}
 .value-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .value-line b{font:800 32px/1 "Barlow Condensed",sans-serif}
+.bids{display:flex;flex-direction:column;gap:12px}
+.bid{display:grid;grid-template-columns:168px minmax(0,1fr);background:#120f16;border:1px solid #3a3328;min-width:0}
+.bid-photo{background:#09080c;min-width:0}
+.bid-photo-link{display:block;line-height:0}
+.bid-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#09080c}
+.bid .photo-credit{margin:0;padding:6px 8px 8px;color:#9c958b;font-size:11px}
+.bid-copy{display:flex;flex-direction:column;gap:8px;padding:12px 14px 14px;min-width:0}
+.bid-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.bid-top a{font-weight:800}
+.status{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.status-live{background:#10281c;color:#7dffa8}
+.status-won{background:#10281c;color:#7dffa8}
+.status-lost{background:#2c1218;color:#ff8d9a}
+.status-bin{background:#2a2416;color:#f0c36a}
+.bid-name{margin:0;font:800 clamp(1.15rem,1.6vw,1.45rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
+.bid-meta{margin:0;color:#d5cdc2;font-size:13px}
+.bid-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:2px 0 0}
+.bid-stats div{background:#191621;padding:7px 8px;min-width:0}
+.bid-stats dt{color:#b7b0a6;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.bid-stats dd{margin:3px 0 0;font:800 20px/1.05 "Barlow Condensed",sans-serif}
+.bid-stats dd.when{font:700 13px/1.25 Inter,system-ui,sans-serif}
+.bid-note{margin:0;color:#b7b0a6;font-size:13px;line-height:1.4}
+.bid-take{margin:0}
+.bid-comps-details{border-top:1px solid #2b2733;padding:0}
+.bid-comps-details summary{min-height:36px;color:#f0c36a;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.bid-comps{list-style:none;margin:0;padding:0 0 8px}
+.bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733;font-size:14px}
+.bid-why{margin:0 0 8px;color:#c9c1b6;font-size:13px}
 @media(max-width:800px){
 .hero{height:min(70vh,calc(100svh - 14.75rem));max-height:72vh}
 .hero h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
@@ -1011,6 +1259,10 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .cost{grid-template-columns:1fr 1fr}
 .detail-photos,.detail-photos.solo{grid-template-columns:1fr}
 .cards.is-list .tile{grid-template-columns:96px minmax(0,1fr)}
+.bid{grid-template-columns:112px minmax(0,1fr)}
+.bid-photo img{height:168px}
+.bid-stats{grid-template-columns:1fr 1fr}
+.bid-copy{padding:10px 10px 12px}
 dialog{width:100vw;max-width:100vw;height:100vh;max-height:100vh;margin:0;border:0}
 }
 '''
@@ -1063,7 +1315,7 @@ def render_page(root: Path, menu: list | None = None) -> str | None:
     as_of = value_as_of(root)
     stamp = page_stamp(root)
     _faq_html, faq_entities = _faq(as_of)
-    body = render_body(data)
+    body = render_body(data, root)
     html_text = _head(_schema(data, summary, stamp, faq_entities)) + body + '\n</body>\n</html>\n'
     if '\u2014' in html_text:
         raise ValueError('Generated card page contains an em dash.')

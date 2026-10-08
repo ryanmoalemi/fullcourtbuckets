@@ -202,6 +202,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(again["mismatches"][0]["field"], "player.NY.Breanna Stewart.pts")
         self.assertEqual(again["mismatches"][0]["balldontlie"], 19)
         self.assertEqual(again["mismatches"][0]["espn"], 18)
+        espn["players"][0]["fgm"] = 1
+        fields = [row["field"] for row in g.crosscheck(primary, espn)["mismatches"]]
+        self.assertIn("player.NY.Breanna Stewart.fgm", fields)
+        self.assertIn("player.NY.Breanna Stewart.pts", fields)
+        espn["players"][0]["fgm"] = 6
         espn["away"]["totals"]["reb"] = 9
         fields = [row["field"] for row in g.crosscheck(primary, espn)["mismatches"]]
         self.assertIn("team.NY.reb", fields)
@@ -233,6 +238,17 @@ class Tests(unittest.TestCase):
             self.assertTrue(doc["crosscheck"]["matched"])
             text = path.with_suffix(".md").read_text(encoding="utf-8")
             self.assertIn("Matched.", text)
+            self.assertIn("6-10 FG", text)
+            self.assertIn("+7", text)
+            self.assertIn("Play-by-play: 2 plays", text)
+            self.assertEqual(len(doc["plays"]), 2)
+            self.assertEqual(doc["plays"][0]["away_score"], 10)
+            self.assertFalse(doc["overtime"])
+            self.assertEqual(doc["plays_status"], "included")
+            index = json.loads((root / "data" / "games" / "index.json").read_text(encoding="utf-8"))
+            self.assertEqual(index["games"][0]["path"], "data/games/2026-10-04-ny-atl.json")
+            self.assertEqual(index["games"][0]["matchup"], "ny-at-atl")
+            self.assertEqual(index["games"][0]["mismatch_count"], 0)
             self.assertIn(g.PUBLIC_SOURCE_NOTE, text)
             self.assertNotIn("balldontlie", text)
             self.assertNotIn("\u2014", text)
@@ -326,6 +342,7 @@ class Tests(unittest.TestCase):
     def test_style_guide_and_workflow(self):
         guide = (ROOT / "docs" / "style-guide.md").read_text(encoding="utf-8")
         self.assertIn("data/games/", guide)
+        self.assertIn("data/games/index.json", guide)
         self.assertIn(g.PUBLIC_SOURCE_NOTE, guide)
         self.assertNotIn("balldontlie", guide.lower())
         self.assertIn("ESPN is the cross-check", guide)
@@ -342,11 +359,23 @@ class Tests(unittest.TestCase):
         self.assertIn("git pull --rebase origin main", workflow)
         self.assertNotIn("upload-pages-artifact", workflow)
         self.assertNotIn("deploy-pages", workflow)
+        dispatcher = (ROOT / ".github" / "workflows" / "dispatch-game-stats.yml").read_text(encoding="utf-8")
+        self.assertIn("fcb-game-stats.yml/dispatches", dispatcher)
+        self.assertNotIn("BALLDONTLIE_API_KEY", dispatcher)
         updater = (ROOT / ".github" / "workflows" / "fcb-wnba.yml").read_text(encoding="utf-8")
         self.assertIn("data/games", updater)
         attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8")
         self.assertIn("data/games", attributes)
         self.assertIn("export-ignore", attributes)
+        writer = (ROOT / "docs" / "STATS_SOURCE.md").read_text(encoding="utf-8")
+        self.assertIn("data/games/", writer)
+        self.assertIn("data/games/index.json", writer)
+        self.assertIn(g.PUBLIC_SOURCE_NOTE, writer)
+        self.assertIn("ESPN", writer)
+        self.assertIn("cross-check", writer.lower())
+        self.assertIn("never name or link", writer.lower())
+        self.assertNotIn("balldontlie", writer.lower())
+        self.assertNotIn("api.balldontlie.io", writer.lower())
 
 
 if __name__ == "__main__":

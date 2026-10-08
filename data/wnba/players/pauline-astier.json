@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-10-04T08:35:56+00:00",
-  "stats_updated_at": "2026-10-04T08:35:56+00:00",
+  "checked_at": "2026-10-08T08:40:08+00:00",
+  "stats_updated_at": "2026-10-08T08:40:08+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -80,28 +80,108 @@
         "name": "Liberty",
         "conference": "Eastern Conference"
       },
-      "games_played": 2,
-      "min": 31.0,
-      "fgm": 2.5,
-      "fga": 6.5,
-      "fg_pct": 38.5,
-      "fg3m": 0.5,
-      "fg3a": 1.0,
+      "games_played": 3,
+      "min": 27.67,
+      "fgm": 3.0,
+      "fga": 6.67,
+      "fg_pct": 45.0,
+      "fg3m": 0.67,
+      "fg3a": 1.33,
       "fg3_pct": 50.0,
       "ftm": 0.0,
       "fta": 0.0,
       "ft_pct": 0.0,
       "oreb": null,
       "dreb": null,
-      "reb": 6.5,
-      "ast": 4.0,
-      "stl": 1.5,
+      "reb": 6.33,
+      "ast": 3.0,
+      "stl": 1.33,
       "blk": 0.0,
-      "turnover": 3.5,
-      "pts": 5.5
+      "turnover": 3.0,
+      "pts": 6.67
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392687,
+      "player_id": 66925,
+      "date": "2026-10-07T23:30:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 101,
+      "away_score": 98,
+      "minutes": "14",
+      "pts": 5.0,
+      "ast": 1.0,
+      "reb": 1.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
+    {
+      "game_id": 1392679,
+      "player_id": 66925,
+      "date": "2026-10-04T18:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 92,
+      "away_score": 82,
+      "minutes": "21",
+      "pts": 9.0,
+      "ast": 1.0,
+      "reb": 6.0,
+      "stl": 1.0,
+      "blk": 0.0,
+      "turnover": 2.0
+    },
     {
       "game_id": 1392671,
       "player_id": 66925,
@@ -343,11 +423,12 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-08-30",
+  "game_log_window_start": "2026-09-03",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
     "Team stints and aggregate rows must never be summed together.",
+    "A season row uses the club from that season when games played matches one stint.",
     "Not listed active does not establish retirement, a trade, or free agency.",
     "News and confirmed transaction feeds are not included in this API integration."
   ]

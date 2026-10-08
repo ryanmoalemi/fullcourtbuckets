@@ -46,7 +46,7 @@ The tease has to be true, and the article has to pay it off. Do not invent a num
 
 ## Game stats for recaps and posts
 
-Recaps and posts take the score, quarter scores, team totals, and player box from `data/games/<YYYY-MM-DD>-<away>-<home>.json`. ESPN is the cross-check, stored on the same file under `crosscheck`. The short read is the `.md` file next to the JSON. The ESPN box-score link in that file can stay on the article.
+Recaps and posts take the score, quarter scores, team totals, and player box from `data/games/<YYYY-MM-DD>-<away>-<home>.json`. The list of those files is `data/games/index.json`. ESPN is the cross-check, stored on the same file under `crosscheck`. The short read is the `.md` file next to the JSON. The ESPN box-score link in that file can stay on the article.
 
 The article source note says: Full Court Buckets gathers its own game data and verifies it against official box scores. Do not name or link the data vendor in the article, the source note, or any other published page text.
 

@@ -31,6 +31,10 @@ After a successful importer step, the builder regenerates pages from the verifie
 
 Use the GitHub connection in this chat to edit sources on main, inspect Actions runs, and verify deployed output. A commit changing an automation file triggers tests/build/deployment. Unchanged data will keep its original source-check timestamp rather than pretending a new import happened.
 
+## Game files for recaps
+
+Article writers take the box from `data/games/`. The short rules are in `docs/STATS_SOURCE.md`. `.github/workflows/fcb-game-stats.yml` writes those files on a nightly schedule and on manual dispatch. A push that changes `.github/dispatch-game-stats.json` starts that same workflow for the dates in the file. Do not name or link the data vendor on any public page.
+
 ## Credentials
 
 `BALLDONTLIE_API_KEY` is already saved as a private repository Actions secret. Do not request it again unless the workflow actually reports a credential problem. Never paste its value in chat, code, issues, public URLs, browser JavaScript, or logs. The Actions runner uses it privately; the chat connector cannot retrieve the secret value.

@@ -154,6 +154,7 @@ class ReeseCardPageTests(unittest.TestCase):
         order = [
             '<section class="intro">',
             'id="collection"',
+            'id="bidding"',
             'id="summary"',
             'id="movers"',
             'id="paid-vs-value"',
@@ -161,6 +162,46 @@ class ReeseCardPageTests(unittest.TestCase):
             'id="method"',
             'id="faq"',
         ]
+        bidding = main.split('id="bidding"', 1)[1].split('id="summary"', 1)[0]
+        self.assertIn('Cards I&#x27;m bidding on', bidding)
+        self.assertIn('https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r', bidding)
+        self.assertIn('https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54', bidding)
+        self.assertIn('status-live">Live', bidding)
+        self.assertIn('>TBA<', bidding)
+        self.assertIn('datetime="2026-10-17T19:00:00-07:00"', bidding)
+        self.assertIn('Oct 17, 2026, 7:00 p.m. PT', bidding)
+        self.assertIn('$2,750', bidding)
+        self.assertIn('$3,355', bidding)
+        self.assertIn('$982', bidding)
+        self.assertIn('$2,750 to $6,000', bidding)
+        self.assertIn('$1,000 to $6,900', bidding)
+        self.assertIn('Comparable sales', bidding)
+        self.assertIn('No graded Gold /10 sale found', bidding)
+        self.assertIn('two base Kabooms in gem mint', bidding)
+        self.assertNotIn('<p class="bid-meta">Cert', bidding)
+        self.assertEqual(bidding.count('>146338722<'), 1)
+        self.assertEqual(bidding.count('>139024135<'), 1)
+        self.assertIn('loading="eager"', bidding)
+        self.assertNotIn('Two live auctions', bidding)
+        self.assertNotIn('/news/angel-reese-game-2-stats-liberty-dream-semis/', bidding)
+        self.assertIn('Bids as of 1:20 a.m. PT, Oct 8, 2026</p>\n<div class="bids">', bidding)
+        goldin = 'https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r'
+        alt = 'https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54'
+        self.assertIn(f'<a class="bid-photo-link" href="{goldin}" target="_blank" rel="noopener nofollow"><img ', bidding)
+        self.assertIn(f'<a class="bid-photo-link" href="{alt}" target="_blank" rel="noopener nofollow"><img ', bidding)
+        self.assertIn(f'Image: <a href="{goldin}" target="_blank" rel="noopener nofollow">Goldin</a>', bidding)
+        self.assertIn(f'Image: <a href="{alt}" target="_blank" rel="noopener nofollow">Alt</a>', bidding)
+        self.assertEqual(bidding.count('<p class="bid-take">I&#x27;m bidding on'), 2)
+        self.assertIn('Image: <a href="https://goldin.co/', bidding)
+        self.assertIn('Image: <a href="https://alt.xyz/', bidding)
+        self.assertNotIn('\u2014', bidding)
+        for name in (
+            'bid-goldin-prizm-gold-vinyl-147-psa8.webp',
+            'bid-alt-kaboom-gold-5-psa10.webp',
+        ):
+            photo = ROOT / 'images' / 'reese-cards' / name
+            self.assertTrue(photo.is_file(), name)
+            self.assertLess(photo.stat().st_size, 200_000, name)
         positions = [main.index(marker) for marker in order]
         self.assertEqual(positions, sorted(positions))
         cards_block = main.split('id="collection"', 1)[1].split('id="summary"', 1)[0]
