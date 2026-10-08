@@ -873,11 +873,15 @@ def _bid_price(entry: dict) -> str:
 def _bid_ends(entry: dict) -> str:
     ends = entry.get('ends_at')
     title = f' title="{esc(entry["ends_note"])}"' if entry.get('ends_note') else ''
-    if ends:
-        stamp = esc(str(ends))
+    if entry.get('ends_label'):
+        label = esc(entry['ends_label'])
+    elif ends:
         label = esc(format_deadline(ends))
-        return f'<div><dt>Ends</dt><dd class="when"{title}><time datetime="{stamp}">{label}</time></dd></div>'
-    return f'<div><dt>Ends</dt><dd class="when"{title}>TBA</dd></div>'
+    else:
+        return f'<div><dt>Ends</dt><dd class="when"{title}>TBA</dd></div>'
+    if ends:
+        return f'<div><dt>Ends</dt><dd class="when"{title}><time datetime="{esc(str(ends))}">{label}</time></dd></div>'
+    return f'<div><dt>Ends</dt><dd class="when"{title}>{label}</dd></div>'
 
 
 def _bid_meta(entry: dict) -> str:
