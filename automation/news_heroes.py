@@ -27,6 +27,8 @@ WEBP_QUALITY = 76
 CHECKED_FOCALS = {
     'angel-reese-game-1-liberty': 'center 6%',
     'liberty-dream-semis-game-1-recap': 'center 18%',
+    # Full-body free-throw photo. 47% keeps the hair and the ball; 25% cuts the ball.
+    'aces-valkyries-semis-game-2-recap': 'center 47%',
     'aces-fever-series-breakdown': 'center 11%',
     # Portrait slab. center 40% keeps JuJu's face; 25% cuts into the label and head.
     'top-10-womens-college-basketball-cards-to-collect-2026': 'center 40%',
