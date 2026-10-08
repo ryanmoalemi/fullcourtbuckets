@@ -22,14 +22,14 @@ def _is_lead_image(image: str) -> bool:
     return image.startswith('/images/') or image.startswith('/news/')
 
 
-# These two listing files are the same bytes (sha256 9a25b2a9...), so the cards
-# and article["image"] paths show one photo twice:
+# Ryan decided to keep both listing photos. They are the same bytes
+# (sha256 9a25b2a9...), so the cards and article["image"] paths show one photo
+# twice:
 #   images/articles/aces-valkyries-semis-game-2-recap/veronica-burton-valkyries.webp
 #   images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.webp
-# Ryan still needs to choose which photo to swap. Do not change either article's
-# photo or copy here. The in-article lead crops (each story's hero-1200.webp)
-# are different files and are not part of this exception. Any other shared file
-# still fails.
+# Do not swap either photo or change either article's copy. The in-article lead
+# crops (each story's hero-1200.webp) are different files and are not part of
+# this exception. Any other shared file still fails.
 KNOWN_DUPLICATE_PHOTO_PAIRS = {
     frozenset({'aces-valkyries-semis-game-2-recap', 'wings-valkyries-game-3-recap'}),
 }
