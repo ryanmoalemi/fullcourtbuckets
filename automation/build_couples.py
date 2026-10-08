@@ -137,17 +137,26 @@ def person_link(name: str, slug: str | None) -> str:
     return f'<a href="/wnba/{esc(slug)}/">{safe}</a>'
 
 
+def name_ends_sentence(name: str) -> bool:
+    """True when the name already supplies the sentence's closing punctuation.
+
+    "Tim Mangum Jr." ends with a period. Adding another period prints "Jr..".
+    """
+    return str(name or '').rstrip().endswith(('.', '!', '?'))
+
+
 def note_html(couple: dict, partner: str, partner_slug: str | None) -> str:
     status = couple.get('status') or ''
     who = person_link(partner, partner_slug)
     if status == 'Married':
-        sentence = f'Married to {who}.'
+        lead = f'Married to {who}'
     elif status == 'Engaged':
-        sentence = f'Engaged to {who}.'
+        lead = f'Engaged to {who}'
     elif status == 'Dating':
-        sentence = f'Dating {who}.'
+        lead = f'Dating {who}'
     else:
         return ''
+    sentence = lead if name_ends_sentence(partner) else lead + '.'
     href = f"/wnba/couples/#{couple_anchor(couple)}"
     return (
         f'<p class="relationship-note">{sentence} '
@@ -170,6 +179,115 @@ def note_for_slug(root, slug: str) -> str:
         elif slug == slug_b:
             notes.append(note_html(couple, couple['a'], slug_a))
     return ''.join(notes)
+
+
+_PARTNER_SUFFIXES = {'jr', 'sr', 'ii', 'iii', 'iv', 'v'}
+_MARRIAGE_NEGATION = re.compile(
+    r'(?:there is )?no (?:widely reported )?public record of [^.]{0,80}\bmarried\b'
+    r'|\bnot married\b'
+    r'|has not announced a marriage'
+    r'|without announcing a wedding'
+    r'|\bno\b[^.]{0,40}\bmarriage\b',
+    re.I,
+)
+
+
+def couples_by_slug(root) -> dict[str, tuple[str, dict]]:
+    """Map a player slug to (partner name, couple record). Empty if the file is absent."""
+    root = Path(root)
+    path = root / 'data' / 'wnba_couples.json'
+    if not path.is_file():
+        return {}
+    try:
+        couples = load_couples(root)
+    except SystemExit:
+        return {}
+    slugs = load_slugs(root)
+    found = {}
+    for couple in couples:
+        for name, partner in ((couple['a'], couple['b']), (couple['b'], couple['a'])):
+            slug = slugs.get(name)
+            if slug:
+                found[slug] = (partner, couple)
+    return found
+
+
+def relationship_question_kind(question: str) -> str:
+    text = ' '.join(str(question or '').casefold().split())
+    if text.startswith('who is ') and text.endswith(' dating?'):
+        return 'dating'
+    if text.startswith('is ') and text.endswith(' married?'):
+        return 'married'
+    return ''
+
+
+def _partner_text(value: str) -> str:
+    return re.sub(r'[^a-z0-9]+', ' ', str(value or '').casefold()).strip()
+
+
+def mentions_partner(answer: str, partner: str) -> bool:
+    text = _partner_text(answer)
+    parts = [part for part in _partner_text(partner).split() if part not in _PARTNER_SUFFIXES]
+    if not parts:
+        return False
+    if ' '.join(parts) in text:
+        return True
+    last = parts[-1]
+    return len(last) >= 4 and re.search(rf'\b{re.escape(last)}\b', text) is not None
+
+
+def marriage_claim(answer: str) -> str:
+    """'yes' when the answer states a marriage, 'no' when it denies one, else ''."""
+    text = str(answer or '').casefold()
+    negated = _MARRIAGE_NEGATION.search(text) is not None
+    scrub = _MARRIAGE_NEGATION.sub(' ', text)
+    if re.search(r'\b(?:married|wed|husband|wife)\b', scrub):
+        return 'yes'
+    if negated:
+        return 'no'
+    return ''
+
+
+def denies_confirmed_relationship(answer: str) -> bool:
+    text = str(answer or '').casefold()
+    return (
+        'not widely publicized a confirmed dating relationship' in text
+        or 'no confirmed dating relationship' in text
+        or 'has not widely publicized' in text
+    )
+
+
+def relationship_faq_conflict(status: str, partner: str, question: str, answer: str) -> str:
+    """Why a dating or married FAQ disagrees with one Couples entry. Empty when it agrees.
+
+    Players who are not in the couples list are not checked. Engaged is not married.
+    """
+    kind = relationship_question_kind(question)
+    if not kind:
+        return ''
+    reasons = []
+    if not mentions_partner(answer, partner):
+        reasons.append(f'does not name {partner}')
+    if denies_confirmed_relationship(answer):
+        reasons.append('denies a confirmed relationship')
+    claim = marriage_claim(answer)
+    engaged = 'engag' in str(answer or '').casefold()
+    if status == 'Married':
+        if claim != 'yes':
+            reasons.append('does not state the marriage')
+    elif status == 'Engaged':
+        if claim == 'yes':
+            reasons.append('calls an engagement a marriage')
+        if not engaged:
+            reasons.append('does not say engaged')
+    elif status == 'Dating':
+        if claim == 'yes':
+            reasons.append('calls dating a marriage')
+        if engaged:
+            reasons.append('calls dating an engagement')
+    else:
+        reasons.append(f'unknown couples status {status}')
+    return '; '.join(reasons)
 
 
 def initials(name: str) -> str:
@@ -533,8 +651,8 @@ def faq_items(cards: list[dict]) -> list[tuple[str, str]]:
             sabrina_bits.append('They married on March 10, 2024, in California.')
 
     return [
-        ('Which WNBA players are married?', f"These marriages are confirmed on this page: {join(married_names)}."),
-        ('Which WNBA players are married to each other?', f"These married couples are both WNBA players: {join(both_names)}."),
+        ('Which WNBA players are married?', sentence(f"These marriages are confirmed on this page: {join(married_names)}")),
+        ('Which WNBA players are married to each other?', sentence(f"These married couples are both WNBA players: {join(both_names)}")),
         ('Are Paige Bueckers and Azzi Fudd dating?', ' '.join(paige_bits)),
         ("Is A'ja Wilson dating Bam Adebayo?", ' '.join(aja_bits)),
         ('Which WNBA players are married to NBA players?', ' '.join(nba_bits)),
