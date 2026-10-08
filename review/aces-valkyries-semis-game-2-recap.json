@@ -1,0 +1,98 @@
+{
+  "site": "fullcourtbuckets.com",
+  "title": "Burton From 28, Stokes at the Rim: Valkyries Hold Off the Aces 83-81, Lead Semis 2-0",
+  "meta_description": "Vegas led for 11 seconds. Burton's 28-footer and Stokes's block gave the Valkyries an 83-81 win and a 2-0 lead.",
+  "hook": "With 41.5 seconds left and the game tied at 76, Veronica Burton pulled up from 28 feet off a Gabby Williams pass and buried it. Then, with 3 seconds left and Vegas down two, Kiah Stokes blocked Chelsea Gray's reverse layup. The Golden State Valkyries won 83-81 and lead the Las Vegas Aces 2-0. Vegas led for 11 seconds all night.",
+  "summary": "Golden State Valkyries 83, Las Vegas Aces 81, on October 7, 2026, at Chase Center. Golden State leads the best-of-five 2-0. Body is the draft, checked against ESPN game 401918298. No fact in the draft contradicted the ESPN summary, box score, or play-by-play, so the wording was kept. The closing italic line was removed because every stat came from ESPN. Game 3 is Friday, October 9, 2026, at 6:30 p.m. PT in Las Vegas on Peacock and NBCSN.",
+  "url_path": "/news/aces-valkyries-semis-game-2-recap/",
+  "files": [
+    "news/aces-valkyries-semis-game-2-recap/index.html"
+  ],
+  "hero_image": "images/articles/aces-valkyries-semis-game-2-recap/veronica-burton-valkyries.jpg",
+  "hero_image_alt": "Veronica Burton of the Golden State Valkyries holding the ball at the free-throw line",
+  "hero_image_credit": "Photo: John Mac / CC BY-SA 4.0. Wikimedia Commons File:Veronica Burton Valkyries.jpg. The Commons file is dated 2025-09-14 at Target Center (Minnesota Lynx vs Golden State Valkyries), not this game. The public caption does not include that date.",
+  "espn_game_id": "401918298",
+  "espn_box_score": "https://www.espn.com/wnba/boxscore/_/gameId/401918298",
+  "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918298",
+  "unique": [
+    "Vegas led for 11 seconds, from A'ja Wilson's layup at 1:36 to Gabby Williams's pull-up at 1:25",
+    "Veronica Burton made a 28-foot three at 41.5 seconds, assisted by Gabby Williams",
+    "Kiah Stokes blocked Chelsea Gray's reverse layup with 3.0 seconds left",
+    "Tiffany Hayes scored 21 points in 17 minutes off the bench",
+    "Golden State led for 95 percent of the game"
+  ],
+  "unverified": [
+    "The Game 3 pick, that the Aces win at home, is opinion.",
+    "The lead photo is Wikimedia Commons File:Veronica Burton Valkyries.jpg by John Mac, dated 2025-09-14 at Target Center, not a photo from this game. The caption credits John Mac and CC BY-SA 4.0 and does not state the date."
+  ],
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Final 83-81, the 11-second Vegas lead, the 95 percent Golden State lead share, Burton's 28-foot three at 41.5, Stokes's block at 3.0, Hayes's 21 points in 17 minutes, the shooting and rebound splits, Jewell Loyd's absence from the box score, the regular-season sweep, and Game 3 on Friday, October 9, 2026, at 6:30 p.m. PT on Peacock and NBCSN were checked against ESPN game 401918298 and the scheduled game 401918300. No number in the draft was wrong. ESPN types Burton's make as a jump shot. The draft says she pulled up. The distance, the make, and the assist are confirmed, so that verb was left as written."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "The page keeps the 11-second lead, the 28-foot make, the block at 3.0, Hayes's bench line, and the 95 percent lead share. A wire recap has the final. It does not walk that 11 seconds."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 6,
+        "max": 10,
+        "reason": "Every number was checked against the ESPN feed, and the photo was matched to the Commons file. There is no original chart, courtside note, or photo from this game, so another editor with the same feed could rebuild the body."
+      },
+      {
+        "name": "Originality",
+        "score": 7,
+        "max": 10,
+        "reason": "The angle is the 11-second lead and the late block, not the box score in order, and the close is a straight Game 3 take. It is still a game recap."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Ryan Moalemi's byline links to his real author page, and he edits the site. He was not at Chase Center, so this is not a courtside report."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The title and H1 match and state the score. The lead photo sits under the headline, and the hook gives the 28-foot make and the block under the byline. The hero is a 16:9 crop inside the article column. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "The disclosure says AI drafted from game data checked against official box scores, Ryan reviewed it, and the box score, play-by-play, and game pages are linked above it. The photo credit names John Mac and the CC BY-SA 4.0 license."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Short sentences, no em dashes, and real subheads. In-article links open in a new tab. The hook is one paragraph. The byline stays on this site, in the same tab."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader gets the finish, how the lead was built, the bench line, the rebound and free-throw gap, and when Game 3 is. The page does not tease a section it does not have."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "No stock AI phrases. The voice is specific and opinionated ('Here's the wild part', 'I'm not burying them yet', 'My call'). The draft wording was kept."
+      }
+    ],
+    "info_gain": "Vegas led for 11 seconds, from Wilson's layup at 1:36 to Williams's pull-up at 1:25. Burton made a 28-foot three at 41.5, assisted by Williams. Stokes blocked Gray's reverse layup at 3.0. Hayes scored 21 in 17 minutes. Golden State led 95 percent of the game.",
+    "ai_flags": []
+  }
+}
