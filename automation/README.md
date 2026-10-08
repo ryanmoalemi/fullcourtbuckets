@@ -33,7 +33,7 @@ Use the GitHub connection in this chat to edit sources on main, inspect Actions 
 
 ## Game files for recaps
 
-Article writers take the box from `data/games/`. The short rules are in `docs/STATS_SOURCE.md`. `.github/workflows/fcb-game-stats.yml` writes those files on a nightly schedule and on manual dispatch. Do not name or link the data vendor on any public page.
+Article writers take the box from `data/games/`. The short rules are in `docs/STATS_SOURCE.md`. `.github/workflows/fcb-game-stats.yml` writes those files on a nightly schedule and on manual dispatch. A push that changes `.github/dispatch-game-stats.json` starts that same workflow for the dates in the file. Do not name or link the data vendor on any public page.
 
 ## Credentials
 
