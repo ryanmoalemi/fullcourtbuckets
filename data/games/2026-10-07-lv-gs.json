@@ -3,7 +3,7 @@
   "source": "balldontlie",
   "fallback": false,
   "flags": [],
-  "checked_at": "2026-10-08T07:40:31+00:00",
+  "checked_at": "2026-10-08T07:45:46+00:00",
   "date": "2026-10-07",
   "status": "final",
   "season": 2026,
@@ -34,7 +34,7 @@
       "fouls": 17,
       "pts": 81
     },
-    "totals_from": "player_sum"
+    "totals_from": "team_stats"
   },
   "home": {
     "id": 13,
@@ -59,7 +59,7 @@
       "fouls": 25,
       "pts": 83
     },
-    "totals_from": "player_sum"
+    "totals_from": "team_stats"
   },
   "periods": [
     {
