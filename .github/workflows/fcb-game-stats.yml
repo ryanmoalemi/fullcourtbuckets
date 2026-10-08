@@ -27,7 +27,7 @@ on:
         required: false
         type: string
       espn_game_id:
-        description: Optional ESPN game id.
+        description: Optional game id. Digits only. Limits the run to that game.
         required: false
         type: string
       scheduled:

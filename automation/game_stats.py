@@ -77,7 +77,11 @@ TEAM_COMPARE = (
     "fgm", "fga", "fg3m", "fg3a", "ftm", "fta",
     "oreb", "dreb", "reb", "ast", "stl", "blk", "turnovers", "fouls",
 )
-PLAYER_COMPARE = ("pts", "reb", "ast", "minutes")
+PLAYER_COMPARE = (
+    "pts", "reb", "ast", "minutes",
+    "fgm", "fga", "fg3m", "fg3a", "ftm", "fta",
+    "oreb", "dreb", "stl", "blk", "turnovers", "fouls", "plus_minus",
+)
 PLAYER_FIELDS = (
     "minutes", "pts", "reb", "oreb", "dreb", "ast", "stl", "blk",
     "turnovers", "fouls", "fgm", "fga", "fg3m", "fg3a", "ftm", "fta", "plus_minus",
@@ -270,6 +274,66 @@ def file_token(team) -> str:
     if isinstance(ident, int) and not isinstance(ident, bool) and ident > 0:
         return f"t{ident}"
     return "tbd"
+
+
+def plus_minus_text(value) -> str:
+    number = as_signed(value)
+    if isinstance(number, bool) or number is None:
+        return "n/a"
+    if isinstance(number, int):
+        return f"{number:+d}"
+    return f"{number:+g}"
+
+
+def normalize_plays(plays):
+    rows = []
+    if not isinstance(plays, list):
+        return rows
+    for raw in plays:
+        if not isinstance(raw, dict):
+            continue
+        team = raw.get("team") if isinstance(raw.get("team"), dict) else {}
+        away = raw.get("away_score")
+        if away is None:
+            away = raw.get("visitor_score")
+        scoring = raw.get("scoring_play")
+        rows.append({
+            "order": as_signed(raw.get("order")),
+            "period": as_signed(raw.get("period")),
+            "clock": str(raw.get("clock") or "").strip() or None,
+            "type": str(raw.get("type") or "").strip() or None,
+            "text": str(raw.get("text") or "").strip() or None,
+            "away_score": as_signed(away),
+            "home_score": as_signed(raw.get("home_score")),
+            "scoring_play": None if scoring is None else bool(scoring),
+            "score_value": as_signed(raw.get("score_value")),
+            "team": canonical(team.get("abbreviation")) or None,
+        })
+    rows.sort(key=lambda row: (row["order"] is None, row["order"] if isinstance(row["order"], int) else 0))
+    return rows
+
+
+def apply_overtime(doc):
+    periods = doc.get("periods") or []
+    extra = [row for row in periods if isinstance(row.get("period"), int) and row["period"] > 4]
+    doc["overtime"] = bool(extra)
+    doc["ot_periods"] = len(extra)
+    return doc
+
+
+def note_plays(doc, access):
+    """Say in the file when play-by-play did not come back. Do not hide an empty feed."""
+    if doc.get("plays"):
+        doc["plays_status"] = "included"
+        doc.pop("plays_note", None)
+        return doc
+    if not endpoint_allowed(access, "plays"):
+        doc["plays_status"] = "not_on_plan"
+        doc["plays_note"] = "Play-by-play is not included on this plan."
+        return doc
+    doc["plays_status"] = "empty"
+    doc["plays_note"] = "Play-by-play returned no rows for this game."
+    return doc
 
 
 def game_slug(day, away, home) -> str:
@@ -850,7 +914,7 @@ def crosscheck(primary, espn):
 def _crosscheck_result(espn, mismatches, unavailable, players_compared):
     compared = True
     matched = not mismatches and players_compared
-    note = "Matched ESPN on the final, quarters, team totals, and each player's points, rebounds, assists, and minutes."
+    note = "Matched ESPN on the final, quarters, team totals, and each player's full box line."
     if mismatches:
         note = "ESPN disagrees with the game file. Resolve every field before review."
     elif not players_compared:
@@ -946,7 +1010,12 @@ def markdown(doc) -> str:
         lines.extend(flag_lines)
         lines.append("")
     when = doc.get("date") or ""
-    lines.append(f"{when}. Final.")
+    if doc.get("overtime"):
+        count = doc.get("ot_periods") or 1
+        final = f"{when}. Final, overtime." if count == 1 else f"{when}. Final, {count} overtime periods."
+    else:
+        final = f"{when}. Final."
+    lines.append(final)
     lines.append(PUBLIC_SOURCE_NOTE)
     lines.append("")
     lines.append(f"{home.get('full_name')} {home.get('score')}, {away.get('full_name')} {away.get('score')}.")
@@ -970,8 +1039,19 @@ def markdown(doc) -> str:
             else:
                 lines.append(
                     f"- {row.get('name')}, {team_abbr}: {row.get('minutes')} MIN, "
-                    f"{row.get('pts')} PTS, {row.get('reb')} REB, {row.get('ast')} AST"
+                    f"{row.get('pts')} PTS, {shooting(row, 'fgm', 'fga')} FG, "
+                    f"{shooting(row, 'fg3m', 'fg3a')} 3P, {shooting(row, 'ftm', 'fta')} FT, "
+                    f"{row.get('oreb')} OREB, {row.get('dreb')} DREB, {row.get('reb')} REB, "
+                    f"{row.get('ast')} AST, {row.get('stl')} STL, {row.get('blk')} BLK, "
+                    f"{row.get('turnovers')} TO, {row.get('fouls')} PF, {plus_minus_text(row.get('plus_minus'))}"
                 )
+    lines.append("")
+    if doc.get("plays"):
+        lines.append(f"Play-by-play: {len(doc['plays'])} plays in this file.")
+    elif doc.get("plays_note"):
+        lines.append(doc["plays_note"])
+    else:
+        lines.append("Play-by-play: not in this file.")
     lines.append("")
     lines.append("## ESPN cross-check")
     lines.append("")
@@ -1020,6 +1100,13 @@ def summary_block(doc, slug) -> str:
         team_phrase(away),
         team_phrase(home),
     ]
+    if doc.get("overtime"):
+        lines.append("Overtime.")
+    play_count = len(doc.get("plays") or [])
+    if play_count:
+        lines.append(f"Play-by-play: {play_count} plays.")
+    else:
+        lines.append("Play-by-play: " + str(doc.get("plays_note") or "not in this file."))
     if doc.get("fallback"):
         lines.insert(2, "FLAG: balldontlie did not supply this game. Numbers are from ESPN.")
         lines.append(f"Reason: {doc.get('fallback_reason')}")
@@ -1079,7 +1166,7 @@ def existing_slugs(root: Path) -> dict:
     if not folder.exists():
         return found
     for path in folder.glob("*.json"):
-        if path.name == "balldontlie-endpoints.json":
+        if path.name in ("balldontlie-endpoints.json", "index.json"):
             continue
         try:
             doc = json.loads(path.read_text(encoding="utf-8"))
@@ -1191,6 +1278,13 @@ def build_bdl_document(game, players, team_rows, plays, team_advanced, player_ad
         "series": series,
         "crosscheck": unchecked_crosscheck(None, "ESPN game not matched yet."),
     }
+    doc["plays"] = normalize_plays(plays)
+    if doc["plays"]:
+        doc["plays_status"] = "included"
+    else:
+        doc["plays_status"] = "empty"
+        doc["plays_note"] = "Play-by-play returned no rows for this game."
+    apply_overtime(doc)
     if not sync.is_final(game):
         doc["flags"].append("balldontlie_not_marked_final")
     if not points_consistent(doc):
@@ -1251,6 +1345,10 @@ def build_fallback(espn, reason, stamp):
         "crosscheck": unchecked_crosscheck(espn, "This file is the ESPN fallback, so there is no second source to compare."),
     }
     doc["crosscheck"]["espn_series"] = espn.get("series")
+    doc["plays"] = []
+    doc["plays_status"] = "not_in_fallback"
+    doc["plays_note"] = "This file is the fallback box. Play-by-play was not copied into it."
+    apply_overtime(doc)
     return doc
 
 
@@ -1483,6 +1581,54 @@ def match_bdl(espn_game, bdl_games):
     return ranked[0][2]
 
 
+def write_index(root: Path, key: str) -> bool:
+    """One stable list of game files. Skipped names are not games."""
+    folder = root / "data" / "games"
+    if not folder.is_dir():
+        return False
+    games = []
+    for path in sorted(folder.glob("*.json")):
+        if path.name in ("balldontlie-endpoints.json", "index.json"):
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(doc, dict) or "away" not in doc or "home" not in doc:
+            continue
+        away = doc["away"].get("abbreviation") or ""
+        home = doc["home"].get("abbreviation") or ""
+        cross = doc.get("crosscheck") or {}
+        games.append({
+            "date": doc.get("date"),
+            "path": f"data/games/{path.name}",
+            "slug": path.stem,
+            "matchup": f"{away.lower()}-at-{home.lower()}",
+            "away": away,
+            "home": home,
+            "away_score": doc["away"].get("score"),
+            "home_score": doc["home"].get("score"),
+            "overtime": bool(doc.get("overtime")),
+            "status": doc.get("status"),
+            "source": doc.get("source"),
+            "fallback": bool(doc.get("fallback")),
+            "crosscheck_matched": bool(cross.get("matched")),
+            "crosscheck_compared": bool(cross.get("compared")),
+            "mismatch_count": len(cross.get("mismatches") or []),
+            "plays": len(doc.get("plays") or []),
+            "plays_status": doc.get("plays_status"),
+        })
+    games.sort(key=lambda row: (str(row.get("date") or ""), str(row.get("slug") or "")))
+    text = json.dumps({"games": games}, ensure_ascii=False, indent=2) + "\n"
+    if key and len(key) >= 12 and key in text:
+        raise GameStatsError("Refusing to write a file that contains the API key.")
+    path = folder / "index.json"
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    atomic_write(path, text)
+    return True
+
+
 def emit(text, key=""):
     text = redact(text, key)
     print(text)
@@ -1679,6 +1825,7 @@ def run(root: Path, now: dt.datetime, *, key="", dates=None, teams=None, espn_id
                 plays, team_rows_adv, player_rows_adv = extra_box(game_id)
                 doc = build_bdl_document(matched, players, teams_for_game, plays, team_rows_adv, player_rows_adv, standings, stamp)
                 if doc is not None:
+                    note_plays(doc, access)
                     apply_espn(doc, espn)
                     persist(doc, doc["away"], doc["home"], f"bdl:{game_id}")
         if doc is None:
@@ -1715,6 +1862,7 @@ def run(root: Path, now: dt.datetime, *, key="", dates=None, teams=None, espn_id
             if doc is None:
                 failures.append(f"bdl:{game_id}")
                 continue
+            note_plays(doc, access)
             apply_espn(doc, None)
             persist(doc, doc["away"], doc["home"], f"bdl:{game_id}")
 
@@ -1732,6 +1880,7 @@ def run(root: Path, now: dt.datetime, *, key="", dates=None, teams=None, espn_id
         lines.append("FLAG: ESPN and balldontlie both failed, so this run could not tell whether games were final.")
     if id_error and not any(doc.get("espn_game_id") == espn_id for _slug, doc in written):
         lines.append(f"FLAG: ESPN game {espn_id} could not be loaded.")
+    write_index(root, key)
     emit("\n".join(lines), key)
     if failures or (not written and scoreboard_errors and bdl_error) or (id_error and not written):
         return 1
