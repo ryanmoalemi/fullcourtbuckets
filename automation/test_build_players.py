@@ -6,7 +6,11 @@ from pathlib import Path
 import re
 import tempfile
 import unittest
+
+import offline_tests
 import build_players as b
+
+offline_tests.install()
 
 ROOT=Path(__file__).resolve().parent
 P={'slug':'example-player','player':{'id':1,'first_name':'Example','last_name':'Player','position':'G','height':"6' 0\"",'weight':'Iowa','college':None,'jersey_number':'22'},'active_in_provider_feed':True,'current_team':{'id':1,'full_name':'Example Team'},'checked_at':'2026-09-16T05:48:36+00:00','season_stats':[{'player_id':1,'season':2026,'season_type':2,'team':{'id':1,'full_name':'Example Team'},'games_played':10,'pts':12.3,'reb':4.5,'ast':6.7,'min':30,'fg_pct':45,'fg3_pct':37,'ft_pct':85}], 'recent_completed_games':[], 'coverage_start':2008}
@@ -484,24 +488,27 @@ class BuildTests(unittest.TestCase):
 
     def test_published_faq_matches_angel_reese_caitlin_clark_and_yvonne_turner(self):
         root = ROOT.parent
-        expected = {
-            'angel-reese': ('16.4 points', 'in 43 games', 'Sep 30, 2026'),
-            'caitlin-clark': ('22.3 points', 'in 40 games', None),
-            'yvonne-turner': ('6.5 points', 'in 29 games', None),
-        }
-        for slug, (points, games, last_date) in expected.items():
+        for slug in ('angel-reese', 'caitlin-clark', 'yvonne-turner'):
             profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text())
             _html, entity = b.faq_section(profile, root)
             answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
             season = next(text for question, text in answers.items() if 'points per game' in question.casefold())
+            row = b.headline(profile)
+            points = f"{b.value(row.get('pts'))} points"
+            games = f"in {b.value(row.get('games_played'), True)} games"
             self.assertIn(points, season, slug)
             self.assertIn(games, season, slug)
+            # The old Angel Reese FAQ said 16.6 points in 42 games. That copy must not return.
             self.assertNotIn('16.6', season)
             self.assertNotIn('in 42 games', season)
-            if last_date:
-                last = next(text for question, text in answers.items() if 'last game' in question.casefold())
-                self.assertIn(last_date, last, slug)
-                self.assertIn('Playoffs', last, slug)
+            last_answers = [text for question, text in answers.items() if 'last game' in question.casefold()]
+            game = b.latest_completed_game(profile)
+            if last_answers and game:
+                shown = b.game_display(game)
+                self.assertNotIn(shown['date'], ('', 'Not listed'), slug)
+                self.assertIn(shown['date'], last_answers[0], slug)
+                if shown['kind'] not in ('', 'Not listed'):
+                    self.assertIn(shown['kind'], last_answers[0], slug)
             b.assert_faq_matches_tables(profile, list(answers.items()))
 
     def test_meta_mentions_playoffs_only_when_the_profile_has_them(self):

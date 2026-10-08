@@ -22,6 +22,19 @@ def _is_lead_image(image: str) -> bool:
     return image.startswith('/images/') or image.startswith('/news/')
 
 
+# These two listing files are the same bytes (sha256 9a25b2a9...), so the cards
+# and article["image"] paths show one photo twice:
+#   images/articles/aces-valkyries-semis-game-2-recap/veronica-burton-valkyries.webp
+#   images/articles/wings-valkyries-game-3-recap/veronica-burton-valkyries-2025.webp
+# Ryan still needs to choose which photo to swap. Do not change either article's
+# photo or copy here. The in-article lead crops (each story's hero-1200.webp)
+# are different files and are not part of this exception. Any other shared file
+# still fails.
+KNOWN_DUPLICATE_PHOTO_PAIRS = {
+    frozenset({'aces-valkyries-semis-game-2-recap', 'wings-valkyries-game-3-recap'}),
+}
+
+
 class NewsPathTests(unittest.TestCase):
     def test_every_article_resolves_under_news(self):
         articles = _articles()
@@ -124,7 +137,10 @@ class NewsPathTests(unittest.TestCase):
             paths[image] = slug
             photo = ROOT / image.lstrip('/')
             digest = hashlib.sha256(photo.read_bytes()).hexdigest()
-            self.assertNotIn(digest, hashes, f'{slug} reuses the photo file from {hashes.get(digest)}')
+            prior = hashes.get(digest)
+            if prior is not None and frozenset({slug, prior}) in KNOWN_DUPLICATE_PHOTO_PAIRS:
+                continue
+            self.assertNotIn(digest, hashes, f'{slug} reuses the photo file from {prior}')
             hashes[digest] = slug
         by_slug = {article['slug']: article for article in articles}
         game_1_article = by_slug['liberty-lynx-game-1-full-recap']
