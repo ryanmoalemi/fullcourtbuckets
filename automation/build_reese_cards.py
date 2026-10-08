@@ -357,6 +357,11 @@ def _external(url: str, label: str) -> str:
     return f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(label)}</a>'
 
 
+def _listing_link(url: str, label: str) -> str:
+    """Marketplace listing. nofollow because these are paid third-party auctions."""
+    return f'<a href="{esc(url)}" target="_blank" rel="noopener nofollow">{esc(label)}</a>'
+
+
 def linkify(text: str) -> str:
     parts = []
     last = 0
@@ -916,10 +921,11 @@ def _bid_article(entry: dict) -> str:
         f'{esc(format_dollars(entry["estimate_low"]))} to '
         f'{esc(format_dollars(entry["estimate_high"]))}'
     )
+    listing = entry['url']
     return f'''<article class="bid" id="{esc(entry["id"])}">
 <div class="bid-photo">
-<img src="{esc(image["src"])}" alt="{esc(image["alt"])}" width="{int(image.get("width") or 760)}" height="{int(image.get("height") or 1200)}" decoding="async" loading="eager">
-<p class="photo-credit">{esc(credit.split(":", 1)[0])}: {_external(entry["url"], credit.split(":", 1)[-1].strip())}</p>
+<a class="bid-photo-link" href="{esc(listing)}" target="_blank" rel="noopener nofollow"><img src="{esc(image["src"])}" alt="{esc(image["alt"])}" width="{int(image.get("width") or 760)}" height="{int(image.get("height") or 1200)}" decoding="async" loading="eager"></a>
+<p class="photo-credit">{esc(credit.split(":", 1)[0])}: {_listing_link(listing, credit.split(":", 1)[-1].strip())}</p>
 </div>
 <div class="bid-copy">
 <div class="bid-top"><span class="status status-{kind}">{esc(label)}</span>{_external(entry["url"], entry["platform"])}</div>
@@ -939,21 +945,6 @@ def _bid_article(entry: dict) -> str:
 </article>'''
 
 
-def _bid_intro(data: dict) -> str:
-    link = data.get('playoff_link') or {}
-    anchor = ''
-    if link.get('href') and link.get('label'):
-        anchor = f'<a href="{esc(link["href"])}">{esc(link["label"])}</a>'
-    parts = []
-    for paragraph in data.get('intro') or []:
-        chunks = str(paragraph).split('{playoff}')
-        html = esc(chunks[0])
-        for chunk in chunks[1:]:
-            html += anchor + esc(chunk)
-        parts.append(f'<p>{html}</p>')
-    return '\n'.join(parts)
-
-
 def render_bids(root: Path) -> str:
     data = load_bids(root)
     if not data or not data.get('bids'):
@@ -964,7 +955,6 @@ def render_bids(root: Path) -> str:
     return f'''<section class="panel" id="bidding">
 <h2>Cards I&#x27;m bidding on</h2>
 {stamp}
-{_bid_intro(data)}
 <div class="bids">{articles}</div>
 </section>'''
 
@@ -1082,6 +1072,7 @@ PAGE_JS = r'''
   }
 
   grid.addEventListener('click', function (event) {
+    if (event.target.closest('a')) return;
     var tile = event.target.closest('.tile');
     if (!tile) return;
     openCard(tile.getAttribute('data-id'));
@@ -1236,6 +1227,7 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .bids{display:flex;flex-direction:column;gap:12px}
 .bid{display:grid;grid-template-columns:168px minmax(0,1fr);background:#120f16;border:1px solid #3a3328;min-width:0}
 .bid-photo{background:#09080c;min-width:0}
+.bid-photo-link{display:block;line-height:0}
 .bid-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#09080c}
 .bid .photo-credit{margin:0;padding:6px 8px 8px;color:#9c958b;font-size:11px}
 .bid-copy{display:flex;flex-direction:column;gap:8px;padding:12px 14px 14px;min-width:0}

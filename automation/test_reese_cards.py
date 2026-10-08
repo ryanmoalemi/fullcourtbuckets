@@ -182,7 +182,15 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertEqual(bidding.count('>146338722<'), 1)
         self.assertEqual(bidding.count('>139024135<'), 1)
         self.assertIn('loading="eager"', bidding)
-        self.assertEqual(bidding.count('/news/angel-reese-game-2-stats-liberty-dream-semis/'), 1)
+        self.assertNotIn('Two live auctions', bidding)
+        self.assertNotIn('/news/angel-reese-game-2-stats-liberty-dream-semis/', bidding)
+        self.assertIn('Bids as of 1:20 a.m. PT, Oct 8, 2026</p>\n<div class="bids">', bidding)
+        goldin = 'https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r'
+        alt = 'https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54'
+        self.assertIn(f'<a class="bid-photo-link" href="{goldin}" target="_blank" rel="noopener nofollow"><img ', bidding)
+        self.assertIn(f'<a class="bid-photo-link" href="{alt}" target="_blank" rel="noopener nofollow"><img ', bidding)
+        self.assertIn(f'Image: <a href="{goldin}" target="_blank" rel="noopener nofollow">Goldin</a>', bidding)
+        self.assertIn(f'Image: <a href="{alt}" target="_blank" rel="noopener nofollow">Alt</a>', bidding)
         self.assertEqual(bidding.count('<p class="bid-take">I&#x27;m bidding on'), 2)
         self.assertIn('Image: <a href="https://goldin.co/', bidding)
         self.assertIn('Image: <a href="https://alt.xyz/', bidding)
