@@ -51,9 +51,43 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install portrait verification dependencies
+        timeout-minutes: 30
+        env:
+          DEBIAN_FRONTEND: noninteractive
+          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
-          python -m pip -q install 'pillow>=11.3,<13' 'playwright>=1.50,<2'
-          python -m playwright install --with-deps chromium > /dev/null
+          # A quiet `playwright install --with-deps` once sat on apt/download until the
+          # 90-minute job timeout cancelled the sync (run 37829289612) and skipped deploy.
+          # Keep the log, fail a stalled attempt, and retry instead of burning the job.
+          set -euo pipefail
+          sudo -n tee /etc/apt/apt.conf.d/99fcb-lock-timeout >/dev/null <<'EOF'
+          DPkg::Lock::Timeout "120";
+          Acquire::Retries "3";
+          EOF
+          run_bounded() {
+            local label="$1"
+            shift
+            local attempt status
+            for attempt in 1 2 3; do
+              echo "::group::${label} (attempt ${attempt}/3)"
+              if timeout --kill-after=20s 8m "$@"; then
+                echo "::endgroup::"
+                return 0
+              fi
+              status=$?
+              echo "::endgroup::"
+              echo "${label} attempt ${attempt} failed (exit ${status})." >&2
+              if [ "$attempt" -lt 3 ]; then
+                sleep 15
+              fi
+            done
+            echo "${label} failed after 3 attempts." >&2
+            return 1
+          }
+          run_bounded "Install Python packages" \
+            python -m pip install --timeout 60 --retries 3 'pillow>=11.3,<13' 'playwright>=1.50,<2'
+          run_bounded "Install Playwright Chromium" \
+            python -m playwright install --with-deps chromium
       - name: Quarantine the audited corrupt portrait and bind existing approvals
         run: python automation/portrait_migration_20260916.py
       - name: Test data safety and page builder without credentials
@@ -253,9 +287,42 @@ jobs:
           INDEXNOW_BEFORE: ${{ github.event.before }}
         run: python automation/indexnow.py || true
       - name: Install real desktop and Safari-engine browsers
+        timeout-minutes: 30
+        env:
+          DEBIAN_FRONTEND: noninteractive
+          PIP_DISABLE_PIP_VERSION_CHECK: "1"
         run: |
-          python -m pip -q install 'playwright>=1.50,<2'
-          python -m playwright install --with-deps chromium webkit > /dev/null
+          # Same bound as the sync install: a silent apt or browser download must not
+          # hang this job. Logs stay on, each attempt dies after 8 minutes, then retries.
+          set -euo pipefail
+          sudo -n tee /etc/apt/apt.conf.d/99fcb-lock-timeout >/dev/null <<'EOF'
+          DPkg::Lock::Timeout "120";
+          Acquire::Retries "3";
+          EOF
+          run_bounded() {
+            local label="$1"
+            shift
+            local attempt status
+            for attempt in 1 2 3; do
+              echo "::group::${label} (attempt ${attempt}/3)"
+              if timeout --kill-after=20s 8m "$@"; then
+                echo "::endgroup::"
+                return 0
+              fi
+              status=$?
+              echo "::endgroup::"
+              echo "${label} attempt ${attempt} failed (exit ${status})." >&2
+              if [ "$attempt" -lt 3 ]; then
+                sleep 15
+              fi
+            done
+            echo "${label} failed after 3 attempts." >&2
+            return 1
+          }
+          run_bounded "Install Python packages" \
+            python -m pip install --timeout 60 --retries 3 'playwright>=1.50,<2'
+          run_bounded "Install Playwright Chromium and WebKit" \
+            python -m playwright install --with-deps chromium webkit
       - name: Verify approved files on the actual public player pages
         run: |
           python "$RUNNER_TEMP/portrait-publish-plan/verify_portraits.py" --plan "$RUNNER_TEMP/portrait-publish-plan/plan.json" --origin https://fullcourtbuckets.com --output "$RUNNER_TEMP/portrait-live-qa" --engines chromium,webkit --retries 4
