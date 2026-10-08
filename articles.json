@@ -1,5 +1,31 @@
 [
   {
+    "slug": "liberty-dream-semis-game-2-recap",
+    "url": "/news/liberty-dream-semis-game-2-recap/",
+    "title": "Hillmon Scores It, Ionescu Throws It Away: Dream Win Game 2 in OT, Lead 2-0",
+    "description": "With 20.8 seconds left in overtime, Hillmon's layup made it 99-98. The Dream held on, 101-98, and lead the semis 2-0.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-07",
+    "image": "/images/articles/liberty-dream-semis-game-2-recap/naz-hillmon-atlanta-dream-2025.jpg",
+    "imageAlt": "Naz Hillmon of the Atlanta Dream at the free-throw line",
+    "imageCredit": "Photo: Michael Cohn Photo / CC BY-SA 4.0",
+    "espnGameId": "401918297",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1500,
+    "imageHeight": 2250,
+    "imageSource": "/images/articles/liberty-dream-semis-game-2-recap/naz-hillmon-atlanta-dream-2025.jpg",
+    "imageFocal": "center 16%",
+    "imageHero": "/images/articles/liberty-dream-semis-game-2-recap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/liberty-dream-semis-game-2-recap/hero-2x.webp",
+    "imageHero2xWidth": 1488,
+    "imageHero2xHeight": 837
+  },
+  {
     "slug": "aces-valkyries-semis-game-1-recap",
     "url": "/news/aces-valkyries-semis-game-1-recap/",
     "title": "Valkyries Own the Glass, Stun the Aces 71-60 in Semis Game 1",
