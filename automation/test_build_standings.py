@@ -4,7 +4,10 @@ import unittest
 from pathlib import Path
 import tempfile
 
+import offline_tests
 import build_standings as standings
+
+offline_tests.install()
 
 ROOT = Path(__file__).resolve().parents[1]
 

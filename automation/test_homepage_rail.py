@@ -5,12 +5,36 @@ import unittest
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import offline_tests
 import homepage_rail as rail
 import internal_links as links
+
+offline_tests.install()
 
 ROOT = Path(__file__).resolve().parents[1]
 PT = ZoneInfo('America/Los_Angeles')
 NOW = dt.datetime(2026, 10, 2, 12, 0, tzinfo=PT)
+
+
+def _newest_game_recaps(articles, limit):
+    """One href per ESPN game: the newest article wins, equal dates keep the first."""
+    best = {}
+    for article in articles or []:
+        if not isinstance(article, dict):
+            continue
+        game_id = str(article.get('espnGameId') or '').strip()
+        slug = str(article.get('slug') or '').strip()
+        if not game_id or not slug:
+            continue
+        href = str(article.get('url') or f'/news/{slug}/')
+        if not href.startswith('/'):
+            href = f'/news/{slug}/'
+        date = str(article.get('date') or '')
+        current = best.get(game_id)
+        if current is None or date > current[0]:
+            best[game_id] = (date, href, slug)
+    ranked = sorted(best.values(), key=lambda row: row[0], reverse=True)
+    return [(href, slug) for _date, href, slug in ranked[:limit]]
 
 
 def _team(team_id, nick, abbr, score, home):
@@ -227,9 +251,19 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIn('>Playoff series<', rail_html)
         self.assertIn('>Latest scores<', rail_html)
         self.assertIn('Aces beat Fever 2-1', rail_html)
-        self.assertIn('href="/news/fever-aces-game-3-recap/"', rail_html)
-        self.assertNotIn('href="/news/fever-aces-game-3-recap/" target="_blank"', rail_html)
-        self.assertIn('target="_blank" rel="noopener"', rail_html)
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/', rail_html)
+        scores = rail_html.split('id="latest-scores"', 1)[1].split('</section>', 1)[0]
+        score_rows = scores.count('<li>')
+        self.assertGreater(score_rows, 0)
+        self.assertLessEqual(score_rows, rail.LATEST_LIMIT)
         articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
         self.assertTrue(articles)
+        # Newest game recap per ESPN id, same tie-break as homepage_rail._recaps.
+        # A fixed older story falls off the rail once newer finals take the slots.
+        newest = _newest_game_recaps(articles, rail.LATEST_LIMIT)
+        self.assertGreaterEqual(len(newest), 1)
+        self.assertLessEqual(len(newest), rail.LATEST_LIMIT)
+        for href, slug in newest:
+            self.assertIn(f'href="{href}"', scores, slug)
+            self.assertNotIn(f'href="{href}" target="_blank"', rail_html, slug)
+        self.assertIn('target="_blank" rel="noopener"', rail_html)
+        self.assertIn('https://www.espn.com/wnba/game/_/gameId/', rail_html)

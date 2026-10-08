@@ -4,7 +4,10 @@ from pathlib import Path
 import tempfile
 import unittest
 
+import offline_tests
 import season_teams as teams
+
+offline_tests.install()
 
 SPARKS = {"id": 12, "full_name": "Los Angeles Sparks", "abbreviation": "LA", "city": "Los Angeles", "name": "Sparks", "conference": "Western Conference"}
 ACES = {"id": 8, "full_name": "Las Vegas Aces", "abbreviation": "LV", "city": "Las Vegas", "name": "Aces", "conference": "Western Conference"}

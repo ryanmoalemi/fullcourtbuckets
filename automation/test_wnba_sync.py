@@ -6,7 +6,11 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+
+import offline_tests
 import wnba_sync as s
+
+offline_tests.install()
 
 P = {"id": 1, "first_name": "Example", "last_name": "Player", "team": {"id": 1, "full_name": "Example Team"}}
 NOW = dt.datetime(2009, 7, 20, 12, tzinfo=dt.timezone.utc)

@@ -5,8 +5,11 @@ from pathlib import Path
 import tempfile
 import unittest
 
+import offline_tests
 import game_stats as g
 import wnba_sync as sync
+
+offline_tests.install()
 
 ROOT = Path(__file__).resolve().parents[1]
 DAY = dt.date(2026, 10, 4)
