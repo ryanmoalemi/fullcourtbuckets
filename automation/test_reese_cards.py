@@ -154,6 +154,7 @@ class ReeseCardPageTests(unittest.TestCase):
         order = [
             '<section class="intro">',
             'id="collection"',
+            'id="bidding"',
             'id="summary"',
             'id="movers"',
             'id="paid-vs-value"',
@@ -161,6 +162,30 @@ class ReeseCardPageTests(unittest.TestCase):
             'id="method"',
             'id="faq"',
         ]
+        bidding = main.split('id="bidding"', 1)[1].split('id="summary"', 1)[0]
+        self.assertIn('Cards I&#x27;m bidding on', bidding)
+        self.assertIn('https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r', bidding)
+        self.assertIn('https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54', bidding)
+        self.assertIn('status-live">Live', bidding)
+        self.assertIn('End time: TBA', bidding)
+        self.assertIn('Sat, Oct 17, 2026, 7:00 p.m. PT', bidding)
+        self.assertIn('$2,750', bidding)
+        self.assertIn('$3,355', bidding)
+        self.assertIn('$982', bidding)
+        self.assertIn('$2,750 to $6,000', bidding)
+        self.assertIn('$1,000 to $6,900', bidding)
+        self.assertEqual(bidding.count('/news/angel-reese-game-2-stats-liberty-dream-semis/'), 1)
+        self.assertEqual(bidding.count('<p class="bid-take">I&#x27;m bidding on'), 2)
+        self.assertIn('Image: <a href="https://goldin.co/', bidding)
+        self.assertIn('Image: <a href="https://alt.xyz/', bidding)
+        self.assertNotIn('\u2014', bidding)
+        for name in (
+            'bid-goldin-prizm-gold-vinyl-147-psa8.webp',
+            'bid-alt-kaboom-gold-5-psa10.webp',
+        ):
+            photo = ROOT / 'images' / 'reese-cards' / name
+            self.assertTrue(photo.is_file(), name)
+            self.assertLess(photo.stat().st_size, 200_000, name)
         positions = [main.index(marker) for marker in order]
         self.assertEqual(positions, sorted(positions))
         cards_block = main.split('id="collection"', 1)[1].split('id="summary"', 1)[0]
