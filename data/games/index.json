@@ -16,8 +16,8 @@
       "crosscheck_matched": false,
       "crosscheck_compared": true,
       "mismatch_count": 2,
-      "plays": 0,
-      "plays_status": null
+      "plays": 359,
+      "plays_status": "included"
     },
     {
       "date": "2026-10-04",
@@ -35,8 +35,8 @@
       "crosscheck_matched": true,
       "crosscheck_compared": true,
       "mismatch_count": 0,
-      "plays": 0,
-      "plays_status": null
+      "plays": 376,
+      "plays_status": "included"
     },
     {
       "date": "2026-10-07",
