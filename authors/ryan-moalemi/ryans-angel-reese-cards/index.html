@@ -141,34 +141,33 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .notes{color:#e7e0d6}
 .value-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .value-line b{font:800 32px/1 "Barlow Condensed",sans-serif}
-.bids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.bid{display:flex;flex-direction:column;background:#120f16;border:1px solid #3a3328;min-width:0}
-.bid img{width:100%;background:#09080c;aspect-ratio:3/4;object-fit:contain}
-.bid .photo-credit{margin:0;padding:8px 14px 0;color:#9c958b;font-size:12px}
-.bid-copy{display:flex;flex-direction:column;gap:8px;padding:4px 14px 16px}
+.bids{display:flex;flex-direction:column;gap:12px}
+.bid{display:grid;grid-template-columns:168px minmax(0,1fr);background:#120f16;border:1px solid #3a3328;min-width:0}
+.bid-photo{background:#09080c;min-width:0}
+.bid-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#09080c}
+.bid .photo-credit{margin:0;padding:6px 8px 8px;color:#9c958b;font-size:11px}
+.bid-copy{display:flex;flex-direction:column;gap:8px;padding:12px 14px 14px;min-width:0}
 .bid-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .bid-top a{font-weight:800}
-.status{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.status{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .status-live{background:#10281c;color:#7dffa8}
 .status-won{background:#10281c;color:#7dffa8}
 .status-lost{background:#2c1218;color:#ff8d9a}
 .status-bin{background:#2a2416;color:#f0c36a}
-.bid-name{margin:0;font:800 clamp(1.35rem,2vw,1.7rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
-.bid-kicker{margin:8px 0 0;color:#f0c36a;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.bid-meta{margin:0;color:#d5cdc2}
-.bid-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 0}
-.bid-facts div{background:#191621;padding:8px;min-width:0}
-.bid-facts dt{color:#b7b0a6;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.bid-facts dd{margin:4px 0 0;font:800 22px/1.05 "Barlow Condensed",sans-serif}
-.bid-facts dd.long{font:700 15px/1.3 Inter,system-ui,sans-serif}
-.bid-sub{display:block;margin-top:4px;color:#b7b0a6;font:600 13px/1.35 Inter,system-ui,sans-serif}
-.estimate{margin:4px 0 0}
-.estimate span{display:block;color:#b7b0a6;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.estimate b{font:800 28px/1 "Barlow Condensed",sans-serif;color:#f0c36a}
+.bid-name{margin:0;font:800 clamp(1.15rem,1.6vw,1.45rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
+.bid-meta{margin:0;color:#d5cdc2;font-size:13px}
+.bid-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:2px 0 0}
+.bid-stats div{background:#191621;padding:7px 8px;min-width:0}
+.bid-stats dt{color:#b7b0a6;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.bid-stats dd{margin:3px 0 0;font:800 20px/1.05 "Barlow Condensed",sans-serif}
+.bid-stats dd.when{font:700 13px/1.25 Inter,system-ui,sans-serif}
+.bid-note{margin:0;color:#b7b0a6;font-size:13px;line-height:1.4}
 .bid-take{margin:0}
-.bid-comps{list-style:none;margin:0;padding:0}
-.bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733}
-.bid-why{margin:0;color:#c9c1b6;font-size:14px}
+.bid-comps-details{border-top:1px solid #2b2733;padding:0}
+.bid-comps-details summary{min-height:36px;color:#f0c36a;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.bid-comps{list-style:none;margin:0;padding:0 0 8px}
+.bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733;font-size:14px}
+.bid-why{margin:0 0 8px;color:#c9c1b6;font-size:13px}
 @media(max-width:800px){
 .hero{height:min(70vh,calc(100svh - 14.75rem));max-height:72vh}
 .hero h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
@@ -176,7 +175,10 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .cost{grid-template-columns:1fr 1fr}
 .detail-photos,.detail-photos.solo{grid-template-columns:1fr}
 .cards.is-list .tile{grid-template-columns:96px minmax(0,1fr)}
-.bids,.bid-facts{grid-template-columns:1fr}
+.bid{grid-template-columns:112px minmax(0,1fr)}
+.bid-photo img{height:168px}
+.bid-stats{grid-template-columns:1fr 1fr}
+.bid-copy{padding:10px 10px 12px}
 dialog{width:100vw;max-width:100vw;height:100vh;max-height:100vh;margin:0;border:0}
 }
 
@@ -347,56 +349,46 @@ dialog{width:100vw;max-width:100vw;height:100vh;max-height:100vh;margin:0;border
 <section class="panel" id="bidding">
 <h2>Cards I&#x27;m bidding on</h2>
 <p class="as-of">Bids as of 1:20 a.m. PT, Oct 8, 2026</p>
-<p>These two are live auctions. They are separate from the cards I already own, and they stay out of the paid and value totals.</p>
-<p>The Dream lead the Liberty 2-0 in the semifinals. Her playoff scoring has gone 13, 15, 17, then 23, and Game 3 is Friday, Oct. 9, at Barclays Center. The Finals are still in front of them.</p>
-<p><a href="/news/angel-reese-game-2-stats-liberty-dream-semis/">Game 2, when she scored 23</a></p>
+<p>Two live auctions, kept out of the collection totals. The Dream lead the Liberty 2-0, her playoff scoring has gone 13, 15, 17, then 23 in <a href="/news/angel-reese-game-2-stats-liberty-dream-semis/">Game 2</a>, and Game 3 is Friday, Oct. 9, at Barclays Center.</p>
 <div class="bids"><article class="bid" id="bid-goldin-prizm-gold-vinyl-147">
-<img src="/images/reese-cards/bid-goldin-prizm-gold-vinyl-147-psa8.webp" alt="2024 Panini Prizm WNBA Gold Vinyl Prizm number 147 Angel Reese rookie card, serial 1 of 1, in a PSA NM-MT 8 slab labeled certification 146338722" width="760" height="1276" decoding="async" loading="lazy">
+<div class="bid-photo">
+<img src="/images/reese-cards/bid-goldin-prizm-gold-vinyl-147-psa8.webp" alt="2024 Panini Prizm WNBA Gold Vinyl Prizm number 147 Angel Reese rookie card, serial 1 of 1, in a PSA NM-MT 8 slab labeled certification 146338722" width="760" height="1276" decoding="async" loading="eager">
 <p class="photo-credit">Image: <a href="https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r" target="_blank" rel="noopener">Goldin</a></p>
+</div>
 <div class="bid-copy">
 <div class="bid-top"><span class="status status-live">Live</span><a href="https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r" target="_blank" rel="noopener">Goldin</a></div>
 <h3 class="bid-name">2024 Panini Prizm WNBA Gold Vinyl Prizm #147 Angel Reese Rookie</h3>
-<p class="grade">PSA NM-MT 8</p>
-<p class="bid-meta">Serial 1/1 <span>Cert <a href="https://www.psacard.com/cert/146338722" target="_blank" rel="noopener">146338722</a></span></p>
-<p class="bid-meta">Lot #978, 2026 Monthly Sports Elite #9</p>
-<p class="bid-meta">Cert 146338722 is printed on the slab and on the Goldin lot.</p>
+<p class="bid-meta">PSA NM-MT 8 · 1/1 · <span title="Cert 146338722 is printed on the slab and on the Goldin lot.">Cert <a href="https://www.psacard.com/cert/146338722" target="_blank" rel="noopener">146338722</a></span> · <span title="Lot #978, 2026 Monthly Sports Elite #9">Lot #978</span></p>
 
-
-<dl class="bid-facts">
-<div><dt>Current bid</dt><dd>$2,750</dd><span class="bid-sub">$3,355 with buyer's premium</span></div>
+<dl class="bid-stats">
+<div><dt>Current bid</dt><dd>$2,750</dd></div>
 <div><dt>Bids</dt><dd>2</dd></div>
-<div><dt>Ends</dt><dd class="long">Sat, Oct 17, 2026, 7:00 p.m. PT</dd><span class="bid-sub">Extended bidding runs in 30-minute intervals after 7:00 p.m. PT. Goldin lists that window as 10:00 p.m. ET on Oct 17, 2026.</span></div>
-<div><dt>As of</dt><dd class="long">1:20 a.m. PT, Oct 8, 2026</dd></div>
+<div><dt>Ends</dt><dd class="when" title="Extended bidding runs in 30-minute intervals after 7:00 p.m. PT."><time datetime="2026-10-17T19:00:00-07:00">Oct 17, 2026, 7:00 p.m. PT</time></dd></div>
+<div><dt>FCB estimate</dt><dd>$2,750 to $6,000</dd></div>
 </dl>
-<p class="estimate"><span>FCB estimated final price</span> <b>$2,750 to $6,000</b></p>
-<p class="bid-sub">About $3,355 to $7,320 with the 22% buyer&#x27;s premium on this listing.</p>
-<p class="bid-take">I&#x27;m bidding on the 1/1 Gold Vinyl of her Prizm rookie, #147, in a PSA 8. No sale of this exact card has turned up, so I&#x27;m keeping a wide range with the live bid as the floor. Her playoff scoring has gone 13, 15, 17, then 23, and the Dream lead the Liberty 2-0 with Game 3 on Friday at Barclays Center. If Atlanta reaches the Finals, this one-of-one can still move, and the PSA 8 is what holds the top of the range down.</p>
-<p class="bid-kicker">Comps behind the range</p><ul class="bid-comps"><li><a href="https://www.si.com/collectibles/groovy-inserts-are-hot-case-hits-for-panini" target="_blank" rel="noopener">May 22, 2025 · $1,403 · PSA 9 · SI.com</a> <span>2024 Prizm Groovy Gold Vinyl Angel Reese 1/1</span> <span>Insert, not the base #147.</span></li><li><a href="https://www.sportscardspro.com/game/basketball-cards-2024-panini-prizm-wnba-kaleidoscopic/angel-reese-gold-vinyl-1" target="_blank" rel="noopener">Oct 2, 2025 · $1,199 · Raw · eBay, via SportsCardsPro</a> <span>2024 Prizm WNBA Kaleidoscopic Gold Vinyl #1 Angel Reese 1/1</span> <span>Insert. Sports Card Investor lists $675 for this same date.</span></li><li><a href="https://www.si.com/collectibles/groovy-inserts-are-hot-case-hits-for-panini" target="_blank" rel="noopener">Mar 13, 2025 · $3,200 · PSA 10 · SI.com</a> <span>2024 Prizm Groovy Gold Vinyl Rickea Jackson rookie 1/1</span> <span>Same rookie class, PSA 10, a different player.</span></li></ul>
-<p class="bid-why">No sale of this #147 Gold Vinyl 1/1 turned up. The low is the live $2,750 bid, with more than a week left and two bids in. The high stays at $6,000: the closest 1/1s are Reese&#x27;s Groovy Gold Vinyl PSA 9 at $1,403 and a Rickea Jackson Groovy Gold Vinyl PSA 10 at $3,200, and this copy is a PSA 8. Clark&#x27;s Gold Vinyl 1/1 is a different market and is left out. Sports Card Investor lists $675 for the same Oct 2, 2025 Kaleidoscopic sale that SportsCardsPro lists at $1,199, so that comp is soft.</p>
+<p class="bid-note">About $3,355 to $7,320 with the 22% buyer&#x27;s premium on this listing. No sale of this exact 1/1 turned up.</p>
+<p class="bid-take">I&#x27;m bidding on the 1/1 Gold Vinyl of her Prizm rookie, #147, in a PSA 8. Nothing of this exact card has sold, so the range starts at the live bid. If Atlanta reaches the Finals, this one-of-one can still move, and the PSA 8 holds the top down.</p>
+<details class="bid-comps-details"><summary>Comparable sales</summary><ul class="bid-comps"><li><a href="https://www.si.com/collectibles/groovy-inserts-are-hot-case-hits-for-panini" target="_blank" rel="noopener">May 22, 2025 · $1,403 · PSA 9 · SI.com</a> <span>2024 Prizm Groovy Gold Vinyl Angel Reese 1/1</span> <span>Insert, not the base #147.</span></li><li><a href="https://www.sportscardspro.com/game/basketball-cards-2024-panini-prizm-wnba-kaleidoscopic/angel-reese-gold-vinyl-1" target="_blank" rel="noopener">Oct 2, 2025 · $1,199 · Raw · eBay, via SportsCardsPro</a> <span>2024 Prizm WNBA Kaleidoscopic Gold Vinyl #1 Angel Reese 1/1</span> <span>Insert. Sports Card Investor lists $675 for this same date.</span></li><li><a href="https://www.si.com/collectibles/groovy-inserts-are-hot-case-hits-for-panini" target="_blank" rel="noopener">Mar 13, 2025 · $3,200 · PSA 10 · SI.com</a> <span>2024 Prizm Groovy Gold Vinyl Rickea Jackson rookie 1/1</span> <span>Same rookie class, PSA 10, a different player.</span></li></ul><p class="bid-why">No sale of this #147 Gold Vinyl 1/1 turned up. Closest 1/1s are Reese&#x27;s Groovy Gold Vinyl PSA 9 at $1,403 and a Rickea Jackson Groovy Gold Vinyl PSA 10 at $3,200. This copy is a PSA 8, so the high stays at $6,000. Clark&#x27;s Gold Vinyl 1/1 is left out. Sports Card Investor lists $675 for the same Oct 2, 2025 Kaleidoscopic sale that SportsCardsPro lists at $1,199.</p></details>
 </div>
 </article><article class="bid" id="bid-alt-kaboom-gold-5">
-<img src="/images/reese-cards/bid-alt-kaboom-gold-5-psa10.webp" alt="2024 Panini Instant Rookie Royalty WNBA Kaboom Gold number 5 Angel Reese rookie card, serial 01 of 10, in a PSA Gem Mint 10 slab labeled certification 139024135" width="900" height="1482" decoding="async" loading="lazy">
+<div class="bid-photo">
+<img src="/images/reese-cards/bid-alt-kaboom-gold-5-psa10.webp" alt="2024 Panini Instant Rookie Royalty WNBA Kaboom Gold number 5 Angel Reese rookie card, serial 01 of 10, in a PSA Gem Mint 10 slab labeled certification 139024135" width="900" height="1482" decoding="async" loading="eager">
 <p class="photo-credit">Image: <a href="https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54" target="_blank" rel="noopener">Alt</a></p>
+</div>
 <div class="bid-copy">
 <div class="bid-top"><span class="status status-live">Live</span><a href="https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54" target="_blank" rel="noopener">Alt</a></div>
 <h3 class="bid-name">2024 Panini Instant Rookie Royalty WNBA Kaboom! Gold Angel Reese #5</h3>
-<p class="grade">PSA 10 Gem Mint</p>
-<p class="bid-meta">Serial 01/10 <span>Cert <a href="https://www.psacard.com/cert/139024135" target="_blank" rel="noopener">139024135</a></span></p>
+<p class="bid-meta">PSA 10 Gem Mint · 01/10 · <span title="Cert 139024135 is printed on the slab. PSA&#x27;s public cert page did not load, so the number is not confirmed there.">Cert <a href="https://www.psacard.com/cert/139024135" target="_blank" rel="noopener">139024135</a></span> · Pop 6</p>
 
-<p class="bid-meta">Cert 139024135 is printed on the slab. PSA&#x27;s public cert page did not load, so the number is not confirmed there.</p>
-<p class="bid-meta">The Alt listing shows a PSA 10 population of 6.</p>
-
-<dl class="bid-facts">
+<dl class="bid-stats">
 <div><dt>Current bid</dt><dd>$982</dd></div>
-<div><dt>Bids</dt><dd>2</dd><span class="bid-sub">Alt showed $982 from WP*** and $957 from ZZ***.</span></div>
-<div><dt>Ends</dt><dd class="long">End time: TBA</dd><span class="bid-sub">The end time is not on the public listing while logged out, and Alt&#x27;s page data did not include it.</span></div>
-<div><dt>As of</dt><dd class="long">1:20 a.m. PT, Oct 8, 2026</dd></div>
+<div><dt>Bids</dt><dd title="Alt showed $982 from WP*** and $957 from ZZ***.">2</dd></div>
+<div><dt>Ends</dt><dd class="when" title="The end time is not on the public listing while logged out, and Alt&#x27;s page data did not include it.">TBA</dd></div>
+<div><dt>FCB estimate</dt><dd>$1,000 to $6,900</dd></div>
 </dl>
-<p class="estimate"><span>FCB estimated final price</span> <b>$1,000 to $6,900</b></p>
-
-<p class="bid-take">I&#x27;m bidding on the Gold Kaboom, serial 01/10, in a PSA 10. I already have two base Kabooms in gem mint, and this is the numbered one. A raw 1/10 sold for $6,900 with buyer&#x27;s premium in August 2025, the base PSA 10 has been closer to $1,000 this year, and the live bid is still $982. If the Dream reach the Finals, the gem of the /10 can separate from the base, and if the series ends Friday that 2025 sale is a long way from this auction.</p>
-<p class="bid-kicker">Comps behind the range</p><ul class="bid-comps"><li><a href="https://www.fanaticscollect.com/weekly/beb4f7b2-7890-11f0-8dfa-067e98e66425/2024-panini-royalty-wnba-kaboom-gold-angel-reese-rookie-110-5" target="_blank" rel="noopener">Aug 25, 2025 · $6,900 · Authenticated raw · Fanatics Collect Weekly</a> <span>2024 Panini Royalty WNBA Kaboom! Gold Angel Reese rookie 1/10 #5</span> <span>$6,900 with buyer&#x27;s premium, 41 bids. The auction closed the evening of Aug 24, 2025 PT.</span></li><li><a href="https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint" target="_blank" rel="noopener">Sep 27, 2026 · $1,500 · PSA 10 · Fanatics Collect</a> <span>2024 Panini Royalty WNBA Kaboom! Angel Reese rookie #5, base</span> <span>Base card, not the Gold /10.</span></li><li><a href="https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint" target="_blank" rel="noopener">Aug 26, 2026 · $975 · PSA 10 · Fanatics Collect</a> <span>2024 Panini Royalty WNBA Kaboom! Angel Reese rookie #5, base</span> <span>Base card, not the Gold /10.</span></li></ul>
-<p class="bid-why">The high is the only verified sale of this Gold /10: $6,900 with buyer&#x27;s premium for an authenticated raw 1/10 on Fanatics Collect, sold Aug 25, 2025. The low sits near the live $982 bid and the recent base Kaboom PSA 10 sales ($975 and $1,500), because no PSA 10 of the Gold has a recorded sale and this auction can still finish close to where it is. The range is wide on purpose. Alt&#x27;s fees were not on the public listing. A $9,000 figure dated July 29, 2025 shows up on Sports Card Investor without a venue, so it is left out.</p>
+<p class="bid-note">No graded Gold /10 sale found. The $6,900 top is a raw 1/10 with buyer&#x27;s premium from Aug 2025.</p>
+<p class="bid-take">I&#x27;m bidding on the Gold Kaboom, serial 01/10, in a PSA 10. I already have two base Kabooms in gem mint, and this is the numbered one. If the Dream reach the Finals, a gem of the /10 can pull away from the base.</p>
+<details class="bid-comps-details"><summary>Comparable sales</summary><ul class="bid-comps"><li><a href="https://www.fanaticscollect.com/weekly/beb4f7b2-7890-11f0-8dfa-067e98e66425/2024-panini-royalty-wnba-kaboom-gold-angel-reese-rookie-110-5" target="_blank" rel="noopener">Aug 25, 2025 · $6,900 · Authenticated raw · Fanatics Collect Weekly</a> <span>2024 Panini Royalty WNBA Kaboom! Gold Angel Reese rookie 1/10 #5</span> <span>$6,900 with buyer&#x27;s premium, 41 bids. The auction closed the evening of Aug 24, 2025 PT.</span></li><li><a href="https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint" target="_blank" rel="noopener">Sep 27, 2026 · $1,500 · PSA 10 · Fanatics Collect</a> <span>2024 Panini Royalty WNBA Kaboom! Angel Reese rookie #5, base</span> <span>Base card, not the Gold /10.</span></li><li><a href="https://www.fanaticscollect.com/buy-now/680b6591-2334-4303-b516-04afc9a427c9/2024-panini-royalty-wnba-kaboom-angel-reese-rookie-5-psa-10-gem-mint" target="_blank" rel="noopener">Aug 26, 2026 · $975 · PSA 10 · Fanatics Collect</a> <span>2024 Panini Royalty WNBA Kaboom! Angel Reese rookie #5, base</span> <span>Base card, not the Gold /10.</span></li></ul><p class="bid-why">No graded Gold /10 sale was found. The $6,900 top is the only verified sale of this card: an authenticated raw 1/10 on Fanatics Collect, sold Aug 25, 2025, with buyer&#x27;s premium. The low sits near the live $982 bid and recent base Kaboom PSA 10 sales. Alt&#x27;s fees were not on the public listing. A $9,000 figure dated July 29, 2025 on Sports Card Investor has no venue, so it is left out.</p></details>
 </div>
 </article></div>
 </section>

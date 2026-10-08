@@ -1,12 +1,11 @@
 {
   "as_of": "2026-10-08T01:20:00-07:00",
   "intro": [
-    "These two are live auctions. They are separate from the cards I already own, and they stay out of the paid and value totals.",
-    "The Dream lead the Liberty 2-0 in the semifinals. Her playoff scoring has gone 13, 15, 17, then 23, and Game 3 is Friday, Oct. 9, at Barclays Center. The Finals are still in front of them."
+    "Two live auctions, kept out of the collection totals. The Dream lead the Liberty 2-0, her playoff scoring has gone 13, 15, 17, then 23 in {playoff}, and Game 3 is Friday, Oct. 9, at Barclays Center."
   ],
   "playoff_link": {
     "href": "/news/angel-reese-game-2-stats-liberty-dream-semis/",
-    "label": "Game 2, when she scored 23"
+    "label": "Game 2"
   },
   "bids": [
     {
@@ -26,11 +25,13 @@
       "bids": 2,
       "as_of": "2026-10-08T01:20:00-07:00",
       "ends_at": "2026-10-17T19:00:00-07:00",
-      "ends_note": "Extended bidding runs in 30-minute intervals after 7:00 p.m. PT. Goldin lists that window as 10:00 p.m. ET on Oct 17, 2026.",
+      "ends_note": "Extended bidding runs in 30-minute intervals after 7:00 p.m. PT.",
       "lot": "Lot #978, 2026 Monthly Sports Elite #9",
+      "lot_short": "Lot #978",
       "estimate_low": 2750,
       "estimate_high": 6000,
-      "estimate_note": "No sale of this #147 Gold Vinyl 1/1 turned up. The low is the live $2,750 bid, with more than a week left and two bids in. The high stays at $6,000: the closest 1/1s are Reese's Groovy Gold Vinyl PSA 9 at $1,403 and a Rickea Jackson Groovy Gold Vinyl PSA 10 at $3,200, and this copy is a PSA 8. Clark's Gold Vinyl 1/1 is a different market and is left out. Sports Card Investor lists $675 for the same Oct 2, 2025 Kaleidoscopic sale that SportsCardsPro lists at $1,199, so that comp is soft.",
+      "estimate_line": "No sale of this exact 1/1 turned up.",
+      "estimate_note": "No sale of this #147 Gold Vinyl 1/1 turned up. Closest 1/1s are Reese's Groovy Gold Vinyl PSA 9 at $1,403 and a Rickea Jackson Groovy Gold Vinyl PSA 10 at $3,200. This copy is a PSA 8, so the high stays at $6,000. Clark's Gold Vinyl 1/1 is left out. Sports Card Investor lists $675 for the same Oct 2, 2025 Kaleidoscopic sale that SportsCardsPro lists at $1,199.",
       "status": "live",
       "final_price": null,
       "result": null,
@@ -41,7 +42,7 @@
         "alt": "2024 Panini Prizm WNBA Gold Vinyl Prizm number 147 Angel Reese rookie card, serial 1 of 1, in a PSA NM-MT 8 slab labeled certification 146338722",
         "credit": "Image: Goldin"
       },
-      "take": "I'm bidding on the 1/1 Gold Vinyl of her Prizm rookie, #147, in a PSA 8. No sale of this exact card has turned up, so I'm keeping a wide range with the live bid as the floor. Her playoff scoring has gone 13, 15, 17, then 23, and the Dream lead the Liberty 2-0 with Game 3 on Friday at Barclays Center. If Atlanta reaches the Finals, this one-of-one can still move, and the PSA 8 is what holds the top of the range down.",
+      "take": "I'm bidding on the 1/1 Gold Vinyl of her Prizm rookie, #147, in a PSA 8. Nothing of this exact card has sold, so the range starts at the live bid. If Atlanta reaches the Finals, this one-of-one can still move, and the PSA 8 holds the top down.",
       "comps": [
         {
           "date": "2025-05-22",
@@ -83,6 +84,7 @@
       "cert_url": "https://www.psacard.com/cert/139024135",
       "cert_note": "Cert 139024135 is printed on the slab. PSA's public cert page did not load, so the number is not confirmed there.",
       "pop_note": "The Alt listing shows a PSA 10 population of 6.",
+      "pop_short": "Pop 6",
       "type": "auction",
       "current_bid": 982,
       "bids": 2,
@@ -92,7 +94,8 @@
       "ends_note": "The end time is not on the public listing while logged out, and Alt's page data did not include it.",
       "estimate_low": 1000,
       "estimate_high": 6900,
-      "estimate_note": "The high is the only verified sale of this Gold /10: $6,900 with buyer's premium for an authenticated raw 1/10 on Fanatics Collect, sold Aug 25, 2025. The low sits near the live $982 bid and the recent base Kaboom PSA 10 sales ($975 and $1,500), because no PSA 10 of the Gold has a recorded sale and this auction can still finish close to where it is. The range is wide on purpose. Alt's fees were not on the public listing. A $9,000 figure dated July 29, 2025 shows up on Sports Card Investor without a venue, so it is left out.",
+      "estimate_line": "No graded Gold /10 sale found. The $6,900 top is a raw 1/10 with buyer's premium from Aug 2025.",
+      "estimate_note": "No graded Gold /10 sale was found. The $6,900 top is the only verified sale of this card: an authenticated raw 1/10 on Fanatics Collect, sold Aug 25, 2025, with buyer's premium. The low sits near the live $982 bid and recent base Kaboom PSA 10 sales. Alt's fees were not on the public listing. A $9,000 figure dated July 29, 2025 on Sports Card Investor has no venue, so it is left out.",
       "status": "live",
       "final_price": null,
       "result": null,
@@ -103,7 +106,7 @@
         "alt": "2024 Panini Instant Rookie Royalty WNBA Kaboom Gold number 5 Angel Reese rookie card, serial 01 of 10, in a PSA Gem Mint 10 slab labeled certification 139024135",
         "credit": "Image: Alt"
       },
-      "take": "I'm bidding on the Gold Kaboom, serial 01/10, in a PSA 10. I already have two base Kabooms in gem mint, and this is the numbered one. A raw 1/10 sold for $6,900 with buyer's premium in August 2025, the base PSA 10 has been closer to $1,000 this year, and the live bid is still $982. If the Dream reach the Finals, the gem of the /10 can separate from the base, and if the series ends Friday that 2025 sale is a long way from this auction.",
+      "take": "I'm bidding on the Gold Kaboom, serial 01/10, in a PSA 10. I already have two base Kabooms in gem mint, and this is the numbered one. If the Dream reach the Finals, a gem of the /10 can pull away from the base.",
       "comps": [
         {
           "date": "2025-08-25",

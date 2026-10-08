@@ -810,7 +810,7 @@ def format_deadline(iso: str) -> str:
     hour = dt.hour % 12 or 12
     ampm = 'a.m.' if dt.hour < 12 else 'p.m.'
     return (
-        f'{dt.strftime("%a")}, {SHORT_MONTHS[dt.month - 1]} {dt.day}, {dt.year}, '
+        f'{SHORT_MONTHS[dt.month - 1]} {dt.day}, {dt.year}, '
         f'{hour}:{dt.minute:02d} {ampm} PT'
     )
 
@@ -859,88 +859,112 @@ def _bid_price(entry: dict) -> str:
     if entry.get('final_price') is not None and str(entry.get('status') or '').lower() in {'won', 'lost'}:
         label = 'Final price'
         amount = format_dollars(entry['final_price'])
-        extra = ''
     else:
         label = 'Asking' if str(entry.get('type') or '') == 'buy_it_now' else 'Current bid'
         amount = format_dollars(entry['current_bid']) if entry.get('current_bid') is not None else 'See listing'
-        extra = ''
-        if entry.get('total_with_premium') is not None:
-            extra = f'<span class="bid-sub">{format_dollars(entry["total_with_premium"])} with buyer\'s premium</span>'
-    return f'<div><dt>{label}</dt><dd>{esc(amount)}</dd>{extra}</div>'
+    return f'<div><dt>{label}</dt><dd>{esc(amount)}</dd></div>'
+
+
+def _bid_ends(entry: dict) -> str:
+    ends = entry.get('ends_at')
+    title = f' title="{esc(entry["ends_note"])}"' if entry.get('ends_note') else ''
+    if ends:
+        stamp = esc(str(ends))
+        label = esc(format_deadline(ends))
+        return f'<div><dt>Ends</dt><dd class="when"{title}><time datetime="{stamp}">{label}</time></dd></div>'
+    return f'<div><dt>Ends</dt><dd class="when"{title}>TBA</dd></div>'
+
+
+def _bid_meta(entry: dict) -> str:
+    bits = [esc(entry['grade']), esc(entry['serial'])]
+    if entry.get('cert'):
+        cert = esc(str(entry['cert']))
+        if entry.get('cert_url'):
+            cert = _external(entry['cert_url'], str(entry['cert']))
+        hint = f' title="{esc(entry["cert_note"])}"' if entry.get('cert_note') else ''
+        bits.append(f'<span{hint}>Cert {cert}</span>')
+    if entry.get('pop_short'):
+        bits.append(esc(entry['pop_short']))
+    if entry.get('lot_short'):
+        lot_title = f' title="{esc(entry["lot"])}"' if entry.get('lot') else ''
+        bits.append(f'<span{lot_title}>{esc(entry["lot_short"])}</span>')
+    return ' · '.join(bits)
 
 
 def _bid_article(entry: dict) -> str:
     image = entry['image']
     label, kind = bid_status(entry)
-    ends = entry.get('ends_at')
-    if ends:
-        end_html = f'<dd class="long">{esc(format_deadline(ends))}</dd>'
-    else:
-        end_html = '<dd class="long">End time: TBA</dd>'
-    end_note = f'<span class="bid-sub">{esc(entry["ends_note"])}</span>' if entry.get('ends_note') else ''
-    lot = f'<p class="bid-meta">{esc(entry["lot"])}</p>' if entry.get('lot') else ''
-    cert = ''
-    if entry.get('cert'):
-        cert_text = f'Cert {esc(entry["cert"])}'
-        if entry.get('cert_url'):
-            cert_text = f'Cert {_external(entry["cert_url"], str(entry["cert"]))}'
-        cert = f' <span>{cert_text}</span>'
-    cert_note = f'<p class="bid-meta">{esc(entry["cert_note"])}</p>' if entry.get('cert_note') else ''
-    pop = f'<p class="bid-meta">{esc(entry["pop_note"])}</p>' if entry.get('pop_note') else ''
-    bids_note = f'<span class="bid-sub">{esc(entry["bids_note"])}</span>' if entry.get('bids_note') else ''
     bid_count = entry.get('bids')
-    count_html = f'<div><dt>Bids</dt><dd>{esc(bid_count)}</dd>{bids_note}</div>' if bid_count is not None else ''
+    count_title = f' title="{esc(entry["bids_note"])}"' if entry.get('bids_note') else ''
+    count_html = (
+        f'<div><dt>Bids</dt><dd{count_title}>{esc(bid_count)}</dd></div>'
+        if bid_count is not None else ''
+    )
     result = f'<p class="bid-meta">{esc(entry["result"])}</p>' if entry.get('result') else ''
-    span = premium_span(entry)
-    span_html = f'<p class="bid-sub">{esc(span)}</p>' if span else ''
+    notes = [part for part in (premium_span(entry), entry.get('estimate_line') or '') if part]
+    note_html = f'<p class="bid-note">{esc(" ".join(notes))}</p>' if notes else ''
     comps = ''.join(_bid_comp(comp) for comp in entry.get('comps') or [])
-    comps_html = f'<p class="bid-kicker">Comps behind the range</p><ul class="bid-comps">{comps}</ul>' if comps else ''
-    note = f'<p class="bid-why">{esc(entry["estimate_note"])}</p>' if entry.get('estimate_note') else ''
+    why = f'<p class="bid-why">{esc(entry["estimate_note"])}</p>' if entry.get('estimate_note') else ''
+    comps_html = ''
+    if comps or why:
+        comps_html = (
+            '<details class="bid-comps-details"><summary>Comparable sales</summary>'
+            f'<ul class="bid-comps">{comps}</ul>{why}</details>'
+        )
     credit = entry['image'].get('credit') or f'Image: {entry["platform"]}'
+    estimate = (
+        f'{esc(format_dollars(entry["estimate_low"]))} to '
+        f'{esc(format_dollars(entry["estimate_high"]))}'
+    )
     return f'''<article class="bid" id="{esc(entry["id"])}">
-<img src="{esc(image["src"])}" alt="{esc(image["alt"])}" width="{int(image.get("width") or 760)}" height="{int(image.get("height") or 1200)}">
+<div class="bid-photo">
+<img src="{esc(image["src"])}" alt="{esc(image["alt"])}" width="{int(image.get("width") or 760)}" height="{int(image.get("height") or 1200)}" decoding="async" loading="eager">
 <p class="photo-credit">{esc(credit.split(":", 1)[0])}: {_external(entry["url"], credit.split(":", 1)[-1].strip())}</p>
+</div>
 <div class="bid-copy">
 <div class="bid-top"><span class="status status-{kind}">{esc(label)}</span>{_external(entry["url"], entry["platform"])}</div>
 <h3 class="bid-name">{esc(entry["card"])}</h3>
-<p class="grade">{esc(entry["grade"])}</p>
-<p class="bid-meta">Serial {esc(entry["serial"])}{cert}</p>
-{lot}
-{cert_note}
-{pop}
+<p class="bid-meta">{_bid_meta(entry)}</p>
 {result}
-<dl class="bid-facts">
+<dl class="bid-stats">
 {_bid_price(entry)}
 {count_html}
-<div><dt>Ends</dt>{end_html}{end_note}</div>
-<div><dt>As of</dt><dd class="long">{esc(format_clock(entry["as_of"]))}</dd></div>
+{_bid_ends(entry)}
+<div><dt>FCB estimate</dt><dd>{estimate}</dd></div>
 </dl>
-<p class="estimate"><span>FCB estimated final price</span> <b>{esc(format_dollars(entry["estimate_low"]))} to {esc(format_dollars(entry["estimate_high"]))}</b></p>
-{span_html}
+{note_html}
 <p class="bid-take">{esc(entry["take"])}</p>
 {comps_html}
-{note}
 </div>
 </article>'''
+
+
+def _bid_intro(data: dict) -> str:
+    link = data.get('playoff_link') or {}
+    anchor = ''
+    if link.get('href') and link.get('label'):
+        anchor = f'<a href="{esc(link["href"])}">{esc(link["label"])}</a>'
+    parts = []
+    for paragraph in data.get('intro') or []:
+        chunks = str(paragraph).split('{playoff}')
+        html = esc(chunks[0])
+        for chunk in chunks[1:]:
+            html += anchor + esc(chunk)
+        parts.append(f'<p>{html}</p>')
+    return '\n'.join(parts)
 
 
 def render_bids(root: Path) -> str:
     data = load_bids(root)
     if not data or not data.get('bids'):
         return ''
-    intro = '\n'.join(f'<p>{esc(paragraph)}</p>' for paragraph in data.get('intro') or [])
-    link = data.get('playoff_link') or {}
-    link_html = ''
-    if link.get('href') and link.get('label'):
-        link_html = f'<p><a href="{esc(link["href"])}">{esc(link["label"])}</a></p>'
     articles = ''.join(_bid_article(entry) for entry in data['bids'])
     checked = format_clock(data['as_of']) if data.get('as_of') else ''
     stamp = f'<p class="as-of">Bids as of {esc(checked)}</p>' if checked else ''
     return f'''<section class="panel" id="bidding">
 <h2>Cards I&#x27;m bidding on</h2>
 {stamp}
-{intro}
-{link_html}
+{_bid_intro(data)}
 <div class="bids">{articles}</div>
 </section>'''
 
@@ -1209,34 +1233,33 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .notes{color:#e7e0d6}
 .value-line{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .value-line b{font:800 32px/1 "Barlow Condensed",sans-serif}
-.bids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.bid{display:flex;flex-direction:column;background:#120f16;border:1px solid #3a3328;min-width:0}
-.bid img{width:100%;background:#09080c;aspect-ratio:3/4;object-fit:contain}
-.bid .photo-credit{margin:0;padding:8px 14px 0;color:#9c958b;font-size:12px}
-.bid-copy{display:flex;flex-direction:column;gap:8px;padding:4px 14px 16px}
+.bids{display:flex;flex-direction:column;gap:12px}
+.bid{display:grid;grid-template-columns:168px minmax(0,1fr);background:#120f16;border:1px solid #3a3328;min-width:0}
+.bid-photo{background:#09080c;min-width:0}
+.bid-photo img{display:block;width:100%;height:230px;object-fit:contain;background:#09080c}
+.bid .photo-credit{margin:0;padding:6px 8px 8px;color:#9c958b;font-size:11px}
+.bid-copy{display:flex;flex-direction:column;gap:8px;padding:12px 14px 14px;min-width:0}
 .bid-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .bid-top a{font-weight:800}
-.status{display:inline-flex;align-items:center;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.status{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .status-live{background:#10281c;color:#7dffa8}
 .status-won{background:#10281c;color:#7dffa8}
 .status-lost{background:#2c1218;color:#ff8d9a}
 .status-bin{background:#2a2416;color:#f0c36a}
-.bid-name{margin:0;font:800 clamp(1.35rem,2vw,1.7rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
-.bid-kicker{margin:8px 0 0;color:#f0c36a;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.bid-meta{margin:0;color:#d5cdc2}
-.bid-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:4px 0 0}
-.bid-facts div{background:#191621;padding:8px;min-width:0}
-.bid-facts dt{color:#b7b0a6;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.bid-facts dd{margin:4px 0 0;font:800 22px/1.05 "Barlow Condensed",sans-serif}
-.bid-facts dd.long{font:700 15px/1.3 Inter,system-ui,sans-serif}
-.bid-sub{display:block;margin-top:4px;color:#b7b0a6;font:600 13px/1.35 Inter,system-ui,sans-serif}
-.estimate{margin:4px 0 0}
-.estimate span{display:block;color:#b7b0a6;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
-.estimate b{font:800 28px/1 "Barlow Condensed",sans-serif;color:#f0c36a}
+.bid-name{margin:0;font:800 clamp(1.15rem,1.6vw,1.45rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
+.bid-meta{margin:0;color:#d5cdc2;font-size:13px}
+.bid-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:2px 0 0}
+.bid-stats div{background:#191621;padding:7px 8px;min-width:0}
+.bid-stats dt{color:#b7b0a6;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.bid-stats dd{margin:3px 0 0;font:800 20px/1.05 "Barlow Condensed",sans-serif}
+.bid-stats dd.when{font:700 13px/1.25 Inter,system-ui,sans-serif}
+.bid-note{margin:0;color:#b7b0a6;font-size:13px;line-height:1.4}
 .bid-take{margin:0}
-.bid-comps{list-style:none;margin:0;padding:0}
-.bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733}
-.bid-why{margin:0;color:#c9c1b6;font-size:14px}
+.bid-comps-details{border-top:1px solid #2b2733;padding:0}
+.bid-comps-details summary{min-height:36px;color:#f0c36a;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.bid-comps{list-style:none;margin:0;padding:0 0 8px}
+.bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733;font-size:14px}
+.bid-why{margin:0 0 8px;color:#c9c1b6;font-size:13px}
 @media(max-width:800px){
 .hero{height:min(70vh,calc(100svh - 14.75rem));max-height:72vh}
 .hero h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
@@ -1244,7 +1267,10 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .cost{grid-template-columns:1fr 1fr}
 .detail-photos,.detail-photos.solo{grid-template-columns:1fr}
 .cards.is-list .tile{grid-template-columns:96px minmax(0,1fr)}
-.bids,.bid-facts{grid-template-columns:1fr}
+.bid{grid-template-columns:112px minmax(0,1fr)}
+.bid-photo img{height:168px}
+.bid-stats{grid-template-columns:1fr 1fr}
+.bid-copy{padding:10px 10px 12px}
 dialog{width:100vw;max-width:100vw;height:100vh;max-height:100vh;margin:0;border:0}
 }
 '''
