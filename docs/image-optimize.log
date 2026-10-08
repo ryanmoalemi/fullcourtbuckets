@@ -1,9 +1,7 @@
-files rewritten: 2
-html files rewritten: 597
+files rewritten: 0
+html files rewritten: 591
 images missing alt: 0
 
-fallback dropped images/articles/aces-valkyries-semis-game-2-recap/veronica-burton-valkyries.jpg; serving veronica-burton-valkyries.webp (83568 bytes)
-fallback dropped images/articles/liberty-dream-semis-game-2-recap/naz-hillmon-atlanta-dream-2025.jpg; serving naz-hillmon-atlanta-dream-2025.webp (98774 bytes)
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
