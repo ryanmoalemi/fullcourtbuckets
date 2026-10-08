@@ -46,7 +46,11 @@ PORTRAIT_MIN_SIDE = 1024  # keep the publisher from rejecting a later sync
 
 IMG_TAG = re.compile(r'<img\b[^>]*>', re.I)
 ATTR = re.compile(r'([^\s=/>]+)(?:\s*=\s*(".*?"|\'.*?\'|[^\s>]+))?', re.S)
-FIGURE_IMG = re.compile(r'<figure\b[^>]*>\s*(?:<picture\b[^>]*>\s*(?:<source\b[^>]*>\s*)*)?<img\b', re.I)
+# A closed </source> still sits between the source tag and the lead <img>.
+FIGURE_IMG = re.compile(
+    r'<figure\b[^>]*>\s*(?:<picture\b[^>]*>\s*(?:<source\b[^>]*>\s*(?:</source>\s*)?)*)?<img\b',
+    re.I,
+)
 
 
 class OptimizeError(Exception):

@@ -46,6 +46,28 @@ class OptimizeImagesTest(unittest.TestCase):
             self.assertIn('photo.jpg', missing)
             self.assertIn('No alt text was written', missing)
 
+    def test_closed_source_lead_is_eager_and_the_logo_stays_lazy(self):
+        html = (
+            '<img src="/logo.png" alt="Full Court Buckets" width="760" height="507">'
+            '<figure class="lead-photo"><picture>'
+            '<source srcset="/hero-1200.webp 1200w" type="image/webp" sizes="842px"></source>'
+            '<img src="/hero-1200.webp" alt="A player at the line" width="1200" height="675" '
+            'decoding="async" loading="lazy">'
+            '</picture></figure>'
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            Image.new('RGB', (1200, 675), (30, 40, 50)).save(root / 'hero-1200.webp', quality=80)
+            Image.new('RGB', (760, 507), (10, 10, 10)).save(root / 'logo.png')
+            updated, _missing = opt.rewrite_html(root, html)
+        lead = updated[updated.find('<figure'):]
+        logo = updated[:updated.find('<figure')]
+        self.assertIn('fetchpriority="high"', lead)
+        self.assertNotIn('loading=', lead)
+        self.assertIn('loading="lazy"', logo)
+        self.assertNotIn('fetchpriority="high"', logo)
+        self.assertEqual(updated.count('fetchpriority="high"'), 1)
+
     def test_broken_file_is_kept_and_logged(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
