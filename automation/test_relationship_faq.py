@@ -122,7 +122,10 @@ class RelationshipFaqTests(unittest.TestCase):
             data = _faq_json(slug)
             visible = {html.unescape(q): html.unescape(a) for q, a in FAQ_ITEM.findall(page)}
             schema = _schema_faq(page)
-            profile = {'slug': slug}
+            profile_path = ROOT / 'data' / 'wnba' / 'players' / f'{slug}.json'
+            active = False
+            if profile_path.is_file():
+                active = json.loads(profile_path.read_text(encoding='utf-8')).get('active_in_provider_feed') is True
             pairs = []
             for item in data['items']:
                 question = item['question']
@@ -134,10 +137,15 @@ class RelationshipFaqTests(unittest.TestCase):
                 if reason:
                     problems.append(f'{slug}: {question}: {reason}')
                 if build_couples.relationship_question_kind(question):
-                    self.assertEqual(visible.get(question), answer, slug)
-                    self.assertEqual(schema.get(question), answer, slug)
                     self.assertNotIn('Jr..', answer, slug)
-            build_players.assert_relationship_faq_matches_couples(slug, pairs, ROOT)
+                    if active:
+                        self.assertEqual(visible.get(question), answer, slug)
+                        self.assertEqual(schema.get(question), answer, slug)
+                    else:
+                        self.assertNotIn(question, visible, slug)
+                        self.assertNotIn(question, schema, slug)
+            if active:
+                build_players.assert_relationship_faq_matches_couples(slug, pairs, ROOT)
         self.assertEqual(problems, [])
 
     def test_allisha_gray_page_says_engaged_not_married(self):

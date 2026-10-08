@@ -355,7 +355,7 @@ def game_display(game):
     }
 
 
-def game_table(profile):
+def game_table(profile, include_note=True):
     games=profile.get('recent_completed_games',[])
     if not games:
         return ''
@@ -364,7 +364,8 @@ def game_table(profile):
         shown = game_display(g)
         nums=''.join(f'<td>{value(g.get(k),True)}</td>' for k in ('pts','reb','ast','stl','blk','turnover'))
         rows.append(f'<tr><th scope="row">{esc(shown["date"])}</th><td class="team-cell">{esc(shown["opponent"])}</td><td>{shown["kind"]}</td><td>{shown["outcome"]}</td><td>{esc(g.get("minutes") or "Not listed")}</td>{nums}</tr>')
-    return f'''<section id="games" class="section"><p class="eyebrow">Completed games</p><h2>Recent game log</h2><p class="muted small">Recent games: {esc(profile.get('game_log_window_start'))} onward. Dates shown in Pacific time. This is not a complete career game log.</p><div class="table-scroll" role="region" tabindex="0" aria-label="Recent completed game statistics"><table><caption>Regular-season and playoff games are labeled separately.</caption><thead><tr><th scope="col">DATE</th><th scope="col">OPPONENT</th><th scope="col">TYPE</th><th scope="col">RESULT</th><th scope="col">MIN</th><th scope="col">PTS</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">STL</th><th scope="col">BLK</th><th scope="col">TO</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
+    note = f'<p class="muted small">Recent games: {esc(profile.get("game_log_window_start"))} onward. Dates shown in Pacific time. This is not a complete career game log.</p>' if include_note else ''
+    return f'''<section id="games" class="section"><p class="eyebrow">Completed games</p><h2>Recent game log</h2>{note}<div class="table-scroll" role="region" tabindex="0" aria-label="Recent completed game statistics"><table><caption>Regular-season and playoff games are labeled separately.</caption><thead><tr><th scope="col">DATE</th><th scope="col">OPPONENT</th><th scope="col">TYPE</th><th scope="col">RESULT</th><th scope="col">MIN</th><th scope="col">PTS</th><th scope="col">REB</th><th scope="col">AST</th><th scope="col">STL</th><th scope="col">BLK</th><th scope="col">TO</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section>'''
 
 
 def player_name(profile) -> str:
@@ -711,8 +712,20 @@ def curated_faq_pairs(profile, root: Path):
         pairs.append((question.strip(), answer.strip()))
     return pairs
 
+def on_current_roster(profile) -> bool:
+    """True only for a player listed on a current roster. Archive pages use the short record."""
+    return isinstance(profile, dict) and profile.get('active_in_provider_feed') is True
+
+
 def faq_answer_pairs(profile, root: Path):
-    """Keep curated questions. Rebuild season, games-played, and last-game answers from profile data."""
+    """Keep curated questions. Rebuild season, games-played, and last-game answers from profile data.
+
+    Archive profiles do not publish the shared FAQ template. Those questions repeat
+    the same filler (kids, nationality, "no widely reported") on players who are
+    not on a current roster.
+    """
+    if not on_current_roster(profile):
+        return []
     raw = curated_faq_pairs(profile, root)
     if not raw:
         return []
@@ -1058,7 +1071,160 @@ def ai_disclosure_html(include_portrait=False) -> str:
     return f'<p class="ai-note">{AI_NOTE}{portrait} {link}</p>'
 
 
+def archive_record_page(profile, root=None, linking=None, menu=None):
+    """Short public record for a player who is not on a current roster.
+
+    Who she is, the teams and years already stored, and the season lines already
+    stored. No FAQ template, no repeated disclaimer blocks, and no biography that
+    is not on the profile. The data-source line appears once.
+    """
+    p = profile['player']
+    name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
+    slug = profile['slug']
+    fields = bio_fields(p)
+    budget = links.Budget() if linking else None
+    stats = profile.get('season_stats', [])
+    years = sorted({row['season'] for row in stats})
+    row = headline(profile)
+    position = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(fields.get('position'), fields.get('position', ''))
+    number = fields.get('jersey_number', '')
+    summary = answer_summary(profile)
+    summary_html = f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
+    day = stats_day(profile)
+    fresh = long_date(day)
+    updated_html = (
+        f'<p class="stats-updated">Stats updated {esc(fresh)}. {esc(STATS_SOURCE)}</p>'
+        if fresh else f'<p class="stats-updated">{esc(STATS_SOURCE)}</p>'
+    )
+    meta = ' / '.join(esc(bit) for bit in ([('#' + number)] if number else []) + ([position] if position else []))
+    meta_html = f'<p class="hero-meta">{meta}</p>' if meta else ''
+    metrics = ''
+    if row:
+        for key, label in (('pts', 'POINTS'), ('ast', 'ASSISTS'), ('reb', 'REBOUNDS')):
+            shown = value(row.get(key))
+            if shown == '-':
+                continue
+            metrics += f'<div class="metric"><strong>{shown}</strong><span>{label}<small>PER GAME</small></span></div>'
+    if metrics:
+        note = f'{row["season"]} · ' + ('regular season' if row['season_type'] == 2 else 'playoffs')
+        hero_stats = f'<div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div>'
+    else:
+        hero_stats = ''
+    art = (
+        f'<div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or "FCB")}</span>'
+        f'<div class="number-card"><span>{esc(p.get("last_name") or name)}</span>'
+        f'<strong class="gradient">{esc(number or "FCB")}</strong></div>'
+        f'<small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div>'
+    )
+    tablehtml = stats_table(profile, 2) + stats_table(profile, 3)
+    if tablehtml:
+        kinds = sorted({item['season_type'] for item in stats})
+        radios = ''.join(
+            f'<button type="button" data-kind="{kind}" aria-pressed="false">{"Regular season" if kind == 2 else "Playoffs"}</button>'
+            for kind in kinds
+        )
+        opts = ''.join(f'<option value="{year}">{year}</option>' for year in sorted(years, reverse=True))
+        controls = (
+            f'<div class="filters js-only"><div class="segmented" role="group" aria-label="Competition">{radios}'
+            f'<button type="button" data-kind="all" aria-pressed="true">Both</button></div>'
+            f'<label>Season <select id="season-filter"><option value="all">All seasons</option>{opts}</select></label></div>'
+        )
+        statshtml = (
+            f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>'
+            f'{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p></section>'
+        )
+    else:
+        statshtml = ''
+    games = game_table(profile, include_note=False)
+    all_teams = []
+    for item in sorted(stats, key=lambda item: -item['season']):
+        pair = (item['season'], tname(item.get('team')))
+        if pair not in all_teams:
+            all_teams.append(pair)
+    latest_year = all_teams[0][0] if all_teams else None
+    timeline_rows = []
+    for year, team_name in all_teams:
+        label = links.linked_team_name(team_name, linking, budget) if linking and year == latest_year else esc(team_name)
+        timeline_rows.append(f'<li><strong>{year}</strong><span>{label}</span></li>')
+    changes = team_change_html(profile, linking, budget)
+    if timeline_rows or changes:
+        timeline = f'<ul class="timeline">{"".join(timeline_rows)}</ul>' if timeline_rows else ''
+        history = (
+            f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams and years</h2>'
+            f'{timeline}{changes}</section>'
+        )
+    else:
+        history = ''
+    couple = couple_note(root, slug)
+    detail_rows = []
+    for key, label in (
+        ('position', 'Position'),
+        ('height', 'Height'),
+        ('jersey_number', 'Jersey number'),
+        ('college', 'College'),
+        ('weight', 'Weight'),
+    ):
+        if key not in fields:
+            continue
+        shown = fields[key]
+        if key == 'position':
+            shown = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(shown, shown)
+        detail_rows.append((label, shown))
+    if years:
+        span = f'{years[0]}–{years[-1]}' if len(years) > 1 else str(years[0])
+        detail_rows.append(('Years on record', span))
+    detail_html = ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(shown)}</dd></div>' for label, shown in detail_rows)
+    aside = (
+        f'<aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section></aside>'
+        if detail_html else ''
+    )
+    nav_links = []
+    if statshtml:
+        nav_links.append('<a href="#stats">Stats</a>')
+    if games:
+        nav_links.append('<a href="#games">Game log</a>')
+    if history:
+        nav_links.append('<a href="#teams">Teams</a>')
+    nav = f'<nav class="section-nav" aria-label="On this page">{"".join(nav_links)}</nav>' if nav_links else ''
+    action = '<a class="button" href="#stats">View stats <span>→</span></a>' if statshtml else ''
+    hero = (
+        f'<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div>'
+        f'<section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy">'
+        f'<div class="hero-kicker"><span class="status">Archive profile</span><span>WNBA PLAYER PROFILE</span></div>'
+        f'<h1 id="player-name"><span>{esc(p.get("first_name"))}</span> <b class="gradient">{esc(p.get("last_name") or p.get("first_name"))}</b></h1>'
+        f'{summary_html}{updated_html}{meta_html}'
+        f'<div class="actions">{action}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div>'
+        f'</div>{art}</div>{hero_stats}</section>{nav}'
+    )
+    column = f'{statshtml}{games}{history}{couple}'
+    if aside:
+        body = hero + f'<div class="content-grid"><div>{column}</div>{aside}</div>'
+    else:
+        body = hero + column
+    route = f'/wnba/{slug}/'
+    title = player_title(name)
+    webpage = {'@type': 'WebPage', 'name': title, 'url': BASE + route, 'about': {'@id': BASE + route + '#player'}}
+    if day:
+        webpage['dateModified'] = day.isoformat()
+    structured = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {'@type': 'Person', '@id': BASE + route + '#player', 'name': name, 'url': BASE + route},
+            webpage,
+            {'@type': 'BreadcrumbList', 'itemListElement': [
+                {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'Players', 'item': BASE + '/wnba/'},
+                {'@type': 'ListItem', 'position': 3, 'name': name, 'item': BASE + route},
+            ]},
+        ],
+    }
+    robots = 'index,follow,max-image-preview:large' if player_indexable(profile, root) else 'noindex'
+    return document(title, player_description(profile), route, body, structured, has_standings(root), menu, robots)
+
+
 def profile_page(profile, root=None, linking=None, menu=None):
+    if not on_current_roster(profile):
+        return archive_record_page(profile, root, linking, menu)
     p=profile['player']; name=(str(p.get('first_name') or '')+' '+str(p.get('last_name') or '')).strip()
     slug=profile['slug']; fields=bio_fields(p); active=profile.get('active_in_provider_feed') is True
     team=profile.get('current_team') if active else None

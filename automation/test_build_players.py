@@ -139,10 +139,13 @@ class BuildTests(unittest.TestCase):
         inactive['active_in_provider_feed'] = False
         archive = b.profile_page(inactive)
         self.assertIn('not on a current roster', archive)
-        self.assertIn('The page does not call that retirement or free agency.', archive)
+        self.assertNotIn('The page does not call that retirement or free agency.', archive)
         self.assertNotIn('That alone does not establish retirement', archive)
         self.assertNotIn('active-player', archive)
         self.assertNotIn('Provider status', archive)
+        self.assertEqual(archive.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+        self.assertNotIn('id="faq"', archive)
+        self.assertNotIn('id="sources"', archive)
     def test_no_browser_api_key_or_provider_fetch(self):
         js=(ROOT/'players.js').read_text();self.assertNotIn('api.balldontlie.io',js);self.assertNotIn('Authorization',js)
 
@@ -486,9 +489,50 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('1 tracked games', answer)
         self.assertIn('4.0 points', answer)
 
+    def test_archive_record_keeps_stored_facts_and_drops_filler(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        profile['player']['college'] = None
+        profile['player']['weight'] = 'Iowa'
+        items = [
+            {'question': 'Does Example Player have kids?', 'answer': 'There is no widely reported public information that Example Player has children.'},
+            {'question': "What is Example Player's nationality?", 'answer': 'No widely reported nationality is listed.'},
+            {'question': 'Who is Example Player?', 'answer': 'Example Player is a former professional with a long untold story.'},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            root = self._write_faq(Path(folder), 'example-player', items)
+            html, entity = b.faq_section(profile, root)
+            self.assertEqual(html, '')
+            self.assertIsNone(entity)
+            page = b.profile_page(profile, root)
+        self.assertIn('Archive profile', page)
+        self.assertIn('Example Player is a guard and is not on a current roster.', page)
+        self.assertIn('In the 2026 season she averaged 12.3 points, 4.5 rebounds and 6.7 assists in 10 games.', page)
+        self.assertIn('<td>12.3</td>', page)
+        self.assertIn('>2026</strong><span>Example Team</span>', page)
+        self.assertIn('<dt>Years on record</dt><dd>2026</dd>', page)
+        self.assertIn('content="index,follow,max-image-preview:large"', page)
+        self.assertEqual(page.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+        self.assertEqual(page.count('<h1 '), 1)
+        for dropped in (
+            'id="faq"', 'FAQPage', 'have kids', 'nationality', 'no widely reported',
+            'untold story', 'id="sources"', 'About these numbers', 'class="ai-note"',
+            'class="archive-band"', 'does not call that retirement',
+            'This is not every roster move', 'Statistics since 2008',
+            'not a full career total', 'The number artwork is a design element',
+            'Iowa', 'balldontlie',
+        ):
+            self.assertNotIn(dropped, page, dropped)
+        active = b.profile_page(P)
+        self.assertIn('Statistics since 2008', active)
+        self.assertIn('id="sources"', active)
+        self.assertIn('class="ai-note"', active)
+        self.assertIn('class="archive-band"', active)
+
     def test_published_faq_matches_angel_reese_caitlin_clark_and_yvonne_turner(self):
         root = ROOT.parent
-        for slug in ('angel-reese', 'caitlin-clark', 'yvonne-turner'):
+        for slug in ('angel-reese', 'caitlin-clark'):
             profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text())
             _html, entity = b.faq_section(profile, root)
             answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
@@ -510,6 +554,15 @@ class BuildTests(unittest.TestCase):
                 if shown['kind'] not in ('', 'Not listed'):
                     self.assertIn(shown['kind'], last_answers[0], slug)
             b.assert_faq_matches_tables(profile, list(answers.items()))
+        turner = json.loads((root / 'data/wnba/players/yvonne-turner.json').read_text())
+        html_text, entity = b.faq_section(turner, root)
+        self.assertEqual(html_text, '')
+        self.assertIsNone(entity)
+        page = b.profile_page(turner, root, menu=[])
+        self.assertNotIn('id="faq"', page)
+        self.assertNotIn('FAQPage', page)
+        self.assertNotIn('no widely reported', page.casefold())
+        self.assertIn('Archive profile', page)
 
     def test_meta_mentions_playoffs_only_when_the_profile_has_them(self):
         regular = copy.deepcopy(P)
