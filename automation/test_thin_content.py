@@ -1,7 +1,8 @@
 """Thin-content rules for team summaries and inactive player bios.
 
-Player pages may not share a sentence of 12 or more words, aside from the
-fixed labels listed below. Bios may not use unverified-claim markers.
+Player bios may not share a sentence of 12 or more words, aside from the
+fixed labels listed below. The bottom FAQ is separate from that check. Bios
+may not use unverified-claim markers.
 
 A second check strips names, numbers, teams, colleges, and years. If one
 sentence skeleton then shows up on more than 5% of the rewritten bios, the
@@ -275,7 +276,8 @@ class CareerRuleTests(unittest.TestCase):
                 continue
             pages += 1
             main = _main(text)
-            for sentence in _sentences(main):
+            bio_text = re.sub(r'<section\b[^>]*\bid="faq"[^>]*>.*?</section>', '', main, flags=re.S)
+            for sentence in _sentences(bio_text):
                 shared[sentence].append(path.parent.name)
             bio = _section(text, 'career') + _section(text, 'answer-summary')
             # answer-summary is a paragraph, not a section. Include it from main via the class.
