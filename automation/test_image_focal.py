@@ -29,6 +29,8 @@ class ImageFocalTests(unittest.TestCase):
         self.assertIn('object-position:center 20%', home)
         self.assertIn('object-position:center 20%', hub)
         self.assertIn('object-position:center 20%', author)
+        ordered = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
+        on_home = {article['slug'] for article in ordered[:1 + links.MORE_STORY_LIMIT]}
         for article in _articles():
             slug = article['slug']
             raw = str(article.get('imageFocal') or '').strip()
@@ -40,8 +42,10 @@ class ImageFocalTests(unittest.TestCase):
                 focal = heroes.focal_for(article)
                 self.assertEqual(focal, heroes.DEFAULT_FOCAL, slug)
             token = f'object-position:{focal}'
-            for label, page in (('hub', hub), ('home', home), ('author', author)):
+            for label, page in (('hub', hub), ('author', author)):
                 self.assertIn(article['image'], page, f'{slug} {label}')
+            if slug in on_home:
+                self.assertIn(article['image'], home, f'{slug} home')
             story = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
             self.assertIn(token, story, slug)
             og = str(article.get('imageOg') or '')
