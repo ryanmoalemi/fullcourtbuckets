@@ -3,13 +3,15 @@
  "title": "Semis Game 3 Preview: Can the Liberty and Aces Do What No WNBA Team Has Done?",
  "meta_description": "Teams up 2-0 in a best-of-five WNBA series are 19-0. Turnovers sink the Liberty, rebounds sink the Aces. Picks for both Game 3s on Friday.",
  "hook": "The New York Liberty have won more quarters than the Atlanta Dream in this series, four to two, and they're still down 0-2. One column in the box score explains it, and it's the same column that decides whether Brooklyn sees a Game 4.",
- "summary": "Preview of both WNBA semifinal Game 3s on Friday, October 9, 2026: Dream at Liberty, 4:30 p.m. PT, Barclays Center, ESPN2 (ESPN game 401918299), and Valkyries at Aces, 6:30 p.m. PT, Michelob ULTRA Arena, Peacock and NBCSN (ESPN game 401918300). Written by the WNBA agent; body kept in its voice. Every number was checked against the Full Court Buckets game files for Games 1 and 2 and the ESPN box scores (401918295, 401918297, 401918296, 401918298). Edits for accuracy: the hook now says the Liberty won four quarters to two (Atlanta's third period win was overtime), the turnover totals say they include team turnovers, and the last line now says the Aces lost the glass 52-25 in Game 1 instead of 'by 30 again'. The opener line and the 'what the highlight packages aren't telling you' tease were cut so the intro is one short hook. Three original stat boards sit inline where the draft placed them.",
+ "summary": "Preview of both WNBA semifinal Game 3s on Friday, October 9, 2026: Dream at Liberty, 4:30 p.m. PT, Barclays Center, ESPN2 (ESPN game 401918299), and Valkyries at Aces, 6:30 p.m. PT, Michelob ULTRA Arena, Peacock and NBCSN (ESPN game 401918300). Written by the WNBA agent; body kept in its voice. Every number was checked against the Full Court Buckets game files for Games 1 and 2 and the ESPN box scores (401918295, 401918297, 401918296, 401918298). Edits for accuracy: the hook now says the Liberty won four quarters to two (Atlanta's third period win was overtime), the turnover totals say they include team turnovers, and the last line now says the Aces lost the glass 52-25 in Game 1 instead of 'by 30 again'. The opener line and the 'what the highlight packages aren't telling you' tease were cut so the intro is one short hook. Three original stat boards sit inline where the draft placed them. Update Oct 8, 11:30 PM PT: added the WNBA agent's 'For the bettors and fantasy players' section with a betting board and a fantasy board. Every line was re-pulled from ESPN's DraftKings odds at 11:30 PM PT and matched the 11:29 PM PT check. Game 1 and 2 lines, cover results and totals, and every fantasy average, DraftKings points per game and per-36 figure were recomputed from our game files. The odds sentence now gives the date, the exact as-of time in PT and says lines may move, and links both ESPN game pages. The 21+, Gamble responsibly, 1-800-GAMBLER line is kept in the text and on both boards. No sportsbook or affiliate links and no call to action to bet.",
  "url_path": "/news/semis-game-3-preview/",
  "files": [
   "news/semis-game-3-preview/index.html",
   "images/articles/semis-game-3-preview/board-dream-liberty-series.png",
   "images/articles/semis-game-3-preview/board-valkyries-aces-series.png",
-  "images/articles/semis-game-3-preview/board-quarter-margins.png"
+  "images/articles/semis-game-3-preview/board-quarter-margins.png",
+  "images/articles/semis-game-3-preview/board-game3-betting.png",
+  "images/articles/semis-game-3-preview/board-game3-fantasy.png"
  ],
  "hero_image": "images/articles/semis-game-3-preview/jordin-canada-dream-2026.jpg",
  "hero_image_alt": "Jordin Canada of the Atlanta Dream lines up a free throw at Target Center in Minneapolis",
@@ -21,14 +23,19 @@
   "Points off turnovers across both games: Dream 60, Liberty 24, a 36-point swing in a series Atlanta leads by 13",
   "Series plus-minus: Reese +18, Canada +17, Hillmon +16; Fauthoux is the only Liberty player above zero. Wilson and Gray are both -11 despite Wilson's 48 points",
   "Valkyries +14 in first halves, Aces +1 in second halves, with 27-8 offensive rebounds and a 61-21 bench edge",
-  "Three original stat boards built from our own game files and checked against ESPN"
+  "Three original stat boards built from our own game files and checked against ESPN",
+  "Game 3 betting and fantasy sheets: both series 2-0 against the spread for the leaders, Dream-Liberty overs 2-0, and DraftKings points per game and per-36 sleepers computed from our own box scores"
  ],
  "unverified": [
   "Both picks (Dream win Game 3, Aces win Game 3) are opinion.",
   "Allisha Gray 'questionable' is from ESPN's Thursday story; ESPN's game page lists her day-to-day. Loyd and Talbot day-to-day is from ESPN's game page as of Thursday evening. Re-check injury status before publishing Friday.",
   "Points off turnovers, fast-break points, points in the paint and bench points are not stored in our game files; they come from the ESPN box scores. Turnover totals (38-22, 29-18) are ESPN's total turnovers, which include team turnovers; our game files store player turnovers only (35-20, 25-17).",
   "The site's standard disclosure line for game stories says AI drafted it 'so it could post the same night'. That wording comes from the site generator and fits recaps better than a preview.",
-  "The lead photo is from May 27, 2026, not from this series."
+  "The lead photo is from May 27, 2026, not from this series.",
+  "Odds are DraftKings as listed on ESPN as of Thu, Oct 8, 2026, 11:29 PM PT (re-checked unchanged at 11:30 PM PT). Lines will move before Friday's tips; the boards are images, so re-check and refresh them if Ryan publishes much later.",
+  "Game 1 and 2 lines are the DraftKings lines ESPN lists on those game pages now (presumably closing lines); opening lines may have differed.",
+  "Fantasy points use DraftKings scoring as stated on the board and are computed from rounded box-score minutes. Kayla Thornton is 22.25 per game, shown as 22.3. Tiffany Hayes's 47.2 per 36 comes from 28 total minutes, which the text now says.",
+  "AdSense: informational odds with a responsible-gambling line and opinion leans. No sportsbook, affiliate or promo links and no 'bet now' language. The section names DraftKings only as the odds source. Low risk; the 'Dream plus the points' lean is the most betting-forward line, so Ryan can cut the leans paragraph if he wants zero gambling advice during the AdSense review."
  ],
  "scorecard": {
   "overall": 8,
@@ -40,19 +47,19 @@
     "name": "Accuracy",
     "score": 9,
     "max": 10,
-    "reason": "Every number, name and date in the title, meta, hook, body, board alt text and schema was checked against our game files for Games 1 and 2 and the four ESPN box scores, plus ESPN game pages 401918299 and 401918300 for times, venues, TV and injuries, ESPN's 19-0 note and the AP defending-champion line. Three fixes: quarters won is four to two (overtime was Atlanta's third period), turnover totals include team turnovers, and Game 1's rebound gap was 52-25, not 30. All three boards match ESPN, including the quarter board, which does not use the bad 7 and 23 Aces quarters from the old game file."
+    "reason": "Every number, name and date in the title, meta, hook, body, board alt text and schema was checked against our game files for Games 1 and 2 and the four ESPN box scores, plus ESPN game pages 401918299 and 401918300 for times, venues, TV and injuries, ESPN's 19-0 note and the AP defending-champion line. Three fixes: quarters won is four to two (overtime was Atlanta's third period), turnover totals include team turnovers, and Game 1's rebound gap was 52-25, not 30. All three boards match ESPN, including the quarter board, which does not use the bad 7 and 23 Aces quarters from the old game file. Betting and fantasy section: all 6 Game 3 odds, 4 prior lines, ATS and over/under results, 12 player averages and fantasy figures, and the injury notes match ESPN and our game files."
    },
    {
     "name": "Information gain",
-    "score": 7,
+    "score": 8,
     "max": 10,
-    "reason": "Two-game series totals, the quarters-won paradox, points off turnovers, series plus-minus, and first-half vs second-half margins are not in the wire previews. Named in unique."
+    "reason": "Two-game series totals, the quarters-won paradox, points off turnovers, series plus-minus, and first-half vs second-half margins are not in the wire previews. Named in unique. The betting and fantasy sheets add per-36 sleepers and series ATS results computed from our own box scores."
    },
    {
     "name": "Effort and replication cost",
-    "score": 7,
+    "score": 8,
     "max": 10,
-    "reason": "Three original stat boards built from our own game files and checked against ESPN. No courtside reporting or photos from this series."
+    "reason": "Five original boards built from our own game files and checked against ESPN, including fantasy scoring computed from every box line. No courtside reporting or photos from this series."
    },
    {
     "name": "Originality",
@@ -76,7 +83,7 @@
     "name": "Transparency",
     "score": 8,
     "max": 10,
-    "reason": "Visible disclosure, every stat linked to an ESPN box score, photo credited with a Commons and license link. The generator's 'same night' wording fits recaps better than previews."
+    "reason": "Visible disclosure, every stat linked to an ESPN box score, photo credited with a Commons and license link. The generator's 'same night' wording fits recaps better than previews. Odds are dated with the exact as-of time in PT, say lines may move, name the source, and carry the 21+ and 1-800-GAMBLER line."
    },
    {
     "name": "Writing craft",
@@ -86,9 +93,9 @@
    },
    {
     "name": "People-first purpose",
-    "score": 8,
+    "score": 9,
     "max": 10,
-    "reason": "A fan gets both games' times, TV, injuries, the stat that decides each series, and a pick."
+    "reason": "A fan gets both games' times, TV, injuries, the stat that decides each series, and a pick. Bettors and fantasy players get the lines, results against them, and fantasy numbers in one place."
    },
    {
     "name": "Human voice",
@@ -97,11 +104,12 @@
     "reason": "Opinionated and specific ('It's a habit.'). Generic opener and stock tease removed."
    }
   ],
-  "info_gain": "Series-level numbers from our own game files: quarters won vs series record, points off turnovers, plus-minus leaders, and half-by-half margins, in three original boards.",
+  "info_gain": "Series-level numbers from our own game files: quarters won vs series record, points off turnovers, plus-minus leaders, and half-by-half margins, in three original boards. Plus Game 3 betting and fantasy sheets built from the same data.",
   "ai_flags": [
    "Removed: 'This is your preview for both WNBA semifinal Game 3s on Friday, and it starts with a weird one' (generic opener).",
    "Removed: 'so here's what the highlight packages aren't telling you' (stock tease).",
-   "Rewrote: 'If the Aces lose the glass by 30 again' (inaccurate) to 'If the Aces lose the glass 52-25 like they did in Game 1'."
+   "Rewrote: 'If the Aces lose the glass by 30 again' (inaccurate) to 'If the Aces lose the glass 52-25 like they did in Game 1'.",
+   "Betting section: added 'though that's from just 28 minutes' to the Hayes per-36 claim so a small sample isn't oversold."
   ]
  }
 }
