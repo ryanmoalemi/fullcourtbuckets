@@ -230,7 +230,7 @@ def season_sentence(row):
         return f'In the {year} {label} she played {games} games.'
     return ''
 
-def answer_summary(profile):
+def answer_summary(profile, career=True):
     """One or two plain sentences under the player name. Only facts present on the profile."""
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
@@ -245,10 +245,14 @@ def answer_summary(profile):
         lead = f'{name} plays for the {team_name}.'
     elif name and active and pos:
         lead = f'{name} is a {pos}.'
-    elif name and pos:
-        lead = f'{name} is a {pos} and is not on a current roster.'
     elif name and not active:
-        lead = f'{name} is not on a current roster.'
+        if career:
+            import career_summary
+            return career_summary.hero_plain(profile)
+        lead = (
+            f'{name} is a {pos} and is not on a current roster.'
+            if pos else f'{name} is not on a current roster.'
+        )
     elif name:
         lead = f'{name} plays in the WNBA.'
     else:
@@ -1292,7 +1296,9 @@ def answer_related_query(profile, query: str, root) -> str:
         base = f'{name} is not on a current roster.'
         return f'{base} {teams}' if teams else base
     if re.search(r'\bwho is\b', text):
-        return answer_summary(profile)
+        import career_summary
+        slug = str(profile.get('slug') or '')
+        return answer_summary(profile, career=career_summary.released(root, slug))
     return ''
 
 
@@ -1760,7 +1766,9 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     row = headline(profile)
     position = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(fields.get('position'), fields.get('position', ''))
     number = fields.get('jersey_number', '')
-    summary = answer_summary(profile)
+    import career_summary
+    use_career = career_summary.released(root, slug)
+    summary = answer_summary(profile, career=use_career)
     summary_html = f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
     day = stats_day(profile)
     fresh = long_date(day)
@@ -1869,7 +1877,8 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         f'<div class="actions">{action}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div>'
         f'</div>{art}</div>{hero_stats}</section>{nav}'
     )
-    column = f'{statshtml}{partial}{games}{history}{couple}'
+    career = career_summary.section_html(profile, root) if use_career else ''
+    column = f'{career}{statshtml}{partial}{games}{history}{couple}'
     if aside:
         body = hero + f'<div class="content-grid"><div>{column}</div>{aside}</div>'
     else:
@@ -2142,7 +2151,11 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         )
     count=len(slot['players'])
     noun='player' if count == 1 else 'players'
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
+    import team_season
+    season = team_season.season_section(root, slot, standing) if root is not None else ''
+    if root is not None:
+        stories = team_season.stories_section(root, slot)
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[

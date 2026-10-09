@@ -49,3 +49,12 @@ tr.rookie-year th,tr.rookie-year td{background:rgba(255,152,0,.14)}
 .sitemap-jump{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 16px}
 .sitemap-jump a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 #sitemap-about h3,#sitemap-teams h3,#sitemap-players h3{margin:16px 0 8px;font-size:18px}
+.team-photo{margin:0 0 16px}
+.team-photo img{display:block;width:100%;max-height:420px;object-fit:cover;background:#111}
+.team-photo figcaption,.career-photo figcaption{margin-top:8px;color:var(--muted);font-size:12px;line-height:1.4}
+.team-photo figcaption a,.career-photo figcaption a,.season-summary a,.career-copy a{color:#e4afeb;text-decoration:underline;text-underline-offset:3px}
+.season-summary,.career-copy p{max-width:42rem;font-size:15px;line-height:1.55}
+.career-layout{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;align-items:start}
+.career-photo{margin:0}
+.career-photo img{display:block;width:100%;aspect-ratio:1;object-fit:cover;background:#111}
+@media(max-width:480px){.career-layout{grid-template-columns:1fr}.career-photo{max-width:220px}.team-photo img{max-height:240px}}
