@@ -45,7 +45,6 @@ ORDINAL_WORDS = (
     'sixth', 'seventh', 'eighth', 'ninth', 'tenth',
 )
 NUMBER_RE = re.compile(r'\b\d+(?:\.\d+)?\b')
-DRAFT_SENTENCE_RE = re.compile(r'\b(?:draft(?:ed)?|overall|pick|selection)\b', re.I)
 TABLE_ROW_RE = re.compile(
     r'<th scope="row">(\d{4})</th><td class="team-cell">([^<]+)</td>'
 )
@@ -159,11 +158,14 @@ def _table_pairs(page: str) -> set[tuple[str, int]]:
 
 
 def _season_claims(text: str, teams: list[str]) -> set[tuple[str, int]]:
-    """Team-years stated as seasons. Draft sentences are not season claims."""
+    """Team-years stated with a season phrase.
+
+    Draft wording alone is not a season. A sentence counts only when it uses
+    "the Team in YEAR" or "the Team from YEAR through YEAR", including when
+    that phrase sits in the draft sentence because she played there.
+    """
     claims = set()
     for sentence in SENTENCE_RE.split(text):
-        if DRAFT_SENTENCE_RE.search(sentence):
-            continue
         work = sentence
         for team in teams:
             span = re.compile(
