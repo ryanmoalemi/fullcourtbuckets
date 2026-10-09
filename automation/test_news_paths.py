@@ -17,6 +17,13 @@ def _articles():
     return json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
 
 
+def _section(page: str, section_id: str) -> str:
+    match = re.search(rf'<section\b[^>]*\bid="{section_id}"[^>]*>.*?</section>', page, re.S)
+    if match is None:
+        raise AssertionError(f'missing section {section_id}')
+    return match.group(0)
+
+
 def _is_lead_image(image: str) -> bool:
     """Shared story photos live in /images/. This collecting story keeps its cards beside the article."""
     return image.startswith('/images/') or image.startswith('/news/')
@@ -160,7 +167,9 @@ class NewsPathTests(unittest.TestCase):
         for slug in ('indiana-fever', 'las-vegas-aces'):
             page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
             self.assertIn('href="/news/fever-aces-game-3-recap/"', page)
-            self.assertNotIn('href="/news/fever-aces-game-3-recap/" target="_blank"', page)
+            news = _section(page, 'team-news')
+            self.assertIn('href="/news/fever-aces-game-3-recap/"', news)
+            self.assertNotIn('target="_blank"', news)
         recap = (ROOT / 'news' / 'fever-aces-game-3-recap' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('https://www.espn.com/wnba/game/_/gameId/401918022', recap)
         self.assertIn('href="/wnba/aja-wilson/" target="_blank" rel="noopener"', recap)
@@ -171,7 +180,9 @@ class NewsPathTests(unittest.TestCase):
         for slug in ('portland-fire', 'toronto-tempo'):
             page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
             self.assertIn('href="/news/wnba-expansion-teams/"', page)
-            self.assertNotIn('href="/news/wnba-expansion-teams/" target="_blank"', page)
+            news = _section(page, 'team-news')
+            self.assertIn('href="/news/wnba-expansion-teams/"', news)
+            self.assertNotIn('target="_blank"', news)
         html_text = links.team_news_html(ROOT, 'portland-fire')
         self.assertIn('href="/news/wnba-expansion-teams/"', html_text)
         self.assertNotIn('target="_blank"', html_text)

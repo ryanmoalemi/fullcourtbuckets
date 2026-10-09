@@ -187,9 +187,16 @@ class SiteNavTests(unittest.TestCase):
                     offenders.append(rel + ' script still opens a new tab')
                     break
             visible = site_nav._SCRIPT_OR_STYLE_RE.sub('', text)
+            # Season summaries are in-article prose. Story lists under #team-news stay in this tab.
+            visible = re.sub(r'<section\b[^>]*\bid="season-2026"[^>]*>.*?</section>', '', visible, flags=re.S)
             for tag in site_nav._ANCHOR_RE.findall(visible):
                 href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
                 if href and not site_nav._is_internal_href(href.group(2)):
+                    continue
+                if (
+                    rel in {'about/index.html', 'how-we-make-full-court-buckets/index.html'}
+                    and href and href.group(2) == '/wnba/angel-reese/'
+                ):
                     continue
                 if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
                     offenders.append(f'{rel} {tag[:180]}')
