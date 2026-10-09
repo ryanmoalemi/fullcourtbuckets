@@ -6,6 +6,7 @@ only from career-extras.json.
 """
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -375,7 +376,24 @@ def _covers(text: str, phrases: list[str]) -> bool:
     return all(phrase in text for phrase in phrases)
 
 
-def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]:
+def _voice(root: Path | None, slug: str) -> int:
+    """2 when this slug has been rewritten in the sportswriter pass."""
+    if root is None or not slug:
+        return 1
+    path = Path(root) / 'data' / 'wnba' / 'career-voice.json'
+    if not path.is_file():
+        return 1
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return 1
+    slugs = data.get('slugs') if isinstance(data, dict) else None
+    if not isinstance(slugs, list):
+        return 1
+    return 2 if slug in slugs else 1
+
+
+def _sentences_v1(profile: dict, extra: dict, root: Path | None = None) -> list[str]:
     name = cs.player_name(profile)
     if not name:
         return []
@@ -507,3 +525,11 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
         if marker in blob.casefold():
             raise ValueError(f'Unverified-claim marker in {slug}: {marker}')
     return cleaned[:4]
+
+
+def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]:
+    slug = str(profile.get('slug') or '')
+    if _voice(root, slug) == 2:
+        import career_voice
+        return career_voice.sentences(profile, extra, root)
+    return _sentences_v1(profile, extra, root)

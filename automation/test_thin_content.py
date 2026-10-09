@@ -40,6 +40,10 @@ def _fixed(sentence: str) -> bool:
 MARKERS = career_summary.MARKERS
 YEAR_RE = re.compile(r'\b(?:19|20)\d{2}\b')
 ORDINAL_RE = re.compile(r'\b\d+(?:st|nd|rd|th)\b', re.I)
+ORDINAL_WORDS = (
+    'first', 'second', 'third', 'fourth', 'fifth',
+    'sixth', 'seventh', 'eighth', 'ninth', 'tenth',
+)
 NUMBER_RE = re.compile(r'\b\d+(?:\.\d+)?\b')
 DRAFT_SENTENCE_RE = re.compile(r'\b(?:draft(?:ed)?|overall|pick|selection)\b', re.I)
 TABLE_ROW_RE = re.compile(
@@ -141,6 +145,8 @@ def _template(sentence: str, name: str, teams: list[str], colleges: list[str], p
             text = re.sub(rf'\b{re.escape(last)}\b', '{NAME}', text)
     text = YEAR_RE.sub('{YEAR}', text)
     text = ORDINAL_RE.sub('{NUM}', text)
+    for word in ORDINAL_WORDS:
+        text = re.sub(rf'\b{word}\b', '{NUM}', text, flags=re.I)
     text = NUMBER_RE.sub('{NUM}', text)
     return re.sub(r'\s+', ' ', text).strip()
 
@@ -299,6 +305,32 @@ class CareerRuleTests(unittest.TestCase):
         }
         self.assertEqual(over, {})
         self.assertGreater(limit, 0)
+
+    def test_sportswriter_bios_use_she_and_skip_filler_verbs(self):
+        voice_path = ROOT / 'data' / 'wnba' / 'career-voice.json'
+        if not voice_path.is_file():
+            self.skipTest('sportswriter voice has not been published')
+        slugs = json.loads(voice_path.read_text(encoding='utf-8')).get('slugs') or []
+        self.assertGreaterEqual(len(slugs), 40)
+        banned = ('competed for', 'suited up', 'recorded', 'during the regular season')
+        for slug in slugs:
+            page = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
+            copy = _paragraphs(_career_copy(page))
+            self.assertGreaterEqual(len(copy), 1, slug)
+            profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            name = career_summary.player_name(profile)
+            self.assertIn(name, copy[0], slug)
+            for sentence in copy[1:]:
+                self.assertNotIn(name, sentence, slug)
+                body = sentence
+                if body.startswith('She '):
+                    body = body[3:]
+                elif body.startswith('Her '):
+                    body = body[4:]
+                self.assertNotRegex(body, r'\b(?:She|Her)\b', slug)
+            blob = ' '.join(copy).casefold()
+            for phrase in banned:
+                self.assertNotIn(phrase, blob, slug)
 
     def test_career_summary_matches_the_season_table(self):
         teams = _known_teams()

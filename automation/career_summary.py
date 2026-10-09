@@ -252,10 +252,40 @@ def sentences_for(profile: dict, root: Path | None = None) -> list[str]:
     return career_prose.sentences(profile, extra, root)
 
 
+def _medal_source(root: Path | None, slug: str) -> str:
+    if root is None or not slug:
+        return ''
+    path = Path(root) / 'data' / 'wnba' / 'career-honors.json'
+    if not path.is_file():
+        return ''
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return ''
+    block = data.get(slug) if isinstance(data, dict) else None
+    if not isinstance(block, dict):
+        return ''
+    for row in block.get('olympics') or []:
+        if not isinstance(row, dict):
+            continue
+        source = str(row.get('source') or '').strip()
+        if 'olympedia.org' in source:
+            return source
+    return ''
+
+
+def _medal_mentioned(profile: dict, root: Path | None) -> bool:
+    if not _medal_source(root, str(profile.get('slug') or '')):
+        return False
+    blob = ' '.join(sentences_for(profile, root))
+    return any(medal in blob for medal in ('Olympic gold', 'Olympic silver', 'Olympic bronze'))
+
+
 def sources_line(profile: dict, root: Path | None = None) -> str:
     """One short credit line. Season numbers are ours. Draft and Olympic notes cite Basketball-Reference."""
     bits = ['Full Court Buckets season logs']
     extra = {}
+    slug = ''
     if root is not None:
         slug = str(profile.get('slug') or '')
         extra = load_extras(root).get(slug) or {}
@@ -267,6 +297,10 @@ def sources_line(profile: dict, root: Path | None = None) -> str:
             bits.append(prose_link(bbref, 'Basketball-Reference'))
         elif intl:
             bits.append(prose_link(intl, 'Basketball-Reference'))
+    if root is not None and slug and _medal_mentioned(profile, root):
+        source = _medal_source(root, slug)
+        if source:
+            bits.append(prose_link(source, 'Olympedia'))
     return 'Sources: ' + '; '.join(bits) + '.'
 
 
