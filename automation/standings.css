@@ -8,3 +8,10 @@
 #faq h3{margin:16px 0 6px;font:700 16px/1.35 "Barlow",sans-serif}
 #faq p{margin:0;color:#d6d2cd;font-size:14px;line-height:1.7}
 #faq a{color:var(--orange);text-decoration:underline;text-underline-offset:3px}
+#playoffs{margin-bottom:22px}
+#playoffs .playoff-round{margin-top:8px}
+#playoffs .conference-wrap{margin-top:12px}
+#playoffs .series-score{margin:0;padding:14px 18px 0;font:800 18px/1.2 "Barlow",sans-serif;color:#f5f3ef}
+#playoffs .series-games{margin:8px 18px 16px;padding-left:18px;color:#d6d2cd;font-size:14px;line-height:1.65}
+#playoffs .series-next,#playoffs .series-status{margin:0 18px 16px;color:#d2cec8;font-size:14px}
+#playoffs .conf-header h3{font-size:18px;line-height:1.35}

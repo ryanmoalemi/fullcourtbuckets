@@ -205,6 +205,54 @@ def is_final(game: dict) -> bool:
         return game["status_state"] == "final"
     return str(game.get("status", "")).strip().lower() in ("post", "final", "final/ot", "final/2ot")
 
+def _postseason(game: dict) -> bool:
+    return game.get("postseason") in (True, 1)
+
+def _series_wins(games: list[dict]) -> list[dict]:
+    """Win counts for each final postseason series. Four wins is a Finals champion."""
+    series = {}
+    for game in games:
+        if not _postseason(game) or not is_final(game):
+            continue
+        home, away = team_key(game.get("home_team")), team_key(game.get("visitor_team"))
+        if not home or not away:
+            continue
+        try:
+            home_score, away_score = int(game.get("home_score")), int(game.get("away_score"))
+        except (TypeError, ValueError):
+            continue
+        if isinstance(game.get("home_score"), bool) or isinstance(game.get("away_score"), bool):
+            continue
+        if home_score == away_score:
+            continue
+        wins = series.setdefault(frozenset((home, away)), {})
+        winner = home if home_score > away_score else away
+        wins[winner] = wins.get(winner, 0) + 1
+    return list(series.values())
+
+def finals_are_over(games: list[dict]) -> bool:
+    """True once a series has four wins. Only the Finals are a best of seven."""
+    return any(wins and max(wins.values()) >= 4 for wins in _series_wins(games))
+
+def postseason_open(games: list[dict], today: dt.date) -> bool:
+    """Keep the daily cadence until the Finals are over, not merely 28 days after the last tip.
+
+    Later rounds are often missing from the schedule until the current series ends. Stopping
+    at last-game-plus-28-days can drop the site to a weekly refresh in the middle of the Finals.
+    """
+    post = [game for game in games if _postseason(game)]
+    if not post:
+        return False
+    dates = [date_of(game.get("date")) for game in post]
+    dates = [day for day in dates if day]
+    years = [game.get("season") for game in post if isinstance(game.get("season"), int) and not isinstance(game.get("season"), bool)]
+    season_year = max(years) if years else (max(dates).year if dates else today.year)
+    if today > dt.date(season_year, 12, 31):
+        return False
+    if finals_are_over(post):
+        return False
+    return True
+
 def in_season(games: list[dict], today: dt.date) -> bool:
     usable = [g for g in games if g.get("status_state") not in ("canceled", "abandoned")]
     dates = [date_of(g.get("date")) for g in usable]
@@ -212,8 +260,10 @@ def in_season(games: list[dict], today: dt.date) -> bool:
     if not dates:
         # A missing schedule must not silently disable daily updates.
         return True
+    if postseason_open(usable, today):
+        return True
     first, last = min(dates), max(dates)
-    # Starts a week before scheduled games; 28-day grace covers later playoff scheduling.
+    # Starts a week before scheduled games; 28-day grace covers a short gap once the Finals are over.
     return first - dt.timedelta(days=7) <= today <= last + dt.timedelta(days=28)
 
 def should_refresh(last_success, today: dt.date, active: bool, force=False) -> bool:

@@ -8,7 +8,7 @@ The authenticated BALLDONTLIE import completed on 2026-09-16 UTC with 562 player
 
 Each run tests the importer and builder, imports data when due, rebuilds profiles, validates the sitemap, commits changed outputs, and explicitly deploys GitHub Pages. The production branch is `main`; the default branch is currently `master`. Its schedule dispatches main's workflow. Leave unrelated old files and CNAME unchanged.
 
-Full statistics refresh is daily in-season and every seven days in the offseason. The scheduler checks the league schedule daily at approximately 04:17 Pacific, with a 28-day playoff scheduling grace period. A missing schedule conservatively means daily. The wrapper may rebuild/redeploy unchanged valid pages between offseason data refreshes so failed deployments can recover. Scheduled execution is best effort.
+Full statistics refresh is daily in-season and every seven days in the offseason. The scheduler checks the league schedule daily at approximately 04:17 Pacific. Daily refreshes continue through the Finals until one team has four wins, even when the next round is not on the schedule yet. The 28-day grace period applies after that champion is decided. A missing schedule conservatively means daily. The wrapper may rebuild/redeploy unchanged valid pages between offseason data refreshes so failed deployments can recover. Scheduled execution is best effort.
 
 ## Important data limits
 

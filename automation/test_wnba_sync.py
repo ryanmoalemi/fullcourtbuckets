@@ -100,6 +100,43 @@ class Tests(unittest.TestCase):
         self.assertTrue(s.in_season([{'date':'2009-05-01'},{'date':'2009-10-01'}],dt.date(2009,9,1)))
     def test_missing_schedule_conservative(self): self.assertTrue(s.in_season([],dt.date(2009,1,1)))
     def test_offseason(self): self.assertFalse(s.in_season([G],dt.date(2009,12,1)))
+    def test_daily_cadence_holds_through_unscheduled_finals(self):
+        """A 3-3 series whose last game is outside the 28-day window is still in season."""
+        games = []
+        for index, (home_score, away_score) in enumerate(((80, 70), (70, 80), (80, 70), (70, 80), (80, 70), (70, 80))):
+            games.append({
+                'date': (dt.date(2026, 10, 1) + dt.timedelta(days=index)).isoformat(),
+                'season': 2026,
+                'postseason': True,
+                'status': 'final',
+                'home_team': {'id': 1},
+                'visitor_team': {'id': 2},
+                'home_score': home_score,
+                'away_score': away_score,
+            })
+        self.assertFalse(s.finals_are_over(games))
+        today = dt.date(2026, 11, 20)
+        self.assertTrue(s.postseason_open(games, today))
+        self.assertTrue(s.in_season(games, today))
+        self.assertTrue(s.should_refresh('2026-11-19', today, s.in_season(games, today)))
+    def test_weekly_after_the_champion_and_the_grace_window(self):
+        games = []
+        for index in range(4):
+            games.append({
+                'date': (dt.date(2026, 10, 10) + dt.timedelta(days=index * 2)).isoformat(),
+                'season': 2026,
+                'postseason': True,
+                'status': 'final',
+                'home_team': {'id': 1},
+                'visitor_team': {'id': 2},
+                'home_score': 80,
+                'away_score': 70,
+            })
+        self.assertTrue(s.finals_are_over(games))
+        last = dt.date(2026, 10, 16)
+        self.assertFalse(s.postseason_open(games, last + dt.timedelta(days=29)))
+        self.assertFalse(s.in_season(games, last + dt.timedelta(days=29)))
+        self.assertTrue(s.in_season(games, last + dt.timedelta(days=10)))
     def test_shrink_guard(self):
         with self.assertRaises(s.SyncError): s.guard_shrink(list(range(20)),[1],'test')
     def test_pagination(self):
