@@ -1,146 +1,197 @@
 {
   "slug": "skylar-diggins",
   "player_name": "Skylar Diggins",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Skylar Diggins's stats / points per game?",
-      "answer": "In the 2026 regular season, Skylar Diggins averaged 14.2 points, 3.2 rebounds, and 4.9 assists in 19 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Skylar Diggins's stats?",
+      "answer": "In the 2026 regular season, Skylar Diggins averaged 14.2 points, 3.2 rebounds, and 4.9 assists in 19 games for the Chicago Sky. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "skylar diggins stats",
-      "approx_monthly_volume": 4400
+      "sources": [
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
+      ],
+      "queries": [
+        {
+          "q": "skylar diggins stats",
+          "vol": 4400
+        }
+      ]
     },
     {
       "question": "Is Skylar Diggins married?",
-      "answer": "Diggins married Daniel Smith; she has often been referred to in coverage as Skylar Diggins-Smith during that marriage period. Confirm latest naming/status against current profiles.",
+      "answer": "People reported on May 1, 2025 that Skylar Diggins filed for divorce from Daniel Smith. They married in 2017. That report did not say a court had finalized the divorce.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins-Smith"
+        "https://people.com/skylar-diggins-files-divorce-husband-daniel-smith-11726884",
+        "https://www.espn.com/espn/print?id=19293909"
       ],
-      "google_keyword": "skylar diggins husband",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "skylar diggins husband",
+          "vol": 1900
+        },
+        {
+          "q": "skylar diggins ex husband",
+          "vol": 320
+        },
+        {
+          "q": "skylar diggins daniel smith",
+          "vol": 320
+        },
+        {
+          "q": "is skylar diggins still married",
+          "vol": 260
+        },
+        {
+          "q": "is skylar diggins married",
+          "vol": 170
+        },
+        {
+          "q": "skylar diggins married",
+          "vol": 90
+        },
+        {
+          "q": "who is skylar diggins married to",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "How old is Skylar Diggins?",
-      "answer": "She was born August 2, 1990 in South Bend, Indiana, U.S. As of late 2026 that puts her at 36 years old.",
+      "answer": "Skylar Diggins was born August 2, 1990.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
       ],
-      "google_keyword": "skylar diggins age",
-      "approx_monthly_volume": 590,
-      "birthdate": "1990-08-02"
+      "queries": [
+        {
+          "q": "skylar diggins age",
+          "vol": 590
+        },
+        {
+          "q": "how old is skylar diggins",
+          "vol": 480
+        }
+      ]
     },
     {
       "question": "How tall is Skylar Diggins?",
-      "answer": "Skylar Diggins is listed at 5' 9\" by the WNBA.",
+      "answer": "The WNBA lists Skylar Diggins at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
       ],
-      "google_keyword": "skylar diggins height",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "skylar diggins height",
+          "vol": 590
+        },
+        {
+          "q": "how tall is skylar diggins",
+          "vol": 210
+        }
+      ]
     },
     {
-      "question": "How much does Skylar Diggins make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Skylar Diggins's base salary / cap hit at about $920,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "skylar diggins net worth",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What is Skylar Diggins's contract?",
-      "answer": "Public salary trackers list Skylar Diggins at about $920,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "skylar diggins contract",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "What is Skylar Diggins's nationality?",
-      "answer": "Skylar Diggins is described as American in major biographical profiles.",
+      "question": "Where did Skylar Diggins play college basketball?",
+      "answer": "Skylar Diggins played college basketball at Notre Dame.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
       ],
-      "google_keyword": "skylar diggins nationality",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "skylar diggins notre dame",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "What team does Skylar Diggins play for?",
-      "answer": "She plays for the Chicago Sky and wears No. 4 as a guard.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
-      ],
-      "google_keyword": "who does skylar diggins play for",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "When was Skylar Diggins drafted?",
-      "answer": "Skylar Diggins was drafted third overall by the Tulsa Shock in the 2013 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
-      ],
-      "google_keyword": "skylar diggins draft pick",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Skylar Diggins?",
-      "answer": "Skylar Kierra Diggins is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA) and for the Lunar Owls of Unrivaled.",
+      "answer": "Skylar Diggins plays guard for the Chicago Sky and wears No. 4. This page also lists the Tulsa Shock, the Dallas Wings, the Phoenix Mercury, and the Seattle Storm.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
       ],
-      "google_keyword": "who is skylar diggins",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "skylar diggins chicago sky",
+          "vol": 210
+        },
+        {
+          "q": "who does skylar diggins play for",
+          "vol": 170
+        },
+        {
+          "q": "what team does skylar diggins play for",
+          "vol": 110
+        },
+        {
+          "q": "skylar diggins team",
+          "vol": 90
+        },
+        {
+          "q": "wnba skylar diggins",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "Where is Skylar Diggins from?",
-      "answer": "She is from South Bend, Indiana, U.S.",
+      "answer": "The WNBA says Skylar Diggins was born and raised in South Bend, Indiana.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
       ],
-      "google_keyword": "where is skylar diggins from",
-      "approx_monthly_volume": 0
+      "queries": []
     },
     {
-      "question": "What college did Skylar Diggins attend?",
-      "answer": "Skylar Diggins played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
-      ],
-      "google_keyword": "skylar diggins notre dame",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Who is Skylar Diggins dating?",
-      "answer": "In June 2016, Diggins got engaged to her longtime boyfriend Daniel Smith who is a former Clay High School and Notre Dame wide receiver.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Skylar_Diggins"
-      ],
-      "google_keyword": "skylar diggins partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Skylar Diggins injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "question": "When was Skylar Diggins drafted?",
+      "answer": "The Tulsa Shock drafted Skylar Diggins third overall in 2013. The first regular-season row on this page is 2013, in 32 games.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "skylar diggins injury",
-      "approx_monthly_volume": 590
+      "sources": [
+        "https://www.wnba.com/player/203400/skylar-diggins/bio",
+        "https://www.wnba.com/news/griner-delle-donne-diggins-top-three-picks-2013-wnba-draft"
+      ],
+      "queries": [
+        {
+          "q": "skylar diggins draft pick",
+          "vol": 90
+        },
+        {
+          "q": "skylar diggins draft",
+          "vol": 90
+        },
+        {
+          "q": "skylar diggins rookie year",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How many years has Skylar Diggins been in the WNBA?",
+      "answer": "Skylar Diggins has 12 regular seasons on this page: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024, 2025, and 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/203400/skylar-diggins/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who is Skylar Diggins?",
+      "answer": "Skylar Diggins is a guard for the Chicago Sky and a Notre Dame alum. USA Today reported on April 30, 2025 that she asked to be addressed as Skylar Diggins, without Smith.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/203400/skylar-diggins/bio",
+        "https://ftw.usatoday.com/story/sports/wnba/2025/04/30/skylar-diggins-smith-storm-name-change/83365525007/"
+      ],
+      "queries": [
+        {
+          "q": "who is skylar diggins",
+          "vol": 90
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

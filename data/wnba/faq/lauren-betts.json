@@ -1,146 +1,197 @@
 {
   "slug": "lauren-betts",
   "player_name": "Lauren Betts",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Lauren Betts's stats / points per game?",
-      "answer": "In the 2026 regular season, Lauren Betts averaged 6.4 points, 4.5 rebounds, and 1.1 assists in 42 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lauren betts stats",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "Does Lauren Betts have a signature shoe?",
-      "answer": "Public search interest ties Lauren Betts to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "Who are Lauren Betts's parents?",
+      "answer": "USA Today names Lauren Betts's parents as Michelle and Andy Betts. The same story names her younger sister, Sienna Betts.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
+        "https://www.usatoday.com/story/sports/ncaaw/2025/03/28/lauren-betts-ucla-basketball-stats-height-parents/82714481007/"
       ],
-      "google_keyword": "lauren betts shoe size",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Who is Lauren Betts dating?",
-      "answer": "As of late 2026, Lauren Betts has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
-      ],
-      "google_keyword": "lauren betts relationship",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How much does Lauren Betts make?",
-      "answer": "A precise public salary or net worth figure for Lauren Betts is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "lauren betts net worth",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "lauren betts parents",
+          "vol": 14800
+        },
+        {
+          "q": "lauren betts family",
+          "vol": 4400
+        },
+        {
+          "q": "lauren betts sister",
+          "vol": 3600
+        },
+        {
+          "q": "lauren betts dad",
+          "vol": 3600
+        },
+        {
+          "q": "lauren betts mother",
+          "vol": 2900
+        },
+        {
+          "q": "lauren betts brother",
+          "vol": 1900
+        },
+        {
+          "q": "lauren betts mom",
+          "vol": 1600
+        },
+        {
+          "q": "lauren betts mom and dad",
+          "vol": 1300
+        },
+        {
+          "q": "is sienna betts related to lauren betts",
+          "vol": 260
+        },
+        {
+          "q": "lauren betts father",
+          "vol": 480
+        },
+        {
+          "q": "lauren betts siblings",
+          "vol": 480
+        }
+      ]
     },
     {
       "question": "How tall is Lauren Betts?",
-      "answer": "Lauren Betts is listed at 6' 7\".",
+      "answer": "The WNBA lists Lauren Betts at 6 feet 7 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
+        "https://www.wnba.com/player/1643427"
       ],
-      "google_keyword": "lauren betts height",
-      "approx_monthly_volume": 8100
+      "queries": [
+        {
+          "q": "lauren betts height",
+          "vol": 8100
+        },
+        {
+          "q": "how tall is lauren betts",
+          "vol": 5400
+        }
+      ]
     },
     {
-      "question": "What college did Lauren Betts attend?",
-      "answer": "Betts played college basketball at UCLA.",
-      "answer_kind": "bio",
+      "question": "What are Lauren Betts's stats?",
+      "answer": "In the 2026 regular season, Lauren Betts averaged 6.4 points, 4.6 rebounds, and 1.2 assists in 44 games for the Washington Mystics. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
+        "https://www.wnba.com/player/1643427"
       ],
-      "google_keyword": "ucla lauren betts",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "Who is Lauren Betts?",
-      "answer": "Lauren Marie Betts is an American professional basketball player for the Washington Mystics of the Women's National Basketball Association (WNBA) and Fenerbahçe of the Turkish Super League.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
-      ],
-      "google_keyword": "who is lauren betts sister",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Lauren Betts's nationality?",
-      "answer": "Lauren Betts is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
-      ],
-      "google_keyword": "lauren betts nationality",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "Is Lauren Betts injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "lauren betts injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who are Lauren Betts's parents?",
-      "answer": "Public profiles share limited verified detail about Lauren Betts's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
-      ],
-      "google_keyword": "lauren betts parents",
-      "approx_monthly_volume": 14800
-    },
-    {
-      "question": "Does Lauren Betts have kids?",
-      "answer": "There is no widely reported public information that Lauren Betts has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
-      ],
-      "google_keyword": "lauren betts personal struggles",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "lauren betts stats",
+          "vol": 3600
+        }
+      ]
     },
     {
       "question": "How old is Lauren Betts?",
-      "answer": "Lauren Betts was born October 15, 2003 in Vitoria-Gasteiz. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Lauren Betts was born October 15, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
+        "https://www.wnba.com/player/1643427",
+        "https://www.wnba.com/draft/2026/prospects/lauren-betts"
       ],
-      "google_keyword": "lauren betts age",
-      "approx_monthly_volume": 590,
-      "birthdate": "2003-10-15"
+      "queries": [
+        {
+          "q": "lauren betts age",
+          "vol": 590
+        }
+      ]
     },
     {
-      "question": "What is Lauren Betts's contract?",
-      "answer": "Contract length and guarantees for Lauren Betts are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
+      "question": "When was Lauren Betts drafted?",
+      "answer": "The Washington Mystics drafted Lauren Betts fourth overall in 2026. The first regular-season row on this page is 2026, in 44 games.",
+      "answer_kind": "mixed",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/draft/2026/prospects/lauren-betts"
       ],
-      "google_keyword": "lauren betts contract",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "lauren betts draft",
+          "vol": 590
+        },
+        {
+          "q": "lauren betts wnba draft",
+          "vol": 390
+        }
+      ]
+    },
+    {
+      "question": "Where did Lauren Betts play college basketball?",
+      "answer": "Lauren Betts played at Stanford, then UCLA. This page lists UCLA.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643427",
+        "https://www.wnba.com/draft/2026/prospects/lauren-betts"
+      ],
+      "queries": [
+        {
+          "q": "ucla lauren betts",
+          "vol": 880
+        },
+        {
+          "q": "lauren betts stanford",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "Where is Lauren Betts from?",
-      "answer": "Lauren Betts is from Vitoria-Gasteiz.",
+      "answer": "The WNBA draft page lists Lauren Betts's birthplace as Vitoria-Gasteiz, Spain. USA Today says she hails from Centennial, Colorado.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/lauren-betts",
+        "https://www.usatoday.com/story/sports/ncaaw/2025/03/28/lauren-betts-ucla-basketball-stats-height-parents/82714481007/"
+      ],
+      "queries": [
+        {
+          "q": "where is lauren betts from",
+          "vol": 390
+        }
+      ]
+    },
+    {
+      "question": "What team does Lauren Betts play for?",
+      "answer": "Lauren Betts plays center for the Washington Mystics and wears No. 51.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1643427"
+      ],
+      "queries": [
+        {
+          "q": "lauren betts wnba",
+          "vol": 480
+        },
+        {
+          "q": "lauren betts mystics",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "Who is Lauren Betts?",
+      "answer": "Lauren Betts is a rookie center for the Washington Mystics. She played college basketball at Stanford and UCLA.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1643427"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Does Lauren Betts have a signature shoe?",
+      "answer": "No signature shoe was announced. Under Armour named Lauren Betts in its 2025 NIL collegiate class.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lauren_Betts"
+        "https://about.underarmour.com/en/stories/2025/03/under-armour-announces-nil-collegiate-class-of-2025-to-celebrate.html"
       ],
-      "google_keyword": "where is lauren betts from",
-      "approx_monthly_volume": 390
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -500,7 +500,6 @@ def rookie_faq_answer(profile, name: str) -> str:
     sentence = f'The first regular-season row for {name} is {first}.'
     if games:
         sentence += f' She played {games} games in that row.'
-    sentence += ' That row is highlighted in the regular-season table.'
     return sentence
 
 
@@ -568,6 +567,8 @@ def _listed(bits: list[str]) -> str:
         return ''
     if len(bits) == 1:
         return bits[0]
+    if len(bits) == 2:
+        return f'{bits[0]} and {bits[1]}'
     return ', '.join(bits[:-1]) + ', and ' + bits[-1]
 
 
@@ -888,9 +889,18 @@ def normalize_question(question: str, name: str = '') -> str:
     return re.sub(r'\s+', ' ', text).strip()
 
 
-# A'ja Wilson's bottom section is the curated FAQ from main, not related searches.
-RELATED_SEARCH_HOLD = frozenset({'aja-wilson'})
-CURATED_FAQ_SLUGS = frozenset({'aja-wilson'})
+# Curated search FAQs replace the shorter related-search block, so each of these
+# pages has one bottom section. A'ja Wilson stays on the same path.
+SEARCH_FAQ_SLUGS = frozenset({
+    'sophie-cunningham', 'caitlin-clark', 'angel-reese', 'paige-bueckers', 'azzi-fudd',
+    'brittney-griner', 'cameron-brink', 'kelsey-plum', 'hailey-van-lith', 'lauren-betts',
+    'olivia-miles', 'dijonai-carrington', 'kelsey-mitchell', 'lexie-hull', 'napheesa-collier',
+    'rickea-jackson', 'sabrina-ionescu', 'aliyah-boston', 'alyssa-thomas', 'breanna-stewart',
+    'candace-parker', 'flaujae-johnson', 'natasha-cloud', 'satou-sabally', 'skylar-diggins',
+    'sue-bird',
+})
+RELATED_SEARCH_HOLD = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
+CURATED_FAQ_SLUGS = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
 _REPEAT_LIMIT = 2
 _STAT_FAMILY = frozenset({'stats', 'assists', 'rebounds', 'points'})
 _SKIP_TOPICS = frozenset({'drop', 'career_games', 'college_stats', ''})
@@ -1414,7 +1424,7 @@ def curated_answer_pairs(profile, root: Path):
 
 
 def faq_answer_pairs(profile, root: Path):
-    """A'ja Wilson uses data/wnba/faq/aja-wilson.json. Every other page uses related searches.
+    """Curated slugs use data/wnba/faq/{slug}.json. Every other page uses related searches.
 
     The old template files are not published. No file, or no query this page can
     answer from stored stats or the couples list, means no section.
@@ -1446,7 +1456,7 @@ def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> Non
 
 
 def faq_section(profile, root=None):
-    """Render the bottom questions. A'ja Wilson keeps the curated FAQ. Others use related searches.
+    """Render the bottom questions. Curated slugs keep the search FAQ. Others use related searches.
 
     Misspellings, other people, bare names, and near-duplicates are dropped from
     related searches. No file, or nothing answerable, means no block and no schema.
@@ -2603,8 +2613,7 @@ def missing_data_markdown(root: Path) -> str:
                 injury_sources = True
     if not injury_sources and 'injury' not in json.dumps(aja).casefold():
         lines.append(
-            "- Is A'ja Wilson injured?: the Plum and Clark pages ask an injury question, but those items have empty `sources` "
-            "and the player file has no injury status. The question was not copied."
+            "- Is A'ja Wilson injured?: no injury status is stored on the player file, and the curated FAQ does not ask it."
         )
     lines.append('')
     lines.append('## Kelsey Plum')

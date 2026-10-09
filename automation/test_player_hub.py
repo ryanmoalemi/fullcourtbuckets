@@ -74,9 +74,16 @@ class PlayerHubTests(unittest.TestCase):
 
     def test_quick_answers_match_the_visible_questions(self):
         clark = (ROOT / 'wnba' / 'caitlin-clark' / 'index.html').read_text(encoding='utf-8')
-        self.assertIn('<h2>Quick answers</h2>', clark)
+        self.assertIn('<h2>Frequently asked questions</h2>', clark)
+        self.assertNotIn('<h2>Quick answers</h2>', clark)
         self.assertNotIn('Related searches', clark)
         visible, schema = _faq_pairs(clark)
+        self.assertTrue(visible)
+        self.assertEqual(visible, schema)
+        gray = (ROOT / 'wnba' / 'chelsea-gray' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('<h2>Quick answers</h2>', gray)
+        self.assertNotIn('Related searches', gray)
+        visible, schema = _faq_pairs(gray)
         self.assertTrue(visible)
         self.assertEqual(visible, schema)
         aja = (ROOT / 'wnba' / 'aja-wilson' / 'index.html').read_text(encoding='utf-8')

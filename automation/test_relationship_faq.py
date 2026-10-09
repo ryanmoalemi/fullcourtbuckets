@@ -166,8 +166,9 @@ class RelationshipFaqTests(unittest.TestCase):
         self.assertNotIn('angel-reese', mapped)
         self.assertNotIn('aaliyah-edwards', mapped)
         angel = _faq_json('angel-reese')
-        angel_dating = next(item['answer'] for item in angel['items'] if item['question'] == 'Who is Angel Reese dating?')
-        self.assertIn('Wendell Carter', angel_dating)
+        angel_questions = [item['question'] for item in angel['items']]
+        self.assertNotIn('Who is Angel Reese dating?', angel_questions)
+        self.assertNotIn('Wendell Carter', ' '.join(item['answer'] for item in angel['items']))
         edwards = _faq_json('aaliyah-edwards')
         dating = next(item['answer'] for item in edwards['items'] if item['question'] == 'Who is Aaliyah Edwards dating?')
         married = next(item['answer'] for item in edwards['items'] if item['question'] == 'Is Aaliyah Edwards married?')

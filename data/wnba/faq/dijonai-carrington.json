@@ -1,142 +1,220 @@
 {
   "slug": "dijonai-carrington",
   "player_name": "DiJonai Carrington",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are DiJonai Carrington's stats / points per game?",
-      "answer": "In the 2026 regular season, DiJonai Carrington averaged 9.8 points, 4.0 rebounds, and 1.6 assists in 31 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dijonai carrington stats",
-      "approx_monthly_volume": 1600
-    },
-    {
       "question": "Who is DiJonai Carrington dating?",
-      "answer": "As of late 2026, DiJonai Carrington has not widely publicized a confirmed dating relationship in major profiles.",
+      "answer": "DiJonai Carrington and NaLyssa Smith dated publicly in 2025 and split in late 2025. No current partner has been publicly confirmed.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
+        "https://www.sportingnews.com/us/wnba/news/dijonai-carrington-nalyssa-smith-cheating-scandal-allegations-wnba-players/567115ee6c87396ded9447e4"
       ],
-      "google_keyword": "dijonai carrington partner",
-      "approx_monthly_volume": 2400
+      "queries": [
+        {
+          "q": "dijonai carrington husband",
+          "vol": 1900
+        },
+        {
+          "q": "nalyssa smith and dijonai carrington",
+          "vol": 1600
+        },
+        {
+          "q": "dijonai carrington boyfriend",
+          "vol": 210
+        },
+        {
+          "q": "dijonai carrington married",
+          "vol": 170
+        },
+        {
+          "q": "are dijonai carrington and nalyssa smith still together",
+          "vol": 140
+        },
+        {
+          "q": "is dijonai carrington married",
+          "vol": 90
+        },
+        {
+          "q": "dijonai carrington relationship",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "How much does DiJonai Carrington make?",
-      "answer": "A precise public salary or net worth figure for DiJonai Carrington is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "dijonai carrington net worth",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How tall is DiJonai Carrington?",
-      "answer": "DiJonai Carrington is listed at 5' 11\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
-      ],
-      "google_keyword": "dijonai carrington height",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How old is DiJonai Carrington?",
-      "answer": "She was born January 8, 1998 in San Diego. As of late 2026 that puts her at 28 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
-      ],
-      "google_keyword": "dijonai carrington age",
-      "approx_monthly_volume": 390,
-      "birthdate": "1998-01-08"
-    },
-    {
-      "question": "What did DiJonai Carrington score in her last game?",
-      "answer": "In her most recent completed game (August 25, 2026 vs. the Connecticut Sun), DiJonai Carrington had 0.0 points, 1.0 rebounds, and 0 assists in a 81-87 loss.",
+      "question": "What are DiJonai Carrington's stats?",
+      "answer": "In the 2026 regular season, DiJonai Carrington averaged 8.8 points, 3.1 rebounds, and 0.6 assists in 11 games for the Chicago Sky. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is dijonai carrington playing tonight",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What is DiJonai Carrington's contract?",
-      "answer": "Contract length and guarantees for DiJonai Carrington are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
       ],
-      "google_keyword": "dijonai carrington contract",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Is DiJonai Carrington married?",
-      "answer": "There is no widely reported public record of DiJonai Carrington being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
-      ],
-      "google_keyword": "dijonai carrington wife",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "What team does DiJonai Carrington play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 7. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does dijonai carrington play for",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What college did DiJonai Carrington attend?",
-      "answer": "Carrington played college basketball at Baylor.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
-      ],
-      "google_keyword": "dijonai carrington stanford",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "Who is DiJonai Carrington?",
-      "answer": "DiJonai Victoria Carrington is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
-      ],
-      "google_keyword": "dijonai carrington bio",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is DiJonai Carrington injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "dijonai carrington injury",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "dijonai carrington stats",
+          "vol": 1600
+        }
+      ]
     },
     {
       "question": "Who are DiJonai Carrington's parents?",
-      "answer": "Public profiles share limited verified detail about DiJonai Carrington's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "answer": "The WNBA bio names her mother, Vickie, and her father, Darren Carrington, who played in the NFL. It also names her sister Diarra and her brother Darren.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
       ],
-      "google_keyword": "dijonai carrington dad",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "dijonai carrington dad",
+          "vol": 880
+        },
+        {
+          "q": "dijonai carrington parents",
+          "vol": 880
+        },
+        {
+          "q": "dijonai carrington father",
+          "vol": 480
+        },
+        {
+          "q": "dijonai carrington family",
+          "vol": 90
+        },
+        {
+          "q": "dijonai carrington brother",
+          "vol": 90
+        },
+        {
+          "q": "dijonai carrington mom",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "How many championships does DiJonai Carrington have?",
-      "answer": "Public biographical sources cover DiJonai Carrington's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
+      "question": "How tall is DiJonai Carrington?",
+      "answer": "The WNBA lists DiJonai Carrington at 5 feet 11 inches.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DiJonai_Carrington"
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
       ],
-      "google_keyword": "dijonai carrington",
-      "approx_monthly_volume": 110000
+      "queries": [
+        {
+          "q": "dijonai carrington height",
+          "vol": 720
+        },
+        {
+          "q": "how tall is dijonai carrington",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "How old is DiJonai Carrington?",
+      "answer": "DiJonai Carrington was born January 8, 1998.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": [
+        {
+          "q": "dijonai carrington age",
+          "vol": 390
+        },
+        {
+          "q": "how old is dijonai carrington",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Where did DiJonai Carrington play college basketball?",
+      "answer": "The WNBA bio says DiJonai Carrington played at Stanford from 2016 to 2020 and at Baylor in 2020-21. This page lists Baylor.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": [
+        {
+          "q": "dijonai carrington stanford",
+          "vol": 320
+        },
+        {
+          "q": "dijonai carrington baylor",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "What team does DiJonai Carrington play for?",
+      "answer": "DiJonai Carrington plays guard for the Chicago Sky and wears No. 7. The Sky signed her on April 12, 2026, and did not disclose terms. The Connecticut Sun drafted her 20th overall in 2021.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://sky.wnba.com/news/chicago-sky-sign-guard-forward-dijonai-carrington",
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": [
+        {
+          "q": "who does dijonai carrington play for",
+          "vol": 170
+        },
+        {
+          "q": "dijonai carrington team",
+          "vol": 140
+        },
+        {
+          "q": "wnba dijonai carrington",
+          "vol": 260
+        },
+        {
+          "q": "dijonai carrington lynx",
+          "vol": 90
+        },
+        {
+          "q": "dijonai carrington wings",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "How much does DiJonai Carrington weigh?",
+      "answer": "The WNBA lists DiJonai Carrington at 175 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Where is DiJonai Carrington from?",
+      "answer": "The WNBA says DiJonai Carrington was born in San Diego, California.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How many years has DiJonai Carrington been in the WNBA?",
+      "answer": "DiJonai Carrington has 6 regular seasons on this page, from 2021 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who is DiJonai Carrington?",
+      "answer": "DiJonai Carrington is a guard for the Chicago Sky. She played at Stanford and Baylor, and the Connecticut Sun drafted her 20th overall in 2021.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1630096/dijonai-carrington/bio"
+      ],
+      "queries": [
+        {
+          "q": "dijonai carrington bio",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

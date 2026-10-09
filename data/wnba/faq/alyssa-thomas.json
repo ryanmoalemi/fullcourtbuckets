@@ -1,142 +1,197 @@
 {
   "slug": "alyssa-thomas",
   "player_name": "Alyssa Thomas",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Alyssa Thomas's stats / points per game?",
-      "answer": "In the 2026 regular season, Alyssa Thomas averaged 14.5 points, 7.8 rebounds, and 8.5 assists in 41 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Alyssa Thomas's stats?",
+      "answer": "In the 2026 regular season, Alyssa Thomas averaged 14.3 points, 7.8 rebounds, and 8.5 assists in 42 games for the Phoenix Mercury. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "alyssa thomas stats",
-      "approx_monthly_volume": 18100
+      "sources": [
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
+      ],
+      "queries": [
+        {
+          "q": "alyssa thomas stats",
+          "vol": 18100
+        },
+        {
+          "q": "alyssa thomas average points per game",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "Is Alyssa Thomas married?",
-      "answer": "No. Alyssa Thomas is not married. She is engaged to DeWanna Bonner. Thomas proposed during WNBA All-Star weekend in July 2023.",
+      "answer": "No. Alyssa Thomas is engaged to DeWanna Bonner. As of October 2026, she is not married.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.theknot.com/content/wnba-relationships"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio",
+        "https://apnews.com/article/bonner-thomas-sun-wnba-engagement-2406246017cd25165676fb2aff9d12e8"
       ],
-      "google_keyword": "alyssa thomas wife",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "How old is Alyssa Thomas?",
-      "answer": "She was born April 12, 1992 in Harrisburg, Pennsylvania, U.S. As of late 2026 that puts her at 34 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
-      ],
-      "google_keyword": "how old is alyssa thomas",
-      "approx_monthly_volume": 590,
-      "birthdate": "1992-04-12"
+      "queries": [
+        {
+          "q": "alyssa thomas wife",
+          "vol": 3600
+        },
+        {
+          "q": "alyssa thomas and dewanna bonner",
+          "vol": 1000
+        },
+        {
+          "q": "alyssa thomas wedding",
+          "vol": 720
+        },
+        {
+          "q": "alyssa thomas fiance",
+          "vol": 390
+        },
+        {
+          "q": "alyssa thomas girlfriend",
+          "vol": 260
+        },
+        {
+          "q": "who is alyssa thomas married to",
+          "vol": 260
+        },
+        {
+          "q": "alyssa thomas married",
+          "vol": 210
+        },
+        {
+          "q": "alyssa thomas and dewanna bonner married",
+          "vol": 170
+        },
+        {
+          "q": "is alyssa thomas married",
+          "vol": 170
+        },
+        {
+          "q": "dewanna bonner alyssa thomas wedding",
+          "vol": 110
+        },
+        {
+          "q": "are dewanna bonner and alyssa thomas still together",
+          "vol": 110
+        },
+        {
+          "q": "alyssa thomas partner",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "How tall is Alyssa Thomas?",
-      "answer": "Alyssa Thomas is listed at 6' 2\" by the WNBA.",
+      "answer": "The WNBA lists Alyssa Thomas at 6 feet 2 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
       ],
-      "google_keyword": "alyssa thomas height",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "alyssa thomas height",
+          "vol": 590
+        },
+        {
+          "q": "alyssa thomas height and weight",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What did Alyssa Thomas score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Dallas Wings), Alyssa Thomas had 15 points, 11 rebounds, and 12 assists in a 87-86 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is alyssa thomas playing tonight",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Alyssa Thomas make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Alyssa Thomas's base salary / cap hit at about $1,200,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
+      "question": "How old is Alyssa Thomas?",
+      "answer": "Alyssa Thomas was born April 12, 1992.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
       ],
-      "google_keyword": "alyssa thomas salary",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Who is Alyssa Thomas dating?",
-      "answer": "In February 2021, she and then Connecticut Sun teammate, DeWanna Bonner, shared that they were in a relationship, and in July 2023 they became engaged.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
-      ],
-      "google_keyword": "alyssa thomas girlfriend",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What is Alyssa Thomas's contract?",
-      "answer": "Public salary trackers list Alyssa Thomas at about $1,200,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "alyssa thomas contract",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "how old is alyssa thomas",
+          "vol": 590
+        },
+        {
+          "q": "alyssa thomas age",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "What team does Alyssa Thomas play for?",
-      "answer": "She plays for the Phoenix Mercury and wears No. 25 as a forward.",
-      "answer_kind": "stats",
+      "answer": "Alyssa Thomas plays forward for the Phoenix Mercury and wears No. 25. The New York Liberty drafted her fourth overall in 2014 and traded her to the Connecticut Sun the same day. This page lists 13 regular seasons, from 2014 to 2026.",
+      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
       ],
-      "google_keyword": "who does alyssa thomas play for",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What position does Alyssa Thomas play?",
-      "answer": "Alyssa Thomas is listed as a forward for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "alyssa thomas position",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "alyssa thomas wnba",
+          "vol": 1300
+        },
+        {
+          "q": "alyssa thomas phoenix mercury",
+          "vol": 590
+        },
+        {
+          "q": "who does alyssa thomas play for",
+          "vol": 170
+        },
+        {
+          "q": "alyssa thomas mercury",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "Where is Alyssa Thomas from?",
-      "answer": "She is from Harrisburg, Pennsylvania, U.S.",
+      "answer": "The WNBA says Alyssa Thomas was born in Camp Hill, Pennsylvania. She played college basketball at Maryland.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
       ],
-      "google_keyword": "where is alyssa thomas from",
-      "approx_monthly_volume": 0
+      "queries": []
+    },
+    {
+      "question": "How much does Alyssa Thomas weigh?",
+      "answer": "The WNBA lists Alyssa Thomas at 203 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
+      ],
+      "queries": [
+        {
+          "q": "alyssa thomas weight",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Alyssa Thomas played for?",
+      "answer": "The regular-season table lists the Connecticut Sun and the Phoenix Mercury for Alyssa Thomas.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What was Alyssa Thomas's rookie year?",
+      "answer": "The first regular-season row for Alyssa Thomas is 2014. She played 34 games in that row.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
+      ],
+      "queries": []
     },
     {
       "question": "Who is Alyssa Thomas?",
-      "answer": "Alyssa Thomas is an American professional basketball forward for the Phoenix Mercury of the Women's National Basketball Association (WNBA) and for the Laces of Unrivaled.",
+      "answer": "Alyssa Thomas is a forward for the Phoenix Mercury and a Maryland alum. She is engaged to DeWanna Bonner.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
+        "https://www.wnba.com/player/203826/alyssa-thomas/bio"
       ],
-      "google_keyword": "who is alyssa thomas",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Is Alyssa Thomas injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "alyssa thomas injury",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How many championships does Alyssa Thomas have?",
-      "answer": "Public biographical sources cover Alyssa Thomas's WNBA title history when she won championships.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Alyssa_Thomas"
-      ],
-      "google_keyword": "has alyssa thomas won a championship",
-      "approx_monthly_volume": 110
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

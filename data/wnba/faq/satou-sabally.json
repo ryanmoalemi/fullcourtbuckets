@@ -1,146 +1,168 @@
 {
   "slug": "satou-sabally",
   "player_name": "Satou Sabally",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Satou Sabally's stats / points per game?",
-      "answer": "In the 2026 regular season, Satou Sabally averaged 10.4 points, 2.8 rebounds, and 1.9 assists in 13 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "question": "What are Satou Sabally's stats?",
+      "answer": "In the 2026 regular season, Satou Sabally averaged 10.4 points, 2.8 rebounds, and 1.9 assists in 13 games for the New York Liberty. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "satou sabally stats",
-      "approx_monthly_volume": 5400
+      "sources": [
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "satou sabally stats",
+          "vol": 5400
+        },
+        {
+          "q": "satou sabally average points per game",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Does Satou Sabally have a sister?",
+      "answer": "Yes. The WNBA says Satou Sabally has six siblings, including her younger sister Nyara Sabally, who played with her at Oregon. The Toronto Tempo selected Nyara Sabally in the 2026 expansion draft on April 3, 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630149/satou-sabally/bio",
+        "https://liberty.wnba.com/news/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft"
+      ],
+      "queries": [
+        {
+          "q": "satou sabally sister",
+          "vol": 1600
+        },
+        {
+          "q": "satou sabally siblings",
+          "vol": 70
+        },
+        {
+          "q": "satou sabally family",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How tall is Satou Sabally?",
-      "answer": "Satou Sabally is listed at 6' 4\" by the WNBA.",
+      "answer": "The WNBA lists Satou Sabally at 6 feet 4 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
       ],
-      "google_keyword": "satou sabally height",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "satou sabally height",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "How old is Satou Sabally?",
-      "answer": "She was born April 25, 1998 in New York City, New York, U.S. As of late 2026 that puts her at 28 years old.",
+      "answer": "Satou Sabally was born April 25, 1998.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
       ],
-      "google_keyword": "satou sabally age",
-      "approx_monthly_volume": 320,
-      "birthdate": "1998-04-25"
+      "queries": [
+        {
+          "q": "satou sabally age",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "Where is Satou Sabally from?",
-      "answer": "She is from New York City, New York, U.S., and played college basketball at Oregon.",
+      "answer": "The WNBA says Satou Sabally was born in New York City, moved to Gambia at age 2, and moved to Berlin at age 7. She played college basketball at Oregon.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio",
+        "https://www.wnba.com/draft/2020/prospects/124890/satou-sabally"
       ],
-      "google_keyword": "where is satou sabally from",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Satou Sabally's contract?",
-      "answer": "Public salary trackers list Satou Sabally at about $815,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "satou sabally contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Satou Sabally make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Satou Sabally's base salary / cap hit at about $815,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "satou sabally net worth",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Satou Sabally's nationality?",
-      "answer": "Satou Sabally is described as German-American in major biographical profiles.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
-      ],
-      "google_keyword": "satou sabally nationality",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "where is satou sabally from",
+          "vol": 210
+        },
+        {
+          "q": "satou sabally oregon",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "What team does Satou Sabally play for?",
-      "answer": "She plays for the New York Liberty and wears No. 0 as a forward.",
+      "answer": "Satou Sabally plays forward for the New York Liberty and wears No. 0. The Dallas Wings drafted her second overall in 2020. This page also lists the Phoenix Mercury.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "satou sabally liberty",
+          "vol": 110
+        },
+        {
+          "q": "satou sabally new york liberty",
+          "vol": 70
+        },
+        {
+          "q": "satou sabally phoenix mercury",
+          "vol": 70
+        },
+        {
+          "q": "satou sabally team",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "How much does Satou Sabally weigh?",
+      "answer": "The WNBA lists Satou Sabally at 175 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "satou sabally weight",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Satou Sabally played for?",
+      "answer": "The regular-season table lists the Dallas Wings, the Phoenix Mercury, and the New York Liberty for Satou Sabally.",
       "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
       ],
-      "google_keyword": "satou sabally team",
-      "approx_monthly_volume": 50
+      "queries": []
+    },
+    {
+      "question": "How many years has Satou Sabally been in the WNBA?",
+      "answer": "Satou Sabally has 7 regular seasons on this page, from 2020 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "satou sabally wnba",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "Who is Satou Sabally?",
-      "answer": "Isatou \"Satou\" Sabally is a German-American professional basketball player for the New York Liberty of the Women's National Basketball Association (WNBA) and for the Phantom of Unrivaled.",
+      "answer": "Satou Sabally is a forward for the New York Liberty and an Oregon alum. Dallas drafted her second overall in 2020.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio"
       ],
-      "google_keyword": "who is satou sabally",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Satou Sabally attend?",
-      "answer": "Satou Sabally played college basketball at Oregon.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
-      ],
-      "google_keyword": "satou sabally oregon",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Satou Sabally dating?",
-      "answer": "As of late 2026, Satou Sabally has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
-      ],
-      "google_keyword": "satou sabally boyfriend",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Satou Sabally married?",
-      "answer": "There is no widely reported public record of Satou Sabally being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
-      ],
-      "google_keyword": "satou sabally husband",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "Is Satou Sabally injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "satou sabally injury",
-      "approx_monthly_volume": 2900
-    },
-    {
-      "question": "Does Satou Sabally have a signature shoe?",
-      "answer": "Public search interest ties Satou Sabally to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Satou_Sabally"
-      ],
-      "google_keyword": "satou sabally shoes",
-      "approx_monthly_volume": 50
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

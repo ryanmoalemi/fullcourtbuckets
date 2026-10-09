@@ -1,163 +1,230 @@
 {
   "slug": "breanna-stewart",
   "player_name": "Breanna Stewart",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Breanna Stewart's stats / points per game?",
-      "answer": "In the 2026 regular season, Breanna Stewart averaged 20.8 points, 8.3 rebounds, and 3.3 assists in 42 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "question": "What are Breanna Stewart's stats?",
+      "answer": "In the 2026 regular season, Breanna Stewart averaged 20.8 points, 8.3 rebounds, and 3.3 assists in 42 games for the New York Liberty. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "breanna stewart stats",
-      "approx_monthly_volume": 18100
+      "sources": [
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
+      ],
+      "queries": [
+        {
+          "q": "breanna stewart stats",
+          "vol": 18100
+        },
+        {
+          "q": "breanna stewart average points per game",
+          "vol": 110
+        },
+        {
+          "q": "breanna stewart points per game",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Is Breanna Stewart married?",
-      "answer": "Yes. Stewart married former professional basketball player Marta Xargay Casademont on July 6, 2021. The couple has children together.",
+      "answer": "Yes. Breanna Stewart is married to Marta Xargay Casademont. They married on July 6, 2021, in Seattle.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
+        "https://www.espn.com/wnba/story/_/id/32033820/seattle-storm-breanna-stewart-wife-marta-xargay-casademont-announce-birth-baby-girl"
       ],
-      "google_keyword": "breanna stewart wife",
-      "approx_monthly_volume": 2400
+      "queries": [
+        {
+          "q": "breanna stewart wife",
+          "vol": 2400
+        },
+        {
+          "q": "breanna stewart husband",
+          "vol": 1000
+        },
+        {
+          "q": "is breanna stewart married",
+          "vol": 480
+        },
+        {
+          "q": "who is breanna stewart married to",
+          "vol": 210
+        },
+        {
+          "q": "breanna stewart wedding",
+          "vol": 140
+        },
+        {
+          "q": "breanna stewart partner",
+          "vol": 110
+        },
+        {
+          "q": "breanna stewart spouse",
+          "vol": 90
+        },
+        {
+          "q": "breanna stewart married",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How tall is Breanna Stewart?",
-      "answer": "Breanna Stewart is listed at 6' 4\" by the WNBA.",
+      "answer": "The WNBA lists Breanna Stewart at 6 feet 4 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
       ],
-      "google_keyword": "breanna stewart height",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "breanna stewart height",
+          "vol": 1300
+        },
+        {
+          "q": "how tall is breanna stewart",
+          "vol": 1000
+        }
+      ]
     },
     {
       "question": "How old is Breanna Stewart?",
-      "answer": "She was born August 27, 1994 in Syracuse, New York, U.S. As of late 2026 that puts her at 32 years old.",
+      "answer": "Breanna Stewart was born August 27, 1994.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
       ],
-      "google_keyword": "how old is breanna stewart",
-      "approx_monthly_volume": 1000,
-      "birthdate": "1994-08-27"
+      "queries": [
+        {
+          "q": "how old is breanna stewart",
+          "vol": 1000
+        },
+        {
+          "q": "breanna stewart age",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "Does Breanna Stewart have a signature shoe?",
-      "answer": "Yes. Stewart has a long-running Puma signature line; the Stewie series reached the Stewie 5 in 2026.",
+      "answer": "Yes. PUMA announced the Stewie 1 on July 8, 2022, and the Stewie 3 launched on May 14, 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.sneakerfreaker.com/performance/features/the-active-wnba-signature-sneaker-lines-you-need-to-know"
+        "https://about.puma.com/en/newsroom/news/puma-hoops-and-breanna-stewart-unveil-stewie-1",
+        "https://about.puma.com/en/newsroom/product-and-brand-news/2024/11-04-2024-puma-hoops-and-breanna-stewart-launch-stewie-3"
       ],
-      "google_keyword": "breanna stewart shoe",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How much does Breanna Stewart make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Breanna Stewart's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "breanna stewart net worth",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What is Breanna Stewart's contract?",
-      "answer": "Public salary trackers list Breanna Stewart at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "breanna stewart contract",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "What did Breanna Stewart score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Atlanta Dream), Breanna Stewart had 27 points, 14 rebounds, and 4 assists in a 84-95 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is breanna stewart playing tonight",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Where is Breanna Stewart from?",
-      "answer": "She is from Syracuse, New York, U.S., and played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
-      ],
-      "google_keyword": "where is breanna stewart from",
-      "approx_monthly_volume": 170
+      "queries": []
     },
     {
       "question": "How many championships does Breanna Stewart have?",
-      "answer": "She has three WNBA titles: two with the Seattle Storm (2018, 2020) and one with the New York Liberty (2024). She was Finals MVP in 2018 and 2020.",
+      "answer": "The WNBA lists Breanna Stewart with three titles, in 2018, 2020, and 2024, and as Finals MVP in 2018 and 2020. She is also a two-time regular-season MVP, in 2018 and 2023.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
       ],
-      "google_keyword": "breanna stewart championships",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "breanna stewart championships",
+          "vol": 140
+        },
+        {
+          "q": "breanna stewart rings",
+          "vol": 90
+        },
+        {
+          "q": "breanna stewart accolades",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Who is Breanna Stewart dating?",
-      "answer": "Breanna Stewart is married to Marta Xargay Casademont. The couple started dating while teammates at Dynamo Kursk.",
-      "answer_kind": "researched",
+      "question": "Where is Breanna Stewart from?",
+      "answer": "Breanna Stewart's listed birthplace is North Syracuse, New York. She played college basketball at UConn.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.theknot.com/content/wnba-relationships",
-        "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more"
+        "https://www.espn.com/wnba/player/bio/_/id/2998928/breanna-stewart",
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
       ],
-      "google_keyword": "breanna stewart partner",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Breanna Stewart?",
-      "answer": "Breanna Mackenzie Stewart, nicknamed \"Stewie\", is an American professional basketball player for the New York Liberty of the Women's National Basketball Association (WNBA) and for the Mist of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
-      ],
-      "google_keyword": "who is breanna stewart",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "breanna stewart uconn",
+          "vol": 390
+        },
+        {
+          "q": "where is breanna stewart from",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "What team does Breanna Stewart play for?",
-      "answer": "She plays for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "breanna stewart team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Breanna Stewart attend?",
-      "answer": "Breanna Stewart played college basketball at UConn.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
-      ],
-      "google_keyword": "breanna stewart uconn",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Breanna Stewart injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer": "Breanna Stewart plays forward for the New York Liberty and wears No. 30. The Seattle Storm drafted her No. 1 overall in 2016.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "breanna stewart injury",
-      "approx_monthly_volume": 1900
+      "sources": [
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
+      ],
+      "queries": [
+        {
+          "q": "breanna stewart wnba",
+          "vol": 590
+        },
+        {
+          "q": "breanna stewart liberty",
+          "vol": 110
+        },
+        {
+          "q": "who does breanna stewart play for",
+          "vol": 90
+        },
+        {
+          "q": "what team does breanna stewart play for",
+          "vol": 70
+        },
+        {
+          "q": "new york liberty breanna stewart",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "How many MVPs does Breanna Stewart have?",
-      "answer": "MVP and major individual award history for Breanna Stewart is summarized in major biographical profiles when she earned those honors.",
-      "answer_kind": "researched",
+      "question": "How much does Breanna Stewart weigh?",
+      "answer": "The WNBA lists Breanna Stewart at 170 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Breanna_Stewart"
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
       ],
-      "google_keyword": "breanna stewart mvp",
-      "approx_monthly_volume": 70
+      "queries": []
+    },
+    {
+      "question": "Which teams has Breanna Stewart played for?",
+      "answer": "The regular-season table lists the Seattle Storm and the New York Liberty for Breanna Stewart.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What was Breanna Stewart's rookie year?",
+      "answer": "The first regular-season row for Breanna Stewart is 2016. She played 34 games in that row.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who is Breanna Stewart?",
+      "answer": "Breanna Stewart is a forward for the New York Liberty and a UConn alum. The WNBA lists her as a two-time MVP and a three-time champion.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1627668/breanna-stewart/bio"
+      ],
+      "queries": [
+        {
+          "q": "who is breanna stewart",
+          "vol": 110
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

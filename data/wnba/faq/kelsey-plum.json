@@ -1,167 +1,231 @@
 {
   "slug": "kelsey-plum",
   "player_name": "Kelsey Plum",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Kelsey Plum's stats / points per game?",
-      "answer": "In the 2026 regular season, Kelsey Plum averaged 23.9 points, 2.2 rebounds, and 6.4 assists in 12 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Kelsey Plum's stats?",
+      "answer": "Kelsey Plum's latest season is listed by team on this page, not as one combined average.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
+      ],
+      "queries": [
+        {
+          "q": "kelsey plum stats",
+          "vol": 8100
+        },
+        {
+          "q": "kelsey plum wnba stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "What did Kelsey Plum average for each team in 2026?",
+      "answer": "In 2026, Kelsey Plum's regular-season lines on this page are split by team. She averaged 23.9 points, 2.2 rebounds, and 6.4 assists in 12 games for the Los Angeles Sparks, and 15.8 points, 1.8 rebounds, and 2.8 assists in 5 games for the Phoenix Mercury.",
       "answer_kind": "stats",
       "sources": [],
-      "google_keyword": "kelsey plum stats",
-      "approx_monthly_volume": 8100
+      "queries": [
+        {
+          "q": "kelsey plum sparks",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "Is Kelsey Plum married?",
-      "answer": "Plum was married to NFL tight end Darren Waller; they later divorced. As of recent public reporting she has not announced a new marriage.",
+      "answer": "Kelsey Plum married Darren Waller on March 4, 2023. USA Today reported that they filed a joint divorce petition on April 23, 2024. No current partner has been publicly confirmed.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+        "https://www.espn.com/wnba/story/_/id/35787691/kelsey-plum-darren-waller-announce-marriage",
+        "https://www.usatoday.com/story/sports/2024/04/23/las-vegas-aces-kelsey-plum-ny-giants-darren-waller-divorce/73428424007/"
       ],
-      "google_keyword": "kelsey plum husband",
-      "approx_monthly_volume": 4400
+      "queries": [
+        {
+          "q": "kelsey plum husband",
+          "vol": 4400
+        },
+        {
+          "q": "is kelsey plum married",
+          "vol": 720
+        },
+        {
+          "q": "darren waller kelsey plum",
+          "vol": 720
+        },
+        {
+          "q": "kelsey plum wife",
+          "vol": 590
+        },
+        {
+          "q": "kelsey plum ex husband",
+          "vol": 480
+        },
+        {
+          "q": "kelsey plum married",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How tall is Kelsey Plum?",
-      "answer": "Kelsey Plum is listed at 5' 8\" by the WNBA.",
+      "answer": "The WNBA lists Kelsey Plum at 5 feet 8 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
       ],
-      "google_keyword": "kelsey plum height",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "kelsey plum height",
+          "vol": 3600
+        },
+        {
+          "q": "how tall is kelsey plum",
+          "vol": 1300
+        },
+        {
+          "q": "kelsey plum height weight",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Kelsey Plum?",
-      "answer": "She was born August 24, 1994 in Poway, California, U.S. As of late 2026 that puts her at 32 years old.",
+      "answer": "Kelsey Plum was born August 24, 1994.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
       ],
-      "google_keyword": "kelsey plum age",
-      "approx_monthly_volume": 1000,
-      "birthdate": "1994-08-24"
+      "queries": [
+        {
+          "q": "kelsey plum age",
+          "vol": 1000
+        },
+        {
+          "q": "how old is kelsey plum",
+          "vol": 720
+        }
+      ]
     },
     {
-      "question": "How much does Kelsey Plum make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Kelsey Plum's base salary / cap hit at about $999,999. Endorsements are separate from that team salary.",
+      "question": "How much did Kelsey Plum sign for with the Sparks?",
+      "answer": "ESPN reported that Kelsey Plum's one-year deal to return to the Los Angeles Sparks was worth $999,999. The Sparks announcement did not release terms. She was traded to the Phoenix Mercury on August 2, 2026, and that figure is not a combined 2026 average.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.espn.com/wnba/story/_/id/48465712/kelsey-plum-signs-one-year-deal-return-sparks",
+        "https://www.wnba.com/news/rapid-reactions-trade-deadline-2026",
+        "https://www.wnba.com/news/sparks-re-sign-kelsey-plum"
       ],
-      "google_keyword": "kelsey plum net worth",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Kelsey Plum's nationality?",
-      "answer": "Kelsey Plum is described as American in major biographical profiles.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "kelsey plum nationality",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Kelsey Plum's contract?",
-      "answer": "Public salary trackers list Kelsey Plum at about $999,999 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "kelsey plum contract",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Who is Kelsey Plum?",
-      "answer": "Kelsey Christine Plum is an American professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA) and for the Phantom of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "who is kelsey plum",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Kelsey Plum play for?",
-      "answer": "She plays for the Phoenix Mercury and wears No. 0 as a guard.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "who does kelsey plum play for",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Where is Kelsey Plum from?",
-      "answer": "She is from Poway, California, U.S.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "where is kelsey plum from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Kelsey Plum's college stats?",
-      "answer": "Across her college career at Washington, Kelsey Plum averaged 25.4 points, 4.3 rebounds, and 3.8 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/kelsey-plum-1.html",
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "kelsey plum college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Kelsey Plum dating?",
-      "answer": "As of late 2026, Kelsey Plum has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "kelsey plum boyfriend",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "What is Kelsey Plum's jersey number?",
-      "answer": "Kelsey Plum wears number 0 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kelsey plum jersey",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Kelsey Plum injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kelsey plum injury",
-      "approx_monthly_volume": 2900
-    },
-    {
-      "question": "Does Kelsey Plum have a signature shoe?",
-      "answer": "Public search interest ties Kelsey Plum to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Plum"
-      ],
-      "google_keyword": "kelsey plum shoes",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What was Kelsey Plum's rookie year?",
-      "answer": "Rebuilt from the first regular-season row on this page.",
-      "answer_kind": "stats",
-      "sources": []
+      "queries": [
+        {
+          "q": "kelsey plum contract",
+          "vol": 720
+        },
+        {
+          "q": "kelsey plum salary",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "Which teams has Kelsey Plum played for?",
-      "answer": "Rebuilt from the team names on the regular-season rows.",
+      "answer": "The regular-season table lists the San Antonio Stars, the Las Vegas Aces, the Los Angeles Sparks, and the Phoenix Mercury for Kelsey Plum.",
       "answer_kind": "stats",
-      "sources": []
+      "sources": [
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
+      ],
+      "queries": [
+        {
+          "q": "kelsey plum teams",
+          "vol": 480
+        },
+        {
+          "q": "who does kelsey plum play for",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "Was Kelsey Plum in Happy Gilmore 2?",
+      "answer": "TODAY reported that Kelsey Plum has a cameo in Happy Gilmore 2 as a golf-course worker.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.today.com/popculture/movies/happy-gilmore-cameos-rcna221088"
+      ],
+      "queries": [
+        {
+          "q": "kelsey plum happy gilmore 2",
+          "vol": 390
+        }
+      ]
+    },
+    {
+      "question": "Does Kelsey Plum have a signature shoe?",
+      "answer": "No signature shoe was announced. Under Armour announced a partnership with Kelsey Plum in October 2022.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://about.underarmour.com/en/stories/2022/10/under-armour-adds-kelsey-plum-to-its-roster.html"
+      ],
+      "queries": [
+        {
+          "q": "kelsey plum shoes",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "What was Kelsey Plum's rookie year?",
+      "answer": "The first regular-season row for Kelsey Plum is 2017. She played 31 games in that row.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
+      ],
+      "queries": [
+        {
+          "q": "kelsey plum rookie year",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "How much does Kelsey Plum weigh?",
+      "answer": "The WNBA lists Kelsey Plum at 145 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Where is Kelsey Plum from?",
+      "answer": "A WNBA draft story calls Kelsey Plum a native of Poway, California. She played college basketball at Washington.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/news/san-antonio-stars-kelsey-plum-washington-number-one-pick-2017-wnba-draft",
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who is Kelsey Plum?",
+      "answer": "Kelsey Plum is a guard for the Phoenix Mercury and a Washington alum. The San Antonio Stars drafted her No. 1 overall in 2017.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1628276/kelsey-plum/bio",
+        "https://www.wnba.com/news/san-antonio-stars-kelsey-plum-washington-number-one-pick-2017-wnba-draft"
+      ],
+      "queries": [
+        {
+          "q": "who is kelsey plum",
+          "vol": 590
+        },
+        {
+          "q": "kelsey plum wnba",
+          "vol": 390
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
