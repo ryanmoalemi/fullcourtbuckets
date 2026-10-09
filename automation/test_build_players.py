@@ -574,7 +574,7 @@ class BuildTests(unittest.TestCase):
         empty['active_in_provider_feed'] = False
         empty['current_team'] = {'id': 9, 'full_name': 'Old Team'}
         archive = b.answer_summary(empty)
-        self.assertEqual(archive, 'Example Player, a guard, has no season line stored on this page.')
+        self.assertEqual(archive, 'No WNBA season is available for Example Player, a guard.')
         self.assertNotIn('averaged', archive)
         self.assertNotIn('is not on a current roster', archive)
         held_stats = copy.deepcopy(P)

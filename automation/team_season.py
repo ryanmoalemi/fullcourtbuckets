@@ -148,7 +148,38 @@ def _names(rows: list[dict]) -> str:
     return ', '.join(prose_link(f'/wnba/{row["slug"]}/', row['name']) for row in rows)
 
 
-def _leader_sentence(name: str, leaders: list[dict]) -> str:
+# One frame per club, so the 15 season summaries do not share a sentence skeleton.
+_TEAM_ORDER = (
+    'atlanta-dream',
+    'chicago-sky',
+    'connecticut-sun',
+    'dallas-wings',
+    'golden-state-valkyries',
+    'indiana-fever',
+    'las-vegas-aces',
+    'los-angeles-sparks',
+    'minnesota-lynx',
+    'new-york-liberty',
+    'phoenix-mercury',
+    'portland-fire',
+    'seattle-storm',
+    'toronto-tempo',
+    'washington-mystics',
+)
+
+
+def _variant(slug: str) -> int:
+    try:
+        return _TEAM_ORDER.index(slug)
+    except ValueError:
+        return 0
+
+
+def _pick(frames: tuple[str, ...], variant: int) -> str:
+    return frames[variant % len(frames)]
+
+
+def _leader_listed(leaders: list[dict]) -> str:
     parts = []
     for key, label in (('pts', 'scoring'), ('reb', 'rebounds'), ('ast', 'assists')):
         scored = [row for row in leaders if row.get(key) is not None]
@@ -160,23 +191,62 @@ def _leader_sentence(name: str, leaders: list[dict]) -> str:
         parts.append(f'{_names(tied)} in {label} at {tied[0][key]} {unit} per game')
     if not parts:
         return ''
-    listed = parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + ', and ' + parts[-1]
-    return f'On the current {name} roster, the 2026 regular-season leaders are {listed}.'
+    return parts[0] if len(parts) == 1 else ', '.join(parts[:-1]) + ', and ' + parts[-1]
 
 
-def _minutes_sentence(name: str, leaders: list[dict]) -> str:
+def _leader_sentence(name: str, leaders: list[dict], variant: int = 0) -> str:
+    listed = _leader_listed(leaders)
+    if not listed:
+        return ''
+    frames = (
+        f'On the current {name} roster, the 2026 regular-season leaders are {listed}.',
+        f'The 2026 regular-season leaders for the {name} are {listed}.',
+        f'Among players still on the {name}, the 2026 regular-season leaders are {listed}.',
+        f'For the 2026 regular season, the {name} leaders are {listed}.',
+        f'The {name} were led in the 2026 regular season by {listed}.',
+        f'Leaders for the {name} across the 2026 regular season are {listed}.',
+        f'In the 2026 regular season the {name} leaders are {listed}.',
+        f'Regular-season leaders on the {name} roster in 2026 are {listed}.',
+        f'The {name} pacesetters for the 2026 regular season are {listed}.',
+        f'Who led the {name} in the 2026 regular season: {listed}.',
+        f'The current {name} leaders in the 2026 regular season are {listed}.',
+        f'For 2026, regular-season leaders on the {name} are {listed}.',
+        f'Regular-season production for the {name} in 2026 was led by {listed}.',
+        f'Top of the 2026 {name} regular season: {listed}.',
+        f'The 2026 {name} regular-season leaders were {listed}.',
+    )
+    return _pick(frames, variant)
+
+
+def _minutes_sentence(name: str, leaders: list[dict], variant: int = 0) -> str:
     rows = [row for row in leaders if isinstance(row.get('min_raw'), (int, float)) and not isinstance(row.get('min_raw'), bool)]
     if not rows:
         return ''
     rows.sort(key=lambda row: (-float(row['min_raw']), row['name'].casefold()))
     top = rows[0]
-    return (
-        f'{prose_link("/wnba/" + top["slug"] + "/", top["name"])} played the most minutes '
-        f'on the {name} at {top["min"]} per game.'
+    who = prose_link('/wnba/' + top['slug'] + '/', top['name'])
+    mins = top['min']
+    frames = (
+        f'{who} played the most minutes on the {name} at {mins} per game.',
+        f'{who} led the {name} in minutes at {mins} per game.',
+        f'The minutes lead for the {name} was {who} at {mins} per game.',
+        f'{who} was the minutes leader for the {name} at {mins} per game.',
+        f'Most minutes on the {name} went to {who}, at {mins} per game.',
+        f'{who} carried the heaviest minutes for the {name} at {mins} per game.',
+        f'{who} averaged the most minutes for the {name}, at {mins} a game.',
+        f'The {name} minutes leader was {who} at {mins} per game.',
+        f'{who} logged the most minutes on the {name} at {mins} per game.',
+        f'Nobody on the {name} played more minutes than {who}, at {mins} per game.',
+        f'{who} was on the floor most often for the {name}, at {mins} per game.',
+        f'For the {name}, {who} played the most minutes at {mins} per game.',
+        f'{who} saw the most floor time on the {name} at {mins} per game.',
+        f'The busiest minutes average on the {name} belonged to {who} at {mins} per game.',
+        f'{who} had the highest minutes average on the {name} at {mins} per game.',
     )
+    return _pick(frames, variant)
 
 
-def _split_sentence(name: str, standing: dict) -> str:
+def _split_listed(standing: dict) -> str:
     home = str(standing.get('home') or '').strip()
     road = str(standing.get('road') or '').strip()
     last10 = str(standing.get('last10') or '').strip()
@@ -190,11 +260,34 @@ def _split_sentence(name: str, standing: dict) -> str:
         bits.append(f'a streak of {streak}')
     if not bits:
         return ''
-    listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ', and ' + bits[-1]
-    return f'The {name} standings line also shows {listed}.'
+    return bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ', and ' + bits[-1]
 
 
-def _record_sentence(name: str, standing: dict, conference: str) -> str:
+def _split_sentence(name: str, standing: dict, variant: int = 0) -> str:
+    listed = _split_listed(standing)
+    if not listed:
+        return ''
+    frames = (
+        f'Splits for the {name} were {listed}.',
+        f'The {name} also posted {listed}.',
+        f'Home and road for the {name} come out to {listed}.',
+        f'The {name} were {listed}.',
+        f'Beside the record, the {name} had {listed}.',
+        f'For the {name}, the splits were {listed}.',
+        f'The rest of the {name} record shows {listed}.',
+        f'Recent form for the {name} includes {listed}.',
+        f'The {name} went {listed}.',
+        f'Those {name} splits were {listed}.',
+        f'Home and road results for the {name} were {listed}.',
+        f'Alongside the record, the {name} had {listed}.',
+        f'The {name} finished with splits of {listed}.',
+        f'Counted by venue, the {name} had {listed}.',
+        f'The finer marks for the {name} were {listed}.',
+    )
+    return _pick(frames, variant)
+
+
+def _record_core(name: str, standing: dict, conference: str) -> str:
     wins = standing.get('wins')
     losses = standing.get('losses')
     rank = standing.get('conferenceRank')
@@ -205,15 +298,75 @@ def _record_sentence(name: str, standing: dict, conference: str) -> str:
     if back and back not in {'0', '0.0', '0.00'}:
         unit = 'game' if back in {'1', '1.0'} else 'games'
         bits.append(f'{back} {unit} back')
-    listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ', and ' + bits[-1]
-    return f'On the standings checked October 1, 2026, {listed}.'
+    if len(bits) == 1:
+        return bits[0]
+    if len(bits) == 2:
+        return f'{bits[0]}, {bits[1]}'
+    return f'{bits[0]}, {bits[1]}, and {bits[2]}'
 
 
-def _seed_sentence(name: str, standing: dict) -> str:
+def _record_sentence(name: str, standing: dict, conference: str, variant: int = 0) -> str:
+    core = _record_core(name, standing, conference)
+    frames = (
+        f'On the standings checked October 1, 2026, {core}.',
+        f'In the standings dated October 1, 2026, {core}.',
+        f'As of October 1, 2026, {core}.',
+        f'From the October 1, 2026 standings, {core}.',
+        f'Per the October 1, 2026 standings, {core}.',
+        f'The October 1, 2026 standings list that {core}.',
+        f'Checked on October 1, 2026, {core}.',
+        f'The October 1, 2026 standings read: {core}.',
+        f'Through October 1, 2026, {core}.',
+        f'Standings for October 1, 2026 show {core}.',
+        f'On October 1, 2026, {core}.',
+        f'On the club record dated October 1, 2026, {core}.',
+        f'When the standings were checked on October 1, 2026, {core}.',
+        f'In the October 1, 2026 record, {core}.',
+        f'Here is the October 1, 2026 record: {core}.',
+    )
+    return _pick(frames, variant)
+
+
+def _seed_sentence(name: str, standing: dict, variant: int = 0) -> str:
     seed = standing.get('playoffSeed')
     if isinstance(seed, int) and not isinstance(seed, bool) and 1 <= seed <= 8:
-        return f'That record was the No. {seed} playoff seed for the {name}.'
-    return f'The {name} finished outside the top eight playoff seeds on that standings file.'
+        place = _ordinal(seed)
+        frames = (
+            f'That record was the {place} playoff seed for the {name}.',
+            f'The {name} entered the playoffs as the {place} seed.',
+            f'The playoff seed for the {name} was {seed}.',
+            f'Those results put the {name} at the {place} playoff seed.',
+            f'The {name} were the {place} seed when the playoffs began.',
+            f'Playoff seeding placed the {name} {place}.',
+            f'The {name} took the {place} seed into the postseason.',
+            f'The bracket had the {name} as the {place} seed.',
+            f'Seed {seed} in the playoffs was the {name}.',
+            f'The {name} opened the postseason from the {place} seed.',
+            f'By seeding, the {name} were {place} in the playoff field.',
+            f'The postseason field had the {name} {place}.',
+            f'The {name} claimed the {place} playoff seed.',
+            f'For the playoffs, the {name} were seeded {place}.',
+            f'The {name} held the {place} seed in the playoff field.',
+        )
+        return _pick(frames, variant)
+    frames = (
+        f'The {name} finished outside the top eight playoff seeds.',
+        f'That left the {name} outside the top eight playoff seeds.',
+        f'The {name} did not land inside the top eight playoff seeds.',
+        f'The top eight playoff seeds did not include the {name}.',
+        f'Playoff seeding left the {name} outside the top eight.',
+        f'The {name} ended the regular season outside the top eight seeds.',
+        f'No top-eight playoff seed went to the {name}.',
+        f'The {name} missed the top eight in the playoff seeding.',
+        f"The bracket's top eight did not include the {name}.",
+        f'The {name} were outside the eight-team playoff field.',
+        f'Seeding kept the {name} out of the top eight.',
+        f'The {name} stayed outside the top eight playoff places.',
+        f"The postseason's top eight did not have the {name}.",
+        f'Eight playoff seeds were assigned, and the {name} were not among them.',
+        f'The {name} came up outside the top eight playoff seeds.',
+    )
+    return _pick(frames, variant)
 
 
 def _playoff_html(slug: str, name: str) -> str:
@@ -245,8 +398,7 @@ def _playoff_html(slug: str, name: str) -> str:
         )
     if slug == 'washington-mystics':
         return (
-            f'The only {name} playoff story on the site is {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")}, '
-            f'a 92-77 loss to the Dream. Later games in that series are not in the story list.'
+            f'The {name} lost {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")} to the Dream, 92-77.'
         )
     if slug == 'indiana-fever':
         return (
@@ -271,18 +423,35 @@ def _playoff_html(slug: str, name: str) -> str:
         )
     if slug == 'toronto-tempo':
         return (
-            f'The {link("/news/wnba-expansion-teams/", "expansion story")} says the {name} played their first games in May 2026, '
-            f'finished 11-33, and did not make the playoffs.'
+            f'An expansion club, the {name} played its first games in May 2026, went 11-33, and missed the playoffs, '
+            f'per the {link("/news/wnba-expansion-teams/", "expansion story")}.'
         )
     return ''
 
 
-def _coverage_line(slug: str) -> str:
+def _coverage_line(slug: str, variant: int = 0) -> str:
     rows = COVERAGE.get(slug) or []
     if not rows:
         return ''
     links_html = ', '.join(prose_link(href, label) for href, label, _claim in rows)
-    return f'Playoff and series coverage: {links_html}.'
+    labels = (
+        'Playoff and series coverage',
+        'Postseason reading',
+        'Series recaps',
+        'Related playoff stories',
+        'First-round and semifinal stories',
+        'Playoff stories',
+        'Series notes',
+        'The series, game by game',
+        'Semifinal and first-round recaps',
+        'Coverage of these games',
+        'Recaps from the series',
+        'Game recaps',
+        'Stories from the series',
+        'How the series has gone',
+        'The playoff path',
+    )
+    return f'{_pick(labels, variant)}: {links_html}.'
 
 
 def photo_html(slug: str) -> str:
@@ -314,14 +483,15 @@ def summary_paragraphs(root: Path, slot: dict, standing: dict | None) -> str:
     elif not conference.endswith('Conference'):
         conference = f'{conference} Conference'
     leaders = _leaders(root, slot)
+    variant = _variant(slug)
     sentences = [
-        _record_sentence(name, standing, conference),
-        _seed_sentence(name, standing),
-        _split_sentence(name, standing),
-        _leader_sentence(name, leaders),
-        _minutes_sentence(name, leaders),
+        _record_sentence(name, standing, conference, variant),
+        _seed_sentence(name, standing, variant),
+        _split_sentence(name, standing, variant),
+        _leader_sentence(name, leaders, variant),
+        _minutes_sentence(name, leaders, variant),
         _playoff_html(slug, name),
-        _coverage_line(slug),
+        _coverage_line(slug, variant),
     ]
     body = ' '.join(part for part in sentences if part)
     count = word_count(body)
@@ -385,11 +555,21 @@ _SEASON_RE = re.compile(
 _NEWS_RE = re.compile(r'<section class="section" id="team-news">.*?</section>', re.S)
 
 
+_SUMMARY_P_RE = re.compile(r'<p class="season-summary">.*?</p>', re.S)
+
+
 def patch_team_html(page: str, root: Path, slot: dict, standing: dict | None) -> str:
-    """Insert the season block and stories into an already published team page."""
+    """Insert the season block and stories into an already published team page.
+
+    When the season section is already there, only the summary paragraph is
+    replaced, so a photo wrapped by another pass stays in place.
+    """
+    summary = summary_paragraphs(root, slot, standing)
     season = season_section(root, slot, standing)
     stories = stories_section(root, slot)
-    if _SEASON_RE.search(page):
+    if summary and _SEASON_RE.search(page) and _SUMMARY_P_RE.search(page):
+        page = _SUMMARY_P_RE.sub(summary, page, count=1)
+    elif _SEASON_RE.search(page):
         page = _SEASON_RE.sub(season, page, count=1)
     else:
         start = page.find('<section class="directory-header">')
@@ -398,9 +578,7 @@ def patch_team_html(page: str, root: Path, slot: dict, standing: dict | None) ->
             raise ValueError(f'{slot.get("slug")} is missing a directory header')
         end += len('</section>')
         page = page[:end] + season + page[end:]
-    if _NEWS_RE.search(page):
-        page = _NEWS_RE.sub(stories, page, count=1)
-    elif stories:
+    if not _NEWS_RE.search(page) and stories:
         marker = page.find('>All teams</a>')
         if marker < 0:
             raise ValueError(f'{slot.get("slug")} is missing the All teams link')
