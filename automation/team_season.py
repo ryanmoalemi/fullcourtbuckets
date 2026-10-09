@@ -208,11 +208,11 @@ def _leader_sentence(name: str, leaders: list[dict], variant: int = 0) -> str:
         f'In the 2026 regular season the {name} leaders are {listed}.',
         f'Regular-season leaders on the {name} roster in 2026 are {listed}.',
         f'The {name} pacesetters for the 2026 regular season are {listed}.',
-        f'Who led the {name} in the 2026 regular season: {listed}.',
+        f'The players who led the {name} in 2026 were {listed}.',
         f'The current {name} leaders in the 2026 regular season are {listed}.',
         f'For 2026, regular-season leaders on the {name} are {listed}.',
         f'Regular-season production for the {name} in 2026 was led by {listed}.',
-        f'Top of the 2026 {name} regular season: {listed}.',
+        f'The 2026 season for the {name} was led by {listed}.',
         f'The 2026 {name} regular-season leaders were {listed}.',
     )
     return _pick(frames, variant)
@@ -270,7 +270,7 @@ def _split_sentence(name: str, standing: dict, variant: int = 0) -> str:
     frames = (
         f'Splits for the {name} were {listed}.',
         f'The {name} also posted {listed}.',
-        f'Home and road for the {name} come out to {listed}.',
+        f'At home and on the road, the {name} had {listed}.',
         f'The {name} were {listed}.',
         f'Beside the record, the {name} had {listed}.',
         f'For the {name}, the splits were {listed}.',
@@ -281,7 +281,7 @@ def _split_sentence(name: str, standing: dict, variant: int = 0) -> str:
         f'Home and road results for the {name} were {listed}.',
         f'Alongside the record, the {name} had {listed}.',
         f'The {name} finished with splits of {listed}.',
-        f'Counted by venue, the {name} had {listed}.',
+        f'Venue by venue, the {name} had {listed}.',
         f'The finer marks for the {name} were {listed}.',
     )
     return _pick(frames, variant)
@@ -307,22 +307,23 @@ def _record_core(name: str, standing: dict, conference: str) -> str:
 
 def _record_sentence(name: str, standing: dict, conference: str, variant: int = 0) -> str:
     core = _record_core(name, standing, conference)
+    cap = core[:1].upper() + core[1:]
     frames = (
-        f'On the standings checked October 1, 2026, {core}.',
-        f'In the standings dated October 1, 2026, {core}.',
-        f'As of October 1, 2026, {core}.',
-        f'From the October 1, 2026 standings, {core}.',
-        f'Per the October 1, 2026 standings, {core}.',
-        f'The October 1, 2026 standings list that {core}.',
-        f'Checked on October 1, 2026, {core}.',
-        f'The October 1, 2026 standings read: {core}.',
-        f'Through October 1, 2026, {core}.',
-        f'Standings for October 1, 2026 show {core}.',
-        f'On October 1, 2026, {core}.',
-        f'On the club record dated October 1, 2026, {core}.',
-        f'When the standings were checked on October 1, 2026, {core}.',
-        f'In the October 1, 2026 record, {core}.',
-        f'Here is the October 1, 2026 record: {core}.',
+        f'As the 2026 regular season ended, {core}.',
+        f'{cap} on October 1, 2026.',
+        f'Come October 1, 2026, {core}.',
+        f'After the 2026 regular season, {core}.',
+        f'At the end of the 2026 regular season, {core}.',
+        f'{cap} for the 2026 season.',
+        f'By October 1, 2026, {core}.',
+        f'{cap} heading into October 2026.',
+        f'Through the 2026 regular season, {core}.',
+        f'Entering October 2026, {core}.',
+        f'{cap} at the close of the regular season.',
+        f'In year one, {core}.',
+        f'Over the 2026 regular season, {core}.',
+        f'{cap} in its first WNBA season.',
+        f'{cap} with the regular season complete.',
     )
     return _pick(frames, variant)
 
@@ -340,7 +341,7 @@ def _seed_sentence(name: str, standing: dict, variant: int = 0) -> str:
             f'Playoff seeding placed the {name} {place}.',
             f'The {name} took the {place} seed into the postseason.',
             f'The bracket had the {name} as the {place} seed.',
-            f'Seed {seed} in the playoffs was the {name}.',
+            f'The {name} earned the No. {seed} seed in the playoffs.',
             f'The {name} opened the postseason from the {place} seed.',
             f'By seeding, the {name} were {place} in the playoff field.',
             f'The postseason field had the {name} {place}.',
@@ -392,7 +393,7 @@ def _playoff_html(slug: str, name: str) -> str:
         )
     if slug == 'atlanta-dream':
         return (
-            f'The {name} beat the Mystics 92-77 in the published {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")} recap. '
+            f'The {name} beat the Mystics 92-77 in {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")}. '
             f'In the semifinals they beat the Liberty 92-82 and 101-98 in overtime and lead 2-0 '
             f'before {link("/news/semis-game-3-preview/", "Game 3")}.'
         )
