@@ -311,8 +311,7 @@ def require_plausible_weight(profile) -> None:
 def header(route='/', menu=None):
     if menu is None:
         menu = site_nav.build_menu(Path(__file__).resolve().parents[1])
-    nav = site_nav.render(menu, route)
-    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent WNBA news and analysis</span></div></div>'''
+    return site_nav.render_header(menu, route)
 
 def footer(include_standings=True):
     html_text = site_nav.footer_html(include_standings)
@@ -2157,14 +2156,13 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     season = team_season.season_section(root, slot, standing) if root is not None else ''
     if root is not None:
         stories = team_season.stories_section(root, slot)
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},
-            {'@type':'ListItem','position':2,'name':'WNBA','item':BASE+'/wnba/'},
-            {'@type':'ListItem','position':3,'name':'Teams','item':BASE+'/wnba/teams/'},
-            {'@type':'ListItem','position':4,'name':name,'item':BASE+route},
+            {'@type':'ListItem','position':2,'name':'Teams','item':BASE+'/wnba/teams/'},
+            {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
     return document(f'{name} Roster | Full Court Buckets', team_description(slot, standing), route, body, structured, include_standings, menu)
@@ -2779,6 +2777,7 @@ def build(root: Path):
     files['sitemap/index.html'] = html_sitemap_page(root, menu, linking, articles, player_rows, page_rows, published_index)
     files['docs/missing-data.md'] = missing_data_markdown(root)
     files['robots.txt'] = ROBOTS_TXT
+    files['search-index.json'] = site_nav.search_index_document(root)
     links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
@@ -2852,6 +2851,7 @@ def refresh_published_news(root: Path | None = None) -> int:
     for relative, content in list(files.items()):
         if str(relative).endswith('.html'):
             files[relative] = links.rewrite_legacy_article_urls(content, articles)
+    files['search-index.json'] = site_nav.search_index_document(root)
     changes = 0
     for relative, content in files.items():
         reject_removed_adu(relative, content)

@@ -404,7 +404,6 @@ def hub_parts(root: Path, linking: dict) -> tuple[str, dict, str, str]:
     body = (
         '<nav class="breadcrumbs" aria-label="Breadcrumb">'
         '<a href="/">Home</a><span aria-hidden="true">/</span>'
-        '<a href="/wnba/">WNBA</a><span aria-hidden="true">/</span>'
         '<span>Teams</span></nav>'
         '<section class="directory-header"><p class="eyebrow">WNBA teams</p>'
         '<h1>WNBA teams</h1>'
@@ -426,8 +425,7 @@ def hub_parts(root: Path, linking: dict) -> tuple[str, dict, str, str]:
                 '@type': 'BreadcrumbList',
                 'itemListElement': [
                     {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
-                    {'@type': 'ListItem', 'position': 2, 'name': 'WNBA', 'item': BASE + '/wnba/'},
-                    {'@type': 'ListItem', 'position': 3, 'name': 'Teams', 'item': BASE + HUB},
+                    {'@type': 'ListItem', 'position': 2, 'name': 'Teams', 'item': BASE + HUB},
                 ],
             },
             {
