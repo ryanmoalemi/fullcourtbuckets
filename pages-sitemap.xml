@@ -200,4 +200,10 @@
     <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
     <lastmod>2026-10-09</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/allisha-gray-game-3-status/</loc>
+    <lastmod>2026-10-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
