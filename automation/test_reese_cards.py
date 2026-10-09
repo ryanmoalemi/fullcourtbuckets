@@ -391,7 +391,10 @@ class ReeseHeroFoldTests(unittest.TestCase):
     """ANGEL REESE, CARDS, and the subtitle stay above the fold."""
 
     def test_title_block_is_above_the_fold(self):
-        from playwright.sync_api import sync_playwright
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            self.skipTest('Playwright is not installed')
 
         server = ThreadingHTTPServer(('127.0.0.1', 0), _QuietHandler)
         thread = threading.Thread(target=server.serve_forever, daemon=True)

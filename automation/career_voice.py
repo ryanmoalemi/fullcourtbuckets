@@ -30,6 +30,7 @@ _BANNED = (
     'suited up',
     'recorded',
     'during the regular season',
+    'subsequently',
 )
 _SHE_RE = re.compile(r'\bShe\b')
 _HER_RE = re.compile(r'\bHer\b')
@@ -327,6 +328,19 @@ def _mentioned_years(text: str) -> list[int]:
     return [int(year) for year in re.findall(r'\b(?:19|20)\d{2}\b', text)]
 
 
+def _phrase_covered(phrase: str, text: str) -> bool:
+    """A shorthand "the Team through YEAR" covers earlier logged runs for that club."""
+    if phrase in text:
+        return True
+    parsed = _parse_phrase(phrase)
+    if not parsed:
+        return False
+    team = parsed['team']
+    work = re.sub(rf'\bthe {re.escape(team)} from \d{{4}} through \d{{4}}', ' ', text)
+    years = [int(year) for year in re.findall(rf'\bthe {re.escape(team)},? through (\d{{4}})', work)]
+    return any(year >= parsed['end'] for year in years)
+
+
 def _rewrite_year_opener(sentence: str, team: str, year: str, phrase: str) -> str:
     """Turn 'In 2015, she averaged 8 for the Dream.' into a sentence that carries the season phrase."""
     patterns = (
@@ -433,7 +447,7 @@ def _listed_frames(subject: str, listed: str, relation: str, lead: bool, known_c
             f'{subject} went on to play for {listed}.',
             f'{subject} moved on to {listed}.',
             f'From there, {subject} played for {listed}.',
-            f'{subject} subsequently played for {listed}.',
+            f'{subject} reached {listed}.',
             f'Her later WNBA stops were {listed}.',
             f'{subject} was later with {listed}.',
             f'Her next WNBA stops were {listed}.',
@@ -471,60 +485,181 @@ def _listed_frames(subject: str, listed: str, relation: str, lead: bool, known_c
     )
 
 
-def _bridge_frames(subject: str, before: list[str], after: list[str]) -> tuple[str, ...]:
-    left = cp._join(before)
-    right = cp._join(after)
-    return (
-        f'{subject} had played for {left}, and she later played for {right}.',
-        f'Earlier, {subject} played for {left}, and she later played for {right}.',
-        f'{subject} played for {left} before that, and she went on to play for {right}.',
-        f'Her earlier stops were {left}, and she later played for {right}.',
-        f'{subject} previously played for {left} and later played for {right}.',
-        f'{subject} had been with {left}, and she went on to play for {right}.',
-        f'Before that, {subject} played for {left}, and she later played for {right}.',
-        f'{subject} came from {left} and later played for {right}.',
-    )
-
-
-def _stop_sentence(name: str, phrases: list[str], prior: str, variant: int, lead: bool) -> str:
-    """Chronological stops that are not already in the bio. No false 'then'."""
-    if not phrases:
-        return ''
-    subject = name if lead else 'She'
-    known_clubs = bool(phrases) and all(
-        (parsed := _parse_phrase(phrase)) and parsed['team'] in prior for phrase in phrases
-    )
-    years = [] if lead else _mentioned_years(prior)
-    if not years:
-        frames = _listed_frames(subject, cp._join(phrases), 'intro', lead, known_clubs)
-        return frames[variant % len(frames)]
-    lo, hi = min(years), max(years)
-    before, mid, after = [], [], []
+def _team_catalog(phrases: list[str]) -> tuple[list[str], dict[str, list[dict]]]:
+    order = []
+    runs: dict[str, list[dict]] = {}
     for phrase in phrases:
         parsed = _parse_phrase(phrase)
         if not parsed:
-            mid.append(phrase)
             continue
-        if parsed['end'] < lo:
-            before.append(phrase)
-        elif parsed['start'] > hi:
-            after.append(phrase)
-        else:
-            mid.append(phrase)
-    if before and after and not mid:
-        frames = _bridge_frames(subject, before, after)
+        team = parsed['team']
+        if team not in runs:
+            order.append(team)
+            runs[team] = []
+        runs[team].append(parsed)
+    for group in runs.values():
+        group.sort(key=lambda item: (item['start'], item['end']))
+    return order, runs
+
+
+def _career_first(runs: dict[str, list[dict]]) -> int | None:
+    starts = [item['start'] for group in runs.values() for item in group]
+    return min(starts) if starts else None
+
+
+def _truncated_start(start: int, career_first: int | None, draft: dict | None) -> bool:
+    """A logged start year is not her debut when she was drafted before our seasons."""
+    if career_first is None or start != career_first or not draft:
+        return False
+    year = draft.get('year')
+    return isinstance(year, int) and year < career_first
+
+
+def _team_bit(team: str, group: list[dict], career_first: int | None, draft: dict | None) -> str:
+    """One mention of a club. Gaps stay inside the span unless a reason is stored."""
+    start = group[0]['start']
+    end = group[-1]['end']
+    gapped = len(group) > 1
+    truncated = _truncated_start(start, career_first, draft)
+    if not gapped and not truncated:
+        if start == end:
+            return f'the {team} in {start}'
+        return f'the {team} from {start} through {end}'
+    return f'the {team} through {end}'
+
+
+def _overseas_note(group: list[dict], extra: dict | None) -> str:
+    """Name a missing WNBA year only when a non-Olympic season is stored for it."""
+    if len(group) < 2 or not isinstance(extra, dict):
+        return ''
+    international = extra.get('international') if isinstance(extra.get('international'), dict) else {}
+    rows = international.get('rows') if isinstance(international.get('rows'), list) else []
+    covered = {year for run in group for year in range(run['start'], run['end'] + 1)}
+    notes = []
+    for year in range(group[0]['start'], group[-1]['end'] + 1):
+        if year in covered:
+            continue
+        clubs = []
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            try:
+                season = int(row.get('season'))
+            except (TypeError, ValueError):
+                continue
+            if season != year:
+                continue
+            league = str(row.get('league') or '')
+            if league in cs.OLYMPICS or 'olympic' in league.casefold():
+                continue
+            club = str(row.get('team') or '').strip()
+            if club and club not in clubs:
+                clubs.append(club)
+        if len(clubs) == 1:
+            notes.append(f'{year} overseas with {clubs[0]}')
+    if not notes:
+        return ''
+    return ', including ' + cp._join(notes)
+
+
+def _one_club_sentence(
+    name: str,
+    team: str,
+    group: list[dict],
+    draft: dict | None,
+    variant: int,
+    lead: bool,
+    extra: dict | None,
+) -> str:
+    end = group[-1]['end']
+    opener = name if lead else 'She'
+    person = name if lead else 'her'
+    note = _overseas_note(group, extra)
+    draft_team = str((draft or {}).get('team') or '')
+    if draft_team == team:
+        frames = (
+            f'{opener} played her whole WNBA career with the {team}, through {end}{note}.',
+            f'{opener} spent her WNBA career with the {team}, through {end}{note}.',
+            f'Her WNBA career was with the {team}, through {end}{note}.',
+            f'{opener} had her WNBA career with the {team}, through {end}{note}.',
+            f'In the WNBA, {opener if lead else "she"} played for the {team}, through {end}{note}.',
+            f'{opener} played in the WNBA with the {team}, through {end}{note}.',
+            f'WNBA seasons for {person} were with the {team}, through {end}{note}.',
+            f'{opener} logged her WNBA career with the {team}, through {end}{note}.',
+        )
         return frames[variant % len(frames)]
-    if before and not mid and not after:
-        relation = 'before'
-        chosen = before
-    elif after and not mid and not before:
-        relation = 'after'
-        chosen = after
-    else:
+    listed = f'the {team} through {end}'
+    frames = _listed_frames(opener, listed, 'intro', lead, known_clubs=False)
+    text = frames[variant % len(frames)]
+    if note and text.endswith('.'):
+        text = text[:-1] + note + '.'
+    return text
+
+
+def _stop_relation(teams: list[str], runs: dict[str, list[dict]], prior: str, lead: bool) -> str:
+    if lead:
+        return 'intro'
+    years = _mentioned_years(prior)
+    if not years:
+        return 'intro'
+    lo, hi = min(years), max(years)
+    starts = [runs[team][0]['start'] for team in teams]
+    ends = [runs[team][-1]['end'] for team in teams]
+    if ends and all(end < lo for end in ends):
+        return 'before'
+    if starts and all(start > hi for start in starts):
+        return 'after'
+    return 'mid'
+
+
+def _stop_sentence(
+    name: str,
+    phrases: list[str],
+    prior: str,
+    variant: int,
+    lead: bool,
+    draft: dict | None = None,
+    all_phrases: list[str] | None = None,
+    extra: dict | None = None,
+) -> str:
+    """One mention per club, in order. No false 'then', and no repeated franchise."""
+    if not phrases:
+        return ''
+    _order, runs = _team_catalog(all_phrases or phrases)
+    if not runs:
+        return ''
+    career_first = _career_first(runs)
+    missing = []
+    seen = set()
+    for phrase in phrases:
+        parsed = _parse_phrase(phrase)
+        if not parsed or parsed['team'] in seen or parsed['team'] not in runs:
+            continue
+        seen.add(parsed['team'])
+        missing.append(parsed['team'])
+    missing.sort(key=lambda team: (runs[team][0]['start'], team))
+    if not missing:
+        return ''
+    gapped_or_truncated = any(
+        len(runs[team]) > 1 or _truncated_start(runs[team][0]['start'], career_first, draft)
+        for team in missing
+    )
+    if len(_order) == 1 and gapped_or_truncated:
+        return _one_club_sentence(name, missing[0], runs[missing[0]], draft, variant, lead, extra)
+    bits = [_team_bit(team, runs[team], career_first, draft) for team in missing]
+    listed = cp._join(bits)
+    known = all(team in prior for team in missing)
+    relation = _stop_relation(missing, runs, prior, lead)
+    if relation == 'before' and len(missing) > 1:
+        # A backward list would need two clauses. Keep one pass in calendar order.
         relation = 'mid'
-        chosen = phrases
-    frames = _listed_frames(subject, cp._join(chosen), relation, lead=False, known_clubs=known_clubs)
-    return frames[variant % len(frames)]
+    subject = name if lead else 'She'
+    frames = _listed_frames(subject, listed, relation, lead, known)
+    text = frames[variant % len(frames)]
+    notes = [note for team in missing if (note := _overseas_note(runs[team], extra))]
+    if notes and text.endswith('.'):
+        text = text[:-1] + ''.join(notes) + '.'
+    return text
 
 
 def _college_sentence(name: str, college: str, variant: int, lead: bool) -> str:
@@ -670,7 +805,9 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
 
     found = []
     if lead_kind == 'teams' and phrases:
-        opener = _stop_sentence(name, phrases, '', rank + 5, lead=True)
+        opener = _stop_sentence(
+            name, phrases, '', rank + 5, lead=True, draft=draft, all_phrases=phrases, extra=extra,
+        )
         if opener:
             found.append(opener)
     for kind in order:
@@ -698,9 +835,11 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
     found = _drop_redundant_list(found, phrases)
     found = _pin_single_years(found, phrases)
     blob = ' '.join(found)
-    missing = [phrase for phrase in phrases if phrase not in blob]
+    missing = [phrase for phrase in phrases if not _phrase_covered(phrase, blob)]
     if missing:
-        team_text = _stop_sentence(name, missing, blob, rank + 5, lead=not found)
+        team_text = _stop_sentence(
+            name, missing, blob, rank + 5, lead=not found, draft=draft, all_phrases=phrases, extra=extra,
+        )
         if team_text:
             if len(found) >= 4:
                 found[-1] = team_text
