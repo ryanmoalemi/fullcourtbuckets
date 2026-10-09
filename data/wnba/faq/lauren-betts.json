@@ -78,7 +78,7 @@
     },
     {
       "question": "What are Lauren Betts's stats?",
-      "answer": "In the 2026 regular season, Lauren Betts averaged 6.4 points, 4.6 rebounds, and 1.2 assists in 44 games for the Washington Mystics. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Lauren Betts averaged 6.4 points, 4.6 rebounds, and 1.2 assists in 44 games for the Washington Mystics.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1643427"
@@ -107,7 +107,7 @@
     },
     {
       "question": "When was Lauren Betts drafted?",
-      "answer": "The Washington Mystics drafted Lauren Betts fourth overall in 2026. The first regular-season row on this page is 2026, in 44 games.",
+      "answer": "The Washington Mystics drafted Lauren Betts fourth overall in 2026. Her first regular season was 2026, in 44 games.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/draft/2026/prospects/lauren-betts"
@@ -125,7 +125,7 @@
     },
     {
       "question": "Where did Lauren Betts play college basketball?",
-      "answer": "Lauren Betts played at Stanford, then UCLA. This page lists UCLA.",
+      "answer": "Lauren Betts played at Stanford, then UCLA.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1643427",

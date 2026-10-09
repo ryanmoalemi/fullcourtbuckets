@@ -1,134 +1,212 @@
 {
   "slug": "marina-mabrey",
   "player_name": "Marina Mabrey",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Marina Mabrey's stats / points per game?",
-      "answer": "In the 2026 regular season, Marina Mabrey averaged 20.8 points, 3.3 rebounds, and 3.7 assists in 32 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Marina Mabrey's stats?",
+      "answer": "In the 2026 regular season, Marina Mabrey averaged 20.8 points, 3.3 rebounds, and 3.7 assists in 32 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marina mabrey stats",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "How old is Marina Mabrey?",
-      "answer": "She was born September 14, 1996 in Belmar, New Jersey, U.S. As of late 2026 that puts her at 30 years old.",
-      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
       ],
-      "google_keyword": "marina mabrey age",
-      "approx_monthly_volume": 590,
-      "birthdate": "1996-09-14"
-    },
-    {
-      "question": "How tall is Marina Mabrey?",
-      "answer": "Marina Mabrey is listed at 6' 1\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "marina mabrey height",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What is Marina Mabrey's contract?",
-      "answer": "Public salary trackers list Marina Mabrey at about $1,200,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "marina mabrey contract",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How much does Marina Mabrey make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Marina Mabrey's base salary / cap hit at about $1,200,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "marina mabrey salary",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Where is Marina Mabrey from?",
-      "answer": "She is from Belmar, New Jersey, U.S., and played college basketball at Notre Dame.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "where is marina mabrey from",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Marina Mabrey's nationality?",
-      "answer": "Marina Mabrey is described as American in major biographical profiles.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "marina mabrey nationality",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What team does Marina Mabrey play for?",
-      "answer": "She plays for the Toronto Tempo and wears No. 3 as a guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marina mabrey team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Marina Mabrey?",
-      "answer": "Marina Alise Mabrey, nicknamed \"Money Mabrey\", is an American professional basketball player for the Toronto Tempo of the Women's National Basketball Association (WNBA) and for Lunar Owls of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "who is marina mabrey",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Marina Mabrey attend?",
-      "answer": "Marina Mabrey played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "marina mabrey notre dame",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Marina Mabrey dating?",
-      "answer": "As of late 2026, Marina Mabrey has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
-      ],
-      "google_keyword": "marina mabrey partner",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "marina mabrey stats",
+          "vol": 9900
+        },
+        {
+          "q": "marina mabrey points per game",
+          "vol": 50
+        },
+        {
+          "q": "marina mabrey average points per game",
+          "vol": 50
+        },
+        {
+          "q": "marina mabrey points",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "Is Marina Mabrey married?",
-      "answer": "There is no widely reported public record of Marina Mabrey being married as of late 2026.",
+      "answer": "No current partner has been publicly confirmed.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marina_Mabrey"
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
       ],
-      "google_keyword": "marina mabrey wife",
-      "approx_monthly_volume": 2400
+      "queries": [
+        {
+          "q": "marina mabrey partner",
+          "vol": 3600
+        },
+        {
+          "q": "marina mabrey wife",
+          "vol": 2400
+        },
+        {
+          "q": "marina mabrey husband",
+          "vol": 880
+        },
+        {
+          "q": "marina mabrey girlfriend",
+          "vol": 590
+        },
+        {
+          "q": "is marina mabrey married",
+          "vol": 480
+        },
+        {
+          "q": "marina mabrey boyfriend",
+          "vol": 210
+        },
+        {
+          "q": "marina mabrey married",
+          "vol": 140
+        },
+        {
+          "q": "marina mabrey relationship",
+          "vol": 110
+        },
+        {
+          "q": "is marina mabrey single",
+          "vol": 70
+        },
+        {
+          "q": "is marina mabrey in a relationship",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Marina Mabrey injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
+      "question": "How old is Marina Mabrey?",
+      "answer": "Marina Mabrey was born September 14, 1996.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey age",
+          "vol": 590
+        },
+        {
+          "q": "how old is marina mabrey",
+          "vol": 390
+        },
+        {
+          "q": "marina mabrey birthday",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "How tall is Marina Mabrey?",
+      "answer": "The WNBA lists Marina Mabrey at 6 feet 1 inch.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey height",
+          "vol": 480
+        },
+        {
+          "q": "how tall is marina mabrey",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "What team does Marina Mabrey play for?",
+      "answer": "Marina Mabrey plays guard for the Toronto Tempo and wears No. 3. The Los Angeles Sparks selected her 19th overall in 2019. She has 8 regular seasons, from 2019 to 2026.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "marina mabrey injury",
-      "approx_monthly_volume": 480
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey wnba",
+          "vol": 210
+        },
+        {
+          "q": "marina mabrey toronto",
+          "vol": 70
+        },
+        {
+          "q": "marina mabrey toronto tempo",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Marina Mabrey played for?",
+      "answer": "The regular-season table lists the Los Angeles Sparks, the Dallas Wings, the Chicago Sky, the Connecticut Sun, and the Toronto Tempo for Marina Mabrey.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey teams",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Marina Mabrey play college basketball?",
+      "answer": "Marina Mabrey played at Notre Dame.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey notre dame",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "How does Marina Mabrey compare to Caitlin Clark?",
+      "answer": "In the 2026 regular season, Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever. In the 2026 regular season, Marina Mabrey averaged 20.8 points, 3.3 rebounds, and 3.7 assists in 32 games for the Toronto Tempo.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio",
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey caitlin clark",
+          "vol": 260
+        }
+      ]
+    },
+    {
+      "question": "What is Marina Mabrey's career high?",
+      "answer": "The Associated Press reported that Marina Mabrey scored 53 points for the Toronto Tempo in a 125-97 win over the Los Angeles Sparks on June 25, 2026, tying the WNBA single-game scoring record.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://apnews.com/article/sparks-tempo-score-a55854ab0aa373da6bed7efdcda9f8de"
+      ],
+      "queries": [
+        {
+          "q": "marina mabrey career high",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What was Marina Mabrey's rookie year?",
+      "answer": "The first regular-season row for Marina Mabrey is 2019. She played 31 games in that row.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629497/marina-mabrey/bio"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

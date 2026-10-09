@@ -1,138 +1,259 @@
 {
   "slug": "becky-hammon",
   "player_name": "Becky Hammon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Becky Hammon's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2014), Becky Hammon averaged 8.2 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "becky hammon stats",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Who is Becky Hammon dating?",
-      "answer": "As of late 2026, Becky Hammon has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who does Becky Hammon coach?",
+      "answer": "As of October 2026, Becky Hammon is the head coach of the Las Vegas Aces. The Aces hired her on December 31, 2021, after she was a San Antonio Spurs assistant from 2014 to 2022. The Aces site lists WNBA titles in 2022, 2023, and 2025, the 2022 Coach of the Year award, and the 2022 Commissioner's Cup.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
+        "https://aces.wnba.com/head-coach-becky-hammon"
       ],
-      "google_keyword": "becky hammon partner",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How much does Becky Hammon make?",
-      "answer": "A precise public salary or net worth figure for Becky Hammon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "becky hammon salary",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Becky Hammon?",
-      "answer": "She was born March 11, 1977 in Rapid City. As of late 2026 that puts her at 49 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
-      ],
-      "google_keyword": "how old is becky hammon",
-      "approx_monthly_volume": 480,
-      "birthdate": "1977-03-11"
-    },
-    {
-      "question": "What is Becky Hammon's contract?",
-      "answer": "Contract length and guarantees for Becky Hammon are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "becky hammon contract",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "becky hammon coach",
+          "vol": 60500
+        },
+        {
+          "q": "who does becky hammon coach",
+          "vol": 40
+        },
+        {
+          "q": "becky hammon spurs coach",
+          "vol": 390
+        },
+        {
+          "q": "becky hammon san antonio spurs",
+          "vol": 390
+        },
+        {
+          "q": "becky hammon spurs",
+          "vol": 390
+        },
+        {
+          "q": "becky hammon teams coached",
+          "vol": 140
+        },
+        {
+          "q": "aces coach becky hammon",
+          "vol": 110
+        },
+        {
+          "q": "becky hammon coaching career",
+          "vol": 70
+        },
+        {
+          "q": "becky hammon aces",
+          "vol": 70
+        },
+        {
+          "q": "las vegas aces coach becky hammon",
+          "vol": 50
+        },
+        {
+          "q": "becky hammon nba",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Is Becky Hammon married?",
-      "answer": "There is no widely reported public record of Becky Hammon being married as of late 2026.",
+      "answer": "Becky Hammon's partner is Brenda Milano, a former Wagner College player and coach, and the couple are raising two sons.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
+        "https://www.marca.com/en/basketball/wnba/las-vegas-aces/2025/10/11/68e95ff9268e3e450f8b45af.html"
       ],
-      "google_keyword": "becky hammon wife",
-      "approx_monthly_volume": 5400
+      "queries": [
+        {
+          "q": "becky hammon wife",
+          "vol": 5400
+        },
+        {
+          "q": "is becky hammon married",
+          "vol": 1000
+        },
+        {
+          "q": "becky hammon husband",
+          "vol": 1000
+        },
+        {
+          "q": "becky hammon partner",
+          "vol": 590
+        },
+        {
+          "q": "becky hammon spouse",
+          "vol": 260
+        },
+        {
+          "q": "who is becky hammon married to",
+          "vol": 210
+        },
+        {
+          "q": "becky hammon ex husband",
+          "vol": 210
+        },
+        {
+          "q": "becky hammon married",
+          "vol": 170
+        },
+        {
+          "q": "is becky hammon still married",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Where is Becky Hammon from?",
-      "answer": "She is from Rapid City.",
+      "question": "How old is Becky Hammon?",
+      "answer": "Becky Hammon was born March 11, 1977.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
       ],
-      "google_keyword": "where is becky hammon from",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How many championships does Becky Hammon have?",
-      "answer": "Public biographical sources cover Becky Hammon's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
-      ],
-      "google_keyword": "becky hammon championships",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "how old is becky hammon",
+          "vol": 480
+        },
+        {
+          "q": "becky hammon age",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "Who is Becky Hammon?",
-      "answer": "Rebecca Lynn Hammon is an American-Russian professional basketball coach and former player who is the head coach of the Las Vegas Aces of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
-      ],
-      "google_keyword": "who is becky hammon",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Does Becky Hammon have kids?",
-      "answer": "There is no widely reported public information that Becky Hammon has children as of late 2026.",
+      "answer": "Becky Hammon is the head coach of the Las Vegas Aces and a former WNBA guard. The Aces site says she played 16 seasons, from 1999 to 2014, went undrafted in 1999 after Colorado State, and was inducted into the Naismith Memorial Basketball Hall of Fame on August 12, 2023. She was also inducted into the Women's Basketball Hall of Fame in 2022. She retired as a player after the 2014 season.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
+        "https://aces.wnba.com/head-coach-becky-hammon",
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
       ],
-      "google_keyword": "becky hammon son",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who are Becky Hammon's parents?",
-      "answer": "Public profiles share limited verified detail about Becky Hammon's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
-      ],
-      "google_keyword": "becky hammon family",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Did Becky Hammon retire?",
-      "answer": "As of late 2026, Becky Hammon is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
-      ],
-      "google_keyword": "when did becky hammon retire",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "who is becky hammon",
+          "vol": 480
+        },
+        {
+          "q": "wnba becky hammon",
+          "vol": 260
+        },
+        {
+          "q": "becky hammon player",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "How tall is Becky Hammon?",
-      "answer": "Becky Hammon is listed at 5' 6\".",
+      "answer": "The WNBA lists Becky Hammon at 5 feet 6 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Becky_Hammon"
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
       ],
-      "google_keyword": "becky hammon height",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "becky hammon height",
+          "vol": 320
+        },
+        {
+          "q": "how tall is becky hammon",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "What are Becky Hammon's stats?",
+      "answer": "In the 2014 regular season, Becky Hammon averaged 8.2 points, 1.4 rebounds, and 4.2 assists in 32 games for the San Antonio Stars.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon stats",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "Where did Becky Hammon play in the WNBA?",
+      "answer": "The Aces coaching page lists the New York Liberty from 1999 to 2006 and San Antonio from 2007 to 2014.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/head-coach-becky-hammon",
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon liberty",
+          "vol": 140
+        },
+        {
+          "q": "becky hammon ny liberty",
+          "vol": 50
+        },
+        {
+          "q": "becky hammon new york liberty",
+          "vol": 50
+        },
+        {
+          "q": "becky hammon career",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Did Becky Hammon win a championship as a player?",
+      "answer": "The Aces coaching page lists WNBA Finals appearances for Becky Hammon in 1999, 2000, 2002, and 2008. It does not list a WNBA title for her as a player. Her coaching titles are 2022, 2023, and 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/head-coach-becky-hammon"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon championships",
+          "vol": 110
+        },
+        {
+          "q": "did becky hammon win a championship as a player",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Becky Hammon go to college?",
+      "answer": "Becky Hammon played at Colorado State. The WNBA says she attended Stevens High School in Rapid City, South Dakota.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100342/becky-hammon/bio",
+        "https://aces.wnba.com/head-coach-becky-hammon"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon csu",
+          "vol": 50
+        },
+        {
+          "q": "becky hammon colorado state",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Who is in Becky Hammon's family?",
+      "answer": "The WNBA says Becky Hammon has one older brother. It does not name him.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100342/becky-hammon/bio"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon family",
+          "vol": 110
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

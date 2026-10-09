@@ -1,151 +1,188 @@
 {
   "slug": "jackie-young",
   "player_name": "Jackie Young",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Jackie Young's stats / points per game?",
-      "answer": "In the 2026 regular season, Jackie Young averaged 19.4 points, 4.3 rebounds, and 6.6 assists in 41 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are Jackie Young's stats?",
+      "answer": "In the 2026 regular season, Jackie Young averaged 18.9 points, 4.4 rebounds, and 6.8 assists in 43 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jackie young stats",
-      "approx_monthly_volume": 22200
-    },
-    {
-      "question": "How tall is Jackie Young?",
-      "answer": "Jackie Young is listed at 6' 0\" by the WNBA.",
-      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
+        "https://www.wnba.com/player/1629498/jackie-young"
       ],
-      "google_keyword": "jackie young height",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How old is Jackie Young?",
-      "answer": "She was born September 16, 1997 in Princeton, Indiana, U.S. As of late 2026 that puts her at 29 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "jackie young age",
-      "approx_monthly_volume": 480,
-      "birthdate": "1997-09-16"
-    },
-    {
-      "question": "How much does Jackie Young make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Jackie Young's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "jackie young net worth",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What is Jackie Young's contract?",
-      "answer": "Public salary trackers list Jackie Young at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "jackie young contract",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What did Jackie Young score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Jackie Young had 23 points, 3 rebounds, and 8 assists in a 98-77 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is jackie young playing tonight",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Where is Jackie Young from?",
-      "answer": "She is from Princeton, Indiana, U.S., and played college basketball at Notre Dame.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "where is jackie young from",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Jackie Young's jersey number?",
-      "answer": "Jackie Young wears number 0 for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jackie young number",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What team does Jackie Young play for?",
-      "answer": "She plays for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jackie young team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Jackie Young?",
-      "answer": "Jacquelyn Young is an American professional basketball player for the Las Vegas Aces of the Women's National Basketball Association (WNBA) and for the Laces of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "who is jackie young",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Jackie Young's college stats?",
-      "answer": "Across her college career at Notre Dame, Jackie Young averaged 12.4 points, 6.3 rebounds, and 3.5 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/jackie-young-1.html",
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "jackie young college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Jackie Young attend?",
-      "answer": "Jackie Young played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "jackie young notre dame",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who is Jackie Young dating?",
-      "answer": "As of late 2026, Jackie Young has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
-      ],
-      "google_keyword": "jackie young partner",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "jackie young stats",
+          "vol": 22200
+        },
+        {
+          "q": "jackie young points per game",
+          "vol": 140
+        },
+        {
+          "q": "jackie young average points per game",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "Is Jackie Young married?",
-      "answer": "There is no widely reported public record of Jackie Young being married as of late 2026.",
+      "answer": "No current partner has been publicly confirmed.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jackie_Young"
+        "https://www.wnba.com/player/1629498/jackie-young"
       ],
-      "google_keyword": "jackie young husband",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "jackie young husband",
+          "vol": 3600
+        },
+        {
+          "q": "jackie young partner",
+          "vol": 1600
+        },
+        {
+          "q": "jackie young wife",
+          "vol": 1300
+        },
+        {
+          "q": "is jackie young married",
+          "vol": 880
+        },
+        {
+          "q": "who is jackie young dating",
+          "vol": 590
+        },
+        {
+          "q": "jackie young dating",
+          "vol": 390
+        },
+        {
+          "q": "is jackie young single",
+          "vol": 140
+        },
+        {
+          "q": "is jackie young in a relationship",
+          "vol": 140
+        },
+        {
+          "q": "jackie young relationship",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Is Jackie Young injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
+      "question": "What team does Jackie Young play for?",
+      "answer": "Jackie Young plays guard for the Las Vegas Aces and wears No. 0. Las Vegas drafted her first overall on April 10, 2019. The Aces bio lists WNBA titles in 2022, 2023, and 2025.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "jackie young injury",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young",
+        "https://aces.wnba.com/jackie-young-bio"
+      ],
+      "queries": [
+        {
+          "q": "jackie young wnba",
+          "vol": 1600
+        },
+        {
+          "q": "jackie young aces",
+          "vol": 260
+        }
+      ]
+    },
+    {
+      "question": "How tall is Jackie Young?",
+      "answer": "The WNBA lists Jackie Young at 6 feet.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young"
+      ],
+      "queries": [
+        {
+          "q": "jackie young height",
+          "vol": 720
+        },
+        {
+          "q": "how tall is jackie young",
+          "vol": 590
+        }
+      ]
+    },
+    {
+      "question": "How old is Jackie Young?",
+      "answer": "Jackie Young was born September 16, 1997.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young"
+      ],
+      "queries": [
+        {
+          "q": "jackie young age",
+          "vol": 480
+        },
+        {
+          "q": "how old is jackie young",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "Where did Jackie Young play college basketball?",
+      "answer": "Jackie Young played at Notre Dame.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young",
+        "https://aces.wnba.com/jackie-young-bio"
+      ],
+      "queries": [
+        {
+          "q": "jackie young notre dame",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Where is Jackie Young from?",
+      "answer": "The Aces bio says Jackie Young played at Princeton Community High School in Indiana and finished as the leading scorer in Indiana high school history with 3,268 points.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/jackie-young-bio"
+      ],
+      "queries": [
+        {
+          "q": "where is jackie young from",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Who is Jackie Young?",
+      "answer": "Jackie Young is a guard for the Las Vegas Aces and a Notre Dame alum. The WNBA lists her as the first overall pick in 2019, a three-time champion in 2022, 2023, and 2025, and the 2022 Most Improved Player.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young",
+        "https://aces.wnba.com/jackie-young-bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Which teams has Jackie Young played for?",
+      "answer": "The regular-season table lists the Las Vegas Aces for Jackie Young.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How many years has Jackie Young been in the WNBA?",
+      "answer": "Jackie Young has 8 regular seasons, from 2019 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629498/jackie-young"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

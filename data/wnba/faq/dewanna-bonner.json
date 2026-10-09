@@ -1,162 +1,295 @@
 {
   "slug": "dewanna-bonner",
   "player_name": "DeWanna Bonner",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are DeWanna Bonner's stats / points per game?",
-      "answer": "In the 2026 regular season, DeWanna Bonner averaged 10.4 points, 6.0 rebounds, and 1.6 assists in 41 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are DeWanna Bonner's stats?",
+      "answer": "DeWanna Bonner's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dewanna bonner stats",
-      "approx_monthly_volume": 8100
+      "sources": [
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
+      ],
+      "queries": [
+        {
+          "q": "dewanna bonner stats",
+          "vol": 8100
+        },
+        {
+          "q": "dewanna bonner rebounds per game",
+          "vol": 50
+        },
+        {
+          "q": "dewanna bonner rebounds",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What did DeWanna Bonner average for each team in 2026?",
+      "answer": "In 2026, DeWanna Bonner's regular-season lines are split by team. She averaged 10.6 points, 6.1 rebounds, and 1.5 assists in 37 games for the Phoenix Mercury, and 8.6 points, 5.4 rebounds, and 1.8 assists in 5 games for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
+      ],
+      "queries": [
+        {
+          "q": "dewanna bonner fever",
+          "vol": 110
+        },
+        {
+          "q": "dewanna bonner indiana fever",
+          "vol": 70
+        },
+        {
+          "q": "dewanna bonner mercury",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "Is DeWanna Bonner married?",
-      "answer": "No. DeWanna Bonner is not married. She is engaged to Alyssa Thomas. Thomas proposed during WNBA All-Star weekend in July 2023.",
+      "answer": "DeWanna Bonner and Alyssa Thomas announced their engagement in July 2023. They have not publicly announced a wedding.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.theknot.com/content/wnba-relationships"
+        "https://apnews.com/article/bonner-thomas-sun-wnba-engagement-2406246017cd25165676fb2aff9d12e8"
       ],
-      "google_keyword": "dewanna bonner wife",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "dewanna bonner wife",
+          "vol": 3600
+        },
+        {
+          "q": "alyssa thomas and dewanna bonner",
+          "vol": 1000
+        },
+        {
+          "q": "dewanna bonner husband",
+          "vol": 210
+        },
+        {
+          "q": "alyssa thomas and dewanna bonner married",
+          "vol": 170
+        },
+        {
+          "q": "is dewanna bonner married",
+          "vol": 170
+        },
+        {
+          "q": "who is dewanna bonner married to",
+          "vol": 170
+        },
+        {
+          "q": "dewanna bonner alyssa thomas wedding",
+          "vol": 110
+        },
+        {
+          "q": "are dewanna bonner and alyssa thomas still together",
+          "vol": 110
+        },
+        {
+          "q": "dewanna bonner married",
+          "vol": 70
+        },
+        {
+          "q": "dewanna bonner fiance",
+          "vol": 70
+        },
+        {
+          "q": "dewanna bonner partner",
+          "vol": 90
+        },
+        {
+          "q": "dewanna bonner spouse",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Does DeWanna Bonner have twins?",
+      "answer": "DeWanna Bonner has twin daughters, Cali and Demi, whom she and Candice Dupree welcomed in 2017.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio",
+        "https://www.espn.com/wnba/story/_/id/20213758/dewanna-bonner-candice-dupree-welcome-twin-girls-family"
+      ],
+      "queries": [
+        {
+          "q": "dewanna bonner ex wife",
+          "vol": 1000
+        },
+        {
+          "q": "dewanna bonner twins",
+          "vol": 480
+        },
+        {
+          "q": "candice dupree dewanna bonner",
+          "vol": 110
+        },
+        {
+          "q": "dewanna bonner candice dupree split",
+          "vol": 90
+        },
+        {
+          "q": "are candice dupree and dewanna bonner still married",
+          "vol": 90
+        },
+        {
+          "q": "dewanna bonner candice dupree wedding",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is DeWanna Bonner?",
-      "answer": "DeWanna Bonner is listed at 6' 4\" by the WNBA.",
+      "answer": "The WNBA lists DeWanna Bonner at 6 feet 4 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "dewanna bonner height",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "dewanna bonner height",
+          "vol": 720
+        },
+        {
+          "q": "how tall is dewanna bonner",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "How old is DeWanna Bonner?",
-      "answer": "She was born August 21, 1987 in Fairfield, Alabama, U.S. As of late 2026 that puts her at 39 years old.",
+      "answer": "DeWanna Bonner was born August 21, 1987.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "dewanna bonner age",
-      "approx_monthly_volume": 480,
-      "birthdate": "1987-08-21"
-    },
-    {
-      "question": "What did DeWanna Bonner score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 at the New York Liberty), DeWanna Bonner had 17 points, 6 rebounds, and 2 assists in a 95-84 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is dewanna bonner playing tonight",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who is DeWanna Bonner dating?",
-      "answer": "She got engaged in 2023 to former Sun and current Mercury teammate Alyssa Thomas, who proposed to Bonner during that year's All-Star weekend.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
-      ],
-      "google_keyword": "dewanna bonner partner",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How many championships does DeWanna Bonner have?",
-      "answer": "WNBA Championship with the Mercury, scoring 12 points, 9 rebounds and 3 assists in the clinching .",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
-      ],
-      "google_keyword": "dewanna bonner championship",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "dewanna bonner age",
+          "vol": 480
+        },
+        {
+          "q": "how old is dewanna bonner",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "What team does DeWanna Bonner play for?",
-      "answer": "She plays for the Atlanta Dream and wears No. 24 as a forward.",
-      "answer_kind": "stats",
+      "answer": "DeWanna Bonner plays forward for the Atlanta Dream and wears No. 24. Her 2026 regular season is split between the Phoenix Mercury and the Atlanta Dream.",
+      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "who does dewanna bonner play for",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "dewanna bonner wnba",
+          "vol": 210
+        },
+        {
+          "q": "who does dewanna bonner play for",
+          "vol": 70
+        },
+        {
+          "q": "dewanna bonner team",
+          "vol": 50
+        },
+        {
+          "q": "dewanna bonner position",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How many championships does DeWanna Bonner have?",
+      "answer": "The WNBA lists two titles for DeWanna Bonner with the Phoenix Mercury, in 2009 and 2014.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
+      ],
+      "queries": [
+        {
+          "q": "dewanna bonner championship",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "Where is DeWanna Bonner from?",
-      "answer": "She is from Fairfield, Alabama, U.S.",
+      "answer": "The WNBA says DeWanna Bonner was born in Fairfield, Alabama. Her parents are LaShelle Bonner and Gregory McCall, and her sister Erica McCall played in the WNBA.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "where is dewanna bonner from",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "dewanna bonner parents",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Who is DeWanna Bonner?",
-      "answer": "DeWanna Bonner is an American professional basketball player for the Atlanta Dream of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Where did DeWanna Bonner play college basketball?",
+      "answer": "DeWanna Bonner played at Auburn. The WNBA says she earned a psychology degree there.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "who is dewanna bonner",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "dewanna bonner auburn",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What is DeWanna Bonner's net worth?",
-      "answer": "Public salary databases list DeWanna Bonner's reported 2025 WNBA salary near $200,000. Endorsements and overseas pay are separate from that figure.",
-      "answer_kind": "researched",
+      "question": "How much does DeWanna Bonner weigh?",
+      "answer": "The WNBA lists DeWanna Bonner at 140 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/free-agents/signed/_/year/2025"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "dewanna bonner net worth",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "dewanna bonner weight",
+          "vol": 140
+        },
+        {
+          "q": "dewanna bonner height weight",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "When was DeWanna Bonner drafted?",
-      "answer": "After a successful college career at Auburn, she was drafted by the Phoenix Mercury with the fifth overall pick of the 2009 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
-      ],
-      "google_keyword": "dewanna bonner draft",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is DeWanna Bonner's contract?",
-      "answer": "Contract length and guarantees for DeWanna Bonner are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "dewanna bonner contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What position does DeWanna Bonner play?",
-      "answer": "DeWanna Bonner is listed as a F for the Atlanta Dream.",
+      "question": "What was DeWanna Bonner's rookie year?",
+      "answer": "The first regular-season row for DeWanna Bonner is 2009. She played 34 games in that row.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dewanna bonner position",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is DeWanna Bonner injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "dewanna bonner injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Did DeWanna Bonner retire?",
-      "answer": "As of late 2026, DeWanna Bonner is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/DeWanna_Bonner"
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
       ],
-      "google_keyword": "dewanna bonner retirement decision",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "dewanna bonner draft",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How many years has DeWanna Bonner been in the WNBA?",
+      "answer": "DeWanna Bonner has 17 regular seasons: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, and 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/201886/dewanna-bonner/bio"
+      ],
+      "queries": [
+        {
+          "q": "how long has dewanna bonner been in the wnba",
+          "vol": 40
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

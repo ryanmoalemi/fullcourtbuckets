@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Sabrina Ionescu's stats?",
-      "answer": "In the 2026 regular season, Sabrina Ionescu averaged 14.6 points, 3.8 rebounds, and 4.7 assists in 31 games for the New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Sabrina Ionescu averaged 14.6 points, 3.8 rebounds, and 4.7 assists in 31 games for the New York Liberty.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
@@ -54,7 +54,7 @@
     },
     {
       "question": "How old is Sabrina Ionescu?",
-      "answer": "Sabrina Ionescu was born December 6, 1997. She is 28.",
+      "answer": "Sabrina Ionescu was born December 6, 1997.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
@@ -139,7 +139,7 @@
     },
     {
       "question": "What team does Sabrina Ionescu play for?",
-      "answer": "Sabrina Ionescu plays guard for the New York Liberty and wears No. 20. The Liberty drafted her No. 1 overall in 2020. This page lists 7 regular seasons with New York, from 2020 to 2026.",
+      "answer": "Sabrina Ionescu plays guard for the New York Liberty and wears No. 20. The Liberty drafted her No. 1 overall in 2020. She has 7 regular seasons with New York, from 2020 to 2026.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"

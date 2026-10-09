@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Azzi Fudd's stats?",
-      "answer": "In the 2026 regular season, Azzi Fudd averaged 13.1 points, 1.7 rebounds, and 1.8 assists in 30 games for the Dallas Wings. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Azzi Fudd averaged 13.1 points, 1.7 rebounds, and 1.8 assists in 30 games for the Dallas Wings.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1643425"
@@ -69,7 +69,7 @@
     },
     {
       "question": "When was Azzi Fudd drafted?",
-      "answer": "The Dallas Wings drafted Azzi Fudd No. 1 overall in 2026. The first regular-season row on this page is 2026, in 30 games.",
+      "answer": "The Dallas Wings drafted Azzi Fudd No. 1 overall in 2026. Her first regular season was 2026, in 30 games.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/1643425",
@@ -88,7 +88,7 @@
     },
     {
       "question": "How old is Azzi Fudd?",
-      "answer": "Azzi Fudd was born November 11, 2002. She is 23.",
+      "answer": "Azzi Fudd was born November 11, 2002.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1643425"

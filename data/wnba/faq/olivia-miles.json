@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Olivia Miles's stats?",
-      "answer": "In the 2026 regular season, Olivia Miles averaged 19.8 points, 4.7 rebounds, and 6.0 assists in 40 games for the Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Olivia Miles averaged 19.8 points, 4.7 rebounds, and 6.0 assists in 40 games for the Minnesota Lynx.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1643426"
@@ -46,7 +46,7 @@
     },
     {
       "question": "Where did Olivia Miles play college basketball?",
-      "answer": "Olivia Miles played at Notre Dame, then transferred to TCU. This page lists TCU.",
+      "answer": "Olivia Miles played at Notre Dame, then transferred to TCU.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/draft/2026/prospects/olivia-miles"
@@ -99,7 +99,7 @@
     },
     {
       "question": "When was Olivia Miles drafted?",
-      "answer": "The Minnesota Lynx drafted Olivia Miles second overall in 2026. The first regular-season row on this page is 2026, in 40 games.",
+      "answer": "The Minnesota Lynx drafted Olivia Miles second overall in 2026. Her first regular season was 2026, in 40 games.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/draft/2026/prospects/olivia-miles"

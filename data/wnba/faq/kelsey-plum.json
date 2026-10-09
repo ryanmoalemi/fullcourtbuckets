@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Kelsey Plum's stats?",
-      "answer": "Kelsey Plum's latest season is listed by team on this page, not as one combined average.",
+      "answer": "Kelsey Plum's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1628276/kelsey-plum/bio"
@@ -24,7 +24,7 @@
     },
     {
       "question": "What did Kelsey Plum average for each team in 2026?",
-      "answer": "In 2026, Kelsey Plum's regular-season lines on this page are split by team. She averaged 23.9 points, 2.2 rebounds, and 6.4 assists in 12 games for the Los Angeles Sparks, and 15.8 points, 1.8 rebounds, and 2.8 assists in 5 games for the Phoenix Mercury.",
+      "answer": "In 2026, Kelsey Plum's regular-season lines are split by team. She averaged 23.9 points, 2.2 rebounds, and 6.4 assists in 12 games for the Los Angeles Sparks, and 15.8 points, 1.8 rebounds, and 2.8 assists in 5 games for the Phoenix Mercury.",
       "answer_kind": "stats",
       "sources": [],
       "queries": [
@@ -111,7 +111,7 @@
     },
     {
       "question": "How much did Kelsey Plum sign for with the Sparks?",
-      "answer": "ESPN reported that Kelsey Plum's one-year deal to return to the Los Angeles Sparks was worth $999,999. The Sparks announcement did not release terms. She was traded to the Phoenix Mercury on August 2, 2026, and that figure is not a combined 2026 average.",
+      "answer": "Kelsey Plum's one-year deal to return to the Los Angeles Sparks was reported at $999,999. The Sparks announcement did not release terms. She was traded to the Phoenix Mercury on August 2, 2026, and that figure is not a combined 2026 average.",
       "answer_kind": "researched",
       "sources": [
         "https://www.espn.com/wnba/story/_/id/48465712/kelsey-plum-signs-one-year-deal-return-sparks",
