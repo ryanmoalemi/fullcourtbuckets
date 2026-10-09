@@ -238,11 +238,29 @@ class BuildTests(unittest.TestCase):
         faq_path = ROOT.parent / 'data/wnba/faq/aja-wilson.json'
         faq = json.loads(faq_path.read_text())
         self.assertEqual(faq['slug'], 'aja-wilson')
-        self.assertGreaterEqual(len(faq['items']), 15)
+        self.assertEqual(faq['source'], 'Google search demand via OpenSEO, Oct 8, 2026')
+        questions = [item['question'] for item in faq['items']]
+        self.assertEqual(questions, [
+            "What are A'ja Wilson's stats?",
+            "Does A'ja Wilson have a signature shoe?",
+            "Who is A'ja Wilson dating?",
+            "What awards has A'ja Wilson won?",
+            "How tall is A'ja Wilson?",
+            "How much does A'ja Wilson make?",
+            "How old is A'ja Wilson?",
+            "How many championships does A'ja Wilson have?",
+            "Who is A'ja Wilson?",
+            "Where is A'ja Wilson from?",
+            "What team does A'ja Wilson play for?",
+            "Who are A'ja Wilson's teammates?",
+            "How does A'ja Wilson compare to Caitlin Clark?",
+            "How much does A'ja Wilson weigh?",
+            "Who is A'ja Wilson's brother?",
+        ])
         profile = json.loads((ROOT.parent / 'data/wnba/players/aja-wilson.json').read_text())
         html, entity = b.faq_section(profile)
         self.assertEqual(len(entity['mainEntity']), len(faq['items']))
-        self.assertEqual([q['name'] for q in entity['mainEntity']], [item['question'] for item in faq['items']])
+        self.assertEqual([q['name'] for q in entity['mainEntity']], questions)
         for item, node in zip(faq['items'], entity['mainEntity']):
             if not b.faq_stat_kind(item['question']):
                 self.assertEqual(node['acceptedAnswer']['text'], item['answer'])
@@ -250,18 +268,21 @@ class BuildTests(unittest.TestCase):
             (node['name'], node['acceptedAnswer']['text']) for node in entity['mainEntity']
         ])
         self.assertIn('How tall is A&#x27;ja Wilson?', html)
-        self.assertIn('How many MVPs does A&#x27;ja Wilson have?', html)
-        self.assertIn('What did A&#x27;ja Wilson score in her last game?', html)
+        self.assertIn('What are A&#x27;ja Wilson&#x27;s stats?', html)
+        self.assertIn('Who is A&#x27;ja Wilson dating?', html)
         answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
         self.assertEqual(
-            answers["How many years has A'ja Wilson been in the WNBA?"],
-            "A'ja Wilson has 9 regular seasons on this page, from 2018 to 2026.",
+            answers["What are A'ja Wilson's stats?"],
+            "In the 2026 regular season, A'ja Wilson averaged 26.2 points, 9.4 rebounds, and 3.2 assists in 41 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
         )
-        self.assertIn(
-            '<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>',
-            answers["Where can I read about A'ja Wilson and the 2026 FIBA World Cup?"],
-        )
-        self.assertIn('How many years has A&#x27;ja Wilson been in the WNBA?', html)
+        self.assertIn('Bam Adebayo', answers["Who is A'ja Wilson dating?"])
+        self.assertIn('not married', answers["Who is A'ja Wilson dating?"])
+        self.assertNotIn('engag', answers["Who is A'ja Wilson dating?"].casefold())
+        self.assertIn('five WNBA MVP', answers["What awards has A'ja Wilson won?"])
+        self.assertIn('9 regular seasons', answers["What team does A'ja Wilson play for?"])
+        self.assertIn('22.3 points', answers["How does A'ja Wilson compare to Caitlin Clark?"])
+        for dropped in ('playing tonight', 'net worth', 'wingspan', 'tattoo', 'injured', 'last game'):
+            self.assertNotIn(dropped, ' '.join(questions).casefold())
         self.assertNotIn('target="_blank"', html[html.find('id="faq"'):html.find('id="sources"')])
         self.assertNotIn('regular-season averages', html)
         self.assertNotIn('google_keyword', html)
