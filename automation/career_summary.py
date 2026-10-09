@@ -147,7 +147,8 @@ def _line_bits(row: dict) -> str:
     listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ' and ' + bits[-1]
     games = _games(row.get('games_played'))
     if games is not None:
-        listed += f' in {games} games'
+        noun = 'game' if games == '1' else 'games'
+        listed += f' in {games} {noun}'
     return listed
 
 
