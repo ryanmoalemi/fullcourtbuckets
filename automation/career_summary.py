@@ -166,13 +166,12 @@ def _best(rows: list[dict]) -> dict | None:
 
 
 def _best_sentence(name: str, row: dict, kind: str) -> str:
+    """Kept for older callers. Editorial copy does not use this skeleton."""
     line = _line_bits(row)
     if not line:
         return ''
-    return (
-        f"The highest points-per-game {kind} line stored for {name} is {line} "
-        f"with the {_team(row)} in {row['season']}."
-    )
+    comp = 'playoffs' if kind == 'playoff' else 'regular season'
+    return f"{name} averaged {line} for the {_team(row)} in {row['season']} during the {comp}."
 
 
 def _college_key(value: str) -> str:
@@ -190,51 +189,20 @@ def profile_college(profile: dict) -> str:
     return text
 
 
-def stat_sentences(profile: dict) -> list[str]:
-    """Named sentences from the season rows already stored for this player."""
-    name = player_name(profile)
-    if not name:
-        return []
-    regular = _rows(profile, 2)
-    playoffs = _rows(profile, 3)
-    position = POSITIONS.get(str((profile.get('player') or {}).get('position') or '').strip(), '')
-    who = f'{name}, a {position},' if position else name
-    sentences = []
-    if regular:
-        years = sorted({row['season'] for row in regular})
-        spans = _spans(regular)
-        if len(years) == 1:
-            span = f'in {years[0]}'
-        else:
-            span = f'from {years[0]} through {years[-1]}'
-        parts = [_span_phrase(group) for group in spans]
-        if len(parts) == 1:
-            listed = parts[0]
-        else:
-            listed = ', '.join(parts[:-1]) + ', and ' + parts[-1]
-        sentences.append(
-            f'Regular-season rows for {who} on this page run {span} with {listed}.'
-        )
-        best = _best(regular)
-        if best:
-            sentences.append(_best_sentence(name, best, 'regular-season'))
-    elif playoffs:
-        sentences.append(f'{who} has no regular-season line stored on this page.')
-    else:
-        sentences.append(f'{who} has no season line stored on this page.')
-    if playoffs:
-        best = _best(playoffs)
-        if best:
-            sentences.append(_best_sentence(name, best, 'playoff'))
-    college = profile_college(profile)
-    if college:
-        sentences.append(f'The college stored for {name} is {college}.')
-    for sentence in sentences:
-        if name not in sentence:
-            raise ValueError(f'Career sentence is missing the player name: {sentence}')
-        if word_count(sentence) >= 12 and name not in sentence:
-            raise ValueError(sentence)
-    return [sentence for sentence in sentences if sentence]
+# Olympic tournaments as labeled on the international table. Anything else is omitted.
+OLYMPICS = {
+    'Athens 2004': (2004, 'Athens'),
+    'Beijing 2008': (2008, 'Beijing'),
+    'London 2012': (2012, 'London'),
+    'Rio de Janeiro 2016': (2016, 'Rio de Janeiro'),
+    'Tokyo 2020': (2020, 'Tokyo'),
+    'Paris 2024': (2024, 'Paris'),
+}
+META_RE = re.compile(
+    r'\b(?:rows?|stored|this page|on this page|database|line)\b',
+    re.I,
+)
+_RANK_CACHE: dict | None = None
 
 
 def _ordinal(number: int) -> str:
@@ -275,76 +243,31 @@ def load_photos(root: Path | None) -> dict:
     return data if isinstance(data, dict) else {}
 
 
-def extra_sentences(profile: dict, extra: dict) -> list[str]:
-    """Sentences that cite Basketball-Reference fields already saved for this player."""
-    name = player_name(profile)
-    if not name or not isinstance(extra, dict):
-        return []
-    sentences = []
-    draft = extra.get('draft') if isinstance(extra.get('draft'), dict) else None
-    source = str(extra.get('bbref') or (draft or {}).get('source') or '').strip()
-    if draft and source and isinstance(draft.get('year'), int) and isinstance(draft.get('overall'), int):
-        team = str(draft.get('team') or '').strip()
-        if team:
-            linked = prose_link(source, 'Basketball-Reference')
-            sentences.append(
-                f'{linked} records {name} as the {_ordinal(draft["overall"])} overall pick, '
-                f'taken by the {team} in the {draft["year"]} WNBA draft.'
-            )
-    bbref_college = str((extra.get('college') or {}).get('name') or '').strip() if isinstance(extra.get('college'), dict) else ''
-    stored = profile_college(profile)
-    if bbref_college and source:
-        linked = prose_link(source, 'Basketball-Reference')
-        if stored and _college_key(stored) == _college_key(bbref_college):
-            sentences.append(f'{linked} lists the same college for {name}: {stored}.')
-        elif not stored:
-            sentences.append(f'{linked} lists {bbref_college} as the college for {name}.')
-    international = extra.get('international') if isinstance(extra.get('international'), dict) else None
-    rows = (international or {}).get('rows') if international else None
-    page = str((international or {}).get('source') or '').strip()
-    if page and isinstance(rows, list) and rows:
-        teams = []
-        leagues = []
-        for row in rows:
-            if not isinstance(row, dict):
-                continue
-            team = str(row.get('team') or '').strip()
-            league = str(row.get('league') or '').strip()
-            if team and team not in teams:
-                teams.append(team)
-            if league and league not in leagues:
-                leagues.append(league)
-        if teams:
-            linked = prose_link(page, 'Basketball-Reference')
-            team_list = ', '.join(teams[:8])
-            league_list = ', '.join(leagues[:8])
-            extra_teams = ''
-            if len(teams) > 8:
-                extra_teams = f' and {len(teams) - 8} more teams'
-            noun = 'row' if len(rows) == 1 else 'rows'
-            sentences.append(
-                f'{linked} lists {len(rows)} international season {noun} for {name} '
-                f'with {team_list}{extra_teams}'
-                + (f', in {league_list}.' if league_list else '.')
-            )
-    for sentence in sentences:
-        plain = re.sub(r'<[^>]+>', '', sentence)
-        if name not in plain:
-            raise ValueError(f'Extra sentence is missing the player name: {plain}')
-    return sentences
-
-
 def sentences_for(profile: dict, root: Path | None = None) -> list[str]:
+    import career_prose
     extra = {}
     if root is not None:
         slug = str(profile.get('slug') or '')
         extra = load_extras(root).get(slug) or {}
-    found = stat_sentences(profile) + extra_sentences(profile, extra)
-    blob = ' '.join(re.sub(r'<[^>]+>', ' ', sentence) for sentence in found).casefold()
-    for marker in MARKERS:
-        if marker in blob:
-            raise ValueError(f'Unverified-claim marker in {profile.get("slug")}: {marker}')
-    return found
+    return career_prose.sentences(profile, extra, root)
+
+
+def sources_line(profile: dict, root: Path | None = None) -> str:
+    """One short credit line. Season numbers are ours. Draft and Olympic notes cite Basketball-Reference."""
+    bits = ['Full Court Buckets season logs']
+    extra = {}
+    if root is not None:
+        slug = str(profile.get('slug') or '')
+        extra = load_extras(root).get(slug) or {}
+    if isinstance(extra, dict):
+        bbref = str(extra.get('bbref') or '').strip()
+        international = extra.get('international') if isinstance(extra.get('international'), dict) else None
+        intl = str((international or {}).get('source') or '').strip()
+        if bbref:
+            bits.append(prose_link(bbref, 'Basketball-Reference'))
+        elif intl:
+            bits.append(prose_link(intl, 'Basketball-Reference'))
+    return 'Sources: ' + '; '.join(bits) + '.'
 
 
 def hero_plain(profile: dict, root: Path | None = None) -> str:
@@ -389,16 +312,14 @@ def photo_html(profile: dict, root: Path | None) -> str:
     )
 
 
-def section_html(profile: dict, root: Path | None = None) -> str:
+def section_html(profile: dict, root: Path | None = None, figure: str = '') -> str:
     found = sentences_for(profile, root)
     if not found:
         return ''
-    paragraphs = ''.join(
-        f'<p>{sentence}</p>' if '<a ' in sentence else f'<p>{esc(sentence)}</p>'
-        for sentence in found
-    )
-    photo = photo_html(profile, root)
-    body = f'<div class="career-layout">{photo}<div class="career-copy">{paragraphs}</div></div>' if photo else paragraphs
+    paragraphs = ''.join(f'<p>{esc(sentence)}</p>' for sentence in found)
+    photo = figure or photo_html(profile, root)
+    copy = f'<div class="career-copy">{paragraphs}<p class="career-sources">{sources_line(profile, root)}</p></div>'
+    body = f'<div class="career-layout">{photo}{copy}</div>' if photo else copy
     return (
         '<section class="section" id="career"><p class="eyebrow">Career</p>'
         f'<h2>Career summary</h2>{body}</section>'
@@ -447,7 +368,11 @@ def patch_player_html(page: str, profile: dict, root: Path) -> str:
     hero = esc(hero_plain(profile, root))
     if hero and _SUMMARY_RE.search(page):
         page = _SUMMARY_RE.sub(lambda match: match.group(1) + hero + match.group(3), page, count=1)
-    block = section_html(profile, root)
+    figure = ''
+    src_match = re.search(r'<figure class="career-photo">.*?</figure>', page, re.S)
+    if src_match:
+        figure = src_match.group(0)
+    block = section_html(profile, root, figure=figure)
     if not block:
         return page
     if _CAREER_RE.search(page):

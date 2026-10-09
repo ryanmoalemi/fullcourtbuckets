@@ -2,6 +2,10 @@
 
 Player pages may not share a sentence of 12 or more words, aside from the
 fixed labels listed below. Bios may not use unverified-claim markers.
+
+A second check strips names, numbers, teams, colleges, and years. If one
+sentence skeleton then shows up on more than 5% of the rewritten bios, the
+test fails. The same rule applies to team season summaries.
 """
 from __future__ import annotations
 
@@ -12,6 +16,7 @@ import unittest
 from collections import defaultdict
 from pathlib import Path
 
+import career_prose
 import career_summary
 import team_season
 import internal_links
@@ -33,6 +38,142 @@ def _fixed(sentence: str) -> bool:
         and 'per game averages except games played' in sentence
     )
 MARKERS = career_summary.MARKERS
+YEAR_RE = re.compile(r'\b(?:19|20)\d{2}\b')
+ORDINAL_RE = re.compile(r'\b\d+(?:st|nd|rd|th)\b', re.I)
+NUMBER_RE = re.compile(r'\b\d+(?:\.\d+)?\b')
+DRAFT_SENTENCE_RE = re.compile(r'\b(?:draft(?:ed)?|overall|pick|selection)\b', re.I)
+TABLE_ROW_RE = re.compile(
+    r'<th scope="row">(\d{4})</th><td class="team-cell">([^<]+)</td>'
+)
+META_PAGE_RE = re.compile(
+    r'\b(?:rows?|stored|this page|on this page|database|standings file|standings line)\b',
+    re.I,
+)
+
+
+def _career_copy(page: str) -> str:
+    match = re.search(r'<div class="career-copy">(.*?)</div>', page, re.S)
+    if not match:
+        return ''
+    copy = re.sub(r'<p class="career-sources">.*?</p>', ' ', match.group(1), flags=re.S)
+    return copy
+
+
+def _paragraphs(fragment: str) -> list[str]:
+    plain_parts = []
+    for piece in re.findall(r'<p\b[^>]*>(.*?)</p>', fragment or '', re.S):
+        if 'career-sources' in piece:
+            continue
+        text = _plain(piece)
+        if text:
+            plain_parts.append(text)
+    return plain_parts
+
+
+def _known_teams() -> list[str]:
+    found = set()
+    extras_path = ROOT / 'data' / 'wnba' / 'career-extras.json'
+    if extras_path.is_file():
+        extras = json.loads(extras_path.read_text(encoding='utf-8'))
+        for extra in extras.values():
+            draft = extra.get('draft') if isinstance(extra, dict) else None
+            if isinstance(draft, dict) and draft.get('team'):
+                found.add(str(draft['team']).strip())
+    for path in (ROOT / 'data' / 'wnba' / 'players').glob('*.json'):
+        try:
+            profile = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for row in profile.get('season_stats') or []:
+            team = career_summary._team(row) if isinstance(row, dict) else ''
+            if team and 'not named' not in team:
+                found.add(team)
+    return sorted(found, key=len, reverse=True)
+
+
+def _known_colleges() -> list[str]:
+    found = set()
+    extras_path = ROOT / 'data' / 'wnba' / 'career-extras.json'
+    extras = json.loads(extras_path.read_text(encoding='utf-8')) if extras_path.is_file() else {}
+    for path in (ROOT / 'data' / 'wnba' / 'players').glob('*.json'):
+        try:
+            profile = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            continue
+        slug = path.stem
+        college = career_prose._college(profile, extras.get(slug) or {})
+        if college:
+            found.add(college)
+    return sorted(found, key=len, reverse=True)
+
+
+def _known_places() -> list[str]:
+    found = {'the United States', 'United States'}
+    for _label, (year, city) in career_summary.OLYMPICS.items():
+        found.add(city)
+        found.add(str(year))
+    extras_path = ROOT / 'data' / 'wnba' / 'career-extras.json'
+    if extras_path.is_file():
+        extras = json.loads(extras_path.read_text(encoding='utf-8'))
+        for extra in extras.values():
+            if not isinstance(extra, dict):
+                continue
+            for event in career_prose._olympics(extra):
+                found.add(event['nation'])
+                found.add(career_prose._nation(event['nation']))
+                found.add(event['city'])
+    found.discard('')
+    return sorted(found, key=len, reverse=True)
+
+
+def _template(sentence: str, name: str, teams: list[str], colleges: list[str], places: list[str]) -> str:
+    text = sentence
+    for team in teams:
+        text = re.sub(rf'\b{re.escape(team)}\b', '{TEAM}', text)
+    for college in colleges:
+        text = text.replace(college, '{COLLEGE}')
+    for place in places:
+        text = re.sub(rf'\b{re.escape(place)}\b', '{PLACE}', text)
+    if name:
+        text = text.replace(name, '{NAME}')
+        last = name.split()[-1]
+        if len(last) >= 4:
+            text = re.sub(rf'\b{re.escape(last)}\b', '{NAME}', text)
+    text = YEAR_RE.sub('{YEAR}', text)
+    text = ORDINAL_RE.sub('{NUM}', text)
+    text = NUMBER_RE.sub('{NUM}', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _table_pairs(page: str) -> set[tuple[str, int]]:
+    pairs = set()
+    for year, team in TABLE_ROW_RE.findall(page):
+        pairs.add((html.unescape(team).strip(), int(year)))
+    return pairs
+
+
+def _season_claims(text: str, teams: list[str]) -> set[tuple[str, int]]:
+    """Team-years stated as seasons. Draft sentences are not season claims."""
+    claims = set()
+    for sentence in SENTENCE_RE.split(text):
+        if DRAFT_SENTENCE_RE.search(sentence):
+            continue
+        work = sentence
+        for team in teams:
+            span = re.compile(
+                rf'\bthe {re.escape(team)} from (\d{{4}}) through (\d{{4}})'
+            )
+            for start, end in span.findall(work):
+                start_year, end_year = int(start), int(end)
+                if start_year <= end_year:
+                    for year in range(start_year, end_year + 1):
+                        claims.add((team, year))
+            work = span.sub(' ', work)
+            single = re.compile(rf'\bthe {re.escape(team)} in (\d{{4}})')
+            for year in single.findall(work):
+                claims.add((team, int(year)))
+            work = single.sub(' ', work)
+    return claims
 
 
 def _plain(fragment: str) -> str:
@@ -102,13 +243,102 @@ class CareerRuleTests(unittest.TestCase):
 
     def test_published_career_copy_matches_the_stored_rows(self):
         rollout = json.loads((ROOT / 'data/wnba/career-rollout.json').read_text(encoding='utf-8'))
+        checked = 0
         for slug in rollout['slugs']:
-            profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
             page = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
+            if 'career-sources' not in page:
+                continue
+            checked += 1
+            profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
             main = _plain(_main(page))
             for sentence in career_summary.sentences_for(profile, ROOT):
                 plain = _plain(sentence)
                 self.assertIn(plain, main, slug)
+            sources = _plain(re.search(r'<p class="career-sources">.*?</p>', page, re.S).group(0))
+            self.assertLess(len(WORD_RE.findall(sources)), 12, slug)
+            self.assertNotIn('balldontlie', sources.casefold(), slug)
+            self.assertIn('Full Court Buckets season logs', sources)
+            extra = career_summary.load_extras(ROOT).get(slug) or {}
+            bbref = str(extra.get('bbref') or '').strip() if isinstance(extra, dict) else ''
+            international = extra.get('international') if isinstance(extra, dict) and isinstance(extra.get('international'), dict) else {}
+            if bbref or str(international.get('source') or '').strip():
+                self.assertIn('Basketball-Reference', sources, slug)
+                self.assertIn('basketball-reference.com', page, slug)
+        self.assertGreaterEqual(checked, 90)
+
+    def test_rewritten_bios_do_not_reuse_a_sentence_template(self):
+        teams = _known_teams()
+        colleges = _known_colleges()
+        places = _known_places()
+        shared = defaultdict(set)
+        pages = []
+        for path in sorted((ROOT / 'wnba').glob('*/index.html')):
+            if path.parent.name in {'teams', 'assets', 'couples'}:
+                continue
+            text = path.read_text(encoding='utf-8', errors='replace')
+            if 'Inactive player' not in text or 'career-sources' not in text:
+                continue
+            pages.append(path.parent.name)
+            profile = json.loads((ROOT / 'data/wnba/players' / f'{path.parent.name}.json').read_text(encoding='utf-8'))
+            name = career_summary.player_name(profile)
+            copy = _career_copy(text)
+            self.assertEqual(META_PAGE_RE.findall(_plain(copy)), [], path.parent.name)
+            for paragraph in _paragraphs(copy):
+                for part in SENTENCE_RE.split(paragraph):
+                    words = WORD_RE.findall(part)
+                    if len(words) < 6:
+                        continue
+                    key = _template(part, name, teams, colleges, places)
+                    shared[key].add(path.parent.name)
+        self.assertGreaterEqual(len(pages), 90)
+        limit = 0.05 * len(pages)
+        over = {
+            template: sorted(slugs)
+            for template, slugs in shared.items()
+            if len(slugs) / len(pages) > 0.05
+        }
+        self.assertEqual(over, {})
+        self.assertGreater(limit, 0)
+
+    def test_career_summary_matches_the_season_table(self):
+        teams = _known_teams()
+        checked = 0
+        for path in sorted((ROOT / 'wnba').glob('*/index.html')):
+            slug = path.parent.name
+            if slug in {'teams', 'assets', 'couples'}:
+                continue
+            text = path.read_text(encoding='utf-8', errors='replace')
+            if 'Inactive player' not in text or 'career-sources' not in text:
+                continue
+            checked += 1
+            profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            copy = _plain(_career_copy(text))
+            table = _table_pairs(text)
+            self.assertTrue(table, slug)
+            for phrase in career_prose.span_phrases(profile):
+                self.assertIn(phrase, copy, slug)
+            claims = _season_claims(copy, teams)
+            extra = sorted(claims - table)
+            self.assertEqual(extra, [], slug)
+            uncovered = sorted(table - claims)
+            self.assertEqual(uncovered, [], slug)
+        self.assertGreaterEqual(checked, 90)
+
+    def test_crystal_bradford_team_years_match_her_table(self):
+        page = (ROOT / 'wnba' / 'crystal-bradford' / 'index.html').read_text(encoding='utf-8')
+        if 'career-sources' not in page:
+            self.skipTest('Crystal Bradford has not been rewritten yet')
+        copy = _plain(_career_copy(page))
+        table = _table_pairs(page)
+        for phrase in (
+            'the Los Angeles Sparks in 2015',
+            'the Atlanta Dream in 2021',
+            'the Las Vegas Aces in 2025',
+        ):
+            self.assertIn(phrase, copy)
+        self.assertIn(('Las Vegas Aces', 2025), table)
+        self.assertIn(('Atlanta Dream', 2021), table)
+        self.assertIn(('Los Angeles Sparks', 2015), table)
 
     def test_inactive_pages_stay_indexable_and_in_the_sitemap(self):
         sitemap = (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8')
@@ -145,6 +375,8 @@ class TeamSummaryTests(unittest.TestCase):
             self.assertNotIn('balldontlie', summary.casefold(), slot['slug'])
             page = (ROOT / 'wnba' / 'teams' / slot['slug'] / 'index.html').read_text(encoding='utf-8')
             block = _section(page, 'season-2026')
+            self.assertIn(summary, page, slot['slug'])
+            self.assertEqual(META_PAGE_RE.findall(_plain(summary)), [], slot['slug'])
             self.assertIn('Season summary', block, slot['slug'])
             self.assertIn('Wikimedia Commons', block, slot['slug'])
             self.assertIn('target="_blank" rel="noopener"', block, slot['slug'])
@@ -154,11 +386,69 @@ class TeamSummaryTests(unittest.TestCase):
         for slug in ('chicago-sky', 'connecticut-sun', 'phoenix-mercury', 'seattle-storm', 'los-angeles-sparks'):
             page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
             self.assertIn('latest league stories', _section(page, 'team-news'), slug)
+        sky = (ROOT / 'wnba' / 'teams' / 'chicago-sky' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('image/webp', _section(sky, 'season-2026'))
         for slug, rows in team_season.COVERAGE.items():
             for href, _label, claim in rows:
                 article_slug = href.strip('/').split('/')[-1]
                 article = (ROOT / 'news' / article_slug / 'index.html').read_text(encoding='utf-8')
                 self.assertIn(claim, article, f'{slug} {article_slug} {claim}')
+
+    def test_team_summaries_do_not_share_a_sentence_template(self):
+        index = json.loads((ROOT / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
+        linking = internal_links.catalog_from_index(index)
+        names = set()
+        teams = set()
+        pages = {}
+        for slot in linking['by_id'].values():
+            teams.add(slot['full_name'])
+            page = (ROOT / 'wnba' / 'teams' / slot['slug'] / 'index.html').read_text(encoding='utf-8')
+            block = _section(page, 'season-2026')
+            summary = re.search(r'<p class="season-summary">(.*?)</p>', block, re.S)
+            self.assertIsNotNone(summary, slot['slug'])
+            pages[slot['slug']] = _plain(summary.group(1))
+            for label in re.findall(r'>([^<]+)</a>', summary.group(1)):
+                names.add(html.unescape(label))
+        team_names = sorted(teams, key=len, reverse=True)
+        player_names = sorted(names, key=len, reverse=True)
+        shared = defaultdict(set)
+        for slug, plain in pages.items():
+            for part in SENTENCE_RE.split(plain):
+                words = WORD_RE.findall(part)
+                if len(words) < 6:
+                    continue
+                text = part
+                for team in team_names:
+                    text = re.sub(rf'\b{re.escape(team)}\b', '{TEAM}', text)
+                for player in player_names:
+                    text = re.sub(rf'\b{re.escape(player)}\b', '{NAME}', text)
+                    last = player.split()[-1]
+                    if len(last) >= 4:
+                        text = re.sub(rf'\b{re.escape(last)}\b', '{NAME}', text)
+                text = text.replace('Eastern Conference', '{CONF}').replace('Western Conference', '{CONF}')
+                text = YEAR_RE.sub('{YEAR}', text)
+                text = ORDINAL_RE.sub('{NUM}', text)
+                text = NUMBER_RE.sub('{NUM}', text)
+                shared[re.sub(r'\s+', ' ', text).strip()].add(slug)
+        over = {
+            template: sorted(slugs)
+            for template, slugs in shared.items()
+            if len(slugs) > 1 and len(slugs) / len(pages) > 0.05
+        }
+        self.assertEqual(over, {})
+
+    def test_team_summary_patch_keeps_an_existing_photo(self):
+        index = json.loads((ROOT / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
+        linking = internal_links.catalog_from_index(index)
+        slot = next(item for item in linking['by_id'].values() if item['slug'] == 'chicago-sky')
+        standing = builder.load_standings_by_name(ROOT).get(slot['full_name'])
+        page = (ROOT / 'wnba' / 'teams' / 'chicago-sky' / 'index.html').read_text(encoding='utf-8')
+        updated = team_season.patch_team_html(page, ROOT, slot, standing)
+        before = _section(page, 'season-2026')
+        after = _section(updated, 'season-2026')
+        self.assertEqual(before.count('<picture>'), after.count('<picture>'))
+        self.assertIn('image/webp', after)
+        self.assertIn('class="season-summary"', after)
 
 
 if __name__ == '__main__':
