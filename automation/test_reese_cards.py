@@ -129,7 +129,12 @@ class ReeseCardPageTests(unittest.TestCase):
         for paragraph in cards.INTRO_PARAGRAPHS:
             self.assertIn(f'<p>{paragraph}</p>', intro)
         self.assertEqual(intro.count('<p>'), 4)
-        self.assertIn('href="/wnba/angel-reese/"', intro)
+        self.assertIn('href="/wnba/angel-reese/" target="_blank" rel="noopener"', intro)
+        main = self.html.split('<main class="shell" id="content">', 1)[1].split('</main>', 1)[0]
+        self.assertEqual(main.count('href="/wnba/angel-reese/"'), 1)
+        self.assertNotIn('Player page:', self.html)
+        self.assertIn('(2024, with the Chicago Sky)', self.html)
+        self.assertIn('/images/reese-cards/angel-reese-hero.webp', self.html)
         self.assertNotIn('transcendent talent', self.html)
         self.assertNotIn('got into sports writing', self.html)
         self.assertIn('height:min(72vh,calc(100svh - 13.25rem))', self.html)
