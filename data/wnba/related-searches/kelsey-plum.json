@@ -1,0 +1,80 @@
+{
+ "slug": "kelsey-plum",
+ "player": "Kelsey Plum",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "kelsey plum",
+   "clicks": 0,
+   "impressions": 9,
+   "question_like": false
+  },
+  {
+   "query": "kelly plum",
+   "clicks": 0,
+   "impressions": 7,
+   "question_like": false
+  },
+  {
+   "query": "kelsey plum stats",
+   "clicks": 0,
+   "impressions": 3,
+   "question_like": true
+  },
+  {
+   "query": "kelsey plum basketball",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": false
+  },
+  {
+   "query": "kelsey plum height",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "kelswy plum",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": false
+  },
+  {
+   "query": "wnba player kelsey plum",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": false
+  },
+  {
+   "query": "kelsea plum",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  },
+  {
+   "query": "kelsey plum rookie year",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "kelsey plum wnba stats",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "kelsey plums",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "slug": "napheesa-collier",
+ "player": "Napheesa Collier",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "napheesa collier",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  },
+  {
+   "query": "napheesa collier stats",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  }
+ ]
+}

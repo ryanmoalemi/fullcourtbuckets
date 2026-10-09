@@ -1,0 +1,38 @@
+{
+ "slug": "makayla-timpson",
+ "player": "Makayla Timpson",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "makayla timpson",
+   "clicks": 0,
+   "impressions": 3,
+   "question_like": false
+  },
+  {
+   "query": "makayla timpson age",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "makayla timpson stats",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "timpson fever player",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  }
+ ]
+}

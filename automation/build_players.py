@@ -10,6 +10,7 @@ import json
 import math
 from pathlib import Path
 import re
+import unicodedata
 from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
@@ -408,23 +409,46 @@ def regular_season_years(profile) -> list[int]:
     return sorted(years)
 
 
+def years_are_continuous(years) -> bool:
+    """True when every year from the first to the last is present."""
+    ordered = sorted({year for year in years if isinstance(year, int) and not isinstance(year, bool)})
+    if len(ordered) <= 1:
+        return True
+    return ordered == list(range(ordered[0], ordered[-1] + 1))
+
+
+def format_season_years(years, *, prose: bool = False) -> str:
+    """Years on record. A range is used only when the years are continuous.
+
+    A gap is written out (2010, 2015, 2016). A continuous run is 2018 to 2026
+    in a sentence and 2018–2026 on a label.
+    """
+    ordered = sorted({year for year in years if isinstance(year, int) and not isinstance(year, bool)})
+    if not ordered:
+        return ''
+    if len(ordered) == 1:
+        return str(ordered[0])
+    if years_are_continuous(ordered):
+        if prose:
+            return f'{ordered[0]} to {ordered[-1]}'
+        return f'{ordered[0]}\u2013{ordered[-1]}'
+    return ', '.join(str(year) for year in ordered)
+
+
 def years_faq_answer(profile, name: str) -> str:
-    """Count of regular-season rows. A gap is named. This is not a career points total."""
+    """Count of regular-season rows. This is not a career points total.
+
+    A range is used only when those seasons are continuous. A gap lists the years
+    that are actually on the page.
+    """
     years = regular_season_years(profile)
     if not years:
         return ''
     count = len(years)
     noun = 'regular season' if count == 1 else 'regular seasons'
-    gaps = [year for year in range(years[0], years[-1] + 1) if year not in years]
-    if count <= 4:
-        sentence = f'{name} has {count} {noun} on this page: {_listed([str(year) for year in years])}.'
-    else:
-        sentence = f'{name} has {count} {noun} on this page, from {years[0]} to {years[-1]}.'
-    if gaps:
-        listed = _listed([str(year) for year in gaps])
-        verb = 'is' if len(gaps) == 1 else 'are'
-        sentence += f' {listed} {verb} not listed.'
-    return sentence
+    if count > 4 and years_are_continuous(years):
+        return f'{name} has {count} {noun} on this page, from {years[0]} to {years[-1]}.'
+    return f'{name} has {count} {noun} on this page: {_listed([str(year) for year in years])}.'
 
 
 def three_point_faq_answer(profile, name: str) -> str:
@@ -847,9 +871,279 @@ def normalize_question(question: str, name: str = '') -> str:
     return re.sub(r'\s+', ' ', text).strip()
 
 
+# A separate change publishes A'ja Wilson's searches. This build must not.
+RELATED_SEARCH_HOLD = frozenset({'aja-wilson'})
+_REPEAT_LIMIT = 2
+_STAT_FAMILY = frozenset({'stats', 'assists', 'rebounds', 'points'})
+_SKIP_TOPICS = frozenset({'drop', 'career_games', 'college_stats', ''})
+_NAME_FILLER = frozenset({
+    'wnba', 'player', 'basketball', 'the', 'and', 'for', 'her', 'she',
+})
+_QUESTION_START = re.compile(
+    r'^(how|what|which|who|where|when|is|are|does|did|do|can|was)\b',
+    re.I,
+)
+_DISK_CANDIDATE_CACHE: dict = {}
+
+
+def _date_range_ok(value) -> bool:
+    if isinstance(value, str) and value.strip():
+        return True
+    if isinstance(value, dict):
+        start = value.get('start')
+        end = value.get('end')
+        return isinstance(start, str) and start.strip() and isinstance(end, str) and end.strip()
+    return False
+
+
+def _folded_tokens(text: str) -> list[str]:
+    folded = unicodedata.normalize('NFKD', str(text or ''))
+    folded = ''.join(ch for ch in folded if not unicodedata.combining(ch))
+    return [part for part in re.split(r'[^a-z0-9]+', folded.casefold()) if part]
+
+
+def _edit_distance(left: str, right: str) -> int:
+    if abs(len(left) - len(right)) > 2:
+        return 3
+    prev = list(range(len(right) + 1))
+    for i, ca in enumerate(left, 1):
+        cur = [i]
+        for j, cb in enumerate(right, 1):
+            cur.append(min(cur[-1] + 1, prev[j] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _name_forms(profile, record_player: str = '') -> list[tuple[str, ...]]:
+    """Accepted name token lists, including a former name carried by the slug."""
+    found = []
+    seen = set()
+
+    def add(text: str) -> None:
+        tokens = tuple(part for part in _folded_tokens(text) if len(part) > 1 and not part.isdigit())
+        if len(tokens) < 2 or tokens in seen:
+            return
+        seen.add(tokens)
+        found.append(tokens)
+
+    add(player_name(profile))
+    add(record_player)
+    slug = str(profile.get('slug') or '')
+    add(' '.join(part for part in slug.split('-') if part and not part.isdigit()))
+    return found
+
+
+def _form_match(form: tuple[str, ...], query_tokens: list[str]) -> str:
+    """exact when every name token is in the query, misspelling when one is off by a letter or two."""
+    used = [False] * len(query_tokens)
+    inexact = False
+    for name in form:
+        exact_at = next((index for index, token in enumerate(query_tokens) if not used[index] and token == name), None)
+        if exact_at is not None:
+            used[exact_at] = True
+            continue
+        fuzzy_at = None
+        for index, token in enumerate(query_tokens):
+            if used[index] or len(token) < 3 or len(name) < 3 or abs(len(token) - len(name)) > 2:
+                continue
+            if token in _NAME_FILLER:
+                continue
+            if _edit_distance(token, name) <= 2:
+                fuzzy_at = index
+                break
+        if fuzzy_at is None:
+            return 'miss'
+        used[fuzzy_at] = True
+        inexact = True
+    return 'misspelling' if inexact else 'exact'
+
+
+def _name_status(query: str, forms: list[tuple[str, ...]]) -> str:
+    tokens = _folded_tokens(query)
+    statuses = [_form_match(form, tokens) for form in forms]
+    if 'exact' in statuses:
+        return 'exact'
+    if 'misspelling' in statuses:
+        return 'misspelling'
+    return 'other'
+
+
+def _query_topic(query: str) -> str:
+    raw = unicodedata.normalize('NFKD', str(query or ''))
+    raw = ''.join(ch for ch in raw if not unicodedata.combining(ch)).casefold()
+    if _DROP_TOPIC_RE.search(raw) or re.search(r'\b(?:net worth|measurements?)\b', raw):
+        return 'drop'
+    if _RELATIONSHIP_RE.search(raw):
+        return 'relationship'
+    if 'last game' in raw:
+        return 'last_game'
+    if 'rookie' in raw and 'year' in raw:
+        return 'rookie'
+    if 'three-point' in raw or '3-point' in raw or 'three point' in raw:
+        return 'three_point'
+    if (('how many years' in raw) or ('how long' in raw)) and 'wnba' in raw:
+        return 'years'
+    if 'how many games' in raw:
+        return 'career_games'
+    if 'college' in raw and 'stats' in raw:
+        return 'college_stats'
+    if re.search(r'\bstats\b', raw):
+        return 'stats'
+    if 'assists per game' in raw:
+        return 'assists'
+    if 'rebounds per game' in raw or re.search(r'\brebounds\b', raw):
+        return 'rebounds'
+    if 'points per game' in raw or re.search(r'\bppg\b', raw) or re.search(r'\bpoints\b', raw):
+        return 'points'
+    if re.search(r'\b(?:how tall|height)\b', raw):
+        return 'height'
+    if re.search(r'\b(?:college|university)\b', raw):
+        return 'college'
+    if re.search(r'\bposition\b', raw):
+        return 'position'
+    if re.search(r'\b(?:jersey|uniform number)\b', raw) or 'what number' in raw:
+        return 'jersey'
+    if re.search(r'\bweigh', raw):
+        return 'weight'
+    if re.search(r'\b(?:what team|which team|plays for|play for|current team)\b', raw) or re.search(r'\bplaying\b', raw):
+        return 'team'
+    if 'fiba' in raw:
+        return 'fiba'
+    if re.search(r'\bwho is\b', raw) or re.search(r'\b(?:bio|facts)\b', raw):
+        return 'who'
+    return ''
+
+
+def _verbatim_question(query: str, name: str) -> str:
+    """Keep a question that is already a sentence and already uses the player's name."""
+    text = ' '.join(str(query or '').split())
+    if not text or not text[:1].isupper():
+        return ''
+    if not (text.endswith('?') or _QUESTION_START.match(text)):
+        return ''
+    folded_name = ' '.join(_folded_tokens(name))
+    if not folded_name or folded_name not in ' '.join(_folded_tokens(text)):
+        return ''
+    return text
+
+
+def _phrase_question(topic: str, name: str, query: str) -> str:
+    verbatim = _verbatim_question(query, name)
+    if verbatim:
+        return verbatim
+    if topic == 'relationship':
+        raw = query.casefold()
+        if any(word in raw for word in ('dating', 'boyfriend', 'girlfriend')):
+            return f'Who is {name} dating?'
+        return f'Is {name} married?'
+    templates = {
+        'stats': "What are {name}'s stats?",
+        'assists': "What are {name}'s assists per game?",
+        'rebounds': "What are {name}'s rebounds per game?",
+        'points': "What are {name}'s points per game?",
+        'height': "How tall is {name}?",
+        'rookie': "What was {name}'s rookie year?",
+        'years': "How long has {name} been in the WNBA?",
+        'position': "What position does {name} play?",
+        'team': "What team does {name} play for?",
+        'who': "Who is {name}?",
+        'college': "Where did {name} go to college?",
+        'jersey': "What number does {name} wear?",
+        'weight': "How much does {name} weigh?",
+        'three_point': "What is {name}'s three-point percentage?",
+        'last_game': "What did {name} score in her last game?",
+        'fiba': "Where can I read about {name} and the 2026 FIBA World Cup?",
+    }
+    template = templates.get(topic)
+    return template.format(name=name) if template else ''
+
+
+def _impressions(item: dict) -> int:
+    value = item.get('impressions')
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return 0
+    return int(value)
+
+
+def _usable_answer(answer: str) -> str:
+    text = str(answer or '').strip()
+    if not text or _NOT_WIDELY_RE.search(text):
+        return ''
+    lowered = text.casefold()
+    if 'balldontlie' in lowered or 'espn' in lowered:
+        return ''
+    return text
+
+
+def _related_player_label(profile, root) -> str:
+    slug = str(profile.get('slug') or '')
+    path = Path(root) / 'data' / 'wnba' / 'related-searches' / f'{slug}.json'
+    if not path.is_file():
+        return ''
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return ''
+    player = data.get('player') if isinstance(data, dict) else ''
+    return player.strip() if isinstance(player, str) else ''
+
+
+def _collapse_stat_family(items: list[dict]) -> list[dict]:
+    """One stats question per page. A narrower stat stays available if the broad one is dropped later."""
+    family = [item for item in items if item['topic'] in _STAT_FAMILY]
+    rest = [item for item in items if item['topic'] not in _STAT_FAMILY]
+    if not family:
+        return rest
+    family.sort(key=lambda item: (-item['impressions'], item['topic'] != 'stats', item['question']))
+    winner = dict(family[0])
+    winner['shadows'] = family[1:]
+    rest.append(winner)
+    return rest
+
+
+def _topic_candidates(profile, root) -> list[dict]:
+    """Answerable questions for one player, after misspellings, other people, and bare names are removed."""
+    slug = str(profile.get('slug') or '')
+    if slug in RELATED_SEARCH_HOLD:
+        return []
+    name = player_name(profile)
+    forms = _name_forms(profile, _related_player_label(profile, root))
+    if not forms:
+        return []
+    grouped = {}
+    for index, item in enumerate(load_related_searches(profile, root)):
+        query = item['query'].strip()
+        if _name_status(query, forms) != 'exact':
+            continue
+        topic = _query_topic(query)
+        if topic in _SKIP_TOPICS:
+            continue
+        question = _phrase_question(topic, name, query)
+        if not question:
+            continue
+        answer = _usable_answer(answer_related_query(profile, question, root))
+        if not answer:
+            continue
+        impressions = _impressions(item)
+        current = grouped.get(topic)
+        if current is None or impressions > current['impressions']:
+            grouped[topic] = {
+                'topic': topic,
+                'question': question,
+                'answer': answer,
+                'impressions': impressions,
+                'name': name,
+                'order': index,
+                'shadows': [],
+            }
+    return _collapse_stat_family(list(grouped.values()))
+
+
 def load_related_searches(profile, root: Path) -> list[dict]:
     """Real search queries for one player. Missing file means there is nothing to show."""
     slug = str(profile.get('slug') or '')
+    if slug in RELATED_SEARCH_HOLD:
+        return []
     path = Path(root) / 'data' / 'wnba' / 'related-searches' / f'{slug}.json'
     if not path.is_file():
         return []
@@ -859,9 +1153,11 @@ def load_related_searches(profile, root: Path) -> list[dict]:
         raise BuildError(f'Related searches for {slug} could not be read.') from exc
     if not isinstance(data, dict) or data.get('slug') != slug:
         raise BuildError(f'Related searches slug does not match {slug}.')
-    for key in ('player', 'source', 'date_range'):
+    for key in ('player', 'source'):
         if not isinstance(data.get(key), str) or not data[key].strip():
             raise BuildError(f'Related searches for {slug} are missing {key}.')
+    if not _date_range_ok(data.get('date_range')):
+        raise BuildError(f'Related searches for {slug} are missing date_range.')
     queries = data.get('queries')
     if not isinstance(queries, list):
         raise BuildError(f'Related searches for {slug} have no query list.')
@@ -913,6 +1209,23 @@ def _couples_fact(profile, root) -> str:
     return ''
 
 
+def _single_average_answer(profile, name: str, key: str, word: str) -> str:
+    """One per-game figure from the same season row the table prints."""
+    row = headline(profile)
+    if not row:
+        return ''
+    number = value(row.get(key))
+    games = value(row.get('games_played'), True)
+    year = row.get('season')
+    if number == '-' or games == '-' or not year:
+        return ''
+    competition = 'regular season' if row.get('season_type') == 2 else 'playoffs'
+    team = tname(row.get('team'))
+    noun = 'game' if games == '1' else 'games'
+    team_bit = f' for the {team}' if team and team != 'Team not listed' else ''
+    return f'In the {year} {competition}, {name} averaged {number} {word} in {games} {noun}{team_bit}.'
+
+
 def answer_related_query(profile, query: str, root) -> str:
     """Answer one real search query from stored stats or the couples list. Empty if unverified."""
     text = str(query or '').casefold()
@@ -927,12 +1240,18 @@ def answer_related_query(profile, query: str, root) -> str:
         return rookie_faq_answer(profile, name)
     if 'three-point' in text or '3-point' in text or 'three point percentage' in text:
         return three_point_faq_answer(profile, name)
-    if 'how many years' in text and 'wnba' in text:
+    if (('how many years' in text) or ('how long' in text)) and 'wnba' in text:
         return years_faq_answer(profile, name)
     if re.search(r'\b(?:which teams|what teams|teams has|teams did)\b', text):
         return teams_faq_answer(profile, name)
     if 'fiba' in text:
         return fiba_faq_answer(profile, name, root)
+    if 'assists per game' in text and not re.search(r'\bstats\b', text):
+        return _single_average_answer(profile, name, 'ast', 'assists')
+    if 'rebounds per game' in text and not re.search(r'\bstats\b', text):
+        return _single_average_answer(profile, name, 'reb', 'rebounds')
+    if ('points per game' in text or re.search(r'\bppg\b', text)) and not re.search(r'\bstats\b', text):
+        return _single_average_answer(profile, name, 'pts', 'points')
     if re.search(r'\b(?:stats|points per game|ppg|averages?|rebounds per game|assists per game)\b', text):
         return _with_numbers(season_faq_answer(profile, name))
     if re.search(r'\b(?:how tall|height)\b', text):
@@ -964,16 +1283,79 @@ def answer_related_query(profile, query: str, root) -> str:
     return ''
 
 
+def _disk_topic_candidates(root: Path) -> dict:
+    """Candidates for every related-search file that has a player record on disk."""
+    folder = Path(root) / 'data' / 'wnba' / 'related-searches'
+    if not folder.is_dir():
+        return {}
+    signature = tuple(sorted(
+        (path.name, path.stat().st_mtime_ns, path.stat().st_size)
+        for path in folder.glob('*.json')
+    ))
+    key = (str(Path(root).resolve()), signature)
+    cached = _DISK_CANDIDATE_CACHE.get(key)
+    if cached is not None:
+        return cached
+    found = {}
+    players = Path(root) / 'data' / 'wnba' / 'players'
+    for path in sorted(folder.glob('*.json')):
+        slug = path.stem
+        if slug in RELATED_SEARCH_HOLD:
+            continue
+        profile_path = players / f'{slug}.json'
+        if not profile_path.is_file():
+            continue
+        try:
+            profile = json.loads(profile_path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise BuildError(f'Related searches for {slug} could not be matched to a player.') from exc
+        found[slug] = _topic_candidates(profile, root)
+    _DISK_CANDIDATE_CACHE[key] = found
+    return found
+
+
+def _limit_repeated_questions(by_slug: dict) -> dict:
+    """The same normalized question is published on at most two pages."""
+    ranked = []
+    for slug, items in by_slug.items():
+        for item in items:
+            ranked.append((-item['impressions'], slug, item['question'], item))
+    ranked.sort()
+    counts = {}
+    kept = {slug: [] for slug in by_slug}
+    for _neg, slug, _question, item in ranked:
+        key = normalize_question(item['question'], item['name']) or item['question'].casefold()
+        chosen = item
+        if counts.get(key, 0) >= _REPEAT_LIMIT:
+            chosen = None
+            for shadow in item.get('shadows') or []:
+                shadow_key = normalize_question(shadow['question'], item['name']) or shadow['question'].casefold()
+                if counts.get(shadow_key, 0) >= _REPEAT_LIMIT:
+                    continue
+                counts[shadow_key] = counts.get(shadow_key, 0) + 1
+                chosen = shadow
+                break
+            if chosen is None:
+                continue
+        else:
+            counts[key] = counts.get(key, 0) + 1
+        kept[slug].append(chosen)
+    pairs = {}
+    for slug, items in kept.items():
+        items.sort(key=lambda item: (-item['impressions'], item.get('order', 0)))
+        pairs[slug] = [(item['question'], item['answer']) for item in items]
+    return pairs
+
+
 def related_search_pairs(profile, root: Path):
     """Real queries that can be answered from this repo. Unanswerable queries are dropped."""
-    slug = profile.get('slug') or 'player'
-    pairs = []
-    for item in load_related_searches(profile, root):
-        query = item['query'].strip()
-        answer = answer_related_query(profile, query, root).strip()
-        if not answer or _NOT_WIDELY_RE.search(answer) or 'balldontlie' in answer.casefold():
-            continue
-        pairs.append((query, answer))
+    slug = str(profile.get('slug') or '')
+    if slug in RELATED_SEARCH_HOLD:
+        return []
+    own = _topic_candidates(profile, root)
+    others = dict(_disk_topic_candidates(root))
+    others[slug] = own
+    pairs = _limit_repeated_questions(others).get(slug, [])
     assert_faq_matches_tables(profile, pairs)
     assert_relationship_faq_matches_couples(slug, pairs, root)
     return pairs
@@ -1010,7 +1392,9 @@ def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> Non
 
 def faq_section(profile, root=None):
     """Render answered related-search queries. No file, or nothing answerable, means no block and no schema.
-    The question text is the query from the file. The answer comes from stored stats or the couples list.
+
+    Misspellings, other people, bare names, and near-duplicates are dropped. The
+    question uses the player's name. The answer comes from stored stats or the couples list.
     """
     if root is None:
         root = Path(__file__).resolve().parents[1]
@@ -1134,7 +1518,7 @@ def player_description(profile, root=None) -> str:
             if check['missing'] or check['games']:
                 extra = ' This record is partial.'
             else:
-                span = f'{years[0]} to {years[-1]}' if len(years) > 1 else str(years[0])
+                span = format_season_years(years, prose=True)
                 extra = f' Seasons on record: {span}.'
             if len(text + extra) <= DESCRIPTION_MAX:
                 text += extra
@@ -1408,7 +1792,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         detail_rows.append((label, shown))
     partial = partial_record_html(profile, root)
     if years:
-        span = f'{years[0]}–{years[-1]}' if len(years) > 1 else str(years[0])
+        span = format_season_years(years)
         detail_rows.append(('Verified seasons' if partial else 'Years on record', span))
     detail_html = ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(shown)}</dd></div>' for label, shown in detail_rows)
     aside = (
@@ -1473,7 +1857,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     budget=links.Budget() if linking else None
     row=headline(profile); stats=profile.get('season_stats',[])
     years=sorted({r['season'] for r in stats})
-    span=f'{years[0]}–{years[-1]}' if len(years)>1 else str(years[0]) if years else 'No season records yet'
+    span=format_season_years(years) if years else 'No season records yet'
     state='Listed active' if active else 'Inactive player'
     position={'G':'Guard','F':'Forward','C':'Center'}.get(fields.get('position'),fields.get('position',''))
     number=fields.get('jersey_number','')

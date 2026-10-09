@@ -1,0 +1,20 @@
+{
+ "slug": "kathleen-doyle",
+ "player": "Kathleen Doyle",
+ "active": false,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "kathleen doyle wnba",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "slug": "te-hina-paopao",
+ "player": "Te-Hina Paopao",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "te hina paopao",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  },
+  {
+   "query": "te-hina paopao",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  },
+  {
+   "query": "tehina paopao wnba",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  }
+ ]
+}

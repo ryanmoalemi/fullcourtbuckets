@@ -1,0 +1,32 @@
+{
+ "slug": "chelsea-gray",
+ "player": "Chelsea Gray",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "chelsea gray wnba stats",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "chelsea gray assists per game",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "how long has chelsea gray been in the wnba",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  }
+ ]
+}
