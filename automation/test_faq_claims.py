@@ -42,21 +42,22 @@ def answer_problems(slug: str, answer: str, profile, root: Path) -> list[str]:
 
 class FaqClaimTests(unittest.TestCase):
     def test_rounding_matches_the_season_table(self):
-        self.assertEqual(players.value(8.25), '8.3')
-        self.assertEqual(players.value(518 / 43), '12.0')
-        self.assertEqual(players.round_tenth(8.25), players.value(8.25))
+        # Published tables use Python's half-even formatting. Half-up would rewrite
+        # .x5 cells on pages that are not part of this FAQ change.
+        self.assertEqual(players.value(8.25), '8.2')
+        self.assertEqual(players.value(12.05), '12.1')
         gray = json.loads((ROOT / 'data/wnba/players/chelsea-gray.json').read_text(encoding='utf-8'))
         row = next(
             item for item in gray['season_stats']
             if item.get('season') == 2026 and item.get('season_type') == 2
         )
-        self.assertEqual(players.value(row['pts']), '12.0')
+        self.assertEqual(players.value(row['pts']), '12.1')
         hammon = json.loads((ROOT / 'data/wnba/players/becky-hammon.json').read_text(encoding='utf-8'))
         season = next(
             item for item in hammon['season_stats']
             if item.get('season') == 2014 and item.get('season_type') == 2
         )
-        self.assertEqual(players.value(season['pts']), '8.3')
+        self.assertEqual(players.value(season['pts']), '8.2')
 
     def test_curated_faq_files_and_related_searches(self):
         problems = []

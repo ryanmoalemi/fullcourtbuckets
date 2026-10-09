@@ -5,7 +5,6 @@ Python 3.11+, standard library only. No credentials, scraped biographies, or inf
 from __future__ import annotations
 import argparse
 import datetime as dt
-from decimal import Decimal, ROUND_HALF_UP
 import html
 import json
 import math
@@ -117,18 +116,11 @@ def publish_adu_redirects(root: Path) -> None:
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
 
-def round_tenth(n) -> str:
-    """One decimal, rounding halves up. The season table and FAQ averages share this."""
-    quant = Decimal(str(n)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
-    return f'{quant:.1f}'
-
-
 def value(n, integer=False):
+    """One decimal, same half-even rounding the published season tables already use."""
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
         return '-'
-    if integer and int(n) == n:
-        return str(int(n))
-    return round_tenth(n)
+    return str(int(n)) if integer and int(n) == n else f'{n:.1f}'
 
 def timestamp(raw, short=False):
     try:
@@ -208,7 +200,7 @@ def stats_day(profile):
 def plain_average(n):
     if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
         return None
-    return round_tenth(n)
+    return f'{n:.1f}'
 
 def plain_games(n):
     if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
@@ -241,7 +233,7 @@ def season_sentence(row):
         return f'In the {year} {label} she played {games} {noun}.'
     return ''
 
-def answer_summary(profile, career=True):
+def answer_summary(profile, career=True, root=None):
     """One or two plain sentences under the player name. Only facts present on the profile."""
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
@@ -259,7 +251,9 @@ def answer_summary(profile, career=True):
     elif name and not active:
         if career:
             import career_summary
-            return career_summary.hero_plain(profile)
+            # Without the site root, career extras never load and the curated
+            # Olympic or draft line is replaced by a generic stat sentence.
+            return career_summary.hero_plain(profile, root)
         lead = (
             f'{name} is a {pos} and is not on a current roster.'
             if pos else f'{name} is not on a current roster.'
@@ -1380,7 +1374,7 @@ def answer_related_query(profile, query: str, root) -> str:
     if re.search(r'\bwho is\b', text):
         import career_summary
         slug = str(profile.get('slug') or '')
-        return answer_summary(profile, career=career_summary.released(root, slug))
+        return answer_summary(profile, career=career_summary.released(root, slug), root=root)
     return ''
 
 
@@ -1850,7 +1844,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     number = fields.get('jersey_number', '')
     import career_summary
     use_career = career_summary.released(root, slug)
-    summary = answer_summary(profile, career=use_career)
+    summary = answer_summary(profile, career=use_career, root=root)
     summary_html = f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
     day = stats_day(profile)
     fresh = long_date(day)
@@ -2020,7 +2014,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
-        intro=f'{name} averaged {value(row["pts"])} points, {value(row["reb"])} rebounds and {value(row["ast"])} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
+        intro=f'{name} averaged {row["pts"]:.1f} points, {row["reb"]:.1f} rebounds and {row["ast"]:.1f} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
     overview=f'<p>{esc(intro)}</p>'
     if team:
         team_label=links.linked_team_name(tname(team), linking, budget)
@@ -2063,7 +2057,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     timeline=''.join(timeline_rows)
     history=f'<section class="section" id="teams"><p class="eyebrow">Team records</p><h2>Teams by season</h2><p class="muted small">The team she played for in each season. This is not every roster move.</p><ul class="timeline">{timeline}</ul></section>' if timeline else ''
     teammates=teammates_html(profile, linking, budget) if linking else ''
-    summary=answer_summary(profile)
+    summary=answer_summary(profile, root=root)
     summary_html=f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
     day=stats_day(profile)
     fresh=long_date(day)
