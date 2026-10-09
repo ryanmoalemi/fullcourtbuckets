@@ -1,137 +1,181 @@
 {
   "slug": "brittney-griner",
   "player_name": "Brittney Griner",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
       "question": "How tall is Brittney Griner?",
-      "answer": "Brittney Griner is listed at 6' 9\" by the WNBA.",
+      "answer": "The WNBA lists Brittney Griner at 6 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
+        "https://www.wnba.com/player/203398/brittney-griner/bio",
+        "https://www.britannica.com/biography/Brittney-Griner"
       ],
-      "google_keyword": "brittney griner height",
-      "approx_monthly_volume": 8100
+      "queries": [
+        {
+          "q": "brittney griner height",
+          "vol": 8100
+        },
+        {
+          "q": "how tall is brittney griner",
+          "vol": 4400
+        },
+        {
+          "q": "brittney griner height and weight",
+          "vol": 480
+        }
+      ]
     },
     {
-      "question": "What are Brittney Griner's stats / points per game?",
-      "answer": "In the 2026 regular season, Brittney Griner averaged 14.5 points, 6.0 rebounds, and 1.0 assists in 2 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "What are Brittney Griner's stats?",
+      "answer": "In the 2026 regular season, Brittney Griner averaged 13.2 points, 5.8 rebounds, and 2.5 assists in 18 games for the Connecticut Sun. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "brittney griner stats",
-      "approx_monthly_volume": 6600
+      "sources": [
+        "https://www.wnba.com/player/203398/brittney-griner/bio"
+      ],
+      "queries": [
+        {
+          "q": "brittney griner stats",
+          "vol": 6600
+        }
+      ]
     },
     {
       "question": "Is Brittney Griner married?",
-      "answer": "Griner married Cherelle Griner; public reporting in 2026 covered divorce proceedings between them. Treat relationship status as in flux based on court filings rather than a settled marriage announcement.",
+      "answer": "USA Today reported on July 31, 2026 that Brittney Griner filed for divorce from Cherelle Griner on July 30, 2026. They married on June 18, 2018. That report did not say a divorce had been granted.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
+        "https://www.usatoday.com/story/sports/wnba/2026/07/31/brittney-griner-divorce-wife-cherelle-griner-georgia-wnba-russia/91126733007/"
       ],
-      "google_keyword": "brittney griner wife",
-      "approx_monthly_volume": 5400
+      "queries": [
+        {
+          "q": "brittney griner wife",
+          "vol": 5400
+        }
+      ]
     },
     {
-      "question": "How old is Brittney Griner?",
-      "answer": "She was born October 18, 1990 in Houston, Texas, U.S. As of late 2026 that puts her at 35 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
-      ],
-      "google_keyword": "what was brittney griner born as",
-      "approx_monthly_volume": 2400,
-      "birthdate": "1990-10-18"
-    },
-    {
-      "question": "How much does Brittney Griner make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Brittney Griner's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
+      "question": "What happened to Brittney Griner in Russia?",
+      "answer": "Britannica says Brittney Griner was detained in Russia in 2022 on a drug offense, sentenced to nine years, and later released in a prisoner exchange. USA Today reported the same detention and the exchange.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.britannica.com/biography/Brittney-Griner",
+        "https://www.usatoday.com/story/sports/wnba/2026/07/31/brittney-griner-divorce-wife-cherelle-griner-georgia-wnba-russia/91126733007/"
       ],
-      "google_keyword": "brittney griner net worth",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "brittney griner russia",
+          "vol": 2400
+        },
+        {
+          "q": "brittney griner russia prison",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "Who is Brittney Griner?",
-      "answer": "Brittney Yvette Griner is an American professional basketball player for the Connecticut Sun of the Women's National Basketball Association (WNBA) and for the Vinyl of Unrivaled.",
+      "answer": "Brittney Griner is a center for the Connecticut Sun and a Baylor alum. The WNBA lists her as the 2014 champion and as Defensive Player of the Year in 2014 and 2015.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
+        "https://www.wnba.com/player/203398/brittney-griner/bio",
+        "https://www.wnba.com/news/reese-named-2026-defensive-player-of-the-year"
       ],
-      "google_keyword": "who is brittney griner",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "who is brittney griner",
+          "vol": 1000
+        },
+        {
+          "q": "brittney griner bio",
+          "vol": 880
+        },
+        {
+          "q": "brittney griner wnba",
+          "vol": 590
+        },
+        {
+          "q": "brittney griner baylor",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "How old is Brittney Griner?",
+      "answer": "Brittney Griner was born October 18, 1990, in Houston, Texas. As of October 9, 2026, she is 35.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203398/brittney-griner/bio",
+        "https://www.britannica.com/biography/Brittney-Griner"
+      ],
+      "queries": [
+        {
+          "q": "brittney griner age",
+          "vol": 1000
+        }
+      ]
+    },
+    {
+      "question": "Who are Brittney Griner's parents?",
+      "answer": "The WNBA and Britannica name her parents as Raymond and Sandra Griner.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203398/brittney-griner/bio",
+        "https://www.britannica.com/biography/Brittney-Griner"
+      ],
+      "queries": [
+        {
+          "q": "brittney griner parents",
+          "vol": 880
+        }
+      ]
     },
     {
       "question": "What team does Brittney Griner play for?",
-      "answer": "She plays for the Connecticut Sun and wears No. 42 as a center.",
-      "answer_kind": "stats",
+      "answer": "Brittney Griner plays center for the Connecticut Sun and wears No. 42. The Sun announced a one-year deal on April 11, 2026, and did not release the terms. The Phoenix Mercury drafted her No. 1 overall in 2013.",
+      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
+        "https://www.wnba.com/news/connecticut-sun-sign-brittney-griner",
+        "https://www.wnba.com/player/203398/brittney-griner/bio"
       ],
-      "google_keyword": "brittney griner team",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "brittney griner team",
+          "vol": 880
+        },
+        {
+          "q": "what team is brittney griner on",
+          "vol": 590
+        },
+        {
+          "q": "brittney griner contract",
+          "vol": 590
+        }
+      ]
     },
     {
-      "question": "Where is Brittney Griner from?",
-      "answer": "She is from Houston, Texas, U.S., and played college basketball at Baylor.",
+      "question": "How much does Brittney Griner weigh?",
+      "answer": "The WNBA lists Brittney Griner at 219 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
+        "https://www.wnba.com/player/203398/brittney-griner/bio"
       ],
-      "google_keyword": "is brittney griner suspended from the wnba",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "brittney griner weight",
+          "vol": 480
+        }
+      ]
     },
     {
-      "question": "What is Brittney Griner's contract?",
-      "answer": "Public salary trackers list Brittney Griner at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
+      "question": "How many years has Brittney Griner been in the WNBA?",
+      "answer": "Brittney Griner has 13 regular seasons on this page: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, and 2026.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.wnba.com/player/203398/brittney-griner/bio"
       ],
-      "google_keyword": "brittney griner contract",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What are Brittney Griner's college stats?",
-      "answer": "Across her college career at Baylor, Brittney Griner averaged 22.2 points, 8.8 rebounds, and 1.6 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/brittney-griner-1.html",
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
-      ],
-      "google_keyword": "brittney griner college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Brittney Griner attend?",
-      "answer": "Brittney Griner played college basketball at Baylor.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
-      ],
-      "google_keyword": "brittney griner baylor",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Is Brittney Griner injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "brittney griner injury",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Does Brittney Griner have a signature shoe?",
-      "answer": "Public search interest ties Brittney Griner to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Griner"
-      ],
-      "google_keyword": "brittney griner shoe size",
-      "approx_monthly_volume": 390
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

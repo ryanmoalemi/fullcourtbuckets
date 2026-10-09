@@ -6,7 +6,7 @@ Nothing here was guessed from memory.
 ## A'ja Wilson
 
 - Career points total: `career_totals_complete` is false and the season rows are per-game averages. Averages were not turned into a career total.
-- Is A'ja Wilson injured?: the Plum and Clark pages ask an injury question, but those items have empty `sources` and the player file has no injury status. The question was not copied.
+- Is A'ja Wilson injured?: no injury status is stored on the player file, and the curated FAQ does not ask it.
 
 ## Kelsey Plum
 

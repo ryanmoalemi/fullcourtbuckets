@@ -1,183 +1,217 @@
 {
   "slug": "sabrina-ionescu",
   "player_name": "Sabrina Ionescu",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "Does Sabrina Ionescu have a signature shoe?",
-      "answer": "Yes. Nike's Sabrina line is into the Sabrina 4 as of 2026, one of the most widely worn signature models across basketball.",
-      "answer_kind": "researched",
+      "question": "What are Sabrina Ionescu's stats?",
+      "answer": "In the 2026 regular season, Sabrina Ionescu averaged 14.6 points, 3.8 rebounds, and 4.7 assists in 31 games for the New York Liberty. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.sneakerfreaker.com/performance/features/the-active-wnba-signature-sneaker-lines-you-need-to-know"
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
       ],
-      "google_keyword": "sabrina ionescu shoes",
-      "approx_monthly_volume": 12100
+      "queries": [
+        {
+          "q": "sabrina ionescu stats",
+          "vol": 12100
+        }
+      ]
     },
     {
-      "question": "What are Sabrina Ionescu's stats / points per game?",
-      "answer": "In the 2026 regular season, Sabrina Ionescu averaged 18.2 points, 4.9 rebounds, and 5.7 assists in 38 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sabrina ionescu stats",
-      "approx_monthly_volume": 12100
+      "question": "Does Sabrina Ionescu have a signature shoe?",
+      "answer": "Yes. Nike released the Sabrina 1 in summer 2023, the Sabrina 2 on June 28, 2024, and the Sabrina 3 on July 24, 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://about.nike.com/en/newsroom/releases/sabrina-ionescu-sabrina-1-official-photos",
+        "https://about.nike.com/en/newsroom/releases/nike-sabrina-2-official-images-sabrina-ionescu",
+        "https://about.nike.com/en/newsroom/releases/nike-sabrina-3-official-images-sabrina-ionescu"
+      ],
+      "queries": [
+        {
+          "q": "sabrina ionescu shoes",
+          "vol": 12100
+        }
+      ]
     },
     {
       "question": "How tall is Sabrina Ionescu?",
-      "answer": "Sabrina Ionescu is listed at 5' 11\" by the WNBA.",
+      "answer": "The WNBA lists Sabrina Ionescu at 5 feet 11 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
       ],
-      "google_keyword": "sabrina ionescu height",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "How much does Sabrina Ionescu make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Sabrina Ionescu's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sabrina ionescu salary",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "What did Sabrina Ionescu score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Atlanta Dream), Sabrina Ionescu had 15 points, 0 rebounds, and 2 assists in a 84-95 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is sabrina ionescu playing tonight",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "sabrina ionescu height",
+          "vol": 1300
+        },
+        {
+          "q": "how tall is sabrina ionescu",
+          "vol": 880
+        }
+      ]
     },
     {
       "question": "How old is Sabrina Ionescu?",
-      "answer": "She was born December 6, 1997 in Walnut Creek, California, U.S. As of late 2026 that puts her at 28 years old.",
+      "answer": "Sabrina Ionescu was born December 6, 1997. As of October 2026, she is 28.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
       ],
-      "google_keyword": "sabrina ionescu age",
-      "approx_monthly_volume": 590,
-      "birthdate": "1997-12-06"
-    },
-    {
-      "question": "What is Sabrina Ionescu's contract?",
-      "answer": "Public salary trackers list Sabrina Ionescu at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sabrina ionescu contract",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Where is Sabrina Ionescu from?",
-      "answer": "She is from Walnut Creek, California, U.S., and played college basketball at Oregon.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
-      ],
-      "google_keyword": "where is sabrina ionescu from",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Who is Sabrina Ionescu?",
-      "answer": "Sabrina Elaine Ionescu is an American professional basketball player for the New York Liberty of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
-      ],
-      "google_keyword": "who is sabrina ionescu",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "sabrina ionescu age",
+          "vol": 590
+        },
+        {
+          "q": "how old is sabrina ionescu",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "Is Sabrina Ionescu married?",
-      "answer": "On March 10, 2024, Ionescu married NFL center and former University of Oregon football player Hroniss Grasu, also a Romanian-American. On December 15, 2025, Ionescu and her husband's California home was broken into.",
+      "answer": "Yes. Sabrina Ionescu is married to Hroniss Grasu. They married on March 10, 2024, in Laguna Beach, California.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
+        "https://www.usatoday.com/story/sports/wnba/liberty/2024/03/13/sabrina-ionescu-raiders-center-hroniss-grasu-get-married/72957396007/"
       ],
-      "google_keyword": "sabrina ionescu wife",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "sabrina ionescu wife",
+          "vol": 210
+        },
+        {
+          "q": "sabrina ionescu boyfriend",
+          "vol": 210
+        },
+        {
+          "q": "sabrina ionescu wedding",
+          "vol": 140
+        },
+        {
+          "q": "sabrina ionescu husband nfl",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Does Sabrina Ionescu have a brother?",
+      "answer": "Yes. The WNBA draft page says Sabrina Ionescu was born 18 minutes ahead of her twin brother, Eddy.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2020/prospects/124846/sabrina-ionescu"
+      ],
+      "queries": [
+        {
+          "q": "sabrina ionescu brother",
+          "vol": 320
+        },
+        {
+          "q": "sabrina ionescu twin brother",
+          "vol": 170
+        },
+        {
+          "q": "sabrina ionescu twin",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where is Sabrina Ionescu from?",
+      "answer": "Sabrina Ionescu's listed birthplace is Walnut Creek, California. She played college basketball at Oregon.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/news/the-resume-sabrina-ionescu-2020-wnba-draft",
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
+      ],
+      "queries": [
+        {
+          "q": "where is sabrina ionescu from",
+          "vol": 260
+        },
+        {
+          "q": "sabrina ionescu oregon",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "What team does Sabrina Ionescu play for?",
-      "answer": "She plays for the New York Liberty and wears No. 20 as a guard.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
-      ],
-      "google_keyword": "what team does sabrina ionescu play for",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What are Sabrina Ionescu's college stats?",
-      "answer": "Across her college career at Oregon, Sabrina Ionescu averaged 18.0 points, 7.3 rebounds, and 7.7 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/sabrina-ionescu-1.html",
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
-      ],
-      "google_keyword": "sabrina ionescu college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Sabrina Ionescu attend?",
-      "answer": "Sabrina Ionescu played college basketball at Oregon.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
-      ],
-      "google_keyword": "sabrina ionescu oregon",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Who is Sabrina Ionescu dating?",
-      "answer": "Sabrina Ionescu is married to Hroniss Grasu.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more"
-      ],
-      "google_keyword": "sabrina ionescu boyfriend",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Sabrina Ionescu's jersey number?",
-      "answer": "Sabrina Ionescu wears number 20 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sabrina ionescu number",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Is Sabrina Ionescu injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
+      "answer": "Sabrina Ionescu plays guard for the New York Liberty and wears No. 20. The Liberty drafted her No. 1 overall in 2020. This page lists 7 regular seasons with New York, from 2020 to 2026.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sabrina ionescu injury",
-      "approx_monthly_volume": 1900
+      "sources": [
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
+      ],
+      "queries": [
+        {
+          "q": "wnba sabrina ionescu",
+          "vol": 480
+        },
+        {
+          "q": "what team does sabrina ionescu play for",
+          "vol": 170
+        },
+        {
+          "q": "who does sabrina ionescu play for",
+          "vol": 140
+        },
+        {
+          "q": "sabrina ionescu liberty",
+          "vol": 110
+        },
+        {
+          "q": "sabrina ionescu number",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "What awards has Sabrina Ionescu won?",
-      "answer": "Award history for Sabrina Ionescu is covered in public biographical sources such as her Wikipedia profile.",
+      "question": "What did Sabrina Ionescu score in the 3-point contest?",
+      "answer": "At the 2023 WNBA All-Star 3-point contest, Sabrina Ionescu scored 37 of 40. The WNBA and the Associated Press called that a WNBA and NBA single-round record. She won the contest again in 2025 with 30 points.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
+        "https://www.wnba.com/news/nba-vs-wnba-3-point-challenge-stephen-sabrina",
+        "https://apnews.com/article/wnba-all-star-game-3point-skills-397fe52ca995053f5860b56bcbf88178",
+        "https://apnews.com/article/wnba-all-star-75f5cc35bae99a745efd495457302578"
       ],
-      "google_keyword": "sabrina ionescu all star",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "sabrina ionescu 3 point contest",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What is Sabrina Ionescu's nationality?",
-      "answer": "Sabrina Ionescu is American.",
+      "question": "How much does Sabrina Ionescu weigh?",
+      "answer": "The WNBA lists Sabrina Ionescu at 165 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sabrina_Ionescu"
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
       ],
-      "google_keyword": "sabrina ionescu nationality",
-      "approx_monthly_volume": 70
+      "queries": []
+    },
+    {
+      "question": "What was Sabrina Ionescu's rookie year?",
+      "answer": "The first regular-season row for Sabrina Ionescu is 2020. She played 3 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How does Sabrina Ionescu compare to Caitlin Clark?",
+      "answer": "In the 2026 regular season, Sabrina Ionescu averaged 14.6 points, 3.8 rebounds, and 4.7 assists in 31 games for the New York Liberty. Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever.",
+      "answer_kind": "stats",
+      "sources": [],
+      "queries": [
+        {
+          "q": "sabrina ionescu vs caitlin clark",
+          "vol": 110
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

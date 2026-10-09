@@ -1,144 +1,181 @@
 {
   "slug": "rickea-jackson",
   "player_name": "Rickea Jackson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "Does Rickea Jackson have kids?",
-      "answer": "Rickea and fellow WNBA player Betnijah Laney-Hamilton share a godmother, Debra Walker, who played with Laney-Hamilton's mother Yolanda on the historic Cheyney State Lady Wolves basketball team. In July 2024, Jackson became the first WNBA player to sign a shoe deal with Skechers.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
-      ],
-      "google_keyword": "michael jackson daughter",
-      "approx_monthly_volume": 18100
-    },
-    {
       "question": "How tall is Rickea Jackson?",
-      "answer": "Rickea Jackson is listed at 6' 2\" by the WNBA.",
+      "answer": "The WNBA lists Rickea Jackson at 6 feet 2 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+        "https://www.wnba.com/player/1642288/rickea-jackson"
       ],
-      "google_keyword": "rickea jackson height",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "rickea jackson height",
+          "vol": 1900
+        },
+        {
+          "q": "how tall is rickea jackson",
+          "vol": 320
+        },
+        {
+          "q": "rickea jackson height and weight",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "What are Rickea Jackson's stats / points per game?",
-      "answer": "In the 2026 regular season, Rickea Jackson averaged 18.0 points, 4.8 rebounds, and 2.0 assists in 4 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rickea jackson stats",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "How old is Rickea Jackson?",
-      "answer": "She was born March 16, 2001 in Detroit, Michigan, U.S. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
-      ],
-      "google_keyword": "rickea jackson age",
-      "approx_monthly_volume": 590,
-      "birthdate": "2001-03-16"
-    },
-    {
-      "question": "How much does Rickea Jackson make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Rickea Jackson's base salary / cap hit at about $430,654. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "rickea jackson net worth",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What is Rickea Jackson's contract?",
-      "answer": "Public salary trackers list Rickea Jackson at about $430,654 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "rickea jackson contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What team does Rickea Jackson play for?",
-      "answer": "She plays for the Chicago Sky and wears No. 5 as a forward.",
+      "question": "What are Rickea Jackson's stats?",
+      "answer": "In the 2026 regular season, Rickea Jackson averaged 18.0 points, 4.8 rebounds, and 2.0 assists in 4 games for the Chicago Sky. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+        "https://www.wnba.com/player/1642288/rickea-jackson"
       ],
-      "google_keyword": "rickea jackson team",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Where is Rickea Jackson from?",
-      "answer": "She is from Detroit, Michigan, U.S., and played college basketball at Mississippi State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
-      ],
-      "google_keyword": "where is rickea jackson from",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Rickea Jackson?",
-      "answer": "Rickea Velece Jackson is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA) and for the Breeze of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
-      ],
-      "google_keyword": "who is rickea jackson",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Rickea Jackson attend?",
-      "answer": "Rickea Jackson played college basketball at Tennessee.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
-      ],
-      "google_keyword": "rickea jackson tennessee",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "rickea jackson stats",
+          "vol": 1900
+        }
+      ]
     },
     {
       "question": "Is Rickea Jackson married?",
-      "answer": "There is no widely reported public record of Rickea Jackson being married as of late 2026.",
+      "answer": "No. The Associated Press has described Rickea Jackson as James Pearce Jr.'s ex-girlfriend. No report used here says they married.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+        "https://apnews.com/article/rickea-jackson-james-pearce-5c5add397c1435248af925500d9f24f4"
       ],
-      "google_keyword": "rickea jackson husband",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "rickea jackson husband",
+          "vol": 720
+        },
+        {
+          "q": "james pearce jr rickea jackson",
+          "vol": 590
+        },
+        {
+          "q": "rickea jackson and james pearce",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What position does Rickea Jackson play?",
-      "answer": "Rickea Jackson is listed as a F for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rickea jackson position",
-      "approx_monthly_volume": 50
+      "question": "How old is Rickea Jackson?",
+      "answer": "Rickea Jackson was born March 16, 2001. As of October 2026, she is 25.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642288/rickea-jackson"
+      ],
+      "queries": [
+        {
+          "q": "rickea jackson age",
+          "vol": 590
+        },
+        {
+          "q": "how old is rickea jackson",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Is Rickea Jackson injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
+      "question": "What team does Rickea Jackson play for?",
+      "answer": "Rickea Jackson plays forward for the Chicago Sky and wears No. 5. The Sky acquired her from the Los Angeles Sparks on April 12, 2026. The Sparks drafted her fourth overall in 2024.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rickea jackson injury",
-      "approx_monthly_volume": 1900
+      "sources": [
+        "https://sky.wnba.com/news/chicago-sky-acquire-forward-rickea-jackson",
+        "https://www.wnba.com/draft/2024/prospects/182482/rickea-jackson"
+      ],
+      "queries": [
+        {
+          "q": "rickea jackson wnba",
+          "vol": 880
+        },
+        {
+          "q": "rickea jackson chicago sky",
+          "vol": 170
+        },
+        {
+          "q": "rickea jackson sparks",
+          "vol": 90
+        },
+        {
+          "q": "rickea jackson team",
+          "vol": 90
+        },
+        {
+          "q": "rickea jackson position",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Does Rickea Jackson have a signature shoe?",
-      "answer": "Public search interest ties Rickea Jackson to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
+      "question": "How much does Rickea Jackson weigh?",
+      "answer": "The WNBA lists Rickea Jackson at 175 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rickea_Jackson"
+        "https://www.wnba.com/player/1642288/rickea-jackson"
       ],
-      "google_keyword": "rickea jackson shoes",
-      "approx_monthly_volume": 50
+      "queries": []
+    },
+    {
+      "question": "Where is Rickea Jackson from?",
+      "answer": "The WNBA draft page and her player listing give Detroit as Rickea Jackson's birthplace. The Chicago Sky says she is from Royal Oak, Michigan.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/182482/rickea-jackson",
+        "https://sky.wnba.com/news/chicago-sky-acquire-forward-rickea-jackson"
+      ],
+      "queries": [
+        {
+          "q": "where is rickea jackson from",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Where did Rickea Jackson play college basketball?",
+      "answer": "Rickea Jackson played at Mississippi State and Tennessee. This page lists Tennessee.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/182482/rickea-jackson",
+        "https://sky.wnba.com/news/chicago-sky-acquire-forward-rickea-jackson"
+      ],
+      "queries": [
+        {
+          "q": "rickea jackson tennessee",
+          "vol": 110
+        },
+        {
+          "q": "rickea jackson mississippi state",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What was Rickea Jackson's rookie year?",
+      "answer": "The first regular-season row for Rickea Jackson is 2024. She played 40 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1642288/rickea-jackson"
+      ],
+      "queries": [
+        {
+          "q": "rickea jackson draft",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Who is Rickea Jackson?",
+      "answer": "Rickea Jackson is a forward for the Chicago Sky. The Los Angeles Sparks drafted her fourth overall in 2024.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1642288/rickea-jackson"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

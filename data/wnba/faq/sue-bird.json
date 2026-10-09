@@ -1,154 +1,259 @@
 {
   "slug": "sue-bird",
   "player_name": "Sue Bird",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Sue Bird's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Sue Bird averaged 7.8 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sue bird stats",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Does Sue Bird have a signature shoe?",
-      "answer": "Public search interest ties Sue Bird to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "Are Sue Bird and Megan Rapinoe still together?",
+      "answer": "People, the Associated Press, and NBC News reported on April 17, 2026 that Sue Bird and Megan Rapinoe had split. They had been engaged since 2020 and were not married.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
+        "https://people.com/megan-rapinoe-sue-bird-announce-split-after-nearly-6-years-engaged-11953009",
+        "https://apnews.com/article/sue-bird-megan-rapinoe-breakup-podcast-4653e0ae13410fafe04612f11af363a8",
+        "https://www.nbcnews.com/sports/soccer/megan-rapinoe-sue-bird-announce-split-nearly-decade-together-rcna332410"
       ],
-      "google_keyword": "sue bird shoe",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "sue bird megan rapinoe",
+          "vol": 12100
+        },
+        {
+          "q": "sue bird wife",
+          "vol": 3600
+        },
+        {
+          "q": "who is sue bird married to",
+          "vol": 480
+        },
+        {
+          "q": "sue bird husband",
+          "vol": 390
+        },
+        {
+          "q": "sue bird partner",
+          "vol": 260
+        },
+        {
+          "q": "sue bird megan rapinoe wedding",
+          "vol": 210
+        },
+        {
+          "q": "sue bird dating",
+          "vol": 210
+        },
+        {
+          "q": "sue bird girlfriend",
+          "vol": 210
+        },
+        {
+          "q": "are sue bird and megan rapinoe married",
+          "vol": 170
+        },
+        {
+          "q": "sue bird married",
+          "vol": 140
+        },
+        {
+          "q": "sue bird spouse",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Who is Sue Bird dating?",
-      "answer": "As of late 2026, Sue Bird has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Is Sue Bird related to Larry Bird?",
+      "answer": "No. A 2021 profile said it is a coincidence that Sue Bird and Larry Bird share a last name.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
+        "https://www.espn.com/wnba/story/_/id/30813740/free-agent-sue-bird-back-seattle-storm-just-not-right-away"
       ],
-      "google_keyword": "sue bird partner",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How much does Sue Bird make?",
-      "answer": "A precise public salary or net worth figure for Sue Bird is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "sue bird net worth",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "How old is Sue Bird?",
-      "answer": "She was born October 16, 1980 in Syosset. As of late 2026 that puts her at 45 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "sue bird age",
-      "approx_monthly_volume": 720,
-      "birthdate": "1980-10-16"
-    },
-    {
-      "question": "Is Sue Bird married?",
-      "answer": "There is no widely reported public record of Sue Bird being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "sue bird wife",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "What team does Sue Bird play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sue bird team",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Where is Sue Bird from?",
-      "answer": "She is from Syosset.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "where is sue bird from",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How many championships does Sue Bird have?",
-      "answer": "As of 2025, Bird is the only WNBA player to win titles in three different decades.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "sue bird championships",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What college did Sue Bird attend?",
-      "answer": "Bird played college basketball at University of Connecticut.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "sue bird uconn",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Who is Sue Bird?",
-      "answer": "Suzanne Brigit Bird is an American former basketball player who played professionally for 20 years in the United States and Russia.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "who is sue bird",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What position does Sue Bird play?",
-      "answer": "Sue Bird is listed as a Guard for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sue bird position",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Sue Bird's parents?",
-      "answer": "Public profiles share limited verified detail about Sue Bird's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "sue bird parents",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Did Sue Bird retire?",
-      "answer": "As of late 2026, Sue Bird is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
-      ],
-      "google_keyword": "when did sue bird retire",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "is sue bird related to larry bird",
+          "vol": 1900
+        }
+      ]
     },
     {
       "question": "How tall is Sue Bird?",
-      "answer": "Sue Bird is listed at 5' 9\".",
+      "answer": "The WNBA lists Sue Bird at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sue_Bird"
+        "https://www.wnba.com/player/100720/sue-bird/bio"
       ],
-      "google_keyword": "sue bird height",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "sue bird height",
+          "vol": 1300
+        },
+        {
+          "q": "how tall is sue bird",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "What are Sue Bird's stats?",
+      "answer": "In the 2022 regular season, Sue Bird averaged 7.8 points, 1.9 rebounds, and 6.0 assists in 31 games for the Seattle Storm. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "sue bird stats",
+          "vol": 720
+        },
+        {
+          "q": "sue bird career stats",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "How old is Sue Bird?",
+      "answer": "Sue Bird was born October 16, 1980. As of October 9, 2026, she is 45.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "sue bird age",
+          "vol": 720
+        },
+        {
+          "q": "how old is sue bird",
+          "vol": 590
+        }
+      ]
+    },
+    {
+      "question": "Does Sue Bird have a statue?",
+      "answer": "Yes. The Seattle Times reported that the Storm unveiled an 8-foot statue of Sue Bird outside Climate Pledge Arena on August 17, 2025, the first WNBA franchise statue of a former player.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.seattletimes.com/sports/storm/seattle-storm-unveil-sue-bird-statue-first-for-wnba-player/",
+        "https://storm.wnba.com/news/seattle-storm-unveils-sue-bird-statue"
+      ],
+      "queries": [
+        {
+          "q": "sue bird statue",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "Where did Sue Bird play college basketball?",
+      "answer": "Sue Bird played at UConn. The WNBA lists her on NCAA championship teams in 2000 and 2002.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "sue bird uconn",
+          "vol": 480
+        },
+        {
+          "q": "sue bird alma mater",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Is Sue Bird in the Hall of Fame?",
+      "answer": "Yes. The Seattle Times reported that Sue Bird was inducted into the Naismith Memorial Basketball Hall of Fame on September 6, 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.seattletimes.com/sports/storm/sue-bird-takes-her-place-in-naismith-memorial-basketball-hall-of-fame/"
+      ],
+      "queries": [
+        {
+          "q": "sue bird hall of fame",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How many championships does Sue Bird have?",
+      "answer": "The WNBA lists four titles for Sue Bird with the Seattle Storm, in 2004, 2010, 2018, and 2020.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "sue bird championships",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Where is Sue Bird from?",
+      "answer": "Sue Bird's listed birthplace is Syosset, New York. She played college basketball at UConn.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.espn.com/wnba/player/bio/_/id/91/sue-bird",
+        "https://www.seattletimes.com/sports/storm/sue-bird-takes-her-place-in-naismith-memorial-basketball-hall-of-fame/"
+      ],
+      "queries": [
+        {
+          "q": "where is sue bird from",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Is Sue Bird retired?",
+      "answer": "Yes. The WNBA says Sue Bird announced her retirement on June 16, 2022, after a career that started with the 2002 draft. She is not on a current roster, and this page labels her an inactive player. This page lists 13 regular seasons from 2008 on, not her full career.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "wnba sue bird",
+          "vol": 390
+        },
+        {
+          "q": "seattle storm sue bird",
+          "vol": 210
+        },
+        {
+          "q": "sue bird team",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "What number did Sue Bird wear?",
+      "answer": "The WNBA lists Sue Bird at No. 10. The Storm says that number is in the rafters at Climate Pledge Arena.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio",
+        "https://storm.wnba.com/news/seattle-storm-unveils-sue-bird-statue"
+      ],
+      "queries": [
+        {
+          "q": "sue bird number",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Who is Sue Bird?",
+      "answer": "Sue Bird is a retired Seattle Storm guard. She was the No. 1 pick in 2002, won four WNBA titles, and entered the Naismith Memorial Basketball Hall of Fame in 2025.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/100720/sue-bird/bio"
+      ],
+      "queries": [
+        {
+          "q": "sue bird position",
+          "vol": 110
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

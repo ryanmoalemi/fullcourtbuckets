@@ -1,160 +1,195 @@
 {
   "slug": "kelsey-mitchell",
   "player_name": "Kelsey Mitchell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Kelsey Mitchell's stats / points per game?",
-      "answer": "In the 2026 regular season, Kelsey Mitchell averaged 25.1 points, 1.7 rebounds, and 2.8 assists in 42 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Kelsey Mitchell's stats?",
+      "answer": "In the 2026 regular season, Kelsey Mitchell averaged 24.7 points, 1.7 rebounds, and 2.8 assists in 44 games for the Indiana Fever. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kelsey mitchell stats",
-      "approx_monthly_volume": 22200
+      "sources": [
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
+      ],
+      "queries": [
+        {
+          "q": "kelsey mitchell stats",
+          "vol": 22200
+        },
+        {
+          "q": "kelsey mitchell average points per game",
+          "vol": 170
+        },
+        {
+          "q": "kelsey mitchell points per game",
+          "vol": 140
+        },
+        {
+          "q": "kelsey mitchell career stats",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Kelsey Mitchell?",
-      "answer": "She was born November 12, 1995 in Cincinnati, Ohio, U.S. As of late 2026 that puts her at 30 years old.",
+      "answer": "Kelsey Mitchell was born November 12, 1995. As of October 2026, she is 30.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
       ],
-      "google_keyword": "how old is kelsey mitchell",
-      "approx_monthly_volume": 1600,
-      "birthdate": "1995-11-12"
+      "queries": [
+        {
+          "q": "how old is kelsey mitchell",
+          "vol": 1600
+        },
+        {
+          "q": "kelsey mitchell age",
+          "vol": 1000
+        }
+      ]
     },
     {
       "question": "How tall is Kelsey Mitchell?",
-      "answer": "Kelsey Mitchell is listed at 5' 8\" by the WNBA.",
+      "answer": "The WNBA lists Kelsey Mitchell at 5 feet 8 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
       ],
-      "google_keyword": "how tall is kelsey mitchell",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "how tall is kelsey mitchell",
+          "vol": 1600
+        },
+        {
+          "q": "kelsey mitchell height",
+          "vol": 880
+        }
+      ]
     },
     {
-      "question": "What is Kelsey Mitchell's contract?",
-      "answer": "Public salary trackers list Kelsey Mitchell at about $1,400,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
+      "question": "Does Kelsey Mitchell have a twin?",
+      "answer": "Yes. On WNBA.com, Kelsey Mitchell said she is a twin and that her mother had two sets of twins: Kevin and Cameron, and Kelsey and Chelsea.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.wnba.com/news/five-things-know-kelsey-mitchell"
       ],
-      "google_keyword": "kelsey mitchell contract",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What did Kelsey Mitchell score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Kelsey Mitchell had 22 points, 0 rebounds, and 2 assists in a 77-93 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kelsey mitchell playing tonight",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "kelsey mitchell twin sister",
+          "vol": 1000
+        },
+        {
+          "q": "kelsey mitchell family",
+          "vol": 210
+        },
+        {
+          "q": "kelsey mitchell sister",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How much does Kelsey Mitchell make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Kelsey Mitchell's base salary / cap hit at about $1,400,000. Endorsements are separate from that team salary.",
+      "answer": "The Indianapolis Star reported on April 17, 2026 that Kelsey Mitchell signed a one-year $1.4 million supermax deal with the Indiana Fever.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.indystar.com/story/sports/basketball/wnba/fever/2026/04/17/indiana-fever-news-aliyah-boston-contract-extension-salary-epic-richest-wnba-total/89666695007/",
+        "https://www.espn.com/wnba/story/_/id/48450282/source-kelsey-mitchell-sign-14m-supermax-deal-fever"
       ],
-      "google_keyword": "kelsey mitchell net worth",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What position does Kelsey Mitchell play?",
-      "answer": "Kelsey Mitchell is listed as a guard for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kelsey mitchell position",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "kelsey mitchell contract",
+          "vol": 880
+        },
+        {
+          "q": "kelsey mitchell salary",
+          "vol": 390
+        },
+        {
+          "q": "how much does kelsey mitchell make",
+          "vol": 170
+        },
+        {
+          "q": "kelsey mitchell fever contract",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "What team does Kelsey Mitchell play for?",
-      "answer": "She plays for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kelsey mitchell team",
-      "approx_monthly_volume": 0
+      "answer": "Kelsey Mitchell plays guard for the Indiana Fever and wears No. 0. The Fever drafted her second overall in 2018. This page lists 9 regular seasons with Indiana, from 2018 to 2026.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
+      ],
+      "queries": [
+        {
+          "q": "kelsey mitchell indiana fever",
+          "vol": 480
+        },
+        {
+          "q": "kelsey mitchell wnba",
+          "vol": 320
+        },
+        {
+          "q": "kelsey mitchell fever",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "Where is Kelsey Mitchell from?",
-      "answer": "She is from Cincinnati, Ohio, U.S.",
+      "answer": "Kelsey Mitchell's listed birthplace is Cincinnati, Ohio. She played college basketball at Ohio State.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
+        "https://www.espn.com/wnba/player/bio/_/id/3142191/kelsey-mitchell",
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
       ],
-      "google_keyword": "where is kelsey mitchell from",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "kelsey mitchell ohio state",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How much does Kelsey Mitchell weigh?",
+      "answer": "The WNBA lists Kelsey Mitchell at 153 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What was Kelsey Mitchell's rookie year?",
+      "answer": "The first regular-season row for Kelsey Mitchell is 2018. She played 34 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
+      ],
+      "queries": []
     },
     {
       "question": "Who is Kelsey Mitchell?",
-      "answer": "Kelsey Michelle Mitchell is an American professional basketball player for the Indiana Fever of the Women's National Basketball Association (WNBA) and for the Hive of Unrivaled.",
+      "answer": "Kelsey Mitchell is a guard for the Indiana Fever and an Ohio State alum. The WNBA says she finished a master's degree in sports administration at Cincinnati in 2020.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
+        "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
       ],
-      "google_keyword": "who is kelsey mitchell",
-      "approx_monthly_volume": 0
+      "queries": []
     },
     {
-      "question": "What are Kelsey Mitchell's college stats?",
-      "answer": "Across her college career at Ohio State, Kelsey Mitchell averaged 24.5 points, 3.9 rebounds, and 1.5 assists per game in 139 games.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
-      ],
-      "google_keyword": "kelsey mitchell college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Kelsey Mitchell attend?",
-      "answer": "Kelsey Mitchell played college basketball at Ohio State.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
-      ],
-      "google_keyword": "kelsey mitchell ohio state",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who is Kelsey Mitchell dating?",
-      "answer": "As of late 2026, Kelsey Mitchell has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
-      ],
-      "google_keyword": "kelsey mitchell partner",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "Is Kelsey Mitchell married?",
-      "answer": "There is no widely reported public record of Kelsey Mitchell being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
-      ],
-      "google_keyword": "kelsey mitchell wife",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Is Kelsey Mitchell injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
+      "question": "How does Kelsey Mitchell compare to Caitlin Clark?",
+      "answer": "In the 2026 regular season, Kelsey Mitchell averaged 24.7 points, 1.7 rebounds, and 2.8 assists in 44 games for the Indiana Fever. Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever.",
+      "answer_kind": "stats",
       "sources": [],
-      "google_keyword": "kelsey mitchell injury",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "How many MVPs does Kelsey Mitchell have?",
-      "answer": "MVP and major individual award history for Kelsey Mitchell is summarized in major biographical profiles when she earned those honors.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kelsey_Mitchell_(basketball)"
-      ],
-      "google_keyword": "kelsey mitchell mvp",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "kelsey mitchell caitlin clark",
+          "vol": 590
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

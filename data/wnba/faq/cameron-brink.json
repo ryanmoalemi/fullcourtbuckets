@@ -1,136 +1,197 @@
 {
   "slug": "cameron-brink",
   "player_name": "Cameron Brink",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
       "question": "How tall is Cameron Brink?",
-      "answer": "Cameron Brink is listed at 6' 4\" by the WNBA.",
+      "answer": "The WNBA lists Cameron Brink at 6 feet 4 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
+        "https://www.wnba.com/player/1642287"
       ],
-      "google_keyword": "cameron brink height",
-      "approx_monthly_volume": 12100
+      "queries": [
+        {
+          "q": "cameron brink height",
+          "vol": 12100
+        },
+        {
+          "q": "how tall is cameron brink",
+          "vol": 4400
+        },
+        {
+          "q": "cameron brink height and weight",
+          "vol": 480
+        }
+      ]
     },
     {
-      "question": "What are Cameron Brink's stats / points per game?",
-      "answer": "In the 2026 regular season, Cameron Brink averaged 9.6 points, 5.0 rebounds, and 1.5 assists in 31 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cameron brink stats",
-      "approx_monthly_volume": 5400
-    },
-    {
-      "question": "Who is Cameron Brink dating?",
-      "answer": "Brink began dating Ben Felter on March 10, 2021, after meeting at Stanford University where they were both student athletes. On September 30, 2024, Brink and Felter got engaged after he proposed to her at the Shangri-La Hotel in Paris.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
-      ],
-      "google_keyword": "cameron brink boyfriend",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "How much does Cameron Brink make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Cameron Brink's base salary / cap hit at about $493,851. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "cameron brink net worth",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Cameron Brink?",
-      "answer": "She was born December 31, 2001 in Princeton, New Jersey, U.S. As of late 2026 that puts her at 24 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
-      ],
-      "google_keyword": "cameron brink age",
-      "approx_monthly_volume": 590,
-      "birthdate": "2001-12-31"
-    },
-    {
-      "question": "Who is Cameron Brink?",
-      "answer": "Cameron Lee Brink is an American professional basketball player for the Los Angeles Sparks of the Women's National Basketball Association (WNBA) and for the Breeze of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
-      ],
-      "google_keyword": "who is cameron brink",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "What is Cameron Brink's contract?",
-      "answer": "Public salary trackers list Cameron Brink at about $493,851 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "cameron brink contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What team does Cameron Brink play for?",
-      "answer": "She plays for the Los Angeles Sparks and wears No. 22 as a forward.",
+      "question": "What are Cameron Brink's stats?",
+      "answer": "In the 2026 regular season, Cameron Brink averaged 9.6 points, 5.0 rebounds, and 1.5 assists in 31 games for the Los Angeles Sparks. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
+        "https://www.wnba.com/player/1642287"
       ],
-      "google_keyword": "who does cameron brink play for",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Where is Cameron Brink from?",
-      "answer": "She is from Princeton, New Jersey, U.S.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
-      ],
-      "google_keyword": "where is cameron brink from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Cameron Brink attend?",
-      "answer": "Cameron Brink played college basketball at Stanford.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
-      ],
-      "google_keyword": "cameron brink stanford",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "cameron brink stats",
+          "vol": 5400
+        }
+      ]
     },
     {
       "question": "Is Cameron Brink married?",
-      "answer": "There is no widely reported public record of Cameron Brink being married as of late 2026.",
+      "answer": "People reported on September 30, 2024 that Cameron Brink got engaged to Ben Felter. A January 3, 2025 People story still called him her fiance. Those reports do not describe a completed wedding.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
+        "https://people.com/wnba-star-cameron-brink-engaged-boyfriend-ben-felter-8720645",
+        "https://people.com/cameron-brink-reveals-special-location-she-plans-to-marry-fiance-ben-felter-exclusive-8768673"
       ],
-      "google_keyword": "cameron brink husband",
-      "approx_monthly_volume": 4400
+      "queries": [
+        {
+          "q": "cameron brink husband",
+          "vol": 4400
+        },
+        {
+          "q": "cameron brink boyfriend",
+          "vol": 1900
+        },
+        {
+          "q": "is cameron brink married",
+          "vol": 210
+        },
+        {
+          "q": "cameron brink wedding",
+          "vol": 170
+        },
+        {
+          "q": "cameron brink married",
+          "vol": 140
+        },
+        {
+          "q": "cameron brink dating",
+          "vol": 140
+        },
+        {
+          "q": "cameron brink ben felter",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Is Cameron Brink injured?",
-      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
+      "question": "How old is Cameron Brink?",
+      "answer": "Cameron Brink was born December 31, 2001. As of October 2026, she is 24.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642287"
+      ],
+      "queries": [
+        {
+          "q": "cameron brink age",
+          "vol": 590
+        },
+        {
+          "q": "how old is cameron brink",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How much does Cameron Brink weigh?",
+      "answer": "The WNBA lists Cameron Brink at 170 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642287"
+      ],
+      "queries": [
+        {
+          "q": "cameron brink weight",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "Who is Cameron Brink?",
+      "answer": "Cameron Brink is a forward for the Los Angeles Sparks and a Stanford alum. The WNBA draft page lists her as a 2021 NCAA champion.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "cameron brink injury",
-      "approx_monthly_volume": 2400
+      "sources": [
+        "https://www.wnba.com/player/1642287",
+        "https://www.wnba.com/draft/2024/prospects/182478/cameron-brink"
+      ],
+      "queries": [
+        {
+          "q": "who is cameron brink",
+          "vol": 320
+        },
+        {
+          "q": "wnba cameron brink",
+          "vol": 480
+        },
+        {
+          "q": "cameron brink stanford",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "What team does Cameron Brink play for?",
+      "answer": "Cameron Brink plays forward for the Los Angeles Sparks and wears No. 22. The Sparks drafted her second overall in 2024.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1642287",
+        "https://www.wnba.com/draft/2024/prospects/182478/cameron-brink"
+      ],
+      "queries": [
+        {
+          "q": "who does cameron brink play for",
+          "vol": 140
+        },
+        {
+          "q": "cameron brink team",
+          "vol": 140
+        },
+        {
+          "q": "cameron brink sparks",
+          "vol": 110
+        },
+        {
+          "q": "cameron brink draft",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Where is Cameron Brink from?",
+      "answer": "The WNBA draft page lists Cameron Brink's birthplace as Princeton, New Jersey.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/182478/cameron-brink"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What was Cameron Brink's rookie year?",
+      "answer": "The first regular-season row for Cameron Brink is 2024. She played 15 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1642287"
+      ],
+      "queries": []
     },
     {
       "question": "Does Cameron Brink have a signature shoe?",
-      "answer": "Public search interest ties Cameron Brink to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer": "No retail signature shoe was announced. WNBA.com reported that Cameron Brink unveiled custom New Balance sneakers at 2026 All-Star weekend.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cameron_Brink"
+        "https://www.wnba.com/news/player/1642287/cameron-brink"
       ],
-      "google_keyword": "cameron brink shoe size",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "cameron brink shoes",
+          "vol": 110
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

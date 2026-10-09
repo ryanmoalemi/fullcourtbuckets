@@ -487,6 +487,54 @@ class BuildTests(unittest.TestCase):
             self.assertNotIn(banned, answers)
             self.assertNotIn(banned, html)
 
+    def test_search_faqs_are_one_curated_section(self):
+        root = ROOT.parent
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 26)
+        self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
+        self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
+        for slug in sorted(b.SEARCH_FAQ_SLUGS):
+            faq_path = root / 'data/wnba/faq' / f'{slug}.json'
+            faq = json.loads(faq_path.read_text(encoding='utf-8'))
+            self.assertEqual(faq['slug'], slug)
+            self.assertEqual(faq['source'], 'Google search demand via OpenSEO, Oct 8, 2026')
+            self.assertGreaterEqual(len(faq['items']), 10, slug)
+            self.assertLessEqual(len(faq['items']), 15, slug)
+            raw = faq_path.read_text(encoding='utf-8')
+            self.assertNotIn('\u2014', raw, slug)
+            self.assertNotIn('\u2013', raw, slug)
+            self.assertNotIn('balldontlie', raw.casefold(), slug)
+            questions = [item['question'] for item in faq['items']]
+            self.assertNotIn('net worth', ' '.join(questions).casefold(), slug)
+            profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            html_text, entity = b.faq_section(profile, root)
+            self.assertIn('Player FAQ', html_text, slug)
+            self.assertIn('Frequently asked questions', html_text, slug)
+            self.assertNotIn('Related searches', html_text, slug)
+            self.assertEqual([node['name'] for node in entity['mainEntity']], questions, slug)
+            visible = re.findall(r'<div class="faq-item"><h3>(.*?)</h3><p>(.*?)</p></div>', html_text)
+            for (question, answer), node in zip(visible, entity['mainEntity']):
+                self.assertEqual(html.unescape(question), node['name'], slug)
+                self.assertEqual(html.unescape(answer), node['acceptedAnswer']['text'], slug)
+            joined = ' '.join(node['acceptedAnswer']['text'] for node in entity['mainEntity'])
+            self.assertNotIn('balldontlie', joined.casefold(), slug)
+            self.assertIsNone(b._NOT_WIDELY_RE.search(joined), slug)
+        plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text(encoding='utf-8'))
+        _html, entity = b.faq_section(plum, root)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        self.assertEqual(
+            answers["What are Kelsey Plum's stats?"],
+            "Kelsey Plum's latest season is listed by team on this page, not as one combined average.",
+        )
+        self.assertNotIn('23.9', answers["What are Kelsey Plum's stats?"])
+        self.assertIn('23.9 points', answers['What did Kelsey Plum average for each team in 2026?'])
+        self.assertIn('15.8 points', answers['What did Kelsey Plum average for each team in 2026?'])
+        for slug in ('sue-bird', 'candace-parker'):
+            profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            page = b.profile_page(profile, root, menu=[])
+            self.assertIn('Inactive player', page, slug)
+            self.assertIn('id="faq"', page, slug)
+            self.assertEqual(page.count('id="faq"'), 1, slug)
+
     def test_plum_and_clark_answers_come_from_page_data(self):
         root = ROOT.parent
         plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text())
@@ -507,11 +555,15 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('kelsea plum', page.casefold())
         self.assertIn('FAQPage', page)
         clark = json.loads((root / 'data/wnba/players/caitlin-clark.json').read_text())
+        clark_faq = json.loads((root / 'data/wnba/faq/caitlin-clark.json').read_text())
         clark_html, clark_entity = b.faq_section(clark, root)
         self.assertEqual(
             [node['name'] for node in clark_entity['mainEntity']],
-            ["What are Caitlin Clark's stats?", "How tall is Caitlin Clark?"],
+            [item['question'] for item in clark_faq['items']],
         )
+        self.assertIn("What are Caitlin Clark's stats?", [node['name'] for node in clark_entity['mainEntity']])
+        self.assertIn("How tall is Caitlin Clark?", [node['name'] for node in clark_entity['mainEntity']])
+        self.assertGreaterEqual(len(clark_entity['mainEntity']), 10)
         self.assertIn('What are Caitlin Clark&#x27;s stats?', clark_html)
         self.assertEqual(
             b.answer_related_query(clark, "What is Caitlin Clark's three-point percentage?", root),
@@ -771,15 +823,17 @@ class BuildTests(unittest.TestCase):
         for slug in ('angel-reese', 'caitlin-clark'):
             profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text())
             html_text, entity = b.faq_section(profile, root)
+            faq = json.loads((root / 'data/wnba/faq' / f'{slug}.json').read_text())
+            self.assertEqual(
+                [node['name'] for node in entity['mainEntity']],
+                [item['question'] for item in faq['items']],
+            )
+            self.assertIn('Player FAQ', html_text)
             if slug == 'caitlin-clark':
-                self.assertEqual(
-                    [node['name'] for node in entity['mainEntity']],
-                    ["What are Caitlin Clark's stats?", "How tall is Caitlin Clark?"],
-                )
                 self.assertIn('22.3 points', html_text)
             else:
-                self.assertEqual(html_text, '')
-                self.assertIsNone(entity)
+                self.assertIn('16.4 points', html_text)
+                self.assertNotIn('Wendell Carter', html_text)
             name = b.player_name(profile)
             season = b.answer_related_query(profile, f"What are {name}'s stats / points per game?", root)
             row = b.headline(profile)

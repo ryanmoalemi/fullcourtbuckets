@@ -1,122 +1,185 @@
 {
   "slug": "azzi-fudd",
   "player_name": "Azzi Fudd",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Azzi Fudd's stats / points per game?",
-      "answer": "In the 2026 regular season, Azzi Fudd averaged 13.1 points, 1.7 rebounds, and 1.8 assists in 30 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Azzi Fudd's stats?",
+      "answer": "In the 2026 regular season, Azzi Fudd averaged 13.1 points, 1.7 rebounds, and 1.8 assists in 30 games for the Dallas Wings. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azzi fudd stats",
-      "approx_monthly_volume": 12100
+      "sources": [
+        "https://www.wnba.com/player/1643425"
+      ],
+      "queries": [
+        {
+          "q": "azzi fudd stats",
+          "vol": 12100
+        }
+      ]
     },
     {
       "question": "Who is Azzi Fudd dating?",
-      "answer": "Azzi Fudd is dating Paige Bueckers. They went public in July 2025, when Bueckers named Fudd as her girlfriend in a WAG Talk interview.",
+      "answer": "Azzi Fudd is dating Paige Bueckers. They went public about the relationship in 2025, and as of October 2026 she is not married.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.eonline.com/news/1420044/paige-bueckers-confirms-azzi-fudd-relationship"
+        "https://www.espn.com/wnba/story/_/id/45769903/paige-bueckers-dallas-wings-azzi-fudd-uconn-huskies-girlfriend",
+        "https://www.espn.com/wnba/story/_/id/48505618/wings-stifle-questions-azzi-fudd-paige-bueckers-relationship"
       ],
-      "google_keyword": "paige bueckers azzi fudd relationship",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "How much does Azzi Fudd make?",
-      "answer": "A precise public salary or net worth figure for Azzi Fudd is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "azzi fudd net worth",
-      "approx_monthly_volume": 2900
+      "queries": [
+        {
+          "q": "azzi fudd and paige bueckers",
+          "vol": 9900
+        },
+        {
+          "q": "paige bueckers azzi fudd relationship",
+          "vol": 2400
+        },
+        {
+          "q": "paige bueckers and azzi fudd dating",
+          "vol": 1000
+        },
+        {
+          "q": "azzi fudd dating",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "How tall is Azzi Fudd?",
-      "answer": "Azzi Fudd is listed at 5' 11\".",
+      "answer": "The WNBA lists Azzi Fudd at 5 feet 11 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azzi_Fudd"
+        "https://www.wnba.com/player/1643425"
       ],
-      "google_keyword": "azzi fudd height",
-      "approx_monthly_volume": 2900
+      "queries": [
+        {
+          "q": "azzi fudd height",
+          "vol": 2900
+        },
+        {
+          "q": "how tall is azzi fudd",
+          "vol": 1600
+        },
+        {
+          "q": "azzi fudd height and weight",
+          "vol": 480
+        }
+      ]
+    },
+    {
+      "question": "When was Azzi Fudd drafted?",
+      "answer": "The Dallas Wings drafted Azzi Fudd No. 1 overall in 2026. The first regular-season row on this page is 2026, in 30 games.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1643425",
+        "https://www.wnba.com/draft/2026/prospects/257829/azzi-fudd"
+      ],
+      "queries": [
+        {
+          "q": "azzi fudd draft",
+          "vol": 2400
+        },
+        {
+          "q": "azzi fudd draft pick",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How old is Azzi Fudd?",
-      "answer": "She was born November 11, 2002 in Fairfax. As of late 2026 that puts her at 23 years old.",
+      "answer": "Azzi Fudd was born November 11, 2002. As of October 2026, she is 23.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azzi_Fudd"
+        "https://www.wnba.com/player/1643425"
       ],
-      "google_keyword": "azzi fudd age",
-      "approx_monthly_volume": 1600,
-      "birthdate": "2002-11-11"
-    },
-    {
-      "question": "What is Azzi Fudd's jersey number?",
-      "answer": "Azzi Fudd wears number 35 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azzi fudd number",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Azzi Fudd's contract?",
-      "answer": "Contract length and guarantees for Azzi Fudd are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "azzi fudd contract",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What team does Azzi Fudd play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 35. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azzi fudd team",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "azzi fudd age",
+          "vol": 1600
+        },
+        {
+          "q": "how old is azzi fudd",
+          "vol": 880
+        },
+        {
+          "q": "azzi fudd birthday",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "Where is Azzi Fudd from?",
-      "answer": "She is from Fairfax.",
+      "answer": "The WNBA draft page lists Azzi Fudd's birthplace as Fairfax, Virginia. She played college basketball at UConn.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azzi_Fudd"
+        "https://www.wnba.com/draft/2026/prospects/257829/azzi-fudd",
+        "https://www.wnba.com/player/1643425"
       ],
-      "google_keyword": "where is azzi fudd from",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "where is azzi fudd from",
+          "vol": 720
+        },
+        {
+          "q": "azzi fudd uconn",
+          "vol": 390
+        }
+      ]
     },
     {
-      "question": "What college did Azzi Fudd attend?",
-      "answer": "Fudd played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Azzi_Fudd"
-      ],
-      "google_keyword": "azzi fudd uconn",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Azzi Fudd injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
+      "question": "What team does Azzi Fudd play for?",
+      "answer": "Azzi Fudd plays guard for the Dallas Wings and wears No. 35.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "azzi fudd injury",
-      "approx_monthly_volume": 2900
+      "sources": [
+        "https://www.wnba.com/player/1643425"
+      ],
+      "queries": [
+        {
+          "q": "azzi fudd dallas wings",
+          "vol": 590
+        },
+        {
+          "q": "azzi fudd wnba",
+          "vol": 480
+        },
+        {
+          "q": "azzi fudd team",
+          "vol": 210
+        },
+        {
+          "q": "azzi fudd number",
+          "vol": 210
+        }
+      ]
     },
     {
-      "question": "Who are Azzi Fudd's parents?",
-      "answer": "Public profiles share limited verified detail about Azzi Fudd's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Does Azzi Fudd have a signature shoe?",
+      "answer": "No signature shoe was announced. The Bay Area News Group reported on March 6, 2026 that Azzi Fudd signed with Nike and joined Jordan Brand.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azzi_Fudd"
+        "https://www.orovillemr.com/2026/03/06/steph-curry-protege-azzi-fudd-joins-nike-continues-under-armour-exodus/"
       ],
-      "google_keyword": "azzi fudd parents",
-      "approx_monthly_volume": 5400
+      "queries": []
+    },
+    {
+      "question": "Who is Azzi Fudd?",
+      "answer": "Azzi Fudd is a rookie guard for the Dallas Wings and a UConn alum. The WNBA draft page lists her as a 2025 NCAA champion and tournament most outstanding player.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/257829/azzi-fudd",
+        "https://www.wnba.com/player/1643425"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What was Azzi Fudd's rookie year?",
+      "answer": "The first regular-season row for Azzi Fudd is 2026. She played 30 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1643425"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

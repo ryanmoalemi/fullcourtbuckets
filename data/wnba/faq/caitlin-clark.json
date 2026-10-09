@@ -1,165 +1,197 @@
 {
   "slug": "caitlin-clark",
   "player_name": "Caitlin Clark",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Caitlin Clark's stats / points per game?",
-      "answer": "In the 2026 regular season, Caitlin Clark averaged 22.7 points, 3.9 rebounds, and 8.4 assists in 38 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Caitlin Clark's stats?",
+      "answer": "In the 2026 regular season, Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "caitlin clark stats",
-      "approx_monthly_volume": 60500
+      "sources": [
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
+      ],
+      "queries": [
+        {
+          "q": "caitlin clark stats",
+          "vol": 60500
+        }
+      ]
     },
     {
       "question": "Does Caitlin Clark have a signature shoe?",
-      "answer": "Yes. Nike announced her first signature sneaker, the Caitlin 1, for a worldwide launch around October 1, 2026, as part of a reported multi-year Nike deal that includes a signature line.",
+      "answer": "Yes. Nike calls the Caitlin 1 her first signature shoe. Nike set the global on-sale date as October 1, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.nike.com/a/caitlin-clark-shoe-release",
-        "https://www.sneakerfreaker.com/performance/features/the-active-wnba-signature-sneaker-lines-you-need-to-know"
+        "https://about.nike.com/en/newsroom/releases/caitlin-clark-turns-the-extraordinary-to-ordinary-with-the-nike-caitlin-1-signature-collection"
       ],
-      "google_keyword": "caitlin clark shoes",
-      "approx_monthly_volume": 40500
+      "queries": [
+        {
+          "q": "caitlin clark shoes",
+          "vol": 40500
+        },
+        {
+          "q": "caitlin clark signature shoe",
+          "vol": 2900
+        }
+      ]
     },
     {
       "question": "Who is Caitlin Clark dating?",
-      "answer": "Clark has been in a long-term relationship with Connor McCaffery, a former Iowa basketball player and coach. As of 2026 they have continued to appear together publicly, including during Team USA events.",
+      "answer": "Caitlin Clark is dating Connor McCaffery. USA Today reported the relationship on April 7, 2024, and as of October 2026 she is not married.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.tvinsider.com/swooon/1293753/caitlin-clark-boyfriend-connor-mccaffery-still-together-relationship-updates/"
+        "https://ftw.usatoday.com/story/sports/ncaaw/2024/04/07/caitlin-clark-boyfriend-connor-mccaffery-iowa-who-is-he-instagram/72617848007/"
       ],
-      "google_keyword": "caitlin clark boyfriend",
-      "approx_monthly_volume": 27100
-    },
-    {
-      "question": "How much does Caitlin Clark make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Caitlin Clark's base salary / cap hit at about $528,846. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "caitlin clark net worth",
-      "approx_monthly_volume": 22200
+      "queries": [
+        {
+          "q": "caitlin clark boyfriend",
+          "vol": 27100
+        },
+        {
+          "q": "caitlin clark husband",
+          "vol": 1900
+        }
+      ]
     },
     {
       "question": "How tall is Caitlin Clark?",
-      "answer": "Caitlin Clark is listed at 6' 0\" by the WNBA.",
+      "answer": "The WNBA lists Caitlin Clark at 6 feet.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
       ],
-      "google_keyword": "caitlin clark height",
-      "approx_monthly_volume": 22200
-    },
-    {
-      "question": "What did Caitlin Clark score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Caitlin Clark had 25 points, 2 rebounds, and 5 assists in a 77-93 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is caitlin clark playing tonight",
-      "approx_monthly_volume": 18100
-    },
-    {
-      "question": "What is Caitlin Clark's jersey number?",
-      "answer": "Caitlin Clark wears number 22 for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "caitlin clark jersey",
-      "approx_monthly_volume": 6600
-    },
-    {
-      "question": "What is Caitlin Clark's contract?",
-      "answer": "Clark is on a four-year rookie-scale deal with the Indiana Fever (originally signed in 2024). After the 2026 CBA adjustment her 2026 base salary is about $528,846, and Indiana exercised a roughly $597,596 team option for 2027.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/player/_/id/90251/caitlin-clark"
-      ],
-      "google_keyword": "caitlin clark contract",
-      "approx_monthly_volume": 5400
+      "queries": [
+        {
+          "q": "caitlin clark height",
+          "vol": 22200
+        },
+        {
+          "q": "caitlin clark height and weight",
+          "vol": 2400
+        }
+      ]
     },
     {
       "question": "What team does Caitlin Clark play for?",
-      "answer": "She plays for the Indiana Fever and wears No. 22 as a guard.",
+      "answer": "Caitlin Clark plays guard for the Indiana Fever and wears No. 22. The Fever drafted her No. 1 overall in 2024. The Indianapolis Star reported on April 28, 2026 that the Fever picked up her fourth-year option through 2027.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio",
+        "https://www.indystar.com/story/sports/basketball/wnba/fever/2026/04/28/indiana-fever-caitlin-clark-contract-fourth-year-option-salary-roster/89844416007/"
+      ],
+      "queries": [
+        {
+          "q": "caitlin clark indiana fever",
+          "vol": 9900
+        },
+        {
+          "q": "caitlin clark team",
+          "vol": 5400
+        },
+        {
+          "q": "wnba caitlin clark",
+          "vol": 4400
+        },
+        {
+          "q": "caitlin clark contract",
+          "vol": 5400
+        },
+        {
+          "q": "caitlin clark salary",
+          "vol": 9900
+        }
+      ]
+    },
+    {
+      "question": "Who are Caitlin Clark's teammates?",
+      "answer": "The other Indiana Fever listed on this site are Aliyah Boston, Bree Hall, Grace VanSlooten, Kelsey Mitchell, Lexie Hull, Makayla Timpson, Mercedes Russell, Michelle Onyiah, Monique Billings, Myisha Hines-Allen, Raven Johnson, Sophie Cunningham, and Tyasha Harris.",
       "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
-      ],
-      "google_keyword": "caitlin clark team",
-      "approx_monthly_volume": 5400
-    },
-    {
-      "question": "Where is Caitlin Clark from?",
-      "answer": "She is from Des Moines, Iowa, U.S., and played college basketball at Iowa.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
-      ],
-      "google_keyword": "where is caitlin clark from",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Is Caitlin Clark married?",
-      "answer": "No. Clark has not announced a marriage. She has been dating Connor McCaffery for several years.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sportingnews.com/us/wnba/indiana-fever/news/caitlin-clark-engaged-wnba-superstar-relationship-iowa-basketball-player/3d1bd8c2f94ce0b34947ea63"
-      ],
-      "google_keyword": "caitlin clark husband",
-      "approx_monthly_volume": 1900
+      "sources": [],
+      "queries": [
+        {
+          "q": "caitlin clark teammates",
+          "vol": 5400
+        }
+      ]
     },
     {
       "question": "How old is Caitlin Clark?",
-      "answer": "She was born January 22, 2002 in Des Moines, Iowa, U.S. As of late 2026 that puts her at 24 years old.",
+      "answer": "Caitlin Clark was born January 22, 2002. As of October 2026, she is 24.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
       ],
-      "google_keyword": "caitlin clark age",
-      "approx_monthly_volume": 1900,
-      "birthdate": "2002-01-22"
+      "queries": []
     },
     {
-      "question": "What awards has Caitlin Clark won?",
-      "answer": "Her early WNBA résumé includes 2024 Rookie of the Year, multiple All-Star nods, and a leading role in Indiana's rise. In college she was a two-time national player of the year and became the NCAA Division I all-time leading scorer at Iowa.",
+      "question": "Where is Caitlin Clark from?",
+      "answer": "The WNBA draft page lists Caitlin Clark's birthplace as West Des Moines, Iowa. She played college basketball at Iowa.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/182471/caitlin-clark",
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
+      ],
+      "queries": [
+        {
+          "q": "where is caitlin clark from",
+          "vol": 2400
+        }
+      ]
+    },
+    {
+      "question": "Does Caitlin Clark play golf?",
+      "answer": "Caitlin Clark has played in an LPGA pro-am. Golfweek reported on October 1, 2026 that she is not in the 2026 event.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
+        "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/11/12/caitlin-clark-sophie-cunningham-lexie-hull-enjoy-lpga-pro-am-at-the-annika/87235917007/",
+        "https://golfweek.usatoday.com/story/sports/golf/lpga/2026/10/01/will-caitlin-clark-play-the-annika-lpga-pro-am-again/92026790007/"
       ],
-      "google_keyword": "caitlin clark awards",
-      "approx_monthly_volume": 100
+      "queries": [
+        {
+          "q": "caitlin clark golf",
+          "vol": 2900
+        }
+      ]
+    },
+    {
+      "question": "How much does Caitlin Clark weigh?",
+      "answer": "The WNBA lists Caitlin Clark at 157 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How does Caitlin Clark compare to Sophie Cunningham?",
+      "answer": "In the 2026 regular season, Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever. Sophie Cunningham averaged 7.9 points, 2.3 rebounds, and 1.2 assists in 43 games for the Indiana Fever.",
+      "answer_kind": "stats",
+      "sources": [],
+      "queries": [
+        {
+          "q": "caitlin clark and sophie cunningham",
+          "vol": 2900
+        }
+      ]
+    },
+    {
+      "question": "What was Caitlin Clark's rookie year?",
+      "answer": "The first regular-season row for Caitlin Clark is 2024. She played 40 games in that row. That row is highlighted in the regular-season table.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
+      ],
+      "queries": []
     },
     {
       "question": "Who is Caitlin Clark?",
-      "answer": "Caitlin Elizabeth Clark is an American professional basketball player for the Indiana Fever of the Women's National Basketball Association (WNBA).",
+      "answer": "Caitlin Clark is a guard for the Indiana Fever and an Iowa alum. The WNBA lists her as the 2024 Rookie of the Year and a 2025 Commissioner's Cup champion.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Caitlin_Clark"
+        "https://www.wnba.com/player/1642286/caitlin-clark/bio"
       ],
-      "google_keyword": "who is caitlin clark",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Is Caitlin Clark injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "caitlin clark injured",
-      "approx_monthly_volume": 49500
-    },
-    {
-      "question": "What is Caitlin Clark's three-point percentage?",
-      "answer": "Rebuilt from the three-point percentage on the headline season row.",
-      "answer_kind": "stats",
-      "sources": []
-    },
-    {
-      "question": "How many years has Caitlin Clark been in the WNBA?",
-      "answer": "Rebuilt from the regular-season rows on this page.",
-      "answer_kind": "stats",
-      "sources": []
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

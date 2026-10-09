@@ -1,153 +1,187 @@
 {
   "slug": "sophie-cunningham",
   "player_name": "Sophie Cunningham",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
       "question": "How tall is Sophie Cunningham?",
-      "answer": "Sophie Cunningham is listed at 6' 1\" by the WNBA.",
+      "answer": "The WNBA lists Sophie Cunningham at 6 feet 1 inch.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
       ],
-      "google_keyword": "sophie cunningham height",
-      "approx_monthly_volume": 33100
-    },
-    {
-      "question": "Who is Sophie Cunningham dating?",
-      "answer": "Cunningham has been publicly linked in media coverage with fellow WNBA player Michaela Onyenwere; treat gossip carefully and prefer statements the players have confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham_(basketball)"
-      ],
-      "google_keyword": "sophie cunningham bf",
-      "approx_monthly_volume": 27100
-    },
-    {
-      "question": "How old is Sophie Cunningham?",
-      "answer": "She was born August 16, 1996 in Columbia, Missouri, U.S. As of late 2026 that puts her at 30 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "sophie cunningham age",
-      "approx_monthly_volume": 12100,
-      "birthdate": "1996-08-16"
-    },
-    {
-      "question": "What are Sophie Cunningham's stats / points per game?",
-      "answer": "In the 2026 regular season, Sophie Cunningham averaged 8.0 points, 2.3 rebounds, and 1.2 assists in 41 games for Indiana Fever. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sophie cunningham stats",
-      "approx_monthly_volume": 12100
-    },
-    {
-      "question": "Who is Sophie Cunningham?",
-      "answer": "Sophie Elizabeth Cunningham is an American professional basketball player for the Indiana Fever of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "who is sophie cunningham",
-      "approx_monthly_volume": 12100
-    },
-    {
-      "question": "How much does Sophie Cunningham make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Sophie Cunningham's base salary / cap hit at about $665,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sophie cunningham net worth",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "What is Sophie Cunningham's contract?",
-      "answer": "Public salary trackers list Sophie Cunningham at about $665,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sophie cunningham contract",
-      "approx_monthly_volume": 5400
-    },
-    {
-      "question": "Where is Sophie Cunningham from?",
-      "answer": "She is from Columbia, Missouri, U.S., and played college basketball at Missouri.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "where is sophie cunningham from",
-      "approx_monthly_volume": 2900
-    },
-    {
-      "question": "What team does Sophie Cunningham play for?",
-      "answer": "She plays for the Indiana Fever and wears No. 8 as a guard.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "what team does sophie cunningham play for",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "What did Sophie Cunningham score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Sophie Cunningham had 0 points, 0 rebounds, and 0 assists in a 77-93 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sophie cunningham stats last game",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Sophie Cunningham's college stats?",
-      "answer": "Across her college career at Missouri, Sophie Cunningham averaged 17.0 points, 5.4 rebounds, and 3.0 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/sophie-cunningham-1.html",
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "sophie cunningham college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Is Sophie Cunningham married?",
-      "answer": "There is no widely reported public record of Sophie Cunningham being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
-      ],
-      "google_keyword": "sophie cunningham wife",
-      "approx_monthly_volume": 49500
-    },
-    {
-      "question": "What is Sophie Cunningham's jersey number?",
-      "answer": "Sophie Cunningham wears number 8 for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "indiana fever sophie cunningham jersey",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "Is Sophie Cunningham injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sophie cunningham injured",
-      "approx_monthly_volume": 2900
+      "queries": [
+        {
+          "q": "sophie cunningham height",
+          "vol": 33100
+        },
+        {
+          "q": "how tall is sophie cunningham",
+          "vol": 27100
+        },
+        {
+          "q": "sophie cunningham height and weight",
+          "vol": 1900
+        }
+      ]
     },
     {
       "question": "Does Sophie Cunningham have a signature shoe?",
-      "answer": "Public search interest ties Sophie Cunningham to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer": "No. Sports Illustrated reported that an adidas Crazy Energy Sophie Cunningham colorway went on sale July 24, 2026. It is a player colorway of an existing model, not a signature shoe.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sophie_Cunningham"
+        "https://www.si.com/fannation/sneakers/news/sophie-cunningham-adidas-shoes-nearly-sold-out-in-under-24-hours"
       ],
-      "google_keyword": "sophie cunningham shoes",
-      "approx_monthly_volume": 18100
+      "queries": [
+        {
+          "q": "sophie cunningham shoes",
+          "vol": 18100
+        }
+      ]
+    },
+    {
+      "question": "What are Sophie Cunningham's stats?",
+      "answer": "In the 2026 regular season, Sophie Cunningham averaged 7.9 points, 2.3 rebounds, and 1.2 assists in 43 games for the Indiana Fever. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": [
+        {
+          "q": "sophie cunningham stats",
+          "vol": 12100
+        }
+      ]
+    },
+    {
+      "question": "How old is Sophie Cunningham?",
+      "answer": "Sophie Cunningham was born August 16, 1996. As of October 2026, she is 30.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": [
+        {
+          "q": "sophie cunningham age",
+          "vol": 12100
+        },
+        {
+          "q": "how old is sophie cunningham",
+          "vol": 9900
+        }
+      ]
+    },
+    {
+      "question": "What team does Sophie Cunningham play for?",
+      "answer": "Sophie Cunningham plays guard for the Indiana Fever and wears No. 8. The WNBA says she joined the Fever from the Phoenix Mercury in a four-team trade on January 31, 2025. This page lists 8 regular seasons, from 2019 to 2026.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": [
+        {
+          "q": "indiana fever sophie cunningham",
+          "vol": 18100
+        },
+        {
+          "q": "sophie cunningham wnba",
+          "vol": 4400
+        }
+      ]
+    },
+    {
+      "question": "Has Sophie Cunningham done modeling work?",
+      "answer": "USA Today reported on April 8, 2026 that Sophie Cunningham is in the 2026 Sports Illustrated Swimsuit Issue, along with Napheesa Collier.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.usatoday.com/story/sports/wnba/2026/04/08/2026-sports-illustrated-swimsuit-wnba-stars/89519928007/"
+      ],
+      "queries": [
+        {
+          "q": "sophie cunningham modeling",
+          "vol": 8100
+        }
+      ]
+    },
+    {
+      "question": "Where is Sophie Cunningham from?",
+      "answer": "Sophie Cunningham was born in Columbia, Missouri, and played college basketball at Missouri.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio",
+        "https://www.espn.com/wnba/player/bio/_/id/3907781/sophie-cunningham"
+      ],
+      "queries": [
+        {
+          "q": "where is sophie cunningham from",
+          "vol": 2900
+        }
+      ]
+    },
+    {
+      "question": "Does Sophie Cunningham have a black belt?",
+      "answer": "The Kansas City Star reported that Sophie Cunningham earned a black belt in tae kwon do at age 6.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.kansascity.com/sports/college/sec/university-of-missouri/article51535655.html"
+      ],
+      "queries": [
+        {
+          "q": "is sophie cunningham a black belt",
+          "vol": 2400
+        },
+        {
+          "q": "sophie cunningham black belt",
+          "vol": 2400
+        }
+      ]
+    },
+    {
+      "question": "Who are Sophie Cunningham's parents?",
+      "answer": "The WNBA says she was born to Jim and Paula Cunningham. Her sister Lindsey also played basketball at Missouri.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": [
+        {
+          "q": "sophie cunningham sister",
+          "vol": 1600
+        },
+        {
+          "q": "sophie cunningham parents",
+          "vol": 1600
+        }
+      ]
+    },
+    {
+      "question": "How much does Sophie Cunningham weigh?",
+      "answer": "The WNBA lists Sophie Cunningham at 156 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "When was Sophie Cunningham drafted?",
+      "answer": "The Phoenix Mercury drafted Sophie Cunningham 13th overall in 2019, in the second round. The first regular-season row on this page is 2019, in 32 games.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio",
+        "https://www.espn.com/wnba/player/bio/_/id/3907781/sophie-cunningham"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who is Sophie Cunningham?",
+      "answer": "Sophie Cunningham is a guard for the Indiana Fever and a University of Missouri alum. The WNBA lists her as a 2025 Commissioner's Cup champion.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1629482/sophie-cunningham/bio"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,134 +1,161 @@
 {
   "slug": "aliyah-boston",
   "player_name": "Aliyah Boston",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Aliyah Boston's stats / points per game?",
-      "answer": "In the 2026 regular season, Aliyah Boston averaged 16.4 points, 8.1 rebounds, and 3.0 assists in 38 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Aliyah Boston's stats?",
+      "answer": "In the 2026 regular season, Aliyah Boston averaged 16.1 points, 8.0 rebounds, and 3.0 assists in 40 games for the Indiana Fever. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aliyah boston stats",
-      "approx_monthly_volume": 18100
+      "sources": [
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
+      ],
+      "queries": [
+        {
+          "q": "aliyah boston stats",
+          "vol": 18100
+        },
+        {
+          "q": "aliyah boston rebounds per game",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "How tall is Aliyah Boston?",
-      "answer": "Aliyah Boston is listed at 6' 5\" by the WNBA.",
+      "answer": "The WNBA lists Aliyah Boston at 6 feet 5 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
       ],
-      "google_keyword": "aliyah boston height",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What did Aliyah Boston score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Aliyah Boston had 7 points, 6 rebounds, and 5 assists in a 77-93 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is aliyah boston playing tonight",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "What is Aliyah Boston's contract?",
-      "answer": "Public salary trackers list Aliyah Boston at about $1,000,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "aliyah boston contract",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "How much does Aliyah Boston make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Aliyah Boston's base salary / cap hit at about $1,000,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "aliyah boston net worth",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "aliyah boston height",
+          "vol": 1600
+        },
+        {
+          "q": "how tall is aliyah boston",
+          "vol": 880
+        },
+        {
+          "q": "aliyah boston height and weight",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Aliyah Boston?",
-      "answer": "She was born December 11, 2001 in Saint Thomas, U.S. Virgin Islands. As of late 2026 that puts her at 24 years old.",
+      "answer": "Aliyah Boston was born December 11, 2001. As of October 2026, she is 24.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
       ],
-      "google_keyword": "aliyah boston age",
-      "approx_monthly_volume": 480,
-      "birthdate": "2001-12-11"
+      "queries": [
+        {
+          "q": "aliyah boston age",
+          "vol": 480
+        },
+        {
+          "q": "how old is aliyah boston",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "Where is Aliyah Boston from?",
-      "answer": "She is from Saint Thomas, U.S. Virgin Islands, and played college basketball at South Carolina.",
+      "answer": "The WNBA draft invite list calls Aliyah Boston a 6-5 forward/center from St. Thomas, U.S. Virgin Islands. The Boston Globe says she moved to Worcester in 2014.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
+        "https://www.wnba.com/news/2023-wnba-draft-invitee-list",
+        "https://www.bostonglobe.com/2021/12/31/sports/how-worcester-played-an-important-role-aliyah-bostons-path-womens-basketball-stardom/"
       ],
-      "google_keyword": "where is aliyah boston from",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "where is aliyah boston from",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "What team does Aliyah Boston play for?",
-      "answer": "She plays for the Indiana Fever and wears No. 7 as a center.",
+      "answer": "Aliyah Boston plays center for the Indiana Fever and wears No. 7. The Fever drafted her No. 1 overall in 2023. This page lists 4 regular seasons with Indiana: 2023, 2024, 2025, and 2026.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
+      ],
+      "queries": [
+        {
+          "q": "aliyah boston wnba",
+          "vol": 210
+        },
+        {
+          "q": "aliyah boston fever",
+          "vol": 140
+        },
+        {
+          "q": "aliyah boston indiana fever",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How much does Aliyah Boston weigh?",
+      "answer": "The WNBA lists Aliyah Boston at 217 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
+      ],
+      "queries": [
+        {
+          "q": "aliyah boston weight",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "Where did Aliyah Boston play college basketball?",
+      "answer": "Aliyah Boston played college basketball at South Carolina.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
+      ],
+      "queries": [
+        {
+          "q": "aliyah boston south carolina",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What was Aliyah Boston's rookie year?",
+      "answer": "The first regular-season row for Aliyah Boston is 2023. She played 40 games in that row. That row is highlighted in the regular-season table.",
       "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
       ],
-      "google_keyword": "aliyah boston unrivaled team",
-      "approx_monthly_volume": 70
+      "queries": []
     },
     {
       "question": "Who is Aliyah Boston?",
-      "answer": "Aliyah Boston is an American professional basketball power forward and center for the Indiana Fever of the Women's National Basketball Association (WNBA) and for the Phantom of Unrivaled.",
+      "answer": "Aliyah Boston is a center for the Indiana Fever and a South Carolina alum. The Fever selected her first overall in the 2023 WNBA draft.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
+        "https://www.wnba.com/player/1641648/aliyah-boston/bio"
       ],
-      "google_keyword": "who is aliyah boston",
-      "approx_monthly_volume": 0
+      "queries": []
     },
     {
-      "question": "What college did Aliyah Boston attend?",
-      "answer": "Aliyah Boston played college basketball at the University of South Carolina.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
-      ],
-      "google_keyword": "aliyah boston south carolina",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Aliyah Boston dating?",
-      "answer": "As of late 2026, Aliyah Boston has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
-      ],
-      "google_keyword": "aliyah boston boyfriend",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "Is Aliyah Boston married?",
-      "answer": "There is no widely reported public record of Aliyah Boston being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aliyah_Boston"
-      ],
-      "google_keyword": "aliyah boston husband",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "Is Aliyah Boston injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
+      "question": "How does Aliyah Boston compare to Caitlin Clark?",
+      "answer": "In the 2026 regular season, Aliyah Boston averaged 16.1 points, 8.0 rebounds, and 3.0 assists in 40 games for the Indiana Fever. Caitlin Clark averaged 22.3 points, 4.0 rebounds, and 8.3 assists in 40 games for the Indiana Fever.",
+      "answer_kind": "stats",
       "sources": [],
-      "google_keyword": "aliyah boston injury",
-      "approx_monthly_volume": 4400
+      "queries": [
+        {
+          "q": "caitlin clark aliyah boston",
+          "vol": 140
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

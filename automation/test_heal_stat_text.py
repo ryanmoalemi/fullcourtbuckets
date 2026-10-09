@@ -231,8 +231,9 @@ class HealStatTextTests(unittest.TestCase):
         slug = 'angel-reese'
         profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
         original = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
-        self.assertNotIn('id="faq"', original)
-        self.assertNotIn('FAQPage', original)
+        self.assertEqual(original.count('id="faq"'), 1)
+        self.assertIn('FAQPage', original)
+        self.assertIn('Player FAQ', original)
         self.assertIn('class="player-illustration"', original)
         self.assertIn('AI-generated illustration', original)
         self.assertIn('FCB:approved-portrait:start', original)
@@ -240,6 +241,7 @@ class HealStatTextTests(unittest.TestCase):
         outcome = heal.heal_page(profile, original, ROOT, previous=original)
         self.assertEqual(outcome.action, 'ok')
         self.assertIn('class="player-illustration"', outcome.html)
+        self.assertEqual(outcome.html.count('id="faq"'), 1)
         self.assertEqual(heal.stat_text_mismatches(profile, outcome.html, ROOT), [])
 
     def test_stat_text_failures_are_not_sitewide_build_errors(self):

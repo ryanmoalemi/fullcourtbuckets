@@ -1,138 +1,261 @@
 {
   "slug": "candace-parker",
   "player_name": "Candace Parker",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 8, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "Is Candace Parker married?",
-      "answer": "Yes. Candace Parker is married to Anna Petrakova. They married in December 2019, and the wedding was private.",
+      "question": "Where did Candace Parker play college basketball?",
+      "answer": "Candace Parker played at Tennessee under Pat Summitt. She led the Lady Vols to NCAA titles in 2007 and 2008.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.theknot.com/content/wnba-relationships"
+        "https://kids.britannica.com/students/article/Candace-Parker/633973",
+        "https://aces.wnba.com/candace-parker-announces-retirement-after-historic-16-year-career"
       ],
-      "google_keyword": "candace parker wife",
-      "approx_monthly_volume": 6600
+      "queries": [
+        {
+          "q": "candace parker tennessee",
+          "vol": 90500
+        },
+        {
+          "q": "candace parker tennessee stats",
+          "vol": 720
+        },
+        {
+          "q": "candace parker pat summitt",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "Does Candace Parker have kids?",
-      "answer": "The couple have a daughter, Lailaa Nicole Williams, born in 2009. In October 2020, Parker and her daughter became part of the ownership group of Angel City FC, a Los Angeles-based team in the National Women's Soccer League that began competing in 2022.",
+      "question": "Is Candace Parker married?",
+      "answer": "Yes. Candace Parker is married to Anna Petrakova. People reported that she was previously married to Shelden Williams from 2008 until they split in 2016.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://www.wnba.com/news/15-seasons-of-cp3-what-keeps-her-going",
+        "https://people.com/who-is-anna-petrakova-candace-parker-wife-7502642"
       ],
-      "google_keyword": "candace parker and daughter",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "candace parker wife",
+          "vol": 6600
+        },
+        {
+          "q": "candace parker husband",
+          "vol": 3600
+        },
+        {
+          "q": "who is candace parker married to",
+          "vol": 720
+        },
+        {
+          "q": "candace parker spouse",
+          "vol": 590
+        },
+        {
+          "q": "candace parker married",
+          "vol": 590
+        },
+        {
+          "q": "candace parker and anna petrakova",
+          "vol": 140
+        },
+        {
+          "q": "does candace parker have a wife",
+          "vol": 140
+        },
+        {
+          "q": "shelden williams and candace parker",
+          "vol": 390
+        },
+        {
+          "q": "candace parker ex husband",
+          "vol": 880
+        }
+      ]
+    },
+    {
+      "question": "How tall is Candace Parker?",
+      "answer": "The WNBA lists Candace Parker at 6 feet 4 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201496/candace-parker/bio"
+      ],
+      "queries": [
+        {
+          "q": "candace parker height",
+          "vol": 2400
+        },
+        {
+          "q": "how tall is candace parker",
+          "vol": 1300
+        }
+      ]
     },
     {
       "question": "How old is Candace Parker?",
-      "answer": "She was born April 19, 1986 in St. Louis, Missouri, U.S. As of late 2026 that puts her at 40 years old.",
+      "answer": "Candace Parker was born April 19, 1986. As of October 2026, she is 40.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://www.wnba.com/player/201496/candace-parker/bio"
       ],
-      "google_keyword": "how old is candace parker",
-      "approx_monthly_volume": 590,
-      "birthdate": "1986-04-19"
+      "queries": [
+        {
+          "q": "how old is candace parker",
+          "vol": 590
+        },
+        {
+          "q": "candace parker age",
+          "vol": 590
+        }
+      ]
     },
     {
-      "question": "Did Candace Parker retire?",
-      "answer": "Parker retired from the WNBA after the 2023 season and has worked in media and broadcasting.",
+      "question": "What are Candace Parker's stats?",
+      "answer": "In the 2022 regular season, Candace Parker averaged 13.2 points, 8.6 rebounds, and 4.5 assists in 32 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/201496/candace-parker/bio"
+      ],
+      "queries": [
+        {
+          "q": "candace parker stats",
+          "vol": 720
+        }
+      ]
+    },
+    {
+      "question": "Is Candace Parker retired?",
+      "answer": "Yes. The Las Vegas Aces say Candace Parker announced her retirement on April 28, 2024. She is not on a current roster, and this page labels her an inactive player.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://aces.wnba.com/candace-parker-bio",
+        "https://aces.wnba.com/candace-parker-announces-retirement-after-historic-16-year-career"
       ],
-      "google_keyword": "when did candace parker retire",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "candace parker retired",
+          "vol": 260
+        },
+        {
+          "q": "is candace parker retired",
+          "vol": 140
+        },
+        {
+          "q": "wnba candace parker",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "How many championships does Candace Parker have?",
-      "answer": "Parker won WNBA titles with the Los Angeles Sparks (2016) and Chicago Sky (2021), plus multiple MVPs and a Finals MVP.",
+      "answer": "The Las Vegas Aces list three WNBA titles for Candace Parker: 2016 with Los Angeles, 2021 with Chicago, and 2023 with Las Vegas. The WNBA lists her MVP awards in 2008 and 2013.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://aces.wnba.com/candace-parker-announces-retirement-after-historic-16-year-career",
+        "https://www.wnba.com/player/201496/candace-parker/bio"
       ],
-      "google_keyword": "candace parker championships",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "candace parker championships",
+          "vol": 210
+        },
+        {
+          "q": "candace parker rings",
+          "vol": 170
+        },
+        {
+          "q": "how many rings does candace parker have",
+          "vol": 90
+        },
+        {
+          "q": "candace parker accolades",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What team does Candace Parker play for?",
-      "answer": "Her most recent WNBA team on record is the Las Vegas Aces.",
-      "answer_kind": "stats",
+      "question": "Is Candace Parker in the Hall of Fame?",
+      "answer": "Yes. Candace Parker was enshrined in the Naismith Memorial Basketball Hall of Fame on August 15, 2026.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://www.espn.com/espn/story/_/id/49623875/basketball-hof-class-2026-honors-women-hoops-nba-icons",
+        "https://apnews.com/article/delle-donne-parker-basketball-hall-of-fame-7bae74d0832a730633f59c20845579d3"
       ],
-      "google_keyword": "candace parker team",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "candace parker hall of fame",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "Where is Candace Parker from?",
-      "answer": "She is from St. Louis, Missouri, U.S., and played college basketball at Tennessee.",
+      "answer": "The Las Vegas Aces and Britannica Kids say Candace Parker was born in St. Louis, Missouri, and grew up in Naperville, Illinois.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://aces.wnba.com/candace-parker-bio",
+        "https://kids.britannica.com/students/article/Candace-Parker/633973"
       ],
-      "google_keyword": "where is candace parker from",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "where is candace parker from",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "Does Candace Parker have children?",
+      "answer": "The Las Vegas Aces say Candace Parker gave birth to her daughter, Lailaa, on May 13, 2009. WNBA.com also names a son, Airr, born February 1, 2022, with Anna Petrakova.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/candace-parker-bio",
+        "https://www.wnba.com/news/15-seasons-of-cp3-what-keeps-her-going"
+      ],
+      "queries": [
+        {
+          "q": "candace parker and daughter",
+          "vol": 720
+        },
+        {
+          "q": "candace parker son",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Where did Candace Parker play in the WNBA?",
+      "answer": "Candace Parker played for the Los Angeles Sparks, then the Chicago Sky, then the Las Vegas Aces. The Sparks drafted her No. 1 overall in 2008.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/candace-parker-announces-retirement-after-historic-16-year-career",
+        "https://kids.britannica.com/students/article/Candace-Parker/633973"
+      ],
+      "queries": [
+        {
+          "q": "candace parker team",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "How much does Candace Parker weigh?",
+      "answer": "The WNBA lists Candace Parker at 184 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201496/candace-parker/bio"
+      ],
+      "queries": []
     },
     {
       "question": "Who is Candace Parker?",
-      "answer": "Candace Nicole Parker, nicknamed \"Ace\", is an American former professional basketball player.",
+      "answer": "Candace Parker is a retired WNBA forward. She won titles with the Sparks, the Sky, and the Aces, and she entered the Naismith Memorial Basketball Hall of Fame in 2026.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
+        "https://aces.wnba.com/candace-parker-announces-retirement-after-historic-16-year-career",
+        "https://www.wnba.com/player/201496/candace-parker/bio"
       ],
-      "google_keyword": "who is candace parker",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What is Candace Parker's WNBA salary?",
-      "answer": "Public salary databases list Candace Parker's reported 2024 WNBA salary near $100,000. Endorsements and overseas pay are separate from that figure. She has since been reported as retired from the WNBA.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/player/_/id/29890/candace-parker"
-      ],
-      "google_keyword": "candace parker wnba salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What are Candace Parker's college stats?",
-      "answer": "Across her college career at Tennessee, Candace Parker averaged 17.4 points, 9.2 rebounds, and 3.8 assists per game in 66 games.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
-      ],
-      "google_keyword": "candace parker tennessee stats",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What is Candace Parker's contract?",
-      "answer": "Contract length and guarantees for Candace Parker are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "candace parker contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What are Candace Parker's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Candace Parker averaged 13.2 points, 8.6 rebounds, and 4.5 assists in 32 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "candace parker stats",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Does Candace Parker have a signature shoe?",
-      "answer": "Public search interest ties Candace Parker to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Candace_Parker"
-      ],
-      "google_keyword": "candace parker basketball shoes",
-      "approx_monthly_volume": 320
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
