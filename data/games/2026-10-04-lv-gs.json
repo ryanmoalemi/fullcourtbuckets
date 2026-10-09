@@ -2,10 +2,8 @@
   "schema_version": 1,
   "source": "balldontlie",
   "fallback": false,
-  "flags": [
-    "crosscheck_mismatch"
-  ],
-  "checked_at": "2026-10-08T07:40:56+00:00",
+  "flags": [],
+  "checked_at": "2026-10-09T06:20:17+00:00",
   "date": "2026-10-04",
   "status": "final",
   "season": 2026,
@@ -71,12 +69,12 @@
     },
     {
       "period": 2,
-      "away": 7,
+      "away": 13,
       "home": 12
     },
     {
       "period": 3,
-      "away": 23,
+      "away": 17,
       "home": 22
     },
     {
@@ -732,20 +730,9 @@
     "source": "espn",
     "espn_game_id": "401918296",
     "compared": true,
-    "matched": false,
+    "matched": true,
     "players_compared": true,
-    "mismatches": [
-      {
-        "field": "period.2.away",
-        "balldontlie": 7,
-        "espn": 13
-      },
-      {
-        "field": "period.3.away",
-        "balldontlie": 23,
-        "espn": 17
-      }
-    ],
+    "mismatches": [],
     "unavailable": [],
     "espn_series": {
       "source": "espn",
@@ -765,7 +752,7 @@
         }
       ]
     },
-    "note": "ESPN disagrees with the game file. Resolve every field before review."
+    "note": "Matched ESPN on the final, quarters, team totals, and each player's full box line."
   },
   "plays": [
     {

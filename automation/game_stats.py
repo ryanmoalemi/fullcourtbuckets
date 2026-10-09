@@ -409,6 +409,14 @@ def choose_periods(candidates, away_score, home_score):
 
 
 def periods_from_plays(plays):
+    """Quarter points from the running score in play-by-play.
+
+    The feed can append a late correction or substitution out of order, so the
+    play with the highest order number in a period is not always its last play.
+    Running scores never go down, so each period ends at the highest score seen
+    in that period. Taking the last row by order once turned a 31-34 halftime
+    into 25-34 (Aces at Valkyries, 2026-10-04).
+    """
     if not isinstance(plays, list):
         return None
     latest = {}
@@ -418,16 +426,14 @@ def periods_from_plays(plays):
         period = as_signed(play.get("period"))
         if not isinstance(period, int) or period <= 0:
             continue
-        order = as_signed(play.get("order")) or 0
         home = as_signed(play.get("home_score"))
         away = as_signed(play.get("away_score"))
         if away is None:
             away = as_signed(play.get("visitor_score"))
         if home is None or away is None:
             continue
-        current = latest.get(period)
-        if current is None or order >= current[0]:
-            latest[period] = (order, home, away)
+        best_home, best_away = latest.get(period, (0, 0))
+        latest[period] = (max(best_home, home), max(best_away, away))
     if not latest:
         return None
     ordered = sorted(latest)
@@ -435,7 +441,7 @@ def periods_from_plays(plays):
         return None
     rows, prev_home, prev_away = [], 0, 0
     for period in ordered:
-        _, home, away = latest[period]
+        home, away = latest[period]
         rows.append({"period": period, "away": away - prev_away, "home": home - prev_home})
         prev_home, prev_away = home, away
     if any(row["away"] < 0 or row["home"] < 0 for row in rows):
