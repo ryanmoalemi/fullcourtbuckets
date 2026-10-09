@@ -30,6 +30,32 @@
     "imageOgHeight": 628
   },
   {
+    "slug": "allisha-gray-game-3-status",
+    "url": "/news/allisha-gray-game-3-status/",
+    "title": "Allisha Gray Is Out for Game 3 as the Dream Go for the Sweep in Brooklyn",
+    "description": "Allisha Gray is out for Game 3. The Dream will try to sweep the Liberty without their leading scorer.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-09",
+    "dateModified": "2026-10-09T15:45:00-07:00",
+    "image": "/images/articles/allisha-gray-game-3-status/allisha-gray-2024.jpg",
+    "imageAlt": "Allisha Gray of the Atlanta Dream in a white jersey holding a basketball",
+    "imageCredit": "Photo: John Mac / Wikimedia Commons (CC BY-SA 2.0)",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1200,
+    "imageHeight": 1859,
+    "imageSource": "/images/articles/allisha-gray-game-3-status/allisha-gray-2024.jpg",
+    "imageFocal": "center 17%",
+    "imageHero": "/images/articles/allisha-gray-game-3-status/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageOg": "/images/articles/allisha-gray-game-3-status/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
+  },
+  {
     "slug": "aces-valkyries-semis-game-2-recap",
     "url": "/news/aces-valkyries-semis-game-2-recap/",
     "title": "Burton From 28, Stokes at the Rim: Valkyries Hold Off the Aces 83-81, Lead Semis 2-0",
