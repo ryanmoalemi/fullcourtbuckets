@@ -1,152 +1,209 @@
 {
   "slug": "chelsea-gray",
   "player_name": "Chelsea Gray",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Chelsea Gray's stats / points per game?",
-      "answer": "In the 2026 regular season, Chelsea Gray averaged 11.9 points, 3.3 rebounds, and 6.7 assists in 41 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are Chelsea Gray's stats?",
+      "answer": "In the 2026 regular season, Chelsea Gray averaged 12.1 points, 3.3 rebounds, and 6.7 assists in 43 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea gray stats",
-      "approx_monthly_volume": 14800
+      "sources": [
+        "https://www.wnba.com/player/203833/chelsea-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "chelsea gray stats",
+          "vol": 14800
+        },
+        {
+          "q": "chelsea gray assists per game",
+          "vol": 90
+        },
+        {
+          "q": "chelsea gray average points per game",
+          "vol": 70
+        },
+        {
+          "q": "chelsea gray assists",
+          "vol": 50
+        },
+        {
+          "q": "chelsea gray wnba stats",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Is Chelsea Gray married?",
-      "answer": "Gray has been publicly known to be in a long-term relationship and later marriage with Tipesa Moorer; they have children together.",
+      "answer": "Yes. Chelsea Gray married Tipesa Moorer in November 2019. Team USA says their first child, Lennox, was born in 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
+        "https://aces.wnba.com/chelsea-gray-bio",
+        "https://www.teamusa.com/profiles/chelsea-gray-1194920"
       ],
-      "google_keyword": "chelsea gray wife",
-      "approx_monthly_volume": 2400
+      "queries": [
+        {
+          "q": "chelsea gray wife",
+          "vol": 2400
+        },
+        {
+          "q": "is chelsea gray married",
+          "vol": 480
+        },
+        {
+          "q": "chelsea gray son",
+          "vol": 170
+        },
+        {
+          "q": "chelsea gray wedding",
+          "vol": 170
+        },
+        {
+          "q": "chelsea gray partner",
+          "vol": 170
+        },
+        {
+          "q": "who is chelsea gray married to",
+          "vol": 140
+        },
+        {
+          "q": "chelsea gray husband",
+          "vol": 110
+        },
+        {
+          "q": "chelsea gray spouse",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "How old is Chelsea Gray?",
-      "answer": "She was born October 8, 1992 in Hayward, California, U.S. As of late 2026 that puts her at 33 years old.",
+      "answer": "Chelsea Gray was born October 8, 1992.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
+        "https://www.wnba.com/player/203833/chelsea-gray/bio"
       ],
-      "google_keyword": "chelsea gray age",
-      "approx_monthly_volume": 590,
-      "birthdate": "1992-10-08"
-    },
-    {
-      "question": "How much does Chelsea Gray make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Chelsea Gray's base salary / cap hit at about $1,000,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "chelsea gray net worth",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "How tall is Chelsea Gray?",
-      "answer": "Chelsea Gray is listed at 5' 11\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "chelsea gray height",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "Does Chelsea Gray have kids?",
-      "answer": "In November 2023, they announced that Tipesa was pregnant with their first child, and in February 2024, Lennox Ali'i Gray was born.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "chelsea gray son",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Chelsea Gray's contract?",
-      "answer": "Public salary trackers list Chelsea Gray at about $1,000,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "chelsea gray contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What did Chelsea Gray score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Chelsea Gray had 15 points, 4 rebounds, and 4 assists in a 98-77 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is chelsea gray playing tonight",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Where is Chelsea Gray from?",
-      "answer": "She is from Hayward, California, U.S., and played college basketball at Duke.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "where is chelsea gray from",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Chelsea Gray?",
-      "answer": "Chelsea Nicelle Gray is an American professional basketball player for the Las Vegas Aces of the Women's National Basketball Association (WNBA) and for Rose of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "who is chelsea gray",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "chelsea gray age",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "What team does Chelsea Gray play for?",
-      "answer": "She plays for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea gray team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Chelsea Gray attend?",
-      "answer": "Chelsea Gray played college basketball at Duke.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "chelsea gray duke",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Chelsea Gray dating?",
-      "answer": "As of late 2026, Chelsea Gray has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
-      ],
-      "google_keyword": "chelsea gray partner",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Chelsea Gray injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
+      "answer": "Chelsea Gray plays guard for the Las Vegas Aces and wears No. 12. Connecticut drafted her 11th overall on April 14, 2014. The first regular-season row on this page is 2015, when she played 34 games.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "chelsea gray injury",
-      "approx_monthly_volume": 210
+      "sources": [
+        "https://www.wnba.com/player/203833/chelsea-gray/bio",
+        "https://aces.wnba.com/chelsea-gray-bio"
+      ],
+      "queries": [
+        {
+          "q": "chelsea gray wnba",
+          "vol": 390
+        },
+        {
+          "q": "chelsea gray aces",
+          "vol": 90
+        },
+        {
+          "q": "who does chelsea gray play for",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Does Chelsea Gray have a signature shoe?",
-      "answer": "Public search interest ties Chelsea Gray to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "How tall is Chelsea Gray?",
+      "answer": "The WNBA lists Chelsea Gray at 5 feet 11 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203833/chelsea-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "chelsea gray height",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "Where did Chelsea Gray play college basketball?",
+      "answer": "Chelsea Gray played at Duke.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203833/chelsea-gray/bio",
+        "https://www.teamusa.com/profiles/chelsea-gray-1194920"
+      ],
+      "queries": [
+        {
+          "q": "chelsea gray duke",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Where is Chelsea Gray from?",
+      "answer": "Team USA says Chelsea Gray grew up in Manteca, California.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Gray"
+        "https://www.teamusa.com/profiles/chelsea-gray-1194920"
       ],
-      "google_keyword": "chelsea gray shoes",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "where is chelsea gray from",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Who are Chelsea Gray's parents?",
+      "answer": "The Aces bio says Chelsea Gray is the daughter of James and Vickey Gray and has one brother, Javon.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/chelsea-gray-bio",
+        "https://www.teamusa.com/profiles/chelsea-gray-1194920"
+      ],
+      "queries": [
+        {
+          "q": "chelsea gray parents",
+          "vol": 70
+        },
+        {
+          "q": "chelsea gray family",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Who is Chelsea Gray?",
+      "answer": "Chelsea Gray is a guard for the Las Vegas Aces. The Aces bio lists WNBA titles in 2016, 2022, 2023, and 2025, and the 2022 Finals MVP.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/chelsea-gray-bio",
+        "https://www.wnba.com/player/203833/chelsea-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "who is chelsea gray",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "How many years has Chelsea Gray been in the WNBA?",
+      "answer": "Chelsea Gray has 12 regular seasons on this page, from 2015 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/203833/chelsea-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "how long has chelsea gray been in the wnba",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

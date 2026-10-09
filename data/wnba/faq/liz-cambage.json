@@ -1,114 +1,204 @@
 {
   "slug": "liz-cambage",
   "player_name": "Liz Cambage",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 9, 2026",
+  "verified_at": "2026-10-09",
   "items": [
     {
-      "question": "What are Liz Cambage's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Liz Cambage averaged 14.2 points, 8.2 rebounds, and 1.3 assists in 25 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "liz cambage stats",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Who is Liz Cambage dating?",
-      "answer": "As of late 2026, Liz Cambage has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
-      ],
-      "google_keyword": "liz cambage partner",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How much does Liz Cambage make?",
-      "answer": "A precise public salary or net worth figure for Liz Cambage is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "liz cambage net worth",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How old is Liz Cambage?",
-      "answer": "Public profiles list Liz Cambage as born in 1991. As of late 2026 that puts her around 35 years old.",
+      "question": "How tall is Liz Cambage?",
+      "answer": "The WNBA lists Liz Cambage at 6 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
       ],
-      "google_keyword": "liz cambage age",
-      "approx_monthly_volume": 590,
-      "birthdate": "1991-01-01"
+      "queries": [
+        {
+          "q": "liz cambage height",
+          "vol": 2400
+        },
+        {
+          "q": "how tall is liz cambage",
+          "vol": 480
+        },
+        {
+          "q": "liz cambage tall",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "Is Liz Cambage married?",
-      "answer": "There is no widely reported public record of Liz Cambage being married as of late 2026.",
+      "answer": "No current partner has been publicly confirmed.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
       ],
-      "google_keyword": "liz cambage husband",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "liz cambage husband",
+          "vol": 1000
+        },
+        {
+          "q": "liz cambage partner",
+          "vol": 260
+        },
+        {
+          "q": "liz cambage relationships",
+          "vol": 140
+        },
+        {
+          "q": "is liz cambage married",
+          "vol": 70
+        },
+        {
+          "q": "liz cambage married",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What team does Liz Cambage play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. Her listed position is Center.",
+      "question": "How old is Liz Cambage?",
+      "answer": "Liz Cambage was born August 18, 1991.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
+      ],
+      "queries": [
+        {
+          "q": "liz cambage age",
+          "vol": 590
+        },
+        {
+          "q": "how old is liz cambage",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "What are Liz Cambage's stats?",
+      "answer": "In the 2022 regular season, Liz Cambage averaged 13.0 points, 6.4 rebounds, and 2.1 assists in 25 games for the Los Angeles Sparks. Her full season-by-season numbers are on this page.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "liz cambage team",
-      "approx_monthly_volume": 40
+      "sources": [
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
+      ],
+      "queries": [
+        {
+          "q": "liz cambage stats",
+          "vol": 390
+        },
+        {
+          "q": "liz cambage wnba stats",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How much does Liz Cambage weigh?",
+      "answer": "The WNBA lists Liz Cambage at 216 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
+      ],
+      "queries": [
+        {
+          "q": "liz cambage weight",
+          "vol": 140
+        },
+        {
+          "q": "liz cambage height and weight",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "Who is Liz Cambage?",
-      "answer": "Elizabeth Folake Cambage is an Australian professional basketball player for the Sichuan Yuanda of the Women's Chinese Basketball Association.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
-      ],
-      "google_keyword": "who is liz cambage",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Liz Cambage's parents?",
-      "answer": "Public profiles share limited verified detail about Liz Cambage's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Liz Cambage is a center who is not on a current roster. The WNBA lists her as the second overall pick in the 2011 WNBA Draft, a four-time All-Star in 2011, 2018, 2019, and 2021, and the 2018 MVP runner-up. This page labels her an inactive player.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
       ],
-      "google_keyword": "liz cambage parents",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "liz cambage wnba",
+          "vol": 320
+        },
+        {
+          "q": "who is liz cambage",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Did Liz Cambage retire?",
-      "answer": "As of late 2026, Liz Cambage has a public WNBA playing career; check her bio for current status.",
+      "question": "What is Liz Cambage's career high?",
+      "answer": "The WNBA bio records a 53-point game for Liz Cambage with Dallas against the New York Liberty on July 17, 2018. The Associated Press reported that Marina Mabrey matched that total, and A'ja Wilson's 53 from August 22, 2023, for Toronto against the Los Angeles Sparks on June 25, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
+        "https://www.wnba.com/player/202633/liz-cambage/bio",
+        "https://apnews.com/article/sparks-tempo-score-a55854ab0aa373da6bed7efdcda9f8de"
       ],
-      "google_keyword": "liz cambage retired",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "liz cambage career high",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "What position does Liz Cambage play?",
-      "answer": "Liz Cambage is listed as a Center for the Dallas Wings.",
+      "question": "Is Liz Cambage still in the WNBA?",
+      "answer": "Liz Cambage is not on a current roster, and this page labels her an inactive player. Her last regular season on this page is 2022 with the Los Angeles Sparks.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
+      ],
+      "queries": [
+        {
+          "q": "is liz cambage still in the wnba",
+          "vol": 40
+        },
+        {
+          "q": "liz cambage retired",
+          "vol": 50
+        },
+        {
+          "q": "is liz cambage retired",
+          "vol": 40
+        },
+        {
+          "q": "liz cambage now",
+          "vol": 40
+        },
+        {
+          "q": "what is liz cambage doing now",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Liz Cambage played for?",
+      "answer": "The regular-season table lists the Tulsa Shock, the Dallas Wings, the Las Vegas Aces, and the Los Angeles Sparks for Liz Cambage.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "liz cambage basketball",
-      "approx_monthly_volume": 60500
+      "sources": [
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
+      ],
+      "queries": [
+        {
+          "q": "liz cambage team",
+          "vol": 40
+        },
+        {
+          "q": "liz cambage aces",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Liz Cambage's nationality?",
-      "answer": "Liz Cambage is Australian.",
-      "answer_kind": "bio",
+      "question": "How many years has Liz Cambage been in the WNBA?",
+      "answer": "Liz Cambage has 6 regular seasons on this page: 2011, 2013, 2018, 2019, 2021, and 2022.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liz_Cambage"
+        "https://www.wnba.com/player/202633/liz-cambage/bio"
       ],
-      "google_keyword": "liz cambage basketball",
-      "approx_monthly_volume": 60500
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
