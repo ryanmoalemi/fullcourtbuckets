@@ -15,6 +15,7 @@ from zoneinfo import ZoneInfo
 from analytics import GA4_TAG
 import homepage_rail
 import internal_links as links
+import season_teams
 import site_nav
 import team_hub
 import team_names
@@ -512,6 +513,15 @@ def faq_answer_html(answer: str) -> str:
     return ''.join(parts)
 
 
+def _year_list(years) -> str:
+    bits = [str(year) for year in years]
+    if len(bits) == 1:
+        return bits[0]
+    if len(bits) == 2:
+        return f'{bits[0]} and {bits[1]}'
+    return ', '.join(bits[:-1]) + ', and ' + bits[-1]
+
+
 def _listed(bits: list[str]) -> str:
     if not bits:
         return ''
@@ -715,6 +725,78 @@ def curated_faq_pairs(profile, root: Path):
 def on_current_roster(profile) -> bool:
     """True only for a player listed on a current roster. Inactive players use the short record."""
     return isinstance(profile, dict) and profile.get('active_in_provider_feed') is True
+
+
+_SEASON_TABLES = {}
+
+
+def season_cross_check(profile, root=None) -> dict:
+    """Regular seasons from 2008 on, compared with the stored team cross-check.
+
+    The cross-check is not copied onto the page. missing lists seasons it has
+    and this profile does not. games lists seasons whose games played disagree.
+    checked is false when this player has no successful cross-check.
+    """
+    empty = {'missing': [], 'games': [], 'extra': [], 'checked': False}
+    if not isinstance(profile, dict) or root is None:
+        return empty
+    key = str(Path(root).resolve())
+    if key not in _SEASON_TABLES:
+        _SEASON_TABLES[key] = season_teams.load_table(Path(root))
+    table = _SEASON_TABLES[key]
+    player = profile.get('player') if isinstance(profile.get('player'), dict) else {}
+    player_id = player.get('id')
+    players = table.get('players') if isinstance(table.get('players'), dict) else {}
+    entry = players.get(str(player_id))
+    if not isinstance(entry, dict) or entry.get('status') != 'ok':
+        return empty
+    coverage = profile.get('coverage_start')
+    if isinstance(coverage, bool) or not isinstance(coverage, int):
+        coverage = 2008
+    ours = {}
+    for row in profile.get('season_stats') or []:
+        if not isinstance(row, dict) or row.get('season_type') != 2:
+            continue
+        year = row.get('season')
+        games = row.get('games_played')
+        if isinstance(year, bool) or not isinstance(year, int) or year < coverage:
+            continue
+        if isinstance(games, bool) or not isinstance(games, int):
+            games = 0
+        ours[year] = ours.get(year, 0) + games
+    theirs = {}
+    for item in season_teams.player_stints(table, player_id):
+        if item.get('season_type') != 2:
+            continue
+        year = item.get('season')
+        games = item.get('games_played')
+        if isinstance(year, bool) or not isinstance(year, int) or year < coverage:
+            continue
+        if isinstance(games, bool) or not isinstance(games, int):
+            continue
+        theirs[year] = theirs.get(year, 0) + games
+    return {
+        'missing': sorted(set(theirs) - set(ours)),
+        'games': sorted(year for year in set(ours) & set(theirs) if ours[year] != theirs[year]),
+        'extra': sorted(set(ours) - set(theirs)),
+        'checked': True,
+    }
+
+
+def partial_record_html(profile, root=None) -> str:
+    """Say the record is partial when a season or its games played could not be verified.
+
+    The sentence names the years. It does not add games, averages, or a career total.
+    """
+    check = season_cross_check(profile, root)
+    if not check['missing'] and not check['games']:
+        return ''
+    bits = ['This record is partial.']
+    if check['missing']:
+        bits.append(f'Verified statistics on this page do not include {_year_list(check["missing"])}.')
+    if check['games']:
+        bits.append(f'Games played for {_year_list(check["games"])} on this page could not be confirmed.')
+    return f'<p class="partial-record">{esc(" ".join(bits))}</p>'
 
 
 _NOT_WIDELY_RE = re.compile(r'not widely (?:reported|publicized)', re.I)
@@ -1303,9 +1385,10 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         if key == 'position':
             shown = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(shown, shown)
         detail_rows.append((label, shown))
+    partial = partial_record_html(profile, root)
     if years:
         span = f'{years[0]}–{years[-1]}' if len(years) > 1 else str(years[0])
-        detail_rows.append(('Years on record', span))
+        detail_rows.append(('Verified seasons' if partial else 'Years on record', span))
     detail_html = ''.join(f'<div><dt>{esc(label)}</dt><dd>{esc(shown)}</dd></div>' for label, shown in detail_rows)
     aside = (
         f'<aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section></aside>'
@@ -1329,7 +1412,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         f'<div class="actions">{action}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div>'
         f'</div>{art}</div>{hero_stats}</section>{nav}'
     )
-    column = f'{statshtml}{games}{history}{couple}'
+    column = f'{statshtml}{partial}{games}{history}{couple}'
     if aside:
         body = hero + f'<div class="content-grid"><div>{column}</div>{aside}</div>'
     else:
@@ -1414,6 +1497,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
         radios=''.join(f'<button type="button" data-kind="{k}" aria-pressed="false">{"Regular season" if k==2 else "Playoffs"}</button>' for k in kinds)
         opts=''.join(f'<option value="{y}">{y}</option>' for y in sorted(years,reverse=True))
         controls=f'<div class="filters js-only"><div class="segmented" role="group" aria-label="Competition">{radios}<button type="button" data-kind="all" aria-pressed="true">Both</button></div><label>Season <select id="season-filter"><option value="all">All seasons</option>{opts}</select></label></div>'
+    partial = partial_record_html(profile, root)
     statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p></section>' if tablehtml else ''
     all_teams=[]
     for r in sorted(stats,key=lambda r:-r['season']):
@@ -1455,7 +1539,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>{numbers_note}</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json">View player data</a></details>'''
     overview_html=f'<section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>'
     archive=f'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>{esc(archive_line)}</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
-    body=hero+f'<div class="content-grid"><div>{statshtml}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
+    body=hero+f'<div class="content-grid"><div>{statshtml}{partial}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
     route=f'/wnba/{slug}/'
     title = player_title(name)
     webpage={'@type':'WebPage','name':title,'url':BASE+route,'about':{'@id':BASE+route+'#player'}}

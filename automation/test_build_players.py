@@ -600,6 +600,93 @@ class BuildTests(unittest.TestCase):
         self.assertIn('Inactive player', page)
         self.assertNotIn('Archive profile', page)
 
+    def test_abby_bishop_record_is_partial_and_does_not_invent_seasons(self):
+        root = ROOT.parent
+        profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
+        check = b.season_cross_check(profile, root)
+        self.assertEqual(check['missing'], [2010, 2016])
+        self.assertEqual(check['games'], [])
+        self.assertTrue(check['checked'])
+        page = b.profile_page(profile, root, menu=[])
+        self.assertIn('This record is partial.', page)
+        self.assertIn('do not include 2010 and 2016.', page)
+        self.assertIn('<td>26</td>', page)
+        self.assertIn('>2015</strong>', page)
+        self.assertNotIn('Years on record', page)
+        self.assertIn('Verified seasons', page)
+        self.assertNotIn('>2010</strong>', page)
+        self.assertNotIn('>2016</strong>', page)
+        self.assertNotIn('55', page)
+        self.assertNotIn('balldontlie', page.casefold())
+        self.assertEqual(page.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+
+    def test_a_matching_season_is_not_called_partial(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            table = {
+                'players': {
+                    '1': {
+                        'name': 'Example Player',
+                        'status': 'ok',
+                        'stints': [{'season': 2026, 'season_type': 2, 'games_played': 10, 'team_slug': 'example'}],
+                    }
+                }
+            }
+            (root / 'data/wnba').mkdir(parents=True)
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            self.assertEqual(b.season_cross_check(profile, root)['missing'], [])
+            self.assertEqual(b.season_cross_check(profile, root)['games'], [])
+            page = b.profile_page(profile, root, menu=[])
+            self.assertNotIn('This record is partial.', page)
+            self.assertIn('Years on record', page)
+            table['players']['1']['stints'].append(
+                {'season': 2010, 'season_type': 2, 'games_played': 16, 'team_slug': 'example'}
+            )
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            self.assertIn('do not include 2010.', page)
+            self.assertNotIn('Years on record', page)
+            table['players']['1']['stints'] = [
+                {'season': 2026, 'season_type': 2, 'games_played': 99, 'team_slug': 'example'}
+            ]
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            disagreed = b.season_cross_check(profile, root)
+            self.assertEqual(disagreed['games'], [2026])
+            self.assertIn('could not be confirmed', b.partial_record_html(profile, root))
+
+    def test_published_pages_flag_season_and_game_disagreements(self):
+        root = ROOT.parent
+        index = json.loads((root / 'data/wnba/players-index.json').read_text())
+        problems = []
+        for entry in index['players']:
+            slug = entry.get('slug') or ''
+            path = root / 'wnba' / slug / 'index.html'
+            profile_path = root / 'data/wnba/players' / f'{slug}.json'
+            if not path.is_file() or not profile_path.is_file():
+                continue
+            page = path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in page:
+                continue
+            profile = json.loads(profile_path.read_text(encoding='utf-8'))
+            check = b.season_cross_check(profile, root)
+            incomplete = bool(check['missing'] or check['games'])
+            flagged = 'This record is partial.' in page
+            if incomplete != flagged:
+                problems.append(slug)
+            if incomplete:
+                note = page[page.find('partial-record'):page.find('partial-record') + 1200]
+                for year in check['missing'] + check['games']:
+                    if str(year) not in note:
+                        problems.append(f'{slug} omits {year}')
+            elif 'class="partial-record"' in page:
+                problems.append(slug + ' extra flag')
+        self.assertEqual(problems, [])
+
     def test_normalized_questions_do_not_repeat_and_answers_are_not_filler(self):
         self.assertEqual(
             b.normalize_question("How old is A'ja Wilson?", "A'ja Wilson"),
