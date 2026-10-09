@@ -461,6 +461,8 @@ def standings_sentence(standings: dict) -> str:
     wins, losses = leader.get('wins'), leader.get('losses')
     if isinstance(wins, bool) or isinstance(losses, bool) or not isinstance(wins, int) or not isinstance(losses, int):
         return ''
+    if standings.get('showPlayoffs'):
+        return f'The {name} finished the regular season at {wins}-{losses}.'
     return f'The {name} lead the WNBA standings at {wins}-{losses}.'
 
 
@@ -494,9 +496,33 @@ def regular_season_is_final(standings: dict) -> bool:
 
 def standings_title(standings: dict) -> str:
     year = standings.get('season') or ''
+    if standings.get('showPlayoffs') and year:
+        return f'{year} WNBA Playoffs'
     if regular_season_is_final(standings) and year:
         return f'Final {year} regular-season standings'
     return 'WNBA Standings'
+
+
+_SHORT_MONTHS = ('', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+
+
+def updated_label(raw, with_time: bool = False) -> str:
+    """Pacific date, and the clock when the playoffs are still being refreshed."""
+    if not with_time:
+        return _long_date(raw)
+    text = str(raw or '').strip()
+    if not text:
+        return ''
+    try:
+        moment = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
+    except ValueError:
+        return ''
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=dt.timezone.utc)
+    local = moment.astimezone(ZoneInfo('America/Los_Angeles'))
+    hour = local.hour % 12 or 12
+    suffix = 'AM' if local.hour < 12 else 'PM'
+    return f'{_SHORT_MONTHS[local.month]} {local.day}, {local.year}, {hour}:{local.minute:02d} {suffix} PT'
 
 
 def stamp_webpage_modified(text: str, day: str) -> str:
@@ -524,7 +550,7 @@ def stamp_webpage_modified(text: str, day: str) -> str:
 def apply_standings_freshness(text: str, standings: dict) -> str:
     """Replace the JS placeholder date with the date stored in the standings file."""
     sentence = standings_sentence(standings)
-    when = _long_date(standings.get('updatedAt'))
+    when = updated_label(standings.get('updatedAt'), with_time=bool(standings.get('playoffsActive')))
     parts = [part for part in (sentence, f'Updated {when}.' if when else '') if part]
     if parts:
         block = '<p class="support" id="standings-updated">' + esc(' '.join(parts)) + '</p>'
@@ -543,12 +569,15 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
         )
     title = standings_title(standings)
     text = re.sub(
-        r'<h1>(?:WNBA Standings|Final \d{4} regular-season standings)</h1>',
+        r'<h1>(?:WNBA Standings|Final \d{4} regular-season standings|\d{4} WNBA Playoffs)</h1>',
         f'<h1>{esc(title)}</h1>',
         text,
         count=1,
     )
-    if regular_season_is_final(standings):
+    if standings.get('showPlayoffs'):
+        sub = 'Playoff series are listed above the final regular-season table.'
+        text = re.sub(r'<p class="subhead">.*?</p>', f'<p class="subhead">{esc(sub)}</p>', text, count=1)
+    elif regular_season_is_final(standings):
         text = re.sub(
             r'<p class="subhead">.*?</p>',
             f'<p class="subhead">{esc(title)}</p>',

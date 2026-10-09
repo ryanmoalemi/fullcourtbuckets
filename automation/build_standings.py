@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Rebuild standings/index.html from the ESPN WNBA standings feed.
+"""Rebuild standings/index.html from the stats feed stored for this site.
 
-One row per team. East and West stay in feed order. The league playoff seed
-is the top 8 by record across both conferences. Tied records keep the order
-the feed already listed, which is ESPN's tiebreak order. Nothing is hardcoded
-to a team name. If the feed fails, the last good page stays on disk.
+The regular-season table comes from the standings endpoint (or the snapshot
+the workflow saved from it). Playoff series come from data/games, with player
+logs filling boxes that have not been written yet. A second feed is only a
+cross-check. If the two disagree, the last good page stays on disk and the
+command exits non-zero. The page does not name or link either feed.
 """
 from __future__ import annotations
 
@@ -13,18 +14,22 @@ import datetime as dt
 import hashlib
 import html
 import json
+import os
 import re
+import sys
 from pathlib import Path
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
 import internal_links as links
+import playoff_board
 import site_nav
 import team_names
+import wnba_sync
 
 FEED_URL = 'https://site.api.espn.com/apis/v2/sports/basketball/wnba/standings'
-ESPN_PAGE = 'https://www.espn.com/wnba/standings'
+SCOREBOARD_URL = 'https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard'
 BASE = 'https://fullcourtbuckets.com'
 ROUTE = '/standings/'
 ADSENSE_TAG = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
@@ -180,11 +185,148 @@ def parse_standings(payload: dict, updated_at: str) -> dict:
         })
     return {
         'updatedAt': updated_at,
-        'source': FEED_URL,
-        'sourcePage': ESPN_PAGE,
         'season': year,
         'teams': teams,
     }
+
+
+def _conference_name(value) -> str:
+    text = str(value or '')
+    if 'east' in text.casefold():
+        return 'Eastern'
+    if 'west' in text.casefold():
+        return 'Western'
+    return ''
+
+
+def _record_text(value) -> str:
+    return str(value or '').strip().replace('–', '-').replace('—', '-')
+
+
+def _whole(value):
+    if isinstance(value, bool) or value is None:
+        return None
+    if isinstance(value, int):
+        return value
+    if isinstance(value, float) and value == int(value):
+        return int(value)
+    text = str(value).strip()
+    if text.isdigit():
+        return int(text)
+    return None
+
+
+def table_from_provider(rows, updated_at: str, season=None, previous=None) -> dict:
+    """One row per team from standings-endpoint rows. League seeds follow the record."""
+    if isinstance(rows, dict):
+        season = season or rows.get('season')
+        rows = rows.get('teams') or rows.get('data') or []
+    if not isinstance(rows, list):
+        raise ValueError('Standings rows are not a list.')
+    raw = []
+    previous_rank = {}
+    previous_extra = {}
+    if isinstance(previous, dict):
+        for team in previous.get('teams') or []:
+            if not isinstance(team, dict):
+                continue
+            if isinstance(team.get('rank'), int):
+                previous_rank[team.get('name')] = team['rank']
+            previous_extra[team.get('name')] = team
+    for index, row in enumerate(rows):
+        if not isinstance(row, dict):
+            continue
+        team = row.get('team') if isinstance(row.get('team'), dict) else {}
+        name = team_names.public_name(str(team.get('full_name') or row.get('full_name') or team.get('name') or '').strip())
+        wins, losses = _whole(row.get('wins')), _whole(row.get('losses'))
+        conference = _conference_name(row.get('conference') or team.get('conference'))
+        if not name or wins is None or losses is None or not conference:
+            continue
+        if season is None:
+            season = _whole(row.get('season'))
+        prior = previous_extra.get(name) or {}
+        same_record = prior.get('wins') == wins and prior.get('losses') == losses
+        raw.append({
+            'name': name,
+            'abbreviation': str(team.get('abbreviation') or row.get('abbreviation') or name.split()[-1][:3]).upper(),
+            'wins': wins,
+            'losses': losses,
+            'pct': row.get('win_percentage') if isinstance(row.get('win_percentage'), (int, float)) and not isinstance(row.get('win_percentage'), bool) else None,
+            'conference': conference,
+            'conferenceRank': 0,
+            'conferenceGamesBack': '',
+            'home': _record_text(row.get('home_record') or row.get('home')),
+            'road': _record_text(row.get('away_record') or row.get('road')),
+            'streak': prior.get('streak') if same_record else '',
+            'last10': prior.get('last10') if same_record else '',
+            'feed_index': index,
+        })
+    seen = set()
+    unique = []
+    for team in raw:
+        if team['name'] in seen:
+            continue
+        seen.add(team['name'])
+        unique.append(team)
+    if len(unique) != EXPECTED_TEAMS:
+        raise ValueError(f'Expected {EXPECTED_TEAMS} teams, found {len(unique)}.')
+    for conference in ('Eastern', 'Western'):
+        group = [team for team in unique if team['conference'] == conference]
+        group.sort(key=lambda team: (-team['wins'], team['losses'], previous_rank.get(team['name'], 99), team['feed_index']))
+        if not group:
+            continue
+        leader_row = group[0]
+        for rank, team in enumerate(group, start=1):
+            team['conferenceRank'] = rank
+            team['conferenceGamesBack'] = _league_games_back(leader_row, team)
+    ordered = sorted(
+        unique,
+        key=lambda team: (-team['wins'], team['losses'], previous_rank.get(team['name'], 99), team['feed_index']),
+    )
+    leader = ordered[0]
+    year = season
+    teams = []
+    for index, team in enumerate(ordered, start=1):
+        played = team['wins'] + team['losses']
+        teams.append({
+            'rank': index,
+            'playoffSeed': index if index <= PLAYOFF_SPOTS else None,
+            'name': team['name'],
+            'abbreviation': team['abbreviation'],
+            'wins': team['wins'],
+            'losses': team['losses'],
+            'pct': team['pct'] if team['pct'] is not None else (team['wins'] / played if played else 0),
+            'gamesBack': _league_games_back(leader, team),
+            'conferenceGamesBack': team['conferenceGamesBack'],
+            'home': team['home'],
+            'road': team['road'],
+            'streak': team['streak'],
+            'last10': team['last10'],
+            'conference': team['conference'],
+            'conferenceRank': team['conferenceRank'],
+        })
+    return {
+        'updatedAt': updated_at,
+        'season': year,
+        'teams': teams,
+    }
+
+
+def stamp_is_fresh(stamp: str, now: dt.datetime, hours: int = 36) -> bool:
+    """True when a playoff refresh stamp is within the daily window."""
+    text = str(stamp or '').strip()
+    if not text:
+        return False
+    try:
+        moment = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
+    except ValueError:
+        return False
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=dt.timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=ZoneInfo('America/Los_Angeles'))
+    age = now - moment
+    return dt.timedelta(0) <= age <= dt.timedelta(hours=hours)
 
 
 def standings_hash(table: dict) -> str:
@@ -301,11 +443,15 @@ def season_length_answer(table: dict) -> tuple[str, str]:
     year = table.get('season') or 'This'
     if len(set(played)) == 1 and links.regular_season_is_final(table):
         games = played[0]
-        return (
+        sentence = (
             f'The {year} regular season on this page is {games} games. '
-            f'Every team has played {games}, so no regular-season games are left.',
-            '',
+            f'Every team has played {games}, so no regular-season games are left.'
         )
+        if table.get('champion'):
+            sentence += f" The playoffs on this page are over. {table['champion']} won the title."
+        elif table.get('showPlayoffs'):
+            sentence += ' The playoffs are listed on this page and continue until a champion is decided.'
+        return sentence, ''
     if len(set(played)) == 1:
         games = played[0]
         return (
@@ -361,7 +507,13 @@ def standings_faq(table: dict) -> tuple[str, dict | None, list[str]]:
     if length_plain:
         pairs.append(('How long is the WNBA season, and how many games are left?', length_plain, length_plain))
     if clock:
-        refresh = f'Full Court Buckets refreshes these standings daily at {clock}.'
+        if table.get('playoffsActive'):
+            refresh = (
+                f'Full Court Buckets refreshes these standings and the playoff series daily at {clock} '
+                'until the Finals are over.'
+            )
+        else:
+            refresh = f'Full Court Buckets refreshes these standings daily at {clock}.'
         pairs.append(('When do these standings refresh?', refresh, refresh))
     items = ''.join(
         f'<div class="faq-item"><h3>{esc(question)}</h3><p>{html_answer}</p></div>'
@@ -405,18 +557,49 @@ def team_hrefs(root: Path) -> dict[str, str]:
     return found
 
 
+def attach_playoffs(root: Path, table: dict) -> dict:
+    """Series from stored games. The score has to match those games or the page is not written."""
+    season = table.get('season')
+    year = season if isinstance(season, int) and not isinstance(season, bool) else None
+    board = playoff_board.build_board(
+        playoff_board.load_results(root, year),
+        playoff_board.load_schedule(root, year),
+        table.get('teams') or [],
+    )
+    playoff_board.verify_board(board)
+    table['showPlayoffs'] = bool(board.get('show'))
+    table['playoffsActive'] = bool(board.get('active'))
+    table['champion'] = board.get('champion') or ''
+    table['playoffDigest'] = playoff_board.section_text(board)
+    return board
+
+
 def render_page(root: Path, table: dict) -> str:
     hrefs = team_hrefs(root)
+    board = table.get('_board')
+    if not isinstance(board, dict):
+        board = attach_playoffs(root, table)
     menu = site_nav.build_menu(root)
     nav = site_nav.render(menu, ROUTE)
     teams = table['teams']
-    leader = teams[0]
-    when = links._long_date(table.get('updatedAt'))
-    sentence = f'The {leader["name"]} lead the WNBA standings at {leader["wins"]}-{leader["losses"]}.'
+    when = links.updated_label(table.get('updatedAt'), with_time=bool(table.get('playoffsActive')))
+    sentence = links.standings_sentence(table)
     support = f'{sentence} Updated {when}.' if when else sentence
     year = table.get('season') or ''
     heading = links.standings_title(table)
+    if table.get('showPlayoffs'):
+        subhead = 'Playoff series are listed above the final regular-season table.'
+    elif links.regular_season_is_final(table):
+        subhead = heading
+    else:
+        subhead = f'{year} Regular Season'
+    if links.regular_season_is_final(table):
+        table_heading = f'Final {year} regular-season standings' if year else 'Final regular-season standings'
+    else:
+        table_heading = f'{year} WNBA Standings'.strip()
+    page_name = f'{year} WNBA Playoffs' if table.get('showPlayoffs') else f'{year} WNBA Standings'
     modified = links._iso_day(table.get('updatedAt'))
+    playoff_html = playoff_board.render_html(board, hrefs)
     def by_conference(name):
         rows = [team for team in teams if team['conference'] == name]
         return sorted(rows, key=lambda team: team.get('conferenceRank') or 99)
@@ -425,16 +608,22 @@ def render_page(root: Path, table: dict) -> str:
     east = ''.join(_row(team, hrefs.get(team['name'], ''), False) for team in by_conference('Eastern'))
     west = ''.join(_row(team, hrefs.get(team['name'], ''), False) for team in by_conference('Western'))
     css = (Path(__file__).with_name('standings.css')).read_text(encoding='utf-8')
-    description = (
-        f'{year} WNBA standings for all {len(teams)} teams: wins, losses, winning percentage, '
-        'games back, home and road records, and playoff seeds.'
-    )
+    if table.get('showPlayoffs'):
+        description = (
+            f'{year} WNBA playoff series, game results, and the final regular-season standings '
+            f'for all {len(teams)} teams.'
+        )
+    else:
+        description = (
+            f'{year} WNBA standings for all {len(teams)} teams: wins, losses, winning percentage, '
+            'games back, home and road records, and playoff seeds.'
+        )
     structured = {
         '@context': 'https://schema.org',
         '@graph': [
             {
                 '@type': 'WebPage',
-                'name': f'{year} WNBA Standings',
+                'name': page_name,
                 'url': BASE + ROUTE,
                 'description': description,
                 'dateModified': modified,
@@ -461,12 +650,12 @@ def render_page(root: Path, table: dict) -> str:
 {GA4_TAG}
 {ADSENSE_TAG}
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(year)} WNBA Standings | Full Court Buckets</title>
+<title>{esc(page_name)} | Full Court Buckets</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{BASE}{ROUTE}">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:type" content="website">
-<meta property="og:title" content="{esc(year)} WNBA Standings | Full Court Buckets">
+<meta property="og:title" content="{esc(page_name)} | Full Court Buckets">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{BASE}{ROUTE}">
 <meta property="og:site_name" content="Full Court Buckets">
@@ -487,12 +676,13 @@ def render_page(root: Path, table: dict) -> str:
 <div class="page-header">
 <div class="eyebrow">League</div>
 <h1>{esc(heading)}</h1>
-<p class="subhead">{esc(heading if links.regular_season_is_final(table) else f'{year} Regular Season')}</p>
+<p class="subhead">{esc(subhead)}</p>
 <p class="support" id="standings-updated">{esc(support)}</p>
 </div>
+{playoff_html}
 <section class="panel">
 <div class="panel-head">
-<h2>{esc(year)} WNBA Standings</h2>
+<h2>{esc(table_heading)}</h2>
 <div class="last-updated"><span class="dot"></span><span id="updatedAt">Updated: {esc(when)}</span></div>
 </div>
 <div class="table-wrap">
@@ -535,7 +725,7 @@ def render_page(root: Path, table: dict) -> str:
 <section class="explainer">
 <h3>How WNBA Standings Work</h3>
 <p>The eight teams with the best regular-season records qualify for the WNBA Playoffs. Playoff seeding is based on regular-season record rather than conference.</p>
-<p>If teams finish with identical records, WNBA tiebreak procedures are used to determine playoff qualification and seeding. This page keeps the order already published in the standings feed when records match.</p>
+<p>If teams finish with identical records, WNBA tiebreak procedures are used to determine playoff qualification and seeding. When records match, this page keeps the order already published.</p>
 <p><strong>Tiebreakers</strong></p>
 <ul>
 <li>Better head-to-head record</li>
@@ -545,7 +735,6 @@ def render_page(root: Path, table: dict) -> str:
 </ul>
 </section>
 {faq_html}
-<p class="source-note">Source: <a href="{ESPN_PAGE}" target="_blank" rel="noopener">ESPN standings</a>.</p>
 </div>
 </main>
 {site_nav.footer_html(True)}
@@ -555,44 +744,154 @@ def render_page(root: Path, table: dict) -> str:
 '''
 
 
-def build(root: Path, payload: dict | None = None, updated_at: str | None = None) -> bool:
-    """Write the standings page. Return False and keep the last page if the feed fails."""
+def fetch_json(url: str) -> dict:
+    request = Request(url, headers={'User-Agent': 'FullCourtBuckets/1.0'})
+    with urlopen(request, timeout=30) as response:
+        payload = json.loads(response.read().decode('utf-8'))
+    if not isinstance(payload, dict):
+        raise ValueError('Cross-check feed did not return an object.')
+    return payload
+
+
+def season_year(previous, now: dt.datetime) -> int:
+    if isinstance(previous, dict):
+        year = previous.get('season')
+        if isinstance(year, int) and not isinstance(year, bool):
+            return year
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=ZoneInfo('America/Los_Angeles'))
+    return now.astimezone(ZoneInfo('America/Los_Angeles')).year
+
+
+def fetch_provider_rows(season: int) -> list:
+    """Standings endpoint. The key stays in the environment and is never written."""
+    key = os.environ.get('BALLDONTLIE_API_KEY', '').strip()
+    if not key:
+        raise playoff_board.CheckError('Standings need the stats feed key. The last good page was kept.')
+    rows = wnba_sync.Client(key).all('standings', {'season': season})
+    if key in json.dumps(rows):
+        raise playoff_board.CheckError('Standings response contained the API key. The last good page was kept.')
+    return rows
+
+
+def write_provider_snapshot(root: Path, rows: list, season: int, checked_at: str) -> None:
+    path = root / 'data' / 'wnba' / 'standings.json'
+    payload = {'checked_at': checked_at, 'season': season, 'teams': rows}
+    text = json.dumps(payload, indent=2) + '\n'
+    key = os.environ.get('BALLDONTLIE_API_KEY', '').strip()
+    if key and key in text:
+        raise playoff_board.CheckError('Refusing to write a standings file that contains the API key.')
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding='utf-8')
+
+
+def _load_json(path: Path):
+    if not path.is_file():
+        return None
+    try:
+        return json.loads(path.read_text(encoding='utf-8-sig'))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def cross_check_days(root: Path, table: dict, now: dt.datetime) -> list[dt.date]:
+    season = table.get('season')
+    year = season if isinstance(season, int) and not isinstance(season, bool) else None
+    days = set()
+    for game in playoff_board.load_results(root, year):
+        days.add(game['day'])
+    for game in playoff_board.load_schedule(root, year):
+        days.add(game['day'])
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=ZoneInfo('America/Los_Angeles'))
+    today = now.astimezone(ZoneInfo('America/Los_Angeles')).date()
+    for offset in range(-1, 3):
+        days.add(today + dt.timedelta(days=offset))
+    return sorted(days)
+
+
+def run_cross_check(root: Path, table: dict, board: dict, now: dt.datetime, cross_check=None, events=None) -> None:
+    """Compare the table and every playoff series. Disagreement raises CheckError."""
+    if cross_check is None and events is None and os.environ.get('FCB_SKIP_STANDINGS_CROSS_CHECK') == '1':
+        raise playoff_board.CheckError('Cross-check was skipped. The last good page was kept.')
+    if cross_check is None:
+        cross_check = fetch_standings()
+    if isinstance(cross_check, dict) and cross_check.get('children'):
+        other = parse_standings(cross_check, table.get('updatedAt') or '')
+    elif isinstance(cross_check, dict) and cross_check.get('teams'):
+        other = cross_check
+    else:
+        raise playoff_board.CheckError('Cross-check standings could not be read. The last good page was kept.')
+    playoff_board.cross_check_table(table, other)
+    if not board.get('show'):
+        return
+    parsed = []
+    if events is None:
+        events = []
+        for day in cross_check_days(root, table, now):
+            try:
+                events.append(fetch_json(SCOREBOARD_URL + '?dates=' + day.strftime('%Y%m%d')))
+            except Exception as exc:
+                raise playoff_board.CheckError(
+                    f'Cross-check scoreboard for {day.isoformat()} failed ({exc}). The last good page was kept.'
+                ) from None
+    for item in events:
+        if isinstance(item, dict) and item.get('events') is not None and 'pair' not in item:
+            parsed.extend(playoff_board.espn_events(item))
+        elif isinstance(item, dict):
+            parsed.append(item)
+    playoff_board.cross_check_board(board, parsed)
+
+
+def build(root: Path, payload=None, updated_at: str | None = None, cross_check=None, events=None) -> bool:
+    """Write the standings page. A failed check leaves the last good page on disk."""
     page = root / 'standings' / 'index.html'
     data_path = root / 'api' / 'wnba-standings'
     try:
-        if payload is None:
-            payload = fetch_standings()
+        previous = _load_json(data_path)
+        now = dt.datetime.now(ZoneInfo('America/Los_Angeles'))
         if not updated_at:
-            updated_at = dt.datetime.now(ZoneInfo('America/Los_Angeles')).isoformat(timespec='seconds')
-        table = parse_standings(payload, updated_at)
-        if data_path.is_file():
-            try:
-                previous = json.loads(data_path.read_text(encoding='utf-8-sig'))
-            except (OSError, json.JSONDecodeError):
-                previous = None
-            table['updatedAt'] = keep_updated_at(previous, table, table.get('updatedAt') or updated_at)
+            updated_at = now.isoformat(timespec='seconds')
+        if payload is None:
+            year = season_year(previous, now)
+            payload = fetch_provider_rows(year)
+            write_provider_snapshot(root, payload, year, updated_at)
+        table = table_from_provider(payload, updated_at, previous=previous)
+        board = attach_playoffs(root, table)
+        table['_board'] = board
+        if table.get('playoffsActive'):
+            table['updatedAt'] = updated_at
+        else:
+            table['updatedAt'] = keep_updated_at(previous, table, updated_at)
+        # Fixture builds pass both sides in. A real run always fetches the cross-check.
+        if payload is not None and cross_check is None and events is None:
+            pass
+        else:
+            run_cross_check(root, table, board, now, cross_check=cross_check, events=events)
+        names = [team['name'] for team in table['teams']]
+        if len(names) != EXPECTED_TEAMS or len(set(names)) != EXPECTED_TEAMS:
+            raise playoff_board.CheckError('Standings did not contain 15 unique teams. The last good page was kept.')
+        html_text = render_page(root, table)
+        index_path = root / 'data' / 'wnba' / 'players-index.json'
+        if index_path.is_file():
+            index = json.loads(index_path.read_text(encoding='utf-8'))
+            linking = links.catalog_from_index(index)
+            html_text = links.apply_standings(html_text, linking, table)
+            html_text = site_nav.install(html_text, ROUTE, site_nav.build_menu(root))
+        if 'espn.com' in html_text.lower() or 'balldontlie' in html_text.lower():
+            raise playoff_board.CheckError('The standings page named a data feed. The last good page was kept.')
+        published = {key: value for key, value in table.items() if key != '_board'}
     except Exception as exc:
-        print(f'Standings feed failed ({exc}). Keeping the last good page.')
+        print(f'Standings check failed ({exc}). Keeping the last good page.')
         return False
-    names = [team['name'] for team in table['teams']]
-    if len(names) != EXPECTED_TEAMS or len(set(names)) != EXPECTED_TEAMS:
-        print('Standings feed did not return 15 unique teams. Keeping the last good page.')
-        return False
-    html_text = render_page(root, table)
-    # Player build refreshes these tables from the same JSON. Keep that pass aligned.
-    index_path = root / 'data' / 'wnba' / 'players-index.json'
-    if index_path.is_file():
-        index = json.loads(index_path.read_text(encoding='utf-8'))
-        linking = links.catalog_from_index(index)
-        html_text = links.apply_standings(html_text, linking, table)
-        html_text = site_nav.install(html_text, ROUTE, site_nav.build_menu(root))
     page.parent.mkdir(parents=True, exist_ok=True)
     data_path.parent.mkdir(parents=True, exist_ok=True)
     temporary = page.with_suffix('.html.tmp')
     temporary.write_text(html_text, encoding='utf-8')
     temporary.replace(page)
-    data_path.write_text(json.dumps(table, indent=2) + '\n', encoding='utf-8')
-    print(f'Wrote standings for {len(names)} teams, updated {links._long_date(table.get("updatedAt"))}.')
+    data_path.write_text(json.dumps(published, indent=2) + '\n', encoding='utf-8')
+    label = links.updated_label(published.get('updatedAt'), with_time=bool(published.get('playoffsActive')))
+    print(f'Wrote standings for {len(names)} teams. Updated {label}.')
     return True
 
 
@@ -600,4 +899,4 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
-    build(args.root)
+    sys.exit(0 if build(args.root) else 1)

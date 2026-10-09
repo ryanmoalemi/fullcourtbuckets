@@ -251,7 +251,10 @@ class PublishedPageTests(unittest.TestCase):
         self.assertIn(f'{BASE}/wnba/matilde-villa-270867/', villa)
         standings = (ROOT / 'standings/index.html').read_text(encoding='utf-8')
         self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/standings/"', standings)
-        self.assertIn('href="https://www.espn.com/wnba/standings" target="_blank" rel="noopener"', standings)
+        self.assertNotIn('espn.com', standings.lower())
+        self.assertNotIn('balldontlie', standings.lower())
+        self.assertIn('id="playoffs"', standings)
+        self.assertIn('Final 2026 regular-season standings', standings)
         body = standings.split('id="standingsBody"', 1)[1].split('</tbody>', 1)[0]
         names = re.findall(r'class="team-name"[^>]*>([^<]+)', body)
         self.assertEqual(len(names), 15)

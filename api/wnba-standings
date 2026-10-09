@@ -1,7 +1,5 @@
 {
-  "updatedAt": "2026-10-01T15:24:03-07:00",
-  "source": "https://site.api.espn.com/apis/v2/sports/basketball/wnba/standings",
-  "sourcePage": "https://www.espn.com/wnba/standings",
+  "updatedAt": "2026-10-08T19:22:01-07:00",
   "season": 2026,
   "teams": [
     {
@@ -259,5 +257,9 @@
       "conference": "Western",
       "conferenceRank": 8
     }
-  ]
+  ],
+  "showPlayoffs": true,
+  "playoffsActive": true,
+  "champion": "",
+  "playoffDigest": "First round\n(1) Minnesota Lynx vs (8) New York Liberty\nLiberty won 2-0\nSep 27: New York Liberty 91, Minnesota Lynx 75\nSep 29: New York Liberty 87, Minnesota Lynx 71\nNew York Liberty advanced. Minnesota Lynx eliminated.\n(2) Golden State Valkyries vs (7) Dallas Wings\nValkyries won 2-1\nSep 27: Golden State Valkyries 104, Dallas Wings 80\nSep 30: Dallas Wings 108, Golden State Valkyries 100\nOct 2: Golden State Valkyries 77, Dallas Wings 73\nGolden State Valkyries advanced. Dallas Wings eliminated.\n(3) Las Vegas Aces vs (6) Indiana Fever\nAces won 2-1\nSep 27: Las Vegas Aces 102, Indiana Fever 85\nSep 29: Indiana Fever 99, Las Vegas Aces 89\nOct 1: Las Vegas Aces 94, Indiana Fever 83\nLas Vegas Aces advanced. Indiana Fever eliminated.\n(4) Atlanta Dream vs (5) Washington Mystics\nDream won 2-0\nSep 27: Atlanta Dream 92, Washington Mystics 77\nSep 30: Atlanta Dream 93, Washington Mystics 75\nAtlanta Dream advanced. Washington Mystics eliminated.\nSemifinals\n(2) Golden State Valkyries vs (3) Las Vegas Aces\nValkyries lead 2-0\nOct 4: Golden State Valkyries 71, Las Vegas Aces 60\nOct 7: Golden State Valkyries 83, Las Vegas Aces 81\n(4) Atlanta Dream vs (8) New York Liberty\nDream leads 2-0\nOct 4: Atlanta Dream 92, New York Liberty 82\nOct 7: Atlanta Dream 101, New York Liberty 98 OT"
 }

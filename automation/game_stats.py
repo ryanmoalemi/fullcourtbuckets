@@ -1887,6 +1887,80 @@ def run(root: Path, now: dt.datetime, *, key="", dates=None, teams=None, espn_id
     return 0
 
 
+def schedule_document(games) -> dict:
+    """Upcoming postseason games only. Finals stay in the box files."""
+    rows = []
+    for game in games or []:
+        if not isinstance(game, dict) or not game.get("postseason"):
+            continue
+        if sync.is_final(game):
+            continue
+        if str(game.get("status_state") or "").lower() in ("canceled", "abandoned"):
+            continue
+        home = team_view(game.get("home_team"))
+        away = team_view(game.get("visitor_team"))
+        if not home.get("abbreviation") or not away.get("abbreviation"):
+            continue
+        rows.append({
+            "date": game.get("date"),
+            "status": game.get("status_state") or game.get("status") or "scheduled",
+            "season": game.get("season"),
+            "postseason": True,
+            "home": {
+                "abbreviation": home.get("abbreviation"),
+                "full_name": home.get("full_name"),
+                "name": home.get("name"),
+            },
+            "away": {
+                "abbreviation": away.get("abbreviation"),
+                "full_name": away.get("full_name"),
+                "name": away.get("name"),
+            },
+        })
+    rows.sort(key=lambda row: str(row.get("date") or ""))
+    return {"games": rows}
+
+
+def write_schedule(root: Path, games, key="") -> bool:
+    text = json.dumps(schedule_document(games), ensure_ascii=False, indent=2) + "\n"
+    if key and len(key) >= 12 and key in text:
+        raise GameStatsError("Refusing to write a file that contains the API key.")
+    path = root / "data" / "games" / "schedule.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    atomic_write(path, text)
+    return True
+
+
+def postseason_dates(games) -> list:
+    found = []
+    for game in games or []:
+        if not isinstance(game, dict) or not game.get("postseason"):
+            continue
+        day = game_day(game.get("date"))
+        if isinstance(day, dt.date):
+            found.append(day)
+    return sorted(set(found))
+
+
+def refresh_postseason(root: Path, key: str, now: dt.datetime | None = None) -> int:
+    """Pull every postseason box for this season, and save games that have not tipped."""
+    if not str(key or "").strip():
+        print("Postseason refresh needs the stats feed key. No game file was changed.", file=sys.stderr)
+        return 1
+    now = now or dt.datetime.now(dt.timezone.utc)
+    client = sync.Client(key.strip())
+    today = _pt_today(now)
+    season_rows = client.all("games", {"seasons[]": [today.year]})
+    write_schedule(root, season_rows, key)
+    dates = postseason_dates(season_rows)
+    if not dates:
+        emit("No postseason games on the season schedule.")
+        return 0
+    return run(root, now, key=key, dates=dates, client=client, scheduled=False)
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Pull WNBA game boxes for recaps.")
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
@@ -1894,6 +1968,7 @@ def main(argv=None):
     parser.add_argument("--teams", default="")
     parser.add_argument("--espn-game-id", default="")
     parser.add_argument("--scheduled", action="store_true")
+    parser.add_argument("--postseason", action="store_true")
     parser.add_argument("--audit-secrets", action="store_true")
     args = parser.parse_args(argv)
     key = os.environ.get("BALLDONTLIE_API_KEY", "")
@@ -1908,6 +1983,12 @@ def main(argv=None):
         text = os.environ.get(name, "").strip()
         return "" if text.lower() == "null" else text
 
+    if args.postseason:
+        try:
+            return refresh_postseason(args.root, key)
+        except (GameStatsError, sync.SyncError) as exc:
+            print(str(exc), file=sys.stderr)
+            return 1
     dates = list(args.date)
     env_date = from_env("GAME_STATS_DATE")
     if env_date and not dates:
