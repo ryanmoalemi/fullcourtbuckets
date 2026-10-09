@@ -122,15 +122,9 @@ class RelationshipFaqTests(unittest.TestCase):
             data = _faq_json(slug)
             visible = {html.unescape(q): html.unescape(a) for q, a in FAQ_ITEM.findall(page)}
             schema = _schema_faq(page)
-            profile_path = ROOT / 'data' / 'wnba' / 'players' / f'{slug}.json'
-            active = False
-            if profile_path.is_file():
-                active = json.loads(profile_path.read_text(encoding='utf-8')).get('active_in_provider_feed') is True
-            pairs = []
             for item in data['items']:
                 question = item['question']
                 answer = item['answer']
-                pairs.append((question, answer))
                 reason = build_couples.relationship_faq_conflict(
                     couple.get('status') or '', partner, question, answer,
                 )
@@ -138,25 +132,26 @@ class RelationshipFaqTests(unittest.TestCase):
                     problems.append(f'{slug}: {question}: {reason}')
                 if build_couples.relationship_question_kind(question):
                     self.assertNotIn('Jr..', answer, slug)
-                    if active:
-                        self.assertEqual(visible.get(question), answer, slug)
-                        self.assertEqual(schema.get(question), answer, slug)
-                    else:
-                        self.assertNotIn(question, visible, slug)
-                        self.assertNotIn(question, schema, slug)
-            if active:
-                build_players.assert_relationship_faq_matches_couples(slug, pairs, ROOT)
+                    self.assertNotIn(question, visible, slug)
+                    self.assertNotIn(question, schema, slug)
         self.assertEqual(problems, [])
 
     def test_allisha_gray_page_says_engaged_not_married(self):
         profile = json.loads((ROOT / 'data' / 'wnba' / 'players' / 'allisha-gray.json').read_text(encoding='utf-8'))
-        _html, entity = build_players.faq_section(profile, ROOT)
-        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
-        self.assertEqual(answers['Who is Allisha Gray dating?'], ALLISHA_DATING)
-        self.assertEqual(answers['Is Allisha Gray married?'], ALLISHA_MARRIED)
+        html_text, entity = build_players.faq_section(profile, ROOT)
+        self.assertEqual(html_text, '')
+        self.assertIsNone(entity)
+        self.assertEqual(
+            build_players.answer_related_query(profile, 'Who is Allisha Gray dating?', ROOT),
+            'Allisha Gray is engaged to Tim Mangum Jr.',
+        )
+        self.assertEqual(
+            build_players.answer_related_query(profile, 'Is Allisha Gray married?', ROOT),
+            'Allisha Gray is engaged to Tim Mangum Jr.',
+        )
         page = (ROOT / 'wnba' / 'allisha-gray' / 'index.html').read_text(encoding='utf-8')
-        self.assertIn(ALLISHA_DATING, page)
-        self.assertIn(ALLISHA_MARRIED, page)
+        self.assertNotIn(ALLISHA_DATING, page)
+        self.assertNotIn(ALLISHA_MARRIED, page)
         self.assertIn('Engaged to Tim Mangum Jr. ', page)
         self.assertNotIn('Jr..', page)
         self.assertNotIn('not widely publicized a confirmed dating relationship', page)

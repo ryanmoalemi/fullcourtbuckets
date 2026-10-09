@@ -16,7 +16,7 @@ Full statistics refresh is daily in-season and every seven days in the offseason
 - Regular season and playoffs remain separate. Multiple team stints are never summed together with aggregate rows. If a latest-season aggregate is ambiguous, the hero omits its headline numbers and retains the separate table rows.
 - Missing statistical values remain missing, not zero.
 - Invalid biography fields are omitted. For example, the live provider returned `Iowa` in a weight field while college was null. The builder does not pretend that text is a weight or silently reclassify it as a verified college field.
-- Archive means not listed in the active feed, not confirmed retired. Team changes are not classified as trades or signings without a transaction source.
+- Inactive player means not on a current roster, not confirmed retired. Team changes are not classified as trades or signings without a transaction source.
 - No automatic news feed is connected. No unlicensed player headshots are published. The number artwork retains the player-template design without pretending to be a photograph.
 - Source freshness is labeled as an API snapshot check, not a guaranteed latest-game cutoff. The recent game log has an explicit 35-day window and final-game filtering.
 

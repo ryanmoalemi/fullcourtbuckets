@@ -41,9 +41,26 @@ def _rich_profile():
 
 
 def _write_faq(root: Path, slug: str, items: list) -> None:
-    faq_dir = root / 'data' / 'wnba' / 'faq'
-    faq_dir.mkdir(parents=True, exist_ok=True)
-    (faq_dir / f'{slug}.json').write_text(json.dumps({'slug': slug, 'items': items}), encoding='utf-8')
+    """Write the queries as related searches. The old FAQ template is not published."""
+    folder = root / 'data' / 'wnba' / 'related-searches'
+    folder.mkdir(parents=True, exist_ok=True)
+    queries = [
+        {
+            'query': item['question'],
+            'clicks': 1,
+            'impressions': 10,
+            'question_like': True,
+        }
+        for item in items
+    ]
+    payload = {
+        'slug': slug,
+        'player': 'Example Player',
+        'source': 'Google Search Console',
+        'date_range': '2026-01-01/2026-10-01',
+        'queries': queries,
+    }
+    (folder / f'{slug}.json').write_text(json.dumps(payload), encoding='utf-8')
 
 
 FAQ_ITEMS = [
@@ -119,7 +136,7 @@ class HealStatTextTests(unittest.TestCase):
         self.assertEqual(title, players.player_title('Example Player'))
         self.assertNotIn('Player Profile', title)
         self.assertEqual(heal._schema_faq_pairs(schema), visible)
-        self.assertEqual(visible[2][1], 'Example Player is listed at 6 feet.')
+        self.assertEqual(visible[2][1], 'Example Player is listed at 6\' 0".')
 
     def test_unfixable_page_keeps_last_html_and_other_pages_still_publish(self):
         recorded = []
@@ -210,20 +227,19 @@ class HealStatTextTests(unittest.TestCase):
         self.assertIn('12.3 points', recorded[0]['body'])
         self.assertEqual(recorded[0]['label'], 'needs-fix')
 
-    def test_published_angel_reese_repair_keeps_the_portrait(self):
+    def test_published_angel_reese_page_keeps_the_portrait(self):
         slug = 'angel-reese'
         profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
         original = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
+        self.assertNotIn('id="faq"', original)
+        self.assertNotIn('FAQPage', original)
+        self.assertIn('class="player-illustration"', original)
+        self.assertIn('AI-generated illustration', original)
+        self.assertIn('FCB:approved-portrait:start', original)
         self.assertEqual(heal.stat_text_mismatches(profile, original, ROOT), [])
-        section = re.search(r'<section class="section" id="faq">.*?</section>', original, re.S).group(0)
-        bad = original.replace(section, section.replace('16.4 points', '99.9 points', 1), 1)
-        outcome = heal.heal_page(profile, bad, ROOT, previous=original)
-        self.assertEqual(outcome.action, 'fixed')
+        outcome = heal.heal_page(profile, original, ROOT, previous=original)
+        self.assertEqual(outcome.action, 'ok')
         self.assertIn('class="player-illustration"', outcome.html)
-        self.assertIn('AI-generated illustration', outcome.html)
-        self.assertIn('FCB:approved-portrait:start', outcome.html)
-        self.assertIn('16.4 points', outcome.html)
-        self.assertNotIn('99.9 points', outcome.html)
         self.assertEqual(heal.stat_text_mismatches(profile, outcome.html, ROOT), [])
 
     def test_stat_text_failures_are_not_sitewide_build_errors(self):

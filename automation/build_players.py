@@ -713,47 +713,180 @@ def curated_faq_pairs(profile, root: Path):
     return pairs
 
 def on_current_roster(profile) -> bool:
-    """True only for a player listed on a current roster. Archive pages use the short record."""
+    """True only for a player listed on a current roster. Inactive players use the short record."""
     return isinstance(profile, dict) and profile.get('active_in_provider_feed') is True
 
 
-def faq_answer_pairs(profile, root: Path):
-    """Keep curated questions. Rebuild season, games-played, and last-game answers from profile data.
+_NOT_WIDELY_RE = re.compile(r'not widely (?:reported|publicized)', re.I)
+_DROP_TOPIC_RE = re.compile(
+    r"\b(?:kids?|children|child|nationalit(?:y|ies)|citizenship|salary|salaries|"
+    r"contract|net worth|how old|years old|\bage\b|birthday|\bborn\b|"
+    r"parents?|\bmom\b|mother|\bdad\b|father|injur(?:y|ed|ies)|"
+    r"retire[ds]?|retirement|\bmvp\b|championships?|\brings?\b|"
+    r"draft|shoe|endorsement)\b",
+    re.I,
+)
+_RELATIONSHIP_RE = re.compile(
+    r"\b(?:dating|married|marriage|husband|wife|boyfriend|girlfriend|fianc\w*|engaged|partner)\b",
+    re.I,
+)
 
-    Archive profiles do not publish the shared FAQ template. Those questions repeat
-    the same filler (kids, nationality, "no widely reported") on players who are
-    not on a current roster.
-    """
-    if not on_current_roster(profile):
+
+def normalize_question(question: str, name: str = '') -> str:
+    """Question text with the player name and punctuation removed, for duplicate checks."""
+    text = html.unescape(str(question or '')).casefold().replace('\u2019', "'")
+    name = html.unescape(str(name or '')).casefold().replace('\u2019', "'").strip()
+    if name:
+        text = re.sub(rf'{re.escape(name)}(?:\'s)?', ' ', text)
+        plain = name.replace("'", '')
+        if plain and plain != name:
+            text = re.sub(rf'{re.escape(plain)}(?:\'s)?', ' ', text)
+    parts = [part for part in re.split(r'[^a-z0-9]+', name) if len(part) >= 2]
+    for part in sorted(set(parts), key=len, reverse=True):
+        text = re.sub(rf'\b{re.escape(part)}\b', ' ', text)
+    text = re.sub(r'[^a-z0-9]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def load_related_searches(profile, root: Path) -> list[dict]:
+    """Real search queries for one player. Missing file means there is nothing to show."""
+    slug = str(profile.get('slug') or '')
+    path = Path(root) / 'data' / 'wnba' / 'related-searches' / f'{slug}.json'
+    if not path.is_file():
         return []
-    raw = curated_faq_pairs(profile, root)
-    if not raw:
-        return []
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise BuildError(f'Related searches for {slug} could not be read.') from exc
+    if not isinstance(data, dict) or data.get('slug') != slug:
+        raise BuildError(f'Related searches slug does not match {slug}.')
+    for key in ('player', 'source', 'date_range'):
+        if not isinstance(data.get(key), str) or not data[key].strip():
+            raise BuildError(f'Related searches for {slug} are missing {key}.')
+    queries = data.get('queries')
+    if not isinstance(queries, list):
+        raise BuildError(f'Related searches for {slug} have no query list.')
+    cleaned = []
+    seen = set()
+    for item in queries:
+        if not isinstance(item, dict) or not isinstance(item.get('query'), str) or not item['query'].strip():
+            raise BuildError(f'Related search for {slug} is missing a query.')
+        query = item['query'].strip()
+        if query in seen:
+            continue
+        seen.add(query)
+        cleaned.append(item)
+    return cleaned
+
+
+def _listed_field(profile, key: str) -> str:
+    return bio_fields((profile or {}).get('player') or {}).get(key) or ''
+
+
+def _with_numbers(answer: str) -> str:
+    """Keep a stats sentence only when it states a number from the page."""
+    text = str(answer or '').strip()
+    if not text or 'not listed' in text.casefold() or not re.search(r'\d', text):
+        return ''
+    return text
+
+
+def _couples_fact(profile, root) -> str:
+    """Status and partner from data/wnba_couples.json. Empty when the player is not listed."""
+    try:
+        import build_couples
+    except ImportError:
+        return ''
+    slug = profile.get('slug') or ''
+    mapped = build_couples.couples_by_slug(root)
+    if slug not in mapped:
+        return ''
+    partner, couple = mapped[slug]
+    partner = str(partner or '').strip().rstrip('.')
+    status = couple.get('status') or ''
     name = player_name(profile) or 'This player'
+    if status == 'Married':
+        return f'{name} is married to {partner}.'
+    if status == 'Engaged':
+        return f'{name} is engaged to {partner}.'
+    if status == 'Dating':
+        return f'{name} is dating {partner}.'
+    return ''
+
+
+def answer_related_query(profile, query: str, root) -> str:
+    """Answer one real search query from stored stats or the couples list. Empty if unverified."""
+    text = str(query or '').casefold()
+    if not text.strip() or _DROP_TOPIC_RE.search(text):
+        return ''
+    name = player_name(profile) or 'This player'
+    if _RELATIONSHIP_RE.search(text):
+        return _couples_fact(profile, root)
+    if 'last game' in text:
+        return _with_numbers(last_game_answer(profile, name))
+    if 'rookie' in text and 'year' in text:
+        return rookie_faq_answer(profile, name)
+    if 'three-point' in text or '3-point' in text or 'three point percentage' in text:
+        return three_point_faq_answer(profile, name)
+    if 'how many years' in text and 'wnba' in text:
+        return years_faq_answer(profile, name)
+    if re.search(r'\b(?:which teams|what teams|teams has|teams did)\b', text):
+        return teams_faq_answer(profile, name)
+    if 'fiba' in text:
+        return fiba_faq_answer(profile, name, root)
+    if re.search(r'\b(?:stats|points per game|ppg|averages?|rebounds per game|assists per game)\b', text):
+        return _with_numbers(season_faq_answer(profile, name))
+    if re.search(r'\b(?:how tall|height)\b', text):
+        height = _listed_field(profile, 'height')
+        return f'{name} is listed at {height}.' if height else ''
+    if re.search(r'\b(?:college|university)\b', text) and 'stats' not in text:
+        college = _listed_field(profile, 'college')
+        return f'{name} is listed with {college}.' if college else ''
+    if re.search(r'\bposition\b', text):
+        position = _listed_field(profile, 'position')
+        label = {'G': 'guard', 'F': 'forward', 'C': 'center'}.get(position, position)
+        return f'{name} is listed as a {label}.' if label else ''
+    if re.search(r'\b(?:jersey|what number|uniform number)\b', text):
+        number = _listed_field(profile, 'jersey_number')
+        return f'{name} is listed at number {number}.' if number else ''
+    if re.search(r'\bweigh(?:s|t)?\b', text):
+        weight = _listed_field(profile, 'weight')
+        return f'{name} is listed at {weight}.' if weight else ''
+    if re.search(r'\b(?:what team|which team|plays for|play for|current team)\b', text):
+        if on_current_roster(profile):
+            team = profile.get('current_team') if isinstance(profile.get('current_team'), dict) else None
+            shown = tname(team)
+            return f'{name} is listed with the {shown}.' if shown and shown != 'Team not listed' else ''
+        teams = teams_faq_answer(profile, name)
+        base = f'{name} is not on a current roster.'
+        return f'{base} {teams}' if teams else base
+    if re.search(r'\bwho is\b', text):
+        return answer_summary(profile)
+    return ''
+
+
+def related_search_pairs(profile, root: Path):
+    """Real queries that can be answered from this repo. Unanswerable queries are dropped."""
     slug = profile.get('slug') or 'player'
     pairs = []
-    for question, answer in raw:
-        kind = faq_stat_kind(question)
-        if kind == 'season':
-            answer = season_faq_answer(profile, name)
-        elif kind == 'last_game':
-            answer = last_game_answer(profile, name)
-        elif kind == 'years':
-            answer = years_faq_answer(profile, name)
-        elif kind == 'three_point':
-            answer = three_point_faq_answer(profile, name)
-        elif kind == 'rookie':
-            answer = rookie_faq_answer(profile, name)
-        elif kind == 'teams':
-            answer = teams_faq_answer(profile, name)
-        elif kind == 'fiba':
-            answer = fiba_faq_answer(profile, name, root)
-        if kind in {'years', 'three_point', 'rookie', 'teams', 'fiba'} and not answer:
-            raise BuildError(f'{slug} FAQ could not be answered from the page data: {question}')
-        pairs.append((question, answer))
+    for item in load_related_searches(profile, root):
+        query = item['query'].strip()
+        answer = answer_related_query(profile, query, root).strip()
+        if not answer or _NOT_WIDELY_RE.search(answer) or 'balldontlie' in answer.casefold():
+            continue
+        pairs.append((query, answer))
     assert_faq_matches_tables(profile, pairs)
     assert_relationship_faq_matches_couples(slug, pairs, root)
     return pairs
+
+
+def faq_answer_pairs(profile, root: Path):
+    """Bottom-of-page pairs come only from data/wnba/related-searches/{slug}.json.
+
+    data/wnba/faq/ is the old template and is not published. No file, or no query
+    this page can answer from stored stats or the couples list, means no section.
+    """
+    return related_search_pairs(profile, root)
 
 
 def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> None:
@@ -777,9 +910,8 @@ def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> Non
 
 
 def faq_section(profile, root=None):
-    """Render every curated FAQ item. Do not invent template or stats-generated questions.
-    Players without data/wnba/faq/{slug}.json, or with an empty items list, get no FAQ block.
-    Numeric season, games-played, and last-game answers come from the same profile as the tables.
+    """Render answered related-search queries. No file, or nothing answerable, means no block and no schema.
+    The question text is the query from the file. The answer comes from stored stats or the couples list.
     """
     if root is None:
         root = Path(__file__).resolve().parents[1]
@@ -792,8 +924,8 @@ def faq_section(profile, root=None):
     )
     block = (
         f'<section class="section" id="faq">'
-        f'<p class="eyebrow">Player FAQ</p>'
-        f'<h2>Frequently asked questions</h2>'
+        f'<p class="eyebrow">Search</p>'
+        f'<h2>Related searches</h2>'
         f'{items}'
         f'</section>'
     )
@@ -1075,8 +1207,9 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     """Short public record for a player who is not on a current roster.
 
     Who she is, the teams and years already stored, and the season lines already
-    stored. No FAQ template, no repeated disclaimer blocks, and no biography that
-    is not on the profile. The data-source line appears once.
+    stored. No template FAQ, no repeated disclaimer blocks, and no biography that
+    is not on the profile. A related-search block appears only when a real query
+    can be answered from stored stats. The data-source line appears once.
     """
     p = profile['player']
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
@@ -1114,7 +1247,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         f'<div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or "FCB")}</span>'
         f'<div class="number-card"><span>{esc(p.get("last_name") or name)}</span>'
         f'<strong class="gradient">{esc(number or "FCB")}</strong></div>'
-        f'<small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div>'
+        f'<small>FULL COURT BUCKETS · INACTIVE PLAYER</small></div>'
     )
     tablehtml = stats_table(profile, 2) + stats_table(profile, 3)
     if tablehtml:
@@ -1190,7 +1323,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     hero = (
         f'<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div>'
         f'<section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy">'
-        f'<div class="hero-kicker"><span class="status">Archive profile</span><span>WNBA PLAYER PROFILE</span></div>'
+        f'<div class="hero-kicker"><span class="status">Inactive player</span><span>WNBA PLAYER PROFILE</span></div>'
         f'<h1 id="player-name"><span>{esc(p.get("first_name"))}</span> <b class="gradient">{esc(p.get("last_name") or p.get("first_name"))}</b></h1>'
         f'{summary_html}{updated_html}{meta_html}'
         f'<div class="actions">{action}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div>'
@@ -1218,6 +1351,11 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
             ]},
         ],
     }
+    faq_html, faq_entity = faq_section(profile, root)
+    if faq_html:
+        body += faq_html
+    if faq_entity:
+        structured['@graph'].append(faq_entity)
     robots = 'index,follow,max-image-preview:large' if player_indexable(profile, root) else 'noindex'
     return document(title, player_description(profile), route, body, structured, has_standings(root), menu, robots)
 
@@ -1232,7 +1370,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     row=headline(profile); stats=profile.get('season_stats',[])
     years=sorted({r['season'] for r in stats})
     span=f'{years[0]}–{years[-1]}' if len(years)>1 else str(years[0]) if years else 'No season records yet'
-    state='Listed active' if active else 'Archive profile'
+    state='Listed active' if active else 'Inactive player'
     position={'G':'Guard','F':'Forward','C':'Center'}.get(fields.get('position'),fields.get('position',''))
     number=fields.get('jersey_number','')
     note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No single season line for the latest year'
@@ -1343,7 +1481,7 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
     entries=[p for p in index['players'] if p.get('id') not in DUPLICATE_PLAYER_IDS]
     cards=[]
     for p in sorted(entries,key=lambda p:p['name'].casefold()):
-        state='Listed active' if p.get('active_in_provider_feed') else 'Archive profile'
+        state='Listed active' if p.get('active_in_provider_feed') else 'Inactive player'
         team=tname(p['current_team']) if p.get('current_team') else 'Historical player records'
         query=' '.join([p['name'],team,state]).casefold()
         cards.append(f'<a class="player-card" href="/wnba/{p["slug"]}/" data-search="{esc(query)}" data-active="{str(bool(p.get("active_in_provider_feed"))).lower()}"><span class="eyebrow">{state}</span><h2>{esc(p["name"])}</h2><p>{esc(team)}</p><span class="small">View profile →</span></a>')
@@ -1354,8 +1492,8 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
             for slot in sorted(linking['by_id'].values(), key=lambda slot: slot['full_name'].casefold())
         )
         team_html=f'<section class="section hub-links" id="teams"><h2>Teams</h2><ul class="team-index">{items}</ul><p>{links.inline_link("All teams", "/wnba/teams/")}</p></section>'
-    updated=f'<p class="muted small directory-updated">Last updated {esc(timestamp(index.get("checked_at")))}. An archive profile means the player is not on a current roster.</p>'
-    filters='<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Archive profiles</option></select></label></div>'
+    updated=f'<p class="muted small directory-updated">Last updated {esc(timestamp(index.get("checked_at")))}. An inactive player is not on a current roster.</p>'
+    filters='<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Inactive players</option></select></label></div>'
     # Search sits under the title so it is on the first mobile screen. The card grid follows. The update note stays at the end.
     body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header player-hub"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p></section>{filters}<p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>{team_html}{updated}'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
