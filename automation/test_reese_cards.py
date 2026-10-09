@@ -179,8 +179,10 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Oct 17, 2026, 7:00 p.m. PT', bidding)
         self.assertIn('$2,750', bidding)
         self.assertIn('$3,355', bidding)
-        self.assertIn('<dt>Current bid</dt><dd>$1,007</dd>', bidding)
-        self.assertIn('<dt>Bids</dt><dd title="Alt showed $982 from WP*** and $957 from ZZ***.">3</dd>', bidding)
+        self.assertIn('<dt>Current bid</dt><dd>$1,107</dd>', bidding)
+        self.assertIn('<dt>Bids</dt><dd>5</dd>', bidding)
+        self.assertNotIn('WP***', bidding)
+        self.assertNotIn('ZZ***', bidding)
         self.assertIn('$2,750 to $6,000', bidding)
         self.assertIn('$1,000 to $6,900', bidding)
         self.assertIn('Comparable sales', bidding)
@@ -192,7 +194,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('loading="eager"', bidding)
         self.assertNotIn('Two live auctions', bidding)
         self.assertNotIn('/news/angel-reese-game-2-stats-liberty-dream-semis/', bidding)
-        self.assertIn('Bids as of 11:51 a.m. PT, Oct 8, 2026</p>\n<div class="bids">', bidding)
+        self.assertIn('Bids as of 10:06 a.m. PT, Oct 9, 2026</p>\n<div class="bids">', bidding)
         goldin = 'https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r'
         alt = 'https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54'
         self.assertIn(f'<a class="bid-photo-link" href="{goldin}" target="_blank" rel="noopener nofollow"><img ', bidding)
