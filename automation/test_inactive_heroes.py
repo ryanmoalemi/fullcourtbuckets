@@ -89,6 +89,12 @@ class InactiveHeroBuildTests(unittest.TestCase):
                 copy_function=os.link,
                 ignore=shutil.ignore_patterns('.git', '__pycache__'),
             )
+            # Team news titles come from articles.json. Compare the rebuild to the
+            # committed pages, which already carry editorial headline updates.
+            team_before = {
+                path: path.read_text(encoding='utf-8', errors='replace')
+                for path in (copy / 'wnba').glob('teams/*/index.html')
+            }
             players.build(copy)
             apply_portraits.apply(copy)
             rollout_player_design.rollout(copy)
@@ -122,9 +128,8 @@ class InactiveHeroBuildTests(unittest.TestCase):
                 if slug not in TOUCHED and _non_faq_text(built) != _non_faq_text(main):
                     text_problems.append(f'{slug}: {_window(_non_faq_text(main), _non_faq_text(built))}')
             for path in sorted((copy / 'wnba').glob('teams/*/index.html')):
-                relative = f'wnba/teams/{path.parent.name}/index.html'
                 built = path.read_text(encoding='utf-8', errors='replace')
-                main = _main_html(relative)
+                main = team_before[path]
                 if REFRESH.search(built) or REFRESH.search(main):
                     continue
                 compared += 1
