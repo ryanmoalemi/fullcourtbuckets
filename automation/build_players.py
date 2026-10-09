@@ -224,10 +224,12 @@ def season_sentence(row):
         listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ' and ' + bits[-1]
         sentence = f'In the {year} {label} she averaged {listed}'
         if games is not None:
-            sentence += f' in {games} games'
+            noun = 'game' if games == '1' else 'games'
+            sentence += f' in {games} {noun}'
         return sentence + '.'
     if games is not None:
-        return f'In the {year} {label} she played {games} games.'
+        noun = 'game' if games == '1' else 'games'
+        return f'In the {year} {label} she played {games} {noun}.'
     return ''
 
 def answer_summary(profile, career=True):

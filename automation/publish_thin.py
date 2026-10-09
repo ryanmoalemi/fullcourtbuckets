@@ -110,15 +110,15 @@ def write_licensed_photos() -> dict:
     return photos
 
 
-def ensure_rollout(extra: int = 0) -> list[str]:
-    """Return the slugs released so far. extra adds the next batch."""
+def ensure_rollout(extra: int = 0) -> tuple[list[str], list[str]]:
+    """Return (released slugs, slugs added this call). extra adds the next batch."""
     current = _load_json(ROLLOUT, {'slugs': []})
     slugs = [slug for slug in current.get('slugs') or [] if isinstance(slug, str)]
     if extra <= 0 and slugs:
-        return slugs
+        return slugs, []
     ranked = [row['slug'] for row in research_careers.inactive_players()]
     have = set(slugs)
-    added = 0
+    added_slugs: list[str] = []
     for slug in ranked:
         if slug in have:
             continue
@@ -129,15 +129,27 @@ def ensure_rollout(extra: int = 0) -> list[str]:
         if 'http-equiv="refresh"' in text.lower():
             continue
         slugs.append(slug)
+        added_slugs.append(slug)
         have.add(slug)
-        added += 1
-        if extra and added >= extra:
+        if extra and len(added_slugs) >= extra:
             break
-        if not current.get('slugs') and added >= BATCH:
+        if not current.get('slugs') and len(added_slugs) >= BATCH:
             break
     ROLLOUT.parent.mkdir(parents=True, exist_ok=True)
     ROLLOUT.write_text(json.dumps({'slugs': slugs}, indent=2) + '\n', encoding='utf-8')
-    return slugs
+    return slugs, added_slugs
+
+
+def _team_facts(page: str) -> str:
+    """Season copy and story titles, ignoring image markup another pass may wrap."""
+    season = re.search(r'<p class="season-summary">(.*?)</p>', page, re.S)
+    news = re.search(r'<section class="section" id="team-news">(.*?)</section>', page, re.S)
+    chunks = []
+    if season:
+        chunks.append(re.sub(r'<[^>]+>', '', season.group(1)))
+    if news:
+        chunks.append(re.sub(r'<[^>]+>', ' ', news.group(1)))
+    return re.sub(r'\s+', ' ', ' '.join(chunks)).strip()
 
 
 def patch_teams() -> list[str]:
@@ -150,7 +162,8 @@ def patch_teams() -> list[str]:
         standing = table.get(slot['full_name']) or table.get(slot.get('name') or '')
         page = path.read_text(encoding='utf-8')
         updated = team_season.patch_team_html(page, ROOT, slot, standing)
-        path.write_text(updated, encoding='utf-8')
+        if _team_facts(page) != _team_facts(updated):
+            path.write_text(updated, encoding='utf-8')
         done.append(slot['slug'])
     return done
 
@@ -184,13 +197,13 @@ def main() -> None:
     extra = int(sys.argv[1]) if len(sys.argv) > 1 else 0
     photos = write_licensed_photos()
     if extra:
-        slugs = ensure_rollout(extra)
+        _slugs, added = ensure_rollout(extra)
     else:
-        slugs = ensure_rollout(0)
+        slugs, added = ensure_rollout(0)
         if not slugs:
-            slugs = ensure_rollout(BATCH)
+            _slugs, added = ensure_rollout(BATCH)
     teams = patch_teams()
-    patched, skipped = patch_players(slugs)
+    patched, skipped = patch_players(added)
     print(f'teams {len(teams)} photos {len(photos)} players {len(patched)} skipped {len(skipped)}')
     for line in skipped:
         print('skip', line)
