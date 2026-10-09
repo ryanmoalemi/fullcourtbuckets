@@ -67,38 +67,6 @@
       "blk": 0.03,
       "turnover": 0.28,
       "pts": 2.22
-    },
-    {
-      "player_id": 67134,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "games_played": 36,
-      "min": 9.17,
-      "fgm": 0.81,
-      "fga": 1.97,
-      "fg_pct": 40.8,
-      "fg3m": 0.25,
-      "fg3a": 0.97,
-      "fg3_pct": 25.7,
-      "ftm": 0.36,
-      "fta": 0.64,
-      "ft_pct": 56.5,
-      "oreb": null,
-      "dreb": null,
-      "reb": 1.03,
-      "ast": 0.56,
-      "stl": 0.42,
-      "blk": 0.03,
-      "turnover": 0.28,
-      "pts": 2.22
     }
   ],
   "recent_completed_games": [

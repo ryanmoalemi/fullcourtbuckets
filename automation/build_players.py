@@ -799,6 +799,23 @@ def partial_record_html(profile, root=None) -> str:
     return f'<p class="partial-record">{esc(" ".join(bits))}</p>'
 
 
+def require_flagged_season_gap(profile, page: str, root) -> None:
+    """Stop the build when seasons or games disagree and the page is not flagged.
+
+    A matching record must not be labeled partial. A disagreement must say so.
+    """
+    check = season_cross_check(profile, root)
+    if not check['checked']:
+        return
+    incomplete = bool(check['missing'] or check['games'])
+    flagged = 'This record is partial.' in page
+    slug = profile.get('slug') or 'player'
+    if incomplete and not flagged:
+        raise BuildError(f'{slug} seasons or games do not match the cross-check and the page is not flagged partial.')
+    if flagged and not incomplete:
+        raise BuildError(f'{slug} is flagged partial without a season or games disagreement.')
+
+
 _NOT_WIDELY_RE = re.compile(r'not widely (?:reported|publicized)', re.I)
 _DROP_TOPIC_RE = re.compile(
     r"\b(?:kids?|children|child|nationalit(?:y|ies)|citizenship|salary|salaries|"
@@ -1103,7 +1120,7 @@ def player_indexable(profile, root) -> bool:
     return player_has_records(profile)
 
 
-def player_description(profile) -> str:
+def player_description(profile, root=None) -> str:
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
     if player_has_records(profile):
@@ -1113,8 +1130,12 @@ def player_description(profile) -> str:
             raise BuildError(f'{profile.get("slug") or name} mentions playoffs without playoff stats.')
         years = sorted({r['season'] for r in profile.get('season_stats') or [] if isinstance(r.get('season'), int)})
         if years:
-            span = f'{years[0]} to {years[-1]}' if len(years) > 1 else str(years[0])
-            extra = f' Seasons on record: {span}.'
+            check = season_cross_check(profile, root) if root is not None else {'missing': [], 'games': []}
+            if check['missing'] or check['games']:
+                extra = ' This record is partial.'
+            else:
+                span = f'{years[0]} to {years[-1]}' if len(years) > 1 else str(years[0])
+                extra = f' Seasons on record: {span}.'
             if len(text + extra) <= DESCRIPTION_MAX:
                 text += extra
         covered = text + ' Available coverage from 2008 onward.'
@@ -1440,7 +1461,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     if faq_entity:
         structured['@graph'].append(faq_entity)
     robots = 'index,follow,max-image-preview:large' if player_indexable(profile, root) else 'noindex'
-    return document(title, player_description(profile), route, body, structured, has_standings(root), menu, robots)
+    return document(title, player_description(profile, root), route, body, structured, has_standings(root), menu, robots)
 
 
 def profile_page(profile, root=None, linking=None, menu=None):
@@ -1459,14 +1480,16 @@ def profile_page(profile, root=None, linking=None, menu=None):
     note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No single season line for the latest year'
     metrics=''.join(f'<div class="metric"><strong>{value((row or {}).get(k))}</strong><span>{label}<small>PER GAME</small></span></div>' for k,label in [('pts','POINTS'),('ast','ASSISTS'),('reb','REBOUNDS')])
     meta=' / '.join(esc(x) for x in [('#'+number) if number else '',position,tname(team) if team else ''] if x)
-    details=[('Roster','On the current roster' if active else 'Not on a current roster'),('Records available',span)]
+    gap = season_cross_check(profile, root)
+    record_label = 'Verified seasons' if gap['missing'] or gap['games'] else 'Records available'
+    details=[('Roster','On the current roster' if active else 'Not on a current roster'),(record_label,span)]
     if team: details.append(('Current team',tname(team)))
     for key,label in [('position','Position'),('height','Height'),('jersey_number','Jersey number'),('college','College'),('weight','Weight')]:
         if key in fields: details.append((label,fields[key]))
     detail_html=''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k,v in details)
     regular=[r for r in stats if r['season_type']==2]
     if not stats:
-        intro = player_description(profile)
+        intro = player_description(profile, root)
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
@@ -1549,7 +1572,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     if faq_entity:
         structured['@graph'].append(faq_entity)
     robots = 'index,follow,max-image-preview:large' if player_indexable(profile, root) else 'noindex'
-    return document(title, player_description(profile), route, body, structured, has_standings(root), menu, robots)
+    return document(title, player_description(profile, root), route, body, structured, has_standings(root), menu, robots)
 
 def couple_note(root, slug):
     """One sourced relationship line. Empty unless this profile is in the couples data."""
@@ -2203,6 +2226,7 @@ def build(root: Path):
                 page=previous
             else:
                 page=outcome.html
+        require_flagged_season_gap(profile, page, root)
         files[relative]=page
         if player_indexable(profile, root):
             indexable_players.append((slug, _player_lastmod(profile)))

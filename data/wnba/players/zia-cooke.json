@@ -70,38 +70,6 @@
     },
     {
       "player_id": 695,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
-      },
-      "games_played": 41,
-      "min": 15.02,
-      "fgm": 2.41,
-      "fga": 6.95,
-      "fg_pct": 34.7,
-      "fg3m": 0.78,
-      "fg3a": 2.66,
-      "fg3_pct": 29.4,
-      "ftm": 1.93,
-      "fta": 2.39,
-      "ft_pct": 80.6,
-      "oreb": null,
-      "dreb": null,
-      "reb": 1.66,
-      "ast": 1.07,
-      "stl": 0.39,
-      "blk": 0.02,
-      "turnover": 1.07,
-      "pts": 7.54
-    },
-    {
-      "player_id": 695,
       "season": 2025,
       "season_type": 2,
       "team": {

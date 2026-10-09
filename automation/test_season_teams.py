@@ -109,6 +109,28 @@ class SeasonTeamTests(unittest.TestCase):
         self.assertEqual(historical["san-antonio-stars"]["id"], 200)
         self.assertEqual(again, {})
 
+    def test_copied_playoff_stints_are_dropped(self):
+        stints = [
+            {"season": 2010, "season_type": 2, "games_played": 16, "team_slug": "seattle-storm"},
+            {"season": 2015, "season_type": 2, "games_played": 26, "team_slug": "seattle-storm"},
+            {"season": 2016, "season_type": 2, "games_played": 13, "team_slug": "seattle-storm"},
+            {"season": 2010, "season_type": 3, "games_played": 16, "team_slug": "seattle-storm"},
+            {"season": 2015, "season_type": 3, "games_played": 26, "team_slug": "seattle-storm"},
+            {"season": 2016, "season_type": 3, "games_played": 13, "team_slug": "seattle-storm"},
+            {"season": 2018, "season_type": 2, "games_played": 34, "team_slug": "seattle-storm"},
+            {"season": 2018, "season_type": 3, "games_played": 5, "team_slug": "seattle-storm"},
+        ]
+        kept = teams.drop_copied_playoff_stints(stints)
+        self.assertEqual(
+            [(row["season"], row["season_type"]) for row in kept],
+            [(2010, 2), (2015, 2), (2016, 2), (2018, 2), (2018, 3)],
+        )
+        table = {"players": {"270": {"status": "ok", "stints": stints}}}
+        self.assertEqual(
+            [row["season_type"] for row in teams.player_stints(table, 270) if row["season"] == 2015],
+            [2],
+        )
+
     def test_apply_updates_season_and_profile(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

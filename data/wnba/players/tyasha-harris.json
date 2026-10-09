@@ -70,38 +70,6 @@
     },
     {
       "player_id": 604,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 3,
-        "full_name": "Indiana Fever",
-        "abbreviation": "IND",
-        "city": "Indiana",
-        "name": "Fever",
-        "conference": "Eastern Conference"
-      },
-      "games_played": 39,
-      "min": 13.64,
-      "fgm": 1.38,
-      "fga": 3.28,
-      "fg_pct": 42.2,
-      "fg3m": 0.64,
-      "fg3a": 1.82,
-      "fg3_pct": 35.2,
-      "ftm": 0.64,
-      "fta": 0.74,
-      "ft_pct": 86.2,
-      "oreb": null,
-      "dreb": null,
-      "reb": 1.08,
-      "ast": 2.03,
-      "stl": 0.28,
-      "blk": 0.18,
-      "turnover": 0.51,
-      "pts": 4.05
-    },
-    {
-      "player_id": 604,
       "season": 2025,
       "season_type": 2,
       "team": {

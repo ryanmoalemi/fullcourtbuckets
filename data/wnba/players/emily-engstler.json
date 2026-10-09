@@ -70,38 +70,6 @@
     },
     {
       "player_id": 648,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 31,
-        "full_name": "Portland Fire",
-        "abbreviation": "POR",
-        "city": "Portland",
-        "name": "Fire",
-        "conference": null
-      },
-      "games_played": 44,
-      "min": 24.66,
-      "fgm": 3.8,
-      "fga": 8.16,
-      "fg_pct": 46.5,
-      "fg3m": 1.27,
-      "fg3a": 3.43,
-      "fg3_pct": 37.1,
-      "ftm": 1.27,
-      "fta": 1.77,
-      "ft_pct": 71.8,
-      "oreb": null,
-      "dreb": null,
-      "reb": 5.73,
-      "ast": 2.09,
-      "stl": 1.39,
-      "blk": 1.43,
-      "turnover": 1.89,
-      "pts": 10.14
-    },
-    {
-      "player_id": 648,
       "season": 2025,
       "season_type": 2,
       "team": {

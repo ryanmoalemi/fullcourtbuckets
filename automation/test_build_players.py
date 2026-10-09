@@ -600,6 +600,16 @@ class BuildTests(unittest.TestCase):
         self.assertIn('Inactive player', page)
         self.assertNotIn('Archive profile', page)
 
+    def test_build_blocks_an_unflagged_season_gap(self):
+        root = ROOT.parent
+        profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
+        with self.assertRaises(b.BuildError):
+            b.require_flagged_season_gap(profile, '<p>Years on record 2015</p>', root)
+        flagged = b.profile_page(profile, root, menu=[])
+        b.require_flagged_season_gap(profile, flagged, root)
+        self.assertIn('This record is partial.', b.player_description(profile, root))
+        self.assertNotIn('Seasons on record', b.player_description(profile, root))
+
     def test_abby_bishop_record_is_partial_and_does_not_invent_seasons(self):
         root = ROOT.parent
         profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())

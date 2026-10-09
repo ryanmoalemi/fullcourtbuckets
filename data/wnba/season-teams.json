@@ -564,30 +564,6 @@
           "season_type": 2,
           "games_played": 30,
           "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 21,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 15,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 30,
-          "team_slug": "connecticut-sun"
         }
       ]
     },
@@ -642,24 +618,6 @@
         {
           "season": 2016,
           "season_type": 2,
-          "games_played": 13,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2010,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
-          "games_played": 26,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
           "games_played": 13,
           "team_slug": "seattle-storm"
         }
@@ -838,12 +796,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 30,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 30,
           "team_slug": "chicago-sky"
         }
@@ -2403,12 +2355,6 @@
           "season_type": 2,
           "games_played": 1,
           "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "golden-state-valkyries"
         }
       ]
     },
@@ -2517,24 +2463,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 4,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 8,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 4,
           "team_slug": "portland-fire"
         }
@@ -2710,24 +2638,6 @@
           "season_type": 2,
           "games_played": 7,
           "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 41,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 20,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 7,
-          "team_slug": "toronto-tempo"
         }
       ]
     },
@@ -2856,24 +2766,6 @@
         {
           "season": 2015,
           "season_type": 2,
-          "games_played": 23,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 31,
-          "team_slug": "tulsa-shock"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "tulsa-shock"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
           "games_played": 23,
           "team_slug": "seattle-storm"
         }
@@ -3182,12 +3074,6 @@
           "season_type": 3,
           "games_played": 10,
           "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
-          "games_played": 6,
-          "team_slug": "minnesota-lynx"
         }
       ]
     },
@@ -3390,12 +3276,6 @@
           "season_type": 2,
           "games_played": 19,
           "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 19,
-          "team_slug": "connecticut-sun"
         }
       ]
     },
@@ -3407,12 +3287,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 6,
-          "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 6,
           "team_slug": "golden-state-valkyries"
         }
@@ -3689,12 +3563,6 @@
           "season_type": 2,
           "games_played": 4,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 4,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -3761,12 +3629,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 37,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 37,
           "team_slug": "seattle-storm"
         }
@@ -4147,12 +4009,6 @@
           "season_type": 2,
           "games_played": 30,
           "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 30,
-          "team_slug": "dallas-wings"
         }
       ]
     },
@@ -4408,24 +4264,6 @@
         {
           "season": 2009,
           "season_type": 2,
-          "games_played": 24,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2007,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2008,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2009,
-          "season_type": 3,
           "games_played": 24,
           "team_slug": "washington-mystics"
         }
@@ -5862,12 +5700,6 @@
           "season_type": 2,
           "games_played": 34,
           "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2019,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "dallas-wings"
         }
       ]
     },
@@ -6195,24 +6027,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 31,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 15,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 19,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 31,
           "team_slug": "los-angeles-sparks"
         }
@@ -7171,12 +6985,6 @@
           "season_type": 2,
           "games_played": 40,
           "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 40,
-          "team_slug": "los-angeles-sparks"
         }
       ]
     },
@@ -7196,18 +7004,6 @@
           "season_type": 2,
           "games_played": 3,
           "team_slug": "portland-fire"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "portland-fire"
         }
       ]
     },
@@ -7225,18 +7021,6 @@
         {
           "season": 2022,
           "season_type": 2,
-          "games_played": 17,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
           "games_played": 17,
           "team_slug": "dallas-wings"
         }
@@ -7373,30 +7157,6 @@
           "season_type": 2,
           "games_played": 1,
           "team_slug": "san-antonio-silver-stars"
-        },
-        {
-          "season": 2009,
-          "season_type": 3,
-          "games_played": 33,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2010,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "tulsa-shock"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "tulsa-shock"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "san-antonio-silver-stars"
         }
       ]
     },
@@ -7408,12 +7168,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 44,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 44,
           "team_slug": "connecticut-sun"
         }
@@ -7659,36 +7413,6 @@
           "season_type": 2,
           "games_played": 13,
           "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2020,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 11,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 33,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 13,
-          "team_slug": "las-vegas-aces"
         }
       ]
     },
@@ -7725,18 +7449,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 3,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 4,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 3,
           "team_slug": "dallas-wings"
         }
@@ -7971,12 +7683,6 @@
           "season_type": 2,
           "games_played": 1,
           "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "dallas-wings"
         }
       ]
     },
@@ -8202,24 +7908,6 @@
         {
           "season": 2025,
           "season_type": 2,
-          "games_played": 4,
-          "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
-          "games_played": 15,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
           "games_played": 4,
           "team_slug": "las-vegas-aces"
         }
@@ -9060,12 +8748,6 @@
           "season_type": 2,
           "games_played": 4,
           "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 4,
-          "team_slug": "washington-mystics"
         }
       ]
     },
@@ -9612,18 +9294,6 @@
           "season_type": 2,
           "games_played": 2,
           "team_slug": "san-antonio-stars"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "san-antonio-silver-stars"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "san-antonio-stars"
         }
       ]
     },
@@ -9865,30 +9535,6 @@
         {
           "season": 2024,
           "season_type": 2,
-          "games_played": 6,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 36,
-          "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 10,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 5,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
           "games_played": 6,
           "team_slug": "atlanta-dream"
         }
@@ -10765,18 +10411,6 @@
           "season_type": 2,
           "games_played": 7,
           "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 7,
-          "team_slug": "seattle-storm"
         }
       ]
     },
@@ -10970,12 +10604,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 21,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 21,
           "team_slug": "minnesota-lynx"
         }
@@ -11221,12 +10849,6 @@
           "season_type": 2,
           "games_played": 12,
           "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 12,
-          "team_slug": "las-vegas-aces"
         }
       ]
     },
@@ -11238,12 +10860,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 3,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 3,
           "team_slug": "minnesota-lynx"
         }
@@ -11384,36 +11000,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 44,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 35,
-          "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 12,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 32,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 40,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 44,
           "team_slug": "portland-fire"
         }
@@ -11792,12 +11378,6 @@
           "season_type": 3,
           "games_played": 1,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2019,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "las-vegas-aces"
         },
         {
           "season": 2020,
@@ -12594,12 +12174,6 @@
           "season_type": 2,
           "games_played": 39,
           "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 39,
-          "team_slug": "portland-fire"
         }
       ]
     },
@@ -12704,12 +12278,6 @@
           "season_type": 2,
           "games_played": 42,
           "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 42,
-          "team_slug": "seattle-storm"
         }
       ]
     },
@@ -12729,12 +12297,6 @@
           "season_type": 2,
           "games_played": 39,
           "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 39,
-          "team_slug": "chicago-sky"
         }
       ]
     },
@@ -12746,12 +12308,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 36,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 36,
           "team_slug": "connecticut-sun"
         }
@@ -12846,18 +12402,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 22,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 22,
           "team_slug": "connecticut-sun"
         }
@@ -13056,36 +12600,6 @@
           "season_type": 2,
           "games_played": 33,
           "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "san-antonio-stars"
-        },
-        {
-          "season": 2017,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "san-antonio-stars"
-        },
-        {
-          "season": 2017,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2019,
-          "season_type": 3,
-          "games_played": 4,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 33,
-          "team_slug": "connecticut-sun"
         }
       ]
     },
@@ -13148,12 +12662,6 @@
           "season_type": 2,
           "games_played": 29,
           "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "portland-fire"
         }
       ]
     },
@@ -13208,12 +12716,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 23,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 23,
           "team_slug": "atlanta-dream"
         }
@@ -13728,30 +13230,6 @@
           "season_type": 2,
           "games_played": 44,
           "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 40,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 44,
-          "team_slug": "chicago-sky"
         }
       ]
     },
@@ -13769,18 +13247,6 @@
         {
           "season": 2025,
           "season_type": 2,
-          "games_played": 10,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 14,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
           "games_played": 10,
           "team_slug": "connecticut-sun"
         }
@@ -13814,30 +13280,6 @@
           "season_type": 2,
           "games_played": 42,
           "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 37,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 43,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 42,
-          "team_slug": "seattle-storm"
         }
       ]
     },
@@ -13855,18 +13297,6 @@
         {
           "season": 2019,
           "season_type": 2,
-          "games_played": 1,
-          "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2018,
-          "season_type": 3,
-          "games_played": 31,
-          "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2019,
-          "season_type": 3,
           "games_played": 1,
           "team_slug": "las-vegas-aces"
         }
@@ -14212,18 +13642,6 @@
           "season_type": 2,
           "games_played": 32,
           "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 32,
-          "team_slug": "los-angeles-sparks"
         }
       ]
     },
@@ -14535,24 +13953,6 @@
           "season_type": 2,
           "games_played": 10,
           "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
-          "games_played": 22,
-          "team_slug": "san-antonio-stars"
-        },
-        {
-          "season": 2017,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2018,
-          "season_type": 3,
-          "games_played": 10,
-          "team_slug": "indiana-fever"
         }
       ]
     },
@@ -14724,18 +14124,6 @@
         {
           "season": 2017,
           "season_type": 2,
-          "games_played": 12,
-          "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
-          "games_played": 25,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2017,
-          "season_type": 3,
           "games_played": 12,
           "team_slug": "indiana-fever"
         }
@@ -15383,12 +14771,6 @@
           "season_type": 2,
           "games_played": 36,
           "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 36,
-          "team_slug": "los-angeles-sparks"
         }
       ]
     },
@@ -15406,18 +14788,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 2,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 2,
           "team_slug": "dallas-wings"
         }
@@ -15712,12 +15082,6 @@
           "season_type": 2,
           "games_played": 24,
           "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2008,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "connecticut-sun"
         }
       ]
     },
@@ -15729,12 +15093,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 16,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 16,
           "team_slug": "portland-fire"
         }
@@ -15933,12 +15291,6 @@
           "season_type": 2,
           "games_played": 16,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -16123,12 +15475,6 @@
         {
           "season": 2023,
           "season_type": 2,
-          "games_played": 40,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
           "games_played": 40,
           "team_slug": "phoenix-mercury"
         }
@@ -16576,12 +15922,6 @@
           "season_type": 2,
           "games_played": 34,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -16607,24 +15947,6 @@
           "season_type": 2,
           "games_played": 43,
           "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 32,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 40,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 43,
-          "team_slug": "chicago-sky"
         }
       ]
     },
@@ -16636,12 +15958,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 4,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 4,
           "team_slug": "phoenix-mercury"
         }
@@ -16728,12 +16044,6 @@
         {
           "season": 2025,
           "season_type": 2,
-          "games_played": 13,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
           "games_played": 13,
           "team_slug": "connecticut-sun"
         }
@@ -17245,12 +16555,6 @@
         {
           "season": 2020,
           "season_type": 2,
-          "games_played": 18,
-          "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2020,
-          "season_type": 3,
           "games_played": 18,
           "team_slug": "indiana-fever"
         }
@@ -18052,30 +17356,6 @@
         {
           "season": 2016,
           "season_type": 2,
-          "games_played": 31,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 25,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
-          "games_played": 32,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
           "games_played": 31,
           "team_slug": "connecticut-sun"
         }
@@ -19064,12 +18344,6 @@
           "season_type": 2,
           "games_played": 28,
           "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "toronto-tempo"
         }
       ]
     },
@@ -19310,18 +18584,6 @@
           "season_type": 2,
           "games_played": 19,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 4,
-          "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 19,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -19547,18 +18809,6 @@
           "season_type": 2,
           "games_played": 30,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2020,
-          "season_type": 3,
-          "games_played": 20,
-          "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 30,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -19718,12 +18968,6 @@
           "season_type": 2,
           "games_played": 44,
           "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 44,
-          "team_slug": "toronto-tempo"
         }
       ]
     },
@@ -19829,18 +19073,6 @@
           "season_type": 2,
           "games_played": 18,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2020,
-          "season_type": 3,
-          "games_played": 22,
-          "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 18,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -19920,18 +19152,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 30,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 25,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 30,
           "team_slug": "connecticut-sun"
         }
@@ -20334,24 +19554,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 12,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 12,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 12,
           "team_slug": "minnesota-lynx"
         }
@@ -20986,24 +20188,6 @@
           "season_type": 2,
           "games_played": 14,
           "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2018,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2021,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 14,
-          "team_slug": "washington-mystics"
         }
       ]
     },
@@ -21084,18 +20268,6 @@
           "season_type": 2,
           "games_played": 21,
           "team_slug": "portland-fire"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "dallas-wings"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 21,
-          "team_slug": "portland-fire"
         }
       ]
     },
@@ -21113,18 +20285,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 22,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 41,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 22,
           "team_slug": "washington-mystics"
         }
@@ -21230,24 +20390,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 7,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 26,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 7,
           "team_slug": "phoenix-mercury"
         }
@@ -21410,18 +20552,6 @@
           "season_type": 2,
           "games_played": 2,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 9,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -21464,12 +20594,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 35,
-          "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 35,
           "team_slug": "toronto-tempo"
         }
@@ -21630,12 +20754,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 3,
-          "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 3,
           "team_slug": "toronto-tempo"
         }
@@ -21974,12 +21092,6 @@
           "season_type": 2,
           "games_played": 19,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 19,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -22223,12 +21335,6 @@
         {
           "season": 2025,
           "season_type": 2,
-          "games_played": 1,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
           "games_played": 1,
           "team_slug": "phoenix-mercury"
         }
@@ -22743,12 +21849,6 @@
           "season_type": 2,
           "games_played": 2,
           "team_slug": "indiana-fever"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "indiana-fever"
         }
       ]
     },
@@ -22785,12 +21885,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 7,
-          "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 7,
           "team_slug": "golden-state-valkyries"
         }
@@ -23256,12 +22350,6 @@
           "season_type": 2,
           "games_played": 5,
           "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 5,
-          "team_slug": "chicago-sky"
         }
       ]
     },
@@ -23310,12 +22398,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 10,
-          "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 10,
           "team_slug": "golden-state-valkyries"
         }
@@ -23906,12 +22988,6 @@
         {
           "season": 2012,
           "season_type": 2,
-          "games_played": 31,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
           "games_played": 31,
           "team_slug": "washington-mystics"
         }
@@ -24521,36 +23597,6 @@
           "season_type": 2,
           "games_played": 11,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2010,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "tulsa-shock"
-        },
-        {
-          "season": 2011,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
-          "games_played": 20,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 11,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -24667,18 +23713,6 @@
           "season_type": 2,
           "games_played": 2,
           "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 5,
-          "team_slug": "golden-state-valkyries"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 2,
-          "team_slug": "los-angeles-sparks"
         }
       ]
     },
@@ -24690,12 +23724,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 40,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 40,
           "team_slug": "connecticut-sun"
         }
@@ -25005,12 +24033,6 @@
           "season_type": 2,
           "games_played": 43,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 43,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -25022,12 +24044,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 42,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 42,
           "team_slug": "portland-fire"
         }
@@ -25444,12 +24460,6 @@
           "season_type": 2,
           "games_played": 14,
           "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 14,
-          "team_slug": "toronto-tempo"
         }
       ]
     },
@@ -25683,12 +24693,6 @@
           "season_type": 2,
           "games_played": 1,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 1,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -25700,12 +24704,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 13,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 13,
           "team_slug": "phoenix-mercury"
         }
@@ -25952,18 +24950,6 @@
           "season_type": 2,
           "games_played": 7,
           "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2016,
-          "season_type": 3,
-          "games_played": 32,
-          "team_slug": "atlanta-dream"
-        },
-        {
-          "season": 2017,
-          "season_type": 3,
-          "games_played": 7,
-          "team_slug": "atlanta-dream"
         }
       ]
     },
@@ -26128,12 +25114,6 @@
           "season_type": 2,
           "games_played": 38,
           "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 38,
-          "team_slug": "connecticut-sun"
         }
       ]
     },
@@ -26169,36 +25149,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 43,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2023,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 37,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 43,
           "team_slug": "los-angeles-sparks"
         }
@@ -26237,18 +25187,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 6,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 15,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 6,
           "team_slug": "connecticut-sun"
         }
@@ -26669,24 +25607,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 4,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2024,
-          "season_type": 3,
-          "games_played": 40,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 38,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 4,
           "team_slug": "chicago-sky"
         }
@@ -27175,12 +26095,6 @@
           "season_type": 2,
           "games_played": 15,
           "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 15,
-          "team_slug": "washington-mystics"
         }
       ]
     },
@@ -27398,30 +26312,6 @@
         {
           "season": 2014,
           "season_type": 2,
-          "games_played": 2,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
-          "games_played": 28,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 8,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
           "games_played": 2,
           "team_slug": "los-angeles-sparks"
         }
@@ -27795,18 +26685,6 @@
           "season_type": 2,
           "games_played": 3,
           "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 3,
-          "team_slug": "los-angeles-sparks"
         }
       ]
     },
@@ -27824,18 +26702,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 38,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 42,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 38,
           "team_slug": "connecticut-sun"
         }
@@ -27880,18 +26746,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 26,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
-          "games_played": 34,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 26,
           "team_slug": "portland-fire"
         }
@@ -27984,18 +26838,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 2,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 5,
-          "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 2,
           "team_slug": "phoenix-mercury"
         }
@@ -28246,12 +27088,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 39,
-          "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 39,
           "team_slug": "portland-fire"
         }
@@ -28535,12 +27371,6 @@
           "season_type": 2,
           "games_played": 24,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 24,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -28552,12 +27382,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 8,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 8,
           "team_slug": "phoenix-mercury"
         }
@@ -29426,12 +28250,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 2,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 2,
           "team_slug": "los-angeles-sparks"
         }
@@ -30644,12 +29462,6 @@
           "season_type": 2,
           "games_played": 37,
           "team_slug": "chicago-sky"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 37,
-          "team_slug": "chicago-sky"
         }
       ]
     },
@@ -31036,12 +29848,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 10,
-          "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 10,
           "team_slug": "seattle-storm"
         }
@@ -31738,18 +30544,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 9,
-          "team_slug": "las-vegas-aces"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 10,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 9,
           "team_slug": "las-vegas-aces"
         }
@@ -32512,12 +31306,6 @@
           "season_type": 2,
           "games_played": 29,
           "team_slug": "portland-fire"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 29,
-          "team_slug": "portland-fire"
         }
       ]
     },
@@ -32596,12 +31384,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 39,
-          "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 39,
           "team_slug": "toronto-tempo"
         }
@@ -33423,18 +32205,6 @@
           "season_type": 2,
           "games_played": 8,
           "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2013,
-          "season_type": 3,
-          "games_played": 31,
-          "team_slug": "new-york-liberty"
-        },
-        {
-          "season": 2014,
-          "season_type": 3,
-          "games_played": 8,
-          "team_slug": "new-york-liberty"
         }
       ]
     },
@@ -33537,12 +32307,6 @@
         {
           "season": 2026,
           "season_type": 2,
-          "games_played": 12,
-          "team_slug": "los-angeles-sparks"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
           "games_played": 12,
           "team_slug": "los-angeles-sparks"
         }
@@ -34152,18 +32916,6 @@
           "season_type": 2,
           "games_played": 35,
           "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2015,
-          "season_type": 3,
-          "games_played": 16,
-          "team_slug": "san-antonio-stars"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 35,
-          "team_slug": "phoenix-mercury"
         }
       ]
     },
@@ -34353,18 +33105,6 @@
           "season_type": 2,
           "games_played": 5,
           "team_slug": "seattle-storm"
-        },
-        {
-          "season": 2011,
-          "season_type": 3,
-          "games_played": 26,
-          "team_slug": "washington-mystics"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
-          "games_played": 5,
-          "team_slug": "seattle-storm"
         }
       ]
     },
@@ -34464,12 +33204,6 @@
           "season_type": 2,
           "games_played": 7,
           "team_slug": "toronto-tempo"
-        },
-        {
-          "season": 2026,
-          "season_type": 3,
-          "games_played": 7,
-          "team_slug": "toronto-tempo"
         }
       ]
     },
@@ -34487,18 +33221,6 @@
         {
           "season": 2025,
           "season_type": 2,
-          "games_played": 1,
-          "team_slug": "minnesota-lynx"
-        },
-        {
-          "season": 2022,
-          "season_type": 3,
-          "games_played": 11,
-          "team_slug": "connecticut-sun"
-        },
-        {
-          "season": 2025,
-          "season_type": 3,
           "games_played": 1,
           "team_slug": "minnesota-lynx"
         }
@@ -34696,12 +33418,6 @@
           "season_type": 2,
           "games_played": 30,
           "team_slug": "san-antonio-silver-stars"
-        },
-        {
-          "season": 2012,
-          "season_type": 3,
-          "games_played": 30,
-          "team_slug": "san-antonio-silver-stars"
         }
       ]
     },
@@ -34713,12 +33429,6 @@
         {
           "season": 2008,
           "season_type": 2,
-          "games_played": 23,
-          "team_slug": "phoenix-mercury"
-        },
-        {
-          "season": 2008,
-          "season_type": 3,
           "games_played": 23,
           "team_slug": "phoenix-mercury"
         }

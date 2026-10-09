@@ -70,38 +70,6 @@
     },
     {
       "player_id": 556,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 11,
-        "full_name": "Dallas Wings",
-        "abbreviation": "DAL",
-        "city": "Dallas",
-        "name": "Wings",
-        "conference": "Western Conference"
-      },
-      "games_played": 32,
-      "min": 17.88,
-      "fgm": 2.34,
-      "fga": 5.13,
-      "fg_pct": 45.7,
-      "fg3m": 0.56,
-      "fg3a": 2.16,
-      "fg3_pct": 26.1,
-      "ftm": 0.78,
-      "fta": 1.16,
-      "ft_pct": 67.6,
-      "oreb": null,
-      "dreb": null,
-      "reb": 3.94,
-      "ast": 1.03,
-      "stl": 0.72,
-      "blk": 0.47,
-      "turnover": 1.19,
-      "pts": 6.03
-    },
-    {
-      "player_id": 556,
       "season": 2025,
       "season_type": 2,
       "team": {

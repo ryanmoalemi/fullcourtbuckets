@@ -70,38 +70,6 @@
     },
     {
       "player_id": 576,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 2,
-        "full_name": "Connecticut Sun",
-        "abbreviation": "CON",
-        "city": "Connecticut",
-        "name": "Sun",
-        "conference": "Eastern Conference"
-      },
-      "games_played": 37,
-      "min": 23.81,
-      "fgm": 3.03,
-      "fga": 7.54,
-      "fg_pct": 40.1,
-      "fg3m": 1.19,
-      "fg3a": 3.68,
-      "fg3_pct": 32.4,
-      "ftm": 1.54,
-      "fta": 2.16,
-      "ft_pct": 71.3,
-      "oreb": null,
-      "dreb": null,
-      "reb": 3.22,
-      "ast": 1.43,
-      "stl": 1.24,
-      "blk": 0.81,
-      "turnover": 1.49,
-      "pts": 8.78
-    },
-    {
-      "player_id": 576,
       "season": 2025,
       "season_type": 2,
       "team": {

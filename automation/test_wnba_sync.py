@@ -30,7 +30,12 @@ class FakeClient:
         if endpoint == 'teams': return [{"id": 1, "full_name": "Example Team"}]
         if endpoint == 'games': return [copy.deepcopy(G)]
         if endpoint == 'player_stats': return [{"player": P, "team": {"id": 1}, "game": {"id": 10}, "min": "25", "pts": 12}]
-        if endpoint == 'player_season_stats': return [stat(params['season'], params['season_type'])]
+        if endpoint == 'player_season_stats':
+            row = stat(params['season'], params['season_type'])
+            if params.get('season_type') == 3:
+                row['games_played'] = 3
+                row['pts'] = 8
+            return [row]
         raise AssertionError(endpoint)
 
 class TeamClient(FakeClient):
@@ -80,6 +85,15 @@ class Tests(unittest.TestCase):
     def test_path_traversal_rejected(self):
         with self.assertRaises(s.SyncError): s.stable_slug(1, 'Name', {'1':'../../index'})
     def test_duplicate_rows_collapsed(self): self.assertEqual(len(s.season_rows([stat(), stat()], 2009)), 1)
+
+    def test_copied_playoff_line_is_dropped(self):
+        copied = stat(kind=3)
+        rows = s.season_rows([stat(), copied], 2009)
+        self.assertEqual([row["season_type"] for row in rows], [2])
+        different = stat(kind=3)
+        different["pts"] = 4
+        rows = s.season_rows([stat(), different], 2009)
+        self.assertEqual(sorted(row["season_type"] for row in rows), [2, 3])
     def test_conflicting_duplicate_rejected(self):
         other=stat(); other['pts']=99
         with self.assertRaises(s.SyncError): s.season_rows([stat(),other],2009)

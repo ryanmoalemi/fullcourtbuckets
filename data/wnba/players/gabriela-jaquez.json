@@ -67,38 +67,6 @@
       "blk": 0.05,
       "turnover": 1.13,
       "pts": 7.13
-    },
-    {
-      "player_id": 67027,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 6,
-        "full_name": "Chicago Sky",
-        "abbreviation": "CHI",
-        "city": "Chicago",
-        "name": "Sky",
-        "conference": "Eastern Conference"
-      },
-      "games_played": 39,
-      "min": 19.51,
-      "fgm": 2.64,
-      "fga": 6.0,
-      "fg_pct": 44.0,
-      "fg3m": 0.49,
-      "fg3a": 1.82,
-      "fg3_pct": 26.8,
-      "ftm": 1.36,
-      "fta": 1.67,
-      "ft_pct": 81.5,
-      "oreb": null,
-      "dreb": null,
-      "reb": 2.97,
-      "ast": 0.9,
-      "stl": 0.69,
-      "blk": 0.05,
-      "turnover": 1.13,
-      "pts": 7.13
     }
   ],
   "recent_completed_games": [

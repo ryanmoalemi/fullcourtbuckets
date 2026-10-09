@@ -192,7 +192,29 @@ def season_rows(rows: list[dict], year: int) -> list[dict]:
         if key in result and row != result[key]:
             raise SyncError("Conflicting duplicate season row.")
         result[key] = row
-    return list(result.values())
+    return drop_copied_playoff_rows(list(result.values()))
+
+
+def drop_copied_playoff_rows(rows: list[dict]) -> list[dict]:
+    """Drop a playoff line that repeats the regular-season line for that player and year."""
+    regular = {}
+    for row in rows:
+        if isinstance(row, dict) and row.get("season_type") == 2:
+            regular.setdefault((row.get("player_id"), row.get("season")), []).append(row)
+    kept = []
+    for row in rows:
+        if isinstance(row, dict) and row.get("season_type") == 3:
+            peers = regular.get((row.get("player_id"), row.get("season")), [])
+            if any(_same_stat_line(row, peer) for peer in peers):
+                continue
+        kept.append(row)
+    return kept
+
+
+def _same_stat_line(left: dict, right: dict) -> bool:
+    fields = ("games_played", "min", "pts", "reb", "ast", "stl", "blk", "turnover",
+              "fgm", "fga", "fg_pct", "fg3m", "fg3a", "fg3_pct", "ftm", "fta", "ft_pct")
+    return all(left.get(field) == right.get(field) for field in fields)
 
 def date_of(value):
     try:

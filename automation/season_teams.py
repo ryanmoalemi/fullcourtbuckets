@@ -176,13 +176,42 @@ def team_for_slug(slug: str, table: dict) -> dict | None:
     return dict(team)
 
 
+def drop_copied_playoff_stints(stints: list[dict]) -> list[dict]:
+    """Drop playoff stints that repeat that season's regular-season games and clubs.
+
+    A year is removed only when every playoff stint matches the regular-season
+    stints for that year. A real playoff series with different games stays.
+    """
+    regular = {}
+    for item in stints:
+        if isinstance(item, dict) and item.get("season_type") == 2:
+            regular.setdefault(item.get("season"), []).append(item)
+    kept = []
+    for item in stints:
+        if not isinstance(item, dict) or item.get("season_type") != 3:
+            kept.append(item)
+            continue
+        year = item.get("season")
+        playoff = [
+            row for row in stints
+            if isinstance(row, dict) and row.get("season_type") == 3 and row.get("season") == year
+        ]
+        signature = sorted((row.get("games_played"), row.get("team_slug")) for row in playoff)
+        baseline = sorted((row.get("games_played"), row.get("team_slug")) for row in regular.get(year, []))
+        if signature and signature == baseline:
+            continue
+        kept.append(item)
+    return kept
+
+
 def player_stints(table: dict, player_id) -> list[dict]:
     players = table.get("players") if isinstance(table.get("players"), dict) else {}
     entry = players.get(str(player_id))
     if not isinstance(entry, dict):
         return []
     stints = entry.get("stints")
-    return [item for item in stints if isinstance(item, dict)] if isinstance(stints, list) else []
+    rows = [item for item in stints if isinstance(item, dict)] if isinstance(stints, list) else []
+    return drop_copied_playoff_stints(rows)
 
 
 def _joined_team(options: list[dict], table: dict) -> dict | None:
@@ -370,7 +399,7 @@ def refresh(root: Path, workers: int = 6) -> dict:
     def job(item):
         player_id, name = item
         espn_id, stints, teams, status = fetch_player(name)
-        return player_id, name, espn_id, stints, teams, status
+        return player_id, name, espn_id, drop_copied_playoff_stints(stints), teams, status
 
     done = 0
     with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:

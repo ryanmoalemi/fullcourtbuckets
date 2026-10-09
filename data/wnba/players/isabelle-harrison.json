@@ -70,38 +70,6 @@
     },
     {
       "player_id": 455,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 30,
-        "full_name": "Toronto Tempo",
-        "abbreviation": "TOR",
-        "city": "Toronto",
-        "name": "Tempo",
-        "conference": null
-      },
-      "games_played": 32,
-      "min": 23.72,
-      "fgm": 4.59,
-      "fga": 10.81,
-      "fg_pct": 42.5,
-      "fg3m": 0.69,
-      "fg3a": 2.47,
-      "fg3_pct": 27.8,
-      "ftm": 2.88,
-      "fta": 3.94,
-      "ft_pct": 73.0,
-      "oreb": null,
-      "dreb": null,
-      "reb": 6.94,
-      "ast": 1.47,
-      "stl": 0.84,
-      "blk": 0.69,
-      "turnover": 1.78,
-      "pts": 12.75
-    },
-    {
-      "player_id": 455,
       "season": 2025,
       "season_type": 2,
       "team": {

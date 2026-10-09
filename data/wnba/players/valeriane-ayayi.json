@@ -67,38 +67,6 @@
       "blk": 0.23,
       "turnover": 1.31,
       "pts": 6.29
-    },
-    {
-      "player_id": 448,
-      "season": 2026,
-      "season_type": 3,
-      "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "games_played": 35,
-      "min": 16.23,
-      "fgm": 1.46,
-      "fga": 4.0,
-      "fg_pct": 36.4,
-      "fg3m": 0.54,
-      "fg3a": 1.97,
-      "fg3_pct": 27.5,
-      "ftm": 2.83,
-      "fta": 3.46,
-      "ft_pct": 81.8,
-      "oreb": null,
-      "dreb": null,
-      "reb": 2.77,
-      "ast": 1.26,
-      "stl": 0.49,
-      "blk": 0.23,
-      "turnover": 1.31,
-      "pts": 6.29
     }
   ],
   "recent_completed_games": [
