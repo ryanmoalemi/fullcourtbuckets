@@ -116,6 +116,9 @@ class Tests(unittest.TestCase):
     def test_offseason(self): self.assertFalse(s.in_season([G],dt.date(2009,12,1)))
     def test_shrink_guard(self):
         with self.assertRaises(s.SyncError): s.guard_shrink(list(range(20)),[1],'test')
+        filled = [{"gap_fill": True, "season": 2010}] * 20
+        self.assertEqual(s.provider_rows(filled + [{"season": 2011}]), [{"season": 2011}])
+        s.guard_shrink(s.provider_rows(filled + list(range(10))), list(range(10)), 'gap fills are not feed rows')
     def test_pagination(self):
         client=s.Client('synthetic-key')
         with patch.object(client,'get',side_effect=[{'data':[{'id':1}],'meta':{'next_cursor':1}},{'data':[{'id':2}],'meta':{}}]):

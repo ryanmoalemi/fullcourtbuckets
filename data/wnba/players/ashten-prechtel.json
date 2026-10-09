@@ -35,7 +35,41 @@
     "name": "Valkyries",
     "conference": "Western Conference"
   },
-  "season_stats": [],
+  "season_stats": [
+    {
+      "player_id": 74886,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "games_played": 6,
+      "min": 7.2,
+      "fgm": 0.5,
+      "fga": 1.5,
+      "fg_pct": 33.3,
+      "fg3m": 0.3,
+      "fg3a": 1,
+      "fg3_pct": 33.3,
+      "ftm": 0.5,
+      "fta": 0.5,
+      "ft_pct": 100,
+      "oreb": 0.3,
+      "dreb": 1.5,
+      "reb": 1.8,
+      "ast": 0.5,
+      "stl": 0.2,
+      "blk": 0.7,
+      "turnover": 1.2,
+      "pts": 1.8,
+      "gap_fill": true
+    }
+  ],
   "recent_completed_games": [
     {
       "game_id": 1392688,

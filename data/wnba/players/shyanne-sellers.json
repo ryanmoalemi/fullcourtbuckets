@@ -35,7 +35,41 @@
     "name": "Sparks",
     "conference": "Western Conference"
   },
-  "season_stats": [],
+  "season_stats": [
+    {
+      "player_id": 67118,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 2,
+      "min": 10.5,
+      "fgm": 0.5,
+      "fga": 3,
+      "fg_pct": 16.7,
+      "fg3m": 0.5,
+      "fg3a": 1,
+      "fg3_pct": 50,
+      "ftm": 0.5,
+      "fta": 1,
+      "ft_pct": 50,
+      "oreb": 0,
+      "dreb": 1,
+      "reb": 1,
+      "ast": 1,
+      "stl": 1,
+      "blk": 0,
+      "turnover": 0.5,
+      "pts": 2,
+      "gap_fill": true
+    }
+  ],
   "recent_completed_games": [
     {
       "game_id": 25068,

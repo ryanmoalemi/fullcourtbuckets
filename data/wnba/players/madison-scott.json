@@ -38,6 +38,39 @@
   "season_stats": [
     {
       "player_id": 781,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 2,
+      "min": 3,
+      "fgm": 1,
+      "fga": 1,
+      "fg_pct": 100,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0,
+      "fta": 0.5,
+      "ft_pct": 0,
+      "oreb": 0,
+      "dreb": 0,
+      "reb": 0,
+      "ast": 0.5,
+      "stl": 0,
+      "blk": 0,
+      "turnover": 0,
+      "pts": 2,
+      "gap_fill": true
+    },
+    {
+      "player_id": 781,
       "season": 2025,
       "season_type": 2,
       "team": {

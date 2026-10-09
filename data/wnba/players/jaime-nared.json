@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 538,
+      "season": 2019,
+      "season_type": 2,
+      "team": {
+        "id": 8,
+        "full_name": "Las Vegas Aces",
+        "abbreviation": "LV",
+        "city": "Las Vegas",
+        "name": "Aces",
+        "conference": "Western Conference"
+      },
+      "games_played": 1,
+      "min": 1,
+      "fgm": 0,
+      "fga": 0,
+      "fg_pct": 0,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0,
+      "fta": 0,
+      "ft_pct": 0,
+      "oreb": 0,
+      "dreb": 0,
+      "reb": 0,
+      "ast": 0,
+      "stl": 0,
+      "blk": 0,
+      "turnover": 0,
+      "pts": 0,
+      "gap_fill": true
+    },
+    {
+      "player_id": 538,
       "season": 2018,
       "season_type": 2,
       "team": {

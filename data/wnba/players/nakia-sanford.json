@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 53,
+      "season": 2013,
+      "season_type": 2,
+      "team": {
+        "id": 9,
+        "full_name": "Seattle Storm",
+        "abbreviation": "SEA",
+        "city": "Seattle",
+        "name": "Storm",
+        "conference": "Western Conference"
+      },
+      "games_played": 15,
+      "min": 10.2,
+      "fgm": 0.5,
+      "fga": 1.8,
+      "fg_pct": 29.6,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0.6,
+      "fta": 1.1,
+      "ft_pct": 56.3,
+      "oreb": 0.8,
+      "dreb": 1.2,
+      "reb": 2,
+      "ast": 0.5,
+      "stl": 0.1,
+      "blk": 0.3,
+      "turnover": 0.8,
+      "pts": 1.7,
+      "gap_fill": true
+    },
+    {
+      "player_id": 53,
       "season": 2012,
       "season_type": 2,
       "team": {

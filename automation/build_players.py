@@ -800,19 +800,19 @@ def partial_record_html(profile, root=None) -> str:
 
 
 def require_flagged_season_gap(profile, page: str, root) -> None:
-    """Stop the build when seasons or games disagree and the page is not flagged.
+    """Stop the build when a checked player's seasons or games still disagree.
 
-    A matching record must not be labeled partial. A disagreement must say so.
+    A matching record must not be labeled partial. Flagging the page does not
+    allow the disagreement through.
     """
     check = season_cross_check(profile, root)
     if not check['checked']:
         return
-    incomplete = bool(check['missing'] or check['games'])
-    flagged = 'This record is partial.' in page
+    incomplete = bool(check['missing'] or check['games'] or check['extra'])
     slug = profile.get('slug') or 'player'
-    if incomplete and not flagged:
-        raise BuildError(f'{slug} seasons or games do not match the cross-check and the page is not flagged partial.')
-    if flagged and not incomplete:
+    if incomplete:
+        raise BuildError(f'{slug} seasons or games do not match the cross-check.')
+    if 'This record is partial.' in page:
         raise BuildError(f'{slug} is flagged partial without a season or games disagreement.')
 
 

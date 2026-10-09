@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 141,
+      "season": 2013,
+      "season_type": 2,
+      "team": {
+        "id": 3,
+        "full_name": "Indiana Fever",
+        "abbreviation": "IND",
+        "city": "Indiana",
+        "name": "Fever",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 6,
+      "min": 11.2,
+      "fgm": 0.3,
+      "fga": 2,
+      "fg_pct": 16.7,
+      "fg3m": 0.2,
+      "fg3a": 1,
+      "fg3_pct": 16.7,
+      "ftm": 0.3,
+      "fta": 0.3,
+      "ft_pct": 100,
+      "oreb": 0,
+      "dreb": 0.5,
+      "reb": 0.5,
+      "ast": 0.7,
+      "stl": 0.3,
+      "blk": 0.2,
+      "turnover": 0.8,
+      "pts": 1.2,
+      "gap_fill": true
+    },
+    {
+      "player_id": 141,
       "season": 2012,
       "season_type": 2,
       "team": {

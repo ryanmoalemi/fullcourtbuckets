@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 240,
+      "season": 2010,
+      "season_type": 2,
+      "team": {
+        "id": 200,
+        "full_name": "San Antonio Silver Stars",
+        "abbreviation": "SAS",
+        "city": "San Antonio",
+        "name": "Silver Stars",
+        "conference": null
+      },
+      "games_played": 10,
+      "min": 10.1,
+      "fgm": 1.2,
+      "fga": 3.2,
+      "fg_pct": 37.5,
+      "fg3m": 0.1,
+      "fg3a": 0.9,
+      "fg3_pct": 11.1,
+      "ftm": 1.3,
+      "fta": 1.9,
+      "ft_pct": 68.4,
+      "oreb": 0.7,
+      "dreb": 1.4,
+      "reb": 2.1,
+      "ast": 0.1,
+      "stl": 0,
+      "blk": 0,
+      "turnover": 0.6,
+      "pts": 3.8,
+      "gap_fill": true
+    },
+    {
+      "player_id": 240,
       "season": 2009,
       "season_type": 2,
       "team": {

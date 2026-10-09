@@ -35,7 +35,41 @@
     "name": "Mercury",
     "conference": "Western Conference"
   },
-  "season_stats": [],
+  "season_stats": [
+    {
+      "player_id": 67096,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "games_played": 4,
+      "min": 15,
+      "fgm": 2,
+      "fga": 4.8,
+      "fg_pct": 42.1,
+      "fg3m": 2,
+      "fg3a": 3.5,
+      "fg3_pct": 57.1,
+      "ftm": 0.5,
+      "fta": 0.5,
+      "ft_pct": 100,
+      "oreb": 1,
+      "dreb": 0.5,
+      "reb": 1.5,
+      "ast": 0.5,
+      "stl": 0.3,
+      "blk": 0,
+      "turnover": 0.3,
+      "pts": 6.5,
+      "gap_fill": true
+    }
+  ],
   "recent_completed_games": [
     {
       "game_id": 25083,

@@ -31,38 +31,6 @@
   "season_stats": [
     {
       "player_id": 542,
-      "season": 2026,
-      "season_type": 2,
-      "team": {
-        "id": 7,
-        "full_name": "Minnesota Lynx",
-        "abbreviation": "MIN",
-        "city": "Minnesota",
-        "name": "Lynx",
-        "conference": "Western Conference"
-      },
-      "games_played": 34,
-      "min": 10.97,
-      "fgm": 1.88,
-      "fga": 3.76,
-      "fg_pct": 50.0,
-      "fg3m": 0.24,
-      "fg3a": 0.74,
-      "fg3_pct": 32.0,
-      "ftm": 0.35,
-      "fta": 0.62,
-      "ft_pct": 57.1,
-      "oreb": null,
-      "dreb": null,
-      "reb": 3.0,
-      "ast": 0.56,
-      "stl": 0.74,
-      "blk": 0.76,
-      "turnover": 0.68,
-      "pts": 4.35
-    },
-    {
-      "player_id": 542,
       "season": 2025,
       "season_type": 2,
       "team": {
@@ -124,6 +92,39 @@
       "blk": 1.0,
       "turnover": 0.2,
       "pts": 2.8
+    },
+    {
+      "player_id": 542,
+      "season": 2019,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 15,
+      "min": 12,
+      "fgm": 3.4,
+      "fga": 6.9,
+      "fg_pct": 49,
+      "fg3m": 0.3,
+      "fg3a": 1.1,
+      "fg3_pct": 31.3,
+      "ftm": 0.7,
+      "fta": 0.9,
+      "ft_pct": 76.9,
+      "oreb": 1.2,
+      "dreb": 2.7,
+      "reb": 3.9,
+      "ast": 0.7,
+      "stl": 1,
+      "blk": 0.2,
+      "turnover": 1.2,
+      "pts": 7.8,
+      "gap_fill": true
     },
     {
       "player_id": 542,

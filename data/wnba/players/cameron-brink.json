@@ -99,6 +99,39 @@
       "blk": 1.37,
       "turnover": 1.32,
       "pts": 5.05
+    },
+    {
+      "player_id": 719,
+      "season": 2024,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 15,
+      "min": 22,
+      "fgm": 2.7,
+      "fga": 6.9,
+      "fg_pct": 39.8,
+      "fg3m": 0.7,
+      "fg3a": 2.1,
+      "fg3_pct": 32.3,
+      "ftm": 1.4,
+      "fta": 1.7,
+      "ft_pct": 84,
+      "oreb": 1.2,
+      "dreb": 4.1,
+      "reb": 5.3,
+      "ast": 1.7,
+      "stl": 1.1,
+      "blk": 2.3,
+      "turnover": 2.3,
+      "pts": 7.5,
+      "gap_fill": true
     }
   ],
   "recent_completed_games": [

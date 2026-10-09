@@ -304,6 +304,11 @@ def merge_team_changes(previous, current_team, now: dt.datetime) -> list:
         return history
     return [{"from": src, "to": dst, "date": pt_date(now)}, *history]
 
+def provider_rows(rows: list) -> list:
+    """Feed rows only. Gap fills are re-applied after each sync and are not part of the shrink check."""
+    return [row for row in rows if not (isinstance(row, dict) and row.get("gap_fill") is True)]
+
+
 def guard_shrink(old: list, new: list, label: str) -> None:
     if old and len(new) < len(old) * 0.8:
         raise SyncError(f"Unexpected drop in {label}; keeping the previous published snapshot.")
@@ -342,7 +347,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
                     raise SyncError("Competition filter was not honored by the provider.")
                 raw.extend(batch)
             rows = season_rows(raw, year)
-            guard_shrink(old, rows, f"{year} season rows")
+            guard_shrink(provider_rows(old), rows, f"{year} season rows")
             if year < today.year and not rows:
                 raise SyncError(f"No historical records returned for {year}; initial import is incomplete.")
             seasons[year] = rows
@@ -353,6 +358,21 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
             year: season_teams.correct_rows(rows, season_team_table)[0]
             for year, rows in seasons.items()
         }
+        filled = replaced = dropped = unresolved = 0
+        for year, rows in seasons.items():
+            updated, report = season_teams.supplement_rows(
+                rows, season_team_table, season_year=year, prior_rows=seasons.get(year - 1, [])
+            )
+            seasons[year] = updated
+            filled += len(report["filled"])
+            replaced += len(report["replaced"])
+            dropped += len(report["dropped"])
+            unresolved += len(report["unresolved"])
+        if filled or replaced or dropped or unresolved:
+            print(
+                f"Filled {filled} missing season rows, replaced {replaced}, "
+                f"dropped {dropped}. Unresolved game counts: {unresolved}."
+            )
     # A recent log, not a falsely complete career game archive.
     start = today - dt.timedelta(days=35)
     recent_games = client.all("games", {"start_date": start.isoformat(), "end_date": today.isoformat()})
@@ -448,6 +468,12 @@ def main():
         season_team_table = season_teams.load_table(args.root)
         if season_team_table.get("players"):
             print(f"Per-season teams loaded for {season_team_table.get('matched_count')} players.")
+            if season_teams.needs_stat_lines(season_team_table):
+                season_team_table = season_teams.enrich_stat_lines(args.root)
+            if not season_team_table.get("playoff_teams"):
+                years = range(FIRST_YEAR, dt.datetime.now(dt.timezone.utc).year + 1)
+                season_team_table["playoff_teams"] = season_teams.fetch_playoff_teams(years)
+                season_teams._write(season_teams.lookup_path(args.root), season_team_table)
         changed = run(args.root, client, dt.datetime.now(dt.timezone.utc), args.force, season_team_table or None)
         if os.environ.get("GITHUB_OUTPUT"):
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:

@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 348,
+      "season": 2015,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 1,
+      "min": 5,
+      "fgm": 0,
+      "fga": 2,
+      "fg_pct": 0,
+      "fg3m": 0,
+      "fg3a": 2,
+      "fg3_pct": 0,
+      "ftm": 0,
+      "fta": 0,
+      "ft_pct": 0,
+      "oreb": 0,
+      "dreb": 1,
+      "reb": 1,
+      "ast": 0,
+      "stl": 0,
+      "blk": 0,
+      "turnover": 0,
+      "pts": 0,
+      "gap_fill": true
+    },
+    {
+      "player_id": 348,
       "season": 2014,
       "season_type": 2,
       "team": {

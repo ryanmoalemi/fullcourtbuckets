@@ -35,7 +35,41 @@
     "name": "Lynx",
     "conference": "Western Conference"
   },
-  "season_stats": [],
+  "season_stats": [
+    {
+      "player_id": 67045,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 7,
+        "full_name": "Minnesota Lynx",
+        "abbreviation": "MIN",
+        "city": "Minnesota",
+        "name": "Lynx",
+        "conference": "Western Conference"
+      },
+      "games_played": 21,
+      "min": 5.3,
+      "fgm": 0.5,
+      "fga": 1.1,
+      "fg_pct": 43.5,
+      "fg3m": 0,
+      "fg3a": 0.3,
+      "fg3_pct": 0,
+      "ftm": 0.8,
+      "fta": 1,
+      "ft_pct": 76.2,
+      "oreb": 0.3,
+      "dreb": 0.7,
+      "reb": 1,
+      "ast": 1.1,
+      "stl": 0.1,
+      "blk": 0.1,
+      "turnover": 0.5,
+      "pts": 1.7,
+      "gap_fill": true
+    }
+  ],
   "recent_completed_games": [],
   "game_log_window_start": "2026-09-03",
   "notes": [

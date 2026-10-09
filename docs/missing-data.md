@@ -12,7 +12,6 @@ Nothing here was guessed from memory.
 
 - Championships: her player file has no championship field, and the FAQ file has no official citation for a title count. The question was skipped.
 - Last game points: the newest completed game (2026-09-25T02:00:00.000Z) does not have a points total. The A'ja Wilson and Caitlin Clark last-game answers are used only when the game table has points. This one was skipped.
-- Teams played for: the regular-season rows name only Los Angeles Sparks, Las Vegas Aces, San Antonio Stars, while the current team field is Phoenix Mercury. The FAQ repeats those names and does not add clubs that are not in the file.
 
 ## Caitlin Clark
 

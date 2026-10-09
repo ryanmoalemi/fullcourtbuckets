@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 561,
+      "season": 2021,
+      "season_type": 2,
+      "team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 9,
+      "min": 9.6,
+      "fgm": 0.9,
+      "fga": 2.7,
+      "fg_pct": 33.3,
+      "fg3m": 0.2,
+      "fg3a": 0.8,
+      "fg3_pct": 28.6,
+      "ftm": 0.8,
+      "fta": 0.9,
+      "ft_pct": 87.5,
+      "oreb": 0.2,
+      "dreb": 2,
+      "reb": 2.2,
+      "ast": 0.2,
+      "stl": 0.4,
+      "blk": 0,
+      "turnover": 0.4,
+      "pts": 2.8,
+      "gap_fill": true
+    },
+    {
+      "player_id": 561,
       "season": 2020,
       "season_type": 2,
       "team": {

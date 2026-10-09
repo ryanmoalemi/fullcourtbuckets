@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 407,
+      "season": 2016,
+      "season_type": 2,
+      "team": {
+        "id": 5,
+        "full_name": "Washington Mystics",
+        "abbreviation": "WSH",
+        "city": "Washington",
+        "name": "Mystics",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 23,
+      "min": 7.8,
+      "fgm": 0.7,
+      "fga": 2.1,
+      "fg_pct": 30.6,
+      "fg3m": 0.4,
+      "fg3a": 1.4,
+      "fg3_pct": 31.3,
+      "ftm": 0.4,
+      "fta": 0.5,
+      "ft_pct": 81.8,
+      "oreb": 0.3,
+      "dreb": 0.9,
+      "reb": 1.1,
+      "ast": 0.4,
+      "stl": 0.3,
+      "blk": 0.1,
+      "turnover": 0.5,
+      "pts": 2.1,
+      "gap_fill": true
+    },
+    {
+      "player_id": 407,
       "season": 2015,
       "season_type": 2,
       "team": {

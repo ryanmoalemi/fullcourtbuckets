@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 233,
+      "season": 2018,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 21,
+      "min": 18.3,
+      "fgm": 1.9,
+      "fga": 5.5,
+      "fg_pct": 34.8,
+      "fg3m": 0.6,
+      "fg3a": 2,
+      "fg3_pct": 27.9,
+      "ftm": 0.3,
+      "fta": 0.3,
+      "ft_pct": 100,
+      "oreb": 0.6,
+      "dreb": 1.8,
+      "reb": 2.4,
+      "ast": 1,
+      "stl": 0.5,
+      "blk": 0.2,
+      "turnover": 0.6,
+      "pts": 4.7,
+      "gap_fill": true
+    },
+    {
+      "player_id": 233,
       "season": 2017,
       "season_type": 2,
       "team": {

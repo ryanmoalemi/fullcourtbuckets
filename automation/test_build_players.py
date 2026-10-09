@@ -300,7 +300,7 @@ class BuildTests(unittest.TestCase):
         )
         self.assertEqual(
             b.answer_related_query(plum, 'Which teams has Kelsey Plum played for?', root),
-            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, and the Los Angeles Sparks for Kelsey Plum. Her current team on this page is the Phoenix Mercury.',
+            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, the Los Angeles Sparks, and the Phoenix Mercury for Kelsey Plum.',
         )
         page = b.profile_page(plum, root)
         self.assertIn('<tr class="rookie-year" data-season="2017">', page)
@@ -600,34 +600,55 @@ class BuildTests(unittest.TestCase):
         self.assertIn('Inactive player', page)
         self.assertNotIn('Archive profile', page)
 
-    def test_build_blocks_an_unflagged_season_gap(self):
-        root = ROOT.parent
-        profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
-        with self.assertRaises(b.BuildError):
-            b.require_flagged_season_gap(profile, '<p>Years on record 2015</p>', root)
-        flagged = b.profile_page(profile, root, menu=[])
-        b.require_flagged_season_gap(profile, flagged, root)
-        self.assertIn('This record is partial.', b.player_description(profile, root))
-        self.assertNotIn('Seasons on record', b.player_description(profile, root))
+    def test_build_blocks_a_season_or_games_mismatch(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data/wnba').mkdir(parents=True)
+            table = {'players': {'1': {'status': 'ok', 'stints': [
+                {'season': 2026, 'season_type': 2, 'games_played': 30, 'team_slug': 'example'},
+            ]}}}
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            with self.assertRaises(b.BuildError):
+                b.require_flagged_season_gap(profile, page, root)
+            self.assertIn('This record is partial.', page)
+            table['players']['1']['stints'][0]['games_played'] = 10
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            b.require_flagged_season_gap(profile, page, root)
 
-    def test_abby_bishop_record_is_partial_and_does_not_invent_seasons(self):
+    def test_abby_bishop_shows_every_seattle_season(self):
         root = ROOT.parent
         profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
         check = b.season_cross_check(profile, root)
-        self.assertEqual(check['missing'], [2010, 2016])
+        self.assertEqual(check['missing'], [])
         self.assertEqual(check['games'], [])
+        self.assertEqual(check['extra'], [])
         self.assertTrue(check['checked'])
+        regular = [row for row in profile['season_stats'] if row['season_type'] == 2]
+        self.assertEqual(
+            [(row['season'], row['games_played'], row['team']['full_name']) for row in sorted(regular, key=lambda row: row['season'])],
+            [(2010, 16, 'Seattle Storm'), (2015, 26, 'Seattle Storm'), (2016, 13, 'Seattle Storm')],
+        )
+        self.assertFalse(any(row['season_type'] == 3 and row['season'] == 2015 for row in profile['season_stats']))
         page = b.profile_page(profile, root, menu=[])
-        self.assertIn('This record is partial.', page)
-        self.assertIn('do not include 2010 and 2016.', page)
-        self.assertIn('<td>26</td>', page)
-        self.assertIn('>2015</strong>', page)
-        self.assertNotIn('Years on record', page)
-        self.assertIn('Verified seasons', page)
-        self.assertNotIn('>2010</strong>', page)
-        self.assertNotIn('>2016</strong>', page)
-        self.assertNotIn('55', page)
+        b.require_flagged_season_gap(profile, page, root)
+        self.assertNotIn('This record is partial.', page)
+        self.assertIn('Years on record', page)
+        self.assertIn('Seasons on record: 2010 to 2016.', b.player_description(profile, root))
+        for year, games in ((2010, 16), (2015, 26), (2016, 13)):
+            self.assertIn(f'data-season="{year}"', page)
+            self.assertIn(f'<td>{games}</td>', page)
+        self.assertIn('Seattle Storm', page)
+        self.assertNotIn('data-competition="3"', page)
+        self.assertNotIn('>Playoffs</', page)
         self.assertNotIn('balldontlie', page.casefold())
+        self.assertNotIn('espn', page.casefold())
         self.assertEqual(page.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
 
     def test_a_matching_season_is_not_called_partial(self):
@@ -684,17 +705,10 @@ class BuildTests(unittest.TestCase):
                 continue
             profile = json.loads(profile_path.read_text(encoding='utf-8'))
             check = b.season_cross_check(profile, root)
-            incomplete = bool(check['missing'] or check['games'])
-            flagged = 'This record is partial.' in page
-            if incomplete != flagged:
+            if check['missing'] or check['games'] or check['extra']:
                 problems.append(slug)
-            if incomplete:
-                note = page[page.find('partial-record'):page.find('partial-record') + 1200]
-                for year in check['missing'] + check['games']:
-                    if str(year) not in note:
-                        problems.append(f'{slug} omits {year}')
-            elif 'class="partial-record"' in page:
-                problems.append(slug + ' extra flag')
+            if 'This record is partial.' in page or 'class="partial-record"' in page:
+                problems.append(slug + ' partial')
         self.assertEqual(problems, [])
 
     def test_normalized_questions_do_not_repeat_and_answers_are_not_filler(self):
