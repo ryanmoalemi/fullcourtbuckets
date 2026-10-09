@@ -468,7 +468,7 @@ def _detail(card: dict, as_of: str) -> str:
             continue
         images.append(
             f'<figure><img src="{esc(src)}" alt="{esc(card_title(card) + ", " + side + " of the " + kind)}" '
-            f'width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">'
+            f'width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}" decoding="async" loading="lazy">'
             f'<figcaption>{esc(side.title())}</figcaption></figure>'
         )
     photo_class = 'detail-photos solo' if len(images) == 1 else 'detail-photos'
@@ -494,7 +494,6 @@ def _detail(card: dict, as_of: str) -> str:
 {comp_html}
 <h3>Value notes</h3>
 <div class="notes">{linkify(card.get("value_notes") or "")}</div>
-<p class="context">Player page: <a href="/wnba/angel-reese/">Angel Reese</a>.</p>
 </div>
 </article>'''
 
@@ -518,7 +517,7 @@ def _tile(card: dict, index: int) -> str:
     current = '' if value is None else format(value, 'f')
     kind = photo_kind(card)
     return f'''<button type="button" class="tile" data-id="{esc(card["id"])}" data-index="{index}" data-date="{esc(card["purchase_date"])}" data-gain="{esc(gain)}" data-value="{esc(current)}" data-paid="{esc(format(paid_amount(card), "f"))}" data-year="{esc(card["year"])}" data-direction="{direction(card)}">
-<img src="{esc(front)}" alt="{esc(card_title(card) + " " + kind)}" width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}">
+<img src="{esc(front)}" alt="{esc(card_title(card) + " " + kind)}" width="{photo_attr(photo, "width", 750)}" height="{photo_attr(photo, "height", 1000)}" decoding="async" loading="lazy">
 <span class="photo-credit">{esc(photo_credit(card))}</span>
 <span class="tile-copy">
 <strong>{esc(card["year"])} {esc(card["set"])}</strong>
@@ -732,10 +731,11 @@ def _hero() -> str:
     credit = (
         f'Photo: {_external(HERO["photographer_url"], HERO["photographer"])}, '
         f'{_external(HERO["license_url"], HERO["license"])}, via '
-        f'{_external(HERO["source_url"], HERO["source_name"])}. {esc(HERO["changes"])}'
+        f'{_external(HERO["source_url"], HERO["source_name"])}. {esc(HERO["changes"])} '
+        '(2024, with the Chicago Sky)'
     )
     return f'''<section class="hero" aria-labelledby="collection-title">
-<img class="hero-photo" src="{esc(HERO["src"])}" alt="{esc(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}">
+<img class="hero-photo" src="{esc(HERO["src"])}" alt="{esc(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">
 <div class="hero-shade" aria-hidden="true"></div>
 <div class="hero-copy">
 <p class="hero-kicker">Personal collection</p>
@@ -975,7 +975,7 @@ def render_body(data: dict, root: Path | None = None) -> str:
     intro_copy = '\n'.join(f'<p>{paragraph}</p>' for paragraph in INTRO_PARAGRAPHS)
     intro = f'''<section class="intro">
 {intro_copy}
-<p><a href="/wnba/angel-reese/">Angel Reese</a> has a player page on this site.</p>
+<p><a href="/wnba/angel-reese/" target="_blank" rel="noopener">Angel Reese</a> has a player page on this site.</p>
 </section>'''
     method = (
         '<section class="panel method" id="method"><h2>How the numbers work</h2>'

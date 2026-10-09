@@ -26,14 +26,32 @@ if(season)season.addEventListener('change',filterStats);
 const search=document.getElementById('player-search');
 const active=document.getElementById('active-filter');
 const normalize=value=>value.toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,'');
+function visibleRows(root){
+  return [...root.querySelectorAll('.player-row')].some(row=>!row.hidden);
+}
 function filterPlayers(){
-  const term=normalize(search?.value||'');let count=0;
-  document.querySelectorAll('[data-search]').forEach(card=>{
-    const match=normalize(card.dataset.search).includes(term)&&(!active||active.value==='all'||card.dataset.active===active.value);
-    card.hidden=!match;if(match)count++;
+  const term=normalize(search?.value||'');
+  const mode=active?active.value:'all';
+  let count=0;
+  document.querySelectorAll('.player-row[data-search]').forEach(row=>{
+    const match=normalize(row.dataset.search).includes(term)&&(mode==='all'||row.dataset.active===mode);
+    row.hidden=!match;
+    if(match)count++;
   });
-  document.getElementById('result-count').textContent=`${count} ${count===1?'profile':'profiles'}`;
-  document.getElementById('no-players').hidden=count>0;
+  document.querySelectorAll('.az-group').forEach(group=>{group.hidden=!visibleRows(group);});
+  const featured=document.getElementById('featured-players');
+  if(featured)featured.hidden=!visibleRows(featured);
+  const inactive=document.getElementById('inactive-players');
+  if(inactive){
+    const any=visibleRows(inactive);
+    inactive.hidden=mode==='true'?!any&&!!term:!any;
+    if(mode==='false'||(term&&any))inactive.open=true;
+    if(mode==='true'&&!term)inactive.open=false;
+  }
+  const result=document.getElementById('result-count');
+  if(result)result.textContent=`${count} ${count===1?'profile':'profiles'}`;
+  const empty=document.getElementById('no-players');
+  if(empty)empty.hidden=count>0;
 }
 if(search)search.addEventListener('input',filterPlayers);
 if(active)active.addEventListener('change',filterPlayers);
