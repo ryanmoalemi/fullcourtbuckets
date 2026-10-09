@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-10-08T08:40:08+00:00",
-  "stats_updated_at": "2026-10-08T08:40:08+00:00",
+  "checked_at": "2026-10-09T07:41:23+00:00",
+  "stats_updated_at": "2026-10-09T07:41:23+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -86,20 +86,19 @@
       "fga": 5.6,
       "fg_pct": 28.6,
       "fg3m": 0.4,
-      "fg3a": 2,
-      "fg3_pct": 20,
+      "fg3a": 2.0,
+      "fg3_pct": 20.0,
       "ftm": 0.6,
       "fta": 0.8,
-      "ft_pct": 75,
-      "oreb": 0.2,
-      "dreb": 1.2,
+      "ft_pct": 75.0,
+      "oreb": null,
+      "dreb": null,
       "reb": 1.4,
       "ast": 0.6,
       "stl": 0.2,
-      "blk": 0,
+      "blk": 0.0,
       "turnover": 0.2,
-      "pts": 4.2,
-      "gap_fill": true
+      "pts": 4.2
     },
     {
       "player_id": 770,
@@ -448,7 +447,7 @@
       "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-09-03",
+  "game_log_window_start": "2026-09-04",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

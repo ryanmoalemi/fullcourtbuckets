@@ -1,7 +1,12 @@
-files rewritten: 0
-html files rewritten: 591
+files rewritten: 5
+html files rewritten: 593
 images missing alt: 0
 
+fallback dropped images/articles/semis-game-3-preview/aja-wilson-aces-2024.jpg; serving aja-wilson-aces-2024.webp (69358 bytes)
+fallback dropped images/articles/semis-game-3-preview/angel-reese-dream-2026.jpg; serving angel-reese-dream-2026.webp (100718 bytes)
+fallback dropped images/articles/semis-game-3-preview/janelle-salaun-valkyries-2026.jpg; serving janelle-salaun-valkyries-2026.webp (48364 bytes)
+resized images/articles/semis-game-3-preview/jordin-canada-dream-2026.jpg to (1688, 1126) (85205 bytes) + jordin-canada-dream-2026.webp
+fallback dropped images/articles/semis-game-3-preview/sabrina-ionescu-liberty-2026.jpg; serving sabrina-ionescu-liberty-2026.webp (87502 bytes)
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
