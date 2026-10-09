@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "5' 11\"",
-    "weight": "Utah",
+    "weight": null,
     "jersey_number": "35",
-    "college": null,
+    "college": "Utah",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

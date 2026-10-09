@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 8\"",
-    "weight": "Ohio State",
+    "weight": null,
     "jersey_number": "0",
-    "college": null,
+    "college": "Ohio State",
     "team": {
       "id": 3,
       "full_name": "Indiana Fever",

@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "Washington",
+    "weight": null,
     "jersey_number": "33",
-    "college": null,
+    "college": "Washington",
     "team": {
       "id": 10,
       "full_name": "Phoenix Mercury",

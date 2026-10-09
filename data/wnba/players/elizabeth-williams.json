@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 3\"",
-    "weight": "Duke",
+    "weight": null,
     "jersey_number": "1",
-    "college": null,
+    "college": "Duke",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

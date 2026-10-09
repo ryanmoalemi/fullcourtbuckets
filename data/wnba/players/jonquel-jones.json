@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 6\"",
-    "weight": "George Washington",
+    "weight": null,
     "jersey_number": "35",
-    "college": null,
+    "college": "George Washington",
     "team": {
       "id": 1,
       "full_name": "New York Liberty",

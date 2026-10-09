@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 0\"",
-    "weight": "Iowa",
+    "weight": null,
     "jersey_number": "20",
-    "college": null,
+    "college": "Iowa",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

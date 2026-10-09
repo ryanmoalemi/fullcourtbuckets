@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 2\"",
-    "weight": "Iowa State",
+    "weight": null,
     "jersey_number": "6",
-    "college": null,
+    "college": "Iowa State",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

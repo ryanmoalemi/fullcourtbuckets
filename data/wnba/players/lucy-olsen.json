@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "Iowa",
+    "weight": null,
     "jersey_number": "33",
-    "college": null,
+    "college": "Iowa",
     "team": {
       "id": 5,
       "full_name": "Washington Mystics",

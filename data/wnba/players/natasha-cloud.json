@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "Saint Joseph's",
+    "weight": null,
     "jersey_number": "9",
-    "college": null,
+    "college": "Saint Joseph's",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

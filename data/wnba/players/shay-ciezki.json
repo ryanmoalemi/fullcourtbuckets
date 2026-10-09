@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 7\"",
-    "weight": "Indiana",
+    "weight": null,
     "jersey_number": "5",
-    "college": null,
+    "college": "Indiana",
     "team": {
       "id": 10,
       "full_name": "Phoenix Mercury",

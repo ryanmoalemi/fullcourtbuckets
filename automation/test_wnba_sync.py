@@ -216,6 +216,30 @@ class Tests(unittest.TestCase):
             self.assertTrue(all(row["team"]["id"] == 1 for row in older))
             self.assertIn("games played matches one stint", " ".join(output["notes"]))
 
+    def test_college_name_in_weight_moves_to_college(self):
+        raw = {**P, "position": "C", "position_abbreviation": "C", "height": "6' 4\"",
+               "weight": "South Carolina", "jersey_number": "22", "college": None}
+        stored = s.player(raw)
+        self.assertIsNone(stored["weight"])
+        self.assertEqual(stored["college"], "South Carolina")
+        self.assertEqual(stored["height"], "6' 4\"")
+        self.assertEqual(stored["jersey_number"], "22")
+        self.assertEqual(stored["position"], "C")
+
+    def test_pound_weight_stays_beside_college(self):
+        raw = {**P, "height": "6' 0\"", "weight": "157 lbs", "jersey_number": "22", "college": "Iowa"}
+        stored = s.player(raw)
+        self.assertEqual(stored["weight"], "157 lbs")
+        self.assertEqual(stored["college"], "Iowa")
+        self.assertEqual(stored["height"], "6' 0\"")
+
+    def test_placeholder_weight_and_college_are_cleared(self):
+        stored = s.player({**P, "weight": "--", "college": "--", "height": "not a height", "jersey_number": "one"})
+        self.assertIsNone(stored["weight"])
+        self.assertIsNone(stored["college"])
+        self.assertIsNone(stored["height"])
+        self.assertIsNone(stored["jersey_number"])
+
     def test_outage_does_not_replace_successful_snapshot(self):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d); s.run(root,FakeClient(),NOW)

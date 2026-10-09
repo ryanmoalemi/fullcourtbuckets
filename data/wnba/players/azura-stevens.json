@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 6\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "30",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 9\"",
-    "weight": "Baylor",
+    "weight": null,
     "jersey_number": "42",
-    "college": null,
+    "college": "Baylor",
     "team": {
       "id": 2,
       "full_name": "Connecticut Sun",

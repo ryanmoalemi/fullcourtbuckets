@@ -145,13 +145,95 @@ def team(value):
         raise SyncError("Invalid team object.")
     return team_names.apply({k: value.get(k) for k in ("id", "full_name", "abbreviation", "city", "name", "conference")})
 
+# A stored weight must be a plausible number of pounds. The provider snapshot
+# put the college name in weight and left college null. Height and jersey were not shifted.
+MIN_POUNDS = 80
+MAX_POUNDS = 400
+_POUNDS_RE = re.compile(r"^(\d{2,3}(?:\.\d+)?)\s*(?:lbs?\.?|pounds?)?$", re.I)
+_CANONICAL_POUNDS_RE = re.compile(r"^\d{2,3}(?:\.\d+)? lbs$")
+_HEIGHT_RE = re.compile(r"""^\d'\s*\d{1,2}"$""")
+_BLANK_BIO = frozenset({"", "--", "—", "-", "n/a", "na", "none"})
+
+
+def _blank_bio(value) -> bool:
+    if value is None:
+        return True
+    return str(value).strip().casefold() in _BLANK_BIO
+
+
+def normalize_pounds(value):
+    """Canonical '157 lbs' when value is 80–400 pounds. None otherwise."""
+    if _blank_bio(value):
+        return None
+    text = str(value).strip()
+    match = _POUNDS_RE.fullmatch(text)
+    if not match:
+        return None
+    number = float(match.group(1))
+    if number < MIN_POUNDS or number > MAX_POUNDS:
+        return None
+    if _CANONICAL_POUNDS_RE.fullmatch(text):
+        return text
+    shown = str(int(number)) if number == int(number) else format(number, "g")
+    return f"{shown} lbs"
+
+
+def plausible_pounds(value) -> bool:
+    """True when weight is absent or a plausible number of pounds."""
+    if value is None:
+        return True
+    if isinstance(value, str) and not value.strip():
+        return True
+    return normalize_pounds(value) is not None
+
+
+def _school_name(value):
+    """A college string. A number of pounds, a placeholder, or a shifted jersey is not one."""
+    if _blank_bio(value) or normalize_pounds(value) is not None:
+        return None
+    text = str(value).strip()
+    if len(text) > 80 or len(re.findall(r"[A-Za-z]", text)) < 3:
+        return None
+    return text
+
+
+def normalize_bio(value: dict) -> dict:
+    """Split height, weight, and college. A school name in weight moves to college.
+
+    A real pound value stays on weight. A placeholder is cleared. No pound value
+    is invented when the feed did not provide one.
+    """
+    if not isinstance(value, dict):
+        raise SyncError("Invalid player biography.")
+    weight = normalize_pounds(value.get("weight"))
+    college = _school_name(value.get("college"))
+    if weight is None and college is None:
+        college = _school_name(value.get("weight"))
+    if weight is None and college is None:
+        weight = normalize_pounds(value.get("college"))
+    height = value.get("height")
+    height_text = "" if height is None else str(height).strip()
+    height = height_text if _HEIGHT_RE.fullmatch(height_text) else None
+    jersey = value.get("jersey_number")
+    jersey_text = "" if jersey is None else str(jersey).strip()
+    jersey = jersey_text if re.fullmatch(r"\d{1,2}", jersey_text) else None
+    return {
+        "position": value.get("position"),
+        "position_abbreviation": value.get("position_abbreviation"),
+        "height": height,
+        "weight": weight,
+        "jersey_number": jersey,
+        "college": college,
+    }
+
+
 def player(value):
     pid = identifier(value.get("id"))
     first, last = str(value.get("first_name") or "").strip(), str(value.get("last_name") or "").strip()
     if not first and not last:
         raise SyncError("Player record without a name.")
     return {"id": pid, "first_name": first, "last_name": last,
-            **{k: value.get(k) for k in ("position", "position_abbreviation", "height", "weight", "jersey_number", "college")},
+            **normalize_bio(value),
             "team": team(value.get("team"))}
 
 def stable_slug(pid: int, name: str, registry: dict) -> str:

@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 2\"",
-    "weight": "Tennessee",
+    "weight": null,
     "jersey_number": "12",
-    "college": null,
+    "college": "Tennessee",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

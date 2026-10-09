@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 1\"",
-    "weight": "Maryland",
+    "weight": null,
     "jersey_number": "6",
-    "college": null,
+    "college": "Maryland",
     "team": {
       "id": 13,
       "full_name": "Golden State Valkyries",

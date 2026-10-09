@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 7\"",
-    "weight": "Colorado",
+    "weight": null,
     "jersey_number": "00",
-    "college": null,
+    "college": "Colorado",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

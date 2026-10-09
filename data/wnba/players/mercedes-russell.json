@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 6\"",
-    "weight": "Tennessee",
+    "weight": null,
     "jersey_number": "5",
-    "college": null,
+    "college": "Tennessee",
     "team": {
       "id": 3,
       "full_name": "Indiana Fever",

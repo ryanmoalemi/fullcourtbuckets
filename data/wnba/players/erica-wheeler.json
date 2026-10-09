@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 7\"",
-    "weight": "Rutgers",
+    "weight": null,
     "jersey_number": "17",
-    "college": null,
+    "college": "Rutgers",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

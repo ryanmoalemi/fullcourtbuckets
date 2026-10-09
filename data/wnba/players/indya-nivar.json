@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "North Carolina",
+    "weight": null,
     "jersey_number": "21",
-    "college": null,
+    "college": "North Carolina",
     "team": {
       "id": 4,
       "full_name": "Atlanta Dream",

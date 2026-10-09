@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "Indiana",
+    "weight": null,
     "jersey_number": "54",
-    "college": null,
+    "college": "Indiana",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

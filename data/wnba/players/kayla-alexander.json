@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 4\"",
-    "weight": "Syracuse",
+    "weight": null,
     "jersey_number": "40",
-    "college": null,
+    "college": "Syracuse",
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "Wake Forest",
+    "weight": null,
     "jersey_number": "5",
-    "college": null,
+    "college": "Wake Forest",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

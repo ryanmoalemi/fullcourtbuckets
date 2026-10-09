@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 4\"",
-    "weight": "Iowa",
+    "weight": null,
     "jersey_number": "17",
-    "college": null,
+    "college": "Iowa",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

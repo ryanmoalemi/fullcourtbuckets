@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 2\"",
-    "weight": "Michigan",
+    "weight": null,
     "jersey_number": "00",
-    "college": null,
+    "college": "Michigan",
     "team": {
       "id": 4,
       "full_name": "Atlanta Dream",

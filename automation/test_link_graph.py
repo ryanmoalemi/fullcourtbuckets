@@ -122,7 +122,7 @@ PROFILE = {
     'slug': 'example-player',
     'player': {
         'id': 1, 'first_name': 'Example', 'last_name': 'Player', 'position': 'G',
-        'height': "6' 0\"", 'weight': 'Iowa', 'college': None, 'jersey_number': '22',
+        'height': "6' 0\"", 'weight': None, 'college': None, 'jersey_number': '22',
     },
     'active_in_provider_feed': True,
     'current_team': {'id': 1, 'full_name': 'Example Team'},

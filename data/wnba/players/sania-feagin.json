@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "South Carolina",
+    "weight": null,
     "jersey_number": "1",
-    "college": null,
+    "college": "South Carolina",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

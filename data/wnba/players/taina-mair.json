@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 9\"",
-    "weight": "Duke",
+    "weight": null,
     "jersey_number": "22",
-    "college": null,
+    "college": "Duke",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

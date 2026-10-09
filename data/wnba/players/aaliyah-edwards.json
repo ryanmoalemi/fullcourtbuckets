@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "8",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 2,
       "full_name": "Connecticut Sun",

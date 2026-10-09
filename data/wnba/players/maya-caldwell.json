@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 11\"",
-    "weight": "Georgia",
+    "weight": null,
     "jersey_number": "3",
-    "college": null,
+    "college": "Georgia",
     "team": {
       "id": 7,
       "full_name": "Minnesota Lynx",

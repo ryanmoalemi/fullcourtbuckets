@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 3\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "41",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 13,
       "full_name": "Golden State Valkyries",

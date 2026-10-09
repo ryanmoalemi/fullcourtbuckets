@@ -13,7 +13,7 @@ import build_players as b
 offline_tests.install()
 
 ROOT=Path(__file__).resolve().parent
-P={'slug':'example-player','player':{'id':1,'first_name':'Example','last_name':'Player','position':'G','height':"6' 0\"",'weight':'Iowa','college':None,'jersey_number':'22'},'active_in_provider_feed':True,'current_team':{'id':1,'full_name':'Example Team'},'checked_at':'2026-09-16T05:48:36+00:00','season_stats':[{'player_id':1,'season':2026,'season_type':2,'team':{'id':1,'full_name':'Example Team'},'games_played':10,'pts':12.3,'reb':4.5,'ast':6.7,'min':30,'fg_pct':45,'fg3_pct':37,'ft_pct':85}], 'recent_completed_games':[], 'coverage_start':2008}
+P={'slug':'example-player','player':{'id':1,'first_name':'Example','last_name':'Player','position':'G','height':"6' 0\"",'weight':None,'college':None,'jersey_number':'22'},'active_in_provider_feed':True,'current_team':{'id':1,'full_name':'Example Team'},'checked_at':'2026-09-16T05:48:36+00:00','season_stats':[{'player_id':1,'season':2026,'season_type':2,'team':{'id':1,'full_name':'Example Team'},'games_played':10,'pts':12.3,'reb':4.5,'ast':6.7,'min':30,'fg_pct':45,'fg3_pct':37,'ft_pct':85}], 'recent_completed_games':[], 'coverage_start':2008}
 
 def setup(root,p=None):
     p=copy.deepcopy(p or P)
@@ -28,9 +28,56 @@ def setup(root,p=None):
     return data
 
 class BuildTests(unittest.TestCase):
-    def test_invalid_weight_not_relabelled(self):
-        fields=b.bio_fields(P['player']); self.assertNotIn('weight',fields);self.assertNotIn('college',fields)
+    def test_invalid_weight_not_shown(self):
+        player = {**P['player'], 'weight': 'Iowa', 'college': None}
+        fields=b.bio_fields(player); self.assertNotIn('weight',fields);self.assertNotIn('college',fields)
+        profile = copy.deepcopy(P)
+        profile['player']['weight'] = 'Iowa'
+        page = b.profile_page(profile, menu=[])
+        self.assertNotIn('<dt>Weight</dt>', page)
+        self.assertNotIn('Iowa', page)
     def test_valid_weight_preserved(self):self.assertEqual(b.bio_fields({'weight':'157 lbs'})['weight'],'157 lbs')
+    def test_weight_must_be_a_plausible_number_of_pounds(self):
+        bad = copy.deepcopy(P)
+        bad['player']['weight'] = 'South Carolina'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        bad['player']['weight'] = '--'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        bad['player']['weight'] = '12 lbs'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        ok = copy.deepcopy(P)
+        ok['player']['weight'] = '157 lbs'
+        b.validate(ok, ok['slug'])
+        ok['player']['weight'] = None
+        b.validate(ok, ok['slug'])
+
+    def test_every_stored_weight_is_a_plausible_number_of_pounds(self):
+        root = ROOT.parent / 'data' / 'wnba' / 'players'
+        shifted = []
+        for path in sorted(root.glob('*.json')):
+            profile = json.loads(path.read_text(encoding='utf-8'))
+            player = profile.get('player') or {}
+            weight = player.get('weight')
+            if not b.wnba_sync.plausible_pounds(weight):
+                shifted.append(path.stem)
+            college = player.get('college')
+            if college and b.wnba_sync.normalize_pounds(college):
+                shifted.append(path.stem + ' college')
+        self.assertEqual(shifted, [])
+
+    def test_published_pages_do_not_show_a_non_pound_weight(self):
+        pounds = re.compile(r'^\d{2,3}(?:\.\d+)? lbs$')
+        bad = []
+        for path in sorted((ROOT.parent / 'wnba').glob('*/index.html')):
+            text = path.read_text(encoding='utf-8')
+            for match in re.finditer(r'<dt>Weight</dt><dd>(.*?)</dd>', text):
+                shown = html.unescape(match.group(1))
+                if not pounds.fullmatch(shown):
+                    bad.append(f'{path.parent.name}: {shown}')
+        self.assertEqual(bad, [])
     def test_null_not_zero(self):self.assertEqual(b.value(None),'-')
     def test_zero_preserved(self):self.assertEqual(b.value(0),'0.0')
     def test_unsafe_slug(self):
@@ -367,12 +414,9 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(html, '')
         self.assertIsNone(entity)
 
-    def test_aja_wilson_template_is_not_published(self):
+    def test_aja_wilson_template_queries_stay_unpublished(self):
         root = ROOT.parent
         profile = json.loads((root / 'data/wnba/players/aja-wilson.json').read_text())
-        html, entity = b.faq_section(profile, root)
-        self.assertEqual(html, '')
-        self.assertIsNone(entity)
         self.assertEqual(
             b.answer_related_query(profile, "How many years has A'ja Wilson been in the WNBA?", root),
             "A'ja Wilson has 9 regular seasons on this page, from 2018 to 2026.",
@@ -384,6 +428,64 @@ class BuildTests(unittest.TestCase):
         self.assertIn('<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>', fiba)
         self.assertNotIn('balldontlie', fiba.casefold())
         self.assertIsNone(b._NOT_WIDELY_RE.search(fiba))
+    def test_aja_wilson_curated_faq_file(self):
+        faq_path = ROOT.parent / 'data/wnba/faq/aja-wilson.json'
+        faq = json.loads(faq_path.read_text())
+        self.assertEqual(faq['slug'], 'aja-wilson')
+        self.assertEqual(faq['source'], 'Google search demand via OpenSEO, Oct 8, 2026')
+        questions = [item['question'] for item in faq['items']]
+        self.assertEqual(questions, [
+            "What are A'ja Wilson's stats?",
+            "Does A'ja Wilson have a signature shoe?",
+            "Who is A'ja Wilson dating?",
+            "What awards has A'ja Wilson won?",
+            "How tall is A'ja Wilson?",
+            "How much does A'ja Wilson make?",
+            "How old is A'ja Wilson?",
+            "How many championships does A'ja Wilson have?",
+            "Who is A'ja Wilson?",
+            "Where is A'ja Wilson from?",
+            "What team does A'ja Wilson play for?",
+            "Who are A'ja Wilson's teammates?",
+            "How does A'ja Wilson compare to Caitlin Clark?",
+            "How much does A'ja Wilson weigh?",
+            "Who is A'ja Wilson's brother?",
+        ])
+        profile = json.loads((ROOT.parent / 'data/wnba/players/aja-wilson.json').read_text())
+        html, entity = b.faq_section(profile)
+        self.assertEqual(len(entity['mainEntity']), len(faq['items']))
+        self.assertEqual([q['name'] for q in entity['mainEntity']], questions)
+        for item, node in zip(faq['items'], entity['mainEntity']):
+            if not b.faq_stat_kind(item['question']):
+                self.assertEqual(node['acceptedAnswer']['text'], item['answer'])
+        b.assert_faq_matches_tables(profile, [
+            (node['name'], node['acceptedAnswer']['text']) for node in entity['mainEntity']
+        ])
+        self.assertIn('How tall is A&#x27;ja Wilson?', html)
+        self.assertIn('What are A&#x27;ja Wilson&#x27;s stats?', html)
+        self.assertIn('Who is A&#x27;ja Wilson dating?', html)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        self.assertEqual(
+            answers["What are A'ja Wilson's stats?"],
+            "In the 2026 regular season, A'ja Wilson averaged 26.2 points, 9.4 rebounds, and 3.2 assists in 41 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
+        )
+        self.assertIn('Bam Adebayo', answers["Who is A'ja Wilson dating?"])
+        self.assertIn('not married', answers["Who is A'ja Wilson dating?"])
+        self.assertNotIn('engag', answers["Who is A'ja Wilson dating?"].casefold())
+        self.assertIn('five WNBA MVP', answers["What awards has A'ja Wilson won?"])
+        self.assertIn('9 regular seasons', answers["What team does A'ja Wilson play for?"])
+        self.assertIn('22.3 points', answers["How does A'ja Wilson compare to Caitlin Clark?"])
+        for dropped in ('playing tonight', 'net worth', 'wingspan', 'tattoo', 'injured', 'last game'):
+            self.assertNotIn(dropped, ' '.join(questions).casefold())
+        self.assertNotIn('target="_blank"', html[html.find('id="faq"'):html.find('id="sources"')])
+        self.assertNotIn('regular-season averages', html)
+        self.assertNotIn('google_keyword', html)
+        self.assertNotIn('\u2014', faq_path.read_text())
+        self.assertNotIn('\u2014', html)
+        answers = ' '.join(item['answer'] for item in faq['items'])
+        for banned in ('imported log', 'imported window', 'BALLDONTLIE', 'tracked on Full Court Buckets', "in our imported"):
+            self.assertNotIn(banned, answers)
+            self.assertNotIn(banned, html)
 
     def test_plum_and_clark_answers_come_from_page_data(self):
         root = ROOT.parent
@@ -849,6 +951,8 @@ class BuildTests(unittest.TestCase):
                 plain_a = html.unescape(re.sub(r'<[^>]+>', '', answer))
                 self.assertIsNone(b._NOT_WIDELY_RE.search(plain_a), slug)
                 self.assertIsNone(b._NOT_WIDELY_RE.search(plain_q), slug)
+                if slug in b.CURATED_FAQ_SLUGS:
+                    continue
                 key = b.normalize_question(plain_q, entry.get('name') or '')
                 counts.setdefault(key, []).append(slug)
         repeats = {key: slugs for key, slugs in counts.items() if len(slugs) >= 3}

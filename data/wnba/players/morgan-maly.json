@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 1\"",
-    "weight": "Creighton",
+    "weight": null,
     "jersey_number": "15",
-    "college": null,
+    "college": "Creighton",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

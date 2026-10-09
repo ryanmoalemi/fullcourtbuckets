@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "Notre Dame",
+    "weight": null,
     "jersey_number": "21",
-    "college": null,
+    "college": "Notre Dame",
     "team": {
       "id": 10,
       "full_name": "Phoenix Mercury",

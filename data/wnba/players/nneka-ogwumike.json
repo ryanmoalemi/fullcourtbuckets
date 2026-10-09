@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 2\"",
-    "weight": "Stanford",
+    "weight": null,
     "jersey_number": "30",
-    "college": null,
+    "college": "Stanford",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

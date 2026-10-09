@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 0\"",
-    "weight": "Duke",
+    "weight": null,
     "jersey_number": "3",
-    "college": null,
+    "college": "Duke",
     "team": {
       "id": 2,
       "full_name": "Connecticut Sun",

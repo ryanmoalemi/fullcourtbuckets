@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 7\"",
-    "weight": "South Carolina",
+    "weight": null,
     "jersey_number": "10",
-    "college": null,
+    "college": "South Carolina",
     "team": {
       "id": 6,
       "full_name": "Chicago Sky",

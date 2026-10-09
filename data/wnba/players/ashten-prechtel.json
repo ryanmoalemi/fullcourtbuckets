@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 5\"",
-    "weight": "Stanford",
+    "weight": null,
     "jersey_number": "11",
-    "college": null,
+    "college": "Stanford",
     "team": {
       "id": 13,
       "full_name": "Golden State Valkyries",

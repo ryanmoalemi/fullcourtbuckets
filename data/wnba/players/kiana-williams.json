@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 8\"",
-    "weight": "Stanford",
+    "weight": null,
     "jersey_number": null,
-    "college": null,
+    "college": "Stanford",
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

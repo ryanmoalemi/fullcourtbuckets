@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "DePaul",
+    "weight": null,
     "jersey_number": "10",
-    "college": null,
+    "college": "DePaul",
     "team": {
       "id": 10,
       "full_name": "Phoenix Mercury",

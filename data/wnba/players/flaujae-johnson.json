@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "LSU",
+    "weight": null,
     "jersey_number": "4",
-    "college": null,
+    "college": "LSU",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

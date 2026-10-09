@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 1\"",
-    "weight": "Ohio State",
+    "weight": null,
     "jersey_number": "3",
-    "college": null,
+    "college": "Ohio State",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 2\"",
-    "weight": "Stanford",
+    "weight": null,
     "jersey_number": "10",
-    "college": null,
+    "college": "Stanford",
     "team": {
       "id": 3,
       "full_name": "Indiana Fever",

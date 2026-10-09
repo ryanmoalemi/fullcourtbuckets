@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 3\"",
-    "weight": "California",
+    "weight": null,
     "jersey_number": "1",
-    "college": null,
+    "college": "California",
     "team": {
       "id": 3,
       "full_name": "Indiana Fever",

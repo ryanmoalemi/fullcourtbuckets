@@ -132,8 +132,12 @@ class RelationshipFaqTests(unittest.TestCase):
                     problems.append(f'{slug}: {question}: {reason}')
                 if build_couples.relationship_question_kind(question):
                     self.assertNotIn('Jr..', answer, slug)
-                    self.assertNotIn(question, visible, slug)
-                    self.assertNotIn(question, schema, slug)
+                    if slug in build_players.CURATED_FAQ_SLUGS:
+                        self.assertEqual(visible.get(question), schema.get(question))
+                        self.assertIn(question, visible, slug)
+                    else:
+                        self.assertNotIn(question, visible, slug)
+                        self.assertNotIn(question, schema, slug)
         self.assertEqual(problems, [])
 
     def test_allisha_gray_page_says_engaged_not_married(self):

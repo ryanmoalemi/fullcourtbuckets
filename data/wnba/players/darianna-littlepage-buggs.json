@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 1\"",
-    "weight": "Baylor",
+    "weight": null,
     "jersey_number": "5",
-    "college": null,
+    "college": "Baylor",
     "team": {
       "id": 5,
       "full_name": "Washington Mystics",

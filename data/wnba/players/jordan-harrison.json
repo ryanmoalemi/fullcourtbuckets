@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 6\"",
-    "weight": "West Virginia",
+    "weight": null,
     "jersey_number": "2",
-    "college": null,
+    "college": "West Virginia",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

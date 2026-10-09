@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 9\"",
-    "weight": "Ohio State",
+    "weight": null,
     "jersey_number": "2",
-    "college": null,
+    "college": "Ohio State",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

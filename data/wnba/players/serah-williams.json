@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 4\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "25",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

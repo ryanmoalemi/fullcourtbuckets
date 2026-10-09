@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 5\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "31",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

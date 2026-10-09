@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 2\"",
-    "weight": "Maryland",
+    "weight": null,
     "jersey_number": "0",
-    "college": null,
+    "college": "Maryland",
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

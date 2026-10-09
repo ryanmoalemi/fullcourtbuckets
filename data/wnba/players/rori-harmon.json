@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 6\"",
-    "weight": "Texas",
+    "weight": null,
     "jersey_number": "3",
-    "college": null,
+    "college": "Texas",
     "team": {
       "id": 5,
       "full_name": "Washington Mystics",

@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 9\"",
-    "weight": "Maryland",
+    "weight": null,
     "jersey_number": "33",
-    "college": null,
+    "college": "Maryland",
     "team": {
       "id": 4,
       "full_name": "Atlanta Dream",

@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 6\"",
-    "weight": "Louisville",
+    "weight": null,
     "jersey_number": "11",
-    "college": null,
+    "college": "Louisville",
     "team": {
       "id": 8,
       "full_name": "Las Vegas Aces",

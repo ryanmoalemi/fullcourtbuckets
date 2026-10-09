@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 2\"",
-    "weight": "Tennessee",
+    "weight": null,
     "jersey_number": "23",
-    "college": null,
+    "college": "Tennessee",
     "team": {
       "id": 9,
       "full_name": "Seattle Storm",

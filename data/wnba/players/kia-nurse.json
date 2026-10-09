@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 1\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "11",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

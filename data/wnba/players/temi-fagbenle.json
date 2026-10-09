@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 5\"",
-    "weight": "USC",
+    "weight": null,
     "jersey_number": "14",
-    "college": null,
+    "college": "USC",
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

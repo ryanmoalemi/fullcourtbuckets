@@ -15,7 +15,7 @@
     "height": "5' 10\"",
     "weight": "141 lbs",
     "jersey_number": "1",
-    "college": "--",
+    "college": null,
     "team": {
       "id": 12,
       "full_name": "Los Angeles Sparks",

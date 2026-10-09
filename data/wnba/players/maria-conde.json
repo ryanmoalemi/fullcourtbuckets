@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "Florida State",
+    "weight": null,
     "jersey_number": "10",
-    "college": null,
+    "college": "Florida State",
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

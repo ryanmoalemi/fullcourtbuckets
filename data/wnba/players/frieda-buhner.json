@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 1\"",
-    "weight": "Florida",
+    "weight": null,
     "jersey_number": "20",
-    "college": null,
+    "college": "Florida",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",

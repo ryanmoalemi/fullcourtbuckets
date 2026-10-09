@@ -18,6 +18,7 @@ import homepage_rail
 import internal_links as links
 import season_teams
 import site_nav
+import wnba_sync
 import team_hub
 import team_names
 from link_graph import page_url
@@ -157,13 +158,13 @@ def team_change_html(profile, linking=None, budget=None):
     return '<p class="muted small">Team change</p>' + ''.join(lines)
 
 def bio_fields(player):
-    # Some provider biography fields contain shifted text. Do not relabel or guess it.
+    # Weight is published only as a plausible number of pounds. A school name is not shown as weight.
     clean = {}
     for key in ('position','height','jersey_number','college','weight'):
         text = str(player.get(key) or '').strip()
         if not text or len(text) > 150:
             continue
-        if key == 'weight' and not re.fullmatch(r'\d{2,3}(?:\.\d+)?\s*(?:lbs?\.?|kg)?',text,re.I):
+        if key == 'weight' and not wnba_sync.plausible_pounds(text):
             continue
         if key == 'height' and not re.search(r'\d',text):
             continue
@@ -289,6 +290,17 @@ def validate(profile, slug):
     for game in profile.get('recent_completed_games',[]):
         if game.get('player_id')!=p['id']:
             raise BuildError('Game record belongs to a different player.')
+    require_plausible_weight(profile)
+
+
+def require_plausible_weight(profile) -> None:
+    """Stop the build when a stored weight is present and is not a number of pounds."""
+    player = profile.get('player') if isinstance(profile.get('player'), dict) else {}
+    weight = player.get('weight')
+    if wnba_sync.plausible_pounds(weight):
+        return
+    slug = profile.get('slug') or 'player'
+    raise BuildError(f'{slug} weight is not a plausible number of pounds.')
 
 def header(route='/', menu=None):
     if menu is None:
@@ -871,8 +883,9 @@ def normalize_question(question: str, name: str = '') -> str:
     return re.sub(r'\s+', ' ', text).strip()
 
 
-# A separate change publishes A'ja Wilson's searches. This build must not.
+# A'ja Wilson's bottom section is the curated FAQ from main, not related searches.
 RELATED_SEARCH_HOLD = frozenset({'aja-wilson'})
+CURATED_FAQ_SLUGS = frozenset({'aja-wilson'})
 _REPEAT_LIMIT = 2
 _STAT_FAMILY = frozenset({'stats', 'assists', 'rebounds', 'points'})
 _SKIP_TOPICS = frozenset({'drop', 'career_games', 'college_stats', ''})
@@ -1361,12 +1374,47 @@ def related_search_pairs(profile, root: Path):
     return pairs
 
 
-def faq_answer_pairs(profile, root: Path):
-    """Bottom-of-page pairs come only from data/wnba/related-searches/{slug}.json.
+def curated_answer_pairs(profile, root: Path):
+    """Keep a curated FAQ exactly, except season answers rebuilt from the page tables."""
+    raw = curated_faq_pairs(profile, root)
+    if not raw:
+        return []
+    name = player_name(profile) or 'This player'
+    slug = profile.get('slug') or 'player'
+    pairs = []
+    for question, answer in raw:
+        kind = faq_stat_kind(question)
+        if kind == 'season':
+            answer = season_faq_answer(profile, name)
+        elif kind == 'last_game':
+            answer = last_game_answer(profile, name)
+        elif kind == 'years':
+            answer = years_faq_answer(profile, name)
+        elif kind == 'three_point':
+            answer = three_point_faq_answer(profile, name)
+        elif kind == 'rookie':
+            answer = rookie_faq_answer(profile, name)
+        elif kind == 'teams':
+            answer = teams_faq_answer(profile, name)
+        elif kind == 'fiba':
+            answer = fiba_faq_answer(profile, name, root)
+        if kind in {'years', 'three_point', 'rookie', 'teams', 'fiba'} and not answer:
+            raise BuildError(f'{slug} FAQ could not be answered from the page data: {question}')
+        pairs.append((question, answer))
+    assert_faq_matches_tables(profile, pairs)
+    assert_relationship_faq_matches_couples(slug, pairs, root)
+    return pairs
 
-    data/wnba/faq/ is the old template and is not published. No file, or no query
-    this page can answer from stored stats or the couples list, means no section.
+
+def faq_answer_pairs(profile, root: Path):
+    """A'ja Wilson uses data/wnba/faq/aja-wilson.json. Every other page uses related searches.
+
+    The old template files are not published. No file, or no query this page can
+    answer from stored stats or the couples list, means no section.
     """
+    slug = profile.get('slug') or ''
+    if slug in CURATED_FAQ_SLUGS:
+        return curated_answer_pairs(profile, root)
     return related_search_pairs(profile, root)
 
 
@@ -1391,10 +1439,10 @@ def assert_relationship_faq_matches_couples(slug: str, pairs, root: Path) -> Non
 
 
 def faq_section(profile, root=None):
-    """Render answered related-search queries. No file, or nothing answerable, means no block and no schema.
+    """Render the bottom questions. A'ja Wilson keeps the curated FAQ. Others use related searches.
 
-    Misspellings, other people, bare names, and near-duplicates are dropped. The
-    question uses the player's name. The answer comes from stored stats or the couples list.
+    Misspellings, other people, bare names, and near-duplicates are dropped from
+    related searches. No file, or nothing answerable, means no block and no schema.
     """
     if root is None:
         root = Path(__file__).resolve().parents[1]
@@ -1405,14 +1453,18 @@ def faq_section(profile, root=None):
         f'<div class="faq-item"><h3>{esc(q)}</h3><p>{faq_answer_html(a)}</p></div>'
         for q, a in pairs
     )
+    slug = profile.get('slug') or ''
+    if slug in CURATED_FAQ_SLUGS:
+        eyebrow, heading = 'Player FAQ', 'Frequently asked questions'
+    else:
+        eyebrow, heading = 'Search', 'Related searches'
     block = (
         f'<section class="section" id="faq">'
-        f'<p class="eyebrow">Search</p>'
-        f'<h2>Related searches</h2>'
+        f'<p class="eyebrow">{eyebrow}</p>'
+        f'<h2>{heading}</h2>'
         f'{items}'
         f'</section>'
     )
-    slug = profile.get('slug') or ''
     entity = {
         '@type': 'FAQPage',
         '@id': f'{BASE}/wnba/{slug}/#faq',

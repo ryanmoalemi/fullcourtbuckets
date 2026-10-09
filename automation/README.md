@@ -43,7 +43,7 @@ Article writers take the box from `data/games/`. The short rules are in `docs/ST
 
 Coverage starts in 2008. Regular season and playoffs are separate. Missing values are not zero. Team stints are not summed with combined rows. Rounded season averages are not used to invent exact career totals or career averages. Source-check timestamps are not guaranteed game-data cutoffs.
 
-Not listed active does not mean retired. A changed team field does not establish a trade, signing, waiver claim, or effective date. Invalid biography fields are hidden instead of guessed; the initial provider response included a college name in a weight field. Recent game logs contain explicitly completed games in a labeled 35-day window, not complete career game histories.
+Not listed active does not mean retired. A changed team field does not establish a trade, signing, waiver claim, or effective date. A weight is stored and shown only as a plausible number of pounds. A college name that arrived in the weight field is stored as college, and the build fails on any other weight. Recent game logs contain explicitly completed games in a labeled 35-day window, not complete career game histories.
 
 News and confirmed transaction feeds are NOT connected. Player photographs, additional verified biographies, awards, and pre-2008 statistics are not supplied by this implementation. The player header uses jersey-number artwork, not a player photograph.
 

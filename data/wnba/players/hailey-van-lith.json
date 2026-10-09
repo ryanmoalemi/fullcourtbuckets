@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 9\"",
-    "weight": "TCU",
+    "weight": null,
     "jersey_number": "2",
-    "college": null,
+    "college": "TCU",
     "team": {
       "id": 2,
       "full_name": "Connecticut Sun",

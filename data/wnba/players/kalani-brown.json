@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 7\"",
-    "weight": "Baylor",
+    "weight": null,
     "jersey_number": "20",
-    "college": null,
+    "college": "Baylor",
     "team": {
       "id": 8,
       "full_name": "Las Vegas Aces",

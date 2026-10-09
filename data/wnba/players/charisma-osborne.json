@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 9\"",
-    "weight": "UCLA",
+    "weight": null,
     "jersey_number": "24",
-    "college": null,
+    "college": "UCLA",
     "team": {
       "id": 31,
       "full_name": "Portland Fire",
