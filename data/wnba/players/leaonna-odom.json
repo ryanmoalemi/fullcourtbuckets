@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 592,
+      "season": 2021,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 18,
+      "min": 11.5,
+      "fgm": 1.2,
+      "fga": 2.5,
+      "fg_pct": 46.7,
+      "fg3m": 0.3,
+      "fg3a": 0.9,
+      "fg3_pct": 29.4,
+      "ftm": 0.5,
+      "fta": 0.7,
+      "ft_pct": 75,
+      "oreb": 0.6,
+      "dreb": 0.6,
+      "reb": 1.2,
+      "ast": 0.4,
+      "stl": 0.3,
+      "blk": 0.3,
+      "turnover": 0.6,
+      "pts": 3.1,
+      "gap_fill": true
+    },
+    {
+      "player_id": 592,
       "season": 2020,
       "season_type": 2,
       "team": {

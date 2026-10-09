@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 181,
+      "season": 2014,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 17,
+      "min": 8.4,
+      "fgm": 1.4,
+      "fga": 3,
+      "fg_pct": 45.1,
+      "fg3m": 0.1,
+      "fg3a": 0.5,
+      "fg3_pct": 12.5,
+      "ftm": 0.5,
+      "fta": 0.8,
+      "ft_pct": 69.2,
+      "oreb": 0.4,
+      "dreb": 0.6,
+      "reb": 1,
+      "ast": 0.6,
+      "stl": 0.5,
+      "blk": 0.4,
+      "turnover": 0.9,
+      "pts": 3.3,
+      "gap_fill": true
+    },
+    {
+      "player_id": 181,
       "season": 2013,
       "season_type": 2,
       "team": {

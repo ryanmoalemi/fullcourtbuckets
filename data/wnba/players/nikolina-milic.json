@@ -15,7 +15,7 @@
     "height": "6' 3\"",
     "weight": "181 lbs",
     "jersey_number": "31",
-    "college": "--",
+    "college": null,
     "team": {
       "id": 30,
       "full_name": "Toronto Tempo",

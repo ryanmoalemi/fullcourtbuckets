@@ -145,13 +145,95 @@ def team(value):
         raise SyncError("Invalid team object.")
     return team_names.apply({k: value.get(k) for k in ("id", "full_name", "abbreviation", "city", "name", "conference")})
 
+# A stored weight must be a plausible number of pounds. The provider snapshot
+# put the college name in weight and left college null. Height and jersey were not shifted.
+MIN_POUNDS = 80
+MAX_POUNDS = 400
+_POUNDS_RE = re.compile(r"^(\d{2,3}(?:\.\d+)?)\s*(?:lbs?\.?|pounds?)?$", re.I)
+_CANONICAL_POUNDS_RE = re.compile(r"^\d{2,3}(?:\.\d+)? lbs$")
+_HEIGHT_RE = re.compile(r"""^\d'\s*\d{1,2}"$""")
+_BLANK_BIO = frozenset({"", "--", "—", "-", "n/a", "na", "none"})
+
+
+def _blank_bio(value) -> bool:
+    if value is None:
+        return True
+    return str(value).strip().casefold() in _BLANK_BIO
+
+
+def normalize_pounds(value):
+    """Canonical '157 lbs' when value is 80–400 pounds. None otherwise."""
+    if _blank_bio(value):
+        return None
+    text = str(value).strip()
+    match = _POUNDS_RE.fullmatch(text)
+    if not match:
+        return None
+    number = float(match.group(1))
+    if number < MIN_POUNDS or number > MAX_POUNDS:
+        return None
+    if _CANONICAL_POUNDS_RE.fullmatch(text):
+        return text
+    shown = str(int(number)) if number == int(number) else format(number, "g")
+    return f"{shown} lbs"
+
+
+def plausible_pounds(value) -> bool:
+    """True when weight is absent or a plausible number of pounds."""
+    if value is None:
+        return True
+    if isinstance(value, str) and not value.strip():
+        return True
+    return normalize_pounds(value) is not None
+
+
+def _school_name(value):
+    """A college string. A number of pounds, a placeholder, or a shifted jersey is not one."""
+    if _blank_bio(value) or normalize_pounds(value) is not None:
+        return None
+    text = str(value).strip()
+    if len(text) > 80 or len(re.findall(r"[A-Za-z]", text)) < 3:
+        return None
+    return text
+
+
+def normalize_bio(value: dict) -> dict:
+    """Split height, weight, and college. A school name in weight moves to college.
+
+    A real pound value stays on weight. A placeholder is cleared. No pound value
+    is invented when the feed did not provide one.
+    """
+    if not isinstance(value, dict):
+        raise SyncError("Invalid player biography.")
+    weight = normalize_pounds(value.get("weight"))
+    college = _school_name(value.get("college"))
+    if weight is None and college is None:
+        college = _school_name(value.get("weight"))
+    if weight is None and college is None:
+        weight = normalize_pounds(value.get("college"))
+    height = value.get("height")
+    height_text = "" if height is None else str(height).strip()
+    height = height_text if _HEIGHT_RE.fullmatch(height_text) else None
+    jersey = value.get("jersey_number")
+    jersey_text = "" if jersey is None else str(jersey).strip()
+    jersey = jersey_text if re.fullmatch(r"\d{1,2}", jersey_text) else None
+    return {
+        "position": value.get("position"),
+        "position_abbreviation": value.get("position_abbreviation"),
+        "height": height,
+        "weight": weight,
+        "jersey_number": jersey,
+        "college": college,
+    }
+
+
 def player(value):
     pid = identifier(value.get("id"))
     first, last = str(value.get("first_name") or "").strip(), str(value.get("last_name") or "").strip()
     if not first and not last:
         raise SyncError("Player record without a name.")
     return {"id": pid, "first_name": first, "last_name": last,
-            **{k: value.get(k) for k in ("position", "position_abbreviation", "height", "weight", "jersey_number", "college")},
+            **normalize_bio(value),
             "team": team(value.get("team"))}
 
 def stable_slug(pid: int, name: str, registry: dict) -> str:
@@ -192,7 +274,29 @@ def season_rows(rows: list[dict], year: int) -> list[dict]:
         if key in result and row != result[key]:
             raise SyncError("Conflicting duplicate season row.")
         result[key] = row
-    return list(result.values())
+    return drop_copied_playoff_rows(list(result.values()))
+
+
+def drop_copied_playoff_rows(rows: list[dict]) -> list[dict]:
+    """Drop a playoff line that repeats the regular-season line for that player and year."""
+    regular = {}
+    for row in rows:
+        if isinstance(row, dict) and row.get("season_type") == 2:
+            regular.setdefault((row.get("player_id"), row.get("season")), []).append(row)
+    kept = []
+    for row in rows:
+        if isinstance(row, dict) and row.get("season_type") == 3:
+            peers = regular.get((row.get("player_id"), row.get("season")), [])
+            if any(_same_stat_line(row, peer) for peer in peers):
+                continue
+        kept.append(row)
+    return kept
+
+
+def _same_stat_line(left: dict, right: dict) -> bool:
+    fields = ("games_played", "min", "pts", "reb", "ast", "stl", "blk", "turnover",
+              "fgm", "fga", "fg_pct", "fg3m", "fg3a", "fg3_pct", "ftm", "fta", "ft_pct")
+    return all(left.get(field) == right.get(field) for field in fields)
 
 def date_of(value):
     try:
@@ -282,6 +386,11 @@ def merge_team_changes(previous, current_team, now: dt.datetime) -> list:
         return history
     return [{"from": src, "to": dst, "date": pt_date(now)}, *history]
 
+def provider_rows(rows: list) -> list:
+    """Feed rows only. Gap fills are re-applied after each sync and are not part of the shrink check."""
+    return [row for row in rows if not (isinstance(row, dict) and row.get("gap_fill") is True)]
+
+
 def guard_shrink(old: list, new: list, label: str) -> None:
     if old and len(new) < len(old) * 0.8:
         raise SyncError(f"Unexpected drop in {label}; keeping the previous published snapshot.")
@@ -320,7 +429,7 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
                     raise SyncError("Competition filter was not honored by the provider.")
                 raw.extend(batch)
             rows = season_rows(raw, year)
-            guard_shrink(old, rows, f"{year} season rows")
+            guard_shrink(provider_rows(old), rows, f"{year} season rows")
             if year < today.year and not rows:
                 raise SyncError(f"No historical records returned for {year}; initial import is incomplete.")
             seasons[year] = rows
@@ -331,6 +440,21 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
             year: season_teams.correct_rows(rows, season_team_table)[0]
             for year, rows in seasons.items()
         }
+        filled = replaced = dropped = unresolved = 0
+        for year, rows in seasons.items():
+            updated, report = season_teams.supplement_rows(
+                rows, season_team_table, season_year=year, prior_rows=seasons.get(year - 1, [])
+            )
+            seasons[year] = updated
+            filled += len(report["filled"])
+            replaced += len(report["replaced"])
+            dropped += len(report["dropped"])
+            unresolved += len(report["unresolved"])
+        if filled or replaced or dropped or unresolved:
+            print(
+                f"Filled {filled} missing season rows, replaced {replaced}, "
+                f"dropped {dropped}. Unresolved game counts: {unresolved}."
+            )
     # A recent log, not a falsely complete career game archive.
     start = today - dt.timedelta(days=35)
     recent_games = client.all("games", {"start_date": start.isoformat(), "end_date": today.isoformat()})
@@ -426,6 +550,12 @@ def main():
         season_team_table = season_teams.load_table(args.root)
         if season_team_table.get("players"):
             print(f"Per-season teams loaded for {season_team_table.get('matched_count')} players.")
+            if season_teams.needs_stat_lines(season_team_table):
+                season_team_table = season_teams.enrich_stat_lines(args.root)
+            if not season_team_table.get("playoff_teams"):
+                years = range(FIRST_YEAR, dt.datetime.now(dt.timezone.utc).year + 1)
+                season_team_table["playoff_teams"] = season_teams.fetch_playoff_teams(years)
+                season_teams._write(season_teams.lookup_path(args.root), season_team_table)
         changed = run(args.root, client, dt.datetime.now(dt.timezone.utc), args.force, season_team_table or None)
         if os.environ.get("GITHUB_OUTPUT"):
             with open(os.environ["GITHUB_OUTPUT"], "a") as f:

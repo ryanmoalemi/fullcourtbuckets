@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 55,
+      "season": 2012,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 10,
+      "min": 14.1,
+      "fgm": 1.1,
+      "fga": 3.7,
+      "fg_pct": 29.7,
+      "fg3m": 0.2,
+      "fg3a": 0.6,
+      "fg3_pct": 33.3,
+      "ftm": 0.2,
+      "fta": 0.2,
+      "ft_pct": 100,
+      "oreb": 0.9,
+      "dreb": 1.8,
+      "reb": 2.7,
+      "ast": 1.1,
+      "stl": 0.2,
+      "blk": 0,
+      "turnover": 1.3,
+      "pts": 2.6,
+      "gap_fill": true
+    },
+    {
+      "player_id": 55,
       "season": 2011,
       "season_type": 2,
       "team": {

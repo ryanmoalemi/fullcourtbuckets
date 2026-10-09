@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 8\"",
-    "weight": "Washington",
+    "weight": null,
     "jersey_number": "0",
-    "college": null,
+    "college": "Washington",
     "team": {
       "id": 10,
       "full_name": "Phoenix Mercury",
@@ -36,6 +36,39 @@
     "conference": "Western Conference"
   },
   "season_stats": [
+    {
+      "player_id": 488,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 10,
+        "full_name": "Phoenix Mercury",
+        "abbreviation": "PHX",
+        "city": "Phoenix",
+        "name": "Mercury",
+        "conference": "Western Conference"
+      },
+      "games_played": 5,
+      "min": 21,
+      "fgm": 5.4,
+      "fga": 11,
+      "fg_pct": 49.1,
+      "fg3m": 1.8,
+      "fg3a": 5,
+      "fg3_pct": 36,
+      "ftm": 3.2,
+      "fta": 3.8,
+      "ft_pct": 84.2,
+      "oreb": 0,
+      "dreb": 1.8,
+      "reb": 1.8,
+      "ast": 2.8,
+      "stl": 0.6,
+      "blk": 0,
+      "turnover": 2.2,
+      "pts": 15.8,
+      "gap_fill": true
+    },
     {
       "player_id": 488,
       "season": 2026,

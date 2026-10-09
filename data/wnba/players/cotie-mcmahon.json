@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 0\"",
-    "weight": "Ole Miss",
+    "weight": null,
     "jersey_number": "23",
-    "college": null,
+    "college": "Ole Miss",
     "team": {
       "id": 5,
       "full_name": "Washington Mystics",

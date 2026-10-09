@@ -13,9 +13,9 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 1\"",
-    "weight": "TCU",
+    "weight": null,
     "jersey_number": "24",
-    "college": null,
+    "college": "TCU",
     "team": {
       "id": 1,
       "full_name": "New York Liberty",
@@ -36,6 +36,39 @@
     "conference": "Eastern Conference"
   },
   "season_stats": [
+    {
+      "player_id": 642,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 1,
+        "full_name": "New York Liberty",
+        "abbreviation": "NY",
+        "city": "New York",
+        "name": "Liberty",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 9,
+      "min": 8.4,
+      "fgm": 0.1,
+      "fga": 1.4,
+      "fg_pct": 7.7,
+      "fg3m": 0.1,
+      "fg3a": 0.7,
+      "fg3_pct": 16.7,
+      "ftm": 0.4,
+      "fta": 0.4,
+      "ft_pct": 100,
+      "oreb": 0.6,
+      "dreb": 0.6,
+      "reb": 1.1,
+      "ast": 0.4,
+      "stl": 0.6,
+      "blk": 0.1,
+      "turnover": 0.1,
+      "pts": 0.8,
+      "gap_fill": true
+    },
     {
       "player_id": 642,
       "season": 2026,
@@ -99,6 +132,39 @@
       "blk": 0.0,
       "turnover": 0.0,
       "pts": 0.0
+    },
+    {
+      "player_id": 642,
+      "season": 2022,
+      "season_type": 2,
+      "team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 4,
+      "min": 11,
+      "fgm": 0.8,
+      "fga": 1.5,
+      "fg_pct": 50,
+      "fg3m": 0.5,
+      "fg3a": 0.8,
+      "fg3_pct": 66.7,
+      "ftm": 0,
+      "fta": 0,
+      "ft_pct": 0,
+      "oreb": 0.8,
+      "dreb": 1,
+      "reb": 1.8,
+      "ast": 0.8,
+      "stl": 0.8,
+      "blk": 0.3,
+      "turnover": 0.3,
+      "pts": 2,
+      "gap_fill": true
     }
   ],
   "recent_completed_games": [

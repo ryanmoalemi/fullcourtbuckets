@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 10\"",
-    "weight": "NC State",
+    "weight": null,
     "jersey_number": "10",
-    "college": null,
+    "college": "NC State",
     "team": {
       "id": 11,
       "full_name": "Dallas Wings",

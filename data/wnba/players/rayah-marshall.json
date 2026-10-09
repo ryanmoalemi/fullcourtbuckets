@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 4\"",
-    "weight": "USC",
+    "weight": null,
     "jersey_number": "13",
-    "college": null,
+    "college": "USC",
     "team": {
       "id": 2,
       "full_name": "Connecticut Sun",
@@ -36,6 +36,39 @@
     "conference": "Eastern Conference"
   },
   "season_stats": [
+    {
+      "player_id": 754,
+      "season": 2026,
+      "season_type": 2,
+      "team": {
+        "id": 2,
+        "full_name": "Connecticut Sun",
+        "abbreviation": "CON",
+        "city": "Connecticut",
+        "name": "Sun",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 6,
+      "min": 5.8,
+      "fgm": 0.5,
+      "fga": 1.5,
+      "fg_pct": 33.3,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0.7,
+      "fta": 1,
+      "ft_pct": 66.7,
+      "oreb": 0.8,
+      "dreb": 0.7,
+      "reb": 1.5,
+      "ast": 0.7,
+      "stl": 0,
+      "blk": 0.3,
+      "turnover": 0.5,
+      "pts": 1.7,
+      "gap_fill": true
+    },
     {
       "player_id": 754,
       "season": 2025,

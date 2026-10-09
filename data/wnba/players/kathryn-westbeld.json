@@ -13,7 +13,7 @@
     "position": "F",
     "position_abbreviation": "F",
     "height": "6' 3\"",
-    "weight": "--",
+    "weight": null,
     "jersey_number": "9",
     "college": "Notre Dame",
     "team": {
@@ -29,38 +29,6 @@
   "active_in_provider_feed": false,
   "current_team": null,
   "season_stats": [
-    {
-      "player_id": 764,
-      "season": 2026,
-      "season_type": 2,
-      "team": {
-        "id": 10,
-        "full_name": "Phoenix Mercury",
-        "abbreviation": "PHX",
-        "city": "Phoenix",
-        "name": "Mercury",
-        "conference": "Western Conference"
-      },
-      "games_played": 43,
-      "min": 18.42,
-      "fgm": 1.79,
-      "fga": 5.0,
-      "fg_pct": 35.8,
-      "fg3m": 0.98,
-      "fg3a": 3.05,
-      "fg3_pct": 32.1,
-      "ftm": 0.58,
-      "fta": 0.74,
-      "ft_pct": 78.1,
-      "oreb": null,
-      "dreb": null,
-      "reb": 2.53,
-      "ast": 0.91,
-      "stl": 0.84,
-      "blk": 0.56,
-      "turnover": 0.56,
-      "pts": 5.14
-    },
     {
       "player_id": 764,
       "season": 2025,

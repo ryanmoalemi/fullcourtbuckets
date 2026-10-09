@@ -1,0 +1,20 @@
+{
+ "slug": "ashlon-jackson",
+ "player": "Ashlon Jackson",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "ashlon jackson",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": false
+  }
+ ]
+}

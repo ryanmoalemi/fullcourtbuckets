@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "5' 8\"",
-    "weight": "Oregon",
+    "weight": null,
     "jersey_number": "2",
-    "college": null,
+    "college": "Oregon",
     "team": {
       "id": 11,
       "full_name": "Dallas Wings",

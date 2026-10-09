@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 0\"",
-    "weight": "UConn",
+    "weight": null,
     "jersey_number": "5",
-    "college": null,
+    "college": "UConn",
     "team": {
       "id": 11,
       "full_name": "Dallas Wings",

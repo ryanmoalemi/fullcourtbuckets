@@ -30,7 +30,12 @@ class FakeClient:
         if endpoint == 'teams': return [{"id": 1, "full_name": "Example Team"}]
         if endpoint == 'games': return [copy.deepcopy(G)]
         if endpoint == 'player_stats': return [{"player": P, "team": {"id": 1}, "game": {"id": 10}, "min": "25", "pts": 12}]
-        if endpoint == 'player_season_stats': return [stat(params['season'], params['season_type'])]
+        if endpoint == 'player_season_stats':
+            row = stat(params['season'], params['season_type'])
+            if params.get('season_type') == 3:
+                row['games_played'] = 3
+                row['pts'] = 8
+            return [row]
         raise AssertionError(endpoint)
 
 class TeamClient(FakeClient):
@@ -80,6 +85,15 @@ class Tests(unittest.TestCase):
     def test_path_traversal_rejected(self):
         with self.assertRaises(s.SyncError): s.stable_slug(1, 'Name', {'1':'../../index'})
     def test_duplicate_rows_collapsed(self): self.assertEqual(len(s.season_rows([stat(), stat()], 2009)), 1)
+
+    def test_copied_playoff_line_is_dropped(self):
+        copied = stat(kind=3)
+        rows = s.season_rows([stat(), copied], 2009)
+        self.assertEqual([row["season_type"] for row in rows], [2])
+        different = stat(kind=3)
+        different["pts"] = 4
+        rows = s.season_rows([stat(), different], 2009)
+        self.assertEqual(sorted(row["season_type"] for row in rows), [2, 3])
     def test_conflicting_duplicate_rejected(self):
         other=stat(); other['pts']=99
         with self.assertRaises(s.SyncError): s.season_rows([stat(),other],2009)
@@ -102,6 +116,9 @@ class Tests(unittest.TestCase):
     def test_offseason(self): self.assertFalse(s.in_season([G],dt.date(2009,12,1)))
     def test_shrink_guard(self):
         with self.assertRaises(s.SyncError): s.guard_shrink(list(range(20)),[1],'test')
+        filled = [{"gap_fill": True, "season": 2010}] * 20
+        self.assertEqual(s.provider_rows(filled + [{"season": 2011}]), [{"season": 2011}])
+        s.guard_shrink(s.provider_rows(filled + list(range(10))), list(range(10)), 'gap fills are not feed rows')
     def test_pagination(self):
         client=s.Client('synthetic-key')
         with patch.object(client,'get',side_effect=[{'data':[{'id':1}],'meta':{'next_cursor':1}},{'data':[{'id':2}],'meta':{}}]):
@@ -198,6 +215,30 @@ class Tests(unittest.TestCase):
             older = [row for row in output["season_stats"] if row["season"] == 2008]
             self.assertTrue(all(row["team"]["id"] == 1 for row in older))
             self.assertIn("games played matches one stint", " ".join(output["notes"]))
+
+    def test_college_name_in_weight_moves_to_college(self):
+        raw = {**P, "position": "C", "position_abbreviation": "C", "height": "6' 4\"",
+               "weight": "South Carolina", "jersey_number": "22", "college": None}
+        stored = s.player(raw)
+        self.assertIsNone(stored["weight"])
+        self.assertEqual(stored["college"], "South Carolina")
+        self.assertEqual(stored["height"], "6' 4\"")
+        self.assertEqual(stored["jersey_number"], "22")
+        self.assertEqual(stored["position"], "C")
+
+    def test_pound_weight_stays_beside_college(self):
+        raw = {**P, "height": "6' 0\"", "weight": "157 lbs", "jersey_number": "22", "college": "Iowa"}
+        stored = s.player(raw)
+        self.assertEqual(stored["weight"], "157 lbs")
+        self.assertEqual(stored["college"], "Iowa")
+        self.assertEqual(stored["height"], "6' 0\"")
+
+    def test_placeholder_weight_and_college_are_cleared(self):
+        stored = s.player({**P, "weight": "--", "college": "--", "height": "not a height", "jersey_number": "one"})
+        self.assertIsNone(stored["weight"])
+        self.assertIsNone(stored["college"])
+        self.assertIsNone(stored["height"])
+        self.assertIsNone(stored["jersey_number"])
 
     def test_outage_does_not_replace_successful_snapshot(self):
         with tempfile.TemporaryDirectory() as d:

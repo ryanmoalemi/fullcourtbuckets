@@ -13,7 +13,7 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 7\"",
-    "weight": "--",
+    "weight": null,
     "jersey_number": "28",
     "college": null,
     "team": {
@@ -163,6 +163,39 @@
       "blk": 0.24,
       "turnover": 0.87,
       "pts": 5.08
+    },
+    {
+      "player_id": 668,
+      "season": 2022,
+      "season_type": 2,
+      "team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 16,
+      "min": 5.1,
+      "fgm": 0.5,
+      "fga": 1.1,
+      "fg_pct": 44.4,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0.8,
+      "fta": 0.8,
+      "ft_pct": 100,
+      "oreb": 0.3,
+      "dreb": 1.2,
+      "reb": 1.5,
+      "ast": 0.1,
+      "stl": 0.1,
+      "blk": 0.1,
+      "turnover": 0.8,
+      "pts": 1.8,
+      "gap_fill": true
     }
   ],
   "recent_completed_games": [

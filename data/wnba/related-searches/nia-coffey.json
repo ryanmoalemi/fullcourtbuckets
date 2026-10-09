@@ -1,0 +1,74 @@
+{
+ "slug": "nia-coffey",
+ "player": "Nia Brodie",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "nia coffey husband",
+   "clicks": 0,
+   "impressions": 4,
+   "question_like": true
+  },
+  {
+   "query": "did nia coffee get married",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "is nia coffey married",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "did nia coffey get married",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "did nia coffey get married?",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "nia brodie contract",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "nia brodie husband",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "nia coffey contract",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "nia coffey salary",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "who did nia coffey marry",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  }
+ ]
+}

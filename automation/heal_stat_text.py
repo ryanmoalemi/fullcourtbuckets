@@ -224,7 +224,7 @@ def stat_text_mismatches(profile, html: str, root) -> list[str]:
             f'page says "{players._faq_quote(og_title)}"; stats data says "{players._faq_quote(expected_title)}".'
         )
     try:
-        expected_desc = players.player_description(profile)
+        expected_desc = players.player_description(profile, root)
     except players.BuildError as exc:
         problems.append(str(exc))
         expected_desc = None
@@ -334,7 +334,7 @@ def rewrite_stat_text(profile, html: str, root) -> str:
     """Replace FAQ, meta description, and schema text from the player data."""
     name = players.player_name(profile) or 'This player'
     title = players.player_title(name)
-    description = players.player_description(profile)
+    description = players.player_description(profile, root)
     block, entity = players.faq_section(profile, root)
     html = _fill(_TITLE_RE, html, title, 'title')
     html = _fill(_OG_TITLE_RE, html, title, 'og:title')

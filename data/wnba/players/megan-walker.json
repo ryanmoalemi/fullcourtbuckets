@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 608,
+      "season": 2022,
+      "season_type": 2,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 12,
+      "min": 9.6,
+      "fgm": 1.2,
+      "fga": 3.2,
+      "fg_pct": 36.8,
+      "fg3m": 0.6,
+      "fg3a": 1.6,
+      "fg3_pct": 36.8,
+      "ftm": 0.3,
+      "fta": 0.5,
+      "ft_pct": 66.7,
+      "oreb": 0.3,
+      "dreb": 0.5,
+      "reb": 0.8,
+      "ast": 0.4,
+      "stl": 0.3,
+      "blk": 0,
+      "turnover": 1,
+      "pts": 3.3,
+      "gap_fill": true
+    },
+    {
+      "player_id": 608,
       "season": 2021,
       "season_type": 2,
       "team": {

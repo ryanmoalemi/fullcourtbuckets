@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 7\"",
-    "weight": "UCLA",
+    "weight": null,
     "jersey_number": "51",
-    "college": null,
+    "college": "UCLA",
     "team": {
       "id": 5,
       "full_name": "Washington Mystics",

@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 315,
+      "season": 2015,
+      "season_type": 2,
+      "team": {
+        "id": 6,
+        "full_name": "Chicago Sky",
+        "abbreviation": "CHI",
+        "city": "Chicago",
+        "name": "Sky",
+        "conference": "Eastern Conference"
+      },
+      "games_played": 16,
+      "min": 13.1,
+      "fgm": 0.9,
+      "fga": 1.6,
+      "fg_pct": 53.8,
+      "fg3m": 0,
+      "fg3a": 0,
+      "fg3_pct": 0,
+      "ftm": 0.4,
+      "fta": 0.4,
+      "ft_pct": 85.7,
+      "oreb": 0.8,
+      "dreb": 1.1,
+      "reb": 1.9,
+      "ast": 0.3,
+      "stl": 0.2,
+      "blk": 0.6,
+      "turnover": 0.9,
+      "pts": 2.1,
+      "gap_fill": true
+    },
+    {
+      "player_id": 315,
       "season": 2014,
       "season_type": 2,
       "team": {

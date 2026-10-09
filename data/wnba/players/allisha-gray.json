@@ -13,9 +13,9 @@
     "position": "G",
     "position_abbreviation": "G",
     "height": "6' 0\"",
-    "weight": "South Carolina",
+    "weight": null,
     "jersey_number": "15",
-    "college": null,
+    "college": "South Carolina",
     "team": {
       "id": 4,
       "full_name": "Atlanta Dream",

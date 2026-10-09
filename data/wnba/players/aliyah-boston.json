@@ -13,9 +13,9 @@
     "position": "C",
     "position_abbreviation": "C",
     "height": "6' 5\"",
-    "weight": "South Carolina",
+    "weight": null,
     "jersey_number": "7",
-    "college": null,
+    "college": "South Carolina",
     "team": {
       "id": 3,
       "full_name": "Indiana Fever",

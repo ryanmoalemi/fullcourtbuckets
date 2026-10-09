@@ -31,6 +31,39 @@
   "season_stats": [
     {
       "player_id": 653,
+      "season": 2023,
+      "season_type": 2,
+      "team": {
+        "id": 12,
+        "full_name": "Los Angeles Sparks",
+        "abbreviation": "LA",
+        "city": "Los Angeles",
+        "name": "Sparks",
+        "conference": "Western Conference"
+      },
+      "games_played": 5,
+      "min": 10.8,
+      "fgm": 0.6,
+      "fga": 2,
+      "fg_pct": 30,
+      "fg3m": 0.2,
+      "fg3a": 0.6,
+      "fg3_pct": 33.3,
+      "ftm": 0.2,
+      "fta": 0.4,
+      "ft_pct": 50,
+      "oreb": 0,
+      "dreb": 0.4,
+      "reb": 0.4,
+      "ast": 1.8,
+      "stl": 0,
+      "blk": 0,
+      "turnover": 1.6,
+      "pts": 1.6,
+      "gap_fill": true
+    },
+    {
+      "player_id": 653,
       "season": 2022,
       "season_type": 2,
       "team": {

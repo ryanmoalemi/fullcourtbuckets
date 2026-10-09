@@ -1,0 +1,44 @@
+{
+ "slug": "sabrina-ionescu",
+ "player": "Sabrina Ionescu",
+ "active": true,
+ "source": "Google Search Console via OpenSEO",
+ "date_range": {
+  "start": "2025-06-09",
+  "end": "2026-10-06",
+  "window": "last_16_months",
+  "timezone": "PT"
+ },
+ "queries": [
+  {
+   "query": "sabrina ionescu",
+   "clicks": 0,
+   "impressions": 6,
+   "question_like": false
+  },
+  {
+   "query": "how much does sabrina ionescu make",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "sabrina ionescu stats",
+   "clicks": 0,
+   "impressions": 2,
+   "question_like": true
+  },
+  {
+   "query": "sabrina ionescu college stats",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  },
+  {
+   "query": "sabrina wnba stats",
+   "clicks": 0,
+   "impressions": 1,
+   "question_like": true
+  }
+ ]
+}

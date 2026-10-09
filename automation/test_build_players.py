@@ -13,7 +13,7 @@ import build_players as b
 offline_tests.install()
 
 ROOT=Path(__file__).resolve().parent
-P={'slug':'example-player','player':{'id':1,'first_name':'Example','last_name':'Player','position':'G','height':"6' 0\"",'weight':'Iowa','college':None,'jersey_number':'22'},'active_in_provider_feed':True,'current_team':{'id':1,'full_name':'Example Team'},'checked_at':'2026-09-16T05:48:36+00:00','season_stats':[{'player_id':1,'season':2026,'season_type':2,'team':{'id':1,'full_name':'Example Team'},'games_played':10,'pts':12.3,'reb':4.5,'ast':6.7,'min':30,'fg_pct':45,'fg3_pct':37,'ft_pct':85}], 'recent_completed_games':[], 'coverage_start':2008}
+P={'slug':'example-player','player':{'id':1,'first_name':'Example','last_name':'Player','position':'G','height':"6' 0\"",'weight':None,'college':None,'jersey_number':'22'},'active_in_provider_feed':True,'current_team':{'id':1,'full_name':'Example Team'},'checked_at':'2026-09-16T05:48:36+00:00','season_stats':[{'player_id':1,'season':2026,'season_type':2,'team':{'id':1,'full_name':'Example Team'},'games_played':10,'pts':12.3,'reb':4.5,'ast':6.7,'min':30,'fg_pct':45,'fg3_pct':37,'ft_pct':85}], 'recent_completed_games':[], 'coverage_start':2008}
 
 def setup(root,p=None):
     p=copy.deepcopy(p or P)
@@ -28,9 +28,56 @@ def setup(root,p=None):
     return data
 
 class BuildTests(unittest.TestCase):
-    def test_invalid_weight_not_relabelled(self):
-        fields=b.bio_fields(P['player']); self.assertNotIn('weight',fields);self.assertNotIn('college',fields)
+    def test_invalid_weight_not_shown(self):
+        player = {**P['player'], 'weight': 'Iowa', 'college': None}
+        fields=b.bio_fields(player); self.assertNotIn('weight',fields);self.assertNotIn('college',fields)
+        profile = copy.deepcopy(P)
+        profile['player']['weight'] = 'Iowa'
+        page = b.profile_page(profile, menu=[])
+        self.assertNotIn('<dt>Weight</dt>', page)
+        self.assertNotIn('Iowa', page)
     def test_valid_weight_preserved(self):self.assertEqual(b.bio_fields({'weight':'157 lbs'})['weight'],'157 lbs')
+    def test_weight_must_be_a_plausible_number_of_pounds(self):
+        bad = copy.deepcopy(P)
+        bad['player']['weight'] = 'South Carolina'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        bad['player']['weight'] = '--'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        bad['player']['weight'] = '12 lbs'
+        with self.assertRaises(b.BuildError):
+            b.validate(bad, bad['slug'])
+        ok = copy.deepcopy(P)
+        ok['player']['weight'] = '157 lbs'
+        b.validate(ok, ok['slug'])
+        ok['player']['weight'] = None
+        b.validate(ok, ok['slug'])
+
+    def test_every_stored_weight_is_a_plausible_number_of_pounds(self):
+        root = ROOT.parent / 'data' / 'wnba' / 'players'
+        shifted = []
+        for path in sorted(root.glob('*.json')):
+            profile = json.loads(path.read_text(encoding='utf-8'))
+            player = profile.get('player') or {}
+            weight = player.get('weight')
+            if not b.wnba_sync.plausible_pounds(weight):
+                shifted.append(path.stem)
+            college = player.get('college')
+            if college and b.wnba_sync.normalize_pounds(college):
+                shifted.append(path.stem + ' college')
+        self.assertEqual(shifted, [])
+
+    def test_published_pages_do_not_show_a_non_pound_weight(self):
+        pounds = re.compile(r'^\d{2,3}(?:\.\d+)? lbs$')
+        bad = []
+        for path in sorted((ROOT.parent / 'wnba').glob('*/index.html')):
+            text = path.read_text(encoding='utf-8')
+            for match in re.finditer(r'<dt>Weight</dt><dd>(.*?)</dd>', text):
+                shown = html.unescape(match.group(1))
+                if not pounds.fullmatch(shown):
+                    bad.append(f'{path.parent.name}: {shown}')
+        self.assertEqual(bad, [])
     def test_null_not_zero(self):self.assertEqual(b.value(None),'-')
     def test_zero_preserved(self):self.assertEqual(b.value(0),'0.0')
     def test_unsafe_slug(self):
@@ -46,7 +93,7 @@ class BuildTests(unittest.TestCase):
         self.assertIsNone(b.headline(p))
     def test_archive_not_retirement(self):
         p=copy.deepcopy(P);p['active_in_provider_feed']=False
-        result=b.profile_page(p);self.assertIn('Archive profile',result);self.assertNotIn('>Retired<',result)
+        result=b.profile_page(p);self.assertIn('Inactive player',result);self.assertNotIn('>Retired<',result);self.assertNotIn('Archive profile',result)
     def test_escaped_name(self):
         p=copy.deepcopy(P);p['player']['first_name']='<script>alert(1)</script>'
         result=b.profile_page(p);self.assertNotIn('<script>alert(1)</script>',result);self.assertIn('&lt;script&gt;',result)
@@ -139,10 +186,13 @@ class BuildTests(unittest.TestCase):
         inactive['active_in_provider_feed'] = False
         archive = b.profile_page(inactive)
         self.assertIn('not on a current roster', archive)
-        self.assertIn('The page does not call that retirement or free agency.', archive)
+        self.assertNotIn('The page does not call that retirement or free agency.', archive)
         self.assertNotIn('That alone does not establish retirement', archive)
         self.assertNotIn('active-player', archive)
         self.assertNotIn('Provider status', archive)
+        self.assertEqual(archive.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+        self.assertNotIn('id="faq"', archive)
+        self.assertNotIn('id="sources"', archive)
     def test_no_browser_api_key_or_provider_fetch(self):
         js=(ROOT/'players.js').read_text();self.assertNotIn('api.balldontlie.io',js);self.assertNotIn('Authorization',js)
 
@@ -151,6 +201,19 @@ class BuildTests(unittest.TestCase):
         faq_dir.mkdir(parents=True, exist_ok=True)
         payload = {'slug': slug if slug_field is None else slug_field, 'items': items}
         (faq_dir / f'{slug}.json').write_text(json.dumps(payload))
+        return root
+
+    def _write_related(self, root, slug, queries, slug_field=None):
+        folder = root / 'data' / 'wnba' / 'related-searches'
+        folder.mkdir(parents=True, exist_ok=True)
+        payload = {
+            'slug': slug if slug_field is None else slug_field,
+            'player': 'Example Player',
+            'source': 'Google Search Console',
+            'date_range': '2026-01-01/2026-10-01',
+            'queries': queries,
+        }
+        (folder / f'{slug}.json').write_text(json.dumps(payload))
         return root
 
     def test_no_faq_file_omits_section(self):
@@ -186,21 +249,36 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('regular-season averages', page)
         self.assertNotIn('playoff averages', page)
 
-    def test_curated_faq_renders_every_item_before_sources(self):
-        items = [{'question': f'Question {i}?', 'answer': f'Answer {i} about <b>facts</b>.'} for i in range(15)]
-        items[0]['answer'] = "A'ja is listed at 6 feet 4 inches."
+    def test_related_searches_render_only_answerable_queries(self):
+        queries = [
+            {'query': f'Question {i}?', 'clicks': i, 'impressions': 10, 'question_like': True}
+            for i in range(15)
+        ]
+        queries.append({
+            'query': "What are Example Player's stats?",
+            'clicks': 20, 'impressions': 100, 'question_like': True,
+        })
+        queries.append({
+            'query': 'Does Example Player have kids?',
+            'clicks': 9, 'impressions': 9, 'question_like': True,
+        })
         with tempfile.TemporaryDirectory() as d:
-            root = self._write_faq(Path(d), 'example-player', items)
+            root = Path(d)
+            self._write_faq(root, 'example-player', [
+                {'question': 'Does Example Player have kids?', 'answer': 'There is no widely reported public information.'},
+            ])
+            self._write_related(root, 'example-player', queries)
             html, entity = b.faq_section(P, root)
-            self.assertEqual(len(entity['mainEntity']), 15)
-            self.assertEqual([q['name'] for q in entity['mainEntity']], [f'Question {i}?' for i in range(15)])
             self.assertEqual(entity['@type'], 'FAQPage')
             self.assertEqual(entity['@id'], 'https://fullcourtbuckets.com/wnba/example-player/#faq')
-            self.assertIn("A'ja is listed at 6 feet 4 inches.", entity['mainEntity'][0]['acceptedAnswer']['text'])
-            self.assertEqual(html.count('class="faq-item"'), 15)
-            self.assertIn('A&#x27;ja is listed at 6 feet 4 inches.', html)
-            self.assertIn('Answer 14 about &lt;b&gt;facts&lt;/b&gt;.', html)
-            self.assertNotIn('<b>facts</b>', html)
+            self.assertEqual(len(entity['mainEntity']), 1)
+            self.assertEqual(entity['mainEntity'][0]['name'], "What are Example Player's stats?")
+            self.assertIn('12.3 points', entity['mainEntity'][0]['acceptedAnswer']['text'])
+            self.assertEqual(html.count('class="faq-item"'), 1)
+            self.assertIn('Related searches', html)
+            self.assertNotIn('no widely', html.casefold())
+            self.assertNotIn('have kids', html.casefold())
+            self.assertNotIn('<b>', html)
             page = b.profile_page(P, root)
             sources = page.find('id="sources"')
             faq = page.find('id="faq"')
@@ -208,32 +286,148 @@ class BuildTests(unittest.TestCase):
             self.assertGreater(faq, 0)
             self.assertGreater(sources, faq)
             self.assertGreater(archive, sources)
-            self.assertEqual(page.count('"@type": "Question"'), 15)
+            self.assertEqual(page.count('"@type": "Question"'), 1)
             self.assertIn('"@type": "FAQPage"', page)
-            self.assertNotIn('regular-season averages', page)
-            self.assertNotIn('google_keyword', page)
+            self.assertNotIn('have kids', page.casefold())
+            self.assertNotIn('no widely', page.casefold())
+            self.assertNotIn('balldontlie', page.casefold())
 
-    def test_empty_faq_file_omits_section(self):
+    def test_empty_related_searches_omit_section(self):
         with tempfile.TemporaryDirectory() as d:
-            root = self._write_faq(Path(d), 'example-player', [])
+            root = self._write_related(Path(d), 'example-player', [])
             html, entity = b.faq_section(P, root)
             self.assertEqual(html, '')
             self.assertIsNone(entity)
 
-    def test_mismatched_or_broken_faq_file_fails_closed(self):
+    def test_broken_related_searches_fail_closed(self):
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
-            self._write_faq(root, 'example-player', [{'question': 'Q?', 'answer': 'A.'}], slug_field='someone-else')
+            self._write_related(
+                root, 'example-player',
+                [{'query': 'What are Example Player\'s stats?', 'clicks': 1, 'impressions': 1, 'question_like': True}],
+                slug_field='someone-else',
+            )
             with self.assertRaises(b.BuildError):
                 b.faq_section(P, root)
-            path = root / 'data/wnba/faq/example-player.json'
+            path = root / 'data/wnba/related-searches/example-player.json'
             path.write_text('{not json')
             with self.assertRaises(b.BuildError):
                 b.faq_section(P, root)
-            path.write_text(json.dumps({'slug': 'example-player', 'items': [{'question': 'Q?'}]}))
+            path.write_text(json.dumps({
+                'slug': 'example-player', 'player': 'Example Player', 'source': 'Google Search Console',
+                'date_range': '2026-01-01/2026-10-01', 'queries': [{}],
+            }))
             with self.assertRaises(b.BuildError):
                 b.faq_section(P, root)
 
+    def test_gapped_seasons_are_listed_and_ranges_stay_continuous(self):
+        base = P['season_stats'][0]
+        gapped = copy.deepcopy(P)
+        gapped['season_stats'] = [{**base, 'season': year} for year in (2010, 2015, 2016)]
+        self.assertIn('Seasons on record: 2010, 2015, 2016.', b.player_description(gapped))
+        self.assertNotIn('2010 to 2016', b.player_description(gapped))
+        self.assertEqual(
+            b.years_faq_answer(gapped, 'Example Player'),
+            'Example Player has 3 regular seasons on this page: 2010, 2015, and 2016.',
+        )
+        wide = copy.deepcopy(P)
+        wide['season_stats'] = [{**base, 'season': year} for year in (2008, 2010, 2012, 2014, 2016, 2018)]
+        answer = b.years_faq_answer(wide, 'Example Player')
+        self.assertNotIn('from 2008 to 2018', answer)
+        self.assertIn('2008, 2010, 2012, 2014, 2016, and 2018', answer)
+        continuous = copy.deepcopy(P)
+        continuous['season_stats'] = [{**base, 'season': year} for year in range(2018, 2027)]
+        self.assertIn('Seasons on record: 2018 to 2026.', b.player_description(continuous))
+        self.assertIn('from 2018 to 2026', b.years_faq_answer(continuous, 'Example Player'))
+        inactive = copy.deepcopy(gapped)
+        inactive['active_in_provider_feed'] = False
+        inactive['current_team'] = None
+        page = b.profile_page(inactive, menu=[])
+        self.assertIn('<dt>Years on record</dt><dd>2010, 2015, 2016</dd>', page)
+        active = b.profile_page(gapped, menu=[])
+        self.assertIn('<dt>Records available</dt><dd>2010, 2015, 2016</dd>', active)
+        self.assertIn('>2010, 2015, 2016</b><span>Available statistical years</span>', active)
+
+    def test_related_searches_drop_misspellings_other_people_and_bare_names(self):
+        queries = [
+            {'query': 'Example Player stats', 'impressions': 5, 'clicks': 0},
+            {'query': 'exampel player stats', 'impressions': 4, 'clicks': 0},
+            {'query': 'example playr stats', 'impressions': 3, 'clicks': 0},
+            {'query': 'someone else stats', 'impressions': 9, 'clicks': 0},
+            {'query': 'Example Player', 'impressions': 8, 'clicks': 0},
+            {'query': 'wnba player Example Player', 'impressions': 2, 'clicks': 0},
+            {'query': 'how old is Example Player', 'impressions': 2, 'clicks': 0},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            path = root / 'data' / 'wnba' / 'related-searches'
+            path.mkdir(parents=True)
+            (path / 'example-player.json').write_text(json.dumps({
+                'slug': 'example-player',
+                'player': 'Example Player',
+                'source': 'Google Search Console',
+                'date_range': {'start': '2025-06-09', 'end': '2026-10-06'},
+                'queries': queries,
+            }))
+            html, entity = b.faq_section(P, root)
+        self.assertEqual([node['name'] for node in entity['mainEntity']], ["What are Example Player's stats?"])
+        self.assertNotIn('someone else', html.casefold())
+        self.assertNotIn('how old', html.casefold())
+        self.assertNotIn('exampel', html.casefold())
+
+    def test_same_normalized_question_stops_at_two_pages(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data/wnba/players').mkdir(parents=True)
+            profiles = []
+            for index, slug in enumerate(('alpha-one', 'bravo-two', 'charlie-three')):
+                profile = copy.deepcopy(P)
+                first, last = slug.split('-')
+                profile['slug'] = slug
+                profile['player'] = {
+                    **P['player'], 'id': index + 1,
+                    'first_name': first.title(), 'last_name': last.title(),
+                }
+                name = f"{profile['player']['first_name']} {profile['player']['last_name']}"
+                (root / 'data/wnba/players' / f'{slug}.json').write_text(json.dumps(profile))
+                self._write_related(root, slug, [
+                    {'query': f'{name} stats', 'impressions': 30 - index, 'clicks': 0},
+                ])
+                profiles.append(profile)
+            published = []
+            for profile in profiles:
+                _html, entity = b.faq_section(profile, root)
+                published.append([] if entity is None else [node['name'] for node in entity['mainEntity']])
+        self.assertEqual(published[0], ["What are Alpha One's stats?"])
+        self.assertEqual(published[1], ["What are Bravo Two's stats?"])
+        self.assertEqual(published[2], [])
+
+    def test_aja_wilson_related_file_is_held(self):
+        profile = copy.deepcopy(P)
+        profile['slug'] = 'aja-wilson'
+        profile['player'] = {**P['player'], 'first_name': "A'ja", 'last_name': 'Wilson'}
+        with tempfile.TemporaryDirectory() as folder:
+            root = self._write_related(Path(folder), 'aja-wilson', [
+                {'query': "What are A'ja Wilson's stats?", 'impressions': 10, 'clicks': 1},
+            ])
+            html, entity = b.faq_section(profile, root)
+        self.assertEqual(html, '')
+        self.assertIsNone(entity)
+
+    def test_aja_wilson_template_queries_stay_unpublished(self):
+        root = ROOT.parent
+        profile = json.loads((root / 'data/wnba/players/aja-wilson.json').read_text())
+        self.assertEqual(
+            b.answer_related_query(profile, "How many years has A'ja Wilson been in the WNBA?", root),
+            "A'ja Wilson has 9 regular seasons on this page, from 2018 to 2026.",
+        )
+        self.assertEqual(b.answer_related_query(profile, "How many MVPs does A'ja Wilson have?", root), '')
+        self.assertEqual(b.answer_related_query(profile, "Does A'ja Wilson have kids?", root), '')
+        self.assertEqual(b.answer_related_query(profile, "What is A'ja Wilson's nationality?", root), '')
+        fiba = b.answer_related_query(profile, "Where can I read about A'ja Wilson and the 2026 FIBA World Cup?", root)
+        self.assertIn('<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>', fiba)
+        self.assertNotIn('balldontlie', fiba.casefold())
+        self.assertIsNone(b._NOT_WIDELY_RE.search(fiba))
     def test_aja_wilson_curated_faq_file(self):
         faq_path = ROOT.parent / 'data/wnba/faq/aja-wilson.json'
         faq = json.loads(faq_path.read_text())
@@ -293,51 +487,64 @@ class BuildTests(unittest.TestCase):
             self.assertNotIn(banned, answers)
             self.assertNotIn(banned, html)
 
-    def test_plum_and_clark_questions_use_page_data(self):
+    def test_plum_and_clark_answers_come_from_page_data(self):
         root = ROOT.parent
         plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text())
-        _html, entity = b.faq_section(plum, root)
-        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
         self.assertEqual(
-            answers["What was Kelsey Plum's rookie year?"],
+            b.answer_related_query(plum, "What was Kelsey Plum's rookie year?", root),
             'The first regular-season row for Kelsey Plum is 2017. She played 31 games in that row. That row is highlighted in the regular-season table.',
         )
         self.assertEqual(
-            answers['Which teams has Kelsey Plum played for?'],
-            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, and the Los Angeles Sparks for Kelsey Plum. Her current team on this page is the Phoenix Mercury.',
+            b.answer_related_query(plum, 'Which teams has Kelsey Plum played for?', root),
+            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, the Los Angeles Sparks, and the Phoenix Mercury for Kelsey Plum.',
         )
-        self.assertNotIn('championship', ' '.join(answers).casefold())
         page = b.profile_page(plum, root)
         self.assertIn('<tr class="rookie-year" data-season="2017">', page)
+        self.assertIn('How tall is Kelsey Plum?', page)
+        self.assertIn('What was Kelsey Plum&#x27;s rookie year?', page)
+        self.assertNotIn('kelly plum', page.casefold())
+        self.assertNotIn('kelswy', page.casefold())
+        self.assertNotIn('kelsea plum', page.casefold())
+        self.assertIn('FAQPage', page)
         clark = json.loads((root / 'data/wnba/players/caitlin-clark.json').read_text())
-        _html, entity = b.faq_section(clark, root)
-        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        clark_html, clark_entity = b.faq_section(clark, root)
         self.assertEqual(
-            answers["What is Caitlin Clark's three-point percentage?"],
+            [node['name'] for node in clark_entity['mainEntity']],
+            ["What are Caitlin Clark's stats?", "How tall is Caitlin Clark?"],
+        )
+        self.assertIn('What are Caitlin Clark&#x27;s stats?', clark_html)
+        self.assertEqual(
+            b.answer_related_query(clark, "What is Caitlin Clark's three-point percentage?", root),
             "In the 2026 regular season, Caitlin Clark's three-point percentage on this page is 36.1.",
         )
         self.assertEqual(
-            answers['How many years has Caitlin Clark been in the WNBA?'],
+            b.answer_related_query(clark, 'How many years has Caitlin Clark been in the WNBA?', root),
             'Caitlin Clark has 3 regular seasons on this page: 2024, 2025, and 2026.',
         )
-        self.assertNotIn('card', ' '.join(node['name'] for node in entity['mainEntity']).casefold())
 
-    def test_build_publishes_curated_faq_only(self):
-        items = [{'question': f'Q{i}?', 'answer': f'A{i}.'} for i in range(12)]
+    def test_build_publishes_related_searches_not_the_template(self):
+        items = [{'question': f'Q{i}?', 'answer': f'There is no widely reported answer {i}.'} for i in range(12)]
+        queries = [
+            {'query': "What are Example Player's stats?", 'clicks': 3, 'impressions': 30, 'question_like': True},
+            {'query': 'Does Example Player have kids?', 'clicks': 2, 'impressions': 20, 'question_like': True},
+        ]
         with tempfile.TemporaryDirectory() as d:
             root = Path(d)
             setup(root)
             self._write_faq(root, 'example-player', items)
+            self._write_related(root, 'example-player', queries)
             self.assertEqual(b.build(root), 1)
             page = (root / 'wnba/example-player/index.html').read_text()
-            self.assertEqual(page.count('class="faq-item"'), 12)
-            self.assertEqual(page.count('"@type": "Question"'), 12)
+            self.assertEqual(page.count('class="faq-item"'), 1)
+            self.assertEqual(page.count('"@type": "Question"'), 1)
+            self.assertIn("What are Example Player&#x27;s stats?", page)
+            self.assertNotIn('have kids', page.casefold())
+            self.assertNotIn('no widely', page.casefold())
             sources = page.find('id="sources"')
             faq = page.find('id="faq"')
             archive = page.find('archive-band')
             self.assertGreater(sources, faq)
             self.assertGreater(archive, sources)
-            self.assertNotIn('regular-season averages', page)
 
     def test_answer_summary_uses_only_real_numbers(self):
         text = b.answer_summary(P)
@@ -422,6 +629,10 @@ class BuildTests(unittest.TestCase):
         self.assertLess(page.find('</h1>'), search)
         self.assertNotIn('Current rosters', page)
         self.assertIn('Find a player', page)
+        self.assertIn('>Inactive players</option>', page)
+        self.assertIn('An inactive player is not on a current roster.', page)
+        self.assertNotIn('Archive profile', page)
+        self.assertNotIn('Archive profiles', page)
         self.assertIn('hub-links', page)
         self.assertNotIn('\u2014', page[profiles:updated])
 
@@ -457,13 +668,13 @@ class BuildTests(unittest.TestCase):
                 'pts': 15, 'reb': 7, 'ast': 2,
             },
         ]
-        items = [
-            {'question': "What are Example Player's stats / points per game?", 'answer': 'She averaged 16.6 points in 42 games.'},
-            {'question': 'What did Example Player score in her last game?', 'answer': 'Her last game was September 21, 2026.'},
-            {'question': 'How tall is Example Player?', 'answer': 'Example Player is listed at 6 feet.'},
+        queries = [
+            {'query': "What are Example Player's stats / points per game?", 'clicks': 8, 'impressions': 80, 'question_like': True},
+            {'query': 'What did Example Player score in her last game?', 'clicks': 4, 'impressions': 40, 'question_like': True},
+            {'query': 'How tall is Example Player?', 'clicks': 2, 'impressions': 20, 'question_like': True},
         ]
         with tempfile.TemporaryDirectory() as folder:
-            root = self._write_faq(Path(folder), 'example-player', items)
+            root = self._write_related(Path(folder), 'example-player', queries)
             html, entity = b.faq_section(profile, root)
         answers = [node['acceptedAnswer']['text'] for node in entity['mainEntity']]
         self.assertIn('16.4 points', answers[0])
@@ -476,12 +687,12 @@ class BuildTests(unittest.TestCase):
         self.assertIn('Playoffs', answers[1])
         self.assertIn('15 points', answers[1])
         self.assertNotIn('September 21', answers[1])
-        self.assertEqual(answers[2], 'Example Player is listed at 6 feet.')
+        self.assertEqual(answers[2], 'Example Player is listed at 6\' 0".')
         self.assertEqual(entity['mainEntity'][0]['acceptedAnswer']['text'], answers[0])
         self.assertIn('16.4 points', html)
         self.assertIn('Sep 30, 2026', html)
         with self.assertRaises(b.BuildError):
-            b.assert_faq_matches_tables(profile, [(items[0]['question'], items[0]['answer'])])
+            b.assert_faq_matches_tables(profile, [(queries[0]['query'], 'She averaged 16.6 points in 42 games.')])
 
     def test_one_tracked_game_is_singular_and_empty_stats_stay_noindex(self):
         profile = copy.deepcopy(P)
@@ -494,12 +705,12 @@ class BuildTests(unittest.TestCase):
             'home_score': 70, 'away_score': 60,
             'pts': 4, 'reb': 1, 'ast': 0,
         }]
-        items = [{
-            'question': "What are Example Player's stats / points per game?",
-            'answer': 'In her most recent 1 tracked games, Example Player averaged 9.9 points.',
+        queries = [{
+            'query': "What are Example Player's stats / points per game?",
+            'clicks': 1, 'impressions': 4, 'question_like': True,
         }]
         with tempfile.TemporaryDirectory() as folder:
-            root = self._write_faq(Path(folder), 'example-player', items)
+            root = self._write_related(Path(folder), 'example-player', queries)
             _html, entity = b.faq_section(profile, root)
             self.assertFalse(b.player_indexable(profile, root))
         answer = entity['mainEntity'][0]['acceptedAnswer']['text']
@@ -507,13 +718,70 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('1 tracked games', answer)
         self.assertIn('4.0 points', answer)
 
+    def test_archive_record_keeps_stored_facts_and_drops_filler(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        profile['player']['college'] = None
+        profile['player']['weight'] = 'Iowa'
+        items = [
+            {'question': 'Does Example Player have kids?', 'answer': 'There is no widely reported public information that Example Player has children.'},
+            {'question': "What is Example Player's nationality?", 'answer': 'No widely reported nationality is listed.'},
+            {'question': 'Who is Example Player?', 'answer': 'Example Player is a former professional with a long untold story.'},
+        ]
+        queries = [
+            {'query': 'Does Example Player have kids?', 'clicks': 3, 'impressions': 12, 'question_like': True},
+            {'query': "What is Example Player's nationality?", 'clicks': 2, 'impressions': 8, 'question_like': True},
+            {'query': 'How old is Example Player?', 'clicks': 1, 'impressions': 4, 'question_like': True},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            root = self._write_faq(Path(folder), 'example-player', items)
+            self._write_related(root, 'example-player', queries)
+            html, entity = b.faq_section(profile, root)
+            self.assertEqual(html, '')
+            self.assertIsNone(entity)
+            page = b.profile_page(profile, root)
+        self.assertIn('Inactive player', page)
+        self.assertNotIn('Archive profile', page)
+        self.assertIn('Example Player is a guard and is not on a current roster.', page)
+        self.assertIn('In the 2026 season she averaged 12.3 points, 4.5 rebounds and 6.7 assists in 10 games.', page)
+        self.assertIn('<td>12.3</td>', page)
+        self.assertIn('>2026</strong><span>Example Team</span>', page)
+        self.assertIn('<dt>Years on record</dt><dd>2026</dd>', page)
+        self.assertIn('content="index,follow,max-image-preview:large"', page)
+        self.assertEqual(page.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+        self.assertEqual(page.count('<h1 '), 1)
+        for dropped in (
+            'id="faq"', 'FAQPage', 'have kids', 'nationality', 'no widely reported',
+            'untold story', 'id="sources"', 'About these numbers', 'class="ai-note"',
+            'class="archive-band"', 'does not call that retirement',
+            'This is not every roster move', 'Statistics since 2008',
+            'not a full career total', 'The number artwork is a design element',
+            'Iowa', 'balldontlie',
+        ):
+            self.assertNotIn(dropped, page, dropped)
+        active = b.profile_page(P)
+        self.assertIn('Statistics since 2008', active)
+        self.assertIn('id="sources"', active)
+        self.assertIn('class="ai-note"', active)
+        self.assertIn('class="archive-band"', active)
+
     def test_published_faq_matches_angel_reese_caitlin_clark_and_yvonne_turner(self):
         root = ROOT.parent
-        for slug in ('angel-reese', 'caitlin-clark', 'yvonne-turner'):
+        for slug in ('angel-reese', 'caitlin-clark'):
             profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text())
-            _html, entity = b.faq_section(profile, root)
-            answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
-            season = next(text for question, text in answers.items() if 'points per game' in question.casefold())
+            html_text, entity = b.faq_section(profile, root)
+            if slug == 'caitlin-clark':
+                self.assertEqual(
+                    [node['name'] for node in entity['mainEntity']],
+                    ["What are Caitlin Clark's stats?", "How tall is Caitlin Clark?"],
+                )
+                self.assertIn('22.3 points', html_text)
+            else:
+                self.assertEqual(html_text, '')
+                self.assertIsNone(entity)
+            name = b.player_name(profile)
+            season = b.answer_related_query(profile, f"What are {name}'s stats / points per game?", root)
             row = b.headline(profile)
             points = f"{b.value(row.get('pts'))} points"
             games = f"in {b.value(row.get('games_played'), True)} games"
@@ -522,15 +790,173 @@ class BuildTests(unittest.TestCase):
             # The old Angel Reese FAQ said 16.6 points in 42 games. That copy must not return.
             self.assertNotIn('16.6', season)
             self.assertNotIn('in 42 games', season)
-            last_answers = [text for question, text in answers.items() if 'last game' in question.casefold()]
+            last = b.answer_related_query(profile, f'What did {name} score in her last game?', root)
             game = b.latest_completed_game(profile)
-            if last_answers and game:
+            if last and game:
                 shown = b.game_display(game)
                 self.assertNotIn(shown['date'], ('', 'Not listed'), slug)
-                self.assertIn(shown['date'], last_answers[0], slug)
+                self.assertIn(shown['date'], last, slug)
                 if shown['kind'] not in ('', 'Not listed'):
-                    self.assertIn(shown['kind'], last_answers[0], slug)
-            b.assert_faq_matches_tables(profile, list(answers.items()))
+                    self.assertIn(shown['kind'], last, slug)
+            b.assert_faq_matches_tables(profile, [
+                (f"What are {name}'s stats / points per game?", season),
+                (f'What did {name} score in her last game?', last),
+            ])
+        turner = json.loads((root / 'data/wnba/players/yvonne-turner.json').read_text())
+        html_text, entity = b.faq_section(turner, root)
+        self.assertEqual(html_text, '')
+        self.assertIsNone(entity)
+        page = b.profile_page(turner, root, menu=[])
+        self.assertNotIn('id="faq"', page)
+        self.assertNotIn('FAQPage', page)
+        self.assertNotIn('no widely reported', page.casefold())
+        self.assertIn('Inactive player', page)
+        self.assertNotIn('Archive profile', page)
+
+    def test_build_blocks_a_season_or_games_mismatch(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data/wnba').mkdir(parents=True)
+            table = {'players': {'1': {'status': 'ok', 'stints': [
+                {'season': 2026, 'season_type': 2, 'games_played': 30, 'team_slug': 'example'},
+            ]}}}
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            with self.assertRaises(b.BuildError):
+                b.require_flagged_season_gap(profile, page, root)
+            self.assertIn('This record is partial.', page)
+            table['players']['1']['stints'][0]['games_played'] = 10
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            b.require_flagged_season_gap(profile, page, root)
+
+    def test_abby_bishop_shows_every_seattle_season(self):
+        root = ROOT.parent
+        profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
+        check = b.season_cross_check(profile, root)
+        self.assertEqual(check['missing'], [])
+        self.assertEqual(check['games'], [])
+        self.assertEqual(check['extra'], [])
+        self.assertTrue(check['checked'])
+        regular = [row for row in profile['season_stats'] if row['season_type'] == 2]
+        self.assertEqual(
+            [(row['season'], row['games_played'], row['team']['full_name']) for row in sorted(regular, key=lambda row: row['season'])],
+            [(2010, 16, 'Seattle Storm'), (2015, 26, 'Seattle Storm'), (2016, 13, 'Seattle Storm')],
+        )
+        self.assertFalse(any(row['season_type'] == 3 and row['season'] == 2015 for row in profile['season_stats']))
+        page = b.profile_page(profile, root, menu=[])
+        b.require_flagged_season_gap(profile, page, root)
+        self.assertNotIn('This record is partial.', page)
+        self.assertIn('<dt>Years on record</dt><dd>2010, 2015, 2016</dd>', page)
+        self.assertNotIn('2010–2016', page)
+        self.assertNotIn('2010 to 2016', b.player_description(profile, root))
+        self.assertIn('Seasons on record: 2010, 2015, 2016.', b.player_description(profile, root))
+        for year, games in ((2010, 16), (2015, 26), (2016, 13)):
+            self.assertIn(f'data-season="{year}"', page)
+            self.assertIn(f'<td>{games}</td>', page)
+        self.assertIn('Seattle Storm', page)
+        self.assertNotIn('data-competition="3"', page)
+        self.assertNotIn('>Playoffs</', page)
+        self.assertNotIn('balldontlie', page.casefold())
+        self.assertNotIn('espn', page.casefold())
+        self.assertEqual(page.count('Full Court Buckets gathers its own game data and verifies it.'), 1)
+
+    def test_a_matching_season_is_not_called_partial(self):
+        profile = copy.deepcopy(P)
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            table = {
+                'players': {
+                    '1': {
+                        'name': 'Example Player',
+                        'status': 'ok',
+                        'stints': [{'season': 2026, 'season_type': 2, 'games_played': 10, 'team_slug': 'example'}],
+                    }
+                }
+            }
+            (root / 'data/wnba').mkdir(parents=True)
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            self.assertEqual(b.season_cross_check(profile, root)['missing'], [])
+            self.assertEqual(b.season_cross_check(profile, root)['games'], [])
+            page = b.profile_page(profile, root, menu=[])
+            self.assertNotIn('This record is partial.', page)
+            self.assertIn('Years on record', page)
+            table['players']['1']['stints'].append(
+                {'season': 2010, 'season_type': 2, 'games_played': 16, 'team_slug': 'example'}
+            )
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            page = b.profile_page(profile, root, menu=[])
+            self.assertIn('do not include 2010.', page)
+            self.assertNotIn('Years on record', page)
+            table['players']['1']['stints'] = [
+                {'season': 2026, 'season_type': 2, 'games_played': 99, 'team_slug': 'example'}
+            ]
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            disagreed = b.season_cross_check(profile, root)
+            self.assertEqual(disagreed['games'], [2026])
+            self.assertIn('could not be confirmed', b.partial_record_html(profile, root))
+
+    def test_published_pages_flag_season_and_game_disagreements(self):
+        root = ROOT.parent
+        index = json.loads((root / 'data/wnba/players-index.json').read_text())
+        problems = []
+        for entry in index['players']:
+            slug = entry.get('slug') or ''
+            path = root / 'wnba' / slug / 'index.html'
+            profile_path = root / 'data/wnba/players' / f'{slug}.json'
+            if not path.is_file() or not profile_path.is_file():
+                continue
+            page = path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in page:
+                continue
+            profile = json.loads(profile_path.read_text(encoding='utf-8'))
+            check = b.season_cross_check(profile, root)
+            if check['missing'] or check['games'] or check['extra']:
+                problems.append(slug)
+            if 'This record is partial.' in page or 'class="partial-record"' in page:
+                problems.append(slug + ' partial')
+        self.assertEqual(problems, [])
+
+    def test_normalized_questions_do_not_repeat_and_answers_are_not_filler(self):
+        self.assertEqual(
+            b.normalize_question("How old is A'ja Wilson?", "A'ja Wilson"),
+            b.normalize_question('How old is Caitlin Clark?', 'Caitlin Clark'),
+        )
+        root = ROOT.parent
+        index = json.loads((root / 'data/wnba/players-index.json').read_text())
+        counts = {}
+        for entry in index['players']:
+            slug = entry.get('slug') or ''
+            path = root / 'wnba' / slug / 'index.html'
+            if not path.is_file():
+                continue
+            page = path.read_text(encoding='utf-8')
+            if 'http-equiv="refresh"' in page:
+                continue
+            self.assertNotIn('balldontlie', page.casefold(), slug)
+            if 'id="faq"' not in page:
+                self.assertNotIn('FAQPage', page, slug)
+                continue
+            for question, answer in re.findall(r'<div class="faq-item"><h3>(.*?)</h3><p>(.*?)</p></div>', page):
+                plain_q = html.unescape(question)
+                plain_a = html.unescape(re.sub(r'<[^>]+>', '', answer))
+                self.assertIsNone(b._NOT_WIDELY_RE.search(plain_a), slug)
+                self.assertIsNone(b._NOT_WIDELY_RE.search(plain_q), slug)
+                if slug in b.CURATED_FAQ_SLUGS:
+                    continue
+                key = b.normalize_question(plain_q, entry.get('name') or '')
+                counts.setdefault(key, []).append(slug)
+        repeats = {key: slugs for key, slugs in counts.items() if len(slugs) >= 3}
+        self.assertEqual(repeats, {})
 
     def test_meta_mentions_playoffs_only_when_the_profile_has_them(self):
         regular = copy.deepcopy(P)
