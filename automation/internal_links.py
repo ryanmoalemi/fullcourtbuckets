@@ -1734,6 +1734,21 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 '''
 
 
+# Figcaption under a stat-board chart in a new article. Published posts stay as written.
+STAT_BOARD_CAPTION = 'gathered and verified by Full Court Buckets'
+
+
+def stat_board_caption(lead: str = '') -> str:
+    """Caption for a future article's stat board. It does not name a stats feed."""
+    source = f'Source: Full Court Buckets game data, {STAT_BOARD_CAPTION}.'
+    text = (lead or '').strip()
+    if not text:
+        return source
+    if not text.endswith('.'):
+        text += '.'
+    return f'{text} {source}'
+
+
 HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
 HOW_MADE_RECAP = (
