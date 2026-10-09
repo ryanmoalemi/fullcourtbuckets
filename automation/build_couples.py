@@ -751,7 +751,7 @@ def schema(cards: list[dict], items: list[tuple[str, str]]) -> str:
             '@type': 'BreadcrumbList',
             'itemListElement': [
                 {'@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': BASE + '/'},
-                {'@type': 'ListItem', 'position': 2, 'name': 'News', 'item': BASE + '/news/'},
+                {'@type': 'ListItem', 'position': 2, 'name': 'Players', 'item': BASE + '/wnba/'},
                 {'@type': 'ListItem', 'position': 3, 'name': 'Couples', 'item': BASE + PAGE_URL},
             ],
         },
@@ -779,7 +779,7 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
     nav = site_nav.render(menu, PAGE_URL)
     body = (
         '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'
-        '<a href="/news/">News</a><span>/</span><span>Couples</span></div>'
+        '<a href="/wnba/">Players</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
         '<p class="lede">Confirmed relationships of WNBA players. Each fact links to the article it came from.</p></section>'
         + ''.join(render_card(card) for card in cards)
@@ -795,7 +795,7 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 {GA4_TAG}
 {ADSENSE_TAG}
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{BASE}{PAGE_URL}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE}{PAGE_URL}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><style>{PAGE_CSS}</style><script type="application/ld+json">{schema(cards, items)}</script><script src="/assets/site-nav.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a><div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent WNBA news and analysis</span></div></div><main id="content" class="wrap">{body}</main>{site_nav.FOOTER_HTML}</body></html>'''
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{BASE}{PAGE_URL}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE}{PAGE_URL}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#0c0c10"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><style>{PAGE_CSS}</style><script type="application/ld+json">{schema(cards, items)}</script><script src="/assets/site-nav.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{site_nav.render_header(menu, PAGE_URL)}<main id="content" class="wrap">{body}</main>{site_nav.FOOTER_HTML}</body></html>'''
 
 
 def patch_players(root: Path = ROOT) -> list[str]:

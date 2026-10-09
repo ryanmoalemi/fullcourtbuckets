@@ -1,0 +1,101 @@
+{
+  "marta-xargay": {
+    "src": "/images/couples/marta-xargay-casademont.jpg",
+    "alt": "Marta Xargay Casademont",
+    "width": 192,
+    "height": 192,
+    "author": "Ministry of the Presidency. Government of Spain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pedro_S%C3%A1nchez_visita_a_la_selecci%C3%B3n_espa%C3%B1ola_femenina_de_baloncesto_antes_del_Eurobasket_2019_06.jpg",
+    "license": "Attribution",
+    "license_href": "https://commons.wikimedia.org/wiki/File:Pedro_S%C3%A1nchez_visita_a_la_selecci%C3%B3n_espa%C3%B1ola_femenina_de_baloncesto_antes_del_Eurobasket_2019_06.jpg",
+    "focal": "center 18%"
+  },
+  "allie-quigley": {
+    "src": "/images/couples/allie-quigley.jpg",
+    "alt": "Allie Quigley",
+    "width": 127,
+    "height": 192,
+    "author": "Lorie Shaull",
+    "page": "https://commons.wikimedia.org/wiki/File:Allie_Quigley_(cropped).jpg",
+    "license": "CC BY-SA 4.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "focal": "center 18%"
+  },
+  "diana-taurasi": {
+    "src": "/images/couples/diana-taurasi.jpg",
+    "alt": "Diana Taurasi",
+    "width": 139,
+    "height": 192,
+    "author": "John Mac",
+    "page": "https://commons.wikimedia.org/wiki/File:Diana_Taurasi_2024_(cropped).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "focal": "center 18%"
+  },
+  "penny-taylor": {
+    "src": "/images/couples/penny-taylor.jpg",
+    "alt": "Penny Taylor",
+    "width": 121,
+    "height": 191,
+    "author": "White House",
+    "page": "https://commons.wikimedia.org/wiki/File:Phoenix_Mercury_at_the_White_House_to_honor_2014_Championship_(cropped_to_focus_on_Penny_Taylor).jpg",
+    "license": "Public domain",
+    "license_href": "https://commons.wikimedia.org/wiki/File:Phoenix_Mercury_at_the_White_House_to_honor_2014_Championship_(cropped_to_focus_on_Penny_Taylor).jpg",
+    "focal": "center 18%"
+  },
+  "candace-parker": {
+    "src": "/images/couples/candace-parker.jpg",
+    "alt": "Candace Parker",
+    "width": 170,
+    "height": 192,
+    "author": "SusanLesch",
+    "page": "https://commons.wikimedia.org/wiki/File:Parker5_20171004.jpg",
+    "license": "CC BY 4.0",
+    "license_href": "https://creativecommons.org/licenses/by/4.0/",
+    "focal": "center 18%"
+  },
+  "jasmine-thomas": {
+    "src": "/images/teams/connecticut-sun.jpg",
+    "alt": "Jasmine Thomas of the Connecticut Sun",
+    "width": 1200,
+    "height": 800,
+    "author": "Lorie Shaull",
+    "page": "https://commons.wikimedia.org/wiki/File:2_Jasmine_Thomas.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/4.0",
+    "focal": "center 20%"
+  },
+  "sylvia-fowles": {
+    "src": "/images/teams/minnesota-lynx.jpg",
+    "alt": "Sylvia Fowles of the Minnesota Lynx",
+    "width": 1200,
+    "height": 800,
+    "author": "Lorie Shaull",
+    "page": "https://commons.wikimedia.org/wiki/File:Sylvia_Fowles_2019.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/4.0",
+    "focal": "center 20%"
+  },
+  "sue-bird": {
+    "src": "/images/teams/seattle-storm.jpg",
+    "alt": "Sue Bird of the Seattle Storm bringing the ball up the floor",
+    "width": 1200,
+    "height": 800,
+    "author": "Lorie Shaull",
+    "page": "https://commons.wikimedia.org/wiki/File:Seattle_Storm_Sue_Bird_(10),_photo_by_Lorie_Shaull.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/4.0",
+    "focal": "center 20%"
+  },
+  "elena-delle-donne": {
+    "src": "/images/teams/washington-mystics.jpg",
+    "alt": "Elena Delle Donne of the Washington Mystics",
+    "width": 1200,
+    "height": 800,
+    "author": "Lorie Shaull",
+    "page": "https://commons.wikimedia.org/wiki/File:Elena_Delle_Donne_(48369657691).jpg",
+    "license": "CC BY-SA 2.0",
+    "license_href": "https://creativecommons.org/licenses/by-sa/2.0",
+    "focal": "center 20%"
+  }
+}

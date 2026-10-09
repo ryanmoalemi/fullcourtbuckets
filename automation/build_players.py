@@ -224,13 +224,15 @@ def season_sentence(row):
         listed = bits[0] if len(bits) == 1 else ', '.join(bits[:-1]) + ' and ' + bits[-1]
         sentence = f'In the {year} {label} she averaged {listed}'
         if games is not None:
-            sentence += f' in {games} games'
+            noun = 'game' if games == '1' else 'games'
+            sentence += f' in {games} {noun}'
         return sentence + '.'
     if games is not None:
-        return f'In the {year} {label} she played {games} games.'
+        noun = 'game' if games == '1' else 'games'
+        return f'In the {year} {label} she played {games} {noun}.'
     return ''
 
-def answer_summary(profile):
+def answer_summary(profile, career=True):
     """One or two plain sentences under the player name. Only facts present on the profile."""
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
@@ -245,10 +247,14 @@ def answer_summary(profile):
         lead = f'{name} plays for the {team_name}.'
     elif name and active and pos:
         lead = f'{name} is a {pos}.'
-    elif name and pos:
-        lead = f'{name} is a {pos} and is not on a current roster.'
     elif name and not active:
-        lead = f'{name} is not on a current roster.'
+        if career:
+            import career_summary
+            return career_summary.hero_plain(profile)
+        lead = (
+            f'{name} is a {pos} and is not on a current roster.'
+            if pos else f'{name} is not on a current roster.'
+        )
     elif name:
         lead = f'{name} plays in the WNBA.'
     else:
@@ -305,8 +311,7 @@ def require_plausible_weight(profile) -> None:
 def header(route='/', menu=None):
     if menu is None:
         menu = site_nav.build_menu(Path(__file__).resolve().parents[1])
-    nav = site_nav.render(menu, route)
-    return f'''<div class="brand-line"></div><header class="site-header"><div class="wrap masthead"><a class="brand" href="/" aria-label="Full Court Buckets home"><img src="/logo.png" alt="Full Court Buckets" width="220" height="76"></a>{nav}</div></header><div class="tagline"><div class="wrap"><span>WNBA NEWS · ANALYSIS · COMMENTARY</span><span>Independent WNBA news and analysis</span></div></div>'''
+    return site_nav.render_header(menu, route)
 
 def footer(include_standings=True):
     html_text = site_nav.footer_html(include_standings)
@@ -1302,7 +1307,9 @@ def answer_related_query(profile, query: str, root) -> str:
         base = f'{name} is not on a current roster.'
         return f'{base} {teams}' if teams else base
     if re.search(r'\bwho is\b', text):
-        return answer_summary(profile)
+        import career_summary
+        slug = str(profile.get('slug') or '')
+        return answer_summary(profile, career=career_summary.released(root, slug))
     return ''
 
 
@@ -1467,7 +1474,7 @@ def faq_section(profile, root=None):
     if slug in CURATED_FAQ_SLUGS:
         eyebrow, heading = 'Player FAQ', 'Frequently asked questions'
     else:
-        eyebrow, heading = 'Search', 'Related searches'
+        eyebrow, heading = 'FAQ', 'Quick answers'
     block = (
         f'<section class="section" id="faq">'
         f'<p class="eyebrow">{eyebrow}</p>'
@@ -1739,7 +1746,7 @@ def team_description(slot: dict, standing: dict | None) -> str:
 
 
 AI_NOTE = (
-    'Built by Full Court Buckets from ESPN and WNBA data. '
+    'Built by Full Court Buckets from game data we gather and verify ourselves. '
     'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
 )
 PORTRAIT_SENTENCE = 'Portrait is an AI illustration.'
@@ -1770,7 +1777,9 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     row = headline(profile)
     position = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(fields.get('position'), fields.get('position', ''))
     number = fields.get('jersey_number', '')
-    summary = answer_summary(profile)
+    import career_summary
+    use_career = career_summary.released(root, slug)
+    summary = answer_summary(profile, career=use_career)
     summary_html = f'<p class="answer-summary">{esc(summary)}</p>' if summary else ''
     day = stats_day(profile)
     fresh = long_date(day)
@@ -1879,7 +1888,8 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         f'<div class="actions">{action}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div>'
         f'</div>{art}</div>{hero_stats}</section>{nav}'
     )
-    column = f'{statshtml}{partial}{games}{history}{couple}'
+    career = career_summary.section_html(profile, root) if use_career else ''
+    column = f'{career}{statshtml}{partial}{games}{history}{couple}'
     if aside:
         body = hero + f'<div class="content-grid"><div>{column}</div>{aside}</div>'
     else:
@@ -2030,14 +2040,154 @@ def couple_note(root, slug):
         return ''
     return build_couples.note_for_slug(root, slug)
 
+def _directory_profile(root, entry):
+    """Load a profile when the data file is on disk. Synthetic tests have no file."""
+    if root is None:
+        return None
+    path = Path(root) / 'data' / 'wnba' / 'players' / f'{entry.get("slug")}.json'
+    if not path.is_file():
+        return None
+    try:
+        return json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def directory_entries(index, root):
+    """Hub rows that can be indexed. Pages with no season stats stay off this list.
+
+    Those pages remain on disk and on team rosters. The sitemap already omits
+    them, so the hub count uses the same rule. A test index with no player
+    files is left intact.
+    """
+    players_dir = None if root is None else Path(root) / 'data' / 'wnba' / 'players'
+    have_files = players_dir is not None and players_dir.is_dir()
+    rows = []
+    for entry in index.get('players') or []:
+        if entry.get('id') in DUPLICATE_PLAYER_IDS:
+            continue
+        profile = _directory_profile(root, entry)
+        if have_files:
+            if profile is None or not player_has_records(profile):
+                continue
+        rows.append((entry, profile))
+    return rows
+
+
+def _directory_letter(name: str) -> str:
+    cleaned = unicodedata.normalize('NFKD', name or '')
+    cleaned = ''.join(ch for ch in cleaned if not unicodedata.combining(ch))
+    for ch in cleaned:
+        if ch.isalpha():
+            return ch.upper()
+    return '#'
+
+
+def _directory_ppg(profile) -> str:
+    if not profile:
+        return ''
+    rows = [
+        row for row in profile.get('season_stats') or []
+        if isinstance(row, dict) and row.get('season_type') == 2
+    ]
+    if not rows:
+        return ''
+    year = max(row.get('season') or 0 for row in rows)
+    chosen = [row for row in rows if row.get('season') == year]
+    aggregate = [row for row in chosen if not ((row.get('team') or {}).get('id'))]
+    pool = aggregate or chosen
+    row = max(pool, key=lambda item: item.get('games_played') or 0)
+    return plain_average(row.get('pts')) or ''
+
+
+def _directory_team(entry, profile) -> str:
+    if entry.get('active_in_provider_feed') and isinstance(entry.get('current_team'), dict):
+        return tname(entry['current_team'])
+    team = (profile.get('player') or {}).get('team') if profile else None
+    if isinstance(team, dict) and (team.get('full_name') or team.get('name')):
+        return tname(team)
+    if isinstance(entry.get('current_team'), dict):
+        return tname(entry['current_team'])
+    return ''
+
+
+def _player_row(entry, profile) -> str:
+    name = entry.get('name') or ''
+    team = _directory_team(entry, profile)
+    ppg = _directory_ppg(profile)
+    bits = [name]
+    if team:
+        bits.append(team)
+    if ppg:
+        bits.append(f'{ppg} PPG')
+    active = bool(entry.get('active_in_provider_feed'))
+    state = 'Listed active' if active else 'Inactive player'
+    query = ' '.join([name, team, state]).casefold()
+    letter = _directory_letter(name)
+    return (
+        f'<a class="player-row" href="/wnba/{esc(entry["slug"])}/" '
+        f'data-search="{esc(query)}" data-active="{str(active).lower()}" data-letter="{esc(letter)}">'
+        f'{esc(" · ".join(bits))}</a>'
+    )
+
+
+def _letter_groups(rows, prefix='players') -> str:
+    groups = {}
+    for entry, profile in rows:
+        groups.setdefault(_directory_letter(entry.get('name') or ''), []).append((entry, profile))
+    html_parts = []
+    for letter in sorted(groups):
+        body = ''.join(_player_row(entry, profile) for entry, profile in groups[letter])
+        html_parts.append(
+            f'<section class="az-group" id="{esc(prefix)}-{esc(letter.casefold())}">'
+            f'<h3 class="az-label">{esc(letter)}</h3>{body}</section>'
+        )
+    return ''.join(html_parts)
+
+
+def _az_jump(letters) -> str:
+    present = set(letters)
+    links_html = []
+    for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+        if letter in present:
+            links_html.append(f'<a href="#players-{letter.casefold()}">{letter}</a>')
+        else:
+            links_html.append(f'<span>{letter}</span>')
+    return f'<nav class="az-jump" aria-label="Players A to Z">{"".join(links_html)}</nav>'
+
+
 def directory_page(index, linking=None, include_standings=True, menu=None, root=None):
-    entries=[p for p in index['players'] if p.get('id') not in DUPLICATE_PLAYER_IDS]
-    cards=[]
-    for p in sorted(entries,key=lambda p:p['name'].casefold()):
-        state='Listed active' if p.get('active_in_provider_feed') else 'Inactive player'
-        team=tname(p['current_team']) if p.get('current_team') else 'Historical player records'
-        query=' '.join([p['name'],team,state]).casefold()
-        cards.append(f'<a class="player-card" href="/wnba/{p["slug"]}/" data-search="{esc(query)}" data-active="{str(bool(p.get("active_in_provider_feed"))).lower()}"><span class="eyebrow">{state}</span><h2>{esc(p["name"])}</h2><p>{esc(team)}</p><span class="small">View profile →</span></a>')
+    rows = directory_entries(index, root)
+    featured_slugs = list(site_nav.FEATURED_PLAYERS)
+    by_slug = {entry['slug']: (entry, profile) for entry, profile in rows}
+    featured = []
+    for slug in featured_slugs:
+        pair = by_slug.get(slug)
+        if pair and pair[0].get('active_in_provider_feed'):
+            featured.append(pair)
+    featured_ids = {entry['slug'] for entry, _profile in featured}
+    active = sorted(
+        [(entry, profile) for entry, profile in rows if entry.get('active_in_provider_feed') and entry['slug'] not in featured_ids],
+        key=lambda pair: (pair[0].get('name') or '').casefold(),
+    )
+    inactive = sorted(
+        [(entry, profile) for entry, profile in rows if not entry.get('active_in_provider_feed')],
+        key=lambda pair: (pair[0].get('name') or '').casefold(),
+    )
+    featured_html = ''
+    if featured:
+        featured_html = (
+            '<section id="featured-players"><p class="eyebrow">Featured</p>'
+            + ''.join(_player_row(entry, profile) for entry, profile in featured)
+            + '</section>'
+        )
+    inactive_html = ''
+    if inactive:
+        inactive_html = (
+            f'<details class="inactive-players" id="inactive-players">'
+            f'<summary>Inactive players ({len(inactive)})</summary>'
+            f'{_letter_groups(inactive, "inactive")}</details>'
+        )
     team_html=''
     if linking and linking['by_id']:
         items=''.join(
@@ -2046,9 +2196,10 @@ def directory_page(index, linking=None, include_standings=True, menu=None, root=
         )
         team_html=f'<section class="section hub-links" id="teams"><h2>Teams</h2><ul class="team-index">{items}</ul><p>{links.inline_link("All teams", "/wnba/teams/")}</p></section>'
     updated=f'<p class="muted small directory-updated">Last updated {esc(timestamp(index.get("checked_at")))}. An inactive player is not on a current roster.</p>'
-    filters='<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="all">All profiles</option><option value="true">Listed active</option><option value="false">Inactive players</option></select></label></div>'
-    # Search sits under the title so it is on the first mobile screen. The card grid follows. The update note stays at the end.
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header player-hub"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{len(entries)} profiles. Available statistics from 2008 onward.</p></section>{filters}<p class="small muted" id="result-count" role="status">{len(entries)} profiles</p><div class="player-grid">{''.join(cards)}</div><p id="no-players" hidden>No players match your search.</p>{team_html}{updated}'''
+    filters='<div class="directory-filters js-only"><label for="player-search">Find a player<input type="search" id="player-search" placeholder="Search a player or team" autocomplete="off"></label><label for="active-filter">Show<select id="active-filter"><option value="true" selected>Listed active</option><option value="all">All profiles</option><option value="false">Inactive players</option></select></label></div>'
+    count = len(rows)
+    # Search sits under the title. Featured names lead, then active players A–Z. Inactive stay collapsed.
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Players</span></div><section class="directory-header player-hub"><p class="eyebrow">Full Court Buckets · The player archive</p><h1>WNBA players.<br><span class="gradient">Past and present.</span></h1><p>{count} profiles. Available statistics from 2008 onward.</p></section>{filters}<p class="small muted" id="result-count" role="status">{count} profiles</p>{featured_html}{_az_jump(_directory_letter(entry.get("name") or "") for entry, _profile in active)}<div class="player-grid" id="active-players">{_letter_groups(active)}</div>{inactive_html}<p id="no-players" hidden>No players match your search.</p>{team_html}{updated}'''
     return document('WNBA Player Stats & Profiles, 2008 Onward | Full Court Buckets','Browse WNBA player profiles, season statistics, team information and recent game logs. Available coverage begins in 2008.','/wnba/',body,include_standings=include_standings,menu=menu)
 
 def redirect_stub(old_route: str, new_route: str, menu) -> str:
@@ -2152,14 +2303,17 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         )
     count=len(slot['players'])
     noun='player' if count == 1 else 'players'
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">WNBA</a><span>/</span><a href="/wnba/teams/">Teams</a><span>/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
+    import team_season
+    season = team_season.season_section(root, slot, standing) if root is not None else ''
+    if root is not None:
+        stories = team_season.stories_section(root, slot)
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
             {'@type':'ListItem','position':1,'name':'Home','item':BASE+'/'},
-            {'@type':'ListItem','position':2,'name':'WNBA','item':BASE+'/wnba/'},
-            {'@type':'ListItem','position':3,'name':'Teams','item':BASE+'/wnba/teams/'},
-            {'@type':'ListItem','position':4,'name':name,'item':BASE+route},
+            {'@type':'ListItem','position':2,'name':'Teams','item':BASE+'/wnba/teams/'},
+            {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
     return document(f'{name} Roster | Full Court Buckets', team_description(slot, standing), route, body, structured, include_standings, menu)
@@ -2773,6 +2927,7 @@ def build(root: Path):
     files['sitemap/index.html'] = html_sitemap_page(root, menu, linking, articles, player_rows, page_rows, published_index)
     files['docs/missing-data.md'] = missing_data_markdown(root)
     files['robots.txt'] = ROBOTS_TXT
+    files['search-index.json'] = site_nav.search_index_document(root)
     links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
@@ -2846,6 +3001,7 @@ def refresh_published_news(root: Path | None = None) -> int:
     for relative, content in list(files.items()):
         if str(relative).endswith('.html'):
             files[relative] = links.rewrite_legacy_article_urls(content, articles)
+    files['search-index.json'] = site_nav.search_index_document(root)
     changes = 0
     for relative, content in files.items():
         reject_removed_adu(relative, content)

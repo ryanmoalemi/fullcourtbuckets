@@ -128,6 +128,24 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
     return planned
 
 
+def latest_playoffs_href(root: Path) -> str:
+    """Newest playoff story. Empty when the postseason coverage is not on disk."""
+    playoffs = []
+    for article in links.load_articles(root):
+        category = str(article.get('category') or '')
+        if 'playoff' not in category.casefold():
+            continue
+        try:
+            href = links.article_href(article)
+        except ValueError:
+            continue
+        playoffs.append((str(article.get('date') or ''), href))
+    if not playoffs:
+        return ''
+    playoffs.sort()
+    return playoffs[-1][1]
+
+
 def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
     """Top-level menu. A link is included only when the target page exists."""
     def exists(url: str) -> bool:
@@ -136,6 +154,15 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
     items: list[dict] = []
     if exists('/'):
         items.append({'label': 'Home', 'href': '/'})
+
+    # One link. Posts stay on /news/ and are never added to this menu.
+    # Couples is a news feature reached from /news/ only. Do not add it here.
+    if exists('/news/'):
+        items.append({'label': 'News', 'href': '/news/'})
+
+    playoffs = latest_playoffs_href(root)
+    if playoffs and exists(playoffs):
+        items.append({'label': 'Playoffs', 'href': playoffs, 'highlight': True})
 
     if exists('/wnba/'):
         children = [{'label': 'Player index, A to Z', 'href': '/wnba/'}]
@@ -167,11 +194,6 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
 
     if exists('/standings/'):
         items.append({'label': 'Standings', 'href': '/standings/'})
-
-    # One link. Posts stay on /news/ and are never added to this menu.
-    # Couples is a news feature reached from /news/ only. Do not add it here.
-    if exists('/news/'):
-        items.append({'label': 'News', 'href': '/news/'})
 
     if exists('/about/'):
         children = []
@@ -222,12 +244,14 @@ def _list(items: list[dict], current: str, nested: bool = False) -> str:
         children = item.get('children') or []
         # Site chrome stays in this tab. New tabs are for article-body links only.
         link = f'<a href="{esc(item["href"])}"{current_attr}>{esc(item["label"])}</a>'
+        highlight = ' site-nav-playoffs' if item.get('highlight') and not nested else ''
         if children and not nested:
             sub = _list(children, current, nested=True).replace('<ul>', f'<ul id="{esc(_submenu_id(item["label"]))}">', 1)
-            parts.append(f'<li class="site-nav-branch">{link}{_subtoggle(item["label"])}{sub}</li>')
+            parts.append(f'<li class="site-nav-branch{highlight}">{link}{_subtoggle(item["label"])}{sub}</li>')
         else:
             sub = _list(children, current, nested=True) if children else ''
-            parts.append(f'<li>{link}{sub}</li>')
+            klass = f' class="{highlight.strip()}"' if highlight else ''
+            parts.append(f'<li{klass}>{link}{sub}</li>')
     return '<ul>' + ''.join(parts) + '</ul>'
 
 
@@ -243,6 +267,160 @@ def render(menu: list[dict], current: str) -> str:
         f'{inner}'
         '</nav>'
     )
+
+
+LOGO_HTML = (
+    '<a class="site-brand" href="/" aria-label="Full Court Buckets home">'
+    '<picture><source srcset="/logo.webp" type="image/webp">'
+    '<img src="/logo.png" alt="Full Court Buckets" width="760" height="507" decoding="async">'
+    '</picture></a>'
+)
+TAGLINE_HTML = (
+    '<p class="site-tagline"><span>WNBA News · Analysis · Commentary</span>'
+    '<span>Independent WNBA news and analysis</span></p>'
+)
+SEARCH_HTML = (
+    '<div class="site-search">'
+    '<button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel">'
+    '<span class="site-search-icon" aria-hidden="true"></span>'
+    '<span class="site-search-label">Search</span></button>'
+    '<div class="site-search-panel" id="site-search-panel" hidden>'
+    '<form role="search">'
+    '<label class="site-search-field">Search Full Court Buckets'
+    '<input type="search" name="q" placeholder="Players, teams, stories" autocomplete="off"></label>'
+    '</form>'
+    '<p class="site-search-status" role="status"></p>'
+    '<ul class="site-search-results"></ul>'
+    '</div>'
+    '<template id="site-search-item"><li><a><span class="site-search-title"></span><span class="site-search-kind"></span></a></li></template>'
+    '</div>'
+)
+
+
+def render_header(menu: list[dict], current: str, show_tagline: bool | None = None) -> str:
+    """One 60px bar for every template. The tagline is homepage-only and hidden on phones."""
+    if show_tagline is None:
+        show_tagline = page_path(current) == '/'
+    tagline = TAGLINE_HTML if show_tagline else ''
+    return (
+        '<header class="site-header"><div class="site-bar">'
+        f'{LOGO_HTML}<div class="site-tools">{SEARCH_HTML}{render(menu, current)}'
+        f'</div></div>{tagline}</header>'
+    )
+
+
+def _element_end(html: str, start: int, tag: str) -> int | None:
+    """End offset of the element that starts at `start`, counting nested copies of the same tag."""
+    lower = html.lower()
+    open_token = f'<{tag}'
+    close_token = f'</{tag}>'
+    if not lower.startswith(open_token, start):
+        return None
+    depth = 0
+    i = start
+    while i < len(html):
+        opened = lower.find(open_token, i)
+        closed = lower.find(close_token, i)
+        if closed < 0:
+            return None
+        if opened != -1 and opened < closed:
+            depth += 1
+            i = opened + len(open_token)
+        else:
+            depth -= 1
+            i = closed + len(close_token)
+            if depth == 0:
+                return i
+    return None
+
+
+def _drop_div_touching(html: str, class_name: str, *, before_header: bool) -> str:
+    """Remove a chrome div that sits directly against the site header."""
+    token = f'<div class="{class_name}">'
+    start = 0
+    while True:
+        at = html.find(token, start)
+        if at < 0:
+            return html
+        end = _element_end(html, at, 'div')
+        if end is None:
+            return html
+        if before_header and html[end:].lstrip().lower().startswith('<header'):
+            return html[:at] + html[end:].lstrip()
+        if not before_header and html[:at].rstrip().lower().endswith('</header>'):
+            return html[:at].rstrip() + html[end:]
+        start = at + len(token)
+
+
+def replace_site_header(page_html: str, menu: list[dict], current: str) -> str:
+    """Swap whatever header this template used for the shared bar. Leave the Now ticker in place."""
+    if 'http-equiv="refresh"' in page_html.lower():
+        return page_html
+    header = render_header(menu, current)
+    page_html = _drop_div_touching(page_html, 'brand-line', before_header=True)
+    page_html = _drop_div_touching(page_html, 'utility', before_header=True)
+    start = page_html.lower().find('<header')
+    if start < 0:
+        if '<body>' in page_html:
+            return page_html.replace('<body>', '<body>' + header, 1)
+        if '<body' in page_html.lower():
+            end = page_html.lower().find('>', page_html.lower().find('<body')) + 1
+            return page_html[:end] + header + page_html[end:]
+        return header + page_html
+    end = _element_end(page_html, start, 'header')
+    if end is None:
+        return page_html
+    page_html = page_html[:start] + header + page_html[end:]
+    return _drop_div_touching(page_html, 'tagline', before_header=False)
+
+
+def build_search_index(root: Path) -> dict:
+    """Static index for the header search. Articles, players, and teams."""
+    items = []
+    for article in links.load_articles(root):
+        title = str(article.get('title') or '').strip()
+        if not title:
+            continue
+        try:
+            href = links.article_href(article)
+        except ValueError:
+            continue
+        items.append({
+            'type': 'Story',
+            'title': title,
+            'url': href,
+            'text': str(article.get('description') or '').strip(),
+        })
+    index_path = root / 'data' / 'wnba' / 'players-index.json'
+    if index_path.is_file():
+        index = json.loads(index_path.read_text(encoding='utf-8'))
+        for entry in index.get('players') or []:
+            slug = str(entry.get('slug') or '').strip()
+            name = str(entry.get('name') or '').strip()
+            if not slug or not name:
+                continue
+            team = entry.get('current_team') if isinstance(entry.get('current_team'), dict) else {}
+            items.append({
+                'type': 'Player',
+                'title': name,
+                'url': f'/wnba/{slug}/',
+                'text': str((team or {}).get('full_name') or '').strip(),
+            })
+        linking = links.catalog_from_index(index)
+        for slot in linking['by_id'].values():
+            items.append({
+                'type': 'Team',
+                'title': slot['full_name'],
+                'url': links.team_href(slot),
+                'text': str(slot.get('conference') or '').strip(),
+            })
+    items.sort(key=lambda item: (item['type'], item['title'].casefold()))
+    return {'items': items}
+
+
+def search_index_document(root: Path) -> str:
+    """Compact JSON the header search fetches from /search-index.json."""
+    return json.dumps(build_search_index(root), separators=(',', ':'), ensure_ascii=False) + '\n'
 
 
 def normalize(nav_html: str) -> str:
@@ -337,28 +515,8 @@ def strip_chrome_new_tabs(page_html: str) -> str:
 
 
 def install(page_html: str, current: str, menu: list[dict]) -> str:
-    """Replace the first main nav. Leave the on-page section nav alone."""
-    rendered = render(menu, current)
-    replaced = False
-
-    def sub(match: re.Match) -> str:
-        nonlocal replaced
-        if replaced:
-            return match.group(0)
-        attrs = match.group(1)
-        if 'section-nav' in attrs or 'On this page' in attrs:
-            return match.group(0)
-        replaced = True
-        return rendered
-
-    page_html = NAV_RE.sub(sub, page_html)
-    if not replaced:
-        if '</header>' in page_html:
-            page_html = page_html.replace('</header>', rendered + '</header>', 1)
-        elif '<body>' in page_html:
-            page_html = page_html.replace('<body>', '<body>' + rendered, 1)
-        else:
-            page_html = rendered + page_html
+    """Put the shared header on the page. Leave the on-page section nav alone."""
+    page_html = replace_site_header(page_html, menu, current)
     return strip_chrome_new_tabs(install_footer(ensure_assets(page_html)))
 
 

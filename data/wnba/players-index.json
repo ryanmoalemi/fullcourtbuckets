@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-08T08:40:08+00:00",
+  "checked_at": "2026-10-09T07:41:23+00:00",
   "players": [
     {
       "id": 345,
@@ -4735,6 +4735,15 @@
       },
       "path": "/wnba/myisha-hines-allen/",
       "data_path": "/data/wnba/players/myisha-hines-allen.json"
+    },
+    {
+      "id": 140035,
+      "slug": "nadia-fingall",
+      "name": "Nadia Fingall",
+      "active_in_provider_feed": false,
+      "current_team": null,
+      "path": "/wnba/nadia-fingall/",
+      "data_path": "/data/wnba/players/nadia-fingall.json"
     },
     {
       "id": 354,

@@ -1,5 +1,35 @@
 [
   {
+    "slug": "semis-game-3-preview",
+    "url": "/news/semis-game-3-preview/",
+    "title": "Semis Game 3 Preview: Can the Liberty and Aces Do What No WNBA Team Has Done?",
+    "description": "Teams up 2-0 in a best-of-five WNBA series are 19-0. Turnovers sink the Liberty, rebounds sink the Aces. Picks for both Game 3s on Friday.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-09",
+    "image": "/images/articles/semis-game-3-preview/jordin-canada-dream-2026.jpg",
+    "imageAlt": "Jordin Canada of the Atlanta Dream lines up a free throw at Target Center in Minneapolis",
+    "imageCredit": "Photo: John Mac / CC BY-SA 4.0",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty",
+      "golden-state-valkyries",
+      "las-vegas-aces"
+    ],
+    "imageWidth": 1688,
+    "imageHeight": 1126,
+    "imageSource": "/images/articles/semis-game-3-preview/jordin-canada-dream-2026.jpg",
+    "imageHero": "/images/articles/semis-game-3-preview/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/semis-game-3-preview/hero-2x.webp",
+    "imageHero2xWidth": 2000,
+    "imageHero2xHeight": 1125,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/semis-game-3-preview/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
+  },
+  {
     "slug": "aces-valkyries-semis-game-2-recap",
     "url": "/news/aces-valkyries-semis-game-2-recap/",
     "title": "Burton From 28, Stokes at the Rim: Valkyries Hold Off the Aces 83-81, Lead Semis 2-0",
@@ -17,13 +47,16 @@
     "imageWidth": 1688,
     "imageHeight": 2531,
     "imageSource": "/images/articles/aces-valkyries-semis-game-2-recap/veronica-burton-valkyries.webp",
-    "imageFocal": "center 47%",
+    "imageFocal": "center 20%",
     "imageHero": "/images/articles/aces-valkyries-semis-game-2-recap/hero-1200.webp",
     "imageHeroWidth": 1200,
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/aces-valkyries-semis-game-2-recap/hero-2x.webp",
-    "imageHero2xWidth": 1920,
-    "imageHero2xHeight": 1080
+    "imageHero2xWidth": 1680,
+    "imageHero2xHeight": 945,
+    "imageOg": "/images/articles/aces-valkyries-semis-game-2-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "angel-reese-game-2-stats-liberty-dream-semis",
@@ -47,7 +80,10 @@
     "imageFocal": "center top",
     "imageHero": "/images/articles/angel-reese-game-2-stats-liberty-dream-semis/hero-1200.webp",
     "imageHeroWidth": 1200,
-    "imageHeroHeight": 675
+    "imageHeroHeight": 675,
+    "imageOg": "/images/articles/angel-reese-game-2-stats-liberty-dream-semis/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "liberty-dream-semis-game-2-recap",
@@ -67,13 +103,16 @@
     "imageWidth": 1500,
     "imageHeight": 2250,
     "imageSource": "/images/articles/liberty-dream-semis-game-2-recap/naz-hillmon-atlanta-dream-2025.webp",
-    "imageFocal": "center 16%",
+    "imageFocal": "center top",
     "imageHero": "/images/articles/liberty-dream-semis-game-2-recap/hero-1200.webp",
     "imageHeroWidth": 1200,
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/liberty-dream-semis-game-2-recap/hero-2x.webp",
     "imageHero2xWidth": 1488,
-    "imageHero2xHeight": 837
+    "imageHero2xHeight": 837,
+    "imageOg": "/images/articles/liberty-dream-semis-game-2-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "aces-valkyries-semis-game-1-recap",
@@ -98,7 +137,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/aces-valkyries-semis-game-1-recap/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/aces-valkyries-semis-game-1-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "angel-reese-game-1-liberty",
@@ -124,7 +167,10 @@
     "imageHero2x": "/images/articles/angel-reese-game-1-liberty/hero-2x.webp",
     "imageHero2xWidth": 1664,
     "imageHero2xHeight": 936,
-    "imageFocal": "center 6%"
+    "imageFocal": "center top",
+    "imageOg": "/images/articles/angel-reese-game-1-liberty/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "top-10-womens-college-basketball-cards-to-collect-2026",
@@ -143,7 +189,10 @@
     "imageHero": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/hero-16x9.webp",
     "imageHeroWidth": 992,
     "imageHeroHeight": 558,
-    "imageFocal": "center 40%"
+    "imageFocal": "center 30%",
+    "imageOg": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/og.webp",
+    "imageOgWidth": 1006,
+    "imageOgHeight": 526
   },
   {
     "slug": "liberty-dream-semis-game-1-recap",
@@ -166,7 +215,10 @@
     "imageHero": "/images/articles/liberty-dream-semis-game-1-recap/hero-16x9.webp",
     "imageHeroWidth": 1120,
     "imageHeroHeight": 630,
-    "imageFocal": "center 18%"
+    "imageFocal": "center 18%",
+    "imageOg": "/images/articles/liberty-dream-semis-game-1-recap/og.webp",
+    "imageOgWidth": 1124,
+    "imageOgHeight": 588
   },
   {
     "slug": "wings-valkyries-game-3-recap",
@@ -191,7 +243,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/wings-valkyries-game-3-recap/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/wings-valkyries-game-3-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "valkyries-wings-game-2-recap",
@@ -216,7 +272,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/valkyries-wings-game-2-recap/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/valkyries-wings-game-2-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "aces-fever-series-breakdown",
@@ -238,7 +298,10 @@
     "imageHero": "/images/articles/aces-fever-series-breakdown/hero-1200.webp",
     "imageHeroWidth": 1200,
     "imageHeroHeight": 675,
-    "imageFocal": "center 11%"
+    "imageFocal": "center top",
+    "imageOg": "/images/articles/aces-fever-series-breakdown/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "clark-no-call-aces-game-3",
@@ -258,7 +321,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/clark-no-call-aces-game-3/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "imageFocal": "center top",
+    "imageOg": "/images/articles/clark-no-call-aces-game-3/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "fever-aces-game-3-recap",
@@ -279,7 +346,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/fever-aces-game-3-recap/hero-2x.webp",
     "imageHero2xWidth": 1600,
-    "imageHero2xHeight": 900
+    "imageHero2xHeight": 900,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/fever-aces-game-3-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "fever-aces-game-2-recap",
@@ -300,7 +371,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/fever-aces-game-2-recap/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/fever-aces-game-2-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "wnba-expansion-teams",
@@ -324,7 +399,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/wnba-expansion-teams/hero-2x.webp",
     "imageHero2xWidth": 1536,
-    "imageHero2xHeight": 864
+    "imageHero2xHeight": 864,
+    "imageFocal": "center 12%",
+    "imageOg": "/images/articles/wnba-expansion-teams/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "liberty-lynx-game-2-recap",
@@ -345,7 +424,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/liberty-lynx-game-2-recap/hero-2x.webp",
     "imageHero2xWidth": 1600,
-    "imageHero2xHeight": 900
+    "imageHero2xHeight": 900,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/liberty-lynx-game-2-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "aces-fever-game-1-aja-wilson-38",
@@ -363,7 +446,11 @@
     "imageSource": "/images/articles/aces-fever-game-1-aja-wilson-38/aja-wilson-aces-2023.webp",
     "imageHero": "/images/articles/aces-fever-game-1-aja-wilson-38/hero-1200.webp",
     "imageHeroWidth": 1200,
-    "imageHeroHeight": 675
+    "imageHeroHeight": 675,
+    "imageFocal": "center 12%",
+    "imageOg": "/images/articles/aces-fever-game-1-aja-wilson-38/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "liberty-lynx-game-1-full-recap",
@@ -381,7 +468,11 @@
     "imageSource": "/images/articles/liberty-lynx-game-1-full-recap/breanna-stewart-usa-2026.webp",
     "imageHero": "/images/articles/liberty-lynx-game-1-full-recap/hero-1200.webp",
     "imageHeroWidth": 1200,
-    "imageHeroHeight": 675
+    "imageHeroHeight": 675,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/liberty-lynx-game-1-full-recap/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "dream-mystics-game-1-howard-reese",
@@ -402,7 +493,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/dream-mystics-game-1-howard-reese/hero-2x.webp",
     "imageHero2xWidth": 1600,
-    "imageHero2xHeight": 900
+    "imageHero2xHeight": 900,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/dream-mystics-game-1-howard-reese/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "valkyries-wings-game-1-zandalasini",
@@ -423,7 +518,11 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/valkyries-wings-game-1-zandalasini/hero-2x.webp",
     "imageHero2xWidth": 1600,
-    "imageHero2xHeight": 900
+    "imageHero2xHeight": 900,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/valkyries-wings-game-1-zandalasini/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   },
   {
     "slug": "fiba-womens-basketball-world-cup-2026",
@@ -440,6 +539,10 @@
     "imageSource": "/images/articles/world-cup-2026/world-cup-2026-hero.webp",
     "imageHero": "/images/articles/world-cup-2026/hero-16x9.webp",
     "imageHeroWidth": 1120,
-    "imageHeroHeight": 630
+    "imageHeroHeight": 630,
+    "imageFocal": "center 20%",
+    "imageOg": "/images/articles/world-cup-2026/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
   }
 ]

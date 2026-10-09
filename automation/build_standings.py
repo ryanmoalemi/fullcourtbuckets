@@ -405,6 +405,32 @@ def team_hrefs(root: Path) -> dict[str, str]:
     return found
 
 
+def series_coverage_html(root: Path) -> str:
+    """A box on the standings page that points at the current playoff series."""
+    href = site_nav.latest_playoffs_href(root)
+    if not href:
+        return ''
+    title = ''
+    for article in links.load_articles(root):
+        try:
+            article_href = links.article_href(article)
+        except ValueError:
+            continue
+        if article_href == href:
+            title = str(article.get('title') or '').strip()
+            break
+    if not title:
+        title = 'Series coverage'
+    return (
+        '<aside class="series-box">'
+        '<p class="info-label">Playoffs</p>'
+        '<h2>Series coverage</h2>'
+        f'<p>{esc(title)}</p>'
+        f'<a href="{esc(href)}">Read the series coverage</a>'
+        '</aside>'
+    )
+
+
 def render_page(root: Path, table: dict) -> str:
     hrefs = team_hrefs(root)
     menu = site_nav.build_menu(root)
@@ -480,21 +506,16 @@ def render_page(root: Path, table: dict) -> str:
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
-<div class="utility"><div class="shell"><div class="utility-tag">WNBA News • Analysis • Commentary</div><div class="utility-note">Independent WNBA news and analysis</div></div></div>
-<header><div class="shell nav"><a class="brand" href="/"><img src="/logo.png" alt="Full Court Buckets"></a>{nav}<a class="watch-btn nav-watch" href="/#latest">Latest Stories</a></div></header>
+{site_nav.render_header(menu, ROUTE)}
 <main class="page">
 <div class="standings-shell">
 <div class="page-header">
 <div class="eyebrow">League</div>
 <h1>{esc(heading)}</h1>
-<p class="subhead">{esc(heading if links.regular_season_is_final(table) else f'{year} Regular Season')}</p>
 <p class="support" id="standings-updated">{esc(support)}</p>
 </div>
+{series_coverage_html(root)}
 <section class="panel">
-<div class="panel-head">
-<h2>{esc(year)} WNBA Standings</h2>
-<div class="last-updated"><span class="dot"></span><span id="updatedAt">Updated: {esc(when)}</span></div>
-</div>
 <div class="table-wrap">
 <table class="standings-table" aria-label="{esc(year)} WNBA Standings">
 <thead>

@@ -185,7 +185,9 @@ class BuildTests(unittest.TestCase):
         inactive = copy.deepcopy(P)
         inactive['active_in_provider_feed'] = False
         archive = b.profile_page(inactive)
-        self.assertIn('not on a current roster', archive)
+        self.assertIn('Inactive player', archive)
+        self.assertIn('id="career"', archive)
+        self.assertNotIn('is a guard and is not on a current roster.', archive)
         self.assertNotIn('The page does not call that retirement or free agency.', archive)
         self.assertNotIn('That alone does not establish retirement', archive)
         self.assertNotIn('active-player', archive)
@@ -275,7 +277,8 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(entity['mainEntity'][0]['name'], "What are Example Player's stats?")
             self.assertIn('12.3 points', entity['mainEntity'][0]['acceptedAnswer']['text'])
             self.assertEqual(html.count('class="faq-item"'), 1)
-            self.assertIn('Related searches', html)
+            self.assertIn('Quick answers', html)
+            self.assertNotIn('Related searches', html)
             self.assertNotIn('no widely', html.casefold())
             self.assertNotIn('have kids', html.casefold())
             self.assertNotIn('<b>', html)
@@ -641,8 +644,16 @@ class BuildTests(unittest.TestCase):
         empty['active_in_provider_feed'] = False
         empty['current_team'] = {'id': 9, 'full_name': 'Old Team'}
         archive = b.answer_summary(empty)
-        self.assertEqual(archive, 'Example Player is a guard and is not on a current roster.')
+        self.assertEqual(archive, 'No WNBA season is available for Example Player, a guard.')
         self.assertNotIn('averaged', archive)
+        self.assertNotIn('is not on a current roster', archive)
+        held_stats = copy.deepcopy(P)
+        held_stats['active_in_provider_feed'] = False
+        named = b.answer_summary(held_stats)
+        self.assertIn('Example Player, a guard', named)
+        self.assertIn('Example Team', named)
+        self.assertIn('2026', named)
+        self.assertNotIn('is not on a current roster', named)
         self.assertNotIn('Old Team', archive)
         self.assertNotIn('retired', archive.lower())
         self.assertNotIn('\u2014', archive)
@@ -704,6 +715,35 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('Archive profiles', page)
         self.assertIn('hub-links', page)
         self.assertNotIn('\u2014', page[profiles:updated])
+        self.assertIn('class="player-row"', page)
+        self.assertIn('class="az-jump"', page)
+        self.assertIn('value="true" selected', page)
+        self.assertIn('Example Player · Example Team', page)
+        self.assertNotIn('Historical player records', page)
+
+    def test_directory_skips_profiles_with_no_season_stats(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            data = root / 'data' / 'wnba' / 'players'
+            data.mkdir(parents=True)
+            thin = {
+                'slug': 'thin-player',
+                'player': {'id': 2, 'first_name': 'Thin', 'last_name': 'Player'},
+                'season_stats': [],
+                'active_in_provider_feed': True,
+            }
+            (data / 'thin-player.json').write_text(json.dumps(thin), encoding='utf-8')
+            (data / 'example-player.json').write_text(json.dumps(P), encoding='utf-8')
+            index = {'checked_at': '2026-10-01T07:31:00+00:00', 'players': [
+                {'id': 2, 'slug': 'thin-player', 'name': 'Thin Player', 'active_in_provider_feed': True, 'current_team': {'full_name': 'Example Team'}},
+                {'id': 1, 'slug': 'example-player', 'name': 'Example Player', 'active_in_provider_feed': True, 'current_team': {'id': 1, 'full_name': 'Example Team'}},
+            ]}
+            page = b.directory_page(index, None, include_standings=False, root=root)
+        self.assertNotIn('/wnba/thin-player/', page)
+        self.assertIn('href="/wnba/example-player/"', page)
+        self.assertIn('1 profiles. Available statistics from 2008 onward.', page)
+        self.assertIn('Example Player · Example Team · 12.3 PPG', page)
+        self.assertLess(page.find('id="featured-players"'), 0)
 
     def test_player_name_has_a_space_between_the_spans(self):
         page = b.profile_page(P)
@@ -812,8 +852,11 @@ class BuildTests(unittest.TestCase):
             page = b.profile_page(profile, root)
         self.assertIn('Inactive player', page)
         self.assertNotIn('Archive profile', page)
-        self.assertIn('Example Player is a guard and is not on a current roster.', page)
-        self.assertIn('In the 2026 season she averaged 12.3 points, 4.5 rebounds and 6.7 assists in 10 games.', page)
+        self.assertIn('id="career"', page)
+        self.assertNotIn('Example Player is a guard and is not on a current roster.', page)
+        self.assertNotIn('In the 2026 season she averaged 12.3 points, 4.5 rebounds and 6.7 assists in 10 games.', page)
+        self.assertIn('12.3 points, 4.5 rebounds and 6.7 assists in 10 games', page)
+        self.assertIn('Example Team in 2026', page)
         self.assertIn('<td>12.3</td>', page)
         self.assertIn('>2026</strong><span>Example Team</span>', page)
         self.assertIn('<dt>Years on record</dt><dd>2026</dd>', page)

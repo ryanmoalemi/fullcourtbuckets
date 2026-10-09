@@ -19,7 +19,7 @@
   height: auto;
   aspect-ratio: 16/9;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 20%;
 }
 
 .article figure.lead-photo figcaption {

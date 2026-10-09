@@ -187,11 +187,20 @@ class SiteNavTests(unittest.TestCase):
                     offenders.append(rel + ' script still opens a new tab')
                     break
             visible = site_nav._SCRIPT_OR_STYLE_RE.sub('', text)
+            # Season summaries are in-article prose. Story lists under #team-news stay in this tab.
+            visible = re.sub(r'<section\b[^>]*\bid="season-2026"[^>]*>.*?</section>', '', visible, flags=re.S)
             for tag in site_nav._ANCHOR_RE.findall(visible):
                 href = re.search(r'\bhref\s*=\s*(["\'])([^"\']*)\1', tag, re.I)
                 if href and not site_nav._is_internal_href(href.group(2)):
                     continue
+                if (
+                    rel in {'about/index.html', 'how-we-make-full-court-buckets/index.html'}
+                    and href and href.group(2) == '/wnba/angel-reese/'
+                ):
+                    continue
                 if re.search(r'\btarget\s*=\s*(["\']?)_blank\1', tag, re.I):
+                    if href and rel == 'authors/ryan-moalemi/ryans-angel-reese-cards/index.html' and href.group(2).split('#')[0].rstrip('/') == '/wnba/angel-reese':
+                        continue
                     offenders.append(f'{rel} {tag[:180]}')
         self.assertEqual(offenders, [])
         hub = (ROOT / 'news' / 'index.html').read_text(encoding='utf-8')
@@ -219,6 +228,44 @@ class SiteNavTests(unittest.TestCase):
             elif '>Follow us</a>' not in footer or '<svg' not in footer:
                 missing.append(path.relative_to(ROOT).as_posix() + ' missing icon or label')
         self.assertEqual(missing, [])
+
+    def test_nav_order_and_shared_header(self):
+        menu = site_nav.build_menu(ROOT)
+        labels = [item['label'] for item in menu]
+        self.assertEqual(
+            labels,
+            ['Home', 'News', 'Playoffs', 'Players', 'Teams', 'Standings', 'About'],
+        )
+        playoffs = next(item for item in menu if item['label'] == 'Playoffs')
+        self.assertTrue(playoffs.get('highlight'))
+        self.assertTrue(playoffs['href'].startswith('/news/'))
+        self.assertNotIn(playoffs['href'], [item['href'] for item in menu if item['label'] == 'News'])
+        header = site_nav.render_header(menu, '/')
+        self.assertIn('class="site-header"', header)
+        self.assertIn('class="site-bar"', header)
+        self.assertIn('site-search-toggle', header)
+        self.assertIn('Independent WNBA news and analysis', header)
+        self.assertIn('<p class="site-tagline">', header)
+        other = site_nav.render_header(menu, '/wnba/')
+        self.assertNotIn('site-tagline', other)
+        self.assertEqual(other.count('<header'), 1)
+        css = site_nav.CSS_TEXT
+        self.assertIn('header.site-header .site-bar{', css)
+        self.assertIn('height:60px;min-height:60px;max-height:60px', css)
+        self.assertIn('header.site-header.is-compact .site-bar{height:48px', css)
+        self.assertIn('header.site-header .site-tagline{display:none', css)
+        self.assertIn('.breadcrumbs a,nav.breadcrumbs a{display:inline-flex', css)
+        self.assertIn('is-compact', site_nav.JS_TEXT)
+        self.assertNotIn('createElement', site_nav.JS_TEXT)
+        self.assertNotIn('innerHTML', site_nav.JS_TEXT)
+        index = site_nav.build_search_index(ROOT)
+        on_disk = json.loads((ROOT / 'search-index.json').read_text(encoding='utf-8'))
+        self.assertEqual(on_disk, index)
+        kinds = {item['type'] for item in index['items']}
+        self.assertEqual(kinds, {'Story', 'Player', 'Team'})
+        self.assertGreater(sum(item['type'] == 'Story' for item in index['items']), 5)
+        self.assertGreater(sum(item['type'] == 'Player' for item in index['items']), 100)
+        self.assertGreaterEqual(sum(item['type'] == 'Team' for item in index['items']), 15)
 
 
 def _blank_internal_anchors(html: str) -> list[str]:

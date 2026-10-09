@@ -1,0 +1,6549 @@
+{
+  "marta-xargay": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/x/xargama01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/marta-xargay-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Spain",
+          "league": "Rio de Janeiro 2016",
+          "games": 4,
+          "pts": 12.3
+        }
+      ]
+    },
+    "slug": "marta-xargay",
+    "name": "Marta Xargay"
+  },
+  "crystal-bradford": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bradfcr01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/b/bradfcr01w.html"
+    },
+    "college": {
+      "name": "Central Michigan University",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bradfcr01w.html"
+    },
+    "match": "wnba",
+    "slug": "crystal-bradford",
+    "name": "Crystal Bradford"
+  },
+  "diana-taurasi": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tauradi01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/t/tauradi01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/t/tauradi01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/diana-taurasi-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 8.2
+        },
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 9.4
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 12.2
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 14.2
+        },
+        {
+          "season": "2020",
+          "team": "United States",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 8.0
+        },
+        {
+          "season": "2024",
+          "team": "United States",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 0.7
+        }
+      ]
+    },
+    "slug": "diana-taurasi",
+    "name": "Diana Taurasi"
+  },
+  "sylvia-fowles": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fowlesy01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/f/fowlesy01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/f/fowlesy01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/sylvia-fowles-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 12.0
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 2,
+          "pts": 4.0
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 9.6
+        },
+        {
+          "season": "2020",
+          "team": "United States",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 7.3
+        }
+      ]
+    },
+    "slug": "sylvia-fowles",
+    "name": "Sylvia Fowles"
+  },
+  "tina-charles": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/charlti01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/c/charlti01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/c/charlti01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/tina-charles-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 12.8
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 12.2
+        },
+        {
+          "season": "2020",
+          "team": "United States",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 7.0
+        }
+      ]
+    },
+    "slug": "tina-charles",
+    "name": "Tina Charles"
+  },
+  "epiphanny-prince": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/princep01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/p/princep01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/p/princep01w.html"
+    },
+    "match": "wnba",
+    "slug": "epiphanny-prince",
+    "name": "Epiphanny Prince"
+  },
+  "kristi-toliver": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html"
+    },
+    "match": "wnba",
+    "slug": "kristi-toliver",
+    "name": "Kristi Toliver"
+  },
+  "allie-quigley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/q/quiglal01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 8,
+      "overall": 22,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/q/quiglal01w.html"
+    },
+    "college": {
+      "name": "DePaul",
+      "source": "https://www.basketball-reference.com/wnba/players/q/quiglal01w.html"
+    },
+    "match": "wnba",
+    "slug": "allie-quigley",
+    "name": "Allie Quigley"
+  },
+  "candice-dupree": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dupreca01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dupreca01w.html"
+    },
+    "college": {
+      "name": "Temple",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dupreca01w.html"
+    },
+    "match": "wnba",
+    "slug": "candice-dupree",
+    "name": "Candice Dupree"
+  },
+  "briann-january": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/januabr01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/j/januabr01w.html"
+    },
+    "college": {
+      "name": "Arizona State",
+      "source": "https://www.basketball-reference.com/wnba/players/j/januabr01w.html"
+    },
+    "match": "wnba",
+    "slug": "briann-january",
+    "name": "Briann January"
+  },
+  "angel-mccoughtry": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccouan01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccouan01w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccouan01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/angel-mccoughtry-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 13.0
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 9.4
+        }
+      ]
+    },
+    "slug": "angel-mccoughtry",
+    "name": "Angel McCoughtry"
+  },
+  "seimone-augustus": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/augusse01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/a/augusse01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/a/augusse01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/seimone-augustus-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 9.6
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 7.4
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 5.6
+        }
+      ]
+    },
+    "slug": "seimone-augustus",
+    "name": "Seimone Augustus"
+  },
+  "crystal-langhorne": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/langhcr01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/l/langhcr01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/l/langhcr01w.html"
+    },
+    "match": "wnba",
+    "slug": "crystal-langhorne",
+    "name": "Crystal Langhorne"
+  },
+  "sue-bird": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/birdsu01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2002,
+      "source": "https://www.basketball-reference.com/wnba/players/b/birdsu01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/b/birdsu01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/sue-bird-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 3.4
+        },
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 3.2
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 4.6
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 4.6
+        },
+        {
+          "season": "2020",
+          "team": "United States",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 3.0
+        }
+      ]
+    },
+    "slug": "sue-bird",
+    "name": "Sue Bird"
+  },
+  "essence-carson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/carsoes01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/c/carsoes01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/c/carsoes01w.html"
+    },
+    "match": "wnba",
+    "slug": "essence-carson",
+    "name": "Essence Carson"
+  },
+  "jasmine-thomas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/thomaja01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/t/thomaja01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/t/thomaja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jasmine-thomas",
+    "name": "Jasmine Thomas"
+  },
+  "leilani-mitchell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mitchle01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 11,
+      "overall": 25,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mitchle01w.html"
+    },
+    "college": {
+      "name": "Utah",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mitchle01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/leilani-mitchell-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 11.6
+        },
+        {
+          "season": "2020",
+          "team": "Australia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 7.7
+        }
+      ]
+    },
+    "slug": "leilani-mitchell",
+    "name": "Leilani Mitchell"
+  },
+  "kia-vaughn": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/v/vaughki01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/v/vaughki01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/v/vaughki01w.html"
+    },
+    "match": "wnba",
+    "slug": "kia-vaughn",
+    "name": "Kia Vaughn"
+  },
+  "shavonte-zellous": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/z/zellosh01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/z/zellosh01w.html"
+    },
+    "college": {
+      "name": "Pitt",
+      "source": "https://www.basketball-reference.com/wnba/players/z/zellosh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shavonte-zellous",
+    "name": "Shavonte Zellous"
+  },
+  "sancho-lyttle": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lyttlsa01w.html",
+    "draft": {
+      "team": "Houston Comets",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lyttlsa01w.html"
+    },
+    "college": {
+      "name": "Houston",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lyttlsa01w.html"
+    },
+    "match": "wnba",
+    "slug": "sancho-lyttle",
+    "name": "Sancho Lyttle"
+  },
+  "danielle-robinson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/robinda01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinda01w.html"
+    },
+    "college": {
+      "name": "Oklahoma",
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinda01w.html"
+    },
+    "match": "wnba",
+    "slug": "danielle-robinson",
+    "name": "Danielle Robinson"
+  },
+  "tamera-young": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/y/youngta01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngta01w.html"
+    },
+    "college": {
+      "name": "James Madison University",
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngta01w.html"
+    },
+    "match": "wnba",
+    "slug": "tamera-young",
+    "name": "Tamera Young"
+  },
+  "cappie-pondexter": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pondeca01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pondeca01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pondeca01w.html"
+    },
+    "match": "wnba",
+    "slug": "cappie-pondexter",
+    "name": "Cappie Pondexter"
+  },
+  "candace-parker": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/parkeca01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/p/parkeca01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/p/parkeca01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/candace-parker-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 10.0
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 8.8
+        }
+      ]
+    },
+    "slug": "candace-parker",
+    "name": "Candace Parker"
+  },
+  "lindsay-whalen": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/whaleli01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/w/whaleli01w.html"
+    },
+    "college": {
+      "name": "Minnesota",
+      "source": "https://www.basketball-reference.com/wnba/players/w/whaleli01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/lindsay-whalen-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 10.0
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 6.2
+        }
+      ]
+    },
+    "slug": "lindsay-whalen",
+    "name": "Lindsay Whalen"
+  },
+  "renee-montgomery": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/montgre01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/m/montgre01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/m/montgre01w.html"
+    },
+    "match": "wnba",
+    "slug": "renee-montgomery",
+    "name": "Renee Montgomery"
+  },
+  "jantel-lavender": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lavenja01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lavenja01w.html"
+    },
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lavenja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jantel-lavender",
+    "name": "Jantel Lavender"
+  },
+  "monique-currie": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/currimo01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/c/currimo01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/c/currimo01w.html"
+    },
+    "match": "wnba",
+    "slug": "monique-currie",
+    "name": "Monique Currie"
+  },
+  "damiris-dantas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dantada01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dantada01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/damiris-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Brazil",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 4.0
+        },
+        {
+          "season": "2016",
+          "team": "Brazil",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 16.8
+        }
+      ]
+    },
+    "slug": "damiris-dantas",
+    "name": "Damiris Dantas"
+  },
+  "tanisha-wright": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html"
+    },
+    "college": {
+      "name": "Penn State",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html"
+    },
+    "match": "wnba",
+    "slug": "tanisha-wright",
+    "name": "Tanisha Wright"
+  },
+  "layshia-clarendon": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/clarela01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/c/clarela01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/c/clarela01w.html"
+    },
+    "match": "wnba",
+    "slug": "layshia-clarendon",
+    "name": "Layshia Clarendon"
+  },
+  "noelle-quinn": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/q/quinnno01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/q/quinnno01w.html"
+    },
+    "college": {
+      "name": "UCLA",
+      "source": "https://www.basketball-reference.com/wnba/players/q/quinnno01w.html"
+    },
+    "match": "wnba",
+    "slug": "noelle-quinn",
+    "name": "Noelle Quinn"
+  },
+  "sydney-colson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/colsosy01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/c/colsosy01w.html"
+    },
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/c/colsosy01w.html"
+    },
+    "match": "wnba",
+    "slug": "sydney-colson",
+    "name": "Sydney Colson"
+  },
+  "elena-delle-donne": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/delleel01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/d/delleel01w.html"
+    },
+    "college": {
+      "name": "University of Delaware",
+      "source": "https://www.basketball-reference.com/wnba/players/d/delleel01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/elena-delledonne-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 4,
+          "pts": 8.5
+        }
+      ]
+    },
+    "slug": "elena-delle-donne",
+    "name": "Elena Delle Donne"
+  },
+  "jia-perkins": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/perkiji01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 3,
+      "pick": 9,
+      "overall": 35,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/p/perkiji01w.html"
+    },
+    "college": {
+      "name": "Texas Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/p/perkiji01w.html"
+    },
+    "match": "wnba",
+    "slug": "jia-perkins",
+    "name": "Jia Perkins"
+  },
+  "aerial-powers": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/powerae01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/p/powerae01w.html"
+    },
+    "college": {
+      "name": "Michigan State",
+      "source": "https://www.basketball-reference.com/wnba/players/p/powerae01w.html"
+    },
+    "match": "wnba",
+    "slug": "aerial-powers",
+    "name": "Aerial Powers"
+  },
+  "alana-beard": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/beardal01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/b/beardal01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/b/beardal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alana-beard",
+    "name": "Alana Beard"
+  },
+  "riquna-williams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/williri02w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/w/williri02w.html"
+    },
+    "college": {
+      "name": "Miami (FL)",
+      "source": "https://www.basketball-reference.com/wnba/players/w/williri02w.html"
+    },
+    "match": "wnba",
+    "slug": "riquna-williams",
+    "name": "Riquna Williams"
+  },
+  "matee-ajavon": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/ajavoma01w.html",
+    "draft": {
+      "team": "Houston Comets",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/a/ajavoma01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/a/ajavoma01w.html"
+    },
+    "match": "wnba",
+    "slug": "matee-ajavon",
+    "name": "Matee Ajavon"
+  },
+  "bria-hartley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hartlbr01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hartlbr01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hartlbr01w.html"
+    },
+    "match": "wnba",
+    "slug": "bria-hartley",
+    "name": "Bria Hartley"
+  },
+  "ivory-latta": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html"
+    },
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html"
+    },
+    "match": "wnba",
+    "slug": "ivory-latta",
+    "name": "Ivory Latta"
+  },
+  "erika-de-souza": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/desouer01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/erika-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Brazil",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 8.2
+        },
+        {
+          "season": "2012",
+          "team": "Brazil",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 16.2
+        },
+        {
+          "season": "2016",
+          "team": "Brazil",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 9.0
+        }
+      ]
+    },
+    "slug": "erika-de-souza",
+    "name": "Erika de Souza"
+  },
+  "plenette-pierson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pierspl01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2003,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pierspl01w.html"
+    },
+    "college": {
+      "name": "Texas Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pierspl01w.html"
+    },
+    "match": "wnba",
+    "slug": "plenette-pierson",
+    "name": "Plenette Pierson"
+  },
+  "tiffany-mitchell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mitchti01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mitchti01w.html"
+    },
+    "college": {
+      "name": "South Carolina",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mitchti01w.html"
+    },
+    "match": "wnba",
+    "slug": "tiffany-mitchell",
+    "name": "Tiffany Mitchell"
+  },
+  "karima-christmas-kelly": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/chriska02w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 2,
+      "pick": 11,
+      "overall": 23,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/c/chriska02w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/c/chriska02w.html"
+    },
+    "match": "wnba",
+    "slug": "karima-christmas-kelly",
+    "name": "Karima Christmas-Kelly"
+  },
+  "marissa-coleman": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/colemma01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/c/colemma01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/c/colemma01w.html"
+    },
+    "match": "wnba",
+    "slug": "marissa-coleman",
+    "name": "Marissa Coleman"
+  },
+  "shekinna-stricklen": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/stricsh01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/s/stricsh01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/s/stricsh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shekinna-stricklen",
+    "name": "Shekinna Stricklen"
+  },
+  "tianna-hawkins": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hawkiti01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hawkiti01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hawkiti01w.html"
+    },
+    "match": "wnba",
+    "slug": "tianna-hawkins",
+    "name": "Tianna Hawkins"
+  },
+  "tamika-catchings": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/catchta01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/c/catchta01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/c/catchta01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/tamika-catchings-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 7.8
+        },
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 7.6
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 5.8
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 3.8
+        }
+      ]
+    },
+    "slug": "tamika-catchings",
+    "name": "Tamika Catchings"
+  },
+  "moriah-jefferson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jeffemo01w.html",
+    "draft": {
+      "team": "San Antonio Stars",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jeffemo01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jeffemo01w.html"
+    },
+    "match": "wnba",
+    "slug": "moriah-jefferson",
+    "name": "Moriah Jefferson"
+  },
+  "swin-cash": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cashsw01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2002,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cashsw01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cashsw01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/swin-cash-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 8.2
+        },
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 3.4
+        }
+      ]
+    },
+    "slug": "swin-cash",
+    "name": "Swin Cash"
+  },
+  "rebekkah-brunson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brunsre01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/b/brunsre01w.html"
+    },
+    "college": {
+      "name": "Georgetown",
+      "source": "https://www.basketball-reference.com/wnba/players/b/brunsre01w.html"
+    },
+    "match": "wnba",
+    "slug": "rebekkah-brunson",
+    "name": "Rebekkah Brunson"
+  },
+  "erlana-larkins": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/larkier01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 14,
+      "overall": 14,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/l/larkier01w.html"
+    },
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/l/larkier01w.html"
+    },
+    "match": "wnba",
+    "slug": "erlana-larkins",
+    "name": "Erlana Larkins"
+  },
+  "jessica-breland": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brelaje01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/b/brelaje01w.html"
+    },
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/b/brelaje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jessica-breland",
+    "name": "Jessica Breland"
+  },
+  "courtney-paris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/parisco01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/p/parisco01w.html"
+    },
+    "college": {
+      "name": "Oklahoma",
+      "source": "https://www.basketball-reference.com/wnba/players/p/parisco01w.html"
+    },
+    "match": "wnba",
+    "slug": "courtney-paris",
+    "name": "Courtney Paris"
+  },
+  "kayla-alexander": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/alexaka01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/a/alexaka01w.html"
+    },
+    "college": {
+      "name": "Syracuse",
+      "source": "https://www.basketball-reference.com/wnba/players/a/alexaka01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/kayla-alexander-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Canada",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 3.3
+        },
+        {
+          "season": "2024",
+          "team": "Canada",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 9.3
+        }
+      ]
+    },
+    "slug": "kayla-alexander",
+    "name": "Kayla Alexander"
+  },
+  "theresa-plaisance": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/plaisth01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 3,
+      "pick": 3,
+      "overall": 27,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/p/plaisth01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/p/plaisth01w.html"
+    },
+    "match": "wnba",
+    "slug": "theresa-plaisance",
+    "name": "Theresa Plaisance"
+  },
+  "carolyn-swords": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/swordca01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/s/swordca01w.html"
+    },
+    "college": {
+      "name": "Boston College",
+      "source": "https://www.basketball-reference.com/wnba/players/s/swordca01w.html"
+    },
+    "match": "wnba",
+    "slug": "carolyn-swords",
+    "name": "Carolyn Swords"
+  },
+  "maya-moore": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/moorema01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/m/moorema01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/m/moorema01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/maya-moore-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 9.2
+        },
+        {
+          "season": "2016",
+          "team": "United States",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 9.6
+        }
+      ]
+    },
+    "slug": "maya-moore",
+    "name": "Maya Moore"
+  },
+  "sophia-young-malcolm": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/y/youngso01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngso01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngso01w.html"
+    },
+    "match": "wnba",
+    "slug": "sophia-young-malcolm",
+    "name": "Sophia Young-Malcolm"
+  },
+  "candice-wiggins": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html"
+    },
+    "match": "wnba",
+    "slug": "candice-wiggins",
+    "name": "Candice Wiggins"
+  },
+  "delisha-milton-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/miltode01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 1999,
+      "source": "https://www.basketball-reference.com/wnba/players/m/miltode01w.html"
+    },
+    "college": {
+      "name": "Florida",
+      "source": "https://www.basketball-reference.com/wnba/players/m/miltode01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/delisha-milton-jones-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 1.6
+        }
+      ]
+    },
+    "slug": "delisha-milton-jones",
+    "name": "DeLisha Milton-Jones"
+  },
+  "glory-johnson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/johnsgl01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnsgl01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnsgl01w.html"
+    },
+    "match": "wnba",
+    "slug": "glory-johnson",
+    "name": "Glory Johnson"
+  },
+  "sugar-rodgers": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/rodgesu01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/r/rodgesu01w.html"
+    },
+    "college": {
+      "name": "Georgetown",
+      "source": "https://www.basketball-reference.com/wnba/players/r/rodgesu01w.html"
+    },
+    "match": "wnba",
+    "slug": "sugar-rodgers",
+    "name": "Sugar Rodgers"
+  },
+  "lindsey-harding": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hardili01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hardili01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hardili01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/lindsey-harding-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Belarus",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 13.8
+        }
+      ]
+    },
+    "slug": "lindsey-harding",
+    "name": "Lindsey Harding"
+  },
+  "tiffany-jackson-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jacksti02w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jacksti02w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jacksti02w.html"
+    },
+    "match": "wnba",
+    "slug": "tiffany-jackson-jones",
+    "name": "Tiffany Jackson-Jones"
+  },
+  "temeka-johnson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/johnste01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnste01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnste01w.html"
+    },
+    "match": "wnba",
+    "slug": "temeka-johnson",
+    "name": "Temeka Johnson"
+  },
+  "teaira-mccowan": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccowte01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccowte01w.html"
+    },
+    "college": {
+      "name": "Mississippi State",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccowte01w.html"
+    },
+    "match": "wnba",
+    "slug": "teaira-mccowan",
+    "name": "Teaira McCowan"
+  },
+  "natalie-achonwa": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/achonna01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/a/achonna01w.html"
+    },
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/a/achonna01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/natalie-achonwa-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Canada",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 7.8
+        },
+        {
+          "season": "2016",
+          "team": "Canada",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 5.6
+        },
+        {
+          "season": "2020",
+          "team": "Canada",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 8.3
+        },
+        {
+          "season": "2024",
+          "team": "Canada",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 4.3
+        }
+      ]
+    },
+    "slug": "natalie-achonwa",
+    "name": "Natalie Achonwa"
+  },
+  "roneeka-hodges": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hodgero01w.html",
+    "draft": {
+      "team": "Houston Comets",
+      "round": 2,
+      "pick": 2,
+      "overall": 15,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hodgero01w.html"
+    },
+    "college": {
+      "name": "Florida State",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hodgero01w.html"
+    },
+    "match": "wnba",
+    "slug": "roneeka-hodges",
+    "name": "Roneeka Hodges"
+  },
+  "shay-murphy": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/murphsh01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 2,
+      "overall": 15,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/m/murphsh01w.html"
+    },
+    "college": {
+      "name": "USC",
+      "source": "https://www.basketball-reference.com/wnba/players/m/murphsh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shay-murphy",
+    "name": "Shay Murphy"
+  },
+  "amanda-zahui-b": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/z/zahuiam01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/z/zahuiam01w.html"
+    },
+    "college": {
+      "name": "Minnesota",
+      "source": "https://www.basketball-reference.com/wnba/players/z/zahuiam01w.html"
+    },
+    "match": "wnba",
+    "slug": "amanda-zahui-b",
+    "name": "Amanda Zahui B."
+  },
+  "erin-phillips": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/philler01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 2,
+      "pick": 8,
+      "overall": 21,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/p/philler01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/erin-phillips-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "Australia",
+          "league": "Beijing 2008",
+          "games": 4,
+          "pts": 0.5
+        },
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 3.6
+        }
+      ]
+    },
+    "slug": "erin-phillips",
+    "name": "Erin Phillips"
+  },
+  "jennifer-lacy": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lacyje01w.html",
+    "college": {
+      "name": "Pepperdine",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lacyje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jennifer-lacy",
+    "name": "Jennifer Lacy"
+  },
+  "armintie-herrington": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pricear01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pricear01w.html"
+    },
+    "college": {
+      "name": "Ole Miss",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pricear01w.html"
+    },
+    "match": "wnba",
+    "slug": "armintie-herrington",
+    "name": "Armintie Herrington"
+  },
+  "tierra-ruffin-pratt": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/ruffiti01w.html",
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/r/ruffiti01w.html"
+    },
+    "match": "wnba",
+    "slug": "tierra-ruffin-pratt",
+    "name": "Tierra Ruffin-Pratt"
+  },
+  "lindsay-allen": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/allenli01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/a/allenli01w.html"
+    },
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/a/allenli01w.html"
+    },
+    "match": "wnba",
+    "slug": "lindsay-allen",
+    "name": "Lindsay Allen"
+  },
+  "alex-montgomery": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/montgal01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/m/montgal01w.html"
+    },
+    "college": {
+      "name": "Georgia Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/m/montgal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alex-montgomery",
+    "name": "Alex Montgomery"
+  },
+  "becky-hammon": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hammobe01w.html",
+    "college": {
+      "name": "Colorado State",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hammobe01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/becky-hammon-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "Russia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 12.4
+        },
+        {
+          "season": "2012",
+          "team": "Russia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 9.2
+        }
+      ]
+    },
+    "slug": "becky-hammon",
+    "name": "Becky Hammon"
+  },
+  "katie-douglas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/douglka01w.html",
+    "draft": {
+      "team": "Orlando Miracle",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/d/douglka01w.html"
+    },
+    "college": {
+      "name": "Purdue",
+      "source": "https://www.basketball-reference.com/wnba/players/d/douglka01w.html"
+    },
+    "match": "wnba",
+    "slug": "katie-douglas",
+    "name": "Katie Douglas"
+  },
+  "shameka-christon": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/chrissh01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/c/chrissh01w.html"
+    },
+    "college": {
+      "name": "Arkansas",
+      "source": "https://www.basketball-reference.com/wnba/players/c/chrissh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shameka-christon",
+    "name": "Shameka Christon"
+  },
+  "chiney-ogwumike": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/o/ogwumch01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/o/ogwumch01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/o/ogwumch01w.html"
+    },
+    "match": "wnba",
+    "slug": "chiney-ogwumike",
+    "name": "Chiney Ogwumike"
+  },
+  "tayler-hill": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hillta01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hillta01w.html"
+    },
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hillta01w.html"
+    },
+    "match": "wnba",
+    "slug": "tayler-hill",
+    "name": "Tayler Hill"
+  },
+  "emma-meesseman": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/meessem01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 2,
+      "pick": 7,
+      "overall": 19,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/m/meessem01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/emma-meesseman-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Belgium",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 27.3
+        },
+        {
+          "season": "2024",
+          "team": "Belgium",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 26.3
+        }
+      ]
+    },
+    "slug": "emma-meesseman",
+    "name": "Emma Meesseman"
+  },
+  "alex-bentley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bentlal01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/b/bentlal01w.html"
+    },
+    "college": {
+      "name": "Penn State",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bentlal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alex-bentley",
+    "name": "Alex Bentley"
+  },
+  "charde-houston": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/houstch01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 2,
+      "overall": 30,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/h/houstch01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/h/houstch01w.html"
+    },
+    "match": "wnba",
+    "slug": "charde-houston",
+    "name": "Charde Houston"
+  },
+  "monica-wright": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wrighmo01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wrighmo01w.html"
+    },
+    "college": {
+      "name": "Virginia",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wrighmo01w.html"
+    },
+    "match": "wnba",
+    "slug": "monica-wright",
+    "name": "Monica Wright"
+  },
+  "kara-braxton": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/braxtka01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/b/braxtka01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/b/braxtka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kara-braxton",
+    "name": "Kara Braxton"
+  },
+  "ebony-hoffman": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hoffmeb01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hoffmeb01w.html"
+    },
+    "college": {
+      "name": "USC",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hoffmeb01w.html"
+    },
+    "match": "wnba",
+    "slug": "ebony-hoffman",
+    "name": "Ebony Hoffman"
+  },
+  "michelle-snow": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/snowmi01w.html",
+    "draft": {
+      "team": "Houston Comets",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2002,
+      "source": "https://www.basketball-reference.com/wnba/players/s/snowmi01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/s/snowmi01w.html"
+    },
+    "match": "wnba",
+    "slug": "michelle-snow",
+    "name": "Michelle Snow"
+  },
+  "latoya-sanders": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pringla01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 13,
+      "overall": 13,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pringla01w.html"
+    },
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pringla01w.html"
+    },
+    "match": "wnba",
+    "slug": "latoya-sanders",
+    "name": "LaToya Sanders"
+  },
+  "tan-white": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/whiteta01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/w/whiteta01w.html"
+    },
+    "college": {
+      "name": "Mississippi State",
+      "source": "https://www.basketball-reference.com/wnba/players/w/whiteta01w.html"
+    },
+    "match": "wnba",
+    "slug": "tan-white",
+    "name": "Tan White"
+  },
+  "lynetta-kizer": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kizerly01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/k/kizerly01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kizerly01w.html"
+    },
+    "match": "wnba",
+    "slug": "lynetta-kizer",
+    "name": "Lynetta Kizer"
+  },
+  "krystal-thomas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/thomakr01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 3,
+      "pick": 12,
+      "overall": 36,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/t/thomakr01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/t/thomakr01w.html"
+    },
+    "match": "wnba",
+    "slug": "krystal-thomas",
+    "name": "Krystal Thomas"
+  },
+  "astou-ndour-fall": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/n/ndouras01w.html",
+    "draft": {
+      "team": "San Antonio Stars",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/n/ndouras01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/astou-ndour-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Spain",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 14.2
+        },
+        {
+          "season": "2020",
+          "team": "Spain",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 22.7
+        }
+      ]
+    },
+    "slug": "astou-ndour-fall",
+    "name": "Astou Ndour-Fall"
+  },
+  "jayne-appel-marinelli": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/appelja01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/a/appelja01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/a/appelja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jayne-appel-marinelli",
+    "name": "Jayne Appel-Marinelli"
+  },
+  "joyner-holmes": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holmejo02w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 7,
+      "overall": 19,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/h/holmejo02w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holmejo02w.html"
+    },
+    "match": "wnba",
+    "slug": "joyner-holmes",
+    "name": "Joyner Holmes"
+  },
+  "avery-warley-talbert": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/warleav01w.html",
+    "college": {
+      "name": "Liberty",
+      "source": "https://www.basketball-reference.com/wnba/players/w/warleav01w.html"
+    },
+    "match": "wnba",
+    "slug": "avery-warley-talbert",
+    "name": "Avery Warley-Talbert"
+  },
+  "liz-cambage": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cambael01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cambael01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/liz-cambage-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 14.0
+        },
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 22.4
+        }
+      ]
+    },
+    "slug": "liz-cambage",
+    "name": "Liz Cambage"
+  },
+  "tina-thompson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/thompti01w.html",
+    "draft": {
+      "team": "Houston Comets",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 1997,
+      "source": "https://www.basketball-reference.com/wnba/players/t/thompti01w.html"
+    },
+    "college": {
+      "name": "USC",
+      "source": "https://www.basketball-reference.com/wnba/players/t/thompti01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/tina-thompson-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 12.2
+        },
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 15.2
+        }
+      ]
+    },
+    "slug": "tina-thompson",
+    "name": "Tina Thompson"
+  },
+  "asjha-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jonesas01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2002,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesas01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesas01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/asjha-jones-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "United States",
+          "league": "London 2012",
+          "games": 4,
+          "pts": 4.5
+        }
+      ]
+    },
+    "slug": "asjha-jones",
+    "name": "Asjha Jones"
+  },
+  "penny-taylor": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/taylope01w.html",
+    "draft": {
+      "team": "Cleveland Rockers",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/t/taylope01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/penny-taylor-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Australia",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 15.6
+        },
+        {
+          "season": "2008",
+          "team": "Australia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 12.8
+        },
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 15.4
+        }
+      ]
+    },
+    "slug": "penny-taylor",
+    "name": "Penny Taylor"
+  },
+  "diamond-deshields": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/deshidi01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/d/deshidi01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/d/deshidi01w.html"
+    },
+    "match": "wnba",
+    "slug": "diamond-deshields",
+    "name": "Diamond DeShields"
+  },
+  "kara-lawson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lawsoka01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2003,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lawsoka01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lawsoka01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/kara-lawson-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 5.6
+        }
+      ]
+    },
+    "slug": "kara-lawson",
+    "name": "Kara Lawson"
+  },
+  "katie-smith": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/smithka01w.html",
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/s/smithka01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/katie-smith-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "United States",
+          "league": "Athens 2004",
+          "games": 3,
+          "pts": 0.0
+        },
+        {
+          "season": "2008",
+          "team": "United States",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 6.4
+        }
+      ]
+    },
+    "slug": "katie-smith",
+    "name": "Katie Smith"
+  },
+  "danielle-adams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/adamsda01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 8,
+      "overall": 20,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/a/adamsda01w.html"
+    },
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/a/adamsda01w.html"
+    },
+    "match": "wnba",
+    "slug": "danielle-adams",
+    "name": "Danielle Adams"
+  },
+  "janel-mccarville": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccarja01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccarja01w.html"
+    },
+    "college": {
+      "name": "Minnesota",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccarja01w.html"
+    },
+    "match": "wnba",
+    "slug": "janel-mccarville",
+    "name": "Janel McCarville"
+  },
+  "allison-hightower": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hightal01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hightal01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hightal01w.html"
+    },
+    "match": "wnba",
+    "slug": "allison-hightower",
+    "name": "Allison Hightower"
+  },
+  "shenise-johnson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/johnssh02w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnssh02w.html"
+    },
+    "college": {
+      "name": "Miami (FL)",
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnssh02w.html"
+    },
+    "match": "wnba",
+    "slug": "shenise-johnson",
+    "name": "Shenise Johnson"
+  },
+  "kaela-davis": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/daviska01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/d/daviska01w.html"
+    },
+    "match": "wnba",
+    "slug": "kaela-davis",
+    "name": "Kaela Davis"
+  },
+  "lecoe-willingham": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/willile01w.html",
+    "college": {
+      "name": "Auburn",
+      "source": "https://www.basketball-reference.com/wnba/players/w/willile01w.html"
+    },
+    "match": "wnba",
+    "slug": "lecoe-willingham",
+    "name": "Le'coe Willingham"
+  },
+  "shey-peddy": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/peddysh01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 2,
+      "pick": 11,
+      "overall": 23,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/p/peddysh01w.html"
+    },
+    "college": {
+      "name": "Temple",
+      "source": "https://www.basketball-reference.com/wnba/players/p/peddysh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shey-peddy",
+    "name": "Shey Peddy"
+  },
+  "victoria-vivians": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html"
+    },
+    "college": {
+      "name": "Mississippi State",
+      "source": "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html"
+    },
+    "match": "wnba",
+    "slug": "victoria-vivians",
+    "name": "Victoria Vivians"
+  },
+  "cathrine-kraayeveld": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kraayca01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 3,
+      "pick": 1,
+      "overall": 27,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/k/kraayca01w.html"
+    },
+    "college": {
+      "name": "Oregon",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kraayca01w.html"
+    },
+    "match": "wnba",
+    "slug": "cathrine-kraayeveld",
+    "name": "Cathrine Kraayeveld"
+  },
+  "kayla-pedersen": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pederka01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pederka01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pederka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kayla-pedersen",
+    "name": "Kayla Pedersen"
+  },
+  "nakia-sanford": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/sanfona01w.html",
+    "college": {
+      "name": "Kansas",
+      "source": "https://www.basketball-reference.com/wnba/players/s/sanfona01w.html"
+    },
+    "match": "wnba",
+    "slug": "nakia-sanford",
+    "name": "Nakia Sanford"
+  },
+  "alexis-hornbuckle": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hornbal01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hornbal01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hornbal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alexis-hornbuckle",
+    "name": "Alexis Hornbuckle"
+  },
+  "erin-thorn": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/thorner01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2003,
+      "source": "https://www.basketball-reference.com/wnba/players/t/thorner01w.html"
+    },
+    "college": {
+      "name": "BYU",
+      "source": "https://www.basketball-reference.com/wnba/players/t/thorner01w.html"
+    },
+    "match": "wnba",
+    "slug": "erin-thorn",
+    "name": "Erin Thorn"
+  },
+  "reshanda-gray": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/grayre01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/g/grayre01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/g/grayre01w.html"
+    },
+    "match": "wnba",
+    "slug": "reshanda-gray",
+    "name": "Reshanda Gray"
+  },
+  "kaleena-mosqueda-lewis": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mosquka01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mosquka01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mosquka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kaleena-mosqueda-lewis",
+    "name": "Kaleena Mosqueda-Lewis"
+  },
+  "kalana-greene": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/greenka01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/g/greenka01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/g/greenka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kalana-greene",
+    "name": "Kalana Greene"
+  },
+  "ruth-riley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html",
+    "draft": {
+      "team": "Miami Sol",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html"
+    },
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html"
+    },
+    "match": "wnba",
+    "slug": "ruth-riley",
+    "name": "Ruth Riley"
+  },
+  "devereaux-peters": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/peterde01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/p/peterde01w.html"
+    },
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/p/peterde01w.html"
+    },
+    "match": "wnba",
+    "slug": "devereaux-peters",
+    "name": "Devereaux Peters"
+  },
+  "aneika-henry-morello": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/henryan01w.html",
+    "college": {
+      "name": "Florida",
+      "source": "https://www.basketball-reference.com/wnba/players/h/henryan01w.html"
+    },
+    "match": "wnba",
+    "slug": "aneika-henry-morello",
+    "name": "Aneika Henry-Morello"
+  },
+  "jessica-moore": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mooreje01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 2,
+      "pick": 11,
+      "overall": 24,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mooreje01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mooreje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jessica-moore",
+    "name": "Jessica Moore"
+  },
+  "jeanette-pohlen-mavunga": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pohleje01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pohleje01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/p/pohleje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jeanette-pohlen-mavunga",
+    "name": "Jeanette Pohlen-Mavunga"
+  },
+  "ashley-robinson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/robinas01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 1,
+      "overall": 14,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinas01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinas01w.html"
+    },
+    "match": "wnba",
+    "slug": "ashley-robinson",
+    "name": "Ashley Robinson"
+  },
+  "chennedy-carter": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cartech01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cartech01w.html"
+    },
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cartech01w.html"
+    },
+    "match": "wnba",
+    "slug": "chennedy-carter",
+    "name": "Chennedy Carter"
+  },
+  "crystal-dangerfield": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
+    },
+    "match": "wnba",
+    "slug": "crystal-dangerfield",
+    "name": "Crystal Dangerfield"
+  },
+  "kelsey-bone": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/boneke01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/b/boneke01w.html"
+    },
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/b/boneke01w.html"
+    },
+    "match": "wnba",
+    "slug": "kelsey-bone",
+    "name": "Kelsey Bone"
+  },
+  "taj-mcwilliams-franklin": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mcwilta01w.html",
+    "draft": {
+      "team": "Orlando Miracle",
+      "round": 3,
+      "pick": 8,
+      "overall": 32,
+      "year": 1999,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mcwilta01w.html"
+    },
+    "match": "wnba",
+    "slug": "taj-mcwilliams-franklin",
+    "name": "Taj McWilliams-Franklin"
+  },
+  "nicky-anosike": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/anosini01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 2,
+      "overall": 16,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/a/anosini01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/a/anosini01w.html"
+    },
+    "match": "wnba",
+    "slug": "nicky-anosike",
+    "name": "Nicky Anosike"
+  },
+  "tammy-sutton-brown": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/suttota01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 2,
+      "pick": 2,
+      "overall": 18,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/s/suttota01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/s/suttota01w.html"
+    },
+    "match": "wnba",
+    "slug": "tammy-sutton-brown",
+    "name": "Tammy Sutton-Brown"
+  },
+  "sug-sutton": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/suttosu01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 3,
+      "pick": 12,
+      "overall": 36,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/s/suttosu01w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/s/suttosu01w.html"
+    },
+    "match": "wnba",
+    "slug": "sug-sutton",
+    "name": "Sug Sutton"
+  },
+  "tangela-smith": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/smithta01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 2,
+      "pick": 2,
+      "overall": 12,
+      "year": 1998,
+      "source": "https://www.basketball-reference.com/wnba/players/s/smithta01w.html"
+    },
+    "college": {
+      "name": "Iowa",
+      "source": "https://www.basketball-reference.com/wnba/players/s/smithta01w.html"
+    },
+    "match": "wnba",
+    "slug": "tangela-smith",
+    "name": "Tangela Smith"
+  },
+  "jessica-davenport": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/davenje01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/d/davenje01w.html"
+    },
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/d/davenje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jessica-davenport",
+    "name": "Jessica Davenport"
+  },
+  "nicole-powell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/powelni01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/p/powelni01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/p/powelni01w.html"
+    },
+    "match": "wnba",
+    "slug": "nicole-powell",
+    "name": "Nicole Powell"
+  },
+  "dominique-canty": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cantydo01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 1999,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cantydo01w.html"
+    },
+    "college": {
+      "name": "Alabama",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cantydo01w.html"
+    },
+    "match": "wnba",
+    "slug": "dominique-canty",
+    "name": "Dominique Canty"
+  },
+  "amber-holt": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holtam01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/h/holtam01w.html"
+    },
+    "college": {
+      "name": "Middle Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holtam01w.html"
+    },
+    "match": "wnba",
+    "slug": "amber-holt",
+    "name": "Amber Holt"
+  },
+  "kelsey-griffin": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/griffke01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/g/griffke01w.html"
+    },
+    "college": {
+      "name": "Nebraska",
+      "source": "https://www.basketball-reference.com/wnba/players/g/griffke01w.html"
+    },
+    "match": "wnba",
+    "slug": "kelsey-griffin",
+    "name": "Kelsey Griffin"
+  },
+  "kelly-miller": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/milleke01w.html",
+    "draft": {
+      "team": "Charlotte Sting",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/m/milleke01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/m/milleke01w.html"
+    },
+    "match": "wnba",
+    "slug": "kelly-miller",
+    "name": "Kelly Miller"
+  },
+  "bria-holmes": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holmebr01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/h/holmebr01w.html"
+    },
+    "college": {
+      "name": "West Virginia",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holmebr01w.html"
+    },
+    "match": "wnba",
+    "slug": "bria-holmes",
+    "name": "Bria Holmes"
+  },
+  "lexie-brown": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brownle02w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/b/brownle02w.html"
+    },
+    "match": "wnba",
+    "slug": "lexie-brown",
+    "name": "Lexie Brown"
+  },
+  "coco-miller": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/milleco01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/m/milleco01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/m/milleco01w.html"
+    },
+    "match": "wnba",
+    "slug": "coco-miller",
+    "name": "Coco Miller"
+  },
+  "morgan-tuck": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tuckmo01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/t/tuckmo01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/t/tuckmo01w.html"
+    },
+    "match": "wnba",
+    "slug": "morgan-tuck",
+    "name": "Morgan Tuck"
+  },
+  "sydney-wiese": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wiesesy01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wiesesy01w.html"
+    },
+    "college": {
+      "name": "Oregon State",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wiesesy01w.html"
+    },
+    "match": "wnba",
+    "slug": "sydney-wiese",
+    "name": "Sydney Wiese"
+  },
+  "natasha-lacy": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lacyna01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 2,
+      "pick": 14,
+      "overall": 28,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lacyna01w.html"
+    },
+    "college": {
+      "name": "Texas-El Paso",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lacyna01w.html"
+    },
+    "match": "wnba",
+    "slug": "natasha-lacy",
+    "name": "Natasha Lacy"
+  },
+  "tully-bevilaqua": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/beviltu01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/tully-bevilaqua-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "Australia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 2.2
+        }
+      ]
+    },
+    "slug": "tully-bevilaqua",
+    "name": "Tully Bevilaqua"
+  },
+  "kiana-williams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/williki02w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/w/williki02w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/w/williki02w.html"
+    },
+    "match": "wnba",
+    "slug": "kiana-williams",
+    "name": "Kiana Williams"
+  },
+  "blake-dietrick": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dietrbl01w.html",
+    "college": {
+      "name": "Princeton",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dietrbl01w.html"
+    },
+    "match": "wnba",
+    "slug": "blake-dietrick",
+    "name": "Blake Dietrick"
+  },
+  "quanitra-hollingsworth": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holliqu01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/h/holliqu01w.html"
+    },
+    "college": {
+      "name": "VCU",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holliqu01w.html"
+    },
+    "match": "wnba",
+    "slug": "quanitra-hollingsworth",
+    "name": "Quanitra Hollingsworth"
+  },
+  "kristine-anigwe": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/anigwkr01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/a/anigwkr01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/a/anigwkr01w.html"
+    },
+    "match": "wnba",
+    "slug": "kristine-anigwe",
+    "name": "Kristine Anigwe"
+  },
+  "cierra-burdick": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/burdici01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/b/burdici01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/b/burdici01w.html"
+    },
+    "match": "wnba",
+    "slug": "cierra-burdick",
+    "name": "Cierra Burdick"
+  },
+  "erica-mccall": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccaler01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccaler01w.html"
+    },
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccaler01w.html"
+    },
+    "match": "wnba",
+    "slug": "erica-mccall",
+    "name": "Erica McCall"
+  },
+  "alaina-coates": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/coateal01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/c/coateal01w.html"
+    },
+    "college": {
+      "name": "South Carolina",
+      "source": "https://www.basketball-reference.com/wnba/players/c/coateal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alaina-coates",
+    "name": "Alaina Coates"
+  },
+  "amber-harris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/harriam01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 4,
+      "overall": 4,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/h/harriam01w.html"
+    },
+    "college": {
+      "name": "Xavier",
+      "source": "https://www.basketball-reference.com/wnba/players/h/harriam01w.html"
+    },
+    "match": "wnba",
+    "slug": "amber-harris",
+    "name": "Amber Harris"
+  },
+  "asia-taylor": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tayloas01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 12,
+      "overall": 36,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/t/tayloas01w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/t/tayloas01w.html"
+    },
+    "match": "wnba",
+    "slug": "asia-taylor",
+    "name": "Asia Taylor"
+  },
+  "ketia-swanier": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/swanike01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/s/swanike01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/s/swanike01w.html"
+    },
+    "match": "wnba",
+    "slug": "ketia-swanier",
+    "name": "Ketia Swanier"
+  },
+  "betty-lennox": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lennobe01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2000,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lennobe01w.html"
+    },
+    "college": {
+      "name": "Louisiana Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lennobe01w.html"
+    },
+    "match": "wnba",
+    "slug": "betty-lennox",
+    "name": "Betty Lennox"
+  },
+  "sandrine-gruda": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/grudasa01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 13,
+      "overall": 13,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/g/grudasa01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/sandrine-gruda-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "France",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 9.8
+        },
+        {
+          "season": "2016",
+          "team": "France",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 8.8
+        },
+        {
+          "season": "2020",
+          "team": "France",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 14.7
+        }
+      ]
+    },
+    "slug": "sandrine-gruda",
+    "name": "Sandrine Gruda"
+  },
+  "marie-ferdinand-harris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/ferdima01w.html",
+    "draft": {
+      "team": "Utah Starzz",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/f/ferdima01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/f/ferdima01w.html"
+    },
+    "match": "wnba",
+    "slug": "marie-ferdinand-harris",
+    "name": "Marie Ferdinand-Harris"
+  },
+  "shoni-schimmel": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/schimsh01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/s/schimsh01w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/s/schimsh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shoni-schimmel",
+    "name": "Shoni Schimmel"
+  },
+  "maggie-lucas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lucasma01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 9,
+      "overall": 21,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lucasma01w.html"
+    },
+    "college": {
+      "name": "Penn State",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lucasma01w.html"
+    },
+    "match": "wnba",
+    "slug": "maggie-lucas",
+    "name": "Maggie Lucas"
+  },
+  "jordan-hooper": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hoopejo01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hoopejo01w.html"
+    },
+    "college": {
+      "name": "Nebraska",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hoopejo01w.html"
+    },
+    "match": "wnba",
+    "slug": "jordan-hooper",
+    "name": "Jordan Hooper"
+  },
+  "jenna-ohea": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/o/oheaje01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/jenna-ohea-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 7.8
+        },
+        {
+          "season": "2020",
+          "team": "Australia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 10.7
+        }
+      ]
+    },
+    "slug": "jenna-ohea",
+    "name": "Jenna O'Hea"
+  },
+  "ruthy-hebard": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hebarru01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hebarru01w.html"
+    },
+    "college": {
+      "name": "Oregon",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hebarru01w.html"
+    },
+    "match": "wnba",
+    "slug": "ruthy-hebard",
+    "name": "Ruthy Hebard"
+  },
+  "haley-peters": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/peterha01w.html",
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/p/peterha01w.html"
+    },
+    "match": "wnba",
+    "slug": "haley-peters",
+    "name": "Haley Peters"
+  },
+  "chante-black": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/blackch01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/b/blackch01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/b/blackch01w.html"
+    },
+    "match": "wnba",
+    "slug": "chante-black",
+    "name": "Chante Black"
+  },
+  "cayla-george": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/francca01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/cayla-george-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 4,
+          "pts": 5.8
+        },
+        {
+          "season": "2020",
+          "team": "Australia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 13.7
+        },
+        {
+          "season": "2024",
+          "team": "Australia",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 6.3
+        }
+      ]
+    },
+    "slug": "cayla-george",
+    "name": "Cayla George"
+  },
+  "lindsay-wisdom-hylton": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wisdoli01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 13,
+      "overall": 13,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wisdoli01w.html"
+    },
+    "college": {
+      "name": "Purdue",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wisdoli01w.html"
+    },
+    "match": "wnba",
+    "slug": "lindsay-wisdom-hylton",
+    "name": "Lindsay Wisdom-Hylton"
+  },
+  "sydney-carter": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cartesy01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 3,
+      "pick": 3,
+      "overall": 27,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cartesy01w.html"
+    },
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cartesy01w.html"
+    },
+    "match": "wnba",
+    "slug": "sydney-carter",
+    "name": "Sydney Carter"
+  },
+  "shannon-bobbitt": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bobbish01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 1,
+      "overall": 15,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/b/bobbish01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bobbish01w.html"
+    },
+    "match": "wnba",
+    "slug": "shannon-bobbitt",
+    "name": "Shannon Bobbitt"
+  },
+  "alexis-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jonesal01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alexis-jones",
+    "name": "Alexis Jones"
+  },
+  "alexis-prince": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/princal01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/p/princal01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/p/princal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alexis-prince",
+    "name": "Alexis Prince"
+  },
+  "sasha-goodlett": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/goodlsa01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/g/goodlsa01w.html"
+    },
+    "college": {
+      "name": "Georgia Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/g/goodlsa01w.html"
+    },
+    "match": "wnba",
+    "slug": "sasha-goodlett",
+    "name": "Sasha Goodlett"
+  },
+  "sequoia-holmes": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holmese01w.html",
+    "college": {
+      "name": "UNLV",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holmese01w.html"
+    },
+    "match": "wnba",
+    "slug": "sequoia-holmes",
+    "name": "Sequoia Holmes"
+  },
+  "kelly-faris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fariske01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/f/fariske01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/f/fariske01w.html"
+    },
+    "match": "wnba",
+    "slug": "kelly-faris",
+    "name": "Kelly Faris"
+  },
+  "tiffany-bias": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/biasti01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/b/biasti01w.html"
+    },
+    "college": {
+      "name": "Oklahoma State",
+      "source": "https://www.basketball-reference.com/wnba/players/b/biasti01w.html"
+    },
+    "match": "wnba",
+    "slug": "tiffany-bias",
+    "name": "Tiffany Bias"
+  },
+  "ashley-walker": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/walkeas01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/w/walkeas01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/w/walkeas01w.html"
+    },
+    "match": "wnba",
+    "slug": "ashley-walker",
+    "name": "Ashley Walker"
+  },
+  "scholanda-dorrell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dorresc01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 1,
+      "pick": 14,
+      "overall": 14,
+      "year": 2006,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dorresc01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dorresc01w.html"
+    },
+    "match": "wnba",
+    "slug": "scholanda-dorrell",
+    "name": "Scholanda Dorrell"
+  },
+  "samantha-prahalis": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/prahasa01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/p/prahasa01w.html"
+    },
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/p/prahasa01w.html"
+    },
+    "match": "wnba",
+    "slug": "samantha-prahalis",
+    "name": "Samantha Prahalis"
+  },
+  "jazmine-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jonesja02w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesja02w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesja02w.html"
+    },
+    "match": "wnba",
+    "slug": "jazmine-jones",
+    "name": "Jazmine Jones"
+  },
+  "ad-durr": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/durras01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/d/durras01w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/d/durras01w.html"
+    },
+    "match": "wnba",
+    "slug": "ad-durr",
+    "name": "AD Durr"
+  },
+  "anete-jekabsone-zogota": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jekaban01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/anete-jekabsone-zogota-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "Latvia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 15.8
+        }
+      ]
+    },
+    "slug": "anete-jekabsone-zogota",
+    "name": "Anete Jekabsone-Zogota"
+  },
+  "ramu-tokashiki": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tokasra01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/ramu-tokashiki-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Japan",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 17.6
+        }
+      ]
+    },
+    "slug": "ramu-tokashiki",
+    "name": "Ramu Tokashiki"
+  },
+  "anna-cruz": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cruzan01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/anna-cruz-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Spain",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 7.8
+        }
+      ]
+    },
+    "slug": "anna-cruz",
+    "name": "Anna Cruz"
+  },
+  "jamierra-faulkner": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/faulkja01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 3,
+      "pick": 10,
+      "overall": 34,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/f/faulkja01w.html"
+    },
+    "college": {
+      "name": "Southern Miss",
+      "source": "https://www.basketball-reference.com/wnba/players/f/faulkja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jamierra-faulkner",
+    "name": "Jamierra Faulkner"
+  },
+  "maria-kliundikova": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/v/vadeema01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/v/vadeema01w.html"
+    },
+    "match": "wnba",
+    "slug": "maria-kliundikova",
+    "name": "Maria Kliundikova"
+  },
+  "svetlana-abrosimova": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/abrossv01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/a/abrossv01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/a/abrossv01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/svetlana-abrosimova-1.html",
+      "rows": [
+        {
+          "season": "2008",
+          "team": "Russia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 7.4
+        }
+      ]
+    },
+    "slug": "svetlana-abrosimova",
+    "name": "Svetlana Abrosimova"
+  },
+  "julie-vanloo": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/v/vanloju01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/julie-vanloo-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Belgium",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 2.7
+        },
+        {
+          "season": "2024",
+          "team": "Belgium",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 11.3
+        }
+      ]
+    },
+    "slug": "julie-vanloo",
+    "name": "Julie Vanloo"
+  },
+  "queen-egbo": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/e/egboqu01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/e/egboqu01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/e/egboqu01w.html"
+    },
+    "match": "wnba",
+    "slug": "queen-egbo",
+    "name": "Queen Egbo"
+  },
+  "shyra-ely-gash": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/e/elysh01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 1,
+      "overall": 14,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/e/elysh01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/e/elysh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shyra-ely-gash",
+    "name": "Shyra Ely-Gash"
+  },
+  "imani-mcgee-stafford": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html"
+    },
+    "match": "wnba",
+    "slug": "imani-mcgee-stafford",
+    "name": "Imani McGee-Stafford"
+  },
+  "kristy-wallace": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wallakr01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wallakr01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/w/wallakr01w.html"
+    },
+    "match": "wnba",
+    "slug": "kristy-wallace",
+    "name": "Kristy Wallace"
+  },
+  "yvonne-turner": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/turneyv01w.html",
+    "college": {
+      "name": "Nebraska",
+      "source": "https://www.basketball-reference.com/wnba/players/t/turneyv01w.html"
+    },
+    "match": "wnba",
+    "slug": "yvonne-turner",
+    "name": "Yvonne Turner"
+  },
+  "belinda-snell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/snellbe01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/belinda-snell-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Australia",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 5.4
+        },
+        {
+          "season": "2008",
+          "team": "Australia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 9.0
+        },
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 7.0
+        }
+      ]
+    },
+    "slug": "belinda-snell",
+    "name": "Belinda Snell"
+  },
+  "jazmon-gwathmey": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/gwathja01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/g/gwathja01w.html"
+    },
+    "college": {
+      "name": "James Madison University",
+      "source": "https://www.basketball-reference.com/wnba/players/g/gwathja01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/jazmon-gwathmey-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Puerto Rico",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 18.0
+        }
+      ]
+    },
+    "slug": "jazmon-gwathmey",
+    "name": "Jazmon Gwathmey"
+  },
+  "ticha-penicheiro": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/penicti01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 1,
+      "pick": 2,
+      "overall": 2,
+      "year": 1998,
+      "source": "https://www.basketball-reference.com/wnba/players/p/penicti01w.html"
+    },
+    "college": {
+      "name": "Old Dominion",
+      "source": "https://www.basketball-reference.com/wnba/players/p/penicti01w.html"
+    },
+    "match": "wnba",
+    "slug": "ticha-penicheiro",
+    "name": "Ticha Penicheiro"
+  },
+  "andrea-riley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/rileyan01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/r/rileyan01w.html"
+    },
+    "college": {
+      "name": "Oklahoma State",
+      "source": "https://www.basketball-reference.com/wnba/players/r/rileyan01w.html"
+    },
+    "match": "wnba",
+    "slug": "andrea-riley",
+    "name": "Andrea Riley"
+  },
+  "nikolina-milic": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/milicni01w.html",
+    "match": "wnba",
+    "slug": "nikolina-milic",
+    "name": "Nikolina Milic"
+  },
+  "danielle-mccray": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccrada01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccrada01w.html"
+    },
+    "college": {
+      "name": "Kansas",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccrada01w.html"
+    },
+    "match": "wnba",
+    "slug": "danielle-mccray",
+    "name": "Danielle McCray"
+  },
+  "jocelyn-willoughby": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/willojo01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/w/willojo01w.html"
+    },
+    "college": {
+      "name": "Virginia",
+      "source": "https://www.basketball-reference.com/wnba/players/w/willojo01w.html"
+    },
+    "match": "wnba",
+    "slug": "jocelyn-willoughby",
+    "name": "Jocelyn Willoughby"
+  },
+  "vicki-baugh": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/baughvi01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 3,
+      "pick": 1,
+      "overall": 25,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/b/baughvi01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/b/baughvi01w.html"
+    },
+    "match": "wnba",
+    "slug": "vicki-baugh",
+    "name": "Vicki Baugh"
+  },
+  "markeisha-gatling": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/gatlima01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/g/gatlima01w.html"
+    },
+    "college": {
+      "name": "NC State",
+      "source": "https://www.basketball-reference.com/wnba/players/g/gatlima01w.html"
+    },
+    "match": "wnba",
+    "slug": "markeisha-gatling",
+    "name": "Markeisha Gatling"
+  },
+  "destanni-henderson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hendede01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 8,
+      "overall": 20,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hendede01w.html"
+    },
+    "college": {
+      "name": "South Carolina",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hendede01w.html"
+    },
+    "match": "wnba",
+    "slug": "destanni-henderson",
+    "name": "Destanni Henderson"
+  },
+  "abby-bishop": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bishoab01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/abby-bishop-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 4,
+          "pts": 4.0
+        }
+      ]
+    },
+    "slug": "abby-bishop",
+    "name": "Abby Bishop"
+  },
+  "brianna-kiesel": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kiesebr01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/k/kiesebr01w.html"
+    },
+    "college": {
+      "name": "Pitt",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kiesebr01w.html"
+    },
+    "match": "wnba",
+    "slug": "brianna-kiesel",
+    "name": "Brianna Kiesel"
+  },
+  "stephanie-mavunga": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mavunst01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mavunst01w.html"
+    },
+    "college": {
+      "name": "Ohio State",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mavunst01w.html"
+    },
+    "match": "wnba",
+    "slug": "stephanie-mavunga",
+    "name": "Stephanie Mavunga"
+  },
+  "jessica-adair": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/adairje01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 3,
+      "pick": 8,
+      "overall": 34,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/a/adairje01w.html"
+    },
+    "college": {
+      "name": "George Washington",
+      "source": "https://www.basketball-reference.com/wnba/players/a/adairje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jessica-adair",
+    "name": "Jessica Adair"
+  },
+  "ewelina-kobryn": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kobryew01w.html",
+    "match": "wnba",
+    "slug": "ewelina-kobryn",
+    "name": "Ewelina Kobryn"
+  },
+  "megan-walker": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 9,
+      "overall": 9,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html"
+    },
+    "match": "wnba",
+    "slug": "megan-walker",
+    "name": "Megan Walker"
+  },
+  "angel-goodrich": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/goodran01w.html",
+    "draft": {
+      "team": "Tulsa Shock",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/g/goodran01w.html"
+    },
+    "college": {
+      "name": "Kansas",
+      "source": "https://www.basketball-reference.com/wnba/players/g/goodran01w.html"
+    },
+    "match": "wnba",
+    "slug": "angel-goodrich",
+    "name": "Angel Goodrich"
+  },
+  "grace-berger": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bergegr01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/b/bergegr01w.html"
+    },
+    "college": {
+      "name": "Indiana",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bergegr01w.html"
+    },
+    "match": "wnba",
+    "slug": "grace-berger",
+    "name": "Grace Berger"
+  },
+  "farhiya-abdi": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/abdifa01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/a/abdifa01w.html"
+    },
+    "match": "wnba",
+    "slug": "farhiya-abdi",
+    "name": "Farhiya Abdi"
+  },
+  "mikiah-herbert-harrigan": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/harrimi01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/h/harrimi01w.html"
+    },
+    "college": {
+      "name": "South Carolina",
+      "source": "https://www.basketball-reference.com/wnba/players/h/harrimi01w.html"
+    },
+    "match": "wnba",
+    "slug": "mikiah-herbert-harrigan",
+    "name": "Mikiah Herbert Harrigan"
+  },
+  "kristen-mann": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mannkr01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mannkr01w.html"
+    },
+    "college": {
+      "name": "UC Santa Barbara",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mannkr01w.html"
+    },
+    "match": "wnba",
+    "slug": "kristen-mann",
+    "name": "Kristen Mann"
+  },
+  "jennie-simms": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/simmsje01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/s/simmsje01w.html"
+    },
+    "college": {
+      "name": "Old Dominion",
+      "source": "https://www.basketball-reference.com/wnba/players/s/simmsje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jennie-simms",
+    "name": "Jennie Simms"
+  },
+  "alissa-pili": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/pilial01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2024,
+      "source": "https://www.basketball-reference.com/wnba/players/p/pilial01w.html"
+    },
+    "match": "wnba",
+    "slug": "alissa-pili",
+    "name": "Alissa Pili"
+  },
+  "courtney-clements": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/clemeco01w.html",
+    "college": {
+      "name": "San Diego State",
+      "source": "https://www.basketball-reference.com/wnba/players/c/clemeco01w.html"
+    },
+    "match": "wnba",
+    "slug": "courtney-clements",
+    "name": "Courtney Clements"
+  },
+  "didi-richards": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/richadi01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/r/richadi01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/r/richadi01w.html"
+    },
+    "match": "wnba",
+    "slug": "didi-richards",
+    "name": "DiDi Richards"
+  },
+  "beatrice-mompremier": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/momprbe01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 8,
+      "overall": 20,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/m/momprbe01w.html"
+    },
+    "college": {
+      "name": "Miami (FL)",
+      "source": "https://www.basketball-reference.com/wnba/players/m/momprbe01w.html"
+    },
+    "match": "wnba",
+    "slug": "beatrice-mompremier",
+    "name": "Beatrice Mompremier"
+  },
+  "linnae-harper": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/harpeli01w.html",
+    "match": "wnba",
+    "slug": "linnae-harper",
+    "name": "Linnae Harper"
+  },
+  "lauren-jackson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jacksla01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jacksla01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/lauren-jackson-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Australia",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 23.4
+        },
+        {
+          "season": "2008",
+          "team": "Australia",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 18.0
+        },
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 15.2
+        },
+        {
+          "season": "2024",
+          "team": "Australia",
+          "league": "Paris 2024",
+          "games": 2,
+          "pts": 3.0
+        }
+      ]
+    },
+    "slug": "lauren-jackson",
+    "name": "Lauren Jackson"
+  },
+  "deanna-nolan": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/n/nolande01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/n/nolande01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/n/nolande01w.html"
+    },
+    "match": "wnba",
+    "slug": "deanna-nolan",
+    "name": "Deanna Nolan"
+  },
+  "ann-wauters": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/wautean01w.html",
+    "draft": {
+      "team": "Cleveland Rockers",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2000,
+      "source": "https://www.basketball-reference.com/wnba/players/w/wautean01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/ann-wauters-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Belgium",
+          "league": "Tokyo 2020",
+          "games": 1,
+          "pts": 2.0
+        }
+      ]
+    },
+    "slug": "ann-wauters",
+    "name": "Ann Wauters"
+  },
+  "chamique-holdsclaw": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/holdsch01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 1999,
+      "source": "https://www.basketball-reference.com/wnba/players/h/holdsch01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/h/holdsch01w.html"
+    },
+    "match": "wnba",
+    "slug": "chamique-holdsclaw",
+    "name": "Chamique Holdsclaw"
+  },
+  "cheryl-ford": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fordch01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 1,
+      "pick": 3,
+      "overall": 3,
+      "year": 2003,
+      "source": "https://www.basketball-reference.com/wnba/players/f/fordch01w.html"
+    },
+    "college": {
+      "name": "Louisiana Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/f/fordch01w.html"
+    },
+    "match": "wnba",
+    "slug": "cheryl-ford",
+    "name": "Cheryl Ford"
+  },
+  "tea-cooper": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/coopete01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/c/coopete01w.html"
+    },
+    "match": "wnba",
+    "slug": "tea-cooper",
+    "name": "Te'a Cooper"
+  },
+  "carla-cortijo": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cortica01w.html",
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cortica01w.html"
+    },
+    "match": "wnba",
+    "slug": "carla-cortijo",
+    "name": "Carla Cortijo"
+  },
+  "vickie-johnson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/johnsvi01w.html",
+    "college": {
+      "name": "Louisiana Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/j/johnsvi01w.html"
+    },
+    "match": "wnba",
+    "slug": "vickie-johnson",
+    "name": "Vickie Johnson"
+  },
+  "ivana-dojkic": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dojkiiv01w.html",
+    "match": "wnba",
+    "slug": "ivana-dojkic",
+    "name": "Ivana Dojkic"
+  },
+  "jj-quinerly": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/q/quinejj01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 3,
+      "pick": 2,
+      "overall": 27,
+      "year": 2025,
+      "source": "https://www.basketball-reference.com/wnba/players/q/quinejj01w.html"
+    },
+    "college": {
+      "name": "West Virginia",
+      "source": "https://www.basketball-reference.com/wnba/players/q/quinejj01w.html"
+    },
+    "match": "wnba",
+    "slug": "jj-quinerly",
+    "name": "JJ Quinerly"
+  },
+  "loree-moore": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/moorelo01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2005,
+      "source": "https://www.basketball-reference.com/wnba/players/m/moorelo01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/m/moorelo01w.html"
+    },
+    "match": "wnba",
+    "slug": "loree-moore",
+    "name": "Loree Moore"
+  },
+  "doneeka-lewis": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hodgedo01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 12,
+      "overall": 25,
+      "year": 2004,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hodgedo01w.html"
+    },
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hodgedo01w.html"
+    },
+    "match": "wnba",
+    "slug": "doneeka-lewis",
+    "name": "Doneeka Lewis"
+  },
+  "kylee-shook": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/shookky01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/s/shookky01w.html"
+    },
+    "college": {
+      "name": "Louisville",
+      "source": "https://www.basketball-reference.com/wnba/players/s/shookky01w.html"
+    },
+    "match": "wnba",
+    "slug": "kylee-shook",
+    "name": "Kylee Shook"
+  },
+  "kiara-leslie": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/lesliki01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/l/lesliki01w.html"
+    },
+    "college": {
+      "name": "NC State",
+      "source": "https://www.basketball-reference.com/wnba/players/l/lesliki01w.html"
+    },
+    "match": "wnba",
+    "slug": "kiara-leslie",
+    "name": "Kiara Leslie"
+  },
+  "leaonna-odom": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/o/odomle01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/o/odomle01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/o/odomle01w.html"
+    },
+    "match": "wnba",
+    "slug": "leaonna-odom",
+    "name": "Leaonna Odom"
+  },
+  "clarissa-dos-santos": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dossacl01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/clarissa-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Brazil",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 12.6
+        },
+        {
+          "season": "2016",
+          "team": "Brazil",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 14.2
+        }
+      ]
+    },
+    "slug": "clarissa-dos-santos",
+    "name": "Clarissa dos Santos"
+  },
+  "sonja-petrovic": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/petroso01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 13,
+      "overall": 26,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/p/petroso01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/sonja-petrovic-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Serbia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 16.4
+        },
+        {
+          "season": "2020",
+          "team": "Serbia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 9.7
+        }
+      ]
+    },
+    "slug": "sonja-petrovic",
+    "name": "Sonja Petrovic"
+  },
+  "megan-frazee": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/frazeme01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 1,
+      "overall": 14,
+      "year": 2009,
+      "source": "https://www.basketball-reference.com/wnba/players/f/frazeme01w.html"
+    },
+    "college": {
+      "name": "Liberty",
+      "source": "https://www.basketball-reference.com/wnba/players/f/frazeme01w.html"
+    },
+    "match": "wnba",
+    "slug": "megan-frazee",
+    "name": "Megan Frazee"
+  },
+  "destiny-slocum": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/slocude01w.html",
+    "draft": {
+      "team": "Las Vegas Aces",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/s/slocude01w.html"
+    },
+    "match": "wnba",
+    "slug": "destiny-slocum",
+    "name": "Destiny Slocum"
+  },
+  "alexis-gray-lawson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/graylal01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 3,
+      "pick": 6,
+      "overall": 30,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/g/graylal01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/g/graylal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alexis-gray-lawson",
+    "name": "Alexis Gray-Lawson"
+  },
+  "davellyn-whyte": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/whyteda01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/w/whyteda01w.html"
+    },
+    "college": {
+      "name": "Arizona",
+      "source": "https://www.basketball-reference.com/wnba/players/w/whyteda01w.html"
+    },
+    "match": "wnba",
+    "slug": "davellyn-whyte",
+    "name": "Davellyn Whyte"
+  },
+  "sevgi-uzun": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/u/uzunse01w.html",
+    "match": "wnba",
+    "slug": "sevgi-uzun",
+    "name": "Sevgi Uzun"
+  },
+  "morgan-bertsch": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bertsmo01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/b/bertsmo01w.html"
+    },
+    "college": {
+      "name": "UC-Davis",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bertsmo01w.html"
+    },
+    "match": "wnba",
+    "slug": "morgan-bertsch",
+    "name": "Morgan Bertsch"
+  },
+  "toni-young": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/y/youngto01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngto01w.html"
+    },
+    "college": {
+      "name": "Oklahoma State",
+      "source": "https://www.basketball-reference.com/wnba/players/y/youngto01w.html"
+    },
+    "match": "wnba",
+    "slug": "toni-young",
+    "name": "Toni Young"
+  },
+  "dulcy-fankam-mendjiadeu": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fankadu01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 9,
+      "overall": 21,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/f/fankadu01w.html"
+    },
+    "match": "wnba",
+    "slug": "dulcy-fankam-mendjiadeu",
+    "name": "Dulcy Fankam Mendjiadeu"
+  },
+  "robyn-parks": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/p/parksro01w.html",
+    "college": {
+      "name": "VCU",
+      "source": "https://www.basketball-reference.com/wnba/players/p/parksro01w.html"
+    },
+    "match": "wnba",
+    "slug": "robyn-parks",
+    "name": "Robyn Parks"
+  },
+  "jaelyn-brown": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brownja06w.html",
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/b/brownja06w.html"
+    },
+    "match": "wnba",
+    "slug": "jaelyn-brown",
+    "name": "Jaelyn Brown"
+  },
+  "nayo-raincock-ekunwe": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/raincna01w.html",
+    "college": {
+      "name": "Simon Fraser University",
+      "source": "https://www.basketball-reference.com/wnba/players/r/raincna01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/nayo-raincock-ekunwe-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Canada",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 7.2
+        },
+        {
+          "season": "2020",
+          "team": "Canada",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 5.3
+        }
+      ]
+    },
+    "slug": "nayo-raincock-ekunwe",
+    "name": "Nayo Raincock-Ekunwe"
+  },
+  "keisha-hampton": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hamptke01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 10,
+      "overall": 22,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hamptke01w.html"
+    },
+    "college": {
+      "name": "DePaul",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hamptke01w.html"
+    },
+    "match": "wnba",
+    "slug": "keisha-hampton",
+    "name": "Keisha Hampton"
+  },
+  "barbara-farris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/farriba01w.html",
+    "college": {
+      "name": "Tulane",
+      "source": "https://www.basketball-reference.com/wnba/players/f/farriba01w.html"
+    },
+    "match": "wnba",
+    "slug": "barbara-farris",
+    "name": "Barbara Farris"
+  },
+  "charli-collier": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/collich01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 1,
+      "pick": 1,
+      "overall": 1,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/c/collich01w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/c/collich01w.html"
+    },
+    "match": "wnba",
+    "slug": "charli-collier",
+    "name": "Charli Collier"
+  },
+  "tricia-liston": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/listotr01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/l/listotr01w.html"
+    },
+    "college": {
+      "name": "Duke",
+      "source": "https://www.basketball-reference.com/wnba/players/l/listotr01w.html"
+    },
+    "match": "wnba",
+    "slug": "tricia-liston",
+    "name": "Tricia Liston"
+  },
+  "ally-malott": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/malotal01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/m/malotal01w.html"
+    },
+    "college": {
+      "name": "Dayton",
+      "source": "https://www.basketball-reference.com/wnba/players/m/malotal01w.html"
+    },
+    "match": "wnba",
+    "slug": "ally-malott",
+    "name": "Ally Malott"
+  },
+  "jacki-gemelos": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/gemelja01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 7,
+      "overall": 31,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/g/gemelja01w.html"
+    },
+    "college": {
+      "name": "USC",
+      "source": "https://www.basketball-reference.com/wnba/players/g/gemelja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jacki-gemelos",
+    "name": "Jacki Gemelos"
+  },
+  "yvonne-anderson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/anderyv01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/yvonne-anderson-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Serbia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 13.0
+        },
+        {
+          "season": "2024",
+          "team": "Serbia",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 13.3
+        }
+      ]
+    },
+    "slug": "yvonne-anderson",
+    "name": "Yvonne Anderson"
+  },
+  "meighan-simmons": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/simmome01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 3,
+      "pick": 2,
+      "overall": 26,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/s/simmome01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/s/simmome01w.html"
+    },
+    "match": "wnba",
+    "slug": "meighan-simmons",
+    "name": "Meighan Simmons"
+  },
+  "jasmine-hassell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hasseja01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 9,
+      "overall": 21,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hasseja01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hasseja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jasmine-hassell",
+    "name": "Jasmine Hassell"
+  },
+  "jene-morris": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/morrije01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/m/morrije01w.html"
+    },
+    "college": {
+      "name": "San Diego State",
+      "source": "https://www.basketball-reference.com/wnba/players/m/morrije01w.html"
+    },
+    "match": "wnba",
+    "slug": "jene-morris",
+    "name": "Jene Morris"
+  },
+  "nadirah-mckenith": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mckenna01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 2,
+      "pick": 5,
+      "overall": 17,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mckenna01w.html"
+    },
+    "college": {
+      "name": "St. John's",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mckenna01w.html"
+    },
+    "match": "wnba",
+    "slug": "nadirah-mckenith",
+    "name": "Nadirah McKenith"
+  },
+  "saniya-chong": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/chongsa01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 3,
+      "pick": 2,
+      "overall": 26,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/c/chongsa01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/c/chongsa01w.html"
+    },
+    "match": "wnba",
+    "slug": "saniya-chong",
+    "name": "Saniya Chong"
+  },
+  "bella-alarie": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/alaribe01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/a/alaribe01w.html"
+    },
+    "college": {
+      "name": "Princeton",
+      "source": "https://www.basketball-reference.com/wnba/players/a/alaribe01w.html"
+    },
+    "match": "wnba",
+    "slug": "bella-alarie",
+    "name": "Bella Alarie"
+  },
+  "victoria-dunlap": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dunlavi01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dunlavi01w.html"
+    },
+    "college": {
+      "name": "Kentucky",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dunlavi01w.html"
+    },
+    "match": "wnba",
+    "slug": "victoria-dunlap",
+    "name": "Victoria Dunlap"
+  },
+  "jaime-nared": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/n/naredja01w.html",
+    "draft": {
+      "team": "Las Vegas Aces",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2018,
+      "source": "https://www.basketball-reference.com/wnba/players/n/naredja01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/n/naredja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jaime-nared",
+    "name": "Jaime Nared"
+  },
+  "amy-atwell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/atwelam01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 3,
+      "pick": 3,
+      "overall": 27,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/a/atwelam01w.html"
+    },
+    "college": {
+      "name": "Hawaii",
+      "source": "https://www.basketball-reference.com/wnba/players/a/atwelam01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/amy-atwell-1.html",
+      "rows": [
+        {
+          "season": "2024",
+          "team": "Australia",
+          "league": "Paris 2024",
+          "games": 2,
+          "pts": 1.0
+        }
+      ]
+    },
+    "slug": "amy-atwell",
+    "name": "Amy Atwell"
+  },
+  "laurie-koehn": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/koehnla01w.html",
+    "college": {
+      "name": "Kansas State",
+      "source": "https://www.basketball-reference.com/wnba/players/k/koehnla01w.html"
+    },
+    "match": "wnba",
+    "slug": "laurie-koehn",
+    "name": "Laurie Koehn"
+  },
+  "stephanie-jones": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jonesst01w.html",
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jonesst01w.html"
+    },
+    "match": "wnba",
+    "slug": "stephanie-jones",
+    "name": "Stephanie Jones"
+  },
+  "angel-robinson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/robinan01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 8,
+      "overall": 20,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinan01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/r/robinan01w.html"
+    },
+    "match": "wnba",
+    "slug": "angel-robinson",
+    "name": "Angel Robinson"
+  },
+  "jennifer-hamson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hamsoje01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 11,
+      "overall": 23,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hamsoje01w.html"
+    },
+    "college": {
+      "name": "BYU",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hamsoje01w.html"
+    },
+    "match": "wnba",
+    "slug": "jennifer-hamson",
+    "name": "Jennifer Hamson"
+  },
+  "jasmine-dickey": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dickeja01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 3,
+      "pick": 6,
+      "overall": 30,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dickeja01w.html"
+    },
+    "college": {
+      "name": "University of Delaware",
+      "source": "https://www.basketball-reference.com/wnba/players/d/dickeja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jasmine-dickey",
+    "name": "Jasmine Dickey"
+  },
+  "nia-clouden": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cloudni01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cloudni01w.html"
+    },
+    "college": {
+      "name": "Michigan State",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cloudni01w.html"
+    },
+    "match": "wnba",
+    "slug": "nia-clouden",
+    "name": "Nia Clouden"
+  },
+  "alex-harden": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hardeal01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hardeal01w.html"
+    },
+    "college": {
+      "name": "Wichita State",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hardeal01w.html"
+    },
+    "match": "wnba",
+    "slug": "alex-harden",
+    "name": "Alex Harden"
+  },
+  "bernice-mosby": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mosbybe01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 6,
+      "overall": 6,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mosbybe01w.html"
+    },
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mosbybe01w.html"
+    },
+    "match": "wnba",
+    "slug": "bernice-mosby",
+    "name": "Bernice Mosby"
+  },
+  "jasmine-walker": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/walkeja01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 7,
+      "overall": 7,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/w/walkeja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jasmine-walker",
+    "name": "Jasmine Walker"
+  },
+  "rachel-hollivay": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hollira01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 1,
+      "overall": 13,
+      "year": 2016,
+      "source": "https://www.basketball-reference.com/wnba/players/h/hollira01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hollira01w.html"
+    },
+    "match": "wnba",
+    "slug": "rachel-hollivay",
+    "name": "Rachel Hollivay"
+  },
+  "victaria-saxton": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/saxtovi01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 3,
+      "pick": 1,
+      "overall": 25,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/s/saxtovi01w.html"
+    },
+    "college": {
+      "name": "South Carolina",
+      "source": "https://www.basketball-reference.com/wnba/players/s/saxtovi01w.html"
+    },
+    "match": "wnba",
+    "slug": "victaria-saxton",
+    "name": "Victaria Saxton"
+  },
+  "marquesha-davis": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/davisma05w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 1,
+      "pick": 11,
+      "overall": 11,
+      "year": 2024,
+      "source": "https://www.basketball-reference.com/wnba/players/d/davisma05w.html"
+    },
+    "match": "wnba",
+    "slug": "marquesha-davis",
+    "name": "Marquesha Davis"
+  },
+  "nikki-greene": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/greenni01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 3,
+      "pick": 2,
+      "overall": 26,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/g/greenni01w.html"
+    },
+    "college": {
+      "name": "Penn State",
+      "source": "https://www.basketball-reference.com/wnba/players/g/greenni01w.html"
+    },
+    "match": "wnba",
+    "slug": "nikki-greene",
+    "name": "Nikki Greene"
+  },
+  "lindsey-moore": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mooreli01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 1,
+      "pick": 12,
+      "overall": 12,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mooreli01w.html"
+    },
+    "college": {
+      "name": "Nebraska",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mooreli01w.html"
+    },
+    "match": "wnba",
+    "slug": "lindsey-moore",
+    "name": "Lindsey Moore"
+  },
+  "taylor-soule": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/souleta01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 4,
+      "overall": 28,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/s/souleta01w.html"
+    },
+    "match": "wnba",
+    "slug": "taylor-soule",
+    "name": "Taylor Soule"
+  },
+  "sam-thomas": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html",
+    "college": {
+      "name": "Arizona",
+      "source": "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html"
+    },
+    "match": "wnba",
+    "slug": "sam-thomas",
+    "name": "Sam Thomas"
+  },
+  "ana-dabovic": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dabovan01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/ana-dabovic-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Serbia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 12.2
+        },
+        {
+          "season": "2020",
+          "team": "Serbia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 6.3
+        }
+      ]
+    },
+    "slug": "ana-dabovic",
+    "name": "Ana Dabovic"
+  },
+  "emma-cechova": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cechoem01w.html",
+    "match": "wnba",
+    "slug": "emma-cechova",
+    "name": "Emma Cechova"
+  },
+  "li-meng": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mengli01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/li-meng-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "China",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 12.3
+        },
+        {
+          "season": "2024",
+          "team": "China",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 13.7
+        }
+      ]
+    },
+    "slug": "li-meng",
+    "name": "Li Meng"
+  },
+  "kathryn-westbeld": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/westbka01w.html",
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/w/westbka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kathryn-westbeld",
+    "name": "Kathryn Westbeld"
+  },
+  "marianna-tolo": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/toloma01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/marianna-tolo-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 7.8
+        },
+        {
+          "season": "2020",
+          "team": "Australia",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 13.0
+        },
+        {
+          "season": "2024",
+          "team": "Australia",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 5.0
+        }
+      ]
+    },
+    "slug": "marianna-tolo",
+    "name": "Marianna Tolo"
+  },
+  "yelena-leuchanka": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/leuchye01w.html",
+    "college": {
+      "name": "West Virginia",
+      "source": "https://www.basketball-reference.com/wnba/players/l/leuchye01w.html"
+    },
+    "match": "wnba",
+    "slug": "yelena-leuchanka",
+    "name": "Yelena Leuchanka"
+  },
+  "jolene-anderson": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/a/anderjo01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 2,
+      "pick": 9,
+      "overall": 23,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/a/anderjo01w.html"
+    },
+    "college": {
+      "name": "Wisconsin",
+      "source": "https://www.basketball-reference.com/wnba/players/a/anderjo01w.html"
+    },
+    "match": "wnba",
+    "slug": "jolene-anderson",
+    "name": "Jolene Anderson"
+  },
+  "celeste-taylor": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tayloce01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2024,
+      "source": "https://www.basketball-reference.com/wnba/players/t/tayloce01w.html"
+    },
+    "match": "wnba",
+    "slug": "celeste-taylor",
+    "name": "Celeste Taylor"
+  },
+  "murjanatu-musa": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/musamu01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/murjanatu-musa-1.html",
+      "rows": [
+        {
+          "season": "2024",
+          "team": "Nigeria",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 10.7
+        }
+      ]
+    },
+    "slug": "murjanatu-musa",
+    "name": "Murjanatu Musa"
+  },
+  "celine-dumerc": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dumercc01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/celine-dumerc-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "France",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 14.4
+        }
+      ]
+    },
+    "slug": "celine-dumerc",
+    "name": "Celine Dumerc"
+  },
+  "alicia-florez": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/floreal01w.html",
+    "match": "wnba",
+    "slug": "alicia-florez",
+    "name": "Alicia Florez"
+  },
+  "natalie-novosel": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/n/novosna01w.html",
+    "draft": {
+      "team": "Washington Mystics",
+      "round": 1,
+      "pick": 8,
+      "overall": 8,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/n/novosna01w.html"
+    },
+    "college": {
+      "name": "Notre Dame",
+      "source": "https://www.basketball-reference.com/wnba/players/n/novosna01w.html"
+    },
+    "match": "wnba",
+    "slug": "natalie-novosel",
+    "name": "Natalie Novosel"
+  },
+  "arella-guirantes": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/guiraar01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 2,
+      "pick": 10,
+      "overall": 22,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/g/guiraar01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/arella-guirantes-1.html",
+      "rows": [
+        {
+          "season": "2024",
+          "team": "Puerto Rico",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 12.3
+        }
+      ]
+    },
+    "slug": "arella-guirantes",
+    "name": "Arella Guirantes"
+  },
+  "jasmine-james": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jamesja01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 3,
+      "pick": 6,
+      "overall": 30,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jamesja01w.html"
+    },
+    "college": {
+      "name": "Georgia",
+      "source": "https://www.basketball-reference.com/wnba/players/j/jamesja01w.html"
+    },
+    "match": "wnba",
+    "slug": "jasmine-james",
+    "name": "Jasmine James"
+  },
+  "april-sykes": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/sykesap01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 3,
+      "pick": 4,
+      "overall": 28,
+      "year": 2012,
+      "source": "https://www.basketball-reference.com/wnba/players/s/sykesap01w.html"
+    },
+    "college": {
+      "name": "Rutgers University",
+      "source": "https://www.basketball-reference.com/wnba/players/s/sykesap01w.html"
+    },
+    "match": "wnba",
+    "slug": "april-sykes",
+    "name": "April Sykes"
+  },
+  "megan-mcconnell": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mcconme01w.html",
+    "college": {
+      "name": "Duquesne",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mcconme01w.html"
+    },
+    "match": "wnba",
+    "slug": "megan-mcconnell",
+    "name": "Megan McConnell"
+  },
+  "maite-cazorla": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cazorma01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 11,
+      "overall": 23,
+      "year": 2019,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cazorma01w.html"
+    },
+    "college": {
+      "name": "Oregon",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cazorma01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/maite-cazorla-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Spain",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 6.3
+        },
+        {
+          "season": "2024",
+          "team": "Spain",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 5.7
+        }
+      ]
+    },
+    "slug": "maite-cazorla",
+    "name": "Maite Cazorla"
+  },
+  "sheri-sam": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/samsh01w.html",
+    "draft": {
+      "team": "Orlando Miracle",
+      "round": 2,
+      "pick": 8,
+      "overall": 20,
+      "year": 1999,
+      "source": "https://www.basketball-reference.com/wnba/players/s/samsh01w.html"
+    },
+    "college": {
+      "name": "Vanderbilt",
+      "source": "https://www.basketball-reference.com/wnba/players/s/samsh01w.html"
+    },
+    "match": "wnba",
+    "slug": "sheri-sam",
+    "name": "Sheri Sam"
+  },
+  "kamiko-williams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/willika01w.html",
+    "draft": {
+      "team": "New York Liberty",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/w/willika01w.html"
+    },
+    "college": {
+      "name": "Tennessee",
+      "source": "https://www.basketball-reference.com/wnba/players/w/willika01w.html"
+    },
+    "match": "wnba",
+    "slug": "kamiko-williams",
+    "name": "Kamiko Williams"
+  },
+  "yuko-oga": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/o/ogayu01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/yuko-oga-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Japan",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 6.6
+        }
+      ]
+    },
+    "slug": "yuko-oga",
+    "name": "Yuko Oga"
+  },
+  "brooke-mccarty-williams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mccarbr01w.html",
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mccarbr01w.html"
+    },
+    "match": "wnba",
+    "slug": "brooke-mccarty-williams",
+    "name": "Brooke McCarty-Williams"
+  },
+  "emese-hof": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/hofem01w.html",
+    "college": {
+      "name": "Miami (FL)",
+      "source": "https://www.basketball-reference.com/wnba/players/h/hofem01w.html"
+    },
+    "match": "wnba",
+    "slug": "emese-hof",
+    "name": "Emese Hof"
+  },
+  "adia-mathies": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mathiad01w.html",
+    "draft": {
+      "team": "Los Angeles Sparks",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2013,
+      "source": "https://www.basketball-reference.com/wnba/players/m/mathiad01w.html"
+    },
+    "college": {
+      "name": "Kentucky",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mathiad01w.html"
+    },
+    "match": "wnba",
+    "slug": "adia-mathies",
+    "name": "A'dia Mathies"
+  },
+  "kelly-santos": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/santoke01w.html",
+    "draft": {
+      "team": "Detroit Shock",
+      "round": 4,
+      "pick": 6,
+      "overall": 54,
+      "year": 2001,
+      "source": "https://www.basketball-reference.com/wnba/players/s/santoke01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/kelly-1.html",
+      "rows": [
+        {
+          "season": "2004",
+          "team": "Brazil",
+          "league": "Athens 2004",
+          "games": 5,
+          "pts": 2.6
+        },
+        {
+          "season": "2008",
+          "team": "Brazil",
+          "league": "Beijing 2008",
+          "games": 5,
+          "pts": 14.6
+        },
+        {
+          "season": "2016",
+          "team": "Brazil",
+          "league": "Rio de Janeiro 2016",
+          "games": 4,
+          "pts": 1.5
+        }
+      ]
+    },
+    "slug": "kelly-santos",
+    "name": "Kelly Santos"
+  },
+  "mamignan-toure": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tourma01w.html",
+    "match": "wnba",
+    "slug": "mamignan-toure",
+    "name": "Mamignan Toure"
+  },
+  "ziomara-morrison": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/morrizi01w.html",
+    "match": "wnba",
+    "slug": "ziomara-morrison",
+    "name": "Ziomara Morrison"
+  },
+  "kariata-diaby": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/diabyka01w.html",
+    "match": "wnba",
+    "slug": "kariata-diaby",
+    "name": "Kariata Diaby"
+  },
+  "shanece-mckinney": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mckinsh01w.html",
+    "college": {
+      "name": "LSU",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mckinsh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shanece-mckinney",
+    "name": "Shanece McKinney"
+  },
+  "rui-machida": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/machiru01w.html",
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/rui-machida-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Japan",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 3.6
+        },
+        {
+          "season": "2020",
+          "team": "Japan",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 5.3
+        },
+        {
+          "season": "2024",
+          "team": "Japan",
+          "league": "Paris 2024",
+          "games": 3,
+          "pts": 4.3
+        }
+      ]
+    },
+    "slug": "rui-machida",
+    "name": "Rui Machida"
+  },
+  "gennifer-brandon": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brandge01w.html",
+    "draft": {
+      "team": "Chicago Sky",
+      "round": 2,
+      "pick": 10,
+      "overall": 22,
+      "year": 2014,
+      "source": "https://www.basketball-reference.com/wnba/players/b/brandge01w.html"
+    },
+    "college": {
+      "name": "California",
+      "source": "https://www.basketball-reference.com/wnba/players/b/brandge01w.html"
+    },
+    "match": "wnba",
+    "slug": "gennifer-brandon",
+    "name": "Gennifer Brandon"
+  },
+  "rachel-jarry": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/j/jarryra01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2011,
+      "source": "https://www.basketball-reference.com/wnba/players/j/jarryra01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/rachel-jarry-1.html",
+      "rows": [
+        {
+          "season": "2012",
+          "team": "Australia",
+          "league": "London 2012",
+          "games": 5,
+          "pts": 3.4
+        },
+        {
+          "season": "2016",
+          "team": "Australia",
+          "league": "Rio de Janeiro 2016",
+          "games": 5,
+          "pts": 3.2
+        }
+      ]
+    },
+    "slug": "rachel-jarry",
+    "name": "Rachel Jarry"
+  },
+  "aisha-sheppard": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/sheppai01w.html",
+    "draft": {
+      "team": "Las Vegas Aces",
+      "round": 2,
+      "pick": 11,
+      "overall": 23,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/s/sheppai01w.html"
+    },
+    "college": {
+      "name": "Virginia Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/s/sheppai01w.html"
+    },
+    "match": "wnba",
+    "slug": "aisha-sheppard",
+    "name": "Aisha Sheppard"
+  },
+  "kathleen-doyle": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/doyleka01w.html",
+    "draft": {
+      "team": "Indiana Fever",
+      "round": 2,
+      "pick": 2,
+      "overall": 14,
+      "year": 2020,
+      "source": "https://www.basketball-reference.com/wnba/players/d/doyleka01w.html"
+    },
+    "college": {
+      "name": "Iowa",
+      "source": "https://www.basketball-reference.com/wnba/players/d/doyleka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kathleen-doyle",
+    "name": "Kathleen Doyle"
+  },
+  "jelena-dubljevic": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dubljje01w.html",
+    "match": "wnba",
+    "slug": "jelena-dubljevic",
+    "name": "Jelena Dubljevic"
+  },
+  "kadi-sissoko": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/s/sissoka01w.html",
+    "draft": {
+      "team": "Phoenix Mercury",
+      "round": 3,
+      "pick": 5,
+      "overall": 29,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/s/sissoka01w.html"
+    },
+    "college": {
+      "name": "USC",
+      "source": "https://www.basketball-reference.com/wnba/players/s/sissoka01w.html"
+    },
+    "match": "wnba",
+    "slug": "kadi-sissoko",
+    "name": "Kadi Sissoko"
+  },
+  "brittainey-raven": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/ravenbr01w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 3,
+      "pick": 9,
+      "overall": 33,
+      "year": 2010,
+      "source": "https://www.basketball-reference.com/wnba/players/r/ravenbr01w.html"
+    },
+    "college": {
+      "name": "Texas",
+      "source": "https://www.basketball-reference.com/wnba/players/r/ravenbr01w.html"
+    },
+    "match": "wnba",
+    "slug": "brittainey-raven",
+    "name": "Brittainey Raven"
+  },
+  "mariella-fasoula": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html",
+    "match": "wnba",
+    "slug": "mariella-fasoula",
+    "name": "Mariella Fasoula"
+  },
+  "elizabeth-kitley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kitleel01w.html",
+    "draft": {
+      "team": "Las Vegas Aces",
+      "round": 2,
+      "pick": 12,
+      "overall": 24,
+      "year": 2024,
+      "source": "https://www.basketball-reference.com/wnba/players/k/kitleel01w.html"
+    },
+    "college": {
+      "name": "Virginia Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kitleel01w.html"
+    },
+    "match": "wnba",
+    "slug": "elizabeth-kitley",
+    "name": "Elizabeth Kitley"
+  },
+  "lorela-cubaj": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/c/cubajlo01w.html",
+    "draft": {
+      "team": "Seattle Storm",
+      "round": 2,
+      "pick": 6,
+      "overall": 18,
+      "year": 2022,
+      "source": "https://www.basketball-reference.com/wnba/players/c/cubajlo01w.html"
+    },
+    "college": {
+      "name": "Georgia Tech",
+      "source": "https://www.basketball-reference.com/wnba/players/c/cubajlo01w.html"
+    },
+    "match": "wnba",
+    "slug": "lorela-cubaj",
+    "name": "Lorela Cubaj"
+  },
+  "nadia-fingall": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/f/fingana01w.html",
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/f/fingana01w.html"
+    },
+    "match": "wnba",
+    "slug": "nadia-fingall",
+    "name": "Nadia Fingall"
+  },
+  "leigha-brown": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/brownle05w.html",
+    "draft": {
+      "team": "Atlanta Dream",
+      "round": 2,
+      "pick": 3,
+      "overall": 15,
+      "year": 2023,
+      "source": "https://www.basketball-reference.com/wnba/players/b/brownle05w.html"
+    },
+    "match": "wnba",
+    "slug": "leigha-brown",
+    "name": "Leigha Brown"
+  },
+  "olivia-epoupa": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/e/epoupol01w.html",
+    "match": "wnba",
+    "slug": "olivia-epoupa",
+    "name": "Olivia Epoupa"
+  },
+  "chelsea-dungee": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/d/dungech01w.html",
+    "draft": {
+      "team": "Dallas Wings",
+      "round": 1,
+      "pick": 5,
+      "overall": 5,
+      "year": 2021,
+      "source": "https://www.basketball-reference.com/wnba/players/d/dungech01w.html"
+    },
+    "match": "wnba",
+    "slug": "chelsea-dungee",
+    "name": "Chelsea Dungee"
+  },
+  "camryn-taylor": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tayloca01w.html",
+    "match": "wnba",
+    "slug": "camryn-taylor",
+    "name": "Camryn Taylor"
+  },
+  "aubrey-griffin": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/g/griffau01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 12,
+      "overall": 37,
+      "year": 2025,
+      "source": "https://www.basketball-reference.com/wnba/players/g/griffau01w.html"
+    },
+    "college": {
+      "name": "UConn",
+      "source": "https://www.basketball-reference.com/wnba/players/g/griffau01w.html"
+    },
+    "match": "wnba",
+    "slug": "aubrey-griffin",
+    "name": "Aubrey Griffin"
+  },
+  "shae-kelley": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kellesh01w.html",
+    "draft": {
+      "team": "Minnesota Lynx",
+      "round": 3,
+      "pick": 11,
+      "overall": 35,
+      "year": 2015,
+      "source": "https://www.basketball-reference.com/wnba/players/k/kellesh01w.html"
+    },
+    "college": {
+      "name": "Minnesota",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kellesh01w.html"
+    },
+    "match": "wnba",
+    "slug": "shae-kelley",
+    "name": "Shae Kelley"
+  },
+  "caitlin-bickle": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/b/bicklca01w.html",
+    "college": {
+      "name": "Baylor",
+      "source": "https://www.basketball-reference.com/wnba/players/b/bicklca01w.html"
+    },
+    "match": "wnba",
+    "slug": "caitlin-bickle",
+    "name": "Caitlin Bickle"
+  },
+  "joslyn-tinkle": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/t/tinkljo01w.html",
+    "college": {
+      "name": "Stanford",
+      "source": "https://www.basketball-reference.com/wnba/players/t/tinkljo01w.html"
+    },
+    "match": "wnba",
+    "slug": "joslyn-tinkle",
+    "name": "Joslyn Tinkle"
+  },
+  "peyton-williams": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/w/willipe01w.html",
+    "college": {
+      "name": "Kansas State",
+      "source": "https://www.basketball-reference.com/wnba/players/w/willipe01w.html"
+    },
+    "match": "wnba",
+    "slug": "peyton-williams",
+    "name": "Peyton Williams"
+  },
+  "adaora-elonu": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/e/elonuad01w.html",
+    "college": {
+      "name": "Texas A&M",
+      "source": "https://www.basketball-reference.com/wnba/players/e/elonuad01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/adaora-elonu-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Nigeria",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 8.0
+        }
+      ]
+    },
+    "slug": "adaora-elonu",
+    "name": "Adaora Elonu"
+  },
+  "ezinne-kalu": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/k/kaluez01w.html",
+    "college": {
+      "name": "Savannah State University",
+      "source": "https://www.basketball-reference.com/wnba/players/k/kaluez01w.html"
+    },
+    "match": "wnba",
+    "slug": "ezinne-kalu",
+    "name": "Ezinne Kalu"
+  },
+  "kim-mestdagh": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/m/mestdki01w.html",
+    "college": {
+      "name": "Colorado State",
+      "source": "https://www.basketball-reference.com/wnba/players/m/mestdki01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/kim-mestdagh-1.html",
+      "rows": [
+        {
+          "season": "2020",
+          "team": "Belgium",
+          "league": "Tokyo 2020",
+          "games": 3,
+          "pts": 11.7
+        }
+      ]
+    },
+    "slug": "kim-mestdagh",
+    "name": "Kim Mestdagh"
+  },
+  "laura-harper": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/h/harpela01w.html",
+    "draft": {
+      "team": "Sacramento Monarchs",
+      "round": 1,
+      "pick": 10,
+      "overall": 10,
+      "year": 2008,
+      "source": "https://www.basketball-reference.com/wnba/players/h/harpela01w.html"
+    },
+    "college": {
+      "name": "Maryland",
+      "source": "https://www.basketball-reference.com/wnba/players/h/harpela01w.html"
+    },
+    "match": "wnba",
+    "slug": "laura-harper",
+    "name": "Laura Harper"
+  },
+  "leticia-romero": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/r/romerle01w.html",
+    "draft": {
+      "team": "Connecticut Sun",
+      "round": 2,
+      "pick": 4,
+      "overall": 16,
+      "year": 2017,
+      "source": "https://www.basketball-reference.com/wnba/players/r/romerle01w.html"
+    },
+    "college": {
+      "name": "Florida State",
+      "source": "https://www.basketball-reference.com/wnba/players/r/romerle01w.html"
+    },
+    "match": "wnba",
+    "international": {
+      "source": "https://www.basketball-reference.com/international/players/leticia-romero-1.html",
+      "rows": [
+        {
+          "season": "2016",
+          "team": "Spain",
+          "league": "Rio de Janeiro 2016",
+          "games": 3,
+          "pts": 9.7
+        },
+        {
+          "season": "2024",
+          "team": "Spain",
+          "league": "Paris 2024",
+          "games": 2,
+          "pts": 0.0
+        }
+      ]
+    },
+    "slug": "leticia-romero",
+    "name": "Leticia Romero"
+  },
+  "camille-little": {
+    "bbref": "https://www.basketball-reference.com/wnba/players/l/littlca01w.html",
+    "draft": {
+      "team": "San Antonio Silver Stars",
+      "round": 2,
+      "pick": 4,
+      "overall": 17,
+      "year": 2007,
+      "source": "https://www.basketball-reference.com/wnba/players/l/littlca01w.html"
+    },
+    "college": {
+      "name": "UNC",
+      "source": "https://www.basketball-reference.com/wnba/players/l/littlca01w.html"
+    },
+    "match": "wnba",
+    "slug": "camille-little",
+    "name": "Camille Little"
+  },
+  "mistie-mccray-bass": {
+    "match": "none",
+    "slug": "mistie-mccray-bass",
+    "name": "Mistie McCray Bass"
+  },
+  "iziane-castro": {
+    "match": "none",
+    "slug": "iziane-castro",
+    "name": "Iziane Castro"
+  },
+  "brittany-boyd-jones": {
+    "match": "none",
+    "slug": "brittany-boyd-jones",
+    "name": "Brittany Boyd-Jones"
+  },
+  "briana-butler": {
+    "match": "none",
+    "slug": "briana-butler",
+    "name": "Briana Butler"
+  },
+  "demya-chakheia-walker": {
+    "match": "none",
+    "slug": "demya-chakheia-walker",
+    "name": "DeMya Chakheia Walker"
+  },
+  "ji-su-park": {
+    "match": "none",
+    "slug": "ji-su-park",
+    "name": "Ji-Su Park"
+  },
+  "marie-guelich": {
+    "match": "none",
+    "slug": "marie-guelich",
+    "name": "Marie Guelich"
+  },
+  "alex-wilson": {
+    "match": "none",
+    "slug": "alex-wilson",
+    "name": "Alex Wilson"
+  },
+  "suzy-batkovic": {
+    "match": "none",
+    "slug": "suzy-batkovic",
+    "name": "Suzy Batkovic"
+  },
+  "evgeniia-belyakova": {
+    "match": "none",
+    "slug": "evgeniia-belyakova",
+    "name": "Evgeniia Belyakova"
+  },
+  "michelle-campbell": {
+    "match": "none",
+    "slug": "michelle-campbell",
+    "name": "Michelle Campbell"
+  },
+  "quionche-carter": {
+    "match": "none",
+    "slug": "quionche-carter",
+    "name": "Quionche Carter"
+  }
+}
