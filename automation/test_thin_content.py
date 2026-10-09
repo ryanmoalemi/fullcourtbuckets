@@ -45,7 +45,6 @@ ORDINAL_WORDS = (
     'sixth', 'seventh', 'eighth', 'ninth', 'tenth',
 )
 NUMBER_RE = re.compile(r'\b\d+(?:\.\d+)?\b')
-DRAFT_SENTENCE_RE = re.compile(r'\b(?:draft(?:ed)?|overall|pick|selection)\b', re.I)
 TABLE_ROW_RE = re.compile(
     r'<th scope="row">(\d{4})</th><td class="team-cell">([^<]+)</td>'
 )
@@ -159,11 +158,14 @@ def _table_pairs(page: str) -> set[tuple[str, int]]:
 
 
 def _season_claims(text: str, teams: list[str]) -> set[tuple[str, int]]:
-    """Team-years stated as seasons. Draft sentences are not season claims."""
+    """Team-years stated with a season phrase.
+
+    Draft wording alone is not a season. A sentence counts only when it uses
+    "the Team in YEAR" or "the Team from YEAR through YEAR", including when
+    that phrase sits in the draft sentence because she played there.
+    """
     claims = set()
     for sentence in SENTENCE_RE.split(text):
-        if DRAFT_SENTENCE_RE.search(sentence):
-            continue
         work = sentence
         for team in teams:
             span = re.compile(
@@ -180,6 +182,46 @@ def _season_claims(text: str, teams: list[str]) -> set[tuple[str, int]]:
                 claims.add((team, int(year)))
             work = single.sub(' ', work)
     return claims
+
+
+def _through_ends(text: str, teams: list[str]) -> dict[str, int]:
+    """Shorthand "the Team through YEAR" covers logged seasons up to that year.
+
+    A continuous "from YEAR through YEAR" is not this shorthand.
+    """
+    work = text
+    for team in teams:
+        work = re.sub(rf'\bthe {re.escape(team)} from \d{{4}} through \d{{4}}', ' ', work)
+    ends = {}
+    for team in teams:
+        for year in re.findall(rf'\bthe {re.escape(team)},? through (\d{{4}})', work):
+            ends[team] = max(ends.get(team, 0), int(year))
+    return ends
+
+
+def _span_covered(phrase: str, copy: str, ends: dict[str, int]) -> bool:
+    if phrase in copy:
+        return True
+    match = re.match(r'the (.+) from (\d{4}) through (\d{4})$', phrase)
+    if match:
+        team, _start, end = match.group(1), int(match.group(2)), int(match.group(3))
+        return ends.get(team, 0) >= end
+    match = re.match(r'the (.+) in (\d{4})$', phrase)
+    if match:
+        team, year = match.group(1), int(match.group(2))
+        return ends.get(team, 0) >= year
+    return False
+
+
+def _team_mentions(sentence: str, teams: list[str]) -> dict[str, int]:
+    work = sentence
+    counts = {}
+    for team in teams:
+        found = re.findall(rf'\b{re.escape(team)}\b', work)
+        if found:
+            counts[team] = len(found)
+            work = re.sub(rf'\b{re.escape(team)}\b', ' ', work)
+    return counts
 
 
 def _plain(fragment: str) -> str:
@@ -312,7 +354,7 @@ class CareerRuleTests(unittest.TestCase):
             self.skipTest('sportswriter voice has not been published')
         slugs = json.loads(voice_path.read_text(encoding='utf-8')).get('slugs') or []
         self.assertGreaterEqual(len(slugs), 40)
-        banned = ('competed for', 'suited up', 'recorded', 'during the regular season')
+        banned = ('competed for', 'suited up', 'recorded', 'during the regular season', 'subsequently')
         for slug in slugs:
             page = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
             copy = _paragraphs(_career_copy(page))
@@ -347,14 +389,59 @@ class CareerRuleTests(unittest.TestCase):
             copy = _plain(_career_copy(text))
             table = _table_pairs(text)
             self.assertTrue(table, slug)
+            ends = _through_ends(copy, teams)
             for phrase in career_prose.span_phrases(profile):
-                self.assertIn(phrase, copy, slug)
+                self.assertTrue(_span_covered(phrase, copy, ends), f'{slug}: {phrase}')
             claims = _season_claims(copy, teams)
             extra = sorted(claims - table)
             self.assertEqual(extra, [], slug)
-            uncovered = sorted(table - claims)
+            uncovered = sorted(
+                pair for pair in table
+                if pair not in claims and ends.get(pair[0], 0) < pair[1]
+            )
             self.assertEqual(uncovered, [], slug)
         self.assertGreaterEqual(checked, 90)
+
+    def test_closing_sentence_names_each_team_once(self):
+        teams = _known_teams()
+        extras = json.loads((ROOT / 'data/wnba/career-extras.json').read_text(encoding='utf-8'))
+        repeated = {}
+        false_debut = {}
+        invented = []
+        checked = 0
+        for path in sorted((ROOT / 'wnba').glob('*/index.html')):
+            slug = path.parent.name
+            if slug in {'teams', 'assets', 'couples'}:
+                continue
+            text = path.read_text(encoding='utf-8', errors='replace')
+            if 'Inactive player' not in text or 'career-sources' not in text:
+                continue
+            checked += 1
+            paragraphs = _paragraphs(_career_copy(text))
+            self.assertTrue(paragraphs, slug)
+            counts = _team_mentions(paragraphs[-1], teams)
+            dupes = {team: count for team, count in counts.items() if count > 1}
+            if dupes:
+                repeated[slug] = dupes
+            profile = json.loads((ROOT / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            copy = _plain(_career_copy(text))
+            folded = copy.casefold()
+            if 'overseas' in folded or 'injur' in folded:
+                invented.append(slug)
+            extra = extras.get(slug) if isinstance(extras.get(slug), dict) else {}
+            draft = career_prose._draft(extra or {})
+            years = []
+            for phrase in career_prose.span_phrases(profile):
+                for year in re.findall(r'\d{4}', phrase):
+                    years.append(int(year))
+            if draft and years and int(draft['year']) < min(years):
+                debut = f"from {min(years)} through"
+                if debut in copy:
+                    false_debut[slug] = debut
+        self.assertGreaterEqual(checked, 90)
+        self.assertEqual(repeated, {})
+        self.assertEqual(false_debut, {})
+        self.assertEqual(invented, [])
 
     def test_crystal_bradford_team_years_match_her_table(self):
         page = (ROOT / 'wnba' / 'crystal-bradford' / 'index.html').read_text(encoding='utf-8')

@@ -30,6 +30,7 @@ _BANNED = (
     'suited up',
     'recorded',
     'during the regular season',
+    'subsequently',
 )
 _SHE_RE = re.compile(r'\bShe\b')
 _HER_RE = re.compile(r'\bHer\b')
@@ -107,12 +108,46 @@ def _stat_clause(row: dict) -> str:
     return f'{listed} over {games} games'
 
 
-def _draft_sentence(name: str, draft: dict, college: str, variant: int, lead: bool) -> str:
+def _draft_sentence(name: str, draft: dict, college: str, variant: int, lead: bool, span: str = '') -> str:
     subject = name if lead else 'She'
     obj = name if lead else 'her'
     team = str(draft['team'])
     year = int(draft['year'])
     word = _ordinal_word(int(draft['overall']))
+    # When she actually played for the club that drafted her, starting that year,
+    # say the season phrase once. That keeps the closer from repeating it.
+    if span:
+        if college:
+            frames = (
+                f'{subject} played for {span} after going {word} overall out of {college}.',
+                f'Out of {college}, {subject} played for {span} as the {word} overall pick.',
+                f'{subject} was the {word} overall pick out of {college} and played for {span}.',
+                f'After {college}, {subject} played for {span} as the {word} overall pick.',
+                f'{subject} left {college} as the {word} overall pick and played for {span}.',
+                f'{subject} went {word} overall out of {college} and played for {span}.',
+                f'From {college}, {subject} played for {span} as the {word} overall pick.',
+                f'{subject} played for {span}, taken {word} overall out of {college}.',
+                f'{subject} came out of {college} and played for {span} as the {word} overall pick.',
+                f'Taken {word} overall out of {college}, {subject} played for {span}.',
+                f'{subject} was drafted {word} overall out of {college} and played for {span}.',
+                f'{subject} played for {span} after going {word} overall out of {college} in the {year} draft.',
+                f'In the {year} draft, {subject} went {word} overall out of {college} and played for {span}.',
+                f'{subject} came out of {college} in the {year} draft, went {word} overall, and played for {span}.',
+                f'{subject} was the {word} overall pick in the {year} draft out of {college} and played for {span}.',
+                f'Out of {college}, {subject} went {word} overall in the {year} draft and played for {span}.',
+            )
+        else:
+            frames = (
+                f'{subject} played for {span} as the {word} overall pick.',
+                f'{subject} was the {word} overall pick and played for {span}.',
+                f'{subject} went {word} overall and played for {span}.',
+                f'{subject} played for {span} after going {word} overall.',
+                f'Taken {word} overall, {subject} played for {span}.',
+                f'{subject} was drafted {word} overall and played for {span}.',
+                f'{subject} went {word} overall in the {year} draft and played for {span}.',
+                f'In the {year} draft, {subject} went {word} overall and played for {span}.',
+            )
+        return frames[variant % len(frames)]
     if college:
         frames = (
             f'The {team} took {obj} {word} overall out of {college} in {year}.',
@@ -260,28 +295,370 @@ def _scoring_sentence(name: str, row: dict, playoffs: bool, variant: int, lead: 
     return text
 
 
-def _team_sentence(name: str, phrases: list[str], variant: int, lead: bool) -> str:
+_SPAN_RE = re.compile(r'^the (.+) from (\d{4}) through (\d{4})$')
+_ONE_YEAR_RE = re.compile(r'^the (.+) in (\d{4})$')
+
+
+def _parse_phrase(phrase: str) -> dict | None:
+    span = _SPAN_RE.match(phrase)
+    if span:
+        return {'team': span.group(1), 'start': int(span.group(2)), 'end': int(span.group(3))}
+    single = _ONE_YEAR_RE.match(phrase)
+    if single:
+        return {'team': single.group(1), 'start': int(single.group(2)), 'end': int(single.group(2))}
+    return None
+
+
+def _draft_span_phrase(draft: dict | None, phrases: list[str]) -> str:
+    """Season phrase for the drafting club, only when she played there from that year."""
+    if not draft:
+        return ''
+    team = str(draft.get('team') or '')
+    year = draft.get('year')
+    if not team or not isinstance(year, int):
+        return ''
+    for phrase in phrases:
+        parsed = _parse_phrase(phrase)
+        if parsed and parsed['team'] == team and parsed['start'] == year:
+            return phrase
+    return ''
+
+
+def _mentioned_years(text: str) -> list[int]:
+    return [int(year) for year in re.findall(r'\b(?:19|20)\d{2}\b', text)]
+
+
+def _phrase_covered(phrase: str, text: str) -> bool:
+    """A shorthand "the Team through YEAR" covers earlier logged runs for that club."""
+    if phrase in text:
+        return True
+    parsed = _parse_phrase(phrase)
+    if not parsed:
+        return False
+    team = parsed['team']
+    work = re.sub(rf'\bthe {re.escape(team)} from \d{{4}} through \d{{4}}', ' ', text)
+    years = [int(year) for year in re.findall(rf'\bthe {re.escape(team)},? through (\d{{4}})', work)]
+    return any(year >= parsed['end'] for year in years)
+
+
+def _rewrite_year_opener(sentence: str, team: str, year: str, phrase: str) -> str:
+    """Turn 'In 2015, she averaged 8 for the Dream.' into a sentence that carries the season phrase."""
+    patterns = (
+        rf'^In {year}, (?P<body>.+?) for the {re.escape(team)}\.$',
+        rf'^In that {year} season, (?P<body>.+?) for the {re.escape(team)}\.$',
+    )
+    for pattern in patterns:
+        match = re.match(pattern, sentence)
+        if not match:
+            continue
+        body = match.group('body')
+        if body.startswith('she '):
+            body = 'She ' + body[4:]
+        elif body.startswith('her '):
+            body = 'Her ' + body[4:]
+        return f'{body} for {phrase}.'
+    return sentence
+
+
+def _pin_single_years(found: list[str], phrases: list[str]) -> list[str]:
+    """If a one-year stop is already described, fold the canonical phrase into that sentence."""
+    pinned = list(found)
+    for phrase in phrases:
+        parsed = _parse_phrase(phrase)
+        if not parsed or parsed['start'] != parsed['end']:
+            continue
+        if any(phrase in sentence for sentence in pinned):
+            continue
+        year = str(parsed['start'])
+        team = parsed['team']
+        for index, sentence in enumerate(pinned):
+            rewritten = _rewrite_year_opener(sentence, team, year, phrase)
+            if rewritten != sentence:
+                pinned[index] = rewritten
+                break
+    return pinned
+
+
+def _listed_frames(subject: str, listed: str, relation: str, lead: bool, known_clubs: bool) -> tuple[str, ...]:
+    if lead or relation == 'intro':
+        # "her" stays lowercase when the name is not the grammatical subject.
+        person = subject if lead else 'her'
+        opener = subject if lead else 'She'
+        return (
+            f'{opener} played for {listed}.',
+            f'In the WNBA, {person if lead else "she"} played for {listed}.',
+            f'{opener} spent her WNBA seasons with {listed}.',
+            f'{opener} made her WNBA stops with {listed}.',
+            f'{opener} logged her WNBA seasons with {listed}.',
+            f'WNBA seasons for {person} came with {listed}.',
+            f'{opener} was in the WNBA with {listed}.',
+            f'{opener} held WNBA roster spots with {listed}.',
+        )
+    # Same clubs already named in the bio: say the years, without "other" or "elsewhere".
+    if known_clubs:
+        if relation == 'after':
+            return (
+                f'{subject} later played for {listed}.',
+                f'Later, {subject} played for {listed}.',
+                f'After that, {subject} played for {listed}.',
+                f'{subject} went on to play for {listed}.',
+                f'In later seasons, {subject} played for {listed}.',
+                f'{subject} was later with {listed}.',
+                f'Her later seasons were with {listed}.',
+                f'{subject} later had seasons with {listed}.',
+                f'Her later WNBA time was with {listed}.',
+                f'From that point, {subject} played for {listed}.',
+                f'{subject} played later for {listed}.',
+            )
+        if relation == 'before':
+            return (
+                f'Before that, {subject} played for {listed}.',
+                f'{subject} had already played for {listed}.',
+                f'Earlier, {subject} played for {listed}.',
+                f'{subject} had played for {listed} before that.',
+                f'Her earlier seasons were with {listed}.',
+                f'{subject} previously played for {listed}.',
+                f'Prior to that, {subject} played for {listed}.',
+                f'{subject} had been with {listed}.',
+                f'Her previous seasons were with {listed}.',
+                f'{subject} had earlier WNBA time with {listed}.',
+                f'Her WNBA time before that was with {listed}.',
+                f'{subject} had those earlier seasons with {listed}.',
+            )
+        return (
+            f'{subject} played for {listed}.',
+            f'Her WNBA seasons included {listed}.',
+            f'{subject} was with {listed}.',
+            f'Those WNBA seasons were with {listed}.',
+            f'{subject} had her WNBA seasons with {listed}.',
+            f'In the WNBA, {subject} played for {listed}.',
+            f'{subject} spent her WNBA seasons with {listed}.',
+            f'Her seasons in the WNBA were with {listed}.',
+            f'{subject} logged WNBA seasons with {listed}.',
+            f'The WNBA seasons for her were with {listed}.',
+            f'{subject} had WNBA seasons with {listed}.',
+            f'Across those years, {subject} played for {listed}.',
+        )
+    if relation == 'after':
+        return (
+            f'{subject} later played for {listed}.',
+            f'Later, {subject} played for {listed}.',
+            f'After that, {subject} played for {listed}.',
+            f'{subject} went on to play for {listed}.',
+            f'{subject} moved on to {listed}.',
+            f'From there, {subject} played for {listed}.',
+            f'{subject} reached {listed}.',
+            f'Her later WNBA stops were {listed}.',
+            f'{subject} was later with {listed}.',
+            f'Her next WNBA stops were {listed}.',
+            f'{subject} went from there to {listed}.',
+            f'In later seasons, {subject} played for {listed}.',
+        )
+    if relation == 'before':
+        return (
+            f'Before that, {subject} played for {listed}.',
+            f'{subject} had already played for {listed}.',
+            f'Earlier, {subject} played for {listed}.',
+            f'{subject} had played for {listed} before that.',
+            f'Her earlier WNBA stops were {listed}.',
+            f'{subject} previously played for {listed}.',
+            f'Prior to that, {subject} played for {listed}.',
+            f'{subject} had been with {listed}.',
+            f'Her previous WNBA stops were {listed}.',
+            f'{subject} had a prior stop with {listed}.',
+            f'{subject} had earlier WNBA time with {listed}.',
+            f'Her WNBA time before that was with {listed}.',
+        )
+    return (
+        f'{subject} played for {listed}.',
+        f'{subject} also played for {listed}.',
+        f'In the WNBA, {subject} also played for {listed}.',
+        f'{subject} was also with {listed}.',
+        f'Her WNBA career also included {listed}.',
+        f'{subject} added WNBA stops with {listed}.',
+        f'Along the way, {subject} played for {listed}.',
+        f'{subject} saw WNBA time with {listed}.',
+        f'{subject} had WNBA time with {listed}.',
+        f'On top of that, {subject} played for {listed}.',
+        f'{subject} took further WNBA stops with {listed}.',
+        f'{subject} had further WNBA stops with {listed}.',
+    )
+
+
+def _team_catalog(phrases: list[str]) -> tuple[list[str], dict[str, list[dict]]]:
+    order = []
+    runs: dict[str, list[dict]] = {}
+    for phrase in phrases:
+        parsed = _parse_phrase(phrase)
+        if not parsed:
+            continue
+        team = parsed['team']
+        if team not in runs:
+            order.append(team)
+            runs[team] = []
+        runs[team].append(parsed)
+    for group in runs.values():
+        group.sort(key=lambda item: (item['start'], item['end']))
+    return order, runs
+
+
+def _career_first(runs: dict[str, list[dict]]) -> int | None:
+    starts = [item['start'] for group in runs.values() for item in group]
+    return min(starts) if starts else None
+
+
+def _truncated_start(start: int, career_first: int | None, draft: dict | None) -> bool:
+    """A logged start year is not her debut when she was drafted before our seasons."""
+    if career_first is None or start != career_first or not draft:
+        return False
+    year = draft.get('year')
+    return isinstance(year, int) and year < career_first
+
+
+def _team_bit(team: str, group: list[dict], career_first: int | None, draft: dict | None) -> str:
+    """One mention of a club. Gaps stay inside the span unless a reason is stored."""
+    start = group[0]['start']
+    end = group[-1]['end']
+    gapped = len(group) > 1
+    truncated = _truncated_start(start, career_first, draft)
+    if not gapped and not truncated:
+        if start == end:
+            return f'the {team} in {start}'
+        return f'the {team} from {start} through {end}'
+    return f'the {team} through {end}'
+
+
+def _overseas_note(group: list[dict], extra: dict | None) -> str:
+    """Name a missing WNBA year only when a non-Olympic season is stored for it."""
+    if len(group) < 2 or not isinstance(extra, dict):
+        return ''
+    international = extra.get('international') if isinstance(extra.get('international'), dict) else {}
+    rows = international.get('rows') if isinstance(international.get('rows'), list) else []
+    covered = {year for run in group for year in range(run['start'], run['end'] + 1)}
+    notes = []
+    for year in range(group[0]['start'], group[-1]['end'] + 1):
+        if year in covered:
+            continue
+        clubs = []
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            try:
+                season = int(row.get('season'))
+            except (TypeError, ValueError):
+                continue
+            if season != year:
+                continue
+            league = str(row.get('league') or '')
+            if league in cs.OLYMPICS or 'olympic' in league.casefold():
+                continue
+            club = str(row.get('team') or '').strip()
+            if club and club not in clubs:
+                clubs.append(club)
+        if len(clubs) == 1:
+            notes.append(f'{year} overseas with {clubs[0]}')
+    if not notes:
+        return ''
+    return ', including ' + cp._join(notes)
+
+
+def _one_club_sentence(
+    name: str,
+    team: str,
+    group: list[dict],
+    draft: dict | None,
+    variant: int,
+    lead: bool,
+    extra: dict | None,
+) -> str:
+    end = group[-1]['end']
+    opener = name if lead else 'She'
+    person = name if lead else 'her'
+    note = _overseas_note(group, extra)
+    draft_team = str((draft or {}).get('team') or '')
+    if draft_team == team:
+        frames = (
+            f'{opener} played her whole WNBA career with the {team}, through {end}{note}.',
+            f'{opener} spent her WNBA career with the {team}, through {end}{note}.',
+            f'Her WNBA career was with the {team}, through {end}{note}.',
+            f'{opener} had her WNBA career with the {team}, through {end}{note}.',
+            f'In the WNBA, {opener if lead else "she"} played for the {team}, through {end}{note}.',
+            f'{opener} played in the WNBA with the {team}, through {end}{note}.',
+            f'WNBA seasons for {person} were with the {team}, through {end}{note}.',
+            f'{opener} logged her WNBA career with the {team}, through {end}{note}.',
+        )
+        return frames[variant % len(frames)]
+    listed = f'the {team} through {end}'
+    frames = _listed_frames(opener, listed, 'intro', lead, known_clubs=False)
+    text = frames[variant % len(frames)]
+    if note and text.endswith('.'):
+        text = text[:-1] + note + '.'
+    return text
+
+
+def _stop_relation(teams: list[str], runs: dict[str, list[dict]], prior: str, lead: bool) -> str:
+    if lead:
+        return 'intro'
+    years = _mentioned_years(prior)
+    if not years:
+        return 'intro'
+    lo, hi = min(years), max(years)
+    starts = [runs[team][0]['start'] for team in teams]
+    ends = [runs[team][-1]['end'] for team in teams]
+    if ends and all(end < lo for end in ends):
+        return 'before'
+    if starts and all(start > hi for start in starts):
+        return 'after'
+    return 'mid'
+
+
+def _stop_sentence(
+    name: str,
+    phrases: list[str],
+    prior: str,
+    variant: int,
+    lead: bool,
+    draft: dict | None = None,
+    all_phrases: list[str] | None = None,
+    extra: dict | None = None,
+) -> str:
+    """One mention per club, in order. No false 'then', and no repeated franchise."""
     if not phrases:
         return ''
-    subject = name if lead else 'She'
-    listed = cp._join(phrases)
-    frames = (
-        f'{subject} played for {listed}.',
-        f'{subject} later played for {listed}.',
-        f'Later, {subject} played for {listed}.',
-        f'{subject} also played for {listed}.',
-        f'After that, {subject} played for {listed}.',
-        f'In the WNBA, {subject} played for {listed}.',
-        f'{subject} then played for {listed}.',
-        f'From there, {subject} played for {listed}.',
-        f'{subject} spent those WNBA seasons with {listed}.',
-        f'{subject} played WNBA basketball for {listed}.',
-        f'{subject} played her WNBA games for {listed}.',
-        f'{subject} played her WNBA seasons for {listed}.',
+    _order, runs = _team_catalog(all_phrases or phrases)
+    if not runs:
+        return ''
+    career_first = _career_first(runs)
+    missing = []
+    seen = set()
+    for phrase in phrases:
+        parsed = _parse_phrase(phrase)
+        if not parsed or parsed['team'] in seen or parsed['team'] not in runs:
+            continue
+        seen.add(parsed['team'])
+        missing.append(parsed['team'])
+    missing.sort(key=lambda team: (runs[team][0]['start'], team))
+    if not missing:
+        return ''
+    gapped_or_truncated = any(
+        len(runs[team]) > 1 or _truncated_start(runs[team][0]['start'], career_first, draft)
+        for team in missing
     )
+    if len(_order) == 1 and gapped_or_truncated:
+        return _one_club_sentence(name, missing[0], runs[missing[0]], draft, variant, lead, extra)
+    bits = [_team_bit(team, runs[team], career_first, draft) for team in missing]
+    listed = cp._join(bits)
+    known = all(team in prior for team in missing)
+    relation = _stop_relation(missing, runs, prior, lead)
+    if relation == 'before' and len(missing) > 1:
+        # A backward list would need two clauses. Keep one pass in calendar order.
+        relation = 'mid'
+    subject = name if lead else 'She'
+    frames = _listed_frames(subject, listed, relation, lead, known)
     text = frames[variant % len(frames)]
-    if lead and text.startswith(('Later, ', 'After that, ', 'From there, ')):
-        text = f'{name} played for {listed}.'
+    notes = [note for team in missing if (note := _overseas_note(runs[team], extra))]
+    if notes and text.endswith('.'):
+        text = text[:-1] + ''.join(notes) + '.'
     return text
 
 
@@ -366,6 +743,7 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
     best_reg = cs._best(regular)
     best_po = cs._best(playoffs)
     draft = cp._draft(extra if isinstance(extra, dict) else {})
+    draft_span = _draft_span_phrase(draft, phrases)
     college = cp._college(profile, extra if isinstance(extra, dict) else {})
     events = cp._olympics(extra if isinstance(extra, dict) else {})
     medal = _medal_event(events, honors_for(root, slug))
@@ -404,12 +782,12 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
                 text = _same_summer(text, _team_for_year(regular, medal['year']))
             return text
         if kind == 'draft':
-            return _draft_sentence(name, draft, college, rank + 7, lead) if draft else ''
+            return _draft_sentence(name, draft, college, rank + 7, lead, draft_span) if draft else ''
         if kind == 'scoring':
             row = best_po if scoring_playoffs else scoring_row
             return _scoring_sentence(name, row, scoring_playoffs, rank, lead, multi) if row is not None else ''
         if kind == 'teams':
-            return _team_sentence(name, phrases, rank + 5, lead) if phrases else ''
+            return ''
         if kind == 'college':
             if not college or draft:
                 return ''
@@ -426,6 +804,12 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
     order = [lead_kind] + rest
 
     found = []
+    if lead_kind == 'teams' and phrases:
+        opener = _stop_sentence(
+            name, phrases, '', rank + 5, lead=True, draft=draft, all_phrases=phrases, extra=extra,
+        )
+        if opener:
+            found.append(opener)
     for kind in order:
         if len(found) >= 4:
             break
@@ -433,8 +817,6 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
         if not text:
             continue
         blob = ' '.join(found)
-        if kind == 'teams' and cp._covers(blob, phrases):
-            continue
         if kind == 'college' and college and college in blob:
             continue
         if kind == 'draft' and draft and str(draft['year']) in blob and _ordinal_word(int(draft['overall'])) in blob:
@@ -451,13 +833,18 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
             found.append(playoff_text)
 
     found = _drop_redundant_list(found, phrases)
+    found = _pin_single_years(found, phrases)
     blob = ' '.join(found)
-    if phrases and not cp._covers(blob, phrases):
-        team_text = _team_sentence(name, phrases, rank + 5, lead=not found)
-        if len(found) >= 4:
-            found[-1] = team_text
-        else:
-            found.append(team_text)
+    missing = [phrase for phrase in phrases if not _phrase_covered(phrase, blob)]
+    if missing:
+        team_text = _stop_sentence(
+            name, missing, blob, rank + 5, lead=not found, draft=draft, all_phrases=phrases, extra=extra,
+        )
+        if team_text:
+            if len(found) >= 4:
+                found[-1] = team_text
+            else:
+                found.append(team_text)
 
     if found and name not in found[0]:
         first = found[0]

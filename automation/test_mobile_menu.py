@@ -81,7 +81,10 @@ def _ignored_console(text, url):
 
 class MobileMenuTests(unittest.TestCase):
     def test_menu_opens_on_every_sitemap_page(self):
-        from playwright.sync_api import sync_playwright
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            self.skipTest('Playwright is not installed')
 
         paths = published_paths()
         self.assertGreater(len(paths), 100)
