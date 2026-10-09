@@ -216,7 +216,7 @@ class HomepageRailTests(unittest.TestCase):
         page = (
             '<section class="feature-grid" id="latest">'
             '<a class="feature feature-link" id="featured-story" href="/news/old/">'
-            '<img class="feature-photo" id="featured-image" src="/images/articles/keep.jpg" alt="Keep">'
+            '<img class="feature-photo" id="featured-image" src="/images/articles/keep.jpg" alt="Keep"'
             '<div class="feature-content"><h1 id="featured-title">Old</h1>'
             '<p id="featured-dek">Old dek</p><div class="meta" id="featured-meta">Old</div></div></a>'
             '<aside class="rail"><div class="rail-card"><h2>WNBA News. Given to You Straight.</h2></div></aside>'
@@ -235,6 +235,8 @@ class HomepageRailTests(unittest.TestCase):
         fresh = rail.render_rail([], [], _standings(), now=NOW)
         updated = links.apply_homepage(page, articles, fresh)
         self.assertIn('id="featured-image"', updated)
+        self.assertIn('src="/images/articles/keep.jpg"', updated)
+        self.assertIn('object-position:center 20%', updated)
         self.assertIn('src="/images/articles/keep.jpg"', updated)
         self.assertIn('>Final standings<', updated)
         self.assertNotIn('Given to You Straight', updated)

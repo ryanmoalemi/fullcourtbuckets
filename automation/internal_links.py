@@ -309,13 +309,21 @@ def _format_date(iso: str) -> str:
     return f'{when.strftime("%B")} {when.day}, {when.year}'
 
 
+def _image_dims(article: dict) -> str:
+    width, height = article.get('imageWidth'), article.get('imageHeight')
+    if not width or not height:
+        return ''
+    return f' width="{int(width)}" height="{int(height)}"'
+
+
 def _story_card(article: dict) -> str:
     title = article['title']
     image = article.get('image') or ''
     alt = article.get('imageAlt') or title
     return (
         f'<a class="article-card" href="{esc(article_href(article))}">'
-        f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"></div>'
+        f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"{_image_dims(article)}'
+        f' decoding="async" loading="lazy"{focal_style(article)}></div>'
         f'<div class="article-copy"><div class="cat">{esc(article.get("category") or "")}</div>'
         f'<h3>{esc(title)}</h3><p>{esc(article.get("description") or "")}</p>'
         f'<div class="date">{esc(_format_date(article["date"]))}</div></div></a>'
@@ -348,7 +356,10 @@ def _featured_photo(article: dict) -> str:
     if not image:
         return ''
     alt = str(article.get('imageAlt') or article.get('title') or '')
-    return f'<img class="feature-photo" id="featured-image" src="{esc(image)}" alt="{esc(alt)}">'
+    return (
+        f'<img class="feature-photo" id="featured-image" src="{esc(image)}" alt="{esc(alt)}"'
+        f'{_image_dims(article)} decoding="async" fetchpriority="high"{focal_style(article)}>'
+    )
 
 
 def _featured_credit(article: dict) -> str:
@@ -962,7 +973,18 @@ def team_news_html(root: Path, team_slug: str) -> str:
         title = str(article.get('title') or '').strip()
         if not title:
             continue
-        items.append('<li>' + inline_link(title, article_href(article)) + '</li>')
+        image = str(article.get('image') or '').strip()
+        thumb = ''
+        if image:
+            alt = str(article.get('imageAlt') or title)
+            thumb = (
+                f'<img src="{esc(image)}" alt="{esc(alt)}"{_image_dims(article)}'
+                f' decoding="async" loading="lazy"{focal_style(article)}>'
+            )
+        items.append(
+            '<li><a class="team-news-item" href="' + esc(article_href(article)) + '">'
+            + thumb + '<span>' + esc(title) + '</span></a></li>'
+        )
     if not items:
         return ''
     return (
@@ -1334,6 +1356,9 @@ def _is_lead_figure(figure: str) -> bool:
 _FOCAL_WORD = r'(?:left|center|right|top|bottom|\d{1,3}(?:\.\d+)?%)'
 _FOCAL_RE = re.compile(rf'^{_FOCAL_WORD}(?:\s+{_FOCAL_WORD})?$', re.I)
 LEAD_SIZES = '(max-width: 900px) calc(94vw - 40px), 842px'
+# object-fit: cover defaults to the center and cuts off heads in portrait photos.
+# 20% keeps the face in frame when a post has no measured focal point.
+DEFAULT_IMAGE_FOCAL = 'center 20%'
 
 
 def lead_focal(article: dict | None) -> str:
@@ -1341,7 +1366,12 @@ def lead_focal(article: dict | None) -> str:
     raw = re.sub(r'\s+', ' ', str((article or {}).get('imageFocal') or '').strip())
     if raw and _FOCAL_RE.fullmatch(raw):
         return raw.lower()
-    return 'center 25%'
+    return DEFAULT_IMAGE_FOCAL
+
+
+def focal_style(article: dict | None) -> str:
+    """Inline object-position so a card crop uses this post's focal point."""
+    return f' style="object-position:{esc(lead_focal(article))}"'
 
 
 def _upsert_attr(tag: str, name: str, value: str) -> str:
@@ -1635,7 +1665,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 .breadcrumbs a{{color:#d4d0ca;text-decoration:underline}}
 .news-list{{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}}
 .news-item{{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;align-items:center;background:rgba(10,10,12,.96);border:1px solid #2b2930;padding:12px;text-decoration:none}}
-.news-item img{{width:180px;height:120px;object-fit:cover;background:#111;border-radius:0}}
+.news-item img{{width:180px;height:120px;object-fit:cover;object-position:{DEFAULT_IMAGE_FOCAL};background:#111;border-radius:0}}
 .news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
 .news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
 .news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}
@@ -1905,7 +1935,11 @@ def _news_list_item(article: dict) -> str:
     alt = str(article.get('imageAlt') or title)
     when = str(article.get('date') or '')
     label = _format_date(when) if when else ''
-    thumb = f'<img src="{esc(image)}" alt="{esc(alt)}">' if image else ''
+    dims = _image_dims(article)
+    thumb = (
+        f'<img src="{esc(image)}" alt="{esc(alt)}"{dims} decoding="async" loading="lazy"{focal_style(article)}>'
+        if image else ''
+    )
     return (
         '<li><a class="news-item" href="' + esc(article_href(article)) + '">'
         + thumb
@@ -1979,7 +2013,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 .breadcrumbs a{{color:#d4d0ca;text-decoration:underline}}
 .news-list{{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}}
 .news-item{{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;align-items:center;background:rgba(10,10,12,.96);border:1px solid #2b2930;padding:12px;text-decoration:none}}
-.news-item img{{width:180px;height:120px;object-fit:cover;background:#111}}
+.news-item img{{width:180px;height:120px;object-fit:cover;object-position:{DEFAULT_IMAGE_FOCAL};background:#111}}
 .news-copy time{{color:#ff9800;font-size:12px;font-weight:800;letter-spacing:.04em}}
 .news-copy h2{{margin:4px 0 6px;font:800 28px/1.1 Barlow,sans-serif}}
 .news-copy p{{margin:0;color:#a5a19b;font-size:15px;line-height:1.45}}

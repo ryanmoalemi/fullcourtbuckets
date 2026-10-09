@@ -3,7 +3,9 @@
 
 Writes hero-1200.webp (1200x675) and, when the source is wide enough,
 hero-2x.webp. Never upscales. The original file stays the listing image.
-imageFocal is a CSS object-position. The default is "center 25%".
+imageFocal is a CSS object-position. The default is "center 20%".
+A missing focal is measured from the source photo (OpenCV Haar) so the face
+stays inside the 16:9 lead and the 1.91:1 social crop. No face uses the default.
 """
 from __future__ import annotations
 
@@ -17,22 +19,14 @@ import internal_links as links
 
 ASPECT = 16 / 9
 HERO_1X = (1200, 675)
+# Open Graph and Twitter large cards are 1.91:1. 1200x628 is that ratio.
+OG_1X = (1200, 628)
+OG_ASPECT = OG_1X[0] / OG_1X[1]
 # A second file is worth serving only when it is clearly sharper than 1200.
 HERO_2X_MIN = 1440
 HERO_2X_CAP = 2400
-DEFAULT_FOCAL = 'center 25%'
+DEFAULT_FOCAL = links.DEFAULT_IMAGE_FOCAL
 WEBP_QUALITY = 76
-# Face check on October 4, 2026. These shift the default window up so the
-# player's face stays in the 16:9 frame. Other stories already fit at center 25%.
-CHECKED_FOCALS = {
-    'angel-reese-game-1-liberty': 'center 6%',
-    'liberty-dream-semis-game-1-recap': 'center 18%',
-    # Full-body free-throw photo. 47% keeps the hair and the ball; 25% cuts the ball.
-    'aces-valkyries-semis-game-2-recap': 'center 47%',
-    'aces-fever-series-breakdown': 'center 11%',
-    # Portrait slab. center 40% keeps JuJu's face; 25% cuts into the label and head.
-    'top-10-womens-college-basketball-cards-to-collect-2026': 'center 40%',
-}
 _FOCAL_WORD = r'(?:left|center|right|top|bottom|\d{1,3}(?:\.\d+)?%)'
 FOCAL_RE = re.compile(rf'^{_FOCAL_WORD}(?:\s+{_FOCAL_WORD})?$', re.I)
 OG_IMAGE_RE = re.compile(
@@ -43,7 +37,7 @@ JSONLD_RE = re.compile(r'<script type="application/ld\+json">(.*?)</script>', re
 
 
 def parse_focal(value: str | None) -> tuple[float, float]:
-    """CSS object-position as two fractions. Missing or invalid uses center 25%."""
+    """CSS object-position as two fractions. Missing or invalid uses center 20%."""
     text = re.sub(r'\s+', ' ', (value or '').strip().lower())
     if not text or FOCAL_RE.fullmatch(text) is None:
         text = DEFAULT_FOCAL
@@ -67,7 +61,7 @@ def _focal_axis(token: str, axis: str) -> float:
         return words[token]
     if token.endswith('%'):
         return min(1.0, max(0.0, float(token[:-1]) / 100))
-    return 0.5 if axis == 'x' else 0.25
+    return 0.5 if axis == 'x' else 0.20
 
 
 def format_focal(px: float, py: float) -> str:
@@ -80,36 +74,43 @@ def format_focal(px: float, py: float) -> str:
     return f'{part(px, True)} {part(py, False)}'
 
 
-def cover_window(width: int, height: int, px: float, py: float) -> tuple[float, float, float, float]:
+def cover_window(width: int, height: int, px: float, py: float,
+                 aspect: float = ASPECT) -> tuple[float, float, float, float]:
     """Source rectangle for object-fit: cover at this object-position."""
     if width < 1 or height < 1:
         raise ValueError('image has no pixels')
-    if width / height > ASPECT:
+    if width / height > aspect:
         crop_h = float(height)
-        crop_w = height * ASPECT
+        crop_w = height * aspect
     else:
         crop_w = float(width)
-        crop_h = width / ASPECT
+        crop_h = width / aspect
     left = (width - crop_w) * px
     top = (height - crop_h) * py
     return left, top, crop_w, crop_h
 
 
 def focal_keeping_face(width: int, height: int, face: tuple[float, float, float, float],
-                       default: tuple[float, float] = (0.5, 0.25)) -> tuple[float, float]:
+                       default: tuple[float, float] | None = None,
+                       aspect: float = OG_ASPECT) -> tuple[float, float]:
     """Move the default window only far enough to keep the face, with room for hair.
 
     face is (x, y, w, h) in source pixels. A face that already fits stays put.
+    aspect is the tightest crop this focal has to satisfy. A 16:9 lead is taller
+    than 1.91:1, so a face kept in the social crop stays in the lead and in cards.
     """
+    if default is None:
+        default = parse_focal(DEFAULT_FOCAL)
     px, py = default
     x, y, fw, fh = face
     if fw < 1 or fh < 1:
         return px, py
-    face_top = y - 0.55 * fh
+    # One face-height above the box leaves room for hair on a tight 1.91 crop.
+    face_top = y - 0.9 * fh
     face_bot = y + fh + 0.12 * fh
     face_left = x - 0.15 * fw
     face_right = x + fw + 0.15 * fw
-    left, top, crop_w, crop_h = cover_window(width, height, px, py)
+    left, top, crop_w, crop_h = cover_window(width, height, px, py, aspect)
     if face_top >= top and face_bot <= top + crop_h and face_left >= left and face_right <= left + crop_w:
         return px, py
     if height - crop_h > 1:
@@ -119,6 +120,7 @@ def focal_keeping_face(width: int, height: int, face: tuple[float, float, float,
             top = face_bot - crop_h
         top = max(0.0, min(height - crop_h, top))
         py = top / (height - crop_h)
+    left, top, crop_w, crop_h = cover_window(width, height, px, py, aspect)
     if width - crop_w > 1:
         if face_left < left:
             left = face_left
@@ -135,10 +137,10 @@ def snap_width(width: int) -> int:
     return max(16, snapped)
 
 
-def crop_image(image: Image.Image, focal: str) -> Image.Image:
+def crop_image(image: Image.Image, focal: str, aspect: float = ASPECT) -> Image.Image:
     px, py = parse_focal(focal)
     width, height = image.size
-    left, top, crop_w, crop_h = cover_window(width, height, px, py)
+    left, top, crop_w, crop_h = cover_window(width, height, px, py, aspect)
     box = (
         int(round(left)),
         int(round(top)),
@@ -156,8 +158,9 @@ def crop_image(image: Image.Image, focal: str) -> Image.Image:
     return image.crop(box)
 
 
-def _resize(image: Image.Image, width: int) -> Image.Image:
-    height = width * 9 // 16
+def _resize(image: Image.Image, width: int, height: int | None = None) -> Image.Image:
+    if height is None:
+        height = width * 9 // 16
     if image.size == (width, height):
         return image
     return image.resize((width, height), Image.Resampling.LANCZOS)
@@ -223,29 +226,148 @@ def write_heroes(source: Path, focal: str) -> dict:
         result['imageHeroWidth'] = crop_w
         result['imageHeroHeight'] = crop_w * 9 // 16
         result['imageHero2x'] = None
+    og_path, og_w, og_h = _write_og(image, focal, source)
+    result['imageOg'] = og_path
+    result['imageOgWidth'] = og_w
+    result['imageOgHeight'] = og_h
     return result
+
+
+def _write_og(image: Image.Image, focal: str, source: Path) -> tuple[Path, int, int]:
+    """1.91:1 social crop. Does not upscale. Shares the lead focal point."""
+    cropped = crop_image(image, focal, OG_ASPECT)
+    crop_w = cropped.size[0]
+    wide = source.parent / 'og-1200.webp'
+    small = source.parent / 'og.webp'
+    if crop_w >= OG_1X[0]:
+        small.unlink(missing_ok=True)
+        _save(_resize(cropped, OG_1X[0], OG_1X[1]), wide)
+        return wide, OG_1X[0], OG_1X[1]
+    snapped = max(2, crop_w - (crop_w % 2))
+    height = max(1, int(round(snapped / OG_ASPECT)))
+    wide.unlink(missing_ok=True)
+    _save(_resize(cropped, snapped, height), small)
+    return small, snapped, height
+
+
+def _iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
+    ax, ay, aw, ah = a
+    bx, by, bw, bh = b
+    x1, y1 = max(ax, bx), max(ay, by)
+    x2, y2 = min(ax + aw, bx + bw), min(ay + ah, by + bh)
+    inter = max(0, x2 - x1) * max(0, y2 - y1)
+    union = aw * ah + bw * bh - inter
+    return inter / union if union else 0.0
+
+
+def detect_faces(image: Image.Image) -> list[tuple[int, int, int, int]]:
+    """Haar faces in source pixels. Empty when OpenCV is not installed."""
+    try:
+        import cv2
+        import numpy as np
+    except ImportError:
+        return []
+    rgb = np.asarray(image.convert('RGB'))
+    height, width = rgb.shape[:2]
+    scale = 900 / max(height, width) if max(height, width) > 900 else 1.0
+    small = rgb
+    if scale < 1:
+        small = cv2.resize(rgb, (max(1, int(width * scale)), max(1, int(height * scale))), interpolation=cv2.INTER_AREA)
+    gray = cv2.equalizeHist(cv2.cvtColor(small, cv2.COLOR_RGB2GRAY))
+    sh, sw = gray.shape[:2]
+    min_side = max(20, int(min(sw, sh) * 0.045))
+    names = (
+        'haarcascade_frontalface_default.xml',
+        'haarcascade_frontalface_alt2.xml',
+        'haarcascade_profileface.xml',
+    )
+    raw: list[tuple[int, int, int, int]] = []
+    for name in names:
+        cascade = cv2.CascadeClassifier(cv2.data.haarcascades + name)
+        if cascade.empty():
+            continue
+        found = cascade.detectMultiScale(gray, scaleFactor=1.08, minNeighbors=5, minSize=(min_side, min_side))
+        for x, y, fw, fh in found:
+            raw.append((int(x), int(y), int(fw), int(fh)))
+    profile = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_profileface.xml')
+    if not profile.empty():
+        flipped = cv2.flip(gray, 1)
+        found = profile.detectMultiScale(flipped, scaleFactor=1.08, minNeighbors=5, minSize=(min_side, min_side))
+        for x, y, fw, fh in found:
+            raw.append((int(sw - x - fw), int(y), int(fw), int(fh)))
+    inv = 1 / scale
+    boxes = []
+    area = width * height
+    for x, y, fw, fh in raw:
+        x, y, fw, fh = int(x * inv), int(y * inv), int(fw * inv), int(fh * inv)
+        if fw < 12 or fh < 12 or fw * fh < 0.002 * area or fw * fh > 0.4 * area:
+            continue
+        boxes.append((x, y, fw, fh))
+    boxes.sort(key=lambda box: box[2] * box[3], reverse=True)
+    kept: list[tuple[int, int, int, int]] = []
+    for box in boxes:
+        if all(_iou(box, other) < 0.35 for other in kept):
+            kept.append(box)
+    return kept
+
+
+def choose_face(boxes: list[tuple[int, int, int, int]], height: int,
+                width: int = 0) -> tuple[int, int, int, int] | None:
+    """Highest substantial face. Boxes glued to the side edge are partial detections."""
+    if width:
+        boxes = [box for box in boxes if box[0] > width * 0.04 and box[0] + box[2] < width * 0.96]
+    if not boxes:
+        return None
+    largest_area = max(box[2] * box[3] for box in boxes)
+
+    def center_y(box: tuple[int, int, int, int]) -> float:
+        return box[1] + box[3] / 2
+
+    candidates = [
+        box for box in boxes
+        if box[2] * box[3] >= 0.4 * largest_area and center_y(box) < height * 0.62
+    ]
+    pool = candidates or boxes
+    return min(pool, key=lambda box: (center_y(box), -(box[2] * box[3])))
+
+
+def suggest_focal(image: Image.Image) -> str:
+    """Face-safe object-position. No detection, or no face, uses center 20%."""
+    face = choose_face(detect_faces(image), image.size[1], image.size[0])
+    if face is None:
+        return DEFAULT_FOCAL
+    px, py = focal_keeping_face(image.size[0], image.size[1], face)
+    return format_focal(px, py)
 
 
 def _web_path(root: Path, file: Path) -> str:
     return '/' + file.resolve().relative_to(root.resolve()).as_posix()
 
 
-def focal_for(article: dict) -> str:
-    raw = str(article.get('imageFocal') or '').strip()
-    if raw and FOCAL_RE.fullmatch(re.sub(r'\s+', ' ', raw)):
-        return re.sub(r'\s+', ' ', raw.lower())
-    slug = str(article.get('slug') or '')
-    return CHECKED_FOCALS.get(slug, DEFAULT_FOCAL)
+def focal_for(article: dict, image: Image.Image | None = None) -> str:
+    """Stored object-position, or a face measurement, or center 20%."""
+    raw = re.sub(r'\s+', ' ', str(article.get('imageFocal') or '').strip())
+    if raw and FOCAL_RE.fullmatch(raw):
+        return raw.lower()
+    if image is not None:
+        return suggest_focal(image)
+    return DEFAULT_FOCAL
 
 
 def ensure_article_hero(root: Path, article: dict) -> dict:
-    """Write the hero files and set imageHero fields. Listing image stays put."""
+    """Write the hero and social crops. Listing image stays put.
+
+    A post with no imageFocal is measured once and the result is stored, including
+    the center 20% fallback, so a later build does not move the crop.
+    """
     source = source_path(root, article)
     if source is None:
         return article
-    if source.name in ('hero-1200.webp', 'hero-2x.webp', 'hero.webp'):
+    if source.name in ('hero-1200.webp', 'hero-2x.webp', 'hero.webp', 'hero-16x9.webp', 'og-1200.webp', 'og.webp'):
         return article
-    focal = focal_for(article)
+    image = load_rgb(source)
+    focal = focal_for(article, image)
+    article['imageFocal'] = focal
     written = write_heroes(source, focal)
     if not article.get('imageSource'):
         article['imageSource'] = '/' + source.resolve().relative_to(root.resolve()).as_posix()
@@ -260,10 +382,10 @@ def ensure_article_hero(root: Path, article: dict) -> dict:
         article.pop('imageHero2x', None)
         article.pop('imageHero2xWidth', None)
         article.pop('imageHero2xHeight', None)
-    if focal != DEFAULT_FOCAL:
-        article['imageFocal'] = focal
-    else:
-        article.pop('imageFocal', None)
+    if written.get('imageOg'):
+        article['imageOg'] = _web_path(root, written['imageOg'])
+        article['imageOgWidth'] = written['imageOgWidth']
+        article['imageOgHeight'] = written['imageOgHeight']
     return article
 
 
@@ -312,9 +434,9 @@ def apply_article_html(html: str, article: dict) -> str:
     """Install the shared lead CSS and point the lead photo at the hero."""
     html = links.ensure_byline(html)
     html = links.order_news_lead(html, article)
-    hero = str(article.get('imageHero') or '').strip()
-    if hero:
-        html = _set_social_image(html, 'https://fullcourtbuckets.com' + hero)
+    social = str(article.get('imageOg') or article.get('imageHero') or '').strip()
+    if social:
+        html = _set_social_image(html, links.BASE + social)
     return html
 
 

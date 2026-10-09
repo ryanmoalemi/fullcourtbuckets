@@ -88,7 +88,7 @@ class NewsLeadTests(unittest.TestCase):
             self.assertNotIn('loading=', img)
             self.assertIn('width="1200"', img)
             self.assertIn('height="800"', img)
-            self.assertIn('object-position:center 25%', img)
+            self.assertIn('object-position:center 20%', img)
             self.assertIn('aspect-ratio:16/9', again)
             self.assertIn('object-fit:cover', again)
             self.assertNotIn('100vw', again)
