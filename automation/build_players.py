@@ -1736,7 +1736,7 @@ def team_description(slot: dict, standing: dict | None) -> str:
 
 
 AI_NOTE = (
-    'Built by Full Court Buckets from ESPN and WNBA data. '
+    'Built by Full Court Buckets from game data we gather and verify ourselves. '
     'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
 )
 PORTRAIT_SENTENCE = 'Portrait is an AI illustration.'

@@ -13,7 +13,7 @@ HOW = '/how-we-make-full-court-buckets/'
 TAGLINE = 'Independent WNBA news and analysis'
 OLD_TAGLINE = 'Built by the WNBA community, for the WNBA community'
 PROFILE_NOTE = (
-    'Built by Full Court Buckets from ESPN and WNBA data. '
+    'Built by Full Court Buckets from game data we gather and verify ourselves. '
     'Profile text and FAQs drafted with AI tools and checked against the stats on this page.'
 )
 PORTRAIT_LINE = 'Portrait is an AI illustration.'
@@ -176,3 +176,29 @@ class HelpfulContentTests(unittest.TestCase):
         self.assertGreater(noted, 10)
         self.assertIn(TAGLINE, (ROOT / 'index.html').read_text(encoding='utf-8'))
         self.assertIn(TAGLINE, builder.header('/'))
+
+    def test_player_byline_does_not_name_espn(self):
+        note = re.compile(r'<p class="ai-note">(.*?)</p>', re.S)
+        self.assertNotIn('ESPN', builder.AI_NOTE)
+        self.assertNotIn('ESPN', builder.ai_disclosure_html())
+        self.assertNotIn('ESPN', builder.ai_disclosure_html(True))
+        self.assertIn(
+            'Profile text and FAQs drafted with AI tools and checked against the stats on this page.',
+            builder.AI_NOTE,
+        )
+        offenders = []
+        for path in sorted((ROOT / 'wnba').glob('*/index.html')):
+            text = path.read_text(encoding='utf-8')
+            match = note.search(text)
+            if match and 'ESPN' in match.group(1):
+                offenders.append(path.relative_to(ROOT).as_posix())
+        self.assertEqual(offenders, [])
+
+    def test_future_stat_board_caption_does_not_name_espn(self):
+        caption = links.stat_board_caption(
+            'Dream vs Liberty, Games 1 and 2 combined. Turnovers include team turnovers.'
+        )
+        self.assertIn('gathered and verified by Full Court Buckets', caption)
+        self.assertNotIn('checked against ESPN box scores', caption)
+        self.assertNotIn('ESPN', caption)
+        self.assertNotIn('ESPN', links.stat_board_caption())
