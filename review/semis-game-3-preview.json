@@ -1,0 +1,107 @@
+{
+ "site": "fullcourtbuckets.com",
+ "title": "Semis Game 3 Preview: Can the Liberty and Aces Do What No WNBA Team Has Done?",
+ "meta_description": "Teams up 2-0 in a best-of-five WNBA series are 19-0. Turnovers sink the Liberty, rebounds sink the Aces. Picks for both Game 3s on Friday.",
+ "hook": "The New York Liberty have won more quarters than the Atlanta Dream in this series, four to two, and they're still down 0-2. One column in the box score explains it, and it's the same column that decides whether Brooklyn sees a Game 4.",
+ "summary": "Preview of both WNBA semifinal Game 3s on Friday, October 9, 2026: Dream at Liberty, 4:30 p.m. PT, Barclays Center, ESPN2 (ESPN game 401918299), and Valkyries at Aces, 6:30 p.m. PT, Michelob ULTRA Arena, Peacock and NBCSN (ESPN game 401918300). Written by the WNBA agent; body kept in its voice. Every number was checked against the Full Court Buckets game files for Games 1 and 2 and the ESPN box scores (401918295, 401918297, 401918296, 401918298). Edits for accuracy: the hook now says the Liberty won four quarters to two (Atlanta's third period win was overtime), the turnover totals say they include team turnovers, and the last line now says the Aces lost the glass 52-25 in Game 1 instead of 'by 30 again'. The opener line and the 'what the highlight packages aren't telling you' tease were cut so the intro is one short hook. Three original stat boards sit inline where the draft placed them.",
+ "url_path": "/news/semis-game-3-preview/",
+ "files": [
+  "news/semis-game-3-preview/index.html",
+  "images/articles/semis-game-3-preview/board-dream-liberty-series.png",
+  "images/articles/semis-game-3-preview/board-valkyries-aces-series.png",
+  "images/articles/semis-game-3-preview/board-quarter-margins.png"
+ ],
+ "hero_image": "images/articles/semis-game-3-preview/jordin-canada-dream-2026.jpg",
+ "hero_image_alt": "Jordin Canada of the Atlanta Dream lines up a free throw at Target Center in Minneapolis",
+ "hero_image_credit": "Photo: John Mac / CC BY-SA 4.0. Wikimedia Commons File:260527 Lynx Dream JohnMc210 (55298398176).jpg, Lynx vs Dream at Target Center on 2026-05-27, Commons category Jordin Canada, license reviewed by FlickreviewR 2. Not from this series; the caption says so.",
+ "espn_game_id": "401918299",
+ "espn_game_page": "https://www.espn.com/wnba/game/_/gameId/401918299",
+ "unique": [
+  "The Liberty won four quarters to the Dream's two and still trail 0-2, because Atlanta has taken 26 more shots on 38-22 turnovers and 20-12 offensive rebounds",
+  "Points off turnovers across both games: Dream 60, Liberty 24, a 36-point swing in a series Atlanta leads by 13",
+  "Series plus-minus: Reese +18, Canada +17, Hillmon +16; Fauthoux is the only Liberty player above zero. Wilson and Gray are both -11 despite Wilson's 48 points",
+  "Valkyries +14 in first halves, Aces +1 in second halves, with 27-8 offensive rebounds and a 61-21 bench edge",
+  "Three original stat boards built from our own game files and checked against ESPN"
+ ],
+ "unverified": [
+  "Both picks (Dream win Game 3, Aces win Game 3) are opinion.",
+  "Allisha Gray 'questionable' is from ESPN's Thursday story; ESPN's game page lists her day-to-day. Loyd and Talbot day-to-day is from ESPN's game page as of Thursday evening. Re-check injury status before publishing Friday.",
+  "Points off turnovers, fast-break points, points in the paint and bench points are not stored in our game files; they come from the ESPN box scores. Turnover totals (38-22, 29-18) are ESPN's total turnovers, which include team turnovers; our game files store player turnovers only (35-20, 25-17).",
+  "The site's standard disclosure line for game stories says AI drafted it 'so it could post the same night'. That wording comes from the site generator and fits recaps better than a preview.",
+  "The lead photo is from May 27, 2026, not from this series."
+ ],
+ "scorecard": {
+  "overall": 8,
+  "max": 10,
+  "stars": 4,
+  "grade": "Ready",
+  "categories": [
+   {
+    "name": "Accuracy",
+    "score": 9,
+    "max": 10,
+    "reason": "Every number, name and date in the title, meta, hook, body, board alt text and schema was checked against our game files for Games 1 and 2 and the four ESPN box scores, plus ESPN game pages 401918299 and 401918300 for times, venues, TV and injuries, ESPN's 19-0 note and the AP defending-champion line. Three fixes: quarters won is four to two (overtime was Atlanta's third period), turnover totals include team turnovers, and Game 1's rebound gap was 52-25, not 30. All three boards match ESPN, including the quarter board, which does not use the bad 7 and 23 Aces quarters from the old game file."
+   },
+   {
+    "name": "Information gain",
+    "score": 7,
+    "max": 10,
+    "reason": "Two-game series totals, the quarters-won paradox, points off turnovers, series plus-minus, and first-half vs second-half margins are not in the wire previews. Named in unique."
+   },
+   {
+    "name": "Effort and replication cost",
+    "score": 7,
+    "max": 10,
+    "reason": "Three original stat boards built from our own game files and checked against ESPN. No courtside reporting or photos from this series."
+   },
+   {
+    "name": "Originality",
+    "score": 7,
+    "max": 10,
+    "reason": "Its own angle (ball security and the glass decide both series) and two straight picks, rather than a schedule listing."
+   },
+   {
+    "name": "Experience and expertise",
+    "score": 7,
+    "max": 10,
+    "reason": "Ryan Moalemi's real byline links to his author page. Not a courtside report."
+   },
+   {
+    "name": "Main content and layout",
+    "score": 8,
+    "max": 10,
+    "reason": "Title and H1 match and don't exaggerate (no team has come back from 0-2). Lead photo under the headline, one short hook, then the series board right under the first subhead. Disclosure and box-score links at the bottom. No placeholders."
+   },
+   {
+    "name": "Transparency",
+    "score": 8,
+    "max": 10,
+    "reason": "Visible disclosure, every stat linked to an ESPN box score, photo credited with a Commons and license link. The generator's 'same night' wording fits recaps better than previews."
+   },
+   {
+    "name": "Writing craft",
+    "score": 8,
+    "max": 10,
+    "reason": "Plain, specific, no em dashes, real subheads, in-article links open in a new tab."
+   },
+   {
+    "name": "People-first purpose",
+    "score": 8,
+    "max": 10,
+    "reason": "A fan gets both games' times, TV, injuries, the stat that decides each series, and a pick."
+   },
+   {
+    "name": "Human voice",
+    "score": 8,
+    "max": 10,
+    "reason": "Opinionated and specific ('It's a habit.'). Generic opener and stock tease removed."
+   }
+  ],
+  "info_gain": "Series-level numbers from our own game files: quarters won vs series record, points off turnovers, plus-minus leaders, and half-by-half margins, in three original boards.",
+  "ai_flags": [
+   "Removed: 'This is your preview for both WNBA semifinal Game 3s on Friday, and it starts with a weird one' (generic opener).",
+   "Removed: 'so here's what the highlight packages aren't telling you' (stock tease).",
+   "Rewrote: 'If the Aces lose the glass by 30 again' (inaccurate) to 'If the Aces lose the glass 52-25 like they did in Game 1'."
+  ]
+ }
+}
