@@ -75,10 +75,10 @@ class CouplesPageTests(unittest.TestCase):
         self.assertIn('href="/wnba/couples/"', feature)
         self.assertIn('WNBA couples', feature)
         crumb = main_text().split('<section', 1)[0]
-        self.assertIn('<a href="/news/">News</a>', crumb)
-        self.assertNotIn('href="/wnba/"', crumb)
-        self.assertIn('"name": "News", "item": "https://fullcourtbuckets.com/news/"', PAGE.read_text(encoding='utf-8'))
-        self.assertNotIn('"name": "WNBA"', PAGE.read_text(encoding='utf-8'))
+        self.assertIn('<a href="/wnba/">Players</a>', crumb)
+        self.assertNotIn('href="/news/"', crumb)
+        self.assertIn('"name": "Players", "item": "https://fullcourtbuckets.com/wnba/"', PAGE.read_text(encoding='utf-8'))
+        self.assertNotIn('"name": "News", "item": "https://fullcourtbuckets.com/news/"', PAGE.read_text(encoding='utf-8'))
 
     def test_patch_hub_moves_couples_link_to_news(self):
         import tempfile

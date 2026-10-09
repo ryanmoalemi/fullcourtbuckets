@@ -32,7 +32,7 @@ class TeamsHubTests(unittest.TestCase):
         self.assertNotIn('\u2014', body)
         self.assertIn('aria-label="Breadcrumb"', body)
         self.assertIn('<a href="/">Home</a>', body)
-        self.assertIn('<a href="/wnba/">WNBA</a>', body)
+        self.assertNotIn('<a href="/wnba/">WNBA</a>', body)
         self.assertIn('<span>Teams</span>', body)
         nav = body[body.find('<nav class="breadcrumbs"'):body.find('</nav>')]
         self.assertNotIn('target="_blank"', nav)
@@ -75,8 +75,8 @@ class TeamsHubTests(unittest.TestCase):
         self.assertNotIn('9-31', body)
         graph = {node['@type']: node for node in structured['@graph']}
         crumbs = graph['BreadcrumbList']['itemListElement']
-        self.assertEqual([crumb['name'] for crumb in crumbs], ['Home', 'WNBA', 'Teams'])
-        self.assertEqual(crumbs[2]['item'], 'https://fullcourtbuckets.com/wnba/teams/')
+        self.assertEqual([crumb['name'] for crumb in crumbs], ['Home', 'Teams'])
+        self.assertEqual(crumbs[1]['item'], 'https://fullcourtbuckets.com/wnba/teams/')
         self.assertEqual(graph['ItemList']['numberOfItems'], 15)
         names = [item['name'] for item in graph['ItemList']['itemListElement']]
         self.assertIn('Portland Fire', names)
