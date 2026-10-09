@@ -85,7 +85,7 @@ jobs:
             return 1
           }
           run_bounded "Install Python packages" \
-            python -m pip install --timeout 60 --retries 3 'pillow>=11.3,<13' 'playwright>=1.50,<2'
+            python -m pip install --timeout 60 --retries 3 'pillow>=11.3,<13' 'playwright>=1.50,<2' 'opencv-python-headless>=4.10,<5'
           run_bounded "Install Playwright Chromium" \
             python -m playwright install --with-deps chromium
       - name: Quarantine the audited corrupt portrait and bind existing approvals

@@ -9,9 +9,9 @@ import news_heroes as heroes
 
 
 class NewsHeroTests(unittest.TestCase):
-    def test_default_focal_is_center_25(self):
-        self.assertEqual(heroes.parse_focal(None), (0.5, 0.25))
-        self.assertEqual(heroes.parse_focal('nope'), (0.5, 0.25))
+    def test_default_focal_is_center_20(self):
+        self.assertEqual(heroes.parse_focal(None), (0.5, 0.20))
+        self.assertEqual(heroes.parse_focal('nope'), (0.5, 0.20))
         self.assertEqual(heroes.parse_focal('center 12%'), (0.5, 0.12))
         self.assertEqual(heroes.parse_focal('40% 10%'), (0.4, 0.1))
 
@@ -33,7 +33,7 @@ class NewsHeroTests(unittest.TestCase):
 
     def test_face_already_in_frame_keeps_the_default(self):
         px, py = heroes.focal_keeping_face(1600, 1067, (700, 280, 140, 180))
-        self.assertEqual((px, py), (0.5, 0.25))
+        self.assertEqual((px, py), (0.5, 0.20))
 
     def test_write_heroes_makes_1200_and_a_larger_2x_without_upscaling(self):
         with tempfile.TemporaryDirectory() as tmp:
