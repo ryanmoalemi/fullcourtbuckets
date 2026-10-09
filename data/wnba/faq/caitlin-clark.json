@@ -117,7 +117,7 @@
     },
     {
       "question": "How old is Caitlin Clark?",
-      "answer": "Caitlin Clark was born January 22, 2002. As of October 2026, she is 24.",
+      "answer": "Caitlin Clark was born January 22, 2002.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1642286/caitlin-clark/bio"
@@ -126,10 +126,11 @@
     },
     {
       "question": "Where is Caitlin Clark from?",
-      "answer": "The WNBA draft page lists Caitlin Clark's birthplace as West Des Moines, Iowa. She played college basketball at Iowa.",
+      "answer": "Caitlin Clark was born in Des Moines, Iowa, and grew up in West Des Moines. She played college basketball at Iowa.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/draft/2024/prospects/182471/caitlin-clark",
+        "https://kids.britannica.com/students/article/Caitlin-Clark/641778",
+        "https://www.biography.com/athletes/a64150678/caitlin-clark",
         "https://www.wnba.com/player/1642286/caitlin-clark/bio"
       ],
       "queries": [
@@ -177,7 +178,7 @@
     },
     {
       "question": "What was Caitlin Clark's rookie year?",
-      "answer": "The first regular-season row for Caitlin Clark is 2024. She played 40 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Caitlin Clark is 2024. She played 40 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1642286/caitlin-clark/bio"

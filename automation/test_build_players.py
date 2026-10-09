@@ -518,6 +518,10 @@ class BuildTests(unittest.TestCase):
             joined = ' '.join(node['acceptedAnswer']['text'] for node in entity['mainEntity'])
             self.assertNotIn('balldontlie', joined.casefold(), slug)
             self.assertIsNone(b._NOT_WIDELY_RE.search(joined), slug)
+            self.assertNotIn('highlighted in the regular-season table', joined, slug)
+            file_answers = {item['question']: item['answer'] for item in faq['items']}
+            for node in entity['mainEntity']:
+                self.assertEqual(file_answers[node['name']], node['acceptedAnswer']['text'], slug)
         plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text(encoding='utf-8'))
         _html, entity = b.faq_section(plum, root)
         answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
@@ -528,6 +532,19 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('23.9', answers["What are Kelsey Plum's stats?"])
         self.assertIn('23.9 points', answers['What did Kelsey Plum average for each team in 2026?'])
         self.assertIn('15.8 points', answers['What did Kelsey Plum average for each team in 2026?'])
+        self.assertIn('No current partner has been publicly confirmed.', answers['Is Kelsey Plum married?'])
+        self.assertNotIn('opened for this page', answers['Is Kelsey Plum married?'])
+        azzi = json.loads((root / 'data/wnba/players/azzi-fudd.json').read_text(encoding='utf-8'))
+        _html, azzi_entity = b.faq_section(azzi, root)
+        azzi_age = next(node['acceptedAnswer']['text'] for node in azzi_entity['mainEntity'] if node['name'].startswith('How old'))
+        self.assertEqual(azzi_age, 'Azzi Fudd was born November 11, 2002. She is 23.')
+        october_birthdays = ('lauren-betts', 'sue-bird', 'brittney-griner', 'paige-bueckers')
+        for slug in october_birthdays:
+            profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            _html, entity = b.faq_section(profile, root)
+            age = next(node['acceptedAnswer']['text'] for node in entity['mainEntity'] if node['name'].startswith('How old'))
+            self.assertNotIn('As of October', age, slug)
+            self.assertNotRegex(age, r'\bshe is \d+', slug)
         for slug in ('sue-bird', 'candace-parker'):
             profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
             page = b.profile_page(profile, root, menu=[])
@@ -540,7 +557,7 @@ class BuildTests(unittest.TestCase):
         plum = json.loads((root / 'data/wnba/players/kelsey-plum.json').read_text())
         self.assertEqual(
             b.answer_related_query(plum, "What was Kelsey Plum's rookie year?", root),
-            'The first regular-season row for Kelsey Plum is 2017. She played 31 games in that row. That row is highlighted in the regular-season table.',
+            'The first regular-season row for Kelsey Plum is 2017. She played 31 games in that row.',
         )
         self.assertEqual(
             b.answer_related_query(plum, 'Which teams has Kelsey Plum played for?', root),

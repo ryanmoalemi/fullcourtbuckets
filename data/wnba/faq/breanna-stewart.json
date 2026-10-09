@@ -88,7 +88,7 @@
     },
     {
       "question": "How old is Breanna Stewart?",
-      "answer": "Breanna Stewart was born August 27, 1994. As of October 2026, she is 32.",
+      "answer": "Breanna Stewart was born August 27, 1994.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1627668/breanna-stewart/bio"
@@ -196,7 +196,7 @@
     },
     {
       "question": "Which teams has Breanna Stewart played for?",
-      "answer": "The regular-season table lists the Seattle Storm, and the New York Liberty for Breanna Stewart.",
+      "answer": "The regular-season table lists the Seattle Storm and the New York Liberty for Breanna Stewart.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1627668/breanna-stewart/bio"
@@ -205,7 +205,7 @@
     },
     {
       "question": "What was Breanna Stewart's rookie year?",
-      "answer": "The first regular-season row for Breanna Stewart is 2016. She played 34 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Breanna Stewart is 2016. She played 34 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1627668/breanna-stewart/bio"

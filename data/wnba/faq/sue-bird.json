@@ -112,7 +112,7 @@
     },
     {
       "question": "How old is Sue Bird?",
-      "answer": "Sue Bird was born October 16, 1980. As of October 9, 2026, she is 45.",
+      "answer": "Sue Bird was born October 16, 1980.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/100720/sue-bird/bio"

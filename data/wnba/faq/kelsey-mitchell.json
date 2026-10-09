@@ -32,7 +32,7 @@
     },
     {
       "question": "How old is Kelsey Mitchell?",
-      "answer": "Kelsey Mitchell was born November 12, 1995. As of October 2026, she is 30.",
+      "answer": "Kelsey Mitchell was born November 12, 1995. She is 30.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"
@@ -163,7 +163,7 @@
     },
     {
       "question": "What was Kelsey Mitchell's rookie year?",
-      "answer": "The first regular-season row for Kelsey Mitchell is 2018. She played 34 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Kelsey Mitchell is 2018. She played 34 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1628909/kelsey-mitchell/bio"

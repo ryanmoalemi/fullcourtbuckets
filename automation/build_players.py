@@ -495,7 +495,6 @@ def rookie_faq_answer(profile, name: str) -> str:
     sentence = f'The first regular-season row for {name} is {first}.'
     if games:
         sentence += f' She played {games} games in that row.'
-    sentence += ' That row is highlighted in the regular-season table.'
     return sentence
 
 
@@ -563,6 +562,8 @@ def _listed(bits: list[str]) -> str:
         return ''
     if len(bits) == 1:
         return bits[0]
+    if len(bits) == 2:
+        return f'{bits[0]} and {bits[1]}'
     return ', '.join(bits[:-1]) + ', and ' + bits[-1]
 
 

@@ -94,7 +94,7 @@
     },
     {
       "question": "How old is Candace Parker?",
-      "answer": "Candace Parker was born April 19, 1986. As of October 2026, she is 40.",
+      "answer": "Candace Parker was born April 19, 1986.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/201496/candace-parker/bio"
@@ -206,11 +206,11 @@
     },
     {
       "question": "Does Candace Parker have children?",
-      "answer": "The Las Vegas Aces say Candace Parker gave birth to her daughter, Lailaa, on May 13, 2009. WNBA.com also names a son, Airr, born February 1, 2022, with Anna Petrakova.",
+      "answer": "The Las Vegas Aces say Candace Parker gave birth to her daughter, Lailaa, on May 13, 2009. The Chicago Sun-Times reported that she and Anna Petrakova welcomed a son, Airr, on February 11, 2022.",
       "answer_kind": "researched",
       "sources": [
         "https://aces.wnba.com/candace-parker-bio",
-        "https://www.wnba.com/news/15-seasons-of-cp3-what-keeps-her-going"
+        "https://chicago.suntimes.com/chicago-sky-and-wnba/2022/2/18/22941024/candace-parker-and-wife-anna-petrakova-welcome-a-son-airr-larry-petrakov-parker"
       ],
       "queries": [
         {

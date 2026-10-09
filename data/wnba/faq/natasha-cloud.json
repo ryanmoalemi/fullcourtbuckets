@@ -38,7 +38,7 @@
     },
     {
       "question": "How old is Natasha Cloud?",
-      "answer": "Natasha Cloud was born February 22, 1992. As of October 2026, she is 34.",
+      "answer": "Natasha Cloud was born February 22, 1992.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/204333"
@@ -138,7 +138,7 @@
     },
     {
       "question": "What was Natasha Cloud's rookie year?",
-      "answer": "The first regular-season row for Natasha Cloud is 2015. She played 34 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Natasha Cloud is 2015. She played 34 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/204333"

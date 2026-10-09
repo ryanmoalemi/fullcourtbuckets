@@ -101,7 +101,7 @@
     },
     {
       "question": "How old is Alyssa Thomas?",
-      "answer": "Alyssa Thomas was born April 12, 1992. As of October 2026, she is 34.",
+      "answer": "Alyssa Thomas was born April 12, 1992.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/203826/alyssa-thomas/bio"
@@ -168,7 +168,7 @@
     },
     {
       "question": "Which teams has Alyssa Thomas played for?",
-      "answer": "The regular-season table lists the Connecticut Sun, and the Phoenix Mercury for Alyssa Thomas.",
+      "answer": "The regular-season table lists the Connecticut Sun and the Phoenix Mercury for Alyssa Thomas.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/203826/alyssa-thomas/bio"
@@ -177,7 +177,7 @@
     },
     {
       "question": "What was Alyssa Thomas's rookie year?",
-      "answer": "The first regular-season row for Alyssa Thomas is 2014. She played 34 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Alyssa Thomas is 2014. She played 34 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/203826/alyssa-thomas/bio"
@@ -186,7 +186,7 @@
     },
     {
       "question": "Who is Alyssa Thomas?",
-      "answer": "Alyssa Thomas is a forward for the Phoenix Mercury and a Maryland alum. She is engaged to teammate DeWanna Bonner.",
+      "answer": "Alyssa Thomas is a forward for the Phoenix Mercury and a Maryland alum. She is engaged to DeWanna Bonner.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/203826/alyssa-thomas/bio"

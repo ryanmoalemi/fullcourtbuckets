@@ -80,7 +80,7 @@
     },
     {
       "question": "How old is Olivia Miles?",
-      "answer": "Olivia Miles was born January 29, 2003. As of October 2026, she is 23.",
+      "answer": "Olivia Miles was born January 29, 2003.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/draft/2026/prospects/olivia-miles",
@@ -176,7 +176,7 @@
     },
     {
       "question": "What was Olivia Miles's rookie year?",
-      "answer": "The first regular-season row for Olivia Miles is 2026. She played 40 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Olivia Miles is 2026. She played 40 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1643426"

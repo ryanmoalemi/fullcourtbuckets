@@ -54,7 +54,7 @@
     },
     {
       "question": "How old is Sabrina Ionescu?",
-      "answer": "Sabrina Ionescu was born December 6, 1997. As of October 2026, she is 28.",
+      "answer": "Sabrina Ionescu was born December 6, 1997. She is 28.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"
@@ -194,7 +194,7 @@
     },
     {
       "question": "What was Sabrina Ionescu's rookie year?",
-      "answer": "The first regular-season row for Sabrina Ionescu is 2020. She played 3 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Sabrina Ionescu is 2020. She played 3 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1629477/sabrina-ionescu/bio"

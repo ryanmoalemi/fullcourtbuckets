@@ -46,7 +46,7 @@
     },
     {
       "question": "How old is Aliyah Boston?",
-      "answer": "Aliyah Boston was born December 11, 2001. As of October 2026, she is 24.",
+      "answer": "Aliyah Boston was born December 11, 2001. She is 24.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1641648/aliyah-boston/bio"
@@ -129,7 +129,7 @@
     },
     {
       "question": "What was Aliyah Boston's rookie year?",
-      "answer": "The first regular-season row for Aliyah Boston is 2023. She played 40 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Aliyah Boston is 2023. She played 40 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1641648/aliyah-boston/bio"

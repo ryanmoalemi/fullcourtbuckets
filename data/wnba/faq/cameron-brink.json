@@ -81,7 +81,7 @@
     },
     {
       "question": "How old is Cameron Brink?",
-      "answer": "Cameron Brink was born December 31, 2001. As of October 2026, she is 24.",
+      "answer": "Cameron Brink was born December 31, 2001. She is 24.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1642287"
@@ -172,7 +172,7 @@
     },
     {
       "question": "What was Cameron Brink's rookie year?",
-      "answer": "The first regular-season row for Cameron Brink is 2024. She played 15 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Cameron Brink is 2024. She played 15 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1642287"

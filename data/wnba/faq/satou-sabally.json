@@ -24,10 +24,11 @@
     },
     {
       "question": "Does Satou Sabally have a sister?",
-      "answer": "Yes. The WNBA says Satou Sabally has six siblings, including her younger sister Nyara Sabally, who plays for the New York Liberty and played with her at Oregon.",
+      "answer": "Yes. The WNBA says Satou Sabally has six siblings, including her younger sister Nyara Sabally, who played with her at Oregon. The Toronto Tempo selected Nyara Sabally in the 2026 expansion draft on April 3, 2026.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/player/1630149/satou-sabally/bio"
+        "https://www.wnba.com/player/1630149/satou-sabally/bio",
+        "https://liberty.wnba.com/news/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft"
       ],
       "queries": [
         {
@@ -60,7 +61,7 @@
     },
     {
       "question": "How old is Satou Sabally?",
-      "answer": "Satou Sabally was born April 25, 1998. As of October 2026, she is 28.",
+      "answer": "Satou Sabally was born April 25, 1998.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1630149/satou-sabally/bio"

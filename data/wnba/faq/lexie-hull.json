@@ -118,7 +118,7 @@
     },
     {
       "question": "How old is Lexie Hull?",
-      "answer": "Lexie Hull was born September 13, 1999. As of October 2026, she is 27.",
+      "answer": "Lexie Hull was born September 13, 1999.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1631086"
@@ -212,7 +212,7 @@
     },
     {
       "question": "What was Lexie Hull's rookie year?",
-      "answer": "The first regular-season row for Lexie Hull is 2022. She played 26 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Lexie Hull is 2022. She played 26 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1631086"

@@ -88,7 +88,7 @@
     },
     {
       "question": "How old is Azzi Fudd?",
-      "answer": "Azzi Fudd was born November 11, 2002. As of October 2026, she is 23.",
+      "answer": "Azzi Fudd was born November 11, 2002. She is 23.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1643425"
@@ -174,7 +174,7 @@
     },
     {
       "question": "What was Azzi Fudd's rookie year?",
-      "answer": "The first regular-season row for Azzi Fudd is 2026. She played 30 games in that row. That row is highlighted in the regular-season table.",
+      "answer": "The first regular-season row for Azzi Fudd is 2026. She played 30 games in that row.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1643425"
