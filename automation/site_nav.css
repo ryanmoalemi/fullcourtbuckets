@@ -62,3 +62,33 @@ header,.site-header{z-index:40}
  .site-footer .footer-links{column-gap:16px;row-gap:0}
  .site-footer .footer-links a{min-height:44px;padding:12px 0}
 }
+/* One shared bar. 60px at rest, 48px after scroll. The logo artwork already carries the tagline. */
+header.site-header{position:sticky;top:0;z-index:50;background:#0c0c10;border-bottom:1px solid #2b2930}
+header.site-header .site-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;height:60px;min-height:60px;max-height:60px;padding:0 16px;box-sizing:border-box}
+header.site-header .site-brand{display:flex;align-items:center;flex:0 1 auto;min-width:0;height:44px}
+header.site-header .site-brand img{display:block;height:44px;width:auto;max-height:44px;max-width:168px;object-fit:contain;object-position:left center}
+header.site-header .site-tools{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:0;margin-left:auto}
+header.site-header.is-compact .site-bar{height:48px;min-height:48px;max-height:48px}
+header.site-header.is-compact .site-brand,header.site-header.is-compact .site-brand img{height:32px;max-height:32px}
+header.site-header .site-tagline{display:none;margin:0;padding:0 16px 8px;color:#77736e;font:700 11px/1.3 "Barlow","Arial Narrow",sans-serif;letter-spacing:.04em}
+header.site-header .site-tagline span+span{margin-left:12px}
+@media (min-width:901px){
+ header.site-header .site-tagline{display:block}
+}
+nav.site-nav .site-nav-playoffs>a{color:#ff9800}
+.site-search{position:relative;flex:0 0 auto}
+.site-search-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:44px;min-height:44px;margin:0;padding:10px 12px;border:1px solid #2b2930;border-radius:3px;background:#0c0c10;color:#f5f3ef;font-family:"Barlow","Arial Narrow",Impact,sans-serif;font-weight:700;font-size:15px;line-height:1;cursor:pointer}
+.site-search-icon{width:14px;height:14px;border:2px solid currentColor;border-radius:50%;position:relative;box-sizing:border-box}
+.site-search-icon:after{content:"";position:absolute;width:6px;height:2px;background:currentColor;right:-5px;bottom:-1px;transform:rotate(45deg)}
+.site-search-panel{position:absolute;top:calc(100% + 8px);right:0;width:min(360px,80vw);background:#0c0c10;border:1px solid #2b2930;box-shadow:0 12px 28px rgba(0,0,0,.45);z-index:70;padding:12px;box-sizing:border-box}
+.site-search-field{display:block;color:#d4d0ca;font:600 12px/1.3 Inter,Arial,sans-serif}
+.site-search-field input{display:block;width:100%;min-height:44px;margin-top:6px;padding:8px 10px;box-sizing:border-box;border:1px solid #2b2930;border-radius:3px;background:#14141a;color:#f5f3ef;font:16px/1.3 Inter,Arial,sans-serif}
+.site-search-status{margin:8px 0 0;color:#a5a19b;font-size:12px}
+.site-search-results{list-style:none;margin:8px 0 0;padding:0;max-height:50vh;overflow:auto}
+.site-search-results a{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;min-height:44px;padding:8px 4px;color:#f5f3ef;text-decoration:none;font-weight:700}
+.site-search-results a:hover{color:#ff9800}
+.site-search-kind{display:block;color:#a5a19b;font-size:11px;font-weight:600}
+.breadcrumbs a,nav.breadcrumbs a{display:inline-flex;align-items:center;min-height:44px;padding:8px 2px;box-sizing:border-box}
+@media (max-width:900px){
+ .site-search-panel{position:fixed;left:0;right:0;top:auto;width:auto;margin-top:0}
+}

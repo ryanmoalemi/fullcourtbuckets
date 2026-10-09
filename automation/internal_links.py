@@ -316,17 +316,31 @@ def _image_dims(article: dict) -> str:
     return f' width="{int(width)}" height="{int(height)}"'
 
 
-def _story_card(article: dict) -> str:
+MORE_STORY_LIMIT = 8
+FULL_STORY_CARDS = 3
+
+
+def _story_card(article: dict, compact: bool = False) -> str:
     title = article['title']
     image = article.get('image') or ''
     alt = article.get('imageAlt') or title
+    klass = 'article-card is-compact' if compact else 'article-card'
     return (
-        f'<a class="article-card" href="{esc(article_href(article))}">'
+        f'<a class="{klass}" href="{esc(article_href(article))}">'
         f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"{_image_dims(article)}'
         f' decoding="async" loading="lazy"{focal_style(article)}></div>'
         f'<div class="article-copy"><div class="cat">{esc(article.get("category") or "")}</div>'
         f'<h3>{esc(title)}</h3><p>{esc(article.get("description") or "")}</p>'
         f'<div class="date">{esc(_format_date(article["date"]))}</div></div></a>'
+    )
+
+
+def _more_story_cards(articles: list) -> str:
+    """Three full cards, then compact rows. Eight stories after the feature."""
+    rest = articles[1:1 + MORE_STORY_LIMIT]
+    return ''.join(
+        _story_card(article, compact=index >= FULL_STORY_CARDS)
+        for index, article in enumerate(rest)
     )
 
 
@@ -388,16 +402,43 @@ def _apply_featured_media(text: str, article: dict) -> str:
     )
 
 
+def _place_hubs(text: str) -> str:
+    """Players and standings sits above the story list, not after it."""
+    text = re.sub(r'<!-- fcb-hubs:start -->.*?<!-- fcb-hubs:end -->', '', text, count=1, flags=re.S)
+    needle = '<section class="section" id="more-stories">'
+    if needle in text:
+        return text.replace(needle, HUBS + needle, 1)
+    fallback = '<section class="section"><div class="section-head"><h2 class="section-title">What We Cover</h2>'
+    if fallback in text:
+        return text.replace(fallback, HUBS + fallback, 1)
+    return text
+
+
+def _ensure_all_news(text: str) -> str:
+    if 'class="all-news"' in text:
+        return text
+    old = (
+        '<section class="section" id="more-stories">'
+        '<div class="section-head"><h2 class="section-title">More Stories</h2></div>'
+    )
+    new = (
+        '<section class="section" id="more-stories">'
+        '<div class="section-head"><h2 class="section-title">More Stories</h2>'
+        '<a class="all-news" href="/news/">All news</a></div>'
+    )
+    if old in text:
+        return text.replace(old, new, 1)
+    return text
+
+
 def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
     text = ensure_site_organization_same_as(text)
     if 'id="latest"' not in text or 'id="older-stories"' not in text:
         return text
     text = ensure_footer_hubs(text)
-    if '<!-- fcb-hubs:start -->' not in text:
-        needle = '<section class="section"><div class="section-head"><h2 class="section-title">What We Cover</h2>'
-        if needle in text:
-            text = text.replace(needle, HUBS + needle, 1)
+    text = _place_hubs(text)
+    text = _ensure_all_news(text)
     ordered = sorted(articles, key=lambda article: article.get('date') or '', reverse=True)
     if ordered:
         featured = ordered[0]
@@ -412,7 +453,7 @@ def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> s
         text = re.sub(r'(<p id="featured-dek">).*?(</p>)', lambda m: m.group(1) + esc(featured.get('description') or '') + m.group(2), text, count=1)
         meta = f'{featured.get("category") or ""} · {_format_date(featured["date"])}'
         text = re.sub(r'(<div class="meta" id="featured-meta">).*?(</div>)', lambda m: m.group(1) + esc(meta) + m.group(2), text, count=1)
-        cards = ''.join(_story_card(article) for article in ordered[1:])
+        cards = _more_story_cards(ordered)
         if '<!-- fcb-stories:start -->' in text:
             text = _replace_marker(text, 'fcb-stories', cards)
         else:
@@ -545,13 +586,6 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
             old = '<p class="support">Updated automatically throughout the season.</p>'
             if old in text:
                 text = text.replace(old, block, 1)
-    if when:
-        text = re.sub(
-            r'(<span id="updatedAt">).*?(</span>)',
-            lambda match: match.group(1) + 'Updated: ' + esc(when) + match.group(2),
-            text,
-            count=1,
-        )
     title = standings_title(standings)
     text = re.sub(
         r'<h1>(?:WNBA Standings|Final \d{4} regular-season standings)</h1>',
@@ -559,13 +593,16 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
         text,
         count=1,
     )
-    if regular_season_is_final(standings):
-        text = re.sub(
-            r'<p class="subhead">.*?</p>',
-            f'<p class="subhead">{esc(title)}</p>',
-            text,
-            count=1,
-        )
+    # One heading and one Updated line. The support sentence carries the date.
+    text = re.sub(r'<p class="subhead">.*?</p>', '', text, count=1, flags=re.S)
+    text = re.sub(r'<div class="last-updated">.*?</div>', '', text, count=1, flags=re.S)
+    text = re.sub(r'<span id="updatedAt">.*?</span>', '', text, count=1, flags=re.S)
+    text = re.sub(
+        r'<h2>[^<]*WNBA Standings</h2>',
+        '',
+        text,
+        count=1,
+    )
     return stamp_webpage_modified(text, _iso_day(standings.get('updatedAt')))
 
 
@@ -1860,6 +1897,165 @@ def order_article_sections(html_text: str) -> str:
     return html_text[:start] + moved + html_text[end:]
 
 
+ARTICLE_END_RE = re.compile(r'<aside class="article-end">.*?</aside>', re.S)
+ARTICLE_END_CSS = (
+    '.article-end{margin:28px 0 0;display:grid;gap:22px}'
+    '.article-end h2{margin:0 0 10px;font:800 22px/1 Barlow,sans-serif;letter-spacing:-.3px}'
+    '.article-end h2:after{content:"";display:block;width:48px;height:3px;margin-top:8px;'
+    'background:linear-gradient(90deg,#7d35ff,#f10091,#ff9800)}'
+    '.article-end ul{list-style:none;margin:0;padding:0}'
+    '.article-end li+li{margin-top:8px}'
+    '.article-end a{color:#f5f3ef;font-weight:700}'
+    '.article-players ul{display:flex;flex-wrap:wrap;gap:8px}'
+    '.article-players li{margin:0}'
+    '.article-players a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;'
+    'border:1px solid #2b2930;background:#141218}'
+)
+PLAYER_HREF_RE = re.compile(r'href="(/wnba/(?!teams/)[a-z0-9-]+/)"')
+
+
+def _article_teams(article: dict) -> frozenset:
+    return frozenset(str(team) for team in (article.get('teams') or []) if team)
+
+
+def series_articles(article: dict, articles: list, limit: int = 4) -> list:
+    """Other posts from the same matchup. A multi-series preview covers each pair."""
+    mine = _article_teams(article)
+    if len(mine) < 2:
+        return []
+    found = []
+    for other in articles:
+        if other.get('slug') == article.get('slug'):
+            continue
+        theirs = _article_teams(other)
+        if len(theirs) < 2:
+            continue
+        if mine == theirs or (len(mine) == 2 and mine < theirs) or (len(theirs) == 2 and theirs < mine):
+            found.append(other)
+    if len(mine) > 2:
+        groups = {}
+        for other in found:
+            groups.setdefault(_article_teams(other), []).append(other)
+        lists = [
+            sorted(group, key=lambda item: item.get('date') or '', reverse=True)
+            for group in groups.values()
+        ]
+        picked = []
+        while len(picked) < limit and any(lists):
+            for group in lists:
+                if group and len(picked) < limit:
+                    picked.append(group.pop(0))
+        return picked
+    found.sort(key=lambda item: item.get('date') or '', reverse=True)
+    return found[:limit]
+
+
+def _latest_news(article: dict, articles: list, skip: set[str], limit: int = 3) -> list:
+    rows = []
+    ordered = sorted(articles, key=lambda item: item.get('date') or '', reverse=True)
+    for other in ordered:
+        slug = str(other.get('slug') or '')
+        if not slug or slug == article.get('slug') or slug in skip:
+            continue
+        rows.append(other)
+        if len(rows) >= limit:
+            break
+    return rows
+
+
+def _player_names(root: Path) -> dict[str, str]:
+    path = root / 'data' / 'wnba' / 'players-index.json'
+    if not path.is_file():
+        return {}
+    index = json.loads(path.read_text(encoding='utf-8'))
+    names = {}
+    for entry in index.get('players') or []:
+        slug = str(entry.get('slug') or '').strip()
+        name = str(entry.get('name') or '').strip()
+        if slug and name:
+            names[slug] = name
+    return names
+
+
+def _mentioned_players(html_text: str, root: Path) -> list[tuple[str, str]]:
+    article = html_text
+    start = article.find('<article')
+    if start >= 0:
+        article = article[start:]
+    cut = article.find('class="how-made"')
+    if cut >= 0:
+        article = article[:cut]
+    names = _player_names(root)
+    found = []
+    seen = set()
+    for href in PLAYER_HREF_RE.findall(article):
+        slug = href.strip('/').split('/')[-1]
+        if slug in seen or slug not in names:
+            continue
+        seen.add(slug)
+        found.append((names[slug], href))
+    return found
+
+
+def _story_links(rows: list) -> str:
+    items = ''.join(
+        f'<li><a href="{esc(article_href(article))}">{esc(article.get("title") or "")}</a></li>'
+        for article in rows
+    )
+    return f'<ul>{items}</ul>' if items else ''
+
+
+def article_end_html(html_text: str, root: Path, article: dict, articles: list) -> str:
+    """Series stories, three latest posts, and the players named in the article."""
+    series = series_articles(article, articles)
+    latest = _latest_news(article, articles, {str(item.get('slug') or '') for item in series})
+    players = _mentioned_players(html_text, root)
+    parts = ['<aside class="article-end">']
+    if series:
+        parts.append(
+            '<section class="article-series"><h2>More from this series</h2>'
+            + _story_links(series) + '</section>'
+        )
+    if latest:
+        parts.append(
+            '<section class="article-latest"><h2>Latest news</h2>'
+            + _story_links(latest) + '</section>'
+        )
+    if players:
+        chips = ''.join(
+            f'<li><a href="{esc(href)}" target="_blank" rel="noopener">{esc(name)}</a></li>'
+            for name, href in players
+        )
+        parts.append(
+            '<section class="article-players"><h2>Players in this story</h2>'
+            f'<ul>{chips}</ul></section>'
+        )
+    parts.append('</aside>')
+    if len(parts) == 2:
+        return ''
+    return ''.join(parts)
+
+
+def ensure_article_end(html_text: str, root: Path, article: dict, articles: list) -> str:
+    """Build-time related links at the end of a post. Re-running replaces the block."""
+    if '.article-end{' not in html_text:
+        if '</style>' in html_text:
+            html_text = html_text.replace('</style>', ARTICLE_END_CSS + '</style>', 1)
+        elif '</head>' in html_text:
+            html_text = html_text.replace('</head>', '<style>' + ARTICLE_END_CSS + '</style></head>', 1)
+    cleaned = ARTICLE_END_RE.sub('', html_text)
+    block = article_end_html(cleaned, root, article, articles)
+    if not block:
+        return cleaned
+    match = HOW_MADE_RE.search(cleaned)
+    if match:
+        end = match.end()
+        return cleaned[:end] + block + cleaned[end:]
+    if '</article>' in cleaned:
+        return cleaned.replace('</article>', block + '</article>', 1)
+    return cleaned + block
+
+
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
@@ -1876,6 +2072,7 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     import news_heroes
     news_heroes.ensure_article_hero(root, article)
     html_text = order_news_lead(html_text, article)
+    html_text = ensure_article_end(html_text, root, article, articles if articles is not None else [article])
     return html_text
 
 
