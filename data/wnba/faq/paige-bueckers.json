@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Paige Bueckers's stats?",
-      "answer": "In the 2026 regular season, Paige Bueckers averaged 20.9 points, 4.1 rebounds, and 5.9 assists in 42 games for the Dallas Wings. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Paige Bueckers averaged 20.9 points, 4.1 rebounds, and 5.9 assists in 42 games for the Dallas Wings.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1642784/paige-bueckers/bio"
@@ -229,7 +229,7 @@
     },
     {
       "question": "How many games has Paige Bueckers played in the WNBA?",
-      "answer": "This page lists 2 regular seasons for Paige Bueckers, 2025 and 2026. The 2025 row is 36 games, and the 2026 row is 42 games.",
+      "answer": "Paige Bueckers has 2 regular seasons, 2025 and 2026. She played 36 games in 2025 and 42 games in 2026.",
       "answer_kind": "stats",
       "sources": [],
       "queries": [

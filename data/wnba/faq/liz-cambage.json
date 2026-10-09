@@ -76,7 +76,7 @@
     },
     {
       "question": "What are Liz Cambage's stats?",
-      "answer": "In the 2022 regular season, Liz Cambage averaged 13.0 points, 6.4 rebounds, and 2.1 assists in 25 games for the Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2022 regular season, Liz Cambage averaged 13.0 points, 6.4 rebounds, and 2.1 assists in 25 games for the Los Angeles Sparks.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/202633/liz-cambage/bio"
@@ -112,7 +112,7 @@
     },
     {
       "question": "Who is Liz Cambage?",
-      "answer": "Liz Cambage is a center who is not on a current roster. The WNBA lists her as the second overall pick in the 2011 WNBA Draft, a four-time All-Star in 2011, 2018, 2019, and 2021, and the 2018 MVP runner-up. This page labels her an inactive player.",
+      "answer": "Liz Cambage is a center who is not on a current roster. The WNBA lists her as the second overall pick in the 2011 WNBA Draft, a four-time All-Star in 2011, 2018, 2019, and 2021, and the 2018 MVP runner-up.",
       "answer_kind": "researched",
       "sources": [
         "https://www.wnba.com/player/202633/liz-cambage/bio"
@@ -130,10 +130,11 @@
     },
     {
       "question": "What is Liz Cambage's career high?",
-      "answer": "The WNBA bio records a 53-point game for Liz Cambage with Dallas against the New York Liberty on July 17, 2018. The Associated Press reported that Marina Mabrey matched that total, and A'ja Wilson's 53 from August 22, 2023, for Toronto against the Los Angeles Sparks on June 25, 2026.",
+      "answer": "Liz Cambage's career high is 53 points, for Dallas against the New York Liberty on July 17, 2018, then a WNBA record. A'ja Wilson tied it on August 22, 2023, and Marina Mabrey tied it for Toronto against the Los Angeles Sparks on June 25, 2026.",
       "answer_kind": "researched",
       "sources": [
         "https://www.wnba.com/player/202633/liz-cambage/bio",
+        "https://apnews.com/sports/wnba-basketball-womens-national-basketball-association-aja-wilson-65d8953ce6b9c43108b6a478bcd940af",
         "https://apnews.com/article/sparks-tempo-score-a55854ab0aa373da6bed7efdcda9f8de"
       ],
       "queries": [
@@ -145,7 +146,7 @@
     },
     {
       "question": "Is Liz Cambage still in the WNBA?",
-      "answer": "Liz Cambage is not on a current roster, and this page labels her an inactive player. Her last regular season on this page is 2022 with the Los Angeles Sparks.",
+      "answer": "Liz Cambage is not on a current roster. Her last regular season was 2022 with the Los Angeles Sparks.",
       "answer_kind": "researched",
       "sources": [
         "https://www.wnba.com/player/202633/liz-cambage/bio"
@@ -193,7 +194,7 @@
     },
     {
       "question": "How many years has Liz Cambage been in the WNBA?",
-      "answer": "Liz Cambage has 6 regular seasons on this page: 2011, 2013, 2018, 2019, 2021, and 2022.",
+      "answer": "Liz Cambage has 6 regular seasons: 2011, 2013, 2018, 2019, 2021, and 2022.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/202633/liz-cambage/bio"

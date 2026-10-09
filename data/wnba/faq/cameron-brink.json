@@ -28,7 +28,7 @@
     },
     {
       "question": "What are Cameron Brink's stats?",
-      "answer": "In the 2026 regular season, Cameron Brink averaged 9.6 points, 5.0 rebounds, and 1.5 assists in 31 games for the Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Cameron Brink averaged 9.6 points, 5.0 rebounds, and 1.5 assists in 31 games for the Los Angeles Sparks.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1642287"
@@ -81,7 +81,7 @@
     },
     {
       "question": "How old is Cameron Brink?",
-      "answer": "Cameron Brink was born December 31, 2001. She is 24.",
+      "answer": "Cameron Brink was born December 31, 2001.",
       "answer_kind": "bio",
       "sources": [
         "https://www.wnba.com/player/1642287"

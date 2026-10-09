@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are DeWanna Bonner's stats?",
-      "answer": "DeWanna Bonner's latest season is listed by team on this page, not as one combined average.",
+      "answer": "DeWanna Bonner's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/201886/dewanna-bonner/bio"
@@ -28,7 +28,7 @@
     },
     {
       "question": "What did DeWanna Bonner average for each team in 2026?",
-      "answer": "In 2026, DeWanna Bonner's regular-season lines on this page are split by team. She averaged 10.6 points, 6.1 rebounds, and 1.5 assists in 37 games for the Phoenix Mercury, and 8.6 points, 5.4 rebounds, and 1.8 assists in 5 games for the Atlanta Dream.",
+      "answer": "In 2026, DeWanna Bonner's regular-season lines are split by team. She averaged 10.6 points, 6.1 rebounds, and 1.5 assists in 37 games for the Phoenix Mercury, and 8.6 points, 5.4 rebounds, and 1.8 assists in 5 games for the Atlanta Dream.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/201886/dewanna-bonner/bio"
@@ -50,11 +50,10 @@
     },
     {
       "question": "Is DeWanna Bonner married?",
-      "answer": "No. DeWanna Bonner is engaged to Alyssa Thomas. As of October 2026, she is not married.",
+      "answer": "DeWanna Bonner and Alyssa Thomas announced their engagement in July 2023. They have not publicly announced a wedding.",
       "answer_kind": "researched",
       "sources": [
-        "https://apnews.com/article/bonner-thomas-sun-wnba-engagement-2406246017cd25165676fb2aff9d12e8",
-        "https://www.espn.com/wnba/story/_/id/38047674/alyssa-thomas-dewanna-bonner-connecticut-sun-engagement"
+        "https://apnews.com/article/bonner-thomas-sun-wnba-engagement-2406246017cd25165676fb2aff9d12e8"
       ],
       "queries": [
         {
@@ -109,7 +108,7 @@
     },
     {
       "question": "Does DeWanna Bonner have twins?",
-      "answer": "The WNBA says DeWanna Bonner has twin daughters, Cali and Demi. ESPN reported that she and Candice Dupree welcomed the twins.",
+      "answer": "DeWanna Bonner has twin daughters, Cali and Demi, whom she and Candice Dupree welcomed in 2017.",
       "answer_kind": "researched",
       "sources": [
         "https://www.wnba.com/player/201886/dewanna-bonner/bio",
@@ -180,7 +179,7 @@
     },
     {
       "question": "What team does DeWanna Bonner play for?",
-      "answer": "DeWanna Bonner plays forward for the Atlanta Dream and wears No. 24. Her 2026 regular season on this page is split between the Phoenix Mercury and the Atlanta Dream.",
+      "answer": "DeWanna Bonner plays forward for the Atlanta Dream and wears No. 24. Her 2026 regular season is split between the Phoenix Mercury and the Atlanta Dream.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/201886/dewanna-bonner/bio"
@@ -280,7 +279,7 @@
     },
     {
       "question": "How many years has DeWanna Bonner been in the WNBA?",
-      "answer": "DeWanna Bonner has 17 regular seasons on this page: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, and 2026.",
+      "answer": "DeWanna Bonner has 17 regular seasons: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, and 2026.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/201886/dewanna-bonner/bio"

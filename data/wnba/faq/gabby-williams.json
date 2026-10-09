@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Gabby Williams's stats?",
-      "answer": "In the 2026 regular season, Gabby Williams averaged 14.4 points, 3.3 rebounds, and 2.2 assists in 39 games for the Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Gabby Williams averaged 14.4 points, 3.3 rebounds, and 2.2 assists in 39 games for the Golden State Valkyries.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1628931/gabby-williams/bio"
@@ -28,10 +28,10 @@
     },
     {
       "question": "Is Gabby Williams married?",
-      "answer": "No current partner has been publicly confirmed.",
+      "answer": "Gabby Williams isn't married. Outsports reported in June 2026 that she is dating Marine Johannès, a New York Liberty guard who also plays with her for France. Neither has announced an engagement.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/1628931/gabby-williams/bio"
+        "https://www.outsports.com/2026/6/28/24138281/gabby-williams-wnba-golden-state-valkyries-gay-pride-night/"
       ],
       "queries": [
         {
@@ -70,7 +70,7 @@
     },
     {
       "question": "What team does Gabby Williams play for?",
-      "answer": "Gabby Williams plays forward for the Golden State Valkyries and wears No. 1. The Chicago Sky drafted her fourth overall in 2018. This page lists 8 regular seasons: 2018, 2019, 2020, 2022, 2023, 2024, 2025, and 2026.",
+      "answer": "Gabby Williams plays forward for the Golden State Valkyries and wears No. 1. The Chicago Sky drafted her fourth overall in 2018. She has 8 regular seasons: 2018, 2019, 2020, 2022, 2023, 2024, 2025, and 2026.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/1628931/gabby-williams/bio"
@@ -172,10 +172,11 @@
     },
     {
       "question": "Where is Gabby Williams from?",
-      "answer": "ESPN lists Gabby Williams's birthplace as Sparks, Nevada.",
+      "answer": "Gabby Williams was born in Sparks, Nevada, and played at Reed High School there.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.espn.com/wnba/player/bio/_/id/3142328/gabby-williams"
+        "https://uconnhuskies.com/sports/womens-basketball/roster/williams-gabby/9758",
+        "https://nevadasportsnet.com/news/reporters/reed-high-alum-gabby-williams-will-play-in-olympics-with-team-france"
       ],
       "queries": [
         {
@@ -186,10 +187,11 @@
     },
     {
       "question": "Who is Gabby Williams?",
-      "answer": "Gabby Williams is a forward for the Golden State Valkyries and a UConn alum. The WNBA lists her as a 2025 All-Star, a 2025 All-Defensive First Team selection, and a 2022 All-Defensive Second Team selection.",
+      "answer": "Gabby Williams is a forward for the Golden State Valkyries and a UConn alum. Basketball-Reference lists her as a two-time All-Star, in 2025 and 2026, a 2025 All-Defensive First Team selection, and a 2022 All-Defensive Second Team selection.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/1628931/gabby-williams/bio"
+        "https://www.wnba.com/player/1628931/gabby-williams/bio",
+        "https://www.basketball-reference.com/wnba/players/w/williga01w.html"
       ],
       "queries": [
         {

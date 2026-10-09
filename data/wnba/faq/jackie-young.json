@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Jackie Young's stats?",
-      "answer": "In the 2026 regular season, Jackie Young averaged 18.9 points, 4.4 rebounds, and 6.8 assists in 43 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Jackie Young averaged 18.9 points, 4.4 rebounds, and 6.8 assists in 43 games for the Las Vegas Aces.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1629498/jackie-young"
@@ -177,7 +177,7 @@
     },
     {
       "question": "How many years has Jackie Young been in the WNBA?",
-      "answer": "Jackie Young has 8 regular seasons on this page, from 2019 to 2026.",
+      "answer": "Jackie Young has 8 regular seasons, from 2019 to 2026.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1629498/jackie-young"

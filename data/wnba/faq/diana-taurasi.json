@@ -60,7 +60,7 @@
     },
     {
       "question": "What are Diana Taurasi's stats?",
-      "answer": "In the 2024 regular season, Diana Taurasi averaged 14.9 points, 3.8 rebounds, and 3.4 assists in 36 games for the Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2024 regular season, Diana Taurasi averaged 14.9 points, 3.8 rebounds, and 3.4 assists in 36 games for the Phoenix Mercury.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/100940/diana-taurasi/bio"
@@ -128,11 +128,10 @@
     },
     {
       "question": "Does Diana Taurasi still play in the WNBA?",
-      "answer": "Diana Taurasi retired on February 25, 2025. The WNBA commissioner's statement that day described a 20-season career. She is not on a current roster, and this page labels her an inactive player. This page lists 16 regular seasons from 2008 on, not all 20.",
+      "answer": "Diana Taurasi retired on February 25, 2025. The WNBA commissioner's statement that day described a 20-season career. She is not on a current roster.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/news/cathy-engelbert-statement-diana-taurasi-retirement",
-        "https://www.wnba.com/player/100940/diana-taurasi/bio"
+        "https://www.wnba.com/news/cathy-engelbert-statement-diana-taurasi-retirement"
       ],
       "queries": [
         {
@@ -191,10 +190,11 @@
     },
     {
       "question": "Who is in Diana Taurasi's family?",
-      "answer": "The WNBA says Diana Taurasi's mother, Lili, is from Argentina, and her father, Mario Taurasi, is from Italy. She has an older sister, Jessika, and a son, Leo Michael Taurasi-Taylor, born in March 2018.",
+      "answer": "The WNBA says Diana Taurasi's mother, Lili, is from Argentina, and her father, Mario Taurasi, is from Italy. She has an older sister, Jessika, and a son, Leo Michael Taurasi-Taylor, born in March 2018. Taurasi and Penny Taylor also have a daughter, born in October 2021.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/player/100940/diana-taurasi/bio"
+        "https://www.wnba.com/player/100940/diana-taurasi/bio",
+        "https://apnews.com/article/sports-penny-taylor-phoenix-05d80a355436b25540e5fccb9d901c10"
       ],
       "queries": [
         {
@@ -227,7 +227,7 @@
     },
     {
       "question": "Who is Diana Taurasi?",
-      "answer": "Diana Taurasi is a retired Phoenix Mercury guard. The WNBA lists three titles, in 2007, 2009, and 2014, and six Olympic gold medals. She was the first overall pick in the 2004 WNBA Draft. This page labels her an inactive player.",
+      "answer": "Diana Taurasi is a retired Phoenix Mercury guard. The WNBA lists three titles, in 2007, 2009, and 2014, and six Olympic gold medals. She was the first overall pick in the 2004 WNBA Draft. She is not on a current roster.",
       "answer_kind": "researched",
       "sources": [
         "https://www.wnba.com/player/100940/diana-taurasi/bio",
@@ -254,9 +254,10 @@
     },
     {
       "question": "How many years has Diana Taurasi been in the WNBA?",
-      "answer": "Diana Taurasi has 16 regular seasons on this page: 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, and 2024.",
+      "answer": "Diana Taurasi played 20 WNBA seasons, all with the Phoenix Mercury, from 2004 to 2024. She sat out the 2015 season.",
       "answer_kind": "stats",
       "sources": [
+        "https://www.wnba.com/news/cathy-engelbert-statement-diana-taurasi-retirement",
         "https://www.wnba.com/player/100940/diana-taurasi/bio"
       ],
       "queries": []

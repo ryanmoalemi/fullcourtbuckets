@@ -112,7 +112,7 @@
     },
     {
       "question": "What are Candace Parker's stats?",
-      "answer": "In the 2022 regular season, Candace Parker averaged 13.2 points, 8.6 rebounds, and 4.5 assists in 32 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2022 regular season, Candace Parker averaged 13.2 points, 8.6 rebounds, and 4.5 assists in 32 games for the Las Vegas Aces.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/201496/candace-parker/bio"
@@ -126,7 +126,7 @@
     },
     {
       "question": "Is Candace Parker retired?",
-      "answer": "Yes. The Las Vegas Aces say Candace Parker announced her retirement on April 28, 2024. She is not on a current roster, and this page labels her an inactive player.",
+      "answer": "Yes. The Las Vegas Aces say Candace Parker announced her retirement on April 28, 2024. She is not on a current roster.",
       "answer_kind": "researched",
       "sources": [
         "https://aces.wnba.com/candace-parker-bio",

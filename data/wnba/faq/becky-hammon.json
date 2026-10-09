@@ -6,11 +6,10 @@
   "items": [
     {
       "question": "Who does Becky Hammon coach?",
-      "answer": "As of October 2026, Becky Hammon is the head coach of the Las Vegas Aces. The Aces hired her on December 31, 2021, after she was a San Antonio Spurs assistant from 2014 to 2022. The Aces site lists WNBA titles in 2022, 2023, and 2025, the 2022 Coach of the Year award, and the 2022 Commissioner's Cup. NBC Sports identified her as the Aces head coach on October 8, 2026. The coaching record on that Aces page runs through 2025.",
+      "answer": "As of October 2026, Becky Hammon is the head coach of the Las Vegas Aces. The Aces hired her on December 31, 2021, after she was a San Antonio Spurs assistant from 2014 to 2022. The Aces site lists WNBA titles in 2022, 2023, and 2025, the 2022 Coach of the Year award, and the 2022 Commissioner's Cup.",
       "answer_kind": "researched",
       "sources": [
-        "https://aces.wnba.com/head-coach-becky-hammon",
-        "https://www.nbcsports.com/watch/wnba/becky-hammon-burton-was-massive-for-gsv-aces-prep-for-game-3"
+        "https://aces.wnba.com/head-coach-becky-hammon"
       ],
       "queries": [
         {
@@ -61,10 +60,10 @@
     },
     {
       "question": "Is Becky Hammon married?",
-      "answer": "No current partner has been publicly confirmed.",
+      "answer": "Becky Hammon's partner is Brenda Milano, a former Wagner College player and coach, and the couple are raising two sons.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/100342/becky-hammon/bio"
+        "https://www.marca.com/en/basketball/wnba/las-vegas-aces/2025/10/11/68e95ff9268e3e450f8b45af.html"
       ],
       "queries": [
         {
@@ -125,7 +124,7 @@
     },
     {
       "question": "Who is Becky Hammon?",
-      "answer": "Becky Hammon is the head coach of the Las Vegas Aces and a former WNBA guard. The Aces site says she played 16 seasons, from 1999 to 2014, went undrafted in 1999 after Colorado State, and was inducted into the Naismith Memorial Basketball Hall of Fame on August 12, 2023. She was also inducted into the Women's Basketball Hall of Fame in 2022. She is not on a current roster, and this page labels her an inactive player.",
+      "answer": "Becky Hammon is the head coach of the Las Vegas Aces and a former WNBA guard. The Aces site says she played 16 seasons, from 1999 to 2014, went undrafted in 1999 after Colorado State, and was inducted into the Naismith Memorial Basketball Hall of Fame on August 12, 2023. She was also inducted into the Women's Basketball Hall of Fame in 2022. She retired as a player after the 2014 season.",
       "answer_kind": "researched",
       "sources": [
         "https://aces.wnba.com/head-coach-becky-hammon",
@@ -166,7 +165,7 @@
     },
     {
       "question": "What are Becky Hammon's stats?",
-      "answer": "In the 2014 regular season, Becky Hammon averaged 8.2 points, 1.4 rebounds, and 4.2 assists in 32 games for the San Antonio Stars. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2014 regular season, Becky Hammon averaged 8.3 points, 1.4 rebounds, and 4.2 assists in 32 games for the San Antonio Stars.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/100342/becky-hammon/bio"
@@ -180,7 +179,7 @@
     },
     {
       "question": "Where did Becky Hammon play in the WNBA?",
-      "answer": "The Aces coaching page lists the New York Liberty from 1999 to 2006 and San Antonio from 2007 to 2014. This page lists 7 regular seasons, from 2008 to 2014, for the San Antonio Silver Stars and the San Antonio Stars.",
+      "answer": "The Aces coaching page lists the New York Liberty from 1999 to 2006 and San Antonio from 2007 to 2014.",
       "answer_kind": "researched",
       "sources": [
         "https://aces.wnba.com/head-coach-becky-hammon",

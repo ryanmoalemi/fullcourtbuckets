@@ -5,6 +5,7 @@ Python 3.11+, standard library only. No credentials, scraped biographies, or inf
 from __future__ import annotations
 import argparse
 import datetime as dt
+from decimal import Decimal, ROUND_HALF_UP
 import html
 import json
 import math
@@ -116,10 +117,18 @@ def publish_adu_redirects(root: Path) -> None:
 def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
 
+def round_tenth(n) -> str:
+    """One decimal, rounding halves up. The season table and FAQ averages share this."""
+    quant = Decimal(str(n)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
+    return f'{quant:.1f}'
+
+
 def value(n, integer=False):
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
         return '-'
-    return str(int(n)) if integer and int(n) == n else f'{n:.1f}'
+    if integer and int(n) == n:
+        return str(int(n))
+    return round_tenth(n)
 
 def timestamp(raw, short=False):
     try:
@@ -199,7 +208,7 @@ def stats_day(profile):
 def plain_average(n):
     if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
         return None
-    return f'{n:.1f}'
+    return round_tenth(n)
 
 def plain_games(n):
     if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
@@ -452,20 +461,86 @@ def format_season_years(years, *, prose: bool = False) -> str:
     return ', '.join(str(year) for year in ordered)
 
 
-def years_faq_answer(profile, name: str) -> str:
-    """Count of regular-season rows. This is not a career points total.
+_ALL_STAR_SLUGS = frozenset({'west', 'east'})
+
+
+def verified_pre2008_career(profile, root=None):
+    """Regular-season years and team names when a checked career started before 2008.
+
+    Season rows in this project start in 2008. The cross-check keeps earlier
+    seasons, so a count taken only from the page would be short. Returns None
+    when the player debuted in 2008 or later, or when that earlier career was
+    not checked.
+    """
+    if root is None or not isinstance(profile, dict):
+        return None
+    player = profile.get('player') if isinstance(profile.get('player'), dict) else {}
+    player_id = player.get('id')
+    if isinstance(player_id, bool) or not isinstance(player_id, int):
+        return None
+    key = str(Path(root).resolve())
+    if key not in _SEASON_TABLES:
+        _SEASON_TABLES[key] = season_teams.load_table(Path(root))
+    table = _SEASON_TABLES[key]
+    players = table.get('players') if isinstance(table.get('players'), dict) else {}
+    entry = players.get(str(player_id))
+    if not isinstance(entry, dict) or entry.get('status') != 'ok':
+        return None
+    years = set()
+    teams = []
+    for stint in entry.get('stints') or []:
+        if not isinstance(stint, dict) or stint.get('season_type') != 2:
+            continue
+        year = stint.get('season')
+        if isinstance(year, bool) or not isinstance(year, int):
+            continue
+        slug = stint.get('team_slug')
+        if slug in _ALL_STAR_SLUGS:
+            continue
+        years.add(year)
+        team = season_teams.team_for_slug(slug, table) if slug else None
+        label = tname(team) if team else ''
+        if label and label != 'Team not listed' and label not in teams:
+            teams.append(label)
+    ordered = sorted(years)
+    if not ordered or ordered[0] >= 2008:
+        return None
+    return ordered, teams
+
+
+def _sat_out_sentence(gaps: list[int]) -> str:
+    if not gaps:
+        return ''
+    if len(gaps) == 1:
+        return f' She sat out the {gaps[0]} season.'
+    return f' She sat out the {_listed([str(year) for year in gaps])} seasons.'
+
+
+def years_faq_answer(profile, name: str, root=None) -> str:
+    """WNBA season count. Players who debuted before 2008 use the checked full span.
 
     A range is used only when those seasons are continuous. A gap lists the years
-    that are actually on the page.
+    that were actually played, or names the seasons that were sat out.
     """
+    checked = verified_pre2008_career(profile, root)
+    if checked:
+        years, teams = checked
+        count = len(years)
+        noun = 'WNBA season' if count == 1 else 'WNBA seasons'
+        gaps = [year for year in range(years[0], years[-1] + 1) if year not in set(years)]
+        team_bit = f', all with the {teams[0]}' if len(teams) == 1 else ''
+        return (
+            f'{name} played {count} {noun}{team_bit}, from {years[0]} to {years[-1]}.'
+            f'{_sat_out_sentence(gaps)}'
+        )
     years = regular_season_years(profile)
     if not years:
         return ''
     count = len(years)
     noun = 'regular season' if count == 1 else 'regular seasons'
     if count > 4 and years_are_continuous(years):
-        return f'{name} has {count} {noun} on this page, from {years[0]} to {years[-1]}.'
-    return f'{name} has {count} {noun} on this page: {_listed([str(year) for year in years])}.'
+        return f'{name} has {count} {noun}, from {years[0]} to {years[-1]}.'
+    return f'{name} has {count} {noun}: {_listed([str(year) for year in years])}.'
 
 
 def three_point_faq_answer(profile, name: str) -> str:
@@ -478,7 +553,7 @@ def three_point_faq_answer(profile, name: str) -> str:
     if pct == '-' or not year:
         return ''
     competition = 'regular season' if row.get('season_type') == 2 else 'playoffs'
-    return f"In the {year} {competition}, {name}'s three-point percentage on this page is {pct}."
+    return f"In the {year} {competition}, {name}'s three-point percentage is {pct}."
 
 
 def rookie_faq_answer(profile, name: str) -> str:
@@ -518,7 +593,7 @@ def teams_faq_answer(profile, name: str) -> str:
     if profile.get('active_in_provider_feed') is True and isinstance(current, dict):
         current_name = tname(current)
         if current_name and current_name != 'Team not listed' and current_name not in names:
-            sentence += f' Her current team on this page is the {current_name}.'
+            sentence += f' Her current team is the {current_name}.'
     return sentence
 
 
@@ -588,18 +663,15 @@ def season_faq_answer(profile, name: str) -> str:
         noun = 'game' if games == '1' else 'games'
         team_bit = f' for the {team}' if team and team != 'Team not listed' else ''
         if bits and games != '-':
-            return (
-                f'In the {year} {competition}, {name} averaged {_listed(bits)} in {games} {noun}{team_bit}. '
-                'Her full season-by-season numbers are on this page.'
-            )
+            return f'In the {year} {competition}, {name} averaged {_listed(bits)} in {games} {noun}{team_bit}.'
         if games != '-':
             return f'In the {year} {competition}, {name} played {games} {noun}{team_bit}.'
     games = [game for game in profile.get('recent_completed_games') or [] if isinstance(game, dict)]
     if not profile.get('season_stats') and games:
         return tracked_games_answer(name, games, profile)
     if profile.get('season_stats'):
-        return f"{name}'s latest season is listed by team on this page, not as one combined average."
-    return 'Season averages are not listed on this page yet.'
+        return f"{name}'s latest season is listed by team, not as one combined average."
+    return 'Season averages are not listed yet.'
 
 
 def tracked_games_answer(name: str, games: list, profile) -> str:
@@ -627,17 +699,14 @@ def tracked_games_answer(name: str, games: list, profile) -> str:
     team_bit = f' for the {team}' if team and team != 'Team not listed' else ''
     if not bits:
         return f'In her most recent {count} tracked {noun}, a points average is not listed{team_bit}.'
-    return (
-        f'In her most recent {count} tracked {noun}, {name} averaged {_listed(bits)}{team_bit}. '
-        'Full game-by-game numbers are on this page.'
-    )
+    return f'In her most recent {count} tracked {noun}, {name} averaged {_listed(bits)}{team_bit}.'
 
 
 def last_game_answer(profile, name: str) -> str:
     """Last completed game, including playoffs, using the game table's date and numbers."""
     game = latest_completed_game(profile)
     if not game:
-        return 'A completed game is not listed on this page yet.'
+        return 'A completed game is not listed yet.'
     shown = game_display(game)
     bits = []
     for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
@@ -1271,7 +1340,7 @@ def answer_related_query(profile, query: str, root) -> str:
     if 'three-point' in text or '3-point' in text or 'three point percentage' in text:
         return three_point_faq_answer(profile, name)
     if (('how many years' in text) or ('how long' in text)) and 'wnba' in text:
-        return years_faq_answer(profile, name)
+        return years_faq_answer(profile, name, root)
     if re.search(r'\b(?:which teams|what teams|teams has|teams did)\b', text):
         return teams_faq_answer(profile, name)
     if 'fiba' in text:
@@ -1408,7 +1477,7 @@ def curated_answer_pairs(profile, root: Path):
         elif kind == 'last_game':
             answer = last_game_answer(profile, name)
         elif kind == 'years':
-            answer = years_faq_answer(profile, name)
+            answer = years_faq_answer(profile, name, root)
         elif kind == 'three_point':
             answer = three_point_faq_answer(profile, name)
         elif kind == 'rookie':
@@ -1951,7 +2020,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
-        intro=f'{name} averaged {row["pts"]:.1f} points, {row["reb"]:.1f} rebounds and {row["ast"]:.1f} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
+        intro=f'{name} averaged {value(row["pts"])} points, {value(row["reb"])} rebounds and {value(row["ast"])} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
     overview=f'<p>{esc(intro)}</p>'
     if team:
         team_label=links.linked_team_name(tname(team), linking, budget)

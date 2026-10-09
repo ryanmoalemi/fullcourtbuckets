@@ -6,7 +6,7 @@
   "items": [
     {
       "question": "What are Angel Reese's stats?",
-      "answer": "In the 2026 regular season, Angel Reese averaged 16.4 points, 12.1 rebounds, and 2.8 assists in 43 games for the Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "answer": "In the 2026 regular season, Angel Reese averaged 16.4 points, 12.1 rebounds, and 2.8 assists in 43 games for the Atlanta Dream.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/1642291/angel-reese/bio"
@@ -164,7 +164,7 @@
     },
     {
       "question": "What is Angel Reese's shooting percentage?",
-      "answer": "In the 2026 regular season, Angel Reese's field-goal percentage on this page is 45.1, and her three-point percentage is 19.3.",
+      "answer": "In the 2026 regular season, Angel Reese's field-goal percentage is 45.1, and her three-point percentage is 19.3.",
       "answer_kind": "stats",
       "sources": [],
       "queries": [

@@ -331,7 +331,7 @@ class BuildTests(unittest.TestCase):
         self.assertNotIn('2010 to 2016', b.player_description(gapped))
         self.assertEqual(
             b.years_faq_answer(gapped, 'Example Player'),
-            'Example Player has 3 regular seasons on this page: 2010, 2015, and 2016.',
+            'Example Player has 3 regular seasons: 2010, 2015, and 2016.',
         )
         wide = copy.deepcopy(P)
         wide['season_stats'] = [{**base, 'season': year} for year in (2008, 2010, 2012, 2014, 2016, 2018)]
@@ -422,7 +422,7 @@ class BuildTests(unittest.TestCase):
         profile = json.loads((root / 'data/wnba/players/aja-wilson.json').read_text())
         self.assertEqual(
             b.answer_related_query(profile, "How many years has A'ja Wilson been in the WNBA?", root),
-            "A'ja Wilson has 9 regular seasons on this page, from 2018 to 2026.",
+            "A'ja Wilson has 9 regular seasons, from 2018 to 2026.",
         )
         self.assertEqual(b.answer_related_query(profile, "How many MVPs does A'ja Wilson have?", root), '')
         self.assertEqual(b.answer_related_query(profile, "Does A'ja Wilson have kids?", root), '')
@@ -470,7 +470,7 @@ class BuildTests(unittest.TestCase):
         answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
         self.assertEqual(
             answers["What are A'ja Wilson's stats?"],
-            "In the 2026 regular season, A'ja Wilson averaged 26.2 points, 9.4 rebounds, and 3.2 assists in 41 games for the Las Vegas Aces. Her full season-by-season numbers are on this page.",
+            "In the 2026 regular season, A'ja Wilson averaged 26.2 points, 9.4 rebounds, and 3.2 assists in 41 games for the Las Vegas Aces.",
         )
         self.assertIn('Bam Adebayo', answers["Who is A'ja Wilson dating?"])
         self.assertIn('not married', answers["Who is A'ja Wilson dating?"])
@@ -540,7 +540,7 @@ class BuildTests(unittest.TestCase):
         answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
         self.assertEqual(
             answers["What are Kelsey Plum's stats?"],
-            "Kelsey Plum's latest season is listed by team on this page, not as one combined average.",
+            "Kelsey Plum's latest season is listed by team, not as one combined average.",
         )
         self.assertNotIn('23.9', answers["What are Kelsey Plum's stats?"])
         self.assertIn('23.9 points', answers['What did Kelsey Plum average for each team in 2026?'])
@@ -550,7 +550,7 @@ class BuildTests(unittest.TestCase):
         azzi = json.loads((root / 'data/wnba/players/azzi-fudd.json').read_text(encoding='utf-8'))
         _html, azzi_entity = b.faq_section(azzi, root)
         azzi_age = next(node['acceptedAnswer']['text'] for node in azzi_entity['mainEntity'] if node['name'].startswith('How old'))
-        self.assertEqual(azzi_age, 'Azzi Fudd was born November 11, 2002. She is 23.')
+        self.assertEqual(azzi_age, 'Azzi Fudd was born November 11, 2002.')
         october_birthdays = (
             'lauren-betts', 'sue-bird', 'brittney-griner', 'paige-bueckers',
             'chelsea-gray', 'sonia-citron',
@@ -572,12 +572,13 @@ class BuildTests(unittest.TestCase):
         bonner_answers = {node['name']: node['acceptedAnswer']['text'] for node in bonner_entity['mainEntity']}
         self.assertEqual(
             bonner_answers["What are DeWanna Bonner's stats?"],
-            "DeWanna Bonner's latest season is listed by team on this page, not as one combined average.",
+            "DeWanna Bonner's latest season is listed by team, not as one combined average.",
         )
         self.assertIn('10.6 points', bonner_answers['What did DeWanna Bonner average for each team in 2026?'])
         self.assertIn('8.6 points', bonner_answers['What did DeWanna Bonner average for each team in 2026?'])
-        self.assertIn('engaged to Alyssa Thomas', bonner_answers['Is DeWanna Bonner married?'])
-        self.assertIn('not married', bonner_answers['Is DeWanna Bonner married?'])
+        self.assertIn('Alyssa Thomas', bonner_answers['Is DeWanna Bonner married?'])
+        self.assertIn('engagement', bonner_answers['Is DeWanna Bonner married?'])
+        self.assertIn('have not publicly announced a wedding', bonner_answers['Is DeWanna Bonner married?'])
         self.assertNotIn('wife', bonner_answers['Is DeWanna Bonner married?'].casefold())
         taurasi = json.loads((root / 'data/wnba/players/diana-taurasi.json').read_text(encoding='utf-8'))
         _html, taurasi_entity = b.faq_section(taurasi, root)
@@ -587,7 +588,7 @@ class BuildTests(unittest.TestCase):
         carter = json.loads((root / 'data/wnba/players/chennedy-carter.json').read_text(encoding='utf-8'))
         _html, carter_entity = b.faq_section(carter, root)
         carter_age = next(node['acceptedAnswer']['text'] for node in carter_entity['mainEntity'] if node['name'].startswith('How old'))
-        self.assertEqual(carter_age, 'Chennedy Carter was born November 14, 1998. She is 27.')
+        self.assertEqual(carter_age, 'Chennedy Carter was born November 14, 1998.')
 
     def test_plum_and_clark_answers_come_from_page_data(self):
         root = ROOT.parent
@@ -621,11 +622,11 @@ class BuildTests(unittest.TestCase):
         self.assertIn('What are Caitlin Clark&#x27;s stats?', clark_html)
         self.assertEqual(
             b.answer_related_query(clark, "What is Caitlin Clark's three-point percentage?", root),
-            "In the 2026 regular season, Caitlin Clark's three-point percentage on this page is 36.1.",
+            "In the 2026 regular season, Caitlin Clark's three-point percentage is 36.1.",
         )
         self.assertEqual(
             b.answer_related_query(clark, 'How many years has Caitlin Clark been in the WNBA?', root),
-            'Caitlin Clark has 3 regular seasons on this page: 2024, 2025, and 2026.',
+            'Caitlin Clark has 3 regular seasons: 2024, 2025, and 2026.',
         )
 
     def test_build_publishes_related_searches_not_the_template(self):
