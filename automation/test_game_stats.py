@@ -182,6 +182,24 @@ class Tests(unittest.TestCase):
         self.assertEqual(g.choose_periods([("plays", rows)], 19, 17)[0], "plays")
         self.assertEqual(g.choose_periods([("plays", rows)], 20, 17), (None, None))
 
+    def test_quarters_ignore_a_late_out_of_order_play(self):
+        # Aces at Valkyries, 2026-10-04: a second-quarter substitution came back
+        # last in the feed with the 25-34 score from 3:42 of the second quarter.
+        rows = g.periods_from_plays([
+            {"order": 1, "period": 1, "away_score": 18, "home_score": 22},
+            {"order": 2, "period": 2, "away_score": 25, "home_score": 34},
+            {"order": 3, "period": 2, "away_score": 31, "home_score": 34},
+            {"order": 4, "period": 3, "away_score": 48, "home_score": 56},
+            {"order": 5, "period": 4, "away_score": 60, "home_score": 71},
+            {"order": 6, "period": 2, "away_score": 25, "home_score": 34},
+        ])
+        self.assertEqual(rows, [
+            {"period": 1, "away": 18, "home": 22},
+            {"period": 2, "away": 13, "home": 12},
+            {"period": 3, "away": 17, "home": 22},
+            {"period": 4, "away": 12, "home": 15},
+        ])
+
     def test_http_classification_does_not_need_a_key(self):
         self.assertEqual(g.classify_http(200, ""), "allowed")
         self.assertEqual(g.classify_http(400, "game_id is required"), "allowed")
