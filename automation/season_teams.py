@@ -20,11 +20,15 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 SEARCH_URL = "https://site.web.api.espn.com/apis/search/v2"
+SEARCH_V3_URL = "https://site.web.api.espn.com/apis/common/v3/search"
 STATS_URL = "https://site.web.api.espn.com/apis/common/v3/sports/basketball/wnba/athletes/{athlete_id}/stats"
 SOURCE = "https://site.web.api.espn.com/apis/common/v3/sports/basketball/wnba/athletes/{id}/stats"
 HISTORICAL_ID_START = 200
 USER_AGENT = "FullCourtBuckets/1.0"
 STANDINGS_URL = "https://site.api.espn.com/apis/v2/sports/basketball/wnba/standings?season={year}"
+CORE_TEAMS_URL = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/{year}/teams?limit=40"
+CORE_ROSTER_URL = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/{year}/teams/{team_id}/athletes?limit=40"
+CORE_ATHLETE_URL = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/wnba/seasons/{year}/athletes/{athlete_id}"
 STAT_FIELDS = {
     "gamesPlayed": "games_played",
     "avgMinutes": "min",
@@ -82,6 +86,44 @@ def search_hits(payload: dict) -> list[dict]:
             if isinstance(item, dict):
                 hits.append(item)
     return hits
+
+
+def needs_refetch(status: str) -> bool:
+    """A missing or failed lookup is tried again. A stored match is left alone.
+
+    Search used to answer no-match for WNBA players and that status was never
+    retried, so the feed's latest club stayed on every season.
+    """
+    text = str(status or "")
+    return not text or text == "no-match" or text.startswith("error")
+
+
+def v3_hits(payload: dict) -> list[dict]:
+    items = payload.get("items") if isinstance(payload, dict) else None
+    if not isinstance(items, list):
+        return []
+    return [item for item in items if isinstance(item, dict)]
+
+
+def pick_v3_candidates(items: list[dict], name: str) -> list[int]:
+    """Basketball athlete ids with this exact name. The league label is not trusted."""
+    wanted = normalize_name(name).split()
+    if not wanted:
+        return []
+    found = []
+    for item in items:
+        sport = str(item.get("sport") or "").casefold()
+        if sport and sport != "basketball":
+            continue
+        if normalize_name(item.get("displayName") or "").split() != wanted:
+            continue
+        try:
+            athlete = int(str(item.get("id")))
+        except (TypeError, ValueError):
+            continue
+        if athlete not in found:
+            found.append(athlete)
+    return found
 
 
 def pick_hit(hits: list[dict], name: str) -> dict | None:
@@ -621,6 +663,38 @@ def select_team(row: dict, stints: list[dict], table: dict):
     return "keep", None
 
 
+def _matching_stint(row: dict, stints: list[dict]) -> dict | None:
+    """The one stint with this season, competition, and games played."""
+    year = row.get("season")
+    kind = row.get("season_type")
+    games = row.get("games_played")
+    if isinstance(games, bool) or not isinstance(games, int):
+        return None
+    exact = [
+        item for item in stints
+        if item.get("season") == year and item.get("season_type") == kind and item.get("games_played") == games
+    ]
+    if len(exact) == 1:
+        return exact[0]
+    return None
+
+
+def _line_from_stint(row: dict, stint: dict, team: dict) -> dict:
+    """Replace a feed row whose club was not that season's club.
+
+    The paid feed often repeats the latest club and a rounded average. When one
+    stint matches the games played, that stint is the season line.
+    """
+    updated = {**row, "team": team}
+    if "pts" not in stint:
+        return updated
+    for key in METRIC_KEYS:
+        if key in stint and stint.get(key) is not None:
+            updated[key] = stint[key]
+    updated["gap_fill"] = True
+    return updated
+
+
 def correct_rows(rows: list[dict], table: dict) -> tuple[list[dict], dict]:
     """Relabel season rows. A correction that would duplicate a season key is reverted."""
     if not table:
@@ -632,7 +706,8 @@ def correct_rows(rows: list[dict], table: dict) -> tuple[list[dict], dict]:
             updated.append(row)
             actions.append("keep")
             continue
-        status, team = select_team(row, player_stints(table, row.get("player_id")), table)
+        stints = player_stints(table, row.get("player_id"))
+        status, team = select_team(row, stints, table)
         if status == "replace" and team:
             current = row.get("team") if isinstance(row.get("team"), dict) else {}
             same = current.get("id") == team.get("id") and current.get("full_name") == team.get("full_name")
@@ -640,7 +715,11 @@ def correct_rows(rows: list[dict], table: dict) -> tuple[list[dict], dict]:
                 updated.append(row)
                 actions.append("keep")
             else:
-                updated.append({**row, "team": team})
+                stint = _matching_stint(row, stints)
+                if stint is not None:
+                    updated.append(_line_from_stint(row, stint, team))
+                else:
+                    updated.append({**row, "team": team})
                 actions.append("replace")
         else:
             updated.append(row)
@@ -684,27 +763,155 @@ def _request_json(url: str, timeout: float = 25) -> dict:
     return payload
 
 
-def fetch_player(name: str, retries: int = 3) -> tuple[int | None, list[dict], dict, str]:
-    """Return espn id, stints, team records, and a status string."""
+def fetch_wnba_stints(espn_id: int) -> tuple[list[dict], dict]:
+    """Season stints from the WNBA athlete feed. An id with no stints is not a match."""
+    stints = []
+    teams = {}
+    for kind in (2, 3):
+        stats_url = STATS_URL.format(athlete_id=espn_id) + "?" + urllib.parse.urlencode({"seasontype": kind})
+        parsed, team_records = parse_stints(_request_json(stats_url), kind)
+        stints.extend(parsed)
+        teams.update(team_records)
+    return stints, teams
+
+
+def _ref_id(ref: str) -> int | None:
+    match = re.search(r"/(\d+)(?:\?|$)", str(ref or ""))
+    if not match:
+        return None
+    return int(match.group(1))
+
+
+def _candidate_ids(name: str) -> list[int]:
+    """Athlete ids to confirm against WNBA season stats.
+
+    The v2 search often returns no WNBA hit: the player is tagged with another
+    league, or the link is not a WNBA page, or the result list is empty. The
+    common search still returns an id. A name match is only a candidate until
+    the WNBA season feed has stints for it.
+    """
+    found_ids = []
     query = urllib.parse.urlencode({"query": name, "limit": 5, "type": "player"})
-    search_url = SEARCH_URL + "?" + query
+    hits = search_hits(_request_json(SEARCH_URL + "?" + query))
+    picked = pick_hit(hits, name)
+    if picked:
+        espn_id = athlete_id(picked)
+        if espn_id:
+            found_ids.append(espn_id)
+    wanted = normalize_name(name).split()
+    for item in hits:
+        if normalize_name(item.get("displayName") or "").split() != wanted:
+            continue
+        espn_id = athlete_id(item)
+        if espn_id and espn_id not in found_ids:
+            found_ids.append(espn_id)
+    if found_ids:
+        return found_ids
+    v3_query = urllib.parse.urlencode({"query": name, "limit": 20, "type": "player"})
+    return pick_v3_candidates(v3_hits(_request_json(SEARCH_V3_URL + "?" + v3_query)), name)
+
+
+_ROSTER_INDEX: dict[int, dict[str, list[int]]] = {}
+
+
+def roster_name_index(year: int) -> dict[str, list[int]]:
+    """Normalized name to athlete ids from the roster feed for that season.
+
+    The franchise list follows the season. The athlete list on each franchise
+    does not: it returns the current roster. An id is still only a match after
+    the WNBA season feed has stints for it, so a current namesake without those
+    stints is ignored.
+    """
+    if year in _ROSTER_INDEX:
+        return _ROSTER_INDEX[year]
+    teams_payload = _request_json(CORE_TEAMS_URL.format(year=year))
+    team_ids = []
+    for item in teams_payload.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        team_id = _ref_id(item.get("$ref"))
+        if team_id and team_id not in team_ids:
+            team_ids.append(team_id)
+
+    def roster(team_id: int) -> list[int]:
+        try:
+            payload = _request_json(CORE_ROSTER_URL.format(year=year, team_id=team_id))
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+            return []
+        ids = []
+        for item in payload.get("items") or []:
+            if not isinstance(item, dict):
+                continue
+            athlete = _ref_id(item.get("$ref"))
+            if athlete and athlete not in ids:
+                ids.append(athlete)
+        return ids
+
+    athlete_ids = []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for ids in pool.map(roster, team_ids):
+            for athlete in ids:
+                if athlete not in athlete_ids:
+                    athlete_ids.append(athlete)
+
+    def load(athlete_id: int) -> tuple[int, str]:
+        try:
+            payload = _request_json(CORE_ATHLETE_URL.format(year=year, athlete_id=athlete_id))
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+            return athlete_id, ""
+        if not isinstance(payload, dict):
+            return athlete_id, ""
+        return athlete_id, normalize_name(payload.get("displayName") or payload.get("fullName") or "")
+
+    index: dict[str, list[int]] = {}
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for athlete_id, label in pool.map(load, athlete_ids):
+            if not label:
+                continue
+            bucket = index.setdefault(label, [])
+            if athlete_id not in bucket:
+                bucket.append(athlete_id)
+    _ROSTER_INDEX[year] = index
+    return index
+
+
+def _confirm_ids(candidate_ids: list[int]) -> list[tuple[int, list[dict], dict]]:
+    confirmed = []
+    for espn_id in candidate_ids:
+        try:
+            stints, teams = fetch_wnba_stints(espn_id)
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+            continue
+        if stints:
+            confirmed.append((espn_id, stints, teams))
+    return confirmed
+
+
+def fetch_player(name: str, retries: int = 3, years: list[int] | None = None) -> tuple[int | None, list[dict], dict, str]:
+    """Return espn id, stints, team records, and a status string.
+
+    Search ids are confirmed on the WNBA season feed. When that id is not a
+    WNBA athlete, rosters for a season she already has supply the id.
+    """
     last_error = ""
     for attempt in range(retries):
         try:
-            found = pick_hit(search_hits(_request_json(search_url)), name)
-            if not found:
-                return None, [], {}, "no-match"
-            espn_id = athlete_id(found)
-            if not espn_id:
-                return None, [], {}, "no-id"
-            stints = []
-            teams = {}
-            for kind in (2, 3):
-                stats_url = STATS_URL.format(athlete_id=espn_id) + "?" + urllib.parse.urlencode({"seasontype": kind})
-                parsed, team_records = parse_stints(_request_json(stats_url), kind)
-                stints.extend(parsed)
-                teams.update(team_records)
-            return espn_id, stints, teams, "ok"
+            confirmed = _confirm_ids(_candidate_ids(name))
+            if not confirmed and years:
+                for year in sorted({year for year in years if isinstance(year, int) and year >= 2008}, reverse=True):
+                    try:
+                        index = roster_name_index(year)
+                    except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError):
+                        continue
+                    confirmed = _confirm_ids(index.get(normalize_name(name), []))
+                    if confirmed:
+                        break
+            if len(confirmed) == 1:
+                espn_id, stints, teams = confirmed[0]
+                return espn_id, stints, teams, "ok"
+            if len(confirmed) > 1:
+                return None, [], {}, "ambiguous-match"
+            return None, [], {}, "no-match"
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, ValueError) as exc:
             last_error = str(exc)
             time.sleep(0.4 * (attempt + 1))
@@ -737,6 +944,7 @@ def refresh(root: Path, workers: int = 6) -> dict:
     bdl_teams = teams_doc.get("teams") or []
     profiles = []
     names = {}
+    years_by_id = {}
     for path in sorted((data / "players").glob("*.json")):
         profile = json.loads(path.read_text(encoding="utf-8"))
         player = profile.get("player") or {}
@@ -746,23 +954,32 @@ def refresh(root: Path, workers: int = 6) -> dict:
             continue
         profiles.append((player_id, name))
         names.setdefault(normalize_name(name), []).append(player_id)
+        years = []
+        for row in profile.get("season_stats") or []:
+            if not isinstance(row, dict):
+                continue
+            year = row.get("season")
+            if isinstance(year, int) and not isinstance(year, bool) and year not in years:
+                years.append(year)
+        years_by_id[player_id] = years
     ambiguous = {player_id for ids in names.values() if len(ids) > 1 for player_id in ids}
     existing = load_table(root)
     players = existing.get("players") if isinstance(existing.get("players"), dict) else {}
     historical = existing.get("historical_teams") if isinstance(existing.get("historical_teams"), dict) else {}
     current = existing.get("current_teams") if isinstance(existing.get("current_teams"), dict) else {}
+    playoff_teams = existing.get("playoff_teams") if isinstance(existing.get("playoff_teams"), dict) else None
     pending = []
     for player_id, name in profiles:
         if player_id in ambiguous:
             continue
         status = str((players.get(str(player_id)) or {}).get("status") or "")
-        if not status or status.startswith("error"):
-            pending.append((player_id, name))
+        if needs_refetch(status):
+            pending.append((player_id, name, years_by_id.get(player_id) or []))
     print(f"Season teams: {len(pending)} to fetch, {len(players)} already stored, {len(ambiguous)} ambiguous names skipped.")
 
     def job(item):
-        player_id, name = item
-        espn_id, stints, teams, status = fetch_player(name)
+        player_id, name, years = item
+        espn_id, stints, teams, status = fetch_player(name, years=years)
         return player_id, name, espn_id, drop_copied_playoff_stints(stints), teams, status
 
     done = 0
@@ -785,23 +1002,23 @@ def refresh(root: Path, workers: int = 6) -> dict:
             players[str(player_id)] = stored
             done += 1
             if done % 40 == 0 or done == len(pending):
-                _write(lookup_path(root), _document(players, current, historical, ambiguous, profiles))
+                _write(lookup_path(root), _document(players, current, historical, ambiguous, profiles, playoff_teams))
                 print(f"Season teams stored {done}/{len(pending)}")
     for player_id in ambiguous:
         name = next(label for pid, label in profiles if pid == player_id)
         players[str(player_id)] = {"name": name, "espn_id": None, "status": "ambiguous-name", "stints": []}
-    document = _document(players, current, historical, ambiguous, profiles)
+    document = _document(players, current, historical, ambiguous, profiles, playoff_teams)
     _write(lookup_path(root), document)
     return document
 
 
-def _document(players, current, historical, ambiguous, profiles) -> dict:
+def _document(players, current, historical, ambiguous, profiles, playoff_teams=None) -> dict:
     unmatched = [
         {"id": int(player_id), "name": entry.get("name"), "status": entry.get("status")}
         for player_id, entry in sorted(players.items(), key=lambda item: int(item[0]))
         if entry.get("status") != "ok"
     ]
-    return {
+    document = {
         "source": SOURCE,
         "checked_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "player_count": len(profiles),
@@ -812,6 +1029,9 @@ def _document(players, current, historical, ambiguous, profiles) -> dict:
         "historical_teams": historical,
         "players": players,
     }
+    if isinstance(playoff_teams, dict) and playoff_teams:
+        document["playoff_teams"] = playoff_teams
+    return document
 
 
 def needs_stat_lines(table: dict) -> bool:
@@ -1013,6 +1233,7 @@ def main():
         table = load_table(args.root)
     if args.apply or (missing and not args.refresh):
         apply_snapshot(args.root, table)
+        apply_supplements(args.root, table)
     else:
         print(f"Matched {table.get('matched_count')} players in {lookup_path(args.root)}.")
 

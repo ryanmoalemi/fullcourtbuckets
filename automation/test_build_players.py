@@ -985,6 +985,36 @@ class BuildTests(unittest.TestCase):
             page = b.profile_page(profile, root, menu=[])
             b.require_flagged_season_gap(profile, page, root)
 
+    def test_build_blocks_one_club_on_every_season(self):
+        profile = copy.deepcopy(P)
+        profile['slug'] = 'example-player'
+        profile['active_in_provider_feed'] = False
+        profile['current_team'] = None
+        storm = {'id': 9, 'full_name': 'Seattle Storm', 'abbreviation': 'SEA', 'city': 'Seattle', 'name': 'Storm'}
+        sparks = {'id': 12, 'full_name': 'Los Angeles Sparks', 'abbreviation': 'LA', 'city': 'Los Angeles', 'name': 'Sparks'}
+        profile['season_stats'] = [
+            {'player_id': 1, 'season': 2022, 'season_type': 2, 'team': dict(storm), 'games_played': 34, 'pts': 7.2},
+            {'player_id': 1, 'season': 2026, 'season_type': 2, 'team': dict(storm), 'games_played': 10, 'pts': 3.8},
+        ]
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'data/wnba').mkdir(parents=True)
+            table = {
+                'current_teams': {'seattle-storm': storm, 'los-angeles-sparks': sparks},
+                'players': {'1': {'status': 'ok', 'stints': [
+                    {'season': 2022, 'season_type': 2, 'games_played': 34, 'team_slug': 'los-angeles-sparks'},
+                    {'season': 2026, 'season_type': 2, 'games_played': 10, 'team_slug': 'seattle-storm'},
+                ]}},
+            }
+            (root / 'data/wnba/season-teams.json').write_text(json.dumps(table), encoding='utf-8')
+            b._SEASON_TABLES.clear()
+            check = b.season_cross_check(profile, root)
+            self.assertEqual(check['teams'], [2022])
+            self.assertEqual(check['missing'], [])
+            page = '<html></html>'
+            with self.assertRaises(b.BuildError):
+                b.require_flagged_season_gap(profile, page, root)
+
     def test_abby_bishop_shows_every_seattle_season(self):
         root = ROOT.parent
         profile = json.loads((root / 'data/wnba/players/abby-bishop.json').read_text())
@@ -1070,8 +1100,12 @@ class BuildTests(unittest.TestCase):
                 continue
             profile = json.loads(profile_path.read_text(encoding='utf-8'))
             check = b.season_cross_check(profile, root)
-            if check['missing'] or check['games'] or check['extra']:
+            if check['missing'] or check['games'] or check['extra'] or check['teams']:
                 problems.append(slug)
+            elif check['checked']:
+                conflicts = b.career_summary_team_conflicts(profile, root, check.get('team_years') or {})
+                if conflicts:
+                    problems.append(slug + ' summary ' + ', '.join(conflicts))
             if 'This record is partial.' in page or 'class="partial-record"' in page:
                 problems.append(slug + ' partial')
         self.assertEqual(problems, [])
