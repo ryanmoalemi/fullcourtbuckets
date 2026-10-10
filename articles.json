@@ -30,6 +30,31 @@
     "imageOgHeight": 628
   },
   {
+    "slug": "dream-sweep-liberty-game-3-semifinals",
+    "url": "/news/dream-sweep-liberty-game-3-semifinals/",
+    "title": "Dream sweep the Liberty, 85-83, and head to the WNBA Finals",
+    "description": "The Dream beat the Liberty 85-83 in Brooklyn to sweep the semifinals and reach the WNBA Finals.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-09",
+    "image": "/images/articles/dream-sweep-liberty-game-3-semifinals/jordin-canada-cropped.jpg",
+    "imageAlt": "Jordin Canada of the Atlanta Dream in a white jersey holding a basketball",
+    "imageCredit": "Photo: Lorie Shaull / Wikimedia Commons (CC BY-SA 4.0)",
+    "teams": [
+      "atlanta-dream",
+      "new-york-liberty"
+    ],
+    "imageWidth": 1069,
+    "imageHeight": 1448,
+    "imageSource": "/images/articles/dream-sweep-liberty-game-3-semifinals/jordin-canada-cropped.jpg",
+    "imageFocal": "center 0%",
+    "imageHero": "/images/articles/dream-sweep-liberty-game-3-semifinals/hero-16x9.webp",
+    "imageHeroWidth": 1056,
+    "imageHeroHeight": 594,
+    "imageOg": "/images/articles/dream-sweep-liberty-game-3-semifinals/og.webp",
+    "imageOgWidth": 1068,
+    "imageOgHeight": 559
+  },
+  {
     "slug": "allisha-gray-game-3-status",
     "url": "/news/allisha-gray-game-3-status/",
     "title": "Allisha Gray Is Out for Game 3 as the Dream Go for the Sweep in Brooklyn",
