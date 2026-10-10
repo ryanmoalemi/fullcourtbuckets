@@ -547,6 +547,7 @@ def main():
     args = parser.parse_args()
     try:
         client = Client(os.environ.get("BALLDONTLIE_API_KEY", ""))
+        season_teams.refresh(args.root)
         season_team_table = season_teams.load_table(args.root)
         if season_team_table.get("players"):
             print(f"Per-season teams loaded for {season_team_table.get('matched_count')} players.")
