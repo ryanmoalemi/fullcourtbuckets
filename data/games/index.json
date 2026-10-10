@@ -75,6 +75,25 @@
       "mismatch_count": 0,
       "plays": 438,
       "plays_status": "included"
+    },
+    {
+      "date": "2026-10-09",
+      "path": "data/games/2026-10-09-atl-ny.json",
+      "slug": "2026-10-09-atl-ny",
+      "matchup": "atl-at-ny",
+      "away": "ATL",
+      "home": "NY",
+      "away_score": 85,
+      "home_score": 83,
+      "overtime": false,
+      "status": "in_progress",
+      "source": "balldontlie",
+      "fallback": false,
+      "crosscheck_matched": true,
+      "crosscheck_compared": true,
+      "mismatch_count": 0,
+      "plays": 370,
+      "plays_status": "included"
     }
   ]
 }
