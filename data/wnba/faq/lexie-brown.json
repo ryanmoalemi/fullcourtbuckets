@@ -1,142 +1,225 @@
 {
   "slug": "lexie-brown",
   "player_name": "Lexie Brown",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Lexie Brown's stats / points per game?",
-      "answer": "In the 2026 regular season, Lexie Brown averaged 3.8 points, 1.3 rebounds, and 1.1 assists in 10 games for Seattle Storm. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lexie brown stats",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Who is Lexie Brown dating?",
-      "answer": "As of late 2026, Lexie Brown has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Where has Lexie Brown played in the WNBA?",
+      "answer": "Basketball-Reference lists Lexie Brown with the Connecticut Sun in 2018, the Minnesota Lynx in 2019 and 2020, the Chicago Sky in 2021, the Los Angeles Sparks from 2022 to 2024, and the Seattle Storm in 2025 and 2026. The WNBA says she was the ninth overall pick in the 2018 draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.basketball-reference.com/wnba/players/b/brownle02w.html",
+        "https://www.wnba.com/player/1628882/lexie-brown/bio"
       ],
-      "google_keyword": "lexie brown partner",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Lexie Brown make?",
-      "answer": "A precise public salary or net worth figure for Lexie Brown is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "lexie brown net worth",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "lexie brown wnba",
+          "vol": 2900
+        },
+        {
+          "q": "seattle storm lexie brown",
+          "vol": 70
+        },
+        {
+          "q": "lexie brown sparks",
+          "vol": 30
+        },
+        {
+          "q": "lexie brown team",
+          "vol": 30
+        },
+        {
+          "q": "what team does lexie brown play for",
+          "vol": 30
+        },
+        {
+          "q": "lexie brown seattle",
+          "vol": 20
+        },
+        {
+          "q": "lexie brown chicago sky",
+          "vol": 10
+        },
+        {
+          "q": "lexie brown connecticut sun",
+          "vol": 10
+        },
+        {
+          "q": "los angeles sparks lexie brown",
+          "vol": 10
+        },
+        {
+          "q": "lexie brown la sparks",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Lexie Brown?",
-      "answer": "Lexie Brown is listed at 5' 9\".",
+      "answer": "The WNBA lists Lexie Brown at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.wnba.com/player/1628882/lexie-brown/bio"
       ],
-      "google_keyword": "lexie brown height",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "lexie brown height",
+          "vol": 390
+        },
+        {
+          "q": "lexie brown height weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Lexie Brown?",
-      "answer": "She was born October 27, 1994 in Boston. As of late 2026 that puts her at 31 years old.",
+      "answer": "Lexie Brown was born October 27, 1994, in Boston, Massachusetts.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.wnba.com/player/1628882/lexie-brown/bio",
+        "https://www.basketball-reference.com/wnba/players/b/brownle02w.html"
       ],
-      "google_keyword": "lexie brown age",
-      "approx_monthly_volume": 260,
-      "birthdate": "1994-10-27"
+      "queries": [
+        {
+          "q": "lexie brown age",
+          "vol": 260
+        }
+      ]
     },
     {
-      "question": "What is Lexie Brown's jersey number?",
-      "answer": "Lexie Brown wears number 8 for the Seattle Storm.",
+      "question": "What are Lexie Brown's stats?",
+      "answer": "In the 2026 regular season, Lexie Brown averaged 3.8 points, 1.3 rebounds, and 1.1 assists in 10 games for the Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lexie brown jersey",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://www.wnba.com/player/1628882/lexie-brown/bio",
+        "https://www.basketball-reference.com/wnba/players/b/brownle02w.html"
+      ],
+      "queries": [
+        {
+          "q": "lexie brown stats",
+          "vol": 260
+        },
+        {
+          "q": "lexie brown wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Lexie Brown's contract?",
-      "answer": "Contract length and guarantees for Lexie Brown are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Who is Lexie Brown's father?",
+      "answer": "Andscape reported that Lexie Brown is the daughter of former NBA player Dee Brown.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://andscape.com/features/lexie-brown-makes-inspiring-return-to-los-angeles-sparks-after-crohns-disease-diagnosis/"
       ],
-      "google_keyword": "lexie brown contract",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "lexie brown dad",
+          "vol": 110
+        },
+        {
+          "q": "lexie brown father",
+          "vol": 50
+        },
+        {
+          "q": "lexie brown parents",
+          "vol": 50
+        },
+        {
+          "q": "who is lexie brown dad",
+          "vol": 10
+        },
+        {
+          "q": "lexie brown dee brown",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Lexie Brown married?",
-      "answer": "There is no widely reported public record of Lexie Brown being married as of late 2026.",
+      "question": "Is Lexie Brown still in the WNBA?",
+      "answer": "The Seattle Storm announced on June 8, 2026, that the team waived Lexie Brown. She is not on a WNBA roster.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.oursportscentral.com/services/releases/storm-waives-lexie-brown/n-6372592"
       ],
-      "google_keyword": "lexie brown husband",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "is lexie brown still in the wnba",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What team does Lexie Brown play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. She wears No. 8. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lexie brown team",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Lexie Brown?",
-      "answer": "Alexis Kiah \"Lexie\" Brown is an American professional basketball player who most recently was a member of the Seattle Storm of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
-      ],
-      "google_keyword": "who is lexie brown dad",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Lexie Brown injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "lexie brown injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Lexie Brown's parents?",
-      "answer": "Public profiles share limited verified detail about Lexie Brown's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Does Lexie Brown have Crohn's disease?",
+      "answer": "Andscape reported that Lexie Brown was diagnosed with Crohn's disease in November 2023.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://andscape.com/features/lexie-brown-makes-inspiring-return-to-los-angeles-sparks-after-crohns-disease-diagnosis/"
       ],
-      "google_keyword": "lexie brown dad",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "lexie brown crohn's disease",
+          "vol": 40
+        },
+        {
+          "q": "lexie brown illness",
+          "vol": 30
+        },
+        {
+          "q": "lexie brown crohn's",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What college did Lexie Brown attend?",
-      "answer": "Brown played college basketball at Duke.",
+      "question": "Where did Lexie Brown play college basketball?",
+      "answer": "Basketball-Reference lists Lexie Brown at Maryland and Duke. The WNBA lists Duke.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.basketball-reference.com/wnba/players/b/brownle02w.html",
+        "https://www.wnba.com/player/1628882/lexie-brown/bio"
       ],
-      "google_keyword": "lexie brown duke",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "lexie brown duke",
+          "vol": 30
+        },
+        {
+          "q": "lexie brown education",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Does Lexie Brown have kids?",
-      "answer": "There is no widely reported public information that Lexie Brown has children as of late 2026.",
+      "question": "How much does Lexie Brown weigh?",
+      "answer": "The WNBA lists Lexie Brown at 162 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628882/lexie-brown/bio"
+      ],
+      "queries": [
+        {
+          "q": "lexie brown weight",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Lexie Brown won a WNBA championship?",
+      "answer": "The WNBA lists a 2021 championship for Lexie Brown. Basketball-Reference lists her 2021 season with the Chicago Sky.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexie_Brown"
+        "https://www.wnba.com/player/1628882/lexie-brown/bio",
+        "https://www.basketball-reference.com/wnba/players/b/brownle02w.html"
       ],
-      "google_keyword": "lexie brown klay thompson",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "lexie brown wnba champion",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

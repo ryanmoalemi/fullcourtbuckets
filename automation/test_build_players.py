@@ -342,6 +342,12 @@ class BuildTests(unittest.TestCase):
         continuous['season_stats'] = [{**base, 'season': year} for year in range(2018, 2027)]
         self.assertIn('Seasons on record: 2018 to 2026.', b.player_description(continuous))
         self.assertIn('from 2018 to 2026', b.years_faq_answer(continuous, 'Example Player'))
+        retired = copy.deepcopy(continuous)
+        retired['active_in_provider_feed'] = False
+        self.assertEqual(
+            b.years_faq_answer(retired, 'Example Player'),
+            'Example Player played 9 regular seasons, from 2018 to 2026.',
+        )
         inactive = copy.deepcopy(gapped)
         inactive['active_in_provider_feed'] = False
         inactive['current_team'] = None
@@ -493,23 +499,29 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 36)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 46)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
             'becky-hammon', 'chelsea-gray', 'gabby-williams', 'jackie-young', 'liz-cambage',
             'diana-taurasi', 'marina-mabrey', 'sonia-citron', 'chennedy-carter', 'dewanna-bonner',
         }
+        october_10 = {
+            'gabriela-jaquez', 'lexie-brown', 'maya-moore', 'raven-johnson', 'allisha-gray',
+            'arike-ogunbowale', 'kamilla-cardoso', 'kayla-mcbride', 'kiki-rice', 'nneka-ogwumike',
+        }
         self.assertTrue(october_9 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_10 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            expected_source = (
-                'Google search demand via OpenSEO, Oct 9, 2026'
-                if slug in october_9
-                else 'Google search demand via OpenSEO, Oct 8, 2026'
-            )
+            if slug in october_10:
+                expected_source = 'Google search demand via OpenSEO, Oct 10, 2026'
+            elif slug in october_9:
+                expected_source = 'Google search demand via OpenSEO, Oct 9, 2026'
+            else:
+                expected_source = 'Google search demand via OpenSEO, Oct 8, 2026'
             self.assertEqual(faq['source'], expected_source)
             self.assertGreaterEqual(len(faq['items']), 10, slug)
             self.assertLessEqual(len(faq['items']), 15, slug)

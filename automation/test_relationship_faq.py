@@ -143,8 +143,13 @@ class RelationshipFaqTests(unittest.TestCase):
     def test_allisha_gray_page_says_engaged_not_married(self):
         profile = json.loads((ROOT / 'data' / 'wnba' / 'players' / 'allisha-gray.json').read_text(encoding='utf-8'))
         html_text, entity = build_players.faq_section(profile, ROOT)
-        self.assertEqual(html_text, '')
-        self.assertIsNone(entity)
+        answers = {node['name']: node['acceptedAnswer']['text'] for node in entity['mainEntity']}
+        married = answers['Is Allisha Gray married?']
+        self.assertIn('announced their engagement on March 29, 2025', married)
+        self.assertIn('Tim Mangum Jr.', married)
+        self.assertNotIn('is married', married.casefold())
+        self.assertNotIn(ALLISHA_DATING, html_text)
+        self.assertNotIn(ALLISHA_MARRIED, html_text)
         self.assertEqual(
             build_players.answer_related_query(profile, 'Who is Allisha Gray dating?', ROOT),
             'Allisha Gray is engaged to Tim Mangum Jr.',

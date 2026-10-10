@@ -42,8 +42,8 @@ def answer_problems(slug: str, answer: str, profile, root: Path) -> list[str]:
 
 class FaqClaimTests(unittest.TestCase):
     def test_rounding_matches_the_season_table(self):
-        # Published tables use Python's half-even formatting. Half-up would rewrite
-        # .x5 cells on pages that are not part of this FAQ change.
+        # 9.05 prints as 9.1. That is half-up of the two-place figure, not half-even.
+        # These checks lock the published one-decimal format.
         self.assertEqual(players.value(8.25), '8.2')
         self.assertEqual(players.value(12.05), '12.1')
         gray = json.loads((ROOT / 'data/wnba/players/chelsea-gray.json').read_text(encoding='utf-8'))

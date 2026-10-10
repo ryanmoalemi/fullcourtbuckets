@@ -1,150 +1,208 @@
 {
   "slug": "raven-johnson",
   "player_name": "Raven Johnson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Raven Johnson's stats / points per game?",
-      "answer": "In the 2026 regular season, Raven Johnson averaged 3.1 points, 1.7 rebounds, and 1.1 assists in 37 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "Does Raven Johnson have a twin brother?",
+      "answer": "Town & Country reported that Raven Johnson has a twin brother, Richard, and that their grandparents, Rodrick and Connie Boone, helped raise her. Rodrick introduced the twins to basketball. The same account names her mother as Shekia Johnson.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.townandcountrymag.com/leisure/sporting/a70908413/raven-johnson-family-mother-brother-grandfather/"
+      ],
+      "queries": [
+        {
+          "q": "raven johnson twin brother",
+          "vol": 1000
+        },
+        {
+          "q": "raven johnson parents",
+          "vol": 260
+        },
+        {
+          "q": "raven johnson twin brother richard",
+          "vol": 210
+        },
+        {
+          "q": "raven johnson mom",
+          "vol": 140
+        },
+        {
+          "q": "raven johnson brother",
+          "vol": 140
+        },
+        {
+          "q": "raven johnson twin",
+          "vol": 110
+        },
+        {
+          "q": "raven johnson family",
+          "vol": 50
+        },
+        {
+          "q": "raven johnson mother",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What are Raven Johnson's stats?",
+      "answer": "In the 2026 regular season, Raven Johnson averaged 3.1 points, 1.7 rebounds, and 1.2 assists in 39 games for the Indiana Fever.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raven johnson stats",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "Who is Raven Johnson dating?",
-      "answer": "As of late 2026, Raven Johnson has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
       ],
-      "google_keyword": "raven johnson boyfriend",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "raven johnson stats",
+          "vol": 1000
+        }
+      ]
     },
     {
-      "question": "How much does Raven Johnson make?",
-      "answer": "A precise public salary or net worth figure for Raven Johnson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "raven johnson net worth",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How tall is Raven Johnson?",
-      "answer": "Raven Johnson is listed at 5' 8\".",
+      "question": "Where did Raven Johnson play college basketball?",
+      "answer": "Raven Johnson played college basketball at South Carolina.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
       ],
-      "google_keyword": "raven johnson height",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What did Raven Johnson score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Raven Johnson had 6.0 points, 4.0 rebounds, and 0 assists in a 77-93 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "why is raven johnson not playing tonight",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Raven Johnson's jersey number?",
-      "answer": "Raven Johnson wears number 3 for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raven johnson fever jersey",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What is Raven Johnson's contract?",
-      "answer": "Contract length and guarantees for Raven Johnson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "raven johnson contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Raven Johnson married?",
-      "answer": "There is no widely reported public record of Raven Johnson being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
-      ],
-      "google_keyword": "is raven johnson married",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "raven johnson south carolina",
+          "vol": 1000
+        }
+      ]
     },
     {
       "question": "What team does Raven Johnson play for?",
-      "answer": "Her most recent WNBA team on record is the Indiana Fever. She wears No. 3. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "did raven johnson play for lsu",
-      "approx_monthly_volume": 30
+      "answer": "Raven Johnson plays guard for the Indiana Fever.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
+      ],
+      "queries": [
+        {
+          "q": "raven johnson wnba",
+          "vol": 720
+        },
+        {
+          "q": "raven johnson fever",
+          "vol": 210
+        },
+        {
+          "q": "is raven johnson going to the wnba",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "What college did Raven Johnson attend?",
-      "answer": "Johnson played college basketball at the South Carolina Gamecocks of the Southeastern Conference (SEC).",
+      "question": "How tall is Raven Johnson?",
+      "answer": "Basketball-Reference lists Raven Johnson at 5 feet 8 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
       ],
-      "google_keyword": "raven johnson south carolina",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "raven johnson height",
+          "vol": 590
+        },
+        {
+          "q": "how tall is raven johnson",
+          "vol": 480
+        },
+        {
+          "q": "raven johnson height and weight",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Who is Raven Johnson?",
-      "answer": "Raven Johnson is an American professional basketball player for the Indiana Fever of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "When was Raven Johnson drafted?",
+      "answer": "Basketball-Reference lists the Indiana Fever as selecting Raven Johnson 10th overall in the 2026 WNBA draft.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
       ],
-      "google_keyword": "who is raven johnson",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Is Raven Johnson injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "raven johnson injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who are Raven Johnson's parents?",
-      "answer": "Public profiles share limited verified detail about Raven Johnson's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
-      ],
-      "google_keyword": "raven johnson parents",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Does Raven Johnson have kids?",
-      "answer": "There is no widely reported public information that Raven Johnson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
-      ],
-      "google_keyword": "raven johnson",
-      "approx_monthly_volume": 49500
+      "queries": [
+        {
+          "q": "raven johnson wnba draft",
+          "vol": 590
+        },
+        {
+          "q": "raven johnson draft",
+          "vol": 210
+        },
+        {
+          "q": "did raven johnson get drafted",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "How old is Raven Johnson?",
-      "answer": "Raven Johnson was born March 4, 2003. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Raven Johnson was born March 4, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raven_Johnson"
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
       ],
-      "google_keyword": "raven johnson age",
-      "approx_monthly_volume": 480,
-      "birthdate": "2003-03-04"
+      "queries": [
+        {
+          "q": "raven johnson age",
+          "vol": 480
+        },
+        {
+          "q": "how old is raven johnson",
+          "vol": 140
+        },
+        {
+          "q": "raven johnson birthday",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where is Raven Johnson from?",
+      "answer": "Basketball-Reference lists Raven Johnson's birthplace as Atlanta, Georgia, and her high school as Westlake.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
+      ],
+      "queries": [
+        {
+          "q": "where is raven johnson from",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "Who is Raven Johnson?",
+      "answer": "Raven Johnson is a guard for the Indiana Fever and a South Carolina alum. Basketball-Reference lists her as the 10th overall pick in the 2026 WNBA draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
+      ],
+      "queries": [
+        {
+          "q": "who is raven johnson",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "How much does Raven Johnson weigh?",
+      "answer": "Basketball-Reference lists Raven Johnson at 167 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/j/johnsra04w.html"
+      ],
+      "queries": [
+        {
+          "q": "raven johnson weight",
+          "vol": 70
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
