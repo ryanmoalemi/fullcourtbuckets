@@ -428,7 +428,8 @@ class BuildTests(unittest.TestCase):
         self.assertEqual(b.answer_related_query(profile, "Does A'ja Wilson have kids?", root), '')
         self.assertEqual(b.answer_related_query(profile, "What is A'ja Wilson's nationality?", root), '')
         fiba = b.answer_related_query(profile, "Where can I read about A'ja Wilson and the 2026 FIBA World Cup?", root)
-        self.assertIn('<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>', fiba)
+        self.assertIn('<a href="/news/fiba-womens-basketball-world-cup-2026/">Team USA at the 2026 Women\'s World Cup</a>', fiba)
+        self.assertNotIn('on the Team USA roster', fiba)
         self.assertNotIn('balldontlie', fiba.casefold())
         self.assertIsNone(b._NOT_WIDELY_RE.search(fiba))
     def test_aja_wilson_curated_faq_file(self):
