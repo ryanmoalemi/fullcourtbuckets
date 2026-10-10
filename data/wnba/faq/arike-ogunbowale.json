@@ -1,171 +1,227 @@
 {
   "slug": "arike-ogunbowale",
   "player_name": "Arike Ogunbowale",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Arike Ogunbowale's stats / points per game?",
-      "answer": "In the 2026 regular season, Arike Ogunbowale averaged 15.1 points, 3.0 rebounds, and 3.2 assists in 43 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Arike Ogunbowale's stats?",
+      "answer": "In the 2026 regular season, Arike Ogunbowale averaged 15.3 points, 3.0 rebounds, and 3.3 assists in 44 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "arike ogunbowale stats",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "What is Arike Ogunbowale's contract?",
-      "answer": "Public salary trackers list Arike Ogunbowale at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"
       ],
-      "google_keyword": "arike ogunbowale contract",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How much does Arike Ogunbowale make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Arike Ogunbowale's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "arike ogunbowale salary",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How tall is Arike Ogunbowale?",
-      "answer": "Arike Ogunbowale is listed at 5' 8\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "arike ogunbowale height",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How old is Arike Ogunbowale?",
-      "answer": "She was born March 2, 1997 in Milwaukee, Wisconsin, U.S. As of late 2026 that puts her at 29 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "arike ogunbowale age",
-      "approx_monthly_volume": 140,
-      "birthdate": "1997-03-02"
-    },
-    {
-      "question": "What did Arike Ogunbowale score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 at the Phoenix Mercury), Arike Ogunbowale had 7 points, 1 rebounds, and 2 assists in a 86-87 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is arike ogunbowale playing tonight",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Where is Arike Ogunbowale from?",
-      "answer": "She is from Milwaukee, Wisconsin, U.S., and played college basketball at Notre Dame.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "where is arike ogunbowale from",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What position does Arike Ogunbowale play?",
-      "answer": "Arike Ogunbowale is listed as a guard for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "arike ogunbowale position",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What team does Arike Ogunbowale play for?",
-      "answer": "She plays for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "arike ogunbowale team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Arike Ogunbowale?",
-      "answer": "Arike Faulina “Goomba” Ogunbowale is a Nigerian-American professional basketball player for the Dallas Wings of the Women's National Basketball Association (WNBA) and for the Mist of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "who is arike ogunbowale",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Arike Ogunbowale's college stats?",
-      "answer": "Across her college career at Notre Dame, Arike Ogunbowale averaged 17.6 points, 4.6 rebounds, and 2.4 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/arike-ogunbowale-1.html",
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "arike ogunbowale college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Arike Ogunbowale attend?",
-      "answer": "Arike Ogunbowale played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "arike ogunbowale notre dame",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "When was Arike Ogunbowale drafted?",
-      "answer": "She played college basketball for the Notre Dame Fighting Irish, before being drafted by the Wings with the fifth overall pick of the 2019 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
-      ],
-      "google_keyword": "arike ogunbowale draft",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Arike Ogunbowale dating?",
-      "answer": "Arike Ogunbowale is married to Lala Ronay.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.them.us/story/wnba-star-arike-ogunbowale-miami-wedding-lala-ronay"
-      ],
-      "google_keyword": "arike ogunbowale girlfriend",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "arike ogunbowale stats",
+          "vol": 9900
+        },
+        {
+          "q": "arike ogunbowale average points per game",
+          "vol": 50
+        },
+        {
+          "q": "arike ogunbowale points per game",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "Is Arike Ogunbowale married?",
-      "answer": "Yes. Arike Ogunbowale is married to Lala Ronay. They married on February 24, 2026, in Miami.",
+      "answer": "Yes. Them reported that Arike Ogunbowale married Lala Ronay on February 24, 2026, in Miami.",
       "answer_kind": "researched",
       "sources": [
         "https://www.them.us/story/wnba-star-arike-ogunbowale-miami-wedding-lala-ronay"
       ],
-      "google_keyword": "arike ogunbowale wife",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "arike ogunbowale wife",
+          "vol": 1900
+        },
+        {
+          "q": "arike ogunbowale husband",
+          "vol": 480
+        },
+        {
+          "q": "arike ogunbowale married",
+          "vol": 90
+        },
+        {
+          "q": "arike ogunbowale girlfriend",
+          "vol": 70
+        },
+        {
+          "q": "arike ogunbowale partner",
+          "vol": 70
+        },
+        {
+          "q": "is arike ogunbowale married",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Is Arike Ogunbowale injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "arike ogunbowale injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Does Arike Ogunbowale have a signature shoe?",
-      "answer": "Public search interest ties Arike Ogunbowale to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "Does Arike Ogunbowale have a brother?",
+      "answer": "Milwaukee Magazine reported that Arike Ogunbowale's brothers are Dare (Oluwadare), Mario, and Darasimi, and that she grew up as the only girl among three brothers. Dare played football at Wisconsin and has played in the NFL.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Arike_Ogunbowale"
+        "https://www.milwaukeemag.com/dare-arike-ogunbowale-milwaukee-siblings/"
       ],
-      "google_keyword": "arike ogunbowale shoes",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "arike ogunbowale brother",
+          "vol": 260
+        },
+        {
+          "q": "arike ogunbowale sister",
+          "vol": 110
+        },
+        {
+          "q": "arike ogunbowale brother nfl",
+          "vol": 30
+        },
+        {
+          "q": "does arike ogunbowale have a brother",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Arike Ogunbowale?",
+      "answer": "The WNBA lists Arike Ogunbowale at 5 feet 8 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale height",
+          "vol": 170
+        },
+        {
+          "q": "how tall is arike ogunbowale",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "How old is Arike Ogunbowale?",
+      "answer": "Arike Ogunbowale was born March 2, 1997.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale age",
+          "vol": 140
+        },
+        {
+          "q": "how old is arike ogunbowale",
+          "vol": 50
+        },
+        {
+          "q": "arike ogunbowale birthday",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where is Arike Ogunbowale from?",
+      "answer": "Milwaukee Magazine reported that Arike Ogunbowale grew up in Milwaukee and played at Divine Savior Holy Angels High School.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.milwaukeemag.com/dare-arike-ogunbowale-milwaukee-siblings/"
+      ],
+      "queries": [
+        {
+          "q": "where is arike ogunbowale from",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where did Arike Ogunbowale play college basketball?",
+      "answer": "Arike Ogunbowale played at Notre Dame from 2015 to 2019. The WNBA lists her as the 2018 NCAA champion and the 2018 tournament Most Outstanding Player. Milwaukee Magazine reported that she hit the winning shots in the 2018 national semifinal and championship game.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio",
+        "https://www.milwaukeemag.com/dare-arike-ogunbowale-milwaukee-siblings/"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale notre dame",
+          "vol": 50
+        },
+        {
+          "q": "arike ogunbowale game winner",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Did Arike Ogunbowale compete on Dancing with the Stars?",
+      "answer": "Gleb Savchenko's profile says he and Arike Ogunbowale were partners on season 26 of Dancing with the Stars. They were eliminated in week 2 and tied for seventh.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Gleb_Savchenko"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale dwts",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Has Arike Ogunbowale played in Unrivaled?",
+      "answer": "The WNBA lists Arike Ogunbowale with Vinyl BC in 2025 and Mist BC in 2026, and as a 2026 Unrivaled champion.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale unrivaled",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Who are Arike Ogunbowale's parents?",
+      "answer": "Milwaukee Magazine reported that Arike Ogunbowale's parents are Yolanda and Gregory. Yolanda played softball at DePaul, and Gregory is a former principal.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.milwaukeemag.com/dare-arike-ogunbowale-milwaukee-siblings/"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale parents",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What position does Arike Ogunbowale play?",
+      "answer": "Arike Ogunbowale plays guard for the Dallas Wings and wears No. 24. The WNBA lists her as the fifth overall pick in the 2019 draft. The regular-season table lists the Dallas Wings for Arike Ogunbowale.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"
+      ],
+      "queries": [
+        {
+          "q": "arike ogunbowale position",
+          "vol": 40
+        },
+        {
+          "q": "arike ogunbowale draft",
+          "vol": 30
+        },
+        {
+          "q": "arike ogunbowale team",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

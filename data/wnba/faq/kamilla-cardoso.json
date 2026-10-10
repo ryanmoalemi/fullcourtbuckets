@@ -1,152 +1,185 @@
 {
   "slug": "kamilla-cardoso",
   "player_name": "Kamilla Cardoso",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Kamilla Cardoso's stats / points per game?",
-      "answer": "In the 2026 regular season, Kamilla Cardoso averaged 14.6 points, 8.6 rebounds, and 2.4 assists in 41 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Kamilla Cardoso's stats?",
+      "answer": "In the 2026 regular season, Kamilla Cardoso averaged 14.7 points, 8.6 rebounds, and 2.5 assists in 43 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kamilla cardoso stats",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "Does Kamilla Cardoso have a signature shoe?",
-      "answer": "Public search interest ties Kamilla Cardoso to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
+        "https://www.wnba.com/player/1642289/kamilla-cardoso"
       ],
-      "google_keyword": "kamilla cardoso shoes",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Kamilla Cardoso dating?",
-      "answer": "As of late 2026, Kamilla Cardoso has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
-      ],
-      "google_keyword": "kamilla cardoso boyfriend",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Kamilla Cardoso make?",
-      "answer": "A precise public salary or net worth figure for Kamilla Cardoso is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kamilla cardoso net worth",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "kamilla cardoso stats",
+          "vol": 9900
+        },
+        {
+          "q": "kamilla cardoso points per game",
+          "vol": 50
+        },
+        {
+          "q": "kamilla cardoso rebounds per game",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is Kamilla Cardoso?",
-      "answer": "Kamilla Cardoso is listed at 6' 7\".",
+      "answer": "The WNBA lists Kamilla Cardoso at 6 feet 7 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
+        "https://www.wnba.com/player/1642289/kamilla-cardoso",
+        "https://www.wnba.com/draft/2024/prospects/183200/kamilla-cardoso"
       ],
-      "google_keyword": "kamilla cardoso height",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "How old is Kamilla Cardoso?",
-      "answer": "She was born April 30, 2001 in Montes Claros. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
-      ],
-      "google_keyword": "kamilla cardoso age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2001-04-30"
-    },
-    {
-      "question": "What did Kamilla Cardoso score in her last game?",
-      "answer": "In her most recent completed game (September 19, 2026 vs. the Atlanta Dream), Kamilla Cardoso had 11.0 points, 6.0 rebounds, and 2.0 assists in a 81-106 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kamilla cardoso playing today",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Kamilla Cardoso's contract?",
-      "answer": "Contract length and guarantees for Kamilla Cardoso are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kamilla cardoso contract",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Is Kamilla Cardoso married?",
-      "answer": "There is no widely reported public record of Kamilla Cardoso being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
-      ],
-      "google_keyword": "kamilla cardoso husband",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "What team does Kamilla Cardoso play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 10. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does kamilla cardoso play for",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Where is Kamilla Cardoso from?",
-      "answer": "She is from Montes Claros.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
-      ],
-      "google_keyword": "where is kamilla cardoso from",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What college did Kamilla Cardoso attend?",
-      "answer": "Cardoso played college basketball at Syracuse University.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
-      ],
-      "google_keyword": "kamilla cardoso south carolina",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Kamilla Cardoso injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kamilla cardoso injury",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "kamilla cardoso height",
+          "vol": 1900
+        },
+        {
+          "q": "how tall is kamilla cardoso",
+          "vol": 320
+        },
+        {
+          "q": "kamilla cardoso height and weight",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "Who are Kamilla Cardoso's parents?",
-      "answer": "Public profiles share limited verified detail about Kamilla Cardoso's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "The Associated Press reported that Kamilla Cardoso's mother is Janete Soares and her older sister is Jessica Silva. They came from Brazil for her South Carolina Senior Day in March 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
+        "https://apnews.com/article/kamilla-cardoso-south-carolina-family-48a9395128c9632e994fa2f0ef33f881"
       ],
-      "google_keyword": "kamilla cardoso parents",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "kamilla cardoso parents",
+          "vol": 260
+        },
+        {
+          "q": "kamilla cardoso mother",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "When was Kamilla Cardoso drafted?",
-      "answer": "Cardoso was selected third overall in the 2024 WNBA draft by the Chicago Sky.",
-      "answer_kind": "researched",
+      "question": "How much does Kamilla Cardoso weigh?",
+      "answer": "The WNBA lists Kamilla Cardoso at 215 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kamilla_Cardoso"
+        "https://www.wnba.com/player/1642289/kamilla-cardoso"
       ],
-      "google_keyword": "kamilla cardoso draft",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kamilla cardoso weight",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "What team does Kamilla Cardoso play for?",
+      "answer": "Kamilla Cardoso plays center for the Chicago Sky and wears No. 10. The regular-season table lists the Chicago Sky for Kamilla Cardoso.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/1642289/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "kamilla cardoso wnba",
+          "vol": 210
+        },
+        {
+          "q": "kamilla cardoso sky",
+          "vol": 50
+        },
+        {
+          "q": "who does kamilla cardoso play for",
+          "vol": 40
+        },
+        {
+          "q": "kamilla cardoso team",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How old is Kamilla Cardoso?",
+      "answer": "Kamilla Cardoso was born April 30, 2001.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/183200/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "kamilla cardoso age",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "How many games did Kamilla Cardoso play in 2026?",
+      "answer": "Kamilla Cardoso played 43 games in the 2026 regular season for the Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1642289/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "kamilla cardoso game log",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Where did Kamilla Cardoso play college basketball?",
+      "answer": "Kamilla Cardoso played at Syracuse in the 2020-21 season, then at South Carolina. The WNBA lists her as an NCAA champion in 2022 and 2024.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/183200/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "kamilla cardoso south carolina",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where is Kamilla Cardoso from?",
+      "answer": "The WNBA lists Kamilla Cardoso's birthplace as Montes Claros, Brazil, and her country as Brazil. Her high school was Hamilton Heights Christian in Chattanooga.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/183200/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "where is kamilla cardoso from",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where was Kamilla Cardoso drafted?",
+      "answer": "The WNBA lists Kamilla Cardoso as the third overall pick in the 2024 draft, selected by the Chicago Sky.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/183200/kamilla-cardoso"
+      ],
+      "queries": [
+        {
+          "q": "kamilla cardoso wnba draft",
+          "vol": 40
+        },
+        {
+          "q": "kamilla cardoso draft pick",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,138 +1,273 @@
 {
   "slug": "maya-moore",
   "player_name": "Maya Moore",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Maya Moore's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2018), Maya Moore averaged 18.0 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maya moore stats",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "Does Maya Moore have a signature shoe?",
-      "answer": "Maya Moore has a public association with Jordan footwear or apparel. A dedicated signature sneaker is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
-      ],
-      "google_keyword": "maya moore jordan",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How much does Maya Moore make?",
-      "answer": "A precise public salary or net worth figure for Maya Moore is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "maya moore net worth",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "How old is Maya Moore?",
-      "answer": "She was born June 11, 1989 in Jefferson City. As of late 2026 that puts her at 37 years old.",
+      "question": "What team did Maya Moore play for?",
+      "answer": "Maya Moore played forward for the Minnesota Lynx. The WNBA says the Lynx selected her first overall in the 2011 draft. Her last WNBA season was 2018, and she is not on a current roster.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.wnba.com/player/202632/maya-moore/bio"
       ],
-      "google_keyword": "maya moore age",
-      "approx_monthly_volume": 260,
-      "birthdate": "1989-06-11"
+      "queries": [
+        {
+          "q": "maya moore lynx",
+          "vol": 49500
+        },
+        {
+          "q": "maya moore wnba",
+          "vol": 720
+        },
+        {
+          "q": "minnesota lynx maya moore",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Is Maya Moore married?",
-      "answer": "There is no widely reported public record of Maya Moore being married as of late 2026.",
+      "answer": "Maya Moore is married to Jonathan Irons. Good Morning America reported that they wed in 2020 and that their son, Jonathan Hughston Irons Jr., was born in February 2022.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.goodmorningamerica.com/culture/story/wnba-star-maya-moore-baby-now-husband-helped-86230515"
       ],
-      "google_keyword": "maya moore husband",
-      "approx_monthly_volume": 2400
+      "queries": [
+        {
+          "q": "maya moore husband",
+          "vol": 2400
+        },
+        {
+          "q": "is maya moore still married",
+          "vol": 140
+        },
+        {
+          "q": "maya moore daughter",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Where is Maya Moore from?",
-      "answer": "She is from Jefferson City.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
-      ],
-      "google_keyword": "where is maya moore from",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How many MVPs does Maya Moore have?",
-      "answer": "MVP and major individual award history for Maya Moore is summarized in major biographical profiles when she earned those honors.",
+      "question": "How many WNBA championships does Maya Moore have?",
+      "answer": "The WNBA lists four championships for Maya Moore, in 2011, 2013, 2015, and 2017, and the 2013 Finals MVP. The Naismith Memorial Basketball Hall of Fame also lists two NCAA titles and two Olympic gold medals.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.wnba.com/player/202632/maya-moore/bio",
+        "https://www.hoophall.com/hall-of-famers/maya-moore"
       ],
-      "google_keyword": "maya moore mvp",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "maya moore rings",
+          "vol": 1900
+        },
+        {
+          "q": "maya moore championships",
+          "vol": 880
+        },
+        {
+          "q": "how many rings does maya moore have",
+          "vol": 390
+        },
+        {
+          "q": "maya moore championship rings",
+          "vol": 260
+        },
+        {
+          "q": "maya moore 12 rings",
+          "vol": 210
+        },
+        {
+          "q": "how many championships does maya moore have",
+          "vol": 210
+        },
+        {
+          "q": "maya moore wnba championships",
+          "vol": 170
+        },
+        {
+          "q": "maya moore how many rings",
+          "vol": 110
+        },
+        {
+          "q": "how many wnba championships does maya moore have",
+          "vol": 70
+        },
+        {
+          "q": "maya moore wnba rings",
+          "vol": 70
+        },
+        {
+          "q": "how many rings maya moore have",
+          "vol": 70
+        },
+        {
+          "q": "how many championships did maya moore win",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "How many championships does Maya Moore have?",
-      "answer": "Public biographical sources cover Maya Moore's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
+      "question": "What are Maya Moore's stats?",
+      "answer": "In the 2018 regular season, Maya Moore averaged 18.0 points, 5.1 rebounds, and 2.6 assists in 34 games for the Minnesota Lynx.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.wnba.com/player/202632/maya-moore/bio"
       ],
-      "google_keyword": "maya moore rings",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "What college did Maya Moore attend?",
-      "answer": "Moore played college basketball at University of Connecticut.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
-      ],
-      "google_keyword": "maya moore uconn",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "maya moore stats",
+          "vol": 1300
+        },
+        {
+          "q": "maya moore stats wnba",
+          "vol": 90
+        },
+        {
+          "q": "maya moore career stats",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Who is Maya Moore?",
-      "answer": "Maya April Moore is an American social justice advocate and former professional basketball player.",
-      "answer_kind": "mixed",
+      "answer": "Maya Moore is a forward who played for the Minnesota Lynx. The WNBA lists her as the 2014 Most Valuable Player and the 2011 Rookie of the Year.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.wnba.com/player/202632/maya-moore/bio"
       ],
-      "google_keyword": "who is maya moore",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "who is maya moore",
+          "vol": 720
+        },
+        {
+          "q": "maya moore accolades",
+          "vol": 320
+        },
+        {
+          "q": "maya moore mvp",
+          "vol": 110
+        },
+        {
+          "q": "maya moore mvps",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Does Maya Moore have kids?",
-      "answer": "There is no widely reported public information that Maya Moore has children as of late 2026.",
-      "answer_kind": "researched",
+      "question": "Where did Maya Moore play college basketball?",
+      "answer": "Maya Moore played at UConn. The Naismith Memorial Basketball Hall of Fame lists two undefeated NCAA title seasons there.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.hoophall.com/hall-of-famers/maya-moore",
+        "https://www.wnba.com/player/202632/maya-moore/bio"
       ],
-      "google_keyword": "maya moore daughter",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Did Maya Moore retire?",
-      "answer": "As of late 2026, Maya Moore is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
-      ],
-      "google_keyword": "why did maya moore retire",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "maya moore uconn",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "How tall is Maya Moore?",
-      "answer": "Maya Moore is listed at 6' 0\".",
+      "answer": "The WNBA lists Maya Moore at 6 feet 0 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Moore"
+        "https://www.wnba.com/player/202632/maya-moore/bio"
       ],
-      "google_keyword": "maya moore height",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "maya moore height",
+          "vol": 390
+        },
+        {
+          "q": "how tall is maya moore",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What is Maya Moore doing now?",
+      "answer": "Maya Moore's last WNBA season was 2018. She is not on a current roster. The Naismith Memorial Basketball Hall of Fame enshrined her in 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/202632/maya-moore/bio",
+        "https://www.hoophall.com/hall-of-famers/maya-moore"
+      ],
+      "queries": [
+        {
+          "q": "maya moore now",
+          "vol": 260
+        },
+        {
+          "q": "maya moore hall of fame",
+          "vol": 140
+        },
+        {
+          "q": "maya moore retired",
+          "vol": 110
+        },
+        {
+          "q": "what is maya moore doing now",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "How old is Maya Moore?",
+      "answer": "Maya Moore was born June 11, 1989.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202632/maya-moore/bio"
+      ],
+      "queries": [
+        {
+          "q": "maya moore age",
+          "vol": 260
+        },
+        {
+          "q": "how old is maya moore",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "How many years did Maya Moore play in the WNBA?",
+      "answer": "Maya Moore has 8 regular seasons, from 2011 to 2018.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/202632/maya-moore/bio"
+      ],
+      "queries": [
+        {
+          "q": "how many years did maya moore play in the wnba",
+          "vol": 110
+        },
+        {
+          "q": "how long did maya moore play in the wnba",
+          "vol": 70
+        },
+        {
+          "q": "maya moore wnba career",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where is Maya Moore from?",
+      "answer": "The WNBA says Maya Moore was born June 11, 1989, in Jefferson City, Missouri. She is the daughter of Kathryn Moore.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202632/maya-moore/bio"
+      ],
+      "queries": [
+        {
+          "q": "where is maya moore from",
+          "vol": 70
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

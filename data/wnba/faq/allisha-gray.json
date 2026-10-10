@@ -1,122 +1,262 @@
 {
   "slug": "allisha-gray",
   "player_name": "Allisha Gray",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Allisha Gray's stats / points per game?",
-      "answer": "In the 2026 regular season, Allisha Gray averaged 18.9 points, 3.4 rebounds, and 2.6 assists in 43 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Allisha Gray's stats?",
+      "answer": "In the 2026 regular season, Allisha Gray averaged 19.0 points, 3.5 rebounds, and 2.6 assists in 44 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "allisha gray stats",
-      "approx_monthly_volume": 8100
-    },
-    {
-      "question": "How much does Allisha Gray make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Allisha Gray's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
       ],
-      "google_keyword": "allisha gray net worth",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How old is Allisha Gray?",
-      "answer": "She was born January 12, 1995 in Greenwood, South Carolina, U.S. As of late 2026 that puts her at 31 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allisha_Gray"
-      ],
-      "google_keyword": "allisha gray age",
-      "approx_monthly_volume": 260,
-      "birthdate": "1995-01-12"
-    },
-    {
-      "question": "How tall is Allisha Gray?",
-      "answer": "Allisha Gray is listed at 6' 0\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allisha_Gray"
-      ],
-      "google_keyword": "allisha gray height",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What did Allisha Gray score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 at the New York Liberty), Allisha Gray had 14 points, 3 rebounds, and 1 assists in a 95-84 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is allisha gray playing tonight",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Allisha Gray's contract?",
-      "answer": "Public salary trackers list Allisha Gray at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "allisha gray contract",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Where is Allisha Gray from?",
-      "answer": "She is from Greenwood, South Carolina, U.S., and played college basketball at North Carolina.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allisha_Gray"
-      ],
-      "google_keyword": "where is allisha gray from",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "allisha gray stats",
+          "vol": 8100
+        },
+        {
+          "q": "allisha gray game log",
+          "vol": 90
+        },
+        {
+          "q": "allisha gray points per game",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "What team does Allisha Gray play for?",
-      "answer": "She plays for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "allisha gray team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Allisha Gray?",
-      "answer": "Allisha Gray is an American professional basketball player for the Atlanta Dream of the Women's National Basketball Association (WNBA) and for the Mist of Unrivaled.",
+      "answer": "Allisha Gray plays guard for the Atlanta Dream and wears No. 15. The regular-season table lists the Dallas Wings and the Atlanta Dream for Allisha Gray. The WNBA lists a gold medal in 3x3 basketball at the 2020 Olympics.",
       "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Allisha_Gray"
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
       ],
-      "google_keyword": "who is allisha gray",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Allisha Gray dating?",
-      "answer": "Allisha Gray is engaged to Tim Mangum Jr. The engagement was a surprise proposal at a staged magazine shoot on March 29, 2025.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.theknot.com/content/allisha-gray-relationship"
-      ],
-      "google_keyword": "allisha gray partner",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "allisha gray atlanta dream",
+          "vol": 2400
+        },
+        {
+          "q": "allisha gray wnba",
+          "vol": 260
+        },
+        {
+          "q": "allisha gray dallas wings",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "Is Allisha Gray married?",
-      "answer": "No. Allisha Gray is not married. She is engaged to Tim Mangum Jr.",
+      "answer": "Allisha Gray and Tim Mangum Jr. announced their engagement on March 29, 2025. They have not publicly announced a wedding.",
       "answer_kind": "researched",
       "sources": [
         "https://www.theknot.com/content/allisha-gray-relationship"
       ],
-      "google_keyword": "allisha gray husband",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "allisha gray husband",
+          "vol": 1300
+        },
+        {
+          "q": "allisha gray wife",
+          "vol": 1000
+        },
+        {
+          "q": "allisha gray fiance",
+          "vol": 590
+        },
+        {
+          "q": "allisha gray married",
+          "vol": 480
+        },
+        {
+          "q": "is allisha gray still engaged",
+          "vol": 390
+        },
+        {
+          "q": "allisha gray partner",
+          "vol": 170
+        },
+        {
+          "q": "is allisha gray married",
+          "vol": 170
+        },
+        {
+          "q": "allisha gray boyfriend",
+          "vol": 170
+        },
+        {
+          "q": "allisha gray tim mangum",
+          "vol": 70
+        },
+        {
+          "q": "allisha gray relationship",
+          "vol": 30
+        },
+        {
+          "q": "allisha gray spouse",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Allisha Gray injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "allisha gray injury",
-      "approx_monthly_volume": 320
+      "question": "How tall is Allisha Gray?",
+      "answer": "The WNBA lists Allisha Gray at 6 feet 0 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray height",
+          "vol": 260
+        }
+      ]
+    },
+    {
+      "question": "How old is Allisha Gray?",
+      "answer": "Allisha Gray was born January 12, 1995.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray age",
+          "vol": 260
+        },
+        {
+          "q": "allisha gray birthday",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Who are Allisha Gray's parents?",
+      "answer": "Team USA says Allisha Gray is the daughter of Annie and Dr. Allen Gray. She has an older brother, Marlo East, a younger brother, A.J. Gray, and a younger sister, Ashley Gray.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.teamusa.com/profiles/allisha-gray-869102",
+        "https://gamecocksonline.com/sports/wbball/roster/player/allisha-gray/"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray parents",
+          "vol": 170
+        },
+        {
+          "q": "allisha gray sister",
+          "vol": 50
+        },
+        {
+          "q": "allisha gray siblings",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where is Allisha Gray from?",
+      "answer": "Team USA lists Allisha Gray's hometown as Sandersville, Georgia. South Carolina's bio says she was born January 12, 1995, in Greenwood, South Carolina, and played at Washington County High School.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.teamusa.com/profiles/allisha-gray-869102",
+        "https://gamecocksonline.com/sports/wbball/roster/player/allisha-gray/"
+      ],
+      "queries": [
+        {
+          "q": "where is allisha gray from",
+          "vol": 140
+        },
+        {
+          "q": "allisha gray hometown",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Has Allisha Gray played in Unrivaled?",
+      "answer": "The WNBA lists Allisha Gray as a 2026 Unrivaled champion with Mist.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray unrivaled",
+          "vol": 140
+        },
+        {
+          "q": "allisha gray unrivaled stats",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Why does Allisha Gray wear goggles?",
+      "answer": "Women's Health reported that Allisha Gray was poked in the eye at training camp for 3x3 basketball at the 2020 Olympics. She started wearing protective goggles there and kept wearing them in the WNBA.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.womenshealthmag.com/fitness/a73438638/allisha-gray-nike-goggles/"
+      ],
+      "queries": [
+        {
+          "q": "why does allisha gray wear goggles",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Where did Allisha Gray play college basketball?",
+      "answer": "South Carolina's bio says Allisha Gray played two seasons at North Carolina, then at South Carolina, and left early for the WNBA draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://gamecocksonline.com/sports/wbball/roster/player/allisha-gray/"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray south carolina",
+          "vol": 90
+        },
+        {
+          "q": "allisha gray education",
+          "vol": 90
+        },
+        {
+          "q": "allisha gray unc",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Where was Allisha Gray drafted?",
+      "answer": "The WNBA lists Allisha Gray as the fourth overall pick in the 2017 draft, selected by the Dallas Wings.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray draft",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What is Allisha Gray's three-point percentage?",
+      "answer": "In the 2026 regular season, Allisha Gray's three-point percentage is 33.9.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+      ],
+      "queries": [
+        {
+          "q": "allisha gray 3 pointers per game",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

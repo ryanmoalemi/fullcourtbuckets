@@ -1,130 +1,220 @@
 {
   "slug": "gabriela-jaquez",
   "player_name": "Gabriela Jaquez",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Gabriela Jaquez's stats / points per game?",
-      "answer": "In the 2026 regular season, Gabriela Jaquez averaged 6.8 points, 3.0 rebounds, and 0.8 assists in 37 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "gabriela jaquez stats",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "How much does Gabriela Jaquez make?",
-      "answer": "A precise public salary or net worth figure for Gabriela Jaquez is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "gabriela jaquez net worth",
-      "approx_monthly_volume": 50
-    },
-    {
       "question": "How tall is Gabriela Jaquez?",
-      "answer": "Gabriela Jaquez is listed at 6' 0\".",
+      "answer": "The WNBA lists Gabriela Jaquez at 6 feet 0 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
       ],
-      "google_keyword": "gabriela jaquez height",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "gabriela jaquez height",
+          "vol": 1600
+        },
+        {
+          "q": "gabriela jaquez height weight",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Gabriela Jaquez's jersey number?",
-      "answer": "Gabriela Jaquez wears number 11 for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "gabriela jaquez jersey chicago",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Gabriela Jaquez's contract?",
-      "answer": "Contract length and guarantees for Gabriela Jaquez are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Who is Gabriela Jaquez's brother?",
+      "answer": "Jaime Jaquez Jr.'s bio says he is the oldest of three siblings. His younger sister is Gabriela Jaquez, and his younger brother is Marcos. Jaime Jaquez Jr. plays for the Milwaukee Bucks.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://en.wikipedia.org/wiki/Jaime_Jaquez_Jr."
       ],
-      "google_keyword": "gabriela jaquez contract",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "gabriela jaquez brother",
+          "vol": 1000
+        },
+        {
+          "q": "is gabriela jaquez related to jaime jaquez",
+          "vol": 170
+        },
+        {
+          "q": "jaime and gabriela jaquez",
+          "vol": 170
+        },
+        {
+          "q": "gabriela jaquez sister",
+          "vol": 70
+        },
+        {
+          "q": "gabriela jaquez siblings",
+          "vol": 50
+        },
+        {
+          "q": "gabriela jaquez jr",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What team does Gabriela Jaquez play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 11. Her listed position is G.",
+      "question": "What are Gabriela Jaquez's stats?",
+      "answer": "In the 2026 regular season, Gabriela Jaquez averaged 7.1 points, 3.0 rebounds, and 0.9 assists in 39 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "gabriela jaquez team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Gabriela Jaquez attend?",
-      "answer": "Jaquez played college basketball at UCLA.",
-      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
       ],
-      "google_keyword": "gabriela jaquez ucla",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What position does Gabriela Jaquez play?",
-      "answer": "Gabriela Jaquez is listed as a G for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "gabriela jaquez softball position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Gabriela Jaquez's nationality?",
-      "answer": "Gabriela Jaquez is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
-      ],
-      "google_keyword": "gabriela jaquez nationality",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Gabriela Jaquez injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "gabriela jaquez injury",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "gabriela jaquez stats",
+          "vol": 1000
+        },
+        {
+          "q": "gabriela jaquez wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Who are Gabriela Jaquez's parents?",
-      "answer": "Public profiles share limited verified detail about Gabriela Jaquez's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Jaime Jaquez Jr.'s bio says their parents are Angela and Jaime Jaquez Sr., and that both played basketball at Concordia University Irvine.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+        "https://en.wikipedia.org/wiki/Jaime_Jaquez_Jr."
       ],
-      "google_keyword": "gabriela jaquez parents",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "gabriela jaquez parents",
+          "vol": 720
+        },
+        {
+          "q": "gabriela jaquez family",
+          "vol": 260
+        },
+        {
+          "q": "gabriela jaquez mom",
+          "vol": 110
+        },
+        {
+          "q": "gabriela jaquez father",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Gabriela Jaquez?",
-      "answer": "Gabriela Raquel Jaquez is a Mexican-American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Did Gabriela Jaquez play softball?",
+      "answer": "The Los Angeles Times reported that Gabriela Jaquez joined the UCLA softball team as a pinch runner in May 2024 and scored a run in her collegiate debut in an NCAA super regional. She had last played softball as a senior at Camarillo High, where she played third base.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+        "https://www.latimes.com/sports/ucla/story/2024-05-29/why-ucla-basketball-star-gabriela-jaquez-joined-bruins-softball-team"
       ],
-      "google_keyword": "gabriela jaquez wikipedia",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "gabriela jaquez softball",
+          "vol": 590
+        },
+        {
+          "q": "gabriela jaquez ucla softball",
+          "vol": 50
+        },
+        {
+          "q": "gabriela jaquez softball stats",
+          "vol": 30
+        },
+        {
+          "q": "gabriela jaquez softball position",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Gabriela Jaquez?",
-      "answer": "Gabriela Jaquez was born November 19, 2003 in Camarillo. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Gabriela Jaquez was born November 19, 2003. The WNBA lists her birthplace as Camarillo, California.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gabriela_Jaquez"
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
       ],
-      "google_keyword": "gabriela jaquez age",
-      "approx_monthly_volume": 480,
-      "birthdate": "2003-11-19"
+      "queries": [
+        {
+          "q": "gabriela jaquez age",
+          "vol": 480
+        },
+        {
+          "q": "gabriela jaquez birthday",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What team does Gabriela Jaquez play for?",
+      "answer": "Gabriela Jaquez plays guard for the Chicago Sky. The regular-season table lists the Chicago Sky for Gabriela Jaquez.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
+      ],
+      "queries": [
+        {
+          "q": "gabriela jaquez wnba",
+          "vol": 390
+        },
+        {
+          "q": "chicago sky gabriela jaquez",
+          "vol": 140
+        },
+        {
+          "q": "gabriela jaquez team",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Gabriela Jaquez play college basketball?",
+      "answer": "Gabriela Jaquez played at UCLA. The WNBA lists her as a 2026 NCAA champion, a 2026 NCAA All-Tournament pick, and a second-team All-Big Ten pick in 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
+      ],
+      "queries": [
+        {
+          "q": "gabriela jaquez ucla",
+          "vol": 390
+        },
+        {
+          "q": "ucla women's basketball gabriela jaquez",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where was Gabriela Jaquez drafted?",
+      "answer": "The WNBA lists Gabriela Jaquez as the fifth overall pick in the 2026 draft, selected by the Chicago Sky.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
+      ],
+      "queries": [
+        {
+          "q": "gabriela jaquez wnba draft",
+          "vol": 320
+        },
+        {
+          "q": "gabriela jaquez draft",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "What is Gabriela Jaquez's nationality?",
+      "answer": "The WNBA lists Gabriela Jaquez's country as the United States.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"
+      ],
+      "queries": [
+        {
+          "q": "gabriela jaquez nationality",
+          "vol": 40
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

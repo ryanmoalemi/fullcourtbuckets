@@ -1,163 +1,191 @@
 {
   "slug": "kayla-mcbride",
   "player_name": "Kayla McBride",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 10, 2026",
+  "verified_at": "2026-10-10",
   "items": [
     {
-      "question": "What are Kayla McBride's stats / points per game?",
-      "answer": "In the 2026 regular season, Kayla McBride averaged 17.9 points, 3.1 rebounds, and 2.2 assists in 42 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "question": "What are Kayla McBride's stats?",
+      "answer": "In the 2026 regular season, Kayla McBride averaged 17.6 points, 3.0 rebounds, and 2.2 assists in 44 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kayla mcbride stats",
-      "approx_monthly_volume": 12100
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride stats",
+          "vol": 12100
+        },
+        {
+          "q": "kayla mcbride points per game",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Who are Kayla McBride's parents?",
+      "answer": "The Notre Dame bio says Kayla McBride is the daughter of LuAnn and Lamont McBride and the oldest of four children. Her younger sister, Karlee, played basketball at Indiana.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fightingirish.com/sports/wbball/roster/player/kayla-mcbride"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride parents",
+          "vol": 1000
+        },
+        {
+          "q": "kayla mcbride family",
+          "vol": 140
+        },
+        {
+          "q": "kayla mcbride father",
+          "vol": 50
+        },
+        {
+          "q": "kayla mcbride brother",
+          "vol": 50
+        },
+        {
+          "q": "kayla mcbride siblings",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Kayla McBride?",
-      "answer": "She was born June 25, 1992 in Erie, Pennsylvania, U.S. As of late 2026 that puts her at 34 years old.",
+      "answer": "Kayla McBride was born June 25, 1992.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"
       ],
-      "google_keyword": "kayla mcbride age",
-      "approx_monthly_volume": 480,
-      "birthdate": "1992-06-25"
-    },
-    {
-      "question": "How tall is Kayla McBride?",
-      "answer": "Kayla McBride is listed at 5' 11\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride height",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What did Kayla McBride score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 at the Connecticut Sun), Kayla McBride had 14 points, 3 rebounds, and 6 assists in a 101-89 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kayla mcbride playing tonight",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Kayla McBride's contract?",
-      "answer": "Public salary trackers list Kayla McBride at about $1,190,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "kayla mcbride contract",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How much does Kayla McBride make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Kayla McBride's base salary / cap hit at about $1,190,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "kayla mcbride net worth",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Kayla McBride's nationality?",
-      "answer": "Kayla McBride is described as American in major biographical profiles.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride nationality",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Where is Kayla McBride from?",
-      "answer": "She is from Erie, Pennsylvania, U.S., and played college basketball at Notre Dame.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "where is kayla mcbride from",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "kayla mcbride age",
+          "vol": 480
+        },
+        {
+          "q": "how old is kayla mcbride",
+          "vol": 260
+        }
+      ]
     },
     {
       "question": "What team does Kayla McBride play for?",
-      "answer": "She plays for the Minnesota Lynx.",
+      "answer": "Kayla McBride plays guard for the Minnesota Lynx and wears No. 21. Basketball-Reference lists the San Antonio Stars as selecting her third overall in the 2014 draft. The regular-season table lists the San Antonio Stars, the Las Vegas Aces, and the Minnesota Lynx for Kayla McBride.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html",
+        "https://en.wikipedia.org/wiki/Kayla_McBride"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride wnba",
+          "vol": 140
+        },
+        {
+          "q": "kayla mcbride lynx",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "How tall is Kayla McBride?",
+      "answer": "Basketball-Reference lists Kayla McBride at 5 feet 11 inches. Notre Dame listed her at 5 feet 11 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html",
+        "https://fightingirish.com/sports/wbball/roster/player/kayla-mcbride"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride height",
+          "vol": 140
+        },
+        {
+          "q": "how tall is kayla mcbride",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What is Kayla McBride's nationality?",
+      "answer": "Basketball-Reference lists Kayla McBride as born in the United States.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride nationality",
+          "vol": 110
+        },
+        {
+          "q": "what nationality is kayla mcbride",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Kayla McBride play college basketball?",
+      "answer": "Kayla McBride played at Notre Dame. The Notre Dame bio says she graduated in May 2014 from the Mendoza College of Business.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://fightingirish.com/sports/wbball/roster/player/kayla-mcbride"
+      ],
+      "queries": [
+        {
+          "q": "kayla mcbride notre dame",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Where is Kayla McBride from?",
+      "answer": "Basketball-Reference lists Kayla McBride's birthplace as Erie, Pennsylvania. Notre Dame lists her hometown as Erie and her high school as Villa Maria Academy.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html",
+        "https://fightingirish.com/sports/wbball/roster/player/kayla-mcbride"
+      ],
+      "queries": [
+        {
+          "q": "where is kayla mcbride from",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What is Kayla McBride's three-point percentage?",
+      "answer": "In the 2026 regular season, Kayla McBride's three-point percentage is 41.2.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kayla mcbride team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Kayla McBride?",
-      "answer": "Kayla Renae McBride is an American professional basketball player for the Minnesota Lynx of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"
       ],
-      "google_keyword": "who is kayla mcbride",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "kayla mcbride 3 pointers per game",
+          "vol": 70
+        },
+        {
+          "q": "kayla mcbride 3-point stats",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What are Kayla McBride's college stats?",
-      "answer": "Across her college career at Notre Dame, Kayla McBride averaged 14.1 points, 4.6 rebounds, and 2.5 assists per game.",
+      "question": "Is Kayla McBride an All-Star?",
+      "answer": "Basketball-Reference lists Kayla McBride as a five-time All-Star.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.sports-reference.com/cbb/players/kayla-mcbride-1.html",
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
+        "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"
       ],
-      "google_keyword": "kayla mcbride college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Kayla McBride attend?",
-      "answer": "Kayla McBride played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride ucla",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Kayla McBride dating?",
-      "answer": "As of late 2026, Kayla McBride has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride partner",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "Is Kayla McBride married?",
-      "answer": "There is no widely reported public record of Kayla McBride being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride husband",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Is Kayla McBride injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kayla mcbride injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What awards has Kayla McBride won?",
-      "answer": "Award history for Kayla McBride is covered in public biographical sources such as her Wikipedia profile.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kayla_McBride"
-      ],
-      "google_keyword": "kayla mcbride all-star",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kayla mcbride all-star",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
