@@ -94,6 +94,25 @@
       "mismatch_count": 0,
       "plays": 372,
       "plays_status": "included"
+    },
+    {
+      "date": "2026-10-09",
+      "path": "data/games/2026-10-09-gs-lv.json",
+      "slug": "2026-10-09-gs-lv",
+      "matchup": "gs-at-lv",
+      "away": "GS",
+      "home": "LV",
+      "away_score": 87,
+      "home_score": 77,
+      "overtime": true,
+      "status": "final",
+      "source": "balldontlie",
+      "fallback": false,
+      "crosscheck_matched": true,
+      "crosscheck_compared": true,
+      "mismatch_count": 0,
+      "plays": 425,
+      "plays_status": "included"
     }
   ]
 }
