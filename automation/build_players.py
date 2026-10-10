@@ -2973,7 +2973,7 @@ def build(root: Path):
     collection_page = build_reese_cards.render_page(root, menu)
     if collection_page:
         files[build_reese_cards.RELATIVE] = collection_page
-    files.update(links.legacy_player_redirect_files({entry['slug'] for entry in published_players}))
+    files.update(links.legacy_player_redirect_files(links.wnba_player_slugs(root, files)))
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     files.update(site_nav.install_tree(root, menu, set(files)))

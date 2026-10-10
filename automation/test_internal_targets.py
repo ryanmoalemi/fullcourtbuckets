@@ -99,6 +99,7 @@ class InternalTargetTests(unittest.TestCase):
         import internal_links as links
         index = json.loads((ROOT / 'data' / 'wnba' / 'players-index.json').read_text(encoding='utf-8'))
         published = {entry['slug'] for entry in index['players']}
+        published |= links.wnba_player_slugs(ROOT)
         expected = links.legacy_player_redirect_files(published)
         self.assertIn('players/index.html', expected)
         self.assertIn('/wnba/', expected['players/index.html'])
@@ -120,3 +121,17 @@ class InternalTargetTests(unittest.TestCase):
             if 'href="/players/' in text or 'href="/players"' in text:
                 linked.append(rel)
         self.assertEqual(linked, [])
+
+    def test_every_wnba_player_has_players_redirect(self):
+        self.assertEqual(self._missing_player_redirects(), [])
+
+    @staticmethod
+    def _missing_player_redirects():
+        import internal_links as links
+        missing = []
+        for slug in sorted(links.wnba_player_slugs(ROOT)):
+            path = ROOT / 'players' / slug / 'index.html'
+            expected = links.permanent_redirect(f'{links.BASE}/wnba/{slug}/')
+            if not path.is_file() or path.read_text(encoding='utf-8') != expected:
+                missing.append(slug)
+        return missing

@@ -2133,6 +2133,9 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
 
 
 # Published at /players/<slug>/ before profiles moved to /wnba/<slug>/.
+# This is only the floor for URLs that already existed. The generator also emits a
+# stub for every current /wnba/<slug>/ page. Two of these names never received a
+# profile and still redirect to the player index.
 LEGACY_PLAYER_SLUGS = (
     'aja-wilson', 'aliyah-boston', 'allisha-gray', 'angel-reese', 'arike-ogunbowale',
     'becky-hammon', 'breanna-stewart', 'caitlin-clark', 'cecilia-zandalasini', 'chelsea-gray',
@@ -2144,6 +2147,8 @@ LEGACY_PLAYER_SLUGS = (
     'raven-johnson', 'rhyne-howard', 'sabrina-ionescu', 'shakira-austin', 'sonia-citron',
     'stephanie-white', 'tiffany-hayes', 'veronica-burton',
 )
+# Folders under /wnba/ that are not player profiles.
+WNBA_NON_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples'})
 
 
 def permanent_redirect(target: str) -> str:
@@ -2167,11 +2172,41 @@ def permanent_redirect(target: str) -> str:
     )
 
 
+def wnba_player_slugs(root: Path | None = None, files: dict | None = None) -> set[str]:
+    """Slugs that publish a /wnba/<slug>/ page, on disk or in this build's output."""
+    found: set[str] = set()
+
+    def add(slug: str) -> None:
+        if slug in WNBA_NON_PLAYER_DIRS or not ARTICLE_SLUG.fullmatch(slug):
+            return
+        found.add(slug)
+
+    if files:
+        for relative in files:
+            match = re.fullmatch(r'wnba/([^/]+)/index\.html', str(relative))
+            if match:
+                add(match.group(1))
+    if root is not None:
+        wnba = Path(root) / 'wnba'
+        if wnba.is_dir():
+            for child in wnba.iterdir():
+                if child.is_dir() and (child / 'index.html').is_file():
+                    add(child.name)
+    return found
+
+
 def legacy_player_redirect_files(published_slugs: set) -> dict:
-    """Old /players/ URLs. A slug with no /wnba/ profile goes to the player index."""
+    """Old /players/ URLs.
+
+    Every slug with a /wnba/<slug>/ page gets a matching stub. A historical
+    /players/ slug that still has no profile goes to the player index.
+    """
     pages = {'players/index.html': permanent_redirect(BASE + '/wnba/')}
-    for slug in LEGACY_PLAYER_SLUGS:
-        route = f'/wnba/{slug}/' if slug in published_slugs else '/wnba/'
+    profiles = set(published_slugs)
+    for slug in sorted(profiles | set(LEGACY_PLAYER_SLUGS)):
+        if not ARTICLE_SLUG.fullmatch(slug):
+            continue
+        route = f'/wnba/{slug}/' if slug in profiles else '/wnba/'
         pages[f'players/{slug}/index.html'] = permanent_redirect(BASE + route)
     return pages
 
