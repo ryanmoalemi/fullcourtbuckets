@@ -11143,5 +11143,38 @@
     "turnover": 1.8,
     "pts": 13.4,
     "gap_fill": true
+  },
+  {
+    "player_id": 684,
+    "season": 2026,
+    "season_type": 2,
+    "team": {
+      "id": 7,
+      "full_name": "Minnesota Lynx",
+      "abbreviation": "MIN",
+      "city": "Minnesota",
+      "name": "Lynx",
+      "conference": "Western Conference"
+    },
+    "games_played": 21,
+    "min": 15.2,
+    "fgm": 1.4,
+    "fga": 3.9,
+    "fg_pct": 37,
+    "fg3m": 0.7,
+    "fg3a": 2.5,
+    "fg3_pct": 28.8,
+    "ftm": 0,
+    "fta": 0.2,
+    "ft_pct": 25,
+    "oreb": 0.4,
+    "dreb": 2.7,
+    "reb": 3.1,
+    "ast": 1.4,
+    "stl": 0.2,
+    "blk": 0.6,
+    "turnover": 0.7,
+    "pts": 3.6,
+    "gap_fill": true
   }
 ]

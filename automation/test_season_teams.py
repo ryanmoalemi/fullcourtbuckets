@@ -300,6 +300,40 @@ class SeasonTeamTests(unittest.TestCase):
             [2],
         )
 
+    def test_v3_candidate_ignores_the_league_label(self):
+        items = [
+            {"id": "3058892", "displayName": "Lexie Brown", "sport": "basketball", "league": "nba-summer-las-vegas"},
+            {"id": "99", "displayName": "Lexie Brown", "sport": "football"},
+            {"id": "100", "displayName": "Alex Brown", "sport": "basketball"},
+        ]
+        self.assertEqual(teams.pick_v3_candidates(items, "Lexie Brown"), [3058892])
+        self.assertTrue(teams.needs_refetch("no-match"))
+        self.assertTrue(teams.needs_refetch("error: HTTP Error 404: Not Found"))
+        self.assertFalse(teams.needs_refetch("ok"))
+        self.assertFalse(teams.needs_refetch("ambiguous-name"))
+
+    def test_wrong_club_takes_the_cross_check_line(self):
+        storm = {"id": 9, "full_name": "Seattle Storm", "abbreviation": "SEA", "city": "Seattle", "name": "Storm", "conference": None}
+        sparks = {"id": 12, "full_name": "Los Angeles Sparks", "abbreviation": "LA", "city": "Los Angeles", "name": "Sparks", "conference": None}
+        table = {
+            "current_teams": {"los-angeles-sparks": sparks, "seattle-storm": storm},
+            "players": {"539": {"status": "ok", "stints": [
+                {"season": 2022, "season_type": 2, "games_played": 34, "team_slug": "los-angeles-sparks", "pts": 7.1, "reb": 2.3, "ast": 2.1},
+            ]}},
+        }
+        original = {"player_id": 539, "season": 2022, "season_type": 2, "team": dict(storm), "games_played": 34, "pts": 7.15, "reb": 2.29, "ast": 2.06}
+        corrected, counts = teams.correct_rows([original], table)
+        self.assertEqual(corrected[0]["team"]["full_name"], "Los Angeles Sparks")
+        self.assertEqual(corrected[0]["pts"], 7.1)
+        self.assertTrue(corrected[0]["gap_fill"])
+        self.assertEqual(counts["replaced"], 1)
+        same_club = dict(original)
+        same_club["team"] = dict(sparks)
+        kept, counts = teams.correct_rows([same_club], table)
+        self.assertEqual(kept[0]["pts"], 7.15)
+        self.assertNotIn("gap_fill", kept[0])
+        self.assertEqual(counts["replaced"], 0)
+
     def test_apply_updates_season_and_profile(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)

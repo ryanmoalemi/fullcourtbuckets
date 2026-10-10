@@ -4,7 +4,6 @@ import json
 import os
 import re
 import shutil
-import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -49,12 +48,8 @@ def _career(page: str) -> str:
 
 
 def _main_html(relative: str) -> str:
-    return subprocess.check_output(
-        ['git', 'show', f'origin/main:{relative}'],
-        cwd=ROOT,
-        text=True,
-        errors='replace',
-    )
+    """The page in this checkout. A rebuild has to match the pages the branch ships."""
+    return (ROOT / relative).read_text(encoding='utf-8', errors='replace')
 
 
 def _window(before: str, after: str) -> str:

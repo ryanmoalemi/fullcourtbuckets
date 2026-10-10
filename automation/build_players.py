@@ -835,14 +835,37 @@ def on_current_roster(profile) -> bool:
 _SEASON_TABLES = {}
 
 
+def expand_team_label(name: str) -> set[str]:
+    """Split a combined club label into the clubs it names."""
+    text = str(name or '').strip()
+    if not text:
+        return set()
+    if ', and ' in text:
+        head, last = text.rsplit(', and ', 1)
+        parts = [part.strip() for part in head.split(', ')] + [last.strip()]
+        return {part for part in parts if part}
+    if ' and ' in text:
+        left, right = text.split(' and ', 1)
+        return {left.strip(), right.strip()}
+    return {text}
+
+
+def _public_team_name(team) -> str:
+    if not isinstance(team, dict):
+        return ''
+    raw = str(team.get('full_name') or team.get('name') or '').strip()
+    return team_names.public_name(raw) if raw else ''
+
+
 def season_cross_check(profile, root=None) -> dict:
     """Regular seasons from 2008 on, compared with the stored team cross-check.
 
     The cross-check is not copied onto the page. missing lists seasons it has
     and this profile does not. games lists seasons whose games played disagree.
+    teams lists seasons whose clubs do not match the cross-check.
     checked is false when this player has no successful cross-check.
     """
-    empty = {'missing': [], 'games': [], 'extra': [], 'checked': False}
+    empty = {'missing': [], 'games': [], 'extra': [], 'teams': [], 'checked': False, 'team_years': {}}
     if not isinstance(profile, dict) or root is None:
         return empty
     key = str(Path(root).resolve())
@@ -859,6 +882,7 @@ def season_cross_check(profile, root=None) -> dict:
     if isinstance(coverage, bool) or not isinstance(coverage, int):
         coverage = 2008
     ours = {}
+    ours_teams = {}
     for row in profile.get('season_stats') or []:
         if not isinstance(row, dict) or row.get('season_type') != 2:
             continue
@@ -869,7 +893,10 @@ def season_cross_check(profile, root=None) -> dict:
         if isinstance(games, bool) or not isinstance(games, int):
             games = 0
         ours[year] = ours.get(year, 0) + games
+        for name in expand_team_label(_public_team_name(row.get('team'))):
+            ours_teams.setdefault(year, set()).add(name)
     theirs = {}
+    theirs_teams = {}
     for item in season_teams.player_stints(table, player_id):
         if item.get('season_type') != 2:
             continue
@@ -880,11 +907,24 @@ def season_cross_check(profile, root=None) -> dict:
         if isinstance(games, bool) or not isinstance(games, int):
             continue
         theirs[year] = theirs.get(year, 0) + games
+        club = season_teams.team_for_slug(item.get('team_slug'), table)
+        for name in expand_team_label(_public_team_name(club)):
+            theirs_teams.setdefault(year, set()).add(name)
+    team_years = {
+        year: sorted(names)
+        for year, names in theirs_teams.items()
+        if names
+    }
     return {
         'missing': sorted(set(theirs) - set(ours)),
         'games': sorted(year for year in set(ours) & set(theirs) if ours[year] != theirs[year]),
         'extra': sorted(set(ours) - set(theirs)),
+        'teams': sorted(
+            year for year in set(ours_teams) & set(theirs_teams)
+            if ours_teams[year] != theirs_teams[year]
+        ),
         'checked': True,
+        'team_years': team_years,
     }
 
 
@@ -904,19 +944,48 @@ def partial_record_html(profile, root=None) -> str:
     return f'<p class="partial-record">{esc(" ".join(bits))}</p>'
 
 
+def career_summary_team_conflicts(profile, root, team_years: dict) -> list[str]:
+    """Years the career summary would assign to a club the cross-check does not.
+
+    Summary sentences are built from the regular-season spans. A span that names
+    the wrong club is the sentence that would say that club for that year.
+    """
+    if not team_years:
+        return []
+    import career_summary
+    problems = []
+    for span in career_summary._spans(career_summary._rows(profile, 2)):
+        named = expand_team_label(span.get('team') or '')
+        if not named:
+            continue
+        start, end = span.get('start'), span.get('end')
+        if not isinstance(start, int) or not isinstance(end, int):
+            continue
+        for year in range(start, end + 1):
+            expected = set(team_years.get(year) or [])
+            if not expected or named == expected or named.issubset(expected):
+                continue
+            problems.append(f"{year} {span['team']}")
+    return problems
+
+
 def require_flagged_season_gap(profile, page: str, root) -> None:
-    """Stop the build when a checked player's seasons or games still disagree.
+    """Stop the build when a checked player's seasons, clubs, or games still disagree.
 
     A matching record must not be labeled partial. Flagging the page does not
-    allow the disagreement through.
+    allow the disagreement through. The career summary is blocked when it names
+    a club for a year the cross-check does not.
     """
     check = season_cross_check(profile, root)
     if not check['checked']:
         return
-    incomplete = bool(check['missing'] or check['games'] or check['extra'])
     slug = profile.get('slug') or 'player'
+    incomplete = bool(check['missing'] or check['games'] or check['extra'] or check['teams'])
     if incomplete:
         raise BuildError(f'{slug} seasons or games do not match the cross-check.')
+    conflicts = career_summary_team_conflicts(profile, root, check.get('team_years') or {})
+    if conflicts:
+        raise BuildError(f'{slug} career summary names the wrong team: {", ".join(conflicts)}.')
     if 'This record is partial.' in page:
         raise BuildError(f'{slug} is flagged partial without a season or games disagreement.')
 
