@@ -320,6 +320,42 @@ MORE_STORY_LIMIT = 8
 FULL_STORY_CARDS = 3
 
 
+# 85-83, 101-98, 2-0. The hyphen is a line-break point, so the score sits in one span.
+SCORE_RE = re.compile(r'(?<!\d)\d{1,3}-\d{1,3}(?!\d)')
+_HEADING_RE = re.compile(r'(<h[1-3]\b[^>]*>)(.*?)(</h[1-3]>)', re.S | re.I)
+
+
+def glue_scores(fragment: str) -> str:
+    """Keep a score together. Tags are left alone so a URL cannot be rewritten."""
+    parts = re.split(r'(<[^>]+>)', fragment)
+    out = []
+    skip = 0
+    for part in parts:
+        if part.startswith('<'):
+            if re.match(r'<span\b[^>]*\bclass="[^"]*\bscore\b', part, re.I):
+                skip += 1
+            elif part.lower().startswith('</span') and skip:
+                skip -= 1
+            out.append(part)
+            continue
+        if skip:
+            out.append(part)
+            continue
+        out.append(SCORE_RE.sub(
+            lambda match: f'<span class="score" style="white-space:nowrap">{match.group(0)}</span>',
+            part,
+        ))
+    return ''.join(out)
+
+
+def glue_headline_scores(html: str) -> str:
+    """Article titles and other headings. Body copy can still break at a hyphen."""
+    return _HEADING_RE.sub(
+        lambda match: match.group(1) + glue_scores(match.group(2)) + match.group(3),
+        html,
+    )
+
+
 def _story_card(article: dict, compact: bool = False) -> str:
     title = article['title']
     image = article.get('image') or ''
@@ -330,7 +366,7 @@ def _story_card(article: dict, compact: bool = False) -> str:
         f'<div class="article-visual"><img src="{esc(image)}" alt="{esc(alt)}"{_image_dims(article)}'
         f' decoding="async" loading="lazy"{focal_style(article)}></div>'
         f'<div class="article-copy"><div class="cat">{esc(article.get("category") or "")}</div>'
-        f'<h3>{esc(title)}</h3><p>{esc(article.get("description") or "")}</p>'
+        f'<h3>{glue_scores(esc(title))}</h3><p>{esc(article.get("description") or "")}</p>'
         f'<div class="date">{esc(_format_date(article["date"]))}</div></div></a>'
     )
 
@@ -449,7 +485,12 @@ def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> s
             count=1,
         )
         text = _apply_featured_media(text, featured)
-        text = re.sub(r'(<h1 id="featured-title">).*?(</h1>)', lambda m: m.group(1) + esc(featured['title']) + m.group(2), text, count=1)
+        text = re.sub(
+            r'(<h1 id="featured-title">).*?(</h1>)',
+            lambda m: m.group(1) + glue_scores(esc(featured['title'])) + m.group(2),
+            text,
+            count=1,
+        )
         text = re.sub(r'(<p id="featured-dek">).*?(</p>)', lambda m: m.group(1) + esc(featured.get('description') or '') + m.group(2), text, count=1)
         meta = f'{featured.get("category") or ""} · {_format_date(featured["date"])}'
         text = re.sub(r'(<div class="meta" id="featured-meta">).*?(</div>)', lambda m: m.group(1) + esc(meta) + m.group(2), text, count=1)
@@ -2087,6 +2128,7 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     news_heroes.ensure_article_hero(root, article)
     html_text = order_news_lead(html_text, article)
     html_text = ensure_article_end(html_text, root, article, articles if articles is not None else [article])
+    html_text = glue_headline_scores(html_text)
     return html_text
 
 
@@ -2155,7 +2197,7 @@ def _news_list_item(article: dict) -> str:
         '<li><a class="news-item" href="' + esc(article_href(article)) + '">'
         + thumb
         + '<span class="news-copy"><time datetime="' + esc(when) + '">' + esc(label) + '</time>'
-        + '<h2>' + esc(title) + '</h2><p>' + esc(summary) + '</p></span></a></li>'
+        + '<h2>' + glue_scores(esc(title)) + '</h2><p>' + esc(summary) + '</p></span></a></li>'
     )
 
 

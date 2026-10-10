@@ -91,7 +91,8 @@ class NewsPathTests(unittest.TestCase):
         for article in ordered:
             href = links.article_href(article)
             self.assertIn(f'href="{href}"', hub)
-            self.assertIn(html.escape(article['title']), hub)
+            visible_hub = html.unescape(re.sub(r'<[^>]+>', '', hub))
+            self.assertIn(article['title'].replace('\u2019', "'"), visible_hub.replace('\u2019', "'"))
             self.assertIn(html.escape(article['description']), hub)
             self.assertIn(article['date'], hub)
             if article.get('image'):
