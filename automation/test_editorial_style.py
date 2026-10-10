@@ -7,7 +7,7 @@ The check blocks a merge when a story breaks one of these rules:
 - The article uses a banned filler phrase.
 - The copy credits ESPN as the stats source.
 - A betting section is missing the 21+ / 1-800-GAMBLER line.
-- A preview whose game date has passed has no archive note linking a recap.
+- A preview whose game date has passed has no archive note linking a published recap.
 
 An existing ESPN box-score, game, or play-by-play link can stay. A short label
 on that link ("ESPN", "ESPN box score", "ESPN play-by-play") is the link, not
@@ -69,6 +69,10 @@ ARCHIVE_SENTENCE = (
     'This preview was published before the game. '
     'For the result, read our game recap.'
 )
+ARCHIVE_RECAPS_PREFIX = (
+    'This preview was published before the games. '
+    'For the results, read our recaps:'
+)
 MONTHS = {
     'january': 1, 'february': 2, 'march': 3, 'april': 4, 'may': 5, 'june': 6,
     'july': 7, 'august': 8, 'september': 9, 'october': 10, 'november': 11,
@@ -99,9 +103,21 @@ def _unescape(value):
 
 
 def _visible(fragment):
+    """Readable text.
+
+    Block tags become spaces so the next paragraph stays a new sentence.
+    Inline tags disappear, so "recap</a>." stays "recap."
+    """
     text = re.sub(r'<script\b[^>]*>.*?</script>', ' ', fragment, flags=re.S | re.I)
     text = re.sub(r'<style\b[^>]*>.*?</style>', ' ', text, flags=re.S | re.I)
-    text = re.sub(r'<[^>]+>', ' ', text)
+    text = re.sub(
+        r'</?(?:p|div|section|article|h[1-6]|li|ul|ol|br|tr|td|th|blockquote|figcaption|figure|nav|header|footer|aside)\b[^>]*>',
+        ' ',
+        text,
+        flags=re.I,
+    )
+    text = re.sub(r'<br\s*/?>', ' ', text, flags=re.I)
+    text = re.sub(r'<[^>]+>', '', text)
     return _unescape(text) or ''
 
 
@@ -222,7 +238,14 @@ def _is_preview(article, headlines):
 
 
 def _archive_hrefs(article_html):
+    """Links inside the archive note, plus a "game recap" label anywhere in the article."""
     hrefs = []
+    for match in re.finditer(r'<p\b[^>]*>.*?</p>', article_html, re.S | re.I):
+        block = match.group(0)
+        visible = _visible(block)
+        if 'This preview was published before the game' not in visible:
+            continue
+        hrefs.extend(re.findall(r'<a\b[^>]*href="([^"]+)"', block, re.I))
     for match in re.finditer(
         r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', article_html, re.S | re.I
     ):
@@ -230,6 +253,45 @@ def _archive_hrefs(article_html):
         if label == 'game recap':
             hrefs.append(match.group(1))
     return hrefs
+
+
+def _news_slug(href):
+    """Slug from a site path or absolute URL. Empty when it is not a news post."""
+    path = href.strip()
+    if '://' in path:
+        path = path.split('://', 1)[1]
+        path = path.split('/', 1)[1] if '/' in path else ''
+    parts = path.split('?', 1)[0].split('#', 1)[0].strip('/').split('/')
+    if len(parts) >= 2 and parts[0] == 'news' and parts[1]:
+        return parts[1]
+    return ''
+
+
+def _metadata_recap_hrefs(article):
+    """A recap named on the articles.json entry, when the note's link is not the only source."""
+    hrefs = []
+    for key in ('recap', 'recapUrl', 'recapSlug'):
+        raw = (article or {}).get(key)
+        values = raw if isinstance(raw, list) else [raw]
+        for value in values:
+            text = str(value or '').strip()
+            if not text:
+                continue
+            if text.startswith('/') or '://' in text:
+                hrefs.append(text)
+            else:
+                hrefs.append(f'/news/{text.strip("/")}/')
+    return hrefs
+
+
+def _published_recap(slug, published, game_date, preview_slug):
+    """A different story that exists on disk and was published on or after the game."""
+    if not slug or slug == preview_slug:
+        return False
+    recap = published.get(slug)
+    if recap is None or not (ROOT / 'news' / slug / 'index.html').is_file():
+        return False
+    return _publish_date(recap) >= game_date
 
 
 def _pacific_today():
@@ -280,28 +342,21 @@ def check_article(article, page, today=None):
         game_date = _game_date(article, article_html)
         if game_date is not None and game_date < today:
             visible = _visible(article_html)
-            hrefs = _archive_hrefs(article_html)
             published = {item['slug']: item for item in _articles()}
-            linked = []
-            for href in hrefs:
-                target = href.strip('/')
-                parts = target.split('/')
-                if len(parts) >= 2 and parts[0] == 'news':
-                    recap_slug = parts[1]
-                    recap = published.get(recap_slug)
-                    recap_file = ROOT / 'news' / recap_slug / 'index.html'
-                    if (
-                        recap is not None
-                        and 'recap' in recap_slug
-                        and recap_file.is_file()
-                        and _publish_date(recap) >= game_date
-                    ):
-                        linked.append(href)
-            if ARCHIVE_SENTENCE not in visible or not linked:
+            hrefs = _archive_hrefs(article_html) + _metadata_recap_hrefs(article)
+            linked = [
+                href for href in hrefs
+                if _published_recap(_news_slug(href), published, game_date, slug)
+            ]
+            plural = ARCHIVE_RECAPS_PREFIX in visible
+            singular = ARCHIVE_SENTENCE in visible
+            needed = 2 if plural else 1
+            if not (plural or singular) or len(linked) < needed:
                 problems.append(
                     f'{slug}: game date {game_date.isoformat()} has passed and the '
                     'preview has no archive note linking a published recap '
-                    f'("{ARCHIVE_SENTENCE}" with "game recap" linked)'
+                    f'("{ARCHIVE_SENTENCE}" or "{ARCHIVE_RECAPS_PREFIX}" '
+                    f'with {needed} recap link(s))'
                 )
     return problems
 
@@ -349,10 +404,10 @@ class EditorialStyleTests(unittest.TestCase):
         ))
 
     def test_passed_preview_without_a_recap_link_is_blocked(self):
-        """The Game 3 preview's date is October 9, 2026. No Game 3 recap exists.
+        """The Game 3 preview's game date is October 9, 2026.
 
-        On that date in Pacific time the note is not due yet. The next Pacific
-        day, the same page has to link a published recap or this check fails.
+        On that date the note is not due yet. On October 10 the note has to
+        point at both published recaps. The slugs do not have to contain "recap".
         """
         article = next(item for item in _articles() if item['slug'] == 'semis-game-3-preview')
         page = (ROOT / 'news' / article['slug'] / 'index.html').read_text(encoding='utf-8')
@@ -364,9 +419,27 @@ class EditorialStyleTests(unittest.TestCase):
         ]
         self.assertEqual(on_game_day, [])
         later = check_article(article, page, today=dt.date(2026, 10, 10))
-        self.assertTrue(any('archive note' in problem for problem in later), later)
-        semis_recaps = [
-            item['slug'] for item in _articles()
-            if 'semis' in item['slug'] and 'game-3' in item['slug'] and 'recap' in item['slug']
+        self.assertFalse(any('archive note' in problem for problem in later), later)
+        self.assertIn('/news/dream-sweep-liberty-game-3-semifinals/', page)
+        self.assertIn('/news/aces-valkyries-semis-game-3-recap/', page)
+        one_link = page.replace(
+            '<a href="/news/aces-valkyries-semis-game-3-recap/">Valkyries sweep the Aces</a>',
+            'Valkyries sweep the Aces',
+            1,
+        )
+        short = check_article(article, one_link, today=dt.date(2026, 10, 10))
+        self.assertTrue(any('archive note' in problem for problem in short), short)
+        unlinked = one_link.replace(
+            '<a href="/news/dream-sweep-liberty-game-3-semifinals/">Dream sweep the Liberty</a>',
+            'Dream sweep the Liberty',
+            1,
+        )
+        missing = check_article(article, unlinked, today=dt.date(2026, 10, 10))
+        self.assertTrue(any('archive note' in problem for problem in missing), missing)
+        via_metadata = dict(article)
+        via_metadata['recap'] = [
+            '/news/dream-sweep-liberty-game-3-semifinals/',
+            '/news/aces-valkyries-semis-game-3-recap/',
         ]
-        self.assertEqual(semis_recaps, [])
+        from_metadata = check_article(via_metadata, unlinked, today=dt.date(2026, 10, 10))
+        self.assertFalse(any('archive note' in problem for problem in from_metadata), from_metadata)

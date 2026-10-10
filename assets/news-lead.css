@@ -28,6 +28,13 @@
   line-height: 1.35;
 }
 
+/* A score such as 85-83 stays on one line. The hyphen is a break point otherwise. */
+.article h1 .score,
+.article h2 .score,
+.article h3 .score {
+  white-space: nowrap;
+}
+
 .article .byline-row {
   display: flex;
   flex-wrap: wrap;
