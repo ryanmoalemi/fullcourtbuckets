@@ -1,5 +1,7 @@
 # Full Court Buckets style guide
 
+Read `docs/EDITORIAL_STYLE.md` before writing or editing a `/news/` article. This file is the page order and lead-photo rules. The editorial guide is the headline, voice, evidence, source, archive, and betting rules.
+
 ## News article lead
 
 Checked on a 390px-wide phone on October 4, 2026. ESPN, The Athletic, and AP each put the headline above the lead photo, and the photo was still on screen without scrolling. On ESPN and The Athletic the credit sits under the photo and the byline sits under that. AP does the same when the story has a lead photo.
