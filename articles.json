@@ -172,7 +172,7 @@
   {
     "slug": "angel-reese-game-1-liberty",
     "url": "/news/angel-reese-game-1-liberty/",
-    "title": "Angel Reese Won DPOY and Got Meaner: Her Game 1 Against the Liberty",
+    "title": "Angel Reese follows DPOY award with four steals against Liberty",
     "description": "Three days after winning DPOY, Angel Reese had four steals from four Liberty players in a 92-82 Dream win.",
     "category": "WNBA Playoffs",
     "date": "2026-10-04",
@@ -196,7 +196,8 @@
     "imageFocal": "center top",
     "imageOg": "/images/articles/angel-reese-game-1-liberty/og-1200.webp",
     "imageOgWidth": 1200,
-    "imageOgHeight": 628
+    "imageOgHeight": 628,
+    "dateModified": "2026-10-09"
   },
   {
     "slug": "top-10-womens-college-basketball-cards-to-collect-2026",
@@ -223,7 +224,7 @@
   {
     "slug": "liberty-dream-semis-game-1-recap",
     "url": "/news/liberty-dream-semis-game-1-recap/",
-    "title": "Reese Takes It, Canada Buries It: Dream Grab Game 1 From the Liberty",
+    "title": "Canada scores 25 as Dream beat Liberty 92-82 in Game 1",
     "description": "With 1:30 left, Canada's step-back three made it 87-77. The Dream beat the Liberty 92-82 to lead 1-0.",
     "category": "WNBA Playoffs",
     "date": "2026-10-04",
@@ -244,7 +245,8 @@
     "imageFocal": "center 18%",
     "imageOg": "/images/articles/liberty-dream-semis-game-1-recap/og.webp",
     "imageOgWidth": 1124,
-    "imageOgHeight": 588
+    "imageOgHeight": 588,
+    "dateModified": "2026-10-09"
   },
   {
     "slug": "wings-valkyries-game-3-recap",
@@ -302,7 +304,8 @@
     "imageFocal": "center 20%",
     "imageOg": "/images/articles/valkyries-wings-game-2-recap/og-1200.webp",
     "imageOgWidth": 1200,
-    "imageOgHeight": 628
+    "imageOgHeight": 628,
+    "dateModified": "2026-10-09"
   },
   {
     "slug": "aces-fever-series-breakdown",
@@ -332,10 +335,14 @@
   {
     "slug": "clark-no-call-aces-game-3",
     "url": "/news/clark-no-call-aces-game-3/",
-    "title": "Bloody Teeth, No Whistle: The Caitlin Clark No-Call That Summed Up Fever vs. Aces",
+    "title": "Caitlin Clark's bloody-mouth no-call deserves a closer look",
     "description": "Caitlin Clark caught an elbow from Jewell Loyd with about three minutes left in Game 3. No foul was called. The Aces won 94-83.",
     "category": "WNBA Playoffs",
     "date": "2026-10-01",
+    "teams": [
+      "indiana-fever",
+      "las-vegas-aces"
+    ],
     "image": "/images/articles/clark-no-call-aces-game-3/caitlin-clark-fever-2025-2.webp",
     "imageAlt": "Caitlin Clark of the Indiana Fever in a white jersey dribbling the ball with her right hand",
     "imageCredit": "Photo: John Mac / CC BY-SA 4.0",
@@ -351,7 +358,8 @@
     "imageFocal": "center top",
     "imageOg": "/images/articles/clark-no-call-aces-game-3/og-1200.webp",
     "imageOgWidth": 1200,
-    "imageOgHeight": 628
+    "imageOgHeight": 628,
+    "dateModified": "2026-10-09"
   },
   {
     "slug": "fever-aces-game-3-recap",
