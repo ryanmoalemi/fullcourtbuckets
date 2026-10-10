@@ -86,13 +86,13 @@
       "away_score": 85,
       "home_score": 83,
       "overtime": false,
-      "status": "in_progress",
+      "status": "final",
       "source": "balldontlie",
       "fallback": false,
       "crosscheck_matched": true,
       "crosscheck_compared": true,
       "mismatch_count": 0,
-      "plays": 370,
+      "plays": 372,
       "plays_status": "included"
     }
   ]
