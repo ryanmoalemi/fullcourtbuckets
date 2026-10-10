@@ -20,6 +20,10 @@ The importer refreshes current and previous seasons and one rotating historical 
 
 After a successful importer step, the builder regenerates pages from the verified local snapshot, even when an API refresh is not yet due. This supports code changes and recovery from failed deployments. Explicit Pages deployment is required because commits made with GITHUB_TOKEN do not trigger normal branch builds.
 
+## News articles
+
+Read `docs/EDITORIAL_STYLE.md` before writing or editing a `/news/` article. `automation/test_editorial_style.py` checks every news article and blocks a merge when the story breaks those rules. Existing ESPN box-score links can stay. Do not name the stats provider.
+
 ## Editing through chat
 
 - `automation/wnba_sync.py`: API importer and permanent provider-ID mapping.
