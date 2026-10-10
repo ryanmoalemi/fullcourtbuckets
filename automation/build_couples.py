@@ -613,20 +613,16 @@ def faq_items(cards: list[dict]) -> list[tuple[str, str]]:
         aja_bits.append('They have been together since 2021, and Wilson confirmed it publicly in February 2025.')
 
     married_nba = []
-    dating_nba = []
     for card in cards:
         note = card['b_note']
-        if 'nba' not in note.casefold():
+        if 'nba' not in note.casefold() or card['status'] != 'Married':
             continue
         if note.startswith(('Former', 'Retired')):
             detail = 'a ' + note[0].lower() + note[1:]
         else:
             detail = 'a ' + note
-        if card['status'] == 'Married':
-            married_nba.append(f"{card['a']} is married to {card['b']}, {detail}.")
-        else:
-            dating_nba.append(f"{card['a']} is dating {card['b']}, {detail}. That relationship is not listed as a marriage.")
-    nba_bits = married_nba + dating_nba
+        married_nba.append(f"{card['a']} is married to {card['b']}, {detail}.")
+    nba_bits = married_nba
     if not any(card['status'] == 'Married' and 'nba' in card['b_note'].casefold() for card in cards):
         nba_bits.append('No marriage on this page is to a current NBA player.')
 
@@ -652,7 +648,9 @@ def faq_items(cards: list[dict]) -> list[tuple[str, str]]:
 
     return [
         ('Which WNBA players are married?', sentence(f"These marriages are confirmed on this page: {join(married_names)}")),
-        ('Which WNBA players are married to each other?', sentence(f"These married couples are both WNBA players: {join(both_names)}")),
+        ('Which WNBA players are married to each other?', sentence(
+            'The married couples listed here in which both partners have played in the WNBA are ' + join(both_names)
+        )),
         ('Are Paige Bueckers and Azzi Fudd dating?', ' '.join(paige_bits)),
         ("Is A'ja Wilson dating Bam Adebayo?", ' '.join(aja_bits)),
         ('Which WNBA players are married to NBA players?', ' '.join(nba_bits)),
@@ -680,7 +678,7 @@ def heart() -> str:
 
 
 def render_card(card: dict) -> str:
-    badge = '<p class="badge">Both WNBA</p>' if card['both_wnba'] else ''
+    badge = '<p class="badge">Both have played in the WNBA</p>' if card['both_wnba'] else ''
     role = f'<p class="role">{esc(card["b"])}: {esc(card["b_note"])}</p>' if card['b_note'] else ''
     chips = ''.join(
         f'<li><a href="{esc(src)}" target="_blank" rel="noopener"><span>{esc(label)}</span>{esc(text)}</a></li>'
@@ -781,12 +779,12 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
         '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'
         '<a href="/wnba/">Players</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
-        '<p class="lede">Confirmed relationships of WNBA players. Each fact links to the article it came from.</p></section>'
+        '<p class="lede">Publicly reported relationships involving current and former WNBA players. Each entry links to the report behind it; the date of that report matters when reading a relationship status.</p></section>'
         + ''.join(render_card(card) for card in cards)
         + render_faq(items)
         + '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. Splits and rumors are left out.</p>'
-        + '<section class="method" id="method"><h2>How this page was built</h2>'
-        '<p>Empty fields are skipped. A chip stays only when its source URL still resolves. Photos are Wikimedia Commons files, after the license on the file page was checked. A partner without a photo is shown with initials. Both-WNBA couples come first.</p></section>'
+        + '<section class="method" id="method"><h2>About these entries</h2>'
+        '<p>This page includes relationships described publicly by the people involved or by the linked reporting. Older reports may not reflect a current status. Photos and credits remain as displayed.</p></section>'
         + f'<p class="checked">Last checked {CHECKED}.</p>'
         + render_credits(cards)
     )

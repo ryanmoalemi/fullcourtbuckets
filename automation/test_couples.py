@@ -21,8 +21,8 @@ class CouplesPageTests(unittest.TestCase):
         self.assertEqual(body.count('class="couple-card"'), 15)
         self.assertEqual(body.count('<h1>'), 1)
         self.assertIn('Last checked September 29, 2026', body)
-        self.assertIn('Both WNBA', body)
-        self.assertLess(body.find('Both WNBA'), body.find('A&#x27;ja Wilson'))
+        self.assertIn('Both have played in the WNBA', body)
+        self.assertLess(body.find('Both have played in the WNBA'), body.find('A&#x27;ja Wilson'))
         for kind in ('Article', 'ItemList', 'BreadcrumbList', 'FAQPage'):
             self.assertIn(f'"@type": "{kind}"', html)
         self.assertNotIn('\u2014', html)

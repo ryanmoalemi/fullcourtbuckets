@@ -600,8 +600,8 @@ def fiba_faq_answer(profile, name: str, root: Path) -> str:
     if not last or last not in path.read_text(encoding='utf-8'):
         return ''
     return (
-        f'Full Court Buckets lists {name} on the Team USA roster in '
-        '<a href="/news/fiba-womens-basketball-world-cup-2026/">This Is the Olympics of the WNBA</a>.'
+        f'Full Court Buckets covers {name} in '
+        '<a href="/news/fiba-womens-basketball-world-cup-2026/">Team USA at the 2026 Women\'s World Cup</a>.'
     )
 
 

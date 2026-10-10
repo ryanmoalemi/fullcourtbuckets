@@ -195,7 +195,7 @@ def expansion_facts(root: Path) -> dict[str, dict]:
     if not path.is_file():
         return {}
     text = path.read_text(encoding='utf-8')
-    start = text.find('WNBA expansion teams 2026: quick facts')
+    start = text.find('Portland and Toronto at a glance')
     if start < 0:
         return {}
     end = text.find('</table>', start)

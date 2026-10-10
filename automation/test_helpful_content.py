@@ -82,9 +82,17 @@ class HelpfulContentTests(unittest.TestCase):
         html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
         articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
         article = next(item for item in articles if item['slug'] == slug)
-        self.assertEqual(links.outbound_source_links(html), [])
-        self.assertIn(links.HOW_MADE_OTHER_UNLINKED, html)
-        self.assertNotIn('sources linked above', html)
+        hrefs = links.outbound_source_links(html)
+        self.assertIn(
+            'https://usab.prowly.com/469652-sonia-citron-and-kiki-iriafen-added-to-2026-usa-basketball-womens-national-team-roster',
+            hrefs,
+        )
+        self.assertIn('https://www.wnba.com/news/att-all-star-2024-faq', hrefs)
+        self.assertIn(
+            'https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/games/128155-USA-FRA',
+            hrefs,
+        )
+        self.assertIn(links.HOW_MADE_OTHER, html)
         self.assertNotIn('official FIBA', html)
         self.assertNotIn('USA Basketball announcements', html)
         links.assert_disclosure_matches_sources(html)
@@ -102,7 +110,7 @@ class HelpfulContentTests(unittest.TestCase):
                 break
         self.assertEqual(node['datePublished'], '2026-08-30')
         self.assertEqual(node['dateModified'], article['dateModified'])
-        self.assertEqual(node['dateModified'], '2026-10-04')
+        self.assertEqual(node['dateModified'], '2026-10-09')
         bare = '<article><p>No links here.</p><p class="how-made">How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi.</p></article>'
         with self.assertRaises(links.DisclosureError):
             links.assert_disclosure_matches_sources(bare)
@@ -114,7 +122,7 @@ class HelpfulContentTests(unittest.TestCase):
         article = next(item for item in articles if item['slug'] == slug)
         self.assertTrue(article.get('authorWrote'))
         self.assertEqual(article['date'], '2026-10-04')
-        self.assertEqual(article['dateModified'], '2026-10-04')
+        self.assertEqual(article['dateModified'], '2026-10-09')
         self.assertIn(links.HOW_MADE_RYAN, html)
         self.assertNotIn('drafted with AI tools', html)
         self.assertIn('Published October 4, 2026', html)
@@ -129,7 +137,7 @@ class HelpfulContentTests(unittest.TestCase):
             if node is not None:
                 break
         self.assertEqual(node['datePublished'], '2026-10-04')
-        self.assertEqual(node['dateModified'], '2026-10-04')
+        self.assertEqual(node['dateModified'], '2026-10-09')
         self.assertEqual(node['author']['url'], links.AUTHOR_URL)
 
     def test_duplicate_game_one_redirects_to_the_full_recap(self):

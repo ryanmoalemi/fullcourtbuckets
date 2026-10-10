@@ -1772,13 +1772,12 @@ HOW_MADE_OTHER_UNLINKED = (
     'then reviewed and edited by Ryan Moalemi.'
 )
 HOW_MADE_RYAN = (
-    'How this was made: Ryan Moalemi researched and wrote this article himself from the sources linked above '
-    '(Topps, PSA, SportsCardsPro/PriceCharting, and school athletics sites). '
-    'AI tools were used only for fact-checking and formatting edits.'
+    'How this was made: This article was drafted with AI assistance from the linked sources '
+    'and reviewed and edited by Ryan Moalemi.'
 )
 HOW_MADE_RYAN_UNLINKED = (
-    'How this was made: Ryan Moalemi researched and wrote this article himself. '
-    'AI tools were used only for fact-checking and formatting edits.'
+    'How this was made: This article was drafted with AI assistance '
+    'and reviewed and edited by Ryan Moalemi.'
 )
 HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
 _OWN_HOSTS = frozenset({'fullcourtbuckets.com', 'www.fullcourtbuckets.com'})
