@@ -309,8 +309,78 @@ class SeasonTeamTests(unittest.TestCase):
         self.assertEqual(teams.pick_v3_candidates(items, "Lexie Brown"), [3058892])
         self.assertTrue(teams.needs_refetch("no-match"))
         self.assertTrue(teams.needs_refetch("error: HTTP Error 404: Not Found"))
+        self.assertTrue(teams.needs_refetch("ambiguous-name"))
+        self.assertTrue(teams.needs_refetch("ambiguous-match"))
         self.assertFalse(teams.needs_refetch("ok"))
-        self.assertFalse(teams.needs_refetch("ambiguous-name"))
+
+    def test_directory_uses_a_unique_last_name_when_search_has_no_exact_name(self):
+        index = {
+            "migna toure": [5279789],
+            "deja kelly": [4433410],
+            "another kelly": [11],
+        }
+        self.assertEqual(teams.directory_candidates(index, "Mamignan Toure"), [5279789])
+        self.assertEqual(teams.directory_candidates(index, "Deja Kelly"), [4433410])
+        self.assertEqual(teams.directory_candidates(index, "Kelly Something"), [])
+
+    def test_gamelog_clubs_skip_preseason_and_add_month_splits(self):
+        payload = {
+            "events": {
+                "1": {"team": {"id": "13", "abbreviation": "SAC", "isAllStar": False}},
+                "2": {"team": {"id": "13", "abbreviation": "SAC", "isAllStar": False}},
+                "3": {"team": {"id": "99", "abbreviation": "WEST", "isAllStar": True}},
+                "4": {"team": {"id": "13", "abbreviation": "SAC", "isAllStar": False}},
+            },
+            "seasonTypes": [
+                {"displayName": "2008 Preseason", "categories": [{"events": [{"eventId": "4"}]}]},
+                {"displayName": "2008 Regular Season", "categories": [
+                    {"events": [{"eventId": "1"}]},
+                    {"events": [{"eventId": "2"}, {"eventId": "3"}]},
+                ]},
+                {"displayName": "2008 Postseason", "categories": [{"events": [{"eventId": "1"}]}]},
+            ],
+        }
+        clubs = teams.clubs_from_gamelog(payload)
+        self.assertEqual(clubs[2]["13"]["count"], 2)
+        self.assertEqual(clubs[2]["99"]["count"], 1)
+        self.assertEqual(clubs[3]["13"]["count"], 1)
+        self.assertNotIn(1, clubs)
+        line = {"games_played": 34, "pts": 5.5}
+        stints = teams.stints_from_clubs(2008, clubs[2], line, {"13": "sacramento-monarchs", "99": "west"})
+        self.assertEqual(stints, [{
+            "season": 2008,
+            "games_played": 34,
+            "team_slug": "sacramento-monarchs",
+            "pts": 5.5,
+        }])
+
+    def test_all_star_row_does_not_block_the_regular_club(self):
+        existing = [{"season": 2007, "season_type": 2, "games_played": 1, "team_slug": "west"}]
+        extra = [{"season": 2007, "season_type": 2, "games_played": 34, "team_slug": "sacramento-monarchs", "pts": 11.0}]
+        merged = teams.merge_stints(existing, extra)
+        self.assertEqual(
+            [(row["team_slug"], row["games_played"]) for row in merged],
+            [("west", 1), ("sacramento-monarchs", 34)],
+        )
+        hints = [{"season": 2013, "season_type": 2, "games_played": 31}]
+        chicago = [{"season": 2013, "season_type": 2, "games_played": 31, "team_slug": "chicago-sky"}]
+        utah = [{"season": 1999, "season_type": 2, "games_played": 8, "team_slug": "utah-starzz"}]
+        chosen = teams._choose_confirmed([(120, utah, {}), (2069162, chicago, {})], hints)
+        self.assertEqual(chosen[0], 2069162)
+        self.assertEqual(teams.disagreement_years(
+            [{"season": 2026, "season_type": 2, "games_played": 35, "team_slug": "washington-mystics"}],
+            [{"season": 2026, "season_type": 2, "games_played": 31}],
+        ), [2026])
+        self.assertEqual(teams.disagreement_years(
+            [
+                {"season": 2012, "season_type": 2, "games_played": 23, "team_slug": "tulsa-shock"},
+                {"season": 2012, "season_type": 2, "games_played": 4, "team_slug": "atlanta-dream"},
+            ],
+            [
+                {"season": 2012, "season_type": 2, "games_played": 23},
+                {"season": 2012, "season_type": 2, "games_played": 4},
+            ],
+        ), [])
 
     def test_wrong_club_takes_the_cross_check_line(self):
         storm = {"id": 9, "full_name": "Seattle Storm", "abbreviation": "SEA", "city": "Seattle", "name": "Storm", "conference": None}
