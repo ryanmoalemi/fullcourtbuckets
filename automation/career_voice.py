@@ -199,6 +199,7 @@ def _olympic_sentence(name: str, events: list[dict], medal: dict | None, variant
         nation = cp._nation(events[0]['nation'])
         bits = [f"{item['city']} in {item['year']}" for item in events]
         listed = cp._join(bits)
+        squad = nation if nation.lower().startswith('the ') else f'the {nation}'
         if len(events) == 1:
             city = events[0]['city']
             year = events[0]['year']
@@ -206,7 +207,7 @@ def _olympic_sentence(name: str, events: list[dict], medal: dict | None, variant
                 f'{subject} played for {nation} at the {year} Olympics in {city}.',
                 f'{subject} represented {nation} at the Olympics in {city} in {year}.',
                 f'In {year}, {subject} played for {nation} at the Olympics in {city}.',
-                f'{subject} was on the {nation} Olympic team in {city} in {year}.',
+                f'{subject} was on {squad} Olympic team in {city} in {year}.',
                 f'{subject} played Olympic basketball for {nation} in {city} in {year}.',
                 f'At the {year} Olympics, {subject} played for {nation} in {city}.',
             )
@@ -214,7 +215,7 @@ def _olympic_sentence(name: str, events: list[dict], medal: dict | None, variant
             frames = (
                 f'{subject} played for {nation} at the Olympics in {listed}.',
                 f'{subject} represented {nation} at the Olympics in {listed}.',
-                f'{subject} was on the {nation} Olympic team in {listed}.',
+                f'{subject} was on {squad} Olympic team in {listed}.',
                 f'For {nation}, {subject} played at the Olympics in {listed}.',
                 f'{subject} played Olympic basketball for {nation} in {listed}.',
                 f'In {listed}, {subject} played for {nation} at the Olympics.',

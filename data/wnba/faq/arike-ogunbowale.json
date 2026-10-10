@@ -161,10 +161,10 @@
     },
     {
       "question": "Did Arike Ogunbowale compete on Dancing with the Stars?",
-      "answer": "Gleb Savchenko's profile says he and Arike Ogunbowale were partners on season 26 of Dancing with the Stars. They were eliminated in week 2 and tied for seventh.",
+      "answer": "People reported that Arike Ogunbowale and pro Gleb Savchenko were partners on Dancing with the Stars: Athletes and were eliminated in week 2.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Gleb_Savchenko"
+        "https://people.com/tv/dwts-athletes-week-two-eliminations/"
       ],
       "queries": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "question": "What position does Arike Ogunbowale play?",
-      "answer": "Arike Ogunbowale plays guard for the Dallas Wings and wears No. 24. The WNBA lists her as the fifth overall pick in the 2019 draft. The regular-season table lists the Dallas Wings for Arike Ogunbowale.",
+      "answer": "Arike Ogunbowale plays guard for the Dallas Wings and wears No. 24. The WNBA lists her as the fifth overall pick in the 2019 draft.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/1629481/arike-ogunbowale/bio"

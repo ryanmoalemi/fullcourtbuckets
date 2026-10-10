@@ -82,10 +82,11 @@
     },
     {
       "question": "What team does Nneka Ogwumike play for?",
-      "answer": "Nneka Ogwumike plays forward for the Los Angeles Sparks and wears No. 30. The WNBA lists her as the first overall pick in the 2012 draft. The regular-season table lists the Los Angeles Sparks and the Seattle Storm for Nneka Ogwumike.",
+      "answer": "Nneka Ogwumike played forward for the Los Angeles Sparks from 2012 through 2023 and again in 2026, and for the Seattle Storm in 2024 and 2025. She wore No. 30. The WNBA lists her as the first overall pick in the 2012 draft. Sports Business Journal reported on August 19, 2026, that she would retire after the 2026 season. The Sparks missed the playoffs, and her last game was September 24, 2026, against the Golden State Valkyries.",
       "answer_kind": "mixed",
       "sources": [
-        "https://www.wnba.com/player/203014/nneka-ogwumike/bio"
+        "https://www.wnba.com/player/203014/nneka-ogwumike/bio",
+        "https://www.sportsbusinessjournal.com/Articles/2026/08/19/report-ogwumike-remaining-as-wnbpa-president-through-end-of-2026/"
       ],
       "queries": [
         {
@@ -168,10 +169,11 @@
     },
     {
       "question": "Is Nneka Ogwumike the WNBPA president?",
-      "answer": "The WNBA lists Nneka Ogwumike as WNBPA president from 2016 to the present.",
-      "answer_kind": "bio",
+      "answer": "The WNBPA Board of Player Representatives reelected Nneka Ogwumike in June 2026. Sports Business Journal reported on August 19, 2026, that she is expected to serve only until the union's election at the end of 2026.",
+      "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/203014/nneka-ogwumike/bio"
+        "https://www.sportsbusinessjournal.com/Articles/2026/06/25/nneka-ogwumike-reelected-wnbpa-president-for-4th-term/",
+        "https://www.sportsbusinessjournal.com/Articles/2026/08/19/report-ogwumike-remaining-as-wnbpa-president-through-end-of-2026/"
       ],
       "queries": [
         {

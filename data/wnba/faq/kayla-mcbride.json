@@ -72,7 +72,7 @@
     },
     {
       "question": "What team does Kayla McBride play for?",
-      "answer": "Kayla McBride plays guard for the Minnesota Lynx and wears No. 21. Basketball-Reference lists the San Antonio Stars as selecting her third overall in the 2014 draft. The regular-season table lists the San Antonio Stars, the Las Vegas Aces, and the Minnesota Lynx for Kayla McBride.",
+      "answer": "Kayla McBride plays guard for the Minnesota Lynx and wears No. 21. Basketball-Reference lists the San Antonio Stars as selecting her third overall in the 2014 draft.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html",
@@ -91,7 +91,7 @@
     },
     {
       "question": "How tall is Kayla McBride?",
-      "answer": "Basketball-Reference lists Kayla McBride at 5 feet 11 inches. Notre Dame listed her at 5 feet 11 inches.",
+      "answer": "Basketball-Reference and Notre Dame list Kayla McBride at 5 feet 11 inches.",
       "answer_kind": "bio",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html",
@@ -110,7 +110,7 @@
     },
     {
       "question": "What is Kayla McBride's nationality?",
-      "answer": "Basketball-Reference lists Kayla McBride as born in the United States.",
+      "answer": "Kayla McBride is American.",
       "answer_kind": "bio",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/m/mcbrika01w.html"

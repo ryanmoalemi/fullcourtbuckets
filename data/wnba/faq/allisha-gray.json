@@ -28,7 +28,7 @@
     },
     {
       "question": "What team does Allisha Gray play for?",
-      "answer": "Allisha Gray plays guard for the Atlanta Dream and wears No. 15. The regular-season table lists the Dallas Wings and the Atlanta Dream for Allisha Gray. The WNBA lists a gold medal in 3x3 basketball at the 2020 Olympics.",
+      "answer": "Allisha Gray plays guard for the Atlanta Dream and wears No. 15. The WNBA lists a gold medal in 3x3 basketball at the 2020 Olympics.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/player/1628277/allisha-gray/bio"
@@ -159,7 +159,7 @@
     },
     {
       "question": "Where is Allisha Gray from?",
-      "answer": "Team USA lists Allisha Gray's hometown as Sandersville, Georgia. South Carolina's bio says she was born January 12, 1995, in Greenwood, South Carolina, and played at Washington County High School.",
+      "answer": "Team USA lists Allisha Gray's hometown as Sandersville, Georgia. South Carolina lists her birth as January 12, 1995, in Greenwood, South Carolina, and her high school as Washington County.",
       "answer_kind": "bio",
       "sources": [
         "https://www.teamusa.com/profiles/allisha-gray-869102",
@@ -178,10 +178,10 @@
     },
     {
       "question": "Has Allisha Gray played in Unrivaled?",
-      "answer": "The WNBA lists Allisha Gray as a 2026 Unrivaled champion with Mist.",
+      "answer": "Unrivaled lists Allisha Gray with Lunar Owls BC in 2025 and Mist BC in 2026, and as a 2026 Unrivaled champion with Mist.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/1628277/allisha-gray/bio"
+        "https://www.unrivaled.basketball/player/allisha-gray-5df4bg3v8c9g/bio"
       ],
       "queries": [
         {
@@ -210,10 +210,11 @@
     },
     {
       "question": "Where did Allisha Gray play college basketball?",
-      "answer": "South Carolina's bio says Allisha Gray played two seasons at North Carolina, then at South Carolina, and left early for the WNBA draft.",
+      "answer": "South Carolina lists Allisha Gray as playing two seasons at North Carolina, then at South Carolina, where the Gamecocks won the 2017 NCAA championship. She left early for the WNBA draft.",
       "answer_kind": "bio",
       "sources": [
-        "https://gamecocksonline.com/sports/wbball/roster/player/allisha-gray/"
+        "https://gamecocksonline.com/sports/wbball/roster/player/allisha-gray/",
+        "https://gamecocksonline.com/news/2017/09/19/allisha-gray-named-wnba-rookie-of-the-year/"
       ],
       "queries": [
         {

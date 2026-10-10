@@ -342,6 +342,12 @@ class BuildTests(unittest.TestCase):
         continuous['season_stats'] = [{**base, 'season': year} for year in range(2018, 2027)]
         self.assertIn('Seasons on record: 2018 to 2026.', b.player_description(continuous))
         self.assertIn('from 2018 to 2026', b.years_faq_answer(continuous, 'Example Player'))
+        retired = copy.deepcopy(continuous)
+        retired['active_in_provider_feed'] = False
+        self.assertEqual(
+            b.years_faq_answer(retired, 'Example Player'),
+            'Example Player played 9 regular seasons, from 2018 to 2026.',
+        )
         inactive = copy.deepcopy(gapped)
         inactive['active_in_provider_feed'] = False
         inactive['current_team'] = None

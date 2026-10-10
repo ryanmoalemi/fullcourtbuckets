@@ -24,10 +24,11 @@
     },
     {
       "question": "Who is Gabriela Jaquez's brother?",
-      "answer": "Jaime Jaquez Jr.'s bio says he is the oldest of three siblings. His younger sister is Gabriela Jaquez, and his younger brother is Marcos. Jaime Jaquez Jr. plays for the Milwaukee Bucks.",
+      "answer": "The Los Angeles Times reported that Jaime Jaquez Jr. is the oldest of three siblings. His younger sister is Gabriela Jaquez, and his younger brother is Marcos. NBA.com lists him with the Milwaukee Bucks.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaime_Jaquez_Jr."
+        "https://www.latimes.com/sports/ucla/story/2023-03-23/gabriela-jaquez-ucla-womens-basketball-sweet-16",
+        "https://www.nba.com/player/1631170/jaime-jaquez-jr"
       ],
       "queries": [
         {
@@ -76,10 +77,10 @@
     },
     {
       "question": "Who are Gabriela Jaquez's parents?",
-      "answer": "Jaime Jaquez Jr.'s bio says their parents are Angela and Jaime Jaquez Sr., and that both played basketball at Concordia University Irvine.",
+      "answer": "The Los Angeles Times reported that Gabriela Jaquez's parents are Angela and Jaime Jaquez Sr., and that both played basketball at Concordia University Irvine.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaime_Jaquez_Jr."
+        "https://www.latimes.com/sports/ucla/story/2023-03-23/gabriela-jaquez-ucla-womens-basketball-sweet-16"
       ],
       "queries": [
         {
@@ -146,7 +147,7 @@
     },
     {
       "question": "What team does Gabriela Jaquez play for?",
-      "answer": "Gabriela Jaquez plays guard for the Chicago Sky. The regular-season table lists the Chicago Sky for Gabriela Jaquez.",
+      "answer": "Gabriela Jaquez plays guard for the Chicago Sky.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.wnba.com/draft/2026/prospects/gabriela-jaquez"

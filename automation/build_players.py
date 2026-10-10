@@ -117,7 +117,11 @@ def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
 
 def value(n, integer=False):
-    """One decimal, same half-even rounding the published season tables already use."""
+    """One decimal, matching the published season tables.
+
+    A stored figure such as 9.05 prints as 9.1. That is half-up of the
+    two-place number, not half-even.
+    """
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
         return '-'
     return str(int(n)) if integer and int(n) == n else f'{n:.1f}'
@@ -532,9 +536,10 @@ def years_faq_answer(profile, name: str, root=None) -> str:
         return ''
     count = len(years)
     noun = 'regular season' if count == 1 else 'regular seasons'
+    verb = 'played' if not on_current_roster(profile) else 'has'
     if count > 4 and years_are_continuous(years):
-        return f'{name} has {count} {noun}, from {years[0]} to {years[-1]}.'
-    return f'{name} has {count} {noun}: {_listed([str(year) for year in years])}.'
+        return f'{name} {verb} {count} {noun}, from {years[0]} to {years[-1]}.'
+    return f'{name} {verb} {count} {noun}: {_listed([str(year) for year in years])}.'
 
 
 def three_point_faq_answer(profile, name: str) -> str:

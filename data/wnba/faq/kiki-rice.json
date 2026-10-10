@@ -20,7 +20,7 @@
     },
     {
       "question": "Is Kiki Rice related to Condoleezza Rice?",
-      "answer": "Town & Country names Kiki Rice's aunt as Susan Rice and former NBA player Allan Houston as her cousin. That account does not name Condoleezza Rice or Jerry Rice.",
+      "answer": "There is no reported relation between Kiki Rice and Condoleezza Rice. Town & Country reports that her aunt is Susan Rice.",
       "answer_kind": "researched",
       "sources": [
         "https://www.townandcountrymag.com/leisure/sporting/a70936551/who-are-kiki-rice-parents-john-andrea/"
@@ -134,7 +134,7 @@
     },
     {
       "question": "What team does Kiki Rice play for?",
-      "answer": "Kiki Rice plays guard for the Toronto Tempo. Basketball-Reference lists the Toronto Tempo as selecting her sixth overall in the 2026 WNBA draft. The regular-season table lists the Toronto Tempo for Kiki Rice.",
+      "answer": "Kiki Rice plays guard for the Toronto Tempo. Basketball-Reference lists the Toronto Tempo as selecting her sixth overall in the 2026 WNBA draft.",
       "answer_kind": "mixed",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/r/riceki01w.html"
@@ -164,10 +164,10 @@
     },
     {
       "question": "Where is Kiki Rice from?",
-      "answer": "Basketball-Reference lists Kiki Rice's birthplace as San Francisco, California, and her high school as Sidwell Friends in Washington, D.C.",
+      "answer": "Kiki Rice grew up in Bethesda, Maryland, and played at Sidwell Friends in Washington, D.C. The WNBA lists her birthplace as Bethesda, Maryland, and her high school as Sidwell Friends School.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.basketball-reference.com/wnba/players/r/riceki01w.html"
+        "https://www.wnba.com/draft/2026/prospects/257922/kiki-rice"
       ],
       "queries": [
         {
@@ -182,7 +182,7 @@
     },
     {
       "question": "What is Kiki Rice's real name?",
-      "answer": "Basketball-Reference lists her name as Kira Carroll Rice.",
+      "answer": "Kiki Rice's real name is Kira Carroll Rice.",
       "answer_kind": "bio",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/r/riceki01w.html"

@@ -6,10 +6,11 @@
   "items": [
     {
       "question": "What team did Maya Moore play for?",
-      "answer": "Maya Moore played forward for the Minnesota Lynx. The WNBA says the Lynx selected her first overall in the 2011 draft. Her last WNBA season was 2018, and she is not on a current roster.",
+      "answer": "Maya Moore played forward for the Minnesota Lynx. The WNBA says the Lynx selected her first overall in the 2011 draft. She stepped away in 2019 and officially retired in January 2023.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/player/202632/maya-moore/bio"
+        "https://www.wnba.com/player/202632/maya-moore/bio",
+        "https://apnews.com/article/sports-retirements-wnba-finals-minnesota-lynx-maya-moore-4774bf710ff45f8d7c146c19cad28bae"
       ],
       "queries": [
         {
@@ -190,10 +191,10 @@
     },
     {
       "question": "What is Maya Moore doing now?",
-      "answer": "Maya Moore's last WNBA season was 2018. She is not on a current roster. The Naismith Memorial Basketball Hall of Fame enshrined her in 2025.",
+      "answer": "Maya Moore stepped away from the WNBA in 2019 and officially retired in January 2023. The Naismith Memorial Basketball Hall of Fame enshrined her in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.wnba.com/player/202632/maya-moore/bio",
+        "https://apnews.com/article/sports-retirements-wnba-finals-minnesota-lynx-maya-moore-4774bf710ff45f8d7c146c19cad28bae",
         "https://www.hoophall.com/hall-of-famers/maya-moore"
       ],
       "queries": [
@@ -235,7 +236,7 @@
     },
     {
       "question": "How many years did Maya Moore play in the WNBA?",
-      "answer": "Maya Moore has 8 regular seasons, from 2011 to 2018.",
+      "answer": "Maya Moore played 8 regular seasons, from 2011 to 2018.",
       "answer_kind": "stats",
       "sources": [
         "https://www.wnba.com/player/202632/maya-moore/bio"
@@ -257,10 +258,11 @@
     },
     {
       "question": "Where is Maya Moore from?",
-      "answer": "The WNBA says Maya Moore was born June 11, 1989, in Jefferson City, Missouri. She is the daughter of Kathryn Moore.",
+      "answer": "The WNBA says Maya Moore was born June 11, 1989, in Jefferson City, Missouri. She is the daughter of Kathryn Moore. She grew up in Georgia and played at Collins Hill High School in Suwanee.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/player/202632/maya-moore/bio"
+        "https://www.wnba.com/player/202632/maya-moore/bio",
+        "https://www.nytimes.com/athletic/385203/2018/06/08/maya-moore-lynx-uconn-collins-hill-geno-auriemma-cheryl-reeve/"
       ],
       "queries": [
         {
