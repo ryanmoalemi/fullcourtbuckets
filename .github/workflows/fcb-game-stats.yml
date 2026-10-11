@@ -16,6 +16,13 @@ on:
       timezone: America/Los_Angeles
     - cron: '25 9 * * *'
       timezone: America/Los_Angeles
+  push:
+    # Pushing this file on the backfill branch starts the ATL/GSV backfill.
+    # The manual start is workflow_dispatch with backfill set to true.
+    branches:
+      - cursor/atl-gsv-2026-games-9c50
+    paths:
+      - .github/workflows/fcb-game-stats.yml
   workflow_dispatch:
     inputs:
       date:
@@ -47,7 +54,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   dispatch-to-production:
-    if: github.ref != 'refs/heads/main' && inputs.backfill != true && inputs.backfill != 'true'
+    if: github.event_name != 'push' && github.ref != 'refs/heads/main' && inputs.backfill != true && inputs.backfill != 'true'
     runs-on: ubuntu-latest
     permissions:
       actions: write
@@ -117,7 +124,7 @@ jobs:
         if: steps.pull.outcome == 'failure' || steps.audit.outcome == 'failure'
         run: exit 1
   backfill:
-    if: github.event_name == 'workflow_dispatch' && (inputs.backfill == true || inputs.backfill == 'true')
+    if: (github.event_name == 'workflow_dispatch' && (inputs.backfill == true || inputs.backfill == 'true')) || (github.event_name == 'push' && github.ref == 'refs/heads/cursor/atl-gsv-2026-games-9c50')
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
