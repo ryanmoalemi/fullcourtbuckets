@@ -12,6 +12,7 @@ import json
 import re
 from pathlib import Path
 
+import per_game
 import team_names
 
 WORD_RE = re.compile(r"[A-Za-z0-9']+")
@@ -94,10 +95,9 @@ def _team(row: dict) -> str:
     return team_names.public_name(raw)
 
 
-def _num(value) -> str | None:
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
-        return None
-    return f'{float(value):.1f}'
+def _num(value, games) -> str | None:
+    """One-decimal counting average from the integer total and games played."""
+    return per_game.shown_average(value, games)
 
 
 def _games(value) -> str | None:
@@ -139,7 +139,7 @@ def _span_phrase(group: dict) -> str:
 def _line_bits(row: dict) -> str:
     bits = []
     for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
-        shown = _num(row.get(key))
+        shown = _num(row.get(key), row.get('games_played'))
         if shown is not None:
             bits.append(f'{shown} {word}')
     if not bits:
@@ -153,7 +153,7 @@ def _line_bits(row: dict) -> str:
 
 
 def _best(rows: list[dict]) -> dict | None:
-    scored = [row for row in rows if _num(row.get('pts')) is not None]
+    scored = [row for row in rows if _num(row.get('pts'), row.get('games_played')) is not None]
     if not scored:
         return None
 

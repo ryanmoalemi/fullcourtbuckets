@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 from analytics import GA4_TAG
 import homepage_rail
 import internal_links as links
+import per_game
 import season_teams
 import site_nav
 import wnba_sync
@@ -117,14 +118,23 @@ def esc(value):
     return html.escape('' if value is None else str(value), quote=True)
 
 def value(n, integer=False):
-    """One decimal, matching the published season tables.
+    """Format a stored figure. Counting averages use per_game.shown_average.
 
-    A stored figure such as 9.05 prints as 9.1. That is half-up of the
-    two-place number, not half-even.
+    Shooting percentages and game-log totals stay here. Per-game points,
+    rebounds, assists, and the other counting averages are recovered from
+    the integer total and rounded half up in per_game.
     """
     if isinstance(n, bool) or not isinstance(n, (float, int)) or not math.isfinite(n):
         return '-'
     return str(int(n)) if integer and int(n) == n else f'{n:.1f}'
+
+
+def row_average(row, key: str) -> str:
+    """One-decimal counting average for a season row. '-' when it is missing."""
+    if not isinstance(row, dict):
+        return '-'
+    shown = per_game.shown_average(row.get(key), row.get('games_played'))
+    return shown if shown is not None else '-'
 
 def timestamp(raw, short=False):
     try:
@@ -201,10 +211,19 @@ def stats_day(profile):
         return None
     return pacific_day(profile.get('stats_updated_at') or profile.get('checked_at'))
 
-def plain_average(n):
-    if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
-        return None
-    return f'{n:.1f}'
+def plain_average(n, games):
+    """One-decimal counting average from the integer total and games played."""
+    return per_game.shown_average(n, games)
+
+
+_COUNTING_COLUMNS = frozenset({'min', 'pts', 'reb', 'ast', 'stl', 'blk', 'turnover'})
+
+
+def _season_cell(row, key: str) -> str:
+    """Table cell. Counting averages use the recovered total. Percentages stay stored."""
+    if key in _COUNTING_COLUMNS:
+        return row_average(row, key)
+    return value(row.get(key), key == 'games_played')
 
 def plain_games(n):
     if isinstance(n, bool) or not isinstance(n, (int, float)) or not math.isfinite(n):
@@ -221,7 +240,7 @@ def season_sentence(row):
     label = 'playoffs' if row.get('season_type') == 3 else 'season'
     bits = []
     for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
-        num = plain_average(row.get(key))
+        num = plain_average(row.get(key), row.get('games_played'))
         if num is not None:
             bits.append(f'{num} {word}')
     games = plain_games(row.get('games_played'))
@@ -341,7 +360,7 @@ def stats_table(profile, kind, highlight_year=None):
     label='Regular season' if kind==2 else 'Playoffs'
     cells=[]
     for r in rows:
-        cols=''.join(f'<td>{value(r.get(key),key=="games_played")}</td>' for key,_ in COLUMNS)
+        cols=''.join(f'<td>{_season_cell(r, key)}</td>' for key,_ in COLUMNS)
         mark = kind == 2 and highlight_year is not None and r.get('season') == highlight_year
         klass = ' class="rookie-year"' if mark else ''
         cells.append(f'<tr{klass} data-season="{r["season"]}"><th scope="row">{r["season"]}</th><td class="team-cell">{esc(tname(r.get("team")))}</td>{cols}</tr>')
@@ -652,7 +671,7 @@ def season_faq_answer(profile, name: str) -> str:
     if row:
         bits = []
         for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
-            num = value(row.get(key))
+            num = row_average(row, key)
             if num != '-':
                 bits.append(f'{num} {word}')
         games = value(row.get('games_played'), True)
@@ -687,7 +706,7 @@ def tracked_games_answer(name: str, games: list, profile) -> str:
             nums.append(float(num))
         if not nums:
             return None
-        return value(sum(nums) / len(nums))
+        return per_game.shown_mean(nums)
 
     bits = []
     for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
@@ -741,7 +760,7 @@ def faq_table_mismatches(profile, pairs) -> list[str]:
         kind = faq_stat_kind(question)
         if kind == 'season' and row:
             for key, word in (('pts', 'points'), ('reb', 'rebounds'), ('ast', 'assists')):
-                num = value(row.get(key))
+                num = row_average(row, key)
                 if num != '-' and f'{num} {word}' not in answer:
                     problems.append(_faq_conflict(slug, f'table says {num} {word}', answer))
             games = value(row.get('games_played'), True)
@@ -766,7 +785,7 @@ def faq_table_mismatches(profile, pairs) -> list[str]:
                     nums.append(float(num))
                 if not nums:
                     continue
-                shown_avg = value(sum(nums) / len(nums))
+                shown_avg = per_game.shown_mean(nums)
                 if f'{shown_avg} {word}' not in answer:
                     problems.append(_faq_conflict(slug, f'game log says {shown_avg} {word}', answer))
         elif kind == 'season' and not row:
@@ -1383,7 +1402,7 @@ def _single_average_answer(profile, name: str, key: str, word: str) -> str:
     row = headline(profile)
     if not row:
         return ''
-    number = value(row.get(key))
+    number = row_average(row, key)
     games = value(row.get('games_played'), True)
     year = row.get('season')
     if number == '-' or games == '-' or not year:
@@ -1844,14 +1863,15 @@ def _roster_stats(root, player: dict) -> dict:
         return empty
     fields = bio_fields(profile.get('player') or {})
     line = _season_line_2026(profile)
+    played = line.get('games_played') if line else None
     return {
         'number': fields.get('jersey_number') or '',
         'position': {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}.get(fields.get('position'), fields.get('position') or ''),
-        'pts': plain_average((line or {}).get('pts')) if line else None,
-        'reb': plain_average((line or {}).get('reb')) if line else None,
-        'ast': plain_average((line or {}).get('ast')) if line else None,
-        'min': plain_average((line or {}).get('min')) if line else None,
-        'min_raw': (line or {}).get('min') if line and plain_average((line or {}).get('min')) else None,
+        'pts': plain_average(line.get('pts'), played) if line else None,
+        'reb': plain_average(line.get('reb'), played) if line else None,
+        'ast': plain_average(line.get('ast'), played) if line else None,
+        'min': plain_average(line.get('min'), played) if line else None,
+        'min_raw': line.get('min') if line and plain_average(line.get('min'), played) else None,
     }
 
 
@@ -1933,7 +1953,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
     metrics = ''
     if row:
         for key, label in (('pts', 'POINTS'), ('ast', 'ASSISTS'), ('reb', 'REBOUNDS')):
-            shown = value(row.get(key))
+            shown = row_average(row, key)
             if shown == '-':
                 continue
             metrics += f'<div class="metric"><strong>{shown}</strong><span>{label}<small>PER GAME</small></span></div>'
@@ -2075,7 +2095,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     position={'G':'Guard','F':'Forward','C':'Center'}.get(fields.get('position'),fields.get('position',''))
     number=fields.get('jersey_number','')
     note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No single season line for the latest year'
-    metrics=''.join(f'<div class="metric"><strong>{value((row or {}).get(k))}</strong><span>{label}<small>PER GAME</small></span></div>' for k,label in [('pts','POINTS'),('ast','ASSISTS'),('reb','REBOUNDS')])
+    metrics=''.join(f'<div class="metric"><strong>{row_average(row, k)}</strong><span>{label}<small>PER GAME</small></span></div>' for k,label in [('pts','POINTS'),('ast','ASSISTS'),('reb','REBOUNDS')])
     meta=' / '.join(esc(x) for x in [('#'+number) if number else '',position,tname(team) if team else ''] if x)
     gap = season_cross_check(profile, root)
     record_label = 'Verified seasons' if gap['missing'] or gap['games'] else 'Records available'
@@ -2090,7 +2110,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
-        intro=f'{name} averaged {row["pts"]:.1f} points, {row["reb"]:.1f} rebounds and {row["ast"]:.1f} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
+        intro=f'{name} averaged {row_average(row, "pts")} points, {row_average(row, "reb")} rebounds and {row_average(row, "ast")} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
     overview=f'<p>{esc(intro)}</p>'
     if team:
         team_label=links.linked_team_name(tname(team), linking, budget)
@@ -2238,7 +2258,7 @@ def _directory_ppg(profile) -> str:
     aggregate = [row for row in chosen if not ((row.get('team') or {}).get('id'))]
     pool = aggregate or chosen
     row = max(pool, key=lambda item: item.get('games_played') or 0)
-    return plain_average(row.get('pts')) or ''
+    return plain_average(row.get('pts'), row.get('games_played')) or ''
 
 
 def _directory_team(entry, profile) -> str:
