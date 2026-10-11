@@ -1,150 +1,203 @@
 {
   "slug": "shakira-austin",
   "player_name": "Shakira Austin",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Shakira Austin's stats / points per game?",
-      "answer": "In the 2026 regular season, Shakira Austin averaged 17.0 points, 9.4 rebounds, and 2.6 assists in 41 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What are Shakira Austin's stats?",
+      "answer": "In the 2026 regular season, Shakira Austin averaged 16.9 points, 9.5 rebounds, and 2.6 assists in 43 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "shakira austin stats",
-      "approx_monthly_volume": 14800
-    },
-    {
-      "question": "Who is Shakira Austin dating?",
-      "answer": "As of late 2026, Shakira Austin has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
+        "https://fullcourtbuckets.com/wnba/shakira-austin/"
       ],
-      "google_keyword": "shakira austin partner",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How much does Shakira Austin make?",
-      "answer": "A precise public salary or net worth figure for Shakira Austin is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "shakira austin net worth",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "shakira austin stats",
+          "vol": 14800
+        },
+        {
+          "q": "shakira austin game log",
+          "vol": 140
+        },
+        {
+          "q": "shakira austin points per game",
+          "vol": 50
+        },
+        {
+          "q": "shakira austin rebounds",
+          "vol": 50
+        },
+        {
+          "q": "shakira austin points",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How tall is Shakira Austin?",
-      "answer": "Shakira Austin is listed at 6' 5\".",
+      "answer": "The WNBA lists Shakira Austin at 6 feet 5 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
+        "https://www.wnba.com/player/1631022/shakira-austin"
       ],
-      "google_keyword": "shakira austin height",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How old is Shakira Austin?",
-      "answer": "She was born July 25, 2000 in Fredericksburg. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
-      ],
-      "google_keyword": "shakira austin age",
-      "approx_monthly_volume": 210,
-      "birthdate": "2000-07-25"
-    },
-    {
-      "question": "What did Shakira Austin score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Connecticut Sun), Shakira Austin had 25.0 points, 13.0 rebounds, and 1.0 assists in a 79-69 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is shakira austin playing tonight",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Shakira Austin's contract?",
-      "answer": "Contract length and guarantees for Shakira Austin are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "shakira austin contract",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Shakira Austin married?",
-      "answer": "There is no widely reported public record of Shakira Austin being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
-      ],
-      "google_keyword": "shakira austin wife",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What team does Shakira Austin play for?",
-      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 0. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "shakira austin team",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Where is Shakira Austin from?",
-      "answer": "She is from Fredericksburg.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
-      ],
-      "google_keyword": "where is shakira austin from",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What position does Shakira Austin play?",
-      "answer": "Shakira Austin is listed as a C for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "shakira austin position",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Shakira Austin's nationality?",
-      "answer": "Shakira Austin is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
-      ],
-      "google_keyword": "shakira austin parents nationality",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Shakira Austin injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "shakira austin injury",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "shakira austin height",
+          "vol": 880
+        },
+        {
+          "q": "how tall is shakira austin",
+          "vol": 260
+        }
+      ]
     },
     {
       "question": "Who are Shakira Austin's parents?",
-      "answer": "Public profiles share limited verified detail about Shakira Austin's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "The WNBA draft profile lists Shakira Austin's parents as Jessica King and David Austin, and says she is the oldest of six.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
+        "https://www.wnba.com/draft/2022/prospects/150699/shakira-austin"
       ],
-      "google_keyword": "shakira austin parents",
-      "approx_monthly_volume": 480
+      "queries": [
+        {
+          "q": "shakira austin parents",
+          "vol": 480
+        },
+        {
+          "q": "shakira austin mother",
+          "vol": 70
+        },
+        {
+          "q": "shakira austin mom",
+          "vol": 70
+        },
+        {
+          "q": "shakira austin dad",
+          "vol": 50
+        },
+        {
+          "q": "shakira austin family",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What college did Shakira Austin attend?",
-      "answer": "Shakira Austin played college basketball at University of Mississippi.",
+      "question": "How old is Shakira Austin?",
+      "answer": "Shakira Austin was born July 25, 2000.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631022/shakira-austin"
+      ],
+      "queries": [
+        {
+          "q": "shakira austin age",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "What team does Shakira Austin play for?",
+      "answer": "Shakira Austin plays center for the Washington Mystics and wears No. 0.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631022/shakira-austin"
+      ],
+      "queries": [
+        {
+          "q": "shakira austin mystics",
+          "vol": 210
+        },
+        {
+          "q": "shakira austin wnba",
+          "vol": 170
+        },
+        {
+          "q": "shakira austin washington mystics",
+          "vol": 50
+        },
+        {
+          "q": "shakira austin position",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Has Shakira Austin played in Unrivaled?",
+      "answer": "Unrivaled lists Shakira Austin with Lunar Owls BC in 2025 and with Rose BC in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shakira_Austin"
+        "https://www.unrivaled.basketball/player/shakira-austin-3z8uacbqmewp/bio"
       ],
-      "google_keyword": "shakira austin ole miss",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "shakira austin unrivaled",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where is Shakira Austin from?",
+      "answer": "Ole Miss lists Shakira Austin's hometown as Fredericksburg, Virginia. The WNBA lists her country as the USA.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://olemisssports.com/sports/womens-basketball/roster/shakira-austin/3446",
+        "https://www.wnba.com/player/1631022/shakira-austin"
+      ],
+      "queries": [
+        {
+          "q": "where is shakira austin from",
+          "vol": 70
+        },
+        {
+          "q": "shakira austin nationality",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where was Shakira Austin drafted?",
+      "answer": "The WNBA lists Shakira Austin as the third overall pick in the 2022 draft, selected by the Washington Mystics.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631022/shakira-austin",
+        "https://www.wnba.com/draft/2022/prospects/150699/shakira-austin"
+      ],
+      "queries": [
+        {
+          "q": "shakira austin draft",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where did Shakira Austin play college basketball?",
+      "answer": "The WNBA draft profile says Shakira Austin played two seasons at Ole Miss after transferring from Maryland.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2022/prospects/150699/shakira-austin",
+        "https://olemisssports.com/sports/womens-basketball/roster/shakira-austin/3446"
+      ],
+      "queries": [
+        {
+          "q": "shakira austin ole miss",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How much does Shakira Austin weigh?",
+      "answer": "The WNBA lists Shakira Austin at 200 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631022/shakira-austin"
+      ],
+      "queries": [
+        {
+          "q": "shakira austin weight",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

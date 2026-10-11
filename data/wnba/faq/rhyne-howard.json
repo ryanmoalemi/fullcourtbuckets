@@ -1,160 +1,257 @@
 {
   "slug": "rhyne-howard",
   "player_name": "Rhyne Howard",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Rhyne Howard's stats / points per game?",
-      "answer": "In the 2026 regular season, Rhyne Howard averaged 18.0 points, 3.8 rebounds, and 3.6 assists in 42 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Rhyne Howard's stats?",
+      "answer": "In the 2026 regular season, Rhyne Howard averaged 17.7 points, 3.8 rebounds, and 3.7 assists in 43 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rhyne howard stats",
-      "approx_monthly_volume": 12100
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rhyne-howard/"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard stats",
+          "vol": 12100
+        },
+        {
+          "q": "rhyne howard game log",
+          "vol": 170
+        },
+        {
+          "q": "rhyne howard points per game",
+          "vol": 70
+        },
+        {
+          "q": "rhyne howard average points per game",
+          "vol": 70
+        },
+        {
+          "q": "rhyne howard stats per game",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Are Rhyne Howard and Natasha Howard related?",
+      "answer": "Kentucky lists Rhyne Howard's sisters as Love Howard and Takema Sexton, and her brothers as RaShawn Avery and James Howard Jr. Natasha Howard is not among them.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
+      ],
+      "queries": [
+        {
+          "q": "natasha howard and rhyne howard related",
+          "vol": 390
+        },
+        {
+          "q": "are rhyne howard and natasha howard related",
+          "vol": 170
+        },
+        {
+          "q": "is natasha howard and rhyne howard related",
+          "vol": 140
+        },
+        {
+          "q": "are natasha howard and rhyne howard sisters",
+          "vol": 90
+        },
+        {
+          "q": "natasha howard rhyne howard",
+          "vol": 50
+        },
+        {
+          "q": "is natasha howard related to rhyne howard",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Who is in Rhyne Howard's family?",
+      "answer": "Kentucky lists Rhyne Howard's parents as Rhvonja \"RJ\" Avery and James Howard, her brothers as RaShawn Avery and James Howard Jr., and her sisters as Love Howard and Takema Sexton.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard sister",
+          "vol": 260
+        },
+        {
+          "q": "rhyne howard parents",
+          "vol": 110
+        },
+        {
+          "q": "rhyne howard brother",
+          "vol": 50
+        },
+        {
+          "q": "rhyne howard siblings",
+          "vol": 50
+        },
+        {
+          "q": "rhyne howard mom",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is Rhyne Howard?",
-      "answer": "Rhyne Howard is listed at 6' 2\" by the WNBA.",
+      "answer": "The WNBA lists Rhyne Howard at 6 feet 2 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
+        "https://www.wnba.com/player/1631009/rhyne-howard"
       ],
-      "google_keyword": "rhyne howard height",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "rhyne howard height",
+          "vol": 210
+        },
+        {
+          "q": "how tall is rhyne howard",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How old is Rhyne Howard?",
-      "answer": "She was born April 29, 2000 in Chattanooga, Tennessee, U.S. As of late 2026 that puts her at 26 years old.",
+      "answer": "Rhyne Howard was born April 29, 2000. Kentucky lists her place of birth as Chattanooga, Tennessee.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
+        "https://www.wnba.com/player/1631009/rhyne-howard",
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
       ],
-      "google_keyword": "rhyne howard age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2000-04-29"
-    },
-    {
-      "question": "What did Rhyne Howard score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 at the New York Liberty), Rhyne Howard had 16 points, 6 rebounds, and 1 assists in a 95-84 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is rhyne howard playing tonight",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Rhyne Howard's contract?",
-      "answer": "Public salary trackers list Rhyne Howard at about $1,100,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "rhyne howard contract",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How much does Rhyne Howard make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Rhyne Howard's base salary / cap hit at about $1,100,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "rhyne howard net worth",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What position does Rhyne Howard play?",
-      "answer": "Rhyne Howard is listed as a guard for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rhyne howard position",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "When was Rhyne Howard drafted?",
-      "answer": "Rhyne Howard was drafted first overall by the Dream in the 2022 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "rhyne howard draft",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "rhyne howard age",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "What team does Rhyne Howard play for?",
-      "answer": "She plays for the Atlanta Dream.",
+      "answer": "Rhyne Howard plays guard for the Atlanta Dream and wears No. 10.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631009/rhyne-howard"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard wnba",
+          "vol": 140
+        },
+        {
+          "q": "rhyne howard atlanta dream",
+          "vol": 70
+        },
+        {
+          "q": "rhyne howard position",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Has Rhyne Howard played in Unrivaled?",
+      "answer": "Unrivaled lists Rhyne Howard with Vinyl BC in 2025 and 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.unrivaled.basketball/player/rhyne-howard-4oadwt7gp636/bio"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard unrivaled",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Do Rhyne Howard and Allisha Gray play on the same team?",
+      "answer": "Rhyne Howard and Allisha Gray both play for the Atlanta Dream.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631009/rhyne-howard",
+        "https://www.wnba.com/player/1628277/allisha-gray"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard and allisha gray",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where was Rhyne Howard drafted?",
+      "answer": "The WNBA lists Rhyne Howard as the first overall pick in the 2022 draft, selected by the Atlanta Dream.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631009/rhyne-howard"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard draft",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "How many three-pointers per game does Rhyne Howard average?",
+      "answer": "In the 2026 regular season, Rhyne Howard averaged 3.1 three-pointers per game for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rhyne howard team",
-      "approx_monthly_volume": 0
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rhyne-howard/"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard 3-pointers per game",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Rhyne Howard play college basketball?",
+      "answer": "Rhyne Howard played at Kentucky.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/",
+        "https://www.wnba.com/player/1631009/rhyne-howard"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard kentucky",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "How is Rhyne Howard's name pronounced?",
+      "answer": "Basketball-Reference gives Rhyne Howard's first name as pronounced Ryan.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/h/howarrh01w.html"
+      ],
+      "queries": [
+        {
+          "q": "rhyne howard pronunciation",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "Where is Rhyne Howard from?",
-      "answer": "She is from Chattanooga, Tennessee, U.S.",
+      "answer": "Kentucky lists Rhyne Howard's hometown as Cleveland, Tennessee, her high school as Bradley Central, and her place of birth as Chattanooga, Tennessee.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
       ],
-      "google_keyword": "where is rhyne howard from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Rhyne Howard?",
-      "answer": "Rhyne Howard is an American professional basketball player for the Atlanta Dream of the Women's National Basketball Association (WNBA) and for the Vinyl of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "who is rhyne howard",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Rhyne Howard attend?",
-      "answer": "Rhyne Howard played college basketball at Kentucky.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "rhyne howard kentucky",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Rhyne Howard dating?",
-      "answer": "As of late 2026, Rhyne Howard has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "rhyne howard partner",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "Is Rhyne Howard married?",
-      "answer": "There is no widely reported public record of Rhyne Howard being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "rhyne howard wife",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Rhyne Howard injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rhyne howard injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Does Rhyne Howard have a signature shoe?",
-      "answer": "Public search interest ties Rhyne Howard to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rhyne_Howard"
-      ],
-      "google_keyword": "rhyne howard shoes",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "where is rhyne howard from",
+          "vol": 40
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

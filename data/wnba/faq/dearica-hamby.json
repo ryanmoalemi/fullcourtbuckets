@@ -1,126 +1,178 @@
 {
   "slug": "dearica-hamby",
   "player_name": "Dearica Hamby",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Dearica Hamby's stats / points per game?",
-      "answer": "In the 2026 regular season, Dearica Hamby averaged 14.5 points, 7.0 rebounds, and 2.4 assists in 41 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
+      "question": "What are Dearica Hamby's stats?",
+      "answer": "In the 2026 regular season, Dearica Hamby averaged 14.4 points, 7.0 rebounds, and 2.4 assists in 42 games for the Los Angeles Sparks.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dearica hamby stats",
-      "approx_monthly_volume": 9900
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/dearica-hamby/"
+      ],
+      "queries": [
+        {
+          "q": "dearica hamby stats",
+          "vol": 9900
+        },
+        {
+          "q": "dearica hamby game log",
+          "vol": 110
+        },
+        {
+          "q": "dearica hamby points per game",
+          "vol": 40
+        },
+        {
+          "q": "dearica hamby average points per game",
+          "vol": 40
+        },
+        {
+          "q": "dearica hamby stats per game",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How tall is Dearica Hamby?",
-      "answer": "Dearica Hamby is listed at 6' 3\" by the WNBA.",
+      "answer": "The WNBA lists Dearica Hamby at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
+        "https://www.wnba.com/player/204324/dearica-hamby"
       ],
-      "google_keyword": "dearica hamby height",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How old is Dearica Hamby?",
-      "answer": "She was born November 6, 1993 in Marietta, Georgia, U.S. As of late 2026 that puts her at 32 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
-      ],
-      "google_keyword": "dearica hamby age",
-      "approx_monthly_volume": 140,
-      "birthdate": "1993-11-06"
-    },
-    {
-      "question": "Does Dearica Hamby have kids?",
-      "answer": "Hamby is a mother; she has spoken publicly about balancing motherhood with her WNBA career.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
-      ],
-      "google_keyword": "dearica hamby daughter",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Dearica Hamby make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Dearica Hamby's base salary / cap hit at about $1,100,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "dearica hamby net worth",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What is Dearica Hamby's contract?",
-      "answer": "Public salary trackers list Dearica Hamby at about $1,100,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "dearica hamby contract",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "dearica hamby height",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "What team does Dearica Hamby play for?",
-      "answer": "She plays for the Los Angeles Sparks and wears No. 5 as a forward.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
-      ],
-      "google_keyword": "dearica hamby team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Where is Dearica Hamby from?",
-      "answer": "She is from Marietta, Georgia, U.S.",
+      "answer": "Dearica Hamby plays forward for the Los Angeles Sparks and wears No. 5.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
+        "https://www.wnba.com/player/204324/dearica-hamby"
       ],
-      "google_keyword": "where is dearica hamby from",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "dearica hamby wnba",
+          "vol": 170
+        },
+        {
+          "q": "dearica hamby sparks",
+          "vol": 30
+        },
+        {
+          "q": "dearica hamby team",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Dearica Hamby?",
-      "answer": "Dearica Marie Hamby is an American basketball player for the Los Angeles Sparks of the Women's National Basketball Association (WNBA) and for the Vinyl of Unrivaled.",
-      "answer_kind": "mixed",
+      "question": "How old is Dearica Hamby?",
+      "answer": "Dearica Hamby was born November 6, 1993.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
+        "https://www.wnba.com/player/204324/dearica-hamby"
       ],
-      "google_keyword": "who is dearica hamby",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "dearica hamby age",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Who is Dearica Hamby dating?",
-      "answer": "As of late 2026, Dearica Hamby has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Does Dearica Hamby have children?",
+      "answer": "The Los Angeles Times reported on August 5, 2024, that Dearica Hamby has a daughter, Amaya, and a son, Legend. A June 9, 2024, Times story said Legend was born in March 2023.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
+        "https://www.latimes.com/sports/olympics/story/2024-08-05/sparks-star-dearica-hamby-bronze-medal-3x3-basketball",
+        "https://www.latimes.com/sports/sparks/story/2024-06-09/sparks-dearica-hamby-las-vegas-aces-trade",
+        "https://www.latimes.com/sports/sparks/story/2024-06-26/sparks-dearica-hamby-3x3-usa-basketball-olympic-team"
       ],
-      "google_keyword": "dearica hamby partner",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "dearica hamby daughter",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Is Dearica Hamby married?",
-      "answer": "There is no widely reported public record of Dearica Hamby being married as of late 2026.",
+      "question": "Has Dearica Hamby played in Unrivaled?",
+      "answer": "Unrivaled lists Dearica Hamby with Vinyl BC in 2025 and 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dearica_Hamby"
+        "https://www.unrivaled.basketball/player/dearica-hamby-4prx3vxu62om/bio"
       ],
-      "google_keyword": "dearica hamby husband",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "dearica hamby unrivaled",
+          "vol": 50
+        },
+        {
+          "q": "dearica hamby unrivaled stats",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Is Dearica Hamby injured?",
-      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "dearica hamby injury",
-      "approx_monthly_volume": 50
+      "question": "Where did Dearica Hamby play college basketball?",
+      "answer": "The WNBA lists Dearica Hamby's college as Wake Forest.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204324/dearica-hamby"
+      ],
+      "queries": [
+        {
+          "q": "dearica hamby wake forest",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Did Dearica Hamby win a WNBA championship?",
+      "answer": "The WNBA says Dearica Hamby won the 2022 WNBA championship with the Las Vegas Aces.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204324/dearica-hamby"
+      ],
+      "queries": [
+        {
+          "q": "dearica hamby aces",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How many rebounds per game does Dearica Hamby average?",
+      "answer": "In the 2026 regular season, Dearica Hamby averaged 7.0 rebounds per game for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/dearica-hamby/"
+      ],
+      "queries": [
+        {
+          "q": "dearica hamby rebounds per game",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What happened between Dearica Hamby and Becky Hammon?",
+      "answer": "The Los Angeles Times reported that Dearica Hamby announced a second pregnancy at the Las Vegas Aces' 2022 championship parade, and that Aces coach Becky Hammon was later suspended over comments about the pregnancy.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.latimes.com/sports/sparks/story/2024-06-09/sparks-dearica-hamby-las-vegas-aces-trade"
+      ],
+      "queries": [
+        {
+          "q": "becky hammon dearica hamby",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

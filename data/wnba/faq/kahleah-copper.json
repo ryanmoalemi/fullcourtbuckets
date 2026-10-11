@@ -1,140 +1,178 @@
 {
   "slug": "kahleah-copper",
   "player_name": "Kahleah Copper",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Kahleah Copper's stats / points per game?",
-      "answer": "In the 2026 regular season, Kahleah Copper averaged 21.6 points, 3.6 rebounds, and 1.9 assists in 39 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Kahleah Copper's stats?",
+      "answer": "In the 2026 regular season, Kahleah Copper averaged 21.5 points, 3.7 rebounds, and 1.9 assists in 40 games for the Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kahleah copper stats",
-      "approx_monthly_volume": 12100
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kahleah-copper/"
+      ],
+      "queries": [
+        {
+          "q": "kahleah copper stats",
+          "vol": 12100
+        },
+        {
+          "q": "kahleah copper game log",
+          "vol": 140
+        },
+        {
+          "q": "kahleah copper average points per game",
+          "vol": 70
+        },
+        {
+          "q": "kahleah copper points per game",
+          "vol": 70
+        },
+        {
+          "q": "kahleah copper stats per game",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What did Kahleah Copper score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Dallas Wings), Kahleah Copper had 31 points, 5 rebounds, and 1 assists in a 87-86 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kahleah copper playing tonight",
-      "approx_monthly_volume": 170
+      "question": "What has Kahleah Copper won in the WNBA?",
+      "answer": "The WNBA lists Kahleah Copper as the 2021 WNBA champion and Finals MVP. She was the seventh overall pick in the 2016 draft, selected by the Washington Mystics, and she played at Rutgers.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627674/kahleah-copper"
+      ],
+      "queries": [
+        {
+          "q": "kahleah copper wnba",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How tall is Kahleah Copper?",
-      "answer": "Kahleah Copper is listed at 6' 1\" by the WNBA.",
+      "answer": "The WNBA lists Kahleah Copper at 6 feet 1 inch.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
+        "https://www.wnba.com/player/1627674/kahleah-copper"
       ],
-      "google_keyword": "kahleah copper height",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "kahleah copper height",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "How old is Kahleah Copper?",
-      "answer": "She was born August 28, 1994 in Philadelphia, Pennsylvania, U.S. As of late 2026 that puts her at 32 years old.",
+      "answer": "Kahleah Copper was born August 28, 1994. Team USA says she grew up in North Philadelphia.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
+        "https://www.wnba.com/player/1627674/kahleah-copper",
+        "https://www.teamusa.com/profiles/kahleah-copper"
       ],
-      "google_keyword": "kahleah copper age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1994-08-28"
+      "queries": [
+        {
+          "q": "kahleah copper age",
+          "vol": 110
+        },
+        {
+          "q": "kahleah copper birthday",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What is Kahleah Copper's contract?",
-      "answer": "Public salary trackers list Kahleah Copper at about $1,200,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
+      "question": "Who are Kahleah Copper's parents?",
+      "answer": "Team USA lists Kahleah Copper's parents as Leticia Copper and Jewelz Butler, and says her mother is a breast cancer survivor.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.teamusa.com/profiles/kahleah-copper"
       ],
-      "google_keyword": "kahleah copper contract",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "kahleah copper parents",
+          "vol": 70
+        },
+        {
+          "q": "kahleah copper family",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "How much does Kahleah Copper make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Kahleah Copper's base salary / cap hit at about $1,200,000. Endorsements are separate from that team salary.",
+      "question": "Has Kahleah Copper played in Unrivaled?",
+      "answer": "Unrivaled lists Kahleah Copper with Rose BC in 2025 and 2026, and lists a 2025 Unrivaled championship with Rose.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
+        "https://www.unrivaled.basketball/player/kahleah-copper-2k18gfn8wsmb/bio"
       ],
-      "google_keyword": "kahleah copper salary",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What position does Kahleah Copper play?",
-      "answer": "Kahleah Copper is listed as a guard for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kahleah copper position",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Where is Kahleah Copper from?",
-      "answer": "She is from Philadelphia, Pennsylvania, U.S., and played college basketball at Rutgers.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
-      ],
-      "google_keyword": "where is kahleah copper from",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kahleah copper unrivaled",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "What team does Kahleah Copper play for?",
-      "answer": "She plays for the Phoenix Mercury.",
+      "answer": "Kahleah Copper plays guard for the Phoenix Mercury and wears No. 2.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627674/kahleah-copper"
+      ],
+      "queries": [
+        {
+          "q": "kahleah copper phoenix mercury",
+          "vol": 50
+        },
+        {
+          "q": "kahleah copper mercury",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What position does Kahleah Copper play?",
+      "answer": "Kahleah Copper plays guard. The WNBA also lists her as a guard-forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627674/kahleah-copper",
+        "https://www.teamusa.com/profiles/kahleah-copper"
+      ],
+      "queries": [
+        {
+          "q": "kahleah copper position",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What points mark does Kahleah Copper hold with the Phoenix Mercury?",
+      "answer": "The WNBA says Kahleah Copper is the fastest player to 1,000 points in Phoenix Mercury history.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627674/kahleah-copper"
+      ],
+      "queries": [
+        {
+          "q": "kahleah copper points",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What is Kahleah Copper's three-point percentage?",
+      "answer": "In the 2026 regular season, Kahleah Copper's three-point percentage is 29.8.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kahleah copper team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Kahleah Copper?",
-      "answer": "Kahleah Copper is an American professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA) and for Rose of Unrivaled.",
-      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
+        "https://fullcourtbuckets.com/wnba/kahleah-copper/"
       ],
-      "google_keyword": "who is kahleah copper",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Kahleah Copper dating?",
-      "answer": "As of late 2026, Kahleah Copper has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
-      ],
-      "google_keyword": "kahleah copper girlfriend",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Is Kahleah Copper married?",
-      "answer": "There is no widely reported public record of Kahleah Copper being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
-      ],
-      "google_keyword": "kahleah copper wife",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "Is Kahleah Copper injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kahleah copper injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Does Kahleah Copper have a signature shoe?",
-      "answer": "Public search interest ties Kahleah Copper to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kahleah_Copper"
-      ],
-      "google_keyword": "kahleah copper shoes",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kahleah copper 3 point stats",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
