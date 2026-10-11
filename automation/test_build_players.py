@@ -530,7 +530,9 @@ class BuildTests(unittest.TestCase):
             else:
                 expected_source = 'Google search demand via OpenSEO, Oct 8, 2026'
             self.assertEqual(faq['source'], expected_source)
-            self.assertGreaterEqual(len(faq['items']), 10, slug)
+            # The sister query was folded into the related answer, so Natasha has 9.
+            minimum = 9 if slug == 'natasha-howard' else 10
+            self.assertGreaterEqual(len(faq['items']), minimum, slug)
             self.assertLessEqual(len(faq['items']), 15, slug)
             raw = faq_path.read_text(encoding='utf-8')
             self.assertNotIn('\u2014', raw, slug)
@@ -619,8 +621,9 @@ class BuildTests(unittest.TestCase):
         )
         self.assertEqual(
             b.answer_related_query(plum, 'Which teams has Kelsey Plum played for?', root),
-            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, the Los Angeles Sparks, and the Phoenix Mercury for Kelsey Plum.',
+            'Kelsey Plum has played for the San Antonio Stars, Las Vegas Aces, Los Angeles Sparks and Phoenix Mercury.',
         )
+        self.assertNotIn('table', b.teams_faq_answer(plum, 'Kelsey Plum').casefold())
         page = b.profile_page(plum, root)
         self.assertIn('<tr class="rookie-year" data-season="2017">', page)
         self.assertIn('How tall is Kelsey Plum?', page)

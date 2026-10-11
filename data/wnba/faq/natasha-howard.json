@@ -73,15 +73,20 @@
         {
           "q": "is natasha howard related to rhyne howard",
           "vol": 40
+        },
+        {
+          "q": "does natasha howard have a sister in the wnba",
+          "vol": 40
         }
       ]
     },
     {
       "question": "What has Natasha Howard won in the WNBA?",
-      "answer": "The WNBA lists Natasha Howard as a Seattle Storm champion in 2018 and 2020, the 2019 Defensive Player of the Year, and the fifth overall pick in the 2014 draft by the Indiana Fever.",
+      "answer": "Natasha Howard is a three-time WNBA champion, with the Minnesota Lynx in 2017 and the Seattle Storm in 2018 and 2020. She was the 2019 Defensive Player of the Year and the 2018 Most Improved Player.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.wnba.com/player/203827/natasha-howard/bio"
+        "https://www.wnba.com/player/203827/natasha-howard/bio",
+        "https://lynx.wnba.com/news/lynx-sign-forward-natasha-howard"
       ],
       "queries": [
         {
@@ -152,7 +157,7 @@
     },
     {
       "question": "Which teams has Natasha Howard played for?",
-      "answer": "The regular-season table lists the Indiana Fever, the Minnesota Lynx, the Seattle Storm, the New York Liberty, and the Dallas Wings for Natasha Howard.",
+      "answer": "Natasha Howard has played for the Indiana Fever, Minnesota Lynx, Seattle Storm, New York Liberty and Dallas Wings.",
       "answer_kind": "stats",
       "sources": [
         "https://fullcourtbuckets.com/wnba/natasha-howard/"
@@ -183,20 +188,6 @@
         {
           "q": "natasha howard rebounds per game",
           "vol": 50
-        }
-      ]
-    },
-    {
-      "question": "Does Natasha Howard have a sister in the WNBA?",
-      "answer": "Kentucky lists Rhyne Howard's sisters as Love Howard and Takema Sexton. Natasha Howard is not one of them.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
-      ],
-      "queries": [
-        {
-          "q": "does natasha howard have a sister in the wnba",
-          "vol": 40
         }
       ]
     },

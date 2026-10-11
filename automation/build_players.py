@@ -596,8 +596,19 @@ def rookie_faq_answer(profile, name: str) -> str:
     return sentence
 
 
+def _team_list(names: list[str]) -> str:
+    """'the Fever, Lynx and Storm': one 'the', and no Oxford comma."""
+    if not names:
+        return ''
+    if len(names) == 1:
+        return f'the {names[0]}'
+    if len(names) == 2:
+        return f'the {names[0]} and {names[1]}'
+    return 'the ' + ', '.join(names[:-1]) + ' and ' + names[-1]
+
+
 def teams_faq_answer(profile, name: str) -> str:
-    """Team names printed on the regular-season rows, plus the current team when it differs."""
+    """Teams in first-appearance order. Never mention the stats table."""
     names = []
     rows = [row for row in profile.get('season_stats') or [] if isinstance(row, dict) and row.get('season_type') == 2]
     for row in sorted(rows, key=lambda item: item.get('season') or 0):
@@ -606,7 +617,7 @@ def teams_faq_answer(profile, name: str) -> str:
             names.append(team)
     if not names:
         return ''
-    sentence = f'The regular-season table lists {_listed([f"the {team}" for team in names])} for {name}.'
+    sentence = f'{name} has played for {_team_list(names)}.'
     current = profile.get('current_team')
     if profile.get('active_in_provider_feed') is True and isinstance(current, dict):
         current_name = tname(current)
