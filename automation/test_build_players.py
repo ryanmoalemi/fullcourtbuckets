@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 46)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 56)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -510,20 +510,29 @@ class BuildTests(unittest.TestCase):
             'gabriela-jaquez', 'lexie-brown', 'maya-moore', 'raven-johnson', 'allisha-gray',
             'arike-ogunbowale', 'kamilla-cardoso', 'kayla-mcbride', 'kiki-rice', 'nneka-ogwumike',
         }
+        october_11 = {
+            'rhyne-howard', 'shakira-austin', 'veronica-burton', 'dearica-hamby', 'jonquel-jones',
+            'kahleah-copper', 'jewell-loyd', 'kiki-iriafen', 'nalyssa-smith', 'natasha-howard',
+        }
         self.assertTrue(october_9 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_10 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_11 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_10:
+            if slug in october_11:
+                expected_source = 'Google search demand via OpenSEO, Oct 11, 2026'
+            elif slug in october_10:
                 expected_source = 'Google search demand via OpenSEO, Oct 10, 2026'
             elif slug in october_9:
                 expected_source = 'Google search demand via OpenSEO, Oct 9, 2026'
             else:
                 expected_source = 'Google search demand via OpenSEO, Oct 8, 2026'
             self.assertEqual(faq['source'], expected_source)
-            self.assertGreaterEqual(len(faq['items']), 10, slug)
+            # The sister query was folded into the related answer, so Natasha has 9.
+            minimum = 9 if slug == 'natasha-howard' else 10
+            self.assertGreaterEqual(len(faq['items']), minimum, slug)
             self.assertLessEqual(len(faq['items']), 15, slug)
             raw = faq_path.read_text(encoding='utf-8')
             self.assertNotIn('\u2014', raw, slug)
@@ -612,8 +621,9 @@ class BuildTests(unittest.TestCase):
         )
         self.assertEqual(
             b.answer_related_query(plum, 'Which teams has Kelsey Plum played for?', root),
-            'The regular-season table lists the San Antonio Stars, the Las Vegas Aces, the Los Angeles Sparks, and the Phoenix Mercury for Kelsey Plum.',
+            'Kelsey Plum has played for the San Antonio Stars, Las Vegas Aces, Los Angeles Sparks and Phoenix Mercury.',
         )
+        self.assertNotIn('table', b.teams_faq_answer(plum, 'Kelsey Plum').casefold())
         page = b.profile_page(plum, root)
         self.assertIn('<tr class="rookie-year" data-season="2017">', page)
         self.assertIn('How tall is Kelsey Plum?', page)

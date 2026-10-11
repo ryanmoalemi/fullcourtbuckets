@@ -596,8 +596,19 @@ def rookie_faq_answer(profile, name: str) -> str:
     return sentence
 
 
+def _team_list(names: list[str]) -> str:
+    """'the Fever, Lynx and Storm': one 'the', and no Oxford comma."""
+    if not names:
+        return ''
+    if len(names) == 1:
+        return f'the {names[0]}'
+    if len(names) == 2:
+        return f'the {names[0]} and {names[1]}'
+    return 'the ' + ', '.join(names[:-1]) + ' and ' + names[-1]
+
+
 def teams_faq_answer(profile, name: str) -> str:
-    """Team names printed on the regular-season rows, plus the current team when it differs."""
+    """Teams in first-appearance order. Never mention the stats table."""
     names = []
     rows = [row for row in profile.get('season_stats') or [] if isinstance(row, dict) and row.get('season_type') == 2]
     for row in sorted(rows, key=lambda item: item.get('season') or 0):
@@ -606,7 +617,7 @@ def teams_faq_answer(profile, name: str) -> str:
             names.append(team)
     if not names:
         return ''
-    sentence = f'The regular-season table lists {_listed([f"the {team}" for team in names])} for {name}.'
+    sentence = f'{name} has played for {_team_list(names)}.'
     current = profile.get('current_team')
     if profile.get('active_in_provider_feed') is True and isinstance(current, dict):
         current_name = tname(current)
@@ -1058,6 +1069,8 @@ SEARCH_FAQ_SLUGS = frozenset({
     'diana-taurasi', 'marina-mabrey', 'sonia-citron', 'chennedy-carter', 'dewanna-bonner',
     'gabriela-jaquez', 'lexie-brown', 'maya-moore', 'raven-johnson', 'allisha-gray',
     'arike-ogunbowale', 'kamilla-cardoso', 'kayla-mcbride', 'kiki-rice', 'nneka-ogwumike',
+    'rhyne-howard', 'shakira-austin', 'veronica-burton', 'dearica-hamby', 'jonquel-jones',
+    'kahleah-copper', 'jewell-loyd', 'kiki-iriafen', 'nalyssa-smith', 'natasha-howard',
 })
 RELATED_SEARCH_HOLD = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
 CURATED_FAQ_SLUGS = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS

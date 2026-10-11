@@ -1,152 +1,218 @@
 {
   "slug": "nalyssa-smith",
   "player_name": "NaLyssa Smith",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are NaLyssa Smith's stats / points per game?",
-      "answer": "In the 2026 regular season, NaLyssa Smith averaged 11.7 points, 6.4 rebounds, and 0.9 assists in 38 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are NaLyssa Smith's stats?",
+      "answer": "In the 2026 regular season, NaLyssa Smith averaged 11.7 points, 6.4 rebounds, and 0.9 assists in 38 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nalyssa smith stats",
-      "approx_monthly_volume": 5400
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/nalyssa-smith/"
+      ],
+      "queries": [
+        {
+          "q": "nalyssa smith stats",
+          "vol": 5400
+        },
+        {
+          "q": "nalyssa smith game log",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Does NaLyssa Smith have a signature shoe?",
-      "answer": "Public search interest ties NaLyssa Smith to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "Are NaLyssa Smith and DiJonai Carrington a couple?",
+      "answer": "NaLyssa Smith and DiJonai Carrington are no longer together. People reported they were dating in July 2025, and Carrington announced the split in November 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
+        "https://people.com/wings-nalyssa-smith-sick-stomach-traded-away-girlfriend-teammate-dijonai-carrington-11764857",
+        "https://nypost.com/2026/07/27/sports/nalyssa-smith-speaks-out-on-ex-dijonai-carringtons-claim-she-cheated-with-multiple-wnba-players/"
       ],
-      "google_keyword": "nalyssa smith shoes",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is NaLyssa Smith dating?",
-      "answer": "As of late 2026, NaLyssa Smith has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
-      ],
-      "google_keyword": "nalyssa smith-girlfriend",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How much does NaLyssa Smith make?",
-      "answer": "A precise public salary or net worth figure for NaLyssa Smith is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "nalyssa smith salary",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How tall is NaLyssa Smith?",
-      "answer": "NaLyssa Smith is listed at 6' 4\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
-      ],
-      "google_keyword": "nalyssa smith height",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How old is NaLyssa Smith?",
-      "answer": "She was born August 8, 2000 in San Antonio. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
-      ],
-      "google_keyword": "nalyssa smith age",
-      "approx_monthly_volume": 140,
-      "birthdate": "2000-08-08"
-    },
-    {
-      "question": "What did NaLyssa Smith score in her last game?",
-      "answer": "In her most recent completed game (August 23, 2026 vs. the Toronto Tempo), NaLyssa Smith had 8.0 points, 8.0 rebounds, and 1.0 assists in a 88-78 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is nalyssa smith playing today",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is NaLyssa Smith's contract?",
-      "answer": "Contract length and guarantees for NaLyssa Smith are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "nalyssa smith contract",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Is NaLyssa Smith married?",
-      "answer": "There is no widely reported public record of NaLyssa Smith being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
-      ],
-      "google_keyword": "nalyssa smith wife",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "nalyssa smith and dijonai carrington",
+          "vol": 1600
+        },
+        {
+          "q": "nalyssa smith wife",
+          "vol": 880
+        },
+        {
+          "q": "nalyssa smith-girlfriend",
+          "vol": 390
+        },
+        {
+          "q": "are dijonai carrington and nalyssa smith still together",
+          "vol": 140
+        },
+        {
+          "q": "nalyssa smith partner",
+          "vol": 110
+        },
+        {
+          "q": "nalyssa smith and dijonai carrington still together",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "What team does NaLyssa Smith play for?",
-      "answer": "Her most recent WNBA team on record is the Las Vegas Aces. She wears No. 3. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nalyssa smith team",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Where is NaLyssa Smith from?",
-      "answer": "She is from San Antonio.",
+      "answer": "NaLyssa Smith plays forward for the Las Vegas Aces and wears No. 3. The WNBA lists her as a 2025 WNBA champion.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
+        "https://www.wnba.com/player/1631019/nalyssa-smith"
       ],
-      "google_keyword": "where is nalyssa smith from",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "nalyssa smith wnba",
+          "vol": 390
+        },
+        {
+          "q": "nalyssa smith aces",
+          "vol": 140
+        },
+        {
+          "q": "nalyssa smith las vegas aces",
+          "vol": 50
+        },
+        {
+          "q": "nalyssa smith team",
+          "vol": 40
+        },
+        {
+          "q": "who does nalyssa smith play for",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What college did NaLyssa Smith attend?",
-      "answer": "Smith played college basketball at Baylor.",
+      "question": "How tall is NaLyssa Smith?",
+      "answer": "The WNBA lists NaLyssa Smith at 6 feet 4 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
+        "https://www.wnba.com/player/1631019/nalyssa-smith"
       ],
-      "google_keyword": "nalyssa smith baylor",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "nalyssa smith height",
+          "vol": 210
+        },
+        {
+          "q": "how tall is nalyssa smith",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "When was NaLyssa Smith drafted?",
-      "answer": "She was drafted second overall by the Indiana Fever in the 2022 WNBA draft.",
-      "answer_kind": "researched",
+      "question": "How old is NaLyssa Smith?",
+      "answer": "NaLyssa Smith was born August 8, 2000.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
+        "https://www.wnba.com/player/1631019/nalyssa-smith"
       ],
-      "google_keyword": "nalyssa smith draft pick",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is NaLyssa Smith injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "nalyssa smith injury",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "nalyssa smith age",
+          "vol": 140
+        },
+        {
+          "q": "nalyssa smith birthday",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "Who are NaLyssa Smith's parents?",
-      "answer": "Public profiles share limited verified detail about NaLyssa Smith's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "The WNBA bio lists NaLyssa Smith as the daughter of Rodney and Nikki Smith, and says her brother, Rodney Smith, played college soccer at St. Mary's (Kansas) and the University of Houston at Victoria.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/NaLyssa_Smith"
+        "https://www.wnba.com/player/1631019/nalyssa-smith/bio",
+        "https://www.wrtv.com/news/the-smith-family-connection-how-a-family-bond-is-helping-drive-fever-star-nalyssa-smith-forward/"
       ],
-      "google_keyword": "nalyssa smith parents",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "nalyssa smith parents",
+          "vol": 50
+        },
+        {
+          "q": "nalyssa smith brother",
+          "vol": 40
+        },
+        {
+          "q": "nalyssa smith dad",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where was NaLyssa Smith drafted?",
+      "answer": "The WNBA lists NaLyssa Smith as the second overall pick in the 2022 draft, selected by the Indiana Fever.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631019/nalyssa-smith"
+      ],
+      "queries": [
+        {
+          "q": "nalyssa smith fever",
+          "vol": 50
+        },
+        {
+          "q": "nalyssa smith draft pick",
+          "vol": 40
+        },
+        {
+          "q": "nalyssa smith draft",
+          "vol": 30
+        },
+        {
+          "q": "nalyssa smith indiana fever",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Where did NaLyssa Smith play college basketball?",
+      "answer": "The WNBA lists NaLyssa Smith's college as Baylor.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631019/nalyssa-smith"
+      ],
+      "queries": [
+        {
+          "q": "nalyssa smith baylor",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where is NaLyssa Smith from?",
+      "answer": "People reported that NaLyssa Smith was raised in San Antonio, Texas.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://people.com/wings-nalyssa-smith-sick-stomach-traded-away-girlfriend-teammate-dijonai-carrington-11764857"
+      ],
+      "queries": [
+        {
+          "q": "where is nalyssa smith from",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How many rebounds per game does NaLyssa Smith average?",
+      "answer": "In the 2026 regular season, NaLyssa Smith averaged 6.4 rebounds per game for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/nalyssa-smith/"
+      ],
+      "queries": [
+        {
+          "q": "nalyssa smith rebounds per game",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

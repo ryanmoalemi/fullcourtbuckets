@@ -1,170 +1,243 @@
 {
   "slug": "jewell-loyd",
   "player_name": "Jewell Loyd",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Jewell Loyd's stats / points per game?",
-      "answer": "In the 2026 regular season, Jewell Loyd averaged 7.6 points, 2.3 rebounds, and 1.4 assists in 40 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are Jewell Loyd's stats?",
+      "answer": "In the 2026 regular season, Jewell Loyd averaged 8.0 points, 2.3 rebounds, and 1.4 assists in 42 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jewell loyd stats",
-      "approx_monthly_volume": 4400
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jewell-loyd/"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd stats",
+          "vol": 4400
+        },
+        {
+          "q": "jewell loyd game log",
+          "vol": 50
+        },
+        {
+          "q": "jewell loyd average points per game",
+          "vol": 30
+        },
+        {
+          "q": "jewell loyd points per game",
+          "vol": 30
+        },
+        {
+          "q": "jewell loyd rebounds per game",
+          "vol": 30
+        },
+        {
+          "q": "jewell loyd rebounds",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Jewell Loyd?",
-      "answer": "She was born October 5, 1993 in Lincolnwood, Illinois, U.S. As of late 2026 that puts her at 32 years old.",
+      "answer": "Jewell Loyd was born October 5, 1993.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
+        "https://www.wnba.com/player/204319/jewell-loyd/bio"
       ],
-      "google_keyword": "jewell loyd age",
-      "approx_monthly_volume": 210,
-      "birthdate": "1993-10-05"
-    },
-    {
-      "question": "How much does Jewell Loyd make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Jewell Loyd's base salary / cap hit at about $800,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "jewell loyd salary",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Jewell Loyd's contract?",
-      "answer": "Public salary trackers list Jewell Loyd at about $800,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "jewell loyd contract",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How many championships does Jewell Loyd have?",
-      "answer": "Loyd won WNBA titles with the Seattle Storm in 2018 and 2020 before later joining the Las Vegas Aces.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd championships",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How tall is Jewell Loyd?",
-      "answer": "Jewell Loyd is listed at 5' 11\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd height",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What did Jewell Loyd score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Jewell Loyd had 4 points, 1 rebounds, and 0 assists in a 98-77 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is jewell loyd playing tonight",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Jewell Loyd's jersey number?",
-      "answer": "Jewell Loyd wears number 24 for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jewell loyd jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "When was Jewell Loyd drafted?",
-      "answer": "Jewell Loyd was selected first overall by the Seattle Storm in the 2015 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd draft",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "jewell loyd age",
+          "vol": 210
+        },
+        {
+          "q": "how old is jewell loyd",
+          "vol": 110
+        },
+        {
+          "q": "jewell loyd birthday",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "What team does Jewell Loyd play for?",
-      "answer": "She plays for the Las Vegas Aces.",
+      "answer": "Jewell Loyd plays guard for the Las Vegas Aces and wears No. 24. She played for the Seattle Storm before joining the Aces.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/204319/jewell-loyd/bio",
+        "https://aces.wnba.com/full-bio-jewell-loyd",
+        "https://fullcourtbuckets.com/wnba/jewell-loyd/"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd wnba",
+          "vol": 210
+        },
+        {
+          "q": "jewell loyd seattle storm",
+          "vol": 90
+        },
+        {
+          "q": "jewell loyd las vegas aces",
+          "vol": 70
+        },
+        {
+          "q": "jewell loyd aces",
+          "vol": 50
+        },
+        {
+          "q": "jewell loyd position",
+          "vol": 20
+        },
+        {
+          "q": "jewell loyd team",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How many championships has Jewell Loyd won?",
+      "answer": "The WNBA lists Jewell Loyd as a champion in 2018, 2020, and 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204319/jewell-loyd/bio"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd championships",
+          "vol": 90
+        },
+        {
+          "q": "jewell loyd wnba championship",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Jewell Loyd?",
+      "answer": "The WNBA lists Jewell Loyd at 5 feet 11 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204319/jewell-loyd/bio"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd height",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Where did Jewell Loyd play college basketball?",
+      "answer": "Jewell Loyd played at Notre Dame and left before her senior season for the 2015 WNBA draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204319/jewell-loyd/bio",
+        "https://aces.wnba.com/full-bio-jewell-loyd"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd notre dame",
+          "vol": 50
+        },
+        {
+          "q": "jewell loyd depaul",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Has Jewell Loyd played in Unrivaled?",
+      "answer": "The Las Vegas Aces bio lists Jewell Loyd with Mist BC in Unrivaled in 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/full-bio-jewell-loyd"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd unrivaled",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Who are Jewell Loyd's parents?",
+      "answer": "The Las Vegas Aces bio lists Jewell Loyd's parents as Gwendolyn Davis-Loyd and Calvin Loyd, and her brother as Jarryd Loyd.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/full-bio-jewell-loyd"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd family",
+          "vol": 30
+        },
+        {
+          "q": "jewell loyd parents",
+          "vol": 20
+        },
+        {
+          "q": "jewell loyd mom",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where was Jewell Loyd drafted?",
+      "answer": "The WNBA lists Jewell Loyd as the first overall pick in the 2015 draft, selected by the Seattle Storm.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204319/jewell-loyd/bio"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd draft",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How did Jewell Loyd shoot from three-point range?",
+      "answer": "In the 2026 regular season, Jewell Loyd shot 33.6% from three-point range.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jewell loyd team",
-      "approx_monthly_volume": 0
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jewell-loyd/"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd 3-point stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How many three-pointers per game does Jewell Loyd average?",
+      "answer": "In the 2026 regular season, Jewell Loyd averaged 1.7 three-pointers per game for the Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jewell-loyd/"
+      ],
+      "queries": [
+        {
+          "q": "jewell loyd 3 pointers per game",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Where is Jewell Loyd from?",
-      "answer": "She is from Lincolnwood, Illinois, U.S.",
+      "answer": "The Las Vegas Aces bio says Jewell Loyd was born in Lincolnwood, Illinois.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
+        "https://aces.wnba.com/full-bio-jewell-loyd"
       ],
-      "google_keyword": "where is jewell loyd from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Jewell Loyd?",
-      "answer": "Jewell Loyd is an American professional basketball player for the Las Vegas Aces of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "who is jewell loyd",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Jewell Loyd attend?",
-      "answer": "Jewell Loyd played college basketball at Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd notre dame",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Jewell Loyd dating?",
-      "answer": "As of late 2026, Jewell Loyd has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd partner",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Is Jewell Loyd married?",
-      "answer": "There is no widely reported public record of Jewell Loyd being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd husband",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What position does Jewell Loyd play?",
-      "answer": "Jewell Loyd is listed as a G for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jewell loyd position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Does Jewell Loyd have a signature shoe?",
-      "answer": "Public search interest ties Jewell Loyd to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jewell_Loyd"
-      ],
-      "google_keyword": "jewell loyd shoes",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "where is jewell loyd from",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

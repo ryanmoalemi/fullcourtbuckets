@@ -1,150 +1,247 @@
 {
   "slug": "kiki-iriafen",
   "player_name": "Kiki Iriafen",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Kiki Iriafen's stats / points per game?",
-      "answer": "In the 2026 regular season, Kiki Iriafen averaged 15.5 points, 9.6 rebounds, and 1.5 assists in 39 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What are Kiki Iriafen's stats?",
+      "answer": "In the 2026 regular season, Kiki Iriafen averaged 15.3 points, 9.6 rebounds, and 1.5 assists in 41 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kiki iriafen stats",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "Who is Kiki Iriafen dating?",
-      "answer": "As of late 2026, Kiki Iriafen has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://fullcourtbuckets.com/wnba/kiki-iriafen/"
       ],
-      "google_keyword": "kiki iriafen partner",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Kiki Iriafen make?",
-      "answer": "A precise public salary or net worth figure for Kiki Iriafen is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kiki iriafen salary",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "kiki iriafen stats",
+          "vol": 9900
+        },
+        {
+          "q": "kiki iriafen game log",
+          "vol": 90
+        },
+        {
+          "q": "kiki iriafen points per game",
+          "vol": 40
+        },
+        {
+          "q": "kiki iriafen stats per game",
+          "vol": 40
+        },
+        {
+          "q": "kiki iriafen rebounds per game",
+          "vol": 40
+        },
+        {
+          "q": "kiki iriafen average points per game",
+          "vol": 30
+        },
+        {
+          "q": "kiki iriafen ppg",
+          "vol": 20
+        },
+        {
+          "q": "kiki iriafen wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Kiki Iriafen?",
-      "answer": "Kiki Iriafen is listed at 6' 3\".",
+      "answer": "Team USA lists Kiki Iriafen at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://www.teamusa.com/profiles/kiki-iriafen"
       ],
-      "google_keyword": "kiki iriafen height",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "kiki iriafen height",
+          "vol": 590
+        },
+        {
+          "q": "how tall is kiki iriafen",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Kiki Iriafen?",
-      "answer": "She was born August 26, 2003 in Tarzana. As of late 2026 that puts her at 23 years old.",
+      "answer": "Kiki Iriafen was born August 26, 2003, in Tarzana, California.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://usctrojans.com/sports/womens-basketball/roster/kiki-iriafen/16742",
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
       ],
-      "google_keyword": "kiki iriafen age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2003-08-26"
+      "queries": [
+        {
+          "q": "kiki iriafen age",
+          "vol": 170
+        },
+        {
+          "q": "how old is kiki iriafen",
+          "vol": 30
+        },
+        {
+          "q": "kiki iriafen birthday",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What did Kiki Iriafen score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Connecticut Sun), Kiki Iriafen had 4.0 points, 5.0 rebounds, and 1.0 assists in a 79-69 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kiki iriafen playing tonight",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What is Kiki Iriafen's jersey number?",
-      "answer": "Kiki Iriafen wears number 44 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kiki iriafen jersey number",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Kiki Iriafen's contract?",
-      "answer": "Contract length and guarantees for Kiki Iriafen are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Who is in Kiki Iriafen's family?",
+      "answer": "Stanford lists Kiki Iriafen's parents as Yemi and Harrison Iriafen and her younger siblings as Shuby and Oyinkan. Team USA says her parents are Nigerian American.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://gostanford.com/sports/womens-basketball/roster/player/kiki-iriafen",
+        "https://www.teamusa.com/profiles/kiki-iriafen"
       ],
-      "google_keyword": "kiki iriafen contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Kiki Iriafen married?",
-      "answer": "There is no widely reported public record of Kiki Iriafen being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
-      ],
-      "google_keyword": "kiki iriafen husband",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "kiki iriafen parents",
+          "vol": 90
+        },
+        {
+          "q": "kiki iriafen nationality",
+          "vol": 40
+        },
+        {
+          "q": "kiki iriafen sister",
+          "vol": 30
+        },
+        {
+          "q": "kiki iriafen family",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "What team does Kiki Iriafen play for?",
-      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 44. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kiki iriafen team",
-      "approx_monthly_volume": 20
+      "answer": "Kiki Iriafen plays forward for the Washington Mystics and wears No. 44.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kiki-iriafen/",
+        "https://www.teamusa.com/profiles/kiki-iriafen"
+      ],
+      "queries": [
+        {
+          "q": "wnba kiki iriafen",
+          "vol": 90
+        },
+        {
+          "q": "kiki iriafen mystics",
+          "vol": 50
+        },
+        {
+          "q": "kiki iriafen washington mystics",
+          "vol": 30
+        },
+        {
+          "q": "kiki iriafen team",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where was Kiki Iriafen drafted?",
+      "answer": "Team USA lists Kiki Iriafen as the fourth overall pick in the 2025 WNBA draft, selected by the Washington Mystics.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.teamusa.com/profiles/kiki-iriafen",
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kiki iriafen draft",
+          "vol": 50
+        },
+        {
+          "q": "kiki iriafen draft pick",
+          "vol": 30
+        },
+        {
+          "q": "kiki iriafen wnba draft",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Where is Kiki Iriafen from?",
-      "answer": "She is from Tarzana.",
+      "answer": "Team USA lists Kiki Iriafen's hometown as Los Angeles. She was born in Tarzana, California.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://www.teamusa.com/profiles/kiki-iriafen",
+        "https://usctrojans.com/sports/womens-basketball/roster/kiki-iriafen/16742",
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
       ],
-      "google_keyword": "where is kiki iriafen from",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "where is kiki iriafen from",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What college did Kiki Iriafen attend?",
-      "answer": "Iriafen played college basketball at Stanford University.",
+      "question": "Where did Kiki Iriafen play college basketball?",
+      "answer": "Kiki Iriafen played at Stanford, then at USC.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://gostanford.com/sports/womens-basketball/roster/player/kiki-iriafen",
+        "https://www.teamusa.com/profiles/kiki-iriafen",
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
       ],
-      "google_keyword": "kiki iriafen stanford",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "kiki iriafen usc",
+          "vol": 40
+        },
+        {
+          "q": "kiki iriafen stanford",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Is Kiki Iriafen injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kiki iriafen injury",
-      "approx_monthly_volume": 590
+      "question": "What is Kiki Iriafen's real name?",
+      "answer": "Stanford lists Kiki Iriafen's full name as Okikiola Iriafen.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://gostanford.com/sports/womens-basketball/roster/player/kiki-iriafen",
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kiki iriafen real name",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Who are Kiki Iriafen's parents?",
-      "answer": "Public profiles share limited verified detail about Kiki Iriafen's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "How is Kiki Iriafen's name pronounced?",
+      "answer": "Iriafen is pronounced ear-ee-uh-fin.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
       ],
-      "google_keyword": "kiki iriafen parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "kiki iriafen pronunciation",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "When was Kiki Iriafen drafted?",
-      "answer": "Iriafen was selected fourth overall by the Mystics in the 2025 WNBA draft and was named an All-Star in her rookie season.",
-      "answer_kind": "researched",
+      "question": "What degree does Kiki Iriafen have?",
+      "answer": "Team USA says Kiki Iriafen earned a degree in design engineering from Stanford and a master's degree in entrepreneurship and innovation from USC.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiki_Iriafen"
+        "https://www.teamusa.com/profiles/kiki-iriafen"
       ],
-      "google_keyword": "kiki iriafen draft",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "kiki iriafen degree",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,116 +1,206 @@
 {
   "slug": "veronica-burton",
   "player_name": "Veronica Burton",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 11, 2026",
+  "verified_at": "2026-10-11",
   "items": [
     {
-      "question": "What are Veronica Burton's stats / points per game?",
-      "answer": "In the 2026 regular season, Veronica Burton averaged 12.1 points, 3.6 rebounds, and 5.7 assists in 42 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Veronica Burton's stats?",
+      "answer": "In the 2026 regular season, Veronica Burton averaged 12.2 points, 3.6 rebounds, and 5.7 assists in 44 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "veronica burton stats",
-      "approx_monthly_volume": 12100
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/veronica-burton/"
+      ],
+      "queries": [
+        {
+          "q": "veronica burton stats",
+          "vol": 12100
+        },
+        {
+          "q": "veronica burton game log",
+          "vol": 170
+        },
+        {
+          "q": "veronica burton points per game",
+          "vol": 50
+        },
+        {
+          "q": "veronica burton stats per game",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Who is Veronica Burton dating?",
-      "answer": "As of late 2026, Veronica Burton has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What team does Veronica Burton play for?",
+      "answer": "Veronica Burton plays guard for the Golden State Valkyries and wears No. 22. The WNBA says the Valkyries selected her in the 2025 expansion draft.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://www.wnba.com/player/1631007/veronica-burton"
       ],
-      "google_keyword": "veronica burton partner",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "veronica burton wnba",
+          "vol": 590
+        },
+        {
+          "q": "veronica burton valkyries",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "How much does Veronica Burton make?",
-      "answer": "A precise public salary or net worth figure for Veronica Burton is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Who is in Veronica Burton's family?",
+      "answer": "Northwestern Magazine reports that Veronica Burton's father is Steve Burton and her mother is Virginia \"Ginni\" Burton. The story names her sisters Kendall and Kayla and her brother Austin, and says she wears No. 22 in memory of her grandfather, Ron Burton.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://magazine.northwestern.edu/features/veronica-burton-wnba-basketball-most-improved-player-golden-state-valkyries-mist-unrivaled"
       ],
-      "google_keyword": "veronica burton salary",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "veronica burton parents",
+          "vol": 590
+        },
+        {
+          "q": "veronica burton family",
+          "vol": 210
+        },
+        {
+          "q": "veronica burton sister",
+          "vol": 110
+        },
+        {
+          "q": "veronica burton dad",
+          "vol": 110
+        },
+        {
+          "q": "veronica burton siblings",
+          "vol": 70
+        },
+        {
+          "q": "veronica burton mother",
+          "vol": 40
+        },
+        {
+          "q": "veronica burton father",
+          "vol": 40
+        },
+        {
+          "q": "veronica burton mom",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How tall is Veronica Burton?",
-      "answer": "Veronica Burton is listed at 5' 9\".",
+      "answer": "The WNBA lists Veronica Burton at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://www.wnba.com/player/1631007/veronica-burton"
       ],
-      "google_keyword": "veronica burton height",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "veronica burton height",
+          "vol": 320
+        },
+        {
+          "q": "how tall is veronica burton",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "How old is Veronica Burton?",
-      "answer": "She was born July 12, 2000 in Newton. As of late 2026 that puts her at 26 years old.",
+      "answer": "Veronica Burton was born July 12, 2000. Northwestern Magazine describes Newton, Massachusetts, as her home.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://www.wnba.com/player/1631007/veronica-burton",
+        "https://magazine.northwestern.edu/features/veronica-burton-wnba-basketball-most-improved-player-golden-state-valkyries-mist-unrivaled"
       ],
-      "google_keyword": "veronica burton age",
-      "approx_monthly_volume": 260,
-      "birthdate": "2000-07-12"
+      "queries": [
+        {
+          "q": "veronica burton age",
+          "vol": 260
+        },
+        {
+          "q": "how old is veronica burton",
+          "vol": 90
+        },
+        {
+          "q": "veronica burton birthday",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What did Veronica Burton score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Veronica Burton had 9.0 points, 4.0 rebounds, and 4.0 assists in a 70-57 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is veronica burton playing tonight",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Veronica Burton's contract?",
-      "answer": "Contract length and guarantees for Veronica Burton are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Has Veronica Burton played in Unrivaled?",
+      "answer": "Northwestern Magazine reports that Veronica Burton played for Mist in Unrivaled and that Mist won the 2026 championship.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://magazine.northwestern.edu/features/veronica-burton-wnba-basketball-most-improved-player-golden-state-valkyries-mist-unrivaled"
       ],
-      "google_keyword": "veronica burton contract",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "veronica burton unrivaled",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Is Veronica Burton married?",
-      "answer": "There is no widely reported public record of Veronica Burton being married as of late 2026.",
-      "answer_kind": "researched",
+      "question": "Where did Veronica Burton play college basketball?",
+      "answer": "Veronica Burton played at Northwestern.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://www.wnba.com/player/1631007/veronica-burton",
+        "https://magazine.northwestern.edu/features/veronica-burton-wnba-basketball-most-improved-player-golden-state-valkyries-mist-unrivaled"
       ],
-      "google_keyword": "veronica burton husband",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "veronica burton northwestern",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "Where is Veronica Burton from?",
-      "answer": "She is from Newton.",
+      "answer": "Northwestern Magazine describes Newton, Massachusetts, as Veronica Burton's home.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://magazine.northwestern.edu/features/veronica-burton-wnba-basketball-most-improved-player-golden-state-valkyries-mist-unrivaled"
       ],
-      "google_keyword": "where is veronica burton from",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "where is veronica burton from",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Who are Veronica Burton's parents?",
-      "answer": "Public profiles share limited verified detail about Veronica Burton's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Where was Veronica Burton drafted?",
+      "answer": "The WNBA lists Veronica Burton as the seventh overall pick in the 2022 draft, selected by the Dallas Wings.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://www.wnba.com/player/1631007/veronica-burton"
       ],
-      "google_keyword": "veronica burton parents",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "veronica burton dallas wings",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Who is Veronica Burton?",
-      "answer": "Veronica Grace Burton is an American professional basketball player for the Golden State Valkyries of the Women's National Basketball Association (WNBA) and for Mist of Unrivaled.",
-      "answer_kind": "mixed",
+      "question": "How did Veronica Burton shoot from three-point range?",
+      "answer": "In the 2026 regular season, Veronica Burton shot 35.5% from three-point range.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Veronica_Burton"
+        "https://fullcourtbuckets.com/wnba/veronica-burton/"
       ],
-      "google_keyword": "veronica burton wikipedia",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "veronica burton 3-point stats",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
