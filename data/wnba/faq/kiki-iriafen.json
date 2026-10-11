@@ -48,11 +48,10 @@
     },
     {
       "question": "How tall is Kiki Iriafen?",
-      "answer": "Team USA lists Kiki Iriafen at 6 feet 3 inches. Basketball-Reference lists her at 202 pounds.",
+      "answer": "Team USA lists Kiki Iriafen at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://www.teamusa.com/profiles/kiki-iriafen",
-        "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"
+        "https://www.teamusa.com/profiles/kiki-iriafen"
       ],
       "queries": [
         {
@@ -62,14 +61,6 @@
         {
           "q": "how tall is kiki iriafen",
           "vol": 170
-        },
-        {
-          "q": "kiki iriafen weight",
-          "vol": 50
-        },
-        {
-          "q": "kiki iriafen height and weight",
-          "vol": 40
         }
       ]
     },
@@ -151,7 +142,7 @@
     },
     {
       "question": "Where was Kiki Iriafen drafted?",
-      "answer": "Team USA and Basketball-Reference list Kiki Iriafen as the fourth overall pick in the 2025 WNBA draft, selected by the Washington Mystics.",
+      "answer": "Team USA lists Kiki Iriafen as the fourth overall pick in the 2025 WNBA draft, selected by the Washington Mystics.",
       "answer_kind": "bio",
       "sources": [
         "https://www.teamusa.com/profiles/kiki-iriafen",
@@ -174,7 +165,7 @@
     },
     {
       "question": "Where is Kiki Iriafen from?",
-      "answer": "Team USA lists Kiki Iriafen's hometown as Los Angeles. Basketball-Reference lists her birthplace as Tarzana, California.",
+      "answer": "Team USA lists Kiki Iriafen's hometown as Los Angeles. She was born in Tarzana, California.",
       "answer_kind": "bio",
       "sources": [
         "https://www.teamusa.com/profiles/kiki-iriafen",
@@ -224,7 +215,7 @@
     },
     {
       "question": "How is Kiki Iriafen's name pronounced?",
-      "answer": "Basketball-Reference gives Iriafen as pronounced ear-ee-uh-fin.",
+      "answer": "Iriafen is pronounced ear-ee-uh-fin.",
       "answer_kind": "researched",
       "sources": [
         "https://www.basketball-reference.com/wnba/players/i/iriafki01w.html"

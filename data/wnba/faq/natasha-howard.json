@@ -31,48 +31,6 @@
       ]
     },
     {
-      "question": "Is Natasha Howard married?",
-      "answer": "The Associated Press reported in July 2019 that Natasha Howard had filed for divorce.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://apnews.com/storms-natasha-howard-denies-abusing-her-wife-9096b2f235fc4da5af706354fa2b653a"
-      ],
-      "queries": [
-        {
-          "q": "natasha howard wife",
-          "vol": 1600
-        },
-        {
-          "q": "is natasha howard still married",
-          "vol": 480
-        },
-        {
-          "q": "natasha howard ex wife",
-          "vol": 390
-        },
-        {
-          "q": "natasha howard partner",
-          "vol": 90
-        },
-        {
-          "q": "is natasha howard married",
-          "vol": 70
-        },
-        {
-          "q": "natasha howard girlfriend",
-          "vol": 50
-        },
-        {
-          "q": "natasha howard wedding",
-          "vol": 50
-        },
-        {
-          "q": "natasha howard spouse",
-          "vol": 40
-        }
-      ]
-    },
-    {
       "question": "Are Natasha Howard and Rhyne Howard related?",
       "answer": "Kentucky lists Rhyne Howard's sisters as Love Howard and Takema Sexton, and her brothers as RaShawn Avery and James Howard Jr. Natasha Howard is not among them.",
       "answer_kind": "researched",
@@ -114,10 +72,6 @@
         },
         {
           "q": "is natasha howard related to rhyne howard",
-          "vol": 40
-        },
-        {
-          "q": "does natasha howard have a sister in the wnba",
           "vol": 40
         }
       ]
@@ -229,6 +183,20 @@
         {
           "q": "natasha howard rebounds per game",
           "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Does Natasha Howard have a sister in the WNBA?",
+      "answer": "Kentucky lists Rhyne Howard's sisters as Love Howard and Takema Sexton. Natasha Howard is not one of them.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://ukathletics.com/sports/wbball/roster/player/rhyne-howard/"
+      ],
+      "queries": [
+        {
+          "q": "does natasha howard have a sister in the wnba",
+          "vol": 40
         }
       ]
     },
