@@ -142,7 +142,7 @@ def _olympics(extra: dict) -> list[dict]:
 
 def _stat_styles(row: dict) -> list[str]:
     def shown(value, keep_zero=False):
-        num = cs._num(value)
+        num = cs._num(value, row.get('games_played'))
         if num is None or (num == '0.0' and not keep_zero):
             return None
         return num

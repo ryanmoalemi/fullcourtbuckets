@@ -12,6 +12,7 @@ import re
 from pathlib import Path
 
 import internal_links as links
+import per_game
 import team_hub
 import team_names
 
@@ -100,10 +101,8 @@ def _ordinal(number: int) -> str:
     return f'{number}{suffix}'
 
 
-def _average(value) -> str | None:
-    if isinstance(value, bool) or not isinstance(value, (int, float)):
-        return None
-    return f'{value:.1f}'
+def _average(value, games) -> str | None:
+    return per_game.shown_average(value, games)
 
 
 def _roster_line(root: Path, slug: str) -> dict:
@@ -123,12 +122,13 @@ def _roster_line(root: Path, slug: str) -> dict:
     if len(rows) != 1:
         return {}
     row = rows[0]
+    played = row.get('games_played')
     return {
-        'pts': _average(row.get('pts')),
-        'reb': _average(row.get('reb')),
-        'ast': _average(row.get('ast')),
-        'min': _average(row.get('min')),
-        'min_raw': row.get('min') if _average(row.get('min')) else None,
+        'pts': _average(row.get('pts'), played),
+        'reb': _average(row.get('reb'), played),
+        'ast': _average(row.get('ast'), played),
+        'min': _average(row.get('min'), played),
+        'min_raw': row.get('min') if _average(row.get('min'), played) else None,
     }
 
 

@@ -85,11 +85,12 @@ def _medal_event(events: list[dict], medals: list[dict]) -> dict | None:
 
 
 def _stat_clause(row: dict) -> str:
-    pts = cs._num(row.get('pts'))
+    played = row.get('games_played')
+    pts = cs._num(row.get('pts'), played)
     if pts is None:
         return ''
-    reb = cs._num(row.get('reb'))
-    ast = cs._num(row.get('ast'))
+    reb = cs._num(row.get('reb'), played)
+    ast = cs._num(row.get('ast'), played)
     games = cs._games(row.get('games_played'))
     others = []
     if reb and float(reb) >= 2:
@@ -698,8 +699,8 @@ def _notable_playoff(regular: dict | None, playoff: dict | None) -> bool:
         return False
     if float(playoff['pts']) >= float(regular['pts']) + 2:
         return True
-    po_ast = cs._num(playoff.get('ast'))
-    reg_ast = cs._num(regular.get('ast'))
+    po_ast = cs._num(playoff.get('ast'), playoff.get('games_played'))
+    reg_ast = cs._num(regular.get('ast'), regular.get('games_played'))
     return bool(po_ast and reg_ast and float(playoff['ast']) >= float(regular['ast']) + 1)
 
 
@@ -823,7 +824,7 @@ def sentences(profile: dict, extra: dict, root: Path | None = None) -> list[str]
         if kind == 'draft' and draft and str(draft['year']) in blob and _ordinal_word(int(draft['overall'])) in blob:
             continue
         if kind == 'scoring' and scoring_row is not None:
-            pts = cs._num(scoring_row.get('pts'))
+            pts = cs._num(scoring_row.get('pts'), scoring_row.get('games_played'))
             if pts and pts in blob and f"the {cs._team(scoring_row)} in {scoring_row['season']}" in blob:
                 continue
         found.append(text)
