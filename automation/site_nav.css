@@ -23,9 +23,9 @@ header,.site-header{z-index:40}
  nav.site-nav>ul{display:flex;align-items:center;gap:2px}
  nav.site-nav>ul>li{position:relative}
  nav.site-nav>ul>li>a{white-space:nowrap}
- nav.site-nav li ul{display:block;position:absolute;top:100%;left:0;min-width:260px;max-width:min(360px,80vw);max-height:70vh;overflow:auto;background:#0c0c10;border:1px solid #2b2930;box-shadow:0 12px 28px rgba(0,0,0,.45);z-index:60;visibility:hidden;opacity:0;pointer-events:none}
+ /* Every submenu opens inward. Teams was left-aligned and crossed the 1365 desktop edge. */
+ nav.site-nav li ul{display:block;position:absolute;top:100%;left:auto;right:0;min-width:260px;max-width:min(360px,80vw);max-height:70vh;overflow:auto;background:#0c0c10;border:1px solid #2b2930;box-shadow:0 12px 28px rgba(0,0,0,.45);z-index:60;visibility:hidden;opacity:0;pointer-events:none}
  nav.site-nav li:hover>ul,nav.site-nav li:focus-within>ul{visibility:visible;opacity:1;pointer-events:auto}
- nav.site-nav>ul>li:nth-last-child(-n+2)>ul{left:auto;right:0}
  nav.site-nav li li a{min-height:44px;padding:10px 14px}
 }
 @media (max-width:1180px) and (min-width:901px){

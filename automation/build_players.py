@@ -2954,6 +2954,11 @@ def build(root: Path):
     status=json.loads((data/'status.json').read_text())
     if status.get('status')!='ok' or not index.get('players'):
         raise BuildError('No successful nonempty import is available.')
+    import playoff_boxes
+    try:
+        playoff_boxes.require_counts(root)
+    except RuntimeError as exc:
+        raise BuildError(str(exc)) from None
     published_players=[p for p in index['players'] if p.get('id') not in DUPLICATE_PLAYER_IDS]
     published_index={**index, 'players': published_players}
     linking=links.catalog_from_index(published_index)
@@ -3018,8 +3023,16 @@ def build(root: Path):
             target=orphan_player_target(child.name, html_text, published_names, published_slugs)
             files[f'wnba/{child.name}/index.html']=links.permanent_redirect(target)
     include_standings=(root/'standings'/'index.html').is_file()
+    import team_season
     for slot in linking['by_id'].values():
-        files[f'wnba/teams/{slot["slug"]}/index.html']=team_page(slot, include_standings, menu, links.team_news_html(root, slot['slug']), root)
+        relative = f'wnba/teams/{slot["slug"]}/index.html'
+        page = team_page(slot, include_standings, menu, links.team_news_html(root, slot['slug']), root)
+        previous_path = root / relative
+        if previous_path.is_file():
+            page = team_season.keep_published_photo(
+                previous_path.read_text(encoding='utf-8'), page,
+            )
+        files[relative] = page
     for team_id, old_slug in team_names.LEGACY_SLUGS.items():
         slot = linking['by_id'].get(team_id)
         if not slot or slot['slug'] == old_slug:

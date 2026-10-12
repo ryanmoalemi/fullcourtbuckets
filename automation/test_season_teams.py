@@ -229,6 +229,28 @@ class SeasonTeamTests(unittest.TestCase):
         self.assertTrue(playoff["gap_fill"])
         self.assertEqual(report["unresolved"], [])
 
+    def test_a_longer_game_log_without_averages_does_not_erase_the_feed_line(self):
+        aces = {"id": 8, "full_name": "Las Vegas Aces", "abbreviation": "LV", "city": "Las Vegas", "name": "Aces", "conference": None}
+        table = {
+            "current_teams": {"las-vegas-aces": aces},
+            "playoff_teams": {"2026": ["las-vegas-aces"]},
+            "players": {"1": {
+                "status": "ok",
+                "confirmed_seasons": [2026],
+                "stints": [
+                    {"season": 2026, "season_type": 3, "games_played": 6, "team_slug": "las-vegas-aces"},
+                ],
+            }},
+        }
+        existing = [
+            {"player_id": 1, "season": 2026, "season_type": 3, "team": dict(aces), "games_played": 5, "pts": 24.0},
+        ]
+        updated, report = teams.supplement_rows(existing, table, season_year=2026)
+        self.assertEqual(updated[0]["games_played"], 5)
+        self.assertEqual(updated[0]["pts"], 24.0)
+        self.assertEqual(report["unresolved"][0]["reason"], "game log is ahead of the season line")
+        self.assertEqual(report["replaced"], [])
+
     def test_game_disagreement_is_not_overwritten(self):
         storm = {"id": 9, "full_name": "Seattle Storm", "abbreviation": "SEA", "city": "Seattle", "name": "Storm", "conference": None}
         table = {
@@ -353,6 +375,15 @@ class SeasonTeamTests(unittest.TestCase):
             "team_slug": "sacramento-monarchs",
             "pts": 5.5,
         }])
+        behind = {"games_played": 5, "pts": 24.0}
+        clubs[3]["13"]["count"] = 6
+        playoff = teams.stints_from_clubs(2008, clubs[3], behind, {"13": "sacramento-monarchs"})
+        self.assertEqual(playoff, [{
+            "season": 2008,
+            "games_played": 6,
+            "team_slug": "sacramento-monarchs",
+        }])
+        self.assertNotIn("pts", playoff[0])
 
     def test_all_star_row_does_not_block_the_regular_club(self):
         existing = [{"season": 2007, "season_type": 2, "games_played": 1, "team_slug": "west"}]
