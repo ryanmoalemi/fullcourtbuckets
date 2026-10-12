@@ -1,152 +1,194 @@
 {
   "slug": "bridget-carleton",
   "player_name": "Bridget Carleton",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 12, 2026",
+  "verified_at": "2026-10-12",
   "items": [
     {
-      "question": "What are Bridget Carleton's stats / points per game?",
-      "answer": "In the 2026 regular season, Bridget Carleton averaged 14.3 points, 4.5 rebounds, and 2.1 assists in 39 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Bridget Carleton's stats?",
+      "answer": "In the 2026 regular season, Bridget Carleton averaged 14.6 points, 4.5 rebounds, and 2.1 assists in 40 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "bridget carleton stats",
-      "approx_monthly_volume": 9900
-    },
-    {
-      "question": "Who is Bridget Carleton dating?",
-      "answer": "As of late 2026, Bridget Carleton has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://fullcourtbuckets.com/wnba/bridget-carleton/"
       ],
-      "google_keyword": "bridget carleton partner",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "How much does Bridget Carleton make?",
-      "answer": "A precise public salary or net worth figure for Bridget Carleton is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "bridget carleton salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "bridget carleton stats",
+          "vol": 9900
+        },
+        {
+          "q": "bridget carleton game log",
+          "vol": 70
+        },
+        {
+          "q": "bridget carleton average points per game",
+          "vol": 30
+        },
+        {
+          "q": "bridget carleton stats per game",
+          "vol": 30
+        },
+        {
+          "q": "bridget carleton points per game",
+          "vol": 20
+        },
+        {
+          "q": "bridget carleton wnba stats",
+          "vol": 20
+        },
+        {
+          "q": "bridget carleton rebounds per game",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Bridget Carleton?",
-      "answer": "Bridget Carleton is listed at 6' 2\".",
+      "answer": "The WNBA lists Bridget Carleton at 6 feet 2 inches and 190 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
       ],
-      "google_keyword": "bridget carleton height",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "bridget carleton height",
+          "vol": 210
+        },
+        {
+          "q": "bridget carleton weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Bridget Carleton?",
-      "answer": "She was born May 22, 1997 in Chatham. As of late 2026 that puts her at 29 years old.",
+      "answer": "Bridget Carleton was born May 22, 1997.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
       ],
-      "google_keyword": "bridget carleton age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1997-05-22"
+      "queries": [
+        {
+          "q": "bridget carleton age",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What did Bridget Carleton score in her last game?",
-      "answer": "In her most recent completed game (August 30, 2026 vs. the Golden State Valkyries), Bridget Carleton had 11.0 points, 5.0 rebounds, and 0 assists in a 69-86 loss.",
+      "question": "What team does Bridget Carleton play for?",
+      "answer": "Bridget Carleton plays forward for the Portland Fire and wears No. 6.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
+      ],
+      "queries": [
+        {
+          "q": "bridget carleton wnba",
+          "vol": 140
+        },
+        {
+          "q": "bridget carleton portland fire wnba",
+          "vol": 30
+        },
+        {
+          "q": "bridget carleton position",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Bridget Carleton played for?",
+      "answer": "Bridget Carleton has played for the Connecticut Sun, Minnesota Lynx and Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is bridget carleton playing tonight",
-      "approx_monthly_volume": 140
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/bridget-carleton/"
+      ],
+      "queries": [
+        {
+          "q": "bridget carleton lynx",
+          "vol": 50
+        },
+        {
+          "q": "minnesota lynx bridget carleton",
+          "vol": 10
+        },
+        {
+          "q": "connecticut sun bridget carleton",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Bridget Carleton's contract?",
-      "answer": "Contract length and guarantees for Bridget Carleton are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
+      "question": "Where did Bridget Carleton play college basketball?",
+      "answer": "Bridget Carleton played at Iowa State.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
       ],
-      "google_keyword": "bridget carleton contract",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "bridget carleton iowa state",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Bridget Carleton married?",
-      "answer": "There is no widely reported public record of Bridget Carleton being married as of late 2026.",
-      "answer_kind": "researched",
+      "question": "How many three-pointers per game does Bridget Carleton average?",
+      "answer": "In the 2026 regular season, Bridget Carleton averaged 2.8 three-pointers per game for the Portland Fire.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://fullcourtbuckets.com/wnba/bridget-carleton/"
       ],
-      "google_keyword": "bridget carleton husband",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "bridget carleton 3 pointers per game",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "Where is Bridget Carleton from?",
-      "answer": "She is from Chatham.",
+      "answer": "The WNBA says Bridget Carleton was born in Chatham, Ontario.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio",
+        "https://olympic.ca/team-canada/bridget-carleton/"
       ],
-      "google_keyword": "where is bridget carleton from",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "where is bridget carleton from",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What position does Bridget Carleton play?",
-      "answer": "Bridget Carleton is listed as a F for the Portland Fire.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "bridget carleton position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Bridget Carleton injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "bridget carleton injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Bridget Carleton's parents?",
-      "answer": "Public profiles share limited verified detail about Bridget Carleton's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
-      ],
-      "google_keyword": "bridget carleton family",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Bridget Carleton attend?",
-      "answer": "Carleton played college basketball at Iowa State.",
+      "question": "Who is in Bridget Carleton's family?",
+      "answer": "The WNBA lists Bridget Carleton's parents as Rob and Carrie Carleton and her sisters as Rachel and Sarah.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
       ],
-      "google_keyword": "bridget carleton iowa state",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "bridget carleton personal life",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Does Bridget Carleton have kids?",
-      "answer": "There is no widely reported public information that Bridget Carleton has children as of late 2026.",
+      "question": "Has Bridget Carleton played in the Olympics?",
+      "answer": "Team Canada lists Bridget Carleton at the Tokyo 2020 and Paris 2024 Olympics. She finished ninth in Tokyo.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
+        "https://olympic.ca/team-canada/bridget-carleton/",
+        "https://www.wnba.com/player/1629524/bridget-carleton/bio"
       ],
-      "google_keyword": "bridget robinson obituary",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Bridget Carleton?",
-      "answer": "Bridget Elizabeth Carleton is a Canadian professional basketball player for the Portland Fire of the Women's National Basketball Association (WNBA) and USK Praha of the Czech Women's Basketball League.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Bridget_Carleton"
-      ],
-      "google_keyword": "who is bridget carleton married to",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "bridget carleton olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

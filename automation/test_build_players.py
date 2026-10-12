@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 56)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 66)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -514,14 +514,21 @@ class BuildTests(unittest.TestCase):
             'rhyne-howard', 'shakira-austin', 'veronica-burton', 'dearica-hamby', 'jonquel-jones',
             'kahleah-copper', 'jewell-loyd', 'kiki-iriafen', 'nalyssa-smith', 'natasha-howard',
         }
+        october_12 = {
+            'natisha-hiedeman', 'rae-burrell', 'alanna-smith', 'awa-fam', 'bridget-carleton',
+            'carla-leite', 'chiney-ogwumike', 'dominique-malonga', 'kara-braxton', 'monique-billings',
+        }
         self.assertTrue(october_9 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_10 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_11 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_12 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_11:
+            if slug in october_12:
+                expected_source = 'Google search demand via OpenSEO, Oct 12, 2026'
+            elif slug in october_11:
                 expected_source = 'Google search demand via OpenSEO, Oct 11, 2026'
             elif slug in october_10:
                 expected_source = 'Google search demand via OpenSEO, Oct 10, 2026'
@@ -530,8 +537,16 @@ class BuildTests(unittest.TestCase):
             else:
                 expected_source = 'Google search demand via OpenSEO, Oct 8, 2026'
             self.assertEqual(faq['source'], expected_source)
-            # The sister query was folded into the related answer, so Natasha has 9.
-            minimum = 9 if slug == 'natasha-howard' else 10
+            # Natasha's sister query was folded into the related answer.
+            # Dominique and Monique stop at 9: the leftover queries are unconfirmed
+            # relationships, pay, or measurements the sources do not list.
+            # Kara's searchable facts are the death, her family, and a short WNBA career.
+            if slug == 'kara-braxton':
+                minimum = 5
+            elif slug in {'natasha-howard', 'dominique-malonga', 'monique-billings'}:
+                minimum = 9
+            else:
+                minimum = 10
             self.assertGreaterEqual(len(faq['items']), minimum, slug)
             self.assertLessEqual(len(faq['items']), 15, slug)
             raw = faq_path.read_text(encoding='utf-8')

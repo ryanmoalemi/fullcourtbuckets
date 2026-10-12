@@ -1,117 +1,247 @@
 {
   "slug": "chiney-ogwumike",
   "player_name": "Chiney Ogwumike",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 12, 2026",
+  "verified_at": "2026-10-12",
   "items": [
     {
-      "question": "What are Chiney Ogwumike's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Chiney Ogwumike averaged 7.0 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chiney ogwumike stats",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Does Chiney Ogwumike have a signature shoe?",
-      "answer": "Public search interest ties Chiney Ogwumike to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike shoe size",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Chiney Ogwumike dating?",
-      "answer": "As of late 2026, Chiney Ogwumike has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike partner",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Chiney Ogwumike make?",
-      "answer": "A precise public salary or net worth figure for Chiney Ogwumike is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "chiney ogwumike net worth",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What is Chiney Ogwumike's contract?",
-      "answer": "Contract length and guarantees for Chiney Ogwumike are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "chiney ogwumike contract",
-      "approx_monthly_volume": 10
-    },
-    {
       "question": "Is Chiney Ogwumike married?",
-      "answer": "There is no widely reported public record of Chiney Ogwumike being married as of late 2026.",
+      "answer": "The Knot reported that Chinenye \"Chiney\" Ogwumike married Raphael Akpejiori in Houston in November 2023. They were engaged on December 24, 2022.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike husband",
-      "approx_monthly_volume": 2900
+      "sources": [
+        "https://www.theknot.com/content/chiney-ogwumike-relationship"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike husband",
+          "vol": 2900
+        },
+        {
+          "q": "is chiney ogwumike still married",
+          "vol": 390
+        },
+        {
+          "q": "chiney ogwumike married",
+          "vol": 320
+        },
+        {
+          "q": "is chiney ogwumike married",
+          "vol": 210
+        },
+        {
+          "q": "chiney ogwumike still married",
+          "vol": 90
+        },
+        {
+          "q": "chiney ogwumike husband still married",
+          "vol": 90
+        },
+        {
+          "q": "chiney ogwumike wife",
+          "vol": 70
+        },
+        {
+          "q": "chiney ogwumike partner",
+          "vol": 30
+        },
+        {
+          "q": "chiney ogwumike wedding",
+          "vol": 30
+        },
+        {
+          "q": "chiney ogwumike husband hayes johnson",
+          "vol": 30
+        },
+        {
+          "q": "chiney ogwumike spouse",
+          "vol": 20
+        },
+        {
+          "q": "who is chiney ogwumike husband",
+          "vol": 20
+        },
+        {
+          "q": "chiney ogwumike boyfriend",
+          "vol": 20
+        },
+        {
+          "q": "chiney ogwumike engagement",
+          "vol": 10
+        },
+        {
+          "q": "chiney ogwumike relationship",
+          "vol": 10
+        },
+        {
+          "q": "chiney ogwumike fiance",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Chiney Ogwumike?",
+      "answer": "The WNBA lists Chiney Ogwumike at 6 feet 3 inches and 183 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203823/chiney-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike height",
+          "vol": 720
+        },
+        {
+          "q": "how tall is chiney ogwumike",
+          "vol": 210
+        },
+        {
+          "q": "chiney ogwumike height and weight",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Who are Chiney Ogwumike's sisters?",
+      "answer": "The WNBA says Nneka Ogwumike is the oldest of four sisters: Chiney, Olivia, and Erica.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203014/nneka-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike sister",
+          "vol": 480
+        },
+        {
+          "q": "chiney ogwumike siblings",
+          "vol": 20
+        },
+        {
+          "q": "who is chiney ogwumike sister",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Chiney Ogwumike's stats?",
+      "answer": "In the 2023 regular season, Chiney Ogwumike averaged 8.4 points, 4.3 rebounds, and 1.3 assists in 10 games for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/chiney-ogwumike/"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike stats",
+          "vol": 170
+        },
+        {
+          "q": "chiney ogwumike wnba stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Chiney Ogwumike?",
+      "answer": "Chiney Ogwumike was born March 21, 1992.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203823/chiney-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike age",
+          "vol": 140
+        },
+        {
+          "q": "how old is chiney ogwumike",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "What team does Chiney Ogwumike play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 13. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chiney ogwumike team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How many championships does Chiney Ogwumike have?",
-      "answer": "Public biographical sources cover Chiney Ogwumike's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike no wedding ring",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Chiney Ogwumike?",
-      "answer": "Chiney Ogwumike is a professional basketball player for the Connecticut Sun.",
+      "answer": "Chiney Ogwumike is not on a current WNBA roster. She has played for the Connecticut Sun and Los Angeles Sparks. The WNBA lists her as the first overall pick in the 2014 draft, selected by the Connecticut Sun, after she played at Stanford.",
       "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "who is chiney ogwumike sister",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Chiney Ogwumike injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "chiney ogwumike injury",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/chiney-ogwumike/",
+        "https://www.wnba.com/player/203823/chiney-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike team",
+          "vol": 20
+        },
+        {
+          "q": "chiney ogwumike la sparks",
+          "vol": 10
+        },
+        {
+          "q": "who does chiney ogwumike play for",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Who are Chiney Ogwumike's parents?",
-      "answer": "Public profiles share limited verified detail about Chiney Ogwumike's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "The New Yorker reported that Nneka Ogwumike's parents are Peter and Ify Ogwumike. The WNBA says Nneka is the oldest of four sisters: Chiney, Olivia, and Erica.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike parents",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://www.newyorker.com/culture/persons-of-interest/nneka-ogwumike-and-the-wnbas-big-complicated-moment",
+        "https://www.wnba.com/player/203014/nneka-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike parents",
+          "vol": 30
+        },
+        {
+          "q": "chiney ogwumike family",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Did Chiney Ogwumike retire?",
-      "answer": "As of late 2026, Chiney Ogwumike has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "why did chiney ogwumike retire",
-      "approx_monthly_volume": 90
+      "question": "How many championships does Chiney Ogwumike have?",
+      "answer": "The WNBA does not list a championship for Chiney Ogwumike. It lists her as the 2014 Rookie of the Year, a 2014 All-Rookie Team selection, an All-Star in 2014 and 2018, and the 2016 AP Comeback Player of the Year.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203823/chiney-ogwumike/bio"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike championships",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Does Chiney Ogwumike have kids?",
-      "answer": "There is no widely reported public information that Chiney Ogwumike has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "chiney ogwumike husband hayes johnson",
-      "approx_monthly_volume": 30
+      "question": "What is Chiney Ogwumike's nationality?",
+      "answer": "The WNBA lists Chiney Ogwumike's country as the USA. The Knot reported that she is a first-generation Nigerian-American and that she described herself as Igbo.",
+      "answer_kind": "mixed",
+      "sources": [
+        "https://www.wnba.com/player/203823/chiney-ogwumike/bio",
+        "https://www.theknot.com/content/chiney-ogwumike-relationship"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike nationality",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How many years has Chiney Ogwumike been in the WNBA?",
+      "answer": "Chiney Ogwumike played 7 regular seasons: 2014, 2016, 2018, 2019, 2021, 2022, and 2023.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/chiney-ogwumike/"
+      ],
+      "queries": [
+        {
+          "q": "chiney ogwumike wnba",
+          "vol": 70
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

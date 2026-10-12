@@ -1,130 +1,226 @@
 {
   "slug": "awa-fam",
   "player_name": "Awa Fam",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 12, 2026",
+  "verified_at": "2026-10-12",
   "items": [
     {
-      "question": "What are Awa Fam's stats / points per game?",
-      "answer": "In the 2026 regular season, Awa Fam averaged 9.9 points, 5.9 rebounds, and 1.8 assists in 36 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "question": "What are Awa Fam's stats?",
+      "answer": "In the 2026 regular season, Awa Fam averaged 10.3 points, 5.9 rebounds, and 1.8 assists in 37 games for the Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "awa fam stats",
-      "approx_monthly_volume": 5400
-    },
-    {
-      "question": "How much does Awa Fam make?",
-      "answer": "A precise public salary or net worth figure for Awa Fam is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/awa-fam/"
       ],
-      "google_keyword": "awa fam salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Awa Fam?",
-      "answer": "Awa Fam is listed at 6' 4\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
-      ],
-      "google_keyword": "awa fam height",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What did Awa Fam score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Las Vegas Aces), Awa Fam had 6.0 points, 6.0 rebounds, and 3.0 assists in a 77-98 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is awa fam playing today",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Awa Fam's contract?",
-      "answer": "Contract length and guarantees for Awa Fam are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "awa fam contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What team does Awa Fam play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. She wears No. 11. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "awa fam team",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "awa fam stats",
+          "vol": 5400
+        },
+        {
+          "q": "awa fam rebounds",
+          "vol": 30
+        },
+        {
+          "q": "awa fam wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Who is Awa Fam?",
-      "answer": "Awa Fam Thiam is a Spanish professional basketball player for the Seattle Storm of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
-      ],
-      "google_keyword": "who is awa fam",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What position does Awa Fam play?",
-      "answer": "Awa Fam is listed as a C for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "awa fam position",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What is Awa Fam's nationality?",
-      "answer": "Awa Fam is Spanish.",
+      "answer": "The 2026 WNBA draft list names her Awa Fam Thiam. The Seattle Storm said she is a Spanish center from Alicante.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
+        "https://www.wnba.com/draft/2026/teams/seattle-storm",
+        "https://storm.wnba.com/news/storm-select-awa-fam-with-the-no-3-overall-pick"
       ],
-      "google_keyword": "awa fam thiam nationality",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "awa fam thiam",
+          "vol": 1900
+        },
+        {
+          "q": "who is awa fam",
+          "vol": 50
+        },
+        {
+          "q": "awa fam thiam wnba",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Awa Fam injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "awa fam injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Awa Fam's parents?",
-      "answer": "Public profiles share limited verified detail about Awa Fam's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "How tall is Awa Fam?",
+      "answer": "The WNBA lists Awa Fam at 6 feet 4 inches.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
+        "https://www.wnba.com/player/1643443/awa-fam"
       ],
-      "google_keyword": "awa fam parents",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "awa fam height",
+          "vol": 720
+        },
+        {
+          "q": "awa fam thiam height",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What team does Awa Fam play for?",
+      "answer": "Awa Fam plays center for the Seattle Storm and wears No. 11.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643443/awa-fam"
+      ],
+      "queries": [
+        {
+          "q": "awa fam wnba",
+          "vol": 260
+        },
+        {
+          "q": "seattle storm awa fam",
+          "vol": 110
+        },
+        {
+          "q": "awa fam position",
+          "vol": 70
+        },
+        {
+          "q": "when will awa fam arrive in seattle",
+          "vol": 50
+        },
+        {
+          "q": "awa fam seattle",
+          "vol": 40
+        },
+        {
+          "q": "when will awa fam join the storm",
+          "vol": 20
+        },
+        {
+          "q": "awa fam thiam position",
+          "vol": 10
+        },
+        {
+          "q": "awa fam team",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Awa Fam?",
-      "answer": "Awa Fam was born June 17, 2006 in Elche. As of late 2026 that puts her at 20 years old.",
-      "answer_kind": "researched",
+      "answer": "Awa Fam was born June 17, 2006.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
+        "https://www.wnba.com/player/1643443/awa-fam"
       ],
-      "google_keyword": "awa fam age",
-      "approx_monthly_volume": 210,
-      "birthdate": "2006-06-17"
+      "queries": [
+        {
+          "q": "awa fam age",
+          "vol": 210
+        },
+        {
+          "q": "awa fam thiam age",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Awa Fam attend?",
-      "answer": "Awa Fam played college basketball at Valencia Basket of the Liga Femenina de Baloncesto.",
-      "answer_kind": "researched",
+      "question": "Where was Awa Fam drafted?",
+      "answer": "The Seattle Storm selected Awa Fam with the No. 3 overall pick in the 2026 WNBA draft.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awa_Fam"
+        "https://storm.wnba.com/news/storm-select-awa-fam-with-the-no-3-overall-pick",
+        "https://www.wnba.com/player/1643443/awa-fam"
       ],
-      "google_keyword": "awa fam lsu",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "awa fam draft",
+          "vol": 50
+        },
+        {
+          "q": "awa fam wnba draft",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where is Awa Fam from?",
+      "answer": "The Seattle Storm said Awa Fam is from Alicante, Spain. The WNBA lists her country as Spain.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://storm.wnba.com/news/storm-select-awa-fam-with-the-no-3-overall-pick",
+        "https://www.wnba.com/player/1643443/awa-fam"
+      ],
+      "queries": [
+        {
+          "q": "awa fam thiam nationality",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Awa Fam play before the WNBA?",
+      "answer": "The Seattle Storm said Awa Fam played for Valencia Basket, which she joined in December 2021.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://storm.wnba.com/news/storm-select-awa-fam-with-the-no-3-overall-pick"
+      ],
+      "queries": [
+        {
+          "q": "awa fam valencia",
+          "vol": 30
+        },
+        {
+          "q": "awa fam valencia basket",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Awa Fam play at LSU?",
+      "answer": "No. The Seattle Storm said she played for Valencia Basket in Spain.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://storm.wnba.com/news/storm-select-awa-fam-with-the-no-3-overall-pick"
+      ],
+      "queries": [
+        {
+          "q": "awa fam lsu",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What was Awa Fam's rookie year?",
+      "answer": "The first regular-season row for Awa Fam is 2026. She played 37 games in that row.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/awa-fam/"
+      ],
+      "queries": [
+        {
+          "q": "awa fam wnba debut",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How does Awa Fam compare to Lauren Betts?",
+      "answer": "In the 2026 regular season, Awa Fam averaged 10.3 points, 5.9 rebounds, and 1.8 assists in 37 games for the Seattle Storm. Lauren Betts averaged 6.4 points, 4.6 rebounds, and 1.2 assists in 44 games for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/awa-fam/",
+        "https://fullcourtbuckets.com/wnba/lauren-betts/"
+      ],
+      "queries": [
+        {
+          "q": "awa fam vs lauren betts",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
