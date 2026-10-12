@@ -1,7 +1,13 @@
-files rewritten: 0
-html files rewritten: 592
+files rewritten: 6
+html files rewritten: 624
 images missing alt: 0
 
+fallback dropped images/articles/aces-valkyries-semis-game-3-recap/carla-leite-valkyries.jpg; serving carla-leite-valkyries.webp (153170 bytes)
+fallback dropped images/articles/allisha-gray-game-3-status/allisha-gray-2024.jpg; serving allisha-gray-2024.webp (61176 bytes)
+fallback dropped images/articles/dream-sweep-liberty-game-3-semifinals/angel-reese-dream-cropped.jpg; serving angel-reese-dream-cropped.webp (74770 bytes)
+fallback dropped images/articles/wnba-finals-2026-audience-growth-dream-valkyries/borlase-dream-gateway-2026.jpg; serving borlase-dream-gateway-2026.webp (53180 bytes)
+fallback dropped images/articles/wnba-finals-2026-audience-growth-dream-valkyries/dream-falcons-suite-tiktok.jpg; serving dream-falcons-suite-tiktok.webp (187016 bytes)
+fallback dropped images/articles/wnba-finals-2026-audience-growth-dream-valkyries/valkyries-bench-target-center-2026.jpg; serving valkyries-bench-target-center-2026.webp (53074 bytes)
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
