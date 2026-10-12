@@ -1,5 +1,25 @@
 [
   {
+    "slug": "wnba-finals-2026-audience-growth-dream-valkyries",
+    "url": "/news/wnba-finals-2026-audience-growth-dream-valkyries/",
+    "title": "WNBA Finals arrive after 51 games topped 1 million viewers",
+    "description": "Atlanta faces Golden State in the 2026 WNBA Finals after 51 regular-season games topped 1 million viewers. See the numbers, our audience estimate and the TV schedule.",
+    "category": "WNBA Playoffs",
+    "date": "2026-10-11",
+    "image": "/images/articles/wnba-finals-2026-audience-growth-dream-valkyries/chart-audience-measures.png",
+    "imageAlt": "Chart of average WNBA viewers per game before the 2026 Finals, with the FCB forecast range of 1.2 to 1.6 million",
+    "imageCredit": "Chart: Full Court Buckets",
+    "teams": [
+      "atlanta-dream",
+      "golden-state-valkyries"
+    ],
+    "imageWidth": 1024,
+    "imageHeight": 935,
+    "imageOg": "/images/articles/wnba-finals-2026-audience-growth-dream-valkyries/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
+  },
+  {
     "slug": "semis-game-3-preview",
     "url": "/news/semis-game-3-preview/",
     "title": "Semis Game 3 Preview: Can the Liberty and Aces Do What No WNBA Team Has Done?",
