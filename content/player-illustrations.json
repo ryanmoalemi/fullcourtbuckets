@@ -1360,6 +1360,32 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 627,
+      "slug": "aari-mcdonald",
+      "player_name": "Aari McDonald",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/aari-mcdonald/portrait.webp",
+      "width": 1140,
+      "height": 1140,
+      "asset_sha256": "0f9e19dd2f3ef6fc2d2a4c9109f38bac8acb6c24965879f3a93198fa5fb7162f",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 1140,
+        "height": 1140,
+        "source_width": 1140,
+        "source_height": 1140,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
