@@ -553,6 +553,22 @@ _SEASON_RE = re.compile(
     rf'<!-- {SEASON_MARK} -->.*?<!-- /{SEASON_MARK} -->',
     re.S,
 )
+_PHOTO_RE = re.compile(r'<figure class="team-photo">.*?</figure>', re.S)
+
+
+def keep_published_photo(previous: str, page: str) -> str:
+    """Keep the photo already published on a team page.
+
+    The page builder emits a plain img. A later image pass wraps that img in
+    a picture element and records the real file size. Rebuilding the page
+    must not throw that wrapper away.
+    """
+    old = _PHOTO_RE.search(previous or '')
+    new = _PHOTO_RE.search(page or '')
+    if not old or not new:
+        return page
+    return page[:new.start()] + old.group(0) + page[new.end():]
+
 _NEWS_RE = re.compile(r'<section class="section" id="team-news">.*?</section>', re.S)
 
 

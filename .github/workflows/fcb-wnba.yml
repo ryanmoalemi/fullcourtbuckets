@@ -315,10 +315,14 @@ jobs:
           else
             echo 'No playoff data changes to commit.' >> "$GITHUB_STEP_SUMMARY"
           fi
+      - name: Install page build dependencies
+        run: python -m pip install --timeout 60 --retries 3 'pillow>=11.3,<13'
       - name: Rebuild standings and player pages
         run: |
           python automation/build_standings.py
           python automation/build_players.py
+          python automation/apply_portraits.py
+          python automation/rollout_player_design.py
       - name: Record the playoff lines the pages will show
         run: |
           python - <<'PY'

@@ -125,6 +125,8 @@ class SiteNavTests(unittest.TestCase):
         self.assertIn('nav.site-nav.is-open>ul{display:block}', mobile)
         desktop = css.split('@media (min-width:901px){', 1)[1].split('@media', 1)[0]
         self.assertIn('nav.site-nav>ul{display:flex;align-items:center;gap:2px}', desktop)
+        self.assertIn('left:auto;right:0', desktop)
+        self.assertNotIn('nth-last-child(-n+2)', css)
         self.assertNotIn('nav.site-nav:not(.is-open)>ul{display:none}', desktop)
         self.assertNotIn('nav.site-nav.is-open>ul{display:block}', desktop)
         builder = (ROOT / 'automation' / 'build_players.py').read_text(encoding='utf-8')

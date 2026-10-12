@@ -558,6 +558,23 @@ class TeamSummaryTests(unittest.TestCase):
         }
         self.assertEqual(over, {})
 
+    def test_rebuild_keeps_the_published_team_photo(self):
+        previous = (
+            '<figure class="team-photo"><picture><source srcset="/images/teams/chicago-sky.webp" '
+            'type="image/webp"><img src="/images/teams/chicago-sky.jpg" width="480" height="480">'
+            '</picture></figure>'
+        )
+        fresh = (
+            'start<figure class="team-photo"><img src="/images/teams/chicago-sky.jpg" '
+            'width="1200" height="1200"></figure>end'
+        )
+        kept = team_season.keep_published_photo(previous, fresh)
+        self.assertIn('type="image/webp"', kept)
+        self.assertIn('width="480"', kept)
+        self.assertNotIn('width="1200"', kept)
+        self.assertTrue(kept.startswith('start'))
+        self.assertTrue(kept.endswith('end'))
+
     def test_team_summary_patch_keeps_an_existing_photo(self):
         index = json.loads((ROOT / 'data/wnba/players-index.json').read_text(encoding='utf-8'))
         linking = internal_links.catalog_from_index(index)

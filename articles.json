@@ -67,6 +67,7 @@
     "image": "/images/articles/aces-valkyries-semis-game-3-recap/carla-leite-valkyries.jpg",
     "imageAlt": "Carla Leite of the Golden State Valkyries in a purple jersey drives past a defender",
     "imageCredit": "Photo: Sarah Stierch / Wikimedia Commons (CC0)",
+    "espnGameId": "401918300",
     "teams": [
       "golden-state-valkyries",
       "las-vegas-aces",
@@ -97,6 +98,7 @@
     "image": "/images/articles/dream-sweep-liberty-game-3-semifinals/angel-reese-dream-cropped.jpg",
     "imageAlt": "Angel Reese of the Atlanta Dream in a white jersey with red trim",
     "imageCredit": "Photo: John Mac / Wikimedia Commons (CC BY-SA 4.0)",
+    "espnGameId": "401918299",
     "teams": [
       "atlanta-dream",
       "new-york-liberty"
