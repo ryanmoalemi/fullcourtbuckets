@@ -369,6 +369,16 @@ def _games(value) -> int | None:
     return value
 
 
+def _positive_games(value) -> int | None:
+    """A game count. Whole-number floats count. Zero and booleans do not."""
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    if isinstance(value, float) and not value.is_integer():
+        return None
+    number = int(value)
+    return number if number > 0 else None
+
+
 def _row_from_stint(player_id, stint: dict, table: dict) -> dict | None:
     team = team_for_slug(stint.get("team_slug"), table)
     games = _games(stint.get("games_played"))
@@ -546,13 +556,27 @@ def supplement_rows(
                 continue
             line_years = _marked_years(entry, "confirmed_seasons") | _marked_years(entry, "unresolved_seasons")
             if current_rows and year in line_years and not _same_coverage(current_rows, available, table):
-                for row in current_rows:
-                    if row in rows:
-                        rows.remove(row)
+                incoming = []
                 for stint in available:
                     row = _row_from_stint(player_id, stint, table)
                     if row is not None:
-                        replaced.append(row)
+                        incoming.append(row)
+                # A longer game log without averages must not erase the feed line.
+                # The box-score pass adds the games the season line has not counted.
+                if incoming and all(row.get("pts") is None for row in incoming):
+                    unresolved.append({
+                        "player_id": player_id,
+                        "season": year,
+                        "season_type": kind,
+                        "api_games": sum(row.get("games_played") or 0 for row in current_rows),
+                        "cross_check_games": sum(item.get("games_played") or 0 for item in available),
+                        "reason": "game log is ahead of the season line",
+                    })
+                    continue
+                for row in current_rows:
+                    if row in rows:
+                        rows.remove(row)
+                replaced.extend(incoming)
                 continue
             extra, reason = _match_stints(current_rows, available, table)
             if reason:
@@ -1087,7 +1111,12 @@ def statistics_line(payload: dict) -> dict:
 
 
 def stints_from_clubs(year: int, clubs: dict[str, dict], line: dict, team_slug: dict[str, str]) -> list[dict]:
-    """One stint per club. A single club uses the season statistic's games and averages."""
+    """One stint per club. A single club uses the season statistic's games and averages.
+
+    When the game log already lists more games than that season line, the line
+    has not caught up. The stint keeps the log's count and does not copy the
+    short line's averages onto it.
+    """
     real = {team_id: info for team_id, info in clubs.items() if not _all_star_club(info)}
     if not real:
         return []
@@ -1095,13 +1124,20 @@ def stints_from_clubs(year: int, clubs: dict[str, dict], line: dict, team_slug: 
     if len(real) == 1:
         team_id, info = next(iter(real.items()))
         slug = team_slug.get(team_id)
-        games = line.get("games_played") or info.get("count")
+        listed = _positive_games(line.get("games_played"))
+        logged = _positive_games(info.get("count"))
+        games = listed or logged
+        copy_line = True
+        if listed and logged and logged > listed:
+            games = logged
+            copy_line = False
         if not slug or not isinstance(games, int) or isinstance(games, bool) or games <= 0:
             return []
         stint = {"season": year, "games_played": games, "team_slug": slug}
-        for key in METRIC_KEYS:
-            if key in line and line.get(key) is not None:
-                stint[key] = line[key]
+        if copy_line:
+            for key in METRIC_KEYS:
+                if key in line and line.get(key) is not None:
+                    stint[key] = line[key]
         stints.append(stint)
         return stints
     for team_id, info in real.items():

@@ -2954,6 +2954,11 @@ def build(root: Path):
     status=json.loads((data/'status.json').read_text())
     if status.get('status')!='ok' or not index.get('players'):
         raise BuildError('No successful nonempty import is available.')
+    import playoff_boxes
+    try:
+        playoff_boxes.require_counts(root)
+    except RuntimeError as exc:
+        raise BuildError(str(exc)) from None
     published_players=[p for p in index['players'] if p.get('id') not in DUPLICATE_PLAYER_IDS]
     published_index={**index, 'players': published_players}
     linking=links.catalog_from_index(published_index)

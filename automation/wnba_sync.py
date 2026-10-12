@@ -22,6 +22,7 @@ import urllib.parse
 import urllib.request
 from zoneinfo import ZoneInfo
 
+import playoff_boxes
 import season_teams
 import team_names
 
@@ -491,6 +492,8 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
     stamp = now.astimezone(dt.timezone.utc).isoformat(timespec="seconds")
     directory, profiles = [], {}
     old_directory = load(data / "players-index.json", {}).get("players", [])
+    playoff_games = playoff_boxes.load_games(root)
+    playoff_updates = 0
     for pid, p in sorted(players.items()):
         if pid not in by_player and pid not in active_players:
             continue  # Players entirely outside the 2008+ scope are not newly published.
@@ -498,6 +501,19 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
         slug = stable_slug(pid, name, registry)
         stats = sorted(by_player[pid], key=lambda r: (-r["season"], r["season_type"], str((r["team"] or {}).get("id"))))
         recent = sorted(logs[pid], key=lambda r: str(r.get("date") or ""), reverse=True)
+        before = [
+            (row.get("season"), row.get("games_played"))
+            for row in stats if isinstance(row, dict) and row.get("season_type") == 3
+        ]
+        created = playoff_boxes.reconcile_player(pid, stats, recent, playoff_games)
+        for row in created:
+            seasons.setdefault(row["season"], []).append(row)
+        after = [
+            (row.get("season"), row.get("games_played"))
+            for row in stats if isinstance(row, dict) and row.get("season_type") == 3
+        ]
+        if before != after or len(recent) != len(logs[pid]):
+            playoff_updates += 1
         # Absence from active feed is NOT evidence of retirement or free agency.
         active = pid in active_players
         current_team = p["team"] if active else None
@@ -537,6 +553,8 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
           "cadence": "daily" if active_season else "weekly", "in_season": active_season,
           "source_data_through": None, "news_connected": False, "transactions_connected": False})
     write(data / "sync-state.json", {"last_success": stamp, "player_ids": sorted(players), "active_ids": sorted(active_players)})
+    if playoff_updates:
+        print(f"Playoff box scores updated {playoff_updates} player lines.")
     print(f"Validated {len(directory)} player records, {len(seasons)} seasons. No credentials saved.")
     return True
 
