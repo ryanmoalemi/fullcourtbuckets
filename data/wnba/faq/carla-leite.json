@@ -1,114 +1,171 @@
 {
   "slug": "carla-leite",
   "player_name": "Carla Leite",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 12, 2026",
+  "verified_at": "2026-10-12",
   "items": [
     {
-      "question": "What are Carla Leite's stats / points per game?",
-      "answer": "In the 2026 regular season, Carla Leite averaged 16.0 points, 2.2 rebounds, and 6.3 assists in 38 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Carla Leite's stats?",
+      "answer": "In the 2026 regular season, Carla Leite averaged 16.1 points, 2.2 rebounds, and 6.3 assists in 39 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "carla leite stats",
-      "approx_monthly_volume": 8100
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/carla-leite/"
+      ],
+      "queries": [
+        {
+          "q": "carla leite stats",
+          "vol": 8100
+        },
+        {
+          "q": "carla leite wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Carla Leite dating?",
-      "answer": "As of late 2026, Carla Leite has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What team does Carla Leite play for?",
+      "answer": "Carla Leite plays guard for the Portland Fire and wears No. 0.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://www.wnba.com/player/1642304/carla-leite"
       ],
-      "google_keyword": "carla leite partner",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How much does Carla Leite make?",
-      "answer": "A precise public salary or net worth figure for Carla Leite is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "carla leite salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "carla leite wnba",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "How tall is Carla Leite?",
-      "answer": "Carla Leite is listed at 5' 9\".",
+      "answer": "The WNBA lists Carla Leite at 5 feet 9 inches and 151 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://www.wnba.com/player/1642304/carla-leite"
       ],
-      "google_keyword": "carla leite height",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "carla leite height",
+          "vol": 260
+        },
+        {
+          "q": "how tall is carla leite",
+          "vol": 50
+        },
+        {
+          "q": "carla leite weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Carla Leite?",
-      "answer": "She was born April 16, 2004 in Poissy. As of late 2026 that puts her at 22 years old.",
+      "answer": "Carla Leite was born April 16, 2004. The French federation describes her as a native of Poissy.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://www.wnba.com/player/1642304/carla-leite",
+        "https://ancien.ffbb.com/equipe-de-france-feminine/leite-lavenir-au-present"
       ],
-      "google_keyword": "carla leite age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2004-04-16"
+      "queries": [
+        {
+          "q": "carla leite age",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "What did Carla Leite score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Los Angeles Sparks), Carla Leite had 23.0 points, 3.0 rebounds, and 5.0 assists in a 84-105 loss.",
+      "question": "Which teams has Carla Leite played for?",
+      "answer": "Carla Leite has played for the Golden State Valkyries and Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is carla leite playing today",
-      "approx_monthly_volume": 210
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/carla-leite/"
+      ],
+      "queries": [
+        {
+          "q": "carla leite valkyries",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Carla Leite married?",
-      "answer": "There is no widely reported public record of Carla Leite being married as of late 2026.",
+      "question": "Where was Carla Leite drafted?",
+      "answer": "The WNBA lists Carla Leite as the ninth overall pick in the 2024 draft, selected by the Dallas Wings.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2024/prospects/183226/carla-leite",
+        "https://www.wnba.com/player/1642304/carla-leite"
+      ],
+      "queries": [
+        {
+          "q": "carla leite wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "carla leite dallas wings",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Carla Leite Portuguese?",
+      "answer": "No. The WNBA lists Carla Leite's country as France.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642304/carla-leite"
+      ],
+      "queries": [
+        {
+          "q": "carla leite portuguese",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Carla Leite play before the WNBA?",
+      "answer": "The French federation lists Carla Leite with Lyon from 2019 to 2022, Tarbes from 2022 to 2024, and Villeneuve d'Ascq from 2024 to 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://lf2.ffbb.com/joueur/parcours-palmares/245351-carla-leite",
+        "https://www.wnba.com/draft/2024/prospects/183226/carla-leite"
       ],
-      "google_keyword": "carla leite husband",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "carla leite tarbes",
+          "vol": 10
+        },
+        {
+          "q": "carla leite basket",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Carla Leite injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "carla leite injury",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Who are Carla Leite's parents?",
-      "answer": "Public profiles share limited verified detail about Carla Leite's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Has Carla Leite won EuroBasket?",
+      "answer": "The French federation lists Carla Leite as a 2023 U20 European champion and the 2023 Euro U20 MVP. It does not list a senior EuroBasket title. The same page lists a 2025 EuroCup title.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://lf2.ffbb.com/joueur/parcours-palmares/245351-carla-leite"
       ],
-      "google_keyword": "carla leite parents",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "carla leite eurobasket",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Carla Leite?",
-      "answer": "Carla Leite is a French professional basketball player for the Portland Fire of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "How many years has Carla Leite been in the WNBA?",
+      "answer": "Carla Leite has 2 regular seasons: 2025 and 2026.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
+        "https://fullcourtbuckets.com/wnba/carla-leite/"
       ],
-      "google_keyword": "carla leite wiki",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "When was Carla Leite drafted?",
-      "answer": "She was selected ninth overall by the Dallas Wings in the 2024 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Carla_Leite"
-      ],
-      "google_keyword": "carla leite draft",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "carla leite wnba",
+          "vol": 320
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

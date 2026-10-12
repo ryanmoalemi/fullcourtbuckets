@@ -1,142 +1,189 @@
 {
   "slug": "natisha-hiedeman",
   "player_name": "Natisha Hiedeman",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 12, 2026",
+  "verified_at": "2026-10-12",
   "items": [
     {
-      "question": "What are Natisha Hiedeman's stats / points per game?",
-      "answer": "In the 2026 regular season, Natisha Hiedeman averaged 14.8 points, 2.5 rebounds, and 4.7 assists in 39 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "question": "What are Natisha Hiedeman's stats?",
+      "answer": "In the 2026 regular season, Natisha Hiedeman averaged 14.7 points, 2.5 rebounds, and 5.0 assists in 40 games for the Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "natisha hiedeman stats",
-      "approx_monthly_volume": 6600
-    },
-    {
-      "question": "Who is Natisha Hiedeman dating?",
-      "answer": "As of late 2026, Natisha Hiedeman has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://fullcourtbuckets.com/wnba/natisha-hiedeman/"
       ],
-      "google_keyword": "natisha hiedeman partner",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Natisha Hiedeman make?",
-      "answer": "A precise public salary or net worth figure for Natisha Hiedeman is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "natisha hiedeman salary",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "natisha hiedeman stats",
+          "vol": 6600
+        },
+        {
+          "q": "natisha hiedeman points per game",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is Natisha Hiedeman?",
-      "answer": "Natisha Hiedeman is listed at 5' 8\".",
+      "answer": "The WNBA lists Natisha Hiedeman at 5 feet 8 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://www.wnba.com/player/1629567/natisha-hiedeman"
       ],
-      "google_keyword": "natisha hiedeman height",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "natisha hiedeman height",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "Who are Courtney Williams and Natisha Hiedeman?",
+      "answer": "Courtney Williams and Natisha Hiedeman are the streaming duo StudBudz. GQ reported that they were Minnesota Lynx teammates, and that Hiedeman signed with the Seattle Storm in April 2026 while Williams remained with the Lynx.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.gq.com/story/wnba-studbudz"
+      ],
+      "queries": [
+        {
+          "q": "courtney williams and natisha hiedeman",
+          "vol": 260
+        }
+      ]
     },
     {
       "question": "How old is Natisha Hiedeman?",
-      "answer": "She was born February 10, 1997 in Green Bay. As of late 2026 that puts her at 29 years old.",
+      "answer": "Natisha Hiedeman was born February 10, 1997.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://www.wnba.com/player/1629567/natisha-hiedeman"
       ],
-      "google_keyword": "natisha hiedeman age",
-      "approx_monthly_volume": 210,
-      "birthdate": "1997-02-10"
-    },
-    {
-      "question": "What did Natisha Hiedeman score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Las Vegas Aces), Natisha Hiedeman had 4.0 points, 0 rebounds, and 3.0 assists in a 77-98 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is natisha hiedeman playing tonight",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Natisha Hiedeman's contract?",
-      "answer": "Contract length and guarantees for Natisha Hiedeman are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "natisha hiedeman contract",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Is Natisha Hiedeman married?",
-      "answer": "There is no widely reported public record of Natisha Hiedeman being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
-      ],
-      "google_keyword": "natisha hiedeman wife",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "natisha hiedeman age",
+          "vol": 210
+        },
+        {
+          "q": "how old is natisha hiedeman",
+          "vol": 140
+        },
+        {
+          "q": "natisha hiedeman birthday",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "What team does Natisha Hiedeman play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. She wears No. 2. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "natisha hiedeman team",
-      "approx_monthly_volume": 30
+      "answer": "Natisha Hiedeman plays guard for the Seattle Storm and wears No. 2.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629567/natisha-hiedeman"
+      ],
+      "queries": [
+        {
+          "q": "natisha hiedeman wnba",
+          "vol": 140
+        },
+        {
+          "q": "natisha hiedeman seattle storm",
+          "vol": 50
+        },
+        {
+          "q": "natisha hiedeman team",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Where did Natisha Hiedeman play college basketball?",
+      "answer": "Natisha Hiedeman played at Marquette.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://gomarquette.com/sports/womens-basketball/roster/natisha-hiedeman/2693",
+        "https://www.wnba.com/player/1629567/natisha-hiedeman"
+      ],
+      "queries": [
+        {
+          "q": "natisha hiedeman marquette",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Has Natisha Hiedeman played in Unrivaled?",
+      "answer": "Unrivaled lists Natisha Hiedeman with Hive BC in 2026, where she averaged 6.1 points, 1.9 rebounds, and 1.3 assists in 12 games. She was a 2025 Unrivaled champion with Rose BC, and she also played for Phantom BC and Laces BC that year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.unrivaled.basketball/player/natisha-hiedeman-okjofgwlkna9/bio"
+      ],
+      "queries": [
+        {
+          "q": "natisha hiedeman unrivaled",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where was Natisha Hiedeman drafted?",
+      "answer": "The WNBA lists Natisha Hiedeman as the 18th overall pick in the 2019 draft. She was selected by the Minnesota Lynx and traded to the Connecticut Sun on draft day.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629567/natisha-hiedeman",
+        "https://gomarquette.com/news/2019/4/10/womens-basketball-natisha-hiedeman-selected-18th-overall-in-2019-wnba-draft"
+      ],
+      "queries": [
+        {
+          "q": "natisha hiedeman draft",
+          "vol": 50
+        },
+        {
+          "q": "natisha hiedeman draft day",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Where is Natisha Hiedeman from?",
-      "answer": "She is from Green Bay.",
+      "answer": "Marquette lists Natisha Hiedeman's hometown as Green Bay, Wisconsin, and her high school as Green Bay Southwest.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://gomarquette.com/sports/womens-basketball/roster/natisha-hiedeman/2693"
       ],
-      "google_keyword": "where is natisha hiedeman from",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "where is natisha hiedeman from",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "What is Natisha Hiedeman's nationality?",
-      "answer": "Natisha Hiedeman is American.",
+      "answer": "The WNBA lists Natisha Hiedeman's country as the USA.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://www.wnba.com/player/1629567/natisha-hiedeman"
       ],
-      "google_keyword": "natisha hiedeman nationality",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "natisha hiedeman nationality",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "When was Natisha Hiedeman drafted?",
-      "answer": "She was drafted with the eighteenth overall pick in the 2019 WNBA draft, which is the highest of any Marquette basketball player in school history and the highest draft pick for the Big East Conference since conference re-alignment.",
-      "answer_kind": "researched",
+      "question": "How does Natisha Hiedeman compare to Kelsey Plum?",
+      "answer": "In the 2026 regular season, Natisha Hiedeman averaged 14.7 points, 2.5 rebounds, and 5.0 assists in 40 games for the Seattle Storm. Kelsey Plum averaged 23.9 points, 2.2 rebounds, and 6.4 assists in 12 games for the Los Angeles Sparks, and 15.8 points, 1.8 rebounds, and 2.8 assists in 5 games for the Phoenix Mercury.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
+        "https://fullcourtbuckets.com/wnba/natisha-hiedeman/",
+        "https://fullcourtbuckets.com/wnba/kelsey-plum/"
       ],
-      "google_keyword": "natisha hiedeman draft",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Natisha Hiedeman injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "natisha hiedeman injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who are Natisha Hiedeman's parents?",
-      "answer": "Public profiles share limited verified detail about Natisha Hiedeman's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natisha_Hiedeman"
-      ],
-      "google_keyword": "natisha hiedeman parents",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "kelsey plum vs natisha hiedeman",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
