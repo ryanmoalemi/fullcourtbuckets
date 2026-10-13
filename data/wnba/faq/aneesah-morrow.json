@@ -1,128 +1,187 @@
 {
   "slug": "aneesah-morrow",
   "player_name": "Aneesah Morrow",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Aneesah Morrow's stats / points per game?",
-      "answer": "In the 2026 regular season, Aneesah Morrow averaged 11.0 points, 8.3 rebounds, and 1.4 assists in 27 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Aneesah Morrow's stats?",
+      "answer": "In the 2026 regular season, Aneesah Morrow averaged 11.0 points, 8.3 rebounds, and 1.4 assists in 27 games for the Connecticut Sun and Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aneesah morrow stats",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "Who is Aneesah Morrow dating?",
-      "answer": "As of late 2026, Aneesah Morrow has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aneesah_Morrow"
+        "https://fullcourtbuckets.com/wnba/aneesah-morrow/"
       ],
-      "google_keyword": "aneesah morrow partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Aneesah Morrow make?",
-      "answer": "A precise public salary or net worth figure for Aneesah Morrow is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aneesah morrow net worth",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "aneesah morrow stats",
+          "vol": 3600
+        },
+        {
+          "q": "aneesah morrow rebounds",
+          "vol": 20
+        },
+        {
+          "q": "aneesah morrow wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Aneesah Morrow?",
-      "answer": "Aneesah Morrow is listed at 6' 1\".",
+      "answer": "The Toronto Tempo roster lists Aneesah Morrow at 6 feet 1 inch and 178 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aneesah_Morrow"
+        "https://www.wnba.com/team/1611661332/toronto-tempo"
       ],
-      "google_keyword": "aneesah morrow height",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "aneesah morrow height",
+          "vol": 260
+        }
+      ]
     },
     {
       "question": "How old is Aneesah Morrow?",
-      "answer": "She was born February 2, 2003. As of late 2026 that puts her at 23 years old.",
+      "answer": "The WNBA draft page lists Aneesah Morrow's birthdate as February 2, 2003.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aneesah_Morrow"
+        "https://www.wnba.com/draft/2025/prospects/aneesah-morrow"
       ],
-      "google_keyword": "aneesah morrow age",
-      "approx_monthly_volume": 70,
-      "birthdate": "2003-02-02"
-    },
-    {
-      "question": "What did Aneesah Morrow score in her last game?",
-      "answer": "In her most recent completed game (August 22, 2026 vs. the Portland Fire), Aneesah Morrow had 0.0 points, 2.0 rebounds, and 0 assists in a 82-79 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is aneesah morrow playing tonight",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Aneesah Morrow's jersey number?",
-      "answer": "Aneesah Morrow wears number 24 for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aneesah morrow jersey",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Aneesah Morrow's contract?",
-      "answer": "Contract length and guarantees for Aneesah Morrow are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aneesah morrow contract",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "aneesah morrow age",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "What team does Aneesah Morrow play for?",
-      "answer": "Her most recent WNBA team on record is the Toronto Tempo. She wears No. 24. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aneesah morrow team",
-      "approx_monthly_volume": 20
+      "answer": "Aneesah Morrow plays forward for the Toronto Tempo and wears No. 24. The WNBA reported that Toronto acquired her from the Connecticut Sun on July 31, 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/team/1611661332/toronto-tempo",
+        "https://www.wnba.com/news/rapid-reactions-trade-deadline-2026"
+      ],
+      "queries": [
+        {
+          "q": "aneesah morrow team",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where was Aneesah Morrow drafted?",
+      "answer": "The Connecticut Sun selected Aneesah Morrow seventh overall in the 2025 WNBA draft. The team said her name is pronounced uh-nee-suh.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/connecticut-sun-select-aneesah-morrow/n-6214039",
+        "https://www.wnba.com/draft/2025/prospects/aneesah-morrow"
+      ],
+      "queries": [
+        {
+          "q": "aneesah morrow draft",
+          "vol": 20
+        },
+        {
+          "q": "aneesah morrow wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Aneesah Morrow play college basketball?",
+      "answer": "The WNBA draft page lists Aneesah Morrow's college as LSU and her previous school as DePaul from 2021 to 2023. South Carolina is not listed.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2025/prospects/aneesah-morrow"
+      ],
+      "queries": [
+        {
+          "q": "aneesah morrow lsu",
+          "vol": 70
+        },
+        {
+          "q": "aneesah morrow depaul",
+          "vol": 20
+        },
+        {
+          "q": "aneesah morrow south carolina",
+          "vol": 10
+        },
+        {
+          "q": "aneesah morrow transfer",
+          "vol": 10
+        },
+        {
+          "q": "lsu women's basketball aneesah morrow",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where is Aneesah Morrow from?",
+      "answer": "The WNBA draft page lists Aneesah Morrow's high school as Simeon, her birthplace as Chicago, Illinois, and her country as the United States.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2025/prospects/aneesah-morrow"
+      ],
+      "queries": [
+        {
+          "q": "aneesah morrow simeon",
+          "vol": 20
+        },
+        {
+          "q": "aneesah morrow chicago",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What position does Aneesah Morrow play?",
-      "answer": "Aneesah Morrow is listed as a F for the Toronto Tempo.",
+      "answer": "The WNBA draft page and the Toronto Tempo roster list Aneesah Morrow as a forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/draft/2025/prospects/aneesah-morrow",
+        "https://www.wnba.com/team/1611661332/toronto-tempo"
+      ],
+      "queries": [
+        {
+          "q": "aneesah morrow position",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How many years has Aneesah Morrow been in the WNBA?",
+      "answer": "Aneesah Morrow has 2 regular seasons: 2025 and 2026.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aneesah morrow position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Aneesah Morrow injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aneesah morrow injury",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Who are Aneesah Morrow's parents?",
-      "answer": "Public profiles share limited verified detail about Aneesah Morrow's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aneesah_Morrow"
+        "https://fullcourtbuckets.com/wnba/aneesah-morrow/"
       ],
-      "google_keyword": "aneesah morrow parents",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "aneesah morrow wnba",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "What college did Aneesah Morrow attend?",
-      "answer": "Aneesah Morrow played college basketball at DePaul University.",
-      "answer_kind": "researched",
+      "question": "Which teams has Aneesah Morrow played for?",
+      "answer": "Aneesah Morrow has played for the Connecticut Sun and Connecticut Sun and Toronto Tempo. Her current team is the Toronto Tempo.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aneesah_Morrow"
+        "https://fullcourtbuckets.com/wnba/aneesah-morrow/"
       ],
-      "google_keyword": "aneesah morrow lsu",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "aneesah morrow connecticut sun",
+          "vol": 40
+        },
+        {
+          "q": "aneesah morrow sun",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

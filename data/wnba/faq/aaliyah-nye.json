@@ -1,114 +1,202 @@
 {
   "slug": "aaliyah-nye",
   "player_name": "Aaliyah Nye",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Aaliyah Nye's stats / points per game?",
-      "answer": "In the 2026 regular season, Aaliyah Nye averaged 0.3 points, 0.0 rebounds, and 0.2 assists in 11 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Aaliyah Nye's stats?",
+      "answer": "Aaliyah Nye's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aaliyah nye stats",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/aaliyah-nye/"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye stats",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "How much does Aaliyah Nye make?",
-      "answer": "A precise public salary or net worth figure for Aaliyah Nye is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "What did Aaliyah Nye average for each team in 2026?",
+      "answer": "In 2026, Aaliyah Nye's regular-season lines are split by team. She averaged 6.0 points, 3.0 rebounds, and 1.0 assists in 1 game for the Los Angeles Sparks, and 0.7 points, 0.2 rebounds, and 0.2 assists in 19 games for the Atlanta Dream.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/aaliyah-nye/"
       ],
-      "google_keyword": "aaliyah nye salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "aaliyah nye wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Aaliyah Nye?",
-      "answer": "Aaliyah Nye is listed at 6' 0\".",
+      "answer": "The WNBA lists Aaliyah Nye at 6 feet 0 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
+        "https://www.wnba.com/player/1642801/aaliyah-nye/bio"
       ],
-      "google_keyword": "aaliyah nye height",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Aaliyah Nye's contract?",
-      "answer": "Contract length and guarantees for Aaliyah Nye are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aaliyah nye contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Aaliyah Nye married?",
-      "answer": "There is no widely reported public record of Aaliyah Nye being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
-      ],
-      "google_keyword": "aaliyah nye husband",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What team does Aaliyah Nye play for?",
-      "answer": "Her most recent WNBA team on record is the Los Angeles Sparks. She wears No. 32. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aaliyah nye team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Aaliyah Nye's nationality?",
-      "answer": "Aaliyah Nye is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
-      ],
-      "google_keyword": "aaliyah nye parents nationality",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Aaliyah Nye injured?",
-      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aaliyah nye injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Aaliyah Nye's parents?",
-      "answer": "Public profiles share limited verified detail about Aaliyah Nye's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
-      ],
-      "google_keyword": "aaliyah nye parents",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Who is Aaliyah Nye?",
-      "answer": "Aaliyah Nye is an American professional basketball player for the Los Angeles Sparks of the Women's National Basketball Association (WNBA) and Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
-      ],
-      "google_keyword": "aaliyah nye wikipedia",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "aaliyah nye height",
+          "vol": 140
+        }
+      ]
     },
     {
       "question": "How old is Aaliyah Nye?",
-      "answer": "Aaliyah Nye was born August 14, 2002. As of late 2026 that puts her at 24 years old.",
+      "answer": "Aaliyah Nye was born August 14, 2002.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642801/aaliyah-nye/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye age",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Where did Aaliyah Nye play college basketball?",
+      "answer": "The WNBA says Aaliyah Nye began her college career at Illinois and then played at Alabama, where she was named to the 2024 All-SEC Second Team.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642801/aaliyah-nye/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye transfer",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where was Aaliyah Nye drafted?",
+      "answer": "The WNBA says the Las Vegas Aces drafted Aaliyah Nye 13th overall in 2025, and that she won the 2025 WNBA championship with the Aces. It also says the Toronto Tempo selected her eighth in the 2026 expansion draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642801/aaliyah-nye/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye draft",
+          "vol": 10
+        },
+        {
+          "q": "aaliyah nye wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What team does Aaliyah Nye play for?",
+      "answer": "Roll Tide Wire reported on August 30, 2026, that the Los Angeles Sparks added Aaliyah Nye after the Atlanta Dream placed her on waivers.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Nye"
+        "https://rolltidewire.usatoday.com/story/sports/college/crimson-tide/womens-basketball/2026/08/30/wnba-aaliyah-nye-alabama-womens-basketball-los-angeles-sparks-roster-moves/91534847007/"
       ],
-      "google_keyword": "aaliyah nye age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2002-08-14"
+      "queries": [
+        {
+          "q": "aaliyah nye team",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Who is in Aaliyah Nye's family?",
+      "answer": "The University of Illinois roster lists Aaliyah Nye as the daughter of James Nye and LaQueena Douglas, and says she has an older sister, Aazhenii, and a twin sister, Aashawnti.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://fightingillini.com/sports/womens-basketball/roster/aaliyah-nye/12250"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye parents",
+          "vol": 390
+        },
+        {
+          "q": "aaliyah nye twin sister",
+          "vol": 210
+        },
+        {
+          "q": "aaliyah nye sisters",
+          "vol": 170
+        },
+        {
+          "q": "aaliyah nye mother",
+          "vol": 50
+        },
+        {
+          "q": "aaliyah nye twin",
+          "vol": 50
+        },
+        {
+          "q": "aaliyah nye father",
+          "vol": 30
+        },
+        {
+          "q": "aaliyah nye family",
+          "vol": 20
+        },
+        {
+          "q": "aaliyah nye mom",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What is Aaliyah Nye's nationality?",
+      "answer": "The WNBA lists Aaliyah Nye's country as the USA.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642801/aaliyah-nye/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye nationality",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How many years has Aaliyah Nye been in the WNBA?",
+      "answer": "Aaliyah Nye has 2 regular seasons: 2025 and 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/aaliyah-nye/"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye wnba",
+          "vol": 320
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Aaliyah Nye played for?",
+      "answer": "Aaliyah Nye has played for the Las Vegas Aces, Los Angeles Sparks and Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/aaliyah-nye/"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah nye aces",
+          "vol": 40
+        },
+        {
+          "q": "aaliyah nye las vegas aces",
+          "vol": 20
+        },
+        {
+          "q": "aaliyah nye las vegas",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

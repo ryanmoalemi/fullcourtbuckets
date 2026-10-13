@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 66)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 76)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -518,15 +518,22 @@ class BuildTests(unittest.TestCase):
             'natisha-hiedeman', 'rae-burrell', 'alanna-smith', 'awa-fam', 'bridget-carleton',
             'carla-leite', 'chiney-ogwumike', 'dominique-malonga', 'kara-braxton', 'monique-billings',
         }
+        october_13 = {
+            'deja-kelly', 'han-xu', 'isabelle-harrison', 'kaitlyn-chen', 'odyssey-sims',
+            'aaliyah-nye', 'alysha-clark', 'aneesah-morrow', 'elena-delle-donne', 'emily-engstler',
+        }
         self.assertTrue(october_9 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_10 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_11 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_12 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_12:
+            if slug in october_13:
+                expected_source = 'Google search demand via OpenSEO, Oct 13, 2026'
+            elif slug in october_12:
                 expected_source = 'Google search demand via OpenSEO, Oct 12, 2026'
             elif slug in october_11:
                 expected_source = 'Google search demand via OpenSEO, Oct 11, 2026'
@@ -541,8 +548,14 @@ class BuildTests(unittest.TestCase):
             # Dominique and Monique stop at 9: the leftover queries are unconfirmed
             # relationships, pay, or measurements the sources do not list.
             # Kara's searchable facts are the death, her family, and a short WNBA career.
-            if slug == 'kara-braxton':
+            # Deja Kelly has no regular-season average. The remaining queries are
+            # unverified relationships, family names, or other people.
+            # Han Xu's leftover queries are family, medical, pay, or other people.
+            # Draft details are folded into the team answer.
+            if slug in {'kara-braxton', 'deja-kelly'}:
                 minimum = 5
+            elif slug == 'han-xu':
+                minimum = 8
             elif slug in {'natasha-howard', 'dominique-malonga', 'monique-billings'}:
                 minimum = 9
             else:

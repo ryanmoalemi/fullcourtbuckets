@@ -1,96 +1,145 @@
 {
   "slug": "han-xu",
   "player_name": "Han Xu",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Han Xu's stats / points per game?",
-      "answer": "In the 2026 regular season, Han Xu averaged 6.2 points, 2.5 rebounds, and 0.7 assists in 43 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "question": "What are Han Xu's stats?",
+      "answer": "In the 2026 regular season, Han Xu averaged 6.3 points, 2.5 rebounds, and 0.7 assists in 44 games for the New York Liberty.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "han xu stats",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Does Han Xu have a signature shoe?",
-      "answer": "Public search interest ties Han Xu to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Han_Xu_(basketball)"
+        "https://fullcourtbuckets.com/wnba/han-xu/"
       ],
-      "google_keyword": "han xu shoe size",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How much does Han Xu make?",
-      "answer": "A precise public salary or net worth figure for Han Xu is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "han xu salary",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "han xu stats",
+          "vol": 590
+        },
+        {
+          "q": "han xu wnba stats",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How tall is Han Xu?",
-      "answer": "Han Xu is listed at 6' 11\".",
+      "answer": "The WNBA lists Han Xu at 6 feet 11 inches and 203 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Han_Xu_(basketball)"
+        "https://www.wnba.com/player/1629566/han-xu/bio"
       ],
-      "google_keyword": "han xu height",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "han xu height",
+          "vol": 1000
+        },
+        {
+          "q": "how tall is han xu",
+          "vol": 320
+        },
+        {
+          "q": "han xu weight",
+          "vol": 70
+        },
+        {
+          "q": "han xu wnba height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Han Xu?",
-      "answer": "She was born October 31, 1999 in Shijiazhuang. As of late 2026 that puts her at 26 years old.",
+      "answer": "The WNBA player listing shows Han Xu's birthdate as October 31, 1999.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Han_Xu_(basketball)"
+        "https://www.wnba.com/player/1629566/han-xu/bio"
       ],
-      "google_keyword": "han xu age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1999-10-31"
-    },
-    {
-      "question": "What is Han Xu's contract?",
-      "answer": "Contract length and guarantees for Han Xu are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "han xu contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Han Xu married?",
-      "answer": "There is no widely reported public record of Han Xu being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Han_Xu_(basketball)"
-      ],
-      "google_keyword": "han xu husband",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "han xu age",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "What team does Han Xu play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 21. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "han xu current team",
-      "approx_monthly_volume": 10
+      "answer": "Han Xu plays center for the New York Liberty and wears No. 21. The WNBA says the Liberty drafted her 14th overall in 2019. The bio calls her the first Chinese player drafted into the WNBA in 22 years, and the youngest player in that draft class at 19.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629566/han-xu/bio"
+      ],
+      "queries": [
+        {
+          "q": "ny liberty han xu",
+          "vol": 90
+        },
+        {
+          "q": "han xu new york liberty",
+          "vol": 40
+        },
+        {
+          "q": "han xu current team",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who are Han Xu's parents?",
-      "answer": "Public profiles share limited verified detail about Han Xu's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Is Han Xu still in the WNBA?",
+      "answer": "Han Xu played in the 2026 WNBA regular season for the New York Liberty.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Han_Xu_(basketball)"
+        "https://fullcourtbuckets.com/wnba/han-xu/",
+        "https://www.wnba.com/player/1629566/han-xu/bio"
       ],
-      "google_keyword": "han xu parents",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "is han xu still in the wnba",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where is Han Xu from?",
+      "answer": "The WNBA says Han Xu is from Shijiazhuang, China, and lists her country as China. The bio says she represented China at the 2024 Paris Olympics.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629566/han-xu/bio"
+      ],
+      "queries": [
+        {
+          "q": "han xu china",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Han Xu been in the WNBA?",
+      "answer": "Han Xu has 4 regular seasons: 2019, 2022, 2023, and 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/han-xu/"
+      ],
+      "queries": [
+        {
+          "q": "han xu wnba",
+          "vol": 720
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Han Xu played for?",
+      "answer": "Han Xu has played for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/han-xu/"
+      ],
+      "queries": [
+        {
+          "q": "han xu liberty",
+          "vol": 170
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

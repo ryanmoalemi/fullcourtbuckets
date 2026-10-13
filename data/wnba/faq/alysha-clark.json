@@ -1,132 +1,206 @@
 {
   "slug": "alysha-clark",
   "player_name": "Alysha Clark",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Alysha Clark's stats / points per game?",
-      "answer": "In the 2026 regular season, Alysha Clark averaged 1.6 points, 1.1 rebounds, and 0.4 assists in 13 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Alysha Clark's stats?",
+      "answer": "In the 2026 regular season, Alysha Clark averaged 2.6 points, 1.7 rebounds, and 0.7 assists in 30 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "alysha clark stats",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Alysha Clark dating?",
-      "answer": "As of late 2026, Alysha Clark has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
+        "https://fullcourtbuckets.com/wnba/alysha-clark/"
       ],
-      "google_keyword": "alysha clark partner",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Alysha Clark make?",
-      "answer": "A precise public salary or net worth figure for Alysha Clark is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "alysha clark net worth",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "alysha clark stats",
+          "vol": 110
+        },
+        {
+          "q": "alysha clark wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Alysha Clark?",
-      "answer": "Alysha Clark is listed at 5' 11\".",
+      "answer": "The WNBA lists Alysha Clark at 5 feet 11 inches and 167 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
+        "https://www.wnba.com/player/202252/alysha-clark"
       ],
-      "google_keyword": "alysha clark height",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "alysha clark height",
+          "vol": 110
+        },
+        {
+          "q": "how tall is alysha clark",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Alysha Clark?",
-      "answer": "She was born July 7, 1987 in Denver. As of late 2026 that puts her at 39 years old.",
+      "answer": "Alysha Clark was born July 7, 1987.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
+        "https://www.wnba.com/player/202252/alysha-clark"
       ],
-      "google_keyword": "alysha clark age",
-      "approx_monthly_volume": 170,
-      "birthdate": "1987-07-07"
-    },
-    {
-      "question": "What is Alysha Clark's jersey number?",
-      "answer": "Alysha Clark wears number 7 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "alysha clark jersey",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Alysha Clark's contract?",
-      "answer": "Contract length and guarantees for Alysha Clark are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "alysha clark contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Alysha Clark married?",
-      "answer": "There is no widely reported public record of Alysha Clark being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
-      ],
-      "google_keyword": "alysha clark wife",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "alysha clark age",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "What team does Alysha Clark play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 7. Her listed position is F.",
+      "answer": "Alysha Clark plays forward for the Dallas Wings and wears No. 7. The Wings announced on April 14, 2026, that they signed her.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/202252/alysha-clark",
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-three-time-wnba-champion-alysha-clark/n-6348450"
+      ],
+      "queries": [
+        {
+          "q": "alysha clark team",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What championships has Alysha Clark won?",
+      "answer": "The Dallas Wings said Alysha Clark is a three-time WNBA champion, with titles for Seattle in 2018 and 2020 and for Las Vegas in 2023. The team also listed WNBA Sixth Player of the Year in 2023, All-Defensive First Team in 2020, and All-Defensive Second Team in 2019. The same announcement said she helped Team Eclipse win the 2026 Athletes Unlimited championship.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-three-time-wnba-champion-alysha-clark/n-6348450"
+      ],
+      "queries": [
+        {
+          "q": "alysha clark championship",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Alysha Clark play college basketball?",
+      "answer": "The WNBA lists Alysha Clark's college as Middle Tennessee and her draft as the 17th overall pick in 2010. The Wings said she started at Belmont from 2005 to 2007, transferred to Middle Tennessee, and led the NCAA in scoring in 2009 and 2010.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/202252/alysha-clark",
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-three-time-wnba-champion-alysha-clark/n-6348450"
+      ],
+      "queries": [
+        {
+          "q": "alysha clark education",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark middle tennessee",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark mtsu",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Alysha Clark played in Israel?",
+      "answer": "The Dallas Wings said Alysha Clark played in France, Turkey, Poland, and Israel, and that she is a three-time Israeli champion, in 2015, 2016, and 2023.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-three-time-wnba-champion-alysha-clark/n-6348450"
+      ],
+      "queries": [
+        {
+          "q": "alysha clark israel",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Who is in Alysha Clark's family?",
+      "answer": "The Las Vegas Aces bio says Alysha Clark was born Alysha Angelica Clark in Denver, that her parents are Kenneth and Jan Clark, and that she has seven siblings: William, LaTonya, Kenneth Jr., Tisha, Corey, Ajia, and Arlisha.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://aces.wnba.com/alysha-clark-bio"
+      ],
+      "queries": [
+        {
+          "q": "alysha clark parents",
+          "vol": 110
+        },
+        {
+          "q": "alysha clark brother",
+          "vol": 20
+        },
+        {
+          "q": "alysha clark family",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark father",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark mom",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark sister",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Alysha Clark been in the WNBA?",
+      "answer": "Alysha Clark has 14 regular seasons: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022, 2023, 2024, 2025, and 2026.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "alysha clark team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many championships does Alysha Clark have?",
-      "answer": "In 2018, Clark won a championship with the Seattle Storm as they swept the Mystics in the 2018 WNBA Finals, and in 2020 won her second championship as the Storm swept the Las Vegas Aces.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
+        "https://fullcourtbuckets.com/wnba/alysha-clark/"
       ],
-      "google_keyword": "alysha clark championship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "alysha clark wnba",
+          "vol": 720
+        }
+      ]
     },
     {
-      "question": "Is Alysha Clark injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "alysha clark injury",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who are Alysha Clark's parents?",
-      "answer": "Public profiles share limited verified detail about Alysha Clark's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Which teams has Alysha Clark played for?",
+      "answer": "Alysha Clark has played for the Seattle Storm, Washington Mystics, Las Vegas Aces, Seattle Storm and Washington Mystics and Dallas Wings.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
+        "https://fullcourtbuckets.com/wnba/alysha-clark/"
       ],
-      "google_keyword": "alysha clark parents",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Alysha Clark?",
-      "answer": "Alysha Angelica Clark is an American-Israeli professional basketball player for the Dallas Wings of the Women's National Basketball Association (WNBA) and Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Alysha_Clark"
-      ],
-      "google_keyword": "who is alysha clark married to",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "alysha clark aces",
+          "vol": 20
+        },
+        {
+          "q": "alysha clark mystics",
+          "vol": 20
+        },
+        {
+          "q": "alysha clark las vegas aces",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark storm",
+          "vol": 10
+        },
+        {
+          "q": "alysha clark washington mystics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

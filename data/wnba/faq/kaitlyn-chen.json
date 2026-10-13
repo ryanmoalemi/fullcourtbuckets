@@ -1,152 +1,249 @@
 {
   "slug": "kaitlyn-chen",
   "player_name": "Kaitlyn Chen",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Kaitlyn Chen's stats / points per game?",
-      "answer": "In the 2026 regular season, Kaitlyn Chen averaged 7.1 points, 1.1 rebounds, and 1.9 assists in 42 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Kaitlyn Chen's stats?",
+      "answer": "In the 2026 regular season, Kaitlyn Chen averaged 7.2 points, 1.1 rebounds, and 1.9 assists in 44 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kaitlyn chen stats",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "Who is Kaitlyn Chen dating?",
-      "answer": "As of late 2026, Kaitlyn Chen has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://fullcourtbuckets.com/wnba/kaitlyn-chen/"
       ],
-      "google_keyword": "kaitlyn chen partner",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How much does Kaitlyn Chen make?",
-      "answer": "A precise public salary or net worth figure for Kaitlyn Chen is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kaitlyn chen salary",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "kaitlyn chen stats",
+          "vol": 880
+        },
+        {
+          "q": "kaitlyn chen wnba stats",
+          "vol": 20
+        },
+        {
+          "q": "kaitlyn chen valkyries stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Kaitlyn Chen?",
-      "answer": "Kaitlyn Chen is listed at 5' 9\".",
+      "answer": "The WNBA lists Kaitlyn Chen at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://www.wnba.com/player/1642822"
       ],
-      "google_keyword": "kaitlyn chen height",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "kaitlyn chen height",
+          "vol": 720
+        },
+        {
+          "q": "kaitlyn chen wnba height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Kaitlyn Chen?",
-      "answer": "She was born February 22, 2002 in San Marino. As of late 2026 that puts her at 24 years old.",
+      "answer": "Kaitlyn Chen was born February 22, 2002.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://www.wnba.com/player/1642822"
       ],
-      "google_keyword": "kaitlyn chen age",
-      "approx_monthly_volume": 140,
-      "birthdate": "2002-02-22"
-    },
-    {
-      "question": "What did Kaitlyn Chen score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Kaitlyn Chen had 10.0 points, 2.0 rebounds, and 2.0 assists in a 70-57 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is kaitlyn chen playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Kaitlyn Chen's contract?",
-      "answer": "Contract length and guarantees for Kaitlyn Chen are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kaitlyn chen contract",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Is Kaitlyn Chen married?",
-      "answer": "There is no widely reported public record of Kaitlyn Chen being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
-      ],
-      "google_keyword": "kaitlyn chen husband",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "kaitlyn chen age",
+          "vol": 140
+        },
+        {
+          "q": "how old is kaitlyn chen",
+          "vol": 20
+        },
+        {
+          "q": "kaitlyn chen birthday",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "What team does Kaitlyn Chen play for?",
-      "answer": "Her most recent WNBA team on record is the Golden State Valkyries. She wears No. 2. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kaitlyn chen team",
-      "approx_monthly_volume": 10
+      "answer": "Kaitlyn Chen plays guard for the Golden State Valkyries and wears No. 2. The WNBA says she signed a contract with Golden State on April 12, 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642822"
+      ],
+      "queries": [
+        {
+          "q": "kaitlyn chen contract",
+          "vol": 90
+        },
+        {
+          "q": "is kaitlyn chen still on the valkyries",
+          "vol": 50
+        },
+        {
+          "q": "is kaitlyn chen still in the wnba",
+          "vol": 20
+        },
+        {
+          "q": "is kaitlyn chen going to the wnba",
+          "vol": 10
+        },
+        {
+          "q": "kaitlyn chen resigned",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Kaitlyn Chen play college basketball?",
+      "answer": "Princeton said Kaitlyn Chen started all 40 games on UConn's national championship team in her graduate season, and that she was the 2023 Ivy League Player of the Year. The WNBA lists her college as Connecticut.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://goprincetontigers.com/news/2025/4/14/womens-basketball-kaitlyn-chen-24-selected-by-golden-state-valkyries-in-2025-wnba-draft",
+        "https://www.wnba.com/player/1642822",
+        "https://uconnhuskies.com/sports/womens-basketball/roster/kaitlyn-chen/14076"
+      ],
+      "queries": [
+        {
+          "q": "kaitlyn chen uconn",
+          "vol": 110
+        },
+        {
+          "q": "kaitlyn chen princeton",
+          "vol": 70
+        },
+        {
+          "q": "kaitlyn chen uconn basketball",
+          "vol": 10
+        },
+        {
+          "q": "uconn women's basketball kaitlyn chen",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where was Kaitlyn Chen drafted?",
+      "answer": "Princeton said the Golden State Valkyries selected Kaitlyn Chen 30th overall in the 2025 WNBA draft. The WNBA lists the same pick.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://goprincetontigers.com/news/2025/4/14/womens-basketball-kaitlyn-chen-24-selected-by-golden-state-valkyries-in-2025-wnba-draft",
+        "https://www.wnba.com/player/1642822"
+      ],
+      "queries": [
+        {
+          "q": "kaitlyn chen draft",
+          "vol": 40
+        },
+        {
+          "q": "kaitlyn chen wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Kaitlyn Chen from?",
-      "answer": "She is from San Marino.",
+      "answer": "UConn lists Kaitlyn Chen's hometown as San Marino, California, and her high school as Flintridge Prep. It says she is the daughter of Sandy Shien and Yeh-Ching Chen and has a sister, Rebecca.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://uconnhuskies.com/sports/womens-basketball/roster/kaitlyn-chen/14076"
       ],
-      "google_keyword": "where is kaitlyn chen from",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kaitlyn chen parents",
+          "vol": 170
+        },
+        {
+          "q": "kaitlyn chen sister",
+          "vol": 40
+        },
+        {
+          "q": "kaitlyn chen dad",
+          "vol": 30
+        },
+        {
+          "q": "where is kaitlyn chen from",
+          "vol": 30
+        },
+        {
+          "q": "kaitlyn chen siblings",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Kaitlyn Chen attend?",
-      "answer": "Chen played college basketball at UConn.",
+      "question": "What degree does Kaitlyn Chen have?",
+      "answer": "UConn says Kaitlyn Chen graduated from Princeton in May 2024 with a bachelor's degree in anthropology and was pursuing a master's in sport management.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://uconnhuskies.com/sports/womens-basketball/roster/kaitlyn-chen/14076"
       ],
-      "google_keyword": "kaitlyn chen uconn",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "kaitlyn chen degree",
+          "vol": 20
+        },
+        {
+          "q": "did kaitlyn chen graduate from princeton",
+          "vol": 10
+        },
+        {
+          "q": "kaitlyn chen major",
+          "vol": 10
+        },
+        {
+          "q": "kaitlyn chen uconn major",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What is Kaitlyn Chen's nationality?",
-      "answer": "Kaitlyn Chen is American.",
+      "answer": "The WNBA lists Kaitlyn Chen's country as the USA.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://www.wnba.com/player/1642822"
       ],
-      "google_keyword": "kaitlyn chen nationality",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kaitlyn chen nationality",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "When was Kaitlyn Chen drafted?",
-      "answer": "She was the first person of Taiwanese descent to be drafted by a WNBA team and to play in a WNBA game.",
-      "answer_kind": "researched",
+      "question": "How many years has Kaitlyn Chen been in the WNBA?",
+      "answer": "Kaitlyn Chen has 2 regular seasons: 2025 and 2026.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://fullcourtbuckets.com/wnba/kaitlyn-chen/"
       ],
-      "google_keyword": "kaitlyn chen draft",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "kaitlyn chen wnba",
+          "vol": 590
+        }
+      ]
     },
     {
-      "question": "Is Kaitlyn Chen injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "is kaitlyn chen injured",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Kaitlyn Chen's parents?",
-      "answer": "Public profiles share limited verified detail about Kaitlyn Chen's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Which teams has Kaitlyn Chen played for?",
+      "answer": "Kaitlyn Chen has played for the Golden State Valkyries.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaitlyn_Chen"
+        "https://fullcourtbuckets.com/wnba/kaitlyn-chen/"
       ],
-      "google_keyword": "kaitlyn chen parents",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "kaitlyn chen team",
+          "vol": 10
+        },
+        {
+          "q": "kaitlyn chen valkyrie",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

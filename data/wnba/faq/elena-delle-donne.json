@@ -1,182 +1,274 @@
 {
   "slug": "elena-delle-donne",
   "player_name": "Elena Delle Donne",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "Is Elena Delle Donne married?",
-      "answer": "Yes. Delle Donne married Amanda Clifton in 2017.",
-      "answer_kind": "researched",
+      "question": "What are Elena Delle Donne's stats?",
+      "answer": "In the 2023 regular season, Elena Delle Donne averaged 16.7 points, 5.4 rebounds, and 2.1 assists in 23 games for the Washington Mystics.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://fullcourtbuckets.com/wnba/elena-delle-donne/"
       ],
-      "google_keyword": "elena delle donne wife",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "elena delle donne stats",
+          "vol": 260
+        }
+      ]
     },
     {
-      "question": "Did Elena Delle Donne retire?",
-      "answer": "Delle Donne retired from the WNBA (announced in 2025 after years limited by injury and back issues).",
+      "question": "Is Elena Delle Donne retired?",
+      "answer": "The WNBA announced that Elena Delle Donne has retired and will serve as a special advisor to Monumental Basketball.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://www.wnba.com/news/elena-delle-donne-announces-retirement"
       ],
-      "google_keyword": "elena delle donne retired",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "elena delle donne retired",
+          "vol": 110
+        },
+        {
+          "q": "what is elena delle donne doing now",
+          "vol": 50
+        },
+        {
+          "q": "is elena delle donne retired",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Does Elena Delle Donne have a signature shoe?",
-      "answer": "Nike released her signature Air Deldon line; she later stepped away from playing after injury-limited seasons and retirement.",
-      "answer_kind": "researched",
+      "question": "How tall is Elena Delle Donne?",
+      "answer": "The WNBA lists Elena Delle Donne at 6 feet 5 inches and 187 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.sneakerfreaker.com/performance/features/the-active-wnba-signature-sneaker-lines-you-need-to-know"
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "elena delle donne basketball shoes",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "elena delle donne height",
+          "vol": 110
+        },
+        {
+          "q": "how tall is elena delle donne",
+          "vol": 70
+        },
+        {
+          "q": "elena delle donne height in feet",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Elena Delle Donne?",
-      "answer": "She was born September 5, 1989 in Wilmington, Delaware, U.S. As of late 2026 that puts her at 37 years old.",
+      "answer": "The WNBA says Elena Delle Donne was born September 5, 1989, in Wilmington, Delaware.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "elena delle donne age",
-      "approx_monthly_volume": 90,
-      "birthdate": "1989-09-05"
+      "queries": [
+        {
+          "q": "elena delle donne age",
+          "vol": 90
+        },
+        {
+          "q": "how old is elena delle donne",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "How many championships does Elena Delle Donne have?",
-      "answer": "WNBA championship in 2019.",
-      "answer_kind": "researched",
+      "question": "Where did Elena Delle Donne play college basketball?",
+      "answer": "The WNBA lists Elena Delle Donne's college as the University of Delaware.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "elena delle donne championship",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How many MVPs does Elena Delle Donne have?",
-      "answer": "She is a two-time WNBA MVP (2015 with Chicago, 2019 with Washington).",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
-      ],
-      "google_keyword": "elena delle donne mvp",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Elena Delle Donne?",
-      "answer": "Elena Delle Donne is an American former professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
-      ],
-      "google_keyword": "who is elena delle donne",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What position does Elena Delle Donne play?",
-      "answer": "Elena Delle Donne is listed as a Forward for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "elena delle donne position",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "elena delle donne delaware",
+          "vol": 70
+        },
+        {
+          "q": "elena delle donne uconn",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "What team does Elena Delle Donne play for?",
-      "answer": "Her most recent WNBA team on record is the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "elena delle donne team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Where is Elena Delle Donne from?",
-      "answer": "She is from Wilmington, Delaware, U.S.",
+      "answer": "Elena Delle Donne is not on a current WNBA roster. The WNBA says the Chicago Sky selected her second overall in the 2013 draft and that she signed with the Washington Mystics on February 1, 2017.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "where is elena delle donne from",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "who is elena delle donne",
+          "vol": 20
+        },
+        {
+          "q": "elena delle donne biography",
+          "vol": 10
+        },
+        {
+          "q": "elena delle donne draft",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Elena Delle Donne's WNBA salary?",
-      "answer": "Public salary databases such as Spotrac list Elena Delle Donne's WNBA career earnings at about $1.24 million through 2026. Her most recent average annual value was about $224,870. She has since been reported as retired from the WNBA.",
+      "question": "What position does Elena Delle Donne play?",
+      "answer": "The WNBA lists Elena Delle Donne as a forward-guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
+      ],
+      "queries": [
+        {
+          "q": "elena delle donne position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What awards has Elena Delle Donne won?",
+      "answer": "The WNBA said Elena Delle Donne won MVP in 2015 with the Chicago Sky and in 2019 with the Washington Mystics, and that she led the Mystics to the 2019 championship. The retirement announcement says she won Olympic gold with Team USA in 2016, was a seven-time All-Star, and in 2019 became the first WNBA player in the 50-40-90 club. The WNBA bio also lists her as the 2013 Rookie of the Year.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/player/earnings/_/id/29979/elena-delle-donne"
+        "https://www.wnba.com/news/elena-delle-donne-announces-retirement",
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "elena delle donne wnba salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "elena delle donne championship",
+          "vol": 30
+        },
+        {
+          "q": "elena delle donne 50 40 90",
+          "vol": 20
+        },
+        {
+          "q": "elena delle donne mvp",
+          "vol": 20
+        },
+        {
+          "q": "elena delle donne olympics",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What are Elena Delle Donne's college stats?",
-      "answer": "Across her college career at Delaware, Elena Delle Donne averaged 19.5 points, 6.7 rebounds, and 1.9 assists per game in 241 games.",
+      "question": "Is Elena Delle Donne married?",
+      "answer": "Page Six reported that Elena Delle Donne married Amanda Clifton on November 3, 2017. The Washington Post also reported the November 3 wedding.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://pagesix.com/2017/11/06/wnba-star-weds-longtime-girlfriend-on-long-island/",
+        "https://www.washingtonpost.com/lifestyle/style/this-wnba-star-didnt-want-a-media-frenzy-when-she-came-out-but-thousands-watched-her-wedding/2017/11/09/eb981620-c32a-11e7-84bc-5e285c7f4512_story.html"
       ],
-      "google_keyword": "elena delle donne college stats",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "elena delle donne wife",
+          "vol": 1000
+        },
+        {
+          "q": "elena delle donne husband",
+          "vol": 320
+        },
+        {
+          "q": "is elena delle donne married",
+          "vol": 90
+        },
+        {
+          "q": "elena delle donne wedding",
+          "vol": 40
+        },
+        {
+          "q": "who is elena delle donne married to",
+          "vol": 30
+        },
+        {
+          "q": "elena delle donne married",
+          "vol": 20
+        },
+        {
+          "q": "elena delle donne partner",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What college did Elena Delle Donne attend?",
-      "answer": "Elena Delle Donne played college basketball at the Delaware Blue Hens from 2009 to 2013.",
-      "answer_kind": "researched",
+      "question": "Who is in Elena Delle Donne's family?",
+      "answer": "The WNBA says Elena Delle Donne's parents are Ernest and Joan Delle Donne, and that she has an older brother, Gene, and a sister, Lizzie.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
+        "https://www.wnba.com/player/203399/elena-delle-donne/bio"
       ],
-      "google_keyword": "elena delle donne uconn",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "elena delle donne sister",
+          "vol": 480
+        },
+        {
+          "q": "elena delle donne sister lizzie",
+          "vol": 90
+        },
+        {
+          "q": "elena delle donne family",
+          "vol": 40
+        },
+        {
+          "q": "elena delle donne parents",
+          "vol": 40
+        },
+        {
+          "q": "elena delle donne brother",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "When was Elena Delle Donne drafted?",
-      "answer": "She was drafted by the Chicago Sky with the second overall pick of the 2013 WNBA draft, and led the Sky to the 2014 WNBA Finals, where they were defeated by the Phoenix Mercury.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
-      ],
-      "google_keyword": "elena delle donne draft",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Elena Delle Donne's contract?",
-      "answer": "Contract length and guarantees for Elena Delle Donne are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "elena delle donne contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Elena Delle Donne dating?",
-      "answer": "As of late 2026, Elena Delle Donne has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Elena_Delle_Donne"
-      ],
-      "google_keyword": "elena delle donne partner",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What are Elena Delle Donne's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2023), Elena Delle Donne averaged 11.0 points, 4.5 rebounds, and 3.5 assists in 2 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "How many years has Elena Delle Donne been in the WNBA?",
+      "answer": "Elena Delle Donne played 10 regular seasons: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, and 2023.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "elena delle donne stats",
-      "approx_monthly_volume": 260
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/elena-delle-donne/"
+      ],
+      "queries": [
+        {
+          "q": "elena delle donne wnba",
+          "vol": 70
+        },
+        {
+          "q": "elena delle donne career stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Elena Delle Donne injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "elena delle donne injury",
-      "approx_monthly_volume": 10
+      "question": "Which teams has Elena Delle Donne played for?",
+      "answer": "Elena Delle Donne has played for the Chicago Sky and Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/elena-delle-donne/"
+      ],
+      "queries": [
+        {
+          "q": "mystics elena delle donne",
+          "vol": 70
+        },
+        {
+          "q": "washington mystics elena delle donne",
+          "vol": 70
+        },
+        {
+          "q": "chicago sky elena delle donne",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
