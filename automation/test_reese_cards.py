@@ -41,6 +41,32 @@ class ReeseCardMathTests(unittest.TestCase):
         self.assertEqual(summary['fully_excluded'][0]['id'], bowman['id'])
         self.assertEqual(summary['paid_unpriced'], [])
         self.assertEqual(cards.value_amount(flawless), Decimal('925.00'))
+        self.assertEqual(flawless['grade'], 'Raw')
+        self.assertIsNone(flawless['psa_cert'])
+        self.assertEqual(flawless['ebay_item_id'], '267798348098')
+        self.assertEqual(
+            flawless['authentication'],
+            {
+                'by': 'eBay Authenticity Guarantee',
+                'status': 'Authenticated',
+                'date': '2026-10-12',
+            },
+        )
+        self.assertEqual(
+            cards.authentication_text(flawless),
+            'Authenticated by eBay Authenticity Guarantee, Oct 12, 2026',
+        )
+        self.assertEqual(cards.authentication_text({}), '')
+        self.assertEqual(
+            cards.authentication_text({
+                'authentication': {
+                    'by': 'eBay Authenticity Guarantee',
+                    'status': 'Pending',
+                    'date': '2026-10-12',
+                },
+            }),
+            '',
+        )
         tiger = next(card for card in data['cards'] if card['id'] == 'reese-2024-prizm-dp-tiger-38')
         self.assertEqual(cards.card_change(tiger), Decimal('-24.44'))
         self.assertEqual(cards.card_percent(tiger), Decimal('-9.8'))
@@ -107,7 +133,13 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('#RPA-AR Gold / 01/10', flawless)
         self.assertNotIn('#RPA-AR Gold /10', flawless)
         self.assertIn('>Raw<', flawless)
+        auth_line = 'Authenticated by eBay Authenticity Guarantee, Oct 12, 2026'
+        self.assertIn(auth_line, flawless)
+        self.assertNotIn('267798348098', flawless)
         panel = self.html.split('data-detail="reese-2024-25-flawless-royalty-rpa-ar-gold"', 1)[1].split('</article>', 1)[0]
+        self.assertIn(auth_line, panel)
+        self.assertEqual(self.html.count(auth_line), 2)
+        self.assertNotIn('267798348098', panel)
         self.assertIn('>$925.00</b>', panel)
         self.assertIn('badge down">-$159.55 (-14.7%)', panel)
         self.assertIn('last eBay sale, $925 best offer', panel)

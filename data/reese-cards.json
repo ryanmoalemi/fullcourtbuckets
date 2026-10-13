@@ -22,7 +22,12 @@
       "tax": 77.5,
       "price_paid_total": 1084.55,
       "source": "eBay",
-      "ebay_item_id": null,
+      "ebay_item_id": "267798348098",
+      "authentication": {
+        "by": "eBay Authenticity Guarantee",
+        "status": "Authenticated",
+        "date": "2026-10-12"
+      },
       "current_value": 925,
       "current_value_source": "last eBay sale, $925 best offer",
       "value_checked": "2026-10-03",

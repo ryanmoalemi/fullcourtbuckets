@@ -311,6 +311,29 @@ def serial_html(card: dict) -> str:
     return f'<p>Serial {esc(text)}</p>'
 
 
+def authentication_text(card: dict) -> str:
+    """Optional public line. Uses authenticator and date only."""
+    auth = card.get('authentication')
+    if not isinstance(auth, dict):
+        return ''
+    by = str(auth.get('by') or '').strip()
+    status = str(auth.get('status') or '').strip().lower()
+    date = str(auth.get('date') or '').strip()
+    if status != 'authenticated' or not by or len(date) < 10:
+        return ''
+    return f'Authenticated by {by}, {short_date(date)}'
+
+
+def _authentication_line(card: dict, tile: bool) -> str:
+    text = authentication_text(card)
+    if not text:
+        return ''
+    safe = esc(text)
+    if tile:
+        return f'<span class="bought">{safe}</span>\n'
+    return f'<p>{safe}</p>\n'
+
+
 def photo_src(photo) -> str:
     if isinstance(photo, str):
         return photo
@@ -482,7 +505,7 @@ def _detail(card: dict, as_of: str) -> str:
 {serial_html(card)}
 {summary_html}
 <p>Bought {esc(long_date(card["purchase_date"]))} on {esc(card.get("source") or "eBay")}.</p>
-<h3>Cost</h3>
+{_authentication_line(card, tile=False)}<h3>Cost</h3>
 <dl class="cost">
 {_cost_rows(card)}
 </dl>
@@ -524,7 +547,7 @@ def _tile(card: dict, index: int) -> str:
 <span class="meta">#{esc(card["card_number"])} {esc(card["parallel"])}{esc(serial_meta(card))}</span>
 <span class="grade">{esc(card.get("grade") or "PSA 10")}</span>
 <span class="bought">Bought {esc(long_date(card["purchase_date"]))}</span>
-<span class="figures"><span>Paid <b>{esc(format_money(paid_amount(card)))}</b></span>{_tile_value(card)}</span>
+{_authentication_line(card, tile=True)}<span class="figures"><span>Paid <b>{esc(format_money(paid_amount(card)))}</b></span>{_tile_value(card)}</span>
 {_badge(card)}
 </span>
 </button>'''
