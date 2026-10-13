@@ -1,152 +1,230 @@
 {
   "slug": "odyssey-sims",
   "player_name": "Odyssey Sims",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 13, 2026",
+  "verified_at": "2026-10-13",
   "items": [
     {
-      "question": "What are Odyssey Sims's stats / points per game?",
-      "answer": "In the 2026 regular season, Odyssey Sims averaged 4.6 points, 1.0 rebounds, and 2.1 assists in 34 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Odyssey Sims's stats?",
+      "answer": "In the 2026 regular season, Odyssey Sims averaged 4.6 points, 0.9 rebounds, and 2.0 assists in 35 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "odyssey sims stats",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Who is Odyssey Sims dating?",
-      "answer": "As of late 2026, Odyssey Sims has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://fullcourtbuckets.com/wnba/odyssey-sims/"
       ],
-      "google_keyword": "odyssey sims partner",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Odyssey Sims make?",
-      "answer": "A precise public salary or net worth figure for Odyssey Sims is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "odyssey sims salary",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "odyssey sims stats",
+          "vol": 2400
+        },
+        {
+          "q": "odyssey sims points per game",
+          "vol": 20
+        },
+        {
+          "q": "odyssey sims career stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Odyssey Sims?",
-      "answer": "Odyssey Sims is listed at 5' 8\".",
+      "answer": "The WNBA lists Odyssey Sims at 5 feet 8 inches and 155 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/player/203824/odyssey-sims/bio"
       ],
-      "google_keyword": "odyssey sims height",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "odyssey sims height",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How old is Odyssey Sims?",
-      "answer": "She was born July 13, 1992 in Irving. As of late 2026 that puts her at 34 years old.",
+      "answer": "Odyssey Sims was born July 13, 1992.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/player/203824/odyssey-sims/bio"
       ],
-      "google_keyword": "odyssey sims age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1992-07-13"
-    },
-    {
-      "question": "What did Odyssey Sims score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Phoenix Mercury), Odyssey Sims had 2.0 points, 3.0 rebounds, and 5.0 assists in a 86-87 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is odyssey sims playing today",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Odyssey Sims's contract?",
-      "answer": "Contract length and guarantees for Odyssey Sims are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "odyssey sims contract",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Is Odyssey Sims married?",
-      "answer": "There is no widely reported public record of Odyssey Sims being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
-      ],
-      "google_keyword": "odyssey sims husband",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "odyssey sims age",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "What team does Odyssey Sims play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 1. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does odyssey sims play for",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How many championships does Odyssey Sims have?",
-      "answer": "Public biographical sources cover Odyssey Sims's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
-      ],
-      "google_keyword": "odyssey sims championship",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Odyssey Sims attend?",
-      "answer": "Sims played college basketball at Baylor.",
+      "answer": "Odyssey Sims plays guard for the Dallas Wings and wears No. 1. The WNBA says the Tulsa Shock selected her second overall in the 2014 draft, and that she signed a one-year deal with Dallas on April 16, 2026.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/player/203824/odyssey-sims/bio"
       ],
-      "google_keyword": "odyssey sims baylor",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "odyssey sims dallas wings",
+          "vol": 90
+        },
+        {
+          "q": "who does odyssey sims play for",
+          "vol": 40
+        },
+        {
+          "q": "odyssey sims team",
+          "vol": 20
+        },
+        {
+          "q": "what team does odyssey sims play for",
+          "vol": 20
+        },
+        {
+          "q": "odyssey sims dallas",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Odyssey Sims?",
-      "answer": "Odyssey Celeste Sims is an American professional basketball player for the Dallas Wings of the Women's National Basketball Association (WNBA) and Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
+      "question": "Where did Odyssey Sims play college basketball?",
+      "answer": "The WNBA lists Odyssey Sims's college as Baylor. Baylor lists her hometown as Irving, Texas, and her high school as MacArthur.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/player/203824/odyssey-sims/bio",
+        "https://baylorbears.com/sports/womens-basketball/roster/odyssey-sims/3260"
       ],
-      "google_keyword": "odyssey sims bio",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "odyssey sims baylor",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Odyssey Sims injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "odyssey sims injury update",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Does Odyssey Sims have kids?",
-      "answer": "There is no widely reported public information that Odyssey Sims has children as of late 2026.",
+      "question": "Does Odyssey Sims have a child?",
+      "answer": "The Atlanta Dream's announcement, published by the WNBA, said Odyssey Sims gave birth to her son, Jaiden, prior to the 2020 season.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/news/odyssey-sims-signs-with-atlanta-dream"
       ],
-      "google_keyword": "odyssey sims son",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "odyssey sims son",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Who are Odyssey Sims's parents?",
-      "answer": "Public profiles share limited verified detail about Odyssey Sims's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Has Odyssey Sims won a championship?",
+      "answer": "The WNBA college notes say Odyssey Sims played in Baylor's NCAA championship win over Notre Dame in 2012. The Dallas Wings said she won the 2026 Athletes Unlimited Pro Basketball championship. Her WNBA honors on the league bio are the 2014 All-Rookie Team and 2019 All-WNBA.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Odyssey_Sims"
+        "https://www.wnba.com/player/203824/odyssey-sims/bio",
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-odyssey-sims/n-6349421"
       ],
-      "google_keyword": "odyssey sims family",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "odyssey sims championship",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Odyssey Sims a starter?",
+      "answer": "The WNBA says Odyssey Sims started 11 of 35 regular-season games for the Dallas Wings in 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203824/odyssey-sims/bio"
+      ],
+      "queries": [
+        {
+          "q": "is odyssey sims a starter",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What contract did Odyssey Sims sign?",
+      "answer": "The WNBA says Odyssey Sims signed a one-year deal with the Dallas Wings on April 16, 2026. It lists three 7-day contracts with the Indiana Fever beginning August 10, 2025, then a rest-of-season contract on August 31, 2025. It also lists hardship contracts with Dallas on June 7, 2023, and June 25, 2024.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203824/odyssey-sims/bio"
+      ],
+      "queries": [
+        {
+          "q": "odyssey sims contract",
+          "vol": 140
+        },
+        {
+          "q": "odyssey sims indiana fever",
+          "vol": 30
+        },
+        {
+          "q": "fever odyssey sims",
+          "vol": 10
+        },
+        {
+          "q": "odyssey sims fever signing",
+          "vol": 10
+        },
+        {
+          "q": "odyssey sims indiana fever hardship contract",
+          "vol": 10
+        },
+        {
+          "q": "odyssey sims released",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Who is in Odyssey Sims's family?",
+      "answer": "Baylor lists Odyssey Sims as the daughter of Pamela Thompson of Irving, Texas, and says she has two older brothers, Oscar and Onaye. Her full name on that roster is Odyssey Celeste Sims.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://baylorbears.com/sports/womens-basketball/roster/odyssey-sims/3260"
+      ],
+      "queries": [
+        {
+          "q": "odyssey sims family",
+          "vol": 30
+        },
+        {
+          "q": "odyssey sims parents",
+          "vol": 20
+        },
+        {
+          "q": "odyssey sims bio",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Odyssey Sims been in the WNBA?",
+      "answer": "Odyssey Sims has 13 regular seasons, from 2014 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/odyssey-sims/"
+      ],
+      "queries": [
+        {
+          "q": "odyssey sims wnba",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Odyssey Sims played for?",
+      "answer": "Odyssey Sims has played for the Tulsa Shock, Dallas Wings, Los Angeles Sparks, Minnesota Lynx, Atlanta Dream, Connecticut Sun and Indiana Fever.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/odyssey-sims/"
+      ],
+      "queries": [
+        {
+          "q": "odyssey sims wnba teams",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
