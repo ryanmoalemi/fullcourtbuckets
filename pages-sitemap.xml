@@ -216,4 +216,10 @@
     <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/liberty-offseason-five-gm-moves/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
