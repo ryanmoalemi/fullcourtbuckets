@@ -19,6 +19,12 @@ The lead photo is the article column at every breakpoint, including a lead that 
 
 On a 390px-wide phone, the headline, the photo, the byline, and the start of the hook are all on the first screen.
 
+## Body photos
+
+A later photo in the article is also 16:9 and the width of the column. The figure class is `body-photo`. `object-fit` is `cover`. Set `object-position` on the image so heads stay fully in frame. The default is `center 20%`.
+
+A screenshot or a chart is the exception. Mark it `no-crop` (or `screenshot`, `chart`, or `stat-board`). Those are not cropped: `object-fit` is `contain`, `max-height` is `70vh` up to 900px wide, and `720px` above that. The full rule is in `docs/EDITORIAL_STYLE.md`. Card photos in a list article stay on the card rule.
+
 Keep the image `width` and `height` (the hero file's real pixels, 1200 and 675 for the standard file). The lead image uses `fetchpriority="high"` and is not lazy-loaded. Later images in the story stay lazy. The shared rules live in `assets/news-lead.css`. `order_news_lead` in `prepare_article_page` inlines them and applies this order.
 
 ## List articles

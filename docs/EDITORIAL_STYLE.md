@@ -39,3 +39,9 @@ Use this for every new preview, recap, feature and guide. It applies to the WNBA
 
 ## Betting content
 - Keep it plain and educational: lines with source and time, "lines may move", no affiliate codes, rel=nofollow links, and the 21+ / Gamble responsibly / 1-800-GAMBLER line.
+
+## In-body photos (Ryan, Oct 13)
+- A photo in the body of a `/news/` article is 16:9, the same shape as the hero. The shared rule is on `figure.body-photo`: `aspect-ratio: 16/9` and `object-fit: cover`, full column width. That is what cuts the scroll on a phone. The class is added by `apply_body_photos` in `order_news_lead`.
+- Set `object-position` on that image so the crop keeps every head fully in frame. The default is `center 20%`. Move it, for example to `center 0%`, when the head sits higher. Look at the crop before publishing. If a head is cut off, change the focal point. Do not publish a crop that slices a head.
+- A screenshot or a chart can stay taller when the reader needs the detail. Mark the figure `no-crop` (a `screenshot`, `chart`, or `stat-board` figure is treated as `no-crop`). Do not crop those. They use `object-fit: contain`. On screens up to 900px wide the cap is `max-height: 70vh`. On wider screens the cap is `max-height: 720px`. If the image is still too tall to read inside that cap, export a shorter file. Do not hide labels or a face by cropping.
+- This rule does not change the hero, the news-listing cards, or player pages. A card photo in a list article keeps the `card` class and stays whole, at the existing narrow width, because cropping the card hides the card.
