@@ -220,4 +220,10 @@
     <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
     <lastmod>2026-10-12</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/finals-game-1-preview-dream-valkyries/</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
