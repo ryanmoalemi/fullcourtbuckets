@@ -1705,7 +1705,9 @@ DUPLICATE_PLAYER_IDS = {
 }
 DESCRIPTION_MAX = 155
 TITLE_LIMIT = 70
-SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples'})
+# viewership-attendance is an evergreen guide, not a player profile. Leave it out
+# of the orphan-player redirect pass.
+SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance'})
 
 
 def cap_description(text, limit=DESCRIPTION_MAX) -> str:
