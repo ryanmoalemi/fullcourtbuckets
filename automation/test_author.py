@@ -114,12 +114,15 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('Full Court Buckets', profile['worksFor']['name'])
         self.assertNotIn('sameAs', profile)
         ordered = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
+        stories = page.split('<h2>Stories</h2>', 1)[1].split('</ol>', 1)[0]
         positions = []
         for article in ordered:
             href = links.article_href(article)
             self.assertIn(f'href="{href}"', page)
             self.assertNotIn(f'href="{href}" target="_blank"', page)
-            positions.append(page.find(href))
+            # Order is the story list. The Playoffs nav can point at an older story.
+            positions.append(stories.find(href))
+            self.assertGreaterEqual(positions[-1], 0, href)
         self.assertEqual(positions, sorted(positions))
         about = (ROOT / 'about' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('href="/authors/ryan-moalemi/"', about)
