@@ -1421,6 +1421,34 @@ def _figure_classes(figure: str) -> set[str]:
     return set(classes.group(1).split()) if classes else set()
 
 
+def _add_figure_class(figure: str, name: str) -> str:
+    """Add one class on the opening tag. An empty class attribute is replaced."""
+    if name in _figure_classes(figure):
+        return figure
+
+    def repl(match: re.Match) -> str:
+        existing = match.group(2).strip()
+        merged = f'{existing} {name}'.strip() if existing else name
+        return f'{match.group(1)}{merged}"'
+
+    updated, count = re.subn(
+        r'(<figure\b[^>]*\bclass=")([^"]*)"',
+        repl,
+        figure,
+        count=1,
+        flags=re.I,
+    )
+    if count:
+        return updated
+    return re.sub(r'<figure\b', f'<figure class="{name}"', figure, count=1, flags=re.I)
+
+
+# Screenshots and charts keep their pixels. card photos in a list stay on the card rule.
+NO_CROP_CLASSES = frozenset({'no-crop', 'screenshot', 'chart', 'stat-board'})
+_FIGURE_OPEN_RE = re.compile(r'<figure\b[^>]*>', re.I)
+_DROP_FIGURE_STYLE = frozenset({'max-width', 'width', 'margin', 'margin-left', 'margin-right'})
+
+
 def _is_lead_figure(figure: str) -> bool:
     """The story photo, not a chart or a later card in a list."""
     if '<img' not in figure.lower():
@@ -1538,6 +1566,94 @@ def _mark_lead_figure(figure: str, article: dict | None = None) -> str:
     return re.sub(r'<img\b[^>]*>', _hero, figure, count=1)
 
 
+def _img_focal(img: str, focals: dict[str, str]) -> str:
+    """Per-image object-position. A named override wins, then a value already on the img."""
+    src = re.search(r'\bsrc="([^"]+)"', img)
+    name = src.group(1).rsplit('/', 1)[-1] if src else ''
+    named = re.sub(r'\s+', ' ', str(focals.get(name) or '').strip())
+    if named and _FOCAL_RE.fullmatch(named):
+        return named.lower()
+    existing = re.search(r'object-position\s*:\s*([^;"]+)', img)
+    if existing:
+        raw = re.sub(r'\s+', ' ', existing.group(1).strip())
+        if _FOCAL_RE.fullmatch(raw):
+            return raw.lower()
+    return DEFAULT_IMAGE_FOCAL
+
+
+def _set_img_focal(figure: str, focal: str) -> str:
+    def repl(match: re.Match) -> str:
+        return _upsert_style_prop(match.group(0), 'object-position', focal)
+
+    return re.sub(r'<img\b[^>]*>', repl, figure, count=1)
+
+
+def _relax_body_figure(figure: str) -> str:
+    """Drop a narrow max-width so the 16:9 photo fills the column like the lead."""
+    open_tag = _FIGURE_OPEN_RE.match(figure)
+    if open_tag is None:
+        return figure
+    tag = open_tag.group(0)
+    style = re.search(r'\bstyle=("|\')(.*?)\1', tag)
+    if style is None:
+        return figure
+    kept = []
+    for decl in style.group(2).split(';'):
+        decl = decl.strip()
+        if not decl or ':' not in decl:
+            continue
+        prop = decl.split(':', 1)[0].strip().lower()
+        if prop in _DROP_FIGURE_STYLE:
+            continue
+        kept.append(decl)
+    if kept:
+        replacement = f'style="{";".join(kept)}"'
+        tag = tag[:style.start()] + replacement + tag[style.end():]
+    else:
+        tag = tag[:style.start()] + tag[style.end():]
+        tag = re.sub(r'\s{2,}', ' ', tag)
+        tag = tag.replace(' >', '>')
+    return tag + figure[open_tag.end():]
+
+
+def apply_body_photos(html: str, focals: dict[str, str] | None = None,
+                      no_crop_files: set[str] | None = None) -> str:
+    """16:9 body photos with a focal point. Screenshots and charts are not cropped.
+
+    Lead photos and list-article card photos are left alone. A figure marked
+    screenshot, chart, stat-board, or no-crop keeps its pixels and only gets
+    the shared no-crop class. no_crop_files names files that are screenshots
+    even when the figure has no class yet. focals maps a filename to an
+    object-position; an object-position already on the img is kept otherwise.
+    """
+    focals = focals or {}
+    names = no_crop_files or set()
+
+    def repl(match: re.Match) -> str:
+        figure = match.group(0)
+        classes = _figure_classes(figure)
+        if 'lead-photo' in classes or 'card' in classes:
+            return figure
+        img = re.search(r'<img\b[^>]*>', figure, re.I)
+        src_name = ''
+        if img:
+            src = re.search(r'\bsrc="([^"]+)"', img.group(0))
+            src_name = src.group(1).rsplit('/', 1)[-1] if src else ''
+        if src_name in names or classes & NO_CROP_CLASSES:
+            figure = _add_figure_class(figure, 'no-crop')
+            if src_name in names:
+                figure = _add_figure_class(figure, 'screenshot')
+            return figure
+        if img is None:
+            return figure
+        figure = _add_figure_class(figure, 'body-photo')
+        figure = _relax_body_figure(figure)
+        img = re.search(r'<img\b[^>]*>', figure, re.I)
+        return _set_img_focal(figure, _img_focal(img.group(0), focals))
+
+    return LEAD_FIGURE_RE.sub(repl, html)
+
+
 # End of the inlined lead block. install_lead_css uses it to refresh an older copy.
 _LEAD_BLOCK_END = '.article .byline-row .byline{margin-bottom:0;font-size:14px;}}'
 
@@ -1600,6 +1716,7 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
 
     The lead matches the article column, uses a 16:9 crop, keeps width and height,
     uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
+    Later photos use the same 16:9 crop unless the figure is a screenshot or chart.
     """
     meta = article
     start = html.find('<article')
@@ -1611,7 +1728,7 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     fallback = None
     for match in LEAD_FIGURE_RE.finditer(article):
         figure = match.group(0)
-        if '<img' not in figure.lower() or 'chart' in _figure_classes(figure):
+        if '<img' not in figure.lower() or _figure_classes(figure) & NO_CROP_CLASSES:
             continue
         if fallback is None:
             fallback = match
@@ -1639,6 +1756,7 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
         return html
     article = article[:h1 + len('</h1>')] + figure + row + article[h1 + len('</h1>'):]
     html = html[:start] + article + html[end:]
+    html = apply_body_photos(html)
     return install_lead_css(html)
 
 

@@ -1,5 +1,6 @@
-/* Shared lead-photo rules for every /news/ article.
-   Inlined by order_news_lead. The photo is the article column, 16:9. */
+/* Shared photo rules for every /news/ article. Inlined by order_news_lead.
+   The lead and each body photo are the article column at 16:9.
+   A screenshot or chart uses no-crop: contain, no crop, height capped. */
 
 .article figure.lead-photo {
   margin: 0 0 8px;
@@ -47,6 +48,44 @@
   margin: 0;
 }
 
+/* In-body photos match the lead. object-position on the img moves the crop. */
+.article figure.body-photo,
+.article figure.portrait.body-photo,
+.article figure.inline-photo.body-photo {
+  margin: 18px 0 22px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.article figure.body-photo img,
+.article figure.portrait.body-photo img,
+.article figure.inline-photo.body-photo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* Screenshots and charts stay whole. A phone still does not scroll a full-length capture. */
+.article figure.no-crop {
+  margin: 18px 0 22px;
+}
+
+.article figure.no-crop img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+}
+
 .article .article-date {
   color: #a29f99;
   font: 600 13px/1.3 Inter, system-ui, sans-serif;
@@ -92,6 +131,10 @@
 
   .article .byline-row {
     margin-bottom: 8px;
+  }
+
+  .article figure.no-crop img {
+    max-height: 70vh;
   }
 
   .article .byline-row .byline {
