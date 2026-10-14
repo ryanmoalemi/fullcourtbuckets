@@ -1,0 +1,16 @@
+rank,team,wins,losses,pct,games_back,home,road,streak,last10,conference,playoff_seed
+1,Minnesota Lynx,33,11,0.75,0,15-7,18-4,W1,6-4,Western,1
+2,Golden State Valkyries,32,12,0.72727275,1,17-5,15-7,W1,7-3,Western,2
+3,Las Vegas Aces,31,13,0.70454544,2,15-7,16-6,W7,8-2,Western,3
+4,Atlanta Dream,30,14,0.6818182,3,15-7,15-7,W5,9-1,Eastern,4
+5,Washington Mystics,28,16,0.6363636,5,15-7,13-9,W4,8-2,Eastern,5
+6,Indiana Fever,28,16,0.6363636,5,15-7,13-9,L1,6-4,Eastern,6
+7,Dallas Wings,27,17,0.6136364,6,16-6,11-11,W1,7-3,Western,7
+8,New York Liberty,26,18,0.59090906,7,14-8,12-10,L2,6-4,Eastern,8
+9,Portland Fire,17,27,0.38636363,16,9-13,8-14,W1,3-7,Western,
+10,Chicago Sky,16,28,0.36363637,17,11-11,5-17,L1,4-6,Eastern,
+11,Los Angeles Sparks,16,28,0.36363637,17,8-14,8-14,L2,4-6,Western,
+12,Phoenix Mercury,16,28,0.36363637,17,7-15,9-13,L1,4-6,Western,
+13,Toronto Tempo,11,33,0.25,22,7-15,4-18,L8,1-9,Eastern,
+14,Connecticut Sun,11,33,0.25,22,8-14,3-19,W1,2-8,Eastern,
+15,Seattle Storm,8,36,0.18181819,25,6-16,2-20,L5,2-8,Western,

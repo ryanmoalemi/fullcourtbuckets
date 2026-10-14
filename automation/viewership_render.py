@@ -14,8 +14,13 @@ from PIL import Image, ImageDraw, ImageFont
 
 import build_viewership_attendance as core
 
-FONT_BOLD = '/usr/share/fonts/truetype/macos/Inter-Bold.ttf'
-FONT_MED = '/usr/share/fonts/truetype/macos/Inter-Medium.ttf'
+_FONT_DIR = Path(__file__).resolve().parents[1] / 'assets' / 'fonts'
+FONT_BOLD = str(_FONT_DIR / 'Inter-Bold.ttf')
+FONT_MED = str(_FONT_DIR / 'Inter-Medium.ttf')
+_FONT_FALLBACKS = (
+    '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf',
+    '/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf',
+)
 BG = (20, 24, 32)
 INK = (245, 243, 239)
 MUTED = (180, 187, 199)
@@ -1618,7 +1623,9 @@ def render_page(root: Path, payload: dict) -> str:
     schema = json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')
     css = (Path(__file__).with_name('standings.css')).read_text(encoding='utf-8') + core.EXTRA_CSS + core.links.BYLINE_CSS
     lead = core.link_teams(core.lead_sentence(payload))
-    disclosure = f'<p class="how-made">{core.esc(core.links.HOW_MADE_OTHER)} {core.links.HOW_MADE_LINK}</p>'
+    # This page is a hub, not a news story. An on-site link stays in this tab.
+    how_made_link = core.links.HOW_MADE_LINK.replace(' target="_blank" rel="noopener"', '')
+    disclosure = f'<p class="how-made">{core.esc(core.links.HOW_MADE_OTHER)} {how_made_link}</p>'
     byline = (
         '<div class="byline-row article">'
         f'{core.links.BYLINE_HTML}'
@@ -1844,7 +1851,11 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 
 def _font(path: str, size: int) -> ImageFont.FreeTypeFont:
-    return ImageFont.truetype(path, size)
+    """Prefer the vendored Inter files. GitHub-hosted runners do not have the macOS font path."""
+    for candidate in (path, *_FONT_FALLBACKS):
+        if candidate and Path(candidate).is_file():
+            return ImageFont.truetype(candidate, size)
+    return ImageFont.load_default(size=size)
 
 
 def _draw_columns(path: Path, title: str, points, *, unit: str, note: str, color=ORANGE) -> None:

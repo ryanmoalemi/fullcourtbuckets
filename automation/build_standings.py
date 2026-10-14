@@ -19,6 +19,7 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
+import citation
 import internal_links as links
 import site_nav
 import team_names
@@ -368,7 +369,7 @@ def standings_faq(table: dict) -> tuple[str, dict | None, list[str]]:
         for question, _plain, html_answer in pairs
     )
     block = (
-        '<section class="section" id="faq">'
+        '<section class="section" id="standings-faq">'
         '<p class="eyebrow">Standings FAQ</p>'
         '<h2>Frequently asked questions</h2>'
         f'{items}'
@@ -376,7 +377,7 @@ def standings_faq(table: dict) -> tuple[str, dict | None, list[str]]:
     )
     entity = {
         '@type': 'FAQPage',
-        '@id': BASE + ROUTE + '#faq',
+        '@id': BASE + ROUTE + '#standings-faq',
         'mainEntity': [
             {
                 '@type': 'Question',
@@ -478,9 +479,31 @@ def render_page(root: Path, table: dict) -> str:
     faq_html, faq_entity, _notes = standings_faq(table)
     if faq_entity:
         structured['@graph'].append(faq_entity)
+    games_sentence, _games_note = season_length_answer(table)
+    structured['@graph'].append({
+        '@type': 'Dataset',
+        'name': f'{year} WNBA standings',
+        'description': description + ' Full Court Buckets gathers and verifies its own data.',
+        'url': BASE + ROUTE,
+        'creator': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
+        'license': citation.CC_BY,
+        'isAccessibleForFree': True,
+        'distribution': {
+            '@type': 'DataDownload',
+            'encodingFormat': 'text/csv',
+            'contentUrl': BASE + ROUTE + 'standings-2026.csv',
+        },
+    })
     schema = json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')
+    cite = citation.standings_quick_cite(leader['name'], leader['wins'], leader['losses'], len(teams), games_sentence)
+    table_embed = citation.embed_block(
+        'final-2026-standings',
+        citation.embed_snippet(BASE + ROUTE, 'final-2026-standings'),
+        'standings-2026.csv',
+    )
+    tie_block = citation.standings_tie_block(teams)
     conf_head = '<tr><th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th></tr>'
-    return f'''<!doctype html>
+    page_html = f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -503,6 +526,7 @@ def render_page(root: Path, table: dict) -> str:
 {css}
 </style>
 <link rel="stylesheet" href="/assets/site-nav.css">
+<link rel="stylesheet" href="/assets/citation.css">
 <script type="application/ld+json">{schema}</script>
 </head>
 <body>
@@ -513,9 +537,10 @@ def render_page(root: Path, table: dict) -> str:
 <div class="eyebrow">League</div>
 <h1>{esc(heading)}</h1>
 <p class="support" id="standings-updated">{esc(support)}</p>
+{cite}
 </div>
 {series_coverage_html(root)}
-<section class="panel">
+<section class="panel" id="final-2026-standings">
 <div class="table-wrap">
 <table class="standings-table" aria-label="{esc(year)} WNBA Standings">
 <thead>
@@ -526,6 +551,7 @@ def render_page(root: Path, table: dict) -> str:
 <tbody id="standingsBody">{body_rows}</tbody>
 </table>
 </div>
+{table_embed}
 </section>
 <div class="conference-wrap">
 <section class="conf-card">
@@ -553,7 +579,7 @@ def render_page(root: Path, table: dict) -> str:
 <div class="info-card"><span class="info-label">Regular Season</span><p>League standings determine playoff seeding</p></div>
 <div class="info-card"><span class="info-label">Tiebreakers</span><p>Head-to-head record is the first tiebreaker</p></div>
 </div>
-<section class="explainer">
+<section class="explainer" id="wnba-tiebreaker-rules">
 <h3>How WNBA Standings Work</h3>
 <p>The eight teams with the best regular-season records qualify for the WNBA Playoffs. Playoff seeding is based on regular-season record rather than conference.</p>
 <p>If teams finish with identical records, WNBA tiebreak procedures are used to determine playoff qualification and seeding. This page keeps the order already published in the standings feed when records match.</p>
@@ -565,15 +591,18 @@ def render_page(root: Path, table: dict) -> str:
 <li>Better point differential against all opponents</li>
 </ul>
 </section>
+{tie_block}
 {faq_html}
 <p class="source-note">Source: <a href="{ESPN_PAGE}" target="_blank" rel="noopener">ESPN standings</a>.</p>
 </div>
 </main>
 {site_nav.footer_html(True)}
+<script src="/assets/citation.js" defer></script>
 <script src="/assets/site-nav.js" defer></script>
 </body>
 </html>
 '''
+    return citation.add_heading_anchors(page_html, citation.STANDINGS_FORCED, start='<main', end='<footer')
 
 
 def build(root: Path, payload: dict | None = None, updated_at: str | None = None) -> bool:
@@ -609,6 +638,8 @@ def build(root: Path, payload: dict | None = None, updated_at: str | None = None
         html_text = site_nav.install(html_text, ROUTE, site_nav.build_menu(root))
     page.parent.mkdir(parents=True, exist_ok=True)
     data_path.parent.mkdir(parents=True, exist_ok=True)
+    csv_headers, csv_rows = citation.standings_csv_rows(table['teams'])
+    citation.write_csv(page.parent / 'standings-2026.csv', csv_headers, csv_rows)
     temporary = page.with_suffix('.html.tmp')
     temporary.write_text(html_text, encoding='utf-8')
     temporary.replace(page)
