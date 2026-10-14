@@ -1711,8 +1711,28 @@ def _pull_article_date(article: str) -> tuple[str, str]:
     return article, date.group(1)
 
 
+QUICK_CITE_RE = re.compile(r'<aside class="fcb-quick-cite".*?</aside>', re.S)
+
+
+def place_quick_cite(html: str) -> str:
+    """Fast-facts box sits directly under the H1, above the hero and the byline."""
+    match = QUICK_CITE_RE.search(html)
+    if not match:
+        return html
+    h1 = html.find('</h1>')
+    if h1 < 0 or match.start() < h1:
+        return html
+    between = html[h1 + len('</h1>'):match.start()]
+    if not re.search(r'<figure\b|<div class="byline', between):
+        return html
+    block = match.group(0).strip()
+    html = html[:match.start()] + html[match.end():]
+    h1 = html.find('</h1>')
+    return html[:h1 + len('</h1>')] + '\n' + block + '\n' + html[h1 + len('</h1>'):]
+
+
 def order_news_lead(html: str, article: dict | None = None) -> str:
-    """Headline, lead photo and credit, byline and date, then the hook and body.
+    """Headline, fast-facts cite when present, lead photo and credit, byline, then the hook.
 
     The lead matches the article column, uses a 16:9 crop, keeps width and height,
     uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
@@ -1738,7 +1758,7 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     if lead is None:
         lead = fallback
     if lead is None:
-        return html
+        return place_quick_cite(html)
     figure = _mark_lead_figure(lead.group(0), meta)
     article = article[:lead.start()] + article[lead.end():]
     byline = BYLINE_RE.search(article)
@@ -1757,7 +1777,7 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     article = article[:h1 + len('</h1>')] + figure + row + article[h1 + len('</h1>'):]
     html = html[:start] + article + html[end:]
     html = apply_body_photos(html)
-    return install_lead_css(html)
+    return place_quick_cite(install_lead_css(html))
 
 
 def ensure_byline(html: str) -> str:
@@ -1793,6 +1813,8 @@ def _author_bio_html() -> str:
             '<a href="/wnba/angel-reese/">Angel Reese</a>',
         )
         parts.append(f'<p>{text}</p>')
+    import citation
+    parts.append(citation.media_line_html())
     parts.append(f'<p><a href="{HOW_PAGE}">{AUTHOR_HOW_LABEL}</a></p>')
     return '\n'.join(parts)
 

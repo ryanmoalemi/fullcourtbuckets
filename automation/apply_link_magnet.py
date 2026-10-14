@@ -72,7 +72,7 @@ def apply_viewership() -> None:
     html = ensure_assets(load(relative))
     html = ensure_dataset(html, citation.dataset_script(
         '2026 WNBA Finals audience and search demand',
-        'Published Full Court Buckets figures for 2026 WNBA audience averages and October search estimates. The game-by-game Finals sheet is the ratings tracker. Full Court Buckets gathers and verifies its own data.',
+        'Published Full Court Buckets figures for 2026 WNBA audience averages and October search estimates. Games 1-4 follow the WNBA release of Oct. 13, 2026. Games 5-7 are not listed in that release. The game-by-game sheet is the ratings tracker. Full Court Buckets gathers and verifies its own data.',
         citation.VIEWERSHIP_URL,
         citation.VIEWERSHIP_URL + 'finals-audience.csv',
     ))
@@ -133,8 +133,8 @@ def apply_viewership() -> None:
             '</figure>\n' + search_embed + '\n<h2 class="section-title">What audience should the Finals draw</h2>',
             'search embed',
         )
-    # The Oct. 11 schedule table still lists Game 3 on Thursday, Oct. 22.
-    # Do not offer an embed of that table. The citable schedule is the tracker.
+    # The visible schedule table is the Oct. 13 release, same rows as the ratings hub.
+    # Do not offer a second embed of it. The citable sheet is the tracker.
     html = citation.add_heading_anchors(html, citation.VIEWERSHIP_FORCED)
     save(relative, under_headline(html))
 
