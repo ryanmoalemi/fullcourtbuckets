@@ -278,6 +278,8 @@ def source_label(url: str) -> str:
         return 'Sports Media Watch'
     if host.endswith('sportsbusinessjournal.com'):
         return 'Sports Business Journal'
+    if host == 'valkyries.wnba.com':
+        return 'Golden State Valkyries'
     if host.endswith('wnba.com'):
         return 'WNBA.com'
     if host.endswith('frontofficesports.com'):
@@ -634,15 +636,20 @@ def crowds_section(payload: dict) -> str:
         text = ', '.join(bits)
         if is_number(row.get('relocated_avg')):
             text = f"{text} ({format_number(row['relocated_avg'])} avg.)" if text else f"{format_number(row['relocated_avg'])} avg."
+        elif row.get('relocated_avg_status') == 'unresolved':
+            text = f'{text}, average unresolved' if text else 'average unresolved'
         body.append([
             esc(f"Relocated big-arena games, {row['season']}"),
             esc(text),
             esc(f"{row['season']} season"),
         ])
         sources.append((row.get('relocated_source') or '', row.get('relocated_source_date') or ''))
-    note = ''
+    notes = []
     if any(row.get('date') == '2024-09-19' and row.get('attendance') == 20711 for row in crowds):
-        note = "We haven't found a league release confirming whether 20,711 was topped in 2025 or 2026."
+        notes.append("We haven't found a league release confirming whether 20,711 was topped in 2025 or 2026.")
+    if any(row.get('relocated_avg_status') == 'unresolved' for row in relocated):
+        notes.append('The 2026 relocated-game average is unresolved. 388,997 divided by 25 is 15,560, so the printed average is omitted.')
+    note = ' '.join(notes)
     return section(
         'What is the biggest WNBA crowd on record?',
         crowds_answer(payload),
@@ -657,8 +664,11 @@ def home_answer(payload: dict) -> str:
     if not rows:
         return ''
     top = rows[0]
-    if top.get('home_team') == 'Indiana Fever' and top['home_attendance'] == 340715 and top.get('season') == 2024:
-        return 'The Indiana Fever hold the single-season home attendance record with 340,715 fans in 2024.'
+    if top.get('home_team') == 'Golden State Valkyries' and top['home_attendance'] == 397408 and top.get('season') == 2025:
+        return (
+            'The Golden State Valkyries set the single-season home attendance record with 397,408 fans in 2025, '
+            "an average of 18,064. Indiana's 340,715 in 2024 stays as that season's record in the league release."
+        )
     return f"{top['home_team']} drew {format_number(top['home_attendance'])} fans at home in {top['season']}."
 
 
@@ -731,9 +741,16 @@ def tracker_section(payload: dict) -> str:
             sources.append((row.get('viewers_source') or '', row.get('viewers_source_date') or ''))
         else:
             viewers = '<span class="pending">Pending</span>'
+        when = format_day(row['date'], weekday=True)
+        tip = str(row.get('tip') or '').strip()
+        if tip:
+            when = f'{when}, {tip}'
+        if row.get('schedule_source'):
+            sources.append((row.get('schedule_source') or '', row.get('schedule_source_date') or ''))
         body.append([
             esc(label),
-            esc(format_day(row['date'], weekday=True)),
+            esc(when),
+            esc(row.get('venue') or ''),
             esc(row.get('network') or ''),
             viewers,
         ])
@@ -743,8 +760,9 @@ def tracker_section(payload: dict) -> str:
     return section(
         'How many people are watching the 2026 WNBA Finals?',
         tracker_answer(payload),
-        table(['Game', 'Date', 'Network', 'Viewers'], body, '2026 WNBA Finals viewership tracker'),
+        table(['Game', 'Date', 'Venue', 'Network', 'Viewers'], body, '2026 WNBA Finals viewership tracker'),
         source_html,
+        'Games 5, 6 and 7 are if necessary. The Oct. 13, 2026 release does not list their dates.',
     )
 
 
