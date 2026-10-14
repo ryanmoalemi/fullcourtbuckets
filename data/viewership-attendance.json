@@ -97,14 +97,17 @@
       "game": "Finals Game 1",
       "home": "",
       "away": "",
-      "venue": "",
+      "venue": "Chase Center",
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip": "3:30 p.m. ET / 12:30 p.m. PT",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-19",
@@ -112,29 +115,35 @@
       "game": "Finals Game 2",
       "home": "",
       "away": "",
-      "venue": "",
+      "venue": "Chase Center",
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip": "8:00 p.m. ET / 5:00 p.m. PT",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-21",
       "season": 2026,
       "game": "Finals Game 3",
       "home": "",
       "away": "",
-      "venue": "",
+      "venue": "State Farm Arena",
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip": "8:00 p.m. ET / 5:00 p.m. PT",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-24",
@@ -142,14 +151,17 @@
       "game": "Finals Game 4",
       "home": "",
       "away": "",
-      "venue": "",
+      "venue": "State Farm Arena",
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip": "1:00 p.m. ET / 10:00 a.m. PT",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     }
   ],
   "seasons": [
@@ -165,9 +177,10 @@
       "finals_matchup": "Valkyries vs. Dream",
       "relocated_games": 25,
       "relocated_attendance": 388997,
-      "relocated_avg": 15743,
+      "relocated_avg": null,
       "relocated_source": "https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/",
-      "relocated_source_date": "2026-10-06"
+      "relocated_source_date": "2026-10-06",
+      "relocated_avg_status": "unresolved"
     },
     {
       "season": 2025,
@@ -218,7 +231,7 @@
       "season": 2024,
       "home_team": "Indiana Fever",
       "home_attendance": 340715,
-      "home_note": "record",
+      "home_note": "2024 record in the league release",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
     },
@@ -230,6 +243,15 @@
       "home_note": "previous record",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
+    },
+    {
+      "season": 2025,
+      "home_team": "Golden State Valkyries",
+      "home_attendance": 397408,
+      "home_games": 22,
+      "home_note": "18,064 per game; single-season record",
+      "home_attendance_source": "https://valkyries.wnba.com/news/valkyries-set-all-time-wnba-attendance-record-20250906",
+      "home_attendance_source_date": "2025-09-06"
     }
   ]
 }
