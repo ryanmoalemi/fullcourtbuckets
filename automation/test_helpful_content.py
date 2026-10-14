@@ -27,6 +27,8 @@ class HelpfulContentTests(unittest.TestCase):
     def test_how_we_make_page_is_linked_from_footer_not_the_menu(self):
         page = (ROOT / 'how-we-make-full-court-buckets' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('<h1>How we make Full Court Buckets</h1>', page)
+        self.assertIn('<a href="/authors/ryan-moalemi/">Ryan Moalemi</a>', page)
+        self.assertIn('He writes content himself, and he also reviews it.', page)
         self.assertIn('He comes up with the story ideas, picks the stats and angles that matter', page)
         self.assertIn('Opinion and analysis pieces are his own take.', page)
         self.assertIn('Ryan reads every story before it goes live and makes the final edit.', page)
