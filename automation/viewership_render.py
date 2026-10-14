@@ -1317,6 +1317,10 @@ def tracker_block(payload: dict) -> str:
             numeric={4},
         )
         + f'<p class="note">{core.esc(note)}</p>'
+        + '<p class="note">The game-by-game ratings hub, with peak audience and a CSV, is the '
+        '<a href="/news/2026-wnba-finals-ratings-tracker/">2026 WNBA Finals ratings tracker</a>. '
+        'Season-long context is in the '
+        '<a href="/news/wnba-finals-2026-audience-growth-dream-valkyries/">Finals audience story</a>.</p>'
         + core.sources_line(sources)
     )
 
