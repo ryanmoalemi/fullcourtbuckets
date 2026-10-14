@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import csv
 import json
+from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -26,9 +27,11 @@ SHARE_BG = (9, 11, 16)
 
 def growth_split(prior: dict, current: dict) -> dict | None:
     """Accounting split of a total-attendance change. None until both years are sourced."""
+    if prior is None or current is None:
+        return None
+    if prior.get('avg_attendance_status') == 'calculated':
+        return _fraction_growth(prior, current)
     for row in (prior, current):
-        if row is None:
-            return None
         for number_key, source_key in (
             ('games_played', 'attendance_source'),
             ('avg_attendance', 'avg_attendance_source'),
@@ -53,6 +56,59 @@ def growth_split(prior: dict, current: dict) -> dict | None:
         'prior_total': games_prior * average_prior,
         'current_total': games_current * average_current,
     }
+
+
+def _fraction_growth(prior: dict, current: dict) -> dict | None:
+    """Split a rounded prior total so the pieces add back to games times the new average."""
+    if not (
+        core.is_number(prior.get('total_attendance'))
+        and core.is_number(prior.get('games_played'))
+        and prior['games_played']
+        and core.is_number(current.get('games_played'))
+        and core.is_number(current.get('avg_attendance'))
+        and core.is_source_url(prior.get('attendance_source'))
+        and core.is_source_url(current.get('avg_attendance_source'))
+    ):
+        return None
+    games_prior = prior['games_played']
+    games_current = current['games_played']
+    total_prior = prior['total_attendance']
+    average_current = current['avg_attendance']
+    extra = (games_current - games_prior) * total_prior / games_prior
+    current_total = games_current * average_current
+    change = current_total - total_prior
+    extra_games = int(Decimal(str(extra)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+    average_crowd = int(change) - extra_games
+    share_games = round(100 * extra_games / change) if change else 0
+    return {
+        'prior_season': prior.get('season'),
+        'current_season': current.get('season'),
+        'games_prior': games_prior,
+        'avg_prior': round(total_prior / games_prior),
+        'games_current': games_current,
+        'avg_current': average_current,
+        'extra_games': extra_games,
+        'average_crowd': average_crowd,
+        'prior_total': total_prior,
+        'current_total': current_total,
+        'method': 'fraction',
+        'share_games': share_games,
+        'share_crowd': 100 - share_games,
+        'printed_avg': prior.get('avg_attendance_printed'),
+    }
+
+
+def _rounded_total_note(payload: dict, split: dict) -> str:
+    row = league_season(payload, split['current_season'])
+    if not row or not core.is_number(row.get('total_attendance')):
+        return ''
+    if row['total_attendance'] == split['current_total']:
+        return ''
+    return (
+        f" {core.source_label(row.get('attendance_source') or '')} rounds the "
+        f"{split['current_season']} total to {core.format_number(row['total_attendance'])}, "
+        'which is a separate rounded figure.'
+    )
 
 
 def league_season(payload: dict, season: int) -> dict | None:
@@ -204,7 +260,9 @@ def line_chart_svg(points, *, y_max: float, unit: str, aria: str, label) -> str:
     segment = []
     dots = []
     drawn = []
-    for index, (name, value) in enumerate(points):
+    for index, point in enumerate(points):
+        name, value = point[0], point[1]
+        marker = point[2] if len(point) > 2 else ''
         x = x_at(index)
         parts.append(_svg_text(x, bottom + 20, str(name), size=12, fill='#f5f3ef', weight=700))
         if value is None:
@@ -215,15 +273,20 @@ def line_chart_svg(points, *, y_max: float, unit: str, aria: str, label) -> str:
             continue
         y = y_at(value)
         segment.append((x, y))
-        dots.append((x, y))
+        dots.append((x, y, marker))
         parts.append(_svg_text(x, max(14, y - 10), label(value), size=12, fill='#f5f3ef', weight=700))
+        if marker:
+            parts.append(_svg_text(x, min(bottom - 4, y + 16), marker, size=10))
     if len(segment) >= 2:
         drawn.append(segment)
     for segment in drawn:
         coords = ' '.join(f'{x:.1f},{y:.1f}' for x, y in segment)
         parts.append(f'<polyline points="{coords}" fill="none" stroke="#ff9800" stroke-width="2.5"/>')
-    for x, y in dots:
-        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#ff9800"/>')
+    for x, y, marker in dots:
+        if marker:
+            parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" fill="#141820" stroke="#ff9800" stroke-width="2"/>')
+        else:
+            parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="#ff9800"/>')
     return _chart(aria, ''.join(parts), width=width, height=height)
 
 
@@ -529,6 +592,68 @@ def crowds_answer(payload: dict) -> str:
     )
 
 
+def _other_broadcast_table(payload: dict, season: int, sources: list) -> str:
+    rows = [
+        row for row in _broadcasts(payload)
+        if row.get('season') == season and row.get('chart') is False
+    ]
+    if not rows:
+        return ''
+    rows = sorted(rows, key=lambda row: -row['avg_viewers'])
+    body = []
+    for row in rows:
+        games = str(row['games']) if core.is_number(row.get('games')) else ''
+        body.append([
+            core.esc(row['network']),
+            core.esc(row['season']),
+            core.esc(games),
+            core.esc(core.format_number(row['avg_viewers'])),
+            core.esc(row.get('scope') or ''),
+            source_cell(row.get('source') or ''),
+        ])
+        sources.append((row.get('source') or '', row.get('source_date') or ''))
+    return (
+        '<h3>Other 2026 partner averages</h3>'
+        '<p class="answer">These averages stay off the bars. The source did not give a full-season game count, '
+        'the figure is only part of the season, or the number is a split or a subset of a larger average.</p>'
+        + table(
+            ['Network', 'Season', 'Games', 'Average viewers', 'Scope', 'Source'],
+            body,
+            f'{season} partner averages without a comparable game count',
+            caption=f'{season} partner averages that are not on the bar chart. Blank game counts were not stated.',
+            numeric={2, 3},
+        )
+    )
+
+
+def _peak_table(payload: dict, sources: list) -> str:
+    rows = [row for row in payload.get('games') or [] if core.is_number(row.get('peak_viewers'))]
+    if not rows:
+        return ''
+    rows = sorted(rows, key=lambda row: -row['peak_viewers'])
+    body = []
+    for row in rows:
+        body.append([
+            core.link_teams(row['game']),
+            core.esc(core.format_day(row['date'])),
+            core.esc(core.format_number(row['peak_viewers'])),
+            core.esc(core.format_number(row['viewers']) if core.is_number(row.get('viewers')) else ''),
+            source_cell(row.get('peak_viewers_source') or ''),
+        ])
+        sources.append((row.get('peak_viewers_source') or '', row.get('peak_viewers_source_date') or ''))
+    return (
+        '<h3>Peak minute audiences</h3>'
+        '<p class="answer">A peak is the highest minute, not the average audience for the game.</p>'
+        + table(
+            ['Game', 'Date', 'Peak viewers', 'Average viewers', 'Source'],
+            body,
+            'Peak minute audiences',
+            caption='Peak minute audiences. Not comparable to average audiences.',
+            numeric={2, 3},
+        )
+    )
+
+
 def tracker_answer(payload: dict) -> str:
     games = [row for row in payload['games'] if row.get('season') == 2026 and core.is_finals_game(row)]
     matchup = ''
@@ -620,6 +745,7 @@ def viewership_section(payload: dict) -> str:
                 caption=f'{season} regular season. Each row is that network\'s own schedule.',
                 numeric={2, 3},
             )
+            + _other_broadcast_table(payload, season, sources)
         )
     espn_rows = espn_regular_season(payload)
     espn_html = ''
@@ -676,11 +802,24 @@ def viewership_section(payload: dict) -> str:
         f'<h2>{core.esc(core.QUESTION)}</h2>'
         f'<p class="answer">{core.link_teams(watched_answer(payload))}</p>'
         '<h3>What are the most-watched WNBA games?</h3>'
-        f'{games_table}{note_html}'
+        f'{games_table}{note_html}{_peak_table(payload, sources)}'
         f'{network_html}{espn_html}'
         f'{core.sources_line(sources)}'
         '</section>'
     )
+
+
+def _chart_points(payload: dict, points, key: str):
+    marked = []
+    for year, value in points:
+        row = league_season(payload, year) or {}
+        marker = ''
+        if key == 'avg_attendance' and row.get('avg_attendance_status') == 'calculated':
+            marker = 'calculated'
+        elif key == 'total_attendance' and row.get('total_attendance_rounded'):
+            marker = 'rounded'
+        marked.append((str(year), value, marker) if marker else (str(year), value))
+    return marked
 
 
 def _average_chart(payload: dict) -> str:
@@ -689,19 +828,25 @@ def _average_chart(payload: dict) -> str:
         return ''
     aria_bits = []
     for year, value in points:
-        aria_bits.append(f'{year} not reported' if value is None else f'{year} {value:,} fans per game')
+        row = league_season(payload, year) or {}
+        if value is None:
+            aria_bits.append(f'{year} not reported')
+        elif row.get('avg_attendance_status') == 'calculated':
+            aria_bits.append(f'{year} {value:,} fans per game, calculated')
+        else:
+            aria_bits.append(f'{year} {value:,} fans per game')
     svg = line_chart_svg(
-        [(str(year), value) for year, value in points],
+        _chart_points(payload, points, 'avg_attendance'),
         y_max=_round_max([value or 0 for _year, value in points], floor=1),
         unit='Fans per game',
-        aria='Regular-season attendance per game. ' + '; '.join(aria_bits) + '. Missing years are not zero.',
+        aria='Regular-season attendance per game. ' + '; '.join(aria_bits) + '. Missing years are not zero. A calculated point is an open circle.',
         label=lambda value: f'{value:,}',
     )
     return (
         '<div class="chart-panel">'
         '<h3>Are average crowds growing?</h3>'
         '<p class="answer">Reported averages are shown for each season in the file. '
-        'A missing year stays a gap. It is not drawn as zero, and the line does not connect across it.</p>'
+        'A calculated average is an open circle. A missing year stays a gap. It is not drawn as zero, and the line does not connect across it.</p>'
         f'{chart_figure(svg, "attendance-average.png")}'
         '</div>'
     )
@@ -721,10 +866,10 @@ def _total_chart(payload: dict) -> str:
     for year, value in points:
         aria_bits.append(f'{year} not reported' if value is None else f'{year} {core.format_number(value)}')
     svg = column_chart_svg(
-        [(str(year), value) for year, value in points],
+        _chart_points(payload, points, 'total_attendance'),
         y_max=_round_max([value or 0 for _year, value in points], floor=1),
         unit='Total fans',
-        aria='Regular-season total attendance. ' + '; '.join(aria_bits) + '. Blank years are not zero.',
+        aria='Regular-season total attendance. ' + '; '.join(aria_bits) + '. Blank years are not zero. Rounded totals are labeled.',
         label=compact_millions,
     )
     return (
@@ -747,17 +892,44 @@ def growth_section(payload: dict) -> str:
             'new games times the change in average. '
             'The 2025 league game count and average attendance are not in this file, so the chart is not drawn.</p>'
         )
-    formula = (
-        f"Extra games: ({split['games_current']} - {split['games_prior']}) x {split['avg_prior']:,} "
-        f"= {split['extra_games']:,}. "
-        f"Average crowd: {split['games_current']} x ({split['avg_current']:,} - {split['avg_prior']:,}) "
-        f"= {split['average_crowd']:,}."
-    )
+    if split.get('method') == 'fraction':
+        printed = split.get('printed_avg')
+        conflict = ''
+        if core.is_number(printed):
+            implied_total = printed * split['games_prior']
+            conflict = (
+                f" Sports Business Journal prints a {printed:,} average for {split['prior_season']}. "
+                f"{printed:,} times {split['games_prior']} games is {implied_total:,}, which is not "
+                f"{core.format_number(split['prior_total'])}. "
+                f"{core.format_number(split['prior_total'])} divided by {split['games_prior']} is "
+                f"{split['prior_total'] / split['games_prior']:,.2f}, shown as {split['avg_prior']:,}. "
+                'The printed average is not used in the split.'
+            )
+        formula = (
+            f"Extra games: {split['games_current'] - split['games_prior']} x "
+            f"({split['prior_total']:,} / {split['games_prior']}) = {split['extra_games']:,} "
+            f"({split['share_games']}%). "
+            f"Average crowd: {split['games_current']} x "
+            f"({split['avg_current']:,} - {split['prior_total']:,} / {split['games_prior']}) "
+            f"= {split['average_crowd']:,} ({split['share_crowd']}%). "
+            f"Together that is {split['current_total']:,} minus {split['prior_total']:,}, "
+            f"or {split['extra_games'] + split['average_crowd']:,}. "
+            f"{split['games_current']} times {split['avg_current']:,} is {split['current_total']:,}."
+            + _rounded_total_note(payload, split)
+            + conflict
+        )
+    else:
+        formula = (
+            f"Extra games: ({split['games_current']} - {split['games_prior']}) x {split['avg_prior']:,} "
+            f"= {split['extra_games']:,}. "
+            f"Average crowd: {split['games_current']} x ({split['avg_current']:,} - {split['avg_prior']:,}) "
+            f"= {split['average_crowd']:,}."
+        )
     return (
         '<h3>How much of the total comes from games versus average crowds?</h3>'
         '<p class="provisional">Provisional</p>'
         '<p class="answer">This is an accounting split of the change in total attendance. '
-        'It is not a cause of demand. The inputs are the sourced game counts and average crowds.</p>'
+        'It is not a cause of demand. The 2025 game count is calculated, and the 2025 average used here is calculated from the rounded total.</p>'
         f'{chart_figure(waterfall_svg(split), "attendance-growth.png")}'
         f'<p class="note">{core.esc(formula)}</p>'
     )
@@ -770,14 +942,25 @@ def attendance_section(payload: dict) -> str:
     total_body = []
     sources = []
     for row in averages:
+        status = 'Calculated' if row.get('avg_attendance_status') == 'calculated' else 'Printed'
         average_body.append([
             core.esc(row['season']),
             core.esc(core.format_number(row['avg_attendance'])),
+            core.esc(status),
             source_cell(row.get('avg_attendance_source') or ''),
         ])
         sources.append((row.get('avg_attendance_source') or '', row.get('avg_attendance_source_date') or ''))
+        if core.is_number(row.get('avg_attendance_printed')):
+            average_body.append([
+                core.esc(row['season']),
+                core.esc(core.format_number(row['avg_attendance_printed'])),
+                'Printed, does not reconcile',
+                source_cell(row.get('avg_attendance_source') or ''),
+            ])
     for row in totals:
         games = str(row['games_played']) if core.is_number(row.get('games_played')) else ''
+        if games and row.get('games_calculated'):
+            games = f'{games}, calculated'
         total_body.append([
             core.esc(row['season']),
             core.esc(core.format_number(row['total_attendance'])),
@@ -785,6 +968,8 @@ def attendance_section(payload: dict) -> str:
             source_cell(row.get('attendance_source') or ''),
         ])
         sources.append((row.get('attendance_source') or '', row.get('attendance_source_date') or ''))
+        if row.get('games_source'):
+            sources.append((row.get('games_source') or '', row.get('games_source_date') or ''))
     share = ''
     if any(row.get('avg_attendance') == 11474 and row.get('season') == 2026 for row in averages):
         share = (
@@ -805,14 +990,14 @@ def attendance_section(payload: dict) -> str:
         '<h3>What is the average WNBA attendance per game?</h3>'
         f'<p class="answer">{core.esc(average_answer(payload))}</p>'
         + table(
-            ['Season', 'Fans per game', 'Source'],
+            ['Season', 'Fans per game', 'Status', 'Source'],
             average_body,
             'WNBA average attendance per game',
-            caption='Regular-season average attendance. 2025 is not in this file.',
+            caption='Regular-season average attendance. A calculated average is the reported total divided by the game count.',
             numeric={1},
-            wide=False,
             mark_latest=True,
         )
+        + _attendance_notes(averages + totals)
         + share
         + '<h3>Season totals</h3>'
         + table(
@@ -828,6 +1013,16 @@ def attendance_section(payload: dict) -> str:
         + core.sources_line(sources)
         + '</section>'
     )
+
+
+def _attendance_notes(rows: list[dict]) -> str:
+    seen = []
+    for row in rows:
+        for key in ('avg_attendance_note', 'attendance_note', 'games_note'):
+            note = str(row.get(key) or '').strip()
+            if note and note not in seen:
+                seen.append(note)
+    return ''.join(f'<p class="note">{core.esc(note)}</p>' for note in seen)
 
 
 def _relocated_block(payload: dict) -> str:
@@ -962,9 +1157,31 @@ def teams_section(payload: dict) -> str:
             'target="_blank" rel="noopener">Front Office Sports</a> is the printed-average source. '
             'The 2025 Fever and Liberty totals in that week\'s team table are left off because the Fever figure was still short of a full home schedule.</p>'
         )
+        + _team_side_notes(payload, sources)
         + core.sources_line(sources)
         + '</section>'
     )
+
+
+def _team_side_notes(payload: dict, sources: list) -> str:
+    notes = []
+    for row in payload.get('seasons') or []:
+        if row.get('road_team') and core.is_number(row.get('road_avg')):
+            notes.append(
+                f"<p class=\"note\">{core.link_teams(row['road_team'])} averaged "
+                f"{row['road_avg']:,} fans on the road in {row['season']}. "
+                f"{core.esc(row.get('road_note') or 'Road games, not home.')} "
+                f"Source: {source_cell(row.get('road_source') or '')}.</p>"
+            )
+            sources.append((row.get('road_source') or '', row.get('road_source_date') or ''))
+        if core.is_number(row.get('home_change_pct')) and not core.is_number(row.get('home_attendance')):
+            notes.append(
+                f"<p class=\"note\">{core.link_teams(row.get('home_team') or '')} home attendance "
+                f"changed {row['home_change_pct']}% in {row['season']}, as printed by the source. "
+                f"{core.esc(row.get('home_note') or '')}</p>"
+            )
+            sources.append((row.get('home_attendance_source') or '', row.get('home_attendance_source_date') or ''))
+    return ''.join(notes)
 
 
 def finals_measurement(row: dict) -> str:
@@ -1028,9 +1245,41 @@ def finals_section(payload: dict) -> str:
             numeric={2, 3},
             mark_latest=True,
         )
+        + _finals_game_table(payload, sources)
         + core.sources_line(sources)
         + tracker_block(payload)
         + '</section>'
+    )
+
+
+def _finals_game_table(payload: dict, sources: list) -> str:
+    body = []
+    for row in core.league_rows(payload):
+        for item in row.get('finals_game_reports') or []:
+            when = core.format_day(item['date']) if item.get('date') else ''
+            body.append([
+                core.esc(row.get('season')),
+                core.esc(item.get('game') or ''),
+                core.esc(when),
+                core.esc(core.format_number(item['viewers'])),
+                core.esc(item.get('network') or ''),
+                core.esc(item.get('note') or ''),
+                source_cell(item.get('source') or ''),
+            ])
+            sources.append((item.get('source') or '', item.get('source_date') or ''))
+    if not body:
+        return ''
+    return (
+        '<h3>2025 Finals, game by game</h3>'
+        '<p class="answer">These are individual games from a completed series. They are not added into the series-average bars above. '
+        'Games 5, 6 and 7 were not played, so they are left blank.</p>'
+        + table(
+            ['Year', 'Game', 'Date', 'Viewers', 'Network', 'Note', 'Source'],
+            body,
+            '2025 WNBA Finals game audiences',
+            caption='Reported 2025 Finals games. Games that were not played have no viewer count.',
+            numeric={3},
+        )
     )
 
 
@@ -1489,16 +1738,33 @@ def csv_rows(payload: dict) -> list[dict]:
                 checked, _csv_note(row['total_attendance']),
             ))
         if core.is_number(row.get('games_played')):
+            game_note = 'Calculated.' if row.get('games_calculated') else ''
             rows.append(_csv_row(
                 f'attendance-games-{season}', season, row['games_played'], 'games',
-                'regular season', row.get('attendance_source') or '', row.get('attendance_source_date') or '',
-                checked, '',
+                'regular season',
+                row.get('games_source') or row.get('attendance_source') or '',
+                row.get('games_source_date') or row.get('attendance_source_date') or '',
+                checked, game_note,
             ))
         if core.is_number(row.get('avg_attendance')):
+            average_note = 'Calculated from the rounded total divided by the game count.' if row.get('avg_attendance_status') == 'calculated' else ''
             rows.append(_csv_row(
                 f'attendance-average-{season}', season, row['avg_attendance'], 'fans per game',
                 'regular season', row.get('avg_attendance_source') or '', row.get('avg_attendance_source_date') or '',
-                checked, '',
+                checked, average_note,
+            ))
+        if core.is_number(row.get('avg_attendance_printed')):
+            rows.append(_csv_row(
+                f'attendance-average-printed-{season}', season, row['avg_attendance_printed'], 'fans per game',
+                'regular season, printed average', row.get('avg_attendance_source') or '',
+                row.get('avg_attendance_source_date') or '', checked,
+                'Printed by the source. Does not reconcile with the total divided by the game count.',
+            ))
+        for item in row.get('finals_game_reports') or []:
+            rows.append(_csv_row(
+                f"finals-game-{season}-{item.get('game')}", season, item['viewers'], 'viewers',
+                f"Finals {item.get('game')}", item.get('source') or '', item.get('source_date') or '',
+                checked, _csv_note(item['viewers'], item.get('note') or ''),
             ))
         if core.is_number(row.get('finals_avg_viewers')):
             games = row.get('finals_games')
@@ -1527,6 +1793,12 @@ def csv_rows(payload: dict) -> list[dict]:
                 f"{event_type(row)}: {row.get('game')}", row.get('viewers_source') or '',
                 row.get('viewers_source_date') or '', checked, _csv_note(row['viewers']),
             ))
+        if core.is_number(row.get('peak_viewers')):
+            rows.append(_csv_row(
+                f"peak-{row.get('date')}", row.get('date'), row['peak_viewers'], 'viewers',
+                f"Peak minute: {row.get('game')}", row.get('peak_viewers_source') or '',
+                row.get('peak_viewers_source_date') or '', checked, 'Peak minute, not the game average.',
+            ))
         if core.is_number(row.get('attendance')):
             rows.append(_csv_row(
                 f"crowd-{row.get('date')}", row.get('date'), row['attendance'], 'fans',
@@ -1539,14 +1811,38 @@ def csv_rows(payload: dict) -> list[dict]:
             f"{row.get('home_team')} home", row.get('home_attendance_source') or '',
             row.get('home_attendance_source_date') or '', checked, str(row.get('home_note') or ''),
         ))
+    for row in payload.get('seasons') or []:
+        if row.get('road_team') and core.is_number(row.get('road_avg')):
+            rows.append(_csv_row(
+                f"road-{row.get('season')}-{row.get('road_team')}", row.get('season'), row['road_avg'], 'fans per game',
+                f"{row.get('road_team')} road", row.get('road_source') or '',
+                row.get('road_source_date') or '', checked, 'Road games, not home.',
+            ))
+        if core.is_number(row.get('home_change_pct')) and not core.is_number(row.get('home_attendance')):
+            rows.append(_csv_row(
+                f"home-change-{row.get('season')}-{row.get('home_team')}", row.get('season'), row['home_change_pct'], 'percent',
+                f"{row.get('home_team')} home attendance change", row.get('home_attendance_source') or '',
+                row.get('home_attendance_source_date') or '', checked, 'Printed change. Season total is not in this file.',
+            ))
     for row in _broadcasts(payload):
-        if not core.is_number(row.get('games')):
-            continue
+        games_note = f"{row.get('games')} games" if core.is_number(row.get('games')) else 'Game count not stated.'
         rows.append(_csv_row(
             f"tv-{row.get('season')}-{row.get('network')}", row.get('season'), row['avg_viewers'], 'viewers',
             row.get('scope') or row.get('network') or '', row.get('source') or '',
             row.get('source_date') or '', checked,
-            _csv_note(row['avg_viewers'], f"{row.get('games')} games. {row.get('measurement') or ''}".strip()),
+            _csv_note(row['avg_viewers'], f"{games_note}. {row.get('measurement') or ''}".strip()),
+        ))
+    split = growth_split(league_season(payload, 2025), league_season(payload, 2026))
+    if split and split.get('method') == 'fraction':
+        rows.append(_csv_row(
+            'growth-extra-games-2025-2026', '2025-2026', split['extra_games'], 'fans',
+            'provisional extra-games piece', '', '', checked,
+            'Calculated. Provisional accounting split.',
+        ))
+        rows.append(_csv_row(
+            'growth-average-crowd-2025-2026', '2025-2026', split['average_crowd'], 'fans',
+            'provisional average-crowd piece', '', '', checked,
+            'Calculated. Provisional accounting split.',
         ))
     for metric in payload.get('metrics') or []:
         rows.append({key: metric.get(key, '') for key in core.CSV_FIELDS})
@@ -1598,7 +1894,7 @@ def _draw_line(path: Path, title: str, points, *, unit: str, note: str) -> None:
     draw = ImageDraw.Draw(image)
     draw.text((48, 28), title, font=_font(FONT_BOLD, 36), fill=INK)
     draw.text((48, 78), unit, font=_font(FONT_MED, 22), fill=MUTED)
-    peak = max([value or 0 for _name, value in points], default=1) * 1.25
+    peak = max([point[1] or 0 for point in points], default=1) * 1.25
     left, right, top, bottom = 140, 1500, 150, 430
     draw.line((left, bottom, right, bottom), fill=MUTED, width=2)
     count = max(len(points), 1)
@@ -1611,7 +1907,9 @@ def _draw_line(path: Path, title: str, points, *, unit: str, note: str) -> None:
             return (left + right) / 2
         return left + (right - left) * index / (count - 1)
 
-    for index, (name, value) in enumerate(points):
+    for index, point in enumerate(points):
+        name, value = point[0], point[1]
+        marker = point[2] if len(point) > 2 else ''
         x = x_at(index)
         draw.text((x - 24, bottom + 18), str(name), font=_font(FONT_BOLD, 22), fill=INK)
         if value is None:
@@ -1622,14 +1920,19 @@ def _draw_line(path: Path, title: str, points, *, unit: str, note: str) -> None:
             continue
         y = bottom - (bottom - top) * (value / peak)
         segment.append((x, y))
-        dots.append((x, y))
+        dots.append((x, y, marker))
         draw.text((x - 36, y - 36), f'{int(value):,}', font=_font(FONT_BOLD, 22), fill=INK)
+        if marker:
+            draw.text((x - 42, y + 12), marker, font=_font(FONT_MED, 16), fill=MUTED)
     if len(segment) >= 2:
         coords.append(segment)
     for segment in coords:
         draw.line(segment, fill=ORANGE, width=4)
-    for x, y in dots:
-        draw.ellipse((x - 7, y - 7, x + 7, y + 7), fill=ORANGE)
+    for x, y, marker in dots:
+        if marker:
+            draw.ellipse((x - 8, y - 8, x + 8, y + 8), outline=ORANGE, width=3)
+        else:
+            draw.ellipse((x - 7, y - 7, x + 7, y + 7), fill=ORANGE)
     draw.text((48, 510), note[:180], font=_font(FONT_MED, 20), fill=MUTED)
     image.save(path, 'PNG')
 
@@ -1661,9 +1964,9 @@ def write_downloads(directory: Path, payload: dict) -> None:
         _draw_line(
             directory / 'attendance-average.png',
             'Regular-season attendance per game',
-            [(str(year), value) for year, value in averages],
+            _chart_points(payload, averages, 'avg_attendance'),
             unit='Fans per game',
-            note='Missing years are not zero. Full Court Buckets.',
+            note='Open circles are calculated. Missing years are not zero. Full Court Buckets.',
         )
     totals = attendance_points(payload, 'total_attendance')
     average_years = [year for year, _value in averages]
@@ -1673,7 +1976,7 @@ def write_downloads(directory: Path, payload: dict) -> None:
         _draw_columns(
             directory / 'attendance-total.png',
             'Regular-season total attendance',
-            [(str(year), value) for year, value in span],
+            _chart_points(payload, span, 'total_attendance'),
             unit='Total fans',
             note='Blank years are not zero. Full Court Buckets.',
         )

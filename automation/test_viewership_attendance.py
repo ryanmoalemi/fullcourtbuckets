@@ -121,11 +121,21 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertNotIn('ESPN data', page)
         self.assertNotRegex(page, r'Source:\s*ESPN\b')
         self.assertNotIn('2.70 million', page)
-        self.assertNotIn('2.58 million', page)
-        self.assertNotIn('1.9 million', page)
-        self.assertNotIn('1.4 million', page)
-        self.assertNotIn('3.15 million', page)
-        self.assertNotIn('11,148', page)
+        self.assertIn('2.58 million', page)
+        self.assertIn('1.9 million', page)
+        self.assertIn('1.4 million', page)
+        self.assertIn('3.15 million', page)
+        self.assertIn('11,148', page)
+        self.assertIn('11,014', page)
+        self.assertIn('484,615', page)
+        self.assertIn('151,805', page)
+        self.assertIn('636,420', page)
+        self.assertIn('5,646', page)
+        self.assertIn('286, calculated', page)
+        self.assertIn('240, calculated', page)
+        self.assertIn('3.82 million', page)
+        self.assertIn('15,116', page)
+        self.assertNotIn('nearly 7,000', page)
         self.assertNotIn('20%', page)
         self.assertNotIn('5%', page)
         self.assertNotIn('balldontlie', page.lower())
@@ -159,16 +169,13 @@ class ViewershipPageTests(unittest.TestCase):
 
     def test_growth_chart_waits_for_both_sourced_years(self):
         page = self.page
-        self.assertIn('2025 league game count and average attendance are not in this file', page)
-        self.assertNotIn('attendance-growth.png', page)
-        self.assertIsNone(viewership.growth_split(
-            viewership.league_rows(_payload())[0] if False else next(
-                row for row in _payload()['seasons'] if row.get('season') == 2025 and not row.get('home_team')
-            ),
-            next(row for row in _payload()['seasons'] if row.get('season') == 2026 and not row.get('home_team')),
-        ))
+        self.assertIn('Provisional', page)
+        self.assertIn('attendance-growth.png', page)
+        self.assertIn('484,615', page)
         payload = copy.deepcopy(_payload())
         prior = next(row for row in payload['seasons'] if row.get('season') == 2025 and not row.get('home_team'))
+        prior.pop('avg_attendance_status', None)
+        prior.pop('avg_attendance_printed', None)
         prior.update({
             'games_played': 220,
             'avg_attendance': 10000,

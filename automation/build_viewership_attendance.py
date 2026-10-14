@@ -88,6 +88,9 @@ SEASON_NUMBERS = (
     ('relocated_avg', 'relocated_source'),
     ('home_attendance', 'home_attendance_source'),
     ('home_games', 'home_attendance_source'),
+    ('road_avg', 'road_source'),
+    ('avg_attendance_printed', 'avg_attendance_source'),
+    ('home_change_pct', 'home_attendance_source'),
 )
 CSV_NAME = 'viewership-attendance.csv'
 CSV_FIELDS = (
@@ -298,7 +301,8 @@ def validate(payload: dict) -> None:
             raise ValueError(f'{label} is missing a season.')
         _require_number_source(label, row, 'attendance', 'attendance_source')
         _require_number_source(label, row, 'viewers', 'viewers_source')
-        for key in ('attendance_source_date', 'viewers_source_date', 'schedule_source_date'):
+        _require_number_source(label, row, 'peak_viewers', 'peak_viewers_source')
+        for key in ('attendance_source_date', 'viewers_source_date', 'schedule_source_date', 'peak_viewers_source_date'):
             if not valid_source_date(row.get(key)):
                 raise ValueError(f'{label} has a source date that is not a month or a day.')
         if str(row.get('tip_et') or '').strip() or str(row.get('status') or '').strip():
@@ -316,11 +320,12 @@ def validate(payload: dict) -> None:
         for key in (
             'attendance_source_date', 'avg_attendance_source_date',
             'finals_viewers_source_date', 'relocated_source_date',
-            'home_attendance_source_date',
+            'home_attendance_source_date', 'games_source_date', 'road_source_date',
         ):
             if not valid_source_date(row.get(key)):
                 raise ValueError(f'{label} has a source date that is not a month or a day.')
         _check_relocated_average(label, row)
+        _check_season_extras(label, row)
     _validate_register(payload.get('sources'))
     _validate_metrics(payload.get('metrics'))
     _validate_broadcasts(payload.get('broadcasts'))
@@ -340,6 +345,21 @@ def _check_relocated_average(label: str, row: dict) -> None:
         return
     if average != round(total / games):
         raise ValueError(f'{label} relocated average does not reconcile.')
+
+
+def _check_season_extras(label: str, row: dict) -> None:
+    if row.get('games_calculated'):
+        if not is_number(row.get('games_played')):
+            raise ValueError(f'{label} is marked calculated but has no game count.')
+        if not is_source_url(row.get('games_source')) or not str(row.get('games_source_date') or '').strip():
+            raise ValueError(f'{label} has a calculated game count but no schedule source.')
+    for item in row.get('finals_game_reports') or []:
+        if not isinstance(item, dict) or not str(item.get('game') or '').strip():
+            raise ValueError(f'{label} has a Finals game report without a game.')
+        if not is_number(item.get('viewers')) or not is_source_url(item.get('source')):
+            raise ValueError(f'{label} has a Finals game report without a sourced viewer count.')
+        if not valid_source_date(item.get('source_date')) or not str(item.get('source_date') or '').strip():
+            raise ValueError(f'{label} has a Finals game report without a source date.')
 
 
 def _validate_register(sources) -> None:
@@ -437,6 +457,8 @@ def source_label(url: str) -> str:
         return 'Front Office Sports'
     if host.endswith('oursportscentral.com'):
         return 'OurSports Central'
+    if host.endswith('kenn.com'):
+        return 'Kenn.com'
     return host
 
 
@@ -470,7 +492,10 @@ def sources_line(pairs: list[tuple[str, str]]) -> str:
 
 
 def league_rows(payload: dict) -> list[dict]:
-    return [row for row in payload.get('seasons') or [] if not str(row.get('home_team') or '').strip()]
+    return [
+        row for row in payload.get('seasons') or []
+        if not str(row.get('home_team') or '').strip() and not str(row.get('road_team') or '').strip()
+    ]
 
 
 def home_rows(payload: dict) -> list[dict]:
