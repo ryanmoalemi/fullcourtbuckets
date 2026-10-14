@@ -16,6 +16,10 @@ BASE = 'https://fullcourtbuckets.com'
 CC_BY = 'https://creativecommons.org/licenses/by/4.0/'
 WNBA_FINALS_RELEASE = 'https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena'
 VIEWERSHIP_URL = BASE + '/news/wnba-finals-2026-audience-growth-dream-valkyries/'
+TRACKER_SLUG = '2026-wnba-finals-ratings-tracker'
+TRACKER_PATH = '/news/' + TRACKER_SLUG + '/'
+TRACKER_URL = BASE + TRACKER_PATH
+DATA_PAGE_PATH = '/wnba/viewership-attendance/'
 CARDS_URL = BASE + '/news/top-10-womens-college-basketball-cards-to-collect-2026/'
 EXPANSION_URL = BASE + '/news/wnba-expansion-teams/'
 LIBERTY_URL = BASE + '/news/liberty-offseason-five-gm-moves/'
@@ -264,8 +268,8 @@ def viewership_blocks(payload: dict) -> dict:
         'Full Court Buckets gathers and verifies its own data. A network audience is credited to the network that released it.</p>\n'
         + embed_block(
             'finals-ratings-tracker',
-            embed_snippet(VIEWERSHIP_URL, 'finals-ratings-tracker'),
-            'finals-audience.csv',
+            embed_snippet(TRACKER_URL, 'finals-ratings-tracker'),
+            'finals-ratings.csv',
         )
     )
     history = (
@@ -282,8 +286,8 @@ def viewership_blocks(payload: dict) -> dict:
         + '\n'
         + embed_block(
             'finals-average-viewers',
-            embed_snippet(VIEWERSHIP_URL, 'finals-average-viewers'),
-            'finals-audience.csv',
+            embed_snippet(TRACKER_URL, 'finals-average-viewers'),
+            'finals-ratings.csv',
         )
     )
     return {'cite': cite, 'tracker': tracker + '\n' + history}
@@ -300,6 +304,165 @@ def viewership_csv_rows(payload: dict) -> tuple[list, list]:
         rows.append(['2026 playoffs per game', row[0], row[2] + ' PPG', row[3] + ' RPG', '', 'FCB verified', 'GP ' + row[1]])
     for row in FINALS_TRACKER_ROWS:
         rows.append(['2026 Finals tracker', 'Game ' + row[0], row[1], row[2], row[3], row[8], row[4]])
+    for row in finals_history_rows(payload):
+        rows.append(['Finals average viewers', row[0], row[3], row[1], row[4], row[3], 'Games ' + row[2]])
+    return headers, rows
+
+
+# Benchmarks that are both in the published audience article and, where a level
+# is stored, in data/viewership-attendance.json. The 24% and 37% comparisons
+# are the published wording. They are not a 168% claim.
+TRACKER_BENCHMARK_ROWS = [
+    ['Regular-season telecasts over 1 million viewers', '51 in 2026, 19 in 2025', 'About 2.7 times as many',
+     'Sports Business Journal, Sept. 30, 2026'],
+    ['ESPN and ABC games without the Fever', '984,000', 'Up 24%',
+     'Front Office Sports, Sept. 25, 2026, for the average. The 24% comparison is the one on the audience article, credited there to the ESPN release of Sept. 25, 2026.'],
+    ['Playoff first round, 10 games', '1.3 million', 'Up 37%',
+     "Just Women's Sports, Oct. 8, 2026"],
+    ['Semifinal opening games, 2 games', '1.15 million', 'Up 10%',
+     'Front Office Sports, Oct. 7, 2026'],
+]
+
+TRACKER_CITE = (
+    'Full Court Buckets, "Four 2026 WNBA Finals games are set, and every viewer count is still pending," '
+    'October 14, 2026.\n'
+    f'{TRACKER_URL}\n'
+    '51 regular-season telecasts exceeded 1 million viewers in 2026, up from 19 in 2025 '
+    '(about 2.7 times as many). Games without the Fever averaged 984,000 viewers, '
+    'up 24%. The 10-game first round averaged 1.3 million, up 37%. October 2026 US search '
+    'estimates: Atlanta Dream 1.22 million, Angel Reese 1.0 million, Golden State Valkyries 550,000. '
+    'Games 1-4 follow the WNBA release of Oct. 13, 2026. Games 5-7 are not listed. '
+    'Viewer cells are pending tip-off.'
+)
+
+SBJ_51_URL = 'https://www.sportsbusinessjournal.com/Articles/2026/09/30/wnba-has-best-regular-season-viewership-since-2000-in-year-1-of-new-media-deal/'
+FOS_GROWTH_URL = 'https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/'
+ESPN_REGULAR_SEASON_RELEASE = 'https://espnpressroom.com/press-release/espn-delivered-its-most-watched-wnba-regular-season-ever/'
+JWS_FIRST_ROUND_URL = 'https://justwomenssports.com/reads/wnba-playoffs-viewership-semifinals-ratings-surge/'
+FOS_SEMIS_URL = 'https://frontofficesports.com/article/wnba-semifinals-open-with-1-15m-viewers-up-10/'
+
+
+def ratings_hub_crosslink() -> str:
+    """Pointer from the audience story. The table itself stays on the hub."""
+    return (
+        '<h2 class="section-title" id="finals-ratings-hub">Game-by-game Finals ratings</h2>\n'
+        '<p>This page is the season-long audience story. The game-by-game sheet, using the '
+        f'<a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release of Oct. 13, 2026</a>, is the '
+        f'<a href="{TRACKER_PATH}">2026 WNBA Finals ratings tracker</a>. '
+        'Multi-year attendance and viewership stay on the '
+        f'<a href="{DATA_PAGE_PATH}">viewership and attendance page</a>.</p>'
+    )
+
+
+def ratings_hub_blocks(payload: dict) -> str:
+    """Game-by-game hub. Schedule rows and history come from the shared tracker."""
+    cite = quick_cite([
+        HTML('<strong>51</strong> regular-season telecasts exceeded 1 million viewers in 2026, up from <strong>19</strong> in 2025 (about 2.7 times as many).'),
+        HTML('Games without the Fever averaged <strong>984,000</strong> viewers, up 24%. The 10-game first round averaged <strong>1.3 million</strong>, up 37%.'),
+        HTML('October 2026 US search estimates: Atlanta Dream <strong>1.22 million</strong>, Angel Reese <strong>1.0 million</strong>, Golden State Valkyries <strong>550,000</strong>.'),
+    ], TRACKER_CITE)
+    tracker = (
+        '<h2 class="section-title" id="finals-ratings-tracker">2026 WNBA Finals game-by-game ratings</h2>\n'
+        '<p>Games 1 through 4 are the only ones in the Oct. 13, 2026 WNBA release. '
+        'Games 5, 6 and 7 are if necessary. That release does not list a date, a tip time, or a network for them, so those cells say Not listed. '
+        'Average viewers, peak audience, and the overnight rating stay Pending tip-off until the network that aired the game releases a number.</p>\n'
+        + data_table(
+            FINALS_TRACKER_HEADERS,
+            FINALS_TRACKER_ROWS,
+            caption=(
+                'Games 1-4: date, tip time, network, and venue from the WNBA release of Oct. 13, 2026. '
+                'Viewer cells stay pending until a network releases them. Games 5-7 are if necessary. '
+                'That release does not list their dates, times, or networks.'
+            ),
+        )
+        + f'\n<p class="fcb-note">Schedule source: <a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release, Oct. 13, 2026</a>. '
+        'Full Court Buckets gathers and verifies its own data. A network audience is credited to the network that released it.</p>\n'
+        + embed_block(
+            'finals-ratings-tracker',
+            embed_snippet(TRACKER_URL, 'finals-ratings-tracker'),
+            'finals-ratings.csv',
+        )
+    )
+    benchmarks = (
+        '<h2 class="section-title" id="finals-benchmarks">Regular-season and playoff benchmarks</h2>\n'
+        '<p>These are the published comparisons around this Finals, not a forecast. '
+        f'The season-long story is <a href="/news/wnba-finals-2026-audience-growth-dream-valkyries/">WNBA Finals arrive after 51 games topped 1 million viewers</a>. '
+        f'The multi-year file is the <a href="{DATA_PAGE_PATH}">viewership and attendance page</a>.</p>\n'
+        + data_table(
+            ['Measure', '2026 figure', 'Comparison', 'Where it is published'],
+            TRACKER_BENCHMARK_ROWS,
+            caption=(
+                '51 and 19 count telecasts over 1 million viewers. That is about 2.7 times as many games, not 51 million people. '
+                '984,000 is the stored average for ESPN and ABC games without the Fever.'
+            ),
+        )
+        + '\n<p class="fcb-note">Sources: '
+        f'<a href="{esc(SBJ_51_URL)}">Sports Business Journal, Sept. 30, 2026</a> (51 and 19). '
+        f'<a href="{esc(FOS_GROWTH_URL)}">Front Office Sports, Sept. 25, 2026</a> (984,000). '
+        f'The up 24% comparison is the one on the audience article, credited there to the '
+        f'<a href="{esc(ESPN_REGULAR_SEASON_RELEASE)}">ESPN release, Sept. 25, 2026</a>. '
+        f'<a href="{esc(JWS_FIRST_ROUND_URL)}">Just Women\'s Sports, Oct. 8, 2026</a> (first round). '
+        f'<a href="{esc(FOS_SEMIS_URL)}">Front Office Sports, Oct. 7, 2026</a> (semifinal openers).</p>\n'
+        + embed_block(
+            'finals-benchmarks',
+            embed_snippet(TRACKER_URL, 'finals-benchmarks'),
+            'finals-ratings.csv',
+        )
+        + '\n<h3 id="october-search-interest">October search interest</h3>\n'
+        '<p>Television averages count viewers. Search volume counts queries. '
+        'Full Court Buckets keyword research estimates US monthly Google searches for October 2026 at '
+        '1.22 million for the Atlanta Dream, 1.0 million for Angel Reese, 550,000 for the Golden State Valkyries, '
+        'and 60,500 each for Gabby Williams and WNBA Finals. Searches are not unique fans.</p>\n'
+        + data_table(
+            ['Query', 'Estimated US monthly searches, October 2026'],
+            SEARCH_ROWS,
+            caption='Full Court Buckets keyword research. Estimates, not a television audience.',
+        )
+        + '\n'
+        + embed_block(
+            'october-search-interest',
+            embed_snippet(TRACKER_URL, 'october-search-interest'),
+            'finals-ratings.csv',
+        )
+    )
+    history = (
+        '<h2 class="section-title" id="finals-average-viewers">Finals average viewers, where a source is on file</h2>\n'
+        + data_table(
+            ['Season', 'Matchup', 'Games', 'Average viewers', 'Network'],
+            finals_history_rows(payload),
+            caption=(
+                '2022 through 2025 averages are the sourced rows in the Full Court Buckets viewership file. '
+                '2020 and 2021 are not in that file. 2026 is pending tip-off. '
+                'This is not a complete history. Each release is linked from the viewership and attendance page.'
+            ),
+        )
+        + '\n<p class="fcb-note">The network column is who aired the series. '
+        'It is not a credit to a stats feed. Full Court Buckets gathers and verifies its own data.</p>\n'
+        + embed_block(
+            'finals-average-viewers',
+            embed_snippet(TRACKER_URL, 'finals-average-viewers'),
+            'finals-ratings.csv',
+        )
+        + '\n<h2 class="section-title" id="figures-left-off">Figures left off this page</h2>\n'
+        '<ul>\n'
+        '<li>1.37 million across 29 regular-season games, up 17%. The audience article prints it. The viewership file instead lists a 1.4 million ESPN and ABC average and does not give a game count, so neither figure is used as a benchmark here.</li>\n'
+        '<li>The 1.2 million ESPN-only split and the 1.6 million ABC-only split. The file says they are parts of that combined average, and it does not state a game count.</li>\n'
+        '<li>USA Network at 543,000 and Prime Video at 437,000. The file marks the first as partial and does not state a game count for the second.</li>\n'
+        '<li>The 1.2 million to 1.6 million Finals forecast, plus revenue and season-ticket figures. Those stay on the audience article. The forecast is not a released rating.</li>\n'
+        '</ul>'
+    )
+    return cite + '\n' + tracker + '\n' + benchmarks + '\n' + history
+
+
+def ratings_hub_csv_rows(payload: dict) -> tuple[list, list]:
+    headers = ['section', 'label', 'value', 'comparison', 'network', 'status', 'notes']
+    rows = []
+    for label, value, change, source in TRACKER_BENCHMARK_ROWS:
+        rows.append(['2026 benchmarks', label, value, change, '', 'Published', source])
+    for name, volume in SEARCH_ROWS:
+        rows.append(['October 2026 US search estimates', name, volume, '', '', 'Estimate', 'Full Court Buckets keyword research'])
+    for row in FINALS_TRACKER_ROWS:
+        rows.append(['2026 Finals tracker', 'Game ' + row[0], row[6], row[7], row[3], row[8], row[1] + '; ' + row[4]])
     for row in finals_history_rows(payload):
         rows.append(['Finals average viewers', row[0], row[3], row[1], row[4], row[3], 'Games ' + row[2]])
     return headers, rows

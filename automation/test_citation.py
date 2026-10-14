@@ -88,8 +88,14 @@ class CitationPageTests(unittest.TestCase):
                 'verified-viewership-table',
                 'finals-tv-schedule',
                 'search-demand-estimates',
+                'finals-ratings-hub',
+            ],
+            'news/2026-wnba-finals-ratings-tracker/index.html': [
                 'finals-ratings-tracker',
+                'finals-benchmarks',
+                'october-search-interest',
                 'finals-average-viewers',
+                'figures-left-off',
             ],
             'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html': [
                 'card-sales-comparison-table',
@@ -146,6 +152,7 @@ class CitationPageTests(unittest.TestCase):
     def test_dataset_pages_and_faq_match(self):
         for relative in (
             'news/wnba-finals-2026-audience-growth-dream-valkyries/index.html',
+            'news/2026-wnba-finals-ratings-tracker/index.html',
             'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html',
             'standings/index.html',
         ):
@@ -171,7 +178,7 @@ class CitationPageTests(unittest.TestCase):
         self.assertNotIn('\u2014', standings)
 
     def test_finals_tracker_uses_the_oct_13_release(self):
-        html = page('news/wnba-finals-2026-audience-growth-dream-valkyries/index.html')
+        html = page('news/2026-wnba-finals-ratings-tracker/index.html')
         tracker = html.split('id="finals-ratings-tracker"', 1)[1].split('id="finals-average-viewers"', 1)[0]
         self.assertIn('Wed, Oct. 21, 2026', tracker)
         self.assertIn('State Farm Arena', tracker)
@@ -180,17 +187,27 @@ class CitationPageTests(unittest.TestCase):
         self.assertEqual(tracker.count('>Not listed<'), 6)
         self.assertNotIn('Oct. 26', tracker)
         self.assertNotIn('168%', html)
+        self.assertNotIn('ESPN networks', html)
         self.assertIn('about 2.7 times', html)
         self.assertIn('984,000', html)
-        self.assertNotIn('embed-finals-tv-schedule', html)
-        schedule = html.split('id="finals-tv-schedule"', 1)[1].split('</table>', 1)[0]
-        self.assertIn('Thu. Oct. 22', schedule)
-        history = html.split('id="finals-average-viewers"', 1)[1].split('id="finals-tv-schedule"', 1)[0]
+        self.assertIn('https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#finals-ratings-tracker', html)
+        self.assertIn('href="/news/wnba-finals-2026-audience-growth-dream-valkyries/"', html)
+        self.assertIn('href="/wnba/viewership-attendance/"', html)
+        self.assertIn('"@type": "Dataset"', html)
+        history = html.split('id="finals-average-viewers"', 1)[1].split('id="figures-left-off"', 1)[0]
         self.assertIn('534,000', history)
         self.assertIn('728,000', history)
         self.assertIn('1,600,000', history)
         self.assertIn('1,500,000', history)
         self.assertIn('Not in the Full Court Buckets viewership file', history)
+        audience = page('news/wnba-finals-2026-audience-growth-dream-valkyries/index.html')
+        self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/"', audience)
+        self.assertNotIn('id="finals-ratings-tracker"', audience)
+        self.assertNotIn('embed-finals-tv-schedule', audience)
+        schedule = audience.split('id="finals-tv-schedule"', 1)[1].split('</table>', 1)[0]
+        self.assertIn('Thu. Oct. 22', schedule)
+        data = page('wnba/viewership-attendance/index.html')
+        self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/"', data)
 
     def test_cards_table_keeps_selected_sales(self):
         html = page('news/top-10-womens-college-basketball-cards-to-collect-2026/index.html')

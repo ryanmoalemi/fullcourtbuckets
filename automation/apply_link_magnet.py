@@ -71,8 +71,8 @@ def apply_viewership() -> None:
     citation.write_csv(ROOT / 'news/wnba-finals-2026-audience-growth-dream-valkyries/finals-audience.csv', headers, rows)
     html = ensure_assets(load(relative))
     html = ensure_dataset(html, citation.dataset_script(
-        '2026 WNBA Finals audience, search demand, and game-by-game schedule',
-        'Published Full Court Buckets figures for 2026 WNBA audience averages, October search estimates, and the Finals schedule. Viewer cells for games that have not been played stay pending. Full Court Buckets gathers and verifies its own data.',
+        '2026 WNBA Finals audience and search demand',
+        'Published Full Court Buckets figures for 2026 WNBA audience averages and October search estimates. The game-by-game Finals sheet is the ratings tracker. Full Court Buckets gathers and verifies its own data.',
         citation.VIEWERSHIP_URL,
         citation.VIEWERSHIP_URL + 'finals-audience.csv',
     ))
@@ -84,12 +84,13 @@ def apply_viewership() -> None:
             'million different people.</p>\n' + blocks['cite'] + '\n<p><a class="inline-link" href="/wnba/angel-reese/"',
             'viewership cite',
         )
-    if 'id="finals-ratings-tracker"' not in html:
+    # The game-by-game table lives on the ratings tracker. Do not paste it back here.
+    if citation.TRACKER_PATH not in html:
         html = once(
             html,
-            '<h2 class="section-title">2026 WNBA Finals schedule</h2>',
-            blocks['tracker'] + '\n<h2 class="section-title">2026 WNBA Finals schedule</h2>',
-            'viewership tracker',
+            '<h2 class="section-title" id="finals-tv-schedule">',
+            citation.ratings_hub_crosslink() + '\n<h2 class="section-title" id="finals-tv-schedule">',
+            'ratings hub link',
         )
     if 'id="verified-viewership-table"' not in html:
         html = once(
