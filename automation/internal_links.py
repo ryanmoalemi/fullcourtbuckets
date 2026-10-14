@@ -1831,7 +1831,12 @@ AUTHOR_HOW_LABEL = 'How we make Full Court Buckets content'
 
 
 def _author_bio_html() -> str:
-    """Intro, then the how-we-make link. The TikTok line closes the page."""
+    """Intro, the media line, then the how-we-make link. The TikTok line closes the page.
+
+    The media line lives here so a nightly rebuild cannot drop it. A one-off
+    patch of the published HTML does not survive render_author_page.
+    """
+    import citation
     parts = [
         '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
     ]
@@ -1841,7 +1846,6 @@ def _author_bio_html() -> str:
             '<a href="/wnba/angel-reese/">Angel Reese</a>',
         )
         parts.append(f'<p>{text}</p>')
-    import citation
     parts.append(citation.media_line_html())
     parts.append(f'<p><a href="{HOW_PAGE}">{AUTHOR_HOW_LABEL}</a></p>')
     return '\n'.join(parts)
@@ -1921,6 +1925,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 .collection-teaser p{{margin:6px 0 0;color:#a5a19b}}
 @media(max-width:700px){{h1{{font-size:40px}}.author-photo{{width:120px;height:120px}}.news-item{{grid-template-columns:1fr}}.news-item img{{width:100%;height:180px}}.collection-teaser{{grid-template-columns:88px 1fr}}.collection-teaser img{{width:88px;height:118px}}}}
 </style>
+<link rel="stylesheet" href="/assets/citation.css">
 </head>
 <body>
 <header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
@@ -1938,6 +1943,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 {_author_closing_html()}
 </div>
 </main>
+<script src="/assets/citation.js" defer></script>
 </body>
 </html>
 '''
