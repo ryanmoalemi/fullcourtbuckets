@@ -82,9 +82,10 @@ class ViewershipPageTests(unittest.TestCase):
 
     def test_question_page_uses_only_sourced_draft_figures(self):
         page = self.page
-        self.assertIn('<h1>WNBA viewership and attendance stats 2026: How many people watch the WNBA?</h1>', page)
-        self.assertIn('Last updated: Oct. 13, 2026.', page)
-        self.assertIn('href="/authors/ryan-moalemi/">Ryan Moalemi</a>', page)
+        self.assertIn('<h1>WNBA Viewership &amp; Attendance Statistics 2026</h1>', page)
+        self.assertIn('Updated Oct. 13, 2026', page)
+        self.assertIn(viewership.links.BYLINE_HTML, page)
+        self.assertIn('id="viewership"', page)
         self.assertIn('How many people watched the WNBA Finals?', page)
         self.assertIn('The 2024 Finals averaged 1.6 million viewers, the highest of the last 25 years.', page)
         self.assertIn('5.04 million', page)
@@ -93,34 +94,52 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('11,474', page)
         self.assertIn('20,711', page)
         self.assertIn('340,715', page)
-        self.assertIn('397,408', page)
-        self.assertIn('18,064', page)
-        self.assertIn('Wed. Oct. 21, 2026, 8:00 p.m. ET / 5:00 p.m. PT', page)
-        self.assertIn('10:00 a.m. PT', page)
-        self.assertIn('State Farm Arena', page)
-        self.assertIn('average unresolved', page)
-        self.assertIn('15,560', page)
-        self.assertIn('if necessary', page)
-        self.assertNotIn('15,743', page)
-        self.assertNotIn('Thu. Oct. 22, 2026', page)
-        self.assertIn('https://valkyries.wnba.com/news/valkyries-set-all-time-wnba-attendance-record-20250906', page)
-        self.assertIn('https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena', page)
         self.assertIn('728,000', page)
         self.assertIn('534,000', page)
         self.assertIn('6,615', page)
-        self.assertIn('Pending', page)
+        self.assertIn('Awaiting release', page)
         self.assertIn('Sat. Oct. 17, 2026', page)
+        self.assertIn('Wed. Oct. 21, 2026', page)
+        self.assertIn('5:00 p.m. PT', page)
+        self.assertIn('10:00 a.m. PT', page)
+        self.assertIn('State Farm Arena', page)
+        self.assertIn('CNBC', page)
+        self.assertIn('if necessary', page)
+        self.assertNotIn('Thu. Oct. 22, 2026', page)
+        self.assertIn('397,408', page)
+        self.assertIn('Unresolved', page)
+        self.assertIn('scope="col"', page)
+        self.assertIn('Download CSV', page)
+        self.assertIn('Copy citation', page)
+        self.assertIn('Embed link', page)
+        self.assertIn('summary_large_image', page)
+        self.assertIn('share-11474-landscape.png', page)
+        self.assertIn('"@type": "Article"', page)
+        self.assertEqual(page.count('class="stat-card"'), 4)
+        self.assertNotIn('built-in boost', page)
+        self.assertNotIn('3.00 million', page)
+        self.assertNotIn('og.jpg', page)
         self.assertIn('ESPN press release', page)
         self.assertIn('https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/', page)
         self.assertNotIn('per ESPN', page)
         self.assertNotIn('ESPN data', page)
         self.assertNotRegex(page, r'Source:\s*ESPN\b')
         self.assertNotIn('2.70 million', page)
-        self.assertNotIn('2.58 million', page)
-        self.assertNotIn('1.9 million', page)
-        self.assertNotIn('1.4 million', page)
-        self.assertNotIn('3.15 million', page)
-        self.assertNotIn('11,148', page)
+        self.assertIn('2.58 million', page)
+        self.assertIn('1.9 million', page)
+        self.assertIn('1.4 million', page)
+        self.assertIn('3.15 million', page)
+        self.assertIn('11,148', page)
+        self.assertIn('11,014', page)
+        self.assertIn('484,615', page)
+        self.assertIn('151,805', page)
+        self.assertIn('636,420', page)
+        self.assertIn('5,646', page)
+        self.assertIn('286, calculated', page)
+        self.assertIn('240, calculated', page)
+        self.assertIn('3.82 million', page)
+        self.assertIn('15,116', page)
+        self.assertNotIn('nearly 7,000', page)
         self.assertNotIn('20%', page)
         self.assertNotIn('5%', page)
         self.assertNotIn('balldontlie', page.lower())
@@ -151,6 +170,48 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('Tue. Oct. 27, 2026', html_text)
         self.assertIn('1.8 million', html_text)
         self.assertIn('https://www.nbcsports.com/pressbox/press-releases/example-finals-audience', html_text)
+
+    def test_growth_chart_waits_for_both_sourced_years(self):
+        page = self.page
+        self.assertIn('Provisional', page)
+        self.assertIn('attendance-growth.png', page)
+        self.assertIn('484,615', page)
+        payload = copy.deepcopy(_payload())
+        prior = next(row for row in payload['seasons'] if row.get('season') == 2025 and not row.get('home_team'))
+        prior.pop('avg_attendance_status', None)
+        prior.pop('avg_attendance_printed', None)
+        prior.update({
+            'games_played': 220,
+            'avg_attendance': 10000,
+            'attendance_source': 'https://www.wnba.com/news/example-2025-attendance',
+            'attendance_source_date': '2025-10-01',
+            'avg_attendance_source': 'https://www.wnba.com/news/example-2025-attendance',
+            'avg_attendance_source_date': '2025-10-01',
+        })
+        viewership.validate(payload)
+        html_text = viewership.render_page(ROOT, payload)
+        self.assertIn('Provisional', html_text)
+        self.assertIn('1,100,000', html_text)
+        self.assertIn('486,420', html_text)
+        self.assertIn('attendance-growth.png', html_text)
+
+    def test_team_ranking_stays_hidden_without_a_complete_season(self):
+        self.assertIn('ranking chart stays hidden', self.page)
+        self.assertNotIn('team-ranking.png', self.page)
+        payload = copy.deepcopy(_payload())
+        payload['home_rankings'] = [{'season': 2026, 'complete': True}]
+        payload['seasons'].append({
+            'season': 2026,
+            'home_team': 'Atlanta Dream',
+            'home_attendance': 200000,
+            'home_games': 22,
+            'home_attendance_source': 'https://www.wnba.com/news/example-dream-home',
+            'home_attendance_source_date': '2026-09-20',
+        })
+        viewership.validate(payload)
+        html_text = viewership.render_page(ROOT, payload)
+        self.assertIn('team-ranking.png', html_text)
+        self.assertIn('9,091', html_text)
 
 
 if __name__ == '__main__':
