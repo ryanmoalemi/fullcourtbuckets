@@ -104,7 +104,10 @@
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "3:30 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-19",
@@ -116,13 +119,16 @@
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-21",
       "season": 2026,
       "game": "Finals Game 3",
       "home": "",
@@ -131,10 +137,13 @@
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-24",
@@ -149,7 +158,67 @@
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "1 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-26",
+      "season": 2026,
+      "game": "Finals Game 5",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "Chase Center",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-29",
+      "season": 2026,
+      "game": "Finals Game 6",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-31",
+      "season": 2026,
+      "game": "Finals Game 7",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "Chase Center",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
     }
   ],
   "seasons": [
@@ -161,13 +230,15 @@
       "attendance_source_date": "2026-10-06",
       "avg_attendance": 11474,
       "avg_attendance_source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
-      "avg_attendance_source_date": "",
+      "avg_attendance_source_date": "2026-09-25",
       "finals_matchup": "Valkyries vs. Dream",
       "relocated_games": 25,
       "relocated_attendance": 388997,
-      "relocated_avg": 15743,
+      "relocated_avg": null,
       "relocated_source": "https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/",
-      "relocated_source_date": "2026-10-06"
+      "relocated_source_date": "2026-10-06",
+      "relocated_avg_status": "unresolved",
+      "relocated_note": "Sports Business Journal printed an average of 15,743. 388,997 divided by 25 is 15,559.88, which rounds to 15,560. The average is omitted until the source reconciles."
     },
     {
       "season": 2025,
@@ -218,7 +289,7 @@
       "season": 2024,
       "home_team": "Indiana Fever",
       "home_attendance": 340715,
-      "home_note": "record",
+      "home_note": "2024 record, since passed",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
     },
@@ -230,6 +301,82 @@
       "home_note": "previous record",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
+    },
+    {
+      "season": 2025,
+      "home_team": "Golden State Valkyries",
+      "home_attendance": 397408,
+      "home_games": 22,
+      "home_note": "single-season record; sellouts at 18,064",
+      "home_attendance_source": "https://valkyries.wnba.com/news/valkyries-set-all-time-wnba-attendance-record-20250906",
+      "home_attendance_source_date": "2025-09-06"
+    },
+    {
+      "season": 2026,
+      "home_team": "Golden State Valkyries",
+      "home_attendance": 397408,
+      "home_games": 22,
+      "home_note": "matched the 2025 record; sellouts at 18,064",
+      "home_attendance_source": "https://www.oursportscentral.com/services/releases/golden-state-valkyries-sell-out-all-home-games-for-second-consecutive-season/n-6414909",
+      "home_attendance_source_date": "2026-09-19"
+    }
+  ],
+  "broadcasts": [
+    {
+      "season": 2026,
+      "network": "NBC",
+      "avg_viewers": 1750000,
+      "games": 7,
+      "scope": "2026 regular season",
+      "measurement": "",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "CBS",
+      "avg_viewers": 1280000,
+      "games": 20,
+      "scope": "2026 regular season",
+      "measurement": "",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "Ion",
+      "avg_viewers": 617000,
+      "games": 51,
+      "scope": "2026 regular season, 51 games across 34 windows",
+      "measurement": "",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2025,
+      "network": "ESPN networks",
+      "avg_viewers": 1300000,
+      "games": 25,
+      "scope": "2025 regular season on ESPN networks",
+      "measurement": "Nielsen Big Data + Panel",
+      "source": "https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/",
+      "source_date": "2025-10-16"
+    },
+    {
+      "season": 2024,
+      "network": "ESPN platforms",
+      "avg_viewers": 1200000,
+      "games": 24,
+      "scope": "2024 regular season on ESPN platforms",
+      "measurement": "",
+      "source": "https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/",
+      "source_date": "2024-10-25"
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-10-13",
+      "note": "Finals Game 3 is Wednesday, Oct. 21, at 8 p.m. ET, not Oct. 22. Games 2 and 3 also air on CNBC. Games 5, 6 and 7 are listed if necessary. The Golden State Valkyries' 397,408 home fans in 2025 is the single-season record, matched in 2026. Indiana's 340,715 in 2024 stays as the record from the league's 2024 release. The 2026 relocated-game average is omitted because 388,997 divided by 25 does not equal the 15,743 figure printed in the source."
     }
   ]
 }
