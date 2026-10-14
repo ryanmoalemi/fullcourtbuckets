@@ -520,9 +520,8 @@ def home_answer(payload: dict) -> str:
     }
     if 2025 in valkyries and 2026 in valkyries:
         return (
-            'The Golden State Valkyries hold the single-season home attendance record with 397,408 fans. '
-            'They set it in 2025 and matched it in 2026. '
-            "The Indiana Fever's 340,715 in 2024 was the record in the league's 2024 release."
+            'The Golden State Valkyries hold the single-season home attendance record with 397,408 fans, '
+            'set in 2025 and matched in 2026. Indiana drew 340,715 in 2024.'
         )
     top = rows[0]
     if top.get('home_team') == 'Indiana Fever' and top.get('home_attendance') == 340715 and top.get('season') == 2024:
@@ -893,18 +892,6 @@ def growth_section(payload: dict) -> str:
             'The 2025 league game count and average attendance are not in this file, so the chart is not drawn.</p>'
         )
     if split.get('method') == 'fraction':
-        printed = split.get('printed_avg')
-        conflict = ''
-        if core.is_number(printed):
-            implied_total = printed * split['games_prior']
-            conflict = (
-                f" Sports Business Journal prints a {printed:,} average for {split['prior_season']}. "
-                f"{printed:,} times {split['games_prior']} games is {implied_total:,}, which is not "
-                f"{core.format_number(split['prior_total'])}. "
-                f"{core.format_number(split['prior_total'])} divided by {split['games_prior']} is "
-                f"{split['prior_total'] / split['games_prior']:,.2f}, shown as {split['avg_prior']:,}. "
-                'The printed average is not used in the split.'
-            )
         formula = (
             f"Extra games: {split['games_current'] - split['games_prior']} x "
             f"({split['prior_total']:,} / {split['games_prior']}) = {split['extra_games']:,} "
@@ -916,7 +903,6 @@ def growth_section(payload: dict) -> str:
             f"or {split['extra_games'] + split['average_crowd']:,}. "
             f"{split['games_current']} times {split['avg_current']:,} is {split['current_total']:,}."
             + _rounded_total_note(payload, split)
-            + conflict
         )
     else:
         formula = (
@@ -1046,8 +1032,7 @@ def _relocated_block(payload: dict) -> str:
     note_html = ''.join(f'<p class="note">{core.esc(note)}</p>' for note in notes)
     return (
         '<h3>Relocated games</h3>'
-        '<p class="answer">Relocated games are listed apart from the single-game crowd record. '
-        'The average stays off this page while the printed average and the total do not reconcile.</p>'
+        '<p class="answer">Relocated games are listed apart from the single-game crowd record.</p>'
         + table(
             ['Season', 'Games', 'Attendance', 'Average', 'Source'],
             body,
@@ -1135,10 +1120,6 @@ def teams_section(payload: dict) -> str:
             '<p class="answer">A team ranking chart needs every club\'s counted home games and home total for one season. '
             'This file does not have that complete set, so the ranking chart stays hidden.</p>'
         )
-    note = (
-        'Front Office Sports printed an average of 18,604 for the 2025 Valkyries. '
-        '397,408 divided by 22 home games is 18,064, which matches the team release, so 18,604 is not used.'
-    )
     return (
         '<section class="qa" id="teams">'
         '<h2>Which WNBA team has the biggest home crowds?</h2>'
@@ -1150,12 +1131,6 @@ def teams_section(payload: dict) -> str:
             'Home attendance by team',
             caption='Home attendance only. Averages are the total divided by counted home games.',
             numeric={2},
-        )
-        + (
-            f'<p class="note">{core.esc(note)} '
-            '<a href="https://frontofficesports.com/valkyries-set-wnba-attendance-record-in-inaugural-season/" '
-            'target="_blank" rel="noopener">Front Office Sports</a> is the printed-average source. '
-            'The 2025 Fever and Liberty totals in that week\'s team table are left off because the Fever figure was still short of a full home schedule.</p>'
         )
         + _team_side_notes(payload, sources)
         + core.sources_line(sources)
@@ -1351,12 +1326,16 @@ def methodology() -> str:
         'One adjustment is not applied to every figure.</li>'
         '<li><strong>Attendance.</strong> Figures are what the league, a team release, or Sports Business Journal\'s box-score count reports. '
         'They are not automatically paid attendance or unique fans.</li>'
-        '<li><strong>Conflicts.</strong> When a source\'s figures do not reconcile, the average is left off and the conflict is labeled. '
-        'Oct. 13, 2026 corrections were checked against the linked reports.</li>'
+        '<li><strong>Conflicts.</strong> When a printed average does not match the total divided by the game count, '
+        'the cell is labeled unresolved and the printed figure stays next to its source.</li>'
         '<li><strong>No guessing.</strong> A blank cell is not zero. '
         'Spot an error? Email <a href="mailto:hello@fullcourtbuckets.com">Ryan</a>.</li>'
         '</ul></section>'
     )
+
+
+def embed_snippet() -> str:
+    return f'<a href="{core.BASE}{core.ROUTE}">WNBA viewership and attendance statistics (Full Court Buckets)</a>'
 
 
 def actions_html() -> str:
@@ -1364,7 +1343,7 @@ def actions_html() -> str:
         '<div class="data-actions">'
         f'<a class="btn primary" href="{core.CSV_NAME}" download>Download CSV</a>'
         '<button class="btn copy-citation" type="button">Copy citation</button>'
-        '<a class="btn" href="#embed">Embed link</a>'
+        f'<button class="btn copy-embed" type="button" data-embed="{core.esc(embed_snippet())}">Embed link</button>'
         '</div>'
     )
 
@@ -1373,16 +1352,6 @@ def citation_text(updated: str) -> str:
     return (
         f'Ryan Moalemi. {core.PAGE_TITLE}. Full Court Buckets. '
         f'Updated {updated}. {core.BASE}{core.ROUTE}'
-    )
-
-
-def embed_html() -> str:
-    snippet = f'<a href="{core.BASE}{core.ROUTE}">WNBA viewership and attendance statistics (Full Court Buckets)</a>'
-    return (
-        '<details class="embed" id="embed">'
-        '<summary>Embed link</summary>'
-        f'<textarea readonly rows="3">{core.esc(snippet)}</textarea>'
-        '</details>'
     )
 
 
@@ -1437,12 +1406,6 @@ def register_rows(payload: dict) -> list[dict]:
             found, row.get('source') or '', row.get('source_date') or '',
             f"{row.get('season')} {row.get('network')} regular-season audience",
         )
-    _add_cover(
-        found,
-        'https://frontofficesports.com/valkyries-set-wnba-attendance-record-in-inaugural-season/',
-        '2025-09-07',
-        '2025 Valkyries average printed, then rejected',
-    )
     for row in payload.get('sources') or []:
         item = found.setdefault(row['url'], {'dates': [], 'covers': []})
         item['publisher'] = row.get('publisher') or ''
@@ -1487,19 +1450,8 @@ def sources_section(payload: dict, updated: str) -> str:
         + '<h2>Cite this page</h2>'
         + f'<blockquote class="cite" id="citation-plain">{core.esc(cite)}</blockquote>'
         + actions_html()
-        + embed_html()
         + '</section>'
     )
-
-
-def corrections_html(payload: dict) -> str:
-    notes = []
-    for row in payload.get('corrections') or []:
-        note = str(row.get('note') or '').strip()
-        when = row.get('date') or ''
-        if note and when:
-            notes.append(f'<p class="correction">Correction, {core.esc(core.format_updated(when))}: {core.esc(note)}</p>')
-    return ''.join(notes)
 
 
 def page_script() -> str:
@@ -1532,18 +1484,53 @@ def page_script() -> str:
     }, {rootMargin: '-140px 0px -420px 0px'});
     Object.keys(current).forEach(function (id) { observer.observe(document.getElementById(id)); });
   }
+  function markCopied(button) {
+    var label = button.getAttribute('data-label');
+    if (!label) {
+      label = button.textContent;
+      button.setAttribute('data-label', label);
+    }
+    button.textContent = 'Copied!';
+    window.clearTimeout(button._copyTimer);
+    button._copyTimer = window.setTimeout(function () {
+      button.textContent = label;
+    }, 1600);
+  }
+  function copyWithFallback(button, text) {
+    function selectFallback() {
+      var area = document.createElement('textarea');
+      area.value = text;
+      area.setAttribute('readonly', '');
+      area.setAttribute('aria-hidden', 'true');
+      area.style.position = 'fixed';
+      area.style.left = '-9999px';
+      area.style.top = '0';
+      document.body.appendChild(area);
+      area.focus();
+      area.select();
+      try { document.execCommand('copy'); } catch (err) {}
+      document.body.removeChild(area);
+      markCopied(button);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        markCopied(button);
+      }, selectFallback);
+    } else {
+      selectFallback();
+    }
+  }
   document.querySelectorAll('.copy-citation').forEach(function (button) {
     button.addEventListener('click', function () {
       var node = document.getElementById('citation-plain');
       var text = node ? node.textContent : '';
-      if (navigator.clipboard && text) navigator.clipboard.writeText(text);
-      button.textContent = 'Copied';
+      if (text) copyWithFallback(button, text);
     });
   });
-  document.querySelectorAll('a[href="#embed"]').forEach(function (link) {
-    link.addEventListener('click', function () {
-      var box = document.getElementById('embed');
-      if (box) box.open = true;
+  document.querySelectorAll('.copy-embed').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var text = button.getAttribute('data-embed') || '';
+      if (text) copyWithFallback(button, text);
     });
   });
 })();
@@ -1681,7 +1668,6 @@ def render_page(root: Path, payload: dict) -> str:
 <p class="eyebrow">WNBA / Data &amp; research</p>
 <h1>{core.esc(core.PAGE_TITLE)}</h1>
 {byline}
-{corrections_html(payload)}
 <p class="subhead">{lead}</p>
 </div>
 <section class="key-stats" aria-label="Key WNBA stats">
@@ -1785,7 +1771,7 @@ def csv_rows(payload: dict) -> list[dict]:
             rows.append(_csv_row(
                 f'relocated-attendance-{season}', season, row['relocated_attendance'], 'fans',
                 'relocated games', row.get('relocated_source') or '', row.get('relocated_source_date') or '',
-                checked, 'Average omitted because the printed average does not reconcile.',
+                checked, 'Unresolved: the printed average does not match the total divided by the game count.',
             ))
     for row in payload.get('games') or []:
         if core.is_number(row.get('viewers')):

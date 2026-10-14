@@ -3,7 +3,7 @@ attendance-total-2026,2026,3790000,fans,regular season,https://www.sportsbusines
 attendance-games-2026,2026,330,games,regular season,https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/,2026-10-06,2026-10-13,
 attendance-average-2026,2026,11474,fans per game,regular season,https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/,2026-09-25,2026-10-13,
 relocated-games-2026,2026,25,games,relocated games,https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/,2026-10-06,2026-10-13,
-relocated-attendance-2026,2026,388997,fans,relocated games,https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/,2026-10-06,2026-10-13,Average omitted because the printed average does not reconcile.
+relocated-attendance-2026,2026,388997,fans,relocated games,https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/,2026-10-06,2026-10-13,Unresolved: the printed average does not match the total divided by the game count.
 attendance-total-2025,2025,3150000,fans,regular season,https://www.sportsbusinessjournal.com/Articles/2025/09/12/relocating-high-demand-games-pushes-wnba-to-new-attendance-highs/,2025-09-12,2026-10-13,Displayed as 3.15 million.
 attendance-games-2025,2025,286,games,regular season,https://www.wnba.com/news/2025-game-schedule,2024-12-02,2026-10-13,Calculated.
 attendance-average-2025,2025,11014,fans per game,regular season,https://www.sportsbusinessjournal.com/Articles/2025/09/12/relocating-high-demand-games-pushes-wnba-to-new-attendance-highs/,2025-09-12,2026-10-13,Calculated from the rounded total divided by the game count.

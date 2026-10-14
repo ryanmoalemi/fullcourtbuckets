@@ -205,7 +205,7 @@
       "relocated_source": "https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/",
       "relocated_source_date": "2026-10-06",
       "relocated_avg_status": "unresolved",
-      "relocated_note": "Sports Business Journal printed an average of 15,743. 388,997 divided by 25 is 15,559.88, which rounds to 15,560. The average is omitted until the source reconciles."
+      "relocated_note": "Unresolved: Sports Business Journal prints 15,743, and 388,997 divided by 25 is 15,560."
     },
     {
       "season": 2025,
@@ -229,7 +229,7 @@
       "avg_attendance_source": "https://www.sportsbusinessjournal.com/Articles/2025/09/12/relocating-high-demand-games-pushes-wnba-to-new-attendance-highs/",
       "avg_attendance_source_date": "2025-09-12",
       "avg_attendance_printed": 11148,
-      "avg_attendance_note": "SBJ prints an average of 11,148. 3,150,000 divided by 286 games is 11,013.99, shown as 11,014. 11,148 times 286 is 3,188,328, which is not 3.15 million. The chart and the split use 11,014. The printed average is not used.",
+      "avg_attendance_note": "Unresolved: Sports Business Journal prints 11,148, and 3.15 million divided by 286 is 11,014.",
       "finals_game_reports": [
         {
           "game": "Game 1",
@@ -457,12 +457,6 @@
       "scope": "Nielsen. Game count not stated. First Nielsen WNBA season for Prime Video.",
       "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
       "source_date": "2026-09-25"
-    }
-  ],
-  "corrections": [
-    {
-      "date": "2026-10-13",
-      "note": "Finals Game 3 is Wednesday, Oct. 21, at 8:00 p.m. ET / 5:00 p.m. PT at State Farm Arena, not Oct. 22. Game 4 tips at 1:00 p.m. ET / 10:00 a.m. PT on NBC and Peacock, also at State Farm Arena. Games 5, 6 and 7 are if necessary. The Oct. 13, 2026 release does not list their dates. The Golden State Valkyries' 397,408 home fans in 2025 is the single-season record. Indiana's 340,715 in 2024 stays as that season's record in the league release. The 2026 relocated-game average is omitted because 388,997 divided by 25 is 15,560."
     }
   ]
 }
