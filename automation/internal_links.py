@@ -937,7 +937,7 @@ BYLINE_CSS = (
     '@media(max-width:900px){.article .byline{font-size:14px;margin-bottom:16px}}'
 )
 BYLINE_RE = re.compile(r'<a class="byline" href="/authors/ryan-moalemi/">.*?</a>', re.S)
-# Headline, then the lead photo and credit, then byline and date, then the hook.
+# Headline, then the byline and date, then the lead photo and credit, then the hook.
 # The photo is the article column, never the viewport, at a fixed 16:9 crop.
 # The previous block broke the photo out to 100vw. Replace it wherever it is still inline.
 OLD_LEAD_CSS = (
@@ -1712,27 +1712,50 @@ def _pull_article_date(article: str) -> tuple[str, str]:
 
 
 QUICK_CITE_RE = re.compile(r'<aside class="fcb-quick-cite".*?</aside>', re.S)
+LEAD_PHOTO_RE = re.compile(r'<figure\b[^>]*\blead-photo\b[^>]*>.*?</figure>', re.S)
+# An archive note stays with the byline, above the photo.
+_ARCHIVE_NOTE_RE = re.compile(
+    r'\s*<p>This preview was published before the games?\..*?</p>',
+    re.S,
+)
+
+
+def _splice_block(html: str, at: int, block: str) -> str:
+    """Insert a block on its own line without stacking blank lines on repeat."""
+    head = html[:at].rstrip('\n')
+    tail = html[at:].lstrip('\n')
+    parts = [part for part in (head, block, tail) if part]
+    return '\n'.join(parts)
 
 
 def place_quick_cite(html: str) -> str:
-    """Fast-facts box sits directly under the H1, above the hero and the byline."""
+    """Fast-facts box follows the lead photo. The byline stays under the H1."""
     match = QUICK_CITE_RE.search(html)
     if not match:
         return html
-    h1 = html.find('</h1>')
-    if h1 < 0 or match.start() < h1:
-        return html
-    between = html[h1 + len('</h1>'):match.start()]
-    if not re.search(r'<figure\b|<div class="byline', between):
-        return html
     block = match.group(0).strip()
-    html = html[:match.start()] + html[match.end():]
+    start, end = match.span()
+    head = html[:start].rstrip('\n')
+    tail = html[end:].lstrip('\n')
+    html = f'{head}\n{tail}' if head and tail else head + tail
+    figure = LEAD_PHOTO_RE.search(html)
+    if figure:
+        return _splice_block(html, figure.end(), block)
+    byline = BYLINE_ROW_RE.search(html)
+    if byline:
+        return _splice_block(html, byline.end(), block)
     h1 = html.find('</h1>')
-    return html[:h1 + len('</h1>')] + '\n' + block + '\n' + html[h1 + len('</h1>'):]
+    if h1 < 0:
+        return block + html
+    return _splice_block(html, h1 + len('</h1>'), block)
 
 
 def order_news_lead(html: str, article: dict | None = None) -> str:
-    """Headline, fast-facts cite when present, lead photo and credit, byline, then the hook.
+    """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
+
+    The byline sits directly under the H1 and above the hero on every article.
+    A fast-facts box, when the page has one, follows the hero. An archive note
+    stays immediately under the byline, still above the photo.
 
     The lead matches the article column, uses a 16:9 crop, keeps width and height,
     uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
@@ -1774,7 +1797,12 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     h1 = article.find('</h1>')
     if h1 < 0:
         return html
-    article = article[:h1 + len('</h1>')] + figure + row + article[h1 + len('</h1>'):]
+    rest = article[h1 + len('</h1>'):]
+    note = _ARCHIVE_NOTE_RE.match(rest)
+    note_html = note.group(0) if note else ''
+    if note:
+        rest = rest[note.end():]
+    article = article[:h1 + len('</h1>')] + row + note_html + figure + rest
     html = html[:start] + article + html[end:]
     html = apply_body_photos(html)
     return place_quick_cite(install_lead_css(html))

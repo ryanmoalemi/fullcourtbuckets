@@ -1,4 +1,4 @@
-"""The lead photo sits under the headline and above the byline and hook."""
+"""The byline sits under the headline. The lead photo sits under the byline and above the hook."""
 import json
 import re
 import tempfile
@@ -31,9 +31,13 @@ class NewsLeadTests(unittest.TestCase):
             hook = html.find('class="lead"')
             if hook < 0 or hook < byline:
                 hook = html.find('class="deck"')
-            self.assertLess(h1, photo, article['slug'])
-            self.assertLess(photo, byline, article['slug'])
-            self.assertLess(byline, hook, article['slug'])
+            cite = html.find('class="fcb-quick-cite"')
+            self.assertLess(h1, byline, article['slug'])
+            self.assertLess(byline, photo, article['slug'])
+            self.assertLess(photo, hook, article['slug'])
+            if cite > 0:
+                self.assertLess(photo, cite, article['slug'])
+                self.assertLess(cite, hook, article['slug'])
             img = re.search(r'<img\b[^>]*>', figure).group(0)
             self.assertIn('fetchpriority="high"', img, article['slug'])
             self.assertNotIn('loading=', img, article['slug'])
@@ -80,9 +84,9 @@ class NewsLeadTests(unittest.TestCase):
             self.assertEqual(again.count('class="article-date"'), 1)
             figure = _lead_figure(again)
             photo = again.find(figure)
-            self.assertLess(again.find('</h1>'), photo)
-            self.assertLess(photo, again.find('class="byline"'))
-            self.assertLess(again.find('class="byline"'), again.find('class="lead"'))
+            self.assertLess(again.find('</h1>'), again.find('class="byline"'))
+            self.assertLess(again.find('class="byline"'), photo)
+            self.assertLess(photo, again.find('class="lead"'))
             img = re.search(r'<img\b[^>]*>', figure).group(0)
             self.assertIn('fetchpriority="high"', img)
             self.assertNotIn('loading=', img)
@@ -125,3 +129,22 @@ class NewsLeadTests(unittest.TestCase):
         self.assertIn('hero-2x.webp 1680w', img)
         self.assertIn('fetchpriority="high"', img)
         self.assertNotIn('loading=', img)
+
+    def test_byline_leads_the_photo_and_the_cite_follows_it(self):
+        bare = '''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Future Recap</title>
+<style>.article h1{margin:0}</style></head>
+<body><article class="article"><h1>Future Recap</h1>
+<aside class="fcb-quick-cite"><p>Fast facts</p></aside>
+<p class="lead">Later.</p>
+<figure><img src="/images/articles/future.webp" alt="A player" width="1200" height="800" loading="lazy"></figure>
+</article></body></html>
+'''
+        html = links.order_news_lead(links.ensure_byline(bare))
+        again = links.order_news_lead(html)
+        self.assertEqual(html, again)
+        photo = html.find(_lead_figure(html))
+        self.assertLess(html.find('</h1>'), html.find('class="byline"'))
+        self.assertLess(html.find('class="byline"'), photo)
+        self.assertLess(photo, html.find('class="fcb-quick-cite"'))
+        self.assertLess(html.find('class="fcb-quick-cite"'), html.find('class="lead"'))

@@ -21,17 +21,9 @@ def once(html: str, old: str, new: str, label: str) -> str:
 
 
 def under_headline(html: str) -> str:
-    """The quick-cite box sits directly under the headline so it is above the fold."""
-    match = re.search(r'\n?<aside class="fcb-quick-cite".*?</aside>\n?', html, re.S)
-    if not match:
-        return html
-    block = match.group(0).strip()
-    html = html[:match.start()] + html[match.end():]
-    marker = '</h1>'
-    at = html.find(marker)
-    if at < 0:
-        return match.group(0) + html
-    return html[:at + len(marker)] + '\n' + block + '\n' + html[at + len(marker):]
+    """Quick-cite follows the lead photo. The byline stays under the H1."""
+    import internal_links as links
+    return links.place_quick_cite(html)
 
 
 def ensure_assets(html: str) -> str:

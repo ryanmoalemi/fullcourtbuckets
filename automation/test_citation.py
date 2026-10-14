@@ -268,10 +268,15 @@ class CitationPageTests(unittest.TestCase):
         for relative, markup in loaded.items():
             h1 = markup.find('</h1>')
             cite = markup.find('class="fcb-quick-cite"')
+            byline = markup.find('class="byline"')
             figure = re.search(r'<figure\b[^>]*\blead-photo\b', markup)
             self.assertLess(h1, cite, relative)
+            if byline > h1:
+                self.assertLess(h1, byline, relative)
             if figure:
-                self.assertLess(cite, figure.start(), relative)
+                self.assertLess(figure.end(), cite, relative)
+                if byline > h1:
+                    self.assertLess(byline, figure.start(), relative)
             for raw in re.findall(r'<textarea\b[^>]*>(.*?)</textarea>', markup, re.S):
                 text = html.unescape(re.sub(r'\s+', ' ', raw))
                 for url, anchor in re.findall(

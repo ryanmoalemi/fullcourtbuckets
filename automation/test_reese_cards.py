@@ -167,10 +167,19 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertNotIn('Player page:', self.html)
         self.assertIn('(2024, with the Chicago Sky)', self.html)
         self.assertIn('/images/reese-cards/angel-reese-hero.webp', self.html)
+        self.assertLess(self.html.find('</h1>'), self.html.find('class="byline"'))
+        self.assertLess(self.html.find('class="byline"'), self.html.find('class="hero-photo"'))
+        self.assertRegex(
+            self.html,
+            r'</h1>\s*<div class="byline-row">\s*<a class="byline" href="/authors/ryan-moalemi/">',
+        )
+        self.assertIn('>By Ryan Moalemi</span>', self.html)
+        self.assertIn('<time class="article-date" datetime="2026-10-13">October 13, 2026</time>', self.html)
         self.assertNotIn('transcendent talent', self.html)
         self.assertNotIn('got into sports writing', self.html)
-        self.assertIn('height:min(72vh,calc(100svh - 13.25rem))', self.html)
+        self.assertIn('height:min(56vh,640px)', self.html)
         self.assertIn('max-height:75vh', self.html)
+        self.assertNotIn('hero-shade', self.html)
         self.assertIn('object-fit:cover', self.html)
         self.assertIn('object-position:center top', self.html)
         self.assertNotIn('min-height:100svh', self.html)
@@ -406,9 +415,9 @@ FOLD_VIEWPORTS = (
     (360, 740),
 )
 FOLD_MEASURE = """() => {
-  const hero = document.querySelector('.hero');
   const name = document.querySelector('#collection-title span:not(.owner-word):not(.cards-word)');
   const word = document.querySelector('#collection-title .cards-word');
+  const byline = document.querySelector('.byline-row');
   const line = document.querySelector('.hero-line');
   const photo = document.querySelector('.hero-photo');
   const box = (el) => {
@@ -419,9 +428,9 @@ FOLD_MEASURE = """() => {
   return {
     scrollY: window.scrollY,
     vh: window.innerHeight,
-    hero: box(hero),
     name: box(name),
     cards: box(word),
+    byline: box(byline),
     line: box(line),
     photo: box(photo),
     fit: photoStyle.objectFit,
@@ -431,7 +440,7 @@ FOLD_MEASURE = """() => {
 
 
 class ReeseHeroFoldTests(unittest.TestCase):
-    """ANGEL REESE, CARDS, and the subtitle stay above the fold."""
+    """The title, byline, and subtitle stay above the fold, and the photo follows them."""
 
     def test_title_block_is_above_the_fold(self):
         try:
@@ -489,13 +498,9 @@ def _fold_problems(width, height, measured):
     position = measured['position']
     if 'top' not in position and not position.endswith('0%'):
         problems.append(f'{label} object-position is {position}')
-    hero = measured['hero']
     photo = measured['photo']
-    if hero['bottom'] > measured['vh'] + 1:
-        problems.append(f'{label} hero bottom {hero["bottom"]:.1f} past {measured["vh"]}')
-    if abs(photo['width'] - hero['width']) > 2 or abs(photo['height'] - hero['height']) > 2:
-        problems.append(f'{label} photo does not cover the hero')
-    for name in ('name', 'cards', 'line'):
+    byline = measured['byline']
+    for name in ('name', 'cards', 'byline', 'line'):
         box = measured[name]
         if box['height'] < 8:
             problems.append(f'{label} {name} has no height')
@@ -503,8 +508,14 @@ def _fold_problems(width, height, measured):
             problems.append(f'{label} {name} starts above the viewport ({box["top"]:.1f})')
         if box['bottom'] > measured['vh'] + 1:
             problems.append(f'{label} {name} ends below the fold ({box["bottom"]:.1f} > {measured["vh"]})')
-        if box['bottom'] > hero['bottom'] + 1:
-            problems.append(f'{label} {name} is clipped by the hero')
+    if byline['top'] + 4 < measured['cards']['bottom']:
+        problems.append(f'{label} byline overlaps the title')
+    if measured['line']['top'] + 4 < byline['bottom']:
+        problems.append(f'{label} subtitle overlaps the byline')
+    if photo['top'] + 4 < measured['line']['bottom']:
+        problems.append(f'{label} photo starts above the subtitle')
+    if photo['height'] < 80:
+        problems.append(f'{label} photo is too short')
     return problems
 
 

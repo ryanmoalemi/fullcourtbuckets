@@ -750,22 +750,34 @@ def _schema(data: dict, summary: dict, as_of: str, faq_entities: list[dict]) -> 
     return payload.replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
 
 
-def _hero() -> str:
+def _byline_row(as_of: str) -> str:
+    """Photo, name, and page date. This row sits directly under the H1."""
+    date = ''
+    day = str(as_of or '')[:10]
+    if len(day) == 10:
+        date = f'<time class="article-date" datetime="{esc(day)}">{esc(long_date(day))}</time>'
+    return f'<div class="byline-row">{links.BYLINE_HTML}{date}</div>'
+
+
+def _hero(as_of: str = '') -> str:
+    """Title, then the byline, then the photo. The photo is not a backdrop."""
     credit = (
         f'Photo: {_external(HERO["photographer_url"], HERO["photographer"])}, '
         f'{_external(HERO["license_url"], HERO["license"])}, via '
         f'{_external(HERO["source_url"], HERO["source_name"])}. {esc(HERO["changes"])} '
         '(2024, with the Chicago Sky)'
     )
-    return f'''<section class="hero" aria-labelledby="collection-title">
-<img class="hero-photo" src="{esc(HERO["src"])}" alt="{esc(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">
-<div class="hero-shade" aria-hidden="true"></div>
+    return f'''<section class="page-open" aria-labelledby="collection-title">
 <div class="hero-copy">
 <p class="hero-kicker">Personal collection</p>
 <h1 id="collection-title"><span class="owner-word">{esc("Ryan's")}</span> <span>Angel Reese</span> <span class="cards-word">cards</span></h1>
+{_byline_row(as_of)}
 <p class="hero-line">Ryan's collection of Angel Reese cards</p>
-<p class="hero-credit">{credit}</p>
 </div>
+<figure class="hero">
+<img class="hero-photo" src="{esc(HERO["src"])}" alt="{esc(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">
+<figcaption class="hero-credit">{credit}</figcaption>
+</figure>
 </section>'''
 
 
@@ -1009,8 +1021,9 @@ def render_body(data: dict, root: Path | None = None) -> str:
         'A card that says not enough sales to price yet stays in the paid total and is left out of value and change.</p>'
         '</section>'
     )
+    stamp = page_stamp(root) if root is not None else prices_as_of(data)
     return f'''<div class="crumb-bar"><div class="shell"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/authors/ryan-moalemi/">Ryan Moalemi</a><span aria-hidden="true">/</span><span>{esc(COLLECTION_TITLE)}</span></nav></div></div>
-{_hero()}
+{_hero(stamp)}
 <main class="shell" id="content">
 {intro}
 <section class="panel" id="collection">
@@ -1164,16 +1177,21 @@ header img{width:220px;height:auto}
 .crumb-bar{background:#07060a;border-bottom:1px solid #241f2a}
 .breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 0;color:#b7b0a6;font-size:13px;font-weight:700}
 .breadcrumbs a{color:#f6f1e8;text-decoration:underline}
-.hero{position:relative;display:flex;align-items:flex-end;overflow:hidden;background:#07060a;height:min(72vh,calc(100svh - 13.25rem));max-height:75vh}
-.hero-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center top}
-.hero-shade{position:absolute;inset:auto 0 0 0;height:68%;background:linear-gradient(180deg,rgba(7,6,10,0) 0%,rgba(7,6,10,.55) 28%,rgba(7,6,10,.94) 70%,#07060a 100%)}
-.hero-copy{position:relative;z-index:1;width:min(1120px,94vw);margin:0 auto;padding:8px 0 12px}
+.page-open{padding:8px 0 0}
+.hero-copy{width:min(1120px,94vw);margin:0 auto}
 .hero-kicker{margin:0 0 6px;color:#f0c36a;font:700 13px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase}
-.hero h1{margin:0;font:900 clamp(3.2rem,min(13vw,18vh),8.2rem)/.84 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
-.hero h1 span{display:block}
-.hero h1 .owner-word{font-size:.38em;letter-spacing:.04em;color:#f6f1e8}
-.hero h1 .cards-word{color:#f0c36a}
-.hero-line{margin:8px 0 0;font:700 clamp(1.05rem,min(2.2vw,3.4vh),1.55rem)/1.2 "Barlow Condensed",sans-serif;letter-spacing:.02em}
+.page-open h1{margin:0;font:900 clamp(3.2rem,min(13vw,18vh),8.2rem)/.84 "Barlow Condensed",Impact,sans-serif;letter-spacing:-.02em;text-transform:uppercase}
+.page-open h1 span{display:block}
+.page-open h1 .owner-word{font-size:.38em;letter-spacing:.04em;color:#f6f1e8}
+.page-open h1 .cards-word{color:#f0c36a}
+.byline-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:12px 0 0}
+.byline{display:flex;align-items:center;gap:10px;margin:0;color:#f6f1e8;font:600 15px/1.3 Inter,system-ui,sans-serif;letter-spacing:0;text-transform:none;text-decoration:none}
+.byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;border:1px solid #3a3328;flex:0 0 40px;background:#111}
+.byline:hover{color:#f0c36a}
+.article-date{color:#d9d1c6;font:600 14px/1.3 Inter,system-ui,sans-serif}
+.hero-line{margin:10px 0 0;font:700 clamp(1.05rem,min(2.2vw,3.4vh),1.55rem)/1.2 "Barlow Condensed",sans-serif;letter-spacing:.02em}
+.hero{margin:14px auto 0;width:min(1120px,94vw)}
+.hero-photo{display:block;width:100%;height:min(56vh,640px);max-height:75vh;object-fit:cover;object-position:center top}
 .hero-credit{margin:8px 0 0;max-width:40rem;color:#d9d1c6;font-size:13px;line-height:1.35}
 .hero-credit a{color:#fff}
 main{padding:8px 0 72px}
@@ -1280,8 +1298,9 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .bid-comps li{display:flex;flex-direction:column;gap:2px;padding:8px 0;border-top:1px solid #2b2733;font-size:14px}
 .bid-why{margin:0 0 8px;color:#c9c1b6;font-size:13px}
 @media(max-width:800px){
-.hero{height:min(70vh,calc(100svh - 14.75rem));max-height:72vh}
-.hero h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
+.page-open h1{font-size:clamp(2.8rem,min(16vw,9vh),4.6rem)}
+.hero-photo{height:min(48vh,420px);max-height:72vh}
+.byline{font-size:14px}
 .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
 .cost{grid-template-columns:1fr 1fr}
 .detail-photos,.detail-photos.solo{grid-template-columns:1fr}
