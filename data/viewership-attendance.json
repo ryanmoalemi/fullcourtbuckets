@@ -89,7 +89,10 @@
       "network": "NBC, Peacock",
       "viewers": 3310000,
       "viewers_source": "https://www.nbcsports.com/pressbox/press-releases/fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season",
-      "viewers_source_date": "2026-08-26"
+      "viewers_source_date": "2026-08-26",
+      "peak_viewers": 3820000,
+      "peak_viewers_source": "https://www.nbcsports.com/pressbox/press-releases/fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season",
+      "peak_viewers_source_date": "2026-08-26"
     },
     {
       "date": "2026-10-17",
@@ -104,7 +107,10 @@
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "3:30 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-19",
@@ -116,13 +122,16 @@
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
-      "date": "2026-10-22",
+      "date": "2026-10-21",
       "season": 2026,
       "game": "Finals Game 3",
       "home": "",
@@ -131,10 +140,13 @@
       "attendance": null,
       "attendance_source": "",
       "attendance_source_date": "",
-      "network": "USA, Peacock",
+      "network": "USA, CNBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
     },
     {
       "date": "2026-10-24",
@@ -149,7 +161,88 @@
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
-      "viewers_source_date": ""
+      "viewers_source_date": "",
+      "tip_et": "1 p.m. ET",
+      "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-26",
+      "season": 2026,
+      "game": "Finals Game 5",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "Chase Center",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-29",
+      "season": 2026,
+      "game": "Finals Game 6",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2026-10-31",
+      "season": 2026,
+      "game": "Finals Game 7",
+      "status": "if necessary",
+      "home": "",
+      "away": "",
+      "venue": "Chase Center",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8 p.m. ET",
+      "schedule_source": "https://valkyries.com/playoffs/",
+      "schedule_source_date": "2026-10-13"
+    },
+    {
+      "date": "2025-05-17",
+      "season": 2025,
+      "game": "Sky at Fever",
+      "network": "ABC",
+      "viewers": 2700000,
+      "viewers_source": "https://espnpressroom.com/press-release/espn-networks-deliver-most-watched-wnba-regular-season-ever/",
+      "viewers_source_date": "2025-09-12"
+    },
+    {
+      "date": "2026-07-18",
+      "season": 2026,
+      "game": "Liberty at Fever",
+      "network": "CBS",
+      "viewers": 2580000,
+      "viewers_source": "https://www.sportsmediawatch.com/2026/07/wnba-viewership-fever-liberty-among-most-watched-since-2000/",
+      "viewers_source_date": "2026-07",
+      "peak_viewers": 3090000,
+      "peak_viewers_source": "https://www.sportsmediawatch.com/2026/07/wnba-viewership-fever-liberty-among-most-watched-since-2000/",
+      "peak_viewers_source_date": "2026-07"
     }
   ],
   "seasons": [
@@ -161,13 +254,15 @@
       "attendance_source_date": "2026-10-06",
       "avg_attendance": 11474,
       "avg_attendance_source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
-      "avg_attendance_source_date": "",
+      "avg_attendance_source_date": "2026-09-25",
       "finals_matchup": "Valkyries vs. Dream",
       "relocated_games": 25,
       "relocated_attendance": 388997,
-      "relocated_avg": 15743,
+      "relocated_avg": null,
       "relocated_source": "https://www.sportsbusinessjournal.com/Articles/2026/10/06/wnba-hits-record-attendance-mark-for-2026-season/",
-      "relocated_source_date": "2026-10-06"
+      "relocated_source_date": "2026-10-06",
+      "relocated_avg_status": "unresolved",
+      "relocated_note": "Sports Business Journal printed an average of 15,743. 388,997 divided by 25 is 15,559.88, which rounds to 15,560. The average is omitted until the source reconciles."
     },
     {
       "season": 2025,
@@ -176,7 +271,41 @@
       "finals_avg_viewers": 1500000,
       "finals_network": "ABC, ESPN",
       "finals_viewers_source": "https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/",
-      "finals_viewers_source_date": "2025-10"
+      "finals_viewers_source_date": "2025-10",
+      "total_attendance": 3150000,
+      "total_attendance_rounded": true,
+      "attendance_source": "https://www.sportsbusinessjournal.com/Articles/2025/09/12/relocating-high-demand-games-pushes-wnba-to-new-attendance-highs/",
+      "attendance_source_date": "2025-09-12",
+      "games_played": 286,
+      "games_calculated": true,
+      "games_source": "https://www.wnba.com/news/2025-game-schedule",
+      "games_source_date": "2024-12-02",
+      "games_note": "Calculated: 13 teams x 22 home games = 286. The Dec. 2, 2024 schedule release says each of the 13 teams plays 44 games, 22 at home.",
+      "avg_attendance": 11014,
+      "avg_attendance_status": "calculated",
+      "avg_attendance_source": "https://www.sportsbusinessjournal.com/Articles/2025/09/12/relocating-high-demand-games-pushes-wnba-to-new-attendance-highs/",
+      "avg_attendance_source_date": "2025-09-12",
+      "avg_attendance_printed": 11148,
+      "avg_attendance_note": "SBJ prints an average of 11,148. 3,150,000 divided by 286 games is 11,013.99, shown as 11,014. 11,148 times 286 is 3,188,328, which is not 3.15 million. The chart and the split use 11,014. The printed average is not used.",
+      "finals_game_reports": [
+        {
+          "game": "Game 1",
+          "viewers": 1900000,
+          "network": "ABC, ESPN",
+          "source": "https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/",
+          "source_date": "2025-10-16",
+          "note": "Most-watched Finals Game 1 in 28 years, in the ESPN press release."
+        },
+        {
+          "game": "Game 4",
+          "viewers": 1400000,
+          "network": "ESPN",
+          "source": "https://www.sportsmediawatch.com/2025/10/wnba-finals-viewership-down-sweep/",
+          "source_date": "2025-10",
+          "date": "2025-10-10",
+          "note": "Clinching game. Games 5, 6 and 7 were not played."
+        }
+      ]
     },
     {
       "season": 2024,
@@ -191,7 +320,12 @@
       "finals_avg_viewers": 1600000,
       "finals_network": "ABC, ESPN",
       "finals_viewers_source": "https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/",
-      "finals_viewers_source_date": "2024-10"
+      "finals_viewers_source_date": "2024-10",
+      "games_played": 240,
+      "games_calculated": true,
+      "games_source": "https://www.wnba.com/news/2024-wnba-season-schedule",
+      "games_source_date": "2023-12-18",
+      "games_note": "Calculated: 12 teams x 20 home games = 240. The Dec. 18, 2023 schedule release says each of the 12 teams plays 40 games, 20 at home. The Sept. 27, 2024 attendance release does not print the game count. 2,353,735 divided by the printed average of 9,807 rounds to 240."
     },
     {
       "season": 2023,
@@ -203,7 +337,11 @@
       "finals_avg_viewers": 728000,
       "finals_network": "ABC, ESPN",
       "finals_viewers_source": "https://www.sportsmediawatch.com/2023/10/wnba-finals-ratings-most-watched-20-years-aces-liberty-viewership/",
-      "finals_viewers_source_date": "2023-10"
+      "finals_viewers_source_date": "2023-10",
+      "total_attendance": 1587488,
+      "games_played": 240,
+      "attendance_source": "https://kenn.com/blog/sports-attendance/all-time-wnba-attendance/",
+      "attendance_note": "Kenn.com prints 240 games and 1,587,488 fans. That total divided by 240 is 6,614.53, which rounds to the 6,615 average in the league release."
     },
     {
       "season": 2022,
@@ -212,13 +350,19 @@
       "finals_avg_viewers": 534000,
       "finals_network": "ABC, ESPN",
       "finals_viewers_source": "https://www.sportsmediawatch.com/2023/10/wnba-finals-ratings-most-watched-20-years-aces-liberty-viewership/",
-      "finals_viewers_source_date": "2023-10"
+      "finals_viewers_source_date": "2023-10",
+      "total_attendance": 1219608,
+      "games_played": 216,
+      "attendance_source": "https://kenn.com/blog/sports-attendance/all-time-wnba-attendance/",
+      "avg_attendance": 5646,
+      "avg_attendance_source": "https://kenn.com/blog/sports-attendance/all-time-wnba-attendance/",
+      "attendance_note": "Kenn.com prints 216 games, 1,219,608 fans, and an average of 5,646. Dividing the total by the games gives 5,646.33, which rounds to the printed average."
     },
     {
       "season": 2024,
       "home_team": "Indiana Fever",
       "home_attendance": 340715,
-      "home_note": "record",
+      "home_note": "2024 record, since passed",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
     },
@@ -230,6 +374,152 @@
       "home_note": "previous record",
       "home_attendance_source": "http://www.wnba.com/news/wnba-delivers-record-setting-2024-season",
       "home_attendance_source_date": "2024-09-27"
+    },
+    {
+      "season": 2025,
+      "home_team": "Golden State Valkyries",
+      "home_attendance": 397408,
+      "home_games": 22,
+      "home_note": "single-season record; sellouts at 18,064",
+      "home_attendance_source": "https://valkyries.wnba.com/news/valkyries-set-all-time-wnba-attendance-record-20250906",
+      "home_attendance_source_date": "2025-09-06"
+    },
+    {
+      "season": 2026,
+      "home_team": "Golden State Valkyries",
+      "home_attendance": 397408,
+      "home_games": 22,
+      "home_note": "matched the 2025 record; sellouts at 18,064",
+      "home_attendance_source": "https://www.oursportscentral.com/services/releases/golden-state-valkyries-sell-out-all-home-games-for-second-consecutive-season/n-6414909",
+      "home_attendance_source_date": "2026-09-19"
+    },
+    {
+      "season": 2026,
+      "road_team": "Indiana Fever",
+      "road_avg": 15116,
+      "road_source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "road_source_date": "2026-09-25",
+      "road_note": "Road games, not home. Not included in a home ranking."
+    },
+    {
+      "season": 2026,
+      "home_team": "Washington Mystics",
+      "home_change_pct": -16,
+      "home_attendance_source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "home_attendance_source_date": "2026-09-25",
+      "home_note": "Front Office Sports reported a 16% drop in home attendance. The season total is not in this file, so there is no ranking bar."
+    }
+  ],
+  "broadcasts": [
+    {
+      "season": 2026,
+      "network": "NBC",
+      "avg_viewers": 1750000,
+      "games": 7,
+      "scope": "Seven regular-season games, total audience delivery on NBC and Peacock",
+      "measurement": "Nielsen Big Data + Panel plus Adobe Analytics. TV plus streaming, so it is not a TV-only average.",
+      "source": "https://www.nbcsports.com/pressbox/press-releases/fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season",
+      "source_date": "2026-08-26"
+    },
+    {
+      "season": 2026,
+      "network": "CBS",
+      "avg_viewers": 1280000,
+      "games": 20,
+      "scope": "2026 regular season",
+      "measurement": "",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "Ion",
+      "avg_viewers": 617000,
+      "games": 51,
+      "scope": "2026 regular season, 51 games across 34 windows",
+      "measurement": "",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2025,
+      "network": "ESPN networks",
+      "avg_viewers": 1300000,
+      "games": 25,
+      "scope": "2025 regular season on ESPN networks",
+      "measurement": "Nielsen Big Data + Panel",
+      "source": "https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/",
+      "source_date": "2025-10-16"
+    },
+    {
+      "season": 2024,
+      "network": "ESPN platforms",
+      "avg_viewers": 1200000,
+      "games": 24,
+      "scope": "2024 regular season on ESPN platforms",
+      "measurement": "",
+      "source": "https://espnpressroom.com/press-release/the-2024-wnba-season-delivers-record-viewership-across-espn-platforms/",
+      "source_date": "2024-10-25"
+    },
+    {
+      "season": 2026,
+      "network": "ESPN networks",
+      "avg_viewers": 1400000,
+      "chart": false,
+      "scope": "ESPN and ABC. Game count not stated. This is the combined partner average.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "ESPN",
+      "avg_viewers": 1200000,
+      "chart": false,
+      "scope": "ESPN channel only. A split of the ESPN networks average, not an added audience. Game count not stated.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "ABC",
+      "avg_viewers": 1600000,
+      "chart": false,
+      "scope": "ABC only. A split of the ESPN networks average, not an added audience. Game count not stated.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "ESPN networks, non-Fever",
+      "avg_viewers": 984000,
+      "chart": false,
+      "scope": "ESPN and ABC games that did not feature the Indiana Fever. A subset, not a full-network average.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "USA Network",
+      "avg_viewers": 543000,
+      "chart": false,
+      "scope": "Partial. The figure was reported before the final week of the season.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "Prime Video",
+      "avg_viewers": 437000,
+      "chart": false,
+      "scope": "Nielsen. Game count not stated. First Nielsen WNBA season for Prime Video.",
+      "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
+      "source_date": "2026-09-25"
+    }
+  ],
+  "corrections": [
+    {
+      "date": "2026-10-13",
+      "note": "Finals Game 3 is Wednesday, Oct. 21, at 8 p.m. ET, not Oct. 22. Games 2 and 3 also air on CNBC. Games 5, 6 and 7 are listed if necessary. The Golden State Valkyries' 397,408 home fans in 2025 is the single-season record, matched in 2026. Indiana's 340,715 in 2024 stays as the record from the league's 2024 release. The 2026 relocated-game average is omitted because 388,997 divided by 25 does not equal the 15,743 figure printed in the source."
     }
   ]
 }
