@@ -1,0 +1,202 @@
+/* Shared citation tools for the five link-magnet pages.
+   Colors match the article template: orange #ff9800, line #2b2930, text #f5f3ef. */
+
+.fcb-quick-cite {
+  margin: 0 0 22px;
+  padding: 14px 16px 16px;
+  border: 1px solid #2b2930;
+  border-left: 3px solid #ff9800;
+  background: #101014;
+}
+
+.fcb-quick-cite-title {
+  margin: 0 0 8px;
+  color: #ff9800;
+  font: 700 13px/1.3 Barlow, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fcb-quick-cite ul {
+  margin: 0 0 12px;
+  padding-left: 18px;
+}
+
+.fcb-quick-cite li {
+  margin: 0 0 6px;
+  color: #e8e3df;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.fcb-quick-cite strong {
+  color: #f5f3ef;
+}
+
+.fcb-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.fcb-copy-citation,
+.fcb-embed-toggle,
+.fcb-copy-embed {
+  min-height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 3px;
+  background: #ff9800;
+  color: #050505;
+  font: 700 13px/1 Inter, Arial, sans-serif;
+  cursor: pointer;
+}
+
+.fcb-copy-embed {
+  margin-top: 8px;
+}
+
+.fcb-embed {
+  margin: 8px 0 18px;
+}
+
+.fcb-embed-panel {
+  margin-top: 8px;
+}
+
+.fcb-embed-note,
+.fcb-note {
+  margin: 0 0 8px;
+  color: #a5a19b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.fcb-embed-panel textarea,
+.fcb-citation-source {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 96px;
+  padding: 8px;
+  border: 1px solid #2b2930;
+  background: #0b0b0d;
+  color: #f5f3ef;
+  font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.fcb-csv {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #ff9800;
+  font-weight: 700;
+}
+
+.fcb-anchor {
+  margin-right: 6px;
+  color: #ff9800;
+  font-weight: 700;
+  text-decoration: none;
+  opacity: 0;
+}
+
+h2:hover > .fcb-anchor,
+h3:hover > .fcb-anchor,
+h2:focus-within > .fcb-anchor,
+h3:focus-within > .fcb-anchor,
+.fcb-anchor:focus {
+  opacity: 1;
+}
+
+.fcb-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 0 0 8px;
+}
+
+.fcb-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.fcb-data-table th,
+.fcb-data-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #2b2930;
+  text-align: left;
+  vertical-align: top;
+}
+
+.fcb-data-table th {
+  color: #a5a19b;
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.fcb-data-table caption {
+  caption-side: bottom;
+  padding-top: 8px;
+  color: #a5a19b;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.fcb-verified-badge {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 6px 10px;
+  border: 1px solid #2b2930;
+  color: #d4d0ca;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.fcb-section-title {
+  margin: 28px 0 10px;
+  font: 800 28px/1.1 Barlow, sans-serif;
+  letter-spacing: -.3px;
+}
+
+.media-contact {
+  margin: 12px 0 18px;
+  color: #d4d0ca;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.media-contact a {
+  color: #ff9800;
+}
+
+@media (max-width: 900px) {
+  .fcb-anchor {
+    opacity: .8;
+  }
+
+  .fcb-quick-cite {
+    padding: 12px;
+  }
+
+  .fcb-quick-cite li,
+  .fcb-data-table {
+    font-size: 13px;
+  }
+
+  .fcb-data-table th,
+  .fcb-data-table td {
+    padding: 6px 8px;
+  }
+
+  .fcb-section-title {
+    font-size: 22px;
+  }
+
+  .fcb-csv {
+    margin-left: 0;
+  }
+}
