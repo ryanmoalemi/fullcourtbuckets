@@ -25,6 +25,37 @@
     "imageOgHeight": 630
   },
   {
+    "slug": "valkyries-defense-film-breakdown",
+    "url": "/news/valkyries-defense-film-breakdown/",
+    "title": "How the Valkyries’ league-best defense takes away the next option, not just the first",
+    "description": "Golden State led the WNBA with a 99.1 defensive rating. Film of Caitlin Clark and Breanna Stewart possessions shows the help, recovery and box-outs behind it.",
+    "category": "WNBA",
+    "date": "2026-10-14",
+    "image": "/images/articles/valkyries-defense-film-breakdown/weak-side-i.webp",
+    "imageAlt": "Diagram of a weak-side I: teal offensive players and two purple help defenders at different depths in the lane",
+    "imageCredit": "Diagram: Full Court Buckets",
+    "teams": [
+      "golden-state-valkyries",
+      "atlanta-dream",
+      "las-vegas-aces",
+      "new-york-liberty",
+      "indiana-fever"
+    ],
+    "imageWidth": 1920,
+    "imageHeight": 1080,
+    "imageFocal": "center center",
+    "imageSource": "/images/articles/valkyries-defense-film-breakdown/weak-side-i.webp",
+    "imageHero": "/images/articles/valkyries-defense-film-breakdown/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/valkyries-defense-film-breakdown/hero-2x.webp",
+    "imageHero2xWidth": 1920,
+    "imageHero2xHeight": 1080,
+    "imageOg": "/images/articles/valkyries-defense-film-breakdown/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
+  },
+  {
     "slug": "liberty-offseason-five-gm-moves",
     "url": "/news/liberty-offseason-five-gm-moves/",
     "title": "Liberty lost the turnover battle by 18 in the sweep. Here are 5 moves I'd make as GM",
