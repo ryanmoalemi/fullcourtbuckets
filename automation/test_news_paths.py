@@ -112,9 +112,16 @@ class NewsPathTests(unittest.TestCase):
         self.assertGreater(photo.stat().st_size, 1000, image)
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         hero = home.split('id="featured-story"', 1)[1].split('</a>', 1)[0]
+        shown = links._featured_source(featured)
+        shown_image = str(shown.get('image') or '')
+        shown_alt = str(shown.get('imageAlt') or '')
+        self.assertTrue((ROOT / shown_image.lstrip('/')).is_file(), shown_image)
         self.assertIn('id="featured-image"', hero)
-        self.assertIn(f'src="{image}"', hero)
-        self.assertIn(f'alt="{html.escape(alt, quote=True)}"', hero)
+        self.assertIn(f'src="{shown_image}"', hero)
+        self.assertIn(f'alt="{html.escape(shown_alt, quote=True)}"', hero)
+        if featured.get('slug') == '2026-wnba-finals-ratings-tracker':
+            self.assertIn('social-card.webp', shown_image)
+            self.assertNotIn('ratings-sheet.webp', hero)
         self.assertIn('id="featured-credit"', hero)
         for article in articles:
             lead = str(article.get('image') or '').strip()

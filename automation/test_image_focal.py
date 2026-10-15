@@ -45,7 +45,14 @@ class ImageFocalTests(unittest.TestCase):
             for label, page in (('hub', hub), ('author', author)):
                 self.assertIn(article['image'], page, f'{slug} {label}')
             if slug in on_home:
-                self.assertIn(article['image'], home, f'{slug} home')
+                if slug == '2026-wnba-finals-ratings-tracker':
+                    card = '/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
+                    self.assertIn(card, home, slug)
+                    featured = home.split('id="featured-image"', 1)[1].split('>', 1)[0]
+                    self.assertIn('social-card.webp', featured)
+                    self.assertNotIn('ratings-sheet.webp', featured)
+                else:
+                    self.assertIn(article['image'], home, f'{slug} home')
             story = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
             if slug == '2026-wnba-finals-ratings-tracker':
                 social = '/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
