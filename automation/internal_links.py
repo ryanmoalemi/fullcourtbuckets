@@ -425,7 +425,6 @@ def _featured_source(article: dict) -> dict:
     if not alt or 'pending' in alt.lower():
         source['imageAlt'] = MATCHUP_ALT
     source['imageFocal'] = 'center center'
-    source['_feature_card'] = True
     return source
 
 
@@ -436,9 +435,8 @@ def _featured_photo(article: dict) -> str:
     if not image:
         return ''
     alt = str(source.get('imageAlt') or source.get('title') or '')
-    klass = 'feature-photo is-card' if source.get('_feature_card') else 'feature-photo'
     return (
-        f'<img class="{klass}" id="featured-image" src="{esc(image)}" alt="{esc(alt)}"'
+        f'<img class="feature-photo" id="featured-image" src="{esc(image)}" alt="{esc(alt)}"'
         f'{_image_dims(source)} decoding="async" fetchpriority="high"{focal_style(source)}>'
     )
 
@@ -448,25 +446,23 @@ def _featured_credit(article: dict) -> str:
     return f'<span class="feature-credit" id="featured-credit">{esc(credit)}</span>'
 
 
+def _homepage_feature_card(article: dict) -> str:
+    """Homepage lead. Same post card the other stories use. No credit on the card."""
+    card = _story_card(_featured_source(article))
+    return card.replace('<a class="article-card"', '<a class="article-card" id="featured-story"', 1)
+
+
 def _apply_featured_media(text: str, article: dict) -> str:
-    """Put the featured story's lead photo and credit on the hero card."""
-    photo = _featured_photo(article)
-    credit = _featured_credit(article)
-    text = re.sub(
-        r'(?:<picture>\s*(?:<source\b[^>]*>\s*)*)?'
-        r'<img class="feature-photo" id="featured-image"[^>]*>'
-        r'(?:\s*</picture>)?',
-        '',
+    """Replace the featured slot with the standard post card."""
+    card = _homepage_feature_card(article)
+    updated, count = re.subn(
+        r'<a\b[^>]*\bid="featured-story"[^>]*>.*?</a>',
+        lambda _match: card,
         text,
         count=1,
+        flags=re.S,
     )
-    text = re.sub(r'<span class="feature-credit" id="featured-credit">.*?</span>', '', text, count=1, flags=re.S)
-    return re.sub(
-        r'(<a class="feature feature-link" id="featured-story" href="[^"]*">)',
-        lambda match: match.group(1) + photo + credit,
-        text,
-        count=1,
-    )
+    return updated if count else text
 
 
 def _place_hubs(text: str) -> str:

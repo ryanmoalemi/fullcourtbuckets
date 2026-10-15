@@ -116,14 +116,20 @@ class NewsPathTests(unittest.TestCase):
         shown_image = str(shown.get('image') or '')
         shown_alt = str(shown.get('imageAlt') or '')
         self.assertTrue((ROOT / shown_image.lstrip('/')).is_file(), shown_image)
-        self.assertIn('id="featured-image"', hero)
+        standard = links._story_card(shown)
+        inner = standard.split('>', 1)[1].removesuffix('</a>')
+        self.assertIn('class="article-visual"', hero)
+        self.assertIn('class="article-copy"', hero)
         self.assertIn(f'src="{shown_image}"', hero)
         self.assertIn(f'alt="{html.escape(shown_alt, quote=True)}"', hero)
+        self.assertIn(inner, hero)
+        self.assertNotIn('feature-credit', hero)
+        self.assertNotIn('feature-photo', hero)
+        self.assertNotIn('is-card', hero)
         if featured.get('slug') == '2026-wnba-finals-ratings-tracker':
             self.assertIn('matchup-1200.webp', shown_image)
             self.assertNotIn('ratings-sheet.webp', hero)
             self.assertNotIn('social-card.webp', hero)
-        self.assertIn('id="featured-credit"', hero)
         for article in articles:
             lead = str(article.get('image') or '').strip()
             self.assertTrue(_is_lead_image(lead), article.get('slug'))
@@ -145,7 +151,9 @@ class NewsPathTests(unittest.TestCase):
             '<a class="feature feature-link" id="featured-story" href="/news/example/"><div class="feature-content"></div></a>',
             bare,
         )
+        self.assertIn('class="article-card" id="featured-story"', rendered)
         self.assertNotIn('id="featured-image"', rendered)
+        self.assertNotIn('feature-credit', rendered)
 
     def test_articles_do_not_share_a_lead_image(self):
         articles = _articles()
