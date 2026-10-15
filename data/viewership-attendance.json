@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "games": [
     {
       "date": "1997-06-21",
@@ -457,6 +457,30 @@
       "scope": "Nielsen. Game count not stated. First Nielsen WNBA season for Prime Video.",
       "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
       "source_date": "2026-09-25"
+    }
+  ],
+  "metrics": [
+    {
+      "metric_id": "playoff-2026-semis-g2-liberty-dream-average",
+      "period": "2026-10-07",
+      "value": 1400000,
+      "unit": "viewers",
+      "scope": "Liberty at Dream, 2026 WNBA semifinals Game 2, average viewers, ESPN",
+      "source_url": "https://www.sportsmediawatch.com/sports-ratings-tracker/",
+      "source_date": "2026-10-13",
+      "checked_at": "2026-10-15",
+      "notes": "Average viewers. Kept separate from the peak."
+    },
+    {
+      "metric_id": "playoff-2026-semis-g2-liberty-dream-peak",
+      "period": "2026-10-07",
+      "value": 1900000,
+      "unit": "viewers",
+      "scope": "Liberty at Dream, 2026 WNBA semifinals Game 2, peak viewers, ESPN",
+      "source_url": "https://www.sportsmediawatch.com/sports-ratings-tracker/",
+      "source_date": "2026-10-13",
+      "checked_at": "2026-10-15",
+      "notes": "Peak viewers. Kept separate from the average. A peak is the highest minute, not the average."
     }
   ]
 }

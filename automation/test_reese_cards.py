@@ -174,7 +174,7 @@ class ReeseCardPageTests(unittest.TestCase):
             r'</h1>\s*<div class="byline-row">\s*<a class="byline" href="/authors/ryan-moalemi/">',
         )
         self.assertIn('>By Ryan Moalemi</span>', self.html)
-        self.assertIn('<time class="article-date" datetime="2026-10-13">October 13, 2026</time>', self.html)
+        self.assertIn('<time class="article-date" datetime="2026-10-15">October 15, 2026</time>', self.html)
         self.assertNotIn('transcendent talent', self.html)
         self.assertNotIn('got into sports writing', self.html)
         self.assertIn('height:min(56vh,640px)', self.html)
@@ -220,10 +220,10 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Oct 17, 2026, 7:00 p.m. PT', bidding)
         self.assertIn('$4,500', bidding)
         self.assertIn('$5,490', bidding)
-        self.assertIn('<dt>Current bid</dt><dd>$4,500</dd>', bidding)
-        self.assertIn('<dt>Bids</dt><dd>8</dd>', bidding)
-        self.assertIn('<dt>Current bid</dt><dd>$5,250</dd>', bidding)
-        self.assertIn('<dt>Bids</dt><dd>6</dd>', bidding)
+        self.assertIn('<dt>Current bid</dt><dd>$4,750</dd>', bidding)
+        self.assertIn('<dt>Bids</dt><dd>9</dd>', bidding)
+        self.assertIn('<dt>Current bid</dt><dd>$5,750</dd>', bidding)
+        self.assertIn('<dt>Bids</dt><dd>7</dd>', bidding)
         self.assertNotIn('$1,107', bidding)
         self.assertNotIn('near the live', bidding)
         self.assertNotIn('WP***', bidding)
@@ -243,7 +243,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('loading="eager"', bidding)
         self.assertNotIn('Two live auctions', bidding)
         self.assertNotIn('/news/angel-reese-game-2-stats-liberty-dream-semis/', bidding)
-        self.assertIn('Bids as of 10:05 a.m. PT, Oct 13, 2026</p>\n<div class="bids">', bidding)
+        self.assertIn('Bids as of 10:00 a.m. PT, Oct 15, 2026</p>\n<div class="bids">', bidding)
         self.assertIn('Alt no longer shows a countdown; the recorded end is approximately Oct 15, 6 PM PT.', bidding)
         goldin = 'https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r'
         alt = 'https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54'

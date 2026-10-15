@@ -452,6 +452,8 @@ def source_label(url: str) -> str:
         return 'WNBA.com'
     if host.endswith('frontofficesports.com'):
         return 'Front Office Sports'
+    if host.endswith('justwomenssports.com'):
+        return "Just Women's Sports"
     if host.endswith('oursportscentral.com'):
         return 'OurSports Central'
     if host.endswith('kenn.com'):

@@ -630,6 +630,107 @@ def _other_broadcast_table(payload: dict, season: int, sources: list) -> str:
     )
 
 
+def _playoff_metrics(payload: dict) -> list[dict]:
+    rows = []
+    for metric in payload.get('metrics') or []:
+        metric_id = str(metric.get('metric_id') or '')
+        if metric_id.startswith('playoff-') and core.is_number(metric.get('value')):
+            rows.append(metric)
+    return rows
+
+
+def _metric_kind(metric: dict) -> str:
+    metric_id = str(metric.get('metric_id') or '')
+    if metric_id.endswith('-peak'):
+        return 'Peak'
+    if metric_id.endswith('-average'):
+        return 'Average'
+    return 'Viewers'
+
+
+def _metric_label(metric: dict) -> str:
+    scope = str(metric.get('scope') or metric.get('metric_id') or '')
+    for marker in (', average', ', peak'):
+        if marker in scope:
+            return scope.split(marker, 1)[0]
+    return scope
+
+
+def _metric_network(metric: dict) -> str:
+    tail = str(metric.get('scope') or '').rsplit(',', 1)[-1].strip()
+    if tail in {'ESPN', 'ABC', 'CBS', 'NBC', 'Ion', 'USA Network', 'Peacock'}:
+        return tail
+    return ''
+
+
+def _first_round_benchmark():
+    """The published 10-game first-round average already stored for the tracker."""
+    import citation
+    for row in citation.TRACKER_BENCHMARK_ROWS:
+        if str(row[0]).startswith('Playoff first round') and '1.3 million' in str(row[1]):
+            return row
+    return None
+
+
+def _first_round_sources() -> list[tuple[str, str, str]]:
+    if _first_round_benchmark() is None:
+        return []
+    import citation
+    cover = '2026 playoff first round, 10 games'
+    return [
+        (citation.JWS_FIRST_ROUND_URL, '2026-10-08', cover),
+        (citation.FOS_FIRST_ROUND_URL, '2026-10-06', cover),
+    ]
+
+
+def _playoff_table(payload: dict, sources: list) -> str:
+    metrics = _playoff_metrics(payload)
+    if not metrics:
+        return ''
+    body = []
+    benchmark = _first_round_benchmark()
+    if benchmark is not None:
+        import citation
+        body.append([
+            core.esc(benchmark[0]),
+            '2026',
+            'Average',
+            core.esc(core.format_number(1_300_000)),
+            '',
+            (
+                f'<a href="{core.esc(citation.JWS_FIRST_ROUND_URL)}" target="_blank" rel="noopener">Just Women\'s Sports</a>'
+                '; '
+                f'<a href="{core.esc(citation.FOS_FIRST_ROUND_URL)}" target="_blank" rel="noopener">Front Office Sports</a>'
+            ),
+        ])
+        for url, date, _cover in _first_round_sources():
+            sources.append((url, date))
+    for metric in metrics:
+        period = str(metric.get('period') or '')
+        when = core.format_day(period) if core.valid_day(period) else period
+        body.append([
+            core.link_teams(_metric_label(metric)),
+            core.esc(when),
+            core.esc(_metric_kind(metric)),
+            core.esc(core.format_number(metric['value'])),
+            core.esc(_metric_network(metric)),
+            source_cell(metric.get('source_url') or ''),
+        ])
+        sources.append((metric.get('source_url') or '', metric.get('source_date') or ''))
+    return (
+        '<h3>2026 playoff viewership</h3>'
+        '<p class="answer">Average viewers and peak viewers are separate. '
+        'The first-round figure is the published 10-game average.</p>'
+        + table(
+            ['Game', 'Date', 'Metric', 'Viewers', 'Network', 'Source'],
+            body,
+            '2026 playoff viewership',
+            caption='2026 playoff viewership. Average and peak stay on their own rows.',
+            numeric={3},
+        )
+    )
+
+
 def _peak_table(payload: dict, sources: list) -> str:
     rows = [row for row in payload.get('games') or [] if core.is_number(row.get('peak_viewers'))]
     if not rows:
@@ -806,7 +907,7 @@ def viewership_section(payload: dict) -> str:
         f'<h2>{core.esc(core.QUESTION)}</h2>'
         f'<p class="answer">{core.link_teams(watched_answer(payload))}</p>'
         '<h3>What are the most-watched WNBA games?</h3>'
-        f'{games_table}{note_html}{_peak_table(payload, sources)}'
+        f'{games_table}{note_html}{_peak_table(payload, sources)}{_playoff_table(payload, sources)}'
         f'{network_html}{espn_html}'
         f'{core.sources_line(sources)}'
         '</section>'
@@ -1399,6 +1500,7 @@ def register_rows(payload: dict) -> list[dict]:
     for row in payload.get('games') or []:
         name = str(row.get('game') or 'Game')
         _add_cover(found, row.get('viewers_source') or '', row.get('viewers_source_date') or '', f'{name} audience')
+        _add_cover(found, row.get('peak_viewers_source') or '', row.get('peak_viewers_source_date') or '', f'{name} peak audience')
         _add_cover(found, row.get('attendance_source') or '', row.get('attendance_source_date') or '', f'{name} attendance')
         _add_cover(found, row.get('schedule_source') or '', row.get('schedule_source_date') or '', f'{name} schedule')
     for row in payload.get('seasons') or []:
@@ -1415,6 +1517,14 @@ def register_rows(payload: dict) -> list[dict]:
             found, row.get('source') or '', row.get('source_date') or '',
             f"{row.get('season')} {row.get('network')} regular-season audience",
         )
+    for metric in payload.get('metrics') or []:
+        _add_cover(
+            found, metric.get('source_url') or '', metric.get('source_date') or '',
+            str(metric.get('scope') or metric.get('metric_id') or ''),
+        )
+    if _playoff_metrics(payload):
+        for url, date, cover in _first_round_sources():
+            _add_cover(found, url, date, cover)
     for row in payload.get('sources') or []:
         item = found.setdefault(row['url'], {'dates': [], 'covers': []})
         item['publisher'] = row.get('publisher') or ''
