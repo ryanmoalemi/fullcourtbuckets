@@ -51,7 +51,7 @@ The page image and the og/twitter image are built from two photos the site alrea
 - Angel Reese of the Atlanta Dream, May 27, 2026. Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons (`File:Angel_Reese_Dream_2.jpg`).
 - Cecilia Zandalasini with the Valkyries at Target Center on Aug. 24, 2026, not from this series. Photo: John Mac / Wikimedia Commons (CC BY-SA 4.0) (`File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg`). This is the photo on the Finals Game 1 preview.
 
-`automation/build_finals_ratings_tracker.py` writes `matchup-1200.webp` at 1200×675 for the page and `matchup-og.webp` at 1200×630 for og:image and twitter:image. Both frames put the players side by side, keep the tops of their heads, and put `2026 WNBA Finals Ratings Tracker` on a dark gradient strip. The page keeps both original captions. The homepage featured card uses the 1200×675 frame. Nightly hero generation skips this slug so it does not recrop the label.
+`automation/build_finals_ratings_tracker.py` writes `matchup-1200.webp` at 1200×675 for the page and `matchup-og.webp` at 1200×630 for og:image and twitter:image. Both frames put the players side by side and keep the tops of their heads. There is no text or gradient on the photo. The page keeps both original captions. The homepage featured card uses the 1200×675 frame. Nightly hero generation skips this slug so it does not recrop the heads.
 
 ## Page order
 

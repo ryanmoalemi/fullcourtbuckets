@@ -36,7 +36,6 @@ MATCHUP_PAGE = (1200, 675)
 MATCHUP_OG = (1200, 630)
 MATCHUP_PAGE_NAME = 'matchup-1200.webp'
 MATCHUP_OG_NAME = 'matchup-og.webp'
-MATCHUP_LABEL = '2026 WNBA Finals Ratings Tracker'
 REESE_PHOTO = ROOT / 'images' / 'articles' / 'wnba-finals-2026-audience-growth-dream-valkyries' / 'angel-reese-dream-2026.webp'
 ZANDA_PHOTO = ROOT / 'images' / 'articles' / 'finals-game-1-preview-dream-valkyries' / 'cecilia-zandalasini-valkyries-2026.webp'
 CARD_TITLE = '2026 WNBA Finals Ratings Tracker'
@@ -136,33 +135,12 @@ def _head_safe_panel(image: Image.Image, width: int, height: int) -> Image.Image
     return src.resize((width, height), Image.Resampling.LANCZOS)
 
 
-def _label_overlay(width: int, height: int) -> Image.Image:
-    """Dark gradient strip with the tracker name, sized for a phone preview."""
-    overlay = Image.new('RGBA', (width, height), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
-    strip = int(height * 0.38)
-    start = height - strip
-    for y in range(start, height):
-        fade = (y - start) / max(1, strip - 1)
-        alpha = int(235 * (fade ** 1.05))
-        draw.line([(0, y), (width, y)], fill=(5, 5, 6, alpha))
-    font_size = 72 if width >= 1200 else 56
-    font = ImageFont.truetype(str(ROOT / 'assets' / 'fonts' / 'Inter-Bold.ttf'), font_size)
-    lines = _wrap_lines(draw, MATCHUP_LABEL, font, width - 80)
-    line_h = int(font_size * 1.12)
-    y = height - (line_h * len(lines)) - 26
-    for line in lines:
-        text_w = draw.textlength(line, font=font)
-        draw.text(((width - text_w) / 2, y), line, font=font, fill=(245, 243, 239, 255))
-        y += line_h
-    return overlay
-
-
 def draw_matchup(size: tuple[int, int], dest: Path) -> Path:
     """Side-by-side credited photos. Page frame is 1200x675; the og crop is 1200x630.
 
     Sources are the Dream and Valkyries photos already published with credit.
-    Missing files stop the build instead of substituting another picture.
+    The frame is the photos only. Missing files stop the build instead of
+    substituting another picture.
     """
     missing = [path for path in (REESE_PHOTO, ZANDA_PHOTO) if not path.is_file()]
     if missing:
@@ -176,11 +154,8 @@ def draw_matchup(size: tuple[int, int], dest: Path) -> Path:
     canvas = Image.new('RGB', size, (5, 5, 6))
     canvas.paste(left, (0, 0))
     canvas.paste(right, (half, 0))
-    seam = ImageDraw.Draw(canvas)
-    seam.rectangle((half - 2, 0, half + 1, height), fill=(5, 5, 6))
-    framed = Image.alpha_composite(canvas.convert('RGBA'), _label_overlay(width, height))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    framed.convert('RGB').save(dest, 'WEBP', quality=86, method=6)
+    canvas.save(dest, 'WEBP', quality=86, method=6)
     return dest
 
 
