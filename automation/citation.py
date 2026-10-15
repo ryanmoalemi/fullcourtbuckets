@@ -332,6 +332,8 @@ TRACKER_BENCHMARK_ROWS = [
      "Just Women's Sports, Oct. 8, 2026; Front Office Sports, Colin Salao, Oct. 6, 2026"],
     ['Semifinal opening games, 2 games', '1.15 million', 'Up 10%',
      'Front Office Sports, Oct. 7, 2026'],
+    ['Liberty at Dream, semifinals Game 2', '1.4 million', 'One game',
+     'Sports Media Watch, Oct. 13, 2026'],
 ]
 
 TRACKER_CITE = (
@@ -354,6 +356,7 @@ ESPN_REGULAR_SEASON_RELEASE = 'https://espnpressroom.com/press-release/espn-deli
 JWS_FIRST_ROUND_URL = 'https://justwomenssports.com/reads/wnba-playoffs-viewership-semifinals-ratings-surge/'
 FOS_FIRST_ROUND_URL = 'https://frontofficesports.com/article/wnba-playoffs-deliver-most-watched-first-round-ever/'
 FOS_SEMIS_URL = 'https://frontofficesports.com/article/wnba-semifinals-open-with-1-15m-viewers-up-10/'
+SMW_RATINGS_TRACKER_URL = 'https://www.sportsmediawatch.com/sports-ratings-tracker/'
 
 
 def finals_tracker_data_path(root: Path) -> Path:
@@ -487,7 +490,9 @@ def ratings_hub_blocks(payload: dict) -> str:
         f'<a href="{esc(JWS_FIRST_ROUND_URL)}">Just Women\'s Sports, Oct. 8, 2026</a> '
         f'and <a href="{esc(FOS_FIRST_ROUND_URL)}">Front Office Sports, Colin Salao, Oct. 6, 2026</a> '
         '(first round, 1.3 million, up 37%). '
-        f'<a href="{esc(FOS_SEMIS_URL)}">Front Office Sports, Oct. 7, 2026</a> (semifinal openers).</p>\n'
+        f'<a href="{esc(FOS_SEMIS_URL)}">Front Office Sports, Oct. 7, 2026</a> (semifinal openers). '
+        f'<a href="{esc(SMW_RATINGS_TRACKER_URL)}">Sports Media Watch, Oct. 13, 2026</a> '
+        '(Liberty at Dream, semifinals Game 2, 1.4 million average).</p>\n'
         + embed_block(
             'finals-benchmarks',
             embed_snippet(TRACKER_URL, 'finals-benchmarks'),

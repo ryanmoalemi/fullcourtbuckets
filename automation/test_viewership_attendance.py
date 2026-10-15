@@ -83,7 +83,10 @@ class ViewershipPageTests(unittest.TestCase):
     def test_question_page_uses_only_sourced_draft_figures(self):
         page = self.page
         self.assertIn('<h1>WNBA Viewership &amp; Attendance Statistics 2026</h1>', page)
-        self.assertIn('Updated Oct. 13, 2026', page)
+        self.assertIn('Updated Oct. 15, 2026', page)
+        self.assertIn('2026 playoff viewership', page)
+        self.assertIn('https://www.sportsmediawatch.com/sports-ratings-tracker/', page)
+        self.assertIn('semifinals Game 2', page)
         self.assertIn(viewership.links.BYLINE_HTML, page)
         self.assertIn('id="viewership"', page)
         self.assertIn('How many people watched the WNBA Finals?', page)
