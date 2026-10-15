@@ -1,17 +1,8 @@
-files rewritten: 10
+files rewritten: 1
 html files rewritten: 628
 images missing alt: 0
 
-resized images/articles/2026-wnba-finals-ratings-tracker/ratings-sheet.webp to (1688, 950) (30220 bytes) + ratings-sheet.webp
-fallback dropped images/articles/finals-game-1-preview-dream-valkyries/cecilia-zandalasini-valkyries-2026.jpg; serving cecilia-zandalasini-valkyries-2026.webp (65084 bytes)
+resized images/articles/2026-wnba-finals-ratings-tracker/ratings-sheet.webp to (1688, 950) (23308 bytes) + ratings-sheet.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
-resized wnba/viewership-attendance/attendance-average.png to (1600, 560) (32435 bytes) + attendance-average.webp
-resized wnba/viewership-attendance/attendance-growth.png to (1600, 560) (31605 bytes) + attendance-growth.webp
-resized wnba/viewership-attendance/attendance-total.png to (1600, 560) (30967 bytes) + attendance-total.webp
-resized wnba/viewership-attendance/espn-regular-season.png to (1600, 560) (26743 bytes) + espn-regular-season.webp
-resized wnba/viewership-attendance/finals-history.png to (1600, 560) (31969 bytes) + finals-history.webp
-resized wnba/viewership-attendance/network-2026.png to (1600, 560) (31118 bytes) + network-2026.webp
-resized wnba/viewership-attendance/share-11474-landscape.png to (1600, 900) (88237 bytes) + share-11474-landscape.webp
-resized wnba/viewership-attendance/share-11474-portrait.png to (1080, 1350) (83450 bytes) + share-11474-portrait.webp
