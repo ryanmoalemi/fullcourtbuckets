@@ -235,9 +235,13 @@ class HomepageRailTests(unittest.TestCase):
         }]
         fresh = rail.render_rail([], [], _standings(), now=NOW)
         updated = links.apply_homepage(page, articles, fresh)
-        self.assertIn('id="featured-image"', updated)
+        self.assertIn('class="article-card" id="featured-story"', updated)
+        self.assertIn('class="article-visual"', updated)
         self.assertIn('src="/images/articles/keep.jpg"', updated)
         self.assertIn('object-position:center 20%', updated)
+        self.assertIn('>Kept</h3>', updated)
+        self.assertNotIn('feature-credit', updated)
+        self.assertNotIn('id="featured-image"', updated)
         self.assertIn('src="/images/articles/keep.jpg"', updated)
         self.assertIn('>Final standings<', updated)
         self.assertNotIn('Given to You Straight', updated)
@@ -293,11 +297,18 @@ class HomepageRailTests(unittest.TestCase):
         self.assertGreaterEqual(match.group(1), newest)
         self.assertNotIn('Burton from 28', home)
         self.assertIn('WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock', home)
+        featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
+        self.assertIn('class="article-card" id="featured-story"', featured)
+        self.assertIn('class="article-visual"', featured)
+        self.assertIn('class="article-copy"', featured)
+        self.assertNotIn('feature-credit', featured)
+        self.assertNotIn('feature-photo', featured)
+        self.assertNotIn('is-card', featured)
         style = home.split('</style>', 1)[0]
-        self.assertIn('grid-template-areas:"copy photo"', style)
-        self.assertIn('grid-template-areas:"photo" "credit" "copy"', style)
-        self.assertNotIn('.feature-photo{position:absolute', style)
-        self.assertNotIn('.feature-content{position:absolute', style)
+        self.assertIn('.article-card{display:grid;grid-template-columns:46% 54%;min-height:290px;', style)
+        self.assertIn('.article-visual img{width:100%;height:100%;object-fit:cover;', style)
+        self.assertIn('.article-card{grid-template-columns:1fr}.article-visual{min-height:210px}', style)
+        self.assertNotIn('.feature-photo.is-card', style)
 
     def test_published_homepage_has_no_slogan_column(self):
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
