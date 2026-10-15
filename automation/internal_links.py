@@ -401,10 +401,7 @@ HUBS = (
 
 
 MATCHUP_IMAGE = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp'
-MATCHUP_ALT = (
-    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
-    'Cecilia Zandalasini of the Golden State Valkyries'
-)
+MATCHUP_ALT = 'Angel Reese of the Atlanta Dream in a white number 5 jersey looks up'
 
 
 def _featured_source(article: dict) -> dict:
@@ -1917,48 +1914,133 @@ def _pull_block(pattern: re.Pattern, text: str) -> tuple[str, str]:
 
 
 TRACKER_MATCHUP_RE = re.compile(r'<figure\b[^>]*\btracker-matchup\b[^>]*>.*?</figure>', re.S)
+TRACKER_STAT_RE = re.compile(r'<p class="tracker-stat">.*?</p>', re.S)
+TRACKER_NOTE_RE = re.compile(r'<p class="tracker-note">.*?</p>', re.S)
+TRACKER_TOOLS_RE = re.compile(r'<nav class="tracker-tools".*?</nav>', re.S)
+TRACKER_AVERAGES_RE = re.compile(r'<section class="tracker-averages".*?</section>', re.S)
+TRACKER_SHEET_BLOCK_RE = re.compile(
+    r'<section class="tracker-sheet-block"[^>]*>.*?</section>',
+    re.S,
+)
+TRACKER_TABLE_RE = re.compile(
+    r'<div class="fcb-table-wrap tracker-sheet"[^>]*>.*?</table></div>',
+    re.S,
+)
+TRACKER_CALLOUT_RE = re.compile(r'<aside class="fcb-tracker-update".*?</aside>', re.S)
+_OLD_RATINGS_SHEET_RE = re.compile(
+    r'<div class="fcb-table-wrap"[^>]*>.*?>Overnight rating<.*?</table></div>',
+    re.S,
+)
+
+TRACKER_COMPACT_CSS = (
+    '<style id="tracker-compact-css">'
+    '.article .tracker-stat{margin:0 0 8px;color:#f5f3ef;font-size:17px;line-height:1.35}'
+    '.article p.tracker-note,.article p.tracker-credit{margin:4px 0 10px;color:#a5a19b;font-size:12px;line-height:1.4}'
+    '.article .tracker-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}'
+    '.article .tracker-tools a,.article .tracker-tools button{appearance:none;margin:0;font:600 13px/1 Inter,system-ui,sans-serif;color:#f5f3ef;background:#141418;border:1px solid #2b2930;border-radius:3px;padding:6px 10px;cursor:pointer;text-decoration:none}'
+    '.article .tracker-averages{margin:0 0 14px}'
+    '.article .tracker-averages h2{margin:0 0 2px;font:800 15px/1.2 Barlow,sans-serif;letter-spacing:0}'
+    '.article .tracker-averages p{margin:0;font-size:15px;line-height:1.35}'
+    '.article h2.section-title{margin:16px 0 8px;font-size:22px;line-height:1.15;letter-spacing:-.3px}'
+    '.article table.tracker-compact{width:max-content;min-width:100%;margin:0;font-size:14px;line-height:1.15}'
+    '.article table.tracker-compact th,.article table.tracker-compact td{padding:4px 8px;white-space:nowrap;vertical-align:middle}'
+    '.article .fcb-table-wrap.tracker-sheet{overflow-x:auto;margin:0 0 4px}'
+    '.article .tracker-sheet-block{margin:0 0 8px}'
+    '.article .tracker-sheet-block h2.section-title{margin:2px 0 6px}'
+    '</style>'
+)
+TRACKER_COMPACT_JS = (
+    '<script id="tracker-compact-js">'
+    "document.querySelectorAll('.fcb-tracker-cite').forEach(function(button){"
+    "button.addEventListener('click',function(){"
+    "var text=button.getAttribute('data-citation')||'';"
+    "var label=button.textContent;"
+    "var done=function(){button.textContent='Copied';setTimeout(function(){button.textContent=label;},1600);};"
+    "if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,done);return;}"
+    "done();});});"
+    '</script>'
+)
+
+
+def install_tracker_compact(html: str) -> str:
+    """Page-local compact table rules. Shared citation.css stays as other pages use it."""
+    needle = '<link rel="stylesheet" href="/assets/citation.css">'
+    if 'id="tracker-compact-css"' not in html and needle in html:
+        html = html.replace(needle, needle + TRACKER_COMPACT_CSS, 1)
+    if 'id="tracker-compact-js"' not in html and '</body>' in html:
+        html = html.replace('</body>', TRACKER_COMPACT_JS + '</body>', 1)
+    return html
+
+
+def _drop_old_ratings_sheet(article: str) -> str:
+    """Remove a leftover nine-column sheet and a heading that is no longer the compact label."""
+    article = re.sub(
+        r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>',
+        '',
+        article,
+        count=1,
+        flags=re.S,
+    )
+    return _OLD_RATINGS_SHEET_RE.sub('', article, count=1)
 
 
 def order_ratings_tracker(html: str) -> str:
-    """H1, byline, summary, matchup photo, ratings table, quick cite, then the update callout.
+    """Fast facts under the byline, then Cite / CSV / Embed, then the compact sheet.
 
-    A stray lead photo, including the old pending-counts sheet, is removed.
-    The credited matchup stays between the summary and the table.
+    A released Finals audience is the tracker-stat line. When that line is present,
+    it and the game table move above the fast facts. A pending line stays off the page.
+    The update callout stays with the sources, just before the how-made line.
+    A stray lead photo or the old matchup figure is removed. The tall nine-column
+    sheet is removed once the compact table is on the page.
     """
     start = html.find('<article')
     end = html.rfind('</article>')
     if start < 0 or end < 0:
-        return html
+        return install_tracker_compact(html)
     article = LEAD_PHOTO_RE.sub('', html[start:end])
-    matchup, article = _pull_block(TRACKER_MATCHUP_RE, article)
+    article = TRACKER_MATCHUP_RE.sub('', article)
+    _lead, article = _pull_block(re.compile(r'<p class="lead">.*?</p>', re.S), article)
+    stat, article = _pull_block(TRACKER_STAT_RE, article)
+    if stat and 'ratings pending' in stat:
+        stat = ''
+    sheet, article = _pull_block(TRACKER_SHEET_BLOCK_RE, article)
+    if sheet:
+        article = _drop_old_ratings_sheet(article)
+    else:
+        table, article = _pull_block(TRACKER_TABLE_RE, article)
+        if table:
+            article = _drop_old_ratings_sheet(article)
+        note, article = _pull_block(TRACKER_NOTE_RE, article)
+        sheet = '\n'.join(part for part in (table, note) if part)
+    tools, article = _pull_block(TRACKER_TOOLS_RE, article)
+    averages, article = _pull_block(TRACKER_AVERAGES_RE, article)
     cite, article = _pull_block(QUICK_CITE_RE, article)
-    callout, article = _pull_block(
-        re.compile(r'<aside class="fcb-tracker-update".*?</aside>', re.S),
-        article,
-    )
-    lead, article = _pull_block(re.compile(r'<p class="lead">.*?</p>', re.S), article)
-    heading, article = _pull_block(
-        re.compile(r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>', re.S),
-        article,
-    )
-    table, article = _pull_block(
-        re.compile(r'<div class="fcb-table-wrap"[^>]*>.*?</table></div>', re.S),
-        article,
-    )
+    callout, article = _pull_block(TRACKER_CALLOUT_RE, article)
     h1 = article.find('</h1>')
     if h1 < 0:
-        return html
+        return install_tracker_compact(html)
     row = BYLINE_ROW_RE.search(article)
     insert_at = row.end() if row and row.start() > h1 else h1 + len('</h1>')
-    block = '\n'.join(part for part in (lead, matchup, heading, table, cite, callout) if part)
+    if stat:
+        parts = (stat, sheet, cite, averages, tools)
+    else:
+        parts = (cite, averages, tools, sheet)
+    block = '\n'.join(part for part in parts if part)
     article = article[:insert_at].rstrip() + '\n' + block + '\n' + article[insert_at:].lstrip()
-    return html[:start] + article + html[end:]
+    if callout:
+        how = article.find('class="how-made"')
+        if how > 0:
+            article = article[:how].rstrip() + '\n' + callout + '\n' + article[how:]
+        else:
+            article = article.rstrip() + '\n' + callout + '\n'
+    return install_tracker_compact(html[:start] + article + html[end:])
 
 
 def place_quick_cite(html: str) -> str:
     """Fast-facts box follows the lead photo. The byline stays under the H1.
 
-    The ratings tracker keeps its own order: summary, table, then the cite.
+    The ratings tracker keeps its own order: fast facts, tools, then the compact sheet.
+    A released audience moves the latest-game line and the sheet above the facts.
     """
     if _is_ratings_tracker_page(html, None):
         return order_ratings_tracker(html)
@@ -1985,7 +2067,7 @@ def place_quick_cite(html: str) -> str:
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
-    The ratings tracker is the exception: the matchup photo follows the summary, and the quick cite follows the table.
+    The ratings tracker is the exception: fast facts follow the byline, then the journalist tools, then the compact ratings table. A released audience moves the latest-game line and that table above the facts. The matchup photo stays off the body.
     On every other article the byline sits directly under the H1 and above the hero.
     A fast-facts box, when the page has one, follows the hero. An archive note
     stays immediately under the byline, still above the photo.

@@ -65,7 +65,8 @@ class ImageFocalTests(unittest.TestCase):
                 self.assertEqual((article.get('imageOgWidth'), article.get('imageOgHeight')), (1200, 630))
                 self.assertIn(links.BASE + social, story)
                 body = story.split('<article', 1)[1].split('</article>', 1)[0]
-                self.assertIn('matchup-1200.webp', body)
+                self.assertNotIn('matchup-1200.webp', body)
+                self.assertNotIn('tracker-matchup', body)
                 self.assertNotIn('social-card.webp', body)
                 self.assertNotIn('og-1200.webp', story)
                 self.assertNotIn('lead-photo', body)
