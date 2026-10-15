@@ -325,8 +325,8 @@ def apply_contact_line() -> None:
         html = ensure_assets(html)
         html = once(
             html,
-            '<p>He hopes Full Court Buckets helps bring new eyes to the movement.</p>',
-            '<p>He hopes Full Court Buckets helps bring new eyes to the movement.</p>\n' + citation.media_line_html(),
+            '<p>My goal for Full Court Buckets is to cover the WNBA thoughtfully and fairly, with genuine respect for every player in the league. I hope our coverage highlights their talent, gives their stories the attention they deserve, and inspires more people to become fans.</p>',
+            '<p>My goal for Full Court Buckets is to cover the WNBA thoughtfully and fairly, with genuine respect for every player in the league. I hope our coverage highlights their talent, gives their stories the attention they deserve, and inspires more people to become fans.</p>\n' + citation.media_line_html(),
             'author line',
         )
         save(author, html)

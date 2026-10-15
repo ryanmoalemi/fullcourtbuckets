@@ -10,6 +10,8 @@ import csv
 import html
 import json
 import re
+import subprocess
+from datetime import datetime
 from pathlib import Path
 
 BASE = 'https://fullcourtbuckets.com'
@@ -159,29 +161,44 @@ def _comma(value: int) -> str:
     return f'{value:,}'
 
 
-# Games 1-4 are the rows in data/viewership-attendance.json, sourced to the
-# WNBA release of Oct. 13, 2026. Games 5-7 are if necessary. That release
-# does not list dates, times, or networks, so those cells stay unavailable.
+# Games 1-4 dates, tip times, and venues are the rows in
+# data/viewership-attendance.json, from the WNBA release of Oct. 13, 2026.
+# Networks for games 2, 3, and 5-7 are USA and Peacock. Games 1 and 4 are
+# NBC and Peacock. NBC Sports (Oct. 13, 2026) and the Valkyries Game 1 preview
+# list those networks. Games 5-7 dates and tip times are not in the WNBA release.
+NBC_FINALS_NETWORKS = 'https://www.nbcsports.com/wnba/news/wnba-finals-games-3-and-4-between-dream-and-valkyries-move-to-state-farm-arena'
+VALKYRIES_FINALS_PREVIEW = 'https://valkyries.wnba.com/news/gameday-preview-20261017'
 FINALS_TRACKER_ROWS = [
     ['1', 'Sat, Oct. 17, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center',
      'NBC, Peacock', '3:30 p.m. ET / 12:30 p.m. PT', 'Pending tip-off', 'Pending tip-off',
      'Pending tip-off', 'Scheduled'],
     ['2', 'Mon, Oct. 19, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center',
-     'USA, CNBC, Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
+     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
      'Pending tip-off', 'Scheduled'],
     ['3', 'Wed, Oct. 21, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena',
-     'USA, CNBC, Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
+     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
      'Pending tip-off', 'Scheduled'],
     ['4', 'Sat, Oct. 24, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena',
-     'NBC, Peacock', '1:00 p.m. ET / 10:00 a.m. PT', 'Pending tip-off', 'Pending tip-off',
+     'NBC and Peacock', '1:00 p.m. ET / 10:00 a.m. PT', 'Pending tip-off', 'Pending tip-off',
      'Pending tip-off', 'Scheduled'],
-    ['5', 'Not listed', 'If necessary', 'Not listed in the Oct. 13, 2026 WNBA release',
+    ['5', 'Not listed', 'If necessary', 'USA and Peacock',
      'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
-    ['6', 'Not listed', 'If necessary', 'Not listed in the Oct. 13, 2026 WNBA release',
+    ['6', 'Not listed', 'If necessary', 'USA and Peacock',
      'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
-    ['7', 'Not listed', 'If necessary', 'Not listed in the Oct. 13, 2026 WNBA release',
+    ['7', 'Not listed', 'If necessary', 'USA and Peacock',
      'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
 ]
+TRACKER_CAPTION = (
+    'Games 1-4: date, tip time, and venue from the WNBA release of Oct. 13, 2026. '
+    'Games 2 and 3, and games 5-7 if necessary, are on USA and Peacock. '
+    'Games 1 and 4 are on NBC and Peacock. '
+    'NBC Sports and the Golden State Valkyries published those networks. '
+    'Viewer cells stay pending until a network releases them. '
+    'The WNBA release does not list dates or tip times for games 5-7.'
+)
+
+# The ratings page reads this file. Last updated is its last change, not a typed date.
+VIEWERSHIP_DATA_REL = 'data/viewership-attendance.json'
 
 FINALS_TRACKER_HEADERS = [
     'Game', 'Date', 'Matchup', 'Network', 'Tip time', 'Overnight rating',
@@ -256,14 +273,9 @@ def viewership_blocks(payload: dict) -> dict:
         + data_table(
             FINALS_TRACKER_HEADERS,
             FINALS_TRACKER_ROWS,
-            caption=(
-                'Games 1-4: date, tip time, network, and venue from the WNBA release of Oct. 13, 2026. '
-                'Viewer cells stay pending until a network releases them. Games 5-7 are if necessary. '
-                'That release does not list their dates, times, or networks.'
-            ),
+            caption=TRACKER_CAPTION,
         )
-        + f'\n<p class="fcb-note">Schedule source: <a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release, Oct. 13, 2026</a>. '
-        'Full Court Buckets gathers and verifies its own data. A network audience is credited to the network that released it.</p>\n'
+        + '\n' + finals_network_note() + '\n'
         + embed_block(
             'finals-ratings-tracker',
             embed_snippet(TRACKER_URL, 'finals-ratings-tracker'),
@@ -316,7 +328,7 @@ TRACKER_BENCHMARK_ROWS = [
     ['ESPN and ABC games without the Fever', '984,000', 'Up 24%',
      'Front Office Sports, Sept. 25, 2026, for the average. The 24% comparison is the one on the audience article, credited there to the ESPN release of Sept. 25, 2026.'],
     ['Playoff first round, 10 games', '1.3 million', 'Up 37%',
-     "Just Women's Sports, Oct. 8, 2026"],
+     "Just Women's Sports, Oct. 8, 2026; Front Office Sports, Colin Salao, Oct. 6, 2026"],
     ['Semifinal opening games, 2 games', '1.15 million', 'Up 10%',
      'Front Office Sports, Oct. 7, 2026'],
 ]
@@ -337,7 +349,72 @@ SBJ_51_URL = 'https://www.sportsbusinessjournal.com/Articles/2026/09/30/wnba-has
 FOS_GROWTH_URL = 'https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/'
 ESPN_REGULAR_SEASON_RELEASE = 'https://espnpressroom.com/press-release/espn-delivered-its-most-watched-wnba-regular-season-ever/'
 JWS_FIRST_ROUND_URL = 'https://justwomenssports.com/reads/wnba-playoffs-viewership-semifinals-ratings-surge/'
+FOS_FIRST_ROUND_URL = 'https://frontofficesports.com/article/wnba-playoffs-deliver-most-watched-first-round-ever/'
 FOS_SEMIS_URL = 'https://frontofficesports.com/article/wnba-semifinals-open-with-1-15m-viewers-up-10/'
+
+
+def finals_tracker_data_path(root: Path) -> Path:
+    return root / VIEWERSHIP_DATA_REL
+
+
+def finals_tracker_updated(root: Path):
+    """Calendar date of the viewership file's last change.
+
+    A committed file uses the git commit date. An uncommitted edit uses the
+    file's modification time, so the label moves when the data changes and
+    is never typed into the page.
+    """
+    path = finals_tracker_data_path(root)
+    try:
+        status = subprocess.run(
+            ['git', '-C', str(root), 'status', '--porcelain', '--', VIEWERSHIP_DATA_REL],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if status.returncode == 0 and status.stdout.strip():
+            return datetime.fromtimestamp(path.stat().st_mtime).date()
+        log = subprocess.run(
+            ['git', '-C', str(root), 'log', '-1', '--format=%cs', '--', VIEWERSHIP_DATA_REL],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        stamp = log.stdout.strip()
+        if log.returncode == 0 and stamp:
+            return datetime.strptime(stamp, '%Y-%m-%d').date()
+    except (OSError, ValueError):
+        pass
+    return datetime.fromtimestamp(path.stat().st_mtime).date()
+
+
+def finals_tracker_updated_label(root: Path) -> str:
+    day = finals_tracker_updated(root)
+    return f'{day.strftime("%B")} {day.day}, {day.year}'
+
+
+def finals_tracker_update_callout(root: Path) -> str:
+    """Update note after the quick cite. The date is the data file's last change."""
+    label = esc(finals_tracker_updated_label(root))
+    return (
+        '<aside class="fcb-tracker-update" aria-label="How this tracker is updated">\n'
+        '<p>How this tracker is updated: After each Finals game, we add average viewers, '
+        'peak audience and overnight rating once the network that aired it releases them, '
+        'usually within 1 to 2 days. Every number is checked against the network\'s own release '
+        f'before it goes up. Last updated: {label}.</p>\n'
+        '</aside>'
+    )
+
+
+def finals_network_note() -> str:
+    """Dates from the WNBA release. Networks from NBC Sports and the Valkyries."""
+    return (
+        f'<p class="fcb-note">Schedule dates for games 1-4: <a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release, Oct. 13, 2026</a>. '
+        f'Networks: <a href="{esc(NBC_FINALS_NETWORKS)}">NBC Sports, Oct. 13, 2026</a> and the '
+        f'<a href="{esc(VALKYRIES_FINALS_PREVIEW)}">Valkyries Game 1 preview</a>. '
+        'Games 2, 3, and 5-7 are USA and Peacock. Games 1 and 4 are NBC and Peacock. '
+        'Full Court Buckets gathers and verifies its own data. A network audience is credited to the network that released it.</p>'
+    )
 
 
 def ratings_hub_crosslink() -> str:
@@ -363,20 +440,16 @@ def ratings_hub_blocks(payload: dict) -> str:
     ], TRACKER_CITE)
     tracker = (
         '<h2 class="section-title" id="finals-ratings-tracker">2026 WNBA Finals game-by-game ratings</h2>\n'
-        '<p>Games 1 through 4 are the only ones in the Oct. 13, 2026 WNBA release. '
-        'Games 5, 6 and 7 are if necessary. That release does not list a date, a tip time, or a network for them, so those cells say Not listed. '
+        '<p>Games 1 through 4 are the only ones dated in the Oct. 13, 2026 WNBA release. '
+        'Games 5, 6 and 7 are if necessary. That release does not list a date or a tip time for them, so those cells say Not listed. '
+        'NBC Sports and the Valkyries list games 5-7 on USA and Peacock. '
         'Average viewers, peak audience, and the overnight rating stay Pending tip-off until the network that aired the game releases a number.</p>\n'
         + data_table(
             FINALS_TRACKER_HEADERS,
             FINALS_TRACKER_ROWS,
-            caption=(
-                'Games 1-4: date, tip time, network, and venue from the WNBA release of Oct. 13, 2026. '
-                'Viewer cells stay pending until a network releases them. Games 5-7 are if necessary. '
-                'That release does not list their dates, times, or networks.'
-            ),
+            caption=TRACKER_CAPTION,
         )
-        + f'\n<p class="fcb-note">Schedule source: <a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release, Oct. 13, 2026</a>. '
-        'Full Court Buckets gathers and verifies its own data. A network audience is credited to the network that released it.</p>\n'
+        + '\n' + finals_network_note() + '\n'
         + embed_block(
             'finals-ratings-tracker',
             embed_snippet(TRACKER_URL, 'finals-ratings-tracker'),
@@ -401,7 +474,9 @@ def ratings_hub_blocks(payload: dict) -> str:
         f'<a href="{esc(FOS_GROWTH_URL)}">Front Office Sports, Sept. 25, 2026</a> (984,000). '
         f'The up 24% comparison is the one on the audience article, credited there to the '
         f'<a href="{esc(ESPN_REGULAR_SEASON_RELEASE)}">ESPN release, Sept. 25, 2026</a>. '
-        f'<a href="{esc(JWS_FIRST_ROUND_URL)}">Just Women\'s Sports, Oct. 8, 2026</a> (first round). '
+        f'<a href="{esc(JWS_FIRST_ROUND_URL)}">Just Women\'s Sports, Oct. 8, 2026</a> '
+        f'and <a href="{esc(FOS_FIRST_ROUND_URL)}">Front Office Sports, Colin Salao, Oct. 6, 2026</a> '
+        '(first round, 1.3 million, up 37%). '
         f'<a href="{esc(FOS_SEMIS_URL)}">Front Office Sports, Oct. 7, 2026</a> (semifinal openers).</p>\n'
         + embed_block(
             'finals-benchmarks',

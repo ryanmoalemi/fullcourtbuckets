@@ -360,6 +360,10 @@ def ensure_article_hero(root: Path, article: dict) -> dict:
     A post with no imageFocal is measured once and the result is stored, including
     the center 20% fallback, so a later build does not move the crop.
     """
+    if article.get('slug') == '2026-wnba-finals-ratings-tracker':
+        # The pending-counts sheet is not this page's social image. The tracker
+        # generator owns imageOg (social-card.webp) and keeps it out of the body.
+        return article
     source = source_path(root, article)
     if source is None:
         return article

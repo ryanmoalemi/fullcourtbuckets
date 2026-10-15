@@ -47,6 +47,16 @@ class ImageFocalTests(unittest.TestCase):
             if slug in on_home:
                 self.assertIn(article['image'], home, f'{slug} home')
             story = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
+            if slug == '2026-wnba-finals-ratings-tracker':
+                social = '/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
+                self.assertEqual(article.get('imageOg'), social)
+                self.assertEqual((article.get('imageOgWidth'), article.get('imageOgHeight')), (1200, 630))
+                self.assertIn(links.BASE + social, story)
+                body = story.split('<article', 1)[1].split('</article>', 1)[0]
+                self.assertNotIn('social-card.webp', body)
+                self.assertNotIn('og-1200.webp', story)
+                self.assertNotIn('lead-photo', body)
+                continue
             self.assertIn(token, story, slug)
             og = str(article.get('imageOg') or '')
             self.assertTrue(og.endswith(('og-1200.webp', 'og.webp')), slug)

@@ -902,24 +902,25 @@ BYLINE_IMAGE = versioned_image(BYLINE_PHOTO)
 # One line for Person JSON-LD. Visible bio paragraphs stay separate.
 AUTHOR_DESCRIPTION = (
     'Ryan Moalemi has been writing internet content since 2001. '
-    'He started sports writing in 2026 and runs Full Court Buckets, '
-    'hoping it helps bring new eyes to the movement.'
+    'He found the WNBA in 2026 because of Angel Reese and covers the league for Full Court Buckets.'
 )
 AUTHOR_META = (
-    'Ryan Moalemi runs Full Court Buckets and writes its WNBA game recaps and news. '
-    'He has been writing internet content since 2001.'
+    'Ryan Moalemi has been writing internet content since 2001. '
+    'He covers the WNBA for Full Court Buckets.'
 )
 AUTHOR_BIO = (
-    'Ryan Moalemi has been writing internet content since 2001.',
     (
-        'He started sports writing in 2026 after being impressed by Angel Reese in a WNBA game, '
-        'and by the positive effect the league is having on women\'s sports overall.'
+        "Hi, I'm Ryan Moalemi. I've been writing internet content since 2001. "
+        'I found the WNBA in 2026 because of Angel Reese, she is the reason I fell in love with the league. '
+        'Now I enjoy watching a number of other players and teams. '
+        "I support the WNBA and the positive effect the league is having on women's sports."
     ),
     (
-        'He runs Full Court Buckets, a US WNBA news and analysis site. '
-        'He writes original content himself, and he also edits AI-assisted drafts.'
+        'My goal for Full Court Buckets is to cover the WNBA thoughtfully and fairly, '
+        'with genuine respect for every player in the league. '
+        'I hope our coverage highlights their talent, gives their stories the attention they deserve, '
+        'and inspires more people to become fans.'
     ),
-    'He hopes Full Court Buckets helps bring new eyes to the movement.',
 )
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
 BYLINE_HTML = (
@@ -1728,8 +1729,61 @@ def _splice_block(html: str, at: int, block: str) -> str:
     return '\n'.join(parts)
 
 
+def _is_ratings_tracker_page(html: str, article: dict | None) -> bool:
+    """The Finals ratings hub has no body hero. Nightly lead ordering must not put one back."""
+    if isinstance(article, dict) and article.get('slug') == '2026-wnba-finals-ratings-tracker':
+        return True
+    return 'class="fcb-tracker-update"' in html and 'id="finals-ratings-tracker"' in html
+
+
+def _pull_block(pattern: re.Pattern, text: str) -> tuple[str, str]:
+    match = pattern.search(text)
+    if not match:
+        return '', text
+    return match.group(0).strip(), text[:match.start()] + text[match.end():]
+
+
+def order_ratings_tracker(html: str) -> str:
+    """H1, byline, one-line summary, ratings table, quick cite, then the update callout.
+
+    The social card stays in og:image and twitter:image. It is not a body photo.
+    """
+    start = html.find('<article')
+    end = html.rfind('</article>')
+    if start < 0 or end < 0:
+        return html
+    article = LEAD_PHOTO_RE.sub('', html[start:end])
+    cite, article = _pull_block(QUICK_CITE_RE, article)
+    callout, article = _pull_block(
+        re.compile(r'<aside class="fcb-tracker-update".*?</aside>', re.S),
+        article,
+    )
+    lead, article = _pull_block(re.compile(r'<p class="lead">.*?</p>', re.S), article)
+    heading, article = _pull_block(
+        re.compile(r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>', re.S),
+        article,
+    )
+    table, article = _pull_block(
+        re.compile(r'<div class="fcb-table-wrap"[^>]*>.*?</table></div>', re.S),
+        article,
+    )
+    h1 = article.find('</h1>')
+    if h1 < 0:
+        return html
+    row = BYLINE_ROW_RE.search(article)
+    insert_at = row.end() if row and row.start() > h1 else h1 + len('</h1>')
+    block = '\n'.join(part for part in (lead, heading, table, cite, callout) if part)
+    article = article[:insert_at].rstrip() + '\n' + block + '\n' + article[insert_at:].lstrip()
+    return html[:start] + article + html[end:]
+
+
 def place_quick_cite(html: str) -> str:
-    """Fast-facts box follows the lead photo. The byline stays under the H1."""
+    """Fast-facts box follows the lead photo. The byline stays under the H1.
+
+    The ratings tracker keeps its own order: summary, table, then the cite.
+    """
+    if _is_ratings_tracker_page(html, None):
+        return order_ratings_tracker(html)
     match = QUICK_CITE_RE.search(html)
     if not match:
         return html
@@ -1753,7 +1807,8 @@ def place_quick_cite(html: str) -> str:
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
-    The byline sits directly under the H1 and above the hero on every article.
+    The ratings tracker is the exception: no body hero, and the quick cite follows the table.
+    On every other article the byline sits directly under the H1 and above the hero.
     A fast-facts box, when the page has one, follows the hero. An archive note
     stays immediately under the byline, still above the photo.
 
@@ -1761,6 +1816,8 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
     Later photos use the same 16:9 crop unless the figure is a screenshot or chart.
     """
+    if _is_ratings_tracker_page(html, article):
+        return order_ratings_tracker(html)
     meta = article
     start = html.find('<article')
     end = html.rfind('</article>')

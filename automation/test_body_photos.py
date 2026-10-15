@@ -74,6 +74,11 @@ class BodyPhotoTests(unittest.TestCase):
         for article in _articles():
             slug = article['slug']
             html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
+            if slug == '2026-wnba-finals-ratings-tracker':
+                body = html.split('<article', 1)[1].split('</article>', 1)[0]
+                self.assertNotIn('lead-photo', body)
+                self.assertNotIn('<figure', body)
+                continue
             self.assertIn(BODY_IMG_RULE, html, slug)
             self.assertIn(NO_CROP_IMG_RULE, html, slug)
             self.assertIn(NO_CROP_MOBILE_RULE, html, slug)

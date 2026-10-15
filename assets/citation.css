@@ -173,6 +173,24 @@ h3:focus-within > .fcb-anchor,
   color: #ff9800;
 }
 
+.fcb-tracker-update {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  border: 2px solid #ff9800;
+  border-radius: 4px;
+  background: #241c0e;
+}
+
+.fcb-tracker-update p {
+  margin: 0;
+  color: #f5f3ef;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 @media (max-width: 900px) {
   .fcb-anchor {
     opacity: .8;
@@ -180,6 +198,14 @@ h3:focus-within > .fcb-anchor,
 
   .fcb-quick-cite {
     padding: 12px;
+  }
+
+  .fcb-tracker-update {
+    padding: 8px 10px;
+  }
+
+  .fcb-tracker-update p {
+    font-size: 16px;
   }
 
   .fcb-quick-cite li,

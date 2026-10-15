@@ -23,6 +23,11 @@ class NewsLeadTests(unittest.TestCase):
     def test_published_stories_show_the_photo_before_the_hook(self):
         for article in _articles():
             html = (ROOT / 'news' / article['slug'] / 'index.html').read_text(encoding='utf-8')
+            if article['slug'] == '2026-wnba-finals-ratings-tracker':
+                body = html.split('<article', 1)[1].split('</article>', 1)[0]
+                self.assertNotIn('lead-photo', body)
+                self.assertNotIn('social-card.webp', body)
+                continue
             figure = _lead_figure(html)
             self.assertTrue(figure, article['slug'])
             photo = html.find(figure)

@@ -1,4 +1,5 @@
 """Ryan Moalemi is the author of every news post, including ones generated later."""
+import html
 import json
 import re
 import tempfile
@@ -52,10 +53,21 @@ class AuthorPageTests(unittest.TestCase):
         page = (ROOT / 'authors' / 'ryan-moalemi' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('<h1>Ryan Moalemi</h1>', page)
         self.assertIn('src="/images/authors/ryan-moalemi-photo.jpg', page)
+        bio = page.split('<div class="bio">', 1)[1].split('class="collection-teaser"', 1)[0]
+        visible_bio = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', html.unescape(bio)))
         self.assertIn(
-            'He runs Full Court Buckets, a US WNBA news and analysis site. '
-            'He writes original content himself, and he also edits AI-assisted drafts.',
-            page,
+            "Hi, I'm Ryan Moalemi. I've been writing internet content since 2001. "
+            'I found the WNBA in 2026 because of Angel Reese, she is the reason I fell in love with the league. '
+            'Now I enjoy watching a number of other players and teams. '
+            "I support the WNBA and the positive effect the league is having on women's sports.",
+            visible_bio,
+        )
+        self.assertIn(
+            'My goal for Full Court Buckets is to cover the WNBA thoughtfully and fairly, '
+            'with genuine respect for every player in the league. '
+            'I hope our coverage highlights their talent, gives their stories the attention they deserve, '
+            'and inspires more people to become fans.',
+            visible_bio,
         )
         self.assertNotIn('uses AI tools to help draft them.', page)
         self.assertNotIn('and writes its game recaps and news.', page)
@@ -63,15 +75,13 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('width="320"', page)
         self.assertIn('height="320"', page)
         self.assertIn('writing internet content since 2001', page)
-        self.assertIn('started sports writing in 2026', page)
         self.assertIn('Angel Reese', page)
         self.assertIn('href="/wnba/angel-reese/">Angel Reese</a>', page)
         self.assertNotIn('href="/wnba/angel-reese/" target="_blank"', page)
         self.assertIn('positive effect the league is having on women', page)
-        self.assertIn('bring new eyes to the movement', page)
-        self.assertIn('runs Full Court Buckets', page)
+        self.assertIn('thoughtfully and fairly', page)
         self.assertIn('<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi', page)
-        bio_end = page.find('bring new eyes to the movement')
+        bio_end = page.find('inspires more people to become fans.')
         tiktok_at = page.find('href="https://www.tiktok.com/@fullcourtbuckets" target="_blank" rel="noopener me"')
         self.assertGreater(bio_end, 0)
         self.assertGreater(tiktok_at, bio_end)
@@ -131,6 +141,20 @@ class AuthorPageTests(unittest.TestCase):
         self.assertIn('runs Full Court Buckets. He comes up with the stories, edits every one, and uses AI tools to help draft them.', about)
         self.assertIn('href="/how-we-make-full-court-buckets/">Here\'s how that works.</a>', about)
         self.assertNotIn('writes the news and game recaps.', about)
+        self.assertIn(
+            'The site is independently funded by its founder, Ryan Moalemi. '
+            'No advertiser or outside party has any say in which games, players, or teams we cover.',
+            about,
+        )
+        self.assertNotIn('supported by advertising', about)
+        contact = (ROOT / 'contact' / 'index.html').read_text(encoding='utf-8')
+        self.assertIn('independently funded by its founder, Ryan Moalemi', contact)
+        self.assertNotIn('supported by advertising', contact)
+        for path in ROOT.rglob('*.html'):
+            if any(part in {'.git', 'node_modules'} for part in path.parts):
+                continue
+            text = path.read_text(encoding='utf-8')
+            self.assertNotIn('supported by advertising', text, path.relative_to(ROOT).as_posix())
         menu = site_nav.render(site_nav.build_menu(ROOT), '/__none__')
         self.assertNotIn('/authors/', menu)
         self.assertIn('<li><a href="/news/">News</a></li>', menu)
@@ -218,7 +242,7 @@ class AuthorPageTests(unittest.TestCase):
             )
             self.assertIn('href="/news/future-recap/"', page)
             self.assertIn('since 2001', page)
-            self.assertIn('writes original content himself', page)
+            self.assertIn('thoughtfully and fairly', page)
             self.assertIn(links.AUTHOR_HOW_LABEL, page)
             self.assertIn(links.AUTHOR_TIKTOK_HTML, page)
             self.assertNotIn('sameAs', links.author_person())

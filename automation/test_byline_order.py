@@ -113,5 +113,47 @@ class BylineOrderTests(unittest.TestCase):
         visible_collection = _visible(collection)
         visible_ordered = _visible(ordered)
         self.assertLess(visible_collection.find('</h1>'), visible_collection.find('class="hero-photo"'))
-        self.assertLess(hub.find('class="byline"'), hub.find('class="lead-photo"'))
         self.assertLess(visible_ordered.find('class="byline"'), visible_ordered.find('lead-photo'))
+        self.assertNotIn('lead-photo', hub)
+        self.assertNotIn('hero-1200.webp', hub)
+        h1 = hub.find('</h1>')
+        byline = hub.find('class="byline"')
+        summary = hub.find('class="lead"')
+        table = hub.find('fcb-data-table')
+        cite = hub.find('fcb-quick-cite')
+        callout = hub.find('fcb-tracker-update')
+        self.assertLess(h1, byline)
+        self.assertLess(byline, summary)
+        self.assertLess(summary, table)
+        self.assertLess(table, cite)
+        self.assertLess(cite, callout)
+
+    def test_nightly_lead_order_does_not_put_the_tracker_hero_back(self):
+        html = tracker.article_html({})
+        html = html.replace(
+            '</h1>',
+            '</h1><figure class="lead-photo"><img src="/images/articles/2026-wnba-finals-ratings-tracker/hero-1200.webp" alt="Viewer counts pending"></figure>',
+            1,
+        )
+        fixed = links.order_news_lead(html, {'slug': '2026-wnba-finals-ratings-tracker'})
+        self.assertNotIn('lead-photo', fixed)
+        self.assertNotIn('hero-1200.webp', fixed)
+        self.assertLess(fixed.find('class="lead"'), fixed.find('fcb-data-table'))
+        self.assertLess(fixed.find('fcb-data-table'), fixed.find('fcb-quick-cite'))
+        self.assertLess(fixed.find('fcb-quick-cite'), fixed.find('fcb-tracker-update'))
+
+    def test_social_card_switches_to_the_latest_released_finals_game(self):
+        self.assertEqual(tracker.tracker_social_headline({}), tracker.BASELINE_SOCIAL_STAT)
+        self.assertEqual(tracker.tracker_social_headline({'games': []}), tracker.BASELINE_SOCIAL_STAT)
+        payload = {'games': [
+            {'game': 'Finals Game 1', 'date': '2026-10-17', 'viewers': 2100000},
+            {'game': 'Finals Game 2', 'date': '2026-10-19', 'viewers': None},
+        ]}
+        self.assertEqual(tracker.tracker_social_headline(payload), 'Game 1 averaged 2.1 million viewers')
+        payload['games'][1]['viewers'] = 1800000
+        self.assertEqual(tracker.tracker_social_headline(payload), 'Game 2 averaged 1.8 million viewers')
+        card = tracker.draw_social_card({})
+        self.assertTrue(card.is_file())
+        from PIL import Image
+        with Image.open(card) as image:
+            self.assertEqual(image.size, (tracker.SOCIAL_WIDTH, tracker.SOCIAL_HEIGHT))
