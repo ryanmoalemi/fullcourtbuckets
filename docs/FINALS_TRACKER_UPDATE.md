@@ -52,16 +52,18 @@ The homepage card and the og/twitter image are one photo: Angel Reese of the Atl
 
 ## Page order
 
-For a journalist, top to bottom:
+For a journalist, top to bottom, while no Finals game has a released audience:
 
 1. Headline and byline.
-2. One-line stat. With no released Finals audience it reads `Game 1 Sat Oct 17, 12:30 PM PT on NBC/Peacock; ratings pending` plus the 2025 Finals average. After a release it names that game's audience and keeps the 2025 benchmark.
-3. Compact ratings table. Dates are `Sat 10/17`. Matchups are `ATL @ GSV`. Networks are `NBC/Peacock`. Tip times are `3:30 / 12:30 PM`, or `1:00 PM / 10:00 AM` when the meridians differ. Empty audience cells say `Pending`. Games 5-7 are one footnote line, with the venues and the Oct. 13 source note.
-4. Cite this, Download CSV, and Embed. Those last two jump to the sections further down.
-5. Past Finals averages: 2022 534K, 2023 728K, 2024 1.6M, 2025 1.5M.
-6. Fast facts.
-7. Benchmarks, search interest, and the full Finals history table.
-8. Network note, photo credit, embed code, CSV, and the update callout.
+2. The existing Fast Facts for Media & Citations box. It includes the past Finals averages (2022 534K, 2023 728K, 2024 1.6M, 2025 1.5M) and the NBC and Peacock regular-season average (1.75 million across 7 games, TV and streaming).
+3. Cite this, Download CSV, and Embed. Those last two jump to the sections further down.
+4. Compact ratings table, labeled `Finals games (ratings added after each game)`. Dates are `Sat 10/17`. Matchups are `ATL @ GSV`. Networks are `NBC/Peacock`. Tip times are `3:30 / 12:30 PM`, or `1:00 PM / 10:00 AM` when the meridians differ. Empty audience cells say `Pending`. Games 5-7 are one footnote line, with the venues and the Oct. 13 source note.
+5. Benchmarks, search interest, and the full Finals history table.
+6. Network note, photo credit, embed code, CSV, and the update callout.
+
+Once any Finals game has a real viewer count, the latest-game line and the compact table move above the fast facts. The pending Game 1 sentence stays off the page until that number exists.
+
+The CSV includes the 2026 benchmarks, the NBC and Peacock regular-season row, October search estimates, games 1-7, and Finals average viewers for the seasons on file.
 
 ## Regenerate
 

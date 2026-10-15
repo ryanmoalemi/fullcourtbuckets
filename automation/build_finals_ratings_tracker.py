@@ -252,13 +252,20 @@ def compact_ratings_table(payload: dict | None) -> str:
     )
     table = table.replace(
         '<div class="fcb-table-wrap">',
-        '<div class="fcb-table-wrap tracker-sheet" id="finals-ratings-tracker">',
+        '<div class="fcb-table-wrap tracker-sheet">',
         1,
     )
-    return table.replace(
+    table = table.replace(
         '<table class="fcb-data-table">',
-        '<table class="fcb-data-table tracker-compact" aria-label="2026 WNBA Finals game-by-game ratings">',
+        f'<table class="fcb-data-table tracker-compact" aria-label="{links.esc(SHEET_HEADING)}">',
         1,
+    )
+    return (
+        '<section class="tracker-sheet-block">\n'
+        f'<h2 class="section-title" id="finals-ratings-tracker">{SHEET_HEADING}</h2>\n'
+        f'{table}\n'
+        f'{tracker_footnote()}\n'
+        '</section>'
     )
 
 
@@ -286,24 +293,91 @@ def journalist_tools() -> str:
     )
 
 
-def _past_finals_line(payload: dict | None) -> str:
+NBC_REGULAR_SEASON = (
+    'https://www.nbcsports.com/pressbox/press-releases/'
+    'fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-'
+    'wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season'
+)
+NBC_REGULAR_SEASON_VIEWERS = 1_750_000
+NBC_REGULAR_SEASON_GAMES = 7
+SHEET_HEADING = 'Finals games (ratings added after each game)'
+
+
+def _past_finals_found(payload: dict | None) -> dict:
     found = {}
     for row in (payload or {}).get('seasons') or []:
         year = row.get('season')
         viewers = row.get('finals_avg_viewers')
         if year in {item[0] for item in PAST_FINALS} and isinstance(viewers, int) and viewers > 0:
             found[year] = viewers
+    return found
+
+
+def _past_finals_line(payload: dict | None) -> str:
+    found = _past_finals_found(payload)
     parts = [f'{year} {_short_viewers(found.get(year, viewers))}' for year, viewers in PAST_FINALS]
-    return '. '.join(parts) + '.'
+    return ', '.join(parts)
+
+
+def _past_finals_html(payload: dict | None) -> str:
+    found = _past_finals_found(payload)
+    parts = [
+        f'<strong>{year} {_short_viewers(found.get(year, viewers))}</strong>'
+        for year, viewers in PAST_FINALS
+    ]
+    return ', '.join(parts)
+
+
+def _nbc_broadcast(payload: dict | None) -> tuple[int, int, str]:
+    """NBC and Peacock regular-season average stored on the viewership file.
+
+    The file's 2026 NBC row is 1,750,000 across 7 games, TV and streaming.
+    A missing row keeps that verified fallback.
+    """
+    viewers = NBC_REGULAR_SEASON_VIEWERS
+    games = NBC_REGULAR_SEASON_GAMES
+    source = NBC_REGULAR_SEASON
+    for row in (payload or {}).get('broadcasts') or []:
+        if row.get('season') != 2026 or row.get('network') != 'NBC':
+            continue
+        value = row.get('avg_viewers')
+        count = row.get('games')
+        if isinstance(value, int) and not isinstance(value, bool) and value > 0:
+            viewers = value
+        if isinstance(count, int) and not isinstance(count, bool) and count > 0:
+            games = count
+        link = row.get('source')
+        if isinstance(link, str) and link.startswith('http'):
+            source = link
+        break
+    return viewers, games, source
+
+
+def _nbc_fact_html(payload: dict | None) -> str:
+    viewers, games, source = _nbc_broadcast(payload)
+    return (
+        f'NBC and Peacock averaged <strong>{_millions(viewers)}</strong> '
+        f'across {games} regular-season games, TV and streaming '
+        f'(<a href="{links.esc(source)}">NBC Sports, Aug. 26, 2026</a>).'
+    )
 
 
 def past_finals_averages(payload: dict | None) -> str:
+    """Kept for a leftover section. The published page folds this line into fast facts."""
     return (
         '<section class="tracker-averages" id="past-finals-averages">'
         '<h2>Past Finals averages</h2>'
-        f'<p>{_past_finals_line(payload)}</p>'
+        f'<p>{_past_finals_line(payload)}.</p>'
         '</section>'
     )
+
+
+def page_stat(payload: dict | None) -> str:
+    """Latest released Finals audience. Empty until a game has a real viewer count."""
+    line = tracker_social_headline(payload)
+    if line == BASELINE_SOCIAL_STAT:
+        return ''
+    return f'{line}. The 2025 Finals averaged 1.5 million.'
 
 
 def _tag_ratings_embed(block: str) -> str:
@@ -436,19 +510,33 @@ def _lower_sections(rest: str) -> tuple[str, str, str]:
     return note, embed, charts
 
 
-def article_html(payload: dict) -> str:
+def _fast_facts(payload: dict) -> tuple[str, str]:
+    """Existing fast-facts aside, with past Finals averages and the NBC average added."""
     blocks = citation.ratings_hub_blocks(payload)
     cite, _, rest = blocks.partition('</aside>')
     cite += '</aside>'
+    extras = (
+        f'<li>Past Finals averages: {_past_finals_html(payload)}.</li>\n'
+        f'<li>{_nbc_fact_html(payload)}</li>\n'
+    )
+    cite = cite.replace('<ul>\n', '<ul>\n' + extras, 1)
+    return cite, rest
+
+
+def article_html(payload: dict) -> str:
+    cite, rest = _fast_facts(payload)
     note, embed, charts = _lower_sections(rest)
+    stat = page_stat(payload)
+    stat_html = f'<p class="tracker-stat">{links.esc(stat)}</p>\n' if stat else ''
+    sheet = compact_ratings_table(payload)
+    tools = journalist_tools()
+    if stat_html:
+        top = f'{stat_html}{sheet}\n{cite}\n{tools}'
+    else:
+        top = f'{cite}\n{tools}\n{sheet}'
     return f'''<article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div><h1>{links.esc(HEADLINE)}</h1>
 <div class="byline-row">{links.BYLINE_HTML}<time class="article-date" datetime="2026-10-14">October 14, 2026</time></div>
-<p class="tracker-stat">{links.esc(headline_stat(payload))}</p>
-{compact_ratings_table(payload)}
-{tracker_footnote()}
-{journalist_tools()}
-{past_finals_averages(payload)}
-{cite}
+{top}
 {charts}
 {note}
 {REESE_CREDIT}

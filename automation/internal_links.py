@@ -1918,6 +1918,10 @@ TRACKER_STAT_RE = re.compile(r'<p class="tracker-stat">.*?</p>', re.S)
 TRACKER_NOTE_RE = re.compile(r'<p class="tracker-note">.*?</p>', re.S)
 TRACKER_TOOLS_RE = re.compile(r'<nav class="tracker-tools".*?</nav>', re.S)
 TRACKER_AVERAGES_RE = re.compile(r'<section class="tracker-averages".*?</section>', re.S)
+TRACKER_SHEET_BLOCK_RE = re.compile(
+    r'<section class="tracker-sheet-block"[^>]*>.*?</section>',
+    re.S,
+)
 TRACKER_TABLE_RE = re.compile(
     r'<div class="fcb-table-wrap tracker-sheet"[^>]*>.*?</table></div>',
     re.S,
@@ -1941,6 +1945,8 @@ TRACKER_COMPACT_CSS = (
     '.article table.tracker-compact{width:max-content;min-width:100%;margin:0;font-size:14px;line-height:1.15}'
     '.article table.tracker-compact th,.article table.tracker-compact td{padding:4px 8px;white-space:nowrap;vertical-align:middle}'
     '.article .fcb-table-wrap.tracker-sheet{overflow-x:auto;margin:0 0 4px}'
+    '.article .tracker-sheet-block{margin:0 0 8px}'
+    '.article .tracker-sheet-block h2.section-title{margin:2px 0 6px}'
     '</style>'
 )
 TRACKER_COMPACT_JS = (
@@ -1966,9 +1972,23 @@ def install_tracker_compact(html: str) -> str:
     return html
 
 
-def order_ratings_tracker(html: str) -> str:
-    """H1, byline, headline stat, compact table, tools, past averages, then the quick cite.
+def _drop_old_ratings_sheet(article: str) -> str:
+    """Remove a leftover nine-column sheet and a heading that is no longer the compact label."""
+    article = re.sub(
+        r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>',
+        '',
+        article,
+        count=1,
+        flags=re.S,
+    )
+    return _OLD_RATINGS_SHEET_RE.sub('', article, count=1)
 
+
+def order_ratings_tracker(html: str) -> str:
+    """Fast facts under the byline, then Cite / CSV / Embed, then the compact sheet.
+
+    A released Finals audience is the tracker-stat line. When that line is present,
+    it and the game table move above the fast facts. A pending line stays off the page.
     The update callout stays with the sources, just before the how-made line.
     A stray lead photo or the old matchup figure is removed. The tall nine-column
     sheet is removed once the compact table is on the page.
@@ -1981,17 +2001,17 @@ def order_ratings_tracker(html: str) -> str:
     article = TRACKER_MATCHUP_RE.sub('', article)
     _lead, article = _pull_block(re.compile(r'<p class="lead">.*?</p>', re.S), article)
     stat, article = _pull_block(TRACKER_STAT_RE, article)
-    table, article = _pull_block(TRACKER_TABLE_RE, article)
-    if table:
-        article = re.sub(
-            r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>',
-            '',
-            article,
-            count=1,
-            flags=re.S,
-        )
-        article = _OLD_RATINGS_SHEET_RE.sub('', article, count=1)
-    note, article = _pull_block(TRACKER_NOTE_RE, article)
+    if stat and 'ratings pending' in stat:
+        stat = ''
+    sheet, article = _pull_block(TRACKER_SHEET_BLOCK_RE, article)
+    if sheet:
+        article = _drop_old_ratings_sheet(article)
+    else:
+        table, article = _pull_block(TRACKER_TABLE_RE, article)
+        if table:
+            article = _drop_old_ratings_sheet(article)
+        note, article = _pull_block(TRACKER_NOTE_RE, article)
+        sheet = '\n'.join(part for part in (table, note) if part)
     tools, article = _pull_block(TRACKER_TOOLS_RE, article)
     averages, article = _pull_block(TRACKER_AVERAGES_RE, article)
     cite, article = _pull_block(QUICK_CITE_RE, article)
@@ -2001,7 +2021,11 @@ def order_ratings_tracker(html: str) -> str:
         return install_tracker_compact(html)
     row = BYLINE_ROW_RE.search(article)
     insert_at = row.end() if row and row.start() > h1 else h1 + len('</h1>')
-    block = '\n'.join(part for part in (stat, table, note, tools, averages, cite) if part)
+    if stat:
+        parts = (stat, sheet, cite, averages, tools)
+    else:
+        parts = (cite, averages, tools, sheet)
+    block = '\n'.join(part for part in parts if part)
     article = article[:insert_at].rstrip() + '\n' + block + '\n' + article[insert_at:].lstrip()
     if callout:
         how = article.find('class="how-made"')
@@ -2015,7 +2039,8 @@ def order_ratings_tracker(html: str) -> str:
 def place_quick_cite(html: str) -> str:
     """Fast-facts box follows the lead photo. The byline stays under the H1.
 
-    The ratings tracker keeps its own order: stat, compact table, tools, then the cite.
+    The ratings tracker keeps its own order: fast facts, tools, then the compact sheet.
+    A released audience moves the latest-game line and the sheet above the facts.
     """
     if _is_ratings_tracker_page(html, None):
         return order_ratings_tracker(html)
@@ -2042,7 +2067,7 @@ def place_quick_cite(html: str) -> str:
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
-    The ratings tracker is the exception: a one-line stat and the compact ratings table follow the byline. The matchup photo stays off the body.
+    The ratings tracker is the exception: fast facts follow the byline, then the journalist tools, then the compact ratings table. A released audience moves the latest-game line and that table above the facts. The matchup photo stays off the body.
     On every other article the byline sits directly under the H1 and above the hero.
     A fast-facts box, when the page has one, follows the hero. An archive note
     stays immediately under the byline, still above the photo.

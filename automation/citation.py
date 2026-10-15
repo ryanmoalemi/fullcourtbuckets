@@ -338,6 +338,8 @@ TRACKER_CITE = (
     'Full Court Buckets, "2026 WNBA Finals ratings tracker: game-by-game TV viewers," '
     'October 14, 2026.\n'
     f'{TRACKER_URL}\n'
+    'Past Finals averages: 2022 534K, 2023 728K, 2024 1.6M, 2025 1.5M. '
+    'NBC and Peacock averaged 1.75 million across 7 regular-season games, TV and streaming. '
     '51 regular-season telecasts exceeded 1 million viewers in 2026, up from 19 in 2025 '
     '(about 2.7 times as many). Games without the Fever averaged 984,000 viewers, '
     'up 24%. The 10-game first round averaged 1.3 million, up 37%. October 2026 US search '
@@ -537,11 +539,49 @@ def ratings_hub_blocks(payload: dict) -> str:
     return cite + '\n' + tracker + '\n' + benchmarks + '\n' + history
 
 
+def _nbc_regular_season_csv_row(payload: dict) -> list:
+    """Verified NBC and Peacock regular-season average. TV and streaming, 7 games."""
+    viewers = 1_750_000
+    games = 7
+    source = (
+        'https://www.nbcsports.com/pressbox/press-releases/'
+        'fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-'
+        'wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season'
+    )
+    for row in (payload or {}).get('broadcasts') or []:
+        if row.get('season') != 2026 or row.get('network') != 'NBC':
+            continue
+        value = row.get('avg_viewers')
+        count = row.get('games')
+        if isinstance(value, int) and not isinstance(value, bool) and value > 0:
+            viewers = value
+        if isinstance(count, int) and not isinstance(count, bool) and count > 0:
+            games = count
+        link = row.get('source')
+        if isinstance(link, str) and link.startswith('http'):
+            source = link
+        break
+    if viewers >= 1_000_000 and viewers % 10_000 == 0:
+        shown = f'{viewers / 1_000_000:.2f}'.rstrip('0').rstrip('.') + ' million'
+    else:
+        shown = f'{viewers:,}'
+    return [
+        '2026 benchmarks',
+        'NBC and Peacock regular-season average',
+        shown,
+        f'{games} games, TV and streaming',
+        'NBC and Peacock',
+        'Published',
+        f'NBC Sports, Aug. 26, 2026. {source}',
+    ]
+
+
 def ratings_hub_csv_rows(payload: dict) -> tuple[list, list]:
     headers = ['section', 'label', 'value', 'comparison', 'network', 'status', 'notes']
     rows = []
     for label, value, change, source in TRACKER_BENCHMARK_ROWS:
         rows.append(['2026 benchmarks', label, value, change, '', 'Published', source])
+    rows.append(_nbc_regular_season_csv_row(payload))
     for name, volume in SEARCH_ROWS:
         rows.append(['October 2026 US search estimates', name, volume, '', '', 'Estimate', 'Full Court Buckets keyword research'])
     for row in FINALS_TRACKER_ROWS:

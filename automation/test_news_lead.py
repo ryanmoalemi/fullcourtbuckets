@@ -29,8 +29,10 @@ class NewsLeadTests(unittest.TestCase):
                 self.assertNotIn('social-card.webp', body)
                 self.assertNotIn('tracker-matchup', body)
                 self.assertNotIn('matchup-1200.webp', body)
-                self.assertLess(body.find('tracker-stat'), body.find('tracker-compact'))
-                self.assertLess(body.find('tracker-compact'), body.find('tracker-tools'))
+                self.assertIn('Finals games (ratings added after each game)', body)
+                self.assertLess(body.find('fcb-quick-cite'), body.find('tracker-tools'))
+                self.assertLess(body.find('tracker-tools'), body.find('tracker-compact'))
+                self.assertNotIn('ratings pending', body)
                 self.assertIn('white-space:nowrap', html)
                 continue
             figure = _lead_figure(html)
