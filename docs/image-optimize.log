@@ -1,7 +1,9 @@
-files rewritten: 0
-html files rewritten: 628
+files rewritten: 2
+html files rewritten: 629
 images missing alt: 0
 
+resized images/articles/valkyries-defense-film-breakdown/box-out.webp to (1688, 949) (17440 bytes) + box-out.webp
+resized images/articles/valkyries-defense-film-breakdown/weak-side-i.webp to (1688, 949) (17836 bytes) + weak-side-i.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
