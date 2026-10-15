@@ -360,7 +360,11 @@ class ReeseCardPageTests(unittest.TestCase):
         author = (ROOT / 'authors' / 'ryan-moalemi' / 'index.html').read_text(encoding='utf-8')
         self.assertIn(f'href="{ROUTE}"', author)
         self.assertNotIn(f'href="{ROUTE}" target="_blank"', author)
-        self.assertIn("<b>Ryan&#x27;s Angel Reese card collection</b>", author)
+        self.assertIn('<b>My Angel Reese card collection</b>', author)
+        self.assertIn(
+            'My Angel Reese card collection, including what I paid for each, and what they&#x27;re worth now.',
+            author,
+        )
         self.assertNotIn("<b>Ryan&#x27;s Angel Reese cards</b>", author)
         self.assertNotIn('<b>Angel Reese cards</b>', author)
         player = (ROOT / 'wnba' / 'angel-reese' / 'index.html').read_text(encoding='utf-8')

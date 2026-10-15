@@ -360,6 +360,10 @@ def ensure_article_hero(root: Path, article: dict) -> dict:
     A post with no imageFocal is measured once and the result is stored, including
     the center 20% fallback, so a later build does not move the crop.
     """
+    if article.get('slug') == '2026-wnba-finals-ratings-tracker':
+        # The matchup is already 1200x675 on the page and 1200x630 for og/twitter.
+        # Recropping it would clip the heads.
+        return article
     source = source_path(root, article)
     if source is None:
         return article

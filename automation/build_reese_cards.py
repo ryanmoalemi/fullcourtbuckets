@@ -33,6 +33,10 @@ BID_TYPES = {'auction', 'buy_it_now'}
 BID_STATUSES = {'live', 'won', 'lost'}
 BASE = 'https://fullcourtbuckets.com'
 COLLECTION_TITLE = "Ryan's Angel Reese card collection"
+AUTHOR_TEASER_TITLE = 'My Angel Reese card collection'
+AUTHOR_TEASER_SUBTITLE = (
+    "My Angel Reese card collection, including what I paid for each, and what they're worth now."
+)
 PAGE_TITLE = f"{COLLECTION_TITLE} | Full Court Buckets"
 PAGE_DESCRIPTION = (
     "Ryan Moalemi's Angel Reese cards: the totals he paid, raw cards and slabs, "
@@ -1374,15 +1378,13 @@ def author_teaser(root: Path) -> str:
     data = load_collection(root)
     if not data:
         return ''
-    count = len(data['cards'])
-    noun = 'card' if count == 1 else 'cards'
     image = '/images/reese-cards/reese-2024-rookie-royalty-kaboom-5-front.webp'
     alt = '2024 Panini Rookie Royalty WNBA Kaboom Angel Reese PSA 10 slab'
     return (
         f'<a class="collection-teaser" href="{ROUTE}">'
         f'<img src="{image}" alt="{esc(alt)}" width="657" height="1000">'
-        f'<span><b>{esc(COLLECTION_TITLE)}</b>'
-        f'<p>{count} Angel Reese {noun} in Ryan\'s collection, with what he paid and the latest values.</p>'
+        f'<span><b>{esc(AUTHOR_TEASER_TITLE)}</b>'
+        f'<p>{esc(AUTHOR_TEASER_SUBTITLE)}</p>'
         '</span></a>'
     )
 

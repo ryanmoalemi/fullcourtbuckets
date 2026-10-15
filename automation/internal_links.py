@@ -400,15 +400,46 @@ HUBS = (
 )
 
 
+MATCHUP_IMAGE = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp'
+MATCHUP_ALT = (
+    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
+    'Cecilia Zandalasini of the Golden State Valkyries'
+)
+
+
+def _featured_source(article: dict) -> dict:
+    """The pending-counts sheet is not the homepage hero. Use the matchup photo."""
+    source = dict(article or {})
+    image = str(source.get('image') or '')
+    if not image:
+        return source
+    tracker = source.get('slug') == '2026-wnba-finals-ratings-tracker'
+    pending = image.endswith('/ratings-sheet.webp') or image.endswith('/social-card.webp')
+    if not tracker and not pending:
+        return source
+    if pending or not image.endswith('/matchup-1200.webp'):
+        source['image'] = MATCHUP_IMAGE
+        source['imageWidth'] = 1200
+        source['imageHeight'] = 675
+    alt = str(source.get('imageAlt') or '')
+    if not alt or 'pending' in alt.lower():
+        source['imageAlt'] = MATCHUP_ALT
+    source['imageFocal'] = 'center center'
+    source['_feature_card'] = True
+    return source
+
+
 def _featured_photo(article: dict) -> str:
     """Lead image for the homepage hero. Empty when the story has no image."""
-    image = str((article or {}).get('image') or '').strip()
+    source = _featured_source(article)
+    image = str(source.get('image') or '').strip()
     if not image:
         return ''
-    alt = str(article.get('imageAlt') or article.get('title') or '')
+    alt = str(source.get('imageAlt') or source.get('title') or '')
+    klass = 'feature-photo is-card' if source.get('_feature_card') else 'feature-photo'
     return (
-        f'<img class="feature-photo" id="featured-image" src="{esc(image)}" alt="{esc(alt)}"'
-        f'{_image_dims(article)} decoding="async" fetchpriority="high"{focal_style(article)}>'
+        f'<img class="{klass}" id="featured-image" src="{esc(image)}" alt="{esc(alt)}"'
+        f'{_image_dims(source)} decoding="async" fetchpriority="high"{focal_style(source)}>'
     )
 
 
@@ -467,6 +498,152 @@ def _ensure_all_news(text: str) -> str:
     return text
 
 
+TICKER_MAX_AGE = dt.timedelta(hours=48)
+_TICKER_RE = re.compile(r'<div class="ticker\b[^>]*>.*?</div></div></div>', re.S)
+_WEEKDAYS = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
+_MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
+
+
+def _article_day(article: dict) -> str:
+    return str(article.get('date') or '')[:10]
+
+
+def _noon(day: dt.date) -> dt.datetime:
+    return dt.datetime(day.year, day.month, day.day, 12, 0, tzinfo=ZoneInfo('America/Los_Angeles'))
+
+
+def _is_game_result(article: dict) -> bool:
+    if str(article.get('espnGameId') or '').strip():
+        return True
+    return bool(re.search(r'\b\d{2,3}\s*-\s*\d{2,3}\b', str(article.get('title') or '')))
+
+
+def _short_club(name: str) -> str:
+    parts = name.split()
+    return parts[-1] if parts else name
+
+
+def _pt_clock(tip: str) -> str:
+    match = re.search(r'(\d{1,2}:\d{2})\s*([ap])\.?m\.?\s*PT', tip, re.I)
+    if not match:
+        return ''
+    hour, minute = match.group(1).split(':')
+    suffix = 'AM' if match.group(2).lower() == 'a' else 'PM'
+    return f'{int(hour)}:{minute} {suffix} PT'
+
+
+def _slash_network(network: str) -> str:
+    return network.replace(' and ', '/').replace(', ', '/')
+
+
+def _schedule_items() -> list[dict]:
+    """Upcoming Finals games from the shared tracker rows."""
+    import citation
+
+    items = []
+    for row in citation.FINALS_TRACKER_ROWS:
+        game, date_text, matchup, network, tip = row[:5]
+        status = row[-1]
+        if status != 'Scheduled':
+            continue
+        found = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2}),\s+(\d{4})', date_text)
+        teams = matchup.split(',', 1)[0]
+        clock = _pt_clock(tip)
+        if not found or ' at ' not in teams or not clock:
+            continue
+        month = _MONTHS.index(found.group(1)) + 1
+        day = dt.date(int(found.group(3)), month, int(found.group(2)))
+        hour_text, suffix = clock.split(' ')[0], clock.split(' ')[1]
+        hour, minute = (int(part) for part in hour_text.split(':'))
+        if suffix == 'PM' and hour != 12:
+            hour += 12
+        if suffix == 'AM' and hour == 12:
+            hour = 0
+        moment = dt.datetime(day.year, day.month, day.day, hour, minute, tzinfo=ZoneInfo('America/Los_Angeles'))
+        away, home = teams.split(' at ', 1)
+        text = (
+            f'WNBA Finals Game {game}: {_short_club(away)} at {_short_club(home)}, '
+            f'{_WEEKDAYS[day.weekday()]} {_MONTHS[day.month - 1]} {day.day}, {clock}, {_slash_network(network)}'
+        )
+        items.append({'date': day.isoformat(), 'moment': moment, 'text': text, 'kind': 'schedule'})
+    return items
+
+
+def _next_finals_item(now: dt.datetime) -> dict | None:
+    fresh = [item for item in _schedule_items() if item['moment'] >= now - TICKER_MAX_AGE]
+    fresh.sort(key=lambda item: item['moment'])
+    return fresh[0] if fresh else None
+
+
+def _article_ticker(article: dict) -> dict | None:
+    raw = _article_day(article)
+    try:
+        day = dt.date.fromisoformat(raw)
+    except ValueError:
+        return None
+    title = re.sub(r'\s+', ' ', str(article.get('title') or '')).strip()
+    if not title:
+        return None
+    return {'date': raw, 'moment': _noon(day), 'text': title, 'kind': 'article'}
+
+
+def choose_ticker(articles: list, now: dt.datetime | None = None) -> dict | None:
+    """Newest game result, or the next Finals game when no result is newer.
+
+    The line is hidden when that item is more than 48 hours old.
+    """
+    moment = now or dt.datetime.now(ZoneInfo('America/Los_Angeles'))
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=ZoneInfo('America/Los_Angeles'))
+    ordered = [article for article in articles or [] if isinstance(article, dict) and _article_day(article)]
+    ordered.sort(key=_article_day, reverse=True)
+    if not ordered:
+        return None
+    newest = ordered[0]
+    schedule = _next_finals_item(moment)
+    result = _article_ticker(newest) if _is_game_result(newest) else None
+    if schedule and (result is None or result['date'] < schedule['date']):
+        item = schedule
+    elif result:
+        item = result
+    else:
+        item = _article_ticker(newest)
+    if item is None or item['moment'] < moment - TICKER_MAX_AGE:
+        return None
+    if item['date'] < _article_day(newest):
+        item = dict(item)
+        item['date'] = _article_day(newest)
+    return item
+
+
+def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> str:
+    """Replace the homepage Now line. Article pages keep their own tickers."""
+    if 'id="latest"' not in html:
+        return html
+    item = choose_ticker(articles, now)
+    if item is None:
+        return _TICKER_RE.sub('', html, count=1)
+    block = (
+        f'<div class="ticker" data-item-date="{esc(item["date"])}">'
+        '<div class="shell"><div class="ticker-label">Now</div>'
+        f'<div class="ticker-text">{esc(item["text"])}</div></div></div>'
+    )
+    if _TICKER_RE.search(html):
+        first = True
+
+        def replace(_match: re.Match) -> str:
+            nonlocal first
+            if first:
+                first = False
+                return block
+            return ''
+
+        return _TICKER_RE.sub(replace, html)
+    if '</header>' in html:
+        return html.replace('</header>', '</header>\n' + block, 1)
+    return html
+
+
 def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
     text = ensure_site_organization_same_as(text)
@@ -517,7 +694,7 @@ def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> s
         text = text.replace('fetch("/articles.json")', helper + '\n  fetch("/articles.json")', 1)
     if rail_html:
         text = homepage_rail.apply_rail(text, rail_html)
-    return text
+    return apply_ticker(text, articles)
 
 
 def _pct(value) -> str:
@@ -902,24 +1079,25 @@ BYLINE_IMAGE = versioned_image(BYLINE_PHOTO)
 # One line for Person JSON-LD. Visible bio paragraphs stay separate.
 AUTHOR_DESCRIPTION = (
     'Ryan Moalemi has been writing internet content since 2001. '
-    'He started sports writing in 2026 and runs Full Court Buckets, '
-    'hoping it helps bring new eyes to the movement.'
+    'He found the WNBA in 2026 because of Angel Reese and covers the league for Full Court Buckets.'
 )
 AUTHOR_META = (
-    'Ryan Moalemi runs Full Court Buckets and writes its WNBA game recaps and news. '
-    'He has been writing internet content since 2001.'
+    'Ryan Moalemi has been writing internet content since 2001. '
+    'He covers the WNBA for Full Court Buckets.'
 )
 AUTHOR_BIO = (
-    'Ryan Moalemi has been writing internet content since 2001.',
     (
-        'He started sports writing in 2026 after being impressed by Angel Reese in a WNBA game, '
-        'and by the positive effect the league is having on women\'s sports overall.'
+        "Hi, I'm Ryan Moalemi. I've been writing internet content since 2001. "
+        'I found the WNBA in 2026 because of Angel Reese, she is the reason I fell in love with the league. '
+        'Now I enjoy watching a number of other players and teams. '
+        "I support the WNBA and the positive effect the league is having on women's sports."
     ),
     (
-        'He runs Full Court Buckets, a US WNBA news and analysis site. '
-        'He writes original content himself, and he also edits AI-assisted drafts.'
+        'My goal for Full Court Buckets is to cover the WNBA thoughtfully and fairly, '
+        'with genuine respect for every player in the league. '
+        'I hope our coverage highlights their talent, gives their stories the attention they deserve, '
+        'and inspires more people to become fans.'
     ),
-    'He hopes Full Court Buckets helps bring new eyes to the movement.',
 )
 GENERATED_LISTING_PAGES = {'news/index.html', AUTHOR_PAGE}
 BYLINE_HTML = (
@@ -1728,8 +1906,66 @@ def _splice_block(html: str, at: int, block: str) -> str:
     return '\n'.join(parts)
 
 
+def _is_ratings_tracker_page(html: str, article: dict | None) -> bool:
+    """The Finals ratings hub keeps its own photo order. Nightly lead ordering must not replace it."""
+    if isinstance(article, dict) and article.get('slug') == '2026-wnba-finals-ratings-tracker':
+        return True
+    return 'class="fcb-tracker-update"' in html and 'id="finals-ratings-tracker"' in html
+
+
+def _pull_block(pattern: re.Pattern, text: str) -> tuple[str, str]:
+    match = pattern.search(text)
+    if not match:
+        return '', text
+    return match.group(0).strip(), text[:match.start()] + text[match.end():]
+
+
+TRACKER_MATCHUP_RE = re.compile(r'<figure\b[^>]*\btracker-matchup\b[^>]*>.*?</figure>', re.S)
+
+
+def order_ratings_tracker(html: str) -> str:
+    """H1, byline, summary, matchup photo, ratings table, quick cite, then the update callout.
+
+    A stray lead photo, including the old pending-counts sheet, is removed.
+    The credited matchup stays between the summary and the table.
+    """
+    start = html.find('<article')
+    end = html.rfind('</article>')
+    if start < 0 or end < 0:
+        return html
+    article = LEAD_PHOTO_RE.sub('', html[start:end])
+    matchup, article = _pull_block(TRACKER_MATCHUP_RE, article)
+    cite, article = _pull_block(QUICK_CITE_RE, article)
+    callout, article = _pull_block(
+        re.compile(r'<aside class="fcb-tracker-update".*?</aside>', re.S),
+        article,
+    )
+    lead, article = _pull_block(re.compile(r'<p class="lead">.*?</p>', re.S), article)
+    heading, article = _pull_block(
+        re.compile(r'<h2\b[^>]*\bid="finals-ratings-tracker"[^>]*>.*?</h2>', re.S),
+        article,
+    )
+    table, article = _pull_block(
+        re.compile(r'<div class="fcb-table-wrap"[^>]*>.*?</table></div>', re.S),
+        article,
+    )
+    h1 = article.find('</h1>')
+    if h1 < 0:
+        return html
+    row = BYLINE_ROW_RE.search(article)
+    insert_at = row.end() if row and row.start() > h1 else h1 + len('</h1>')
+    block = '\n'.join(part for part in (lead, matchup, heading, table, cite, callout) if part)
+    article = article[:insert_at].rstrip() + '\n' + block + '\n' + article[insert_at:].lstrip()
+    return html[:start] + article + html[end:]
+
+
 def place_quick_cite(html: str) -> str:
-    """Fast-facts box follows the lead photo. The byline stays under the H1."""
+    """Fast-facts box follows the lead photo. The byline stays under the H1.
+
+    The ratings tracker keeps its own order: summary, table, then the cite.
+    """
+    if _is_ratings_tracker_page(html, None):
+        return order_ratings_tracker(html)
     match = QUICK_CITE_RE.search(html)
     if not match:
         return html
@@ -1753,7 +1989,8 @@ def place_quick_cite(html: str) -> str:
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
-    The byline sits directly under the H1 and above the hero on every article.
+    The ratings tracker is the exception: the matchup photo follows the summary, and the quick cite follows the table.
+    On every other article the byline sits directly under the H1 and above the hero.
     A fast-facts box, when the page has one, follows the hero. An archive note
     stays immediately under the byline, still above the photo.
 
@@ -1761,6 +1998,8 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     uses fetchpriority="high", and is not lazy-loaded. imageFocal sets object-position.
     Later photos use the same 16:9 crop unless the figure is a screenshot or chart.
     """
+    if _is_ratings_tracker_page(html, article):
+        return order_ratings_tracker(html)
     meta = article
     start = html.find('<article')
     end = html.rfind('</article>')

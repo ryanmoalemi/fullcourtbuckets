@@ -1,6 +1,7 @@
 """Homepage rail is generated from scoreboard data, not slogan copy."""
 import datetime as dt
 import json
+import re
 import unittest
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -243,6 +244,61 @@ class HomepageRailTests(unittest.TestCase):
         kept = links.apply_homepage(page, articles, None)
         self.assertIn('Given to You Straight', kept)
 
+    def test_ticker_uses_the_finals_schedule_when_no_result_is_newer(self):
+        now = dt.datetime(2026, 10, 15, 12, 0, tzinfo=PT)
+        articles = [
+            {'slug': '2026-wnba-finals-ratings-tracker', 'title': 'Four games are set', 'date': '2026-10-14'},
+            {
+                'slug': 'aces-valkyries-semis-game-2-recap',
+                'title': 'Burton from 28. Valkyries 83, Aces 81.',
+                'date': '2026-10-07',
+                'espnGameId': '401918298',
+            },
+        ]
+        item = links.choose_ticker(articles, now)
+        self.assertEqual(
+            item['text'],
+            'WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock',
+        )
+        self.assertGreaterEqual(item['date'], articles[0]['date'])
+
+    def test_ticker_uses_a_newer_game_result(self):
+        now = dt.datetime(2026, 10, 18, 18, 0, tzinfo=PT)
+        articles = [{
+            'slug': 'finals-game-1-recap',
+            'title': 'Dream beat Valkyries 90-80',
+            'date': '2026-10-18',
+            'espnGameId': '401918305',
+        }]
+        item = links.choose_ticker(articles, now)
+        self.assertEqual(item['text'], 'Dream beat Valkyries 90-80')
+        self.assertEqual(item['date'], '2026-10-18')
+
+    def test_ticker_hides_when_the_newest_item_is_older_than_48_hours(self):
+        now = dt.datetime(2026, 10, 28, 15, 0, tzinfo=PT)
+        articles = [{
+            'slug': 'old-recap',
+            'title': 'Burton from 28. Valkyries 83, Aces 81.',
+            'date': '2026-10-07',
+            'espnGameId': '401918298',
+        }]
+        self.assertIsNone(links.choose_ticker(articles, now))
+
+    def test_published_ticker_is_not_older_than_the_newest_article(self):
+        home = (ROOT / 'index.html').read_text(encoding='utf-8')
+        articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
+        newest = max(article['date'] for article in articles)
+        match = re.search(r'<div class="ticker"[^>]*data-item-date="(\d{4}-\d{2}-\d{2})"', home)
+        self.assertIsNotNone(match)
+        self.assertGreaterEqual(match.group(1), newest)
+        self.assertNotIn('Burton from 28', home)
+        self.assertIn('WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock', home)
+        style = home.split('</style>', 1)[0]
+        self.assertIn('grid-template-areas:"copy photo"', style)
+        self.assertIn('grid-template-areas:"photo" "credit" "copy"', style)
+        self.assertNotIn('.feature-photo{position:absolute', style)
+        self.assertNotIn('.feature-content{position:absolute', style)
+
     def test_published_homepage_has_no_slogan_column(self):
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         rail_html = home.split('id="home-rail"', 1)[1].split('</aside>', 1)[0]
@@ -269,3 +325,20 @@ class HomepageRailTests(unittest.TestCase):
             self.assertNotIn(f'href="{href}" target="_blank"', rail_html, slug)
         self.assertIn('target="_blank" rel="noopener"', rail_html)
         self.assertIn('https://www.espn.com/wnba/game/_/gameId/', rail_html)
+        newest_recap = max(
+            (article for article in articles if article.get('espnGameId')),
+            key=lambda article: article['date'],
+        )
+        recap_day = dt.date.fromisoformat(newest_recap['date'])
+        self.assertIn(f'{recap_day.strftime("%b")} {recap_day.day}', scores)
+        import citation
+        scheduled = next(
+            row for row in citation.FINALS_TRACKER_ROWS
+            if row[-1] == 'Scheduled' and row[1] != 'Not listed'
+        )
+        matchup = scheduled[2].split(',', 1)[0]
+        away, home_club = matchup.split(' at ', 1)
+        series = rail_html.split('id="playoff-series"', 1)[1].split('</section>', 1)[0]
+        self.assertIn(f'{away.split()[-1]} at {home_club.split()[-1]}', series)
+        day_match = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2})', scheduled[1])
+        self.assertIn(f'{day_match.group(1)} {int(day_match.group(2))}', series)
