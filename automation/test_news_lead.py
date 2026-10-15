@@ -27,6 +27,15 @@ class NewsLeadTests(unittest.TestCase):
                 body = html.split('<article', 1)[1].split('</article>', 1)[0]
                 self.assertNotIn('lead-photo', body)
                 self.assertNotIn('social-card.webp', body)
+                self.assertLess(body.find('class="lead"'), body.find('tracker-matchup'))
+                self.assertLess(body.find('tracker-matchup'), body.find('fcb-data-table'))
+                figure = re.search(r'<figure\b[^>]*\btracker-matchup\b[^>]*>.*?</figure>', body, re.S).group(0)
+                img = re.search(r'<img\b[^>]*>', figure).group(0)
+                self.assertIn('fetchpriority="high"', img)
+                self.assertIn('width="1200"', img)
+                self.assertIn('height="675"', img)
+                self.assertIn('matchup-1200.webp', img)
+                self.assertIn('<figcaption', figure)
                 continue
             figure = _lead_figure(html)
             self.assertTrue(figure, article['slug'])

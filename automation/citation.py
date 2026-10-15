@@ -11,8 +11,9 @@ import html
 import json
 import re
 import subprocess
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 BASE = 'https://fullcourtbuckets.com'
 CC_BY = 'https://creativecommons.org/licenses/by/4.0/'
@@ -334,7 +335,7 @@ TRACKER_BENCHMARK_ROWS = [
 ]
 
 TRACKER_CITE = (
-    'Full Court Buckets, "Four 2026 WNBA Finals games are set, and every viewer count is still pending," '
+    'Full Court Buckets, "2026 WNBA Finals ratings tracker: game-by-game TV viewers," '
     'October 14, 2026.\n'
     f'{TRACKER_URL}\n'
     '51 regular-season telecasts exceeded 1 million viewers in 2026, up from 19 in 2025 '
@@ -357,12 +358,19 @@ def finals_tracker_data_path(root: Path) -> Path:
     return root / VIEWERSHIP_DATA_REL
 
 
-def finals_tracker_updated(root: Path):
-    """Calendar date of the viewership file's last change.
+def pacific_calendar_date(moment: datetime):
+    """Calendar day in America/Los_Angeles. A naive timestamp is UTC."""
+    if moment.tzinfo is None:
+        moment = moment.replace(tzinfo=timezone.utc)
+    return moment.astimezone(ZoneInfo('America/Los_Angeles')).date()
 
-    A committed file uses the git commit date. An uncommitted edit uses the
-    file's modification time, so the label moves when the data changes and
-    is never typed into the page.
+
+def finals_tracker_updated(root: Path):
+    """Pacific calendar date of the viewership file's last change.
+
+    A committed file uses the git commit instant, converted to
+    America/Los_Angeles. An uncommitted edit uses the file's modification
+    time in that same zone. The label is never typed into the page.
     """
     path = finals_tracker_data_path(root)
     try:
@@ -373,19 +381,19 @@ def finals_tracker_updated(root: Path):
             text=True,
         )
         if status.returncode == 0 and status.stdout.strip():
-            return datetime.fromtimestamp(path.stat().st_mtime).date()
+            return pacific_calendar_date(datetime.fromtimestamp(path.stat().st_mtime, timezone.utc))
         log = subprocess.run(
-            ['git', '-C', str(root), 'log', '-1', '--format=%cs', '--', VIEWERSHIP_DATA_REL],
+            ['git', '-C', str(root), 'log', '-1', '--format=%ct', '--', VIEWERSHIP_DATA_REL],
             check=False,
             capture_output=True,
             text=True,
         )
         stamp = log.stdout.strip()
-        if log.returncode == 0 and stamp:
-            return datetime.strptime(stamp, '%Y-%m-%d').date()
+        if log.returncode == 0 and stamp.isdigit():
+            return pacific_calendar_date(datetime.fromtimestamp(int(stamp), timezone.utc))
     except (OSError, ValueError):
         pass
-    return datetime.fromtimestamp(path.stat().st_mtime).date()
+    return pacific_calendar_date(datetime.fromtimestamp(path.stat().st_mtime, timezone.utc))
 
 
 def finals_tracker_updated_label(root: Path) -> str:

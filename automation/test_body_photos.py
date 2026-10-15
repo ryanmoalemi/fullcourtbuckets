@@ -77,7 +77,8 @@ class BodyPhotoTests(unittest.TestCase):
             if slug == '2026-wnba-finals-ratings-tracker':
                 body = html.split('<article', 1)[1].split('</article>', 1)[0]
                 self.assertNotIn('lead-photo', body)
-                self.assertNotIn('<figure', body)
+                self.assertEqual(len(re.findall(r'<figure\b[^>]*\btracker-matchup\b', body)), 1)
+                self.assertIn('matchup-1200.webp', body)
                 continue
             self.assertIn(BODY_IMG_RULE, html, slug)
             self.assertIn(NO_CROP_IMG_RULE, html, slug)

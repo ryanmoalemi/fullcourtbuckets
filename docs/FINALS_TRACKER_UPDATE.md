@@ -37,24 +37,25 @@ The game-by-game table on the news page is `FINALS_TRACKER_ROWS` in `automation/
 
 ## Last updated
 
-The callout after the quick cite says `Last updated:` plus a date. `citation.finals_tracker_updated()` reads it from this data file:
+The callout after the quick cite says `Last updated:` plus a date. `citation.finals_tracker_updated()` reads it from this data file and converts the instant to America/Los_Angeles:
 
-- If `data/viewership-attendance.json` has uncommitted changes, the date is the file's modification time.
-- Otherwise the date is the git commit date of the last commit that changed the file.
+- If `data/viewership-attendance.json` has uncommitted changes, the date is the file's modification time in Pacific Time.
+- Otherwise the date is the git commit instant of the last commit that changed the file, also in Pacific Time.
 
-Do not hardcode the date in Python or HTML.
+A change just after midnight UTC still shows the previous Pacific calendar day. Do not hardcode the date in Python or HTML. Date-only article publish dates are already calendar days and are not shifted.
 
-## Social card
+## Matchup photo
 
-`automation/build_finals_ratings_tracker.py` draws `images/articles/2026-wnba-finals-ratings-tracker/social-card.webp` at 1200×630. The title is `2026 WNBA Finals Ratings Tracker`. Until a Finals game has a released audience, the headline stat is `51 telecasts topped 1M viewers in 2026 (up from 19)`.
+The page image and the og/twitter image are built from two photos the site already publishes with credit:
 
-A released audience is an integer `viewers` value on a `Finals Game N` row in the JSON file. The newest `date` wins, and the card headline becomes `Game N averaged X million viewers`. Pending cells stay off the card.
+- Angel Reese of the Atlanta Dream, May 27, 2026. Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons (`File:Angel_Reese_Dream_2.jpg`).
+- Cecilia Zandalasini with the Valkyries at Target Center on Aug. 24, 2026, not from this series. Photo: John Mac / Wikimedia Commons (CC BY-SA 4.0) (`File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg`). This is the photo on the Finals Game 1 preview.
 
-That file is the page's `og:image` and `twitter:image` only. It is not in the article body. The news listing still uses `ratings-sheet.webp`. Nightly hero generation skips this slug so it does not replace the social card with a crop of the pending-counts sheet.
+`automation/build_finals_ratings_tracker.py` writes `matchup-1200.webp` at 1200×675 for the page and `matchup-og.webp` at 1200×630 for og:image and twitter:image. Both frames put the players side by side, keep the tops of their heads, and put `2026 WNBA Finals Ratings Tracker` on a dark gradient strip. The page keeps both original captions. The homepage featured card uses the 1200×675 frame. Nightly hero generation skips this slug so it does not recrop the label.
 
 ## Page order
 
-Headline, byline, one-line summary, the game-by-game ratings table, the quick-cite box, then the update callout. Game notes and the longer intro stay after the callout. There is no hero in the body.
+Headline, byline, one-line summary, the matchup photo, the game-by-game ratings table, the quick-cite box, then the update callout. Game notes and the longer intro stay after the callout.
 
 ## Regenerate
 

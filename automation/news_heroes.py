@@ -361,8 +361,8 @@ def ensure_article_hero(root: Path, article: dict) -> dict:
     the center 20% fallback, so a later build does not move the crop.
     """
     if article.get('slug') == '2026-wnba-finals-ratings-tracker':
-        # The pending-counts sheet is not this page's social image. The tracker
-        # generator owns imageOg (social-card.webp) and keeps it out of the body.
+        # The matchup is already 1200x675 on the page and 1200x630 for og/twitter.
+        # Recropping it would clip the heads or the gradient label.
         return article
     source = source_path(root, article)
     if source is None:

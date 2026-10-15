@@ -46,20 +46,25 @@ class ImageFocalTests(unittest.TestCase):
                 self.assertIn(article['image'], page, f'{slug} {label}')
             if slug in on_home:
                 if slug == '2026-wnba-finals-ratings-tracker':
-                    card = '/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
+                    card = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp'
                     self.assertIn(card, home, slug)
                     featured = home.split('id="featured-image"', 1)[1].split('>', 1)[0]
-                    self.assertIn('social-card.webp', featured)
+                    self.assertIn('matchup-1200.webp', featured)
                     self.assertNotIn('ratings-sheet.webp', featured)
+                    self.assertNotIn('social-card.webp', featured)
                 else:
                     self.assertIn(article['image'], home, f'{slug} home')
             story = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
             if slug == '2026-wnba-finals-ratings-tracker':
-                social = '/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
+                social = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp'
+                page_image = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp'
+                self.assertEqual(article.get('image'), page_image)
+                self.assertEqual((article.get('imageWidth'), article.get('imageHeight')), (1200, 675))
                 self.assertEqual(article.get('imageOg'), social)
                 self.assertEqual((article.get('imageOgWidth'), article.get('imageOgHeight')), (1200, 630))
                 self.assertIn(links.BASE + social, story)
                 body = story.split('<article', 1)[1].split('</article>', 1)[0]
+                self.assertIn('matchup-1200.webp', body)
                 self.assertNotIn('social-card.webp', body)
                 self.assertNotIn('og-1200.webp', story)
                 self.assertNotIn('lead-photo', body)

@@ -22,16 +22,23 @@ import site_nav
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = citation.TRACKER_SLUG
-HEADLINE = 'Four 2026 WNBA Finals games are set, and every viewer count is still pending'
+HEADLINE = '2026 WNBA Finals ratings tracker: game-by-game TV viewers'
 DESCRIPTION = (
-    'Four 2026 WNBA Finals games are on the Oct. 13 schedule. '
-    'Viewer cells stay pending until tip-off.'
+    'Game-by-game TV viewers for the 2026 WNBA Finals, updated after each game, '
+    'with citation, embed code and CSV.'
 )
 IMAGE_DIR = ROOT / 'images' / 'articles' / SLUG
 SOURCE_NAME = 'ratings-sheet.webp'
 SOCIAL_NAME = 'social-card.webp'
 SOCIAL_WIDTH = 1200
 SOCIAL_HEIGHT = 630
+MATCHUP_PAGE = (1200, 675)
+MATCHUP_OG = (1200, 630)
+MATCHUP_PAGE_NAME = 'matchup-1200.webp'
+MATCHUP_OG_NAME = 'matchup-og.webp'
+MATCHUP_LABEL = '2026 WNBA Finals Ratings Tracker'
+REESE_PHOTO = ROOT / 'images' / 'articles' / 'wnba-finals-2026-audience-growth-dream-valkyries' / 'angel-reese-dream-2026.webp'
+ZANDA_PHOTO = ROOT / 'images' / 'articles' / 'finals-game-1-preview-dream-valkyries' / 'cecilia-zandalasini-valkyries-2026.webp'
 CARD_TITLE = '2026 WNBA Finals Ratings Tracker'
 BASELINE_SOCIAL_STAT = '51 telecasts topped 1M viewers in 2026 (up from 19)'
 HUB_FORCED = {
@@ -47,8 +54,21 @@ ARCHIVE_NOTE = (
 )
 
 
-HERO_ALT = '2026 WNBA Finals graphic: viewer counts pending, Game 1 on Saturday, Oct. 17'
-HERO_CREDIT = 'Graphic: Full Court Buckets'
+HERO_ALT = (
+    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
+    'Cecilia Zandalasini of the Golden State Valkyries'
+)
+HERO_CREDIT = 'Photos: John Mac, CC BY-SA 4.0, via Wikimedia Commons'
+MATCHUP_CAPTION = (
+    'Angel Reese of the Atlanta Dream, May 27, 2026. Photo: '
+    '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_2.jpg" target="_blank" rel="noopener">John Mac</a>, '
+    '<a class="inline-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, '
+    'via <a class="inline-link" href="https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. '
+    'Cecilia Zandalasini with the Valkyries at Target Center on Aug. 24, 2026, not from this series. Photo: '
+    '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg" target="_blank" rel="noopener">John Mac</a> / '
+    '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> '
+    '(<a class="inline-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>).'
+)
 
 
 def _millions(viewers: int) -> str:
@@ -96,6 +116,85 @@ def _wrap_lines(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFo
     return lines or ['']
 
 
+def _head_safe_panel(image: Image.Image, width: int, height: int) -> Image.Image:
+    """Fill one half of the frame without cutting off the top of the head.
+
+    A landscape photo keeps its full height and loses side margins.
+    A portrait photo keeps the top of the frame, where these credited
+    shots place the player's head.
+    """
+    src = image.convert('RGB')
+    sw, sh = src.size
+    target = width / height
+    if sw / sh > target:
+        crop_w = int(round(sh * target))
+        left = max(0, (sw - crop_w) // 2)
+        src = src.crop((left, 0, left + crop_w, sh))
+    else:
+        crop_h = min(sh, int(round(sw / target)))
+        src = src.crop((0, 0, sw, crop_h))
+    return src.resize((width, height), Image.Resampling.LANCZOS)
+
+
+def _label_overlay(width: int, height: int) -> Image.Image:
+    """Dark gradient strip with the tracker name, sized for a phone preview."""
+    overlay = Image.new('RGBA', (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    strip = int(height * 0.38)
+    start = height - strip
+    for y in range(start, height):
+        fade = (y - start) / max(1, strip - 1)
+        alpha = int(235 * (fade ** 1.05))
+        draw.line([(0, y), (width, y)], fill=(5, 5, 6, alpha))
+    font_size = 72 if width >= 1200 else 56
+    font = ImageFont.truetype(str(ROOT / 'assets' / 'fonts' / 'Inter-Bold.ttf'), font_size)
+    lines = _wrap_lines(draw, MATCHUP_LABEL, font, width - 80)
+    line_h = int(font_size * 1.12)
+    y = height - (line_h * len(lines)) - 26
+    for line in lines:
+        text_w = draw.textlength(line, font=font)
+        draw.text(((width - text_w) / 2, y), line, font=font, fill=(245, 243, 239, 255))
+        y += line_h
+    return overlay
+
+
+def draw_matchup(size: tuple[int, int], dest: Path) -> Path:
+    """Side-by-side credited photos. Page frame is 1200x675; the og crop is 1200x630.
+
+    Sources are the Dream and Valkyries photos already published with credit.
+    Missing files stop the build instead of substituting another picture.
+    """
+    missing = [path for path in (REESE_PHOTO, ZANDA_PHOTO) if not path.is_file()]
+    if missing:
+        names = ', '.join(str(path.relative_to(ROOT)) for path in missing)
+        raise SystemExit(f'matchup photos are missing: {names}')
+    width, height = size
+    half = width // 2
+    with Image.open(REESE_PHOTO) as reese, Image.open(ZANDA_PHOTO) as zanda:
+        left = _head_safe_panel(reese, half, height)
+        right = _head_safe_panel(zanda, width - half, height)
+    canvas = Image.new('RGB', size, (5, 5, 6))
+    canvas.paste(left, (0, 0))
+    canvas.paste(right, (half, 0))
+    seam = ImageDraw.Draw(canvas)
+    seam.rectangle((half - 2, 0, half + 1, height), fill=(5, 5, 6))
+    framed = Image.alpha_composite(canvas.convert('RGBA'), _label_overlay(width, height))
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    framed.convert('RGB').save(dest, 'WEBP', quality=86, method=6)
+    return dest
+
+
+def matchup_figure() -> str:
+    """Compact photo under the summary. The ratings table stays directly below it."""
+    src = f'/images/articles/{SLUG}/{MATCHUP_PAGE_NAME}'
+    width, height = MATCHUP_PAGE
+    return (
+        f'<figure class="tracker-matchup"><img src="{src}" alt="{links.esc(HERO_ALT)}" '
+        f'width="{width}" height="{height}" decoding="async" fetchpriority="high" '
+        f'style="object-position:center center"><figcaption>{MATCHUP_CAPTION}</figcaption></figure>'
+    )
+
+
 def draw_social_card(payload: dict | None) -> Path:
     """1200x630 share card. Not used in the page body.
 
@@ -141,8 +240,8 @@ def article_dict(source: Path) -> dict:
         'imageAlt': HERO_ALT,
         'imageCredit': HERO_CREDIT,
         'teams': ['atlanta-dream', 'golden-state-valkyries'],
-        'imageWidth': 2400,
-        'imageHeight': 1350,
+        'imageWidth': MATCHUP_PAGE[0],
+        'imageHeight': MATCHUP_PAGE[1],
         'imageFocal': 'center center',
         'imageSource': rel,
     }
@@ -209,6 +308,7 @@ def article_html(payload: dict) -> str:
     return f'''<article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div><h1>{links.esc(HEADLINE)}</h1>
 <div class="byline-row">{links.BYLINE_HTML}<time class="article-date" datetime="2026-10-14">October 14, 2026</time></div>
 {summary}
+{matchup_figure()}
 {table}
 {cite}
 {citation.finals_tracker_update_callout(ROOT)}
@@ -335,12 +435,30 @@ def add_archive_note() -> None:
 
 def main() -> None:
     payload = json.loads((ROOT / 'data' / 'viewership-attendance.json').read_text(encoding='utf-8'))
-    social = draw_social_card(payload)
+    page_image = draw_matchup(MATCHUP_PAGE, IMAGE_DIR / MATCHUP_PAGE_NAME)
+    og_image = draw_matchup(MATCHUP_OG, IMAGE_DIR / MATCHUP_OG_NAME)
     articles = links.load_articles(ROOT)
     article = next(item for item in articles if item.get('slug') == SLUG)
-    article['imageOg'] = '/' + social.resolve().relative_to(ROOT.resolve()).as_posix()
-    article['imageOgWidth'] = SOCIAL_WIDTH
-    article['imageOgHeight'] = SOCIAL_HEIGHT
+    page_rel = '/' + page_image.resolve().relative_to(ROOT.resolve()).as_posix()
+    og_rel = '/' + og_image.resolve().relative_to(ROOT.resolve()).as_posix()
+    article['title'] = HEADLINE
+    article['description'] = DESCRIPTION
+    article['image'] = page_rel
+    article['imageAlt'] = HERO_ALT
+    article['imageCredit'] = HERO_CREDIT
+    article['imageWidth'] = MATCHUP_PAGE[0]
+    article['imageHeight'] = MATCHUP_PAGE[1]
+    article['imageFocal'] = 'center center'
+    article['imageSource'] = page_rel
+    article['imageHero'] = page_rel
+    article['imageHeroWidth'] = MATCHUP_PAGE[0]
+    article['imageHeroHeight'] = MATCHUP_PAGE[1]
+    article.pop('imageHero2x', None)
+    article.pop('imageHero2xWidth', None)
+    article.pop('imageHero2xHeight', None)
+    article['imageOg'] = og_rel
+    article['imageOgWidth'] = MATCHUP_OG[0]
+    article['imageOgHeight'] = MATCHUP_OG[1]
     news_heroes.ensure_article_hero(ROOT, article)
     save_article(article, articles)
     articles = links.load_articles(ROOT)

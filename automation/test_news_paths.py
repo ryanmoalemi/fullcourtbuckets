@@ -120,8 +120,9 @@ class NewsPathTests(unittest.TestCase):
         self.assertIn(f'src="{shown_image}"', hero)
         self.assertIn(f'alt="{html.escape(shown_alt, quote=True)}"', hero)
         if featured.get('slug') == '2026-wnba-finals-ratings-tracker':
-            self.assertIn('social-card.webp', shown_image)
+            self.assertIn('matchup-1200.webp', shown_image)
             self.assertNotIn('ratings-sheet.webp', hero)
+            self.assertNotIn('social-card.webp', hero)
         self.assertIn('id="featured-credit"', hero)
         for article in articles:
             lead = str(article.get('image') or '').strip()

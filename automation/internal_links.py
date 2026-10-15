@@ -400,21 +400,32 @@ HUBS = (
 )
 
 
+MATCHUP_IMAGE = '/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp'
+MATCHUP_ALT = (
+    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
+    'Cecilia Zandalasini of the Golden State Valkyries'
+)
+
+
 def _featured_source(article: dict) -> dict:
-    """The pending-counts sheet is not the homepage hero. Use the social card."""
+    """The pending-counts sheet is not the homepage hero. Use the matchup photo."""
     source = dict(article or {})
     image = str(source.get('image') or '')
-    og = str(source.get('imageOg') or '')
     if not image:
         return source
-    pending = source.get('slug') == '2026-wnba-finals-ratings-tracker' or image.endswith('/ratings-sheet.webp')
-    if pending and og.endswith('/social-card.webp'):
-        source['image'] = og
-        source['imageAlt'] = '2026 WNBA Finals Ratings Tracker'
-        source['imageWidth'] = source.get('imageOgWidth') or 1200
-        source['imageHeight'] = source.get('imageOgHeight') or 630
-        source['imageFocal'] = 'center center'
-        source['_feature_card'] = True
+    tracker = source.get('slug') == '2026-wnba-finals-ratings-tracker'
+    pending = image.endswith('/ratings-sheet.webp') or image.endswith('/social-card.webp')
+    if not tracker and not pending:
+        return source
+    if pending or not image.endswith('/matchup-1200.webp'):
+        source['image'] = MATCHUP_IMAGE
+        source['imageWidth'] = 1200
+        source['imageHeight'] = 675
+    alt = str(source.get('imageAlt') or '')
+    if not alt or 'pending' in alt.lower():
+        source['imageAlt'] = MATCHUP_ALT
+    source['imageFocal'] = 'center center'
+    source['_feature_card'] = True
     return source
 
 
@@ -1896,7 +1907,7 @@ def _splice_block(html: str, at: int, block: str) -> str:
 
 
 def _is_ratings_tracker_page(html: str, article: dict | None) -> bool:
-    """The Finals ratings hub has no body hero. Nightly lead ordering must not put one back."""
+    """The Finals ratings hub keeps its own photo order. Nightly lead ordering must not replace it."""
     if isinstance(article, dict) and article.get('slug') == '2026-wnba-finals-ratings-tracker':
         return True
     return 'class="fcb-tracker-update"' in html and 'id="finals-ratings-tracker"' in html
@@ -1909,16 +1920,21 @@ def _pull_block(pattern: re.Pattern, text: str) -> tuple[str, str]:
     return match.group(0).strip(), text[:match.start()] + text[match.end():]
 
 
-def order_ratings_tracker(html: str) -> str:
-    """H1, byline, one-line summary, ratings table, quick cite, then the update callout.
+TRACKER_MATCHUP_RE = re.compile(r'<figure\b[^>]*\btracker-matchup\b[^>]*>.*?</figure>', re.S)
 
-    The social card stays in og:image and twitter:image. It is not a body photo.
+
+def order_ratings_tracker(html: str) -> str:
+    """H1, byline, summary, matchup photo, ratings table, quick cite, then the update callout.
+
+    A stray lead photo, including the old pending-counts sheet, is removed.
+    The credited matchup stays between the summary and the table.
     """
     start = html.find('<article')
     end = html.rfind('</article>')
     if start < 0 or end < 0:
         return html
     article = LEAD_PHOTO_RE.sub('', html[start:end])
+    matchup, article = _pull_block(TRACKER_MATCHUP_RE, article)
     cite, article = _pull_block(QUICK_CITE_RE, article)
     callout, article = _pull_block(
         re.compile(r'<aside class="fcb-tracker-update".*?</aside>', re.S),
@@ -1938,7 +1954,7 @@ def order_ratings_tracker(html: str) -> str:
         return html
     row = BYLINE_ROW_RE.search(article)
     insert_at = row.end() if row and row.start() > h1 else h1 + len('</h1>')
-    block = '\n'.join(part for part in (lead, heading, table, cite, callout) if part)
+    block = '\n'.join(part for part in (lead, matchup, heading, table, cite, callout) if part)
     article = article[:insert_at].rstrip() + '\n' + block + '\n' + article[insert_at:].lstrip()
     return html[:start] + article + html[end:]
 
@@ -1973,7 +1989,7 @@ def place_quick_cite(html: str) -> str:
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
-    The ratings tracker is the exception: no body hero, and the quick cite follows the table.
+    The ratings tracker is the exception: the matchup photo follows the summary, and the quick cite follows the table.
     On every other article the byline sits directly under the H1 and above the hero.
     A fast-facts box, when the page has one, follows the hero. An archive note
     stays immediately under the byline, still above the photo.

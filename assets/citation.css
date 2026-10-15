@@ -173,6 +173,26 @@ h3:focus-within > .fcb-anchor,
   color: #ff9800;
 }
 
+.article figure.tracker-matchup {
+  margin: 4px 0 12px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.article figure.tracker-matchup img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.article figure.tracker-matchup figcaption {
+  margin-top: 6px;
+  color: #9a958e;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .fcb-tracker-update {
   box-sizing: border-box;
   width: 100%;

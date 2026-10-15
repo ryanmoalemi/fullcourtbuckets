@@ -1,8 +1,10 @@
 """Citation tools on the five link-magnet pages, plus the updater slug fix."""
 import html
+import inspect
 import json
 import re
 import unittest
+from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -200,8 +202,15 @@ class CitationPageTests(unittest.TestCase):
         self.assertNotIn('Oct. 26', tracker)
         label = citation.finals_tracker_updated_label(ROOT)
         self.assertRegex(label, r'^[A-Z][a-z]+ \d{1,2}, \d{4}$')
-        self.assertNotIn(label, (ROOT / 'automation' / 'citation.py').read_text(encoding='utf-8'))
-        self.assertNotIn(label, (ROOT / 'automation' / 'build_finals_ratings_tracker.py').read_text(encoding='utf-8'))
+        date_source = (
+            inspect.getsource(citation.pacific_calendar_date)
+            + inspect.getsource(citation.finals_tracker_updated)
+            + inspect.getsource(citation.finals_tracker_updated_label)
+        )
+        self.assertNotIn(label, date_source)
+        self.assertIn('America/Los_Angeles', date_source)
+        early_utc = datetime(2026, 10, 15, 3, 43, tzinfo=timezone.utc)
+        self.assertEqual(citation.pacific_calendar_date(early_utc).isoformat(), '2026-10-14')
         callout = html.split('class="fcb-tracker-update"', 1)[1].split('</aside>', 1)[0]
         self.assertIn('How this tracker is updated:', callout)
         self.assertIn('usually within 1 to 2 days', callout)
@@ -210,20 +219,27 @@ class CitationPageTests(unittest.TestCase):
         body = html.split('<article', 1)[1].split('</article>', 1)[0]
         self.assertNotIn('lead-photo', body)
         self.assertNotIn('social-card.webp', body)
+        self.assertNotIn('ratings-sheet.webp', body)
         self.assertNotIn('hero-1200.webp', body)
-        social = 'https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/social-card.webp'
+        self.assertIn('tracker-matchup', body)
+        self.assertIn('matchup-1200.webp', body)
+        self.assertIn('Angel_Reese_Dream_2.jpg', body)
+        self.assertIn('260824_Lynx_Valkries_JohnMc249_(55485544642).jpg', body)
+        social = 'https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp'
         self.assertIn(f'property="og:image" content="{social}"', html)
         self.assertIn(f'name="twitter:image" content="{social}"', html)
         self.assertNotIn('og-1200.webp', html)
         h1 = body.find('</h1>')
         byline = body.find('class="byline"')
         summary = body.find('class="lead"')
+        photo = body.find('tracker-matchup')
         table = body.find('fcb-data-table')
         cite = body.find('fcb-quick-cite')
         note = body.find('fcb-tracker-update')
         self.assertLess(h1, byline)
         self.assertLess(byline, summary)
-        self.assertLess(summary, table)
+        self.assertLess(summary, photo)
+        self.assertLess(photo, table)
         self.assertLess(table, cite)
         self.assertLess(cite, note)
         self.assertIn('font-size: 16px', (ROOT / 'assets' / 'citation.css').read_text(encoding='utf-8'))
