@@ -37,7 +37,6 @@ MATCHUP_OG = (1200, 630)
 MATCHUP_PAGE_NAME = 'matchup-1200.webp'
 MATCHUP_OG_NAME = 'matchup-og.webp'
 REESE_PHOTO = ROOT / 'images' / 'articles' / 'wnba-finals-2026-audience-growth-dream-valkyries' / 'angel-reese-dream-2026.webp'
-ZANDA_PHOTO = ROOT / 'images' / 'articles' / 'finals-game-1-preview-dream-valkyries' / 'cecilia-zandalasini-valkyries-2026.webp'
 CARD_TITLE = '2026 WNBA Finals Ratings Tracker'
 BASELINE_SOCIAL_STAT = '51 telecasts topped 1M viewers in 2026 (up from 19)'
 HUB_FORCED = {
@@ -53,20 +52,31 @@ ARCHIVE_NOTE = (
 )
 
 
-HERO_ALT = (
-    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
-    'Cecilia Zandalasini of the Golden State Valkyries'
+HERO_ALT = 'Angel Reese of the Atlanta Dream in a white number 5 jersey looks up'
+HERO_CREDIT = 'Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons'
+PENDING_HEADLINE = (
+    'Game 1 Sat Oct 17, 12:30 PM PT on NBC/Peacock; ratings pending. '
+    'The 2025 Finals averaged 1.5 million.'
 )
-HERO_CREDIT = 'Photos: John Mac, CC BY-SA 4.0, via Wikimedia Commons'
-MATCHUP_CAPTION = (
-    'Angel Reese of the Atlanta Dream, May 27, 2026. Photo: '
+ONE_LINE_CITE = (
+    'Full Court Buckets, "2026 WNBA Finals ratings tracker: game-by-game TV viewers," '
+    'October 14, 2026. https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/'
+)
+PAST_FINALS = ((2022, 534_000), (2023, 728_000), (2024, 1_600_000), (2025, 1_500_000))
+_MONTH_NUM = {
+    'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,
+    'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12,
+}
+_CLUB = {
+    'Atlanta Dream': 'ATL',
+    'Golden State Valkyries': 'GSV',
+}
+REESE_CREDIT = (
+    '<p class="tracker-credit">Photo: Angel Reese of the Atlanta Dream, May 27, 2026. '
     '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_2.jpg" target="_blank" rel="noopener">John Mac</a>, '
     '<a class="inline-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>, '
     'via <a class="inline-link" href="https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a>. '
-    'Cecilia Zandalasini with the Valkyries at Target Center on Aug. 24, 2026, not from this series. Photo: '
-    '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg" target="_blank" rel="noopener">John Mac</a> / '
-    '<a class="inline-link" href="https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc249_(55485544642).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> '
-    '(<a class="inline-link" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>).'
+    'The photo is the card and the social image.</p>'
 )
 
 
@@ -115,59 +125,190 @@ def _wrap_lines(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFo
     return lines or ['']
 
 
-def _head_safe_panel(image: Image.Image, width: int, height: int) -> Image.Image:
-    """Fill one half of the frame without cutting off the top of the head.
+def _face_centered_crop(image: Image.Image, width: int, height: int) -> Image.Image:
+    """Crop to the frame with the largest detected face at the center.
 
-    A landscape photo keeps its full height and loses side margins.
-    A portrait photo keeps the top of the frame, where these credited
-    shots place the player's head.
+    The homepage card uses object-fit: cover and object-position center, so the
+    face has to sit in the middle of both the 16:9 card and the shorter og frame.
     """
     src = image.convert('RGB')
     sw, sh = src.size
     target = width / height
     if sw / sh > target:
         crop_w = int(round(sh * target))
-        left = max(0, (sw - crop_w) // 2)
-        src = src.crop((left, 0, left + crop_w, sh))
+        crop_h = sh
     else:
-        crop_h = min(sh, int(round(sw / target)))
-        src = src.crop((0, 0, sw, crop_h))
-    return src.resize((width, height), Image.Resampling.LANCZOS)
+        crop_w = sw
+        crop_h = int(round(sw / target))
+    crop_w = min(crop_w, sw)
+    crop_h = min(crop_h, sh)
+    faces = news_heroes.detect_faces(src)
+    if faces:
+        x, y, fw, fh = max(faces, key=lambda box: box[2] * box[3])
+        cx = x + fw / 2
+        cy = y + fh / 2
+    else:
+        cx, cy = sw / 2, sh * 0.38
+    left = max(0, min(int(round(cx - crop_w / 2)), sw - crop_w))
+    top = max(0, min(int(round(cy - crop_h / 2)), sh - crop_h))
+    cropped = src.crop((left, top, left + crop_w, top + crop_h))
+    return cropped.resize((width, height), Image.Resampling.LANCZOS)
 
 
 def draw_matchup(size: tuple[int, int], dest: Path) -> Path:
-    """Side-by-side credited photos. Page frame is 1200x675; the og crop is 1200x630.
+    """Angel Reese alone. Page frame is 1200x675; the og crop is 1200x630.
 
-    Sources are the Dream and Valkyries photos already published with credit.
-    The frame is the photos only. Missing files stop the build instead of
-    substituting another picture.
+    The source is the credited Dream photo already in the repo. The frame is
+    the photo only. A missing file stops the build.
     """
-    missing = [path for path in (REESE_PHOTO, ZANDA_PHOTO) if not path.is_file()]
-    if missing:
-        names = ', '.join(str(path.relative_to(ROOT)) for path in missing)
-        raise SystemExit(f'matchup photos are missing: {names}')
-    width, height = size
-    half = width // 2
-    with Image.open(REESE_PHOTO) as reese, Image.open(ZANDA_PHOTO) as zanda:
-        left = _head_safe_panel(reese, half, height)
-        right = _head_safe_panel(zanda, width - half, height)
-    canvas = Image.new('RGB', size, (5, 5, 6))
-    canvas.paste(left, (0, 0))
-    canvas.paste(right, (half, 0))
+    if not REESE_PHOTO.is_file():
+        raise SystemExit(f'matchup photo is missing: {REESE_PHOTO.relative_to(ROOT)}')
+    with Image.open(REESE_PHOTO) as reese:
+        canvas = _face_centered_crop(reese, size[0], size[1])
     dest.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(dest, 'WEBP', quality=86, method=6)
     return dest
 
 
-def matchup_figure() -> str:
-    """Compact photo under the summary. The ratings table stays directly below it."""
-    src = f'/images/articles/{SLUG}/{MATCHUP_PAGE_NAME}'
-    width, height = MATCHUP_PAGE
-    return (
-        f'<figure class="tracker-matchup"><img src="{src}" alt="{links.esc(HERO_ALT)}" '
-        f'width="{width}" height="{height}" decoding="async" fetchpriority="high" '
-        f'style="object-position:center center"><figcaption>{MATCHUP_CAPTION}</figcaption></figure>'
+def _short_viewers(viewers: int) -> str:
+    if viewers >= 1_000_000:
+        text = f'{viewers / 1_000_000:.2f}'.rstrip('0').rstrip('.')
+        return f'{text}M'
+    if viewers >= 1_000:
+        return f'{round(viewers / 1000)}K'
+    return f'{viewers:,}'
+
+
+def headline_stat(payload: dict | None) -> str:
+    """Latest released Finals audience, or the Game 1 pending line, plus 2025."""
+    line = tracker_social_headline(payload)
+    if line == BASELINE_SOCIAL_STAT:
+        return PENDING_HEADLINE
+    return f'{line}. The 2025 Finals averaged 1.5 million.'
+
+
+def _short_date(text: str) -> str:
+    match = re.match(r'([A-Z][a-z]{2}),\s+([A-Z][a-z]{2})\.?\s+(\d{1,2})', text)
+    if not match or match.group(2) not in _MONTH_NUM:
+        return text
+    return f'{match.group(1)} {_MONTH_NUM[match.group(2)]}/{int(match.group(3))}'
+
+
+def _short_matchup(text: str) -> str:
+    teams = text.split(',', 1)[0]
+    if ' at ' not in teams:
+        return teams
+    away, home = teams.split(' at ', 1)
+    return f'{_CLUB.get(away.strip(), away.strip())} @ {_CLUB.get(home.strip(), home.strip())}'
+
+
+def _short_network(text: str) -> str:
+    return text.replace(' and ', '/').replace(', ', '/')
+
+
+def _short_tip(text: str) -> str:
+    parts = re.findall(r'(\d{1,2}:\d{2})\s*([ap])\.?m\.?', text, re.I)
+    if len(parts) < 2:
+        return text
+    (left, left_mer), (right, right_mer) = parts[0], parts[1]
+    meridians = tuple('AM' if mer.lower() == 'a' else 'PM' for mer in (left_mer, right_mer))
+    if meridians[0] == meridians[1]:
+        return f'{left} / {right} {meridians[0]}'
+    return f'{left} {meridians[0]} / {right} {meridians[1]}'
+
+
+def _compact_viewers(game_no: str, row: list, payload: dict | None) -> str:
+    for item in (payload or {}).get('games') or []:
+        if str(item.get('game') or '') != f'Finals Game {game_no}':
+            continue
+        viewers = item.get('viewers')
+        if isinstance(viewers, bool) or not isinstance(viewers, int) or viewers <= 0:
+            break
+        return _short_viewers(viewers)
+    cell = row[6] if len(row) > 6 else 'Pending tip-off'
+    if cell == 'Pending tip-off':
+        return 'Pending'
+    return str(cell)
+
+
+def compact_ratings_table(payload: dict | None) -> str:
+    """Four scheduled games, one line each. Games 5-7 stay in the footnote."""
+    rows = []
+    for row in citation.FINALS_TRACKER_ROWS:
+        if row[-1] != 'Scheduled':
+            continue
+        game, date, matchup, network, tip = row[:5]
+        rows.append([
+            game,
+            _short_date(date),
+            _short_matchup(matchup),
+            _short_network(network),
+            _short_tip(tip),
+            _compact_viewers(game, row, payload),
+        ])
+    table = citation.data_table(
+        ['Game', 'Date', 'Matchup', 'Network', 'Tip', 'Viewers'],
+        rows,
     )
+    table = table.replace(
+        '<div class="fcb-table-wrap">',
+        '<div class="fcb-table-wrap tracker-sheet" id="finals-ratings-tracker">',
+        1,
+    )
+    return table.replace(
+        '<table class="fcb-data-table">',
+        '<table class="fcb-data-table tracker-compact" aria-label="2026 WNBA Finals game-by-game ratings">',
+        1,
+    )
+
+
+def tracker_footnote() -> str:
+    return (
+        '<p class="tracker-note">Games 1-2: Chase Center. '
+        'Games 3-4: State Farm Arena (Wed, Oct. 21, 2026). '
+        'Game 4 tips at 1:00 p.m. ET / 10:00 a.m. PT. '
+        'Games 5-7, if necessary, are on USA and Peacock. '
+        'Dates and tip times for those games are not listed. '
+        'Viewer cells stay Pending tip-off. '
+        f'<a class="inline-link" href="{citation.WNBA_FINALS_RELEASE}">WNBA release of Oct. 13, 2026</a>. '
+        f'Networks: <a class="inline-link" href="{citation.NBC_FINALS_NETWORKS}">NBC Sports</a> '
+        f'and the <a class="inline-link" href="{citation.VALKYRIES_FINALS_PREVIEW}">Valkyries</a>.</p>'
+    )
+
+
+def journalist_tools() -> str:
+    return (
+        '<nav class="tracker-tools" aria-label="Journalist tools">'
+        f'<button type="button" class="fcb-tracker-cite" data-citation="{links.esc(ONE_LINE_CITE)}">Cite this</button>'
+        '<a href="#finals-csv">Download CSV</a>'
+        '<a href="#finals-embed">Embed</a>'
+        '</nav>'
+    )
+
+
+def _past_finals_line(payload: dict | None) -> str:
+    found = {}
+    for row in (payload or {}).get('seasons') or []:
+        year = row.get('season')
+        viewers = row.get('finals_avg_viewers')
+        if year in {item[0] for item in PAST_FINALS} and isinstance(viewers, int) and viewers > 0:
+            found[year] = viewers
+    parts = [f'{year} {_short_viewers(found.get(year, viewers))}' for year, viewers in PAST_FINALS]
+    return '. '.join(parts) + '.'
+
+
+def past_finals_averages(payload: dict | None) -> str:
+    return (
+        '<section class="tracker-averages" id="past-finals-averages">'
+        '<h2>Past Finals averages</h2>'
+        f'<p>{_past_finals_line(payload)}</p>'
+        '</section>'
+    )
+
+
+def _tag_ratings_embed(block: str) -> str:
+    block = block.replace('<div class="fcb-embed">', '<div class="fcb-embed" id="finals-embed">', 1)
+    return block.replace('<a class="fcb-csv"', '<a id="finals-csv" class="fcb-csv"', 1)
 
 
 def draw_social_card(payload: dict | None) -> Path:
@@ -271,25 +412,48 @@ def _tracker_table_block(rest: str) -> tuple[str, str]:
     return block, remainder
 
 
+def _lower_sections(rest: str) -> tuple[str, str, str]:
+    """Charts stay below the facts. The network note and ratings embed move to the sources."""
+    _heading, rest = _tracker_table_block(rest)
+    rest = re.sub(
+        r'\s*<p>Games 1 through 4 are the only ones dated.*?</p>',
+        '\n',
+        rest,
+        count=1,
+        flags=re.S,
+    )
+    note_at = rest.find('<p class="fcb-note">')
+    embed_at = rest.find('<div class="fcb-embed">')
+    bench_at = rest.find('id="finals-benchmarks"')
+    if note_at < 0 or embed_at < note_at or bench_at < embed_at:
+        return '', '', rest.strip()
+    heading_at = rest.rfind('<h2', 0, bench_at)
+    if heading_at < 0:
+        heading_at = bench_at
+    note = rest[note_at:embed_at].strip()
+    embed = _tag_ratings_embed(rest[embed_at:heading_at].strip())
+    charts = rest[heading_at:].strip()
+    return note, embed, charts
+
+
 def article_html(payload: dict) -> str:
     blocks = citation.ratings_hub_blocks(payload)
     cite, _, rest = blocks.partition('</aside>')
     cite += '</aside>'
-    table, after = _tracker_table_block(rest)
-    summary = (
-        '<p class="lead">The WNBA set four 2026 Finals games on Oct. 13, '
-        'and not one of them has a released audience.</p>'
-    )
+    note, embed, charts = _lower_sections(rest)
     return f'''<article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div><h1>{links.esc(HEADLINE)}</h1>
 <div class="byline-row">{links.BYLINE_HTML}<time class="article-date" datetime="2026-10-14">October 14, 2026</time></div>
-{summary}
-{matchup_figure()}
-{table}
+<p class="tracker-stat">{links.esc(headline_stat(payload))}</p>
+{compact_ratings_table(payload)}
+{tracker_footnote()}
+{journalist_tools()}
+{past_finals_averages(payload)}
 {cite}
+{charts}
+{note}
+{REESE_CREDIT}
+{embed}
 {citation.finals_tracker_update_callout(ROOT)}
-<p>Game 1 is Saturday, Oct. 17, at 3:30 p.m. ET on NBC and Peacock, with the <a class="inline-link" href="/wnba/teams/atlanta-dream/" target="_blank" rel="noopener">Atlanta Dream</a> at the <a class="inline-link" href="/wnba/teams/golden-state-valkyries/" target="_blank" rel="noopener">Golden State Valkyries</a>. Games 5, 6 and 7 are if necessary. The Oct. 13 release does not list their dates or tip times. NBC Sports and the Valkyries list those games on USA and Peacock.</p>
-<p>Game 3 is Wednesday, Oct. 21, at State Farm Arena, at 8:00 p.m. ET on USA and Peacock. That is the schedule to cite while the viewer cells stay empty.</p>
-{after}
 <p class="how-made">How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi. {links.HOW_MADE_LINK}</p>
 <p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p></article>'''
 
@@ -408,6 +572,23 @@ def add_archive_note() -> None:
     path.write_text(html, encoding='utf-8')
 
 
+OLD_LISTING_ALT = (
+    'Angel Reese of the Atlanta Dream in a white Dream jersey beside '
+    'Cecilia Zandalasini of the Golden State Valkyries'
+)
+
+
+def replace_listing_alt() -> None:
+    """The card filename stays. Listings that baked the old two-player alt get the Reese line."""
+    for path in ROOT.rglob('*.html'):
+        if '__pycache__' in path.parts:
+            continue
+        text = path.read_text(encoding='utf-8')
+        if OLD_LISTING_ALT not in text:
+            continue
+        path.write_text(text.replace(OLD_LISTING_ALT, HERO_ALT), encoding='utf-8')
+
+
 def main() -> None:
     payload = json.loads((ROOT / 'data' / 'viewership-attendance.json').read_text(encoding='utf-8'))
     page_image = draw_matchup(MATCHUP_PAGE, IMAGE_DIR / MATCHUP_PAGE_NAME)
@@ -483,6 +664,7 @@ def main() -> None:
     add_archive_note()
     refresh_news_itemlist()
     refresh_html_sitemap()
+    replace_listing_alt()
     refresh_team_stories()
     viewership.build(ROOT)
     print(f'Wrote {dest.relative_to(ROOT)}')
