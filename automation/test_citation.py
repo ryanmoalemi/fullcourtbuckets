@@ -295,6 +295,26 @@ class CitationPageTests(unittest.TestCase):
     def test_author_and_contact_lines(self):
         for relative in ('authors/ryan-moalemi/index.html', 'contact/index.html'):
             self.assertIn(MEDIA, page(relative))
+        author = page('authors/ryan-moalemi/index.html')
+        self.assertIn('href="/assets/citation.css"', author)
+        self.assertIn('src="/assets/citation.js"', author)
+        self.assertEqual(author.count('class="media-contact"'), 1)
+
+    def test_author_generator_keeps_contact_line_through_nav_install(self):
+        """The nightly updater renders this page, then installs the site nav."""
+        import site_nav
+        articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
+        html = links.render_author_page(articles, ROOT)
+        self.assertIn(MEDIA, html)
+        self.assertIn('href="/assets/citation.css"', html)
+        self.assertIn('src="/assets/citation.js"', html)
+        installed = site_nav.install(html, '/authors/ryan-moalemi/', site_nav.build_menu(ROOT))
+        self.assertIn(MEDIA, installed)
+        self.assertIn('href="/assets/citation.css"', installed)
+        self.assertIn('src="/assets/citation.js"', installed)
+        self.assertEqual(installed.count('class="media-contact"'), 1)
+        self.assertEqual(installed.count('href="/assets/citation.css"'), 1)
+        self.assertEqual(installed.count('src="/assets/citation.js"'), 1)
 
     def test_viewership_hub_embed_stays_one_click(self):
         html = page('wnba/viewership-attendance/index.html')

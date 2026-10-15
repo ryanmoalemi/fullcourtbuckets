@@ -2485,9 +2485,12 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     noun='player' if count == 1 else 'players'
     import team_season
     season = team_season.season_section(root, slot, standing) if root is not None else ''
+    coverage = ''
     if root is not None:
         stories = team_season.stories_section(root, slot)
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>'''
+        import team_coverage
+        coverage = team_coverage.section_html(root, slot)
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
@@ -3204,6 +3207,8 @@ def refresh_published_news(root: Path | None = None) -> int:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding='utf-8')
         changes += 1
+    import team_coverage
+    changes += team_coverage.refresh(root)
     print(f'Published news paths; {changes} files changed.')
     return changes
 

@@ -260,6 +260,8 @@ def refresh_team_stories() -> None:
         if not match or not expected or match.group(0) == expected:
             continue
         page.write_text(html[:match.start()] + expected + html[match.end():], encoding='utf-8')
+    import team_coverage
+    team_coverage.refresh(ROOT)
 
 
 def add_archive_note() -> None:
