@@ -42,38 +42,55 @@ ARCHIVE_NOTE = (
 )
 
 
+HERO_ALT = '2026 WNBA Finals graphic: viewer counts pending, Game 1 on Saturday, Oct. 17'
+HERO_CREDIT = 'Graphic: Full Court Buckets'
+
+
+def _fit_font(draw: ImageDraw.ImageDraw, text: str, path: Path, size: int, max_width: int) -> ImageFont.FreeTypeFont:
+    """Largest face at or under size whose line fits the frame."""
+    while size > 40:
+        font = ImageFont.truetype(str(path), size)
+        if draw.textlength(text, font=font) <= max_width:
+            return font
+        size -= 4
+    return ImageFont.truetype(str(path), size)
+
+
 def draw_sheet() -> Path:
-    """16:9 artwork. The hero crop stays 16:9. Open Graph uses the site's 1.91 crop."""
+    """16:9 poster. A few words at display size, so a 390px phone can still read them.
+
+    The schedule stays in the HTML table. Open Graph uses the site's 1.91 crop of this frame.
+    """
     width, height = 2400, 1350
-    image = Image.new('RGB', (width, height), (7, 7, 10))
+    image = Image.new('RGB', (width, height), (12, 12, 16))
     draw = ImageDraw.Draw(image)
-    for x in range(18):
-        color = (
-            int(125 + (241 - 125) * x / 17),
-            int(53 + (0 - 53) * x / 17),
-            int(255 + (145 - 255) * x / 17),
-        )
-        draw.rectangle((0, x * 4, width, x * 4 + 4), fill=color)
-    bold = ImageFont.truetype(str(ROOT / 'assets' / 'fonts' / 'Inter-Bold.ttf'), 84)
-    medium = ImageFont.truetype(str(ROOT / 'assets' / 'fonts' / 'Inter-Medium.ttf'), 40)
-    small = ImageFont.truetype(str(ROOT / 'assets' / 'fonts' / 'Inter-Medium.ttf'), 32)
-    draw.text((120, 150), 'FULL COURT BUCKETS', font=medium, fill=(255, 152, 0))
-    draw.text((120, 230), 'Viewer counts are still pending', font=bold, fill=(245, 243, 239))
-    draw.text((120, 350), '2026 WNBA Finals. Four games from the Oct. 13 release.', font=medium, fill=(210, 204, 198))
-    rows = (
-        'Game 1   Sat, Oct. 17   NBC, Peacock          Pending tip-off',
-        'Game 2   Mon, Oct. 19   USA, CNBC, Peacock    Pending tip-off',
-        'Game 3   Wed, Oct. 21   USA, CNBC, Peacock    Pending tip-off',
-        'Game 4   Sat, Oct. 24   NBC, Peacock          Pending tip-off',
-        'Games 5-7   Not listed in that release',
+    draw.rectangle((0, 0, 36, height), fill=(255, 152, 0))
+    bold_path = ROOT / 'assets' / 'fonts' / 'Inter-Bold.ttf'
+    medium_path = ROOT / 'assets' / 'fonts' / 'Inter-Medium.ttf'
+    max_width = width - 220
+    kicker = _fit_font(draw, '2026 WNBA Finals', medium_path, 96, max_width)
+    line_one = _fit_font(draw, 'Viewer counts', bold_path, 228, max_width)
+    line_two = _fit_font(draw, 'pending', bold_path, 228, max_width)
+    date = _fit_font(draw, 'Game 1, Sat, Oct. 17', bold_path, 132, max_width)
+    lines = (
+        (kicker, '2026 WNBA Finals', (255, 152, 0), 28),
+        (line_one, 'Viewer counts', (245, 243, 239), 18),
+        (line_two, 'pending', (245, 243, 239), 36),
+        (date, 'Game 1, Sat, Oct. 17', (245, 243, 239), 0),
     )
-    y = 500
-    for row in rows:
-        draw.text((120, y), row, font=small, fill=(245, 243, 239))
-        y += 90
+    heights = []
+    for font, text, _fill, gap in lines:
+        box = draw.textbbox((0, 0), text, font=font)
+        heights.append((box[3] - box[1], gap))
+    block = sum(item[0] + item[1] for item in heights)
+    y = (height - block) / 2
+    x = 120
+    for (font, text, fill, gap), (line_height, _gap) in zip(lines, heights):
+        draw.text((x, y), text, font=font, fill=fill)
+        y += line_height + gap
     IMAGE_DIR.mkdir(parents=True, exist_ok=True)
     dest = IMAGE_DIR / SOURCE_NAME
-    image.save(dest, 'WEBP', quality=82, method=6)
+    image.save(dest, 'WEBP', quality=86, method=6)
     return dest
 
 
@@ -87,8 +104,8 @@ def article_dict(source: Path) -> dict:
         'category': 'WNBA',
         'date': '2026-10-14',
         'image': rel,
-        'imageAlt': 'Chart of the 2026 WNBA Finals schedule with viewer counts still pending',
-        'imageCredit': 'Chart: Full Court Buckets',
+        'imageAlt': HERO_ALT,
+        'imageCredit': HERO_CREDIT,
         'teams': ['atlanta-dream', 'golden-state-valkyries'],
         'imageWidth': 2400,
         'imageHeight': 1350,
@@ -136,9 +153,9 @@ def article_html(payload: dict) -> str:
     cite, _, rest = blocks.partition('</aside>')
     cite += '</aside>'
     return f'''<article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div><h1>{links.esc(HEADLINE)}</h1>
+<div class="byline-row">{links.BYLINE_HTML}<time class="article-date" datetime="2026-10-14">October 14, 2026</time></div>
+<figure class="lead-photo"><img src="/images/articles/{SLUG}/{SOURCE_NAME}" alt="{links.esc(HERO_ALT)}" width="2400" height="1350"><figcaption>Game 1 is Saturday, Oct. 17. Viewer counts stay pending until a network releases them. {HERO_CREDIT}</figcaption></figure>
 {cite}
-<figure class="lead-photo"><img src="/images/articles/{SLUG}/{SOURCE_NAME}" alt="Chart of the 2026 WNBA Finals schedule with viewer counts still pending" width="2400" height="1350"><figcaption>The 2026 WNBA Finals ratings sheet. Viewer cells stay pending until a network releases them. Chart: Full Court Buckets.</figcaption></figure>
-{links.BYLINE_HTML}<time class="article-date" datetime="2026-10-14">October 14, 2026</time>
 <p class="lead">The WNBA set four 2026 Finals games on Oct. 13, and not one of them has a released audience.</p>
 <p>Game 1 is Saturday, Oct. 17, at 3:30 p.m. ET on NBC and Peacock, with the <a class="inline-link" href="/wnba/teams/atlanta-dream/" target="_blank" rel="noopener">Atlanta Dream</a> at the <a class="inline-link" href="/wnba/teams/golden-state-valkyries/" target="_blank" rel="noopener">Golden State Valkyries</a>. Games 5, 6 and 7 are if necessary, and the Oct. 13 release does not list them.</p>
 <p>Game 3 is Wednesday, Oct. 21, at State Farm Arena, at 8:00 p.m. ET on USA, CNBC and Peacock. That is the schedule to cite while the viewer cells stay empty.</p>
@@ -148,15 +165,8 @@ def article_html(payload: dict) -> str:
 
 
 def under_headline(html: str) -> str:
-    match = re.search(r'\n?<aside class="fcb-quick-cite".*?</aside>\n?', html, re.S)
-    if not match:
-        return html
-    block = match.group(0).strip()
-    html = html[:match.start()] + html[match.end():]
-    at = html.find('</h1>')
-    if at < 0:
-        return block + html
-    return html[:at + len('</h1>')] + '\n' + block + '\n' + html[at + len('</h1>'):]
+    """Quick-cite follows the lead photo. The byline stays under the H1."""
+    return links.place_quick_cite(html)
 
 
 def save_article(article: dict, articles: list) -> None:
@@ -257,10 +267,10 @@ def add_archive_note() -> None:
     html = path.read_text(encoding='utf-8')
     if 'This preview was published before the game.' in html:
         return
-    needle = '</time></div><p class="lead">'
-    if needle not in html:
+    marker = '</time></div>'
+    if marker not in html:
         raise SystemExit('Game 1 preview byline marker is missing')
-    html = html.replace(needle, '</time></div>' + ARCHIVE_NOTE + '<p class="lead">', 1)
+    html = html.replace(marker, marker + ARCHIVE_NOTE, 1)
     path.write_text(html, encoding='utf-8')
 
 

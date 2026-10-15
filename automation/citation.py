@@ -259,9 +259,7 @@ def viewership_blocks(payload: dict) -> dict:
             caption=(
                 'Games 1-4: date, tip time, network, and venue from the WNBA release of Oct. 13, 2026. '
                 'Viewer cells stay pending until a network releases them. Games 5-7 are if necessary. '
-                'That release does not list their dates, times, or networks. The schedule table lower '
-                'on this page is the Oct. 11 listing and still shows Game 3 on Thursday, Oct. 22, and '
-                'Game 4 at 12:30 p.m. PT.'
+                'That release does not list their dates, times, or networks.'
             ),
         )
         + f'\n<p class="fcb-note">Schedule source: <a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release, Oct. 13, 2026</a>. '
@@ -345,10 +343,12 @@ FOS_SEMIS_URL = 'https://frontofficesports.com/article/wnba-semifinals-open-with
 def ratings_hub_crosslink() -> str:
     """Pointer from the audience story. The table itself stays on the hub."""
     return (
-        '<h2 class="section-title" id="finals-ratings-hub">Game-by-game Finals ratings</h2>\n'
+        '<h2 class="section-title" id="finals-ratings-tracker">'
+        '<span id="finals-ratings-hub"></span>'
+        'Game-by-game Finals ratings</h2>\n'
         '<p>This page is the season-long audience story. The game-by-game sheet, using the '
         f'<a href="{esc(WNBA_FINALS_RELEASE)}">WNBA release of Oct. 13, 2026</a>, is the '
-        f'<a href="{TRACKER_PATH}">2026 WNBA Finals ratings tracker</a>. '
+        f'<a href="{TRACKER_PATH}#finals-ratings-tracker">2026 WNBA Finals ratings tracker</a>. '
         'Multi-year attendance and viewership stay on the '
         f'<a href="{DATA_PAGE_PATH}">viewership and attendance page</a>.</p>'
     )

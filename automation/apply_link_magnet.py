@@ -21,17 +21,9 @@ def once(html: str, old: str, new: str, label: str) -> str:
 
 
 def under_headline(html: str) -> str:
-    """The quick-cite box sits directly under the headline so it is above the fold."""
-    match = re.search(r'\n?<aside class="fcb-quick-cite".*?</aside>\n?', html, re.S)
-    if not match:
-        return html
-    block = match.group(0).strip()
-    html = html[:match.start()] + html[match.end():]
-    marker = '</h1>'
-    at = html.find(marker)
-    if at < 0:
-        return match.group(0) + html
-    return html[:at + len(marker)] + '\n' + block + '\n' + html[at + len(marker):]
+    """Quick-cite follows the lead photo. The byline stays under the H1."""
+    import internal_links as links
+    return links.place_quick_cite(html)
 
 
 def ensure_assets(html: str) -> str:
@@ -72,7 +64,7 @@ def apply_viewership() -> None:
     html = ensure_assets(load(relative))
     html = ensure_dataset(html, citation.dataset_script(
         '2026 WNBA Finals audience and search demand',
-        'Published Full Court Buckets figures for 2026 WNBA audience averages and October search estimates. The game-by-game Finals sheet is the ratings tracker. Full Court Buckets gathers and verifies its own data.',
+        'Published Full Court Buckets figures for 2026 WNBA audience averages and October search estimates. Games 1-4 follow the WNBA release of Oct. 13, 2026. Games 5-7 are not listed in that release. The game-by-game sheet is the ratings tracker. Full Court Buckets gathers and verifies its own data.',
         citation.VIEWERSHIP_URL,
         citation.VIEWERSHIP_URL + 'finals-audience.csv',
     ))
@@ -133,8 +125,8 @@ def apply_viewership() -> None:
             '</figure>\n' + search_embed + '\n<h2 class="section-title">What audience should the Finals draw</h2>',
             'search embed',
         )
-    # The Oct. 11 schedule table still lists Game 3 on Thursday, Oct. 22.
-    # Do not offer an embed of that table. The citable schedule is the tracker.
+    # The visible schedule table is the Oct. 13 release, same rows as the ratings hub.
+    # Do not offer a second embed of it. The citable sheet is the tracker.
     html = citation.add_heading_anchors(html, citation.VIEWERSHIP_FORCED)
     save(relative, under_headline(html))
 

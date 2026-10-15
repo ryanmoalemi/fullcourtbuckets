@@ -1,4 +1,5 @@
 """Citation tools on the five link-magnet pages, plus the updater slug fix."""
+import html
 import json
 import re
 import unittest
@@ -89,6 +90,7 @@ class CitationPageTests(unittest.TestCase):
                 'finals-tv-schedule',
                 'search-demand-estimates',
                 'finals-ratings-hub',
+                'finals-ratings-tracker',
             ],
             'news/2026-wnba-finals-ratings-tracker/index.html': [
                 'finals-ratings-tracker',
@@ -201,11 +203,25 @@ class CitationPageTests(unittest.TestCase):
         self.assertIn('1,500,000', history)
         self.assertIn('Not in the Full Court Buckets viewership file', history)
         audience = page('news/wnba-finals-2026-audience-growth-dream-valkyries/index.html')
-        self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/"', audience)
-        self.assertNotIn('id="finals-ratings-tracker"', audience)
+        self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/#finals-ratings-tracker"', audience)
+        self.assertIn('id="finals-ratings-tracker"', audience)
+        self.assertIn('id="finals-ratings-hub"', audience)
         self.assertNotIn('embed-finals-tv-schedule', audience)
         schedule = audience.split('id="finals-tv-schedule"', 1)[1].split('</table>', 1)[0]
-        self.assertIn('Thu. Oct. 22', schedule)
+        self.assertIn('Wed. Oct. 21, 2026', schedule)
+        self.assertIn('State Farm Arena', schedule)
+        self.assertIn('1:00 p.m. ET / 10:00 a.m. PT', schedule)
+        self.assertIn('Not listed', schedule)
+        self.assertNotIn('Thu. Oct. 22', schedule)
+        self.assertNotIn('Oct. 26', schedule)
+        preview = page('news/finals-game-1-preview-dream-valkyries/index.html')
+        listed = preview.split('Full Finals schedule', 1)[1].split('Injury report', 1)[0]
+        self.assertIn('Wednesday, Oct. 21', listed)
+        self.assertIn('State Farm Arena', listed)
+        self.assertIn('1:00 p.m. ET / 10:00 a.m. PT', listed)
+        self.assertIn('Not listed', listed)
+        self.assertNotIn('Thursday, Oct. 22', listed)
+        self.assertNotIn('Oct. 26', listed)
         data = page('wnba/viewership-attendance/index.html')
         self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/"', data)
 
@@ -237,6 +253,44 @@ class CitationPageTests(unittest.TestCase):
         self.assertIn('$1,190,000', liberty)
         self.assertIn('$288,600', liberty)
         self.assertIn('not a published dollar figure', liberty)
+
+    def test_embed_and_cite_anchors_resolve(self):
+        pages = (
+            'news/wnba-finals-2026-audience-growth-dream-valkyries/index.html',
+            'news/2026-wnba-finals-ratings-tracker/index.html',
+            'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html',
+            'news/wnba-expansion-teams/index.html',
+            'news/liberty-offseason-five-gm-moves/index.html',
+            'standings/index.html',
+        )
+        loaded = {relative: page(relative) for relative in pages}
+        found = 0
+        for relative, markup in loaded.items():
+            h1 = markup.find('</h1>')
+            cite = markup.find('class="fcb-quick-cite"')
+            byline = markup.find('class="byline"')
+            figure = re.search(r'<figure\b[^>]*\blead-photo\b', markup)
+            self.assertLess(h1, cite, relative)
+            if byline > h1:
+                self.assertLess(h1, byline, relative)
+            if figure:
+                self.assertLess(figure.end(), cite, relative)
+                if byline > h1:
+                    self.assertLess(byline, figure.start(), relative)
+            for raw in re.findall(r'<textarea\b[^>]*>(.*?)</textarea>', markup, re.S):
+                text = html.unescape(re.sub(r'\s+', ' ', raw))
+                for url, anchor in re.findall(
+                    r'(https://fullcourtbuckets\.com[^#\s"<>]*)#([A-Za-z0-9_-]+)',
+                    text,
+                ):
+                    found += 1
+                    path = url.split('https://fullcourtbuckets.com', 1)[1]
+                    if not path.endswith('/'):
+                        path += '/'
+                    target = 'index.html' if path == '/' else path.lstrip('/') + 'index.html'
+                    target_html = page(target)
+                    self.assertIn(f'id="{anchor}"', target_html, f'{relative} -> {url}#{anchor}')
+        self.assertGreaterEqual(found, 6)
 
     def test_author_and_contact_lines(self):
         for relative in ('authors/ryan-moalemi/index.html', 'contact/index.html'):
