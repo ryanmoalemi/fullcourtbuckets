@@ -67,14 +67,13 @@ The CSV includes the 2026 benchmarks, the NBC and Peacock regular-season row, Oc
 
 ## Regenerate
 
-From the repo root:
+`automation/build_finals_ratings_tracker.py` no longer writes `/news/2026-wnba-finals-ratings-tracker/`. That URL is the attendance database, and running the script leaves the page in place.
+
+From the repo root, this still rewrites `/wnba/viewership-attendance/`:
 
 ```bash
-python automation/build_finals_ratings_tracker.py
 python automation/build_viewership_attendance.py
 ```
-
-The first command rewrites the ratings tracker, its CSV (`news/2026-wnba-finals-ratings-tracker/finals-ratings.csv`), and the listings that point at the story. The second rewrites `/wnba/viewership-attendance/` from the same JSON file.
 
 Check:
 

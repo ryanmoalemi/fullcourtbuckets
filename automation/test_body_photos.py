@@ -79,7 +79,8 @@ class BodyPhotoTests(unittest.TestCase):
                 self.assertNotIn('lead-photo', body)
                 self.assertNotIn('tracker-matchup', body)
                 self.assertNotIn('matchup-1200.webp', body)
-                self.assertIn('tracker-compact', body)
+                self.assertNotIn('tracker-compact', body)
+                self.assertIn('fcb-table', body)
                 continue
             self.assertIn(BODY_IMG_RULE, html, slug)
             self.assertIn(NO_CROP_IMG_RULE, html, slug)

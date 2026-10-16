@@ -20,6 +20,19 @@ def _lead_figure(html: str) -> str:
 
 
 class NewsLeadTests(unittest.TestCase):
+    def test_attendance_page_is_not_rebuilt(self):
+        slug = '2026-wnba-finals-ratings-tracker'
+        path = ROOT / 'news' / slug / 'index.html'
+        before = path.read_bytes()
+        article = next(item for item in _articles() if item['slug'] == slug)
+        prepared = links.prepare_article_page(ROOT, article, _articles())
+        self.assertEqual(prepared, before.decode('utf-8'))
+        ordered = links.order_news_lead(prepared, article)
+        self.assertEqual(ordered, prepared)
+        import build_finals_ratings_tracker as tracker
+        tracker.main()
+        self.assertEqual(path.read_bytes(), before)
+
     def test_published_stories_show_the_photo_before_the_hook(self):
         for article in _articles():
             html = (ROOT / 'news' / article['slug'] / 'index.html').read_text(encoding='utf-8')
@@ -29,11 +42,12 @@ class NewsLeadTests(unittest.TestCase):
                 self.assertNotIn('social-card.webp', body)
                 self.assertNotIn('tracker-matchup', body)
                 self.assertNotIn('matchup-1200.webp', body)
-                self.assertIn('Finals games (ratings added after each game)', body)
-                self.assertLess(body.find('fcb-quick-cite'), body.find('tracker-tools'))
-                self.assertLess(body.find('tracker-tools'), body.find('tracker-compact'))
+                self.assertNotIn('fcb-quick-cite', body)
+                self.assertNotIn('tracker-compact', body)
                 self.assertNotIn('ratings pending', body)
-                self.assertIn('white-space:nowrap', html)
+                self.assertIn('92,599', body)
+                self.assertIn('fcb-table', body)
+                self.assertLess(html.find('</h1>'), html.find('class="byline"'))
                 continue
             figure = _lead_figure(html)
             self.assertTrue(figure, article['slug'])

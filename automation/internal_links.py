@@ -1899,8 +1899,17 @@ def _splice_block(html: str, at: int, block: str) -> str:
     return '\n'.join(parts)
 
 
+# This slug is the attendance database. Nightly assembly must not rebuild that page.
+FROZEN_ARTICLE_SLUGS = frozenset({'2026-wnba-finals-ratings-tracker'})
+
+
 def _is_ratings_tracker_page(html: str, article: dict | None) -> bool:
-    """The Finals ratings hub keeps its own photo order. Nightly lead ordering must not replace it."""
+    """Ratings lead order applies only while the page is still the ratings tracker.
+
+    The attendance database keeps this slug. Its markup must not be reordered.
+    """
+    if 'fcb-attendance' in html:
+        return False
     if isinstance(article, dict) and article.get('slug') == '2026-wnba-finals-ratings-tracker':
         return True
     return 'class="fcb-tracker-update"' in html and 'id="finals-ratings-tracker"' in html
@@ -2605,6 +2614,8 @@ def ensure_article_end(html_text: str, root: Path, article: dict, articles: list
 def prepare_article_page(root: Path, article: dict, articles: list | None = None) -> str:
     slug = article_slug(article)
     html_text = read_article_source(root, slug)
+    if slug in FROZEN_ARTICLE_SLUGS:
+        return html_text
     html_text = rewrite_legacy_article_urls(html_text, articles if articles is not None else [article])
     absolute = article_absolute(article)
     html_text = _upsert_meta(html_text, absolute, article.get('description'))

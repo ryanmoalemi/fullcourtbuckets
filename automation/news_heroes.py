@@ -450,6 +450,9 @@ def publish(root: Path) -> list[str]:
     articles = json.loads(path.read_text(encoding='utf-8'))
     notes = []
     for article in articles:
+        if article.get('slug') in links.FROZEN_ARTICLE_SLUGS:
+            notes.append(f"{article['slug']}: left unchanged")
+            continue
         before = str(article.get('imageHero') or '')
         ensure_article_hero(root, article)
         hero = str(article.get('imageHero') or '')

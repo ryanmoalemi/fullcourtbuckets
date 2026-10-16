@@ -95,13 +95,6 @@ class CitationPageTests(unittest.TestCase):
                 'finals-ratings-hub',
                 'finals-ratings-tracker',
             ],
-            'news/2026-wnba-finals-ratings-tracker/index.html': [
-                'finals-ratings-tracker',
-                'finals-benchmarks',
-                'october-search-interest',
-                'finals-average-viewers',
-                'figures-left-off',
-            ],
             'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html': [
                 'card-sales-comparison-table',
                 'juju-watkins',
@@ -155,9 +148,14 @@ class CitationPageTests(unittest.TestCase):
             json_ld(html)
 
     def test_dataset_pages_and_faq_match(self):
+        attendance = page('news/2026-wnba-finals-ratings-tracker/index.html')
+        attendance_sets = typed(attendance, 'Dataset')
+        self.assertEqual(len(attendance_sets), 1)
+        self.assertEqual(attendance_sets[0]['license'], 'https://creativecommons.org/licenses/by/4.0/')
+        self.assertTrue(attendance_sets[0]['distribution']['contentUrl'].endswith('finals-attendance.csv'))
+        self.assertIn('official box scores', attendance_sets[0]['description'])
         for relative in (
             'news/wnba-finals-2026-audience-growth-dream-valkyries/index.html',
-            'news/2026-wnba-finals-ratings-tracker/index.html',
             'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html',
             'standings/index.html',
         ):
@@ -184,29 +182,20 @@ class CitationPageTests(unittest.TestCase):
 
     def test_finals_tracker_uses_the_oct_13_release(self):
         html = page('news/2026-wnba-finals-ratings-tracker/index.html')
-        tracker = html.split('id="finals-ratings-tracker"', 1)[1].split('id="finals-average-viewers"', 1)[0]
-        self.assertIn('Wed, Oct. 21, 2026', tracker)
-        self.assertIn('State Farm Arena', tracker)
-        self.assertIn('10:00 a.m. PT', tracker)
-        self.assertIn('Pending tip-off', tracker)
-        self.assertIn('USA and Peacock', tracker)
-        self.assertNotIn('CNBC', tracker)
-        self.assertIn('Colin Salao', html)
-        self.assertIn('https://frontofficesports.com/article/wnba-playoffs-deliver-most-watched-first-round-ever/', html)
-        self.assertIn('https://justwomenssports.com/reads/wnba-playoffs-viewership-semifinals-ratings-surge/', html)
-        self.assertIn('https://www.nbcsports.com/wnba/news/wnba-finals-games-3-and-4-between-dream-and-valkyries-move-to-state-farm-arena', html)
-        self.assertIn('https://valkyries.wnba.com/news/gameday-preview-20261017', html)
-        self.assertIn('Sat 10/17', tracker)
-        self.assertIn('ATL @ GSV', tracker)
-        self.assertIn('GSV @ ATL', tracker)
-        self.assertIn('NBC/Peacock', tracker)
-        self.assertIn('USA/Peacock', tracker)
-        self.assertIn('3:30 / 12:30 PM', tracker)
-        self.assertIn('1:00 PM / 10:00 AM', tracker)
-        self.assertIn('>Pending<', tracker)
-        self.assertNotIn('>Not listed<', tracker)
-        self.assertNotIn('Overnight rating', tracker)
-        self.assertNotIn('Oct. 26', tracker)
+        body = html.split('<article', 1)[1].split('</article>', 1)[0]
+        self.assertIn('92,599', body)
+        self.assertIn('id="fdb"', body)
+        self.assertIn('id="finals-ratings-tracker"', html)
+        self.assertIn('ryan-moalemi-photo-byline', html)
+        self.assertLess(body.find('</h1>'), body.find('class="byline"'))
+        self.assertNotIn('ratings pending', body)
+        self.assertNotIn('Overnight rating', body)
+        self.assertNotIn('fcb-quick-cite', body)
+        self.assertNotIn('balldontlie', body.lower())
+        social = 'https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp'
+        self.assertIn(f'property="og:image" content="{social}"', html)
+        self.assertIn(f'name="twitter:image" content="{social}"', html)
+        self.assertIn('"@type": "Dataset"', html)
         label = citation.finals_tracker_updated_label(ROOT)
         self.assertRegex(label, r'^[A-Z][a-z]+ \d{1,2}, \d{4}$')
         date_source = (
@@ -218,75 +207,7 @@ class CitationPageTests(unittest.TestCase):
         self.assertIn('America/Los_Angeles', date_source)
         early_utc = datetime(2026, 10, 15, 3, 43, tzinfo=timezone.utc)
         self.assertEqual(citation.pacific_calendar_date(early_utc).isoformat(), '2026-10-14')
-        callout = html.split('class="fcb-tracker-update"', 1)[1].split('</aside>', 1)[0]
-        self.assertIn('How this tracker is updated:', callout)
-        self.assertIn('usually within 1 to 2 days', callout)
-        self.assertIn("network's own release", callout)
-        self.assertIn(f'Last updated: {label}.', callout)
-        body = html.split('<article', 1)[1].split('</article>', 1)[0]
-        self.assertNotIn('lead-photo', body)
-        self.assertNotIn('social-card.webp', body)
-        self.assertNotIn('ratings-sheet.webp', body)
-        self.assertNotIn('hero-1200.webp', body)
-        self.assertNotIn('tracker-matchup', body)
-        self.assertNotIn('matchup-1200.webp', body)
-        self.assertIn('Angel_Reese_Dream_2.jpg', body)
-        self.assertNotIn('260824_Lynx_Valkries_JohnMc249_(55485544642).jpg', body)
-        self.assertNotIn('ratings pending', body)
-        self.assertNotIn('not one of them has a released audience', body)
-        self.assertIn('Finals games (ratings added after each game)', body)
-        self.assertIn('2022 534K', body)
-        self.assertIn('2023 728K', body)
-        self.assertIn('2024 1.6M', body)
-        self.assertIn('2025 1.5M', body)
-        self.assertIn('1.75 million', body)
-        facts = body.split('fcb-quick-cite', 1)[1].split('</aside>', 1)[0]
-        self.assertIn('Past Finals averages', facts)
-        self.assertIn('1.75 million', facts)
-        self.assertNotIn('ESPN', facts)
-        self.assertNotIn('balldontlie', facts.lower())
-        self.assertIn('id="finals-csv"', html)
-        self.assertIn('id="finals-embed"', html)
-        social = 'https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp'
-        self.assertIn(f'property="og:image" content="{social}"', html)
-        self.assertIn(f'name="twitter:image" content="{social}"', html)
-        self.assertNotIn('og-1200.webp', html)
-        h1 = body.find('</h1>')
-        byline = body.find('class="byline"')
-        table = body.find('tracker-compact')
-        tools = body.find('tracker-tools')
-        cite = body.find('fcb-quick-cite')
-        note = body.find('fcb-tracker-update')
-        self.assertLess(h1, byline)
-        self.assertLess(byline, cite)
-        self.assertLess(cite, tools)
-        self.assertLess(tools, table)
-        self.assertLess(table, note)
-        self.assertNotIn('tracker-stat', body)
-        csv_text = (ROOT / 'news' / '2026-wnba-finals-ratings-tracker' / 'finals-ratings.csv').read_text(encoding='utf-8')
-        self.assertIn('NBC and Peacock regular-season average', csv_text)
-        self.assertIn('1.75 million', csv_text)
-        self.assertIn('534,000', csv_text)
-        self.assertIn('728,000', csv_text)
-        self.assertIn('1,600,000', csv_text)
-        self.assertIn('1,500,000', csv_text)
-        self.assertIn('51 in 2026, 19 in 2025', csv_text)
-        self.assertIn('1.3 million', csv_text)
         self.assertIn('font-size: 16px', (ROOT / 'assets' / 'citation.css').read_text(encoding='utf-8'))
-        self.assertNotIn('168%', html)
-        self.assertNotIn('ESPN networks', html)
-        self.assertIn('about 2.7 times', html)
-        self.assertIn('984,000', html)
-        self.assertIn('https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#finals-ratings-tracker', html)
-        self.assertIn('href="/news/wnba-finals-2026-audience-growth-dream-valkyries/"', html)
-        self.assertIn('href="/wnba/viewership-attendance/"', html)
-        self.assertIn('"@type": "Dataset"', html)
-        history = html.split('id="finals-average-viewers"', 1)[1].split('id="figures-left-off"', 1)[0]
-        self.assertIn('534,000', history)
-        self.assertIn('728,000', history)
-        self.assertIn('1,600,000', history)
-        self.assertIn('1,500,000', history)
-        self.assertIn('Not in the Full Court Buckets viewership file', history)
         audience = page('news/wnba-finals-2026-audience-growth-dream-valkyries/index.html')
         self.assertIn('href="/news/2026-wnba-finals-ratings-tracker/#finals-ratings-tracker"', audience)
         self.assertIn('id="finals-ratings-tracker"', audience)
@@ -355,10 +276,15 @@ class CitationPageTests(unittest.TestCase):
             cite = markup.find('class="fcb-quick-cite"')
             byline = markup.find('class="byline"')
             figure = re.search(r'<figure\b[^>]*\blead-photo\b', markup)
-            self.assertLess(h1, cite, relative)
-            if byline > h1:
+            if relative == 'news/2026-wnba-finals-ratings-tracker/index.html':
+                self.assertIn('92,599', markup)
                 self.assertLess(h1, byline, relative)
-            if figure:
+                cite = -1
+            else:
+                self.assertLess(h1, cite, relative)
+            if byline > h1 and cite > 0:
+                self.assertLess(h1, byline, relative)
+            if figure and cite > 0:
                 self.assertLess(figure.end(), cite, relative)
                 if byline > h1:
                     self.assertLess(byline, figure.start(), relative)

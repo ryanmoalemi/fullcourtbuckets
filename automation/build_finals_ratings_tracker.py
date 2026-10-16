@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Publish /news/2026-wnba-finals-ratings-tracker/ from the shared Finals rows.
+"""Retired writer for /news/2026-wnba-finals-ratings-tracker/.
 
-The game-by-game sheet is citation.FINALS_TRACKER_ROWS, which matches
-data/viewership-attendance.json and the Oct. 13, 2026 WNBA release.
+That URL is the WNBA Finals attendance database. main() does not write it.
+article_html() remains so the old ratings markup can still be tested.
 """
 from __future__ import annotations
 
@@ -678,6 +678,13 @@ def replace_listing_alt() -> None:
 
 
 def main() -> None:
+    """Leave the attendance page in place. This builder no longer publishes it."""
+    print(
+        'Skipped. /news/2026-wnba-finals-ratings-tracker/ is the attendance database. '
+        'This builder does not write that page.',
+        file=sys.stderr,
+    )
+    return
     payload = json.loads((ROOT / 'data' / 'viewership-attendance.json').read_text(encoding='utf-8'))
     page_image = draw_matchup(MATCHUP_PAGE, IMAGE_DIR / MATCHUP_PAGE_NAME)
     og_image = draw_matchup(MATCHUP_OG, IMAGE_DIR / MATCHUP_OG_NAME)

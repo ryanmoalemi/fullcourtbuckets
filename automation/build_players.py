@@ -3068,8 +3068,12 @@ def build(root: Path):
         if text != original:
             files['index.html']=text
     phrases=links.article_phrases(published_index, linking)
+    frozen_pages={f'news/{slug}/index.html' for slug in links.FROZEN_ARTICLE_SLUGS}
     for relative, content in links.assemble_news_pages(root).items():
         if links.is_redirect_html(content):
+            files[relative]=content
+            continue
+        if relative in frozen_pages:
             files[relative]=content
             continue
         current=page_url(Path(relative))
@@ -3111,8 +3115,9 @@ def build(root: Path):
     report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':STATS_SOURCE,'coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
     articles=links.load_articles(root)
+    frozen_pages={f'news/{slug}/index.html' for slug in links.FROZEN_ARTICLE_SLUGS}
     for relative, content in list(files.items()):
-        if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS:
+        if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS and relative not in frozen_pages:
             files[relative]=links.rewrite_legacy_article_urls(content, articles)
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
@@ -3154,8 +3159,12 @@ def refresh_published_news(root: Path | None = None) -> int:
     menu = site_nav.build_menu(root, site_nav.planned_paths(root, index, linking))
     phrases = links.article_phrases(index, linking)
     files: dict[str, str] = {}
+    frozen_pages = {f'news/{slug}/index.html' for slug in links.FROZEN_ARTICLE_SLUGS}
     for relative, content in links.assemble_news_pages(root).items():
         if links.is_redirect_html(content):
+            files[relative] = content
+            continue
+        if relative in frozen_pages:
             files[relative] = content
             continue
         current = page_url(Path(relative))
