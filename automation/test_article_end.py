@@ -53,7 +53,7 @@ class ArticleEndTests(unittest.TestCase):
 
     def test_standings_has_one_heading_one_updated_line_and_a_series_box(self):
         box = build_standings.series_coverage_html(ROOT)
-        self.assertIn('href="/news/wnba-finals-2026-audience-growth-dream-valkyries/"', box)
+        self.assertIn('href="/news/wnba-finals-2026-schedule-dream-valkyries/"', box)
         self.assertIn('>Read the series coverage</a>', box)
         css = (ROOT / 'automation' / 'standings.css').read_text(encoding='utf-8')
         self.assertIn('width:min(1240px,calc(100% - 32px))', css)
