@@ -1,0 +1,17 @@
+round,game,date,matchup,venue,attendance,score,lead_changes,times_tied,source_url
+R1,G1,2026-09-27,NYL@MIN,Target Center,12339,NYL 91-75,5,4,https://www.wnba.com/game/1042600101
+R1,G2,2026-09-29,MIN@NYL,Barclays Center,17593,NYL 87-71,0,0,https://www.wnba.com/game/1042600102
+R1,G1,2026-09-27,DAL@GSV,Chase Center,18064,GSV 104-80,6,4,https://www.wnba.com/game/1042600111
+R1,G2,2026-09-30,GSV@DAL,College Park Center,6251,DAL 108-100 OT,15,14,https://www.wnba.com/game/1042600112
+R1,G3,2026-10-02,DAL@GSV,Chase Center,18064,GSV 77-73,5,3,https://www.wnba.com/game/1042600113
+R1,G1,2026-09-27,IND@LVA,Michelob Ultra Arena,10207,LVA 102-85,5,6,https://www.wnba.com/game/1042600121
+R1,G2,2026-09-29,LVA@IND,Gainbridge Fieldhouse,16298,IND 99-89,4,4,https://www.wnba.com/game/1042600122
+R1,G3,2026-10-01,IND@LVA,Michelob Ultra Arena,10388,LVA 94-83,7,7,https://www.wnba.com/game/1042600123
+R1,G1,2026-09-27,WAS@ATL,State Farm Arena,9766,ATL 92-77,2,3,https://www.wnba.com/game/1042600131
+R1,G2,2026-09-30,ATL@WAS,CareFirst Arena,4200,ATL 93-75,0,0,https://www.wnba.com/game/1042600132
+SF,G1,2026-10-04,LVA@GSV,Chase Center,18064,GSV 71-60,7,3,https://www.wnba.com/game/1042600211
+SF,G2,2026-10-07,LVA@GSV,Chase Center,18064,GSV 83-81,2,2,https://www.wnba.com/game/1042600212
+SF,G3,2026-10-09,GSV@LVA,Michelob Ultra Arena,10218,GSV 87-77 OT,3,3,https://www.wnba.com/game/1042600213
+SF,G1,2026-10-04,NYL@ATL,State Farm Arena,9745,ATL 92-82,15,3,https://www.wnba.com/game/1042600201
+SF,G2,2026-10-07,NYL@ATL,State Farm Arena,9574,ATL 101-98 OT,17,8,https://www.wnba.com/game/1042600202
+SF,G3,2026-10-09,ATL@NYL,Barclays Center,17991,ATL 85-83,7,5,https://www.wnba.com/game/1042600203
