@@ -15,6 +15,7 @@ from pathlib import Path
 import re
 
 import internal_links as links
+import rss_feed
 from link_graph import file_for_url, iter_html, page_url
 
 HERE = Path(__file__).resolve().parent
@@ -432,6 +433,7 @@ def extract_main_nav(page_html: str) -> list[str]:
 
 
 def ensure_assets(page_html: str) -> str:
+    page_html = rss_feed.ensure_link(page_html)
     if '/assets/site-nav.css' not in page_html:
         if '</head>' in page_html:
             page_html = page_html.replace('</head>', STYLESHEET + '</head>', 1)
