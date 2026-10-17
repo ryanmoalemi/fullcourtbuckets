@@ -234,27 +234,50 @@
 }
 .article.fcb-attendance table.hdb thead th{text-transform:none;letter-spacing:0}
 .article.fcb-attendance [id]{scroll-margin-top:76px}
-.article-wrap:has(.fcb-attendance){padding-top:6px}
-.article.fcb-attendance{padding-top:8px}
-.article.fcb-attendance h1{font-size:clamp(26px,2.5vw,34px);line-height:1.05;letter-spacing:-.5px;margin:0 0 4px}
-.article.fcb-attendance .meta-row{margin-bottom:2px}
-.article.fcb-attendance .byline-row{margin-bottom:4px}
-.article.fcb-attendance .byline img,.article.fcb-attendance .byline-row .byline img{width:32px;height:32px;max-width:32px;flex-basis:32px}
-.article.fcb-attendance .fcb-next{margin:2px 0 0;font:600 14px/1.35 Inter,Arial;color:#2a2622}
-.article.fcb-attendance .fcb-updated{margin:0;padding:3px 8px}
-.article.fcb-attendance .fcb-updated a,.article.fcb-attendance .fcb-jumpnav a,.article.fcb-attendance .fcb-next a,.article.fcb-attendance .fcb-quote a{color:#5b22c9;text-decoration:underline}
-.article.fcb-attendance .fcb-jumpnav{display:flex;flex-wrap:wrap;gap:4px 14px;margin:4px 0 0;font:700 14px/1.3 Inter,Arial}
-.article.fcb-attendance .fcb-answer{padding:6px 12px}
-.article.fcb-attendance .fcb-tools{margin-top:4px}
-.article.fcb-attendance .fcb-jumpnav{margin:4px 0 0}
-.article.fcb-attendance .fcb-tools button,.article.fcb-attendance .fcb-tools .cl{font-size:12px;min-height:32px}
-.article.fcb-attendance .fcb-hero-db{margin:6px 0 10px!important}
-.article.fcb-attendance .hdb-band{padding:8px 14px}
-.article.fcb-attendance .hdb-band h2{font-size:22px;margin:0}
-.article.fcb-attendance .hdb-sub{margin:2px 0}
-.article.fcb-attendance .vt{margin-top:4px}
-.article.fcb-attendance .fsum{margin:4px 16px 2px;padding:4px 10px}
-.article.fcb-attendance .hdb-legend{padding:2px 16px 0}
+.article-wrap:has(.fcb-attendance){padding-top:2px}
+.article.fcb-attendance{padding-top:2px}
+.article.fcb-attendance h1{font-size:clamp(22px,2vw,28px);line-height:1.05;letter-spacing:-.4px;margin:0 0 2px}
+.article.fcb-attendance .meta-row{margin-bottom:0;font-size:12px;line-height:1.3}
+.article.fcb-attendance .byline-row{margin-bottom:2px;gap:4px 8px}
+.article.fcb-attendance .byline,.article.fcb-attendance .byline-row .byline{font-size:12px;line-height:1.25}
+.article.fcb-attendance .article-date{font-size:12px;line-height:1.25}
+.article.fcb-attendance .byline img,.article.fcb-attendance .byline-row .byline img{width:24px;height:24px;max-width:24px;flex-basis:24px}
+.article.fcb-attendance .fcb-next{font:600 12px/1.35 Inter,Arial;color:#2a2622}
+.article.fcb-attendance .fcb-updated{margin:0 0 2px;padding:2px 8px;font-size:12px;line-height:1.35}
+.article.fcb-attendance .fcb-updated a,.article.fcb-attendance .fcb-jumpnav a,.article.fcb-attendance .fcb-quote a{color:#5b22c9;text-decoration:underline}
+.article.fcb-attendance .fcb-quote{font-size:15px;line-height:1.3}
+.article.fcb-attendance .cov{font-size:12px;line-height:1.3;margin:3px 0 0;padding:1px 8px}
+.article.fcb-attendance .fcb-actions{display:flex;flex-wrap:wrap;align-items:center;gap:2px 12px;margin-top:2px}
+.article.fcb-attendance .fcb-jumpnav{display:flex;flex-wrap:wrap;gap:2px 12px;margin:0;font:700 12px/1.3 Inter,Arial}
+.article.fcb-attendance .fcb-answer{padding:4px 10px}
+.article.fcb-attendance .fcb-tools{margin:0;gap:6px 10px}
+.article.fcb-attendance .fcb-tools button,.article.fcb-attendance .fcb-tools .cl{font-size:12px;min-height:28px;padding:2px 8px}
+.article.fcb-attendance .fcb-hero-db{margin:4px 0 8px!important}
+.article.fcb-attendance .hdb-band{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:12px;row-gap:0;padding:6px 12px}
+.article.fcb-attendance .hdb-band>div:first-child{display:contents}
+.article.fcb-attendance .hdb-act{grid-column:2;grid-row:1 / span 4;align-self:center}
+.article.fcb-attendance .hdb-band h2{font-size:18px;line-height:1.15;margin:0}
+.article.fcb-attendance .hdb-kick{font-size:12px}
+.article.fcb-attendance .hdb-sub{margin:1px 0;font-size:12px;line-height:1.3}
+.article.fcb-attendance .hdb-act{flex-direction:row;flex-wrap:wrap;gap:6px;align-items:center}
+.article.fcb-attendance .hdb-act .short{display:none}
+.article.fcb-attendance .pbtn,.article.fcb-attendance .hdb-act .cl{padding:4px 10px}
+.article.fcb-attendance .vt{margin-top:2px}
+.article.fcb-attendance .vt button{padding:4px 10px}
+.article.fcb-attendance .hdb-bar{padding:6px 10px;gap:6px}
+.article.fcb-attendance .pill{font-size:12px;padding:2px 6px 2px 10px}
+.article.fcb-attendance .optt{font-size:12px}
+.article.fcb-attendance .moref{display:none}
+.article.fcb-attendance .fsum{margin:2px 12px;padding:3px 8px;font-size:12px;line-height:1.35;gap:2px 10px}
+.article.fcb-attendance .fsum .note{font-size:12px}
+.article.fcb-attendance .hdb-legend{padding:2px 12px 0;font-size:12px}
+.article.fcb-attendance .hdb-legend .bdg{font-size:12px}
+.article.fcb-attendance .ver{font-size:12px}
+.article.fcb-attendance .pill .tlab{font-size:12px}
+.article.fcb-attendance .fsum .lab{font-size:12px}
+.article.fcb-attendance .chips{padding:2px 12px 0;font-size:12px}
+.article.fcb-attendance table.hdb{font-size:12px}
+.article.fcb-attendance table.hdb thead th{font-size:12px}
 .article.fcb-attendance .hdb-pager{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:8px 16px 12px;font-size:13px;color:#151413}
 .article.fcb-attendance .hdb-pager-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .article.fcb-attendance .hdb-pager button,.article.fcb-attendance .hdb-pager select{font:700 13px/1.2 Inter,Arial;min-height:36px;padding:4px 10px;border:1px solid #d8c8ff;border-radius:4px;background:#fff;color:#2a1458}
@@ -284,10 +307,54 @@
 .article.fcb-attendance .fcb-sched td{border:0;padding:2px 0;font-size:13px;text-align:left}
 .article.fcb-attendance .fcb-sched td::before{content:attr(data-label);font-weight:700;display:inline-block;min-width:7.2em;color:#151413}
 }
+@media (max-width:800px){
+.article-wrap:has(.fcb-attendance){padding-top:0}
+.article-wrap:has(.fcb-attendance) .breadcrumbs{margin:0;font-size:12px;gap:4px}
+.article-wrap:has(.fcb-attendance) .breadcrumbs a{min-height:0;padding:0;font-size:12px}
+.article.fcb-attendance{padding:2px 8px 16px}
+.article.fcb-attendance h1{font-size:21px;line-height:1.15;margin:0}
+.article.fcb-attendance .byline img,.article.fcb-attendance .byline-row .byline img{width:20px;height:20px;max-width:20px;flex-basis:20px}
+.article.fcb-attendance .fcb-next{display:none}
+.article.fcb-attendance .fcb-updated{display:block;padding:2px 6px}
+.article.fcb-attendance .fcb-quote{font-size:13px;line-height:1.3}
+.article.fcb-attendance .fcb-answer{padding:3px 6px}
+.article.fcb-attendance .fcb-actions{gap:2px 8px}
+.article.fcb-attendance .fcb-tools button,.article.fcb-attendance .fcb-tools .cl{min-height:0;padding:0;background:none;border:0;color:#5b22c9;text-decoration:underline;font-size:12px}
+.article.fcb-attendance .fcb-hero-db{display:flex;flex-direction:column;margin:4px 0 8px!important}
+.article.fcb-attendance .hdb-scroll{order:4}
+.article.fcb-attendance .hdb-pager{order:5}
+.article.fcb-attendance .fsum{order:6;margin:4px 6px}
+.article.fcb-attendance .hdb-legend{order:7}
+.article.fcb-attendance #chips:not(:has(.chip)){display:none}
+.article.fcb-attendance .meta-row{flex-wrap:nowrap;gap:6px}
+.article.fcb-attendance .hdb-band{grid-template-columns:minmax(0,1fr) auto;padding:6px 8px;row-gap:1px}
+.article.fcb-attendance .hdb-kick,.article.fcb-attendance .hdb-band h2,.article.fcb-attendance .hdb-sub,.article.fcb-attendance .vt,.article.fcb-attendance .hdb-act{grid-column:1 / -1}
+.article.fcb-attendance .vt{grid-row:4}
+.article.fcb-attendance .hdb-act{grid-row:5;justify-self:start}
+.article.fcb-attendance .vt button{white-space:nowrap;padding:3px 8px}
+.article.fcb-attendance .hdb-bar{flex-wrap:nowrap;padding:4px 6px;gap:4px}
+.article.fcb-attendance .hdb-bar.is-open{flex-wrap:wrap}
+.article.fcb-attendance #fy,.article.fcb-attendance #ft{max-width:58px}
+.article.fcb-attendance .hdb-bar.is-open .pill select{max-width:120px}
+.article.fcb-attendance .fcb-updated{line-height:1.25;padding:1px 6px}
+.article.fcb-attendance .hdb-band h2{font-size:16px;line-height:1.15}
+.article.fcb-attendance .hdb-act .wide{display:none}
+.article.fcb-attendance .hdb-act .short{display:inline}
+.article.fcb-attendance .hdb-act .pbtn,.article.fcb-attendance .hdb-act .cl{font-size:12px;padding:3px 8px}
+.article.fcb-attendance .pill .tlab{display:none}
+.article.fcb-attendance .pill.srch{min-width:0;flex:1 1 40px}
+.article.fcb-attendance .hdb-bar .xtra{display:none}
+.article.fcb-attendance .hdb-bar.is-open .xtra{display:flex}
+.article.fcb-attendance .moref{display:inline-flex;align-items:center;font:700 12px/1.2 Inter,Arial;color:#5b22c9;background:#fff;border:1.5px solid #7d35ff;border-radius:999px;padding:4px 10px}
+.article.fcb-attendance .moref:focus-visible{outline:2px solid #5b22c9;outline-offset:2px}
+.article.fcb-attendance table.hdb thead th{font-size:12px;white-space:nowrap;padding:4px 6px}
+.article.fcb-attendance table.hdb td{padding:4px 6px}
+}
 @media print{
 .article.fcb-attendance tr.pg-hide{display:table-row}
 .article.fcb-attendance .hdb-pager,.article.fcb-attendance .fcb-jumpnav,.article.fcb-attendance .jump{display:none!important}
 .article.fcb-attendance .fcb-sched-note,.article.fcb-attendance .cov,.article.fcb-attendance .cond,.article.fcb-attendance #data-scope{display:block!important}
+.article.fcb-attendance .fcb-next{display:inline!important}
 }
 
 </style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "WNBA Finals Attendance Record & History (2002–2026)", "description": "Every WNBA Finals game since 2002 with published attendance. Highest series total in the database: 92,599 (2024, five games). Searchable by game or series, with sources and a record calculator.", "url": "https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/"}, "datePublished": "2026-10-14", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Ryan Moalemi", "url": "https://fullcourtbuckets.com/authors/ryan-moalemi/"}, "publisher": {"@type": "Organization", "name": "Full Court Buckets", "logo": {"@type": "ImageObject", "url": "https://fullcourtbuckets.com/logo.png"}}, "image": ["https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "WNBA Finals attendance, 2002–2025", "description": "Full Court Buckets compiled this WNBA Finals attendance database from official box scores. Every Finals game from 2002 through 2025 with a published figure, plus series totals.", "url": "https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/", "creator": {"@type": "Organization", "name": "Full Court Buckets", "url": "https://fullcourtbuckets.com/"}, "license": "https://creativecommons.org/licenses/by/4.0/", "isAccessibleForFree": true, "distribution": {"@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/finals-attendance.csv"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://fullcourtbuckets.com/"}, {"@type": "ListItem", "position": 2, "name": "News", "item": "https://fullcourtbuckets.com/news/"}, {"@type": "ListItem", "position": 3, "name": "WNBA Finals Attendance Record & History (2002–2026)", "item": "https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/"}]}</script><link rel="alternate" type="application/rss+xml" title="Full Court Buckets" href="https://fullcourtbuckets.com/feed.xml"></head>
@@ -298,21 +365,20 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/news/">News</a><span aria-hidden="true">/</span><span>WNBA Finals Attendance Record &amp; History (2002–2026)</span></nav><article class="article fcb-attendance"><div class="meta-row"><span class="cat">WNBA Finals · Data</span><span class="divider"></span><span>Full Court Buckets</span></div><h1>WNBA Finals Attendance Record &amp; History (2002–2026)</h1>
 <div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><span class="article-date">Published <time datetime="2026-10-14">October 14, 2026</time> · Updated Oct. 16, 2026, PT</span></div>
 <header class="fcb-top"><a href="#finals-database" class="jump" id="jump">Jump to the data</a>
-<p class="fcb-updated" id="data-scope"><b>Data through:</b> Finals archive: through 2025. 2026 playoffs: through semifinals. 2026 Finals: awaiting Game 1. <span class="ver">Dataset v1</span> · <a href="#verify">Methods</a><br>Next data update after Game 1.</p>
-<p class="fcb-next">Next: Game 1, Sat. Oct. 17, 12:30 p.m. PT (3:30 p.m. ET) at Chase Center.</p>
+<p class="fcb-updated" id="data-scope"><b>Data through:</b> Finals archive: through 2025. 2026 playoffs: through semifinals. 2026 Finals: awaiting Game 1. <span class="ver">Dataset v1</span> · <a href="#verify">Methods</a> Next data update after Game 1. <span class="fcb-next">Next: Game 1, Sat. Oct. 17, 12:30 p.m. PT (3:30 p.m. ET) at Chase Center.</span></p>
 <section id="record-line"><div class="fcb-answer"><p class="fcb-quote" id="stat-record-92599">The highest Finals series total in our 2002–2025 database is 92,599, across five games in 2024. <a href="?y=2024#finals-database">See supporting games</a></p>
 <span class="cov">Coverage: 2002–2025 · 1997–2001 not yet included · <span class="dyn-nk">90</span> of <span class="dyn-ng">93</span> games have published attendance</span>
 <p class="sub" id="cur-leader" style="display:none"></p></div>
-<div class="fcb-tools"><button data-copy="The highest WNBA Finals series total in the Full Court Buckets 2002–2025 database is 92,599 combined reported attendance, over five games in 2024. https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#record-line (Dataset v1; Finals archive: through 2025)">Copy citation</button><a class="cl" href="https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#record-line" data-a="record-line">🔗 Copy link to this answer</a></div>
-<nav class="fcb-jumpnav" aria-label="On this page"><a href="#finals-database">Database</a><a href="#finals-2026">2026 Finals</a><a href="#record-calculator">Calculator</a><a href="#verify">Sources</a></nav>
+<div class="fcb-actions"><div class="fcb-tools"><button data-copy="The highest WNBA Finals series total in the Full Court Buckets 2002–2025 database is 92,599 combined reported attendance, over five games in 2024. https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#record-line (Dataset v1; Finals archive: through 2025)">Copy citation</button><a class="cl" href="https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#record-line" data-a="record-line">🔗 Copy link to this answer</a></div>
+<nav class="fcb-jumpnav" aria-label="On this page"><a href="#finals-database">Database</a><a href="#finals-2026">2026 Finals</a><a href="#record-calculator">Calculator</a><a href="#verify">Sources</a></nav></div>
 </section>
 </header>
 <span id="finals-ratings-tracker"></span><section id="finals-database" class="fcb-hero-db">
 <div class="hdb-band"><div><p class="hdb-kick">The FCB Finals database</p><h2>Every WNBA Finals game since 2002 — searchable</h2>
 <p class="hdb-sub"><span class="dyn-ng">93</span> games indexed · <span class="dyn-nk">90</span> with published attendance · each row links to its source game record</p>
 <div class="vt" role="tablist"><button id="vg" class="on" role="tab" aria-selected="true">By game</button><button id="vs" role="tab" aria-selected="false">By Finals series</button></div></div>
-<div class="hdb-act"><a class="pbtn solid" id="dl-all" href="finals-attendance.csv" download>⬇ Download CSV (all games)</a><button class="pbtn" id="dl-f">⬇ CSV of current filters</button><a class="cl" href="https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#finals-database" data-a="finals-database">🔗 Copy link to this view</a></div></div>
-<div class="hdb-bar pr-hide"><label class="pill"><span>Year</span><select id="fy"><option value="">All</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option></select></label><label class="pill"><span>Team <span class="tlab" id="tlab">(any game involving)</span></span><select id="ft"><option value="">All</option><option value="ATL">Atlanta</option><option value="CHI">Chicago</option><option value="CON">Connecticut</option><option value="DET">Detroit</option><option value="IND">Indiana</option><option value="LAS">Los Angeles</option><option value="LVA">Las Vegas</option><option value="MIN">Minnesota</option><option value="NYL">New York</option><option value="PHX">Phoenix (PHO/PHX)</option><option value="SAC">Sacramento</option><option value="SAN">San Antonio</option><option value="SEA">Seattle</option><option value="WAS">Washington</option></select></label><label class="optt"><input type="checkbox" id="fh"> Home games only</label><label class="pill"><span>Arena</span><select id="fa"><option value="">All</option><option>AT&amp;T Center</option><option>Bankers Life Fieldhouse</option><option>Barclays Center</option><option>EMU Convocation Center</option><option>EagleBank Arena, George Mason University</option><option>Entertainment and Sports Arena</option><option>Footprint Center</option><option>Galen Center</option><option>Gwinnett Center</option><option>KeyArena</option><option>Madison Square Garden</option><option>Michelob ULTRA Arena</option><option>Mohegan Sun Arena</option><option>Mortgage Matchup Center</option><option>Palace of Auburn Hills</option><option>Philips Arena</option><option>STAPLES Center</option><option>Sleep Train Arena</option><option>Target Center</option><option>UIC Pavilion</option><option>US Airways Center</option><option>WNBA Court 1</option><option>Williams Arena, Univ. of Minnesota</option><option>Wintrust Arena</option></select></label><label class="pill"><span>OT</span><select id="fo"><option value="">All</option><option value="reg">Regulation</option><option value="anyot">OT (any)</option><option value="mot">Multiple OT</option><option value="unknown">Unknown</option></select></label><label class="pill srch"><span>🔍</span><input id="fq" placeholder="Search team, arena, year…"></label><label class="optt"><input type="checkbox" id="fopt"> Show score, margin &amp; OT</label></div>
+<div class="hdb-act"><a class="pbtn solid" id="dl-all" href="finals-attendance.csv" download><span class="wide">⬇ Download CSV (all games)</span><span class="short">⬇ All CSV</span></a><button class="pbtn" id="dl-f"><span class="wide">⬇ CSV of current filters</span><span class="short">⬇ Filtered</span></button><a class="cl" href="https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#finals-database" data-a="finals-database"><span class="wide">🔗 Copy link to this view</span><span class="short">🔗 Link</span></a></div></div>
+<div class="hdb-bar pr-hide"><label class="pill"><span>Year</span><select id="fy"><option value="">All</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option><option>2005</option><option>2004</option><option>2003</option><option>2002</option></select></label><label class="pill"><span>Team <span class="tlab" id="tlab">(any game involving)</span></span><select id="ft"><option value="">All</option><option value="ATL">Atlanta</option><option value="CHI">Chicago</option><option value="CON">Connecticut</option><option value="DET">Detroit</option><option value="IND">Indiana</option><option value="LAS">Los Angeles</option><option value="LVA">Las Vegas</option><option value="MIN">Minnesota</option><option value="NYL">New York</option><option value="PHX">Phoenix (PHO/PHX)</option><option value="SAC">Sacramento</option><option value="SAN">San Antonio</option><option value="SEA">Seattle</option><option value="WAS">Washington</option></select></label><label class="optt xtra"><input type="checkbox" id="fh"> Home games only</label><label class="pill xtra"><span>Arena</span><select id="fa"><option value="">All</option><option>AT&amp;T Center</option><option>Bankers Life Fieldhouse</option><option>Barclays Center</option><option>EMU Convocation Center</option><option>EagleBank Arena, George Mason University</option><option>Entertainment and Sports Arena</option><option>Footprint Center</option><option>Galen Center</option><option>Gwinnett Center</option><option>KeyArena</option><option>Madison Square Garden</option><option>Michelob ULTRA Arena</option><option>Mohegan Sun Arena</option><option>Mortgage Matchup Center</option><option>Palace of Auburn Hills</option><option>Philips Arena</option><option>STAPLES Center</option><option>Sleep Train Arena</option><option>Target Center</option><option>UIC Pavilion</option><option>US Airways Center</option><option>WNBA Court 1</option><option>Williams Arena, Univ. of Minnesota</option><option>Wintrust Arena</option></select></label><label class="pill xtra"><span>OT</span><select id="fo"><option value="">All</option><option value="reg">Regulation</option><option value="anyot">OT (any)</option><option value="mot">Multiple OT</option><option value="unknown">Unknown</option></select></label><label class="pill srch"><span>🔍</span><input id="fq" placeholder="Search team, arena, year…"></label><label class="optt xtra"><input type="checkbox" id="fopt"> Show score, margin &amp; OT</label><button type="button" id="more-filters" class="moref" aria-expanded="false">More filters</button></div>
 <div class="chips pr-hide" id="chips"><span style="color:#5a554e">No filters applied</span></div>
 <div class="fsum" id="fsum" aria-live="polite"><span class="lab">For these filters</span><span id="scount"><b id="sg">93</b> matching of <span class="dyn-ng">93</span> indexed games</span><span><b id="sk">90</b> with attendance</span><span>Combined reported attendance <b id="st">1,191,363</b></span><span>Average per game <b id="sa">13,237</b></span><span class="note" id="sx" style="margin:0">Excluded from arithmetic: 3 games with no attendance shown (2020, no fans).</span></div>
 <p class="empty" id="empty-none" role="status">No games match these filters. Clear a filter to see results.</p>
@@ -434,7 +500,7 @@ sorter('fdb');sorter('sdb');
 function csv(all){var L=['dataset_version,game_id,season,game,date,matchup,arena,attendance,attendance_status,overtime_state,source_url'];[].forEach.call(tb.rows,function(r){if(!all&&!match(r))return;L.push([FCB.version,r.id,r.dataset.y,r.dataset.g,r.dataset.date,r.dataset.m,'"'+r.dataset.a+'"',r.dataset.att,r.dataset.att!==''?'reported':'not_shown_no_fans',r.dataset.ot,r.dataset.src].join(','))});return L.join('\n')}
 window.FCBcsv=csv;function dl(t,n){var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/csv'}));a.download=n;a.click()}
 if($('dl-all')&&$('dl-all').tagName!='A')$('dl-all').onclick=function(){dl(csv(true),'fcb-finals-attendance-'+FCB.version+'.csv')};$('dl-f').onclick=function(){dl(csv(false),'fcb-finals-attendance-'+FCB.version+'-filtered.csv')};
-var P=new URLSearchParams(location.search);var rs0=readSize(P.get('ps'));if(rs0)pageSize=rs0;var rp=parseInt(P.get('pg'),10);if(rp>0)page=rp;F.forEach(function(f){if(P.get(f[1]))f[0].value=P.get(f[1])});if(P.get('home'))fh.checked=true;if(P.get('view')=='series')view(true);
+var P=new URLSearchParams(location.search);var rs0=readSize(P.get('ps'));if(rs0)pageSize=rs0;var rp=parseInt(P.get('pg'),10);if(rp>0)page=rp;F.forEach(function(f){if(P.get(f[1]))f[0].value=P.get(f[1])});if(P.get('home'))fh.checked=true;if(P.get('view')=='series')view(true);var moreB=$('more-filters');if(moreB){var openExtra=!!(P.get('a')||P.get('ot')||P.get('home'));function setMore(open){document.querySelector('.hdb-bar').classList.toggle('is-open',open);moreB.setAttribute('aria-expanded',open?'true':'false');moreB.textContent=open?'Fewer filters':'More filters'}setMore(openExtra);moreB.addEventListener('click',function(){setMore(moreB.getAttribute('aria-expanded')!=='true')});}
 function reveal(id){var el=$(id);if(!el)return;el.style.outline='3px solid #f10091';try{if(el.scrollIntoView)el.scrollIntoView({block:'center'})}catch(err){}}function openRecord(scroll){var hs=location.hash.slice(1);if(/^g\d{4}-\d$/.test(hs)&&$(hs)){view(false);flt(hs);if(!match($(hs))&&active())$(hs).title='Opened by direct link; outside the current filters';if(scroll)reveal(hs);return}if(/^s\d{4}$/.test(hs)&&$(hs)){view(true);flt('stay');paginate(hs);if(scroll)reveal(hs);return}flt('stay')}openRecord(!!location.hash);
 window.addEventListener('hashchange',function(){openRecord(true)});
 var io=window.IntersectionObserver&&new IntersectionObserver(function(ents){var e=ents[0],jump=$('jump');if(!jump)return;if(window.matchMedia('(max-width:600px)').matches||e.isIntersecting){jump.style.display='none';return}if(e.boundingClientRect.top<0){jump.textContent='Back to data';jump.style.display=''}else{jump.textContent='Jump to the data';jump.style.display=''}},{rootMargin:'-72px 0px -24px 0px'});io&&io.observe(db);
