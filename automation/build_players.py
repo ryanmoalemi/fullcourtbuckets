@@ -19,6 +19,7 @@ import internal_links as links
 import per_game
 import season_teams
 import site_nav
+import rss_feed
 import wnba_sync
 import team_hub
 import team_names
@@ -3125,6 +3126,7 @@ def build(root: Path):
     files['player-sitemap.xml'] = _sitemap_document(player_rows)
     files['pages-sitemap.xml'] = _sitemap_document(page_rows)
     files['sitemap.xml'] = _sitemap_index()
+    files['feed.xml'] = rss_feed.feed_document(root)
     files['sitemap/index.html'] = html_sitemap_page(root, menu, linking, articles, player_rows, page_rows, published_index)
     files['docs/missing-data.md'] = missing_data_markdown(root)
     files['robots.txt'] = ROBOTS_TXT
