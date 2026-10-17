@@ -432,8 +432,20 @@ def extract_main_nav(page_html: str) -> list[str]:
     return MAIN_NAV_RE.findall(page_html)
 
 
+PINTEREST_VERIFY_TAG = (
+    '<meta name="p:domain_verify" content="31768ba4e5e82ef772093f8a448d1884"/>'
+)
+
+
+def ensure_pinterest_verify(page_html: str) -> str:
+    if 'name="p:domain_verify"' in page_html or '</head>' not in page_html:
+        return page_html
+    return page_html.replace('</head>', PINTEREST_VERIFY_TAG + '</head>', 1)
+
+
 def ensure_assets(page_html: str) -> str:
     page_html = rss_feed.ensure_link(page_html)
+    page_html = ensure_pinterest_verify(page_html)
     if '/assets/site-nav.css' not in page_html:
         if '</head>' in page_html:
             page_html = page_html.replace('</head>', STYLESHEET + '</head>', 1)
