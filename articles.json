@@ -1,5 +1,33 @@
 [
   {
+    "slug": "valkyries-wnba-finals-performers",
+    "url": "/news/valkyries-wnba-finals-performers/",
+    "title": "Goapele, Rita Moreno and Larry June set for Valkyries' Finals Game 1; Alanis Morissette sings before Game 2",
+    "description": "Who performs at Valkyries vs. Dream WNBA Finals Games 1 and 2 at Chase Center: Goapele, Rita Moreno, Larry June, Alanis Morissette, Too $hort and LaRussell.",
+    "category": "WNBA",
+    "date": "2026-10-17",
+    "image": "/images/articles/valkyries-wnba-finals-performers/hero-1200.webp",
+    "imageAlt": "Chase Center arena in San Francisco, seen from Thrive City in May 2025",
+    "imageCredit": "Photo: 9yz, CC BY 4.0, via Wikimedia Commons",
+    "teams": [
+      "golden-state-valkyries",
+      "atlanta-dream"
+    ],
+    "imageFocal": "center 20%",
+    "imageSource": "/images/articles/valkyries-wnba-finals-performers/chase-center-thrive-city.jpg",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "imageHero": "/images/articles/valkyries-wnba-finals-performers/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/valkyries-wnba-finals-performers/hero-2x.webp",
+    "imageHero2xWidth": 2400,
+    "imageHero2xHeight": 1350,
+    "imageOg": "/images/articles/valkyries-wnba-finals-performers/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628
+  },
+  {
     "slug": "wnba-finals-2026-schedule-dream-valkyries",
     "url": "/news/wnba-finals-2026-schedule-dream-valkyries/",
     "title": "WNBA Finals open Saturday at 12:30 PM PT with the Valkyries hosting the Dream in Game 1",
@@ -26,8 +54,8 @@
   {
     "slug": "2026-wnba-finals-ratings-tracker",
     "url": "/news/2026-wnba-finals-ratings-tracker/",
-    "title": "WNBA Finals Attendance Record & History (2002–2026)",
-    "description": "Every WNBA Finals game since 2002 with published attendance. Highest series total in the database: 92,599 (2024, five games). Searchable by game or series, with sources and a record calculator.",
+    "title": "WNBA Finals attendance by year, record and history (2002–2026)",
+    "description": "WNBA Finals attendance by year since 2002. The record is 92,599 fans at the 2024 Finals, or 18,520 per game, the highest series total since 2002. Search by game or series, with sources and a record calculator.",
     "category": "WNBA",
     "date": "2026-10-14",
     "image": "/images/articles/2026-wnba-finals-ratings-tracker/matchup-1200.webp",

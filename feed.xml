@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Goapele, Rita Moreno and Larry June set for Valkyries' Finals Game 1; Alanis Morissette sings before Game 2</title>
+      <link>https://fullcourtbuckets.com/news/valkyries-wnba-finals-performers/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/valkyries-wnba-finals-performers/</guid>
+      <pubDate>Sat, 17 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>WNBA</category>
+      <description>Who performs at Valkyries vs. Dream WNBA Finals Games 1 and 2 at Chase Center: Goapele, Rita Moreno, Larry June, Alanis Morissette, Too $hort and LaRussell.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-wnba-finals-performers/og-1200.webp" length="82280" type="image/webp"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-wnba-finals-performers/og-1200.webp" medium="image" type="image/webp"/>
+    </item>
     <item>
       <title>WNBA Finals open Saturday at 12:30 PM PT with the Valkyries hosting the Dream in Game 1</title>
       <link>https://fullcourtbuckets.com/news/wnba-finals-2026-schedule-dream-valkyries/</link>
@@ -24,13 +35,13 @@
       <media:content url="https://fullcourtbuckets.com/images/articles/wnba-finals-2026-schedule-dream-valkyries/og-1200.webp" medium="image" type="image/webp"/>
     </item>
     <item>
-      <title>WNBA Finals Attendance Record &amp; History (2002–2026)</title>
+      <title>WNBA Finals attendance by year, record and history (2002–2026)</title>
       <link>https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/</link>
       <guid isPermaLink="true">https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/</guid>
       <pubDate>Wed, 14 Oct 2026 12:00:00 -0700</pubDate>
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>WNBA</category>
-      <description>Every WNBA Finals game since 2002 with published attendance. Highest series total in the database: 92,599 (2024, five games). Searchable by game or series, with sources and a record calculator.</description>
+      <description>WNBA Finals attendance by year since 2002. The record is 92,599 fans at the 2024 Finals, or 18,520 per game, the highest series total since 2002. Search by game or series, with sources and a record calculator.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp" length="60418" type="image/webp"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/2026-wnba-finals-ratings-tracker/matchup-og.webp" medium="image" type="image/webp"/>
     </item>
@@ -330,17 +341,6 @@
       <description>Cecilia Zandalasini scored 22, Tiffany Hayes and Gabby Williams added 21 and 20, and the No. 2 Valkyries beat the No. 7 Wings 104-80 despite Paige Bueckers' 21.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-wings-game-1-zandalasini/og-1200.webp" length="18406" type="image/webp"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-wings-game-1-zandalasini/og-1200.webp" medium="image" type="image/webp"/>
-    </item>
-    <item>
-      <title>Team USA at the 2026 Women's World Cup</title>
-      <link>https://fullcourtbuckets.com/news/fiba-womens-basketball-world-cup-2026/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/fiba-womens-basketball-world-cup-2026/</guid>
-      <pubDate>Sun, 30 Aug 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>World Cup</category>
-      <description>The U.S. won its fifth straight World Cup in Berlin. Here is how the roster changed before the tournament and why Clark and Reese's pairing drew attention.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/world-cup-2026/og-1200.webp" length="35070" type="image/webp"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/world-cup-2026/og-1200.webp" medium="image" type="image/webp"/>
     </item>
   </channel>
 </rss>
