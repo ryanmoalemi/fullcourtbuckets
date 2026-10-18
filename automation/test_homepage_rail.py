@@ -319,7 +319,9 @@ class HomepageRailTests(unittest.TestCase):
         self.assertNotIn('\u2014', rail_html)
         self.assertIn('>Playoff series<', rail_html)
         self.assertIn('>Latest scores<', rail_html)
-        self.assertIn('Aces beat Fever 2-1', rail_html)
+        # Completed series roll off the 14-day scoreboard window, so check the form
+        # of the finished-series lines instead of one fixed first-round result.
+        self.assertRegex(rail_html, r'<li><p class="rail-status">[A-Z][A-Za-z ]+ beat [A-Z][A-Za-z ]+ \d-\d</p>')
         scores = rail_html.split('id="latest-scores"', 1)[1].split('</section>', 1)[0]
         score_rows = scores.count('<li>')
         self.assertGreater(score_rows, 0)
