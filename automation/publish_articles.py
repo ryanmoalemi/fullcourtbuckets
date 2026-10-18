@@ -526,6 +526,8 @@ def update_homepage(articles: list) -> None:
         flags=re.S,
     )
     text = links._replace_marker(text, 'fcb-stories', links._more_story_cards(articles))
+    # Keep the homepage Now line in step with the newest story, as the nightly build does.
+    text = links.apply_ticker(text, articles)
     write_if_changed(path, text)
 
 
