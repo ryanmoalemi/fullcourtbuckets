@@ -1,0 +1,39 @@
+name: Publish articles
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/articles/**'
+      - 'automation/publish_articles.py'
+      - '.github/workflows/publish-articles.yml'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check Pillow
+      - name: Generate pages from content/articles
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python automation/publish_articles.py
+      - name: Editorial, image, lead, and team checks
+        working-directory: automation
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -m unittest test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables -q
+      - name: Commit generated pages
+        run: |
+          git add -A -- . ':!**/__pycache__'
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Publish articles from content/articles."
+          git push
