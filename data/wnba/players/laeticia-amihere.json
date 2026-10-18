@@ -80,25 +80,25 @@
         "name": "Valkyries",
         "conference": "Western Conference"
       },
-      "games_played": 1,
-      "min": 6.0,
-      "fgm": 0.0,
-      "fga": 1.0,
-      "fg_pct": 0.0,
+      "games_played": 2,
+      "min": 10.0,
+      "fgm": 1.0,
+      "fga": 1.5,
+      "fg_pct": 66.7,
       "fg3m": 0.0,
-      "fg3a": 1.0,
+      "fg3a": 0.5,
       "fg3_pct": 0.0,
-      "ftm": 0.0,
-      "fta": 0.0,
-      "ft_pct": 0.0,
-      "oreb": null,
-      "dreb": null,
-      "reb": 1.0,
+      "ftm": 0.5,
+      "fta": 1.0,
+      "ft_pct": 50.0,
+      "oreb": 0.5,
+      "dreb": 2.0,
+      "reb": 3.0,
       "ast": 0.0,
-      "stl": 0.0,
-      "blk": 0.0,
-      "turnover": 1.0,
-      "pts": 0.0
+      "stl": 0.5,
+      "blk": 0.5,
+      "turnover": 0.5,
+      "pts": 2.5
     },
     {
       "player_id": 690,
@@ -296,6 +296,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392707,
+      "player_id": 690,
+      "date": "2026-10-17T19:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 68,
+      "away_score": 64,
+      "minutes": "14",
+      "pts": 5.0,
+      "ast": 0.0,
+      "reb": 5.0,
+      "stl": 1.0,
+      "blk": 1.0,
+      "turnover": 0.0
+    },
     {
       "game_id": 1392696,
       "player_id": 690,
