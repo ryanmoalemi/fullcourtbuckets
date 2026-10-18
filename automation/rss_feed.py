@@ -31,7 +31,8 @@ def _abs(url: str) -> str:
 
 def feed_document(root: Path, articles: list[dict] | None = None) -> str:
     if articles is None:
-        articles = json.loads((root / 'articles.json').read_text(encoding='utf-8'))
+        path = root / 'articles.json'
+        articles = json.loads(path.read_text(encoding='utf-8')) if path.is_file() else []
     items = [a for a in articles if a.get('url') and a.get('title') and a.get('date')]
     items.sort(key=lambda a: (a['date'], a.get('dateModified') or ''), reverse=True)
     items = items[:LIMIT]
@@ -76,6 +77,9 @@ def feed_document(root: Path, articles: list[dict] | None = None) -> str:
 
 def ensure_link(page_html: str) -> str:
     if 'type="application/rss+xml"' in page_html or '</head>' not in page_html:
+        return page_html
+    if 'http-equiv="refresh"' in page_html:
+        # Redirect stubs must stay byte-identical to internal_links.permanent_redirect().
         return page_html
     return page_html.replace('</head>', LINK_TAG + '</head>', 1)
 

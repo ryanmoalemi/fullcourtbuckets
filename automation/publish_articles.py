@@ -423,19 +423,7 @@ def write_if_changed(path: Path, text: str) -> bool:
 
 
 def redirect_html(slug: str) -> str:
-    url = f'https://fullcourtbuckets.com/news/{slug}/'
-    return (
-        '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n'
-        '<title>Redirect</title>\n'
-        f'<link rel="canonical" href="{url}">\n'
-        '<meta name="robots" content="noindex">\n'
-        f'<meta http-equiv="refresh" content="0; url={url}">\n'
-        f'<script>location.replace("{url}");</script>\n'
-        '<link rel="alternate" type="application/rss+xml" title="Full Court Buckets" '
-        'href="https://fullcourtbuckets.com/feed.xml"></head>\n<body>\n'
-        f'<p><a href="{url}">This page has moved.</a></p>\n'
-        '</body>\n</html>\n'
-    )
+    return links.permanent_redirect(f'https://fullcourtbuckets.com/news/{slug}/')
 
 
 def upsert_record(articles: list, article: dict) -> tuple[list, bool]:
