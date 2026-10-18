@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Valkyries or Dream players will each get $60,000 for the 2026 WNBA title, up from $22,908</title>
+      <link>https://fullcourtbuckets.com/news/wnba-finals-bonus-2026-champions-60000/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/wnba-finals-bonus-2026-champions-60000/</guid>
+      <pubDate>Sun, 18 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>Each eligible player on the 2026 WNBA champion gets a $60,000 bonus, up from $22,908 in 2025. The runner-up gets $20,000 each and the Finals MVP gets $30,000, up from $5,000.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.webp" length="25960" type="image/webp"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.webp" medium="image" type="image/webp"/>
+    </item>
     <item>
       <title>Gabby Williams scores 8 of the last 9 as Valkyries beat Dream 68-64 in Finals Game 1</title>
       <link>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-1-recap/</link>
@@ -330,17 +341,6 @@
       <description>Rhyne Howard scored 26 with five steals, Angel Reese had 13 and 12 in her playoff debut, and the No. 4 Dream beat the No. 5 Mystics 92-77.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/dream-mystics-game-1-howard-reese/og-1200.webp" length="30472" type="image/webp"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/dream-mystics-game-1-howard-reese/og-1200.webp" medium="image" type="image/webp"/>
-    </item>
-    <item>
-      <title>A'ja Wilson Drops 38 as Aces Roll Past Fever in Game 1</title>
-      <link>https://fullcourtbuckets.com/news/aces-fever-game-1-aja-wilson-38/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/aces-fever-game-1-aja-wilson-38/</guid>
-      <pubDate>Mon, 28 Sep 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA Playoffs</category>
-      <description>A'ja Wilson scored 38 points with 16 rebounds as the No. 3 Aces beat the No. 6 Fever 102-85. Las Vegas leads the series 1-0 with Game 2 Tuesday in Indianapolis.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/aces-fever-game-1-aja-wilson-38/og-1200.webp" length="28244" type="image/webp"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/aces-fever-game-1-aja-wilson-38/og-1200.webp" medium="image" type="image/webp"/>
     </item>
   </channel>
 </rss>
