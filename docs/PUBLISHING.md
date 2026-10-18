@@ -55,11 +55,22 @@ Required: `title`, `slug`, `date`, `description`, `hero_alt`, `photo_credit`, an
 
 The body is markdown: `##` sections, `-` lists, `**bold**`, and `[label](/path/)` links. A paragraph that mentions DraftKings, betting odds, or a moneyline gets the site line `21+. Gamble responsibly. 1-800-GAMBLER.` under it. Do not credit ESPN or a stats vendor. That fails the editorial check and nothing is committed.
 
+Tables use GitHub-style pipe rows: a header row, a separator row of `---` cells, then one row per line. Cells take `**bold**` and `[label](/path/)` links. Leave a blank line before and after the table.
+
+```markdown
+| Bonus | 2025 | 2026 |
+|---|---|---|
+| **WNBA champion**, per player | $22,908 | $60,000 |
+| Finals MVP | $5,000 | $30,000 |
+```
+
+The table renders as `<div class="table-wrap"><table>` with a `<thead>` and `<tbody>`, using the article table styles already in the template. The wrapper scrolls sideways on narrow phones. Lines that start with `|` but have no separator row stay a plain paragraph.
+
 `ticker` is the optional “Now” line under the header. Set it when the story has a score. If you leave it out, a new page says “WNBA news, analysis and commentary.” Editing a page that already has a line leaves that line in place.
 
 ## What the action updates
 
-On a push to `main` that touches `content/articles/**`, `.github/workflows/publish-articles.yml` runs `automation/publish_articles.py`, then the editorial, image-focal, news-lead, and team-coverage checks. If a check fails, the job stops and does not commit. If they pass, it commits the generated files and Pages deploys as usual. Push the folder straight to `main`. The action writes the HTML. If `main` is protected, let the GitHub Actions bot push without a review, or the generated commit will be rejected.
+On a push to `main` that touches `content/articles/**`, `.github/workflows/publish-articles.yml` runs `automation/publish_articles.py`, then the editorial, image-focal, news-lead, team-coverage, and table checks. If a check fails, the job stops and does not commit. If they pass, it commits the generated files and Pages deploys as usual. Push the folder straight to `main`. The action writes the HTML. If `main` is protected, let the GitHub Actions bot push without a review, or the generated commit will be rejected.
 
 Generated each time, only when something changed:
 

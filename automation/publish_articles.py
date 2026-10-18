@@ -88,10 +88,40 @@ def inline(text: str) -> str:
     return re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', rendered)
 
 
+TABLE_SEPARATOR_RE = re.compile(r'^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$')
+
+
+def table_cells(line: str) -> list[str]:
+    row = line.strip()
+    if row.startswith('|'):
+        row = row[1:]
+    if row.endswith('|'):
+        row = row[:-1]
+    return [cell.strip() for cell in row.split('|')]
+
+
+def table_html(rows: list[str]) -> str:
+    """Render a pipe table (header row, --- separator, body rows) as a scrollable table."""
+    header = table_cells(rows[0])
+    body = [table_cells(row) for row in rows[2:]]
+    head_html = ''.join(f'<th scope="col">{inline(cell)}</th>' for cell in header)
+    body_rows = []
+    for cells in body:
+        cells = (cells + [''] * len(header))[:len(header)]
+        body_rows.append('<tr>' + ''.join(f'<td>{inline(cell)}</td>' for cell in cells) + '</tr>')
+    return (
+        '<div class="table-wrap"><table>'
+        f'<thead><tr>{head_html}</tr></thead>'
+        f'<tbody>{"".join(body_rows)}</tbody>'
+        '</table></div>'
+    )
+
+
 def body_html(markdown: str) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
     bullets: list[str] = []
+    table: list[str] = []
 
     def flush_paragraph() -> None:
         if not paragraph:
@@ -107,7 +137,24 @@ def body_html(markdown: str) -> str:
         blocks.append(('ul', list(bullets)))
         bullets.clear()
 
+    def flush_table() -> None:
+        if not table:
+            return
+        if len(table) >= 2 and TABLE_SEPARATOR_RE.match(table[1].strip()):
+            blocks.append(('table', list(table)))
+        else:
+            # Not a real table (no separator row): keep the text as a paragraph.
+            paragraph.extend(table)
+            flush_paragraph()
+        table.clear()
+
     for line in markdown.splitlines():
+        if line.strip().startswith('|'):
+            flush_paragraph()
+            flush_bullets()
+            table.append(line.strip())
+            continue
+        flush_table()
         if not line.strip():
             flush_paragraph()
             flush_bullets()
@@ -122,6 +169,7 @@ def body_html(markdown: str) -> str:
             bullets.append(line[2:].strip())
             continue
         paragraph.append(line.strip())
+    flush_table()
     flush_paragraph()
     flush_bullets()
 
@@ -135,6 +183,9 @@ def body_html(markdown: str) -> str:
         if kind == 'ul':
             items = ''.join(f'<li>{inline(item)}</li>' for item in value)
             html_blocks.append(f'<ul>{items}</ul>')
+            continue
+        if kind == 'table':
+            html_blocks.append(table_html(value))
             continue
         html_blocks.append(f'<p{" class=\"lead\"" if first else ""}>{inline(value)}</p>')
         first = False
