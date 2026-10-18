@@ -3120,6 +3120,10 @@ def build(root: Path):
     for relative, content in list(files.items()):
         if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS and relative not in frozen_pages:
             files[relative]=links.rewrite_legacy_article_urls(content, articles)
+    for relative, content in list(files.items()):
+        # Every generated page advertises the feed; redirect stubs are left untouched.
+        if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS:
+            files[relative] = rss_feed.ensure_link(content)
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)
