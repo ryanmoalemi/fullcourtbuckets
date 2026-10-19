@@ -209,10 +209,14 @@ def player_link(e: dict) -> str:
     return ext(e['player'], f'/wnba/{e["player_slug"]}/')
 
 
-def relative_html(e: dict) -> str:
+def relative_name_html(e: dict) -> str:
     if has_page(e['relative_slug']):
         return ext(e['relative'], f'/wnba/{e["relative_slug"]}/')
     return esc(e['relative'])
+
+
+def relative_html(e: dict) -> str:
+    return f'<span class="fr-who">{relative_head_html(e)}{relative_name_html(e)}</span>'
 
 
 def team_html(e: dict) -> str:
@@ -265,6 +269,24 @@ def source_cell(e: dict) -> str:
 def initials(name: str) -> str:
     bits = [b for b in re.split(r'[\s-]+', name) if b and b[0].isalpha()]
     return (bits[0][0] + bits[-1][0]).upper() if len(bits) > 1 else bits[0][:2].upper()
+
+
+# Table-only headshot credits for relatives without a composite photo record.
+TABLE_ONLY_RELATIVE_PHOTOS = {
+    'joe-salavea': {'author': 'Office of U.S. Congressman Eni Faleomavaega of American Samoa', 'license': 'Public domain',
+                    'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Joe_Salave%27a.jpg'},
+}
+
+
+def relative_photo(e: dict):
+    return e.get('photo_relative') or TABLE_ONLY_RELATIVE_PHOTOS.get(e['relative_slug'])
+
+
+def relative_head_html(e: dict) -> str:
+    src = f'/images/relatives/heads/relatives/{e["relative_slug"]}.webp'
+    if relative_photo(e) and (ROOT / src.lstrip('/')).is_file():
+        return f'<img class="fr-head" src="{src}" alt="" width="32" height="32" loading="lazy" decoding="async">'
+    return f'<span class="fr-head fr-init" aria-hidden="true">{esc(initials(e["relative"]))}</span>'
 
 
 def head_html(e: dict) -> str:
@@ -435,6 +457,18 @@ def head_credits(entries: list[dict]) -> str:
     out = f'<p id="table-photo-credits">Table headshots, cropped from licensed photos ({len(items)}):</p><ul>{"".join(items)}</ul>'
     if missing:
         out += f'<p>Initials are shown where we found no licensed photo in the player\'s current uniform: {", ".join(missing)}.</p>'
+    rseen, ritems, rmissing = set(), [], []
+    for e in entries:
+        if e['relative_slug'] in rseen:
+            continue
+        rseen.add(e['relative_slug'])
+        if relative_photo(e) and (ROOT / 'images' / 'relatives' / 'heads' / 'relatives' / f'{e["relative_slug"]}.webp').is_file():
+            ritems.append(f'<li>{esc(e["relative"])}: {credit(relative_photo(e))}</li>')
+        else:
+            rmissing.append(esc(e['relative']))
+    out += f'<p>Relatives ({len(ritems)}):</p><ul>{"".join(ritems)}</ul>'
+    if rmissing:
+        out += f'<p>Initials are shown for relatives with no usable licensed photo: {", ".join(rmissing)}.</p>'
     return out
 
 
