@@ -1,13 +1,11 @@
-"""Every /news/ article photo file is 16:9 (docs/EDITORIAL_STYLE.md, Photo shape).
+"""Every photo in every /news/ post is a true 16:9 file and renders 16:9.
 
-The lead photo and every body photo must be a 16:9 landscape file, ratio
-1.74 to 1.80, cropped with heads in frame. CSS cover alone is not enough: the
-file itself is the shape. Screenshots and charts (figure.no-crop, .screenshot,
-.chart, .stat-board) may be taller and are skipped. Decorative stat-card
-backgrounds with alt="" are not article photos.
-
-ALLOWLIST is for a photo-like graphic that has to keep its own shape. Keep it
-short and say why.
+Ryan, Oct 19, 2026: "all photos in all posts should be 16:9." No exemptions:
+lead, body, screenshots, charts, cards. Photos are cropped with heads in
+frame (automation/crop_16x9.py); charts, screenshots and cards are padded
+with --pad so nothing is cut. Every srcset variant counts. og:image social
+cards (1.91:1) are not post photos. Author bylines and table headshots
+(not in a <figure>) are not post photos either.
 """
 import re
 import unittest
@@ -17,12 +15,17 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 MIN_RATIO, MAX_RATIO = 1.74, 1.80
-SKIP_CLASSES = {'no-crop', 'screenshot', 'chart', 'stat-board', 'card'}
-# file name -> reason
-ALLOWLIST = {}
 
 FIGURE_RE = re.compile(r'<figure\b([^>]*)>(.*?)</figure>', re.S)
-SRC_RE = re.compile(r'\bsrc="(/images/[^"?]+)')
+URL_RE = re.compile(r'\b(?:src|srcset)="([^"]+)"')
+
+
+def _files(inner):
+    for value in URL_RE.findall(inner):
+        for part in value.split(','):
+            src = part.strip().split(' ')[0].split('?')[0]
+            if src.startswith('/') and not src.startswith('/images/authors/'):
+                yield src
 
 
 def _ratio(rel):
@@ -33,23 +36,24 @@ def _ratio(rel):
 
 class PhotoAspectTests(unittest.TestCase):
     def test_news_article_photos_are_16_9(self):
-        bad = []
+        bad, seen = [], 0
         for page in sorted((ROOT / 'news').glob('*/index.html')):
             html = page.read_text(encoding='utf-8')
-            for attrs, inner in FIGURE_RE.findall(html):
-                cls = re.search(r'class="([^"]*)"', attrs)
-                classes = set(cls.group(1).split()) if cls else set()
-                if classes & SKIP_CLASSES or not classes & {'lead-photo', 'body-photo'}:
-                    continue
-                for src in SRC_RE.findall(inner):
-                    if src.rsplit('/', 1)[-1] in ALLOWLIST or src.startswith('/images/authors/'):
+            for _attrs, inner in FIGURE_RE.findall(html):
+                for src in _files(inner):
+                    path = ROOT / src.lstrip('/')
+                    if not path.exists():
                         continue
-                    if not (ROOT / src.lstrip('/')).exists():
-                        continue
+                    seen += 1
                     r = _ratio(src)
                     if not MIN_RATIO <= r <= MAX_RATIO:
                         bad.append(f'{page.parent.name}: {src} is {r:.3f}:1')
-        self.assertEqual(bad, [], 'Crop these to 16:9 with heads in frame:\n' + '\n'.join(bad))
+        self.assertGreater(seen, 100)
+        self.assertEqual(bad, [], 'Crop (photos) or --pad (charts) to 16:9 with automation/crop_16x9.py:\n' + '\n'.join(bad))
+
+    def test_publisher_rejects_non_16_9(self):
+        src = (ROOT / 'automation' / 'publish_articles.py').read_text(encoding='utf-8')
+        self.assertIn('it must be 16:9', src)
 
     def test_drop_in_article_photos_are_16_9(self):
         bad = []
@@ -75,25 +79,6 @@ class PhotoSlotTests(unittest.TestCase):
     file-only test above never looked at card slots or rendered size.
     """
 
-    def test_srcset_variants_are_16_9(self):
-        bad = []
-        for page in sorted((ROOT / 'news').glob('*/index.html')):
-            html = page.read_text(encoding='utf-8')
-            for attrs, inner in FIGURE_RE.findall(html):
-                cls = re.search(r'class="([^"]*)"', attrs)
-                classes = set(cls.group(1).split()) if cls else set()
-                if classes & SKIP_CLASSES or not classes & {'lead-photo', 'body-photo'}:
-                    continue
-                for srcset in SRCSET_RE.findall(inner):
-                    for part in srcset.split(','):
-                        src = part.strip().split(' ')[0].split('?')[0]
-                        if not src.startswith('/images/') or not (ROOT / src.lstrip('/')).exists():
-                            continue
-                        r = _ratio(src)
-                        if not MIN_RATIO <= r <= MAX_RATIO:
-                            bad.append(f'{page.parent.name}: srcset {src} is {r:.3f}:1')
-        self.assertEqual(bad, [], '\n'.join(bad))
-
     def test_shared_css_forces_16_9_card_slots(self):
         css = (ROOT / 'automation' / 'site_nav.css').read_text(encoding='utf-8')
         for sel in CARD_SELECTORS:
@@ -118,8 +103,9 @@ class PhotoSlotTests(unittest.TestCase):
         threading.Thread(target=srv.serve_forever, daemon=True).start()
         base = f'http://127.0.0.1:{srv.server_address[1]}'
         pages = ['/', '/news/'] + sorted(
-            '/news/' + p.parent.name + '/' for p in (ROOT / 'news').glob('*/index.html'))[:40]
-        sel = ','.join(CARD_SELECTORS + ('.article figure.lead-photo img', '.article figure.body-photo img'))
+            '/news/' + p.parent.name + '/' for p in (ROOT / 'news').glob('*/index.html')
+            if 'http-equiv="refresh"' not in p.read_text(encoding='utf-8'))  # redirects leave the repo
+        sel = ','.join(CARD_SELECTORS + ('.article figure img',))
         js = ("s=>[...document.querySelectorAll(s)].map(i=>{const b=i.getBoundingClientRect();"
               "return [i.getAttribute('src'),b.width,b.height]}).filter(x=>x[1]>40&&x[2]>0)")
         bad = []
