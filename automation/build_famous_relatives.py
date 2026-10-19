@@ -72,7 +72,13 @@ PAGE_CSS = (
     '.fr-table th[aria-sort="ascending"] button:after{content:"\\25B2";font-size:10px}'
     '.fr-table th[aria-sort="descending"] button:after{content:"\\25BC";font-size:10px}'
     '.fr-table td{vertical-align:top}'
-    '.fr-table td.fr-src{white-space:nowrap}'
+    '.fr-table td.fr-src{white-space:normal;min-width:140px}'
+    '.fr-kind{display:inline-block;margin-left:4px;font-size:11px;line-height:1;padding:2px 5px;border:1px solid #d6d1c8;border-radius:3px;color:#6b665e;text-transform:uppercase;letter-spacing:.03em;vertical-align:1px}'
+    '.fr-dot{color:#9a958c}'
+    '.fr-who{display:inline-flex;align-items:center;gap:8px}'
+    '.fr-table .fr-head{flex:0 0 32px;width:32px!important;height:32px!important;max-width:none!important;margin:0!important;border-radius:50%;object-fit:cover;background:#ece8e1;border:1px solid #e0dbd2}'
+    '.fr-init{display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#5b4a8a;box-sizing:border-box}'
+    '@media (max-width:600px){.fr-table .fr-head{flex-basis:26px;width:26px!important;height:26px!important}.fr-init{font-size:10px}}'
     '.fr-counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 18px}'
     '.fr-counts table{width:100%}'
     '.fr-sources{font-size:13px;color:#a29f99;margin:6px 0 0}'
@@ -203,10 +209,14 @@ def player_link(e: dict) -> str:
     return ext(e['player'], f'/wnba/{e["player_slug"]}/')
 
 
-def relative_html(e: dict) -> str:
+def relative_name_html(e: dict) -> str:
     if has_page(e['relative_slug']):
         return ext(e['relative'], f'/wnba/{e["relative_slug"]}/')
     return esc(e['relative'])
+
+
+def relative_html(e: dict) -> str:
+    return f'<span class="fr-who">{relative_head_html(e)}{relative_name_html(e)}</span>'
 
 
 def team_html(e: dict) -> str:
@@ -225,12 +235,67 @@ def sources_html(e: dict) -> str:
     return '; '.join(parts)
 
 
+SHORT_SOURCE = {
+    'Big 12 Conference': 'Big 12', 'University of Maryland': 'Maryland', 'Canadian Olympic Committee': 'Team Canada',
+    'Daily Emerald (University of Oregon student paper)': 'Daily Emerald', 'National Football Foundation': 'NFF',
+    'Nashville Metro Council resolution R98-1304 honoring the Nashville Noise': 'Nashville Metro Council',
+    'Sport Australia Hall of Fame': 'Sport Australia HOF', 'Candace Parker official site': 'CandaceParker.com',
+    'Milwaukee Bucks': 'Milwaukee Bucks', 'Team USA': 'Team USA', 'WNBA.com 2009 transactions (archived)': 'WNBA.com',
+}
+
+
+def short_source(label: str) -> str:
+    """Publisher-only link text, e.g. 'Stanford Athletics bio: Cameron Brink' -> 'Stanford'."""
+    head = label.split(':')[0].split(',')[0].strip()
+    if head in SHORT_SOURCE:
+        return SHORT_SOURCE[head]
+    head = re.sub(r'\s+(bio|release|feature|report|profile|player record|athlete record|game summary|draft profile|Q&A|transactions|inaugural draft results|press room bio|Press Room bio)\b.*$', '', head, flags=re.I).strip()
+    head = re.sub(r'^(.*?) Athletics$', r'\1', head)
+    return SHORT_SOURCE.get(head, head)
+
+
 def source_cell(e: dict) -> str:
-    parts = []
-    for i, src in enumerate(e['sources'], 1):
-        tag = 'report' if src['kind'] == 'report' else 'primary'
-        parts.append(f'<a class="inline-link" href="{esc(src["url"])}" target="_blank" rel="noopener" title="{esc(src["label"])}">{i}</a><span class="fr-kind"> ({tag})</span>')
-    return ' '.join(parts)
+    parts, seen = [], {}
+    for src in e['sources']:
+        name = short_source(src['label'])
+        seen[name] = seen.get(name, 0) + 1
+        if seen[name] > 1:
+            name = f'{name} ({seen[name]})'
+        tag = '<span class="fr-kind">report</span>' if src['kind'] == 'report' else ''
+        parts.append(f'<a class="inline-link" href="{esc(src["url"])}" target="_blank" rel="noopener" title="{esc(src["label"])}">{esc(name)}</a>{tag}')
+    return ' <span class="fr-dot" aria-hidden="true">\u00b7</span> '.join(parts)
+
+
+def initials(name: str) -> str:
+    bits = [b for b in re.split(r'[\s-]+', name) if b and b[0].isalpha()]
+    return (bits[0][0] + bits[-1][0]).upper() if len(bits) > 1 else bits[0][:2].upper()
+
+
+# Table-only headshot credits for relatives without a composite photo record.
+TABLE_ONLY_RELATIVE_PHOTOS = {
+    'antonio-davis': {'author': 'Lordcolus (derivative work: Lpdrew)', 'license': 'CC BY 2.0',
+                      'license_url': 'https://creativecommons.org/licenses/by/2.0', 'source_page': 'https://commons.wikimedia.org/wiki/File:Antonio_Davis.jpg'},
+    'joe-salavea': {'author': 'Office of U.S. Congressman Eni Faleomavaega of American Samoa', 'license': 'Public domain',
+                    'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Joe_Salave%27a.jpg'},
+}
+
+
+def relative_photo(e: dict):
+    return e.get('photo_relative') or TABLE_ONLY_RELATIVE_PHOTOS.get(e['relative_slug'])
+
+
+def relative_head_html(e: dict) -> str:
+    src = f'/images/relatives/heads/relatives/{e["relative_slug"]}.webp'
+    if relative_photo(e) and (ROOT / src.lstrip('/')).is_file():
+        return f'<img class="fr-head" src="{src}" alt="" width="32" height="32" loading="lazy" decoding="async">'
+    return f'<span class="fr-head fr-init" aria-hidden="true">{esc(initials(e["relative"]))}</span>'
+
+
+def head_html(e: dict) -> str:
+    src = f'/images/relatives/heads/{e["player_slug"]}.webp'
+    if (ROOT / src.lstrip('/')).is_file():
+        return f'<img class="fr-head" src="{src}" alt="" width="32" height="32" loading="lazy" decoding="async">'
+    return f'<span class="fr-head fr-init" aria-hidden="true">{esc(initials(e["player"]))}</span>'
 
 
 def credit(photo: dict) -> str:
@@ -276,7 +341,7 @@ def table_html(entries: list[dict]) -> str:
         rows.append(
             '<tr>'
             f'<td data-sort="{e["rank"]}">{e["rank"]}</td>'
-            f'<td data-sort="{esc(e["player"])}">{player_link(e)}</td>'
+            f'<td data-sort="{esc(e["player"])}"><span class="fr-who">{head_html(e)}{player_link(e)}</span></td>'
             f'<td data-sort="{esc(e["_team"] or "zzz")}">{team_html(e)}</td>'
             f'<td>{relative_html(e)}</td>'
             f'<td>{esc(e["relation"])}</td>'
@@ -377,7 +442,36 @@ def all_sources(entries: list[dict]) -> str:
         f'<p>News reports, used only where we found no primary record ({len(reports)}):</p>'
         f'<ul>{"".join(li(s) for s in reports)}</ul>'
         '<p>2026 teams come from Full Court Buckets player data.</p>'
+        + head_credits(entries)
     )
+
+
+def head_credits(entries: list[dict]) -> str:
+    seen, items, missing = set(), [], []
+    for e in entries:
+        if e['player_slug'] in seen:
+            continue
+        seen.add(e['player_slug'])
+        if (ROOT / 'images' / 'relatives' / 'heads' / f'{e["player_slug"]}.webp').is_file() and e.get('photo_player'):
+            items.append(f'<li>{esc(e["player"])}: {credit(e["photo_player"])}</li>')
+        else:
+            missing.append(esc(e['player']))
+    out = f'<p id="table-photo-credits">Table headshots, cropped from licensed photos ({len(items)}):</p><ul>{"".join(items)}</ul>'
+    if missing:
+        out += f'<p>Initials are shown for players with no licensed photo we could find: {", ".join(missing)}.</p>'
+    rseen, ritems, rmissing = set(), [], []
+    for e in entries:
+        if e['relative_slug'] in rseen:
+            continue
+        rseen.add(e['relative_slug'])
+        if relative_photo(e) and (ROOT / 'images' / 'relatives' / 'heads' / 'relatives' / f'{e["relative_slug"]}.webp').is_file():
+            ritems.append(f'<li>{esc(e["relative"])}: {credit(relative_photo(e))}</li>')
+        else:
+            rmissing.append(esc(e['relative']))
+    out += f'<p>Relatives ({len(ritems)}):</p><ul>{"".join(ritems)}</ul>'
+    if rmissing:
+        out += f'<p>Initials are shown for relatives with no licensed photo we could find: {", ".join(rmissing)}.</p>'
+    return out
 
 
 def body(doc: dict, entries: list[dict], s: dict) -> str:
@@ -404,7 +498,7 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
             f'{s["by_team"].get("Golden State Valkyries", 0)} with the {ext("Golden State Valkyries", "/wnba/teams/golden-state-valkyries/")}.</p>'
         )
     parts.append('<h2 class="section-title" id="list">All famous relatives of WNBA players</h2>')
-    parts.append('<p>Tap a column heading to sort. Each number in the Sources column opens that row\'s source, marked primary or report.</p>')
+    parts.append('<p>Tap a column heading to sort. Sources are primary unless marked report.</p>')
     parts.append(table_html(entries))
     parts.append(f'<p><a class="fr-download" href="{CSV_NAME}" download>Download the data (CSV)</a></p>')
     rel = s['by_relation']
@@ -604,10 +698,10 @@ def main() -> None:
     article = next(a for a in articles if a.get('slug') == SLUG)
     pa.save_articles(articles)
     page = render(doc, entries, s, article, articles)
-    pa.write_if_changed(PAGE_PATH, page)
+    pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     # Run the same pass the nightly news build runs, so tonight's rebuild is a no-op.
     page = links.prepare_article_page(ROOT, article, articles)
-    pa.write_if_changed(PAGE_PATH, page)
+    pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     pa.write_if_changed(CSV_PATH, write_csv(entries))
     pa.write_if_changed(ROOT / SLUG / 'index.html', pa.redirect_html(SLUG))
     if is_new or record_changed:
