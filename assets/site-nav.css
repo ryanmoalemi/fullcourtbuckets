@@ -208,3 +208,17 @@ html body .breadcrumbs,html body .article-date,html body .hero-credit,html body 
 html body .hero-credit a,html body .breadcrumbs a{color:#5b22c9!important}
 html body .stats .down b,html body .stats .down em{color:#a1122b!important}
 html body .stats .up b,html body .stats .up em{color:#0a6b2d!important}
+/* nav polish: only the current page is underlined; desktop list has no panel shadow */
+html body nav.site-nav .site-nav-playoffs>a:not([aria-current="page"]){box-shadow:none!important}
+@media (min-width:900px){html body nav.site-nav>ul{box-shadow:none!important;background:transparent!important}}
+html body nav.site-nav .site-nav-subtoggle,html body nav.site-nav li{border-color:#e2ddd6!important}
+/* Shared Now bar (same on every page) */
+html body .fcb-now{background:#f6f1ff;border-bottom:1px solid #e4dbf7}
+html body .fcb-now .ticker-shell{display:flex;align-items:center;gap:14px;box-sizing:border-box;width:100%;max-width:1240px;margin:0 auto;padding:8px 16px;min-height:36px;height:auto}
+html body .fcb-now .ticker-label{flex:0 0 auto;font:800 12px/1 "Barlow","Arial Narrow",sans-serif;letter-spacing:.04em;text-transform:uppercase}
+html body .fcb-now .ticker-text{font:600 13px/1.35 Inter,Arial,sans-serif;white-space:normal;overflow:visible}
+html body .fcb-now .ticker-text a{color:#2a1458!important;text-decoration:underline;text-underline-offset:3px}
+html body .fcb-now .ticker-text a:hover{color:#5b22c9!important}
+html body .fcb-now{position:relative}
+html body .fcb-now .ticker-text a::after{content:"";position:absolute;inset:0}
+html body .fcb-now:hover .ticker-text a{color:#5b22c9!important}

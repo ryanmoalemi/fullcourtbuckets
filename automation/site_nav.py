@@ -443,6 +443,20 @@ def ensure_pinterest_verify(page_html: str) -> str:
     return page_html.replace('</head>', PINTEREST_VERIFY_TAG + '</head>', 1)
 
 
+ICON_LINKS = (
+    '<link rel="icon" href="/favicon.ico" sizes="48x48">'
+    '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">'
+    '<link rel="apple-touch-icon" href="/apple-touch-icon.png">'
+    '<link rel="manifest" href="/site.webmanifest">'
+)
+
+
+def ensure_icons(page_html: str) -> str:
+    if '/site.webmanifest' in page_html or '</head>' not in page_html:
+        return page_html
+    return page_html.replace('</head>', ICON_LINKS + '</head>', 1)
+
+
 def ensure_assets(page_html: str) -> str:
     page_html = rss_feed.ensure_link(page_html)
     page_html = ensure_pinterest_verify(page_html)
@@ -454,6 +468,8 @@ def ensure_assets(page_html: str) -> str:
     if '/assets/site-nav.js' not in page_html and '</body>' in page_html:
         page_html = page_html.replace('</body>', SCRIPT + '</body>', 1)
     page_html = page_html.replace('nav{display:none}', 'nav:not(.site-nav){display:none}')
+    page_html = apply_now_bar(page_html)
+    page_html = ensure_icons(page_html)
     return page_html
 
 
@@ -546,3 +562,53 @@ def install_tree(root: Path, menu: list[dict], skip: set[str]) -> dict[str, str]
         if updated != original:
             updates[rel] = updated
     return updates
+
+
+# ---- Sitewide Now bar: one shared value from data/now-ticker.json ----
+import datetime as _dt
+import html as _html
+import json as _json
+
+NOW_PATH = Path(__file__).resolve().parents[1] / 'data' / 'now-ticker.json'
+NOW_RE = re.compile(r'<div class="ticker\b[^>]*>.*?</div></div></div>', re.S)
+
+
+def load_now() -> dict:
+    return _json.loads(NOW_PATH.read_text(encoding='utf-8'))
+
+
+def now_item(now: _dt.datetime | None = None) -> dict:
+    """The current item, or the evergreen fallback once it has expired."""
+    data = load_now()
+    moment = now or _dt.datetime.now(_dt.timezone.utc)
+    if moment >= _dt.datetime.fromisoformat(data['expires']):
+        fb = dict(data['fallback'])
+        fb.setdefault('date', data.get('date', ''))
+        fb['expired'] = True
+        return fb
+    return data
+
+
+def now_bar_html(now: _dt.datetime | None = None) -> str:
+    data = load_now()
+    item = now_item(now)
+    e = lambda v: _html.escape(str(v), quote=True)
+    fb = data['fallback']
+    return (
+        f'<div class="ticker fcb-now" data-item-date="{e(data.get("date", ""))}" data-expires="{e(data["expires"])}" '
+        f'data-fallback-text="{e(fb["text"])}" data-fallback-url="{e(fb["url"])}">'
+        '<div class="shell ticker-shell"><div class="ticker-label">Now</div>'
+        f'<div class="ticker-text"><a href="{e(item["url"])}">{e(item["text"])}</a></div></div></div>'
+    )
+
+
+def apply_now_bar(page_html: str, now: _dt.datetime | None = None) -> str:
+    """Remove any page-specific ticker and put the shared one right after the site header."""
+    if 'site-header' not in page_html:
+        return page_html
+    stripped = NOW_RE.sub('', page_html)
+    end = stripped.find('</header>', stripped.find('site-header'))
+    if end < 0:
+        return page_html
+    end += len('</header>')
+    return stripped[:end] + now_bar_html(now) + stripped[end:]

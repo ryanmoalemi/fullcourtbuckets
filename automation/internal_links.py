@@ -622,7 +622,10 @@ def choose_ticker(articles: list, now: dt.datetime | None = None) -> dict | None
 
 
 def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> str:
-    """Replace the homepage Now line. Article pages keep their own tickers."""
+    """The Now line is one shared sitewide value (data/now-ticker.json); see site_nav.apply_now_bar."""
+    import site_nav
+    if 'site-header' in html:
+        return site_nav.apply_now_bar(html)
     if 'id="latest"' not in html:
         return html
     item = choose_ticker(articles, now)
