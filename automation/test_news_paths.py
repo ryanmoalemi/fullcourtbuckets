@@ -194,7 +194,7 @@ class NewsPathTests(unittest.TestCase):
             self.assertIn('href="/news/fever-aces-game-3-recap/"', news)
             self.assertNotIn('target="_blank"', news)
         recap = (ROOT / 'news' / 'fever-aces-game-3-recap' / 'index.html').read_text(encoding='utf-8')
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/401918022', recap)
+        self.assertNotIn('espn.com/wnba/game/', recap)  # never credit ESPN for game stats
         self.assertIn('href="/wnba/aja-wilson/" target="_blank" rel="noopener"', recap)
         self.assertIn('href="/wnba/teams/las-vegas-aces/" target="_blank" rel="noopener"', recap)
         self.assertNotIn('\u2014', recap)

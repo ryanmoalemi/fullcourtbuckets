@@ -73,24 +73,7 @@ class NoApiHrefTests(unittest.TestCase):
                     offenders.append(f'{path.relative_to(ROOT)} -> {html.unescape(href)}')
         self.assertEqual(offenders, [])
 
-    def test_series_breakdown_sources_are_human_espn_pages(self):
+    def test_series_breakdown_sources_are_not_espn_game_stats(self):
         page = (ROOT / 'news/aces-fever-series-breakdown/index.html').read_text(encoding='utf-8')
         self.assertNotIn('site.api.espn.com', page)
-        expected = {
-            'ESPN play-by-play': 'https://www.espn.com/wnba/playbyplay/_/gameId/401918022',
-            'Game 1 box': 'https://www.espn.com/wnba/boxscore/_/gameId/401918015',
-            'Game 2 box': 'https://www.espn.com/wnba/boxscore/_/gameId/401918018',
-            'Game 3 box': 'https://www.espn.com/wnba/boxscore/_/gameId/401918022',
-            'ESPN box': 'https://www.espn.com/wnba/boxscore/_/gameId/401918022',
-            'G1': 'https://www.espn.com/wnba/boxscore/_/gameId/401918015',
-            'G2': 'https://www.espn.com/wnba/boxscore/_/gameId/401918018',
-            'G3': 'https://www.espn.com/wnba/boxscore/_/gameId/401918022',
-        }
-        for label, url in expected.items():
-            self.assertIn(
-                f'<a href="{url}" target="_blank" rel="noopener">{label}</a>',
-                page,
-                label,
-            )
-        self.assertEqual(page.count('ESPN play-by-play'), 2)
-        self.assertEqual(page.count('>ESPN box</a>'), 2)
+        self.assertNotRegex(page, r'espn\.com/wnba/(boxscore|playbyplay|game)/')
