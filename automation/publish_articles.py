@@ -298,6 +298,14 @@ def figure_html(article: dict, meta: dict) -> str:
     )
 
 
+def top_link_html(meta: dict) -> str:
+    """Optional one-line link under the byline (front matter top_link_text + top_link_url)."""
+    text, url = str(meta.get('top_link_text') or '').strip(), str(meta.get('top_link_url') or '').strip()
+    if not (text and url):
+        return ''
+    return f'<p class="top-link"><a href="{esc(url)}">{esc(text)} &rarr;</a></p>'
+
+
 def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str:
     slug = article['slug']
     dest = ROOT / 'news' / slug / 'index.html'
@@ -322,7 +330,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         f'<h1>{esc(title)}</h1>'
         f'<div class="byline-row">{links.BYLINE_HTML}'
         f'<time class="article-date" datetime="{esc(article["date"])}">{esc(when)}</time></div>'
-        f'{figure_html(article, meta)}{body}{how}'
+        f'{top_link_html(meta)}{figure_html(article, meta)}{body}{how}'
         '<p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p>'
         '</article>'
     )
@@ -623,6 +631,7 @@ def publish_folder(folder: Path, articles: list) -> list:
     # The record now in the list is the one listings and the article end should see.
     article = next(item for item in articles if item.get('slug') == slug)
     page = render_page(meta, markdown, article, articles)
+    page = site_nav.apply_now_bar(site_nav.ensure_fonts(page))  # keep the shared Now bar + fonts on rebuild
     page_changed = write_if_changed(ROOT / 'news' / slug / 'index.html', page)
     write_if_changed(ROOT / slug / 'index.html', redirect_html(slug))
     if not (is_new or record_changed or page_changed):

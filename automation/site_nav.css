@@ -231,3 +231,6 @@ html body .feature-grid{align-items:start}
 html body .feature-grid>.article-card{grid-template-columns:1fr!important;min-height:0!important;height:auto!important;align-self:start}
 html body .feature-grid>.article-card .article-visual{width:100%}
 html body .feature-grid>.article-card .article-copy{padding:18px 22px 20px}
+/* Article top link (publish_articles top_link_*): one prominent line under the byline. */
+html body .article .top-link{margin:0 0 12px;padding:10px 14px;border-left:3px solid #7d35ff;background:#f3eefc;font:700 16px/1.35 Inter,system-ui,sans-serif}
+html body .article .top-link a{color:#5b22c9!important;text-decoration:underline;text-underline-offset:3px}

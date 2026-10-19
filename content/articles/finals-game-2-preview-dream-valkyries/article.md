@@ -15,12 +15,12 @@ hero_alt: "Jordin Canada of the Atlanta Dream in a white number 3 jersey"
 photo_credit: "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:260527_Lynx_Dream_JohnMc210_(55298398176).jpg"
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
+top_link_text: "Follow the play-by-play: Dream vs. Valkyries, Game 2"
+top_link_url: "/wnba/finals/2026/game-2/play-by-play/"
 ticker: "Finals Game 2: Dream at Valkyries, Monday 5 p.m. PT. Golden State leads 1-0."
 ---
 
 The [Atlanta Dream](/wnba/teams/atlanta-dream/) forced 44 more turnovers than they committed across their first five playoff games, and they won the turnover count in all five. In Game 1 of the WNBA Finals, the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) flipped it: Atlanta turned it over 12 times to Golden State's 8 and lost 68-64.
-
-Every Game 2 play will post on the [Game 2 play-by-play page](/wnba/finals/2026/game-2/play-by-play/) after the final buzzer.
 
 Game 2 is Monday at Chase Center, with Golden State up 1-0. The question for Atlanta is whether it can get its best weapon back, because the Dream also went 2 of 19 from the field in the fourth quarter of Game 1, and Golden State's late blocks came from four players other than [Kiah Stokes](/wnba/kiah-stokes/).
 

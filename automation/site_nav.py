@@ -457,7 +457,21 @@ def ensure_icons(page_html: str) -> str:
     return page_html.replace('</head>', ICON_LINKS + '</head>', 1)
 
 
+FONTS_LINK = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+              '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+              '<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800'
+              '&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">')
+
+
+def ensure_fonts(page_html: str) -> str:
+    """The shared header is set in Barlow/Inter; every page must load them."""
+    if 'family=Barlow:' in page_html or '</head>' not in page_html:
+        return page_html
+    return page_html.replace('</head>', FONTS_LINK + '</head>', 1)
+
+
 def ensure_assets(page_html: str) -> str:
+    page_html = ensure_fonts(page_html)
     page_html = rss_feed.ensure_link(page_html)
     page_html = ensure_pinterest_verify(page_html)
     if '/assets/site-nav.css' not in page_html:
