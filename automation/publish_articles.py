@@ -243,6 +243,8 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
     })
     if str(meta.get('game_id') or '').strip():  # links score rows to this recap; no ESPN box-score line
         article['gameId'] = str(meta['game_id']).strip()
+    if str(meta.get('preview_game_id') or '').strip():  # rail 'Next' links this preview before tip
+        article['previewGameId'] = str(meta['preview_game_id']).strip()
     return article
 
 
@@ -633,7 +635,9 @@ def publish_folder(folder: Path, articles: list) -> list:
     # The record now in the list is the one listings and the article end should see.
     article = next(item for item in articles if item.get('slug') == slug)
     page = render_page(meta, markdown, article, articles)
-    page = site_nav.apply_now_bar(site_nav.ensure_fonts(page))  # keep the shared Now bar + fonts on rebuild
+    page = site_nav.apply_now_bar(site_nav.ensure_fonts(page))
+    import strip_espn_stats
+    page = strip_espn_stats.clean(page)  # never credit ESPN for game stats  # keep the shared Now bar + fonts on rebuild
     page_changed = write_if_changed(ROOT / 'news' / slug / 'index.html', page)
     write_if_changed(ROOT / slug / 'index.html', redirect_html(slug))
     if not (is_new or record_changed or page_changed):

@@ -1543,23 +1543,20 @@ def read_article_source(root: Path, slug: str) -> str:
     raise FileNotFoundError(f'No article HTML for {slug}')
 
 
-ESPN_GAME = 'https://www.espn.com/wnba/game/_/gameId/{game_id}'
-
-
 def box_score_html(game_id: str) -> str:
-    """One source line for a recap. Future posts set espnGameId on the articles.json entry."""
-    url = ESPN_GAME.format(game_id=str(game_id).strip())
-    return f'<p class="box-score">Box score: <a href="{esc(url)}" target="_blank" rel="noopener">ESPN</a>.</p>'
+    """Game source line: our own play-by-play/game page only, never ESPN (Ryan's rule)."""
+    import strip_espn_stats
+    url = strip_espn_stats.game_pages().get(str(game_id).strip())
+    return f'<p class="box-score">Play-by-play: <a href="{esc(url)}">Full Court Buckets game page</a>.</p>' if url else ''
 
 
 def ensure_box_score(html_text: str, article: dict) -> str:
-    game_id = str((article or {}).get('espnGameId') or '').strip()
-    if not game_id or not game_id.isdigit():
+    import strip_espn_stats
+    html_text = strip_espn_stats.clean(html_text)
+    game_id = str((article or {}).get('gameId') or (article or {}).get('espnGameId') or '').strip()
+    snippet = box_score_html(game_id) if game_id.isdigit() else ''
+    if not snippet or snippet in html_text:
         return html_text
-    url = ESPN_GAME.format(game_id=game_id)
-    if url in html_text:
-        return html_text
-    snippet = box_score_html(game_id)
     if '<p class="brand-sign">' in html_text:
         return html_text.replace('<p class="brand-sign">', snippet + '<p class="brand-sign">', 1)
     if '</article>' in html_text:

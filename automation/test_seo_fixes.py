@@ -103,11 +103,13 @@ class GeneratorRuleTests(unittest.TestCase):
 
     def test_box_score_link_for_a_future_recap(self):
         html_text = '<article><p>Recap.</p><p class="brand-sign">Full Court Buckets</p></article>'
-        updated = links.ensure_box_score(html_text, {'espnGameId': '401918017'})
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/401918017', updated)
-        self.assertIn('target="_blank" rel="noopener"', updated)
-        self.assertLess(updated.index('Box score'), updated.index('brand-sign'))
-        self.assertEqual(links.ensure_box_score(updated, {'espnGameId': '401918017'}), updated)
+        # Never ESPN: a game with no FCB page gets no line; one with a page links ours.
+        self.assertEqual(links.ensure_box_score(html_text, {'espnGameId': '401918017'}), html_text)
+        updated = links.ensure_box_score(html_text, {'gameId': '401918305'})
+        self.assertIn('href="/wnba/finals/2026/game-1/play-by-play/"', updated)
+        self.assertNotIn('espn.com', updated)
+        self.assertLess(updated.index('box-score'), updated.index('brand-sign'))
+        self.assertEqual(links.ensure_box_score(updated, {'gameId': '401918305'}), updated)
 
     def test_duplicate_orphan_and_sitemap_rules(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -282,10 +284,9 @@ class PublishedPageTests(unittest.TestCase):
         expansion = (ROOT / 'news/wnba-expansion-teams/index.html').read_text(encoding='utf-8')
         self.assertNotIn('site.api.espn.com', expansion)
         self.assertIn('https://www.espn.com/wnba/standings', expansion)
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/401856891', expansion)
+        self.assertNotIn('espn.com/wnba/game/', expansion)
         recap = (ROOT / 'news/liberty-lynx-game-2-recap/index.html').read_text(encoding='utf-8')
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/401918017', recap)
-        self.assertIn('target="_blank" rel="noopener"', recap)
+        self.assertNotIn('espn.com/wnba/game/', recap)
         meta = re.search(r'name="description" content="([^"]*)"', recap).group(1)
         self.assertLessEqual(len(meta), 155)
         player_text = (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8')
