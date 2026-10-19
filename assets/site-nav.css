@@ -222,3 +222,7 @@ html body .fcb-now .ticker-text a:hover{color:#5b22c9!important}
 html body .fcb-now{position:relative}
 html body .fcb-now .ticker-text a::after{content:"";position:absolute;inset:0}
 html body .fcb-now:hover .ticker-text a{color:#5b22c9!important}
+/* Photo shape: every article photo slot renders 16:9 (docs/EDITORIAL_STYLE.md). test_photo_aspect checks rendered size. */
+html body .article-visual{aspect-ratio:16/9!important;height:auto!important;min-height:0!important;align-self:center}
+html body .article-visual img,html body .news-item img,html body .team-news-item img{aspect-ratio:16/9!important;height:auto!important;object-fit:cover;object-position:center 20%}
+html body .article-card.is-compact .article-visual{height:auto!important;min-height:0!important}
