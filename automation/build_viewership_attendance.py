@@ -438,6 +438,8 @@ def source_label(url: str) -> str:
     host = (urlparse(url).hostname or '').lower().removeprefix('www.')
     if host == 'espnpressroom.com':
         return 'ESPN press release'
+    if host.endswith('nielsen.com'):
+        return 'Nielsen'
     if host.endswith('nbcsports.com'):
         return 'NBC Sports press release'
     if host.endswith('sportsmediawatch.com'):

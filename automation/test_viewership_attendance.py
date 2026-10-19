@@ -83,7 +83,7 @@ class ViewershipPageTests(unittest.TestCase):
     def test_question_page_uses_only_sourced_draft_figures(self):
         page = self.page
         self.assertIn('<h1>WNBA Viewership &amp; Attendance Statistics 2026</h1>', page)
-        self.assertIn('Updated Oct. 15, 2026', page)
+        self.assertIn('Updated Oct. 19, 2026', page)
         self.assertIn('2026 playoff viewership', page)
         self.assertIn('https://www.sportsmediawatch.com/sports-ratings-tracker/', page)
         self.assertIn('semifinals Game 2', page)
@@ -138,6 +138,9 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertNotIn('og.jpg', page)
         self.assertIn('ESPN press release', page)
         self.assertIn('https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/', page)
+        self.assertIn('https://www.nielsen.com/news-center/2026/nielsen-46-billion-minutes-of-womens-sports-were-consumed-in-2025/', page)
+        self.assertIn('Game 1 viewership has not been published yet.', page)
+        self.assertNotIn('Audiences are awaiting release.', page)
         self.assertNotIn('per ESPN', page)
         self.assertNotIn('ESPN data', page)
         self.assertNotRegex(page, r'Source:\s*ESPN\b')

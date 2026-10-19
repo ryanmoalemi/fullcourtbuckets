@@ -155,7 +155,9 @@ def same_season_broadcasts(payload: dict) -> tuple[list[dict], int | None]:
 def espn_regular_season(payload: dict) -> list[dict]:
     rows = [
         row for row in _broadcasts(payload)
-        if str(row.get('network') or '').startswith('ESPN') and core.is_number(row.get('games'))
+        if str(row.get('network') or '').startswith('ESPN')
+        and core.is_number(row.get('avg_viewers'))
+        and str(row.get('scope') or '').endswith('regular season on ' + str(row.get('network') or ''))
     ]
     return sorted(rows, key=lambda row: row['season'])
 
@@ -439,6 +441,11 @@ def event_type(row: dict) -> str:
     if core.is_all_star(row):
         return 'All-Star'
     return 'Regular season'
+
+
+def games_label(row: dict) -> str:
+    games = row.get('games')
+    return f'{games} games' if core.is_number(games) else 'games not stated'
 
 
 def stat_cards(payload: dict) -> list[dict]:
@@ -770,6 +777,12 @@ def tracker_answer(payload: dict) -> str:
         return ''
     first = min(games, key=lambda row: row['date'])
     when = core.format_day(first['date'])
+    if matchup == 'Valkyries vs. Dream' and first['date'] == '2026-10-17' and first.get('status') == 'Final: Valkyries 68-64':
+        return (
+            'Game 1 was played Oct. 17 at Chase Center, where the Valkyries beat the Dream 68-64 '
+            'before 18,064 fans to lead the series 1-0. Game 2 is Monday, Oct. 19 at 5:00 p.m. PT '
+            '(8:00 p.m. ET) on USA and Peacock. Game 1 viewership has not been published yet.'
+        )
     if matchup == 'Valkyries vs. Dream' and first['date'] == '2026-10-17':
         return 'The 2026 Finals (Valkyries vs. Dream) begin Oct. 17. Audiences are awaiting release.'
     if matchup:
@@ -855,11 +868,11 @@ def viewership_section(payload: dict) -> str:
     espn_rows = espn_regular_season(payload)
     espn_html = ''
     if len(espn_rows) >= 2:
-        points = [(str(row['season']), row['avg_viewers'], f"{row['games']} games") for row in espn_rows]
+        points = [(str(row['season']), row['avg_viewers'], games_label(row)) for row in espn_rows]
         aria = (
             'ESPN regular-season average: '
             + ' and '.join(
-                f"{core.format_number(row['avg_viewers'])} in {row['season']} across {row['games']} games"
+                f"{core.format_number(row['avg_viewers'])} in {row['season']} ({games_label(row)})"
                 for row in espn_rows
             )
             + '. Measurement methods differ. This is not a percent change.'
@@ -878,19 +891,23 @@ def viewership_section(payload: dict) -> str:
             table_rows.append([
                 core.esc(row['network']),
                 core.esc(row['season']),
-                core.esc(str(row['games'])),
+                core.esc(str(row['games']) if core.is_number(row.get('games')) else 'Not stated'),
                 core.esc(core.format_number(row['avg_viewers'])),
                 core.esc(measure),
                 source_cell(row.get('source') or ''),
             ])
             sources.append((row.get('source') or '', row.get('source_date') or ''))
         detail = ' and '.join(
-            f"a {core.format_number(row['avg_viewers'])} average across {row['games']} regular-season games in {row['season']}"
+            (
+                f"a {core.format_number(row['avg_viewers'])} average across {row['games']} regular-season games in {row['season']}"
+                if core.is_number(row.get('games'))
+                else f"a {core.format_number(row['avg_viewers'])} regular-season average in {row['season']}"
+            )
             for row in espn_rows
         )
         espn_html = (
             '<h3>ESPN regular-season average, 2024 and 2025</h3>'
-            f'<p class="answer">ESPN reported {detail}. The 2025 figure uses Nielsen Big Data + Panel. '
+            f'<p class="answer">Games on ESPN networks drew {detail}. The 2025 figure uses Nielsen Big Data + Panel. '
             'The bars are separate reports, not a percent change in fan interest.</p>'
             f'{chart_figure(svg, "espn-regular-season.png")}'
             + table(
@@ -1269,9 +1286,9 @@ def finals_measurement(row: dict) -> str:
     season = row.get('season')
     games = row.get('finals_games')
     if season == 2025:
-        return f'{games} games. ESPN identifies 2025 as Big Data + Panel.'
+        return f'{games} games. Nielsen Big Data + Panel.'
     if season == 2024:
-        return f'{games} games. ESPN called this the highest Finals audience of the last 25 years.'
+        return f'{games} games. 1.57 million before rounding, the most-watched Finals since 1999.'
     if games:
         return f'{games} games.'
     return ''
@@ -2106,7 +2123,7 @@ def write_downloads(directory: Path, payload: dict) -> None:
         _draw_columns(
             directory / 'espn-regular-season.png',
             'ESPN regular-season average',
-            [(str(row['season']), row['avg_viewers'], f"{row['games']} games") for row in espn_rows],
+            [(str(row['season']), row['avg_viewers'], games_label(row)) for row in espn_rows],
             unit='Average viewers',
             note='2025 uses Big Data + Panel. Not a percent change.',
             color=PURPLE,

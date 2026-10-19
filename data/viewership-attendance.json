@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15",
+  "updated": "2026-10-19",
   "games": [
     {
       "date": "1997-06-21",
@@ -110,7 +110,8 @@
       "viewers_source_date": "",
       "tip_et": "3:30 p.m. ET / 12:30 p.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
-      "schedule_source_date": "2026-10-13"
+      "schedule_source_date": "2026-10-13",
+      "status": "Final: Valkyries 68-64"
     },
     {
       "date": "2026-10-19",
@@ -391,8 +392,8 @@
       "games": 25,
       "scope": "2025 regular season on ESPN networks",
       "measurement": "Nielsen Big Data + Panel",
-      "source": "https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/",
-      "source_date": "2025-10-16"
+      "source": "https://www.nielsen.com/news-center/2026/nielsen-46-billion-minutes-of-womens-sports-were-consumed-in-2025/",
+      "source_date": "2026-03-05"
     },
     {
       "season": 2024,
