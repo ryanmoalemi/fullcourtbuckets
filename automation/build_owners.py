@@ -463,7 +463,8 @@ def owner_cell(data: dict, r: dict) -> str:
                   f'title="Photo: {esc(ph["author"])}, {esc(ph["license"])}">')
         else:
             av = f'<span class="ow-av" aria-hidden="true">{esc(initials(ph["person"]))}</span>'
-        text = text.replace(name, f'<span class="ow-person">{av}{name}</span>', 1)
+        label = f'<a href="{OWNER_PAGES[ph["person"]]}">{name}</a>' if ph['person'] in OWNER_PAGES else name
+        text = text.replace(name, f'<span class="ow-person">{av}{label}</span>', 1)
     text = re.sub(r'</span>\s*(?:and|;|,)\s*<span class="ow-person">', '</span><span class="ow-person">', text)
     return f'<span class="ow-owners">{text}</span>'
 
@@ -887,6 +888,9 @@ def shell_parts() -> tuple[str, str, str]:
 
 
 def render(data: dict, s: dict) -> str:
+    import build_owner_profiles as profiles_mod
+    OWNER_PAGES.clear()
+    OWNER_PAGES.update({p: f'/wnba/owners/{profiles_mod.slug(p)}/' for p in profiles_mod.eligible(data)})
     head, top, bottom = shell_parts()
     head += f'<style id="{STYLE_ID}">{PAGE_CSS}</style>{jsonld(data)}'
     main = (
@@ -946,9 +950,14 @@ def update_sitemap() -> None:
     path.write_text(text, encoding='utf-8')
 
 
+OWNER_PAGES: dict = {}
+
+
 def main() -> None:
+    import build_owner_profiles as profiles_mod
     data = load()
     validate(data)
+    profiles_mod.build(data)
     s = stats(data)
     write_if_changed(PAGE_PATH, render(data, s))
     write_downloads(data, s)
