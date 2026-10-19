@@ -1,98 +1,164 @@
 {
   "slug": "justine-pissott",
   "player_name": "Justine Pissott",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "Who is Justine Pissott dating?",
-      "answer": "As of late 2026, Justine Pissott has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What are Justine Pissott's stats?",
+      "answer": "In the 2026 regular season, Justine Pissott averaged 3.8 points, 1.0 rebounds, and 0.4 assists in 10 games for the Las Vegas Aces.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
+        "https://fullcourtbuckets.com/wnba/justine-pissott/"
       ],
-      "google_keyword": "justine pissott partner",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Justine Pissott make?",
-      "answer": "A precise public salary or net worth figure for Justine Pissott is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "justine pissott salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "justine pissott stats",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "How tall is Justine Pissott?",
-      "answer": "Justine Pissott is listed at 6' 4\".",
+      "answer": "The WNBA lists Justine Pissott at 6 feet 4 inches and 175 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
+        "https://www.wnba.com/player/1643495/justine-pissott/bio"
       ],
-      "google_keyword": "justine pissott height",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Justine Pissott's contract?",
-      "answer": "Contract length and guarantees for Justine Pissott are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "justine pissott contract",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Justine Pissott married?",
-      "answer": "There is no widely reported public record of Justine Pissott being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
-      ],
-      "google_keyword": "is justine pissott married",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Justine Pissott injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "justine pissott injury",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Who are Justine Pissott's parents?",
-      "answer": "Public profiles share limited verified detail about Justine Pissott's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
-      ],
-      "google_keyword": "justine pissott parents",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Justine Pissott?",
-      "answer": "Justine Pissott is an American professional basketball player for the Las Vegas Aces of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
-      ],
-      "google_keyword": "justine pissott wikipedia",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "justine pissott height",
+          "vol": 210
+        },
+        {
+          "q": "justine pissott weight",
+          "vol": 20
+        },
+        {
+          "q": "justine pissott height and weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Justine Pissott?",
-      "answer": "Justine Pissott was born February 4, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer": "Justine Pissott was born February 4, 2004.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643495/justine-pissott/bio"
+      ],
+      "queries": [
+        {
+          "q": "justine pissott age",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What team does Justine Pissott play for?",
+      "answer": "Justine Pissott plays for the Las Vegas Aces and wears No. 13.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643495/justine-pissott/bio"
+      ],
+      "queries": [
+        {
+          "q": "justine pissott wnba",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Why did Justine Pissott leave the Indiana Fever?",
+      "answer": "Justine Pissott was on a player development contract with Indiana. On July 7, 2026, she signed a rest-of-season offer sheet from the Las Vegas Aces, and the Fever did not match it.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Justine_Pissott"
+        "https://www.reviewjournal.com/sports/aces/aces-tender-offer-sheet-to-fever-rookie-guard-3847603/"
       ],
-      "google_keyword": "justine pissott age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2004-02-04"
+      "queries": [
+        {
+          "q": "justine pissott fever",
+          "vol": 40
+        },
+        {
+          "q": "justine pissott contract",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "When was Justine Pissott drafted?",
+      "answer": "The Indiana Fever selected Justine Pissott 25th overall, in the second round, of the 2026 WNBA Draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643495/justine-pissott/bio",
+        "https://www.reviewjournal.com/sports/aces/aces-tender-offer-sheet-to-fever-rookie-guard-3847603/"
+      ],
+      "queries": [
+        {
+          "q": "justine pissott wnba draft",
+          "vol": 30
+        },
+        {
+          "q": "justine pissott draft",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How did Justine Pissott play in her WNBA debut?",
+      "answer": "In her first WNBA game, on July 11, 2026, against Phoenix, Justine Pissott scored 19 points on 7-of-8 shooting with five 3-pointers, the Associated Press reported.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.nbcsports.com/wnba/news/aces-beat-mercury-106-58-to-match-the-third-biggest-win-in-wnba-history"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Where did Justine Pissott play college basketball?",
+      "answer": "Justine Pissott started at Tennessee and finished at Vanderbilt.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/258062/justine-pissott",
+        "https://www.wnba.com/player/1643495/justine-pissott/bio"
+      ],
+      "queries": [
+        {
+          "q": "justine pissott vanderbilt",
+          "vol": 140
+        },
+        {
+          "q": "justine pissott transfer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Justine Pissott go to high school?",
+      "answer": "Justine Pissott went to Red Bank Catholic in New Jersey.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2026/prospects/258062/justine-pissott"
+      ],
+      "queries": []
+    },
+    {
+      "question": "What position does Justine Pissott play?",
+      "answer": "The WNBA lists Justine Pissott as a guard-forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643495/justine-pissott/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How many years has Justine Pissott been in the WNBA?",
+      "answer": "Justine Pissott has 1 regular season: 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/justine-pissott/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

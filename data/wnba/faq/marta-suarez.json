@@ -1,94 +1,184 @@
 {
   "slug": "marta-suarez",
   "player_name": "Marta Suarez",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "Who is Marta Suarez dating?",
-      "answer": "As of late 2026, Marta Suarez has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What are Marta Suarez's stats?",
+      "answer": "In the 2026 regular season, Marta Suarez averaged 3.5 points, 1.5 rebounds, and 0.4 assists in 19 games for the Phoenix Mercury.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marta_Su%C3%A1rez"
+        "https://fullcourtbuckets.com/wnba/marta-suarez/"
       ],
-      "google_keyword": "marta suarez relationship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marta suarez stats",
+          "vol": 210
+        },
+        {
+          "q": "marta suarez wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How tall is Marta Suarez?",
-      "answer": "Marta Suarez is listed at 6' 3\".",
+      "question": "Where did Marta Suarez play college basketball?",
+      "answer": "Marta Suarez played at Tennessee (2020-23), California (2023-25), and TCU (2025-26). The WNBA says she made the All-Big 12 First Team at TCU in 2026.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marta_Su%C3%A1rez"
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
       ],
-      "google_keyword": "marta suarez height",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Marta Suarez's contract?",
-      "answer": "Contract length and guarantees for Marta Suarez are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "marta suarez contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marta suarez tcu",
+          "vol": 390
+        },
+        {
+          "q": "marta suarez cal",
+          "vol": 20
+        },
+        {
+          "q": "marta suarez transfer",
+          "vol": 30
+        },
+        {
+          "q": "marta suarez tcv",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Marta Suarez play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 77. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marta suarez team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What position does Marta Suarez play?",
-      "answer": "Marta Suarez is listed as a F for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marta suarez position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Marta Suarez injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "marta suarez injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Marta Suarez's parents?",
-      "answer": "Public profiles share limited verified detail about Marta Suarez's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "answer": "Marta Suarez plays forward for the Phoenix Mercury and wears No. 77. The WNBA says she signed a developmental player contract with Phoenix on May 6, 2026.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marta_Su%C3%A1rez"
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
       ],
-      "google_keyword": "marta suarez parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marta suarez wnba",
+          "vol": 210
+        },
+        {
+          "q": "marta suarez team",
+          "vol": 10
+        },
+        {
+          "q": "marta suarez contract",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Marta Suarez?",
-      "answer": "Marta Suárez Rodríguez is a Spanish professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "How tall is Marta Suarez?",
+      "answer": "The WNBA lists Marta Suarez at 6 feet 3 inches.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marta_Su%C3%A1rez"
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
       ],
-      "google_keyword": "marta suarez wikipedia",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "marta suarez height",
+          "vol": 140
+        },
+        {
+          "q": "marta suarez height and weight",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "When was Marta Suarez drafted?",
+      "answer": "Seattle selected Marta Suarez 16th overall in the 2026 WNBA Draft and traded her to Golden State on draft night, the WNBA says.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
+      ],
+      "queries": [
+        {
+          "q": "marta suarez wnba draft",
+          "vol": 140
+        },
+        {
+          "q": "marta suarez draft",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Did Marta Suarez play for the Valkyries?",
+      "answer": "The WNBA says Golden State signed Marta Suarez to a rookie-scale contract on April 17, 2026, and waived her on May 3, 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
+      ],
+      "queries": [
+        {
+          "q": "marta suarez valkyries",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Marta Suarez?",
-      "answer": "Marta Suarez was born May 7, 2002. As of late 2026 that puts her at 24 years old.",
-      "answer_kind": "researched",
+      "answer": "Marta Suarez was born May 7, 2002.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marta_Su%C3%A1rez"
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
       ],
-      "google_keyword": "marta suarez age",
-      "approx_monthly_volume": 110,
-      "birthdate": "2002-05-07"
+      "queries": [
+        {
+          "q": "marta suarez age",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Where is Marta Suarez from?",
+      "answer": "The WNBA says Marta Suarez was born in Oviedo, Spain, and grew up on a farm.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Who are Marta Suarez's parents?",
+      "answer": "The WNBA bio lists her parents as Maximino Suárez Diaz and Marisa Rodríguez Medina, and says she has one brother, Alejandro.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
+      ],
+      "queries": [
+        {
+          "q": "marta suarez parents",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What position does Marta Suarez play?",
+      "answer": "The WNBA lists Marta Suarez as a forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643438/marta-suarez/bio"
+      ],
+      "queries": [
+        {
+          "q": "marta suarez position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Marta Suarez been in the WNBA?",
+      "answer": "Marta Suarez has 1 regular season: 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/marta-suarez/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

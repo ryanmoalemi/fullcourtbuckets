@@ -1,126 +1,198 @@
 {
   "slug": "rori-harmon",
   "player_name": "Rori Harmon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "What are Rori Harmon's stats / points per game?",
-      "answer": "In the 2026 regular season, Rori Harmon averaged 1.1 points, 1.1 rebounds, and 1.4 assists in 7 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What are Rori Harmon's stats?",
+      "answer": "In the 2026 regular season, Rori Harmon averaged 0.8 points, 0.5 rebounds, and 0.9 assists in 15 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rori harmon stats",
-      "approx_monthly_volume": 590
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rori-harmon/"
+      ],
+      "queries": [
+        {
+          "q": "rori harmon stats",
+          "vol": 590
+        },
+        {
+          "q": "rori harmon wnba stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Rori Harmon dating?",
-      "answer": "As of late 2026, Rori Harmon has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "Is Rori Harmon in the WNBA?",
+      "answer": "Yes. Rori Harmon plays guard for the Washington Mystics, wears No. 3, and is listed as a developmental player.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
       ],
-      "google_keyword": "rori harmon girlfriend",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "How much does Rori Harmon make?",
-      "answer": "A precise public salary or net worth figure for Rori Harmon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "rori harmon net worth",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "rori harmon wnba",
+          "vol": 590
+        },
+        {
+          "q": "is rori harmon going to the wnba",
+          "vol": 170
+        },
+        {
+          "q": "rori harmon contract",
+          "vol": 30
+        },
+        {
+          "q": "rori harmon wnba contract",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Rori Harmon?",
-      "answer": "Rori Harmon is listed at 5' 6\".",
+      "answer": "The WNBA lists Rori Harmon at 5 feet 6 inches and 146 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
       ],
-      "google_keyword": "rori harmon height",
-      "approx_monthly_volume": 480
+      "queries": [
+        {
+          "q": "rori harmon height",
+          "vol": 480
+        },
+        {
+          "q": "how tall is rori harmon",
+          "vol": 210
+        },
+        {
+          "q": "rori harmon height and weight",
+          "vol": 10
+        },
+        {
+          "q": "rori harmon weight",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Rori Harmon's contract?",
-      "answer": "Contract length and guarantees for Rori Harmon are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "rori harmon contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Rori Harmon's nationality?",
-      "answer": "Rori Harmon is American.",
+      "question": "When was Rori Harmon drafted?",
+      "answer": "The Washington Mystics selected Rori Harmon 34th overall, in the third round, of the 2026 WNBA Draft.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
       ],
-      "google_keyword": "rori harmon parents nationality",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Rori Harmon injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rori harmon injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who are Rori Harmon's parents?",
-      "answer": "Public profiles share limited verified detail about Rori Harmon's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
-      ],
-      "google_keyword": "rori harmon parents",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How many championships does Rori Harmon have?",
-      "answer": "Public biographical sources cover Rori Harmon's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
-      ],
-      "google_keyword": "is rori harmon entering the draft 2026",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Rori Harmon?",
-      "answer": "Rori Harmon is an American professional basketball player for the Washington Mystics of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
-      ],
-      "google_keyword": "rori harmon wiki",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "rori harmon wnba draft",
+          "vol": 320
+        },
+        {
+          "q": "rori harmon draft",
+          "vol": 170
+        },
+        {
+          "q": "did rori harmon get drafted",
+          "vol": 90
+        },
+        {
+          "q": "will rori harmon get drafted",
+          "vol": 70
+        },
+        {
+          "q": "who drafted rori harmon",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Rori Harmon?",
-      "answer": "Rori Harmon was born January 29, 2003. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Rori Harmon was born January 29, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
       ],
-      "google_keyword": "rori harmon age",
-      "approx_monthly_volume": 140,
-      "birthdate": "2003-01-29"
+      "queries": [
+        {
+          "q": "rori harmon age",
+          "vol": 140
+        },
+        {
+          "q": "how old is rori harmon",
+          "vol": 30
+        },
+        {
+          "q": "rori harmon birthday",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Rori Harmon attend?",
-      "answer": "Rori Harmon played college basketball at the Texas Longhorns.",
+      "question": "Where did Rori Harmon play college basketball?",
+      "answer": "Rori Harmon played five seasons at Texas. The WNBA says she set the program's career records for assists (977) and steals (388) and helped Texas reach the Final Four in 2025 and 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
+      ],
+      "queries": [
+        {
+          "q": "rori harmon texas",
+          "vol": 140
+        },
+        {
+          "q": "rori harmon texas basketball",
+          "vol": 40
+        },
+        {
+          "q": "rori harmon record",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where is Rori Harmon from?",
+      "answer": "Rori Harmon was born in Houston and went to Cypress Creek High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rori_Harmon"
+        "https://www.wnba.com/draft/2026/prospects/257835/rori-harmon"
       ],
-      "google_keyword": "rori harmon texas",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "where is rori harmon from",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What awards did Rori Harmon win in college?",
+      "answer": "The WNBA lists Big 12 Defensive Player of the Year (2023), Big 12 Freshman of the Year (2022), and Nancy Lieberman Award finalist (2025 and 2026).",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
+      ],
+      "queries": [
+        {
+          "q": "rori harmon all-american",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What position does Rori Harmon play?",
+      "answer": "The WNBA lists Rori Harmon as a guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643450/rori-harmon/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How many years has Rori Harmon been in the WNBA?",
+      "answer": "Rori Harmon has 1 regular season: 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rori-harmon/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,96 +1,183 @@
 {
   "slug": "madina-okot",
   "player_name": "Madina Okot",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "What are Madina Okot's stats / points per game?",
-      "answer": "In the 2026 regular season, Madina Okot averaged 5.5 points, 3.4 rebounds, and 0.3 assists in 41 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Madina Okot's stats?",
+      "answer": "In the 2026 regular season, Madina Okot averaged 5.4 points, 3.3 rebounds, and 0.3 assists in 42 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "madina okot stats",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How much does Madina Okot make?",
-      "answer": "A precise public salary or net worth figure for Madina Okot is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/madina-okot/"
       ],
-      "google_keyword": "madina okot net worth",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "madina okot stats",
+          "vol": 480
+        }
+      ]
     },
     {
       "question": "How tall is Madina Okot?",
-      "answer": "Madina Okot is listed at 6' 6\".",
+      "answer": "The WNBA lists Madina Okot at 6 feet 6 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Madina_Okot"
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
       ],
-      "google_keyword": "madina okot height",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What is Madina Okot's contract?",
-      "answer": "Contract length and guarantees for Madina Okot are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "madina okot contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What college did Madina Okot attend?",
-      "answer": "Okot played college basketball at the Mississippi State Bulldogs and the South Carolina Gamecocks.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Madina_Okot"
-      ],
-      "google_keyword": "madina okot south carolina",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Is Madina Okot injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "madina okot injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Madina Okot's parents?",
-      "answer": "Public profiles share limited verified detail about Madina Okot's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Madina_Okot"
-      ],
-      "google_keyword": "madina okot parents",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Madina Okot?",
-      "answer": "Madina Okot Mullah is a Kenyan professional basketball player for the Atlanta Dream of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Madina_Okot"
-      ],
-      "google_keyword": "madina okot wikipedia",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "madina okot height",
+          "vol": 260
+        },
+        {
+          "q": "madina okot height and weight",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Madina Okot?",
-      "answer": "Madina Okot was born August 23, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer": "Madina Okot was born August 23, 2004.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
+      ],
+      "queries": [
+        {
+          "q": "madina okot age",
+          "vol": 170
+        }
+      ]
+    },
+    {
+      "question": "Where is Madina Okot from?",
+      "answer": "The Atlanta Dream's WNBA bio says Madina Okot is from Mumias, Kenya. She played at Kaya Tiwi Secondary School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Madina_Okot"
+        "https://www.wnba.com/player/1643431/madina-okot/bio",
+        "https://www.wnba.com/draft/2026/prospects/257924/madina-okot"
       ],
-      "google_keyword": "madina okot age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2004-08-23"
+      "queries": [
+        {
+          "q": "where is madina okot from",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Madina Okot play college basketball?",
+      "answer": "Madina Okot played the 2024-25 season at Mississippi State, then transferred to South Carolina for 2025-26, where she averaged 12.8 points and an SEC-best 10.6 rebounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
+      ],
+      "queries": [
+        {
+          "q": "madina okot south carolina",
+          "vol": 90
+        },
+        {
+          "q": "where did madina okot transfer from",
+          "vol": 10
+        },
+        {
+          "q": "madina okot transfer",
+          "vol": 10
+        },
+        {
+          "q": "madina okot south carolina transfer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Why couldn't Madina Okot play another college season?",
+      "answer": "On April 8, 2026, the NCAA declined to grant Madina Okot an extra year of eligibility, which meant she had used up her college eligibility and could enter the WNBA Draft, USA Today reported.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.usatoday.com/story/sports/ncaaw/2026/04/08/south-carolina-madina-okot-wnba-draft-ncaa-eligibility-womens-basketball/89518437007/"
+      ],
+      "queries": [
+        {
+          "q": "madina okot years of eligibility",
+          "vol": 390
+        },
+        {
+          "q": "madina okot eligibility",
+          "vol": 320
+        },
+        {
+          "q": "madina okot eligibility appeal",
+          "vol": 320
+        },
+        {
+          "q": "ncaa denies madina okot waiver",
+          "vol": 210
+        },
+        {
+          "q": "ncaa madina okot eligibility appeal",
+          "vol": 140
+        },
+        {
+          "q": "madina okot waiver",
+          "vol": 10
+        },
+        {
+          "q": "madina okot decision",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Madina Okot drafted?",
+      "answer": "The Atlanta Dream selected Madina Okot 13th overall in the 2026 WNBA Draft. The WNBA says she is the first Kenyan woman drafted in the top 15.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
+      ],
+      "queries": [
+        {
+          "q": "madina okot draft",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What team does Madina Okot play for?",
+      "answer": "Madina Okot plays center for the Atlanta Dream and wears No. 11.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
+      ],
+      "queries": [
+        {
+          "q": "atlanta dream madina okot",
+          "vol": 40
+        },
+        {
+          "q": "madina okot wnba",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What position does Madina Okot play?",
+      "answer": "The WNBA lists Madina Okot as a center.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643431/madina-okot/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "How many years has Madina Okot been in the WNBA?",
+      "answer": "Madina Okot has 1 regular season: 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/madina-okot/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
