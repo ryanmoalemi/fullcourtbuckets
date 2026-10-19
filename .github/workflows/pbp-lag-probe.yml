@@ -1,0 +1,33 @@
+name: PBP lag probe (Finals Game 2, test only)
+# Ryan-approved live test, Mon Oct 19 2026 5:00-8:00 PM PT. Read-only: no commits, no deploy, no site changes.
+on:
+  schedule:
+    - cron: '*/5 0-2 20 10 *'   # Oct 20 00:00-02:55 UTC = Oct 19 5:00-7:55 PM PT
+    - cron: '0 3 20 10 *'       # 8:00 PM PT
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pbp-lag-probe
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch game and play-by-play (metrics only)
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python automation/pbp_lag_probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pbp-probe-${{ github.run_id }}
+          path: probe.json
+          retention-days: 14
