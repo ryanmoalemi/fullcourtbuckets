@@ -248,4 +248,10 @@
     <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
     <lastmod>2026-10-18</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/wnba-players-famous-relatives/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

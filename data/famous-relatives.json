@@ -1,0 +1,1360 @@
+{
+ "title": "Famous relatives of WNBA players",
+ "page": "/news/wnba-players-famous-relatives/",
+ "updated": "2026-10-19",
+ "corrections": "hello@fullcourtbuckets.com",
+ "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
+ "entries": [
+  {
+   "rank": 1,
+   "player": "Cameron Brink",
+   "player_slug": "cameron-brink",
+   "relative": "Stephen Curry",
+   "relative_slug": "stephen-curry",
+   "relation": "Godbrother",
+   "relation_type": "godfamily",
+   "sport": "NBA",
+   "known_for": "Four-time NBA champion and two-time NBA MVP with the Golden State Warriors.",
+   "extra": "Not a blood relative. Curry's parents, Dell and Sonya Curry, are Brink's godparents, and Brink's parents are Stephen's godparents. Brink's mother, Michelle Bain-Brink, was Sonya Curry's college roommate at Virginia Tech, and her father, Greg Brink, was Dell Curry's teammate there.",
+   "sources": [
+    {
+     "label": "Stanford Athletics bio: Cameron Brink",
+     "url": "https://gostanford.com/sports/womens-basketball/roster/player/cameron-brink",
+     "kind": "primary"
+    },
+    {
+     "label": "Stanford Athletics feature, March 15, 2022",
+     "url": "https://gostanford.com/news/2022/03/15/the-truth-in-first-impressions",
+     "kind": "primary"
+    },
+    {
+     "label": "NBA.com bio: Stephen Curry",
+     "url": "https://www.nba.com/player/201939/stephen-curry/bio",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/cameron-brink.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cameron_Brink_Sparks_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Cyrus Saatsaz",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Stephen_Curry_Shooting_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 2,
+   "player": "Angel Reese",
+   "player_slug": "angel-reese",
+   "relative": "Julian Reese",
+   "relative_slug": "julian-reese",
+   "relation": "Younger brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "NBA forward. Signed a two-way contract with the New Orleans Pelicans on Sept. 24, 2026, after starting 2026 with the Washington Wizards.",
+   "extra": "Both siblings played at St. Frances Academy in Baltimore and at Maryland.",
+   "sources": [
+    {
+     "label": "University of Maryland bio: Julian Reese",
+     "url": "https://umterps.com/sports/mens-basketball/roster/julian-reese/12689",
+     "kind": "primary"
+    },
+    {
+     "label": "NBA.com player record: Julian Reese",
+     "url": "https://www.nba.com/player/1642882/julian-reese",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/angel-reese.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Cam Andrews",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Julian_Reese_Kevin_Marfo.jpg"
+   }
+  },
+  {
+   "rank": 3,
+   "player": "Gabriela Jaquez",
+   "player_slug": "gabriela-jaquez",
+   "relative": "Jaime Jaquez Jr.",
+   "relative_slug": "jaime-jaquez-jr",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "NBA forward and former UCLA All-American. The Miami Heat traded him to the Milwaukee Bucks on July 6, 2026, in the Giannis Antetokounmpo deal.",
+   "extra": "The Chicago Sky drafted Gabriela fifth overall in 2026.",
+   "sources": [
+    {
+     "label": "UCLA Athletics bio: Gabriela Jaquez",
+     "url": "https://uclabruins.com/sports/softball/roster/player/gabriela-jaquez",
+     "kind": "primary"
+    },
+    {
+     "label": "UCLA Athletics bio: Gabriela Jaquez (basketball)",
+     "url": "https://uclabruins.com/sports/womens-basketball/roster/player/gabriela-jaquez-1",
+     "kind": "primary"
+    },
+    {
+     "label": "Milwaukee Bucks release, July 6, 2026 (reprinted by Urban Milwaukee)",
+     "url": "https://urbanmilwaukee.com/pressrelease/milwaukee-bucks-acquire-tyler-herro-kelel-ware-jaime-jaquez-jr-kasparas-jakucionis-2026-13th-overall-pick-nate-ament-and-future-draft-considerations/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/gabriela-jaquez.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Gabriela_Jaquez_Sky.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Steve Cheng, Bruin Report Online",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jaime_Jaquez_Jr_2021.jpg"
+   }
+  },
+  {
+   "rank": 4,
+   "player": "Kia Nurse",
+   "player_slug": "kia-nurse",
+   "relative": "Donovan McNabb",
+   "relative_slug": "donovan-mcnabb",
+   "relation": "Uncle by marriage",
+   "relation_type": "uncle/aunt",
+   "sport": "NFL",
+   "known_for": "Six-time Pro Bowl quarterback who played 13 NFL seasons.",
+   "extra": "He is married to Kia's aunt, Raquel Nurse, a former Syracuse point guard.",
+   "sources": [
+    {
+     "label": "WNBA.com draft profile: Five things to know about Kia Nurse",
+     "url": "https://www.wnba.com/news/five-things-know-kia-nurse",
+     "kind": "primary"
+    },
+    {
+     "label": "NHL.com feature on the Nurse family",
+     "url": "https://www.nhl.com/news/oilers-defenseman-darnell-nurse-family-support-group-315607050",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kia-nurse.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kia_Nurse_2025_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "JO3 Corwin Colbert, U.S. Navy",
+    "license": "Public domain",
+    "license_url": null,
+    "source_page": "https://commons.wikimedia.org/wiki/File:Donovan_McNabb.jpg"
+   }
+  },
+  {
+   "rank": 5,
+   "player": "Kia Nurse",
+   "player_slug": "kia-nurse",
+   "relative": "Darnell Nurse",
+   "relative_slug": "darnell-nurse",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NHL",
+   "known_for": "NHL defenseman. The San Jose Sharks acquired him from the Edmonton Oilers on July 1, 2026.",
+   "extra": "Their father, Richard Nurse, was a wide receiver for the CFL's Hamilton Tiger-Cats for six seasons.",
+   "sources": [
+    {
+     "label": "WNBA.com draft profile: Five things to know about Kia Nurse",
+     "url": "https://www.wnba.com/news/five-things-know-kia-nurse",
+     "kind": "primary"
+    },
+    {
+     "label": "NHL.com feature on the Nurse family",
+     "url": "https://www.nhl.com/news/oilers-defenseman-darnell-nurse-family-support-group-315607050",
+     "kind": "primary"
+    },
+    {
+     "label": "San Jose Sharks release, July 1, 2026",
+     "url": "https://www.nhl.com/sharks/news/sharks-acquire-defenseman-darnell-nurse-from-the-edmonton-oilers",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kia-nurse.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kia_Nurse_2025_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "All-Pro Reels",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Darnell_Nurse_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 6,
+   "player": "Kia Nurse",
+   "player_slug": "kia-nurse",
+   "relative": "Sarah Nurse",
+   "relative_slug": "sarah-nurse",
+   "relation": "Cousin",
+   "relation_type": "cousin",
+   "sport": "PWHL",
+   "known_for": "Three-time Olympic medalist for Canada who set the single-tournament Olympic points record while winning gold in 2022. Forward for the PWHL's Vancouver Goldeneyes.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "WNBA.com draft profile: Five things to know about Kia Nurse",
+     "url": "https://www.wnba.com/news/five-things-know-kia-nurse",
+     "kind": "primary"
+    },
+    {
+     "label": "Canadian Olympic Committee bio: Sarah Nurse",
+     "url": "https://olympic.ca/team-canada/sarah-nurse/",
+     "kind": "primary"
+    },
+    {
+     "label": "PWHL release: Vancouver signs Sarah Nurse",
+     "url": "https://www.thepwhl.com/en/news/2025/june/05/pwhl-vancouver-signs-sarah-nurse-to-one-year-contract",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kia-nurse.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kia_Nurse_2025_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sarah_Nurse.jpg"
+   }
+  },
+  {
+   "rank": 7,
+   "player": "Imani McGee-Stafford",
+   "player_slug": "imani-mcgee-stafford",
+   "relative": "JaVale McGee",
+   "relative_slug": "javale-mcgee",
+   "relation": "Older half-brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Longtime NBA center, the 18th pick in 2008, and an Olympic gold medalist with Team USA.",
+   "extra": "They have the same mother and different fathers.",
+   "sources": [
+    {
+     "label": "Big 12 Conference feature: Imani McGee-Stafford, Feb. 27, 2013",
+     "url": "https://big12sports.com/news/2013/2/27/206508662.aspx",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com: JaVale McGee through his sister's eyes",
+     "url": "https://www.wnba.com/news/javale-mcgee-through-his-sisters-eyes",
+     "kind": "primary"
+    },
+    {
+     "label": "Team USA profile: JaVale McGee",
+     "url": "https://www.teamusa.com/profiles/javale-mcgee-1201071",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/imani-mcgee-stafford.webp",
+    "author": "Ailura",
+    "license": "CC BY-SA 3.0 at",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:20260904_WBWC_AUSPUR_9069.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Keith Allison from Baltimore, USA",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:J_McGee_-_Wizards_vs_Heat_2009-04-04.jpg"
+   }
+  },
+  {
+   "rank": 8,
+   "player": "Imani McGee-Stafford",
+   "player_slug": "imani-mcgee-stafford",
+   "relative": "Pamela McGee",
+   "relative_slug": "pamela-mcgee",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "WNBA",
+   "known_for": "Two-time NCAA champion at USC, 1984 Olympic gold medalist and the No. 2 pick in the first WNBA draft.",
+   "extra": "Team USA's profile says JaVale was the first son of a WNBA player to be drafted into the NBA.",
+   "sources": [
+    {
+     "label": "Big 12 Conference feature: Imani McGee-Stafford, Feb. 27, 2013",
+     "url": "https://big12sports.com/news/2013/2/27/206508662.aspx",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com: JaVale McGee through his sister's eyes",
+     "url": "https://www.wnba.com/news/javale-mcgee-through-his-sisters-eyes",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/imani-mcgee-stafford.webp",
+    "author": "Ailura",
+    "license": "CC BY-SA 3.0 at",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:20260904_WBWC_AUSPUR_9069.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 9,
+   "player": "Candace Parker",
+   "player_slug": "candace-parker",
+   "relative": "Anthony Parker",
+   "relative_slug": "anthony-parker",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Former NBA guard who played for the Toronto Raptors. Orlando Magic general manager since July 2023.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Tennessee Athletics Q&A with Candace Parker, Sept. 14, 2007",
+     "url": "https://utsports.com/news/2007/9/14/Parker_Proves_Goals_Are_Meant_To_Be_Reached",
+     "kind": "primary"
+    },
+    {
+     "label": "Candace Parker official site: About",
+     "url": "https://candaceparker.com/about/",
+     "kind": "primary"
+    },
+    {
+     "label": "Orlando Magic release, July 5, 2023",
+     "url": "https://www.nba.com/magic/news/orlando-magic-announce-basketball-operations-promotions-anthony-parker-pete-dalessandro-john-hammond-20230705",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/candace-parker.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Candace_Parker_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Keith Allison from Baltimore, USA",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Anthony_Parker_Cavs2.jpg"
+   }
+  },
+  {
+   "rank": 10,
+   "player": "Satou Sabally",
+   "player_slug": "satou-sabally",
+   "relative": "Nyara Sabally",
+   "relative_slug": "nyara-sabally",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "WNBA forward. The Toronto Tempo took her in the 2026 expansion draft.",
+   "extra": "Both played at Oregon and both played for Germany at the 2024 Olympics. They first faced each other in the WNBA on June 11, 2023.",
+   "sources": [
+    {
+     "label": "WNBA.com bio: Nyara Sabally",
+     "url": "https://www.wnba.com/player/1631055/nyara-sabally/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA release: 2026 expansion draft results, April 3, 2026",
+     "url": "https://www.wnba.com/news/wnba-expansion-draft-2026-results",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com game summary: Wings vs. Liberty, June 11, 2023",
+     "url": "https://www.wnba.com/game/dal-vs-nyl-1022300046",
+     "kind": "primary"
+    },
+    {
+     "label": "Oregon Athletics release: Sabally sisters named to Germany's Olympic roster",
+     "url": "https://goducks.com/news/2024/7/15/womens-basketball-sabally-sisters-headed-to-paris-games",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/satou-sabally.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Satou_Sabally_2025.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nyara_Sabally_2024_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 11,
+   "player": "Nneka Ogwumike",
+   "player_slug": "nneka-ogwumike",
+   "relative": "Chiney Ogwumike",
+   "relative_slug": "chiney-ogwumike",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "No. 1 pick in the 2014 WNBA draft, two-time All-Star and a full-time ESPN analyst since 2018.",
+   "extra": "Nneka went first in 2012 and Chiney went first in 2014. Stanford noted they were the second set of siblings taken first overall in a major American sports draft, after Peyton and Eli Manning.",
+   "sources": [
+    {
+     "label": "Stanford Athletics bio: Nneka Ogwumike",
+     "url": "https://gostanford.com/news/2013/04/17/player-bio-nneka-ogwumike",
+     "kind": "primary"
+    },
+    {
+     "label": "Stanford Athletics release, May 19, 2014",
+     "url": "https://gostanford.com/news/2014/05/19/ogwumike-honored-by-saa",
+     "kind": "primary"
+    },
+    {
+     "label": "ESPN Press Room bio: Chiney Ogwumike",
+     "url": "https://espnpressroom.com/bio/chiney-ogwumike/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/nneka-ogwumike.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Nneka_Ogwumike_2024_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chiney_Ogwumike.jpg"
+   }
+  },
+  {
+   "rank": 12,
+   "player": "Flau'jae Johnson",
+   "player_slug": "flaujae-johnson",
+   "relative": "Camoflauge (Jason Johnson)",
+   "relative_slug": "camoflauge",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Music",
+   "known_for": "Savannah, Georgia rapper who was shot and killed in May 2003, about six months before she was born.",
+   "extra": "She told MTV he named her Flau'jae because he wanted her name to rhyme, per Olympics.com.",
+   "sources": [
+    {
+     "label": "Olympics.com feature: Meet Flau'jae Johnson",
+     "url": "https://www.olympics.com/en/news/meet-flau-jae-johnson-multi-talented-college-basketball-star-rap-artist",
+     "kind": "primary"
+    },
+    {
+     "label": "Savannah Morning News report, March 24, 2023",
+     "url": "https://eu.savannahnow.com/story/sports/college/basketball/2023/03/24/flau-jae-johnson-scores-puma-athletic-endorsements-roc-nation-recording-deal/70041998007/",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/flaujae-johnson.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Flaujae_Johnson_Storm_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 13,
+   "player": "Diamond DeShields",
+   "player_slug": "diamond-deshields",
+   "relative": "Delino DeShields",
+   "relative_slug": "delino-deshields",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "MLB",
+   "known_for": "Played 13 Major League Baseball seasons for Montreal, the Dodgers, St. Louis, Baltimore and the Cubs.",
+   "extra": "Her mother, Tisha, was an All-America heptathlete at Tennessee in 1991.",
+   "sources": [
+    {
+     "label": "Tennessee Athletics bio: Diamond DeShields",
+     "url": "https://utsports.com/sports/womens-basketball/roster/diamond-deshields/6377",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/diamond-deshields.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Diamond_DeShields.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Joel Dinda",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Delino_DeShields_managing_Dayton_2011-04-15.jpg"
+   }
+  },
+  {
+   "rank": 14,
+   "player": "Diamond DeShields",
+   "player_slug": "diamond-deshields",
+   "relative": "Delino DeShields Jr.",
+   "relative_slug": "delino-deshields-jr",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "MLB",
+   "known_for": "Drafted eighth overall by the Houston Astros and went on to play in the majors.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Tennessee Athletics bio: Diamond DeShields",
+     "url": "https://utsports.com/sports/womens-basketball/roster/diamond-deshields/6377",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/diamond-deshields.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Diamond_DeShields.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Erik Drost on Flickr",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Delino_DeShields_(49488566433).jpg"
+   }
+  },
+  {
+   "rank": 15,
+   "player": "Lexie Brown",
+   "player_slug": "lexie-brown",
+   "relative": "Dee Brown",
+   "relative_slug": "dee-brown",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Won the 1991 NBA Slam Dunk Contest. Played for the Celtics (1990-98), Raptors (1998-2000) and Magic (2000-02).",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Duke Athletics bio: Lexie Brown",
+     "url": "https://goduke.com/sports/womens-basketball/roster/lexie-brown/2587",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/lexie-brown.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lexi_Brown_2_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Keith Allison",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Dee_Brown.jpg"
+   }
+  },
+  {
+   "rank": 16,
+   "player": "Kalani Brown",
+   "player_slug": "kalani-brown",
+   "relative": "P.J. Brown",
+   "relative_slug": "pj-brown",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Played 15 NBA seasons and won the 2008 NBA title with the Boston Celtics in his final season.",
+   "extra": "Her mother, Dee, and her father both played at Louisiana Tech.",
+   "sources": [
+    {
+     "label": "Baylor Athletics bio: Kalani Brown",
+     "url": "https://baylorbears.com/sports/womens-basketball/roster/kalani-brown/5765",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kalani-brown.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kalani_Brown_2025_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "The original uploader was Parkerjh at English Wikipedia.",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_page": "https://commons.wikimedia.org/wiki/File:PJ_Brown_03_24_2008.jpg"
+   }
+  },
+  {
+   "rank": 17,
+   "player": "Tamika Catchings",
+   "player_slug": "tamika-catchings",
+   "relative": "Harvey Catchings",
+   "relative_slug": "harvey-catchings",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Played 11 seasons in the NBA, then played professionally overseas.",
+   "extra": "Tamika spent parts of her childhood in Italy during his career there.",
+   "sources": [
+    {
+     "label": "WNBA.com feature: Tamika Catchings' legacy",
+     "url": "https://www.wnba.com/news/tamika-catchings-legacy-feature-michelle-smith",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/tamika-catchings.webp",
+    "author": "SusanLesch",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Catchings_20@20.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 18,
+   "player": "Iliana Rupert",
+   "player_slug": "iliana-rupert",
+   "relative": "Rayan Rupert",
+   "relative_slug": "rayan-rupert",
+   "relation": "Younger brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "NBA guard. Signed a two-way contract with the Philadelphia 76ers on July 8, 2026.",
+   "extra": "Their father, Thierry Rupert, played power forward for the French national team.",
+   "sources": [
+    {
+     "label": "WNBA.com bio: Iliana Rupert",
+     "url": "https://www.wnba.com/player/1630387/iliana-rupert/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "Philadelphia 76ers release, July 8, 2026",
+     "url": "https://www.nba.com/sixers/news/philadelphia-76erssign-rayan-rupert-to-two-way-contract",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/iliana-rupert.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Iliana_Rupert_12_Fenerbah%C3%A7e_WB_EuroLeague_Women_20251104_(3).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "FIRST TEAM",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:RAYAN_RUPERT_NOUS_PARLE_DE_SA_BELLE_INT%C3%89GRATION_AVEC_LES_GRIZZLIES_!.webm"
+   }
+  },
+  {
+   "rank": 19,
+   "player": "Janelle Salaün",
+   "player_slug": "janelle-salaun",
+   "relative": "Tidjane Salaün",
+   "relative_slug": "tidjane-salaun",
+   "relation": "Brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Sixth pick in the 2024 NBA draft by the Charlotte Hornets.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "WNBA.com bio: Janelle Salaün",
+     "url": "https://www.wnba.com/player/1642767/janelle-salaun/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "Charlotte Hornets release: 2024 NBA draft",
+     "url": "https://www.nba.com/hornets/news/charlotte-hornets-select-tidjane-salaun-sixth-overall-in-2024-nba-draft",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/janelle-salaun.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:260604_Lynx_Valkries_JohnMc196_(55314206532)_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 20,
+   "player": "Arike Ogunbowale",
+   "player_slug": "arike-ogunbowale",
+   "relative": "Dare Ogunbowale",
+   "relative_slug": "dare-ogunbowale",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NFL",
+   "known_for": "NFL running back from Wisconsin. The Houston Texans signed him off the Las Vegas Raiders practice squad on Sept. 29, 2026.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Tampa Bay Buccaneers feature, April 7, 2019",
+     "url": "https://www.buccaneers.com/news/sports-a-family-affair-for-dare-arike-ogunbowale",
+     "kind": "primary"
+    },
+    {
+     "label": "Houston Texans transactions, Sept. 29, 2026",
+     "url": "https://www.houstontexans.com/news/houston-texans-transactions-9-29-2026",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/arike-ogunbowale.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Arike_Ogunbowale_01_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "E's Adventures in Life from USA! Where else could you live that would be this good!",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:20170102_Cotton_Bowl_UW_vs_W_Mich_(158)_(35673803601).jpg"
+   }
+  },
+  {
+   "rank": 21,
+   "player": "Angel Reese",
+   "player_slug": "angel-reese",
+   "relative": "Jordan Hawkins",
+   "relative_slug": "jordan-hawkins",
+   "relation": "Cousin",
+   "relation_type": "cousin",
+   "sport": "NBA",
+   "known_for": "Won the 2023 NCAA title at UConn, the same year Reese was Most Outstanding Player of the women's Final Four with LSU. Signed a two-way deal with the Chicago Bulls on Oct. 6, 2026.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "UConn Athletics release: national championship, April 3, 2023",
+     "url": "https://uconnhuskies.com/news/2023/4/3/mens-basketball-uconn-wins-march-madness-with-76-59-smothering-of-sdsu",
+     "kind": "primary"
+    },
+    {
+     "label": "Chicago Bulls release, Oct. 6, 2026",
+     "url": "https://www.nba.com/news/chicago-bulls-sign-jordan-hawkins-to-two-way-contract",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/angel-reese.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "All-Pro Reels",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jordan_Hawkins.jpg"
+   }
+  },
+  {
+   "rank": 22,
+   "player": "Kaela Davis",
+   "player_slug": "kaela-davis",
+   "relative": "Antonio Davis",
+   "relative_slug": "antonio-davis",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Spent 13 seasons in the NBA with the Pacers, Raptors, Bulls and Knicks.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "South Carolina Athletics bio: Kaela Davis",
+     "url": "https://gamecocksonline.com/sports/wbball/roster/player/kaela-davis/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kaela-davis.webp",
+    "author": "SusanLesch",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Davis2-20180523.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 23,
+   "player": "Courtney Paris",
+   "player_slug": "courtney-paris",
+   "relative": "Bubba Paris",
+   "relative_slug": "bubba-paris",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NFL",
+   "known_for": "Offensive tackle on the San Francisco 49ers teams that won Super Bowls XIX, XXIII and XXIV.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "WNBA.com bio: Courtney Paris",
+     "url": "https://www.wnba.com/player/201907/courtney-paris/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "Michigan Athletics: Wolverines in the Super Bowl",
+     "url": "https://mgoblue.com/sports/2017/6/16/former_wolverines_super_bowl_participants",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/courtney-paris.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Courtney_Paris_guards_Shao_Ting,_shooting_the_ball_(47965444431).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Paul Hermans",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:San_Francisco_Bubba_Paris_13-10-2012_13-57-42_(cropped).JPG"
+   }
+  },
+  {
+   "rank": 24,
+   "player": "Courtney Paris",
+   "player_slug": "courtney-paris",
+   "relative": "Ashley Paris",
+   "relative_slug": "ashley-paris",
+   "relation": "Twin sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "Played alongside Courtney at Oklahoma. The Los Angeles Sparks drafted her in 2009, then waived her in June 2009 before the season.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "WNBA.com bio: Courtney Paris",
+     "url": "https://www.wnba.com/player/201907/courtney-paris/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com 2009 transactions (archived)",
+     "url": "https://web.archive.org/web/20090627012619/www.wnba.com/transactions/WNBA_2009.html",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/courtney-paris.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Courtney_Paris_guards_Shao_Ting,_shooting_the_ball_(47965444431).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Sergeev Pavel",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ashley_Paris_55.jpg"
+   }
+  },
+  {
+   "rank": 25,
+   "player": "Veronica Burton",
+   "player_slug": "veronica-burton",
+   "relative": "Ron Burton",
+   "relative_slug": "ron-burton",
+   "relation": "Grandfather",
+   "relation_type": "grandparent",
+   "sport": "NFL",
+   "known_for": "The Boston Patriots' first-ever AFL draft choice (1960) and a College Football Hall of Famer from Northwestern.",
+   "extra": "Her parents, Steve and Ginni, were both Northwestern student-athletes. She is the eighth member of her family to attend the school.",
+   "sources": [
+    {
+     "label": "Northwestern Athletics feature, April 1, 2019",
+     "url": "https://nusports.com/news/2019/04/01/first-year-veronica-burton-forges-her-own-path-as-wildcat",
+     "kind": "primary"
+    },
+    {
+     "label": "National Football Foundation: Ron Burton, College Football Hall of Fame",
+     "url": "https://footballfoundation.org/honors/nff-college-football-hall-of-fame/ron-burton/1756",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/veronica-burton.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Veronica_Burton_Valkyries.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 26,
+   "player": "Te-Hina Paopao",
+   "player_slug": "te-hina-paopao",
+   "relative": "Joe Salave'a",
+   "relative_slug": "joe-salavea",
+   "relation": "Uncle",
+   "relation_type": "uncle/aunt",
+   "sport": "NFL",
+   "known_for": "Nine-year NFL veteran at defensive tackle. Arizona named him associate head coach in January 2025.",
+   "extra": "He was on Oregon's football staff when she signed with the Ducks, per the Daily Emerald.",
+   "sources": [
+    {
+     "label": "Daily Emerald (University of Oregon student paper) report",
+     "url": "https://dailyemerald.com/79514/sports/te-hina-paopao-was-destined-for-success-since-age-10/",
+     "kind": "report"
+    },
+    {
+     "label": "Arizona Athletics release, Jan. 9, 2025",
+     "url": "https://arizonawildcats.com/news/2025/1/9/football-current-assistant-gonzales-promoted-to-defensive-coordinator-and-former-wildcat-standout-salave-a-named-associate-head-coach",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/te-hina-paopao.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Te-Hina_Paopao_Dream_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 27,
+   "player": "Te-Hina Paopao",
+   "player_slug": "te-hina-paopao",
+   "relative": "Megan Faraimo",
+   "relative_slug": "megan-faraimo",
+   "relation": "Cousin",
+   "relation_type": "cousin",
+   "sport": "Softball",
+   "known_for": "Pitcher taken third overall by the Utah Talons in the AUSL's inaugural 2025 draft. Won the league's first title with Utah in July 2025.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Sporting News report",
+     "url": "https://www.sportingnews.com/us/womens-college-basketball/south-carolina/news/te-hina-paopao-pronunciation-guide-south-carolina-name-family/812660f80c9bf8b08bf390ea",
+     "kind": "report"
+    },
+    {
+     "label": "AUSL inaugural draft results",
+     "url": "https://theausl.com/news/ausl-inaugural-draft-tracker-by-round/",
+     "kind": "primary"
+    },
+    {
+     "label": "UCLA Athletics release, July 28, 2025",
+     "url": "https://uclabruins.com/news/2025/07/28/four-bruins-help-talons-win-first-ausl-championship",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/te-hina-paopao.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Te-Hina_Paopao_Dream_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Scinsvche",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Megan_Faraimo_4_(Red_Terriers).jpg"
+   }
+  },
+  {
+   "rank": 28,
+   "player": "Naz Hillmon",
+   "player_slug": "naz-hillmon",
+   "relative": "Jawad Williams",
+   "relative_slug": "jawad-williams",
+   "relation": "Uncle",
+   "relation_type": "uncle/aunt",
+   "sport": "NBA",
+   "known_for": "Started on North Carolina's 2005 national championship team and had a brief NBA career. Joined the Cleveland Cavaliers' coaching staff in June 2025.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Michigan Athletics feature, March 9, 2020",
+     "url": "https://mgoblue.com/news/2020/3/9/womens-basketball-naz-hillmon-third-generation-hoops-star-rebounds-her-way-to-success",
+     "kind": "primary"
+    },
+    {
+     "label": "Cleveland 19 News report, June 18, 2025",
+     "url": "https://www.cleveland19.com/2025/06/18/cavs-hire-cleveland-native-jawad-williams/",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/naz-hillmon.webp",
+    "author": "Michael Cohn Photo",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Naz_Hillmon_Atlanta_Dream_2025.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Dan Fornal",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jawad_Williams_shooting_over_Mike_Bibby_cropped.jpg"
+   }
+  },
+  {
+   "rank": 29,
+   "player": "Naz Hillmon",
+   "player_slug": "naz-hillmon",
+   "relative": "NaSheema Anderson",
+   "relative_slug": "nasheema-anderson",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "ABL",
+   "known_for": "Played at Vanderbilt and professionally for the Nashville Noise of the ABL.",
+   "extra": "Naz, her mother, her uncle and her aunts have won eight Ohio state basketball titles between them, per Michigan Athletics.",
+   "sources": [
+    {
+     "label": "Michigan Athletics feature, March 9, 2020",
+     "url": "https://mgoblue.com/news/2020/3/9/womens-basketball-naz-hillmon-third-generation-hoops-star-rebounds-her-way-to-success",
+     "kind": "primary"
+    },
+    {
+     "label": "Nashville Metro Council resolution R98-1304 honoring the Nashville Noise",
+     "url": "https://legisarchive.nashville.gov/mc/resolutions/term_1995_1999/r98_1304.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/naz-hillmon.webp",
+    "author": "Michael Cohn Photo",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Naz_Hillmon_Atlanta_Dream_2025.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 30,
+   "player": "Kaila Charles",
+   "player_slug": "kaila-charles",
+   "relative": "Ruperta Charles",
+   "relative_slug": "ruperta-charles",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "Track and field",
+   "known_for": "Ran track at Howard (1980-84), competed at the 1984 Olympic Games and was inducted into Howard's Hall of Fame in 2014.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "University of Maryland bio: Kaila Charles",
+     "url": "https://umterps.com/sports/womens-basketball/roster/kaila-charles/8139",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/kaila-charles.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kaila_Charles_2025_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 31,
+   "player": "Kaila Charles",
+   "player_slug": "kaila-charles",
+   "relative": "Afia Charles",
+   "relative_slug": "afia-charles",
+   "relation": "Older sister",
+   "relation_type": "sibling",
+   "sport": "Track and field",
+   "known_for": "Ran track at UCF and competed for Antigua and Barbuda at the 2012 London Olympics.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "University of Maryland bio: Kaila Charles",
+     "url": "https://umterps.com/sports/womens-basketball/roster/kaila-charles/8139",
+     "kind": "primary"
+    },
+    {
+     "label": "Olympics.com athlete record: Afia Charles",
+     "url": "https://www.olympics.com/en/athletes/afia-charles",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/kaila-charles.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kaila_Charles_2025_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 32,
+   "player": "Katie Lou Samuelson",
+   "player_slug": "katie-lou-samuelson",
+   "relative": "Karlie Samuelson",
+   "relative_slug": "karlie-samuelson",
+   "relation": "Older sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "WNBA guard who played at Stanford.",
+   "extra": "A third sister, Bonnie, also played at Stanford.",
+   "sources": [
+    {
+     "label": "UConn Athletics bio: Katie Lou Samuelson",
+     "url": "https://uconnhuskies.com/sports/womens-basketball/roster/samuelson-katie-lou/9339",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/katie-lou-samuelson.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Katie_Lou_Samuelson_(47937094962).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Karlie_Samuelson_2024_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 33,
+   "player": "DeWanna Bonner",
+   "player_slug": "dewanna-bonner",
+   "relative": "Erica McCall",
+   "relative_slug": "erica-mccall",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "Former WNBA forward from Stanford, drafted 17th overall by the Indiana Fever in 2017.",
+   "extra": "Their father, Greg McCall, was Cal State Bakersfield's head women's basketball coach, per Erica's WNBA bio.",
+   "sources": [
+    {
+     "label": "WNBA.com bio: Erica McCall",
+     "url": "https://www.wnba.com/player/1628286/erica-mccall/bio",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/dewanna-bonner.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:DeWanna_Bonner_2024.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 34,
+   "player": "Brionna Jones",
+   "player_slug": "brionna-jones",
+   "relative": "Stephanie Jones",
+   "relative_slug": "stephanie-jones",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "Former WNBA forward who played at Maryland. She was on the Atlanta Dream's 2026 training camp roster, Brionna's team.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "University of Maryland bio: Stephanie Jones",
+     "url": "https://umterps.com/sports/womens-basketball/roster/stephanie-jones/8140",
+     "kind": "primary"
+    },
+    {
+     "label": "Atlanta Dream release: 2026 training camp roster",
+     "url": "https://dream.wnba.com/news/atlanta-dream-announce-2026-training-camp-roster",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "yahoo",
+   "photo_player": {
+    "file": "/images/relatives/brionna-jones.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Brionna_Jones_2024a_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 35,
+   "player": "Lauren Jackson",
+   "player_slug": "lauren-jackson",
+   "relative": "Gary Jackson and Maree Bennie",
+   "relative_slug": "gary-jackson",
+   "relation": "Parents",
+   "relation_type": "parent",
+   "sport": "Basketball",
+   "known_for": "Both played for Australia. Gary played for the Boomers in 1975, and Maree played for the Opals from 1974 to 1982.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Sport Australia Hall of Fame: Lauren Jackson",
+     "url": "https://sahof.org.au/hall-of-fame-member/lauren-jackson/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/lauren-jackson.webp",
+    "author": "Bidgee",
+    "license": "CC BY-SA 3.0 au",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/au/deed.en",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Lauren_Jackson_at_day_two_of_the_Opals_camp.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 36,
+   "player": "Kristi Toliver",
+   "player_slug": "kristi-toliver",
+   "relative": "George Toliver",
+   "relative_slug": "george-toliver",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA (referee)",
+   "known_for": "NBA referee.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "University of Maryland bio: Kristi Toliver",
+     "url": "https://umterps.com/sports/womens-basketball/roster/kristi-toliver/4567",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-19",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kristi-toliver.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kristi_Toliver_(48372362562).jpg"
+   },
+   "photo_relative": null
+  }
+ ]
+}
