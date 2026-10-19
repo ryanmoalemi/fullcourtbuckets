@@ -140,11 +140,11 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIn('>Playoff series<', html_text)
         self.assertIn('Aces lead Fever 2-1', html_text)
         self.assertIn('Next: Fri, Oct 2, 7:00 p.m. PT', html_text)
-        self.assertIn('href="https://www.espn.com/wnba/game/_/gameId/401918099" target="_blank" rel="noopener"', html_text)
+        self.assertNotIn('espn.com', html_text)  # score/next links stay on FCB (Oct 19, 2026)
         self.assertIn('>Latest scores<', html_text)
         self.assertIn('href="/news/fever-aces-game-3-recap/">Aces 94, Fever 83</a>', html_text)
         self.assertNotIn('href="/news/fever-aces-game-3-recap/" target="_blank"', html_text)
-        self.assertIn('href="https://www.espn.com/wnba/game/_/gameId/401918016" target="_blank" rel="noopener"', html_text)
+        self.assertIn('<li>Valkyries 104, Wings 80<p', html_text)  # no FCB page: unlinked
         self.assertNotIn('>TBD<', html_text)
         self.assertNotIn('Final standings', html_text)
         self.assertNotIn('\u2014', html_text)

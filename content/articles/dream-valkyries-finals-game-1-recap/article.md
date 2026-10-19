@@ -15,6 +15,7 @@ photo_credit: "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc300_(55486705669)_(cropped).jpg"
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 ticker: "Valkyries 68, Dream 64. Golden State leads the Finals 1-0."
+game_id: "401918305"
 ---
 
 The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) beat the [Atlanta Dream](/wnba/teams/atlanta-dream/) 68-64 in Game 1 of the WNBA Finals on Saturday at Chase Center, and they did it by holding Atlanta scoreless for the final 3:12. [Gabby Williams](/wnba/gabby-williams/) scored 8 of Golden State's last 9 points, including the free throws at 1:18 that gave the Valkyries their first lead since the third quarter.

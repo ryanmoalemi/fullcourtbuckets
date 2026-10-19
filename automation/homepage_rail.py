@@ -202,7 +202,7 @@ def _recaps(articles: list) -> dict:
     for article in articles or []:
         if not isinstance(article, dict):
             continue
-        game_id = str(article.get('espnGameId') or '').strip()
+        game_id = str(article.get('gameId') or article.get('espnGameId') or '').strip()
         slug = str(article.get('slug') or '').strip()
         if not game_id or not slug:
             continue
@@ -216,7 +216,23 @@ def _recaps(articles: list) -> dict:
     return {game_id: href for game_id, (_date, href) in best.items()}
 
 
-def playoff_series(events: list) -> list:
+def _game_pages() -> dict:
+    """ESPN game id -> our own play-by-play/game page (data/fcb-game-pages.json)."""
+    path = Path(__file__).resolve().parents[1] / 'data' / 'fcb-game-pages.json'
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return {}
+    return {str(k): str(v) for k, v in data.items() if str(v).startswith('/')}
+
+
+def fcb_game_url(game_id: str, recaps: dict) -> str:
+    """FCB recap first, then our game page, else ''. Never an outside site."""
+    game_id = str(game_id or '')
+    return recaps.get(game_id) or _game_pages().get(game_id, '')
+
+
+def playoff_series(events: list, articles: list | None = None) -> list:
     """Incomplete series first, then completed series, newest last game first."""
     groups: dict[tuple, list] = {}
     for event in events:
@@ -237,7 +253,7 @@ def playoff_series(events: list) -> list:
             'status': _status_line(status_teams, latest['wins'], completed),
             'completed': completed,
             'next_label': _next_label(nxt) if nxt else '',
-            'next_url': espn_game_url(nxt['id']) if nxt and nxt['id'] else '',
+            'next_url': fcb_game_url(nxt['id'], _recaps(articles or [])) if nxt and nxt['id'] else '',
             'next_when': nxt['when'] if nxt else None,
             'last_when': latest['when'],
         })
@@ -261,8 +277,7 @@ def latest_finals(events: list, articles: list, limit: int = LATEST_LIMIT) -> li
         rows.append({
             'line': _score_line(event),
             'when_label': _date_label(event),
-            'recap': recaps.get(event['id'], ''),
-            'espn': espn_game_url(event['id']) if event['id'] else '',
+            'recap': fcb_game_url(event['id'], recaps),
         })
     return rows
 
@@ -305,9 +320,11 @@ def render_series(rows: list) -> str:
         nxt = ''
         if row['next_label'] and row['next_url']:
             nxt = (
-                f'<a class="rail-next" href="{esc(row["next_url"])}" target="_blank" rel="noopener">'
+                f'<a class="rail-next" href="{esc(row["next_url"])}">'
                 f'{esc(row["next_label"])}</a>'
             )
+        elif row['next_label']:  # no FCB page for the game yet: show it, link nothing
+            nxt = f'<span class="rail-next">{esc(row["next_label"])}</span>'
         items.append(f'<li><p class="rail-status">{esc(row["status"])}</p>{nxt}</li>')
     return (
         '<section class="rail-box" id="playoff-series"><h2>Playoff series</h2>'
@@ -322,8 +339,6 @@ def render_scores(rows: list) -> str:
     for row in rows:
         if row['recap']:
             link = f'<a href="{esc(row["recap"])}">{esc(row["line"])}</a>'
-        elif row['espn']:
-            link = f'<a href="{esc(row["espn"])}" target="_blank" rel="noopener">{esc(row["line"])}</a>'
         else:
             link = esc(row['line'])
         meta = f'<p class="rail-meta">{esc(row["when_label"])}</p>' if row['when_label'] else ''
@@ -340,7 +355,7 @@ def render_rail(events: list, articles: list, standings: dict | None, now: dt.da
     if not games_active(events, moment):
         inner = render_standings(standings)
     else:
-        inner = render_series(playoff_series(events)) + render_scores(latest_finals(events, articles))
+        inner = render_series(playoff_series(events, articles)) + render_scores(latest_finals(events, articles))
         if not inner.strip():
             inner = render_standings(standings)
     html_text = f'<aside class="rail" id="home-rail">{inner}</aside>'
