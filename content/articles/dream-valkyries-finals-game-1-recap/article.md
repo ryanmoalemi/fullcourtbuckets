@@ -29,7 +29,7 @@ Williams answered right away. She had already scored on a running layup at 3:22,
 
 Atlanta still had chances. Howard missed a 25-foot three at 1:09. Reese then stole the ball from Williams with 46.1 seconds left, but [Naz Hillmon](/wnba/naz-hillmon/) missed a 26-foot three at 25.9. [Kiah Stokes](/wnba/kiah-stokes/) rebounded, got fouled and made 1 of 2 at 23.8 for a 66-64 lead.
 
-Gray missed a 25-footer at 7.9 that would have won it. Howard fouled on purpose at 4.1, Williams made both, and Gray's step-back three at 2.1 missed. Atlanta missed all five shots it took in the last 81 seconds.
+Gray missed a 25-footer at 7.9 that would have won it. Howard fouled on purpose at 4.1, Williams made both, and Gray's step-back three at 2.1 missed. Atlanta missed all seven of its field-goal attempts after the 3:12 mark.
 
 ## How it got there
 
