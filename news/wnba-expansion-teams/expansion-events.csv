@@ -1,0 +1,24 @@
+season_effective,franchise_or_team,event_type,announced_date,team_count_change,teams_that_season,status,source_id
+1997,"Charlotte, Cleveland, Houston, Los Angeles, New York, Phoenix, Sacramento and Utah",Original entry (8 teams),1996-10-30,8,8,completed,S-TIMELINE
+1998,Detroit Shock; Washington Mystics,New expansion entry,1997-10-01,2,10,completed,S-TIMELINE
+1999,Orlando Miracle; Minnesota Lynx,New expansion entry,1998-04-22,2,12,completed,S-TIMELINE
+2000,Indiana Fever; Miami Sol; Portland Fire (2000-02); Seattle Storm,New expansion entry,1999-06-07,4,16,completed,S-TIMELINE
+2003,Miami Sol,"Cessation (Miami Heat declined ownership; players dispersed April 24, 2003)",2002-11-27,-1,14,completed,S-TIMELINE
+2003,Portland Fire (2000-02),"Cessation (Trail Blazers declined ownership; players dispersed April 24, 2003)",2002-12-30,-1,14,completed,S-TIMELINE
+2003,Orlando Miracle to Connecticut Sun,Relocation and rebrand,2002-10-21,0,14,completed,S-TIMELINE
+2003,Utah Starzz to San Antonio,Relocation,2002-12-05,0,14,completed,S-TIMELINE
+2004,Cleveland Rockers,"Cessation (players dispersed Jan. 6, 2004)",,-1,13,completed,S-TIMELINE
+2006,Chicago Sky,New expansion entry,2005-02-08,1,14,completed,S-TIMELINE
+2007,Charlotte Sting,Cessation (Bobcats ended operation),2006-12-13,-1,13,completed,S-TIMELINE
+2008,Atlanta Dream,New expansion entry,2007-10-17,1,14,completed,S-TIMELINE
+2009,Houston Comets,Cessation (operations suspended),2008-12-02,-1,13,completed,S-TIMELINE
+2010,Sacramento Monarchs,Cessation (Maloof family ended operation),2009-11-20,-1,12,completed,S-TIMELINE
+2010,Detroit Shock to Tulsa,Relocation,2009-10-20,0,12,completed,S-TIMELINE
+2016,Tulsa Shock to Dallas-Fort Worth,Relocation,2015-07-23,0,12,completed,S-DFW
+2018,San Antonio franchise to Las Vegas (Aces),Relocation,,0,12,completed,S-ACES
+2025,Golden State Valkyries,New expansion entry (13th franchise),,1,13,completed,S-GSV-RULES
+2026,Toronto Tempo,New expansion entry (14th franchise),2024-05-23,1,15,completed,S-TOR
+2026,Portland Fire (2026-),New expansion entry (15th franchise),2024-09-18,1,15,completed,S-POR
+2028,Cleveland Sirens,"Approved expansion entry; announced June 30, 2025, approved April 9, 2026, named Aug. 4, 2026",2025-06-30,1,16,planned,S-SIRENS
+2029,Detroit (name not announced),"Approved expansion entry; announced June 30, 2025, approved April 9, 2026",2025-06-30,1,17,planned,S-APPROVE
+2030,Philadelphia (name not announced),"Approved expansion entry; announced June 30, 2025, approved April 9, 2026",2025-06-30,1,18,planned,S-APPROVE
