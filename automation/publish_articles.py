@@ -243,6 +243,8 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
     })
     if str(meta.get('game_id') or '').strip():  # links score rows to this recap; no ESPN box-score line
         article['gameId'] = str(meta['game_id']).strip()
+    if str(meta.get('preview_game_id') or '').strip():  # rail 'Next' links this preview before tip
+        article['previewGameId'] = str(meta['preview_game_id']).strip()
     return article
 
 

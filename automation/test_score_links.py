@@ -28,7 +28,9 @@ class ScoreLinkTests(unittest.TestCase):
     def test_resolver_order(self):
         recaps = {'1': '/news/recap/'}
         self.assertEqual(homepage_rail.fcb_game_url('1', recaps), '/news/recap/')
-        self.assertEqual(homepage_rail.fcb_game_url('401918306', {}), '/wnba/finals/2026/game-2/play-by-play/')
+        self.assertEqual(homepage_rail.fcb_game_url('401918305', {}), '/wnba/finals/2026/game-1/play-by-play/')
+        arts = [{'slug': 'g2-preview', 'previewGameId': '77', 'date': '2026-10-19'}]
+        self.assertEqual(homepage_rail.fcb_upcoming_url('77', arts), '/news/g2-preview/')
         self.assertEqual(homepage_rail.fcb_game_url('999', {}), '')
 
     def test_unlinked_when_no_fcb_page(self):

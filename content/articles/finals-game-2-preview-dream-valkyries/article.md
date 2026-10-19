@@ -17,6 +17,7 @@ photo_credit_url: "https://commons.wikimedia.org/wiki/File:260527_Lynx_Dream_Joh
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 top_link_text: "Follow the play-by-play: Dream vs. Valkyries, Game 2"
 top_link_url: "/wnba/finals/2026/game-2/play-by-play/"
+preview_game_id: "401918306"
 ticker: "Finals Game 2: Dream at Valkyries, Monday 5 p.m. PT. Golden State leads 1-0."
 ---
 

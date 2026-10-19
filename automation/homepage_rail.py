@@ -232,6 +232,26 @@ def fcb_game_url(game_id: str, recaps: dict) -> str:
     return recaps.get(game_id) or _game_pages().get(game_id, '')
 
 
+def _previews(articles: list) -> dict:
+    """game id -> newest FCB preview article (articles.json previewGameId)."""
+    best = {}
+    for article in articles or []:
+        if not isinstance(article, dict):
+            continue
+        gid, slug = str(article.get('previewGameId') or '').strip(), str(article.get('slug') or '').strip()
+        if gid and slug:
+            date = str(article.get('date') or '')
+            if gid not in best or date > best[gid][0]:
+                best[gid] = (date, f'/news/{slug}/')
+    return {k: v for k, (_d, v) in best.items()}
+
+
+def fcb_upcoming_url(game_id: str, articles: list) -> str:
+    """Upcoming/live game: our preview first, then our game page. Never an outside site."""
+    game_id = str(game_id or '')
+    return _previews(articles).get(game_id) or _game_pages().get(game_id, '')
+
+
 def playoff_series(events: list, articles: list | None = None) -> list:
     """Incomplete series first, then completed series, newest last game first."""
     groups: dict[tuple, list] = {}
@@ -253,7 +273,7 @@ def playoff_series(events: list, articles: list | None = None) -> list:
             'status': _status_line(status_teams, latest['wins'], completed),
             'completed': completed,
             'next_label': _next_label(nxt) if nxt else '',
-            'next_url': fcb_game_url(nxt['id'], _recaps(articles or [])) if nxt and nxt['id'] else '',
+            'next_url': fcb_upcoming_url(nxt['id'], articles or []) if nxt and nxt['id'] else '',
             'next_when': nxt['when'] if nxt else None,
             'last_when': latest['when'],
         })
