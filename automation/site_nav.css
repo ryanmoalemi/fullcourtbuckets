@@ -226,3 +226,8 @@ html body .fcb-now:hover .ticker-text a{color:#5b22c9!important}
 html body .article-visual{aspect-ratio:16/9!important;height:auto!important;min-height:0!important;align-self:center}
 html body .article-visual img,html body .news-item img,html body .team-news-item img{aspect-ratio:16/9!important;height:auto!important;object-fit:cover;object-position:center 20%}
 html body .article-card.is-compact .article-visual{height:auto!important;min-height:0!important}
+/* Homepage lead card: 16:9 photo full width on top, text stacked under, height fits content (no empty bands). */
+html body .feature-grid{align-items:start}
+html body .feature-grid>.article-card{grid-template-columns:1fr!important;min-height:0!important;height:auto!important;align-self:start}
+html body .feature-grid>.article-card .article-visual{width:100%}
+html body .feature-grid>.article-card .article-copy{padding:18px 22px 20px}
