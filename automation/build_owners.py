@@ -80,12 +80,33 @@ PAGE_CSS = (
     '.ow-controls input{flex:1 1 220px}'
     '.ow-count{color:#a29f99;font-size:14px}'
     '.page-header .eyebrow{font-size:12px}'
+    '.page-header{margin-bottom:6px}.ow-meta{margin:0 0 2px!important;font-size:13px!important}'
+    '.ow-intro{margin:0 0 6px;font-size:15px}#ownership{margin-top:4px}#ownership h2{margin:0 0 6px}'
+    '#ownership .ow-controls{margin:0 0 6px}'
     '.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}'
     '.ow-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}'
     '.ow-scroll{position:relative}.ow-hint{display:none;margin:0 0 6px;font-size:13px;font-weight:700;color:#ff9800}'
     '.ow-av{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;'
     'vertical-align:middle;margin:0 6px 2px 0;object-fit:cover;flex:none;background:#3a3835;color:#f5f3ef;font:800 12px/1 Barlow,sans-serif}'
-    '.ow-person{display:inline-flex;align-items:center;margin:1px 8px 1px 0;white-space:nowrap}'
+    '.ow-person{display:inline-flex;align-items:center;white-space:nowrap}'
+    '.ow-owners{display:inline-flex;flex-wrap:wrap;align-items:center;gap:3px 12px}'
+    '.ow-owners .ow-av{margin:0 5px 0 0}'
+    '.ow-table td:nth-child(2){min-width:250px}'
+    # White table panel (copied page-locally from the Finals ratings tracker's .fcb-attendance table styles).
+    '.ow-scroll{background:#fff;border:1px solid #e2ded8;border-radius:8px;overflow:hidden;color:#151413}'
+    '.ow-scroll .ow-table{color:#151413;background:#fff;font-variant-numeric:tabular-nums}'
+    '.ow-scroll .ow-table th{background:#2a1458;color:#fff;font-weight:700;border-bottom:0}'
+    '.ow-scroll .ow-table td{border-bottom:1px solid #e2ded8;background:#fff;color:#151413}'
+    '.ow-scroll .ow-table tbody tr:nth-child(even) td{background:#faf8fd}'
+    '.ow-scroll .ow-table tbody tr:hover td{background:#efe6ff}'
+    '.ow-scroll .ow-table tr:target td,.ow-scroll .ow-table tr.ow-hit td{background:#fff3df}'
+    '.ow-scroll .ow-table a{color:#5b22c9}'
+    '.ow-scroll .ow-table strong,.ow-scroll .ow-table b{color:#151413}'
+    '.ow-scroll .ow-tag{color:#45413b;border-color:#bbb6ae;background:#fff}'
+    '.ow-scroll .ow-tag.report{color:#7a4a00;border-color:#c98a2c;background:#fff3df}'
+    '.ow-scroll .ow-tag.missing{color:#a12b2b;border-color:#d99;background:#fff0f0}'
+    '.ow-scroll .ow-small{color:#5a554e}'
+    '.ow-scroll .ow-av{background:#e9e4f5;color:#2a1458}'
     '.ow-table{width:100%;border-collapse:collapse;font-size:15px}'
     '.ow-table th,.ow-table td{padding:8px 10px;border-bottom:1px solid #3a3835;text-align:left;vertical-align:top}'
     '.ow-table th{font-size:14px;color:#d0ccc6;white-space:nowrap}'
@@ -111,20 +132,46 @@ PAGE_CSS = (
     '@media (max-width:640px){.ow-profile dl{grid-template-columns:1fr}.ow-profile dt{margin-top:6px}'
     '.ow-table{font-size:14px}.ow-controls input{flex:1 1 100%}.ow-controls select{flex:1 1 auto;max-width:100%}'
     '.ow-hint{display:block}.ow-scroll:after{content:"";position:absolute;top:0;right:0;bottom:0;width:28px;pointer-events:none;'
-    'background:linear-gradient(90deg,rgba(5,5,5,0),rgba(5,5,5,.9))}'
-    '.ow-table th:first-child,.ow-table td:first-child{position:sticky;left:0;z-index:1;background:#0b0b0d;min-width:96px;max-width:110px}'
+    'background:linear-gradient(90deg,rgba(255,255,255,0),#fff)}'
+    '.ow-table th:first-child,.ow-table td:first-child{position:sticky;left:0;z-index:1;min-width:96px;max-width:110px;box-shadow:inset -1px 0 0 #e2ded8}'
+    '.ow-table td:nth-child(2){min-width:180px}'
     '.ow-person{white-space:normal}}'
+    '.ow-collapse>summary{list-style:none;cursor:default}.ow-collapse>summary::-webkit-details-marker{display:none}'
+    '.ow-collapse>summary h3{display:inline}.ow-sum{display:none}'
+    '@media (max-width:600px){'
+    '.ow-body{font-size:14px;line-height:1.45}.ow-body p{margin:0 0 8px}'
+    '.ow-section{margin:16px 0}.section-title{font-size:21px!important;margin:0 0 6px!important}'
+    '.ow-table{font-size:12px!important;line-height:1.35}.ow-table th,.ow-table td{padding:4px 6px!important}'
+    '.ow-table th{font-size:12px!important}.ow-ev,.ow-tag{font-size:12px!important}'
+    '.ow-table td:nth-child(n+3){min-width:120px}'
+    '.ow-finding{padding:10px;margin:0 0 10px}.ow-finding h3{font-size:17px}.ow-finding p,.ow-finding .ow-small{font-size:13px}'
+    '.ow-profile{padding:6px 0}.ow-collapse>summary{cursor:pointer;display:flex;flex-wrap:wrap;gap:2px 8px;align-items:baseline}'
+    '.ow-collapse>summary h3{font-size:16px!important;margin:0!important}'
+    '.ow-collapse>summary:after{content:"+";margin-left:auto;color:#ff9800;font-weight:800}.ow-collapse[open]>summary:after{content:"−"}'
+    '.ow-sum{display:block;flex-basis:100%;font-size:12px;color:#a29f99}'
+    '.ow-profile dl{font-size:13px;gap:2px 8px}'
+    '.ow-faq h3{font-size:16px;margin:12px 0 4px}.ow-small{font-size:12px}'
+    '.ow-downloads{gap:6px}.ow-downloads a,.ow-downloads button{padding:6px 9px;font-size:12px}'
+    '.ow-cite{font-size:12px;padding:8px}'
+    '.ow-more{display:block;width:100%;margin:6px 0;padding:8px;border:1px solid #ff9800;background:none;color:#f5f3ef;font:800 13px Barlow,sans-serif}}'
+    '.ow-more{display:none}@media (max-width:600px){.ow-more:not([hidden]){display:block}}'
 )
 PAGE_JS = r"""(function(){
+if(window.matchMedia&&matchMedia('(max-width:600px)').matches){document.querySelectorAll('details.ow-collapse[open]').forEach(function(d){if(!location.hash||!d.closest(location.hash))d.removeAttribute('open');});}
 function q(s,r){return (r||document).querySelectorAll(s);}
 var params=new URLSearchParams(location.search);
 q('[data-ow-table]').forEach(function(box){
   var key=box.getAttribute('data-ow-table');var input=box.querySelector('input');var sel=box.querySelector('select');
   var rows=q('tbody tr',box);var count=box.querySelector('.ow-count');
-  function apply(){var t=(input.value||'').toLowerCase().trim();var f=sel?sel.value:'';var n=0;
+  var phone=window.matchMedia&&matchMedia('(max-width:600px)').matches;var cap=phone&&rows.length>20?10:0;var more=null;
+  if(cap){more=document.createElement('button');more.type='button';more.className='ow-more';box.querySelector('.ow-scroll').after(more);
+    more.addEventListener('click',function(){cap=0;more.remove();more=null;apply();});}
+  function apply(){var t=(input.value||'').toLowerCase().trim();var f=sel?sel.value:'';var n=0;var shown=0;
     rows.forEach(function(r){var ok=(!t||r.textContent.toLowerCase().indexOf(t)>-1)&&(!f||r.getAttribute('data-filter')===f);
-      if(location.hash&&r.id===location.hash.slice(1))ok=true;r.hidden=!ok;if(ok)n++;});
-    if(count)count.textContent=n+' of '+rows.length+' rows';
+      if(location.hash&&r.id===location.hash.slice(1))ok=true;if(ok)n++;var vis=ok&&(!cap||t||f||shown<cap||(location.hash&&r.id===location.hash.slice(1)));
+      r.hidden=!vis;if(vis)shown++;});
+    if(more){more.hidden=!!(t||f)||n<=cap;more.textContent='Show all '+n+' rows';}
+    if(count)count.textContent=(shown<n?shown+' shown, ':'')+n+' of '+rows.length+' rows';
     var p=new URLSearchParams(location.search);if(t)p.set(key+'_q',t);else p.delete(key+'_q');
     if(f)p.set(key+'_f',f);else p.delete(key+'_f');var s=p.toString();
     history.replaceState(null,'',location.pathname+(s?'?'+s:'')+location.hash);}
@@ -417,7 +464,8 @@ def owner_cell(data: dict, r: dict) -> str:
         else:
             av = f'<span class="ow-av" aria-hidden="true">{esc(initials(ph["person"]))}</span>'
         text = text.replace(name, f'<span class="ow-person">{av}{name}</span>', 1)
-    return text
+    text = re.sub(r'</span>\s*(?:and|;|,)\s*<span class="ow-person">', '</span><span class="ow-person">', text)
+    return f'<span class="ow-owners">{text}</span>'
 
 
 def photo_credits(data: dict) -> str:
@@ -634,7 +682,8 @@ def profiles(data: dict) -> str:
         ev = evidence_cell(o)
         page = f'<a href="/wnba/teams/{slug}/">{esc(team)} team page</a>' if team in TEAM_SLUGS else ''
         out.append(
-            f'<section class="ow-profile" id="{esc(slug)}"><h3>{esc(o["team"])}</h3><dl>'
+            f'<section class="ow-profile" id="{esc(slug)}"><details class="ow-collapse" open><summary><h3>{esc(o["team"])}</h3>'
+            f'<span class="ow-sum">{esc(o["controlling_owner"])}</span></summary><dl>'
             f'<dt>Controlling owner</dt><dd>{esc(o["controlling_owner"])} ({ev})</dd>'
             f'<dt>What the source says</dt><dd>{esc(o["owner_claim_as_described"])}{(" " + esc(o["owner_claim_note"])) if o["owner_claim_note"] else ""}</dd>'
             f'<dt>Current practice arrangement</dt><dd>{esc(o["practice_arrangement"])}</dd>'
@@ -645,7 +694,7 @@ def profiles(data: dict) -> str:
             f'<dt>Valuation estimates</dt><dd>{v_txt}</dd>'
             f'<dt>Facility</dt><dd>{f_txt}</dd>'
             f'<dt>Verified</dt><dd>{esc(human_date(o["last_verified_at"]))}{" · " + page if page else ""}</dd>'
-            '</dl></section>'
+            '</dl></details></section>'
         )
     return ''.join(out)
 
@@ -699,22 +748,21 @@ def body(data: dict, s: dict) -> str:
     # Ryan's rule (academic data-publication norms): only supporting material sits above the first table:
     # the data-through line, a one- or two-sentence answer and the coverage line. No lists, findings or news.
     p.append(f'<p class="ow-meta">Published {esc(human_date(PUBLISHED))} · Data through {esc(human_date(DATA_THROUGH))} · Dataset {DATASET_VERSION}</p>')
-    p.append(
-        '<div class="ow-answer"><p><strong>Who owns WNBA teams?</strong> '
-        f'Search the controlling owners, publicly disclosed investors, transaction records and facility projects for all {s["teams"]} teams in FCB\'s 2026 ownership reference. '
-        'Team ownership, governor roles and league investments are recorded separately, with evidence attached to each claim.</p>'
-        '</div>'
-    )
+    p.append(f'<p class="ow-intro">Controlling owners, investors, sales and facility projects for all {s["teams"]} WNBA teams, each linked to its source.</p>')
     missing = [f"{r['team']}: {r['controlling_owner_evidence']}" for r in active(data) if r['controlling_owner_evidence'] != 'sourced']
     miss_txt = f' (not yet primary-sourced for control: {"; ".join(missing)})' if missing else ''
-    p.append(f'<p class="ow-small">Ownership reviewed through {esc(human_date(DATA_THROUGH))}: {s["teams"]} active teams, {s["owner_sourced"]} with a sourced controlling-owner record, '
-             f'{s["governors_sourced"]} of {s["teams"]} governors sourced. Full counts and evidence limits are in <a href="#methods">Methods</a>.</p>')
     p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
              + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
     p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
              '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
              '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
     p.append('<section class="ow-section" id="prices"><h2 class="section-title">Prices and valuations</h2>' + prices_section(data) + '</section>')
+    p.append(
+        '<div class="ow-answer"><p><strong>Who owns WNBA teams?</strong> '
+        f'Search the controlling owners, publicly disclosed investors, transaction records and facility projects for all {s["teams"]} teams in FCB\'s 2026 ownership reference. '
+        'Team ownership, governor roles and league investments are recorded separately, with evidence attached to each claim.</p>'
+        '</div>'
+    )
     p.append('<p class="ow-detail">One detail from the filings: the Mohegan Tribe\'s 2003 purchase of the Sun was $2 million in cash plus an $8 million note to the league, according to its SEC registration statement.</p>')
     p.append('<nav class="ow-local" aria-label="On this page"><a href="#ownership">Ownership</a><a href="#investors">Investors</a>'
              '<a href="#transactions">Transactions</a><a href="#facilities">Facilities</a><a href="#methods">Methods</a></nav>')

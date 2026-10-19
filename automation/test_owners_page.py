@@ -38,13 +38,11 @@ class OwnersPageTests(unittest.TestCase):
         main = self.html.split('</time></div>', 1)[1]
         above = main[:main.find('<table')]
         self.assertIn('class="ow-meta"', above)
-        self.assertIn('class="ow-answer"', above)
-        self.assertIn('Ownership reviewed through', above)
+        self.assertIn('class="ow-intro"', above)
+        self.assertNotIn('class="ow-answer"', above)
         self.assertIn('id="ownership"', above)
-        answer = re.search(r'<div class="ow-answer">(.*?)</div>', above, re.S).group(1)
-        self.assertEqual(answer.count('<p'), 1)
-        sentences = re.findall(r'[.?!](?=\s|<|$)', re.sub(r'<[^>]+>', '', answer).replace('?', '.', 1))
-        self.assertLessEqual(len(sentences) - 1, 2, answer)
+        intro = re.sub(r'<[^>]+>', '', re.search(r'<p class="ow-intro">(.*?)</p>', above, re.S).group(1))
+        self.assertLessEqual(len(intro), 160, intro)
         for banned in ('<ul', '<ol', '<li', 'ow-finding', 'id="findings"', 'ow-local', 'Mohegan', '<figure', '<img src="/images/articles'):
             self.assertNotIn(banned, above, banned)
         self.assertLess(main.find('id="prices"'), main.find('Mohegan'))
@@ -157,6 +155,19 @@ class OwnersPageTests(unittest.TestCase):
             self.assertRegex(row['license'], r'^(CC BY|CC BY-SA|Public domain|CC0)', row)
             self.assertTrue((ROOT / 'wnba' / 'owners' / src).is_file(), src)
             self.assertIn(row['source_url'], main, f'no credit in Methods for {src}')
+
+    def test_text_above_table_is_short(self):
+        """Ryan (Oct 19, 2026): only a data line, one short intro and at most one key fact above the table."""
+        import sys
+        sys.path.insert(0, str(ROOT / 'automation'))
+        import test_data_table_first as dtf
+        m = dtf.MARK.search(self.html)
+        row = [x for x in dtf.BYLINE_ROW.finditer(self.html) if x.end() <= m.start()][-1]
+        between = self.html[row.end():m.start()]
+        text = ' '.join(dtf.TAG.sub(' ', between).split())
+        self.assertLessEqual(len(text), 300, text)
+        self.assertNotIn('ow-answer', between)
+        self.assertNotIn('Ownership reviewed', between)
 
 
 if __name__ == '__main__':
