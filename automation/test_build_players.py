@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 76)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 86)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -526,12 +526,19 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_10 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_11 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_12 <= b.SEARCH_FAQ_SLUGS)
+        october_19 = {
+            'georgia-amoore', 'gianna-kneepkens', 'jacy-sheldon', 'jordin-canada', 'justine-pissott',
+            'madina-okot', 'makayla-timpson', 'marine-johannes', 'marta-suarez', 'rori-harmon',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_13:
+            if slug in october_19:
+                expected_source = 'Google search demand via OpenSEO, Oct 19, 2026'
+            elif slug in october_13:
                 expected_source = 'Google search demand via OpenSEO, Oct 13, 2026'
             elif slug in october_12:
                 expected_source = 'Google search demand via OpenSEO, Oct 12, 2026'

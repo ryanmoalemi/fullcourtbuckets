@@ -1,148 +1,175 @@
 {
   "slug": "jordin-canada",
   "player_name": "Jordin Canada",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "What are Jordin Canada's stats / points per game?",
-      "answer": "In the 2026 regular season, Jordin Canada averaged 11.6 points, 3.5 rebounds, and 7.3 assists in 42 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Jordin Canada's stats?",
+      "answer": "In the 2026 regular season, Jordin Canada averaged 11.6 points, 3.5 rebounds, and 7.3 assists in 43 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jordin canada stats",
-      "approx_monthly_volume": 6600
-    },
-    {
-      "question": "Who is Jordin Canada dating?",
-      "answer": "As of late 2026, Jordin Canada has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
+        "https://fullcourtbuckets.com/wnba/jordin-canada/"
       ],
-      "google_keyword": "jordin canada partner",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "How much does Jordin Canada make?",
-      "answer": "A precise public salary or net worth figure for Jordin Canada is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jordin canada salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "jordin canada stats",
+          "vol": 6600
+        },
+        {
+          "q": "jordin canada stats per game",
+          "vol": 20
+        },
+        {
+          "q": "jordin canada wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "jordin canada points per game",
+          "vol": 20
+        },
+        {
+          "q": "jordin canada average points per game",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Jordin Canada?",
-      "answer": "Jordin Canada is listed at 5' 6\".",
+      "answer": "The WNBA lists Jordin Canada at 5 feet 6 inches and 135 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
       ],
-      "google_keyword": "jordin canada height",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "jordin canada height",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Jordin Canada?",
-      "answer": "She was born August 11, 1995 in Los Angeles. As of late 2026 that puts her at 31 years old.",
+      "answer": "Jordin Canada was born August 11, 1995.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
       ],
-      "google_keyword": "jordin canada age",
-      "approx_monthly_volume": 90,
-      "birthdate": "1995-08-11"
-    },
-    {
-      "question": "What did Jordin Canada score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the New York Liberty), Jordin Canada had 19.0 points, 3.0 rebounds, and 9.0 assists in a 95-84 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is jordin canada playing today",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What is Jordin Canada's jersey number?",
-      "answer": "Jordin Canada wears number 3 for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jordin canada jersey",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Jordin Canada's contract?",
-      "answer": "Contract length and guarantees for Jordin Canada are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jordin canada contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Jordin Canada married?",
-      "answer": "There is no widely reported public record of Jordin Canada being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
-      ],
-      "google_keyword": "jordin canada husband",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "jordin canada age",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "What team does Jordin Canada play for?",
-      "answer": "Her most recent WNBA team on record is the Atlanta Dream. She wears No. 3. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jordin canada team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many championships does Jordin Canada have?",
-      "answer": "In her rookie season with the Storm, she won her first WNBA championship as they swept the Washington Mystics.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
-      ],
-      "google_keyword": "jordin canada championships",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Jordin Canada attend?",
-      "answer": "Canada played college basketball at UCLA.",
+      "answer": "Jordin Canada plays guard for the Atlanta Dream and wears No. 3.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
       ],
-      "google_keyword": "jordin canada ucla",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "jordin canada atlanta dream",
+          "vol": 50
+        },
+        {
+          "q": "jordin canada team",
+          "vol": 10
+        },
+        {
+          "q": "jordin canada wnba",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Jordin Canada played for?",
+      "answer": "Jordin Canada has played for the Seattle Storm, Los Angeles Sparks and Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jordin-canada/"
+      ],
+      "queries": [
+        {
+          "q": "jordin canada seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "jordin canada sparks",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many championships has Jordin Canada won?",
+      "answer": "The WNBA lists Jordin Canada as a two-time WNBA champion, in 2018 and 2020, both with the Seattle Storm.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
+      ],
+      "queries": [
+        {
+          "q": "jordin canada championships",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Jordin Canada drafted?",
+      "answer": "The Seattle Storm selected Jordin Canada fifth overall in the 2018 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
+      ],
+      "queries": []
+    },
+    {
+      "question": "Where did Jordin Canada play college basketball?",
+      "answer": "Jordin Canada played at UCLA. The WNBA says she is UCLA women's basketball's all-time assists leader with 831 and was a two-time Pac-12 Defensive Player of the Year.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
+      ],
+      "queries": [
+        {
+          "q": "jordin canada ucla",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Has Jordin Canada led the WNBA in steals?",
+      "answer": "Yes. The WNBA lists her as the league's steals leader in 2019 and 2023, and she made the All-Defensive First Team both years.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
+      ],
+      "queries": []
     },
     {
       "question": "What position does Jordin Canada play?",
-      "answer": "Jordin Canada is listed as a G for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jordin canada position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Jordin Canada injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "jordin canada injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Jordin Canada's parents?",
-      "answer": "Public profiles share limited verified detail about Jordin Canada's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "answer": "The WNBA lists Jordin Canada as a guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordin_Canada"
+        "https://www.wnba.com/player/1628886/jordin-canada/bio"
       ],
-      "google_keyword": "jordin canada parents",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "jordin canada position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Jordin Canada been in the WNBA?",
+      "answer": "Jordin Canada has 9 regular seasons, from 2018 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jordin-canada/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

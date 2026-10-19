@@ -1,158 +1,183 @@
 {
   "slug": "jacy-sheldon",
   "player_name": "Jacy Sheldon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 19, 2026",
+  "verified_at": "2026-10-19",
   "items": [
     {
-      "question": "What are Jacy Sheldon's stats / points per game?",
-      "answer": "In the 2026 regular season, Jacy Sheldon averaged 6.3 points, 1.4 rebounds, and 1.7 assists in 42 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Jacy Sheldon's stats?",
+      "answer": "In the 2026 regular season, Jacy Sheldon averaged 6.4 points, 1.4 rebounds, and 1.8 assists in 44 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jacy sheldon stats",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Does Jacy Sheldon have a signature shoe?",
-      "answer": "Public search interest ties Jacy Sheldon to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
+        "https://fullcourtbuckets.com/wnba/jacy-sheldon/"
       ],
-      "google_keyword": "jacy sheldon shoes",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Jacy Sheldon dating?",
-      "answer": "As of late 2026, Jacy Sheldon has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
-      ],
-      "google_keyword": "jacy sheldon partner",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How much does Jacy Sheldon make?",
-      "answer": "A precise public salary or net worth figure for Jacy Sheldon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jacy sheldon net worth",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "jacy sheldon stats",
+          "vol": 590
+        }
+      ]
     },
     {
       "question": "How tall is Jacy Sheldon?",
-      "answer": "Jacy Sheldon is listed at 5' 10\".",
+      "answer": "The WNBA lists Jacy Sheldon at 5 feet 10 inches and 140 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
       ],
-      "google_keyword": "jacy sheldon height",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What did Jacy Sheldon score in her last game?",
-      "answer": "In her most recent completed game (September 19, 2026 vs. the Atlanta Dream), Jacy Sheldon had 9.0 points, 1.0 rebounds, and 4.0 assists in a 81-106 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "why isn t jacy sheldon playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Jacy Sheldon's jersey number?",
-      "answer": "Jacy Sheldon wears number 0 for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jacy sheldon jersey",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What is Jacy Sheldon's contract?",
-      "answer": "Contract length and guarantees for Jacy Sheldon are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jacy sheldon contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Jacy Sheldon married?",
-      "answer": "There is no widely reported public record of Jacy Sheldon being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
-      ],
-      "google_keyword": "jacy sheldon husband",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What team does Jacy Sheldon play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 0. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does jacy sheldon play for",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What college did Jacy Sheldon attend?",
-      "answer": "Sheldon played college basketball at Ohio State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
-      ],
-      "google_keyword": "jacy sheldon ohio state",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What position does Jacy Sheldon play?",
-      "answer": "Jacy Sheldon is listed as a G for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jacy sheldon position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Jacy Sheldon injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "jacy sheldon injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who are Jacy Sheldon's parents?",
-      "answer": "Public profiles share limited verified detail about Jacy Sheldon's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
-      ],
-      "google_keyword": "jacy sheldon parents",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How many championships does Jacy Sheldon have?",
-      "answer": "Public biographical sources cover Jacy Sheldon's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
-      ],
-      "google_keyword": "what did sophie cunningham say to jacy sheldon during fight",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "jacy sheldon height",
+          "vol": 260
+        },
+        {
+          "q": "jacy sheldon measurements",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Jacy Sheldon?",
-      "answer": "Jacy Sheldon was born August 23, 2000 in Dublin. As of late 2026 that puts her at 26 years old.",
+      "answer": "Jacy Sheldon was born August 23, 2000.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
+      ],
+      "queries": [
+        {
+          "q": "jacy sheldon age",
+          "vol": 170
+        },
+        {
+          "q": "how old is jacy sheldon",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What team does Jacy Sheldon play for?",
+      "answer": "Jacy Sheldon plays guard for the Chicago Sky and wears No. 0.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
+      ],
+      "queries": [
+        {
+          "q": "who does jacy sheldon play for",
+          "vol": 110
+        },
+        {
+          "q": "what team does jacy sheldon play for",
+          "vol": 40
+        },
+        {
+          "q": "what team is jacy sheldon on",
+          "vol": 30
+        },
+        {
+          "q": "jacy sheldon team",
+          "vol": 30
+        },
+        {
+          "q": "jacy sheldon chicago sky",
+          "vol": 50
+        },
+        {
+          "q": "jacy sheldon wnba",
+          "vol": 390
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Jacy Sheldon played for?",
+      "answer": "Jacy Sheldon has played for the Dallas Wings, Connecticut Sun, Washington Mystics and Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jacy-sheldon/"
+      ],
+      "queries": [
+        {
+          "q": "jacy sheldon sun",
+          "vol": 30
+        },
+        {
+          "q": "jacy sheldon mystics",
+          "vol": 20
+        },
+        {
+          "q": "jacy sheldon connecticut",
+          "vol": 20
+        },
+        {
+          "q": "jacy sheldon dallas wings",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Jacy Sheldon drafted?",
+      "answer": "The Dallas Wings selected Jacy Sheldon fifth overall in the 2024 WNBA Draft. The WNBA says she was traded to the Connecticut Sun in February 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
+      ],
+      "queries": [
+        {
+          "q": "jacy sheldon wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Jacy Sheldon play college basketball?",
+      "answer": "Jacy Sheldon played five seasons at Ohio State (2019-2024). The WNBA says she left sixth in program scoring with 2,009 points and was a 2024 AP and USBWA second-team All-American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
+      ],
+      "queries": [
+        {
+          "q": "jacy sheldon ohio state",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where is Jacy Sheldon from?",
+      "answer": "Jacy Sheldon was born in Akron, Ohio, and went to Dublin Coffman High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jacy_Sheldon"
+        "https://www.wnba.com/draft/2024/prospects/182518/jacy-sheldon"
       ],
-      "google_keyword": "jacy sheldon age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2000-08-23"
+      "queries": [
+        {
+          "q": "jacy sheldon dublin coffman",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What position does Jacy Sheldon play?",
+      "answer": "The WNBA lists Jacy Sheldon as a guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642292/jacy-sheldon/bio"
+      ],
+      "queries": [
+        {
+          "q": "jacy sheldon position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Jacy Sheldon been in the WNBA?",
+      "answer": "Jacy Sheldon has 3 regular seasons: 2024, 2025, and 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jacy-sheldon/"
+      ],
+      "queries": []
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
