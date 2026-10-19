@@ -20,6 +20,8 @@ ticker: "Finals Game 2: Dream at Valkyries, Monday 5 p.m. PT. Golden State leads
 
 The [Atlanta Dream](/wnba/teams/atlanta-dream/) forced 44 more turnovers than they committed across their first five playoff games, and they won the turnover count in all five. In Game 1 of the WNBA Finals, the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) flipped it: Atlanta turned it over 12 times to Golden State's 8 and lost 68-64.
 
+Every Game 2 play will post on the [Game 2 play-by-play page](/wnba/finals/2026/game-2/play-by-play/) after the final buzzer.
+
 Game 2 is Monday at Chase Center, with Golden State up 1-0. The question for Atlanta is whether it can get its best weapon back, because the Dream also went 2 of 19 from the field in the fourth quarter of Game 1, and Golden State's late blocks came from four players other than [Kiah Stokes](/wnba/kiah-stokes/).
 
 ## Finals Game 2 at a glance

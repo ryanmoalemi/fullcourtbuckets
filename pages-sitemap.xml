@@ -260,4 +260,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-1/play-by-play/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-2/play-by-play/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
 </urlset>
