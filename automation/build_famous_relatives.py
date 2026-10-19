@@ -273,6 +273,8 @@ def initials(name: str) -> str:
 
 # Table-only headshot credits for relatives without a composite photo record.
 TABLE_ONLY_RELATIVE_PHOTOS = {
+    'antonio-davis': {'author': 'Lordcolus (derivative work: Lpdrew)', 'license': 'CC BY 2.0',
+                      'license_url': 'https://creativecommons.org/licenses/by/2.0', 'source_page': 'https://commons.wikimedia.org/wiki/File:Antonio_Davis.jpg'},
     'joe-salavea': {'author': 'Office of U.S. Congressman Eni Faleomavaega of American Samoa', 'license': 'Public domain',
                     'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Joe_Salave%27a.jpg'},
 }
@@ -456,7 +458,7 @@ def head_credits(entries: list[dict]) -> str:
             missing.append(esc(e['player']))
     out = f'<p id="table-photo-credits">Table headshots, cropped from licensed photos ({len(items)}):</p><ul>{"".join(items)}</ul>'
     if missing:
-        out += f'<p>Initials are shown where we found no licensed photo in the player\'s current uniform: {", ".join(missing)}.</p>'
+        out += f'<p>Initials are shown for players with no licensed photo we could find: {", ".join(missing)}.</p>'
     rseen, ritems, rmissing = set(), [], []
     for e in entries:
         if e['relative_slug'] in rseen:
@@ -468,7 +470,7 @@ def head_credits(entries: list[dict]) -> str:
             rmissing.append(esc(e['relative']))
     out += f'<p>Relatives ({len(ritems)}):</p><ul>{"".join(ritems)}</ul>'
     if rmissing:
-        out += f'<p>Initials are shown for relatives with no usable licensed photo: {", ".join(rmissing)}.</p>'
+        out += f'<p>Initials are shown for relatives with no licensed photo we could find: {", ".join(rmissing)}.</p>'
     return out
 
 
@@ -696,10 +698,10 @@ def main() -> None:
     article = next(a for a in articles if a.get('slug') == SLUG)
     pa.save_articles(articles)
     page = render(doc, entries, s, article, articles)
-    pa.write_if_changed(PAGE_PATH, page)
+    pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     # Run the same pass the nightly news build runs, so tonight's rebuild is a no-op.
     page = links.prepare_article_page(ROOT, article, articles)
-    pa.write_if_changed(PAGE_PATH, page)
+    pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     pa.write_if_changed(CSV_PATH, write_csv(entries))
     pa.write_if_changed(ROOT / SLUG / 'index.html', pa.redirect_html(SLUG))
     if is_new or record_changed:
