@@ -241,6 +241,8 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
         'teams': list(meta.get('teams') or []),
         'imageFocal': focal_for(meta, existing),
     })
+    if str(meta.get('game_id') or '').strip():  # links score rows to this recap; no ESPN box-score line
+        article['gameId'] = str(meta['game_id']).strip()
     return article
 
 
