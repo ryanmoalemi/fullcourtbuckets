@@ -1,5 +1,30 @@
 [
   {
+    "slug": "finals-game-2-preview-dream-valkyries",
+    "url": "/news/finals-game-2-preview-dream-valkyries/",
+    "title": "WNBA Finals Game 2 preview: Atlanta lost the turnover battle for the first time this postseason",
+    "description": "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Game 2 is Monday at 5 p.m. PT at Chase Center, with Golden State up 1-0.",
+    "category": "news",
+    "date": "2026-10-19",
+    "imageAlt": "Jordin Canada of the Atlanta Dream in a white number 3 jersey",
+    "imageCredit": "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons",
+    "teams": [
+      "atlanta-dream",
+      "golden-state-valkyries"
+    ],
+    "imageFocal": "center 20%",
+    "image": "/images/articles/finals-game-2-preview-dream-valkyries/hero-1200.webp",
+    "imageSource": "/images/articles/finals-game-2-preview-dream-valkyries/photo.jpg",
+    "imageHero": "/images/articles/finals-game-2-preview-dream-valkyries/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageOg": "/images/articles/finals-game-2-preview-dream-valkyries/og-1200.webp",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628,
+    "imageWidth": 1200,
+    "imageHeight": 675
+  },
+  {
     "slug": "wnba-players-famous-relatives",
     "url": "/news/wnba-players-famous-relatives/",
     "title": "Steph Curry, Donovan McNabb and JaVale McGee top our list of 36 WNBA players' famous relatives",
