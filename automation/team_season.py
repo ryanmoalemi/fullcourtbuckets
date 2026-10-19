@@ -32,7 +32,7 @@ COVERAGE = {
         ('/news/wings-valkyries-game-3-recap/', 'Wings Game 3', '77-73'),
         ('/news/aces-valkyries-semis-game-1-recap/', 'Aces Game 1', '71-60'),
         ('/news/aces-valkyries-semis-game-2-recap/', 'Aces Game 2', '83-81'),
-        ('/news/semis-game-3-preview/', 'Game 3 preview', '2-0'),
+        ('/news/aces-valkyries-semis-game-3-recap/', 'Aces Game 3', '87-77'),
     ],
     'las-vegas-aces': [
         ('/news/aces-fever-game-1-aja-wilson-38/', 'Fever Game 1', '102-85'),
@@ -41,13 +41,13 @@ COVERAGE = {
         ('/news/aces-fever-series-breakdown/', 'series breakdown', '2-1'),
         ('/news/aces-valkyries-semis-game-1-recap/', 'Valkyries Game 1', '71-60'),
         ('/news/aces-valkyries-semis-game-2-recap/', 'Valkyries Game 2', '83-81'),
-        ('/news/semis-game-3-preview/', 'Game 3 preview', '2-0'),
+        ('/news/aces-valkyries-semis-game-3-recap/', 'Valkyries Game 3', '87-77'),
     ],
     'atlanta-dream': [
         ('/news/dream-mystics-game-1-howard-reese/', 'Mystics Game 1', '92-77'),
         ('/news/liberty-dream-semis-game-1-recap/', 'Liberty Game 1', '92-82'),
         ('/news/liberty-dream-semis-game-2-recap/', 'Liberty Game 2', '101-98'),
-        ('/news/semis-game-3-preview/', 'Game 3 preview', '2-0'),
+        ('/news/dream-sweep-liberty-game-3-semifinals/', 'Liberty Game 3', '85-83'),
     ],
     'washington-mystics': [
         ('/news/dream-mystics-game-1-howard-reese/', 'Game 1 recap', '92-77'),
@@ -68,7 +68,7 @@ COVERAGE = {
         ('/news/liberty-lynx-game-2-recap/', 'Lynx Game 2', '87-71'),
         ('/news/liberty-dream-semis-game-1-recap/', 'Dream Game 1', '92-82'),
         ('/news/liberty-dream-semis-game-2-recap/', 'Dream Game 2', '101-98'),
-        ('/news/semis-game-3-preview/', 'Game 3 preview', '2-0'),
+        ('/news/dream-sweep-liberty-game-3-semifinals/', 'Dream Game 3', '85-83'),
     ],
     'portland-fire': [
         ('/news/wnba-expansion-teams/', 'expansion story', '17-27'),
@@ -380,22 +380,22 @@ def _playoff_html(slug: str, name: str) -> str:
         )
     if slug == 'golden-state-valkyries':
         return (
-            f'The {name} opened the first round with a 104-80 win, dropped Game 2 108-100 in overtime, '
-            f'and closed the Wings out 77-73 to win the series 2-1. '
-            f'In the semifinals they beat the Aces 71-60 and 83-81 and lead 2-0 heading into '
-            f'{link("/news/semis-game-3-preview/", "Game 3")}.'
+            f'The {name} beat the Wings 2-1, then swept the Aces 3-0, '
+            f'winning semifinal Game 3 87-77 in overtime. '
+            f'Golden State won Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} 68-64 on Oct. 17, 2026, to lead 1-0. '
+            f'{link("/news/finals-game-2-preview-dream-valkyries/", "Game 2")} is Oct. 19, 2026, 5 p.m. PT, at Chase Center.'
         )
     if slug == 'las-vegas-aces':
         return (
             f'The {name} beat the Fever 102-85, lost Game 2 99-89, and closed the series 94-83 for a 2-1 win. '
-            f'In the semifinals the Valkyries beat Las Vegas 71-60 and 83-81, so the Aces trail 0-2 '
-            f'going into {link("/news/semis-game-3-preview/", "Game 3")}.'
+            f'In the semifinals the Valkyries swept Las Vegas 3-0, winning 71-60, 83-81 and 87-77 in overtime in {link("/news/aces-valkyries-semis-game-3-recap/", "Game 3")}.'
         )
     if slug == 'atlanta-dream':
         return (
             f'The {name} beat the Mystics 92-77 in {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")}. '
-            f'In the semifinals they beat the Liberty 92-82 and 101-98 in overtime and lead 2-0 '
-            f'before {link("/news/semis-game-3-preview/", "Game 3")}.'
+            f'In the semifinals they swept the Liberty 3-0, ending it 85-83 in {link("/news/dream-sweep-liberty-game-3-semifinals/", "Game 3")}. '
+            f'Atlanta lost Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} to Golden State 68-64 on Oct. 17, 2026, and trails 1-0. '
+            f'{link("/news/finals-game-2-preview-dream-valkyries/", "Game 2")} is set for 5 p.m. PT on Oct. 19, 2026, in San Francisco.'
         )
     if slug == 'washington-mystics':
         return (
@@ -414,8 +414,7 @@ def _playoff_html(slug: str, name: str) -> str:
     if slug == 'new-york-liberty':
         return (
             f'The {name} beat the Lynx 91-75 and 87-71 to sweep the first round. '
-            f'In the semifinals the Dream beat New York 92-82 and 101-98 in overtime, so the Liberty trail 0-2 '
-            f'before {link("/news/semis-game-3-preview/", "Game 3")}.'
+            f'In the semifinals the Dream swept New York 3-0, winning 92-82, 101-98 in overtime and 85-83 in {link("/news/dream-sweep-liberty-game-3-semifinals/", "Game 3")}.'
         )
     if slug == 'portland-fire':
         return (
