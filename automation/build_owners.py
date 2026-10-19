@@ -654,20 +654,14 @@ def faq(data: dict, s: dict) -> list[tuple[str, str]]:
 
 def body(data: dict, s: dict) -> str:
     p = []
-    # Ryan's rule: on data pages the data tables sit directly under the headline and byline;
-    # the short answer, coverage line and findings follow them.
-    p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
-             + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
-    p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
-             '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
-             '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
-    p.append('<section class="ow-section" id="prices"><h2 class="section-title">Prices and valuations</h2>' + prices_section(data) + '</section>')
+    # Ryan's rule (academic data-publication norms): only supporting material sits above the first table:
+    # the data-through line, a one- or two-sentence answer and the coverage line. No lists, findings or news.
     p.append(f'<p class="ow-meta">Published {esc(human_date(PUBLISHED))} · Data through {esc(human_date(DATA_THROUGH))} · Dataset {DATASET_VERSION}</p>')
     p.append(
         '<div class="ow-answer"><p><strong>Who owns WNBA teams?</strong> '
         f'Search the controlling owners, publicly disclosed investors, transaction records and facility projects for all {s["teams"]} teams in FCB\'s 2026 ownership reference. '
         'Team ownership, governor roles and league investments are recorded separately, with evidence attached to each claim.</p>'
-        '<p>One detail from the filings: the Mohegan Tribe\'s 2003 purchase of the Sun was $2 million in cash plus an $8 million note to the league, according to its SEC registration statement.</p></div>'
+        '</div>'
     )
     missing = [f"{r['team']}: {r['controlling_owner_evidence']}" for r in active(data) if r['controlling_owner_evidence'] != 'sourced']
     miss_txt = f' (not yet primary-sourced for control: {"; ".join(missing)})' if missing else ''
@@ -678,6 +672,13 @@ def body(data: dict, s: dict) -> str:
              f'{s["inv_sourced"]} relationships tied to a primary document, {s["inv_report"]} to a labeled report only) + {s["rows_future"]} future-team rows + {s["rows_unnamed"]} unnamed group'
              f'{" + " + str(s["rows_other_excluded"]) + " other excluded" if s["rows_other_excluded"] else ""}. '
              'Investors are the ones teams or filings have made public; this is not a complete cap table.</p>')
+    p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
+             + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
+    p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
+             '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
+             '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
+    p.append('<section class="ow-section" id="prices"><h2 class="section-title">Prices and valuations</h2>' + prices_section(data) + '</section>')
+    p.append('<p class="ow-detail">One detail from the filings: the Mohegan Tribe\'s 2003 purchase of the Sun was $2 million in cash plus an $8 million note to the league, according to its SEC registration statement.</p>')
     p.append('<nav class="ow-local" aria-label="On this page"><a href="#ownership">Ownership</a><a href="#investors">Investors</a>'
              '<a href="#transactions">Transactions</a><a href="#facilities">Facilities</a><a href="#methods">Methods</a></nav>')
     p.append('<section class="ow-section" id="findings"><h2 class="section-title">What FCB\'s research shows</h2>' + findings(data, s) + '</section>')

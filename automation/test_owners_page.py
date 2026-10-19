@@ -34,13 +34,21 @@ class OwnersPageTests(unittest.TestCase):
         self.assertEqual(self.html.count('<h1>'), 1)
         self.assertIn(f'<h1>{owners.esc(owners.H1)}</h1>', self.html)
 
-    def test_data_table_sits_directly_under_the_byline(self):
+    def test_only_supporting_material_sits_above_the_first_table(self):
         main = self.html.split('</time></div>', 1)[1]
-        self.assertTrue(main.startswith('</div><article class="ow-body"><section class="ow-section" id="ownership">'), main[:200])
-        table = main.find('<table')
-        for later in ('class="ow-answer"', 'class="ow-meta"', 'id="findings"', 'Ownership reviewed through'):
-            self.assertLess(table, main.find(later), later)
-        self.assertLess(main.find('id="prices"'), main.find('class="ow-answer"'))
+        above = main[:main.find('<table')]
+        self.assertIn('class="ow-meta"', above)
+        self.assertIn('class="ow-answer"', above)
+        self.assertIn('Ownership reviewed through', above)
+        self.assertIn('id="ownership"', above)
+        answer = re.search(r'<div class="ow-answer">(.*?)</div>', above, re.S).group(1)
+        self.assertEqual(answer.count('<p'), 1)
+        sentences = re.findall(r'[.?!](?=\s|<|$)', re.sub(r'<[^>]+>', '', answer).replace('?', '.', 1))
+        self.assertLessEqual(len(sentences) - 1, 2, answer)
+        for banned in ('<ul', '<ol', '<li', 'ow-finding', 'id="findings"', 'ow-local', 'Mohegan', '<figure', '<img src="/images/articles'):
+            self.assertNotIn(banned, above, banned)
+        self.assertLess(main.find('id="prices"'), main.find('Mohegan'))
+        self.assertLess(main.find('id="prices"'), main.find('ow-local'))
 
     def test_headline_fields_agree(self):
         ld = [json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', self.html, re.S)]
