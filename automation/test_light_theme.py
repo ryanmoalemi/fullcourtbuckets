@@ -52,8 +52,9 @@ class LightThemeTests(unittest.TestCase):
         self.assertEqual((ROOT / 'assets/site-nav.css').read_text(encoding='utf-8'), site_nav.CSS_TEXT)
 
     def test_header_uses_light_logo_and_theme_color(self):
-        self.assertIn('/logo-light.webp', site_nav.LOGO_HTML)
-        self.assertTrue((ROOT / 'logo-light.png').exists() and (ROOT / 'logo.png').exists())
+        self.assertIn('/logo.svg', site_nav.LOGO_HTML)
+        self.assertIn('/logo-c.webp', site_nav.LOGO_HTML)
+        self.assertTrue((ROOT / 'logo-c.png').exists() and (ROOT / 'logo-light.png').exists() and (ROOT / 'logo.png').exists())
         for marker in ('html body header.site-header', 'html body .ticker{', 'html body .site-footer', 'html body .news-item'):
             self.assertIn(marker, site_nav.CSS_TEXT)
         dark = []
