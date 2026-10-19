@@ -654,6 +654,14 @@ def faq(data: dict, s: dict) -> list[tuple[str, str]]:
 
 def body(data: dict, s: dict) -> str:
     p = []
+    # Ryan's rule: on data pages the data tables sit directly under the headline and byline;
+    # the short answer, coverage line and findings follow them.
+    p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
+             + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
+    p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
+             '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
+             '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
+    p.append('<section class="ow-section" id="prices"><h2 class="section-title">Prices and valuations</h2>' + prices_section(data) + '</section>')
     p.append(f'<p class="ow-meta">Published {esc(human_date(PUBLISHED))} · Data through {esc(human_date(DATA_THROUGH))} · Dataset {DATASET_VERSION}</p>')
     p.append(
         '<div class="ow-answer"><p><strong>Who owns WNBA teams?</strong> '
@@ -672,12 +680,6 @@ def body(data: dict, s: dict) -> str:
              'Investors are the ones teams or filings have made public; this is not a complete cap table.</p>')
     p.append('<nav class="ow-local" aria-label="On this page"><a href="#ownership">Ownership</a><a href="#investors">Investors</a>'
              '<a href="#transactions">Transactions</a><a href="#facilities">Facilities</a><a href="#methods">Methods</a></nav>')
-    p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
-             + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
-    p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
-             '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
-             '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
-    p.append('<section class="ow-section" id="prices"><h2 class="section-title">Prices and valuations</h2>' + prices_section(data) + '</section>')
     p.append('<section class="ow-section" id="findings"><h2 class="section-title">What FCB\'s research shows</h2>' + findings(data, s) + '</section>')
     p.append('<section class="ow-section" id="transactions"><h2 class="section-title">Franchise sales and expansion fees</h2>' + transactions_section(data) + '</section>')
     p.append('<section class="ow-section" id="facilities"><h2 class="section-title">Practice facility investments</h2>' + facilities_section(data) + '</section>')

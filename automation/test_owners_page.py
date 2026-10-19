@@ -34,6 +34,14 @@ class OwnersPageTests(unittest.TestCase):
         self.assertEqual(self.html.count('<h1>'), 1)
         self.assertIn(f'<h1>{owners.esc(owners.H1)}</h1>', self.html)
 
+    def test_data_table_sits_directly_under_the_byline(self):
+        main = self.html.split('</time></div>', 1)[1]
+        self.assertTrue(main.startswith('</div><article class="ow-body"><section class="ow-section" id="ownership">'), main[:200])
+        table = main.find('<table')
+        for later in ('class="ow-answer"', 'class="ow-meta"', 'id="findings"', 'Ownership reviewed through'):
+            self.assertLess(table, main.find(later), later)
+        self.assertLess(main.find('id="prices"'), main.find('class="ow-answer"'))
+
     def test_headline_fields_agree(self):
         ld = [json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', self.html, re.S)]
         article = next(x for x in ld if x['@type'] == 'Article')
