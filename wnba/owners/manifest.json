@@ -4,8 +4,8 @@
  "license": "https://creativecommons.org/licenses/by/4.0/",
  "files": {
   "data-dictionary.md": {
-   "sha256": "dbd8304e3b7f77e3a7168880e78083d7234624172bfcc58ae1377fbc2b95eb8c",
-   "bytes": 8643
+   "sha256": "766a0a8a140ce5d34d53d6d4722954092074d971d413371b773f6d59ab783955",
+   "bytes": 9281
   },
   "entities.csv": {
    "sha256": "66fc6d2ab1bbb24825d0e38e4d12a380e6d4286bf01de9167feea562ab740cb5",
@@ -20,12 +20,16 @@
    "bytes": 5571
   },
   "findings.json": {
-   "sha256": "2ffd6e67c75d550945fa4f6af957f8b9962a372c31f0eb55e0c51838a20f0c5c",
+   "sha256": "2939e050fd038e6afdd58c497b28dc4f9502e53436dd5d98bcd3cefc59c5b567",
    "bytes": 712
   },
   "investors.csv": {
    "sha256": "c0280d653e77009510eb39ccfb7fdd7ba8ebd51d47feb915d41ce488a96922d1",
    "bytes": 35480
+  },
+  "owner_photos.csv": {
+   "sha256": "e7d794a8a055f28b979a1ff24ac63810d77b5fd988d262c572a94f6d47077087",
+   "bytes": 5412
   },
   "ownership.csv": {
    "sha256": "b28b843462acff399216005b5ae70b872c66016bfe1ce68b41e772fe08bb01d5",
@@ -44,8 +48,8 @@
    "bytes": 13044
   },
   "wnba-owners.json": {
-   "sha256": "3aefcf1e785c2d0a11696a8d1d5b978920f2dc2291974f86b7032c05f79b1851",
-   "bytes": 221997
+   "sha256": "75a170abd10934fdde0b4c12df5f70e83cff5b64e60d01807d0eb2166b1c5d1d",
+   "bytes": 232925
   }
  },
  "records": {
@@ -56,6 +60,7 @@
   "facility_projects": 11,
   "facility_financials": 18,
   "valuations": 53,
-  "sources": 80
+  "sources": 80,
+  "owner_photos": 22
  }
 }

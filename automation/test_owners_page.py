@@ -140,10 +140,23 @@ class OwnersPageTests(unittest.TestCase):
     def test_listed_as_a_static_sitemap_page(self):
         self.assertIn("('wnba/owners/index.html', '/wnba/owners/')", (ROOT / 'automation' / 'build_players.py').read_text(encoding='utf-8'))
 
-    def test_no_photo_on_page(self):
+    def test_only_credited_owner_photos_on_page(self):
+        """Ryan (Oct 19, 2026): small owner circles allowed, but only openly licensed, credited, self-hosted ones."""
+        import csv
         main = self.html.split('<main', 1)[1].split('</main>', 1)[0]
         imgs = re.findall(r'<img\b[^>]*>', main)
-        self.assertTrue(all('ryan-moalemi-photo-byline' in i for i in imgs), imgs)
+        with (ROOT / 'data' / 'wnba' / 'owners' / 'owner_photos.csv').open(encoding='utf-8') as fh:
+            photos = {r['image_path']: r for r in csv.DictReader(fh) if r['display'] == 'photo'}
+        for tag in imgs:
+            if 'ryan-moalemi-photo-byline' in tag:
+                continue
+            src = re.search(r'src="([^"]+)"', tag).group(1)
+            self.assertIn(src, photos, tag)
+            row = photos[src]
+            self.assertTrue(row['license'] and row['author'] and row['source_url'].startswith('https://commons.wikimedia.org/'), row)
+            self.assertRegex(row['license'], r'^(CC BY|CC BY-SA|Public domain|CC0)', row)
+            self.assertTrue((ROOT / 'wnba' / 'owners' / src).is_file(), src)
+            self.assertIn(row['source_url'], main, f'no credit in Methods for {src}')
 
 
 if __name__ == '__main__':

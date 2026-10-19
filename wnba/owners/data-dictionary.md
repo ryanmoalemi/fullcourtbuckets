@@ -14,7 +14,7 @@ Corrections, media and data questions: ryan@fullcourtbuckets.com (general: hello
 - **Money:** USD millions, nominal unless the column says 2026 dollars. Arithmetic runs at full precision and is displayed to one decimal.
 
 ## ownership.csv: current ownership summary (18 rows: 15 active teams, 3 announced) · 12 fields
-team_id · team · scope (active / future) · team_page (existing FCB slug) · controlling_owner · controlling_owner_source_url · controlling_owner_evidence · governor (currently "not yet sourced" for every team) · nba_relationship_current · nba_relationship_at_2026_05_04 (the snapshot used for valuation comparisons) · facility_project_ids · last_verified_at.
+team_id · team · scope (active / future) · team_page (existing FCB slug) · controlling_owner · controlling_owner_source_url · controlling_owner_evidence · governor (sourced for 1 of 15 active teams as of Oct 19, 2026: Los Angeles Sparks; "not yet sourced" elsewhere) · governor_source_url · nba_relationship_current · nba_relationship_at_2026_05_04 (the snapshot used for valuation comparisons) · facility_project_ids · last_verified_at.
 NBA relationship values: shared controlling ownership (evidence) · other affiliation (e.g., minority/parent role) · no qualifying shared-control relationship identified · unclear.
 
 ## investors.csv: publicly disclosed ownership and investor register (62 rows) · 22 fields
@@ -58,6 +58,9 @@ observation_id · project_id · amount_usd_m · precision · observation_type (a
 
 ## valuations.csv: publisher estimates (53 rows) · 9 fields
 valuation_id · team · publisher · published_date · amount_usd_m · currency · value_type ("unspecified (publisher estimate)") · source_url · note. These are CNBC and Sportico proprietary estimates, credited to them; they are not transaction prices or FCB data.
+
+## owner_photos.csv: controlling-owner photos (one row per named controlling owner of an active team)
+photo_id · person · team_id · image_path (self-hosted 96x96 face crop) · display (photo / initials) · source_url (Wikimedia Commons file page) · title · author · license · license_url · identity_basis (Wikidata item whose image property names the file) · crop · retrieved. Photos are not covered by FCB's CC BY 4.0 license; each keeps its own license. Initials are used where no openly licensed, face-visible photo was matched to the person.
 
 ## sources.csv: source index (78 rows) · 7 fields
 source_id · url · issuer · source_type · used_in · access_status (paywalled sources are flagged) · archive_url (empty: archive.org snapshots not yet captured).

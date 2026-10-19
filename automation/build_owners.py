@@ -50,7 +50,7 @@ DESCRIPTION = (
 )
 COLLECTIONS = (
     'ownership', 'investors', 'entities', 'transactions',
-    'facility_projects', 'facility_financials', 'valuations', 'sources',
+    'facility_projects', 'facility_financials', 'valuations', 'sources', 'owner_photos',
 )
 ZIP_NAME = 'wnba-owners-dataset.zip'
 JSON_NAME = 'wnba-owners.json'
@@ -79,7 +79,13 @@ PAGE_CSS = (
     'background:#1b1a19;color:#f5f3ef;border:1px solid #55524d;border-radius:4px}'
     '.ow-controls input{flex:1 1 220px}'
     '.ow-count{color:#a29f99;font-size:14px}'
+    '.page-header .eyebrow{font-size:12px}'
+    '.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}'
     '.ow-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}'
+    '.ow-scroll{position:relative}.ow-hint{display:none;margin:0 0 6px;font-size:13px;font-weight:700;color:#ff9800}'
+    '.ow-av{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;'
+    'vertical-align:middle;margin:0 6px 2px 0;object-fit:cover;flex:none;background:#3a3835;color:#f5f3ef;font:800 12px/1 Barlow,sans-serif}'
+    '.ow-person{display:inline-flex;align-items:center;margin:1px 8px 1px 0;white-space:nowrap}'
     '.ow-table{width:100%;border-collapse:collapse;font-size:15px}'
     '.ow-table th,.ow-table td{padding:8px 10px;border-bottom:1px solid #3a3835;text-align:left;vertical-align:top}'
     '.ow-table th{font-size:14px;color:#d0ccc6;white-space:nowrap}'
@@ -103,7 +109,11 @@ PAGE_CSS = (
     '.ow-faq h3{margin:18px 0 6px;font:800 19px/1.2 Barlow,sans-serif}'
     '.ow-cite{white-space:pre-wrap;font-size:14px;background:#1b1a19;padding:10px;border:1px solid #3a3835}'
     '@media (max-width:640px){.ow-profile dl{grid-template-columns:1fr}.ow-profile dt{margin-top:6px}'
-    '.ow-table{font-size:14px}}'
+    '.ow-table{font-size:14px}.ow-controls input{flex:1 1 100%}.ow-controls select{flex:1 1 auto;max-width:100%}'
+    '.ow-hint{display:block}.ow-scroll:after{content:"";position:absolute;top:0;right:0;bottom:0;width:28px;pointer-events:none;'
+    'background:linear-gradient(90deg,rgba(5,5,5,0),rgba(5,5,5,.9))}'
+    '.ow-table th:first-child,.ow-table td:first-child{position:sticky;left:0;z-index:1;background:#0b0b0d;min-width:96px;max-width:110px}'
+    '.ow-person{white-space:normal}}'
 )
 PAGE_JS = r"""(function(){
 function q(s,r){return (r||document).querySelectorAll(s);}
@@ -358,7 +368,8 @@ def table(headers: list[str], rows: list[tuple[str, str, list[str]]]) -> str:
         f'<tr id="{esc(rid)}" data-filter="{esc(flt)}">' + ''.join(f'<td>{c}</td>' for c in cells) + '</tr>'
         for rid, flt, cells in rows
     )
-    return f'<div class="ow-table-wrap"><table class="ow-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+    return ('<p class="ow-hint" aria-hidden="true">Swipe for more columns →</p>'
+            f'<div class="ow-scroll"><div class="ow-table-wrap"><table class="ow-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div></div>')
 
 
 def nba_short(value: str) -> str:
@@ -391,13 +402,44 @@ def governor_cell(r: dict) -> str:
     return esc(r['governor']) + (' ' + src_link(r['governor_source_url']) if r.get('governor_source_url') else '')
 
 
+def initials(name: str) -> str:
+    return ''.join(w[0] for w in name.split() if w[0].isalpha())[:2].upper()
+
+
+def owner_cell(data: dict, r: dict) -> str:
+    """Controlling owner text with a small circle photo (openly licensed) or initials before each person."""
+    text = esc(r['controlling_owner'])
+    for ph in (x for x in data['owner_photos'] if x['team_id'] == r['team_id']):
+        name = esc(ph['person'])
+        if ph['display'] == 'photo':
+            av = (f'<img class="ow-av" src="{esc(ph["image_path"])}" alt="" width="26" height="26" loading="lazy" '
+                  f'title="Photo: {esc(ph["author"])}, {esc(ph["license"])}">')
+        else:
+            av = f'<span class="ow-av" aria-hidden="true">{esc(initials(ph["person"]))}</span>'
+        text = text.replace(name, f'<span class="ow-person">{av}{name}</span>', 1)
+    return text
+
+
+def photo_credits(data: dict) -> str:
+    rows = [x for x in data['owner_photos'] if x['display'] == 'photo']
+    n_init = sum(1 for x in data['owner_photos'] if x['display'] != 'photo')
+    items = '; '.join(
+        f'{esc(x["person"])}: <a href="{esc(x["source_url"])}" target="_blank" rel="noopener">{esc(x["title"][5:])}</a> by {esc(x["author"])}, '
+        + (f'<a href="{esc(x["license_url"])}" target="_blank" rel="noopener">{esc(x["license"])}</a>' if x['license_url'] else esc(x['license']))
+        for x in rows)
+    return (f'<p><strong>Owner photos:</strong> {len(rows)} owners shown with openly licensed photos from Wikimedia Commons, '
+            'matched to the person through Wikidata, cropped to the face and resized by FCB (changes made). '
+            f'{n_init} owners without a licensable photo are shown with initials. Credits: {items}. '
+            'Details per photo are in owner_photos.csv.</p>')
+
+
 def ownership_section(data: dict) -> str:
     rows = []
     for r in active(data):
         ev = evidence_cell(r)
         flt = 'shared' if r['nba_relationship_current'].startswith('shared') else 'other'
         rows.append((r['team_id'], flt, [
-            team_link(r['team']), esc(r['controlling_owner']), governor_cell(r),
+            team_link(r['team']), owner_cell(data, r), governor_cell(r),
             esc(nba_short(r['nba_relationship_current'])), esc(first_effective(data, r['team'])), f'<span class="ow-ev">{ev}</span>',
         ]))
     t = table(['Team', 'Controlling owner/group', 'Team governor', f'NBA relationship ({human_date(DATA_THROUGH)})', 'Effective since', 'Evidence'], rows)
@@ -665,13 +707,8 @@ def body(data: dict, s: dict) -> str:
     )
     missing = [f"{r['team']}: {r['controlling_owner_evidence']}" for r in active(data) if r['controlling_owner_evidence'] != 'sourced']
     miss_txt = f' (not yet primary-sourced for control: {"; ".join(missing)})' if missing else ''
-    p.append(f'<p class="ow-small">Ownership reviewed through {esc(human_date(DATA_THROUGH))}. {s["teams"]} active teams indexed; {s["owner_sourced"]} have a sourced controlling-owner record{esc(miss_txt)}. '
-             f'Governors: {s["governors_sourced"]} of {s["teams"]} sourced so far. '
-             f'Investor register: {s["rows_total"]} rows = {s["relationships"]} person-or-organization relationships with active franchises '
-             f'({s["distinct_people"]} distinct people or families, {s["distinct_orgs"]} organization, across {s["franchises_with_investors"]} franchises; '
-             f'{s["inv_sourced"]} relationships tied to a primary document, {s["inv_report"]} to a labeled report only) + {s["rows_future"]} future-team rows + {s["rows_unnamed"]} unnamed group'
-             f'{" + " + str(s["rows_other_excluded"]) + " other excluded" if s["rows_other_excluded"] else ""}. '
-             'Investors are the ones teams or filings have made public; this is not a complete cap table.</p>')
+    p.append(f'<p class="ow-small">Ownership reviewed through {esc(human_date(DATA_THROUGH))}: {s["teams"]} active teams, {s["owner_sourced"]} with a sourced controlling-owner record, '
+             f'{s["governors_sourced"]} of {s["teams"]} governors sourced. Full counts and evidence limits are in <a href="#methods">Methods</a>.</p>')
     p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
              + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
     p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
@@ -689,6 +726,13 @@ def body(data: dict, s: dict) -> str:
     items = faq(data, s)
     p.append('<section class="ow-section ow-faq" id="faq"><h2 class="section-title">Frequently asked questions</h2>'
              + ''.join(f'<h3>{esc(q)}</h3><p>{esc(a)}</p>' for q, a in items) + '</section>')
+    coverage_li = (f'<li><strong>Coverage:</strong> {s["teams"]} active teams indexed; {s["owner_sourced"]} have a sourced controlling-owner record{esc(miss_txt)}. '
+             f'Investor register: {s["rows_total"]} rows = {s["relationships"]} person-or-organization relationships with active franchises '
+             f'({s["distinct_people"]} distinct people or families, {s["distinct_orgs"]} organization, across {s["franchises_with_investors"]} franchises; '
+             f'{s["inv_sourced"]} relationships tied to a primary document, {s["inv_report"]} to a labeled report only) + {s["rows_future"]} future-team rows + {s["rows_unnamed"]} unnamed group'
+             f'{" + " + str(s["rows_other_excluded"]) + " other excluded" if s["rows_other_excluded"] else ""}. '
+             'Investors are the ones teams or filings have made public; this is not a complete cap table.</li>')
+    gov_teams = [r['team'] for r in active(data) if r['governor'] and r['governor'] != 'not yet sourced']
     cite_apa = (f'Moalemi, R. ({PUBLISHED[:4]}, {human_date(PUBLISHED).split(",")[0]}). {H1} (Dataset {DATASET_VERSION}). Full Court Buckets. {CANONICAL}')
     cite_plain = f'Source: Full Court Buckets WNBA ownership dataset {DATASET_VERSION} (data through {human_date(DATA_THROUGH)}), {CANONICAL}'
     p.append(
@@ -701,7 +745,10 @@ def body(data: dict, s: dict) -> str:
         '<li><strong>Prices:</strong> amounts are nominal as disclosed or reported. 2026-dollar figures use BLS CPI-U (CUUR0000SA0) annual averages against the January to September 2026 average. '
         'They measure purchasing power, not returns.</li>'
         '<li><strong>Valuations:</strong> CNBC (May 4, 2026) and Sportico (May 1, 2026) estimates, each credited to its publisher.</li>'
-        '<li><strong>Not yet sourced:</strong> team governors, defunct franchises and the transactions listed as known gaps.</li></ul>'
+        + coverage_li
+        + f'<li><strong>Governors:</strong> {s["governors_sourced"]} of {s["teams"]} sourced ({esc(", ".join(gov_teams))}); the rest are not yet sourced.</li>'
+        '<li><strong>Not yet sourced:</strong> defunct franchises and the transactions listed as known gaps.</li></ul>'
+        + photo_credits(data)
         + coverage_table(data)
         + '<h3>Download the data</h3><div class="ow-downloads">'
         + ''.join(f'<a href="{n}.csv" download>{n}.csv</a>' for n in COLLECTIONS)
