@@ -2,6 +2,14 @@
 
 Use this for every new preview, recap, feature and guide. It applies to the WNBA bot's drafts too.
 
+## Rule #1: be the primary source (Ryan, Oct 19, 2026)
+- Tier 1 reporters (NYT, ESPN, The Athletic, WSJ) must link the primary source of a fact, never an aggregator. So unless FCB is the primary source, they won't link to us.
+- Every FCB piece needs something original that exists nowhere else: our own dataset, count, ledger, tracker, primary-document research or cross-dataset analysis. A page that only summarizes other sites doesn't meet the bar.
+- Every fact we cite links its own primary source: the official league or team release, the official game record, a court, arbitration or SEC filing, a Secretary of State or trademark record, a municipal document, or an archive.org snapshot of one. Don't link an aggregator or a story that just repeats the fact.
+- Cite CNBC, Sportico, Forbes and similar outlets only for their own proprietary work (valuations, net worths, original reporting). When no primary source exists, say so and cite the best contemporaneous report, labeled as a report.
+- Data pages carry a Source column per row, a data dictionary, a downloadable file and a corrections address.
+- This doesn't change the stats rule: never credit ESPN or the stats API; FCB gathers and verifies its own data.
+
 ## Headlines and openings
 - Write headlines in sentence case. Lead with the result or the player plus the number ("Burton's late three and Stokes' block lift Valkyries over Aces 83-81"). Don't use all-caps score summaries or clickbait questions.
 - Use the same headline in the H1, the news card, og/twitter titles and the JSON-LD headline. A title tag can be shortened, but its meaning can't change.
