@@ -13,7 +13,7 @@ PT = ZoneInfo("America/Los_Angeles")
 STOP_AFTER = dt.date(2026, 10, 20)  # PT; does nothing after this date
 TEAMS = {"ATL", "GS", "GSV"}
 GAME_KEYS = ("id", "date", "datetime", "status", "period", "time", "postseason",
-             "home_score", "visitor_score", "home_team_score", "visitor_team_score")
+             "home_score", "away_score", "visitor_score", "status_state", "home_team_score", "visitor_team_score")
 
 
 def abbr(team):
@@ -63,7 +63,7 @@ def finish(out):
     g, lp = out.get("game", {}), out.get("last_play", {})
     row = (f"| {out['fetched_pt']} | {out['fetched_utc']} | {g.get('status', '')} | {g.get('period', '')} | {g.get('time', '')} | "
            f"{lp.get('period', '')} {lp.get('clock', '')} | {str(lp.get('text', '')).replace('|', '/')} | {out.get('play_count', '')} | "
-           f"{lp.get('away_score', g.get('visitor_score', ''))}-{lp.get('home_score', g.get('home_score', ''))} | {out.get('error') or out.get('skipped') or ''} |")
+           f"{lp.get('away_score', g.get('away_score', g.get('visitor_score', '')))}-{lp.get('home_score', g.get('home_score', ''))} | {out.get('error') or out.get('skipped') or ''} |")
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a") as f:
