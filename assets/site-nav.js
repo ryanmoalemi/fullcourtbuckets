@@ -167,3 +167,6 @@
     if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') setOpen(false);
   });
 })();
+/* Now bar staleness guard: after data-expires, show the evergreen fallback link. */
+(function(){var bar=document.querySelector('.fcb-now');if(!bar)return;var exp=Date.parse(bar.getAttribute('data-expires')||'');
+if(!isNaN(exp)&&Date.now()>=exp){var a=bar.querySelector('.ticker-text a');if(a){a.textContent=bar.getAttribute('data-fallback-text');a.setAttribute('href',bar.getAttribute('data-fallback-url'));}}})();
