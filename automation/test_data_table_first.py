@@ -13,7 +13,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKIP_DIRS = {'.git', '__pycache__', 'node_modules'}
-REQUIRED = ['news/2026-wnba-finals-ratings-tracker/index.html']
+REQUIRED = [
+    'news/2026-wnba-finals-ratings-tracker/index.html',
+    'news/wnba-expansion-teams/index.html',
+]
 MARK = re.compile(r'<[a-z]+\b[^>]*\bdata-fcb-data-table\b', re.S)
 BYLINE_ROW = re.compile(r'<div class="byline-row[^"]*">.*?</div>', re.S)
 BANNED = re.compile(r'<(?:ul|ol|dl|table|figure|svg|canvas|img|picture|iframe|blockquote)\b', re.I)
