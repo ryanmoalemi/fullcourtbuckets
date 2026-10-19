@@ -1,0 +1,65 @@
+/* Light theme MOCKUP (branch cursor/light-theme-mockup). Loaded last in <head>.
+   Matches the Finals ratings tracker's white table panel: white page, dark text,
+   purple headings/links, alternating light row shading. Header bar and footer stay
+   dark because the logo artwork has an opaque black background.
+   Contrast (on #fff): text #151413 18.6:1, muted #5a554e 7.3:1, link #5b22c9 9.0:1,
+   pink #b8006f 6.0:1. Min text 12px. */
+:root{color-scheme:light;--bg:#f7f5f2;--surface:#ffffff;--panel:#ffffff;--text:#151413;--muted:#5a554e;--line:#e2ddd6;--purple:#5b22c9;--pink:#b8006f;--link:#5b22c9;--zebra:#f6f1ff;--head:#f3f0eb}
+html body{background:var(--bg)!important;color:var(--text)}
+/* keep the bar and footer dark (logo) */
+html body header,html body .utility,html body .ticker,html body .site-header,html body header.site-header{color:#f5f3ef}
+html body .site-header,html body header.site-header{--text:#f5f3f7;--muted:#c7c3bd;--line:#2b2930}
+/* main surfaces */
+html body main,html body #content{color:var(--text)}
+html body .article,html body .rail-box,html body .article-card,html body .coverage-card,html body .side-promo,html body .feature,html body .feature-content,html body .cta,
+html body .hero,html body .number-card,html body .hero-stats,html body .overview-strip,html body .side-card,html body .player-card,html body .team-card,html body .archive-band,
+html body .fcb-quick-cite,html body .fcb-tracker-update,html body .table-scroll{background:#fff!important;color:var(--text)!important;border-color:var(--line)!important;box-shadow:0 1px 3px rgba(40,20,80,.06)}
+html body .feature::before{display:none}
+html body .feature picture,html body .article-visual{background:#ece8f3!important}
+html body main p,html body main li,html body main td,html body main dd,html body main .deck,html body .article p,html body .article ul,html body .article td,html body .feature p,
+html body .fcb-quick-cite li,html body .fcb-tracker-update p,html body .hero-meta,html body .metric>span,html body .ticker-text{color:var(--text)!important}
+html body main h1,html body main h2,html body main h3,html body main h4,html body .article h1,html body .article h2,html body .article h3{color:#2a1458!important}
+html body main strong,html body main b,html body .article strong,html body .fcb-quick-cite strong,html body .article .pull-quote{color:#151413!important}
+html body .meta,html body .meta-row,html body .article-date,html body .article .article-date,html body .breadcrumbs,html body .article figcaption,html body .article caption,html body .brand-sign,
+html body .article .how-made,html body .muted,html body .metric small,html body .hero-art>small,html body .fcb-note,html body .fcb-embed-note,html body .fcb-data-table caption,
+html body .player-card>.small,html body .number-card>span,html body .text-button,html body .segmented button,html body main small{color:var(--muted)!important}
+/* links */
+html body main a:not(.button):not(.site-brand),html body .article a,html body .breadcrumbs a,html body .rail-more a,html body .sources a,html body a.inline-link,
+html body .article .how-made a,html body .article-end a,html body .team-news-item,html body #team-coverage .team-coverage-list a,html body #team-coverage .team-coverage-more summary,
+html body .fcb-csv,html body .fcb-anchor,html body .media-contact a,html body .team-photo figcaption a,html body .career-photo figcaption a,html body .season-summary a,html body .career-copy a{color:var(--link)!important}
+html body main a:hover,html body .article a:hover{color:#b8006f!important}
+html body .article .byline,html body main .byline{color:#2a2622!important}
+html body .article-players a{background:#f6f1ff!important;color:#5b22c9!important;border-color:#d8c8ff!important}
+html body .status,html body .timeline strong{color:#b8006f!important}
+html body .gradient{background:linear-gradient(105deg,#5b22c9,#b8006f 62%,#c25e00);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* labels that were orange on black */
+html body main .tag,html body main .kicker,html body main .eyebrow,html body .fcb-quick-cite-title{color:#b8006f!important}
+/* tables: tracker panel look */
+html body main table{background:#fff;color:var(--text)}
+html body main thead th,html body main table th,html body .article th,html body .fcb-data-table th,html body thead th:first-child{background:var(--head)!important;color:#45413b!important;border-color:var(--line)!important}
+html body main tbody tr,html body main tbody td,html body main tbody th,html body .table-scroll tbody td:first-child{background:#fff!important;color:var(--text)!important;border-color:var(--line)!important}
+html body main tbody tr:nth-child(even),html body main tbody tr:nth-child(even) td,html body main tbody tr:nth-child(even) th{background:var(--zebra)!important}
+html body main tbody tr:hover td,html body main tbody tr:hover th{background:#ece3ff!important}
+html body main tr.rookie-year td,html body main tr.rookie-year th{background:#fff4e0!important}
+/* forms, segmented controls, FAQ */
+html body main select,html body main input,html body main textarea,html body .fcb-citation-source{background:#fff!important;color:var(--text)!important;border:1px solid #bdb6ad!important}
+html body .segmented{background:#f3f0eb!important}
+html body .segmented button[aria-pressed=true]{background:#5b22c9!important;color:#fff!important}
+html body main details,html body main .faq{background:#fff;border-color:var(--line)!important}
+html body main summary{color:#2a1458!important}
+/* images keep a neutral backdrop instead of black */
+html body .article img,html body .team-news-item img,html body .team-card-photo,html body .team-photo img,html body .career-photo img,html body .article .byline img{background:#ece8f3!important}
+/* ads */
+html body ins.adsbygoogle,html body .ad-slot{background:transparent!important}
+/* minimum text size */
+html body main small,html body main .small,html body main th,html body main td,html body .meta,html body figcaption,html body caption{font-size:max(12px,1em)}
+/* fixes after first screenshot pass */
+html body .ticker .ticker-text,html body .ticker a{color:#e8e3df!important}
+html body main,html body #content,html body .article{--orange:#a85400}
+html body main .label,html body main .cat,html body main .article-copy .cat,html body main .rail-conf{color:#a85400!important}
+html body main .eyebrow,html body main .small,html body main .label,html body main .cat,html body main .rail-conf{font-size:12px!important}
+html body main .button:not(.primary){background:#fff!important;color:#5b22c9!important;border:1px solid #5b22c9!important}
+/* tracker's own purple band stays white-on-purple */
+html body .article .hdb-band,html body .article .hdb-band h2,html body .article .hdb-band p,html body .article .hdb-band strong{color:#fff!important}
+html body .article .hdb-band a.cl:not(.x):not(.y):not(.z){color:#fff!important}
+html body main .cta a.watch-btn:not(.x):not(.y),html body main a.watch-btn:not(.x):not(.y):not(.z){color:#fff!important}
