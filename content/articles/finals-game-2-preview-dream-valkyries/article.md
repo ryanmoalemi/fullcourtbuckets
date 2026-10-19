@@ -2,6 +2,7 @@
 title: "WNBA Finals Game 2 preview: Atlanta lost the turnover battle for the first time this postseason"
 slug: finals-game-2-preview-dream-valkyries
 date: 2026-10-19
+updated: "2026-10-19 12:13 PT"
 description: "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Game 2 is Monday at 5 p.m. PT at Chase Center, with Golden State up 1-0."
 category: news
 tags:
@@ -27,8 +28,8 @@ Game 2 is Monday at Chase Center, with Golden State up 1-0. The question for Atl
 - Where: Chase Center, San Francisco
 - TV and streaming: USA Network, CNBC and Peacock
 - Series: Golden State leads 1-0
-- Series odds: Valkyries -190, Dream +155 ([DraftKings](https://sportsbook.draftkings.com/leagues/basketball/wnba), checked Oct. 19 at 9:50 a.m. PT)
-- Game line: Valkyries -2.5, total 152.5 ([DraftKings](https://sportsbook.draftkings.com/leagues/basketball/wnba), checked Oct. 19 at 9:50 a.m. PT)
+- Series odds: Valkyries -190, Dream +155 ([DraftKings](https://sportsbook.draftkings.com/leagues/basketball/wnba), checked Oct. 19 at 12:13 p.m. PT)
+- Game line: Valkyries -2.5, total 152.5 ([DraftKings](https://sportsbook.draftkings.com/leagues/basketball/wnba), checked Oct. 19 at 12:13 p.m. PT)
 - Next: Game 3 is Wednesday, Oct. 21, at 5 p.m. PT at State Farm Arena in Atlanta ([Valkyries schedule update](https://valkyries.wnba.com/news/wnba-finals-schedule-updates-20261013), [WNBA release on Games 3 and 4](https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena))
 
 ## Injury report
@@ -67,7 +68,7 @@ Gray went 0 for 7 in the fourth. Atlanta's starting guards, Gray, Howard and Can
 
 [DraftKings](https://sportsbook.draftkings.com/leagues/basketball/wnba) has Golden State favored by 2.5 points in Game 2, with the Valkyries at -105 and the Dream +2.5 at -115. The moneyline is Golden State -135 and Atlanta +114. The total is 152.5, with the over at -108 and the under at -112. DraftKings opened Game 2 at Golden State -1.5 with a 151.5 total ([DraftKings Network](https://dknetwork.draftkings.com/2026/10/17/opening-odds-for-game-2-of-the-wnba-finals/)), so both numbers have gone up a point.
 
-The series price is Valkyries -190 and Dream +155, per DraftKings. Prices were checked Oct. 19 at 9:50 a.m. PT and may change before tip-off.
+The series price is Valkyries -190 and Dream +155, per DraftKings. Prices were checked Oct. 19 at 12:13 p.m. PT and may change before tip-off.
 
 My betting lean is the under 152.5. Game 1 finished with 132 points, 20.5 under this total, and neither team made more than a third of its shots. One game is a small sample, and Atlanta scored at least 85 in every playoff game before Saturday, so this is a lean, not a lock.
 
