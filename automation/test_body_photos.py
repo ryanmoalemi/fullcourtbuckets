@@ -15,19 +15,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # Focal points checked against the source photos. Each one keeps heads in frame.
 BODY_FOCALS = {
-    'williams-2025.webp': 'center 0%',
-    'astier-2026.webp': 'center 7%',
-    'valkyries-bench-target-center-2026.webp': 'center 0%',
-    'borlase-dream-gateway-2026.webp': 'center 0%',
-    'angel-reese-dream-2026.webp': 'center 2%',
-    'sabrina-ionescu-liberty-2026.webp': 'center 0%',
-    'janelle-salaun-valkyries-2026.webp': 'center 0%',
-    'aja-wilson-aces-2024.webp': 'center 0%',
-    'moda-center.webp': 'center 20%',
-    'coca-cola-coliseum.webp': 'center 0%',
-    'caitlin-clark-fever-2026.webp': 'center 0%',
-    'han-xu-liberty-barclays-2026.webp': 'center 0%',
-    'gabby-williams-valkyries-2026.webp': 'center 20%',
+    'williams-2025-16x9.webp': 'center 0%',
+    'astier-2026-16x9.webp': 'center 7%',
+    'valkyries-bench-target-center-2026-16x9.webp': 'center 0%',
+    'borlase-dream-gateway-2026-16x9.webp': 'center 0%',
+    'angel-reese-dream-2026-16x9.webp': 'center 2%',
+    'sabrina-ionescu-liberty-2026-16x9.webp': 'center 0%',
+    'janelle-salaun-valkyries-2026-16x9.webp': 'center 0%',
+    'aja-wilson-aces-2024-16x9.webp': 'center 0%',
+    'moda-center-16x9.webp': 'center 20%',
+    'coca-cola-coliseum-16x9.webp': 'center 0%',
+    'caitlin-clark-fever-2026-16x9.webp': 'center 0%',
+    'han-xu-liberty-barclays-2026-16x9.webp': 'center 0%',
+    'gabby-williams-valkyries-2026-16x9.webp': 'center 20%',
 }
 
 BODY_IMG_RULE = (
