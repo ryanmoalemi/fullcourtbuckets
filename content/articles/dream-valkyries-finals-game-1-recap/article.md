@@ -19,7 +19,7 @@ ticker: "Valkyries 68, Dream 64. Golden State leads the Finals 1-0."
 
 The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) beat the [Atlanta Dream](/wnba/teams/atlanta-dream/) 68-64 in Game 1 of the WNBA Finals on Saturday at Chase Center, and they did it by holding Atlanta scoreless for the final 3:12. [Gabby Williams](/wnba/gabby-williams/) scored 8 of Golden State's last 9 points, including the free throws at 1:18 that gave the Valkyries their first lead since the third quarter.
 
-Atlanta led for most of the afternoon. The Dream were up 64-61 with 3:12 left and never scored again. Golden State now leads the best-of-seven series 1-0, and it has beaten Atlanta in all four meetings this season, counting three regular-season wins.
+Atlanta led for most of the afternoon in front of a [sellout crowd of 18,064](/news/2026-wnba-finals-ratings-tracker/). The Dream were up 64-61 with 3:12 left and never scored again. Golden State now leads the best-of-seven series 1-0, and it has beaten Atlanta in all four meetings this season, counting three regular-season wins.
 
 ## The last 3:12
 
