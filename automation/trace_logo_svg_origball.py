@@ -29,6 +29,11 @@ d2=((xx-BALL[0]*S)**2+(yy-BALL[1]*S)**2)<=((BALL[2]+8)*S)**2
 c2=inball|(d2&((xx>BALL[0]*S)|(yy<BALL[1]*S)))
 dark=smooth(fillsmall(dark,150*S*S))
 seam=dark&d2
+# drop the small dark streak just under the ball
+lab,n=nd.label(dark&~d2); cm=np.array(nd.center_of_mass(dark&~d2,lab,range(1,n+1))); sz=nd.sum(dark&~d2,lab,range(1,n+1))
+under=[i+1 for i,(cy,cx) in enumerate(cm) if BALL[1]*S+BALL[2]*S*0.6<cy<(BALL[1]+BALL[2]+30)*S and abs(cx-BALL[0]*S)<55*S and sz[i]<4000*S*S]
+print('streak comps',len(under))
+dark=dark&~np.isin(lab,under)
 dark=dark&~d2
 color=smooth(fillsmall(color,150*S*S))
 dark=clean(dark,40); color=clean(color,60)
