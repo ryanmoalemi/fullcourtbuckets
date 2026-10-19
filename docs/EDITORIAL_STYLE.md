@@ -53,3 +53,9 @@ Use this for every new preview, recap, feature and guide. It applies to the WNBA
 - Set `object-position` on that image so the crop keeps every head fully in frame. The default is `center 20%`. Move it, for example to `center 0%`, when the head sits higher. Look at the crop before publishing. If a head is cut off, change the focal point. Do not publish a crop that slices a head.
 - A screenshot or a chart can stay taller when the reader needs the detail. Mark the figure `no-crop` (a `screenshot`, `chart`, or `stat-board` figure is treated as `no-crop`). Do not crop those. They use `object-fit: contain`. On screens up to 900px wide the cap is `max-height: 70vh`. On wider screens the cap is `max-height: 720px`. If the image is still too tall to read inside that cap, export a shorter file. Do not hide labels or a face by cropping.
 - This rule does not change the hero, the news-listing cards, or player pages. A card photo in a list article keeps the `card` class and stays whole, at the existing narrow width, because cropping the card hides the card.
+
+## Data pages, charts and tools (Ryan, Oct 19, 2026)
+- Data pages, charts and tools follow normal academic data-publication norms.
+- Material that supports the data may sit above or near the table: methods, sources, the data-through date, definitions, and one key-fact line.
+- News, game schedules, storylines and bullet lists never sit above a data table, chart or tool. They go below it.
+- Mark the element that holds the table, chart or tool with `data-fcb-data-table`. `automation/test_data_table_first.py` fails the build if a list, chart, image, news answer block or more than 700 characters of text sits between the byline and that element.
