@@ -1340,7 +1340,7 @@ def _head(schema: str) -> str:
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{hero_url}">
 <meta property="og:site_name" content="Full Court Buckets">
-<meta name="theme-color" content="#07060a">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&amp;family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
@@ -1351,7 +1351,7 @@ def _head(schema: str) -> str:
 </style>
 </head>
 <body>
-<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 '''
 
 

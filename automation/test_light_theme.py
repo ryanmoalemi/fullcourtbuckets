@@ -13,7 +13,9 @@ from link_graph import iter_html
 ROOT = Path(__file__).resolve().parents[1]
 MARK = 'Light theme (sitewide)'
 SAMPLE = ['/', '/news/finals-game-2-preview-dream-valkyries/', '/wnba/aja-wilson/',
-          '/wnba/teams/golden-state-valkyries/', '/news/2026-wnba-finals-ratings-tracker/']
+          '/wnba/teams/golden-state-valkyries/', '/news/2026-wnba-finals-ratings-tracker/',
+          '/about/', '/authors/ryan-moalemi/', '/news/', '/standings/',
+          '/authors/ryan-moalemi/ryans-angel-reese-cards/']
 
 JS = r"""() => {
   const rgb = s => { const m = s.match(/[\d.]+/g); return m ? m.map(Number) : null; };
@@ -23,7 +25,14 @@ JS = r"""() => {
       if (cs.backgroundImage && cs.backgroundImage!=='none') return null;
       const c=rgb(cs.backgroundColor); if (c && (c.length<4 || c[3]>0.5)) return c; } return [255,255,255]; };
   const bad=[];
-  for (const el of document.querySelectorAll('main *, #content *')) {
+  const cards=[];
+  for (const el of document.querySelectorAll('body *')) {
+    const cs0=getComputedStyle(el), c0=rgb(cs0.backgroundColor), r=el.getBoundingClientRect();
+    if (c0 && (c0.length<4 || c0[3]>0.5) && lum(c0)<0.12 && r.width>120 && r.height>50 && (el.innerText||'').trim()
+        && /^(A|ARTICLE|SECTION|DIV|LI|BUTTON|HEADER|FOOTER|NAV|UL|ASIDE|DIALOG)$/.test(el.tagName)
+        && !el.closest('.hdb-band, thead, .fcb-hero-db')) cards.push('dark panel '+el.tagName+'.'+[...el.classList].join('.'));
+  }
+  for (const el of document.querySelectorAll('body *')) {
     const t=[...el.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();
     if (!t) continue; const cs=getComputedStyle(el);
     if (cs.visibility==='hidden' || cs.display==='none' || el.getClientRects().length===0) continue;
@@ -32,14 +41,27 @@ JS = r"""() => {
     const a=lum(fg), b=lum(bg), ratio=(Math.max(a,b)+0.05)/(Math.min(a,b)+0.05);
     if (b>0.8 && ratio<3) bad.push(el.tagName+' "'+t.slice(0,40)+'" '+cs.color+' on '+bg.join(','));
   }
-  return bad.slice(0,20);
+  return cards.slice(0,10).concat(bad.slice(0,20));
 }"""
 
 
 class LightThemeTests(unittest.TestCase):
+    maxDiff = None
     def test_shared_css_carries_theme(self):
         self.assertIn(MARK, site_nav.CSS_TEXT)
         self.assertEqual((ROOT / 'assets/site-nav.css').read_text(encoding='utf-8'), site_nav.CSS_TEXT)
+
+    def test_header_uses_light_logo_and_theme_color(self):
+        self.assertIn('/logo-light.webp', site_nav.LOGO_HTML)
+        self.assertTrue((ROOT / 'logo-light.png').exists() and (ROOT / 'logo.png').exists())
+        for marker in ('html body header.site-header', 'html body .ticker{', 'html body .site-footer', 'html body .news-item'):
+            self.assertIn(marker, site_nav.CSS_TEXT)
+        dark = []
+        for path in iter_html(ROOT):
+            html = path.read_text(encoding='utf-8', errors='ignore')
+            if 'name="theme-color" content="#0c0c10"' in html or 'srcset="/logo.webp"' in html:
+                dark.append(str(path.relative_to(ROOT)))
+        self.assertEqual(dark, [])
 
     def test_every_page_loads_theme(self):
         missing = []

@@ -100,7 +100,7 @@ def fit_size(size: tuple[int, int], box: tuple[int, int], *, cover: bool = False
 def display_box(rel: str) -> tuple[tuple[int, int], bool, int]:
     """(box, cover, min_side) for a repo-relative posix path."""
     name = Path(rel).name
-    if rel in ('logo.png', 'logo.webp') or name == 'logo.png':
+    if rel in ('logo.png', 'logo.webp', 'logo-light.png', 'logo-light.webp') or name in ('logo.png', 'logo-light.png'):
         return LOGO_BOX, False, 0
     if rel.startswith('images/authors/') and 'byline' in name:
         return BYLINE_BOX, False, 0
@@ -126,7 +126,7 @@ def is_approved_portrait(rel: str) -> bool:
 def quality_for(rel: str, opaque_png: bool) -> int:
     if rel.startswith('images/authors/'):
         return 90
-    if rel in ('logo.png', 'logo.webp'):
+    if rel in ('logo.png', 'logo.webp', 'logo-light.png', 'logo-light.webp'):
         return 82
     if opaque_png and not is_approved_portrait(rel):
         return 85
@@ -197,7 +197,7 @@ def approved_sources(root: Path) -> set[str]:
 def _drop_bulky_fallback(path: Path, webp_path: Path, src: str, rel: str,
                           log: list[str], moves: dict[str, Path]) -> bool:
     """Drop a fallback the browser will not fetch when WebP is smaller to ship."""
-    if path.name == 'logo.png' or not path.exists() or path == webp_path:
+    if path.name in ('logo.png', 'logo-light.png') or not path.exists() or path == webp_path:
         return False
     if path.stat().st_size <= FALLBACK_KEEP_BELOW:
         return False
@@ -236,7 +236,7 @@ def optimize_file(root: Path, path: Path, log: list[str], moves: dict[str, Path]
         if already_fits and path.suffix.lower() == '.webp':
             return False
         if already_fits and webp_path.is_file() and path.suffix.lower() != '.webp':
-            if path.name == 'logo.png' and path.stat().st_size > 400_000 and 'A' not in image.getbands():
+            if path.name in ('logo.png', 'logo-light.png') and path.stat().st_size > 400_000 and 'A' not in image.getbands():
                 reduced = image.convert('RGB').quantize(colors=256, method=Image.Quantize.FASTOCTREE)
                 reduced.save(path, 'PNG', optimize=True)
                 log.append(f'logo fallback quantized to {path.stat().st_size} bytes')
@@ -636,7 +636,7 @@ def drop_unreferenced_root_copies(root: Path, log: list[str]) -> None:
     for path in list(root.iterdir()):
         if not path.is_file() or path.suffix.lower() not in RASTER:
             continue
-        if path.name in ('logo.png', 'logo.webp') or path.name not in published:
+        if path.name in ('logo.png', 'logo.webp', 'logo-light.png', 'logo-light.webp') or path.name not in published:
             continue
         if re.search(rf'(?<![\w./-])/{re.escape(path.name)}(?![\w.-])', blob):
             continue

@@ -2266,7 +2266,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 <link rel="stylesheet" href="/assets/citation.css">
 </head>
 <body>
-<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{esc(AUTHOR_NAME)}</span></nav>
 <h1>{esc(AUTHOR_NAME)}</h1>
@@ -2827,7 +2827,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 </style>
 </head>
 <body>
-<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
 <h1>WNBA news</h1>
