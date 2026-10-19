@@ -341,7 +341,7 @@ def filter_box(key: str, label: str, options: list[tuple[str, str]], table: str,
     select = (f'<label class="visually-hidden" for="ow-{key}-f">Filter</label>'
               f'<select id="ow-{key}-f"><option value="">All</option>{opts}</select>') if options else ''
     return (
-        f'<div class="ow-tab" data-ow-table="{key}">'
+        f'<div class="ow-tab" data-ow-table="{key}"' + (' data-fcb-data-table' if key == 'ownership' else '') + '>'
         f'<div class="ow-controls"><label class="visually-hidden" for="ow-{key}-q">Search {esc(label)}</label>'
         f'<input id="ow-{key}-q" type="search" placeholder="Search names, teams, entities">{select}'
         '<button type="button" class="ow-clear">Clear all</button><span class="ow-count" aria-live="polite"></span></div>'
