@@ -9,6 +9,7 @@ import unittest
 from pathlib import Path
 
 import build_finals_ratings_tracker as tracker
+import build_owners as owners
 import build_reese_cards as cards
 import internal_links as links
 
@@ -92,6 +93,8 @@ class BylineOrderTests(unittest.TestCase):
         hub = tracker.article_html({})
         collection = cards.render_page(ROOT)
         author = links.render_author_page([])
+        owners_data = owners.load()
+        owners_page = owners.render(owners_data, owners.stats(owners_data))
         viewership = (ROOT / 'automation' / 'viewership_render.py').read_text(encoding='utf-8')
         h1 = viewership.find('<h1>{core.esc(core.PAGE_TITLE)}</h1>')
         byline = viewership.find('{byline}', h1)
@@ -104,6 +107,7 @@ class BylineOrderTests(unittest.TestCase):
             'ratings tracker template': hub,
             'card collection': collection,
             'author profile': author,
+            'owners page': owners_page,
         }
         problems = []
         for label, html in samples.items():
