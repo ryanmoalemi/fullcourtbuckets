@@ -2930,6 +2930,8 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('wnba/teams/index.html', '/wnba/teams/'),
         ('wnba/couples/index.html', '/wnba/couples/'),
         ('sitemap/index.html', '/sitemap/'),
+        ('wnba/finals/2026/game-1/play-by-play/index.html', '/wnba/finals/2026/game-1/play-by-play/'),
+        ('wnba/finals/2026/game-2/play-by-play/index.html', '/wnba/finals/2026/game-2/play-by-play/'),
     ]
     collection_route = '/authors/ryan-moalemi/ryans-angel-reese-cards/'
     collection_day = ''

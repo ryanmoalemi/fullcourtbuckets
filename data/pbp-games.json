@@ -1,0 +1,13 @@
+{
+  "series": "2026 WNBA Finals",
+  "away": "ATL", "home": "GS",
+  "names": {"ATL": "Dream", "GS": "Valkyries"},
+  "games": {
+    "401918305": {"number": 1, "date": "2026-10-17", "date_text": "Sat Oct 17, 2026", "tip": "Sat Oct 17, 2026, 12:30 p.m. PT", "venue": "Chase Center",
+                  "game_json": "data/games/2026-10-17-atl-gs.json", "series_before": {"GS": 0, "ATL": 0},
+                  "preview": "/news/finals-game-1-preview-dream-valkyries/", "recap": "/news/dream-valkyries-finals-game-1-recap/"},
+    "401918306": {"number": 2, "date": "2026-10-19", "date_text": "Mon Oct 19, 2026", "tip": "Mon Oct 19, 2026, 5 p.m. PT", "venue": "Chase Center",
+                  "game_json": null, "series_before": {"GS": 1, "ATL": 0},
+                  "preview": "/news/finals-game-2-preview-dream-valkyries/", "recap": null}
+  }
+}
