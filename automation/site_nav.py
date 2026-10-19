@@ -272,8 +272,8 @@ def render(menu: list[dict], current: str) -> str:
 
 LOGO_HTML = (
     '<a class="site-brand" href="/" aria-label="Full Court Buckets home">'
-    '<picture><source srcset="/logo.webp" type="image/webp">'
-    '<img src="/logo.png" alt="Full Court Buckets" width="760" height="507" decoding="async">'
+    '<picture><source srcset="/logo-light.webp" type="image/webp">'
+    '<img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416" decoding="async">'
     '</picture></a>'
 )
 TAGLINE_HTML = (

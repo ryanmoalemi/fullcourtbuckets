@@ -558,12 +558,21 @@ def _schedule_items() -> list[dict]:
             f'WNBA Finals Game {game}: {_short_club(away)} at {_short_club(home)}, '
             f'{_WEEKDAYS[day.weekday()]} {_MONTHS[day.month - 1]} {day.day}, {clock}, {_slash_network(network)}'
         )
+        text = FINALS_TICKER_TEXT.get(str(game), text)
         items.append({'date': day.isoformat(), 'moment': moment, 'text': text, 'kind': 'schedule'})
     return items
 
 
+# Hand-written Now lines for Finals games, matching the article tickers (absolute dates, series status).
+FINALS_TICKER_TEXT = {
+    '2': 'WNBA Finals Game 2: Dream at Valkyries, Mon Oct 19, 2026, 5 p.m. PT, Chase Center. Valkyries lead 1-0.',
+}
+# A scheduled game stays the Now line until about three hours after tip-off, then the next game takes over.
+GAME_WINDOW = dt.timedelta(hours=3)
+
+
 def _next_finals_item(now: dt.datetime) -> dict | None:
-    fresh = [item for item in _schedule_items() if item['moment'] >= now - TICKER_MAX_AGE]
+    fresh = [item for item in _schedule_items() if item['moment'] >= now - GAME_WINDOW]
     fresh.sort(key=lambda item: item['moment'])
     return fresh[0] if fresh else None
 
@@ -595,7 +604,10 @@ def choose_ticker(articles: list, now: dt.datetime | None = None) -> dict | None
     newest = ordered[0]
     schedule = _next_finals_item(moment)
     result = _article_ticker(newest) if _is_game_result(newest) else None
-    if schedule and (result is None or result['date'] < schedule['date']):
+    result_fresh = result is not None and result['moment'] >= moment - TICKER_MAX_AGE
+    game_day = schedule is not None and schedule['date'] <= moment.date().isoformat()
+    # The next game takes over on game day; before that a fresh result stays up.
+    if schedule and (result is None or game_day or not result_fresh):
         item = schedule
     elif result:
         item = result
@@ -2254,7 +2266,7 @@ h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 <link rel="stylesheet" href="/assets/citation.css">
 </head>
 <body>
-<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{esc(AUTHOR_NAME)}</span></nav>
 <h1>{esc(AUTHOR_NAME)}</h1>
@@ -2815,7 +2827,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 </style>
 </head>
 <body>
-<header><div class="shell"><a href="/"><img src="/logo.png" alt="Full Court Buckets"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
+<header><div class="shell"><a href="/"><img src="/logo-light.png" alt="Full Court Buckets" width="480" height="416"></a><nav aria-label="Main"><a href="/">Home</a></nav></div></header>
 <main class="shell">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>News</span></nav>
 <h1>WNBA news</h1>

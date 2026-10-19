@@ -296,7 +296,8 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIsNotNone(match)
         self.assertGreaterEqual(match.group(1), newest)
         self.assertNotIn('Burton from 28', home)
-        self.assertIn('WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock', home)
+        self.assertIn('WNBA Finals Game 2: Dream at Valkyries, Mon Oct 19, 2026, 5 p.m. PT, Chase Center. Valkyries lead 1-0.', home)
+        self.assertNotIn('tonight', home.split('class="ticker"', 1)[1].split('</div></div></div>', 1)[0].lower())
         featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
         self.assertIn('class="article-card" id="featured-story"', featured)
         self.assertIn('class="article-visual"', featured)

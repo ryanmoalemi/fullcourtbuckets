@@ -95,15 +95,13 @@ nav.site-nav .site-nav-playoffs>a{color:#ff9800}
 
 /* Light theme (sitewide). Shared by every page via site-nav.css.
    Matches the Finals ratings tracker's white table panel: white page, dark text,
-   purple headings/links, alternating light row shading. Header bar and footer stay
-   dark because the logo artwork has an opaque black background.
+   purple headings/links, alternating light row shading. Header, menu, ticker and footer
+   are light too; they use the transparent /logo-light.webp mark.
    Contrast (on #fff): text #151413 18.6:1, muted #5a554e 7.3:1, link #5b22c9 9.0:1,
    pink #b8006f 6.0:1. Min text 12px. */
 :root{color-scheme:light;--bg:#f7f5f2;--surface:#ffffff;--panel:#ffffff;--text:#151413;--muted:#5a554e;--line:#e2ddd6;--purple:#5b22c9;--pink:#b8006f;--link:#5b22c9;--zebra:#f6f1ff;--head:#f3f0eb}
 html body{background:var(--bg)!important;color:var(--text)}
 /* keep the bar and footer dark (logo) */
-html body header,html body .utility,html body .ticker,html body .site-header,html body header.site-header{color:#f5f3ef}
-html body .site-header,html body header.site-header{--text:#f5f3f7;--muted:#c7c3bd;--line:#2b2930}
 /* main surfaces */
 html body main,html body #content{color:var(--text)}
 html body .article,html body .rail-box,html body .article-card,html body .coverage-card,html body .side-promo,html body .feature,html body .feature-content,html body .cta,
@@ -149,7 +147,6 @@ html body ins.adsbygoogle,html body .ad-slot{background:transparent!important}
 /* minimum text size */
 html body main small,html body main .small,html body main th,html body main td,html body .meta,html body figcaption,html body caption{font-size:max(12px,1em)}
 /* fixes after first screenshot pass */
-html body .ticker .ticker-text,html body .ticker a{color:#e8e3df!important}
 html body main,html body #content,html body .article{--orange:#a85400}
 html body main .label,html body main .cat,html body main .article-copy .cat,html body main .rail-conf{color:#a85400!important}
 html body main .eyebrow,html body main .small,html body main .label,html body main .cat,html body main .rail-conf{font-size:12px!important}
@@ -158,3 +155,56 @@ html body main .button:not(.primary){background:#fff!important;color:#5b22c9!imp
 html body .article .hdb-band,html body .article .hdb-band h2,html body .article .hdb-band p,html body .article .hdb-band strong{color:#fff!important}
 html body .article .hdb-band a.cl:not(.x):not(.y):not(.z){color:#fff!important}
 html body main .cta a.watch-btn:not(.x):not(.y),html body main a.watch-btn:not(.x):not(.y):not(.z){color:#fff!important}
+
+/* Light header, menus, ticker and footer */
+html body header,html body header.site-header,html body .site-header,html body .utility{background:#fff!important;color:#151413!important;border-color:#e2ddd6!important;box-shadow:0 1px 0 #e2ddd6}
+html body header.site-header .site-tagline,html body .utility,html body .utility *{color:#5a554e!important}
+html body nav.site-nav a,html body nav.site-nav .site-nav-subtoggle,html body .site-search-toggle,html body nav.site-nav .site-nav-toggle{color:#151413!important}
+html body nav.site-nav a:hover,html body nav.site-nav .site-nav-subtoggle:hover,html body .site-search-results a:hover{color:#5b22c9!important}
+html body nav.site-nav a[aria-current="page"],html body nav.site-nav .site-nav-playoffs>a{color:#5b22c9!important;box-shadow:inset 0 -2px 0 #5b22c9}
+html body nav.site-nav a:focus-visible,html body nav.site-nav button:focus-visible,html body .site-search-toggle:focus-visible{outline-color:#5b22c9!important}
+html body nav.site-nav .site-nav-toggle,html body .site-search-toggle{background:#fff!important;border-color:#d6d0c8!important}
+html body nav.site-nav .site-nav-bars,html body nav.site-nav .site-nav-bars:before,html body nav.site-nav .site-nav-bars:after{background:#151413!important}
+html body nav.site-nav li ul,html body nav.site-nav>ul,html body .site-search-panel{background:#fff!important;border-color:#e2ddd6!important;box-shadow:0 10px 28px rgba(40,20,80,.12)!important}
+html body .site-search-field{color:#45413b!important}
+html body .site-search-field input{background:#fff!important;color:#151413!important;border:1px solid #bdb6ad!important}
+html body .site-search-status,html body .site-search-kind{color:#5a554e!important}
+html body .site-search-results a{color:#151413!important}
+html body .ticker{background:#f6f1ff!important;border-color:#e4dbf7!important;color:#151413!important}
+html body .ticker .ticker-label{color:#b8006f!important}
+html body .ticker .ticker-text,html body .ticker a{color:#151413!important}
+html body footer,html body .site-footer,html body .footer{background:#f4f1f8!important;color:#45413b!important;border-top:1px solid #e2ddd6!important}
+html body .site-footer b,html body .footer-brand,html body footer b{color:#151413!important}
+html body .site-footer .footer-links a,html body footer a{color:#5b22c9!important}
+html body .site-footer .footer-links a:hover,html body footer a:hover{color:#b8006f!important}
+html body .site-footer svg,html body footer svg{fill:currentColor}
+/* Preview cards and listings, every page */
+html body .news-item,html body .collection-teaser,html body .tile,html body .bid,html body .method,html body .stats li,html body .bid-stats div,html body .cost div,
+html body .panel,html body .conf-card,html body .explainer,html body .info-card,html body #faq,html body #standings-faq,html body .crumb-bar,html body dialog,html body .dialog-bar,
+html body .control-row button,html body .control-row select,html body .eyebrow,html body .article-card,html body .coverage-card,html body .side-promo{background:#fff!important;color:#151413!important;border:1px solid #e2ddd6!important}
+html body .news-item h2,html body .news-item h3,html body .collection-teaser b,html body .tile b,html body .tile h2,html body .tile h3,html body .bid h3,html body .bid h2{color:#2a1458!important}
+html body .news-item p,html body .collection-teaser p,html body .tile p,html body .news-copy p{color:#45413b!important}
+html body .news-item time,html body .news-copy time{color:#a85400!important}
+html body .news-item:hover,html body .collection-teaser:hover,html body .tile:hover{border-color:#5b22c9!important}
+html body .news-item img,html body .collection-teaser img,html body .tile img,html body .bid-photo,html body .bid-photo img,html body .detail img,html body .author-photo{background:#f3f0eb!important;border-color:#e2ddd6!important}
+html body .badge.up,html body .status-live,html body .status-won{background:#e3f6ea!important;color:#0a6b2d!important}
+html body .badge.down,html body .status-lost{background:#fde8ec!important;color:#a1122b!important}
+html body .badge.unknown,html body .badge.flat{background:#efedf2!important;color:#45413b!important}
+html body .status-bin{background:#fff4dc!important;color:#7a5200!important}
+html body .track{background:#ece8f3!important}
+html body .segmented button:not([aria-pressed=true]){background:transparent!important;color:#45413b!important}
+html body .standings-table th,html body .standings-table td,html body .conf-table th,html body .conf-table td,html body .playoff-row td{background:#fff!important;color:#151413!important}
+html body .standings-table thead th,html body .conf-table thead th{background:#f3f0eb!important;color:#45413b!important}
+html body .standings-table tbody tr:nth-child(even) td,html body .conf-table tbody tr:nth-child(even) td{background:#f6f1ff!important}
+html body .article .fcb-updated .ver,html body .fcb-updated .ver{background:#2a1458;color:#fff}
+/* Standings page */
+html body .subhead,html body .info-card p,html body .standings-table tbody td,html body .playoff-line td,html body .rank,html body .team-badge,html body .explainer p,html body .explainer li,html body .explainer strong,html body #faq p,html body #standings-faq p,html body .series-box p{color:#151413!important}
+html body .status,html body .secondary,html body .standings-table thead th,html body .conf-table thead th,html body .muted-note,html body .last-updated{color:#5a554e!important}
+html body .series-box{background:#fff!important;border-color:#e2ddd6!important}
+/* Angel Reese card collection page */
+html body .page-open h1 .owner-word,html body .byline,html body .stats b,html body .notes,html body .when button,html body dialog,html body .tile-copy,html body .tile-copy b{color:#151413!important}
+html body .page-open h1 .cards-word,html body .hero-kicker,html body .as-of,html body .grade,html body .detail .eyebrow,html body .bid-comps-details summary{color:#a85400!important}
+html body .breadcrumbs,html body .article-date,html body .hero-credit,html body .lede,html body .stats span,html body .asterisk-note,html body .photo-credit,html body .tile-copy .meta,html body .tile-copy .bought,html body .detail figcaption,html body .cost dt,html body .cost .fee-note,html body .bid-meta,html body .bid-stats dt,html body .bid-note,html body .bid-why{color:#5a554e!important}
+html body .hero-credit a,html body .breadcrumbs a{color:#5b22c9!important}
+html body .stats .down b,html body .stats .down em{color:#a1122b!important}
+html body .stats .up b,html body .stats .up em{color:#0a6b2d!important}
