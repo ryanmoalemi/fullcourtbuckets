@@ -454,11 +454,15 @@ def _coverage_line(slug: str, variant: int = 0) -> str:
     return f'{_pick(labels, variant)}: {links_html}.'
 
 
+PHOTO_FOCAL = {'portland-fire': 'center center', 'golden-state-valkyries': 'center 30%'}
+
+
 def photo_html(slug: str) -> str:
     spec = team_hub.VISUALS.get(slug)
     if not spec:
         return ''
-    focal = 'center center' if slug == 'portland-fire' else 'center 20%'
+    # Per-team 16:9 focal point; the Valkyries photo is a tall portrait whose head sits near 36% down.
+    focal = PHOTO_FOCAL.get(slug, 'center 20%')
     caption = (
         f'Photo: {esc(spec["author"])} / '
         f'<a href="{esc(spec["page"])}" target="_blank" rel="noopener">Wikimedia Commons</a> '
