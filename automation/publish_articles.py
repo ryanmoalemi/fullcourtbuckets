@@ -606,6 +606,12 @@ def publish_folder(folder: Path, articles: list) -> list:
     if not photo_path.is_file():
         raise SystemExit(f'{slug}: photo.jpg is missing')
     photo = photo_path.read_bytes()
+    from PIL import Image  # every post photo is a true 16:9 file (test_photo_aspect)
+    with Image.open(photo_path) as im:
+        ratio = im.size[0] / im.size[1]
+    if not 1.74 <= ratio <= 1.80:
+        raise SystemExit(f'{slug}: photo.jpg is {ratio:.3f}:1; it must be 16:9. '
+                         f'Run python3 automation/crop_16x9.py {photo_path} and check heads by eye.')
     existing = next((item for item in articles if item.get('slug') == slug), None)
     is_new = existing is None
     article = record_for(meta, folder, existing)
