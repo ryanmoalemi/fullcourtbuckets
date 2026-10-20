@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T02:08:50+00:00",
+ "checked_at": "2026-10-20T02:13:22+00:00",
  "period": 4,
- "clock": "5:06",
+ "clock": "2:50",
  "last_play_period": 4,
- "last_play_clock": "5:06",
+ "last_play_clock": "2:50",
  "away": {
   "abbreviation": "ATL",
-  "score": 69,
-  "feed_score": 69
+  "score": 74,
+  "feed_score": 74
  },
  "home": {
   "abbreviation": "GS",
-  "score": 52,
-  "feed_score": 52
+  "score": 59,
+  "feed_score": 59
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 9,
-   "home": 6
+   "away": 14,
+   "home": 13
   }
  ],
  "players": [],
@@ -4456,6 +4456,150 @@
    "text": "Dream Full timeout",
    "away_score": 69,
    "home_score": 52,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 369,
+   "period": 4,
+   "clock": "4:49",
+   "type": "Step Back Jump Shot",
+   "text": "Rhyne Howard makes 18-foot step back jumpshot (Angel Reese assists)",
+   "away_score": 71,
+   "home_score": 52,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 370,
+   "period": 4,
+   "clock": "4:32",
+   "type": "Jump Shot",
+   "text": "Kaila Charles makes 23-foot three point jumper (Tiffany Hayes assists)",
+   "away_score": 71,
+   "home_score": 55,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 371,
+   "period": 4,
+   "clock": "4:15",
+   "type": "Jump Shot",
+   "text": "Angel Reese makes 24-foot three point jumper (Jordin Canada assists)",
+   "away_score": 74,
+   "home_score": 55,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 372,
+   "period": 4,
+   "clock": "4:02",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 74,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 373,
+   "period": 4,
+   "clock": "4:02",
+   "type": "Free Throw - 1 of 2",
+   "text": "Kaitlyn Chen makes free throw 1 of 2",
+   "away_score": 74,
+   "home_score": 56,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 374,
+   "period": 4,
+   "clock": "4:02",
+   "type": "Free Throw - 2 of 2",
+   "text": "Kaitlyn Chen makes free throw 2 of 2",
+   "away_score": 74,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 375,
+   "period": 4,
+   "clock": "3:43",
+   "type": "Fade Away Jump Shot",
+   "text": "Angel Reese misses 7-foot fade away jump shot",
+   "away_score": 74,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 376,
+   "period": 4,
+   "clock": "3:41",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 74,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 377,
+   "period": 4,
+   "clock": "3:29",
+   "type": "Lost Ball Turnover",
+   "text": "Tiffany Hayes lost ball turnover (Rhyne Howard steals)",
+   "away_score": 74,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 378,
+   "period": 4,
+   "clock": "3:08",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Tiffany Hayes steals)",
+   "away_score": 74,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 379,
+   "period": 4,
+   "clock": "2:58",
+   "type": "Turnaround Jump Shot",
+   "text": "Gabby Williams makes 15-foot turnaround jump shot",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 380,
+   "period": 4,
+   "clock": "2:50",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 74,
+   "home_score": 59,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
