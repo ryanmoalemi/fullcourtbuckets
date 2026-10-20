@@ -5,15 +5,15 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T00:56:15+00:00",
+ "checked_at": "2026-10-20T01:00:47+00:00",
  "period": 2,
- "clock": "3:17",
+ "clock": "2:35",
  "last_play_period": 2,
- "last_play_clock": "2:55",
+ "last_play_clock": "2:35",
  "away": {
   "abbreviation": "ATL",
-  "score": 30,
-  "feed_score": 30
+  "score": 32,
+  "feed_score": 32
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 12,
+   "away": 14,
    "home": 12
   }
  ],
@@ -2029,7 +2029,7 @@
   {
    "order": 167,
    "period": 2,
-   "clock": "4:00",
+   "clock": "4:02",
    "type": "Driving Layup Shot",
    "text": "Angel Reese misses driving layup",
    "away_score": 27,
@@ -2053,7 +2053,7 @@
   {
    "order": 169,
    "period": 2,
-   "clock": "3:57",
+   "clock": "4:00",
    "type": "Jumpball",
    "text": "Angel Reese vs. Kaila Charles (Jordin Canada gains possession)",
    "away_score": 27,
@@ -2125,7 +2125,7 @@
   {
    "order": 175,
    "period": 2,
-   "clock": "3:44",
+   "clock": "3:46",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 28,
@@ -2192,6 +2192,78 @@
    "home_score": 33,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 181,
+   "period": 2,
+   "clock": "2:53",
+   "type": "Personal Foul",
+   "text": "Laeticia Amihere personal foul",
+   "away_score": 30,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 182,
+   "period": 2,
+   "clock": "2:53",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 30,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 183,
+   "period": 2,
+   "clock": "2:53",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Laeticia Amihere",
+   "away_score": 30,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 184,
+   "period": 2,
+   "clock": "2:53",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Cecilia Zandalasini",
+   "away_score": 30,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 185,
+   "period": 2,
+   "clock": "2:46",
+   "type": "Personal Foul",
+   "text": "Tiffany Hayes personal foul",
+   "away_score": 30,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 186,
+   "period": 2,
+   "clock": "2:35",
+   "type": "Running Jump Shot",
+   "text": "Jordin Canada makes 2-foot running jump shot",
+   "away_score": 32,
+   "home_score": 33,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "ATL"
   }
  ]
