@@ -1,7 +1,7 @@
 {
  "title": "Famous relatives of WNBA players",
  "page": "/news/wnba-players-famous-relatives/",
- "updated": "2026-10-19",
+ "updated": "2026-10-20",
  "corrections": "hello@fullcourtbuckets.com",
  "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
  "entries": [
@@ -229,7 +229,7 @@
    "relation": "Cousin",
    "relation_type": "cousin",
    "sport": "PWHL",
-   "known_for": "Three-time Olympic medalist for Canada who set the single-tournament Olympic points record while winning gold in 2022. Forward for the PWHL's Vancouver Goldeneyes.",
+   "known_for": "Three-time Olympic medalist for Canada who set the single-tournament Olympic points record while winning gold in 2022. Forward for the PWHL's Vancouver Goldeneyes, who re-signed her in June 2026 through the 2027-28 season.",
    "extra": null,
    "sources": [
     {
@@ -245,6 +245,11 @@
     {
      "label": "PWHL release: Vancouver signs Sarah Nurse",
      "url": "https://www.thepwhl.com/en/news/2025/june/05/pwhl-vancouver-signs-sarah-nurse-to-one-year-contract",
+     "kind": "primary"
+    },
+    {
+     "label": "PWHL release: Vancouver Goldeneyes re-sign and protect Sarah Nurse, June 2, 2026",
+     "url": "https://www.thepwhl.com/en/teams/vancouver-goldeneyes/news/2026/june/02/vancouver-goldeneyes-re-sign-and-protect-sarah-nurse-ahead-of-2026-27-season",
      "kind": "primary"
     }
    ],
@@ -1027,7 +1032,7 @@
    "relation": "Cousin",
    "relation_type": "cousin",
    "sport": "Softball",
-   "known_for": "Pitcher taken third overall by the Utah Talons in the AUSL's inaugural 2025 draft. Won the league's first title with Utah in July 2025.",
+   "known_for": "Pitcher taken third overall by the Utah Talons in the AUSL's inaugural 2025 draft. Won the league's first two titles with Utah, in July 2025 and July 2026.",
    "extra": null,
    "sources": [
     {
@@ -1043,6 +1048,16 @@
     {
      "label": "UCLA Athletics release, July 28, 2025",
      "url": "https://uclabruins.com/news/2025/07/28/four-bruins-help-talons-win-first-ausl-championship",
+     "kind": "primary"
+    },
+    {
+     "label": "AUSL player bio: Megan Faraimo",
+     "url": "https://theausl.com/players/megan-faraimo/",
+     "kind": "primary"
+    },
+    {
+     "label": "AUSL release: Talons sweep for consecutive AUSL titles, July 26, 2026",
+     "url": "https://theausl.com/news/utah-talons-win-2026-ausl-championship/",
      "kind": "primary"
     }
    ],
@@ -1355,6 +1370,477 @@
     "source_page": "https://commons.wikimedia.org/wiki/File:Kristi_Toliver_(48372362562).jpg"
    },
    "photo_relative": null
+  },
+  {
+   "rank": 37,
+   "player": "Cheryl Ford",
+   "player_slug": "cheryl-ford",
+   "relative": "Karl Malone",
+   "relative_slug": "karl-malone",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Naismith Hall of Famer (enshrined 2010), two-time NBA MVP, 14-time All-Star and two-time Olympic gold medalist who played for the Utah Jazz and Los Angeles Lakers. His 36,928 career points rank third behind LeBron James and Kareem Abdul-Jabbar.",
+   "extra": "Both played at Louisiana Tech. The Detroit Shock took her third overall in the 2003 WNBA draft.",
+   "sources": [
+    {
+     "label": "Louisiana Tech Athletics release: Cheryl Ford Day set for Claiborne Parish, April 22, 2003",
+     "url": "https://latechsports.com/news/2003/4/22/Cheryl_Ford_Day_Set_for_Claiborne_Parish",
+     "kind": "primary"
+    },
+    {
+     "label": "Louisiana Tech Athletics release: Ford selected No. 3 overall in WNBA draft, April 28, 2003",
+     "url": "https://latechsports.com/news/2003/4/28/Ford_Selected_No_3_Overall_in_WNBA_Draft",
+     "kind": "primary"
+    },
+    {
+     "label": "Naismith Basketball Hall of Fame: Karl Malone",
+     "url": "https://www.hoophall.com/hall-of-famers/karl-malone",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/cheryl-ford.webp",
+    "author": "Dave Hogg from Royal Oak, MI, USA",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cheryl_and_Plenette_(633882629)_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Airman 1st Class Jacob B. Wrightsman",
+    "license": "Public domain",
+    "license_url": null,
+    "source_page": "https://commons.wikimedia.org/wiki/File:NBA_HOF%E2%80%99er_Karl_Malone_visits_Barksdale_(9)_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 38,
+   "player": "Candice Wiggins",
+   "player_slug": "candice-wiggins",
+   "relative": "Alan Wiggins",
+   "relative_slug": "alan-wiggins",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "MLB",
+   "known_for": "Played for the San Diego Padres and set the club's single-season stolen-base record.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Stanford Athletics bio: Candice Wiggins",
+     "url": "https://gostanford.com/news/2013/04/17/player-bio-candice-wiggins-1",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/candice-wiggins.webp",
+    "author": "Danny Karwoski",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Candice_Wiggins_at_2_August_2015_game_cropped.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 39,
+   "player": "Bella Alarie",
+   "player_slug": "bella-alarie",
+   "relative": "Mark Alarie",
+   "relative_slug": "mark-alarie",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Two-time All-ACC first-team pick at Duke and the 18th pick in the 1986 NBA draft, by Denver. He played five NBA seasons.",
+   "extra": "Team USA's profile notes he also represented Team USA.",
+   "sources": [
+    {
+     "label": "WNBA.com 2020 draft prospect profile: Bella Alarie",
+     "url": "https://www.wnba.com/draft/2020/prospects/124783/bella-alarie",
+     "kind": "primary"
+    },
+    {
+     "label": "Princeton Athletics bio: Bella Alarie",
+     "url": "https://goprincetontigers.com/sports/womens-basketball/roster/alarie-bella/16321",
+     "kind": "primary"
+    },
+    {
+     "label": "Team USA profile: Bella Alarie",
+     "url": "https://www.teamusa.com/profiles/bella-alarie-1155851",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": null,
+   "photo_relative": null
+  },
+  {
+   "rank": 40,
+   "player": "Nia Coffey",
+   "player_slug": "nia-coffey",
+   "relative": "Amir Coffey",
+   "relative_slug": "amir-coffey",
+   "relation": "Younger brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Played seven NBA seasons with the Los Angeles Clippers, Milwaukee Bucks and Phoenix Suns. Hapoel Tel Aviv signed him to a one-year contract for the 2026-27 season.",
+   "extra": "He played at Minnesota, like their father, Richard.",
+   "sources": [
+    {
+     "label": "Northwestern School of Education and Social Policy: Nia Coffey inducted into Hall of Fame, 2025",
+     "url": "https://sesp.northwestern.edu/news-events/sesp-news/2025/nia-coffey-inducted-into-hall-of-fame.html",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com 2017 draft prospect profile: Nia Coffey",
+     "url": "https://www.wnba.com/draft/2017/prospects/50123/nia-coffey",
+     "kind": "primary"
+    },
+    {
+     "label": "Hapoel IBI Tel Aviv release: Welcome, Amir Coffey!",
+     "url": "https://hapoelbc.com/en/amircoffey-2/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/nia-coffey.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:260621_Lynx_Mystics_JohnMc392_(55349450566)_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Alexander Jonesi",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Amir_Coffey.jpg"
+   }
+  },
+  {
+   "rank": 41,
+   "player": "Nia Coffey",
+   "player_slug": "nia-coffey",
+   "relative": "Richard Coffey",
+   "relative_slug": "richard-coffey",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Played at Minnesota from 1986 to 1990 under Clem Haskins, then in the NBA.",
+   "extra": "Her WNBA draft profile says he taught her extensively about rebounding.",
+   "sources": [
+    {
+     "label": "WNBA.com 2017 draft prospect profile: Nia Coffey",
+     "url": "https://www.wnba.com/draft/2017/prospects/50123/nia-coffey",
+     "kind": "primary"
+    },
+    {
+     "label": "Northwestern School of Education and Social Policy: Nia Coffey inducted into Hall of Fame, 2025",
+     "url": "https://sesp.northwestern.edu/news-events/sesp-news/2025/nia-coffey-inducted-into-hall-of-fame.html",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/nia-coffey.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:260621_Lynx_Mystics_JohnMc392_(55349450566)_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 42,
+   "player": "Kelly Miller",
+   "player_slug": "kelly-miller",
+   "relative": "Coco Miller",
+   "relative_slug": "coco-miller",
+   "relation": "Twin sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "Sixth pick in the 2001 WNBA draft by the Washington Mystics. Her 12-year WNBA career included the Mystics, Atlanta Dream and Los Angeles Sparks.",
+   "extra": "Kelly went second overall in the same draft and won the 2007 WNBA title with Phoenix. The twins shared the 1999 AAU Sullivan Award at Georgia.",
+   "sources": [
+    {
+     "label": "Georgia Athletics release: Kelly and Coco Miller named 2019 SEC Legends, Jan. 23, 2019",
+     "url": "https://georgiadogs.com/news/2019/1/23/womens-basketball-kelly-and-coco-miller-named-2019-sec-legends",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kelly-miller.webp",
+    "author": "Keith Allison",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kelly_Miller_WNBA.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 43,
+   "player": "Megan McConnell",
+   "player_slug": "megan-mcconnell",
+   "relative": "T.J. McConnell",
+   "relative_slug": "tj-mcconnell",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "NBA guard with the Indiana Pacers, after starting his career with the Philadelphia 76ers. Played at Duquesne (2010-12) and Arizona (2013-15).",
+   "extra": "Their father, Tim, has more than 600 coaching wins at Chartiers Valley High School, per Duquesne Athletics.",
+   "sources": [
+    {
+     "label": "Duquesne Athletics bio: Megan McConnell",
+     "url": "https://goduquesne.com/sports/womens-basketball/roster/megan-mcconnell/12629",
+     "kind": "primary"
+    },
+    {
+     "label": "Indiana Pacers roster",
+     "url": "https://www.nba.com/pacers/roster",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/megan-mcconnell.webp",
+    "author": "John Manard",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Megan_McConnell,_Duquesne_Dukes_1_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Chensiyuan",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:1_tj_mcconnell_2025_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 44,
+   "player": "Megan McConnell",
+   "player_slug": "megan-mcconnell",
+   "relative": "Suzie McConnell-Serio",
+   "relative_slug": "suzie-mcconnell-serio",
+   "relation": "Aunt",
+   "relation_type": "uncle/aunt",
+   "sport": "WNBA",
+   "known_for": "All-American at Penn State, Olympic gold medalist, WNBA player and Women's Basketball Hall of Famer. Head coach of the Minnesota Lynx (2003-06), Duquesne (2007-13) and Pitt (2013-18).",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Duquesne Athletics bio: Megan McConnell",
+     "url": "https://goduquesne.com/sports/womens-basketball/roster/megan-mcconnell/12629",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/megan-mcconnell.webp",
+    "author": "John Manard",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Megan_McConnell,_Duquesne_Dukes_1_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 45,
+   "player": "Joslyn Tinkle",
+   "player_slug": "joslyn-tinkle",
+   "relative": "Wayne Tinkle",
+   "relative_slug": "wayne-tinkle",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "College basketball (coach)",
+   "known_for": "Men's head coach at Montana for eight seasons, then at Oregon State from May 2014 until February 2026, where his teams won the 2021 Pac-12 Tournament and reached the Elite Eight. He played at Montana and then 10 years of pro ball in Europe.",
+   "extra": "Her brother, Tres, became Oregon State's all-time leading scorer with 2,233 points, per the school.",
+   "sources": [
+    {
+     "label": "Stanford Athletics bio: Joslyn Tinkle",
+     "url": "https://gostanford.com/sports/womens-basketball/roster/player/joslyn-tinkle",
+     "kind": "primary"
+    },
+    {
+     "label": "Oregon State Athletics bio: Wayne Tinkle",
+     "url": "https://osubeavers.com/sports/mens-basketball/roster/coaches/wayne-tinkle/3210",
+     "kind": "primary"
+    },
+    {
+     "label": "Oregon State Athletics release: leadership change in men's basketball, Feb. 26, 2026",
+     "url": "https://osubeavers.com/news/2026/2/26/mens-basketball-oregon-state-announces-leadership-change-in-mens-basketball-program",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": null,
+   "photo_relative": null
+  },
+  {
+   "rank": 46,
+   "player": "Charlisse Leger-Walker",
+   "player_slug": "charlisse-leger-walker",
+   "relative": "Leanne Walker",
+   "relative_slug": "leanne-walker",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "Basketball",
+   "known_for": "Played for New Zealand's Tall Ferns at the 2000 Sydney and 2004 Athens Olympics.",
+   "extra": "Her sister Krystal also played at Washington State (2019-21).",
+   "sources": [
+    {
+     "label": "Washington State Athletics bio: Charlisse Leger-Walker (2022-23)",
+     "url": "https://wsucougars.com/sports/womens-basketball/roster/season/2022-23/player/charlisse-leger-walker",
+     "kind": "primary"
+    },
+    {
+     "label": "New Zealand Olympic Committee: Leanne Walker",
+     "url": "https://www.olympic.org.nz/athletes/leanne-walker/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/charlisse-leger-walker.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Charlisse_Leger-Walker.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "New Zealand Government, Office of the Governor-General",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Leanne_Walker_Oct2020_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 47,
+   "player": "Alissa Pili",
+   "player_slug": "alissa-pili",
+   "relative": "Brandon Pili",
+   "relative_slug": "brandon-pili",
+   "relation": "Older brother",
+   "relation_type": "sibling",
+   "sport": "NFL",
+   "known_for": "NFL nose tackle from USC who plays for the Seattle Seahawks.",
+   "extra": "She has eight siblings, per Utah Athletics.",
+   "sources": [
+    {
+     "label": "Utah Athletics bio: Alissa Pili",
+     "url": "https://utahutes.com/sports/womens-basketball/roster/alissa-pili/13955",
+     "kind": "primary"
+    },
+    {
+     "label": "Seattle Seahawks player page: Brandon Pili",
+     "url": "https://www.seahawks.com/team/players-roster/brandon-pili/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/alissa-pili.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Alissa_Pili_Lynx_2024.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 48,
+   "player": "Valériane Ayayi",
+   "player_slug": "valeriane-ayayi",
+   "relative": "Joël Ayayi",
+   "relative_slug": "joel-ayayi",
+   "relation": "Younger brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Former Gonzaga guard who signed a two-way contract with the Los Angeles Lakers in August 2021. He was the Most Outstanding Player of the 2020 WCC Tournament.",
+   "extra": "The French Olympic Committee lists her Olympic medals for France: bronze at Tokyo 2020 and silver at Paris 2024.",
+   "sources": [
+    {
+     "label": "French Olympic Committee (Équipe de France) athlete profile: Valériane Ayayi",
+     "url": "https://www.equipedefrance.com/athlete/valeriane-ayayi",
+     "kind": "primary"
+    },
+    {
+     "label": "Los Angeles Lakers release: Lakers sign Joel Ayayi and Austin Reaves to two-way contracts, Aug. 3, 2021 (archive.org snapshot)",
+     "url": "https://web.archive.org/web/20220612075250/https://www.nba.com/lakers/releases/lakers-sign-joel-ayayi-austin-reaves-two-way-contracts",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/valeriane-ayayi.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Val%C3%A9riane_Ayayi_11_France_20250619_(1).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jo%C3%ABl_Ayayi_Paris_Basketball_Euroleague_20251001_(2)_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 49,
+   "player": "Maddy Westbeld",
+   "player_slug": "maddy-westbeld",
+   "relative": "Kathryn Westbeld",
+   "relative_slug": "kathryn-westbeld",
+   "relation": "Older sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "WNBA forward who joined the Phoenix Mercury on a training camp contract in February 2025. Helped Notre Dame win the 2018 NCAA championship.",
+   "extra": "They are the only sisters to each score 1,000 points for Notre Dame.",
+   "sources": [
+    {
+     "label": "WNBA.com bio: Kathryn Westbeld",
+     "url": "https://www.wnba.com/player/1628957/kathryn-westbeld/bio",
+     "kind": "primary"
+    },
+    {
+     "label": "Notre Dame Athletics bio: Maddy Westbeld",
+     "url": "https://fightingirish.com/sports/wbball/roster/player/maddy-westbeld",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-20",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/maddy-westbeld.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Maddy_Westbeld_2025_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kathryn_Westbeld_2025_(cropped).jpg"
+   }
   }
  ]
 }
