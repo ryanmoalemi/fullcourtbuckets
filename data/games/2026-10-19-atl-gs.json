@@ -5,7 +5,7 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:09:52+00:00",
+ "checked_at": "2026-10-20T01:14:25+00:00",
  "period": 2,
  "clock": "0.0",
  "last_play_period": 2,
@@ -2497,7 +2497,7 @@
   {
    "order": 206,
    "period": 2,
-   "clock": "3.9",
+   "clock": "2.5",
    "type": "Pullup Jump Shot",
    "text": "DeWanna Bonner makes 18-foot pullup jump shot (Jordin Canada assists)",
    "away_score": 39,
