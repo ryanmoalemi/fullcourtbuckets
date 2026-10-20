@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:51:09+00:00",
+ "checked_at": "2026-10-20T01:55:12+00:00",
  "period": 4,
- "clock": "9:15",
+ "clock": "7:32",
  "last_play_period": 4,
- "last_play_clock": "9:20",
+ "last_play_clock": "7:32",
  "away": {
   "abbreviation": "ATL",
-  "score": 60,
-  "feed_score": 60
+  "score": 67,
+  "feed_score": 67
  },
  "home": {
   "abbreviation": "GS",
-  "score": 46,
-  "feed_score": 46
+  "score": 48,
+  "feed_score": 48
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 0,
-   "home": 0
+   "away": 7,
+   "home": 2
   }
  ],
  "players": [],
@@ -3756,8 +3756,8 @@
    "order": 310,
    "period": 3,
    "clock": "0.8",
-   "type": "Jump Shot Bank",
-   "text": "Jordin Canada makes 32-foot jump bank shot",
+   "type": "Pullup Jump Shot",
+   "text": "Jordin Canada makes 32-foot three pointer",
    "away_score": 60,
    "home_score": 46,
    "scoring_play": true,
@@ -3827,7 +3827,7 @@
   {
    "order": 316,
    "period": 4,
-   "clock": "9:39",
+   "clock": "9:40",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 60,
@@ -3851,7 +3851,7 @@
   {
    "order": 318,
    "period": 4,
-   "clock": "9:20",
+   "clock": "9:21",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 60,
@@ -3859,6 +3859,246 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 319,
+   "period": 4,
+   "clock": "9:15",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 60,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 320,
+   "period": 4,
+   "clock": "9:15",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada makes free throw 1 of 2",
+   "away_score": 61,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 321,
+   "period": 4,
+   "clock": "9:15",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada makes free throw 2 of 2",
+   "away_score": 62,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 322,
+   "period": 4,
+   "clock": "9:03",
+   "type": "Bad Pass\nTurnover",
+   "text": "Veronica Burton bad pass\nturnover (DeWanna Bonner steals)",
+   "away_score": 62,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 323,
+   "period": 4,
+   "clock": "9:00",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 62,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 324,
+   "period": 4,
+   "clock": "9:00",
+   "type": "Free Throw - 1 of 2",
+   "text": "DeWanna Bonner makes free throw 1 of 2",
+   "away_score": 63,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 325,
+   "period": 4,
+   "clock": "9:00",
+   "type": "Free Throw - 2 of 2",
+   "text": "DeWanna Bonner makes free throw 2 of 2",
+   "away_score": 64,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 326,
+   "period": 4,
+   "clock": "8:46",
+   "type": "Bad Pass\nTurnover",
+   "text": "Cecilia Zandalasini bad pass\nturnover (DeWanna Bonner steals)",
+   "away_score": 64,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 327,
+   "period": 4,
+   "clock": "8:35",
+   "type": "Layup Shot",
+   "text": "Kiah Stokes blocks Naz Hillmon 's 3-foot layup",
+   "away_score": 64,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 328,
+   "period": 4,
+   "clock": "8:31",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 64,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 329,
+   "period": 4,
+   "clock": "8:29",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup",
+   "away_score": 64,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 330,
+   "period": 4,
+   "clock": "8:29",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 64,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 331,
+   "period": 4,
+   "clock": "8:29",
+   "type": "Substitution",
+   "text": "Kaila Charles enters the game for Cecilia Zandalasini",
+   "away_score": 64,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 332,
+   "period": 4,
+   "clock": "8:29",
+   "type": "Free Throw - 1 of 1",
+   "text": "Tiffany Hayes misses free throw 1 of 1",
+   "away_score": 64,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 333,
+   "period": 4,
+   "clock": "8:27",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 64,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 334,
+   "period": 4,
+   "clock": "8:11",
+   "type": "Jump Shot",
+   "text": "Allisha Gray makes 24-foot three point jumper (Jordin Canada assists)",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 335,
+   "period": 4,
+   "clock": "7:57",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 26-foot three point jumper",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 336,
+   "period": 4,
+   "clock": "7:53",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 337,
+   "period": 4,
+   "clock": "7:34",
+   "type": "Floating Jump Shot",
+   "text": "Jordin Canada misses 4-foot floating jump shot",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 338,
+   "period": 4,
+   "clock": "7:32",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
