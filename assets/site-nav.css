@@ -270,3 +270,6 @@ html body .ss-all[hidden],html body .ss-dym[hidden]{display:none}
 #search-page .ss-item .site-search-title{font-size:16px}
 #search-page .site-search-kind{color:#5a554e;font-size:12px}
 @media (max-width:600px){#search-page h1{font-size:28px}#search-page .ss-thumb{width:72px;height:40px}#search-page .ss-thumb.is-person{width:44px;height:44px}}
+/* Article column stays centered in the page shell; small data tables scroll inside the column on phones. */
+main.article-wrap>.article{margin-left:auto;margin-right:auto}
+@media(max-width:600px){.article table.fcb-table.sm{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}}
