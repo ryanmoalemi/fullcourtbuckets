@@ -70,6 +70,10 @@ PAGE_CSS = '''
 .ww-city-h{margin:14px 0 6px;font:700 18px/1.3 Barlow,sans-serif;color:#3b3833}.ww-n{color:#6b665f;font-weight:600}
 .ww-list{list-style:none;margin:0;padding:0}
 .ww-dym{flex:1 1 100%;margin:0}.ww-row.is-active{background:#f6f1ff;outline:2px solid #5b22c9;outline-offset:-2px}
+.ww-page .byline-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:12px 0 8px;background:none;padding:0;box-shadow:none;border:0}
+.ww-page .byline-row .byline{display:flex;align-items:center;gap:10px;margin:0;font:600 14px/1.3 Inter,system-ui,sans-serif;text-decoration:none}
+.ww-page .byline-row .byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line,#2b2930);flex:0 0 40px}
+.ww-page .byline-row .article-date{font-size:13px;margin:0;line-height:1.3}
 .ww-row[hidden],.ww-city[hidden],.ww-state[hidden]{display:none!important}
 .ww-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #ece7e0}
 .ww-logo{flex:0 0 44px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:800 15px/1 Barlow,sans-serif;letter-spacing:.5px}
@@ -87,9 +91,6 @@ PAGE_CSS = '''
 .ww-page .page-header .eyebrow{display:none}
 .ww-page .page-header h1{font-size:23px!important;line-height:1.2;margin:6px 0 0}
 .ww-page .page-header .breadcrumbs{font-size:12px}
-.ww-page .byline-row{margin-top:8px}
-.ww-page .byline-row .byline,.ww-page .byline-row .article-date{font-size:13px!important}
-.ww-page .byline-row img{width:28px;height:28px}
 .ww-controls{order:1;top:56px;gap:8px;padding:8px 0}
 .ww-controls input,.ww-controls select{flex:1 1 100%}
 .ww-count{font-size:12px}
@@ -316,7 +317,7 @@ def render(rows: list[dict]) -> str:
         '<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/wnba/">WNBA</a> › <span>Where to watch</span></nav>'
         '<p class="eyebrow">WNBA / Data &amp; research</p>'
         f'<h1>{esc(H1)}</h1>'
-        f'<div class="byline-row article">{links.BYLINE_HTML}<span class="byline-sep" aria-hidden="true">|</span>'
+        f'<div class="byline-row">{links.BYLINE_HTML}'
         f'<time class="article-date" datetime="{DATA_THROUGH}">{esc(human(DATA_THROUGH))}</time></div>'
         '</div><div class="ww-top">'
         f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {len(s["teams"])} team markets.</p>'
