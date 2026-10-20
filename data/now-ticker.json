@@ -1,9 +1,9 @@
 {
   "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 2 recap routine at 8:30 PM PT replaces this). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "Final: Dream 79, Valkyries 65 in Finals Game 2 (series tied 1-1)",
+  "text": "Dream 79, Valkyries 65 in Finals Game 2; series tied 1-1. Game 3: Wed, Oct 21, 5 p.m. PT, State Farm Arena",
   "url": "/news/dream-valkyries-finals-game-2-recap/",
   "date": "2026-10-19",
-  "expires": "2026-10-19T23:59:00-07:00",
+  "expires": "2026-10-21T17:00:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"

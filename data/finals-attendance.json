@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "released": "2026-10-18",
+  "released": "2026-10-19",
   "source": "Full Court Buckets compiled this data from official box scores.",
   "finals": [
     {
@@ -1787,6 +1787,25 @@
       "lead_changes": "7",
       "times_tied": "6",
       "source_url": "https://www.wnba.com/game/1042600301",
+      "note": ""
+    },
+    {
+      "season": "2026",
+      "game": "2",
+      "date": "2026-10-19",
+      "away": "ATL",
+      "away_score": "79",
+      "home": "GSV",
+      "home_score": "65",
+      "winner": "ATL",
+      "margin": "14",
+      "overtime_periods": "0",
+      "arena": "Chase Center",
+      "attendance": "18064",
+      "sellout_flag": "1",
+      "lead_changes": "14",
+      "times_tied": "13",
+      "source_url": "https://www.wnba.com/game/1042600302",
       "note": ""
     }
   ],
