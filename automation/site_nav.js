@@ -446,7 +446,20 @@
     });
   })();
 
-  window.FCBSearch = { load: load, search: function (q) { return search(q); }, stem: stem, fold: fold };
+  /* Same engine over a caller-supplied item list (used by on-page filters, e.g. where-to-watch). */
+  function createIndex(items) {
+    var saved = [docs, vocab, display];
+    prepare({ items: items });
+    var st = [docs, vocab, display];
+    docs = saved[0]; vocab = saved[1]; display = saved[2];
+    return { search: function (q) {
+      var o = [docs, vocab, display];
+      docs = st[0]; vocab = st[1]; display = st[2];
+      try { return search(q); } finally { docs = o[0]; vocab = o[1]; display = o[2]; }
+    } };
+  }
+  window.FCBSearch = { load: load, search: function (q) { return search(q); }, stem: stem, fold: fold,
+    createIndex: createIndex, highlight: highlight };
 })();
 /* Now bar staleness guard: after data-expires, show the evergreen fallback link. */
 (function(){var bar=document.querySelector('.fcb-now');if(!bar)return;var exp=Date.parse(bar.getAttribute('data-expires')||'');
