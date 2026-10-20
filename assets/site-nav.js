@@ -369,7 +369,7 @@
       }
       input.setAttribute('aria-expanded', 'true');
       if (status) status.textContent = res.length + (res.length === 1 ? ' result' : ' results');
-      if (all) { all.setAttribute('href', searchUrl(query)); all.textContent = 'See all ' + res.length + ' results'; all.removeAttribute('hidden'); }
+      if (all) { all.setAttribute('href', searchUrl(query)); all.textContent = res.length === 1 ? 'See the result' : 'See all ' + res.length + ' results'; all.removeAttribute('hidden'); }
     }
     button.addEventListener('click', function () { setOpen(button.getAttribute('aria-expanded') !== 'true'); });
     input.addEventListener('focus', start);
