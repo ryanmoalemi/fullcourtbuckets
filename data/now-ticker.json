@@ -1,9 +1,9 @@
 {
   "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 2 recap routine at 8:30 PM PT replaces this). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "WNBA Finals Game 2: Dream at Valkyries, Mon Oct 19, 2026, 5 p.m. PT, Chase Center. Valkyries lead 1-0.",
-  "url": "/news/finals-game-2-preview-dream-valkyries/",
+  "text": "Live: Dream 13, Valkyries 13 with 3:46 left in the 1st quarter of Finals Game 2 (Valkyries lead series 1-0). Follow the live play-by-play.",
+  "url": "/wnba/finals/2026/game-2/play-by-play/",
   "date": "2026-10-19",
-  "expires": "2026-10-20T09:00:00-07:00",
+  "expires": "2026-10-19T18:10:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"
