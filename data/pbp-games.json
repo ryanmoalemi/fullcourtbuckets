@@ -34,6 +34,18 @@
       },
       "preview": "/news/finals-game-2-preview-dream-valkyries/",
       "recap": "/news/dream-valkyries-finals-game-2-recap/"
+    },
+    "401918307": {
+      "number": 3,
+      "date": "2026-10-21",
+      "date_text": "Wed Oct 21, 2026",
+      "tip": "Wed Oct 21, 2026, 5 p.m. PT",
+      "venue": "State Farm Arena",
+      "series_before": {
+        "GS": 1,
+        "ATL": 1
+      },
+      "preview": "/news/finals-game-3-preview-dream-valkyries/"
     }
   }
 }
