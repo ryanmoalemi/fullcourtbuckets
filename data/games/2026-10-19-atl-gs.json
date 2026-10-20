@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:00:47+00:00",
+ "checked_at": "2026-10-20T01:05:20+00:00",
  "period": 2,
- "clock": "2:35",
+ "clock": "56.6",
  "last_play_period": 2,
- "last_play_clock": "2:35",
+ "last_play_clock": "56.6",
  "away": {
   "abbreviation": "ATL",
-  "score": 32,
-  "feed_score": 32
+  "score": 37,
+  "feed_score": 37
  },
  "home": {
   "abbreviation": "GS",
-  "score": 33,
-  "feed_score": 33
+  "score": 37,
+  "feed_score": 37
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 14,
-   "home": 12
+   "away": 19,
+   "home": 16
   }
  ],
  "players": [],
@@ -2149,7 +2149,7 @@
   {
    "order": 177,
    "period": 2,
-   "clock": "3:23",
+   "clock": "3:24",
    "type": "Defensive Rebound",
    "text": "Naz Hillmon defensive rebound",
    "away_score": 28,
@@ -2161,9 +2161,9 @@
   {
    "order": 178,
    "period": 2,
-   "clock": "3:17",
-   "type": "Layup Shot",
-   "text": "Angel Reese makes layup (Jordin Canada assists)",
+   "clock": "3:18",
+   "type": "Running Layup Shot",
+   "text": "Angel Reese makes running layup (Jordin Canada assists)",
    "away_score": 30,
    "home_score": 33,
    "scoring_play": true,
@@ -2185,7 +2185,7 @@
   {
    "order": 180,
    "period": 2,
-   "clock": "2:55",
+   "clock": "2:57",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 30,
@@ -2257,14 +2257,194 @@
   {
    "order": 186,
    "period": 2,
-   "clock": "2:35",
-   "type": "Running Jump Shot",
-   "text": "Jordin Canada makes 2-foot running jump shot",
+   "clock": "2:36",
+   "type": "Driving Finger Roll Layup",
+   "text": "Jordin Canada makes 2-foot two point shot",
    "away_score": 32,
    "home_score": 33,
    "scoring_play": true,
    "score_value": 2,
    "team": "ATL"
+  },
+  {
+   "order": 187,
+   "period": 2,
+   "clock": "2:17",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 23-foot three point jumper",
+   "away_score": 32,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 188,
+   "period": 2,
+   "clock": "2:15",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 32,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 189,
+   "period": 2,
+   "clock": "2:02",
+   "type": "Shooting Foul",
+   "text": "Kaitlyn Chen shooting foul",
+   "away_score": 32,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 190,
+   "period": 2,
+   "clock": "2:02",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase makes free throw 1 of 2",
+   "away_score": 33,
+   "home_score": 33,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 191,
+   "period": 2,
+   "clock": "2:02",
+   "type": "Substitution",
+   "text": "Veronica Burton enters the game for Kaitlyn Chen",
+   "away_score": 33,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 192,
+   "period": 2,
+   "clock": "2:02",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Angel Reese",
+   "away_score": 33,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 193,
+   "period": 2,
+   "clock": "2:02",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase makes free throw 2 of 2",
+   "away_score": 34,
+   "home_score": 33,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 194,
+   "period": 2,
+   "clock": "1:38",
+   "type": "Turnaround Jump Shot",
+   "text": "Isobel Borlase blocks Veronica Burton's turnaround jump shot",
+   "away_score": 34,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 195,
+   "period": 2,
+   "clock": "1:36",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 34,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 196,
+   "period": 2,
+   "clock": "1:31",
+   "type": "Running Jump Shot",
+   "text": "Allisha Gray makes 25-foot running jump shot (Jordin Canada assists)",
+   "away_score": 37,
+   "home_score": 33,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 197,
+   "period": 2,
+   "clock": "1:31",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 37,
+   "home_score": 33,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 198,
+   "period": 2,
+   "clock": "1:17",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup (Kiah Stokes assists)",
+   "away_score": 37,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 199,
+   "period": 2,
+   "clock": "1:07",
+   "type": "Jump Shot",
+   "text": "Allisha Gray misses 24-foot three point jumper",
+   "away_score": 37,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 200,
+   "period": 2,
+   "clock": "1:04",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 37,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 201,
+   "period": 2,
+   "clock": "56.6",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup (Veronica Burton assists)",
+   "away_score": 37,
+   "home_score": 37,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
