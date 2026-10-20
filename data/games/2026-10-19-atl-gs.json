@@ -5,11 +5,11 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:14:25+00:00",
- "period": 2,
- "clock": "0.0",
- "last_play_period": 2,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-20T01:23:28+00:00",
+ "period": 3,
+ "clock": "9:29",
+ "last_play_period": 3,
+ "last_play_clock": "9:31",
  "away": {
   "abbreviation": "ATL",
   "score": 39,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 37,
-  "feed_score": 37
+  "score": 40,
+  "feed_score": 40
  },
  "periods": [
   {
@@ -30,6 +30,11 @@
    "period": 2,
    "away": 21,
    "home": 16
+  },
+  {
+   "period": 3,
+   "away": 0,
+   "home": 3
   }
  ],
  "players": [],
@@ -458,8 +463,8 @@
    "order": 36,
    "period": 1,
    "clock": "5:30",
-   "type": "Jump Shot",
-   "text": "Cecilia Zandalasini misses 23-foot three point jumper",
+   "type": "Running Jump Shot",
+   "text": "Cecilia Zandalasini misses 23-foot running jump shot",
    "away_score": 8,
    "home_score": 8,
    "scoring_play": false,
@@ -2517,6 +2522,90 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 208,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Kaila Charles",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 209,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Cecilia Zandalasini enters the game for Tiffany Hayes",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 210,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Isobel Borlase",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 211,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for DeWanna Bonner",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 212,
+   "period": 3,
+   "clock": "9:42",
+   "type": "Bad Pass\nTurnover",
+   "text": "Gabby Williams bad pass\nturnover (Rhyne Howard steals)",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 213,
+   "period": 3,
+   "clock": "9:38",
+   "type": "Bad Pass\nTurnover",
+   "text": "Rhyne Howard bad pass\nturnover (Gabby Williams steals)",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 214,
+   "period": 3,
+   "clock": "9:31",
+   "type": "No Shot (Default Shot)",
+   "text": "makes 26-foot shot",
+   "away_score": 39,
+   "home_score": 40,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
   }
  ]
 }
