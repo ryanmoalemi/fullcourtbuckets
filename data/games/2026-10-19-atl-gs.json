@@ -5,11 +5,11 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:59:45+00:00",
+ "checked_at": "2026-10-20T02:00:32+00:00",
  "period": 4,
- "clock": "7:07",
+ "clock": "6:45",
  "last_play_period": 4,
- "last_play_clock": "7:07",
+ "last_play_clock": "7:05",
  "away": {
   "abbreviation": "ATL",
   "score": 67,
@@ -4139,7 +4139,7 @@
   {
    "order": 342,
    "period": 4,
-   "clock": "7:07",
+   "clock": "7:10",
    "type": "Jumpball",
    "text": "Naz Hillmon vs. Kaila Charles",
    "away_score": 67,
@@ -4159,6 +4159,18 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 344,
+   "period": 4,
+   "clock": "7:05",
+   "type": "Personal Foul",
+   "text": "Naz Hillmon personal foul",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
