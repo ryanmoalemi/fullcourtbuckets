@@ -35,6 +35,11 @@ on:
         required: false
         type: boolean
         default: false
+      backfill:
+        description: Backfill the 2026 Dream (ATL) and Valkyries (GSV) regular season and first round. The API is primary. ESPN fills gaps only.
+        required: false
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -42,7 +47,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   dispatch-to-production:
-    if: github.ref != 'refs/heads/main'
+    if: github.ref != 'refs/heads/main' && inputs.backfill != true && inputs.backfill != 'true'
     runs-on: ubuntu-latest
     permissions:
       actions: write
@@ -60,7 +65,7 @@ jobs:
             -F inputs[scheduled]=${{ github.event_name == 'schedule' && 'true' || inputs.scheduled }} \
             -f inputs[espn_game_id]='${{ inputs.espn_game_id }}'
   stats:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && inputs.backfill != true && inputs.backfill != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
@@ -110,4 +115,85 @@ jobs:
           exit 1
       - name: Fail the job when a game was not saved or the secret scan failed
         if: steps.pull.outcome == 'failure' || steps.audit.outcome == 'failure'
+        run: exit 1
+  backfill:
+    if: github.event_name == 'workflow_dispatch' && (inputs.backfill == true || inputs.backfill == 'true')
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test game stats without the API key
+        run: python -m unittest discover -s automation -p 'test_game_stats.py' -v
+      - name: Backfill Dream and Valkyries regular season and first round
+        id: pull
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: |
+          python - << 'PY'
+          import subprocess
+          import sys
+
+          # One team per run. Two abbreviations would keep only head-to-head games.
+          # Forty dates is the pipeline cap of forty games, and each of these teams
+          # played once on each date. GSV is the public abbreviation; the sync maps it to GS.
+          batches = {
+              "ATL": [
+                  ['2026-04-29', '2026-05-03', '2026-05-09', '2026-05-12', '2026-05-17', '2026-05-22', '2026-05-24', '2026-05-27', '2026-05-29', '2026-06-02', '2026-06-04', '2026-06-06', '2026-06-09', '2026-06-11', '2026-06-14', '2026-06-18', '2026-06-20', '2026-06-22', '2026-06-24', '2026-06-26', '2026-06-27', '2026-07-02', '2026-07-04', '2026-07-09', '2026-07-11', '2026-07-13', '2026-07-17', '2026-07-19', '2026-07-29', '2026-07-31', '2026-08-03', '2026-08-05', '2026-08-07', '2026-08-10', '2026-08-13', '2026-08-16', '2026-08-18', '2026-08-20', '2026-08-22', '2026-08-24'],
+                  ['2026-08-28', '2026-08-30', '2026-09-17', '2026-09-19', '2026-09-21', '2026-09-23', '2026-09-27', '2026-09-30'],
+              ],
+              "GSV": [
+                  ['2026-04-25', '2026-05-08', '2026-05-10', '2026-05-13', '2026-05-21', '2026-05-22', '2026-05-25', '2026-05-28', '2026-05-31', '2026-06-02', '2026-06-04', '2026-06-06', '2026-06-09', '2026-06-12', '2026-06-15', '2026-06-17', '2026-06-19', '2026-06-21', '2026-06-24', '2026-06-26', '2026-06-28', '2026-07-04', '2026-07-06', '2026-07-08', '2026-07-10', '2026-07-15', '2026-07-18', '2026-07-20', '2026-07-29', '2026-08-02', '2026-08-04', '2026-08-07', '2026-08-09', '2026-08-12', '2026-08-17', '2026-08-19', '2026-08-21', '2026-08-24', '2026-08-26', '2026-08-27'],
+                  ['2026-08-30', '2026-09-18', '2026-09-19', '2026-09-22', '2026-09-24', '2026-09-27', '2026-09-30', '2026-10-02'],
+              ],
+          }
+          for team, groups in batches.items():
+              for dates in groups:
+                  if len(dates) > 40:
+                      sys.exit(f"{team} batch has {len(dates)} dates")
+                  cmd = ["python", "-u", "automation/game_stats.py", "--teams", team]
+                  for day in dates:
+                      cmd.extend(["--date", day])
+                  print(f"Sync {team} {dates[0]} through {dates[-1]} ({len(dates)} dates)", flush=True)
+                  result = subprocess.run(cmd)
+                  if result.returncode != 0:
+                      sys.exit(result.returncode)
+          PY
+      - name: Validate stored game files
+        id: validate
+        if: steps.pull.outcome == 'success'
+        run: python -m unittest discover -s automation -p 'test_game_data.py' -v
+      - name: Scan game files for the secret
+        id: audit
+        if: steps.validate.outcome == 'success'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python automation/game_stats.py --audit-secrets
+      - name: Commit game files to main
+        if: steps.audit.outcome == 'success'
+        run: |
+          git config user.name 'Full Court Buckets updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/games
+          if git diff --cached --quiet; then
+            echo 'No game-stat changes to commit.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git commit -m 'Record WNBA game stats'
+          for attempt in 1 2 3 4; do
+            if git pull --rebase origin main && git push origin HEAD:main; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 2))
+          done
+          echo 'Could not push game stats to main.' >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+      - name: Fail the job when the backfill, validation, or secret scan failed
+        if: steps.pull.outcome == 'failure' || steps.validate.outcome == 'failure' || steps.audit.outcome == 'failure'
         run: exit 1
