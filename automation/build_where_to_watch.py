@@ -74,6 +74,7 @@ PAGE_CSS = '''
 .ww-page .byline-row .byline{display:flex;align-items:center;gap:10px;margin:0;font:600 14px/1.3 Inter,system-ui,sans-serif;text-decoration:none}
 .ww-page .byline-row .byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;border:1px solid var(--line,#2b2930);flex:0 0 40px}
 .ww-page .byline-row .article-date{font-size:13px;margin:0;line-height:1.3}
+.ww-logo-img{display:block;object-fit:contain;border-radius:50%!important;padding:0!important;background:#fff;border:1px solid #e4dfd8;box-sizing:border-box}
 .ww-row[hidden],.ww-city[hidden],.ww-state[hidden]{display:none!important}
 .ww-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #ece7e0}
 .ww-logo{flex:0 0 44px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:800 15px/1 Barlow,sans-serif;letter-spacing:.5px}
@@ -176,6 +177,14 @@ def verification(r: dict) -> str:
             f' (accessed {human(r["verification_date"])})')
 
 
+def logo_html(r: dict, color: str) -> str:
+    logo = (r.get('logo') or '').strip()
+    if logo.startswith('/assets/bars/') and (ROOT / logo.lstrip('/')).exists():
+        return (f'<img class="ww-logo ww-logo-img" src="{esc(logo)}" alt="{esc(r["name"])} logo" '
+                'width="44" height="44" loading="lazy" decoding="async">')
+    return f'<span class="ww-logo" style="background:{color}" aria-hidden="true">{esc(initials(r["name"]))}</span>'
+
+
 def row_html(r: dict) -> str:
     color = TEAM_COLORS.get(r['team_market'], '#555')
     btns = []
@@ -189,7 +198,7 @@ def row_html(r: dict) -> str:
     team = '' if r['team_market'] == NO_TEAM else f'<p class="ww-team">Team market: {esc(r["team_market"])}</p>'
     hay = ' '.join([r['name'], r['street'], r['city'], r['state'], STATES.get(r['state'], ''), r['team_market']]).lower()
     return (f'<li class="ww-row" data-team="{esc(r["team_market"])}" data-q="{esc(hay)}">'
-            f'<span class="ww-logo" style="background:{color}" aria-hidden="true">{esc(initials(r["name"]))}</span>'
+            + logo_html(r, color) +
             f'<div class="ww-body"><p class="ww-name">{esc(r["name"])}</p><p class="ww-loc">{esc(area)}</p>{team}'
             f'<p class="ww-tag">Shows WNBA games</p><p class="ww-ver">{verification(r)}</p>'
             f'<div class="ww-btns">{"".join(btns)}</div></div></li>')
@@ -382,7 +391,23 @@ def update_sitemaps() -> None:
         path.write_text(page, encoding='utf-8')
 
 
+def fill_missing_logos() -> None:
+    """New venues (e.g. from the bar-reply routine) get a logo on the next build. Blank `logo` = not tried yet;
+    `none` = checked, use initials. Set FCB_NO_LOGO_FETCH=1 to skip the network step."""
+    import os
+    if os.environ.get('FCB_NO_LOGO_FETCH'): return
+    with DATA.open(encoding='utf-8', newline='') as fh:
+        todo = [r['id'] for r in csv.DictReader(fh) if r.get('website') and not (r.get('logo') or '').strip()]
+    if not todo: return
+    try:
+        import fetch_bar_logos
+        fetch_bar_logos.main(['--id', *todo])
+    except Exception as e:  # never block a page build on logo fetching
+        print(f'logo fetch skipped: {e}', file=sys.stderr)
+
+
 def main() -> None:
+    fill_missing_logos()
     rows = load()
     write_if_changed(PAGE_PATH, render(rows))
     write_og_image(stats(rows))
