@@ -38,7 +38,7 @@ CSV_PATH = ROOT / 'news' / SLUG / CSV_NAME
 PHOTO_DIR = ROOT / 'images' / 'relatives'
 HERO_SOURCE = ROOT / 'images' / 'articles' / SLUG / 'photo.jpg'
 PUBLISHED = '2026-10-19'
-HEADLINE = "Steph Curry, Donovan McNabb and JaVale McGee top our list of {relatives} WNBA players' famous relatives"
+HEADLINE = "Steph Curry, Karl Malone and Donovan McNabb top our list of {relatives} WNBA players' famous relatives"
 CATEGORY = 'WNBA'
 HERO_ALT = 'Cameron Brink of the Los Angeles Sparks, left, and Stephen Curry of the Golden State Warriors'
 FEATURED_TEAMS = ('atlanta-dream', 'golden-state-valkyries')
@@ -479,7 +479,7 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
     total = s['relatives']
     by_e = {(e['player_slug'], e['relative_slug']): e for e in entries}
     lead = (
-        'Steph Curry is Cameron Brink\'s godbrother, Donovan McNabb is Kia Nurse\'s uncle by marriage, and JaVale McGee is '
+        'Steph Curry is Cameron Brink\'s godbrother, Karl Malone is Cheryl Ford\'s father, Donovan McNabb is Kia Nurse\'s uncle by marriage, and JaVale McGee is '
         'Imani McGee-Stafford\'s older half-brother. Angel Reese\'s younger brother, Julian, signed with the New Orleans Pelicans on Sept. 24, 2026. '
         f'Full Court Buckets has checked {total} famous relatives of {s["players"]} current and former WNBA players against team, league and school records. '
         f'The NBA accounts for {s["by_sport"]["NBA"]} of them, and {s["on_roster"]} of the players are on 2026 rosters.'
@@ -640,7 +640,7 @@ def record(doc: dict, s: dict, existing: dict | None) -> dict:
         'url': f'/news/{SLUG}/',
         'title': title,
         'description': (
-            f"Steph Curry, Donovan McNabb, JaVale McGee and Angel Reese's NBA brother lead {s['relatives']} famous relatives "
+            f"Steph Curry, Karl Malone, Donovan McNabb and Angel Reese's NBA brother lead {s['relatives']} famous relatives "
             f"of {s['players']} WNBA players, each checked against official records. Updated {human_date(doc['updated'])}."
         ),
         'category': CATEGORY,
