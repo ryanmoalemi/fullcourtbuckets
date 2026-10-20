@@ -5,15 +5,15 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:05:20+00:00",
+ "checked_at": "2026-10-20T01:09:52+00:00",
  "period": 2,
- "clock": "56.6",
+ "clock": "0.0",
  "last_play_period": 2,
- "last_play_clock": "56.6",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 37,
-  "feed_score": 37
+  "score": 39,
+  "feed_score": 39
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 19,
+   "away": 21,
    "home": 16
   }
  ],
@@ -2403,7 +2403,7 @@
    "period": 2,
    "clock": "1:17",
    "type": "Driving Layup Shot",
-   "text": "Tiffany Hayes makes driving layup (Kiah Stokes assists)",
+   "text": "Tiffany Hayes makes driving layup",
    "away_score": 37,
    "home_score": 35,
    "scoring_play": true,
@@ -2425,7 +2425,7 @@
   {
    "order": 200,
    "period": 2,
-   "clock": "1:04",
+   "clock": "1:05",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 37,
@@ -2445,6 +2445,78 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 202,
+   "period": 2,
+   "clock": "34.6",
+   "type": "Pullup Jump Shot",
+   "text": "Isobel Borlase misses 25-foot three point pullup jump shot",
+   "away_score": 37,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 203,
+   "period": 2,
+   "clock": "32.9",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 37,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 204,
+   "period": 2,
+   "clock": "15.4",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes misses driving layup",
+   "away_score": 37,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 205,
+   "period": 2,
+   "clock": "13.7",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 37,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 206,
+   "period": 2,
+   "clock": "3.9",
+   "type": "Pullup Jump Shot",
+   "text": "DeWanna Bonner makes 18-foot pullup jump shot (Jordin Canada assists)",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 207,
+   "period": 2,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 2nd Quarter",
+   "away_score": 39,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
