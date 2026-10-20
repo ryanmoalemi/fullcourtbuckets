@@ -382,8 +382,9 @@ def _playoff_html(slug: str, name: str) -> str:
         return (
             f'The {name} beat the Wings 2-1, then swept the Aces 3-0, '
             f'winning semifinal Game 3 87-77 in overtime. '
-            f'Golden State won Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} 68-64 on Oct. 17, 2026, to lead 1-0. '
-            f'{link("/news/finals-game-2-preview-dream-valkyries/", "Game 2")} is Oct. 19, 2026, 5 p.m. PT, at Chase Center.'
+            f'Golden State won Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} 68-64 on Oct. 17, 2026, '
+            f'then lost {link("/news/dream-valkyries-finals-game-2-recap/", "Game 2")} 79-65 to Atlanta on Oct. 19, so the series is tied 1-1. '
+            f'{link("/news/finals-game-3-preview-dream-valkyries/", "Game 3")} is Wed., Oct. 21, 2026, 5 p.m. PT, at State Farm Arena.'
         )
     if slug == 'las-vegas-aces':
         return (
@@ -394,8 +395,9 @@ def _playoff_html(slug: str, name: str) -> str:
         return (
             f'The {name} beat the Mystics 92-77 in {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")}. '
             f'In the semifinals they swept the Liberty 3-0, ending it 85-83 in {link("/news/dream-sweep-liberty-game-3-semifinals/", "Game 3")}. '
-            f'Atlanta lost Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} to Golden State 68-64 on Oct. 17, 2026, and trails 1-0. '
-            f'{link("/news/finals-game-2-preview-dream-valkyries/", "Game 2")} is set for 5 p.m. PT on Oct. 19, 2026, in San Francisco.'
+            f'Atlanta lost Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} to Golden State 68-64 on Oct. 17, 2026, '
+            f'then won {link("/news/dream-valkyries-finals-game-2-recap/", "Game 2")} 79-65 on Oct. 19 to tie the series 1-1. '
+            f'{link("/news/finals-game-3-preview-dream-valkyries/", "Game 3")} is Wed., Oct. 21, 2026, 5 p.m. PT, at State Farm Arena in Atlanta.'
         )
     if slug == 'washington-mystics':
         return (

@@ -780,8 +780,9 @@ def tracker_answer(payload: dict) -> str:
     if matchup == 'Valkyries vs. Dream' and first['date'] == '2026-10-17' and first.get('status') == 'Final: Valkyries 68-64':
         return (
             'Game 1 was played Oct. 17 at Chase Center, where the Valkyries beat the Dream 68-64 '
-            'before 18,064 fans to lead the series 1-0. Game 2 is Monday, Oct. 19 at 5:00 p.m. PT '
-            '(8:00 p.m. ET) on USA and Peacock. Game 1 viewership has not been published yet.'
+            'before 18,064 fans. The Dream won Game 2 79-65 on Oct. 19 to tie the series 1-1. '
+            'Game 3 is Wednesday, Oct. 21 at 5:00 p.m. PT at State Farm Arena in Atlanta. '
+            'Game 1 viewership has not been published yet.'
         )
     if matchup == 'Valkyries vs. Dream' and first['date'] == '2026-10-17':
         return 'The 2026 Finals (Valkyries vs. Dream) begin Oct. 17. Audiences are awaiting release.'
