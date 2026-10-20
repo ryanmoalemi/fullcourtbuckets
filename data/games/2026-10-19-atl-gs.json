@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T01:32:33+00:00",
+ "checked_at": "2026-10-20T01:37:05+00:00",
  "period": 3,
- "clock": "5:51",
+ "clock": "4:49",
  "last_play_period": 3,
- "last_play_clock": "6:04",
+ "last_play_clock": "4:49",
  "away": {
   "abbreviation": "ATL",
-  "score": 42,
-  "feed_score": 42
+  "score": 44,
+  "feed_score": 44
  },
  "home": {
   "abbreviation": "GS",
-  "score": 40,
-  "feed_score": 40
+  "score": 42,
+  "feed_score": 42
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 3,
-   "home": 3
+   "away": 5,
+   "home": 5
   }
  ],
  "players": [],
@@ -2658,7 +2658,7 @@
   {
    "order": 219,
    "period": 3,
-   "clock": "8:48",
+   "clock": "8:49",
    "type": "Turnaround Jump Shot",
    "text": "Kiah Stokes blocks Angel Reese 's 4-foot turnaround jump shot",
    "away_score": 39,
@@ -3007,8 +3007,8 @@
    "order": 248,
    "period": 3,
    "clock": "6:30",
-   "type": "Jump Shot",
-   "text": "Kayla Thornton misses 25-foot three point jumper",
+   "type": "Jump Shot Bank",
+   "text": "Kayla Thornton misses 25-foot jump bank shot",
    "away_score": 42,
    "home_score": 40,
    "scoring_play": false,
@@ -3018,7 +3018,7 @@
   {
    "order": 249,
    "period": 3,
-   "clock": "6:27",
+   "clock": "6:28",
    "type": "Defensive Rebound",
    "text": "DeWanna Bonner defensive rebound",
    "away_score": 42,
@@ -3042,9 +3042,9 @@
   {
    "order": 251,
    "period": 3,
-   "clock": "6:07",
+   "clock": "6:08",
    "type": "Driving Layup Shot",
-   "text": "Angel Reese blocks Tiffany Hayes 's 4-foot driving layup",
+   "text": "Angel Reese blocks Tiffany Hayes 's 5-foot driving layup",
    "away_score": 42,
    "home_score": 40,
    "scoring_play": false,
@@ -3054,7 +3054,7 @@
   {
    "order": 252,
    "period": 3,
-   "clock": "6:04",
+   "clock": "6:06",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 42,
@@ -3062,6 +3062,126 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 253,
+   "period": 3,
+   "clock": "5:54",
+   "type": "Pullup Jump Shot",
+   "text": "DeWanna Bonner misses 26-foot three point pullup jump shot",
+   "away_score": 42,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 254,
+   "period": 3,
+   "clock": "5:51",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 42,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 255,
+   "period": 3,
+   "clock": "5:40",
+   "type": "Pullup Bank Jump Shot",
+   "text": "Kaitlyn Chen makes 3-foot two point shot",
+   "away_score": 42,
+   "home_score": 42,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 256,
+   "period": 3,
+   "clock": "5:19",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 25-foot three point jumper",
+   "away_score": 42,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 257,
+   "period": 3,
+   "clock": "5:13",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 42,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 258,
+   "period": 3,
+   "clock": "4:57",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "away_score": 42,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 259,
+   "period": 3,
+   "clock": "4:53",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 42,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 260,
+   "period": 3,
+   "clock": "4:49",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese makes driving layup (Allisha Gray assists)",
+   "away_score": 44,
+   "home_score": 42,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 261,
+   "period": 3,
+   "clock": "4:49",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 44,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 262,
+   "period": 3,
+   "clock": "4:49",
+   "type": "Official Timeout",
+   "text": "Official timeout",
+   "away_score": 44,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
