@@ -1,0 +1,76 @@
+name: FCB live play-by-play (Finals Game 2)
+# Ryan, Oct 19 2026: Game 2 play-by-play page updates about every 5 minutes while live.
+# Runs from the default branch (schedules only fire there), works on main, pushes so Pages deploys.
+# On Final: full import + final score check, then disables itself.
+on:
+  schedule:
+    - cron: '*/5 0-3 20 10 *'   # Oct 20 00:00-03:55 UTC = Oct 19 5:00-8:55 PM PT
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: fcb-live-pbp
+  cancel-in-progress: false
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch live game + plays
+        id: fetch
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: |
+          set +e
+          python -u automation/live_pbp.py; rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          echo "live_pbp exit $rc" >> "$GITHUB_STEP_SUMMARY"
+          if [ $rc -eq 1 ]; then exit 1; fi
+          exit 0
+      - name: Build live page
+        if: steps.fetch.outputs.rc == '0'
+        run: python automation/build_pbp.py --game-id 401918306 --game-json data/games/2026-10-19-atl-gs.json --live
+      - name: Final import and final page (full score check)
+        id: final
+        if: steps.fetch.outputs.rc == '10'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+          GAME_STATS_DATE: '2026-10-19'
+          GAME_STATS_TEAMS: 'ATL,GS'
+          GAME_STATS_ESPN_ID: '401918306'
+        run: |
+          python -u automation/game_stats.py
+          python automation/game_stats.py --audit-secrets
+          python automation/build_pbp.py --game-id 401918306 --game-json data/games/2026-10-19-atl-gs.json
+      - name: Secret scan
+        if: steps.fetch.outputs.rc == '0'
+        env:
+          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
+        run: python automation/game_stats.py --audit-secrets
+      - name: Commit and push when data changed
+        if: steps.fetch.outputs.rc == '0' || steps.final.outcome == 'success'
+        run: |
+          git config user.name 'Full Court Buckets updater'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/games/2026-10-19-atl-gs.json data/pbp-games.json wnba/finals/2026/game-2/play-by-play/index.html
+          if git diff --cached --quiet; then echo 'No change.' >> "$GITHUB_STEP_SUMMARY"; exit 0; fi
+          git commit -m "Game 2 play-by-play: ${{ steps.fetch.outputs.rc == '10' && 'final' || 'live update' }}"
+          for attempt in 1 2 3 4 5; do
+            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
+            git rebase --abort 2>/dev/null || true
+            sleep $((attempt * 3))
+          done
+          exit 1
+      - name: Disable after Final
+        if: steps.final.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow disable fcb-live-pbp.yml --repo "${{ github.repository }}"
