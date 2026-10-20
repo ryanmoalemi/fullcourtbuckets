@@ -1,50 +1,55 @@
 {
   "slug": "taniya-latson",
   "player_name": "Ta'Niya Latson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What college did Ta'Niya Latson attend?",
-      "answer": "Latson played college basketball at the Florida State Seminoles and the South Carolina Gamecocks.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ta'Niya_Latson"
-      ],
-      "google_keyword": "ta'niya latson south carolina",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Ta'Niya Latson's parents?",
-      "answer": "Public profiles share limited verified detail about Ta'Niya Latson's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Where did Ta'Niya Latson play college basketball?",
+      "answer": "Ta'Niya Latson played three seasons at Florida State, then transferred to South Carolina for her senior season. She started all 35 games for the Gamecocks, who went 36-4 and finished as NCAA runners-up.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ta'Niya_Latson"
+        "https://www.oursportscentral.com/services/releases/las-vegas-aces-sign-taniya-latson-to-development-player-contract/n-6385668",
+        "https://sparks.wnba.com/news/sparks-draft-taniya-latson-chance-gray-and-amelia-hassett"
       ],
-      "google_keyword": "ta'niya latson parents",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Does Ta'Niya Latson have kids?",
-      "answer": "There is no widely reported public information that Ta'Niya Latson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ta'Niya_Latson"
-      ],
-      "google_keyword": "ta'niya latson",
-      "approx_monthly_volume": 18100
+      "queries": [
+        {
+          "q": "ta'niya latson south carolina",
+          "vol": 70
+        },
+        {
+          "q": "ta'niya latson fsu",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Ta'Niya Latson?",
-      "answer": "Ta'Niya Latson was born October 20, 2003. As of late 2026 that puts her at 22 years old.",
+      "answer": "The WNBA lists Ta'Niya Latson's birthdate as October 20, 2003.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ta'Niya_Latson"
+        "https://www.wnba.com/draft/2026/prospects/257842/taniya-latson"
       ],
-      "google_keyword": "how old is ta'niya latson",
-      "approx_monthly_volume": 10,
-      "birthdate": "2003-10-20"
+      "queries": [
+        {
+          "q": "how old is ta'niya latson",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Ta'Niya Latson go to high school?",
+      "answer": "Ta'Niya Latson was a 2022 McDonald's All-American and Florida Miss Basketball at American Heritage School in Plantation, Florida, the Las Vegas Aces said.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/las-vegas-aces-sign-taniya-latson-to-development-player-contract/n-6385668"
+      ],
+      "queries": [
+        {
+          "q": "ta'niya latson american heritage",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

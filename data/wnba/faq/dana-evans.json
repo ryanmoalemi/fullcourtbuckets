@@ -1,154 +1,167 @@
 {
   "slug": "dana-evans",
   "player_name": "Dana Evans",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Dana Evans's stats / points per game?",
-      "answer": "In the 2026 regular season, Dana Evans averaged 6.6 points, 1.1 rebounds, and 2.2 assists in 44 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are Dana Evans's stats?",
+      "answer": "In the 2026 regular season, Dana Evans averaged 3.6 points, 1.4 rebounds, and 2.1 assists in 14 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dana evans stats",
-      "approx_monthly_volume": 720
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/dana-evans/"
+      ],
+      "queries": [
+        {
+          "q": "dana evans stats",
+          "vol": 590
+        }
+      ]
     },
     {
-      "question": "Does Dana Evans have a signature shoe?",
-      "answer": "Public search interest ties Dana Evans to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "What team does Dana Evans play for?",
+      "answer": "Dana Evans plays guard for the Las Vegas Aces and wears No. 11. Las Vegas acquired her from Chicago on February 7, 2025, for the No. 16 and No. 22 picks in the 2025 draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://www.wnba.com/player/1630389/dana-evans/bio",
+        "https://aces.wnba.com/full-bio-dana-evans"
       ],
-      "google_keyword": "dana evans shoes",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "dana evans wnba",
+          "vol": 720
+        },
+        {
+          "q": "dana evans aces",
+          "vol": 90
+        },
+        {
+          "q": "dana evans las vegas aces",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Who is Dana Evans dating?",
-      "answer": "As of late 2026, Dana Evans has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "Which teams has Dana Evans played for?",
+      "answer": "Dana Evans has played for the Dallas Wings, Chicago Sky and Las Vegas Aces.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://fullcourtbuckets.com/wnba/dana-evans/"
       ],
-      "google_keyword": "dana evans relationship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "dana evans chicago sky",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "How much does Dana Evans make?",
-      "answer": "A precise public salary or net worth figure for Dana Evans is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "How many championships has Dana Evans won?",
+      "answer": "Dana Evans has won two WNBA championships: 2021 with the Chicago Sky and 2025 with the Las Vegas Aces.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630389/dana-evans/bio",
+        "https://aces.wnba.com/full-bio-dana-evans"
       ],
-      "google_keyword": "dana evans salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "dana evans championship",
+          "vol": 30
+        },
+        {
+          "q": "dana evans wnba champion",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Dana Evans?",
-      "answer": "Dana Evans is listed at 5' 6\".",
+      "answer": "The WNBA lists Dana Evans at 5 feet 6 inches and 145 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://www.wnba.com/player/1630389/dana-evans/bio"
       ],
-      "google_keyword": "dana evans height",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "dana evans height",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How old is Dana Evans?",
-      "answer": "She was born August 1, 1998 in Gary. As of late 2026 that puts her at 28 years old.",
+      "answer": "Dana Evans was born August 1, 1998.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://www.wnba.com/player/1630389/dana-evans/bio"
       ],
-      "google_keyword": "dana evans age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1998-08-01"
+      "queries": [
+        {
+          "q": "dana evans age",
+          "vol": 90
+        },
+        {
+          "q": "dana evans birthday",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Dana Evans's jersey number?",
-      "answer": "Dana Evans wears number 11 for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dana evans chicago sky jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Dana Evans's contract?",
-      "answer": "Contract length and guarantees for Dana Evans are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Where did Dana Evans play college basketball?",
+      "answer": "Dana Evans played four seasons at Louisville. The Dallas Wings drafted her 13th overall, the first pick of the second round, in 2021.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630389/dana-evans/bio",
+        "https://aces.wnba.com/full-bio-dana-evans"
       ],
-      "google_keyword": "dana evans contract",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Dana Evans married?",
-      "answer": "There is no widely reported public record of Dana Evans being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
-      ],
-      "google_keyword": "dana evans husband",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Where is Dana Evans from?",
-      "answer": "She is from Gary.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
-      ],
-      "google_keyword": "where is dana evans from",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How many championships does Dana Evans have?",
-      "answer": "Public biographical sources cover Dana Evans's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
-      ],
-      "google_keyword": "dana evans championship",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Dana Evans?",
-      "answer": "Dana Kiana Evans is an American professional basketball player for the Las Vegas Aces of the Women's National Basketball Association and for the Phantom of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
-      ],
-      "google_keyword": "who is dana evans",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Dana Evans injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "dana evans injury",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "dana evans louisville",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "Who are Dana Evans's parents?",
-      "answer": "Public profiles share limited verified detail about Dana Evans's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Her Aces bio lists her parents as Damon and Shwanda Evans and says she has three brothers.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://aces.wnba.com/full-bio-dana-evans"
       ],
-      "google_keyword": "dana evans parents",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "dana evans parents",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What college did Dana Evans attend?",
-      "answer": "Evans played college basketball at Louisville.",
-      "answer_kind": "bio",
+      "question": "Has Dana Evans played overseas?",
+      "answer": "Yes. Her Aces bio lists KSC Szekszárd in Hungary in 2021-22 and Besiktas in Istanbul, Turkey, from 2022-23 through 2024-25.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dana_Evans"
+        "https://aces.wnba.com/full-bio-dana-evans"
       ],
-      "google_keyword": "dana evans louisville",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "dana evans besiktas",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Dana Evans a Jordan Brand athlete?",
+      "answer": "Yes. Her Aces bio says she is a Jordan Brand athlete.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/full-bio-dana-evans"
+      ],
+      "queries": [
+        {
+          "q": "dana evans jordan",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,152 +1,183 @@
 {
   "slug": "brittney-sykes",
   "player_name": "Brittney Sykes",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Brittney Sykes's stats / points per game?",
-      "answer": "In the 2026 regular season, Brittney Sykes averaged 20.1 points, 3.8 rebounds, and 3.5 assists in 15 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Brittney Sykes's stats?",
+      "answer": "In the 2026 regular season, Brittney Sykes averaged 18.6 points, 3.5 rebounds, and 3.4 assists in 17 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "brittney sykes stats",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Who is Brittney Sykes dating?",
-      "answer": "As of late 2026, Brittney Sykes has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://fullcourtbuckets.com/wnba/brittney-sykes/"
       ],
-      "google_keyword": "brittney sykes partner",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "brittney sykes stats",
+          "vol": 1900
+        },
+        {
+          "q": "brittney sykes wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes stats per game",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes points",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes points per game",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes average points per game",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes assists per game",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes game log",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "How much does Brittney Sykes make?",
-      "answer": "A precise public salary or net worth figure for Brittney Sykes is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "brittney sykes net worth",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Brittney Sykes?",
-      "answer": "Brittney Sykes is listed at 5' 11\".",
+      "question": "What team does Brittney Sykes play for?",
+      "answer": "Brittney Sykes plays guard for the Toronto Tempo and wears No. 20.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio"
       ],
-      "google_keyword": "brittney sykes height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How old is Brittney Sykes?",
-      "answer": "She was born February 7, 1994 in Newark. As of late 2026 that puts her at 32 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
-      ],
-      "google_keyword": "brittney sykes age",
-      "approx_monthly_volume": 40,
-      "birthdate": "1994-02-07"
-    },
-    {
-      "question": "What did Brittney Sykes score in her last game?",
-      "answer": "In her most recent completed game (August 22, 2026 vs. the Portland Fire), Brittney Sykes had 0.0 points, 0 rebounds, and 0 assists in a 82-79 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is brittney sykes playing tonight",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Brittney Sykes's jersey number?",
-      "answer": "Brittney Sykes wears number 20 for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "brittney sykes jersey",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "brittney sykes wnba",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "What is Brittney Sykes's contract?",
-      "answer": "Contract length and guarantees for Brittney Sykes are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "The Toronto Tempo signed Brittney Sykes to a multi-year contract on April 11, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/news/toronto-tempo-sign-brittney-sykes"
       ],
-      "google_keyword": "brittney sykes contract",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "brittney sykes contract",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Is Brittney Sykes married?",
-      "answer": "There is no widely reported public record of Brittney Sykes being married as of late 2026.",
-      "answer_kind": "researched",
+      "question": "Who has Brittney Sykes played for?",
+      "answer": "Brittney Sykes has played for the Atlanta Dream, Los Angeles Sparks, Washington Mystics, Seattle Storm, and Toronto Tempo.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://fullcourtbuckets.com/wnba/brittney-sykes/"
       ],
-      "google_keyword": "brittney sykes wife",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "brittney sykes teams",
+          "vol": 10
+        },
+        {
+          "q": "brittney sykes storm",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Where is Brittney Sykes from?",
-      "answer": "She is from Newark.",
+      "question": "How tall is Brittney Sykes?",
+      "answer": "The WNBA lists Brittney Sykes at 5 feet 11 inches and 152 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio"
       ],
-      "google_keyword": "where is brittney sykes from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "brittney sykes height",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What awards has Brittney Sykes won?",
-      "answer": "Award and All-Star history for Brittney Sykes is covered in public biographical sources. See the cited profile for the confirmed list.",
-      "answer_kind": "researched",
+      "question": "How old is Brittney Sykes?",
+      "answer": "Brittney Sykes was born February 7, 1994.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio"
       ],
-      "google_keyword": "brittney sykes all star",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "brittney sykes age",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "When was Brittney Sykes drafted?",
-      "answer": "She was drafted with the seventh overall pick in the 2017 WNBA draft.",
+      "answer": "Brittney Sykes was selected seventh overall in the first round of the 2017 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio",
+        "https://www.wnba.com/news/toronto-tempo-sign-brittney-sykes"
       ],
-      "google_keyword": "brittney sykes draft",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "brittney sykes draft",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Brittney Sykes injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "brittney sykes injury",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "Does Brittney Sykes have kids?",
-      "answer": "There is no widely reported public information that Brittney Sykes has children as of late 2026.",
+      "question": "Where did Brittney Sykes play college basketball?",
+      "answer": "Brittney Sykes played college basketball at Syracuse.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio",
+        "https://www.wnba.com/news/toronto-tempo-sign-brittney-sykes"
       ],
-      "google_keyword": "brittney sykes son",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "brittney sykes syracuse",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who are Brittney Sykes's parents?",
-      "answer": "Public profiles share limited verified detail about Brittney Sykes's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Has Brittney Sykes been an All-Star?",
+      "answer": "Yes. Brittney Sykes was a 2025 WNBA All-Star. The WNBA also lists her on the All-Defensive First Team in 2021 and the All-Defensive Second Team in 2020 and 2022.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brittney_Sykes"
+        "https://www.wnba.com/player/1628279/brittney-sykes/bio",
+        "https://www.wnba.com/news/toronto-tempo-sign-brittney-sykes"
       ],
-      "google_keyword": "brittney sykes parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "brittney sykes all star",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What is Brittney Sykes's 3-point percentage?",
+      "answer": "In the 2026 regular season, Brittney Sykes's three-point percentage is 25.8.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/brittney-sykes/"
+      ],
+      "queries": [
+        {
+          "q": "brittney sykes 3-point stats",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

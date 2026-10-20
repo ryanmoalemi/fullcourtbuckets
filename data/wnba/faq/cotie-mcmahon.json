@@ -1,102 +1,194 @@
 {
   "slug": "cotie-mcmahon",
   "player_name": "Cotie McMahon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Cotie McMahon's stats / points per game?",
-      "answer": "In the 2026 regular season, Cotie McMahon averaged 6.3 points, 2.9 rebounds, and 1.9 assists in 40 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What are Cotie McMahon's stats?",
+      "answer": "In the 2026 regular season, Cotie McMahon averaged 6.6 points, 2.9 rebounds, and 1.9 assists in 42 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cotie mcmahon stats",
-      "approx_monthly_volume": 880
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/cotie-mcmahon/"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon stats",
+          "vol": 880
+        }
+      ]
     },
     {
-      "question": "How much does Cotie McMahon make?",
-      "answer": "A precise public salary or net worth figure for Cotie McMahon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Cotie McMahon play for?",
+      "answer": "Cotie McMahon plays for the Washington Mystics and wears No. 23.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon wnba",
+          "vol": 70
+        },
+        {
+          "q": "cotie mcmahon mystics",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "When was Cotie McMahon drafted?",
+      "answer": "The Washington Mystics selected Cotie McMahon 11th overall in the first round of the 2026 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio",
+        "https://www.wnba.com/draft/2026/prospects/257846/cotie-mcmahon"
       ],
-      "google_keyword": "cotie mcmahon net worth",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "cotie mcmahon wnba draft",
+          "vol": 170
+        },
+        {
+          "q": "cotie mcmahon draft",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How tall is Cotie McMahon?",
-      "answer": "Cotie McMahon is listed at 6' 0\".",
+      "answer": "The WNBA lists Cotie McMahon at 6 feet and 203 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cotie_McMahon"
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
       ],
-      "google_keyword": "cotie mcmahon height",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "cotie mcmahon height",
+          "vol": 170
+        },
+        {
+          "q": "cotie mcmahon weight",
+          "vol": 70
+        },
+        {
+          "q": "cotie mcmahon height and weight",
+          "vol": 40
+        },
+        {
+          "q": "how much does cotie mcmahon weight",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Cotie McMahon's jersey number?",
-      "answer": "Cotie McMahon wears number 23 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cotie mcmahon jersey",
-      "approx_monthly_volume": 40
+      "question": "Where did Cotie McMahon play college basketball?",
+      "answer": "Cotie McMahon played at Ohio State from 2022 to 2025, then spent her final season at Ole Miss. The WNBA says she was the 2023 Big Ten Freshman of the Year and made the All-Big Ten First Team in 2024 and 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio",
+        "https://www.wnba.com/draft/2026/prospects/257846/cotie-mcmahon"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon ole miss",
+          "vol": 170
+        },
+        {
+          "q": "cotie mcmahon ohio state",
+          "vol": 40
+        },
+        {
+          "q": "ohio state women's basketball cotie mcmahon",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Cotie McMahon attend?",
-      "answer": "McMahon played college basketball at the Ole Miss Rebels of the Southeastern Conference and the Ohio State Buckeyes where she was named Big Ten Freshman of the Year in 2023.",
+      "question": "Where did Cotie McMahon transfer?",
+      "answer": "Cotie McMahon transferred from Ohio State to Ole Miss for the 2025-26 season. She started all 35 games, averaged 19.5 points, and was named SEC Newcomer of the Year, the WNBA says.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cotie_McMahon"
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
       ],
-      "google_keyword": "cotie mcmahon ohio state",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What position does Cotie McMahon play?",
-      "answer": "Cotie McMahon is listed as a G for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cotie mcmahon position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Cotie McMahon injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "cotie mcmahon injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who are Cotie McMahon's parents?",
-      "answer": "Public profiles share limited verified detail about Cotie McMahon's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cotie_McMahon"
-      ],
-      "google_keyword": "cotie mcmahon parents",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How old is Cotie McMahon?",
-      "answer": "Cotie McMahon was born May 4, 2004 in Centerville. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cotie_McMahon"
-      ],
-      "google_keyword": "cotie mcmahon age",
-      "approx_monthly_volume": 50,
-      "birthdate": "2004-05-04"
+      "queries": [
+        {
+          "q": "cotie mcmahon transfer",
+          "vol": 110
+        },
+        {
+          "q": "cotie mcmahon transfer portal",
+          "vol": 20
+        },
+        {
+          "q": "where will cotie mcmahon transfer to",
+          "vol": 10
+        },
+        {
+          "q": "where is cotie mcmahon going",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Cotie McMahon from?",
-      "answer": "Cotie McMahon is from Centerville.",
+      "answer": "Cotie McMahon was born in Dayton, Ohio, and went to Centerville High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cotie_McMahon"
+        "https://www.wnba.com/draft/2026/prospects/257846/cotie-mcmahon"
       ],
-      "google_keyword": "where is cotie mcmahon from",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "where is cotie mcmahon from",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What position does Cotie McMahon play?",
+      "answer": "The WNBA player page lists Cotie McMahon as a guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon position",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Is Cotie McMahon a rookie?",
+      "answer": "Yes. 2026 was Cotie McMahon's first WNBA season, and the WNBA lists her experience as rookie.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon year",
+          "vol": 10
+        },
+        {
+          "q": "what year is cotie mcmahon",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Was Cotie McMahon a top recruit?",
+      "answer": "Her WNBA bio says she was rated a four-star recruit coming out of high school, where she also ran track and field.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643430/cotie-mcmahon/bio"
+      ],
+      "queries": [
+        {
+          "q": "cotie mcmahon recruiting",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

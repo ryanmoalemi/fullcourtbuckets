@@ -1,124 +1,201 @@
 {
   "slug": "kara-lawson",
   "player_name": "Kara Lawson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Kara Lawson's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2015), Kara Lawson averaged 6.0 points, 1.3 rebounds, and 0.7 assists in 3 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kara lawson stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Kara Lawson dating?",
-      "answer": "As of late 2026, Kara Lawson has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who is Kara Lawson?",
+      "answer": "Kara Lawson is the head women's basketball coach at Duke, named on July 11, 2020, and head coach of the USA Basketball Women's National Team through 2028. She is a former WNBA champion and Olympic gold medalist.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
       ],
-      "google_keyword": "kara lawson partner",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "who is kara lawson",
+          "vol": 260
+        },
+        {
+          "q": "kara lawson bio",
+          "vol": 30
+        },
+        {
+          "q": "kara lawson coach",
+          "vol": 210
+        },
+        {
+          "q": "kara lawson duke coach",
+          "vol": 30
+        },
+        {
+          "q": "kara lawson duke",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "How much does Kara Lawson make?",
-      "answer": "A precise public salary or net worth figure for Kara Lawson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What does 'handle hard better' mean?",
+      "answer": "'Handle hard better' is the message of a short talk Kara Lawson gave about handling hard things in life. It went viral, and she discussed the reaction on TODAY.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.today.com/video/coach-behind-handle-hard-better-viral-pep-talk-speaks-to-today-152538693808"
       ],
-      "google_keyword": "kara lawson salary",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "kara lawson handle hard better",
+          "vol": 720
+        }
+      ]
     },
     {
       "question": "How old is Kara Lawson?",
-      "answer": "Public profiles list Kara Lawson as born in 1981. As of late 2026 that puts her around 45 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
-      ],
-      "google_keyword": "kara lawson age",
-      "approx_monthly_volume": 90,
-      "birthdate": "1981-01-01"
-    },
-    {
-      "question": "What is Kara Lawson's contract?",
-      "answer": "Contract length and guarantees for Kara Lawson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "Kara Lawson was born February 14, 1981, in Alexandria, Virginia.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.olympedia.org/athletes/111850"
       ],
-      "google_keyword": "kara lawson contract",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kara lawson age",
+          "vol": 110
+        },
+        {
+          "q": "how old is kara lawson",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Is Kara Lawson married?",
-      "answer": "There is no widely reported public record of Kara Lawson being married as of late 2026.",
+      "question": "Did Kara Lawson play in the WNBA?",
+      "answer": "Yes. Kara Lawson played 13 WNBA seasons, from 2003 to 2015, with the Sacramento Monarchs, Connecticut Sun, and Washington Mystics. The Detroit Shock drafted her fifth overall in 2003, and she won the 2005 WNBA title with Sacramento.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
       ],
-      "google_keyword": "kara lawson husband",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "kara lawson wnba",
+          "vol": 170
+        },
+        {
+          "q": "who did kara lawson play for",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What team does Kara Lawson play for?",
-      "answer": "Her most recent WNBA team on record is the Sacramento Monarchs. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who did kara lawson play for",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Kara Lawson?",
-      "answer": "Kara Marie Lawson is an American basketball coach and former player who is the head coach for the Duke Blue Devils women's basketball team and the U.S.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
-      ],
-      "google_keyword": "who is kara lawson",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Does Kara Lawson have kids?",
-      "answer": "There is no widely reported public information that Kara Lawson has children as of late 2026.",
+      "question": "What were Kara Lawson's WNBA career averages?",
+      "answer": "Duke says Kara Lawson averaged 9.8 points, 2.6 rebounds, and 2.5 assists in 377 WNBA games and was a 2007 WNBA All-Star.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
       ],
-      "google_keyword": "kara lawson daughter",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "kara lawson career stats",
+          "vol": 30
+        },
+        {
+          "q": "kara lawson stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who are Kara Lawson's parents?",
-      "answer": "Public profiles share limited verified detail about Kara Lawson's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Where did Kara Lawson play college basketball?",
+      "answer": "Kara Lawson played four seasons at Tennessee for Pat Summitt and helped the Lady Vols reach the Final Four in 2000, 2002, and 2003. She scored 1,950 career points.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
       ],
-      "google_keyword": "kara lawson parents",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "kara lawson tennessee",
+          "vol": 140
+        },
+        {
+          "q": "kara lawson pat summitt",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What position does Kara Lawson play?",
-      "answer": "Kara Lawson is listed as a Guard for the Sacramento Monarchs.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kara lawson basketball",
-      "approx_monthly_volume": 14800
-    },
-    {
-      "question": "What is Kara Lawson's nationality?",
-      "answer": "Kara Lawson is American.",
-      "answer_kind": "bio",
+      "question": "Is Kara Lawson the Team USA coach?",
+      "answer": "Yes. Kara Lawson was named head coach of the USA Basketball Women's National Team in September 2025 and will lead the team through the 2028 Olympics in Los Angeles. As a player, she won Olympic gold in 2008.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Lawson"
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407",
+        "https://goduke.com/news/2025/9/22/womens-basketball-kara-lawson-named-2025-28-usa-basketball-womens-national-team-head-coach"
       ],
-      "google_keyword": "kara lawson basketball",
-      "approx_monthly_volume": 14800
+      "queries": [
+        {
+          "q": "kara lawson team usa",
+          "vol": 90
+        },
+        {
+          "q": "kara lawson usa basketball",
+          "vol": 50
+        },
+        {
+          "q": "kara lawson team usa coach",
+          "vol": 20
+        },
+        {
+          "q": "kara lawson olympics",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Did Kara Lawson coach the Boston Celtics?",
+      "answer": "Yes. Duke says she became the first female coach in Celtics history and spent one season, 2019-20, on Boston's staff.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
+      ],
+      "queries": [
+        {
+          "q": "kara lawson celtics",
+          "vol": 30
+        },
+        {
+          "q": "kara lawson boston celtics",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What is Kara Lawson's coaching record at Duke?",
+      "answer": "Duke lists Kara Lawson at 124-50 through six seasons. In 2025-26, Duke won the ACC regular-season and tournament titles and reached the Elite Eight, and she was named ACC Coach of the Year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://goduke.com/sports/womens-basketball/roster/coaches/kara-lawson/5407"
+      ],
+      "queries": [
+        {
+          "q": "kara lawson coaching record",
+          "vol": 30
+        },
+        {
+          "q": "kara lawson coaching career",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How tall is Kara Lawson?",
+      "answer": "Olympedia lists Kara Lawson at 175 centimeters, about 5 feet 9 inches.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.olympedia.org/athletes/111850"
+      ],
+      "queries": [
+        {
+          "q": "kara lawson height",
+          "vol": 70
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

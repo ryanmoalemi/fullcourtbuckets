@@ -1,114 +1,207 @@
 {
   "slug": "sarah-ashlee-barker",
   "player_name": "Sarah Ashlee Barker",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Sarah Ashlee Barker's stats / points per game?",
-      "answer": "In the 2026 regular season, Sarah Ashlee Barker averaged 10.7 points, 4.5 rebounds, and 2.4 assists in 26 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Sarah Ashlee Barker's stats?",
+      "answer": "In the 2026 regular season, Sarah Ashlee Barker averaged 10.7 points, 4.5 rebounds, and 2.4 assists in 26 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sarah ashlee barker stats",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How much does Sarah Ashlee Barker make?",
-      "answer": "A precise public salary or net worth figure for Sarah Ashlee Barker is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/sarah-ashlee-barker/"
       ],
-      "google_keyword": "sarah ashlee barker salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "sarah ashlee barker stats",
+          "vol": 880
+        },
+        {
+          "q": "sarah ashlee barker wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Sarah Ashlee Barker?",
-      "answer": "Sarah Ashlee Barker is listed at 6' 0\".",
+      "answer": "The WNBA lists Sarah Ashlee Barker at 6 feet and 173 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio"
       ],
-      "google_keyword": "sarah ashlee barker height",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What is Sarah Ashlee Barker's contract?",
-      "answer": "Contract length and guarantees for Sarah Ashlee Barker are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "sarah ashlee barker contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Sarah Ashlee Barker married?",
-      "answer": "There is no widely reported public record of Sarah Ashlee Barker being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
-      ],
-      "google_keyword": "sarah ashlee barker husband",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Who is Sarah Ashlee Barker?",
-      "answer": "Sarah Ashlee Barker is an American professional basketball player for the Portland Fire of the Women's National Basketball Association (WNBA) and Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
-      ],
-      "google_keyword": "who is sarah ashlee barker mom",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What position does Sarah Ashlee Barker play?",
-      "answer": "Sarah Ashlee Barker is listed as a G for the Portland Fire.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sarah ashlee barker position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Sarah Ashlee Barker injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sarah ashlee barker injury",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "Who are Sarah Ashlee Barker's parents?",
-      "answer": "Public profiles share limited verified detail about Sarah Ashlee Barker's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
-      ],
-      "google_keyword": "sarah ashlee barker parents",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Does Sarah Ashlee Barker have kids?",
-      "answer": "There is no widely reported public information that Sarah Ashlee Barker has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
-      ],
-      "google_keyword": "sarah ashlee barker personal loss",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "sarah ashlee barker height",
+          "vol": 210
+        },
+        {
+          "q": "sarah ashlee barker height and weight",
+          "vol": 20
+        },
+        {
+          "q": "sarah ashlee barker weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Sarah Ashlee Barker?",
-      "answer": "Sarah Ashlee Barker was born September 10, 2001. As of late 2026 that puts her at 25 years old.",
+      "answer": "Sarah Ashlee Barker was born September 10, 2001.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker age",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What team does Sarah Ashlee Barker play for?",
+      "answer": "Sarah Ashlee Barker plays guard for the Portland Fire and wears No. 3. Portland selected her from the Los Angeles Sparks in the 2026 WNBA Expansion Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker wnba",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Sarah Ashlee Barker played for?",
+      "answer": "Sarah Ashlee Barker has played for the Los Angeles Sparks and Portland Fire.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/sarah-ashlee-barker/"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker sparks",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "When was Sarah Ashlee Barker drafted?",
+      "answer": "The Los Angeles Sparks selected Sarah Ashlee Barker ninth overall in the first round of the 2025 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sarah_Ashlee_Barker"
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio",
+        "https://www.wnba.com/draft/2025/prospects/197177/sarah-ashlee-barker"
       ],
-      "google_keyword": "sarah ashlee barker age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2001-09-10"
+      "queries": [
+        {
+          "q": "sarah ashlee barker draft",
+          "vol": 30
+        },
+        {
+          "q": "sarah ashlee barker wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "will sarah ashlee barker be drafted",
+          "vol": 0
+        }
+      ]
+    },
+    {
+      "question": "Where did Sarah Ashlee Barker play college basketball?",
+      "answer": "Sarah Ashlee Barker played at Georgia (2020-22) and Alabama (2022-25). The WNBA says she was a two-time First Team All-SEC pick and set Alabama's single-game scoring record with 45 points against Maryland in the 2025 NCAA Tournament.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio",
+        "https://rolltide.com/sports/womens-basketball/roster/sarah-ashlee-barker/12040"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker alabama",
+          "vol": 30
+        },
+        {
+          "q": "sarah ashlee barker georgia",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where is Sarah Ashlee Barker from?",
+      "answer": "Sarah Ashlee Barker was born in Birmingham, Alabama, and went to Spain Park High School in Hoover, Alabama.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2025/prospects/197177/sarah-ashlee-barker",
+        "https://rolltide.com/sports/womens-basketball/roster/sarah-ashlee-barker/12040"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker spain park",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Who are Sarah Ashlee Barker's parents?",
+      "answer": "Her Alabama bio lists her parents as Jay Barker and Amy Barker Rozell and says she has three brothers: Andrew, Braxton, and Harrison.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://rolltide.com/sports/womens-basketball/roster/sarah-ashlee-barker/12040"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker parents",
+          "vol": 140
+        },
+        {
+          "q": "sarah ashlee barker mom",
+          "vol": 70
+        },
+        {
+          "q": "sarah ashlee barker dad",
+          "vol": 30
+        },
+        {
+          "q": "sarah ashlee barker family",
+          "vol": 20
+        },
+        {
+          "q": "sarah ashlee barker siblings",
+          "vol": 10
+        },
+        {
+          "q": "sarah ashlee barker father",
+          "vol": 10
+        },
+        {
+          "q": "sarah ashlee barker brother",
+          "vol": 10
+        },
+        {
+          "q": "sarah ashlee barker mother",
+          "vol": 10
+        },
+        {
+          "q": "who is sarah ashlee barker mom",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What position does Sarah Ashlee Barker play?",
+      "answer": "The WNBA lists Sarah Ashlee Barker as a guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642782/sarah-ashlee-barker/bio"
+      ],
+      "queries": [
+        {
+          "q": "sarah ashlee barker position",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

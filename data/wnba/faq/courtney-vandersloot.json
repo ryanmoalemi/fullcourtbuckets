@@ -1,179 +1,170 @@
 {
   "slug": "courtney-vandersloot",
   "player_name": "Courtney Vandersloot",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "Is Courtney Vandersloot married?",
-      "answer": "Yes. Vandersloot is married to fellow professional basketball player Allie Quigley.",
-      "answer_kind": "researched",
+      "question": "What are Courtney Vandersloot's stats?",
+      "answer": "In the 2026 regular season, Courtney Vandersloot averaged 9.6 points, 2.9 rebounds, and 5.4 assists in 27 games for the Chicago Sky.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://fullcourtbuckets.com/wnba/courtney-vandersloot/"
       ],
-      "google_keyword": "courtney vandersloot wife",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "courtney vandersloot stats",
+          "vol": 2400
+        },
+        {
+          "q": "courtney vandersloot assists per game",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Courtney Vandersloot?",
-      "answer": "She was born February 8, 1989 in Kent, Washington, U.S. As of late 2026 that puts her at 37 years old.",
+      "answer": "Courtney Vandersloot was born February 8, 1989.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio"
       ],
-      "google_keyword": "how old is courtney vandersloot",
-      "approx_monthly_volume": 170,
-      "birthdate": "1989-02-08"
-    },
-    {
-      "question": "How tall is Courtney Vandersloot?",
-      "answer": "Courtney Vandersloot is listed at 5' 8\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
-      ],
-      "google_keyword": "courtney vandersloot height",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What is Courtney Vandersloot's contract?",
-      "answer": "Public salary trackers list Courtney Vandersloot at about $750,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "courtney vandersloot contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How much does Courtney Vandersloot make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Courtney Vandersloot's base salary / cap hit at about $750,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "courtney vandersloot net worth",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Courtney Vandersloot's jersey number?",
-      "answer": "Courtney Vandersloot wears number 22 for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney vandersloot jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How many championships does Courtney Vandersloot have?",
-      "answer": "Vandersloot won the 2021 WNBA title with Chicago and later added a championship with the New York Liberty in 2024.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
-      ],
-      "google_keyword": "courtney vandersloot championships",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What did Courtney Vandersloot score in her last game?",
-      "answer": "In her most recent completed game (September 19, 2026 at the Atlanta Dream), Courtney Vandersloot had 10 points, 5 rebounds, and 6 assists in a 81-106 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney vandersloot points last game",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "how old is courtney vandersloot",
+          "vol": 170
+        },
+        {
+          "q": "courtney vandersloot age",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "What team does Courtney Vandersloot play for?",
-      "answer": "She plays for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney vandersloot team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Where is Courtney Vandersloot from?",
-      "answer": "She is from Kent, Washington, U.S.",
+      "answer": "Courtney Vandersloot plays guard for the Chicago Sky and wears No. 22.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio"
       ],
-      "google_keyword": "where is courtney vandersloot from",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "courtney vandersloot sky",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Courtney Vandersloot?",
-      "answer": "Courtney Vandersloot is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
-      ],
-      "google_keyword": "who is courtney vandersloot",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Courtney Vandersloot's college stats?",
-      "answer": "Across her college career at Gonzaga, Courtney Vandersloot averaged 15.2 points, 3.8 rebounds, and 8.2 assists per game.",
+      "question": "When did Courtney Vandersloot return to the Chicago Sky?",
+      "answer": "The Sky signed Courtney Vandersloot back in 2025 free agency after two seasons with the New York Liberty. Chicago drafted her third overall in 2011, and she spent her first 12 seasons there.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.sports-reference.com/cbb/players/courtney-vandersloot-1.html",
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://www.wnba.com/news/courtney-vandersloot-returns-to-chicago",
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio"
       ],
-      "google_keyword": "courtney vandersloot college stats",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "courtney vandersloot chicago sky",
+          "vol": 20
+        },
+        {
+          "q": "courtney vandersloot dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Courtney Vandersloot attend?",
-      "answer": "Courtney Vandersloot played college basketball at Gonzaga.",
-      "answer_kind": "researched",
+      "question": "Which teams has Courtney Vandersloot played for?",
+      "answer": "Courtney Vandersloot has played for the Chicago Sky and New York Liberty.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://fullcourtbuckets.com/wnba/courtney-vandersloot/"
       ],
-      "google_keyword": "courtney vandersloot gonzaga",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "courtney vandersloot teams",
+          "vol": 10
+        },
+        {
+          "q": "courtney vandersloot liberty",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Courtney Vandersloot dating?",
-      "answer": "Courtney Vandersloot is married to Allie Quigley.",
+      "question": "How many championships has Courtney Vandersloot won?",
+      "answer": "Courtney Vandersloot has won two WNBA championships: 2021 with the Chicago Sky and 2024 with the New York Liberty.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more"
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio",
+        "https://www.wnba.com/news/courtney-vandersloot-returns-to-chicago"
       ],
-      "google_keyword": "courtney vandersloot partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "courtney vandersloot championships",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Courtney Vandersloot?",
+      "answer": "The WNBA lists Courtney Vandersloot at 5 feet 8 inches and 137 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio"
+      ],
+      "queries": [
+        {
+          "q": "courtney vandersloot height",
+          "vol": 50
+        },
+        {
+          "q": "how tall is courtney vandersloot",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Courtney Vandersloot play college basketball?",
+      "answer": "Courtney Vandersloot played at Gonzaga from 2007 to 2011. She led the nation in assists per game in 2009-10 and 2010-11, the Sky said.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/courtney-vandersloot-returns-to-chicago"
+      ],
+      "queries": [
+        {
+          "q": "courtney vandersloot gonzaga",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "What position does Courtney Vandersloot play?",
-      "answer": "Courtney Vandersloot is listed as a G for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney vandersloot position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What are Courtney Vandersloot's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Courtney Vandersloot averaged 10.6 points, 3.1 rebounds, and 5.3 assists in 7 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney vandersloot stats",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Is Courtney Vandersloot injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "courtney vandersloot injury update",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Did Courtney Vandersloot retire?",
-      "answer": "As of late 2026, Courtney Vandersloot is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
+      "answer": "The WNBA lists Courtney Vandersloot as a guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Courtney_Vandersloot"
+        "https://www.wnba.com/player/202664/courtney-vandersloot/bio"
       ],
-      "google_keyword": "courtney vandersloot retirement",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "courtney vandersloot position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many years has Courtney Vandersloot been in the WNBA?",
+      "answer": "Courtney Vandersloot has 16 regular seasons, from 2011 to 2026.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/courtney-vandersloot/"
+      ],
+      "queries": [
+        {
+          "q": "courtney vandersloot wnba",
+          "vol": 70
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
