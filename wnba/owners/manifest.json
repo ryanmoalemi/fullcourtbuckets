@@ -1,0 +1,66 @@
+{
+ "version": "v3",
+ "data_through": "2026-10-19",
+ "license": "https://creativecommons.org/licenses/by/4.0/",
+ "files": {
+  "data-dictionary.md": {
+   "sha256": "766a0a8a140ce5d34d53d6d4722954092074d971d413371b773f6d59ab783955",
+   "bytes": 9281
+  },
+  "entities.csv": {
+   "sha256": "66fc6d2ab1bbb24825d0e38e4d12a380e6d4286bf01de9167feea562ab740cb5",
+   "bytes": 11392
+  },
+  "facility_financials.csv": {
+   "sha256": "e1f26c9da5348d4a01793450e2ee0dd32e5ce7878c9943d1b810811396560260",
+   "bytes": 8219
+  },
+  "facility_projects.csv": {
+   "sha256": "f5e640a46c0b76934c607ecc943cde946228538ff3509fb3cf0f0b4e89ce3238",
+   "bytes": 5571
+  },
+  "findings.json": {
+   "sha256": "ec73cc84e3bbf75cc4d019f04ca257998ddf623e144c82d68aefabd6fa131385",
+   "bytes": 712
+  },
+  "investors.csv": {
+   "sha256": "c0280d653e77009510eb39ccfb7fdd7ba8ebd51d47feb915d41ce488a96922d1",
+   "bytes": 35480
+  },
+  "owner_photos.csv": {
+   "sha256": "e7d794a8a055f28b979a1ff24ac63810d77b5fd988d262c572a94f6d47077087",
+   "bytes": 5412
+  },
+  "ownership.csv": {
+   "sha256": "b28b843462acff399216005b5ae70b872c66016bfe1ce68b41e772fe08bb01d5",
+   "bytes": 8353
+  },
+  "sources.csv": {
+   "sha256": "a958fcc5433983e326863c1b8ecaafcab5f07623cb73ee150e4c5e8cd830a3d8",
+   "bytes": 14433
+  },
+  "transactions.csv": {
+   "sha256": "ca818b8244da937f58cab2b7977a1dd7230280960e0048ad63cf6849658d9e95",
+   "bytes": 11679
+  },
+  "valuations.csv": {
+   "sha256": "3f5e57b99049b54e66170678b2967cb96ddcc78a8ac4b859fda0382400e808c2",
+   "bytes": 13044
+  },
+  "wnba-owners.json": {
+   "sha256": "75a170abd10934fdde0b4c12df5f70e83cff5b64e60d01807d0eb2166b1c5d1d",
+   "bytes": 232925
+  }
+ },
+ "records": {
+  "ownership": 18,
+  "investors": 62,
+  "entities": 24,
+  "transactions": 22,
+  "facility_projects": 11,
+  "facility_financials": 18,
+  "valuations": 53,
+  "sources": 80,
+  "owner_photos": 22
+ }
+}
