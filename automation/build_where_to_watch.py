@@ -2,7 +2,7 @@
 
 Data rule: a row is listed only when an official team watch-party page, the venue's own WNBA page,
 a named local news report, or a written staff reply shows WNBA screenings. verification_type
-'staff_reply' renders "Confirmed with staff on <date>"; anything else renders the source line.
+'staff_reply' renders "Confirmed with staff on <date>" plus the optional games_note (e.g. 'every WNBA game'); anything else renders the source line.
 Run: python automation/build_where_to_watch.py
 """
 from __future__ import annotations
@@ -48,7 +48,7 @@ TEAM_COLORS = {
     'Dallas Wings': '#1d6fb8', 'Connecticut Sun': '#c4511f', 'Portland Fire': '#b3261e',
 }
 STATES = {'CA': 'California', 'NY': 'New York', 'IN': 'Indiana', 'WA': 'Washington', 'GA': 'Georgia',
-          'MN': 'Minnesota', 'AZ': 'Arizona', 'ON': 'Ontario', 'FL': 'Florida', 'IL': 'Illinois',
+          'MN': 'Minnesota', 'CO': 'Colorado', 'AZ': 'Arizona', 'ON': 'Ontario', 'FL': 'Florida', 'IL': 'Illinois',
           'DC': 'District of Columbia', 'OR': 'Oregon', 'TX': 'Texas', 'NV': 'Nevada', 'CT': 'Connecticut'}
 NO_TEAM = 'No local team'
 esc = html.escape
@@ -145,7 +145,9 @@ def tel(phone: str) -> str:
 
 def verification(r: dict) -> str:
     if r.get('verification_type') == 'staff_reply':
-        return f'Confirmed with staff on {human(r["verification_date"])}'
+        line = f'Confirmed with staff on {human(r["verification_date"])}'
+        note = (r.get('games_note') or '').strip()
+        return f'{line}. Shows {esc(note)}.' if note else line
     return (f'Source: <a href="{esc(r["source_url"])}" rel="nofollow noopener" target="_blank">{esc(r["source_name"])}</a>'
             f' (accessed {human(r["verification_date"])})')
 
