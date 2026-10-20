@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T02:13:22+00:00",
+ "checked_at": "2026-10-20T02:22:25+00:00",
  "period": 4,
- "clock": "2:50",
+ "clock": "44.2",
  "last_play_period": 4,
- "last_play_clock": "2:50",
+ "last_play_clock": "44.2",
  "away": {
   "abbreviation": "ATL",
-  "score": 74,
-  "feed_score": 74
+  "score": 78,
+  "feed_score": 78
  },
  "home": {
   "abbreviation": "GS",
-  "score": 59,
-  "feed_score": 59
+  "score": 63,
+  "feed_score": 63
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 14,
-   "home": 13
+   "away": 18,
+   "home": 17
   }
  ],
  "players": [],
@@ -2135,7 +2135,7 @@
   {
    "order": 175,
    "period": 2,
-   "clock": "3:46",
+   "clock": "3:47",
    "type": "Offensive Rebound",
    "text": "Allisha Gray offensive rebound",
    "away_score": 28,
@@ -3743,7 +3743,7 @@
   {
    "order": 309,
    "period": 3,
-   "clock": "3.1",
+   "clock": "4.3",
    "type": "Offensive Rebound",
    "text": "Tiffany Hayes offensive rebound",
    "away_score": 57,
@@ -4199,7 +4199,7 @@
   {
    "order": 347,
    "period": 3,
-   "clock": "3.0",
+   "clock": "3.1",
    "type": "Bad Pass\nTurnover",
    "text": "Tiffany Hayes bad pass\nturnover (Jordin Canada steals)",
    "away_score": 57,
@@ -4583,7 +4583,7 @@
   {
    "order": 379,
    "period": 4,
-   "clock": "2:58",
+   "clock": "2:59",
    "type": "Turnaround Jump Shot",
    "text": "Gabby Williams makes 15-foot turnaround jump shot",
    "away_score": 74,
@@ -4603,6 +4603,342 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 381,
+   "period": 4,
+   "clock": "2:40",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Gabby Williams steals)",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 382,
+   "period": 4,
+   "clock": "2:33",
+   "type": "Running Pullup Jump Shot",
+   "text": "Gabby Williams misses running pullup jump shot",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 383,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 384,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Personal Foul",
+   "text": "Kiah Stokes personal foul",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 385,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Free Throw - 1 of 2",
+   "text": "Angel Reese misses free throw 1 of 2",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 386,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 387,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Substitution",
+   "text": "Laeticia Amihere enters the game for Kiah Stokes",
+   "away_score": 74,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 388,
+   "period": 4,
+   "clock": "2:30",
+   "type": "Free Throw - 2 of 2",
+   "text": "Angel Reese makes free throw 2 of 2",
+   "away_score": 75,
+   "home_score": 59,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 389,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Shooting Foul",
+   "text": "Jordin Canada shooting foul",
+   "away_score": 75,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 390,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Coach's Challenge (Stands)",
+   "text": "(02:14) [Dream] COACH'S CHALLENGE (CALL STANDS) [Dream] charged with a timeout",
+   "away_score": 75,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 391,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Free Throw - 1 of 2",
+   "text": "Tiffany Hayes misses free throw 1 of 2",
+   "away_score": 75,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 392,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 75,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 393,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes makes free throw 2 of 2",
+   "away_score": 75,
+   "home_score": 60,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 394,
+   "period": 4,
+   "clock": "1:55",
+   "type": "Personal Foul",
+   "text": "Tiffany Hayes personal foul",
+   "away_score": 75,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 395,
+   "period": 4,
+   "clock": "1:55",
+   "type": "Free Throw - 1 of 2",
+   "text": "Allisha Gray makes free throw 1 of 2",
+   "away_score": 76,
+   "home_score": 60,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 396,
+   "period": 4,
+   "clock": "1:53",
+   "type": "Substitution",
+   "text": "Veronica Burton enters the game for Gabby Williams",
+   "away_score": 76,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 397,
+   "period": 4,
+   "clock": "1:55",
+   "type": "Free Throw - 2 of 2",
+   "text": "Allisha Gray misses free throw 2 of 2",
+   "away_score": 76,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 398,
+   "period": 4,
+   "clock": "1:53",
+   "type": "Jumpball",
+   "text": "Naz Hillmon vs. Laeticia Amihere (Jordin Canada gains possession)",
+   "away_score": 76,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 399,
+   "period": 4,
+   "clock": "1:41",
+   "type": "Layup Shot",
+   "text": "Angel Reese makes layup (Jordin Canada assists)",
+   "away_score": 78,
+   "home_score": 60,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 400,
+   "period": 4,
+   "clock": "1:53",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 76,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 401,
+   "period": 4,
+   "clock": "1:30",
+   "type": "Jump Shot",
+   "text": "Veronica Burton makes 24-foot three point jumper (Tiffany Hayes assists)",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 402,
+   "period": 4,
+   "clock": "1:11",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 6-foot jumper",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 403,
+   "period": 4,
+   "clock": "1:09",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 404,
+   "period": 4,
+   "clock": "2:14",
+   "type": "Challenge",
+   "text": "Dream Coach's Challenge",
+   "away_score": 75,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 405,
+   "period": 4,
+   "clock": "1:04",
+   "type": "Jump Shot",
+   "text": "Kaila Charles misses 25-foot three point jumper",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 406,
+   "period": 4,
+   "clock": "1:00",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 407,
+   "period": 4,
+   "clock": "53.5",
+   "type": "Reset Timeout",
+   "text": "Dream Reset Timeout",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 408,
+   "period": 4,
+   "clock": "44.2",
+   "type": "Personal Foul",
+   "text": "Kaila Charles personal foul",
+   "away_score": 78,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
