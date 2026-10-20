@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 86)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 96)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -530,13 +530,20 @@ class BuildTests(unittest.TestCase):
             'georgia-amoore', 'gianna-kneepkens', 'jacy-sheldon', 'jordin-canada', 'justine-pissott',
             'madina-okot', 'makayla-timpson', 'marine-johannes', 'marta-suarez', 'rori-harmon',
         }
+        october_20 = {
+            'sarah-ashlee-barker', 'taniya-latson', 'aaliyah-edwards', 'brittney-sykes', 'chloe-bibby',
+            'cotie-mcmahon', 'courtney-vandersloot', 'dana-evans', 'erica-wheeler', 'kara-lawson',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_19:
+            if slug in october_20:
+                expected_source = 'Google search demand via OpenSEO, Oct 20, 2026'
+            elif slug in october_19:
                 expected_source = 'Google search demand via OpenSEO, Oct 19, 2026'
             elif slug in october_13:
                 expected_source = 'Google search demand via OpenSEO, Oct 13, 2026'
@@ -559,7 +566,11 @@ class BuildTests(unittest.TestCase):
             # unverified relationships, family names, or other people.
             # Han Xu's leftover queries are family, medical, pay, or other people.
             # Draft details are folded into the team answer.
-            if slug in {'kara-braxton', 'deja-kelly'}:
+            # Ta'Niya Latson's name searches are almost all other people. Only her
+            # college, age, and high school queries are about her.
+            if slug == 'taniya-latson':
+                minimum = 3
+            elif slug in {'kara-braxton', 'deja-kelly'}:
                 minimum = 5
             elif slug == 'han-xu':
                 minimum = 8

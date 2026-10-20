@@ -1,152 +1,223 @@
 {
   "slug": "chloe-bibby",
   "player_name": "Chloe Bibby",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Chloe Bibby's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Chloe Bibby averaged 3.9 points,",
+      "question": "How did Chloe Bibby play in 2026?",
+      "answer": "In the 2026 regular season, Chloe Bibby averaged 5.5 points in 4 games for the Chicago Sky and 4.4 points in 5 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chloe bibby stats",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Does Chloe Bibby have a signature shoe?",
-      "answer": "Public search interest ties Chloe Bibby to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
+        "https://fullcourtbuckets.com/wnba/chloe-bibby/"
       ],
-      "google_keyword": "chloe bibby shoe size",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Chloe Bibby dating?",
-      "answer": "As of late 2026, Chloe Bibby has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
-      ],
-      "google_keyword": "chloe bibby partner",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How much does Chloe Bibby make?",
-      "answer": "A precise public salary or net worth figure for Chloe Bibby is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "chloe bibby net worth",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Chloe Bibby?",
-      "answer": "Chloe Bibby is listed at 6' 2\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
-      ],
-      "google_keyword": "chloe bibby height",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What is Chloe Bibby's jersey number?",
-      "answer": "Chloe Bibby wears number 55 for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chloe bibby jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Chloe Bibby's contract?",
-      "answer": "Contract length and guarantees for Chloe Bibby are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "chloe bibby contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Chloe Bibby married?",
-      "answer": "There is no widely reported public record of Chloe Bibby being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
-      ],
-      "google_keyword": "chloe bibby husband",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "chloe bibby stats",
+          "vol": 70
+        },
+        {
+          "q": "chloe bibby wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Chloe Bibby play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 55. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chloe bibby current team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Chloe Bibby?",
-      "answer": "Chloe Louise Bibby is an Australian professional basketball player for the Minnesota Lynx of the Women's National Basketball Association (WNBA) and for Uni Girona CB of the Liga Femenina de Baloncesto.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
-      ],
-      "google_keyword": "chloe bibby bio",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Chloe Bibby injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "chloe bibby injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who are Chloe Bibby's parents?",
-      "answer": "Public profiles share limited verified detail about Chloe Bibby's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Chloe Bibby plays forward for the Minnesota Lynx and wears No. 55. The Lynx signed her on August 1, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
+        "https://www.wnba.com/player/1631064/chloe-bibby/bio",
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-chloe-bibby/n-6395750"
       ],
-      "google_keyword": "chloe bibby dad",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "chloe bibby wnba",
+          "vol": 260
+        },
+        {
+          "q": "chloe bibby current team",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Chloe Bibby attend?",
-      "answer": "Bibby played college basketball at the Mississippi State Bulldogs and the Maryland Terrapins.",
+      "question": "Which teams has Chloe Bibby played for?",
+      "answer": "Chloe Bibby has played for the Golden State Valkyries, Indiana Fever, Chicago Sky and Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/chloe-bibby/"
+      ],
+      "queries": [
+        {
+          "q": "chloe bibby indiana fever",
+          "vol": 20
+        },
+        {
+          "q": "chloe bibby valkyries",
+          "vol": 10
+        },
+        {
+          "q": "chloe bibby fever contract",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Chloe Bibby related to Mike Bibby?",
+      "answer": "No family link to Mike Bibby has been reported. Chloe Bibby is from Australia, and her Mississippi State bio lists her parents as Leigh-anne and Adrian Bibby.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://hailstate.com/sports/womens-basketball/roster/chloe-bibby/5279",
+        "https://www.essentiallysports.com/wnba-basketball-news-fact-check-is-indiana-fevers-chloe-bibby-related-to-mike-bibby/"
+      ],
+      "queries": [
+        {
+          "q": "chloe bibby related to mike bibby",
+          "vol": 210
+        },
+        {
+          "q": "is chloe bibby related to mike bibby",
+          "vol": 170
+        },
+        {
+          "q": "chloe bibby mike bibby",
+          "vol": 140
+        },
+        {
+          "q": "chloe bibby and mike bibby related",
+          "vol": 10
+        },
+        {
+          "q": "is chloe bibby related to henry bibby",
+          "vol": 10
+        },
+        {
+          "q": "chloe bibby dad",
+          "vol": 90
+        },
+        {
+          "q": "chloe bibby parents",
+          "vol": 40
+        },
+        {
+          "q": "chloe bibby father",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Chloe Bibby?",
+      "answer": "The WNBA lists Chloe Bibby at 6 feet 2 inches and 191 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
+        "https://www.wnba.com/player/1631064/chloe-bibby/bio"
       ],
-      "google_keyword": "chloe bibby maryland",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "chloe bibby height",
+          "vol": 90
+        },
+        {
+          "q": "how tall is chloe bibby",
+          "vol": 20
+        },
+        {
+          "q": "chloe bibby weight",
+          "vol": 10
+        },
+        {
+          "q": "chloe bibby height and weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Chloe Bibby?",
-      "answer": "Chloe Bibby was born June 15, 1998 in Horsham. As of late 2026 that puts her at 28 years old.",
+      "answer": "Chloe Bibby was born June 15, 1998.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631064/chloe-bibby/bio"
+      ],
+      "queries": [
+        {
+          "q": "chloe bibby age",
+          "vol": 30
+        },
+        {
+          "q": "how old is chloe bibby",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Was Chloe Bibby drafted?",
+      "answer": "No. The WNBA lists Chloe Bibby as undrafted.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631064/chloe-bibby/bio"
+      ],
+      "queries": [
+        {
+          "q": "chloe bibby wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Chloe Bibby play college basketball?",
+      "answer": "Chloe Bibby played three seasons at Mississippi State and two at Maryland. She made the All-Big Ten Second Team in 2022, the Lynx said.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-chloe-bibby/n-6395750",
+        "https://hailstate.com/sports/womens-basketball/roster/chloe-bibby/5279"
       ],
-      "google_keyword": "chloe bibby age",
-      "approx_monthly_volume": 40,
-      "birthdate": "1998-06-15"
+      "queries": [
+        {
+          "q": "chloe bibby maryland",
+          "vol": 10
+        },
+        {
+          "q": "chloe bibby mississippi state",
+          "vol": 10
+        },
+        {
+          "q": "chloe bibby msu",
+          "vol": null
+        },
+        {
+          "q": "chloe bibby transfer",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Chloe Bibby from?",
-      "answer": "Chloe Bibby is from Horsham.",
+      "answer": "The Minnesota Lynx describe Chloe Bibby as a native of Warracknabeal, Australia.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chloe_Bibby"
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-chloe-bibby/n-6395750"
       ],
-      "google_keyword": "where is chloe bibby from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is chloe bibby from",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Chloe Bibby played for Australia?",
+      "answer": "Yes. The Lynx said she helped Australia win gold at the 2025 FIBA Women's Asia Cup and bronze at the 2022 FIBA Women's World Cup.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-chloe-bibby/n-6395750"
+      ],
+      "queries": [
+        {
+          "q": "chloe bibby australia",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,160 +1,191 @@
 {
   "slug": "aaliyah-edwards",
   "player_name": "Aaliyah Edwards",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 20, 2026",
+  "verified_at": "2026-10-20",
   "items": [
     {
-      "question": "What are Aaliyah Edwards's stats / points per game?",
-      "answer": "In the 2026 regular season, Aaliyah Edwards averaged 9.4 points, 3.8 rebounds, and 0.9 assists in 20 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "What are Aaliyah Edwards's stats?",
+      "answer": "In the 2026 regular season, Aaliyah Edwards averaged 11.1 points, 4.7 rebounds, and 1.0 assists in 30 games for the Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aaliyah edwards stats",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "Who is Aaliyah Edwards dating?",
-      "answer": "As of late 2026, Aaliyah Edwards has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+        "https://fullcourtbuckets.com/wnba/aaliyah-edwards/"
       ],
-      "google_keyword": "aaliyah edwards relationship",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Aaliyah Edwards make?",
-      "answer": "A precise public salary or net worth figure for Aaliyah Edwards is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aaliyah edwards salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Aaliyah Edwards?",
-      "answer": "Aaliyah Edwards is listed at 6' 3\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
-      ],
-      "google_keyword": "aaliyah edwards height",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How old is Aaliyah Edwards?",
-      "answer": "She was born July 9, 2002 in Kingston. As of late 2026 that puts her at 24 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
-      ],
-      "google_keyword": "aaliyah edwards age",
-      "approx_monthly_volume": 50,
-      "birthdate": "2002-07-09"
-    },
-    {
-      "question": "What did Aaliyah Edwards score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Washington Mystics), Aaliyah Edwards had 8.0 points, 13.0 rebounds, and 1.0 assists in a 69-79 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is aaliyah edwards playing tonight",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What is Aaliyah Edwards's jersey number?",
-      "answer": "Aaliyah Edwards wears number 8 for the Connecticut Sun.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aaliyah edwards jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Aaliyah Edwards's contract?",
-      "answer": "Contract length and guarantees for Aaliyah Edwards are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aaliyah edwards contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Aaliyah Edwards married?",
-      "answer": "There is no widely reported public record of Aaliyah Edwards being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
-      ],
-      "google_keyword": "aaliyah edwards spouse",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "aaliyah edwards stats",
+          "vol": 2400
+        },
+        {
+          "q": "aaliyah edwards game log",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "What team does Aaliyah Edwards play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 8. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aaliyah edwards team",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Where is Aaliyah Edwards from?",
-      "answer": "She is from Kingston.",
+      "answer": "Aaliyah Edwards plays forward for the Connecticut Sun and wears No. 8.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
       ],
-      "google_keyword": "where is aaliyah edwards from",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "aaliyah edwards wnba",
+          "vol": 170
+        },
+        {
+          "q": "aaliyah edwards team",
+          "vol": 30
+        },
+        {
+          "q": "aaliyah edwards wnba team",
+          "vol": 20
+        },
+        {
+          "q": "aaliyah edwards current team",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Aaliyah Edwards attend?",
-      "answer": "Edwards played college basketball at UConn.",
+      "question": "When did Aaliyah Edwards join the Connecticut Sun?",
+      "answer": "The Sun acquired Aaliyah Edwards from the Washington Mystics on August 7, 2025, for Jacy Sheldon and the right to swap 2026 first-round picks.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/connecticut-sun-acquire-aaliyah-edwards",
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah edwards sun",
+          "vol": 20
+        },
+        {
+          "q": "mystics aaliyah edwards",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Aaliyah Edwards?",
+      "answer": "The WNBA lists Aaliyah Edwards at 6 feet 3 inches and 206 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
       ],
-      "google_keyword": "aaliyah edwards uconn",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "aaliyah edwards height",
+          "vol": 140
+        },
+        {
+          "q": "aaliyah edwards weight",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Aaliyah Edwards?",
-      "answer": "Aaliyah Mckenzie Edwards is a Canadian professional basketball player for the Connecticut Sun of the Women's National Basketball Association (WNBA) and for the Lunar Owls of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
-      ],
-      "google_keyword": "who is aaliyah the singer",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Aaliyah Edwards's nationality?",
-      "answer": "Aaliyah Edwards is Canadian.",
+      "question": "How old is Aaliyah Edwards?",
+      "answer": "Aaliyah Edwards was born July 9, 2002.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
       ],
-      "google_keyword": "is aaliyah edwards canadian",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Aaliyah Edwards injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aaliyah edwards injury",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "aaliyah edwards age",
+          "vol": 50
+        },
+        {
+          "q": "aaliyah edwards birthday",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "When was Aaliyah Edwards drafted?",
-      "answer": "She played college basketball at UConn before being selected sixth overall by the Mystics in the 2024 WNBA draft.",
+      "answer": "The Washington Mystics selected Aaliyah Edwards sixth overall in the 2024 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah edwards draft pick",
+          "vol": 30
+        },
+        {
+          "q": "aaliyah edwards wnba draft",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Aaliyah Edwards play college basketball?",
+      "answer": "Aaliyah Edwards played four seasons at UConn (2020-24). The WNBA says she helped the Huskies reach three Final Fours and the 2022 national championship game, and she was a 2024 USBWA second-team All-American.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah edwards uconn",
+          "vol": 140
+        },
+        {
+          "q": "uconn women's basketball aaliyah edwards",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Aaliyah Edwards Canadian?",
+      "answer": "Yes. Aaliyah Edwards is from Kingston, Ontario, and her WNBA listing gives her country as Canada.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aaliyah_Edwards"
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio",
+        "https://www.wnba.com/news/connecticut-sun-acquire-aaliyah-edwards"
       ],
-      "google_keyword": "aaliyah edwards draft pick",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "is aaliyah edwards canadian",
+          "vol": 10
+        },
+        {
+          "q": "where is aaliyah edwards from",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Has Aaliyah Edwards played in the Olympics?",
+      "answer": "Yes. The Sun said she was the youngest member of Canada's team at the Tokyo Olympics and played for Canada again at the 2024 Paris Olympics.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/connecticut-sun-acquire-aaliyah-edwards"
+      ],
+      "queries": [
+        {
+          "q": "aaliyah edwards olympics",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Who is Aaliyah Edwards?",
+      "answer": "Aaliyah Edwards is a Canadian forward for the Connecticut Sun. The Washington Mystics drafted her sixth overall in 2024 out of UConn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1642290/aaliyah-edwards/bio",
+        "https://www.wnba.com/news/connecticut-sun-acquire-aaliyah-edwards"
+      ],
+      "queries": [
+        {
+          "q": "who is aaliyah edwards",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
