@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T00:38:09+00:00",
+ "checked_at": "2026-10-20T00:42:42+00:00",
  "period": 2,
- "clock": "9:48",
+ "clock": "7:55",
  "last_play_period": 2,
- "last_play_clock": "10:00",
+ "last_play_clock": "7:55",
  "away": {
   "abbreviation": "ATL",
-  "score": 18,
-  "feed_score": 18
+  "score": 25,
+  "feed_score": 25
  },
  "home": {
   "abbreviation": "GS",
-  "score": 21,
-  "feed_score": 21
+  "score": 24,
+  "feed_score": 24
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 0,
-   "home": 0
+   "away": 7,
+   "home": 3
   }
  ],
  "players": [],
@@ -1214,8 +1214,8 @@
    "order": 99,
    "period": 1,
    "clock": "0.0",
-   "type": "Jump Shot",
-   "text": "DeWanna Bonner misses 55-foot three point jumper",
+   "type": "Pullup Jump Shot",
+   "text": "DeWanna Bonner misses 55-foot three point pullup jump shot",
    "away_score": 18,
    "home_score": 21,
    "scoring_play": false,
@@ -1257,6 +1257,222 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 103,
+   "period": 2,
+   "clock": "9:48",
+   "type": "Personal Foul",
+   "text": "Jordin Canada personal foul",
+   "away_score": 18,
+   "home_score": 21,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 104,
+   "period": 2,
+   "clock": "9:48",
+   "type": "Away from Play Foul",
+   "text": "Rhyne Howard away from play foul",
+   "away_score": 18,
+   "home_score": 21,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 105,
+   "period": 2,
+   "clock": "9:48",
+   "type": "Free Throw - 1 of 1",
+   "text": "Tiffany Hayes makes free throw 1 of 1",
+   "away_score": 18,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 106,
+   "period": 2,
+   "clock": "9:48",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Rhyne Howard",
+   "away_score": 18,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 107,
+   "period": 2,
+   "clock": "9:42",
+   "type": "Pullup Jump Shot",
+   "text": "Tiffany Hayes misses 28-foot three point pullup jump shot",
+   "away_score": 18,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 108,
+   "period": 2,
+   "clock": "9:40",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 18,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 109,
+   "period": 2,
+   "clock": "9:32",
+   "type": "Running Jump Shot",
+   "text": "Allisha Gray makes 25-foot running jump shot (Jordin Canada assists)",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 110,
+   "period": 2,
+   "clock": "9:14",
+   "type": "Step Back Jump Shot",
+   "text": "Janelle Salaun misses 22-foot three point step back jumpshot",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 111,
+   "period": 2,
+   "clock": "9:12",
+   "type": "Offensive Rebound",
+   "text": "Kaila Charles offensive rebound",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 112,
+   "period": 2,
+   "clock": "9:07",
+   "type": "Bad Pass\nTurnover",
+   "text": "Kaila Charles bad pass\nturnover (Isobel Borlase steals)",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 113,
+   "period": 2,
+   "clock": "9:02",
+   "type": "Running Layup Shot",
+   "text": "Angel Reese makes running layup",
+   "away_score": 23,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 114,
+   "period": 2,
+   "clock": "8:38",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup",
+   "away_score": 23,
+   "home_score": 24,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 115,
+   "period": 2,
+   "clock": "8:21",
+   "type": "Turnaround Jump Shot",
+   "text": "Isobel Borlase misses 10-foot turnaround jump shot",
+   "away_score": 23,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 116,
+   "period": 2,
+   "clock": "8:18",
+   "type": "Defensive Rebound",
+   "text": "Janelle Salaun defensive rebound",
+   "away_score": 23,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 117,
+   "period": 2,
+   "clock": "8:08",
+   "type": "Running Jump Shot",
+   "text": "Janelle Salaun misses 12-foot running jump shot",
+   "away_score": 23,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 118,
+   "period": 2,
+   "clock": "8:04",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 23,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 119,
+   "period": 2,
+   "clock": "7:55",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese makes driving layup (Isobel Borlase assists)",
+   "away_score": 25,
+   "home_score": 24,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 120,
+   "period": 2,
+   "clock": "7:55",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 25,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
