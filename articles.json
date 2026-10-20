@@ -1,5 +1,31 @@
 [
   {
+    "slug": "dream-valkyries-finals-game-2-recap",
+    "url": "/news/dream-valkyries-finals-game-2-recap/",
+    "title": "Angel Reese scores 30 as Dream beat Valkyries 79-65 to even the WNBA Finals",
+    "description": "The Atlanta Dream beat the Golden State Valkyries 79-65 in Game 2 of the WNBA Finals on Monday at Chase Center, tying the series 1-1.",
+    "category": "news",
+    "date": "2026-10-19",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a black number 5 jersey",
+    "imageCredit": "Photo: Michaelcohnphoto, CC BY-SA 4.0, via Wikimedia Commons",
+    "teams": [
+      "atlanta-dream",
+      "golden-state-valkyries"
+    ],
+    "imageFocal": "center 0%",
+    "gameId": "401918306",
+    "image": "/images/articles/dream-valkyries-finals-game-2-recap/hero-16x9.webp",
+    "imageSource": "/images/articles/dream-valkyries-finals-game-2-recap/photo.jpg",
+    "imageHero": "/images/articles/dream-valkyries-finals-game-2-recap/hero-16x9.webp",
+    "imageHeroWidth": 1120,
+    "imageHeroHeight": 630,
+    "imageOg": "/images/articles/dream-valkyries-finals-game-2-recap/og.webp",
+    "imageOgWidth": 1124,
+    "imageOgHeight": 588,
+    "imageWidth": 1120,
+    "imageHeight": 630
+  },
+  {
     "slug": "finals-game-2-preview-dream-valkyries",
     "url": "/news/finals-game-2-preview-dream-valkyries/",
     "title": "WNBA Finals Game 2 preview: Atlanta lost the turnover battle for the first time this postseason",

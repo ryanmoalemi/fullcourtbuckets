@@ -268,4 +268,10 @@
     <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-2/play-by-play/</loc>
     <lastmod>2026-10-19</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-2-recap/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
