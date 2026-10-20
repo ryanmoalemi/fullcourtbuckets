@@ -74,7 +74,7 @@ class ImageFocalTests(unittest.TestCase):
                 continue
             self.assertIn(token, story, slug)
             og = str(article.get('imageOg') or '')
-            self.assertTrue(og.endswith(('og-1200.webp', 'og.webp')), slug)
+            self.assertTrue(og.endswith(('og-1200.jpg', 'og.jpg')), slug)
             self.assertIn(links.BASE + og, story, slug)
             self.assertTrue((ROOT / og.lstrip('/')).is_file(), slug)
             width = int(article['imageOgWidth'])

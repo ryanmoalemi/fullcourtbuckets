@@ -172,6 +172,12 @@ def _save(image: Image.Image, dest: Path) -> None:
     flat.save(dest, 'WEBP', quality=WEBP_QUALITY, method=6)
 
 
+def _save_jpeg(image: Image.Image, dest: Path) -> None:
+    # Social cards: X's card crawler does not reliably render WebP, so og/twitter images are JPEG.
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    image.convert('RGB').save(dest, 'JPEG', quality=85, optimize=True, progressive=True)
+
+
 def load_rgb(path: Path) -> Image.Image:
     image = Image.open(path)
     image = ImageOps.exif_transpose(image)
@@ -237,16 +243,18 @@ def _write_og(image: Image.Image, focal: str, source: Path) -> tuple[Path, int, 
     """1.91:1 social crop. Does not upscale. Shares the lead focal point."""
     cropped = crop_image(image, focal, OG_ASPECT)
     crop_w = cropped.size[0]
-    wide = source.parent / 'og-1200.webp'
-    small = source.parent / 'og.webp'
+    wide = source.parent / 'og-1200.jpg'
+    small = source.parent / 'og.jpg'
+    for old in ('og-1200.webp', 'og.webp', 'og-1200.jpg', 'og.jpg'):
+        (source.parent / old).unlink(missing_ok=True)
     if crop_w >= OG_1X[0]:
         small.unlink(missing_ok=True)
-        _save(_resize(cropped, OG_1X[0], OG_1X[1]), wide)
+        _save_jpeg(_resize(cropped, OG_1X[0], OG_1X[1]), wide)
         return wide, OG_1X[0], OG_1X[1]
     snapped = max(2, crop_w - (crop_w % 2))
     height = max(1, int(round(snapped / OG_ASPECT)))
     wide.unlink(missing_ok=True)
-    _save(_resize(cropped, snapped, height), small)
+    _save_jpeg(_resize(cropped, snapped, height), small)
     return small, snapped, height
 
 

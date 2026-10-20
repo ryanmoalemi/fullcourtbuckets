@@ -24,6 +24,9 @@ DATA = ROOT / 'data' / 'where-to-watch-bars.csv'
 PAGE_DIR = ROOT / 'wnba' / 'where-to-watch'
 PAGE_PATH = PAGE_DIR / 'index.html'
 CSV_NAME = 'where-to-watch-wnba-bars.csv'
+OG_NAME = 'og-1200.jpg'
+OG_URL = 'https://fullcourtbuckets.com/wnba/where-to-watch/' + OG_NAME
+OG_SIZE = (1200, 630)
 SHELL_PAGE = ROOT / 'wnba' / 'viewership-attendance' / 'index.html'
 CANONICAL = 'https://fullcourtbuckets.com/wnba/where-to-watch/'
 PATH = '/wnba/where-to-watch/'
@@ -222,20 +225,50 @@ def jsonld(s: dict) -> str:
     return '<script type="application/ld+json">' + json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False) + '</script>'
 
 
+def write_og_image(s: dict) -> None:
+    """1200x630 JPEG share card (X does not reliably render WebP cards)."""
+    from PIL import Image, ImageDraw, ImageFont
+    w, h = OG_SIZE
+    img = Image.new('RGB', OG_SIZE, '#faf8fd')
+    d = ImageDraw.Draw(img)
+    for x in range(w):  # FCB purple-pink-orange accent bar
+        t = x / (w - 1)
+        a, b = ((125, 53, 255), (241, 0, 145)) if t < .5 else ((241, 0, 145), (255, 152, 0))
+        u = t * 2 if t < .5 else (t - .5) * 2
+        d.line([(x, 0), (x, 17)], fill=tuple(int(a[i] + (b[i] - a[i]) * u) for i in range(3)))
+    fonts = ROOT / 'assets' / 'fonts'
+    bold = lambda n: ImageFont.truetype(str(fonts / 'Inter-Bold.ttf'), n)
+    med = lambda n: ImageFont.truetype(str(fonts / 'Inter-Medium.ttf'), n)
+    logo = Image.open(ROOT / 'logo.png').convert('RGBA')
+    logo.thumbnail((210, 140))
+    img.paste(logo, (w - logo.width - 60, 52), logo)
+    d.text((70, 70), 'WNBA / DATA & RESEARCH', font=bold(26), fill='#c2007a')
+    d.text((70, 150), 'Where to watch', font=bold(92), fill='#2a1458')
+    d.text((70, 258), 'WNBA games', font=bold(92), fill='#2a1458')
+    d.text((70, 390), f'{s["venues"]} bars and restaurants in {len(s["teams"])} team markets', font=med(40), fill='#2b2925')
+    d.text((70, 448), 'Search by city or team. Check before you go.', font=med(32), fill='#5d5952')
+    d.text((70, 540), 'fullcourtbuckets.com/wnba/where-to-watch', font=bold(28), fill='#9a5200')
+    PAGE_DIR.mkdir(parents=True, exist_ok=True)
+    img.save(PAGE_DIR / OG_NAME, 'JPEG', quality=88, optimize=True, progressive=True)
+
+
 def shell_parts(s: dict) -> tuple[str, str, str]:
     shell = SHELL_PAGE.read_text(encoding='utf-8')
     head_end = shell.index('</head>')
     head = shell[:head_end]
     head = re.sub(r'<script type="application/ld\+json">.*?</script>', '', head, flags=re.S)
     head = re.sub(r'<title>.*?</title>', f'<title>{esc(TITLE)}</title>', head, count=1, flags=re.S)
-    head = re.sub(r'\s*<meta (?:name|property)="(?:description|og:[a-z:]+|twitter:[a-z:]+)" content="[^"]*">', '', head)
+    head = re.sub(r'\s*<meta (?:name|property)="(?:description|og:[a-z:_]+|twitter:[a-z:_]+)" content="[^"]*">', '', head)
     head = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{CANONICAL}">', head)
     d = esc(description(s))
     meta = (f'\n<meta name="description" content="{d}">\n<meta property="og:type" content="website">'
             f'\n<meta property="og:title" content="{esc(H1)}">\n<meta property="og:description" content="{d}">'
             f'\n<meta property="og:url" content="{CANONICAL}">\n<meta property="og:site_name" content="Full Court Buckets">'
-            f'\n<meta name="twitter:card" content="summary">\n<meta name="twitter:title" content="{esc(H1)}">'
-            f'\n<meta name="twitter:description" content="{d}">')
+            f'\n<meta property="og:image" content="{OG_URL}">\n<meta property="og:image:type" content="image/jpeg">'
+            f'\n<meta property="og:image:width" content="{OG_SIZE[0]}">\n<meta property="og:image:height" content="{OG_SIZE[1]}">'
+            f'\n<meta property="og:image:alt" content="Where to watch WNBA games: bars and restaurants by city and team">'
+            f'\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{esc(H1)}">'
+            f'\n<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{OG_URL}">')
     head = head.replace(f'<title>{esc(TITLE)}</title>', f'<title>{esc(TITLE)}</title>{meta}', 1)
     body_start = shell.index('<main class="page">')
     top = shell[head_end:body_start]
@@ -249,6 +282,9 @@ def render(rows: list[dict]) -> str:
     head, top, bottom = shell_parts(s)
     head += f'<style id="{STYLE_ID}">{PAGE_CSS}</style>{jsonld(s)}'
     opts = ''.join(f'<option value="{esc(t)}">{esc(t)} ({sum(1 for r in rows if r["team_market"] == t)})</option>' for t in s['teams'])
+    others = sum(1 for r in rows if r['team_market'] == NO_TEAM)
+    if others:
+        opts += f'<option value="{NO_TEAM}">Other cities, no local team ({others})</option>'
     faq = ''.join(f'<h3>{esc(q)}</h3><p>{a}</p>' for q, a in FAQ)
     main = (
         '<main class="page ww-page"><div class="standings-shell ww-wrap"><div class="page-header">'
@@ -323,6 +359,7 @@ def update_sitemaps() -> None:
 def main() -> None:
     rows = load()
     write_if_changed(PAGE_PATH, render(rows))
+    write_og_image(stats(rows))
     write_if_changed(PAGE_DIR / CSV_NAME, DATA.read_text(encoding='utf-8'))
     update_sitemaps()
     s = stats(rows)
