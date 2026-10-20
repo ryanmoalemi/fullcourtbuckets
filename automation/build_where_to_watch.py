@@ -69,6 +69,7 @@ PAGE_CSS = '''
 .ww-state-h{margin:28px 0 4px;font:800 26px/1.15 Barlow,sans-serif}
 .ww-city-h{margin:14px 0 6px;font:700 18px/1.3 Barlow,sans-serif;color:#3b3833}.ww-n{color:#6b665f;font-weight:600}
 .ww-list{list-style:none;margin:0;padding:0}
+.ww-row[hidden],.ww-city[hidden],.ww-state[hidden]{display:none!important}
 .ww-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #ece7e0}
 .ww-logo{flex:0 0 44px;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font:800 15px/1 Barlow,sans-serif;letter-spacing:.5px}
 .ww-body p{margin:0}.ww-name{font:700 17px/1.3 Inter,sans-serif;color:#1b1a19}
