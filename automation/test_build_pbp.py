@@ -21,7 +21,7 @@ class BuildPbp(unittest.TestCase):
 
     def test_placeholder_has_no_plays(self):
         _, out = build_pbp.build('401918306')
-        self.assertIn('Play-by-play posts after the final buzzer', out)
+        self.assertIn('Live: updates about every 5 minutes.', out)
         self.assertIn('Valkyries lead 1-0', out)
         self.assertNotIn('id="play-', out)
 

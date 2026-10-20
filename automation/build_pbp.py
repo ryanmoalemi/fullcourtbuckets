@@ -28,7 +28,7 @@ def qname(n): return f"Q{n}" if n <= 4 else f"OT{n-4}"
 def url_for(n): return f"/wnba/finals/2026/game-{n}/play-by-play/"
 
 
-def derive(d):
+def derive(d, live=False):
     A = d['away']['abbreviation']
     roster = sorted([p for p in d.get('players', []) if not p.get('did_not_play')], key=lambda p: -len(p['name']))
     plays = sorted([dict(p) for p in d.get('plays') or []], key=lambda p: p['order'])
@@ -69,6 +69,10 @@ def derive(d):
         c = p.get('clock') or '0'
         s = int(c.split(':')[0]) * 60 + float(c.split(':')[1]) if ':' in c else float(c)
         p['clutch'] = p['period'] >= 4 and s <= 300 and abs(before) <= 5
+    if live:  # final score check runs on Final; live = running score must match the scoring plays
+        if (a, h) != (d['away']['score'], d['home']['score']):
+            raise ScoreCheckError(f"live rebuilt {a}-{h}, page score {d['away']['score']}-{d['home']['score']}")
+        return plays, roster
     if (a, h) != (d['away']['score'], d['home']['score']):
         raise ScoreCheckError(f"final rebuilt {a}-{h}, box {d['away']['score']}-{d['home']['score']}")
     return plays, roster
@@ -122,7 +126,7 @@ def shell_parts(title, desc, path, date):
     return head, body_open, byline, foot
 
 
-def build(game_id, game_json=None, today=None):
+def build(game_id, game_json=None, today=None, live=False):
     conf = json.loads(CONF.read_text())
     g = conf['games'][game_id]; n = g['number']; A, H = conf['away'], conf['home']; NAME = conf['names']
     path = url_for(n)
@@ -132,8 +136,12 @@ def build(game_id, game_json=None, today=None):
         d = json.loads((ROOT / gj).read_text())
         if str(d.get('espn_game_id')) != str(game_id):
             raise ScoreCheckError(f'{gj} is game {d.get("espn_game_id")}, not {game_id}')
-        if d.get('status') != 'final':
+        if d.get('status') == 'live' and live:
+            pass
+        elif d.get('status') != 'final':
             d = None
+        else:
+            live = False
     title = f"Dream vs. Valkyries play-by-play: 2026 WNBA Finals Game {n}"
     others = ' '.join(f'<a href="{url_for(x["number"])}">Game {x["number"]}</a>' for k, x in sorted(conf['games'].items(), key=lambda kv: kv[1]['number']) if k != game_id)
     links = [f'<a href="{g["preview"]}">Game {n} preview</a>'] + ([f'<a href="{g["recap"]}">Game {n} recap</a>'] if g.get('recap') else [])
@@ -143,18 +151,19 @@ def build(game_id, game_json=None, today=None):
         lead = max(w, key=w.get); lo = min(w, key=w.get)
         return 'Series tied ' + f"{w[lead]}-{w[lo]}" if w[lead] == w[lo] else f"{NAME[lead]} lead {w[lead]}-{w[lo]}"
     if d is None:
-        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, Dream at Valkyries, {g['tip']}, {g['venue']}. Every play posts after the final buzzer."
+        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, Dream at Valkyries, {g['tip']}, {g['venue']}. Live: updates about every 5 minutes."
         head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
         main = (f'<main class="shell article-wrap pbp"><article class="article"><h1>{E(title)}</h1>{byline}'
-                f'<p class="thru">Game {n} has not started. Every play posts here after the final buzzer.</p>'
+                f'<p class="thru">Game {n} has not started. Live: updates about every 5 minutes.</p>'
                 f'<div class="pbp-panel" data-fcb-data-table>{sb("NOT STARTED", "&ndash;", "&ndash;")}'
-                f'<p class="pbp-wait">Tip: {E(g["tip"])}, {E(g["venue"])}<br>{E(series_text(sbf))}<br><b>Play-by-play posts after the final buzzer.</b></p></div>'
+                f'<p class="pbp-wait">Tip: {E(g["tip"])}, {E(g["venue"])}<br>{E(series_text(sbf))}<br><b>Live: updates about every 5 minutes.</b></p></div>'
                 f'<p class="note">{" · ".join(links)} · Other games: {others}</p></article></main>')
         return path, head + '\n' + bo + main + '\n' + foot
-    plays, roster = derive(d)
+    plays, roster = derive(d, live)
     pc, overrides = player_counts(plays, roster)
     winner = A if d['away']['score'] > d['home']['score'] else H
-    after = dict(sbf); after[winner] += 1
+    after = dict(sbf)
+    if not live: after[winner] += 1
     lc = sum(p['flag'] == 'lead change' for p in plays); ties = sum(p['flag'] == 'tie' for p in plays)
     runs, cur = [], None
     for p in plays:
@@ -170,6 +179,14 @@ def build(game_id, game_json=None, today=None):
     fs, fa = (d['home']['score'], NAME[H]), (d['away']['score'], NAME[A])
     hi, lo = (fs, fa) if fs[0] > fa[0] else (fa, fs)
     thru = f"Final: {hi[1]} {hi[0]}, {lo[1]} {lo[0]}, {g['date_text']}, {g['venue']}. {series_text(after)}. {len(rows)} plays, newest first. {lc} lead changes, {ties} ties."
+    if live:
+        from zoneinfo import ZoneInfo
+        now = (today or dt.datetime.now(ZoneInfo('America/Los_Angeles')))
+        stamp = now.strftime('%-I:%M ') + ('a.m.' if now.hour < 12 else 'p.m.') + ' PT'
+        lp, lc_ = d.get('last_play_period') or plays[-1]['period'], d.get('last_play_clock') or plays[-1]['clock']
+        where = f"{qname(int(lp))} {lc_}" if lp else ''
+        thru = (f"{NAME[A]} {d['away']['score']}, {NAME[H]} {d['home']['score']}, {where}. {series_text(after)} entering Game {n}. "
+                f"Updated {stamp}. Live: updates about every 5 minutes. {len(rows)} plays so far, newest first.")
     desc = f"Every play from Game {n} of the 2026 WNBA Finals ({hi[1]} {hi[0]}, {lo[1]} {lo[0]}): search, filter by player, team, play type, quarter, runs and clutch time, cite any play, download CSV or JSON."
     head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
     per = d['periods']
@@ -181,8 +198,8 @@ def build(game_id, game_json=None, today=None):
     def rlabel(r): return f"{r['pts']}-0 {NAME[r['team']]}, {qname(r['sp']['period'])} {r['sp']['clock']} to {qname(r['endp']['period'])} {r['endp']['clock']}"
     ov = ('; '.join(overrides) + '. ') if overrides else ''
     main = f"""<main class="shell article-wrap pbp"><article class="article"><h1>{E(title)}</h1>{byline}
-<p class="thru">{E(thru)}</p>
-<div class="pbp-panel" data-fcb-data-table>{sb('FINAL', d['away']['score'], d['home']['score'])}
+<p class="thru">{'<span class="live-badge">LIVE</span> ' if live else ''}{E(thru)}</p>
+<div class="pbp-panel" data-fcb-data-table>{sb(('LIVE ' + qname(int(d.get('last_play_period') or plays[-1]['period'])) + ' ' + E(str(d.get('last_play_clock') or ''))) if live else 'FINAL', d['away']['score'], d['home']['score'])}
 <table class="ql"><thead><tr><th></th>{''.join(f'<th>{qname(x["period"])}</th>' for x in per)}<th>T</th></tr></thead><tbody>{qrow(A, 'away')}{qrow(H, 'home')}</tbody></table>
 <button type="button" class="fbtn" id="fbtn" aria-expanded="false" aria-controls="flt">Filter</button><form class="flt" id="flt" role="search" aria-label="Filter plays" onsubmit="return false">
 <input type="search" name="q" placeholder="Search plays, e.g. Reese steal" aria-label="Search play text">
@@ -194,8 +211,7 @@ def build(game_id, game_json=None, today=None):
 <div class="chips"><label><input type="checkbox" name="scoring"> Scoring only</label><label><input type="checkbox" name="swing"> Lead changes and ties</label><label><input type="checkbox" name="clutch"> Clutch</label><label><input type="checkbox" name="oldest"> Oldest first</label></div>
 <div class="bar"><span id="count" role="status">{len(rows)} plays</span><span class="acts"><button type="button" id="csv">CSV</button><button type="button" id="json">JSON</button><button type="button" id="reset">Reset</button></span></div></form>
 <div class="tw"><table class="pl" id="pl"><thead><tr><th>Time</th><th>Team</th><th>Play</th><th>{A}-{H}</th><th><span class="vh">Link</span></th></tr></thead><tbody>{static}</tbody></table></div></div>
-<h2>Player play counts</h2><p class="note">Tap a name to filter the plays.</p>
-<div class="tw"><table class="pc"><thead><tr><th>Player</th><th>Team</th><th>PTS</th><th>2P</th><th>3P</th><th>FT</th><th>REB</th><th>TO</th><th>PF</th><th>Plays</th></tr></thead><tbody>{ptab}</tbody></table></div>
+{'' if live else f'<h2>Player play counts</h2><p class="note">Tap a name to filter the plays.</p><div class="tw"><table class="pc"><thead><tr><th>Player</th><th>Team</th><th>PTS</th><th>2P</th><th>3P</th><th>FT</th><th>REB</th><th>TO</th><th>PF</th><th>Plays</th></tr></thead><tbody>{ptab}</tbody></table></div>'}
 <p class="note">{' · '.join(links)} · Other games: {others}</p>
 <h2>Methods</h2><p class="note">The running score is rebuilt from the scoring plays and checked against every scoring play and the final before this page is published. Player counts come from the plays and are checked against the official box score; where they differ, the box score value is shown. {E(ov)}"Plays" counts every play that names the player. Clutch: last 5 minutes of the 4th quarter or overtime with the score within 5 points before the play. Lead changes, ties and runs (6 or more unanswered points) are computed from scoring plays. Data: Full Court Buckets, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
 </article></main><div id="toast" role="status" hidden></div>
@@ -207,17 +223,18 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[1])
     ap.add_argument('--game-id', required=True)
     ap.add_argument('--game-json')
+    ap.add_argument('--live', action='store_true', help='game in progress: LIVE badge, running score check only')
     a = ap.parse_args(argv)
     try:
-        path, out = build(a.game_id, a.game_json)
+        path, out = build(a.game_id, a.game_json, live=a.live)
     except ScoreCheckError as e:
         print(f'SCORE CHECK FAILED, page not written: {e}', file=sys.stderr); return 2
     dest = ROOT / path.strip('/') / 'index.html'
     dest.parent.mkdir(parents=True, exist_ok=True); dest.write_text(out, encoding='utf-8')
-    if a.game_json:
+    if a.game_json and not a.live:
         conf = json.loads(CONF.read_text()); conf['games'][a.game_id]['game_json'] = a.game_json
         CONF.write_text(json.dumps(conf, indent=2) + '\n')
-    print(f'wrote {dest.relative_to(ROOT)} ({"final" if "data-player" in out else "placeholder"})')
+    print(f'wrote {dest.relative_to(ROOT)} ({"live" if "live-badge" in out else "final" if "data-player" in out else "placeholder"})')
     return 0
 
 

@@ -29,3 +29,5 @@ table.pl,table.pc{width:100%;border-collapse:collapse;font-size:13.5px}
 .fbtn{display:none}
 @media(max-width:600px){.fbtn{display:block;margin:6px 10px;font:600 13px Inter,sans-serif;border:1px solid #d5d9e0;background:#fff;border-radius:999px;padding:5px 14px}.flt{display:none}.flt.open{display:flex}}
 .pbp-wait{padding:18px 16px;margin:0;font-size:15px;line-height:1.6;text-align:center}
+.live-badge{display:inline-block;padding:2px 8px;margin-right:6px;border-radius:3px;background:#e0004d;color:#fff;font:800 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.06em;animation:fcbpulse 2s infinite}
+@keyframes fcbpulse{50%{opacity:.6}}
