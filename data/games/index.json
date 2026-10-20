@@ -330,17 +330,17 @@
       "matchup": "atl-at-gs",
       "away": "ATL",
       "home": "GS",
-      "away_score": 44,
-      "home_score": 42,
+      "away_score": 79,
+      "home_score": 65,
       "overtime": false,
-      "status": "live",
-      "source": null,
+      "status": "final",
+      "source": "balldontlie",
       "fallback": false,
-      "crosscheck_matched": false,
-      "crosscheck_compared": false,
+      "crosscheck_matched": true,
+      "crosscheck_compared": true,
       "mismatch_count": 0,
-      "plays": 262,
-      "plays_status": null
+      "plays": 420,
+      "plays_status": "included"
     }
   ]
 }
