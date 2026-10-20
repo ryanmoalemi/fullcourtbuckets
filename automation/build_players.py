@@ -3138,7 +3138,7 @@ def build(root: Path):
     files['sitemap/index.html'] = html_sitemap_page(root, menu, linking, articles, player_rows, page_rows, published_index)
     files['docs/missing-data.md'] = missing_data_markdown(root)
     files['robots.txt'] = ROBOTS_TXT
-    files['search-index.json'] = site_nav.search_index_document(root)
+    files['search-index.json'] = site_nav.search_index_document(root, files)
     links.verify_hrefs(root, files)
     # All profiles are validated and rendered before any existing page is replaced.
     changes=0
@@ -3216,7 +3216,7 @@ def refresh_published_news(root: Path | None = None) -> int:
     for relative, content in list(files.items()):
         if str(relative).endswith('.html'):
             files[relative] = links.rewrite_legacy_article_urls(content, articles)
-    files['search-index.json'] = site_nav.search_index_document(root)
+    files['search-index.json'] = site_nav.search_index_document(root, files)
     changes = 0
     for relative, content in files.items():
         reject_removed_adu(relative, content)

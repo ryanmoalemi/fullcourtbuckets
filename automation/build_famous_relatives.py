@@ -718,3 +718,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+    import search_index; search_index.write()  # keep site search current

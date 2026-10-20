@@ -605,4 +605,6 @@ def main() -> int:
 
 
 if __name__ == '__main__':
-    sys.exit(main())
+    _rc = main()
+    import search_index; search_index.write()  # keep site search current
+    sys.exit(_rc)

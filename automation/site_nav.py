@@ -280,7 +280,7 @@ TAGLINE_HTML = (
     '<p class="site-tagline"><span>WNBA News · Analysis · Commentary</span>'
     '<span>Independent WNBA news and analysis</span></p>'
 )
-SEARCH_HTML = (
+OLD_SEARCH_HTML = (
     '<div class="site-search">'
     '<button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel">'
     '<span class="site-search-icon" aria-hidden="true"></span>'
@@ -296,6 +296,36 @@ SEARCH_HTML = (
     '<template id="site-search-item"><li><a><span class="site-search-title"></span><span class="site-search-kind"></span></a></li></template>'
     '</div>'
 )
+# Header search. Results, groups and highlights are cloned from these templates (no innerHTML).
+SEARCH_HTML = (
+    '<div class="site-search">'
+    '<button type="button" class="site-search-toggle" aria-expanded="false" aria-controls="site-search-panel" aria-keyshortcuts="/">'
+    '<span class="site-search-icon" aria-hidden="true"></span>'
+    '<span class="site-search-label">Search</span></button>'
+    '<div class="site-search-panel" id="site-search-panel" hidden>'
+    '<form role="search" action="/search/">'
+    '<label class="site-search-field">Search Full Court Buckets'
+    '<input type="search" name="q" placeholder="Players, teams, owners, stories" autocomplete="off" spellcheck="false"'
+    ' role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="site-search-list"></label>'
+    '</form>'
+    '<p class="site-search-status" role="status"></p>'
+    '<p class="ss-dym" hidden>Did you mean <a href="/search/"></a>?</p>'
+    '<ul class="site-search-results" id="site-search-list" role="listbox"></ul>'
+    '<a class="ss-all" href="/search/" hidden>See all results</a>'
+    '</div>'
+    '<template id="site-search-item"><li class="ss-item" role="option"><a class="ss-link">'
+    '<span class="ss-thumb"><img alt="" width="48" height="27" loading="lazy" decoding="async"></span>'
+    '<span class="ss-text"><span class="site-search-title"></span><span class="ss-snippet"></span>'
+    '<span class="site-search-kind"></span></span></a></li></template>'
+    '<template id="site-search-group"><li class="ss-group" role="presentation"></li></template>'
+    '<template id="site-search-mark"><mark></mark></template>'
+    '</div>'
+)
+
+
+def upgrade_search_markup(page_html: str) -> str:
+    """Swap the old header search block for the current one."""
+    return page_html.replace(OLD_SEARCH_HTML, SEARCH_HTML)
 
 
 def render_header(menu: list[dict], current: str, show_tagline: bool | None = None) -> str:
@@ -376,52 +406,18 @@ def replace_site_header(page_html: str, menu: list[dict], current: str) -> str:
 
 
 def build_search_index(root: Path) -> dict:
-    """Static index for the header search. Articles, players, and teams."""
-    items = []
-    for article in links.load_articles(root):
-        title = str(article.get('title') or '').strip()
-        if not title:
-            continue
-        try:
-            href = links.article_href(article)
-        except ValueError:
-            continue
-        items.append({
-            'type': 'Story',
-            'title': title,
-            'url': href,
-            'text': str(article.get('description') or '').strip(),
-        })
-    index_path = root / 'data' / 'wnba' / 'players-index.json'
-    if index_path.is_file():
-        index = json.loads(index_path.read_text(encoding='utf-8'))
-        for entry in index.get('players') or []:
-            slug = str(entry.get('slug') or '').strip()
-            name = str(entry.get('name') or '').strip()
-            if not slug or not name:
-                continue
-            team = entry.get('current_team') if isinstance(entry.get('current_team'), dict) else {}
-            items.append({
-                'type': 'Player',
-                'title': name,
-                'url': f'/wnba/{slug}/',
-                'text': str((team or {}).get('full_name') or '').strip(),
-            })
-        linking = links.catalog_from_index(index)
-        for slot in linking['by_id'].values():
-            items.append({
-                'type': 'Team',
-                'title': slot['full_name'],
-                'url': links.team_href(slot),
-                'text': str(slot.get('conference') or '').strip(),
-            })
-    items.sort(key=lambda item: (item['type'], item['title'].casefold()))
-    return {'items': items}
+    """Every indexable page on disk (see search_index.py)."""
+    import search_index
+    return search_index.build(root)
 
 
-def search_index_document(root: Path) -> str:
-    """Compact JSON the header search fetches from /search-index.json."""
-    return json.dumps(build_search_index(root), separators=(',', ':'), ensure_ascii=False) + '\n'
+def search_index_document(root: Path, pending: dict | None = None) -> str:
+    """Compact JSON the header search lazy-loads from /search-index.json.
+
+    pending: pages a generator is about to write ({relative path: html})."""
+    import search_index
+    search_index.write_search_page(root)
+    return search_index.document(root, pending=pending)
 
 
 def normalize(nav_html: str) -> str:
@@ -484,6 +480,7 @@ def ensure_assets(page_html: str) -> str:
     page_html = page_html.replace('nav{display:none}', 'nav:not(.site-nav){display:none}')
     page_html = apply_now_bar(page_html)
     page_html = ensure_icons(page_html)
+    page_html = upgrade_search_markup(page_html)
     return page_html
 
 

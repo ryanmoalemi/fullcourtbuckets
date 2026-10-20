@@ -653,3 +653,4 @@ if __name__ == '__main__':
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     build(args.root)
+    import search_index; search_index.write(args.root)  # keep site search current

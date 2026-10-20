@@ -263,11 +263,11 @@ class SiteNavTests(unittest.TestCase):
         index = site_nav.build_search_index(ROOT)
         on_disk = json.loads((ROOT / 'search-index.json').read_text(encoding='utf-8'))
         self.assertEqual(on_disk, index)
-        kinds = {item['type'] for item in index['items']}
-        self.assertEqual(kinds, {'Story', 'Player', 'Team'})
-        self.assertGreater(sum(item['type'] == 'Story' for item in index['items']), 5)
-        self.assertGreater(sum(item['type'] == 'Player' for item in index['items']), 100)
-        self.assertGreaterEqual(sum(item['type'] == 'Team' for item in index['items']), 15)
+        kinds = {item['k'] for item in index['items']}
+        self.assertTrue({'Article', 'Player', 'Team'} <= kinds, kinds)
+        self.assertGreater(sum(item['k'] == 'Article' for item in index['items']), 5)
+        self.assertGreater(sum(item['k'] == 'Player' for item in index['items']), 100)
+        self.assertGreaterEqual(sum(item['k'] == 'Team' for item in index['items']), 15)
 
 
 def _blank_internal_anchors(html: str) -> list[str]:
