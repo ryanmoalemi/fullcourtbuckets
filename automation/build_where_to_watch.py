@@ -61,6 +61,7 @@ PAGE_CSS = '''
 .ww-box strong{color:#1b1a19}
 .ww-notice{margin:0 0 18px;padding:12px 16px;border-left:4px solid #ff9800;background:#fff3df;font-size:14px;line-height:1.55;color:#2b2925}
 .ww-notice-short,.ww-notice-below{display:none}
+.ww-count.is-on{color:#1b1a19;font-weight:700;background:#fff1a8;padding:2px 6px;border-radius:3px}
 .ww-controls{position:sticky;top:64px;z-index:5;display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 0;background:#fff;border-bottom:1px solid #e4dfd8}
 .ww-controls input,.ww-controls select{min-height:44px;padding:0 12px;border:1px solid #cfc9c1;border-radius:3px;font:500 16px Inter,system-ui,sans-serif;background:#fff;color:#1b1a19}
 .ww-controls input{flex:1 1 320px}.ww-controls select{flex:0 1 260px}
@@ -109,30 +110,35 @@ PAGE_CSS = '''
 PAGE_JS = r'''(function(){
 /* Venue filter built on the main site search engine (window.FCBSearch from /assets/site-nav.js):
    same tokenizing, accent folding, stemming, prefix + typo-tolerant matching, ranking, "Did you mean" and highlighting. */
-function init(){var q=document.getElementById('ww-q'),t=document.getElementById('ww-t'),c=document.getElementById('ww-c'),e=document.getElementById('ww-e'),dym=document.getElementById('ww-dym');
-if(!q||!window.FCBSearch||!FCBSearch.createIndex)return;
+function init(){var q=document.getElementById('ww-q'),c=document.getElementById('ww-c'),e=document.getElementById('ww-e'),dym=document.getElementById('ww-dym');
+if(!q)return;
+/* Fallback if a phone still has an old cached site-nav.js without createIndex: plain accent-folded word-prefix filter. */
+var FS=(window.FCBSearch&&FCBSearch.createIndex)?FCBSearch:{fold:function(x){x=String(x||'').toLowerCase();return x.normalize?x.normalize('NFD').replace(/[\u0300-\u036f]/g,''):x;},
+highlight:function(n,x){n.textContent=x;},createIndex:function(it){var f=this.fold;return{search:function(qs){var w=f(qs).split(/[^a-z0-9]+/).filter(Boolean),res=[];
+it.forEach(function(d){var h=' '+f([d.t,d.w,d.k,d.b].join(' ')).replace(/[^a-z0-9]+/g,' ');if(w.every(function(x){return h.indexOf(' '+x)>-1;}))res.push({doc:{item:d},score:1,hits:[]});});
+return{results:res,terms:w,suggestion:''};}};}};
 var rows=[].slice.call(document.querySelectorAll('.ww-row')),items=[],timer=null,active=-1;
 rows.forEach(function(r,i){var n=r.querySelector('.ww-name'),l=r.querySelector('.ww-loc');r._i=i;r._n=n?n.textContent:'';r._l=l?l.textContent:'';
 items.push({t:r._n,w:r._l,k:r.dataset.team||'',b:r.dataset.q||'',_r:i});});
-var idx=FCBSearch.createIndex(items);
+var idx=FS.createIndex(items);
 function vis(){return rows.filter(function(r){return !r.hidden&&!r.closest('[hidden]');});}
 function setActive(i){var v=vis();rows.forEach(function(r){r.classList.remove('is-active');});if(!v.length){active=-1;return;}
 if(i<0)i=v.length-1;if(i>=v.length)i=0;active=i;v[i].classList.add('is-active');v[i].scrollIntoView({block:'nearest'});}
-function run(){var query=q.value.trim(),tv=t.value,n=0,score={},terms=[];active=-1;dym.hidden=true;
+function run(){var query=q.value.trim(),n=0,score={},terms=[];active=-1;dym.hidden=true;
 if(query){var out=idx.search(query),res=out.results,clean=res.filter(function(x){return !x.hits.some(function(h){return h[2]==='f';});});
 if(clean.length)res=clean;terms=out.terms;res.forEach(function(x){score[x.doc.item._r]=x.score;});
-if(out.suggestion&&FCBSearch.fold(out.suggestion)!==FCBSearch.fold(query)){var a=dym.querySelector('a');a.textContent=out.suggestion;dym.hidden=false;}}
-rows.forEach(function(r){var ok=(!tv||r.dataset.team===tv)&&(!query||r._i in score);r.hidden=!ok;if(ok)n++;r.classList.remove('is-active');
-var nm=r.querySelector('.ww-name'),lc=r.querySelector('.ww-loc');if(nm)FCBSearch.highlight(nm,r._n,ok?terms:[]);if(lc)FCBSearch.highlight(lc,r._l,ok?terms:[]);});
+if(out.suggestion&&FS.fold(out.suggestion)!==FS.fold(query)){var a=dym.querySelector('a');a.textContent=out.suggestion;dym.hidden=false;}}
+rows.forEach(function(r){var ok=!query||r._i in score;r.hidden=!ok;if(ok)n++;r.classList.remove('is-active');
+var nm=r.querySelector('.ww-name'),lc=r.querySelector('.ww-loc');if(nm)FS.highlight(nm,r._n,ok?terms:[]);if(lc)FS.highlight(lc,r._l,ok?terms:[]);});
 document.querySelectorAll('.ww-city ul,.ww-city ol').forEach(function(u){var rs=[].slice.call(u.children).filter(function(x){return x.classList.contains('ww-row');});
 rs.sort(function(x,y){return query?((score[y._i]||0)-(score[x._i]||0))||x._i-y._i:x._i-y._i;});rs.forEach(function(x){u.appendChild(x);});});
 document.querySelectorAll('.ww-city,.ww-state').forEach(function(d){d.hidden=!d.querySelector('.ww-row:not([hidden])');});
-c.textContent='Showing '+n+' venue'+(n==1?'':'s');e.style.display=n?'none':'block';}
-q.addEventListener('input',function(){clearTimeout(timer);timer=setTimeout(run,60);});t.addEventListener('change',run);
+c.textContent=query?(n+' of '+rows.length+' venues match \u201c'+query+'\u201d'):('Showing all '+n+' venues');c.classList.toggle('is-on',!!query);e.style.display=n?'none':'block';}
+function soon(){clearTimeout(timer);timer=setTimeout(run,60);}['input','keyup','compositionend','change','search'].forEach(function(k){q.addEventListener(k,soon);});
 q.addEventListener('keydown',function(ev){if(ev.key==='ArrowDown'){ev.preventDefault();setActive(active+1);}else if(ev.key==='ArrowUp'){ev.preventDefault();setActive(active-1);}
 else if(ev.key==='Escape'){ev.preventDefault();q.value='';run();}else if(ev.key==='Enter'){ev.preventDefault();var v=vis(),r=v[active<0?0:active];if(r){var l=r.querySelector('a');r.scrollIntoView({block:'center'});if(l)l.focus({preventScroll:true});}}});
 dym.querySelector('a').addEventListener('click',function(ev){ev.preventDefault();q.value=this.textContent;run();q.focus();});
-if(q.value.trim()||t.value)run();}
+if(q.value.trim())run();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();'''
 
 
@@ -291,6 +297,13 @@ def shell_parts(s: dict) -> tuple[str, str, str]:
     shell = SHELL_PAGE.read_text(encoding='utf-8')
     head_end = shell.index('</head>')
     head = shell[:head_end]
+    # cache-bust shared assets so phones never pair this page with a stale site-nav.js (CDN max-age=600)
+    import hashlib
+    for asset in ('site-nav.js', 'site-nav.css'):
+        v = hashlib.sha1((ROOT / 'assets' / asset).read_bytes()).hexdigest()[:10]
+        shell = re.sub(rf'/assets/{re.escape(asset)}(\?v=[0-9a-f]+)?"', f'/assets/{asset}?v={v}"', shell)
+    head_end = shell.index('</head>')
+    head = shell[:head_end]
     head = re.sub(r'<script type="application/ld\+json">.*?</script>', '', head, flags=re.S)
     head = re.sub(r'<title>.*?</title>', f'<title>{esc(TITLE)}</title>', head, count=1, flags=re.S)
     head = re.sub(r'\s*<meta (?:name|property)="(?:description|og:[a-z:_]+|twitter:[a-z:_]+)" content="[^"]*">', '', head)
@@ -336,7 +349,6 @@ def render(rows: list[dict]) -> str:
         '<p class="ww-notice-short"><strong>Check before you go:</strong> call ahead to confirm your game. <a href="#check-before-you-go">Details</a></p>'
         '<div class="ww-controls" data-fcb-data-table><label class="ww-sr" for="ww-q">Search venues</label>'
         '<input id="ww-q" type="search" placeholder="Search bars, neighborhoods or cities..." autocomplete="off"><p class="ss-dym ww-dym" id="ww-dym" hidden>Did you mean <a href="#"></a>?</p>'
-        f'<label class="ww-sr" for="ww-t">Team</label><select id="ww-t"><option value="">All teams</option>{opts}</select>'
         f'<span class="ww-count" id="ww-c" aria-live="polite">Showing {s["venues"]} venues</span></div>'
         f'<div class="ww-dir" id="ww-dir">{directory(rows)}'
         '<p class="ww-empty" id="ww-e">No venues match. Try a city or team name, or clear the filter.</p>'
