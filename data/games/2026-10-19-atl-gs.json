@@ -5,20 +5,20 @@
  "espn_game_id": "401918306",
  "balldontlie_game_id": 1392708,
  "date": "2026-10-19",
- "checked_at": "2026-10-20T02:00:32+00:00",
+ "checked_at": "2026-10-20T02:04:17+00:00",
  "period": 4,
- "clock": "6:45",
+ "clock": "5:21",
  "last_play_period": 4,
- "last_play_clock": "7:05",
+ "last_play_clock": "5:21",
  "away": {
   "abbreviation": "ATL",
-  "score": 67,
-  "feed_score": 67
+  "score": 69,
+  "feed_score": 69
  },
  "home": {
   "abbreviation": "GS",
-  "score": 48,
-  "feed_score": 48
+  "score": 52,
+  "feed_score": 52
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 7,
-   "home": 2
+   "away": 9,
+   "home": 6
   }
  ],
  "players": [],
@@ -3744,13 +3744,13 @@
    "order": 309,
    "period": 3,
    "clock": "3.1",
-   "type": "Defensive Rebound",
-   "text": "Jordin Canada defensive rebound",
+   "type": "Offensive Rebound",
+   "text": "Tiffany Hayes offensive rebound",
    "away_score": 57,
    "home_score": 46,
    "scoring_play": false,
    "score_value": 0,
-   "team": "ATL"
+   "team": "GS"
   },
   {
    "order": 310,
@@ -4151,7 +4151,7 @@
   {
    "order": 343,
    "period": 4,
-   "clock": "7:07",
+   "clock": "7:10",
    "type": "Offensive Rebound",
    "text": "Golden State Valkyries offensive team rebound",
    "away_score": 67,
@@ -4171,6 +4171,222 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 345,
+   "period": 4,
+   "clock": "6:58",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 346,
+   "period": 4,
+   "clock": "6:56",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 347,
+   "period": 3,
+   "clock": "3.0",
+   "type": "Bad Pass\nTurnover",
+   "text": "Tiffany Hayes bad pass\nturnover (Jordin Canada steals)",
+   "away_score": 57,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 348,
+   "period": 4,
+   "clock": "6:48",
+   "type": "Pullup Jump Shot",
+   "text": "Tiffany Hayes misses 16-foot pullup jump shot",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 349,
+   "period": 4,
+   "clock": "6:46",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 350,
+   "period": 4,
+   "clock": "6:26",
+   "type": "Jump Shot",
+   "text": "Allisha Gray misses 25-foot three point jumper",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 351,
+   "period": 4,
+   "clock": "6:23",
+   "type": "Offensive Rebound",
+   "text": "Jordin Canada offensive rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 352,
+   "period": 4,
+   "clock": "6:16",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Angel Reese misses two point shot",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 353,
+   "period": 4,
+   "clock": "6:14",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 354,
+   "period": 4,
+   "clock": "6:06",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 67,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 355,
+   "period": 4,
+   "clock": "6:06",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada makes free throw 1 of 2",
+   "away_score": 68,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 356,
+   "period": 4,
+   "clock": "6:06",
+   "type": "Substitution",
+   "text": "Kaitlyn Chen enters the game for Veronica Burton",
+   "away_score": 68,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 357,
+   "period": 4,
+   "clock": "6:06",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada makes free throw 2 of 2",
+   "away_score": 69,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 358,
+   "period": 4,
+   "clock": "5:47",
+   "type": "Jump Shot",
+   "text": "Gabby Williams makes 26-foot three point jumper (Kaitlyn Chen assists)",
+   "away_score": 69,
+   "home_score": 51,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 359,
+   "period": 4,
+   "clock": "5:31",
+   "type": "Out of Bounds - Bad Pass Turnover",
+   "text": "Angel Reese out of bounds bad pass turnover",
+   "away_score": 69,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 360,
+   "period": 4,
+   "clock": "5:21",
+   "type": "Shooting Foul",
+   "text": "Angel Reese shooting foul",
+   "away_score": 69,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 361,
+   "period": 4,
+   "clock": "5:21",
+   "type": "Free Throw - 1 of 2",
+   "text": "Tiffany Hayes makes free throw 1 of 2",
+   "away_score": 69,
+   "home_score": 52,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 362,
+   "period": 4,
+   "clock": "5:21",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes misses free throw 2 of 2",
+   "away_score": 69,
+   "home_score": 52,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
