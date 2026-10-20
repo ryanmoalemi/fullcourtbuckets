@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "games": [
     {
       "date": "1997-06-21",
@@ -101,9 +101,9 @@
       "home": "",
       "away": "",
       "venue": "Chase Center",
-      "attendance": null,
-      "attendance_source": "",
-      "attendance_source_date": "",
+      "attendance": 18064,
+      "attendance_source": "https://www.wnba.com/game/1042600301",
+      "attendance_source_date": "2026-10-17",
       "network": "NBC, Peacock",
       "viewers": null,
       "viewers_source": "",
@@ -120,16 +120,17 @@
       "home": "",
       "away": "",
       "venue": "Chase Center",
-      "attendance": null,
-      "attendance_source": "",
-      "attendance_source_date": "",
+      "attendance": 18064,
+      "attendance_source": "https://www.wnba.com/game/1042600302",
+      "attendance_source_date": "2026-10-19",
       "network": "USA and Peacock",
       "viewers": null,
       "viewers_source": "",
       "viewers_source_date": "",
       "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
-      "schedule_source_date": "2026-10-13"
+      "schedule_source_date": "2026-10-13",
+      "status": "Final: Dream 79-65"
     },
     {
       "date": "2026-10-21",
