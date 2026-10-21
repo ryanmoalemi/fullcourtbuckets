@@ -10,6 +10,10 @@
   // Mangled links (e.g. Gmail "&source=gmail&ust=...") put '&' params in the path.
   var i = raw.indexOf('&');
   if (i > 0) { location.replace(raw.slice(0, i) + q + h); return; }
+  // Common guessed/old paths -> real pages.
+  var alias = {'/where-to-watch':'/wnba/where-to-watch/','/wnba/where-to-watch-wnba':'/wnba/where-to-watch/','/wnba/2026-wnba-finals-ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/tracker':'/2026-wnba-finals-ratings-tracker/','/owners':'/wnba/owners/'};
+  var k = raw.replace(/\/(index\.html?)?$/i,'').toLowerCase();
+  if (alias[k]) { location.replace(alias[k] + q + h); return; }
   // Social URLs accidentally glued onto our domain (/https://www.tiktok.com/@...).
   var m = raw.match(/^\/+(https?:)?\/*(www\.)?tiktok\.com\/@fullcourtbuckets/i);
   if (m) { location.replace('https://www.tiktok.com/@fullcourtbuckets'); }
