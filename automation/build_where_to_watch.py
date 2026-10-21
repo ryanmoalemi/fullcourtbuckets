@@ -31,7 +31,10 @@ SHELL_PAGE = ROOT / 'wnba' / 'viewership-attendance' / 'index.html'
 CANONICAL = 'https://fullcourtbuckets.com/wnba/where-to-watch/'
 PATH = '/wnba/where-to-watch/'
 PUBLISHED = '2026-10-20'
-DATA_THROUGH = '2026-10-20'
+# Data-through / updated date = today's date in Pacific Time at build time (override with WTW_DATA_THROUGH=YYYY-MM-DD).
+import os as _os
+from zoneinfo import ZoneInfo as _ZI
+DATA_THROUGH = _os.environ.get('WTW_DATA_THROUGH') or dt.datetime.now(_ZI('America/Los_Angeles')).date().isoformat()
 # Temporary Finals headline (Oct 2026). To revert after the Finals, set FINALS_HEADLINE = None.
 FINALS_HEADLINE = 'Where to Watch the 2026 WNBA Finals: Bars That Show the Games'
 H1 = FINALS_HEADLINE or 'Where to Watch WNBA Games: Bars That Show the Games'
@@ -403,7 +406,13 @@ def update_sitemaps() -> None:
     for name in ('pages-sitemap.xml', 'sitemap.xml'):
         path = ROOT / name
         text = path.read_text(encoding='utf-8')
-        if f'<loc>{CANONICAL}</loc>' in text or '<urlset' not in text:
+        if '<urlset' not in text:
+            continue
+        if f'<loc>{CANONICAL}</loc>' in text:
+            new = re.sub(r'(<loc>' + re.escape(CANONICAL) + r'</loc>\s*<lastmod>)[^<]*(</lastmod>)',
+                         lambda m: m.group(1) + DATA_THROUGH + m.group(2), text, count=1)
+            if new != text:
+                path.write_text(new, encoding='utf-8')
             continue
         entry = (f'  <url>\n    <loc>{CANONICAL}</loc>\n    <lastmod>{DATA_THROUGH}</lastmod>\n'
                  '    <changefreq>daily</changefreq>\n    <priority>0.8</priority>\n  </url>\n')
