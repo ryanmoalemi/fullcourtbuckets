@@ -133,7 +133,7 @@
       }
       if (it.k === 'Team' || it.k === 'Owner' || it.k === 'Tracker' || it.k === 'Data') boost += 1;
       var tt = tokens(it.t).map(stem);
-      docs.push({ item: it, f: f, ft: fold(it.t), tt: tt, boost: boost });
+      docs.push({ item: it, f: f, ft: fold(it.t), fo: ' ' + tokens([it.w, it.k, it.b, it.s].join(' ')).join(' ') + ' ', tt: tt, boost: boost });
     }
   }
   function load() {
@@ -164,7 +164,7 @@
   }
   /* Each query term -> list of [vocabTerm, weight, kind]. kind: e exact, p prefix, f fuzzy. */
   function expand(term, isLast) {
-    var out = [], st = stem(term), max = term.length >= 8 ? 2 : (term.length >= 4 ? 1 : 0);
+    var out = [], st = stem(term), max = term.length >= 8 ? 2 : (term.length >= 5 ? 1 : 0);
     if (vocab[st]) out.push([st, 1, 'e']);
     if (st !== term && vocab[term]) out.push([term, 1, 'e']);
     for (var v in vocab) {
@@ -179,7 +179,7 @@
     return out.slice(0, 40);
   }
 
-  function search(query) {
+  function search(query, noSuggest) {
     var q = tokens(query);
     if (!q.length || !docs) return { results: [], terms: [], suggestion: '' };
     var exps = [], required = [];
@@ -187,7 +187,8 @@
       exps.push(expand(q[i], i === q.length - 1));
       required.push(!OPTIONAL[q[i]] || q.length === 1);
     }
-    var phrase = fold(query).trim();
+    var phrase = fold(query).trim(), nReq = 0;
+    for (var rq = 0; rq < required.length; rq++) if (required[rq]) nReq++;
     function run(strict) {
       var res = [];
       for (var d = 0; d < docs.length; d++) {
@@ -207,8 +208,10 @@
           score += best; hits.push([t, bestTerm, bestKind]);
         }
         if (!score || (strict && missing)) continue;
+        if (!strict && (nReq < 3 || missing > 1)) continue;
         if (!strict) score *= Math.pow(0.4, missing);
         if (phrase.length > 2 && doc.ft.indexOf(phrase) !== -1) score += 8;
+        else if (q.length > 1 && doc.fo.indexOf(' ' + q.join(' ') + ' ') !== -1) score += 6;
         if (doc.tt.length && doc.tt.length <= 4) {
           var covered = 0;
           for (var c = 0; c < doc.tt.length; c++) for (var hc = 0; hc < hits.length; hc++) if (hits[hc][1] === doc.tt[c]) { covered++; break; }
@@ -225,6 +228,21 @@
     var results = run(true);
     if (!results.length) results = run(false);
     var suggestion = '';
+    if (!results.length && !noSuggest) {
+      /* Zero results: suggest a corrected query only if every term has a close real word and it actually returns results. */
+      var fx = q.slice(), ch = false, ok = true;
+      for (var z = 0; z < q.length; z++) {
+        if (exps[z].length && exps[z][0][2] === 'e') continue;
+        var fz = null;
+        for (var y = 0; y < exps[z].length; y++) if (exps[z][y][2] === 'f') { fz = exps[z][y][0]; break; }
+        if (fz) { fx[z] = fz; ch = true; } else if (required[z]) { ok = false; break; }
+      }
+      if (ch && ok && search(fx.join(' '), true).results.length) {
+        var nz = [];
+        for (var w2 = 0; w2 < fx.length; w2++) nz.push(display[stem(fx[w2])] || display[fx[w2]] || fx[w2]);
+        suggestion = nz.join(' ');
+      }
+    }
     if (results.length) {
       var top = results[0], fixed = q.slice(), changed = false;
       for (var h = 0; h < top.hits.length; h++) {
