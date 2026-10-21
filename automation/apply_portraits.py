@@ -80,6 +80,36 @@ def asset_url(root: Path, path: str) -> str:
     return path + '?v=' + hashlib.sha256(file.read_bytes()).hexdigest()[:12]
 
 
+def photo_credit(root: Path, slug: str):
+    """Licensed real photo credit (CC BY / CC BY-SA / PD) from content/player-photo-credits.json."""
+    path = root / 'content' / 'player-photo-credits.json'
+    if not path.is_file():
+        return None
+    credit = json.loads(path.read_text(encoding='utf-8')).get('credits', {}).get(slug)
+    if not credit:
+        return None
+    lic = str(credit.get('license', ''))
+    if re.search(r'\b(ND|NC)\b', lic):
+        raise ValueError(f'{slug}: ND/NC photo licenses are not allowed.')
+    for key in ('file_url', 'license_url'):
+        if credit.get(key) and not re.fullmatch(r'https://[^"<>\s]+', credit[key]):
+            raise ValueError(f'{slug}: unsafe credit URL')
+    return credit
+
+
+def credit_html(credit: dict) -> str:
+    lic = esc(credit['license'])
+    if credit.get('license_url'):
+        lic = f'<a href="{esc(credit["license_url"])}" rel="license noopener" target="_blank">{lic}</a>'
+    author = f'<a href="{esc(credit["file_url"])}" rel="noopener" target="_blank">{esc(credit["author"])}</a>'
+    changes = f', {esc(credit["changes"])}' if credit.get('changes') else ''
+    return f'<span class="photo-credit">Photo: {author}, {lic}, via Wikimedia Commons{changes}.</span>'
+
+
+CREDIT_CSS = '.photo-credit{font-size:11px;line-height:1.4;color:inherit;opacity:.8}.photo-credit a{color:inherit;text-decoration:underline}'
+CREDIT_SOURCES = re.compile(r'<p class="photo-credit-source">.*?</p>', re.S)
+
+
 def render(page: str, profile: dict, record: dict, root: Path) -> str:
     player = profile.get('player', {})
     pid, slug = record.get('player_id'), record.get('slug', '')
@@ -167,6 +197,19 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         page = page.replace(short_note, '')
         if note_bit in page and photo_line not in page:
             page = page.replace(note_bit, note_bit + photo_line, 1)
+        credit = photo_credit(root, slug)
+        if credit:
+            # Credit lives in the small provenance line under the stats and in Sources,
+            # never as a caption over or under the photo.
+            line = credit_html(credit)
+            page = re.sub(r' ?<span class="photo-credit">.*?</span>', '', page, flags=re.S)
+            page = page.replace(photo_line, photo_line + line + ' ', 1)
+            src_p = '<p class="photo-credit-source">' + line.replace('<span class="photo-credit">', '').replace('</span>', '') + '</p>'
+            page = CREDIT_SOURCES.sub('', page)
+            page = page.replace('<details class="sources section" id="sources"><summary>About these numbers</summary>',
+                                '<details class="sources section" id="sources"><summary>About these numbers</summary>' + src_p, 1)
+            if CREDIT_CSS not in page:
+                page = page.replace('</head>', '<style id="fcb-photo-credit">' + CREDIT_CSS + '</style></head>', 1)
     else:
         if note_bit in page and portrait_bit not in page:
             page = page.replace(note_bit, note_bit + portrait_bit, 1)
@@ -180,6 +223,11 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
                 entity['image'] = {'@type': 'ImageObject', 'contentUrl': BASE + src,
                                    'caption': caption if photo else f'{name}. {caption}.',
                                    'width': width, 'height': height}
+                credit = photo_credit(root, slug) if photo else None
+                if credit:
+                    entity['image'].update(creditText=credit['author'] + ' via Wikimedia Commons',
+                                           license=credit.get('license_url', ''),
+                                           acquireLicensePage=credit['file_url'])
         encoded = json.dumps(schema, ensure_ascii=False).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
         return '<script type="application/ld+json">' + encoded + '</script>'
     return re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, page, flags=re.S)
