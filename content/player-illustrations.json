@@ -1386,6 +1386,32 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 570,
+      "slug": "jackie-young",
+      "player_name": "Jackie Young",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/jackie-young/portrait.webp",
+      "width": 1000,
+      "height": 1000,
+      "asset_sha256": "5fa68ec8b94fc3fc34f58255d653c9d01ae01505f4b3d19669a49a6ef589f253",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 1000,
+        "height": 1000,
+        "source_width": 1000,
+        "source_height": 1000,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Licensed Wikimedia Commons photograph (Lorie Shaull, CC BY-SA 2.0), cropped and background removed. Credit in content/player-photo-credits.json.",
+      "display": "Existing compact desktop/mobile template. Real photograph; credit shown in the small line under the stats and in Sources, not under the photo."
     }
   ]
 }

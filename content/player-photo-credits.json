@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "note": "Licensed real photos (Wikimedia Commons CC BY / CC BY-SA / public domain). apply_portraits.py prints the credit in the small line under the stats and in Sources. Never use ND or NC licenses.",
+  "credits": {
+    "jackie-young": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jackie_Young.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-21: edges checked at 200% on dark and light backgrounds"
+    }
+  }
+}
