@@ -72,11 +72,21 @@
 (function () {
   var header = document.querySelector('header.site-header');
   if (!header) return;
+  /* Hysteresis: compacting removes 12px from an in-flow sticky header, and Chrome's
+     scroll anchoring then pulls scrollY back by the same 12px. A single 8px threshold
+     made that loop forever (the mobile "bounce"). Separate on/off points far wider
+     than the 12px shift, applied once per frame, stop the feedback loop. */
+  var COMPACT_AT = 72, EXPAND_AT = 4, compact = false, queued = false;
   function sync() {
-    header.classList.toggle('is-compact', window.scrollY > 8);
+    queued = false;
+    var y = window.scrollY || window.pageYOffset || 0;
+    var next = compact ? y > EXPAND_AT : y > COMPACT_AT;
+    if (next !== compact) { compact = next; header.classList.toggle('is-compact', compact); }
   }
   sync();
-  window.addEventListener('scroll', sync, { passive: true });
+  window.addEventListener('scroll', function () {
+    if (!queued) { queued = true; window.requestAnimationFrame(sync); }
+  }, { passive: true });
 })();
 /* Site search: lazy-loaded static index, typo-tolerant ranking, autocomplete,
    recent searches and the /search/ results page. DOM nodes are cloned from templates. */
