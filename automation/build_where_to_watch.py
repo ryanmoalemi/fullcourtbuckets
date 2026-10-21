@@ -83,6 +83,7 @@ PAGE_CSS = '''
 .ww-loc,.ww-team{font-size:14px;color:#4a4740;line-height:1.45}
 .ww-tag{display:inline-block;margin-top:4px!important;padding:2px 8px;border:1px solid #2a8f4f;border-radius:3px;color:#1f6b3a;font:700 12px/1.5 Inter,sans-serif}
 .ww-ver{margin-top:4px!important;font-size:13px;color:#5d5952}.ww-ver a{color:#9a5200;text-decoration:underline}
+.ww-quote{margin-top:6px!important;font-size:14px;line-height:1.45;color:#2b2925;font-style:italic;border-left:3px solid #c8102e;padding-left:8px}
 .ww-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
 .ww-btns .btn{min-height:44px;padding:0 14px;border:1px solid #ff9800;border-radius:3px;color:#8a4a00;font:700 14px Inter,sans-serif;text-decoration:none;display:inline-flex;align-items:center}
 .ww-empty{display:none;padding:20px 0;color:#5d5952}
@@ -183,6 +184,15 @@ def verification(r: dict) -> str:
             f' (accessed {human(r["verification_date"])})')
 
 
+def quote_html(r: dict) -> str:
+    q = (r.get('bar_quote') or '').strip()
+    if not q or r.get('verification_type') != 'staff_reply':
+        return ''
+    d = dt.date.fromisoformat(r['verification_date'])
+    return (f'<p class="ww-quote">From the bar: &ldquo;{esc(q)}&rdquo; '
+            f'({d.strftime("%B")} {d.day}, {d.year})</p>')
+
+
 def logo_html(r: dict, color: str) -> str:
     logo = (r.get('logo') or '').strip()
     if logo.startswith('/assets/bars/') and (ROOT / logo.lstrip('/')).exists():
@@ -206,7 +216,7 @@ def row_html(r: dict) -> str:
     return (f'<li class="ww-row" data-team="{esc(r["team_market"])}" data-q="{esc(hay)}">'
             + logo_html(r, color) +
             f'<div class="ww-body"><p class="ww-name">{esc(r["name"])}</p><p class="ww-loc">{esc(area)}</p>{team}'
-            f'<p class="ww-tag">Shows WNBA games</p><p class="ww-ver">{verification(r)}</p>'
+            f'<p class="ww-tag">Shows WNBA games</p><p class="ww-ver">{verification(r)}</p>{quote_html(r)}'
             f'<div class="ww-btns">{"".join(btns)}</div></div></li>')
 
 
