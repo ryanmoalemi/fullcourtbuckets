@@ -11,7 +11,7 @@
   var i = raw.indexOf('&');
   if (i > 0) { location.replace(raw.slice(0, i) + q + h); return; }
   // Common guessed/old paths -> real pages.
-  var alias = {'/where-to-watch':'/wnba/where-to-watch/','/wnba/where-to-watch-wnba':'/wnba/where-to-watch/','/wnba/2026-wnba-finals-ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/tracker':'/2026-wnba-finals-ratings-tracker/','/owners':'/wnba/owners/'};
+  var alias = {'/where-to-watch':'/wnba/where-to-watch/','/wnba/where-to-watch-wnba':'/wnba/where-to-watch/','/wnba/2026-wnba-finals-ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/ratings-tracker':'/2026-wnba-finals-ratings-tracker/','/tracker':'/2026-wnba-finals-ratings-tracker/','/owners':'/wnba/owners/','/news/finals-game-3-preview-dream-valkyries':'/news/finals-game-3-preview-valkyries-dream/'};
   var k = raw.replace(/\/(index\.html?)?$/i,'').toLowerCase();
   if (alias[k]) { location.replace(alias[k] + q + h); return; }
   // Social URLs accidentally glued onto our domain (/https://www.tiktok.com/@...).
