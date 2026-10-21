@@ -1,154 +1,145 @@
 {
   "slug": "tiffany-hayes",
   "player_name": "Tiffany Hayes",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Tiffany Hayes's stats / points per game?",
-      "answer": "In the 2026 regular season, Tiffany Hayes averaged 9.1 points, 2.1 rebounds, and 2.6 assists in 40 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Tiffany Hayes's stats?",
+      "answer": "In the 2026 regular season, Tiffany Hayes averaged 9.0 points, 2.0 rebounds, and 2.5 assists in 42 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tiffany hayes stats",
-      "approx_monthly_volume": 2400
-    },
-    {
-      "question": "Who is Tiffany Hayes dating?",
-      "answer": "As of late 2026, Tiffany Hayes has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
+        "https://fullcourtbuckets.com/wnba/tiffany-hayes/"
       ],
-      "google_keyword": "who is tiffany hayes partner",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Tiffany Hayes make?",
-      "answer": "A precise public salary or net worth figure for Tiffany Hayes is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "tiffany hayes net worth",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How tall is Tiffany Hayes?",
-      "answer": "Tiffany Hayes is listed at 5' 10\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
-      ],
-      "google_keyword": "tiffany hayes height",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "tiffany hayes stats",
+          "vol": 2900
+        },
+        {
+          "q": "tiffany hayes game log",
+          "vol": 30
+        },
+        {
+          "q": "tiffany hayes stats per game",
+          "vol": 10
+        },
+        {
+          "q": "tiffany hayes average points per game",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Tiffany Hayes?",
-      "answer": "She was born September 20, 1989 in Fort Johnson South. As of late 2026 that puts her at 37 years old.",
+      "answer": "Tiffany Hayes was born September 20, 1989.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
+        "https://www.wnba.com/player/203026/tiffany-hayes/bio"
       ],
-      "google_keyword": "tiffany hayes age",
-      "approx_monthly_volume": 210,
-      "birthdate": "1989-09-20"
+      "queries": [
+        {
+          "q": "tiffany hayes age",
+          "vol": 260
+        },
+        {
+          "q": "how old is tiffany hayes",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "What did Tiffany Hayes score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Seattle Storm), Tiffany Hayes had 10.0 points, 2.0 rebounds, and 6.0 assists in a 70-57 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is tiffany hayes playing tonight",
-      "approx_monthly_volume": 140
+      "question": "Where did Tiffany Hayes play college basketball?",
+      "answer": "Tiffany Hayes played at UConn, where she won national championships in 2009 and 2010, and reached four Final Fours. Her UConn teams went 147-7.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203026/tiffany-hayes/bio"
+      ],
+      "queries": [
+        {
+          "q": "tiffany hayes uconn",
+          "vol": 140
+        },
+        {
+          "q": "tiffany hayes uconn years",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What team does Tiffany Hayes play for?",
+      "answer": "Tiffany Hayes plays guard for the Golden State Valkyries and wears No. 15.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203026/tiffany-hayes/bio"
+      ],
+      "queries": [
+        {
+          "q": "tiffany hayes valkyries",
+          "vol": 110
+        },
+        {
+          "q": "tiffany hayes valkyries signing",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What is Tiffany Hayes's contract?",
-      "answer": "Contract length and guarantees for Tiffany Hayes are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "The Golden State Valkyries re-signed Tiffany Hayes to a one-year contract on April 18, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/203026/tiffany-hayes/bio",
+        "https://valkyries.wnba.com/news/valkyries-re-sign-tiffany-hayes-20260418"
       ],
-      "google_keyword": "tiffany hayes contract",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "tiffany hayes contract",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Is Tiffany Hayes married?",
-      "answer": "There is no widely reported public record of Tiffany Hayes being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
-      ],
-      "google_keyword": "is tiffany hayes married",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What college did Tiffany Hayes attend?",
-      "answer": "Hayes played college basketball at UConn.",
+      "question": "How tall is Tiffany Hayes?",
+      "answer": "The WNBA lists Tiffany Hayes at 5 feet 10 inches and 155 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
+        "https://www.wnba.com/player/203026/tiffany-hayes/bio"
       ],
-      "google_keyword": "tiffany hayes uconn",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "tiffany hayes height",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "What is Tiffany Hayes's nationality?",
-      "answer": "Tiffany Hayes is American.",
-      "answer_kind": "bio",
+      "question": "Which teams has Tiffany Hayes played for?",
+      "answer": "Tiffany Hayes has played for the Atlanta Dream, Connecticut Sun, Las Vegas Aces and Golden State Valkyries.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
+        "https://fullcourtbuckets.com/wnba/tiffany-hayes/"
       ],
-      "google_keyword": "tiffany hayes azerbaijan citizenship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tiffany hayes dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Tiffany Hayes injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "tiffany hayes injury",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Who are Tiffany Hayes's parents?",
-      "answer": "Public profiles share limited verified detail about Tiffany Hayes's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "How many years has Tiffany Hayes played in the WNBA?",
+      "answer": "Tiffany Hayes has 14 regular seasons: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025, and 2026.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
+        "https://fullcourtbuckets.com/wnba/tiffany-hayes/"
       ],
-      "google_keyword": "tiffany hayes parents",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Did Tiffany Hayes retire?",
-      "answer": "As of late 2026, Tiffany Hayes is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
-      ],
-      "google_keyword": "tiffany hayes retirement",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Tiffany Hayes?",
-      "answer": "Renara Tiffany Hayes is an American-Azerbaijani professional basketball player for the Golden State Valkyries of the Women's National Basketball Association (WNBA) and for ÇBK Mersin of the Turkish Super League.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
-      ],
-      "google_keyword": "who is tiffany hayes partner",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Does Tiffany Hayes have kids?",
-      "answer": "There is no widely reported public information that Tiffany Hayes has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Hayes"
-      ],
-      "google_keyword": "tiffany morrison",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "tiffany hayes wnba",
+          "vol": 720
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

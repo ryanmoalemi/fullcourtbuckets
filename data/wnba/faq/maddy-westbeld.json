@@ -1,122 +1,168 @@
 {
   "slug": "maddy-westbeld",
   "player_name": "Maddy Westbeld",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Maddy Westbeld's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Maddy Westbeld averaged 4.1 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maddy westbeld stats",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Maddy Westbeld dating?",
-      "answer": "As of late 2026, Maddy Westbeld has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
-      ],
-      "google_keyword": "maddy westbeld partner",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "How much does Maddy Westbeld make?",
-      "answer": "A precise public salary or net worth figure for Maddy Westbeld is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "maddy westbeld salary",
-      "approx_monthly_volume": 30
-    },
-    {
       "question": "How tall is Maddy Westbeld?",
-      "answer": "Maddy Westbeld is listed at 6' 3\".",
+      "answer": "The WNBA lists Maddy Westbeld at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+        "https://www.wnba.com/player/1642818/maddy-westbeld/bio"
       ],
-      "google_keyword": "maddy westbeld height",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "maddy westbeld height",
+          "vol": 210
+        },
+        {
+          "q": "maddy westbeld height and weight",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Maddy Westbeld's jersey number?",
-      "answer": "Maddy Westbeld wears number 21 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maddy westbeld jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Maddy Westbeld's contract?",
-      "answer": "Contract length and guarantees for Maddy Westbeld are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Who is Maddy Westbeld's sister?",
+      "answer": "Maddy Westbeld's sister, Kat, also played at Notre Dame. The school says they are the only sisters to each score 1,000 points for the Irish.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fightingirish.com/sports/wbball/roster/player/maddy-westbeld"
       ],
-      "google_keyword": "maddy westbeld contract",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "maddy westbeld sister",
+          "vol": 210
+        },
+        {
+          "q": "maddy westbeld siblings",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Maddy Westbeld play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 21. Her listed position is F.",
+      "question": "How did Maddy Westbeld play in 2026?",
+      "answer": "In the 2026 regular season, Maddy Westbeld averaged 3.3 points in 7 games for the Phoenix Mercury and 1.0 points in 3 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does maddy westbeld play for",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Maddy Westbeld injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "maddy westbeld injury",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Who are Maddy Westbeld's parents?",
-      "answer": "Public profiles share limited verified detail about Maddy Westbeld's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+        "https://fullcourtbuckets.com/wnba/maddy-westbeld/"
       ],
-      "google_keyword": "maddy westbeld parents",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who is Maddy Westbeld?",
-      "answer": "Madeline Grace Westbeld is an American professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
-      ],
-      "google_keyword": "maddy westbeld wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "maddy westbeld stats",
+          "vol": 90
+        },
+        {
+          "q": "maddy westbeld wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Maddy Westbeld?",
-      "answer": "Maddy Westbeld was born February 10, 2002. As of late 2026 that puts her at 24 years old.",
-      "answer_kind": "researched",
+      "answer": "Maddy Westbeld was born February 10, 2002.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+        "https://www.wnba.com/player/1642818/maddy-westbeld/bio"
       ],
-      "google_keyword": "maddy westbeld age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2002-02-10"
+      "queries": [
+        {
+          "q": "maddy westbeld age",
+          "vol": 90
+        },
+        {
+          "q": "maddy westbeld birthday",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Maddy Westbeld attend?",
-      "answer": "Maddy Westbeld played college basketball at Fairmont High School in Kettering, Ohio where she classified as a five-star recruit by ESPN.",
+      "question": "What team does Maddy Westbeld play for?",
+      "answer": "Maddy Westbeld plays forward for the Phoenix Mercury and wears No. 21.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Westbeld"
+        "https://www.wnba.com/player/1642818/maddy-westbeld/bio",
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-forward-maddy-westbeld/n-6402735"
       ],
-      "google_keyword": "maddy westbeld notre dame",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "who does maddy westbeld play for",
+          "vol": 20
+        },
+        {
+          "q": "maddy westbeld wnba",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "When did Maddy Westbeld join the Phoenix Mercury?",
+      "answer": "The Phoenix Mercury signed Maddy Westbeld to a rest-of-season contract on August 18, 2026. She had played three games for the Chicago Sky that season on a developmental contract.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-forward-maddy-westbeld/n-6402735"
+      ],
+      "queries": [
+        {
+          "q": "maddy westbeld contract",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "When was Maddy Westbeld drafted?",
+      "answer": "The Chicago Sky selected Maddy Westbeld 16th overall in the 2025 WNBA Draft. As a rookie she averaged 4.1 points in 26 games and scored a career-high 25 points in the season finale.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-forward-maddy-westbeld/n-6402735",
+        "https://www.wnba.com/player/1642818/maddy-westbeld/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy westbeld chicago sky",
+          "vol": 40
+        },
+        {
+          "q": "maddy westbeld wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Maddy Westbeld play college basketball?",
+      "answer": "Maddy Westbeld played five seasons at Notre Dame (2020-25) and averaged 12.1 points and 6.7 rebounds in 141 games. She was a three-time All-ACC pick and helped the Irish win the 2024 ACC title.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-forward-maddy-westbeld/n-6402735"
+      ],
+      "queries": [
+        {
+          "q": "maddy westbeld notre dame",
+          "vol": 20
+        },
+        {
+          "q": "notre dame fighting irish women's basketball maddy westbeld",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Maddy Westbeld go to high school?",
+      "answer": "Maddy Westbeld played at Fairmont High School in Kettering, Ohio. She was a 2020 McDonald's All-American and the 2020 Gatorade Ohio Girls Basketball Player of the Year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fightingirish.com/sports/wbball/roster/player/maddy-westbeld"
+      ],
+      "queries": [
+        {
+          "q": "maddy westbeld high school",
+          "vol": null
+        },
+        {
+          "q": "maddy westbeld recruiting",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,122 +1,176 @@
 {
   "slug": "nyara-sabally",
   "player_name": "Nyara Sabally",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Nyara Sabally's stats / points per game?",
-      "answer": "In the 2026 regular season, Nyara Sabally averaged 12.3 points, 5.3 rebounds, and 1.7 assists in 24 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Nyara Sabally's stats?",
+      "answer": "In the 2026 regular season, Nyara Sabally averaged 12.3 points, 5.3 rebounds, and 1.7 assists in 24 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nyara sabally stats",
-      "approx_monthly_volume": 2900
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/nyara-sabally/"
+      ],
+      "queries": [
+        {
+          "q": "nyara sabally stats",
+          "vol": 3600
+        },
+        {
+          "q": "nyara sabally game log",
+          "vol": 40
+        },
+        {
+          "q": "nyara sabally wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Nyara Sabally dating?",
-      "answer": "As of late 2026, Nyara Sabally has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "Are Nyara and Satou Sabally sisters?",
+      "answer": "Yes. Nyara Sabally is the younger sister of WNBA forward Satou Sabally. The two were teammates at Oregon in 2018-19 and 2019-20.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio"
       ],
-      "google_keyword": "nyara sabally partner",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How much does Nyara Sabally make?",
-      "answer": "A precise public salary or net worth figure for Nyara Sabally is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "nyara sabally salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "nyara sabally sister",
+          "vol": 320
+        },
+        {
+          "q": "are satou and nyara sabally sisters",
+          "vol": 140
+        },
+        {
+          "q": "satou and nyara sabally",
+          "vol": 70
+        },
+        {
+          "q": "are satou and nyara sabally twins",
+          "vol": 10
+        },
+        {
+          "q": "nyara sabally siblings",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Nyara Sabally?",
-      "answer": "Nyara Sabally is listed at 6' 5\".",
+      "answer": "The WNBA lists Nyara Sabally at 6 feet 5 inches and 214 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio"
       ],
-      "google_keyword": "nyara sabally height",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How old is Nyara Sabally?",
-      "answer": "She was born February 26, 2000 in Bandon. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
-      ],
-      "google_keyword": "nyara sabally age",
-      "approx_monthly_volume": 40,
-      "birthdate": "2000-02-26"
-    },
-    {
-      "question": "What is Nyara Sabally's jersey number?",
-      "answer": "Nyara Sabally wears number 8 for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nyara sabally jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Nyara Sabally's contract?",
-      "answer": "Contract length and guarantees for Nyara Sabally are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "nyara sabally contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Nyara Sabally married?",
-      "answer": "There is no widely reported public record of Nyara Sabally being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
-      ],
-      "google_keyword": "nyara sabally husband",
-      "approx_monthly_volume": 480
+      "queries": [
+        {
+          "q": "nyara sabally height",
+          "vol": 140
+        },
+        {
+          "q": "nyara sabally weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Nyara Sabally play for?",
-      "answer": "Her most recent WNBA team on record is the Toronto Tempo. She wears No. 8. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nyara sabally team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Nyara Sabally injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "nyara sabally injury",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Who are Nyara Sabally's parents?",
-      "answer": "Public profiles share limited verified detail about Nyara Sabally's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Nyara Sabally plays for the Toronto Tempo and wears No. 8. Toronto took her from the New York Liberty in the 2026 WNBA Expansion Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio",
+        "https://www.oursportscentral.com/services/releases/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft/n-6343091"
       ],
-      "google_keyword": "nyara sabally parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "nyara sabally team",
+          "vol": 20
+        },
+        {
+          "q": "nyara sabally wnba",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "What college did Nyara Sabally attend?",
-      "answer": "Nyara Sabally played college basketball at Oregon.",
+      "question": "How old is Nyara Sabally?",
+      "answer": "Nyara Sabally was born February 26, 2000, and is from Berlin, Germany.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "nyara sabally age",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "When was Nyara Sabally drafted?",
+      "answer": "The New York Liberty selected Nyara Sabally fifth overall in the 2022 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nyara_Sabally"
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio",
+        "https://www.oursportscentral.com/services/releases/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft/n-6343091"
       ],
-      "google_keyword": "nyara sabally oregon",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "nyara sabally draft",
+          "vol": 10
+        },
+        {
+          "q": "nyara sabally wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Nyara Sabally play college basketball?",
+      "answer": "Nyara Sabally played at Oregon. She tied the school's single-game NCAA Tournament scoring record with 31 points against Belmont.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631055/nyara-sabally/bio"
+      ],
+      "queries": [
+        {
+          "q": "nyara sabally oregon",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Nyara Sabally played in the Olympics?",
+      "answer": "Yes. Nyara Sabally played for Germany at the 2024 Paris Olympics. She made 12 free throws against France, tying the record for most made free throws in an Olympic game since 1988.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft/n-6343091"
+      ],
+      "queries": [
+        {
+          "q": "nyara sabally olympics",
+          "vol": 10
+        },
+        {
+          "q": "nyara sabally olympics stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Nyara Sabally win a championship with the Liberty?",
+      "answer": "Yes. Nyara Sabally had 13 points and seven rebounds in Game 5 of the 2024 WNBA Finals, when the Liberty won their first championship.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/toronto-tempo-select-nyara-sabally-and-adja-kane-in-2026-wnba-expansion-draft/n-6343091"
+      ],
+      "queries": [
+        {
+          "q": "nyara sabally liberty",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

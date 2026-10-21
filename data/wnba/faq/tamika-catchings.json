@@ -1,156 +1,224 @@
 {
   "slug": "tamika-catchings",
   "player_name": "Tamika Catchings",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Tamika Catchings's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2016), Tamika Catchings averaged 12.7 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tamika catchings stats",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who is Tamika Catchings dating?",
-      "answer": "As of late 2026, Tamika Catchings has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Did Tamika Catchings play at Tennessee?",
+      "answer": "Yes. Tamika Catchings played at Tennessee from 1997 to 2001 for Pat Summitt. She won the 1998 NCAA championship and was a First Team All-American all four seasons.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings",
+        "https://www.wnba.com/news/tamika-catchings-elected-to-naismith-memorial-basketball-hall-of-fame"
       ],
-      "google_keyword": "who is tamika catchings partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tamika catchings tennessee",
+          "vol": 14800
+        }
+      ]
     },
     {
-      "question": "How much does Tamika Catchings make?",
-      "answer": "A precise public salary or net worth figure for Tamika Catchings is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Is Tamika Catchings deaf?",
+      "answer": "Tamika Catchings was born with a hearing impairment and wore a hearing aid as a young girl. At Tennessee, Pat Summitt encouraged her to wear one again, and she also went to speech therapy.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/100646/tamika-catchings/bio",
+        "https://our.tennessee.edu/2017/tamika-catchings/",
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings"
       ],
-      "google_keyword": "tamika catchings net worth",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "tamika catchings hearing loss",
+          "vol": 390
+        },
+        {
+          "q": "tamika catchings deaf",
+          "vol": 390
+        },
+        {
+          "q": "is tamika catchings deaf",
+          "vol": 260
+        },
+        {
+          "q": "tamika catchings hearing",
+          "vol": 50
+        },
+        {
+          "q": "was tamika catchings born deaf",
+          "vol": 50
+        },
+        {
+          "q": "tamika catchings deaf or hearing",
+          "vol": 50
+        },
+        {
+          "q": "tamika catchings disability",
+          "vol": 20
+        },
+        {
+          "q": "tamika catchings hearing aids",
+          "vol": 20
+        },
+        {
+          "q": "how did tamika catchings become deaf",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "How old is Tamika Catchings?",
-      "answer": "She was born July 21, 1979 in Stratford. As of late 2026 that puts her at 47 years old.",
+      "question": "What were Tamika Catchings's WNBA career averages?",
+      "answer": "The WNBA lists Tamika Catchings's career averages at 16.1 points, 7.3 rebounds, and 3.3 assists per game.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
+        "https://www.wnba.com/player/100646/tamika-catchings/bio"
       ],
-      "google_keyword": "tamika catchings age",
-      "approx_monthly_volume": 70,
-      "birthdate": "1979-07-21"
+      "queries": [
+        {
+          "q": "tamika catchings stats",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Is Tamika Catchings married?",
-      "answer": "There is no widely reported public record of Tamika Catchings being married as of late 2026.",
+      "question": "What awards did Tamika Catchings win?",
+      "answer": "Tamika Catchings was the 2011 WNBA MVP and the 2012 WNBA Finals MVP when Indiana won the title. She was a five-time WNBA Defensive Player of the Year, a 10-time All-Star, and a four-time Olympic gold medalist.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings",
+        "https://www.wnba.com/player/100646/tamika-catchings/bio"
       ],
-      "google_keyword": "tamika catchings husband",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Where is Tamika Catchings from?",
-      "answer": "She is from Stratford.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "where is tamika catchings from",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How many championships does Tamika Catchings have?",
-      "answer": "Widely considered as one of the greatest female basketball players and one of the most decorated players in WNBA history, Catchings has won a WNBA championship (2012), WNBA Most Valuable Player Award (2011), WNBA Finals MVP Award (2012), five WNBA Defensive Player of the Year Awards, four Olympic gold medals, the WNBA Rookie of the Year Award (2002), and an NCAA championship with the University of Tennessee Lady Vols (1998).",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "tamika catchings championship",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What awards has Tamika Catchings won?",
-      "answer": "Widely considered as one of the greatest female basketball players and one of the most decorated players in WNBA history, Catchings has won a WNBA championship (2012), WNBA Most Valuable Player Award (2011), WNBA Finals MVP Award (2012), five WNBA Defensive Player of the Year Awards, four Olympic gold medals, the WNBA Rookie of the Year Award (2002), and an NCAA championship with the University of Tennessee Lady Vols (1998).",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "tamika catchings awards",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What college did Tamika Catchings attend?",
-      "answer": "Catchings played college basketball at University of Tennessee.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "tamika catchings tennessee",
-      "approx_monthly_volume": 14800
-    },
-    {
-      "question": "Who is Tamika Catchings?",
-      "answer": "Tamika Devonne Catchings is an American former professional basketball player who played her entire 15-year career for the Indiana Fever of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "who is tamika catchings",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What position does Tamika Catchings play?",
-      "answer": "Tamika Catchings is listed as a Forward for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tamika catchings position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Does Tamika Catchings have kids?",
-      "answer": "There is no widely reported public information that Tamika Catchings has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "tamika catchings son",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Who are Tamika Catchings's parents?",
-      "answer": "Public profiles share limited verified detail about Tamika Catchings's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "tamika catchings family",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Did Tamika Catchings retire?",
-      "answer": "As of late 2026, Tamika Catchings is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
-      ],
-      "google_keyword": "when did tamika catchings retire",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "tamika catchings awards",
+          "vol": 110
+        },
+        {
+          "q": "tamika catchings championship",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Tamika Catchings?",
-      "answer": "Tamika Catchings is listed at 6' 2\".",
+      "answer": "The WNBA lists Tamika Catchings at 6 feet 1 inch.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tamika_Catchings"
+        "https://www.wnba.com/player/100646/tamika-catchings/bio"
       ],
-      "google_keyword": "tamika catchings height",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "tamika catchings height",
+          "vol": 110
+        },
+        {
+          "q": "how tall is tamika catchings",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How old is Tamika Catchings?",
+      "answer": "Tamika Catchings was born July 21, 1979, in Stratford, New Jersey.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/100646/tamika-catchings/bio",
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings"
+      ],
+      "queries": [
+        {
+          "q": "tamika catchings age",
+          "vol": 70
+        },
+        {
+          "q": "how old is tamika catchings",
+          "vol": 70
+        },
+        {
+          "q": "where is tamika catchings from",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How many years did Tamika Catchings play in the WNBA?",
+      "answer": "Tamika Catchings played 15 WNBA seasons, all with the Indiana Fever, from 2002 to 2016.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/tamika-catchings/"
+      ],
+      "queries": [
+        {
+          "q": "tamika catchings fever",
+          "vol": 30
+        },
+        {
+          "q": "indiana fever tamika catchings",
+          "vol": 70
+        },
+        {
+          "q": "tamika catchings wnba",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Who is Tamika Catchings?",
+      "answer": "Tamika Catchings is a Naismith Basketball Hall of Fame forward who spent her whole WNBA career with the Indiana Fever. The Fever drafted her third overall in 2001.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings",
+        "https://www.wnba.com/player/100646/tamika-catchings/bio"
+      ],
+      "queries": [
+        {
+          "q": "who is tamika catchings",
+          "vol": 50
+        },
+        {
+          "q": "tamika catchings bio",
+          "vol": 10
+        },
+        {
+          "q": "tamika catchings draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Tamika Catchings own a tea shop?",
+      "answer": "Yes. Tamika Catchings bought Tea's Me Cafe in Indianapolis in 2017.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://teasmeindy.com/pages/about",
+        "https://www.ibj.com/articles/63152-former-fever-star-catchings-buys-indianapolis-tea-shop"
+      ],
+      "queries": [
+        {
+          "q": "tamika catchings tea shop",
+          "vol": 40
+        },
+        {
+          "q": "tamika catchings tea",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Is Tamika Catchings in the Hall of Fame?",
+      "answer": "Yes. Tamika Catchings was elected to the Naismith Memorial Basketball Hall of Fame in the Class of 2020.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/tamika-catchings-elected-to-naismith-memorial-basketball-hall-of-fame",
+        "https://www.hoophall.com/hall-of-famers/tamika-catchings"
+      ],
+      "queries": [
+        {
+          "q": "tamika catchings hall of fame",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

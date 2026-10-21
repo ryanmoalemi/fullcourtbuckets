@@ -1,94 +1,163 @@
 {
   "slug": "layshia-clarendon",
   "player_name": "Layshia Clarendon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Layshia Clarendon's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Layshia Clarendon averaged 0.0 points,",
+      "question": "What are Layshia Clarendon's stats?",
+      "answer": "In the 2024 regular season, Layshia Clarendon averaged 4.3 points, 1.8 rebounds, and 2.6 assists in 21 games for the Los Angeles Sparks.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "layshia clarendon stats",
-      "approx_monthly_volume": 260
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/layshia-clarendon/"
+      ],
+      "queries": [
+        {
+          "q": "layshia clarendon stats",
+          "vol": 260
+        },
+        {
+          "q": "layshia clarendon wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Layshia Clarendon make?",
-      "answer": "A precise public salary or net worth figure for Layshia Clarendon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "How tall is Layshia Clarendon?",
+      "answer": "The WNBA lists Layshia Clarendon at 5 feet 9 inches and 158 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/203406/layshia-clarendon/bio"
       ],
-      "google_keyword": "layshia clarendon net worth",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "layshia clarendon height",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How old is Layshia Clarendon?",
-      "answer": "Public profiles list Layshia Clarendon as born in 1991. As of late 2026 that puts her around 35 years old.",
+      "answer": "Layshia Clarendon was born May 2, 1991.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Layshia_Clarendon"
+        "https://www.wnba.com/player/203406/layshia-clarendon/bio"
       ],
-      "google_keyword": "layshia clarendon was born",
-      "approx_monthly_volume": 70,
-      "birthdate": "1991-01-01"
+      "queries": [
+        {
+          "q": "layshia clarendon age",
+          "vol": 30
+        },
+        {
+          "q": "layshia clarendon was born",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "What is Layshia Clarendon's jersey number?",
-      "answer": "Layshia Clarendon wears number 5 for the Indiana Fever.",
+      "question": "Which teams has Layshia Clarendon played for?",
+      "answer": "Layshia Clarendon has played for the Indiana Fever, Atlanta Dream, Connecticut Sun, New York Liberty, Minnesota Lynx and Los Angeles Sparks.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "layshia clarendon jersey",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/layshia-clarendon/"
+      ],
+      "queries": [
+        {
+          "q": "layshia clarendon dates joined",
+          "vol": 20
+        },
+        {
+          "q": "layshia clarendon team",
+          "vol": 10
+        },
+        {
+          "q": "layshia clarendon sparks",
+          "vol": 10
+        },
+        {
+          "q": "layshia clarendon liberty",
+          "vol": null
+        },
+        {
+          "q": "layshia clarendon new york liberty",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Layshia Clarendon married?",
-      "answer": "There is no widely reported public record of Layshia Clarendon being married as of late 2026.",
+      "question": "How many years did Layshia Clarendon play in the WNBA?",
+      "answer": "Layshia Clarendon played 11 regular seasons: 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, and 2024.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/layshia-clarendon/"
+      ],
+      "queries": [
+        {
+          "q": "layshia clarendon wnba",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where did Layshia Clarendon play college basketball?",
+      "answer": "Layshia Clarendon played four seasons at California. As a senior, Clarendon led Cal with 16.4 points per game and helped the team reach its first NCAA Final Four. The Indiana Fever then took Clarendon ninth overall in the 2013 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Layshia_Clarendon"
+        "https://www.oursportscentral.com/services/releases/layshia-clarendon-of-california-selected-by-indiana-fever/n-4576778",
+        "https://www.wnba.com/player/203406/layshia-clarendon/bio"
       ],
-      "google_keyword": "layshia clarendon wife",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "layshia clarendon college",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Layshia Clarendon injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "layshia clarendon injury",
-      "approx_monthly_volume": 10
+      "question": "Where did Layshia Clarendon go to high school?",
+      "answer": "Layshia Clarendon played at Cajon High School and is from San Bernardino, California. Clarendon was California's Ms. Basketball in 2009, Cal says.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://calbears.com/sports/womens-basketball/roster/layshia-clarendon/6727"
+      ],
+      "queries": [
+        {
+          "q": "layshia clarendon high school",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Who are Layshia Clarendon's parents?",
-      "answer": "Public profiles share limited verified detail about Layshia Clarendon's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Cal's bio lists Layshia Clarendon's parents as Sharon and Curtis Clarendon.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Layshia_Clarendon"
+        "https://calbears.com/sports/womens-basketball/roster/layshia-clarendon/6727"
       ],
-      "google_keyword": "layshia clarendon parents",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "layshia clarendon parents",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Did Layshia Clarendon retire?",
-      "answer": "As of late 2026, Layshia Clarendon has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
+      "question": "Was Layshia Clarendon an All-Star?",
+      "answer": "Yes. Layshia Clarendon was a 2017 WNBA All-Star and won gold with the United States at the 2018 FIBA World Cup.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Layshia_Clarendon"
+        "https://www.wnba.com/player/203406/layshia-clarendon/bio"
       ],
-      "google_keyword": "layshia clarendon retirement",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Layshia Clarendon?",
-      "answer": "Layshia Renee Clarendon is an American former professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Layshia_Clarendon"
-      ],
-      "google_keyword": "who is layshia clarendon married to",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "was layshia clarendon good",
+          "vol": 20
+        },
+        {
+          "q": "layshia clarendon gold medals",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
