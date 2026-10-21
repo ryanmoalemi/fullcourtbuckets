@@ -133,7 +133,7 @@ var nm=r.querySelector('.ww-name'),lc=r.querySelector('.ww-loc');if(nm)FS.highli
 document.querySelectorAll('.ww-city ul,.ww-city ol').forEach(function(u){var rs=[].slice.call(u.children).filter(function(x){return x.classList.contains('ww-row');});
 rs.sort(function(x,y){return query?((score[y._i]||0)-(score[x._i]||0))||x._i-y._i:x._i-y._i;});rs.forEach(function(x){u.appendChild(x);});});
 document.querySelectorAll('.ww-city,.ww-state').forEach(function(d){d.hidden=!d.querySelector('.ww-row:not([hidden])');});
-c.textContent=query?(n+' of '+rows.length+' venues match \u201c'+query+'\u201d'):('Showing all '+n+' venues');c.classList.toggle('is-on',!!query);e.style.display=n?'none':'block';}
+c.textContent=query?(n+' of '+rows.length+' venues match \u201c'+query+'\u201d'):('Showing all '+n+' venues');c.classList.toggle('is-on',!!query);e.style.display=n?'none':'block';if(!n&&query)e.textContent='No venues match \u201c'+query+'\u201d. Try a city, neighborhood or bar name, or clear the search.';}
 function soon(){clearTimeout(timer);timer=setTimeout(run,60);}['input','keyup','compositionend','change','search'].forEach(function(k){q.addEventListener(k,soon);});
 q.addEventListener('keydown',function(ev){if(ev.key==='ArrowDown'){ev.preventDefault();setActive(active+1);}else if(ev.key==='ArrowUp'){ev.preventDefault();setActive(active-1);}
 else if(ev.key==='Escape'){ev.preventDefault();q.value='';run();}else if(ev.key==='Enter'){ev.preventDefault();var v=vis(),r=v[active<0?0:active];if(r){var l=r.querySelector('a');r.scrollIntoView({block:'center'});if(l)l.focus({preventScroll:true});}}});
@@ -351,7 +351,7 @@ def render(rows: list[dict]) -> str:
         '<input id="ww-q" type="search" placeholder="Search bars, neighborhoods or cities..." autocomplete="off"><p class="ss-dym ww-dym" id="ww-dym" hidden>Did you mean <a href="#"></a>?</p>'
         f'<span class="ww-count" id="ww-c" aria-live="polite">Showing {s["venues"]} venues</span></div>'
         f'<div class="ww-dir" id="ww-dir">{directory(rows)}'
-        '<p class="ww-empty" id="ww-e">No venues match. Try a city or team name, or clear the filter.</p>'
+        '<p class="ww-empty" id="ww-e">No venues match. Try a city, neighborhood or bar name, or clear the search.</p>'
         f'<div class="ww-notice ww-notice-below" id="check-before-you-go" role="note"><strong>Check before you go:</strong> {NOTICE}</div></div>'
         '</div><div class="ww-below">'
         '<h2 id="download">Download the data (CC BY 4.0)</h2>'
