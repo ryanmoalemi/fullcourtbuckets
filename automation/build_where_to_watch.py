@@ -354,7 +354,6 @@ def render(rows: list[dict]) -> str:
         f'<div class="byline-row">{links.BYLINE_HTML}'
         f'<time class="article-date" datetime="{DATA_THROUGH}">{esc(human(DATA_THROUGH))}</time></div>'
         '</div><div class="ww-top">'
-        f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {s["cities"]} cities across the U.S. and Canada, in WNBA team markets and beyond.</p>'
         f'<div class="ww-box"><span><strong>Data through:</strong> {human(DATA_THROUGH)} (PT)</span><span><strong>{s["venues"]}</strong> venues</span>'
         f'<span><strong>{s["confirmed"]}</strong> confirmed with staff</span><span><strong>{s["sourced"]}</strong> from team or venue pages</span></div>'
         f'<div class="ww-notice ww-notice-top" role="note"><strong>Check before you go:</strong> {NOTICE}</div>'
@@ -370,7 +369,9 @@ def render(rows: list[dict]) -> str:
         f'<p><a class="ww-dl" href="{PATH}{CSV_NAME}" download>Download CSV</a></p>'
         '<p>Columns: id, name, street, city, state, country, team_market, verification_type, verification_date, source_name, source_url, website, phone, directions. '
         'Credit: "Full Court Buckets, Where to Watch WNBA Games (CC BY 4.0)" with a link to this page.</p>'
-        '<h2 id="methods">How we build this list</h2><ul>'
+        '<h2 id="methods">How we build this list</h2>'
+        f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {s["cities"]} cities across the U.S. and Canada, in WNBA team markets and beyond.</p>'
+        '<ul>'
         "<li>A venue is listed only when an official team watch-party page, the venue's own WNBA page, a named local news report, or a written reply to our staff shows WNBA screenings.</li>"
         '<li>"Confirmed with staff" means the venue replied to us in writing on that date. We keep those replies on file.</li>'
         '<li>Reddit, aggregators and third-party directories are not used as evidence.</li>'
