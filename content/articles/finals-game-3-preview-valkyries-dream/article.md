@@ -23,7 +23,7 @@ ticker: "Finals Game 3: Valkyries at Dream, tonight 5 p.m. PT. Series tied 1-1."
 
 The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) have scored 9 points in the third quarter of both WNBA Finals games, and they haven't attempted a single free throw in either one. The [Atlanta Dream](/wnba/teams/atlanta-dream/) have outscored them 38-18 in third quarters, and that 20-point gap is the whole series so far.
 
-In the other three quarters of Games 1 and 2, Golden State leads 115-105. Game 3 is tonight at State Farm Arena with the series tied 1-1, and the third quarter is where the Valkyries have to find points.
+Game 3 is tonight at State Farm Arena with the series tied 1-1, and the third quarter is where the Valkyries have to find points.
 
 ## Finals Game 3 at a glance
 
@@ -31,9 +31,10 @@ In the other three quarters of Games 1 and 2, Golden State leads 115-105. Game 3
 - Where: State Farm Arena, Atlanta
 - TV and streaming: USA Network, CNBC and Peacock ([WNBA schedule](https://valkyries.wnba.com/news/wnba-finals-schedule-updates-20261013))
 - Series: Tied 1-1. Golden State won Game 1 68-64, and Atlanta won Game 2 79-65.
-- Series odds: Dream -135, Valkyries +115 ([ESPN betting report](https://www.espn.com/espn/betting/story/_/id/48417601/2026-wnba-championship-odds-playoffs-mvp), Oct. 20, 10:41 a.m. PT)
 - Game line: Dream -3.5, total 153.5 (DraftKings, as of Oct. 21 at 11:00 a.m. PT)
 - Next: Game 4 is Saturday, Oct. 24, at 10 a.m. PT in Atlanta
+
+Game 3 was moved up from Thursday, Oct. 22, and out of the Dream's usual home arena to State Farm Arena. It is the first WNBA Finals game in the Atlanta market since 2013, the league said when it announced the move.
 
 ## Injury report
 
@@ -45,9 +46,9 @@ Golden State: No players are listed. [Iliana Rupert](/wnba/iliana-rupert/) has n
 
 ## What happened in Game 2
 
-Atlanta won 79-65 at Chase Center on Monday. [Angel Reese](/wnba/angel-reese/) had 30 points and 16 rebounds, and a 19-2 run that started at 3:52 of the third quarter turned a 45-44 game into a 64-46 lead by 9:00 of the fourth. Both teams made 21 field goals and 7 threes. Atlanta made 30 of 35 free throws and Golden State 16 of 19. Our [Game 2 recap](/news/dream-valkyries-finals-game-2-recap/) has the full sequence.
+Atlanta won 79-65 at Chase Center on Monday. [Angel Reese](/wnba/angel-reese/) had 30 points and 16 rebounds, and a 19-2 run that started at 3:52 of the third quarter turned a 45-44 game into a 64-46 lead by 9:00 of the fourth. [Rhyne Howard](/wnba/rhyne-howard/) had 6 steals, a Finals record ([AP](https://apnews.com/article/dream-valkyries-score-wnba-finals-game-2-8561417b17cc6fb3e3e890e331fb6525)). Both teams made 21 field goals and 7 threes. Atlanta made 30 of 35 free throws and Golden State 16 of 19. Our [Game 2 recap](/news/dream-valkyries-finals-game-2-recap/) has the full sequence.
 
-Golden State turned it over 19 times, and Atlanta scored 24 points off those turnovers. "We have to play harder, number one, but we've got to play smarter as well," Valkyries coach Natalie Nakase said after the game ([NBC Bay Area](https://www.nbcbayarea.com/wnba/golden-state-valkyries/adjustments-analysis-finals-game-plan-dream/4161489/)).
+Golden State turned it over 19 times (every turnover count in this preview includes team turnovers), and Atlanta scored 24 points off those turnovers. "We have to play harder, number one, but we've got to play smarter as well," Valkyries coach Natalie Nakase said after the game ([NBC Bay Area](https://www.nbcbayarea.com/wnba/golden-state-valkyries/adjustments-analysis-finals-game-plan-dream/4161489/)).
 
 ## The third quarter is the series
 
@@ -57,20 +58,16 @@ The Dream were called for 5 fouls in those two quarters, 3 in Game 1 and 2 in Ga
 
 The two quarters didn't go the same way. In Game 1, the Valkyries kept the ball (1 turnover) but missed 21 of 25 shots. In Game 2 they turned it over 8 times in the quarter. The result was 9 points both times.
 
-Outside the third quarter, Golden State won the other three quarters of Game 1 by 12, 59-47, and Atlanta won them by 2 in Game 2, 58-56. Two quarters is a very small sample, so this shows where the series has been decided, not what will happen tonight. Turnover totals here include team turnovers.
+Outside the third quarter, Golden State won the other three quarters of Game 1 by 12, 59-47, and Atlanta won them by 2 in Game 2, 58-56. In the other three quarters combined, Golden State leads 115-105. Two quarters is a very small sample, so this shows where the series has been decided, not what will happen tonight.
 
 The Dream lost all three home Finals games in 2010, 2011 and 2013, each one with Atlanta down 0-2. Tonight is the first time they have played a home Finals game with the series tied.
 
 ## The odds and my pick
 
-DraftKings has Atlanta favored by 3.5 points, with the Dream at -115 and the Valkyries +3.5 at -105. The moneyline is Atlanta -175 and Golden State +145. The total is 153.5, with -110 on both sides. Overnight, DraftKings had Atlanta -162 and a 151.5 total, so the line has moved toward Atlanta and the total has gone up 2 points ([The Odds API snapshot via AgentBets](https://agentbets.ai/odds/draftkings/wnba/), 6:00 p.m. PT Oct. 20 and 11:00 a.m. PT Oct. 21).
+DraftKings has Atlanta -3.5 and a total of 153.5, as of 11:00 a.m. PT Oct. 21 ([The Odds API snapshot via AgentBets](https://agentbets.ai/odds/draftkings/wnba/)). The series price is Dream -135, Valkyries +115 ([ESPN betting report](https://www.espn.com/espn/betting/story/_/id/48417601/2026-wnba-championship-odds-playoffs-mvp), Oct. 20, 10:41 a.m. PT). Prices may change before tip-off.
 
-The series price flipped after Game 2. Golden State was -125 to win the title before Game 1 and Atlanta +105, and the Dream are now -135 with the Valkyries +115 ([ESPN betting report](https://www.espn.com/espn/betting/story/_/id/48417601/2026-wnba-championship-odds-playoffs-mvp), Oct. 20). Prices were checked Oct. 21 and may change before tip-off.
-
-My betting lean is the under 153.5. The first two games finished with 132 and 144 points, 21.5 and 9.5 under tonight's number, and neither team has shot better than 34.4 percent from the field in a Finals game. Two games is a small sample, so this is a lean, not a lock.
-
-My pick is Atlanta to win Game 3. Golden State has scored 18 points and taken no free throws in two third quarters against this defense.
+My lean is the under 153.5: Games 1 and 2 finished with 132 and 144 points, and neither team has shot better than 34.4 percent in a Finals game. My pick is Atlanta to win Game 3.
 
 21+. Gamble responsibly. 1-800-GAMBLER.
 
-Full Court Buckets gathers and verifies its own game data. Turnover totals include team turnovers.
+Full Court Buckets gathers and verifies its own game data.
