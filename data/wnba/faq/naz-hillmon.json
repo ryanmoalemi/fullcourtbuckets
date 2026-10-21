@@ -1,104 +1,162 @@
 {
   "slug": "naz-hillmon",
   "player_name": "Naz Hillmon",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Naz Hillmon's stats / points per game?",
-      "answer": "In the 2026 regular season, Naz Hillmon averaged 8.9 points, 4.6 rebounds, and 1.6 assists in 42 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Naz Hillmon's stats?",
+      "answer": "In the 2026 regular season, Naz Hillmon averaged 9.1 points, 4.6 rebounds, and 1.6 assists in 43 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "naz hillmon stats",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "How much does Naz Hillmon make?",
-      "answer": "A precise public salary or net worth figure for Naz Hillmon is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/naz-hillmon/"
       ],
-      "google_keyword": "naz hillmon salary",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "naz hillmon stats",
+          "vol": 3600
+        },
+        {
+          "q": "naz hillmon wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "naz hillmon stats per game",
+          "vol": 10
+        },
+        {
+          "q": "naz hillmon rebounds per game",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Naz Hillmon?",
-      "answer": "Naz Hillmon is listed at 6' 2\".",
+      "answer": "The WNBA lists Naz Hillmon at 6 feet 2 inches and 190 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Naz_Hillmon"
+        "https://www.wnba.com/player/1631044/naz-hillmon/bio"
       ],
-      "google_keyword": "naz hillmon height",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "naz hillmon height",
+          "vol": 110
+        },
+        {
+          "q": "naz hillmon weight",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Naz Hillmon play college basketball?",
+      "answer": "Naz Hillmon played at Michigan, where she was a four-time All-Big Ten First Team selection and the program's first All-American. She is the only Michigan player, man or woman, with 2,000 points and 1,000 rebounds.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/2025-kia-wnba-sixth-poy",
+        "https://mgoblue.com/sports/womens-basketball/roster/naz-hillmon/22275"
+      ],
+      "queries": [
+        {
+          "q": "naz hillmon michigan",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What team does Naz Hillmon play for?",
+      "answer": "Naz Hillmon plays forward for the Atlanta Dream and wears No. 00. She was the 2025 WNBA Sixth Player of the Year, the first Dream player to win the award.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1631044/naz-hillmon/bio",
+        "https://www.wnba.com/news/2025-kia-wnba-sixth-poy"
+      ],
+      "queries": [
+        {
+          "q": "naz hillmon atlanta dream",
+          "vol": 50
+        },
+        {
+          "q": "naz hillmon wnba",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Naz Hillmon?",
-      "answer": "She was born April 5, 2000 in Cleveland. As of late 2026 that puts her at 26 years old.",
+      "answer": "Naz Hillmon was born April 5, 2000.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Naz_Hillmon"
+        "https://www.wnba.com/player/1631044/naz-hillmon/bio"
       ],
-      "google_keyword": "naz hillmon age",
-      "approx_monthly_volume": 50,
-      "birthdate": "2000-04-05"
+      "queries": [
+        {
+          "q": "naz hillmon age",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What is Naz Hillmon's contract?",
-      "answer": "Contract length and guarantees for Naz Hillmon are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Did Naz Hillmon score 50 points in a game?",
+      "answer": "Yes. Naz Hillmon scored 50 points for Michigan at Ohio State in January 2021, the most by any man or woman in Michigan basketball history.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://mgoblue.com/news/2021/1/21/womens-basketball-hillmon-breaks-michigan-scoring-record-in-tough-road-loss-at-osu",
+        "https://mgoblue.com/sports/womens-basketball/roster/naz-hillmon/22275"
       ],
-      "google_keyword": "naz hillmon contract",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "naz hillmon 50 point game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Naz Hillmon married?",
-      "answer": "There is no widely reported public record of Naz Hillmon being married as of late 2026.",
+      "question": "Where did Naz Hillmon go to high school?",
+      "answer": "Naz Hillmon is from Cleveland, Ohio, and played at Gilmour Academy.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Naz_Hillmon"
+        "https://mgoblue.com/sports/womens-basketball/roster/naz-hillmon/22275"
       ],
-      "google_keyword": "naz hillmon husband",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "naz hillmon gilmour",
+          "vol": null
+        },
+        {
+          "q": "naz hillmon high school",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "When was Naz Hillmon drafted?",
+      "answer": "The Atlanta Dream selected Naz Hillmon 15th overall in the second round of the 2022 WNBA Draft.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1631044/naz-hillmon/bio",
+        "https://www.wnba.com/news/2025-kia-wnba-sixth-poy"
+      ],
+      "queries": [
+        {
+          "q": "naz hillmon wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What position does Naz Hillmon play?",
-      "answer": "Naz Hillmon is listed as a F for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "naz hillmon position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Naz Hillmon injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "naz hillmon injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Does Naz Hillmon have kids?",
-      "answer": "There is no widely reported public information that Naz Hillmon has children as of late 2026.",
-      "answer_kind": "researched",
+      "answer": "The WNBA lists Naz Hillmon as a forward.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Naz_Hillmon"
+        "https://www.wnba.com/player/1631044/naz-hillmon/bio"
       ],
-      "google_keyword": "naz hillmon daughter",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Who are Naz Hillmon's parents?",
-      "answer": "Public profiles share limited verified detail about Naz Hillmon's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Naz_Hillmon"
-      ],
-      "google_keyword": "naz hillmon parents",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "naz hillmon position",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

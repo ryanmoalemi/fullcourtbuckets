@@ -1,85 +1,176 @@
 {
   "slug": "renee-montgomery",
   "player_name": "Renee Montgomery",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Renee Montgomery's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), Renee Montgomery averaged 9.5 points,",
+      "question": "Is Renee Montgomery an owner of the Atlanta Dream?",
+      "answer": "Yes. Renee Montgomery is a partner and vice president of the Atlanta Dream. She joined the ownership group with Larry Gottesdiener and Suzanne Abair in 2021, becoming the first former WNBA player to hold both an ownership stake and an executive role with a team.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://dream.wnba.com/renee-montgomery",
+        "https://www.nba.com/news/atlanta-dreams-sale-unanimously-approved-by-wnba-nba-bogs"
+      ],
+      "queries": [
+        {
+          "q": "atlanta dream owner renee montgomery",
+          "vol": 30
+        },
+        {
+          "q": "renee montgomery owner",
+          "vol": 10
+        },
+        {
+          "q": "atlanta dream renee montgomery",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Renee Montgomery play college basketball?",
+      "answer": "Renee Montgomery played at UConn and helped the Huskies win the 2009 NCAA national championship. She was a two-time All-American.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://dream.wnba.com/renee-montgomery",
+        "https://www.wnba.com/player/201904/renee-montgomery/bio"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery uconn",
+          "vol": 110
+        },
+        {
+          "q": "renee montgomery uconn years",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What is 'A Radical Act: Renee Montgomery'?",
+      "answer": "'A Radical Act: Renee Montgomery' is a 2024 documentary about her path from West Virginia and UConn to co-owner and vice president of the Atlanta Dream. Sandrine Orabona directed it, and LeBron James and Maverick Carter were executive producers.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://storyform.tv/projects/a-radical-act/",
+        "https://tv.apple.com/us/movie/a-radical-act-renee-montgomery/umc.cmc.7f4ra3v38ygb4an3ff8xig18b"
+      ],
+      "queries": [
+        {
+          "q": "a radical act: renee montgomery",
+          "vol": 90
+        },
+        {
+          "q": "a radical act renee montgomery trailer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Renee Montgomery?",
+      "answer": "The WNBA lists Renee Montgomery at 5 feet 7 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201904/renee-montgomery/bio"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery height",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "How old is Renee Montgomery?",
+      "answer": "Renee Montgomery was born December 2, 1986.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201904/renee-montgomery/bio"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery age",
+          "vol": 70
+        },
+        {
+          "q": "how old is renee montgomery",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What are Renee Montgomery's stats?",
+      "answer": "In the 2019 regular season, Renee Montgomery averaged 9.5 points, 2.2 rebounds, and 2.6 assists in 34 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "renee montgomery stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Renee Montgomery dating?",
-      "answer": "As of late 2026, Renee Montgomery has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "renee montgomery partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Renee Montgomery make?",
-      "answer": "A precise public salary or net worth figure for Renee Montgomery is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/renee-montgomery/"
       ],
-      "google_keyword": "renee montgomery net worth",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "renee montgomery stats",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What is Renee Montgomery's contract?",
-      "answer": "Contract length and guarantees for Renee Montgomery are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
+      "question": "Which teams did Renee Montgomery play for?",
+      "answer": "Renee Montgomery has played for the Minnesota Lynx, Connecticut Sun, Seattle Storm and Atlanta Dream.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/renee-montgomery/"
       ],
-      "google_keyword": "renee montgomery contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Renee Montgomery married?",
-      "answer": "There is no widely reported public record of Renee Montgomery being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "renee montgomery wife",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "renee montgomery dates joined",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "Who is Renee Montgomery?",
-      "answer": "Renee Montgomery is a professional basketball player for the Minnesota Lynx.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "who is the father of renee montgomery son",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What position does Renee Montgomery play?",
-      "answer": "Renee Montgomery is listed as a Guard for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "renee montgomery position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Renee Montgomery have kids?",
-      "answer": "There is no widely reported public information that Renee Montgomery has children as of late 2026.",
+      "answer": "Renee Montgomery is a former WNBA guard who won championships with the Minnesota Lynx in 2015 and 2017. She was a 2011 All-Star and the 2012 Sixth Woman of the Year, and she is now a partner and vice president of the Atlanta Dream.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "renee montgomery son",
-      "approx_monthly_volume": 590
+      "sources": [
+        "https://dream.wnba.com/renee-montgomery",
+        "https://www.wnba.com/player/201904/renee-montgomery/bio"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery bio",
+          "vol": 10
+        },
+        {
+          "q": "renee montgomery wnba",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "Who are Renee Montgomery's parents?",
-      "answer": "Public profiles share limited verified detail about Renee Montgomery's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Her WNBA bio lists her parents as Ron and Bertlela Montgomery.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201904/renee-montgomery/bio"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery parents",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What is the Renee Montgomery Foundation?",
+      "answer": "Renee Montgomery launched the Renee Montgomery Foundation in 2019 to promote equality in women's sports and advocate for social justice.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "renee montgomery parents",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://dream.wnba.com/renee-montgomery"
+      ],
+      "queries": [
+        {
+          "q": "renee montgomery foundation",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

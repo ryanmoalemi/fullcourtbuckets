@@ -1,114 +1,175 @@
 {
   "slug": "li-yueru",
   "player_name": "Li Yueru",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 21, 2026",
+  "verified_at": "2026-10-21",
   "items": [
     {
-      "question": "What are Li Yueru's stats / points per game?",
-      "answer": "In the 2026 regular season, Li Yueru averaged 3.4 points, 2.8 rebounds, and 0.4 assists in 32 games for Dallas Wings. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "li yueru stats",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Does Li Yueru have a signature shoe?",
-      "answer": "Public search interest ties Li Yueru to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
-      ],
-      "google_keyword": "li yueru shoe size",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Who is Li Yueru dating?",
-      "answer": "As of late 2026, Li Yueru has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
-      ],
-      "google_keyword": "li yueru partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Li Yueru make?",
-      "answer": "A precise public salary or net worth figure for Li Yueru is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "li yueru net worth",
-      "approx_monthly_volume": 30
-    },
-    {
       "question": "How tall is Li Yueru?",
-      "answer": "Li Yueru is listed at 6' 7\".",
+      "answer": "The WNBA lists Li Yueru at 6 feet 7 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
       ],
-      "google_keyword": "li yueru height",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "li yueru height",
+          "vol": 720
+        },
+        {
+          "q": "li yueru height and weight",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "How old is Li Yueru?",
-      "answer": "She was born March 28, 1999 in Shanxi. As of late 2026 that puts her at 27 years old.",
-      "answer_kind": "bio",
+      "question": "What are Li Yueru's stats?",
+      "answer": "In the 2026 regular season, Li Yueru averaged 3.3 points, 2.8 rebounds, and 0.5 assists in 33 games for the Dallas Wings.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
+        "https://fullcourtbuckets.com/wnba/li-yueru/"
       ],
-      "google_keyword": "li yueru age",
-      "approx_monthly_volume": 90,
-      "birthdate": "1999-03-28"
-    },
-    {
-      "question": "What is Li Yueru's contract?",
-      "answer": "Contract length and guarantees for Li Yueru are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "li yueru contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Li Yueru married?",
-      "answer": "There is no widely reported public record of Li Yueru being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
-      ],
-      "google_keyword": "li yueru husband",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "li yueru stats",
+          "vol": 210
+        },
+        {
+          "q": "li yueru wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "li yueru stats per game",
+          "vol": 0
+        },
+        {
+          "q": "li yueru rebounds",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Li Yueru play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 28. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "li yueru team",
-      "approx_monthly_volume": 10
+      "answer": "Li Yueru plays center for the Dallas Wings and wears No. 28.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "dallas wings li yueru",
+          "vol": 90
+        },
+        {
+          "q": "li yueru team",
+          "vol": 10
+        },
+        {
+          "q": "li yueru wnba",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Is Li Yueru injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "li yueru injury",
-      "approx_monthly_volume": 40
+      "question": "How old is Li Yueru?",
+      "answer": "Li Yueru was born March 28, 1999.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "li yueru age",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Who are Li Yueru's parents?",
-      "answer": "Public profiles share limited verified detail about Li Yueru's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "What is Li Yueru's contract?",
+      "answer": "Li Yueru signed a reserved qualifying offer with the Dallas Wings on April 8, 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "li yueru contract",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Who has Li Yueru played for?",
+      "answer": "Li Yueru has played for the Chicago Sky (2022), Los Angeles Sparks (2024), and Seattle Storm (2025). Seattle traded her to the Dallas Wings in June 2025, and she has played for Dallas since.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Li_Yueru"
+        "https://fullcourtbuckets.com/wnba/li-yueru/",
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
       ],
-      "google_keyword": "li yueru parents",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "li yueru chicago sky",
+          "vol": 10
+        },
+        {
+          "q": "li yueru storm",
+          "vol": 10
+        },
+        {
+          "q": "li yueru seattle",
+          "vol": 10
+        },
+        {
+          "q": "los angeles sparks li yueru",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Li Yueru play in Unrivaled?",
+      "answer": "Yes. Li Yueru played the 2026 Unrivaled season with Mist BC and won the championship, her WNBA bio says.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "li yueru unrivaled",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "When was Li Yueru drafted?",
+      "answer": "The Atlanta Dream selected Li Yueru 35th overall in the third round of the 2019 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "li yueru draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Li Yueru played in the Olympics?",
+      "answer": "Yes. Li Yueru led China with 17.7 points and 11.0 rebounds per game at the 2024 Paris Olympics.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629574/li-yueru/bio"
+      ],
+      "queries": [
+        {
+          "q": "li yueru olympics",
+          "vol": 10
+        },
+        {
+          "q": "li yueru stats olympics",
+          "vol": 0
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
