@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>WNBA Finals Game 3 preview: Golden State hasn't taken a third-quarter free throw this series</title>
+      <link>https://fullcourtbuckets.com/news/finals-game-3-preview-valkyries-dream/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/finals-game-3-preview-valkyries-dream/</guid>
+      <pubDate>Wed, 21 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>Golden State has scored 9 points and taken no free throws in the third quarter of both Finals games. Game 3 is tonight at 5 p.m. PT at State Farm Arena, series tied 1-1.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-valkyries-dream/og-1200.jpg" length="68655" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-valkyries-dream/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Steph Curry, Karl Malone and Donovan McNabb top our list of 49 WNBA players' famous relatives</title>
       <link>https://fullcourtbuckets.com/news/wnba-players-famous-relatives/</link>
@@ -22,17 +33,6 @@
       <description>Steph Curry, Karl Malone, Donovan McNabb and Angel Reese's NBA brother lead 49 famous relatives of 38 WNBA players, each checked against official records. Updated October 20, 2026.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/wnba-players-famous-relatives/og-1200.jpg" length="120270" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/wnba-players-famous-relatives/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>WNBA Finals Game 3 preview: Atlanta has won the third quarters 38-18</title>
-      <link>https://fullcourtbuckets.com/news/finals-game-3-preview-dream-valkyries/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/finals-game-3-preview-dream-valkyries/</guid>
-      <pubDate>Mon, 19 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>news</category>
-      <description>Golden State has scored 9 points in the third quarter of both Finals games. Game 3 is Wednesday at 5 p.m. PT at State Farm Arena in Atlanta, with the series tied 1-1.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-dream-valkyries/og-1200.jpg" length="90929" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-dream-valkyries/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
       <title>Angel Reese scores 30 as Dream beat Valkyries 79-65 to even the WNBA Finals</title>
@@ -330,17 +330,6 @@
       <description>A'ja Wilson scored 36 points with 10 rebounds as the Aces beat the Fever 94-83 to win the first-round series 2-1.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/fever-aces-game-3-recap/og-1200.jpg" length="110319" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/fever-aces-game-3-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>WNBA Expansion Teams 2026: Portland Fire and Toronto Tempo</title>
-      <link>https://fullcourtbuckets.com/news/wnba-expansion-teams/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/wnba-expansion-teams/</guid>
-      <pubDate>Wed, 30 Sep 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA</category>
-      <description>The WNBA has 15 teams in 2026. Here's how the Portland Fire and Toronto Tempo were built, how their first seasons went, and which new WNBA teams come next.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/wnba-expansion-teams/og-1200.jpg" length="177131" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/wnba-expansion-teams/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
