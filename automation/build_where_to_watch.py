@@ -228,12 +228,14 @@ def directory(rows: list[dict]) -> str:
 def stats(rows: list[dict]) -> dict:
     teams = sorted({r['team_market'] for r in rows if r['team_market'] != NO_TEAM})
     confirmed = sum(1 for r in rows if r.get('verification_type') == 'staff_reply')
-    return {'venues': len(rows), 'teams': teams, 'confirmed': confirmed, 'sourced': len(rows) - confirmed}
+    cities = {(r['city'], r['state']) for r in rows}
+    states = {r['state'] for r in rows}
+    return {'venues': len(rows), 'teams': teams, 'cities': len(cities), 'states': len(states), 'confirmed': confirmed, 'sourced': len(rows) - confirmed}
 
 
 def description(s: dict) -> str:
-    return (f'{s["venues"]} bars and restaurants in {len(s["teams"])} WNBA team markets that show WNBA games, '
-            'from official team watch-party lists and venue confirmations. Search by city or team.')
+    return (f'{s["venues"]} bars and restaurants in {s["cities"]} U.S. and Canadian cities that show WNBA games, '
+            'from official team watch-party lists, venue pages and venue confirmations. Search by city.')
 
 
 FAQ = [
@@ -286,8 +288,8 @@ def write_og_image(s: dict) -> None:
     d.text((70, 70), 'WNBA / DATA & RESEARCH', font=bold(26), fill='#c2007a')
     d.text((70, 150), 'Where to watch', font=bold(92), fill='#2a1458')
     d.text((70, 258), 'WNBA games', font=bold(92), fill='#2a1458')
-    d.text((70, 390), f'{s["venues"]} bars and restaurants in {len(s["teams"])} team markets', font=med(40), fill='#2b2925')
-    d.text((70, 448), 'Search by city or team. Check before you go.', font=med(32), fill='#5d5952')
+    d.text((70, 390), f'{s["venues"]} bars and restaurants in {s["cities"]} cities', font=med(40), fill='#2b2925')
+    d.text((70, 448), 'Search by city. Check before you go.', font=med(32), fill='#5d5952')
     d.text((70, 540), 'fullcourtbuckets.com/wnba/where-to-watch', font=bold(28), fill='#9a5200')
     PAGE_DIR.mkdir(parents=True, exist_ok=True)
     img.save(PAGE_DIR / OG_NAME, 'JPEG', quality=88, optimize=True, progressive=True)
@@ -342,7 +344,7 @@ def render(rows: list[dict]) -> str:
         f'<div class="byline-row">{links.BYLINE_HTML}'
         f'<time class="article-date" datetime="{DATA_THROUGH}">{esc(human(DATA_THROUGH))}</time></div>'
         '</div><div class="ww-top">'
-        f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {len(s["teams"])} team markets.</p>'
+        f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {s["cities"]} cities across the U.S. and Canada, in WNBA team markets and beyond.</p>'
         f'<div class="ww-box"><span><strong>Data through:</strong> {human(DATA_THROUGH)} (PT)</span><span><strong>{s["venues"]}</strong> venues</span>'
         f'<span><strong>{s["confirmed"]}</strong> confirmed with staff</span><span><strong>{s["sourced"]}</strong> from team or venue pages</span></div>'
         f'<div class="ww-notice ww-notice-top" role="note"><strong>Check before you go:</strong> {NOTICE}</div>'
@@ -426,7 +428,7 @@ def main() -> None:
     write_if_changed(PAGE_DIR / CSV_NAME, DATA.read_text(encoding='utf-8'))
     update_sitemaps()
     s = stats(rows)
-    print(f'{s["venues"]} venues, {len(s["teams"])} team markets, {s["confirmed"]} confirmed with staff')
+    print(f'{s["venues"]} venues, {s["cities"]} cities, {s["states"]} states, {len(s["teams"])} team markets, {s["confirmed"]} confirmed with staff')
 
 
 if __name__ == '__main__':
