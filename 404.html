@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+(function(){
+  var p = location.pathname, q = location.search, h = location.hash;
+  var raw = p;
+  try { raw = decodeURIComponent(p); } catch (e) {}
+  // Mangled links (e.g. Gmail "&source=gmail&ust=...") put '&' params in the path.
+  var i = raw.indexOf('&');
+  if (i > 0) { location.replace(raw.slice(0, i) + q + h); return; }
+  // Social URLs accidentally glued onto our domain (/https://www.tiktok.com/@...).
+  var m = raw.match(/^\/+(https?:)?\/*(www\.)?tiktok\.com\/@fullcourtbuckets/i);
+  if (m) { location.replace('https://www.tiktok.com/@fullcourtbuckets'); }
+})();
+</script>
 <!-- Google tag (gtag.js) -->
 <script>
 (function(){
