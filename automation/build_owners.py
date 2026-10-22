@@ -905,7 +905,12 @@ def render(data: dict, s: dict) -> str:
         '</div></main>'
     )
     bottom = bottom.replace('</body>', f'<script id="{SCRIPT_ID}">{PAGE_JS}</script>\n</body>', 1)
-    return head + top + main + bottom
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import site_nav
+    # Same shared head assets (feed link, Pinterest tag, fonts, icons) that
+    # build_players' site_nav.install_tree adds, so the page is stable whatever
+    # state the shell page was in when this ran.
+    return site_nav.ensure_assets(head + top + main + bottom)
 
 
 def write_if_changed(path: Path, content) -> None:

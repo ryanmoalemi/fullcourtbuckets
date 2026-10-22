@@ -1557,6 +1557,9 @@ def ensure_box_score(html_text: str, article: dict) -> str:
     snippet = box_score_html(game_id) if game_id.isdigit() else ''
     if not snippet or snippet in html_text:
         return html_text
+    if '<p class="how-made">' in html_text:
+        # A game page published after the story: its link still belongs above the disclosure.
+        return html_text.replace('<p class="how-made">', snippet + '<p class="how-made">', 1)
     if '<p class="brand-sign">' in html_text:
         return html_text.replace('<p class="brand-sign">', snippet + '<p class="brand-sign">', 1)
     if '</article>' in html_text:
@@ -2085,6 +2088,24 @@ def place_quick_cite(html: str) -> str:
     return _splice_block(html, h1 + len('</h1>'), block)
 
 
+_DATA_TABLE_OPEN_RE = re.compile(r'<([a-z][a-z0-9]*)\b[^>]*\bdata-fcb-data-table\b[^>]*>', re.I)
+
+
+def _data_table_end(fragment: str) -> int | None:
+    """Offset just past the element marked data-fcb-data-table, or None."""
+    opened = _DATA_TABLE_OPEN_RE.search(fragment)
+    if not opened:
+        return None
+    tag = opened.group(1).lower()
+    token = re.compile(rf'<(/?){tag}\b[^>]*>', re.I)
+    depth = 0
+    for match in token.finditer(fragment, opened.start()):
+        depth += -1 if match.group(1) else 1
+        if depth == 0:
+            return match.end()
+    return None
+
+
 def order_news_lead(html: str, article: dict | None = None) -> str:
     """Headline, byline and date, lead photo and credit, quick-cite, then the hook.
 
@@ -2140,7 +2161,12 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     note_html = note.group(0) if note else ''
     if note:
         rest = rest[note.end():]
-    article = article[:h1 + len('</h1>')] + row + note_html + figure + rest
+    table_end = _data_table_end(rest)
+    if table_end is not None:
+        # Data pages: the table comes straight after the byline; the lead photo follows it.
+        article = article[:h1 + len('</h1>')] + row + note_html + rest[:table_end] + figure + rest[table_end:]
+    else:
+        article = article[:h1 + len('</h1>')] + row + note_html + figure + rest
     html = html[:start] + article + html[end:]
     html = apply_body_photos(html)
     return place_quick_cite(install_lead_css(html))
@@ -2629,6 +2655,11 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     if slug in FROZEN_ARTICLE_SLUGS:
         return html_text
     html_text = rewrite_legacy_article_urls(html_text, articles if articles is not None else [article])
+    import news_heroes
+    # Crop first: the og/twitter meta and schema below read the paths this writes.
+    social_before = str(article.get('imageOg') or article.get('imageHero') or '').strip()
+    news_heroes.ensure_article_hero(root, article)
+    social_after = str(article.get('imageOg') or article.get('imageHero') or '').strip()
     absolute = article_absolute(article)
     html_text = _upsert_meta(html_text, absolute, article.get('description'))
     html_text = ensure_author_meta(html_text)
@@ -2638,11 +2669,12 @@ def prepare_article_page(root: Path, article: dict, articles: list | None = None
     html_text = ensure_how_made(html_text, article)
     html_text = ensure_byline(html_text)
     html_text = order_article_sections(html_text)
-    import news_heroes
-    news_heroes.ensure_article_hero(root, article)
     html_text = order_news_lead(html_text, article)
     html_text = ensure_article_end(html_text, root, article, articles if articles is not None else [article])
     html_text = glue_headline_scores(html_text)
+    if social_after and social_after != social_before:
+        # A re-crop renamed the social card; og:image, twitter:image and schema follow it.
+        html_text = news_heroes._set_social_image(html_text, BASE + social_after)
     return html_text
 
 
@@ -2843,6 +2875,7 @@ h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 def assemble_news_pages(root: Path) -> dict[str, str]:
     """Article HTML at news/<slug>/, redirect stubs at the old root paths, and the /news/ hub."""
     articles = ensure_article_urls(root)
+    before = json.dumps(articles, ensure_ascii=False, sort_keys=True)
     pages = {}
     live = set()
     for article in articles:
@@ -2850,6 +2883,12 @@ def assemble_news_pages(root: Path) -> dict[str, str]:
         live.add(slug)
         pages[f'news/{slug}/index.html'] = prepare_article_page(root, article, articles)
         pages[f'{slug}/index.html'] = redirect_stub(article)
+    path = root / 'articles.json'
+    if path.is_file() and json.dumps(articles, ensure_ascii=False, sort_keys=True) != before:
+        # prepare_article_page re-crops heroes and social cards and can rename them
+        # (hero-16x9 -> hero-1200, og.jpg -> og-1200.jpg). Persist the new paths so
+        # articles.json, the page markup and the files on disk agree.
+        path.write_text(json.dumps(articles, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     for slug, href in RETIRED_NEWS.items():
         if slug in live:
             continue
