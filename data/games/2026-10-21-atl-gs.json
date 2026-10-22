@@ -5,15 +5,15 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T02:08:57+00:00",
+ "checked_at": "2026-10-22T02:13:30+00:00",
  "period": 4,
- "clock": "4:33",
+ "clock": "3:52",
  "last_play_period": 4,
- "last_play_clock": "4:33",
+ "last_play_clock": "3:52",
  "away": {
   "abbreviation": "ATL",
-  "score": 86,
-  "feed_score": 86
+  "score": 87,
+  "feed_score": 87
  },
  "home": {
   "abbreviation": "GS",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 15,
+   "away": 16,
    "home": 8
   }
  ],
@@ -4391,7 +4391,7 @@
   {
    "order": 363,
    "period": 4,
-   "clock": "4:58",
+   "clock": "5:00",
    "type": "Defensive Rebound",
    "text": "DeWanna Bonner defensive rebound",
    "away_score": 82,
@@ -4427,7 +4427,7 @@
   {
    "order": 366,
    "period": 4,
-   "clock": "4:36",
+   "clock": "4:38",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 84,
@@ -4459,6 +4459,138 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 369,
+   "period": 4,
+   "clock": "4:27",
+   "type": "Driving Finger Roll Layup",
+   "text": "Veronica Burton misses two point shot",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 370,
+   "period": 4,
+   "clock": "4:22",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 371,
+   "period": 4,
+   "clock": "4:22",
+   "type": "Tip Shot",
+   "text": "Kiah Stokes misses tip shot",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 372,
+   "period": 4,
+   "clock": "4:21",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 373,
+   "period": 4,
+   "clock": "4:07",
+   "type": "Shooting Foul",
+   "text": "Tiffany Hayes shooting foul",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 374,
+   "period": 4,
+   "clock": "4:07",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase misses free throw 1 of 2",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 375,
+   "period": 4,
+   "clock": "4:07",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 376,
+   "period": 4,
+   "clock": "4:07",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Allisha Gray",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 377,
+   "period": 4,
+   "clock": "4:07",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase makes free throw 2 of 2",
+   "away_score": 87,
+   "home_score": 65,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 378,
+   "period": 4,
+   "clock": "3:55",
+   "type": "Driving Floating Jump Shot",
+   "text": "Gabby Williams misses driving floating jump shot",
+   "away_score": 87,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 379,
+   "period": 4,
+   "clock": "3:52",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 87,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
