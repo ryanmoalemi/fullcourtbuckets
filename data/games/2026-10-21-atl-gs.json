@@ -5,20 +5,20 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T01:05:26+00:00",
+ "checked_at": "2026-10-22T01:09:58+00:00",
  "period": 2,
- "clock": "59.0",
+ "clock": "0.0",
  "last_play_period": 2,
- "last_play_clock": "59.0",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 43,
-  "feed_score": 43
+  "score": 46,
+  "feed_score": 46
  },
  "home": {
   "abbreviation": "GS",
-  "score": 37,
-  "feed_score": 37
+  "score": 40,
+  "feed_score": 40
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 20,
-   "home": 22
+   "away": 23,
+   "home": 25
   }
  ],
  "players": [],
@@ -2437,7 +2437,7 @@
   {
    "order": 201,
    "period": 2,
-   "clock": "59.0",
+   "clock": "1:01",
    "type": "Jump Shot",
    "text": "Jordin Canada misses 34-foot three point jumper",
    "away_score": 43,
@@ -2449,7 +2449,7 @@
   {
    "order": 202,
    "period": 2,
-   "clock": "59.0",
+   "clock": "1:00",
    "type": "Offensive Rebound",
    "text": "Dream offensive team rebound",
    "away_score": 43,
@@ -2461,14 +2461,110 @@
   {
    "order": 203,
    "period": 2,
-   "clock": "59.0",
-   "type": "No Turnover",
-   "text": "turnover",
+   "clock": "1:00",
+   "type": "Shot Clock Turnover",
+   "text": "shot clock turnover",
    "away_score": 43,
    "home_score": 37,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 204,
+   "period": 2,
+   "clock": "1:00",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Janelle Salaun",
+   "away_score": 43,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 205,
+   "period": 2,
+   "clock": "47.9",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 25-foot three point pullup jump shot",
+   "away_score": 43,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 206,
+   "period": 2,
+   "clock": "46.3",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 43,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 207,
+   "period": 2,
+   "clock": "29.6",
+   "type": "Jump Shot",
+   "text": "Naz Hillmon makes 25-foot three point jumper (Jordin Canada assists)",
+   "away_score": 46,
+   "home_score": 37,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 208,
+   "period": 2,
+   "clock": "16.8",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini makes 22-foot three point jumper (Veronica Burton assists)",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 209,
+   "period": 2,
+   "clock": "5.6",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Kiah Stokes steals)",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 210,
+   "period": 2,
+   "clock": "1.3",
+   "type": "Out of Bounds - Lost Ball Turnover",
+   "text": "Gabby Williams out of bounds lost ball turnover",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 211,
+   "period": 2,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 2nd Quarter",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
