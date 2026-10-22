@@ -345,6 +345,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-22: edges checked on dark and light backgrounds; identity confirmed from Commons description (Atlanta Dream #15, July 17, 2024)"
+    },
+    "rhyne-howard": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rhyne_Howard.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "courtney-vandersloot": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Courtney_Vandersloot_(53099258855)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aari-mcdonald": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aari_McDonald_(52921268261)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aaliyah-edwards": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aaliyah_Edwards_Mystics_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "azura-stevens": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Azura_Stevens_2023_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "betnijah-laney-hamilton": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Betnijah_Laney_2023.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "alysha-clark": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alysha_Clark_2023.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aneesah-morrow": {
+      "author": "CCS Pictures",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aneesah_Morrow_2025.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "antonia-delaere": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Antonia_Delaere_6_Belgium_20250629_(5).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "ashlon-jackson": {
+      "author": "Hameltion",
+      "file_url": "https://commons.wikimedia.org/wiki/File:UNC_vs_Duke_(Jan_2025)_32_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "awa-fam": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Awa_Fam_Thiam_11_Spain_20250629_(8).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "awak-kuier": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Awak_Kuier_34_Galatasaray_WB_TKBSL_20260201_(3).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "ariel-atkins": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ariel_Atkins_3_Fenerbah%C3%A7e_WB_EuroLeague_Women_20250108_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "diamond-miller": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Diamond_Miller_(53063063088).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "ezi-magbegor": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ezi_Magbegor_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "dominique-malonga": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Dominique_Malonga_14_France_20260905_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aminata-gueye": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aminata_Gueye_31_France_20260905_(4).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "brionna-jones": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Brionna_Jones_2024a_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "carla-leite": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Carla_Leite_0_France_20260904_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "cecilia-zandalasini": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Cecilia_Zandalasini_2024.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
