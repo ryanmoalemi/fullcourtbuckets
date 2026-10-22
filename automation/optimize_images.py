@@ -23,7 +23,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 RASTER = {'.jpg', '.jpeg', '.png', '.webp', '.gif', '.avif'}
-SKIP_DIRS = {'portrait-masters', 'portrait-handoff', '.git'}
+SKIP_DIRS = {'portrait-masters', 'portrait-handoff', '.git', 'content'}
 UNTOUCHED_FILES = {
     'robots.txt', 'sitemap.xml', 'pages-sitemap.xml', 'player-sitemap.xml',
 }
@@ -215,6 +215,10 @@ def optimize_file(root: Path, path: Path, log: list[str], moves: dict[str, Path]
     # News heroes are already a 16:9 crop at display size. Do not shrink them.
     if path.name in ('hero-1200.webp', 'hero-2x.webp', 'hero-16x9.webp'):
         return False
+    # Social cards are fetched by crawlers that want a JPEG at a fixed size;
+    # article metadata and tests point at og-1200.jpg / og.jpg. Leave them be.
+    if path.stem in ('og', 'og-1200'):
+        return False
     rel = path.relative_to(root).as_posix()
     src = '/' + rel
     try:
@@ -371,30 +375,51 @@ def _src_file(root: Path, src: str) -> Path | None:
 
 def _rebuild_img(tag: str, *, width: int | None, height: int | None, src: str | None,
                  lcp: bool) -> str:
+    """Fill in what a tag is missing without reshuffling what a generator wrote.
+
+    Generators (play-by-play, owners, Reese cards, news listings) own their
+    markup and their tests compare committed pages byte for byte, so existing
+    attributes keep their order and an explicit loading/fetchpriority choice is
+    respected. Only a lazy hero is promoted, and missing hints are appended.
+    """
+    original = _attr_map(tag)
+    loading = _unquote(original.get('loading')).lower() if 'loading' in original else None
+    has_priority = 'fetchpriority' in original
+    promote = lcp and not has_priority and loading in (None, 'lazy')
+    same_src = src is None or src == _unquote(original.get('src'))
+    hinted = 'loading' in original or has_priority
+    if same_src and hinted and not promote and 'width' in original and 'height' in original \
+            and (not (width and height) or (_unquote(original.get('width')) == str(width)
+                                           and _unquote(original.get('height')) == str(height))):
+        # Already sized by its generator: byte-identical output keeps generated pages current.
+        return tag
     attrs = []
     seen = set()
     for name, raw in _attrs(tag):
         key = name.lower()
-        if key in ('width', 'height', 'loading', 'decoding', 'fetchpriority'):
-            continue
         if key == 'src' and src is not None:
             attrs.append((name, _quote(src)))
-            seen.add('src')
+        elif key == 'width' and width and height:
+            attrs.append((name, f'"{width}"'))
+        elif key == 'height' and width and height:
+            attrs.append((name, f'"{height}"'))
+        elif key == 'loading' and promote:
             continue
-        if raw is None:
-            attrs.append((name, None))
         else:
             attrs.append((name, raw))
         seen.add(key)
     if 'src' not in seen and src is not None:
         attrs.insert(0, ('src', _quote(src)))
     if width and height:
-        attrs.append(('width', f'"{width}"'))
-        attrs.append(('height', f'"{height}"'))
-    attrs.append(('decoding', '"async"'))
-    if lcp:
+        if 'width' not in seen:
+            attrs.append(('width', f'"{width}"'))
+        if 'height' not in seen:
+            attrs.append(('height', f'"{height}"'))
+    if 'decoding' not in seen:
+        attrs.append(('decoding', '"async"'))
+    if promote:
         attrs.append(('fetchpriority', '"high"'))
-    else:
+    elif loading is None and not has_priority:
         attrs.append(('loading', '"lazy"'))
     parts = []
     for name, raw in attrs:
@@ -563,6 +588,9 @@ def repair_image_urls(root: Path) -> int:
             continue
         if path.name in UNTOUCHED_FILES:
             continue
+        if 'play-by-play' in path.parts or path.parts[-3:-1] == ('wnba', 'owners') or path.relative_to(root).as_posix() == 'wnba/owners/index.html':
+            # build_pbp.py owns these pages byte for byte (test_build_pbp); it copies an article shell.
+            continue
         original = path.read_text(encoding='utf-8')
 
         def replace(match: re.Match) -> str:
@@ -608,6 +636,9 @@ def retarget_documents(root: Path, moves: dict[str, Path]) -> int:
         if any(part in SKIP_DIRS or part == '.git' for part in path.parts):
             continue
         if path.name in UNTOUCHED_FILES:
+            continue
+        if 'play-by-play' in path.parts or path.parts[-3:-1] == ('wnba', 'owners') or path.relative_to(root).as_posix() == 'wnba/owners/index.html':
+            # build_pbp.py owns these pages byte for byte (test_build_pbp); it copies an article shell.
             continue
         original = path.read_text(encoding='utf-8')
         updated = original
@@ -707,6 +738,9 @@ def optimize_tree(root: Path | None = None) -> dict:
             continue
         if path.name in UNTOUCHED_FILES:
             continue
+        if 'play-by-play' in path.parts or path.parts[-3:-1] == ('wnba', 'owners') or path.relative_to(root).as_posix() == 'wnba/owners/index.html':
+            # build_pbp.py owns these pages byte for byte (test_build_pbp); it copies an article shell.
+            continue
         original = path.read_text(encoding='utf-8')
         updated, missing = rewrite_html(root, original, moves, approved)
         updated = lock_logo_slot(updated)
@@ -719,6 +753,7 @@ def optimize_tree(root: Path | None = None) -> dict:
             html_changed += 1
     stamp_articles(root)
     write_missing_alt(root, missing_pages)
+    refresh_search_index(root)
     log_path = root / 'docs' / 'image-optimize.log'
     log_path.parent.mkdir(parents=True, exist_ok=True)
     summary = [
@@ -730,6 +765,18 @@ def optimize_tree(root: Path | None = None) -> dict:
     ]
     log_path.write_text('\n'.join(summary) + '\n', encoding='utf-8')
     return {'changed': changed, 'html': html_changed, 'log': log, 'missing': missing_pages}
+
+
+def refresh_search_index(root: Path) -> None:
+    """Search thumbnails are derived from page images; rebuild the index after they change."""
+    index = root / 'search-index.json'
+    if not index.is_file() or root != ROOT:
+        return
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import site_nav
+    document = site_nav.search_index_document(root)
+    if index.read_text(encoding='utf-8') != document:
+        index.write_text(document, encoding='utf-8')
 
 
 def main() -> int:

@@ -3124,6 +3124,13 @@ def build(root: Path):
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     files.update(site_nav.install_tree(root, menu, set(files)))
+    owners_page = root / 'wnba' / 'owners' / 'index.html'
+    if owners_page.is_file():
+        # The owners table is generated from its dataset (test_owners_page compares
+        # byte for byte); re-render it instead of patching the committed copy.
+        import build_owners
+        owners_data = build_owners.load()
+        files['wnba/owners/index.html'] = build_owners.render(owners_data, build_owners.stats(owners_data))
     report={'status':'ok','profile_count':len(slugs),'team_page_count':len(linking['by_id']),'data_checked_at':index.get('checked_at'), 'source':STATS_SOURCE,'coverage_start':2008,'complete_career_totals':False,'news_connected':False,'transactions_connected':False,'directory':'/wnba/'}
     files['data/wnba/site-build.json']=json.dumps(report,indent=2)+'\n'
     articles=links.load_articles(root)
@@ -3135,6 +3142,15 @@ def build(root: Path):
         # Every generated page advertises the feed; redirect stubs are left untouched.
         if relative.endswith('.html') and relative not in REMOVED_ADU_PATHS:
             files[relative] = rss_feed.ensure_link(content)
+    for relative, content in list(files.items()):
+        # Profiles, team pages and the directory are rendered from templates that
+        # never pass through site_nav.install(); give them the same shared head
+        # assets (favicons, Barlow/Inter, Now bar, search thumbnails) so a data
+        # refresh cannot publish pages that drift from the rest of the site.
+        if (relative.endswith('.html') and relative not in REMOVED_ADU_PATHS
+                and relative not in frozen_pages and '<header class="site-header"' in content
+                and not links.is_redirect_html(content)):
+            files[relative] = site_nav.ensure_assets(content)
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)

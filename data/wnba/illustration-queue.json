@@ -87,15 +87,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 341,
-      "slug": "brittney-griner",
-      "player_name": "Brittney Griner",
-      "listed_active": true,
-      "profile_path": "/wnba/brittney-griner/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 494,
       "slug": "brittney-sykes",
       "player_name": "Brittney Sykes",
@@ -402,29 +393,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 437,
-      "slug": "jewell-loyd",
-      "player_name": "Jewell Loyd",
-      "listed_active": true,
-      "profile_path": "/wnba/jewell-loyd/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 67134,
       "slug": "jihyun-park",
       "player_name": "Jihyun Park",
       "listed_active": true,
       "profile_path": "/wnba/jihyun-park/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 465,
-      "slug": "jonquel-jones",
-      "player_name": "Jonquel Jones",
-      "listed_active": true,
-      "profile_path": "/wnba/jonquel-jones/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -488,15 +461,6 @@
       "player_name": "Justine Pissott",
       "listed_active": true,
       "profile_path": "/wnba/justine-pissott/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 462,
-      "slug": "kahleah-copper",
-      "player_name": "Kahleah Copper",
-      "listed_active": true,
-      "profile_path": "/wnba/kahleah-copper/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -578,15 +542,6 @@
       "player_name": "Katie Lou Samuelson",
       "listed_active": true,
       "profile_path": "/wnba/katie-lou-samuelson/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 374,
-      "slug": "kayla-mcbride",
-      "player_name": "Kayla McBride",
-      "listed_active": true,
-      "profile_path": "/wnba/kayla-mcbride/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1266,15 +1221,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 602,
-      "slug": "satou-sabally",
-      "player_name": "Satou Sabally",
-      "listed_active": true,
-      "profile_path": "/wnba/satou-sabally/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 67054,
       "slug": "saylor-poffenbarger",
       "player_name": "Saylor Poffenbarger",
@@ -1338,29 +1284,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 346,
-      "slug": "skylar-diggins",
-      "player_name": "Skylar Diggins",
-      "listed_active": true,
-      "profile_path": "/wnba/skylar-diggins/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 736,
       "slug": "sonia-citron",
       "player_name": "Sonia Citron",
       "listed_active": true,
       "profile_path": "/wnba/sonia-citron/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 558,
-      "slug": "sophie-cunningham",
-      "player_name": "Sophie Cunningham",
-      "listed_active": true,
-      "profile_path": "/wnba/sophie-cunningham/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

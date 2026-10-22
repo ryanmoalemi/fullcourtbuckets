@@ -231,10 +231,19 @@ def build(game_id, game_json=None, today=None, live=False):
 
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[1])
-    ap.add_argument('--game-id', required=True)
+    ap.add_argument('--game-id')
+    ap.add_argument('--all', action='store_true',
+                    help='rebuild every configured game page; pages copy the recap shell, so rerun after news pages change')
     ap.add_argument('--game-json')
     ap.add_argument('--live', action='store_true', help='game in progress: LIVE badge, running score check only')
     a = ap.parse_args(argv)
+    if a.all:
+        rc = 0
+        for gid in json.loads(CONF.read_text())['games']:
+            rc = max(rc, main(['--game-id', gid]))
+        return rc
+    if not a.game_id:
+        ap.error('--game-id or --all is required')
     try:
         path, out = build(a.game_id, a.game_json, live=a.live)
     except ScoreCheckError as e:
