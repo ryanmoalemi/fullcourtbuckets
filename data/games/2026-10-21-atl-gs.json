@@ -5,20 +5,20 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T01:23:35+00:00",
+ "checked_at": "2026-10-22T01:28:08+00:00",
  "period": 3,
- "clock": "9:48",
- "last_play_period": 2,
- "last_play_clock": "0.0",
+ "clock": "8:01",
+ "last_play_period": 3,
+ "last_play_clock": "8:01",
  "away": {
   "abbreviation": "ATL",
-  "score": 46,
-  "feed_score": 46
+  "score": 48,
+  "feed_score": 48
  },
  "home": {
   "abbreviation": "GS",
-  "score": 40,
-  "feed_score": 40
+  "score": 48,
+  "feed_score": 48
  },
  "periods": [
   {
@@ -30,6 +30,11 @@
    "period": 2,
    "away": 23,
    "home": 25
+  },
+  {
+   "period": 3,
+   "away": 2,
+   "home": 8
   }
  ],
  "players": [],
@@ -2425,7 +2430,7 @@
   {
    "order": 200,
    "period": 2,
-   "clock": "1:22",
+   "clock": "1:24",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 43,
@@ -2565,6 +2570,234 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 212,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Isobel Borlase",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 213,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Tiffany Hayes",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 214,
+   "period": 3,
+   "clock": "9:50",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini makes 22-foot three point jumper (Gabby Williams assists)",
+   "away_score": 46,
+   "home_score": 43,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 215,
+   "period": 3,
+   "clock": "9:32",
+   "type": "Lost Ball Turnover",
+   "text": "Allisha Gray lost ball turnover (Gabby Williams steals)",
+   "away_score": 46,
+   "home_score": 43,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 216,
+   "period": 3,
+   "clock": "9:25",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams makes driving layup",
+   "away_score": 46,
+   "home_score": 45,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 217,
+   "period": 3,
+   "clock": "9:02",
+   "type": "Driving Layup Shot",
+   "text": "Rhyne Howard makes driving layup (Allisha Gray assists)",
+   "away_score": 48,
+   "home_score": 45,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 218,
+   "period": 3,
+   "clock": "9:02",
+   "type": "Shooting Foul",
+   "text": "Kayla Thornton shooting foul",
+   "away_score": 48,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 219,
+   "period": 3,
+   "clock": "9:02",
+   "type": "Free Throw - 1 of 1",
+   "text": "Rhyne Howard misses free throw 1 of 1",
+   "away_score": 48,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 220,
+   "period": 3,
+   "clock": "8:58",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 48,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 221,
+   "period": 3,
+   "clock": "8:52",
+   "type": "Step Back Jump Shot",
+   "text": "Cecilia Zandalasini makes 24-foot three point step back jumpshot (Gabby Williams assists)",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 222,
+   "period": 3,
+   "clock": "8:37",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Cecilia Zandalasini steals)",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 223,
+   "period": 3,
+   "clock": "8:20",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 23-foot three point jumper",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 224,
+   "period": 3,
+   "clock": "8:17",
+   "type": "Offensive Rebound",
+   "text": "Kayla Thornton offensive rebound",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 225,
+   "period": 3,
+   "clock": "8:14",
+   "type": "Jumpball",
+   "text": "Kayla Thornton vs. Rhyne Howard (Naz Hillmon gains possession)",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 226,
+   "period": 3,
+   "clock": "8:14",
+   "type": "Lost Ball Turnover",
+   "text": "Kayla Thornton lost ball turnover (Rhyne Howard steals)",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 227,
+   "period": 3,
+   "clock": "8:08",
+   "type": "Personal Foul",
+   "text": "Cecilia Zandalasini personal foul",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 228,
+   "period": 3,
+   "clock": "8:01",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 229,
+   "period": 3,
+   "clock": "8:01",
+   "type": "Free Throw - 1 of 2",
+   "text": "Allisha Gray misses free throw 1 of 2",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 230,
+   "period": 3,
+   "clock": "8:01",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 48,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
