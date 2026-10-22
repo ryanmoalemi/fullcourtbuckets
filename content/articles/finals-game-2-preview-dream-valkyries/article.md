@@ -80,3 +80,5 @@ My pick is Golden State to win Game 2. The Valkyries have won the combined turno
 21+. Gamble responsibly. 1-800-GAMBLER.
 
 Full Court Buckets gathers and verifies its own game data.
+
+TV: USA Network (simulcast on CNBC) · Stream: Peacock
