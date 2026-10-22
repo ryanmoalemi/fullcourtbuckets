@@ -130,6 +130,8 @@ CSS = B.PAGE_CSS + (
     '.op-head{display:flex;align-items:center;gap:10px;margin:0 0 4px}'
     '.op-head img,.op-head .ow-av{width:48px;height:48px;font-size:16px;margin:0}'
     '.op-new{font-size:14px;margin:0 0 6px}.op-new a{color:#ff9800}'
+    # Raw source URLs are long single words; let them wrap so phones never scroll sideways.
+    '#sources a{overflow-wrap:anywhere;word-break:break-word}'
 )
 
 

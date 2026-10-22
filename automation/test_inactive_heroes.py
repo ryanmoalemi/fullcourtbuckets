@@ -12,6 +12,7 @@ import apply_portraits
 import build_players as players
 import career_summary
 import rollout_player_design
+import site_nav
 
 ROOT = Path(__file__).resolve().parents[1]
 TOUCHED = set(players.SEARCH_FAQ_SLUGS) | {'aja-wilson', 'janelle-salaun'}
@@ -31,6 +32,9 @@ def _plain(fragment: str) -> str:
 
 
 def _non_faq_text(page: str) -> str:
+    # The shared Now bar is site chrome that site_nav.apply_now_bar refreshes on
+    # every publish; it is not player or team text, so it is left out here.
+    page = site_nav.NOW_RE.sub(' ', page)
     page = FAQ_SECTION.sub(' ', page)
     page = SCRIPT.sub(' ', page)
     page = STYLE.sub(' ', page)

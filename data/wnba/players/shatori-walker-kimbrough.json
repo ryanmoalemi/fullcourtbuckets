@@ -114,19 +114,19 @@
         "name": "Dream",
         "conference": "Eastern Conference"
       },
-      "games_played": 1,
-      "min": 1.0,
+      "games_played": 3,
+      "min": 1.33,
       "fgm": 0.0,
       "fga": 0.0,
-      "fg_pct": 0.0,
+      "fg_pct": null,
       "fg3m": 0.0,
       "fg3a": 0.0,
-      "fg3_pct": 0.0,
+      "fg3_pct": null,
       "ftm": 0.0,
       "fta": 0.0,
-      "ft_pct": 0.0,
-      "oreb": null,
-      "dreb": null,
+      "ft_pct": null,
+      "oreb": 0.0,
+      "dreb": 0.0,
       "reb": 0.0,
       "ast": 0.0,
       "stl": 0.0,
@@ -683,6 +683,86 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392715,
+      "player_id": 493,
+      "date": "2026-10-21T19:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "visitor_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "home_score": 97,
+      "away_score": 71,
+      "minutes": "2",
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    },
+    {
+      "game_id": 1392708,
+      "player_id": 493,
+      "date": "2026-10-19T19:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 65,
+      "away_score": 79,
+      "minutes": "1",
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 0.0
+    },
     {
       "game_id": 1392707,
       "player_id": 493,
