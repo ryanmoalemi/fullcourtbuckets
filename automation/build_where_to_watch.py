@@ -461,6 +461,9 @@ def main() -> None:
     write_og_image(stats(rows))
     write_if_changed(PAGE_DIR / CSV_NAME, DATA.read_text(encoding='utf-8'))
     update_sitemaps()
+    # The header search index includes this page; keep it current (as publish_articles.py does).
+    import site_nav
+    write_if_changed(ROOT / 'search-index.json', site_nav.search_index_document(ROOT))
     s = stats(rows)
     print(f'{s["venues"]} venues, {s["cities"]} cities, {s["states"]} states, {len(s["teams"])} team markets, {s["confirmed"]} confirmed with staff')
 
