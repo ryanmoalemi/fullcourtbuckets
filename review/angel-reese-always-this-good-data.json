@@ -1,15 +1,93 @@
-{"scorecard":{"overall":8,"max":10,"stars":4,"grade":"Ready","categories":[
-{"name":"Accuracy","score":9,"max":10,"reason":"Every figure traced to an opened primary source (Maryland/LSU stat sheets, MaxPreps, WNBA.com, FCB game files); unverifiable items left out and listed. HS rebounding sources conflict and both are shown."},
-{"name":"Information gain","score":8,"max":10,"reason":"Original HS-to-Finals dataset with FCB-computed TS% and double-double rates; claim-by-claim test of the replies; free-throw rate finding (fewer FTA than college) not in top results."},
-{"name":"Effort and replication cost","score":8,"max":10,"reason":"Combined seven primary sources plus 8 FCB playoff box files into a downloadable CSV and custom 16:9 chart."},
-{"name":"Originality","score":8,"max":10,"reason":"Own angle: rebounding constant, efficiency is the change; tests specific public claims."},
-{"name":"Experience and expertise","score":8,"max":10,"reason":"Real Ryan Moalemi byline linked to author page."},
-{"name":"Main content and layout","score":8,"max":10,"reason":"Data table directly under byline per data-page rule; chart and findings next; methods at bottom. Title above fold desktop and mobile."},
-{"name":"Transparency","score":9,"max":10,"reason":"AI disclosure, photo credit, data dictionary, CSV, corrections link."},
-{"name":"Writing craft","score":8,"max":10,"reason":"Plain, no em dashes, real subheads, outbound links in new tab."},
-{"name":"People-first purpose","score":8,"max":10,"reason":"Answers 'did she get good overnight' directly with data."},
-{"name":"Human voice","score":7,"max":10,"reason":"Specific numbers and judgments; some list-heavy structure."}],
-"info_gain":["Career dataset from high school to 2026 Finals Game 3 with TS% and double-double rate","Finding: she attempts fewer free throws per game now (6.3-6.8) than at LSU (8.1-9.4), undercutting the 'foul calls' claim","Finding: 2023 title game audience (9.9M) exceeds Finals Games 1-2 (2.1M, 1.33M)"],
-"ai_flags":["Removed unverified 'Front Office Sports reporter' label for Colin Salao","Replaced 'any 2026 Finals game' with Games 1-2 (Game 3 audience not out)","Replaced em-dash table placeholders with n/a"]},
-"unique":["Original per-level dataset with computed efficiency","Reply claims tested against data","FT-rate and audience comparisons"],
-"unverified":["Junior high stats (no primary source found)","HS freshman-junior season lines (only secondary sources)","Maryland double-double counts","2026 regular-season double-double count","Chicago Sky team records","Colin Salao's employer/title","Game 3 viewership (not released)"]}
+{
+ "scorecard": {
+  "overall": 9,
+  "max": 10,
+  "stars": 4.5,
+  "grade": "Ready",
+  "categories": [
+   {
+    "name": "Accuracy",
+    "score": 9,
+    "max": 10,
+    "reason": "Every number re-checked against Maryland box scores, LSU stat PDFs and box score PDFs, WNBA.com releases, AP and FCB game files. Fixed four errors from v1 (Maryland 2021-22 TS 55.6 to 55.5, 2025 TS 53.8 to 53.7, playoff TS 59.8 to 59.7, 2026 double-doubles n/a to 32). Not 10: LSU 2023-24 box scores sum to 442 rebounds vs 441 on the season sheet (disclosed), and X view/like counts are a 7:37 PM PT snapshot."
+   },
+   {
+    "name": "Information gain",
+    "score": 9,
+    "max": 10,
+    "reason": "New vs the top 10 for 'angel reese stats', 'angel reese rebounds', 'angel reese college stats' and 'angel reese rebounding record' (ESPN, Basketball Reference, WNBA.com, LSU, Wikipedia, Fox, Yahoo, StatMuse, TSN, HighPostHoops, Her Hoop Stats, Sports Reference): one 124-game sourced ledger across Maryland, LSU and 2026 playoffs; Maryland double-double counts (1, 17) that no result prints; first-three-seasons comparison vs every debut since 2009; first-half vs second-half college shooting test of the 'late leap' claim; offensive-rebound share by season. Not 10: Sports Reference already has per-season college game logs, and WNBA regular-season game rows are missing."
+   },
+   {
+    "name": "Effort and replication cost",
+    "score": 9,
+    "max": 10,
+    "reason": "Parsed 33 LSU box score PDFs by column position, LSU's game-by-game sheet, Maryland's official box score feed and 8 FCB playoff files, reconciled to season totals, plus a custom 16:9 chart, CSV, JSON and Dataset schema. Not 10: no WNBA regular-season game-by-game rows."
+   },
+   {
+    "name": "Originality",
+    "score": 9,
+    "max": 10,
+    "reason": "Own thesis (rebounding constant, shooting changed) tested claim by claim against real replies, with a split that shows the 2026 rise breaks her college pattern."
+   },
+   {
+    "name": "Experience and expertise",
+    "score": 8,
+    "max": 10,
+    "reason": "Real Ryan Moalemi byline linked to his author page with a real photo. Not 10 without first-hand reporting (an interview, courtside notes or a quote from a coach or Reese)."
+   },
+   {
+    "name": "Main content and layout",
+    "score": 9,
+    "max": 10,
+    "reason": "Only headline, byline, Data-through box and one-line key fact sit above the data table; no bullets above it. Ledger, chart and findings follow, fine print at the bottom. Title above the fold on desktop and 390px mobile. Not 10: the 11-column table scrolls sideways on phones."
+   },
+   {
+    "name": "Transparency",
+    "score": 9,
+    "max": 10,
+    "reason": "AI disclosure, how-made link, every row sourced, methods line, rebound discrepancy disclosed, photo credited, CSV and JSON downloads, corrections link. Headshot is labeled an illustration in alt text but not in a visible caption."
+   },
+   {
+    "name": "Writing craft",
+    "score": 9,
+    "max": 10,
+    "reason": "Plain, no em dashes, real subheads, all outbound links open in a new tab. Some paragraphs in the replies section are still dense with numbers."
+   },
+   {
+    "name": "People-first purpose",
+    "score": 9,
+    "max": 10,
+    "reason": "Answers the 'overnight' question directly with data a reader can download; honest dates and a Data-through box. Game 3 audience not out yet."
+   },
+   {
+    "name": "Human voice",
+    "score": 8,
+    "max": 10,
+    "reason": "Flagged and rewrote stock lines; voice is direct with opinions ('The rebounding was never the thing that changed. Her shooting was.'). Not 10: no first-hand moment from someone who was there. No AI detector run."
+   }
+  ],
+  "info_gain": "124-game official-box-score ledger (CSV/JSON) with Maryland double-double counts, streaks, offensive-rebound share, first-half vs second-half college shooting split, and a first-three-seasons rebounding comparison against every WNBA debut since 2009.",
+  "ai_flags": [
+   "'What changed is how efficiently she scores.' -> 'The rebounding was never the thing that changed. Her shooting was.'",
+   "'The real jump is efficiency, not production.' -> 'The jump is shooting.'",
+   "'This is the best-supported read.' -> 'The best-supported read.' plus the split evidence",
+   "'It has climbed every season since' -> 'It has gone up every season since'"
+  ]
+ },
+ "unique": [
+  "Every Maryland and LSU game plus the 2026 playoffs in one sourced, downloadable ledger (124 rows, each linked to its box score).",
+  "Maryland double-double counts (1 in 2020-21, 17 in 2021-22) and 10+ rebound streaks not printed anywhere in the top 10.",
+  "Reese's 12.6 rebounds a game over her first three seasons vs Tina Charles' 11.1, the next best among 215 players who debuted since 2009.",
+  "College shooting fell in the second half of all three full seasons; 2026 rose late, which supports the 'finishing leap' reply."
+ ],
+ "unverified": [
+  "2024-26 WNBA regular-season game-by-game rows (no league-sourced game logs reachable), so no 2026 month-by-month split",
+  "2025 offensive rebounds",
+  "LSU 2023-24: box scores sum to 442 rebounds and 184 offensive vs 441 and 183 on the season sheet",
+  "Colin Salao post views/likes are a 7:37 PM PT Oct. 21 snapshot",
+  "Finals Game 3 TV audience not released at time of writing",
+  "Junior high and first three high school seasons",
+  "College national/conference rebounding ranks",
+  "Chicago Sky team records"
+ ]
+}
