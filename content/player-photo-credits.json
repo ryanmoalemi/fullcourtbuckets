@@ -505,6 +505,70 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "amy-okonkwo": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Amy_Okonkwo_0_Nigeria_20260905_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "charisma-osborne": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Charisma_Osborne_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "cheyenne-parker-tyus": {
+      "author": "johnmac612",
+      "file_url": "https://commons.wikimedia.org/wiki/File:230523_Lynx_Dreaml_JohnMc55.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "chloe-bibby": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chloe_Bibby_55_Australia_20260315_(1)_(cropped).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "christyn-williams": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Christyn_Williams_250901_Lynx_Wings_win_JohnMc271_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "costanza-verona": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Costanza_Verona_8_Italy_20250629_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "cotie-mcmahon": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Cotie_McMahon_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "alanna-smith": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alanna_Smith_Minnesota_Lynx_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
