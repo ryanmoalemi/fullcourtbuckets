@@ -1,76 +1,50 @@
-name: FCB live play-by-play (Finals Game 2)
-# Ryan, Oct 19 2026: Game 2 play-by-play page updates about every 5 minutes while live.
-# Runs from the default branch (schedules only fire there), works on main, pushes so Pages deploys.
-# On Final: full import + final score check, then disables itself.
+name: Live play-by-play
+# Near-real-time play-by-play for any game set in data/live-pbp.json (Ryan, Oct 21 2026:
+# update as soon as new info arrives). One long-running job polls the feed every 30 s, commits
+# only when the play count changes, and pushes at most once a minute so Pages builds keep up.
+# Public repo: Actions minutes are free; one ~3 h job per game.
+# On Final: full box-score import into the SAME game file, final page, guard check, push.
+# Schedules only fire from the default branch (master); the job always runs main's scripts.
 on:
   schedule:
-    - cron: '*/5 0-3 20 10 *'   # Oct 20 00:00-03:55 UTC = Oct 19 5:00-8:55 PM PT
+    # Game 4: Sat Oct 24 2026, 10 a.m. PT tip = 17:00 UTC. Start 9:30 a.m. PT; 10:15 backup if the first is skipped.
+    - cron: '30 16 24 10 *'
+    - cron: '15 17 24 10 *'
   workflow_dispatch:
+    inputs:
+      loop:
+        description: Keep polling until Final
+        type: boolean
+        default: true
+      dry_run:
+        description: Commit locally only, never push
+        type: boolean
+        default: false
+      ref:
+        description: Branch whose scripts and data to use
+        default: main
 permissions:
   contents: write
-  actions: write
 concurrency:
   group: fcb-live-pbp
   cancel-in-progress: false
 jobs:
   live:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ inputs.ref || 'main' }}
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Fetch live game + plays
-        id: fetch
+      - name: Live play-by-play loop
         env:
           BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
-        run: |
-          set +e
-          python -u automation/live_pbp.py; rc=$?
-          echo "rc=$rc" >> "$GITHUB_OUTPUT"
-          echo "live_pbp exit $rc" >> "$GITHUB_STEP_SUMMARY"
-          if [ $rc -eq 1 ]; then exit 1; fi
-          exit 0
-      - name: Build live page
-        if: steps.fetch.outputs.rc == '0'
-        run: python automation/build_pbp.py --game-id 401918306 --game-json data/games/2026-10-19-atl-gs.json --live
-      - name: Final import and final page (full score check)
-        id: final
-        if: steps.fetch.outputs.rc == '10'
-        env:
-          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
-          GAME_STATS_DATE: '2026-10-19'
-          GAME_STATS_TEAMS: 'ATL,GS'
-          GAME_STATS_ESPN_ID: '401918306'
-        run: |
-          python -u automation/game_stats.py
-          python automation/game_stats.py --audit-secrets
-          python automation/build_pbp.py --game-id 401918306 --game-json data/games/2026-10-19-atl-gs.json
-      - name: Secret scan
-        if: steps.fetch.outputs.rc == '0'
-        env:
-          BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
-        run: python automation/game_stats.py --audit-secrets
-      - name: Commit and push when data changed
-        if: steps.fetch.outputs.rc == '0' || steps.final.outcome == 'success'
-        run: |
-          git config user.name 'Full Court Buckets updater'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/games/2026-10-19-atl-gs.json data/pbp-games.json wnba/finals/2026/game-2/play-by-play/index.html
-          if git diff --cached --quiet; then echo 'No change.' >> "$GITHUB_STEP_SUMMARY"; exit 0; fi
-          git commit -m "Game 2 play-by-play: ${{ steps.fetch.outputs.rc == '10' && 'final' || 'live update' }}"
-          for attempt in 1 2 3 4 5; do
-            if git pull --rebase origin main && git push origin HEAD:main; then exit 0; fi
-            git rebase --abort 2>/dev/null || true
-            sleep $((attempt * 3))
-          done
-          exit 1
-      - name: Disable after Final
-        if: steps.final.outcome == 'success'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh workflow disable fcb-live-pbp.yml --repo "${{ github.repository }}"
+          LOOP: ${{ (github.event_name == 'schedule' || inputs.loop) && '1' || '0' }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          POLL_SECONDS: '30'
+          MIN_PUSH_SECONDS: '60'
+        run: bash automation/live_pbp_loop.sh

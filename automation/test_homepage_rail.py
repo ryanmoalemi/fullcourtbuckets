@@ -23,7 +23,7 @@ def _newest_game_recaps(articles, limit):
     for article in articles or []:
         if not isinstance(article, dict):
             continue
-        game_id = str(article.get('espnGameId') or '').strip()
+        game_id = str(article.get('gameId') or article.get('espnGameId') or '').strip()
         slug = str(article.get('slug') or '').strip()
         if not game_id or not slug:
             continue
@@ -296,7 +296,7 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIsNotNone(match)
         self.assertGreaterEqual(match.group(1), newest)
         self.assertNotIn('Burton from 28', home)
-        self.assertIn('WNBA Finals Game 2: Dream at Valkyries, Mon Oct 19, 2026, 5 p.m. PT, Chase Center. Valkyries lead 1-0.', home)
+        self.assertIn('Final: Dream 97, Valkyries 71 in Finals Game 3 (Dream lead 2-1)', home)
         self.assertNotIn('tonight', home.split('class="ticker', 1)[1].split('</div></div></div>', 1)[0].lower())
         featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
         self.assertIn('class="article-card" id="featured-story"', featured)
@@ -337,22 +337,31 @@ class HomepageRailTests(unittest.TestCase):
         for href, slug in newest:
             self.assertIn(f'href="{href}"', scores, slug)
             self.assertNotIn(f'href="{href}" target="_blank"', rail_html, slug)
-        self.assertIn('target="_blank" rel="noopener"', rail_html)
-        self.assertIn('https://www.espn.com/wnba/game/_/gameId/', rail_html)
+        # Score rows link to FCB recaps or game pages, never an outside stats site.
+        self.assertNotIn('espn.com', rail_html)
         newest_recap = max(
-            (article for article in articles if article.get('espnGameId')),
+            (article for article in articles if article.get('gameId') or article.get('espnGameId')),
             key=lambda article: article['date'],
         )
         recap_day = dt.date.fromisoformat(newest_recap['date'])
         self.assertIn(f'{recap_day.strftime("%b")} {recap_day.day}', scores)
         import citation
+        def _row_day(row):
+            found = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2}),\s+(\d{4})', row[1])
+            return dt.datetime.strptime(' '.join(found.groups()), '%b %d %Y').date() if found else None
+
+        # The next game is the first listed one after the newest published recap.
         scheduled = next(
             row for row in citation.FINALS_TRACKER_ROWS
             if row[-1] == 'Scheduled' and row[1] != 'Not listed'
+            and _row_day(row) and _row_day(row) > recap_day
         )
         matchup = scheduled[2].split(',', 1)[0]
         away, home_club = matchup.split(' at ', 1)
         series = rail_html.split('id="playoff-series"', 1)[1].split('</section>', 1)[0]
-        self.assertIn(f'{away.split()[-1]} at {home_club.split()[-1]}', series)
+        # The rail names both clubs in the series line and gives the next tip day.
+        self.assertIn(away.split()[-1], series)
+        self.assertIn(home_club.split()[-1], series)
+        self.assertIn('Next: ', series)
         day_match = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2})', scheduled[1])
         self.assertIn(f'{day_match.group(1)} {int(day_match.group(2))}', series)

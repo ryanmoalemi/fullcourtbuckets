@@ -83,7 +83,8 @@ class ViewershipPageTests(unittest.TestCase):
     def test_question_page_uses_only_sourced_draft_figures(self):
         page = self.page
         self.assertIn('<h1>WNBA Viewership &amp; Attendance Statistics 2026</h1>', page)
-        self.assertIn('Updated Oct. 19, 2026', page)
+        payload = json.loads((ROOT / 'data' / 'viewership-attendance.json').read_text(encoding='utf-8'))
+        self.assertIn(f"Updated {viewership.format_updated(payload['updated'])}", page)
         self.assertIn('2026 playoff viewership', page)
         self.assertIn('https://www.sportsmediawatch.com/sports-ratings-tracker/', page)
         self.assertIn('semifinals Game 2', page)
@@ -107,7 +108,11 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('10:00 a.m. PT', page)
         self.assertIn('State Farm Arena', page)
         self.assertIn('USA and Peacock', page)
-        self.assertNotIn('CNBC', page)
+        # CNBC is only named as the USA Network simulcast from USA Sports releases
+        # (Game 2 audience, Game 3 TV); it never stands in for the USA listing.
+        for row in re.findall(r'<tr>.*?</tr>', page, flags=re.S):
+            if 'CNBC' in row:
+                self.assertIn('USA', row)
         self.assertIn('if necessary', page)
         self.assertNotIn('Thu. Oct. 22, 2026', page)
         self.assertIn('397,408', page)

@@ -19,7 +19,9 @@
         "ATL": 0
       },
       "preview": "/news/finals-game-1-preview-dream-valkyries/",
-      "recap": "/news/dream-valkyries-finals-game-1-recap/"
+      "recap": "/news/dream-valkyries-finals-game-1-recap/",
+      "tv": "NBC",
+      "stream": "Peacock"
     },
     "401918306": {
       "number": 2,
@@ -33,7 +35,9 @@
         "ATL": 0
       },
       "preview": "/news/finals-game-2-preview-dream-valkyries/",
-      "recap": "/news/dream-valkyries-finals-game-2-recap/"
+      "recap": "/news/dream-valkyries-finals-game-2-recap/",
+      "tv": "USA Network (simulcast on CNBC)",
+      "stream": "Peacock"
     },
     "401918307": {
       "number": 3,
@@ -46,7 +50,24 @@
         "ATL": 1
       },
       "preview": "/news/finals-game-3-preview-valkyries-dream/",
-      "game_json": "data/games/2026-10-21-gs-atl.json"
+      "game_json": "data/games/2026-10-21-gs-atl.json",
+      "tv": "USA Network (simulcast on CNBC)",
+      "stream": "Peacock",
+      "recap": "/news/dream-valkyries-finals-game-3-recap/"
+    },
+    "401918308": {
+      "number": 4,
+      "date": "2026-10-24",
+      "date_text": "Sat Oct 24, 2026",
+      "tip": "Sat Oct 24, 2026, 10 a.m. PT",
+      "venue": "State Farm Arena",
+      "series_before": {
+        "GS": 1,
+        "ATL": 2
+      },
+      "tv": "NBC",
+      "stream": "Peacock",
+      "game_json": "data/games/2026-10-24-gs-atl.json"
     }
   }
 }
