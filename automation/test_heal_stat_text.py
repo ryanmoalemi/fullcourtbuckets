@@ -235,7 +235,8 @@ class HealStatTextTests(unittest.TestCase):
         self.assertIn('FAQPage', original)
         self.assertIn('Player FAQ', original)
         self.assertIn('class="player-illustration"', original)
-        self.assertIn('AI-generated illustration', original)
+        # Reese now uses a licensed real photo (2026-10-22); either label is fine.
+        self.assertTrue('AI-generated illustration' in original or 'class="photo-credit"' in original)
         self.assertIn('FCB:approved-portrait:start', original)
         self.assertEqual(heal.stat_text_mismatches(profile, original, ROOT), [])
         outcome = heal.heal_page(profile, original, ROOT, previous=original)
