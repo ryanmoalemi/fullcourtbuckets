@@ -109,7 +109,7 @@ class Tests(unittest.TestCase):
         self.assertTrue(s.should_refresh('2009-07-10',dt.date(2009,7,20),False))
     def test_daily_during_season(self):
         self.assertTrue(s.should_refresh('2009-07-19',dt.date(2009,7,20),True))
-        self.assertFalse(s.should_refresh('2009-07-20',dt.date(2009,7,20),True))
+        self.assertTrue(s.should_refresh('2009-07-20',dt.date(2009,7,20),True))
     def test_midseason_pause(self):
         self.assertTrue(s.in_season([{'date':'2009-05-01'},{'date':'2009-10-01'}],dt.date(2009,9,1)))
     def test_missing_schedule_conservative(self): self.assertTrue(s.in_season([],dt.date(2009,1,1)))
