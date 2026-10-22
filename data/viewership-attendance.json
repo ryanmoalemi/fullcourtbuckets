@@ -127,10 +127,10 @@
       "attendance": 18064,
       "attendance_source": "https://www.wnba.com/game/1042600302",
       "attendance_source_date": "2026-10-19",
-      "network": "USA and Peacock",
-      "viewers": null,
-      "viewers_source": "",
-      "viewers_source_date": "",
+      "network": "USA Network, CNBC, E! and Peacock",
+      "viewers": 1330000,
+      "viewers_source": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-coverage-dream-valkyries-game-2-most-watched-wnba-finals-game",
+      "viewers_source_date": "2026-10-21",
       "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
       "schedule_source_date": "2026-10-13",
@@ -487,6 +487,17 @@
       "source_date": "2026-10-13",
       "checked_at": "2026-10-15",
       "notes": "Peak viewers. Kept separate from the average. A peak is the highest minute, not the average."
+    },
+    {
+      "metric_id": "finals-2026-g2-usa-sports-avg",
+      "period": "2026-10-19",
+      "value": 1330000,
+      "unit": "viewers",
+      "scope": "Dream at Valkyries, 2026 WNBA Finals Game 2, average viewers across USA Network, CNBC, E! and Peacock",
+      "source_url": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-coverage-dream-valkyries-game-2-most-watched-wnba-finals-game",
+      "source_date": "2026-10-21",
+      "checked_at": "2026-10-21",
+      "notes": "USA Sports calls it the most-watched WNBA Finals Game 2 ever on cable. Up 9% vs. the 2025 WNBA Finals Game 2 (PHX/LV) on broadcast television. Nielsen Big Data + Panel and Adobe Analytics."
     }
   ]
 }
