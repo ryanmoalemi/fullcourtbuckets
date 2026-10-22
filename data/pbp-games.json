@@ -45,7 +45,8 @@
         "GS": 1,
         "ATL": 1
       },
-      "preview": "/news/finals-game-3-preview-valkyries-dream/"
+      "preview": "/news/finals-game-3-preview-valkyries-dream/",
+      "game_json": "data/games/2026-10-21-atl-gs.json"
     }
   }
 }

@@ -349,8 +349,8 @@
       "matchup": "atl-at-gs",
       "away": "ATL",
       "home": "GS",
-      "away_score": 57,
-      "home_score": 49,
+      "away_score": 87,
+      "home_score": 65,
       "overtime": false,
       "status": "live",
       "source": null,
@@ -358,8 +358,27 @@
       "crosscheck_matched": false,
       "crosscheck_compared": false,
       "mismatch_count": 0,
-      "plays": 258,
+      "plays": 379,
       "plays_status": null
+    },
+    {
+      "date": "2026-10-21",
+      "path": "data/games/2026-10-21-gs-atl.json",
+      "slug": "2026-10-21-gs-atl",
+      "matchup": "gs-at-atl",
+      "away": "GS",
+      "home": "ATL",
+      "away_score": 71,
+      "home_score": 97,
+      "overtime": false,
+      "status": "final",
+      "source": "balldontlie",
+      "fallback": false,
+      "crosscheck_matched": true,
+      "crosscheck_compared": true,
+      "mismatch_count": 0,
+      "plays": 426,
+      "plays_status": "included"
     }
   ]
 }
