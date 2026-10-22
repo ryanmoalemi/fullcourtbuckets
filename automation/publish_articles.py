@@ -28,6 +28,8 @@ SHELL_PAGE = ROOT / 'news' / 'dream-valkyries-finals-game-1-recap' / 'index.html
 DISCLAIMER = '21+. Gamble responsibly. 1-800-GAMBLER.'
 BETTING_RE = re.compile(r'betting odds|DraftKings|moneyline|Gamble responsibly', re.I)
 SIZES = '(max-width: 900px) calc(94vw - 40px), 842px'
+BROADCAST_STYLE = 'font-size:14px;color:#8a877f;margin:18px 0 0'
+TRACKER_PATH = '/news/2026-wnba-finals-ratings-tracker/'
 
 
 def esc(text: str) -> str:
@@ -187,6 +189,10 @@ def body_html(markdown: str) -> str:
         if kind == 'table':
             html_blocks.append(table_html(value))
             continue
+        if value.startswith('TV: ') and not first:
+            # The closing broadcast line keeps its small grey style on every rebuild.
+            html_blocks.append(f'<p class="broadcast-line" style="{BROADCAST_STYLE}">{inline(value)}</p>')
+            continue
         html_blocks.append(f'<p{" class=\"lead\"" if first else ""}>{inline(value)}</p>')
         first = False
         if BETTING_RE.search(value) and DISCLAIMER not in markdown and not disclaimer:
@@ -302,6 +308,21 @@ def figure_html(article: dict, meta: dict) -> str:
     )
 
 
+def archive_note_html(meta: dict) -> str:
+    """Preview archive note under the byline once the game is played (front matter recap_url).
+
+    Kept in the source so a rebuild of the preview never drops it.
+    """
+    url = str(meta.get('recap_url') or '').strip()
+    if not url:
+        return ''
+    return (
+        '<p>This preview was published before the game. For the result, read our '
+        f'<a href="{esc(url)}">game recap</a>. '
+        f'<a href="{TRACKER_PATH}">2026 WNBA Finals ratings tracker</a>.</p>'
+    )
+
+
 def top_link_html(meta: dict) -> str:
     """Optional one-line link under the byline (front matter top_link_text + top_link_url)."""
     text, url = str(meta.get('top_link_text') or '').strip(), str(meta.get('top_link_url') or '').strip()
@@ -334,7 +355,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         f'<h1>{esc(title)}</h1>'
         f'<div class="byline-row">{links.BYLINE_HTML}'
         f'<time class="article-date" datetime="{esc(article["date"])}">{esc(when)}</time></div>'
-        f'{top_link_html(meta)}{figure_html(article, meta)}{body}{how}'
+        f'{archive_note_html(meta)}{top_link_html(meta)}{figure_html(article, meta)}{body}{how}'
         '<p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p>'
         '</article>'
     )

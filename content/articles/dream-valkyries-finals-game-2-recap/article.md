@@ -71,6 +71,6 @@ Game 3 is Wednesday, Oct. 21, at 5 p.m. PT at State Farm Arena in Atlanta, on US
 
 My pick is Atlanta in Game 3. Through two games, the Dream have outscored Golden State 38-18 in third quarters.
 
-*Full Court Buckets gathers and verifies its own game data. Turnover totals include team turnovers.*
+Full Court Buckets gathers and verifies its own game data. Turnover totals include team turnovers.
 
 TV: USA Network (simulcast on CNBC) · Stream: Peacock

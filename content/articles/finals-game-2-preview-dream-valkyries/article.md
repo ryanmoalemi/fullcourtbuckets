@@ -8,6 +8,7 @@ category: news
 tags:
   - finals
   - preview
+recap_url: "/news/dream-valkyries-finals-game-2-recap/"
 teams:
   - atlanta-dream
   - golden-state-valkyries
