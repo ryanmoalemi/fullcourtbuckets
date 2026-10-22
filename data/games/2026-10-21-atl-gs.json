@@ -5,20 +5,20 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T00:51:50+00:00",
+ "checked_at": "2026-10-22T00:56:23+00:00",
  "period": 2,
- "clock": "5:54",
+ "clock": "4:18",
  "last_play_period": 2,
- "last_play_clock": "5:54",
+ "last_play_clock": "4:18",
  "away": {
   "abbreviation": "ATL",
-  "score": 33,
-  "feed_score": 33
+  "score": 37,
+  "feed_score": 37
  },
  "home": {
   "abbreviation": "GS",
-  "score": 23,
-  "feed_score": 23
+  "score": 26,
+  "feed_score": 26
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 10,
-   "home": 8
+   "away": 14,
+   "home": 11
   }
  ],
  "players": [],
@@ -1321,7 +1321,7 @@
   {
    "order": 108,
    "period": 1,
-   "clock": "48.5",
+   "clock": "50.5",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 19,
@@ -1513,7 +1513,7 @@
   {
    "order": 124,
    "period": 2,
-   "clock": "9:35",
+   "clock": "9:36",
    "type": "Layup Shot",
    "text": "Naz Hillmon misses layup",
    "away_score": 23,
@@ -1525,7 +1525,7 @@
   {
    "order": 125,
    "period": 2,
-   "clock": "9:32",
+   "clock": "9:34",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 23,
@@ -1573,7 +1573,7 @@
   {
    "order": 129,
    "period": 2,
-   "clock": "8:46",
+   "clock": "8:48",
    "type": "Defensive Rebound",
    "text": "Janelle Salaun defensive rebound",
    "away_score": 23,
@@ -1585,7 +1585,7 @@
   {
    "order": 130,
    "period": 2,
-   "clock": "8:39",
+   "clock": "8:41",
    "type": "Driving Layup Shot",
    "text": "Tiffany Hayes misses driving layup",
    "away_score": 23,
@@ -1597,7 +1597,7 @@
   {
    "order": 131,
    "period": 2,
-   "clock": "8:37",
+   "clock": "8:40",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 23,
@@ -1621,7 +1621,7 @@
   {
    "order": 133,
    "period": 2,
-   "clock": "8:09",
+   "clock": "8:10",
    "type": "Pullup Jump Shot",
    "text": "Tiffany Hayes misses 25-foot three point pullup jump shot",
    "away_score": 25,
@@ -1633,7 +1633,7 @@
   {
    "order": 134,
    "period": 2,
-   "clock": "8:06",
+   "clock": "8:08",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 25,
@@ -1645,7 +1645,7 @@
   {
    "order": 135,
    "period": 2,
-   "clock": "7:58",
+   "clock": "7:59",
    "type": "Jump Shot",
    "text": "Allisha Gray misses 23-foot three point jumper",
    "away_score": 25,
@@ -1657,7 +1657,7 @@
   {
    "order": 136,
    "period": 2,
-   "clock": "7:56",
+   "clock": "7:57",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 25,
@@ -1929,6 +1929,198 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 159,
+   "period": 2,
+   "clock": "5:39",
+   "type": "Bad Pass\nTurnover",
+   "text": "Gabby Williams bad pass\nturnover (Rhyne Howard steals)",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 160,
+   "period": 2,
+   "clock": "5:35",
+   "type": "Running Layup Shot",
+   "text": "Jordin Canada makes running layup (Rhyne Howard assists)",
+   "away_score": 35,
+   "home_score": 23,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 161,
+   "period": 2,
+   "clock": "5:15",
+   "type": "Jump Shot",
+   "text": "Janelle Salaun makes 25-foot three point jumper (Gabby Williams assists)",
+   "away_score": 35,
+   "home_score": 26,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 162,
+   "period": 2,
+   "clock": "5:00",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese makes driving layup (Jordin Canada assists)",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 163,
+   "period": 2,
+   "clock": "4:40",
+   "type": "Driving Layup Shot",
+   "text": "Aminata Gueye misses driving layup",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 164,
+   "period": 2,
+   "clock": "4:37",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 165,
+   "period": 2,
+   "clock": "4:25",
+   "type": "Lost Ball Turnover",
+   "text": "Jordin Canada lost ball turnover (Veronica Burton steals)",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 166,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Transition Take Foul",
+   "text": "Rhyne Howard transition take foul",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 167,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Free Throw - 1 of 1",
+   "text": "Gabby Williams misses free throw 1 of 1",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 168,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 169,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for Angel Reese",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 170,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Isobel Borlase",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "4:23",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Aminata Gueye",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 172,
+   "period": 2,
+   "clock": "4:18",
+   "type": "Shooting Foul",
+   "text": "Rhyne Howard shooting foul",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 173,
+   "period": 2,
+   "clock": "4:18",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 174,
+   "period": 2,
+   "clock": "4:18",
+   "type": "Coach's Challenge (replaycenter)",
+   "text": "(04:18) [Golden State Valkyries] COACH'S CHALLENGE (CALL REPLAYCENTER)",
+   "away_score": 37,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
