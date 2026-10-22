@@ -5,15 +5,15 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T01:50:48+00:00",
- "period": 3,
- "clock": "0.0",
- "last_play_period": 3,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-22T01:55:21+00:00",
+ "period": 4,
+ "clock": "9:15",
+ "last_play_period": 4,
+ "last_play_clock": "9:27",
  "away": {
   "abbreviation": "ATL",
-  "score": 71,
-  "feed_score": 71
+  "score": 73,
+  "feed_score": 73
  },
  "home": {
   "abbreviation": "GS",
@@ -35,6 +35,11 @@
    "period": 3,
    "away": 25,
    "home": 17
+  },
+  {
+   "period": 4,
+   "away": 2,
+   "home": 0
   }
  ],
  "players": [],
@@ -3571,8 +3576,8 @@
    "order": 295,
    "period": 3,
    "clock": "1:20",
-   "type": "Turnaround Jump Shot",
-   "text": "Isobel Borlase misses 14-foot turnaround jump shot",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Isobel Borlase misses 14-foot two point shot",
    "away_score": 66,
    "home_score": 55,
    "scoring_play": false,
@@ -3619,8 +3624,8 @@
    "order": 299,
    "period": 3,
    "clock": "1:07",
-   "type": "Turnaround Jump Shot",
-   "text": "Janelle Salaun makes 14-foot turnaround jump shot (Kaitlyn Chen assists)",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Janelle Salaun makes 14-foot two point shot (Kaitlyn Chen assists)",
    "away_score": 66,
    "home_score": 57,
    "scoring_play": true,
@@ -3631,8 +3636,8 @@
    "order": 300,
    "period": 3,
    "clock": "56.6",
-   "type": "Driving Layup Shot",
-   "text": "Jordin Canada makes driving layup (Allisha Gray assists)",
+   "type": "Driving Finger Roll Layup",
+   "text": "Jordin Canada makes 3-foot two point shot (Allisha Gray assists)",
    "away_score": 68,
    "home_score": 57,
    "scoring_play": true,
@@ -3774,7 +3779,7 @@
   {
    "order": 312,
    "period": 3,
-   "clock": "0.0",
+   "clock": "1.1",
    "type": "Offensive Rebound",
    "text": "Dream offensive team rebound",
    "away_score": 71,
@@ -3794,6 +3799,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 314,
+   "period": 4,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Isobel Borlase",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 315,
+   "period": 4,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for DeWanna Bonner",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 316,
+   "period": 4,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Tiffany Hayes",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 317,
+   "period": 4,
+   "clock": "9:43",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 1-foot layup (Angel Reese assists)",
+   "away_score": 73,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 318,
+   "period": 4,
+   "clock": "9:27",
+   "type": "Loose Ball Foul",
+   "text": "Jordin Canada loose ball foul",
+   "away_score": 73,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
