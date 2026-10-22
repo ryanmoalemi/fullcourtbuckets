@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fullcourtbuckets.com/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/about/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/authors/ryan-moalemi/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/authors/ryan-moalemi/ryans-angel-reese-cards/</loc>
@@ -18,19 +18,19 @@
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/contact/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/how-we-make-full-court-buckets/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-14</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/aces-fever-game-1-aja-wilson-38/</loc>
@@ -57,6 +57,10 @@
     <lastmod>2026-10-09</lastmod>
   </url>
   <url>
+    <loc>https://fullcourtbuckets.com/news/angel-reese-always-this-good-data/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
     <loc>https://fullcourtbuckets.com/news/angel-reese-game-1-liberty/</loc>
     <lastmod>2026-10-04</lastmod>
   </url>
@@ -81,6 +85,14 @@
     <lastmod>2026-10-17</lastmod>
   </url>
   <url>
+    <loc>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-2-recap/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-3-recap/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
     <loc>https://fullcourtbuckets.com/news/fever-aces-game-2-recap/</loc>
     <lastmod>2026-09-30</lastmod>
   </url>
@@ -95,6 +107,14 @@
   <url>
     <loc>https://fullcourtbuckets.com/news/finals-game-1-preview-dream-valkyries/</loc>
     <lastmod>2026-10-10</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/finals-game-2-preview-dream-valkyries/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/finals-game-3-preview-valkyries-dream/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/liberty-dream-semis-game-1-recap/</loc>
@@ -138,7 +158,7 @@
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/valkyries-wnba-finals-performers/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/wings-valkyries-game-3-recap/</loc>
@@ -150,7 +170,7 @@
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/wnba-finals-2026-audience-growth-dream-valkyries/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/news/wnba-finals-2026-schedule-dream-valkyries/</loc>
@@ -161,12 +181,16 @@
     <lastmod>2026-10-18</lastmod>
   </url>
   <url>
+    <loc>https://fullcourtbuckets.com/news/wnba-players-famous-relatives/</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
     <loc>https://fullcourtbuckets.com/privacy/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/sitemap/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/standings/</loc>
@@ -174,194 +198,94 @@
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/terms/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/wnba/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/wnba/couples/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/atlanta-dream/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/chicago-sky/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/connecticut-sun/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/dallas-wings/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/golden-state-valkyries/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/indiana-fever/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/las-vegas-aces/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/los-angeles-sparks/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/minnesota-lynx/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/new-york-liberty/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/phoenix-mercury/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/portland-fire/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/seattle-storm/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/toronto-tempo/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
-    <lastmod>2026-10-18</lastmod>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/news/wnba-players-famous-relatives/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/news/finals-game-2-preview-dream-valkyries/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-1/play-by-play/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-2/play-by-play/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-2-recap/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://fullcourtbuckets.com/wnba/owners/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/news/finals-game-3-preview-valkyries-dream/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/joe-lacob/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/atlanta-dream/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/joe-tsai/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/chicago-sky/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/mark-davis/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/connecticut-sun/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/mat-ishbia/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/dallas-wings/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/mark-walter/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/golden-state-valkyries/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/marc-lore/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/indiana-fever/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/tilman-fertitta/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/las-vegas-aces/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/lisa-bhathal-merage/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/los-angeles-sparks/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/larry-gottesdiener/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/minnesota-lynx/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
-    <loc>https://fullcourtbuckets.com/wnba/owners/larry-tanenbaum/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://fullcourtbuckets.com/wnba/teams/new-york-liberty/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/teams/phoenix-mercury/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/teams/portland-fire/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/teams/seattle-storm/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/teams/toronto-tempo/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/teams/washington-mystics/</loc>
+    <lastmod>2026-10-21</lastmod>
   </url>
   <url>
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-10-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/news/finals-game-3-preview-valkyries-dream/</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/news/angel-reese-always-this-good-data/</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://fullcourtbuckets.com/news/dream-valkyries-finals-game-3-recap/</loc>
-    <lastmod>2026-10-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
