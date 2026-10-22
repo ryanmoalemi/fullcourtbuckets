@@ -1,7 +1,13 @@
-files rewritten: 0
+files rewritten: 6
 html files rewritten: 651
 images missing alt: 0
 
-KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/tmp/fcbfix/images/players/aja-wilson-portrait-v1.webp'
-KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/tmp/fcbfix/images/players/angel-reese-portrait-v1.avif'
-KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/tmp/fcbfix/images/players/angel-reese-portrait-v1.png'
+resized apple-touch-icon.png to (180, 180) (14305 bytes) + apple-touch-icon.webp
+resized favicon-16.png to (16, 16) (925 bytes) + favicon-16.webp
+resized favicon-32.png to (32, 32) (2363 bytes) + favicon-32.webp
+resized icon-192.png to (192, 192) (23660 bytes) + icon-192.webp
+resized icon-512.png to (512, 512) (84970 bytes) + icon-512.webp
+KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
+KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
+KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
+resized images/players/caitlin-clark-portrait-v2.avif to (640, 650) (20536 bytes) + caitlin-clark-portrait-v2.webp
