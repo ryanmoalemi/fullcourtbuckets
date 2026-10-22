@@ -1,9 +1,9 @@
 {
   "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 3 recap replaces this). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "Finals Game 3 preview: Valkyries at Dream, series tied 1-1. Tip-off Wed, Oct 21, 5 p.m. PT, State Farm Arena",
-  "url": "/news/finals-game-3-preview-valkyries-dream/",
+  "text": "LIVE: Finals Game 3 play-by-play, Valkyries at Dream (series tied 1-1), State Farm Arena",
+  "url": "/wnba/finals/2026/game-3/play-by-play/",
   "date": "2026-10-21",
-  "expires": "2026-10-21T17:00:00-07:00",
+  "expires": "2026-10-22T03:00:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"
