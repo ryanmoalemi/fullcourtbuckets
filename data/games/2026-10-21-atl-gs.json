@@ -5,11 +5,11 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T00:42:03+00:00",
+ "checked_at": "2026-10-22T00:42:44+00:00",
  "period": 2,
- "clock": "9:50",
+ "clock": "9:32",
  "last_play_period": 2,
- "last_play_clock": "9:50",
+ "last_play_clock": "9:32",
  "away": {
   "abbreviation": "ATL",
   "score": 23,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 17,
-  "feed_score": 17
+  "score": 18,
+  "feed_score": 18
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 0,
-   "home": 2
+   "home": 3
   }
  ],
  "players": [],
@@ -949,7 +949,7 @@
   {
    "order": 77,
    "period": 1,
-   "clock": "3:22",
+   "clock": "3:23",
    "type": "Defensive Rebound",
    "text": "Kayla Thornton defensive rebound",
    "away_score": 9,
@@ -1497,6 +1497,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 123,
+   "period": 2,
+   "clock": "9:50",
+   "type": "Free Throw - 1 of 1",
+   "text": "Tiffany Hayes makes free throw 1 of 1",
+   "away_score": 23,
+   "home_score": 18,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 124,
+   "period": 2,
+   "clock": "9:35",
+   "type": "Layup Shot",
+   "text": "Naz Hillmon misses layup",
+   "away_score": 23,
+   "home_score": 18,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 125,
+   "period": 2,
+   "clock": "9:32",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 23,
+   "home_score": 18,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
