@@ -1,0 +1,125 @@
+game_no,level,season,team,date,opponent,min,pts,reb,oreb,dreb,ast,stl,blk,tov,fgm,fga,fg3m,fg3a,ftm,fta,ts_pct,double_double,reb_10_plus,source
+1,College,2020-21,Maryland,2020-11-27,vs Davidson,15,20,9,4,5,0,1,2,1,7,10,0,0,6,9,71.6,0,0,https://umterps.com/sports/womens-basketball/stats/2020/davidson/boxscore/12076
+2,College,2020-21,Maryland,2020-11-28,vs Missouri St.,29,15,9,4,5,3,2,3,3,6,10,0,0,3,6,59.3,0,0,https://umterps.com/sports/womens-basketball/stats/2020/missouri-st-/boxscore/12077
+3,College,2020-21,Maryland,2020-11-29,vs Arkansas,17,16,8,6,2,2,1,1,3,5,12,0,0,6,7,53.1,0,0,https://umterps.com/sports/womens-basketball/stats/2020/arkansas/boxscore/12078
+4,College,2020-21,Maryland,2020-12-03,Towson,3,2,2,0,2,0,0,0,1,1,1,0,0,0,0,100.0,0,0,https://umterps.com/sports/womens-basketball/stats/2020/towson/boxscore/12079
+5,College,2020-21,Maryland,2021-02-23,Iowa,11,8,3,1,2,1,0,1,0,2,2,0,0,4,6,86.2,0,0,https://umterps.com/sports/womens-basketball/stats/2020/iowa/boxscore/12117
+6,College,2020-21,Maryland,2021-02-25,at Purdue,19,17,9,3,6,1,2,3,3,6,10,1,2,4,5,69.7,0,0,https://umterps.com/sports/womens-basketball/stats/2020/purdue/boxscore/12382
+7,College,2020-21,Maryland,2021-02-28,at Northwestern,13,4,3,2,1,0,0,1,1,1,6,0,1,2,2,29.1,0,0,https://umterps.com/sports/womens-basketball/stats/2020/northwestern/boxscore/12127
+8,College,2020-21,Maryland,2021-03-04,at Michigan,15,6,7,1,6,0,0,2,2,1,4,0,0,4,8,39.9,0,0,https://umterps.com/sports/womens-basketball/stats/2020/michigan/boxscore/12121
+9,College,2020-21,Maryland,2021-03-06,Penn St.,16,11,4,2,2,2,0,1,2,3,5,0,1,5,6,72.0,0,0,https://umterps.com/sports/womens-basketball/stats/2020/penn-st-/boxscore/12128
+10,College,2020-21,Maryland,2021-03-11,vs Nebraska,10,5,3,2,1,0,0,1,0,2,4,0,0,1,2,51.2,0,0,https://umterps.com/sports/womens-basketball/stats/2020/nebraska/boxscore/12129
+11,College,2020-21,Maryland,2021-03-12,vs Northwestern,22,10,11,1,10,2,2,2,2,4,9,0,0,2,3,48.4,1,1,https://umterps.com/sports/womens-basketball/stats/2020/northwestern/boxscore/12384
+12,College,2020-21,Maryland,2021-03-13,vs Iowa,16,6,6,3,3,2,1,0,1,2,8,0,0,2,6,28.2,0,0,https://umterps.com/sports/womens-basketball/stats/2020/iowa/boxscore/12385
+13,College,2020-21,Maryland,2021-03-22,vs Mount St. Mary's,10,11,6,4,2,0,0,1,1,2,8,0,0,7,9,46.0,0,0,https://umterps.com/sports/womens-basketball/stats/2020/mount-st-mary-s/boxscore/12130
+14,College,2020-21,Maryland,2021-03-24,vs Alabama,19,19,5,3,2,2,0,1,0,8,12,0,1,3,4,69.0,0,0,https://umterps.com/sports/womens-basketball/stats/2020/alabama/boxscore/12394
+15,College,2020-21,Maryland,2021-03-28,vs Texas,10,0,5,4,1,2,0,0,2,0,6,0,1,0,0,0.0,0,0,https://umterps.com/sports/womens-basketball/stats/2020/texas/boxscore/12131
+16,College,2021-22,Maryland,2021-11-09,Longwood,31,21,14,8,6,0,1,1,2,8,18,0,0,5,7,49.8,1,1,https://umterps.com/sports/womens-basketball/stats/2021/longwood/boxscore/12548
+17,College,2021-22,Maryland,2021-11-12,Villanova,23,23,5,3,2,0,1,0,3,10,15,0,0,3,3,70.5,0,0,https://umterps.com/sports/womens-basketball/stats/2021/villanova/boxscore/12549
+18,College,2021-22,Maryland,2021-11-14,at James Madison,24,12,14,8,6,1,4,0,3,3,10,0,0,6,8,44.4,1,1,https://umterps.com/sports/womens-basketball/stats/2021/james-madison/boxscore/12550
+19,College,2021-22,Maryland,2021-11-16,Mount St. Mary's,24,18,15,7,8,3,4,1,1,8,12,0,0,2,4,65.4,1,1,https://umterps.com/sports/womens-basketball/stats/2021/mount-st-mary-s/boxscore/12551
+20,College,2021-22,Maryland,2021-11-18,UNCW,24,23,12,9,3,3,5,2,1,9,13,0,0,5,7,71.5,1,1,https://umterps.com/sports/womens-basketball/stats/2021/uncw/boxscore/12552
+21,College,2021-22,Maryland,2021-11-21,Baylor,19,17,9,5,4,0,2,0,2,7,11,0,1,3,3,69.0,0,0,https://umterps.com/sports/womens-basketball/stats/2021/baylor/boxscore/12553
+22,College,2021-22,Maryland,2021-11-25,vs NC State,27,24,9,3,6,0,2,0,4,9,14,1,2,5,7,70.3,0,0,https://umterps.com/sports/womens-basketball/stats/2021/nc-state/boxscore/12546
+23,College,2021-22,Maryland,2021-11-27,vs Stanford,15,6,5,3,2,2,2,0,0,2,13,0,1,2,6,19.2,0,0,https://umterps.com/sports/womens-basketball/stats/2021/stanford/boxscore/12547
+24,College,2021-22,Maryland,2021-12-02,Miami (FL),33,26,15,8,7,0,0,0,5,10,14,0,0,6,12,67.4,1,1,https://umterps.com/sports/womens-basketball/stats/2021/miami-fl-/boxscore/12584
+25,College,2021-22,Maryland,2021-12-05,at Rutgers,22,18,6,2,4,2,0,0,1,7,10,0,0,4,8,66.6,0,0,https://umterps.com/sports/womens-basketball/stats/2021/rutgers/boxscore/12647
+26,College,2021-22,Maryland,2021-12-08,Purdue,26,15,8,3,5,3,1,0,2,4,10,0,0,7,11,50.5,0,0,https://umterps.com/sports/womens-basketball/stats/2021/purdue/boxscore/12648
+27,College,2021-22,Maryland,2021-12-12,at South Carolina,31,20,10,3,7,2,1,3,1,7,19,0,0,6,9,43.6,1,1,https://umterps.com/sports/womens-basketball/stats/2021/south-carolina/boxscore/12554
+28,College,2021-22,Maryland,2021-12-21,at Coppin St.,25,12,14,5,9,2,1,1,2,4,12,0,1,4,8,38.7,1,1,https://umterps.com/sports/womens-basketball/stats/2021/coppin-st-/boxscore/12555
+29,College,2021-22,Maryland,2022-01-02,at Indiana,35,22,12,6,6,0,2,3,3,8,16,0,0,6,7,57.7,1,1,https://umterps.com/sports/womens-basketball/stats/2021/indiana/boxscore/12650
+30,College,2021-22,Maryland,2022-01-06,Penn St.,23,15,14,8,6,2,1,2,1,6,14,0,0,3,4,47.6,1,1,https://umterps.com/sports/womens-basketball/stats/2021/penn-st-/boxscore/12651
+31,College,2021-22,Maryland,2022-01-09,at Minnesota,21,19,10,6,4,0,3,0,1,9,11,0,0,1,3,77.1,1,1,https://umterps.com/sports/womens-basketball/stats/2021/minnesota/boxscore/12652
+32,College,2021-22,Maryland,2022-01-16,Michigan,29,9,10,4,6,3,3,2,4,2,13,0,2,5,5,29.6,0,1,https://umterps.com/sports/womens-basketball/stats/2021/michigan/boxscore/12653
+33,College,2021-22,Maryland,2022-01-20,at Ohio St.,27,22,11,6,5,1,1,2,2,7,12,0,0,8,8,70.9,1,1,https://umterps.com/sports/womens-basketball/stats/2021/ohio-st-/boxscore/12654
+34,College,2021-22,Maryland,2022-01-23,Northwestern,27,9,8,2,6,2,2,1,1,4,7,0,0,1,2,57.1,0,0,https://umterps.com/sports/womens-basketball/stats/2021/northwestern/boxscore/12655
+35,College,2021-22,Maryland,2022-01-27,Rutgers,22,14,12,8,4,1,1,1,6,5,11,0,0,4,8,48.2,1,1,https://umterps.com/sports/womens-basketball/stats/2021/rutgers/boxscore/12656
+36,College,2021-22,Maryland,2022-01-30,at Penn St.,23,18,4,3,1,2,1,1,1,8,13,0,0,2,4,61.0,0,0,https://umterps.com/sports/womens-basketball/stats/2021/penn-st-/boxscore/12657
+37,College,2021-22,Maryland,2022-02-03,at Michigan St.,26,25,9,6,3,0,0,1,2,9,18,0,0,7,11,54.7,0,0,https://umterps.com/sports/womens-basketball/stats/2021/michigan-st-/boxscore/12658
+38,College,2021-22,Maryland,2022-02-06,Nebraska,26,15,16,10,6,4,2,1,5,6,14,0,0,3,7,43.9,1,1,https://umterps.com/sports/womens-basketball/stats/2021/nebraska/boxscore/12659
+39,College,2021-22,Maryland,2022-02-09,Wisconsin,32,19,9,6,3,2,1,3,3,7,12,0,1,5,9,59.5,0,0,https://umterps.com/sports/womens-basketball/stats/2021/wisconsin/boxscore/12660
+40,College,2021-22,Maryland,2022-02-14,at Iowa,33,25,13,6,7,2,2,2,5,9,15,0,1,7,11,63.0,1,1,https://umterps.com/sports/womens-basketball/stats/2021/iowa/boxscore/12661
+41,College,2021-22,Maryland,2022-02-17,Ohio St.,26,21,15,6,9,1,0,2,2,6,14,0,0,9,10,57.1,1,1,https://umterps.com/sports/womens-basketball/stats/2021/ohio-st-/boxscore/12662
+42,College,2021-22,Maryland,2022-02-20,at Michigan,14,6,5,1,4,1,1,1,6,2,7,0,0,2,2,38.1,0,0,https://umterps.com/sports/womens-basketball/stats/2021/michigan/boxscore/12663
+43,College,2021-22,Maryland,2022-02-25,Indiana,31,20,16,8,8,2,1,1,3,9,21,0,0,2,4,43.9,1,1,https://umterps.com/sports/womens-basketball/stats/2021/indiana/boxscore/12664
+44,College,2021-22,Maryland,2022-03-04,vs Indiana,28,14,13,5,8,3,4,0,4,5,11,0,1,4,5,53.0,1,1,https://umterps.com/sports/womens-basketball/stats/2021/indiana/boxscore/12966
+45,College,2021-22,Maryland,2022-03-18,Delaware,27,15,9,3,6,1,0,1,1,5,12,0,0,5,5,52.8,0,0,https://umterps.com/sports/womens-basketball/stats/2021/delaware/boxscore/12706
+46,College,2021-22,Maryland,2022-03-20,FGCU,22,21,9,3,6,2,1,1,3,5,6,0,0,11,14,86.3,0,0,https://umterps.com/sports/womens-basketball/stats/2021/fgcu/boxscore/12970
+47,College,2021-22,Maryland,2022-03-25,vs Stanford,30,25,9,5,4,1,3,3,1,7,16,1,1,10,12,58.7,0,0,https://umterps.com/sports/womens-basketball/stats/2021/stanford/boxscore/12707
+48,College,2022-23,LSU,2022-11-07,Bellarmine,23,31,13,5,8,2,4,2,0,11,14,0,0,9,15,75.2,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+49,College,2022-23,LSU,2022-11-11,Mississippi Val.,23,16,15,5,10,5,4,2,2,5,11,0,1,6,7,56.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+50,College,2022-23,LSU,2022-11-13,Western Caro.,21,17,15,5,10,2,1,2,0,8,12,0,0,1,3,63.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+51,College,2022-23,LSU,2022-11-16,Houston Christian,32,29,16,7,9,1,1,2,2,13,23,0,0,3,4,58.6,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+52,College,2022-23,LSU,2022-11-20,Northwestern St.,28,23,19,10,9,4,3,2,1,10,15,0,0,3,5,66.9,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+53,College,2022-23,LSU,2022-11-24,vs George Mason,36,21,19,8,11,3,1,1,1,7,12,0,1,7,9,65.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+54,College,2022-23,LSU,2022-11-26,vs UAB,28,25,10,2,8,3,1,1,2,11,15,0,0,3,7,69.1,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+55,College,2022-23,LSU,2022-11-29,Southeastern La.,40,25,11,8,3,3,3,0,3,10,20,0,0,5,9,52.2,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+56,College,2022-23,LSU,2022-12-04,at Tulane,38,21,10,2,8,5,2,3,2,7,10,0,0,7,13,66.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+57,College,2022-23,LSU,2022-12-14,Lamar University,35,32,15,7,8,4,4,1,2,13,15,0,0,6,10,82.5,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+58,College,2022-23,LSU,2022-12-17,vs Montana St.,30,30,13,3,10,2,1,1,2,10,16,0,0,10,12,70.5,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+59,College,2022-23,LSU,2022-12-18,vs Oregon St.,36,25,20,7,13,1,2,1,4,10,18,0,1,5,6,60.6,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+60,College,2022-23,LSU,2022-12-29,at Arkansas,30,19,16,7,9,1,0,1,2,6,16,0,0,7,8,48.7,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+61,College,2022-23,LSU,2023-01-01,Vanderbilt,35,21,17,8,9,1,0,1,6,8,18,0,0,5,9,47.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+62,College,2022-23,LSU,2023-01-05,Texas A&M,33,26,28,12,16,0,2,2,1,8,15,1,1,9,13,62.7,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+63,College,2022-23,LSU,2023-01-08,at Kentucky,36,26,13,4,9,3,2,3,3,5,14,0,0,16,17,60.5,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+64,College,2022-23,LSU,2023-01-12,at Missouri,28,20,12,4,8,2,2,2,2,8,14,0,0,4,6,60.1,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+65,College,2022-23,LSU,2023-01-15,Auburn,36,23,15,5,10,2,1,0,0,7,14,0,0,9,12,59.6,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+66,College,2022-23,LSU,2023-01-19,Arkansas,36,30,19,13,6,3,1,1,3,10,21,0,0,10,17,52.7,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+67,College,2022-23,LSU,2023-01-23,at Alabama,33,14,14,4,10,2,1,2,4,4,11,0,0,6,10,45.5,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+68,College,2022-23,LSU,2023-01-30,Tennessee,37,18,17,7,10,1,3,1,2,5,14,0,0,8,9,50.1,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+69,College,2022-23,LSU,2023-02-02,Georgia,41,23,14,11,3,2,3,1,5,7,17,0,0,9,15,48.7,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+70,College,2022-23,LSU,2023-02-05,at Texas A&M,38,26,22,11,11,2,1,0,2,7,15,0,0,12,16,59.0,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+71,College,2022-23,LSU,2023-02-12,at South Carolina,33,16,4,0,4,2,1,4,1,5,15,0,0,6,9,42.2,0,0,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+72,College,2022-23,LSU,2023-02-16,Ole Miss,40,36,20,8,12,0,2,0,1,12,21,0,1,12,14,66.3,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+73,College,2022-23,LSU,2023-02-19,at Florida,36,25,16,3,13,5,2,3,3,12,16,0,0,1,2,74.1,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+74,College,2022-23,LSU,2023-02-23,at Vanderbilt,37,23,18,5,13,1,1,3,7,9,14,0,0,5,5,71.0,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+75,College,2022-23,LSU,2023-02-26,Mississippi St.,38,23,26,10,16,1,0,0,0,8,18,0,1,7,9,52.4,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+76,College,2022-23,LSU,2023-03-03,vs Georgia,20,15,6,4,2,1,0,0,2,4,9,0,0,7,9,57.9,0,0,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+77,College,2022-23,LSU,2023-03-04,vs Tennessee,31,22,11,6,5,1,1,0,6,8,16,0,0,6,8,56.4,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+78,College,2022-23,LSU,2023-03-17,Hawaii,36,34,15,6,9,2,3,3,0,13,20,0,0,8,12,67.2,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+79,College,2022-23,LSU,2023-03-19,Michigan,37,25,24,14,10,4,3,6,1,8,23,0,0,9,11,44.9,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+80,College,2022-23,LSU,2023-03-24,vs Utah,31,17,12,5,7,1,1,3,3,6,12,0,0,5,8,54.8,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+81,College,2022-23,LSU,2023-03-26,vs Miami (FL),38,13,18,4,14,4,3,2,4,3,15,0,0,7,10,33.5,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+82,College,2022-23,LSU,2023-03-31,vs Virginia Tech,38,24,12,6,6,0,3,0,1,11,19,0,0,2,2,60.4,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+83,College,2022-23,LSU,2023-04-02,vs Iowa,29,15,10,6,4,5,3,1,0,5,12,0,0,5,8,48.3,1,1,https://static.lsusports.net/assets/docs/wb/23stats/23stats.pdf
+84,College,2023-24,LSU,2023-11-06,Colorado,30,15,12,5,7,1,0,1,2,6,15,0,0,3,5,43.6,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls01.pdf
+85,College,2023-24,LSU,2023-11-09,Queens (NC),25,28,14,5,9,1,2,1,0,9,15,0,1,10,11,70.6,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls02.pdf
+86,College,2023-24,LSU,2023-11-12,Mississippi Val.,20,14,10,5,5,4,2,1,3,3,10,0,3,8,9,50.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls03.pdf
+87,College,2023-24,LSU,2023-11-14,Kent St.,13,11,5,3,2,0,0,0,0,5,9,0,1,1,2,55.7,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls04.pdf
+88,College,2023-24,LSU,2023-11-30,Virginia Tech,29,19,9,6,3,2,1,0,4,5,10,0,0,9,16,55.8,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls09.pdf
+89,College,2023-24,LSU,2023-12-10,Louisiana,32,20,9,3,6,2,1,1,2,5,10,0,1,10,18,55.8,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls10.pdf
+90,College,2023-24,LSU,2023-12-12,McNeese,22,21,11,6,5,3,6,0,3,5,7,0,0,11,13,82.5,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls11.pdf
+91,College,2023-24,LSU,2023-12-17,Northwestern St.,27,25,14,6,8,1,3,0,2,10,13,0,0,5,6,79.9,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls12.pdf
+92,College,2023-24,LSU,2023-12-20,at Coppin St.,32,26,6,3,3,2,5,1,1,11,15,0,0,4,6,73.7,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls13.pdf
+93,College,2023-24,LSU,2023-12-30,Jacksonville,28,17,20,6,14,3,3,1,5,3,9,0,0,11,14,56.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls14.pdf
+94,College,2023-24,LSU,2024-01-04,Missouri,37,21,13,9,4,4,1,1,1,7,16,0,0,7,8,53.8,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls15.pdf
+95,College,2023-24,LSU,2024-01-07,at Ole Miss,38,21,9,6,3,4,3,0,1,7,17,0,0,7,10,49.1,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls16.pdf
+96,College,2023-24,LSU,2024-01-11,Texas A&M,32,20,18,7,11,7,1,2,2,4,13,0,0,12,14,52.2,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls17.pdf
+97,College,2023-24,LSU,2024-01-14,at Auburn,37,24,11,6,5,0,0,1,2,8,15,0,0,8,12,59.2,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls18.pdf
+98,College,2023-24,LSU,2024-01-18,at Alabama,28,20,17,11,6,0,2,1,4,7,16,0,0,6,7,52.4,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls19.pdf
+99,College,2023-24,LSU,2024-01-21,Arkansas,30,16,17,6,11,0,0,1,4,6,10,1,1,3,6,63.3,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls20.pdf
+100,College,2023-24,LSU,2024-01-25,South Carolina,28,15,8,3,5,4,1,2,3,7,15,0,0,1,1,48.6,0,0,https://static.lsusports.net/assets/docs/wb/24stats/ls21.pdf
+101,College,2023-24,LSU,2024-01-29,at Mississippi St.,36,20,18,10,8,2,5,0,3,7,17,0,0,6,8,48.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls22.pdf
+102,College,2023-24,LSU,2024-02-04,Florida,31,14,10,2,8,6,1,1,1,4,6,0,0,6,8,73.5,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls23.pdf
+103,College,2023-24,LSU,2024-02-08,at Vanderbilt,24,15,16,7,9,1,1,1,3,4,7,0,0,7,8,71.3,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls24.pdf
+104,College,2023-24,LSU,2024-02-11,Alabama,34,27,19,8,11,6,2,1,4,11,20,0,0,5,9,56.3,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls25.pdf
+105,College,2023-24,LSU,2024-02-19,at Texas A&M,30,13,10,2,8,2,4,0,2,5,10,0,0,3,3,57.4,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls26.pdf
+106,College,2023-24,LSU,2024-02-22,Auburn,39,25,20,7,13,2,0,1,3,8,13,0,0,9,11,70.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls27.pdf
+107,College,2023-24,LSU,2024-02-25,at Tennessee,37,11,15,7,8,3,0,0,1,4,18,0,0,3,6,26.6,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls28.pdf
+108,College,2023-24,LSU,2024-02-29,at Georgia,33,17,15,3,12,2,0,1,1,8,15,0,0,1,1,55.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls29.pdf
+109,College,2023-24,LSU,2024-03-03,Kentucky,31,22,14,5,9,1,3,5,6,10,18,0,1,2,2,58.3,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls30.pdf
+110,College,2023-24,LSU,2024-03-08,Auburn,32,18,11,4,7,3,2,0,2,6,14,0,0,6,6,54.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls31.pdf
+111,College,2023-24,LSU,2024-03-09,Ole Miss,34,21,17,6,11,0,2,1,3,9,17,0,0,3,7,52.3,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls32.pdf
+112,College,2023-24,LSU,2024-03-10,at South Carolina,34,15,13,7,6,2,0,0,2,7,19,0,1,1,2,37.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls33.pdf
+113,College,2023-24,LSU,2024-03-22,Rice,37,10,19,6,13,0,3,1,6,1,7,0,0,8,12,40.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls34.pdf
+114,College,2023-24,LSU,2024-03-24,Middle Tenn.,35,20,11,3,8,3,2,1,2,6,17,0,0,8,10,46.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls35.pdf
+115,College,2023-24,LSU,2024-03-30,at UCLA,30,16,11,1,10,1,4,2,0,5,12,0,0,6,7,53.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls36.pdf
+116,College,2023-24,LSU,2024-04-01,at Iowa,35,17,20,10,10,4,2,3,2,7,21,0,0,3,8,34.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls37.pdf
+117,WNBA playoffs,2026,Atlanta Dream,2026-09-27,vs WSH,30,13,12,3,9,1,2,1,1,4,15,1,2,4,5,37.8,1,1,https://www.wnba.com/game/1042600131
+118,WNBA playoffs,2026,Atlanta Dream,2026-09-30,at WSH,28,15,7,1,6,2,0,3,1,4,8,0,4,7,8,65.1,0,0,https://www.wnba.com/game/1042600132
+119,WNBA playoffs,2026,Atlanta Dream,2026-10-04,vs NY,34,17,7,4,3,2,4,3,4,6,10,1,1,4,6,67.2,0,0,https://www.wnba.com/game/1042600201
+120,WNBA playoffs,2026,Atlanta Dream,2026-10-07,vs NY,39,23,7,5,2,2,1,2,2,8,16,1,2,6,6,61.7,0,0,https://www.wnba.com/game/1042600202
+121,WNBA playoffs,2026,Atlanta Dream,2026-10-09,at NY,37,22,9,5,4,3,1,2,3,7,18,2,4,6,6,53.3,0,0,https://www.wnba.com/game/1042600203
+122,WNBA playoffs,2026,Atlanta Dream,2026-10-17,at GS,35,14,12,5,7,0,2,1,4,5,11,0,1,4,7,49.7,1,1,https://www.wnba.com/game/1042600301
+123,WNBA playoffs,2026,Atlanta Dream,2026-10-19,at GS,34,30,16,4,12,3,1,2,2,10,16,1,1,9,11,72.0,1,1,https://www.wnba.com/game/1042600302
+124,WNBA playoffs,2026,Atlanta Dream,2026-10-21,vs GS,34,21,12,2,10,3,3,0,2,7,12,2,2,5,5,73.9,1,1,https://www.wnba.com/game/1042600303

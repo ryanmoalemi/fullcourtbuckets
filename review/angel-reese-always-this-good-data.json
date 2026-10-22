@@ -1,0 +1,95 @@
+{
+  "scorecard": {
+    "overall": 9,
+    "max": 10,
+    "stars": 4.5,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "All 9 X posts re-read via X API: text, author, time (Salao 5:44 PM PT) confirmed, counts updated to 9:41 PM PT snapshot. All 8 playoff rows match WNBA.com box scores (155 pts, 51-106 FG, 45-54 FT, TS 59.7). TS fixed (2024 46.4). Headline 'every full season since high school' is true only with the stated definition (excludes 15-game freshman year); WNBA regular-season totals for 2024 and 2026 TS still corroborated, not from an official totals export."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "124-game box score ledger with per-game official links, first-three-seasons rebounding comparison, season-half shooting split, claim-by-claim test of real replies; none in top results."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 9,
+        "max": 10,
+        "reason": "116 college box scores plus 8 WNBA box scores hand-logged, CSV/JSON downloads, custom chart."
+      },
+      {
+        "name": "Originality",
+        "score": 9,
+        "max": 10,
+        "reason": "Own angle: tests a viral post and its replies against a self-built dataset."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline and author page; no first-hand interview or quote."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Career table directly under byline; ledger next; fine print at bottom. Title and H1 match; hook is pointed but defined in the first line."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "AI disclosure, methods, data dictionary, source conflicts (829 vs 830, LSU rebound) shown, snapshot time for X counts."
+      },
+      {
+        "name": "Writing craft",
+        "score": 9,
+        "max": 10,
+        "reason": "Plain voice, real subheads, no em dashes, links open in new tab."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "Answers the 'overnight' question with data and says what the numbers can't prove."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific, opinionated; restraint lines added without hedging the whole piece."
+      }
+    ],
+    "info_gain": [
+      "124-game rebounding ledger, each row linked to its official box score",
+      "Reese vs every 2009+ debut over first three WNBA seasons",
+      "College season-half shooting split vs 2026 playoff rise",
+      "Real replies tested claim by claim with verified posts"
+    ],
+    "ai_flags": [
+      "'The best-supported read' -> 'The data fits this, but can't prove it'",
+      "'The numbers don't back this one' -> 'Box scores can't settle this'",
+      "'It doesn't explain her own rise' -> 'both can be true, these numbers can't separate the two'"
+    ]
+  },
+  "unique": [
+    "124-game rebounding ledger, each row linked to its official box score",
+    "Reese vs every 2009+ debut over first three WNBA seasons",
+    "College season-half shooting split vs 2026 playoff rise",
+    "Real replies tested claim by claim with verified posts"
+  ],
+  "unverified": [
+    "WNBA 2024 and 2026 regular-season FGA/FTA totals (TS 46.4, 52.4) corroborated by secondary tables, not an official totals export",
+    "Maryland double-double counts reconstructed from box scores",
+    "High school: only senior season and LSU-bio career averages; first three HS seasons not sourced",
+    "Headline 'full season' excludes the injury-shortened 15-game freshman year by definition",
+    "X engagement counts are a 9:41 PM PT Oct. 21 snapshot and will change",
+    "Game 3 audience not yet released"
+  ]
+}
