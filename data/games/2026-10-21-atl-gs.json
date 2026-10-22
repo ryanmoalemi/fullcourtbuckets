@@ -5,20 +5,20 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T01:46:16+00:00",
+ "checked_at": "2026-10-22T01:50:48+00:00",
  "period": 3,
- "clock": "1:19",
+ "clock": "0.0",
  "last_play_period": 3,
- "last_play_clock": "1:40",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 66,
-  "feed_score": 66
+  "score": 71,
+  "feed_score": 71
  },
  "home": {
   "abbreviation": "GS",
-  "score": 55,
-  "feed_score": 55
+  "score": 57,
+  "feed_score": 57
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 20,
-   "home": 15
+   "away": 25,
+   "home": 17
   }
  ],
  "players": [],
@@ -3246,7 +3246,7 @@
   {
    "order": 268,
    "period": 3,
-   "clock": "4:03",
+   "clock": "4:05",
    "type": "Defensive Rebound",
    "text": "Aminata Gueye defensive rebound",
    "away_score": 59,
@@ -3378,7 +3378,7 @@
   {
    "order": 279,
    "period": 3,
-   "clock": "2:51",
+   "clock": "2:52",
    "type": "Jump Shot",
    "text": "Aminata Gueye misses 14-foot jumper",
    "away_score": 62,
@@ -3390,7 +3390,7 @@
   {
    "order": 280,
    "period": 3,
-   "clock": "2:49",
+   "clock": "2:50",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 62,
@@ -3462,7 +3462,7 @@
   {
    "order": 286,
    "period": 3,
-   "clock": "2:17",
+   "clock": "2:21",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 64,
@@ -3475,8 +3475,8 @@
    "order": 287,
    "period": 3,
    "clock": "2:07",
-   "type": "Turnaround Jump Shot",
-   "text": "DeWanna Bonner makes 11-foot turnaround jump shot (Allisha Gray assists)",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "DeWanna Bonner makes 11-foot two point shot (Allisha Gray assists)",
    "away_score": 66,
    "home_score": 55,
    "scoring_play": true,
@@ -3566,6 +3566,234 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 295,
+   "period": 3,
+   "clock": "1:20",
+   "type": "Turnaround Jump Shot",
+   "text": "Isobel Borlase misses 14-foot turnaround jump shot",
+   "away_score": 66,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 296,
+   "period": 3,
+   "clock": "1:19",
+   "type": "Defensive Rebound",
+   "text": "Golden State Valkyries defensive team rebound",
+   "away_score": 66,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 297,
+   "period": 3,
+   "clock": "1:19",
+   "type": "Loose Ball Foul",
+   "text": "Isobel Borlase loose ball foul",
+   "away_score": 66,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 298,
+   "period": 3,
+   "clock": "1:19",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Rhyne Howard",
+   "away_score": 66,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 299,
+   "period": 3,
+   "clock": "1:07",
+   "type": "Turnaround Jump Shot",
+   "text": "Janelle Salaun makes 14-foot turnaround jump shot (Kaitlyn Chen assists)",
+   "away_score": 66,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 300,
+   "period": 3,
+   "clock": "56.6",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Allisha Gray assists)",
+   "away_score": 68,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 301,
+   "period": 3,
+   "clock": "48.0",
+   "type": "Offensive Foul",
+   "text": "Gabby Williams offensive foul",
+   "away_score": 68,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 302,
+   "period": 3,
+   "clock": "48.0",
+   "type": "Offensive Foul Turnover",
+   "text": "Gabby Williams offensive foul turnover",
+   "away_score": 68,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 303,
+   "period": 3,
+   "clock": "48.0",
+   "type": "Technical Foul",
+   "text": "technical foul",
+   "away_score": 68,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
+  },
+  {
+   "order": 304,
+   "period": 3,
+   "clock": "48.0",
+   "type": "Free Throw - Technical",
+   "text": "Jordin Canada makes technical free throw",
+   "away_score": 69,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 305,
+   "period": 3,
+   "clock": "34.1",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 4-foot layup (Allisha Gray assists)",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 306,
+   "period": 3,
+   "clock": "34.1",
+   "type": "Shooting Foul",
+   "text": "Kaitlyn Chen shooting foul",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 307,
+   "period": 3,
+   "clock": "34.1",
+   "type": "Substitution",
+   "text": "Veronica Burton enters the game for Kaitlyn Chen",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 308,
+   "period": 3,
+   "clock": "34.1",
+   "type": "Free Throw - 1 of 1",
+   "text": "Naz Hillmon misses free throw 1 of 1",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 309,
+   "period": 3,
+   "clock": "31.4",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 310,
+   "period": 3,
+   "clock": "13.6",
+   "type": "Traveling",
+   "text": "Kaila Charles traveling turnover",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 311,
+   "period": 3,
+   "clock": "1.1",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada misses driving layup",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 312,
+   "period": 3,
+   "clock": "0.0",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 313,
+   "period": 3,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 3rd Quarter",
+   "away_score": 71,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
