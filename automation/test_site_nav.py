@@ -160,7 +160,8 @@ class SiteNavTests(unittest.TestCase):
         for path in pages:
             html = path.read_text(encoding='utf-8')
             rel = path.relative_to(ROOT).as_posix()
-            if 'class="footer-links"' in html and 'href="/assets/site-nav.css"' not in html:
+            # A ?v= cache-buster (build_where_to_watch.py) still loads the shared stylesheet.
+            if 'class="footer-links"' in html and not re.search(r'href="/assets/site-nav\.css(?:\?v=[0-9a-f]+)?"', html):
                 offenders.append(rel + ' missing /assets/site-nav.css')
             for match in site_nav._CHROME_REGION_RE.finditer(html):
                 for tag in site_nav._ANCHOR_RE.findall(match.group(0)):

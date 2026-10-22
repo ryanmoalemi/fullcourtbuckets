@@ -175,10 +175,22 @@ class RelationshipFaqTests(unittest.TestCase):
         self.assertNotIn('Who is Angel Reese dating?', angel_questions)
         self.assertNotIn('Wendell Carter', ' '.join(item['answer'] for item in angel['items']))
         edwards = _faq_json('aaliyah-edwards')
-        dating = next(item['answer'] for item in edwards['items'] if item['question'] == 'Who is Aaliyah Edwards dating?')
-        married = next(item['answer'] for item in edwards['items'] if item['question'] == 'Is Aaliyah Edwards married?')
-        self.assertIn('has not widely publicized a confirmed dating relationship', dating)
-        self.assertIn('no widely reported public record', married)
+        # Without a Couples entry, the FAQ either leaves relationship questions out
+        # or keeps the cautious no-public-record wording. It never names a partner.
+        answers = {item['question']: item['answer'] for item in edwards['items']}
+        dating = answers.get('Who is Aaliyah Edwards dating?')
+        married = answers.get('Is Aaliyah Edwards married?')
+        if dating is not None:
+            self.assertIn('has not widely publicized a confirmed dating relationship', dating)
+        if married is not None:
+            self.assertIn('no widely reported public record', married)
+        for question, answer in answers.items():
+            if not build_couples.relationship_question_kind(question):
+                continue
+            self.assertTrue(
+                'not widely publicized' in answer or 'no widely reported public record' in answer,
+                question,
+            )
         megan = _faq_json('megan-dileo')
         questions = [item['question'] for item in megan['items']]
         self.assertFalse(any(build_couples.relationship_question_kind(question) for question in questions))
