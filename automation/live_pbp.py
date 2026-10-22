@@ -36,6 +36,9 @@ def main():
     plays = normalize_plays(client.all('plays', {'game_id': feed_id}))
     away_t, home_t = abbr(game.get('visitor_team')) or 'ATL', abbr(game.get('home_team')) or 'GS'
     # File keeps ATL as 'away' for the whole series; map feed scores by team, not by side.
+    if away_t != 'ATL':  # feed sides are GS@ATL (Atlanta home games); file keeps ATL as 'away'
+        for p in plays:
+            p['away_score'], p['home_score'] = p.get('home_score'), p.get('away_score')
     atl_feed, gs_feed = (game.get('away_score'), game.get('home_score')) if away_t == 'ATL' else (game.get('home_score'), game.get('away_score'))
     a = h = 0; per = {}
     for p in plays:
