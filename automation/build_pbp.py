@@ -134,6 +134,13 @@ def build(game_id, game_json=None, today=None, live=False):
     gj = game_json or g.get('game_json')
     if gj:
         d = json.loads((ROOT / gj).read_text())
+        if d.get('away', {}).get('abbreviation') == H and d.get('home', {}).get('abbreviation') == A:
+            # Feed sides flipped (e.g. Atlanta home games): keep the series orientation A/H used by the page.
+            d['away'], d['home'] = d['home'], d['away']
+            for p in d.get('plays') or []:
+                p['away_score'], p['home_score'] = p.get('home_score'), p.get('away_score')
+            for q in d.get('periods') or []:
+                q['away'], q['home'] = q.get('home'), q.get('away')
         if str(d.get('espn_game_id')) != str(game_id):
             raise ScoreCheckError(f'{gj} is game {d.get("espn_game_id")}, not {game_id}')
         if d.get('status') == 'live' and live:
