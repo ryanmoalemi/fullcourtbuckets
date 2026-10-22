@@ -65,3 +65,5 @@ My preview picked Atlanta to win Game 1 and Dream +2.5 as a betting lean. Both m
 Game 2 is Monday, Oct. 19, at 5 p.m. PT at Chase Center, on USA Network, CNBC and Peacock.
 
 My pick is Golden State in Game 2. The Valkyries won Game 1 while making just 21% of their threes, because their offensive rebounding and shot blocking didn't depend on shots falling.
+
+TV: NBC · Stream: Peacock
