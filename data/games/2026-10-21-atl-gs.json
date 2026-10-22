@@ -5,20 +5,20 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T01:28:08+00:00",
+ "checked_at": "2026-10-22T01:32:40+00:00",
  "period": 3,
- "clock": "8:01",
+ "clock": "5:25",
  "last_play_period": 3,
- "last_play_clock": "8:01",
+ "last_play_clock": "5:25",
  "away": {
   "abbreviation": "ATL",
-  "score": 48,
-  "feed_score": 48
+  "score": 57,
+  "feed_score": 57
  },
  "home": {
   "abbreviation": "GS",
-  "score": 48,
-  "feed_score": 48
+  "score": 49,
+  "feed_score": 49
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 2,
-   "home": 8
+   "away": 11,
+   "home": 9
   }
  ],
  "players": [],
@@ -2694,7 +2694,7 @@
   {
    "order": 222,
    "period": 3,
-   "clock": "8:37",
+   "clock": "8:39",
    "type": "Bad Pass\nTurnover",
    "text": "Jordin Canada bad pass\nturnover (Cecilia Zandalasini steals)",
    "away_score": 48,
@@ -2718,7 +2718,7 @@
   {
    "order": 224,
    "period": 3,
-   "clock": "8:17",
+   "clock": "8:19",
    "type": "Offensive Rebound",
    "text": "Kayla Thornton offensive rebound",
    "away_score": 48,
@@ -2730,7 +2730,7 @@
   {
    "order": 225,
    "period": 3,
-   "clock": "8:14",
+   "clock": "8:17",
    "type": "Jumpball",
    "text": "Kayla Thornton vs. Rhyne Howard (Naz Hillmon gains possession)",
    "away_score": 48,
@@ -2798,6 +2798,342 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 231,
+   "period": 3,
+   "clock": "8:01",
+   "type": "Free Throw - 2 of 2",
+   "text": "Allisha Gray makes free throw 2 of 2",
+   "away_score": 49,
+   "home_score": 48,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 232,
+   "period": 3,
+   "clock": "7:45",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 49,
+   "home_score": 48,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 233,
+   "period": 3,
+   "clock": "7:45",
+   "type": "Free Throw - 1 of 2",
+   "text": "Cecilia Zandalasini makes free throw 1 of 2",
+   "away_score": 49,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 234,
+   "period": 3,
+   "clock": "7:45",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 49,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 235,
+   "period": 3,
+   "clock": "7:45",
+   "type": "Free Throw - 2 of 2",
+   "text": "Cecilia Zandalasini misses free throw 2 of 2",
+   "away_score": 49,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 236,
+   "period": 3,
+   "clock": "7:42",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 49,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 237,
+   "period": 3,
+   "clock": "7:36",
+   "type": "Layup Driving Reverse",
+   "text": "Rhyne Howard makes two point shot",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 238,
+   "period": 3,
+   "clock": "7:18",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 18-foot pullup jump shot",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 239,
+   "period": 3,
+   "clock": "7:15",
+   "type": "Offensive Rebound",
+   "text": "Gabby Williams offensive rebound",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 240,
+   "period": 3,
+   "clock": "7:00",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini misses 23-foot three point jumper",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 241,
+   "period": 3,
+   "clock": "6:58",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 242,
+   "period": 3,
+   "clock": "6:54",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 243,
+   "period": 3,
+   "clock": "6:51",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 244,
+   "period": 3,
+   "clock": "6:31",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 11-foot pullup jump shot",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 245,
+   "period": 3,
+   "clock": "6:28",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 246,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 51,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 247,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Free Throw - 1 of 2",
+   "text": "Angel Reese makes free throw 1 of 2",
+   "away_score": 52,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 248,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Naz Hillmon",
+   "away_score": 52,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 249,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Substitution",
+   "text": "Kaitlyn Chen enters the game for Veronica Burton",
+   "away_score": 52,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 250,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Cecilia Zandalasini",
+   "away_score": 52,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 251,
+   "period": 3,
+   "clock": "6:23",
+   "type": "Free Throw - 2 of 2",
+   "text": "Angel Reese makes free throw 2 of 2",
+   "away_score": 53,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 252,
+   "period": 3,
+   "clock": "6:08",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "away_score": 53,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 253,
+   "period": 3,
+   "clock": "6:06",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 53,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 254,
+   "period": 3,
+   "clock": "5:55",
+   "type": "Driving Layup Shot",
+   "text": "Isobel Borlase makes driving layup (Angel Reese assists)",
+   "away_score": 55,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 255,
+   "period": 3,
+   "clock": "5:33",
+   "type": "Driving Floating Jump Shot",
+   "text": "Kaitlyn Chen misses driving floating jump shot",
+   "away_score": 55,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 256,
+   "period": 3,
+   "clock": "5:30",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 55,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 257,
+   "period": 3,
+   "clock": "5:25",
+   "type": "No Shot (Default Shot)",
+   "text": "Angel Reese makes 1-foot shot",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 258,
+   "period": 3,
+   "clock": "5:25",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
