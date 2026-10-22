@@ -337,6 +337,14 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "allisha-gray": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Allisha_Gray_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked on dark and light backgrounds; identity confirmed from Commons description (Atlanta Dream #15, July 17, 2024)"
     }
   }
 }
