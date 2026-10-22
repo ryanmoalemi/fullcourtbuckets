@@ -868,6 +868,10 @@ def shell_parts() -> tuple[str, str, str]:
     head_end = shell.index('</head>')
     head = shell[:head_end]
     head = re.sub(r'<script type="application/ld\+json">.*?</script>', '', head, flags=re.S)
+    # The feed link and Pinterest tag are re-added by site_nav.ensure_assets in render();
+    # drop the shell's copies so their position does not depend on the shell's history.
+    head = re.sub(r'<link rel="alternate" type="application/rss\+xml"[^>]*>', '', head)
+    head = re.sub(r'<meta name="p:domain_verify"[^>]*>', '', head)
     head = re.sub(r'<title>.*?</title>', f'<title>{esc(TITLE)}</title>', head, count=1, flags=re.S)
     head = re.sub(r'\s*<meta (?:name|property)="(?:description|og:[a-z:]+|twitter:[a-z:]+)" content="[^"]*">', '', head)
     head = re.sub(r'<link rel="canonical" href="[^"]*">', f'<link rel="canonical" href="{CANONICAL}">', head)
