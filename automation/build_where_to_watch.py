@@ -180,10 +180,22 @@ def tel(phone: str) -> str:
     return '+' + digits if len(digits) == 11 else '+1' + digits[-10:]
 
 
+def wants_to_show(r: dict) -> bool:
+    """Staff replied they'd like to show games (games_note starts with "says"); not a firm yes."""
+    return r.get('verification_type') == 'staff_reply' and (r.get('games_note') or '').strip().lower().startswith('says ')
+
+
+def tag_text(r: dict) -> str:
+    note = (r.get('games_note') or '').strip()
+    return note[:1].upper() + note[1:] if wants_to_show(r) else 'Shows WNBA games'
+
+
 def verification(r: dict) -> str:
     if r.get('verification_type') == 'staff_reply':
-        line = f'Confirmed with staff on {human(r["verification_date"])}'
         note = (r.get('games_note') or '').strip()
+        if wants_to_show(r):
+            return f'Staff replied on {human(r["verification_date"])}. {esc(note[:1].upper() + note[1:])}.'
+        line = f'Confirmed with staff on {human(r["verification_date"])}'
         return f'{line}. Shows {esc(note)}.' if note else line
     return (f'Source: <a href="{esc(r["source_url"])}" rel="nofollow noopener" target="_blank">{esc(r["source_name"])}</a>'
             f' (accessed {human(r["verification_date"])})')
@@ -221,7 +233,7 @@ def row_html(r: dict) -> str:
     return (f'<li class="ww-row" data-team="{esc(r["team_market"])}" data-q="{esc(hay)}">'
             + logo_html(r, color) +
             f'<div class="ww-body"><p class="ww-name">{esc(r["name"])}</p><p class="ww-loc">{esc(area)}</p>{team}'
-            f'<p class="ww-tag">Shows WNBA games</p><p class="ww-ver">{verification(r)}</p>{quote_html(r)}'
+            f'<p class="ww-tag">{esc(tag_text(r))}</p><p class="ww-ver">{verification(r)}</p>{quote_html(r)}'
             f'<div class="ww-btns">{"".join(btns)}</div></div></li>')
 
 
