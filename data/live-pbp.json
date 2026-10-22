@@ -1,12 +1,12 @@
 {
-  "_note": "Config for automation/live_pbp.py and live_pbp_loop.sh. Game 3 prepped Oct 19 2026. feed_id null = find the feed game by date + teams at run time. fcb-live-pbp.yml stays disabled until game day.",
-  "game_number": 3,
-  "date": "2026-10-21",
-  "feed_dates": ["2026-10-21", "2026-10-22"],
+  "_note": "Config for automation/live_pbp.py and live_pbp_loop.sh (workflow: Live play-by-play, fcb-live-pbp.yml). Game 4 set Oct 21 2026 from the WNBA schedule: Sat Oct 24, 10 a.m. PT (17:00 UTC), State Farm Arena. game_json uses the feed's side order (away-home) so the final import overwrites the same file. For the next game: update this file, the cron in fcb-live-pbp.yml on master, and add the game to data/pbp-games.json.",
+  "game_number": 4,
+  "date": "2026-10-24",
+  "feed_dates": ["2026-10-24", "2026-10-25"],
   "teams": ["ATL", "GS"],
   "feed_id": null,
-  "site_id": "401918307",
-  "game_json": "data/games/2026-10-21-atl-gs.json",
-  "page_dir": "wnba/finals/2026/game-3",
-  "stop_after_pt": "202610212100"
+  "site_id": "401918308",
+  "game_json": "data/games/2026-10-24-gs-atl.json",
+  "page_dir": "wnba/finals/2026/game-4",
+  "stop_after_pt": "202610241500"
 }
