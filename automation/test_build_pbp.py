@@ -20,9 +20,10 @@ class BuildPbp(unittest.TestCase):
             self.assertEqual((m['pts'], m['3pa'], m['2pa'] + m['3pa']), (r['pts'], r['fg3a'], r['fga']), r['name'])
 
     def test_placeholder_has_no_plays(self):
-        _, out = build_pbp.build('401918306')
-        self.assertIn('Live: updates about every 5 minutes.', out)
-        self.assertIn('Valkyries lead 1-0', out)
+        _, out = build_pbp.build('401918308')
+        self.assertIn('Live: updates within about a minute of each play.', out)
+        self.assertIn('Dream lead 2-1', out)
+        self.assertIn('TV: NBC · Stream: Peacock', out)
         self.assertNotIn('id="play-', out)
 
     def test_bad_score_refuses(self):
@@ -33,7 +34,7 @@ class BuildPbp(unittest.TestCase):
             build_pbp.derive(d)
 
     def test_pages_are_current(self):
-        for gid in ('401918305', '401918306'):
+        for gid in ('401918305', '401918306', '401918307', '401918308'):
             path, out = build_pbp.build(gid)
             self.assertEqual((ROOT / path.strip('/') / 'index.html').read_text(), out, f'{path} is stale: rerun build_pbp.py')
 
