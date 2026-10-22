@@ -5,15 +5,15 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T00:47:17+00:00",
+ "checked_at": "2026-10-22T00:51:50+00:00",
  "period": 2,
- "clock": "6:46",
+ "clock": "5:54",
  "last_play_period": 2,
- "last_play_clock": "7:04",
+ "last_play_clock": "5:54",
  "away": {
   "abbreviation": "ATL",
-  "score": 27,
-  "feed_score": 27
+  "score": 33,
+  "feed_score": 33
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 4,
+   "away": 10,
    "home": 8
   }
  ],
@@ -1095,7 +1095,7 @@
    "period": 1,
    "clock": "2:41",
    "type": "Driving Layup Shot",
-   "text": "DeWanna Bonner blocks Tiffany Hayes 's 7-foot driving layup",
+   "text": "Tiffany Hayes misses driving layup",
    "away_score": 13,
    "home_score": 8,
    "scoring_play": false,
@@ -1683,7 +1683,7 @@
    "period": 2,
    "clock": "7:32",
    "type": "Driving Layup Shot",
-   "text": "Angel Reese makes driving layup",
+   "text": "Angel Reese makes driving layup (Isobel Borlase assists)",
    "away_score": 27,
    "home_score": 21,
    "scoring_play": true,
@@ -1809,6 +1809,126 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 149,
+   "period": 2,
+   "clock": "6:47",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Naz Hillmon",
+   "away_score": 27,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 150,
+   "period": 2,
+   "clock": "6:45",
+   "type": "Jumpball",
+   "text": "Janelle Salaun vs. Rhyne Howard (Isobel Borlase gains possession)",
+   "away_score": 27,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 151,
+   "period": 2,
+   "clock": "6:45",
+   "type": "Lost Ball Turnover",
+   "text": "Janelle Salaun lost ball turnover (Rhyne Howard steals)",
+   "away_score": 27,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 152,
+   "period": 2,
+   "clock": "6:32",
+   "type": "Jump Shot",
+   "text": "Angel Reese makes 24-foot three point jumper (Rhyne Howard assists)",
+   "away_score": 30,
+   "home_score": 23,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 153,
+   "period": 2,
+   "clock": "6:18",
+   "type": "Bad Pass\nTurnover",
+   "text": "Veronica Burton bad pass\nturnover (Angel Reese steals)",
+   "away_score": 30,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 154,
+   "period": 2,
+   "clock": "6:12",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 24-foot three point jumper (Jordin Canada assists)",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 155,
+   "period": 2,
+   "clock": "5:55",
+   "type": "Jump Shot",
+   "text": "Janelle Salaun misses 24-foot three point jumper",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 156,
+   "period": 2,
+   "clock": "5:54",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 157,
+   "period": 2,
+   "clock": "5:54",
+   "type": "Out of Bounds - Lost Ball Turnover",
+   "text": "Jordin Canada out of bounds lost ball turnover",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 158,
+   "period": 2,
+   "clock": "5:54",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 33,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
