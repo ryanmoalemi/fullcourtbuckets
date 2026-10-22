@@ -167,7 +167,9 @@ jobs:
               assert 'class="player-illustration"' in text
               assert portrait['src'] in text
               if portrait.get('kind') == 'photograph':
-                  assert f'alt="{portrait["player_name"]}"' in text
+                  # Pages escape apostrophes (A'ja Wilson -> A&#x27;ja Wilson).
+                  import html as _html
+                  assert f'alt="{_html.escape(portrait["player_name"])}"' in text or f'alt="{portrait["player_name"]}"' in text, portrait['slug']
                   assert 'illustrated portrait' not in text
                   assert 'AI-generated illustration' not in text
                   assert 'The number artwork is a design element, not a player photograph.' not in text
