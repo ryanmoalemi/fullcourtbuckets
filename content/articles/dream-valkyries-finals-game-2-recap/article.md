@@ -67,7 +67,7 @@ Williams and Hayes scored 14 each for Golden State, but Williams went 3 of 15. [
 
 My preview picked Golden State to win Game 2, and that missed. The betting lean, the under 152.5, hit with 144 total points.
 
-Game 3 is Wednesday, Oct. 21, at 5 p.m. PT at State Farm Arena in Atlanta, on USA Network, CNBC and Peacock.
+Game 3 is Wednesday, Oct. 21, at 5 p.m. PT at State Farm Arena in Atlanta, on USA Network and Peacock.
 
 My pick is Atlanta in Game 3. Through two games, the Dream have outscored Golden State 38-18 in third quarters.
 
