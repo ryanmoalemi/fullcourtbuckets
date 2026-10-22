@@ -29,7 +29,7 @@ Game 3 is tonight at State Farm Arena with the series tied 1-1, and the third qu
 
 - When: Wednesday, Oct. 21, at 5 p.m. PT
 - Where: State Farm Arena, Atlanta
-- TV and streaming: USA Network and Peacock ([WNBA schedule](https://valkyries.wnba.com/news/wnba-finals-schedule-updates-20261013))
+- TV and streaming: USA Network (simulcast on CNBC) and Peacock ([USA Sports release, Oct. 21, 2026](https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-coverage-dream-valkyries-game-2-most-watched-wnba-finals-game))
 - Series: Tied 1-1. Golden State won Game 1 68-64, and Atlanta won Game 2 79-65.
 - Game line: Dream -3.5, total 153.5 (DraftKings, as of Oct. 21 at 11:00 a.m. PT)
 - Next: Game 4 is Saturday, Oct. 24, at 10 a.m. PT in Atlanta
