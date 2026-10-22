@@ -115,11 +115,11 @@ game_no,level,season,team,date,opponent,min,pts,reb,oreb,dreb,ast,stl,blk,tov,fg
 114,College,2023-24,LSU,2024-03-24,Middle Tenn.,35,20,11,3,8,3,2,1,2,6,17,0,0,8,10,46.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls35.pdf
 115,College,2023-24,LSU,2024-03-30,at UCLA,30,16,11,1,10,1,4,2,0,5,12,0,0,6,7,53.1,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls36.pdf
 116,College,2023-24,LSU,2024-04-01,at Iowa,35,17,20,10,10,4,2,3,2,7,21,0,0,3,8,34.7,1,1,https://static.lsusports.net/assets/docs/wb/24stats/ls37.pdf
-117,WNBA playoffs,2026,Atlanta Dream,2026-09-27,vs WSH,30,13,12,3,9,1,2,1,1,4,15,1,2,4,5,37.8,1,1,FCB game data: https://fullcourtbuckets.com/data/games/2026-09-27-wsh-atl.json
-118,WNBA playoffs,2026,Atlanta Dream,2026-09-30,at WSH,28,15,7,1,6,2,0,3,1,4,8,0,4,7,8,65.1,0,0,FCB game data: https://fullcourtbuckets.com/data/games/2026-09-30-atl-wsh.json
-119,WNBA playoffs,2026,Atlanta Dream,2026-10-04,vs NY,34,17,7,4,3,2,4,3,4,6,10,1,1,4,6,67.2,0,0,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-04-ny-atl.json
-120,WNBA playoffs,2026,Atlanta Dream,2026-10-07,vs NY,39,23,7,5,2,2,1,2,2,8,16,1,2,6,6,61.7,0,0,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-07-ny-atl.json
-121,WNBA playoffs,2026,Atlanta Dream,2026-10-09,at NY,37,22,9,5,4,3,1,2,3,7,18,2,4,6,6,53.3,0,0,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-09-atl-ny.json
-122,WNBA playoffs,2026,Atlanta Dream,2026-10-17,at GS,35,14,12,5,7,0,2,1,4,5,11,0,1,4,7,49.7,1,1,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-17-atl-gs.json
-123,WNBA playoffs,2026,Atlanta Dream,2026-10-19,at GS,34,30,16,4,12,3,1,2,2,10,16,1,1,9,11,72.0,1,1,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-19-atl-gs.json
-124,WNBA playoffs,2026,Atlanta Dream,2026-10-21,vs GS,34,21,12,2,10,3,3,0,2,7,12,2,2,5,5,73.9,1,1,FCB game data: https://fullcourtbuckets.com/data/games/2026-10-21-gs-atl.json
+117,WNBA playoffs,2026,Atlanta Dream,2026-09-27,vs WSH,30,13,12,3,9,1,2,1,1,4,15,1,2,4,5,37.8,1,1,https://www.wnba.com/game/1042600131
+118,WNBA playoffs,2026,Atlanta Dream,2026-09-30,at WSH,28,15,7,1,6,2,0,3,1,4,8,0,4,7,8,65.1,0,0,https://www.wnba.com/game/1042600132
+119,WNBA playoffs,2026,Atlanta Dream,2026-10-04,vs NY,34,17,7,4,3,2,4,3,4,6,10,1,1,4,6,67.2,0,0,https://www.wnba.com/game/1042600201
+120,WNBA playoffs,2026,Atlanta Dream,2026-10-07,vs NY,39,23,7,5,2,2,1,2,2,8,16,1,2,6,6,61.7,0,0,https://www.wnba.com/game/1042600202
+121,WNBA playoffs,2026,Atlanta Dream,2026-10-09,at NY,37,22,9,5,4,3,1,2,3,7,18,2,4,6,6,53.3,0,0,https://www.wnba.com/game/1042600203
+122,WNBA playoffs,2026,Atlanta Dream,2026-10-17,at GS,35,14,12,5,7,0,2,1,4,5,11,0,1,4,7,49.7,1,1,https://www.wnba.com/game/1042600301
+123,WNBA playoffs,2026,Atlanta Dream,2026-10-19,at GS,34,30,16,4,12,3,1,2,2,10,16,1,1,9,11,72.0,1,1,https://www.wnba.com/game/1042600302
+124,WNBA playoffs,2026,Atlanta Dream,2026-10-21,vs GS,34,21,12,2,10,3,3,0,2,7,12,2,2,5,5,73.9,1,1,https://www.wnba.com/game/1042600303

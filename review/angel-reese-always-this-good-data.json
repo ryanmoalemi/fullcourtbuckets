@@ -1,93 +1,95 @@
 {
- "scorecard": {
-  "overall": 9,
-  "max": 10,
-  "stars": 4.5,
-  "grade": "Ready",
-  "categories": [
-   {
-    "name": "Accuracy",
-    "score": 9,
+  "scorecard": {
+    "overall": 9,
     "max": 10,
-    "reason": "Every number re-checked against Maryland box scores, LSU stat PDFs and box score PDFs, WNBA.com releases, AP and FCB game files. Fixed four errors from v1 (Maryland 2021-22 TS 55.6 to 55.5, 2025 TS 53.8 to 53.7, playoff TS 59.8 to 59.7, 2026 double-doubles n/a to 32). Not 10: LSU 2023-24 box scores sum to 442 rebounds vs 441 on the season sheet (disclosed), and X view/like counts are a 7:37 PM PT snapshot."
-   },
-   {
-    "name": "Information gain",
-    "score": 9,
-    "max": 10,
-    "reason": "New vs the top 10 for 'angel reese stats', 'angel reese rebounds', 'angel reese college stats' and 'angel reese rebounding record' (ESPN, Basketball Reference, WNBA.com, LSU, Wikipedia, Fox, Yahoo, StatMuse, TSN, HighPostHoops, Her Hoop Stats, Sports Reference): one 124-game sourced ledger across Maryland, LSU and 2026 playoffs; Maryland double-double counts (1, 17) that no result prints; first-three-seasons comparison vs every debut since 2009; first-half vs second-half college shooting test of the 'late leap' claim; offensive-rebound share by season. Not 10: Sports Reference already has per-season college game logs, and WNBA regular-season game rows are missing."
-   },
-   {
-    "name": "Effort and replication cost",
-    "score": 9,
-    "max": 10,
-    "reason": "Parsed 33 LSU box score PDFs by column position, LSU's game-by-game sheet, Maryland's official box score feed and 8 FCB playoff files, reconciled to season totals, plus a custom 16:9 chart, CSV, JSON and Dataset schema. Not 10: no WNBA regular-season game-by-game rows."
-   },
-   {
-    "name": "Originality",
-    "score": 9,
-    "max": 10,
-    "reason": "Own thesis (rebounding constant, shooting changed) tested claim by claim against real replies, with a split that shows the 2026 rise breaks her college pattern."
-   },
-   {
-    "name": "Experience and expertise",
-    "score": 8,
-    "max": 10,
-    "reason": "Real Ryan Moalemi byline linked to his author page with a real photo. Not 10 without first-hand reporting (an interview, courtside notes or a quote from a coach or Reese)."
-   },
-   {
-    "name": "Main content and layout",
-    "score": 9,
-    "max": 10,
-    "reason": "Only headline, byline, Data-through box and one-line key fact sit above the data table; no bullets above it. Ledger, chart and findings follow, fine print at the bottom. Title above the fold on desktop and 390px mobile. Not 10: the 11-column table scrolls sideways on phones."
-   },
-   {
-    "name": "Transparency",
-    "score": 9,
-    "max": 10,
-    "reason": "AI disclosure, how-made link, every row sourced, methods line, rebound discrepancy disclosed, photo credited, CSV and JSON downloads, corrections link. Headshot is labeled an illustration in alt text but not in a visible caption."
-   },
-   {
-    "name": "Writing craft",
-    "score": 9,
-    "max": 10,
-    "reason": "Plain, no em dashes, real subheads, all outbound links open in a new tab. Some paragraphs in the replies section are still dense with numbers."
-   },
-   {
-    "name": "People-first purpose",
-    "score": 9,
-    "max": 10,
-    "reason": "Answers the 'overnight' question directly with data a reader can download; honest dates and a Data-through box. Game 3 audience not out yet."
-   },
-   {
-    "name": "Human voice",
-    "score": 8,
-    "max": 10,
-    "reason": "Flagged and rewrote stock lines; voice is direct with opinions ('The rebounding was never the thing that changed. Her shooting was.'). Not 10: no first-hand moment from someone who was there. No AI detector run."
-   }
+    "stars": 4.5,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "All 9 X posts re-read via X API: text, author, time (Salao 5:44 PM PT) confirmed, counts updated to 9:41 PM PT snapshot. All 8 playoff rows match WNBA.com box scores (155 pts, 51-106 FG, 45-54 FT, TS 59.7). TS fixed (2024 46.4). Headline 'every full season since high school' is true only with the stated definition (excludes 15-game freshman year); WNBA regular-season totals for 2024 and 2026 TS still corroborated, not from an official totals export."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "124-game box score ledger with per-game official links, first-three-seasons rebounding comparison, season-half shooting split, claim-by-claim test of real replies; none in top results."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 9,
+        "max": 10,
+        "reason": "116 college box scores plus 8 WNBA box scores hand-logged, CSV/JSON downloads, custom chart."
+      },
+      {
+        "name": "Originality",
+        "score": 9,
+        "max": 10,
+        "reason": "Own angle: tests a viral post and its replies against a self-built dataset."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline and author page; no first-hand interview or quote."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Career table directly under byline; ledger next; fine print at bottom. Title and H1 match; hook is pointed but defined in the first line."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "AI disclosure, methods, data dictionary, source conflicts (829 vs 830, LSU rebound) shown, snapshot time for X counts."
+      },
+      {
+        "name": "Writing craft",
+        "score": 9,
+        "max": 10,
+        "reason": "Plain voice, real subheads, no em dashes, links open in new tab."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "Answers the 'overnight' question with data and says what the numbers can't prove."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific, opinionated; restraint lines added without hedging the whole piece."
+      }
+    ],
+    "info_gain": [
+      "124-game rebounding ledger, each row linked to its official box score",
+      "Reese vs every 2009+ debut over first three WNBA seasons",
+      "College season-half shooting split vs 2026 playoff rise",
+      "Real replies tested claim by claim with verified posts"
+    ],
+    "ai_flags": [
+      "'The best-supported read' -> 'The data fits this, but can't prove it'",
+      "'The numbers don't back this one' -> 'Box scores can't settle this'",
+      "'It doesn't explain her own rise' -> 'both can be true, these numbers can't separate the two'"
+    ]
+  },
+  "unique": [
+    "124-game rebounding ledger, each row linked to its official box score",
+    "Reese vs every 2009+ debut over first three WNBA seasons",
+    "College season-half shooting split vs 2026 playoff rise",
+    "Real replies tested claim by claim with verified posts"
   ],
-  "info_gain": "124-game official-box-score ledger (CSV/JSON) with Maryland double-double counts, streaks, offensive-rebound share, first-half vs second-half college shooting split, and a first-three-seasons rebounding comparison against every WNBA debut since 2009.",
-  "ai_flags": [
-   "'What changed is how efficiently she scores.' -> 'The rebounding was never the thing that changed. Her shooting was.'",
-   "'The real jump is efficiency, not production.' -> 'The jump is shooting.'",
-   "'This is the best-supported read.' -> 'The best-supported read.' plus the split evidence",
-   "'It has climbed every season since' -> 'It has gone up every season since'"
+  "unverified": [
+    "WNBA 2024 and 2026 regular-season FGA/FTA totals (TS 46.4, 52.4) corroborated by secondary tables, not an official totals export",
+    "Maryland double-double counts reconstructed from box scores",
+    "High school: only senior season and LSU-bio career averages; first three HS seasons not sourced",
+    "Headline 'full season' excludes the injury-shortened 15-game freshman year by definition",
+    "X engagement counts are a 9:41 PM PT Oct. 21 snapshot and will change",
+    "Game 3 audience not yet released"
   ]
- },
- "unique": [
-  "Every Maryland and LSU game plus the 2026 playoffs in one sourced, downloadable ledger (124 rows, each linked to its box score).",
-  "Maryland double-double counts (1 in 2020-21, 17 in 2021-22) and 10+ rebound streaks not printed anywhere in the top 10.",
-  "Reese's 12.6 rebounds a game over her first three seasons vs Tina Charles' 11.1, the next best among 215 players who debuted since 2009.",
-  "College shooting fell in the second half of all three full seasons; 2026 rose late, which supports the 'finishing leap' reply."
- ],
- "unverified": [
-  "2024-26 WNBA regular-season game-by-game rows (no league-sourced game logs reachable), so no 2026 month-by-month split",
-  "2025 offensive rebounds",
-  "LSU 2023-24: box scores sum to 442 rebounds and 184 offensive vs 441 and 183 on the season sheet",
-  "Colin Salao post views/likes are a 7:37 PM PT Oct. 21 snapshot",
-  "Finals Game 3 TV audience not released at time of writing",
-  "Junior high and first three high school seasons",
-  "College national/conference rebounding ranks",
-  "Chicago Sky team records"
- ]
 }
