@@ -1,94 +1,120 @@
 {
   "slug": "grace-vanslooten",
   "player_name": "Grace VanSlooten",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 22, 2026",
+  "verified_at": "2026-10-22",
   "items": [
     {
-      "question": "What are Grace VanSlooten's stats / points per game?",
-      "answer": "In the 2026 regular season, Grace VanSlooten averaged 3.4 points, 1.2 rebounds, and 0.6 assists in 5 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Grace VanSlooten's stats?",
+      "answer": "Grace VanSlooten's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "grace vanslooten stats",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Who is Grace VanSlooten dating?",
-      "answer": "As of late 2026, Grace VanSlooten has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
+        "https://fullcourtbuckets.com/wnba/grace-vanslooten/"
       ],
-      "google_keyword": "grace vanslooten partner",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How much does Grace VanSlooten make?",
-      "answer": "A precise public salary or net worth figure for Grace VanSlooten is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "grace vanslooten salary",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "grace vanslooten stats",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How tall is Grace VanSlooten?",
-      "answer": "Grace VanSlooten is listed at 6' 3\".",
+      "answer": "The WNBA lists Grace VanSlooten at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio"
       ],
-      "google_keyword": "grace vanslooten height",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "grace vanslooten height",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "Is Grace VanSlooten married?",
-      "answer": "There is no widely reported public record of Grace VanSlooten being married as of late 2026.",
+      "question": "When was Grace VanSlooten drafted?",
+      "answer": "The Seattle Storm selected Grace VanSlooten in the third round, 39th overall, of the 2026 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio",
+        "https://fullcourtbuckets.com/wnba/grace-vanslooten/"
       ],
-      "google_keyword": "grace vanslooten husband",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What position does Grace VanSlooten play?",
-      "answer": "Grace VanSlooten is listed as a F for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "grace vanslooten position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Grace VanSlooten injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "grace vanslooten injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What college did Grace VanSlooten attend?",
-      "answer": "VanSlooten played college basketball at Michigan State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
-      ],
-      "google_keyword": "grace vanslooten oregon",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "grace vanslooten wnba draft",
+          "vol": 70
+        },
+        {
+          "q": "grace vanslooten draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Grace VanSlooten?",
-      "answer": "Grace VanSlooten was born June 16, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer": "Grace VanSlooten was born June 16, 2004.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio"
+      ],
+      "queries": [
+        {
+          "q": "grace vanslooten age",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What team does Grace VanSlooten play for?",
+      "answer": "Grace VanSlooten plays forward for the Indiana Fever and wears No. 14. She played four games for the Seattle Storm, then signed with Indiana as a free agent on a rest-of-season contract on May 21, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Grace_VanSlooten"
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio",
+        "https://fullcourtbuckets.com/wnba/grace-vanslooten/"
       ],
-      "google_keyword": "grace vanslooten age",
-      "approx_monthly_volume": 70,
-      "birthdate": "2004-06-16"
+      "queries": [
+        {
+          "q": "grace vanslooten wnba",
+          "vol": 50
+        },
+        {
+          "q": "grace vanslooten fever",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Grace VanSlooten play college basketball?",
+      "answer": "Grace VanSlooten started at Oregon, where she led the team with 15.0 points per game as a sophomore. She then transferred to Michigan State and made the All-Big Ten Second Team in 2025 and 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio"
+      ],
+      "queries": [
+        {
+          "q": "grace vanslooten oregon",
+          "vol": 10
+        },
+        {
+          "q": "grace vanslooten transfer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What position does Grace VanSlooten play?",
+      "answer": "The WNBA lists Grace VanSlooten as a forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643453/grace-vanslooten/bio"
+      ],
+      "queries": [
+        {
+          "q": "grace vanslooten position",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

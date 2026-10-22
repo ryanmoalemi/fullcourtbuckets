@@ -1,76 +1,124 @@
 {
   "slug": "angela-dugalic",
   "player_name": "Angela Dugalic",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 22, 2026",
+  "verified_at": "2026-10-22",
   "items": [
     {
-      "question": "What are Angela Dugalic's stats / points per game?",
-      "answer": "In the 2026 regular season, Angela Dugalic averaged 2.8 points, 2.3 rebounds, and 0.6 assists in 36 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "angela dugalic stats",
-      "approx_monthly_volume": 140
-    },
-    {
       "question": "How tall is Angela Dugalic?",
-      "answer": "Angela Dugalic is listed at 6' 4\".",
+      "answer": "The WNBA lists Angela Dugalic at 6 feet 4 inches and 199 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Angela_Dugali%C4%87"
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio"
       ],
-      "google_keyword": "angela dugalic height",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "angela dugalic height",
+          "vol": 170
+        },
+        {
+          "q": "angela dugalic weight",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Angela Dugalic's contract?",
-      "answer": "Contract length and guarantees for Angela Dugalic are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "What are Angela Dugalic's stats?",
+      "answer": "In the 2026 regular season, Angela Dugalic averaged 2.7 points, 2.2 rebounds, and 0.6 assists in 38 games for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/angela-dugalic/"
+      ],
+      "queries": [
+        {
+          "q": "angela dugalic stats",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Where did Angela Dugalic play college basketball?",
+      "answer": "Angela Dugalic began at Oregon in 2020-21, then transferred to UCLA, where she played through 2025-26. In her final season she was the Big Ten Sixth Player of the Year as UCLA won the 2025-26 national championship.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio",
+        "https://uclabruins.com/sports/womens-basketball/roster/player/angela-dugalic"
       ],
-      "google_keyword": "angela dugalic contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Angela Dugalic attend?",
-      "answer": "Dugalic played college basketball at UCLA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angela_Dugali%C4%87"
-      ],
-      "google_keyword": "angela dugalic ucla",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Angela Dugalic injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "angela dugalic injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Angela Dugalic's parents?",
-      "answer": "Public profiles share limited verified detail about Angela Dugalic's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angela_Dugali%C4%87"
-      ],
-      "google_keyword": "angela dugalic parents",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "angela dugalic ucla",
+          "vol": 70
+        },
+        {
+          "q": "angela dugalic oregon",
+          "vol": 10
+        },
+        {
+          "q": "angela dugalic transfer",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Angela Dugalic?",
-      "answer": "Angela Dugalic was born December 29, 2001 in Des Plaines. As of late 2026 that puts her at 24 years old.",
+      "answer": "Angela Dugalic was born December 29, 2001.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio"
+      ],
+      "queries": [
+        {
+          "q": "angela dugalic age",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What team does Angela Dugalic play for?",
+      "answer": "Angela Dugalic plays forward for the Washington Mystics and wears No. 32. Washington selected her ninth overall in the 2026 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio"
+      ],
+      "queries": [
+        {
+          "q": "angela dugalic wnba",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Where did Angela Dugalic go to high school?",
+      "answer": "Angela Dugalic played at Maine West High School in Des Plaines, Illinois. As a senior she was a McDonald's All-American, the 2020 Illinois Gatorade Player of the Year, and the 2020 Illinois Miss Basketball.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Angela_Dugali%C4%87"
+        "https://uclabruins.com/sports/womens-basketball/roster/player/angela-dugalic",
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio"
       ],
-      "google_keyword": "angela dugalic age",
-      "approx_monthly_volume": 70,
-      "birthdate": "2001-12-29"
+      "queries": [
+        {
+          "q": "angela dugalic maine west",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Does Angela Dugalic play for Serbia?",
+      "answer": "Yes. Angela Dugalic represents Serbia internationally, including at the 2020 Tokyo Olympics, the 2024 Paris Olympics, and the 2025 FIBA Women's EuroBasket.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643455/angela-dugalic/bio"
+      ],
+      "queries": [
+        {
+          "q": "angela dugalic serbia",
+          "vol": 10
+        },
+        {
+          "q": "angela dugalic olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
