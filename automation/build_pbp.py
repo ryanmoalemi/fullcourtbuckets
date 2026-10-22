@@ -151,7 +151,7 @@ def build(game_id, game_json=None, today=None, live=False):
         lead = max(w, key=w.get); lo = min(w, key=w.get)
         return 'Series tied ' + f"{w[lead]}-{w[lo]}" if w[lead] == w[lo] else f"{NAME[lead]} lead {w[lead]}-{w[lo]}"
     if d is None:
-        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, Dream at Valkyries, {g['tip']}, {g['venue']}. Live: updates about every 5 minutes."
+        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, {'Valkyries at Dream' if 'State Farm' in g['venue'] else 'Dream at Valkyries'}, {g['tip']}, {g['venue']}. Live: updates about every 5 minutes."
         head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
         main = (f'<main class="shell article-wrap pbp"><article class="article"><h1>{E(title)}</h1>{byline}'
                 f'<p class="thru">Game {n} has not started. Live: updates about every 5 minutes.</p>'
