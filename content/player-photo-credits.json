@@ -9,6 +9,174 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-21: edges checked at 200% on dark and light backgrounds"
+    },
+    "caitlin-clark": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Caitlin_Clark_Fever_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aja-wilson": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:A%27ja_Wilson_(53756794398)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "angel-reese": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "paige-bueckers": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Paige_Bueckers_2025_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "sabrina-ionescu": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sabrina_Ionescu_2025_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "napheesa-collier": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Napheesa_Collier_WNBA_Finals_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelsey-plum": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelsey_Plum_2025_Sparks_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelsey-mitchell": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelsey_Mitchell_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "aliyah-boston": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aliyah_Boston_(53029603721)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "chelsea-gray": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chelsea_Gray_(53756793833)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "cameron-brink": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Cameron_Brink_Sparks_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "kahleah-copper": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kahleah_Copper_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "jonquel-jones": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jonquel_Jones_WNBA_Finals_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "skylar-diggins": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Skylar_Diggins-Smith_2024a_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "dearica-hamby": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Dearica_Hamby_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "satou-sabally": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Satou_Sabally_2025b.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "brittney-griner": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Brittney_Griner_3.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "sophie-cunningham": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sophie_Cunningham_Fever_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "dijonai-carrington": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:DiJonai_Carrington_2025a_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "kayla-mcbride": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kayla_McBride_2021_Minnesota_Lynx.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "jewell-loyd": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jewell_Loyd_2025.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
