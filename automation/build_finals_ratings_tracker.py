@@ -274,7 +274,7 @@ def tracker_footnote() -> str:
         '<p class="tracker-note">Games 1-2: Chase Center. '
         'Games 3-4: State Farm Arena (Wed, Oct. 21, 2026). '
         'Game 4 tips at 1:00 p.m. ET / 10:00 a.m. PT. '
-        'Games 5-7, if necessary, are on USA and Peacock. '
+        'Games 5-7, if necessary, are on USA Network (simulcast on CNBC) and Peacock (' f'<a class="inline-link" href="{citation.USA_SPORTS_G3_RELEASE}">USA Sports release of Oct. 21, 2026</a>). '
         'Dates and tip times for those games are not listed. '
         'Viewer cells stay Pending tip-off. '
         f'<a class="inline-link" href="{citation.WNBA_FINALS_RELEASE}">WNBA release of Oct. 13, 2026</a>. '

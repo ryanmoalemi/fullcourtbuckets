@@ -962,3 +962,5 @@ STANDINGS_FORCED = {
     'current rosters': 'rosters',
     'tied records in the 2026 standings': 'standings-tie-log',
 }
+
+USA_SPORTS_G3_RELEASE = 'https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-coverage-dream-valkyries-game-2-most-watched-wnba-finals-game'
