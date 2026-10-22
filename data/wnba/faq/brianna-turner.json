@@ -1,106 +1,131 @@
 {
   "slug": "brianna-turner",
   "player_name": "Brianna Turner",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 22, 2026",
+  "verified_at": "2026-10-22",
   "items": [
     {
-      "question": "What are Brianna Turner's stats / points per game?",
-      "answer": "In the 2026 regular season, Brianna Turner averaged 1.6 points, 2.2 rebounds, and 0.2 assists in 39 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What team does Brianna Turner play for?",
+      "answer": "Brianna Turner plays for the Las Vegas Aces and wears No. 21. The Aces announced her signing in free agency on April 13, 2026, after she spent 2025 with the Indiana Fever.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1629488/brianna-turner/bio",
+        "https://www.reviewjournal.com/sports/aces/aces-add-forwards-brianna-turner-stephanie-talbot-in-free-agency-3737442/"
+      ],
+      "queries": [
+        {
+          "q": "brianna turner wnba",
+          "vol": 260
+        },
+        {
+          "q": "is brianna turner still on the fever",
+          "vol": 10
+        },
+        {
+          "q": "fever brianna turner signing",
+          "vol": 10
+        },
+        {
+          "q": "indiana fever brianna turner signing details",
+          "vol": 10
+        },
+        {
+          "q": "indiana fever sign former all defensive forward brianna turner",
+          "vol": 0
+        }
+      ]
+    },
+    {
+      "question": "What are Brianna Turner's stats?",
+      "answer": "In the 2026 regular season, Brianna Turner averaged 1.6 points, 2.3 rebounds, and 0.2 assists in 41 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "brianna turner stats",
-      "approx_monthly_volume": 90
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/brianna-turner/"
+      ],
+      "queries": [
+        {
+          "q": "brianna turner stats",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Who is Brianna Turner dating?",
-      "answer": "As of late 2026, Brianna Turner has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "Which teams has Brianna Turner played for?",
+      "answer": "Brianna Turner has played for the Phoenix Mercury, Chicago Sky, Indiana Fever and Las Vegas Aces.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
+        "https://fullcourtbuckets.com/wnba/brianna-turner/"
       ],
-      "google_keyword": "brianna turner partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Brianna Turner make?",
-      "answer": "A precise public salary or net worth figure for Brianna Turner is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "brianna turner salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "brianna turner indiana fever",
+          "vol": 50
+        },
+        {
+          "q": "brianna turner fever",
+          "vol": 20
+        },
+        {
+          "q": "brianna turner phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "brianna turner chicago sky",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Brianna Turner?",
-      "answer": "Brianna Turner is listed at 6' 3\".",
+      "answer": "The WNBA lists Brianna Turner at 6 feet 3 inches and 175 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
+        "https://www.wnba.com/player/1629488/brianna-turner/bio"
       ],
-      "google_keyword": "brianna turner height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "brianna turner height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Brianna Turner?",
-      "answer": "She was born July 5, 1996 in Pearland. As of late 2026 that puts her at 30 years old.",
+      "answer": "Brianna Turner was born July 5, 1996.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
+        "https://www.wnba.com/player/1629488/brianna-turner/bio"
       ],
-      "google_keyword": "brianna turner age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1996-07-05"
+      "queries": [
+        {
+          "q": "brianna turner age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Brianna Turner's contract?",
-      "answer": "Contract length and guarantees for Brianna Turner are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Where did Brianna Turner play college basketball?",
+      "answer": "Brianna Turner played at Notre Dame and was part of the team that won the 2018 NCAA championship. The Atlanta Dream drafted her 11th overall in 2019, and she began her WNBA career with the Phoenix Mercury.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1629488/brianna-turner/bio",
+        "https://www.reviewjournal.com/sports/aces/aces-add-forwards-brianna-turner-stephanie-talbot-in-free-agency-3737442/",
+        "https://fullcourtbuckets.com/wnba/brianna-turner/"
       ],
-      "google_keyword": "brianna turner contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Brianna Turner married?",
-      "answer": "There is no widely reported public record of Brianna Turner being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
-      ],
-      "google_keyword": "brianna turner husband",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Is Brianna Turner injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "is brianna turner injured",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Brianna Turner's parents?",
-      "answer": "Public profiles share limited verified detail about Brianna Turner's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
-      ],
-      "google_keyword": "brianna turner parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Brianna Turner attend?",
-      "answer": "Brianna Turner played college basketball at Manvel High School.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Brianna_Turner"
-      ],
-      "google_keyword": "brianna turner notre dame",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "brianna turner notre dame",
+          "vol": 20
+        },
+        {
+          "q": "brianna turner draft",
+          "vol": null
+        },
+        {
+          "q": "brianna turner wnba draft",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

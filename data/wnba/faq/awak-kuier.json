@@ -1,76 +1,153 @@
 {
   "slug": "awak-kuier",
   "player_name": "Awak Kuier",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 22, 2026",
+  "verified_at": "2026-10-22",
   "items": [
     {
-      "question": "What are Awak Kuier's stats / points per game?",
-      "answer": "In the 2026 regular season, Awak Kuier averaged 6.1 points, 3.9 rebounds, and 1.0 assists in 40 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Awak Kuier's stats?",
+      "answer": "In the 2026 regular season, Awak Kuier averaged 6.3 points, 3.9 rebounds, and 1.0 assists in 41 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "awak kuier stats",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "How much does Awak Kuier make?",
-      "answer": "A precise public salary or net worth figure for Awak Kuier is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/awak-kuier/"
       ],
-      "google_keyword": "awak kuier salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "awak kuier stats",
+          "vol": 1900
+        }
+      ]
     },
     {
       "question": "How tall is Awak Kuier?",
-      "answer": "Awak Kuier is listed at 6' 6\".",
+      "answer": "The WNBA lists Awak Kuier at 6 feet 6 inches and 168 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awak_Kuier"
+        "https://www.wnba.com/player/1630386/awak-kuier/bio"
       ],
-      "google_keyword": "awak kuier height",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "What position does Awak Kuier play?",
-      "answer": "Awak Kuier is listed as a F for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "awak kuier position",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "When was Awak Kuier drafted?",
-      "answer": "Selected by the Wings with the second overall pick in the 2021 WNBA draft, she was the second Finnish player in the history of the league after Taru Tuukkanen to be drafted, and she became the first Finnish player to play in the WNBA in May 2021.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Awak_Kuier"
-      ],
-      "google_keyword": "awak kuier draft",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Awak Kuier's parents?",
-      "answer": "Public profiles share limited verified detail about Awak Kuier's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Awak_Kuier"
-      ],
-      "google_keyword": "awak kuier parents",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "awak kuier height",
+          "vol": 390
+        },
+        {
+          "q": "awak kuier height weight",
+          "vol": null
+        },
+        {
+          "q": "awak kuier weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Awak Kuier?",
-      "answer": "Awak Kuier was born August 19, 2001 in Cairo. As of late 2026 that puts her at 25 years old.",
+      "answer": "Awak Kuier was born August 19, 2001.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630386/awak-kuier/bio"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier age",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What team does Awak Kuier play for?",
+      "answer": "Awak Kuier plays forward for the Dallas Wings and wears No. 34. She signed a one-year deal with Dallas on April 11, 2026. In 2026 she set the Wings' single-season record with 72 blocks.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630386/awak-kuier/bio"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier dallas wings",
+          "vol": 70
+        },
+        {
+          "q": "awak kuier wnba",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Can Awak Kuier dunk?",
+      "answer": "Yes. Awak Kuier started dunking at age 14, the WNBA says, and dunked at an NBA Basketball Without Borders camp during NBA All-Star 2017 at age 15.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Awak_Kuier"
+        "https://www.wnba.com/news/five-things-to-know-about-awak-kuier",
+        "https://www.wnba.com/draft/2021/prospects/135633/awak-kuier"
       ],
-      "google_keyword": "awak kuier age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2001-08-19"
+      "queries": [
+        {
+          "q": "awak kuier dunk",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where is Awak Kuier from?",
+      "answer": "Awak Kuier was born in Cairo, Egypt, after her South Sudanese parents fled the civil war there. The family moved to Finland when she was 2, and she holds Finnish and Egyptian citizenship.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/five-things-to-know-about-awak-kuier",
+        "https://www.wnba.com/draft/2021/prospects/135633/awak-kuier"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier parents",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "What position does Awak Kuier play?",
+      "answer": "The WNBA lists Awak Kuier as a forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630386/awak-kuier/bio"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier position",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "When was Awak Kuier drafted?",
+      "answer": "The Dallas Wings selected Awak Kuier second overall in the 2021 WNBA Draft. She skipped U.S. college and turned pro in Italy with Virtus Eirene Ragusa in 2020.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1630386/awak-kuier/bio",
+        "https://www.wnba.com/news/five-things-to-know-about-awak-kuier"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier draft",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where does Awak Kuier play overseas?",
+      "answer": "Awak Kuier plays for Galatasaray in Turkey, where she spent 2025-26 and is listed for 2026-27. She previously played for Reyer Venezia and Ragusa in Italy.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630386/awak-kuier/bio"
+      ],
+      "queries": [
+        {
+          "q": "awak kuier galatasaray",
+          "vol": 10
+        },
+        {
+          "q": "awak kuier euroleague",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

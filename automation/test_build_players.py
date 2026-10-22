@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 106)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 116)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -538,15 +538,22 @@ class BuildTests(unittest.TestCase):
             'kayla-thornton', 'layshia-clarendon', 'li-yueru', 'maddy-westbeld', 'naz-hillmon',
             'nyara-sabally', 'renee-montgomery', 'saniya-rivers', 'tamika-catchings', 'tiffany-hayes',
         }
+        october_22 = {
+            'angela-dugalic', 'awak-kuier', 'brianna-turner', 'charlisse-leger-walker', 'grace-vanslooten',
+            'myisha-hines-allen', 'olivia-nelson-ododa', 'sydney-colson', 'tina-charles', 'ariel-atkins',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_21 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_22 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_21:
+            if slug in october_22:
+                expected_source = 'Google search demand via OpenSEO, Oct 22, 2026'
+            elif slug in october_21:
                 expected_source = 'Google search demand via OpenSEO, Oct 21, 2026'
             elif slug in october_20:
                 expected_source = 'Google search demand via OpenSEO, Oct 20, 2026'
@@ -577,8 +584,18 @@ class BuildTests(unittest.TestCase):
             # college, age, and high school queries are about her.
             # Oct 21: the rest of these players' searches are relationships, family,
             # pay, injuries, or other people, so their sets stop below 10.
+            # Oct 22: same for these players; Tina Charles's name searches are
+            # mostly the singer, and Brianna Turner's include other people.
             if slug == 'taniya-latson':
                 minimum = 3
+            elif slug in {'brianna-turner'}:
+                minimum = 6
+            elif slug in {'angela-dugalic', 'grace-vanslooten'}:
+                minimum = 7
+            elif slug in {'charlisse-leger-walker', 'olivia-nelson-ododa', 'ariel-atkins'}:
+                minimum = 8
+            elif slug in {'awak-kuier', 'sydney-colson', 'tina-charles'}:
+                minimum = 9
             elif slug in {'saniya-rivers'}:
                 minimum = 7
             elif slug in {'tiffany-hayes'}:
