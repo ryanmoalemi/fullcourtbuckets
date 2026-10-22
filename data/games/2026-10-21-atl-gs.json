@@ -5,15 +5,15 @@
  "espn_game_id": "401918307",
  "balldontlie_game_id": 1392715,
  "date": "2026-10-21",
- "checked_at": "2026-10-22T02:04:25+00:00",
+ "checked_at": "2026-10-22T02:08:57+00:00",
  "period": 4,
- "clock": "5:51",
+ "clock": "4:33",
  "last_play_period": 4,
- "last_play_clock": "5:51",
+ "last_play_clock": "4:33",
  "away": {
   "abbreviation": "ATL",
-  "score": 80,
-  "feed_score": 80
+  "score": 86,
+  "feed_score": 86
  },
  "home": {
   "abbreviation": "GS",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 9,
+   "away": 15,
    "home": 8
   }
  ],
@@ -4163,7 +4163,7 @@
   {
    "order": 344,
    "period": 4,
-   "clock": "7:04",
+   "clock": "7:05",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 78,
@@ -4187,7 +4187,7 @@
   {
    "order": 346,
    "period": 4,
-   "clock": "6:56",
+   "clock": "6:58",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 78,
@@ -4259,7 +4259,7 @@
   {
    "order": 352,
    "period": 4,
-   "clock": "6:28",
+   "clock": "6:29",
    "type": "Offensive Rebound",
    "text": "Kiah Stokes offensive rebound",
    "away_score": 80,
@@ -4319,7 +4319,7 @@
   {
    "order": 357,
    "period": 4,
-   "clock": "5:58",
+   "clock": "6:00",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 80,
@@ -4351,6 +4351,114 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 360,
+   "period": 4,
+   "clock": "5:51",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Naz Hillmon",
+   "away_score": 80,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 361,
+   "period": 4,
+   "clock": "5:29",
+   "type": "Driving Floating Jump Shot",
+   "text": "Isobel Borlase makes 6-foot driving floating jump shot (Allisha Gray assists)",
+   "away_score": 82,
+   "home_score": 65,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 362,
+   "period": 4,
+   "clock": "5:03",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 25-foot three point jumper",
+   "away_score": 82,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 363,
+   "period": 4,
+   "clock": "4:58",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 82,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 364,
+   "period": 4,
+   "clock": "4:50",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup",
+   "away_score": 84,
+   "home_score": 65,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 365,
+   "period": 4,
+   "clock": "4:39",
+   "type": "Pullup Jump Shot",
+   "text": "Cecilia Zandalasini misses 22-foot three point pullup jump shot",
+   "away_score": 84,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 366,
+   "period": 4,
+   "clock": "4:36",
+   "type": "Defensive Rebound",
+   "text": "Isobel Borlase defensive rebound",
+   "away_score": 84,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 367,
+   "period": 4,
+   "clock": "4:33",
+   "type": "Running Layup Shot",
+   "text": "DeWanna Bonner makes running layup (Isobel Borlase assists)",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 368,
+   "period": 4,
+   "clock": "4:33",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 86,
+   "home_score": 65,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
