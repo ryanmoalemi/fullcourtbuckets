@@ -1,38 +1,50 @@
-name: FCB live play-by-play (Finals Game 2)
-# Ryan, Oct 19 2026: Game 2 play-by-play updates about every 5 minutes while live.
-# workflow_dispatch with loop=true runs one job that refreshes every ~5 min until Final
-# (cron schedules on GitHub can be delayed or skipped; the schedule is a backup pass).
-# On Final: full import + final score check, then the workflow disables itself.
+name: Live play-by-play
+# Near-real-time play-by-play for any game set in data/live-pbp.json (Ryan, Oct 21 2026:
+# update as soon as new info arrives). One long-running job polls the feed every 30 s, commits
+# only when the play count changes, and pushes at most once a minute so Pages builds keep up.
+# Public repo: Actions minutes are free; one ~3 h job per game.
+# On Final: full box-score import into the SAME game file, final page, guard check, push.
+# Schedules only fire from the default branch (master); the job always runs main's scripts.
 on:
   schedule:
-    - cron: '*/5 0-3 20 10 *'   # Oct 20 00:00-03:55 UTC = Oct 19 5:00-8:55 PM PT
+    # Game 4: Sat Oct 24 2026, 10 a.m. PT tip = 17:00 UTC. Start 9:30 a.m. PT; 10:15 backup if the first is skipped.
+    - cron: '30 16 24 10 *'
+    - cron: '15 17 24 10 *'
   workflow_dispatch:
     inputs:
       loop:
-        description: Keep refreshing every ~5 minutes until Final
+        description: Keep polling until Final
         type: boolean
         default: true
+      dry_run:
+        description: Commit locally only, never push
+        type: boolean
+        default: false
+      ref:
+        description: Branch whose scripts and data to use
+        default: main
 permissions:
   contents: write
-  actions: write
 concurrency:
-  group: fcb-live-pbp-${{ github.event_name }}
+  group: fcb-live-pbp
   cancel-in-progress: false
 jobs:
   live:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ inputs.ref || 'main' }}
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Refresh Game 2 play-by-play
+      - name: Live play-by-play loop
         env:
           BALLDONTLIE_API_KEY: ${{ secrets.BALLDONTLIE_API_KEY }}
-          GH_TOKEN: ${{ github.token }}
-          LOOP: ${{ github.event_name == 'workflow_dispatch' && inputs.loop && '1' || '0' }}
+          LOOP: ${{ (github.event_name == 'schedule' || inputs.loop) && '1' || '0' }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          POLL_SECONDS: '30'
+          MIN_PUSH_SECONDS: '60'
         run: bash automation/live_pbp_loop.sh
