@@ -322,8 +322,12 @@ def in_season(games: list[dict], today: dt.date) -> bool:
     return first - dt.timedelta(days=7) <= today <= last + dt.timedelta(days=28)
 
 def should_refresh(last_success, today: dt.date, active: bool, force=False) -> bool:
+    """In season every updater run refreshes, so a game that ends after an
+    earlier same-day run still reaches the player pages on the next run."""
+    if force or active:
+        return True
     last = date_of(last_success)
-    return force or last is None or (today - last).days >= (1 if active else 7)
+    return last is None or (today - last).days >= 7
 
 def team_key(team):
     """Identity of a non-null team. Same id is the same team even if the name changes."""

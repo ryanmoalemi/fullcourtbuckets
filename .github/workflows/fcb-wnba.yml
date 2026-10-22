@@ -3,6 +3,9 @@ on:
   schedule:
     - cron: '17 4 * * *'
       timezone: America/Los_Angeles
+    # Second nightly pass so evening games reach player pages the same night.
+    - cron: '47 23 * * *'
+      timezone: America/Los_Angeles
   workflow_dispatch:
     inputs:
       force:
