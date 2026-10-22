@@ -1031,5 +1031,28 @@
     "imageOg": "/images/articles/world-cup-2026/og-1200.jpg",
     "imageOgWidth": 1200,
     "imageOgHeight": 628
+  },
+  {
+    "slug": "angel-reese-always-this-good-data",
+    "url": "/news/angel-reese-always-this-good-data/",
+    "title": "Angel Reese didn't get good overnight: double-digit rebounds in every full season since high school",
+    "description": "Our dataset tracks Angel Reese from Saint Frances to the 2026 Finals. Her rebounding has been elite at every level; her scoring efficiency is what rose, to 59.8% true shooting in the playoffs.",
+    "category": "news",
+    "date": "2026-10-21",
+    "image": "/images/articles/angel-reese-always-this-good-data/hero-1200.webp",
+    "imageAlt": "Angel Reese of the Atlanta Dream, in a white number 5 Dream jersey, drives with the ball against the Minnesota Lynx at Target Center",
+    "imageCredit": "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons",
+    "imageFocal": "center 2%",
+    "teams": [
+      "atlanta-dream"
+    ],
+    "imageHero": "/images/articles/angel-reese-always-this-good-data/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageOg": "/images/articles/angel-reese-always-this-good-data/og-1200.jpg",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 628,
+    "imageWidth": 1200,
+    "imageHeight": 675
   }
 ]

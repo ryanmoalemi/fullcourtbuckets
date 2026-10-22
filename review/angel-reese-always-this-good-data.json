@@ -1,0 +1,15 @@
+{"scorecard":{"overall":8,"max":10,"stars":4,"grade":"Ready","categories":[
+{"name":"Accuracy","score":9,"max":10,"reason":"Every figure traced to an opened primary source (Maryland/LSU stat sheets, MaxPreps, WNBA.com, FCB game files); unverifiable items left out and listed. HS rebounding sources conflict and both are shown."},
+{"name":"Information gain","score":8,"max":10,"reason":"Original HS-to-Finals dataset with FCB-computed TS% and double-double rates; claim-by-claim test of the replies; free-throw rate finding (fewer FTA than college) not in top results."},
+{"name":"Effort and replication cost","score":8,"max":10,"reason":"Combined seven primary sources plus 8 FCB playoff box files into a downloadable CSV and custom 16:9 chart."},
+{"name":"Originality","score":8,"max":10,"reason":"Own angle: rebounding constant, efficiency is the change; tests specific public claims."},
+{"name":"Experience and expertise","score":8,"max":10,"reason":"Real Ryan Moalemi byline linked to author page."},
+{"name":"Main content and layout","score":8,"max":10,"reason":"Data table directly under byline per data-page rule; chart and findings next; methods at bottom. Title above fold desktop and mobile."},
+{"name":"Transparency","score":9,"max":10,"reason":"AI disclosure, photo credit, data dictionary, CSV, corrections link."},
+{"name":"Writing craft","score":8,"max":10,"reason":"Plain, no em dashes, real subheads, outbound links in new tab."},
+{"name":"People-first purpose","score":8,"max":10,"reason":"Answers 'did she get good overnight' directly with data."},
+{"name":"Human voice","score":7,"max":10,"reason":"Specific numbers and judgments; some list-heavy structure."}],
+"info_gain":["Career dataset from high school to 2026 Finals Game 3 with TS% and double-double rate","Finding: she attempts fewer free throws per game now (6.3-6.8) than at LSU (8.1-9.4), undercutting the 'foul calls' claim","Finding: 2023 title game audience (9.9M) exceeds Finals Games 1-2 (2.1M, 1.33M)"],
+"ai_flags":["Removed unverified 'Front Office Sports reporter' label for Colin Salao","Replaced 'any 2026 Finals game' with Games 1-2 (Game 3 audience not out)","Replaced em-dash table placeholders with n/a"]},
+"unique":["Original per-level dataset with computed efficiency","Reply claims tested against data","FT-rate and audience comparisons"],
+"unverified":["Junior high stats (no primary source found)","HS freshman-junior season lines (only secondary sources)","Maryland double-double counts","2026 regular-season double-double count","Chicago Sky team records","Colin Salao's employer/title","Game 3 viewership (not released)"]}
