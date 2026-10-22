@@ -341,6 +341,25 @@
       "mismatch_count": 0,
       "plays": 420,
       "plays_status": "included"
+    },
+    {
+      "date": "2026-10-21",
+      "path": "data/games/2026-10-21-atl-gs.json",
+      "slug": "2026-10-21-atl-gs",
+      "matchup": "atl-at-gs",
+      "away": "ATL",
+      "home": "GS",
+      "away_score": 57,
+      "home_score": 49,
+      "overtime": false,
+      "status": "live",
+      "source": null,
+      "fallback": false,
+      "crosscheck_matched": false,
+      "crosscheck_compared": false,
+      "mismatch_count": 0,
+      "plays": 258,
+      "plays_status": null
     }
   ]
 }
