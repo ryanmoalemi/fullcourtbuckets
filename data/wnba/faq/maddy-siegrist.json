@@ -1,112 +1,184 @@
 {
   "slug": "maddy-siegrist",
   "player_name": "Maddy Siegrist",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Maddy Siegrist's stats / points per game?",
-      "answer": "In the 2026 regular season, Maddy Siegrist averaged 6.4 points, 2.6 rebounds, and 0.9 assists in 40 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Maddy Siegrist's stats?",
+      "answer": "In the 2026 regular season, Maddy Siegrist averaged 6.5 points, 2.7 rebounds, and 0.9 assists in 41 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maddy siegrist stats",
-      "approx_monthly_volume": 590
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/maddy-siegrist/"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist stats",
+          "vol": 590
+        },
+        {
+          "q": "maddy siegrist wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "maddy siegrist game log",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Maddy Siegrist dating?",
-      "answer": "As of late 2026, Maddy Siegrist has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What team does Maddy Siegrist play for?",
+      "answer": "Maddy Siegrist plays forward for the Dallas Wings and wears No. 20. Dallas drafted her in 2023, and she has played her whole WNBA career there.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
       ],
-      "google_keyword": "maddy siegrist partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Maddy Siegrist make?",
-      "answer": "A precise public salary or net worth figure for Maddy Siegrist is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "maddy siegrist salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "maddy siegrist wnba",
+          "vol": 110
+        },
+        {
+          "q": "maddy siegrist dallas wings",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is Maddy Siegrist?",
-      "answer": "Maddy Siegrist is listed at 6' 2\".",
+      "answer": "The WNBA lists Maddy Siegrist at 6 feet 2 inches and 175 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
       ],
-      "google_keyword": "maddy siegrist height",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How old is Maddy Siegrist?",
-      "answer": "She was born May 22, 2000 in Poughkeepsie. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
-      ],
-      "google_keyword": "maddy siegrist age",
-      "approx_monthly_volume": 40,
-      "birthdate": "2000-05-22"
-    },
-    {
-      "question": "What did Maddy Siegrist score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Phoenix Mercury), Maddy Siegrist had 9.0 points, 3.0 rebounds, and 0 assists in a 86-87 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is maddy siegrist playing tonight",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Maddy Siegrist's jersey number?",
-      "answer": "Maddy Siegrist wears number 20 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maddy siegrist jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Maddy Siegrist married?",
-      "answer": "There is no widely reported public record of Maddy Siegrist being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
-      ],
-      "google_keyword": "maddy siegrist husband",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Is Maddy Siegrist injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "maddy siegrist injury",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "maddy siegrist height",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Who are Maddy Siegrist's parents?",
-      "answer": "Public profiles share limited verified detail about Maddy Siegrist's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Maddy Siegrist is the daughter of George and Ginna Siegrist and is one of four children. Her father played basketball at Marist College.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
+        "https://www.wnba.com/draft/2023/prospects/167560/maddy-siegrist"
       ],
-      "google_keyword": "maddy siegrist family",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "maddy siegrist family",
+          "vol": 50
+        },
+        {
+          "q": "maddy siegrist parents",
+          "vol": 20
+        },
+        {
+          "q": "maddy siegrist siblings",
+          "vol": 10
+        },
+        {
+          "q": "maddy siegrist father",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Maddy Siegrist attend?",
-      "answer": "Maddy Siegrist played college basketball at Villanova University.",
-      "answer_kind": "researched",
+      "question": "How many points did Maddy Siegrist score at Villanova?",
+      "answer": "Maddy Siegrist scored 2,896 points at Villanova, the most in program history and the most by any Big East player, men or women. She led the nation with 29.2 points per game as a senior.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maddy_Siegrist"
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
       ],
-      "google_keyword": "maddy siegrist villanova",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "maddy siegrist villanova",
+          "vol": 40
+        },
+        {
+          "q": "maddy siegrist career points",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Maddy Siegrist?",
+      "answer": "Maddy Siegrist was born May 22, 2000.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist age",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Does Maddy Siegrist play in Unrivaled?",
+      "answer": "Maddy Siegrist played in the 2026 Unrivaled season for Laces BC, averaging 8.1 points and 3.2 rebounds as the team went 10-4.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist unrivaled",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "When was Maddy Siegrist drafted?",
+      "answer": "The Dallas Wings selected Maddy Siegrist third overall in the 2023 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist draft",
+          "vol": 20
+        },
+        {
+          "q": "maddy siegrist draft pick",
+          "vol": 20
+        },
+        {
+          "q": "maddy siegrist wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What records does Maddy Siegrist hold?",
+      "answer": "Maddy Siegrist scored 50 points against Seton Hall on February 11, 2023, a Villanova and Big East single-game record. She was also the first Division I player, male or female, to score 20 or more points in 37 straight games.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist record",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Maddy Siegrist play in Athletes Unlimited?",
+      "answer": "Yes. Maddy Siegrist played Athletes Unlimited Pro Basketball in 2024 and 2025 and won the 2025 league title with a record 7,052 leaderboard points.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641652/maddy-siegrist/bio"
+      ],
+      "queries": [
+        {
+          "q": "maddy siegrist athletes unlimited",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,106 +1,174 @@
 {
   "slug": "diamond-miller",
   "player_name": "Diamond Miller",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Diamond Miller's stats / points per game?",
-      "answer": "In the 2026 regular season, Diamond Miller averaged 9.7 points, 2.6 rebounds, and 1.4 assists in 41 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "What are Diamond Miller's stats?",
+      "answer": "In the 2026 regular season, Diamond Miller averaged 9.8 points, 2.7 rebounds, and 1.4 assists in 43 games for the Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "diamond miller stats",
-      "approx_monthly_volume": 2900
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/diamond-miller/"
+      ],
+      "queries": [
+        {
+          "q": "diamond miller stats",
+          "vol": 2900
+        }
+      ]
     },
     {
-      "question": "How much does Diamond Miller make?",
-      "answer": "A precise public salary or net worth figure for Diamond Miller is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Diamond Miller play for?",
+      "answer": "Diamond Miller plays forward for the Connecticut Sun and wears No. 1. Connecticut acquired her from the Dallas Wings in a trade for Rayah Marshall on April 9, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1641649/diamond-miller/bio",
+        "https://www.wnba.com/news/connecticut-sun-acquire-diamond-miller"
       ],
-      "google_keyword": "diamond miller salary",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "diamond miller wnba",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "How tall is Diamond Miller?",
-      "answer": "Diamond Miller is listed at 6' 3\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
-      ],
-      "google_keyword": "diamond miller height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Diamond Miller's contract?",
-      "answer": "Contract length and guarantees for Diamond Miller are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "The WNBA player page lists Diamond Miller at 6 feet 1 inch and 178 pounds. The Connecticut Sun's trade announcement calls her a 6-3 forward.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1641649/diamond-miller/bio",
+        "https://www.wnba.com/news/connecticut-sun-acquire-diamond-miller"
       ],
-      "google_keyword": "diamond miller contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Diamond Miller married?",
-      "answer": "There is no widely reported public record of Diamond Miller being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
-      ],
-      "google_keyword": "is diamond miller married",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Diamond Miller injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "diamond miller injury",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who are Diamond Miller's parents?",
-      "answer": "Public profiles share limited verified detail about Diamond Miller's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
-      ],
-      "google_keyword": "diamond miller parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Diamond Miller attend?",
-      "answer": "Miller played college basketball at the Maryland Terrapins.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
-      ],
-      "google_keyword": "diamond miller maryland",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "diamond miller height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Diamond Miller?",
-      "answer": "Diamond Miller was born February 11, 2001 in Montclair. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "researched",
+      "answer": "Diamond Miller was born February 11, 2001.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
+        "https://www.wnba.com/player/1641649/diamond-miller/bio"
       ],
-      "google_keyword": "diamond miller age",
-      "approx_monthly_volume": 30,
-      "birthdate": "2001-02-11"
+      "queries": [
+        {
+          "q": "diamond miller age",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "When was Diamond Miller drafted?",
+      "answer": "The Minnesota Lynx selected Diamond Miller second overall in the 2023 WNBA Draft out of Maryland.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641649/diamond-miller/bio"
+      ],
+      "queries": [
+        {
+          "q": "diamond miller draft pick",
+          "vol": 20
+        },
+        {
+          "q": "diamond miller draft",
+          "vol": 20
+        },
+        {
+          "q": "diamond miller wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Diamond Miller from?",
-      "answer": "Diamond Miller is from Montclair.",
+      "answer": "Diamond Miller is from Somerset, New Jersey. She is the leading scorer in Franklin High School history with 2,460 points and was a McDonald's All-American and New Jersey Gatorade Player of the Year.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_Miller"
+        "https://www.wnba.com/draft/2023/prospects/167552/diamond-miller"
       ],
-      "google_keyword": "where is diamond miller from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is diamond miller from",
+          "vol": 10
+        },
+        {
+          "q": "diamond miller franklin",
+          "vol": 10
+        },
+        {
+          "q": "diamond miller mcdonald's",
+          "vol": null
+        },
+        {
+          "q": "diamond miller basketball high school",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Diamond Miller play for the Minnesota Lynx?",
+      "answer": "Yes. Diamond Miller played for the Minnesota Lynx from 2023 until a trade to the Dallas Wings on August 3, 2025. As a Lynx rookie she made the 2023 All-Rookie Team and was the WNBA Rookie of the Month for July.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641649/diamond-miller/bio"
+      ],
+      "queries": [
+        {
+          "q": "minnesota lynx diamond miller",
+          "vol": 10
+        },
+        {
+          "q": "diamond miller lynx",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Who are Diamond Miller's parents?",
+      "answer": "Diamond Miller is the daughter of Dreana and Lance Miller. Her father played basketball at Villanova and professionally overseas.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2023/prospects/167552/diamond-miller"
+      ],
+      "queries": [
+        {
+          "q": "diamond miller parents",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Diamond Miller play college basketball?",
+      "answer": "Diamond Miller played four seasons at Maryland, from 2019 to 2023. She was a 2023 Second Team All-American (AP, USBWA, The Athletic) and twice made the All-Big Ten First Team.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641649/diamond-miller/bio"
+      ],
+      "queries": [
+        {
+          "q": "diamond miller maryland",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Diamond Miller played for Team USA?",
+      "answer": "Yes. Diamond Miller won gold with the USA Under-19 team at the 2019 FIBA World Cup and was also on a gold-medal USA Under-16 team.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2023/prospects/167552/diamond-miller"
+      ],
+      "queries": [
+        {
+          "q": "diamond miller olympics",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

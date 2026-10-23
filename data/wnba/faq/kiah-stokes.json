@@ -1,106 +1,156 @@
 {
   "slug": "kiah-stokes",
   "player_name": "Kiah Stokes",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Kiah Stokes's stats / points per game?",
-      "answer": "In the 2026 regular season, Kiah Stokes averaged 3.5 points, 5.6 rebounds, and 1.2 assists in 41 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Kiah Stokes's stats?",
+      "answer": "In the 2026 regular season, Kiah Stokes averaged 3.6 points, 5.8 rebounds, and 1.3 assists in 43 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kiah stokes stats",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "Who is Kiah Stokes dating?",
-      "answer": "As of late 2026, Kiah Stokes has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
+        "https://fullcourtbuckets.com/wnba/kiah-stokes/"
       ],
-      "google_keyword": "kiah stokes partner",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How much does Kiah Stokes make?",
-      "answer": "A precise public salary or net worth figure for Kiah Stokes is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kiah stokes salary",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "kiah stokes stats",
+          "vol": 2900
+        },
+        {
+          "q": "kiah stokes wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Kiah Stokes?",
-      "answer": "Kiah Stokes is listed at 6' 3\".",
+      "answer": "The WNBA lists Kiah Stokes at 6 feet 3 inches and 191 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
+        "https://www.wnba.com/player/204329/kiah-stokes/bio"
       ],
-      "google_keyword": "kiah stokes height",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "kiah stokes height",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "How old is Kiah Stokes?",
-      "answer": "She was born March 30, 1993 in Cedar Rapids. As of late 2026 that puts her at 33 years old.",
+      "answer": "Kiah Stokes was born March 30, 1993.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
+        "https://www.wnba.com/player/204329/kiah-stokes/bio"
       ],
-      "google_keyword": "kiah stokes age",
-      "approx_monthly_volume": 70,
-      "birthdate": "1993-03-30"
-    },
-    {
-      "question": "What is Kiah Stokes's contract?",
-      "answer": "Contract length and guarantees for Kiah Stokes are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kiah stokes contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Kiah Stokes married?",
-      "answer": "There is no widely reported public record of Kiah Stokes being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
-      ],
-      "google_keyword": "is kiah stokes married",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What college did Kiah Stokes attend?",
-      "answer": "Stokes played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
-      ],
-      "google_keyword": "kiah stokes uconn",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Kiah Stokes injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kiah stokes injury",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "kiah stokes age",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "Who are Kiah Stokes's parents?",
-      "answer": "Public profiles share limited verified detail about Kiah Stokes's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Kiah Stokes is the daughter of Julie Saddler and Greg Stokes. Her father was an All-American at Iowa, played for the Philadelphia 76ers, and won gold with the 1983 USA Pan American Games team.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kiah_Stokes"
+        "https://aces.wnba.com/kiah-stokes-bio"
       ],
-      "google_keyword": "kiah stokes parents",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "kiah stokes parents",
+          "vol": 50
+        },
+        {
+          "q": "kiah stokes dad",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What team does Kiah Stokes play for?",
+      "answer": "Kiah Stokes plays center for the Golden State Valkyries and wears No. 41. She signed a multi-year contract with Golden State on April 13, 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204329/kiah-stokes/bio"
+      ],
+      "queries": [
+        {
+          "q": "kiah stokes wnba",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Kiah Stokes play college basketball?",
+      "answer": "Kiah Stokes played at UConn, where she won three NCAA championships and was the 2015 AAC Defensive Player of the Year.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204329/kiah-stokes/bio"
+      ],
+      "queries": [
+        {
+          "q": "kiah stokes uconn",
+          "vol": 40
+        },
+        {
+          "q": "kiah stokes uconn women's basketball",
+          "vol": 0
+        },
+        {
+          "q": "kiah stokes college",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "How many championships has Kiah Stokes won with the Aces?",
+      "answer": "Kiah Stokes won three WNBA championships with the Las Vegas Aces, in 2022, 2023, and 2025. She joined Las Vegas in July 2021 and also won the 2022 Commissioner's Cup.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/204329/kiah-stokes/bio",
+        "https://aces.wnba.com/kiah-stokes-bio"
+      ],
+      "queries": [
+        {
+          "q": "kiah stokes las vegas aces",
+          "vol": 10
+        },
+        {
+          "q": "kiah stokes aces",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Kiah Stokes play for the New York Liberty?",
+      "answer": "Yes. The New York Liberty drafted Kiah Stokes 11th overall in 2015, and she made the All-Rookie Team and the All-Defensive Second Team that year. She played for New York until June 2021.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/204329/kiah-stokes/bio",
+        "https://aces.wnba.com/kiah-stokes-bio"
+      ],
+      "queries": [
+        {
+          "q": "kiah stokes new york liberty",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Kiah Stokes play for Fenerbahce?",
+      "answer": "Yes. With Fenerbahçe, Kiah Stokes won a EuroLeague title, two Turkish Cups, and four Turkish Super League titles.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204329/kiah-stokes/bio"
+      ],
+      "queries": [
+        {
+          "q": "kiah stokes fenerbahçe",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
