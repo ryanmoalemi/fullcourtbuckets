@@ -569,6 +569,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+    },
+    "kamilla-cardoso": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kamilla_Cardoso_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "janelle-salaun": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Janelle_Sala%C3%BCn_13_France_20250618_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "laura-juskaite": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Laura_Ju%C5%A1kait%C4%97_12_Lithuania_20250624_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "emily-engstler": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Emily_Engstler_Fire_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "natasha-cloud": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Natasha_Cloud_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "nalyssa-smith": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:NaLyssa_Smith_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "dewanna-bonner": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Dewanna_Bonner_in_2019_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "pauline-astier": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Pauline_Astier_98_France_20250619_(5)_(cropped).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "isabelle-harrison": {
+      "author": "John McLellan",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Cropped_Isabelle_Harrison.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "azzi-fudd": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Azzi_Fudd_Wings_1_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "naz-hillmon": {
+      "author": "Michael Cohn Photo",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Naz_Hillmon_Atlanta_Dream_2025.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "erica-wheeler": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Erica_Wheeler_(52964603001)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "jade-melbourne": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jade_Melbourne_2_Australia_20260311_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "tiffany-hayes": {
+      "author": "Sphilbrick",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tiffany_Hayes_UConn.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "kiki-rice": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kiki_Rice_2026_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "michaela-onyenwere": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Michaela_Onyenwere_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "leila-lacan": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Le%C3%AFla_Lacan_42_France_20250618_(9).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "kayla-thornton": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kayla_Thornton_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "marine-johannes": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Marine_Johannes_2025_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "olivia-nelson-ododa": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Olivia_Nelson-Ododa_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
