@@ -1,132 +1,177 @@
 {
   "slug": "michaela-onyenwere",
   "player_name": "Michaela Onyenwere",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Michaela Onyenwere's stats / points per game?",
-      "answer": "In the 2026 regular season, Michaela Onyenwere averaged 8.9 points, 2.6 rebounds, and 1.7 assists in 38 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What are Michaela Onyenwere's stats?",
+      "answer": "In the 2026 regular season, Michaela Onyenwere averaged 9.0 points, 2.6 rebounds, and 1.7 assists in 40 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "michaela onyenwere stats",
-      "approx_monthly_volume": 1900
-    },
-    {
-      "question": "How much does Michaela Onyenwere make?",
-      "answer": "A precise public salary or net worth figure for Michaela Onyenwere is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/michaela-onyenwere/"
       ],
-      "google_keyword": "michaela onyenwere salary",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "michaela onyenwere stats",
+          "vol": 1900
+        }
+      ]
     },
     {
-      "question": "How tall is Michaela Onyenwere?",
-      "answer": "Michaela Onyenwere is listed at 6' 0\".",
+      "question": "Where did Michaela Onyenwere play college basketball?",
+      "answer": "Michaela Onyenwere played four seasons at UCLA and finished with 1,888 points, fourth most in school history.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
       ],
-      "google_keyword": "michaela onyenwere height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "michaela onyenwere ucla",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Is Michaela Onyenwere a coach?",
+      "answer": "Yes. Michaela Onyenwere joined UCLA's staff as an assistant coach for the 2025-26 college season, when UCLA won its first NCAA women's basketball championship.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
+      ],
+      "queries": [
+        {
+          "q": "michaela onyenwere coach",
+          "vol": 70
+        },
+        {
+          "q": "michaela onyenwere assistant coach",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Michaela Onyenwere?",
-      "answer": "She was born August 10, 1999 in Aurora. As of late 2026 that puts her at 27 years old.",
+      "answer": "Michaela Onyenwere was born August 10, 1999.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
       ],
-      "google_keyword": "michaela onyenwere age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1999-08-10"
+      "queries": [
+        {
+          "q": "michaela onyenwere age",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What is Michaela Onyenwere's jersey number?",
-      "answer": "Michaela Onyenwere wears number 12 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "michaela onyenwere jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Michaela Onyenwere's contract?",
-      "answer": "Contract length and guarantees for Michaela Onyenwere are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "What team does Michaela Onyenwere play for?",
+      "answer": "Michaela Onyenwere plays forward for the Washington Mystics and wears No. 12. She signed a multi-year contract with Washington on April 12, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio",
+        "https://mystics.wnba.com/news/mystics-sign-michaela-onyenwere-to-multi-year-deal"
       ],
-      "google_keyword": "michaela onyenwere contract",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "michaela onyenwere wnba",
+          "vol": 30
+        },
+        {
+          "q": "michaela onyenwere mystics",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Michaela Onyenwere married?",
-      "answer": "There is no widely reported public record of Michaela Onyenwere being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
-      ],
-      "google_keyword": "michaela onyenwere husband",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What awards has Michaela Onyenwere won?",
-      "answer": "Award and All-Star history for Michaela Onyenwere is covered in public biographical sources. See the cited profile for the confirmed list.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
-      ],
-      "google_keyword": "michaela onyenwere rookie of the year",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Michaela Onyenwere attend?",
-      "answer": "Onyenwere played college basketball at UCLA.",
+      "question": "How tall is Michaela Onyenwere?",
+      "answer": "The WNBA lists Michaela Onyenwere at 6 feet and 202 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
       ],
-      "google_keyword": "michaela onyenwere ucla",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "michaela onyenwere height",
+          "vol": 20
+        },
+        {
+          "q": "michaela onyenwere weight",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Michaela Onyenwere injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "michaela onyenwere injury",
-      "approx_monthly_volume": 40
+      "question": "When was Michaela Onyenwere drafted?",
+      "answer": "The New York Liberty selected Michaela Onyenwere sixth overall in the 2021 WNBA Draft. She played for New York in 2021 and 2022.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
+      ],
+      "queries": [
+        {
+          "q": "michaela onyenwere draft",
+          "vol": 10
+        },
+        {
+          "q": "michaela onyenwere wnba draft",
+          "vol": null
+        },
+        {
+          "q": "michaela onyenwere liberty",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Who are Michaela Onyenwere's parents?",
-      "answer": "Public profiles share limited verified detail about Michaela Onyenwere's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "UCLA lists Michaela Onyenwere's parents as Edith and Peter Onyenwere. Her father ran track for Nigeria and competed in college at Missouri.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
+        "https://uclabruins.com/sports/womens-basketball/roster/player/michaela-onyenwere"
       ],
-      "google_keyword": "michaela onyenwere parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "michaela onyenwere parents",
+          "vol": 10
+        },
+        {
+          "q": "michaela onyenwere nigerian",
+          "vol": null
+        },
+        {
+          "q": "michaela onyenwere parents nationality",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What did Michaela Onyenwere score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Connecticut Sun), Michaela Onyenwere had 7.0 points, 0 rebounds, and 0 assists in a 79-69 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "michaela onyenwere stats last game",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Michaela Onyenwere?",
-      "answer": "Michaela Nne Onyenwere is a Nigerian-American basketball player for the Washington Mystics of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Did Michaela Onyenwere win Rookie of the Year?",
+      "answer": "Yes. Michaela Onyenwere was the 2021 WNBA Rookie of the Year with the New York Liberty and made the 2021 All-Rookie Team.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Michaela_Onyenwere"
+        "https://www.wnba.com/player/1630446/michaela-onyenwere/bio"
       ],
-      "google_keyword": "michaela onyenwere wikipedia",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "michaela onyenwere rookie of the year",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How do you pronounce Michaela Onyenwere?",
+      "answer": "The Washington Mystics spell out her last name as OWN-uen-weh-ray.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://mystics.wnba.com/news/mystics-sign-michaela-onyenwere-to-multi-year-deal"
+      ],
+      "queries": [
+        {
+          "q": "michaela onyenwere pronunciation",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

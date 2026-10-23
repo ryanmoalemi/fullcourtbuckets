@@ -1,96 +1,118 @@
 {
   "slug": "rebecca-allen",
   "player_name": "Rebecca Allen",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Rebecca Allen's stats / points per game?",
-      "answer": "In the 2026 regular season, Rebecca Allen averaged 5.1 points, 2.6 rebounds, and 1.3 assists in 44 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Rebecca Allen's stats?",
+      "answer": "In the 2026 regular season, Rebecca Allen averaged 5.8 points, 2.6 rebounds, and 0.6 assists in 29 games for the New York Liberty.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rebecca allen stats",
-      "approx_monthly_volume": 1000
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rebecca-allen/"
+      ],
+      "queries": [
+        {
+          "q": "rebecca allen stats",
+          "vol": 1000
+        }
+      ]
     },
     {
-      "question": "Does Rebecca Allen have a signature shoe?",
-      "answer": "Rebecca Allen has a public association with Jordan footwear or apparel. A dedicated signature sneaker is not always confirmed in every source.",
+      "question": "What team does Rebecca Allen play for?",
+      "answer": "Rebecca Allen plays for the New York Liberty and wears No. 9. She signed a one-year deal with New York in April 2026, returning to the team where she spent her first seven WNBA seasons.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
+        "https://www.wnba.com/player/204296/rebecca-allen/bio",
+        "https://nypost.com/2026/04/13/sports/liberty-signing-rebecca-allen-pauline-astier-to-bolster-bench/"
       ],
-      "google_keyword": "rebecca jordan",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Who is Rebecca Allen dating?",
-      "answer": "As of late 2026, Rebecca Allen has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
-      ],
-      "google_keyword": "rebecca allen partner",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How much does Rebecca Allen make?",
-      "answer": "A precise public salary or net worth figure for Rebecca Allen is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "rebecca allen salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Rebecca Allen?",
-      "answer": "Rebecca Allen is listed at 6' 2\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
-      ],
-      "google_keyword": "rebecca allen height",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "rebecca allen wnba",
+          "vol": 880
+        },
+        {
+          "q": "rebecca allen liberty",
+          "vol": 110
+        },
+        {
+          "q": "rebecca allen new york liberty",
+          "vol": 40
+        },
+        {
+          "q": "rebecca allen ny liberty",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Rebecca Allen?",
-      "answer": "She was born November 6, 1992 in Wangaratta. As of late 2026 that puts her at 33 years old.",
+      "answer": "Rebecca Allen was born November 6, 1992.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
+        "https://www.wnba.com/player/204296/rebecca-allen/bio"
       ],
-      "google_keyword": "rebecca allen age",
-      "approx_monthly_volume": 50,
-      "birthdate": "1992-11-06"
+      "queries": [
+        {
+          "q": "rebecca allen age",
+          "vol": 70
+        },
+        {
+          "q": "how old is rebecca allen",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Is Rebecca Allen married?",
-      "answer": "There is no widely reported public record of Rebecca Allen being married as of late 2026.",
+      "question": "How tall is Rebecca Allen?",
+      "answer": "The WNBA lists Rebecca Allen at 6 feet 2 inches and 162 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/204296/rebecca-allen/bio"
+      ],
+      "queries": [
+        {
+          "q": "rebecca allen height",
+          "vol": 50
+        },
+        {
+          "q": "how tall is rebecca allen",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Rebecca Allen played for?",
+      "answer": "Rebecca Allen has played for the New York Liberty, Connecticut Sun, Phoenix Mercury and Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rebecca-allen/"
+      ],
+      "queries": [
+        {
+          "q": "rebecca allen sky",
+          "vol": 10
+        },
+        {
+          "q": "rebecca allen mercury",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Rebecca Allen play for Australia?",
+      "answer": "Yes. Rebecca Allen is Australian and has played for the national team, the Opals. She won a silver medal with Australia at the 2018 FIBA World Cup.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
+        "https://www.wnba.com/player/204296/rebecca-allen/bio",
+        "https://www.wnba.com/news/new-york-liberty-re-sign-rebecca-allen"
       ],
-      "google_keyword": "rebecca allen husband",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "Is Rebecca Allen injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rebecca allen injury",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Does Rebecca Allen have kids?",
-      "answer": "There is no widely reported public information that Rebecca Allen has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebecca_Allen_(basketball)"
-      ],
-      "google_keyword": "rebecca gleeson",
-      "approx_monthly_volume": 14800
+      "queries": [
+        {
+          "q": "rebecca allen opals",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

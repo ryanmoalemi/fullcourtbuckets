@@ -1,124 +1,191 @@
 {
   "slug": "kalani-brown",
   "player_name": "Kalani Brown",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Kalani Brown's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Kalani Brown averaged 5.1 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kalani brown stats",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Does Kalani Brown have a signature shoe?",
-      "answer": "Public search interest ties Kalani Brown to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "What team does Kalani Brown play for?",
+      "answer": "Kalani Brown plays center for the Las Vegas Aces and wears No. 20. The Aces signed her on August 29, 2026, after NaLyssa Smith's season-ending injury.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
+        "https://www.wnba.com/player/1629480/kalani-brown/bio",
+        "https://www.reviewjournal.com/sports/aces/aces-sign-center-kalani-brown-after-nalyssa-smiths-season-ending-injury-3871635/"
       ],
-      "google_keyword": "kalani brown shoe size",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Kalani Brown dating?",
-      "answer": "As of late 2026, Kalani Brown has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
-      ],
-      "google_keyword": "kalani brown relationship",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How much does Kalani Brown make?",
-      "answer": "A precise public salary or net worth figure for Kalani Brown is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kalani brown net worth",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kalani brown wnba",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "How tall is Kalani Brown?",
-      "answer": "Kalani Brown is listed at 6' 7\".",
+      "answer": "The WNBA lists Kalani Brown at 6 feet 7 inches and 245 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
       ],
-      "google_keyword": "kalani brown height",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "kalani brown height",
+          "vol": 260
+        },
+        {
+          "q": "how tall is kalani brown",
+          "vol": 90
+        },
+        {
+          "q": "kalani brown weight",
+          "vol": 50
+        },
+        {
+          "q": "kalani brown height and weight",
+          "vol": 30
+        },
+        {
+          "q": "how much does kalani brown weight",
+          "vol": 20
+        },
+        {
+          "q": "kalani brown tall",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Kalani Brown's jersey number?",
-      "answer": "Kalani Brown wears number 20 for the Las Vegas Aces.",
+      "question": "What are Kalani Brown's stats?",
+      "answer": "In the 2026 regular season, Kalani Brown averaged 6.0 points, 1.7 rebounds, and 0.3 assists in 3 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kalani brown jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Kalani Brown's contract?",
-      "answer": "Contract length and guarantees for Kalani Brown are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/kalani-brown/"
       ],
-      "google_keyword": "kalani brown contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Kalani Brown married?",
-      "answer": "There is no widely reported public record of Kalani Brown being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
-      ],
-      "google_keyword": "kalani brown husband",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What college did Kalani Brown attend?",
-      "answer": "Brown played college basketball at Baylor.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
-      ],
-      "google_keyword": "kalani brown baylor",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Kalani Brown injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kalani brown injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kalani brown stats",
+          "vol": 90
+        },
+        {
+          "q": "kalani brown wnba stats",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Who are Kalani Brown's parents?",
-      "answer": "Public profiles share limited verified detail about Kalani Brown's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "answer": "Kalani Brown is the daughter of DeJuna (Dee) Brown and former NBA veteran P.J. Brown. Both of her parents played basketball at Louisiana Tech. She has two sisters, Briana and Whitney, and a brother, Javani.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
       ],
-      "google_keyword": "kalani brown parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "kalani brown parents",
+          "vol": 70
+        },
+        {
+          "q": "kalani brown dad",
+          "vol": 40
+        },
+        {
+          "q": "kalani brown mom",
+          "vol": 20
+        },
+        {
+          "q": "kalani brown mother",
+          "vol": 10
+        },
+        {
+          "q": "kalani brown siblings",
+          "vol": 10
+        },
+        {
+          "q": "dee brown kalani brown",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Kalani Brown?",
-      "answer": "Kalani Brown was born March 21, 1997 in Louisiana. As of late 2026 that puts her at 29 years old.",
-      "answer_kind": "researched",
+      "answer": "Kalani Brown was born March 21, 1997.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kalani_Brown"
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
       ],
-      "google_keyword": "kalani brown age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1997-03-21"
+      "queries": [
+        {
+          "q": "kalani brown age",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Kalani Brown played for?",
+      "answer": "Kalani Brown has played for the Los Angeles Sparks, Atlanta Dream, Dallas Wings, Phoenix Mercury and Las Vegas Aces.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kalani-brown/"
+      ],
+      "queries": [
+        {
+          "q": "kalani brown mercury",
+          "vol": 30
+        },
+        {
+          "q": "kalani brown phoenix mercury",
+          "vol": 20
+        },
+        {
+          "q": "dallas wings kalani brown",
+          "vol": 10
+        },
+        {
+          "q": "kalani brown atlanta dream",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Kalani Brown play college basketball?",
+      "answer": "Kalani Brown played at Baylor from 2015 to 2019 and won the 2019 NCAA championship. Her career .639 field goal percentage is the highest in Baylor history.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
+      ],
+      "queries": [
+        {
+          "q": "kalani brown baylor",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "When was Kalani Brown drafted?",
+      "answer": "The Los Angeles Sparks selected Kalani Brown seventh overall in the 2019 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
+      ],
+      "queries": [
+        {
+          "q": "kalani brown wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where has Kalani Brown played overseas?",
+      "answer": "Kalani Brown has played for Xinjiang in China (2019-20), Kayseri in Turkey (2020-21), and Hatay in Turkey (2021-22).",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629480/kalani-brown/bio"
+      ],
+      "queries": [
+        {
+          "q": "kalani brown overseas",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

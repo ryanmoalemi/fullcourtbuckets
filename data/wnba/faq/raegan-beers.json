@@ -1,110 +1,133 @@
 {
   "slug": "raegan-beers",
   "player_name": "Raegan Beers",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 23, 2026",
+  "verified_at": "2026-10-23",
   "items": [
     {
-      "question": "What are Raegan Beers's stats / points per game?",
-      "answer": "In the 2026 regular season, Raegan Beers averaged 4.0 points, 3.1 rebounds, and 0.8 assists in 36 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raegan beers stats",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How much does Raegan Beers make?",
-      "answer": "A precise public salary or net worth figure for Raegan Beers is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "raegan beers salary",
-      "approx_monthly_volume": 20
-    },
-    {
       "question": "How tall is Raegan Beers?",
-      "answer": "Raegan Beers is listed at 6' 4\".",
+      "answer": "The WNBA lists Raegan Beers at 6 feet 4 inches and 244 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raegan_Beers"
+        "https://www.wnba.com/player/1643441/raegan-beers/bio"
       ],
-      "google_keyword": "raegan beers height weight",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "raegan beers weight",
+          "vol": 260
+        },
+        {
+          "q": "raegan beers height weight",
+          "vol": 260
+        },
+        {
+          "q": "raegan beers height",
+          "vol": 140
+        },
+        {
+          "q": "how tall is raegan beers",
+          "vol": 40
+        },
+        {
+          "q": "how much does raegan beers weigh",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What did Raegan Beers score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Washington Mystics), Raegan Beers had 11.0 points, 5.0 rebounds, and 1.0 assists in a 69-79 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is raegan beers playing today",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Raegan Beers's jersey number?",
-      "answer": "Raegan Beers wears number 15 for the Connecticut Sun.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raegan beers jersey",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "What is Raegan Beers's contract?",
-      "answer": "Contract length and guarantees for Raegan Beers are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Was Raegan Beers drafted?",
+      "answer": "No. Raegan Beers was not selected in the 2026 WNBA Draft. She then signed a training camp contract with the Connecticut Sun.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1643441/raegan-beers/bio",
+        "https://sports.yahoo.com/articles/raegan-beers-signs-wnba-training-181559257.html"
       ],
-      "google_keyword": "raegan beers contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "raegan beers wnba draft",
+          "vol": 210
+        },
+        {
+          "q": "raegan beers draft",
+          "vol": 110
+        },
+        {
+          "q": "raegan beers undrafted",
+          "vol": 20
+        },
+        {
+          "q": "raegan beers draft pick",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Raegan Beers's stats?",
+      "answer": "In the 2026 regular season, Raegan Beers averaged 4.6 points, 3.2 rebounds, and 0.8 assists in 38 games for the Connecticut Sun.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/raegan-beers/"
+      ],
+      "queries": [
+        {
+          "q": "raegan beers stats",
+          "vol": 210
+        }
+      ]
+    },
+    {
+      "question": "Where did Raegan Beers play college basketball?",
+      "answer": "Raegan Beers played at Oregon State and then Oklahoma, averaging 16.1 points and 9.7 rebounds across 129 college games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sports.yahoo.com/articles/raegan-beers-signs-wnba-training-181559257.html"
+      ],
+      "queries": [
+        {
+          "q": "raegan beers oklahoma",
+          "vol": 210
+        },
+        {
+          "q": "raegan beers oregon state",
+          "vol": 20
+        },
+        {
+          "q": "raegan beers transfer",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Raegan Beers play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 15. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raegan beers team usa",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Raegan Beers injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "raegan beers injury",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Who are Raegan Beers's parents?",
-      "answer": "Public profiles share limited verified detail about Raegan Beers's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Raegan_Beers"
-      ],
-      "google_keyword": "raegan beers parents",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What college did Raegan Beers attend?",
-      "answer": "Beers played college basketball at the Oklahoma Sooners and Oregon State Beavers.",
+      "answer": "Raegan Beers plays forward for the Connecticut Sun and wears No. 15. 2026 was her rookie season.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raegan_Beers"
+        "https://www.wnba.com/player/1643441/raegan-beers/bio"
       ],
-      "google_keyword": "raegan beers oregon state",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "raegan beers wnba",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How old is Raegan Beers?",
-      "answer": "Raegan Beers was born July 23, 2003 in Littleton. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Raegan Beers was born July 23, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raegan_Beers"
+        "https://www.wnba.com/player/1643441/raegan-beers/bio"
       ],
-      "google_keyword": "raegan beers age",
-      "approx_monthly_volume": 70,
-      "birthdate": "2003-07-23"
+      "queries": [
+        {
+          "q": "raegan beers age",
+          "vol": 70
+        },
+        {
+          "q": "raegan beers birthday",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
