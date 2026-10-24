@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:44:18+00:00",
+ "checked_at": "2026-10-24T17:45:21+00:00",
  "period": 2,
- "clock": "8:44",
+ "clock": "8:11",
  "last_play_period": 2,
- "last_play_clock": "8:46",
+ "last_play_clock": "8:14",
  "away": {
   "abbreviation": "GS",
   "score": 18,
@@ -1160,6 +1160,66 @@
    "home_score": 15,
    "scoring_play": true,
    "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 95,
+   "period": 2,
+   "clock": "8:36",
+   "type": "Out of Bounds - Bad Pass Turnover",
+   "text": "Angel Reese out of bounds bad pass turnover",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 96,
+   "period": 2,
+   "clock": "8:36",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Kayla Thornton",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 97,
+   "period": 2,
+   "clock": "8:36",
+   "type": "Substitution",
+   "text": "Juste Jocyte enters the game for Kaila Charles",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 98,
+   "period": 2,
+   "clock": "8:20",
+   "type": "Driving Layup Shot",
+   "text": "Veronica Burton misses driving layup",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 99,
+   "period": 2,
+   "clock": "8:14",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
