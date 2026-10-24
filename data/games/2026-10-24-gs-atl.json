@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:30:01+00:00",
+ "checked_at": "2026-10-24T18:30:33+00:00",
  "period": 3,
- "clock": "8:41",
+ "clock": "8:03",
  "last_play_period": 3,
- "last_play_clock": "8:57",
+ "last_play_clock": "8:30",
  "away": {
   "abbreviation": "GS",
   "score": 42,
@@ -2462,6 +2462,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 203,
+   "period": 3,
+   "clock": "8:41",
+   "type": "Lost Ball Turnover",
+   "text": "Kaila Charles lost ball turnover (Naz Hillmon steals)",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 204,
+   "period": 3,
+   "clock": "8:30",
+   "type": "No Shot (Default Shot)",
+   "text": "Rhyne Howard misses shot",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
