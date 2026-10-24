@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:11:26+00:00",
+ "checked_at": "2026-10-24T18:11:58+00:00",
  "period": 2,
- "clock": "4.2",
+ "clock": "0.0",
  "last_play_period": 2,
- "last_play_clock": "22.0",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "GS",
   "score": 42,
@@ -2289,6 +2289,54 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 189,
+   "period": 2,
+   "clock": "4.2",
+   "type": "Traveling",
+   "text": "Isobel Borlase traveling turnover",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 190,
+   "period": 2,
+   "clock": "0.6",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 26-foot three point jumper",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 191,
+   "period": 2,
+   "clock": "0.1",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 192,
+   "period": 2,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 2nd Quarter",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
