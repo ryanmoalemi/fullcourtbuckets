@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:07:15+00:00",
+ "checked_at": "2026-10-24T18:09:20+00:00",
  "period": 2,
- "clock": "1:22",
+ "clock": "1:08",
  "last_play_period": 2,
- "last_play_clock": "1:22",
+ "last_play_clock": "1:08",
  "away": {
   "abbreviation": "GS",
-  "score": 38,
-  "feed_score": 38
+  "score": 40,
+  "feed_score": 40
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 23,
-  "feed_score": 23
+  "score": 25,
+  "feed_score": 25
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 22,
-   "home": 12
+   "away": 24,
+   "home": 14
   }
  ],
  "players": [],
@@ -2031,7 +2031,7 @@
    "period": 2,
    "clock": "1:24",
    "type": "Substitution",
-   "text": "Isobel Borlase enters the game for Madina Okot",
+   "text": "enters the game for Allisha Gray",
    "away_score": 38,
    "home_score": 22,
    "scoring_play": false,
@@ -2040,18 +2040,6 @@
   },
   {
    "order": 168,
-   "period": 2,
-   "clock": "1:24",
-   "type": "Substitution",
-   "text": "Rhyne Howard enters the game for Allisha Gray",
-   "away_score": 38,
-   "home_score": 22,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "ATL"
-  },
-  {
-   "order": 169,
    "period": 2,
    "clock": "1:24",
    "type": "Free Throw - 1 of 2",
@@ -2063,7 +2051,7 @@
    "team": "ATL"
   },
   {
-   "order": 170,
+   "order": 169,
    "period": 2,
    "clock": "1:24",
    "type": "Substitution",
@@ -2075,7 +2063,7 @@
    "team": "ATL"
   },
   {
-   "order": 171,
+   "order": 170,
    "period": 2,
    "clock": "1:24",
    "type": "Free Throw - 2 of 2",
@@ -2087,7 +2075,7 @@
    "team": "ATL"
   },
   {
-   "order": 172,
+   "order": 171,
    "period": 2,
    "clock": "1:22",
    "type": "Offensive Rebound",
@@ -2097,6 +2085,102 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 172,
+   "period": 2,
+   "clock": "1:17",
+   "type": "Shooting Foul",
+   "text": "Kayla Thornton shooting foul",
+   "away_score": 38,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 173,
+   "period": 2,
+   "clock": "1:17",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase makes free throw 1 of 2",
+   "away_score": 38,
+   "home_score": 24,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 174,
+   "period": 2,
+   "clock": "1:17",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase makes free throw 2 of 2",
+   "away_score": 38,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 175,
+   "period": 2,
+   "clock": "1:08",
+   "type": "Shooting Foul",
+   "text": "Jordin Canada shooting foul",
+   "away_score": 38,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 176,
+   "period": 2,
+   "clock": "1:57",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Madina Okot",
+   "away_score": 35,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 177,
+   "period": 2,
+   "clock": "1:57",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Allisha Gray",
+   "away_score": 35,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 178,
+   "period": 2,
+   "clock": "1:08",
+   "type": "Free Throw - 1 of 2",
+   "text": "Veronica Burton makes free throw 1 of 2",
+   "away_score": 39,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 179,
+   "period": 2,
+   "clock": "1:08",
+   "type": "Free Throw - 2 of 2",
+   "text": "Veronica Burton makes free throw 2 of 2",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
   }
  ]
 }
