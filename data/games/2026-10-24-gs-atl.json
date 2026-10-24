@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:11:58+00:00",
- "period": 2,
- "clock": "0.0",
- "last_play_period": 2,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-24T18:28:58+00:00",
+ "period": 3,
+ "clock": "9:18",
+ "last_play_period": 3,
+ "last_play_clock": "9:18",
  "away": {
   "abbreviation": "GS",
   "score": 42,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 26,
-  "feed_score": 26
+  "score": 28,
+  "feed_score": 28
  },
  "periods": [
   {
@@ -30,6 +30,11 @@
    "period": 2,
    "away": 26,
    "home": 15
+  },
+  {
+   "period": 3,
+   "away": 0,
+   "home": 2
   }
  ],
  "players": [],
@@ -2282,8 +2287,8 @@
    "order": 188,
    "period": 2,
    "clock": "22.0",
-   "type": "Running Layup Shot",
-   "text": "Gabby Williams makes running layup",
+   "type": "Running Finger Roll Layup",
+   "text": "Gabby Williams makes two point shot",
    "away_score": 42,
    "home_score": 26,
    "scoring_play": true,
@@ -2306,8 +2311,8 @@
    "order": 190,
    "period": 2,
    "clock": "0.6",
-   "type": "Jump Shot",
-   "text": "Gabby Williams misses 26-foot three point jumper",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 26-foot three point pullup jump shot",
    "away_score": 42,
    "home_score": 26,
    "scoring_play": false,
@@ -2337,6 +2342,102 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 193,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for Isobel Borlase",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 194,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for DeWanna Bonner",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 195,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Kayla Thornton",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 196,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Cecilia Zandalasini",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 197,
+   "period": 3,
+   "clock": "9:45",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 3-foot layup (Jordin Canada assists)",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 198,
+   "period": 3,
+   "clock": "9:21",
+   "type": "Pullup Jump Shot",
+   "text": "Veronica Burton misses 23-foot three point pullup jump shot",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 199,
+   "period": 3,
+   "clock": "9:18",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 200,
+   "period": 3,
+   "clock": "9:18",
+   "type": "Personal Foul",
+   "text": "Gabby Williams personal foul",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
