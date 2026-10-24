@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:23:23+00:00",
+ "checked_at": "2026-10-24T19:24:26+00:00",
  "period": 4,
- "clock": "1:35",
+ "clock": "33.6",
  "last_play_period": 4,
- "last_play_clock": "1:11",
+ "last_play_clock": "33.6",
  "away": {
   "abbreviation": "GS",
-  "score": 64,
-  "feed_score": 64
+  "score": 66,
+  "feed_score": 66
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 10,
+   "away": 12,
    "home": 14
   }
  ],
@@ -4260,8 +4260,8 @@
    "order": 352,
    "period": 4,
    "clock": "5:12",
-   "type": "Turnaround Jump Shot",
-   "text": "Rhyne Howard makes 13-foot turnaround jump shot",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Rhyne Howard makes 13-foot two point shot",
    "away_score": 61,
    "home_score": 53,
    "scoring_play": true,
@@ -4584,13 +4584,97 @@
    "order": 379,
    "period": 4,
    "clock": "1:11",
-   "type": "No Shot (Default Shot)",
-   "text": "Kayla Thornton misses shot",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton misses 24-foot three point jumper",
    "away_score": 64,
    "home_score": 59,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 380,
+   "period": 4,
+   "clock": "1:07",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 64,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 381,
+   "period": 4,
+   "clock": "1:04",
+   "type": "Jump Shot",
+   "text": "Allisha Gray misses 24-foot three point jumper",
+   "away_score": 64,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 382,
+   "period": 4,
+   "clock": "1:01",
+   "type": "Offensive Rebound",
+   "text": "Rhyne Howard offensive rebound",
+   "away_score": 64,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 383,
+   "period": 4,
+   "clock": "59.5",
+   "type": "Jump Shot",
+   "text": "Isobel Borlase misses 24-foot three point jumper",
+   "away_score": 64,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 384,
+   "period": 4,
+   "clock": "55.5",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 64,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 385,
+   "period": 4,
+   "clock": "34.6",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Veronica Burton makes 11-foot two point shot",
+   "away_score": 66,
+   "home_score": 59,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 386,
+   "period": 4,
+   "clock": "33.6",
+   "type": "Reset Timeout",
+   "text": "Dream Reset Timeout",
+   "away_score": 66,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
