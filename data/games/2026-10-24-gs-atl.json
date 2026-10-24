@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:59:26+00:00",
+ "checked_at": "2026-10-24T18:00:30+00:00",
  "period": 2,
- "clock": "3:20",
+ "clock": "2:43",
  "last_play_period": 2,
- "last_play_clock": "3:23",
+ "last_play_clock": "2:43",
  "away": {
   "abbreviation": "GS",
-  "score": 31,
-  "feed_score": 31
+  "score": 33,
+  "feed_score": 33
  },
  "home": {
   "abbreviation": "ATL",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 15,
+   "away": 17,
    "home": 9
   }
  ],
@@ -1785,6 +1785,114 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 147,
+   "period": 2,
+   "clock": "3:03",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 148,
+   "period": 2,
+   "clock": "3:03",
+   "type": "Free Throw - 1 of 2",
+   "text": "Angel Reese misses free throw 1 of 2",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 149,
+   "period": 2,
+   "clock": "3:03",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 150,
+   "period": 2,
+   "clock": "3:03",
+   "type": "Free Throw - 2 of 2",
+   "text": "Angel Reese misses free throw 2 of 2",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 151,
+   "period": 2,
+   "clock": "3:01",
+   "type": "Offensive Rebound",
+   "text": "Rhyne Howard offensive rebound",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 152,
+   "period": 2,
+   "clock": "2:59",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 153,
+   "period": 2,
+   "clock": "2:54",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 154,
+   "period": 2,
+   "clock": "2:46",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Veronica Burton makes 9-foot two point shot",
+   "away_score": 33,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 155,
+   "period": 2,
+   "clock": "2:43",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 33,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
