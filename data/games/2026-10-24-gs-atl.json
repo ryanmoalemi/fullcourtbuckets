@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:16:41+00:00",
+ "checked_at": "2026-10-24T17:17:44+00:00",
  "period": 1,
- "clock": "9:06",
+ "clock": "8:18",
  "last_play_period": 1,
- "last_play_clock": "9:06",
+ "last_play_clock": "8:28",
  "away": {
   "abbreviation": "GS",
   "score": 0,
@@ -148,6 +148,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 11,
+   "period": 1,
+   "clock": "8:45",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 12,
+   "period": 1,
+   "clock": "8:40",
+   "type": "Defensive Rebound",
+   "text": "Tiffany Hayes defensive rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 13,
+   "period": 1,
+   "clock": "8:29",
+   "type": "Jump Shot",
+   "text": "Kiah Stokes misses 23-foot three point jumper",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 14,
+   "period": 1,
+   "clock": "8:28",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 15,
+   "period": 1,
+   "clock": "8:28",
+   "type": "Loose Ball Foul",
+   "text": "Allisha Gray loose ball foul",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
