@@ -1,15 +1,15 @@
 {
  "schema_version": 1,
- "status": "pre",
+ "status": "live",
  "live": true,
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T16:35:44+00:00",
- "period": null,
- "clock": "0.0",
- "last_play_period": null,
- "last_play_clock": null,
+ "checked_at": "2026-10-24T17:16:41+00:00",
+ "period": 1,
+ "clock": "9:06",
+ "last_play_period": 1,
+ "last_play_clock": "9:06",
  "away": {
   "abbreviation": "GS",
   "score": 0,
@@ -17,10 +17,137 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 0,
-  "feed_score": 0
+  "score": 2,
+  "feed_score": 2
  },
- "periods": [],
+ "periods": [
+  {
+   "period": 1,
+   "away": 0,
+   "home": 2
+  }
+ ],
  "players": [],
- "plays": []
+ "plays": [
+  {
+   "order": 1,
+   "period": 1,
+   "clock": "10:00",
+   "type": "Jumpball",
+   "text": "Kiah Stokes vs. Angel Reese (Veronica Burton gains possession)",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 2,
+   "period": 1,
+   "clock": "9:40",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Tiffany Hayes misses two point shot",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 3,
+   "period": 1,
+   "clock": "9:37",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 4,
+   "period": 1,
+   "clock": "9:36",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 25-foot three point jumper",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 5,
+   "period": 1,
+   "clock": "9:32",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 6,
+   "period": 1,
+   "clock": "9:15",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 7,
+   "period": 1,
+   "clock": "9:15",
+   "type": "Free Throw - 1 of 2",
+   "text": "Allisha Gray makes free throw 1 of 2",
+   "away_score": 0,
+   "home_score": 1,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 8,
+   "period": 1,
+   "clock": "9:15",
+   "type": "Free Throw - 2 of 2",
+   "text": "Allisha Gray makes free throw 2 of 2",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 9,
+   "period": 1,
+   "clock": "9:06",
+   "type": "Offensive Foul",
+   "text": "Tiffany Hayes offensive foul",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 10,
+   "period": 1,
+   "clock": "9:06",
+   "type": "Offensive Foul Turnover",
+   "text": "Tiffany Hayes offensive foul turnover",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  }
+ ]
 }
