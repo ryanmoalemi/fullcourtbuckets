@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:43:38+00:00",
+ "checked_at": "2026-10-24T18:44:10+00:00",
  "period": 3,
- "clock": "5:00",
+ "clock": "4:26",
  "last_play_period": 3,
- "last_play_clock": "4:36",
+ "last_play_clock": "4:26",
  "away": {
   "abbreviation": "GS",
   "score": 46,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 37,
-  "feed_score": 37
+  "score": 40,
+  "feed_score": 40
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 4,
-   "home": 11
+   "home": 14
   }
  ],
  "players": [],
@@ -3103,10 +3103,46 @@
    "order": 256,
    "period": 3,
    "clock": "4:36",
-   "type": "No Shot (Default Shot)",
-   "text": "Gabby Williams misses shot",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
    "away_score": 46,
    "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 257,
+   "period": 3,
+   "clock": "4:33",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 46,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 258,
+   "period": 3,
+   "clock": "4:27",
+   "type": "No Shot (Default Shot)",
+   "text": "Isobel Borlase makes 25-foot shot (Jordin Canada assists)",
+   "away_score": 46,
+   "home_score": 40,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 259,
+   "period": 3,
+   "clock": "4:26",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 46,
+   "home_score": 40,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
