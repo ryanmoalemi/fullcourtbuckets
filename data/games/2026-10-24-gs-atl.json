@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:58:46+00:00",
- "period": 3,
- "clock": "0.0",
- "last_play_period": 3,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-24T19:03:26+00:00",
+ "period": 4,
+ "clock": "9:23",
+ "last_play_period": 4,
+ "last_play_clock": "9:23",
  "away": {
   "abbreviation": "GS",
   "score": 54,
@@ -35,6 +35,11 @@
    "period": 3,
    "away": 12,
    "home": 19
+  },
+  {
+   "period": 4,
+   "away": 0,
+   "home": 0
   }
  ],
  "players": [],
@@ -3746,6 +3751,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 310,
+   "period": 4,
+   "clock": "9:34",
+   "type": "Driving Layup Shot",
+   "text": "Veronica Burton misses driving layup",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 311,
+   "period": 4,
+   "clock": "9:34",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 312,
+   "period": 4,
+   "clock": "9:26",
+   "type": "Jump Shot",
+   "text": "Allisha Gray misses 24-foot three point jumper",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 313,
+   "period": 4,
+   "clock": "9:23",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
