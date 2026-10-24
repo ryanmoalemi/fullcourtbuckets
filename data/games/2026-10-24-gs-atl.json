@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:07:05+00:00",
+ "checked_at": "2026-10-24T19:08:08+00:00",
  "period": 4,
- "clock": "7:34",
+ "clock": "6:47",
  "last_play_period": 4,
- "last_play_clock": "7:40",
+ "last_play_clock": "6:49",
  "away": {
   "abbreviation": "GS",
   "score": 57,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 49,
-  "feed_score": 49
+  "score": 51,
+  "feed_score": 51
  },
  "periods": [
   {
@@ -39,7 +39,7 @@
   {
    "period": 4,
    "away": 3,
-   "home": 4
+   "home": 6
   }
  ],
  "players": [],
@@ -3804,8 +3804,8 @@
    "order": 314,
    "period": 4,
    "clock": "8:59",
-   "type": "Pullup Jump Shot",
-   "text": "Allisha Gray blocks Kaitlyn Chen 's 11-foot pullup jump shot",
+   "type": "Turnaround Jump Shot",
+   "text": "Allisha Gray blocks Kaitlyn Chen 's 11-foot turnaround jump shot",
    "away_score": 54,
    "home_score": 45,
    "scoring_play": false,
@@ -4036,6 +4036,126 @@
    "text": "Kiah Stokes offensive foul turnover",
    "away_score": 57,
    "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 334,
+   "period": 4,
+   "clock": "8:14",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Kaila Charles",
+   "away_score": 54,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 335,
+   "period": 4,
+   "clock": "7:34",
+   "type": "Offensive Foul",
+   "text": "Isobel Borlase offensive foul",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 336,
+   "period": 4,
+   "clock": "7:34",
+   "type": "Offensive Foul Turnover",
+   "text": "Isobel Borlase offensive foul turnover",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 337,
+   "period": 4,
+   "clock": "7:34",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 338,
+   "period": 4,
+   "clock": "7:24",
+   "type": "Driving Layup Shot",
+   "text": "Naz Hillmon blocks Tiffany Hayes 's 6-foot driving layup",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 339,
+   "period": 4,
+   "clock": "7:16",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 340,
+   "period": 4,
+   "clock": "7:12",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup",
+   "away_score": 57,
+   "home_score": 51,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 341,
+   "period": 4,
+   "clock": "6:54",
+   "type": "Driving Layup Shot",
+   "text": "Veronica Burton misses driving layup",
+   "away_score": 57,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 342,
+   "period": 4,
+   "clock": "6:50",
+   "type": "Offensive Rebound",
+   "text": "Tiffany Hayes offensive rebound",
+   "away_score": 57,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 343,
+   "period": 4,
+   "clock": "6:49",
+   "type": "No Shot (Default Shot)",
+   "text": "Gabby Williams misses shot",
+   "away_score": 57,
+   "home_score": 51,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
