@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:57:51+00:00",
+ "checked_at": "2026-10-24T17:58:23+00:00",
  "period": 2,
- "clock": "3:56",
+ "clock": "3:36",
  "last_play_period": 2,
- "last_play_clock": "3:56",
+ "last_play_clock": "3:36",
  "away": {
   "abbreviation": "GS",
-  "score": 28,
-  "feed_score": 28
+  "score": 29,
+  "feed_score": 29
  },
  "home": {
   "abbreviation": "ATL",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 12,
+   "away": 13,
    "home": 9
   }
  ],
@@ -1706,8 +1706,8 @@
    "order": 140,
    "period": 2,
    "clock": "3:56",
-   "type": "Driving Layup Shot",
-   "text": "Cecilia Zandalasini makes driving layup",
+   "type": "Driving Finger Roll Layup",
+   "text": "Cecilia Zandalasini makes 4-foot two point shot (Veronica Burton assists)",
    "away_score": 28,
    "home_score": 20,
    "scoring_play": true,
@@ -1725,6 +1725,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 142,
+   "period": 2,
+   "clock": "3:56",
+   "type": "Free Throw - 1 of 1",
+   "text": "Cecilia Zandalasini makes free throw 1 of 1",
+   "away_score": 29,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 143,
+   "period": 2,
+   "clock": "3:36",
+   "type": "Layup Shot",
+   "text": "Veronica Burton blocks Angel Reese 's 5-foot layup",
+   "away_score": 29,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 144,
+   "period": 2,
+   "clock": "3:36",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 29,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
