@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21",
+  "updated": "2026-10-24",
   "games": [
     {
       "date": "1997-06-21",
@@ -140,19 +140,22 @@
       "date": "2026-10-21",
       "season": 2026,
       "game": "Finals Game 3",
-      "home": "",
-      "away": "",
+      "home": "Atlanta Dream",
+      "away": "Golden State Valkyries",
       "venue": "State Farm Arena",
-      "attendance": null,
-      "attendance_source": "",
-      "attendance_source_date": "",
-      "network": "USA and Peacock",
-      "viewers": null,
-      "viewers_source": "",
-      "viewers_source_date": "",
+      "attendance": 17099,
+      "attendance_source": "https://www.wnba.com/game/1042600303",
+      "attendance_source_date": "2026-10-21",
+      "network": "USA Network, CNBC, Peacock",
+      "viewers": 1710000,
+      "viewers_source": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-finals-game-3-1999-best-ever-cable",
+      "viewers_source_date": "2026-10-23",
       "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
-      "schedule_source_date": "2026-10-13"
+      "schedule_source_date": "2026-10-13",
+      "attendance_note": "sellout",
+      "viewers_note": "average audience",
+      "status": "Final: Dream 97-71"
     },
     {
       "date": "2026-10-24",
@@ -499,5 +502,7 @@
       "checked_at": "2026-10-21",
       "notes": "USA Sports calls it the most-watched WNBA Finals Game 2 ever on cable. Up 9% vs. the 2025 WNBA Finals Game 2 (PHX/LV) on broadcast television. Nielsen Big Data + Panel and Adobe Analytics."
     }
-  ]
+  ],
+  "updated_time": "10:30 a.m. PT",
+  "finals_intro": "Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million."
 }
