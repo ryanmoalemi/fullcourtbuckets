@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:51:08+00:00",
+ "checked_at": "2026-10-24T17:55:14+00:00",
  "period": 2,
- "clock": "5:49",
+ "clock": "5:39",
  "last_play_period": 2,
- "last_play_clock": "5:49",
+ "last_play_clock": "5:39",
  "away": {
   "abbreviation": "GS",
   "score": 24,
@@ -1143,7 +1143,7 @@
    "period": 2,
    "clock": "9:11",
    "type": "Pullup Jump Shot",
-   "text": "Allisha Gray makes 9-foot pullup jump shot",
+   "text": "Allisha Gray makes 9-foot pullup jump shot (Jordin Canada assists)",
    "away_score": 16,
    "home_score": 15,
    "scoring_play": true,
@@ -1263,7 +1263,7 @@
    "period": 2,
    "clock": "8:04",
    "type": "Offensive Rebound",
-   "text": "Golden State Valkyries offensive team rebound",
+   "text": "Tiffany Hayes offensive rebound",
    "away_score": 18,
    "home_score": 15,
    "scoring_play": false,
@@ -1527,12 +1527,36 @@
    "period": 2,
    "clock": "5:49",
    "type": "Full Timeout",
-   "text": "Golden State Valkyries Full timeout",
+   "text": "Dream Full timeout",
    "away_score": 24,
    "home_score": 20,
    "scoring_play": false,
    "score_value": 0,
-   "team": "GS"
+   "team": "ATL"
+  },
+  {
+   "order": 126,
+   "period": 2,
+   "clock": "5:49",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Rhyne Howard",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 127,
+   "period": 2,
+   "clock": "5:39",
+   "type": "No Turnover",
+   "text": "Angel Reese turnover Cecilia Zandalasini",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
