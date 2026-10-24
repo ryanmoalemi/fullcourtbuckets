@@ -1,86 +1,190 @@
 {
   "slug": "serah-williams",
   "player_name": "Serah Williams",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What are Serah Williams's stats / points per game?",
-      "answer": "In the 2026 regular season, Serah Williams averaged 4.4 points, 2.8 rebounds, and 0.5 assists in 38 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Serah Williams's stats?",
+      "answer": "In the 2026 regular season, Serah Williams averaged 4.3 points, 2.7 rebounds, and 0.5 assists in 39 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "serah williams stats",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Serah Williams make?",
-      "answer": "A precise public salary or net worth figure for Serah Williams is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/serah-williams/"
       ],
-      "google_keyword": "serah williams salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "serah williams stats",
+          "vol": 170
+        }
+      ]
     },
     {
       "question": "How tall is Serah Williams?",
-      "answer": "Serah Williams is listed at 6' 4\".",
+      "answer": "The WNBA lists Serah Williams at 6 feet 4 inches and 185 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Serah_Williams"
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
       ],
-      "google_keyword": "serah williams height",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "serah williams height",
+          "vol": 70
+        },
+        {
+          "q": "how tall is serah williams",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What college did Serah Williams attend?",
-      "answer": "Williams played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Serah_Williams"
-      ],
-      "google_keyword": "uconn serah williams",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Serah Williams injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "serah williams injury",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Serah Williams's parents?",
-      "answer": "Public profiles share limited verified detail about Serah Williams's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "When was Serah Williams drafted?",
+      "answer": "The Connecticut Sun selected Serah Williams in the third round, 33rd overall, of the 2026 WNBA Draft. Her draft rights were traded to the Portland Fire for Taylor Bigby and Portland's 2027 third-round pick.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Serah_Williams"
+        "https://www.wnba.com/player/1643436/serah-williams/bio",
+        "https://fire.wnba.com/news/portland-fire-selects-iyana-martin-frieda-buhner-in-2026-wnba-college-draft-acquire-serah-williams-via-trade"
       ],
-      "google_keyword": "serah williams parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "serah williams wnba draft",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What team does Serah Williams play for?",
+      "answer": "Serah Williams plays forward for the Portland Fire. She signed with Portland on April 16, 2026, and as a rookie she appeared in 39 games with 3 starts.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
+      ],
+      "queries": [
+        {
+          "q": "serah williams wnba",
+          "vol": 70
+        },
+        {
+          "q": "serah williams portland fire",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Did Serah Williams transfer to UConn?",
+      "answer": "Yes. Serah Williams transferred from Wisconsin to UConn for the 2025-26 season. In her one season in Storrs she started, won regular-season and conference titles, and reached the Final Four.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://uconnhuskies.com/news/2026/4/13/womens-basketball-serah-williams-selected-by-connecticut-sun-at-the-2026-wnba-draft",
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
+      ],
+      "queries": [
+        {
+          "q": "uconn serah williams",
+          "vol": 50
+        },
+        {
+          "q": "serah williams transfer",
+          "vol": 50
+        },
+        {
+          "q": "serah williams uconn basketball",
+          "vol": 20
+        },
+        {
+          "q": "serah williams uconn transfer",
+          "vol": 20
+        },
+        {
+          "q": "serah williams portal",
+          "vol": 10
+        },
+        {
+          "q": "serah williams transfer portal",
+          "vol": 10
+        },
+        {
+          "q": "serah williams uconn transfer portal",
+          "vol": 10
+        },
+        {
+          "q": "uconn huskies serah williams transfer",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Serah Williams?",
-      "answer": "Serah Williams was born January 17, 2004 in Brooklyn. As of late 2026 that puts her at 22 years old.",
+      "answer": "Serah Williams was born January 17, 2004.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
+      ],
+      "queries": [
+        {
+          "q": "serah williams age",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Did Serah Williams play at Wisconsin?",
+      "answer": "Yes. Serah Williams played three seasons at Wisconsin. She was the 2024 Big Ten Defensive Player of the Year, made the All-Big Ten First Team in 2024 and 2025, and finished college with 1,748 points, 951 rebounds and 262 blocks.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Serah_Williams"
+        "https://www.wnba.com/player/1643436/serah-williams/bio",
+        "https://fire.wnba.com/news/portland-fire-selects-iyana-martin-frieda-buhner-in-2026-wnba-college-draft-acquire-serah-williams-via-trade"
       ],
-      "google_keyword": "serah williams age",
-      "approx_monthly_volume": 40,
-      "birthdate": "2004-01-17"
+      "queries": [
+        {
+          "q": "serah williams wisconsin",
+          "vol": 20
+        },
+        {
+          "q": "serah williams badgers",
+          "vol": 10
+        },
+        {
+          "q": "serah williams wisconsin basketball",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What year is Serah Williams?",
+      "answer": "Serah Williams finished her college career at UConn in 2025-26 and was a WNBA rookie with the Portland Fire in 2026.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
+      ],
+      "queries": [
+        {
+          "q": "serah williams year",
+          "vol": 20
+        },
+        {
+          "q": "what year is serah williams",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Serah Williams from?",
-      "answer": "Serah Williams is from Brooklyn.",
+      "answer": "Serah Williams was born in Brooklyn, New York, and played high school basketball at Niagara Prep. Her WNBA player page lists her country as Canada.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Serah_Williams"
+        "https://www.wnba.com/draft/2026/prospects/257849/serah-williams",
+        "https://www.wnba.com/player/1643436/serah-williams/bio"
       ],
-      "google_keyword": "where is serah williams from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is serah williams from",
+          "vol": 10
+        },
+        {
+          "q": "serah williams canada",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

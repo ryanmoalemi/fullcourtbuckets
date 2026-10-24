@@ -1,86 +1,83 @@
 {
   "slug": "damiris-dantas",
   "player_name": "Damiris Dantas",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What are Damiris Dantas's stats / points per game?",
-      "answer": "In the 2026 regular season, Damiris Dantas averaged 4.0 points, 1.0 rebounds, and 0.2 assists in 4 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Damiris Dantas's stats?",
+      "answer": "In the 2026 regular season, Damiris Dantas averaged 3.3 points, 1.5 rebounds, and 0.3 assists in 12 games for the Indiana Fever.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "damiris dantas stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Damiris Dantas dating?",
-      "answer": "As of late 2026, Damiris Dantas has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Damiris_Dantas"
+        "https://fullcourtbuckets.com/wnba/damiris-dantas/"
       ],
-      "google_keyword": "damiris dantas partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Damiris Dantas make?",
-      "answer": "A precise public salary or net worth figure for Damiris Dantas is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "damiris dantas salary",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How tall is Damiris Dantas?",
-      "answer": "Damiris Dantas is listed at 6' 4\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Damiris_Dantas"
-      ],
-      "google_keyword": "damiris dantas height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "damiris dantas stats",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How old is Damiris Dantas?",
-      "answer": "She was born November 17, 1992 in São Paulo. As of late 2026 that puts her at 33 years old.",
+      "answer": "Damiris Dantas was born November 17, 1992, in Ferraz de Vasconcelos, Sao Paulo, Brazil.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Damiris_Dantas"
+        "https://www.wnba.com/player/203024/damiris-dantas/bio"
       ],
-      "google_keyword": "damiris dantas age",
-      "approx_monthly_volume": 40,
-      "birthdate": "1992-11-17"
+      "queries": [
+        {
+          "q": "damiris dantas age",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "What is Damiris Dantas's contract?",
-      "answer": "Contract length and guarantees for Damiris Dantas are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "How tall is Damiris Dantas?",
+      "answer": "The WNBA lists Damiris Dantas at 6 feet 4 inches and 203 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203024/damiris-dantas/bio"
+      ],
+      "queries": [
+        {
+          "q": "damiris dantas height",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Does Damiris Dantas play for the Indiana Fever?",
+      "answer": "Yes. Damiris Dantas re-signed with the Indiana Fever for the 2026 season, her third straight with the team. Minnesota drafted her 12th overall in 2012, and she also played for the Lynx and the Atlanta Dream.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/203024/damiris-dantas/bio",
+        "https://www.oursportscentral.com/services/releases/indiana-fever-re-sign-brazilian-center-damiris-dantas/n-6347306"
       ],
-      "google_keyword": "damiris dantas contract",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "damiris dantas wnba",
+          "vol": 20
+        },
+        {
+          "q": "damiris dantas indiana fever",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Damiris Dantas married?",
-      "answer": "There is no widely reported public record of Damiris Dantas being married as of late 2026.",
-      "answer_kind": "researched",
+      "question": "Has Damiris Dantas won the AmeriCup with Brazil?",
+      "answer": "Yes. Damiris Dantas won AmeriCup gold with Brazil in 2011 and 2023, and bronze in 2013 and 2019. She made the 2019 AmeriCup All-Star Five.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Damiris_Dantas"
+        "https://www.wnba.com/player/203024/damiris-dantas/bio"
       ],
-      "google_keyword": "damiris dantas husband",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "Is Damiris Dantas injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "damiris dantas injury",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "damiris dantas americup",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

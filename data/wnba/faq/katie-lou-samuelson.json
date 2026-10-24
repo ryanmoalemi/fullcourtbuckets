@@ -1,150 +1,234 @@
 {
   "slug": "katie-lou-samuelson",
   "player_name": "Katie Lou Samuelson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What are Katie Lou Samuelson's stats / points per game?",
-      "answer": "In the 2026 regular season, Katie Lou Samuelson averaged 4.4 points, 2.1 rebounds, and 0.8 assists in 32 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "question": "What are Katie Lou Samuelson's stats?",
+      "answer": "In the 2026 regular season, Katie Lou Samuelson averaged 4.4 points, 2.1 rebounds, and 0.8 assists in 32 games for the Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "katie lou samuelson stats",
-      "approx_monthly_volume": 90
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/katie-lou-samuelson/"
+      ],
+      "queries": [
+        {
+          "q": "katie lou samuelson stats",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Who is Katie Lou Samuelson dating?",
-      "answer": "Katie Lou Samuelson is married to Devin Cannady.",
+      "question": "Does Katie Lou Samuelson have sisters?",
+      "answer": "Yes. Katie Lou Samuelson has two older sisters, Bonnie and Karlie, who both played basketball at Stanford. Her parents are Karen and Jon Samuelson.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.theknot.com/content/wnba-relationships"
+        "https://uconnhuskies.com/sports/womens-basketball/roster/katie-lou-samuelson/9339",
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio"
       ],
-      "google_keyword": "katie lou samuelson partner",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "katie lou samuelson sisters",
+          "vol": 70
+        },
+        {
+          "q": "karlie and katie lou samuelson",
+          "vol": 30
+        },
+        {
+          "q": "does katie lou samuelson have a sister",
+          "vol": 10
+        },
+        {
+          "q": "is karlie samuelson related to katie lou samuelson",
+          "vol": 10
+        },
+        {
+          "q": "are karlie and katie lou samuelson related",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson family",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson parents",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Katie Lou Samuelson make?",
-      "answer": "A precise public salary or net worth figure for Katie Lou Samuelson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Did Katie Lou Samuelson play at UConn?",
+      "answer": "Yes. Katie Lou Samuelson played four seasons at UConn. She led the nation in three-point percentage (47.5) in 2017-18.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio",
+        "https://uconnhuskies.com/sports/womens-basketball/roster/katie-lou-samuelson/9339"
       ],
-      "google_keyword": "katie lou samuelson salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "katie lou samuelson uconn",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How tall is Katie Lou Samuelson?",
-      "answer": "Katie Lou Samuelson is listed at 6' 3\".",
+      "answer": "The WNBA lists Katie Lou Samuelson at 6 feet 3 inches and 163 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio"
       ],
-      "google_keyword": "katie lou samuelson height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How old is Katie Lou Samuelson?",
-      "answer": "She was born June 13, 1997 in Fullerton. As of late 2026 that puts her at 29 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
-      ],
-      "google_keyword": "katie lou samuelson age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1997-06-13"
-    },
-    {
-      "question": "What did Katie Lou Samuelson score in her last game?",
-      "answer": "In her most recent completed game (August 30, 2026 vs. the Los Angeles Sparks), Katie Lou Samuelson had 4.0 points, 0 rebounds, and 2.0 assists in a 74-90 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "why is katie lou samuelson not playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Katie Lou Samuelson's jersey number?",
-      "answer": "Katie Lou Samuelson wears number 33 for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "katie lou samuelson jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Katie Lou Samuelson's contract?",
-      "answer": "Contract length and guarantees for Katie Lou Samuelson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "katie lou samuelson contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Katie Lou Samuelson married?",
-      "answer": "Yes. Katie Lou Samuelson is married to Devin Cannady. They eloped in April 2023.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.theknot.com/content/wnba-relationships"
-      ],
-      "google_keyword": "katie lou samuelson husband",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "katie lou samuelson height",
+          "vol": 40
+        },
+        {
+          "q": "katie lou samuelson height and weight",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Katie Lou Samuelson play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. She wears No. 33. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does katie lou samuelson play for",
-      "approx_monthly_volume": 20
+      "answer": "Katie Lou Samuelson plays for the Seattle Storm, who brought her back for the 2026 season. She missed the 2025 season with an ACL injury suffered in training camp.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio",
+        "https://storm.wnba.com/news/kls-is-back"
+      ],
+      "queries": [
+        {
+          "q": "who does katie lou samuelson play for",
+          "vol": 20
+        },
+        {
+          "q": "katie lou samuelson seattle storm",
+          "vol": 20
+        },
+        {
+          "q": "katie lou samuelson wnba",
+          "vol": 30
+        },
+        {
+          "q": "what team is katie lou samuelson on",
+          "vol": 10
+        },
+        {
+          "q": "what team does katie lou samuelson play for",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson new team",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Katie Lou Samuelson attend?",
-      "answer": "Samuelson played college basketball at UConn.",
+      "question": "How old is Katie Lou Samuelson?",
+      "answer": "Katie Lou Samuelson was born June 13, 1997.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio"
       ],
-      "google_keyword": "katie lou samuelson uconn",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "katie lou samuelson age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Katie Lou Samuelson injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "katie lou samuelson injury",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Does Katie Lou Samuelson have kids?",
-      "answer": "There is no widely reported public information that Katie Lou Samuelson has children as of late 2026.",
+      "question": "When was Katie Lou Samuelson drafted?",
+      "answer": "The Chicago Sky selected Katie Lou Samuelson fourth overall in the 2019 WNBA Draft out of UConn.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio",
+        "https://fullcourtbuckets.com/wnba/katie-lou-samuelson/"
       ],
-      "google_keyword": "katie lou samuelson daughter",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "katie lou samuelson draft pick",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson draft",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who are Katie Lou Samuelson's parents?",
-      "answer": "Public profiles share limited verified detail about Katie Lou Samuelson's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Has Katie Lou Samuelson played in the Olympics?",
+      "answer": "No. She was named to the 2021 USA 3x3 Olympic qualifying team ahead of the Tokyo Olympics but could not compete because of illness. She won gold with USA Basketball at the 2019 FIBA AmeriCup.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio"
       ],
-      "google_keyword": "katie lou samuelson parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "katie lou samuelson olympics",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson usa basketball",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How many championships does Katie Lou Samuelson have?",
-      "answer": "Public biographical sources cover Katie Lou Samuelson's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
+      "question": "Did Katie Lou Samuelson go 10 for 10 from three?",
+      "answer": "Yes. On March 6, 2017, against USF, Katie Lou Samuelson made all 10 of her three-point attempts and scored a career-high 40 points.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Lou_Samuelson"
+        "https://uconnhuskies.com/sports/womens-basketball/roster/katie-lou-samuelson/9339"
       ],
-      "google_keyword": "katie arrington",
-      "approx_monthly_volume": 1000
+      "queries": [
+        {
+          "q": "katie lou samuelson 10 for 10",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson record",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Katie Lou Samuelson play for the Fever and Sparks?",
+      "answer": "Yes. Katie Lou Samuelson played for the Los Angeles Sparks in 2022, when she averaged a career-high 9.7 points, and for the Indiana Fever in 2024. She then signed with Seattle in February 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://storm.wnba.com/news/kls-is-back"
+      ],
+      "queries": [
+        {
+          "q": "katie lou samuelson indiana fever",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson sparks",
+          "vol": 10
+        },
+        {
+          "q": "katie lou samuelson has parted ways with the indiana fever",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Katie Lou Samuelson play for Perfumerias Avenida?",
+      "answer": "Yes. Katie Lou Samuelson played for Perfumerias Avenida in Spain from 2020 to 2022 and helped the team reach the 2021 EuroLeague Final and win the Spanish league title.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629478/katie-lou-samuelson/bio"
+      ],
+      "queries": [
+        {
+          "q": "katie lou samuelson avenida",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
