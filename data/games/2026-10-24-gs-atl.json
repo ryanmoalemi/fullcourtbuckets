@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:14:56+00:00",
+ "checked_at": "2026-10-24T19:15:59+00:00",
  "period": 4,
- "clock": "4:48",
+ "clock": "3:40",
  "last_play_period": 4,
- "last_play_clock": "4:49",
+ "last_play_clock": "3:43",
  "away": {
   "abbreviation": "GS",
-  "score": 61,
-  "feed_score": 61
+  "score": 64,
+  "feed_score": 64
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 7,
+   "away": 10,
    "home": 10
   }
  ],
@@ -4079,7 +4079,7 @@
   {
    "order": 337,
    "period": 4,
-   "clock": "7:24",
+   "clock": "7:25",
    "type": "Driving Layup Shot",
    "text": "Naz Hillmon blocks Tiffany Hayes 's 6-foot driving layup",
    "away_score": 57,
@@ -4091,7 +4091,7 @@
   {
    "order": 338,
    "period": 4,
-   "clock": "7:16",
+   "clock": "7:24",
    "type": "Defensive Rebound",
    "text": "Dream defensive team rebound",
    "away_score": 57,
@@ -4103,7 +4103,7 @@
   {
    "order": 339,
    "period": 4,
-   "clock": "7:12",
+   "clock": "7:13",
    "type": "Driving Layup Shot",
    "text": "Jordin Canada makes driving layup",
    "away_score": 57,
@@ -4296,13 +4296,85 @@
    "order": 355,
    "period": 4,
    "clock": "4:49",
-   "type": "No Shot (Default Shot)",
-   "text": "Isobel Borlase makes 2-foot shot",
+   "type": "Running Layup Shot",
+   "text": "Isobel Borlase makes running layup",
    "away_score": 61,
    "home_score": 55,
    "scoring_play": true,
    "score_value": 2,
    "team": "ATL"
+  },
+  {
+   "order": 356,
+   "period": 4,
+   "clock": "4:23",
+   "type": "Step Back Jump Shot",
+   "text": "Veronica Burton makes 24-foot three point step back jumpshot (Gabby Williams assists)",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 357,
+   "period": 4,
+   "clock": "4:06",
+   "type": "Layup Shot",
+   "text": "Angel Reese misses layup",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 358,
+   "period": 4,
+   "clock": "4:03",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 359,
+   "period": 4,
+   "clock": "4:02",
+   "type": "Tip Shot",
+   "text": "Angel Reese misses 2-foot tip shot",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 360,
+   "period": 4,
+   "clock": "4:00",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 361,
+   "period": 4,
+   "clock": "3:43",
+   "type": "No Shot (Default Shot)",
+   "text": "Gabby Williams misses shot",
+   "away_score": 64,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
