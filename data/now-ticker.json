@@ -1,9 +1,9 @@
 {
   "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 4 preview replaces this). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "Final: Dream 97, Valkyries 71 in Finals Game 3 (Dream lead 2-1)",
-  "url": "/news/dream-valkyries-finals-game-3-recap/",
-  "date": "2026-10-21",
-  "expires": "2026-10-22T23:59:00-07:00",
+  "text": "Live now: Finals Game 4, Valkyries at Dream (Dream lead best-of-7 series 2-1). Follow the play-by-play",
+  "url": "/wnba/finals/2026/game-4/play-by-play/",
+  "date": "2026-10-24",
+  "expires": "2026-10-24T23:59:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"
