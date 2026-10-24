@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:03:26+00:00",
+ "checked_at": "2026-10-24T19:04:29+00:00",
  "period": 4,
- "clock": "9:23",
+ "clock": "8:20",
  "last_play_period": 4,
- "last_play_clock": "9:23",
+ "last_play_clock": "8:24",
  "away": {
   "abbreviation": "GS",
   "score": 54,
@@ -3755,7 +3755,7 @@
   {
    "order": 310,
    "period": 4,
-   "clock": "9:34",
+   "clock": "9:48",
    "type": "Driving Layup Shot",
    "text": "Veronica Burton misses driving layup",
    "away_score": 54,
@@ -3767,7 +3767,7 @@
   {
    "order": 311,
    "period": 4,
-   "clock": "9:34",
+   "clock": "9:47",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 54,
@@ -3799,6 +3799,90 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 314,
+   "period": 4,
+   "clock": "8:59",
+   "type": "Pullup Jump Shot",
+   "text": "Allisha Gray blocks Kaitlyn Chen 's 11-foot pullup jump shot",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 315,
+   "period": 4,
+   "clock": "8:58",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 316,
+   "period": 4,
+   "clock": "8:58",
+   "type": "Personal Foul",
+   "text": "Kaitlyn Chen personal foul",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 317,
+   "period": 4,
+   "clock": "8:46",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 318,
+   "period": 4,
+   "clock": "8:42",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 319,
+   "period": 4,
+   "clock": "8:27",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 320,
+   "period": 4,
+   "clock": "8:24",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
