@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:34:44+00:00",
+ "checked_at": "2026-10-24T18:35:47+00:00",
  "period": 3,
  "clock": "7:39",
  "last_play_period": 3,
- "last_play_clock": "7:39",
+ "last_play_clock": "8:41",
  "away": {
   "abbreviation": "GS",
   "score": 42,
@@ -2606,6 +2606,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 215,
+   "period": 3,
+   "clock": "8:42",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese blocks Kaila Charles 's 5-foot driving layup",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 216,
+   "period": 3,
+   "clock": "8:41",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
