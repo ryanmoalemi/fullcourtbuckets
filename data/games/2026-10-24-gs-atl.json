@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:34:28+00:00",
+ "checked_at": "2026-10-24T17:35:32+00:00",
  "period": 1,
- "clock": "1:10",
+ "clock": "49.1",
  "last_play_period": 1,
- "last_play_clock": "1:10",
+ "last_play_clock": "49.1",
  "away": {
   "abbreviation": "GS",
   "score": 14,
@@ -988,6 +988,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 81,
+   "period": 1,
+   "clock": "1:10",
+   "type": "Substitution",
+   "text": "Janelle Salaun enters the game for Gabby Williams",
+   "away_score": 14,
+   "home_score": 9,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 82,
+   "period": 1,
+   "clock": "49.1",
+   "type": "Offensive Foul",
+   "text": "Cecilia Zandalasini offensive foul",
+   "away_score": 14,
+   "home_score": 9,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 83,
+   "period": 1,
+   "clock": "49.1",
+   "type": "Offensive Foul Turnover",
+   "text": "Cecilia Zandalasini offensive foul turnover",
+   "away_score": 14,
+   "home_score": 9,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 84,
+   "period": 1,
+   "clock": "49.1",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 14,
+   "home_score": 9,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
