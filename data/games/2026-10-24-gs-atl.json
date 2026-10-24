@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:24:33+00:00",
+ "checked_at": "2026-10-24T17:28:09+00:00",
  "period": 1,
  "clock": "4:54",
  "last_play_period": 1,
  "last_play_clock": "4:54",
  "away": {
   "abbreviation": "GS",
-  "score": 4,
-  "feed_score": 4
+  "score": 5,
+  "feed_score": 5
  },
  "home": {
   "abbreviation": "ATL",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 4,
+   "away": 5,
    "home": 7
   }
  ],
@@ -356,7 +356,7 @@
   {
    "order": 28,
    "period": 1,
-   "clock": "7:23",
+   "clock": "7:22",
    "type": "Delay of Game",
    "text": "Golden State Valkyries delay of game violation",
    "away_score": 2,
@@ -502,7 +502,7 @@
    "period": 1,
    "clock": "5:59",
    "type": "Driving Layup Shot",
-   "text": "Isobel Borlase makes driving layup",
+   "text": "Isobel Borlase makes driving layup (Angel Reese assists)",
    "away_score": 2,
    "home_score": 7,
    "scoring_play": true,
@@ -548,7 +548,7 @@
   {
    "order": 44,
    "period": 1,
-   "clock": "5:20",
+   "clock": "5:22",
    "type": "Jump Shot",
    "text": "Veronica Burton blocks Isobel Borlase 's 25-foot three point jumper",
    "away_score": 2,
@@ -560,7 +560,7 @@
   {
    "order": 45,
    "period": 1,
-   "clock": "5:16",
+   "clock": "5:20",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 2,
@@ -585,8 +585,8 @@
    "order": 47,
    "period": 1,
    "clock": "4:59",
-   "type": "No Shot (Default Shot)",
-   "text": "Angel Reese misses shot",
+   "type": "Driving Layup Shot",
+   "text": "Kiah Stokes blocks Angel Reese 's 4-foot driving layup",
    "away_score": 4,
    "home_score": 7,
    "scoring_play": false,
@@ -628,6 +628,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 51,
+   "period": 1,
+   "clock": "4:54",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Angel Reese",
+   "away_score": 4,
+   "home_score": 7,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 52,
+   "period": 1,
+   "clock": "4:54",
+   "type": "Free Throw - 1 of 2",
+   "text": "Kaila Charles makes free throw 1 of 2",
+   "away_score": 5,
+   "home_score": 7,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 53,
+   "period": 1,
+   "clock": "4:54",
+   "type": "Free Throw - 2 of 2",
+   "text": "Kaila Charles misses free throw 2 of 2",
+   "away_score": 5,
+   "home_score": 7,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
