@@ -1,0 +1,26 @@
+{
+ "schema_version": 1,
+ "status": "pre",
+ "live": true,
+ "espn_game_id": "401918308",
+ "balldontlie_game_id": 1392716,
+ "date": "2026-10-24",
+ "checked_at": "2026-10-24T16:35:44+00:00",
+ "period": null,
+ "clock": "0.0",
+ "last_play_period": null,
+ "last_play_clock": null,
+ "away": {
+  "abbreviation": "GS",
+  "score": 0,
+  "feed_score": 0
+ },
+ "home": {
+  "abbreviation": "ATL",
+  "score": 0,
+  "feed_score": 0
+ },
+ "periods": [],
+ "players": [],
+ "plays": []
+}
