@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:58:23+00:00",
+ "checked_at": "2026-10-24T17:59:26+00:00",
  "period": 2,
- "clock": "3:36",
+ "clock": "3:20",
  "last_play_period": 2,
- "last_play_clock": "3:36",
+ "last_play_clock": "3:23",
  "away": {
   "abbreviation": "GS",
-  "score": 29,
-  "feed_score": 29
+  "score": 31,
+  "feed_score": 31
  },
  "home": {
   "abbreviation": "ATL",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 13,
+   "away": 15,
    "home": 9
   }
  ],
@@ -1760,6 +1760,30 @@
    "home_score": 20,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 145,
+   "period": 2,
+   "clock": "3:36",
+   "type": "Personal Foul",
+   "text": "Jordin Canada personal foul",
+   "away_score": 29,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 146,
+   "period": 2,
+   "clock": "3:23",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams makes 17-foot pullup jump shot",
+   "away_score": 31,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "GS"
   }
  ]
