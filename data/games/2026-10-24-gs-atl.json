@@ -5,26 +5,26 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:19:50+00:00",
+ "checked_at": "2026-10-24T17:20:53+00:00",
  "period": 1,
- "clock": "7:27",
+ "clock": "6:59",
  "last_play_period": 1,
- "last_play_clock": "7:24",
+ "last_play_clock": "7:02",
  "away": {
   "abbreviation": "GS",
-  "score": 0,
-  "feed_score": 0
+  "score": 2,
+  "feed_score": 2
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 2,
-  "feed_score": 2
+  "score": 5,
+  "feed_score": 5
  },
  "periods": [
   {
    "period": 1,
-   "away": 0,
-   "home": 2
+   "away": 2,
+   "home": 5
   }
  ],
  "players": [],
@@ -309,8 +309,8 @@
    "order": 24,
    "period": 1,
    "clock": "7:27",
-   "type": "No Turnover",
-   "text": "Jordin Canada turnover Veronica Burton",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Veronica Burton steals)",
    "away_score": 0,
    "home_score": 2,
    "scoring_play": false,
@@ -321,13 +321,61 @@
    "order": 25,
    "period": 1,
    "clock": "7:24",
-   "type": "No Shot (Default Shot)",
-   "text": "Rhyne Howard blocks Veronica Burton's shot",
+   "type": "Running Layup Shot",
+   "text": "Rhyne Howard blocks Veronica Burton 's 2-foot running layup",
    "away_score": 0,
    "home_score": 2,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 26,
+   "period": 1,
+   "clock": "7:22",
+   "type": "Offensive Rebound",
+   "text": "Kaila Charles offensive rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 27,
+   "period": 1,
+   "clock": "7:12",
+   "type": "Layup Shot",
+   "text": "Kaila Charles makes layup",
+   "away_score": 2,
+   "home_score": 2,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 28,
+   "period": 1,
+   "clock": "7:11",
+   "type": "Delay of Game",
+   "text": "Golden State Valkyries delay of game violation",
+   "away_score": 2,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 29,
+   "period": 1,
+   "clock": "7:02",
+   "type": "No Shot (Default Shot)",
+   "text": "Rhyne Howard makes 24-foot shot",
+   "away_score": 2,
+   "home_score": 5,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
   }
  ]
 }
