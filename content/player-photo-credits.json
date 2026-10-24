@@ -729,6 +729,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-23: edges checked at 200% on dark and light backgrounds"
+    },
+    "megan-dileo": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Megan_DiLeo_17_Spain_20260905_(4).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kennedy-burke": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kennedy_Burke_22_T\u00fcrkiye_20260904_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "natasha-mack": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Natasha_Mack_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kaitlyn-chen": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kaitlyn_Chen_Valkyries_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "zia-cooke": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Zia_Cooke_11_Danilo's_Pizza_SK_TKBSL_20250213_(6).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "georgia-amoore": {
+      "author": "SneakinDeacon",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Georgia_Amoore_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "maria-conde": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mar\u00eda_Conde_10_Spain_20260905_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "nyara-sabally": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nyara_Sabally_18_Fenerbah\u00e7e_WB_EuroLeague_Women_20250108_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "lauren-betts": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lauren_Betts_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "jacy-sheldon": {
+      "author": "Alexander Jonesi",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jacy_Sheldon_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "monique-billings": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Monique_Billings_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kaila-charles": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kaila_Charles_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "gabriela-jaquez": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Gabriela_Jaquez_Sky.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "sarah-ashlee-barker": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sarah_Ashlee_Barker_Fire_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "han-xu": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Han_Xu_(basketball)_15_China_20260906_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "noemie-brochant": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:No\u00e9mie_Brochant_1_France_20250619_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "nia-coffey": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nia_Coffey_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "maddy-siegrist": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maddy_Siegrist_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "saniya-rivers": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Saniya_Rivers_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "frieda-buhner": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Frieda_B\u00fchner_20_Germany_20250625_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
