@@ -5,26 +5,31 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:39:10+00:00",
- "period": 1,
- "clock": "0.0",
- "last_play_period": 1,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-24T17:44:18+00:00",
+ "period": 2,
+ "clock": "8:44",
+ "last_play_period": 2,
+ "last_play_clock": "8:46",
  "away": {
   "abbreviation": "GS",
-  "score": 16,
-  "feed_score": 16
+  "score": 18,
+  "feed_score": 18
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 11,
-  "feed_score": 11
+  "score": 15,
+  "feed_score": 15
  },
  "periods": [
   {
    "period": 1,
    "away": 16,
    "home": 11
+  },
+  {
+   "period": 2,
+   "away": 2,
+   "home": 4
   }
  ],
  "players": [],
@@ -1053,8 +1058,8 @@
    "order": 86,
    "period": 1,
    "clock": "39.0",
-   "type": "Driving Layup Shot",
-   "text": "Jordin Canada makes driving layup (Naz Hillmon assists)",
+   "type": "Driving Finger Roll Layup",
+   "text": "Jordin Canada makes 2-foot two point shot (Angel Reese assists)",
    "away_score": 14,
    "home_score": 11,
    "scoring_play": true,
@@ -1077,8 +1082,8 @@
    "order": 88,
    "period": 1,
    "clock": "1.9",
-   "type": "Driving Layup Shot",
-   "text": "Angel Reese misses driving layup",
+   "type": "Driving Hook Shot",
+   "text": "Angel Reese misses 4-foot two point shot",
    "away_score": 16,
    "home_score": 11,
    "scoring_play": false,
@@ -1088,7 +1093,7 @@
   {
    "order": 89,
    "period": 1,
-   "clock": "0.0",
+   "clock": "0.9",
    "type": "Defensive Rebound",
    "text": "Cecilia Zandalasini defensive rebound",
    "away_score": 16,
@@ -1108,6 +1113,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 91,
+   "period": 2,
+   "clock": "9:37",
+   "type": "Fade Away Jump Shot",
+   "text": "Jordin Canada makes 11-foot fade away jump shot",
+   "away_score": 16,
+   "home_score": 13,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 92,
+   "period": 2,
+   "clock": "9:19",
+   "type": "Bad Pass\nTurnover",
+   "text": "Kaila Charles bad pass\nturnover (Angel Reese steals)",
+   "away_score": 16,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 93,
+   "period": 2,
+   "clock": "9:11",
+   "type": "Pullup Jump Shot",
+   "text": "Allisha Gray makes 9-foot pullup jump shot",
+   "away_score": 16,
+   "home_score": 15,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 94,
+   "period": 2,
+   "clock": "8:46",
+   "type": "Step Back Jump Shot",
+   "text": "Janelle Salaun makes 11-foot step back jumpshot (Veronica Burton assists)",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
