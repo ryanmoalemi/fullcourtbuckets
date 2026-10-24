@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:09:20+00:00",
+ "checked_at": "2026-10-24T18:10:23+00:00",
  "period": 2,
- "clock": "1:08",
+ "clock": "50.4",
  "last_play_period": 2,
- "last_play_clock": "1:08",
+ "last_play_clock": "50.4",
  "away": {
   "abbreviation": "GS",
   "score": 40,
@@ -2030,18 +2030,6 @@
    "order": 167,
    "period": 2,
    "clock": "1:24",
-   "type": "Substitution",
-   "text": "enters the game for Allisha Gray",
-   "away_score": 38,
-   "home_score": 22,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "ATL"
-  },
-  {
-   "order": 168,
-   "period": 2,
-   "clock": "1:24",
    "type": "Free Throw - 1 of 2",
    "text": "Isobel Borlase makes free throw 1 of 2",
    "away_score": 38,
@@ -2051,7 +2039,7 @@
    "team": "ATL"
   },
   {
-   "order": 169,
+   "order": 168,
    "period": 2,
    "clock": "1:24",
    "type": "Substitution",
@@ -2063,7 +2051,7 @@
    "team": "ATL"
   },
   {
-   "order": 170,
+   "order": 169,
    "period": 2,
    "clock": "1:24",
    "type": "Free Throw - 2 of 2",
@@ -2075,7 +2063,7 @@
    "team": "ATL"
   },
   {
-   "order": 171,
+   "order": 170,
    "period": 2,
    "clock": "1:22",
    "type": "Offensive Rebound",
@@ -2087,7 +2075,7 @@
    "team": "ATL"
   },
   {
-   "order": 172,
+   "order": 171,
    "period": 2,
    "clock": "1:17",
    "type": "Shooting Foul",
@@ -2099,7 +2087,7 @@
    "team": "GS"
   },
   {
-   "order": 173,
+   "order": 172,
    "period": 2,
    "clock": "1:17",
    "type": "Free Throw - 1 of 2",
@@ -2111,7 +2099,7 @@
    "team": "ATL"
   },
   {
-   "order": 174,
+   "order": 173,
    "period": 2,
    "clock": "1:17",
    "type": "Free Throw - 2 of 2",
@@ -2123,7 +2111,7 @@
    "team": "ATL"
   },
   {
-   "order": 175,
+   "order": 174,
    "period": 2,
    "clock": "1:08",
    "type": "Shooting Foul",
@@ -2135,7 +2123,7 @@
    "team": "ATL"
   },
   {
-   "order": 176,
+   "order": 175,
    "period": 2,
    "clock": "1:57",
    "type": "Substitution",
@@ -2147,7 +2135,7 @@
    "team": "ATL"
   },
   {
-   "order": 177,
+   "order": 176,
    "period": 2,
    "clock": "1:57",
    "type": "Substitution",
@@ -2159,7 +2147,7 @@
    "team": "ATL"
   },
   {
-   "order": 178,
+   "order": 177,
    "period": 2,
    "clock": "1:08",
    "type": "Free Throw - 1 of 2",
@@ -2171,7 +2159,7 @@
    "team": "GS"
   },
   {
-   "order": 179,
+   "order": 178,
    "period": 2,
    "clock": "1:08",
    "type": "Free Throw - 2 of 2",
@@ -2181,6 +2169,54 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "GS"
+  },
+  {
+   "order": 179,
+   "period": 2,
+   "clock": "53.0",
+   "type": "Jump Shot",
+   "text": "DeWanna Bonner misses 24-foot three point jumper",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 180,
+   "period": 2,
+   "clock": "50.4",
+   "type": "Offensive Rebound",
+   "text": "DeWanna Bonner offensive rebound",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 181,
+   "period": 2,
+   "clock": "50.4",
+   "type": "Shooting Foul",
+   "text": "Kayla Thornton shooting foul",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 182,
+   "period": 2,
+   "clock": "50.4",
+   "type": "Free Throw - 1 of 2",
+   "text": "DeWanna Bonner misses free throw 1 of 2",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
