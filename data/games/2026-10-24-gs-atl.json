@@ -5,7 +5,7 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:17:35+00:00",
+ "checked_at": "2026-10-24T19:19:10+00:00",
  "period": 4,
  "clock": "2:45",
  "last_play_period": 4,
@@ -4163,18 +4163,6 @@
   {
    "order": 344,
    "period": 4,
-   "clock": "8:09",
-   "type": "Substitution",
-   "text": "Isobel Borlase enters the game for Allisha Gray",
-   "away_score": 57,
-   "home_score": 46,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "ATL"
-  },
-  {
-   "order": 345,
-   "period": 4,
    "clock": "6:47",
    "type": "Full Timeout",
    "text": "Dream Full timeout",
@@ -4185,7 +4173,7 @@
    "team": "ATL"
   },
   {
-   "order": 346,
+   "order": 345,
    "period": 4,
    "clock": "6:47",
    "type": "Coach's Challenge (Overturned)",
@@ -4197,9 +4185,9 @@
    "team": "ATL"
   },
   {
-   "order": 347,
+   "order": 346,
    "period": 4,
-   "clock": "6:34",
+   "clock": "6:40",
    "type": "Jump Shot",
    "text": "Rhyne Howard misses 25-foot three point jumper",
    "away_score": 57,
@@ -4209,11 +4197,11 @@
    "team": "ATL"
   },
   {
-   "order": 348,
+   "order": 347,
    "period": 4,
-   "clock": "6:28",
+   "clock": "6:38",
    "type": "Defensive Rebound",
-   "text": "Tiffany Hayes defensive rebound",
+   "text": "Kiah Stokes defensive rebound",
    "away_score": 57,
    "home_score": 51,
    "scoring_play": false,
@@ -4221,7 +4209,7 @@
    "team": "GS"
   },
   {
-   "order": 349,
+   "order": 348,
    "period": 4,
    "clock": "6:17",
    "type": "Driving Layup Shot",
@@ -4233,7 +4221,7 @@
    "team": "GS"
   },
   {
-   "order": 350,
+   "order": 349,
    "period": 4,
    "clock": "5:46",
    "type": "Driving Layup Shot",
@@ -4245,7 +4233,7 @@
    "team": "ATL"
   },
   {
-   "order": 351,
+   "order": 350,
    "period": 4,
    "clock": "5:45",
    "type": "Defensive Rebound",
@@ -4257,7 +4245,7 @@
    "team": "GS"
   },
   {
-   "order": 352,
+   "order": 351,
    "period": 4,
    "clock": "5:28",
    "type": "Driving Floating Jump Shot",
@@ -4269,7 +4257,7 @@
    "team": "GS"
   },
   {
-   "order": 353,
+   "order": 352,
    "period": 4,
    "clock": "5:12",
    "type": "Turnaround Jump Shot",
@@ -4281,7 +4269,7 @@
    "team": "ATL"
   },
   {
-   "order": 354,
+   "order": 353,
    "period": 4,
    "clock": "4:54",
    "type": "Lost Ball Turnover",
@@ -4293,7 +4281,7 @@
    "team": "GS"
   },
   {
-   "order": 355,
+   "order": 354,
    "period": 4,
    "clock": "4:49",
    "type": "Running Layup Shot",
@@ -4305,7 +4293,7 @@
    "team": "ATL"
   },
   {
-   "order": 356,
+   "order": 355,
    "period": 4,
    "clock": "4:23",
    "type": "Step Back Jump Shot",
@@ -4317,7 +4305,7 @@
    "team": "GS"
   },
   {
-   "order": 357,
+   "order": 356,
    "period": 4,
    "clock": "4:06",
    "type": "Layup Shot",
@@ -4329,7 +4317,7 @@
    "team": "ATL"
   },
   {
-   "order": 358,
+   "order": 357,
    "period": 4,
    "clock": "4:03",
    "type": "Offensive Rebound",
@@ -4341,7 +4329,7 @@
    "team": "ATL"
   },
   {
-   "order": 359,
+   "order": 358,
    "period": 4,
    "clock": "4:02",
    "type": "Tip Shot",
@@ -4353,7 +4341,7 @@
    "team": "ATL"
   },
   {
-   "order": 360,
+   "order": 359,
    "period": 4,
    "clock": "4:00",
    "type": "Defensive Rebound",
@@ -4365,7 +4353,7 @@
    "team": "GS"
   },
   {
-   "order": 361,
+   "order": 360,
    "period": 4,
    "clock": "3:43",
    "type": "Turnaround Fade Away Jump Shot",
@@ -4377,7 +4365,7 @@
    "team": "GS"
   },
   {
-   "order": 362,
+   "order": 361,
    "period": 4,
    "clock": "3:40",
    "type": "Defensive Rebound",
@@ -4389,7 +4377,7 @@
    "team": "ATL"
   },
   {
-   "order": 363,
+   "order": 362,
    "period": 4,
    "clock": "3:22",
    "type": "Hook Shot",
@@ -4401,7 +4389,7 @@
    "team": "ATL"
   },
   {
-   "order": 364,
+   "order": 363,
    "period": 4,
    "clock": "3:19",
    "type": "Defensive Rebound",
@@ -4413,7 +4401,7 @@
    "team": "GS"
   },
   {
-   "order": 365,
+   "order": 364,
    "period": 4,
    "clock": "2:56",
    "type": "Pullup Jump Shot",
@@ -4425,7 +4413,7 @@
    "team": "GS"
   },
   {
-   "order": 366,
+   "order": 365,
    "period": 4,
    "clock": "2:52",
    "type": "Defensive Rebound",
@@ -4437,7 +4425,7 @@
    "team": "ATL"
   },
   {
-   "order": 367,
+   "order": 366,
    "period": 4,
    "clock": "2:45",
    "type": "Shooting Foul",
@@ -4449,7 +4437,7 @@
    "team": "GS"
   },
   {
-   "order": 368,
+   "order": 367,
    "period": 4,
    "clock": "2:45",
    "type": "Official Timeout",
