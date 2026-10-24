@@ -1,82 +1,66 @@
 {
   "slug": "tayler-hill",
   "player_name": "Tayler Hill",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What college did Tayler Hill attend?",
-      "answer": "Hill played college basketball at Ohio State Buckeyes.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tayler_Hill"
-      ],
-      "google_keyword": "tayler hill ohio state",
-      "approx_monthly_volume": 10
-    },
-    {
       "question": "Who is Tayler Hill?",
-      "answer": "Tayler Hill is an American former professional basketball player.",
-      "answer_kind": "mixed",
+      "answer": "Tayler Hill is a guard who played in the WNBA from 2013 to 2019 for the Washington Mystics and Dallas Wings. Washington drafted her fourth overall in 2013 out of Ohio State. Her most recent season was 2019, when she played four games before season-ending knee surgery.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tayler_Hill"
+        "https://www.wnba.com/player/203401/tayler-hill/bio",
+        "https://fullcourtbuckets.com/wnba/tayler-hill/"
       ],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "tayler hill wnba",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "What team does Tayler Hill play for?",
-      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 4. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What are Tayler Hill's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2016), Tayler Hill averaged 15.4 points, 2.6 rebounds, and 2.9 assists in 32 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What is Tayler Hill's jersey number?",
-      "answer": "Tayler Hill wears number 4 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What position does Tayler Hill play?",
-      "answer": "Tayler Hill is listed as a Guard for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How old is Tayler Hill?",
-      "answer": "Public profiles list Tayler Hill as born in 1990. As of late 2026 that puts her around 36 years old.",
+      "question": "Where did Tayler Hill play college basketball?",
+      "answer": "Tayler Hill played four seasons at Ohio State, starting all four years. She made the All-Big Ten First Team twice and finished as the fifth-leading scorer in school history.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tayler_Hill"
+        "https://www.wnba.com/player/203401/tayler-hill/bio"
       ],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70,
-      "birthdate": "1990-01-01"
+      "queries": [
+        {
+          "q": "tayler hill ohio state",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Tayler Hill's nationality?",
-      "answer": "Tayler Hill is American.",
+      "question": "Did Tayler Hill play for the Dallas Wings?",
+      "answer": "Yes. Washington traded Tayler Hill to the Dallas Wings on July 23, 2018, for Aerial Powers. She played for Dallas in 2018 and 2019.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/203401/tayler-hill/bio",
+        "https://fullcourtbuckets.com/wnba/tayler-hill/"
+      ],
+      "queries": [
+        {
+          "q": "tayler hill dallas wings",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Tayler Hill have a son?",
+      "answer": "Yes. Tayler Hill's son was born June 18, 2014, according to her WNBA bio.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tayler_Hill"
+        "https://www.wnba.com/player/203401/tayler-hill/bio"
       ],
-      "google_keyword": "tayler hill wnba",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "tayler hill baby",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
