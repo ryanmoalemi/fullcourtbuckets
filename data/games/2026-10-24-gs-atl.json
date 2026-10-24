@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:13:53+00:00",
+ "checked_at": "2026-10-24T19:14:56+00:00",
  "period": 4,
- "clock": "5:45",
+ "clock": "4:48",
  "last_play_period": 4,
- "last_play_clock": "5:45",
+ "last_play_clock": "4:49",
  "away": {
   "abbreviation": "GS",
-  "score": 59,
-  "feed_score": 59
+  "score": 61,
+  "feed_score": 61
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 51,
-  "feed_score": 51
+  "score": 55,
+  "feed_score": 55
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 5,
-   "home": 6
+   "away": 7,
+   "home": 10
   }
  ],
  "players": [],
@@ -4255,6 +4255,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 352,
+   "period": 4,
+   "clock": "5:28",
+   "type": "Driving Floating Jump Shot",
+   "text": "Tiffany Hayes makes 9-foot driving floating jump shot",
+   "away_score": 61,
+   "home_score": 51,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 353,
+   "period": 4,
+   "clock": "5:12",
+   "type": "Turnaround Jump Shot",
+   "text": "Rhyne Howard makes 13-foot turnaround jump shot",
+   "away_score": 61,
+   "home_score": 53,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 354,
+   "period": 4,
+   "clock": "4:54",
+   "type": "Lost Ball Turnover",
+   "text": "Tiffany Hayes lost ball turnover (Isobel Borlase steals)",
+   "away_score": 61,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 355,
+   "period": 4,
+   "clock": "4:49",
+   "type": "No Shot (Default Shot)",
+   "text": "Isobel Borlase makes 2-foot shot",
+   "away_score": 61,
+   "home_score": 55,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
   }
  ]
 }
