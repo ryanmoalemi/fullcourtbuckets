@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:38:56+00:00",
+ "checked_at": "2026-10-24T18:39:59+00:00",
  "period": 3,
- "clock": "6:19",
+ "clock": "5:57",
  "last_play_period": 3,
- "last_play_clock": "6:26",
+ "last_play_clock": "5:57",
  "away": {
   "abbreviation": "GS",
   "score": 44,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 32,
-  "feed_score": 32
+  "score": 34,
+  "feed_score": 34
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 2,
-   "home": 6
+   "home": 8
   }
  ],
  "players": [],
@@ -2810,6 +2810,78 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 232,
+   "period": 3,
+   "clock": "6:19",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 44,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 233,
+   "period": 3,
+   "clock": "6:05",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 12-foot pullup jump shot",
+   "away_score": 44,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 234,
+   "period": 3,
+   "clock": "6:02",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 44,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 235,
+   "period": 3,
+   "clock": "5:57",
+   "type": "Driving Floating Jump Shot",
+   "text": "Rhyne Howard makes 12-foot driving floating jump shot",
+   "away_score": 44,
+   "home_score": 34,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 236,
+   "period": 3,
+   "clock": "5:57",
+   "type": "Shooting Foul",
+   "text": "Cecilia Zandalasini shooting foul",
+   "away_score": 44,
+   "home_score": 34,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 237,
+   "period": 3,
+   "clock": "5:57",
+   "type": "No Foul",
+   "text": "foul",
+   "away_score": 44,
+   "home_score": 34,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
