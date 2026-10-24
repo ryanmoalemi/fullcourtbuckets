@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:55:39+00:00",
+ "checked_at": "2026-10-24T18:57:13+00:00",
  "period": 3,
- "clock": "37.0",
+ "clock": "9.2",
  "last_play_period": 3,
- "last_play_clock": "37.0",
+ "last_play_clock": "9.2",
  "away": {
   "abbreviation": "GS",
-  "score": 52,
-  "feed_score": 52
+  "score": 54,
+  "feed_score": 54
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 10,
+   "away": 12,
    "home": 17
   }
  ],
@@ -3223,8 +3223,8 @@
    "order": 266,
    "period": 3,
    "clock": "3:02",
-   "type": "Full Timeout",
-   "text": "Dream Full timeout",
+   "type": "Challenge",
+   "text": "Dream Coach's Challenge",
    "away_score": 50,
    "home_score": 40,
    "scoring_play": false,
@@ -3625,6 +3625,66 @@
    "home_score": 43,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 300,
+   "period": 3,
+   "clock": "17.9",
+   "type": "Personal Foul",
+   "text": "Isobel Borlase personal foul",
+   "away_score": 52,
+   "home_score": 43,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 301,
+   "period": 3,
+   "clock": "9.2",
+   "type": "Shooting Foul",
+   "text": "Angel Reese shooting foul",
+   "away_score": 52,
+   "home_score": 43,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 302,
+   "period": 3,
+   "clock": "9.2",
+   "type": "Free Throw - 1 of 2",
+   "text": "Tiffany Hayes makes free throw 1 of 2",
+   "away_score": 53,
+   "home_score": 43,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 303,
+   "period": 3,
+   "clock": "9.2",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Isobel Borlase",
+   "away_score": 53,
+   "home_score": 43,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 304,
+   "period": 3,
+   "clock": "9.2",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes makes free throw 2 of 2",
+   "away_score": 54,
+   "home_score": 43,
+   "scoring_play": true,
+   "score_value": 1,
    "team": "GS"
   }
  ]
