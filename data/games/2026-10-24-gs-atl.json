@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:24:26+00:00",
+ "checked_at": "2026-10-24T19:25:29+00:00",
  "period": 4,
- "clock": "33.6",
+ "clock": "28.7",
  "last_play_period": 4,
- "last_play_clock": "33.6",
+ "last_play_clock": "28.7",
  "away": {
   "abbreviation": "GS",
   "score": 66,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 59,
-  "feed_score": 59
+  "score": 62,
+  "feed_score": 62
  },
  "periods": [
   {
@@ -39,7 +39,7 @@
   {
    "period": 4,
    "away": 12,
-   "home": 14
+   "home": 17
   }
  ],
  "players": [],
@@ -4675,6 +4675,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 387,
+   "period": 4,
+   "clock": "33.6",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Allisha Gray",
+   "away_score": 66,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 388,
+   "period": 4,
+   "clock": "28.7",
+   "type": "Driving Layup Shot",
+   "text": "Rhyne Howard makes driving layup",
+   "away_score": 66,
+   "home_score": 61,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 389,
+   "period": 4,
+   "clock": "28.7",
+   "type": "Shooting Foul",
+   "text": "Tiffany Hayes shooting foul",
+   "away_score": 66,
+   "home_score": 61,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 390,
+   "period": 4,
+   "clock": "28.7",
+   "type": "Free Throw - 1 of 1",
+   "text": "Rhyne Howard makes free throw 1 of 1",
+   "away_score": 66,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 391,
+   "period": 4,
+   "clock": "28.7",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 66,
+   "home_score": 62,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
