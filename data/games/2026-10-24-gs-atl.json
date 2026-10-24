@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:10:23+00:00",
+ "checked_at": "2026-10-24T18:11:26+00:00",
  "period": 2,
- "clock": "50.4",
+ "clock": "4.2",
  "last_play_period": 2,
- "last_play_clock": "50.4",
+ "last_play_clock": "22.0",
  "away": {
   "abbreviation": "GS",
-  "score": 40,
-  "feed_score": 40
+  "score": 42,
+  "feed_score": 42
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 25,
-  "feed_score": 25
+  "score": 26,
+  "feed_score": 26
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 24,
-   "home": 14
+   "away": 26,
+   "home": 15
   }
  ],
  "players": [],
@@ -2217,6 +2217,78 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 183,
+   "period": 2,
+   "clock": "50.4",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 40,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 184,
+   "period": 2,
+   "clock": "50.4",
+   "type": "Free Throw - 2 of 2",
+   "text": "DeWanna Bonner makes free throw 2 of 2",
+   "away_score": 40,
+   "home_score": 26,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 185,
+   "period": 2,
+   "clock": "34.9",
+   "type": "Jump Shot",
+   "text": "Kaila Charles misses 23-foot three point jumper",
+   "away_score": 40,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 186,
+   "period": 2,
+   "clock": "31.7",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 40,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 187,
+   "period": 2,
+   "clock": "25.1",
+   "type": "Bad Pass\nTurnover",
+   "text": "DeWanna Bonner bad pass\nturnover (Gabby Williams steals)",
+   "away_score": 40,
+   "home_score": 26,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 188,
+   "period": 2,
+   "clock": "22.0",
+   "type": "Running Layup Shot",
+   "text": "Gabby Williams makes running layup",
+   "away_score": 42,
+   "home_score": 26,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
