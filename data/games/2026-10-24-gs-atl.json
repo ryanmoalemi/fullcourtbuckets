@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:37:53+00:00",
+ "checked_at": "2026-10-24T18:38:56+00:00",
  "period": 3,
- "clock": "6:26",
+ "clock": "6:19",
  "last_play_period": 3,
- "last_play_clock": "6:31",
+ "last_play_clock": "6:26",
  "away": {
   "abbreviation": "GS",
   "score": 44,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 31,
-  "feed_score": 31
+  "score": 32,
+  "feed_score": 32
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 2,
-   "home": 5
+   "home": 6
   }
  ],
  "players": [],
@@ -2759,6 +2759,54 @@
    "text": "Naz Hillmon defensive rebound",
    "away_score": 44,
    "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 228,
+   "period": 3,
+   "clock": "6:26",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 44,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 229,
+   "period": 3,
+   "clock": "6:26",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada makes free throw 1 of 2",
+   "away_score": 44,
+   "home_score": 32,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 230,
+   "period": 3,
+   "clock": "6:26",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 44,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 231,
+   "period": 3,
+   "clock": "6:26",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada misses free throw 2 of 2",
+   "away_score": 44,
+   "home_score": 32,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
