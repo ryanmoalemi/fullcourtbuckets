@@ -1,142 +1,199 @@
 {
   "slug": "zia-cooke",
   "player_name": "Zia Cooke",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What are Zia Cooke's stats / points per game?",
-      "answer": "In the 2026 regular season, Zia Cooke averaged 7.5 points, 1.7 rebounds, and 1.1 assists in 41 games for Seattle Storm. Her full season-by-season numbers are on this page.",
+      "question": "What are Zia Cooke's stats?",
+      "answer": "In the 2026 regular season, Zia Cooke averaged 7.5 points, 1.7 rebounds, and 1.1 assists in 41 games for the Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "zia cooke stats",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "Who is Zia Cooke dating?",
-      "answer": "As of late 2026, Zia Cooke has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
+        "https://fullcourtbuckets.com/wnba/zia-cooke/"
       ],
-      "google_keyword": "is zia cooke in a relationship",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How much does Zia Cooke make?",
-      "answer": "A precise public salary or net worth figure for Zia Cooke is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "zia cooke net worth",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How tall is Zia Cooke?",
-      "answer": "Zia Cooke is listed at 5' 9\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
-      ],
-      "google_keyword": "zia cooke height",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How old is Zia Cooke?",
-      "answer": "She was born January 9, 2001 in Toledo. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
-      ],
-      "google_keyword": "zia cooke age",
-      "approx_monthly_volume": 90,
-      "birthdate": "2001-01-09"
-    },
-    {
-      "question": "What is Zia Cooke's jersey number?",
-      "answer": "Zia Cooke wears number 7 for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "zia cooke jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Zia Cooke's contract?",
-      "answer": "Contract length and guarantees for Zia Cooke are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "zia cooke contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Zia Cooke married?",
-      "answer": "There is no widely reported public record of Zia Cooke being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
-      ],
-      "google_keyword": "zia cooke husband",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "zia cooke stats",
+          "vol": 590
+        },
+        {
+          "q": "zia cooke wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Zia Cooke play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. She wears No. 7. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "what team does zia cooke play for",
-      "approx_monthly_volume": 20
+      "answer": "Zia Cooke plays guard for the Seattle Storm, who re-signed her for the 2026 season. In 2025 Seattle traded her to Washington on August 5 and then claimed her back off waivers later that month.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1641660/zia-cooke/bio",
+        "https://storm.wnba.com/news/zia-and-mack-return-to-the-storm"
+      ],
+      "queries": [
+        {
+          "q": "zia cooke wnba",
+          "vol": 390
+        },
+        {
+          "q": "is zia cooke in the wnba",
+          "vol": 40
+        },
+        {
+          "q": "is zia cooke still in the wnba",
+          "vol": 30
+        },
+        {
+          "q": "zia cooke seattle storm",
+          "vol": 30
+        },
+        {
+          "q": "what team does zia cooke play for",
+          "vol": 20
+        },
+        {
+          "q": "who does zia cooke play for",
+          "vol": 20
+        },
+        {
+          "q": "zia cooke wnba team",
+          "vol": 10
+        },
+        {
+          "q": "who is zia cooke",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Zia Cooke?",
+      "answer": "Zia Cooke was born January 9, 2001.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641660/zia-cooke/bio"
+      ],
+      "queries": [
+        {
+          "q": "zia cooke age",
+          "vol": 90
+        },
+        {
+          "q": "how old is zia cooke",
+          "vol": 30
+        },
+        {
+          "q": "zia cooke birthday",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Zia Cooke?",
+      "answer": "The WNBA lists Zia Cooke at 5 feet 9 inches and 163 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641660/zia-cooke/bio"
+      ],
+      "queries": [
+        {
+          "q": "zia cooke height",
+          "vol": 90
+        },
+        {
+          "q": "how tall is zia cooke",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Did Zia Cooke win a championship at South Carolina?",
+      "answer": "Yes. Zia Cooke started all four years at South Carolina and won the 2022 NCAA championship. The Gamecocks went 129-9 in her four seasons.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1641660/zia-cooke/bio",
+        "https://gamecocksonline.com/sports/womens-basketball/roster/zia-cooke/"
+      ],
+      "queries": [
+        {
+          "q": "zia cooke south carolina",
+          "vol": 50
+        },
+        {
+          "q": "south carolina women's basketball zia cooke",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Zia Cooke drafted?",
+      "answer": "The Los Angeles Sparks selected Zia Cooke 10th overall in the 2023 WNBA Draft. She played for Los Angeles in 2023 and 2024.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1641660/zia-cooke/bio",
+        "https://fullcourtbuckets.com/wnba/zia-cooke/"
+      ],
+      "queries": [
+        {
+          "q": "zia cooke draft pick",
+          "vol": 20
+        },
+        {
+          "q": "zia cooke draft",
+          "vol": 20
+        },
+        {
+          "q": "la sparks zia cooke",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Zia Cooke from?",
-      "answer": "She is from Toledo.",
-      "answer_kind": "bio",
+      "answer": "Zia Cooke is from Toledo, Ohio, where she played at Rogers High School. Her hometown named a street in her honor.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
+        "https://gamecocksonline.com/sports/womens-basketball/roster/zia-cooke/"
       ],
-      "google_keyword": "where is zia cooke from",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Zia Cooke?",
-      "answer": "Zia Cooke is an American professional basketball player for the Seattle Storm of the Women's National Basketball Association (WNBA) and also playing for Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
-      ],
-      "google_keyword": "who is zia cooke",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Zia Cooke injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "zia cooke injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is zia cooke from",
+          "vol": 20
+        },
+        {
+          "q": "zia cooke street",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Who are Zia Cooke's parents?",
-      "answer": "Public profiles share limited verified detail about Zia Cooke's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "South Carolina lists Zia Cooke as the daughter of Michelle and Stratman Cooke. She has one brother, Stratman.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
+        "https://gamecocksonline.com/sports/womens-basketball/roster/zia-cooke/"
       ],
-      "google_keyword": "zia cooke parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Zia Cooke attend?",
-      "answer": "Zia Cooke played college basketball at the South Carolina Gamecocks.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Zia_Cooke"
-      ],
-      "google_keyword": "zia cooke south carolina",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "zia cooke parents",
+          "vol": 10
+        },
+        {
+          "q": "zia cooke dad",
+          "vol": 10
+        },
+        {
+          "q": "zia cooke mom",
+          "vol": 10
+        },
+        {
+          "q": "zia cooke family",
+          "vol": 10
+        },
+        {
+          "q": "zia cooke sister",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

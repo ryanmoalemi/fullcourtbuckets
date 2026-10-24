@@ -107,7 +107,7 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('5:00 p.m. PT', page)
         self.assertIn('10:00 a.m. PT', page)
         self.assertIn('State Farm Arena', page)
-        self.assertIn('USA and Peacock', page)
+        self.assertIn('USA Network, CNBC, Peacock', page)
         # CNBC is only named as the USA Network simulcast from USA Sports releases
         # (Game 2 audience, Game 3 TV); it never stands in for the USA listing.
         for row in re.findall(r'<tr>.*?</tr>', page, flags=re.S):

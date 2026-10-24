@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 126)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 136)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -546,17 +546,24 @@ class BuildTests(unittest.TestCase):
             'brionna-jones', 'cecilia-zandalasini', 'diamond-miller', 'glory-johnson', 'kalani-brown',
             'kiah-stokes', 'maddy-siegrist', 'michaela-onyenwere', 'raegan-beers', 'rebecca-allen',
         }
+        october_24 = {
+            'serah-williams', 'tayler-hill', 'tyasha-harris', 'zia-cooke', 'alissa-pili',
+            'cheyenne-parker-tyus', 'damiris-dantas', 'jade-melbourne', 'julie-allemand', 'katie-lou-samuelson',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_21 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_22 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_23 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_24 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_23:
+            if slug in october_24:
+                expected_source = 'Google search demand via OpenSEO, Oct 24, 2026'
+            elif slug in october_23:
                 expected_source = 'Google search demand via OpenSEO, Oct 23, 2026'
             elif slug in october_22:
                 expected_source = 'Google search demand via OpenSEO, Oct 22, 2026'
@@ -595,8 +602,20 @@ class BuildTests(unittest.TestCase):
             # mostly the singer, and Brianna Turner's include other people.
             # Oct 23: same; Rebecca Allen's name searches are mostly other people,
             # and Raegan Beers's leftovers are family, pay, or NIL.
+            # Oct 24: same; Tayler Hill and Cheyenne Parker-Tyus have few searches
+            # about them that are not relationships, pay, or other people.
             if slug == 'taniya-latson':
                 minimum = 3
+            elif slug in {'cheyenne-parker-tyus'}:
+                minimum = 3
+            elif slug in {'tayler-hill'}:
+                minimum = 4
+            elif slug in {'damiris-dantas'}:
+                minimum = 5
+            elif slug in {'zia-cooke', 'alissa-pili', 'julie-allemand'}:
+                minimum = 8
+            elif slug in {'serah-williams', 'jade-melbourne'}:
+                minimum = 9
             elif slug in {'raegan-beers', 'rebecca-allen'}:
                 minimum = 6
             elif slug in {'brionna-jones', 'cecilia-zandalasini'}:

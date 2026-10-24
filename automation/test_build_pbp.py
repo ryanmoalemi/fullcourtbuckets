@@ -23,7 +23,7 @@ class BuildPbp(unittest.TestCase):
         _, out = build_pbp.build('401918308')
         self.assertIn('Live: updates within about a minute of each play.', out)
         self.assertIn('Dream lead 2-1', out)
-        self.assertIn('TV: NBC · Stream: Peacock', out)
+        self.assertIn('TV: NBC. Streaming: Peacock.', out)
         self.assertNotIn('id="play-', out)
 
     def test_bad_score_refuses(self):

@@ -1,104 +1,188 @@
 {
   "slug": "tyasha-harris",
   "player_name": "Tyasha Harris",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 24, 2026",
+  "verified_at": "2026-10-24",
   "items": [
     {
-      "question": "What are Tyasha Harris's stats / points per game?",
-      "answer": "In the 2026 regular season, Tyasha Harris averaged 4.2 points, 1.1 rebounds, and 2.0 assists in 37 games for Indiana Fever. Her full season-by-season numbers are on this page.",
+      "question": "What are Tyasha Harris's stats?",
+      "answer": "In the 2026 regular season, Tyasha Harris averaged 4.1 points, 1.1 rebounds, and 2.0 assists in 39 games for the Indiana Fever.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tyasha harris stats",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who is Tyasha Harris dating?",
-      "answer": "As of late 2026, Tyasha Harris has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://fullcourtbuckets.com/wnba/tyasha-harris/"
       ],
-      "google_keyword": "tyasha harris partner",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "tyasha harris stats",
+          "vol": 210
+        },
+        {
+          "q": "tyasha harris wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "tyasha harris game log",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Tyasha Harris make?",
-      "answer": "A precise public salary or net worth figure for Tyasha Harris is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "tyasha harris salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Tyasha Harris?",
-      "answer": "Tyasha Harris is listed at 5' 10\".",
+      "question": "What team does Tyasha Harris play for?",
+      "answer": "Tyasha Harris plays guard for the Indiana Fever. She signed with Indiana as a free agent on April 12, 2026, after stints with the Dallas Wings and Connecticut Sun.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
       ],
-      "google_keyword": "tyasha harris height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "tyasha harris wnba",
+          "vol": 70
+        },
+        {
+          "q": "tyasha harris fever",
+          "vol": 20
+        },
+        {
+          "q": "tyasha harris signs fever",
+          "vol": 10
+        },
+        {
+          "q": "tyasha harris bio",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Tyasha Harris?",
-      "answer": "She was born May 1, 1998 in East Lansing. As of late 2026 that puts her at 28 years old.",
+      "answer": "Tyasha Harris was born May 1, 1998.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
       ],
-      "google_keyword": "tyasha harris age",
-      "approx_monthly_volume": 40,
-      "birthdate": "1998-05-01"
+      "queries": [
+        {
+          "q": "tyasha harris age",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What did Tyasha Harris score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Washington Mystics), Tyasha Harris had 0.0 points, 1.0 rebounds, and 1.0 assists in a 77-93 loss.",
+      "question": "How tall is Tyasha Harris?",
+      "answer": "The WNBA lists Tyasha Harris at 5 feet 10 inches and 164 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
+      ],
+      "queries": [
+        {
+          "q": "tyasha harris height",
+          "vol": 20
+        },
+        {
+          "q": "how tall is tyasha harris",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Tyasha Harris play at South Carolina?",
+      "answer": "Yes. Tyasha Harris helped South Carolina win its first NCAA championship in 2017. She left with the program record for games played (139) and won the 2020 Dawn Staley Award as the nation's top guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
+      ],
+      "queries": [
+        {
+          "q": "tyasha harris south carolina",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What is Tyasha Harris's three-point percentage?",
+      "answer": "In the 2026 regular season, Tyasha Harris's three-point percentage is 35.2.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is tyasha harris playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Tyasha Harris married?",
-      "answer": "There is no widely reported public record of Tyasha Harris being married as of late 2026.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://fullcourtbuckets.com/wnba/tyasha-harris/"
       ],
-      "google_keyword": "tyasha harris wife",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "tyasha harris 3 point stats",
+          "vol": 10
+        },
+        {
+          "q": "tyasha harris 3 pointers per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Tyasha Harris attend?",
-      "answer": "Harris played college basketball at University of South Carolina.",
+      "question": "When was Tyasha Harris drafted?",
+      "answer": "The Dallas Wings selected Tyasha Harris seventh overall in the 2020 WNBA Draft. She spent three seasons in Dallas, two with Connecticut, then returned to Dallas in 2025.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
       ],
-      "google_keyword": "tyasha harris south carolina",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Tyasha Harris injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "tyasha harris injury",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "tyasha harris wnba draft",
+          "vol": null
+        },
+        {
+          "q": "tyasha harris dallas wings",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Who are Tyasha Harris's parents?",
-      "answer": "Public profiles share limited verified detail about Tyasha Harris's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "South Carolina lists Tyasha Harris as the daughter of Shannon Greer-Harris and Bruce Harris. She has an older brother, Bruce, and two younger sisters, Talia and Tamara.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tyasha_Harris"
+        "https://gamecocksonline.com/sports/womens-basketball/roster/tyasha-harris/"
       ],
-      "google_keyword": "tyasha harris family",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tyasha harris parents",
+          "vol": 10
+        },
+        {
+          "q": "tyasha harris family",
+          "vol": 10
+        },
+        {
+          "q": "tyasha harris sister",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Tyasha Harris go to high school?",
+      "answer": "Tyasha Harris went to Heritage Christian in Noblesville, Indiana, where she is the school's all-time top scorer with 2,004 points.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gamecocksonline.com/sports/womens-basketball/roster/tyasha-harris/"
+      ],
+      "queries": [
+        {
+          "q": "tyasha harris high school",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Has Tyasha Harris played in Turkey?",
+      "answer": "Yes. Tyasha Harris has played overseas in Turkey for Cankaya and Kayseri Basketbol, as well as in China and Russia.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630112/tyasha-harris/bio"
+      ],
+      "queries": [
+        {
+          "q": "tyasha harris turkey",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

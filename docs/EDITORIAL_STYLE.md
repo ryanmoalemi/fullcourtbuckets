@@ -10,6 +10,13 @@ Use this for every new preview, recap, feature and guide. It applies to the WNBA
 - Data pages carry a Source column per row, a data dictionary, a downloadable file and a corrections address.
 - This doesn't change the stats rule: never credit ESPN or the stats API; FCB gathers and verifies its own data.
 
+## Where to watch (Ryan, Oct 24, 2026)
+
+- Every game preview, recap "next game" note, play-by-play page, live homepage story and schedule table must name both TV and streaming, written as `TV: NBC. Streaming: Peacock.` Never list the TV network alone.
+- Use only the official broadcaster or league release (NBC Sports, USA Sports/Versant, WNBA.com) and link it in a new tab.
+- 2026 Finals: Games 1 and 4 are TV: NBC. Streaming: Peacock. Games 2, 3 and 5-7 are TV: USA Network (simulcast on CNBC). Streaming: Peacock.
+- `automation/build_pbp.py` refuses to build a play-by-play page unless the game in `data/pbp-games.json` has both `tv` and `stream`.
+
 ## Headlines and openings
 - Write headlines in sentence case. Lead with the result or the player plus the number ("Burton's late three and Stokes' block lift Valkyries over Aces 83-81"). Don't use all-caps score summaries or clickbait questions.
 - Use the same headline in the H1, the news card, og/twitter titles and the JSON-LD headline. A title tag can be shortened, but its meaning can't change.
