@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:30:33+00:00",
+ "checked_at": "2026-10-24T18:32:07+00:00",
  "period": 3,
- "clock": "8:03",
+ "clock": "7:39",
  "last_play_period": 3,
- "last_play_clock": "8:30",
+ "last_play_clock": "7:46",
  "away": {
   "abbreviation": "GS",
   "score": 42,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 28,
-  "feed_score": 28
+  "score": 30,
+  "feed_score": 30
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 0,
-   "home": 2
+   "home": 4
   }
  ],
  "players": [],
@@ -2479,13 +2479,121 @@
    "order": 204,
    "period": 3,
    "clock": "8:30",
-   "type": "No Shot (Default Shot)",
-   "text": "Rhyne Howard misses shot",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard misses 14-foot pullup jump shot",
    "away_score": 42,
    "home_score": 28,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 205,
+   "period": 3,
+   "clock": "8:27",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 206,
+   "period": 3,
+   "clock": "8:13",
+   "type": "Turnaround Jump Shot",
+   "text": "Gabby Williams misses 9-foot turnaround jump shot",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 207,
+   "period": 3,
+   "clock": "8:11",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 208,
+   "period": 3,
+   "clock": "8:04",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 209,
+   "period": 3,
+   "clock": "8:03",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 210,
+   "period": 3,
+   "clock": "8:03",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 42,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 211,
+   "period": 3,
+   "clock": "8:03",
+   "type": "Free Throw - 1 of 2",
+   "text": "Naz Hillmon makes free throw 1 of 2",
+   "away_score": 42,
+   "home_score": 29,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 212,
+   "period": 3,
+   "clock": "8:03",
+   "type": "Free Throw - 2 of 2",
+   "text": "Naz Hillmon makes free throw 2 of 2",
+   "away_score": 42,
+   "home_score": 30,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 213,
+   "period": 3,
+   "clock": "7:46",
+   "type": "Traveling",
+   "text": "Kiah Stokes traveling turnover",
+   "away_score": 42,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
