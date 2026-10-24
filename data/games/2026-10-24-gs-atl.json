@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:57:13+00:00",
+ "checked_at": "2026-10-24T18:58:46+00:00",
  "period": 3,
- "clock": "9.2",
+ "clock": "0.0",
  "last_play_period": 3,
- "last_play_clock": "9.2",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "GS",
   "score": 54,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 43,
-  "feed_score": 43
+  "score": 45,
+  "feed_score": 45
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 12,
-   "home": 17
+   "home": 19
   }
  ],
  "players": [],
@@ -3499,8 +3499,8 @@
    "order": 289,
    "period": 3,
    "clock": "1:14",
-   "type": "Jump Shot",
-   "text": "Allisha Gray misses 8-foot jumper",
+   "type": "Driving Floating Jump Shot",
+   "text": "Allisha Gray misses driving floating jump shot",
    "away_score": 52,
    "home_score": 43,
    "scoring_play": false,
@@ -3547,8 +3547,8 @@
    "order": 293,
    "period": 3,
    "clock": "57.6",
-   "type": "Driving Layup Shot",
-   "text": "Veronica Burton misses driving layup",
+   "type": "Layup Driving Reverse",
+   "text": "Veronica Burton misses two point shot",
    "away_score": 52,
    "home_score": 43,
    "scoring_play": false,
@@ -3686,6 +3686,66 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "GS"
+  },
+  {
+   "order": 305,
+   "period": 3,
+   "clock": "1.2",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 54,
+   "home_score": 43,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 306,
+   "period": 3,
+   "clock": "1.2",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada makes free throw 1 of 2",
+   "away_score": 54,
+   "home_score": 44,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 307,
+   "period": 3,
+   "clock": "1.2",
+   "type": "Substitution",
+   "text": "Kaitlyn Chen enters the game for Veronica Burton",
+   "away_score": 54,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 308,
+   "period": 3,
+   "clock": "1.2",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada makes free throw 2 of 2",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 309,
+   "period": 3,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 3rd Quarter",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
