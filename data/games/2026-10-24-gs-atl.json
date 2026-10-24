@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:47:28+00:00",
+ "checked_at": "2026-10-24T17:48:31+00:00",
  "period": 2,
- "clock": "7:50",
+ "clock": "7:23",
  "last_play_period": 2,
- "last_play_clock": "7:50",
+ "last_play_clock": "7:23",
  "away": {
   "abbreviation": "GS",
-  "score": 18,
-  "feed_score": 18
+  "score": 20,
+  "feed_score": 20
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 15,
-  "feed_score": 15
+  "score": 16,
+  "feed_score": 16
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 2,
-   "home": 4
+   "away": 4,
+   "home": 5
   }
  ],
  "players": [],
@@ -1314,6 +1314,78 @@
    "text": "Dream offensive team rebound",
    "away_score": 18,
    "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 108,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Jordin Canada",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 109,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Substitution",
+   "text": "Kaila Charles enters the game for Tiffany Hayes",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 110,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Free Throw - 2 of 2",
+   "text": "Allisha Gray makes free throw 2 of 2",
+   "away_score": 18,
+   "home_score": 16,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 111,
+   "period": 2,
+   "clock": "7:31",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams makes 13-foot pullup jump shot",
+   "away_score": 20,
+   "home_score": 16,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 112,
+   "period": 2,
+   "clock": "7:23",
+   "type": "Offensive Charge",
+   "text": "Angel Reese offensive charge",
+   "away_score": 20,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 113,
+   "period": 2,
+   "clock": "7:23",
+   "type": "Offensive Foul Turnover",
+   "text": "Angel Reese offensive foul turnover",
+   "away_score": 20,
+   "home_score": 16,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
