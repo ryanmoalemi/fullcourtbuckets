@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:35:47+00:00",
+ "checked_at": "2026-10-24T18:37:21+00:00",
  "period": 3,
- "clock": "7:39",
+ "clock": "6:57",
  "last_play_period": 3,
- "last_play_clock": "8:41",
+ "last_play_clock": "6:57",
  "away": {
   "abbreviation": "GS",
-  "score": 42,
-  "feed_score": 42
+  "score": 44,
+  "feed_score": 44
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 30,
-  "feed_score": 30
+  "score": 31,
+  "feed_score": 31
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 0,
-   "home": 4
+   "away": 2,
+   "home": 5
   }
  ],
  "players": [],
@@ -2627,6 +2627,114 @@
    "text": "Naz Hillmon defensive rebound",
    "away_score": 42,
    "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 217,
+   "period": 3,
+   "clock": "7:39",
+   "type": "Substitution",
+   "text": "Cecilia Zandalasini enters the game for Kaila Charles",
+   "away_score": 42,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 218,
+   "period": 3,
+   "clock": "7:39",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada misses free throw 1 of 2",
+   "away_score": 42,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 219,
+   "period": 3,
+   "clock": "7:39",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 42,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 220,
+   "period": 3,
+   "clock": "7:39",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada makes free throw 2 of 2",
+   "away_score": 42,
+   "home_score": 31,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 221,
+   "period": 3,
+   "clock": "7:19",
+   "type": "Driving Finger Roll Layup",
+   "text": "Gabby Williams makes 2-foot two point shot",
+   "away_score": 44,
+   "home_score": 31,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 222,
+   "period": 3,
+   "clock": "7:09",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 24-foot three point jumper",
+   "away_score": 44,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 223,
+   "period": 3,
+   "clock": "7:07",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 44,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 224,
+   "period": 3,
+   "clock": "6:57",
+   "type": "Offensive Charge",
+   "text": "Allisha Gray offensive charge",
+   "away_score": 44,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 225,
+   "period": 3,
+   "clock": "6:57",
+   "type": "Offensive Foul Turnover",
+   "text": "Allisha Gray offensive foul turnover",
+   "away_score": 44,
+   "home_score": 31,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
