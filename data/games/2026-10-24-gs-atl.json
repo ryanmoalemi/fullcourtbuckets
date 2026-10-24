@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:38:37+00:00",
+ "checked_at": "2026-10-24T17:39:10+00:00",
  "period": 1,
- "clock": "38.6",
+ "clock": "0.0",
  "last_play_period": 1,
- "last_play_clock": "39.0",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "GS",
-  "score": 14,
-  "feed_score": 14
+  "score": 16,
+  "feed_score": 16
  },
  "home": {
   "abbreviation": "ATL",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 14,
+   "away": 16,
    "home": 11
   }
  ],
@@ -1060,6 +1060,54 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "ATL"
+  },
+  {
+   "order": 87,
+   "period": 1,
+   "clock": "18.5",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Kaila Charles makes 9-foot two point shot",
+   "away_score": 16,
+   "home_score": 11,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 88,
+   "period": 1,
+   "clock": "1.9",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 16,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 89,
+   "period": 1,
+   "clock": "0.0",
+   "type": "Defensive Rebound",
+   "text": "Cecilia Zandalasini defensive rebound",
+   "away_score": 16,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 90,
+   "period": 1,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 1st Quarter",
+   "away_score": 16,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
