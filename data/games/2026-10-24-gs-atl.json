@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:08:40+00:00",
+ "checked_at": "2026-10-24T19:10:45+00:00",
  "period": 4,
  "clock": "6:47",
  "last_play_period": 4,
- "last_play_clock": "8:09",
+ "last_play_clock": "6:47",
  "away": {
   "abbreviation": "GS",
   "score": 57,
@@ -3757,7 +3757,7 @@
    "period": 4,
    "clock": "9:48",
    "type": "Driving Layup Shot",
-   "text": "Veronica Burton misses driving layup",
+   "text": "Kaila Charles misses driving layup",
    "away_score": 54,
    "home_score": 45,
    "scoring_play": false,
@@ -4079,18 +4079,6 @@
   {
    "order": 337,
    "period": 4,
-   "clock": "7:34",
-   "type": "Substitution",
-   "text": "Isobel Borlase enters the game for Allisha Gray",
-   "away_score": 57,
-   "home_score": 49,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "ATL"
-  },
-  {
-   "order": 338,
-   "period": 4,
    "clock": "7:24",
    "type": "Driving Layup Shot",
    "text": "Naz Hillmon blocks Tiffany Hayes 's 6-foot driving layup",
@@ -4101,7 +4089,7 @@
    "team": "GS"
   },
   {
-   "order": 339,
+   "order": 338,
    "period": 4,
    "clock": "7:16",
    "type": "Defensive Rebound",
@@ -4113,7 +4101,7 @@
    "team": "ATL"
   },
   {
-   "order": 340,
+   "order": 339,
    "period": 4,
    "clock": "7:12",
    "type": "Driving Layup Shot",
@@ -4125,7 +4113,7 @@
    "team": "ATL"
   },
   {
-   "order": 341,
+   "order": 340,
    "period": 4,
    "clock": "6:54",
    "type": "Driving Layup Shot",
@@ -4137,7 +4125,7 @@
    "team": "GS"
   },
   {
-   "order": 342,
+   "order": 341,
    "period": 4,
    "clock": "6:50",
    "type": "Offensive Rebound",
@@ -4149,7 +4137,7 @@
    "team": "GS"
   },
   {
-   "order": 343,
+   "order": 342,
    "period": 4,
    "clock": "6:49",
    "type": "Jump Shot",
@@ -4161,7 +4149,7 @@
    "team": "GS"
   },
   {
-   "order": 344,
+   "order": 343,
    "period": 4,
    "clock": "6:47",
    "type": "Offensive Rebound",
@@ -4173,13 +4161,37 @@
    "team": "GS"
   },
   {
-   "order": 345,
+   "order": 344,
    "period": 4,
    "clock": "8:09",
    "type": "Substitution",
    "text": "Isobel Borlase enters the game for Allisha Gray",
    "away_score": 57,
    "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 345,
+   "period": 4,
+   "clock": "6:47",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 57,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 346,
+   "period": 4,
+   "clock": "6:47",
+   "type": "Coach's Challenge (replaycenter)",
+   "text": "(06:47) [Dream] COACH'S CHALLENGE (CALL REPLAYCENTER)",
+   "away_score": 57,
+   "home_score": 51,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
