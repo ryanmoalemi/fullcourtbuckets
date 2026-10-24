@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:49:03+00:00",
+ "checked_at": "2026-10-24T17:51:08+00:00",
  "period": 2,
- "clock": "6:58",
+ "clock": "5:49",
  "last_play_period": 2,
- "last_play_clock": "7:08",
+ "last_play_clock": "5:49",
  "away": {
   "abbreviation": "GS",
-  "score": 20,
-  "feed_score": 20
+  "score": 24,
+  "feed_score": 24
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 16,
-  "feed_score": 16
+  "score": 20,
+  "feed_score": 20
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 4,
-   "home": 5
+   "away": 8,
+   "home": 9
   }
  ],
  "players": [],
@@ -1419,12 +1419,120 @@
    "period": 2,
    "clock": "7:08",
    "type": "Defensive Rebound",
-   "text": "Rhyne Howard defensive rebound",
+   "text": "Angel Reese defensive rebound",
    "away_score": 20,
    "home_score": 16,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 117,
+   "period": 2,
+   "clock": "6:58",
+   "type": "Personal Foul",
+   "text": "Kaila Charles personal foul",
+   "away_score": 20,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 118,
+   "period": 2,
+   "clock": "6:58",
+   "type": "Technical Foul",
+   "text": "Naz Hillmon technical foul",
+   "away_score": 20,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 119,
+   "period": 2,
+   "clock": "6:58",
+   "type": "Free Throw - Technical",
+   "text": "Gabby Williams makes technical free throw",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 120,
+   "period": 2,
+   "clock": "6:52",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 2-foot layup (Angel Reese assists)",
+   "away_score": 21,
+   "home_score": 18,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 121,
+   "period": 2,
+   "clock": "6:28",
+   "type": "Pullup Jump Shot",
+   "text": "Veronica Burton makes 31-foot three pointer",
+   "away_score": 24,
+   "home_score": 18,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 122,
+   "period": 2,
+   "clock": "6:15",
+   "type": "Hook Shot",
+   "text": "Angel Reese makes 7-foot hook shot (Rhyne Howard assists)",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 123,
+   "period": 2,
+   "clock": "5:50",
+   "type": "Step Back Jump Shot",
+   "text": "Cecilia Zandalasini misses 18-foot step back jumpshot",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 124,
+   "period": 2,
+   "clock": "5:49",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 125,
+   "period": 2,
+   "clock": "5:49",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
