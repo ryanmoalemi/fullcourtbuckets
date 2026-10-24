@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:08:08+00:00",
+ "checked_at": "2026-10-24T19:08:40+00:00",
  "period": 4,
  "clock": "6:47",
  "last_play_period": 4,
- "last_play_clock": "6:49",
+ "last_play_clock": "8:09",
  "away": {
   "abbreviation": "GS",
   "score": 57,
@@ -4152,13 +4152,37 @@
    "order": 343,
    "period": 4,
    "clock": "6:49",
-   "type": "No Shot (Default Shot)",
-   "text": "Gabby Williams misses shot",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 26-foot three point jumper",
    "away_score": 57,
    "home_score": 51,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 344,
+   "period": 4,
+   "clock": "6:47",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 57,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 345,
+   "period": 4,
+   "clock": "8:09",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 57,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
