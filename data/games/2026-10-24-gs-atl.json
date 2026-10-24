@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:44:10+00:00",
+ "checked_at": "2026-10-24T18:46:45+00:00",
  "period": 3,
- "clock": "4:26",
+ "clock": "3:41",
  "last_play_period": 3,
- "last_play_clock": "4:26",
+ "last_play_clock": "3:41",
  "away": {
   "abbreviation": "GS",
-  "score": 46,
-  "feed_score": 46
+  "score": 48,
+  "feed_score": 48
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 4,
+   "away": 6,
    "home": 14
   }
  ],
@@ -3103,8 +3103,8 @@
    "order": 256,
    "period": 3,
    "clock": "4:36",
-   "type": "Driving Layup Shot",
-   "text": "Gabby Williams misses driving layup",
+   "type": "Driving Finger Roll Layup",
+   "text": "Gabby Williams misses two point shot",
    "away_score": 46,
    "home_score": 37,
    "scoring_play": false,
@@ -3127,8 +3127,8 @@
    "order": 258,
    "period": 3,
    "clock": "4:27",
-   "type": "No Shot (Default Shot)",
-   "text": "Isobel Borlase makes 25-foot shot (Jordin Canada assists)",
+   "type": "Jump Shot",
+   "text": "Isobel Borlase makes 25-foot three point jumper (Jordin Canada assists)",
    "away_score": 46,
    "home_score": 40,
    "scoring_play": true,
@@ -3146,6 +3146,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 260,
+   "period": 3,
+   "clock": "4:06",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup (Veronica Burton assists)",
+   "away_score": 48,
+   "home_score": 40,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 261,
+   "period": 3,
+   "clock": "3:41",
+   "type": "No Shot (Default Shot)",
+   "text": "Jordin Canada misses shot",
+   "away_score": 48,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
