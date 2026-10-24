@@ -5,7 +5,7 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:32:40+00:00",
+ "checked_at": "2026-10-24T18:34:44+00:00",
  "period": 3,
  "clock": "7:39",
  "last_play_period": 3,
@@ -2466,18 +2466,6 @@
   {
    "order": 203,
    "period": 3,
-   "clock": "8:41",
-   "type": "Lost Ball Turnover",
-   "text": "Kaila Charles lost ball turnover (Naz Hillmon steals)",
-   "away_score": 42,
-   "home_score": 28,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "GS"
-  },
-  {
-   "order": 204,
-   "period": 3,
    "clock": "8:30",
    "type": "Pullup Jump Shot",
    "text": "Rhyne Howard misses 14-foot pullup jump shot",
@@ -2488,7 +2476,7 @@
    "team": "ATL"
   },
   {
-   "order": 205,
+   "order": 204,
    "period": 3,
    "clock": "8:27",
    "type": "Defensive Rebound",
@@ -2500,7 +2488,7 @@
    "team": "GS"
   },
   {
-   "order": 206,
+   "order": 205,
    "period": 3,
    "clock": "8:13",
    "type": "Turnaround Jump Shot",
@@ -2512,7 +2500,7 @@
    "team": "GS"
   },
   {
-   "order": 207,
+   "order": 206,
    "period": 3,
    "clock": "8:11",
    "type": "Defensive Rebound",
@@ -2524,7 +2512,7 @@
    "team": "ATL"
   },
   {
-   "order": 208,
+   "order": 207,
    "period": 3,
    "clock": "8:04",
    "type": "Jump Shot",
@@ -2536,7 +2524,7 @@
    "team": "ATL"
   },
   {
-   "order": 209,
+   "order": 208,
    "period": 3,
    "clock": "8:03",
    "type": "Offensive Rebound",
@@ -2548,7 +2536,7 @@
    "team": "ATL"
   },
   {
-   "order": 210,
+   "order": 209,
    "period": 3,
    "clock": "8:03",
    "type": "Shooting Foul",
@@ -2560,7 +2548,7 @@
    "team": "GS"
   },
   {
-   "order": 211,
+   "order": 210,
    "period": 3,
    "clock": "8:03",
    "type": "Free Throw - 1 of 2",
@@ -2572,7 +2560,7 @@
    "team": "ATL"
   },
   {
-   "order": 212,
+   "order": 211,
    "period": 3,
    "clock": "8:03",
    "type": "Free Throw - 2 of 2",
@@ -2584,7 +2572,7 @@
    "team": "ATL"
   },
   {
-   "order": 213,
+   "order": 212,
    "period": 3,
    "clock": "7:46",
    "type": "Traveling",
@@ -2596,7 +2584,7 @@
    "team": "GS"
   },
   {
-   "order": 214,
+   "order": 213,
    "period": 3,
    "clock": "7:39",
    "type": "Shooting Foul",
@@ -2608,7 +2596,7 @@
    "team": "GS"
   },
   {
-   "order": 215,
+   "order": 214,
    "period": 3,
    "clock": "7:39",
    "type": "Full Timeout",
