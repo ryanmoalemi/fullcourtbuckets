@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:39:59+00:00",
+ "checked_at": "2026-10-24T18:42:34+00:00",
  "period": 3,
- "clock": "5:57",
+ "clock": "5:00",
  "last_play_period": 3,
- "last_play_clock": "5:57",
+ "last_play_clock": "5:17",
  "away": {
   "abbreviation": "GS",
-  "score": 44,
-  "feed_score": 44
+  "score": 46,
+  "feed_score": 46
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 34,
-  "feed_score": 34
+  "score": 35,
+  "feed_score": 35
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 2,
-   "home": 8
+   "away": 4,
+   "home": 9
   }
  ],
  "players": [],
@@ -2875,13 +2875,121 @@
    "order": 237,
    "period": 3,
    "clock": "5:57",
-   "type": "No Foul",
-   "text": "foul",
+   "type": "Technical Foul",
+   "text": "technical foul",
    "away_score": 44,
    "home_score": 34,
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 238,
+   "period": 3,
+   "clock": "5:57",
+   "type": "Free Throw - Technical",
+   "text": "Rhyne Howard makes technical free throw",
+   "away_score": 44,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 239,
+   "period": 3,
+   "clock": "5:57",
+   "type": "Free Throw - 1 of 1",
+   "text": "Rhyne Howard misses free throw 1 of 1",
+   "away_score": 44,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 240,
+   "period": 3,
+   "clock": "5:54",
+   "type": "Defensive Rebound",
+   "text": "Tiffany Hayes defensive rebound",
+   "away_score": 44,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 241,
+   "period": 3,
+   "clock": "5:39",
+   "type": "Shooting Foul",
+   "text": "Isobel Borlase shooting foul",
+   "away_score": 44,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 242,
+   "period": 3,
+   "clock": "5:39",
+   "type": "Free Throw - 1 of 2",
+   "text": "Gabby Williams makes free throw 1 of 2",
+   "away_score": 45,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 243,
+   "period": 3,
+   "clock": "5:39",
+   "type": "Free Throw - 2 of 2",
+   "text": "Gabby Williams makes free throw 2 of 2",
+   "away_score": 46,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 244,
+   "period": 3,
+   "clock": "5:18",
+   "type": "Turnaround Jump Shot",
+   "text": "Cecilia Zandalasini blocks Jordin Canada 's 6-foot turnaround jump shot",
+   "away_score": 46,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 245,
+   "period": 3,
+   "clock": "5:17",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 46,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 246,
+   "period": 3,
+   "clock": "5:17",
+   "type": "Personal Foul",
+   "text": "Jordin Canada personal foul",
+   "away_score": 46,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
