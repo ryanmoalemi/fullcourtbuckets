@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:46:24+00:00",
+ "checked_at": "2026-10-24T17:47:28+00:00",
  "period": 2,
- "clock": "7:59",
+ "clock": "7:50",
  "last_play_period": 2,
- "last_play_clock": "7:59",
+ "last_play_clock": "7:50",
  "away": {
   "abbreviation": "GS",
   "score": 18,
@@ -1251,7 +1251,7 @@
    "period": 2,
    "clock": "8:04",
    "type": "Jumpball",
-   "text": "Tiffany Hayes vs. Rhyne Howard (Cecilia Zandalasini gains possession)",
+   "text": "Tiffany Hayes vs. Rhyne Howard (Veronica Burton gains possession)",
    "away_score": 18,
    "home_score": 15,
    "scoring_play": false,
@@ -1281,6 +1281,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 105,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Shooting Foul",
+   "text": "Tiffany Hayes shooting foul",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 106,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Free Throw - 1 of 2",
+   "text": "Allisha Gray misses free throw 1 of 2",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 107,
+   "period": 2,
+   "clock": "7:50",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 18,
+   "home_score": 15,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
