@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:21:16+00:00",
+ "checked_at": "2026-10-24T19:22:19+00:00",
  "period": 4,
- "clock": "2:45",
+ "clock": "2:24",
  "last_play_period": 4,
- "last_play_clock": "2:45",
+ "last_play_clock": "1:56",
  "away": {
   "abbreviation": "GS",
   "score": 64,
@@ -4081,7 +4081,7 @@
    "period": 4,
    "clock": "7:25",
    "type": "Driving Layup Shot",
-   "text": "Naz Hillmon blocks Tiffany Hayes 's 6-foot driving layup",
+   "text": "Angel Reese blocks Tiffany Hayes 's 6-foot driving layup",
    "away_score": 57,
    "home_score": 49,
    "scoring_play": false,
@@ -4507,6 +4507,54 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "ATL"
+  },
+  {
+   "order": 373,
+   "period": 4,
+   "clock": "2:24",
+   "type": "Personal Foul",
+   "text": "Isobel Borlase personal foul",
+   "away_score": 64,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 374,
+   "period": 4,
+   "clock": "2:10",
+   "type": "Step Back Jump Shot",
+   "text": "Veronica Burton misses 25-foot three point step back jumpshot",
+   "away_score": 64,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 375,
+   "period": 4,
+   "clock": "2:05",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 64,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 376,
+   "period": 4,
+   "clock": "1:56",
+   "type": "No Shot (Default Shot)",
+   "text": "Gabby Williams misses shot",
+   "away_score": 64,
+   "home_score": 57,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
