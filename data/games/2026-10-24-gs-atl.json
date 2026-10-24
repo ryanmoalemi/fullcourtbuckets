@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T17:35:32+00:00",
+ "checked_at": "2026-10-24T17:38:37+00:00",
  "period": 1,
- "clock": "49.1",
+ "clock": "38.6",
  "last_play_period": 1,
- "last_play_clock": "49.1",
+ "last_play_clock": "39.0",
  "away": {
   "abbreviation": "GS",
   "score": 14,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 9,
-  "feed_score": 9
+  "score": 11,
+  "feed_score": 11
  },
  "periods": [
   {
    "period": 1,
    "away": 14,
-   "home": 9
+   "home": 11
   }
  ],
  "players": [],
@@ -1036,6 +1036,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 85,
+   "period": 1,
+   "clock": "49.1",
+   "type": "Coach's Challenge (Supported)",
+   "text": "(00:49.1) [Golden State Valkyries] COACH'S CHALLENGE (REPLAY SUPPORTS CALL) [Golden State Valkyries] charged with a timeout",
+   "away_score": 14,
+   "home_score": 9,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 86,
+   "period": 1,
+   "clock": "39.0",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Naz Hillmon assists)",
+   "away_score": 14,
+   "home_score": 11,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
   }
  ]
 }
