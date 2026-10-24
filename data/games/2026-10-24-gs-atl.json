@@ -5,15 +5,15 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:12:50+00:00",
+ "checked_at": "2026-10-24T19:13:53+00:00",
  "period": 4,
- "clock": "6:47",
+ "clock": "5:45",
  "last_play_period": 4,
- "last_play_clock": "6:28",
+ "last_play_clock": "5:45",
  "away": {
   "abbreviation": "GS",
-  "score": 57,
-  "feed_score": 57
+  "score": 59,
+  "feed_score": 59
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 3,
+   "away": 5,
    "home": 6
   }
  ],
@@ -4200,8 +4200,8 @@
    "order": 347,
    "period": 4,
    "clock": "6:34",
-   "type": "No Shot (Default Shot)",
-   "text": "Rhyne Howard misses shot",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 25-foot three point jumper",
    "away_score": 57,
    "home_score": 51,
    "scoring_play": false,
@@ -4215,6 +4215,42 @@
    "type": "Defensive Rebound",
    "text": "Tiffany Hayes defensive rebound",
    "away_score": 57,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 349,
+   "period": 4,
+   "clock": "6:17",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup",
+   "away_score": 59,
+   "home_score": 51,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 350,
+   "period": 4,
+   "clock": "5:46",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 59,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 351,
+   "period": 4,
+   "clock": "5:45",
+   "type": "Defensive Rebound",
+   "text": "Golden State Valkyries defensive team rebound",
+   "away_score": 59,
    "home_score": 51,
    "scoring_play": false,
    "score_value": 0,
