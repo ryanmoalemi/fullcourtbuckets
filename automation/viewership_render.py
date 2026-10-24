@@ -1334,8 +1334,10 @@ def finals_section(payload: dict) -> str:
         '<section class="qa" id="finals">'
         '<h2>How many people watched the WNBA Finals?</h2>'
         f'<p class="answer">{core.link_teams(finals_answer(payload))}</p>'
-        '<p class="note">2026 Finals audiences are not on this chart. Unreported games stay in the tracker below.</p>'
-        f'{chart_figure(svg, "finals-history.png")}'
+        + (f'<p class="note">{core.esc(payload["finals_intro"])} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
+           if payload.get('finals_intro') else
+           '<p class="note">2026 Finals audiences are not on this chart. Unreported games stay in the tracker below.</p>')
+        +         f'{chart_figure(svg, "finals-history.png")}'
         + table(
             ['Year', 'Matchup', 'Games', 'Average viewers', 'Network', 'Measurement', 'Source'],
             body,
@@ -1678,6 +1680,8 @@ def page_script() -> str:
 def render_page(root: Path, payload: dict) -> str:
     menu = core.site_nav.build_menu(root)
     updated = core.format_updated(payload['updated'])
+    if payload.get('updated_time'):
+        updated = f"{updated}, {payload['updated_time']}"
     cards = render_cards(stat_cards(payload))
     sections = ''.join([
         viewership_section(payload),
