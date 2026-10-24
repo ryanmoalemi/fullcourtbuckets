@@ -5,7 +5,7 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:47:49+00:00",
+ "checked_at": "2026-10-24T18:51:26+00:00",
  "period": 3,
  "clock": "3:02",
  "last_play_period": 3,
@@ -3163,8 +3163,8 @@
    "order": 261,
    "period": 3,
    "clock": "3:41",
-   "type": "Turnaround Jump Shot",
-   "text": "Jordin Canada misses 6-foot turnaround jump shot",
+   "type": "Driving Layup Shot",
+   "text": "Kiah Stokes blocks Jordin Canada 's 6-foot driving layup",
    "away_score": 48,
    "home_score": 40,
    "scoring_play": false,
@@ -3223,25 +3223,37 @@
    "order": 266,
    "period": 3,
    "clock": "3:02",
-   "type": "No Shot (Default Shot)",
-   "text": "Veronica Burton misses shot",
+   "type": "Shooting Foul",
+   "text": "Jordin Canada shooting foul",
    "away_score": 50,
    "home_score": 40,
    "scoring_play": false,
    "score_value": 0,
-   "team": "GS"
+   "team": "ATL"
   },
   {
    "order": 267,
    "period": 3,
    "clock": "3:02",
-   "type": "Offensive Rebound",
-   "text": "Golden State Valkyries offensive team rebound",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
    "away_score": 50,
    "home_score": 40,
    "scoring_play": false,
    "score_value": 0,
-   "team": "GS"
+   "team": "ATL"
+  },
+  {
+   "order": 268,
+   "period": 3,
+   "clock": "3:02",
+   "type": "Coach's Challenge (Overturned)",
+   "text": "(03:02) [Dream] COACH'S CHALLENGE (CALL OVERTURNED) [Dream] retain their timeout",
+   "away_score": 50,
+   "home_score": 40,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
