@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T19:19:10+00:00",
+ "checked_at": "2026-10-24T19:19:42+00:00",
  "period": 4,
  "clock": "2:45",
  "last_play_period": 4,
- "last_play_clock": "2:45",
+ "last_play_clock": "9:26",
  "away": {
   "abbreviation": "GS",
   "score": 64,
@@ -4223,7 +4223,7 @@
   {
    "order": 349,
    "period": 4,
-   "clock": "5:46",
+   "clock": "5:48",
    "type": "Driving Layup Shot",
    "text": "Angel Reese misses driving layup",
    "away_score": 59,
@@ -4447,6 +4447,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 368,
+   "period": 4,
+   "clock": "7:40",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 57,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 369,
+   "period": 4,
+   "clock": "9:26",
+   "type": "Jumpball",
+   "text": "Kayla Thornton vs. Angel Reese (Jordin Canada gains possession)",
+   "away_score": 54,
+   "home_score": 45,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
