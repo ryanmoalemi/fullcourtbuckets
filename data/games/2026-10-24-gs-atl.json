@@ -5,11 +5,11 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:06:12+00:00",
+ "checked_at": "2026-10-24T18:07:15+00:00",
  "period": 2,
- "clock": "1:24",
+ "clock": "1:22",
  "last_play_period": 2,
- "last_play_clock": "1:24",
+ "last_play_clock": "1:22",
  "away": {
   "abbreviation": "GS",
   "score": 38,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 22,
-  "feed_score": 22
+  "score": 23,
+  "feed_score": 23
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 22,
-   "home": 11
+   "home": 12
   }
  ],
  "players": [],
@@ -2018,13 +2018,85 @@
    "order": 166,
    "period": 2,
    "clock": "1:24",
-   "type": "No Foul",
-   "text": "Cecilia Zandalasini foul",
+   "type": "Personal Foul",
+   "text": "Cecilia Zandalasini personal foul",
    "away_score": 38,
    "home_score": 22,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 167,
+   "period": 2,
+   "clock": "1:24",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Madina Okot",
+   "away_score": 38,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 168,
+   "period": 2,
+   "clock": "1:24",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Allisha Gray",
+   "away_score": 38,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 169,
+   "period": 2,
+   "clock": "1:24",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase makes free throw 1 of 2",
+   "away_score": 38,
+   "home_score": 23,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 170,
+   "period": 2,
+   "clock": "1:24",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Angel Reese",
+   "away_score": 38,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "1:24",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase misses free throw 2 of 2",
+   "away_score": 38,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 172,
+   "period": 2,
+   "clock": "1:22",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 38,
+   "home_score": 23,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
