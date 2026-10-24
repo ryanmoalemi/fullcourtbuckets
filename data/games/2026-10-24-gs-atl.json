@@ -5,20 +5,20 @@
  "espn_game_id": "401918308",
  "balldontlie_game_id": 1392716,
  "date": "2026-10-24",
- "checked_at": "2026-10-24T18:03:35+00:00",
+ "checked_at": "2026-10-24T18:05:40+00:00",
  "period": 2,
- "clock": "2:35",
+ "clock": "1:36",
  "last_play_period": 2,
- "last_play_clock": "2:35",
+ "last_play_clock": "1:57",
  "away": {
   "abbreviation": "GS",
-  "score": 33,
-  "feed_score": 33
+  "score": 35,
+  "feed_score": 35
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 20,
-  "feed_score": 20
+  "score": 22,
+  "feed_score": 22
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 17,
-   "home": 9
+   "away": 19,
+   "home": 11
   }
  ],
  "players": [],
@@ -1917,6 +1917,90 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 158,
+   "period": 2,
+   "clock": "2:26",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 33,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 159,
+   "period": 2,
+   "clock": "2:26",
+   "type": "Free Throw - 1 of 2",
+   "text": "Angel Reese makes free throw 1 of 2",
+   "away_score": 33,
+   "home_score": 21,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 160,
+   "period": 2,
+   "clock": "2:26",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Kiah Stokes",
+   "away_score": 33,
+   "home_score": 21,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 161,
+   "period": 2,
+   "clock": "2:26",
+   "type": "Free Throw - 2 of 2",
+   "text": "Angel Reese makes free throw 2 of 2",
+   "away_score": 33,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 162,
+   "period": 2,
+   "clock": "2:04",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini makes 10-foot jumper (Veronica Burton assists)",
+   "away_score": 35,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 163,
+   "period": 2,
+   "clock": "1:57",
+   "type": "Offensive Foul",
+   "text": "Angel Reese offensive foul",
+   "away_score": 35,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 164,
+   "period": 2,
+   "clock": "1:57",
+   "type": "Offensive Foul Turnover",
+   "text": "Jordin Canada offensive foul turnover",
+   "away_score": 35,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
