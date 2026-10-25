@@ -260,7 +260,12 @@ class HomepageRailTests(unittest.TestCase):
                 'espnGameId': '401918298',
             },
         ]
-        item = links.choose_ticker(articles, now)
+        # Pin the schedule to the day before Game 1 (the shared tracker rows now carry finals).
+        import citation
+        from unittest import mock
+        game1 = list(citation.FINALS_TRACKER_ROWS[0][:5]) + ['Pending tip-off'] * 3 + ['Scheduled']
+        with mock.patch.object(citation, 'FINALS_TRACKER_ROWS', [game1]):
+            item = links.choose_ticker(articles, now)
         self.assertEqual(
             item['text'],
             'WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock',
