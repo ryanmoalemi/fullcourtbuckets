@@ -49,7 +49,8 @@
     "description": "Allisha Gray is out for Game 3 in Brooklyn. The Dream will try to sweep the Liberty without their leading scorer. What her absence means for Atlanta."
   },
   "/news/angel-reese-always-this-good-data/": {
-    "title": "Angel Reese's rebounding: double digits every season"
+    "title": "Angel Reese's rebounding: double digits every season",
+    "description": "Angel Reese has averaged 10+ rebounds in every full college and WNBA season. Our 124-game box score ledger shows the rebounding was always there."
   },
   "/news/angel-reese-game-1-liberty/": {
     "title": "Angel Reese follows DPOY award with four steals vs. Liberty",
@@ -71,13 +72,15 @@
     "description": "The Dream beat the Liberty 85-83 in Brooklyn to sweep the semifinals and reach the WNBA Finals. How Atlanta closed it out, with key plays and full stats."
   },
   "/news/dream-valkyries-finals-game-1-recap/": {
-    "title": "Gabby Williams lifts Valkyries over Dream 68-64 in Game 1"
+    "title": "Gabby Williams lifts Valkyries over Dream 68-64 in Game 1",
+    "description": "The Golden State Valkyries beat the Atlanta Dream 68-64 in Game 1 of the WNBA Finals on Saturday at Chase Center. Recap, key runs and full stats."
   },
   "/news/dream-valkyries-finals-game-2-recap/": {
     "title": "Angel Reese scores 30 as Dream even the Finals 79-65"
   },
   "/news/dream-valkyries-finals-game-3-recap/": {
-    "title": "Dream beat Valkyries 97-71 for a 2-1 WNBA Finals lead"
+    "title": "Dream beat Valkyries 97-71 for a 2-1 WNBA Finals lead",
+    "description": "The Atlanta Dream beat the Golden State Valkyries 97-71 in Game 3 of the WNBA Finals on Wednesday at State Farm Arena to lead the series 2-1."
   },
   "/news/fever-aces-game-2-recap/": {
     "title": "Clark hits back-to-back threes, Fever even series with Aces",
@@ -95,10 +98,12 @@
     "description": "The Dream and Valkyries open the WNBA Finals on Saturday, Oct. 17, at 12:30 p.m. PT. Atlanta's pressure meets Golden State's rebounding. Updated Oct. 15."
   },
   "/news/finals-game-2-preview-dream-valkyries/": {
-    "title": "Finals Game 2 preview: Dream lost the turnover battle"
+    "title": "Finals Game 2 preview: Dream lost the turnover battle",
+    "description": "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Game 2 is Monday at 5 p.m. PT."
   },
   "/news/finals-game-3-preview-valkyries-dream/": {
-    "title": "Finals Game 3 preview: Valkyries' missing free throws"
+    "title": "Finals Game 3 preview: Valkyries' missing free throws",
+    "description": "Golden State has scored 9 points and taken no free throws in the third quarter of both Finals games. Game 3 is tonight at 5 p.m. PT in Atlanta."
   },
   "/news/": {
     "title": "WNBA news, recaps and analysis | Full Court Buckets",
@@ -148,13 +153,16 @@
     "title": "WNBA expansion teams 2026: Portland Fire and Toronto Tempo"
   },
   "/news/wnba-finals-2026-audience-growth-dream-valkyries/": {
-    "title": "WNBA Finals 2026: audience growth behind Dream vs. Valkyries"
+    "title": "WNBA Finals 2026: audience growth behind Dream vs. Valkyries",
+    "description": "Atlanta faces Golden State in the 2026 WNBA Finals after 51 regular-season games topped 1 million viewers. See the numbers and our audience estimate."
   },
   "/news/wnba-finals-2026-schedule-dream-valkyries/": {
-    "title": "WNBA Finals 2026 schedule: Dream vs. Valkyries, Game 1"
+    "title": "WNBA Finals 2026 schedule: Dream vs. Valkyries, Game 1",
+    "description": "Game 1 of the WNBA Finals is Saturday, Oct. 17, at 12:30 p.m. PT at Chase Center. Full schedule, how both teams swept the semifinals, and more."
   },
   "/news/wnba-finals-bonus-2026-champions-60000/": {
-    "title": "2026 WNBA champions get $60,000 each, up from $22,908"
+    "title": "2026 WNBA champions get $60,000 each, up from $22,908",
+    "description": "Each eligible player on the 2026 WNBA champion gets a $60,000 bonus, up from $22,908 in 2025. The runner-up gets $20,000 each and the Finals MVP $30,000."
   },
   "/news/wnba-players-famous-relatives/": {
     "title": "49 WNBA players' famous relatives, from Curry to Malone"
