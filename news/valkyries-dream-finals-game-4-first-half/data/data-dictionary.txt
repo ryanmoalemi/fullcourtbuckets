@@ -1,0 +1,111 @@
+FULL COURT BUCKETS: 2026 WNBA FINALS DATA
+Data through Game 4, October 24, 2026
+
+FILES AND RECORDS
+finals-team-games.csv: 8 records, one team in one game.
+game4-halves.csv: 4 records, one team in one half of Game 4.
+reese-howard-finals.csv: 8 records, Angel Reese and Rhyne Howard in Games 1–4.
+series-derived.csv: 4 records, winner/loser comparisons for each game.
+finals-games-1-4.json: the same normalized records, metadata and series totals/splits.
+sources/all_summaries.json: official box-score statistical snapshots, preserving original field names.
+sources/official_halves.json: counts derived from official Game 4 play-by-play, preserving original field names.
+calculate-data.mjs: Node.js reproduction script. Run node calculate-data.mjs in any directory. It reads sources beside the script and rewrites its derived CSV/JSON files beside the script. No third-party packages or network access required for reproduction. Optional --source-dir PATH and --output-dir PATH select other locations. The --artifact flag is only for the original authoring environment.
+
+SOURCES
+https://www.wnba.com/game/atl-vs-gsv-1042600301/box-score
+https://www.wnba.com/game/atl-vs-gsv-1042600302/box-score
+https://www.wnba.com/game/gsv-vs-atl-1042600303/box-score
+https://www.wnba.com/game/gsv-vs-atl-1042600304/box-score
+https://www.wnba.com/game/gsv-vs-atl-1042600304/play-by-play
+
+IDENTIFIERS AND UNITS
+game_number: Finals game number, 1–4.
+game_id: official WNBA game identifier, retained as a text identifier in JSON.
+team/opponent: ATL = Atlanta Dream; GSV = Golden State Valkyries.
+result/team_result: W or L for the team’s full-game result.
+half: 1 = periods 1–2; 2 = periods 3–4. Half points are points within that half, not cumulative score.
+data_cutoff: 2026-10-24. This is the dataset cutoff date, not each game’s date.
+minutes: official player playing time in minutes:seconds.
+All counts are whole numbers. Points columns measure scoreboard points; attempt columns measure attempts, not scoring possessions or trips to the line.
+All percentage columns ending _pct use a 0–100 scale, rounded to six decimal places. Display 42.105263 as 42.1%, not 4,210.5%.
+Blank CSV / null JSON percentage: denominator is zero. For example, Howard had zero free-throw attempts in Game 2; the free-throw percentage is undefined, not an observed 0% success rate.
+
+OFFICIAL TEAM FIELD MAPPINGS
+In sources/all_summaries.json, each game contains teams.ATL and teams.GSV.
+points <- team.score (also reconciled to team.stats.points).
+turnovers_player <- team.stats.turnovers (sum of player turnovers).
+turnovers_team <- team.postgame.turnoversTeam (turnovers charged to the team rather than a named player).
+turnovers_total <- team.postgame.turnoversTotal = turnovers_player + turnovers_team.
+points_off_turnovers <- team.postgame.pointsFromTurnovers.
+field_goals_made <- team.stats.fieldGoalsMade.
+field_goals_attempted <- team.stats.fieldGoalsAttempted.
+three_pointers_made <- team.stats.threePointersMade.
+three_pointers_attempted <- team.stats.threePointersAttempted.
+free_throws_made <- team.stats.freeThrowsMade.
+free_throws_attempted <- team.stats.freeThrowsAttempted.
+offensive_rebounds <- team.stats.reboundsOffensive.
+defensive_rebounds <- team.stats.reboundsDefensive.
+rebounds <- team.stats.reboundsTotal.
+assists <- team.stats.assists.
+steals <- team.stats.steals.
+blocks <- team.stats.blocks.
+personal_fouls <- team.stats.foulsPersonal.
+points_in_paint <- team.postgame.pointsInThePaint.
+second_chance_points <- team.postgame.pointsSecondChance.
+fast_break_points <- team.postgame.pointsFastBreak.
+bench_points <- team.postgame.benchPoints.
+Rebounds are the official box-score player-credit totals. They exclude the separate postgame.reboundsTeam counter, which is preserved in the source snapshot but is not added to box-score rebounds.
+Player rows use the same statistical mappings under player.statistics; turnovers is that player’s statistics.turnovers and plus_minus is statistics.plusMinusPoints. No team turnovers are assigned to individual players.
+
+DERIVED FIELDS AND EXACT FORMULAS
+opponent_points: points in the opposing team’s matched game/half record.
+other_points = points - points_off_turnovers.
+two_pointers_made = field_goals_made - three_pointers_made.
+two_pointers_attempted = field_goals_attempted - three_pointers_attempted.
+two_point_points = 2 * two_pointers_made.
+three_point_points = 3 * three_pointers_made.
+points = two_point_points + three_point_points + free_throws_made.
+scoring_margin = points - opponent_points.
+turnover_advantage = opponent turnovers_total - own turnovers_total. Positive means the row’s team committed fewer turnovers.
+points_off_turnovers_margin = own points_off_turnovers - opponent points_off_turnovers.
+other_points_margin = own other_points - opponent other_points.
+field_goal_percentage_pct = 100 * field_goals_made / field_goals_attempted.
+two_point_percentage_pct = 100 * two_pointers_made / two_pointers_attempted.
+three_point_percentage_pct = 100 * three_pointers_made / three_pointers_attempted.
+free_throw_percentage_pct = 100 * free_throws_made / free_throws_attempted.
+Series totals sum the appropriate records. Per-game averages divide group totals by games. Shooting splits divide total makes by total attempts, never average rounded game percentages.
+series-derived.csv winner_* and loser_* fields select the corresponding team-game values by final result. winning_margin is winner_points - loser_points. Its two component margins are winner points-off-turnovers margin and winner other-points margin.
+
+HALF COUNTS
+Read official WNBA page __NEXT_DATA__.props.pageProps.playByPlay.actions.
+Field-goal attempt: isFieldGoal = 1. Made field goal: additionally shotResult = Made. A three-pointer has shotValue = 3.
+Free-throw attempt: actionType = Free Throw. A missed attempt has a description starting MISS; other free-throw attempts count as makes. Counts were reconciled to full-game official totals.
+Turnover: actionType = Turnover. For the Atlanta shot-clock turnover, teamId = 0 and personId equals Atlanta’s team ID. Retain that event as a team turnover.
+Do not sum pointsTotal, which is not a uniform per-event scoring value. Reconstruct points as 2 * FGM + FG3M + FTM, then reconcile to period-end scores.
+Do not deduplicate all events by actionNumber: a turnover and its steal can share that number. actionId uniquely identifies the supplied Game 4 events.
+Half offensive/defensive rebounds were counted from increments in player cumulative Off/Def rebound counts in rebound events. Full-game totals reconcile to the box score.
+In sources/official_halves.json, zero-valued TOV_TEAM keys may be absent because the source is a counter. Exported half turnovers_team is exactly TOV_TOTAL - TOV_PLAYER.
+Half-level points off turnovers were not retrieved. They are omitted, not imputed.
+
+INTERPRETATION
+Points off turnovers are already included in total points. Other points is a scoring decomposition, not a prediction of what the score would have been without turnovers. Do not add points off turnovers to total points.
+Points in the paint, second-chance points and fast-break points can overlap each other and points off turnovers. Do not sum those categories to reconstruct a score.
+No estimated possessions, pace, turnover rates, or FGA + 0.44 * FTA figures are included. All reported shot attempts are literal field-goal attempts or free-throw attempts.
+Four games establish a descriptive pattern, not a causal or predictive rule.
+
+REUSE AND CREDIT
+Full Court Buckets makes this data compilation and analysis free to use and republish.
+Suggested attribution: Full Court Buckets analysis of official WNBA data.
+Please credit Full Court Buckets and link to its published data article. The permanent article URL should be supplied by the publisher when this package is posted.
+
+DEEP-DIVE FILES (Games 1-4; source: Full Court Buckets game data, verified against official WNBA box scores and play-by-play)
+Build: python3 data/build_halves.py && python3 data/deep/analyze.py && python3 data/deep/zones_crosscheck.py && python3 data/deep/summaries.py ; cross-check: python3 data/deep/crosscheck_deep.py, python3 data/crosscheck_wnbacom_halves.py
+finals-halves.csv: first/second-half team stats, same columns as game4-halves.csv.
+finals-turnovers.csv: one row per turnover. Columns: game, period, clock, team, player (TEAM = team turnover), type (bad pass, lost ball, offensive foul, travel, shot clock, ...), live_ball_steal (1 if a steal is credited), stolen_by, opp_points_next_24s (points the opponent scored in the 24 game-clock seconds after the turnover, same quarter), and the play text.
+finals-turnovers-by-type.csv: turnovers aggregated by team/game/player/type, plus LIVE-BALL and DEAD-BALL rows. Includes opp_points_within_24s and opp_points_per_turnover.
+finals-shots.csv: one row per field-goal attempt (blocked shots count as misses for the shooter's team). Zone: rim 0-4 ft or layup/dunk/tip/finger roll/putback; paint/short 5-14 ft or floater/hook; midrange 15+ ft two-pointer; three. zone_source = "api text" or "wnba.com shotDistance" (the 30 attempts with no distance or type in the API text).
+finals-shot-zones.csv: FGM/FGA/FG% by team, game (or all) and half (or all) for each zone.
+finals-runs.csv: unanswered scoring runs of 8+ points, with start and end clock, the score before and after (ATL-GSV), and the plays that started and ended each run.
+finals-lead-tracker.csv: lead changes, ties (after the opening tip) and largest lead for each team in each game.
+finals-clutch.csv: Game 1, the last 5:00 of the 4th quarter. The score was within 5 for all of it. Rows for each team and player. Game 4 was within 5 for only part of its last 1:40, so it isn't included.
+finals-clutch-plays.csv: every play in the last 5:00 of a 4th quarter when the score was within 5 before the play.

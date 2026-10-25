@@ -1915,7 +1915,9 @@ def _splice_block(html: str, at: int, block: str) -> str:
 
 
 # This slug is the attendance database. Nightly assembly must not rebuild that page.
-FROZEN_ARTICLE_SLUGS = frozenset({'2026-wnba-finals-ratings-tracker'})
+# Data-first articles: the data table sits directly under the byline, so they carry no lead photo.
+DATA_FIRST_ARTICLE_SLUGS = frozenset({'valkyries-dream-finals-game-4-first-half'})
+FROZEN_ARTICLE_SLUGS = frozenset({'2026-wnba-finals-ratings-tracker'}) | DATA_FIRST_ARTICLE_SLUGS
 
 
 def _is_ratings_tracker_page(html: str, article: dict | None) -> bool:

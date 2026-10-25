@@ -1,0 +1,5 @@
+game_number,game_id,winner,loser,winner_points,loser_points,winner_turnovers,loser_turnovers,winner_points_off_turnovers,loser_points_off_turnovers,winner_other_points,loser_other_points,winning_margin,winner_points_off_turnovers_margin,winner_other_points_margin,source_boxscore_url,data_cutoff
+1,1042600301,GSV,ATL,68,64,10,12,17,8,51,56,4,9,-5,https://www.wnba.com/game/atl-vs-gsv-1042600301/box-score,2026-10-24
+2,1042600302,ATL,GSV,79,65,14,19,24,13,55,52,14,11,3,https://www.wnba.com/game/atl-vs-gsv-1042600302/box-score,2026-10-24
+3,1042600303,ATL,GSV,97,71,10,17,22,7,75,64,26,15,11,https://www.wnba.com/game/gsv-vs-atl-1042600303/box-score,2026-10-24
+4,1042600304,GSV,ATL,67,62,9,18,16,8,51,54,5,8,-3,https://www.wnba.com/game/gsv-vs-atl-1042600304/box-score,2026-10-24

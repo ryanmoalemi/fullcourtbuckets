@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>40 Shots to 19 Before Halftime: How Golden State Won WNBA Finals Game 4</title>
+      <link>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-4-first-half/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/valkyries-dream-finals-game-4-first-half/</guid>
+      <pubDate>Sat, 24 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>WNBA Finals</category>
+      <description>Official Game 4 data show Golden State took 40 first-half shots to Atlanta’s 19 despite nearly identical shooting percentages. Download the data and charts.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-4-first-half/og-1200.jpg" length="69230" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-4-first-half/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Angel Reese didn't get good overnight: double-digit rebounds in every full season since high school</title>
       <link>https://fullcourtbuckets.com/news/angel-reese-always-this-good-data/</link>
@@ -330,17 +341,6 @@
       <description>A'ja Wilson scored 96 points on 64.6% shooting as the Aces beat the Fever 2-1. Indiana won the paint in all three games.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/aces-fever-series-breakdown/og-1200.jpg" length="51469" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/aces-fever-series-breakdown/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Caitlin Clark's bloody-mouth no-call deserves a closer look</title>
-      <link>https://fullcourtbuckets.com/news/clark-no-call-aces-game-3/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/clark-no-call-aces-game-3/</guid>
-      <pubDate>Thu, 01 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA Playoffs</category>
-      <description>Caitlin Clark caught an elbow from Jewell Loyd with about three minutes left in Game 3. No foul was called. The Aces won 94-83.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/clark-no-call-aces-game-3/og-1200.jpg" length="100955" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/clark-no-call-aces-game-3/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

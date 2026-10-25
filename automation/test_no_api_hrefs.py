@@ -10,7 +10,7 @@ from link_graph import iter_html
 ROOT = Path(__file__).resolve().parents[1]
 ANCHOR = re.compile(r'<a\b[^>]*>', re.I)
 HREF = re.compile(r"""href\s*=\s*(?:"([^"]*)"|'([^']*)')""", re.I)
-PLAYER_DATA = re.compile(r'^/data/wnba/players/[a-z0-9-]+\.json$')
+PLAYER_DATA = re.compile(r'^/(?:data/wnba/players/[a-z0-9-]+|news/[a-z0-9-]+/data/[a-z0-9-]+)\.json$')  # player data and article data downloads
 OWN_HOSTS = {'fullcourtbuckets.com', 'www.fullcourtbuckets.com'}
 
 

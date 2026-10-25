@@ -74,6 +74,8 @@ class BodyPhotoTests(unittest.TestCase):
         for article in _articles():
             slug = article['slug']
             html = (ROOT / 'news' / slug / 'index.html').read_text(encoding='utf-8')
+            if slug in links.DATA_FIRST_ARTICLE_SLUGS:
+                continue  # data table first, no lead photo (test_data_table_first)
             if slug == '2026-wnba-finals-ratings-tracker':
                 body = html.split('<article', 1)[1].split('</article>', 1)[0]
                 self.assertNotIn('lead-photo', body)
