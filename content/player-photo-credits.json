@@ -1537,6 +1537,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "charlisse-leger-walker": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Charlisse_Leger-Walker.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "lexi-held": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lexi_Held_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "nell-angloma": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nell_Angloma_33_Fenerbah%C3%A7e_WB_TKBSL_20261010_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "aicha-coulibaly": {
+      "author": "CCS Pictures",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aicha_Coulibaly_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "chance-gray": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chance_Gray_2026a.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "angela-dugalic": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Angela_Dugalic.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "cassandre-prosper": {
+      "author": "Hameltion",
+      "file_url": "https://commons.wikimedia.org/wiki/File:UNC_vs_ND_(Jan_2025)_25_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "ornella-bankole": {
+      "author": "Gold Broth",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ornella_Bankole_02.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "justine-pissott": {
+      "author": "Michael Cohn Photo",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Justine_Pissott_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "grace-vanslooten": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Grace_VanSlooten_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "taylor-thierry": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Taylor_Thierry_2025_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "ashten-prechtel": {
+      "author": "Missvain",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ashten_Prechtel_-_May_2026_-_Sarah_Stierch.jpg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "chennedy-carter": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chennedy_Carter.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "kiana-williams": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kiana_Williams_23_Bota%C5%9F_SK_TKBSL_20251224_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "sug-sutton": {
+      "author": "Micahmn",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sug_Sutton_Mystics_2025_(cropped).jpg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "damiris-dantas": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Damiris_Dantas_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "lexie-brown": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lexie_Brown_2025.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "julie-vanloo": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Julie_Vanloo_35_Belgium_20250625_(2)_(cropped).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "emma-cechova": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Emma_Cechova_Lynx.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "nikolina-milic": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nikolina_Mili%C4%87_20241101.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
     }
   }
 }

@@ -203,7 +203,20 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
             # never as a caption over or under the photo.
             line = credit_html(credit)
             page = re.sub(r' ?<span class="photo-credit">.*?</span>', '', page, flags=re.S)
-            page = page.replace(photo_line, photo_line + line + ' ', 1)
+            page = re.sub(r'<p class="muted small photo-credit-fallback">.*?</p>', '', page, flags=re.S)
+            if photo_line in page:
+                page = page.replace(photo_line, photo_line + line + ' ', 1)
+            else:
+                # Inactive pages have no AI provenance sentence. The career
+                # sources line is their Sources line; keep the credit there,
+                # not under the photo, so a stats rebuild can put it back.
+                marker = 'class="career-sources">'
+                at = page.find(marker)
+                if at != -1:
+                    end = page.find('</p>', at)
+                    if end != -1:
+                        extra = '<p class="muted small photo-credit-fallback">' + line + '</p>'
+                        page = page[:end + 4] + extra + page[end + 4:]
             src_p = '<p class="photo-credit-source">' + line.replace('<span class="photo-credit">', '').replace('</span>', '') + '</p>'
             page = CREDIT_SOURCES.sub('', page)
             page = page.replace('<details class="sources section" id="sources"><summary>About these numbers</summary>',

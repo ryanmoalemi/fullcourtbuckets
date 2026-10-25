@@ -124,6 +124,24 @@ class PortraitTests(unittest.TestCase):
         self.assertNotIn('The number artwork is a design element, not a player photograph.', page)
         self.assertIn('class="player-illustration"', figure)
         self.assertIn('"caption": "Caitlin Clark"', page)
+    def test_inactive_page_credit_goes_in_sources_not_on_the_photo(self):
+        record = dict(RECORD, kind='photograph')
+        record.pop('mask')
+        (self.root/'content').mkdir()
+        (self.root/'content/player-photo-credits.json').write_text(json.dumps({'credits': {'caitlin-clark': {
+            'author': 'Zafer', 'license': 'CC BY 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by/4.0/',
+            'file_url': 'https://commons.wikimedia.org/wiki/File:Example.jpg',
+            'changes': 'cropped, background removed'}}}))
+        thin = PAGE.replace(STATS, '<p class="career-sources">Sources: season logs.</p>' + STATS)
+        thin = thin.replace('checked against the stats on this page. ', '')
+        page = portraits.render(thin, PROFILE, record, self.root)
+        figure = portraits.APPLIED.search(page).group()
+        self.assertNotIn('photo-credit', figure)
+        self.assertIn('class="muted small photo-credit-fallback"', page)
+        self.assertIn('>Zafer</a>', page)
+        self.assertIn('CC BY 4.0', page)
+        self.assertLess(page.find('career-sources'), page.find('photo-credit-fallback'))
     def test_compact_number_art_slot_accepts_portrait(self):
         compact = PAGE.replace(
             '<section class="hero" aria-labelledby="player-name">',
