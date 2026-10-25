@@ -235,7 +235,7 @@ def compact_ratings_table(payload: dict | None) -> str:
     """Four scheduled games, one line each. Games 5-7 stay in the footnote."""
     rows = []
     for row in citation.FINALS_TRACKER_ROWS:
-        if row[-1] != 'Scheduled':
+        if row[-1] == 'If necessary':
             continue
         game, date, matchup, network, tip = row[:5]
         rows.append([
