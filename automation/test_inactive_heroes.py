@@ -85,7 +85,8 @@ class InactiveHeroBuildTests(unittest.TestCase):
             shutil.copytree(
                 ROOT,
                 copy,
-                copy_function=os.link,
+                # Real copies: builders rewrite files in place, and a hard link would
+                # write through to the committed tree (article images, articles.json).
                 ignore=shutil.ignore_patterns('.git', '__pycache__'),
             )
             # Team news titles come from articles.json. Compare the rebuild to the

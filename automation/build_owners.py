@@ -865,6 +865,9 @@ def jsonld(data: dict) -> str:
 
 def shell_parts() -> tuple[str, str, str]:
     shell = SHELL_PAGE.read_text(encoding='utf-8')
+    # The image step and the viewership builder disagree on whether the header logo
+    # carries fetchpriority; drop it so this page does not depend on the shell's history.
+    shell = shell.replace(' decoding="async" fetchpriority="high"></picture></a>', ' decoding="async"></picture></a>')
     head_end = shell.index('</head>')
     head = shell[:head_end]
     head = re.sub(r'<script type="application/ld\+json">.*?</script>', '', head, flags=re.S)
