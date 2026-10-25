@@ -43,10 +43,9 @@ DATASET_VERSION = 'v3'
 LICENSE_URL = citation.CC_BY
 CONTACT = 'ryan@fullcourtbuckets.com'
 H1 = 'WNBA team owners 2026: who owns every team, plus sales and facility investments'
-TITLE = 'WNBA Team Owners 2026: Who Owns Every Team | Full Court Buckets'
+TITLE = 'WNBA team owners 2026: who owns every team and since when'
 DESCRIPTION = (
-    'Who owns every WNBA team, the investors teams have disclosed, every franchise sale and expansion '
-    'fee FCB has documented, and facility projects, with sources and downloads.'
+    'Who owns every WNBA team, the investors teams have disclosed, every franchise sale and expansion fee FCB has documented, with sources and downloads.'
 )
 COLLECTIONS = (
     'ownership', 'investors', 'entities', 'transactions',

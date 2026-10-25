@@ -1767,7 +1767,8 @@ def player_indexable(profile, root) -> bool:
     return player_has_records(profile)
 
 
-def player_description(profile, root=None) -> str:
+def player_description(profile, root=None, meta=True) -> str:
+    fit = seo_meta.player_description if meta else (lambda t: t)
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
     if player_has_records(profile):
@@ -1788,7 +1789,7 @@ def player_description(profile, root=None) -> str:
         covered = text + ' Available coverage from 2008 onward.'
         if 'Available coverage from 2008 onward.' not in text and len(covered) <= DESCRIPTION_MAX:
             text = covered
-        return seo_meta.player_description(cap_description(text))
+        return fit(cap_description(text))
     fields = bio_fields(p)
     pos = POSITION_WORDS.get(fields.get('position') or '', '')
     active = profile.get('active_in_provider_feed') is True
@@ -1804,7 +1805,7 @@ def player_description(profile, root=None) -> str:
         lead = f'{name} is a WNBA player profile.'
     else:
         lead = 'WNBA player profile.'
-    return seo_meta.player_description(lead + ' No season records are listed on this page yet.')
+    return fit(lead + ' No season records are listed on this page yet.')
 
 
 def _name_from_player_html(text: str) -> str:
@@ -2140,7 +2141,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     detail_html=''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k,v in details)
     regular=[r for r in stats if r['season_type']==2]
     if not stats:
-        intro = player_description(profile, root)
+        intro = player_description(profile, root, meta=False)
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
@@ -2349,6 +2350,17 @@ def _az_jump(letters) -> str:
         else:
             links_html.append(f'<span>{letter}</span>')
     return f'<nav class="az-jump" aria-label="Players A to Z">{"".join(links_html)}</nav>'
+
+
+def _apply_seo_meta(root, files, frozen=()):
+    """Unique, in-range titles and descriptions (data/seo-meta.json + seo_meta family rules)."""
+    overrides = seo_meta.load_overrides(Path(root))
+    for relative, content in list(files.items()):
+        rel = str(relative)
+        if (rel.endswith('index.html') and rel not in frozen and rel not in REMOVED_ADU_PATHS
+                and not seo_meta.REDIRECT_RE.search(content)
+                and '/' + rel.removesuffix('index.html') not in seo_meta.FROZEN):
+            files[relative] = seo_meta.apply_text(content, '/' + rel.removesuffix('index.html'), overrides)
 
 
 def directory_page(index, linking=None, include_standings=True, menu=None, root=None):
@@ -3159,6 +3171,7 @@ def build(root: Path):
                 and relative not in frozen_pages and '<header class="site-header"' in content
                 and not links.is_redirect_html(content)):
             files[relative] = site_nav.ensure_assets(content)
+    _apply_seo_meta(root, files, frozen_pages)
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)
@@ -3247,6 +3260,7 @@ def refresh_published_news(root: Path | None = None) -> int:
     for relative, content in list(files.items()):
         if str(relative).endswith('.html'):
             files[relative] = links.rewrite_legacy_article_urls(content, articles)
+    _apply_seo_meta(root, files, {f'news/{slug}/index.html' for slug in links.FROZEN_ARTICLE_SLUGS})
     files['search-index.json'] = site_nav.search_index_document(root, files)
     changes = 0
     for relative, content in files.items():

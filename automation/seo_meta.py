@@ -153,13 +153,17 @@ def load_overrides(root: Path = ROOT) -> dict:
     return json.loads(p.read_text(encoding='utf-8')) if p.is_file() else {}
 
 
+# Pages that must not change (the #328 Game 4 first-half page is frozen).
+FROZEN = {'/news/valkyries-dream-finals-game-4-first-half/'}
+
+
 def pages(root: Path = ROOT):
     for p in sorted(root.rglob('index.html')):
         rel = p.relative_to(root)
         if rel.parts[0] in SKIP_DIRS:
             continue
         text = p.read_text(encoding='utf-8', errors='replace')
-        if REDIRECT_RE.search(text):
+        if REDIRECT_RE.search(text) or '/' + rel.as_posix().removesuffix('index.html') in FROZEN:
             continue
         yield p, '/' + rel.as_posix().removesuffix('index.html'), text
 
@@ -184,6 +188,7 @@ def apply_text(text: str, rel: str, overrides: dict) -> str:
             new_d = desc if (desc_ok(desc) or not desc) else fit_description(desc)
     if tm and new_t != title:
         text = text[:tm.start(1)] + htmlmod.escape(new_t, quote=False) + text[tm.end(1):]
+        text = _sync(text, title, new_t, ('og:title', 'twitter:title'), 'name')
     if new_d != desc:
         esc = htmlmod.escape(new_d, quote=True)
         dm = DESC_RE.search(text)
@@ -191,6 +196,26 @@ def apply_text(text: str, rel: str, overrides: dict) -> str:
             text = text[:dm.start(2)] + esc + text[dm.end(2):]
         elif '</title>' in text:
             text = text.replace('</title>', f'</title>\n<meta name="description" content="{esc}">', 1)
+        if desc:
+            text = _sync(text, desc, new_d, ('og:description', 'twitter:description'), 'description')
+    return text
+
+
+def _sync(text: str, old: str, new: str, props: tuple, ld_key: str) -> str:
+    """Keep og/twitter tags and JSON-LD that repeated the old value in step with the new one."""
+    def meta(m):
+        return m.group(1) + htmlmod.escape(new, quote=True) + m.group(3) if _plain(m.group(2)) == old else m.group(0)
+    for prop in props:
+        text = re.sub(r'(<meta (?:name|property)="' + re.escape(prop) + r'" content=")([^"]*)(")', meta, text)
+    def encodings(v):
+        a = json.dumps(v, ensure_ascii=False)
+        b = json.dumps(v)
+        safe = lambda x: x.replace('&', '\\u0026').replace('<', '\\u003c').replace('>', '\\u003e')
+        c = safe(a)
+        return [(a, a), (b, b), (c, c), (safe(b), safe(b)), (a.replace("'", '\\u0027'), a.replace("'", '\\u0027')), (c.replace("'", '\\u0027'), c.replace("'", '\\u0027'))]
+    for (o_enc, _), (n_enc, _) in zip(encodings(old), encodings(new)):
+        for sep in (': ', ':'):
+            text = text.replace(f'"{ld_key}"{sep}{o_enc}', f'"{ld_key}"{sep}{n_enc}')
     return text
 
 
