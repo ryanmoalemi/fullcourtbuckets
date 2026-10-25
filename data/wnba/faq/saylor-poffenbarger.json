@@ -1,67 +1,174 @@
 {
   "slug": "saylor-poffenbarger",
   "player_name": "Saylor Poffenbarger",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 25, 2026",
+  "verified_at": "2026-10-25",
   "items": [
     {
-      "question": "How much does Saylor Poffenbarger make?",
-      "answer": "A precise public salary or net worth figure for Saylor Poffenbarger is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Saylor Poffenbarger play for?",
+      "answer": "Saylor Poffenbarger finished the 2026 season with the Phoenix Mercury, who signed her to a seven-day contract on August 25, 2026. Earlier she went to training camp with the Minnesota Lynx, who waived her on May 6, and played five games for the Chicago Sky on a hardship contract.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-saylor-poffenbarger-to-seven-day-contract/n-6405662",
+        "https://www.oursportscentral.com/services/releases/lynx-waive-king-poffenbarger-and-sherrod/n-6358109",
+        "https://www.oursportscentral.com/services/releases/chicago-sky-waive-saylor-poffenbarger/n-6379218"
       ],
-      "google_keyword": "saylor poffenbarger net worth",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "saylor poffenbarger wnba",
+          "vol": 170
+        },
+        {
+          "q": "saylor poffenbarger lynx",
+          "vol": 30
+        },
+        {
+          "q": "saylor poffenbarger chicago sky",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Saylor Poffenbarger?",
-      "answer": "Saylor Poffenbarger is listed at 6' 2\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Saylor_Poffenbarger"
-      ],
-      "google_keyword": "saylor poffenbarger height",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Saylor Poffenbarger's contract?",
-      "answer": "Contract length and guarantees for Saylor Poffenbarger are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "Maryland lists Saylor Poffenbarger at 6 feet 2 inches.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://umterps.com/sports/womens-basketball/roster/saylor-poffenbarger/14817"
       ],
-      "google_keyword": "saylor poffenbarger contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "saylor poffenbarger height",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Is Saylor Poffenbarger injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "saylor poffenbarger injury",
-      "approx_monthly_volume": 30
+      "question": "What were Saylor Poffenbarger's 2026 numbers?",
+      "answer": "In 2026, Saylor Poffenbarger played 5 games for the Chicago Sky and 2 games for the Phoenix Mercury. She averaged 1.5 points and 2.0 rebounds in her two games with Phoenix.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/saylor-poffenbarger/"
+      ],
+      "queries": [
+        {
+          "q": "saylor poffenbarger stats",
+          "vol": 70
+        }
+      ]
     },
     {
-      "question": "Does Saylor Poffenbarger have kids?",
-      "answer": "There is no widely reported public information that Saylor Poffenbarger has children as of late 2026.",
+      "question": "Was Saylor Poffenbarger drafted?",
+      "answer": "No. Saylor Poffenbarger was not selected in the 2026 WNBA Draft. The Minnesota Lynx signed her to a training camp contract on April 16, 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Saylor_Poffenbarger"
+        "https://www.wnba.com/draft/2026/prospects/258061/saylor-poffenbarger",
+        "https://www.oursportscentral.com/services/releases/lynx-sign-six-to-training-camp-contracts/n-6349274"
       ],
-      "google_keyword": "saylor poffenbarger daughter",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "saylor poffenbarger wnba draft",
+          "vol": 70
+        },
+        {
+          "q": "did saylor poffenbarger get drafted",
+          "vol": 20
+        },
+        {
+          "q": "saylor poffenbarger draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What colleges did Saylor Poffenbarger play for?",
+      "answer": "Saylor Poffenbarger played college basketball at UConn, Arkansas and Maryland. She made the 2023 All-SEC Freshman Team at Arkansas and averaged 9.5 points and 7.2 rebounds as a senior at Maryland in 2025-26.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://umterps.com/sports/womens-basketball/roster/saylor-poffenbarger/14817",
+        "https://www.oursportscentral.com/services/releases/lynx-sign-six-to-training-camp-contracts/n-6349274"
+      ],
+      "queries": [
+        {
+          "q": "saylor poffenbarger maryland",
+          "vol": 50
+        },
+        {
+          "q": "saylor poffenbarger uconn",
+          "vol": 50
+        },
+        {
+          "q": "saylor poffenbarger arkansas",
+          "vol": 10
+        },
+        {
+          "q": "saylor poffenbarger transfer",
+          "vol": 10
+        },
+        {
+          "q": "uconn women's basketball saylor poffenbarger",
+          "vol": 10
+        },
+        {
+          "q": "saylor poffenbarger transfer portal",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Who are Saylor Poffenbarger's parents?",
-      "answer": "Public profiles share limited verified detail about Saylor Poffenbarger's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Saylor Poffenbarger's parents are William and Amy Poffenbarger. Her mother played basketball at Missouri, and her brother Reese plays football at North Texas.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Saylor_Poffenbarger"
+        "https://umterps.com/sports/womens-basketball/roster/saylor-poffenbarger/14817"
       ],
-      "google_keyword": "saylor poffenbarger parents",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "saylor poffenbarger parents",
+          "vol": 30
+        },
+        {
+          "q": "saylor poffenbarger brother",
+          "vol": 50
+        },
+        {
+          "q": "saylor poffenbarger mom",
+          "vol": 10
+        },
+        {
+          "q": "saylor poffenbarger mother",
+          "vol": 10
+        },
+        {
+          "q": "saylor poffenbarger family",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where is Saylor Poffenbarger from?",
+      "answer": "Saylor Poffenbarger is from Middletown, Maryland, and played at Middletown High School. She was the No. 30 overall recruit coming out of high school, according to Maryland.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://umterps.com/sports/womens-basketball/roster/saylor-poffenbarger/14817"
+      ],
+      "queries": [
+        {
+          "q": "saylor poffenbarger middletown",
+          "vol": null
+        },
+        {
+          "q": "saylor poffenbarger high school",
+          "vol": null
+        },
+        {
+          "q": "saylor poffenbarger recruiting",
+          "vol": 10
+        },
+        {
+          "q": "saylor poffenbarger bio",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

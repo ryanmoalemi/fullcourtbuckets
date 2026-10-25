@@ -1,150 +1,234 @@
 {
   "slug": "kia-nurse",
   "player_name": "Kia Nurse",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 25, 2026",
+  "verified_at": "2026-10-25",
   "items": [
     {
-      "question": "What are Kia Nurse's stats / points per game?",
-      "answer": "In the 2026 regular season, Kia Nurse averaged 5.3 points, 1.1 rebounds, and 1.0 assists in 41 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Kia Nurse's stats?",
+      "answer": "In the 2026 regular season, Kia Nurse averaged 5.5 points, 1.2 rebounds, and 1.0 assists in 43 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kia nurse stats",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "Does Kia Nurse have a signature shoe?",
-      "answer": "Kia Nurse has a public association with Jordan footwear or apparel. A dedicated signature sneaker is not always confirmed in every source.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
+        "https://fullcourtbuckets.com/wnba/kia-nurse/"
       ],
-      "google_keyword": "jordan 36 kia nurse",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Kia Nurse dating?",
-      "answer": "As of late 2026, Kia Nurse has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
-      ],
-      "google_keyword": "kia nurse partner",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Kia Nurse make?",
-      "answer": "A precise public salary or net worth figure for Kia Nurse is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kia nurse salary",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How tall is Kia Nurse?",
-      "answer": "Kia Nurse is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
-      ],
-      "google_keyword": "kia nurse height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How old is Kia Nurse?",
-      "answer": "She was born February 22, 1996 in Hamilton. As of late 2026 that puts her at 30 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
-      ],
-      "google_keyword": "kia nurse age",
-      "approx_monthly_volume": 70,
-      "birthdate": "1996-02-22"
-    },
-    {
-      "question": "What did Kia Nurse score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the New York Liberty), Kia Nurse had 2.0 points, 0 rebounds, and 0 assists in a 69-106 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kia nurse points last game",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Kia Nurse's contract?",
-      "answer": "Contract length and guarantees for Kia Nurse are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kia nurse contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Kia Nurse married?",
-      "answer": "There is no widely reported public record of Kia Nurse being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
-      ],
-      "google_keyword": "kia nurse husband",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "kia nurse stats",
+          "vol": 480
+        },
+        {
+          "q": "kia nurse game log",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What team does Kia Nurse play for?",
-      "answer": "Her most recent WNBA team on record is the Toronto Tempo. She wears No. 11. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kia nurse team",
-      "approx_monthly_volume": 10
+      "answer": "Kia Nurse plays guard for the Toronto Tempo. She signed with Toronto on April 14, 2026, before the franchise's first WNBA season, and played 43 games for the Tempo that year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.cbc.ca/news/canada/hamilton/toronto-tempo-kia-nurse-wnba-9.7163084",
+        "https://fullcourtbuckets.com/wnba/kia-nurse/"
+      ],
+      "queries": [
+        {
+          "q": "kia nurse wnba",
+          "vol": 170
+        },
+        {
+          "q": "kia nurse toronto tempo",
+          "vol": 20
+        },
+        {
+          "q": "kia nurse team",
+          "vol": 10
+        },
+        {
+          "q": "who does kia nurse play for",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse position",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Kia Nurse attend?",
-      "answer": "Nurse played college basketball at UConn.",
+      "question": "How old is Kia Nurse?",
+      "answer": "Kia Nurse was born February 22, 1996.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
+        "https://www.wnba.com/player/1628915/kia-nurse/bio"
       ],
-      "google_keyword": "kia nurse uconn",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "kia nurse age",
+          "vol": 70
+        },
+        {
+          "q": "how old is kia nurse",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Kia Nurse?",
-      "answer": "Kia Augustine Nurse is a Canadian professional basketball player for the Toronto Tempo of the Women's National Basketball Association (WNBA) and Athletes Unlimited Pro Basketball.",
-      "answer_kind": "mixed",
+      "question": "Did Kia Nurse play at UConn?",
+      "answer": "Yes. Kia Nurse was a four-year starter at UConn and won NCAA championships in 2015 and 2016. The Huskies reached the Final Four in all four of her seasons.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
+        "https://www.wnba.com/draft/2018/prospects/75995/kia-nurse"
       ],
-      "google_keyword": "who is kia nurse father",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What position does Kia Nurse play?",
-      "answer": "Kia Nurse is listed as a G for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kia nurse position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Kia Nurse injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kia nurse injury",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kia nurse uconn",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "Who are Kia Nurse's parents?",
-      "answer": "Public profiles share limited verified detail about Kia Nurse's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Kia Nurse's father, Richard, played in the CFL for the Hamilton Tiger-Cats, and her mother played basketball at McMaster University. Her sister Tamika played college basketball at Oregon and Bowling Green, and her brother Darnell was an NHL defenseman with the Edmonton Oilers when she was drafted in 2018.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kia_Nurse"
+        "https://www.wnba.com/draft/2018/prospects/75995/kia-nurse",
+        "https://www.wnba.com/player/1628915/kia-nurse/bio"
       ],
-      "google_keyword": "kia nurse parents",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kia nurse parents",
+          "vol": 30
+        },
+        {
+          "q": "kia nurse family",
+          "vol": 20
+        },
+        {
+          "q": "kia nurse sister",
+          "vol": 50
+        },
+        {
+          "q": "kia nurse brother",
+          "vol": 20
+        },
+        {
+          "q": "who is kia nurse father",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse mother",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse family tree",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Kia Nurse related to Sarah Nurse?",
+      "answer": "Yes. Hockey player Sarah Nurse is Kia Nurse's cousin, according to her WNBA draft profile. Sarah played college hockey at Wisconsin.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/draft/2018/prospects/75995/kia-nurse"
+      ],
+      "queries": [
+        {
+          "q": "is sarah nurse related to kia nurse",
+          "vol": 30
+        },
+        {
+          "q": "sarah nurse kia nurse",
+          "vol": 20
+        },
+        {
+          "q": "kia nurse cousin",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Kia Nurse?",
+      "answer": "The WNBA lists Kia Nurse at 6 feet and 195 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628915/kia-nurse/bio"
+      ],
+      "queries": [
+        {
+          "q": "kia nurse height",
+          "vol": 20
+        },
+        {
+          "q": "kia nurse height in feet",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Kia Nurse played in the Olympics?",
+      "answer": "Yes. Kia Nurse has played for Canada at three Olympics, in 2016, 2020 and 2024. She also played in the 2014, 2018 and 2022 FIBA Women's Basketball World Cups.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.theglobeandmail.com/sports/basketball/article-toronto-tempo-signs-kia-nurse-wnba/"
+      ],
+      "queries": [
+        {
+          "q": "kia nurse olympics",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse canada basketball",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse team canada",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse canada",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Kia Nurse drafted?",
+      "answer": "The New York Liberty selected Kia Nurse 10th overall in the 2018 WNBA Draft. As a rookie she scored 34 points at Indiana on June 2, 2018, a Liberty rookie record.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628915/kia-nurse/bio"
+      ],
+      "queries": [
+        {
+          "q": "kia nurse draft",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse liberty",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What WNBA teams has Kia Nurse played for?",
+      "answer": "Kia Nurse has played for the New York Liberty, Phoenix Mercury, Seattle Storm, Los Angeles Sparks, Chicago Sky and Toronto Tempo.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kia-nurse/"
+      ],
+      "queries": [
+        {
+          "q": "kia nurse sparks",
+          "vol": 10
+        },
+        {
+          "q": "kia nurse seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "chicago sky kia nurse",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
