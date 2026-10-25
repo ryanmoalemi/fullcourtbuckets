@@ -23,6 +23,7 @@ import rss_feed
 import wnba_sync
 import team_hub
 import team_names
+import seo_meta
 from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
@@ -1745,17 +1746,8 @@ def cap_description(text, limit=DESCRIPTION_MAX) -> str:
 
 
 def player_title(name: str) -> str:
-    """'<Name> WNBA Stats & Profile | Full Court Buckets', shorter when that runs past 70 characters."""
-    full = f'{name} WNBA Stats & Profile | Full Court Buckets'
-    if len(full) <= TITLE_LIMIT:
-        return full
-    short = f'{name} WNBA Stats | Full Court Buckets'
-    if len(short) <= TITLE_LIMIT:
-        return short
-    tiny = f'{name} | Full Court Buckets'
-    if len(tiny) <= TITLE_LIMIT:
-        return tiny
-    return cap_description(tiny, TITLE_LIMIT)
+    """Sentence-case '<Name> WNBA stats and profile', 45-65 characters (see seo_meta)."""
+    return seo_meta.player_title(name)
 
 
 def player_has_records(profile) -> bool:
@@ -1775,7 +1767,8 @@ def player_indexable(profile, root) -> bool:
     return player_has_records(profile)
 
 
-def player_description(profile, root=None) -> str:
+def player_description(profile, root=None, meta=True) -> str:
+    fit = seo_meta.player_description if meta else (lambda t: t)
     p = profile.get('player') or {}
     name = (str(p.get('first_name') or '') + ' ' + str(p.get('last_name') or '')).strip()
     if player_has_records(profile):
@@ -1796,7 +1789,7 @@ def player_description(profile, root=None) -> str:
         covered = text + ' Available coverage from 2008 onward.'
         if 'Available coverage from 2008 onward.' not in text and len(covered) <= DESCRIPTION_MAX:
             text = covered
-        return cap_description(text)
+        return fit(cap_description(text))
     fields = bio_fields(p)
     pos = POSITION_WORDS.get(fields.get('position') or '', '')
     active = profile.get('active_in_provider_feed') is True
@@ -1812,7 +1805,7 @@ def player_description(profile, root=None) -> str:
         lead = f'{name} is a WNBA player profile.'
     else:
         lead = 'WNBA player profile.'
-    return cap_description(lead + ' No season records are listed on this page yet.')
+    return fit(lead + ' No season records are listed on this page yet.')
 
 
 def _name_from_player_html(text: str) -> str:
@@ -2148,7 +2141,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     detail_html=''.join(f'<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>' for k,v in details)
     regular=[r for r in stats if r['season_type']==2]
     if not stats:
-        intro = player_description(profile, root)
+        intro = player_description(profile, root, meta=False)
     else:
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
@@ -2359,6 +2352,17 @@ def _az_jump(letters) -> str:
     return f'<nav class="az-jump" aria-label="Players A to Z">{"".join(links_html)}</nav>'
 
 
+def _apply_seo_meta(root, files, frozen=()):
+    """Unique, in-range titles and descriptions (data/seo-meta.json + seo_meta family rules)."""
+    overrides = seo_meta.load_overrides(Path(root))
+    for relative, content in list(files.items()):
+        rel = str(relative)
+        if (rel.endswith('index.html') and rel not in frozen and rel not in REMOVED_ADU_PATHS
+                and not seo_meta.REDIRECT_RE.search(content)
+                and '/' + rel.removesuffix('index.html') not in seo_meta.FROZEN):
+            files[relative] = seo_meta.apply_text(content, '/' + rel.removesuffix('index.html'), overrides)
+
+
 def directory_page(index, linking=None, include_standings=True, menu=None, root=None):
     rows = directory_entries(index, root)
     featured_slugs = list(site_nav.FEATURED_PLAYERS)
@@ -2522,7 +2526,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
-    return document(f'{name} Roster | Full Court Buckets', team_description(slot, standing), route, body, structured, include_standings, menu)
+    return document(seo_meta.team_title(name), seo_meta.team_description(team_description(slot, standing)), route, body, structured, include_standings, menu)
 
 def teams_hub_page(root, linking, include_standings=True, menu=None):
     body, structured, title, description = team_hub.hub_parts(root, linking)
@@ -3167,6 +3171,7 @@ def build(root: Path):
                 and relative not in frozen_pages and '<header class="site-header"' in content
                 and not links.is_redirect_html(content)):
             files[relative] = site_nav.ensure_assets(content)
+    _apply_seo_meta(root, files, frozen_pages)
     for relative in REMOVED_ADU_PATHS:
         files[relative] = adu_redirect_html(relative)
     player_rows, page_rows = sitemap_rows(root, files, linking, indexable_players, articles)
@@ -3255,6 +3260,7 @@ def refresh_published_news(root: Path | None = None) -> int:
     for relative, content in list(files.items()):
         if str(relative).endswith('.html'):
             files[relative] = links.rewrite_legacy_article_urls(content, articles)
+    _apply_seo_meta(root, files, {f'news/{slug}/index.html' for slug in links.FROZEN_ARTICLE_SLUGS})
     files['search-index.json'] = site_nav.search_index_document(root, files)
     changes = 0
     for relative, content in files.items():
