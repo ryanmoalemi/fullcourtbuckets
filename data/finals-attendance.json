@@ -1826,6 +1826,25 @@
       "times_tied": "2",
       "source_url": "https://www.wnba.com/game/1042600303",
       "note": ""
+    },
+    {
+      "season": "2026",
+      "game": "4",
+      "date": "2026-10-24",
+      "away": "GSV",
+      "away_score": "67",
+      "home": "ATL",
+      "home_score": "62",
+      "winner": "GSV",
+      "margin": "5",
+      "overtime_periods": "0",
+      "arena": "State Farm Arena",
+      "attendance": "17099",
+      "sellout_flag": "1",
+      "lead_changes": "1",
+      "times_tied": "2",
+      "source_url": "https://www.wnba.com/game/1042600304",
+      "note": ""
     }
   ],
   "playoffs2026": [
