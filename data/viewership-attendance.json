@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "games": [
     {
       "date": "1997-06-21",
@@ -161,19 +161,21 @@
       "date": "2026-10-24",
       "season": 2026,
       "game": "Finals Game 4",
-      "home": "",
-      "away": "",
+      "home": "Atlanta Dream",
+      "away": "Golden State Valkyries",
       "venue": "State Farm Arena",
-      "attendance": null,
-      "attendance_source": "",
-      "attendance_source_date": "",
+      "attendance": 17099,
+      "attendance_source": "https://www.wnba.com/game/1042600304",
+      "attendance_source_date": "2026-10-24",
       "network": "NBC and Peacock",
       "viewers": null,
       "viewers_source": "",
       "viewers_source_date": "",
       "tip_et": "1:00 p.m. ET / 10:00 a.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
-      "schedule_source_date": "2026-10-13"
+      "schedule_source_date": "2026-10-13",
+      "attendance_note": "sellout",
+      "status": "Final: Valkyries 67-62"
     },
     {
       "date": "2025-05-17",
@@ -504,5 +506,29 @@
     }
   ],
   "updated_time": "10:30 a.m. PT",
-  "finals_intro": "Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million."
+  "finals_intro": "Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million. Through four games the Finals have drawn 70,326 fans, 15,514 more than the entire 2025 Finals.",
+  "finals_intro_links": [
+    {
+      "text": "Game 1 averaged 2.1 million viewers (peak 3.0 million)",
+      "href": "https://www.nbcsports.com/pressbox/press-releases/nbc-and-peacock-deliver-most-watched-wnba-finals-game-1-ever"
+    },
+    {
+      "text": "Game 2 averaged 1.33 million",
+      "href": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-coverage-dream-valkyries-game-2-most-watched-wnba-finals-game"
+    },
+    {
+      "text": "Game 3 averaged 1.71 million",
+      "href": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-finals-game-3-1999-best-ever-cable"
+    },
+    {
+      "text": "70,326 fans",
+      "href": "https://www.wnba.com/game/1042600304",
+      "note": "Sum of official WNBA.com box score attendance: 18,064 (G1, /game/1042600301) + 18,064 (G2, /game/1042600302) + 17,099 (G3, /game/1042600303) + 17,099 (G4, /game/1042600304)."
+    },
+    {
+      "text": "the entire 2025 Finals",
+      "href": "https://www.wnba.com/game/1042500304",
+      "note": "2025 Finals total 54,812 from WNBA.com box scores: 10,266 (/game/1042500301) + 10,404 (/game/1042500302) + 17,071 (/game/1042500303) + 17,071 (/game/1042500304)."
+    }
+  ]
 }
