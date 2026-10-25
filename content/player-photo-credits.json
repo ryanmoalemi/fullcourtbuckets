@@ -740,7 +740,7 @@
     },
     "kennedy-burke": {
       "author": "Zafer",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Kennedy_Burke_22_T\u00fcrkiye_20260904_(2).JPG",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kennedy_Burke_22_Türkiye_20260904_(2).JPG",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
@@ -780,7 +780,7 @@
     },
     "maria-conde": {
       "author": "Zafer",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Mar\u00eda_Conde_10_Spain_20260905_(1).JPG",
+      "file_url": "https://commons.wikimedia.org/wiki/File:María_Conde_10_Spain_20260905_(1).JPG",
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
@@ -788,7 +788,7 @@
     },
     "nyara-sabally": {
       "author": "Zafer",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Nyara_Sabally_18_Fenerbah\u00e7e_WB_EuroLeague_Women_20250108_(1).jpg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nyara_Sabally_18_Fenerbahçe_WB_EuroLeague_Women_20250108_(1).jpg",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "changes": "cropped, background removed",
@@ -852,7 +852,7 @@
     },
     "noemie-brochant": {
       "author": "Zafer",
-      "file_url": "https://commons.wikimedia.org/wiki/File:No\u00e9mie_Brochant_1_France_20250619_(1).jpg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Noémie_Brochant_1_France_20250619_(1).jpg",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "changes": "cropped, background removed",
@@ -884,9 +884,225 @@
     },
     "frieda-buhner": {
       "author": "Zafer",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Frieda_B\u00fchner_20_Germany_20250625_(1).jpg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Frieda_Bühner_20_Germany_20250625_(1).jpg",
       "license": "CC BY 4.0",
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "makayla-timpson": {
+      "author": "CCS Pictures",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Makayla_Timpson.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kia-nurse": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kia_Nurse_5_Canada_20260315_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "aziaha-james": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aziaha_James_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "lexie-hull": {
+      "author": "Scott U",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lexie_Hull_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "elizabeth-williams": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Elizabeth_Olatayo_Williams_1_Fenerbah%C3%A7e_Women%27s_Basketball_20191031_(4).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "valeriane-ayayi": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Val%C3%A9riane_Ayayi_11_France_20250621.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "rebekah-gardner": {
+      "author": "FCBQ",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rebekah_Gardner_-_Semifinal_34a_Lliga_Catalana_AON_2022_Femenina_(Foto_David_Subirana)_(52396282357)_(cropped).jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "isobel-borlase": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Isobel_Borlase_20_Australia_20260315_(4).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "rachel-banham": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2_Rachel_Banham_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "julie-allemand": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Julie_Allemand_22_Fenerbah%C3%A7e_WB_EuroLeague_Women_20241029.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "leonie-fiebich": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Leonie_Fiebich_13_Germany_20250629_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "maya-caldwell": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maya_Caldwell_(55549482196).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "monique-akoa-makani": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Monique_Akoa_Makani_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "stephanie-talbot": {
+      "author": "User:Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Stephanie_Talbot_6_Australia_20260906_(3).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "raegan-beers": {
+      "author": "CCS Pictures",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Raegan_Beers.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "rebecca-allen": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rebecca_Allen_8_Fenerbah%C3%A7e_WB_TKBSL_20251106_(4).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "serah-williams": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Serah_Williams_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "jordan-horston": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jordan_Horston_(53133689014)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "jovana-nogic": {
+      "author": "Michaelcohnphoto",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jovana_Nogi%C4%87,_Phoenix_Mercury_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "odyssey-sims": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Odyssey_Sims_20190714_Lorie_Shaull.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "teja-oblak": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Teja_Oblak_3_Galatasaray_WB_TKBSL_20260201_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "tyasha-harris": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tyasha_Harris_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kiah-stokes": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kiah_Stokes_41_Fenerbah%C3%A7e_Women%27s_Basketball_20191031_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "laeticia-amihere": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Laeticia_Amihere_2022_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "karlie-samuelson": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Karlie_Samuelson_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "temi-fagbenle": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Temi_Fagbenle_14_Be%C5%9Fikta%C5%9F_WB_TKBSL_20250104_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "myisha-hines-allen": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Myisha_Hines-Allen_(53076539979)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
     }
