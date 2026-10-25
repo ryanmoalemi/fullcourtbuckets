@@ -272,6 +272,10 @@ def social_block(text: str, image: str, alt: str, width: int, height: int) -> st
     add('name', 'twitter:description', vals.get('og:description', ''))
     add('name', 'twitter:image', image)
     add('name', 'twitter:image:alt', vals.get('og:image:alt') or alt)
+    order = ['og:title', 'og:description', 'og:url', 'og:type', 'og:site_name', 'og:image', 'og:image:width',
+             'og:image:height', 'og:image:alt', 'twitter:card', 'twitter:site', 'twitter:title',
+             'twitter:description', 'twitter:image', 'twitter:image:alt']
+    tags.sort(key=lambda t: (order.index(_key(t)) if _key(t) in order else len(order), _key(t)))
     block = '<!--fcb-social-->' + ''.join(tags) + '<!--/fcb-social-->'
     m = re.search(r'<meta\s+charset=[^>]*>', head, re.I) or re.search(r'<head\b[^>]*>', head, re.I)
     if m:
