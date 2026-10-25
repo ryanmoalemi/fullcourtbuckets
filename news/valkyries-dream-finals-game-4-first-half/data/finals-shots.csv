@@ -1,0 +1,530 @@
+game,half,period,clock,team,shooter,made,zone,points,text,zone_source
+1,1,1,9:46,ATL,Allisha Gray,1,rim (0-4 ft),2,Allisha Gray makes driving layup (Jordin Canada assists),api text
+1,1,1,9:29,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 24-foot three point jumper,api text
+1,1,1,9:10,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 26-foot three point step back jumpshot,api text
+1,1,1,8:58,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 11-foot pullup jump shot,api text
+1,1,1,8:49,ATL,Angel Reese ,0,rim (0-4 ft),0,Kiah Stokes blocks Angel Reese 's 3-foot layup,api text
+1,1,1,8:28,GSV,Cecilia Zandalasini,1,paint/short (5-14 ft),2,Cecilia Zandalasini makes 5-foot two point shot (Gabby Williams assists),api text
+1,1,1,8:14,ATL,Naz Hillmon,1,three,3,Naz Hillmon makes 23-foot three point jumper (Jordin Canada assists),api text
+1,1,1,7:50,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point jumper,api text
+1,1,1,7:42,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup (Jordin Canada assists),api text
+1,1,1,7:30,GSV,Veronica Burton,1,rim (0-4 ft),2,Veronica Burton makes driving layup,api text
+1,1,1,7:19,ATL,Jordin Canada ,0,paint/short (5-14 ft),0,Kiah Stokes blocks Jordin Canada 's 6-foot two point shot,api text
+1,1,1,7:11,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot three point jumper,api text
+1,1,1,6:51,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 26-foot three point step back jumpshot,api text
+1,1,1,6:45,GSV,Kayla Thornton,0,three,0,Kayla Thornton misses 27-foot three point jumper,api text
+1,1,1,6:36,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes running layup,api text
+1,1,1,6:23,GSV,Kiah Stokes,0,rim (0-4 ft),0,Kiah Stokes misses layup,api text
+1,1,1,6:12,ATL,DeWanna Bonner,1,paint/short (5-14 ft),2,DeWanna Bonner makes 5-foot two point shot (Allisha Gray assists),api text
+1,1,1,5:52,GSV,Veronica Burton,0,three,0,Veronica Burton misses 24-foot three point pullup jump shot,api text
+1,1,1,5:39,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 26-foot three point jumper,api text
+1,1,1,5:24,GSV,Gabby Williams,0,three,0,Gabby Williams misses 29-foot three point jumper,api text
+1,1,1,5:17,GSV,Veronica Burton,1,rim (0-4 ft),2,Veronica Burton makes 3-foot layup (Kayla Thornton assists),api text
+1,1,1,4:57,ATL,Allisha Gray ,0,paint/short (5-14 ft),0,Kiah Stokes blocks Allisha Gray 's 5-foot driving layup,api text
+1,1,1,4:46,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes 2-foot layup (Gabby Williams assists),api text
+1,1,1,4:22,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 30-foot three point pullup jump shot,api text
+1,1,1,4:13,GSV,Gabby Williams,0,three,0,Gabby Williams misses 22-foot running jump shot,api text
+1,1,1,4:04,GSV,Kiah Stokes,0,three,0,Kiah Stokes misses 25-foot three point jumper,api text
+1,1,1,3:59,GSV,Kiah Stokes ,0,rim (0-4 ft),0,Isobel Borlase blocks Kiah Stokes 's 3-foot layup,api text
+1,1,1,3:42,ATL,Isobel Borlase,0,rim (0-4 ft),0,Isobel Borlase misses driving layup,api text
+1,1,1,3:22,GSV,Kaitlyn Chen,1,rim (0-4 ft),2,Kaitlyn Chen makes 3-foot two point shot,api text
+1,1,1,3:13,ATL,Naz Hillmon,0,three,0,Naz Hillmon misses 26-foot three point jumper,api text
+1,1,1,2:48,GSV,Kaitlyn Chen,1,three,3,Kaitlyn Chen makes 24-foot jump bank shot (Tiffany Hayes assists),api text
+1,1,1,2:35,ATL,Allisha Gray,0,three,0,Allisha Gray misses 26-foot three point jumper,api text
+1,1,1,2:09,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Jordin Canada assists),api text
+1,1,1,1:51,GSV,Kayla Thornton,0,three,0,Kayla Thornton misses 24-foot three point jumper,api text
+1,1,1,1:44,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup (Isobel Borlase assists),api text
+1,1,1,1:27,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 25-foot three point pullup jump shot,api text
+1,1,1,1:17,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes 4-foot two point shot,api text
+1,1,1,1:09,ATL,Allisha Gray,0,three,0,Allisha Gray misses 23-foot three point jumper,api text
+1,1,1,50.2,GSV,Tiffany Hayes,0,paint/short (5-14 ft),0,Tiffany Hayes misses 6-foot fade away jump shot,api text
+1,1,1,34.4,GSV,Kaitlyn Chen,0,rim (0-4 ft),0,Kaitlyn Chen misses 4-foot hook shot,api text
+1,1,1,13.8,ATL,Angel Reese,1,paint/short (5-14 ft),2,Angel Reese makes 5-foot two point shot (Rhyne Howard assists),api text
+1,1,2,9:28,ATL,Allisha Gray,1,paint/short (5-14 ft),2,Allisha Gray makes 14-foot pullup jump shot (Jordin Canada assists),api text
+1,1,2,9:05,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes two point shot (Cecilia Zandalasini assists),wnba.com shotDistance
+1,1,2,8:39,GSV,Gabby Williams,1,three,3,Gabby Williams makes 26-foot three point jumper (Veronica Burton assists),api text
+1,1,2,8:23,ATL,Allisha Gray,1,three,3,Allisha Gray makes 28-foot three point jumper (Rhyne Howard assists),api text
+1,1,2,8:11,GSV,Janelle Salaun,0,three,0,Janelle Salaun misses 24-foot three point jumper,api text
+1,1,2,7:52,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses 13-foot fade away jump shot,api text
+1,1,2,7:21,ATL,Angel Reese ,0,paint/short (5-14 ft),0,Kiah Stokes blocks Angel Reese 's 5-foot two point shot,api text
+1,1,2,6:59,GSV,Gabby Williams,1,three,3,Gabby Williams makes 22-foot three point jumper (Kiah Stokes assists),api text
+1,1,2,6:46,ATL,Angel Reese,0,three,0,Angel Reese misses 25-foot three point jumper,api text
+1,1,2,6:28,GSV,Gabby Williams,1,paint/short (5-14 ft),2,Gabby Williams makes 10-foot pullup jump shot (Kaila Charles assists),api text
+1,1,2,5:48,GSV,Cecilia Zandalasini,1,paint/short (5-14 ft),2,Cecilia Zandalasini makes 10-foot turnaround jump shot,api text
+1,1,2,5:28,ATL,Isobel Borlase,1,rim (0-4 ft),2,Isobel Borlase makes 4-foot two point shot (Jordin Canada assists),api text
+1,1,2,5:18,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 26-foot three point jumper (Veronica Burton assists),api text
+1,1,2,5:05,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 23-foot three point jumper (Jordin Canada assists),api text
+1,1,2,4:52,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes layup (Veronica Burton assists),api text
+1,1,2,4:12,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot jump bank shot,api text
+1,1,2,3:59,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses two point shot,wnba.com shotDistance
+1,1,2,3:37,GSV,Kaila Charles,1,rim (0-4 ft),2,Kaila Charles makes driving layup,api text
+1,1,2,2:58,GSV,Veronica Burton ,0,paint/short (5-14 ft),0,Naz Hillmon blocks Veronica Burton 's 7-foot driving floating jump shot,api text
+1,1,2,2:50,ATL,Allisha Gray,0,three,0,Allisha Gray misses 28-foot running jump shot,api text
+1,1,2,2:32,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes driving layup,api text
+1,1,2,2:09,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Allisha Gray misses 8-foot fade away jump shot,api text
+1,1,2,1:52,GSV,Gabby Williams,1,three,3,Gabby Williams makes 24-foot three point jumper (Tiffany Hayes assists),api text
+1,1,2,1:29,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes running layup,api text
+1,1,2,49.1,GSV,Gabby Williams,0,three,0,Gabby Williams misses 28-foot three point jumper,api text
+1,1,2,40.4,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses driving layup,api text
+1,1,2,24.3,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+1,1,2,2.3,ATL,Allisha Gray,0,three,0,Allisha Gray misses 25-foot three point jumper,api text
+1,1,2,1.0,ATL,Angel Reese ,0,rim (0-4 ft),0,Laeticia Amihere blocks Angel Reese 's 4-foot two point shot,api text
+1,2,3,9:35,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses 9-foot turnaround jump shot,api text
+1,2,3,9:27,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 27-foot running jump shot (Allisha Gray assists),api text
+1,2,3,9:01,GSV,Veronica Burton,0,three,0,Veronica Burton misses 28-foot three point pullup jump shot,api text
+1,2,3,8:35,GSV,Tiffany Hayes,0,paint/short (5-14 ft),0,Tiffany Hayes misses 10-foot pullup jump shot,api text
+1,2,3,8:05,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 30-foot three point pullup jump shot,api text
+1,2,3,7:39,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 23-foot three point jumper,api text
+1,2,3,7:23,GSV,Gabby Williams,1,midrange (15+ ft 2PT),2,Gabby Williams makes 21-foot pullup jump shot,api text
+1,2,3,7:11,ATL,Rhyne Howard,1,paint/short (5-14 ft),2,Rhyne Howard makes 7-foot two point shot,api text
+1,2,3,6:54,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point pullup jump shot,api text
+1,2,3,6:41,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Allisha Gray misses 13-foot pullup jump shot,api text
+1,2,3,6:28,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses driving floating jump shot,api text
+1,2,3,6:09,GSV,Gabby Williams,0,midrange (15+ ft 2PT),0,Gabby Williams misses 18-foot pullup jump shot,api text
+1,2,3,5:50,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes driving layup (Rhyne Howard assists),api text
+1,2,3,5:35,GSV,Gabby Williams,0,three,0,Gabby Williams misses 28-foot three point jumper,api text
+1,2,3,5:31,GSV,Kaila Charles,0,paint/short (5-14 ft),0,Kaila Charles misses driving floating jump shot,api text
+1,2,3,5:28,GSV,Kaila Charles ,0,rim (0-4 ft),0,Angel Reese blocks Kaila Charles 's 3-foot two point shot,api text
+1,2,3,5:02,GSV,Kaitlyn Chen,0,rim (0-4 ft),0,Kaitlyn Chen misses layup,api text
+1,2,3,4:54,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 24-foot three point jumper,api text
+1,2,3,4:38,GSV,Tiffany Hayes ,0,rim (0-4 ft),0,Rhyne Howard blocks Tiffany Hayes 's 3-foot driving layup,api text
+1,2,3,4:27,ATL,Isobel Borlase,1,paint/short (5-14 ft),2,Isobel Borlase makes 9-foot two point shot (DeWanna Bonner assists),api text
+1,2,3,4:02,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses driving floating jump shot,api text
+1,2,3,3:43,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses driving layup,api text
+1,2,3,3:40,GSV,Laeticia Amihere,1,rim (0-4 ft),2,Laeticia Amihere makes tip shot,api text
+1,2,3,3:20,GSV,Kaila Charles,1,three,3,Kaila Charles makes 24-foot three point jumper (Tiffany Hayes assists),api text
+1,2,3,3:08,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 25-foot three point jumper,api text
+1,2,3,2:58,GSV,Laeticia Amihere,1,rim (0-4 ft),2,Laeticia Amihere makes layup (Kaitlyn Chen assists),api text
+1,2,3,2:39,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 27-foot three point jumper,api text
+1,2,3,2:31,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses two point shot,wnba.com shotDistance
+1,2,3,2:16,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses 11-foot fade away jump shot,api text
+1,2,3,1:52,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point pullup jump shot,api text
+1,2,3,1:41,ATL,Allisha Gray,1,paint/short (5-14 ft),2,Allisha Gray makes 8-foot turnaround jump shot,api text
+1,2,3,1:20,GSV,Kaila Charles,0,rim (0-4 ft),0,Kaila Charles misses driving layup,api text
+1,2,3,1:14,GSV,Cecilia Zandalasini,0,midrange (15+ ft 2PT),0,Cecilia Zandalasini misses 18-foot pullup jump shot,api text
+1,2,3,41.0,GSV,Kaila Charles,0,three,0,Kaila Charles misses 25-foot three point jumper,api text
+1,2,3,31.9,GSV,Tiffany Hayes,0,midrange (15+ ft 2PT),0,Tiffany Hayes misses 22-foot step back jumpshot,api text
+1,2,3,8.8,ATL,Allisha Gray,1,paint/short (5-14 ft),2,Allisha Gray makes 10-foot turnaround jump shot (Rhyne Howard assists),api text
+1,2,3,1.1,GSV,Kaitlyn Chen,0,three,0,Kaitlyn Chen misses 25-foot three point pullup jump shot,api text
+1,2,4,9:44,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 23-foot three point jumper,api text
+1,2,4,9:36,ATL,Jordin Canada ,0,paint/short (5-14 ft),0,Cecilia Zandalasini blocks Jordin Canada 's 5-foot pullup jump shot,api text
+1,2,4,9:16,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 10-foot pullup jump shot,api text
+1,2,4,8:40,GSV,Tiffany Hayes,1,three,3,Tiffany Hayes makes 26-foot three point jumper (Kaila Charles assists),api text
+1,2,4,8:26,ATL,Allisha Gray,0,rim (0-4 ft),0,Allisha Gray misses driving layup,api text
+1,2,4,8:13,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses 12-foot turnaround jump shot,api text
+1,2,4,8:03,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses two point shot,wnba.com shotDistance
+1,2,4,7:56,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses 2-foot two point shot,api text
+1,2,4,7:40,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 26-foot three point pullup jump shot,api text
+1,2,4,7:16,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes layup,api text
+1,2,4,6:54,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 25-foot three point jumper,api text
+1,2,4,6:46,GSV,Kaila Charles,0,three,0,Kaila Charles misses 23-foot three point jumper,api text
+1,2,4,6:29,GSV,Kaila Charles,1,rim (0-4 ft),2,Kaila Charles makes running layup,api text
+1,2,4,6:03,ATL,Rhyne Howard ,0,rim (0-4 ft),0,Kaila Charles blocks Rhyne Howard 's 3-foot driving layup,api text
+1,2,4,5:58,ATL,Allisha Gray,0,three,0,Allisha Gray misses 26-foot three point jumper,api text
+1,2,4,5:47,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 23-foot three point jumper,api text
+1,2,4,5:36,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses driving layup,api text
+1,2,4,5:10,ATL,Allisha Gray,0,midrange (15+ ft 2PT),0,Allisha Gray misses 18-foot pullup jump shot,api text
+1,2,4,4:52,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+1,2,4,4:50,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes tip shot,api text
+1,2,4,4:23,ATL,Jordin Canada,1,paint/short (5-14 ft),2,Jordin Canada makes 13-foot two point shot,api text
+1,2,4,4:08,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+1,2,4,4:04,GSV,Kaila Charles,0,three,0,Kaila Charles misses 25-foot three point jumper,api text
+1,2,4,3:54,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 26-foot three point pullup jump shot,api text
+1,2,4,3:33,ATL,Jordin Canada ,0,paint/short (5-14 ft),0,Veronica Burton blocks Jordin Canada 's 6-foot driving layup,api text
+1,2,4,3:30,ATL,Angel Reese ,0,rim (0-4 ft),0,Tiffany Hayes blocks Angel Reese 's 4-foot layup,api text
+1,2,4,3:22,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes running layup (Tiffany Hayes assists),api text
+1,2,4,2:40,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Veronica Burton blocks Allisha Gray's floating jump shot,api text
+1,2,4,2:33,ATL,Jordin Canada,0,three,0,Jordin Canada misses 26-foot three point pullup jump shot,api text
+1,2,4,1:46,GSV,Kaila Charles ,0,paint/short (5-14 ft),0,Rhyne Howard blocks Kaila Charles 's 5-foot layup,api text
+1,2,4,1:21,ATL,Allisha Gray,0,rim (0-4 ft),0,Allisha Gray misses driving layup,api text
+1,2,4,1:09,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot three point jumper,api text
+1,2,4,25.9,ATL,Naz Hillmon,0,three,0,Naz Hillmon misses 26-foot three point jumper,api text
+1,2,4,7.9,ATL,Allisha Gray,0,three,0,Allisha Gray misses 25-foot three point jumper,api text
+1,2,4,2.1,ATL,Allisha Gray,0,three,0,Allisha Gray misses 23-foot three point step back jumpshot,api text
+2,1,1,9:20,ATL,Allisha Gray ,0,midrange (15+ ft 2PT),0,Kayla Thornton blocks Allisha Gray 's 16-foot jumper,api text
+2,1,1,9:13,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Rhyne Howard assists),api text
+2,1,1,8:53,GSV,Gabby Williams,1,paint/short (5-14 ft),2,Gabby Williams makes 9-foot turnaround jump shot (Cecilia Zandalasini assists),api text
+2,1,1,8:41,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text
+2,1,1,8:26,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 23-foot three point jumper,api text
+2,1,1,8:08,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot three point jumper,api text
+2,1,1,7:54,GSV,Veronica Burton,1,rim (0-4 ft),2,Veronica Burton makes driving layup,api text
+2,1,1,7:29,ATL,Naz Hillmon,0,three,0,Naz Hillmon misses 25-foot three point jumper,api text
+2,1,1,7:11,GSV,Gabby Williams,0,midrange (15+ ft 2PT),0,Gabby Williams misses 16-foot pullup jump shot,api text
+2,1,1,6:37,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses driving floating jump shot,api text
+2,1,1,6:27,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 26-foot three point jumper (Jordin Canada assists),api text
+2,1,1,6:14,GSV,Cecilia Zandalasini,0,rim (0-4 ft),0,Cecilia Zandalasini misses layup,api text
+2,1,1,5:55,GSV,Kayla Thornton,0,paint/short (5-14 ft),0,Kayla Thornton misses 10-foot turnaround jump shot,api text
+2,1,1,5:49,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 25-foot three point jumper (Veronica Burton assists),api text
+2,1,1,5:38,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses driving layup,api text
+2,1,1,5:30,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 23-foot running jump shot,api text
+2,1,1,5:25,GSV,Kayla Thornton,1,rim (0-4 ft),2,Kayla Thornton makes two point shot,wnba.com shotDistance
+2,1,1,5:14,ATL,Angel Reese ,0,rim (0-4 ft),0,Kiah Stokes blocks Angel Reese 's 3-foot layup,api text
+2,1,1,5:05,ATL,Rhyne Howard,0,rim (0-4 ft),0,Rhyne Howard misses running layup,api text
+2,1,1,5:02,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes two point shot,wnba.com shotDistance
+2,1,1,4:30,GSV,Kaila Charles,1,three,3,Kaila Charles makes 25-foot three pointer,api text
+2,1,1,4:13,ATL,Jordin Canada,0,paint/short (5-14 ft),0,Jordin Canada misses 10-foot pullup jump shot,api text
+2,1,1,4:03,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+2,1,1,3:52,ATL,DeWanna Bonner,0,paint/short (5-14 ft),0,DeWanna Bonner misses 12-foot fade away jump shot,api text
+2,1,1,3:46,ATL,Jordin Canada,1,three,3,Jordin Canada makes 25-foot three point jumper (Angel Reese assists),api text
+2,1,1,3:16,GSV,Cecilia Zandalasini ,0,three,0,Rhyne Howard blocks Cecilia Zandalasini 's 25-foot three point pullup jump shot,api text
+2,1,1,3:04,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes 3-foot layup (Jordin Canada assists),api text
+2,1,1,2:33,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text
+2,1,1,2:09,GSV,Tiffany Hayes,1,paint/short (5-14 ft),2,Tiffany Hayes makes 14-foot two point shot,api text
+2,1,1,1:40,GSV,Kaila Charles,1,three,3,Kaila Charles makes 23-foot three point jumper (Kaitlyn Chen assists),api text
+2,1,1,53.8,GSV,Aminata Gueye ,0,rim (0-4 ft),0,Angel Reese blocks Aminata Gueye 's 3-foot layup,api text
+2,1,1,45.0,ATL,Allisha Gray ,0,paint/short (5-14 ft),0,Kaila Charles blocks Allisha Gray 's 7-foot driving floating jump shot,api text
+2,1,1,37.4,GSV,Kaila Charles,0,rim (0-4 ft),0,Kaila Charles misses running layup,api text
+2,1,1,2.0,GSV,Kaitlyn Chen,1,paint/short (5-14 ft),2,Kaitlyn Chen makes 5-foot two point shot (Tiffany Hayes assists),api text
+2,1,1,0.0,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 55-foot three point pullup jump shot,api text
+2,1,2,9:42,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 28-foot three point pullup jump shot,api text
+2,1,2,9:32,ATL,Allisha Gray,1,three,3,Allisha Gray makes 25-foot running jump shot (Jordin Canada assists),api text
+2,1,2,9:14,GSV,Janelle Salaun,0,three,0,Janelle Salaun misses 22-foot three point step back jumpshot,api text
+2,1,2,9:02,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup,api text
+2,1,2,8:38,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+2,1,2,8:21,ATL,Isobel Borlase,0,paint/short (5-14 ft),0,Isobel Borlase misses 10-foot turnaround jump shot,api text
+2,1,2,8:08,GSV,Janelle Salaun,0,paint/short (5-14 ft),0,Janelle Salaun misses two point shot,wnba.com shotDistance
+2,1,2,7:56,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Isobel Borlase assists),api text
+2,1,2,7:28,ATL,Isobel Borlase ,0,paint/short (5-14 ft),0,Cecilia Zandalasini blocks Isobel Borlase 's 6-foot driving layup,api text
+2,1,2,7:25,ATL,Allisha Gray,1,paint/short (5-14 ft),2,Allisha Gray makes 5-foot layup (Jordin Canada assists),api text
+2,1,2,6:18,GSV,Cecilia Zandalasini,0,midrange (15+ ft 2PT),0,Cecilia Zandalasini misses 15-foot step back jumpshot,api text
+2,1,2,5:56,ATL,Angel Reese,0,paint/short (5-14 ft),0,Angel Reese misses 6-foot two point shot,api text
+2,1,2,5:33,GSV,Gabby Williams,0,three,0,Gabby Williams misses 23-foot three point jumper,api text
+2,1,2,4:41,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 23-foot three point jumper,api text
+2,1,2,4:36,ATL,Jordin Canada,0,midrange (15+ ft 2PT),0,Jordin Canada misses 18-foot pullup jump shot,api text
+2,1,2,4:02,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses driving layup,api text
+2,1,2,3:50,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 25-foot three point jumper,api text
+2,1,2,3:28,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses 11-foot turnaround jump shot,api text
+2,1,2,3:18,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup (Jordin Canada assists),api text
+2,1,2,2:59,GSV,Gabby Williams,0,three,0,Gabby Williams misses 24-foot three point pullup jump shot,api text
+2,1,2,2:36,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes 2-foot two point shot,api text
+2,1,2,2:17,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 23-foot three point jumper,api text
+2,1,2,1:38,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Isobel Borlase blocks Veronica Burton's turnaround jump shot,wnba.com shotDistance
+2,1,2,1:31,ATL,Allisha Gray,1,three,3,Allisha Gray makes 25-foot running jump shot (Jordin Canada assists),api text
+2,1,2,1:17,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+2,1,2,1:07,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot three point jumper,api text
+2,1,2,56.6,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup (Veronica Burton assists),api text
+2,1,2,34.6,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 25-foot three point pullup jump shot,api text
+2,1,2,15.4,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses driving layup,api text
+2,1,2,2.5,ATL,DeWanna Bonner,1,midrange (15+ ft 2PT),2,DeWanna Bonner makes 18-foot pullup jump shot (Jordin Canada assists),api text
+2,2,3,9:31,GSV,Veronica Burton,1,three,3,Veronica Burton makes 26-foot three point jumper (Gabby Williams assists),api text
+2,2,3,8:57,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot running jump shot,api text
+2,2,3,8:49,ATL,Angel Reese ,0,rim (0-4 ft),0,Kiah Stokes blocks Angel Reese 's 4-foot turnaround jump shot,api text
+2,2,3,8:45,ATL,Allisha Gray ,0,paint/short (5-14 ft),0,Veronica Burton blocks Allisha Gray 's 5-foot driving layup,api text
+2,2,3,8:13,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses driving layup,api text
+2,2,3,7:51,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+2,2,3,7:40,ATL,Jordin Canada,0,paint/short (5-14 ft),0,Jordin Canada misses driving floating jump shot,api text
+2,2,3,7:32,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses driving floating jump shot,api text
+2,2,3,7:09,ATL,Allisha Gray,0,three,0,Allisha Gray misses 28-foot three point jumper,api text
+2,2,3,6:30,GSV,Kayla Thornton,0,three,0,Kayla Thornton misses 25-foot jump bank shot,api text
+2,2,3,6:08,GSV,Tiffany Hayes ,0,paint/short (5-14 ft),0,Angel Reese blocks Tiffany Hayes 's 5-foot driving layup,api text
+2,2,3,5:54,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 26-foot three point pullup jump shot,api text
+2,2,3,5:40,GSV,Kaitlyn Chen,1,rim (0-4 ft),2,Kaitlyn Chen makes 3-foot two point shot,api text
+2,2,3,5:18,ATL,Jordin Canada,0,three,0,Jordin Canada misses 25-foot three point jumper,api text
+2,2,3,4:57,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 24-foot three point jumper,api text
+2,2,3,4:49,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup (Allisha Gray assists),api text
+2,2,3,4:26,GSV,Kaila Charles,0,paint/short (5-14 ft),0,Kaila Charles misses driving floating jump shot,api text
+2,2,3,4:06,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 25-foot three point jumper,api text
+2,2,3,3:52,GSV,Kaitlyn Chen,1,paint/short (5-14 ft),2,Kaitlyn Chen makes 8-foot turnaround jump shot,api text
+2,2,3,3:42,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 27-foot three point jumper,api text
+2,2,3,3:30,GSV,Kaitlyn Chen,0,rim (0-4 ft),0,Kaitlyn Chen misses two point shot,wnba.com shotDistance
+2,2,3,3:18,ATL,DeWanna Bonner ,0,rim (0-4 ft),0,Kiah Stokes blocks DeWanna Bonner 's 3-foot layup,api text
+2,2,3,3:06,ATL,DeWanna Bonner,1,rim (0-4 ft),2,DeWanna Bonner makes running layup (Angel Reese assists),api text
+2,2,3,2:13,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+2,2,3,1:50,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Allisha Gray misses 13-foot two point shot,api text
+2,2,3,1:35,GSV,Kaila Charles,0,three,0,Kaila Charles misses 23-foot three point step back jumpshot,api text
+2,2,3,1:04,GSV,Gabby Williams,0,three,0,Gabby Williams misses 26-foot three point pullup jump shot,api text
+2,2,3,53.2,GSV,Veronica Burton,1,rim (0-4 ft),2,Veronica Burton makes driving layup,api text
+2,2,3,46.2,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes layup (Rhyne Howard assists),api text
+2,2,3,6.5,GSV,Veronica Burton,0,three,0,Veronica Burton misses 26-foot three point step back jumpshot,api text
+2,2,3,0.8,ATL,Jordin Canada,1,three,3,Jordin Canada makes 32-foot three pointer,api text
+2,2,4,9:43,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 23-foot three point jumper,api text
+2,2,4,9:24,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses 12-foot pullup jump shot,api text
+2,2,4,8:37,ATL,Naz Hillmon ,0,rim (0-4 ft),0,Kiah Stokes blocks Naz Hillmon 's 3-foot hook shot,api text
+2,2,4,8:29,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+2,2,4,8:11,ATL,Allisha Gray,1,three,3,Allisha Gray makes 24-foot three point jumper (Jordin Canada assists),api text
+2,2,4,7:57,GSV,Gabby Williams,0,three,0,Gabby Williams misses 26-foot three point pullup jump shot,api text
+2,2,4,7:35,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses 4-foot fade away jump shot,api text
+2,2,4,7:12,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 13-foot pullup jump shot,api text
+2,2,4,6:58,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+2,2,4,6:48,GSV,Tiffany Hayes,0,midrange (15+ ft 2PT),0,Tiffany Hayes misses 16-foot pullup jump shot,api text
+2,2,4,6:26,ATL,Allisha Gray,0,three,0,Allisha Gray misses 25-foot three point jumper,api text
+2,2,4,6:16,ATL,Angel Reese,0,paint/short (5-14 ft),0,Angel Reese misses two point shot,wnba.com shotDistance
+2,2,4,5:47,GSV,Gabby Williams,1,three,3,Gabby Williams makes 26-foot three point jumper (Kaitlyn Chen assists),api text
+2,2,4,5:11,GSV,Gabby Williams,0,midrange (15+ ft 2PT),0,Gabby Williams misses 18-foot pullup jump shot,api text
+2,2,4,4:49,ATL,Rhyne Howard,1,midrange (15+ ft 2PT),2,Rhyne Howard makes 18-foot step back jumpshot (Angel Reese assists),api text
+2,2,4,4:32,GSV,Kaila Charles,1,three,3,Kaila Charles makes 23-foot three point jumper (Tiffany Hayes assists),api text
+2,2,4,4:15,ATL,Angel Reese,1,three,3,Angel Reese makes 24-foot three point jumper (Jordin Canada assists),api text
+2,2,4,3:43,ATL,Angel Reese,0,paint/short (5-14 ft),0,Angel Reese misses 7-foot fade away jump shot,api text
+2,2,4,2:59,GSV,Gabby Williams,1,midrange (15+ ft 2PT),2,Gabby Williams makes 15-foot turnaround jump shot,api text
+2,2,4,2:33,GSV,Gabby Williams,0,three,0,Gabby Williams misses running pullup jump shot,api text
+2,2,4,1:41,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Jordin Canada assists),api text
+2,2,4,1:29,GSV,Veronica Burton,1,three,3,Veronica Burton makes 24-foot three point jumper (Tiffany Hayes assists),api text
+2,2,4,1:12,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses finger roll layup,api text
+2,2,4,1:04,GSV,Kaila Charles,0,three,0,Kaila Charles misses 25-foot three point jumper,api text
+2,2,4,39.5,GSV,Laeticia Amihere,1,rim (0-4 ft),2,Laeticia Amihere makes layup (Kaitlyn Chen assists),api text
+2,2,4,16.1,ATL,Jordin Canada,0,three,0,Jordin Canada misses 30-foot three point pullup jump shot,api text
+2,2,4,7.7,GSV,Veronica Burton,0,three,0,Veronica Burton misses 26-foot three point jumper,api text
+3,1,1,9:46,ATL,Rhyne Howard,0,rim (0-4 ft),0,Rhyne Howard misses layup,api text
+3,1,1,9:27,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses 11-foot turnaround jump shot,api text
+3,1,1,9:18,ATL,Jordin Canada,0,three,0,Jordin Canada misses running pullup jump shot,api text
+3,1,1,8:57,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses driving floating jump shot,api text
+3,1,1,8:43,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes layup (Rhyne Howard assists),api text
+3,1,1,8:23,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses two point shot,wnba.com shotDistance
+3,1,1,7:58,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses driving floating jump shot,api text
+3,1,1,7:50,ATL,Allisha Gray,1,rim (0-4 ft),2,Allisha Gray makes driving layup (Jordin Canada assists),api text
+3,1,1,7:31,GSV,Kayla Thornton,0,three,0,Kayla Thornton misses 23-foot three point jumper,api text
+3,1,1,7:26,ATL,Naz Hillmon ,0,rim (0-4 ft),0,Veronica Burton blocks Naz Hillmon 's 3-foot driving layup,api text
+3,1,1,7:20,ATL,Naz Hillmon,0,three,0,Naz Hillmon misses 24-foot three point jumper,api text
+3,1,1,7:01,ATL,Angel Reese,0,rim (0-4 ft),0,Kiah Stokes blocks Angel Reese's driving layup,api text
+3,1,1,6:54,ATL,Angel Reese ,0,paint/short (5-14 ft),0,Kiah Stokes blocks Angel Reese 's 8-foot driving layup,api text
+3,1,1,6:45,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot three point jumper,api text
+3,1,1,6:32,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 11-foot fade away jump shot,api text
+3,1,1,6:14,ATL,Jordin Canada ,0,rim (0-4 ft),0,Kiah Stokes blocks Jordin Canada 's 3-foot driving layup,api text
+3,1,1,5:42,GSV,Tiffany Hayes,0,paint/short (5-14 ft),0,Tiffany Hayes misses driving floating jump shot,api text
+3,1,1,5:18,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 26-foot three point jumper,api text
+3,1,1,5:10,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses running layup,api text
+3,1,1,4:57,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Jordin Canada assists),api text
+3,1,1,4:38,GSV,Aminata Gueye,1,rim (0-4 ft),2,Aminata Gueye makes 3-foot two point shot (Tiffany Hayes assists),api text
+3,1,1,4:16,ATL,Allisha Gray,0,rim (0-4 ft),0,Allisha Gray misses driving layup,api text
+3,1,1,4:15,ATL,Rhyne Howard,0,rim (0-4 ft),0,Aminata Gueye blocks Rhyne Howard's two point shot,wnba.com shotDistance
+3,1,1,4:12,ATL,Allisha Gray,0,midrange (15+ ft 2PT),0,Allisha Gray misses 15-foot step back jumpshot,api text
+3,1,1,4:01,GSV,Aminata Gueye,0,three,0,Aminata Gueye misses 24-foot three point jumper,api text
+3,1,1,3:50,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses 2-foot reverse layup,api text
+3,1,1,3:43,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes running layup,api text
+3,1,1,3:25,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses driving layup,api text
+3,1,1,3:16,GSV,Tiffany Hayes,1,three,3,Tiffany Hayes makes 24-foot three point jumper (Veronica Burton assists),api text
+3,1,1,3:01,ATL,Rhyne Howard,1,rim (0-4 ft),2,Rhyne Howard makes finger roll layup (Jordin Canada assists),api text
+3,1,1,2:41,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses driving layup,api text
+3,1,1,2:18,ATL,Naz Hillmon,1,three,3,Naz Hillmon makes 24-foot three point jumper (Allisha Gray assists),api text
+3,1,1,1:42,ATL,Naz Hillmon,1,three,3,Naz Hillmon makes 25-foot three point jumper (Jordin Canada assists),api text
+3,1,1,1:27,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup (Gabby Williams assists),api text
+3,1,1,1:11,ATL,Isobel Borlase,0,rim (0-4 ft),0,Isobel Borlase misses driving layup,api text
+3,1,1,58.3,GSV,Kaitlyn Chen,0,three,0,Kaitlyn Chen misses 25-foot three point jumper,api text
+3,1,1,51.5,GSV,Kaitlyn Chen,0,midrange (15+ ft 2PT),0,Kaitlyn Chen misses 18-foot pullup jump shot,api text
+3,1,1,40.1,ATL,Angel Reese,1,three,3,Angel Reese makes 24-foot three point jumper (Jordin Canada assists),api text
+3,1,1,26.1,GSV,Gabby Williams,1,three,3,Gabby Williams makes 24-foot three point jumper (Kaila Charles assists),api text
+3,1,1,1.0,GSV,Gabby Williams,0,three,0,Gabby Williams misses 26-foot three point pullup jump shot,api text
+3,1,2,9:50,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+3,1,2,9:36,ATL,Naz Hillmon,0,rim (0-4 ft),0,Naz Hillmon misses layup,api text
+3,1,2,8:50,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses driving floating jump shot,api text
+3,1,2,8:41,GSV,Tiffany Hayes,0,rim (0-4 ft),0,Tiffany Hayes misses driving layup,api text
+3,1,2,8:27,ATL,Isobel Borlase,1,paint/short (5-14 ft),2,Isobel Borlase makes 10-foot pullup jump shot (Angel Reese assists),api text
+3,1,2,8:10,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 25-foot three point pullup jump shot,api text
+3,1,2,7:59,ATL,Allisha Gray,0,three,0,Allisha Gray misses 23-foot three point jumper,api text
+3,1,2,7:46,GSV,Janelle Salaun,1,three,3,Janelle Salaun makes 24-foot three point jumper (Veronica Burton assists),api text
+3,1,2,7:32,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup (Isobel Borlase assists),api text
+3,1,2,7:20,GSV,Janelle Salaun,1,rim (0-4 ft),2,Janelle Salaun makes driving layup (Gabby Williams assists),api text
+3,1,2,7:07,ATL,Naz Hillmon,0,three,0,Naz Hillmon misses 25-foot three point jumper,api text
+3,1,2,6:32,ATL,Angel Reese,1,three,3,Angel Reese makes 24-foot three point jumper (Rhyne Howard assists),api text
+3,1,2,6:12,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 24-foot three point jumper (Jordin Canada assists),api text
+3,1,2,5:57,GSV,Janelle Salaun,0,three,0,Janelle Salaun misses 24-foot three point jumper,api text
+3,1,2,5:35,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes running layup (Rhyne Howard assists),api text
+3,1,2,5:15,GSV,Janelle Salaun,1,three,3,Janelle Salaun makes 25-foot three point jumper (Gabby Williams assists),api text
+3,1,2,5:00,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup,api text
+3,1,2,4:42,GSV,Aminata Gueye,0,rim (0-4 ft),0,Aminata Gueye misses driving layup,api text
+3,1,2,3:54,GSV,Janelle Salaun,1,three,3,Janelle Salaun makes 23-foot three point jumper (Cecilia Zandalasini assists),api text
+3,1,2,3:34,ATL,Allisha Gray,1,midrange (15+ ft 2PT),2,Allisha Gray makes 17-foot pullup jump shot,api text
+3,1,2,3:16,GSV,Gabby Williams,1,three,3,Gabby Williams makes 24-foot three pointer,api text
+3,1,2,2:46,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 13-foot pullup jump shot,api text
+3,1,2,2:37,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text
+3,1,2,2:09,ATL,Isobel Borlase,1,three,3,Isobel Borlase makes 24-foot three pointer,api text
+3,1,2,1:43,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 23-foot three point step back jumpshot (Kiah Stokes assists),api text
+3,1,2,1:32,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 24-foot three point jumper,api text
+3,1,2,1:01,ATL,Jordin Canada,0,three,0,Jordin Canada misses 34-foot three point jumper,api text
+3,1,2,47.9,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point pullup jump shot,api text
+3,1,2,29.6,ATL,Naz Hillmon,1,three,3,Naz Hillmon makes 25-foot three point jumper (Jordin Canada assists),api text
+3,1,2,16.8,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 22-foot three point jumper (Veronica Burton assists),api text
+3,2,3,9:50,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 22-foot three point jumper (Gabby Williams assists),api text
+3,2,3,9:25,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes driving layup,api text
+3,2,3,9:02,ATL,Rhyne Howard,1,rim (0-4 ft),2,Rhyne Howard makes driving layup (Allisha Gray assists),api text
+3,2,3,8:52,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 24-foot three point step back jumpshot (Gabby Williams assists),api text
+3,2,3,8:20,GSV,Veronica Burton,0,three,0,Veronica Burton misses 23-foot three point jumper,api text
+3,2,3,7:36,ATL,Rhyne Howard,1,rim (0-4 ft),2,Rhyne Howard makes two point shot,wnba.com shotDistance
+3,2,3,7:18,GSV,Gabby Williams,0,midrange (15+ ft 2PT),0,Gabby Williams misses 18-foot pullup jump shot,api text
+3,2,3,7:02,GSV,Cecilia Zandalasini ,0,three,0,Jordin Canada blocks Cecilia Zandalasini 's 24-foot three point jumper,api text
+3,2,3,6:55,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses driving layup,api text
+3,2,3,6:31,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 11-foot pullup jump shot,api text
+3,2,3,6:08,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 24-foot three point jumper,api text
+3,2,3,5:55,ATL,Isobel Borlase,1,rim (0-4 ft),2,Isobel Borlase makes driving layup (Angel Reese assists),api text
+3,2,3,5:33,GSV,Kaitlyn Chen,0,paint/short (5-14 ft),0,Kaitlyn Chen misses driving floating jump shot,api text
+3,2,3,5:25,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes running layup,api text
+3,2,3,5:04,GSV,Tiffany Hayes,1,paint/short (5-14 ft),2,Tiffany Hayes makes 11-foot driving floating jump shot (Gabby Williams assists),api text
+3,2,3,4:47,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes 3-foot two point shot,api text
+3,2,3,4:07,ATL,Isobel Borlase,0,rim (0-4 ft),0,Isobel Borlase misses driving layup,api text
+3,2,3,3:41,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup (Kaitlyn Chen assists),api text
+3,2,3,3:03,ATL,DeWanna Bonner,1,three,3,DeWanna Bonner makes 24-foot three point jumper (Rhyne Howard assists),api text
+3,2,3,2:52,GSV,Aminata Gueye,0,paint/short (5-14 ft),0,Aminata Gueye misses 14-foot jumper,api text
+3,2,3,2:44,ATL,Isobel Borlase,1,rim (0-4 ft),2,Isobel Borlase makes running layup,api text
+3,2,3,2:22,GSV,Kaitlyn Chen ,0,rim (0-4 ft),0,Isobel Borlase blocks Kaitlyn Chen 's 1-foot driving layup,api text
+3,2,3,2:07,ATL,DeWanna Bonner,1,paint/short (5-14 ft),2,DeWanna Bonner makes 11-foot two point shot (Allisha Gray assists),api text
+3,2,3,1:46,GSV,Tiffany Hayes ,0,rim (0-4 ft),0,Rhyne Howard blocks Tiffany Hayes 's 4-foot driving layup,api text
+3,2,3,1:42,GSV,Janelle Salaun,0,rim (0-4 ft),0,Janelle Salaun misses driving layup,api text
+3,2,3,1:41,GSV,Kaila Charles,0,rim (0-4 ft),0,Kaila Charles misses two point shot,wnba.com shotDistance
+3,2,3,1:20,ATL,Isobel Borlase,0,paint/short (5-14 ft),0,Isobel Borlase misses 14-foot two point shot,api text
+3,2,3,1:07,GSV,Janelle Salaun,1,paint/short (5-14 ft),2,Janelle Salaun makes 14-foot two point shot (Kaitlyn Chen assists),api text
+3,2,3,56.6,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes 3-foot two point shot (Allisha Gray assists),api text
+3,2,3,34.1,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes 4-foot layup (Allisha Gray assists),api text
+3,2,3,1.1,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses driving layup,api text
+3,2,4,9:44,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes 1-foot layup (Angel Reese assists),api text
+3,2,4,9:16,GSV,Veronica Burton,0,three,0,Veronica Burton misses 24-foot three point jumper,api text
+3,2,4,9:08,GSV,Veronica Burton,1,three,3,Veronica Burton makes 24-foot three point jumper (Gabby Williams assists),api text
+3,2,4,8:42,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point pullup jump shot,api text
+3,2,4,8:24,ATL,Rhyne Howard,0,midrange (15+ ft 2PT),0,Rhyne Howard misses 18-foot step back jumpshot,api text
+3,2,4,8:12,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes driving layup (Jordin Canada assists),api text
+3,2,4,7:45,ATL,Jordin Canada,0,rim (0-4 ft),0,Jordin Canada misses driving layup,api text
+3,2,4,7:30,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 22-foot three point jumper,api text
+3,2,4,7:07,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses two point shot,wnba.com shotDistance
+3,2,4,7:00,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot running jump shot,api text
+3,2,4,6:31,GSV,Veronica Burton,0,three,0,Veronica Burton misses 23-foot three point jumper,api text
+3,2,4,6:17,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes layup (Gabby Williams assists),api text
+3,2,4,6:02,ATL,Allisha Gray,0,three,0,Allisha Gray misses 25-foot three point jumper,api text
+3,2,4,5:53,GSV,Gabby Williams,1,three,3,Gabby Williams makes 24-foot running jump shot (Veronica Burton assists),api text
+3,2,4,5:29,ATL,Isobel Borlase,1,paint/short (5-14 ft),2,Isobel Borlase makes 6-foot driving floating jump shot (Allisha Gray assists),api text
+3,2,4,5:03,GSV,Gabby Williams,0,three,0,Gabby Williams misses 25-foot three point jumper,api text
+3,2,4,4:50,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes driving layup,api text
+3,2,4,4:39,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 22-foot three point pullup jump shot,api text
+3,2,4,4:33,ATL,DeWanna Bonner,1,rim (0-4 ft),2,DeWanna Bonner makes running layup (Isobel Borlase assists),api text
+3,2,4,4:27,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+3,2,4,4:24,GSV,Kiah Stokes,0,rim (0-4 ft),0,Kiah Stokes misses tip shot,api text
+3,2,4,3:56,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses driving floating jump shot,api text
+3,2,4,3:36,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 24-foot three point pullup jump shot,api text
+3,2,4,3:33,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses driving floating jump shot,api text
+3,2,4,3:30,ATL,Rhyne Howard,0,rim (0-4 ft),0,Rhyne Howard misses tip shot,api text
+3,2,4,3:05,GSV,Gabby Williams,0,three,0,Gabby Williams misses 24-foot three point step back jumpshot,api text
+3,2,4,2:57,GSV,Kiah Stokes,0,three,0,Kiah Stokes misses 24-foot three point jumper,api text
+3,2,4,2:41,ATL,Isobel Borlase,0,paint/short (5-14 ft),0,Isobel Borlase misses 11-foot pullup jump shot,api text
+3,2,4,2:30,GSV,Gabby Williams,1,midrange (15+ ft 2PT),2,Gabby Williams makes 15-foot turnaround jump shot,api text
+3,2,4,2:04,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+3,2,4,1:41,GSV,Kaitlyn Chen,1,paint/short (5-14 ft),2,Kaitlyn Chen makes 13-foot pullup jump shot (Juste Jocyte assists),api text
+3,2,4,1:31,ATL,Te-Hina Paopao,0,three,0,Te-Hina Paopao misses 25-foot three point pullup jump shot,api text
+3,2,4,1:07,GSV,Aminata Gueye,0,paint/short (5-14 ft),0,Aminata Gueye misses 7-foot hook shot,api text
+3,2,4,58.1,ATL,Sika Kone,1,three,3,Sika Kone makes 24-foot three point jumper (Te-Hina Paopao assists),api text
+3,2,4,44.5,GSV,Laeticia Amihere,0,rim (0-4 ft),0,Madina Okot blocks Laeticia Amihere's driving layup,api text
+3,2,4,28.7,ATL,Madina Okot,1,paint/short (5-14 ft),2,Madina Okot makes 7-foot two point shot (Sika Kone assists),api text
+3,2,4,2.3,ATL,Sika Kone,1,paint/short (5-14 ft),2,Sika Kone makes 6-foot driving floating jump shot (Madina Okot assists),api text
+4,1,1,9:40,GSV,Tiffany Hayes,0,paint/short (5-14 ft),0,Tiffany Hayes misses two point shot,wnba.com shotDistance
+4,1,1,9:36,GSV,Veronica Burton,0,three,0,Veronica Burton misses 25-foot three point jumper,api text
+4,1,1,8:45,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses driving layup,api text
+4,1,1,8:29,GSV,Kiah Stokes,0,three,0,Kiah Stokes misses 23-foot three point jumper,api text
+4,1,1,8:17,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses driving floating jump shot,api text
+4,1,1,7:56,ATL,Allisha Gray,0,three,0,Allisha Gray misses 23-foot three point jumper,api text
+4,1,1,7:37,GSV,Kiah Stokes,0,three,0,Kiah Stokes misses 23-foot three point jumper,api text
+4,1,1,7:26,GSV,Veronica Burton,0,rim (0-4 ft),0,Rhyne Howard blocks Veronica Burton's running layup,api text
+4,1,1,7:23,GSV,Kaila Charles,1,paint/short (5-14 ft),2,Kaila Charles makes two point shot,wnba.com shotDistance
+4,1,1,7:02,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 24-foot three pointer,api text
+4,1,1,6:38,GSV,Kaila Charles,0,three,0,Kaila Charles misses 25-foot three point jumper,api text
+4,1,1,6:33,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 24-foot three point jumper,api text
+4,1,1,6:13,GSV,Gabby Williams,0,three,0,Gabby Williams misses 24-foot three point jumper,api text
+4,1,1,5:59,ATL,Isobel Borlase,1,rim (0-4 ft),2,Isobel Borlase makes driving layup (Angel Reese assists),api text
+4,1,1,5:41,GSV,Tiffany Hayes,0,paint/short (5-14 ft),0,Tiffany Hayes misses driving floating jump shot,api text
+4,1,1,5:22,ATL,Isobel Borlase ,0,three,0,Veronica Burton blocks Isobel Borlase 's 25-foot three point jumper,api text
+4,1,1,5:10,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes layup (Kaila Charles assists),api text
+4,1,1,4:59,ATL,Angel Reese ,0,rim (0-4 ft),0,Kiah Stokes blocks Angel Reese 's 4-foot driving layup,api text
+4,1,1,4:35,GSV,Cecilia Zandalasini,1,rim (0-4 ft),2,Cecilia Zandalasini makes two point shot,wnba.com shotDistance
+4,1,1,4:11,GSV,Kiah Stokes,1,rim (0-4 ft),2,Kiah Stokes makes 2-foot layup (Gabby Williams assists),api text
+4,1,1,3:53,GSV,Gabby Williams,0,three,0,Gabby Williams misses 23-foot three point jumper,api text
+4,1,1,3:39,GSV,Kiah Stokes,0,midrange (15+ ft 2PT),0,Kiah Stokes misses 20-foot jumper,api text
+4,1,1,3:28,GSV,Kaila Charles,0,three,0,Kaila Charles misses 24-foot three point step back jumpshot,api text
+4,1,1,3:12,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 24-foot three point jumper,api text
+4,1,1,3:00,GSV,Gabby Williams,1,paint/short (5-14 ft),2,Gabby Williams makes 11-foot turnaround jump shot,api text
+4,1,1,2:24,GSV,Gabby Williams ,0,rim (0-4 ft),0,Angel Reese blocks Gabby Williams 's 3-foot running layup,api text
+4,1,1,2:09,GSV,Cecilia Zandalasini,1,three,3,Cecilia Zandalasini makes 23-foot three point jumper (Gabby Williams assists),api text
+4,1,1,1:48,ATL,Rhyne Howard,1,paint/short (5-14 ft),2,Rhyne Howard makes 12-foot two point shot,api text
+4,1,1,1:33,GSV,Gabby Williams,0,three,0,Gabby Williams misses 24-foot three point pullup jump shot,api text
+4,1,1,39.0,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes 2-foot two point shot (Angel Reese assists),api text
+4,1,1,18.5,GSV,Kaila Charles,1,paint/short (5-14 ft),2,Kaila Charles makes 9-foot two point shot,api text
+4,1,1,1.9,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses 4-foot two point shot,api text
+4,1,2,9:37,ATL,Jordin Canada,1,paint/short (5-14 ft),2,Jordin Canada makes 11-foot fade away jump shot,api text
+4,1,2,9:11,ATL,Allisha Gray,1,paint/short (5-14 ft),2,Allisha Gray makes 9-foot pullup jump shot (Jordin Canada assists),api text
+4,1,2,8:46,GSV,Janelle Salaun,1,paint/short (5-14 ft),2,Janelle Salaun makes 11-foot step back jumpshot (Veronica Burton assists),api text
+4,1,2,8:20,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+4,1,2,8:12,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 24-foot three point jumper,api text
+4,1,2,7:31,GSV,Gabby Williams,1,paint/short (5-14 ft),2,Gabby Williams makes 13-foot pullup jump shot,api text
+4,1,2,7:12,GSV,Veronica Burton,0,three,0,Veronica Burton misses 27-foot three point jumper,api text
+4,1,2,6:52,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes 2-foot layup (Angel Reese assists),api text
+4,1,2,6:28,GSV,Veronica Burton,1,three,3,Veronica Burton makes 31-foot three pointer,api text
+4,1,2,6:15,ATL,Angel Reese,1,paint/short (5-14 ft),2,Angel Reese makes 7-foot hook shot (Rhyne Howard assists),api text
+4,1,2,5:50,GSV,Cecilia Zandalasini,0,midrange (15+ ft 2PT),0,Cecilia Zandalasini misses 18-foot step back jumpshot,api text
+4,1,2,5:24,GSV,Gabby Williams,0,three,0,Gabby Williams misses 24-foot three point pullup jump shot,api text
+4,1,2,5:18,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+4,1,2,4:33,GSV,Gabby Williams,1,paint/short (5-14 ft),2,Gabby Williams makes 10-foot pullup jump shot,api text
+4,1,2,4:25,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 24-foot three point jumper,api text
+4,1,2,4:17,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot three point jumper,api text
+4,1,2,3:56,GSV,Cecilia Zandalasini,1,rim (0-4 ft),2,Cecilia Zandalasini makes 4-foot two point shot (Veronica Burton assists),api text
+4,1,2,3:36,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses layup,api text
+4,1,2,3:23,GSV,Gabby Williams,1,midrange (15+ ft 2PT),2,Gabby Williams makes 17-foot pullup jump shot,api text
+4,1,2,2:59,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text
+4,1,2,2:46,GSV,Veronica Burton,1,paint/short (5-14 ft),2,Veronica Burton makes 9-foot two point shot,api text
+4,1,2,2:04,GSV,Cecilia Zandalasini,1,paint/short (5-14 ft),2,Cecilia Zandalasini makes 10-foot jumper (Veronica Burton assists),api text
+4,1,2,1:38,GSV,Kayla Thornton,1,three,3,Kayla Thornton makes 24-foot three point jumper (Cecilia Zandalasini assists),api text
+4,1,2,53.0,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 24-foot three point jumper,api text
+4,1,2,34.9,GSV,Kaila Charles,0,three,0,Kaila Charles misses 23-foot three point jumper,api text
+4,1,2,22.0,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes two point shot,wnba.com shotDistance
+4,1,2,0.6,GSV,Gabby Williams,0,three,0,Gabby Williams misses 26-foot three point pullup jump shot,api text
+4,2,3,9:45,ATL,Naz Hillmon,1,rim (0-4 ft),2,Naz Hillmon makes 3-foot layup (Jordin Canada assists),api text
+4,2,3,9:21,GSV,Veronica Burton,0,three,0,Veronica Burton misses 23-foot three point pullup jump shot,api text
+4,2,3,9:01,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 24-foot three point jumper,api text
+4,2,3,8:42,GSV,Kaila Charles ,0,paint/short (5-14 ft),0,Angel Reese blocks Kaila Charles 's 5-foot driving layup,api text
+4,2,3,8:30,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses 14-foot pullup jump shot,api text
+4,2,3,8:13,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 9-foot turnaround jump shot,api text
+4,2,3,8:04,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text
+4,2,3,7:19,GSV,Gabby Williams,1,rim (0-4 ft),2,Gabby Williams makes 2-foot two point shot,api text
+4,2,3,7:09,ATL,Angel Reese,0,three,0,Angel Reese misses 24-foot three point jumper,api text
+4,2,3,6:36,GSV,Cecilia Zandalasini,0,three,0,Cecilia Zandalasini misses 23-foot three point step back jumpshot,api text
+4,2,3,6:05,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 12-foot pullup jump shot,api text
+4,2,3,5:57,ATL,Rhyne Howard,1,paint/short (5-14 ft),2,Rhyne Howard makes 12-foot driving floating jump shot,api text
+4,2,3,5:18,ATL,Jordin Canada,0,paint/short (5-14 ft),0,Veronica Burton blocks Jordin Canada's turnaround jump shot,wnba.com shotDistance
+4,2,3,5:08,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+4,2,3,5:02,GSV,Cecilia Zandalasini,0,paint/short (5-14 ft),0,Cecilia Zandalasini misses driving floating jump shot,api text
+4,2,3,4:36,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses two point shot,wnba.com shotDistance
+4,2,3,4:27,ATL,Isobel Borlase,1,three,3,Isobel Borlase makes 25-foot three point jumper (Jordin Canada assists),api text
+4,2,3,4:06,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup (Veronica Burton assists),api text
+4,2,3,3:41,ATL,Jordin Canada ,0,paint/short (5-14 ft),0,Kiah Stokes blocks Jordin Canada 's 6-foot driving layup,api text
+4,2,3,3:24,GSV,Gabby Williams,1,midrange (15+ ft 2PT),2,Gabby Williams makes 17-foot pullup jump shot (Veronica Burton assists),api text
+4,2,3,3:08,ATL,Rhyne Howard,0,paint/short (5-14 ft),0,Rhyne Howard misses driving floating jump shot,api text
+4,2,3,3:02,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses running layup,api text
+4,2,3,2:43,ATL,DeWanna Bonner,1,three,3,DeWanna Bonner makes 25-foot jump bank shot (Jordin Canada assists),api text
+4,2,3,2:30,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes 3-foot two point shot,api text
+4,2,3,2:19,ATL,DeWanna Bonner ,0,rim (0-4 ft),0,Kiah Stokes blocks DeWanna Bonner 's 3-foot driving layup,api text
+4,2,3,2:11,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 25-foot three point jumper,api text
+4,2,3,1:53,GSV,Tiffany Hayes,0,three,0,Tiffany Hayes misses 25-foot three point pullup jump shot,api text
+4,2,3,1:44,ATL,Isobel Borlase,0,rim (0-4 ft),0,Isobel Borlase misses driving layup,api text
+4,2,3,1:24,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 12-foot two point shot,api text
+4,2,3,1:14,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Allisha Gray misses driving floating jump shot,api text
+4,2,3,1:09,ATL,DeWanna Bonner,0,three,0,DeWanna Bonner misses 25-foot three point jumper,api text
+4,2,3,57.6,GSV,Veronica Burton,0,paint/short (5-14 ft),0,Veronica Burton misses two point shot,wnba.com shotDistance
+4,2,3,39.6,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 23-foot three point jumper,api text
+4,2,4,9:49,GSV,Kaitlyn Chen,0,rim (0-4 ft),0,Allisha Gray blocks Kaitlyn Chen's driving layup,api text
+4,2,4,9:26,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot three point jumper,api text
+4,2,4,9:01,GSV,Kaitlyn Chen ,0,paint/short (5-14 ft),0,Allisha Gray blocks Kaitlyn Chen 's 11-foot turnaround jump shot,api text
+4,2,4,8:46,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses driving layup,api text
+4,2,4,8:27,GSV,Gabby Williams,0,rim (0-4 ft),0,Gabby Williams misses driving layup,api text
+4,2,4,8:09,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+4,2,4,7:56,ATL,Allisha Gray,0,paint/short (5-14 ft),0,Allisha Gray misses 10-foot turnaround jump shot,api text
+4,2,4,7:50,ATL,Rhyne Howard,1,three,3,Rhyne Howard makes 25-foot three point jumper (Naz Hillmon assists),api text
+4,2,4,7:25,GSV,Tiffany Hayes ,0,paint/short (5-14 ft),0,Angel Reese blocks Tiffany Hayes 's 6-foot driving layup,api text
+4,2,4,7:13,ATL,Jordin Canada,1,rim (0-4 ft),2,Jordin Canada makes 2-foot two point shot,api text
+4,2,4,6:54,GSV,Veronica Burton,0,rim (0-4 ft),0,Veronica Burton misses driving layup,api text
+4,2,4,6:49,GSV,Gabby Williams,0,three,0,Gabby Williams misses 26-foot three point jumper,api text
+4,2,4,6:40,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot three point jumper,api text
+4,2,4,6:17,GSV,Tiffany Hayes,1,rim (0-4 ft),2,Tiffany Hayes makes driving layup,api text
+4,2,4,5:48,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses two point shot,wnba.com shotDistance
+4,2,4,5:28,GSV,Tiffany Hayes,1,paint/short (5-14 ft),2,Tiffany Hayes makes 9-foot driving floating jump shot,api text
+4,2,4,5:12,ATL,Rhyne Howard,1,paint/short (5-14 ft),2,Rhyne Howard makes 13-foot two point shot,api text
+4,2,4,4:49,ATL,Isobel Borlase,1,rim (0-4 ft),2,Isobel Borlase makes running layup,api text
+4,2,4,4:23,GSV,Veronica Burton,1,three,3,Veronica Burton makes 24-foot three point step back jumpshot (Gabby Williams assists),api text
+4,2,4,4:06,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses layup,api text
+4,2,4,4:02,ATL,Angel Reese,0,rim (0-4 ft),0,Angel Reese misses 2-foot tip shot,api text
+4,2,4,3:43,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 9-foot two point shot,api text
+4,2,4,3:22,ATL,Angel Reese,0,paint/short (5-14 ft),0,Angel Reese misses 5-foot two point shot,api text
+4,2,4,2:56,GSV,Veronica Burton,0,three,0,Veronica Burton misses 25-foot three point jumper,api text
+4,2,4,2:10,GSV,Veronica Burton,0,three,0,Veronica Burton misses 25-foot three point step back jumpshot,api text
+4,2,4,1:56,GSV,Gabby Williams,0,paint/short (5-14 ft),0,Gabby Williams misses 13-foot pullup jump shot,api text
+4,2,4,1:36,ATL,Angel Reese,1,rim (0-4 ft),2,Angel Reese makes driving layup,api text
+4,2,4,1:11,GSV,Kayla Thornton,0,three,0,Kayla Thornton misses 24-foot three point jumper,api text
+4,2,4,1:04,ATL,Allisha Gray,0,three,0,Allisha Gray misses 24-foot running jump shot,api text
+4,2,4,59.5,ATL,Isobel Borlase,0,three,0,Isobel Borlase misses 24-foot three point jumper,api text
+4,2,4,34.6,GSV,Veronica Burton,1,paint/short (5-14 ft),2,Veronica Burton makes 11-foot two point shot,api text
+4,2,4,28.7,ATL,Rhyne Howard,1,rim (0-4 ft),2,Rhyne Howard makes driving layup,api text
+4,2,4,19.7,ATL,Rhyne Howard,0,three,0,Rhyne Howard misses 25-foot three point jumper,api text
+4,2,4,15.2,ATL,Jordin Canada,0,three,0,Jordin Canada misses 24-foot three point jumper,api text

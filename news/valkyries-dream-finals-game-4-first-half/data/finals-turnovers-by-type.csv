@@ -1,0 +1,124 @@
+team,game,player,category,turnovers,live_ball,opp_points_within_24s,opp_points_per_turnover
+ATL,1,team,DEAD-BALL (no steal),5,0,8,1.6
+ATL,1,team,LIVE-BALL (steal),7,7,9,1.29
+ATL,1,team,bad pass,6,5,10,1.67
+ATL,1,team,lost ball,2,2,2,1.0
+ATL,1,team,opposite basket,1,0,0,0.0
+ATL,1,team,out of bounds (non-pass),1,0,3,3.0
+ATL,1,team,travel,2,0,2,1.0
+ATL,2,team,DEAD-BALL (no steal),6,0,1,0.17
+ATL,2,team,LIVE-BALL (steal),8,8,10,1.25
+ATL,2,team,bad pass,6,5,6,1.0
+ATL,2,team,lost ball,5,3,5,1.0
+ATL,2,team,offensive foul,1,0,0,0.0
+ATL,2,team,travel,2,0,0,0.0
+ATL,3,team,DEAD-BALL (no steal),4,0,0,0.0
+ATL,3,team,LIVE-BALL (steal),6,6,7,1.17
+ATL,3,team,bad pass,4,4,3,0.75
+ATL,3,team,lost ball,3,2,4,1.33
+ATL,3,team,offensive foul,1,0,0,0.0
+ATL,3,team,shot clock,2,0,0,0.0
+ATL,4,team,DEAD-BALL (no steal),10,0,7,0.7
+ATL,4,team,LIVE-BALL (steal),8,8,9,1.12
+ATL,4,team,bad pass,8,7,7,0.88
+ATL,4,team,lost ball,1,1,2,2.0
+ATL,4,team,offensive foul,5,0,3,0.6
+ATL,4,team,shot clock,1,0,2,2.0
+ATL,4,team,travel,3,0,2,0.67
+ATL,all,Allisha Gray,bad pass,1,1,0,0.0
+ATL,all,Allisha Gray,lost ball,2,1,2,1.0
+ATL,all,Allisha Gray,offensive foul,2,0,0,0.0
+ATL,all,Allisha Gray,out of bounds (non-pass),1,0,3,3.0
+ATL,all,Angel Reese,bad pass,6,4,7,1.17
+ATL,all,Angel Reese,lost ball,1,1,0,0.0
+ATL,all,Angel Reese,offensive foul,4,0,3,0.75
+ATL,all,Angel Reese,opposite basket,1,0,0,0.0
+ATL,all,Angel Reese,travel,2,0,2,1.0
+ATL,all,DeWanna Bonner,bad pass,2,2,2,1.0
+ATL,all,DeWanna Bonner,travel,1,0,0,0.0
+ATL,all,Isobel Borlase,lost ball,2,2,2,1.0
+ATL,all,Isobel Borlase,offensive foul,1,0,0,0.0
+ATL,all,Isobel Borlase,travel,1,0,0,0.0
+ATL,all,Jordin Canada,bad pass,9,8,14,1.56
+ATL,all,Jordin Canada,lost ball,4,3,7,1.75
+ATL,all,Madina Okot,travel,1,0,0,0.0
+ATL,all,Naz Hillmon,bad pass,1,1,0,0.0
+ATL,all,Naz Hillmon,lost ball,1,0,0,0.0
+ATL,all,Naz Hillmon,travel,1,0,0,0.0
+ATL,all,Rhyne Howard,bad pass,5,5,3,0.6
+ATL,all,Rhyne Howard,lost ball,1,1,2,2.0
+ATL,all,Rhyne Howard,travel,1,0,2,2.0
+ATL,all,TEAM,shot clock,3,0,2,0.67
+ATL,all,team,DEAD-BALL (no steal),25,0,16,0.64
+ATL,all,team,LIVE-BALL (steal),29,29,35,1.21
+ATL,all,team,bad pass,24,21,26,1.08
+ATL,all,team,lost ball,11,8,13,1.18
+ATL,all,team,offensive foul,7,0,3,0.43
+ATL,all,team,opposite basket,1,0,0,0.0
+ATL,all,team,out of bounds (non-pass),1,0,3,3.0
+ATL,all,team,shot clock,3,0,2,0.67
+ATL,all,team,travel,7,0,4,0.57
+GSV,1,team,DEAD-BALL (no steal),5,0,6,1.2
+GSV,1,team,LIVE-BALL (steal),5,5,2,0.4
+GSV,1,team,bad pass,4,4,2,0.5
+GSV,1,team,lost ball,1,1,0,0.0
+GSV,1,team,other,1,0,0,0.0
+GSV,1,team,palming,1,0,2,2.0
+GSV,1,team,shot clock,2,0,2,1.0
+GSV,1,team,travel,1,0,2,2.0
+GSV,2,team,DEAD-BALL (no steal),5,0,4,0.8
+GSV,2,team,LIVE-BALL (steal),14,14,20,1.43
+GSV,2,team,bad pass,11,10,14,1.27
+GSV,2,team,lost ball,6,4,8,1.33
+GSV,2,team,shot clock,1,0,2,2.0
+GSV,2,team,travel,1,0,0,0.0
+GSV,3,team,DEAD-BALL (no steal),8,0,6,0.75
+GSV,3,team,LIVE-BALL (steal),9,9,17,1.89
+GSV,3,team,bad pass,6,5,7,1.17
+GSV,3,team,lost ball,5,4,10,2.0
+GSV,3,team,offensive foul,2,0,6,3.0
+GSV,3,team,out of bounds (non-pass),1,0,0,0.0
+GSV,3,team,shot clock,2,0,0,0.0
+GSV,3,team,travel,1,0,0,0.0
+GSV,4,team,DEAD-BALL (no steal),5,0,4,0.8
+GSV,4,team,LIVE-BALL (steal),4,4,4,1.0
+GSV,4,team,bad pass,1,1,2,2.0
+GSV,4,team,lost ball,3,3,2,0.67
+GSV,4,team,offensive foul,3,0,2,0.67
+GSV,4,team,travel,2,0,2,1.0
+GSV,all,Aminata Gueye,offensive foul,1,0,3,3.0
+GSV,all,Cecilia Zandalasini,bad pass,5,4,6,1.2
+GSV,all,Cecilia Zandalasini,offensive foul,1,0,2,2.0
+GSV,all,Cecilia Zandalasini,travel,2,0,3,1.5
+GSV,all,Gabby Williams,bad pass,5,4,3,0.6
+GSV,all,Gabby Williams,lost ball,4,3,2,0.5
+GSV,all,Gabby Williams,offensive foul,1,0,3,3.0
+GSV,all,Janelle Salaun,lost ball,2,1,5,2.5
+GSV,all,Kaila Charles,bad pass,4,4,4,1.0
+GSV,all,Kaila Charles,lost ball,1,1,2,2.0
+GSV,all,Kaila Charles,travel,1,0,0,0.0
+GSV,all,Kaitlyn Chen,lost ball,1,1,2,2.0
+GSV,all,Kayla Thornton,lost ball,1,1,1,1.0
+GSV,all,Kiah Stokes,bad pass,1,1,2,2.0
+GSV,all,Kiah Stokes,lost ball,2,2,3,1.5
+GSV,all,Kiah Stokes,offensive foul,1,0,0,0.0
+GSV,all,Kiah Stokes,travel,2,0,1,0.5
+GSV,all,TEAM,shot clock,5,0,4,0.8
+GSV,all,Tiffany Hayes,bad pass,2,2,5,2.5
+GSV,all,Tiffany Hayes,lost ball,3,3,5,1.67
+GSV,all,Tiffany Hayes,offensive foul,1,0,0,0.0
+GSV,all,Tiffany Hayes,palming,1,0,2,2.0
+GSV,all,Veronica Burton,bad pass,5,5,5,1.0
+GSV,all,Veronica Burton,lost ball,1,0,0,0.0
+GSV,all,Veronica Burton,other,1,0,0,0.0
+GSV,all,Veronica Burton,out of bounds (non-pass),1,0,0,0.0
+GSV,all,team,DEAD-BALL (no steal),23,0,20,0.87
+GSV,all,team,LIVE-BALL (steal),32,32,43,1.34
+GSV,all,team,bad pass,22,20,25,1.14
+GSV,all,team,lost ball,15,12,20,1.33
+GSV,all,team,offensive foul,5,0,8,1.6
+GSV,all,team,other,1,0,0,0.0
+GSV,all,team,out of bounds (non-pass),1,0,0,0.0
+GSV,all,team,palming,1,0,2,2.0
+GSV,all,team,shot clock,5,0,4,0.8
+GSV,all,team,travel,5,0,4,0.8

@@ -1,0 +1,9 @@
+game_number,game_id,player,team,opponent,team_result,minutes,points,field_goals_made,field_goals_attempted,three_pointers_made,three_pointers_attempted,free_throws_made,free_throws_attempted,offensive_rebounds,defensive_rebounds,rebounds,assists,steals,blocks,personal_fouls,turnovers,plus_minus,field_goal_percentage_pct,three_point_percentage_pct,free_throw_percentage_pct,source_boxscore_url,data_cutoff
+1,1042600301,Angel Reese,ATL,GSV,L,34:52,14,5,11,0,1,4,7,5,7,12,0,2,1,5,4,2,45.454545,0,57.142857,https://www.wnba.com/game/atl-vs-gsv-1042600301/box-score,2026-10-24
+1,1042600301,Rhyne Howard,ATL,GSV,L,38:03,12,3,14,2,9,4,4,0,7,7,4,1,2,5,3,-3,21.428571,22.222222,100,https://www.wnba.com/game/atl-vs-gsv-1042600301/box-score,2026-10-24
+2,1042600302,Angel Reese,ATL,GSV,W,33:48,30,10,16,1,1,9,11,4,12,16,3,1,2,5,2,13,62.5,100,81.818182,https://www.wnba.com/game/atl-vs-gsv-1042600302/box-score,2026-10-24
+2,1042600302,Rhyne Howard,ATL,GSV,W,27:28,5,2,7,1,5,0,0,1,1,2,2,6,1,4,1,-2,28.571429,20,,https://www.wnba.com/game/atl-vs-gsv-1042600302/box-score,2026-10-24
+3,1042600303,Angel Reese,ATL,GSV,W,34:25,21,7,12,2,2,5,5,2,10,12,3,3,0,3,2,12,58.333333,100,100,https://www.wnba.com/game/gsv-vs-atl-1042600303/box-score,2026-10-24
+3,1042600303,Rhyne Howard,ATL,GSV,W,27:08,16,4,11,1,2,7,10,2,2,4,4,5,1,5,0,15,36.363636,50,70,https://www.wnba.com/game/gsv-vs-atl-1042600303/box-score,2026-10-24
+4,1042600304,Angel Reese,ATL,GSV,L,34:05,8,2,12,0,1,4,6,3,6,9,3,1,3,4,6,1,16.666667,0,66.666667,https://www.wnba.com/game/gsv-vs-atl-1042600304/box-score,2026-10-24
+4,1042600304,Rhyne Howard,ATL,GSV,L,37:07,19,6,14,2,8,5,7,3,5,8,1,0,1,0,3,-6,42.857143,25,71.428571,https://www.wnba.com/game/gsv-vs-atl-1042600304/box-score,2026-10-24

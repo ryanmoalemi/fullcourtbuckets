@@ -1,0 +1,110 @@
+game,period,clock,team,player,type,live_ball_steal,stolen_by,opp_points_next_24s,text
+1,1,6:39,GSV,Cecilia Zandalasini,bad pass,1,Jordin Canada,2,Cecilia Zandalasini bad pass turnover (Jordin Canada steals)
+1,1,3:39,ATL,Angel Reese,travel,0,,2,Angel Reese traveling turnover
+1,1,2:18,GSV,Tiffany Hayes,palming,0,,2,Tiffany Hayes palming turnover
+1,2,8:57,ATL,Allisha Gray,out of bounds (non-pass),0,,3,Allisha Gray steps out of bounds turnover
+1,2,8:10,GSV,Veronica Burton,other,0,,0,Veronica Burton back court turnover
+1,2,7:36,GSV,Cecilia Zandalasini,travel,0,,2,Cecilia Zandalasini traveling turnover
+1,2,4:11,GSV,TEAM,shot clock,0,,0,shot clock turnover
+1,2,3:14,ATL,Rhyne Howard,bad pass,1,Laeticia Amihere,0,Rhyne Howard bad pass turnover (Laeticia Amihere steals)
+1,2,1:59,GSV,Veronica Burton,bad pass,1,Rhyne Howard,0,Veronica Burton bad pass turnover (Rhyne Howard steals)
+1,2,1:56,ATL,Angel Reese,bad pass,1,Tiffany Hayes,3,Angel Reese bad pass turnover (Tiffany Hayes steals)
+1,2,1:32,ATL,Jordin Canada,bad pass,1,Gabby Williams,2,Jordin Canada bad pass turnover (Gabby Williams steals)
+1,3,8:26,ATL,Angel Reese,lost ball,1,Veronica Burton,0,Angel Reese lost ball turnover (Veronica Burton steals)
+1,3,6:23,ATL,Angel Reese,opposite basket,0,,0,Angel Reese opposite basket turnover
+1,3,5:22,ATL,Naz Hillmon,travel,0,,0,Naz Hillmon traveling turnover
+1,3,3:54,ATL,Jordin Canada,bad pass,1,Kaila Charles,2,Jordin Canada bad pass turnover (Kaila Charles steals)
+1,3,3:35,ATL,Jordin Canada,bad pass,0,,3,Jordin Canada out of bounds bad pass turnover
+1,3,1:14,GSV,TEAM,shot clock,0,,2,shot clock turnover
+1,4,6:33,ATL,Rhyne Howard,lost ball,1,Kaila Charles,2,Rhyne Howard lost ball turnover (Kaila Charles steals)
+1,4,2:53,GSV,Kaila Charles,bad pass,1,Jordin Canada,0,Kaila Charles bad pass turnover (Jordin Canada steals)
+1,4,2:04,ATL,Rhyne Howard,bad pass,1,Cecilia Zandalasini,0,Rhyne Howard bad pass turnover (Cecilia Zandalasini steals)
+1,4,1:41,GSV,Gabby Williams,bad pass,1,Angel Reese,0,Gabby Williams bad pass turnover (Angel Reese steals)
+1,4,46.1,GSV,Gabby Williams,lost ball,1,Angel Reese,0,Gabby Williams lost ball turnover (Angel Reese steals)
+2,1,9:41,ATL,Naz Hillmon,lost ball,0,,0,Naz Hillmon out of bounds lost ball turnover
+2,1,9:24,GSV,Kiah Stokes,bad pass,1,Rhyne Howard,2,Kiah Stokes bad pass turnover (Rhyne Howard steals)
+2,1,6:04,ATL,Jordin Canada,lost ball,1,Veronica Burton,3,Jordin Canada lost ball turnover (Veronica Burton steals)
+2,1,5:07,GSV,Gabby Williams,lost ball,1,Rhyne Howard,2,Gabby Williams lost ball turnover (Rhyne Howard steals)
+2,1,3:15,GSV,TEAM,shot clock,0,,2,shot clock turnover
+2,1,2:46,GSV,Cecilia Zandalasini,bad pass,0,,0,Cecilia Zandalasini bad pass turnover
+2,1,1:30,ATL,Madina Okot,travel,0,,0,Madina Okot traveling turnover
+2,1,1:15,GSV,Janelle Salaun,lost ball,0,,2,Janelle Salaun out of bounds lost ball turnover
+2,1,26.4,ATL,Angel Reese,offensive foul,0,,0,Angel Reese offensive foul turnover
+2,2,9:07,GSV,Kaila Charles,bad pass,1,Isobel Borlase,2,Kaila Charles bad pass turnover (Isobel Borlase steals)
+2,2,6:41,ATL,Isobel Borlase,lost ball,1,Kayla Thornton,0,Isobel Borlase lost ball turnover (Kayla Thornton steals)
+2,2,6:36,GSV,Veronica Burton,lost ball,0,,0,Veronica Burton out of bounds lost ball turnover
+2,2,6:33,ATL,Allisha Gray,lost ball,0,,0,Allisha Gray out of bounds lost ball turnover
+2,2,6:12,GSV,Kiah Stokes,travel,0,,0,Kiah Stokes traveling turnover
+2,2,5:12,ATL,Jordin Canada,lost ball,1,Veronica Burton,2,Jordin Canada lost ball turnover (Veronica Burton steals)
+2,2,3:45,ATL,Allisha Gray,bad pass,1,Gabby Williams,0,Allisha Gray bad pass turnover (Gabby Williams steals)
+2,3,9:42,GSV,Gabby Williams,bad pass,1,Rhyne Howard,0,Gabby Williams bad pass turnover (Rhyne Howard steals)
+2,3,9:39,ATL,Rhyne Howard,bad pass,1,Gabby Williams,3,Rhyne Howard bad pass turnover (Gabby Williams steals)
+2,3,9:10,ATL,Naz Hillmon,bad pass,1,Gabby Williams,0,Naz Hillmon bad pass turnover (Gabby Williams steals)
+2,3,9:03,GSV,Gabby Williams,bad pass,1,Rhyne Howard,1,Gabby Williams bad pass turnover (Rhyne Howard steals)
+2,3,8:36,GSV,Veronica Burton,bad pass,1,Allisha Gray,0,Veronica Burton bad pass turnover (Allisha Gray steals)
+2,3,6:49,GSV,Cecilia Zandalasini,bad pass,1,DeWanna Bonner,2,Cecilia Zandalasini bad pass turnover (DeWanna Bonner steals)
+2,3,6:23,ATL,DeWanna Bonner,travel,0,,0,DeWanna Bonner traveling turnover
+2,3,3:12,GSV,Kaitlyn Chen,lost ball,1,Rhyne Howard,2,Kaitlyn Chen lost ball turnover (Rhyne Howard steals)
+2,3,2:37,GSV,Tiffany Hayes,bad pass,1,DeWanna Bonner,2,Tiffany Hayes bad pass turnover (DeWanna Bonner steals)
+2,3,26.1,GSV,Kaila Charles,lost ball,1,Angel Reese,2,Kaila Charles lost ball turnover (Angel Reese steals)
+2,3,3.1,GSV,Tiffany Hayes,bad pass,1,Jordin Canada,3,Tiffany Hayes bad pass turnover (Jordin Canada steals)
+2,4,9:03,GSV,Veronica Burton,bad pass,1,DeWanna Bonner,2,Veronica Burton bad pass turnover (DeWanna Bonner steals)
+2,4,8:46,GSV,Cecilia Zandalasini,bad pass,1,DeWanna Bonner,0,Cecilia Zandalasini bad pass turnover (DeWanna Bonner steals)
+2,4,5:31,ATL,Angel Reese,bad pass,0,,1,Angel Reese out of bounds bad pass turnover
+2,4,3:29,GSV,Tiffany Hayes,lost ball,1,Rhyne Howard,0,Tiffany Hayes lost ball turnover (Rhyne Howard steals)
+2,4,3:08,ATL,Jordin Canada,bad pass,1,Tiffany Hayes,2,Jordin Canada bad pass turnover (Tiffany Hayes steals)
+2,4,2:40,ATL,Jordin Canada,bad pass,1,Gabby Williams,0,Jordin Canada bad pass turnover (Gabby Williams steals)
+3,1,7:25,GSV,Veronica Burton,out of bounds (non-pass),0,,0,Veronica Burton steps out of bounds turnover
+3,1,7:09,GSV,Gabby Williams,bad pass,0,,0,Gabby Williams out of bounds bad pass turnover
+3,1,5:40,GSV,TEAM,shot clock,0,,0,shot clock turnover
+3,1,4:11,ATL,TEAM,shot clock,0,,0,shot clock turnover
+3,1,1:52,GSV,Tiffany Hayes,lost ball,1,Angel Reese,3,Tiffany Hayes lost ball turnover (Angel Reese steals)
+3,2,9:12,GSV,Kaila Charles,bad pass,1,Rhyne Howard,0,Kaila Charles bad pass turnover (Rhyne Howard steals)
+3,2,6:45,GSV,Janelle Salaun,lost ball,1,Rhyne Howard,3,Janelle Salaun lost ball turnover (Rhyne Howard steals)
+3,2,6:20,GSV,Veronica Burton,bad pass,1,Angel Reese,3,Veronica Burton bad pass turnover (Angel Reese steals)
+3,2,5:54,ATL,Jordin Canada,lost ball,0,,0,Jordin Canada out of bounds lost ball turnover
+3,2,5:40,GSV,Gabby Williams,bad pass,1,Rhyne Howard,2,Gabby Williams bad pass turnover (Rhyne Howard steals)
+3,2,4:25,ATL,Jordin Canada,lost ball,1,Veronica Burton,2,Jordin Canada lost ball turnover (Veronica Burton steals)
+3,2,4:03,ATL,Angel Reese,bad pass,1,Gabby Williams,3,Angel Reese bad pass turnover (Gabby Williams steals)
+3,2,2:17,GSV,Kiah Stokes,lost ball,1,Jordin Canada,3,Kiah Stokes lost ball turnover (Jordin Canada steals)
+3,2,1:00,ATL,TEAM,shot clock,0,,0,shot clock turnover
+3,2,5.6,ATL,Jordin Canada,bad pass,1,Kiah Stokes,0,Jordin Canada bad pass turnover (Kiah Stokes steals)
+3,2,1.3,GSV,Gabby Williams,lost ball,0,,0,Gabby Williams out of bounds lost ball turnover
+3,3,9:32,ATL,Allisha Gray,lost ball,1,Gabby Williams,2,Allisha Gray lost ball turnover (Gabby Williams steals)
+3,3,8:39,ATL,Jordin Canada,bad pass,1,Cecilia Zandalasini,0,Jordin Canada bad pass turnover (Cecilia Zandalasini steals)
+3,3,8:17,GSV,Kayla Thornton,lost ball,1,Rhyne Howard,1,Kayla Thornton lost ball turnover (Rhyne Howard steals)
+3,3,3:31,ATL,Angel Reese,offensive foul,0,,0,Angel Reese offensive foul turnover
+3,3,3:20,GSV,Aminata Gueye,offensive foul,0,,3,Aminata Gueye offensive foul turnover
+3,3,1:40,GSV,TEAM,shot clock,0,,0,shot clock turnover
+3,3,48.0,GSV,Gabby Williams,offensive foul,0,,3,Gabby Williams offensive foul turnover
+3,3,13.6,GSV,Kaila Charles,travel,0,,0,Kaila Charles traveling turnover
+3,4,8:01,GSV,Veronica Burton,bad pass,1,Angel Reese,0,Veronica Burton bad pass turnover (Angel Reese steals)
+3,4,6:49,GSV,Cecilia Zandalasini,bad pass,1,Rhyne Howard,2,Cecilia Zandalasini bad pass turnover (Rhyne Howard steals)
+3,4,2:11,ATL,DeWanna Bonner,bad pass,1,Gabby Williams,0,DeWanna Bonner bad pass turnover (Gabby Williams steals)
+4,1,9:06,GSV,Tiffany Hayes,offensive foul,0,,0,Tiffany Hayes offensive foul turnover
+4,1,7:27,ATL,Jordin Canada,bad pass,1,Veronica Burton,2,Jordin Canada bad pass turnover (Veronica Burton steals)
+4,1,6:26,ATL,Allisha Gray,offensive foul,0,,0,Allisha Gray offensive foul turnover
+4,1,4:39,ATL,Isobel Borlase,lost ball,1,Cecilia Zandalasini,2,Isobel Borlase lost ball turnover (Cecilia Zandalasini steals)
+4,1,4:24,ATL,Rhyne Howard,travel,0,,2,Rhyne Howard traveling turnover
+4,1,3:57,ATL,Rhyne Howard,bad pass,1,Gabby Williams,0,Rhyne Howard bad pass turnover (Gabby Williams steals)
+4,1,2:30,ATL,Jordin Canada,bad pass,1,Cecilia Zandalasini,3,Jordin Canada bad pass turnover (Cecilia Zandalasini steals)
+4,1,1:10,ATL,Angel Reese,travel,0,,0,Angel Reese traveling turnover
+4,1,49.1,GSV,Cecilia Zandalasini,offensive foul,0,,2,Cecilia Zandalasini offensive foul turnover
+4,2,9:19,GSV,Kaila Charles,bad pass,1,Angel Reese,2,Kaila Charles bad pass turnover (Angel Reese steals)
+4,2,8:36,ATL,Angel Reese,bad pass,0,,0,Angel Reese out of bounds bad pass turnover
+4,2,7:59,GSV,Cecilia Zandalasini,travel,0,,1,Cecilia Zandalasini traveling turnover
+4,2,7:23,ATL,Angel Reese,offensive foul,0,,0,Angel Reese offensive foul turnover
+4,2,5:39,ATL,Angel Reese,bad pass,1,Cecilia Zandalasini,0,Angel Reese bad pass turnover (Cecilia Zandalasini steals)
+4,2,4:53,ATL,TEAM,shot clock,0,,2,shot clock turnover
+4,2,1:57,ATL,Angel Reese,offensive foul,0,,3,Angel Reese offensive foul turnover
+4,2,25.1,ATL,DeWanna Bonner,bad pass,1,Gabby Williams,2,DeWanna Bonner bad pass turnover (Gabby Williams steals)
+4,2,4.2,ATL,Isobel Borlase,travel,0,,0,Isobel Borlase traveling turnover
+4,3,7:46,GSV,Kiah Stokes,travel,0,,1,Kiah Stokes traveling turnover
+4,3,6:57,ATL,Allisha Gray,offensive foul,0,,0,Allisha Gray offensive foul turnover
+4,3,3:05,ATL,Rhyne Howard,bad pass,1,Veronica Burton,0,Rhyne Howard bad pass turnover (Veronica Burton steals)
+4,3,1:47,GSV,Kiah Stokes,lost ball,1,DeWanna Bonner,0,Kiah Stokes lost ball turnover (DeWanna Bonner steals)
+4,3,48.3,GSV,Gabby Williams,lost ball,1,Isobel Borlase,0,Gabby Williams lost ball turnover (Isobel Borlase steals)
+4,4,7:40,GSV,Kiah Stokes,offensive foul,0,,0,Kiah Stokes offensive foul turnover
+4,4,7:34,ATL,Isobel Borlase,offensive foul,0,,0,Isobel Borlase offensive foul turnover
+4,4,4:54,GSV,Tiffany Hayes,lost ball,1,Isobel Borlase,2,Tiffany Hayes lost ball turnover (Isobel Borlase steals)
+4,4,9.8,ATL,Angel Reese,bad pass,1,Veronica Burton,0,Angel Reese bad pass turnover (Veronica Burton steals)
