@@ -15,6 +15,7 @@ git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
 now() { TZ=America/Los_Angeles date '+%-I:%M:%S %p PT'; }
 push() {
   python automation/pbp_guard.py check "$PAGE" "$GJ" || { echo "$(now) GUARD blocked commit ($1)"; git checkout -q -- data "$PD" 2>/dev/null; return 1; }
+  python automation/social_meta.py --tags-only >/dev/null 2>&1 || true
   git add -A -- data "$PD"
   git diff --cached --quiet && { echo "$(now) no change"; return 0; }
   git commit -qm "Game $N play-by-play: $1"

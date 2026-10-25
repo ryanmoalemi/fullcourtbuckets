@@ -19,8 +19,8 @@ import internal_links as links
 
 ASPECT = 16 / 9
 HERO_1X = (1200, 675)
-# Open Graph and Twitter large cards are 1.91:1. 1200x628 is that ratio.
-OG_1X = (1200, 628)
+# Open Graph and Twitter large cards: X and Facebook both recommend exactly 1200x630.
+OG_1X = (1200, 630)
 OG_ASPECT = OG_1X[0] / OG_1X[1]
 # A second file is worth serving only when it is clearly sharper than 1200.
 HERO_2X_MIN = 1440
@@ -240,22 +240,17 @@ def write_heroes(source: Path, focal: str) -> dict:
 
 
 def _write_og(image: Image.Image, focal: str, source: Path) -> tuple[Path, int, int]:
-    """1.91:1 social crop. Does not upscale. Shares the lead focal point."""
+    """1200x630 social crop sharing the lead focal point.
+
+    Social cards are always exactly 1200x630 (X/Facebook large-card size). A smaller
+    source crop is scaled up for this share file only; the in-article hero never is.
+    """
     cropped = crop_image(image, focal, OG_ASPECT)
-    crop_w = cropped.size[0]
     wide = source.parent / 'og-1200.jpg'
-    small = source.parent / 'og.jpg'
-    for old in ('og-1200.webp', 'og.webp', 'og-1200.jpg', 'og.jpg'):
+    for old in ('og-1200.webp', 'og.webp', 'og.jpg'):
         (source.parent / old).unlink(missing_ok=True)
-    if crop_w >= OG_1X[0]:
-        small.unlink(missing_ok=True)
-        _save_jpeg(_resize(cropped, OG_1X[0], OG_1X[1]), wide)
-        return wide, OG_1X[0], OG_1X[1]
-    snapped = max(2, crop_w - (crop_w % 2))
-    height = max(1, int(round(snapped / OG_ASPECT)))
-    wide.unlink(missing_ok=True)
-    _save_jpeg(_resize(cropped, snapped, height), small)
-    return small, snapped, height
+    _save_jpeg(cropped.resize(OG_1X, Image.LANCZOS), wide)
+    return wide, OG_1X[0], OG_1X[1]
 
 
 def _iou(a: tuple[int, int, int, int], b: tuple[int, int, int, int]) -> float:
