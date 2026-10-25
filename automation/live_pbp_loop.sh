@@ -7,7 +7,7 @@ set -u
 cfg() { python3 -c "import json;print(json.load(open('data/live-pbp.json'))['$1'])"; }
 N=$(cfg game_number); D=$(cfg date); SID=$(cfg site_id); GJ=$(cfg game_json); PD=$(cfg page_dir); STOP=$(cfg stop_after_pt)
 TEAMS=$(python3 -c "import json;print(','.join(json.load(open('data/live-pbp.json'))['teams']))")
-POLL=${POLL_SECONDS:-30}; MINPUSH=${MIN_PUSH_SECONDS:-60}; PAGE="$PD/play-by-play/index.html"
+POLL=${POLL_SECONDS:-30}; MINPUSH=${MIN_PUSH_SECONDS:-30}; PAGE="$PD/play-by-play/index.html"
 export LIVE_PBP_PATH_FILE="${RUNNER_TEMP:-/tmp}/live_pbp_path"
 DRY=${DRY_RUN:-0}; last_push=0; pending=0
 git config user.name 'Full Court Buckets updater'

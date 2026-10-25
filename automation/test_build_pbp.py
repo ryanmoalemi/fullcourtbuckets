@@ -22,7 +22,7 @@ class BuildPbp(unittest.TestCase):
     def test_placeholder_has_no_plays(self):
         # Game 4 is final; the next unplayed game (Game 5) is the placeholder now.
         _, out = build_pbp.build('401918309')
-        self.assertIn('Live: updates within about a minute of each play.', out)
+        self.assertIn('Live: updates every 30 seconds.', out)
         self.assertIn('Series tied 2-2', out)
         self.assertIn('TV: USA Network (simulcast on CNBC). Streaming: Peacock.', out)
         self.assertNotIn('id="play-', out)
