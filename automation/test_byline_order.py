@@ -139,7 +139,9 @@ class BylineOrderTests(unittest.TestCase):
         self.assertIn('1.75 million', facts)
         self.assertNotIn('ESPN', facts)
         sheet = hub.split('tracker-compact', 1)[1].split('<tbody>', 1)[1].split('</tbody>', 1)[0]
-        self.assertEqual(sheet.count('<tr>'), 4)
+        import citation
+        played_or_set = [r for r in citation.FINALS_TRACKER_ROWS if r[-1] != 'If necessary']
+        self.assertEqual(sheet.count('<tr>'), len(played_or_set))
         self.assertNotIn('If necessary', sheet)
         self.assertNotIn('Chase Center', sheet)
         h1 = hub.find('</h1>')
