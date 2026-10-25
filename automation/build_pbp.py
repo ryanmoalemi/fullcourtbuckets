@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).parent))
 import site_nav  # noqa: E402
 import social_meta  # noqa: E402
+import seo_meta  # noqa: E402
 
 E = html.escape
 CONF = ROOT / 'data/pbp-games.json'
@@ -118,7 +119,7 @@ def shell_parts(title, desc, path, date):
          "dateModified": date, "isAccessibleForFree": True},
         {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
          {"@type": "ListItem", "position": 2, "name": "WNBA", "item": BASE + "/wnba/"}, {"@type": "ListItem", "position": 3, "name": title, "item": url}]}]}
-    meta = (f'<title>{E(title)} | Full Court Buckets</title><meta name="description" content="{E(desc)}"><link rel="canonical" href="{url}">'
+    meta = (f'<title>{E(seo_meta.fit_title(title.replace(": ", ", ", 1)))}</title><meta name="description" content="{E(seo_meta.pbp_description(desc))}"><link rel="canonical" href="{url}">'
             f'<meta property="og:type" content="website"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
             f'<meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/images/articles/dream-valkyries-finals-game-1-recap/hero-1200.webp">'
             f'<meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/pbp.css">'
@@ -217,7 +218,7 @@ def build(game_id, game_json=None, today=None, live=False):
         where = f"{qname(int(lp))} {lc_}" if lp else ''
         thru = (f"{NAME[A]} {d['away']['score']}, {NAME[H]} {d['home']['score']}, {where}. {series_text(after)} entering Game {n}. "
                 f"Updated {stamp}. {LIVE_NOTE} {len(rows)} plays so far, newest first.")
-    desc = f"Every play from Game {n} of the 2026 WNBA Finals ({hi[1]} {hi[0]}, {lo[1]} {lo[0]}): search, filter by player, team, play type, quarter, runs and clutch time, cite any play, download CSV or JSON."
+    desc = f"Every play from Game {n} of the 2026 WNBA Finals ({hi[1]} {hi[0]}, {lo[1]} {lo[0]}): search by player, team, quarter, runs and clutch time, and download CSV or JSON."
     head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
     per = d['periods']
     qrow = lambda t, k: f"<tr><td>{NAME[t]}</td>" + ''.join(f"<td>{x[k]}</td>" for x in per) + f"<td>{d[k]['score']}</td></tr>"

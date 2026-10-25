@@ -9,6 +9,7 @@ import json
 import re
 
 import build_owners as B
+import seo_meta
 
 MIN_EVENTS = 4
 PRIMARY_EVENT_TYPES = ('primary filing', 'official announcement', 'official publication')
@@ -143,8 +144,8 @@ def render_page(data: dict, person: str, rec: dict) -> str:
     ev = timeline(rec, person)
     title = f'{person}: {team} ownership record and timeline'
     head, top, bottom = B.shell_parts()
-    head = head.replace(f'<title>{B.esc(B.TITLE)}</title>', f'<title>{B.esc(title)} | Full Court Buckets</title>')
-    head = head.replace(B.CANONICAL, url).replace(B.esc(B.DESCRIPTION), B.esc(f'FCB ownership timeline for {person} and the {team}: deal, approvals, roles, facilities and credited valuations, each linked to its source.'))
+    head = head.replace(f'<title>{B.esc(B.TITLE)}</title>', f'<title>{B.esc(seo_meta.owner_title(person, team))}</title>')
+    head = head.replace(B.CANONICAL, url).replace(B.esc(B.DESCRIPTION), B.esc(seo_meta.fit_description(f'FCB ownership timeline for {person} and the {team}: deal, approvals, roles, facilities and credited valuations, each linked to its source.')))
     head = head.replace(B.esc(B.H1), B.esc(title))
     person_ld = {'@context': 'https://schema.org', '@type': 'Person', 'name': person, 'url': url,
                  'affiliation': {'@type': 'SportsTeam', 'name': team}, 'jobTitle': 'Controlling owner (as described in cited source)'}

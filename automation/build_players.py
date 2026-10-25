@@ -23,6 +23,7 @@ import rss_feed
 import wnba_sync
 import team_hub
 import team_names
+import seo_meta
 from link_graph import page_url
 
 BASE = 'https://fullcourtbuckets.com'
@@ -1745,17 +1746,8 @@ def cap_description(text, limit=DESCRIPTION_MAX) -> str:
 
 
 def player_title(name: str) -> str:
-    """'<Name> WNBA Stats & Profile | Full Court Buckets', shorter when that runs past 70 characters."""
-    full = f'{name} WNBA Stats & Profile | Full Court Buckets'
-    if len(full) <= TITLE_LIMIT:
-        return full
-    short = f'{name} WNBA Stats | Full Court Buckets'
-    if len(short) <= TITLE_LIMIT:
-        return short
-    tiny = f'{name} | Full Court Buckets'
-    if len(tiny) <= TITLE_LIMIT:
-        return tiny
-    return cap_description(tiny, TITLE_LIMIT)
+    """Sentence-case '<Name> WNBA stats and profile', 45-65 characters (see seo_meta)."""
+    return seo_meta.player_title(name)
 
 
 def player_has_records(profile) -> bool:
@@ -1796,7 +1788,7 @@ def player_description(profile, root=None) -> str:
         covered = text + ' Available coverage from 2008 onward.'
         if 'Available coverage from 2008 onward.' not in text and len(covered) <= DESCRIPTION_MAX:
             text = covered
-        return cap_description(text)
+        return seo_meta.player_description(cap_description(text))
     fields = bio_fields(p)
     pos = POSITION_WORDS.get(fields.get('position') or '', '')
     active = profile.get('active_in_provider_feed') is True
@@ -1812,7 +1804,7 @@ def player_description(profile, root=None) -> str:
         lead = f'{name} is a WNBA player profile.'
     else:
         lead = 'WNBA player profile.'
-    return cap_description(lead + ' No season records are listed on this page yet.')
+    return seo_meta.player_description(lead + ' No season records are listed on this page yet.')
 
 
 def _name_from_player_html(text: str) -> str:
@@ -2522,7 +2514,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
-    return document(f'{name} Roster | Full Court Buckets', team_description(slot, standing), route, body, structured, include_standings, menu)
+    return document(seo_meta.team_title(name), seo_meta.team_description(team_description(slot, standing)), route, body, structured, include_standings, menu)
 
 def teams_hub_page(root, linking, include_standings=True, menu=None):
     body, structured, title, description = team_hub.hub_parts(root, linking)
