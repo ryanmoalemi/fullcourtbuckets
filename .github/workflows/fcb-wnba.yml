@@ -137,6 +137,8 @@ jobs:
           if [ "${{ steps.key.outputs.ready }}" = true ]; then
             python automation/build_pbp.py --all
           fi
+      - name: Social share images and og/twitter tags on every page
+        run: python automation/social_meta.py
       - name: Check generated pages and sitemap before publication
         if: steps.key.outputs.ready == 'true'
         run: |
@@ -217,7 +219,7 @@ jobs:
         run: |
           git config user.name 'Full Court Buckets updater'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml sitemap/index.html docs/missing-data.md standings/index.html api/wnba-standings about/index.html authors/ryan-moalemi/index.html how-we-make-full-court-buckets/index.html contact/index.html privacy/index.html terms/index.html 404.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json images logo.png logo.webp articles.json docs/missing-alt.md docs/image-optimize.log search-index.json feed.xml news
+          git add -- content/social-cards.json data/wnba wnba index.html robots.txt player-sitemap.xml sitemap.xml pages-sitemap.xml sitemap/index.html docs/missing-data.md standings/index.html api/wnba-standings about/index.html authors/ryan-moalemi/index.html how-we-make-full-court-buckets/index.html contact/index.html privacy/index.html terms/index.html 404.html assets/site-nav.css assets/site-nav.js content/player-illustrations.json content/portrait-quality.json content/portrait-rollout.json content/portrait-quarantine.json images logo.png logo.webp articles.json docs/missing-alt.md docs/image-optimize.log search-index.json feed.xml news
           python -c "import json; arts=json.load(open('articles.json')); print('\n'.join(['news/index.html']+[p for a in arts for p in ('news/'+a['slug']+'/index.html', a['slug']+'/index.html')]))" | xargs -d '\n' git add --
           python -c "import sys; sys.path.insert(0,'automation'); import build_players as b; print('\n'.join(sorted(b.REMOVED_ADU_PATHS)))" | xargs -d '\n' git add --
           if ! git diff --cached --quiet; then

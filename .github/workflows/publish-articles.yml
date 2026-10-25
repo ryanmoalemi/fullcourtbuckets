@@ -23,6 +23,10 @@ jobs:
         env:
           PYTHONDONTWRITEBYTECODE: '1'
         run: python automation/publish_articles.py
+      - name: Social share images and og/twitter tags
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python automation/social_meta.py
       - name: Editorial, image, lead, and team checks
         working-directory: automation
         env:

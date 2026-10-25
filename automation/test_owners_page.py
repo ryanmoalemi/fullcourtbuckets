@@ -27,7 +27,8 @@ class OwnersPageTests(unittest.TestCase):
         cls.rendered = owners.render(cls.data, cls.stats)
 
     def test_committed_page_matches_the_generator(self):
-        self.assertEqual(self.html, self.rendered)
+        import social_meta  # share tags are added after every builder
+        self.assertEqual(social_meta.BLOCK_RE.sub('', self.html), social_meta.BLOCK_RE.sub('', self.rendered))
 
     def test_byline_sits_under_the_h1(self):
         self.assertEqual(byline_problems(self.html, 'owners'), [])
