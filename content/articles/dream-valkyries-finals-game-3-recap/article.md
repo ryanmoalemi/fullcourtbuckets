@@ -87,6 +87,8 @@ My preview pick, Atlanta to win Game 3, was right. The lean, the under 153.5, mi
 
 Game 4 is Saturday, Oct. 24, at 10 a.m. PT at State Farm Arena ([WNBA release](https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena)), on NBC and Peacock. The Finals are best of seven, so Atlanta is two wins from the first championship in franchise history. One lopsided game is a small sample, and Golden State won Game 1 by doing what it did not do Wednesday: winning the quarters outside the third.
 
+Watch every possession on the [Game 3 play-by-play page](/wnba/finals/2026/game-3/play-by-play/).
+
 Full Court Buckets gathers and verifies its own game data. Turnover totals include team turnovers.
 
 TV: NBC · Stream: Peacock

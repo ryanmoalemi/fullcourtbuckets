@@ -67,7 +67,8 @@
       },
       "tv": "NBC",
       "stream": "Peacock",
-      "game_json": "data/games/2026-10-24-gs-atl.json"
+      "game_json": "data/games/2026-10-24-gs-atl.json",
+      "recap": "/news/valkyries-dream-finals-game-4-recap/"
     },
     "401918309": {
       "number": 5,

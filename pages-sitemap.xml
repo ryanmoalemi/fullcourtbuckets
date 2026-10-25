@@ -292,4 +292,10 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-4-recap/</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
