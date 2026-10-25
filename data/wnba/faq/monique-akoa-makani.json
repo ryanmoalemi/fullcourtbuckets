@@ -1,94 +1,78 @@
 {
   "slug": "monique-akoa-makani",
   "player_name": "Monique Akoa Makani",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 25, 2026",
+  "verified_at": "2026-10-25",
   "items": [
     {
-      "question": "What are Monique Akoa Makani's stats / points per game?",
-      "answer": "In the 2026 regular season, Monique Akoa Makani averaged 7.7 points, 2.2 rebounds, and 2.7 assists in 41 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What were Monique Akoa Makani's 2026 averages?",
+      "answer": "In the 2026 regular season, Monique Akoa Makani averaged 9.4 points and 2.5 assists in 19 games for the Phoenix Mercury. After moving to the Los Angeles Sparks, she averaged 4.6 points and 1.7 assists in 11 games.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "monique akoa makani stats",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "Who is Monique Akoa Makani dating?",
-      "answer": "As of late 2026, Monique Akoa Makani has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Monique_Akoa_Makani"
+        "https://fullcourtbuckets.com/wnba/monique-akoa-makani/"
       ],
-      "google_keyword": "monique akoa makani partner",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Monique Akoa Makani make?",
-      "answer": "A precise public salary or net worth figure for Monique Akoa Makani is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "monique akoa makani salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Monique Akoa Makani?",
-      "answer": "Monique Akoa Makani is listed at 5' 11\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Monique_Akoa_Makani"
-      ],
-      "google_keyword": "monique akoa makani height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What did Monique Akoa Makani score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Portland Fire), Monique Akoa Makani had 6.0 points, 1.0 rebounds, and 3.0 assists in a 105-84 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "monique akoa makani playing tonight",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Monique Akoa Makani married?",
-      "answer": "There is no widely reported public record of Monique Akoa Makani being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Monique_Akoa_Makani"
-      ],
-      "google_keyword": "monique akoa makani husband",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Monique Akoa Makani injured?",
-      "answer": "Injury status changes during the season. Check the latest Los Angeles Sparks reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "monique akoa makani injury",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Monique Akoa Makani's parents?",
-      "answer": "Public profiles share limited verified detail about Monique Akoa Makani's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Monique_Akoa_Makani"
-      ],
-      "google_keyword": "monique akoa makani parents",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "monique akoa makani stats",
+          "vol": 1000
+        }
+      ]
     },
     {
       "question": "How old is Monique Akoa Makani?",
-      "answer": "Monique Akoa Makani was born February 4, 2001. As of late 2026 that puts her at 25 years old.",
+      "answer": "Monique Akoa Makani was born February 4, 2001, in Edea, Cameroon.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642777/monique-akoa-makani/bio"
+      ],
+      "queries": [
+        {
+          "q": "monique akoa makani age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Monique Akoa Makani?",
+      "answer": "The WNBA lists Monique Akoa Makani at 5 feet 11 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642777/monique-akoa-makani/bio"
+      ],
+      "queries": [
+        {
+          "q": "monique akoa makani height",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Was Monique Akoa Makani drafted?",
+      "answer": "No. Monique Akoa Makani was not drafted. She signed a training camp contract with the Phoenix Mercury on March 11, 2025, and made the 2025 WNBA All-Rookie Team.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642777/monique-akoa-makani/bio"
+      ],
+      "queries": [
+        {
+          "q": "monique akoa makani draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What team does Monique Akoa Makani play for?",
+      "answer": "Monique Akoa Makani plays guard for the Los Angeles Sparks. Phoenix traded her to Los Angeles on August 2, 2026, along with a 2027 first-round pick and a 2028 second-round pick, for Kelsey Plum.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Monique_Akoa_Makani"
+        "https://www.oursportscentral.com/services/releases/los-angeles-sparks-acquire-monique-akoa-makani-2027-first-round-pick-and-2028-second-round-pick-from-phoenix-mercury/n-6396227"
       ],
-      "google_keyword": "monique akoa makani age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2001-02-04"
+      "queries": [
+        {
+          "q": "monique akoa makani wnba",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

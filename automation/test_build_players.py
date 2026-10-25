@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 136)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 146)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -550,6 +550,10 @@ class BuildTests(unittest.TestCase):
             'serah-williams', 'tayler-hill', 'tyasha-harris', 'zia-cooke', 'alissa-pili',
             'cheyenne-parker-tyus', 'damiris-dantas', 'jade-melbourne', 'julie-allemand', 'katie-lou-samuelson',
         }
+        october_25 = {
+            'kia-nurse', 'leonie-fiebich', 'marta-xargay', 'monique-akoa-makani', 'natasha-mack',
+            'penny-taylor', 'rachel-banham', 'saylor-poffenbarger', 'stefanie-dolson', 'swin-cash',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -557,11 +561,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_22 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_23 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_24 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_25 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_24:
+            if slug in october_25:
+                expected_source = 'Google search demand via OpenSEO, Oct 25, 2026'
+            elif slug in october_24:
                 expected_source = 'Google search demand via OpenSEO, Oct 24, 2026'
             elif slug in october_23:
                 expected_source = 'Google search demand via OpenSEO, Oct 23, 2026'
@@ -604,8 +611,18 @@ class BuildTests(unittest.TestCase):
             # and Raegan Beers's leftovers are family, pay, or NIL.
             # Oct 24: same; Tayler Hill and Cheyenne Parker-Tyus have few searches
             # about them that are not relationships, pay, or other people.
+            # Oct 25: same; Monique Akoa Makani's and Natasha Mack's other searches
+            # are relationships or pay, and Leonie Fiebich's are mostly relationships.
             if slug == 'taniya-latson':
                 minimum = 3
+            elif slug in {'monique-akoa-makani', 'natasha-mack'}:
+                minimum = 5
+            elif slug in {'leonie-fiebich', 'saylor-poffenbarger'}:
+                minimum = 7
+            elif slug in {'marta-xargay', 'stefanie-dolson'}:
+                minimum = 8
+            elif slug in {'penny-taylor'}:
+                minimum = 9
             elif slug in {'cheyenne-parker-tyus'}:
                 minimum = 3
             elif slug in {'tayler-hill'}:

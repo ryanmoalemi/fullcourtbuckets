@@ -1,114 +1,205 @@
 {
   "slug": "rachel-banham",
   "player_name": "Rachel Banham",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 25, 2026",
+  "verified_at": "2026-10-25",
   "items": [
     {
-      "question": "What are Rachel Banham's stats / points per game?",
-      "answer": "In the 2026 regular season, Rachel Banham averaged 4.9 points, 1.2 rebounds, and 1.3 assists in 38 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rachel banham stats",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How much does Rachel Banham make?",
-      "answer": "A precise public salary or net worth figure for Rachel Banham is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Who are Rachel Banham's parents?",
+      "answer": "Rachel Banham is the daughter of Don and Mel Banham, according to Minnesota. She has an older brother, Cole, who played running back for the Gophers, a younger brother, Blake, and a younger sister, Paige.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://gophersports.com/sports/womens-basketball/roster/rachel-banham/8192"
       ],
-      "google_keyword": "rachel banham salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "rachel banham parents",
+          "vol": 390
+        },
+        {
+          "q": "rachel banham dad",
+          "vol": 40
+        },
+        {
+          "q": "rachel banham family",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "How tall is Rachel Banham?",
-      "answer": "Rachel Banham is listed at 5' 10\".",
-      "answer_kind": "bio",
+      "question": "What are Rachel Banham's stats?",
+      "answer": "In the 2026 regular season, Rachel Banham averaged 5.0 points, 1.2 rebounds, and 1.3 assists in 40 games for the Chicago Sky.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
+        "https://fullcourtbuckets.com/wnba/rachel-banham/"
       ],
-      "google_keyword": "rachel banham height",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "rachel banham stats",
+          "vol": 110
+        },
+        {
+          "q": "rachel banham wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "rachel banham stats per game",
+          "vol": 10
+        },
+        {
+          "q": "rachel banham points per game",
+          "vol": 10
+        },
+        {
+          "q": "rachel banham average points per game",
+          "vol": 10
+        },
+        {
+          "q": "rachel banham game log",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What team does Rachel Banham play for?",
+      "answer": "Rachel Banham plays guard for the Chicago Sky. Chicago acquired her in a trade with Connecticut during the 2024 season and re-signed her on April 11, 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sky.wnba.com/news/chicago-sky-re-sign-rachel-banham"
+      ],
+      "queries": [
+        {
+          "q": "rachel banham wnba",
+          "vol": 90
+        },
+        {
+          "q": "rachel banham chicago sky",
+          "vol": 30
+        },
+        {
+          "q": "who is rachel banham",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Rachel Banham?",
-      "answer": "She was born July 15, 1993 in Lakeville. As of late 2026 that puts her at 33 years old.",
+      "answer": "Rachel Banham was born July 15, 1993.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
+        "https://www.wnba.com/player/1627671/rachel-banham/bio"
       ],
-      "google_keyword": "rachel banham age",
-      "approx_monthly_volume": 50,
-      "birthdate": "1993-07-15"
+      "queries": [
+        {
+          "q": "rachel banham age",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "What is Rachel Banham's jersey number?",
-      "answer": "Rachel Banham wears number 24 for the Chicago Sky.",
+      "question": "How tall is Rachel Banham?",
+      "answer": "The WNBA lists Rachel Banham at 5 feet 10 inches and 181 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627671/rachel-banham/bio"
+      ],
+      "queries": [
+        {
+          "q": "rachel banham height",
+          "vol": 40
+        },
+        {
+          "q": "rachel banham height and weight",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What is Rachel Banham's three-point percentage?",
+      "answer": "In the 2026 regular season, Rachel Banham's three-point percentage is 32.4.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rachel banham jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Rachel Banham's contract?",
-      "answer": "Contract length and guarantees for Rachel Banham are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/rachel-banham/"
       ],
-      "google_keyword": "rachel banham contract",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "rachel banham 3-point stats",
+          "vol": 10
+        },
+        {
+          "q": "rachel banham 3 pointers per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Rachel Banham married?",
-      "answer": "There is no widely reported public record of Rachel Banham being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
-      ],
-      "google_keyword": "rachel banham husband",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Who is Rachel Banham?",
-      "answer": "Rachel Banham is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA) and the Lunar Owls of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
-      ],
-      "google_keyword": "who is rachel banham",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Rachel Banham's nationality?",
-      "answer": "Rachel Banham is American.",
+      "question": "What is Rachel Banham's career high?",
+      "answer": "Rachel Banham's WNBA career high is 29 points, set for Minnesota against Indiana on September 12, 2020. In college she tied the NCAA women's record with 60 points at Northwestern on February 7, 2016.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
+        "https://www.wnba.com/player/1627671/rachel-banham/bio"
       ],
-      "google_keyword": "rachel banham nationality",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "rachel banham career high",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Rachel Banham injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rachel banham injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Rachel Banham's parents?",
-      "answer": "Public profiles share limited verified detail about Rachel Banham's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Did Rachel Banham play for the Minnesota Lynx?",
+      "answer": "Yes. Rachel Banham played for the Minnesota Lynx from 2020 to 2023. In 2020 she set the franchise single-season record for three-point percentage at 47.2%.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rachel_Banham"
+        "https://www.wnba.com/player/1627671/rachel-banham/bio",
+        "https://fullcourtbuckets.com/wnba/rachel-banham/"
       ],
-      "google_keyword": "rachel banham parents",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "rachel banham lynx",
+          "vol": 10
+        },
+        {
+          "q": "minnesota lynx rachel banham",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Rachel Banham go to high school?",
+      "answer": "Rachel Banham is from Lakeville, Minnesota, and went to Lakeville North High School. She led Lakeville North to the 2010 state title and was the 2011 Minnesota Gatorade Player of the Year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gophersports.com/sports/womens-basketball/roster/rachel-banham/8192"
+      ],
+      "queries": [
+        {
+          "q": "rachel banham high school",
+          "vol": null
+        },
+        {
+          "q": "rachel banham nationality",
+          "vol": 10
+        },
+        {
+          "q": "what nationality is rachel banham",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What were Rachel Banham's college stats?",
+      "answer": "Rachel Banham scored 3,093 points at Minnesota, the Big Ten career record and sixth in NCAA history at the time. She was the 2016 Big Ten Player of the Year.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1627671/rachel-banham/bio"
+      ],
+      "queries": [
+        {
+          "q": "rachel banham college stats",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

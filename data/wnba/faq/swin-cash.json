@@ -1,88 +1,245 @@
 {
   "slug": "swin-cash",
   "player_name": "Swin Cash",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 25, 2026",
+  "verified_at": "2026-10-25",
   "items": [
     {
-      "question": "What are Swin Cash's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2016), Swin Cash averaged 5.3 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "swin cash stats",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Swin Cash make?",
-      "answer": "A precise public salary or net worth figure for Swin Cash is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "swin cash net worth",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "How old is Swin Cash?",
-      "answer": "Public profiles list Swin Cash as born in 1979. As of late 2026 that puts her around 47 years old.",
+      "question": "How tall is Swin Cash?",
+      "answer": "The WNBA lists Swin Cash at 6 feet 1 inch.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
+        "https://www.wnba.com/player/100721/swin-cash/bio"
       ],
-      "google_keyword": "swin cash age",
-      "approx_monthly_volume": 50,
-      "birthdate": "1979-01-01"
-    },
-    {
-      "question": "Is Swin Cash married?",
-      "answer": "There is no widely reported public record of Swin Cash being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
-      ],
-      "google_keyword": "swin cash husband",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "swin cash height",
+          "vol": 110
+        },
+        {
+          "q": "how tall is swin cash",
+          "vol": 40
+        },
+        {
+          "q": "swin cash measurements",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Who is Swin Cash?",
-      "answer": "Swintayla Marie Cash Canal is an American former professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
-      ],
-      "google_keyword": "who is swin cash",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Does Swin Cash have kids?",
-      "answer": "There is no widely reported public information that Swin Cash has children as of late 2026.",
+      "answer": "Swin Cash is a Hall of Fame forward who played 15 WNBA seasons, from 2002 to 2016. She won three WNBA championships, two Olympic gold medals and two NCAA titles at UConn.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
+        "https://www.hoophall.com/hall-of-famers/swin-cash",
+        "https://www.wnba.com/player/100721/swin-cash/bio"
       ],
-      "google_keyword": "swin cash son",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "who is swin cash",
+          "vol": 50
+        },
+        {
+          "q": "swin cash wnba",
+          "vol": 110
+        },
+        {
+          "q": "swin cash bio",
+          "vol": 10
+        },
+        {
+          "q": "swin cash biography",
+          "vol": 10
+        },
+        {
+          "q": "swin cash facts",
+          "vol": 10
+        },
+        {
+          "q": "swin cash career",
+          "vol": null
+        },
+        {
+          "q": "swin cash position",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who are Swin Cash's parents?",
-      "answer": "Public profiles share limited verified detail about Swin Cash's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Did Swin Cash play at UConn?",
+      "answer": "Yes. Swin Cash won NCAA championships at UConn in 2000 and 2002 and was the 2002 Final Four Most Outstanding Player. The Detroit Shock then drafted her second overall in 2002.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
+        "https://www.hoophall.com/hall-of-famers/swin-cash"
       ],
-      "google_keyword": "swin cash family",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "swin cash uconn",
+          "vol": 90
+        },
+        {
+          "q": "swin cash college",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "How many championships does Swin Cash have?",
-      "answer": "Public biographical sources cover Swin Cash's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
+      "question": "What are Swin Cash's stats?",
+      "answer": "In the 2016 regular season, Swin Cash averaged 5.3 points, 3.4 rebounds, and 1.4 assists in 31 games for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/swin-cash/"
+      ],
+      "queries": [
+        {
+          "q": "swin cash stats",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "How old is Swin Cash?",
+      "answer": "Swin Cash was born September 22, 1979.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Swin_Cash"
+        "https://www.hoophall.com/hall-of-famers/swin-cash"
       ],
-      "google_keyword": "swin cash bring it on",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "swin cash age",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Did Swin Cash win championships in Atlanta and New York?",
+      "answer": "No. Swin Cash won her three WNBA titles with the Detroit Shock in 2003 and 2006 and the Seattle Storm in 2010. She played for Atlanta and New York late in her career, from 2014 to 2016.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/swin-cash",
+        "https://fullcourtbuckets.com/wnba/swin-cash/"
+      ],
+      "queries": [
+        {
+          "q": "did swin cash win championships in atlanta and new york",
+          "vol": 30
+        },
+        {
+          "q": "where did swin cash win championships",
+          "vol": null
+        },
+        {
+          "q": "swin cash awards",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Swin Cash work for the New Orleans Pelicans?",
+      "answer": "Yes. The New Orleans Pelicans promoted Swin Cash to senior vice president of basketball operations in 2024.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.nba.com/pelicans/news/pelicans-basketball-operations-promotion-staff-additions-2024-2025-nba-season"
+      ],
+      "queries": [
+        {
+          "q": "swin cash pelicans",
+          "vol": 30
+        },
+        {
+          "q": "swin cash new orleans pelicans",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Is Swin Cash in the Hall of Fame?",
+      "answer": "Yes. Swin Cash was enshrined in the Naismith Memorial Basketball Hall of Fame on September 10, 2022.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/swin-cash",
+        "https://uconnhuskies.com/news/2022/9/12/womens-basketball-swin-cash-officially-enshrined-in-naismith-hall-of-fame"
+      ],
+      "queries": [
+        {
+          "q": "swin cash hall of fame",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where is Swin Cash from?",
+      "answer": "Swin Cash is from McKeesport, Pennsylvania, where she played at McKeesport High School.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/swin-cash",
+        "https://www.wnba.com/player/100721/swin-cash/bio"
+      ],
+      "queries": [
+        {
+          "q": "swin cash mckeesport",
+          "vol": 10
+        },
+        {
+          "q": "where is swin cash from",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many WNBA teams did Swin Cash play for?",
+      "answer": "Swin Cash played for five WNBA teams: the Detroit Shock (2002 to 2007), Seattle Storm (2008 to 2011), Chicago Sky (2012 to 2013), Atlanta Dream (2014) and New York Liberty (2014 to 2016).",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/swin-cash",
+        "https://www.wnba.com/player/100721/swin-cash/bio"
+      ],
+      "queries": [
+        {
+          "q": "swin cash teams",
+          "vol": 10
+        },
+        {
+          "q": "did swin cash play on 5 different teams",
+          "vol": null
+        },
+        {
+          "q": "how many teams did swin cash play for",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Swin Cash win Olympic gold?",
+      "answer": "Yes. Swin Cash won Olympic gold with the United States in 2004 and 2012.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/swin-cash"
+      ],
+      "queries": [
+        {
+          "q": "swin cash olympics",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Swin Cash start a charity?",
+      "answer": "Yes. Swin Cash started Cash for Kids, a charity for children, in 2005.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100721/swin-cash/bio"
+      ],
+      "queries": [
+        {
+          "q": "swin cash charity",
+          "vol": 10
+        },
+        {
+          "q": "did swin cash make a charity",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
