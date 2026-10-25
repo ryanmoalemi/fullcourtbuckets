@@ -33,6 +33,17 @@ class SeoMeta(unittest.TestCase):
         self.assertTrue(seo_meta.desc_ok(seo_meta.player_description('Awa Fam is a center.')))
         self.assertTrue(seo_meta.desc_ok(seo_meta.fit_description('x ' * 120)))
 
+    def test_no_espn_credit_and_streaming_next_to_tv(self):
+        for page in ROOT.rglob('*.html'):
+            if '.git' in page.parts or 'node_modules' in page.parts:
+                continue
+            text = page.read_text(encoding='utf-8', errors='ignore')
+            self.assertNotIn('Stream: ESPN App', text, page)
+            self.assertNotIn('ESPN noted', text, page)
+            for line in __import__('re').findall(r'class="broadcast-line"[^>]*>([^<]*)<', text):
+                if 'TV:' in line:
+                    self.assertIn('Stream:', line, page)
+
     def test_audit_catches_problems(self):
         import tempfile
         with tempfile.TemporaryDirectory() as tmp:
