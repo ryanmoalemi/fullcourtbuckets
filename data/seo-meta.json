@@ -1,0 +1,209 @@
+{
+  "/": {
+    "title": "Full Court Buckets: WNBA news, stats and analysis"
+  },
+  "/about/": {
+    "title": "About Full Court Buckets, an independent WNBA site",
+    "description": "About Full Court Buckets, an independent WNBA site for news, standings, player profiles and data. Who writes it, how it works, and no league affiliation."
+  },
+  "/authors/ryan-moalemi/": {
+    "title": "Ryan Moalemi, WNBA writer | Full Court Buckets",
+    "description": "Ryan Moalemi has been writing internet content since 2001. He covers the WNBA for Full Court Buckets: recaps, previews, data stories and card collecting."
+  },
+  "/authors/ryan-moalemi/ryans-angel-reese-cards/": {
+    "description": "Ryan Moalemi's Angel Reese card collection: what he paid in total, raw cards and graded slabs, and current values from recent sold comps, card by card."
+  },
+  "/contact/": {
+    "title": "Contact Full Court Buckets: tips and corrections",
+    "description": "Contact Full Court Buckets to send a story tip, ask about a stat, or request a correction to any page, player profile, standings table or data download."
+  },
+  "/news/2026-wnba-finals-ratings-tracker/embed/chart/": {
+    "title": "WNBA Finals attendance by series, 2002–2025 (chart)",
+    "description": "Embeddable chart of total WNBA Finals attendance by series from 2002 to 2025, from the Full Court Buckets attendance database, with the record series."
+  },
+  "/news/2026-wnba-finals-ratings-tracker/": {
+    "title": "WNBA Finals attendance by year, records and history",
+    "description": "WNBA Finals attendance by year since 2002. The record is 92,599 fans at the 2024 Finals, 18,520 per game. Search by game or series, with sources."
+  },
+  "/news/aces-fever-game-1-aja-wilson-38/": {
+    "title": "A'ja Wilson drops 38 as Aces roll past Fever in Game 1"
+  },
+  "/news/aces-fever-series-breakdown/": {
+    "title": "Aces vs. Fever series breakdown: Wilson won the matchup",
+    "description": "A'ja Wilson scored 96 points on 64.6% shooting as the Aces beat the Fever 2-1. Indiana won the paint in all three games. How the series was decided."
+  },
+  "/news/aces-valkyries-semis-game-1-recap/": {
+    "title": "Valkyries own the glass, stun the Aces 71-60 in Game 1",
+    "description": "Golden State grabbed 52 rebounds to Vegas's 25 and beat the Aces 71-60 in semifinal Game 1. The rebounding leader did not score. Full recap and stats."
+  },
+  "/news/aces-valkyries-semis-game-2-recap/": {
+    "title": "Burton's three, Stokes' block lift Valkyries over Aces",
+    "description": "Vegas led for 11 seconds. Burton's 28-footer and Stokes's block gave the Valkyries an 83-81 win and a 2-0 semifinal lead. Recap, key plays and stats."
+  },
+  "/news/aces-valkyries-semis-game-3-recap/": {
+    "title": "Valkyries beat Aces 87-77 in OT to reach the WNBA Finals",
+    "description": "The Valkyries beat the Aces 87-77 in overtime in Las Vegas to sweep the semifinals and reach the WNBA Finals. How the overtime went, with full stats."
+  },
+  "/news/allisha-gray-game-3-status/": {
+    "title": "Allisha Gray out for Game 3 as Dream go for the sweep",
+    "description": "Allisha Gray is out for Game 3 in Brooklyn. The Dream will try to sweep the Liberty without their leading scorer. What her absence means for Atlanta."
+  },
+  "/news/angel-reese-always-this-good-data/": {
+    "title": "Angel Reese's rebounding: double digits every season"
+  },
+  "/news/angel-reese-game-1-liberty/": {
+    "title": "Angel Reese follows DPOY award with four steals vs. Liberty",
+    "description": "Three days after winning Defensive Player of the Year, Angel Reese had four steals from four Liberty players in a 92-82 Dream win in semifinal Game 1."
+  },
+  "/news/angel-reese-game-2-stats-liberty-dream-semis/": {
+    "title": "Angel Reese scores 23 as Dream take 2-0 lead over Liberty",
+    "description": "Angel Reese's plus-11 was the best mark in Game 2. Free throws with 4.3 seconds left made it 101-98, and Atlanta leads the Liberty 2-0. Her full stat line."
+  },
+  "/news/clark-no-call-aces-game-3/": {
+    "title": "Caitlin Clark's bloody-mouth no-call, a closer look",
+    "description": "Caitlin Clark caught an elbow from Jewell Loyd with about three minutes left in Game 3. No foul was called and the Aces won 94-83. The rule and the replay."
+  },
+  "/news/dream-mystics-game-1-howard-reese/": {
+    "title": "Dream rally from 11 down to beat Mystics in Game 1"
+  },
+  "/news/dream-sweep-liberty-game-3-semifinals/": {
+    "title": "Dream sweep the Liberty 85-83, head to the WNBA Finals",
+    "description": "The Dream beat the Liberty 85-83 in Brooklyn to sweep the semifinals and reach the WNBA Finals. How Atlanta closed it out, with key plays and full stats."
+  },
+  "/news/dream-valkyries-finals-game-1-recap/": {
+    "title": "Gabby Williams lifts Valkyries over Dream 68-64 in Game 1"
+  },
+  "/news/dream-valkyries-finals-game-2-recap/": {
+    "title": "Angel Reese scores 30 as Dream even the Finals 79-65"
+  },
+  "/news/dream-valkyries-finals-game-3-recap/": {
+    "title": "Dream beat Valkyries 97-71 for a 2-1 WNBA Finals lead"
+  },
+  "/news/fever-aces-game-2-recap/": {
+    "title": "Clark hits back-to-back threes, Fever even series with Aces",
+    "description": "Caitlin Clark scored 27 points with 15 assists and Aliyah Boston had 22 as the Fever beat the Aces 99-89 to tie the first-round series 1-1. Full recap."
+  },
+  "/news/fever-aces-game-3-recap/": {
+    "title": "Wilson scores 36 as Aces close out the Fever 94-83",
+    "description": "A'ja Wilson scored 36 points with 10 rebounds as the Aces beat the Fever 94-83 to win the first-round series 2-1. Recap, key runs and the full box score."
+  },
+  "/news/fiba-womens-basketball-world-cup-2026/": {
+    "title": "Team USA at the 2026 Women's World Cup | Full Court Buckets"
+  },
+  "/news/finals-game-1-preview-dream-valkyries/": {
+    "title": "Finals Game 1 preview: Dream pressure vs. Valkyries boards",
+    "description": "The Dream and Valkyries open the WNBA Finals on Saturday, Oct. 17, at 12:30 p.m. PT. Atlanta's pressure meets Golden State's rebounding. Updated Oct. 15."
+  },
+  "/news/finals-game-2-preview-dream-valkyries/": {
+    "title": "Finals Game 2 preview: Dream lost the turnover battle"
+  },
+  "/news/finals-game-3-preview-valkyries-dream/": {
+    "title": "Finals Game 3 preview: Valkyries' missing free throws"
+  },
+  "/news/": {
+    "title": "WNBA news, recaps and analysis | Full Court Buckets",
+    "description": "WNBA game recaps, previews, roster notes and data stories from Full Court Buckets, newest first, each with its date and a one-line summary of the story."
+  },
+  "/news/liberty-dream-semis-game-1-recap/": {
+    "title": "Canada scores 25 as Dream beat Liberty 92-82 in Game 1",
+    "description": "With 1:30 left, Canada's step-back three made it 87-77. The Dream beat the Liberty 92-82 to lead the semifinals 1-0. Recap, key plays and stats."
+  },
+  "/news/liberty-dream-semis-game-2-recap/": {
+    "title": "Hillmon scores, Ionescu turns it over: Dream win in OT",
+    "description": "With 20.8 seconds left in overtime, Hillmon's layup made it 99-98. The Dream held on, 101-98, and lead the semifinals 2-0. Recap, final plays and stats."
+  },
+  "/news/liberty-lynx-game-1-full-recap/": {
+    "title": "Liberty stun No. 1 Lynx 91-75: Game 1 full recap"
+  },
+  "/news/liberty-lynx-game-2-recap/": {
+    "title": "Johannes hits the dagger three, Liberty sweep the Lynx"
+  },
+  "/news/liberty-offseason-five-gm-moves/": {
+    "title": "Liberty offseason: 5 moves I'd make as GM after the sweep",
+    "description": "Atlanta swept the Liberty while shooting 42.0% to New York's 47.1%. The gap was 18 turnovers. Here are five offseason moves I would make as the Liberty GM."
+  },
+  "/news/semis-game-3-preview/": {
+    "title": "Semis Game 3 preview: can the Liberty and Aces rally?"
+  },
+  "/news/top-10-womens-college-basketball-cards-to-collect-2026/": {
+    "title": "10 women's college basketball cards and their sales"
+  },
+  "/news/valkyries-defense-film-breakdown/": {
+    "title": "Valkyries defense film breakdown: help, recovery, box-outs"
+  },
+  "/news/valkyries-dream-finals-game-4-first-half/": {
+    "title": "40 shots to 19: how the Valkyries won Finals Game 4"
+  },
+  "/news/valkyries-wings-game-1-zandalasini/": {
+    "title": "Valkyries blow out Wings 104-80 in Game 1 | Full Court Buckets"
+  },
+  "/news/valkyries-wings-game-2-recap/": {
+    "title": "Ogunbowale scores 45, Wings beat Valkyries 108-100 in OT"
+  },
+  "/news/valkyries-wnba-finals-performers/": {
+    "title": "Valkyries Finals performers: Goapele, Moreno, Morissette"
+  },
+  "/news/wings-valkyries-game-3-recap/": {
+    "title": "Valkyries close out the Wings 77-73, win series 2-1",
+    "description": "Dallas led 44-37 at half. Golden State won the fourth quarter 23-14, finished 77-73, and took the first-round series 2-1. Recap, key runs and full stats."
+  },
+  "/news/wnba-expansion-teams/": {
+    "title": "WNBA expansion teams 2026: Portland Fire and Toronto Tempo"
+  },
+  "/news/wnba-finals-2026-audience-growth-dream-valkyries/": {
+    "title": "WNBA Finals 2026: audience growth behind Dream vs. Valkyries"
+  },
+  "/news/wnba-finals-2026-schedule-dream-valkyries/": {
+    "title": "WNBA Finals 2026 schedule: Dream vs. Valkyries, Game 1"
+  },
+  "/news/wnba-finals-bonus-2026-champions-60000/": {
+    "title": "2026 WNBA champions get $60,000 each, up from $22,908"
+  },
+  "/news/wnba-players-famous-relatives/": {
+    "title": "49 WNBA players' famous relatives, from Curry to Malone"
+  },
+  "/privacy/": {
+    "title": "Privacy policy: cookies, analytics and ads | Full Court Buckets",
+    "description": "How Full Court Buckets uses cookies, analytics and advertising, what is collected when you visit, and the choices you have about ads and tracking."
+  },
+  "/search/": {
+    "title": "Search WNBA players, teams and stories | Full Court Buckets",
+    "description": "Search Full Court Buckets for WNBA players, teams, owners, trackers and stories, and jump straight to a player profile, team page or news article."
+  },
+  "/sitemap/": {
+    "title": "Site map: every Full Court Buckets page by section",
+    "description": "HTML site map of Full Court Buckets: the home page, standings, news, all 15 teams, every WNBA player profile, owners, trackers and the about pages."
+  },
+  "/standings/": {
+    "title": "2026 WNBA standings: records, seeds and games back",
+    "description": "2026 WNBA standings for all 15 teams: wins, losses, winning percentage, games back, home and road records, and playoff seeds, updated after every game."
+  },
+  "/terms/": {
+    "title": "Terms of use for the Full Court Buckets WNBA site",
+    "description": "Terms for using Full Court Buckets, including site content, player profiles, standings and data downloads, reuse and credit, and how to send a correction."
+  },
+  "/wnba/": {
+    "title": "WNBA player stats and profiles, 2008 onward | Full Court Buckets",
+    "description": "Browse WNBA player profiles with season statistics, team information and recent game logs. Coverage begins in 2008. Search by name or browse by team."
+  },
+  "/wnba/couples/": {
+    "title": "WNBA couples: confirmed relationships, with sources",
+    "description": "A list of confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out, and every couple listed is backed by a cited report."
+  },
+  "/wnba/owners/": {
+    "title": "WNBA team owners 2026: who owns every team and since when",
+    "description": "Who owns every WNBA team, the investors teams have disclosed, every franchise sale and expansion fee FCB has documented, with sources and downloads."
+  },
+  "/wnba/teams/": {
+    "title": "WNBA teams: all 15 rosters for 2026 | Full Court Buckets",
+    "description": "All 15 WNBA teams with a current roster, including the Portland Fire and Toronto Tempo, with conference, 2026 record and links to every player profile."
+  },
+  "/wnba/viewership-attendance/": {
+    "title": "WNBA viewership and attendance statistics 2026",
+    "description": "Record 2026 WNBA attendance, fans per game, Finals audiences and the most-watched games of the season, each figure with its date and its original source."
+  },
+  "/wnba/where-to-watch/": {
+    "title": "Where to watch the 2026 WNBA Finals: bars showing games",
+    "description": "251 bars and restaurants in 74 U.S. and Canadian cities that show WNBA games, from team watch-party lists, venue pages and confirmations. Search by city."
+  }
+}

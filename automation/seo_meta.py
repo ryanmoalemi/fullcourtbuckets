@@ -53,7 +53,6 @@ def fit_title(*candidates: str) -> str:
 PADS = (
     ' Updated after every game on Full Court Buckets.',
     ' Stats, records and recent games on Full Court Buckets.',
-    ' Every number on the page is checked against the box scores.',
     ' From Full Court Buckets.',
     ' Read more on Full Court Buckets.',
 )
@@ -79,6 +78,11 @@ def fit_description(text: str, pads: tuple[str, ...] = PADS) -> str:
             for b in pads:
                 if a != b and desc_ok(d + a + b):
                     return d + a + b
+        for pad in pads + PADS:  # very short text: keep adding closing sentences
+            if len(d + pad) <= DESC_MAX and pad.strip() not in d:
+                d += pad
+            if len(d) >= DESC_MIN:
+                break
     return d
 
 
@@ -170,9 +174,14 @@ def apply_text(text: str, rel: str, overrides: dict) -> str:
         new_t, new_d = o.get('title', title), o.get('description', desc)
     else:
         fam = family_meta(rel, title, desc)
-        if not fam:
-            return text
-        new_t, new_d = fam
+        if fam:
+            new_t, new_d = fam
+        else:
+            # Any other page (new articles too): keep in-range wording, otherwise
+            # drop or add the site name and trim or extend the description.
+            base = title.removesuffix(SUFFIX).strip()
+            new_t = title if title_ok(title) or not base else fit_title(base)
+            new_d = desc if (desc_ok(desc) or not desc) else fit_description(desc)
     if tm and new_t != title:
         text = text[:tm.start(1)] + htmlmod.escape(new_t, quote=False) + text[tm.end(1):]
     if new_d != desc:

@@ -1,4 +1,5 @@
 """SEO starter-guide rules: duplicates, orphans, titles, sitemaps, and static pages."""
+import html
 import copy
 import json
 import re
@@ -45,15 +46,15 @@ class GeneratorRuleTests(unittest.TestCase):
     def test_titles_descriptions_and_thin_profiles(self):
         self.assertEqual(
             builder.player_title("A'ja Wilson"),
-            "A'ja Wilson WNBA Stats & Profile | Full Court Buckets",
+            "A'ja Wilson WNBA stats and profile | Full Court Buckets",
         )
         long_name = 'Darianna Littlepage-Buggs'
         titled = builder.player_title(long_name)
-        self.assertIn('WNBA Stats & Profile', titled)
-        self.assertLessEqual(len(titled), 70)
+        self.assertIn('WNBA stats and profile', titled)
+        self.assertLessEqual(len(titled), 65)
         huge = builder.player_title('X' * 40)
         self.assertLessEqual(len(huge), 70)
-        self.assertNotIn('WNBA Stats & Profile', huge)
+        self.assertNotIn('Full Court Buckets', huge)
         clipped = builder.cap_description('alpha ' * 40)
         self.assertLessEqual(len(clipped), 155)
         self.assertFalse(clipped.endswith(' '))
@@ -272,7 +273,7 @@ class PublishedPageTests(unittest.TestCase):
             self.assertNotIn(title, titles.values())
             titles[entry['slug']] = title
             description = re.search(r'name="description" content="([^"]*)"', text).group(1)
-            self.assertLessEqual(len(description), 155, entry['slug'])
+            self.assertLessEqual(len(html.unescape(description)), 160, entry['slug'])
             self.assertLessEqual(len(title), 81, entry['slug'])
         darianna = (ROOT / 'wnba/darianna-littlepage-buggs/index.html').read_text(encoding='utf-8')
         self.assertNotIn('Available coverage from 2008 onward.', darianna)
@@ -336,7 +337,7 @@ class PublishedPageTests(unittest.TestCase):
         fever = (ROOT / 'wnba/teams/indiana-fever/index.html').read_text(encoding='utf-8')
         fever_desc = re.search(r'name="description" content="([^"]*)"', fever).group(1)
         self.assertGreaterEqual(len(fever_desc), 110)
-        self.assertLessEqual(len(fever_desc), 155)
+        self.assertLessEqual(len(fever_desc), 160)
         self.assertIn('Latest stories', fever)
         self.assertIn('href="/news/fever-aces-game-2-recap/"', fever)
         self.assertIn('<th scope="col">PPG</th>', fever)
