@@ -964,6 +964,16 @@ def season_cross_check(profile, root=None) -> dict:
     }
 
 
+def stat_notes_html(slug, root=None) -> str:
+    """Hand-written record notes kept in data/wnba/stat-notes.json so rebuilds keep them."""
+    base = Path(root) if root is not None else Path(__file__).resolve().parents[1]
+    try:
+        notes = json.loads((base / 'data' / 'wnba' / 'stat-notes.json').read_text(encoding='utf-8')).get(slug) or []
+    except (OSError, ValueError, AttributeError):
+        return ''
+    return ''.join(f'<p class="finals-record">{note}</p>' for note in notes if isinstance(note, str) and note.strip())
+
+
 def partial_record_html(profile, root=None) -> str:
     """Say the record is partial when a season or its games played could not be verified.
 
@@ -1720,7 +1730,7 @@ DESCRIPTION_MAX = 155
 TITLE_LIMIT = 70
 # viewership-attendance is an evergreen guide, not a player profile. Leave it out
 # of the orphan-player redirect pass.
-SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'owners', 'where-to-watch'})
+SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'owners', 'where-to-watch', 'finals'})
 
 
 def cap_description(text, limit=DESCRIPTION_MAX) -> str:
@@ -2170,7 +2180,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
         opts=''.join(f'<option value="{y}">{y}</option>' for y in sorted(years,reverse=True))
         controls=f'<div class="filters js-only"><div class="segmented" role="group" aria-label="Competition">{radios}<button type="button" data-kind="all" aria-pressed="true">Both</button></div><label>Season <select id="season-filter"><option value="all">All seasons</option>{opts}</select></label></div>'
     partial = partial_record_html(profile, root)
-    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p></section>' if tablehtml else ''
+    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p>{stat_notes_html(slug, root)}</section>' if tablehtml else ''
     all_teams=[]
     for r in sorted(stats,key=lambda r:-r['season']):
         item=(r['season'],tname(r.get('team')))

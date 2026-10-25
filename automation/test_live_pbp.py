@@ -50,7 +50,7 @@ class LivePbp(unittest.TestCase):
         self.run_feed(200); f = self.tmp / 'data/games/2026-10-21-gs-atl.json'
         with self.assertRaises(build_pbp.ScoreCheckError):
             build_pbp.build('401918307', str(f))         # the Game 3 bug: final build pointed at a live file
-        _, ph = build_pbp.build('401918308')
+        _, ph = build_pbp.build('401918309')         # Game 5: still a placeholder (Game 4 is final)
         page = self.tmp / 'p.html'; page.write_text(ph)
         self.assertTrue(pbp_guard.check(str(page), str(f)))
 

@@ -1,0 +1,6 @@
+{
+  "_note": "Hand-written record sentences shown under a player's stats table (HTML). build_players.py adds them on every rebuild. Never credit ESPN or the stats API.",
+  "kiah-stokes": [
+    "Stokes set a WNBA Finals record with 14 blocks through the first four games of the 2026 Finals, passing the previous record of 12 held by Brittney Griner and Sylvia Fowles, <a href=\"https://www.wnba.com/news/2026-finals-dream-valkyries-game-4-recap\">according to the WNBA</a>."
+  ]
+}

@@ -281,7 +281,12 @@ def write_search_page(root: Path = ROOT) -> Path | None:
     page = re.sub(r'<meta name="robots"[^>]*>', '', page)
     page = page.replace('</head>', '<meta name="robots" content="noindex,follow"></head>', 1)
     page = re.sub(r'<script type="application/ld\+json">.*?</script>', '', page, flags=re.S)
+    import social_meta
+    page = social_meta.BLOCK_RE.sub('', page)
     page = re.sub(r'<meta property="og:[^>]*>|<meta name="twitter:[^>]*>', '', page)
+    # Keep the PR #327 share tags (the about shell's block was stripped above).
+    page = social_meta.social_block(page, social_meta.default_image_url(), social_meta.DEFAULT_ALT,
+                                    social_meta.W, social_meta.H)
     page = re.sub(r'<main\b.*?</main>', lambda _m: SEARCH_MAIN, page, count=1, flags=re.S)
     page = page.replace(' aria-current="page"', '')
     out = root / 'search' / 'index.html'

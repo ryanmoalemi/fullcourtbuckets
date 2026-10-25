@@ -93,6 +93,17 @@ jobs:
             python -m playwright install --with-deps chromium
       - name: Quarantine the audited corrupt portrait and bind existing approvals
         run: python automation/portrait_migration_20260916.py
+      - name: Reconcile playoff counts with committed box scores
+        # fcb-game-stats.yml commits new box scores without the player profiles; bring the
+        # profiles' playoff lines up to date first so the count check does not block the sync.
+        # Pages are rebuilt from those profiles so the page tests compare like with like.
+        run: |
+          python automation/reconcile_playoff_profiles.py | tee "$RUNNER_TEMP/reconcile.log"
+          if ! grep -q 'in 0 profile' "$RUNNER_TEMP/reconcile.log"; then
+            python automation/build_players.py
+            python automation/apply_portraits.py
+            python automation/rollout_player_design.py
+          fi
       - name: Test data safety and page builder without credentials
         run: |
           python -m unittest discover -s automation -p 'test_*.py' -v
