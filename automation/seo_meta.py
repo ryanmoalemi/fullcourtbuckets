@@ -58,6 +58,22 @@ PADS = (
 )
 
 
+END = '.!?"\u201d)'
+
+
+def complete(d: str) -> bool:
+    return bool(d) and d.rstrip()[-1] in END
+
+
+def complete_sentences(d: str) -> str:
+    """Drop a cut-off trailing fragment (descriptions must end on a full sentence)."""
+    d = d.strip()
+    if complete(d):
+        return d
+    parts = re.split(r'(?<=[.!?])\s+', d)
+    return ' '.join(parts[:-1]) if len(parts) > 1 else d.rstrip(' ,;:') + '.'
+
+
 def fit_description(text: str, pads: tuple[str, ...] = PADS) -> str:
     """Trim whole sentences when long; add one closing sentence when short."""
     d = re.sub(r'\s+', ' ', text or '').strip()
@@ -185,7 +201,7 @@ def apply_text(text: str, rel: str, overrides: dict) -> str:
             # drop or add the site name and trim or extend the description.
             base = title.removesuffix(SUFFIX).strip()
             new_t = title if title_ok(title) or not base else fit_title(base)
-            new_d = desc if (desc_ok(desc) or not desc) else fit_description(desc)
+            new_d = desc if ((desc_ok(desc) and complete(desc)) or not desc) else fit_description(complete_sentences(desc))
     if tm and new_t != title:
         text = text[:tm.start(1)] + htmlmod.escape(new_t, quote=False) + text[tm.end(1):]
         text = _sync(text, title, new_t, ('og:title', 'twitter:title'), 'name')
@@ -233,6 +249,8 @@ def audit(root: Path = ROOT) -> list[str]:
             problems.append(f'{rel}: missing meta description')
         elif not desc_ok(d):
             problems.append(f'{rel}: description is {len(d)} characters')
+        elif not complete(d):
+            problems.append(f'{rel}: description stops mid-sentence: ...{d[-40:]}')
         if t and t in seen_t:
             problems.append(f'{rel}: title duplicates {seen_t[t]}')
         if d and d in seen_d:
