@@ -171,23 +171,23 @@ NBC_FINALS_NETWORKS = 'https://www.nbcsports.com/wnba/news/wnba-finals-games-3-a
 VALKYRIES_FINALS_PREVIEW = 'https://valkyries.wnba.com/news/gameday-preview-20261017'
 FINALS_TRACKER_ROWS = [
     ['1', 'Sat, Oct. 17, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center',
-     'NBC, Peacock', '3:30 p.m. ET / 12:30 p.m. PT', 'Pending tip-off', 'Pending tip-off',
-     'Pending tip-off', 'Scheduled'],
+     'NBC, Peacock', '3:30 p.m. ET / 12:30 p.m. PT', 'Not released', '2.1 million',
+     '3.0 million', 'Final: Valkyries 68, Dream 64'],
     ['2', 'Mon, Oct. 19, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center',
-     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
-     'Pending tip-off', 'Scheduled'],
+     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', '1.33 million',
+     'Not released', 'Final: Dream 79, Valkyries 65'],
     ['3', 'Wed, Oct. 21, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena',
-     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off',
-     'Pending tip-off', 'Scheduled'],
+     'USA and Peacock', '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', '1.71 million',
+     'Not released', 'Final: Dream 97, Valkyries 71'],
     ['4', 'Sat, Oct. 24, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena',
-     'NBC and Peacock', '1:00 p.m. ET / 10:00 a.m. PT', 'Pending tip-off', 'Pending tip-off',
-     'Pending tip-off', 'Scheduled'],
-    ['5', 'Not listed', 'If necessary', 'USA and Peacock',
-     'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
-    ['6', 'Not listed', 'If necessary', 'USA and Peacock',
-     'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
-    ['7', 'Not listed', 'If necessary', 'USA and Peacock',
-     'Not listed', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
+     'NBC and Peacock', '1:00 p.m. ET / 10:00 a.m. PT', 'Not released', 'Not released',
+     'Not released', 'Final: Valkyries 67, Dream 62'],
+    ['5', 'Mon, Oct. 26, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center', 'USA and Peacock',
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'Scheduled'],
+    ['6', 'Thu, Oct. 29, 2026', 'If necessary: Golden State Valkyries at Atlanta Dream, State Farm Arena', 'USA and Peacock',
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
+    ['7', 'Sat, Oct. 31, 2026', 'If necessary: Atlanta Dream at Golden State Valkyries, Chase Center', 'USA and Peacock',
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
 ]
 TRACKER_CAPTION = (
     'Games 1-4: date, tip time, and venue from the WNBA release of Oct. 13, 2026. '
@@ -195,7 +195,7 @@ TRACKER_CAPTION = (
     'Games 1 and 4 are on NBC and Peacock. '
     'NBC Sports and the Golden State Valkyries published those networks. '
     'Viewer cells stay pending until a network releases them. '
-    'The WNBA release does not list dates or tip times for games 5-7.'
+    'Games 5-7 dates and tip times are from the league schedule; games 6 and 7 are played only if necessary.'
 )
 
 # The ratings page reads this file. Last updated is its last change, not a typed date.

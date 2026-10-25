@@ -1,12 +1,18 @@
 {
-  "_note": "Config for automation/live_pbp.py and live_pbp_loop.sh (workflow: Live play-by-play, fcb-live-pbp.yml). Game 4 set Oct 21 2026 from the WNBA schedule: Sat Oct 24, 10 a.m. PT (17:00 UTC), State Farm Arena. game_json uses the feed's side order (away-home) so the final import overwrites the same file. For the next game: update this file, the cron in fcb-live-pbp.yml on master, and add the game to data/pbp-games.json.",
-  "game_number": 4,
-  "date": "2026-10-24",
-  "feed_dates": ["2026-10-24", "2026-10-25"],
-  "teams": ["ATL", "GS"],
+  "_note": "Config for automation/live_pbp.py and live_pbp_loop.sh (workflow: Live play-by-play, fcb-live-pbp.yml). Game 5 set Oct 25 2026 from the WNBA schedule: Mon Oct 26, 5 p.m. PT (00:00 UTC Oct 27), Chase Center. game_json uses the feed's side order (away-home) so the final import overwrites the same file. For the next game: update this file, the cron in fcb-live-pbp.yml on master, and add the game to data/pbp-games.json.",
+  "game_number": 5,
+  "date": "2026-10-26",
+  "feed_dates": [
+    "2026-10-26",
+    "2026-10-27"
+  ],
+  "teams": [
+    "GS",
+    "ATL"
+  ],
   "feed_id": null,
-  "site_id": "401918308",
-  "game_json": "data/games/2026-10-24-gs-atl.json",
-  "page_dir": "wnba/finals/2026/game-4",
-  "stop_after_pt": "202610241500"
+  "site_id": "401918309",
+  "game_json": "data/games/2026-10-26-atl-gs.json",
+  "page_dir": "wnba/finals/2026/game-5",
+  "stop_after_pt": "202610262200"
 }
