@@ -1105,6 +1105,222 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "stefanie-dolson": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Stefanie_Dolson_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "katie-lou-samuelson": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Katie_Lou_Samuelson_(47937094962)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "te-hina-paopao": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Te-Hina_Paopao_Dream_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "gianna-kneepkens": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Gianna_Kneepkens_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "raven-johnson": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Raven_Johnson.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "alicia-florez-245094": {
+      "author": "User:Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alicia_Florez_18_Spain_20260905_(5)_(cropped).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "hailey-van-lith": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Hailey_Van_Lith_Sky.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "holly-winterburn": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Holly_Winterburn_7_Be%C5%9Fikta%C5%9F_WB_TKBSL_20250104_(3).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "sami-whitcomb": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sami_Whitcomb_32_Be%C5%9Fikta%C5%9F_WB_TKBSL_20251224_(3)_(cropped).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "li-yueru": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Li_Yueru_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "anastasiia-olairi-kosu": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Anastasiia_Kosu_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "luisa-geiselsoder": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Luisa_Geisels%C3%B6der_15_Germany_20250629_(3).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "marine-fauthoux": {
+      "author": "Patroklis",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Marine_Fauthoux_(24.05.21).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "teonni-key": {
+      "author": "Hameltion",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Teonni_Key_(Jan_2024)_01_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "jordan-harrison": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jordan_Harrison_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "mackenzie-holmes": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mackenzie_Holmes_2023.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "jihyun-park": {
+      "author": "User:Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Park_Ji-hyun_(basketball)_1_South_Korea_20260904_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "dorka-juhasz": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Dorka_Juh%C3%A1sz_1_Pallacanestro_Femminile_Schio_EuroLeague_Women_20250226_(5).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "mai-yamamoto": {
+      "author": "User:Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mai_Yamamoto_23_Japan_20260904_(4).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "emma-cannon": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Emma_Cannon_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "tonie-morgan": {
+      "author": "CCS Pictures",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tonie_Morgan_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "shay-ciezki": {
+      "author": "timweight",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Shay_Ciezki_2023_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "brianna-turner": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Brianna_Turner_and_Leilani_Mitchell_pregame_(48019127831).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "sika-kone": {
+      "author": "User:Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sika_Kon%C3%A9_23_Mali_20260905_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kyara-linskens": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kyara_Linskens_13_Belgium_20250629_(4).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "lucy-olsen": {
+      "author": "Micahmn",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lucy_Olsen_Washington_Mystics_2025_(cropped).jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
+    },
+    "kierstan-bell": {
+      "author": "Alexander Jonesi",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kierstan_Bell_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-24: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
