@@ -31,6 +31,44 @@ class SocialMetaTest(unittest.TestCase):
         self.assertEqual(sm.social_block(once, 'https://fullcourtbuckets.com/a.jpg', 'alt', 1200, 630), once)
         self.assertIn('twitter:card', once)
 
+    def test_share_tags_sit_at_top_of_head(self):
+        # X's card crawler only reads the start of the page: every og/twitter tag
+        # must come before any <script>, <style> or JSON-LD, use absolute https
+        # image URLs, appear once, and include twitter:site/title.
+        bad = []
+        for page in sm.pages(ROOT):
+            text = page.read_text(encoding='utf-8', errors='replace')
+            if '</head>' not in text or re.search(r'http-equiv="?refresh', text, re.I):
+                continue
+            head = text.split('</head>', 1)[0]
+            rel = page.relative_to(ROOT)
+            first = min([i for i in (head.find('<script'), head.find('<style'), head.find('<link')) if i >= 0] or [len(head)])
+            tags = [(m.start(), m.group(0)) for m in sm.SOCIAL_TAG_RE.finditer(head)]
+            if not tags or tags[-1][0] > first or tags[-1][0] > 4096:
+                bad.append(f'{rel} social tags not at top of <head>')
+            keys = [sm._key(t) for _, t in tags]
+            for k in set(keys):
+                if keys.count(k) > 1 and not k.startswith('og:image'):
+                    bad.append(f'{rel} duplicate {k}')
+            for k in ('twitter:site', 'twitter:title', 'twitter:card', 'twitter:image', 'og:image'):
+                if k not in keys:
+                    bad.append(f'{rel} missing {k}')
+            for _, t in tags:
+                if sm._key(t) in ('og:image', 'twitter:image') and not sm._content(t).startswith('https://'):
+                    bad.append(f'{rel} relative image {sm._content(t)}')
+        self.assertEqual(bad, [], bad[:20])
+
+    def test_block_moves_late_tags_to_top(self):
+        html = ('<html><head><meta charset="utf-8"><script>x()</script><style>a{}</style>'
+                '<meta property="og:title" content="T"><meta property="og:image" content="https://fullcourtbuckets.com/a.jpg">'
+                '<meta property="og:title" content="T2"></head><body></body></html>')
+        out = sm.social_block(html, 'https://fullcourtbuckets.com/b.jpg', 'alt', 1200, 630)
+        self.assertLess(out.find('og:image'), out.find('<script'))
+        self.assertEqual(out.count('property="og:title"'), 1)
+        self.assertIn('name="twitter:title" content="T"', out)
+        self.assertIn('name="twitter:site" content="@fullcourtbucket"', out)
+        self.assertIn('name="twitter:image" content="https://fullcourtbuckets.com/a.jpg"', out)
+
 
 if __name__ == '__main__':
     unittest.main()
