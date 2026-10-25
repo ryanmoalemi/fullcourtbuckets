@@ -289,6 +289,8 @@ def write_search_page(root: Path = ROOT) -> Path | None:
                                     social_meta.W, social_meta.H)
     page = re.sub(r'<main\b.*?</main>', lambda _m: SEARCH_MAIN, page, count=1, flags=re.S)
     page = page.replace(' aria-current="page"', '')
+    import seo_meta
+    page = seo_meta.apply_rel(page, '/search/', root)
     out = root / 'search' / 'index.html'
     out.parent.mkdir(exist_ok=True)
     if not out.is_file() or out.read_text(encoding='utf-8') != page:

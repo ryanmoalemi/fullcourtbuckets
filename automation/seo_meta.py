@@ -253,6 +253,13 @@ def run(root: Path = ROOT) -> int:
     return changed
 
 
+def apply_rel(text: str, rel: str, root: Path = ROOT) -> str:
+    """For page builders: apply overrides/family rules to one rendered page before writing."""
+    if rel in FROZEN or REDIRECT_RE.search(text):
+        return text
+    return apply_text(text, rel, load_overrides(root))
+
+
 def apply_file(path: Path, root: Path = ROOT) -> None:
     """For builders that write one page outside the main build (live play-by-play)."""
     rel = '/' + path.relative_to(root).as_posix().removesuffix('index.html')
