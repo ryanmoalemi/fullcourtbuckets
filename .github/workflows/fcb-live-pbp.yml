@@ -8,8 +8,8 @@ name: Live play-by-play
 on:
   schedule:
     # Game 4: Sat Oct 24 2026, 10 a.m. PT tip = 17:00 UTC. Start 9:30 a.m. PT; 10:15 backup if the first is skipped.
-    - cron: '30 16 24 10 *'
-    - cron: '15 17 24 10 *'
+    - cron: '30 23 26 10 *'
+    - cron: '15 0 27 10 *'
   workflow_dispatch:
     inputs:
       loop:
