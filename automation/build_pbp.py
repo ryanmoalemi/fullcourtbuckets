@@ -132,6 +132,18 @@ def shell_parts(title, desc, path, date):
     return head, body_open, byline, foot
 
 
+# Ryan's standing rule: live play-by-play pages update every 30 seconds during a game.
+LIVE_UPDATE_SECONDS = 30
+LIVE_NOTE = f'Live: updates every {LIVE_UPDATE_SECONDS} seconds.'
+LIVE_REFRESH = ('<script id="pbp-live-refresh">setInterval(function(){if(!document.hidden)location.reload()},'
+                f'{LIVE_UPDATE_SECONDS * 1000});</script>')
+
+
+def with_live_refresh(page):
+    """Pre-game and live pages reload themselves every LIVE_UPDATE_SECONDS; final pages do not."""
+    return page.replace('</body>', LIVE_REFRESH + '</body>', 1) if '</body>' in page else page + LIVE_REFRESH
+
+
 def build(game_id, game_json=None, today=None, live=False):
     conf = json.loads(CONF.read_text())
     g = conf['games'][game_id]; n = g['number']; A, H = conf['away'], conf['home']; NAME = conf['names']
@@ -169,14 +181,14 @@ def build(game_id, game_json=None, today=None, live=False):
         lead = max(w, key=w.get); lo = min(w, key=w.get)
         return 'Series tied ' + f"{w[lead]}-{w[lo]}" if w[lead] == w[lo] else f"{NAME[lead]} lead {w[lead]}-{w[lo]}"
     if d is None:
-        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, {'Valkyries at Dream' if 'State Farm' in g['venue'] else 'Dream at Valkyries'}, {g['tip']}, {g['venue']}. Live: updates within about a minute of each play."
+        desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, {'Valkyries at Dream' if 'State Farm' in g['venue'] else 'Dream at Valkyries'}, {g['tip']}, {g['venue']}. {LIVE_NOTE}"
         head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
         main = (f'<main class="shell article-wrap pbp"><article class="article"><h1>{E(title)}</h1>{byline}'
-                f'{bline}<p class="thru">Game {n} has not started. Live: updates within about a minute of each play.</p>'
+                f'{bline}<p class="thru">Game {n} has not started. {LIVE_NOTE}</p>'
                 f'<div class="pbp-panel" data-fcb-data-table>{sb("NOT STARTED", "&ndash;", "&ndash;")}'
-                f'<p class="pbp-wait">Tip: {E(g["tip"])}, {E(g["venue"])}<br>{E(series_text(sbf))}<br><b>Live: updates within about a minute of each play.</b></p></div>'
+                f'<p class="pbp-wait">Tip: {E(g["tip"])}, {E(g["venue"])}<br>{E(series_text(sbf))}<br><b>{LIVE_NOTE}</b></p></div>'
                 f'<p class="note">{" · ".join(links + ["Other games: " + others])}</p></article></main>')
-        return path, social_tags(head + '\n' + bo + main + '\n' + foot)
+        return path, with_live_refresh(social_tags(head + '\n' + bo + main + '\n' + foot))
     plays, roster = derive(d, live)
     pc, overrides = player_counts(plays, roster)
     winner = A if d['away']['score'] > d['home']['score'] else H
@@ -204,7 +216,7 @@ def build(game_id, game_json=None, today=None, live=False):
         lp, lc_ = d.get('last_play_period') or plays[-1]['period'], d.get('last_play_clock') or plays[-1]['clock']
         where = f"{qname(int(lp))} {lc_}" if lp else ''
         thru = (f"{NAME[A]} {d['away']['score']}, {NAME[H]} {d['home']['score']}, {where}. {series_text(after)} entering Game {n}. "
-                f"Updated {stamp}. Live: updates within about a minute of each play. {len(rows)} plays so far, newest first.")
+                f"Updated {stamp}. {LIVE_NOTE} {len(rows)} plays so far, newest first.")
     desc = f"Every play from Game {n} of the 2026 WNBA Finals ({hi[1]} {hi[0]}, {lo[1]} {lo[0]}): search, filter by player, team, play type, quarter, runs and clutch time, cite any play, download CSV or JSON."
     head, bo, byline, foot = shell_parts(title, desc, path, g['date'])
     per = d['periods']
@@ -235,7 +247,8 @@ def build(game_id, game_json=None, today=None, live=False):
 <h2>Methods</h2><p class="note">The running score is rebuilt from the scoring plays and checked against every scoring play and the final before this page is published. Player counts come from the plays and are checked against the official box score; where they differ, the box score value is shown. {E(ov)}"Plays" counts every play that names the player. Clutch: last 5 minutes of the 4th quarter or overtime with the score within 5 points before the play. Lead changes, ties and runs (6 or more unanswered points) are computed from scoring plays. Data: Full Court Buckets, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
 </article></main><div id="toast" role="status" hidden></div>
 <script>window.PBP={json.dumps({'rows': rows, 'q': {r['q']: qname(r['q']) for r in rows}, 'url': BASE + path, 'title': title, 'file': f'fcb-2026-finals-game-{n}-plays', 'an': NAME[A], 'hn': NAME[H], 'date': g['date_text']})};</script><script src="/assets/pbp.js" defer></script>"""
-    return path, social_tags(head + '\n' + bo + main + '\n' + foot)
+    page = social_tags(head + '\n' + bo + main + '\n' + foot)
+    return path, (with_live_refresh(page) if live else page)
 
 
 def main(argv=None):

@@ -46,5 +46,5 @@ jobs:
           LOOP: ${{ (github.event_name == 'schedule' || inputs.loop) && '1' || '0' }}
           DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
           POLL_SECONDS: '30'
-          MIN_PUSH_SECONDS: '60'
+          MIN_PUSH_SECONDS: '30'
         run: bash automation/live_pbp_loop.sh
