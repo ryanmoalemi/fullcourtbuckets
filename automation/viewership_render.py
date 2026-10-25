@@ -30,6 +30,16 @@ GRID = (42, 46, 54)
 SHARE_BG = (9, 11, 16)
 
 
+def finals_intro_html(payload: dict) -> str:
+    """Escaped Finals intro, with each sourced phrase linked to its primary source."""
+    text = core.esc(payload.get('finals_intro') or '')
+    for link in payload.get('finals_intro_links') or []:
+        label, href = link.get('text') or '', link.get('href') or ''
+        if label and href and core.esc(label) in text:
+            text = text.replace(core.esc(label), core.links.inline_link(label, href), 1)
+    return text
+
+
 def growth_split(prior: dict, current: dict) -> dict | None:
     """Accounting split of a total-attendance change. None until both years are sourced."""
     if prior is None or current is None:
@@ -1334,7 +1344,7 @@ def finals_section(payload: dict) -> str:
         '<section class="qa" id="finals">'
         '<h2>How many people watched the WNBA Finals?</h2>'
         f'<p class="answer">{core.link_teams(finals_answer(payload))}</p>'
-        + (f'<p class="note">{core.esc(payload["finals_intro"])} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
+        + (f'<p class="note">{finals_intro_html(payload)} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
            if payload.get('finals_intro') else
            '<p class="note">2026 Finals audiences are not on this chart. Unreported games stay in the tracker below.</p>')
         +         f'{chart_figure(svg, "finals-history.png")}'
