@@ -43,6 +43,8 @@ MUTED = (177, 171, 185)
 PINK = (255, 75, 177)
 ORANGE = (255, 152, 98)
 PURPLE = (185, 109, 245)
+TWITTER_SITE = '@fullcourtbucket'
+SOCIAL_TAG_RE = re.compile(r'<meta\b[^>]*\b(?:property|name)="(?:og|twitter):[^"]*"[^>]*>\n?', re.I)
 DEFAULT_ALT = 'Full Court Buckets: WNBA stats, news and where to watch'
 BLOCK_RE = re.compile(r'\n*<!--fcb-social-->.*?<!--/fcb-social-->\n*', re.S)
 LICENSES = {
@@ -222,13 +224,41 @@ def _existing_image(text: str) -> str:
     return htmlmod.unescape(m.group(1)) if m else ''
 
 
+def _content(tag: str) -> str:
+    m = re.search(r'content="([^"]*)"', tag)
+    return htmlmod.unescape(m.group(1)) if m else ''
+
+
+def _key(tag: str) -> str:
+    return re.search(r'(?:property|name)="([^"]*)"', tag, re.I).group(1).lower()
+
+
 def social_block(text: str, image: str, alt: str, width: int, height: int) -> str:
-    text = BLOCK_RE.sub('', text)
-    tags = []
+    if '</head>' not in text:
+        return text
+    head, sep, rest = text.partition('</head>')
+    head = re.sub(r'\n*<!--/?fcb-social-->\n*', '\n', head)
+    tags, seen = [], set()
+    for t in SOCIAL_TAG_RE.findall(head):
+        t = t.strip()
+        k = _key(t)
+        # og:image:* may repeat for multiple images; everything else is single-valued.
+        if k in seen and not k.startswith('og:image'):
+            continue
+        if t not in tags:
+            tags.append(t)
+            seen.add(k)
+    head = SOCIAL_TAG_RE.sub('', head)
+    vals = {}
+    for t in tags:
+        vals.setdefault(_key(t), _content(t))
+
     def add(attr, key, val):
-        if not _has(text, key):
+        if key not in seen and val not in ('', None):
             tags.append(f'<meta {attr}="{key}" content="{htmlmod.escape(str(val), quote=True)}">')
-    existing = _existing_image(text)
+            seen.add(key)
+            vals[key] = str(val)
+    existing = vals.get('og:image', '')
     if existing:
         image = existing
     else:
@@ -237,12 +267,18 @@ def social_block(text: str, image: str, alt: str, width: int, height: int) -> st
         add('property', 'og:image:height', height)
         add('property', 'og:image:alt', alt)
     add('name', 'twitter:card', 'summary_large_image')
+    add('name', 'twitter:site', TWITTER_SITE)
+    add('name', 'twitter:title', vals.get('og:title') or _title(text))
+    add('name', 'twitter:description', vals.get('og:description', ''))
     add('name', 'twitter:image', image)
-    add('name', 'twitter:image:alt', alt)
-    if not tags:
-        return text
-    block = '\n<!--fcb-social-->' + ''.join(tags) + '<!--/fcb-social-->\n'
-    return text.replace('</head>', block + '</head>', 1)
+    add('name', 'twitter:image:alt', vals.get('og:image:alt') or alt)
+    block = '<!--fcb-social-->' + ''.join(tags) + '<!--/fcb-social-->'
+    m = re.search(r'<meta\s+charset=[^>]*>', head, re.I) or re.search(r'<head\b[^>]*>', head, re.I)
+    if m:
+        head = head[:m.end()] + '\n' + block + '\n' + head[m.end():].lstrip('\n')
+    else:
+        head = head + block + '\n'
+    return head + sep + rest
 
 
 def _title(text: str) -> str:
