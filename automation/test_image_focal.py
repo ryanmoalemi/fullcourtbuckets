@@ -72,7 +72,10 @@ class ImageFocalTests(unittest.TestCase):
                 self.assertNotIn('og-1200.webp', story)
                 self.assertNotIn('lead-photo', body)
                 continue
-            self.assertIn(token, story, slug)
+            # Chart-led data stories (e.g. the Finals Game 4 first-half piece)
+            # publish without a lead photo, so there is no crop to position.
+            if 'class="lead-photo' in story:
+                self.assertIn(token, story, slug)
             og = str(article.get('imageOg') or '')
             self.assertTrue(og.endswith(('og-1200.jpg', 'og.jpg')), slug)
             self.assertIn(links.BASE + og, story, slug)

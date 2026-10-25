@@ -43,6 +43,7 @@ MUTED = (177, 171, 185)
 PINK = (255, 75, 177)
 ORANGE = (255, 152, 98)
 PURPLE = (185, 109, 245)
+DEFAULT_ALT = 'Full Court Buckets: WNBA stats, news and where to watch'
 BLOCK_RE = re.compile(r'\n*<!--fcb-social-->.*?<!--/fcb-social-->\n*', re.S)
 LICENSES = {
     'by-sa/4.0': 'CC BY-SA 4.0', 'by-sa/3.0': 'CC BY-SA 3.0', 'by-sa/2.5': 'CC BY-SA 2.5',
@@ -257,6 +258,12 @@ def pages(root: Path):
         yield p
 
 
+def default_image_url() -> str:
+    """Sitewide default share image, versioned like run() writes it."""
+    url = f'{BASE}/images/social/fcb-default.jpg'
+    return f'{url}?v={_vers(DEFAULT_CARD)}' if DEFAULT_CARD.is_file() else url
+
+
 def run(root: Path = ROOT, cards: bool = True) -> dict:
     stats = {'player_cards': 0, 'fallback_cards': 0, 'pages_updated': 0, 'articles_reexported': []}
     if cards:
@@ -281,7 +288,7 @@ def run(root: Path = ROOT, cards: bool = True) -> dict:
         if '</head>' not in text or re.search(r'http-equiv="?refresh', text, re.I):
             continue
         rel = '/' + page.relative_to(root).as_posix().removesuffix('index.html')
-        image, alt, w, h = default_url, 'Full Court Buckets: WNBA stats, news and where to watch', W, H
+        image, alt, w, h = default_url, DEFAULT_ALT, W, H
         m = re.fullmatch(r'/wnba/([a-z0-9-]+)/', rel)
         info = player_info(text, m.group(1), teams) if m else None
         if info:

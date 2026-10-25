@@ -68,6 +68,19 @@
       "tv": "NBC",
       "stream": "Peacock",
       "game_json": "data/games/2026-10-24-gs-atl.json"
+    },
+    "401918309": {
+      "number": 5,
+      "date": "2026-10-26",
+      "date_text": "Mon Oct 26, 2026",
+      "tip": "Mon Oct 26, 2026, 5 p.m. PT",
+      "venue": "Chase Center",
+      "series_before": {
+        "GS": 2,
+        "ATL": 2
+      },
+      "tv": "USA Network (simulcast on CNBC)",
+      "stream": "Peacock"
     }
   }
 }

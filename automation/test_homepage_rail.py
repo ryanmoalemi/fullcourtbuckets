@@ -1,5 +1,6 @@
 """Homepage rail is generated from scoreboard data, not slogan copy."""
 import datetime as dt
+import html
 import json
 import re
 import unittest
@@ -296,7 +297,9 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIsNotNone(match)
         self.assertGreaterEqual(match.group(1), newest)
         self.assertNotIn('Burton from 28', home)
-        self.assertIn('Final: Dream 97, Valkyries 71 in Finals Game 3 (Dream lead 2-1)', home)
+        # The Now line is the shared data/now-ticker.json item; match it instead of one past game.
+        now_item = json.loads((ROOT / 'data' / 'now-ticker.json').read_text(encoding='utf-8'))
+        self.assertIn(html.escape(now_item['text'], quote=False), home)
         self.assertNotIn('tonight', home.split('class="ticker', 1)[1].split('</div></div></div>', 1)[0].lower())
         featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
         self.assertIn('class="article-card" id="featured-story"', featured)
@@ -322,7 +325,10 @@ class HomepageRailTests(unittest.TestCase):
         self.assertIn('>Latest scores<', rail_html)
         # Completed series roll off the 14-day scoreboard window, so check the form
         # of the finished-series lines instead of one fixed first-round result.
-        self.assertRegex(rail_html, r'<li><p class="rail-status">[A-Z][A-Za-z ]+ beat [A-Z][A-Za-z ]+ \d-\d</p>')
+        statuses = re.findall(r'<p class="rail-status">([^<]*)</p>', rail_html)
+        self.assertTrue(statuses)
+        for status in statuses:
+            self.assertRegex(status, r'^[A-Z][A-Za-z ]+ (beat|lead) [A-Z][A-Za-z ]+ \d-\d$|^[A-Z][A-Za-z ]+ and [A-Z][A-Za-z ]+ tied \d-\d$|^[A-Z][A-Za-z ]+ at [A-Z][A-Za-z ]+$')
         scores = rail_html.split('id="latest-scores"', 1)[1].split('</section>', 1)[0]
         score_rows = scores.count('<li>')
         self.assertGreater(score_rows, 0)
@@ -334,7 +340,9 @@ class HomepageRailTests(unittest.TestCase):
         newest = _newest_game_recaps(articles, rail.LATEST_LIMIT)
         self.assertGreaterEqual(len(newest), 1)
         self.assertLessEqual(len(newest), rail.LATEST_LIMIT)
-        for href, slug in newest:
+        # Rows for games with no recap yet link to our play-by-play page and take a slot.
+        recap_rows = scores.count('href="/news/')
+        for href, slug in newest[:recap_rows]:
             self.assertIn(f'href="{href}"', scores, slug)
             self.assertNotIn(f'href="{href}" target="_blank"', rail_html, slug)
         # Score rows link to FCB recaps or game pages, never an outside stats site.
@@ -345,23 +353,18 @@ class HomepageRailTests(unittest.TestCase):
         )
         recap_day = dt.date.fromisoformat(newest_recap['date'])
         self.assertIn(f'{recap_day.strftime("%b")} {recap_day.day}', scores)
-        import citation
-        def _row_day(row):
-            found = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2}),\s+(\d{4})', row[1])
-            return dt.datetime.strptime(' '.join(found.groups()), '%b %d %Y').date() if found else None
-
-        # The next game is the first listed one after the newest published recap.
-        scheduled = next(
-            row for row in citation.FINALS_TRACKER_ROWS
-            if row[-1] == 'Scheduled' and row[1] != 'Not listed'
-            and _row_day(row) and _row_day(row) > recap_day
-        )
-        matchup = scheduled[2].split(',', 1)[0]
-        away, home_club = matchup.split(' at ', 1)
+        # The tracker rows in citation.py are hand-kept and stay 'Scheduled' after a game is
+        # played, so check the rail against itself: the next tip is after the newest final.
         series = rail_html.split('id="playoff-series"', 1)[1].split('</section>', 1)[0]
-        # The rail names both clubs in the series line and gives the next tip day.
-        self.assertIn(away.split()[-1], series)
-        self.assertIn(home_club.split()[-1], series)
         self.assertIn('Next: ', series)
-        day_match = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2})', scheduled[1])
-        self.assertIn(f'{day_match.group(1)} {int(day_match.group(2))}', series)
+        next_match = re.search(r'Next: [A-Z][a-z]{2}, ([A-Z][a-z]{2}) (\d{1,2})', series)
+        self.assertIsNotNone(next_match)
+        year = recap_day.year
+        next_day = dt.datetime.strptime(f'{next_match.group(1)} {next_match.group(2)} {year}', '%b %d %Y').date()
+        score_days = [dt.datetime.strptime(f'{m} {d} {year}', '%b %d %Y').date()
+                      for m, d in re.findall(r'<p class="rail-meta">([A-Z][a-z]{2}) (\d{1,2})</p>', scores)]
+        self.assertTrue(score_days)
+        self.assertGreater(next_day, max(score_days))
+        # Where-to-watch on the next game lists streaming alongside TV.
+        if 'TV: ' in series:
+            self.assertIn('Streaming: ', series)

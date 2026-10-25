@@ -167,6 +167,20 @@ def _next_label(event: dict) -> str:
     return f'Next: {local.strftime("%a")}, {local.strftime("%b")} {local.day}, {hour}:{local.strftime("%M")} {ampm} PT'
 
 
+def _watch_suffix(game_id: str) -> str:
+    """Where to watch (TV and streaming) from data/pbp-games.json, or ''."""
+    path = Path(__file__).resolve().parents[1] / 'data' / 'pbp-games.json'
+    try:
+        game = json.loads(path.read_text(encoding='utf-8'))['games'].get(str(game_id or '')) or {}
+    except (OSError, ValueError, KeyError, AttributeError):
+        return ''
+    tv = re.sub(r'\s*\(.*?\)', '', str(game.get('tv') or '')).strip()
+    stream = str(game.get('stream') or '').strip()
+    if not tv or not stream:
+        return ''
+    return f' (TV: {tv}. Streaming: {stream})'
+
+
 def _score_line(event: dict) -> str:
     ordered = sorted(event['teams'], key=lambda team: (-team['score'], 0 if team['home'] else 1))
     line = f'{ordered[0]["nick"]} {ordered[0]["score"]}, {ordered[1]["nick"]} {ordered[1]["score"]}'
@@ -272,7 +286,7 @@ def playoff_series(events: list, articles: list | None = None) -> list:
         rows.append({
             'status': _status_line(status_teams, latest['wins'], completed),
             'completed': completed,
-            'next_label': _next_label(nxt) if nxt else '',
+            'next_label': (_next_label(nxt) + _watch_suffix(nxt['id'])) if nxt else '',
             'next_url': fcb_upcoming_url(nxt['id'], articles or []) if nxt and nxt['id'] else '',
             'next_when': nxt['when'] if nxt else None,
             'last_when': latest['when'],
