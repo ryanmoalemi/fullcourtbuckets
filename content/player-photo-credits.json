@@ -1697,6 +1697,166 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-25: edges checked at 200% on dark and light backgrounds"
+    },
+    "teaira-mccowan": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Teaira%20McCowan%20(48666690226)%20(1).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alex-wilson": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alex%20Wilson%20(basketball)%204%20Australia%2020260906%20(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "nadia-fingall": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nadia%20Fingall%204%20Valencia%20Basket%20(women)%20EuroLeague%20Women%2020250108%20(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alissa-pili": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alissa%20Pili%20Lynx%202024.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "kayla-alexander": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kayla%20Alexander%2014%20Canada%2020260311%20(3)%20(cropped).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "emese-hof": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Emese%20Hof%2014%20ZVVZ%20USK%20Praha%20EuroLeague%20Women%2020241212%20(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "mariella-fasoula": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mariella%20Fasoula%2034%20Be%C5%9Fikta%C5%9F%20WB%20TKBSL%2020251224%20(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "aubrey-griffin": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aubrey%20Griffin.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "jj-quinerly": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:JJ%20Quinerly%202026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "abby-bishop": {
+      "author": "Hawkeye7",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Canberra%20Capitals%20No%204%20Abbey%20Bishop.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "aerial-powers": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2%20Aerial%20Powers%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "aisha-sheppard": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Aisha%20Sheppard%202%20%C4%B0lkem%20Yap%C4%B1%20Tarsus%20SK%20TKBSL%2020250111.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alaina-coates": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alaina%20Coates.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alana-beard": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alana%20Beard%202011.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alex-bentley": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alex%20Bentley%20at%202015%20All-Star%20Game%20cropped.png",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alex-montgomery": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alex%20Montgomery.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "alexis-jones": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Alexis%20Jones%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "allie-quigley": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Allie%20Quigley%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "allison-hightower": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Allison%20Hightower%20cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "amanda-zahui-b": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Amanda%20Zahui%20B.%20(52876379029)%20(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
