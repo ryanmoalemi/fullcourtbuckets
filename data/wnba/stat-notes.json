@@ -2,5 +2,8 @@
   "_note": "Hand-written record sentences shown under a player's stats table (HTML). build_players.py adds them on every rebuild. Never credit ESPN or the stats API.",
   "kiah-stokes": [
     "Stokes set a WNBA Finals record with 14 blocks through the first four games of the 2026 Finals, passing the previous record of 12 held by Brittney Griner and Sylvia Fowles, <a href=\"https://www.wnba.com/news/2026-finals-dream-valkyries-game-4-recap\">according to the WNBA</a>."
+  ],
+  "rhyne-howard": [
+    "2026 WNBA Finals, Games 1–4: 13.0 points, 5.3 rebounds, 2.8 assists and 3.0 steals per game (52 points, 21 rebounds, 11 assists, 12 steals in 4 games), from the official WNBA box scores for <a href=\"https://www.wnba.com/game/atl-vs-gsv-1042600301/box-score\">Game 1</a>, <a href=\"https://statsdmz.nba.com/pdfs/20261019/20261019_ATLGSV.pdf\">Game 2</a>, <a href=\"https://statsdmz.nba.com/pdfs/20261021/20261021_GSVATL.pdf\">Game 3</a> and <a href=\"https://statsdmz.nba.com/pdfs/20261024/20261024_GSVATL.pdf\">Game 4</a>."
   ]
 }
