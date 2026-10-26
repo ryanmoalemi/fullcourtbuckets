@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-29",
+  "last_checked": "2026-10-26",
   "couples": [
     {
       "a": "Breanna Stewart",
@@ -265,6 +265,59 @@
       "kids_src": "",
       "photo_a": "https://commons.wikimedia.org/wiki/File:260615_Lynx_Fire_JohnMc061_(55338371670)_(cropped).jpg|John Mac|CC BY-SA 4.0",
       "photo_b": null
+    },
+    {
+      "a": "Jewell Loyd",
+      "b": "Natalija Marshall",
+      "both_wnba": false,
+      "b_note": "Former Notre Dame and Miami forward; fashion stylist",
+      "status": "Engaged",
+      "engaged": "September 2026 (announced on Instagram, Sept. 2)",
+      "engaged_src": "https://www.instagram.com/p/DczTPZ2DwIk/",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Jewell_Loyd_2024_(cropped).jpg|John Mac|CC BY-SA 2.0"
+    },
+    {
+      "a": "Cameron Brink",
+      "b": "Ben Felter",
+      "both_wnba": false,
+      "b_note": "Former Stanford rower",
+      "status": "Engaged",
+      "engaged": "Fall 2024, during Paris Fashion Week",
+      "engaged_src": "https://www.vogue.com/slideshow/cameron-brink-balenciaga-spring-2025-diary",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Cameron_Brink_(cropped).jpg|Gamecock Central|CC BY 2.0"
+    },
+    {
+      "a": "Lexie Hull",
+      "b": "Will Matthiessen",
+      "both_wnba": false,
+      "b_note": "Former professional baseball player",
+      "status": "Engaged",
+      "engaged": "April 20, 2025 (announced on Instagram)",
+      "engaged_src": "https://www.instagram.com/p/DIrSTMSP5cH/",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Lexie_Hull_(cropped).jpg|Scott U|CC BY-SA 2.0"
+    },
+    {
+      "a": "Natasha Cloud",
+      "b": "Isabelle Harrison",
+      "both_wnba": true,
+      "b_note": "WNBA forward since 2015",
+      "status": "Dating",
+      "since": "About 2021 (Cloud described a four-year relationship in November 2025)",
+      "since_src": "https://www.glamour.com/story/natasha-cloud-modern-love-interview",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Natasha_Cloud_2024_(cropped).jpg|John Mac|CC BY-SA 2.0",
+      "photo_b": "https://commons.wikimedia.org/wiki/File:2_Isabelle_Harrison_(cropped).jpg|Lorie Shaull|CC BY-SA 4.0"
+    },
+    {
+      "a": "Chelsea Gray",
+      "b": "Tipesa Moorer",
+      "both_wnba": false,
+      "b_note": "Former Cal State Long Beach forward",
+      "status": "Married",
+      "engaged": "June 2018 (announced on Instagram)",
+      "engaged_src": "https://www.instagram.com/p/BkjU-tIjr_g/",
+      "wedding": "November 2, 2019, in Los Angeles",
+      "wedding_src": "https://www.outsports.com/2019/11/4/20946279/wnba-chelsea-gray-los-angeles-sparks-gay-lesbian-wedding/",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Chelsea_Gray_(cropped).jpg|Lorie Shaull|CC BY-SA 4.0"
     }
   ],
   "excluded": {
@@ -307,18 +360,8 @@
         "https://www.autostraddle.com/wnba-and-womens-basketball-lesbian-couples/"
       ],
       [
-        "Natasha Cloud & Isabelle Harrison",
-        "Confirmed (joint NYT interview, 2025) but 2026 status unclear",
-        "https://people.com/couples-playing-in-the-wnba-11969761"
-      ],
-      [
         "Kahleah Copper & Michaela Mabrey",
         "Social posts only, no major-outlet interview",
-        "https://www.autostraddle.com/wnba-and-womens-basketball-lesbian-couples/"
-      ],
-      [
-        "Jewell Loyd & Natalija Marshall",
-        "Instagram post only, secondary source",
         "https://www.autostraddle.com/wnba-and-womens-basketball-lesbian-couples/"
       ],
       [
