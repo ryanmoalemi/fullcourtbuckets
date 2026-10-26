@@ -1,78 +1,93 @@
 {
   "slug": "jovana-nogic",
   "player_name": "Jovana Nogic",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "What are Jovana Nogic's stats / points per game?",
-      "answer": "In the 2026 regular season, Jovana Nogic averaged 10.4 points, 1.1 rebounds, and 1.6 assists in 16 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Jovana Nogic's stats?",
+      "answer": "In the 2026 regular season, Jovana Nogic averaged 10.4 points, 1.1 rebounds, and 1.6 assists in 16 games for the Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jovana nogic stats",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How much does Jovana Nogic make?",
-      "answer": "A precise public salary or net worth figure for Jovana Nogic is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/jovana-nogic/"
       ],
-      "google_keyword": "jovana nogic salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "jovana nogic stats",
+          "vol": 390
+        }
+      ]
     },
     {
       "question": "How tall is Jovana Nogic?",
-      "answer": "Jovana Nogic is listed at 6' 0\".",
+      "answer": "The WNBA lists Jovana Nogic at 6 feet.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
+        "https://www.wnba.com/player/1643505/jovana-nogic/bio"
       ],
-      "google_keyword": "jovana nogic height",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Jovana Nogic's contract?",
-      "answer": "Contract length and guarantees for Jovana Nogic are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jovana nogic contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Jovana Nogic married?",
-      "answer": "There is no widely reported public record of Jovana Nogic being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
-      ],
-      "google_keyword": "jovana nogic husband",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Jovana Nogic?",
-      "answer": "Jovana Nogić is a Serbian professional basketball player and member of Serbia national team.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
-      ],
-      "google_keyword": "jovana nogic wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "jovana nogic height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Jovana Nogic?",
-      "answer": "Jovana Nogic was born December 17, 1997 in Belgrade. As of late 2026 that puts her at 28 years old.",
+      "answer": "Jovana Nogic was born December 17, 1997.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643505/jovana-nogic/bio"
+      ],
+      "queries": [
+        {
+          "q": "jovana nogic age",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Was Jovana Nogic drafted?",
+      "answer": "No. Jovana Nogic was not drafted into the WNBA. She played at Providence from 2015 to 2019 and left as the program's all-time leader in three-pointers made.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643505/jovana-nogic/bio"
+      ],
+      "queries": [
+        {
+          "q": "jovana nogic draft",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What team does Jovana Nogic play for?",
+      "answer": "Jovana Nogic plays for the Phoenix Mercury. 2026 was her first WNBA season, and she shot 42.1% from three in 16 games.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jovana_Nogi%C4%87"
+        "https://www.wnba.com/player/1643505/jovana-nogic/bio",
+        "https://fullcourtbuckets.com/wnba/jovana-nogic/"
       ],
-      "google_keyword": "jovana nogic age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1997-12-17"
+      "queries": [
+        {
+          "q": "jovana nogic mercury",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Has Jovana Nogic played in the Olympics?",
+      "answer": "Yes. Jovana Nogic helped Serbia reach the quarterfinals of the 2024 Paris Olympics, averaging 12.3 points and 4.5 assists while shooting 43.5% from three. She captains Serbia's national team.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643505/jovana-nogic/bio"
+      ],
+      "queries": [
+        {
+          "q": "jovana nogic olympic stats",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
