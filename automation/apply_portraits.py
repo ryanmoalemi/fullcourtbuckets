@@ -215,7 +215,10 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
                 if at != -1:
                     end = page.find('</p>', at)
                     if end != -1:
-                        extra = '<p class="muted small photo-credit-fallback">' + line + '</p>'
+                        extra = (
+                            '<p class="muted small photo-credit-fallback">'
+                            + photo_line + line + '</p>'
+                        )
                         page = page[:end + 4] + extra + page[end + 4:]
             src_p = '<p class="photo-credit-source">' + line.replace('<span class="photo-credit">', '').replace('</span>', '') + '</p>'
             page = CREDIT_SOURCES.sub('', page)

@@ -277,6 +277,10 @@ class CareerRuleTests(unittest.TestCase):
             pages += 1
             main = _main(text)
             bio_text = re.sub(r'<section\b[^>]*\bid="faq"[^>]*>.*?</section>', '', main, flags=re.S)
+            # License credits repeat on purpose. They are not biography.
+            bio_text = re.sub(r'<p class="muted small photo-credit-fallback">.*?</p>', '', bio_text, flags=re.S)
+            bio_text = re.sub(r'<span class="photo-credit">.*?</span>', '', bio_text, flags=re.S)
+            bio_text = re.sub(r'<p class="photo-credit-source">.*?</p>', '', bio_text, flags=re.S)
             for sentence in _sentences(bio_text):
                 shared[sentence].append(path.parent.name)
             bio = _section(text, 'career') + _section(text, 'answer-summary')
