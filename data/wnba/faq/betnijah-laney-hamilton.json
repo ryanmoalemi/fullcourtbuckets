@@ -1,132 +1,82 @@
 {
   "slug": "betnijah-laney-hamilton",
   "player_name": "Betnijah Laney-Hamilton",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "Is Betnijah Laney-Hamilton married?",
-      "answer": "Laney is married to Jordan Hamilton, a fellow basketball player.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
-      ],
-      "google_keyword": "betnijah laney husband",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What are Betnijah Laney-Hamilton's stats / points per game?",
-      "answer": "In the 2026 regular season, Betnijah Laney-Hamilton averaged 4.7 points, 1.9 rebounds, and 1.5 assists in 17 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "What were Betnijah Laney-Hamilton's 2026 averages?",
+      "answer": "In the 2026 regular season, Betnijah Laney-Hamilton averaged 4.7 points, 1.9 rebounds and 1.5 assists in 17 games for the New York Liberty. After joining the Washington Mystics, she averaged 4.2 points, 1.8 rebounds and 2.3 assists in 13 games.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "betnijah laney stats",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/betnijah-laney-hamilton/"
+      ],
+      "queries": [
+        {
+          "q": "betnijah laney-hamilton stats",
+          "vol": 110
+        }
+      ]
     },
     {
       "question": "How old is Betnijah Laney-Hamilton?",
-      "answer": "She was born October 29, 1993 in Philadelphia, Pennsylvania, U.S. As of late 2026 that puts her at 32 years old.",
+      "answer": "Betnijah Laney-Hamilton was born October 29, 1993.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
+        "https://www.wnba.com/player/204335/betnijah-laney-hamilton/bio"
       ],
-      "google_keyword": "betnijah laney hamilton age",
-      "approx_monthly_volume": 40,
-      "birthdate": "1993-10-29"
-    },
-    {
-      "question": "What is Betnijah Laney-Hamilton's contract?",
-      "answer": "Public salary trackers list Betnijah Laney-Hamilton at about $400,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "betnijah laney hamilton contract",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "betnijah laney hamilton age",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How tall is Betnijah Laney-Hamilton?",
-      "answer": "Betnijah Laney-Hamilton is listed at 6' 0\" by the WNBA.",
+      "answer": "The WNBA lists Betnijah Laney-Hamilton at 6 feet and 166 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
+        "https://www.wnba.com/player/204335/betnijah-laney-hamilton/bio"
       ],
-      "google_keyword": "betnijah laney-hamilton height",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Betnijah Laney-Hamilton make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Betnijah Laney-Hamilton's base salary / cap hit at about $400,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "betnijah laney-hamilton salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What did Betnijah Laney-Hamilton score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Connecticut Sun), Betnijah Laney-Hamilton had 3 points, 0 rebounds, and 0 assists in a 79-69 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "betnijah laney points last game",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Betnijah Laney-Hamilton's jersey number?",
-      "answer": "Betnijah Laney-Hamilton wears number 4 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "betnijah laney jersey",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "betnijah laney-hamilton height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "What team does Betnijah Laney-Hamilton play for?",
-      "answer": "She plays for the Washington Mystics and wears No. 4 as a guard.",
-      "answer_kind": "stats",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
-      ],
-      "google_keyword": "betnijah laney-hamilton team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Where is Betnijah Laney-Hamilton from?",
-      "answer": "She is from Philadelphia, Pennsylvania, U.S.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
-      ],
-      "google_keyword": "where is betnijah laney-hamilton from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Betnijah Laney-Hamilton?",
-      "answer": "Betnijah Laney-Hamilton is an American professional basketball player for the Washington Mystics of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
-      ],
-      "google_keyword": "who is betnijah laney-hamilton",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Is Betnijah Laney-Hamilton injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "betnijah laney-hamilton injury",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Does Betnijah Laney-Hamilton have a signature shoe?",
-      "answer": "Public search interest ties Betnijah Laney-Hamilton to performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "answer": "Betnijah Laney-Hamilton plays for the Washington Mystics, who claimed her off waivers from the New York Liberty on August 8, 2026. She won the 2024 WNBA title with New York and has also played for Chicago, Connecticut, Indiana and Atlanta.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Betnijah_Laney-Hamilton"
+        "https://www.oursportscentral.com/services/releases/mystics-claim-betnijah-laney-hamilton-off-waivers/n-6398788"
       ],
-      "google_keyword": "betnijah laney hamilton shoes",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "betnijah laney-hamilton team",
+          "vol": 10
+        },
+        {
+          "q": "where is betnijah laney-hamilton",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How do you pronounce Betnijah?",
+      "answer": "Betnijah is pronounced buh-NYE-juh, according to the Washington Mystics. She is from Clayton, Delaware, and played college basketball at Rutgers.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/mystics-claim-betnijah-laney-hamilton-off-waivers/n-6398788"
+      ],
+      "queries": [
+        {
+          "q": "betnijah laney hamilton pronunciation",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

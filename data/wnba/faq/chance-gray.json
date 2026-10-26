@@ -1,78 +1,92 @@
 {
   "slug": "chance-gray",
   "player_name": "Chance Gray",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "What are Chance Gray's stats / points per game?",
-      "answer": "In the 2026 regular season, Chance Gray averaged 3.2 points, 1.1 rebounds, and 1.0 assists in 38 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chance gray stats",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How much does Chance Gray make?",
-      "answer": "A precise public salary or net worth figure for Chance Gray is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Did Chance Gray play at Ohio State?",
+      "answer": "Yes. Chance Gray played her last two college seasons at Ohio State, 2024-25 and 2025-26, after two seasons at Oregon. The Buckeyes went 54-15 with her, and she finished her college career with 1,701 points.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://ohiostatebuckeyes.com/news/2026/4/13/womens-basketball-chance-gray-selected-by-los-angeles-sparks-in-2026-wnba-draft",
+        "https://sparks.wnba.com/news/sparks-draft-taniya-latson-chance-gray-and-amelia-hassett"
       ],
-      "google_keyword": "chance gray salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "chance gray ohio state",
+          "vol": 140
+        },
+        {
+          "q": "chance gray oregon",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Chance Gray's stats?",
+      "answer": "In the 2026 regular season, Chance Gray averaged 3.1 points, 1.1 rebounds, and 1.0 assists in 40 games for the Los Angeles Sparks.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/chance-gray/"
+      ],
+      "queries": [
+        {
+          "q": "chance gray stats",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "What team does Chance Gray play for?",
+      "answer": "Chance Gray plays guard for the Los Angeles Sparks, who drafted her in the second round, 24th overall, in the 2026 WNBA Draft. The Cincinnati native played 40 regular season games as a rookie.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sparks.wnba.com/news/sparks-draft-taniya-latson-chance-gray-and-amelia-hassett",
+        "https://fullcourtbuckets.com/wnba/chance-gray/"
+      ],
+      "queries": [
+        {
+          "q": "chance gray wnba",
+          "vol": 50
+        },
+        {
+          "q": "chance gray wnba draft",
+          "vol": 40
+        },
+        {
+          "q": "chance gray sparks",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Chance Gray?",
-      "answer": "Chance Gray is listed at 5' 9\".",
+      "answer": "The WNBA lists Chance Gray at 5 feet 9 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chance_Gray"
+        "https://www.wnba.com/player/1643462/chance-gray/bio"
       ],
-      "google_keyword": "chance gray height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Chance Gray's contract?",
-      "answer": "Contract length and guarantees for Chance Gray are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "chance gray contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Chance Gray attend?",
-      "answer": "Gray played college basketball at Ohio State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chance_Gray"
-      ],
-      "google_keyword": "chance gray ohio state",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who are Chance Gray's parents?",
-      "answer": "Public profiles share limited verified detail about Chance Gray's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chance_Gray"
-      ],
-      "google_keyword": "chance gray parents",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "chance gray height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Chance Gray?",
-      "answer": "Chance Gray was born July 6, 2004. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Chance Gray was born July 6, 2004.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chance_Gray"
+        "https://www.wnba.com/player/1643462/chance-gray/bio"
       ],
-      "google_keyword": "chance gray age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2004-07-06"
+      "queries": [
+        {
+          "q": "chance gray age",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

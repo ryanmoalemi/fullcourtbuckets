@@ -1,94 +1,117 @@
 {
   "slug": "aziaha-james",
   "player_name": "Aziaha James",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "What are Aziaha James's stats / points per game?",
-      "answer": "In the 2026 regular season, Aziaha James averaged 6.1 points, 2.4 rebounds, and 1.2 assists in 38 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What are Aziaha James' stats?",
+      "answer": "In the 2026 regular season, Aziaha James averaged 6.1 points, 2.4 rebounds, and 1.3 assists in 39 games for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aziaha james stats",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/aziaha-james/"
+      ],
+      "queries": [
+        {
+          "q": "aziaha james stats",
+          "vol": 170
+        },
+        {
+          "q": "aziaha james wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Aziaha James dating?",
-      "answer": "As of late 2026, Aziaha James has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What team does Aziaha James play for?",
+      "answer": "Aziaha James plays guard for the Dallas Wings, who drafted her 12th overall in the 2025 WNBA Draft. She played 38 regular season games as a rookie and 39 in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aziaha_James"
+        "https://www.wnba.com/player/1642793/aziaha-james/bio",
+        "https://fullcourtbuckets.com/wnba/aziaha-james/"
       ],
-      "google_keyword": "aziaha james relationship",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How much does Aziaha James make?",
-      "answer": "A precise public salary or net worth figure for Aziaha James is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aziaha james salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "aziaha james wnba",
+          "vol": 110
+        },
+        {
+          "q": "aziaha james wings",
+          "vol": 10
+        },
+        {
+          "q": "aziaha james wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "aziaha james draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Aziaha James?",
-      "answer": "Aziaha James is listed at 5' 10\".",
+      "answer": "The WNBA lists Aziaha James at 5 feet 10 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aziaha_James"
+        "https://www.wnba.com/player/1642793/aziaha-james/bio"
       ],
-      "google_keyword": "aziaha james height",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "aziaha james height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Aziaha James?",
-      "answer": "She was born November 19, 2002. As of late 2026 that puts her at 23 years old.",
+      "answer": "Aziaha James was born November 19, 2002.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aziaha_James"
+        "https://www.wnba.com/player/1642793/aziaha-james/bio"
       ],
-      "google_keyword": "aziaha james age",
-      "approx_monthly_volume": 40,
-      "birthdate": "2002-11-19"
+      "queries": [
+        {
+          "q": "aziaha james age",
+          "vol": 40
+        },
+        {
+          "q": "aziaha james birthday",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Aziaha James's jersey number?",
-      "answer": "Aziaha James wears number 10 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aziaha james jersey",
-      "approx_monthly_volume": 20
+      "question": "Did Aziaha James play at NC State?",
+      "answer": "Yes. Aziaha James played four seasons at NC State, from 2021 to 2025. She was a two-time All-ACC First Team pick, scored 1,589 points, and the Wolfpack went 103-27 in her career.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642793/aziaha-james/bio"
+      ],
+      "queries": [
+        {
+          "q": "aziaha james nc state",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Is Aziaha James injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aziaha james injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who are Aziaha James's parents?",
-      "answer": "Public profiles share limited verified detail about Aziaha James's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Where is Aziaha James from?",
+      "answer": "Aziaha James is from Virginia Beach, Virginia, and went to Princess Anne High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aziaha_James"
+        "https://gopack.com/sports/womens-basketball/roster/aziaha-james/13124"
       ],
-      "google_keyword": "aziaha james parents",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "When was Aziaha James drafted?",
-      "answer": "She was selected 12th overall by the Wings in the 2025 WNBA draft.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aziaha_James"
-      ],
-      "google_keyword": "aziaha james draft",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "aziaha james hometown",
+          "vol": 10
+        },
+        {
+          "q": "aziaha james high school",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

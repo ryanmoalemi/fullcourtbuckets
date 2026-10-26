@@ -1,104 +1,193 @@
 {
   "slug": "chamique-holdsclaw",
   "player_name": "Chamique Holdsclaw",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "What are Chamique Holdsclaw's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2010), Chamique Holdsclaw averaged 13.6 points, 5.3 rebounds, and 2.0 assists in 29 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chamique holdsclaw stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Does Chamique Holdsclaw have a signature shoe?",
-      "answer": "Public search interest ties Chamique Holdsclaw to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "What did Chamique Holdsclaw do at Tennessee?",
+      "answer": "Chamique Holdsclaw led Tennessee to three straight NCAA championships, in 1996, 1997 and 1998, and was a two-time Naismith College Player of the Year. She finished as Tennessee's all-time leading scorer and rebounder, men's or women's, with 3,025 points and 1,295 rebounds.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
+        "https://www.wbhof.com/member/chamique-holdsclaw",
+        "https://www.wnba.com/news/wnba-spotlight-hoop-hall-of-fame-class-of-2026"
       ],
-      "google_keyword": "chamique holdsclaw shoes",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "chamique holdsclaw tennessee",
+          "vol": 70
+        },
+        {
+          "q": "chamique holdsclaw college",
+          "vol": null
+        },
+        {
+          "q": "chamique holdsclaw won how many ncaa championships",
+          "vol": null
+        },
+        {
+          "q": "chamique holdsclaw college stats",
+          "vol": null
+        },
+        {
+          "q": "chamique holdsclaw tennessee stats",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "How much does Chamique Holdsclaw make?",
-      "answer": "A precise public salary or net worth figure for Chamique Holdsclaw is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What did Chamique Holdsclaw average in her WNBA career?",
+      "answer": "Chamique Holdsclaw averaged 16.9 points and 7.6 rebounds per game over her 11-year WNBA career with the Mystics, Sparks, Dream and Silver Stars. In 2002 she became the first WNBA player to lead the league in scoring and rebounding in the same season.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/news/wnba-spotlight-hoop-hall-of-fame-class-of-2026"
       ],
-      "google_keyword": "chamique holdsclaw net worth",
-      "approx_monthly_volume": 210
+      "queries": [
+        {
+          "q": "chamique holdsclaw stats",
+          "vol": 50
+        },
+        {
+          "q": "chamique holdsclaw wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw wnba",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Is Chamique Holdsclaw in the Hall of Fame?",
+      "answer": "Yes. Chamique Holdsclaw was enshrined in the Naismith Memorial Basketball Hall of Fame on August 15, 2026, in Springfield, Massachusetts. She entered the Women's Basketball Hall of Fame in 2018.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/wnba-spotlight-hoop-hall-of-fame-class-of-2026",
+        "https://www.wbhof.com/member/chamique-holdsclaw"
+      ],
+      "queries": [
+        {
+          "q": "chamique holdsclaw hall of fame",
+          "vol": 40
+        },
+        {
+          "q": "chamique holdsclaw 2018",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Chamique Holdsclaw?",
-      "answer": "Public profiles list Chamique Holdsclaw as born in 1977. As of late 2026 that puts her around 49 years old.",
+      "answer": "The Naismith Memorial Basketball Hall of Fame lists Chamique Holdsclaw's birthdate as August 9, 1977.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/hall-of-famers/chamique-holdsclaw"
+      ],
+      "queries": [
+        {
+          "q": "chamique holdsclaw age",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How tall is Chamique Holdsclaw?",
+      "answer": "The WNBA lists Chamique Holdsclaw at 6 feet 2 inches and 172 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
+        "https://www.wnba.com/player/100356/chamique-holdsclaw/bio"
       ],
-      "google_keyword": "chamique holdsclaw age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1977-01-01"
+      "queries": [
+        {
+          "q": "chamique holdsclaw height",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Chamique Holdsclaw married?",
-      "answer": "There is no widely reported public record of Chamique Holdsclaw being married as of late 2026.",
+      "question": "What is Mind/Game about?",
+      "answer": "Mind/Game: The Unquiet Journey of Chamique Holdsclaw is a documentary directed by Rick Goldsmith. It follows her basketball career and her work as a mental health advocate.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
+        "https://washingtoncitypaper.com/article/398658/d-c-independent-film-fest-mindgame-the-unquiet-journey-of-chamique-holdsclaw-and-internet-junkie-reviewed/"
       ],
-      "google_keyword": "chamique holdsclaw husband",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What team does Chamique Holdsclaw play for?",
-      "answer": "Her most recent WNBA team on record is the Atlanta Dream. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chamique holdsclaw teammates",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Chamique Holdsclaw have kids?",
-      "answer": "There is no widely reported public information that Chamique Holdsclaw has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
-      ],
-      "google_keyword": "willie johnson chamique holdsclaw",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "mind/game the unquiet journey of chamique holdsclaw",
+          "vol": 20
+        },
+        {
+          "q": "mind game chamique holdsclaw",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw movie",
+          "vol": 10
+        },
+        {
+          "q": "mind/game the unquiet journey of chamique holdsclaw summary",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Who is Chamique Holdsclaw?",
-      "answer": "Chamique Shaunta Holdsclaw is an American former professional basketball player in the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "answer": "Chamique Holdsclaw is a Hall of Fame forward from Queens, New York. She won three NCAA titles at Tennessee, went first overall to the Washington Mystics in the 1999 WNBA Draft, won 1999 Rookie of the Year and 2000 Olympic gold, and made six WNBA All-Star teams.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
+        "https://www.hoophall.com/hall-of-famers/chamique-holdsclaw",
+        "https://www.wnba.com/news/wnba-spotlight-hoop-hall-of-fame-class-of-2026"
       ],
-      "google_keyword": "chamique holdsclaw biography",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "chamique holdsclaw biography",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw bio",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What position does Chamique Holdsclaw play?",
-      "answer": "Chamique Holdsclaw is listed as a Forward for the Atlanta Dream.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chamique holdsclaw",
-      "approx_monthly_volume": 6600
+      "question": "Was Chamique Holdsclaw on the cover of SLAM?",
+      "answer": "Yes. In 1998, SLAM put Chamique Holdsclaw on the cover of its 29th issue, wearing a full Knicks uniform, before her senior year at Tennessee.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/wnba-spotlight-hoop-hall-of-fame-class-of-2026"
+      ],
+      "queries": [
+        {
+          "q": "chamique holdsclaw slam magazine",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw slam cover",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw slam magazine cover",
+          "vol": 10
+        },
+        {
+          "q": "chamique holdsclaw slam",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What is Chamique Holdsclaw's nationality?",
-      "answer": "Chamique Holdsclaw is American.",
-      "answer_kind": "bio",
+      "question": "Where did Chamique Holdsclaw go to high school?",
+      "answer": "Chamique Holdsclaw went to Christ the King High School in Queens, New York, where she won four state championships.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Chamique_Holdsclaw"
+        "https://www.hoophall.com/hall-of-famers/chamique-holdsclaw"
       ],
-      "google_keyword": "chamique holdsclaw",
-      "approx_monthly_volume": 6600
+      "queries": [
+        {
+          "q": "chamique holdsclaw high school",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

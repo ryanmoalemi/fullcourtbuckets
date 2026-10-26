@@ -1,88 +1,95 @@
 {
   "slug": "kaila-charles",
   "player_name": "Kaila Charles",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 26, 2026",
+  "verified_at": "2026-10-26",
   "items": [
     {
-      "question": "What are Kaila Charles's stats / points per game?",
-      "answer": "In the 2026 regular season, Kaila Charles averaged 6.4 points, 4.6 rebounds, and 1.4 assists in 42 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Kaila Charles' stats?",
+      "answer": "In the 2026 regular season, Kaila Charles averaged 6.3 points, 4.7 rebounds, and 1.4 assists in 44 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kaila charles stats",
-      "approx_monthly_volume": 480
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kaila-charles/"
+      ],
+      "queries": [
+        {
+          "q": "kaila charles stats",
+          "vol": 480
+        }
+      ]
     },
     {
-      "question": "How much does Kaila Charles make?",
-      "answer": "A precise public salary or net worth figure for Kaila Charles is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Kaila Charles play for?",
+      "answer": "Kaila Charles plays for the Golden State Valkyries, who signed her to a multi-year contract on April 12, 2026. She has also played for the Connecticut Sun (2020 to 2021), Atlanta Dream (2022), Seattle Storm (2023) and Dallas Wings (2025), before joining Golden State later in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630097/kaila-charles/bio",
+        "https://fullcourtbuckets.com/wnba/kaila-charles/"
       ],
-      "google_keyword": "kaila charles salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kaila charles wnba",
+          "vol": 140
+        },
+        {
+          "q": "kaila charles valkyries",
+          "vol": 40
+        },
+        {
+          "q": "kaila charles dallas wings",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Kaila Charles?",
-      "answer": "Kaila Charles is listed at 6' 1\".",
+      "answer": "The WNBA lists Kaila Charles at 6 feet 1 inch and 168 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaila_Charles"
+        "https://www.wnba.com/player/1630097/kaila-charles/bio"
       ],
-      "google_keyword": "kaila charles height",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Kaila Charles's contract?",
-      "answer": "Contract length and guarantees for Kaila Charles are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kaila charles contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Kaila Charles married?",
-      "answer": "There is no widely reported public record of Kaila Charles being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kaila_Charles"
-      ],
-      "google_keyword": "kaila charles husband",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Kaila Charles's parents?",
-      "answer": "Public profiles share limited verified detail about Kaila Charles's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kaila_Charles"
-      ],
-      "google_keyword": "kaila charles parents",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Kaila Charles attend?",
-      "answer": "Charles played college basketball at the Maryland Terrapins.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kaila_Charles"
-      ],
-      "google_keyword": "kaila charles maryland",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kaila charles height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Kaila Charles?",
-      "answer": "Kaila Charles was born March 23, 1998 in Glenn Dale. As of late 2026 that puts her at 28 years old.",
-      "answer_kind": "researched",
+      "answer": "Kaila Charles was born March 23, 1998.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kaila_Charles"
+        "https://www.wnba.com/player/1630097/kaila-charles/bio"
       ],
-      "google_keyword": "kaila charles age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1998-03-23"
+      "queries": [
+        {
+          "q": "kaila charles age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Did Kaila Charles play at Maryland?",
+      "answer": "Yes. Kaila Charles scored 1,984 points at Maryland and was a 2020 third-team All-American. The Connecticut Sun drafted her 23rd overall in 2020.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630097/kaila-charles/bio"
+      ],
+      "queries": [
+        {
+          "q": "kaila charles maryland",
+          "vol": 10
+        },
+        {
+          "q": "kaila charles draft",
+          "vol": null
+        },
+        {
+          "q": "kaila charles wnba draft",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
