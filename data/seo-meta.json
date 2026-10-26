@@ -192,8 +192,8 @@
     "description": "Browse WNBA player profiles with season statistics, team information and recent game logs. Coverage begins in 2008. Search by name or browse by team."
   },
   "/wnba/couples/": {
-    "title": "WNBA couples: confirmed relationships, with sources",
-    "description": "A list of confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out, and every couple listed is backed by a cited report."
+    "title": "WNBA couples 2026: 20 confirmed relationships, sourced",
+    "description": "Every WNBA couple here is confirmed by the players, their team or an on-record interview: 20 spouses, fiancés and partners, each with a linked source."
   },
   "/wnba/teams/": {
     "title": "WNBA teams: all 15 rosters for 2026 | Full Court Buckets",

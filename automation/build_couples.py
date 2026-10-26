@@ -25,7 +25,7 @@ PAGE_URL = '/wnba/couples/'
 DATA_PATH = ROOT / 'data' / 'wnba_couples.json'
 PAGE_PATH = ROOT / 'wnba' / 'couples' / 'index.html'
 PHOTO_DIR = ROOT / 'images' / 'couples'
-CHECKED = 'September 29, 2026'
+CHECKED = 'October 26, 2026'
 UA = 'FullCourtBuckets/1.0 (https://fullcourtbuckets.com/wnba/couples/; source and photo check)'
 BROWSER_UA = (
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
@@ -788,12 +788,12 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
         + f'<p class="checked">Last checked {CHECKED}.</p>'
         + render_credits(cards)
     )
-    title = 'WNBA Couples | Full Court Buckets'
-    description = 'Confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out.'
+    title = f'WNBA couples 2026: {len(cards)} confirmed relationships, sourced'
+    description = f'Every WNBA couple here is confirmed by the players, their team or an on-record interview: {len(cards)} spouses, fiancés and partners, each with a linked source.'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 {GA4_TAG}
 {ADSENSE_TAG}
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{BASE}{PAGE_URL}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE}{PAGE_URL}"><meta property="og:site_name" content="Full Court Buckets"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><style>{PAGE_CSS}</style><script type="application/ld+json">{schema(cards, items)}</script><script src="/assets/site-nav.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{site_nav.render_header(menu, PAGE_URL)}<main id="content" class="wrap">{body}</main>{site_nav.FOOTER_HTML}</body></html>'''
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="{BASE}{PAGE_URL}"><link rel="icon" href="/favicon.svg"><meta property="og:type" content="article"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(description)}"><meta property="og:url" content="{BASE}{PAGE_URL}"><meta property="og:site_name" content="Full Court Buckets"><meta property="og:image" content="{BASE}/images/social/wnba-couples.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="WNBA couples: confirmed relationships, with sources"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{BASE}/images/social/wnba-couples.jpg"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="/wnba/assets/players.css"><link rel="stylesheet" href="/assets/site-nav.css"><style>{PAGE_CSS}</style><script type="application/ld+json">{schema(cards, items)}</script><script src="/assets/site-nav.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a>{site_nav.render_header(menu, PAGE_URL)}<main id="content" class="wrap">{body}</main>{site_nav.FOOTER_HTML}</body></html>'''
 
 
 def patch_players(root: Path = ROOT) -> list[str]:
