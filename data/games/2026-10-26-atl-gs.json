@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:35:18+00:00",
+ "checked_at": "2026-10-27T00:35:51+00:00",
  "period": 1,
  "clock": "21.5",
  "last_play_period": 1,
- "last_play_clock": "22.1",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "ATL",
   "score": 14,
@@ -934,7 +934,7 @@
    "period": 1,
    "clock": "2:25",
    "type": "Driving Layup Shot",
-   "text": "Naz Hillmon blocks Cecilia Zandalasini 's 7-foot driving layup",
+   "text": "Cecilia Zandalasini misses driving layup",
    "away_score": 8,
    "home_score": 10,
    "scoring_play": false,
@@ -1305,13 +1305,37 @@
    "order": 107,
    "period": 1,
    "clock": "22.1",
-   "type": "No Shot (Default Shot)",
-   "text": "Rhyne Howard makes 26-foot shot (Jordin Canada assists)",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 26-foot three point jumper (Jordin Canada assists)",
    "away_score": 14,
    "home_score": 13,
    "scoring_play": true,
    "score_value": 3,
    "team": "ATL"
+  },
+  {
+   "order": 108,
+   "period": 1,
+   "clock": "0.9",
+   "type": "No Turnover",
+   "text": "Veronica Burton turnover",
+   "away_score": 14,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 109,
+   "period": 1,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 1st Quarter",
+   "away_score": 14,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
