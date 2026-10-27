@@ -180,8 +180,8 @@
     "description": "HTML site map of Full Court Buckets: the home page, standings, news, all 15 teams, every WNBA player profile, owners, trackers and the about pages."
   },
   "/standings/": {
-    "title": "2026 WNBA standings: records, seeds and games back",
-    "description": "2026 WNBA standings for all 15 teams: wins, losses, winning percentage, games back, home and road records, and playoff seeds, updated after every game."
+    "title": "Final 2026 WNBA standings and Finals series status",
+    "description": "Final 2026 WNBA regular-season standings for all 15 teams, with records, games back and playoff seeds, plus the current WNBA Finals series score and schedule."
   },
   "/terms/": {
     "title": "Terms of use for the Full Court Buckets WNBA site",
