@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:27:30+00:00",
+ "checked_at": "2026-10-27T00:28:34+00:00",
  "period": 1,
- "clock": "2:59",
+ "clock": "2:50",
  "last_play_period": 1,
- "last_play_clock": "3:01",
+ "last_play_clock": "2:59",
  "away": {
   "abbreviation": "ATL",
-  "score": 6,
-  "feed_score": 6
+  "score": 8,
+  "feed_score": 8
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 6,
+   "away": 8,
    "home": 8
   }
  ],
@@ -644,7 +644,7 @@
   {
    "order": 52,
    "period": 1,
-   "clock": "4:16",
+   "clock": "4:18",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 4,
@@ -657,8 +657,8 @@
    "order": 53,
    "period": 1,
    "clock": "3:55",
-   "type": "Jump Shot",
-   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "type": "Step Back Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point step back jumpshot",
    "away_score": 4,
    "home_score": 8,
    "scoring_play": false,
@@ -668,7 +668,7 @@
   {
    "order": 54,
    "period": 1,
-   "clock": "3:52",
+   "clock": "3:53",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 4,
@@ -819,6 +819,54 @@
    "home_score": 8,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 67,
+   "period": 1,
+   "clock": "2:59",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 68,
+   "period": 1,
+   "clock": "2:59",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase makes free throw 1 of 2",
+   "away_score": 7,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 69,
+   "period": 1,
+   "clock": "2:59",
+   "type": "Substitution",
+   "text": "Te-Hina Paopao enters the game for Jordin Canada",
+   "away_score": 7,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 70,
+   "period": 1,
+   "clock": "2:59",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase makes free throw 2 of 2",
+   "away_score": 8,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 1,
    "team": "ATL"
   }
  ]
