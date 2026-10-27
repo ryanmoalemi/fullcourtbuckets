@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T01:18:46+00:00",
+ "checked_at": "2026-10-27T01:20:22+00:00",
  "period": 3,
- "clock": "8:32",
+ "clock": "7:27",
  "last_play_period": 3,
- "last_play_clock": "8:32",
+ "last_play_clock": "7:27",
  "away": {
   "abbreviation": "ATL",
   "score": 24,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 27,
-  "feed_score": 27
+  "score": 32,
+  "feed_score": 32
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 2,
-   "home": 2
+   "home": 7
   }
  ],
  "players": [],
@@ -2406,7 +2406,7 @@
   {
    "order": 198,
    "period": 3,
-   "clock": "9:43",
+   "clock": "9:45",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 22,
@@ -2419,8 +2419,8 @@
    "order": 199,
    "period": 3,
    "clock": "9:24",
-   "type": "Layup Shot",
-   "text": "Jordin Canada makes layup (Rhyne Howard assists)",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Rhyne Howard assists)",
    "away_score": 24,
    "home_score": 25,
    "scoring_play": true,
@@ -2447,6 +2447,90 @@
    "text": "shot clock turnover",
    "away_score": 24,
    "home_score": 27,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 202,
+   "period": 3,
+   "clock": "8:10",
+   "type": "Jump Shot",
+   "text": "Kiah Stokes makes 23-foot three point jumper (Tiffany Hayes assists)",
+   "away_score": 24,
+   "home_score": 30,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 203,
+   "period": 3,
+   "clock": "7:53",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
+   "away_score": 24,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 204,
+   "period": 3,
+   "clock": "7:49",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 24,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 205,
+   "period": 3,
+   "clock": "7:47",
+   "type": "Layup Shot",
+   "text": "Angel Reese misses layup",
+   "away_score": 24,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 206,
+   "period": 3,
+   "clock": "7:45",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 24,
+   "home_score": 30,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 207,
+   "period": 3,
+   "clock": "7:27",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup",
+   "away_score": 24,
+   "home_score": 32,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 208,
+   "period": 3,
+   "clock": "7:27",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 24,
+   "home_score": 32,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
