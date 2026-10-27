@@ -5,20 +5,20 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T01:17:11+00:00",
+ "checked_at": "2026-10-27T01:18:46+00:00",
  "period": 3,
- "clock": "9:43",
+ "clock": "8:32",
  "last_play_period": 3,
- "last_play_clock": "9:43",
+ "last_play_clock": "8:32",
  "away": {
   "abbreviation": "ATL",
-  "score": 22,
-  "feed_score": 22
+  "score": 24,
+  "feed_score": 24
  },
  "home": {
   "abbreviation": "GS",
-  "score": 25,
-  "feed_score": 25
+  "score": 27,
+  "feed_score": 27
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 0,
-   "home": 0
+   "away": 2,
+   "home": 2
   }
  ],
  "players": [],
@@ -2394,7 +2394,7 @@
   {
    "order": 197,
    "period": 3,
-   "clock": "9:48",
+   "clock": "9:47",
    "type": "Jump Shot",
    "text": "Veronica Burton misses 26-foot three point jumper",
    "away_score": 22,
@@ -2411,6 +2411,42 @@
    "text": "Jordin Canada defensive rebound",
    "away_score": 22,
    "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 199,
+   "period": 3,
+   "clock": "9:24",
+   "type": "Layup Shot",
+   "text": "Jordin Canada makes layup (Rhyne Howard assists)",
+   "away_score": 24,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 200,
+   "period": 3,
+   "clock": "8:59",
+   "type": "Step Back Jump Shot",
+   "text": "Kaila Charles makes 15-foot step back jumpshot (Tiffany Hayes assists)",
+   "away_score": 24,
+   "home_score": 27,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 201,
+   "period": 3,
+   "clock": "8:32",
+   "type": "Shot Clock Turnover",
+   "text": "shot clock turnover",
+   "away_score": 24,
+   "home_score": 27,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
