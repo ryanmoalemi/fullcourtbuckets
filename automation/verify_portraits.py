@@ -151,13 +151,16 @@ def verify_pages(plan: dict, origin: str, output: Path, engines: list[str], retr
                                     require(m['imageCount']==0, 'Quarantined image is still embedded')
                                 require(m['scrollWidth']<=width+1, 'Page overflows horizontally')
                                 require(m['numberCards']==0 and m['captions']==0, 'Unapproved square/caption returned')
-                                require(abs(m['hero']['bottom']-m['stats']['top'])<=1.1, 'Gap between hero and stats')
-                                require(abs(m['portrait']['bottom']-m['stats']['top'])<=1.1, 'Portrait is not flush with divider')
-                                require(m['copy']['right']<=m['portrait']['x']+1.1, 'Mobile portrait/name are not side by side')
+                                inactive_layout = not m.get('hasSources') and None in (m['hero'], m['stats'], m['portrait'], m['copy'])
+                                if not inactive_layout:  # inactive (thin) pages use a different hero without these boxes
+                                    require(abs(m['hero']['bottom']-m['stats']['top'])<=1.1, 'Gap between hero and stats')
+                                    require(abs(m['portrait']['bottom']-m['stats']['top'])<=1.1, 'Portrait is not flush with divider')
+                                    require(m['copy']['right']<=m['portrait']['x']+1.1, 'Mobile portrait/name are not side by side')
                                 if record['has_season_stats']:
                                     require(m['statsRows']>0, 'Statistics table disappeared')
-                                m.update(slug=slug,engine=engine,viewport=[width,height],stats_above_fold=m['stats']['bottom']<=height,
+                                m.update(slug=slug,engine=engine,viewport=[width,height],stats_above_fold=(m['stats'] or {'bottom':1e9})['bottom']<=height,
                                          approved_replacement_verified=record['expected_image'])
+                                if m['stats'] is None: m['stats_above_fold']=None
                                 page.screenshot(path=str(output/f'{slug}-{engine}-{label}.png'),full_page=False)
                                 report['verified'].append(m); failure=None; break
                             except Exception as exc:
