@@ -5,7 +5,7 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:21:36+00:00",
+ "checked_at": "2026-10-27T00:24:12+00:00",
  "period": 1,
  "clock": "4:39",
  "last_play_period": 1,
@@ -332,7 +332,7 @@
   {
    "order": 26,
    "period": 1,
-   "clock": "6:32",
+   "clock": "6:33",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 4,
@@ -345,8 +345,8 @@
    "order": 27,
    "period": 1,
    "clock": "6:25",
-   "type": "Jump Shot",
-   "text": "Tiffany Hayes misses 23-foot three point jumper",
+   "type": "Step Back Jump Shot",
+   "text": "Tiffany Hayes misses 23-foot three point step back jumpshot",
    "away_score": 4,
    "home_score": 4,
    "scoring_play": false,
@@ -356,7 +356,7 @@
   {
    "order": 28,
    "period": 1,
-   "clock": "6:21",
+   "clock": "6:23",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 4,
@@ -380,9 +380,9 @@
   {
    "order": 30,
    "period": 1,
-   "clock": "6:09",
-   "type": "Layup Shot",
-   "text": "Veronica Burton blocks Jordin Canada 's 7-foot layup",
+   "clock": "6:12",
+   "type": "Layup Driving Reverse",
+   "text": "Veronica Burton blocks Jordin Canada 's 7-foot two point shot",
    "away_score": 4,
    "home_score": 4,
    "scoring_play": false,
@@ -392,7 +392,7 @@
   {
    "order": 31,
    "period": 1,
-   "clock": "6:09",
+   "clock": "6:10",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 4,
@@ -416,7 +416,7 @@
   {
    "order": 33,
    "period": 1,
-   "clock": "5:54",
+   "clock": "5:57",
    "type": "Jumpball",
    "text": "Angel Reese vs. Gabby Williams (Veronica Burton gains possession)",
    "away_score": 4,
@@ -580,6 +580,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 47,
+   "period": 1,
+   "clock": "4:39",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Angel Reese",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 48,
+   "period": 1,
+   "clock": "4:39",
+   "type": "Substitution",
+   "text": "enters the game for Allisha Gray",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
