@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:15:10+00:00",
+ "checked_at": "2026-10-27T00:15:43+00:00",
  "period": 1,
- "clock": "7:18",
+ "clock": "6:59",
  "last_play_period": 1,
- "last_play_clock": "7:50",
+ "last_play_clock": "7:02",
  "away": {
   "abbreviation": "ATL",
   "score": 2,
@@ -171,6 +171,78 @@
    "home_score": 4,
    "scoring_play": true,
    "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 13,
+   "period": 1,
+   "clock": "7:24",
+   "type": "Layup Shot",
+   "text": "Rhyne Howard blocks Tiffany Hayes 's 6-foot layup",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 14,
+   "period": 1,
+   "clock": "7:20",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 15,
+   "period": 1,
+   "clock": "7:16",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Tiffany Hayes steals)",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 16,
+   "period": 1,
+   "clock": "7:08",
+   "type": "Running Layup Shot",
+   "text": "Gabby Williams misses running layup",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 17,
+   "period": 1,
+   "clock": "7:04",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 18,
+   "period": 1,
+   "clock": "7:02",
+   "type": "No Shot (Default Shot)",
+   "text": "Allisha Gray misses shot",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "ATL"
   }
  ]
