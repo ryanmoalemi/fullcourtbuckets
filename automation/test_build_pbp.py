@@ -6,6 +6,20 @@ ROOT = Path(__file__).resolve().parents[1]
 G1 = ROOT / 'data/games/2026-10-17-atl-gs.json'
 
 
+def build_unplayed(game_id):
+    """Build a game as the pre-tip placeholder (its box score dropped from a temp copy of the config)."""
+    import json as _j, tempfile as _t
+    from pathlib import Path as _P
+    conf = _j.loads(build_pbp.CONF.read_text()); conf['games'][game_id].pop('game_json', None)
+    conf['games'][game_id].pop('recap', None)
+    tmp = _P(_t.mkdtemp()) / 'pbp-games.json'; tmp.write_text(_j.dumps(conf))
+    saved, build_pbp.CONF = build_pbp.CONF, tmp
+    try:
+        return build_pbp.build(game_id)
+    finally:
+        build_pbp.CONF = saved
+
+
 class BuildPbp(unittest.TestCase):
     def test_game1_builds_and_matches_box(self):
         path, out = build_pbp.build('401918305')
@@ -20,8 +34,8 @@ class BuildPbp(unittest.TestCase):
             self.assertEqual((m['pts'], m['3pa'], m['2pa'] + m['3pa']), (r['pts'], r['fg3a'], r['fga']), r['name'])
 
     def test_placeholder_has_no_plays(self):
-        # Game 4 is final; the next unplayed game (Game 5) is the placeholder now.
-        _, out = build_pbp.build('401918309')
+        # Game 5 as it looked before tip-off (series 2-2): the placeholder has no plays.
+        _, out = build_unplayed('401918309')
         self.assertIn('Live: updates every 30 seconds.', out)
         self.assertIn('Series tied 2-2', out)
         self.assertIn('TV: USA Network (simulcast on CNBC). Streaming: Peacock.', out)

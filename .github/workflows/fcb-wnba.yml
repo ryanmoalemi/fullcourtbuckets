@@ -104,10 +104,28 @@ jobs:
             python automation/apply_portraits.py
             python automation/rollout_player_design.py
           fi
-      - name: Test data safety and page builder without credentials
+      - name: Test player data safety and the player page builder (blocking)
         run: |
-          python -m unittest discover -s automation -p 'test_*.py' -v
+          python -m unittest -v \
+            automation/test_build_players.py automation/test_wnba_sync.py \
+            automation/test_playoff_boxes.py automation/test_rollout_player_design.py \
+            automation/test_game_stats.py automation/test_game_data.py \
+            automation/test_player_hub.py automation/test_season_teams.py \
+            automation/test_no_espn_game_stats.py automation/test_no_api_hrefs.py \
+            automation/test_portraits.py
           node --check automation/players.js
+      - name: Site-wide page tests (reported, never block player stats)
+        # Unrelated site tests (nav, SEO meta, ticker, search index...) used to stop the whole
+        # job, so a Finals box score could sit unpublished for a day. They still run and a
+        # failure is shown in the summary and as a warning, but the player rebuild continues.
+        continue-on-error: true
+        run: |
+          if ! python -m unittest discover -s automation -p 'test_*.py' > "$RUNNER_TEMP/site-tests.log" 2>&1; then
+            grep -E '^(FAIL|ERROR):' "$RUNNER_TEMP/site-tests.log" | sed 's/^/- /' >> "$GITHUB_STEP_SUMMARY" || true
+            echo '::warning::Site-wide tests failed; player stats were still rebuilt. See summary.'
+            tail -n 80 "$RUNNER_TEMP/site-tests.log"
+            exit 1
+          fi
       - name: Check the private API secret
         id: key
         env:
