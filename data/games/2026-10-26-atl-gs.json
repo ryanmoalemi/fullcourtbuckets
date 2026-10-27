@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T02:16:14+00:00",
+ "checked_at": "2026-10-27T02:17:48+00:00",
  "period": 4,
- "clock": "49.9",
+ "clock": "42.3",
  "last_play_period": 4,
- "last_play_clock": "49.9",
+ "last_play_clock": "42.3",
  "away": {
   "abbreviation": "ATL",
   "score": 52,
@@ -4387,6 +4387,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 363,
+   "period": 4,
+   "clock": "45.5",
+   "type": "Pullup Jump Shot",
+   "text": "Jordin Canada misses 25-foot three point pullup jump shot",
+   "away_score": 52,
+   "home_score": 64,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 364,
+   "period": 4,
+   "clock": "42.3",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 52,
+   "home_score": 64,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
