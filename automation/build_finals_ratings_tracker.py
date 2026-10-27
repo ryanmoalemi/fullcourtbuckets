@@ -542,7 +542,7 @@ def article_html(payload: dict) -> str:
 {REESE_CREDIT}
 {embed}
 {citation.finals_tracker_update_callout(ROOT)}
-<p class="how-made">How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi. {links.HOW_MADE_LINK}</p>
+<p class="how-made">How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story. {links.HOW_MADE_LINK}</p>
 <p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p></article>'''
 
 

@@ -113,7 +113,7 @@ class HelpfulContentTests(unittest.TestCase):
         self.assertEqual(node['datePublished'], '2026-08-30')
         self.assertEqual(node['dateModified'], article['dateModified'])
         self.assertEqual(node['dateModified'], '2026-10-09')
-        bare = '<article><p>No links here.</p><p class="how-made">How this story was made: drafted with AI tools from the sources linked above, then reviewed and edited by Ryan Moalemi.</p></article>'
+        bare = '<article><p>No links here.</p><p class="how-made">Built from the sources linked above.</p></article>'
         with self.assertRaises(links.DisclosureError):
             links.assert_disclosure_matches_sources(bare)
 

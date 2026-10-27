@@ -141,7 +141,7 @@ class NoConflictMarkerTests(unittest.TestCase):
         text = page.read_text(encoding='utf-8')
         self.assertNotIn(THEIRS, text)
         self.assertNotIn(OURS, text)
-        self.assertIn('How this was made', text)
+        self.assertIn('How this story was made', text)
         self.assertIn('Photo shows an ungraded copy of the same card.', text)
         self.assertIn('Photo shows a graded copy of the same card.', text)
 
