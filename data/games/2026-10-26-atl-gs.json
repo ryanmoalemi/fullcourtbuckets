@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:59:25+00:00",
+ "checked_at": "2026-10-27T00:59:59+00:00",
  "period": 2,
  "clock": "25.7",
  "last_play_period": 2,
- "last_play_clock": "35.6",
+ "last_play_clock": "21.9",
  "away": {
   "abbreviation": "ATL",
   "score": 22,
@@ -1885,9 +1885,9 @@
   {
    "order": 155,
    "period": 2,
-   "clock": "3:17",
-   "type": "Jump Shot",
-   "text": "Gabby Williams misses 25-foot three point jumper",
+   "clock": "3:16",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 25-foot three point pullup jump shot",
    "away_score": 21,
    "home_score": 22,
    "scoring_play": false,
@@ -1897,7 +1897,7 @@
   {
    "order": 156,
    "period": 2,
-   "clock": "3:13",
+   "clock": "3:14",
    "type": "Offensive Rebound",
    "text": "Veronica Burton offensive rebound",
    "away_score": 21,
@@ -1909,7 +1909,7 @@
   {
    "order": 157,
    "period": 2,
-   "clock": "3:01",
+   "clock": "3:00",
    "type": "Turnaround Jump Shot",
    "text": "Gabby Williams misses 15-foot turnaround jump shot",
    "away_score": 21,
@@ -2253,6 +2253,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 186,
+   "period": 2,
+   "clock": "27.1",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada misses driving layup",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 187,
+   "period": 2,
+   "clock": "24.1",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 188,
+   "period": 2,
+   "clock": "21.9",
+   "type": "Lost Ball Turnover",
+   "text": "Kiah Stokes lost ball turnover (Jordin Canada steals)",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
