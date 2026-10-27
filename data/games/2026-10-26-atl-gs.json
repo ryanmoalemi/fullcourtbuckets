@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:57:44+00:00",
+ "checked_at": "2026-10-27T00:58:18+00:00",
  "period": 2,
- "clock": "58.4",
+ "clock": "42.6",
  "last_play_period": 2,
- "last_play_clock": "1:15",
+ "last_play_clock": "42.6",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -1825,7 +1825,7 @@
   {
    "order": 150,
    "period": 2,
-   "clock": "4:04",
+   "clock": "4:05",
    "type": "Jump Shot",
    "text": "Kayla Thornton misses 22-foot three point jumper",
    "away_score": 21,
@@ -1837,7 +1837,7 @@
   {
    "order": 151,
    "period": 2,
-   "clock": "4:01",
+   "clock": "4:03",
    "type": "Offensive Rebound",
    "text": "Tiffany Hayes offensive rebound",
    "away_score": 21,
@@ -2145,6 +2145,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 177,
+   "period": 2,
+   "clock": "58.4",
+   "type": "Offensive Foul",
+   "text": "Cecilia Zandalasini offensive foul",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 178,
+   "period": 2,
+   "clock": "58.4",
+   "type": "Offensive Foul Turnover",
+   "text": "Cecilia Zandalasini offensive foul turnover",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 179,
+   "period": 2,
+   "clock": "46.0",
+   "type": "Jump Shot",
+   "text": "Isobel Borlase misses 25-foot three point jumper",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 180,
+   "period": 2,
+   "clock": "42.6",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
