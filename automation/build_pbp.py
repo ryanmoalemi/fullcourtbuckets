@@ -193,7 +193,8 @@ def build(game_id, game_json=None, today=None, live=False):
                 f'{bline}<p class="thru">Game {n} has not started. {LIVE_NOTE}</p>'
                 f'<div class="pbp-panel" data-fcb-data-table>{sb("NOT STARTED", "&ndash;", "&ndash;")}'
                 f'<p class="pbp-wait">Tip: {E(g["tip"])}, {E(g["venue"])}<br>{E(series_text(sbf))}<br><b>{LIVE_NOTE}</b></p></div>'
-                f'<p class="note">{" · ".join(links + ["Other games: " + others])}</p></article></main>')
+                f'<h2>Game {n} details</h2><p class="note">Plays, the running score and player play counts appear here once Game {n} tips off; the page refreshes during the game.</p>'
+                f'<h2>More from the series</h2><p class="note">{" · ".join(links + ["Other games: " + others])}</p></article></main>')
         return path, with_live_refresh(social_tags(head + '\n' + bo + main + '\n' + foot))
     plays, roster = derive(d, live)
     pc, overrides = player_counts(plays, roster)

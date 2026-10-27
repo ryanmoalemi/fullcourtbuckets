@@ -3,7 +3,7 @@ title: "Valkyries beat Dream 67-62 to tie the WNBA Finals 2-2 as Atlanta turns i
 slug: valkyries-dream-finals-game-4-recap
 date: 2026-10-24
 category: news
-description: "Golden State beat Atlanta 67-62 in Game 4 at State Farm Arena to tie the WNBA Finals 2-2. The Dream had 18 turnovers, 14 before halftime. Game 5 is Monday."
+description: "Golden State beat Atlanta 67-62 in Game 4 at State Farm Arena to tie the WNBA Finals 2-2. The Dream had 18 turnovers, 14 before halftime."
 tags:
   - finals
   - recap

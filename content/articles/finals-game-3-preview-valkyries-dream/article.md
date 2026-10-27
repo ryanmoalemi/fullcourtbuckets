@@ -3,7 +3,7 @@ title: "WNBA Finals Game 3 preview: Golden State hasn't taken a third-quarter fr
 slug: finals-game-3-preview-valkyries-dream
 date: 2026-10-21
 updated: "2026-10-21 12:45 PT"
-description: "Golden State has scored 9 points and taken no free throws in the third quarter of both Finals games. Game 3 is tonight at 5 p.m. PT at State Farm Arena, series tied 1-1."
+description: "Golden State has scored 9 points and taken no free throws in the third quarter of both Finals games. Written before Game 3 with the series tied 1-1; Atlanta won Game 3 97-71."
 category: news
 tags:
   - finals

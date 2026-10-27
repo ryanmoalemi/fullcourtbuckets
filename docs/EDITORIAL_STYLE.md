@@ -80,3 +80,7 @@ Learned from the Finals Game 5 recap. They apply to every article and data page.
 7. **SEO structure on every page.** SEO meta (title, description, canonical, social tags), a visible breadcrumb trail with matching BreadcrumbList JSON-LD, one H1, and clear H2/H3 subheads.
 
 `automation/test_article_rules.py` checks the mechanical parts on every published `/news/` article: "guaranteed", unscoped "ever"/"all-time" claims, credit or attribution requests, FCB data labeled CC BY instead of CC0, `google.com/search` links, and missing title, description, canonical, breadcrumbs, BreadcrumbList JSON-LD, or H1/H2 structure.
+
+## Time-sensitive text
+
+Don't hand-write "Game 5 is Monday", "Finals open Saturday", a series score or a running attendance total on an evergreen page (homepage, team, standings, tracker, schedule, hubs). Use a `data-fcb-dynamic` section (see AGENTS.md, "Dynamic sections") so it updates after each final. In a dated story, write it as of the story's date ("Written before Game 3 with the series tied 1-1") and keep the description free of future-tense game days.

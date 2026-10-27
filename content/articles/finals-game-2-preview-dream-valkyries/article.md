@@ -3,7 +3,7 @@ title: "WNBA Finals Game 2 preview: Atlanta lost the turnover battle for the fir
 slug: finals-game-2-preview-dream-valkyries
 date: 2026-10-19
 updated: "2026-10-19 12:13 PT"
-description: "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Game 2 is Monday at 5 p.m. PT at Chase Center, with Golden State up 1-0."
+description: "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Written before Game 2 with Golden State up 1-0; Atlanta won Game 2 79-65."
 category: news
 tags:
   - finals

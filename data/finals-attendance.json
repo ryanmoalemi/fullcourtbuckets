@@ -1845,6 +1845,25 @@
       "times_tied": "2",
       "source_url": "https://www.wnba.com/game/1042600304",
       "note": ""
+    },
+    {
+      "season": "2026",
+      "game": "5",
+      "date": "2026-10-26",
+      "away": "ATL",
+      "away_score": "55",
+      "home": "GSV",
+      "home_score": "64",
+      "winner": "GSV",
+      "margin": "9",
+      "overtime_periods": "0",
+      "arena": "Chase Center",
+      "attendance": "18064",
+      "sellout_flag": "1",
+      "lead_changes": "n/a",
+      "times_tied": "n/a",
+      "source_url": "https://www.wnba.com/game/1042600305",
+      "note": ""
     }
   ],
   "playoffs2026": [

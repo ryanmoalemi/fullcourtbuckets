@@ -148,3 +148,14 @@ Ryan approved real Wikimedia Commons photos for player pages, one player at a ti
 ## SEO completeness (owner standing rule, 2026-10-27)
 
 Every indexable page needs a unique title and meta description, canonical, og:title/description/url/image and twitter:card/title, compact visible breadcrumbs directly above the single H1 with matching `BreadcrumbList` JSON-LD, and descriptive H2/H3 subheadings. `automation/breadcrumbs.py` fills missing breadcrumbs (and the homepage H1) after every build; `social_meta.py` fills missing OG/Twitter text tags. Play-by-play trails are Home > WNBA > 2026 Finals > Game N > Play-by-play (`breadcrumbs.pbp_trail`). `automation/test_seo_completeness.py` fails the build when any page misses one.
+
+## Dynamic sections (owner standing rule, 2026-10-27)
+
+Any text that changes after a game (series score, next game, schedule results, attendance totals, "Game N is Thursday") must not be hand-written on an evergreen page. Wrap it in a marked section and let `automation/dynamic_sections.py` fill it:
+
+`<p data-fcb-dynamic="series-status" data-fcb-source="data/games data/finals-schedule.json" data-fcb-updated="YYYY-MM-DD">…</p><!--/fcb-dynamic-->`
+
+- Kinds: `series-status` (optional `data-fcb-team="GS"`/`"ATL"`), `finals-schedule`, `next-game`, `finals-attendance-lead`, `finals-attendance-counter`, `finals-attendance-data`.
+- Sources: results from `data/games/`, unplayed games from `data/finals-schedule.json`, attendance from `data/finals-attendance.json`. Update the data, never the rendered text.
+- The renderer runs in `fcb-wnba.yml` (after every final) and `publish-articles.yml`, after `breadcrumbs.py`. `dynamic_sections.py --check` (and `test_dynamic_sections.py`) fails on a section older than the latest final or on stale wording outside a section.
+- Dated news stories may keep their own body text; their descriptions and cards may not say "Game N is <day>".
