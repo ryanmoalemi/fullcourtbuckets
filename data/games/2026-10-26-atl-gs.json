@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:15:43+00:00",
+ "checked_at": "2026-10-27T00:16:47+00:00",
  "period": 1,
- "clock": "6:59",
+ "clock": "6:35",
  "last_play_period": 1,
- "last_play_clock": "7:02",
+ "last_play_clock": "6:35",
  "away": {
   "abbreviation": "ATL",
-  "score": 2,
-  "feed_score": 2
+  "score": 4,
+  "feed_score": 4
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 2,
+   "away": 4,
    "home": 4
   }
  ],
@@ -237,13 +237,73 @@
    "order": 18,
    "period": 1,
    "clock": "7:02",
-   "type": "No Shot (Default Shot)",
-   "text": "Allisha Gray misses shot",
+   "type": "Turnaround Jump Shot",
+   "text": "Allisha Gray misses 11-foot turnaround jump shot",
    "away_score": 2,
    "home_score": 4,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 19,
+   "period": 1,
+   "clock": "6:59",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 20,
+   "period": 1,
+   "clock": "6:39",
+   "type": "Floating Jump Shot",
+   "text": "Gabby Williams misses 10-foot floating jump shot",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 21,
+   "period": 1,
+   "clock": "6:37",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 22,
+   "period": 1,
+   "clock": "6:35",
+   "type": "Running Layup Shot",
+   "text": "Angel Reese makes running layup (Jordin Canada assists)",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 23,
+   "period": 1,
+   "clock": "6:35",
+   "type": "No Foul",
+   "text": "foul",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
