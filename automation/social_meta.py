@@ -258,6 +258,13 @@ def social_block(text: str, image: str, alt: str, width: int, height: int) -> st
             tags.append(f'<meta {attr}="{key}" content="{htmlmod.escape(str(val), quote=True)}">')
             seen.add(key)
             vals[key] = str(val)
+    # Owner rule: every page carries full OG/Twitter meta. Fill text tags from
+    # the page's own <title>, meta description and canonical when a page lacks them.
+    add('property', 'og:title', _title(text))
+    add('property', 'og:description', _description(text))
+    add('property', 'og:url', _canonical(text))
+    add('property', 'og:type', 'website')
+    add('property', 'og:site_name', 'Full Court Buckets')
     existing = vals.get('og:image', '')
     if existing:
         image = existing
@@ -283,6 +290,16 @@ def social_block(text: str, image: str, alt: str, width: int, height: int) -> st
     else:
         head = head + block + '\n'
     return head + sep + rest
+
+
+def _description(text: str) -> str:
+    m = re.search(r'<meta name="description" content="([^"]*)"', text, re.I)
+    return htmlmod.unescape(m.group(1)).strip() if m else ''
+
+
+def _canonical(text: str) -> str:
+    m = re.search(r'<link rel="canonical" href="([^"]*)"', text, re.I)
+    return htmlmod.unescape(m.group(1)).strip() if m else ''
 
 
 def _title(text: str) -> str:
