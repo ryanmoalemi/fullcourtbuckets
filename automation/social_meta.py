@@ -8,6 +8,9 @@ play-by-play loop). It is idempotent and safe to run repeatedly:
   fallback card with their name. Cards live in images/social/players/ and are
   rebuilt only when the inputs change (content/social-cards.json).
 * News articles use their 1200x630 og-1200.jpg crop (news_heroes._write_og).
+* Team pages (/wnba/teams/<slug>/) get a 1200x630 text card with the team
+  name and conference (no logos or photos, so no third-party rights needed).
+  Cards live in images/social/teams/ and replace the site default og:image.
 * Every other page gets the site default card images/social/fcb-default.jpg.
 * Tags are only added where missing; existing og:image tags are kept. Added
   tags live between <!--fcb-social--> markers just before </head>. Page bodies
@@ -121,6 +124,47 @@ def render_player(name: str, team: str, portrait: Path | None, credit: str):
         fc = _fit(d, credit, 'Inter-Medium.ttf', 18, text_w, 12)
         d.text((60, H - 56), credit, font=fc, fill=MUTED)
     return img
+
+
+def render_team(name: str, conference: str):
+    img = _base()
+    d = ImageDraw.Draw(img)
+    d.text((60, 80), 'WNBA TEAM' + (f' | {conference.upper()}' if conference else ''), font=font('Inter-Bold.ttf', 26), fill=ORANGE)
+    parts = name.rsplit(' ', 1)
+    city, nick = (parts[0], parts[1]) if len(parts) > 1 else ('', parts[0])
+    y = 140
+    if city:
+        f1 = _fit(d, city.upper(), 'BarlowCondensed-ExtraBold.ttf', 110, 1080)
+        d.text((60, y), city.upper(), font=f1, fill=TEXT)
+        y += f1.size + 4
+    f2 = _fit(d, nick.upper(), 'BarlowCondensed-ExtraBold.ttf', 160, 1080)
+    d.text((60, y), nick.upper(), font=f2, fill=PINK)
+    y += f2.size + 30
+    d.text((64, y), 'Roster, record, schedule and player profiles', font=font('Inter-Medium.ttf', 32), fill=MUTED)
+    _wordmark(img, 60, H - 90)
+    return img
+
+
+def team_info(text: str) -> dict:
+    name = ''
+    for node in _jsonld(text):
+        if node.get('@type') == 'SportsTeam' and node.get('name'):
+            name = node['name']
+            break
+    if not name:
+        m = re.search(r'<h1[^>]*>(.*?)</h1>', text, re.S)
+        name = htmlmod.unescape(re.sub('<[^>]+>', '', m.group(1))).strip() if m else ''
+        name = re.sub(r'\s*\b20\d\d\b.*$', '', name).strip()
+    m = re.search(r'(Eastern|Western) Conference', text)
+    return {'name': name, 'conference': m.group(0) if m else ''}
+
+
+def _drop_default_image(text: str) -> str:
+    """Remove og/twitter image tags that point at the generic default card."""
+    if 'fcb-default.jpg' not in text:
+        return text
+    return re.sub(r'<meta\b[^>]*(?:property|name)="(?:og:image(?::[a-z]+)?|twitter:image(?::alt)?)"[^>]*>\n?',
+                  '', text, flags=re.I) if re.search(r'property="og:image"[^>]*fcb-default\.jpg|fcb-default\.jpg[^>]*property="og:image"', text) else text
 
 
 def render_default():
@@ -360,13 +404,26 @@ def run(root: Path = ROOT, cards: bool = True) -> dict:
                 stats['player_cards' if info['portrait'] else 'fallback_cards'] += 1
                 image = f'{BASE}/images/social/players/{slug}.jpg?v={_vers(out)}'
                 alt = f"{info['name']}" + (f", {info['team']}" if info['team'] else '') + ' | WNBA player profile on Full Court Buckets'
+        elif (tm := re.fullmatch(r'/wnba/teams/([a-z0-9-]+)/', rel)) and team_info(text)['name']:
+            slug = tm.group(1)
+            ti = team_info(text)
+            out = SOCIAL_DIR / 'teams' / f'{slug}.jpg'
+            key = hashlib.sha256(json.dumps([CARD_VERSION, 'team', ti['name'], ti['conference']]).encode()).hexdigest()[:16]
+            if cards and (manifest.get('team:' + slug) != key or not out.is_file()):
+                _save(render_team(ti['name'], ti['conference']), out)
+                manifest['team:' + slug] = key
+            if out.is_file():
+                text = _drop_default_image(text)
+                image = f'{BASE}/images/social/teams/{slug}.jpg?v={_vers(out)}'
+                alt = f"{ti['name']} 2026 roster and record on Full Court Buckets"
         elif rel in articles:
             a = articles[rel]
             image = BASE + a['imageOg']
             w, h = a.get('imageOgWidth') or W, a.get('imageOgHeight') or H
             alt = a.get('imageAlt') or _title(text)
+        original = page.read_text(encoding='utf-8', errors='replace')
         updated = social_block(text, image, alt, w, h)
-        if updated != text:
+        if updated != original:
             page.write_text(updated, encoding='utf-8')
             stats['pages_updated'] += 1
     if cards:
