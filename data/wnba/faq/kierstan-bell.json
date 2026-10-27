@@ -1,106 +1,188 @@
 {
   "slug": "kierstan-bell",
   "player_name": "Kierstan Bell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Kierstan Bell's stats / points per game?",
-      "answer": "In the 2026 regular season, Kierstan Bell averaged 1.9 points, 1.5 rebounds, and 0.7 assists in 22 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What team does Kierstan Bell play for?",
+      "answer": "Kierstan Bell plays forward for the Las Vegas Aces, who drafted her in the first round, 11th overall, in the 2022 WNBA Draft. She has won three WNBA championships with Las Vegas, in 2022, 2023 and 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631006/kierstan-bell/bio"
+      ],
+      "queries": [
+        {
+          "q": "kierstan bell wnba",
+          "vol": 110
+        },
+        {
+          "q": "kierstan bell aces",
+          "vol": 30
+        },
+        {
+          "q": "las vegas aces kierstan bell",
+          "vol": 10
+        },
+        {
+          "q": "kierstan bell wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "kierstan bell draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Kierstan Bell's stats?",
+      "answer": "In the 2026 regular season, Kierstan Bell averaged 1.9 points, 1.4 rebounds, and 0.6 assists in 28 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kierstan bell stats",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who is Kierstan Bell dating?",
-      "answer": "As of late 2026, Kierstan Bell has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
+        "https://fullcourtbuckets.com/wnba/kierstan-bell/"
       ],
-      "google_keyword": "kierstan bell partner",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "How much does Kierstan Bell make?",
-      "answer": "A precise public salary or net worth figure for Kierstan Bell is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kierstan bell salary",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How tall is Kierstan Bell?",
-      "answer": "Kierstan Bell is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
-      ],
-      "google_keyword": "kierstan bell height",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How old is Kierstan Bell?",
-      "answer": "She was born March 16, 2000 in Alliance. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
-      ],
-      "google_keyword": "kierstan bell age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2000-03-16"
-    },
-    {
-      "question": "What is Kierstan Bell's contract?",
-      "answer": "Contract length and guarantees for Kierstan Bell are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kierstan bell contract",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Is Kierstan Bell married?",
-      "answer": "There is no widely reported public record of Kierstan Bell being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
-      ],
-      "google_keyword": "kierstan bell wife",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Is Kierstan Bell injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kierstan bell injury",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kierstan bell stats",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "Who are Kierstan Bell's parents?",
-      "answer": "Public profiles share limited verified detail about Kierstan Bell's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Kierstan Bell is the daughter of Amanda Hubbs and the late Perry Bell, according to her Las Vegas Aces bio. She has one sibling, Sa'renity.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
+        "https://aces.wnba.com/kierstan-bell-bio"
       ],
-      "google_keyword": "kierstan bell parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "kierstan bell parents",
+          "vol": 70
+        },
+        {
+          "q": "kierstan bell mom",
+          "vol": 20
+        },
+        {
+          "q": "kierstan bell mother",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Kierstan Bell attend?",
-      "answer": "Kierstan Bell played college basketball at Florida Gulf Coast and Ohio State.",
+      "question": "How tall is Kierstan Bell?",
+      "answer": "The WNBA lists Kierstan Bell at 6 feet 1 inch and 176 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631006/kierstan-bell/bio"
+      ],
+      "queries": [
+        {
+          "q": "kierstan bell height",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How old is Kierstan Bell?",
+      "answer": "Kierstan Bell was born March 16, 2000.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631006/kierstan-bell/bio"
+      ],
+      "queries": [
+        {
+          "q": "kierstan bell age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Did Kierstan Bell transfer from Ohio State to FGCU?",
+      "answer": "Yes. Kierstan Bell played her freshman season, 2019-20, at Ohio State and made the Big Ten All-Freshman Team. She then played two seasons at Florida Gulf Coast, where she was twice named ASUN Player of the Year and Becky Hammon Mid-Major Player of the Year.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kierstan_Bell"
+        "https://aces.wnba.com/kierstan-bell-bio"
       ],
-      "google_keyword": "kierstan bell ohio state",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kierstan bell fgcu",
+          "vol": 10
+        },
+        {
+          "q": "kierstan bell ohio state",
+          "vol": 10
+        },
+        {
+          "q": "kierstan bell transfer",
+          "vol": 10
+        },
+        {
+          "q": "why did kierstan bell transfer",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell osu",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell ohio state transfer",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell college",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell ohio state stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Kierstan Bell go to high school?",
+      "answer": "Kierstan Bell graduated in 2019 from Canton McKinley High School in Canton, Ohio. She was a McDonald's All-American and the first player in Ohio high school history to be named Ms. Basketball three times.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/kierstan-bell-bio"
+      ],
+      "queries": [
+        {
+          "q": "kierstan bell recruiting",
+          "vol": 10
+        },
+        {
+          "q": "kierstan bell canton mckinley",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell high school",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell mcdonalds",
+          "vol": null
+        },
+        {
+          "q": "kierstan bell 2019",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Has Kierstan Bell played in Australia?",
+      "answer": "Yes. Kierstan Bell played the 2022-23 WNBL season for the Adelaide Lightning in Australia, with a season-high 23 points against Southside on December 3.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://aces.wnba.com/kierstan-bell-bio"
+      ],
+      "queries": [
+        {
+          "q": "kierstan bell australia",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

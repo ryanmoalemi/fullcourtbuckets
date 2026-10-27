@@ -1,112 +1,111 @@
 {
   "slug": "temi-fagbenle",
   "player_name": "Temi Fagbenle",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Temi Fagbenle's stats / points per game?",
-      "answer": "In the 2026 regular season, Temi Fagbenle averaged 2.0 points, 1.0 rebounds, and 1.0 assists in 1 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Temi Fagbenle's stats?",
+      "answer": "In the 2026 regular season, Temi Fagbenle averaged 5.9 points, 3.4 rebounds, and 1.0 assists in 25 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "temi fagbenle stats",
-      "approx_monthly_volume": 590
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/temi-fagbenle/"
+      ],
+      "queries": [
+        {
+          "q": "temi fagbenle stats",
+          "vol": 590
+        },
+        {
+          "q": "temi fagbenle stats per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Temi Fagbenle dating?",
-      "answer": "As of late 2026, Temi Fagbenle has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Where has Temi Fagbenle played in the WNBA?",
+      "answer": "Temi Fagbenle has played for the Minnesota Lynx (2017 to 2019), Indiana Fever (2024), Golden State Valkyries (2025) and Toronto Tempo, who signed her in April 2026. Minnesota drafted her 35th overall in 2016.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Temi_Fagbenle"
+        "https://www.wnba.com/player/1627701/temi-fagbenle/bio",
+        "https://www.tsn.ca/wnba/article/tempo-signs-centre-fagbenle-to-one-year-1m-deal/"
       ],
-      "google_keyword": "temi fagbenle partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Temi Fagbenle make?",
-      "answer": "A precise public salary or net worth figure for Temi Fagbenle is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "temi fagbenle salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Temi Fagbenle?",
-      "answer": "Temi Fagbenle is listed at 6' 5\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Temi_Fagbenle"
-      ],
-      "google_keyword": "temi fagbenle height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "temi fagbenle wnba",
+          "vol": 20
+        },
+        {
+          "q": "temi fagbenle fever",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Temi Fagbenle?",
-      "answer": "She was born September 8, 1992 in Baltimore. As of late 2026 that puts her at 34 years old.",
+      "answer": "Temi Fagbenle was born September 8, 1992, in Baltimore, Maryland, and grew up mostly in London.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Temi_Fagbenle"
+        "https://www.wnba.com/player/1627701/temi-fagbenle/bio"
       ],
-      "google_keyword": "temi fagbenle age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1992-09-08"
+      "queries": [
+        {
+          "q": "temi fagbenle age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What did Temi Fagbenle score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the New York Liberty), Temi Fagbenle had 4.0 points, 3.0 rebounds, and 1.0 assists in a 69-106 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is temi fagbenle playing tonight",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Temi Fagbenle's jersey number?",
-      "answer": "Temi Fagbenle wears number 14 for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "temi fagbenle jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Temi Fagbenle's contract?",
-      "answer": "Contract length and guarantees for Temi Fagbenle are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
+      "question": "How tall is Temi Fagbenle?",
+      "answer": "The WNBA lists Temi Fagbenle at 6 feet 5 inches and 180 pounds.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1627701/temi-fagbenle/bio"
       ],
-      "google_keyword": "temi fagbenle contract",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Is Temi Fagbenle married?",
-      "answer": "There is no widely reported public record of Temi Fagbenle being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Temi_Fagbenle"
-      ],
-      "google_keyword": "temi fagbenle husband",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Is Temi Fagbenle injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "temi fagbenle injury",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "temi fagbenle height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Who are Temi Fagbenle's parents?",
-      "answer": "Public profiles share limited verified detail about Temi Fagbenle's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Temi Fagbenle is the daughter of Buki and Tunde Fagbenle and has 11 siblings, according to her WNBA bio. Her brother O-T Fagbenle is an actor.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Temi_Fagbenle"
+        "https://www.wnba.com/player/1627701/temi-fagbenle/bio",
+        "https://www.tsn.ca/wnba/article/tempo-signs-centre-fagbenle-to-one-year-1m-deal/"
       ],
-      "google_keyword": "temi fagbenle parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "temi fagbenle parents",
+          "vol": 10
+        },
+        {
+          "q": "temi fagbenle family",
+          "vol": 10
+        },
+        {
+          "q": "temi fagbenle brother",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Temi Fagbenle play at Harvard?",
+      "answer": "Yes. Temi Fagbenle played at Harvard and was the 2012-13 Ivy League Rookie of the Year. She finished college at USC in 2015-16, made the All-Pac-12 Team and earned a master's degree there.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1627701/temi-fagbenle/bio",
+        "https://usctrojans.com/sports/womens-basketball/roster/temi-fagbenle/5723"
+      ],
+      "queries": [
+        {
+          "q": "temi fagbenle harvard",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,95 +1,87 @@
 {
   "slug": "mercedes-russell",
   "player_name": "Mercedes Russell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Mercedes Russell's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Mercedes Russell averaged 1.7 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mercedes russell stats",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who is Mercedes Russell dating?",
-      "answer": "As of late 2026, Mercedes Russell has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What team does Mercedes Russell play for?",
+      "answer": "Mercedes Russell is a center for the Indiana Fever, who signed her in August 2026. New York drafted her 22nd overall in 2018. She played for Seattle from 2018 to 2024, winning WNBA titles in 2018 and 2020, and for the Los Angeles Sparks in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Mercedes_Russell"
+        "https://www.si.com/wnba/fever/what-to-know-about-new-indiana-fever-player-mercedes-russell-01kzpf1fqejj",
+        "https://www.wnba.com/player/1628920/mercedes-russell/bio"
       ],
-      "google_keyword": "mercedes russell partner",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How much does Mercedes Russell make?",
-      "answer": "A precise public salary or net worth figure for Mercedes Russell is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "mercedes russell net worth",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "mercedes russell wnba",
+          "vol": 320
+        }
+      ]
     },
     {
       "question": "How tall is Mercedes Russell?",
-      "answer": "Mercedes Russell is listed at 6' 6\".",
+      "answer": "The WNBA lists Mercedes Russell at 6 feet 6 inches and 195 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Mercedes_Russell"
+        "https://www.wnba.com/player/1628920/mercedes-russell/bio"
       ],
-      "google_keyword": "mercedes russell height",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Mercedes Russell's contract?",
-      "answer": "Contract length and guarantees for Mercedes Russell are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "mercedes russell contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Mercedes Russell married?",
-      "answer": "There is no widely reported public record of Mercedes Russell being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Mercedes_Russell"
-      ],
-      "google_keyword": "mercedes russell wife",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What college did Mercedes Russell attend?",
-      "answer": "Russell played college basketball at Tennessee.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Mercedes_Russell"
-      ],
-      "google_keyword": "mercedes russell tennessee",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Mercedes Russell injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "mercedes russell injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "mercedes russell height",
+          "vol": 110
+        },
+        {
+          "q": "how tall is mercedes russell",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "Who are Mercedes Russell's parents?",
-      "answer": "Public profiles share limited verified detail about Mercedes Russell's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "answer": "Mercedes Russell's parents are Tammy Hill and Lorenzo Russell, according to her WNBA bio.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Mercedes_Russell"
+        "https://www.wnba.com/player/1628920/mercedes-russell/bio"
       ],
-      "google_keyword": "mercedes russell parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "mercedes russell parents",
+          "vol": 110
+        },
+        {
+          "q": "mercedes russell father",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What are Mercedes Russell's stats?",
+      "answer": "In the 2026 regular season, Mercedes Russell averaged 1.6 points, 1.1 rebounds, and 0.6 assists in 7 games for the Indiana Fever.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/mercedes-russell/"
+      ],
+      "queries": [
+        {
+          "q": "mercedes russell stats",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Did Mercedes Russell play at Tennessee?",
+      "answer": "Yes. Mercedes Russell was an All-American center at Tennessee and one of the few Lady Vols with 1,500 points and 1,000 rebounds. She averaged 15.3 points and 9.2 rebounds as a senior.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628920/mercedes-russell/bio"
+      ],
+      "queries": [
+        {
+          "q": "mercedes russell tennessee",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
