@@ -300,4 +300,14 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-10-26</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/wnba/finals/2026/game-6/play-by-play/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/finals-game-6-preview-valkyries-dream/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
