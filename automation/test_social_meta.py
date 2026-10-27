@@ -72,3 +72,17 @@ class SocialMetaTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+def test_team_pages_have_team_specific_share_images():
+    import re
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    for slug in ('new-york-liberty', 'las-vegas-aces'):
+        t = (root / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
+        for key in ('og:image', 'twitter:image'):
+            m = re.search(r'(?:property|name)="' + key + r'" content="([^"]*)"', t)
+            assert m and f'/images/social/teams/{slug}.jpg' in m.group(1), (slug, key)
+        assert 'name="twitter:card" content="summary_large_image"' in t
+        assert 'fcb-default.jpg' not in t
+        assert (root / 'images' / 'social' / 'teams' / f'{slug}.jpg').is_file()
