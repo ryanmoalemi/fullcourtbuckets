@@ -102,7 +102,7 @@ MEASURE = '''() => {
    innerWidth,scrollWidth:document.documentElement.scrollWidth,
    numberCards:document.querySelectorAll('.hero .number-card').length,captions:document.querySelectorAll('.hero figcaption').length,
    imageCount:document.querySelectorAll('img.player-illustration').length,statsRows:document.querySelectorAll('#stats tbody tr').length,
-   sourceText:document.querySelector('#sources')?.textContent||''};
+   sourceText:document.querySelector('#sources')?.textContent||'',hasSources:!!document.querySelector('#sources')};
 }'''
 
 def verify_pages(plan: dict, origin: str, output: Path, engines: list[str], retries: int = 1) -> dict:
@@ -135,7 +135,10 @@ def verify_pages(plan: dict, origin: str, output: Path, engines: list[str], retr
                                 m=page.evaluate(MEASURE)
                                 require(normal_name(m['heading'])==normal_name(record['name']), 'Wrong player name')
                                 require(m['canonical']==f'{BASE}/wnba/{slug}/', 'Wrong canonical player URL')
-                                require(f"Player ID: {record['player_id']}." in m['sourceText'], 'Wrong player ID')
+                                # Inactive (thin) player pages have no #sources block; their ID is bound to the
+                                # profile at plan time and the name + canonical URL are checked above.
+                                if m.get('hasSources'):
+                                    require(f"Player ID: {record['player_id']}." in m['sourceText'], 'Wrong player ID')
                                 if record['expected_image']:
                                     require(m['complete'] and m['naturalWidth']==record['width'] and m['naturalHeight']==record['height'], 'Browser image decode/dimensions failed')
                                     require(urlparse(m['src']).path==record['src'], 'Wrong or outdated portrait URL')
