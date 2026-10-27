@@ -5,9 +5,9 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:46:24+00:00",
+ "checked_at": "2026-10-27T00:47:28+00:00",
  "period": 2,
- "clock": "6:35",
+ "clock": "6:22",
  "last_play_period": 2,
  "last_play_clock": "6:35",
  "away": {
@@ -1417,7 +1417,7 @@
   {
    "order": 116,
    "period": 2,
-   "clock": "8:28",
+   "clock": "8:25",
    "type": "Shot Clock Turnover",
    "text": "shot clock turnover",
    "away_score": 14,
@@ -1617,6 +1617,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 133,
+   "period": 2,
+   "clock": "6:35",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Cecilia Zandalasini",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 134,
+   "period": 2,
+   "clock": "6:35",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Jordin Canada",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
