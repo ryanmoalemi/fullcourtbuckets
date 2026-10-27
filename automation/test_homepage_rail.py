@@ -285,7 +285,8 @@ class HomepageRailTests(unittest.TestCase):
         self.assertEqual(item['date'], '2026-10-18')
 
     def test_ticker_hides_when_the_newest_item_is_older_than_48_hours(self):
-        now = dt.datetime(2026, 10, 28, 15, 0, tzinfo=PT)
+        # After the Finals schedule ends, so no scheduled game can stand in for the old recap.
+        now = dt.datetime(2026, 11, 10, 15, 0, tzinfo=PT)
         articles = [{
             'slug': 'old-recap',
             'title': 'Burton from 28. Valkyries 83, Aces 81.',
