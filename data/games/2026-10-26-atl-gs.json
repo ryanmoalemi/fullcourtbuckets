@@ -5,7 +5,7 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T02:09:16+00:00",
+ "checked_at": "2026-10-27T02:09:50+00:00",
  "period": 4,
  "clock": "2:17",
  "last_play_period": 4,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 59,
-  "feed_score": 59
+  "score": 60,
+  "feed_score": 60
  },
  "periods": [
   {
@@ -39,7 +39,7 @@
   {
    "period": 4,
    "away": 6,
-   "home": 13
+   "home": 14
   }
  ],
  "players": [],
@@ -4067,7 +4067,7 @@
   {
    "order": 336,
    "period": 4,
-   "clock": "3:12",
+   "clock": "3:13",
    "type": "Defensive Rebound",
    "text": "Naz Hillmon defensive rebound",
    "away_score": 46,
@@ -4079,7 +4079,7 @@
   {
    "order": 337,
    "period": 4,
-   "clock": "3:06",
+   "clock": "3:07",
    "type": "Driving Floating Jump Shot",
    "text": "Rhyne Howard misses driving floating jump shot",
    "away_score": 46,
@@ -4156,6 +4156,42 @@
    "text": "Tiffany Hayes makes free throw 1 of 2",
    "away_score": 46,
    "home_score": 59,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 344,
+   "period": 4,
+   "clock": "2:17",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Isobel Borlase",
+   "away_score": 46,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 345,
+   "period": 4,
+   "clock": "2:17",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Allisha Gray",
+   "away_score": 46,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 346,
+   "period": 4,
+   "clock": "2:17",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes makes free throw 2 of 2",
+   "away_score": 46,
+   "home_score": 60,
    "scoring_play": true,
    "score_value": 1,
    "team": "GS"
