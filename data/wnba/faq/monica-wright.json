@@ -1,58 +1,92 @@
 {
   "slug": "monica-wright",
   "player_name": "Monica Wright",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Monica Wright's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2014), Monica Wright averaged 5.8 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "monica wright stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Monica Wright make?",
-      "answer": "A precise public salary or net worth figure for Monica Wright is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Who is Monica Wright?",
+      "answer": "Monica Wright is a former WNBA guard from the University of Virginia. The Minnesota Lynx took her second overall in the 2010 WNBA Draft, and she won WNBA championships with Minnesota in 2011 and 2013.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/202257/monica-wright/bio",
+        "https://www.wnba.com/draft/2010"
       ],
-      "google_keyword": "monica wright net worth",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "who is monica wright",
+          "vol": 50
+        },
+        {
+          "q": "monica wright wnba",
+          "vol": 390
+        },
+        {
+          "q": "monica wright lynx",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Monica Wright?",
+      "answer": "The WNBA lists Monica Wright at 5 feet 10 inches and 182 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/202257/monica-wright/bio"
+      ],
+      "queries": [
+        {
+          "q": "monica wright height",
+          "vol": 40
+        },
+        {
+          "q": "how tall is monica wright",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Monica Wright?",
-      "answer": "Public profiles list Monica Wright as born in 1988. As of late 2026 that puts her around 38 years old.",
+      "answer": "Monica Wright was born July 15, 1988.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Monica_Wright"
+        "https://www.wnba.com/player/202257/monica-wright/bio"
       ],
-      "google_keyword": "monica wright age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1988-01-01"
+      "queries": [
+        {
+          "q": "monica wright age",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Is Monica Wright married?",
-      "answer": "There is no widely reported public record of Monica Wright being married as of late 2026.",
+      "question": "What was Monica Wright's best WNBA season?",
+      "answer": "Monica Wright played 7 WNBA regular seasons, from 2010 to 2016, for the Minnesota Lynx and Seattle Storm. Her best season was her 2010 rookie year, when she averaged 11.1 points in 34 games and made the All-Rookie Team.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Monica_Wright"
+        "https://fullcourtbuckets.com/wnba/monica-wright/",
+        "https://www.wnba.com/player/202257/monica-wright/bio"
       ],
-      "google_keyword": "monica wright husband",
-      "approx_monthly_volume": 390
+      "queries": [
+        {
+          "q": "monica wright stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Monica Wright?",
-      "answer": "Monica Ashante Wright Rogers is an American basketball executive and former player and coach.",
-      "answer_kind": "mixed",
+      "question": "Where did Monica Wright play in college?",
+      "answer": "Monica Wright played at Virginia, where she was a three-time AP All-American, the 2010 ACC Player of the Year and the school's all-time leading scorer with 2,540 points.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Monica_Wright"
+        "https://www.wnba.com/player/202257/monica-wright/bio"
       ],
-      "google_keyword": "who is monica wright",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "monica wright uva",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

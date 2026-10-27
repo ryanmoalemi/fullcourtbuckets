@@ -1,27 +1,84 @@
 {
   "slug": "mai-yamamoto",
   "player_name": "Mai Yamamoto",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
       "question": "How tall is Mai Yamamoto?",
-      "answer": "Mai Yamamoto is listed at 5' 5\".",
+      "answer": "The WNBA lists Mai Yamamoto at 5 feet 5 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Mai_Yamamoto"
+        "https://www.wnba.com/player/1642769/mai-yamamoto/bio"
       ],
-      "google_keyword": "mai yamamoto height",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "mai yamamoto height",
+          "vol": 390
+        }
+      ]
     },
     {
-      "question": "What are Mai Yamamoto's stats / points per game?",
-      "answer": "In her most recent 6 tracked games, Mai Yamamoto averaged 5.3 points, 2.0 rebounds, and 1.7 assists for Las Vegas Aces. Full game-by-game numbers are on this page.",
+      "question": "What are Mai Yamamoto's stats?",
+      "answer": "In the 2026 regular season, Mai Yamamoto averaged 5.1 points, 1.1 rebounds, and 1.4 assists in 14 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mai yamamoto stats",
-      "approx_monthly_volume": 140
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/mai-yamamoto/"
+      ],
+      "queries": [
+        {
+          "q": "mai yamamoto stats",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "What team does Mai Yamamoto play for?",
+      "answer": "Mai Yamamoto plays guard for the Las Vegas Aces, who signed the Japan national team guard to a rest-of-season contract in July 2026. She had scored 24 points with seven 3-pointers against the Aces in an April exhibition. She has played for the Toyota Antelopes in Japan since 2017.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fox5vegas.com/2026/07/20/las-vegas-aces-sign-japan-national-team-guard-mai-yamamoto/",
+        "https://fullcourtbuckets.com/wnba/mai-yamamoto/"
+      ],
+      "queries": [
+        {
+          "q": "mai yamamoto wnba",
+          "vol": 140
+        }
+      ]
+    },
+    {
+      "question": "Did Mai Yamamoto play for the Dallas Wings?",
+      "answer": "No. Mai Yamamoto signed with the Dallas Wings in February 2025 but was waived before the season started. Her WNBA debut came with Las Vegas in 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fox5vegas.com/2026/07/20/las-vegas-aces-sign-japan-national-team-guard-mai-yamamoto/",
+        "https://fullcourtbuckets.com/wnba/mai-yamamoto/"
+      ],
+      "queries": [
+        {
+          "q": "mai yamamoto dallas wings",
+          "vol": 30
+        },
+        {
+          "q": "mai yamamoto wings",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Mai Yamamoto played in the Olympics?",
+      "answer": "Yes. Mai Yamamoto played for Japan at the 2024 Paris Olympics and had 17 points, three rebounds and five assists in the opening game against the United States. She also won 3x3 U23 World Cup gold with Japan in 2019.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fox5vegas.com/2026/07/20/las-vegas-aces-sign-japan-national-team-guard-mai-yamamoto/"
+      ],
+      "queries": [
+        {
+          "q": "mai yamamoto olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

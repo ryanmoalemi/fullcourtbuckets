@@ -1,64 +1,101 @@
 {
   "slug": "lexi-held",
   "player_name": "Lexi Held",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Lexi Held's stats / points per game?",
-      "answer": "In the 2026 regular season, Lexi Held averaged 5.4 points, 1.1 rebounds, and 1.5 assists in 41 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What were Lexi Held's 2026 numbers?",
+      "answer": "In the 2026 regular season, Lexi Held averaged 5.4 points, 1.1 rebounds and 1.4 assists in 42 games between the Toronto Tempo and Phoenix Mercury. As a rookie with Phoenix in 2025, she averaged 5.3 points in 32 games.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lexi held stats",
-      "approx_monthly_volume": 260
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/lexi-held/"
+      ],
+      "queries": [
+        {
+          "q": "lexi held stats",
+          "vol": 260
+        }
+      ]
     },
     {
-      "question": "How much does Lexi Held make?",
-      "answer": "A precise public salary or net worth figure for Lexi Held is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Lexi Held play for?",
+      "answer": "Lexi Held plays guard for the Phoenix Mercury. The Toronto Tempo took her 10th overall in the 2026 WNBA Expansion Draft, and after she played 8 games for Toronto, the Tempo waived her and Phoenix brought her back.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.sbnation.com/wnba/1116691/wnba-lexi-held-phoenix-mercury-toronto-tempo",
+        "https://sports.yahoo.com/articles/phoenix-mercury-bring-back-lexi-183914125.html"
       ],
-      "google_keyword": "lexi held salary",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "lexi held wnba",
+          "vol": 110
+        },
+        {
+          "q": "lexi held phoenix mercury",
+          "vol": 20
+        },
+        {
+          "q": "lexi held mercury",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Lexi Held?",
-      "answer": "Lexi Held is listed at 5' 10\".",
+      "answer": "The WNBA lists Lexi Held at 5 feet 10 inches and 138 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexi_Held"
+        "https://www.wnba.com/player/1631118/lexi-held/bio"
       ],
-      "google_keyword": "lexi held height",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Lexi Held's jersey number?",
-      "answer": "Lexi Held wears number 10 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lexi held jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Lexi Held injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "lexi held injury",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "lexi held height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Lexi Held?",
-      "answer": "Lexi Held was born December 28, 1999. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "researched",
+      "answer": "Lexi Held was born December 28, 1999, in Burlington, Kentucky.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lexi_Held"
+        "https://www.wnba.com/player/1631118/lexi-held/bio"
       ],
-      "google_keyword": "lexi held age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1999-12-28"
+      "queries": [
+        {
+          "q": "lexi held age",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Was Lexi Held drafted?",
+      "answer": "No. Lexi Held went undrafted out of DePaul. She signed a training camp contract with Phoenix on February 7, 2025, after playing professionally in Sweden, Australia, Poland, Italy and Hungary.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631118/lexi-held/bio"
+      ],
+      "queries": [
+        {
+          "q": "lexi held draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Lexi Held play at DePaul?",
+      "answer": "Yes. Lexi Held played at DePaul from 2018 to 2022, won three BIG EAST Tournament titles and made the All-BIG EAST First Team in 2021. She finished fifth on DePaul's all-time list with 239 three-pointers.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1631118/lexi-held/bio"
+      ],
+      "queries": [
+        {
+          "q": "lexi held depaul",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

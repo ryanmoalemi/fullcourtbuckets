@@ -1,142 +1,190 @@
 {
   "slug": "sami-whitcomb",
   "player_name": "Sami Whitcomb",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Sami Whitcomb's stats / points per game?",
-      "answer": "In the 2026 regular season, Sami Whitcomb averaged 9.1 points, 2.6 rebounds, and 2.5 assists in 43 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Sami Whitcomb's stats?",
+      "answer": "In the 2026 regular season, Sami Whitcomb averaged 5.3 points, 1.7 rebounds, and 2.1 assists in 21 games for the Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sami whitcomb stats",
-      "approx_monthly_volume": 1300
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/sami-whitcomb/"
+      ],
+      "queries": [
+        {
+          "q": "sami whitcomb stats",
+          "vol": 1000
+        },
+        {
+          "q": "sami whitcomb game log",
+          "vol": 20
+        },
+        {
+          "q": "sami whitcomb points per game",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb stats per game",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Sami Whitcomb married?",
-      "answer": "Whitcomb is married to former Willetton Tigers SBL player, Kate Malpass. The couple married in the U.S.",
-      "answer_kind": "researched",
+      "question": "Where has Sami Whitcomb played in the WNBA?",
+      "answer": "Sami Whitcomb has played for the Seattle Storm (2017 to 2020 and 2023 to 2024), New York Liberty (2021 to 2022) and Phoenix Mercury (2025 to present). She won WNBA titles with Seattle in 2018 and 2020.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
       ],
-      "google_keyword": "sami whitcomb wife",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "How much does Sami Whitcomb make?",
-      "answer": "For the 2026 WNBA season, Spotrac lists Sami Whitcomb's base salary / cap hit at about $735,000. Endorsements are separate from that team salary.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sami whitcomb salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "sami whitcomb wnba",
+          "vol": 90
+        },
+        {
+          "q": "sami whitcomb seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb new york liberty",
+          "vol": null
+        },
+        {
+          "q": "sami whitcomb championship",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Sami Whitcomb?",
-      "answer": "She was born July 20, 1988 in Ventura, California, U.S. As of late 2026 that puts her at 38 years old.",
+      "answer": "Sami Whitcomb was born July 20, 1988, in Ventura, California.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
       ],
-      "google_keyword": "sami whitcomb age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1988-07-20"
+      "queries": [
+        {
+          "q": "sami whitcomb age",
+          "vol": 20
+        },
+        {
+          "q": "how old is sami whitcomb",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What did Sami Whitcomb score in her last game?",
-      "answer": "In her most recent completed game (September 21, 2026 vs. the Dallas Wings), Sami Whitcomb had 8 points, 2 rebounds, and 2 assists in a 87-86 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is sami whitcomb playing tonight",
-      "approx_monthly_volume": 30
+      "question": "Is Sami Whitcomb Australian?",
+      "answer": "Yes. Sami Whitcomb was born in California and became a naturalized Australian citizen on February 1, 2018. She won Olympic bronze with Australia at the 2024 Paris Games, averaging 13.0 points and 5.3 assists in six games.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
+      ],
+      "queries": [
+        {
+          "q": "is sami whitcomb australian",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb opals",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb olympics stats",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb australia",
+          "vol": 10
+        },
+        {
+          "q": "sami whitcomb olympic stats 2024",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What is Sami Whitcomb's career high?",
+      "answer": "Sami Whitcomb's WNBA career high is 36 points, with seven 3-pointers, against Dallas on July 7, 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
+      ],
+      "queries": [
+        {
+          "q": "sami whitcomb career high",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many 3-pointers does Sami Whitcomb have?",
+      "answer": "Entering the 2026 season, Sami Whitcomb had 511 career 3-pointers, 20th in WNBA history. She was tied with Kara Lawson for the most made off the bench (306).",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
+      ],
+      "queries": [
+        {
+          "q": "sami whitcomb 3-point stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Sami Whitcomb play for the Perth Lynx?",
+      "answer": "Yes. Sami Whitcomb played for the Perth Lynx in 2022. In Australia's WNBL she won the 2025 title and league MVP with the Townsville Fire.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
+      ],
+      "queries": [
+        {
+          "q": "sami whitcomb perth lynx",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Sami Whitcomb?",
-      "answer": "Sami Whitcomb is listed at 5' 10\" by the WNBA.",
+      "answer": "The WNBA lists Sami Whitcomb at 5 feet 10 inches and 149 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
       ],
-      "google_keyword": "sami whitcomb height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "sami whitcomb height",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How many championships does Sami Whitcomb have?",
-      "answer": "WNBA championship with a 3-0 sweep over the Washington Mystics in the Finals.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
-      ],
-      "google_keyword": "sami whitcomb championship",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Sami Whitcomb's contract?",
-      "answer": "Public salary trackers list Sami Whitcomb at about $735,000 for 2026. Exact years remaining and guarantees vary by deal; Spotrac and team announcements are the best public references.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/rankings/player/_/year/2026"
-      ],
-      "google_keyword": "sami whitcomb contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Sami Whitcomb's nationality?",
-      "answer": "Sami Whitcomb is described as American-Australian in major biographical profiles.",
+      "question": "Where did Sami Whitcomb go to college?",
+      "answer": "Sami Whitcomb played four seasons at the University of Washington, from 2006 to 2010, and made All-Pac-10 as a senior.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
+        "https://www.wnba.com/player/1628244/sami-whitcomb/bio"
       ],
-      "google_keyword": "is sami whitcomb australian",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Sami Whitcomb attend?",
-      "answer": "Sami Whitcomb played college basketball at Washington.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
-      ],
-      "google_keyword": "sami whitcomb college",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What team does Sami Whitcomb play for?",
-      "answer": "She plays for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sami whitcomb team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Where is Sami Whitcomb from?",
-      "answer": "She is from Ventura, California, U.S.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
-      ],
-      "google_keyword": "where is sami whitcomb from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is Sami Whitcomb?",
-      "answer": "Samantha Allison Whitcomb is an American-Australian professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sami_Whitcomb"
-      ],
-      "google_keyword": "who is sami whitcomb",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Is Sami Whitcomb injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sami whitcomb injury",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "sami whitcomb uw",
+          "vol": null
+        },
+        {
+          "q": "sami whitcomb college",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

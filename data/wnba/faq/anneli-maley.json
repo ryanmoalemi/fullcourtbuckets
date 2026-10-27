@@ -1,104 +1,88 @@
 {
   "slug": "anneli-maley",
   "player_name": "Anneli Maley",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Anneli Maley's stats / points per game?",
-      "answer": "In the 2026 regular season, Anneli Maley averaged 0.5 points, 1.0 rebounds, and 0.0 assists in 2 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "anneli maley stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Anneli Maley dating?",
-      "answer": "As of late 2026, Anneli Maley has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What team does Anneli Maley play for?",
+      "answer": "Anneli Maley plays forward for the New York Liberty. She started 2026 on a developmental contract, and the Liberty converted it to a standard full-season deal on September 3, 2026. She first played in the WNBA in 2022 with the Chicago Sky.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
+        "https://nypost.com/2026/09/16/sports/liberty-sign-anneli-maley-to-full-season-contract/",
+        "https://www.basketball.com.au/news/anneli-maley-new-york-liberty-standard-contract-wnba"
       ],
-      "google_keyword": "anneli maley partner",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "anneli maley wnba",
+          "vol": 90
+        },
+        {
+          "q": "anneli maley liberty",
+          "vol": 50
+        },
+        {
+          "q": "anneli maley chicago sky",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Anneli Maley?",
-      "answer": "Anneli Maley is listed at 6' 1\".",
+      "answer": "The WNBA lists Anneli Maley at 6 feet 1 inch.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
+        "https://www.wnba.com/player/1630993/anneli-maley/bio"
       ],
-      "google_keyword": "anneli maley height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What is Anneli Maley's contract?",
-      "answer": "Contract length and guarantees for Anneli Maley are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "anneli maley contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Anneli Maley married?",
-      "answer": "There is no widely reported public record of Anneli Maley being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
-      ],
-      "google_keyword": "anneli maley wife",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Anneli Maley injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "anneli maley injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Anneli Maley's parents?",
-      "answer": "Public profiles share limited verified detail about Anneli Maley's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
-      ],
-      "google_keyword": "anneli maley parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What team does Anneli Maley play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 24. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "anneli maley teammates",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Anneli Maley attend?",
-      "answer": "Maley played college basketball at the Oregon Ducks and TCU Horned Frogs.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
-      ],
-      "google_keyword": "anneli maley oregon",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "anneli maley height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Anneli Maley?",
-      "answer": "Anneli Maley was born September 1, 1998 in East Melbourne. As of late 2026 that puts her at 28 years old.",
+      "answer": "Anneli Maley was born September 1, 1998. She is from Australia.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630993/anneli-maley/bio"
+      ],
+      "queries": [
+        {
+          "q": "anneli maley age",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What were Anneli Maley's 2026 numbers?",
+      "answer": "In the 2026 regular season, Anneli Maley averaged 0.8 points and 1.1 rebounds in 9 games for the New York Liberty, after 2 games with the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/anneli-maley/"
+      ],
+      "queries": [
+        {
+          "q": "anneli maley stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Has Anneli Maley played for the Opals?",
+      "answer": "Yes. Anneli Maley won bronze with Australia's Opals at the 2022 FIBA World Cup and played 3x3 for Australia at the 2024 Paris Olympics.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Anneli_Maley"
+        "https://www.wnba.com/player/1630993/anneli-maley/bio",
+        "https://www.basketball.com.au/news/anneli-maley-new-york-liberty-standard-contract-wnba"
       ],
-      "google_keyword": "anneli maley age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1998-09-01"
+      "queries": [
+        {
+          "q": "anneli maley opals",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

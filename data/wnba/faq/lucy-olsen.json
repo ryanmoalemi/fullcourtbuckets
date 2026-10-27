@@ -1,160 +1,207 @@
 {
   "slug": "lucy-olsen",
   "player_name": "Lucy Olsen",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "What are Lucy Olsen's stats / points per game?",
-      "answer": "In the 2026 regular season, Lucy Olsen averaged 2.9 points, 0.7 rebounds, and 1.3 assists in 14 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lucy olsen stats",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "How much does Lucy Olsen make?",
-      "answer": "A precise public salary or net worth figure for Lucy Olsen is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What team does Lucy Olsen play for?",
+      "answer": "Lucy Olsen plays guard for the Washington Mystics, who drafted her in the second round, 23rd overall, in the 2025 WNBA Draft. She played 41 regular season games as a rookie and 22 in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio",
+        "https://fullcourtbuckets.com/wnba/lucy-olsen/"
       ],
-      "google_keyword": "lucy olsen salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "lucy olsen wnba",
+          "vol": 390
+        },
+        {
+          "q": "lucy olsen washington mystics",
+          "vol": 110
+        },
+        {
+          "q": "lucy olsen mystics",
+          "vol": 90
+        },
+        {
+          "q": "who does lucy olsen play for",
+          "vol": 30
+        },
+        {
+          "q": "lucy olsen wnba draft",
+          "vol": 20
+        },
+        {
+          "q": "lucy olsen draft",
+          "vol": 10
+        },
+        {
+          "q": "lucy olsen wnba team",
+          "vol": 10
+        },
+        {
+          "q": "what team does lucy olsen play for",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Lucy Olsen's stats?",
+      "answer": "In the 2026 regular season, Lucy Olsen averaged 2.5 points, 0.5 rebounds, and 0.8 assists in 22 games for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/lucy-olsen/"
+      ],
+      "queries": [
+        {
+          "q": "lucy olsen stats",
+          "vol": 140
+        },
+        {
+          "q": "lucy olsen wnba stats",
+          "vol": 30
+        },
+        {
+          "q": "lucy olsen mystics stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Lucy Olsen transfer from Villanova to Iowa?",
+      "answer": "Yes. Lucy Olsen played three seasons at Villanova, where she scored 1,504 points and averaged 23.3 points as a junior, third in the country. She signed with Iowa in April 2024 and was a unanimous All-Big Ten First Team pick in 2024-25, averaging 17.9 points and 5.1 assists.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://hawkeyesports.com/news/2024/04/24/transfer-lucy-olsen-signs-with-the-hawkeyes",
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio"
+      ],
+      "queries": [
+        {
+          "q": "lucy olsen iowa",
+          "vol": 50
+        },
+        {
+          "q": "lucy olsen iowa basketball",
+          "vol": 10
+        },
+        {
+          "q": "lucy olsen iowa stats",
+          "vol": 10
+        },
+        {
+          "q": "why did lucy olsen transfer to iowa",
+          "vol": 10
+        },
+        {
+          "q": "where did lucy olsen transfer from",
+          "vol": 10
+        },
+        {
+          "q": "lucy olsen villanova",
+          "vol": 10
+        },
+        {
+          "q": "lucy olsen villanova stats",
+          "vol": 10
+        },
+        {
+          "q": "lucy olsen villanova basketball",
+          "vol": 10
+        },
+        {
+          "q": "iowa women's basketball lucy olsen",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Lucy Olsen play for the Townsville Fire?",
+      "answer": "Yes. Lucy Olsen played in Australia's WNBL for the Townsville Fire, averaging 8.7 points and 3.4 assists in 28 games. She won the league's Sixth Woman of the Year award and helped Townsville win the WNBL title.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio"
+      ],
+      "queries": [
+        {
+          "q": "lucy olsen townsville fire",
+          "vol": 40
+        },
+        {
+          "q": "lucy olsen australia",
+          "vol": 30
+        },
+        {
+          "q": "lucy olsen fire",
+          "vol": 30
+        },
+        {
+          "q": "lucy olsen wnbl",
+          "vol": 20
+        },
+        {
+          "q": "lucy olsen australian pro basketball",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Lucy Olsen?",
-      "answer": "Lucy Olsen is listed at 5' 10\".",
+      "answer": "The WNBA lists Lucy Olsen at 5 feet 10 inches and 141 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio"
       ],
-      "google_keyword": "lucy olsen height",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What did Lucy Olsen score in her last game?",
-      "answer": "In her most recent completed game (September 22, 2026 vs. the Connecticut Sun), Lucy Olsen had 0.0 points, 0 rebounds, and 0 assists in a 79-69 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "why is lucy olsen not playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Lucy Olsen's jersey number?",
-      "answer": "Lucy Olsen wears number 33 for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lucy olsen jersey",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Lucy Olsen's contract?",
-      "answer": "Contract length and guarantees for Lucy Olsen are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "lucy olsen contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What team does Lucy Olsen play for?",
-      "answer": "Her most recent WNBA team on record is the Washington Mystics. She wears No. 33. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "who does lucy olsen play for",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Lucy Olsen's nationality?",
-      "answer": "Lucy Olsen is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "lucy olsen australian pro basketball",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Lucy Olsen injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "is lucy olsen injured",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who are Lucy Olsen's parents?",
-      "answer": "Public profiles share limited verified detail about Lucy Olsen's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "lucy olsen parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many championships does Lucy Olsen have?",
-      "answer": "Public biographical sources cover Lucy Olsen's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "lucy olsen spring ford",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Lucy Olsen have kids?",
-      "answer": "There is no widely reported public information that Lucy Olsen has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "is olivia olson related to lucy olsen",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What college did Lucy Olsen attend?",
-      "answer": "Olsen played college basketball at Iowa.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "lucy olsen iowa",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Lucy Olsen?",
-      "answer": "Lucy Anne Olsen is an American professional basketball player for the Washington Mystics of the Women's National Basketball Association (WNBA) and the Townsville Portland Fire of the Women's National Basketball League (WNBL).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
-      ],
-      "google_keyword": "lucy olsen wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "lucy olsen height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Lucy Olsen?",
-      "answer": "Lucy Olsen was born May 26, 2003 in Collegeville. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Lucy Olsen was born May 26, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio"
       ],
-      "google_keyword": "lucy olsen age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2003-05-26"
+      "queries": [
+        {
+          "q": "lucy olsen age",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Where is Lucy Olsen from?",
-      "answer": "Lucy Olsen is from Collegeville.",
+      "answer": "Lucy Olsen is from Collegeville, Pennsylvania, and played high school basketball at Spring-Ford.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lucy_Olsen"
+        "https://www.wnba.com/draft/2025/prospects/197435/lucy-olsen",
+        "https://hawkeyesports.com/news/2024/04/24/transfer-lucy-olsen-signs-with-the-hawkeyes"
       ],
-      "google_keyword": "where did lucy olsen transfer from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "lucy olsen spring ford",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Lucy Olsen played 3x3 for USA Basketball?",
+      "answer": "Yes. Lucy Olsen was on the 2023 USA 3x3 U21 team at the FIBA 3x3 U21 Nations League in China and the USA U23 Nations League roster in 2024.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642802/lucy-olsen/bio"
+      ],
+      "queries": [
+        {
+          "q": "lucy olsen 3x3",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

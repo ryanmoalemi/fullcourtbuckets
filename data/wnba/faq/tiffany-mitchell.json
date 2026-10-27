@@ -1,122 +1,73 @@
 {
   "slug": "tiffany-mitchell",
   "player_name": "Tiffany Mitchell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 27, 2026",
+  "verified_at": "2026-10-27",
   "items": [
     {
-      "question": "How old is Tiffany Mitchell?",
-      "answer": "She was born September 23, 1994 in Charlotte, North Carolina, U.S. As of late 2026 that puts her at 31 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
-      ],
-      "google_keyword": "tiffany mitchell big brother age",
-      "approx_monthly_volume": 90,
-      "birthdate": "1994-09-23"
-    },
-    {
-      "question": "Who is Tiffany Mitchell?",
-      "answer": "Tiffany Mitchell is an American professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
-      ],
-      "google_keyword": "who is tiffany mitchell",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What college did Tiffany Mitchell attend?",
-      "answer": "Mitchell played college basketball at South Carolina.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
-      ],
-      "google_keyword": "tiffany mitchell college",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Tiffany Mitchell's jersey number?",
-      "answer": "Tiffany Mitchell wears number 25 for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tiffany and co mitchell and ness jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Tiffany Mitchell?",
-      "answer": "Tiffany Mitchell is listed at 5' 9\" by the WNBA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
-      ],
-      "google_keyword": "tiffany mitchell height",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What are Tiffany Mitchell's stats / points per game?",
-      "answer": "In the 2026 regular season, Tiffany Mitchell averaged 3.2 points, 1.1 rebounds, and 0.3 assists in 39 games for Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tiffany mitchell stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What team does Tiffany Mitchell play for?",
-      "answer": "Her most recent WNBA team on record is the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tiffany mitchell team",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Where is Tiffany Mitchell from?",
-      "answer": "She is from Charlotte, North Carolina, U.S.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
-      ],
-      "google_keyword": "where is tiffany mitchell from",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What is Tiffany Mitchell's WNBA salary?",
-      "answer": "Public salary databases list Tiffany Mitchell's reported 2025 WNBA salary near $101,123. Endorsements and overseas pay are separate from that figure.",
+      "question": "Where has Tiffany Mitchell played in the WNBA?",
+      "answer": "WNBA guard Tiffany Mitchell has played for the Indiana Fever (2016 to 2022), Minnesota Lynx (2023), Connecticut Sun (2024), Las Vegas Aces (2025) and Seattle Storm, who signed her in July 2025. Indiana drafted her ninth overall in 2016.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/free-agents/signed/_/year/2025"
+        "https://www.wnba.com/player/1627676/tiffany-mitchell/bio",
+        "https://storm.wnba.com/news/veteran-guard-tiffany-mitchell-signs-with-seattle"
       ],
-      "google_keyword": "tiffany mitchell wnba salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tiffany mitchell wnba",
+          "vol": 210
+        },
+        {
+          "q": "connecticut sun tiffany mitchell",
+          "vol": 10
+        },
+        {
+          "q": "tiffany mitchell indiana fever",
+          "vol": 10
+        },
+        {
+          "q": "tiffany mitchell seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "tiffany mitchell las vegas aces",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Tiffany Mitchell dating?",
-      "answer": "As of late 2026, Tiffany Mitchell has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "How old is WNBA guard Tiffany Mitchell?",
+      "answer": "WNBA guard Tiffany Mitchell was born September 23, 1994, in Charlotte, North Carolina.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
+        "https://www.wnba.com/player/1627676/tiffany-mitchell/bio",
+        "https://storm.wnba.com/news/veteran-guard-tiffany-mitchell-signs-with-seattle"
       ],
-      "google_keyword": "tiffany mitchell partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tiffany mitchell age",
+          "vol": 90
+        },
+        {
+          "q": "how old is tiffany mitchell",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Tiffany Mitchell married?",
-      "answer": "There is no widely reported public record of Tiffany Mitchell being married as of late 2026.",
+      "question": "What did Tiffany Mitchell do at South Carolina?",
+      "answer": "Tiffany Mitchell was a three-time All-American at South Carolina, a two-time SEC Player of the Year, including 2015. She scored 1,885 points, and the school retired her No. 25 jersey in 2023.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tiffany_Mitchell_(basketball)"
+        "https://www.wnba.com/player/1627676/tiffany-mitchell/bio",
+        "https://storm.wnba.com/news/veteran-guard-tiffany-mitchell-signs-with-seattle"
       ],
-      "google_keyword": "mark mitchell tiffany derry husband",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Tiffany Mitchell injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "tiffany mitchell injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tiffany mitchell south carolina",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
