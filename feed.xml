@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Finals Game 6 preview: Valkyries can win a title while outscored</title>
+      <link>https://fullcourtbuckets.com/news/finals-game-6-preview-valkyries-dream/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/finals-game-6-preview-valkyries-dream/</guid>
+      <pubDate>Tue, 27 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>Valkyries vs. Dream Game 6 preview: road teams are 2-4 in Finals closeout games when the home team had already won one, since 2002. Tip time, TV, odds, and original data with CSVs.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-6-preview-valkyries-dream/og-1200.jpg" length="77695" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/finals-game-6-preview-valkyries-dream/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Valkyries beat Dream 64-55 in the lowest-scoring WNBA Finals game since 2002</title>
       <link>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-5-recap/</link>
@@ -20,7 +31,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>The Valkyries beat the Dream 64-55, the lowest-scoring Finals game since at least 2002, for a 3-2 lead despite being outscored by 22 in the series.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-5-recap/og-1200.jpg" length="72795" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-5-recap/og-1200.jpg" length="70953" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-5-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -31,7 +42,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>Golden State beat Atlanta 67-62 in Game 4 at State Farm Arena to tie the WNBA Finals 2-2. The Dream had 18 turnovers, 14 before halftime.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-4-recap/og-1200.jpg" length="92153" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-4-recap/og-1200.jpg" length="91724" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-4-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -75,7 +86,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>Golden State has scored 9 points and taken no free throws in the third quarter of both Finals games. Written before Game 3 with the series tied 1-1; Atlanta won Game 3 97-71.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-valkyries-dream/og-1200.jpg" length="68240" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-valkyries-dream/og-1200.jpg" length="68951" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/finals-game-3-preview-valkyries-dream/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -119,7 +130,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>Each eligible player on the 2026 WNBA champion gets a $60,000 bonus, up from $22,908 in 2025. The runner-up gets $20,000 each and the Finals MVP gets $30,000, up from $5,000.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.jpg" length="69374" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.jpg" length="67734" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -130,7 +141,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>The Golden State Valkyries beat the Atlanta Dream 68-64 in Game 1 of the WNBA Finals on Saturday at Chase Center, and they did it by holding Atlanta scoreless for the final 3:12.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/dream-valkyries-finals-game-1-recap/og-1200.jpg" length="85905" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/dream-valkyries-finals-game-1-recap/og-1200.jpg" length="88035" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/dream-valkyries-finals-game-1-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -330,17 +341,6 @@
       <description>Golden State grabbed 52 rebounds to Vegas's 25 and beat the Aces 71-60 in Game 1. The glass leader did not score.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/aces-valkyries-semis-game-1-recap/og-1200.jpg" length="153463" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/aces-valkyries-semis-game-1-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Valkyries Close Out the Wings 77-73, Win Series 2-1</title>
-      <link>https://fullcourtbuckets.com/news/wings-valkyries-game-3-recap/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/wings-valkyries-game-3-recap/</guid>
-      <pubDate>Sat, 03 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA Playoffs</category>
-      <description>Dallas led 44-37 at half. Golden State won the fourth quarter 23-14, finished 77-73, and took the series 2-1.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/wings-valkyries-game-3-recap/og-1200.jpg" length="40807" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/wings-valkyries-game-3-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>

@@ -74,7 +74,8 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
 def inline(text: str) -> str:
     def link(label: str, href: str) -> str:
         return (
-            f'<a class="inline-link" href="{esc(href)}" target="_blank" rel="noopener">'
+            f'<a class="inline-link" href="{esc(href)}" target="_blank" '
+            f'rel="{"nofollow noopener" if BETTING_HOST_RE.search(href) else "noopener"}">'
             f'{esc(label)}</a>'
         )
 
@@ -90,6 +91,8 @@ def inline(text: str) -> str:
     return re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', rendered)
 
 
+BETTING_HOST_RE = re.compile(r'//(?:[a-z0-9-]+\.)*(?:draftkings|kalshi|dunkelindex|fanduel|betmgm|caesars|polymarket)\.', re.I)
+DYNAMIC_LINE_RE = re.compile(r'\{dynamic:([a-z0-9-]+)\}')
 TABLE_SEPARATOR_RE = re.compile(r'^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$')
 
 
@@ -161,6 +164,12 @@ def body_html(markdown: str) -> str:
             flush_paragraph()
             flush_bullets()
             continue
+        dyn = DYNAMIC_LINE_RE.fullmatch(line.strip())
+        if dyn:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('dynamic', dyn.group(1)))
+            continue
         if line.startswith('## '):
             flush_paragraph()
             flush_bullets()
@@ -188,6 +197,12 @@ def body_html(markdown: str) -> str:
             continue
         if kind == 'table':
             html_blocks.append(table_html(value))
+            continue
+        if kind == 'dynamic':
+            # Body is filled by automation/dynamic_sections.py (same workflow run).
+            html_blocks.append(
+                f'<div data-fcb-dynamic="{esc(value)}" data-fcb-source="data/games data/finals-schedule.json" '
+                f'data-fcb-updated=""></div><!--/fcb-dynamic-->')
             continue
         if value.startswith('TV: ') and not first:
             # The closing broadcast line keeps its small grey style on every rebuild.
