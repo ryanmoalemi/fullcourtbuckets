@@ -1,4 +1,4 @@
-files rewritten: 11
+files rewritten: 20
 html files rewritten: 654
 images missing alt: 0
 
@@ -7,12 +7,21 @@ resized favicon-16.png to (16, 16) (925 bytes) + favicon-16.webp
 resized favicon-32.png to (32, 32) (2363 bytes) + favicon-32.webp
 resized icon-192.png to (192, 192) (23660 bytes) + icon-192.webp
 resized icon-512.png to (512, 512) (84970 bytes) + icon-512.webp
-resized images/articles/dream-valkyries-finals-game-1-recap/gabby-williams-valkyries.jpg to (1688, 950) (92479 bytes) + gabby-williams-valkyries.webp
-resized images/articles/finals-game-3-preview-valkyries-dream/photo.jpg to (1688, 950) (67908 bytes) + photo.webp
-resized images/articles/finals-game-6-preview-valkyries-dream/photo.jpg to (1688, 950) (76557 bytes) + photo.webp
-resized images/articles/valkyries-dream-finals-game-4-recap/photo.jpg to (1688, 950) (91152 bytes) + photo.webp
-resized images/articles/valkyries-dream-finals-game-5-recap/photo.jpg to (1688, 949) (71378 bytes) + photo.webp
-resized images/articles/wnba-finals-bonus-2026-champions-60000/photo.jpg to (1688, 950) (69580 bytes) + photo.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
+resized images/social/teams/atlanta-dream.jpg to (1200, 630) (42059 bytes) + atlanta-dream.webp
+resized images/social/teams/chicago-sky.jpg to (1200, 630) (40190 bytes) + chicago-sky.webp
+resized images/social/teams/connecticut-sun.jpg to (1200, 630) (42854 bytes) + connecticut-sun.webp
+resized images/social/teams/dallas-wings.jpg to (1200, 630) (42282 bytes) + dallas-wings.webp
+resized images/social/teams/golden-state-valkyries.jpg to (1200, 630) (51624 bytes) + golden-state-valkyries.webp
+resized images/social/teams/indiana-fever.jpg to (1200, 630) (41015 bytes) + indiana-fever.webp
+resized images/social/teams/las-vegas-aces.jpg to (1200, 630) (43101 bytes) + las-vegas-aces.webp
+resized images/social/teams/los-angeles-sparks.jpg to (1200, 630) (48560 bytes) + los-angeles-sparks.webp
+resized images/social/teams/minnesota-lynx.jpg to (1200, 630) (42474 bytes) + minnesota-lynx.webp
+resized images/social/teams/new-york-liberty.jpg to (1200, 630) (44270 bytes) + new-york-liberty.webp
+resized images/social/teams/phoenix-mercury.jpg to (1200, 630) (45351 bytes) + phoenix-mercury.webp
+resized images/social/teams/portland-fire.jpg to (1200, 630) (40220 bytes) + portland-fire.webp
+resized images/social/teams/seattle-storm.jpg to (1200, 630) (42125 bytes) + seattle-storm.webp
+resized images/social/teams/toronto-tempo.jpg to (1200, 630) (41434 bytes) + toronto-tempo.webp
+resized images/social/teams/washington-mystics.jpg to (1200, 630) (48692 bytes) + washington-mystics.webp
