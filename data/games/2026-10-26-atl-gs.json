@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:57:11+00:00",
+ "checked_at": "2026-10-27T00:57:44+00:00",
  "period": 2,
- "clock": "1:17",
+ "clock": "58.4",
  "last_play_period": 2,
- "last_play_clock": "1:30",
+ "last_play_clock": "1:15",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -2121,6 +2121,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 175,
+   "period": 2,
+   "clock": "1:17",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Isobel Borlase misses 7-foot two point shot",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 176,
+   "period": 2,
+   "clock": "1:15",
+   "type": "Defensive Rebound",
+   "text": "Cecilia Zandalasini defensive rebound",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
