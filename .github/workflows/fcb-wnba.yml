@@ -106,13 +106,10 @@ jobs:
           fi
       - name: Test player data safety and the player page builder (blocking)
         run: |
-          python -m unittest -v \
-            automation/test_build_players.py automation/test_wnba_sync.py \
-            automation/test_playoff_boxes.py automation/test_rollout_player_design.py \
-            automation/test_game_stats.py automation/test_game_data.py \
-            automation/test_player_hub.py automation/test_season_teams.py \
-            automation/test_no_espn_game_stats.py automation/test_no_api_hrefs.py \
-            automation/test_portraits.py
+          (cd automation && python -m unittest -v \
+            test_build_players test_wnba_sync test_playoff_boxes test_rollout_player_design \
+            test_game_stats test_game_data test_player_hub test_season_teams \
+            test_no_espn_game_stats test_no_api_hrefs test_portraits)
           node --check automation/players.js
       - name: Site-wide page tests (reported, never block player stats)
         # Unrelated site tests (nav, SEO meta, ticker, search index...) used to stop the whole
