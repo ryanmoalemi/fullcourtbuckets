@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:58:52+00:00",
+ "checked_at": "2026-10-27T00:59:25+00:00",
  "period": 2,
- "clock": "37.7",
+ "clock": "25.7",
  "last_play_period": 2,
- "last_play_clock": "37.7",
+ "last_play_clock": "35.6",
  "away": {
   "abbreviation": "ATL",
-  "score": 21,
-  "feed_score": 21
+  "score": 22,
+  "feed_score": 22
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 7,
+   "away": 8,
    "home": 12
   }
  ],
@@ -2205,6 +2205,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 182,
+   "period": 2,
+   "clock": "37.7",
+   "type": "Free Throw - 1 of 2",
+   "text": "Rhyne Howard makes free throw 1 of 2",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 183,
+   "period": 2,
+   "clock": "37.7",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Angel Reese",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 184,
+   "period": 2,
+   "clock": "37.7",
+   "type": "Free Throw - 2 of 2",
+   "text": "Rhyne Howard misses free throw 2 of 2",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 185,
+   "period": 2,
+   "clock": "35.6",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 22,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
