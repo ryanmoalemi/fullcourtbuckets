@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:24:46+00:00",
+ "checked_at": "2026-10-27T00:25:19+00:00",
  "period": 1,
- "clock": "4:37",
+ "clock": "4:19",
  "last_play_period": 1,
- "last_play_clock": "4:37",
+ "last_play_clock": "4:16",
  "away": {
   "abbreviation": "ATL",
   "score": 4,
@@ -464,7 +464,7 @@
   {
    "order": 37,
    "period": 1,
-   "clock": "5:30",
+   "clock": "5:31",
    "type": "Reverse Layup Shot",
    "text": "Allisha Gray misses 7-foot reverse layup",
    "away_score": 4,
@@ -628,6 +628,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 51,
+   "period": 1,
+   "clock": "4:21",
+   "type": "Jump Shot",
+   "text": "DeWanna Bonner misses 23-foot three point jumper",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 52,
+   "period": 1,
+   "clock": "4:16",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
