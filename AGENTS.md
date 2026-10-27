@@ -94,6 +94,16 @@ Every AI-assisted piece, including titles, meta descriptions, alt text, and stru
 
 When a player's saved `current_team` changes from one non-null team to a different non-null team, `automation/wnba_sync.py` prepends a `team_changes` entry on `data/wnba/players/<slug>.json`: `from`, `to`, and `date` (the America/Los_Angeles calendar date, `YYYY-MM-DD`). Newest stays first. The player page shows a small label `Team change`, then `Joined the <To Team> from the <From Team> on <Mon D, YYYY>` (for example, `Joined the Sparks from the Liberty on Oct 3, 2026`). Do not write Moved. The feed does not say whether it was a trade, a signing, or a waiver claim. Do not record a null transition, including a player leaving or returning to the active feed. Keep earlier entries. Do not loosen the active-player shrink guard for this.
 
+## Standing article rules (Ryan, Oct 27, 2026)
+Full text in `docs/EDITORIAL_STYLE.md` ("Standing article rules"); `automation/test_article_rules.py` checks the mechanical parts.
+1. Verify every outside number (other outlets, AI tools, our own drafts) against the official box score or another primary source before use.
+2. Use FCB's own datasets and tools for original data hooks only where a journalist would genuinely link to them. Tables go high on the page with methods, sources, a data-through date and a CSV.
+3. Scope claims to the data ("since 2002", not "ever"). Never write "guaranteed". Quote official wording for records.
+4. Before writing, check what's trending on X, Reddit and in the news, and read that day's (and older, if useful) articles on the topic. Add every idea that truly improves ours, after verifying it.
+5. After publishing, check the live page: title and meta, internal links, play-by-play links and CSV downloads. A `data/seo-meta.json` override needs a manual publish run, because the workflow skips `data/`.
+6. Never ask for credit or attribution; say the data is free to use.
+7. Every page has SEO meta, breadcrumbs with BreadcrumbList JSON-LD, and a clear H1/H2 structure.
+
 ## Standing owner instruction: handle the complete publication
 
 The owner directed: "remember always get your github write publish permissions don't ask me to post anything". Discover and use the connected read/write tools, read the current target files, and perform uploads, commits, publication and live verification here. Do not ask the owner to post code, manually upload approved files, or resend originals already in the conversation or preserved Drive storage.

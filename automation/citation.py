@@ -103,7 +103,7 @@ def embed_block(anchor: str, snippet: str, csv_href: str = '') -> str:
         f'{csv_link}\n'
         '</div>\n'
         f'<div class="fcb-embed-panel" id="embed-{esc(anchor)}" hidden>\n'
-        '<p class="fcb-embed-note">Free to republish with link attribution (CC BY 4.0).</p>\n'
+        '<p class="fcb-embed-note">Free to use and republish (CC BY 4.0).</p>\n'
         f'<textarea readonly rows="4">{esc(snippet)}</textarea>\n'
         '<button type="button" class="fcb-copy-embed">Copy Embed Code</button>\n'
         '</div>\n'

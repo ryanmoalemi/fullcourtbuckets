@@ -65,3 +65,7 @@ Recaps and posts take the score, quarter scores, team totals, and player box fro
 The article source note says: Full Court Buckets gathers its own game data and verifies it against official box scores. Do not name or link the data vendor in the article, the source note, or any other published page text.
 
 Any mismatch must be resolved before review. If `crosscheck.mismatches` is not empty, do not pick the number that sounds better. If `source` is `espn` and `fallback` is true, the site's own feed did not supply the game. Say so in the draft, and do not treat that file as the primary box. A file whose cross-check did not run is not ready either.
+
+## Standing article rules
+
+The seven standing rules (verify outside numbers, original data hooks only where a journalist would link, scoped claims, research X/Reddit/news first, live-page check after publishing, never ask for credit, SEO meta plus breadcrumbs and H1/H2) are in `docs/EDITORIAL_STYLE.md` under "Standing article rules". `automation/test_article_rules.py` enforces the mechanical parts.
