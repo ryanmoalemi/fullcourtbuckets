@@ -2927,7 +2927,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
             payload = json.loads(data_path.read_text(encoding='utf-8-sig'))
         except (OSError, json.JSONDecodeError):
             payload = {}
-        standings_day = _iso_date(payload.get('updatedAt'))
+        standings_day = links.standings_page_day(payload) if payload else ''
     players = []
     pages = []
 

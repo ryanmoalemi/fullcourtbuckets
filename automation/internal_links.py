@@ -739,7 +739,24 @@ def standings_sentence(standings: dict) -> str:
     wins, losses = leader.get('wins'), leader.get('losses')
     if isinstance(wins, bool) or isinstance(losses, bool) or not isinstance(wins, int) or not isinstance(losses, int):
         return ''
+    if regular_season_is_final(standings):
+        return f'The {name} finished with the best regular-season record at {wins}-{losses}.'
     return f'The {name} lead the WNBA standings at {wins}-{losses}.'
+
+
+def standings_updated_label(standings: dict) -> str:
+    return 'Regular season final as of' if regular_season_is_final(standings) else 'Updated'
+
+
+def standings_page_day(standings: dict) -> str:
+    """Standings data day, or the latest Finals final shown in the series box if newer."""
+    day = _iso_day(standings.get('updatedAt'))
+    try:
+        import finals_series
+        series_day = finals_series.latest_day()
+    except Exception:
+        series_day = ''
+    return max(day, series_day)
 
 
 def _iso_day(raw) -> str:
@@ -803,7 +820,7 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
     """Replace the JS placeholder date with the date stored in the standings file."""
     sentence = standings_sentence(standings)
     when = _long_date(standings.get('updatedAt'))
-    parts = [part for part in (sentence, f'Updated {when}.' if when else '') if part]
+    parts = [part for part in (sentence, f'{standings_updated_label(standings)} {when}.' if when else '') if part]
     if parts:
         block = '<p class="support" id="standings-updated">' + esc(' '.join(parts)) + '</p>'
         if 'id="standings-updated"' in text:
@@ -829,7 +846,7 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
         text,
         count=1,
     )
-    return stamp_webpage_modified(text, _iso_day(standings.get('updatedAt')))
+    return stamp_webpage_modified(text, standings_page_day(standings))
 
 
 def apply_standings(text: str, linking: dict, standings: dict) -> str:
