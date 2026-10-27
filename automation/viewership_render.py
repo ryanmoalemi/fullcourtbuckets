@@ -1332,7 +1332,7 @@ def finals_section(payload: dict) -> str:
         '<section class="qa" id="finals">'
         '<h2>How many people watched the WNBA Finals?</h2>'
         f'<p class="answer">{core.link_teams(finals_answer(payload))}</p>'
-        + (f'<p class="note">{core.esc(payload["finals_intro"])} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
+        + (f'<p class="note">{series_line(payload)}{core.esc(payload["finals_intro"])} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
            if payload.get('finals_intro') else
            '<p class="note">2026 Finals audiences are not on this chart. Unreported games stay in the tracker below.</p>')
         +         f'{chart_figure(svg, "finals-history.png")}'
@@ -1675,6 +1675,16 @@ def page_script() -> str:
 """
 
 
+def series_line(payload: dict) -> str:
+    """Finals series status as a dynamic section, refreshed by dynamic_sections.py."""
+    import dynamic_sections as ds
+    s = ds.finals_series.series(ds.ROOT)
+    if not s:
+        return ''
+    return (f'<span data-fcb-dynamic="series-line" data-fcb-source="data/games data/finals-schedule.json" '
+            f'data-fcb-updated="{core.esc(s["last_day"])}">{ds.render_series_line(ds.ROOT, s, {})}</span>{ds.END} ')
+
+
 def render_page(root: Path, payload: dict) -> str:
     menu = core.site_nav.build_menu(root)
     updated = core.format_updated(payload['updated'])
@@ -1764,7 +1774,7 @@ def render_page(root: Path, payload: dict) -> str:
         '<div class="byline-row article">'
         f'{core.links.BYLINE_HTML}'
         '<span class="byline-sep" aria-hidden="true">|</span>'
-        f'<time class="article-date" datetime="{core.esc(payload["updated"])}">Updated {core.esc(updated)}</time>'
+        f'<time class="article-date" datetime="{core.esc(payload["updated"])}"><span data-fcb-dynamic="page-updated" data-fcb-source="data/viewership-attendance.json" data-fcb-updated="{core.esc(payload["updated"])}">Updated {core.esc(updated)}</span><!--/fcb-dynamic--></time>'
         '</div>'
     )
     return f'''<!doctype html>
