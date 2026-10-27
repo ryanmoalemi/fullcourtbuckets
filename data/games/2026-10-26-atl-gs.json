@@ -5,26 +5,26 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:30:49+00:00",
+ "checked_at": "2026-10-27T00:31:23+00:00",
  "period": 1,
- "clock": "2:08",
+ "clock": "1:39",
  "last_play_period": 1,
- "last_play_clock": "2:08",
+ "last_play_clock": "1:39",
  "away": {
   "abbreviation": "ATL",
-  "score": 8,
-  "feed_score": 8
+  "score": 10,
+  "feed_score": 10
  },
  "home": {
   "abbreviation": "GS",
-  "score": 10,
-  "feed_score": 10
+  "score": 13,
+  "feed_score": 13
  },
  "periods": [
   {
    "period": 1,
-   "away": 8,
-   "home": 10
+   "away": 10,
+   "home": 13
   }
  ],
  "players": [],
@@ -909,8 +909,8 @@
    "order": 74,
    "period": 1,
    "clock": "2:35",
-   "type": "Jump Shot",
-   "text": "Te-Hina Paopao misses 25-foot three point jumper",
+   "type": "Pullup Jump Shot",
+   "text": "Te-Hina Paopao misses 25-foot three point pullup jump shot",
    "away_score": 8,
    "home_score": 10,
    "scoring_play": false,
@@ -920,7 +920,7 @@
   {
    "order": 75,
    "period": 1,
-   "clock": "2:31",
+   "clock": "2:33",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 8,
@@ -1024,6 +1024,90 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 84,
+   "period": 1,
+   "clock": "1:59",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton makes 24-foot three point jumper (Veronica Burton assists)",
+   "away_score": 8,
+   "home_score": 13,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 85,
+   "period": 1,
+   "clock": "1:41",
+   "type": "Layup Shot",
+   "text": "Rhyne Howard misses layup",
+   "away_score": 8,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 86,
+   "period": 1,
+   "clock": "1:40",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 8,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 87,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Layup Shot",
+   "text": "Cecilia Zandalasini blocks Rhyne Howard 's 6-foot layup",
+   "away_score": 8,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 88,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 8,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 89,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Layup Shot",
+   "text": "Angel Reese makes layup",
+   "away_score": 10,
+   "home_score": 13,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 90,
+   "period": 1,
+   "clock": "1:39",
+   "type": "No Foul",
+   "text": "Kaila Charles foul",
+   "away_score": 10,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
