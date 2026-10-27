@@ -1,4 +1,16 @@
 {
+  "site": "fullcourtbuckets.com",
+  "title": "Dream offensive fouls jumped from 2 to 9 after Atlanta went up 2-1 in the Finals",
+  "meta_description": "The Dream were called for 2 offensive fouls in Finals Games 1-3 and 9 in Games 4-5. FCB&#x27;s game-by-game foul ledger is free to use (CC0).",
+  "url_path": "/news/wnba-finals-foul-data-dream-valkyries/",
+  "files": [
+    "news/wnba-finals-foul-data-dream-valkyries/index.html",
+    "images/articles/wnba-finals-foul-data-dream-valkyries/hero-1200.webp",
+    "images/articles/wnba-finals-foul-data-dream-valkyries/chart-offensive-fouls-16x9.webp",
+    "images/articles/wnba-finals-foul-data-dream-valkyries/chart-offensive-fouls.png",
+    "data/finals-2026-foul-ledger.csv"
+  ],
+  "hero_image": "images/articles/wnba-finals-foul-data-dream-valkyries/hero-1200.webp",
   "scorecard": {
     "overall": 8,
     "max": 10,
