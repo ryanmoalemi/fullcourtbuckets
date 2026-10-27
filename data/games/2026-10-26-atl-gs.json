@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:20:00+00:00",
+ "checked_at": "2026-10-27T00:21:36+00:00",
  "period": 1,
- "clock": "5:43",
+ "clock": "4:39",
  "last_play_period": 1,
- "last_play_clock": "5:43",
+ "last_play_clock": "4:39",
  "away": {
   "abbreviation": "ATL",
   "score": 4,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 4,
-  "feed_score": 4
+  "score": 8,
+  "feed_score": 8
  },
  "periods": [
   {
    "period": 1,
    "away": 4,
-   "home": 4
+   "home": 8
   }
  ],
  "players": [],
@@ -188,7 +188,7 @@
   {
    "order": 14,
    "period": 1,
-   "clock": "7:20",
+   "clock": "7:24",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 2,
@@ -200,7 +200,7 @@
   {
    "order": 15,
    "period": 1,
-   "clock": "7:16",
+   "clock": "7:17",
    "type": "Bad Pass\nTurnover",
    "text": "Jordin Canada bad pass\nturnover (Tiffany Hayes steals)",
    "away_score": 2,
@@ -212,7 +212,7 @@
   {
    "order": 16,
    "period": 1,
-   "clock": "7:08",
+   "clock": "7:12",
    "type": "Running Layup Shot",
    "text": "Gabby Williams misses running layup",
    "away_score": 2,
@@ -224,7 +224,7 @@
   {
    "order": 17,
    "period": 1,
-   "clock": "7:04",
+   "clock": "7:10",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 2,
@@ -248,7 +248,7 @@
   {
    "order": 19,
    "period": 1,
-   "clock": "6:59",
+   "clock": "7:00",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 2,
@@ -260,9 +260,9 @@
   {
    "order": 20,
    "period": 1,
-   "clock": "6:39",
-   "type": "Floating Jump Shot",
-   "text": "Gabby Williams misses 10-foot floating jump shot",
+   "clock": "6:40",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 10-foot pullup jump shot",
    "away_score": 2,
    "home_score": 4,
    "scoring_play": false,
@@ -460,6 +460,126 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 37,
+   "period": 1,
+   "clock": "5:30",
+   "type": "Reverse Layup Shot",
+   "text": "Allisha Gray misses 7-foot reverse layup",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 38,
+   "period": 1,
+   "clock": "5:27",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 39,
+   "period": 1,
+   "clock": "5:11",
+   "type": "Jump Shot",
+   "text": "Kiah Stokes misses 23-foot three point jumper",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 40,
+   "period": 1,
+   "clock": "5:08",
+   "type": "Offensive Rebound",
+   "text": "Tiffany Hayes offensive rebound",
+   "away_score": 4,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 41,
+   "period": 1,
+   "clock": "5:01",
+   "type": "Cutting Layup Shot",
+   "text": "Kiah Stokes makes 5-foot layup (Gabby Williams assists)",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 42,
+   "period": 1,
+   "clock": "4:48",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 43,
+   "period": 1,
+   "clock": "4:44",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 44,
+   "period": 1,
+   "clock": "4:39",
+   "type": "Turnaround Jump Shot",
+   "text": "Gabby Williams makes 13-foot turnaround jump shot",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 45,
+   "period": 1,
+   "clock": "4:39",
+   "type": "Shooting Foul",
+   "text": "Jordin Canada shooting foul",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 46,
+   "period": 1,
+   "clock": "4:39",
+   "type": "Official Timeout",
+   "text": "Official timeout",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
