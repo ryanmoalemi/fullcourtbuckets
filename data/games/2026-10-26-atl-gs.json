@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T02:15:09+00:00",
+ "checked_at": "2026-10-27T02:16:14+00:00",
  "period": 4,
  "clock": "49.9",
  "last_play_period": 4,
- "last_play_clock": "56.8",
+ "last_play_clock": "49.9",
  "away": {
   "abbreviation": "ATL",
   "score": 52,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 62,
-  "feed_score": 62
+  "score": 64,
+  "feed_score": 64
  },
  "periods": [
   {
@@ -39,7 +39,7 @@
   {
    "period": 4,
    "away": 12,
-   "home": 16
+   "home": 18
   }
  ],
  "players": [],
@@ -4339,6 +4339,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 359,
+   "period": 4,
+   "clock": "49.9",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 52,
+   "home_score": 62,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 360,
+   "period": 4,
+   "clock": "49.9",
+   "type": "Free Throw - 1 of 2",
+   "text": "Gabby Williams makes free throw 1 of 2",
+   "away_score": 52,
+   "home_score": 63,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 361,
+   "period": 4,
+   "clock": "49.9",
+   "type": "Free Throw - 2 of 2",
+   "text": "Gabby Williams makes free throw 2 of 2",
+   "away_score": 52,
+   "home_score": 64,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 362,
+   "period": 4,
+   "clock": "49.9",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 52,
+   "home_score": 64,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
