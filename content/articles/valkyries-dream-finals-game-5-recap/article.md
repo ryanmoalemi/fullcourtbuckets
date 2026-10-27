@@ -3,7 +3,7 @@ title: "Valkyries beat Dream 64-55 in Game 5 and move one win from the WNBA titl
 slug: valkyries-dream-finals-game-5-recap
 date: 2026-10-26
 category: news
-description: "Golden State beat Atlanta 64-55 in Game 5 at Chase Center to take a 3-2 WNBA Finals lead. The Dream shot 29.2% and scored a series-low 55. Game 6 is Thursday."
+description: "Kiah Stokes and the Valkyries held Angel Reese to 7 points in a 64-55 Game 5 win and a 3-2 Finals lead. Game 6 is Thursday at 9:30 a.m. PT in Atlanta."
 tags:
   - finals
   - recap
@@ -33,6 +33,8 @@ The Dream led 14-13 after one quarter on a [Rhyne Howard](/wnba/rhyne-howard/) t
 
 [Kiah Stokes](/wnba/kiah-stokes/) made two threes in the third quarter, and Golden State won it 21-18 to lead 46-40.
 
+At 6:37 of the third, Allisha Gray was called for an offensive foul on an inbounds play with Golden State up 34-26. The Dream challenged, and replay upheld the call.
+
 ## How Golden State pulled away
 
 A [Jordin Canada](/wnba/jordin-canada/) layup cut the lead to 46-42 with 9:53 left. Golden State then scored 10 of the next 12 points: a [Gabby Williams](/wnba/gabby-williams/) and-one, a Stokes three at 7:21 assisted by [Cecilia Zandalasini](/wnba/cecilia-zandalasini/), a [Veronica Burton](/wnba/veronica-burton/) basket and a Zandalasini basket at 4:58 for 56-44.
@@ -46,15 +48,35 @@ After two [Isobel Borlase](/wnba/isobel-borlase/) free throws, [Tiffany Hayes](/
 - **Rim protection.** Golden State blocked 9 shots to Atlanta's 3. Burton had 4, Stokes 3, and [Kaila Charles](/wnba/kaila-charles/) and Zandalasini 1 each.
 - **The glass.** Atlanta won the rebounding battle 44-33, with 12 offensive rebounds to Golden State's 5, but did not turn the extra chances into points.
 
-Stokes had 13 points on 5 of 6 shooting, 3 of 4 from three, with 8 rebounds and 3 blocks. Burton added 13 points, 8 rebounds, 3 assists and 4 blocks. Hayes scored 12 on 4 of 9 shooting and 4 of 4 free throws. Zandalasini had 12 points off the bench on 5 of 10 shooting and was +9, the best mark of the game. Williams scored 9 with 3 steals.
+**Free throws dried up.** Atlanta went 11 of 14 at the line, its fewest attempts of the Finals by 7.
 
-Howard led Atlanta with 20 points on 7 of 15 shooting, including 3 of 8 threes. [Angel Reese](/wnba/angel-reese/) had 15 rebounds, 5 of them offensive, and 5 assists, but scored 7 points on 2 of 8 shooting. Canada scored 12 on 5 of 16, [Allisha Gray](/wnba/allisha-gray/) had 10 on 4 of 12, and [Naz Hillmon](/wnba/naz-hillmon/) grabbed 11 rebounds.
+| Game | Dream FT | FTA | Result |
+| --- | --- | --- | --- |
+| 1 | 18 | 21 | Loss, 68-64 |
+| 2 | 30 | 35 | Win, 79-65 |
+| 3 | 20 | 29 | Win, 97-71 |
+| 4 | 22 | 31 | Loss, 67-62 |
+| 5 | 11 | 14 | Loss, 64-55 |
+
+**Reese's scoring.** Reese's last field goal came with 1:39 left in the first quarter. Her 7 points and 4 free-throw attempts are her lows of the 2026 playoffs, and she had 3 turnovers to 2 made shots. Atlanta is 2-0 this series when she scores 20 or more and 0-3 when she scores under 15.
+
+| Game | Reese FGM-FGA | Points | Result |
+| --- | --- | --- | --- |
+| 1 | 5-11 | 14 | Loss |
+| 2 | 10-16 | 30 | Win |
+| 3 | 7-12 | 21 | Win |
+| 4 | 2-12 | 8 | Loss |
+| 5 | 2-8 | 7 | Loss |
+
+Stokes had 13 points on 5 of 6 shooting, 3 of 4 from three, with 8 rebounds and 3 blocks. She has 17 blocks in the series and at least 3 in every game. Burton added 13 points, 8 rebounds, 3 assists and 4 blocks. Hayes scored 12 on 4 of 9 shooting and 4 of 4 free throws. It is her fourth straight game in double figures. Zandalasini had 12 points off the bench on 5 of 10 shooting and was +9, the best mark of the game. Williams scored 9 with 3 steals.
+
+Howard led Atlanta with 20 points on 7 of 15 shooting, including 3 of 8 threes. [Angel Reese](/wnba/angel-reese/) had 15 rebounds, 5 of them offensive, and 5 assists, but scored 7 points on 2 of 8 shooting. Canada scored 12 on 5 of 16, [Allisha Gray](/wnba/allisha-gray/) had 10 on 4 of 12, and [Naz Hillmon](/wnba/naz-hillmon/) grabbed 11 rebounds. Atlanta's bench went 0 of 9 from the field. [DeWanna Bonner](/wnba/dewanna-bonner/) and Borlase combined for 4 points on 0 of 8.
 
 Watch every possession on the [Game 5 play-by-play page](/wnba/finals/2026/game-5/play-by-play/), or check the [official WNBA.com box score](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score).
 
 ## The series so far
 
-The team with fewer turnovers has won all five games, and so has the team leading at halftime. Atlanta has won its two games by a combined 40 points. Golden State has won its three by a combined 18.
+The team with fewer turnovers has won all five games, and so has the team leading at halftime. Atlanta has won its two games by a combined 40 points. Golden State has won its three by a combined 18. The Valkyries, in their second season, went 32-12 as the No. 2 seed.
 
 Game 5 drew 18,064 at Chase Center, a sellout. That brings the 2026 Finals to 88,390 fans through five games, according to the [FCB Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/). The record is 92,599, set in 2024. A Game 6 crowd of 4,209 would tie it and 4,210 would break it. State Farm Arena drew 17,099 for Game 4.
 
