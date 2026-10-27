@@ -2333,22 +2333,22 @@ def stat_board_caption(lead: str = '') -> str:
 HOW_MADE_PAGE = '/how-we-make-full-court-buckets/'
 HOW_MADE_LINK = f'<a href="{HOW_MADE_PAGE}" target="_blank" rel="noopener">How we make Full Court Buckets</a>'
 HOW_MADE_RECAP = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_RECAP_BOX_ONLY = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_OTHER = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_OTHER_UNLINKED = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_RYAN = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_RYAN_UNLINKED = (
-    'How this story was made: Full Court Buckets articles are written by Ryan Moalemi, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
+    'How this story was made: Full Court Buckets articles are written by <a href="/authors/ryan-moalemi/">Ryan Moalemi</a>, sometimes with AI assistance, and every stat is checked against official WNBA box scores and the sources cited in the story.'
 )
 HOW_MADE_RE = re.compile(r'<p class="how-made">.*?</p>', re.S)
 _OWN_HOSTS = frozenset({'fullcourtbuckets.com', 'www.fullcourtbuckets.com'})
