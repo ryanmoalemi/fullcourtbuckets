@@ -58,10 +58,10 @@ class OwnersPageTests(unittest.TestCase):
         self.assertIn(f'<meta name="twitter:title" content="{owners.esc(owners.H1)}">', self.html)
         self.assertNotIn('FAQPage', self.html)
 
-    def test_dataset_is_cc_by_with_every_download(self):
+    def test_dataset_is_cc0_with_every_download(self):
         ld = [json.loads(x) for x in re.findall(r'<script type="application/ld\+json">(.*?)</script>', self.html, re.S)]
         dataset = next(x for x in ld if x['@type'] == 'Dataset')
-        self.assertEqual(dataset['license'], 'https://creativecommons.org/licenses/by/4.0/')
+        self.assertEqual(dataset['license'], 'https://creativecommons.org/publicdomain/zero/1.0/')
         for item in dataset['distribution']:
             name = item['contentUrl'].rsplit('/', 1)[1]
             self.assertTrue((ROOT / 'wnba' / 'owners' / name).is_file() or name.endswith('.json'), name)

@@ -40,7 +40,7 @@ SHELL_PAGE = ROOT / 'wnba' / 'viewership-attendance' / 'index.html'
 PUBLISHED = '2026-10-19'
 DATA_THROUGH = '2026-10-19'
 DATASET_VERSION = 'v3'
-LICENSE_URL = citation.CC_BY
+LICENSE_URL = citation.CC0
 CONTACT = 'ryan@fullcourtbuckets.com'
 H1 = 'WNBA team owners 2026: who owns every team, plus sales and facility investments'
 TITLE = 'WNBA team owners 2026: who owns every team and since when'
@@ -802,8 +802,8 @@ def body(data: dict, s: dict) -> str:
         + ''.join(f'<a href="{n}.csv" download>{n}.csv</a>' for n in COLLECTIONS)
         + f'<a href="{ZIP_NAME}" download>Everything (zip: JSON, all CSVs, manifest, findings review file)</a></div>'
         + dictionary_html()
-        + f'<p><strong>License:</strong> FCB\'s dataset, calculations and text are free to reuse under <a href="{LICENSE_URL}" target="_blank" rel="noopener">CC BY 4.0</a> '
-          'with credit to Full Court Buckets and a link to this page. Valuations remain the work of CNBC and Sportico, and linked documents belong to their publishers.</p>'
+        + f'<p><strong>License:</strong> FCB\'s dataset, calculations and text are free to use and republish (<a href="{LICENSE_URL}" target="_blank" rel="noopener">CC0</a>), '
+          'no credit required. Valuations remain the work of CNBC and Sportico, and linked documents belong to their publishers.</p>'
         + f'<p><strong>Corrections:</strong> spot an error? Email <a href="mailto:{CONTACT}">{CONTACT}</a> with a link to the document. Each fix is dated.</p>'
         + citation.media_line_html()
         + '<h3>Cite this page</h3>'

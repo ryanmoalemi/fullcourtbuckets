@@ -28,6 +28,14 @@ CREDIT_RES = (
     re.compile(r'\b(?:credit|cite) (?:us|Full Court Buckets|FCB)\b', re.I),
     re.compile(r'\blink back to (?:us|this page|Full Court Buckets)\b', re.I),
 )
+# FCB's own data, charts and embeds are CC0 (Ryan, Oct 27). Third-party photo
+# credits keep their CC BY / CC BY-SA labels, so only FCB-license wording is flagged.
+CC_BY_RES = (
+    re.compile(r'\b(?:use|reuse|republish|cite|data|dataset|chart|embed|CSV|license|licensed)\b[^.<>]{0,60}?\bCC[ -]?BY\b(?!-SA)', re.I),
+    re.compile(r'"license":\s*"https://creativecommons\.org/licenses/by/[0-9.]+/?",\s*"(?:isAccessibleForFree|creator)"'),
+    # Embed snippets live HTML-escaped in a <textarea>; raw links are photo credits.
+    re.compile(r'&lt;a href=&quot;https://creativecommons\.org/licenses/by/[0-9.]+/?&quot;&gt;CC BY'),
+)
 GOOGLE_SEARCH_RE = re.compile(r'href="[^"]*google\.[a-z.]+/search', re.I)
 RECORD_RE = re.compile(r'\b(?:ever|all-time)\b', re.I)
 SCOPE_RE = re.compile(
@@ -65,6 +73,11 @@ def credit_requests(text):
     return [m.group(0) for r in CREDIT_RES for m in [r.search(text)] if m]
 
 
+def cc_by_labels(page):
+    """FCB data/chart/embed labels still using CC BY instead of CC0."""
+    return [m.group(0)[:120] for r in CC_BY_RES for m in r.finditer(page)]
+
+
 def seo_problems(page):
     problems = []
     if not re.search(r'<title>[^<]+</title>', page, re.I):
@@ -98,6 +111,11 @@ class StandingArticleRules(unittest.TestCase):
         self.assertTrue(credit_requests('Please credit Full Court Buckets.'))
         self.assertTrue(credit_requests('Free to cite with link attribution.'))
         self.assertFalse(credit_requests('The data is free to use.'))
+        self.assertTrue(cc_by_labels('Free to use and republish (CC BY 4.0).'))
+        self.assertTrue(cc_by_labels('&lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/&quot;&gt;CC BY 4.0&lt;/a&gt;'))
+        self.assertFalse(cc_by_labels('by Prime Minister&#x27;s Office, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>; cropped by FCB.'))
+        self.assertFalse(cc_by_labels('Free to use and republish (CC0).'))
+        self.assertFalse(cc_by_labels('Photo: Zafer, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>, via Wikimedia Commons'))
 
     def test_published_articles(self):
         failures = []
@@ -110,6 +128,8 @@ class StandingArticleRules(unittest.TestCase):
                 failures.append(f'{slug}: unscoped ever/all-time claim: {s[:140]}')
             for hit in credit_requests(text):
                 failures.append(f'{slug}: asks for credit: {hit}')
+            for hit in cc_by_labels(page):
+                failures.append(f'{slug}: FCB data labeled CC BY (use CC0): {hit}')
             if GOOGLE_SEARCH_RE.search(page):
                 failures.append(f'{slug}: google.com/search link')
             for p in seo_problems(page):

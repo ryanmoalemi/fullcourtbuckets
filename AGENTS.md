@@ -101,7 +101,7 @@ Full text in `docs/EDITORIAL_STYLE.md` ("Standing article rules"); `automation/t
 3. Scope claims to the data ("since 2002", not "ever"). Never write "guaranteed". Quote official wording for records.
 4. Before writing, check what's trending on X, Reddit and in the news, and read that day's (and older, if useful) articles on the topic. Add every idea that truly improves ours, after verifying it.
 5. After publishing, check the live page: title and meta, internal links, play-by-play links and CSV downloads. A `data/seo-meta.json` override needs a manual publish run, because the workflow skips `data/`.
-6. Never ask for credit or attribution; say the data is free to use.
+6. Never ask for credit or attribution; say the data is free to use. FCB's own data, charts, embeds, CSVs and dataset metadata are CC0 (https://creativecommons.org/publicdomain/zero/1.0/), labeled "Free to use and republish (CC0)". Never label FCB data CC BY; `citation.CC0` is the constant. Third-party photos keep their own CC BY / CC BY-SA credits.
 7. Every page has SEO meta, breadcrumbs with BreadcrumbList JSON-LD, and a clear H1/H2 structure.
 
 ## Standing owner instruction: handle the complete publication

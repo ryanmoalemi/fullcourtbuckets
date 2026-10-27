@@ -16,7 +16,8 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 BASE = 'https://fullcourtbuckets.com'
-CC_BY = 'https://creativecommons.org/licenses/by/4.0/'
+CC0 = 'https://creativecommons.org/publicdomain/zero/1.0/'
+CC_BY = CC0  # legacy alias: FCB data is CC0, not CC BY
 WNBA_FINALS_RELEASE = 'https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena'
 VIEWERSHIP_URL = BASE + '/news/wnba-finals-2026-audience-growth-dream-valkyries/'
 TRACKER_SLUG = '2026-wnba-finals-ratings-tracker'
@@ -87,7 +88,7 @@ def embed_snippet(page_url: str, anchor: str, image: str = '', image_alt: str = 
     return '\n'.join([
         first,
         f'<a href="{deep}">Source: Full Court Buckets</a>',
-        f'<a href="{CC_BY}">CC BY 4.0</a>',
+        f'<a href="{CC0}">CC0</a>',
     ])
 
 
@@ -103,7 +104,7 @@ def embed_block(anchor: str, snippet: str, csv_href: str = '') -> str:
         f'{csv_link}\n'
         '</div>\n'
         f'<div class="fcb-embed-panel" id="embed-{esc(anchor)}" hidden>\n'
-        '<p class="fcb-embed-note">Free to use and republish (CC BY 4.0).</p>\n'
+        '<p class="fcb-embed-note">Free to use and republish (CC0).</p>\n'
         f'<textarea readonly rows="4">{esc(snippet)}</textarea>\n'
         '<button type="button" class="fcb-copy-embed">Copy Embed Code</button>\n'
         '</div>\n'
@@ -138,7 +139,7 @@ def dataset_script(name: str, description: str, url: str, csv_url: str) -> str:
             'name': 'Full Court Buckets',
             'url': BASE + '/',
         },
-        'license': CC_BY,
+        'license': CC0,
         'isAccessibleForFree': True,
         'distribution': {
             '@type': 'DataDownload',

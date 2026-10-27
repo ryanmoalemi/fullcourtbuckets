@@ -2,7 +2,7 @@
  "dataset": "Full Court Buckets WNBA ownership dataset",
  "version": "v3",
  "data_through": "2026-10-19",
- "license": "https://creativecommons.org/licenses/by/4.0/",
+ "license": "https://creativecommons.org/publicdomain/zero/1.0/",
  "url": "https://fullcourtbuckets.com/wnba/owners/",
  "collections": {
   "ownership": [
