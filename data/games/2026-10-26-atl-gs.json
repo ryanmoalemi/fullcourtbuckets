@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:34:44+00:00",
+ "checked_at": "2026-10-27T00:35:18+00:00",
  "period": 1,
- "clock": "34.7",
+ "clock": "21.5",
  "last_play_period": 1,
- "last_play_clock": "34.7",
+ "last_play_clock": "22.1",
  "away": {
   "abbreviation": "ATL",
-  "score": 11,
-  "feed_score": 11
+  "score": 14,
+  "feed_score": 14
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 11,
+   "away": 14,
    "home": 13
   }
  ],
@@ -1028,7 +1028,7 @@
   {
    "order": 84,
    "period": 1,
-   "clock": "1:59",
+   "clock": "1:58",
    "type": "Jump Shot",
    "text": "Kayla Thornton makes 24-foot three point jumper (Veronica Burton assists)",
    "away_score": 8,
@@ -1276,6 +1276,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 105,
+   "period": 1,
+   "clock": "32.0",
+   "type": "Jumpball",
+   "text": "DeWanna Bonner vs. Kaila Charles (Naz Hillmon gains possession)",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 106,
+   "period": 1,
+   "clock": "32.0",
+   "type": "Lost Ball Turnover",
+   "text": "Kaila Charles lost ball turnover (DeWanna Bonner steals)",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 107,
+   "period": 1,
+   "clock": "22.1",
+   "type": "No Shot (Default Shot)",
+   "text": "Rhyne Howard makes 26-foot shot (Jordin Canada assists)",
+   "away_score": 14,
+   "home_score": 13,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
   }
  ]
 }
