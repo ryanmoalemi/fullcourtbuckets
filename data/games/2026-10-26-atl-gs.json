@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:48:35+00:00",
+ "checked_at": "2026-10-27T00:49:39+00:00",
  "period": 2,
- "clock": "4:43",
+ "clock": "3:53",
  "last_play_period": 2,
- "last_play_clock": "5:44",
+ "last_play_clock": "3:50",
  "away": {
   "abbreviation": "ATL",
-  "score": 19,
-  "feed_score": 19
+  "score": 21,
+  "feed_score": 21
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 5,
+   "away": 7,
    "home": 9
   }
  ],
@@ -1347,7 +1347,7 @@
    "period": 2,
    "clock": "9:23",
    "type": "Bad Pass\nTurnover",
-   "text": "DeWanna Bonner bad pass\nturnover (Veronica Burton steals)",
+   "text": "DeWanna Bonner bad pass\nturnover (Kaila Charles steals)",
    "away_score": 14,
    "home_score": 15,
    "scoring_play": false,
@@ -1393,7 +1393,7 @@
   {
    "order": 114,
    "period": 2,
-   "clock": "8:26",
+   "clock": "8:28",
    "type": "Turnaround Jump Shot",
    "text": "Veronica Burton misses 27-foot turnaround jump shot",
    "away_score": 14,
@@ -1405,7 +1405,7 @@
   {
    "order": 115,
    "period": 2,
-   "clock": "8:26",
+   "clock": "8:27",
    "type": "Offensive Rebound",
    "text": "Golden State Valkyries offensive team rebound",
    "away_score": 14,
@@ -1417,7 +1417,7 @@
   {
    "order": 116,
    "period": 2,
-   "clock": "8:27",
+   "clock": "8:28",
    "type": "Shot Clock Turnover",
    "text": "shot clock turnover",
    "away_score": 14,
@@ -1429,7 +1429,7 @@
   {
    "order": 117,
    "period": 2,
-   "clock": "8:26",
+   "clock": "8:28",
    "type": "Substitution",
    "text": "Angel Reese enters the game for DeWanna Bonner",
    "away_score": 14,
@@ -1718,8 +1718,8 @@
    "order": 141,
    "period": 2,
    "clock": "5:47",
-   "type": "No Shot (Default Shot)",
-   "text": "Angel Reese misses shot",
+   "type": "Layup Shot",
+   "text": "Angel Reese misses layup",
    "away_score": 19,
    "home_score": 22,
    "scoring_play": false,
@@ -1737,6 +1737,138 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 143,
+   "period": 2,
+   "clock": "5:23",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 29-foot three point jumper",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 144,
+   "period": 2,
+   "clock": "5:20",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 145,
+   "period": 2,
+   "clock": "5:11",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 26-foot three point jumper",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 146,
+   "period": 2,
+   "clock": "5:07",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 147,
+   "period": 2,
+   "clock": "4:48",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 24-foot three point jumper",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 148,
+   "period": 2,
+   "clock": "4:43",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 19,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 149,
+   "period": 2,
+   "clock": "4:27",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard makes 10-foot pullup jump shot",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 150,
+   "period": 2,
+   "clock": "4:04",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton misses 22-foot three point jumper",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 151,
+   "period": 2,
+   "clock": "4:01",
+   "type": "Offensive Rebound",
+   "text": "Tiffany Hayes offensive rebound",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 152,
+   "period": 2,
+   "clock": "3:53",
+   "type": "Driving Layup Shot",
+   "text": "Veronica Burton misses driving layup",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 153,
+   "period": 2,
+   "clock": "3:50",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
