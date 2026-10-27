@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:56:04+00:00",
+ "checked_at": "2026-10-27T00:56:38+00:00",
  "period": 2,
- "clock": "1:54",
+ "clock": "1:43",
  "last_play_period": 2,
- "last_play_clock": "2:09",
+ "last_play_clock": "1:43",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -1729,7 +1729,7 @@
   {
    "order": 142,
    "period": 2,
-   "clock": "5:44",
+   "clock": "5:46",
    "type": "Defensive Rebound",
    "text": "Kayla Thornton defensive rebound",
    "away_score": 19,
@@ -1741,7 +1741,7 @@
   {
    "order": 143,
    "period": 2,
-   "clock": "5:23",
+   "clock": "5:25",
    "type": "Jump Shot",
    "text": "Tiffany Hayes misses 29-foot three point jumper",
    "away_score": 19,
@@ -1753,7 +1753,7 @@
   {
    "order": 144,
    "period": 2,
-   "clock": "5:20",
+   "clock": "5:23",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 19,
@@ -1765,7 +1765,7 @@
   {
    "order": 145,
    "period": 2,
-   "clock": "5:11",
+   "clock": "5:12",
    "type": "Jump Shot",
    "text": "Rhyne Howard misses 26-foot three point jumper",
    "away_score": 19,
@@ -2049,6 +2049,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 169,
+   "period": 2,
+   "clock": "1:54",
+   "type": "Traveling",
+   "text": "Madina Okot traveling turnover",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 170,
+   "period": 2,
+   "clock": "1:54",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "1:54",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Madina Okot",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 172,
+   "period": 2,
+   "clock": "1:43",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
