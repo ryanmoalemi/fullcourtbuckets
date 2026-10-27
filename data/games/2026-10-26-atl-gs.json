@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:26:23+00:00",
+ "checked_at": "2026-10-27T00:26:57+00:00",
  "period": 1,
  "clock": "3:38",
  "last_play_period": 1,
- "last_play_clock": "3:38",
+ "last_play_clock": "3:15",
  "away": {
   "abbreviation": "ATL",
   "score": 6,
@@ -748,6 +748,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 61,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Free Throw - 1 of 1",
+   "text": "Jordin Canada misses free throw 1 of 1",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 62,
+   "period": 1,
+   "clock": "3:35",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 63,
+   "period": 1,
+   "clock": "3:15",
+   "type": "No Shot (Default Shot)",
+   "text": "Cecilia Zandalasini misses shot",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
