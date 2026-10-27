@@ -67,3 +67,16 @@ Use this for every new preview, recap, feature and guide. It applies to the WNBA
 - Material that supports the data may sit above or near the table: methods, sources, the data-through date, definitions, and one key-fact line.
 - News, game schedules, storylines and bullet lists never sit above a data table, chart or tool. They go below it.
 - Mark the element that holds the table, chart or tool with `data-fcb-data-table`. `automation/test_data_table_first.py` fails the build if a list, chart, image, news answer block or more than 700 characters of text sits between the byline and that element.
+
+## Standing article rules (Ryan, Oct 27, 2026)
+Learned from the Finals Game 5 recap. They apply to every article and data page.
+
+1. **Verify every outside number.** A number from another outlet, an AI tool, or our own earlier draft is checked against the official box score or another primary source before it is used. If it cannot be verified, drop it.
+2. **Original data hooks only where they earn a link.** Use FCB's own datasets and tools for a data angle only when a journalist would genuinely link to it. When you do, put the table high on the page (see "Data pages, charts and tools") with methods, sources, a data-through date, and a CSV download.
+3. **Scope every claim to the data.** Write "since 2002" or "in our 2002-2026 database", not "ever" or "all-time", unless the record is attributed to a source that says so. Never write "guaranteed". For records, quote the official wording (league, team, or broadcaster release).
+4. **Research before writing.** Check what is trending on X, Reddit, and in the news, and read that day's articles on the topic (older ones too, when useful). Add every idea that truly improves our story, after verifying it.
+5. **Check the live page after publishing.** Confirm the title and meta, internal links, play-by-play links, and CSV downloads on the public URL. A `data/seo-meta.json` override needs a manual publish run, because the publish workflow skips `data/`.
+6. **Never ask for credit or attribution.** Say the data is free to use.
+7. **SEO structure on every page.** SEO meta (title, description, canonical, social tags), a visible breadcrumb trail with matching BreadcrumbList JSON-LD, one H1, and clear H2/H3 subheads.
+
+`automation/test_article_rules.py` checks the mechanical parts on every published `/news/` article: "guaranteed", unscoped "ever"/"all-time" claims, credit or attribution requests, `google.com/search` links, and missing title, description, canonical, breadcrumbs, BreadcrumbList JSON-LD, or H1/H2 structure.

@@ -530,7 +530,7 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
     parts.append('<h2 class="section-title" id="data">Download the data</h2>')
     parts.append(
         f'<p>The full list is a free CSV, one row per player and relative: <a class="fr-download" href="{CSV_NAME}" download>Download famous-relatives.csv</a>. '
-        'Please credit Full Court Buckets and link this page.</p>'
+        'The data is free to use.</p>'
     )
     parts.append('<dl class="fr-dict">' + ''.join(f'<dt>{esc(k)}</dt><dd>{esc(v)}</dd>' for k, v in DICTIONARY) + '</dl>')
     parts.append(f'<p>Spot an error or know a relative we missed? Email <a href="mailto:{esc(doc["corrections"])}">{esc(doc["corrections"])}</a> with a link to an official record. Each fix is dated.</p>')

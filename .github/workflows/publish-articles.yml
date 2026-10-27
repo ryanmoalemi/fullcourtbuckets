@@ -33,7 +33,7 @@ jobs:
         working-directory: automation
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python -m unittest test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta -q
+        run: python -m unittest test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta test_article_rules -q
       - name: Commit generated pages
         run: |
           git add -A -- . ':!**/__pycache__'
