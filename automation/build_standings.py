@@ -486,7 +486,7 @@ def render_page(root: Path, table: dict) -> str:
         'description': description + ' Full Court Buckets gathers and verifies its own data.',
         'url': BASE + ROUTE,
         'creator': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
-        'license': citation.CC_BY,
+        'license': citation.CC0,
         'isAccessibleForFree': True,
         'distribution': {
             '@type': 'DataDownload',

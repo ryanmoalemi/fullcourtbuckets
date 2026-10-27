@@ -271,7 +271,7 @@ FAQ = [
     ('My bar shows WNBA games. How do I get listed?',
      f'Email <a href="mailto:{CONTACT}">{CONTACT}</a> with your bar name, address and a link to your WNBA listing or event page.'),
     ('A listing is wrong or a bar closed. What should I do?', f'Email <a href="mailto:{CONTACT}">{CONTACT}</a> and we will recheck it.'),
-    ('Can I reuse the data?', 'Yes, under CC BY 4.0 with credit to Full Court Buckets.'),
+    ('Can I reuse the data?', 'Yes. The data is free to use and republish (CC0).'),
 ]
 
 
@@ -283,7 +283,7 @@ def jsonld(s: dict) -> str:
          'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': 'https://fullcourtbuckets.com/authors/ryan-moalemi/'},
          'publisher': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': 'https://fullcourtbuckets.com/'}},
         {'@type': 'Dataset', 'name': 'Full Court Buckets: where to watch WNBA games', 'url': CANONICAL,
-         'description': description(s), 'license': 'https://creativecommons.org/licenses/by/4.0/',
+         'description': description(s), 'license': 'https://creativecommons.org/publicdomain/zero/1.0/',
          'creator': {'@type': 'Organization', 'name': 'Full Court Buckets'}, 'dateModified': DATA_THROUGH,
          'distribution': [{'@type': 'DataDownload', 'encodingFormat': 'text/csv', 'contentUrl': CANONICAL + CSV_NAME}]},
         {'@type': 'BreadcrumbList', 'itemListElement': [
@@ -382,10 +382,10 @@ def render(rows: list[dict]) -> str:
         '<p class="ww-empty" id="ww-e">No venues match. Try a city, neighborhood or bar name, or clear the search.</p>'
         f'<div class="ww-notice ww-notice-below" id="check-before-you-go" role="note"><strong>Check before you go:</strong> {NOTICE}</div></div>'
         '</div><div class="ww-below">'
-        '<h2 id="download">Download the data (CC BY 4.0)</h2>'
+        '<h2 id="download">Download the data (CC0)</h2>'
         f'<p><a class="ww-dl" href="{PATH}{CSV_NAME}" download>Download CSV</a></p>'
         '<p>Columns: id, name, street, city, state, country, team_market, verification_type, verification_date, source_name, source_url, website, phone, directions. '
-        'Credit: "Full Court Buckets, Where to Watch WNBA Games (CC BY 4.0)" with a link to this page.</p>'
+        'Free to use and republish (CC0).</p>'
         '<h2 id="methods">How we build this list</h2>'
         f'<p class="ww-intro">A directory of bars and restaurants that list WNBA screenings on official team watch-party pages or their own websites, or that confirmed with our staff. Covers {s["venues"]} venues in {s["cities"]} cities across the U.S., Canada and the U.K., in WNBA team markets and beyond.</p>'
         '<ul>'

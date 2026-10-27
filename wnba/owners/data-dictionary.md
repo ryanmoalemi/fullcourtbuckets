@@ -1,6 +1,6 @@
 # Data dictionary: FCB WNBA ownership dataset (v3)
 
-Data version: v3 · Data through: Oct 19, 2026 (PT) · License: CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), credit Full Court Buckets and link https://fullcourtbuckets.com/wnba/owners/.
+Data version: v3 · Data through: Oct 19, 2026 (PT) · License: CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Free to use and republish.
 Source of truth: the CSVs in `data/wnba/owners/`. `automation/build_owners.py` generates every count, table and finding on the page from them; nothing on the page is typed in by hand.
 Corrections, media and data questions: ryan@fullcourtbuckets.com (general: hello@fullcourtbuckets.com).
 
@@ -60,7 +60,7 @@ observation_id · project_id · amount_usd_m · precision · observation_type (a
 valuation_id · team · publisher · published_date · amount_usd_m · currency · value_type ("unspecified (publisher estimate)") · source_url · note. These are CNBC and Sportico proprietary estimates, credited to them; they are not transaction prices or FCB data.
 
 ## owner_photos.csv: controlling-owner photos (one row per named controlling owner of an active team)
-photo_id · person · team_id · image_path (self-hosted 96x96 face crop) · display (photo / initials) · source_url (Wikimedia Commons file page) · title · author · license · license_url · identity_basis (Wikidata item whose image property names the file) · crop · retrieved. Photos are not covered by FCB's CC BY 4.0 license; each keeps its own license. Initials are used where no openly licensed, face-visible photo was matched to the person.
+photo_id · person · team_id · image_path (self-hosted 96x96 face crop) · display (photo / initials) · source_url (Wikimedia Commons file page) · title · author · license · license_url · identity_basis (Wikidata item whose image property names the file) · crop · retrieved. Photos are not covered by FCB's CC0 dedication; each keeps its own license. Initials are used where no openly licensed, face-visible photo was matched to the person.
 
 ## sources.csv: source index (78 rows) · 7 fields
 source_id · url · issuer · source_type · used_in · access_status (paywalled sources are flagged) · archive_url (empty: archive.org snapshots not yet captured).

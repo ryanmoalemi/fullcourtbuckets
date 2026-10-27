@@ -114,7 +114,7 @@ def shell_parts(title, desc, path, date):
         head = re.sub(pat, '', head, flags=re.S)
     url = BASE + path
     ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "Dataset", "name": title, "description": desc, "url": url, "license": "https://creativecommons.org/licenses/by/4.0/",
+        {"@type": "Dataset", "name": title, "description": desc, "url": url, "license": "https://creativecommons.org/publicdomain/zero/1.0/",
          "creator": {"@type": "Organization", "name": "Full Court Buckets", "url": BASE + "/"}, "author": {"@type": "Person", "name": "Ryan Moalemi", "url": BASE + "/authors/ryan-moalemi/"},
          "dateModified": date, "isAccessibleForFree": True},
         {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},

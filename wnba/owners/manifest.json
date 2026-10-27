@@ -1,11 +1,11 @@
 {
  "version": "v3",
  "data_through": "2026-10-19",
- "license": "https://creativecommons.org/licenses/by/4.0/",
+ "license": "https://creativecommons.org/publicdomain/zero/1.0/",
  "files": {
   "data-dictionary.md": {
-   "sha256": "766a0a8a140ce5d34d53d6d4722954092074d971d413371b773f6d59ab783955",
-   "bytes": 9281
+   "sha256": "b4e1b59174aac2733d92f8f2211b79bfcde450a315de1875b893bc5fcfaf0a45",
+   "bytes": 9227
   },
   "entities.csv": {
    "sha256": "66fc6d2ab1bbb24825d0e38e4d12a380e6d4286bf01de9167feea562ab740cb5",
@@ -20,7 +20,7 @@
    "bytes": 5571
   },
   "findings.json": {
-   "sha256": "90839a439ddb3508a158b92dea7248bc5ad9e7d5fa2e91b7eb956ee53e9e2d8e",
+   "sha256": "c046cce0512f98a5dcc11443355c3d4752fe7a10d5e61f279c7d7a4143727e5e",
    "bytes": 712
   },
   "investors.csv": {
@@ -48,8 +48,8 @@
    "bytes": 13044
   },
   "wnba-owners.json": {
-   "sha256": "75a170abd10934fdde0b4c12df5f70e83cff5b64e60d01807d0eb2166b1c5d1d",
-   "bytes": 232925
+   "sha256": "4bb05035ad5ffe6f0023d5b17558439275016bfa8a0576e98aafb9f6f9eec092",
+   "bytes": 232931
   }
  },
  "records": {

@@ -213,7 +213,7 @@ def render_page(data: dict, person: str, rec: dict) -> str:
            '<p class="ow-small">A registry or filing entry is not by itself proof of ownership or control.</p></section>' if ents else '')
         + f'<section class="ow-section" id="sources"><h2 class="section-title">Sources</h2><ul>{srcs}</ul>{credit}'
         f'<p>Full dataset, methods and corrections: <a href="/wnba/owners/#methods">WNBA team owners 2026</a>. Corrections: <a href="mailto:{B.CONTACT}">{B.CONTACT}</a>. '
-        f'License: <a href="{B.LICENSE_URL}">CC BY 4.0</a> for FCB data and text; photos and linked documents keep their own licenses.</p></section>'
+        f'License: FCB data and text are free to use and republish (<a href="{B.LICENSE_URL}">CC0</a>); photos and linked documents keep their own licenses.</p></section>'
         f'<p class="how-made">{B.links.HOW_MADE_OTHER} <a href="{B.links.HOW_MADE_PAGE}">How we make Full Court Buckets</a></p>'
         '</article></div></main>'
     )
