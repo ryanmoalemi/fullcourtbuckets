@@ -165,7 +165,7 @@
     "description": "Each eligible player on the 2026 WNBA champion gets a $60,000 bonus, up from $22,908 in 2025. The runner-up gets $20,000 each and the Finals MVP $30,000."
   },
   "/news/wnba-players-famous-relatives/": {
-    "title": "57 WNBA players' famous relatives, from Curry to Malone"
+    "title": "{famous_relatives} WNBA players' famous relatives, from Curry to Malone"
   },
   "/privacy/": {
     "title": "Privacy policy: cookies, analytics and ads | Full Court Buckets",

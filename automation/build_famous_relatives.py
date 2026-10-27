@@ -36,7 +36,23 @@ PAGE_PATH = ROOT / 'news' / SLUG / 'index.html'
 CSV_NAME = 'famous-relatives.csv'
 CSV_PATH = ROOT / 'news' / SLUG / CSV_NAME
 PHOTO_DIR = ROOT / 'images' / 'relatives'
-HERO_SOURCE = ROOT / 'images' / 'articles' / SLUG / 'photo.jpg'
+HERO_DIR = ROOT / 'images' / 'articles' / SLUG
+HERO_NAMES = ('photo.webp', 'photo.jpg', 'photo.jpeg', 'photo.png')
+
+
+def hero_source(article: dict | None = None) -> Path:
+    """The hero file that exists: the record's imageSource first, then photo.webp/.jpg/.jpeg/.png."""
+    names = []
+    if article and article.get('imageSource'):
+        names.append(Path(str(article['imageSource'])).name)
+    names += [n for n in HERO_NAMES if n not in names]
+    for name in names:
+        path = HERO_DIR / name
+        if path.is_file():
+            return path
+    raise SystemExit(f'no hero photo in {HERO_DIR} (tried {", ".join(names)})')
+
+
 PUBLISHED = '2026-10-19'
 HEADLINE = "Steph Curry, Karl Malone and Donovan McNabb top our list of {relatives} WNBA players' famous relatives"
 CATEGORY = 'WNBA'
@@ -57,7 +73,7 @@ DICTIONARY = (
     ('team_2026', 'The player\'s team in FCB\'s 2026 player data. Blank when she is not on a 2026 roster.'),
     ('relative', 'The famous relative.'),
     ('relation', 'How the relative is related to the player, in the player\'s terms (her father, her cousin).'),
-    ('relation_type', 'One of sibling, parent, grandparent, uncle/aunt, cousin or godfamily.'),
+    ('relation_type', 'One of sibling, parent, grandparent, uncle/aunt, cousin, godfamily or spouse (current or former).'),
     ('sport', 'Where the relative made their name.'),
     ('known_for', 'The verified one-line reason the relative is notable.'),
     ('source_urls', 'Every source for the row, separated by a space.'),
@@ -195,13 +211,16 @@ def stats(entries: list[dict]) -> dict:
         'primary_rows': sum(1 for e in entries if all(s['kind'] == 'primary' for s in e['sources'])),
         'with_report': sum(1 for e in entries if any(s['kind'] == 'report' for s in e['sources'])),
         'photo_pairs': sum(1 for e in entries if e.get('photo_player') and e.get('photo_relative')),
-        'wnba_families': sum(1 for e in entries if e['sport'] == 'WNBA'),
+        'wnba_families': sum(1 for e in entries if e['sport'] == 'WNBA' and e['relation_type'] != 'spouse'),
+        'spouses': sum(1 for e in entries if e['relation_type'] == 'spouse'),
+        'wnba_spouses': sum(1 for e in entries if e['relation_type'] == 'spouse' and e['sport'] == 'WNBA'),
     }
 
 
 RELATION_LABEL = OrderedDict((
     ('sibling', 'Siblings'), ('parent', 'Parents'), ('grandparent', 'Grandparents'),
     ('uncle/aunt', 'Uncles and aunts'), ('cousin', 'Cousins'), ('godfamily', 'Godfamily'),
+    ('spouse', 'Spouses'),
 ))
 
 
@@ -391,6 +410,10 @@ def faq_items(entries: list[dict], s: dict, updated: str) -> list[tuple[str, str
              lambda e: f'Ron Burton. {e["known_for"]}'),
         item(('lexie-brown', 'dee-brown'), "Who is Lexie Brown's dad?",
              lambda e: f'Dee Brown. {e["known_for"]}'),
+        item(('breanna-stewart', 'marta-xargay'), "Who is Breanna Stewart's wife?",
+             lambda e: f'Marta Xargay. {e["known_for"]} {e["extra"]}'),
+        item(('diana-taurasi', 'penny-taylor'), "Who is Diana Taurasi's wife?",
+             lambda e: f'Penny Taylor. {e["known_for"]} {e["extra"]}'),
     ]
     return [i for i in items if i]
 
@@ -509,7 +532,9 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
         f'<li><strong>NBA is the most common link:</strong> {sport["NBA"]} of {total} relatives ({pct(sport["NBA"], total)}).</li>'
         f'<li><strong>Siblings lead the relations:</strong> {rel["sibling"]} siblings and {rel["parent"]} parents.</li>'
         f'<li><strong>WNBA families:</strong> {s["wnba_families"]} relatives also played in the WNBA, so the league has its own families: the Sabally, Ogwumike, Samuelson, Jones and Paris sisters, Bonner and McCall, and Pamela McGee and her daughter.</li>'
-        f'<li><strong>Primary records:</strong> {s["primary_rows"]} of {total} rows rest only on official records. The other {s["with_report"]} also cite a news report, labeled as one.</li>'
+        + (f'<li><strong>Spouses:</strong> {s["spouses"]} spouses are notable in their own right, {s["wnba_spouses"]} of them WNBA players. '
+           'Only spouses with a public career and an official team, league or school record of the marriage are listed. Private spouses are left out.</li>' if s.get('spouses') else '')
+        + f'<li><strong>Primary records:</strong> {s["primary_rows"]} of {total} rows rest only on official records. The other {s["with_report"]} also cite a news report, labeled as one.</li>'
         f'<li><strong>Photos:</strong> {s["photo_pairs"]} pairs have freely licensed photos of both people.</li>'
         '</ul>')
     rel_rows = [(label, rel[key]) for key, label in RELATION_LABEL.items() if rel.get(key)]
@@ -565,6 +590,8 @@ def extra_jsonld(entries: list[dict], faq: list[tuple[str, str]], title: str) ->
             person['sibling'] = relative
         elif rel_type == 'parent':
             person['parent'] = relative
+        elif rel_type == 'spouse' and not e['relation'].lower().startswith('former'):
+            person['spouse'] = relative
         else:
             person['relatedTo'] = relative
         elements.append({'@type': 'ListItem', 'position': e['rank'], 'item': person})
@@ -687,9 +714,10 @@ def main() -> None:
     existing = next((a for a in articles if a.get('slug') == SLUG), None)
     is_new = existing is None
     article = record(doc, s, existing)
-    photo = HERO_SOURCE.read_bytes()
+    hero_path = hero_source(existing)
+    photo = hero_path.read_bytes()
     if not (existing and pa.images_ready(existing, photo)):
-        pa.write_images(article, HERO_SOURCE, photo)
+        pa.write_images(article, hero_path, photo)
     else:
         for key in ('image', 'imageSource', 'imageHero', 'imageHeroWidth', 'imageHeroHeight', 'imageOg', 'imageOgWidth', 'imageOgHeight', 'imageWidth', 'imageHeight'):
             if key in existing:

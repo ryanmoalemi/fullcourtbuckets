@@ -164,9 +164,39 @@ def family_meta(rel: str, title: str, desc: str):
     return None
 
 
+# Counts that come from data, so hand-written titles never go stale.
+# Use them in data/seo-meta.json as {token}, e.g. "{famous_relatives} WNBA players' famous relatives".
+def _count_entries(rel_path: str):
+    def count(root: Path) -> int:
+        doc = json.loads((root / rel_path).read_text(encoding='utf-8'))
+        return len(doc['entries'])
+    return count
+
+
+TOKENS = {
+    'famous_relatives': _count_entries('data/famous-relatives.json'),
+}
+TOKEN_RE = re.compile(r'\{(' + '|'.join(TOKENS) + r')\}')
+
+
+def fill_tokens(text: str, root: Path = ROOT) -> str:
+    """Replace {token} placeholders with live counts from the data files."""
+    cache = {}
+
+    def sub(m):
+        if m.group(1) not in cache:
+            cache[m.group(1)] = str(TOKENS[m.group(1)](root))
+        return cache[m.group(1)]
+    return TOKEN_RE.sub(sub, text)
+
+
 def load_overrides(root: Path = ROOT) -> dict:
     p = root / 'data' / 'seo-meta.json'
-    return json.loads(p.read_text(encoding='utf-8')) if p.is_file() else {}
+    if not p.is_file():
+        return {}
+    data = json.loads(p.read_text(encoding='utf-8'))
+    return {path: {k: fill_tokens(v, root) if isinstance(v, str) else v for k, v in o.items()} if isinstance(o, dict) else o
+            for path, o in data.items()}
 
 
 # Pages that must not change (the #328 Game 4 first-half page is frozen).
