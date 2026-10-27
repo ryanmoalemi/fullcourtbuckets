@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:33:04+00:00",
+ "checked_at": "2026-10-27T00:33:38+00:00",
  "period": 1,
  "clock": "39.1",
  "last_play_period": 1,
- "last_play_clock": "58.9",
+ "last_play_clock": "43.1",
  "away": {
   "abbreviation": "ATL",
   "score": 11,
@@ -932,7 +932,7 @@
   {
    "order": 76,
    "period": 1,
-   "clock": "2:23",
+   "clock": "2:25",
    "type": "Driving Layup Shot",
    "text": "Naz Hillmon blocks Cecilia Zandalasini 's 7-foot driving layup",
    "away_score": 8,
@@ -1173,8 +1173,8 @@
    "order": 96,
    "period": 1,
    "clock": "1:05",
-   "type": "No Shot (Default Shot)",
-   "text": "Allisha Gray misses shot",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Allisha Gray misses 11-foot two point shot",
    "away_score": 11,
    "home_score": 13,
    "scoring_play": false,
@@ -1204,6 +1204,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 99,
+   "period": 1,
+   "clock": "58.9",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Gabby Williams",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 100,
+   "period": 1,
+   "clock": "58.9",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Angel Reese",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 101,
+   "period": 1,
+   "clock": "58.9",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 102,
+   "period": 1,
+   "clock": "43.1",
+   "type": "No Shot (Default Shot)",
+   "text": "Kaila Charles misses shot",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
