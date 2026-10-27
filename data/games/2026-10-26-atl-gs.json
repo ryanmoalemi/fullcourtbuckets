@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:54:25+00:00",
+ "checked_at": "2026-10-27T00:55:29+00:00",
  "period": 2,
- "clock": "2:50",
+ "clock": "2:16",
  "last_play_period": 2,
- "last_play_clock": "2:50",
+ "last_play_clock": "2:16",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 22,
-  "feed_score": 22
+  "score": 25,
+  "feed_score": 25
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 7,
-   "home": 9
+   "home": 12
   }
  ],
  "players": [],
@@ -1669,8 +1669,8 @@
   {
    "order": 137,
    "period": 2,
-   "clock": "6:08",
-   "type": "Layup Shot",
+   "clock": "6:10",
+   "type": "Cutting Layup Shot",
    "text": "Veronica Burton blocks Naz Hillmon 's 6-foot layup",
    "away_score": 19,
    "home_score": 22,
@@ -1681,7 +1681,7 @@
   {
    "order": 138,
    "period": 2,
-   "clock": "6:05",
+   "clock": "6:08",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 19,
@@ -1983,12 +1983,60 @@
    "period": 2,
    "clock": "2:50",
    "type": "Substitution",
-   "text": "enters the game for Isobel Borlase",
+   "text": "Jordin Canada enters the game for Isobel Borlase",
    "away_score": 21,
    "home_score": 22,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 164,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Back Court Turnover",
+   "text": "Rhyne Howard back court turnover",
+   "away_score": 21,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 165,
+   "period": 2,
+   "clock": "2:30",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini makes 24-foot three point jumper (Tiffany Hayes assists)",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 166,
+   "period": 2,
+   "clock": "2:19",
+   "type": "No Shot (Default Shot)",
+   "text": "Kiah Stokes blocks Angel Reese 's 6-foot shot",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 167,
+   "period": 2,
+   "clock": "2:16",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 21,
+   "home_score": 25,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
