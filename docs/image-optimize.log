@@ -1,4 +1,4 @@
-files rewritten: 10
+files rewritten: 5
 html files rewritten: 653
 images missing alt: 0
 
@@ -7,11 +7,6 @@ resized favicon-16.png to (16, 16) (925 bytes) + favicon-16.webp
 resized favicon-32.png to (32, 32) (2363 bytes) + favicon-32.webp
 resized icon-192.png to (192, 192) (23660 bytes) + icon-192.webp
 resized icon-512.png to (512, 512) (84970 bytes) + icon-512.webp
-resized images/articles/dream-valkyries-finals-game-1-recap/gabby-williams-valkyries.jpg to (1688, 950) (92479 bytes) + gabby-williams-valkyries.webp
-resized images/articles/finals-game-3-preview-valkyries-dream/photo.jpg to (1688, 950) (67908 bytes) + photo.webp
-resized images/articles/valkyries-dream-finals-game-4-recap/photo.jpg to (1688, 950) (91152 bytes) + photo.webp
-resized images/articles/valkyries-dream-finals-game-5-recap/photo.jpg to (1688, 949) (71378 bytes) + photo.webp
-resized images/articles/wnba-finals-bonus-2026-champions-60000/photo.jpg to (1688, 950) (69580 bytes) + photo.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
