@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:42:10+00:00",
+ "checked_at": "2026-10-27T00:42:43+00:00",
  "period": 2,
- "clock": "8:11",
+ "clock": "7:48",
  "last_play_period": 2,
- "last_play_clock": "8:12",
+ "last_play_clock": "7:31",
  "away": {
   "abbreviation": "ATL",
   "score": 16,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 18,
-  "feed_score": 18
+  "score": 20,
+  "feed_score": 20
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 2,
-   "home": 5
+   "home": 7
   }
  ],
  "players": [],
@@ -1069,7 +1069,7 @@
   {
    "order": 87,
    "period": 1,
-   "clock": "1:39",
+   "clock": "1:41",
    "type": "Layup Shot Putback",
    "text": "Cecilia Zandalasini blocks Angel Reese 's 6-foot two point shot",
    "away_score": 8,
@@ -1081,7 +1081,7 @@
   {
    "order": 88,
    "period": 1,
-   "clock": "1:39",
+   "clock": "1:40",
    "type": "Offensive Rebound",
    "text": "Angel Reese offensive rebound",
    "away_score": 8,
@@ -1509,6 +1509,42 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "ATL"
+  },
+  {
+   "order": 124,
+   "period": 2,
+   "clock": "7:51",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup (Kiah Stokes assists)",
+   "away_score": 16,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 125,
+   "period": 2,
+   "clock": "7:33",
+   "type": "Floating Jump Shot",
+   "text": "Angel Reese misses 7-foot floating jump shot",
+   "away_score": 16,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 126,
+   "period": 2,
+   "clock": "7:31",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 16,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
