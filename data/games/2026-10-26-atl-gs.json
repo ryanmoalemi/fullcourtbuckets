@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:31:23+00:00",
+ "checked_at": "2026-10-27T00:31:56+00:00",
  "period": 1,
  "clock": "1:39",
  "last_play_period": 1,
  "last_play_clock": "1:39",
  "away": {
   "abbreviation": "ATL",
-  "score": 10,
-  "feed_score": 10
+  "score": 11,
+  "feed_score": 11
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 10,
+   "away": 11,
    "home": 13
   }
  ],
@@ -682,7 +682,7 @@
    "period": 1,
    "clock": "3:38",
    "type": "Driving Layup Shot",
-   "text": "Jordin Canada makes driving layup (Naz Hillmon assists)",
+   "text": "Jordin Canada makes driving layup",
    "away_score": 6,
    "home_score": 8,
    "scoring_play": true,
@@ -1041,8 +1041,8 @@
    "order": 85,
    "period": 1,
    "clock": "1:41",
-   "type": "Layup Shot",
-   "text": "Rhyne Howard misses layup",
+   "type": "Driving Layup Shot",
+   "text": "Rhyne Howard misses driving layup",
    "away_score": 8,
    "home_score": 13,
    "scoring_play": false,
@@ -1101,13 +1101,49 @@
    "order": 90,
    "period": 1,
    "clock": "1:39",
-   "type": "No Foul",
-   "text": "Kaila Charles foul",
+   "type": "Shooting Foul",
+   "text": "Kaila Charles shooting foul",
    "away_score": 10,
    "home_score": 13,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 91,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Kayla Thornton",
+   "away_score": 10,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 92,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Te-Hina Paopao",
+   "away_score": 10,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 93,
+   "period": 1,
+   "clock": "1:39",
+   "type": "Free Throw - 1 of 1",
+   "text": "Angel Reese makes free throw 1 of 1",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
   }
  ]
 }
