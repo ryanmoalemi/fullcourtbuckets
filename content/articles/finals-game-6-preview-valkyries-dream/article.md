@@ -26,11 +26,9 @@ ticker: "Finals Game 6 preview: Valkyries at Dream, Thu 9:30 a.m. PT. Golden Sta
 data_table_first: true
 ---
 
-The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the WNBA Finals 3-2 and can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta. The [Atlanta Dream](/wnba/teams/atlanta-dream/) have outscored them 357-335. Since 2002, road teams with a chance to close out a Finals after the home team had won a game are 2-4.
+The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the [Atlanta Dream](/wnba/teams/atlanta-dream/) 3-2 and can win the title in Game 6, but road teams in their spot are 2-4 since 2002.
 
 ## Road teams closing out a Finals, since 2002
-
-Key finding: road teams playing for the title are 8-8 since 2002, and 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday.
 
 Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team could clinch the title with a win. "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
 
@@ -42,6 +40,8 @@ Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002
 | 2022 | 4 | Las Vegas | Connecticut | 2-1 | 78-71 | Yes |
 | 2023 | 4 | Las Vegas | New York | 2-1 | 70-69 | Yes |
 | 2024 | 4 | New York | Minnesota | 2-1 | 80-82 | No |
+
+Road teams playing for the title are 8-8 since 2002, and 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
 
 All six games were decided by 7 points or fewer, and three by 2 or fewer. Three of the four road teams that lost the closeout won the title at home in the next game: Minnesota in 2015, Washington in 2019 and New York in 2024. The 2007 Detroit Shock lost Game 5 at home to Phoenix. Road teams whose opponent had not yet won a game went 6-4 in their closeout games; the CSV has all 16 games.
 
@@ -80,6 +80,22 @@ Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files
 | [Veronica Burton](/wnba/veronica-burton/) | GS | 45 | 24 | 17 | 10 | 8 | 16-55 | 6-23 | 7-9 |
 | [Kiah Stokes](/wnba/kiah-stokes/) | GS | 28 | 53 | 3 | 17 | 1 | 12-21 | 3-8 | 1-2 |
 
+## Attendance record watch
+
+The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on Thursday would pass the 2024 Finals record of 92,599, the most since 2002, and State Farm Arena seats more than 17,000. Our [Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/) has every game, and the data is free to reuse under CC0.
+
+## Where the trophy would be raised
+
+If Golden State wins Thursday, it would celebrate on a court that has to be ready for an NBA game a few hours later. The Hawks host the Cleveland Cavaliers at State Farm Arena at 8 p.m. ET that night ([NBA.com](https://www.nba.com/hawks/game/0022600144-cavaliers-vs-hawks-atlanta-ga-10-29-2026)), with doors at 7 p.m. ([State Farm Arena](https://www.statefarmarena.com/events/detail/tlanta-hawks-vs-cleveland-cavaliers-tickets-atlanta-georgia-2026-10-29)). That is seven and a half hours from Game 6 tip-off to the Hawks' tip, and six and a half to the Hawks' doors, before any overtime or trophy ceremony.
+
+ESPN's Ramona Shelburne reported on NBA Today on Oct. 26 that the celebration "may not actually be on that court." She said, "I've heard there are discussions about whether there's enough time to turn the arena over in time for the fans to celebrate on the court. It could be moved to like a practice court" ([Yahoo Sports](https://sports.yahoo.com/articles/valkyries-could-forced-celebrate-championship-033816709.html)). She later posted on X: "To clarify: There is a resolve to make sure any potential championship that is won Thursday afternoon is celebrated on the court" ([The Big Lead](https://www.thebiglead.com/wnba-finals-face-self-inflicted-embarrassment-potential-trophy-presentation/)). The WNBA's Game 6 announcement does not mention a trophy plan ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)), and we found no Dream or arena statement on it as of Oct. 27.
+
+Only Golden State can clinch Thursday. If Atlanta wins, Game 7 is Saturday, Oct. 31, at 5 p.m. PT (8 p.m. ET) at Chase Center in San Francisco ([WNBA](https://www.wnba.com/news/game-preview-2026-wnba-finals)), and the trophy would be presented there.
+
+## A second-year champion
+
+Golden State played its first season in 2025, when it became the first expansion team to make the playoffs in its first year ([Valkyries](https://valkyries.wnba.com/news/valkyries-clinch-postseason-berth-20250904)). A title Thursday would come in its second season. The fastest expansion champion so far is the Seattle Storm, which joined in 2000 and won in 2004, its fifth season ([WNBA](https://www.wnba.com/news/wnba-history-timeline-2012/amp)). Neither finalist has won a WNBA title, so 2026 will crown a first-time champion ([WNBA](https://www.wnba.com/all-time-wnba-champions)).
+
 ## Follow Game 6 live
 
 Our [Game 6 play-by-play page](/wnba/finals/2026/game-6/play-by-play/) goes live at tip-off and updates every 30 seconds, with every play, the running score and a downloadable CSV.
@@ -91,21 +107,26 @@ Our [Game 6 play-by-play page](/wnba/finals/2026/game-6/play-by-play/) goes live
 - When: Thursday, Oct. 29, at 9:30 a.m. PT (12:30 p.m. ET)
 - Where: State Farm Arena, Atlanta
 - TV and streaming: USA Network, with Peacock streaming ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)). E! and Syfy are also listed to carry the game.
+- Doors: 10:30 a.m. ET. The arena is cashless ([State Farm Arena](https://www.statefarmarena.com/events/detail/atlanta-dream-wnba-playoffs-finals-game-6-tickets-atlanta-georgia-2026-10-29)).
 - Series: Golden State leads 3-2. A Golden State win ends the series; an Atlanta win forces Game 7.
 
 {dynamic:next-game}
 
+[dynamic:game6-injuries] Injuries: the latest official WNBA injury report, for Game 5 (Oct. 26, 11 p.m. ET), listed only Atlanta's Brionna Jones as out (left leg). The Game 6 report is due by 5 p.m. ET Wednesday ([WNBA injury report](https://www.wnba.com/wnba-injury-report)). Checked Oct. 27, 12:40 p.m. PT.
+
 ## Why it's at 9:30 a.m. PT
 
-Game 6 was moved from the Dream's home court, Gateway Center Arena (about 3,500 seats), to State Farm Arena (more than 17,000), and to an early-afternoon tip so crews can turn the building over for the Hawks' game against Cleveland that night, which moved to 8 p.m. ET ([CBS Sports](https://www.cbssports.com/wnba/news/2026-wnba-finals-game-6-venue-state-farm-arena-dream-valkyries/), [SI](https://www.si.com/wnba/wnba-opts-for-daytime-tip-off-in-bigger-arena-for-game-6-of-finals)). The weekday midday tip drew the loudest reaction on X and r/wnba this week ([Yahoo Sports](https://sports.yahoo.com/articles/don-t-care-angel-reese-013200044.html), [Deadline](https://deadline.com/2026/10/wnba-moves-game-6-final-series-midday-thursday-usa-network-1237201077/)). Atlanta coach Karl Smesko said there would be no pregame shootaround for either team ([Yahoo Sports](https://sports.yahoo.com/articles/don-t-care-angel-reese-013200044.html)).
+Game 6 was originally set for 8 p.m. ET. The WNBA moved it to 12:30 p.m. ET at State Farm Arena, which seats more than 17,000, instead of the Dream's usual home, Gateway Center Arena (about 3,500). The Hawks agreed to move their game against Cleveland that night to 8 p.m. ET ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)). "The sellout crowds and extraordinary atmosphere at State Farm Arena for Games 3 and 4 were a tremendous success, and we're excited to give thousands more fans the opportunity to experience Game 6 with a championship on the line," Commissioner Cathy Engelbert said in the announcement.
 
-The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on Thursday would pass the 2024 Finals record of 92,599, since 2002 ([FCB attendance tracker](/news/2026-wnba-finals-ratings-tracker/)).
+Atlanta coach Karl Smesko said he was excited Atlanta could pack a big arena and joked, "I'd like to see it be a national holiday for all WNBA championship games" ([Yahoo Sports](https://sports.yahoo.com/articles/atlanta-dream-coach-quips-wnba-045013911.html)). He also said there would be no pregame shootaround for either team ([Yahoo Sports](https://sports.yahoo.com/articles/don-t-care-angel-reese-013200044.html)). The weekday midday tip drew the loudest reaction on X and r/wnba this week ([Deadline](https://deadline.com/2026/10/wnba-moves-game-6-final-series-midday-thursday-usa-network-1237201077/)).
 
 ## Three things to watch
 
 The third quarter. Atlanta has won the third quarter 100-68 across five games. Golden State has won the other three quarters 267-257. The team that led at halftime has won all five games, and so has the team with fewer turnovers ([Game 5 recap](/news/valkyries-dream-finals-game-5-recap/)).
 
 Reese against Stokes. Reese averaged 21.7 points in Games 1-3 and 7.5 in Games 4-5. Stokes called Reese "the head of the snake" after holding her to 2 of 10 shooting in Game 4 ([USA Today](https://www.usatoday.com/story/sports/wnba/2026/10/25/valkyries-kiah-stokes-stopped-angel-reese-wnba-finals/92422274007/)). Stokes has at least 3 blocks in every game of the series, and her 17 blocks are a Finals series record, passing Sylvia Fowles and Brittney Griner ([WNBA on X](https://x.com/WNBA/status/2114819937114239414)).
+
+Atlanta's Game 5 hole. The Dream shot 19 of 65 (29.2 percent), turned it over 15 times and got 4 points from the bench ([WNBA.com box score](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score)). "That's going to be a very ruthless Atlanta team that really wants it just as much. You can never count them out," Golden State coach Natalie Nakase said after Game 5 ([SI](https://www.si.com/onsi/womens-fastbreak/wnba/natalie-nakase-is-preparing-valkyries-for-ruthless-atlanta-team-in-must-win-game-6-01m5ynhgw3r2)).
 
 Free throws. Atlanta averaged 29.0 free-throw attempts in Games 1-4 and took 14 in Game 5. "The contact they allow on Angel compared to everybody else is just ridiculous," Smesko said after Game 5 ([SI](https://www.si.com/wnba/finals/angel-reese-refs-officiating-woes-dream-loss)). Reese said, "It definitely shifted when we went up 2-1" (same source).
 
@@ -115,7 +136,7 @@ If Golden State wins, the Finals MVP debate is between Williams, its leading sco
 
 ## The odds
 
-DraftKings opened Atlanta -3.5, with the Dream -166 and the Valkyries +140 on the moneyline, on Oct. 26 ([DraftKings Network](https://dknetwork.draftkings.com/2026/10/26/opening-odds-for-game-6-of-the-wnba-finals/)). The Dunkel Index lists a total of 147.5 ([Dunkel Index](https://www.dunkelindex.com/news/dream-vs-valkyries-wnba-betting-trends-stats-10-29-2026)). Kalshi gave Atlanta a 56 percent chance to win Game 6 on Oct. 27. Prices may change before tip-off.
+[dynamic:game6-odds] DraftKings opened Atlanta -3.5, with the Dream -166 and the Valkyries +140 on the moneyline, on Oct. 26 ([DraftKings Network](https://dknetwork.draftkings.com/2026/10/26/opening-odds-for-game-6-of-the-wnba-finals/)). The Dunkel Index lists a total of 147.5 ([Dunkel Index](https://www.dunkelindex.com/news/dream-vs-valkyries-wnba-betting-trends-stats-10-29-2026)). Kalshi gave Atlanta a 56 percent chance to win Game 6 on Oct. 27. Prices may change before tip-off. Lines checked Oct. 27.
 
 Four of five games in this series finished under 147.5 combined points, and Game 5 finished with 119.
 
