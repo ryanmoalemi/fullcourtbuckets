@@ -212,3 +212,10 @@ class HelpfulContentTests(unittest.TestCase):
         self.assertNotIn('checked against ESPN box scores', caption)
         self.assertNotIn('ESPN', caption)
         self.assertNotIn('ESPN', links.stat_board_caption())
+
+
+class HowMadeAuthorLinkTest(unittest.TestCase):
+    def test_note_links_ryan_to_author_page(self):
+        for sentence in (links.HOW_MADE_RECAP, links.HOW_MADE_RECAP_BOX_ONLY, links.HOW_MADE_OTHER,
+                         links.HOW_MADE_OTHER_UNLINKED, links.HOW_MADE_RYAN, links.HOW_MADE_RYAN_UNLINKED):
+            self.assertIn('<a href="/authors/ryan-moalemi/">Ryan Moalemi</a>', sentence)
