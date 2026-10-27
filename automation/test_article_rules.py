@@ -33,7 +33,8 @@ CREDIT_RES = (
 CC_BY_RES = (
     re.compile(r'\b(?:use|reuse|republish|cite|data|dataset|chart|embed|CSV|license|licensed)\b[^.<>]{0,60}?\bCC[ -]?BY\b(?!-SA)', re.I),
     re.compile(r'"license":\s*"https://creativecommons\.org/licenses/by/[0-9.]+/?",\s*"(?:isAccessibleForFree|creator)"'),
-    re.compile(r'(?:&lt;|<)a href=(?:&quot;|")https://creativecommons\.org/licenses/by/[0-9.]+/?(?:&quot;|")(?:&gt;|>)CC BY'),
+    # Embed snippets live HTML-escaped in a <textarea>; raw links are photo credits.
+    re.compile(r'&lt;a href=&quot;https://creativecommons\.org/licenses/by/[0-9.]+/?&quot;&gt;CC BY'),
 )
 GOOGLE_SEARCH_RE = re.compile(r'href="[^"]*google\.[a-z.]+/search', re.I)
 RECORD_RE = re.compile(r'\b(?:ever|all-time)\b', re.I)
@@ -111,7 +112,8 @@ class StandingArticleRules(unittest.TestCase):
         self.assertTrue(credit_requests('Free to cite with link attribution.'))
         self.assertFalse(credit_requests('The data is free to use.'))
         self.assertTrue(cc_by_labels('Free to use and republish (CC BY 4.0).'))
-        self.assertTrue(cc_by_labels('<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'))
+        self.assertTrue(cc_by_labels('&lt;a href=&quot;https://creativecommons.org/licenses/by/4.0/&quot;&gt;CC BY 4.0&lt;/a&gt;'))
+        self.assertFalse(cc_by_labels('by Prime Minister&#x27;s Office, <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>; cropped by FCB.'))
         self.assertFalse(cc_by_labels('Free to use and republish (CC0).'))
         self.assertFalse(cc_by_labels('Photo: Zafer, <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>, via Wikimedia Commons'))
 

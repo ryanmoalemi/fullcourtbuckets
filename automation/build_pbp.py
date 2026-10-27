@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import site_nav  # noqa: E402
 import social_meta  # noqa: E402
 import seo_meta  # noqa: E402
+import breadcrumbs  # noqa: E402
 
 E = html.escape
 CONF = ROOT / 'data/pbp-games.json'
@@ -102,7 +103,11 @@ def player_counts(plays, roster):
 
 
 def social_tags(page):
-    """Same twitter/og tags social_meta.py adds, so a rebuild matches the published page."""
+    """Same twitter/og tags social_meta.py adds, so a rebuild matches the published page.
+    Also applies breadcrumbs.fix so the page ships Home > WNBA > Finals > Game N > Play-by-play."""
+    m = re.search(r'<link rel="canonical" href="https://fullcourtbuckets\.com(/[^"]*)"', page)
+    if m:
+        page = breadcrumbs.fix(page, m.group(1))
     return social_meta.social_block(page, social_meta.default_image_url(), social_meta.DEFAULT_ALT, social_meta.W, social_meta.H)
 
 
@@ -245,7 +250,7 @@ def build(game_id, game_json=None, today=None, live=False):
 <div class="tw"><table class="pl" id="pl"><thead><tr><th>Time</th><th>Team</th><th>Play</th><th>{A}-{H}</th><th><span class="vh">Link</span></th></tr></thead><tbody>{static}</tbody></table></div></div>
 {'' if live else f'<h2>Player play counts</h2><p class="note">Tap a name to filter the plays.</p><div class="tw"><table class="pc"><thead><tr><th>Player</th><th>Team</th><th>PTS</th><th>2P</th><th>3P</th><th>FT</th><th>REB</th><th>TO</th><th>PF</th><th>Plays</th></tr></thead><tbody>{ptab}</tbody></table></div>'}
 <p class="note">{' · '.join(links + ['Other games: ' + others])}</p>
-<h2>Methods</h2><p class="note">The running score is rebuilt from the scoring plays and checked against every scoring play and the final before this page is published. Player counts come from the plays and are checked against the official box score; where they differ, the box score value is shown. {E(ov)}"Plays" counts every play that names the player. Clutch: last 5 minutes of the 4th quarter or overtime with the score within 5 points before the play. Lead changes, ties and runs (6 or more unanswered points) are computed from scoring plays. Data: Full Court Buckets, licensed <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">CC BY 4.0</a>.</p>
+<h2>Methods</h2><p class="note">The running score is rebuilt from the scoring plays and checked against every scoring play and the final before this page is published. Player counts come from the plays and are checked against the official box score; where they differ, the box score value is shown. {E(ov)}"Plays" counts every play that names the player. Clutch: last 5 minutes of the 4th quarter or overtime with the score within 5 points before the play. Lead changes, ties and runs (6 or more unanswered points) are computed from scoring plays. Data: Full Court Buckets. Free to use and republish (<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license">CC0</a>).</p>
 </article></main><div id="toast" role="status" hidden></div>
 <script>window.PBP={json.dumps({'rows': rows, 'q': {r['q']: qname(r['q']) for r in rows}, 'url': BASE + path, 'title': title, 'file': f'fcb-2026-finals-game-{n}-plays', 'an': NAME[A], 'hn': NAME[H], 'date': g['date_text']})};</script><script src="/assets/pbp.js" defer></script>"""
     page = social_tags(head + '\n' + bo + main + '\n' + foot)

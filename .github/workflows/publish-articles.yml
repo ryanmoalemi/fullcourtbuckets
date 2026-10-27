@@ -25,6 +25,7 @@ jobs:
         run: |
           python automation/publish_articles.py
           python automation/seo_meta.py
+          python automation/breadcrumbs.py
       - name: Social share images and og/twitter tags
         env:
           PYTHONDONTWRITEBYTECODE: '1'
@@ -33,7 +34,7 @@ jobs:
         working-directory: automation
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python -m unittest test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta test_article_rules -q
+        run: python -m unittest test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta test_article_rules test_seo_completeness -q
       - name: Commit generated pages
         run: |
           git add -A -- . ':!**/__pycache__'
