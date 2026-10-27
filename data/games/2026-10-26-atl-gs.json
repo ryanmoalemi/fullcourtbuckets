@@ -5,26 +5,26 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:13:59+00:00",
+ "checked_at": "2026-10-27T00:15:10+00:00",
  "period": 1,
- "clock": "8:28",
+ "clock": "7:18",
  "last_play_period": 1,
- "last_play_clock": "8:59",
+ "last_play_clock": "7:50",
  "away": {
   "abbreviation": "ATL",
-  "score": 0,
-  "feed_score": 0
+  "score": 2,
+  "feed_score": 2
  },
  "home": {
   "abbreviation": "GS",
-  "score": 2,
-  "feed_score": 2
+  "score": 4,
+  "feed_score": 4
  },
  "periods": [
   {
    "period": 1,
-   "away": 0,
-   "home": 2
+   "away": 2,
+   "home": 4
   }
  ],
  "players": [],
@@ -68,7 +68,7 @@
   {
    "order": 4,
    "period": 1,
-   "clock": "9:06",
+   "clock": "9:07",
    "type": "Jump Shot",
    "text": "Gabby Williams misses 33-foot three point jumper",
    "away_score": 0,
@@ -80,7 +80,7 @@
   {
    "order": 5,
    "period": 1,
-   "clock": "9:03",
+   "clock": "9:05",
    "type": "Offensive Rebound",
    "text": "Kaila Charles offensive rebound",
    "away_score": 0,
@@ -100,6 +100,78 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 7,
+   "period": 1,
+   "clock": "8:36",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 25-foot three point jumper",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 8,
+   "period": 1,
+   "clock": "8:28",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 9,
+   "period": 1,
+   "clock": "8:10",
+   "type": "Driving Layup Shot",
+   "text": "Veronica Burton makes driving layup",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 10,
+   "period": 1,
+   "clock": "7:53",
+   "type": "Running Finger Roll Layup",
+   "text": "Kaila Charles blocks Naz Hillmon 's 6-foot two point shot",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 11,
+   "period": 1,
+   "clock": "7:53",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 12,
+   "period": 1,
+   "clock": "7:50",
+   "type": "Cutting Layup Shot",
+   "text": "Allisha Gray makes 6-foot layup (Jordin Canada assists)",
+   "away_score": 2,
+   "home_score": 4,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
   }
  ]
 }
