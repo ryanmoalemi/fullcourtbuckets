@@ -5,20 +5,20 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T02:10:24+00:00",
+ "checked_at": "2026-10-27T02:11:58+00:00",
  "period": 4,
- "clock": "1:46",
+ "clock": "1:30",
  "last_play_period": 4,
- "last_play_clock": "2:04",
+ "last_play_clock": "1:08",
  "away": {
   "abbreviation": "ATL",
-  "score": 46,
-  "feed_score": 46
+  "score": 49,
+  "feed_score": 49
  },
  "home": {
   "abbreviation": "GS",
-  "score": 60,
-  "feed_score": 60
+  "score": 62,
+  "feed_score": 62
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 6,
-   "home": 14
+   "away": 9,
+   "home": 16
   }
  ],
  "players": [],
@@ -2004,8 +2004,8 @@
    "order": 164,
    "period": 2,
    "clock": "2:48",
-   "type": "Back Court Turnover",
-   "text": "Rhyne Howard back court turnover",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover",
    "away_score": 21,
    "home_score": 22,
    "scoring_play": false,
@@ -4127,7 +4127,7 @@
   {
    "order": 341,
    "period": 4,
-   "clock": "2:35",
+   "clock": "2:36",
    "type": "Bad Pass\nTurnover",
    "text": "Naz Hillmon bad pass\nturnover (Tiffany Hayes steals)",
    "away_score": 46,
@@ -4200,8 +4200,8 @@
    "order": 347,
    "period": 4,
    "clock": "2:07",
-   "type": "No Shot (Default Shot)",
-   "text": "Jordin Canada misses shot",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
    "away_score": 46,
    "home_score": 60,
    "scoring_play": false,
@@ -4211,7 +4211,7 @@
   {
    "order": 348,
    "period": 4,
-   "clock": "2:04",
+   "clock": "2:05",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 46,
@@ -4219,6 +4219,90 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 349,
+   "period": 4,
+   "clock": "1:46",
+   "type": "Shooting Foul",
+   "text": "Jordin Canada shooting foul",
+   "away_score": 46,
+   "home_score": 60,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 350,
+   "period": 4,
+   "clock": "1:46",
+   "type": "Free Throw - 1 of 2",
+   "text": "Tiffany Hayes makes free throw 1 of 2",
+   "away_score": 46,
+   "home_score": 61,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 351,
+   "period": 4,
+   "clock": "1:46",
+   "type": "Substitution",
+   "text": "Te-Hina Paopao enters the game for Naz Hillmon",
+   "away_score": 46,
+   "home_score": 61,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 352,
+   "period": 4,
+   "clock": "1:46",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes makes free throw 2 of 2",
+   "away_score": 46,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 353,
+   "period": 4,
+   "clock": "1:30",
+   "type": "Jump Shot",
+   "text": "Jordin Canada makes 25-foot three point jumper (Angel Reese assists)",
+   "away_score": 49,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 354,
+   "period": 4,
+   "clock": "1:11",
+   "type": "No Shot (Default Shot)",
+   "text": "Veronica Burton misses shot",
+   "away_score": 49,
+   "home_score": 62,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 355,
+   "period": 4,
+   "clock": "1:08",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 49,
+   "home_score": 62,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
