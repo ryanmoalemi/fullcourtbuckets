@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-01T15:24:03-07:00",
+  "updatedAt": "2026-10-27T09:36:24-07:00",
   "source": "https://site.api.espn.com/apis/v2/sports/basketball/wnba/standings",
   "sourcePage": "https://www.espn.com/wnba/standings",
-  "season": 2026,
+  "season": 2027,
   "teams": [
     {
       "rank": 1,
