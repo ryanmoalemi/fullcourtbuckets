@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:25:19+00:00",
+ "checked_at": "2026-10-27T00:26:23+00:00",
  "period": 1,
- "clock": "4:19",
+ "clock": "3:38",
  "last_play_period": 1,
- "last_play_clock": "4:16",
+ "last_play_clock": "3:38",
  "away": {
   "abbreviation": "ATL",
-  "score": 4,
-  "feed_score": 4
+  "score": 6,
+  "feed_score": 6
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 4,
+   "away": 6,
    "home": 8
   }
  ],
@@ -476,7 +476,7 @@
   {
    "order": 38,
    "period": 1,
-   "clock": "5:27",
+   "clock": "5:29",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 4,
@@ -500,7 +500,7 @@
   {
    "order": 40,
    "period": 1,
-   "clock": "5:08",
+   "clock": "5:09",
    "type": "Offensive Rebound",
    "text": "Tiffany Hayes offensive rebound",
    "away_score": 4,
@@ -524,7 +524,7 @@
   {
    "order": 42,
    "period": 1,
-   "clock": "4:48",
+   "clock": "4:49",
    "type": "Jump Shot",
    "text": "Jordin Canada misses 24-foot three point jumper",
    "away_score": 4,
@@ -536,7 +536,7 @@
   {
    "order": 43,
    "period": 1,
-   "clock": "4:44",
+   "clock": "4:46",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 4,
@@ -652,6 +652,102 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 53,
+   "period": 1,
+   "clock": "3:55",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 54,
+   "period": 1,
+   "clock": "3:52",
+   "type": "Defensive Rebound",
+   "text": "Isobel Borlase defensive rebound",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 55,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Naz Hillmon assists)",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 56,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 57,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Tiffany Hayes",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 58,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Substitution",
+   "text": "Cecilia Zandalasini enters the game for Kiah Stokes",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 59,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for Rhyne Howard",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 60,
+   "period": 1,
+   "clock": "3:38",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for DeWanna Bonner",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
