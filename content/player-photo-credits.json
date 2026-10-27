@@ -1857,6 +1857,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-26: edges checked at 200% on dark and light backgrounds"
+    },
+    "amy-atwell": {
+      "author": "DaHuzyBru",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Amy%20Atwell%202023.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "anete-jekabsone-zogota": {
+      "author": "Augustas Didžgalvis",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Anete%20Jekabsone-Zogota%20by%20Augustas%20Didzgalvis.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "angel-goodrich": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Angel%20Goodrich%20at%202%20August%202015%20game%20cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "angel-mccoughtry": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Angel%20McCoughtry%20in%202018.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "ann-wauters": {
+      "author": "Joost Pauwels",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ann%20Wauters%20(2024).png",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "anna-cruz": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Anna%20Cruz%2020161011.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "arella-guirantes": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Arella%20Guirantes%2022%20Puerto%20Rico%2020260906%20(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "asia-taylor": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Asia%20Taylor%20by%20Lorie%20Shaull.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "beatrice-mompremier": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Beatrice%20Mompremier%2032%20Danilo's%20Pizza%20SK%20TKBSL%2020241221%20(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "becky-hammon": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Becky%20Hammon%202025%20(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "belinda-snell": {
+      "author": "Campeones 2008",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Belinda%20Snell.JPG",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "briann-january": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2%20Briann%20January%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "brooke-mccarty-williams": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:McCarty-Williams%2020190822.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "camryn-taylor": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Camryn%20Taylor%20250901%20Lynx%20Wings%20win%20JohnMc286%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "candace-parker": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Candace%20Parker%20(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "cappie-pondexter": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Pondexter3-20180520.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "carolyn-swords": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Carolyn%20Swords.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "celeste-taylor": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Celeste%20Taylor.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "chamique-holdsclaw": {
+      "author": "US Department of Labor",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chamique%20Holdsclaw.jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "charli-collier": {
+      "author": "Secart3",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Charli%20Collier%20media.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
