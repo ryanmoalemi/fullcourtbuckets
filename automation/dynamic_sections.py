@@ -259,7 +259,13 @@ def render_next_game(root: Path, s: dict, attrs: dict) -> str:
     return E(line)
 
 
+def render_series_line(root: Path, s: dict, attrs: dict) -> str:
+    """One-sentence series status for inline intros."""
+    return E(_status_line(s))
+
+
 RENDERERS = {
+    'series-line': render_series_line,
     'finals-attendance-lead': render_attendance_lead,
     'finals-attendance-counter': render_attendance_counter,
     'finals-attendance-data': render_attendance_data,

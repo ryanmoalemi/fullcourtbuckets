@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-27",
   "games": [
     {
       "date": "1997-06-21",
@@ -161,19 +161,41 @@
       "date": "2026-10-24",
       "season": 2026,
       "game": "Finals Game 4",
-      "home": "",
-      "away": "",
+      "home": "Atlanta Dream",
+      "away": "Golden State Valkyries",
       "venue": "State Farm Arena",
-      "attendance": null,
-      "attendance_source": "",
-      "attendance_source_date": "",
+      "attendance": 17099,
+      "attendance_source": "https://www.wnba.com/game/1042600304",
+      "attendance_source_date": "2026-10-24",
       "network": "NBC and Peacock",
       "viewers": null,
       "viewers_source": "",
       "viewers_source_date": "",
       "tip_et": "1:00 p.m. ET / 10:00 a.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
-      "schedule_source_date": "2026-10-13"
+      "schedule_source_date": "2026-10-13",
+      "attendance_note": "sellout",
+      "status": "Final: Valkyries 67-62"
+    },
+    {
+      "date": "2026-10-26",
+      "season": 2026,
+      "game": "Finals Game 5",
+      "home": "Golden State Valkyries",
+      "away": "Atlanta Dream",
+      "venue": "Chase Center",
+      "attendance": 18064,
+      "attendance_source": "https://www.wnba.com/game/1042600305",
+      "attendance_source_date": "2026-10-26",
+      "network": "USA Network, CNBC, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
+      "attendance_note": "sellout",
+      "status": "Final: Valkyries 64-55",
+      "schedule_source": "https://www.wnba.com/game/1042600305",
+      "schedule_source_date": "2026-10-26"
     },
     {
       "date": "2025-05-17",
@@ -503,6 +525,6 @@
       "notes": "USA Sports calls it the most-watched WNBA Finals Game 2 ever on cable. Up 9% vs. the 2025 WNBA Finals Game 2 (PHX/LV) on broadcast television. Nielsen Big Data + Panel and Adobe Analytics."
     }
   ],
-  "updated_time": "10:30 a.m. PT",
-  "finals_intro": "Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million."
+  "updated_time": "10:24 a.m. PT",
+  "finals_intro": "Five games have drawn 88,390 fans. Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million. Game 4 and Game 5 viewership hasn't been released yet."
 }
