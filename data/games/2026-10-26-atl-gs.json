@@ -5,7 +5,7 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:43:47+00:00",
+ "checked_at": "2026-10-27T00:46:24+00:00",
  "period": 2,
  "clock": "6:35",
  "last_play_period": 2,
@@ -1274,13 +1274,13 @@
    "order": 104,
    "period": 1,
    "clock": "40.7",
-   "type": "Offensive Rebound",
-   "text": "Golden State Valkyries offensive team rebound",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
    "away_score": 11,
    "home_score": 13,
    "scoring_play": false,
    "score_value": 0,
-   "team": "GS"
+   "team": "ATL"
   },
   {
    "order": 105,
@@ -1297,18 +1297,6 @@
   {
    "order": 106,
    "period": 1,
-   "clock": "32.0",
-   "type": "Lost Ball Turnover",
-   "text": "Kaila Charles lost ball turnover (DeWanna Bonner steals)",
-   "away_score": 11,
-   "home_score": 13,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "GS"
-  },
-  {
-   "order": 107,
-   "period": 1,
    "clock": "21.5",
    "type": "Jump Shot",
    "text": "Rhyne Howard makes 26-foot three point jumper (Jordin Canada assists)",
@@ -1319,7 +1307,7 @@
    "team": "ATL"
   },
   {
-   "order": 108,
+   "order": 107,
    "period": 1,
    "clock": "0.9",
    "type": "Out of Bounds - Lost Ball Turnover",
@@ -1331,7 +1319,7 @@
    "team": "GS"
   },
   {
-   "order": 109,
+   "order": 108,
    "period": 1,
    "clock": "0.0",
    "type": "End Period",
@@ -1343,9 +1331,9 @@
    "team": null
   },
   {
-   "order": 110,
+   "order": 109,
    "period": 2,
-   "clock": "9:41",
+   "clock": "9:40",
    "type": "Turnaround Jump Shot",
    "text": "Veronica Burton makes 7-foot turnaround jump shot",
    "away_score": 14,
@@ -1355,7 +1343,7 @@
    "team": "GS"
   },
   {
-   "order": 111,
+   "order": 110,
    "period": 2,
    "clock": "9:23",
    "type": "Bad Pass\nTurnover",
@@ -1367,7 +1355,7 @@
    "team": "ATL"
   },
   {
-   "order": 112,
+   "order": 111,
    "period": 2,
    "clock": "9:15",
    "type": "Jump Shot",
@@ -1379,7 +1367,7 @@
    "team": "GS"
   },
   {
-   "order": 113,
+   "order": 112,
    "period": 2,
    "clock": "8:53",
    "type": "Jump Shot",
@@ -1391,7 +1379,7 @@
    "team": "ATL"
   },
   {
-   "order": 114,
+   "order": 113,
    "period": 2,
    "clock": "8:50",
    "type": "Defensive Rebound",
@@ -1403,7 +1391,7 @@
    "team": "GS"
   },
   {
-   "order": 115,
+   "order": 114,
    "period": 2,
    "clock": "8:26",
    "type": "Turnaround Jump Shot",
@@ -1415,7 +1403,7 @@
    "team": "GS"
   },
   {
-   "order": 116,
+   "order": 115,
    "period": 2,
    "clock": "8:26",
    "type": "Offensive Rebound",
@@ -1427,7 +1415,7 @@
    "team": "GS"
   },
   {
-   "order": 117,
+   "order": 116,
    "period": 2,
    "clock": "8:28",
    "type": "Shot Clock Turnover",
@@ -1439,7 +1427,7 @@
    "team": "GS"
   },
   {
-   "order": 118,
+   "order": 117,
    "period": 2,
    "clock": "8:28",
    "type": "Substitution",
@@ -1451,7 +1439,7 @@
    "team": "ATL"
   },
   {
-   "order": 119,
+   "order": 118,
    "period": 2,
    "clock": "8:17",
    "type": "Jump Shot",
@@ -1463,7 +1451,7 @@
    "team": "ATL"
   },
   {
-   "order": 120,
+   "order": 119,
    "period": 2,
    "clock": "8:16",
    "type": "Offensive Rebound",
@@ -1475,7 +1463,7 @@
    "team": "ATL"
   },
   {
-   "order": 121,
+   "order": 120,
    "period": 2,
    "clock": "8:16",
    "type": "Substitution",
@@ -1487,7 +1475,7 @@
    "team": "GS"
   },
   {
-   "order": 122,
+   "order": 121,
    "period": 2,
    "clock": "8:16",
    "type": "Substitution",
@@ -1499,7 +1487,7 @@
    "team": "ATL"
   },
   {
-   "order": 123,
+   "order": 122,
    "period": 2,
    "clock": "8:12",
    "type": "Cutting Layup Shot",
@@ -1511,7 +1499,7 @@
    "team": "ATL"
   },
   {
-   "order": 124,
+   "order": 123,
    "period": 2,
    "clock": "7:51",
    "type": "Driving Layup Shot",
@@ -1523,7 +1511,7 @@
    "team": "GS"
   },
   {
-   "order": 125,
+   "order": 124,
    "period": 2,
    "clock": "7:33",
    "type": "Floating Jump Shot",
@@ -1535,7 +1523,7 @@
    "team": "ATL"
   },
   {
-   "order": 126,
+   "order": 125,
    "period": 2,
    "clock": "7:31",
    "type": "Defensive Rebound",
@@ -1547,7 +1535,7 @@
    "team": "GS"
   },
   {
-   "order": 127,
+   "order": 126,
    "period": 2,
    "clock": "7:16",
    "type": "Driving Layup Shot",
@@ -1559,7 +1547,7 @@
    "team": "GS"
   },
   {
-   "order": 128,
+   "order": 127,
    "period": 2,
    "clock": "7:05",
    "type": "Jump Shot",
@@ -1571,7 +1559,7 @@
    "team": "ATL"
   },
   {
-   "order": 129,
+   "order": 128,
    "period": 2,
    "clock": "6:49",
    "type": "Driving Layup Shot",
@@ -1583,7 +1571,7 @@
    "team": "GS"
   },
   {
-   "order": 130,
+   "order": 129,
    "period": 2,
    "clock": "6:47",
    "type": "Defensive Rebound",
@@ -1595,7 +1583,7 @@
    "team": "ATL"
   },
   {
-   "order": 131,
+   "order": 130,
    "period": 2,
    "clock": "6:40",
    "type": "Jump Shot",
@@ -1607,7 +1595,7 @@
    "team": "ATL"
   },
   {
-   "order": 132,
+   "order": 131,
    "period": 2,
    "clock": "6:36",
    "type": "Defensive Rebound",
@@ -1619,7 +1607,7 @@
    "team": "GS"
   },
   {
-   "order": 133,
+   "order": 132,
    "period": 2,
    "clock": "6:35",
    "type": "Full Timeout",
