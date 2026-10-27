@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:41:36+00:00",
+ "checked_at": "2026-10-27T00:42:10+00:00",
  "period": 2,
- "clock": "8:26",
+ "clock": "8:11",
  "last_play_period": 2,
- "last_play_clock": "8:16",
+ "last_play_clock": "8:12",
  "away": {
   "abbreviation": "ATL",
-  "score": 14,
-  "feed_score": 14
+  "score": 16,
+  "feed_score": 16
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 0,
+   "away": 2,
    "home": 5
   }
  ],
@@ -1309,7 +1309,7 @@
   {
    "order": 107,
    "period": 1,
-   "clock": "22.1",
+   "clock": "21.5",
    "type": "Jump Shot",
    "text": "Rhyne Howard makes 26-foot three point jumper (Jordin Canada assists)",
    "away_score": 14,
@@ -1454,8 +1454,8 @@
    "order": 119,
    "period": 2,
    "clock": "8:17",
-   "type": "No Shot (Default Shot)",
-   "text": "Jordin Canada misses shot",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 23-foot three point jumper",
    "away_score": 14,
    "home_score": 18,
    "scoring_play": false,
@@ -1472,6 +1472,42 @@
    "home_score": 18,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 121,
+   "period": 2,
+   "clock": "8:16",
+   "type": "Substitution",
+   "text": "Gabby Williams enters the game for Kaila Charles",
+   "away_score": 14,
+   "home_score": 18,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 122,
+   "period": 2,
+   "clock": "8:16",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for Isobel Borlase",
+   "away_score": 14,
+   "home_score": 18,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 123,
+   "period": 2,
+   "clock": "8:12",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 4-foot layup (Jordin Canada assists)",
+   "away_score": 16,
+   "home_score": 18,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "ATL"
   }
  ]
