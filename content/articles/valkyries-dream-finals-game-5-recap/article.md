@@ -29,6 +29,8 @@ Atlanta made 19 of 65 shots, 29.2%, and 6 of 26 threes. Its 55 points are the fe
 
 ## Atlanta's 8-point quarter
 
+Golden State started [Kaila Charles](/wnba/kaila-charles/), [Gabby Williams](/wnba/gabby-williams/), [Kiah Stokes](/wnba/kiah-stokes/), [Tiffany Hayes](/wnba/tiffany-hayes/) and [Veronica Burton](/wnba/veronica-burton/), the same five as Game 4. [Angel Reese](/wnba/angel-reese/) picked up two fouls in the first quarter, an offensive foul at 2:08 and a personal foul with 58.9 seconds left, and sat until 8:28 of the second.
+
 The Dream led 14-13 after one quarter on a [Rhyne Howard](/wnba/rhyne-howard/) three with 21.5 seconds left. That one-point edge was Atlanta's biggest lead of the night. The Dream scored 8 points in the second quarter and trailed 25-22 at halftime. Their 22 first-half points are the fewest by either team in a half this series.
 
 [Kiah Stokes](/wnba/kiah-stokes/) made two threes in the third quarter, and Golden State won it 21-18 to lead 46-40.
@@ -43,10 +45,11 @@ After two [Isobel Borlase](/wnba/isobel-borlase/) free throws, [Tiffany Hayes](/
 
 ## The numbers that decided it
 
-- **Turnovers.** Atlanta 15, Golden State 7 (official team totals). Golden State had 9 steals.
+- **Turnovers.** Atlanta 17, Golden State 9, including 2 team turnovers each, per the [official WNBA.com box score](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score). Golden State had 9 steals and scored 21 points off turnovers to Atlanta's 6.
 - **Shooting.** Golden State made 24 of 61 shots and Atlanta 19 of 65. Both teams made 6 threes.
 - **Rim protection.** Golden State blocked 9 shots to Atlanta's 3. Burton had 4, Stokes 3, and [Kaila Charles](/wnba/kaila-charles/) and Zandalasini 1 each.
-- **The glass.** Atlanta won the rebounding battle 44-33, with 12 offensive rebounds to Golden State's 5, but did not turn the extra chances into points.
+- **The glass.** Atlanta won the rebounding battle 44-33, with 12 offensive rebounds to Golden State's 5, and outscored Golden State 19-6 on second-chance points. That was not enough to offset the turnovers.
+- **Paint and bench.** Golden State won points in the paint 26-18 and bench points 15-4.
 
 **Free throws dried up.** Atlanta went 11 of 14 at the line, its fewest attempts of the Finals by 7.
 
@@ -68,11 +71,13 @@ After two [Isobel Borlase](/wnba/isobel-borlase/) free throws, [Tiffany Hayes](/
 | 4 | 2-12 | 8 | Loss |
 | 5 | 2-8 | 7 | Loss |
 
-Stokes had 13 points on 5 of 6 shooting, 3 of 4 from three, with 8 rebounds and 3 blocks. She has 17 blocks in the series and at least 3 in every game. Burton added 13 points, 8 rebounds, 3 assists and 4 blocks. Hayes scored 12 on 4 of 9 shooting and 4 of 4 free throws. It is her fourth straight game in double figures. Zandalasini had 12 points off the bench on 5 of 10 shooting and was +9, the best mark of the game. Williams scored 9 with 3 steals.
+Stokes had 13 points on 5 of 6 shooting, 3 of 4 from three, with 8 rebounds and 3 blocks. She has 17 blocks in the series and at least 3 in every game. The WNBA [said before Game 5](https://x.com/WNBA/status/2114819937114239414) that her 14 blocks through Game 4 had already passed Sylvia Fowles and Brittney Griner for the most in a Finals series, and [the league noted](https://x.com/WNBA/status/2114925168447418512) her sixth straight playoff game with 3 or more blocks ties Lisa Leslie for the longest such streak. After the game she told the home fans, "All we need is two hoops, 94 feet and each other," in [an on-court interview the WNBA posted](https://x.com/WNBA/status/2114910240600994251). Burton added 13 points, 8 rebounds, 3 assists and 4 blocks. Hayes scored 12 on 4 of 9 shooting and 4 of 4 free throws. It is her fourth straight game in double figures. Zandalasini had 12 points off the bench on 5 of 10 shooting and was +9, the best mark of the game. Williams scored 9 with 3 steals.
 
 Howard led Atlanta with 20 points on 7 of 15 shooting, including 3 of 8 threes. [Angel Reese](/wnba/angel-reese/) had 15 rebounds, 5 of them offensive, and 5 assists, but scored 7 points on 2 of 8 shooting. Canada scored 12 on 5 of 16, [Allisha Gray](/wnba/allisha-gray/) had 10 on 4 of 12, and [Naz Hillmon](/wnba/naz-hillmon/) grabbed 11 rebounds. Atlanta's bench went 0 of 9 from the field. [DeWanna Bonner](/wnba/dewanna-bonner/) and Borlase combined for 4 points on 0 of 8.
 
 Watch every possession on the [Game 5 play-by-play page](/wnba/finals/2026/game-5/play-by-play/), or check the [official WNBA.com box score](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score).
+
+Before the game, Reese arrived at Chase Center in a black "Protect Black Women" T-shirt, [in a video the WNBA posted](https://x.com/WNBA/status/2114831567373680672).
 
 ## The series so far
 
