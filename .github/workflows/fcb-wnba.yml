@@ -260,8 +260,14 @@ jobs:
             if ! git diff --quiet || [ -n "$(git ls-files --others --exclude-standard)" ]; then
               git stash push -u -m 'leftover build files'
             fi
-            git pull --rebase origin main
-            git push origin HEAD:main
+            # Editors push recaps/news while this job runs (~30 min). On a conflicting hunk keep
+            # main's newer copy (-X ours = upstream during a rebase) so player stats still publish.
+            for attempt in 1 2 3; do
+              if git pull --rebase -X ours origin main && git push origin HEAD:main; then break; fi
+              git rebase --abort 2>/dev/null || true
+              [ "$attempt" = 3 ] && exit 1
+              sleep $((attempt * 5))
+            done
             git stash drop || true
           fi
       - name: Prepare existing website and generated profiles
