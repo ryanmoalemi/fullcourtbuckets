@@ -1,0 +1,90 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Offensive fouls, shooting fouls, personal fouls, free throws, scores and Reese's box line were checked against WNBA.com play-by-play and box scores for Finals Games 1-5. Quotes used in the story are from the Dream's site or CBS Sports' account of the press conference. Minutes are the official box-score clock."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "The top results are press-conference writeups. This page adds a game-by-game foul ledger, the player charged on each offensive foul, Reese's share, a chart of that split, and the Dream's offensive-foul count in the five playoff games before the Finals."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Every foul event in ten official play-by-play files was counted, paired turnovers were not double-counted, and the result is a downloadable CSV plus a chart that is not on the wire stories."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The piece tests Reese's claim that the whistle changed after Atlanta went up 2-1, and it says where that shows up and where it does not."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 8,
+        "max": 10,
+        "reason": "Ryan Moalemi is the byline, with a link to his author page. The work is a count of official logs, not a courtside report."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "The ledger sits under a one-sentence opening. The chart, the player breakdown and Reese's game log follow. Game 6 time, TV and the series lead are filled from the schedule file."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "The how-made line names Ryan and the AI assistance. The photo keeps the John Mac CC BY-SA credit. The CSV is marked CC0, with Dataset markup, and the sources are listed."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentences are plain and the subheads say what the section contains. No em dashes. The methods line above the table is dense because the news template caps that text."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader who wants to know whether the whistle changed gets the count, the names, and the limit of a five-game sample. It does not predict Game 6."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Clocks, names and the Game 4 versus Game 5 split are specific. Two stiff lines were rewritten before publishing: a 'the ledger checks one claim' opener, and a note that the story does not quote the AP. No stock phrases remain."
+      }
+    ],
+    "info_gain": [
+      "Game-by-game offensive fouls, shooting fouls, personal fouls and free throws for both teams, from official play-by-play and box scores.",
+      "Who was charged, with the quarter and clock, and Angel Reese's share of the Dream's nine offensive fouls in Games 4 and 5.",
+      "A grouped bar chart of that split, plus the Dream's eight offensive fouls in five earlier 2026 playoff games.",
+      "The CSV is free to use under CC0."
+    ],
+    "ai_flags": []
+  },
+  "unique": [
+    "Dream offensive fouls went from 2 in Games 1-3 to 9 in Games 4-5, and Reese had 5 of the 9.",
+    "Game 4 was not a drop in defensive whistles: the Valkyries had 26 personal fouls and 14 shooting fouls, and the Dream shot 31 free throws.",
+    "Game 5 is the free throw drop: 14 Dream attempts and 9 Valkyries shooting fouls.",
+    "The same count gives the Dream 8 offensive fouls, 3 by Reese, in the five playoff games before the Finals."
+  ],
+  "unverified": [
+    "The UnderdogWNBA clip was not transcribed independently. The contact quote is taken from CBS Sports, which matches the line described on the clip. The view count is not in the story.",
+    "A direct fetch of the AP story returned 403. A later search snippet shows the story and Reese's 7 points on 8 shots. The article links AP and does not quote it.",
+    "A direct fetch of the USA Today story returned 402. A search snippet shows the story and the Dream's 11-of-14 free throws in Game 5, which matches the box score. The article links USA Today and does not quote it.",
+    "No league fine, no meeting with the head of officiating, and no Valkyries coach reaction. Those were not in the primary sources used here.",
+    "Full Court Buckets game files are missing some Finals offensive fouls, so they were not used as the source."
+  ]
+}
