@@ -5,15 +5,15 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T02:11:58+00:00",
+ "checked_at": "2026-10-27T02:12:31+00:00",
  "period": 4,
- "clock": "1:30",
+ "clock": "56.8",
  "last_play_period": 4,
- "last_play_clock": "1:08",
+ "last_play_clock": "56.8",
  "away": {
   "abbreviation": "ATL",
-  "score": 49,
-  "feed_score": 49
+  "score": 52,
+  "feed_score": 52
  },
  "home": {
   "abbreviation": "GS",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 9,
+   "away": 12,
    "home": 16
   }
  ],
@@ -4272,8 +4272,8 @@
    "order": 353,
    "period": 4,
    "clock": "1:30",
-   "type": "Jump Shot",
-   "text": "Jordin Canada makes 25-foot three point jumper (Angel Reese assists)",
+   "type": "Pullup Jump Shot",
+   "text": "Jordin Canada makes 25-foot three pointer (Angel Reese assists)",
    "away_score": 49,
    "home_score": 62,
    "scoring_play": true,
@@ -4284,8 +4284,8 @@
    "order": 354,
    "period": 4,
    "clock": "1:11",
-   "type": "No Shot (Default Shot)",
-   "text": "Veronica Burton misses shot",
+   "type": "Driving Floating Jump Shot",
+   "text": "Veronica Burton misses driving floating jump shot",
    "away_score": 49,
    "home_score": 62,
    "scoring_play": false,
@@ -4295,7 +4295,7 @@
   {
    "order": 355,
    "period": 4,
-   "clock": "1:08",
+   "clock": "1:11",
    "type": "Defensive Rebound",
    "text": "Rhyne Howard defensive rebound",
    "away_score": 49,
@@ -4303,6 +4303,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 356,
+   "period": 4,
+   "clock": "1:04",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 25-foot three point jumper",
+   "away_score": 52,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 357,
+   "period": 4,
+   "clock": "56.8",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 52,
+   "home_score": 62,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
