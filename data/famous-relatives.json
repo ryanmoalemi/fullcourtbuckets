@@ -1,7 +1,7 @@
 {
  "title": "Famous relatives of WNBA players",
  "page": "/news/wnba-players-famous-relatives/",
- "updated": "2026-10-20",
+ "updated": "2026-10-27",
  "corrections": "hello@fullcourtbuckets.com",
  "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
  "entries": [
@@ -1840,6 +1840,287 @@
     "license": "CC BY-SA 2.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "source_page": "https://commons.wikimedia.org/wiki/File:Kathryn_Westbeld_2025_(cropped).jpg"
+   }
+  },
+  {
+   "rank": 50,
+   "player": "Cassandre Prosper",
+   "player_slug": "cassandre-prosper",
+   "relative": "Olivier-Maxence Prosper",
+   "relative_slug": "olivier-maxence-prosper",
+   "relation": "Brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "NBA forward who played at Marquette and then for the Dallas Mavericks. The Memphis Grizzlies signed him to a multi-year contract in March 2026.",
+   "extra": "Her mother played college basketball at Manhattan College and Concordia, and her father played his whole college career at Concordia, per Notre Dame.",
+   "sources": [
+    {
+     "label": "Notre Dame Athletics bio: Cassandre Prosper",
+     "url": "https://fightingirish.com/sports/wbball/roster/player/cassandre-prosper",
+     "kind": "primary"
+    },
+    {
+     "label": "NBA.com: Grizzlies sign forward Olivier-Maxence Prosper to multi-year contract, March 4, 2026",
+     "url": "https://www.nba.com/news/grizzlies-sign-forward-olivier-maxence-prosper-to-multi-year-contract",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/cassandre-prosper.webp",
+    "author": "Hameltion",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:UNC_vs_ND_(Jan_2025)_25_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "TigerNet.com",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Olivier-Maxence_Prosper.jpg"
+   }
+  },
+  {
+   "rank": 51,
+   "player": "Aubrey Griffin",
+   "player_slug": "aubrey-griffin",
+   "relative": "Adrian Griffin",
+   "relative_slug": "adrian-griffin",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "Played nine NBA seasons after Seton Hall, including the 2006 NBA Finals with the Dallas Mavericks. The Milwaukee Bucks hired him as head coach in June 2023.",
+   "extra": "Her mother, Audrey Sterling, was a track All-American at Seton Hall, per UConn.",
+   "sources": [
+    {
+     "label": "UConn Athletics bio: Aubrey Griffin",
+     "url": "https://uconnhuskies.com/sports/womens-basketball/roster/aubrey-griffin/13219",
+     "kind": "primary"
+    },
+    {
+     "label": "Milwaukee Bucks release: Bucks hire Adrian Griffin as head coach, June 5, 2023",
+     "url": "https://www.nba.com/bucks/news/milwaukee-bucks-hire-adrian-griffin-as-head-coach",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/aubrey-griffin.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aubrey_Griffin.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 52,
+   "player": "Aubrey Griffin",
+   "player_slug": "aubrey-griffin",
+   "relative": "AJ Griffin",
+   "relative_slug": "aj-griffin",
+   "relation": "Brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Played at Duke, then for the Atlanta Hawks, who drafted him No. 16 overall in 2022.",
+   "extra": "Another brother, Alan, played at Illinois and Syracuse, per UConn.",
+   "sources": [
+    {
+     "label": "UConn Athletics bio: Aubrey Griffin",
+     "url": "https://uconnhuskies.com/sports/womens-basketball/roster/aubrey-griffin/13219",
+     "kind": "primary"
+    },
+    {
+     "label": "Atlanta Hawks release: Hawks select AJ Griffin with the No. 16 pick in the 2022 NBA Draft",
+     "url": "https://www.nba.com/hawks/news/atlanta-hawks-select-aj-griffin-with-the-no-16-pick-and-acquire-the-draft-rights-to-the-51st-pick-tyrese-martin-in-the-2022-nba-draft",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/aubrey-griffin.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Aubrey_Griffin.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 53,
+   "player": "Kiah Stokes",
+   "player_slug": "kiah-stokes",
+   "relative": "Greg Stokes",
+   "relative_slug": "greg-stokes",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBA",
+   "known_for": "All-American at Iowa who played for the Philadelphia 76ers and won gold with the 1983 U.S. Pan American Games team.",
+   "extra": "Kiah won three NCAA titles at UConn, per the Aces.",
+   "sources": [
+    {
+     "label": "Las Vegas Aces bio: Kiah Stokes",
+     "url": "https://aces.wnba.com/kiah-stokes-bio",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kiah-stokes.webp",
+    "author": "Sakhalinio",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kiah_Stokes_41_Fenerbah%C3%A7e_Women%27s_Basketball_20191031_(1).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Danny Karwoski",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Greg_Stokes.jpg"
+   }
+  },
+  {
+   "rank": 54,
+   "player": "Kiki Rice",
+   "player_slug": "kiki-rice",
+   "relative": "Allan Houston",
+   "relative_slug": "allan-houston",
+   "relation": "Cousin",
+   "relation_type": "cousin",
+   "sport": "NBA",
+   "known_for": "Two-time NBA All-Star (2000 and 2001) with the New York Knicks and a gold medalist with the U.S. team at the 2000 Sydney Olympics. He retired as a player in 2005 and moved into the Knicks' front office.",
+   "extra": "Both of her parents were athletes at Yale: her father, John, played basketball and her mother, Andrea, played tennis, per UCLA.",
+   "sources": [
+    {
+     "label": "UCLA Athletics bio: Kiki Rice (2025-26)",
+     "url": "https://uclabruins.com/sports/womens-basketball/roster/season/2025-26/player/kiki-rice",
+     "kind": "primary"
+    },
+    {
+     "label": "New York Knicks: Allan Houston",
+     "url": "https://www.nba.com/knicks/allan-houston",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kiki-rice.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kiki_Rice_Tempo_2_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Chamber of Fear (derivative work: Lpdrew)",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Allan_Houston_2010.jpg"
+   }
+  },
+  {
+   "rank": 55,
+   "player": "Lauren Betts",
+   "player_slug": "lauren-betts",
+   "relative": "Andy Betts",
+   "relative_slug": "andy-betts",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball",
+   "known_for": "Played at Long Beach State and was a second-round pick of the Charlotte Hornets in the 1998 NBA draft. He played for England and Great Britain and spent 14 years as a pro in Spain, Italy, Greece and Ukraine.",
+   "extra": "Her mother, Michelle, won the 1993 NCAA volleyball title at Long Beach State, and her younger sister, Sienna, is on UCLA's 2025-26 roster.",
+   "sources": [
+    {
+     "label": "UCLA Athletics bio: Lauren Betts (2025-26)",
+     "url": "https://uclabruins.com/sports/womens-basketball/roster/season/2025-26/player/lauren-betts",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/lauren-betts.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:260621_Lynx_Mystics_JohnMc001_(55349607113)_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 56,
+   "player": "DiJonai Carrington",
+   "player_slug": "dijonai-carrington",
+   "relative": "Darren Carrington",
+   "relative_slug": "darren-carrington",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NFL",
+   "known_for": "Played football at Northern Arizona, then had an eight-year NFL career after the Denver Broncos drafted him in the fifth round in 1989.",
+   "extra": "Her brother, Darren, played college football at Oregon and Utah, per Baylor.",
+   "sources": [
+    {
+     "label": "Baylor Athletics bio: DiJonai Carrington",
+     "url": "https://baylorbears.com/sports/womens-basketball/roster/dijonai-carrington/10073",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/dijonai-carrington.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:DiJonai_Carrington_2025_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 57,
+   "player": "Myisha Hines-Allen",
+   "player_slug": "myisha-hines-allen",
+   "relative": "Josh Hines-Allen",
+   "relative_slug": "josh-hines-allen",
+   "relation": "Brother",
+   "relation_type": "sibling",
+   "sport": "NFL",
+   "known_for": "Jacksonville Jaguars edge rusher and the first rookie in franchise history to make the Pro Bowl. He changed his last name from Allen to Hines-Allen in July 2024.",
+   "extra": "Their uncle, Gregory Hines, played college basketball at Hampton and had a 12-year pro career, per the Jaguars.",
+   "sources": [
+    {
+     "label": "Jacksonville Jaguars player page: Josh Hines-Allen",
+     "url": "https://www.jaguars.com/team/players-roster/josh-allen/",
+     "kind": "primary"
+    },
+    {
+     "label": "Jacksonville Jaguars: Josh Hines-Allen announces name change, July 9, 2024",
+     "url": "https://www.jaguars.com/news/official-jaguars-josh-hines-allen-announces-name-change",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-10-27",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/myisha-hines-allen.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Myisha_Hines-Allen_(53076539979)_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "All-Pro Reels",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Josh_Allen_OLB_2022.jpg"
    }
   }
  ]
