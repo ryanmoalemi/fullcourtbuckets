@@ -102,7 +102,7 @@ class StandingsFeedTests(unittest.TestCase):
             html_text = page.read_text(encoding='utf-8')
             self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/standings/"', html_text)
             self.assertIn('href="https://www.espn.com/wnba/standings" target="_blank" rel="noopener"', html_text)
-            self.assertIn('Updated October 1, 2026', html_text)
+            self.assertIn('Regular season final as of October 1, 2026', html_text)
             body = html_text.split('id="standingsBody"', 1)[1].split('</tbody>', 1)[0]
             for name in (
                 'Minnesota Lynx', 'Golden State Valkyries', 'Las Vegas Aces', 'Atlanta Dream',
@@ -118,7 +118,8 @@ class StandingsFeedTests(unittest.TestCase):
             self.assertEqual(len(saved['teams']), 15)
             self.assertEqual(saved['teams'][0]['name'], 'Minnesota Lynx')
             self.assertIn('Final 2026 regular-season standings', html_text)
-            self.assertIn('"dateModified": "2026-10-01"', html_text)
+            import finals_series
+            self.assertIn(f'"dateModified": "{max("2026-10-01", finals_series.latest_day())}"', html_text)
             self.assertIn('How do WNBA playoff tiebreakers work?', html_text)
             self.assertIn('What is the 2026 WNBA playoff format by round?', html_text)
             self.assertIn('best-of-three', html_text)
@@ -134,7 +135,7 @@ class StandingsFeedTests(unittest.TestCase):
             self.assertNotIn('\u2014', html_text)
             self.assertTrue(standings.build(root, payload=final_2026_payload(), updated_at='2026-10-04T01:48:18-07:00'))
             again = page.read_text(encoding='utf-8')
-            self.assertIn('Updated October 1, 2026', again)
+            self.assertIn('Regular season final as of October 1, 2026', again)
             self.assertNotIn('October 4, 2026', again)
             kept = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
             self.assertEqual(kept['updatedAt'], '2026-10-01T12:00:00-07:00')

@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 
 from analytics import GA4_TAG
 import citation
+import finals_series
 import internal_links as links
 import site_nav
 import team_names
@@ -406,28 +407,92 @@ def team_hrefs(root: Path) -> dict[str, str]:
     return found
 
 
-def series_coverage_html(root: Path) -> str:
-    """A box on the standings page that points at the current playoff series."""
-    href = site_nav.latest_playoffs_href(root)
-    if not href:
-        return ''
-    title = ''
+def _article_href_matching(root: Path, needle: str) -> str:
+    found = []
     for article in links.load_articles(root):
         try:
-            article_href = links.article_href(article)
+            href = links.article_href(article)
         except ValueError:
             continue
-        if article_href == href:
-            title = str(article.get('title') or '').strip()
-            break
-    if not title:
-        title = 'Series coverage'
+        if needle in href:
+            found.append((str(article.get('date') or ''), href))
+    return sorted(found)[-1][1] if found else ''
+
+
+def _pbp_href(root: Path, season, number: int, espn_id=None) -> str:
+    pages = {}
+    try:
+        pages = json.loads((root / 'data' / 'fcb-game-pages.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        pass
+    href = pages.get(str(espn_id or '')) or f'/wnba/finals/{season}/game-{number}/play-by-play/'
+    return href if (root / href.strip('/') / 'index.html').is_file() else ''
+
+
+def series_coverage_html(root: Path) -> str:
+    """Finals box built from the final box scores in data/games (see finals_series)."""
+    root = Path(root)
+    href = site_nav.latest_playoffs_href(root)
+    current = finals_series.series(root)
+    if not current:
+        if not href:
+            return ''
+        return (
+            '<aside class="series-box">'
+            '<p class="info-label">Playoffs</p>'
+            '<h2>Series coverage</h2>'
+            f'<a href="{esc(href)}">Read the series coverage</a>'
+            '</aside>'
+        )
+    season = current['season']
+    lead, trail = current['teams'][0], current['teams'][1]
+    played = len(current['games'])
+    last = current['games'][-1]
+    if current['champion']:
+        status = f'The {lead["full_name"]} won the {season} WNBA championship, beating the {trail["full_name"]} {lead["wins"]}-{trail["wins"]}.'
+        heading = f'{season} WNBA champions: {lead["full_name"]}'
+    elif lead['wins'] == trail['wins']:
+        status = f'The {lead["full_name"]} and {trail["full_name"]} are tied {lead["wins"]}-{trail["wins"]} after {played} games.'
+        heading = f'{season} WNBA Finals: series tied {lead["wins"]}-{trail["wins"]}'
+    else:
+        status = f'The {lead["full_name"]} lead the {trail["full_name"]} {lead["wins"]}-{trail["wins"]} after {played} games.'
+        heading = f'{season} WNBA Finals: {lead["name"]} lead {lead["wins"]}-{trail["wins"]}'
+    items = []
+    recap = _article_href_matching(root, f'finals-game-{played}-recap')
+    if recap:
+        items.append(f'<li><a href="{esc(recap)}">Game {played} recap</a></li>')
+    last_pbp = _pbp_href(root, season, played, last.get('espn_game_id'))
+    if last_pbp:
+        items.append(f'<li><a href="{esc(last_pbp)}">Game {played} play-by-play</a></li>')
+    upcoming_html = ''
+    names = {t['abbreviation']: t['name'] for t in current['teams']}
+    for game in current['upcoming']:
+        number = int(game['game'])
+        label = f'Game {number}' + (', if needed' if game.get('if_needed') else '')
+        when = ', '.join(part for part in (game.get('day'), game.get('time')) if part)
+        where = game.get('arena') or ''
+        watch = ''
+        if game.get('tv'):
+            watch = f' TV: {game["tv"]}' + (f'; streaming on {game["stream"]}.' if game.get('stream') else '.')
+        host = names.get(game.get('home'), '')
+        host_text = f' ({host} host)' if host else ''
+        upcoming_html += f'<li><strong>{esc(label)}:</strong> {esc(when)} at {esc(where)}{esc(host_text)}.{esc(watch)}</li>'
+        preview = _article_href_matching(root, f'finals-game-{number}-preview')
+        if preview:
+            items.append(f'<li><a href="{esc(preview)}">Game {number} preview</a></li>')
+        pbp = _pbp_href(root, season, number)
+        if pbp:
+            items.append(f'<li><a href="{esc(pbp)}">Game {number} play-by-play</a></li>')
+    if href:
+        items.append(f'<li><a href="{esc(href)}">Read the series coverage</a></li>')
+    schedule_html = f'<ul class="series-next">{upcoming_html}</ul>' if upcoming_html else ''
+    links_html = f'<ul class="series-links">{"".join(items)}</ul>' if items else ''
     return (
-        '<aside class="series-box">'
-        '<p class="info-label">Playoffs</p>'
-        '<h2>Series coverage</h2>'
-        f'<p>{esc(title)}</p>'
-        f'<a href="{esc(href)}">Read the series coverage</a>'
+        f'<aside class="series-box" id="finals-series" data-fcb-dynamic="series-status" data-fcb-source="data/games data/finals-schedule.json" data-fcb-updated="{esc(current["last_day"])}">'
+        '<p class="info-label">WNBA Finals</p>'
+        f'<h2>{esc(heading)}</h2>'
+        f'<p>{esc(status)} Updated after Game {played}, {esc(links._long_date(last.get("date")))}.</p>'
+        f'{schedule_html}{links_html}'
         '</aside>'
     )
 
@@ -439,11 +504,11 @@ def render_page(root: Path, table: dict) -> str:
     teams = table['teams']
     leader = teams[0]
     when = links._long_date(table.get('updatedAt'))
-    sentence = f'The {leader["name"]} lead the WNBA standings at {leader["wins"]}-{leader["losses"]}.'
-    support = f'{sentence} Updated {when}.' if when else sentence
+    sentence = links.standings_sentence(table) or f'The {leader["name"]} lead the WNBA standings at {leader["wins"]}-{leader["losses"]}.'
+    support = f'{sentence} {links.standings_updated_label(table)} {when}.' if when else sentence
     year = table.get('season') or ''
     heading = links.standings_title(table)
-    modified = links._iso_day(table.get('updatedAt'))
+    modified = links.standings_page_day(table)
     def by_conference(name):
         rows = [team for team in teams if team['conference'] == name]
         return sorted(rows, key=lambda team: team.get('conferenceRank') or 99)
@@ -453,6 +518,9 @@ def render_page(root: Path, table: dict) -> str:
     west = ''.join(_row(team, hrefs.get(team['name'], ''), False) for team in by_conference('Western'))
     css = (Path(__file__).with_name('standings.css')).read_text(encoding='utf-8')
     description = (
+        f'Final {year} WNBA regular-season standings for all {len(teams)} teams: wins, losses, winning percentage, '
+        'games back, home and road records and playoff seeds, plus the live WNBA Finals series status.'
+        if links.regular_season_is_final(table) else
         f'{year} WNBA standings for all {len(teams)} teams: wins, losses, winning percentage, '
         'games back, home and road records, and playoff seeds.'
     )
@@ -539,10 +607,10 @@ def render_page(root: Path, table: dict) -> str:
 <p class="support" id="standings-updated">{esc(support)}</p>
 {cite}
 </div>
-{series_coverage_html(root)}
 <section class="panel" id="final-2026-standings">
 <div class="table-wrap">
-<table class="standings-table" aria-label="{esc(year)} WNBA Standings">
+<table class="standings-table" aria-label="{esc(heading)}">
+<caption class="table-caption">{esc(heading)}</caption>
 <thead>
 <tr>
 <th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th><th>HOME</th><th>ROAD</th><th>STREAK</th><th>L10</th>
@@ -553,6 +621,7 @@ def render_page(root: Path, table: dict) -> str:
 </div>
 {table_embed}
 </section>
+{series_coverage_html(root)}
 <div class="conference-wrap">
 <section class="conf-card">
 <div class="conf-header"><h3>Eastern Conference</h3></div>
