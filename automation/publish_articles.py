@@ -7,6 +7,7 @@ listings the last recap was added to. Running it again changes nothing.
 """
 from __future__ import annotations
 
+from datetime import date
 import html
 import json
 import re
@@ -93,6 +94,9 @@ def inline(text: str) -> str:
 
 BETTING_HOST_RE = re.compile(r'//(?:[a-z0-9-]+\.)*(?:draftkings|kalshi|dunkelindex|fanduel|betmgm|caesars|polymarket)\.', re.I)
 DYNAMIC_LINE_RE = re.compile(r'\{dynamic:([a-z0-9-]+)\}')
+# A hand-checked, time-sensitive paragraph: "[dynamic:kind] text". Kept as written,
+# marked so readers and checks know it changes (injuries, odds, ticket prices).
+MANUAL_DYNAMIC_RE = re.compile(r'^\[dynamic:([a-z0-9-]+)\]\s+(.*)$', re.S)
 TABLE_SEPARATOR_RE = re.compile(r'^\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)*\|?\s*$')
 
 
@@ -203,6 +207,15 @@ def body_html(markdown: str) -> str:
             html_blocks.append(
                 f'<div data-fcb-dynamic="{esc(value)}" data-fcb-source="data/games data/finals-schedule.json" '
                 f'data-fcb-updated=""></div><!--/fcb-dynamic-->')
+            continue
+        manual = MANUAL_DYNAMIC_RE.match(value) if kind == 'p' else None
+        if manual:
+            html_blocks.append(
+                f'<p data-fcb-dynamic="{esc(manual.group(1))}" data-fcb-source="manual" '
+                f'data-fcb-updated="{date.today().isoformat()}">{inline(manual.group(2))}</p><!--/fcb-dynamic-->')
+            if BETTING_RE.search(value) and DISCLAIMER not in markdown and not disclaimer:
+                html_blocks.append(f'<p>{esc(DISCLAIMER)}</p>')
+                disclaimer = True
             continue
         if value.startswith('TV: ') and not first:
             # The closing broadcast line keeps its small grey style on every rebuild.
