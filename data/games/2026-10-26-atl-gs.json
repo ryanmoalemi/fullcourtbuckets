@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:28:34+00:00",
+ "checked_at": "2026-10-27T00:29:08+00:00",
  "period": 1,
- "clock": "2:50",
+ "clock": "2:23",
  "last_play_period": 1,
- "last_play_clock": "2:59",
+ "last_play_clock": "2:31",
  "away": {
   "abbreviation": "ATL",
   "score": 8,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 8,
-  "feed_score": 8
+  "score": 10,
+  "feed_score": 10
  },
  "periods": [
   {
    "period": 1,
    "away": 8,
-   "home": 8
+   "home": 10
   }
  ],
  "players": [],
@@ -764,7 +764,7 @@
   {
    "order": 62,
    "period": 1,
-   "clock": "3:35",
+   "clock": "3:36",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 6,
@@ -868,6 +868,66 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "ATL"
+  },
+  {
+   "order": 71,
+   "period": 1,
+   "clock": "2:50",
+   "type": "Shooting Foul",
+   "text": "Te-Hina Paopao shooting foul",
+   "away_score": 8,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 72,
+   "period": 1,
+   "clock": "2:50",
+   "type": "Free Throw - 1 of 2",
+   "text": "Veronica Burton makes free throw 1 of 2",
+   "away_score": 8,
+   "home_score": 9,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 73,
+   "period": 1,
+   "clock": "2:50",
+   "type": "Free Throw - 2 of 2",
+   "text": "Veronica Burton makes free throw 2 of 2",
+   "away_score": 8,
+   "home_score": 10,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 74,
+   "period": 1,
+   "clock": "2:35",
+   "type": "Jump Shot",
+   "text": "Te-Hina Paopao misses 25-foot three point jumper",
+   "away_score": 8,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 75,
+   "period": 1,
+   "clock": "2:31",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 8,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
