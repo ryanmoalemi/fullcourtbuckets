@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:26:57+00:00",
+ "checked_at": "2026-10-27T00:27:30+00:00",
  "period": 1,
- "clock": "3:38",
+ "clock": "2:59",
  "last_play_period": 1,
- "last_play_clock": "3:15",
+ "last_play_clock": "3:01",
  "away": {
   "abbreviation": "ATL",
   "score": 6,
@@ -777,13 +777,49 @@
    "order": 63,
    "period": 1,
    "clock": "3:15",
-   "type": "No Shot (Default Shot)",
-   "text": "Cecilia Zandalasini misses shot",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini misses 24-foot three point jumper",
    "away_score": 6,
    "home_score": 8,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 64,
+   "period": 1,
+   "clock": "3:12",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 65,
+   "period": 1,
+   "clock": "3:05",
+   "type": "Floating Jump Shot",
+   "text": "Angel Reese misses 8-foot floating jump shot",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 66,
+   "period": 1,
+   "clock": "3:01",
+   "type": "Offensive Rebound",
+   "text": "Isobel Borlase offensive rebound",
+   "away_score": 6,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
