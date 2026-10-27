@@ -81,7 +81,8 @@
         "ATL": 2
       },
       "tv": "USA Network (simulcast on CNBC)",
-      "stream": "Peacock"
+      "stream": "Peacock",
+      "game_json": "data/games/2026-10-26-atl-gs.json"
     }
   }
 }
