@@ -5,11 +5,11 @@
  "espn_game_id": "401918309",
  "balldontlie_game_id": 1392723,
  "date": "2026-10-26",
- "checked_at": "2026-10-27T00:31:56+00:00",
+ "checked_at": "2026-10-27T00:32:31+00:00",
  "period": 1,
- "clock": "1:39",
+ "clock": "1:03",
  "last_play_period": 1,
- "last_play_clock": "1:39",
+ "last_play_clock": "1:19",
  "away": {
   "abbreviation": "ATL",
   "score": 11,
@@ -1143,6 +1143,30 @@
    "home_score": 13,
    "scoring_play": true,
    "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 94,
+   "period": 1,
+   "clock": "1:21",
+   "type": "Floating Jump Shot",
+   "text": "Gabby Williams misses 13-foot floating jump shot",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 95,
+   "period": 1,
+   "clock": "1:19",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 11,
+   "home_score": 13,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "ATL"
   }
  ]
