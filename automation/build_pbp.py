@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import site_nav  # noqa: E402
 import social_meta  # noqa: E402
 import seo_meta  # noqa: E402
+import breadcrumbs  # noqa: E402
 
 E = html.escape
 CONF = ROOT / 'data/pbp-games.json'
@@ -102,7 +103,11 @@ def player_counts(plays, roster):
 
 
 def social_tags(page):
-    """Same twitter/og tags social_meta.py adds, so a rebuild matches the published page."""
+    """Same twitter/og tags social_meta.py adds, so a rebuild matches the published page.
+    Also applies breadcrumbs.fix so the page ships Home > WNBA > Finals > Game N > Play-by-play."""
+    m = re.search(r'<link rel="canonical" href="https://fullcourtbuckets\.com(/[^"]*)"', page)
+    if m:
+        page = breadcrumbs.fix(page, m.group(1))
     return social_meta.social_block(page, social_meta.default_image_url(), social_meta.DEFAULT_ALT, social_meta.W, social_meta.H)
 
 
