@@ -1,9 +1,9 @@
 {
-  "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 5 preview or Game 4 recap replaces this). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "Final: Valkyries 67, Dream 62 in Finals Game 4. Series tied 2-2. Game 5 is Mon, Oct 26, 5 p.m. PT at Chase Center (TV: USA. Streaming: Peacock)",
-  "url": "/wnba/finals/2026/game-4/play-by-play/",
-  "date": "2026-10-24",
-  "expires": "2026-10-26T23:59:00-07:00",
+  "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 5 recap replaces this; next: Game 6 result). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
+  "text": "Final: Valkyries 64, Dream 55 in Finals Game 5. Valkyries lead 3-2. Game 6 is Thu, Oct 29, 9:30 a.m. PT at State Farm Arena (TV: USA Network, E! and Syfy. Streaming: Peacock)",
+  "url": "/news/valkyries-dream-finals-game-5-recap/",
+  "date": "2026-10-26",
+  "expires": "2026-10-29T23:59:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"
