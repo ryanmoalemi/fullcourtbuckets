@@ -304,4 +304,10 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/wnba-finals-foul-data-dream-valkyries/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

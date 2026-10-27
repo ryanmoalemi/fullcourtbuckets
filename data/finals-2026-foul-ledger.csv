@@ -1,0 +1,6 @@
+game,date,venue,winner,atl_pts,gsv_pts,atl_personal_fouls,gsv_personal_fouls,atl_offensive_fouls,gsv_offensive_fouls,atl_shooting_fouls_committed,gsv_shooting_fouls_committed,atl_fta,gsv_fta,atl_ftm,gsv_ftm,reese_minutes,reese_points,reese_fga,reese_fta,reese_personal_fouls,reese_offensive_fouls,official_pbp_url
+1,2026-10-17,Chase Center,GSV,64,68,14,13,0,0,4,10,21,16,18,11,34:52,14,11,7,5,0,https://www.wnba.com/game/atl-vs-gsv-1042600301/play-by-play
+2,2026-10-19,Chase Center,ATL,79,65,18,23,1,0,10,11,35,19,30,16,33:48,30,16,11,5,1,https://www.wnba.com/game/atl-vs-gsv-1042600302/play-by-play
+3,2026-10-21,State Farm Arena,ATL,97,71,17,21,1,2,8,14,29,17,20,11,34:25,21,12,5,3,1,https://www.wnba.com/game/gsv-vs-atl-1042600303/play-by-play
+4,2026-10-24,State Farm Arena,GSV,62,67,19,26,5,3,6,14,31,13,22,11,34:05,8,12,6,4,2,https://www.wnba.com/game/gsv-vs-atl-1042600304/play-by-play
+5,2026-10-26,Chase Center,GSV,55,64,17,14,4,1,6,9,14,13,11,10,32:40,7,8,4,4,3,https://www.wnba.com/game/atl-vs-gsv-1042600305/play-by-play

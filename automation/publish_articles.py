@@ -71,6 +71,21 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
     return meta, parts[2].strip('\n')
 
 
+IMG_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+FACE_CSS = (
+    '<style id="fcb-player-face">.article img.player-face{width:32px;height:32px;max-width:32px;'
+    'border-radius:50%;object-fit:cover;vertical-align:middle;display:inline-block;margin:0 4px 0 0}'
+    '</style>'
+)
+
+
+def face_img(alt: str, href: str) -> str:
+    return (
+        f'<img class="player-face" src="{esc(href)}" alt="{esc(alt)}" width="32" height="32" '
+        'decoding="async" loading="lazy">'
+    )
+
+
 def inline(text: str) -> str:
     def link(label: str, href: str) -> str:
         return (
@@ -79,7 +94,14 @@ def inline(text: str) -> str:
             f'{esc(label)}</a>'
         )
 
-    parts = re.split(r'(\[[^\]]+\]\([^)]+\))', text)
+    images: list[str] = []
+
+    def stash(match: re.Match) -> str:
+        images.append(face_img(match.group(1), match.group(2)))
+        return f'\x00IMG{len(images) - 1}\x00'
+
+    stashed = IMG_RE.sub(stash, text)
+    parts = re.split(r'(\[[^\]]+\]\([^)]+\))', stashed)
     out = []
     for part in parts:
         match = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', part)
@@ -88,7 +110,10 @@ def inline(text: str) -> str:
         else:
             out.append(esc(part))
     rendered = ''.join(out)
-    return re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', rendered)
+    rendered = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', rendered)
+    for index, tag in enumerate(images):
+        rendered = rendered.replace(f'\x00IMG{index}\x00', tag)
+    return rendered
 
 
 BETTING_HOST_RE = re.compile(r'//(?:[a-z0-9-]+\.)*(?:draftkings|kalshi|dunkelindex|fanduel|betmgm|caesars|polymarket)\.', re.I)
@@ -119,6 +144,21 @@ def table_html(rows: list[str]) -> str:
         f'<thead><tr>{head_html}</tr></thead>'
         f'<tbody>{"".join(body_rows)}</tbody>'
         '</table></div>'
+    )
+
+
+def chart_figure(alt: str, src: str) -> str:
+    """A chart on its own line. The file has to be 16:9; the figure is not cropped."""
+    width = height = 0
+    path = ROOT / src.lstrip('/')
+    if path.is_file():
+        from PIL import Image
+        with Image.open(path) as im:
+            width, height = im.size
+    dims = f' width="{width}" height="{height}"' if width and height else ''
+    return (
+        f'<figure class="chart no-crop"><img src="{esc(src)}" alt="{esc(alt)}"{dims} '
+        'decoding="async" loading="lazy"></figure>'
     )
 
 
@@ -160,6 +200,12 @@ def body_html(markdown: str) -> str:
             table.append(line.strip())
             continue
         flush_table()
+        chart = IMG_RE.fullmatch(line.strip())
+        if chart:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('figure', chart.groups()))
+            continue
         if not line.strip():
             flush_paragraph()
             flush_bullets()
@@ -198,6 +244,9 @@ def body_html(markdown: str) -> str:
         if kind == 'table':
             html_blocks.append(table_html(value))
             continue
+        if kind == 'figure':
+            html_blocks.append(chart_figure(value[0], value[1]))
+            continue
         if kind == 'dynamic':
             # Body is filled by automation/dynamic_sections.py (same workflow run).
             html_blocks.append(
@@ -229,17 +278,22 @@ def focal_for(meta: dict, existing: dict | None) -> str:
     return raw
 
 
-def caption_html(credit: str, credit_url: str, license_url: str) -> str:
+def caption_html(credit: str, credit_url: str, license_url: str, lead: str = '') -> str:
     match = re.fullmatch(r'Photo: (.+), (.+), via Wikimedia Commons', credit.strip())
     if match and credit_url and license_url:
         author, license_name = match.group(1), match.group(2)
-        return (
+        credit_html = (
             'Photo: '
             f'<a class="inline-link" href="{esc(credit_url)}" target="_blank" rel="noopener">{esc(author)}</a>, '
             f'<a class="inline-link" href="{esc(license_url)}" target="_blank" rel="noopener">{esc(license_name)}</a>, via '
             f'<a class="inline-link" href="{esc(credit_url)}" target="_blank" rel="noopener">Wikimedia Commons</a>'
         )
-    return esc(credit)
+    else:
+        credit_html = esc(credit)
+    lead = lead.strip()
+    if lead:
+        return esc(lead.rstrip('.') + '.') + ' ' + credit_html
+    return credit_html
 
 
 def load_articles() -> list:
@@ -312,6 +366,7 @@ def figure_html(article: dict, meta: dict) -> str:
         str(meta.get('photo_credit') or article.get('imageCredit') or ''),
         str(meta.get('photo_credit_url') or ''),
         str(meta.get('license_url') or ''),
+        str(meta.get('caption_lead') or ''),
     )
     return (
         f'<figure class="lead-photo"><picture><source srcset="{esc(srcset)}" type="image/webp" '
@@ -381,6 +436,11 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     page = re.sub(r'<article class="article">.*?</article>', article_html, page, count=1, flags=re.S)
     page = links.ensure_article_end(page, ROOT, article, articles)
     page = set_title(page, title, social, description, article)
+    extra = dataset_tag(meta, article)
+    if extra and '"@type": "Dataset"' not in page and '"@type":"Dataset"' not in page:
+        page = page.replace('</head>', extra + '</head>', 1)
+    if 'player-face' in page and 'id="fcb-player-face"' not in page:
+        page = page.replace('</head>', FACE_CSS + '</head>', 1)
     ticker = str(meta.get('ticker') or '').strip()
     if ticker or not existed:
         # A new story must not keep the shell page's score in the Now bar.
@@ -463,6 +523,22 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
         count=1,
     )
     return page
+
+
+def dataset_tag(meta: dict, article: dict) -> str:
+    csv_path = str(meta.get('dataset_csv') or '').strip()
+    if not csv_path:
+        return ''
+    import citation
+    slug = article['slug']
+    page_url = f'https://fullcourtbuckets.com/news/{slug}/'
+    csv_url = csv_path if csv_path.startswith('http') else 'https://fullcourtbuckets.com' + csv_path
+    return citation.dataset_script(
+        str(meta.get('dataset_name') or article['title']),
+        str(meta.get('dataset_description') or article.get('description') or ''),
+        page_url,
+        csv_url,
+    )
 
 
 def write_if_changed(path: Path, text: str) -> bool:

@@ -1,5 +1,30 @@
 [
   {
+    "slug": "wnba-finals-foul-data-dream-valkyries",
+    "url": "/news/wnba-finals-foul-data-dream-valkyries/",
+    "title": "Dream offensive fouls jumped from 2 to 9 after Atlanta went up 2-1 in the Finals",
+    "description": "The Dream were called for 2 offensive fouls in Finals Games 1-3 and 9 in Games 4-5. FCB's game-by-game foul ledger is free to use (CC0).",
+    "category": "news",
+    "date": "2026-10-27",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a white number 5 road jersey with red trim holds a basketball and looks up",
+    "imageCredit": "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons",
+    "teams": [
+      "atlanta-dream",
+      "golden-state-valkyries"
+    ],
+    "imageFocal": "center 20%",
+    "image": "/images/articles/wnba-finals-foul-data-dream-valkyries/hero-1200.webp",
+    "imageSource": "/images/articles/wnba-finals-foul-data-dream-valkyries/photo.jpg",
+    "imageHero": "/images/articles/wnba-finals-foul-data-dream-valkyries/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageOg": "/images/articles/wnba-finals-foul-data-dream-valkyries/foul-ledger-og-1200.jpg",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 630,
+    "imageWidth": 1200,
+    "imageHeight": 675
+  },
+  {
     "slug": "finals-game-6-preview-valkyries-dream",
     "url": "/news/finals-game-6-preview-valkyries-dream/",
     "title": "Finals Game 6 preview: Valkyries can win a title while outscored",
