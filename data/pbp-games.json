@@ -82,7 +82,8 @@
       },
       "tv": "USA Network (simulcast on CNBC)",
       "stream": "Peacock",
-      "game_json": "data/games/2026-10-26-atl-gs.json"
+      "game_json": "data/games/2026-10-26-atl-gs.json",
+      "recap": "/news/valkyries-dream-finals-game-5-recap/"
     }
   }
 }

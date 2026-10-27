@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Valkyries beat Dream 64-55 in Game 5 and move one win from the WNBA title</title>
+      <link>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-5-recap/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/valkyries-dream-finals-game-5-recap/</guid>
+      <pubDate>Mon, 26 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>Golden State beat Atlanta 64-55 in Game 5 at Chase Center to take a 3-2 WNBA Finals lead. The Dream shot 29.2% and scored a series-low 55. Game 6 is Thursday.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-5-recap/og-1200.jpg" length="70953" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-5-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>Valkyries beat Dream 67-62 to tie the WNBA Finals 2-2 as Atlanta turns it over 18 times</title>
       <link>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-4-recap/</link>
@@ -330,17 +341,6 @@
       <description>Dallas led 44-37 at half. Golden State won the fourth quarter 23-14, finished 77-73, and took the series 2-1.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/wings-valkyries-game-3-recap/og-1200.jpg" length="40807" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/wings-valkyries-game-3-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Ogunbowale Scores 45, Wings Beat Valkyries 108-100 in OT</title>
-      <link>https://fullcourtbuckets.com/news/valkyries-wings-game-2-recap/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/valkyries-wings-game-2-recap/</guid>
-      <pubDate>Fri, 02 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA Playoffs</category>
-      <description>Arike Ogunbowale scored 45 points, including the tying three with 4.1 seconds left, and the Wings beat the Valkyries 108-100 in overtime to tie the series 1-1.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-wings-game-2-recap/og-1200.jpg" length="177049" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-wings-game-2-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
