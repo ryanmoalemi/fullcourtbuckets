@@ -360,6 +360,9 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     description = article.get('description') or ''
     when = links._format_date(article['date'])
     body = body_html(markdown)
+    if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
+        # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
+        body = body.replace('<div class="table-wrap">', '<div class="table-wrap" data-fcb-data-table>', 1)
     linked = bool(meta.get('photo_credit_url') or meta.get('license_url'))
     sentence = links.HOW_MADE_OTHER if linked else links.HOW_MADE_OTHER_UNLINKED
     how = f'<p class="how-made">{sentence} {links.HOW_MADE_LINK}</p>'

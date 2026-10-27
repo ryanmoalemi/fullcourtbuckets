@@ -23,6 +23,7 @@ focal_y: "center 30%"
 top_link_text: "Follow the play-by-play: Valkyries at Dream, Game 6"
 top_link_url: "/wnba/finals/2026/game-6/play-by-play/"
 ticker: "Finals Game 6 preview: Valkyries at Dream, Thu 9:30 a.m. PT. Golden State leads 3-2."
+data_table_first: true
 ---
 
 The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the WNBA Finals 3-2 and can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta. The [Atlanta Dream](/wnba/teams/atlanta-dream/) have outscored them 357-335. Since 2002, road teams with a chance to close out a Finals after the home team had won a game are 2-4.

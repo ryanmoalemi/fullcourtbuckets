@@ -21,13 +21,10 @@ photo_commons_file: "File:Kiah Stokes 2026.jpg"
 photo_subject: "Kiah Stokes, Golden State Valkyries, August 24, 2026 at Target Center"
 photo_author: "John Mac"
 photo_license: "CC BY-SA 4.0"
+data_table_first: true
 ---
 
 The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) beat the [Atlanta Dream](/wnba/teams/atlanta-dream/) 64-55 in Game 5 of the WNBA Finals on Monday at Chase Center, taking a 3-2 series lead. Golden State is one win from the title.
-
-Atlanta made 19 of 65 shots, 29.2%, and 6 of 26 threes. Its 55 points are the fewest by either team in the series. Golden State shot 39.3% and blocked 9 shots.
-
-The 119 combined points are the fewest in any of the 98 WNBA Finals games played from 2002 through Monday. Golden State's 64 points are the fewest by a Finals winner since Sacramento beat Connecticut 62-59 in Game 4 of the 2005 Finals.
 
 ## Finals data: lowest-scoring games since 2002
 
@@ -43,6 +40,10 @@ The 119 combined points are the fewest in any of the 98 WNBA Finals games played
 | 6 | 2006 Game 4 | Detroit 72, Sacramento 52 | 124 |
 | 7 (tie) | 2026 Game 4 | Golden State 67, Atlanta 62 | 129 |
 | 7 (tie) | 2024 Game 5 | New York 67, Minnesota 62 (OT) | 129 |
+
+Atlanta made 19 of 65 shots, 29.2%, and 6 of 26 threes. Its 55 points are the fewest by either team in the series. Golden State shot 39.3% and blocked 9 shots.
+
+The 119 combined points are the fewest in any of the 98 WNBA Finals games played from 2002 through Monday. Golden State's 64 points are the fewest by a Finals winner since Sacramento beat Connecticut 62-59 in Game 4 of the 2005 Finals.
 
 Atlanta's 55 points tie Connecticut in 2005 Game 3 for the fourth-lowest team score in that span, behind Phoenix's 50 in 2021 Game 3 and 52-point games by Sacramento (2006 Game 4) and Indiana (2015 Game 5).
 

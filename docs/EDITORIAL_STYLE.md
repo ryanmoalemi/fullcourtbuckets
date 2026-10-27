@@ -67,6 +67,7 @@ Use this for every new preview, recap, feature and guide. It applies to the WNBA
 - Material that supports the data may sit above or near the table: methods, sources, the data-through date, definitions, and one key-fact line.
 - News, game schedules, storylines and bullet lists never sit above a data table, chart or tool. They go below it.
 - Mark the element that holds the table, chart or tool with `data-fcb-data-table`. `automation/test_data_table_first.py` fails the build if a list, chart, image, news answer block or more than 700 characters of text sits between the byline and that element.
+- News exception (Ryan, Oct. 27, 2026): a news article may run headline, byline, one 16:9 lead photo, a one-line opening (`p.lead`, 400 characters max), then the marked table, with only a section title, key finding and methods/data-through lines in between. Set `data_table_first: true` in the article's front matter and the publisher marks its first table. Data pages and tools keep the strict rule with nothing above the table but supporting material.
 
 ## Standing article rules (Ryan, Oct 27, 2026)
 Learned from the Finals Game 5 recap. They apply to every article and data page.

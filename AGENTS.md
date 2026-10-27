@@ -97,7 +97,7 @@ When a player's saved `current_team` changes from one non-null team to a differe
 ## Standing article rules (Ryan, Oct 27, 2026)
 Full text in `docs/EDITORIAL_STYLE.md` ("Standing article rules"); `automation/test_article_rules.py` checks the mechanical parts.
 1. Verify every outside number (other outlets, AI tools, our own drafts) against the official box score or another primary source before use.
-2. Use FCB's own datasets and tools for original data hooks only where a journalist would genuinely link to them. Tables go high on the page with methods, sources, a data-through date and a CSV.
+2. Use FCB's own datasets and tools for original data hooks only where a journalist would genuinely link to them. Tables go high on the page with methods, sources, a data-through date and a CSV. News articles may put the 16:9 lead photo and a one-line opening above the first table (front matter `data_table_first: true`); data pages and tools keep nothing above the table (see `docs/EDITORIAL_STYLE.md`).
 3. Scope claims to the data ("since 2002", not "ever"). Never write "guaranteed". Quote official wording for records.
 4. Before writing, check what's trending on X, Reddit and in the news, and read that day's (and older, if useful) articles on the topic. Add every idea that truly improves ours, after verifying it.
 5. After publishing, check the live page: title and meta, internal links, play-by-play links and CSV downloads. A `data/seo-meta.json` override needs a manual publish run, because the workflow skips `data/`.
