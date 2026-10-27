@@ -169,6 +169,10 @@ jobs:
           python automation/seo_meta.py
           # Visible breadcrumbs above the H1 + BreadcrumbList JSON-LD + homepage H1 (owner SEO rule).
           python automation/breadcrumbs.py
+          # Fill every data-fcb-dynamic section (series status, Finals schedule) from data/games
+          # and data/finals-schedule.json, then report stale hand-written wording (AGENTS.md).
+          python automation/dynamic_sections.py
+          python automation/dynamic_sections.py --check >> "$GITHUB_STEP_SUMMARY" || echo '::warning::dynamic_sections --check found stale wording; see the step summary'
           python automation/social_meta.py
           # Search thumbnails are keyed on image file sizes, which the image and share
           # steps above can change; rebuild the index last so it matches its generator.
@@ -377,6 +381,7 @@ jobs:
           python automation/apply_portraits.py
           python automation/rollout_player_design.py
           python automation/breadcrumbs.py
+          python automation/dynamic_sections.py
       - name: Record the playoff lines the pages will show
         run: |
           python - <<'PY'

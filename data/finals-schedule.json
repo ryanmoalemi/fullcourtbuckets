@@ -3,7 +3,30 @@
   "note": "Upcoming WNBA Finals games. Finished games come from data/games, so only the schedule lives here. Times from WNBA.com and USA Sports (verified Oct. 27, 2026).",
   "best_of": 7,
   "games": [
-    {"game": 6, "date": "2026-10-29", "day": "Thursday, Oct. 29", "time": "9:30 a.m. PT (12:30 p.m. ET)", "arena": "State Farm Arena, Atlanta", "home": "ATL", "tv": "USA Network, E! and Syfy", "stream": "Peacock", "if_needed": false},
-    {"game": 7, "date": "2026-10-31", "day": "Saturday, Oct. 31", "time": "", "arena": "Chase Center, San Francisco", "home": "GS", "tv": "", "stream": "", "if_needed": true}
+    {
+      "game": 6,
+      "date": "2026-10-29",
+      "day": "Thursday, Oct. 29",
+      "time": "9:30 a.m. PT (12:30 p.m. ET)",
+      "arena": "State Farm Arena, Atlanta",
+      "home": "ATL",
+      "tv": "USA Network, E! and Syfy",
+      "stream": "Peacock",
+      "if_needed": false,
+      "espn_game_id": "401918310"
+    },
+    {
+      "game": 7,
+      "date": "2026-10-31",
+      "day": "Saturday, Oct. 31",
+      "time": "5 p.m. PT (8 p.m. ET)",
+      "arena": "Chase Center, San Francisco",
+      "home": "GS",
+      "tv": "USA Network and CNBC",
+      "stream": "Peacock",
+      "if_needed": true,
+      "source": "https://www.wnba.com/news/game-preview-2026-wnba-finals",
+      "espn_game_id": "401918311"
+    }
   ]
 }

@@ -52,7 +52,9 @@ def series(root: Path = ROOT) -> dict | None:
             teams.setdefault(side['abbreviation'], {'abbreviation': side['abbreviation'], 'name': side.get('name') or side['abbreviation'], 'full_name': side.get('full_name') or side['abbreviation'], 'wins': 0})
         winner = away if away['score'] > home['score'] else home
         teams[winner['abbreviation']]['wins'] += 1
-        played.append({'game': number, 'date': game.get('date'), 'winner': winner['abbreviation'], 'espn_game_id': game.get('espn_game_id')})
+        played.append({'game': number, 'date': game.get('date'), 'winner': winner['abbreviation'], 'espn_game_id': game.get('espn_game_id'),
+                       'home': home['abbreviation'], 'away': away['abbreviation'],
+                       'scores': {away['abbreviation']: away['score'], home['abbreviation']: home['score']}})
     # Only call it the Finals once the schedule file names this pair (it is written for the Finals).
     sched_homes = {g.get('home') for g in sched.get('games') or []}
     if sched_homes and not sched_homes <= pair:

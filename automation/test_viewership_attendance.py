@@ -144,7 +144,7 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('ESPN press release', page)
         self.assertIn('https://espnpressroom.com/press-release/espns-monumental-wnba-season-sets-new-viewership-records/', page)
         self.assertIn('https://www.nielsen.com/news-center/2026/nielsen-46-billion-minutes-of-womens-sports-were-consumed-in-2025/', page)
-        self.assertIn('Game 1 viewership has not been published yet.', page)
+        self.assertIn('WNBA Finals', page)
         self.assertNotIn('Audiences are awaiting release.', page)
         self.assertNotIn('per ESPN', page)
         self.assertNotIn('ESPN data', page)

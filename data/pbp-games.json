@@ -84,6 +84,19 @@
       "stream": "Peacock",
       "game_json": "data/games/2026-10-26-atl-gs.json",
       "recap": "/news/valkyries-dream-finals-game-5-recap/"
+    },
+    "401918310": {
+      "number": 6,
+      "date": "2026-10-29",
+      "date_text": "Thu Oct 29, 2026",
+      "tip": "Thu Oct 29, 2026, 9:30 a.m. PT (12:30 p.m. ET)",
+      "venue": "State Farm Arena",
+      "series_before": {
+        "GS": 3,
+        "ATL": 2
+      },
+      "tv": "USA Network, E! and Syfy",
+      "stream": "Peacock"
     }
   }
 }

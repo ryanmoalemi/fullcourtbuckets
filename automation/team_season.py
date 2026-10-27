@@ -373,6 +373,8 @@ def _seed_sentence(name: str, standing: dict, variant: int = 0) -> str:
 def _playoff_html(slug: str, name: str) -> str:
     """Team-specific postseason sentences. Each one names the club."""
     link = prose_link
+    import dynamic_sections
+    _finals = dynamic_sections.finals_series.series(dynamic_sections.ROOT)
     if slug == 'minnesota-lynx':
         return (
             f'The No. 8 Liberty beat the {name} 91-75 in {link("/news/liberty-lynx-game-1-full-recap/", "Game 1")} '
@@ -381,9 +383,8 @@ def _playoff_html(slug: str, name: str) -> str:
     if slug == 'golden-state-valkyries':
         return (
             f'The {name} beat the Wings 2-1 and swept the Aces 3-0. '
-            f'Golden State won Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} 68-64 on Oct. 17, 2026, '
-            f'lost {link("/news/dream-valkyries-finals-game-2-recap/", "Game 2")} 79-65 on Oct. 19 and dropped '
-            f'{link("/news/dream-valkyries-finals-game-3-recap/", "Game 3")} 97-71 in Atlanta on Oct. 21 to trail 2-1.'
+            + f'<span data-fcb-dynamic="series-status" data-fcb-team="GS" data-fcb-source="data/games data/finals-schedule.json" data-fcb-updated="{(_finals or {}).get("last_day", "")}">'
+            f'{dynamic_sections.render_series_status(dynamic_sections.ROOT, _finals, {"data-fcb-team": "GS"}) if _finals else ""}</span><!--/fcb-dynamic-->'
         )
     if slug == 'las-vegas-aces':
         return (
@@ -392,12 +393,10 @@ def _playoff_html(slug: str, name: str) -> str:
         )
     if slug == 'atlanta-dream':
         return (
-            f'The {name} beat the Mystics 92-77 in {link("/news/dream-mystics-game-1-howard-reese/", "Game 1")}, '
-            f'then swept the Liberty 3-0, ending it 85-83 in {link("/news/dream-sweep-liberty-game-3-semifinals/", "Game 3")}. '
-            f'Atlanta lost Finals {link("/news/dream-valkyries-finals-game-1-recap/", "Game 1")} 68-64, '
-            f'won {link("/news/dream-valkyries-finals-game-2-recap/", "Game 2")} 79-65 and took '
-            f'{link("/news/dream-valkyries-finals-game-3-recap/", "Game 3")} 97-71 at State Farm Arena on Oct. 21, 2026, '
-            f'its first home Finals win, for a 2-1 series lead.'
+            f'The {name} beat the {link("/news/dream-mystics-game-1-howard-reese/", "Mystics")}, '
+            f'then swept the Liberty 3-0 in the {link("/news/dream-sweep-liberty-game-3-semifinals/", "semifinals")}. '
+            + f'<span data-fcb-dynamic="series-status" data-fcb-team="ATL" data-fcb-source="data/games data/finals-schedule.json" data-fcb-updated="{(_finals or {}).get("last_day", "")}">'
+            f'{dynamic_sections.render_series_status(dynamic_sections.ROOT, _finals, {"data-fcb-team": "ATL"}) if _finals else ""}</span><!--/fcb-dynamic-->'
         )
     if slug == 'washington-mystics':
         return (
