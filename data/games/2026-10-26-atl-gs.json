@@ -3,7 +3,7 @@
   "source": "balldontlie",
   "fallback": false,
   "flags": [],
-  "checked_at": "2026-10-27T02:19:26+00:00",
+  "checked_at": "2026-10-27T03:39:30+00:00",
   "date": "2026-10-26",
   "status": "final",
   "season": 2026,
@@ -5162,7 +5162,7 @@
     {
       "order": 364,
       "period": 4,
-      "clock": "42.3",
+      "clock": "42.6",
       "type": "Defensive Rebound",
       "text": "Kiah Stokes defensive rebound",
       "away_score": 52,
@@ -5174,7 +5174,7 @@
     {
       "order": 365,
       "period": 4,
-      "clock": "26.5",
+      "clock": "26.4",
       "type": "Lost Ball Turnover",
       "text": "Cecilia Zandalasini lost ball turnover (Jordin Canada steals)",
       "away_score": 52,
@@ -5186,7 +5186,7 @@
     {
       "order": 366,
       "period": 4,
-      "clock": "16.8",
+      "clock": "16.1",
       "type": "Jump Shot",
       "text": "Jordin Canada makes 25-foot three point jumper (Rhyne Howard assists)",
       "away_score": 55,
