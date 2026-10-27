@@ -6,15 +6,6 @@
   "brief": "Original editorial basketball-player illustration in the approved Full Court Buckets style. Recognizable individual facial features, realistic proportions, confident natural expression, clean outlines and detailed graphic-novel shading. Exactly one player. Head and shoulders, top of hair fully visible with a little headroom; upper chest and both upper arms extend past the bottom of the frame for a clean straight crop. Transparent alpha background. Plain white basketball top with dark trim, without team or sponsor logos, numbers, names, watermarks or captions. No scenery or decorative shapes inside the image. The website supplies the background, every label and all statistics as HTML. Use the approved Caitlin illustration only for art direction, not as another player's face. A name or provider ID is not proof that a generated likeness is accurate; review before publication.",
   "entries": [
     {
-      "player_id": 67006,
-      "slug": "angela-dugalic",
-      "player_name": "Angela Dugalic",
-      "listed_active": true,
-      "profile_path": "/wnba/angela-dugalic/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 494,
       "slug": "brittney-sykes",
       "player_name": "Brittney Sykes",
@@ -42,24 +33,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 67088,
-      "slug": "grace-vanslooten",
-      "player_name": "Grace VanSlooten",
-      "listed_active": true,
-      "profile_path": "/wnba/grace-vanslooten/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 66973,
-      "slug": "justine-pissott",
-      "player_name": "Justine Pissott",
-      "listed_active": true,
-      "profile_path": "/wnba/justine-pissott/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 266905,
       "slug": "kamila-borkowska",
       "player_name": "Kamila Borkowska",
@@ -74,15 +47,6 @@
       "player_name": "Kara Dunn",
       "listed_active": true,
       "profile_path": "/wnba/kara-dunn/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 766,
-      "slug": "lexi-held",
-      "player_name": "Lexi Held",
-      "listed_active": true,
-      "profile_path": "/wnba/lexi-held/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -141,29 +105,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 66941,
-      "slug": "nell-angloma",
-      "player_name": "Nell Angloma",
-      "listed_active": true,
-      "profile_path": "/wnba/nell-angloma/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 61828,
       "slug": "nyadiew-puoch",
       "player_name": "Nyadiew Puoch",
       "listed_active": true,
       "profile_path": "/wnba/nyadiew-puoch/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 165049,
-      "slug": "ornella-bankole",
-      "player_name": "Ornella Bankole",
-      "listed_active": true,
-      "profile_path": "/wnba/ornella-bankole/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -195,15 +141,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 734,
-      "slug": "taylor-thierry",
-      "player_name": "Taylor Thierry",
-      "listed_active": true,
-      "profile_path": "/wnba/taylor-thierry/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 218289,
       "slug": "zaay-green",
       "player_name": "Zaay Green",
@@ -218,15 +155,6 @@
       "player_name": "A'dia Mathies",
       "listed_active": false,
       "profile_path": "/wnba/adia-mathies/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 270,
-      "slug": "abby-bishop",
-      "player_name": "Abby Bishop",
-      "listed_active": false,
-      "profile_path": "/wnba/abby-bishop/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -249,74 +177,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 452,
-      "slug": "aerial-powers",
-      "player_name": "Aerial Powers",
-      "listed_active": false,
-      "profile_path": "/wnba/aerial-powers/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 637,
-      "slug": "aisha-sheppard",
-      "player_name": "Aisha Sheppard",
-      "listed_active": false,
-      "profile_path": "/wnba/aisha-sheppard/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 520,
-      "slug": "alaina-coates",
-      "player_name": "Alaina Coates",
-      "listed_active": false,
-      "profile_path": "/wnba/alaina-coates/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 60,
-      "slug": "alana-beard",
-      "player_name": "Alana Beard",
-      "listed_active": false,
-      "profile_path": "/wnba/alana-beard/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 349,
-      "slug": "alex-bentley",
-      "player_name": "Alex Bentley",
-      "listed_active": false,
-      "profile_path": "/wnba/alex-bentley/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 414,
       "slug": "alex-harden",
       "player_name": "Alex Harden",
       "listed_active": false,
       "profile_path": "/wnba/alex-harden/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 302,
-      "slug": "alex-montgomery",
-      "player_name": "Alex Montgomery",
-      "listed_active": false,
-      "profile_path": "/wnba/alex-montgomery/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67018,
-      "slug": "alex-wilson",
-      "player_name": "Alex Wilson",
-      "listed_active": false,
-      "profile_path": "/wnba/alex-wilson/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -339,15 +204,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 497,
-      "slug": "alexis-jones",
-      "player_name": "Alexis Jones",
-      "listed_active": false,
-      "profile_path": "/wnba/alexis-jones/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 504,
       "slug": "alexis-prince",
       "player_name": "Alexis Prince",
@@ -366,47 +222,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 716,
-      "slug": "alissa-pili",
-      "player_name": "Alissa Pili",
-      "listed_active": false,
-      "profile_path": "/wnba/alissa-pili/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 48,
-      "slug": "allie-quigley",
-      "player_name": "Allie Quigley",
-      "listed_active": false,
-      "profile_path": "/wnba/allie-quigley/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 253,
-      "slug": "allison-hightower",
-      "player_name": "Allison Hightower",
-      "listed_active": false,
-      "profile_path": "/wnba/allison-hightower/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 407,
       "slug": "ally-malott",
       "player_name": "Ally Malott",
       "listed_active": false,
       "profile_path": "/wnba/ally-malott/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 430,
-      "slug": "amanda-zahui-b",
-      "player_name": "Amanda Zahui B.",
-      "listed_active": false,
-      "profile_path": "/wnba/amanda-zahui-b/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -587,15 +407,6 @@
       "player_name": "Astou Ndour-Fall",
       "listed_active": false,
       "profile_path": "/wnba/astou-ndour-fall/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67044,
-      "slug": "aubrey-griffin",
-      "player_name": "Aubrey Griffin",
-      "listed_active": false,
-      "profile_path": "/wnba/aubrey-griffin/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -915,15 +726,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 605,
-      "slug": "chennedy-carter",
-      "player_name": "Chennedy Carter",
-      "listed_active": false,
-      "profile_path": "/wnba/chennedy-carter/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 14,
       "slug": "cheryl-ford",
       "player_name": "Cheryl Ford",
@@ -1010,15 +812,6 @@
       "player_name": "Crystal Langhorne",
       "listed_active": false,
       "profile_path": "/wnba/crystal-langhorne/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 379,
-      "slug": "damiris-dantas",
-      "player_name": "Damiris Dantas",
-      "listed_active": false,
-      "profile_path": "/wnba/damiris-dantas/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1190,24 +983,6 @@
       "player_name": "Elizabeth Kitley",
       "listed_active": false,
       "profile_path": "/wnba/elizabeth-kitley/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 99367,
-      "slug": "emese-hof",
-      "player_name": "Emese Hof",
-      "listed_active": false,
-      "profile_path": "/wnba/emese-hof/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67040,
-      "slug": "emma-cechova",
-      "player_name": "Emma Cechova",
-      "listed_active": false,
-      "profile_path": "/wnba/emma-cechova/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1635,15 +1410,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 743,
-      "slug": "jj-quinerly",
-      "player_name": "JJ Quinerly",
-      "listed_active": false,
-      "profile_path": "/wnba/jj-quinerly/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 595,
       "slug": "jocelyn-willoughby",
       "player_name": "Jocelyn Willoughby",
@@ -1685,15 +1451,6 @@
       "player_name": "Joyner Holmes",
       "listed_active": false,
       "profile_path": "/wnba/joyner-holmes/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 715,
-      "slug": "julie-vanloo",
-      "player_name": "Julie Vanloo",
-      "listed_active": false,
-      "profile_path": "/wnba/julie-vanloo/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1815,15 +1572,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 337,
-      "slug": "kayla-alexander",
-      "player_name": "Kayla Alexander",
-      "listed_active": false,
-      "profile_path": "/wnba/kayla-alexander/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 289,
       "slug": "kayla-pedersen",
       "player_name": "Kayla Pedersen",
@@ -1901,15 +1649,6 @@
       "player_name": "Kia Vaughn",
       "listed_active": false,
       "profile_path": "/wnba/kia-vaughn/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 631,
-      "slug": "kiana-williams",
-      "player_name": "Kiana Williams",
-      "listed_active": false,
-      "profile_path": "/wnba/kiana-williams/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -2076,15 +1815,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 539,
-      "slug": "lexie-brown",
-      "player_name": "Lexie Brown",
-      "listed_active": false,
-      "profile_path": "/wnba/lexie-brown/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 679,
       "slug": "li-meng",
       "player_name": "Li Meng",
@@ -2243,15 +1973,6 @@
       "player_name": "Marie Guelich",
       "listed_active": false,
       "profile_path": "/wnba/marie-guelich/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67145,
-      "slug": "mariella-fasoula",
-      "player_name": "Mariella Fasoula",
-      "listed_active": false,
-      "profile_path": "/wnba/mariella-fasoula/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -2436,15 +2157,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 140035,
-      "slug": "nadia-fingall",
-      "player_name": "Nadia Fingall",
-      "listed_active": false,
-      "profile_path": "/wnba/nadia-fingall/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 354,
       "slug": "nadirah-mckenith",
       "player_name": "Nadirah McKenith",
@@ -2531,15 +2243,6 @@
       "player_name": "Nikki Greene",
       "listed_active": false,
       "profile_path": "/wnba/nikki-greene/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 652,
-      "slug": "nikolina-milic",
-      "player_name": "Nikolina Milic",
-      "listed_active": false,
-      "profile_path": "/wnba/nikolina-milic/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -2967,15 +2670,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 610,
-      "slug": "sug-sutton",
-      "player_name": "Sug Sutton",
-      "listed_active": false,
-      "profile_path": "/wnba/sug-sutton/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 363,
       "slug": "sugar-rodgers",
       "player_name": "Sugar Rodgers",
@@ -3134,15 +2828,6 @@
       "player_name": "Te'a Cooper",
       "listed_active": false,
       "profile_path": "/wnba/tea-cooper/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 564,
-      "slug": "teaira-mccowan",
-      "player_name": "Teaira McCowan",
-      "listed_active": false,
-      "profile_path": "/wnba/teaira-mccowan/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },

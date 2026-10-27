@@ -2,7 +2,7 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-10-25T11:31:15+00:00",
+  "checked_at": "2026-10-27T05:37:13+00:00",
   "stats_updated_at": "2026-10-25T07:30:02+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
@@ -80,25 +80,25 @@
         "name": "Dream",
         "conference": "Eastern Conference"
       },
-      "games_played": 9,
-      "min": 32.11,
-      "fgm": 2.33,
-      "fga": 5.67,
-      "fg_pct": 41.2,
-      "fg3m": 0.78,
-      "fg3a": 2.89,
-      "fg3_pct": 26.9,
-      "ftm": 0.56,
-      "fta": 0.67,
+      "games_played": 10,
+      "min": 32.3,
+      "fgm": 2.2,
+      "fga": 5.6,
+      "fg_pct": 39.3,
+      "fg3m": 0.7,
+      "fg3a": 2.7,
+      "fg3_pct": 25.9,
+      "ftm": 0.5,
+      "fta": 0.6,
       "ft_pct": 83.3,
-      "oreb": 1.89,
-      "dreb": 2.44,
-      "reb": 4.33,
-      "ast": 1.56,
-      "stl": 0.67,
-      "blk": 0.11,
-      "turnover": 0.89,
-      "pts": 6.0,
+      "oreb": 2.2,
+      "dreb": 2.8,
+      "reb": 5.0,
+      "ast": 1.4,
+      "stl": 0.6,
+      "blk": 0.1,
+      "turnover": 1.0,
+      "pts": 5.6,
       "gap_fill": true
     },
     {
@@ -327,6 +327,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392723,
+      "player_id": 658,
+      "date": "2026-10-26T19:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 64,
+      "away_score": 55,
+      "minutes": "34",
+      "pts": 2.0,
+      "ast": 0.0,
+      "reb": 11.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 2.0
+    },
     {
       "game_id": 1392716,
       "player_id": 658,
@@ -768,7 +808,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-09-20",
+  "game_log_window_start": "2026-09-21",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

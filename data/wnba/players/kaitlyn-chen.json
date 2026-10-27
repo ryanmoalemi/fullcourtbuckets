@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-10-25T11:31:15+00:00",
-  "stats_updated_at": "2026-10-25T07:30:02+00:00",
+  "checked_at": "2026-10-27T05:37:13+00:00",
+  "stats_updated_at": "2026-10-27T05:37:13+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -80,25 +80,25 @@
         "name": "Valkyries",
         "conference": "Western Conference"
       },
-      "games_played": 10,
-      "min": 11.6,
-      "fgm": 2.0,
-      "fga": 4.9,
+      "games_played": 11,
+      "min": 10.82,
+      "fgm": 1.82,
+      "fga": 4.45,
       "fg_pct": 40.8,
-      "fg3m": 0.5,
-      "fg3a": 1.0,
+      "fg3m": 0.45,
+      "fg3a": 0.91,
       "fg3_pct": 50.0,
-      "ftm": 0.6,
-      "fta": 0.6,
+      "ftm": 0.55,
+      "fta": 0.55,
       "ft_pct": 100.0,
-      "oreb": 0.3,
-      "dreb": 0.8,
-      "reb": 1.1,
-      "ast": 1.3,
+      "oreb": 0.27,
+      "dreb": 0.73,
+      "reb": 1.0,
+      "ast": 1.18,
       "stl": 0.0,
-      "blk": 0.1,
-      "turnover": 0.8,
-      "pts": 5.1,
+      "blk": 0.09,
+      "turnover": 0.82,
+      "pts": 4.64,
       "gap_fill": true
     },
     {
@@ -167,6 +167,46 @@
     }
   ],
   "recent_completed_games": [
+    {
+      "game_id": 1392723,
+      "player_id": 775,
+      "date": "2026-10-26T19:00:00.000Z",
+      "season": 2026,
+      "postseason": true,
+      "team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "home_team": {
+        "id": 13,
+        "full_name": "Golden State Valkyries",
+        "abbreviation": "GS",
+        "city": "Golden State",
+        "name": "Valkyries",
+        "conference": "Western Conference"
+      },
+      "visitor_team": {
+        "id": 4,
+        "full_name": "Atlanta Dream",
+        "abbreviation": "ATL",
+        "city": "Atlanta",
+        "name": "Dream",
+        "conference": "Eastern Conference"
+      },
+      "home_score": 64,
+      "away_score": 55,
+      "minutes": "3",
+      "pts": 0.0,
+      "ast": 0.0,
+      "reb": 0.0,
+      "stl": 0.0,
+      "blk": 0.0,
+      "turnover": 1.0
+    },
     {
       "game_id": 1392716,
       "player_id": 775,
@@ -646,49 +686,9 @@
       "stl": 0.0,
       "blk": 0.0,
       "turnover": 0.0
-    },
-    {
-      "game_id": 25064,
-      "player_id": 775,
-      "date": "2026-09-20T01:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 9,
-        "full_name": "Seattle Storm",
-        "abbreviation": "SEA",
-        "city": "Seattle",
-        "name": "Storm",
-        "conference": "Western Conference"
-      },
-      "home_score": 70,
-      "away_score": 57,
-      "minutes": "28",
-      "pts": 10.0,
-      "ast": 2.0,
-      "reb": 2.0,
-      "stl": 1.0,
-      "blk": 0.0,
-      "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-09-20",
+  "game_log_window_start": "2026-09-21",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
