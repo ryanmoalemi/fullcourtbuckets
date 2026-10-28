@@ -69,3 +69,12 @@ Any mismatch must be resolved before review. If `crosscheck.mismatches` is not e
 ## Standing article rules
 
 The seven standing rules (verify outside numbers, original data hooks only where a journalist would link, scoped claims, research X/Reddit/news first, live-page check after publishing, never ask for credit, SEO meta plus breadcrumbs and H1/H2) are in `docs/EDITORIAL_STYLE.md` under "Standing article rules". `automation/test_article_rules.py` enforces the mechanical parts.
+
+## Tables and charts in articles (Ryan, Oct. 27, 2026)
+
+- Introduce every table or chart with one or two natural sentences in the article's voice: what it shows and the takeaway, ending in a lead-in such as "Here's every champion since 2002 by Finals scoring:". No "Key finding:" or "Key fact:" labels.
+- The table or chart comes right after its lead-in. Never push it down.
+- Data-through date, methods, source and the CC0 download go in a small, muted caption directly below the table: "Source: WNBA.com box scores. Data through Oct. 26, 2026. Methods: ... Download CSV (CC0)." Never between a heading and its table.
+- In `content/articles/*/article.md`, a paragraph starting with "Data through", "Methods:", "Source:"/"Sources:" or "Download (CC0):" is moved below the section's table by `automation/publish_articles.py` and rendered as `<p class="table-note" data-fcb-dynamic="data-note">` (time-sensitive). Hand-built pages use the same class.
+- Wide tables scroll sideways inside the column on phones with edge shadows and a visible "Scroll for more columns →" hint (`assets/site-nav.css`, `assets/site-nav.js`). No column may be hidden without that cue.
+- Enforced by `automation/test_article_data_notes.py`.

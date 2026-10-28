@@ -1,5 +1,6 @@
 ---
-title: "Finals Game 6 preview: Valkyries can win a title while outscored"
+title: "Finals Game 6 preview: Valkyries one win from the title, but road teams are 2-4 in this spot"
+seo_title: "Game 6 preview: Valkyries one win away; road teams 2-4"
 slug: finals-game-6-preview-valkyries-dream
 date: 2026-10-27
 updated: "2026-10-27 22:40 PT"
@@ -30,6 +31,8 @@ The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the [Atla
 
 ## Road teams closing out a Finals, since 2002
 
+Six road teams since 2002 have played for the title after the home team had already won a game in the series, which is Golden State's spot on Thursday, and only two of them won. Here are those six games:
+
 Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team could clinch the title with a win. "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
 
 | Season | Game | Road team | At | Series before | Final | Road team won? |
@@ -47,7 +50,7 @@ All six games were decided by 7 points or fewer, and three by 2 or fewer. Three 
 
 ## Golden State's points per game would be the lowest for a champion since 2002
 
-Key finding: Golden State has scored 67.0 points per game in the Finals. If it wins Game 6 while scoring 65 or fewer, its 66.7 average would be the lowest for a champion since 2002, below the 2005 Sacramento Monarchs (66.75).
+Golden State has scored 67.0 points per game in the Finals. If it wins Game 6 while scoring 65 or fewer, its 66.7 average would be the lowest for a champion since 2002, just under the 2005 Sacramento Monarchs' 66.75. Here are the lowest-scoring champions since 2002, with Golden State's pace so far:
 
 Data through Finals Game 5, Oct. 26, 2026. Methods: total Finals points divided by Finals games for each champion. Source: WNBA.com box scores. Download (CC0): [champion-points-per-game-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/champion-points-per-game-2002-2025.csv)
 
@@ -64,7 +67,7 @@ If the series goes seven, Golden State would need 132 or fewer combined points i
 
 ## Series leaders through five games
 
-Key finding: Gabby Williams leads the series with 81 points but has made 26 of 90 shots (28.9 percent). Angel Reese has 80 points on 59 shots and 64 rebounds. Kiah Stokes has 17 blocks and 53 rebounds while scoring 28 points.
+Gabby Williams leads the series with 81 points, but she has made 26 of 90 shots (28.9 percent). Angel Reese is one point behind on 59 shots, with 64 rebounds, and Kiah Stokes has 17 blocks and 53 rebounds while scoring 28 points. Here are the series leaders through five games:
 
 Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files built from WNBA.com box scores. Download (CC0): [finals-2026-player-totals-through-game-5.csv](/news/finals-game-6-preview-valkyries-dream/data/finals-2026-player-totals-through-game-5.csv)
 

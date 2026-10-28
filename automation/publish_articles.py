@@ -126,6 +126,77 @@ def table_html(rows: list[str]) -> str:
     )
 
 
+# Data notes (Ryan, Oct. 27, 2026): "Data through / Methods / Source / Download"
+# paragraphs never sit between a heading and its table. The builder moves each one
+# to a small muted caption directly below the next table in its section.
+NOTE_RE = re.compile(r'^(?:\*\*)?(?:Data through|Methods(?: and sources)?:|Sources?:|Download \(CC0\):)', re.I)
+KEY_FINDING_RE = re.compile(r'^(?:\*\*)?Key (?:finding|fact):(?:\*\*)?\s*', re.I)
+NOTE_PARTS_RE = re.compile(r'(?=(?:Data through|Methods(?: and sources)?:|Sources?:|Download \(CC0\):))')
+
+
+def note_text(text: str) -> str:
+    """Order a data note as: Source. Data through. Methods. Download CSV (CC0)."""
+    parts = [part.strip() for part in NOTE_PARTS_RE.split(text) if part.strip()]
+    def rank(part: str) -> int:
+        low = part.lower()
+        if low.startswith('source'):
+            return 0
+        if low.startswith('data through'):
+            return 1
+        if low.startswith('method'):
+            return 2
+        if low.startswith('download'):
+            return 3
+        return 4
+    out = []
+    for part in sorted(parts, key=rank):
+        if part.lower().startswith('download (cc0):'):
+            link = part.split(':', 1)[1].strip()
+            match = re.match(r'\[[^\]]*\]\(([^)]+)\)', link)
+            part = f'[Download CSV (CC0)]({match.group(1)})' if match else 'Download (CC0): ' + link
+        if part and part[-1] not in '.)!?':
+            part += '.'
+        out.append(part)
+    return ' '.join(out)
+
+
+def place_notes(blocks: list) -> list:
+    """Attach each data note directly below a table in its section.
+
+    A note goes under the next table in its section; if the section has no later
+    table, under the section's last earlier table; if it has none, at section end.
+    """
+    sections: list[list] = [[]]
+    for kind, value in blocks:
+        if kind == 'h2':
+            sections.append([])
+        if kind == 'p' and isinstance(value, str):
+            value = KEY_FINDING_RE.sub('', value)
+            if NOTE_RE.match(value):
+                kind, value = 'note', value.replace('**', '')
+        sections[-1].append((kind, value))
+    out: list = []
+    for section in sections:
+        notes: dict[int, list] = {}
+        body = []
+        tables = [i for i, (kind, _) in enumerate(section) if kind == 'table']
+        for i, (kind, value) in enumerate(section):
+            if kind != 'note':
+                continue
+            later = [t for t in tables if t > i]
+            earlier = [t for t in tables if t < i]
+            target = later[0] if later else (earlier[-1] if earlier else len(section))
+            notes.setdefault(target, []).append(value)
+        for i, block in enumerate(section):
+            if block[0] != 'note':
+                body.append(block)
+            if i in notes:
+                body.extend(('note', text) for text in notes[i])
+        body.extend(('note', text) for text in notes.get(len(section), []))
+        out.extend(body)
+    return out
+
+
 def body_html(markdown: str) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
@@ -187,6 +258,7 @@ def body_html(markdown: str) -> str:
     flush_table()
     flush_paragraph()
     flush_bullets()
+    blocks = place_notes(blocks)
 
     html_blocks = []
     first = True
@@ -201,6 +273,11 @@ def body_html(markdown: str) -> str:
             continue
         if kind == 'table':
             html_blocks.append(table_html(value))
+            continue
+        if kind == 'note':
+            html_blocks.append(
+                f'<p class="table-note" data-fcb-dynamic="data-note" data-fcb-source="manual" '
+                f'data-fcb-updated="{date.today().isoformat()}">{inline(note_text(value))}</p><!--/fcb-dynamic-->')
             continue
         if kind == 'dynamic':
             # Body is filled by automation/dynamic_sections.py (same workflow run).
@@ -393,7 +470,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     article_html = links.glue_headline_scores(article_html)
     page = re.sub(r'<article class="article">.*?</article>', article_html, page, count=1, flags=re.S)
     page = links.ensure_article_end(page, ROOT, article, articles)
-    page = set_title(page, title, social, description, article)
+    page = set_title(page, str(meta.get('seo_title') or title), social, description, article)
     ticker = str(meta.get('ticker') or '').strip()
     if ticker or not existed:
         # A new story must not keep the shell page's score in the Now bar.
