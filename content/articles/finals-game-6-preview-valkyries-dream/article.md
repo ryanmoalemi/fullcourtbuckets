@@ -3,7 +3,7 @@ title: "WNBA 2026 Finals: Valkyries can clinch in Game 6, but road teams in this
 seo_title: "WNBA Finals Game 6: Valkyries can clinch; road teams 2-4"
 slug: finals-game-6-preview-valkyries-dream
 date: 2026-10-27
-updated: "2026-10-27 22:40 PT"
+updated: "2026-10-28 08:30 PT"
 description: "Valkyries vs. Dream Game 6 preview: road teams are 2-4 in Finals closeout games when the home team had already won one, since 2002. Tip time, TV, odds, and original data with CSVs."
 category: news
 tags:
@@ -27,7 +27,7 @@ ticker: "Finals Game 6 preview: Valkyries at Dream, Thu 9:30 a.m. PT. Golden Sta
 data_table_first: true
 ---
 
-The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the [Atlanta Dream](/wnba/teams/atlanta-dream/) 3-2. They can win the title in Game 6, but road teams in their spot are 2-4 since 2002.
+The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the [Atlanta Dream](/wnba/teams/atlanta-dream/) 3-2 and can win the title in Game 6. Since 2002, road teams in their spot are 2-4.
 
 ## Road teams closing out a Finals, since 2002
 
@@ -44,13 +44,13 @@ Since 2002, six road teams have led the Finals with a chance to clinch on the ro
 
 Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team led the series and could clinch with a win (winner-take-all deciders excluded). "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
 
-Road teams leading the series with a chance to clinch are 8-8 since 2002; winner-take-all deciders are not counted. They are 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
+Since 2002, road teams leading the series with a chance to clinch are 8-8, not counting winner-take-all deciders. They are 2-4 when the home team had already won a game in the series, which is Golden State's spot Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
 
 All six games were decided by 7 points or fewer, and three by 2 or fewer. Three of the four road teams that lost the closeout won the title at home in the next game: Minnesota in 2015, Washington in 2019 and New York in 2024. The 2007 Detroit Shock lost Game 5 at home to Phoenix. Road teams whose opponent had not yet won a game went 6-4 in their closeout games; the CSV has all 16 games.
 
 ## Golden State's points per game would be the lowest for a champion since 2002
 
-Golden State has scored 67.0 points per game in the Finals. If it wins Game 6 while scoring 65 or fewer, its 66.7 average would be the lowest for a champion since 2002. That would put it just under the 2005 Sacramento Monarchs' 66.75. Here are the lowest-scoring champions since 2002, with Golden State's pace so far:
+Golden State is averaging 67.0 points per game in the Finals. If it wins Game 6 while scoring 65 or fewer, its 66.7 average would be the lowest for a champion since 2002, just under the 2005 Sacramento Monarchs' 66.75. The table shows the lowest-scoring champions since 2002, plus Golden State's pace so far:
 
 | Season | Champion | Finals games | Points | Per game |
 | --- | --- | --- | --- | --- |
@@ -63,11 +63,11 @@ Golden State has scored 67.0 points per game in the Finals. If it wins Game 6 wh
 
 Data through Finals Game 5, Oct. 26, 2026. Methods: total Finals points divided by Finals games for each champion. Source: WNBA.com box scores. Download (CC0): [champion-points-per-game-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/champion-points-per-game-2002-2025.csv)
 
-If the series goes seven, Golden State would need 132 or fewer combined points in Games 6 and 7 to finish under 66.75. Since 2002, only the 2006 Detroit Shock (outscored by 9) and the 2016 Los Angeles Sparks (by 5) won three of the first five Finals games while being outscored, and both won the title. Golden State is at minus-22.
+If the series goes seven, Golden State would need 132 or fewer combined points in Games 6 and 7 to finish under 66.75. Since 2002, only the 2006 Detroit Shock (outscored by 9) and the 2016 Los Angeles Sparks (by 5) have won three of the first five Finals games while being outscored; both won the title. Golden State is at minus-22.
 
 ## Series leaders through five games
 
-Gabby Williams leads the series with 81 points, but she has made 26 of 90 shots (28.9 percent). Angel Reese is one point behind on 59 shots and has 64 rebounds. Kiah Stokes has 17 blocks and 53 rebounds while scoring 28 points. Here are the series leaders through five games:
+Gabby Williams leads the series with 81 points, but she has made 26 of 90 shots (28.9 percent). Angel Reese is one point behind on 59 shots and has 64 rebounds. Kiah Stokes has 17 blocks and 53 rebounds while scoring 28 points. The full leaders table through five games is below:
 
 | Player | Team | PTS | REB | AST | BLK | STL | FG | 3P | FT |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ Kiah Stokes missed all four of her 3-point tries in Games 1-4, then made 3 of 4 
 
 #### Win the turnover battle
 
-The team with fewer turnovers has won all five games. Atlanta had 14 and 8 in its wins, against Golden State's 18 and 15, and 12, 17 and 15 in its losses.
+The team with fewer turnovers has won all five games. Atlanta had 14 and 8 in its wins, against Golden State's 18 and 15, and 12, 17 and 15 in its losses. The team with more points off turnovers has also won every game: Atlanta outscored Golden State 46-20 off turnovers in its two wins, and Golden State won that count 54-22 in its three.
 
 #### Try Reese at the 4
 
@@ -131,9 +131,13 @@ The halftime leader has won all five games. Golden State led at the half by 3, 1
 
 #### Make it a half-court game
 
-Golden State's last two wins were the two slowest games of the series, about 73 and 72 possessions in Games 4 and 5, and Atlanta's paint scoring fell from 40 in Game 3 to 18 and 14.
+Golden State's last two wins were the two slowest games of the series, about 73 and 72 possessions in Games 4 and 5, and Atlanta's paint scoring fell from 40 in Game 3 to 18 and 14. Its fast-break points fell from 19 and 13 in Games 2 and 3 to 2 in each of Games 4 and 5.
 
-Data through Finals Game 5, Oct. 26, 2026. Methods: counts from FCB's play-by-play and box-score files for Games 1-5, built from [WNBA.com box scores](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score). Possessions are estimated as field-goal attempts minus offensive rebounds plus turnovers plus 0.44 times free-throw attempts, averaged for both teams. Paint finishes are points on layups, putbacks, hooks and tip-ins in the play-by-play. Some ideas came from fan discussion this week; we kept only the ones the numbers back up.
+#### Keep the Game 4 starting five
+
+Golden State started Kayla Thornton and Cecilia Zandalasini with Stokes, Gabby Williams and Burton in Games 1-3 and went 1-2. Natalie Nakase started Kaila Charles and Tiffany Hayes in their place in Games 4 and 5, and Golden State won both. The rotation got shorter too: seven Valkyries played at least five minutes in each of those games, down from nine, nine and 10 in Games 1-3, and Burton played about 38 and 37 minutes.
+
+Data through Finals Game 5, Oct. 26, 2026. Methods: counts from FCB's play-by-play and box-score files for Games 1-5, built from [WNBA.com box scores](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score). Possessions are estimated as field-goal attempts minus offensive rebounds plus turnovers plus 0.44 times free-throw attempts, averaged for both teams. Fast-break points, points off turnovers, starters and minutes are from the WNBA.com box scores. Paint finishes are points on layups, putbacks, hooks and tip-ins in the play-by-play. Some ideas came from fan discussion this week; we kept only the ones the numbers back up.
 
 ## Attendance record watch
 
@@ -141,7 +145,7 @@ The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on T
 
 ## Where the trophy would be raised
 
-If Golden State wins Thursday, it would celebrate on a court that has to be ready for an NBA game a few hours later. The Hawks host the Cleveland Cavaliers at State Farm Arena at 8 p.m. ET that night ([NBA.com](https://www.nba.com/hawks/game/0022600144-cavaliers-vs-hawks-atlanta-ga-10-29-2026)), with doors at 7 p.m. ([State Farm Arena](https://www.statefarmarena.com/events/detail/tlanta-hawks-vs-cleveland-cavaliers-tickets-atlanta-georgia-2026-10-29)). That leaves seven and a half hours from Game 6 tip-off to the Hawks' tip, and six and a half to the Hawks' doors, before any overtime or trophy ceremony.
+If Golden State wins Thursday, it would celebrate on a court that has to be ready for an NBA game a few hours later. The Hawks host the Cleveland Cavaliers at State Farm Arena at 8 p.m. ET that night ([NBA.com](https://www.nba.com/hawks/game/0022600144-cavaliers-vs-hawks-atlanta-ga-10-29-2026)), with doors at 7 p.m. ([State Farm Arena](https://www.statefarmarena.com/events/detail/tlanta-hawks-vs-cleveland-cavaliers-tickets-atlanta-georgia-2026-10-29)). That leaves seven and a half hours from Game 6 tip-off to the Hawks' tip, and six and a half hours to the Hawks' doors, before accounting for overtime or a trophy ceremony.
 
 ESPN's Ramona Shelburne reported on NBA Today on Oct. 26 that the celebration "may not actually be on that court." She said, "I've heard there are discussions about whether there's enough time to turn the arena over in time for the fans to celebrate on the court. It could be moved to like a practice court" ([Yahoo Sports](https://sports.yahoo.com/articles/valkyries-could-forced-celebrate-championship-033816709.html)). She later posted on X: "To clarify: There is a resolve to make sure any potential championship that is won Thursday afternoon is celebrated on the court" ([The Big Lead](https://www.thebiglead.com/wnba-finals-face-self-inflicted-embarrassment-potential-trophy-presentation/)). The WNBA's Game 6 announcement does not mention a trophy plan ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)), and we found no Dream or arena statement on it as of Oct. 27.
 
@@ -177,7 +181,9 @@ Game 6 was originally set for 8 p.m. ET. The WNBA moved it to 12:30 p.m. ET at S
 
 Atlanta coach Karl Smesko said he was excited Atlanta could pack a big arena and joked, "I'd like to see it be a national holiday for all WNBA championship games" ([Yahoo Sports](https://sports.yahoo.com/articles/atlanta-dream-coach-quips-wnba-045013911.html)). He also said there would be no pregame shootaround for either team ([Yahoo Sports](https://sports.yahoo.com/articles/don-t-care-angel-reese-013200044.html)). The weekday midday tip drew the loudest reaction on X and r/wnba this week ([Deadline](https://deadline.com/2026/10/wnba-moves-game-6-final-series-midday-thursday-usa-network-1237201077/)).
 
-## Three things to watch
+Dream ownership answered in an open letter to fans on Oct. 27. "Two months ago, when the WNBA finalized playoff dates and times, we raised concerns that the W Finals schedule conflicted with NBA games at State Farm Arena," it said, adding, "Playing a midday game on a Thursday is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)). The Dream announced on Oct. 6 that it will play all of its home games at State Farm Arena starting in 2027 ([Atlanta Dream](https://dream.wnba.com/news/atlanta-dream-announces-multi-year-agreement-to-play-all-home-games-at-state-farm-arena)).
+
+## Four things to watch
 
 The third quarter. Atlanta has won the third quarter 100-68 across five games. Golden State has won the other three quarters 267-257. The team that led at halftime has won all five games, and so has the team with fewer turnovers ([Game 5 recap](/news/valkyries-dream-finals-game-5-recap/)).
 
