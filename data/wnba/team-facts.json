@@ -1,0 +1,3213 @@
+{
+  "source": "WNBA.com team pages (official league site)",
+  "checked_at": "2026-10-28T00:21:03+00:00",
+  "note": "Copied as published. Empty fields stay null and are left blank on the site.",
+  "teams": {
+    "New York Liberty": {
+      "wnba_team_id": 1611661313,
+      "full_name": "New York Liberty",
+      "source": "https://www.wnba.com/team/1611661313",
+      "founded": 1997,
+      "arena": "Barclays Center",
+      "arena_capacity": null,
+      "owner": "Joe Tsai & Clare Wu Tsai",
+      "general_manager": "Jonathan Kolb",
+      "head_coach": "Chris DeMarco",
+      "official_site": "https://liberty.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 89.6,
+          "rank": 5
+        },
+        "rpg": {
+          "value": 35.5,
+          "rank": 3
+        },
+        "apg": {
+          "value": 20.8,
+          "rank": 7
+        },
+        "oppg": {
+          "value": 86.4,
+          "rank": 7
+        }
+      },
+      "championships": [
+        {
+          "year": 2024,
+          "opponent": "Minnesota Lynx"
+        }
+      ],
+      "commissioners_cup": [
+        2023
+      ],
+      "hall_of_fame": [
+        {
+          "player": "Becky Hammon",
+          "position": "G",
+          "seasons": "1999-2006",
+          "inducted": 2023
+        },
+        {
+          "player": "Swin Cash",
+          "position": "F",
+          "seasons": "2014-2016",
+          "inducted": 2022
+        },
+        {
+          "player": "Teresa Weatherspoon",
+          "position": "G",
+          "seasons": "1997-2003",
+          "inducted": 2019
+        },
+        {
+          "player": "Katie Smith",
+          "position": "G",
+          "seasons": "2013",
+          "inducted": 2018
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Tina Charles",
+          "total": 3739
+        },
+        "rebounds": {
+          "player": "Tina Charles",
+          "total": 1723
+        },
+        "assists": {
+          "player": "Teresa Weatherspoon",
+          "total": 1306
+        },
+        "steals": {
+          "player": "Teresa Weatherspoon",
+          "total": 453
+        },
+        "blocks": {
+          "player": "Breanna Stewart",
+          "total": 207
+        }
+      },
+      "roster": {
+        "Satou Sabally": {
+          "number": "0",
+          "height": "6-4",
+          "age": 28,
+          "experience": "6",
+          "country": "Germany",
+          "school": "Oregon",
+          "developmental": false
+        },
+        "Marine Fauthoux": {
+          "number": "4",
+          "height": "5-9",
+          "age": 25,
+          "experience": "R",
+          "country": "France",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Elizabeth Balogun": {
+          "number": "5",
+          "height": "6-2",
+          "age": 26,
+          "experience": "R",
+          "country": "USA",
+          "school": "Duke",
+          "developmental": true
+        },
+        "Rebekah Gardner": {
+          "number": "7",
+          "height": "6-1",
+          "age": 36,
+          "experience": "3",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Rebecca Allen": {
+          "number": "9",
+          "height": "6-2",
+          "age": 33,
+          "experience": "10",
+          "country": "Australia",
+          "school": "Melbourne",
+          "developmental": false
+        },
+        "Madison Scott": {
+          "number": "10",
+          "height": "6-2",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Mississippi",
+          "developmental": true
+        },
+        "Leonie Fiebich": {
+          "number": "13",
+          "height": "6-4",
+          "age": 26,
+          "experience": "2",
+          "country": "Germany",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Raquel Carrera": {
+          "number": "14",
+          "height": "6-3",
+          "age": 24,
+          "experience": "R",
+          "country": "Spain",
+          "school": "Valencia BC",
+          "developmental": false
+        },
+        "Pauline Astier": {
+          "number": "18",
+          "height": "5-11",
+          "age": 24,
+          "experience": "R",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Sabrina Ionescu": {
+          "number": "20",
+          "height": "5-11",
+          "age": 28,
+          "experience": "6",
+          "country": "USA",
+          "school": "Oregon",
+          "developmental": false
+        },
+        "Han Xu": {
+          "number": "21",
+          "height": "6-11",
+          "age": 26,
+          "experience": "3",
+          "country": "China",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Marine Johannes": {
+          "number": "23",
+          "height": "5-10",
+          "age": 31,
+          "experience": "4",
+          "country": "France",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Anneli Maley": {
+          "number": "24",
+          "height": "6-1",
+          "age": 28,
+          "experience": "1",
+          "country": "Australia",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Breanna Stewart": {
+          "number": "30",
+          "height": "6-4",
+          "age": 32,
+          "experience": "9",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Jonquel Jones": {
+          "number": "35",
+          "height": "6-6",
+          "age": 32,
+          "experience": "9",
+          "country": "Bahamas",
+          "school": "George Washington",
+          "developmental": false
+        }
+      }
+    },
+    "Phoenix Mercury": {
+      "wnba_team_id": 1611661317,
+      "full_name": "Phoenix Mercury",
+      "source": "https://www.wnba.com/team/1611661317",
+      "founded": 1997,
+      "arena": "Footprint Center",
+      "arena_capacity": null,
+      "owner": "Mat Ishbia",
+      "general_manager": "Nick U'Ren",
+      "head_coach": "Nate Tibbetts",
+      "official_site": "https://mercury.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 84.4,
+          "rank": 11
+        },
+        "rpg": {
+          "value": 31.6,
+          "rank": 13
+        },
+        "apg": {
+          "value": 20.3,
+          "rank": 10
+        },
+        "oppg": {
+          "value": 87.6,
+          "rank": 8
+        }
+      },
+      "championships": [
+        {
+          "year": 2007,
+          "opponent": "Detroit Shock"
+        },
+        {
+          "year": 2009,
+          "opponent": "Indiana Fever"
+        },
+        {
+          "year": 2014,
+          "opponent": "Chicago Sky"
+        }
+      ],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Michele Timms",
+          "position": "G",
+          "seasons": "1997-2001",
+          "inducted": 2024
+        },
+        {
+          "player": "Nancy Lieberman",
+          "position": "G",
+          "seasons": "1997",
+          "inducted": 1996
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Diana Taurasi",
+          "total": 10646
+        },
+        "rebounds": {
+          "player": "DeWanna Bonner",
+          "total": 2400
+        },
+        "assists": {
+          "player": "Diana Taurasi",
+          "total": 2394
+        },
+        "steals": {
+          "player": "Diana Taurasi",
+          "total": 518
+        },
+        "blocks": {
+          "player": "Brittney Griner",
+          "total": 812
+        }
+      },
+      "roster": {
+        "Kelsey Plum": {
+          "number": "0",
+          "height": "5-8",
+          "age": 32,
+          "experience": "8",
+          "country": "USA",
+          "school": "Washington",
+          "developmental": false
+        },
+        "Noemie Brochant": {
+          "number": "1",
+          "height": "5-11",
+          "age": 27,
+          "experience": "R",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Kahleah Copper": {
+          "number": "2",
+          "height": "6-1",
+          "age": 32,
+          "experience": "10",
+          "country": "USA",
+          "school": "Rutgers",
+          "developmental": false
+        },
+        "Natasha Mack": {
+          "number": "4",
+          "height": "6-4",
+          "age": 28,
+          "experience": "3",
+          "country": "USA",
+          "school": "Oklahoma State",
+          "developmental": false
+        },
+        "Shay Ciezki": {
+          "number": "5",
+          "height": "5-7",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Indiana",
+          "developmental": false
+        },
+        "Saylor Poffenbarger": {
+          "number": "6",
+          "height": "6-2",
+          "age": 23,
+          "experience": "R",
+          "country": null,
+          "school": "Maryland",
+          "developmental": true
+        },
+        "Lexi Held": {
+          "number": "10",
+          "height": "5-10",
+          "age": 26,
+          "experience": "1",
+          "country": "USA",
+          "school": "DePaul",
+          "developmental": false
+        },
+        "Valeriane Ayayi": {
+          "number": "11",
+          "height": "6-1",
+          "age": 32,
+          "experience": "1",
+          "country": "France",
+          "school": "France",
+          "developmental": false
+        },
+        "Kara Dunn": {
+          "number": "12",
+          "height": "5-11",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Southern California",
+          "developmental": true
+        },
+        "Maddy Westbeld": {
+          "number": "21",
+          "height": "6-3",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Alyssa Thomas": {
+          "number": "25",
+          "height": "6-2",
+          "age": 34,
+          "experience": "12",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": false
+        },
+        "Jovana Nogic": {
+          "number": "29",
+          "height": "6-0",
+          "age": 28,
+          "experience": "R",
+          "country": "Serbia",
+          "school": "Providence",
+          "developmental": false
+        },
+        "Kyara Linskens": {
+          "number": "31",
+          "height": "6-4",
+          "age": 29,
+          "experience": "1",
+          "country": "Belgium",
+          "school": null,
+          "developmental": false
+        },
+        "Sami Whitcomb": {
+          "number": "33",
+          "height": "5-10",
+          "age": 38,
+          "experience": "9",
+          "country": "Australia",
+          "school": "Washington",
+          "developmental": false
+        },
+        "Marta Suarez": {
+          "number": "77",
+          "height": "6-3",
+          "age": 24,
+          "experience": "R",
+          "country": "Spain",
+          "school": "TCU",
+          "developmental": false
+        }
+      }
+    },
+    "Las Vegas Aces": {
+      "wnba_team_id": 1611661319,
+      "full_name": "Las Vegas Aces",
+      "source": "https://www.wnba.com/team/1611661319",
+      "founded": 1997,
+      "arena": "Michelob Ultra Arena",
+      "arena_capacity": null,
+      "owner": "Mark Davis",
+      "general_manager": null,
+      "head_coach": "Becky Hammon",
+      "official_site": "https://aces.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 91.5,
+          "rank": 2
+        },
+        "rpg": {
+          "value": 33.4,
+          "rank": 7
+        },
+        "apg": {
+          "value": 22,
+          "rank": 2
+        },
+        "oppg": {
+          "value": 85.8,
+          "rank": 6
+        }
+      },
+      "championships": [
+        {
+          "year": 2022,
+          "opponent": "Connecticut Sun"
+        },
+        {
+          "year": 2023,
+          "opponent": "New York Liberty"
+        },
+        {
+          "year": 2025,
+          "opponent": "New York Liberty"
+        }
+      ],
+      "commissioners_cup": [
+        2022
+      ],
+      "hall_of_fame": [
+        {
+          "player": "Becky Hammon",
+          "position": "G",
+          "seasons": "2007-2014",
+          "inducted": 2023
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "A'ja Wilson",
+          "total": 6792
+        },
+        "rebounds": {
+          "player": "A'ja Wilson",
+          "total": 2878
+        },
+        "assists": {
+          "player": "Chelsea Gray",
+          "total": 1349
+        },
+        "steals": {
+          "player": "Sophia Young-Malcolm",
+          "total": 477
+        },
+        "blocks": {
+          "player": "Margo Dydek",
+          "total": 655
+        }
+      },
+      "roster": {
+        "Jackie Young": {
+          "number": "0",
+          "height": "6-0",
+          "age": 29,
+          "experience": "7",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Kierstan Bell": {
+          "number": "1",
+          "height": "6-1",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Florida Gulf Coast",
+          "developmental": false
+        },
+        "Janiah Barker": {
+          "number": "2",
+          "height": "6-4",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "NaLyssa Smith": {
+          "number": "3",
+          "height": "6-4",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": false
+        },
+        "Ta'Niya Latson": {
+          "number": "5",
+          "height": "5-8",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": true
+        },
+        "Stephanie Talbot": {
+          "number": "7",
+          "height": "6-2",
+          "age": 32,
+          "experience": "7",
+          "country": "Australia",
+          "school": "Adelaide",
+          "developmental": false
+        },
+        "Dana Evans": {
+          "number": "11",
+          "height": "5-6",
+          "age": 28,
+          "experience": "5",
+          "country": "USA",
+          "school": "Louisville",
+          "developmental": false
+        },
+        "Chelsea Gray": {
+          "number": "12",
+          "height": "5-11",
+          "age": 34,
+          "experience": "11",
+          "country": "USA",
+          "school": "Duke",
+          "developmental": false
+        },
+        "Justine Pissott": {
+          "number": "13",
+          "height": "6-4",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Vanderbilt",
+          "developmental": false
+        },
+        "Mai Yamamoto": {
+          "number": "18",
+          "height": "5-5",
+          "age": 27,
+          "experience": "R",
+          "country": "Japan",
+          "school": null,
+          "developmental": false
+        },
+        "Kalani Brown": {
+          "number": "20",
+          "height": "6-7",
+          "age": 29,
+          "experience": "6",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": false
+        },
+        "Brianna Turner": {
+          "number": "21",
+          "height": "6-3",
+          "age": 30,
+          "experience": "7",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "A'ja Wilson": {
+          "number": "22",
+          "height": "6-4",
+          "age": 30,
+          "experience": "8",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Jewell Loyd": {
+          "number": "24",
+          "height": "5-11",
+          "age": 33,
+          "experience": "11",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Cheyenne Parker-Tyus": {
+          "number": "32",
+          "height": "6-4",
+          "age": 34,
+          "experience": "11",
+          "country": "USA",
+          "school": "Middle Tennessee",
+          "developmental": false
+        }
+      }
+    },
+    "Los Angeles Sparks": {
+      "wnba_team_id": 1611661320,
+      "full_name": "Los Angeles Sparks",
+      "source": "https://www.wnba.com/team/1611661320",
+      "founded": 1997,
+      "arena": "Crypto.com Arena",
+      "arena_capacity": "19060",
+      "owner": "Earvin Johnson and Mark Walter",
+      "general_manager": "Reagan Pebley",
+      "head_coach": "Lynne Roberts",
+      "official_site": "https://sparks.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 87,
+          "rank": 7
+        },
+        "rpg": {
+          "value": 31,
+          "rank": 14
+        },
+        "apg": {
+          "value": 21.8,
+          "rank": 4
+        },
+        "oppg": {
+          "value": 91.3,
+          "rank": 14
+        }
+      },
+      "championships": [
+        {
+          "year": 2001,
+          "opponent": "Charlotte Sting"
+        },
+        {
+          "year": 2002,
+          "opponent": "New York Liberty"
+        },
+        {
+          "year": 2016,
+          "opponent": "Minnesota Lynx"
+        }
+      ],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Seimone Augustus",
+          "position": "G",
+          "seasons": "2020",
+          "inducted": 2024
+        },
+        {
+          "player": "Teresa Weatherspoon",
+          "position": "G",
+          "seasons": "2004",
+          "inducted": 2019
+        },
+        {
+          "player": "Tina Thompson",
+          "position": "F",
+          "seasons": "2009-2011",
+          "inducted": 2018
+        },
+        {
+          "player": "Lisa Leslie",
+          "position": "C",
+          "seasons": "1997-2009",
+          "inducted": 2015
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Nneka Ogwumike",
+          "total": 6625
+        },
+        "rebounds": {
+          "player": "Lisa Leslie",
+          "total": 3307
+        },
+        "assists": {
+          "player": "Candace Parker",
+          "total": 1331
+        },
+        "steals": {
+          "player": "Nneka Ogwumike",
+          "total": 599
+        },
+        "blocks": {
+          "player": "Lisa Leslie",
+          "total": 822
+        }
+      },
+      "roster": {
+        "Shyanne Sellers": {
+          "number": "0",
+          "height": "6-2",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": true
+        },
+        "Monique Akoa Makani": {
+          "number": "1",
+          "height": "5-11",
+          "age": 25,
+          "experience": "1",
+          "country": "Cameroon",
+          "school": null,
+          "developmental": false
+        },
+        "Chance Gray": {
+          "number": "2",
+          "height": "5-9",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Ohio State",
+          "developmental": false
+        },
+        "Tonie Morgan": {
+          "number": "4",
+          "height": null,
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Kentucky",
+          "developmental": false
+        },
+        "Dearica Hamby": {
+          "number": "5",
+          "height": "6-3",
+          "age": 32,
+          "experience": "11",
+          "country": "USA",
+          "school": "Wake Forest",
+          "developmental": false
+        },
+        "Jihyun Park": {
+          "number": "6",
+          "height": "6-1",
+          "age": 26,
+          "experience": "R",
+          "country": "South Korea",
+          "school": null,
+          "developmental": false
+        },
+        "Ariel Atkins": {
+          "number": "7",
+          "height": "5-10",
+          "age": 30,
+          "experience": "8",
+          "country": "USA",
+          "school": "Texas-Austin",
+          "developmental": false
+        },
+        "Rae Burrell": {
+          "number": "12",
+          "height": "6-2",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "Aaliyah Nye": {
+          "number": "13",
+          "height": "6-0",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Alabama",
+          "developmental": false
+        },
+        "Ndjakalenga Mwenentanda": {
+          "number": "15",
+          "height": "6-2",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Vanderbilt",
+          "developmental": true
+        },
+        "Erica Wheeler": {
+          "number": "17",
+          "height": "5-7",
+          "age": 35,
+          "experience": "10",
+          "country": "USA",
+          "school": "Rutgers",
+          "developmental": false
+        },
+        "Cameron Brink": {
+          "number": "22",
+          "height": "6-4",
+          "age": 24,
+          "experience": "2",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Nneka Ogwumike": {
+          "number": "30",
+          "height": "6-2",
+          "age": 36,
+          "experience": "14",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Emma Cannon": {
+          "number": "32",
+          "height": "6-2",
+          "age": 37,
+          "experience": "7",
+          "country": "USA",
+          "school": "Florida Southern",
+          "developmental": false
+        }
+      }
+    },
+    "Dallas Wings": {
+      "wnba_team_id": 1611661321,
+      "full_name": "Dallas Wings",
+      "source": "https://www.wnba.com/team/1611661321",
+      "founded": 1998,
+      "arena": "College Park Center",
+      "arena_capacity": null,
+      "owner": "Bill Cameron",
+      "general_manager": "Curt Miller",
+      "head_coach": "Jose Fernandez",
+      "official_site": "https://wings.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 89.4,
+          "rank": 6
+        },
+        "rpg": {
+          "value": 34.6,
+          "rank": 4
+        },
+        "apg": {
+          "value": 22.3,
+          "rank": 1
+        },
+        "oppg": {
+          "value": 85.3,
+          "rank": 5
+        }
+      },
+      "championships": [
+        {
+          "year": 2003,
+          "opponent": "Los Angeles Sparks"
+        },
+        {
+          "year": 2006,
+          "opponent": "Sacramento Monarchs"
+        },
+        {
+          "year": 2008,
+          "opponent": "San Antonio Silver Stars"
+        }
+      ],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Swin Cash",
+          "position": "F",
+          "seasons": "2002-2007",
+          "inducted": 2022
+        },
+        {
+          "player": "Katie Smith",
+          "position": "G",
+          "seasons": "2005-2009",
+          "inducted": 2018
+        },
+        {
+          "player": "Sheryl Swoopes",
+          "position": "F",
+          "seasons": "2011",
+          "inducted": 2016
+        },
+        {
+          "player": "Lynette Woodard",
+          "position": "G",
+          "seasons": "1998",
+          "inducted": 2004
+        },
+        {
+          "player": "Nancy Lieberman",
+          "position": "G",
+          "seasons": "2008",
+          "inducted": 1996
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Arike Ogunbowale",
+          "total": 5136
+        },
+        "rebounds": {
+          "player": "Cheryl Ford",
+          "total": 1907
+        },
+        "assists": {
+          "player": "Arike Ogunbowale",
+          "total": 1034
+        },
+        "steals": {
+          "player": "Deanna Nolan",
+          "total": 388
+        },
+        "blocks": {
+          "player": "Ruth Riley",
+          "total": 206
+        }
+      },
+      "roster": {
+        "Odyssey Sims": {
+          "number": "1",
+          "height": "5-8",
+          "age": 34,
+          "experience": "12",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": false
+        },
+        "Deja Kelly": {
+          "number": "2",
+          "height": "5-8",
+          "age": 25,
+          "experience": "R",
+          "country": "USA",
+          "school": "Oregon",
+          "developmental": true
+        },
+        "Paige Bueckers": {
+          "number": "5",
+          "height": "6-0",
+          "age": 25,
+          "experience": "1",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Costanza Verona": {
+          "number": "6",
+          "height": "5-6",
+          "age": 27,
+          "experience": "R",
+          "country": "Italy",
+          "school": null,
+          "developmental": true
+        },
+        "Alysha Clark": {
+          "number": "7",
+          "height": "5-11",
+          "age": 39,
+          "experience": "13",
+          "country": "USA",
+          "school": "Middle Tennessee",
+          "developmental": false
+        },
+        "Alanna Smith": {
+          "number": "8",
+          "height": "6-4",
+          "age": 30,
+          "experience": "7",
+          "country": "Australia",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Aziaha James": {
+          "number": "10",
+          "height": "5-10",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "North Carolina State",
+          "developmental": false
+        },
+        "Christyn Williams": {
+          "number": "13",
+          "height": "5-11",
+          "age": 26,
+          "experience": "1",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": true
+        },
+        "Maddy Siegrist": {
+          "number": "20",
+          "height": "6-2",
+          "age": 26,
+          "experience": "3",
+          "country": "USA",
+          "school": "Villanova",
+          "developmental": false
+        },
+        "Arike Ogunbowale": {
+          "number": "24",
+          "height": "5-8",
+          "age": 29,
+          "experience": "7",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Li Yueru": {
+          "number": "28",
+          "height": "6-7",
+          "age": 27,
+          "experience": "3",
+          "country": "China",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Haley Jones": {
+          "number": "30",
+          "height": "6-1",
+          "age": 25,
+          "experience": "3",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Jessica Shepard": {
+          "number": "32",
+          "height": "6-4",
+          "age": 30,
+          "experience": "5",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Kitija Laksa": {
+          "number": "33",
+          "height": "6-1",
+          "age": 30,
+          "experience": "1",
+          "country": "Latvia",
+          "school": "South Florida",
+          "developmental": false
+        },
+        "Awak Kuier": {
+          "number": "34",
+          "height": "6-6",
+          "age": 25,
+          "experience": "3",
+          "country": "Finland",
+          "school": "Ragusa",
+          "developmental": false
+        },
+        "Azzi Fudd": {
+          "number": "35",
+          "height": "5-11",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        }
+      }
+    },
+    "Washington Mystics": {
+      "wnba_team_id": 1611661322,
+      "full_name": "Washington Mystics",
+      "source": "https://www.wnba.com/team/1611661322",
+      "founded": 1998,
+      "arena": "Entertainment & Sports Arena",
+      "arena_capacity": "20647",
+      "owner": "Ted Leonsis",
+      "general_manager": "Jamila Wideman",
+      "head_coach": "Sydney Johnson",
+      "official_site": "https://mystics.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 84,
+          "rank": 12
+        },
+        "rpg": {
+          "value": 37.7,
+          "rank": 1
+        },
+        "apg": {
+          "value": 19.7,
+          "rank": 11
+        },
+        "oppg": {
+          "value": 82.7,
+          "rank": 2
+        }
+      },
+      "championships": [
+        {
+          "year": 2019,
+          "opponent": "Connecticut Sun"
+        }
+      ],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Katie Smith",
+          "position": "G",
+          "seasons": "2010",
+          "inducted": 2018
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Alana Beard",
+          "total": 3128
+        },
+        "rebounds": {
+          "player": "Chamique Holdsclaw",
+          "total": 1459
+        },
+        "assists": {
+          "player": "Natasha Cloud",
+          "total": 1259
+        },
+        "steals": {
+          "player": "Alana Beard",
+          "total": 364
+        },
+        "blocks": {
+          "player": "Emma Meesseman",
+          "total": 195
+        }
+      },
+      "roster": {
+        "Shakira Austin": {
+          "number": "0",
+          "height": "6-5",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Mississippi",
+          "developmental": false
+        },
+        "Alicia Florez": {
+          "number": "2",
+          "height": "5-9",
+          "age": 22,
+          "experience": "R",
+          "country": "Spain",
+          "school": null,
+          "developmental": false
+        },
+        "Rori Harmon": {
+          "number": "3",
+          "height": "5-6",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Texas",
+          "developmental": true
+        },
+        "Darianna Littlepage-Buggs": {
+          "number": "5",
+          "height": "6-1",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": true
+        },
+        "Georgia Amoore": {
+          "number": "8",
+          "height": "5-6",
+          "age": 25,
+          "experience": "R",
+          "country": "Australia",
+          "school": "Kentucky",
+          "developmental": false
+        },
+        "Michaela Onyenwere": {
+          "number": "12",
+          "height": "6-0",
+          "age": 27,
+          "experience": "5",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Cassandre Prosper": {
+          "number": "18",
+          "height": "6-3",
+          "age": 21,
+          "experience": "R",
+          "country": "Canada",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Sonia Citron": {
+          "number": "22",
+          "height": "6-1",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Cotie McMahon": {
+          "number": "23",
+          "height": "6-0",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Mississippi",
+          "developmental": false
+        },
+        "Angela Dugalic": {
+          "number": "32",
+          "height": "6-4",
+          "age": 24,
+          "experience": "R",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Lucy Olsen": {
+          "number": "33",
+          "height": "5-10",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "Iowa",
+          "developmental": false
+        },
+        "Betnijah Laney-Hamilton": {
+          "number": "44",
+          "height": "6-0",
+          "age": 32,
+          "experience": "9",
+          "country": "USA",
+          "school": "Rutgers",
+          "developmental": false
+        },
+        "Kiki Iriafen": {
+          "number": "44",
+          "height": "6-3",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "Southern California",
+          "developmental": false
+        },
+        "Lauren Betts": {
+          "number": "51",
+          "height": "6-7",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        }
+      }
+    },
+    "Connecticut Sun": {
+      "wnba_team_id": 1611661323,
+      "full_name": "Connecticut Sun",
+      "source": "https://www.wnba.com/team/1611661323",
+      "founded": 1999,
+      "arena": "Mohegan Sun Arena",
+      "arena_capacity": null,
+      "owner": "Mohegan Sun",
+      "general_manager": "Morgan Tuck",
+      "head_coach": "Rachid Meziane",
+      "official_site": "https://sun.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 78.9,
+          "rank": 15
+        },
+        "rpg": {
+          "value": 32.6,
+          "rank": 11
+        },
+        "apg": {
+          "value": 19.1,
+          "rank": 15
+        },
+        "oppg": {
+          "value": 88.1,
+          "rank": 9
+        }
+      },
+      "championships": [],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Lindsay Whalen",
+          "position": "G",
+          "seasons": "2004-2009",
+          "inducted": 2022
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Nykesha Sales",
+          "total": 3955
+        },
+        "rebounds": {
+          "player": "Alyssa Thomas",
+          "total": 2396
+        },
+        "assists": {
+          "player": "Alyssa Thomas",
+          "total": 1463
+        },
+        "steals": {
+          "player": "Alyssa Thomas",
+          "total": 494
+        },
+        "blocks": {
+          "player": "Jonquel Jones",
+          "total": 270
+        }
+      },
+      "roster": {
+        "Diamond Miller": {
+          "number": "1",
+          "height": "6-1",
+          "age": 25,
+          "experience": "3",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": false
+        },
+        "Hailey Van Lith": {
+          "number": "2",
+          "height": "5-9",
+          "age": 25,
+          "experience": "1",
+          "country": "USA",
+          "school": "TCU",
+          "developmental": true
+        },
+        "Ashlon Jackson": {
+          "number": "3",
+          "height": "6-0",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Duke",
+          "developmental": false
+        },
+        "Charlisse Leger-Walker": {
+          "number": "4",
+          "height": "5-10",
+          "age": 25,
+          "experience": "R",
+          "country": "New Zealand",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Gianna Kneepkens": {
+          "number": "5",
+          "height": "5-11",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Aaliyah Edwards": {
+          "number": "8",
+          "height": "6-3",
+          "age": 24,
+          "experience": "2",
+          "country": "Canada",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Olivia Nelson-Ododa": {
+          "number": "10",
+          "height": "6-5",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Rayah Marshall": {
+          "number": "13",
+          "height": "6-4",
+          "age": 22,
+          "experience": "1",
+          "country": "USA",
+          "school": "Southern California",
+          "developmental": true
+        },
+        "Raegan Beers": {
+          "number": "15",
+          "height": "6-4",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Oklahoma",
+          "developmental": false
+        },
+        "Saniya Rivers": {
+          "number": "22",
+          "height": "6-1",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "North Carolina State",
+          "developmental": false
+        },
+        "Kennedy Burke": {
+          "number": "25",
+          "height": "6-1",
+          "age": 29,
+          "experience": "6",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Nell Angloma": {
+          "number": "33",
+          "height": "6-1",
+          "age": 20,
+          "experience": "R",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Brittney Griner": {
+          "number": "42",
+          "height": "6-9",
+          "age": 36,
+          "experience": "12",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": false
+        },
+        "Leila Lacan": {
+          "number": "47",
+          "height": "5-11",
+          "age": 22,
+          "experience": "1",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        }
+      }
+    },
+    "Minnesota Lynx": {
+      "wnba_team_id": 1611661324,
+      "full_name": "Minnesota Lynx",
+      "source": "https://www.wnba.com/team/1611661324",
+      "founded": 1999,
+      "arena": "Target Center",
+      "arena_capacity": "19356",
+      "owner": "Glen Taylor",
+      "general_manager": null,
+      "head_coach": "Cheryl Reeve",
+      "official_site": "https://lynx.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 90.8,
+          "rank": 4
+        },
+        "rpg": {
+          "value": 34.5,
+          "rank": 5
+        },
+        "apg": {
+          "value": 21.9,
+          "rank": 3
+        },
+        "oppg": {
+          "value": 83.7,
+          "rank": 3
+        }
+      },
+      "championships": [
+        {
+          "year": 2011,
+          "opponent": "Atlanta Dream"
+        },
+        {
+          "year": 2013,
+          "opponent": "Atlanta Dream"
+        },
+        {
+          "year": 2015,
+          "opponent": "Indiana Fever"
+        },
+        {
+          "year": 2017,
+          "opponent": "Los Angeles Sparks"
+        }
+      ],
+      "commissioners_cup": [
+        2024
+      ],
+      "hall_of_fame": [
+        {
+          "player": "Maya Moore",
+          "position": "F",
+          "seasons": "2011-2018",
+          "inducted": 2025
+        },
+        {
+          "player": "Sylvia Fowles",
+          "position": "C",
+          "seasons": "2015-2022",
+          "inducted": 2025
+        },
+        {
+          "player": "Seimone Augustus",
+          "position": "G",
+          "seasons": "2006-2019",
+          "inducted": 2024
+        },
+        {
+          "player": "Lindsay Whalen",
+          "position": "G",
+          "seasons": "2010-2018",
+          "inducted": 2022
+        },
+        {
+          "player": "Katie Smith",
+          "position": "G",
+          "seasons": "1999-2005",
+          "inducted": 2018
+        },
+        {
+          "player": "Teresa Edwards",
+          "position": "G",
+          "seasons": "2003-2004",
+          "inducted": 2011
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Seimone Augustus",
+          "total": 5881
+        },
+        "rebounds": {
+          "player": "Sylvia Fowles",
+          "total": 2174
+        },
+        "assists": {
+          "player": "Lindsay Whalen",
+          "total": 1384
+        },
+        "steals": {
+          "player": "Maya Moore",
+          "total": 449
+        },
+        "blocks": {
+          "player": "Sylvia Fowles",
+          "total": 345
+        }
+      },
+      "roster": {
+        "Elena Buenavida": {
+          "number": null,
+          "height": "5-9",
+          "age": 22,
+          "experience": "R",
+          "country": "Spain",
+          "school": null,
+          "developmental": true
+        },
+        "Natasha Howard": {
+          "number": "1",
+          "height": "6-2",
+          "age": 35,
+          "experience": "12",
+          "country": "USA",
+          "school": "Florida State",
+          "developmental": false
+        },
+        "Liatu King": {
+          "number": "2",
+          "height": "5-11",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": true
+        },
+        "Maya Caldwell": {
+          "number": "3",
+          "height": "5-11",
+          "age": 27,
+          "experience": "4",
+          "country": "USA",
+          "school": "Georgia",
+          "developmental": false
+        },
+        "Aari McDonald": {
+          "number": "4",
+          "height": "5-6",
+          "age": 28,
+          "experience": "5",
+          "country": "USA",
+          "school": "Arizona",
+          "developmental": false
+        },
+        "Olivia Miles": {
+          "number": "5",
+          "height": "5-10",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "TCU",
+          "developmental": false
+        },
+        "Anastasiia Olairi Kosu": {
+          "number": "7",
+          "height": "6-1",
+          "age": 21,
+          "experience": "1",
+          "country": "Russia",
+          "school": null,
+          "developmental": false
+        },
+        "Antonia Delaere": {
+          "number": "8",
+          "height": "5-11",
+          "age": 32,
+          "experience": "R",
+          "country": "Belgium",
+          "school": null,
+          "developmental": false
+        },
+        "Courtney Williams": {
+          "number": "10",
+          "height": "5-8",
+          "age": 32,
+          "experience": "10",
+          "country": "USA",
+          "school": "South Florida",
+          "developmental": false
+        },
+        "Nia Brodie": {
+          "number": "12",
+          "height": "6-1",
+          "age": 31,
+          "experience": "9",
+          "country": "USA",
+          "school": "Northwestern",
+          "developmental": false
+        },
+        "Dorka Juhasz": {
+          "number": "14",
+          "height": "6-5",
+          "age": 26,
+          "experience": "2",
+          "country": "Hungary",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Kayla McBride": {
+          "number": "21",
+          "height": "5-11",
+          "age": 34,
+          "experience": "12",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Emma Cechova": {
+          "number": "22",
+          "height": "6-4",
+          "age": 22,
+          "experience": "R",
+          "country": "Czech Republic",
+          "school": "Czech Republic",
+          "developmental": false
+        },
+        "Napheesa Collier": {
+          "number": "24",
+          "height": "6-1",
+          "age": 30,
+          "experience": "7",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Chloe Bibby": {
+          "number": "55",
+          "height": "6-2",
+          "age": 28,
+          "experience": "1",
+          "country": "Australia",
+          "school": "Maryland",
+          "developmental": false
+        }
+      }
+    },
+    "Indiana Fever": {
+      "wnba_team_id": 1611661325,
+      "full_name": "Indiana Fever",
+      "source": "https://www.wnba.com/team/1611661325",
+      "founded": 2000,
+      "arena": "Gainbridge Fieldhouse ",
+      "arena_capacity": "18345",
+      "owner": "Herbert Simon",
+      "general_manager": "Amber Cox",
+      "head_coach": "Stephanie White",
+      "official_site": "https://fever.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 96,
+          "rank": 1
+        },
+        "rpg": {
+          "value": 33.4,
+          "rank": 7
+        },
+        "apg": {
+          "value": 20.7,
+          "rank": 8
+        },
+        "oppg": {
+          "value": 90.4,
+          "rank": 11
+        }
+      },
+      "championships": [
+        {
+          "year": 2012,
+          "opponent": "Minnesota Lynx"
+        }
+      ],
+      "commissioners_cup": [
+        2025
+      ],
+      "hall_of_fame": [
+        {
+          "player": "Yolanda Griffith",
+          "position": "C",
+          "seasons": "2009",
+          "inducted": 2021
+        },
+        {
+          "player": "Tamika Catchings",
+          "position": "F",
+          "seasons": "2002-2016",
+          "inducted": 2020
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Tamika Catchings",
+          "total": 7380
+        },
+        "rebounds": {
+          "player": "Tamika Catchings",
+          "total": 3316
+        },
+        "assists": {
+          "player": "Tamika Catchings",
+          "total": 1488
+        },
+        "steals": {
+          "player": "Tamika Catchings",
+          "total": 1074
+        },
+        "blocks": {
+          "player": "Tamika Catchings",
+          "total": 385
+        }
+      },
+      "roster": {
+        "Kelsey Mitchell": {
+          "number": "0",
+          "height": "5-8",
+          "age": 30,
+          "experience": "8",
+          "country": "USA",
+          "school": "Ohio State",
+          "developmental": false
+        },
+        "Michelle Onyiah": {
+          "number": "1",
+          "height": "6-3",
+          "age": 24,
+          "experience": "R",
+          "country": "USA",
+          "school": "California-Berkeley",
+          "developmental": true
+        },
+        "Myisha Hines-Allen": {
+          "number": "2",
+          "height": "6-2",
+          "age": 31,
+          "experience": "8",
+          "country": "USA",
+          "school": "Louisville",
+          "developmental": false
+        },
+        "Raven Johnson": {
+          "number": "3",
+          "height": "5-8",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Mercedes Russell": {
+          "number": "5",
+          "height": "6-6",
+          "age": 31,
+          "experience": "8",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "Aliyah Boston": {
+          "number": "7",
+          "height": "6-5",
+          "age": 24,
+          "experience": "3",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Sophie Cunningham": {
+          "number": "8",
+          "height": "6-1",
+          "age": 30,
+          "experience": "7",
+          "country": "USA",
+          "school": "Missouri",
+          "developmental": false
+        },
+        "Lexie Hull": {
+          "number": "10",
+          "height": "6-2",
+          "age": 27,
+          "experience": "4",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Damiris Dantas": {
+          "number": "12",
+          "height": "6-4",
+          "age": 33,
+          "experience": "10",
+          "country": "Brazil",
+          "school": "Real Celta Vigo",
+          "developmental": false
+        },
+        "Grace VanSlooten": {
+          "number": "14",
+          "height": "6-3",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Michigan State",
+          "developmental": false
+        },
+        "Makayla Timpson": {
+          "number": "21",
+          "height": "6-2",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Florida State",
+          "developmental": false
+        },
+        "Caitlin Clark": {
+          "number": "22",
+          "height": "6-0",
+          "age": 24,
+          "experience": "2",
+          "country": "USA",
+          "school": "Iowa",
+          "developmental": false
+        },
+        "Bree Hall": {
+          "number": "23",
+          "height": "6-1",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": true
+        },
+        "Monique Billings": {
+          "number": "25",
+          "height": "6-4",
+          "age": 30,
+          "experience": "8",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Tyasha Harris": {
+          "number": "52",
+          "height": "5-10",
+          "age": 28,
+          "experience": "6",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        }
+      }
+    },
+    "Portland Fire": {
+      "wnba_team_id": 1611661327,
+      "full_name": "Portland Fire",
+      "source": "https://www.wnba.com/team/1611661327",
+      "founded": 2000,
+      "arena": "Moda Center",
+      "arena_capacity": "19980",
+      "owner": "Raj Sports",
+      "general_manager": "Vanja Černivec",
+      "head_coach": "Alex Sarama",
+      "official_site": "https://fire.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 86.2,
+          "rank": 9
+        },
+        "rpg": {
+          "value": 30.2,
+          "rank": 15
+        },
+        "apg": {
+          "value": 20.4,
+          "rank": 9
+        },
+        "oppg": {
+          "value": 91,
+          "rank": 13
+        }
+      },
+      "championships": [],
+      "commissioners_cup": [],
+      "hall_of_fame": [],
+      "franchise_leaders": {
+        "points": {
+          "player": "Sylvia Crawley",
+          "total": 935
+        },
+        "rebounds": {
+          "player": "Sylvia Crawley",
+          "total": 522
+        },
+        "assists": {
+          "player": "Carla Leite",
+          "total": 245
+        },
+        "steals": {
+          "player": "Stacey Thomas",
+          "total": 126
+        },
+        "blocks": {
+          "player": "Sylvia Crawley",
+          "total": 87
+        }
+      },
+      "roster": {
+        "Carla Leite": {
+          "number": "0",
+          "height": "5-9",
+          "age": 22,
+          "experience": "1",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Sania Feagin": {
+          "number": "1",
+          "height": "6-3",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": true
+        },
+        "Jordan Harrison": {
+          "number": "2",
+          "height": "5-6",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "West Virginia",
+          "developmental": false
+        },
+        "Sarah Ashlee Barker": {
+          "number": "3",
+          "height": "6-0",
+          "age": 25,
+          "experience": "1",
+          "country": "USA",
+          "school": "Alabama",
+          "developmental": false
+        },
+        "Bridget Carleton": {
+          "number": "6",
+          "height": "6-2",
+          "age": 29,
+          "experience": "7",
+          "country": "Canada",
+          "school": "Iowa State",
+          "developmental": false
+        },
+        "Teja Oblak": {
+          "number": "7",
+          "height": "5-8",
+          "age": 35,
+          "experience": "R",
+          "country": "Slovenia",
+          "school": null,
+          "developmental": false
+        },
+        "Amy Okonkwo": {
+          "number": "8",
+          "height": "6-2",
+          "age": 30,
+          "experience": "1",
+          "country": "USA",
+          "school": "TCU",
+          "developmental": false
+        },
+        "Nyadiew Puoch": {
+          "number": "13",
+          "height": "6-3",
+          "age": 22,
+          "experience": "R",
+          "country": "Australia",
+          "school": "Southside",
+          "developmental": false
+        },
+        "Luisa Geiselsoder": {
+          "number": "15",
+          "height": "6-4",
+          "age": 26,
+          "experience": "1",
+          "country": "Germany",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Megan DiLeo": {
+          "number": "17",
+          "height": "6-4",
+          "age": 29,
+          "experience": "7",
+          "country": "USA",
+          "school": "Iowa",
+          "developmental": false
+        },
+        "Frieda Buhner": {
+          "number": "20",
+          "height": "6-2",
+          "age": 22,
+          "experience": "R",
+          "country": "Germany",
+          "school": null,
+          "developmental": false
+        },
+        "Emily Engstler": {
+          "number": "21",
+          "height": "6-1",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Louisville",
+          "developmental": false
+        },
+        "Charisma Osborne": {
+          "number": "24",
+          "height": "5-9",
+          "age": 25,
+          "experience": "1",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": true
+        },
+        "Serah Williams": {
+          "number": "25",
+          "height": "6-4",
+          "age": 22,
+          "experience": "R",
+          "country": "Canada",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Karlie Samuelson": {
+          "number": "44",
+          "height": "6-0",
+          "age": 31,
+          "experience": "7",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": false
+        },
+        "Holly Winterburn": {
+          "number": "77",
+          "height": "5-11",
+          "age": 26,
+          "experience": "R",
+          "country": "United Kingdom",
+          "school": "Oregon",
+          "developmental": false
+        }
+      }
+    },
+    "Seattle Storm": {
+      "wnba_team_id": 1611661328,
+      "full_name": "Seattle Storm",
+      "source": "https://www.wnba.com/team/1611661328",
+      "founded": 2000,
+      "arena": "Climate Pledge Arena",
+      "arena_capacity": "17072",
+      "owner": "Ginny Gilder, Dawn Trudeau, and Lisa Brummel",
+      "general_manager": "Talisa Rhea",
+      "head_coach": "Sonia Raman",
+      "official_site": "https://storm.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 82.2,
+          "rank": 13
+        },
+        "rpg": {
+          "value": 33.9,
+          "rank": 6
+        },
+        "apg": {
+          "value": 19.2,
+          "rank": 14
+        },
+        "oppg": {
+          "value": 88.9,
+          "rank": 10
+        }
+      },
+      "championships": [
+        {
+          "year": 2004,
+          "opponent": "Connecticut Sun"
+        },
+        {
+          "year": 2010,
+          "opponent": "Atlanta Dream"
+        },
+        {
+          "year": 2018,
+          "opponent": "Washington Mystics"
+        },
+        {
+          "year": 2020,
+          "opponent": "Las Vegas Aces"
+        }
+      ],
+      "commissioners_cup": [
+        2021
+      ],
+      "hall_of_fame": [
+        {
+          "player": "Sue Bird",
+          "position": "G",
+          "seasons": "2002-2022",
+          "inducted": 2025
+        },
+        {
+          "player": "Swin Cash",
+          "position": "F",
+          "seasons": "2008-2011",
+          "inducted": 2022
+        },
+        {
+          "player": "Lauren Jackson",
+          "position": "F",
+          "seasons": "2001-2012",
+          "inducted": 2021
+        },
+        {
+          "player": "Yolanda Griffith",
+          "position": "C",
+          "seasons": "2008",
+          "inducted": 2021
+        },
+        {
+          "player": "Katie Smith",
+          "position": "G",
+          "seasons": "2011-2012",
+          "inducted": 2018
+        },
+        {
+          "player": "Tina Thompson",
+          "position": "F",
+          "seasons": "2012-2013",
+          "inducted": 2018
+        },
+        {
+          "player": "Sheryl Swoopes",
+          "position": "F",
+          "seasons": "2008",
+          "inducted": 2016
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Sue Bird",
+          "total": 6803
+        },
+        "rebounds": {
+          "player": "Lauren Jackson",
+          "total": 2447
+        },
+        "assists": {
+          "player": "Sue Bird",
+          "total": 3234
+        },
+        "steals": {
+          "player": "Sue Bird",
+          "total": 724
+        },
+        "blocks": {
+          "player": "Lauren Jackson",
+          "total": 586
+        }
+      },
+      "roster": {
+        "Natisha Hiedeman": {
+          "number": "2",
+          "height": "5-8",
+          "age": 29,
+          "experience": "7",
+          "country": "USA",
+          "school": "Marquette",
+          "developmental": false
+        },
+        "Taylor Thierry": {
+          "number": "3",
+          "height": "6-1",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "Ohio State",
+          "developmental": false
+        },
+        "Flau'jae Johnson": {
+          "number": "4",
+          "height": "5-10",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Louisiana State",
+          "developmental": false
+        },
+        "Jaylyn Sherrod": {
+          "number": "4",
+          "height": "5-7",
+          "age": 25,
+          "experience": "2",
+          "country": "USA",
+          "school": "Colorado",
+          "developmental": true
+        },
+        "Jade Melbourne": {
+          "number": "5",
+          "height": "5-10",
+          "age": 24,
+          "experience": "3",
+          "country": "Australia",
+          "school": "                                   ",
+          "developmental": false
+        },
+        "Zia Cooke": {
+          "number": "7",
+          "height": "5-9",
+          "age": 25,
+          "experience": "3",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Awa Fam": {
+          "number": "11",
+          "height": "6-4",
+          "age": 20,
+          "experience": "R",
+          "country": "Spain",
+          "school": null,
+          "developmental": false
+        },
+        "Ezi Magbegor": {
+          "number": "13",
+          "height": "6-4",
+          "age": 27,
+          "experience": "6",
+          "country": "Australia",
+          "school": "Melbourne",
+          "developmental": false
+        },
+        "Dominique Malonga": {
+          "number": "14",
+          "height": "6-6",
+          "age": 20,
+          "experience": "1",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Taina Mair": {
+          "number": "22",
+          "height": "5-9",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "Duke",
+          "developmental": true
+        },
+        "Jordan Horston": {
+          "number": "23",
+          "height": "6-2",
+          "age": 25,
+          "experience": "2",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "Stefanie Dolson": {
+          "number": "31",
+          "height": "6-5",
+          "age": 34,
+          "experience": "12",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Katie Lou Samuelson": {
+          "number": "33",
+          "height": "6-3",
+          "age": 29,
+          "experience": "5",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Mackenzie Holmes": {
+          "number": "54",
+          "height": "6-3",
+          "age": 25,
+          "experience": "1",
+          "country": "USA",
+          "school": "Indiana",
+          "developmental": false
+        }
+      }
+    },
+    "Chicago Sky": {
+      "wnba_team_id": 1611661329,
+      "full_name": "Chicago Sky",
+      "source": "https://www.wnba.com/team/1611661329",
+      "founded": 2006,
+      "arena": "Wintrust Arena",
+      "arena_capacity": null,
+      "owner": "Michael Alter",
+      "general_manager": "Jeff Pagliocca",
+      "head_coach": "Tyler Marsh",
+      "official_site": "https://sky.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 86.8,
+          "rank": 8
+        },
+        "rpg": {
+          "value": 33,
+          "rank": 10
+        },
+        "apg": {
+          "value": 21.6,
+          "rank": 5
+        },
+        "oppg": {
+          "value": 90.7,
+          "rank": 12
+        }
+      },
+      "championships": [
+        {
+          "year": 2021,
+          "opponent": "Phoenix Mercury"
+        }
+      ],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Sylvia Fowles",
+          "position": "C",
+          "seasons": "2008-2014",
+          "inducted": 2025
+        },
+        {
+          "player": "Swin Cash",
+          "position": "F",
+          "seasons": "2012-2013",
+          "inducted": 2022
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Courtney Vandersloot",
+          "total": 4003
+        },
+        "rebounds": {
+          "player": "Sylvia Fowles",
+          "total": 1832
+        },
+        "assists": {
+          "player": "Courtney Vandersloot",
+          "total": 2571
+        },
+        "steals": {
+          "player": "Courtney Vandersloot",
+          "total": 499
+        },
+        "blocks": {
+          "player": "Sylvia Fowles",
+          "total": 376
+        }
+      },
+      "roster": {
+        "Jacy Sheldon": {
+          "number": "0",
+          "height": "5-10",
+          "age": 26,
+          "experience": "2",
+          "country": "USA",
+          "school": "Ohio State",
+          "developmental": false
+        },
+        "Elizabeth Williams": {
+          "number": "1",
+          "height": "6-3",
+          "age": 33,
+          "experience": "11",
+          "country": "United Kingdom",
+          "school": "Duke",
+          "developmental": false
+        },
+        "Skylar Diggins": {
+          "number": "4",
+          "height": "5-9",
+          "age": 36,
+          "experience": "11",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Rickea Jackson": {
+          "number": "5",
+          "height": "6-2",
+          "age": 25,
+          "experience": "2",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "DiJonai Carrington": {
+          "number": "7",
+          "height": "5-11",
+          "age": 28,
+          "experience": "5",
+          "country": "USA",
+          "school": "Baylor",
+          "developmental": false
+        },
+        "Natasha Cloud": {
+          "number": "9",
+          "height": "5-10",
+          "age": 34,
+          "experience": "10",
+          "country": "USA",
+          "school": "St. Joseph's (PA)",
+          "developmental": false
+        },
+        "Kamilla Cardoso": {
+          "number": "10",
+          "height": "6-7",
+          "age": 25,
+          "experience": "2",
+          "country": "Brazil",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Gabriela Jaquez": {
+          "number": "11",
+          "height": "6-0",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Sydney Taylor": {
+          "number": "12",
+          "height": "5-9",
+          "age": 25,
+          "experience": "R",
+          "country": "USA",
+          "school": "Louisville",
+          "developmental": false
+        },
+        "Morgan Maly": {
+          "number": "15",
+          "height": "6-1",
+          "age": 24,
+          "experience": "R",
+          "country": "USA",
+          "school": "Creighton",
+          "developmental": false
+        },
+        "Kate Martin": {
+          "number": "20",
+          "height": "6-0",
+          "age": 26,
+          "experience": "2",
+          "country": "USA",
+          "school": "Iowa",
+          "developmental": true
+        },
+        "Courtney Vandersloot": {
+          "number": "22",
+          "height": "5-8",
+          "age": 37,
+          "experience": "15",
+          "country": "USA",
+          "school": "Gonzaga",
+          "developmental": false
+        },
+        "Rachel Banham": {
+          "number": "24",
+          "height": "5-10",
+          "age": 33,
+          "experience": "10",
+          "country": "USA",
+          "school": "Minnesota",
+          "developmental": false
+        },
+        "Azura Stevens": {
+          "number": "30",
+          "height": "6-6",
+          "age": 30,
+          "experience": "8",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Aicha Coulibaly": {
+          "number": "35",
+          "height": "6-0",
+          "age": 25,
+          "experience": "R",
+          "country": "Mali",
+          "school": "Texas A&M",
+          "developmental": false
+        }
+      }
+    },
+    "Atlanta Dream": {
+      "wnba_team_id": 1611661330,
+      "full_name": "Atlanta Dream",
+      "source": "https://www.wnba.com/team/1611661330",
+      "founded": 2008,
+      "arena": "Gateway Center Arena",
+      "arena_capacity": null,
+      "owner": "L. Gottesdiener, S. Abair, R. Montgomery",
+      "general_manager": "Dan Padover",
+      "head_coach": "Karl Smesko",
+      "official_site": "https://dream.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 91.3,
+          "rank": 3
+        },
+        "rpg": {
+          "value": 35.6,
+          "rank": 2
+        },
+        "apg": {
+          "value": 21.5,
+          "rank": 6
+        },
+        "oppg": {
+          "value": 84.5,
+          "rank": 4
+        }
+      },
+      "championships": [],
+      "commissioners_cup": [],
+      "hall_of_fame": [
+        {
+          "player": "Swin Cash",
+          "position": "F",
+          "seasons": "2014",
+          "inducted": 2022
+        }
+      ],
+      "franchise_leaders": {
+        "points": {
+          "player": "Angel McCoughtry",
+          "total": 5468
+        },
+        "rebounds": {
+          "player": "Sancho Lyttle",
+          "total": 1876
+        },
+        "assists": {
+          "player": "Angel McCoughtry",
+          "total": 859
+        },
+        "steals": {
+          "player": "Angel McCoughtry",
+          "total": 597
+        },
+        "blocks": {
+          "player": "Elizabeth Williams",
+          "total": 331
+        }
+      },
+      "roster": {
+        "Matilde Villa": {
+          "number": "0",
+          "height": "5-7",
+          "age": 21,
+          "experience": "R",
+          "country": "Italy",
+          "school": null,
+          "developmental": true
+        },
+        "Naz Hillmon": {
+          "number": "00",
+          "height": "6-2",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Michigan",
+          "developmental": false
+        },
+        "Te-Hina Paopao": {
+          "number": "2",
+          "height": "5-9",
+          "age": 24,
+          "experience": "1",
+          "country": null,
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Jordin Canada": {
+          "number": "3",
+          "height": "5-6",
+          "age": 31,
+          "experience": "8",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Angel Reese": {
+          "number": "5",
+          "height": "6-4",
+          "age": 24,
+          "experience": "2",
+          "country": "USA",
+          "school": "Louisiana State",
+          "developmental": false
+        },
+        "Rhyne Howard": {
+          "number": "10",
+          "height": "6-2",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Kentucky",
+          "developmental": false
+        },
+        "Madina Okot": {
+          "number": "11",
+          "height": "6-6",
+          "age": 22,
+          "experience": "R",
+          "country": "Kenya",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Allisha Gray": {
+          "number": "15",
+          "height": "6-0",
+          "age": 31,
+          "experience": "9",
+          "country": "USA",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Isobel Borlase": {
+          "number": "20",
+          "height": "5-11",
+          "age": 22,
+          "experience": "R",
+          "country": "Australia",
+          "school": "Adelaide",
+          "developmental": false
+        },
+        "Indya Nivar": {
+          "number": "21",
+          "height": "5-10",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "North Carolina",
+          "developmental": true
+        },
+        "Sika Kone": {
+          "number": "23",
+          "height": "6-3",
+          "age": 24,
+          "experience": "3",
+          "country": "Mali",
+          "school": "Spain",
+          "developmental": false
+        },
+        "DeWanna Bonner": {
+          "number": "24",
+          "height": "6-4",
+          "age": 39,
+          "experience": "16",
+          "country": "USA",
+          "school": "Auburn",
+          "developmental": false
+        },
+        "Shatori Walker-Kimbrough": {
+          "number": "33",
+          "height": "5-9",
+          "age": 31,
+          "experience": "9",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": false
+        },
+        "Brionna Jones": {
+          "number": "42",
+          "height": "6-3",
+          "age": 30,
+          "experience": "9",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": false
+        }
+      }
+    },
+    "Golden State Valkyries": {
+      "wnba_team_id": 1611661331,
+      "full_name": "Golden State Valkyries",
+      "source": "https://www.wnba.com/team/1611661331",
+      "founded": 2025,
+      "arena": "Chase Center",
+      "arena_capacity": null,
+      "owner": "Joe Lacob",
+      "general_manager": "Ohemaa Nyanin",
+      "head_coach": "Natalie Nakase",
+      "official_site": "https://valkyries.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 82.2,
+          "rank": 14
+        },
+        "rpg": {
+          "value": 33.3,
+          "rank": 9
+        },
+        "apg": {
+          "value": 19.3,
+          "rank": 13
+        },
+        "oppg": {
+          "value": 75.1,
+          "rank": 1
+        }
+      },
+      "championships": [],
+      "commissioners_cup": [],
+      "hall_of_fame": [],
+      "franchise_leaders": {
+        "points": {
+          "player": "Veronica Burton",
+          "total": 1061
+        },
+        "rebounds": {
+          "player": "Veronica Burton",
+          "total": 352
+        },
+        "assists": {
+          "player": "Veronica Burton",
+          "total": 517
+        },
+        "steals": {
+          "player": "Veronica Burton",
+          "total": 119
+        },
+        "blocks": {
+          "player": "Kiah Stokes",
+          "total": 74
+        }
+      },
+      "roster": {
+        "Gabby Williams": {
+          "number": "1",
+          "height": "5-11",
+          "age": 30,
+          "experience": "7",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Kaitlyn Chen": {
+          "number": "2",
+          "height": "5-9",
+          "age": 24,
+          "experience": "1",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Laeticia Amihere": {
+          "number": "3",
+          "height": "6-3",
+          "age": 25,
+          "experience": "3",
+          "country": "Canada",
+          "school": "South Carolina",
+          "developmental": false
+        },
+        "Juste Jocyte": {
+          "number": "4",
+          "height": "6-0",
+          "age": 20,
+          "experience": "R",
+          "country": "Lithuania",
+          "school": null,
+          "developmental": false
+        },
+        "Kayla Thornton": {
+          "number": "5",
+          "height": "6-1",
+          "age": 34,
+          "experience": "10",
+          "country": "USA",
+          "school": "Texas-El Paso",
+          "developmental": false
+        },
+        "Kaila Charles": {
+          "number": "6",
+          "height": "6-1",
+          "age": 28,
+          "experience": "5",
+          "country": "USA",
+          "school": "Maryland",
+          "developmental": false
+        },
+        "Miela Sowah": {
+          "number": "7",
+          "height": "5-10",
+          "age": 26,
+          "experience": "R",
+          "country": "Australia",
+          "school": "Duke",
+          "developmental": true
+        },
+        "Ashten Prechtel": {
+          "number": "11",
+          "height": "6-5",
+          "age": 25,
+          "experience": "R",
+          "country": "USA",
+          "school": "Stanford",
+          "developmental": true
+        },
+        "Iliana Rupert": {
+          "number": "12",
+          "height": "6-4",
+          "age": 25,
+          "experience": "3",
+          "country": "France",
+          "school": "Tango Bourges",
+          "developmental": false
+        },
+        "Janelle Salaun": {
+          "number": "13",
+          "height": "6-2",
+          "age": 25,
+          "experience": "1",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Tiffany Hayes": {
+          "number": "15",
+          "height": "5-10",
+          "age": 37,
+          "experience": "13",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Veronica Burton": {
+          "number": "22",
+          "height": "5-9",
+          "age": 26,
+          "experience": "4",
+          "country": "USA",
+          "school": "Northwestern",
+          "developmental": false
+        },
+        "Cecilia Zandalasini": {
+          "number": "24",
+          "height": "6-2",
+          "age": 30,
+          "experience": "4",
+          "country": "Italy",
+          "school": "PF Schio",
+          "developmental": false
+        },
+        "Aminata Gueye": {
+          "number": "31",
+          "height": "6-4",
+          "age": 24,
+          "experience": "R",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        },
+        "Kiah Stokes": {
+          "number": "41",
+          "height": "6-3",
+          "age": 33,
+          "experience": "10",
+          "country": "USA",
+          "school": "Connecticut",
+          "developmental": false
+        }
+      }
+    },
+    "Toronto Tempo": {
+      "wnba_team_id": 1611661332,
+      "full_name": "Toronto Tempo",
+      "source": "https://www.wnba.com/team/1611661332",
+      "founded": 2026,
+      "arena": "Coca-Cola Coliseum",
+      "arena_capacity": null,
+      "owner": "Kilmer Sports Ventures",
+      "general_manager": "Monica Wright Rogers",
+      "head_coach": "Sandy Brondello",
+      "official_site": "https://tempo.wnba.com/",
+      "ranks": {
+        "ppg": {
+          "value": 85.7,
+          "rank": 10
+        },
+        "rpg": {
+          "value": 32.1,
+          "rank": 12
+        },
+        "apg": {
+          "value": 19.5,
+          "rank": 12
+        },
+        "oppg": {
+          "value": 94.4,
+          "rank": 15
+        }
+      },
+      "championships": [],
+      "commissioners_cup": [],
+      "hall_of_fame": [],
+      "franchise_leaders": {
+        "points": {
+          "player": "Marina Mabrey",
+          "total": 667
+        },
+        "rebounds": {
+          "player": "Isabelle Harrison",
+          "total": 222
+        },
+        "assists": {
+          "player": "Julie Allemand",
+          "total": 180
+        },
+        "steals": {
+          "player": "Laura Juskaite",
+          "total": 60
+        },
+        "blocks": {
+          "player": "Isabelle Harrison",
+          "total": 22
+        }
+      },
+      "roster": {
+        "Zaay Green": {
+          "number": "00",
+          "height": "6-2",
+          "age": 26,
+          "experience": "R",
+          "country": "USA",
+          "school": "Alabama",
+          "developmental": false
+        },
+        "Kiki Rice": {
+          "number": "1",
+          "height": "5-11",
+          "age": 22,
+          "experience": "R",
+          "country": "USA",
+          "school": "UCLA",
+          "developmental": false
+        },
+        "Laura Juskaite": {
+          "number": "2",
+          "height": "6-4",
+          "age": 29,
+          "experience": "R",
+          "country": "Lithuania",
+          "school": null,
+          "developmental": false
+        },
+        "Marina Mabrey": {
+          "number": "3",
+          "height": "6-1",
+          "age": 30,
+          "experience": "7",
+          "country": "USA",
+          "school": "Notre Dame",
+          "developmental": false
+        },
+        "Maria Gakdeng": {
+          "number": "6",
+          "height": "6-3",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "North Carolina",
+          "developmental": true
+        },
+        "Teonni Key": {
+          "number": "7",
+          "height": "6-4",
+          "age": 23,
+          "experience": "R",
+          "country": "USA",
+          "school": "Kentucky",
+          "developmental": false
+        },
+        "Nyara Sabally": {
+          "number": "8",
+          "height": "6-5",
+          "age": 26,
+          "experience": "3",
+          "country": "Germany",
+          "school": "Oregon",
+          "developmental": false
+        },
+        "Maria Conde": {
+          "number": "10",
+          "height": "6-3",
+          "age": 29,
+          "experience": "R",
+          "country": "Spain",
+          "school": "Florida State",
+          "developmental": false
+        },
+        "Kamila Borkowska": {
+          "number": "11",
+          "height": "6-7",
+          "age": 24,
+          "experience": "R",
+          "country": "Poland",
+          "school": null,
+          "developmental": true
+        },
+        "Kia Nurse": {
+          "number": "11",
+          "height": "6-0",
+          "age": 30,
+          "experience": "7",
+          "country": "Canada",
+          "school": "Connecticut",
+          "developmental": false
+        },
+        "Temi Fagbenle": {
+          "number": "14",
+          "height": "6-5",
+          "age": 34,
+          "experience": "5",
+          "country": "United Kingdom",
+          "school": "Harvard",
+          "developmental": false
+        },
+        "Brittney Sykes": {
+          "number": "20",
+          "height": "5-11",
+          "age": 32,
+          "experience": "9",
+          "country": "USA",
+          "school": "Syracuse",
+          "developmental": false
+        },
+        "Isabelle Harrison": {
+          "number": "21",
+          "height": "6-5",
+          "age": 33,
+          "experience": "8",
+          "country": "USA",
+          "school": "Tennessee",
+          "developmental": false
+        },
+        "Julie Allemand": {
+          "number": "22",
+          "height": "5-10",
+          "age": 30,
+          "experience": "3",
+          "country": "Belgium",
+          "school": "Castors Braine",
+          "developmental": false
+        },
+        "Aneesah Morrow": {
+          "number": "24",
+          "height": "6-1",
+          "age": 23,
+          "experience": "1",
+          "country": "USA",
+          "school": "Louisiana State",
+          "developmental": false
+        },
+        "Ornella Bankole": {
+          "number": "33",
+          "height": "5-11",
+          "age": 29,
+          "experience": "R",
+          "country": "France",
+          "school": null,
+          "developmental": false
+        }
+      }
+    }
+  }
+}

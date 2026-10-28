@@ -105,7 +105,7 @@ def _average(value, games) -> str | None:
     return per_game.shown_average(value, games)
 
 
-def _roster_line(root: Path, slug: str) -> dict:
+def _roster_line(root: Path, slug: str, team_id=None) -> dict:
     path = root / 'data' / 'wnba' / 'players' / f'{slug}.json'
     if not path.is_file():
         return {}
@@ -117,6 +117,10 @@ def _roster_line(root: Path, slug: str) -> dict:
         row for row in profile.get('season_stats') or []
         if row.get('season') == 2026 and row.get('season_type') == 2
     ]
+    if team_id is not None and len(rows) > 1:
+        mine = [row for row in rows if (row.get('team') or {}).get('id') == team_id]
+        if len(mine) == 1:
+            rows = mine
     if len(rows) != 1:
         rows = [row for row in rows if not (row.get('team') or {}).get('id')]
     if len(rows) != 1:
@@ -135,7 +139,7 @@ def _roster_line(root: Path, slug: str) -> dict:
 def _leaders(root: Path, slot: dict) -> list[dict]:
     found = []
     for player in slot.get('players') or []:
-        stats = _roster_line(root, player['slug'])
+        stats = _roster_line(root, player['slug'], slot.get('id'))
         if not stats:
             continue
         if stats.get('pts') is None and stats.get('reb') is None and stats.get('ast') is None:

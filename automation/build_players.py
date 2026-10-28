@@ -23,6 +23,7 @@ import rss_feed
 import wnba_sync
 import team_hub
 import team_names
+import team_page_extras as team_extras
 import seo_meta
 from link_graph import page_url
 
@@ -1881,8 +1882,13 @@ def load_standings_by_name(root) -> dict:
     return found
 
 
-def _season_line_2026(profile: dict):
+def _season_line_2026(profile: dict, team_id=None):
     rows = [r for r in profile.get('season_stats') or [] if r.get('season') == 2026 and r.get('season_type') == 2]
+    if team_id is not None:
+        # A traded player has one line per club; a team page shows the line with that club.
+        mine = [r for r in rows if (r.get('team') or {}).get('id') == team_id]
+        if len(mine) == 1:
+            return mine[0]
     if len(rows) == 1:
         return rows[0]
     aggregate = [r for r in rows if not (r.get('team') or {}).get('id')]
@@ -1891,7 +1897,7 @@ def _season_line_2026(profile: dict):
     return None
 
 
-def _roster_stats(root, player: dict) -> dict:
+def _roster_stats(root, player: dict, team_id=None) -> dict:
     empty = {'number': '', 'position': '', 'pts': None, 'reb': None, 'ast': None, 'min': None, 'min_raw': None}
     if root is None:
         return empty
@@ -1903,7 +1909,7 @@ def _roster_stats(root, player: dict) -> dict:
     except (OSError, json.JSONDecodeError):
         return empty
     fields = bio_fields(profile.get('player') or {})
-    line = _season_line_2026(profile)
+    line = _season_line_2026(profile, team_id)
     played = line.get('games_played') if line else None
     return {
         'number': fields.get('jersey_number') or '',
@@ -2439,6 +2445,8 @@ def redirect_stub(old_route: str, new_route: str, menu) -> str:
     return site_nav.install(page, old_route, menu)
 
 
+TEAM_CSV: dict = {}
+
 def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     name=slot['full_name']
     route=links.team_href(slot)
@@ -2462,14 +2470,21 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     rows = []
     leaders = []
     minute_rows = []
+    csv_rows = []
+    facts = team_extras.team_facts(root, name)
+    dev_tag = ' <abbr class="dev-tag" title="Developmental player">Dev</abbr>'
     for player in slot['players']:
-        stats = _roster_stats(root, player)
+        stats = _roster_stats(root, player, slot.get('id'))
+        official = team_extras.roster_facts(facts, player['name'], stats['number'])
+        dev = bool(official.get('developmental'))
+        csv_rows.append({'name': player['name'], 'slug': player['slug'], 'developmental': dev, **stats})
         if isinstance(stats.get('min_raw'), (int, float)) and not isinstance(stats.get('min_raw'), bool):
             minute_rows.append({'name': player['name'], 'slug': player['slug'], **stats})
         rows.append(
             '<tr>'
             f'<td>{_stat_cell(stats["number"])}</td>'
-            f'<td>{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}</td>'
+            f'<td>{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}'
+            f'{dev_tag if dev else ""}</td>'
             f'<td>{_stat_cell(stats["position"])}</td>'
             f'<td>{_stat_cell(stats["pts"])}</td>'
             f'<td>{_stat_cell(stats["reb"])}</td>'
@@ -2480,7 +2495,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             leaders.append({'name': player['name'], 'slug': player['slug'], **stats})
     roster = (
         '<div class="table-scroll" role="region" tabindex="0" aria-label="Current roster">'
-        '<table><caption>Current roster. 2026 regular-season per-game averages when a season line is on file.</caption>'
+        '<table><caption>Current roster. 2026 regular-season per-game averages with this team when a season line is on file. Dev marks a developmental player, as listed on WNBA.com.</caption>'
         '<thead><tr><th scope="col">No.</th><th scope="col">Player</th><th scope="col">Pos</th>'
         '<th scope="col">PPG</th><th scope="col">RPG</th><th scope="col">APG</th></tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
@@ -2515,15 +2530,26 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             f'<h2>Team leaders</h2>{minute_html}{list_html}</section>'
         )
     count=len(slot['players'])
-    noun='player' if count == 1 else 'players'
     import team_season
+    top = {}
+    for key in ('pts', 'reb', 'ast'):
+        scored = [row for row in leaders if row.get(key) is not None]
+        if scored:
+            top[key] = max(scored, key=lambda row: float(row[key]))
+    lead = team_extras.lead_html(root, slot, standing, count)
+    ranks = team_extras.ranks_html(root, slot)
+    data_day = team_extras.standings_day(root) or team_extras.facts_checked(root)
+    faq = team_extras.faq_items(root, slot, standing, top, count)
+    faq_section = team_extras.faq_html(faq, data_day)
+    download = team_extras.download_html(slot, route, data_day) if root is not None else ''
+    TEAM_CSV[slot['slug']] = team_extras.roster_csv(slot, csv_rows)
     season = team_season.season_section(root, slot, standing) if root is not None else ''
     coverage = ''
     if root is not None:
         stories = team_season.stories_section(root, slot)
         import team_coverage
         coverage = team_coverage.section_html(root, slot)
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1><p>{count} {noun} are listed on the current roster.</p>{record}{conf}{standings_link}</section>{season}<section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{stories}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1>{lead}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{ranks}{stories}{season}{faq_section}{download}{conf}{standings_link}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
@@ -2532,6 +2558,9 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             {'@type':'ListItem','position':3,'name':name,'item':BASE+route},
         ]},
     ]}
+    faq_node = team_extras.faq_schema(faq, BASE+route)
+    if faq_node:
+        structured['@graph'].append(faq_node)
     return document(seo_meta.team_title(name), seo_meta.team_description(team_description(slot, standing)), route, body, structured, include_standings, menu)
 
 def teams_hub_page(root, linking, include_standings=True, menu=None):
@@ -3080,6 +3109,8 @@ def build(root: Path):
                 previous_path.read_text(encoding='utf-8'), page,
             )
         files[relative] = page
+        if slot['slug'] in TEAM_CSV:
+            files[f'wnba/teams/{slot["slug"]}/{team_extras.csv_name(slot)}'] = TEAM_CSV[slot['slug']]
     for team_id, old_slug in team_names.LEGACY_SLUGS.items():
         slot = linking['by_id'].get(team_id)
         if not slot or slot['slug'] == old_slug:
