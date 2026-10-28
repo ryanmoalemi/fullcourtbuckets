@@ -147,7 +147,7 @@ The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on T
 
 If Golden State wins Thursday, it would celebrate on a court that has to be ready for an NBA game a few hours later. The Hawks host the Cleveland Cavaliers at State Farm Arena at 8 p.m. ET that night ([NBA.com](https://www.nba.com/hawks/game/0022600144-cavaliers-vs-hawks-atlanta-ga-10-29-2026)), with doors at 7 p.m. ([State Farm Arena](https://www.statefarmarena.com/events/detail/tlanta-hawks-vs-cleveland-cavaliers-tickets-atlanta-georgia-2026-10-29)). That leaves seven and a half hours from Game 6 tip-off to the Hawks' tip, and six and a half hours to the Hawks' doors, before accounting for overtime or a trophy ceremony.
 
-ESPN's Ramona Shelburne reported on NBA Today on Oct. 26 that the celebration "may not actually be on that court." She said, "I've heard there are discussions about whether there's enough time to turn the arena over in time for the fans to celebrate on the court. It could be moved to like a practice court" ([Yahoo Sports](https://sports.yahoo.com/articles/valkyries-could-forced-celebrate-championship-033816709.html)). She later posted on X: "To clarify: There is a resolve to make sure any potential championship that is won Thursday afternoon is celebrated on the court" ([The Big Lead](https://www.thebiglead.com/wnba-finals-face-self-inflicted-embarrassment-potential-trophy-presentation/)). The WNBA's Game 6 announcement does not mention a trophy plan ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)), and we found no Dream or arena statement on it as of Oct. 27.
+ESPN's Ramona Shelburne reported on NBA Today on Oct. 26 that the celebration "may not actually be on that court." She said, "I've heard there are discussions about whether there's enough time to turn the arena over in time for the fans to celebrate on the court. It could be moved to like a practice court" ([Yahoo Sports](https://sports.yahoo.com/articles/valkyries-could-forced-celebrate-championship-033816709.html)). She later posted on X: "To clarify: There is a resolve to make sure any potential championship that is won Thursday afternoon is celebrated on the court" ([The Big Lead](https://www.thebiglead.com/wnba-finals-face-self-inflicted-embarrassment-potential-trophy-presentation/)). The WNBA's Game 6 announcement does not mention a trophy plan ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)), and we found no Dream or arena statement on it as of Tuesday.
 
 Only Golden State can clinch Thursday. If Atlanta wins, Game 7 is Saturday, Oct. 31, at 5 p.m. PT (8 p.m. ET) at Chase Center in San Francisco ([WNBA](https://www.wnba.com/news/game-preview-2026-wnba-finals)), and the trophy would be presented there.
 
@@ -173,7 +173,7 @@ Our [Game 6 play-by-play page](/wnba/finals/2026/game-6/play-by-play/) goes live
 
 {dynamic:next-game}
 
-[dynamic:game6-injuries] Injuries: the latest official WNBA injury report, for Game 5 (Oct. 26, 11 p.m. ET), listed only Atlanta's Brionna Jones as out (left leg). The Game 6 report is due by 5 p.m. ET Wednesday ([WNBA injury report](https://www.wnba.com/wnba-injury-report)). Checked Oct. 27, 12:40 p.m. PT.
+[dynamic:game6-injuries] Injuries: the latest official WNBA injury report, for Game 5 (Oct. 26, 11 p.m. ET), listed only Atlanta's Brionna Jones as out (left leg). The Game 6 report is due by 5 p.m. ET Wednesday ([WNBA injury report](https://www.wnba.com/wnba-injury-report)). Checked Tuesday, 12:40 p.m. PT.
 
 ## Why it's at 9:30 a.m. PT
 
@@ -181,7 +181,7 @@ Game 6 was originally set for 8 p.m. ET. The WNBA moved it to 12:30 p.m. ET at S
 
 Atlanta coach Karl Smesko said he was excited Atlanta could pack a big arena and joked, "I'd like to see it be a national holiday for all WNBA championship games" ([Yahoo Sports](https://sports.yahoo.com/articles/atlanta-dream-coach-quips-wnba-045013911.html)). He also said there would be no pregame shootaround for either team ([Yahoo Sports](https://sports.yahoo.com/articles/don-t-care-angel-reese-013200044.html)). The weekday midday tip drew the loudest reaction on X and r/wnba this week ([Deadline](https://deadline.com/2026/10/wnba-moves-game-6-final-series-midday-thursday-usa-network-1237201077/)).
 
-Dream ownership answered in an open letter to fans on Oct. 27. "Two months ago, when the WNBA finalized playoff dates and times, we raised concerns that the W Finals schedule conflicted with NBA games at State Farm Arena," it said, adding, "Playing a midday game on a Thursday is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)). The Dream announced on Oct. 6 that it will play all of its home games at State Farm Arena starting in 2027 ([Atlanta Dream](https://dream.wnba.com/news/atlanta-dream-announces-multi-year-agreement-to-play-all-home-games-at-state-farm-arena)).
+Dream ownership answered in an open letter to fans on Tuesday. "Two months ago, when the WNBA finalized playoff dates and times, we raised concerns that the W Finals schedule conflicted with NBA games at State Farm Arena," it said, adding, "Playing a midday game on a Thursday is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)). The Dream announced on Oct. 6 that it will play all of its home games at State Farm Arena starting in 2027 ([Atlanta Dream](https://dream.wnba.com/news/atlanta-dream-announces-multi-year-agreement-to-play-all-home-games-at-state-farm-arena)).
 
 ## Four things to watch
 
@@ -195,11 +195,11 @@ Free throws. Atlanta averaged 29.0 free-throw attempts in Games 1-4 and took 14 
 
 ## Finals MVP race
 
-If Golden State wins, the Finals MVP debate is between Williams, its leading scorer, and Stokes, whose case rests on defense. Kalshi's Finals MVP market had Williams at 57 percent, Reese 27 and Stokes 18 on Oct. 27 ([Kalshi](https://kalshi.com/markets/kxwnbagame/gs-valkyries-vs-atl-dream/kxwnbagame-26oct29gsatl)). CBS Sports ranks the field after Game 5 ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-mvp-rankings-angel-reese-gabby-williams-game-5/)).
+If Golden State wins, the Finals MVP debate is between Williams, its leading scorer, and Stokes, whose case rests on defense. Kalshi's Finals MVP market had Williams at 57 percent, Reese 27 and Stokes 18 on Tuesday ([Kalshi](https://kalshi.com/markets/kxwnbagame/gs-valkyries-vs-atl-dream/kxwnbagame-26oct29gsatl)). CBS Sports ranks the field after Game 5 ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-mvp-rankings-angel-reese-gabby-williams-game-5/)).
 
 ## The odds
 
-[dynamic:game6-odds] DraftKings opened Atlanta -3.5, with the Dream -166 and the Valkyries +140 on the moneyline, on Oct. 26 ([DraftKings Network](https://dknetwork.draftkings.com/2026/10/26/opening-odds-for-game-6-of-the-wnba-finals/)). The Dunkel Index lists a total of 147.5 ([Dunkel Index](https://www.dunkelindex.com/news/dream-vs-valkyries-wnba-betting-trends-stats-10-29-2026)). Kalshi gave Atlanta a 56 percent chance to win Game 6 on Oct. 27. Prices may change before tip-off. Lines checked Oct. 27.
+[dynamic:game6-odds] DraftKings opened Atlanta -3.5, with the Dream -166 and the Valkyries +140 on the moneyline, on Oct. 26 ([DraftKings Network](https://dknetwork.draftkings.com/2026/10/26/opening-odds-for-game-6-of-the-wnba-finals/)). The Dunkel Index lists a total of 147.5 ([Dunkel Index](https://www.dunkelindex.com/news/dream-vs-valkyries-wnba-betting-trends-stats-10-29-2026)). Kalshi gave Atlanta a 56 percent chance to win Game 6 on Tuesday. Prices may change before tip-off. Lines checked Tuesday.
 
 Four of five games in this series finished under 147.5 combined points, and Game 5 finished with 119.
 
