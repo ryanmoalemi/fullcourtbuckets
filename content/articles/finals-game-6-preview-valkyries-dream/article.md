@@ -31,9 +31,7 @@ The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) lead the [Atla
 
 ## Road teams closing out a Finals, since 2002
 
-Since 2002, six road teams have played for the title after the home team had already won a game in the series. That is Golden State's spot on Thursday, and only two of those road teams won. Here are those six games:
-
-Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team could clinch the title with a win. "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
+Since 2002, six road teams have led the Finals with a chance to clinch on the road after the home team had already won a game in the series. That is Golden State's spot on Thursday, and only two of those road teams won. Here are those six games:
 
 | Season | Game | Road team | At | Series before | Final | Road team won? |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -44,15 +42,15 @@ Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002
 | 2023 | 4 | Las Vegas | New York | 2-1 | 70-69 | Yes |
 | 2024 | 4 | New York | Minnesota | 2-1 | 80-82 | No |
 
-Road teams playing for the title are 8-8 since 2002. They are 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
+Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team could clinch the title with a win. "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
+
+Road teams leading the series with a chance to clinch are 8-8 since 2002; winner-take-all deciders are not counted. They are 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
 
 All six games were decided by 7 points or fewer, and three by 2 or fewer. Three of the four road teams that lost the closeout won the title at home in the next game: Minnesota in 2015, Washington in 2019 and New York in 2024. The 2007 Detroit Shock lost Game 5 at home to Phoenix. Road teams whose opponent had not yet won a game went 6-4 in their closeout games; the CSV has all 16 games.
 
 ## Golden State's points per game would be the lowest for a champion since 2002
 
 Golden State has scored 67.0 points per game in the Finals. If it wins Game 6 while scoring 65 or fewer, its 66.7 average would be the lowest for a champion since 2002. That would put it just under the 2005 Sacramento Monarchs' 66.75. Here are the lowest-scoring champions since 2002, with Golden State's pace so far:
-
-Data through Finals Game 5, Oct. 26, 2026. Methods: total Finals points divided by Finals games for each champion. Source: WNBA.com box scores. Download (CC0): [champion-points-per-game-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/champion-points-per-game-2002-2025.csv)
 
 | Season | Champion | Finals games | Points | Per game |
 | --- | --- | --- | --- | --- |
@@ -63,13 +61,13 @@ Data through Finals Game 5, Oct. 26, 2026. Methods: total Finals points divided 
 | 2015 | Minnesota | 5 | 364 | 72.80 |
 | 2026 so far | Golden State | 5 | 335 | 67.00 |
 
+Data through Finals Game 5, Oct. 26, 2026. Methods: total Finals points divided by Finals games for each champion. Source: WNBA.com box scores. Download (CC0): [champion-points-per-game-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/champion-points-per-game-2002-2025.csv)
+
 If the series goes seven, Golden State would need 132 or fewer combined points in Games 6 and 7 to finish under 66.75. Since 2002, only the 2006 Detroit Shock (outscored by 9) and the 2016 Los Angeles Sparks (by 5) won three of the first five Finals games while being outscored, and both won the title. Golden State is at minus-22.
 
 ## Series leaders through five games
 
 Gabby Williams leads the series with 81 points, but she has made 26 of 90 shots (28.9 percent). Angel Reese is one point behind on 59 shots and has 64 rebounds. Kiah Stokes has 17 blocks and 53 rebounds while scoring 28 points. Here are the series leaders through five games:
-
-Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files built from WNBA.com box scores. Download (CC0): [finals-2026-player-totals-through-game-5.csv](/news/finals-game-6-preview-valkyries-dream/data/finals-2026-player-totals-through-game-5.csv)
 
 | Player | Team | PTS | REB | AST | BLK | STL | FG | 3P | FT |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -82,6 +80,8 @@ Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files
 | [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) | GS | 48 | 4 | 6 | 3 | 6 | 17-44 | 8-22 | 6-10 |
 | [Veronica Burton](/wnba/veronica-burton/) | GS | 45 | 24 | 17 | 10 | 8 | 16-55 | 6-23 | 7-9 |
 | [Kiah Stokes](/wnba/kiah-stokes/) | GS | 28 | 53 | 3 | 17 | 1 | 12-21 | 3-8 | 1-2 |
+
+Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files built from WNBA.com box scores. Download (CC0): [finals-2026-player-totals-through-game-5.csv](/news/finals-game-6-preview-valkyries-dream/data/finals-2026-player-totals-through-game-5.csv)
 
 ## Keys to victory for Game 6
 
