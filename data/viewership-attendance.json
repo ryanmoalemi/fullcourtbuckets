@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-28",
   "games": [
     {
       "date": "1997-06-21",
@@ -168,14 +168,19 @@
       "attendance_source": "https://www.wnba.com/game/1042600304",
       "attendance_source_date": "2026-10-24",
       "network": "NBC and Peacock",
-      "viewers": null,
-      "viewers_source": "",
-      "viewers_source_date": "",
+      "viewers": 1900000,
+      "viewers_source": "https://www.nbcsports.com/pressbox/press-releases/nbc-and-peacock-deliver-most-watched-wnba-finals-game-4-ever",
+      "viewers_source_date": "2026-10-27",
       "tip_et": "1:00 p.m. ET / 10:00 a.m. PT",
       "schedule_source": "https://www.wnba.com/news/wnba-finals-games3-and-4-to-be-played-at-state-farm-arena",
       "schedule_source_date": "2026-10-13",
       "attendance_note": "sellout",
-      "status": "Final: Valkyries 67-62"
+      "status": "Final: Valkyries 67-62",
+      "viewers_note": "Total Audience Delivery (Nielsen Big Data + Panel plus Adobe Analytics for Peacock)",
+      "peak_viewers": 2500000,
+      "peak_viewers_source": "https://www.nbcsports.com/pressbox/press-releases/nbc-and-peacock-deliver-most-watched-wnba-finals-game-4-ever",
+      "peak_viewers_source_date": "2026-10-27",
+      "peak_window": "3:30-3:45 p.m. ET"
     },
     {
       "date": "2026-10-26",
@@ -523,8 +528,30 @@
       "source_date": "2026-10-21",
       "checked_at": "2026-10-21",
       "notes": "USA Sports calls it the most-watched WNBA Finals Game 2 ever on cable. Up 9% vs. the 2025 WNBA Finals Game 2 (PHX/LV) on broadcast television. Nielsen Big Data + Panel and Adobe Analytics."
+    },
+    {
+      "metric_id": "finals-2026-g4-nbc-peak",
+      "period": "2026-10-24",
+      "value": 2500000,
+      "unit": "viewers",
+      "scope": "Valkyries at Dream, 2026 WNBA Finals Game 4, peak viewers, NBC and Peacock, 3:30-3:45 p.m. ET",
+      "source_url": "https://www.nbcsports.com/pressbox/press-releases/nbc-and-peacock-deliver-most-watched-wnba-finals-game-4-ever",
+      "source_date": "2026-10-27",
+      "checked_at": "2026-10-28",
+      "notes": "Peak viewers. Kept separate from the 1.9 million average."
+    },
+    {
+      "metric_id": "finals-2026-nbc-g1-g4-avg",
+      "period": "2026-10-17/2026-10-24",
+      "value": 2000000,
+      "unit": "viewers",
+      "scope": "NBC and Peacock two-game WNBA Finals average (Games 1 and 4)",
+      "source_url": "https://www.nbcsports.com/pressbox/press-releases/nbc-and-peacock-deliver-most-watched-wnba-finals-game-4-ever",
+      "source_date": "2026-10-27",
+      "checked_at": "2026-10-28",
+      "notes": "NBC's Games 1 and 4 averaged 2.0 million, up 20% vs. 2025's Games 1 and 4. Total Audience Delivery."
     }
   ],
-  "updated_time": "10:24 a.m. PT",
-  "finals_intro": "Five games have drawn 88,390 fans. Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million and Game 3 averaged 1.71 million. Game 4 and Game 5 viewership hasn't been released yet."
+  "updated_time": "10:30 a.m. PT",
+  "finals_intro": "Five games have drawn 88,390 fans. Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million, Game 3 averaged 1.71 million and Game 4 averaged 1.9 million (peak 2.5 million). Game 5 viewership hasn't been released yet. Game 6 tips off Oct. 29 at 12:30 p.m. ET / 9:30 a.m. PT on USA Network, E!, Syfy and Peacock (no CNBC); if needed, Game 7 tips off Oct. 31 at 8 p.m. ET."
 }
