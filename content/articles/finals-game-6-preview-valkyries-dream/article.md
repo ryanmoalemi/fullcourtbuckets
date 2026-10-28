@@ -87,11 +87,11 @@ Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files
 
 ### Atlanta Dream
 
+!photo: /images/articles/finals-game-6-preview-valkyries-dream/angel-reese.jpg | Angel Reese, in a black Chicago Sky jersey and headband, looking ahead | Photo: John Mac, CC BY-SA 2.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Angel_Reese_Chicago_Sky_(cropped).jpg | https://creativecommons.org/licenses/by-sa/2.0/ | center 15%
+
 #### Push the pace
 
 Atlanta's two wins were the two fastest games of the series, at about 82 and 83 possessions, and it scored 79 and 97. Its three losses ran about 80, 73 and 72 possessions, and it scored 64, 62 and 55. Speed has not tired out Stokes's shot blocking, though: she had 4 blocks in each of Games 1 and 2 and 3 in each of Games 3-5.
-
-!photo: /images/articles/finals-game-6-preview-valkyries-dream/angel-reese.jpg | Angel Reese, in a black Chicago Sky jersey and headband, looking ahead | Photo: John Mac, CC BY-SA 2.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Angel_Reese_Chicago_Sky_(cropped).jpg | https://creativecommons.org/licenses/by-sa/2.0/ | center 15%
 
 #### Get Reese going
 

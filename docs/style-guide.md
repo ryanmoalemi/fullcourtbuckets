@@ -84,6 +84,7 @@ The seven standing rules (verify outside numbers, original data hooks only where
 - Under each H4, write one or two sentences with the stat that backs it. Don't repeat the label as the first words.
 - The methods/data note goes once, at the end of the section, not between the H2 and the first item.
 - If the page has a table of contents, list the H3s in it.
+- Team sections follow one order: the team H3, then the team photo (with its credit), then the H4 keys. Never put the photo between or after the H4s.
 
 ## Photos throughout articles (Ryan, Oct 27, 2026)
 - Photos in the body are encouraged, not just the hero. Put them where they fit the text (a player next to her key, the arena next to the schedule).
