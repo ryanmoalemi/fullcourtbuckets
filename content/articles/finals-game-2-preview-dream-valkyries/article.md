@@ -2,7 +2,7 @@
 title: "WNBA Finals Game 2 preview: Atlanta lost the turnover battle for the first time this postseason"
 slug: finals-game-2-preview-dream-valkyries
 date: 2026-10-19
-updated: "2026-10-19 12:13 PT"
+updated: "2026-10-28 15:55 PT"
 description: "Atlanta won the turnover count in all five of its first playoff games, then lost it 12-8 in Finals Game 1. Written before Game 2 with Golden State up 1-0; Atlanta won Game 2 79-65."
 category: news
 tags:
@@ -59,6 +59,8 @@ Atlanta's playoff run was built on extra possessions. The Dream won the turnover
 Golden State also won the offensive glass 12-7. Add the turnover margin and the offensive-rebound margin together, and the Valkyries have come out ahead in all seven of their playoff games, including their one loss, to Dallas. Atlanta had been ahead in all five of its games before Saturday, and finished minus-9 in Game 1.
 
 The turnover counts here are player turnovers from FCB's game files, which leave out team turnovers. Counting team turnovers, Golden State had 10, so the official count was 12-10, not 12-8. That's also why Atlanta's semifinal margin is plus-18 here and plus-19 in [our Game 1 preview](/news/finals-game-1-preview-dream-valkyries/). One Finals game is a small sample, so this shows what changed on Saturday, not what will happen Monday.
+
+That's the kind of series this was expected to be. In his [Finals preview](https://chartinghoops.substack.com/p/the-chris-finals-preview-0f9), Chris Gunther of Charting Hoops pointed out that both finalists are defense-first teams in a league where offenses usually win titles, and that both went exactly 18-5 after the Fourth of July. Extra possessions are how a defense-first team wins, which is why Atlanta losing that count in Game 1 matters.
 
 ## The fourth quarter, and who protected the rim
 
