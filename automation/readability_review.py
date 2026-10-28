@@ -21,13 +21,20 @@ Forbidden: changing, adding or removing any number, name, team, quote, date, sta
 reaction, motivation or opinion; touching markdown table rows, quoted speech, or link URLs.
 Each "original" must be copied EXACTLY (character for character) from the article and be one sentence or a
 short passage; "suggested" replaces it. Use original "TITLE" to suggest a new headline. Max 12 edits, only
-ones that clearly help. Return JSON {"edits":[{"original":..., "suggested":..., "reason":...}]}.
+ones that clearly help.
+If you believe something is factually WRONG (a stat, date, name, score, record), do NOT put it in edits. List it
+in "factual_flags" instead, with the exact original text, your suggested fix, and why. These are never applied
+automatically; a human checks each one against a primary source.
+Return JSON {"edits":[{"original":..., "suggested":..., "reason":...}],
+"factual_flags":[{"original":..., "suggested":..., "reason":...}]}.
 Style guide excerpt:
 """
-SCHEMA = {"type": "object", "additionalProperties": False, "required": ["edits"], "properties": {"edits": {
-    "type": "array", "items": {"type": "object", "additionalProperties": False,
+_ITEM = {"type": "array", "items": {"type": "object", "additionalProperties": False,
     "required": ["original", "suggested", "reason"], "properties": {
-        "original": {"type": "string"}, "suggested": {"type": "string"}, "reason": {"type": "string"}}}}}}
+        "original": {"type": "string"}, "suggested": {"type": "string"}, "reason": {"type": "string"}}}}
+SCHEMA = {"type": "object", "additionalProperties": False, "required": ["edits", "factual_flags"],
+          "properties": {"edits": _ITEM, "factual_flags": _ITEM}}
+FLAGS = []  # factual corrections proposed by a model: reported, never auto-applied
 BANNED = ("Here's the wild part", "The wild part?", "Like really", "Game over.", "felt like the moment", "was nuts")
 USAGE = []
 
@@ -49,7 +56,8 @@ def ask_openai(text):
         {'Authorization': 'Bearer ' + key})
     u = d.get('usage', {}); USAGE.append(('openai', OPENAI_MODEL, u.get('input_tokens', 0), u.get('output_tokens', 0)))
     out = ''.join(c.get('text', '') for o in d.get('output', []) if o.get('type') == 'message' for c in o['content'])
-    return json.loads(out)['edits']
+    j = json.loads(out); FLAGS.extend(dict(f, model='openai') for f in j.get('factual_flags', []))
+    return j['edits']
 
 
 def ask_gemini(text):
@@ -61,7 +69,9 @@ def ask_gemini(text):
         'contents': [{'role': 'user', 'parts': [{'text': text}]}],
         'generationConfig': {'responseMimeType': 'application/json'}}, {'x-goog-api-key': key})
     u = d.get('usageMetadata', {}); USAGE.append(('gemini', GEMINI_MODEL, u.get('promptTokenCount', 0), u.get('candidatesTokenCount', 0)))
-    return json.loads(d['candidates'][0]['content']['parts'][0]['text'])['edits']
+    j = json.loads(d['candidates'][0]['content']['parts'][0]['text'])
+    FLAGS.extend(dict(f, model='gemini') for f in j.get('factual_flags', []))
+    return j.get('edits', [])
 
 
 def style_excerpt():
@@ -185,6 +195,11 @@ def main():
     for e in accepted:
         lines += [f"- **{'/'.join(e['models'])}**: {e['reason']}", f"  - Before: {e.get('before_title', title) if e['original']=='TITLE' else e['original']}",
                   f"  - After: {e['suggested']}", '']
+    lines += ['## Needs fact-check (not applied; verify each against a primary source)', '']
+    for f in FLAGS:
+        lines += [f"- **{f['model']}**: {f['reason']}", f"  - Text: {f['original']}", f"  - Suggested fix: {f['suggested']}", '']
+    if not FLAGS:
+        lines += ['- None', '']
     lines += ['## Rejected', '']
     for e, why in rejected:
         lines += [f"- **{'/'.join(e['models'])}** ({why}): {e['reason']}", f"  - Before: {e['original']}", f"  - After: {e['suggested']}", '']
