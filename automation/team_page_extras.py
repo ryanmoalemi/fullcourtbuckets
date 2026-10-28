@@ -218,7 +218,7 @@ def faq_schema(items: list[tuple[str, str]], url: str) -> dict | None:
     }
 
 
-CSV_FIELDS = ('team', 'number', 'player', 'position', 'developmental', 'draft_year', 'draft_round', 'draft_pick', 'undrafted', 'ppg', 'rpg', 'apg', 'mpg', 'profile_url')
+CSV_FIELDS = ('team', 'number', 'player', 'position', 'developmental', 'draft_year', 'draft_round', 'draft_pick', 'drafted_by', 'undrafted', 'ppg', 'rpg', 'apg', 'mpg', 'profile_url')
 
 
 def csv_name(slot: dict) -> str:
@@ -537,16 +537,17 @@ def draft_text(row: dict) -> str:
     if row.get('undrafted'):
         return 'Undrafted'
     if row.get('year') and row.get('round') and row.get('pick'):
-        return f'{row["year"]} R{row["round"]}, No. {row["pick"]}'
+        text = f'{row["year"]} R{row["round"]}, No. {row["pick"]}'
+        return f'{text} ({row["drafted_by"]})' if row.get('drafted_by') else text
     return ''
 
 
 def draft_fields(row: dict) -> list:
     if row.get('undrafted'):
-        return ['', '', '', 'yes']
+        return ['', '', '', '', 'yes']
     if row.get('year'):
-        return [row.get('year') or '', row.get('round') or '', row.get('pick') or '', 'no']
-    return ['', '', '', '']
+        return [row.get('year') or '', row.get('round') or '', row.get('pick') or '', row.get('drafted_by') or '', 'no']
+    return ['', '', '', '', '']
 
 
 def history_csv_name(slot: dict) -> str:
@@ -579,10 +580,14 @@ def history_html(root, slot: dict) -> str:
         f'<tbody>{"".join(body)}</tbody></table></div>'
         '<p class="muted small">Methods: W-L and finish from <a href="https://www.wnba.com/standings" target="_blank" '
         'rel="noopener">WNBA.com standings</a> for 2010 on (finish is the standings rank: by conference through 2015, '
-        'league-wide from 2016). WNBA.com does not publish standings before 2010, so for 1997-2009 the W-L is counted '
-        'from final regular-season scores in the <a href="https://www.wnba.com/schedule" target="_blank" rel="noopener">'
-        'WNBA.com schedule</a> and the finish is left blank. Playoff result from the series line in the same schedule. '
-        'Team name is the name the franchise played under that season.</p>'
+        'league-wide from 2016). For 1997-2009 the W-L is counted from final regular-season scores in the '
+        '<a href="https://www.wnba.com/schedule" target="_blank" rel="noopener">WNBA.com schedule</a>, and the finish is '
+        'the conference rank from archived WNBA.com standings pages (<a href="https://web.archive.org/" target="_blank" '
+        'rel="noopener">Wayback Machine</a>) for 1998, 2002-2004 and 2007-2009. No archived official table was found for '
+        '1997, 1999-2001, 2005 or 2006, so those finishes come from <a href="https://www.basketball-reference.com/wnba/" '
+        'target="_blank" rel="noopener">Basketball-Reference</a> (not an official source); every W-L in those tables '
+        'matches the WNBA.com count. The CSV names the source of each finish. Playoff result from the series line in '
+        'the same schedule. Team name is the name the franchise played under that season.</p>'
     )
     return ('<section class="section" id="history"><p class="eyebrow">Franchise history</p>'
             f'<h2>Season by season</h2>{dynamic("div", "team-history", "data/wnba/team-history.json", updated, table)}</section>')
@@ -651,11 +656,11 @@ def schedule_html(root, slot: dict) -> str:
 def history_csv(root, slot: dict) -> str:
     buffer = io.StringIO()
     writer = csv.writer(buffer, lineterminator='\n')
-    writer.writerow(('franchise', 'season', 'team_name', 'wins', 'losses', 'finish', 'playoffs', 'record_source'))
+    writer.writerow(('franchise', 'season', 'team_name', 'wins', 'losses', 'finish', 'playoffs', 'record_source', 'finish_source'))
     for r in team_history(root, slot['full_name']):
         writer.writerow((slot['full_name'], r['season'], r.get('team_name') or '', r.get('wins') if r.get('wins') is not None else '',
                          r.get('losses') if r.get('losses') is not None else '', r.get('finish') or '', r.get('playoffs') or '',
-                         r.get('record_source') or ''))
+                         r.get('record_source') or '', r.get('finish_source') or (r.get('record_source') if r.get('finish') else '') or ''))
     return buffer.getvalue()
 
 

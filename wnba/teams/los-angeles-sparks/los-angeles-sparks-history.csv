@@ -1,31 +1,31 @@
-franchise,season,team_name,wins,losses,finish,playoffs,record_source
-Los Angeles Sparks,2026,Los Angeles Sparks,16,28,12th of 15 in the league,Missed playoffs,https://www.wnba.com/standings?season=2026
-Los Angeles Sparks,2025,Los Angeles Sparks,21,23,9th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025
-Los Angeles Sparks,2024,Los Angeles Sparks,8,32,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024
-Los Angeles Sparks,2023,Los Angeles Sparks,17,23,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2023
-Los Angeles Sparks,2022,Los Angeles Sparks,13,23,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2022
-Los Angeles Sparks,2021,Los Angeles Sparks,12,20,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2021
-Los Angeles Sparks,2020,Los Angeles Sparks,15,7,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2020
-Los Angeles Sparks,2019,Los Angeles Sparks,22,12,3rd of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2019
-Los Angeles Sparks,2018,Los Angeles Sparks,19,15,6th of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2018
-Los Angeles Sparks,2017,Los Angeles Sparks,26,8,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2017
-Los Angeles Sparks,2016,Los Angeles Sparks,26,8,2nd of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2016
-Los Angeles Sparks,2015,Los Angeles Sparks,14,20,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2015
-Los Angeles Sparks,2014,Los Angeles Sparks,16,18,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2014
-Los Angeles Sparks,2013,Los Angeles Sparks,24,10,2nd in the West,Lost in First Round,https://www.wnba.com/standings?season=2013
-Los Angeles Sparks,2012,Los Angeles Sparks,24,10,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2012
-Los Angeles Sparks,2011,Los Angeles Sparks,15,19,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2011
-Los Angeles Sparks,2010,Los Angeles Sparks,13,21,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2010
-Los Angeles Sparks,2009,Los Angeles Sparks,18,16,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2009&regionId=1
-Los Angeles Sparks,2008,Los Angeles Sparks,20,14,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2008&regionId=1
-Los Angeles Sparks,2007,Los Angeles Sparks,10,24,,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1
-Los Angeles Sparks,2006,Los Angeles Sparks,25,9,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2006&regionId=1
-Los Angeles Sparks,2005,Los Angeles Sparks,17,17,,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1
-Los Angeles Sparks,2004,Los Angeles Sparks,25,9,,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1
-Los Angeles Sparks,2003,Los Angeles Sparks,24,10,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2003&regionId=1
-Los Angeles Sparks,2002,Los Angeles Sparks,25,7,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2002&regionId=1
-Los Angeles Sparks,2001,Los Angeles Sparks,28,4,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2001&regionId=1
-Los Angeles Sparks,2000,Los Angeles Sparks,28,4,,Reached Playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
-Los Angeles Sparks,1999,Los Angeles Sparks,20,12,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
-Los Angeles Sparks,1998,Los Angeles Sparks,12,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1
-Los Angeles Sparks,1997,Los Angeles Sparks,14,14,,Missed playoffs,https://www.wnba.com/api/schedule?season=1997&regionId=1
+franchise,season,team_name,wins,losses,finish,playoffs,record_source,finish_source
+Los Angeles Sparks,2026,Los Angeles Sparks,16,28,12th of 15 in the league,Missed playoffs,https://www.wnba.com/standings?season=2026,https://www.wnba.com/standings?season=2026
+Los Angeles Sparks,2025,Los Angeles Sparks,21,23,9th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025,https://www.wnba.com/standings?season=2025
+Los Angeles Sparks,2024,Los Angeles Sparks,8,32,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024,https://www.wnba.com/standings?season=2024
+Los Angeles Sparks,2023,Los Angeles Sparks,17,23,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2023,https://www.wnba.com/standings?season=2023
+Los Angeles Sparks,2022,Los Angeles Sparks,13,23,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2022,https://www.wnba.com/standings?season=2022
+Los Angeles Sparks,2021,Los Angeles Sparks,12,20,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2021,https://www.wnba.com/standings?season=2021
+Los Angeles Sparks,2020,Los Angeles Sparks,15,7,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2020,https://www.wnba.com/standings?season=2020
+Los Angeles Sparks,2019,Los Angeles Sparks,22,12,3rd of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2019,https://www.wnba.com/standings?season=2019
+Los Angeles Sparks,2018,Los Angeles Sparks,19,15,6th of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2018,https://www.wnba.com/standings?season=2018
+Los Angeles Sparks,2017,Los Angeles Sparks,26,8,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2017,https://www.wnba.com/standings?season=2017
+Los Angeles Sparks,2016,Los Angeles Sparks,26,8,2nd of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2016,https://www.wnba.com/standings?season=2016
+Los Angeles Sparks,2015,Los Angeles Sparks,14,20,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2015,https://www.wnba.com/standings?season=2015
+Los Angeles Sparks,2014,Los Angeles Sparks,16,18,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2014,https://www.wnba.com/standings?season=2014
+Los Angeles Sparks,2013,Los Angeles Sparks,24,10,2nd in the West,Lost in First Round,https://www.wnba.com/standings?season=2013,https://www.wnba.com/standings?season=2013
+Los Angeles Sparks,2012,Los Angeles Sparks,24,10,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2012,https://www.wnba.com/standings?season=2012
+Los Angeles Sparks,2011,Los Angeles Sparks,15,19,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2011,https://www.wnba.com/standings?season=2011
+Los Angeles Sparks,2010,Los Angeles Sparks,13,21,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2010,https://www.wnba.com/standings?season=2010
+Los Angeles Sparks,2009,Los Angeles Sparks,18,16,3rd in the West,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2009&regionId=1,https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Los Angeles Sparks,2008,Los Angeles Sparks,20,14,3rd in the West,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2008&regionId=1,https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Los Angeles Sparks,2007,Los Angeles Sparks,10,24,7th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1,https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Los Angeles Sparks,2006,Los Angeles Sparks,25,9,1st in the West,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2006&regionId=1,https://www.basketball-reference.com/wnba/years/2006.html
+Los Angeles Sparks,2005,Los Angeles Sparks,17,17,4th in the West,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1,https://www.basketball-reference.com/wnba/years/2005.html
+Los Angeles Sparks,2004,Los Angeles Sparks,25,9,1st in the West,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1,https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html
+Los Angeles Sparks,2003,Los Angeles Sparks,24,10,1st in the West,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2003&regionId=1,https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html
+Los Angeles Sparks,2002,Los Angeles Sparks,25,7,1st in the West,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2002&regionId=1,https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html
+Los Angeles Sparks,2001,Los Angeles Sparks,28,4,1st in the West,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2001&regionId=1,https://www.basketball-reference.com/wnba/years/2001.html
+Los Angeles Sparks,2000,Los Angeles Sparks,28,4,1st in the West,Reached Playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1,https://www.basketball-reference.com/wnba/years/2000.html
+Los Angeles Sparks,1999,Los Angeles Sparks,20,12,2nd in the West,Lost in Playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1,https://www.basketball-reference.com/wnba/years/1999.html
+Los Angeles Sparks,1998,Los Angeles Sparks,12,18,3rd in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1,https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html
+Los Angeles Sparks,1997,Los Angeles Sparks,14,14,2nd in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=1997&regionId=1,https://www.basketball-reference.com/wnba/years/1997.html

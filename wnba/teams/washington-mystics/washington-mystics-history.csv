@@ -1,30 +1,30 @@
-franchise,season,team_name,wins,losses,finish,playoffs,record_source
-Washington Mystics,2026,Washington Mystics,28,16,5th of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026
-Washington Mystics,2025,Washington Mystics,16,28,10th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025
-Washington Mystics,2024,Washington Mystics,14,26,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024
-Washington Mystics,2023,Washington Mystics,19,21,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2023
-Washington Mystics,2022,Washington Mystics,22,14,5th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022
-Washington Mystics,2021,Washington Mystics,12,20,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2021
-Washington Mystics,2020,Washington Mystics,9,13,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2020
-Washington Mystics,2019,Washington Mystics,26,8,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2019
-Washington Mystics,2018,Washington Mystics,22,12,3rd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2018
-Washington Mystics,2017,Washington Mystics,18,16,6th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2017
-Washington Mystics,2016,Washington Mystics,13,21,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2016
-Washington Mystics,2015,Washington Mystics,18,16,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2015
-Washington Mystics,2014,Washington Mystics,16,18,3rd in the East,Lost in First Round,https://www.wnba.com/standings?season=2014
-Washington Mystics,2013,Washington Mystics,17,17,3rd in the East,Lost in First Round,https://www.wnba.com/standings?season=2013
-Washington Mystics,2012,Washington Mystics,5,29,6th in the East,Missed playoffs,https://www.wnba.com/standings?season=2012
-Washington Mystics,2011,Washington Mystics,6,28,6th in the East,Missed playoffs,https://www.wnba.com/standings?season=2011
-Washington Mystics,2010,Washington Mystics,22,12,1st in the East,Lost in First Round,https://www.wnba.com/standings?season=2010
-Washington Mystics,2009,Washington Mystics,16,18,,Lost in First Round,https://www.wnba.com/api/schedule?season=2009&regionId=1
-Washington Mystics,2008,Washington Mystics,10,24,,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1
-Washington Mystics,2007,Washington Mystics,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1
-Washington Mystics,2006,Washington Mystics,18,16,,Lost in First Round,https://www.wnba.com/api/schedule?season=2006&regionId=1
-Washington Mystics,2005,Washington Mystics,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1
-Washington Mystics,2004,Washington Mystics,17,17,,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1
-Washington Mystics,2003,Washington Mystics,9,25,,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1
-Washington Mystics,2002,Washington Mystics,17,15,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2002&regionId=1
-Washington Mystics,2001,Washington Mystics,10,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
-Washington Mystics,2000,Washington Mystics,14,18,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
-Washington Mystics,1999,Washington Mystics,12,20,,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
-Washington Mystics,1998,Washington Mystics,3,27,,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1
+franchise,season,team_name,wins,losses,finish,playoffs,record_source,finish_source
+Washington Mystics,2026,Washington Mystics,28,16,5th of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026,https://www.wnba.com/standings?season=2026
+Washington Mystics,2025,Washington Mystics,16,28,10th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025,https://www.wnba.com/standings?season=2025
+Washington Mystics,2024,Washington Mystics,14,26,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024,https://www.wnba.com/standings?season=2024
+Washington Mystics,2023,Washington Mystics,19,21,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2023,https://www.wnba.com/standings?season=2023
+Washington Mystics,2022,Washington Mystics,22,14,5th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022,https://www.wnba.com/standings?season=2022
+Washington Mystics,2021,Washington Mystics,12,20,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2021,https://www.wnba.com/standings?season=2021
+Washington Mystics,2020,Washington Mystics,9,13,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2020,https://www.wnba.com/standings?season=2020
+Washington Mystics,2019,Washington Mystics,26,8,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2019,https://www.wnba.com/standings?season=2019
+Washington Mystics,2018,Washington Mystics,22,12,3rd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2018,https://www.wnba.com/standings?season=2018
+Washington Mystics,2017,Washington Mystics,18,16,6th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2017,https://www.wnba.com/standings?season=2017
+Washington Mystics,2016,Washington Mystics,13,21,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2016,https://www.wnba.com/standings?season=2016
+Washington Mystics,2015,Washington Mystics,18,16,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2015,https://www.wnba.com/standings?season=2015
+Washington Mystics,2014,Washington Mystics,16,18,3rd in the East,Lost in First Round,https://www.wnba.com/standings?season=2014,https://www.wnba.com/standings?season=2014
+Washington Mystics,2013,Washington Mystics,17,17,3rd in the East,Lost in First Round,https://www.wnba.com/standings?season=2013,https://www.wnba.com/standings?season=2013
+Washington Mystics,2012,Washington Mystics,5,29,6th in the East,Missed playoffs,https://www.wnba.com/standings?season=2012,https://www.wnba.com/standings?season=2012
+Washington Mystics,2011,Washington Mystics,6,28,6th in the East,Missed playoffs,https://www.wnba.com/standings?season=2011,https://www.wnba.com/standings?season=2011
+Washington Mystics,2010,Washington Mystics,22,12,1st in the East,Lost in First Round,https://www.wnba.com/standings?season=2010,https://www.wnba.com/standings?season=2010
+Washington Mystics,2009,Washington Mystics,16,18,4th in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2009&regionId=1,https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Washington Mystics,2008,Washington Mystics,10,24,6th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1,https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Washington Mystics,2007,Washington Mystics,16,18,5th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1,https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Washington Mystics,2006,Washington Mystics,18,16,4th in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2006&regionId=1,https://www.basketball-reference.com/wnba/years/2006.html
+Washington Mystics,2005,Washington Mystics,16,18,5th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1,https://www.basketball-reference.com/wnba/years/2005.html
+Washington Mystics,2004,Washington Mystics,17,17,4th in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1,https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html
+Washington Mystics,2003,Washington Mystics,9,25,7th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1,https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html
+Washington Mystics,2002,Washington Mystics,17,15,3rd in the East,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2002&regionId=1,https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html
+Washington Mystics,2001,Washington Mystics,10,22,8th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1,https://www.basketball-reference.com/wnba/years/2001.html
+Washington Mystics,2000,Washington Mystics,14,18,4th in the East,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1,https://www.basketball-reference.com/wnba/years/2000.html
+Washington Mystics,1999,Washington Mystics,12,20,5th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1,https://www.basketball-reference.com/wnba/years/1999.html
+Washington Mystics,1998,Washington Mystics,3,27,5th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1,https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html

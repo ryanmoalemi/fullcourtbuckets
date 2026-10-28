@@ -1,7 +1,7 @@
 {
   "source": "WNBA.com player pages (official league site)",
   "checked_at": "2026-10-28T03:53:35+00:00",
-  "note": "Draft year, round and overall pick as published on each player page. WNBA.com does not publish the drafting team there, so it is not recorded.",
+  "note": "Draft year, round and overall pick as published on each player page. Drafting team from the WNBA.com draft board for that year (wnba.com/draft/<year>/board, 2016 on) or the WNBA.com draft results page (wnba.com/draft/<year>, 2009-2015), matched on year, round and pick. It is the team that made the pick, under its name that year.",
   "players": {
     "1630149": {
       "year": 2020,
@@ -11,7 +11,9 @@
       "source": "https://www.wnba.com/player/1630149",
       "player": "Satou Sabally",
       "team": "New York Liberty",
-      "person_id": 1630149
+      "person_id": 1630149,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1630469": {
       "year": 2021,
@@ -21,7 +23,9 @@
       "source": "https://www.wnba.com/player/1630469",
       "player": "Marine Fauthoux",
       "team": "New York Liberty",
-      "person_id": 1630469
+      "person_id": 1630469,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1641663": {
       "year": null,
@@ -61,7 +65,9 @@
       "source": "https://www.wnba.com/player/1642810",
       "player": "Madison Scott",
       "team": "New York Liberty",
-      "person_id": 1642810
+      "person_id": 1642810,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1630142": {
       "year": 2020,
@@ -71,7 +77,9 @@
       "source": "https://www.wnba.com/player/1630142",
       "player": "Leonie Fiebich",
       "team": "New York Liberty",
-      "person_id": 1630142
+      "person_id": 1630142,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1630384": {
       "year": 2021,
@@ -81,7 +89,9 @@
       "source": "https://www.wnba.com/player/1630384",
       "player": "Raquel Carrera",
       "team": "New York Liberty",
-      "person_id": 1630384
+      "person_id": 1630384,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1631136": {
       "year": null,
@@ -101,7 +111,9 @@
       "source": "https://www.wnba.com/player/1629477",
       "player": "Sabrina Ionescu",
       "team": "New York Liberty",
-      "person_id": 1629477
+      "person_id": 1629477,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1629566": {
       "year": 2019,
@@ -111,7 +123,9 @@
       "source": "https://www.wnba.com/player/1629566",
       "player": "Han Xu",
       "team": "New York Liberty",
-      "person_id": 1629566
+      "person_id": 1629566,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1629546": {
       "year": null,
@@ -141,7 +155,9 @@
       "source": "https://www.wnba.com/player/1627668",
       "player": "Breanna Stewart",
       "team": "New York Liberty",
-      "person_id": 1627668
+      "person_id": 1627668,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1627673": {
       "year": 2016,
@@ -151,7 +167,9 @@
       "source": "https://www.wnba.com/player/1627673",
       "player": "Jonquel Jones",
       "team": "New York Liberty",
-      "person_id": 1627673
+      "person_id": 1627673,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1628276": {
       "year": 2017,
@@ -161,7 +179,9 @@
       "source": "https://www.wnba.com/player/1628276",
       "player": "Kelsey Plum",
       "team": "Phoenix Mercury",
-      "person_id": 1628276
+      "person_id": 1628276,
+      "drafted_by": "San Antonio Stars",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "1643493": {
       "year": null,
@@ -181,7 +201,9 @@
       "source": "https://www.wnba.com/player/1627674",
       "player": "Kahleah Copper",
       "team": "Phoenix Mercury",
-      "person_id": 1627674
+      "person_id": 1627674,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1630442": {
       "year": 2021,
@@ -191,7 +213,9 @@
       "source": "https://www.wnba.com/player/1630442",
       "player": "Natasha Mack",
       "team": "Phoenix Mercury",
-      "person_id": 1630442
+      "person_id": 1630442,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1643470": {
       "year": null,
@@ -251,7 +275,9 @@
       "source": "https://www.wnba.com/player/1642818",
       "player": "Maddy Westbeld",
       "team": "Phoenix Mercury",
-      "person_id": 1642818
+      "person_id": 1642818,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "203826": {
       "year": 2014,
@@ -261,7 +287,9 @@
       "source": "https://www.wnba.com/player/203826",
       "player": "Alyssa Thomas",
       "team": "Phoenix Mercury",
-      "person_id": 203826
+      "person_id": 203826,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1643505": {
       "year": null,
@@ -301,7 +329,9 @@
       "source": "https://www.wnba.com/player/1643438",
       "player": "Marta Suarez",
       "team": "Phoenix Mercury",
-      "person_id": 1643438
+      "person_id": 1643438,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1629498": {
       "year": 2019,
@@ -311,7 +341,9 @@
       "source": "https://www.wnba.com/player/1629498",
       "player": "Jackie Young",
       "team": "Las Vegas Aces",
-      "person_id": 1629498
+      "person_id": 1629498,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1631006": {
       "year": 2022,
@@ -321,7 +353,9 @@
       "source": "https://www.wnba.com/player/1631006",
       "player": "Kierstan Bell",
       "team": "Las Vegas Aces",
-      "person_id": 1631006
+      "person_id": 1631006,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1643434": {
       "year": 2026,
@@ -331,7 +365,9 @@
       "source": "https://www.wnba.com/player/1643434",
       "player": "Janiah Barker",
       "team": "Las Vegas Aces",
-      "person_id": 1643434
+      "person_id": 1643434,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1631019": {
       "year": 2022,
@@ -341,7 +377,9 @@
       "source": "https://www.wnba.com/player/1631019",
       "player": "NaLyssa Smith",
       "team": "Las Vegas Aces",
-      "person_id": 1631019
+      "person_id": 1631019,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1643444": {
       "year": 2026,
@@ -351,7 +389,9 @@
       "source": "https://www.wnba.com/player/1643444",
       "player": "Ta'Niya Latson",
       "team": "Las Vegas Aces",
-      "person_id": 1643444
+      "person_id": 1643444,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "203855": {
       "year": 2014,
@@ -361,7 +401,9 @@
       "source": "https://www.wnba.com/player/203855",
       "player": "Stephanie Talbot",
       "team": "Las Vegas Aces",
-      "person_id": 203855
+      "person_id": 203855,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1630389": {
       "year": 2021,
@@ -371,7 +413,9 @@
       "source": "https://www.wnba.com/player/1630389",
       "player": "Dana Evans",
       "team": "Las Vegas Aces",
-      "person_id": 1630389
+      "person_id": 1630389,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "203833": {
       "year": 2014,
@@ -381,7 +425,9 @@
       "source": "https://www.wnba.com/player/203833",
       "player": "Chelsea Gray",
       "team": "Las Vegas Aces",
-      "person_id": 203833
+      "person_id": 203833,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1643495": {
       "year": 2026,
@@ -391,7 +437,9 @@
       "source": "https://www.wnba.com/player/1643495",
       "player": "Justine Pissott",
       "team": "Las Vegas Aces",
-      "person_id": 1643495
+      "person_id": 1643495,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642769": {
       "year": null,
@@ -411,7 +459,9 @@
       "source": "https://www.wnba.com/player/1629480",
       "player": "Kalani Brown",
       "team": "Las Vegas Aces",
-      "person_id": 1629480
+      "person_id": 1629480,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1629488": {
       "year": 2019,
@@ -421,7 +471,9 @@
       "source": "https://www.wnba.com/player/1629488",
       "player": "Brianna Turner",
       "team": "Las Vegas Aces",
-      "person_id": 1629488
+      "person_id": 1629488,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1628932": {
       "year": 2018,
@@ -431,7 +483,9 @@
       "source": "https://www.wnba.com/player/1628932",
       "player": "A'ja Wilson",
       "team": "Las Vegas Aces",
-      "person_id": 1628932
+      "person_id": 1628932,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "204319": {
       "year": 2015,
@@ -441,7 +495,9 @@
       "source": "https://www.wnba.com/player/204319",
       "player": "Jewell Loyd",
       "team": "Las Vegas Aces",
-      "person_id": 204319
+      "person_id": 204319,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "204323": {
       "year": 2015,
@@ -451,7 +507,9 @@
       "source": "https://www.wnba.com/player/204323",
       "player": "Cheyenne Parker-Tyus",
       "team": "Las Vegas Aces",
-      "person_id": 204323
+      "person_id": 204323,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "1642811": {
       "year": 2025,
@@ -461,7 +519,9 @@
       "source": "https://www.wnba.com/player/1642811",
       "player": "Shyanne Sellers",
       "team": "Los Angeles Sparks",
-      "person_id": 1642811
+      "person_id": 1642811,
+      "drafted_by": "Golden State Valkyries",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1642777": {
       "year": null,
@@ -481,7 +541,9 @@
       "source": "https://www.wnba.com/player/1643462",
       "player": "Chance Gray",
       "team": "Los Angeles Sparks",
-      "person_id": 1643462
+      "person_id": 1643462,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643439": {
       "year": 2026,
@@ -491,7 +553,9 @@
       "source": "https://www.wnba.com/player/1643439",
       "player": "Tonie Morgan",
       "team": "Los Angeles Sparks",
-      "person_id": 1643439
+      "person_id": 1643439,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "204324": {
       "year": 2015,
@@ -501,7 +565,9 @@
       "source": "https://www.wnba.com/player/204324",
       "player": "Dearica Hamby",
       "team": "Los Angeles Sparks",
-      "person_id": 204324
+      "person_id": 204324,
+      "drafted_by": "San Antonio Stars",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "1630148": {
       "year": null,
@@ -521,7 +587,9 @@
       "source": "https://www.wnba.com/player/1628878",
       "player": "Ariel Atkins",
       "team": "Los Angeles Sparks",
-      "person_id": 1628878
+      "person_id": 1628878,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1630996": {
       "year": 2022,
@@ -531,7 +599,9 @@
       "source": "https://www.wnba.com/player/1630996",
       "player": "Rae Burrell",
       "team": "Los Angeles Sparks",
-      "person_id": 1630996
+      "person_id": 1630996,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1642801": {
       "year": 2025,
@@ -541,7 +611,9 @@
       "source": "https://www.wnba.com/player/1642801",
       "player": "Aaliyah Nye",
       "team": "Los Angeles Sparks",
-      "person_id": 1642801
+      "person_id": 1642801,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643479": {
       "year": null,
@@ -571,7 +643,9 @@
       "source": "https://www.wnba.com/player/1642287",
       "player": "Cameron Brink",
       "team": "Los Angeles Sparks",
-      "person_id": 1642287
+      "person_id": 1642287,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "203014": {
       "year": 2012,
@@ -581,7 +655,9 @@
       "source": "https://www.wnba.com/player/203014",
       "player": "Nneka Ogwumike",
       "team": "Los Angeles Sparks",
-      "person_id": 203014
+      "person_id": 203014,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2012"
     },
     "1628242": {
       "year": null,
@@ -601,7 +677,9 @@
       "source": "https://www.wnba.com/player/203824",
       "player": "Odyssey Sims",
       "team": "Dallas Wings",
-      "person_id": 203824
+      "person_id": 203824,
+      "drafted_by": "Tulsa Shock",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1642795": {
       "year": null,
@@ -621,7 +699,9 @@
       "source": "https://www.wnba.com/player/1642784",
       "player": "Paige Bueckers",
       "team": "Dallas Wings",
-      "person_id": 1642784
+      "person_id": 1642784,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643424": {
       "year": null,
@@ -641,7 +721,9 @@
       "source": "https://www.wnba.com/player/202252",
       "player": "Alysha Clark",
       "team": "Dallas Wings",
-      "person_id": 202252
+      "person_id": 202252,
+      "drafted_by": "San Antonio Silver Stars",
+      "drafted_by_source": "https://www.wnba.com/draft/2010"
     },
     "1629501": {
       "year": 2019,
@@ -651,7 +733,9 @@
       "source": "https://www.wnba.com/player/1629501",
       "player": "Alanna Smith",
       "team": "Dallas Wings",
-      "person_id": 1629501
+      "person_id": 1629501,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1642793": {
       "year": 2025,
@@ -661,7 +745,9 @@
       "source": "https://www.wnba.com/player/1642793",
       "player": "Aziaha James",
       "team": "Dallas Wings",
-      "person_id": 1642793
+      "person_id": 1642793,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1631090": {
       "year": 2022,
@@ -671,7 +757,9 @@
       "source": "https://www.wnba.com/player/1631090",
       "player": "Christyn Williams",
       "team": "Dallas Wings",
-      "person_id": 1631090
+      "person_id": 1631090,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1641652": {
       "year": 2023,
@@ -681,7 +769,9 @@
       "source": "https://www.wnba.com/player/1641652",
       "player": "Maddy Siegrist",
       "team": "Dallas Wings",
-      "person_id": 1641652
+      "person_id": 1641652,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1629481": {
       "year": 2019,
@@ -691,7 +781,9 @@
       "source": "https://www.wnba.com/player/1629481",
       "player": "Arike Ogunbowale",
       "team": "Dallas Wings",
-      "person_id": 1629481
+      "person_id": 1629481,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1629574": {
       "year": 2019,
@@ -701,7 +793,9 @@
       "source": "https://www.wnba.com/player/1629574",
       "player": "Li Yueru",
       "team": "Dallas Wings",
-      "person_id": 1629574
+      "person_id": 1629574,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1641650": {
       "year": 2023,
@@ -711,7 +805,9 @@
       "source": "https://www.wnba.com/player/1641650",
       "player": "Haley Jones",
       "team": "Dallas Wings",
-      "person_id": 1641650
+      "person_id": 1641650,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1629491": {
       "year": 2019,
@@ -721,7 +817,9 @@
       "source": "https://www.wnba.com/player/1629491",
       "player": "Jessica Shepard",
       "team": "Dallas Wings",
-      "person_id": 1629491
+      "person_id": 1629491,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1629490": {
       "year": 2020,
@@ -731,7 +829,9 @@
       "source": "https://www.wnba.com/player/1629490",
       "player": "Kitija Laksa",
       "team": "Dallas Wings",
-      "person_id": 1629490
+      "person_id": 1629490,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1630386": {
       "year": 2021,
@@ -741,7 +841,9 @@
       "source": "https://www.wnba.com/player/1630386",
       "player": "Awak Kuier",
       "team": "Dallas Wings",
-      "person_id": 1630386
+      "person_id": 1630386,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1643425": {
       "year": 2026,
@@ -751,7 +853,9 @@
       "source": "https://www.wnba.com/player/1643425",
       "player": "Azzi Fudd",
       "team": "Dallas Wings",
-      "person_id": 1643425
+      "person_id": 1643425,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1631022": {
       "year": 2022,
@@ -761,7 +865,9 @@
       "source": "https://www.wnba.com/player/1631022",
       "player": "Shakira Austin",
       "team": "Washington Mystics",
-      "person_id": 1631022
+      "person_id": 1631022,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1643644": {
       "year": null,
@@ -781,7 +887,9 @@
       "source": "https://www.wnba.com/player/1643450",
       "player": "Rori Harmon",
       "team": "Washington Mystics",
-      "person_id": 1643450
+      "person_id": 1643450,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643440": {
       "year": 2026,
@@ -791,7 +899,9 @@
       "source": "https://www.wnba.com/player/1643440",
       "player": "Darianna Littlepage-Buggs",
       "team": "Washington Mystics",
-      "person_id": 1643440
+      "person_id": 1643440,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642781": {
       "year": 2025,
@@ -801,7 +911,9 @@
       "source": "https://www.wnba.com/player/1642781",
       "player": "Georgia Amoore",
       "team": "Washington Mystics",
-      "person_id": 1642781
+      "person_id": 1642781,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1630446": {
       "year": 2021,
@@ -811,7 +923,9 @@
       "source": "https://www.wnba.com/player/1630446",
       "player": "Michaela Onyenwere",
       "team": "Washington Mystics",
-      "person_id": 1630446
+      "person_id": 1630446,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1643467": {
       "year": 2026,
@@ -821,7 +935,9 @@
       "source": "https://www.wnba.com/player/1643467",
       "player": "Cassandre Prosper",
       "team": "Washington Mystics",
-      "person_id": 1643467
+      "person_id": 1643467,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642785": {
       "year": 2025,
@@ -831,7 +947,9 @@
       "source": "https://www.wnba.com/player/1642785",
       "player": "Sonia Citron",
       "team": "Washington Mystics",
-      "person_id": 1642785
+      "person_id": 1642785,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643430": {
       "year": 2026,
@@ -841,7 +959,9 @@
       "source": "https://www.wnba.com/player/1643430",
       "player": "Cotie McMahon",
       "team": "Washington Mystics",
-      "person_id": 1643430
+      "person_id": 1643430,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643455": {
       "year": 2026,
@@ -851,7 +971,9 @@
       "source": "https://www.wnba.com/player/1643455",
       "player": "Angela Dugalic",
       "team": "Washington Mystics",
-      "person_id": 1643455
+      "person_id": 1643455,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642802": {
       "year": 2025,
@@ -861,7 +983,9 @@
       "source": "https://www.wnba.com/player/1642802",
       "player": "Lucy Olsen",
       "team": "Washington Mystics",
-      "person_id": 1642802
+      "person_id": 1642802,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "204335": {
       "year": 2015,
@@ -871,7 +995,9 @@
       "source": "https://www.wnba.com/player/204335",
       "player": "Betnijah Laney-Hamilton",
       "team": "Washington Mystics",
-      "person_id": 204335
+      "person_id": 204335,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2015/draftboard"
     },
     "1642792": {
       "year": 2025,
@@ -881,7 +1007,9 @@
       "source": "https://www.wnba.com/player/1642792",
       "player": "Kiki Iriafen",
       "team": "Washington Mystics",
-      "person_id": 1642792
+      "person_id": 1642792,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643427": {
       "year": 2026,
@@ -891,7 +1019,9 @@
       "source": "https://www.wnba.com/player/1643427",
       "player": "Lauren Betts",
       "team": "Washington Mystics",
-      "person_id": 1643427
+      "person_id": 1643427,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1641649": {
       "year": 2023,
@@ -901,7 +1031,9 @@
       "source": "https://www.wnba.com/player/1641649",
       "player": "Diamond Miller",
       "team": "Connecticut Sun",
-      "person_id": 1641649
+      "person_id": 1641649,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1642817": {
       "year": 2025,
@@ -911,7 +1043,9 @@
       "source": "https://www.wnba.com/player/1642817",
       "player": "Hailey Van Lith",
       "team": "Connecticut Sun",
-      "person_id": 1642817
+      "person_id": 1642817,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643437": {
       "year": 2026,
@@ -921,7 +1055,9 @@
       "source": "https://www.wnba.com/player/1643437",
       "player": "Ashlon Jackson",
       "team": "Connecticut Sun",
-      "person_id": 1643437
+      "person_id": 1643437,
+      "drafted_by": "Golden State Valkyries",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643449": {
       "year": 2026,
@@ -931,7 +1067,9 @@
       "source": "https://www.wnba.com/player/1643449",
       "player": "Charlisse Leger-Walker",
       "team": "Connecticut Sun",
-      "person_id": 1643449
+      "person_id": 1643449,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643429": {
       "year": 2026,
@@ -941,7 +1079,9 @@
       "source": "https://www.wnba.com/player/1643429",
       "player": "Gianna Kneepkens",
       "team": "Connecticut Sun",
-      "person_id": 1643429
+      "person_id": 1643429,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642290": {
       "year": 2024,
@@ -951,7 +1091,9 @@
       "source": "https://www.wnba.com/player/1642290",
       "player": "Aaliyah Edwards",
       "team": "Connecticut Sun",
-      "person_id": 1642290
+      "person_id": 1642290,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1631135": {
       "year": 2022,
@@ -961,7 +1103,9 @@
       "source": "https://www.wnba.com/player/1631135",
       "player": "Olivia Nelson-Ododa",
       "team": "Connecticut Sun",
-      "person_id": 1631135
+      "person_id": 1631135,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1642796": {
       "year": 2025,
@@ -971,7 +1115,9 @@
       "source": "https://www.wnba.com/player/1642796",
       "player": "Rayah Marshall",
       "team": "Connecticut Sun",
-      "person_id": 1642796
+      "person_id": 1642796,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643441": {
       "year": null,
@@ -991,7 +1137,9 @@
       "source": "https://www.wnba.com/player/1642809",
       "player": "Saniya Rivers",
       "team": "Connecticut Sun",
-      "person_id": 1642809
+      "person_id": 1642809,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1629568": {
       "year": 2019,
@@ -1001,7 +1149,9 @@
       "source": "https://www.wnba.com/player/1629568",
       "player": "Kennedy Burke",
       "team": "Connecticut Sun",
-      "person_id": 1629568
+      "person_id": 1629568,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1643448": {
       "year": 2026,
@@ -1011,7 +1161,9 @@
       "source": "https://www.wnba.com/player/1643448",
       "player": "Nell Angloma",
       "team": "Connecticut Sun",
-      "person_id": 1643448
+      "person_id": 1643448,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "203398": {
       "year": 2013,
@@ -1021,7 +1173,9 @@
       "source": "https://www.wnba.com/player/203398",
       "player": "Brittney Griner",
       "team": "Connecticut Sun",
-      "person_id": 203398
+      "person_id": 203398,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2013"
     },
     "1642303": {
       "year": 2024,
@@ -1031,7 +1185,9 @@
       "source": "https://www.wnba.com/player/1642303",
       "player": "Leila Lacan",
       "team": "Connecticut Sun",
-      "person_id": 1642303
+      "person_id": 1642303,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1643825": {
       "year": null,
@@ -1051,7 +1207,9 @@
       "source": "https://www.wnba.com/player/203827",
       "player": "Natasha Howard",
       "team": "Minnesota Lynx",
-      "person_id": 203827
+      "person_id": 203827,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1642820": {
       "year": 2025,
@@ -1061,7 +1219,9 @@
       "source": "https://www.wnba.com/player/1642820",
       "player": "Liatu King",
       "team": "Minnesota Lynx",
-      "person_id": 1642820
+      "person_id": 1642820,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1630471": {
       "year": 2021,
@@ -1071,7 +1231,9 @@
       "source": "https://www.wnba.com/player/1630471",
       "player": "Maya Caldwell",
       "team": "Minnesota Lynx",
-      "person_id": 1630471
+      "person_id": 1630471,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1630462": {
       "year": 2021,
@@ -1081,7 +1243,9 @@
       "source": "https://www.wnba.com/player/1630462",
       "player": "Aari McDonald",
       "team": "Minnesota Lynx",
-      "person_id": 1630462
+      "person_id": 1630462,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1643426": {
       "year": 2026,
@@ -1091,7 +1255,9 @@
       "source": "https://www.wnba.com/player/1643426",
       "player": "Olivia Miles",
       "team": "Minnesota Lynx",
-      "person_id": 1643426
+      "person_id": 1643426,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642797": {
       "year": 2025,
@@ -1101,7 +1267,9 @@
       "source": "https://www.wnba.com/player/1642797",
       "player": "Anastasiia Olairi Kosu",
       "team": "Minnesota Lynx",
-      "person_id": 1642797
+      "person_id": 1642797,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643489": {
       "year": null,
@@ -1121,7 +1289,9 @@
       "source": "https://www.wnba.com/player/1627675",
       "player": "Courtney Williams",
       "team": "Minnesota Lynx",
-      "person_id": 1627675
+      "person_id": 1627675,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1628269": {
       "year": 2017,
@@ -1131,7 +1301,9 @@
       "source": "https://www.wnba.com/player/1628269",
       "player": "Nia Brodie",
       "team": "Minnesota Lynx",
-      "person_id": 1628269
+      "person_id": 1628269,
+      "drafted_by": "San Antonio Stars",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "1641657": {
       "year": 2023,
@@ -1141,7 +1313,9 @@
       "source": "https://www.wnba.com/player/1641657",
       "player": "Dorka Juhasz",
       "team": "Minnesota Lynx",
-      "person_id": 1641657
+      "person_id": 1641657,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "203825": {
       "year": 2014,
@@ -1151,7 +1325,9 @@
       "source": "https://www.wnba.com/player/203825",
       "player": "Kayla McBride",
       "team": "Minnesota Lynx",
-      "person_id": 203825
+      "person_id": 203825,
+      "drafted_by": "San Antonio Stars",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1643488": {
       "year": null,
@@ -1171,7 +1347,9 @@
       "source": "https://www.wnba.com/player/1629483",
       "player": "Napheesa Collier",
       "team": "Minnesota Lynx",
-      "person_id": 1629483
+      "person_id": 1629483,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1631064": {
       "year": null,
@@ -1191,7 +1369,9 @@
       "source": "https://www.wnba.com/player/1628909",
       "player": "Kelsey Mitchell",
       "team": "Indiana Fever",
-      "person_id": 1628909
+      "person_id": 1628909,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1642803": {
       "year": null,
@@ -1211,7 +1391,9 @@
       "source": "https://www.wnba.com/player/1628899",
       "player": "Myisha Hines-Allen",
       "team": "Indiana Fever",
-      "person_id": 1628899
+      "person_id": 1628899,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1643433": {
       "year": 2026,
@@ -1221,7 +1403,9 @@
       "source": "https://www.wnba.com/player/1643433",
       "player": "Raven Johnson",
       "team": "Indiana Fever",
-      "person_id": 1643433
+      "person_id": 1643433,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1628920": {
       "year": 2018,
@@ -1231,7 +1415,9 @@
       "source": "https://www.wnba.com/player/1628920",
       "player": "Mercedes Russell",
       "team": "Indiana Fever",
-      "person_id": 1628920
+      "person_id": 1628920,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1641648": {
       "year": 2023,
@@ -1241,7 +1427,9 @@
       "source": "https://www.wnba.com/player/1641648",
       "player": "Aliyah Boston",
       "team": "Indiana Fever",
-      "person_id": 1641648
+      "person_id": 1641648,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1629482": {
       "year": 2019,
@@ -1251,7 +1439,9 @@
       "source": "https://www.wnba.com/player/1629482",
       "player": "Sophie Cunningham",
       "team": "Indiana Fever",
-      "person_id": 1629482
+      "person_id": 1629482,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1631086": {
       "year": 2022,
@@ -1261,7 +1451,9 @@
       "source": "https://www.wnba.com/player/1631086",
       "player": "Lexie Hull",
       "team": "Indiana Fever",
-      "person_id": 1631086
+      "person_id": 1631086,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "203024": {
       "year": 2012,
@@ -1271,7 +1463,9 @@
       "source": "https://www.wnba.com/player/203024",
       "player": "Damiris Dantas",
       "team": "Indiana Fever",
-      "person_id": 203024
+      "person_id": 203024,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2012"
     },
     "1643453": {
       "year": 2026,
@@ -1281,7 +1475,9 @@
       "source": "https://www.wnba.com/player/1643453",
       "player": "Grace VanSlooten",
       "team": "Indiana Fever",
-      "person_id": 1643453
+      "person_id": 1643453,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642815": {
       "year": 2025,
@@ -1291,7 +1487,9 @@
       "source": "https://www.wnba.com/player/1642815",
       "player": "Makayla Timpson",
       "team": "Indiana Fever",
-      "person_id": 1642815
+      "person_id": 1642815,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1642286": {
       "year": 2024,
@@ -1301,7 +1499,9 @@
       "source": "https://www.wnba.com/player/1642286",
       "player": "Caitlin Clark",
       "team": "Indiana Fever",
-      "person_id": 1642286
+      "person_id": 1642286,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1642788": {
       "year": 2025,
@@ -1311,7 +1511,9 @@
       "source": "https://www.wnba.com/player/1642788",
       "player": "Bree Hall",
       "team": "Indiana Fever",
-      "person_id": 1642788
+      "person_id": 1642788,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1628881": {
       "year": 2018,
@@ -1321,7 +1523,9 @@
       "source": "https://www.wnba.com/player/1628881",
       "player": "Monique Billings",
       "team": "Indiana Fever",
-      "person_id": 1628881
+      "person_id": 1628881,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1630112": {
       "year": 2020,
@@ -1331,7 +1535,9 @@
       "source": "https://www.wnba.com/player/1630112",
       "player": "Tyasha Harris",
       "team": "Indiana Fever",
-      "person_id": 1630112
+      "person_id": 1630112,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1642304": {
       "year": 2024,
@@ -1341,7 +1547,9 @@
       "source": "https://www.wnba.com/player/1642304",
       "player": "Carla Leite",
       "team": "Portland Fire",
-      "person_id": 1642304
+      "person_id": 1642304,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1642790": {
       "year": 2025,
@@ -1351,7 +1559,9 @@
       "source": "https://www.wnba.com/player/1642790",
       "player": "Sania Feagin",
       "team": "Portland Fire",
-      "person_id": 1642790
+      "person_id": 1642790,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643527": {
       "year": null,
@@ -1371,7 +1581,9 @@
       "source": "https://www.wnba.com/player/1642782",
       "player": "Sarah Ashlee Barker",
       "team": "Portland Fire",
-      "person_id": 1642782
+      "person_id": 1642782,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1629524": {
       "year": 2019,
@@ -1381,7 +1593,9 @@
       "source": "https://www.wnba.com/player/1629524",
       "player": "Bridget Carleton",
       "team": "Portland Fire",
-      "person_id": 1629524
+      "person_id": 1629524,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1643506": {
       "year": null,
@@ -1411,7 +1625,9 @@
       "source": "https://www.wnba.com/player/1642296",
       "player": "Nyadiew Puoch",
       "team": "Portland Fire",
-      "person_id": 1642296
+      "person_id": 1642296,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1630143": {
       "year": 2020,
@@ -1421,7 +1637,9 @@
       "source": "https://www.wnba.com/player/1630143",
       "player": "Luisa Geiselsoder",
       "team": "Portland Fire",
-      "person_id": 1630143
+      "person_id": 1630143,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1629484": {
       "year": 2019,
@@ -1431,7 +1649,9 @@
       "source": "https://www.wnba.com/player/1629484",
       "player": "Megan DiLeo",
       "team": "Portland Fire",
-      "person_id": 1629484
+      "person_id": 1629484,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1643494": {
       "year": 2026,
@@ -1441,7 +1661,9 @@
       "source": "https://www.wnba.com/player/1643494",
       "player": "Frieda Buhner",
       "team": "Portland Fire",
-      "person_id": 1643494
+      "person_id": 1643494,
+      "drafted_by": "Portland Fire",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1631083": {
       "year": 2022,
@@ -1451,7 +1673,9 @@
       "source": "https://www.wnba.com/player/1631083",
       "player": "Emily Engstler",
       "team": "Portland Fire",
-      "person_id": 1631083
+      "person_id": 1631083,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1642294": {
       "year": 2024,
@@ -1461,7 +1685,9 @@
       "source": "https://www.wnba.com/player/1642294",
       "player": "Charisma Osborne",
       "team": "Portland Fire",
-      "person_id": 1642294
+      "person_id": 1642294,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1643436": {
       "year": 2026,
@@ -1471,7 +1697,9 @@
       "source": "https://www.wnba.com/player/1643436",
       "player": "Serah Williams",
       "team": "Portland Fire",
-      "person_id": 1643436
+      "person_id": 1643436,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1628317": {
       "year": null,
@@ -1501,7 +1729,9 @@
       "source": "https://www.wnba.com/player/1629567",
       "player": "Natisha Hiedeman",
       "team": "Seattle Storm",
-      "person_id": 1629567
+      "person_id": 1629567,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1642814": {
       "year": 2025,
@@ -1511,7 +1741,9 @@
       "source": "https://www.wnba.com/player/1642814",
       "player": "Taylor Thierry",
       "team": "Seattle Storm",
-      "person_id": 1642814
+      "person_id": 1642814,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643428": {
       "year": 2026,
@@ -1521,7 +1753,9 @@
       "source": "https://www.wnba.com/player/1643428",
       "player": "Flau'jae Johnson",
       "team": "Seattle Storm",
-      "person_id": 1643428
+      "person_id": 1643428,
+      "drafted_by": "Golden State Valkyries",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642320": {
       "year": null,
@@ -1541,7 +1775,9 @@
       "source": "https://www.wnba.com/player/1631141",
       "player": "Jade Melbourne",
       "team": "Seattle Storm",
-      "person_id": 1631141
+      "person_id": 1631141,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1641660": {
       "year": 2023,
@@ -1551,7 +1787,9 @@
       "source": "https://www.wnba.com/player/1641660",
       "player": "Zia Cooke",
       "team": "Seattle Storm",
-      "person_id": 1641660
+      "person_id": 1641660,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1643443": {
       "year": 2026,
@@ -1561,7 +1799,9 @@
       "source": "https://www.wnba.com/player/1643443",
       "player": "Awa Fam",
       "team": "Seattle Storm",
-      "person_id": 1643443
+      "person_id": 1643443,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1629496": {
       "year": 2019,
@@ -1571,7 +1811,9 @@
       "source": "https://www.wnba.com/player/1629496",
       "player": "Ezi Magbegor",
       "team": "Seattle Storm",
-      "person_id": 1629496
+      "person_id": 1629496,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1642798": {
       "year": 2025,
@@ -1581,7 +1823,9 @@
       "source": "https://www.wnba.com/player/1642798",
       "player": "Dominique Malonga",
       "team": "Seattle Storm",
-      "person_id": 1642798
+      "person_id": 1642798,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643473": {
       "year": 2026,
@@ -1591,7 +1835,9 @@
       "source": "https://www.wnba.com/player/1643473",
       "player": "Taina Mair",
       "team": "Seattle Storm",
-      "person_id": 1643473
+      "person_id": 1643473,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1641651": {
       "year": 2023,
@@ -1601,7 +1847,9 @@
       "source": "https://www.wnba.com/player/1641651",
       "player": "Jordan Horston",
       "team": "Seattle Storm",
-      "person_id": 1641651
+      "person_id": 1641651,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "203828": {
       "year": 2014,
@@ -1611,7 +1859,9 @@
       "source": "https://www.wnba.com/player/203828",
       "player": "Stefanie Dolson",
       "team": "Seattle Storm",
-      "person_id": 203828
+      "person_id": 203828,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2014"
     },
     "1629478": {
       "year": 2019,
@@ -1621,7 +1871,9 @@
       "source": "https://www.wnba.com/player/1629478",
       "player": "Katie Lou Samuelson",
       "team": "Seattle Storm",
-      "person_id": 1629478
+      "person_id": 1629478,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1642307": {
       "year": 2024,
@@ -1631,7 +1883,9 @@
       "source": "https://www.wnba.com/player/1642307",
       "player": "Mackenzie Holmes",
       "team": "Seattle Storm",
-      "person_id": 1642307
+      "person_id": 1642307,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1642292": {
       "year": 2024,
@@ -1641,7 +1895,9 @@
       "source": "https://www.wnba.com/player/1642292",
       "player": "Jacy Sheldon",
       "team": "Chicago Sky",
-      "person_id": 1642292
+      "person_id": 1642292,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "204322": {
       "year": 2015,
@@ -1651,7 +1907,9 @@
       "source": "https://www.wnba.com/player/204322",
       "player": "Elizabeth Williams",
       "team": "Chicago Sky",
-      "person_id": 204322
+      "person_id": 204322,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "203400": {
       "year": 2013,
@@ -1661,7 +1919,9 @@
       "source": "https://www.wnba.com/player/203400",
       "player": "Skylar Diggins",
       "team": "Chicago Sky",
-      "person_id": 203400
+      "person_id": 203400,
+      "drafted_by": "Tulsa Shock",
+      "drafted_by_source": "https://www.wnba.com/draft/2013"
     },
     "1642288": {
       "year": 2024,
@@ -1671,7 +1931,9 @@
       "source": "https://www.wnba.com/player/1642288",
       "player": "Rickea Jackson",
       "team": "Chicago Sky",
-      "person_id": 1642288
+      "person_id": 1642288,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1630096": {
       "year": 2021,
@@ -1681,7 +1943,9 @@
       "source": "https://www.wnba.com/player/1630096",
       "player": "DiJonai Carrington",
       "team": "Chicago Sky",
-      "person_id": 1630096
+      "person_id": 1630096,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "204333": {
       "year": 2015,
@@ -1691,7 +1955,9 @@
       "source": "https://www.wnba.com/player/204333",
       "player": "Natasha Cloud",
       "team": "Chicago Sky",
-      "person_id": 204333
+      "person_id": 204333,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2015/draftboard"
     },
     "1642289": {
       "year": 2024,
@@ -1701,7 +1967,9 @@
       "source": "https://www.wnba.com/player/1642289",
       "player": "Kamilla Cardoso",
       "team": "Chicago Sky",
-      "person_id": 1642289
+      "person_id": 1642289,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1643447": {
       "year": 2026,
@@ -1711,7 +1979,9 @@
       "source": "https://www.wnba.com/player/1643447",
       "player": "Gabriela Jaquez",
       "team": "Chicago Sky",
-      "person_id": 1643447
+      "person_id": 1643447,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1642321": {
       "year": null,
@@ -1741,7 +2011,9 @@
       "source": "https://www.wnba.com/player/1642324",
       "player": "Kate Martin",
       "team": "Chicago Sky",
-      "person_id": 1642324
+      "person_id": 1642324,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "202664": {
       "year": 2011,
@@ -1751,7 +2023,9 @@
       "source": "https://www.wnba.com/player/202664",
       "player": "Courtney Vandersloot",
       "team": "Chicago Sky",
-      "person_id": 202664
+      "person_id": 202664,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2011"
     },
     "1627671": {
       "year": 2016,
@@ -1761,7 +2035,9 @@
       "source": "https://www.wnba.com/player/1627671",
       "player": "Rachel Banham",
       "team": "Chicago Sky",
-      "person_id": 1627671
+      "person_id": 1627671,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1628922": {
       "year": 2018,
@@ -1771,7 +2047,9 @@
       "source": "https://www.wnba.com/player/1628922",
       "player": "Azura Stevens",
       "team": "Chicago Sky",
-      "person_id": 1628922
+      "person_id": 1628922,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1642786": {
       "year": 2025,
@@ -1781,7 +2059,9 @@
       "source": "https://www.wnba.com/player/1642786",
       "player": "Aicha Coulibaly",
       "team": "Chicago Sky",
-      "person_id": 1642786
+      "person_id": 1642786,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1642327": {
       "year": 2024,
@@ -1791,7 +2071,9 @@
       "source": "https://www.wnba.com/player/1642327",
       "player": "Matilde Villa",
       "team": "Atlanta Dream",
-      "person_id": 1642327
+      "person_id": 1642327,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1631044": {
       "year": 2022,
@@ -1801,7 +2083,9 @@
       "source": "https://www.wnba.com/player/1631044",
       "player": "Naz Hillmon",
       "team": "Atlanta Dream",
-      "person_id": 1631044
+      "person_id": 1631044,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1642804": {
       "year": 2025,
@@ -1811,7 +2095,9 @@
       "source": "https://www.wnba.com/player/1642804",
       "player": "Te-Hina Paopao",
       "team": "Atlanta Dream",
-      "person_id": 1642804
+      "person_id": 1642804,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1628886": {
       "year": 2018,
@@ -1821,7 +2107,9 @@
       "source": "https://www.wnba.com/player/1628886",
       "player": "Jordin Canada",
       "team": "Atlanta Dream",
-      "person_id": 1628886
+      "person_id": 1628886,
+      "drafted_by": "Seattle Storm",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1642291": {
       "year": 2024,
@@ -1831,7 +2119,9 @@
       "source": "https://www.wnba.com/player/1642291",
       "player": "Angel Reese",
       "team": "Atlanta Dream",
-      "person_id": 1642291
+      "person_id": 1642291,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1631009": {
       "year": 2022,
@@ -1841,7 +2131,9 @@
       "source": "https://www.wnba.com/player/1631009",
       "player": "Rhyne Howard",
       "team": "Atlanta Dream",
-      "person_id": 1631009
+      "person_id": 1631009,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1643431": {
       "year": 2026,
@@ -1851,7 +2143,9 @@
       "source": "https://www.wnba.com/player/1643431",
       "player": "Madina Okot",
       "team": "Atlanta Dream",
-      "person_id": 1643431
+      "person_id": 1643431,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1628277": {
       "year": 2017,
@@ -1861,7 +2155,9 @@
       "source": "https://www.wnba.com/player/1628277",
       "player": "Allisha Gray",
       "team": "Atlanta Dream",
-      "person_id": 1628277
+      "person_id": 1628277,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "1642302": {
       "year": 2024,
@@ -1871,7 +2167,9 @@
       "source": "https://www.wnba.com/player/1642302",
       "player": "Isobel Borlase",
       "team": "Atlanta Dream",
-      "person_id": 1642302
+      "person_id": 1642302,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2024/board"
     },
     "1643469": {
       "year": 2026,
@@ -1881,7 +2179,9 @@
       "source": "https://www.wnba.com/player/1643469",
       "player": "Indya Nivar",
       "team": "Atlanta Dream",
-      "person_id": 1643469
+      "person_id": 1643469,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1631021": {
       "year": 2022,
@@ -1891,7 +2191,9 @@
       "source": "https://www.wnba.com/player/1631021",
       "player": "Sika Kone",
       "team": "Atlanta Dream",
-      "person_id": 1631021
+      "person_id": 1631021,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "201886": {
       "year": 2009,
@@ -1901,7 +2203,9 @@
       "source": "https://www.wnba.com/player/201886",
       "player": "DeWanna Bonner",
       "team": "Atlanta Dream",
-      "person_id": 201886
+      "person_id": 201886,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2009"
     },
     "1628278": {
       "year": 2017,
@@ -1911,7 +2215,9 @@
       "source": "https://www.wnba.com/player/1628278",
       "player": "Shatori Walker-Kimbrough",
       "team": "Atlanta Dream",
-      "person_id": 1628278
+      "person_id": 1628278,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "1628280": {
       "year": 2017,
@@ -1921,7 +2227,9 @@
       "source": "https://www.wnba.com/player/1628280",
       "player": "Brionna Jones",
       "team": "Atlanta Dream",
-      "person_id": 1628280
+      "person_id": 1628280,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "1628931": {
       "year": 2018,
@@ -1931,7 +2239,9 @@
       "source": "https://www.wnba.com/player/1628931",
       "player": "Gabby Williams",
       "team": "Golden State Valkyries",
-      "person_id": 1628931
+      "person_id": 1628931,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1642822": {
       "year": 2025,
@@ -1941,7 +2251,9 @@
       "source": "https://www.wnba.com/player/1642822",
       "player": "Kaitlyn Chen",
       "team": "Golden State Valkyries",
-      "person_id": 1642822
+      "person_id": 1642822,
+      "drafted_by": "Golden State Valkyries",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1641656": {
       "year": 2023,
@@ -1951,7 +2263,9 @@
       "source": "https://www.wnba.com/player/1641656",
       "player": "Laeticia Amihere",
       "team": "Golden State Valkyries",
-      "person_id": 1641656
+      "person_id": 1641656,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1642794": {
       "year": 2025,
@@ -1961,7 +2275,9 @@
       "source": "https://www.wnba.com/player/1642794",
       "player": "Juste Jocyte",
       "team": "Golden State Valkyries",
-      "person_id": 1642794
+      "person_id": 1642794,
+      "drafted_by": "Golden State Valkyries",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "203866": {
       "year": null,
@@ -1981,7 +2297,9 @@
       "source": "https://www.wnba.com/player/1630097",
       "player": "Kaila Charles",
       "team": "Golden State Valkyries",
-      "person_id": 1630097
+      "person_id": 1630097,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2020/board"
     },
     "1631039": {
       "year": null,
@@ -2001,7 +2319,9 @@
       "source": "https://www.wnba.com/player/1641695",
       "player": "Ashten Prechtel",
       "team": "Golden State Valkyries",
-      "person_id": 1641695
+      "person_id": 1641695,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2023/board"
     },
     "1630387": {
       "year": 2021,
@@ -2011,7 +2331,9 @@
       "source": "https://www.wnba.com/player/1630387",
       "player": "Iliana Rupert",
       "team": "Golden State Valkyries",
-      "person_id": 1630387
+      "person_id": 1630387,
+      "drafted_by": "Las Vegas Aces",
+      "drafted_by_source": "https://www.wnba.com/draft/2021/board"
     },
     "1642767": {
       "year": null,
@@ -2031,7 +2353,9 @@
       "source": "https://www.wnba.com/player/203026",
       "player": "Tiffany Hayes",
       "team": "Golden State Valkyries",
-      "person_id": 203026
+      "person_id": 203026,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2012"
     },
     "1631007": {
       "year": 2022,
@@ -2041,7 +2365,9 @@
       "source": "https://www.wnba.com/player/1631007",
       "player": "Veronica Burton",
       "team": "Golden State Valkyries",
-      "person_id": 1631007
+      "person_id": 1631007,
+      "drafted_by": "Dallas Wings",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1628508": {
       "year": null,
@@ -2071,7 +2397,9 @@
       "source": "https://www.wnba.com/player/204329",
       "player": "Kiah Stokes",
       "team": "Golden State Valkyries",
-      "person_id": 204329
+      "person_id": 204329,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "1642791": {
       "year": 2025,
@@ -2081,7 +2409,9 @@
       "source": "https://www.wnba.com/player/1642791",
       "player": "Zaay Green",
       "team": "Toronto Tempo",
-      "person_id": 1642791
+      "person_id": 1642791,
+      "drafted_by": "Washington Mystics",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643445": {
       "year": 2026,
@@ -2091,7 +2421,9 @@
       "source": "https://www.wnba.com/player/1643445",
       "player": "Kiki Rice",
       "team": "Toronto Tempo",
-      "person_id": 1643445
+      "person_id": 1643445,
+      "drafted_by": "Toronto Tempo",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1643420": {
       "year": null,
@@ -2111,7 +2443,9 @@
       "source": "https://www.wnba.com/player/1629497",
       "player": "Marina Mabrey",
       "team": "Toronto Tempo",
-      "person_id": 1629497
+      "person_id": 1629497,
+      "drafted_by": "Los Angeles Sparks",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1642832": {
       "year": null,
@@ -2131,7 +2465,9 @@
       "source": "https://www.wnba.com/player/1643457",
       "player": "Teonni Key",
       "team": "Toronto Tempo",
-      "person_id": 1643457
+      "person_id": 1643457,
+      "drafted_by": "Toronto Tempo",
+      "drafted_by_source": "https://www.wnba.com/draft/2026/board"
     },
     "1631055": {
       "year": 2022,
@@ -2141,7 +2477,9 @@
       "source": "https://www.wnba.com/player/1631055",
       "player": "Nyara Sabally",
       "team": "Toronto Tempo",
-      "person_id": 1631055
+      "person_id": 1631055,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2022/board"
     },
     "1629576": {
       "year": 2019,
@@ -2151,7 +2489,9 @@
       "source": "https://www.wnba.com/player/1629576",
       "player": "Maria Conde",
       "team": "Toronto Tempo",
-      "person_id": 1629576
+      "person_id": 1629576,
+      "drafted_by": "Chicago Sky",
+      "drafted_by_source": "https://www.wnba.com/draft/2019/board"
     },
     "1631137": {
       "year": null,
@@ -2171,7 +2511,9 @@
       "source": "https://www.wnba.com/player/1628915",
       "player": "Kia Nurse",
       "team": "Toronto Tempo",
-      "person_id": 1628915
+      "person_id": 1628915,
+      "drafted_by": "New York Liberty",
+      "drafted_by_source": "https://www.wnba.com/draft/2018/board"
     },
     "1627701": {
       "year": 2016,
@@ -2181,7 +2523,9 @@
       "source": "https://www.wnba.com/player/1627701",
       "player": "Temi Fagbenle",
       "team": "Toronto Tempo",
-      "person_id": 1627701
+      "person_id": 1627701,
+      "drafted_by": "Minnesota Lynx",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1628279": {
       "year": 2017,
@@ -2191,7 +2535,9 @@
       "source": "https://www.wnba.com/player/1628279",
       "player": "Brittney Sykes",
       "team": "Toronto Tempo",
-      "person_id": 1628279
+      "person_id": 1628279,
+      "drafted_by": "Atlanta Dream",
+      "drafted_by_source": "https://www.wnba.com/draft/2017/board"
     },
     "204330": {
       "year": 2015,
@@ -2201,7 +2547,9 @@
       "source": "https://www.wnba.com/player/204330",
       "player": "Isabelle Harrison",
       "team": "Toronto Tempo",
-      "person_id": 204330
+      "person_id": 204330,
+      "drafted_by": "Phoenix Mercury",
+      "drafted_by_source": "https://www.wnba.com/draft/2015"
     },
     "1627700": {
       "year": 2016,
@@ -2211,7 +2559,9 @@
       "source": "https://www.wnba.com/player/1627700",
       "player": "Julie Allemand",
       "team": "Toronto Tempo",
-      "person_id": 1627700
+      "person_id": 1627700,
+      "drafted_by": "Indiana Fever",
+      "drafted_by_source": "https://www.wnba.com/draft/2016/board"
     },
     "1642800": {
       "year": 2025,
@@ -2221,7 +2571,9 @@
       "source": "https://www.wnba.com/player/1642800",
       "player": "Aneesah Morrow",
       "team": "Toronto Tempo",
-      "person_id": 1642800
+      "person_id": 1642800,
+      "drafted_by": "Connecticut Sun",
+      "drafted_by_source": "https://www.wnba.com/draft/2025/board"
     },
     "1643706": {
       "year": null,

@@ -1,7 +1,7 @@
 {
   "source": "WNBA.com standings (2010 on) and the WNBA.com schedule feed (every season)",
   "checked_at": "2026-10-28T03:53:35+00:00",
-  "note": "W-L and finish from wnba.com/standings when published (2010 on); before 2010 the W-L is counted from final regular-season scores in the league schedule feed and the finish is left blank. Playoff result from the series line in the same feed.",
+  "note": "W-L and finish from wnba.com/standings when published (2010 on). Before 2010 the W-L is counted from final regular-season scores in the league schedule feed, and the finish is the conference rank from archived WNBA.com standings pages (Wayback Machine) for 1998, 2002-2004 and 2007-2009, or from Basketball-Reference for 1997, 1999-2001, 2005 and 2006, where no archived official table was found. Each row names its finish source.",
   "teams": {
     "New York Liberty": [
       {
@@ -179,130 +179,156 @@
         "team_name": "New York Liberty",
         "wins": 13,
         "losses": 21,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "New York Liberty",
         "wins": 19,
         "losses": 15,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "New York Liberty",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "New York Liberty",
         "wins": 11,
         "losses": 23,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "New York Liberty",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "New York Liberty",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "New York Liberty",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "New York Liberty",
         "wins": 18,
         "losses": 14,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "New York Liberty",
         "wins": 21,
         "losses": 11,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "New York Liberty",
         "wins": 20,
         "losses": 12,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "New York Liberty",
         "wins": 18,
         "losses": 14,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "New York Liberty",
         "wins": 18,
         "losses": 12,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 1997,
         "team_name": "New York Liberty",
         "wins": 17,
         "losses": 11,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1997.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Phoenix Mercury": [
@@ -481,130 +507,156 @@
         "team_name": "Phoenix Mercury",
         "wins": 23,
         "losses": 11,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Phoenix Mercury",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Phoenix Mercury",
         "wins": 23,
         "losses": 11,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Phoenix Mercury",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Phoenix Mercury",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Phoenix Mercury",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Phoenix Mercury",
         "wins": 8,
         "losses": 26,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Phoenix Mercury",
         "wins": 11,
         "losses": 21,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Phoenix Mercury",
         "wins": 13,
         "losses": 19,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Phoenix Mercury",
         "wins": 20,
         "losses": 12,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Phoenix Mercury",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "Phoenix Mercury",
         "wins": 19,
         "losses": 11,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 1997,
         "team_name": "Phoenix Mercury",
         "wins": 16,
         "losses": 12,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1997.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Las Vegas Aces": [
@@ -783,130 +835,156 @@
         "team_name": "San Antonio Silver Stars",
         "wins": 15,
         "losses": 19,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "San Antonio Silver Stars",
         "wins": 24,
         "losses": 10,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "San Antonio Silver Stars",
         "wins": 20,
         "losses": 14,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "San Antonio Silver Stars",
         "wins": 13,
         "losses": 21,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "San Antonio Silver Stars",
         "wins": 7,
         "losses": 27,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "San Antonio Silver Stars",
         "wins": 9,
         "losses": 25,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "San Antonio Silver Stars",
         "wins": 12,
         "losses": 22,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Utah Starzz",
         "wins": 20,
         "losses": 12,
-        "finish": null,
+        "finish": "3rd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Utah Starzz",
         "wins": 19,
         "losses": 13,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Utah Starzz",
         "wins": 18,
         "losses": 14,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Utah Starzz",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "Utah Starzz",
         "wins": 8,
         "losses": 22,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 1997,
         "team_name": "Utah Starzz",
         "wins": 7,
         "losses": 21,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1997.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Los Angeles Sparks": [
@@ -1085,130 +1163,156 @@
         "team_name": "Los Angeles Sparks",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Los Angeles Sparks",
         "wins": 20,
         "losses": 14,
-        "finish": null,
+        "finish": "3rd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Los Angeles Sparks",
         "wins": 10,
         "losses": 24,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Los Angeles Sparks",
         "wins": 25,
         "losses": 9,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Los Angeles Sparks",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Los Angeles Sparks",
         "wins": 25,
         "losses": 9,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Los Angeles Sparks",
         "wins": 24,
         "losses": 10,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Los Angeles Sparks",
         "wins": 25,
         "losses": 7,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Los Angeles Sparks",
         "wins": 28,
         "losses": 4,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Los Angeles Sparks",
         "wins": 28,
         "losses": 4,
-        "finish": null,
+        "finish": "1st in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Reached Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Los Angeles Sparks",
         "wins": 20,
         "losses": 12,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "Los Angeles Sparks",
         "wins": 12,
         "losses": 18,
-        "finish": null,
+        "finish": "3rd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 1997,
         "team_name": "Los Angeles Sparks",
         "wins": 14,
         "losses": 14,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1997.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Dallas Wings": [
@@ -1387,120 +1491,144 @@
         "team_name": "Detroit Shock",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Detroit Shock",
         "wins": 22,
         "losses": 12,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Detroit Shock",
         "wins": 24,
         "losses": 10,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Detroit Shock",
         "wins": 23,
         "losses": 11,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Detroit Shock",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Detroit Shock",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Detroit Shock",
         "wins": 25,
         "losses": 9,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Detroit Shock",
         "wins": 9,
         "losses": 23,
-        "finish": null,
+        "finish": "8th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Detroit Shock",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Detroit Shock",
         "wins": 14,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Detroit Shock",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "Detroit Shock",
         "wins": 17,
         "losses": 13,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       }
     ],
     "Washington Mystics": [
@@ -1679,120 +1807,144 @@
         "team_name": "Washington Mystics",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Washington Mystics",
         "wins": 10,
         "losses": 24,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Washington Mystics",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Washington Mystics",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Washington Mystics",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Washington Mystics",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Washington Mystics",
         "wins": 9,
         "losses": 25,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Washington Mystics",
         "wins": 17,
         "losses": 15,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Washington Mystics",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "8th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Washington Mystics",
         "wins": 14,
         "losses": 18,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Washington Mystics",
         "wins": 12,
         "losses": 20,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1998,
         "team_name": "Washington Mystics",
         "wins": 3,
         "losses": 27,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "finish_source": "https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       }
     ],
     "Connecticut Sun": [
@@ -1971,110 +2123,132 @@
         "team_name": "Connecticut Sun",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Connecticut Sun",
         "wins": 21,
         "losses": 13,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Connecticut Sun",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Connecticut Sun",
         "wins": 26,
         "losses": 8,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Connecticut Sun",
         "wins": 26,
         "losses": 8,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Connecticut Sun",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Connecticut Sun",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Orlando Miracle",
         "wins": 16,
         "losses": 16,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Orlando Miracle",
         "wins": 13,
         "losses": 19,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Orlando Miracle",
         "wins": 16,
         "losses": 16,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Lost in Playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Orlando Miracle",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Minnesota Lynx": [
@@ -2253,110 +2427,132 @@
         "team_name": "Minnesota Lynx",
         "wins": 14,
         "losses": 20,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Minnesota Lynx",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Minnesota Lynx",
         "wins": 10,
         "losses": 24,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Minnesota Lynx",
         "wins": 10,
         "losses": 24,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Minnesota Lynx",
         "wins": 14,
         "losses": 20,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Minnesota Lynx",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Minnesota Lynx",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Minnesota Lynx",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "8th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Minnesota Lynx",
         "wins": 12,
         "losses": 20,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Minnesota Lynx",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "6th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 1999,
         "team_name": "Minnesota Lynx",
         "wins": 15,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/1999.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Indiana Fever": [
@@ -2535,100 +2731,120 @@
         "team_name": "Indiana Fever",
         "wins": 22,
         "losses": 12,
-        "finish": null,
+        "finish": "1st in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Indiana Fever",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Indiana Fever",
         "wins": 21,
         "losses": 13,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Indiana Fever",
         "wins": 21,
         "losses": 13,
-        "finish": null,
+        "finish": "3rd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Indiana Fever",
         "wins": 21,
         "losses": 13,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in Semifinals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Indiana Fever",
         "wins": 15,
         "losses": 19,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Indiana Fever",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Indiana Fever",
         "wins": 16,
         "losses": 16,
-        "finish": null,
+        "finish": "4th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Indiana Fever",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Indiana Fever",
         "wins": 9,
         "losses": 23,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Portland Fire": [
@@ -2647,30 +2863,36 @@
         "team_name": "Portland Fire",
         "wins": 16,
         "losses": 16,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Portland Fire",
         "wins": 11,
         "losses": 21,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Portland Fire",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "7th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Seattle Storm": [
@@ -2849,100 +3071,120 @@
         "team_name": "Seattle Storm",
         "wins": 20,
         "losses": 14,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Seattle Storm",
         "wins": 22,
         "losses": 12,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Seattle Storm",
         "wins": 17,
         "losses": 17,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Seattle Storm",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2005,
         "team_name": "Seattle Storm",
         "wins": 20,
         "losses": 14,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2005.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2004,
         "team_name": "Seattle Storm",
         "wins": 20,
         "losses": 14,
-        "finish": null,
+        "finish": "2nd in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
         "playoffs": "Won WNBA Finals",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "finish_source": "https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2003,
         "team_name": "Seattle Storm",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "5th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "finish_source": "https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2002,
         "team_name": "Seattle Storm",
         "wins": 17,
         "losses": 15,
-        "finish": null,
+        "finish": "4th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "finish_source": "https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2001,
         "team_name": "Seattle Storm",
         "wins": 10,
         "losses": 22,
-        "finish": null,
+        "finish": "8th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2001.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       },
       {
         "season": 2000,
         "team_name": "Seattle Storm",
         "wins": 6,
         "losses": 26,
-        "finish": null,
+        "finish": "8th in the West",
         "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2000.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Chicago Sky": [
@@ -3121,40 +3363,48 @@
         "team_name": "Chicago Sky",
         "wins": 16,
         "losses": 18,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Chicago Sky",
         "wins": 12,
         "losses": 22,
-        "finish": null,
+        "finish": "5th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2007,
         "team_name": "Chicago Sky",
         "wins": 14,
         "losses": 20,
-        "finish": null,
+        "finish": "6th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "finish_source": "https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2006,
         "team_name": "Chicago Sky",
         "wins": 5,
         "losses": 29,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "finish_source": "https://www.basketball-reference.com/wnba/years/2006.html",
+        "finish_source_label": "Basketball-Reference (no official table found)"
       }
     ],
     "Atlanta Dream": [
@@ -3333,20 +3583,24 @@
         "team_name": "Atlanta Dream",
         "wins": 18,
         "losses": 16,
-        "finish": null,
+        "finish": "2nd in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
         "playoffs": "Lost in First Round",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "finish_source": "https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       },
       {
         "season": 2008,
         "team_name": "Atlanta Dream",
         "wins": 4,
         "losses": 30,
-        "finish": null,
+        "finish": "7th in the East",
         "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
         "playoffs": "Missed playoffs",
-        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "finish_source": "https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html",
+        "finish_source_label": "WNBA.com standings (archived)"
       }
     ],
     "Golden State Valkyries": [

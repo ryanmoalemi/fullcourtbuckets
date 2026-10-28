@@ -1,31 +1,31 @@
-franchise,season,team_name,wins,losses,finish,playoffs,record_source
-New York Liberty,2026,New York Liberty,26,18,8th of 15 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2026
-New York Liberty,2025,New York Liberty,27,17,5th of 13 in the league,Lost in First Round,https://www.wnba.com/standings?season=2025
-New York Liberty,2024,New York Liberty,32,8,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2024
-New York Liberty,2023,New York Liberty,32,8,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2023
-New York Liberty,2022,New York Liberty,16,20,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022
-New York Liberty,2021,New York Liberty,12,20,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2021
-New York Liberty,2020,New York Liberty,2,20,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2020
-New York Liberty,2019,New York Liberty,10,24,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2019
-New York Liberty,2018,New York Liberty,7,27,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2018
-New York Liberty,2017,New York Liberty,22,12,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2017
-New York Liberty,2016,New York Liberty,21,13,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2016
-New York Liberty,2015,New York Liberty,23,11,1st in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2015
-New York Liberty,2014,New York Liberty,15,19,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2014
-New York Liberty,2013,New York Liberty,11,23,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2013
-New York Liberty,2012,New York Liberty,15,19,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2012
-New York Liberty,2011,New York Liberty,19,15,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2011
-New York Liberty,2010,New York Liberty,22,12,2nd in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2010
-New York Liberty,2009,New York Liberty,13,21,,Missed playoffs,https://www.wnba.com/api/schedule?season=2009&regionId=1
-New York Liberty,2008,New York Liberty,19,15,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2008&regionId=1
-New York Liberty,2007,New York Liberty,16,18,,Lost in First Round,https://www.wnba.com/api/schedule?season=2007&regionId=1
-New York Liberty,2006,New York Liberty,11,23,,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1
-New York Liberty,2005,New York Liberty,18,16,,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1
-New York Liberty,2004,New York Liberty,18,16,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2004&regionId=1
-New York Liberty,2003,New York Liberty,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1
-New York Liberty,2002,New York Liberty,18,14,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2002&regionId=1
-New York Liberty,2001,New York Liberty,21,11,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
-New York Liberty,2000,New York Liberty,20,12,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2000&regionId=1
-New York Liberty,1999,New York Liberty,18,14,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=1999&regionId=1
-New York Liberty,1998,New York Liberty,18,12,,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1
-New York Liberty,1997,New York Liberty,17,11,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=1997&regionId=1
+franchise,season,team_name,wins,losses,finish,playoffs,record_source,finish_source
+New York Liberty,2026,New York Liberty,26,18,8th of 15 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2026,https://www.wnba.com/standings?season=2026
+New York Liberty,2025,New York Liberty,27,17,5th of 13 in the league,Lost in First Round,https://www.wnba.com/standings?season=2025,https://www.wnba.com/standings?season=2025
+New York Liberty,2024,New York Liberty,32,8,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2024,https://www.wnba.com/standings?season=2024
+New York Liberty,2023,New York Liberty,32,8,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2023,https://www.wnba.com/standings?season=2023
+New York Liberty,2022,New York Liberty,16,20,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022,https://www.wnba.com/standings?season=2022
+New York Liberty,2021,New York Liberty,12,20,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2021,https://www.wnba.com/standings?season=2021
+New York Liberty,2020,New York Liberty,2,20,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2020,https://www.wnba.com/standings?season=2020
+New York Liberty,2019,New York Liberty,10,24,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2019,https://www.wnba.com/standings?season=2019
+New York Liberty,2018,New York Liberty,7,27,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2018,https://www.wnba.com/standings?season=2018
+New York Liberty,2017,New York Liberty,22,12,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2017,https://www.wnba.com/standings?season=2017
+New York Liberty,2016,New York Liberty,21,13,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2016,https://www.wnba.com/standings?season=2016
+New York Liberty,2015,New York Liberty,23,11,1st in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2015,https://www.wnba.com/standings?season=2015
+New York Liberty,2014,New York Liberty,15,19,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2014,https://www.wnba.com/standings?season=2014
+New York Liberty,2013,New York Liberty,11,23,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2013,https://www.wnba.com/standings?season=2013
+New York Liberty,2012,New York Liberty,15,19,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2012,https://www.wnba.com/standings?season=2012
+New York Liberty,2011,New York Liberty,19,15,4th in the East,Lost in First Round,https://www.wnba.com/standings?season=2011,https://www.wnba.com/standings?season=2011
+New York Liberty,2010,New York Liberty,22,12,2nd in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2010,https://www.wnba.com/standings?season=2010
+New York Liberty,2009,New York Liberty,13,21,7th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2009&regionId=1,https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+New York Liberty,2008,New York Liberty,19,15,3rd in the East,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2008&regionId=1,https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+New York Liberty,2007,New York Liberty,16,18,4th in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2007&regionId=1,https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+New York Liberty,2006,New York Liberty,11,23,6th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1,https://www.basketball-reference.com/wnba/years/2006.html
+New York Liberty,2005,New York Liberty,18,16,3rd in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1,https://www.basketball-reference.com/wnba/years/2005.html
+New York Liberty,2004,New York Liberty,18,16,2nd in the East,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2004&regionId=1,https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html
+New York Liberty,2003,New York Liberty,16,18,6th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1,https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html
+New York Liberty,2002,New York Liberty,18,14,1st in the East,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2002&regionId=1,https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html
+New York Liberty,2001,New York Liberty,21,11,2nd in the East,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1,https://www.basketball-reference.com/wnba/years/2001.html
+New York Liberty,2000,New York Liberty,20,12,1st in the East,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2000&regionId=1,https://www.basketball-reference.com/wnba/years/2000.html
+New York Liberty,1999,New York Liberty,18,14,1st in the East,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=1999&regionId=1,https://www.basketball-reference.com/wnba/years/1999.html
+New York Liberty,1998,New York Liberty,18,12,3rd in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1,https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html
+New York Liberty,1997,New York Liberty,17,11,2nd in the East,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=1997&regionId=1,https://www.basketball-reference.com/wnba/years/1997.html

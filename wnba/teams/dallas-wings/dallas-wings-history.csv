@@ -1,30 +1,30 @@
-franchise,season,team_name,wins,losses,finish,playoffs,record_source
-Dallas Wings,2026,Dallas Wings,27,17,7th of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026
-Dallas Wings,2025,Dallas Wings,10,34,13th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025
-Dallas Wings,2024,Dallas Wings,9,31,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024
-Dallas Wings,2023,Dallas Wings,22,18,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2023
-Dallas Wings,2022,Dallas Wings,18,18,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022
-Dallas Wings,2021,Dallas Wings,14,18,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2021
-Dallas Wings,2020,Dallas Wings,8,14,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2020
-Dallas Wings,2019,Dallas Wings,10,24,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2019
-Dallas Wings,2018,Dallas Wings,15,19,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2018
-Dallas Wings,2017,Dallas Wings,16,18,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2017
-Dallas Wings,2016,Dallas Wings,11,23,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2016
-Dallas Wings,2015,Tulsa Shock,18,16,3rd in the West,Lost in First Round,https://www.wnba.com/standings?season=2015
-Dallas Wings,2014,Tulsa Shock,12,22,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2014
-Dallas Wings,2013,Tulsa Shock,11,23,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2013
-Dallas Wings,2012,Tulsa Shock,9,25,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2012
-Dallas Wings,2011,Tulsa Shock,3,31,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2011
-Dallas Wings,2010,Tulsa Shock,6,28,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2010
-Dallas Wings,2009,Detroit Shock,18,16,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2009&regionId=1
-Dallas Wings,2008,Detroit Shock,22,12,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2008&regionId=1
-Dallas Wings,2007,Detroit Shock,24,10,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2007&regionId=1
-Dallas Wings,2006,Detroit Shock,23,11,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2006&regionId=1
-Dallas Wings,2005,Detroit Shock,16,18,,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1
-Dallas Wings,2004,Detroit Shock,17,17,,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1
-Dallas Wings,2003,Detroit Shock,25,9,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2003&regionId=1
-Dallas Wings,2002,Detroit Shock,9,23,,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1
-Dallas Wings,2001,Detroit Shock,10,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
-Dallas Wings,2000,Detroit Shock,14,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
-Dallas Wings,1999,Detroit Shock,15,17,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
-Dallas Wings,1998,Detroit Shock,17,13,,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1
+franchise,season,team_name,wins,losses,finish,playoffs,record_source,finish_source
+Dallas Wings,2026,Dallas Wings,27,17,7th of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026,https://www.wnba.com/standings?season=2026
+Dallas Wings,2025,Dallas Wings,10,34,13th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025,https://www.wnba.com/standings?season=2025
+Dallas Wings,2024,Dallas Wings,9,31,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024,https://www.wnba.com/standings?season=2024
+Dallas Wings,2023,Dallas Wings,22,18,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2023,https://www.wnba.com/standings?season=2023
+Dallas Wings,2022,Dallas Wings,18,18,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022,https://www.wnba.com/standings?season=2022
+Dallas Wings,2021,Dallas Wings,14,18,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2021,https://www.wnba.com/standings?season=2021
+Dallas Wings,2020,Dallas Wings,8,14,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2020,https://www.wnba.com/standings?season=2020
+Dallas Wings,2019,Dallas Wings,10,24,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2019,https://www.wnba.com/standings?season=2019
+Dallas Wings,2018,Dallas Wings,15,19,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2018,https://www.wnba.com/standings?season=2018
+Dallas Wings,2017,Dallas Wings,16,18,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2017,https://www.wnba.com/standings?season=2017
+Dallas Wings,2016,Dallas Wings,11,23,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2016,https://www.wnba.com/standings?season=2016
+Dallas Wings,2015,Tulsa Shock,18,16,3rd in the West,Lost in First Round,https://www.wnba.com/standings?season=2015,https://www.wnba.com/standings?season=2015
+Dallas Wings,2014,Tulsa Shock,12,22,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2014,https://www.wnba.com/standings?season=2014
+Dallas Wings,2013,Tulsa Shock,11,23,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2013,https://www.wnba.com/standings?season=2013
+Dallas Wings,2012,Tulsa Shock,9,25,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2012,https://www.wnba.com/standings?season=2012
+Dallas Wings,2011,Tulsa Shock,3,31,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2011,https://www.wnba.com/standings?season=2011
+Dallas Wings,2010,Tulsa Shock,6,28,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2010,https://www.wnba.com/standings?season=2010
+Dallas Wings,2009,Detroit Shock,18,16,3rd in the East,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2009&regionId=1,https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Dallas Wings,2008,Detroit Shock,22,12,1st in the East,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2008&regionId=1,https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Dallas Wings,2007,Detroit Shock,24,10,1st in the East,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2007&regionId=1,https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Dallas Wings,2006,Detroit Shock,23,11,2nd in the East,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2006&regionId=1,https://www.basketball-reference.com/wnba/years/2006.html
+Dallas Wings,2005,Detroit Shock,16,18,4th in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2005&regionId=1,https://www.basketball-reference.com/wnba/years/2005.html
+Dallas Wings,2004,Detroit Shock,17,17,3rd in the East,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1,https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html
+Dallas Wings,2003,Detroit Shock,25,9,1st in the East,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2003&regionId=1,https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html
+Dallas Wings,2002,Detroit Shock,9,23,8th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1,https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html
+Dallas Wings,2001,Detroit Shock,10,22,6th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1,https://www.basketball-reference.com/wnba/years/2001.html
+Dallas Wings,2000,Detroit Shock,14,18,5th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1,https://www.basketball-reference.com/wnba/years/2000.html
+Dallas Wings,1999,Detroit Shock,15,17,3rd in the East,Lost in Playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1,https://www.basketball-reference.com/wnba/years/1999.html
+Dallas Wings,1998,Detroit Shock,17,13,4th in the East,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1,https://web.archive.org/web/20010820083311/http://www.wnba.com/standings.html

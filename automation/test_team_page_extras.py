@@ -72,6 +72,8 @@ class TeamPagePhaseTwoTests(unittest.TestCase):
         self.assertEqual(tx.draft_text({'undrafted': True}), 'Undrafted')
         self.assertEqual(tx.draft_text({'year': 2020, 'round': 1, 'pick': 2}), '2020 R1, No. 2')
         self.assertEqual(tx.draft_text({}), '')
+        self.assertEqual(tx.draft_text({'year': 2020, 'round': 1, 'pick': 2, 'drafted_by': 'Dallas Wings'}), '2020 R1, No. 2 (Dallas Wings)')
+        self.assertEqual(tx.draft_fields({'year': 2020, 'round': 1, 'pick': 2, 'drafted_by': 'Dallas Wings'}), [2020, 1, 2, 'Dallas Wings', 'no'])
         slot = {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'}
         hist = tx.history_html(ROOT, slot)
         self.assertIn('data-fcb-dynamic="team-history"', hist)
