@@ -2017,6 +2017,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-27: edges checked at 200% on dark and light backgrounds"
+    },
+    "tina-charles": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tina_Charles_31_Fenerbah%C3%A7e_WB_EuroLeague_Women_20250226_(3).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "diana-taurasi": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Diana_Taurasi_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "sylvia-fowles": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2_Sylvia_Fowles_2019_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "maya-moore": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maya_Moore_speaking_at_the_Marshall_Project_in_Washington_DC_(48751715837)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "elena-delle-donne": {
+      "author": "TonyTheTiger",
+      "file_url": "https://commons.wikimedia.org/wiki/File:20140814_Elena_Delle_Donne.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "seimone-augustus": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Seimone_Augustus_in_2019_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "kristi-toliver": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kristi_Toliver_(48372781167).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "crystal-langhorne": {
+      "author": "BDZ Sports",
+      "file_url": "https://commons.wikimedia.org/wiki/File:CrystalLanghorne.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "sue-bird": {
+      "author": "Fuzheado",
+      "file_url": "https://commons.wikimedia.org/wiki/File:SXSW-2024-alih-OB7A0246-Sue_Bird.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "tamika-catchings": {
+      "author": "Ruben.caraveo",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tamika_Catchings.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "monique-currie": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Currie2-20180919.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "jasmine-thomas": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2_Jasmine_Thomas_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "epiphanny-prince": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Epiphanny_Prince_WNBA.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "danielle-robinson": {
+      "author": "Lorie Shaull from St Paul, United States",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Danielle_Robinson_(48315070407).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "rebekkah-brunson": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rebekkah_Brunson_in_2018.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "shavonte-zellous": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Shavonte_Zellous_1_ESB_Villeneuve-d%27Ascq_LM_EuroLeague_Women_20241029_(5).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "emma-meesseman": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Emma_Meesseman_11_Fenerbah%C3%A7e_WB_EuroLeague_Women_20250108_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "tanisha-wright": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tanisha_Wright_at_2_August_2015_game_cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "plenette-pierson": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Plenette_Pierson_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
+    },
+    "swin-cash": {
+      "author": "US Embassy London",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Swin_Cash_(cropped).jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-28: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
