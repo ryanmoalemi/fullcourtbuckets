@@ -1,0 +1,13 @@
+{
+  "note": "WNBA Finals series average viewers (Nielsen), by year. Years with no figure are blank because no network release or Nielsen-based report was verified. Sources are network press releases where one exists; Sports Media Watch (Nielsen data) otherwise.",
+  "updated": "2026-10-28",
+  "years": [
+    {"season": 2013, "matchup": "Lynx def. Dream", "games": 3, "avg_viewers": 345000, "network": "ESPN networks", "source": "https://www.sportsmediawatch.com/2018/09/wnba-finals-ratings-nfl-pregame-ooh-cfb/", "source_name": "Sports Media Watch, Sept. 2018"},
+    {"season": 2014, "matchup": "Mercury def. Sky", "games": 3, "avg_viewers": 634000, "network": "ESPN networks", "source": "https://www.sportsmediawatch.com/2021/10/wnba-finals-ratings-most-watched-four-years-sky-mercury/", "source_name": "Sports Media Watch, Oct. 2021"},
+    {"season": 2017, "matchup": "Lynx def. Sparks", "games": 5, "avg_viewers": 563000, "network": "ABC, ESPN, ESPN2", "source": "https://espnpressroom.com/press-release/2021-wnba-season-on-espn-abc-experiences-exponential-viewership-growth-most-viewed-wnba-finals-since-2017/", "source_name": "ESPN Press Room, Oct. 2021"},
+    {"season": 2018, "matchup": "Storm def. Mystics", "games": 3, "avg_viewers": 481000, "network": "ABC, ESPN2, ESPNEWS", "source": "https://www.sportsmediawatch.com/2018/09/wnba-finals-ratings-nfl-pregame-ooh-cfb/", "source_name": "Sports Media Watch, Sept. 2018"},
+    {"season": 2019, "matchup": "Mystics def. Sun", "games": 5, "avg_viewers": 386000, "network": "ABC, ESPN, ESPN2", "source": "https://espnpressroom.com/press-release/2021-wnba-season-on-espn-abc-experiences-exponential-viewership-growth-most-viewed-wnba-finals-since-2017/", "source_name": "ESPN Press Room, Oct. 2021"},
+    {"season": 2020, "matchup": "Storm def. Aces", "games": 3, "avg_viewers": 447000, "network": "ESPN", "source": "https://espnpressroom.com/press-release/2021-wnba-season-on-espn-abc-experiences-exponential-viewership-growth-most-viewed-wnba-finals-since-2017/", "source_name": "ESPN Press Room, Oct. 2021"},
+    {"season": 2021, "matchup": "Sky def. Mercury", "games": 4, "avg_viewers": 548000, "network": "ABC, ESPN, ESPN2", "source": "https://espnpressroom.com/press-release/2021-wnba-season-on-espn-abc-experiences-exponential-viewership-growth-most-viewed-wnba-finals-since-2017/", "source_name": "ESPN Press Room, Oct. 2021"}
+  ]
+}

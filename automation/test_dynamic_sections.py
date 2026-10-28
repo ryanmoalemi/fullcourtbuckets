@@ -59,3 +59,20 @@ class TrackerSectionsTests(unittest.TestCase):
         unmarked = ds.SECTION.sub(' ', text)
         self.assertNotRegex(unmarked, r'Updated [A-Z][a-z]+\.? \d+, 20\d\d, PT')
         self.assertNotIn('through Game ', re.sub(r'<script\b.*?</script>', ' ', unmarked, flags=re.S))
+
+
+class TrackerCountTests(unittest.TestCase):
+    def test_printed_counts_match_database_rows(self):
+        text = (ROOT / 'news' / '2026-wnba-finals-ratings-tracker' / 'index.html').read_text(encoding='utf-8')
+        c = ds.tracker_counts(text)
+        self.assertIsNotNone(c)
+        self.assertEqual(ds.tracker_count_problems(text), [])
+        self.assertIn(f'<span class="dyn-ng">{c["games"]}</span>', text)
+        self.assertIn(f'<b id="st">{c["total"]:,}</b>', text)
+
+    def test_sync_fixes_stale_counts(self):
+        page = ('<span class="dyn-ng">1</span><span class="dyn-nk">1</span><b id="sg">1</b><b id="sk">1</b><b id="st">5</b><b id="sa">5</b>'
+                '<table id="fdb"><tr id="g1" data-att="100"></tr><tr id="g2" data-att=""></tr><tr id="g3" data-att="300"></tr></table>')
+        out = ds.sync_tracker_counts(page)
+        for frag in ('dyn-ng">3<', 'dyn-nk">2<', 'id="sg">3<', 'id="sk">2<', 'id="st">400<', 'id="sa">200<'):
+            self.assertIn(frag, out)

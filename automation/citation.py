@@ -238,8 +238,32 @@ PLAYOFF_COMPARE_ROWS = [
 ]
 
 
-def finals_history_rows(payload: dict) -> list[list[str]]:
-    """Finals averages stored with a source. Years that are absent stay unavailable."""
+FINALS_HISTORY_REL = 'data/finals-viewership-history.json'
+FINALS_HISTORY_GAP = 'No verified source on file'
+
+
+def finals_history_extra() -> dict:
+    """Sourced Finals averages for years not in the viewership file (network releases or Nielsen reports)."""
+    path = Path(__file__).resolve().parent.parent / FINALS_HISTORY_REL
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out = {}
+    for row in data.get('years') or []:
+        if row.get('avg_viewers') and row.get('source'):
+            out[row['season']] = {
+                'season': row['season'],
+                'finals_matchup': row.get('matchup'),
+                'finals_games': row.get('games'),
+                'finals_avg_viewers': row['avg_viewers'],
+                'finals_network': row.get('network'),
+                'finals_viewers_source': row['source'],
+            }
+    return out
+
+
+def _finals_by_year(payload: dict) -> dict:
     by_year = {}
     for row in payload.get('seasons') or []:
         year = row.get('season')
@@ -247,11 +271,23 @@ def finals_history_rows(payload: dict) -> list[list[str]]:
             continue
         if row.get('finals_avg_viewers') and row.get('finals_viewers_source'):
             by_year[year] = row
+    for year, row in finals_history_extra().items():
+        by_year.setdefault(year, row)
+    return by_year
+
+
+def finals_history_sources(payload: dict) -> dict:
+    return {year: row.get('finals_viewers_source') for year, row in _finals_by_year(payload).items()}
+
+
+def finals_history_rows(payload: dict) -> list[list[str]]:
+    """Finals averages stored with a source. Years that are absent stay unavailable."""
+    by_year = _finals_by_year(payload)
     rows = []
     for year in range(2020, 2027):
         row = by_year.get(year)
         if not row:
-            label = 'Pending tip-off' if year == 2026 else 'Not in the Full Court Buckets viewership file'
+            label = 'Pending tip-off' if year == 2026 else FINALS_HISTORY_GAP
             rows.append([str(year), label, label, label, label])
             continue
         rows.append([
@@ -290,8 +326,8 @@ def viewership_blocks(payload: dict) -> dict:
             ['Season', 'Matchup', 'Games', 'Average viewers', 'Network'],
             finals_history_rows(payload),
             caption=(
-                '2022 through 2025 averages are the sourced rows in the Full Court Buckets viewership file. '
-                '2020 and 2021 are not in that file. 2026 is pending tip-off. '
+                '2020 and 2021: ESPN Press Room, Oct. 2021 (Nielsen). 2022 through 2025: the sourced rows in the Full Court Buckets viewership file. '
+                '2026 is pending until the series ends. '
                 'This is not a complete history.'
             ),
         )
@@ -522,8 +558,8 @@ def ratings_hub_blocks(payload: dict) -> str:
             ['Season', 'Matchup', 'Games', 'Average viewers', 'Network'],
             finals_history_rows(payload),
             caption=(
-                '2022 through 2025 averages are the sourced rows in the Full Court Buckets viewership file. '
-                '2020 and 2021 are not in that file. 2026 is pending tip-off. '
+                '2020 and 2021: ESPN Press Room, Oct. 2021 (Nielsen). 2022 through 2025: the sourced rows in the Full Court Buckets viewership file. '
+                '2026 is pending until the series ends. '
                 'This is not a complete history. Each release is linked from the viewership and attendance page.'
             ),
         )
@@ -592,8 +628,11 @@ def ratings_hub_csv_rows(payload: dict) -> tuple[list, list]:
         rows.append(['October 2026 US search estimates', name, volume, '', '', 'Estimate', 'Full Court Buckets keyword research'])
     for row in FINALS_TRACKER_ROWS:
         rows.append(['2026 Finals tracker', 'Game ' + row[0], row[6], row[7], row[3], row[8], row[1] + '; ' + row[4]])
+    sources = finals_history_sources(payload)
     for row in finals_history_rows(payload):
-        rows.append(['Finals average viewers', row[0], row[3], row[1], row[4], row[3], 'Games ' + row[2]])
+        source = sources.get(int(row[0])) or ''
+        note = 'Games ' + row[2] + ('; source: ' + source if source else '')
+        rows.append(['Finals average viewers', row[0], row[3], row[1], row[4], row[3], note])
     return headers, rows
 
 

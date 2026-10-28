@@ -173,12 +173,11 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertNotIn(ROUTE, nav)
         self.assertIn('viewership-attendance', build_players.SKIP_PLAYER_DIRS)
 
-    def test_not_in_the_menu_or_sitemap(self):
-        for name in ('sitemap.xml', 'pages-sitemap.xml', 'player-sitemap.xml'):
-            text = (ROOT / name).read_text(encoding='utf-8')
-            self.assertNotIn(ROUTE, text, name)
-        html_map = (ROOT / 'sitemap' / 'index.html').read_text(encoding='utf-8')
-        self.assertNotIn(ROUTE, html_map)
+    def test_in_the_pages_sitemap_only(self):
+        # Listed in pages-sitemap.xml so search engines find it; still kept out of the menu.
+        pages = (ROOT / 'pages-sitemap.xml').read_text(encoding='utf-8')
+        self.assertIn(f'<loc>https://fullcourtbuckets.com{ROUTE}</loc>', pages)
+        self.assertNotIn(ROUTE, (ROOT / 'player-sitemap.xml').read_text(encoding='utf-8'))
 
     def test_appended_finals_game_renders_without_a_page_edit(self):
         payload = copy.deepcopy(_payload())
