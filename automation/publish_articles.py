@@ -204,12 +204,31 @@ SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10
 BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
 
 
+def ensure_body_photo_files(src: str, webp: str, root: Path | None = None) -> None:
+    """Every in-body <picture> needs both files on disk: the webp source and the jpg <img> fallback.
+    If one is missing, build it from the other; if neither exists, stop the build."""
+    from PIL import Image
+    root = root or ROOT
+    jpg_path, webp_path = root / src.lstrip('/'), root / webp.lstrip('/')
+    if jpg_path.is_file() and webp_path.is_file():
+        return
+    if not jpg_path.is_file() and not webp_path.is_file():
+        raise SystemExit(f'in-body photo missing: {src} (and {webp})')
+    if not jpg_path.is_file():
+        with Image.open(webp_path) as im:
+            im.convert('RGB').save(jpg_path, 'JPEG', quality=85, optimize=True, progressive=True)
+    else:
+        with Image.open(jpg_path) as im:
+            im.convert('RGB').save(webp_path, 'WEBP', quality=82)
+
+
 def body_photo_html(parts: list) -> str:
     src, alt, credit = parts[0], parts[1], parts[2]
     credit_url = parts[3] if len(parts) > 3 else ''
     license_url = parts[4] if len(parts) > 4 else ''
     focal = parts[5] if len(parts) > 5 and parts[5] else 'center 20%'
     webp = src.rsplit('.', 1)[0] + '.webp'
+    ensure_body_photo_files(src, webp)
     return (
         f'<figure class="inline-photo body-photo"><picture><source srcset="{esc(webp)}" type="image/webp">'
         f'<img src="{esc(src)}" alt="{esc(alt)}" width="1600" height="900" loading="lazy" decoding="async" '
