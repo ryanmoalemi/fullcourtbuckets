@@ -83,3 +83,10 @@ tr.rookie-year th,tr.rookie-year td{background:rgba(255,152,0,.14)}
 #faq details{border-bottom:1px solid rgba(127,127,127,.3);padding:.5rem 0}
 #faq summary{cursor:pointer;font-weight:600}
 .team-download{margin:.25rem 0}
+.roster-name{white-space:nowrap}
+.roster-face{display:inline-block;width:32px;height:32px;border-radius:50%;object-fit:cover;object-position:center 20%;vertical-align:middle;margin-right:.5rem;background:#e9e9ef}
+.roster-face-fallback{display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#4a4a5a;background:#e3e3ea}
+.franchise-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem 1rem;margin:0 0 1rem}
+.franchise-facts dt{font-size:.8rem;opacity:.75}
+.franchise-facts dd{margin:0;font-weight:600}
+#schedule tr.upcoming td{font-style:italic}

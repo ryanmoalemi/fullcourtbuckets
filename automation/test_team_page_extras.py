@@ -45,5 +45,32 @@ class TeamPageExtrasTests(unittest.TestCase):
         self.assertIn('class="breadcrumbs"', page)
 
 
+class TeamPagePhaseTwoTests(unittest.TestCase):
+    def test_fallback_avatar_uses_initials(self):
+        html = tx.headshot_html(ROOT, 'no-such-player-slug', 'Matilde Villa')
+        self.assertIn('roster-face-fallback', html)
+        self.assertIn('>MV<', html)
+
+    def test_approved_portrait_is_a_circle_image(self):
+        slug, src = next(iter(tx.portraits(ROOT).items()))
+        self.assertIn(src, tx.headshot_html(ROOT, slug, 'X'))
+
+    def test_bio_cells_leave_unknowns_blank_and_trim(self):
+        self.assertEqual(tx.bio_cells({}), ['', '', '', ''])
+        self.assertEqual(tx.bio_cells({'height': '6-4', 'age': 30, 'experience': 'R', 'school': '  ', 'country': 'Australia'}),
+                         ['6-4', '30', 'Rookie', 'Australia'])
+
+    def test_franchise_section_credits_wnba_com_and_skips_missing_capacity(self):
+        html = tx.franchise_html(ROOT, {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'})
+        self.assertIn('WNBA.com', html)
+        self.assertNotIn('capacity', html)
+        self.assertNotIn('ESPN', html)
+
+    def test_playoff_section_is_dynamic_and_absent_for_non_playoff_team(self):
+        dream = tx.playoff_html(ROOT, {'full_name': 'Atlanta Dream', 'slug': 'atlanta-dream'})
+        self.assertIn('data-fcb-dynamic="team-schedule"', dream)
+        self.assertEqual(tx.playoff_html(ROOT, {'full_name': 'Seattle Storm', 'slug': 'seattle-storm'}), '')
+
+
 if __name__ == '__main__':
     unittest.main()
