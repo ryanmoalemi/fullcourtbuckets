@@ -109,6 +109,10 @@ Kiah Stokes missed all four of her 3-point tries in Games 1-4, then made 3 of 4 
 
 The team with fewer turnovers has won all five games. Atlanta had 14 and 8 in its wins, against Golden State's 18 and 15, and 12, 17 and 15 in its losses.
 
+#### Try Reese at the 4
+
+Reese shot 22 of 39 (56 percent) for 65 points in Games 1-3 and 4 of 20 (20 percent) for 15 in Games 4-5. Court Queens LA (@courtqueens101) suggested on X that Smesko play Madina Okot at the 5 and Reese at the 4, so Stokes has to guard Okot. Okot has played 3:56 in the series, and the pair have shared the floor for under two minutes.
+
 ### Golden State Valkyries
 
 !photo: /images/articles/finals-game-6-preview-valkyries-dream/veronica-burton.jpg | Veronica Burton of the Golden State Valkyries, in a white Valkyries jersey, holding a ball at the free-throw line | Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Veronica_Burton_Valkyries.jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 30%
