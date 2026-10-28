@@ -5,6 +5,11 @@ Sources:
 * data/wnba/team-facts.json, a snapshot of each club's WNBA.com team page
   (automation/fetch_team_facts.py), for team ranks and developmental tags.
 * The players' own 2026 season lines in data/wnba/players.
+* data/wnba/player-draft.json, team-history.json and schedule-2026.json, snapshots
+  of WNBA.com player pages, standings and the league schedule feed
+  (automation/fetch_team_extras.py).
+* data/wnba/arena-capacity.json, venue-operator or league capacity figures with a
+  source URL per arena.
 
 Time-sensitive text sits in data-fcb-dynamic sections that the builder refills
 on every run. Nothing here is invented: a missing field is left out.
@@ -213,7 +218,7 @@ def faq_schema(items: list[tuple[str, str]], url: str) -> dict | None:
     }
 
 
-CSV_FIELDS = ('team', 'number', 'player', 'position', 'developmental', 'ppg', 'rpg', 'apg', 'mpg', 'profile_url')
+CSV_FIELDS = ('team', 'number', 'player', 'position', 'developmental', 'draft_year', 'draft_round', 'draft_pick', 'undrafted', 'ppg', 'rpg', 'apg', 'mpg', 'profile_url')
 
 
 def csv_name(slot: dict) -> str:
@@ -228,6 +233,7 @@ def roster_csv(slot: dict, rows: list[dict]) -> str:
         writer.writerow([
             slot['full_name'], row.get('number') or '', row['name'], row.get('position') or '',
             'yes' if row.get('developmental') else 'no',
+            *draft_fields(row.get('draft') or {}),
             row.get('pts') or '', row.get('reb') or '', row.get('ast') or '', row.get('min') or '',
             f'{BASE}/wnba/{row["slug"]}/',
         ])
@@ -243,7 +249,9 @@ def download_html(slot: dict, route: str, updated: str) -> str:
     )
     body = (
         f'<p><a class="data-download" href="{esc(href)}" download>Download the {esc(name)} roster (CSV)</a>. '
-        f'Released under <a href="{CC0}" target="_blank" rel="noopener">CC0 1.0</a>: free to use with no permission needed.</p>'
+        f'<a class="data-download" href="{esc(route + history_csv_name(slot))}" download>season-by-season history (CSV)</a> and '
+        f'<a class="data-download" href="{esc(route + schedule_csv_name(slot))}" download>2026 schedule and results (CSV)</a>. '
+        f'All released under <a href="{CC0}" target="_blank" rel="noopener">CC0 1.0</a>: free to use with no permission needed.</p>'
         f'<p class="cite-this"><strong>Cite this:</strong> {esc(cite)}</p>'
     )
     return (
@@ -430,8 +438,13 @@ def franchise_html(root, slot: dict) -> str:
         items.append(('First season', esc(facts['founded'])))
     arena = str(facts.get('arena') or '').strip()
     if arena:
-        cap = facts.get('arena_capacity')
-        items.append(('Arena', esc(arena) + (f' (capacity {int(cap):,})' if isinstance(cap, int) else '')))
+        cap, cap_src = arena_capacity(root, slot['full_name'], facts)
+        cap_html = ''
+        if cap:
+            label = f'{cap:,}' + (f' for {cap_src["label"]}' if cap_src.get('label') else '')
+            cap_html = (f' (capacity {label}, per <a href="{esc(cap_src["source"])}" target="_blank" '
+                        f'rel="noopener">{esc(cap_src["source_name"])}</a>)')
+        items.append(('Arena', esc(arena) + cap_html))
     for key, label in (('head_coach', 'Head coach'), ('general_manager', 'General manager'), ('owner', 'Owner')):
         if facts.get(key):
             items.append((label, esc(str(facts[key]).strip())))
@@ -464,7 +477,193 @@ def franchise_html(root, slot: dict) -> str:
             '<table><thead><tr><th scope="col">Player</th><th scope="col">Pos</th><th scope="col">With team</th>'
             f'<th scope="col">Inducted</th></tr></thead><tbody>{rows}</tbody></table></div>'
         )
+    if cap and cap_src.get('override'):
+        parts.append(f'<p class="muted small">{esc(cap_src["override"])}</p>')
     credit = (f'<p class="muted small">Franchise facts as listed on <a href="{esc(source)}" target="_blank" '
               f'rel="noopener">WNBA.com</a>, checked {esc(facts_checked(root))}.</p>') if source else ''
     return ('<section class="section" id="franchise"><p class="eyebrow">Franchise</p>'
             f'<h2>About the {esc(slot["full_name"])}</h2>{"".join(parts)}{credit}</section>')
+
+
+# ------------------------------------------------- draft, history, schedule --
+
+_JSON: dict = {}
+
+
+def _load(root, name: str) -> dict:
+    if root is None:
+        return {}
+    path = Path(root) / 'data' / 'wnba' / name
+    key = str(path)
+    if key not in _JSON:
+        try:
+            _JSON[key] = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            _JSON[key] = {}
+    return _JSON[key]
+
+
+def _as_int(value):
+    try:
+        return int(str(value).replace(',', '').strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def arena_capacity(root, team: str, facts: dict) -> tuple[int | None, dict]:
+    """Capacity and its source: the venue/league figure when filed, else WNBA.com's."""
+    filed = (_load(root, 'arena-capacity.json').get('teams') or {}).get(team) or {}
+    if _as_int(filed.get('capacity')):
+        return _as_int(filed['capacity']), filed
+    cap = _as_int(facts.get('arena_capacity'))
+    if cap:
+        return cap, {'source': facts.get('source') or '', 'source_name': 'WNBA.com', 'label': ''}
+    return None, {}
+
+
+def player_draft(root, team: str, name: str) -> dict:
+    wanted = norm_name(name)
+    rows = (_load(root, 'player-draft.json').get('players') or {}).values()
+    for row in rows:
+        if row.get('team') == team and norm_name(row.get('player')) == wanted:
+            return row
+    for row in rows:
+        if norm_name(row.get('player')) == wanted:
+            return row
+    return {}
+
+
+def draft_text(row: dict) -> str:
+    if row.get('undrafted'):
+        return 'Undrafted'
+    if row.get('year') and row.get('round') and row.get('pick'):
+        return f'{row["year"]} R{row["round"]}, No. {row["pick"]}'
+    return ''
+
+
+def draft_fields(row: dict) -> list:
+    if row.get('undrafted'):
+        return ['', '', '', 'yes']
+    if row.get('year'):
+        return [row.get('year') or '', row.get('round') or '', row.get('pick') or '', 'no']
+    return ['', '', '', '']
+
+
+def history_csv_name(slot: dict) -> str:
+    return f'{slot["slug"]}-history.csv'
+
+
+def schedule_csv_name(slot: dict) -> str:
+    return f'{slot["slug"]}-schedule-2026.csv'
+
+
+def team_history(root, team: str) -> list[dict]:
+    return list((_load(root, 'team-history.json').get('teams') or {}).get(team) or [])
+
+
+def history_html(root, slot: dict) -> str:
+    rows = team_history(root, slot['full_name'])
+    if not rows:
+        return ''
+    updated = str(_load(root, 'team-history.json').get('checked_at') or '')[:10]
+    body = []
+    for r in rows:
+        wl = f'{r["wins"]}-{r["losses"]}' if isinstance(r.get('wins'), int) and isinstance(r.get('losses'), int) else ''
+        body.append(f'<tr><td>{r["season"]}</td><td>{esc(r.get("team_name") or "")}</td><td>{esc(wl)}</td>'
+                    f'<td>{esc(r.get("finish") or "")}</td><td>{esc(r.get("playoffs") or "")}</td></tr>')
+    table = (
+        '<div class="table-scroll" role="region" tabindex="0" aria-label="Season-by-season history">'
+        '<table><caption>Season-by-season regular-season record, finish and playoff result.</caption>'
+        '<thead><tr><th scope="col">Season</th><th scope="col">Team</th><th scope="col">W-L</th>'
+        '<th scope="col">Finish</th><th scope="col">Playoffs</th></tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table></div>'
+        '<p class="muted small">Methods: W-L and finish from <a href="https://www.wnba.com/standings" target="_blank" '
+        'rel="noopener">WNBA.com standings</a> for 2010 on (finish is the standings rank: by conference through 2015, '
+        'league-wide from 2016). WNBA.com does not publish standings before 2010, so for 1997-2009 the W-L is counted '
+        'from final regular-season scores in the <a href="https://www.wnba.com/schedule" target="_blank" rel="noopener">'
+        'WNBA.com schedule</a> and the finish is left blank. Playoff result from the series line in the same schedule. '
+        'Team name is the name the franchise played under that season.</p>'
+    )
+    return ('<section class="section" id="history"><p class="eyebrow">Franchise history</p>'
+            f'<h2>Season by season</h2>{dynamic("div", "team-history", "data/wnba/team-history.json", updated, table)}</section>')
+
+
+def _team_id(root, team: str):
+    for tid, name in (_load(root, 'schedule-2026.json').get('teams') or {}).items():
+        if name == team:
+            return int(tid)
+    return None
+
+
+def team_schedule(root, team: str) -> list[dict]:
+    data = _load(root, 'schedule-2026.json')
+    tid = _team_id(root, team)
+    names = {int(k): v for k, v in (data.get('teams') or {}).items()}
+    out = []
+    for g in data.get('games') or []:
+        if tid not in (g['home']['id'], g['away']['id']):
+            continue
+        home = g['home']['id'] == tid
+        mine, other = (g['home'], g['away']) if home else (g['away'], g['home'])
+        result = ''
+        if isinstance(mine.get('score'), int) and isinstance(other.get('score'), int) and (mine['score'] or other['score']):
+            result = f'{"W" if mine["score"] > other["score"] else "L"} {mine["score"]}-{other["score"]}'
+        kind = {'Regular Season': 'Regular season', 'Comm Cup': "Commissioner's Cup final"}.get(g['type'], g['type'])
+        if g['type'] == 'Playoffs' and g.get('label'):
+            kind = f'Playoffs: {g["label"]}'
+        out.append({'date': g.get('date') or '', 'type': kind, 'home': home,
+                    'opponent': names.get(other['id']) or other.get('tricode') or '',
+                    'result': result, 'arena': g.get('arena') or '', 'series': g.get('series') or ''})
+    return out
+
+
+def schedule_html(root, slot: dict) -> str:
+    games = team_schedule(root, slot['full_name'])
+    if not games:
+        return ''
+    recaps = {score: href for href, label, score in _recaps(slot)}
+    updated = str(_load(root, 'schedule-2026.json').get('checked_at') or '')[:10]
+    rows, w, l = [], 0, 0
+    for g in games:
+        score = g['result'][2:]
+        alt = '-'.join(reversed(score.split('-'))) if score else ''
+        recap = recaps.get(score) or recaps.get(alt) if score else None
+        link = f'<a class="inline-link" href="{esc(recap)}">Recap</a>' if recap else ''
+        if g['type'] == 'Regular season' and g['result']:
+            w += g['result'].startswith('W')
+            l += g['result'].startswith('L')
+        rows.append(f'<tr><td>{esc(g["date"])}</td><td>{esc(g["type"])}</td>'
+                    f'<td>{"vs." if g["home"] else "at"} {esc(g["opponent"])}</td><td>{esc(g["result"])}</td>'
+                    f'<td>{esc(g["arena"])}</td><td>{link}</td></tr>')
+    table = (
+        '<div class="table-scroll" role="region" tabindex="0" aria-label="2026 schedule and results">'
+        f'<table><caption>Every 2026 game: regular season ({w}-{l}), Commissioner\'s Cup final and playoffs.</caption>'
+        '<thead><tr><th scope="col">Date</th><th scope="col">Game</th><th scope="col">Opponent</th>'
+        '<th scope="col">Result</th><th scope="col">Arena</th><th scope="col">Links</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+        '<p class="muted small">Methods: dates (U.S. Eastern), opponents, arenas and final scores from the '
+        '<a href="https://www.wnba.com/schedule?season=2026" target="_blank" rel="noopener">WNBA.com schedule</a>.</p>'
+    )
+    return ('<section class="section" id="season-schedule"><p class="eyebrow">2026 season</p>'
+            f'<h2>Schedule and results</h2>{dynamic("div", "team-season-schedule", "data/wnba/schedule-2026.json", updated, table)}</section>')
+
+
+def history_csv(root, slot: dict) -> str:
+    buffer = io.StringIO()
+    writer = csv.writer(buffer, lineterminator='\n')
+    writer.writerow(('franchise', 'season', 'team_name', 'wins', 'losses', 'finish', 'playoffs', 'record_source'))
+    for r in team_history(root, slot['full_name']):
+        writer.writerow((slot['full_name'], r['season'], r.get('team_name') or '', r.get('wins') if r.get('wins') is not None else '',
+                         r.get('losses') if r.get('losses') is not None else '', r.get('finish') or '', r.get('playoffs') or '',
+                         r.get('record_source') or ''))
+    return buffer.getvalue()
+
+
+def schedule_csv(root, slot: dict) -> str:
+    buffer = io.StringIO()
+    writer = csv.writer(buffer, lineterminator='\n')
+    writer.writerow(('team', 'date_et', 'game', 'home_away', 'opponent', 'result', 'arena', 'series'))
+    for g in team_schedule(root, slot['full_name']):
+        writer.writerow((slot['full_name'], g['date'], g['type'], 'home' if g['home'] else 'away',
+                         g['opponent'], g['result'], g['arena'], g['series']))
+    return buffer.getvalue()

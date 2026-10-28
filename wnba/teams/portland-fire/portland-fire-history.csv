@@ -1,0 +1,5 @@
+franchise,season,team_name,wins,losses,finish,playoffs,record_source
+Portland Fire,2026,Portland Fire,17,27,9th of 15 in the league,Missed playoffs,https://www.wnba.com/standings?season=2026
+Portland Fire,2002,Portland Fire,16,16,,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1
+Portland Fire,2001,Portland Fire,11,21,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
+Portland Fire,2000,Portland Fire,10,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1

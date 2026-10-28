@@ -1,0 +1,31 @@
+franchise,season,team_name,wins,losses,finish,playoffs,record_source
+Phoenix Mercury,2026,Phoenix Mercury,16,28,10th of 15 in the league,Missed playoffs,https://www.wnba.com/standings?season=2026
+Phoenix Mercury,2025,Phoenix Mercury,27,17,4th of 13 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2025
+Phoenix Mercury,2024,Phoenix Mercury,19,21,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2024
+Phoenix Mercury,2023,Phoenix Mercury,9,31,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2023
+Phoenix Mercury,2022,Phoenix Mercury,15,21,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2022
+Phoenix Mercury,2021,Phoenix Mercury,19,13,5th of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2021
+Phoenix Mercury,2020,Phoenix Mercury,13,9,5th of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2020
+Phoenix Mercury,2019,Phoenix Mercury,15,19,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2019
+Phoenix Mercury,2018,Phoenix Mercury,20,14,5th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2018
+Phoenix Mercury,2017,Phoenix Mercury,18,16,5th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2017
+Phoenix Mercury,2016,Phoenix Mercury,16,18,8th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2016
+Phoenix Mercury,2015,Phoenix Mercury,20,14,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2015
+Phoenix Mercury,2014,Phoenix Mercury,29,5,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2014
+Phoenix Mercury,2013,Phoenix Mercury,19,15,3rd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2013
+Phoenix Mercury,2012,Phoenix Mercury,7,27,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2012
+Phoenix Mercury,2011,Phoenix Mercury,19,15,3rd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2011
+Phoenix Mercury,2010,Phoenix Mercury,15,19,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2010
+Phoenix Mercury,2009,Phoenix Mercury,23,11,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2009&regionId=1
+Phoenix Mercury,2008,Phoenix Mercury,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1
+Phoenix Mercury,2007,Phoenix Mercury,23,11,,Won WNBA Finals,https://www.wnba.com/api/schedule?season=2007&regionId=1
+Phoenix Mercury,2006,Phoenix Mercury,18,16,,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1
+Phoenix Mercury,2005,Phoenix Mercury,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1
+Phoenix Mercury,2004,Phoenix Mercury,17,17,,Missed playoffs,https://www.wnba.com/api/schedule?season=2004&regionId=1
+Phoenix Mercury,2003,Phoenix Mercury,8,26,,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1
+Phoenix Mercury,2002,Phoenix Mercury,11,21,,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1
+Phoenix Mercury,2001,Phoenix Mercury,13,19,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
+Phoenix Mercury,2000,Phoenix Mercury,20,12,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
+Phoenix Mercury,1999,Phoenix Mercury,15,17,,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
+Phoenix Mercury,1998,Phoenix Mercury,19,11,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=1998&regionId=1
+Phoenix Mercury,1997,Phoenix Mercury,16,12,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=1997&regionId=1

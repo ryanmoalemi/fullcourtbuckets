@@ -1,0 +1,31 @@
+franchise,season,team_name,wins,losses,finish,playoffs,record_source
+Las Vegas Aces,2026,Las Vegas Aces,31,13,3rd of 15 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2026
+Las Vegas Aces,2025,Las Vegas Aces,30,14,2nd of 13 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2025
+Las Vegas Aces,2024,Las Vegas Aces,27,13,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2024
+Las Vegas Aces,2023,Las Vegas Aces,34,6,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2023
+Las Vegas Aces,2022,Las Vegas Aces,26,10,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2022
+Las Vegas Aces,2021,Las Vegas Aces,24,8,2nd of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2021
+Las Vegas Aces,2020,Las Vegas Aces,18,4,1st of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2020
+Las Vegas Aces,2019,Las Vegas Aces,21,13,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2019
+Las Vegas Aces,2018,Las Vegas Aces,14,20,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2018
+Las Vegas Aces,2017,San Antonio Stars,8,26,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2017
+Las Vegas Aces,2016,San Antonio Stars,7,27,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2016
+Las Vegas Aces,2015,San Antonio Stars,8,26,6th in the West,Missed playoffs,https://www.wnba.com/standings?season=2015
+Las Vegas Aces,2014,San Antonio Stars,16,18,3rd in the West,Lost in First Round,https://www.wnba.com/standings?season=2014
+Las Vegas Aces,2013,San Antonio Silver Stars,12,22,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2013
+Las Vegas Aces,2012,San Antonio Silver Stars,21,13,3rd in the West,Lost in First Round,https://www.wnba.com/standings?season=2012
+Las Vegas Aces,2011,San Antonio Silver Stars,18,16,4th in the West,Lost in First Round,https://www.wnba.com/standings?season=2011
+Las Vegas Aces,2010,San Antonio Silver Stars,14,20,3rd in the West,Lost in First Round,https://www.wnba.com/standings?season=2010
+Las Vegas Aces,2009,San Antonio Silver Stars,15,19,,Lost in First Round,https://www.wnba.com/api/schedule?season=2009&regionId=1
+Las Vegas Aces,2008,San Antonio Silver Stars,24,10,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2008&regionId=1
+Las Vegas Aces,2007,San Antonio Silver Stars,20,14,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2007&regionId=1
+Las Vegas Aces,2006,San Antonio Silver Stars,13,21,,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1
+Las Vegas Aces,2005,San Antonio Silver Stars,7,27,,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1
+Las Vegas Aces,2004,San Antonio Silver Stars,9,25,,Missed playoffs,https://www.wnba.com/api/schedule?season=2004&regionId=1
+Las Vegas Aces,2003,San Antonio Silver Stars,12,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1
+Las Vegas Aces,2002,Utah Starzz,20,12,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2002&regionId=1
+Las Vegas Aces,2001,Utah Starzz,19,13,,Lost in Playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
+Las Vegas Aces,2000,Utah Starzz,18,14,,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
+Las Vegas Aces,1999,Utah Starzz,15,17,,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
+Las Vegas Aces,1998,Utah Starzz,8,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=1998&regionId=1
+Las Vegas Aces,1997,Utah Starzz,7,21,,Missed playoffs,https://www.wnba.com/api/schedule?season=1997&regionId=1

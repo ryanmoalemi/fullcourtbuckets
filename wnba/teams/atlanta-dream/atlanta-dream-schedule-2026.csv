@@ -1,0 +1,57 @@
+team,date_et,game,home_away,opponent,result,arena,series
+Atlanta Dream,2026-05-09,Regular season,away,Minnesota Lynx,W 91-90,Target Center,
+Atlanta Dream,2026-05-12,Regular season,away,Dallas Wings,W 77-72,College Park Center,
+Atlanta Dream,2026-05-17,Regular season,home,Las Vegas Aces,L 84-85,State Farm Arena,
+Atlanta Dream,2026-05-22,Regular season,home,Dallas Wings,W 86-69,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-05-24,Regular season,home,Phoenix Mercury,W 82-80,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-05-27,Regular season,away,Minnesota Lynx,L 81-96,Target Center,
+Atlanta Dream,2026-05-29,Regular season,away,Portland Fire,W 86-66,Moda Center,
+Atlanta Dream,2026-06-02,Regular season,home,Connecticut Sun,W 91-75,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-06-04,Regular season,away,Indiana Fever,L 71-83,Gainbridge Fieldhouse,
+Atlanta Dream,2026-06-06,Regular season,home,Washington Mystics,W 109-77,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-06-09,Regular season,away,Chicago Sky,W 82-75,Wintrust Arena,
+Atlanta Dream,2026-06-11,Regular season,home,New York Liberty,L 90-104,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-06-14,Regular season,away,Toronto Tempo,W 102-77,Coca-Cola Coliseum,
+Atlanta Dream,2026-06-18,Regular season,away,Indiana Fever,W 108-101,Gainbridge Fieldhouse,
+Atlanta Dream,2026-06-20,Regular season,home,Indiana Fever,W 113-96,State Farm Arena,
+Atlanta Dream,2026-06-22,Regular season,home,Toronto Tempo,W 94-87,State Farm Arena,
+Atlanta Dream,2026-06-24,Regular season,away,Golden State Valkyries,L 66-77,Chase Center,
+Atlanta Dream,2026-06-26,Regular season,away,Golden State Valkyries,L 75-78,Chase Center,
+Atlanta Dream,2026-06-27,Regular season,away,Seattle Storm,L 90-105,Climate Pledge Arena,
+Atlanta Dream,2026-07-02,Regular season,away,Washington Mystics,L 76-81,CareFirst Arena,
+Atlanta Dream,2026-07-04,Regular season,home,Golden State Valkyries,L 83-88,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-07-09,Regular season,home,Seattle Storm,W 89-78,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-07-11,Regular season,home,Portland Fire,L 92-102,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-07-13,Regular season,home,Los Angeles Sparks,W 101-92,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-07-17,Regular season,away,Toronto Tempo,W 111-92,Coca-Cola Coliseum,
+Atlanta Dream,2026-07-19,Regular season,home,Chicago Sky,W 93-91,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-07-29,Regular season,away,Dallas Wings,W 82-81,College Park Center,
+Atlanta Dream,2026-07-31,Regular season,home,Seattle Storm,W 98-89,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-08-03,Regular season,home,Las Vegas Aces,L 87-109,State Farm Arena,
+Atlanta Dream,2026-08-05,Regular season,home,Phoenix Mercury,W 96-82,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-08-07,Regular season,away,Washington Mystics,L 74-79,CareFirst Arena,
+Atlanta Dream,2026-08-10,Regular season,home,Toronto Tempo,W 107-95,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-08-13,Regular season,away,Connecticut Sun,W 104-69,Mohegan Sun Arena,
+Atlanta Dream,2026-08-16,Regular season,home,Indiana Fever,L 91-95,State Farm Arena,
+Atlanta Dream,2026-08-18,Regular season,away,Las Vegas Aces,W 97-82,Michelob ULTRA Arena,
+Atlanta Dream,2026-08-20,Regular season,away,Los Angeles Sparks,W 124-88,Crypto.com Arena,
+Atlanta Dream,2026-08-22,Regular season,away,Phoenix Mercury,W 99-89,Mortgage Matchup Center,
+Atlanta Dream,2026-08-24,Regular season,away,Los Angeles Sparks,W 78-71,Crypto.com Arena,
+Atlanta Dream,2026-08-28,Regular season,home,Portland Fire,L 83-101,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-08-30,Regular season,home,Minnesota Lynx,W 89-81,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-09-17,Regular season,home,Connecticut Sun,W 103-59,Gateway Center Arena @ College Park,
+Atlanta Dream,2026-09-19,Regular season,home,Chicago Sky,W 106-81,State Farm Arena,
+Atlanta Dream,2026-09-21,Regular season,away,New York Liberty,W 95-84,Barclays Center,
+Atlanta Dream,2026-09-23,Regular season,away,New York Liberty,W 83-65,Barclays Center,
+Atlanta Dream,2026-09-27,Playoffs: First Round Game 1,home,Washington Mystics,W 92-77,State Farm Arena,ATL leads 1-0
+Atlanta Dream,2026-09-30,Playoffs: First Round Game 2,away,Washington Mystics,W 93-75,CareFirst Arena,ATL wins 2-0
+Atlanta Dream,2026-10-04,Playoffs: Semifinals Game 1,home,New York Liberty,W 92-82,State Farm Arena,ATL leads 1-0
+Atlanta Dream,2026-10-07,Playoffs: Semifinals Game 2,home,New York Liberty,W 101-98,State Farm Arena,ATL leads 2-0
+Atlanta Dream,2026-10-09,Playoffs: Semifinals Game 3,away,New York Liberty,W 85-83,Barclays Center,ATL wins 3-0
+Atlanta Dream,2026-10-17,Playoffs: WNBA Finals Game 1,away,Golden State Valkyries,L 64-68,Chase Center,GSV leads 1-0
+Atlanta Dream,2026-10-19,Playoffs: WNBA Finals Game 2,away,Golden State Valkyries,W 79-65,Chase Center,Series tied 1-1
+Atlanta Dream,2026-10-21,Playoffs: WNBA Finals Game 3,home,Golden State Valkyries,W 97-71,State Farm Arena,ATL leads 2-1
+Atlanta Dream,2026-10-24,Playoffs: WNBA Finals Game 4,home,Golden State Valkyries,L 62-67,State Farm Arena,Series tied 2-2
+Atlanta Dream,2026-10-26,Playoffs: WNBA Finals Game 5,away,Golden State Valkyries,L 55-64,Chase Center,GSV leads 3-2
+Atlanta Dream,2026-10-29,Playoffs: WNBA Finals Game 6,home,Golden State Valkyries,,State Farm Arena,GSV leads 3-2
+Atlanta Dream,2026-10-31,Playoffs: WNBA Finals Game 7,away,Golden State Valkyries,,Chase Center,GSV leads 3-2

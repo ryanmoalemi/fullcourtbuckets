@@ -1,0 +1,28 @@
+franchise,season,team_name,wins,losses,finish,playoffs,record_source
+Indiana Fever,2026,Indiana Fever,28,16,6th of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026
+Indiana Fever,2025,Indiana Fever,24,20,6th of 13 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2025
+Indiana Fever,2024,Indiana Fever,20,20,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2024
+Indiana Fever,2023,Indiana Fever,13,27,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2023
+Indiana Fever,2022,Indiana Fever,5,31,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2022
+Indiana Fever,2021,Indiana Fever,6,26,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2021
+Indiana Fever,2020,Indiana Fever,6,16,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2020
+Indiana Fever,2019,Indiana Fever,13,21,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2019
+Indiana Fever,2018,Indiana Fever,6,28,12th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2018
+Indiana Fever,2017,Indiana Fever,9,25,11th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2017
+Indiana Fever,2016,Indiana Fever,17,17,5th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2016
+Indiana Fever,2015,Indiana Fever,20,14,3rd in the East,Lost in WNBA Finals,https://www.wnba.com/standings?season=2015
+Indiana Fever,2014,Indiana Fever,16,18,2nd in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2014
+Indiana Fever,2013,Indiana Fever,16,18,4th in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2013
+Indiana Fever,2012,Indiana Fever,22,12,2nd in the East,Won WNBA Finals,https://www.wnba.com/standings?season=2012
+Indiana Fever,2011,Indiana Fever,21,13,1st in the East,Lost in Semifinals,https://www.wnba.com/standings?season=2011
+Indiana Fever,2010,Indiana Fever,21,13,3rd in the East,Lost in First Round,https://www.wnba.com/standings?season=2010
+Indiana Fever,2009,Indiana Fever,22,12,,Lost in WNBA Finals,https://www.wnba.com/api/schedule?season=2009&regionId=1
+Indiana Fever,2008,Indiana Fever,17,17,,Lost in First Round,https://www.wnba.com/api/schedule?season=2008&regionId=1
+Indiana Fever,2007,Indiana Fever,21,13,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2007&regionId=1
+Indiana Fever,2006,Indiana Fever,21,13,,Lost in First Round,https://www.wnba.com/api/schedule?season=2006&regionId=1
+Indiana Fever,2005,Indiana Fever,21,13,,Lost in Semifinals,https://www.wnba.com/api/schedule?season=2005&regionId=1
+Indiana Fever,2004,Indiana Fever,15,19,,Missed playoffs,https://www.wnba.com/api/schedule?season=2004&regionId=1
+Indiana Fever,2003,Indiana Fever,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2003&regionId=1
+Indiana Fever,2002,Indiana Fever,16,16,,Lost in First Round,https://www.wnba.com/api/schedule?season=2002&regionId=1
+Indiana Fever,2001,Indiana Fever,10,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
+Indiana Fever,2000,Indiana Fever,9,23,,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
