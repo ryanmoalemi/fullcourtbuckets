@@ -146,47 +146,44 @@ def main():
     front, body = (m.group(1), src[m.end():]) if m else ('', src)
     tm = re.search(r'^title: "(.*)"$', front, re.M); title = tm.group(1) if tm else ''
     text = f'TITLE: {title}\n\n{body}'
-    raw = []
-    for name, fn in (('openai', ask_openai), ('gemini', ask_gemini)):
-        if name not in a.models:
-            continue
+    # Sequential pass (default): OpenAI edits first, then Gemini reviews the
+    # OpenAI-edited text. Each pass's edits go through the same safety checks.
+    accepted, rejected, new_body, new_title = [], [], body, title
+    order = [n for n in ('openai', 'gemini') if n in a.models.split(',')]
+    for name in order:
+        fn = {'openai': ask_openai, 'gemini': ask_gemini}[name]
         try:
-            raw += [dict(e, model=name) for e in fn(text)]
+            raw = [dict(e, model=name) for e in fn(f'TITLE: {new_title}\n\n{new_body}')]
         except Exception as ex:  # noqa: keep running with the other model
             msg = ex.read().decode()[:200] if isinstance(ex, urllib.error.HTTPError) else str(ex)
             print(f'{name} failed: {msg}', file=sys.stderr)
-    # merge: same original -> keep the first, note agreement
-    merged, seen = [], {}
-    for e in raw:
-        if e['original'].startswith('TITLE'):
-            e['original'] = 'TITLE'
-            e['suggested'] = re.sub(r'^TITLE:\s*', '', e['suggested'])
-        k = e['original'].strip()
-        if k in seen:
-            seen[k]['models'].append(e['model']); continue
-        e['models'] = [e['model']]; seen[k] = e; merged.append(e)
-    accepted, rejected, new_body, new_title = [], [], body, title
-    for e in merged:
-        if e['original'] == 'TITLE':
-            why = check_title(title, e['suggested']) if new_title == title else 'second headline suggestion'
-        else:
-            why = check(e, new_body)
-            if not why and any(e['original'] in x['original'] or x['original'] in e['original'] for x in accepted):
-                why = 'overlaps an accepted edit'
-        if why:
-            rejected.append((e, why)); continue
-        accepted.append(e)
-        if e['original'] == 'TITLE':
-            new_title = e['suggested']
-        else:
-            new_body = new_body.replace(e['original'], e['suggested'], 1)
+            continue
+        pass_ok, pass_title = [], new_title
+        for e in raw:
+            e['models'] = [name]
+            if e['original'].startswith('TITLE'):
+                e['original'] = 'TITLE'
+                e['suggested'] = re.sub(r'^TITLE:\s*', '', e['suggested'])
+                why = check_title(pass_title, e['suggested']) if new_title == pass_title else 'second headline suggestion'
+            else:
+                why = check(e, new_body)
+                if not why and any(e['original'] in x['original'] or x['original'] in e['original'] for x in pass_ok):
+                    why = 'overlaps an accepted edit'
+            if why:
+                rejected.append((e, why)); continue
+            e['before_title'] = new_title
+            pass_ok.append(e); accepted.append(e)
+            if e['original'] == 'TITLE':
+                new_title = e['suggested']
+            else:
+                new_body = new_body.replace(e['original'], e['suggested'], 1)
     cost = {'openai': (1.25, 10.0), 'gemini': (1.25, 10.0)}  # USD per 1M tokens in/out, rough
     usd = sum(i * cost[p][0] / 1e6 + o * cost[p][1] / 1e6 for p, _, i, o in USAGE)
     lines = [f'# Readability review: {path.parent.name}', '',
              'Models: ' + ', '.join(f'{p} {mdl} ({i} in / {o} out tokens)' for p, mdl, i, o in USAGE),
              f'Approx. cost: ${usd:.3f}', f'Accepted {len(accepted)}, rejected {len(rejected)}', '', '## Accepted', '']
     for e in accepted:
-        lines += [f"- **{'/'.join(e['models'])}**: {e['reason']}", f"  - Before: {title if e['original']=='TITLE' else e['original']}",
+        lines += [f"- **{'/'.join(e['models'])}**: {e['reason']}", f"  - Before: {e.get('before_title', title) if e['original']=='TITLE' else e['original']}",
                   f"  - After: {e['suggested']}", '']
     lines += ['## Rejected', '']
     for e, why in rejected:
