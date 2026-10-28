@@ -1,114 +1,157 @@
 {
   "slug": "karlie-samuelson",
   "player_name": "Karlie Samuelson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "What are Karlie Samuelson's stats / points per game?",
-      "answer": "In the 2026 regular season, Karlie Samuelson averaged 4.9 points, 1.5 rebounds, and 0.8 assists in 31 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Karlie Samuelson's stats?",
+      "answer": "In the 2026 regular season, Karlie Samuelson averaged 4.8 points, 1.5 rebounds, and 0.9 assists in 32 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "karlie samuelson stats",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Karlie Samuelson dating?",
-      "answer": "As of late 2026, Karlie Samuelson has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
+        "https://fullcourtbuckets.com/wnba/karlie-samuelson/"
       ],
-      "google_keyword": "karlie samuelson partner",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "karlie samuelson stats",
+          "vol": 90
+        },
+        {
+          "q": "karlie samuelson points per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Karlie Samuelson make?",
-      "answer": "A precise public salary or net worth figure for Karlie Samuelson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "karlie samuelson salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Karlie Samuelson?",
-      "answer": "Karlie Samuelson is listed at 6' 0\".",
+      "question": "Who has Karlie Samuelson played for in the WNBA?",
+      "answer": "Karlie Samuelson has played for the Los Angeles Sparks, Dallas Wings, Seattle Storm, Phoenix Mercury, Washington Mystics, Minnesota Lynx and Portland Fire. She went undrafted out of Stanford, signed with Los Angeles in April 2017 and signed with Portland on April 11, 2026.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
+        "https://www.wnba.com/player/1628317/karlie-samuelson/bio"
       ],
-      "google_keyword": "karlie samuelson height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "karlie samuelson wnba",
+          "vol": 50
+        },
+        {
+          "q": "karlie samuelson la sparks",
+          "vol": 10
+        },
+        {
+          "q": "karlie samuelson sparks",
+          "vol": 10
+        },
+        {
+          "q": "karlie samuelson mystics",
+          "vol": 10
+        },
+        {
+          "q": "karlie samuelson lynx",
+          "vol": 10
+        },
+        {
+          "q": "karlie samuelson dallas wings",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What is Karlie Samuelson's jersey number?",
-      "answer": "Karlie Samuelson wears number 44 for the Portland Fire.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "karlie samuelson jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Karlie Samuelson's contract?",
-      "answer": "Contract length and guarantees for Karlie Samuelson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Is Karlie Samuelson related to Katie Lou Samuelson?",
+      "answer": "Yes. Katie Lou Samuelson is Karlie Samuelson's younger sister. Both play in the WNBA.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.fiba.basketball/en/news/womenseurobasket-2019-news-samuelson-ready-to-fire-for-great-britain-in-bid-to-reach-new-heights"
       ],
-      "google_keyword": "karlie samuelson contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Karlie Samuelson married?",
-      "answer": "There is no widely reported public record of Karlie Samuelson being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
-      ],
-      "google_keyword": "karlie samuelson husband",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "What college did Karlie Samuelson attend?",
-      "answer": "Samuelson played college basketball at Stanford.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
-      ],
-      "google_keyword": "karlie samuelson stanford",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Karlie Samuelson injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "karlie samuelson injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Does Karlie Samuelson have kids?",
-      "answer": "There is no widely reported public information that Karlie Samuelson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
-      ],
-      "google_keyword": "karlie samuelson",
-      "approx_monthly_volume": 5400
+      "queries": [
+        {
+          "q": "karlie samuelson sister",
+          "vol": 20
+        },
+        {
+          "q": "is karlie samuelson related to katie lou samuelson",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Karlie Samuelson?",
-      "answer": "Karlie Samuelson was born May 10, 1995 in Fullerton. As of late 2026 that puts her at 31 years old.",
+      "answer": "Karlie Samuelson was born May 10, 1995.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628317/karlie-samuelson/bio"
+      ],
+      "queries": [
+        {
+          "q": "karlie samuelson age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Karlie Samuelson play college basketball?",
+      "answer": "Karlie Samuelson played four seasons at Stanford (2013 to 2017). She made All-Pac-12 and was an AP honorable mention All-American in 2017, and she ranks second in Stanford history in career three-point percentage (44.3%).",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628317/karlie-samuelson/bio"
+      ],
+      "queries": [
+        {
+          "q": "karlie samuelson stanford",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Karlie Samuelson?",
+      "answer": "The WNBA lists Karlie Samuelson at 6 feet and 159 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628317/karlie-samuelson/bio"
+      ],
+      "queries": [
+        {
+          "q": "karlie samuelson height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Karlie Samuelson play for Great Britain?",
+      "answer": "Yes. Karlie Samuelson plays for Great Britain. She made her senior debut in the EuroBasket 2019 qualifiers and played for GB at FIBA Women's EuroBasket 2019.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Karlie_Samuelson"
+        "https://www.fiba.basketball/en/news/womenseurobasket-2019-news-samuelson-ready-to-fire-for-great-britain-in-bid-to-reach-new-heights"
       ],
-      "google_keyword": "karlie samuelson age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1995-05-10"
+      "queries": [
+        {
+          "q": "karlie samuelson great britain",
+          "vol": null
+        },
+        {
+          "q": "karlie samuelson gb",
+          "vol": null
+        },
+        {
+          "q": "karlie samuelson eurobasket",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Karlie Samuelson play in Belgium?",
+      "answer": "Yes. Karlie Samuelson played for Castors Braine in Belgium, including in EuroLeague Women. She has also played in Spain, the United Kingdom and Turkey.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1628317/karlie-samuelson/bio",
+        "https://www.fiba.basketball/en/news/womenseurobasket-2019-news-samuelson-ready-to-fire-for-great-britain-in-bid-to-reach-new-heights"
+      ],
+      "queries": [
+        {
+          "q": "karlie samuelson belgium",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

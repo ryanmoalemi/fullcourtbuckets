@@ -1,134 +1,189 @@
 {
   "slug": "dorka-juhasz",
   "player_name": "Dorka Juhasz",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "What are Dorka Juhasz's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2024), Dorka Juhasz averaged 4.8 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dorka juhasz stats",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who is Dorka Juhasz dating?",
-      "answer": "As of late 2026, Dorka Juhasz has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
-      ],
-      "google_keyword": "dorka juhasz boyfriend",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Dorka Juhasz make?",
-      "answer": "A precise public salary or net worth figure for Dorka Juhasz is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "dorka juhasz salary",
-      "approx_monthly_volume": 20
-    },
-    {
       "question": "How tall is Dorka Juhasz?",
-      "answer": "Dorka Juhasz is listed at 6' 5\".",
+      "answer": "The WNBA lists Dorka Juhasz at 6 feet 5 inches and 190 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
+        "https://www.wnba.com/player/1641657/dorka-juhasz/bio"
       ],
-      "google_keyword": "dorka juhasz height",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "dorka juhasz height",
+          "vol": 170
+        },
+        {
+          "q": "dorka juhasz height and weight",
+          "vol": 10
+        },
+        {
+          "q": "dorka juhasz weight",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How old is Dorka Juhasz?",
-      "answer": "She was born December 18, 1999 in Pécs. As of late 2026 that puts her at 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
-      ],
-      "google_keyword": "dorka juhasz age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1999-12-18"
-    },
-    {
-      "question": "What did Dorka Juhasz score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Connecticut Sun), Dorka Juhasz had 4.0 points, 3.0 rebounds, and 0 assists in a 101-89 win.",
+      "question": "What are Dorka Juhasz's stats?",
+      "answer": "In the 2026 regular season, Dorka Juhasz averaged 3.6 points, 3.1 rebounds, and 1.4 assists in 21 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is dorka juhasz playing tonight",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/dorka-juhasz/"
+      ],
+      "queries": [
+        {
+          "q": "dorka juhasz stats",
+          "vol": 140
+        }
+      ]
     },
     {
-      "question": "What is Dorka Juhasz's contract?",
-      "answer": "Contract length and guarantees for Dorka Juhasz are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Did Dorka Juhasz play at Ohio State and UConn?",
+      "answer": "Yes. Dorka Juhasz was twice named First Team All-Big Ten at Ohio State, then transferred to UConn for her final two college seasons, helping the Huskies reach the 2022 NCAA championship game and the 2023 Sweet 16.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/draft/2023/prospects/167775/dorka-juhasz"
       ],
-      "google_keyword": "dorka juhasz contract",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "dorka juhasz uconn",
+          "vol": 90
+        },
+        {
+          "q": "dorka juhasz ohio state",
+          "vol": 20
+        },
+        {
+          "q": "dorka juhasz transfer",
+          "vol": 10
+        },
+        {
+          "q": "uconn women's basketball dorka juhasz",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Dorka Juhasz married?",
-      "answer": "There is no widely reported public record of Dorka Juhasz being married as of late 2026.",
+      "question": "What WNBA team does Dorka Juhasz play for?",
+      "answer": "Dorka Juhasz plays forward for the Minnesota Lynx, who drafted her in the second round, 16th overall, in 2023. She made the 2023 All-Rookie Team and set the Lynx rookie record with 246 rebounds. She did not play in the WNBA in 2025 and returned to Minnesota in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
+        "https://www.wnba.com/player/1641657/dorka-juhasz/bio",
+        "https://fullcourtbuckets.com/wnba/dorka-juhasz/"
       ],
-      "google_keyword": "dorka juhasz husband",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "dorka juhasz lynx",
+          "vol": 40
+        },
+        {
+          "q": "dorka juhasz wnba",
+          "vol": 30
+        },
+        {
+          "q": "dorka juhasz draft pick",
+          "vol": 10
+        },
+        {
+          "q": "dorka juhasz wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Was Dorka Juhasz EuroLeague MVP?",
+      "answer": "Yes. Dorka Juhasz was named 2025-26 EuroLeague Women MVP with Galatasaray. At 26 she was the youngest winner of the award, averaging 12.8 points and 8.0 rebounds on 52% shooting.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fiba.basketball/en/news/juhasz-crowned-mvp-to-lead-euroleague-women-awards"
+      ],
+      "queries": [
+        {
+          "q": "dorka juhasz euroleague",
+          "vol": 30
+        },
+        {
+          "q": "dorka juhasz euroleague stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Dorka Juhasz from?",
-      "answer": "She is from Pécs.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
-      ],
-      "google_keyword": "where is dorka juhasz from",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What college did Dorka Juhasz attend?",
-      "answer": "Juhasz played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
-      ],
-      "google_keyword": "dorka juhasz uconn",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Is Dorka Juhasz injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "dorka juhasz injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who are Dorka Juhasz's parents?",
-      "answer": "Public profiles share limited verified detail about Dorka Juhasz's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Dorka Juhasz is from Pécs, Hungary. Her WNBA draft bio says she is the daughter of Zsolt and Hajnalka Juhász and has a brother, Gergely.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
+        "https://www.wnba.com/draft/2023/prospects/167775/dorka-juhasz"
       ],
-      "google_keyword": "dorka juhasz parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is dorka juhasz from",
+          "vol": 20
+        },
+        {
+          "q": "dorka juhasz country",
+          "vol": null
+        },
+        {
+          "q": "dorka juhasz nationality",
+          "vol": null
+        },
+        {
+          "q": "dorka juhasz hometown",
+          "vol": null
+        },
+        {
+          "q": "dorka juhasz parents",
+          "vol": 10
+        },
+        {
+          "q": "dorka juhasz family",
+          "vol": 10
+        },
+        {
+          "q": "dorka juhasz mother",
+          "vol": null
+        },
+        {
+          "q": "dorka juhasz bio",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "When was Dorka Juhasz drafted?",
-      "answer": "She was selected 16th overall by the Lynx in the 2023 WNBA draft.",
-      "answer_kind": "researched",
+      "question": "How old is Dorka Juhasz?",
+      "answer": "Dorka Juhasz was born December 18, 1999.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Dorka_Juh%C3%A1sz"
+        "https://www.wnba.com/player/1641657/dorka-juhasz/bio"
       ],
-      "google_keyword": "dorka juhasz draft pick",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "dorka juhasz age",
+          "vol": 10
+        },
+        {
+          "q": "dorka juhasz birthday",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Dorka Juhasz play for Hungary?",
+      "answer": "Yes. Dorka Juhasz made the All-Star Five at the 2026 World Cup Qualifying Tournament in Istanbul, averaging 18.0 points and 9.0 rebounds as Hungary qualified for its first World Cup since 1998.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641657/dorka-juhasz/bio"
+      ],
+      "queries": [
+        {
+          "q": "dorka juhasz hungary",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
