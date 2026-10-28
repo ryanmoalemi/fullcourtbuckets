@@ -93,4 +93,4 @@ The seven standing rules (verify outside numbers, original data hooks only where
 - Never put a photo between a heading and its table.
 
 ## Readability review before publish (Ryan, Oct 27, 2026)
-Every article's final draft goes through the GPT readability review, then Gemini, before publish. See `docs/READABILITY_REVIEW.md`.
+Every article's final draft goes through the GPT readability review, then Gemini, before publish. Factual flags from either model are checked by hand against a primary source, never applied automatically. See `docs/READABILITY_REVIEW.md`.
