@@ -1,6 +1,6 @@
 ---
-title: "Valkyries can clinch in Game 6, but road teams in this spot are 2-4"
-seo_title: "Game 6 preview: Valkyries one win away; road teams 2-4"
+title: "WNBA 2026 Finals: Valkyries can clinch in Game 6, but road teams in this spot are 2-4"
+seo_title: "WNBA Finals Game 6: Valkyries can clinch; road teams 2-4"
 slug: finals-game-6-preview-valkyries-dream
 date: 2026-10-27
 updated: "2026-10-27 22:40 PT"
