@@ -436,7 +436,16 @@ def render_tracker_scope_text(root: Path, s: dict, attrs: dict, body: str = '') 
     return _APA.sub(lambda m: f'{m.group(1)}{FULL_MONTHS[mo - 1]} {d}{m.group(2)}', body)
 
 
+def render_tracker_2026_total(root: Path, s: dict, attrs: dict) -> str:
+    """Answer-line sentence: 2026 Finals combined attendance so far, from the data file."""
+    rows = [r for r in _attendance(root) if r.get('attendance')]
+    if not rows:
+        return 'The 2026 Finals have no reported attendance yet.'
+    return f"The 2026 Finals are at {sum(int(r['attendance']) for r in rows):,} through Game {rows[-1]['game']}."
+
+
 RENDERERS = {
+    'tracker-2026-total': render_tracker_2026_total,
     'series-line': render_series_line,
     'finals-attendance-lead': render_attendance_lead,
     'finals-attendance-counter': render_attendance_counter,
@@ -466,6 +475,50 @@ def _set_attr(attrs: str, name: str, value: str) -> str:
     return attrs + f' {name}="{value}"'
 
 
+# ---- Tracker database counts ----
+# The header ("N games indexed · K with published attendance"), the default filter
+# summary and the coverage line are printed in the HTML before JavaScript runs.
+# They are counted from the database rows themselves so a new game row can never
+# leave the printed counts behind the table (crawlers and no-JS readers see them).
+_DB_TABLE = re.compile(r'<table[^>]*\bid="fdb".*?</table>', re.S)
+_DB_ROW = re.compile(r'<tr id="g[^"]*"[^>]*\bdata-att="(\d*)"')
+
+
+def tracker_counts(text: str):
+    m = _DB_TABLE.search(text)
+    if not m:
+        return None
+    atts = _DB_ROW.findall(m.group(0))
+    if not atts:
+        return None
+    known = [int(a) for a in atts if a]
+    total = sum(known)
+    return {'games': len(atts), 'with_att': len(known), 'total': total,
+            'avg': int(total / len(known) + 0.5) if known else 0}
+
+
+def sync_tracker_counts(text: str) -> str:
+    c = tracker_counts(text)
+    if not c:
+        return text
+    text = re.sub(r'(<span class="dyn-ng">)\d+(</span>)', lambda m: f"{m.group(1)}{c['games']}{m.group(2)}", text)
+    text = re.sub(r'(<span class="dyn-nk">)\d+(</span>)', lambda m: f"{m.group(1)}{c['with_att']}{m.group(2)}", text)
+    text = re.sub(r'(<b id="sg">)[\d,]+(</b>)', lambda m: f"{m.group(1)}{c['games']}{m.group(2)}", text)
+    text = re.sub(r'(<b id="sk">)[\d,]+(</b>)', lambda m: f"{m.group(1)}{c['with_att']}{m.group(2)}", text)
+    text = re.sub(r'(<b id="st">)[\d,]+(</b>)', lambda m: f"{m.group(1)}{c['total']:,}{m.group(2)}", text)
+    text = re.sub(r'(<b id="sa">)[\d,]+(</b>)', lambda m: f"{m.group(1)}{c['avg']:,}{m.group(2)}", text)
+    missing = c['games'] - c['with_att']
+    text = re.sub(r'(<span class="note" id="sx"[^>]*>Excluded from arithmetic: )\d+( games? with no attendance shown)',
+                  lambda m: f"{m.group(1)}{missing}{m.group(2)}", text)
+    return text
+
+
+def tracker_count_problems(text: str) -> list:
+    if not tracker_counts(text):
+        return []
+    return [] if sync_tracker_counts(text) == text else ['printed database counts do not match the table rows']
+
+
 def render_html(text: str, root: Path, s: dict | None) -> str:
     def swap(m: re.Match) -> str:
         fn = RENDERERS.get(m.group('kind'))
@@ -477,7 +530,7 @@ def render_html(text: str, root: Path, s: dict | None) -> str:
         else:
             body = fn(root, s, _attrs(m.group('attrs')))
         return f"<{m.group('tag')}{attrs}>{body}</{m.group('tag')}>{END}"
-    return SECTION.sub(swap, text)
+    return sync_tracker_counts(SECTION.sub(swap, text))
 
 
 def html_files(root: Path):
@@ -513,6 +566,7 @@ def stale_problems(root: Path) -> list[str]:
             updated = _attrs(m.group('attrs')).get('data-fcb-updated', '')
             if m.group('kind') in RENDERERS and latest and updated < latest:
                 problems.append(f'{rel}: {m.group("kind")} section updated {updated or "never"}, latest final {latest}')
+        problems.extend(f'{rel}: {p}' for p in tracker_count_problems(text))
         unmarked = _visible(SECTION.sub(' ', text))
         if rel.startswith('news/'):
             # A news story is dated; only cards that link to other stories must stay current.
