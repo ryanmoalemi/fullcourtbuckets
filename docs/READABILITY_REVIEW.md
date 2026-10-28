@@ -7,10 +7,10 @@ python3 /workspace/fcb-review/review.py content/articles/<slug>/article.md --app
 ```
 
 - Runs on the Grok Bot box only. It reads `OPENAI_API_KEY` and `GEMINI_API_KEY` from the environment. Keys are never written to files, the repo or GitHub Actions secrets.
-- `automation/readability_review.py` is the same logic, kept in the repo for review. Models: `FCB_OPENAI_MODEL` (default `gpt-5.5`) and `FCB_GEMINI_MODEL` (default `gemini-2.5-pro`). `--models openai` runs one model.
+- `automation/readability_review.py` is the same logic, kept in the repo for review. Models: `FCB_OPENAI_MODEL` (default `gpt-5.5`) and `FCB_GEMINI_MODEL` (default `gemini-3.1-pro-preview`; gemini-2.5-pro is closed to new API users). `--models openai` runs one model.
 - Sequential by default: GPT (OpenAI) edits first, then Gemini reviews the GPT-edited text. Each pass's edits go through the safety checks below before the next pass starts.
 - Both models get the article and an editor prompt that allows readability edits only (clearer sentence-case headline, simpler sentences, flow, table lead-ins, cutting filler) and forbids changing any number, name, quote, date, stat or link, or adding a fact.
 - Suggestions come back as JSON `{original, suggested, reason}`. The script rejects any edit that changes a number, link, quote, proper noun or superlative (best/most/only/every/record...), touches a table row or a Data/Source/Methods note, is formatting-only, uses a banned filler phrase, or whose original text isn't found exactly once. A headline edit must keep its numbers, add no proper noun and not be a question.
 - Models may also propose factual corrections. These come back as a separate `factual_flags` list (original, suggested fix, reason), are NEVER auto-applied, and appear in the report under "Needs fact-check". The editor (the bot as fact checker) verifies each one against a primary source and applies only the ones that check out, citing the source.
 - Accepted edits are applied to `article.md` and a before/after markdown report is written. Read the report, then run the normal checks (`python3 -m unittest automation/test_editorial_style.py`) and publish. Readability edits are pre-approved.
-- Cost is about $0.05-0.10 per article per model.
+- Cost is about $0.05-0.10 per article per model. Gemini 3.1 Pro Preview list price: $2.00 / 1M input, $12.00 / 1M output including thinking tokens (prompts <= 200k).

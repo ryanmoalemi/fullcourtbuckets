@@ -10,7 +10,7 @@ import argparse, collections, json, os, re, sys, urllib.request, urllib.error
 from pathlib import Path
 
 OPENAI_MODEL = os.environ.get('FCB_OPENAI_MODEL', 'gpt-5.5')
-GEMINI_MODEL = os.environ.get('FCB_GEMINI_MODEL', 'gemini-2.5-pro')
+GEMINI_MODEL = os.environ.get('FCB_GEMINI_MODEL', 'gemini-3.1-pro-preview')
 STYLE = Path(__file__).resolve().parents[1] / 'docs' / 'EDITORIAL_STYLE.md'
 
 PROMPT = """You are a copy editor for Full Court Buckets, a WNBA site. Suggest READABILITY edits only.
@@ -68,7 +68,7 @@ def ask_gemini(text):
         'systemInstruction': {'parts': [{'text': PROMPT + style_excerpt()}]},
         'contents': [{'role': 'user', 'parts': [{'text': text}]}],
         'generationConfig': {'responseMimeType': 'application/json'}}, {'x-goog-api-key': key})
-    u = d.get('usageMetadata', {}); USAGE.append(('gemini', GEMINI_MODEL, u.get('promptTokenCount', 0), u.get('candidatesTokenCount', 0)))
+    u = d.get('usageMetadata', {}); USAGE.append(('gemini', GEMINI_MODEL, u.get('promptTokenCount', 0), u.get('candidatesTokenCount', 0) + u.get('thoughtsTokenCount', 0)))  # thinking billed as output
     j = json.loads(d['candidates'][0]['content']['parts'][0]['text'])
     FLAGS.extend(dict(f, model='gemini') for f in j.get('factual_flags', []))
     return j.get('edits', [])
@@ -187,7 +187,7 @@ def main():
                 new_title = e['suggested']
             else:
                 new_body = new_body.replace(e['original'], e['suggested'], 1)
-    cost = {'openai': (1.25, 10.0), 'gemini': (1.25, 10.0)}  # USD per 1M tokens in/out, rough
+    cost = {'openai': (1.25, 10.0), 'gemini': (2.0, 12.0)}  # USD per 1M in/out; gemini-3.1-pro-preview list price (<=200k prompt), ai.google.dev/gemini-api/docs/pricing, checked 2026-10-27
     usd = sum(i * cost[p][0] / 1e6 + o * cost[p][1] / 1e6 for p, _, i, o in USAGE)
     lines = [f'# Readability review: {path.parent.name}', '',
              'Models: ' + ', '.join(f'{p} {mdl} ({i} in / {o} out tokens)' for p, mdl, i, o in USAGE),
