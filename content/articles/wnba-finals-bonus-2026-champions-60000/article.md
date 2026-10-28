@@ -24,6 +24,8 @@ A year ago, winning the midseason Commissioner's Cup paid more than winning the 
 
 ## 2025 vs. 2026 playoff bonuses
 
+Every playoff bonus at least doubled under the new deal, and the Finals MVP award grew sixfold. Here's each one, 2025 vs. 2026:
+
 | Bonus | 2025 | 2026 | Change |
 |---|---|---|---|
 | WNBA champion, per player | $22,908 | $60,000 | 2.6x |
@@ -32,7 +34,7 @@ A year ago, winning the midseason Commissioner's Cup paid more than winning the 
 | Lost in first round, per player | $1,778 | $5,000 | 2.8x |
 | Finals MVP | $5,000 | $30,000 | 6x |
 
-The 2025 figures are from the league's March 2026 summary of the deal. The 2026 figures are from the bonus table in the signed agreement. Change is the 2026 figure divided by the 2025 figure, rounded to one decimal.
+Sources: 2025 figures from the league's March 2026 summary of the deal; 2026 figures from the bonus table in the signed agreement. Methods: Change is the 2026 figure divided by the 2025 figure, rounded to one decimal.
 
 ## What each Finals roster stands to earn
 

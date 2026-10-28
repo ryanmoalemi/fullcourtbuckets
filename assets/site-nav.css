@@ -273,3 +273,13 @@ html body .ss-all[hidden],html body .ss-dym[hidden]{display:none}
 /* Article column stays centered in the page shell; small data tables scroll inside the column on phones. */
 main.article-wrap>.article{margin-left:auto;margin-right:auto}
 @media(max-width:600px){.article table.fcb-table.sm{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+/* Article data captions (Ryan, Oct. 27, 2026): source, data-through, methods and CC0 download sit in a small muted note directly below the table. */
+html body .article .table-note{font-size:13px;line-height:1.45;color:#6b665e!important;margin:-4px 0 18px;padding-top:6px;border-top:1px solid var(--line,#e6e1d8)}
+html body .article .table-note a{color:inherit!important;text-decoration:underline}
+/* Wide tables never hide columns without a cue: edge shadows while scrolling plus a visible "Scroll for more" hint (site-nav.js adds .is-scrollable). */
+html body .article .table-wrap,html body .article .fcb-table-wrap{position:relative;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;background:linear-gradient(to right,#fff 30%,rgba(255,255,255,0)) left center/24px 100% no-repeat local,linear-gradient(to left,#fff 30%,rgba(255,255,255,0)) right center/24px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.18),transparent) left center/12px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.18),transparent) right center/12px 100% no-repeat scroll}
+html body .article .table-wrap table,html body .article .fcb-table-wrap table{background:transparent!important}
+html body .article .table-wrap td,html body .article .table-wrap th{white-space:nowrap}
+html body .article .table-wrap td:last-child,html body .article .table-wrap th:last-child{white-space:normal}
+html body .article .table-scroll-hint{display:none;font-size:12px;color:#6b665e;margin:0 0 4px;text-align:right}
+html body .article .table-scroll-hint.is-on{display:block}

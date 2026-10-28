@@ -28,7 +28,7 @@ The [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) beat the [Atla
 
 ## Finals data: lowest-scoring games since 2002
 
-**Key finding:** Game 5 broke a three-way tie at 121 points for the lowest-scoring WNBA Finals game since at least 2002.
+Game 5 broke a three-way tie at 121 points for the lowest-scoring WNBA Finals game since at least 2002. Here are the lowest-scoring Finals games in that span:
 
 | Rank | Finals game | Final score | Combined points |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ Atlanta's 55 points tie Connecticut in 2005 Game 3 for the fourth-lowest team sc
 
 ## Series data: the third quarter and the point differential
 
-**Key finding:** Golden State leads 3-2 while being outscored 357-335. Atlanta has won the third quarter by 32 points, and Golden State has won the other three quarters by 10.
+Golden State leads 3-2 even though Atlanta has outscored it 357-335, and the third quarter explains most of that gap: Atlanta has won it by 32 points, while Golden State has won the other three quarters by 10. Here's how each game split:
 
 | Game | Final | 3rd quarter | Other 3 quarters | Halftime |
 | --- | --- | --- | --- | --- |
