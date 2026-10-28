@@ -42,7 +42,7 @@ Since 2002, six road teams have led the Finals with a chance to clinch on the ro
 | 2023 | 4 | Las Vegas | New York | 2-1 | 70-69 | Yes |
 | 2024 | 4 | New York | Minnesota | 2-1 | 80-82 | No |
 
-Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team could clinch the title with a win. "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
+Data through Finals Game 5, Oct. 26, 2026. Methods: every Finals game since 2002 in which the road team led the series and could clinch with a win (winner-take-all deciders excluded). "Opponent had a win" means the home team had won at least one game in the series. 2020 was played at a neutral site and is excluded. Source: WNBA.com box scores, compiled in the FCB Finals database. Download (CC0): [road-closeout-chances-2002-2025.csv](/news/finals-game-6-preview-valkyries-dream/data/road-closeout-chances-2002-2025.csv)
 
 Road teams leading the series with a chance to clinch are 8-8 since 2002; winner-take-all deciders are not counted. They are 2-4 when the home team had already won a game in the series, which is Golden State's spot on Thursday. Golden State can win the title in Game 6 on Thursday at 9:30 a.m. PT (12:30 p.m. ET) at State Farm Arena in Atlanta, even though Atlanta has outscored it 357-335.
 
