@@ -1,17 +1,17 @@
-team,number,player,position,developmental,draft_year,draft_round,draft_pick,undrafted,ppg,rpg,apg,mpg,profile_url
-Toronto Tempo,24,Aneesah Morrow,Forward,no,2025,1,7,no,11.0,8.3,1.4,22.2,https://fullcourtbuckets.com/wnba/aneesah-morrow/
-Toronto Tempo,20,Brittney Sykes,Guard,no,2017,1,7,no,18.6,3.5,3.4,29.4,https://fullcourtbuckets.com/wnba/brittney-sykes/
-Toronto Tempo,21,Isabelle Harrison,Forward,no,2015,1,12,no,12.8,6.9,1.5,23.7,https://fullcourtbuckets.com/wnba/isabelle-harrison/
-Toronto Tempo,22,Julie Allemand,Guard,no,2016,3,33,no,6.0,3.2,5.5,28.3,https://fullcourtbuckets.com/wnba/julie-allemand/
-Toronto Tempo,11,Kamila Borkowska,Center,yes,,,,yes,,,,,https://fullcourtbuckets.com/wnba/kamila-borkowska/
-Toronto Tempo,11,Kia Nurse,Guard,no,2018,1,10,no,5.5,1.2,1.0,14.3,https://fullcourtbuckets.com/wnba/kia-nurse/
-Toronto Tempo,1,Kiki Rice,Guard,no,2026,1,6,no,13.4,3.7,3.5,27.1,https://fullcourtbuckets.com/wnba/kiki-rice/
-Toronto Tempo,2,Laura Juskaite,Forward,no,,,,yes,11.3,4.2,1.8,25.4,https://fullcourtbuckets.com/wnba/laura-juskaite/
-Toronto Tempo,10,Maria Conde,Forward,no,2019,3,27,no,8.5,4.5,2.5,26.4,https://fullcourtbuckets.com/wnba/maria-conde/
-Toronto Tempo,6,Maria Gakdeng,Forward,yes,,,,yes,,,,,https://fullcourtbuckets.com/wnba/maria-gakdeng/
-Toronto Tempo,3,Marina Mabrey,Guard,no,2019,2,19,no,20.8,3.3,3.7,29.5,https://fullcourtbuckets.com/wnba/marina-mabrey/
-Toronto Tempo,8,Nyara Sabally,Forward,no,2022,1,5,no,12.3,5.3,1.7,23.9,https://fullcourtbuckets.com/wnba/nyara-sabally/
-Toronto Tempo,33,Ornella Bankole,Guard,no,,,,yes,3.4,2.3,1.1,14.8,https://fullcourtbuckets.com/wnba/ornella-bankole/
-Toronto Tempo,14,Temi Fagbenle,Center,no,2016,3,35,no,5.9,3.4,1.0,17.8,https://fullcourtbuckets.com/wnba/temi-fagbenle/
-Toronto Tempo,7,Teonni Key,Forward,no,2026,2,22,no,2.2,2.1,0.5,11.1,https://fullcourtbuckets.com/wnba/teonni-key/
-Toronto Tempo,00,Zaay Green,Guard,no,2025,3,32,no,2.1,1.0,0.1,9.6,https://fullcourtbuckets.com/wnba/zaay-green/
+team,number,player,position,developmental,draft_year,draft_round,draft_pick,drafted_by,undrafted,ppg,rpg,apg,mpg,profile_url
+Toronto Tempo,24,Aneesah Morrow,Forward,no,2025,1,7,Connecticut Sun,no,11.0,8.3,1.4,22.2,https://fullcourtbuckets.com/wnba/aneesah-morrow/
+Toronto Tempo,20,Brittney Sykes,Guard,no,2017,1,7,Atlanta Dream,no,18.6,3.5,3.4,29.4,https://fullcourtbuckets.com/wnba/brittney-sykes/
+Toronto Tempo,21,Isabelle Harrison,Forward,no,2015,1,12,Phoenix Mercury,no,12.8,6.9,1.5,23.7,https://fullcourtbuckets.com/wnba/isabelle-harrison/
+Toronto Tempo,22,Julie Allemand,Guard,no,2016,3,33,Indiana Fever,no,6.0,3.2,5.5,28.3,https://fullcourtbuckets.com/wnba/julie-allemand/
+Toronto Tempo,11,Kamila Borkowska,Center,yes,,,,,yes,,,,,https://fullcourtbuckets.com/wnba/kamila-borkowska/
+Toronto Tempo,11,Kia Nurse,Guard,no,2018,1,10,New York Liberty,no,5.5,1.2,1.0,14.3,https://fullcourtbuckets.com/wnba/kia-nurse/
+Toronto Tempo,1,Kiki Rice,Guard,no,2026,1,6,Toronto Tempo,no,13.4,3.7,3.5,27.1,https://fullcourtbuckets.com/wnba/kiki-rice/
+Toronto Tempo,2,Laura Juskaite,Forward,no,,,,,yes,11.3,4.2,1.8,25.4,https://fullcourtbuckets.com/wnba/laura-juskaite/
+Toronto Tempo,10,Maria Conde,Forward,no,2019,3,27,Chicago Sky,no,8.5,4.5,2.5,26.4,https://fullcourtbuckets.com/wnba/maria-conde/
+Toronto Tempo,6,Maria Gakdeng,Forward,yes,,,,,yes,,,,,https://fullcourtbuckets.com/wnba/maria-gakdeng/
+Toronto Tempo,3,Marina Mabrey,Guard,no,2019,2,19,Los Angeles Sparks,no,20.8,3.3,3.7,29.5,https://fullcourtbuckets.com/wnba/marina-mabrey/
+Toronto Tempo,8,Nyara Sabally,Forward,no,2022,1,5,New York Liberty,no,12.3,5.3,1.7,23.9,https://fullcourtbuckets.com/wnba/nyara-sabally/
+Toronto Tempo,33,Ornella Bankole,Guard,no,,,,,yes,3.4,2.3,1.1,14.8,https://fullcourtbuckets.com/wnba/ornella-bankole/
+Toronto Tempo,14,Temi Fagbenle,Center,no,2016,3,35,Minnesota Lynx,no,5.9,3.4,1.0,17.8,https://fullcourtbuckets.com/wnba/temi-fagbenle/
+Toronto Tempo,7,Teonni Key,Forward,no,2026,2,22,Toronto Tempo,no,2.2,2.1,0.5,11.1,https://fullcourtbuckets.com/wnba/teonni-key/
+Toronto Tempo,00,Zaay Green,Guard,no,2025,3,32,Washington Mystics,no,2.1,1.0,0.1,9.6,https://fullcourtbuckets.com/wnba/zaay-green/

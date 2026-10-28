@@ -1,15 +1,15 @@
-team,number,player,position,developmental,draft_year,draft_round,draft_pick,undrafted,ppg,rpg,apg,mpg,profile_url
-Atlanta Dream,15,Allisha Gray,Guard,no,2017,1,4,no,19.0,3.5,2.6,32.6,https://fullcourtbuckets.com/wnba/allisha-gray/
-Atlanta Dream,5,Angel Reese,Forward,no,2024,1,7,no,16.4,12.1,2.8,31.0,https://fullcourtbuckets.com/wnba/angel-reese/
-Atlanta Dream,42,Brionna Jones,Forward,no,2017,1,8,no,8.2,5.6,2.0,16.9,https://fullcourtbuckets.com/wnba/brionna-jones/
-Atlanta Dream,24,DeWanna Bonner,Forward,no,2009,1,5,no,8.6,5.4,1.8,20.8,https://fullcourtbuckets.com/wnba/dewanna-bonner/
-Atlanta Dream,21,Indya Nivar,Guard,yes,2026,2,28,no,1.0,0.8,0.3,3.0,https://fullcourtbuckets.com/wnba/indya-nivar/
-Atlanta Dream,20,Isobel Borlase,Guard,no,2024,2,20,no,4.8,1.5,1.0,13.0,https://fullcourtbuckets.com/wnba/isobel-borlase/
-Atlanta Dream,3,Jordin Canada,Guard,no,2018,1,5,no,11.6,3.5,7.3,31.1,https://fullcourtbuckets.com/wnba/jordin-canada/
-Atlanta Dream,11,Madina Okot,Center,no,2026,1,13,no,5.4,3.3,0.3,9.1,https://fullcourtbuckets.com/wnba/madina-okot/
-Atlanta Dream,0,Matilde Villa,Guard,yes,2024,3,32,no,,,,,https://fullcourtbuckets.com/wnba/matilde-villa-270867/
-Atlanta Dream,00,Naz Hillmon,Forward,no,2022,2,15,no,9.1,4.6,1.6,28.7,https://fullcourtbuckets.com/wnba/naz-hillmon/
-Atlanta Dream,10,Rhyne Howard,Guard,no,2022,1,1,no,17.7,3.8,3.7,34.2,https://fullcourtbuckets.com/wnba/rhyne-howard/
-Atlanta Dream,33,Shatori Walker-Kimbrough,Guard,no,2017,1,6,no,1.3,0.5,0.6,3.0,https://fullcourtbuckets.com/wnba/shatori-walker-kimbrough/
-Atlanta Dream,23,Sika Kone,Forward,no,2022,3,29,no,1.8,1.0,0.2,5.0,https://fullcourtbuckets.com/wnba/sika-kone/
-Atlanta Dream,2,Te-Hina Paopao,Guard,no,2025,2,18,no,3.7,0.8,1.4,11.6,https://fullcourtbuckets.com/wnba/te-hina-paopao/
+team,number,player,position,developmental,draft_year,draft_round,draft_pick,drafted_by,undrafted,ppg,rpg,apg,mpg,profile_url
+Atlanta Dream,15,Allisha Gray,Guard,no,2017,1,4,Dallas Wings,no,19.0,3.5,2.6,32.6,https://fullcourtbuckets.com/wnba/allisha-gray/
+Atlanta Dream,5,Angel Reese,Forward,no,2024,1,7,Chicago Sky,no,16.4,12.1,2.8,31.0,https://fullcourtbuckets.com/wnba/angel-reese/
+Atlanta Dream,42,Brionna Jones,Forward,no,2017,1,8,Connecticut Sun,no,8.2,5.6,2.0,16.9,https://fullcourtbuckets.com/wnba/brionna-jones/
+Atlanta Dream,24,DeWanna Bonner,Forward,no,2009,1,5,Phoenix Mercury,no,8.6,5.4,1.8,20.8,https://fullcourtbuckets.com/wnba/dewanna-bonner/
+Atlanta Dream,21,Indya Nivar,Guard,yes,2026,2,28,Atlanta Dream,no,1.0,0.8,0.3,3.0,https://fullcourtbuckets.com/wnba/indya-nivar/
+Atlanta Dream,20,Isobel Borlase,Guard,no,2024,2,20,Atlanta Dream,no,4.8,1.5,1.0,13.0,https://fullcourtbuckets.com/wnba/isobel-borlase/
+Atlanta Dream,3,Jordin Canada,Guard,no,2018,1,5,Seattle Storm,no,11.6,3.5,7.3,31.1,https://fullcourtbuckets.com/wnba/jordin-canada/
+Atlanta Dream,11,Madina Okot,Center,no,2026,1,13,Atlanta Dream,no,5.4,3.3,0.3,9.1,https://fullcourtbuckets.com/wnba/madina-okot/
+Atlanta Dream,0,Matilde Villa,Guard,yes,2024,3,32,Atlanta Dream,no,,,,,https://fullcourtbuckets.com/wnba/matilde-villa-270867/
+Atlanta Dream,00,Naz Hillmon,Forward,no,2022,2,15,Atlanta Dream,no,9.1,4.6,1.6,28.7,https://fullcourtbuckets.com/wnba/naz-hillmon/
+Atlanta Dream,10,Rhyne Howard,Guard,no,2022,1,1,Atlanta Dream,no,17.7,3.8,3.7,34.2,https://fullcourtbuckets.com/wnba/rhyne-howard/
+Atlanta Dream,33,Shatori Walker-Kimbrough,Guard,no,2017,1,6,Washington Mystics,no,1.3,0.5,0.6,3.0,https://fullcourtbuckets.com/wnba/shatori-walker-kimbrough/
+Atlanta Dream,23,Sika Kone,Forward,no,2022,3,29,New York Liberty,no,1.8,1.0,0.2,5.0,https://fullcourtbuckets.com/wnba/sika-kone/
+Atlanta Dream,2,Te-Hina Paopao,Guard,no,2025,2,18,Atlanta Dream,no,3.7,0.8,1.4,11.6,https://fullcourtbuckets.com/wnba/te-hina-paopao/

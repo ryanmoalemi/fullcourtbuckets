@@ -1,29 +1,29 @@
-franchise,season,team_name,wins,losses,finish,playoffs,record_source
-Minnesota Lynx,2026,Minnesota Lynx,33,11,1st of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026
-Minnesota Lynx,2025,Minnesota Lynx,34,10,1st of 13 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2025
-Minnesota Lynx,2024,Minnesota Lynx,30,10,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2024
-Minnesota Lynx,2023,Minnesota Lynx,19,21,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2023
-Minnesota Lynx,2022,Minnesota Lynx,14,22,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2022
-Minnesota Lynx,2021,Minnesota Lynx,22,10,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2021
-Minnesota Lynx,2020,Minnesota Lynx,14,8,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2020
-Minnesota Lynx,2019,Minnesota Lynx,18,16,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2019
-Minnesota Lynx,2018,Minnesota Lynx,18,16,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2018
-Minnesota Lynx,2017,Minnesota Lynx,27,7,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2017
-Minnesota Lynx,2016,Minnesota Lynx,28,6,1st of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2016
-Minnesota Lynx,2015,Minnesota Lynx,22,12,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2015
-Minnesota Lynx,2014,Minnesota Lynx,25,9,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2014
-Minnesota Lynx,2013,Minnesota Lynx,26,8,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2013
-Minnesota Lynx,2012,Minnesota Lynx,27,7,1st in the West,Lost in WNBA Finals,https://www.wnba.com/standings?season=2012
-Minnesota Lynx,2011,Minnesota Lynx,27,7,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2011
-Minnesota Lynx,2010,Minnesota Lynx,13,21,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2010
-Minnesota Lynx,2009,Minnesota Lynx,14,20,,Missed playoffs,https://www.wnba.com/api/schedule?season=2009&regionId=1
-Minnesota Lynx,2008,Minnesota Lynx,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1
-Minnesota Lynx,2007,Minnesota Lynx,10,24,,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1
-Minnesota Lynx,2006,Minnesota Lynx,10,24,,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1
-Minnesota Lynx,2005,Minnesota Lynx,14,20,,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1
-Minnesota Lynx,2004,Minnesota Lynx,18,16,,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1
-Minnesota Lynx,2003,Minnesota Lynx,18,16,,Lost in First Round,https://www.wnba.com/api/schedule?season=2003&regionId=1
-Minnesota Lynx,2002,Minnesota Lynx,10,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1
-Minnesota Lynx,2001,Minnesota Lynx,12,20,,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1
-Minnesota Lynx,2000,Minnesota Lynx,15,17,,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1
-Minnesota Lynx,1999,Minnesota Lynx,15,17,,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1
+franchise,season,team_name,wins,losses,finish,playoffs,record_source,finish_source
+Minnesota Lynx,2026,Minnesota Lynx,33,11,1st of 15 in the league,Lost in First Round,https://www.wnba.com/standings?season=2026,https://www.wnba.com/standings?season=2026
+Minnesota Lynx,2025,Minnesota Lynx,34,10,1st of 13 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2025,https://www.wnba.com/standings?season=2025
+Minnesota Lynx,2024,Minnesota Lynx,30,10,2nd of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2024,https://www.wnba.com/standings?season=2024
+Minnesota Lynx,2023,Minnesota Lynx,19,21,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2023,https://www.wnba.com/standings?season=2023
+Minnesota Lynx,2022,Minnesota Lynx,14,22,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2022,https://www.wnba.com/standings?season=2022
+Minnesota Lynx,2021,Minnesota Lynx,22,10,3rd of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2021,https://www.wnba.com/standings?season=2021
+Minnesota Lynx,2020,Minnesota Lynx,14,8,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2020,https://www.wnba.com/standings?season=2020
+Minnesota Lynx,2019,Minnesota Lynx,18,16,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2019,https://www.wnba.com/standings?season=2019
+Minnesota Lynx,2018,Minnesota Lynx,18,16,7th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2018,https://www.wnba.com/standings?season=2018
+Minnesota Lynx,2017,Minnesota Lynx,27,7,1st of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2017,https://www.wnba.com/standings?season=2017
+Minnesota Lynx,2016,Minnesota Lynx,28,6,1st of 12 in the league,Lost in WNBA Finals,https://www.wnba.com/standings?season=2016,https://www.wnba.com/standings?season=2016
+Minnesota Lynx,2015,Minnesota Lynx,22,12,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2015,https://www.wnba.com/standings?season=2015
+Minnesota Lynx,2014,Minnesota Lynx,25,9,2nd in the West,Lost in Semifinals,https://www.wnba.com/standings?season=2014,https://www.wnba.com/standings?season=2014
+Minnesota Lynx,2013,Minnesota Lynx,26,8,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2013,https://www.wnba.com/standings?season=2013
+Minnesota Lynx,2012,Minnesota Lynx,27,7,1st in the West,Lost in WNBA Finals,https://www.wnba.com/standings?season=2012,https://www.wnba.com/standings?season=2012
+Minnesota Lynx,2011,Minnesota Lynx,27,7,1st in the West,Won WNBA Finals,https://www.wnba.com/standings?season=2011,https://www.wnba.com/standings?season=2011
+Minnesota Lynx,2010,Minnesota Lynx,13,21,5th in the West,Missed playoffs,https://www.wnba.com/standings?season=2010,https://www.wnba.com/standings?season=2010
+Minnesota Lynx,2009,Minnesota Lynx,14,20,5th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2009&regionId=1,https://web.archive.org/web/20091002080655/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Minnesota Lynx,2008,Minnesota Lynx,16,18,7th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1,https://web.archive.org/web/20081217022011/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Minnesota Lynx,2007,Minnesota Lynx,10,24,6th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1,https://web.archive.org/web/20071001152424/http://www.wnba.com/standings/team_record_comparison/conferenceNew_Std_Cnf.html
+Minnesota Lynx,2006,Minnesota Lynx,10,24,7th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1,https://www.basketball-reference.com/wnba/years/2006.html
+Minnesota Lynx,2005,Minnesota Lynx,14,20,6th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2005&regionId=1,https://www.basketball-reference.com/wnba/years/2005.html
+Minnesota Lynx,2004,Minnesota Lynx,18,16,4th in the West,Lost in First Round,https://www.wnba.com/api/schedule?season=2004&regionId=1,https://web.archive.org/web/20041206211525/http://www.wnba.com/standings/by_conference.html
+Minnesota Lynx,2003,Minnesota Lynx,18,16,4th in the West,Lost in First Round,https://www.wnba.com/api/schedule?season=2003&regionId=1,https://web.archive.org/web/20031008043936/http://www.wnba.com/standings/by_conference.html
+Minnesota Lynx,2002,Minnesota Lynx,10,22,8th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2002&regionId=1,https://web.archive.org/web/20021204210544/http://www.wnba.com/standings/by_conference.html
+Minnesota Lynx,2001,Minnesota Lynx,12,20,6th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2001&regionId=1,https://www.basketball-reference.com/wnba/years/2001.html
+Minnesota Lynx,2000,Minnesota Lynx,15,17,6th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=2000&regionId=1,https://www.basketball-reference.com/wnba/years/2000.html
+Minnesota Lynx,1999,Minnesota Lynx,15,17,4th in the West,Missed playoffs,https://www.wnba.com/api/schedule?season=1999&regionId=1,https://www.basketball-reference.com/wnba/years/1999.html

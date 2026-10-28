@@ -2500,7 +2500,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             leaders.append({'name': player['name'], 'slug': player['slug'], **stats})
     roster = (
         '<div class="table-scroll" role="region" tabindex="0" aria-label="Current roster">'
-        '<table><caption>Current roster. 2026 regular-season per-game averages with this team when a season line is on file. Dev marks a developmental player. Height, age, experience, school or country and draft (year, round, overall pick) as listed on each player\'s WNBA.com page (WNBA.com does not list the drafting team there, so it is left out).</caption>'
+        '<table><caption>Current roster. 2026 regular-season per-game averages with this team when a season line is on file. Dev marks a developmental player. Height, age, experience, school or country and draft (year, round, overall pick) as listed on each player\'s WNBA.com page. Drafting team (in brackets) from the WNBA.com draft board or draft results page for that year, matched on year, round and pick; it is the team that made the pick, under its name that year.</caption>'
         '<thead><tr><th scope="col">No.</th><th scope="col">Player</th><th scope="col">Pos</th>'
         '<th scope="col">Ht</th><th scope="col">Age</th><th scope="col">Exp</th><th scope="col">School / country</th><th scope="col">Draft</th>'
         '<th scope="col">PPG</th><th scope="col">RPG</th><th scope="col">APG</th></tr></thead>'

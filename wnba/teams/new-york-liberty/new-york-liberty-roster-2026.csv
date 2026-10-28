@@ -1,16 +1,16 @@
-team,number,player,position,developmental,draft_year,draft_round,draft_pick,undrafted,ppg,rpg,apg,mpg,profile_url
-New York Liberty,24,Anneli Maley,Forward,no,,,,yes,0.8,1.1,0.4,8.4,https://fullcourtbuckets.com/wnba/anneli-maley/
-New York Liberty,30,Breanna Stewart,Forward,no,2016,1,1,no,20.8,8.3,3.3,33.0,https://fullcourtbuckets.com/wnba/breanna-stewart/
-New York Liberty,5,Elizabeth Balogun,Guard,yes,,,,yes,,,,,https://fullcourtbuckets.com/wnba/elizabeth-balogun/
-New York Liberty,21,Han Xu,Center,no,2019,2,14,no,6.3,2.5,0.7,13.7,https://fullcourtbuckets.com/wnba/han-xu/
-New York Liberty,35,Jonquel Jones,Center,no,2016,1,6,no,14.5,9.1,2.6,28.2,https://fullcourtbuckets.com/wnba/jonquel-jones/
-New York Liberty,13,Leonie Fiebich,Forward,no,2020,2,22,no,8.8,3.0,2.1,28.7,https://fullcourtbuckets.com/wnba/leonie-fiebich/
-New York Liberty,10,Madison Scott,Guard,yes,2025,2,14,no,2.0,0.0,0.5,3.0,https://fullcourtbuckets.com/wnba/madison-scott/
-New York Liberty,4,Marine Fauthoux,Guard,no,2021,3,29,no,4.4,2.0,1.9,12.4,https://fullcourtbuckets.com/wnba/marine-fauthoux/
-New York Liberty,23,Marine Johannes,Guard,no,,,,yes,8.2,2.0,2.4,20.1,https://fullcourtbuckets.com/wnba/marine-johannes/
-New York Liberty,18,Pauline Astier,Guard,no,,,,yes,9.3,2.7,3.3,23.3,https://fullcourtbuckets.com/wnba/pauline-astier/
-New York Liberty,14,Raquel Carrera,Forward,no,2021,2,15,no,1.7,1.2,0.5,6.5,https://fullcourtbuckets.com/wnba/raquel-carrera/
-New York Liberty,9,Rebecca Allen,Guard,no,,,,yes,5.8,2.6,0.6,18.1,https://fullcourtbuckets.com/wnba/rebecca-allen/
-New York Liberty,7,Rebekah Gardner,Guard,no,,,,yes,5.0,2.4,1.2,14.9,https://fullcourtbuckets.com/wnba/rebekah-gardner/
-New York Liberty,20,Sabrina Ionescu,Guard,no,2020,1,1,no,14.6,3.8,4.7,29.8,https://fullcourtbuckets.com/wnba/sabrina-ionescu/
-New York Liberty,0,Satou Sabally,Forward,no,2020,1,2,no,10.4,2.8,1.9,16.8,https://fullcourtbuckets.com/wnba/satou-sabally/
+team,number,player,position,developmental,draft_year,draft_round,draft_pick,drafted_by,undrafted,ppg,rpg,apg,mpg,profile_url
+New York Liberty,24,Anneli Maley,Forward,no,,,,,yes,0.8,1.1,0.4,8.4,https://fullcourtbuckets.com/wnba/anneli-maley/
+New York Liberty,30,Breanna Stewart,Forward,no,2016,1,1,Seattle Storm,no,20.8,8.3,3.3,33.0,https://fullcourtbuckets.com/wnba/breanna-stewart/
+New York Liberty,5,Elizabeth Balogun,Guard,yes,,,,,yes,,,,,https://fullcourtbuckets.com/wnba/elizabeth-balogun/
+New York Liberty,21,Han Xu,Center,no,2019,2,14,New York Liberty,no,6.3,2.5,0.7,13.7,https://fullcourtbuckets.com/wnba/han-xu/
+New York Liberty,35,Jonquel Jones,Center,no,2016,1,6,Los Angeles Sparks,no,14.5,9.1,2.6,28.2,https://fullcourtbuckets.com/wnba/jonquel-jones/
+New York Liberty,13,Leonie Fiebich,Forward,no,2020,2,22,Los Angeles Sparks,no,8.8,3.0,2.1,28.7,https://fullcourtbuckets.com/wnba/leonie-fiebich/
+New York Liberty,10,Madison Scott,Guard,yes,2025,2,14,Dallas Wings,no,2.0,0.0,0.5,3.0,https://fullcourtbuckets.com/wnba/madison-scott/
+New York Liberty,4,Marine Fauthoux,Guard,no,2021,3,29,New York Liberty,no,4.4,2.0,1.9,12.4,https://fullcourtbuckets.com/wnba/marine-fauthoux/
+New York Liberty,23,Marine Johannes,Guard,no,,,,,yes,8.2,2.0,2.4,20.1,https://fullcourtbuckets.com/wnba/marine-johannes/
+New York Liberty,18,Pauline Astier,Guard,no,,,,,yes,9.3,2.7,3.3,23.3,https://fullcourtbuckets.com/wnba/pauline-astier/
+New York Liberty,14,Raquel Carrera,Forward,no,2021,2,15,Atlanta Dream,no,1.7,1.2,0.5,6.5,https://fullcourtbuckets.com/wnba/raquel-carrera/
+New York Liberty,9,Rebecca Allen,Guard,no,,,,,yes,5.8,2.6,0.6,18.1,https://fullcourtbuckets.com/wnba/rebecca-allen/
+New York Liberty,7,Rebekah Gardner,Guard,no,,,,,yes,5.0,2.4,1.2,14.9,https://fullcourtbuckets.com/wnba/rebekah-gardner/
+New York Liberty,20,Sabrina Ionescu,Guard,no,2020,1,1,New York Liberty,no,14.6,3.8,4.7,29.8,https://fullcourtbuckets.com/wnba/sabrina-ionescu/
+New York Liberty,0,Satou Sabally,Forward,no,2020,1,2,Dallas Wings,no,10.4,2.8,1.9,16.8,https://fullcourtbuckets.com/wnba/satou-sabally/

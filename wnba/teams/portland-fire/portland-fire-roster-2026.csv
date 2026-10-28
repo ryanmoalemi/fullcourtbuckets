@@ -1,17 +1,17 @@
-team,number,player,position,developmental,draft_year,draft_round,draft_pick,undrafted,ppg,rpg,apg,mpg,profile_url
-Portland Fire,8,Amy Okonkwo,Forward,no,,,,yes,6.3,1.3,0.3,12.3,https://fullcourtbuckets.com/wnba/amy-okonkwo/
-Portland Fire,6,Bridget Carleton,Forward,no,2019,2,21,no,14.6,4.5,2.1,30.9,https://fullcourtbuckets.com/wnba/bridget-carleton/
-Portland Fire,0,Carla Leite,Guard,no,2024,1,9,no,16.1,2.2,6.3,26.0,https://fullcourtbuckets.com/wnba/carla-leite/
-Portland Fire,24,Charisma Osborne,Guard,yes,2024,3,25,no,9.7,1.7,1.3,19.7,https://fullcourtbuckets.com/wnba/charisma-osborne/
-Portland Fire,21,Emily Engstler,Forward,no,2022,1,4,no,10.1,5.7,2.1,24.7,https://fullcourtbuckets.com/wnba/emily-engstler/
-Portland Fire,20,Frieda Buhner,Forward,no,2026,2,17,no,6.3,2.1,0.7,15.5,https://fullcourtbuckets.com/wnba/frieda-buhner/
-Portland Fire,77,Holly Winterburn,Guard,no,,,,yes,4.0,1.4,1.8,11.2,https://fullcourtbuckets.com/wnba/holly-winterburn/
-Portland Fire,2,Jordan Harrison,Guard,no,,,,yes,5.1,1.8,4.2,14.1,https://fullcourtbuckets.com/wnba/jordan-harrison/
-Portland Fire,44,Karlie Samuelson,Guard,no,,,,yes,4.8,1.5,0.9,16.0,https://fullcourtbuckets.com/wnba/karlie-samuelson/
-Portland Fire,15,Luisa Geiselsoder,Center,no,2020,2,21,no,4.5,2.6,1.3,16.6,https://fullcourtbuckets.com/wnba/luisa-geiselsoder/
-Portland Fire,17,Megan DiLeo,Center,no,2019,2,17,no,13.1,4.3,0.9,24.2,https://fullcourtbuckets.com/wnba/megan-dileo/
-Portland Fire,13,Nyadiew Puoch,Forward,no,2024,1,12,no,4.3,2.2,0.8,18.5,https://fullcourtbuckets.com/wnba/nyadiew-puoch/
-Portland Fire,1,Sania Feagin,Forward,yes,2025,2,21,no,0.0,0.3,0.7,3.3,https://fullcourtbuckets.com/wnba/sania-feagin/
-Portland Fire,3,Sarah Ashlee Barker,Guard,no,2025,1,9,no,10.7,4.5,2.4,24.7,https://fullcourtbuckets.com/wnba/sarah-ashlee-barker/
-Portland Fire,25,Serah Williams,Center,no,2026,3,33,no,4.3,2.7,0.5,13.1,https://fullcourtbuckets.com/wnba/serah-williams/
-Portland Fire,7,Teja Oblak,Guard,no,,,,yes,5.6,1.6,3.2,13.4,https://fullcourtbuckets.com/wnba/teja-oblak/
+team,number,player,position,developmental,draft_year,draft_round,draft_pick,drafted_by,undrafted,ppg,rpg,apg,mpg,profile_url
+Portland Fire,8,Amy Okonkwo,Forward,no,,,,,yes,6.3,1.3,0.3,12.3,https://fullcourtbuckets.com/wnba/amy-okonkwo/
+Portland Fire,6,Bridget Carleton,Forward,no,2019,2,21,Connecticut Sun,no,14.6,4.5,2.1,30.9,https://fullcourtbuckets.com/wnba/bridget-carleton/
+Portland Fire,0,Carla Leite,Guard,no,2024,1,9,Dallas Wings,no,16.1,2.2,6.3,26.0,https://fullcourtbuckets.com/wnba/carla-leite/
+Portland Fire,24,Charisma Osborne,Guard,yes,2024,3,25,Phoenix Mercury,no,9.7,1.7,1.3,19.7,https://fullcourtbuckets.com/wnba/charisma-osborne/
+Portland Fire,21,Emily Engstler,Forward,no,2022,1,4,Indiana Fever,no,10.1,5.7,2.1,24.7,https://fullcourtbuckets.com/wnba/emily-engstler/
+Portland Fire,20,Frieda Buhner,Forward,no,2026,2,17,Portland Fire,no,6.3,2.1,0.7,15.5,https://fullcourtbuckets.com/wnba/frieda-buhner/
+Portland Fire,77,Holly Winterburn,Guard,no,,,,,yes,4.0,1.4,1.8,11.2,https://fullcourtbuckets.com/wnba/holly-winterburn/
+Portland Fire,2,Jordan Harrison,Guard,no,,,,,yes,5.1,1.8,4.2,14.1,https://fullcourtbuckets.com/wnba/jordan-harrison/
+Portland Fire,44,Karlie Samuelson,Guard,no,,,,,yes,4.8,1.5,0.9,16.0,https://fullcourtbuckets.com/wnba/karlie-samuelson/
+Portland Fire,15,Luisa Geiselsoder,Center,no,2020,2,21,Dallas Wings,no,4.5,2.6,1.3,16.6,https://fullcourtbuckets.com/wnba/luisa-geiselsoder/
+Portland Fire,17,Megan DiLeo,Center,no,2019,2,17,Dallas Wings,no,13.1,4.3,0.9,24.2,https://fullcourtbuckets.com/wnba/megan-dileo/
+Portland Fire,13,Nyadiew Puoch,Forward,no,2024,1,12,Atlanta Dream,no,4.3,2.2,0.8,18.5,https://fullcourtbuckets.com/wnba/nyadiew-puoch/
+Portland Fire,1,Sania Feagin,Forward,yes,2025,2,21,Los Angeles Sparks,no,0.0,0.3,0.7,3.3,https://fullcourtbuckets.com/wnba/sania-feagin/
+Portland Fire,3,Sarah Ashlee Barker,Guard,no,2025,1,9,Los Angeles Sparks,no,10.7,4.5,2.4,24.7,https://fullcourtbuckets.com/wnba/sarah-ashlee-barker/
+Portland Fire,25,Serah Williams,Center,no,2026,3,33,Connecticut Sun,no,4.3,2.7,0.5,13.1,https://fullcourtbuckets.com/wnba/serah-williams/
+Portland Fire,7,Teja Oblak,Guard,no,,,,,yes,5.6,1.6,3.2,13.4,https://fullcourtbuckets.com/wnba/teja-oblak/
