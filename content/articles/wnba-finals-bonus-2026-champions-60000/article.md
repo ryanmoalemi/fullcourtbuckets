@@ -20,7 +20,7 @@ focal_y: 20
 
 Every eligible player on the team that wins the 2026 WNBA Finals, either the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) or the [Atlanta Dream](/wnba/teams/atlanta-dream/), will get a $60,000 bonus, up from $22,908 per player last season. Players on the losing team get $20,000 each, and the Finals MVP gets a separate $30,000 award, six times the $5,000 paid in 2025. The numbers come from the bonus schedule in the new collective bargaining agreement the league and the players' union signed in March.
 
-A year ago, winning the midseason Commissioner's Cup paid more than winning the title. Players on the 2025 Cup champion Indiana Fever could earn up to $30,000 each, according to Sportico. The new deal keeps the Cup at $30,000 per player and pays twice that for the championship. Golden State leads the series 1-0 after a [68-64 win in Game 1](/news/dream-valkyries-finals-game-1-recap/) on Saturday at Chase Center, so the Valkyries are three wins from the $60,000 tier.
+A year ago, winning the midseason Commissioner's Cup paid more than winning the title. Players on the 2025 Cup champion Indiana Fever could earn up to $30,000 each, according to Sportico. The new deal keeps the Cup at $30,000 per player and pays twice that for the championship.
 
 ## 2025 vs. 2026 playoff bonuses
 
@@ -44,13 +44,19 @@ The agreement's bonus table counts 12 players per team. On that basis:
 - **The runner-up's roster:** $240,000 (12 x $20,000).
 - **The gap between winning and losing:** $40,000 per player, or $480,000 across a 12-player roster.
 
-The Finals MVP award is listed as its own line in the agreement, separate from the team bonuses, and nothing in the table says one replaces the other. Read that way, a Finals MVP from the winning team would collect $90,000 in bonuses ($60,000 plus $30,000). The table does not say how the award is handled if the MVP comes from the losing team, so that case is left out here.
+The Finals MVP award is listed as its own line in the agreement, separate from the team bonuses, and the table does not say one replaces the other. Under that reading, a Finals MVP from the winning team would collect $90,000 in bonuses ($60,000 plus $30,000). The table does not say how the award is handled if the MVP comes from the losing team, so that case is left out here.
 
-Not every player who wore the jersey this season is automatically in line for a share. To earn a team bonus, a player must be on the team's regular-season roster on the last day of the regular season. A player who was on a playoff team's roster for two-thirds of its regular-season games but not on any roster on the final day gets $5,000 instead, as long as she did not earn a playoff team bonus with another team. The exact headcount on each Finals roster that qualifies has not been published.
+Not every player who wore the jersey this season is automatically in line for a share. To earn a team bonus, a player must be on the team's regular-season roster on the last day of the regular season. If a player was on a playoff team's roster for two-thirds of its regular-season games but not on any roster on the final day, she gets $5,000 instead, as long as she did not earn a playoff team bonus with another team. The exact headcount on each Finals roster that qualifies has not been published.
+
+## Why neither Finals team gets Cup money
+
+The 2026 Commissioner's Cup went to the [New York Liberty](/wnba/teams/new-york-liberty/), who beat the [Las Vegas Aces](/wnba/teams/las-vegas-aces/) 93-85 in the Cup final on June 30 at Barclays Center. [Breanna Stewart](/wnba/breanna-stewart/) was named the game's MVP. Under the agreement, that win was worth $30,000 per player for 12 Liberty players. The Aces got $10,000 each as the Cup runner-up, and Stewart also earned the separate $10,000 Cup MVP award.
+
+Neither the Valkyries nor the Dream reached the Cup final, so neither team adds Cup team money to its playoff bonus this season. Using the agreement's 12-player basis, the Liberty's Cup pool was $360,000, half of the $720,000 the Finals champion's roster will get.
 
 ## Is "nearly tripled" right?
 
-Close, but it rounds up. The AP described the $60,000 title bonus as "nearly triple" last year's amount. The actual ratio is 2.6 times. The bigger multipliers are lower in the table: semifinal bonuses are up 2.9 times, first-round bonuses 2.8 times, and the Finals MVP award is up six times.
+Close, but it rounds up. The AP described the $60,000 title bonus as "nearly triple" last year's amount. The actual ratio is 2.6 times. The larger multipliers are lower in the table: semifinal bonuses are up 2.9 times, first-round bonuses 2.8 times, and the Finals MVP award is up six times.
 
 Last year's numbers were already a raise. The 2024 champion New York Liberty got $20,825 per player. When the Finals moved from best-of-five to best-of-seven in 2025, the league raised the pool, and each Las Vegas Aces player got $22,908, Sportico reported. Some outlets still list $20,825 as the 2025 figure. That is the 2024 amount.
 
@@ -62,11 +68,16 @@ Playoff bonuses are paid in addition to salary. Starting in 2027, every amount i
 
 ## What's next
 
-Game 2 is Monday, Oct. 19, at 5 p.m. PT at Chase Center. Game 1 drew 18,064, and attendance for every Finals game since 2002 is in our [WNBA Finals tracker and database](/news/2026-wnba-finals-ratings-tracker/).
+{dynamic:series-status}
+
+{dynamic:next-game}
+
+Attendance for every Finals game since 2002 is in our [WNBA Finals tracker and database](/news/2026-wnba-finals-ratings-tracker/).
 
 ## Sources
 
 - [Collective Bargaining Agreement, Article IX, Merit Bonuses](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf) (WNBPA, effective March 19, 2026)
+- [Aces vs. Liberty, Commissioner's Cup final, June 30, 2026: game summary](https://www.wnba.com/game/lva-vs-nyl-1052600001) (WNBA.com)
 - [Key elements of the tentative collective bargaining agreement](https://pr.nba.com/wp-content/uploads/sites/46/2026/03/KEY-ELEMENTS-OF-THE-TENTATIVE-COLLECTIVE-BARGAINING-AGREEMENT-Final-.pdf) (WNBA, March 2026)
 - [A landmark 7-year WNBA labor deal moves forward with a signed term sheet](https://apnews.com/article/wnba-cba-4d48f3d0e31e99d443079a953ab5b397) (AP, March 2026)
 - [WNBA Finals bonus pay: champions see raise for best-of-7 victory](https://www.sportico.com/leagues/basketball/2025/wnba-finals-bonus-pay-championship-aces-mercury-salaries-1234873385/) (Sportico, 2025)
