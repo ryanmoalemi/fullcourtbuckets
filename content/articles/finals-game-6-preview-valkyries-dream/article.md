@@ -2,7 +2,7 @@
 title: "Finals Game 6 preview: Valkyries can win a title while outscored"
 slug: finals-game-6-preview-valkyries-dream
 date: 2026-10-27
-updated: "2026-10-27 14:00 PT"
+updated: "2026-10-27 22:40 PT"
 description: "Valkyries vs. Dream Game 6 preview: road teams are 2-4 in Finals closeout games when the home team had already won one, since 2002. Tip time, TV, odds, and original data with CSVs."
 category: news
 tags:
@@ -79,6 +79,32 @@ Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files
 | [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) | GS | 48 | 4 | 6 | 3 | 6 | 17-44 | 8-22 | 6-10 |
 | [Veronica Burton](/wnba/veronica-burton/) | GS | 45 | 24 | 17 | 10 | 8 | 16-55 | 6-23 | 7-9 |
 | [Kiah Stokes](/wnba/kiah-stokes/) | GS | 28 | 53 | 3 | 17 | 1 | 12-21 | 3-8 | 1-2 |
+
+## Keys to victory for Game 6
+
+Data through Finals Game 5, Oct. 26, 2026. Methods: counts from FCB's play-by-play and box-score files for Games 1-5, built from [WNBA.com box scores](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score). Possessions are estimated as field-goal attempts minus offensive rebounds plus turnovers plus 0.44 times free-throw attempts, averaged for both teams. Paint finishes are points on layups, putbacks, hooks and tip-ins in the play-by-play. Some ideas came from fan discussion this week; we kept only the ones the numbers back up.
+
+Atlanta Dream keys:
+
+Push the pace. Atlanta's two wins were the two fastest games of the series, at about 82 and 83 possessions, and it scored 79 and 97. Its three losses ran about 80, 73 and 72 possessions, and it scored 64, 62 and 55. Speed has not tired out Stokes's shot blocking, though: she had 4 blocks in each of Games 1 and 2 and 3 in each of Games 3-5.
+
+Get Reese going early. Angel Reese scored 30 and 21 on 17 of 28 shooting in Atlanta's wins and 14, 8 and 7 on 9 of 31 in its losses.
+
+Score at the rim, not just the line. Atlanta scored 24 and 40 points on paint finishes in its wins and 22, 18 and 14 in its losses. Free throws have not decided games: Atlanta took 31 free throws to Golden State's 13 in Game 4 and still lost 67-62.
+
+Don't leave Stokes open. Kiah Stokes missed all four of her 3-point tries in Games 1-4, then made 3 of 4 in Game 5 and scored 13, her high for the series, in a 9-point Atlanta loss.
+
+Win the turnover battle. The team with fewer turnovers has won all five games. Atlanta had 14 and 8 in its wins, against Golden State's 18 and 15, and 12, 17 and 15 in its losses.
+
+Golden State Valkyries keys:
+
+Keep Atlanta in the low 60s. Golden State has won every game in which Atlanta scored 64 or fewer (64, 62 and 55) and lost both games in which Atlanta scored 79 or more.
+
+Take care of the ball. Golden State turned it over 8, 9 and 7 times in its wins and 18 and 15 times in its losses.
+
+Win the first half. The halftime leader has won all five games. Golden State led at the half by 3, 16 and 3 in its wins and trailed by 2 and 6 in its losses.
+
+Make it a half-court game. Golden State's last two wins were the two slowest games of the series, about 73 and 72 possessions in Games 4 and 5, and Atlanta's paint scoring fell from 40 in Game 3 to 18 and 14.
 
 ## Attendance record watch
 
