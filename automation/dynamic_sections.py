@@ -264,6 +264,178 @@ def render_series_line(root: Path, s: dict, attrs: dict) -> str:
     return E(_status_line(s))
 
 
+# ---- 2026 Finals attendance tracker (/news/2026-wnba-finals-ratings-tracker/) ----
+# Every time-sensitive line on that page is one of these sections, so a new final in
+# data/games, a new row in data/finals-attendance.json or a schedule change in
+# data/finals-schedule.json moves the header, schedule and calculator on its own.
+
+def _att_rows(root: Path) -> list[dict]:
+    return sorted((r for r in _attendance(root) if r.get('attendance')), key=lambda r: int(r['game']))
+
+
+def _history(root: Path) -> dict:
+    return {int(g['game']): g for g in finals_series.schedule(root).get('history') or []}
+
+
+def tracker_through(root: Path, s: dict) -> int:
+    """Highest 2026 Finals game with both a final and a published attendance."""
+    rows = _att_rows(root)
+    return min(len(s['games']), int(rows[-1]['game'])) if rows else 0
+
+
+def _long_day(iso: str) -> str:
+    y, m, d = (int(x) for x in iso.split('-'))
+    return f'{MONTHS[m - 1]} {d}, {y}'
+
+
+def tracker_updated_iso(root: Path, s: dict) -> str:
+    days = [s['last_day']] + [str(r.get('date') or '') for r in _att_rows(root)]
+    days.append(str(finals_series.schedule(root).get('verified') or ''))
+    return max(d for d in days if d)
+
+
+def render_tracker_updated(root: Path, s: dict, attrs: dict) -> str:
+    return f'Updated {E(_long_day(tracker_updated_iso(root, s)))}, PT'
+
+
+def _scope_text(root: Path, s: dict) -> str:
+    n = tracker_through(root, s)
+    return f'2026 Finals: through Game {n}.' if n else '2026 Finals: no games yet.'
+
+
+def _upcoming_short(root: Path, s: dict) -> str:
+    if s['champion'] or not s['upcoming']:
+        return ''
+    g = s['upcoming'][0]
+    h = _history(root).get(int(g['game']), {})
+    return f"Next: Game {g['game']}, {h.get('day') or g.get('day')}, {g.get('time')} at {g.get('arena')}."
+
+
+def render_tracker_scope(root: Path, s: dict, attrs: dict) -> str:
+    nxt = _upcoming_short(root, s)
+    after = (f" Next data update after Game {s['upcoming'][0]['game']}." if nxt else '')
+    return ('<b>Data through:</b> Finals archive: through 2025. 2026 playoffs: through semifinals. '
+            f'{E(_scope_text(root, s))} <span class="ver">Dataset v1</span> · <a href="#verify">Methods</a>{E(after)}'
+            + (f' <span class="fcb-next">{E(nxt)}</span>' if nxt else (f' <span class="fcb-next">{E(_status_line(s))}</span>' if s['champion'] else '')))
+
+
+def render_tracker_schedule(root: Path, s: dict, attrs: dict) -> str:
+    """Tbody of the tracker schedule table: result and attendance from data, the rest from the schedule."""
+    names = {t['abbreviation']: t['name'] for t in s['teams']}
+    hist = _history(root)
+    att = {int(r['game']): r for r in _att_rows(root)}
+    played = {g['game']: g for g in s['games']}
+    upcoming = {int(g['game']): g for g in s['upcoming']}
+    rows = []
+    for n in range(1, s['best_of'] + 1):
+        h = hist.get(n, {})
+        up = upcoming.get(n, {})
+        label = f'{n}*' if (up.get('if_needed') or (n == s['best_of'] and n not in played and not up)) else str(n)
+        tip = h.get('tip') or ''
+        arena = up.get('arena') or h.get('arena') or ''
+        arena_cell = E(arena) if arena else 'Arena TBD'
+        if n in played:
+            res = f'<td data-label="Result" data-state="final">{E(_result(s, played[n]))}</td>'
+        elif s['champion']:
+            res = '<td class="pending" data-label="Result" data-state="not-needed">Not needed</td>'
+        elif up.get('if_needed'):
+            res = '<td class="pending" data-label="Result" data-state="if-necessary">If necessary</td>'
+        else:
+            res = '<td class="pending" data-label="Result" data-state="not-played">Not played yet</td>'
+        r = att.get(n)
+        if r:
+            a = f'<td data-label="Attendance" data-state="published">{int(r["attendance"]):,}</td>'
+            box = f'<a href="{E(r.get("source_url") or "")}" rel="nofollow">Box score</a>' if r.get('source_url') else 'Not available yet'
+        else:
+            state, txt = (('not-needed', 'Not needed') if s['champion'] and n not in played else
+                          ('if-necessary', 'If necessary') if up.get('if_needed') else ('not-published', 'Not published yet'))
+            a = f'<td class="pending" data-label="Attendance" data-state="{state}">{txt}</td>'
+            box = 'Not available yet'
+        rows.append(f'<tr id="finals-2026-g{n}"><td data-label="Game">{label}</td><td data-label="Date">{E(h.get("day") or "")}</td>'
+                    f'<td data-label="Tip">{E(tip)}</td><td data-label="Arena">{arena_cell}</td>'
+                    f'<td data-label="TV / Streaming">{E(h.get("watch") or "")}</td>{res}{a}<td data-label="Box score">{box}</td></tr>')
+    return '\n' + '\n'.join(rows) + '\n'
+
+
+def render_tracker_sched_note(root: Path, s: dict, attrs: dict) -> str:
+    sched = finals_series.schedule(root)
+    src = next((g for g in sched.get('games') or [] if g.get('source')), None)
+    lead, trail = s['teams'][0], s['teams'][-1]
+    done = len(s['games'])
+    parts = [f"Results for Games 1–{done} come from the final box scores and attendance from the published game records."]
+    if s['champion']:
+        parts.append(_status_line(s))
+    else:
+        state = f"tied {lead['wins']}-{trail['wins']}" if lead['wins'] == trail['wins'] else f"{lead['wins']}-{trail['wins']}, {lead['name']} leading"
+        must = [g['game'] for g in s['upcoming'] if not g.get('if_needed')]
+        maybe = [g['game'] for g in s['upcoming'] if g.get('if_needed')]
+        bits = []
+        if must:
+            bits.append(('Game ' + ' and '.join(map(str, must))) + (' will be played' if len(must) > 1 else ' will be played'))
+        if maybe:
+            bits.append(('Game ' + ' and '.join(map(str, maybe))) + ' is if necessary')
+        parts.append(f"With the series {state} after Game {done}, " + '; '.join(bits) + '.')
+    body = E(' '.join(parts))
+    if src and not s['champion']:
+        body += (f' Upcoming tip times and arenas are from the official <a href="{E(src["source"])}">{E(src.get("source_label") or "WNBA.com game page")}</a>'
+                 f' and WNBA.com game pages, checked {E(_long_day(sched.get("verified") or s["last_day"]))}.')
+    return body
+
+
+def _g6(root: Path) -> dict:
+    sched = finals_series.schedule(root)
+    g = next((x for x in sched.get('games') or [] if int(x['game']) == 6), None)
+    if g is None:
+        g = _history(root).get(6, {})
+    return g
+
+
+def render_tracker_g6_venue(root: Path, s: dict, attrs: dict) -> str:
+    g = _g6(root)
+    arena = (g.get('arena') or '').split(',')[0]
+    if not arena:
+        return 'Game 6 venue unconfirmed'
+    src = g.get('source')
+    where = f' per the <a href="{E(src)}">{E(g.get("source_label") or "WNBA.com game page")}</a>' if src else ''
+    return f'Game 6 at {E(arena)}{where}'
+
+
+def render_tracker_g6_cell(root: Path, s: dict, attrs: dict) -> str:
+    arena = (_g6(root).get('arena') or '').split(',')[0]
+    opts = ['Chase Center', 'State Farm Arena']
+    if arena:
+        sel = ''.join(f'<option{" selected" if o == arena else ""}>{o}</option>' for o in opts)
+        return (f'<b>G6</b><span class="vn">{E(arena)}</span><select id="v5" aria-label="Game 6 venue">{sel}</select>'
+                f'<span class="st" id="st5">Future · assumption</span>'
+                f'<input id="a5" type="number" value="{18064 if arena == "Chase Center" else 17099}" min="0" step="1" aria-label="Game 6 attendance">')
+    return ('<b>G6</b><span class="vn">Venue unconfirmed</span><select id="v5" aria-label="Game 6 venue"><option>Venue unconfirmed</option>'
+            + ''.join(f'<option>{o}</option>' for o in opts) +
+            '</select><span class="st" id="st5">Future · assumption</span><input id="a5" type="number" value="17099" min="0" step="1" aria-label="Game 6 attendance">')
+
+
+def render_tracker_finals_row(root: Path, s: dict, attrs: dict) -> str:
+    rows = _att_rows(root)
+    n = tracker_through(root, s)
+    vals = [int(r['attendance']) for r in rows[:n]]
+    total = sum(vals)
+    avg = int(total / len(vals) + 0.5) if vals else 0
+    return (f'<td><b>Finals (through Game {n})</b></td><td>{len(vals)}</td><td>{total:,}</td><td>{avg:,}</td>'
+            f'<td>{max(vals) if vals else 0:,}</td><td><a class="cl" href="https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/#po2026-f" data-a="po2026-f">Copy link</a></td>')
+
+
+_THROUGH = re.compile(r'(2026 Finals:? through Game |plus 2026 Finals through Game )\d+')
+_APA = re.compile(r'(Moalemi, R\. \(2026, )[A-Z][a-z]+ \d+(\))')
+FULL_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+
+def render_tracker_scope_text(root: Path, s: dict, attrs: dict, body: str = '') -> str:
+    """Rewrite 'through Game N' and the APA date inside a block (attributes such as data-copy included)."""
+    n = tracker_through(root, s)
+    body = _THROUGH.sub(lambda m: m.group(1) + str(n), body)
+    y, mo, d = (int(x) for x in tracker_updated_iso(root, s).split('-'))
+    return _APA.sub(lambda m: f'{m.group(1)}{FULL_MONTHS[mo - 1]} {d}{m.group(2)}', body)
+
+
 RENDERERS = {
     'series-line': render_series_line,
     'finals-attendance-lead': render_attendance_lead,
@@ -272,7 +444,16 @@ RENDERERS = {
     'next-game': render_next_game,
     'series-status': render_series_status,
     'finals-schedule': render_finals_schedule,
+    'tracker-updated': render_tracker_updated,
+    'tracker-scope': render_tracker_scope,
+    'tracker-schedule': render_tracker_schedule,
+    'tracker-sched-note': render_tracker_sched_note,
+    'tracker-g6-venue': render_tracker_g6_venue,
+    'tracker-g6-cell': render_tracker_g6_cell,
+    'tracker-finals-row': render_tracker_finals_row,
+    'tracker-scope-text': render_tracker_scope_text,
 }
+BODY_RENDERERS = {render_attendance_data, render_tracker_scope_text}
 
 
 def _attrs(text: str) -> dict:
@@ -291,7 +472,7 @@ def render_html(text: str, root: Path, s: dict | None) -> str:
         if not fn or not s:
             return m.group(0)
         attrs = _set_attr(m.group('attrs'), 'data-fcb-updated', s['last_day'])
-        if fn is render_attendance_data:
+        if fn in BODY_RENDERERS:
             body = fn(root, s, {}, m.group('body'))
         else:
             body = fn(root, s, _attrs(m.group('attrs')))

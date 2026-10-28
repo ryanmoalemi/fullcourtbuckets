@@ -1,5 +1,6 @@
 """Time-sensitive text lives in data-fcb-dynamic sections and stays current."""
 import tempfile
+import re
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -47,3 +48,14 @@ class CheckCatchesStaleness(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class TrackerSectionsTests(unittest.TestCase):
+    def test_tracker_time_sensitive_lines_are_dynamic(self):
+        text = (ROOT / 'news' / '2026-wnba-finals-ratings-tracker' / 'index.html').read_text(encoding='utf-8')
+        for kind in ('tracker-updated', 'tracker-scope', 'tracker-schedule', 'tracker-sched-note',
+                     'tracker-g6-venue', 'tracker-g6-cell', 'tracker-finals-row'):
+            self.assertIn(f'data-fcb-dynamic="{kind}"', text, kind)
+        unmarked = ds.SECTION.sub(' ', text)
+        self.assertNotRegex(unmarked, r'Updated [A-Z][a-z]+\.? \d+, 20\d\d, PT')
+        self.assertNotIn('through Game ', re.sub(r'<script\b.*?</script>', ' ', unmarked, flags=re.S))
