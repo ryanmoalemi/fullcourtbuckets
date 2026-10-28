@@ -1,140 +1,177 @@
 {
   "slug": "azura-stevens",
   "player_name": "Azura Stevens",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "What are Azura Stevens's stats / points per game?",
-      "answer": "In the 2026 regular season, Azura Stevens averaged 10.6 points, 6.4 rebounds, and 2.1 assists in 32 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Azura Stevens's stats?",
+      "answer": "In the 2026 regular season, Azura Stevens averaged 10.6 points, 6.4 rebounds, and 2.1 assists in 32 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azura stevens stats",
-      "approx_monthly_volume": 6600
-    },
-    {
-      "question": "Who is Azura Stevens dating?",
-      "answer": "As of late 2026, Azura Stevens has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://fullcourtbuckets.com/wnba/azura-stevens/"
       ],
-      "google_keyword": "azura stevens partner",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How much does Azura Stevens make?",
-      "answer": "A precise public salary or net worth figure for Azura Stevens is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "azura stevens salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "azura stevens stats",
+          "vol": 6600
+        },
+        {
+          "q": "azura stevens stats per game",
+          "vol": 20
+        },
+        {
+          "q": "azura stevens points per game",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens points",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens average points per game",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens rebounds per game",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Azura Stevens?",
-      "answer": "Azura Stevens is listed at 6' 6\".",
+      "answer": "The WNBA lists Azura Stevens at 6 feet 6 inches and 180 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://www.wnba.com/player/1628922/azura-stevens/bio"
       ],
-      "google_keyword": "azura stevens height",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "azura stevens height",
+          "vol": 720
+        },
+        {
+          "q": "how tall is azura stevens",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What WNBA team does Azura Stevens play for?",
+      "answer": "Azura Stevens plays for the Chicago Sky, who signed her as a free agent on April 11, 2026. Dallas drafted her sixth overall in 2018, and she won the 2021 WNBA championship in her first stint with Chicago (2020 to 2022) before three seasons with the Los Angeles Sparks.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/news/chicago-sky-sign-azura-stevens",
+        "https://www.wnba.com/player/1628922/azura-stevens/bio"
+      ],
+      "queries": [
+        {
+          "q": "azura stevens wnba",
+          "vol": 480
+        },
+        {
+          "q": "azura stevens chicago sky",
+          "vol": 40
+        },
+        {
+          "q": "azura stevens team",
+          "vol": 20
+        },
+        {
+          "q": "azura stevens wnba team",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens bio",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Azura Stevens?",
-      "answer": "She was born February 1, 1996 in Pawtucket. As of late 2026 that puts her at 30 years old.",
+      "answer": "Azura Stevens was born February 1, 1996.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://www.wnba.com/player/1628922/azura-stevens/bio"
       ],
-      "google_keyword": "azura stevens age",
-      "approx_monthly_volume": 110,
-      "birthdate": "1996-02-01"
+      "queries": [
+        {
+          "q": "azura stevens age",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "What did Azura Stevens score in her last game?",
-      "answer": "In her most recent completed game (September 18, 2026 vs. the Washington Mystics), Azura Stevens had 6.0 points, 3.0 rebounds, and 0 assists in a 80-110 loss.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is azura stevens playing tonight",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "What is Azura Stevens's jersey number?",
-      "answer": "Azura Stevens wears number 30 for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azura stevens number",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Azura Stevens's contract?",
-      "answer": "Contract length and guarantees for Azura Stevens are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Did Azura Stevens play at Duke and UConn?",
+      "answer": "Yes. Azura Stevens played two seasons at Duke, averaging 16.2 points and 8.8 rebounds, then transferred to UConn for her final college season, where she averaged 14.7 points, 7.4 rebounds and a conference-leading 2.1 blocks.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/news/chicago-sky-sign-azura-stevens"
       ],
-      "google_keyword": "azura stevens contract",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "azura stevens uconn",
+          "vol": 90
+        },
+        {
+          "q": "azura stevens duke",
+          "vol": 10
+        },
+        {
+          "q": "azura stevens transfer",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Azura Stevens married?",
-      "answer": "There is no widely reported public record of Azura Stevens being married as of late 2026.",
+      "question": "Does Azura Stevens play in Unrivaled?",
+      "answer": "Yes. Azura Stevens played for Hive BC in Unrivaled, averaging 10.8 points and 6.5 rebounds and shooting 35.1% from three, according to the Chicago Sky.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://www.wnba.com/news/chicago-sky-sign-azura-stevens"
       ],
-      "google_keyword": "is azura stevens married",
-      "approx_monthly_volume": 260
+      "queries": [
+        {
+          "q": "azura stevens unrivaled",
+          "vol": 70
+        },
+        {
+          "q": "azura stevens unrivaled stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Azura Stevens play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 30. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "azura stevens team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What college did Azura Stevens attend?",
-      "answer": "Stevens played college basketball at UConn.",
+      "question": "What number does Azura Stevens wear?",
+      "answer": "Azura Stevens wears No. 30 for the Chicago Sky.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://www.wnba.com/player/1628922/azura-stevens/bio"
       ],
-      "google_keyword": "azura stevens uconn",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "azura stevens number",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Azura Stevens?",
-      "answer": "Azurá Breeona Stevens is an American professional basketball player for the Chicago Sky of the Women's National Basketball Association (WNBA) and for Hive BC of Unrivaled.",
-      "answer_kind": "mixed",
+      "question": "What is Azura Stevens's three-point percentage?",
+      "answer": "In the 2026 regular season, Azura Stevens's three-point percentage is 25.5.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
+        "https://fullcourtbuckets.com/wnba/azura-stevens/"
       ],
-      "google_keyword": "azura stevens bio",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Azura Stevens injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "azura stevens injury",
-      "approx_monthly_volume": 320
-    },
-    {
-      "question": "Who are Azura Stevens's parents?",
-      "answer": "Public profiles share limited verified detail about Azura Stevens's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Azur%C3%A1_Stevens"
-      ],
-      "google_keyword": "azura stevens parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "azura stevens 3 point stats",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

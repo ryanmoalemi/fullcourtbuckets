@@ -1,78 +1,69 @@
 {
   "slug": "maya-caldwell",
   "player_name": "Maya Caldwell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "What are Maya Caldwell's stats / points per game?",
-      "answer": "In the 2026 regular season, Maya Caldwell averaged 4.0 points, 2.3 rebounds, and 1.1 assists in 42 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "question": "What are Maya Caldwell's stats?",
+      "answer": "In the 2026 regular season, Maya Caldwell averaged 4.1 points, 2.4 rebounds, and 1.1 assists in 44 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "maya caldwell stats",
-      "approx_monthly_volume": 170
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/maya-caldwell/"
+      ],
+      "queries": [
+        {
+          "q": "maya caldwell stats",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "How much does Maya Caldwell make?",
-      "answer": "A precise public salary or net worth figure for Maya Caldwell is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Who has Maya Caldwell played for in the WNBA?",
+      "answer": "Indiana drafted Maya Caldwell out of Georgia in the third round, 33rd overall, in 2021. She debuted with the Atlanta Dream in 2022, played for Indiana in 2023, returned to Atlanta for 2024 and 2025, and played for the Minnesota Lynx in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1630471/maya-caldwell/bio",
+        "https://fullcourtbuckets.com/wnba/maya-caldwell/"
       ],
-      "google_keyword": "maya caldwell salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "maya caldwell wnba",
+          "vol": 110
+        },
+        {
+          "q": "maya caldwell atlanta dream",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Maya Caldwell?",
-      "answer": "Maya Caldwell is listed at 5' 11\".",
+      "answer": "The WNBA lists Maya Caldwell at 5 feet 11 inches and 159 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Caldwell"
+        "https://www.wnba.com/player/1630471/maya-caldwell/bio"
       ],
-      "google_keyword": "maya caldwell height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Maya Caldwell's contract?",
-      "answer": "Contract length and guarantees for Maya Caldwell are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "maya caldwell contract",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Maya Caldwell married?",
-      "answer": "There is no widely reported public record of Maya Caldwell being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Caldwell"
-      ],
-      "google_keyword": "maya caldwell husband",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "Who are Maya Caldwell's parents?",
-      "answer": "Public profiles share limited verified detail about Maya Caldwell's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Caldwell"
-      ],
-      "google_keyword": "maya caldwell parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "maya caldwell height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Maya Caldwell?",
-      "answer": "Maya Caldwell was born December 15, 1998 in Charlotte. As of late 2026 that puts her at 27 years old.",
-      "answer_kind": "researched",
+      "answer": "Maya Caldwell was born December 15, 1998.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Maya_Caldwell"
+        "https://www.wnba.com/player/1630471/maya-caldwell/bio"
       ],
-      "google_keyword": "maya caldwell age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1998-12-15"
+      "queries": [
+        {
+          "q": "maya caldwell age",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

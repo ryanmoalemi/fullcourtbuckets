@@ -1,58 +1,101 @@
 {
   "slug": "shay-ciezki",
   "player_name": "Shay Ciezki",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "How tall is Shay Ciezki?",
-      "answer": "Shay Ciezki is listed at 5' 7\".",
-      "answer_kind": "bio",
+      "question": "What are Shay Ciezki's stats?",
+      "answer": "In the 2026 regular season, Shay Ciezki averaged 8.5 points, 1.5 rebounds, and 1.6 assists in 8 games for the Phoenix Mercury.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shay_Ciezki"
+        "https://fullcourtbuckets.com/wnba/shay-ciezki/"
       ],
-      "google_keyword": "shay ciezki height",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "shay ciezki stats",
+          "vol": 110
+        }
+      ]
+    },
+    {
+      "question": "Was Shay Ciezki drafted?",
+      "answer": "No. Shay Ciezki went undrafted in 2026 and signed with the Phoenix Mercury on April 14, 2026. After time on a developmental contract, Phoenix signed her for the rest of the season on September 18, after a 22-point game at Portland.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.thedailyhoosier.com/indianas-shay-ciezki-signing-with-wnbas-phoenix-mercury/",
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-sign-shay-ciezki-to-rest-of-season-contract-saylor-poffenbarger-to-developmental-contract/n-6414466"
+      ],
+      "queries": [
+        {
+          "q": "shay ciezki wnba draft",
+          "vol": 70
+        },
+        {
+          "q": "shay ciezki draft",
+          "vol": 10
+        },
+        {
+          "q": "shay ciezki phoenix mercury",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How old is Shay Ciezki?",
-      "answer": "Public profiles list Shay Ciezki as born in 2003. As of late 2026 that puts her around 23 years old.",
+      "answer": "Shay Ciezki was born November 26, 2003.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shay_Ciezki"
+        "https://www.wnba.com/player/1643470/shay-ciezki/bio"
       ],
-      "google_keyword": "shay ciezki age",
-      "approx_monthly_volume": 70,
-      "birthdate": "2003-01-01"
+      "queries": [
+        {
+          "q": "shay ciezki age",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "What is Shay Ciezki's nationality?",
-      "answer": "Shay Ciezki is American.",
+      "answer": "Shay Ciezki is American. She was born in Buffalo, New York.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shay_Ciezki"
+        "https://www.wnba.com/player/1643470/shay-ciezki/bio"
       ],
-      "google_keyword": "shay ciezki nationality",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "shay ciezki nationality",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Shay Ciezki injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "shay ciezki injury",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Shay Ciezki?",
-      "answer": "Shay Ciezki is an American professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "How tall is Shay Ciezki?",
+      "answer": "The WNBA lists Shay Ciezki at 5 feet 7 inches.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shay_Ciezki"
+        "https://www.wnba.com/player/1643470/shay-ciezki/bio"
       ],
-      "google_keyword": "shay ciezki wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "shay ciezki height",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Did Shay Ciezki play at Penn State?",
+      "answer": "Yes. Shay Ciezki played two seasons at Penn State (2022 to 2024), averaging 11.6 points, then transferred to Indiana. As an Indiana senior she made All-Big Ten First Team and shot 50/40/90.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643470/shay-ciezki/bio"
+      ],
+      "queries": [
+        {
+          "q": "shay ciezki penn state",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

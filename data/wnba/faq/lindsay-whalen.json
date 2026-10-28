@@ -1,88 +1,197 @@
 {
   "slug": "lindsay-whalen",
   "player_name": "Lindsay Whalen",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "What are Lindsay Whalen's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2018), Lindsay Whalen averaged 5.7 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lindsay whalen stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How much does Lindsay Whalen make?",
-      "answer": "A precise public salary or net worth figure for Lindsay Whalen is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What were Lindsay Whalen's WNBA career numbers?",
+      "answer": "Lindsay Whalen played 15 WNBA seasons, with the Connecticut Sun (2004 to 2009) and Minnesota Lynx (2010 to 2018). In 480 regular season games she averaged 11.5 points, 4.9 assists and 3.8 rebounds, and she won four championships with Minnesota (2011, 2013, 2015, 2017).",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://lynx.wnba.com/basketball-operations/lindsay-whalen"
       ],
-      "google_keyword": "lindsay whalen net worth",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "lindsay whalen stats",
+          "vol": 50
+        },
+        {
+          "q": "lindsay whalen wnba",
+          "vol": 90
+        },
+        {
+          "q": "lindsay whalen lynx",
+          "vol": 70
+        },
+        {
+          "q": "lindsay whalen minnesota lynx",
+          "vol": 70
+        },
+        {
+          "q": "sports career of lindsay whalen",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen bio",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen biography",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Lindsay Whalen?",
-      "answer": "Public profiles list Lindsay Whalen as born in 1982. As of late 2026 that puts her around 44 years old.",
+      "answer": "Lindsay Whalen was born May 9, 1982.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsay_Whalen"
+        "https://www.wnba.com/player/100915/lindsay-whalen/bio"
       ],
-      "google_keyword": "how old is lindsay whalen",
-      "approx_monthly_volume": 50,
-      "birthdate": "1982-01-01"
+      "queries": [
+        {
+          "q": "how old is lindsay whalen",
+          "vol": 50
+        },
+        {
+          "q": "lindsay whalen age",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What is Lindsay Whalen's contract?",
-      "answer": "Contract length and guarantees for Lindsay Whalen are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "What is Lindsay Whalen doing now?",
+      "answer": "Lindsay Whalen is an assistant coach for the Minnesota Lynx. The 2026 season was her second year on the Lynx staff.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://lynx.wnba.com/basketball-operations/lindsay-whalen"
       ],
-      "google_keyword": "lindsay whalen lynx contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "what is lindsay whalen doing now",
+          "vol": 30
+        },
+        {
+          "q": "lindsay whalen now",
+          "vol": 30
+        },
+        {
+          "q": "what does lindsay whalen do now",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen coach",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Lindsay Whalen married?",
-      "answer": "There is no widely reported public record of Lindsay Whalen being married as of late 2026.",
+      "question": "How tall is Lindsay Whalen?",
+      "answer": "The WNBA listed Lindsay Whalen at 5 feet 9 inches and 170 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100915/lindsay-whalen/bio"
+      ],
+      "queries": [
+        {
+          "q": "lindsay whalen height",
+          "vol": 30
+        },
+        {
+          "q": "how tall is lindsay whalen",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen weight",
+          "vol": 10
+        },
+        {
+          "q": "how much does lindsay whalen weigh",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What was Lindsay Whalen's record as Gophers coach?",
+      "answer": "Lindsay Whalen coached the University of Minnesota from 2018 to 2023 and went 71-76 overall and 32-58 in the Big Ten in five seasons. She stepped down on March 2, 2023, saying it was the right time to step aside and return to being a proud alum.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsay_Whalen"
+        "https://gophersports.com/news/2023/3/2/whalen-steps-down-as-head-womens-basketball-coach"
       ],
-      "google_keyword": "lindsay whalen husband",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "lindsay whalen gophers",
+          "vol": 20
+        },
+        {
+          "q": "lindsay whalen coaching record",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen resigns",
+          "vol": 10
+        },
+        {
+          "q": "why did lindsay whalen resign",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen university of minnesota",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen minnesota",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Lindsay Whalen?",
-      "answer": "Lindsay Marie Whalen is an American professional basketball coach and former player who is an assistant coach for the Minnesota Lynx of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lindsay_Whalen"
-      ],
-      "google_keyword": "lindsay whalen bio",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Lindsay Whalen's parents?",
-      "answer": "Public profiles share limited verified detail about Lindsay Whalen's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Is Lindsay Whalen in the Hall of Fame?",
+      "answer": "Yes. Lindsay Whalen was inducted into the Naismith Memorial Basketball Hall of Fame in 2022 and the Women's Basketball Hall of Fame in 2023. The Lynx retired her No. 13 in 2019.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsay_Whalen"
+        "https://lynx.wnba.com/basketball-operations/lindsay-whalen"
       ],
-      "google_keyword": "lindsay whalen family",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "lindsay whalen hall of fame",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Did Lindsay Whalen retire?",
-      "answer": "As of late 2026, Lindsay Whalen has a public WNBA playing career; check her bio for current status.",
+      "question": "Where is Lindsay Whalen from?",
+      "answer": "Lindsay Whalen is from Hutchinson, Minnesota. She played college basketball at Minnesota from 2000 to 2004, became the program's first three-time All-American and led the Gophers to their only Final Four.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsay_Whalen"
+        "https://www.wnba.com/player/100915/lindsay-whalen/bio",
+        "https://gophersports.com/news/2023/3/2/whalen-steps-down-as-head-womens-basketball-coach"
       ],
-      "google_keyword": "when did lindsay whalen retire",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is lindsay whalen from",
+          "vol": 10
+        },
+        {
+          "q": "lindsay whalen hometown",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Lindsay Whalen win Olympic gold?",
+      "answer": "Yes. Lindsay Whalen won Olympic gold with Team USA in 2012 and 2016, and FIBA World Championship gold in 2010 and 2014.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100915/lindsay-whalen/bio"
+      ],
+      "queries": [
+        {
+          "q": "lindsay whalen olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

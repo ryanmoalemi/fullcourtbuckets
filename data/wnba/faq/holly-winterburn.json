@@ -1,68 +1,82 @@
 {
   "slug": "holly-winterburn",
   "player_name": "Holly Winterburn",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 28, 2026",
+  "verified_at": "2026-10-28",
   "items": [
     {
-      "question": "Who is Holly Winterburn dating?",
-      "answer": "As of late 2026, Holly Winterburn has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What are Holly Winterburn's stats?",
+      "answer": "In the 2026 regular season, Holly Winterburn averaged 4.0 points, 1.4 rebounds, and 1.8 assists in 29 games for the Portland Fire.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Holly_Winterburn"
+        "https://fullcourtbuckets.com/wnba/holly-winterburn/"
       ],
-      "google_keyword": "holly winterburn partner",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How much does Holly Winterburn make?",
-      "answer": "A precise public salary or net worth figure for Holly Winterburn is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "holly winterburn salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "holly winterburn stats",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How tall is Holly Winterburn?",
-      "answer": "Holly Winterburn is listed at 5' 11\".",
+      "answer": "The WNBA lists Holly Winterburn at 5 feet 11 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Holly_Winterburn"
+        "https://www.wnba.com/player/1641683/holly-winterburn/bio"
       ],
-      "google_keyword": "holly winterburn height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Holly Winterburn injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "holly winterburn injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Holly Winterburn's parents?",
-      "answer": "Public profiles share limited verified detail about Holly Winterburn's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Holly_Winterburn"
-      ],
-      "google_keyword": "holly winterburn parents",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "holly winterburn height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Holly Winterburn?",
-      "answer": "Holly Winterburn was born October 1, 2000 in Northampton. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "researched",
+      "answer": "Holly Winterburn was born October 1, 2000.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Holly_Winterburn"
+        "https://www.wnba.com/player/1641683/holly-winterburn/bio"
       ],
-      "google_keyword": "holly winterburn age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2000-10-01"
+      "queries": [
+        {
+          "q": "holly winterburn age",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Holly Winterburn play for Great Britain?",
+      "answer": "Yes. Holly Winterburn played for Great Britain at FIBA Women's EuroBasket in 2023 and 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641683/holly-winterburn/bio"
+      ],
+      "queries": [
+        {
+          "q": "holly winterburn fiba",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Holly Winterburn play before the WNBA?",
+      "answer": "Holly Winterburn played one college season at Oregon (2019-20), then played for the London Lions (2022 to 2024) and Besiktas in Turkey (2024 to 2026). She signed with Atlanta on May 7, 2026, was waived two days later and signed with the Portland Fire on May 13.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641683/holly-winterburn/bio"
+      ],
+      "queries": [
+        {
+          "q": "holly winterburn transfer",
+          "vol": null
+        },
+        {
+          "q": "holly winterburn recruiting",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
