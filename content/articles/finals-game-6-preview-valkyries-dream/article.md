@@ -83,6 +83,21 @@ Gabby Williams leads the series with 81 points, but she has made 26 of 90 shots 
 
 Data through Finals Game 5, Oct. 26, 2026. Source: Full Court Buckets game files built from WNBA.com box scores. Download (CC0): [finals-2026-player-totals-through-game-5.csv](/news/finals-game-6-preview-valkyries-dream/data/finals-2026-player-totals-through-game-5.csv)
 
+## The free-throw gap
+
+Atlanta has attempted 52 more free throws than Golden State in this series, 130 to 78, or 10.4 more per game. The Dream attempted more free throws in all five games, with the widest gap in Game 4 (31 to 13), which Atlanta still lost. The table below shows the game-by-game count:
+
+| Game | Dream FTA | Valkyries FTA | Difference | Running total |
+| --- | --- | --- | --- | --- |
+| 1 | 21 | 16 | ATL +5 | ATL +5 |
+| 2 | 35 | 19 | ATL +16 | ATL +21 |
+| 3 | 29 | 17 | ATL +12 | ATL +33 |
+| 4 | 31 | 13 | ATL +18 | ATL +51 |
+| 5 | 14 | 13 | ATL +1 | ATL +52 |
+| Total | 130 | 78 | ATL +52 | |
+
+Data through Finals Game 5, Oct. 26, 2026. Methods: team free-throw attempts (FTA) per game; the difference is Dream minus Valkyries. Source: [WNBA.com box scores](https://www.wnba.com/game/atl-vs-gsv-1042600305/box-score). Data: CC0.
+
 ## Keys to victory for Game 6
 
 ### Atlanta Dream
