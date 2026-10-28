@@ -30,7 +30,7 @@ DATA_FILE = Path('data/reese-cards.json')
 BIDS_FILE = Path('data/reese-bids.json')
 PT = ZoneInfo('America/Los_Angeles')
 BID_TYPES = {'auction', 'buy_it_now'}
-BID_STATUSES = {'live', 'won', 'lost'}
+BID_STATUSES = {'live', 'won', 'lost', 'sold'}
 BASE = 'https://fullcourtbuckets.com'
 COLLECTION_TITLE = "Ryan's Angel Reese card collection"
 AUTHOR_TEASER_TITLE = 'My Angel Reese card collection'
@@ -249,7 +249,7 @@ def _check_bid(entry: dict) -> None:
     if entry['type'] not in BID_TYPES:
         raise ValueError(f"Bid {entry['id']} type must be auction or buy_it_now.")
     if str(entry['status']).lower() not in BID_STATUSES:
-        raise ValueError(f"Bid {entry['id']} status must be live, won, or lost.")
+        raise ValueError(f"Bid {entry['id']} status must be live, won, lost, or sold.")
     if money_amount(entry['estimate_low']) > money_amount(entry['estimate_high']):
         raise ValueError(f"Bid {entry['id']} estimate_low is above estimate_high.")
     if entry['type'] == 'auction' and entry.get('current_bid') is None and entry.get('final_price') is None:
@@ -865,6 +865,8 @@ def bid_status(entry: dict) -> tuple[str, str]:
         return 'Won', 'won'
     if status == 'lost':
         return 'Lost', 'lost'
+    if status == 'sold':
+        return 'Sold', 'sold'
     if str(entry.get('type') or '').lower() == 'buy_it_now':
         return 'Buy it now', 'bin'
     return 'Live', 'live'
@@ -900,7 +902,7 @@ def _bid_comp(comp: dict) -> str:
 
 
 def _bid_price(entry: dict) -> str:
-    if entry.get('final_price') is not None and str(entry.get('status') or '').lower() in {'won', 'lost'}:
+    if entry.get('final_price') is not None and str(entry.get('status') or '').lower() in {'won', 'lost', 'sold'}:
         label = 'Final price'
         amount = format_dollars(entry['final_price'])
     else:
@@ -1285,6 +1287,7 @@ dialog::backdrop{background:rgba(0,0,0,.78)}
 .status{display:inline-flex;align-items:center;padding:3px 8px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .status-live{background:#10281c;color:#7dffa8}
 .status-won{background:#10281c;color:#7dffa8}
+.status-sold{background:#2a2416;color:#f0c36a}
 .status-lost{background:#2c1218;color:#ff8d9a}
 .status-bin{background:#2a2416;color:#f0c36a}
 .bid-name{margin:0;font:800 clamp(1.15rem,1.6vw,1.45rem)/1.05 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
