@@ -1,15 +1,15 @@
-team,number,player,position,developmental,ppg,rpg,apg,mpg,profile_url
-Seattle Storm,11,Awa Fam,Center,no,10.3,5.9,1.8,27.7,https://fullcourtbuckets.com/wnba/awa-fam/
-Seattle Storm,14,Dominique Malonga,Center,no,17.1,8.8,1.7,26.4,https://fullcourtbuckets.com/wnba/dominique-malonga/
-Seattle Storm,13,Ezi Magbegor,Forward,no,6.9,4.0,1.8,20.4,https://fullcourtbuckets.com/wnba/ezi-magbegor/
-Seattle Storm,4,Flau'jae Johnson,Guard,no,14.9,4.8,2.9,28.7,https://fullcourtbuckets.com/wnba/flaujae-johnson/
-Seattle Storm,5,Jade Melbourne,Guard,no,9.1,2.1,3.7,24.5,https://fullcourtbuckets.com/wnba/jade-melbourne/
-Seattle Storm,00,Jaylyn Sherrod,Guard,yes,0.7,1.0,1.0,9.3,https://fullcourtbuckets.com/wnba/jaylyn-sherrod/
-Seattle Storm,23,Jordan Horston,Forward,no,4.5,3.5,1.3,17.5,https://fullcourtbuckets.com/wnba/jordan-horston/
-Seattle Storm,33,Katie Lou Samuelson,Forward,no,4.4,2.1,0.8,15.3,https://fullcourtbuckets.com/wnba/katie-lou-samuelson/
-Seattle Storm,54,Mackenzie Holmes,Forward,no,2.8,2.9,0.6,10.0,https://fullcourtbuckets.com/wnba/mackenzie-holmes/
-Seattle Storm,2,Natisha Hiedeman,Guard,no,14.7,2.5,5.0,30.0,https://fullcourtbuckets.com/wnba/natisha-hiedeman/
-Seattle Storm,31,Stefanie Dolson,Center,no,3.3,2.4,1.2,15.0,https://fullcourtbuckets.com/wnba/stefanie-dolson/
-Seattle Storm,22,Taina Mair,Guard,yes,1.3,0.4,0.5,5.1,https://fullcourtbuckets.com/wnba/taina-mair/
-Seattle Storm,3,Taylor Thierry,Forward,no,1.9,1.7,0.5,9.7,https://fullcourtbuckets.com/wnba/taylor-thierry/
-Seattle Storm,7,Zia Cooke,Guard,no,7.5,1.7,1.1,15.0,https://fullcourtbuckets.com/wnba/zia-cooke/
+team,number,player,position,developmental,draft_year,draft_round,draft_pick,undrafted,ppg,rpg,apg,mpg,profile_url
+Seattle Storm,11,Awa Fam,Center,no,2026,1,3,no,10.3,5.9,1.8,27.7,https://fullcourtbuckets.com/wnba/awa-fam/
+Seattle Storm,14,Dominique Malonga,Center,no,2025,1,2,no,17.1,8.8,1.7,26.4,https://fullcourtbuckets.com/wnba/dominique-malonga/
+Seattle Storm,13,Ezi Magbegor,Forward,no,2019,1,12,no,6.9,4.0,1.8,20.4,https://fullcourtbuckets.com/wnba/ezi-magbegor/
+Seattle Storm,4,Flau'jae Johnson,Guard,no,2026,1,8,no,14.9,4.8,2.9,28.7,https://fullcourtbuckets.com/wnba/flaujae-johnson/
+Seattle Storm,5,Jade Melbourne,Guard,no,2022,3,33,no,9.1,2.1,3.7,24.5,https://fullcourtbuckets.com/wnba/jade-melbourne/
+Seattle Storm,00,Jaylyn Sherrod,Guard,yes,,,,yes,0.7,1.0,1.0,9.3,https://fullcourtbuckets.com/wnba/jaylyn-sherrod/
+Seattle Storm,23,Jordan Horston,Forward,no,2023,1,9,no,4.5,3.5,1.3,17.5,https://fullcourtbuckets.com/wnba/jordan-horston/
+Seattle Storm,33,Katie Lou Samuelson,Forward,no,2019,1,4,no,4.4,2.1,0.8,15.3,https://fullcourtbuckets.com/wnba/katie-lou-samuelson/
+Seattle Storm,54,Mackenzie Holmes,Forward,no,2024,3,26,no,2.8,2.9,0.6,10.0,https://fullcourtbuckets.com/wnba/mackenzie-holmes/
+Seattle Storm,2,Natisha Hiedeman,Guard,no,2019,2,18,no,14.7,2.5,5.0,30.0,https://fullcourtbuckets.com/wnba/natisha-hiedeman/
+Seattle Storm,31,Stefanie Dolson,Center,no,2014,1,6,no,3.3,2.4,1.2,15.0,https://fullcourtbuckets.com/wnba/stefanie-dolson/
+Seattle Storm,22,Taina Mair,Guard,yes,2026,1,14,no,1.3,0.4,0.5,5.1,https://fullcourtbuckets.com/wnba/taina-mair/
+Seattle Storm,3,Taylor Thierry,Forward,no,2025,3,36,no,1.9,1.7,0.5,9.7,https://fullcourtbuckets.com/wnba/taylor-thierry/
+Seattle Storm,7,Zia Cooke,Guard,no,2023,1,10,no,7.5,1.7,1.1,15.0,https://fullcourtbuckets.com/wnba/zia-cooke/

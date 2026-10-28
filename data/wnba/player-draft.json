@@ -1,0 +1,2237 @@
+{
+  "source": "WNBA.com player pages (official league site)",
+  "checked_at": "2026-10-28T03:53:35+00:00",
+  "note": "Draft year, round and overall pick as published on each player page. WNBA.com does not publish the drafting team there, so it is not recorded.",
+  "players": {
+    "1630149": {
+      "year": 2020,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630149",
+      "player": "Satou Sabally",
+      "team": "New York Liberty",
+      "person_id": 1630149
+    },
+    "1630469": {
+      "year": 2021,
+      "round": 3,
+      "pick": 29,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630469",
+      "player": "Marine Fauthoux",
+      "team": "New York Liberty",
+      "person_id": 1630469
+    },
+    "1641663": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1641663",
+      "player": "Elizabeth Balogun",
+      "team": "New York Liberty",
+      "person_id": 1641663
+    },
+    "203822": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/203822",
+      "player": "Rebekah Gardner",
+      "team": "New York Liberty",
+      "person_id": 203822
+    },
+    "204296": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/204296",
+      "player": "Rebecca Allen",
+      "team": "New York Liberty",
+      "person_id": 204296
+    },
+    "1642810": {
+      "year": 2025,
+      "round": 2,
+      "pick": 14,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642810",
+      "player": "Madison Scott",
+      "team": "New York Liberty",
+      "person_id": 1642810
+    },
+    "1630142": {
+      "year": 2020,
+      "round": 2,
+      "pick": 22,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630142",
+      "player": "Leonie Fiebich",
+      "team": "New York Liberty",
+      "person_id": 1630142
+    },
+    "1630384": {
+      "year": 2021,
+      "round": 2,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630384",
+      "player": "Raquel Carrera",
+      "team": "New York Liberty",
+      "person_id": 1630384
+    },
+    "1631136": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1631136",
+      "player": "Pauline Astier",
+      "team": "New York Liberty",
+      "person_id": 1631136
+    },
+    "1629477": {
+      "year": 2020,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629477",
+      "player": "Sabrina Ionescu",
+      "team": "New York Liberty",
+      "person_id": 1629477
+    },
+    "1629566": {
+      "year": 2019,
+      "round": 2,
+      "pick": 14,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629566",
+      "player": "Han Xu",
+      "team": "New York Liberty",
+      "person_id": 1629566
+    },
+    "1629546": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1629546",
+      "player": "Marine Johannes",
+      "team": "New York Liberty",
+      "person_id": 1629546
+    },
+    "1630993": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1630993",
+      "player": "Anneli Maley",
+      "team": "New York Liberty",
+      "person_id": 1630993
+    },
+    "1627668": {
+      "year": 2016,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627668",
+      "player": "Breanna Stewart",
+      "team": "New York Liberty",
+      "person_id": 1627668
+    },
+    "1627673": {
+      "year": 2016,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627673",
+      "player": "Jonquel Jones",
+      "team": "New York Liberty",
+      "person_id": 1627673
+    },
+    "1628276": {
+      "year": 2017,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628276",
+      "player": "Kelsey Plum",
+      "team": "Phoenix Mercury",
+      "person_id": 1628276
+    },
+    "1643493": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643493",
+      "player": "Noemie Brochant",
+      "team": "Phoenix Mercury",
+      "person_id": 1643493
+    },
+    "1627674": {
+      "year": 2016,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627674",
+      "player": "Kahleah Copper",
+      "team": "Phoenix Mercury",
+      "person_id": 1627674
+    },
+    "1630442": {
+      "year": 2021,
+      "round": 2,
+      "pick": 16,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630442",
+      "player": "Natasha Mack",
+      "team": "Phoenix Mercury",
+      "person_id": 1630442
+    },
+    "1643470": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643470",
+      "player": "Shay Ciezki",
+      "team": "Phoenix Mercury",
+      "person_id": 1643470
+    },
+    "1643458": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643458",
+      "player": "Saylor Poffenbarger",
+      "team": "Phoenix Mercury",
+      "person_id": 1643458
+    },
+    "1631118": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1631118",
+      "player": "Lexi Held",
+      "team": "Phoenix Mercury",
+      "person_id": 1631118
+    },
+    "204468": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/204468",
+      "player": "Valeriane Ayayi",
+      "team": "Phoenix Mercury",
+      "person_id": 204468
+    },
+    "1643454": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643454",
+      "player": "Kara Dunn",
+      "team": "Phoenix Mercury",
+      "person_id": 1643454
+    },
+    "1642818": {
+      "year": 2025,
+      "round": 2,
+      "pick": 16,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642818",
+      "player": "Maddy Westbeld",
+      "team": "Phoenix Mercury",
+      "person_id": 1642818
+    },
+    "203826": {
+      "year": 2014,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203826",
+      "player": "Alyssa Thomas",
+      "team": "Phoenix Mercury",
+      "person_id": 203826
+    },
+    "1643505": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643505",
+      "player": "Jovana Nogic",
+      "team": "Phoenix Mercury",
+      "person_id": 1643505
+    },
+    "1642768": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642768",
+      "player": "Kyara Linskens",
+      "team": "Phoenix Mercury",
+      "person_id": 1642768
+    },
+    "1628244": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1628244",
+      "player": "Sami Whitcomb",
+      "team": "Phoenix Mercury",
+      "person_id": 1628244
+    },
+    "1643438": {
+      "year": 2026,
+      "round": 2,
+      "pick": 16,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643438",
+      "player": "Marta Suarez",
+      "team": "Phoenix Mercury",
+      "person_id": 1643438
+    },
+    "1629498": {
+      "year": 2019,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629498",
+      "player": "Jackie Young",
+      "team": "Las Vegas Aces",
+      "person_id": 1629498
+    },
+    "1631006": {
+      "year": 2022,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631006",
+      "player": "Kierstan Bell",
+      "team": "Las Vegas Aces",
+      "person_id": 1631006
+    },
+    "1643434": {
+      "year": 2026,
+      "round": 2,
+      "pick": 29,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643434",
+      "player": "Janiah Barker",
+      "team": "Las Vegas Aces",
+      "person_id": 1643434
+    },
+    "1631019": {
+      "year": 2022,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631019",
+      "player": "NaLyssa Smith",
+      "team": "Las Vegas Aces",
+      "person_id": 1631019
+    },
+    "1643444": {
+      "year": 2026,
+      "round": 2,
+      "pick": 20,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643444",
+      "player": "Ta'Niya Latson",
+      "team": "Las Vegas Aces",
+      "person_id": 1643444
+    },
+    "203855": {
+      "year": 2014,
+      "round": 3,
+      "pick": 33,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203855",
+      "player": "Stephanie Talbot",
+      "team": "Las Vegas Aces",
+      "person_id": 203855
+    },
+    "1630389": {
+      "year": 2021,
+      "round": 2,
+      "pick": 13,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630389",
+      "player": "Dana Evans",
+      "team": "Las Vegas Aces",
+      "person_id": 1630389
+    },
+    "203833": {
+      "year": 2014,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203833",
+      "player": "Chelsea Gray",
+      "team": "Las Vegas Aces",
+      "person_id": 203833
+    },
+    "1643495": {
+      "year": 2026,
+      "round": 2,
+      "pick": 25,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643495",
+      "player": "Justine Pissott",
+      "team": "Las Vegas Aces",
+      "person_id": 1643495
+    },
+    "1642769": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642769",
+      "player": "Mai Yamamoto",
+      "team": "Las Vegas Aces",
+      "person_id": 1642769
+    },
+    "1629480": {
+      "year": 2019,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629480",
+      "player": "Kalani Brown",
+      "team": "Las Vegas Aces",
+      "person_id": 1629480
+    },
+    "1629488": {
+      "year": 2019,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629488",
+      "player": "Brianna Turner",
+      "team": "Las Vegas Aces",
+      "person_id": 1629488
+    },
+    "1628932": {
+      "year": 2018,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628932",
+      "player": "A'ja Wilson",
+      "team": "Las Vegas Aces",
+      "person_id": 1628932
+    },
+    "204319": {
+      "year": 2015,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204319",
+      "player": "Jewell Loyd",
+      "team": "Las Vegas Aces",
+      "person_id": 204319
+    },
+    "204323": {
+      "year": 2015,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204323",
+      "player": "Cheyenne Parker-Tyus",
+      "team": "Las Vegas Aces",
+      "person_id": 204323
+    },
+    "1642811": {
+      "year": 2025,
+      "round": 2,
+      "pick": 17,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642811",
+      "player": "Shyanne Sellers",
+      "team": "Los Angeles Sparks",
+      "person_id": 1642811
+    },
+    "1642777": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642777",
+      "player": "Monique Akoa Makani",
+      "team": "Los Angeles Sparks",
+      "person_id": 1642777
+    },
+    "1643462": {
+      "year": 2026,
+      "round": 2,
+      "pick": 24,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643462",
+      "player": "Chance Gray",
+      "team": "Los Angeles Sparks",
+      "person_id": 1643462
+    },
+    "1643439": {
+      "year": 2026,
+      "round": 3,
+      "pick": 32,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643439",
+      "player": "Tonie Morgan",
+      "team": "Los Angeles Sparks",
+      "person_id": 1643439
+    },
+    "204324": {
+      "year": 2015,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204324",
+      "player": "Dearica Hamby",
+      "team": "Los Angeles Sparks",
+      "person_id": 204324
+    },
+    "1630148": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1630148",
+      "player": "Jihyun Park",
+      "team": "Los Angeles Sparks",
+      "person_id": 1630148
+    },
+    "1628878": {
+      "year": 2018,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628878",
+      "player": "Ariel Atkins",
+      "team": "Los Angeles Sparks",
+      "person_id": 1628878
+    },
+    "1630996": {
+      "year": 2022,
+      "round": 1,
+      "pick": 9,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630996",
+      "player": "Rae Burrell",
+      "team": "Los Angeles Sparks",
+      "person_id": 1630996
+    },
+    "1642801": {
+      "year": 2025,
+      "round": 2,
+      "pick": 13,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642801",
+      "player": "Aaliyah Nye",
+      "team": "Los Angeles Sparks",
+      "person_id": 1642801
+    },
+    "1643479": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643479",
+      "player": "Ndjakalenga Mwenentanda",
+      "team": "Los Angeles Sparks",
+      "person_id": 1643479
+    },
+    "204365": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/204365",
+      "player": "Erica Wheeler",
+      "team": "Los Angeles Sparks",
+      "person_id": 204365
+    },
+    "1642287": {
+      "year": 2024,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642287",
+      "player": "Cameron Brink",
+      "team": "Los Angeles Sparks",
+      "person_id": 1642287
+    },
+    "203014": {
+      "year": 2012,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203014",
+      "player": "Nneka Ogwumike",
+      "team": "Los Angeles Sparks",
+      "person_id": 203014
+    },
+    "1628242": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1628242",
+      "player": "Emma Cannon",
+      "team": "Los Angeles Sparks",
+      "person_id": 1628242
+    },
+    "203824": {
+      "year": 2014,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203824",
+      "player": "Odyssey Sims",
+      "team": "Dallas Wings",
+      "person_id": 203824
+    },
+    "1642795": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642795",
+      "player": "Deja Kelly",
+      "team": "Dallas Wings",
+      "person_id": 1642795
+    },
+    "1642784": {
+      "year": 2025,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642784",
+      "player": "Paige Bueckers",
+      "team": "Dallas Wings",
+      "person_id": 1642784
+    },
+    "1643424": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643424",
+      "player": "Costanza Verona",
+      "team": "Dallas Wings",
+      "person_id": 1643424
+    },
+    "202252": {
+      "year": 2010,
+      "round": 2,
+      "pick": 17,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/202252",
+      "player": "Alysha Clark",
+      "team": "Dallas Wings",
+      "person_id": 202252
+    },
+    "1629501": {
+      "year": 2019,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629501",
+      "player": "Alanna Smith",
+      "team": "Dallas Wings",
+      "person_id": 1629501
+    },
+    "1642793": {
+      "year": 2025,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642793",
+      "player": "Aziaha James",
+      "team": "Dallas Wings",
+      "person_id": 1642793
+    },
+    "1631090": {
+      "year": 2022,
+      "round": 2,
+      "pick": 14,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631090",
+      "player": "Christyn Williams",
+      "team": "Dallas Wings",
+      "person_id": 1631090
+    },
+    "1641652": {
+      "year": 2023,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641652",
+      "player": "Maddy Siegrist",
+      "team": "Dallas Wings",
+      "person_id": 1641652
+    },
+    "1629481": {
+      "year": 2019,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629481",
+      "player": "Arike Ogunbowale",
+      "team": "Dallas Wings",
+      "person_id": 1629481
+    },
+    "1629574": {
+      "year": 2019,
+      "round": 3,
+      "pick": 35,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629574",
+      "player": "Li Yueru",
+      "team": "Dallas Wings",
+      "person_id": 1629574
+    },
+    "1641650": {
+      "year": 2023,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641650",
+      "player": "Haley Jones",
+      "team": "Dallas Wings",
+      "person_id": 1641650
+    },
+    "1629491": {
+      "year": 2019,
+      "round": 2,
+      "pick": 16,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629491",
+      "player": "Jessica Shepard",
+      "team": "Dallas Wings",
+      "person_id": 1629491
+    },
+    "1629490": {
+      "year": 2020,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629490",
+      "player": "Kitija Laksa",
+      "team": "Dallas Wings",
+      "person_id": 1629490
+    },
+    "1630386": {
+      "year": 2021,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630386",
+      "player": "Awak Kuier",
+      "team": "Dallas Wings",
+      "person_id": 1630386
+    },
+    "1643425": {
+      "year": 2026,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643425",
+      "player": "Azzi Fudd",
+      "team": "Dallas Wings",
+      "person_id": 1643425
+    },
+    "1631022": {
+      "year": 2022,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631022",
+      "player": "Shakira Austin",
+      "team": "Washington Mystics",
+      "person_id": 1631022
+    },
+    "1643644": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643644",
+      "player": "Alicia Florez",
+      "team": "Washington Mystics",
+      "person_id": 1643644
+    },
+    "1643450": {
+      "year": 2026,
+      "round": 3,
+      "pick": 34,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643450",
+      "player": "Rori Harmon",
+      "team": "Washington Mystics",
+      "person_id": 1643450
+    },
+    "1643440": {
+      "year": 2026,
+      "round": 2,
+      "pick": 30,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643440",
+      "player": "Darianna Littlepage-Buggs",
+      "team": "Washington Mystics",
+      "person_id": 1643440
+    },
+    "1642781": {
+      "year": 2025,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642781",
+      "player": "Georgia Amoore",
+      "team": "Washington Mystics",
+      "person_id": 1642781
+    },
+    "1630446": {
+      "year": 2021,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630446",
+      "player": "Michaela Onyenwere",
+      "team": "Washington Mystics",
+      "person_id": 1630446
+    },
+    "1643467": {
+      "year": 2026,
+      "round": 2,
+      "pick": 19,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643467",
+      "player": "Cassandre Prosper",
+      "team": "Washington Mystics",
+      "person_id": 1643467
+    },
+    "1642785": {
+      "year": 2025,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642785",
+      "player": "Sonia Citron",
+      "team": "Washington Mystics",
+      "person_id": 1642785
+    },
+    "1643430": {
+      "year": 2026,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643430",
+      "player": "Cotie McMahon",
+      "team": "Washington Mystics",
+      "person_id": 1643430
+    },
+    "1643455": {
+      "year": 2026,
+      "round": 1,
+      "pick": 9,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643455",
+      "player": "Angela Dugalic",
+      "team": "Washington Mystics",
+      "person_id": 1643455
+    },
+    "1642802": {
+      "year": 2025,
+      "round": 2,
+      "pick": 23,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642802",
+      "player": "Lucy Olsen",
+      "team": "Washington Mystics",
+      "person_id": 1642802
+    },
+    "204335": {
+      "year": 2015,
+      "round": 2,
+      "pick": 17,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204335",
+      "player": "Betnijah Laney-Hamilton",
+      "team": "Washington Mystics",
+      "person_id": 204335
+    },
+    "1642792": {
+      "year": 2025,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642792",
+      "player": "Kiki Iriafen",
+      "team": "Washington Mystics",
+      "person_id": 1642792
+    },
+    "1643427": {
+      "year": 2026,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643427",
+      "player": "Lauren Betts",
+      "team": "Washington Mystics",
+      "person_id": 1643427
+    },
+    "1641649": {
+      "year": 2023,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641649",
+      "player": "Diamond Miller",
+      "team": "Connecticut Sun",
+      "person_id": 1641649
+    },
+    "1642817": {
+      "year": 2025,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642817",
+      "player": "Hailey Van Lith",
+      "team": "Connecticut Sun",
+      "person_id": 1642817
+    },
+    "1643437": {
+      "year": 2026,
+      "round": 2,
+      "pick": 23,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643437",
+      "player": "Ashlon Jackson",
+      "team": "Connecticut Sun",
+      "person_id": 1643437
+    },
+    "1643449": {
+      "year": 2026,
+      "round": 2,
+      "pick": 18,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643449",
+      "player": "Charlisse Leger-Walker",
+      "team": "Connecticut Sun",
+      "person_id": 1643449
+    },
+    "1643429": {
+      "year": 2026,
+      "round": 1,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643429",
+      "player": "Gianna Kneepkens",
+      "team": "Connecticut Sun",
+      "person_id": 1643429
+    },
+    "1642290": {
+      "year": 2024,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642290",
+      "player": "Aaliyah Edwards",
+      "team": "Connecticut Sun",
+      "person_id": 1642290
+    },
+    "1631135": {
+      "year": 2022,
+      "round": 2,
+      "pick": 19,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631135",
+      "player": "Olivia Nelson-Ododa",
+      "team": "Connecticut Sun",
+      "person_id": 1631135
+    },
+    "1642796": {
+      "year": 2025,
+      "round": 2,
+      "pick": 25,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642796",
+      "player": "Rayah Marshall",
+      "team": "Connecticut Sun",
+      "person_id": 1642796
+    },
+    "1643441": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643441",
+      "player": "Raegan Beers",
+      "team": "Connecticut Sun",
+      "person_id": 1643441
+    },
+    "1642809": {
+      "year": 2025,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642809",
+      "player": "Saniya Rivers",
+      "team": "Connecticut Sun",
+      "person_id": 1642809
+    },
+    "1629568": {
+      "year": 2019,
+      "round": 2,
+      "pick": 22,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629568",
+      "player": "Kennedy Burke",
+      "team": "Connecticut Sun",
+      "person_id": 1629568
+    },
+    "1643448": {
+      "year": 2026,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643448",
+      "player": "Nell Angloma",
+      "team": "Connecticut Sun",
+      "person_id": 1643448
+    },
+    "203398": {
+      "year": 2013,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203398",
+      "player": "Brittney Griner",
+      "team": "Connecticut Sun",
+      "person_id": 203398
+    },
+    "1642303": {
+      "year": 2024,
+      "round": 1,
+      "pick": 10,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642303",
+      "player": "Leila Lacan",
+      "team": "Connecticut Sun",
+      "person_id": 1642303
+    },
+    "1643825": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643825",
+      "player": "Elena Buenavida",
+      "team": "Minnesota Lynx",
+      "person_id": 1643825
+    },
+    "203827": {
+      "year": 2014,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203827",
+      "player": "Natasha Howard",
+      "team": "Minnesota Lynx",
+      "person_id": 203827
+    },
+    "1642820": {
+      "year": 2025,
+      "round": 3,
+      "pick": 28,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642820",
+      "player": "Liatu King",
+      "team": "Minnesota Lynx",
+      "person_id": 1642820
+    },
+    "1630471": {
+      "year": 2021,
+      "round": 3,
+      "pick": 33,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630471",
+      "player": "Maya Caldwell",
+      "team": "Minnesota Lynx",
+      "person_id": 1630471
+    },
+    "1630462": {
+      "year": 2021,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630462",
+      "player": "Aari McDonald",
+      "team": "Minnesota Lynx",
+      "person_id": 1630462
+    },
+    "1643426": {
+      "year": 2026,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643426",
+      "player": "Olivia Miles",
+      "team": "Minnesota Lynx",
+      "person_id": 1643426
+    },
+    "1642797": {
+      "year": 2025,
+      "round": 2,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642797",
+      "player": "Anastasiia Olairi Kosu",
+      "team": "Minnesota Lynx",
+      "person_id": 1642797
+    },
+    "1643489": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643489",
+      "player": "Antonia Delaere",
+      "team": "Minnesota Lynx",
+      "person_id": 1643489
+    },
+    "1627675": {
+      "year": 2016,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627675",
+      "player": "Courtney Williams",
+      "team": "Minnesota Lynx",
+      "person_id": 1627675
+    },
+    "1628269": {
+      "year": 2017,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628269",
+      "player": "Nia Brodie",
+      "team": "Minnesota Lynx",
+      "person_id": 1628269
+    },
+    "1641657": {
+      "year": 2023,
+      "round": 2,
+      "pick": 16,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641657",
+      "player": "Dorka Juhasz",
+      "team": "Minnesota Lynx",
+      "person_id": 1641657
+    },
+    "203825": {
+      "year": 2014,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203825",
+      "player": "Kayla McBride",
+      "team": "Minnesota Lynx",
+      "person_id": 203825
+    },
+    "1643488": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643488",
+      "player": "Emma Cechova",
+      "team": "Minnesota Lynx",
+      "person_id": 1643488
+    },
+    "1629483": {
+      "year": 2019,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629483",
+      "player": "Napheesa Collier",
+      "team": "Minnesota Lynx",
+      "person_id": 1629483
+    },
+    "1631064": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1631064",
+      "player": "Chloe Bibby",
+      "team": "Minnesota Lynx",
+      "person_id": 1631064
+    },
+    "1628909": {
+      "year": 2018,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628909",
+      "player": "Kelsey Mitchell",
+      "team": "Indiana Fever",
+      "person_id": 1628909
+    },
+    "1642803": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642803",
+      "player": "Michelle Onyiah",
+      "team": "Indiana Fever",
+      "person_id": 1642803
+    },
+    "1628899": {
+      "year": 2018,
+      "round": 2,
+      "pick": 19,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628899",
+      "player": "Myisha Hines-Allen",
+      "team": "Indiana Fever",
+      "person_id": 1628899
+    },
+    "1643433": {
+      "year": 2026,
+      "round": 1,
+      "pick": 10,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643433",
+      "player": "Raven Johnson",
+      "team": "Indiana Fever",
+      "person_id": 1643433
+    },
+    "1628920": {
+      "year": 2018,
+      "round": 2,
+      "pick": 22,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628920",
+      "player": "Mercedes Russell",
+      "team": "Indiana Fever",
+      "person_id": 1628920
+    },
+    "1641648": {
+      "year": 2023,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641648",
+      "player": "Aliyah Boston",
+      "team": "Indiana Fever",
+      "person_id": 1641648
+    },
+    "1629482": {
+      "year": 2019,
+      "round": 2,
+      "pick": 13,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629482",
+      "player": "Sophie Cunningham",
+      "team": "Indiana Fever",
+      "person_id": 1629482
+    },
+    "1631086": {
+      "year": 2022,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631086",
+      "player": "Lexie Hull",
+      "team": "Indiana Fever",
+      "person_id": 1631086
+    },
+    "203024": {
+      "year": 2012,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203024",
+      "player": "Damiris Dantas",
+      "team": "Indiana Fever",
+      "person_id": 203024
+    },
+    "1643453": {
+      "year": 2026,
+      "round": 3,
+      "pick": 39,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643453",
+      "player": "Grace VanSlooten",
+      "team": "Indiana Fever",
+      "person_id": 1643453
+    },
+    "1642815": {
+      "year": 2025,
+      "round": 2,
+      "pick": 19,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642815",
+      "player": "Makayla Timpson",
+      "team": "Indiana Fever",
+      "person_id": 1642815
+    },
+    "1642286": {
+      "year": 2024,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642286",
+      "player": "Caitlin Clark",
+      "team": "Indiana Fever",
+      "person_id": 1642286
+    },
+    "1642788": {
+      "year": 2025,
+      "round": 2,
+      "pick": 20,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642788",
+      "player": "Bree Hall",
+      "team": "Indiana Fever",
+      "person_id": 1642788
+    },
+    "1628881": {
+      "year": 2018,
+      "round": 2,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628881",
+      "player": "Monique Billings",
+      "team": "Indiana Fever",
+      "person_id": 1628881
+    },
+    "1630112": {
+      "year": 2020,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630112",
+      "player": "Tyasha Harris",
+      "team": "Indiana Fever",
+      "person_id": 1630112
+    },
+    "1642304": {
+      "year": 2024,
+      "round": 1,
+      "pick": 9,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642304",
+      "player": "Carla Leite",
+      "team": "Portland Fire",
+      "person_id": 1642304
+    },
+    "1642790": {
+      "year": 2025,
+      "round": 2,
+      "pick": 21,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642790",
+      "player": "Sania Feagin",
+      "team": "Portland Fire",
+      "person_id": 1642790
+    },
+    "1643527": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643527",
+      "player": "Jordan Harrison",
+      "team": "Portland Fire",
+      "person_id": 1643527
+    },
+    "1642782": {
+      "year": 2025,
+      "round": 1,
+      "pick": 9,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642782",
+      "player": "Sarah Ashlee Barker",
+      "team": "Portland Fire",
+      "person_id": 1642782
+    },
+    "1629524": {
+      "year": 2019,
+      "round": 2,
+      "pick": 21,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629524",
+      "player": "Bridget Carleton",
+      "team": "Portland Fire",
+      "person_id": 1629524
+    },
+    "1643506": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643506",
+      "player": "Teja Oblak",
+      "team": "Portland Fire",
+      "person_id": 1643506
+    },
+    "1629539": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1629539",
+      "player": "Amy Okonkwo",
+      "team": "Portland Fire",
+      "person_id": 1629539
+    },
+    "1642296": {
+      "year": 2024,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642296",
+      "player": "Nyadiew Puoch",
+      "team": "Portland Fire",
+      "person_id": 1642296
+    },
+    "1630143": {
+      "year": 2020,
+      "round": 2,
+      "pick": 21,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630143",
+      "player": "Luisa Geiselsoder",
+      "team": "Portland Fire",
+      "person_id": 1630143
+    },
+    "1629484": {
+      "year": 2019,
+      "round": 2,
+      "pick": 17,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629484",
+      "player": "Megan DiLeo",
+      "team": "Portland Fire",
+      "person_id": 1629484
+    },
+    "1643494": {
+      "year": 2026,
+      "round": 2,
+      "pick": 17,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643494",
+      "player": "Frieda Buhner",
+      "team": "Portland Fire",
+      "person_id": 1643494
+    },
+    "1631083": {
+      "year": 2022,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631083",
+      "player": "Emily Engstler",
+      "team": "Portland Fire",
+      "person_id": 1631083
+    },
+    "1642294": {
+      "year": 2024,
+      "round": 3,
+      "pick": 25,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642294",
+      "player": "Charisma Osborne",
+      "team": "Portland Fire",
+      "person_id": 1642294
+    },
+    "1643436": {
+      "year": 2026,
+      "round": 3,
+      "pick": 33,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643436",
+      "player": "Serah Williams",
+      "team": "Portland Fire",
+      "person_id": 1643436
+    },
+    "1628317": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1628317",
+      "player": "Karlie Samuelson",
+      "team": "Portland Fire",
+      "person_id": 1628317
+    },
+    "1641683": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1641683",
+      "player": "Holly Winterburn",
+      "team": "Portland Fire",
+      "person_id": 1641683
+    },
+    "1629567": {
+      "year": 2019,
+      "round": 2,
+      "pick": 18,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629567",
+      "player": "Natisha Hiedeman",
+      "team": "Seattle Storm",
+      "person_id": 1629567
+    },
+    "1642814": {
+      "year": 2025,
+      "round": 3,
+      "pick": 36,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642814",
+      "player": "Taylor Thierry",
+      "team": "Seattle Storm",
+      "person_id": 1642814
+    },
+    "1643428": {
+      "year": 2026,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643428",
+      "player": "Flau'jae Johnson",
+      "team": "Seattle Storm",
+      "person_id": 1643428
+    },
+    "1642320": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642320",
+      "player": "Jaylyn Sherrod",
+      "team": "Seattle Storm",
+      "person_id": 1642320
+    },
+    "1631141": {
+      "year": 2022,
+      "round": 3,
+      "pick": 33,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631141",
+      "player": "Jade Melbourne",
+      "team": "Seattle Storm",
+      "person_id": 1631141
+    },
+    "1641660": {
+      "year": 2023,
+      "round": 1,
+      "pick": 10,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641660",
+      "player": "Zia Cooke",
+      "team": "Seattle Storm",
+      "person_id": 1641660
+    },
+    "1643443": {
+      "year": 2026,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643443",
+      "player": "Awa Fam",
+      "team": "Seattle Storm",
+      "person_id": 1643443
+    },
+    "1629496": {
+      "year": 2019,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629496",
+      "player": "Ezi Magbegor",
+      "team": "Seattle Storm",
+      "person_id": 1629496
+    },
+    "1642798": {
+      "year": 2025,
+      "round": 1,
+      "pick": 2,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642798",
+      "player": "Dominique Malonga",
+      "team": "Seattle Storm",
+      "person_id": 1642798
+    },
+    "1643473": {
+      "year": 2026,
+      "round": 1,
+      "pick": 14,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643473",
+      "player": "Taina Mair",
+      "team": "Seattle Storm",
+      "person_id": 1643473
+    },
+    "1641651": {
+      "year": 2023,
+      "round": 1,
+      "pick": 9,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641651",
+      "player": "Jordan Horston",
+      "team": "Seattle Storm",
+      "person_id": 1641651
+    },
+    "203828": {
+      "year": 2014,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203828",
+      "player": "Stefanie Dolson",
+      "team": "Seattle Storm",
+      "person_id": 203828
+    },
+    "1629478": {
+      "year": 2019,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629478",
+      "player": "Katie Lou Samuelson",
+      "team": "Seattle Storm",
+      "person_id": 1629478
+    },
+    "1642307": {
+      "year": 2024,
+      "round": 3,
+      "pick": 26,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642307",
+      "player": "Mackenzie Holmes",
+      "team": "Seattle Storm",
+      "person_id": 1642307
+    },
+    "1642292": {
+      "year": 2024,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642292",
+      "player": "Jacy Sheldon",
+      "team": "Chicago Sky",
+      "person_id": 1642292
+    },
+    "204322": {
+      "year": 2015,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204322",
+      "player": "Elizabeth Williams",
+      "team": "Chicago Sky",
+      "person_id": 204322
+    },
+    "203400": {
+      "year": 2013,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203400",
+      "player": "Skylar Diggins",
+      "team": "Chicago Sky",
+      "person_id": 203400
+    },
+    "1642288": {
+      "year": 2024,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642288",
+      "player": "Rickea Jackson",
+      "team": "Chicago Sky",
+      "person_id": 1642288
+    },
+    "1630096": {
+      "year": 2021,
+      "round": 2,
+      "pick": 20,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630096",
+      "player": "DiJonai Carrington",
+      "team": "Chicago Sky",
+      "person_id": 1630096
+    },
+    "204333": {
+      "year": 2015,
+      "round": 2,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204333",
+      "player": "Natasha Cloud",
+      "team": "Chicago Sky",
+      "person_id": 204333
+    },
+    "1642289": {
+      "year": 2024,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642289",
+      "player": "Kamilla Cardoso",
+      "team": "Chicago Sky",
+      "person_id": 1642289
+    },
+    "1643447": {
+      "year": 2026,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643447",
+      "player": "Gabriela Jaquez",
+      "team": "Chicago Sky",
+      "person_id": 1643447
+    },
+    "1642321": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642321",
+      "player": "Sydney Taylor",
+      "team": "Chicago Sky",
+      "person_id": 1642321
+    },
+    "1642835": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642835",
+      "player": "Morgan Maly",
+      "team": "Chicago Sky",
+      "person_id": 1642835
+    },
+    "1642324": {
+      "year": 2024,
+      "round": 2,
+      "pick": 18,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642324",
+      "player": "Kate Martin",
+      "team": "Chicago Sky",
+      "person_id": 1642324
+    },
+    "202664": {
+      "year": 2011,
+      "round": 1,
+      "pick": 3,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/202664",
+      "player": "Courtney Vandersloot",
+      "team": "Chicago Sky",
+      "person_id": 202664
+    },
+    "1627671": {
+      "year": 2016,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627671",
+      "player": "Rachel Banham",
+      "team": "Chicago Sky",
+      "person_id": 1627671
+    },
+    "1628922": {
+      "year": 2018,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628922",
+      "player": "Azura Stevens",
+      "team": "Chicago Sky",
+      "person_id": 1628922
+    },
+    "1642786": {
+      "year": 2025,
+      "round": 2,
+      "pick": 22,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642786",
+      "player": "Aicha Coulibaly",
+      "team": "Chicago Sky",
+      "person_id": 1642786
+    },
+    "1642327": {
+      "year": 2024,
+      "round": 3,
+      "pick": 32,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642327",
+      "player": "Matilde Villa",
+      "team": "Atlanta Dream",
+      "person_id": 1642327
+    },
+    "1631044": {
+      "year": 2022,
+      "round": 2,
+      "pick": 15,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631044",
+      "player": "Naz Hillmon",
+      "team": "Atlanta Dream",
+      "person_id": 1631044
+    },
+    "1642804": {
+      "year": 2025,
+      "round": 2,
+      "pick": 18,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642804",
+      "player": "Te-Hina Paopao",
+      "team": "Atlanta Dream",
+      "person_id": 1642804
+    },
+    "1628886": {
+      "year": 2018,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628886",
+      "player": "Jordin Canada",
+      "team": "Atlanta Dream",
+      "person_id": 1628886
+    },
+    "1642291": {
+      "year": 2024,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642291",
+      "player": "Angel Reese",
+      "team": "Atlanta Dream",
+      "person_id": 1642291
+    },
+    "1631009": {
+      "year": 2022,
+      "round": 1,
+      "pick": 1,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631009",
+      "player": "Rhyne Howard",
+      "team": "Atlanta Dream",
+      "person_id": 1631009
+    },
+    "1643431": {
+      "year": 2026,
+      "round": 1,
+      "pick": 13,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643431",
+      "player": "Madina Okot",
+      "team": "Atlanta Dream",
+      "person_id": 1643431
+    },
+    "1628277": {
+      "year": 2017,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628277",
+      "player": "Allisha Gray",
+      "team": "Atlanta Dream",
+      "person_id": 1628277
+    },
+    "1642302": {
+      "year": 2024,
+      "round": 2,
+      "pick": 20,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642302",
+      "player": "Isobel Borlase",
+      "team": "Atlanta Dream",
+      "person_id": 1642302
+    },
+    "1643469": {
+      "year": 2026,
+      "round": 2,
+      "pick": 28,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643469",
+      "player": "Indya Nivar",
+      "team": "Atlanta Dream",
+      "person_id": 1643469
+    },
+    "1631021": {
+      "year": 2022,
+      "round": 3,
+      "pick": 29,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631021",
+      "player": "Sika Kone",
+      "team": "Atlanta Dream",
+      "person_id": 1631021
+    },
+    "201886": {
+      "year": 2009,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/201886",
+      "player": "DeWanna Bonner",
+      "team": "Atlanta Dream",
+      "person_id": 201886
+    },
+    "1628278": {
+      "year": 2017,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628278",
+      "player": "Shatori Walker-Kimbrough",
+      "team": "Atlanta Dream",
+      "person_id": 1628278
+    },
+    "1628280": {
+      "year": 2017,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628280",
+      "player": "Brionna Jones",
+      "team": "Atlanta Dream",
+      "person_id": 1628280
+    },
+    "1628931": {
+      "year": 2018,
+      "round": 1,
+      "pick": 4,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628931",
+      "player": "Gabby Williams",
+      "team": "Golden State Valkyries",
+      "person_id": 1628931
+    },
+    "1642822": {
+      "year": 2025,
+      "round": 3,
+      "pick": 30,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642822",
+      "player": "Kaitlyn Chen",
+      "team": "Golden State Valkyries",
+      "person_id": 1642822
+    },
+    "1641656": {
+      "year": 2023,
+      "round": 1,
+      "pick": 8,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641656",
+      "player": "Laeticia Amihere",
+      "team": "Golden State Valkyries",
+      "person_id": 1641656
+    },
+    "1642794": {
+      "year": 2025,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642794",
+      "player": "Juste Jocyte",
+      "team": "Golden State Valkyries",
+      "person_id": 1642794
+    },
+    "203866": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/203866",
+      "player": "Kayla Thornton",
+      "team": "Golden State Valkyries",
+      "person_id": 203866
+    },
+    "1630097": {
+      "year": 2020,
+      "round": 2,
+      "pick": 23,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630097",
+      "player": "Kaila Charles",
+      "team": "Golden State Valkyries",
+      "person_id": 1630097
+    },
+    "1631039": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1631039",
+      "player": "Miela Sowah",
+      "team": "Golden State Valkyries",
+      "person_id": 1631039
+    },
+    "1641695": {
+      "year": 2023,
+      "round": 3,
+      "pick": 34,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1641695",
+      "player": "Ashten Prechtel",
+      "team": "Golden State Valkyries",
+      "person_id": 1641695
+    },
+    "1630387": {
+      "year": 2021,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1630387",
+      "player": "Iliana Rupert",
+      "team": "Golden State Valkyries",
+      "person_id": 1630387
+    },
+    "1642767": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642767",
+      "player": "Janelle Salaun",
+      "team": "Golden State Valkyries",
+      "person_id": 1642767
+    },
+    "203026": {
+      "year": 2012,
+      "round": 2,
+      "pick": 14,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/203026",
+      "player": "Tiffany Hayes",
+      "team": "Golden State Valkyries",
+      "person_id": 203026
+    },
+    "1631007": {
+      "year": 2022,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631007",
+      "player": "Veronica Burton",
+      "team": "Golden State Valkyries",
+      "person_id": 1631007
+    },
+    "1628508": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1628508",
+      "player": "Cecilia Zandalasini",
+      "team": "Golden State Valkyries",
+      "person_id": 1628508
+    },
+    "1643832": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643832",
+      "player": "Aminata Gueye",
+      "team": "Golden State Valkyries",
+      "person_id": 1643832
+    },
+    "204329": {
+      "year": 2015,
+      "round": 1,
+      "pick": 11,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204329",
+      "player": "Kiah Stokes",
+      "team": "Golden State Valkyries",
+      "person_id": 204329
+    },
+    "1642791": {
+      "year": 2025,
+      "round": 3,
+      "pick": 32,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642791",
+      "player": "Zaay Green",
+      "team": "Toronto Tempo",
+      "person_id": 1642791
+    },
+    "1643445": {
+      "year": 2026,
+      "round": 1,
+      "pick": 6,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643445",
+      "player": "Kiki Rice",
+      "team": "Toronto Tempo",
+      "person_id": 1643445
+    },
+    "1643420": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643420",
+      "player": "Laura Juskaite",
+      "team": "Toronto Tempo",
+      "person_id": 1643420
+    },
+    "1629497": {
+      "year": 2019,
+      "round": 2,
+      "pick": 19,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629497",
+      "player": "Marina Mabrey",
+      "team": "Toronto Tempo",
+      "person_id": 1629497
+    },
+    "1642832": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1642832",
+      "player": "Maria Gakdeng",
+      "team": "Toronto Tempo",
+      "person_id": 1642832
+    },
+    "1643457": {
+      "year": 2026,
+      "round": 2,
+      "pick": 22,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1643457",
+      "player": "Teonni Key",
+      "team": "Toronto Tempo",
+      "person_id": 1643457
+    },
+    "1631055": {
+      "year": 2022,
+      "round": 1,
+      "pick": 5,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1631055",
+      "player": "Nyara Sabally",
+      "team": "Toronto Tempo",
+      "person_id": 1631055
+    },
+    "1629576": {
+      "year": 2019,
+      "round": 3,
+      "pick": 27,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1629576",
+      "player": "Maria Conde",
+      "team": "Toronto Tempo",
+      "person_id": 1629576
+    },
+    "1631137": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1631137",
+      "player": "Kamila Borkowska",
+      "team": "Toronto Tempo",
+      "person_id": 1631137
+    },
+    "1628915": {
+      "year": 2018,
+      "round": 1,
+      "pick": 10,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628915",
+      "player": "Kia Nurse",
+      "team": "Toronto Tempo",
+      "person_id": 1628915
+    },
+    "1627701": {
+      "year": 2016,
+      "round": 3,
+      "pick": 35,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627701",
+      "player": "Temi Fagbenle",
+      "team": "Toronto Tempo",
+      "person_id": 1627701
+    },
+    "1628279": {
+      "year": 2017,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1628279",
+      "player": "Brittney Sykes",
+      "team": "Toronto Tempo",
+      "person_id": 1628279
+    },
+    "204330": {
+      "year": 2015,
+      "round": 1,
+      "pick": 12,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/204330",
+      "player": "Isabelle Harrison",
+      "team": "Toronto Tempo",
+      "person_id": 204330
+    },
+    "1627700": {
+      "year": 2016,
+      "round": 3,
+      "pick": 33,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1627700",
+      "player": "Julie Allemand",
+      "team": "Toronto Tempo",
+      "person_id": 1627700
+    },
+    "1642800": {
+      "year": 2025,
+      "round": 1,
+      "pick": 7,
+      "undrafted": false,
+      "source": "https://www.wnba.com/player/1642800",
+      "player": "Aneesah Morrow",
+      "team": "Toronto Tempo",
+      "person_id": 1642800
+    },
+    "1643706": {
+      "year": null,
+      "round": null,
+      "pick": null,
+      "undrafted": true,
+      "source": "https://www.wnba.com/player/1643706",
+      "player": "Ornella Bankole",
+      "team": "Toronto Tempo",
+      "person_id": 1643706
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "note": "Seating capacity for each club's home arena, from the venue operator or the league. Used when the club's WNBA.com team page leaves capacity blank, or when its listed figure is wrong for the building (Mystics). Basketball configuration where the source gives one.",
+  "checked": "2026-10-27",
+  "teams": {
+    "New York Liberty": {"capacity": 17553, "label": "basketball", "source": "https://www.barclayscenter.com/about-us", "source_name": "Barclays Center"},
+    "Phoenix Mercury": {"capacity": 17071, "label": "basketball", "source": "https://www.nba.com/news/all-30-nba-arenas-by-team", "source_name": "NBA.com"},
+    "Las Vegas Aces": {"capacity": 10891, "label": "basketball", "source": "https://assets.contentstack.io/v3/assets/bltc6ce635bc4868eb2/bltce6ef8394563b15d/mandalay-bay-convention-center-michelob-ultra-arena-tech-rider.pdf", "source_name": "MGM Resorts Michelob ULTRA Arena technical guide"},
+    "Dallas Wings": {"capacity": 7000, "label": "", "source": "https://utamavs.com/sports/2019/10/24/college-park-center", "source_name": "UT Arlington Athletics"},
+    "Connecticut Sun": {"capacity": 10000, "label": "", "source": "https://sun.wnba.com/mohegan-sun-arena", "source_name": "Connecticut Sun"},
+    "Chicago Sky": {"capacity": 10387, "label": "", "source": "https://www.wintrustarena.com/events/depaul-blue-demons", "source_name": "Wintrust Arena"},
+    "Atlanta Dream": {"capacity": 3500, "label": "basketball", "source": "https://gatewaycenterarena.com/blog/gateway-center-arena-college-park-slated-to-open-in-october/", "source_name": "Gateway Center Arena"},
+    "Golden State Valkyries": {"capacity": 18064, "label": "basketball", "source": "https://www.nba.com/news/all-30-nba-arenas-by-team", "source_name": "NBA.com"},
+    "Toronto Tempo": {"capacity": 8500, "label": "basketball", "source": "https://www.coca-colacoliseum.com/assets/doc/Coca-Cola-Coliseum-Venue-Rental-Technical-Guide-a153d7503a.pdf", "source_name": "Coca-Cola Coliseum venue guide"},
+    "Washington Mystics": {"capacity": 4200, "label": "", "source": "https://eventsdc.com/venue/carefirst-arena/carefirst-arena-fact-sheet", "source_name": "Events DC", "override": "WNBA.com lists 20,647, which matches a downtown NBA arena rather than this 4,200-seat building."}
+  }
+}

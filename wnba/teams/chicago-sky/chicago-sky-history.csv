@@ -1,0 +1,22 @@
+franchise,season,team_name,wins,losses,finish,playoffs,record_source
+Chicago Sky,2026,Chicago Sky,16,28,11th of 15 in the league,Missed playoffs,https://www.wnba.com/standings?season=2026
+Chicago Sky,2025,Chicago Sky,10,34,12th of 13 in the league,Missed playoffs,https://www.wnba.com/standings?season=2025
+Chicago Sky,2024,Chicago Sky,13,27,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2024
+Chicago Sky,2023,Chicago Sky,18,22,8th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2023
+Chicago Sky,2022,Chicago Sky,26,10,2nd of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2022
+Chicago Sky,2021,Chicago Sky,16,16,6th of 12 in the league,Won WNBA Finals,https://www.wnba.com/standings?season=2021
+Chicago Sky,2020,Chicago Sky,12,10,6th of 12 in the league,Lost in First Round,https://www.wnba.com/standings?season=2020
+Chicago Sky,2019,Chicago Sky,20,14,5th of 12 in the league,Lost in Second Round,https://www.wnba.com/standings?season=2019
+Chicago Sky,2018,Chicago Sky,13,21,10th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2018
+Chicago Sky,2017,Chicago Sky,12,22,9th of 12 in the league,Missed playoffs,https://www.wnba.com/standings?season=2017
+Chicago Sky,2016,Chicago Sky,18,16,4th of 12 in the league,Lost in Semifinals,https://www.wnba.com/standings?season=2016
+Chicago Sky,2015,Chicago Sky,21,13,2nd in the East,Lost in First Round,https://www.wnba.com/standings?season=2015
+Chicago Sky,2014,Chicago Sky,15,19,4th in the East,Lost in WNBA Finals,https://www.wnba.com/standings?season=2014
+Chicago Sky,2013,Chicago Sky,24,10,1st in the East,Lost in First Round,https://www.wnba.com/standings?season=2013
+Chicago Sky,2012,Chicago Sky,14,20,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2012
+Chicago Sky,2011,Chicago Sky,14,20,5th in the East,Missed playoffs,https://www.wnba.com/standings?season=2011
+Chicago Sky,2010,Chicago Sky,14,20,6th in the East,Missed playoffs,https://www.wnba.com/standings?season=2010
+Chicago Sky,2009,Chicago Sky,16,18,,Missed playoffs,https://www.wnba.com/api/schedule?season=2009&regionId=1
+Chicago Sky,2008,Chicago Sky,12,22,,Missed playoffs,https://www.wnba.com/api/schedule?season=2008&regionId=1
+Chicago Sky,2007,Chicago Sky,14,20,,Missed playoffs,https://www.wnba.com/api/schedule?season=2007&regionId=1
+Chicago Sky,2006,Chicago Sky,5,29,,Missed playoffs,https://www.wnba.com/api/schedule?season=2006&regionId=1

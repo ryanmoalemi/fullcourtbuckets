@@ -1,0 +1,3387 @@
+{
+  "source": "WNBA.com standings (2010 on) and the WNBA.com schedule feed (every season)",
+  "checked_at": "2026-10-28T03:53:35+00:00",
+  "note": "W-L and finish from wnba.com/standings when published (2010 on); before 2010 the W-L is counted from final regular-season scores in the league schedule feed and the finish is left blank. Playoff result from the series line in the same feed.",
+  "teams": {
+    "New York Liberty": [
+      {
+        "season": 2026,
+        "team_name": "New York Liberty",
+        "wins": 26,
+        "losses": 18,
+        "finish": "8th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "New York Liberty",
+        "wins": 27,
+        "losses": 17,
+        "finish": "5th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "New York Liberty",
+        "wins": 32,
+        "losses": 8,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "New York Liberty",
+        "wins": 32,
+        "losses": 8,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "New York Liberty",
+        "wins": 16,
+        "losses": 20,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "New York Liberty",
+        "wins": 12,
+        "losses": 20,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "New York Liberty",
+        "wins": 2,
+        "losses": 20,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "New York Liberty",
+        "wins": 10,
+        "losses": 24,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "New York Liberty",
+        "wins": 7,
+        "losses": 27,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "New York Liberty",
+        "wins": 22,
+        "losses": 12,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "New York Liberty",
+        "wins": 21,
+        "losses": 13,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "New York Liberty",
+        "wins": 23,
+        "losses": 11,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "New York Liberty",
+        "wins": 15,
+        "losses": 19,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "New York Liberty",
+        "wins": 11,
+        "losses": 23,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "New York Liberty",
+        "wins": 15,
+        "losses": 19,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "New York Liberty",
+        "wins": 19,
+        "losses": 15,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "New York Liberty",
+        "wins": 22,
+        "losses": 12,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "New York Liberty",
+        "wins": 13,
+        "losses": 21,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "New York Liberty",
+        "wins": 19,
+        "losses": 15,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "New York Liberty",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "New York Liberty",
+        "wins": 11,
+        "losses": 23,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "New York Liberty",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "New York Liberty",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "New York Liberty",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "New York Liberty",
+        "wins": 18,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "New York Liberty",
+        "wins": 21,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "New York Liberty",
+        "wins": 20,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "New York Liberty",
+        "wins": 18,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "New York Liberty",
+        "wins": 18,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      },
+      {
+        "season": 1997,
+        "team_name": "New York Liberty",
+        "wins": 17,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+      }
+    ],
+    "Phoenix Mercury": [
+      {
+        "season": 2026,
+        "team_name": "Phoenix Mercury",
+        "wins": 16,
+        "losses": 28,
+        "finish": "10th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Phoenix Mercury",
+        "wins": 27,
+        "losses": 17,
+        "finish": "4th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Phoenix Mercury",
+        "wins": 19,
+        "losses": 21,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Phoenix Mercury",
+        "wins": 9,
+        "losses": 31,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Phoenix Mercury",
+        "wins": 15,
+        "losses": 21,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Phoenix Mercury",
+        "wins": 19,
+        "losses": 13,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Phoenix Mercury",
+        "wins": 13,
+        "losses": 9,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Phoenix Mercury",
+        "wins": 15,
+        "losses": 19,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Phoenix Mercury",
+        "wins": 20,
+        "losses": 14,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Phoenix Mercury",
+        "wins": 18,
+        "losses": 16,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Phoenix Mercury",
+        "wins": 16,
+        "losses": 18,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Phoenix Mercury",
+        "wins": 20,
+        "losses": 14,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Phoenix Mercury",
+        "wins": 29,
+        "losses": 5,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Phoenix Mercury",
+        "wins": 19,
+        "losses": 15,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Phoenix Mercury",
+        "wins": 7,
+        "losses": 27,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Phoenix Mercury",
+        "wins": 19,
+        "losses": 15,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Phoenix Mercury",
+        "wins": 15,
+        "losses": 19,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Phoenix Mercury",
+        "wins": 23,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Phoenix Mercury",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Phoenix Mercury",
+        "wins": 23,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Phoenix Mercury",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Phoenix Mercury",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Phoenix Mercury",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Phoenix Mercury",
+        "wins": 8,
+        "losses": 26,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Phoenix Mercury",
+        "wins": 11,
+        "losses": 21,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Phoenix Mercury",
+        "wins": 13,
+        "losses": 19,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Phoenix Mercury",
+        "wins": 20,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Phoenix Mercury",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "Phoenix Mercury",
+        "wins": 19,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      },
+      {
+        "season": 1997,
+        "team_name": "Phoenix Mercury",
+        "wins": 16,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+      }
+    ],
+    "Las Vegas Aces": [
+      {
+        "season": 2026,
+        "team_name": "Las Vegas Aces",
+        "wins": 31,
+        "losses": 13,
+        "finish": "3rd of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Las Vegas Aces",
+        "wins": 30,
+        "losses": 14,
+        "finish": "2nd of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Las Vegas Aces",
+        "wins": 27,
+        "losses": 13,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Las Vegas Aces",
+        "wins": 34,
+        "losses": 6,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Las Vegas Aces",
+        "wins": 26,
+        "losses": 10,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Las Vegas Aces",
+        "wins": 24,
+        "losses": 8,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Las Vegas Aces",
+        "wins": 18,
+        "losses": 4,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Las Vegas Aces",
+        "wins": 21,
+        "losses": 13,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Las Vegas Aces",
+        "wins": 14,
+        "losses": 20,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "San Antonio Stars",
+        "wins": 8,
+        "losses": 26,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "San Antonio Stars",
+        "wins": 7,
+        "losses": 27,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "San Antonio Stars",
+        "wins": 8,
+        "losses": 26,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "San Antonio Stars",
+        "wins": 16,
+        "losses": 18,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 12,
+        "losses": 22,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 21,
+        "losses": 13,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 18,
+        "losses": 16,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 14,
+        "losses": 20,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 15,
+        "losses": 19,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 24,
+        "losses": 10,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 20,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 13,
+        "losses": 21,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 7,
+        "losses": 27,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 9,
+        "losses": 25,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "San Antonio Silver Stars",
+        "wins": 12,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Utah Starzz",
+        "wins": 20,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Utah Starzz",
+        "wins": 19,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Utah Starzz",
+        "wins": 18,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Utah Starzz",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "Utah Starzz",
+        "wins": 8,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      },
+      {
+        "season": 1997,
+        "team_name": "Utah Starzz",
+        "wins": 7,
+        "losses": 21,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+      }
+    ],
+    "Los Angeles Sparks": [
+      {
+        "season": 2026,
+        "team_name": "Los Angeles Sparks",
+        "wins": 16,
+        "losses": 28,
+        "finish": "12th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Los Angeles Sparks",
+        "wins": 21,
+        "losses": 23,
+        "finish": "9th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Los Angeles Sparks",
+        "wins": 8,
+        "losses": 32,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Los Angeles Sparks",
+        "wins": 17,
+        "losses": 23,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Los Angeles Sparks",
+        "wins": 13,
+        "losses": 23,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Los Angeles Sparks",
+        "wins": 12,
+        "losses": 20,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Los Angeles Sparks",
+        "wins": 15,
+        "losses": 7,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Los Angeles Sparks",
+        "wins": 22,
+        "losses": 12,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Los Angeles Sparks",
+        "wins": 19,
+        "losses": 15,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Los Angeles Sparks",
+        "wins": 26,
+        "losses": 8,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Los Angeles Sparks",
+        "wins": 26,
+        "losses": 8,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Los Angeles Sparks",
+        "wins": 14,
+        "losses": 20,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Los Angeles Sparks",
+        "wins": 16,
+        "losses": 18,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Los Angeles Sparks",
+        "wins": 24,
+        "losses": 10,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Los Angeles Sparks",
+        "wins": 24,
+        "losses": 10,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Los Angeles Sparks",
+        "wins": 15,
+        "losses": 19,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Los Angeles Sparks",
+        "wins": 13,
+        "losses": 21,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Los Angeles Sparks",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Los Angeles Sparks",
+        "wins": 20,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Los Angeles Sparks",
+        "wins": 10,
+        "losses": 24,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Los Angeles Sparks",
+        "wins": 25,
+        "losses": 9,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Los Angeles Sparks",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Los Angeles Sparks",
+        "wins": 25,
+        "losses": 9,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Los Angeles Sparks",
+        "wins": 24,
+        "losses": 10,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Los Angeles Sparks",
+        "wins": 25,
+        "losses": 7,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Los Angeles Sparks",
+        "wins": 28,
+        "losses": 4,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Los Angeles Sparks",
+        "wins": 28,
+        "losses": 4,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Reached Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Los Angeles Sparks",
+        "wins": 20,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "Los Angeles Sparks",
+        "wins": 12,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      },
+      {
+        "season": 1997,
+        "team_name": "Los Angeles Sparks",
+        "wins": 14,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1997&regionId=1"
+      }
+    ],
+    "Dallas Wings": [
+      {
+        "season": 2026,
+        "team_name": "Dallas Wings",
+        "wins": 27,
+        "losses": 17,
+        "finish": "7th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Dallas Wings",
+        "wins": 10,
+        "losses": 34,
+        "finish": "13th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Dallas Wings",
+        "wins": 9,
+        "losses": 31,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Dallas Wings",
+        "wins": 22,
+        "losses": 18,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Dallas Wings",
+        "wins": 18,
+        "losses": 18,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Dallas Wings",
+        "wins": 14,
+        "losses": 18,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Dallas Wings",
+        "wins": 8,
+        "losses": 14,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Dallas Wings",
+        "wins": 10,
+        "losses": 24,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Dallas Wings",
+        "wins": 15,
+        "losses": 19,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Dallas Wings",
+        "wins": 16,
+        "losses": 18,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Dallas Wings",
+        "wins": 11,
+        "losses": 23,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Tulsa Shock",
+        "wins": 18,
+        "losses": 16,
+        "finish": "3rd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Tulsa Shock",
+        "wins": 12,
+        "losses": 22,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Tulsa Shock",
+        "wins": 11,
+        "losses": 23,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Tulsa Shock",
+        "wins": 9,
+        "losses": 25,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Tulsa Shock",
+        "wins": 3,
+        "losses": 31,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Tulsa Shock",
+        "wins": 6,
+        "losses": 28,
+        "finish": "6th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Detroit Shock",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Detroit Shock",
+        "wins": 22,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Detroit Shock",
+        "wins": 24,
+        "losses": 10,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Detroit Shock",
+        "wins": 23,
+        "losses": 11,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Detroit Shock",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Detroit Shock",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Detroit Shock",
+        "wins": 25,
+        "losses": 9,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Detroit Shock",
+        "wins": 9,
+        "losses": 23,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Detroit Shock",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Detroit Shock",
+        "wins": 14,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Detroit Shock",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "Detroit Shock",
+        "wins": 17,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      }
+    ],
+    "Washington Mystics": [
+      {
+        "season": 2026,
+        "team_name": "Washington Mystics",
+        "wins": 28,
+        "losses": 16,
+        "finish": "5th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Washington Mystics",
+        "wins": 16,
+        "losses": 28,
+        "finish": "10th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Washington Mystics",
+        "wins": 14,
+        "losses": 26,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Washington Mystics",
+        "wins": 19,
+        "losses": 21,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Washington Mystics",
+        "wins": 22,
+        "losses": 14,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Washington Mystics",
+        "wins": 12,
+        "losses": 20,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Washington Mystics",
+        "wins": 9,
+        "losses": 13,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Washington Mystics",
+        "wins": 26,
+        "losses": 8,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Washington Mystics",
+        "wins": 22,
+        "losses": 12,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Washington Mystics",
+        "wins": 18,
+        "losses": 16,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Washington Mystics",
+        "wins": 13,
+        "losses": 21,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Washington Mystics",
+        "wins": 18,
+        "losses": 16,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Washington Mystics",
+        "wins": 16,
+        "losses": 18,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Washington Mystics",
+        "wins": 17,
+        "losses": 17,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Washington Mystics",
+        "wins": 5,
+        "losses": 29,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Washington Mystics",
+        "wins": 6,
+        "losses": 28,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Washington Mystics",
+        "wins": 22,
+        "losses": 12,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Washington Mystics",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Washington Mystics",
+        "wins": 10,
+        "losses": 24,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Washington Mystics",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Washington Mystics",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Washington Mystics",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Washington Mystics",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Washington Mystics",
+        "wins": 9,
+        "losses": 25,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Washington Mystics",
+        "wins": 17,
+        "losses": 15,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Washington Mystics",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Washington Mystics",
+        "wins": 14,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Washington Mystics",
+        "wins": 12,
+        "losses": 20,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      },
+      {
+        "season": 1998,
+        "team_name": "Washington Mystics",
+        "wins": 3,
+        "losses": 27,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1998&regionId=1"
+      }
+    ],
+    "Connecticut Sun": [
+      {
+        "season": 2026,
+        "team_name": "Connecticut Sun",
+        "wins": 11,
+        "losses": 33,
+        "finish": "14th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Connecticut Sun",
+        "wins": 11,
+        "losses": 33,
+        "finish": "11th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Connecticut Sun",
+        "wins": 28,
+        "losses": 12,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Connecticut Sun",
+        "wins": 27,
+        "losses": 13,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Connecticut Sun",
+        "wins": 25,
+        "losses": 11,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Connecticut Sun",
+        "wins": 26,
+        "losses": 6,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Connecticut Sun",
+        "wins": 10,
+        "losses": 12,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Connecticut Sun",
+        "wins": 23,
+        "losses": 11,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Connecticut Sun",
+        "wins": 21,
+        "losses": 13,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Connecticut Sun",
+        "wins": 21,
+        "losses": 13,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Connecticut Sun",
+        "wins": 14,
+        "losses": 20,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Connecticut Sun",
+        "wins": 15,
+        "losses": 19,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Connecticut Sun",
+        "wins": 13,
+        "losses": 21,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Connecticut Sun",
+        "wins": 10,
+        "losses": 24,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Connecticut Sun",
+        "wins": 25,
+        "losses": 9,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Connecticut Sun",
+        "wins": 21,
+        "losses": 13,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Connecticut Sun",
+        "wins": 17,
+        "losses": 17,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Connecticut Sun",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Connecticut Sun",
+        "wins": 21,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Connecticut Sun",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Connecticut Sun",
+        "wins": 26,
+        "losses": 8,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Connecticut Sun",
+        "wins": 26,
+        "losses": 8,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Connecticut Sun",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Connecticut Sun",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Orlando Miracle",
+        "wins": 16,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Orlando Miracle",
+        "wins": 13,
+        "losses": 19,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Orlando Miracle",
+        "wins": 16,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Lost in Playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Orlando Miracle",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      }
+    ],
+    "Minnesota Lynx": [
+      {
+        "season": 2026,
+        "team_name": "Minnesota Lynx",
+        "wins": 33,
+        "losses": 11,
+        "finish": "1st of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Minnesota Lynx",
+        "wins": 34,
+        "losses": 10,
+        "finish": "1st of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Minnesota Lynx",
+        "wins": 30,
+        "losses": 10,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Minnesota Lynx",
+        "wins": 19,
+        "losses": 21,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Minnesota Lynx",
+        "wins": 14,
+        "losses": 22,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Minnesota Lynx",
+        "wins": 22,
+        "losses": 10,
+        "finish": "3rd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Minnesota Lynx",
+        "wins": 14,
+        "losses": 8,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Minnesota Lynx",
+        "wins": 18,
+        "losses": 16,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Minnesota Lynx",
+        "wins": 18,
+        "losses": 16,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Minnesota Lynx",
+        "wins": 27,
+        "losses": 7,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Minnesota Lynx",
+        "wins": 28,
+        "losses": 6,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Minnesota Lynx",
+        "wins": 22,
+        "losses": 12,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Minnesota Lynx",
+        "wins": 25,
+        "losses": 9,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Minnesota Lynx",
+        "wins": 26,
+        "losses": 8,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Minnesota Lynx",
+        "wins": 27,
+        "losses": 7,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Minnesota Lynx",
+        "wins": 27,
+        "losses": 7,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Minnesota Lynx",
+        "wins": 13,
+        "losses": 21,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Minnesota Lynx",
+        "wins": 14,
+        "losses": 20,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Minnesota Lynx",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Minnesota Lynx",
+        "wins": 10,
+        "losses": 24,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Minnesota Lynx",
+        "wins": 10,
+        "losses": 24,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Minnesota Lynx",
+        "wins": 14,
+        "losses": 20,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Minnesota Lynx",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Minnesota Lynx",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Minnesota Lynx",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Minnesota Lynx",
+        "wins": 12,
+        "losses": 20,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Minnesota Lynx",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      },
+      {
+        "season": 1999,
+        "team_name": "Minnesota Lynx",
+        "wins": 15,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=1999&regionId=1"
+      }
+    ],
+    "Indiana Fever": [
+      {
+        "season": 2026,
+        "team_name": "Indiana Fever",
+        "wins": 28,
+        "losses": 16,
+        "finish": "6th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Indiana Fever",
+        "wins": 24,
+        "losses": 20,
+        "finish": "6th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Indiana Fever",
+        "wins": 20,
+        "losses": 20,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Indiana Fever",
+        "wins": 13,
+        "losses": 27,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Indiana Fever",
+        "wins": 5,
+        "losses": 31,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Indiana Fever",
+        "wins": 6,
+        "losses": 26,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Indiana Fever",
+        "wins": 6,
+        "losses": 16,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Indiana Fever",
+        "wins": 13,
+        "losses": 21,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Indiana Fever",
+        "wins": 6,
+        "losses": 28,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Indiana Fever",
+        "wins": 9,
+        "losses": 25,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Indiana Fever",
+        "wins": 17,
+        "losses": 17,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Indiana Fever",
+        "wins": 20,
+        "losses": 14,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Indiana Fever",
+        "wins": 16,
+        "losses": 18,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Indiana Fever",
+        "wins": 16,
+        "losses": 18,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Indiana Fever",
+        "wins": 22,
+        "losses": 12,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Indiana Fever",
+        "wins": 21,
+        "losses": 13,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Indiana Fever",
+        "wins": 21,
+        "losses": 13,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Indiana Fever",
+        "wins": 22,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Indiana Fever",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Indiana Fever",
+        "wins": 21,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Indiana Fever",
+        "wins": 21,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Indiana Fever",
+        "wins": 21,
+        "losses": 13,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Indiana Fever",
+        "wins": 15,
+        "losses": 19,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Indiana Fever",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Indiana Fever",
+        "wins": 16,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Indiana Fever",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Indiana Fever",
+        "wins": 9,
+        "losses": 23,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      }
+    ],
+    "Portland Fire": [
+      {
+        "season": 2026,
+        "team_name": "Portland Fire",
+        "wins": 17,
+        "losses": 27,
+        "finish": "9th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Portland Fire",
+        "wins": 16,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Portland Fire",
+        "wins": 11,
+        "losses": 21,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Portland Fire",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      }
+    ],
+    "Seattle Storm": [
+      {
+        "season": 2026,
+        "team_name": "Seattle Storm",
+        "wins": 8,
+        "losses": 36,
+        "finish": "15th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Seattle Storm",
+        "wins": 23,
+        "losses": 21,
+        "finish": "7th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Seattle Storm",
+        "wins": 25,
+        "losses": 15,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Seattle Storm",
+        "wins": 11,
+        "losses": 29,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Seattle Storm",
+        "wins": 22,
+        "losses": 14,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Seattle Storm",
+        "wins": 21,
+        "losses": 11,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Seattle Storm",
+        "wins": 18,
+        "losses": 4,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Seattle Storm",
+        "wins": 18,
+        "losses": 16,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Seattle Storm",
+        "wins": 26,
+        "losses": 8,
+        "finish": "1st of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Seattle Storm",
+        "wins": 15,
+        "losses": 19,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Seattle Storm",
+        "wins": 16,
+        "losses": 18,
+        "finish": "7th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Seattle Storm",
+        "wins": 10,
+        "losses": 24,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Seattle Storm",
+        "wins": 12,
+        "losses": 22,
+        "finish": "5th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Seattle Storm",
+        "wins": 17,
+        "losses": 17,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Seattle Storm",
+        "wins": 16,
+        "losses": 18,
+        "finish": "4th in the West",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Seattle Storm",
+        "wins": 21,
+        "losses": 13,
+        "finish": "2nd in the West",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Seattle Storm",
+        "wins": 28,
+        "losses": 6,
+        "finish": "1st in the West",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Seattle Storm",
+        "wins": 20,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Seattle Storm",
+        "wins": 22,
+        "losses": 12,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Seattle Storm",
+        "wins": 17,
+        "losses": 17,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Seattle Storm",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      },
+      {
+        "season": 2005,
+        "team_name": "Seattle Storm",
+        "wins": 20,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2005&regionId=1"
+      },
+      {
+        "season": 2004,
+        "team_name": "Seattle Storm",
+        "wins": 20,
+        "losses": 14,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2004&regionId=1"
+      },
+      {
+        "season": 2003,
+        "team_name": "Seattle Storm",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2003&regionId=1"
+      },
+      {
+        "season": 2002,
+        "team_name": "Seattle Storm",
+        "wins": 17,
+        "losses": 15,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2002&regionId=1"
+      },
+      {
+        "season": 2001,
+        "team_name": "Seattle Storm",
+        "wins": 10,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2001&regionId=1"
+      },
+      {
+        "season": 2000,
+        "team_name": "Seattle Storm",
+        "wins": 6,
+        "losses": 26,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2000&regionId=1"
+      }
+    ],
+    "Chicago Sky": [
+      {
+        "season": 2026,
+        "team_name": "Chicago Sky",
+        "wins": 16,
+        "losses": 28,
+        "finish": "11th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Chicago Sky",
+        "wins": 10,
+        "losses": 34,
+        "finish": "12th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Chicago Sky",
+        "wins": 13,
+        "losses": 27,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Chicago Sky",
+        "wins": 18,
+        "losses": 22,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Chicago Sky",
+        "wins": 26,
+        "losses": 10,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Chicago Sky",
+        "wins": 16,
+        "losses": 16,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Won WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Chicago Sky",
+        "wins": 12,
+        "losses": 10,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Chicago Sky",
+        "wins": 20,
+        "losses": 14,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Chicago Sky",
+        "wins": 13,
+        "losses": 21,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Chicago Sky",
+        "wins": 12,
+        "losses": 22,
+        "finish": "9th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Chicago Sky",
+        "wins": 18,
+        "losses": 16,
+        "finish": "4th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Chicago Sky",
+        "wins": 21,
+        "losses": 13,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Chicago Sky",
+        "wins": 15,
+        "losses": 19,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Chicago Sky",
+        "wins": 24,
+        "losses": 10,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Chicago Sky",
+        "wins": 14,
+        "losses": 20,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Chicago Sky",
+        "wins": 14,
+        "losses": 20,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Chicago Sky",
+        "wins": 14,
+        "losses": 20,
+        "finish": "6th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Chicago Sky",
+        "wins": 16,
+        "losses": 18,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Chicago Sky",
+        "wins": 12,
+        "losses": 22,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      },
+      {
+        "season": 2007,
+        "team_name": "Chicago Sky",
+        "wins": 14,
+        "losses": 20,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2007&regionId=1"
+      },
+      {
+        "season": 2006,
+        "team_name": "Chicago Sky",
+        "wins": 5,
+        "losses": 29,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2006&regionId=1"
+      }
+    ],
+    "Atlanta Dream": [
+      {
+        "season": 2026,
+        "team_name": "Atlanta Dream",
+        "wins": 30,
+        "losses": 14,
+        "finish": "4th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Atlanta Dream",
+        "wins": 30,
+        "losses": 14,
+        "finish": "3rd of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      },
+      {
+        "season": 2024,
+        "team_name": "Atlanta Dream",
+        "wins": 15,
+        "losses": 25,
+        "finish": "8th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2024",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2024&regionId=1"
+      },
+      {
+        "season": 2023,
+        "team_name": "Atlanta Dream",
+        "wins": 19,
+        "losses": 21,
+        "finish": "5th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2023",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2023&regionId=1"
+      },
+      {
+        "season": 2022,
+        "team_name": "Atlanta Dream",
+        "wins": 14,
+        "losses": 22,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2022",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2022&regionId=1"
+      },
+      {
+        "season": 2021,
+        "team_name": "Atlanta Dream",
+        "wins": 8,
+        "losses": 24,
+        "finish": "11th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2021",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2021&regionId=1"
+      },
+      {
+        "season": 2020,
+        "team_name": "Atlanta Dream",
+        "wins": 7,
+        "losses": 15,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2020",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2020&regionId=1"
+      },
+      {
+        "season": 2019,
+        "team_name": "Atlanta Dream",
+        "wins": 8,
+        "losses": 26,
+        "finish": "12th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2019",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2019&regionId=1"
+      },
+      {
+        "season": 2018,
+        "team_name": "Atlanta Dream",
+        "wins": 23,
+        "losses": 11,
+        "finish": "2nd of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2018",
+        "playoffs": "Lost in Semifinals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2018&regionId=1"
+      },
+      {
+        "season": 2017,
+        "team_name": "Atlanta Dream",
+        "wins": 12,
+        "losses": 22,
+        "finish": "10th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2017",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2017&regionId=1"
+      },
+      {
+        "season": 2016,
+        "team_name": "Atlanta Dream",
+        "wins": 17,
+        "losses": 17,
+        "finish": "6th of 12 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2016",
+        "playoffs": "Lost in Second Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2016&regionId=1"
+      },
+      {
+        "season": 2015,
+        "team_name": "Atlanta Dream",
+        "wins": 15,
+        "losses": 19,
+        "finish": "5th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2015",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2015&regionId=1"
+      },
+      {
+        "season": 2014,
+        "team_name": "Atlanta Dream",
+        "wins": 19,
+        "losses": 15,
+        "finish": "1st in the East",
+        "record_source": "https://www.wnba.com/standings?season=2014",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2014&regionId=1"
+      },
+      {
+        "season": 2013,
+        "team_name": "Atlanta Dream",
+        "wins": 17,
+        "losses": 17,
+        "finish": "2nd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2013",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2013&regionId=1"
+      },
+      {
+        "season": 2012,
+        "team_name": "Atlanta Dream",
+        "wins": 19,
+        "losses": 15,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2012",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2012&regionId=1"
+      },
+      {
+        "season": 2011,
+        "team_name": "Atlanta Dream",
+        "wins": 20,
+        "losses": 14,
+        "finish": "3rd in the East",
+        "record_source": "https://www.wnba.com/standings?season=2011",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2011&regionId=1"
+      },
+      {
+        "season": 2010,
+        "team_name": "Atlanta Dream",
+        "wins": 19,
+        "losses": 15,
+        "finish": "4th in the East",
+        "record_source": "https://www.wnba.com/standings?season=2010",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2010&regionId=1"
+      },
+      {
+        "season": 2009,
+        "team_name": "Atlanta Dream",
+        "wins": 18,
+        "losses": 16,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2009&regionId=1"
+      },
+      {
+        "season": 2008,
+        "team_name": "Atlanta Dream",
+        "wins": 4,
+        "losses": 30,
+        "finish": null,
+        "record_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2008&regionId=1"
+      }
+    ],
+    "Golden State Valkyries": [
+      {
+        "season": 2026,
+        "team_name": "Golden State Valkyries",
+        "wins": 32,
+        "losses": 12,
+        "finish": "2nd of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Lost in WNBA Finals",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      },
+      {
+        "season": 2025,
+        "team_name": "Golden State Valkyries",
+        "wins": 23,
+        "losses": 21,
+        "finish": "8th of 13 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2025",
+        "playoffs": "Lost in First Round",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2025&regionId=1"
+      }
+    ],
+    "Toronto Tempo": [
+      {
+        "season": 2026,
+        "team_name": "Toronto Tempo",
+        "wins": 11,
+        "losses": 33,
+        "finish": "13th of 15 in the league",
+        "record_source": "https://www.wnba.com/standings?season=2026",
+        "playoffs": "Missed playoffs",
+        "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
+      }
+    ]
+  }
+}

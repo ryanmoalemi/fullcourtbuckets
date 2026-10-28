@@ -60,11 +60,28 @@ class TeamPagePhaseTwoTests(unittest.TestCase):
         self.assertEqual(tx.bio_cells({'height': '6-4', 'age': 30, 'experience': 'R', 'school': '  ', 'country': 'Australia'}),
                          ['6-4', '30', 'Rookie', 'Australia'])
 
-    def test_franchise_section_credits_wnba_com_and_skips_missing_capacity(self):
+    def test_franchise_section_credits_wnba_com_and_cites_capacity_source(self):
         html = tx.franchise_html(ROOT, {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'})
         self.assertIn('WNBA.com', html)
-        self.assertNotIn('capacity', html)
+        self.assertIn('capacity 17,553 for basketball, per <a href="https://www.barclayscenter.com/about-us"', html)
         self.assertNotIn('ESPN', html)
+        self.assertEqual(tx.arena_capacity(None, 'X', {}), (None, {}))
+        self.assertEqual(tx.arena_capacity(None, 'X', {'arena_capacity': '19060', 'source': 's'})[0], 19060)
+
+    def test_draft_history_and_schedule_sections(self):
+        self.assertEqual(tx.draft_text({'undrafted': True}), 'Undrafted')
+        self.assertEqual(tx.draft_text({'year': 2020, 'round': 1, 'pick': 2}), '2020 R1, No. 2')
+        self.assertEqual(tx.draft_text({}), '')
+        slot = {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'}
+        hist = tx.history_html(ROOT, slot)
+        self.assertIn('data-fcb-dynamic="team-history"', hist)
+        self.assertIn('<td>1997</td>', hist)
+        sched = tx.schedule_html(ROOT, slot)
+        self.assertIn('data-fcb-dynamic="team-season-schedule"', sched)
+        self.assertEqual(tx.schedule_csv(ROOT, slot).count('Regular season'), 44)
+        for text in (hist, sched):
+            self.assertNotIn('ESPN', text)
+            self.assertNotIn('balldontlie', text.casefold())
 
     def test_playoff_section_is_dynamic_and_absent_for_non_playoff_team(self):
         dream = tx.playoff_html(ROOT, {'full_name': 'Atlanta Dream', 'slug': 'atlanta-dream'})
