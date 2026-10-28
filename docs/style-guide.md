@@ -78,3 +78,19 @@ The seven standing rules (verify outside numbers, original data hooks only where
 - In `content/articles/*/article.md`, a paragraph starting with "Data through", "Methods:", "Source:"/"Sources:" or "Download (CC0):" is moved below the section's table by `automation/publish_articles.py` and rendered as `<p class="table-note" data-fcb-dynamic="data-note">` (time-sensitive). Hand-built pages use the same class.
 - Wide tables scroll sideways inside the column on phones with edge shadows and a visible "Scroll for more columns →" hint (`assets/site-nav.css`, `assets/site-nav.js`). No column may be hidden without that cue.
 - Enforced by `automation/test_article_data_notes.py`.
+
+## Keys to victory and other list-style sections (Ryan, Oct 27, 2026)
+- Give each group its own H3 (`### Atlanta Dream`, `### Golden State Valkyries`), then each item its own H4 with a short, scannable label (`#### Push the pace`, `#### Hold Atlanta to 64 or fewer`).
+- Under each H4, write one or two sentences with the stat that backs it. Don't repeat the label as the first words.
+- The methods/data note goes once, at the end of the section, not between the H2 and the first item.
+- If the page has a table of contents, list the H3s in it.
+
+## Photos throughout articles (Ryan, Oct 27, 2026)
+- Photos in the body are encouraged, not just the hero. Put them where they fit the text (a player next to her key, the arena next to the schedule).
+- Every photo is 16:9, the same as the hero. Crop with `automation/crop_16x9.py`, save a 1600x900 `.jpg` and `.webp` in `images/articles/<slug>/`, and check that no head is cut off.
+- Use only licensed images (Wikimedia Commons CC BY / CC BY-SA / CC0 or similar, or ones already in the repo). Credit each one in the hero style: `Photo: Author, LICENSE, via Wikimedia Commons`, with the file and license links, plus descriptive alt text.
+- In `article.md`, one line: `!photo: /images/articles/<slug>/<name>.jpg | alt | Photo: Author, LICENSE, via Wikimedia Commons | file URL | license URL | focal`.
+- Never put a photo between a heading and its table.
+
+## Readability review before publish (Ryan, Oct 27, 2026)
+Every new article runs the GPT + Gemini readability review before it is published. See `docs/READABILITY_REVIEW.md`.

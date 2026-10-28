@@ -197,6 +197,27 @@ def place_notes(blocks: list) -> list:
     return out
 
 
+# In-body photo line (docs/style-guide.md): every photo is a 16:9 file, licensed and credited.
+# !photo: /images/articles/<slug>/<name>.jpg | alt text | Photo: Author, LICENSE, via Wikimedia Commons | credit url | license url | focal
+SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10px;font:800 24px/1.1 Barlow,sans-serif;'
+                   'color:#fff}.article h4.sub-h4{margin:18px 0 6px;font:700 18px/1.25 Barlow,sans-serif;color:#ff9800}</style>')
+BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
+
+
+def body_photo_html(parts: list) -> str:
+    src, alt, credit = parts[0], parts[1], parts[2]
+    credit_url = parts[3] if len(parts) > 3 else ''
+    license_url = parts[4] if len(parts) > 4 else ''
+    focal = parts[5] if len(parts) > 5 and parts[5] else 'center 20%'
+    webp = src.rsplit('.', 1)[0] + '.webp'
+    return (
+        f'<figure class="inline-photo body-photo"><picture><source srcset="{esc(webp)}" type="image/webp">'
+        f'<img src="{esc(src)}" alt="{esc(alt)}" width="1600" height="900" loading="lazy" decoding="async" '
+        f'style="object-position:{esc(focal)}"></picture>'
+        f'<figcaption>{caption_html(credit, credit_url, license_url)}</figcaption></figure>'
+    )
+
+
 def body_html(markdown: str) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
@@ -250,6 +271,18 @@ def body_html(markdown: str) -> str:
             flush_bullets()
             blocks.append(('h2', line[3:].strip()))
             continue
+        photo = BODY_PHOTO_RE.fullmatch(line.strip())
+        if photo:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('photo', [x.strip() for x in photo.group(1).split('|')]))
+            continue
+        if line.startswith('### ') or line.startswith('#### '):
+            flush_paragraph()
+            flush_bullets()
+            level = 'h4' if line.startswith('#### ') else 'h3'
+            blocks.append((level, line.split(' ', 1)[1].strip()))
+            continue
         if line.startswith('- '):
             flush_paragraph()
             bullets.append(line[2:].strip())
@@ -266,6 +299,14 @@ def body_html(markdown: str) -> str:
     for kind, value in blocks:
         if kind == 'h2':
             html_blocks.append(f'<h2 class="section-title">{esc(value)}</h2>')
+            continue
+        if kind == 'photo':
+            html_blocks.append(body_photo_html(value))
+            continue
+        if kind in ('h3', 'h4'):
+            if not any('sub-h-css' in b for b in html_blocks):
+                html_blocks.append(SUB_HEADING_CSS)
+            html_blocks.append(f'<{kind} class="sub-{kind}">{inline(value)}</{kind}>')
             continue
         if kind == 'ul':
             items = ''.join(f'<li>{inline(item)}</li>' for item in value)
