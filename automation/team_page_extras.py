@@ -63,7 +63,16 @@ def team_facts(root, name: str) -> dict:
 
 
 def facts_checked(root) -> str:
-    return str(load_facts(root).get('checked_at') or '')[:10]
+    """Day the WNBA.com snapshot was taken, in Pacific time (the site's clock)."""
+    raw = str(load_facts(root).get('checked_at') or '')
+    if not raw:
+        return ''
+    try:
+        import datetime as dt
+        from zoneinfo import ZoneInfo
+        return dt.datetime.fromisoformat(raw).astimezone(ZoneInfo('America/Los_Angeles')).date().isoformat()
+    except ValueError:
+        return raw[:10]
 
 
 def roster_facts(facts: dict, player_name: str, number: str = '') -> dict:
@@ -242,3 +251,220 @@ def download_html(slot: dict, route: str, updated: str) -> str:
         + dynamic('div', 'team-download', 'data/wnba/players', updated, body)
         + '</section>'
     )
+
+
+# ---------------------------------------------------------------- phase 2 --
+
+_PORTRAITS: dict = {}
+
+
+def portraits(root) -> dict:
+    """Approved player portraits keyed by slug (content/player-illustrations.json)."""
+    if root is None:
+        return {}
+    key = str(root)
+    if key not in _PORTRAITS:
+        found = {}
+        try:
+            data = json.loads((Path(root) / 'content' / 'player-illustrations.json').read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            data = {}
+        for row in data.get('portraits') or []:
+            if row.get('approved') and row.get('slug') and str(row.get('src') or '').startswith('/'):
+                found[row['slug']] = row['src']
+        _PORTRAITS[key] = found
+    return _PORTRAITS[key]
+
+
+def initials(name: str) -> str:
+    parts = [part for part in re.split(r'[\s-]+', str(name or '')) if part[:1].isalpha()]
+    if not parts:
+        return '?'
+    letters = parts[0][0] + (parts[-1][0] if len(parts) > 1 else '')
+    return letters.upper()
+
+
+def headshot_html(root, slug: str, name: str) -> str:
+    """Circle headshot beside a name; an initials avatar when no approved photo exists."""
+    src = portraits(root).get(slug)
+    if src:
+        return (f'<img class="roster-face" src="{esc(src)}" alt="" width="40" height="40" '
+                f'loading="lazy" decoding="async">')
+    return f'<span class="roster-face roster-face-fallback" aria-hidden="true">{esc(initials(name))}</span>'
+
+
+def bio_cells(official: dict) -> list[str]:
+    """Height, age, experience and school/country from WNBA.com; blank when not listed."""
+    raw = official.get('experience')
+    exp = str(raw).strip() if raw is not None else ''
+    if exp == 'R':
+        exp = 'Rookie'
+    elif exp:
+        exp = f'{exp} yr' if exp == '1' else f'{exp} yrs'
+    school = str(official.get('school') or '').strip()
+    country = str(official.get('country') or '').strip()
+    if school and country and country != 'USA':
+        origin = f'{school} / {country}'
+    else:
+        origin = school or country
+    values = [str(official.get('height') or '').strip(), official.get('age'), exp, origin]
+    return [esc(v) if v not in (None, '') else '' for v in values]
+
+
+def _games(root) -> list[dict]:
+    if root is None:
+        return []
+    out = []
+    for path in sorted((Path(root) / 'data' / 'games').glob('2026-*.json')):
+        try:
+            game = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if game.get('status') == 'final' and game.get('season') in (2026, None):
+            out.append(game)
+    return out
+
+
+def _recaps(slot: dict) -> list:
+    try:
+        import team_season
+        return list(team_season.COVERAGE.get(slot['slug']) or [])
+    except Exception:
+        return []
+
+
+def _finals_teams(root) -> dict:
+    """Abbreviation to full name for the clubs in data/finals-schedule.json."""
+    try:
+        finals = json.loads((Path(root) / 'data' / 'finals-schedule.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError, TypeError):
+        return {}
+    names = {}
+    for game in _games(root):
+        for side in ('home', 'away'):
+            t = game.get(side) or {}
+            if t.get('abbreviation'):
+                names[t['abbreviation']] = t.get('full_name') or t['abbreviation']
+    clubs = {g.get('home') for g in finals.get('games') or [] if g.get('home')}
+    return {abbr: names.get(abbr, abbr) for abbr in sorted(clubs)}
+
+
+def playoff_html(root, slot: dict) -> str:
+    """2026 playoff results and next scheduled games, from data/games and data/finals-schedule.json."""
+    if root is None:
+        return ''
+    name = slot['full_name']
+    played = []
+    abbr = ''
+    for game in _games(root):
+        home, away = game.get('home') or {}, game.get('away') or {}
+        if name not in (home.get('full_name'), away.get('full_name')):
+            continue
+        mine, other = (home, away) if home.get('full_name') == name else (away, home)
+        abbr = mine.get('abbreviation') or abbr
+        if not isinstance(mine.get('score'), int) or not isinstance(other.get('score'), int):
+            continue
+        played.append((game, mine, other, mine is home))
+    try:
+        pbp = json.loads((Path(root) / 'data' / 'fcb-game-pages.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        pbp = {}
+    try:
+        finals = json.loads((Path(root) / 'data' / 'finals-schedule.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        finals = {}
+    clubs = _finals_teams(root)
+    upcoming = [g for g in finals.get('games') or [] if abbr and abbr in clubs]
+    if not played and not upcoming:
+        return ''
+    recaps = {score: (href, label) for href, label, score in _recaps(slot)}
+    rows = []
+    for game, mine, other, at_home in played:
+        won = mine['score'] > other['score']
+        score = f'{mine["score"]}-{other["score"]}'
+        alt = f'{other["score"]}-{mine["score"]}'
+        ot = ' (OT)' if game.get('overtime') else ''
+        extra = []
+        recap = recaps.get(score) or recaps.get(alt)
+        if recap:
+            extra.append(f'<a class="inline-link" href="{esc(recap[0])}">Recap</a>')
+        page = pbp.get(str(game.get('espn_game_id') or ''))
+        if page:
+            extra.append(f'<a class="inline-link" href="{esc(page)}">Play-by-play</a>')
+        rows.append(
+            f'<tr><td>{esc(game.get("date") or "")}</td>'
+            f'<td>{"vs." if at_home else "at"} {esc(other.get("full_name") or "")}</td>'
+            f'<td>{"W" if won else "L"} {esc(score)}{ot}</td><td>{" · ".join(extra)}</td></tr>'
+        )
+    for game in upcoming:
+        where = 'vs.' if game.get('home') == abbr else 'at'
+        opp = next((t for t in clubs if t != abbr), '')
+        tag = ' (if needed)' if game.get('if_needed') else ''
+        rows.append(
+            f'<tr class="upcoming"><td>{esc(game.get("day") or game.get("date") or "")}</td>'
+            f'<td>Finals Game {esc(game.get("game"))}{tag}: {where} {esc(clubs.get(opp, opp))}</td>'
+            f'<td>{esc(game.get("time") or "")}</td><td>{esc(game.get("tv") or "")}</td></tr>'
+        )
+    last = max([g.get('date') or '' for g, *_ in played] + [''])
+    table = (
+        '<div class="table-scroll" role="region" tabindex="0" aria-label="2026 playoff games">'
+        '<table><caption>2026 playoff results and upcoming games. Scores from the site\'s committed box scores; '
+        'times as published by the league.</caption>'
+        '<thead><tr><th scope="col">Date</th><th scope="col">Game</th><th scope="col">Result or time</th>'
+        '<th scope="col">Links or TV</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+    body = dynamic('div', 'team-schedule', 'data/games data/finals-schedule.json', last, table)
+    return ('<section class="section" id="schedule"><p class="eyebrow">2026 postseason</p>'
+            f'<h2>Playoff results and schedule</h2>{body}</section>')
+
+
+def franchise_html(root, slot: dict) -> str:
+    """Franchise facts as listed on the club's WNBA.com team page. Missing fields stay out."""
+    facts = team_facts(root, slot['full_name'])
+    if not facts:
+        return ''
+    source = facts.get('source') or ''
+    items = []
+    if facts.get('founded'):
+        items.append(('First season', esc(facts['founded'])))
+    arena = str(facts.get('arena') or '').strip()
+    if arena:
+        cap = facts.get('arena_capacity')
+        items.append(('Arena', esc(arena) + (f' (capacity {int(cap):,})' if isinstance(cap, int) else '')))
+    for key, label in (('head_coach', 'Head coach'), ('general_manager', 'General manager'), ('owner', 'Owner')):
+        if facts.get(key):
+            items.append((label, esc(str(facts[key]).strip())))
+    titles = [str(t.get('year')) for t in facts.get('championships') or [] if t.get('year')]
+    items.append(('WNBA championships', esc(', '.join(titles)) if titles else 'None'))
+    cups = facts.get('commissioners_cup') or []
+    if cups:
+        items.append(("Commissioner's Cup", esc(', '.join(str(c) for c in cups))))
+    site = facts.get('official_site')
+    if site:
+        items.append(('Official site', f'<a href="{esc(site)}" rel="noopener" target="_blank">{esc(site.split("//")[-1].rstrip("/"))}</a>'))
+    dl = ''.join(f'<div><dt>{k}</dt><dd>{v}</dd></div>' for k, v in items)
+    parts = [f'<dl class="franchise-facts">{dl}</dl>']
+    leaders = facts.get('franchise_leaders') or {}
+    li = ''.join(
+        f'<li>{esc(k.capitalize())}: {esc(v.get("player"))} ({int(v["total"]):,})</li>'
+        for k, v in leaders.items() if v.get('player') and isinstance(v.get('total'), int)
+    )
+    if li:
+        parts.append(f'<h3>Franchise career leaders</h3><ul class="teammate-list">{li}</ul>')
+    hof = facts.get('hall_of_fame') or []
+    if hof:
+        rows = ''.join(
+            f'<tr><td>{esc(h.get("player") or "")}</td><td>{esc(h.get("position") or "")}</td>'
+            f'<td>{esc(h.get("seasons") or "")}</td><td>{esc(h.get("inducted") or "")}</td></tr>'
+            for h in hof
+        )
+        parts.append(
+            '<h3>Hall of Famers</h3><div class="table-scroll" role="region" tabindex="0" aria-label="Hall of Famers">'
+            '<table><thead><tr><th scope="col">Player</th><th scope="col">Pos</th><th scope="col">With team</th>'
+            f'<th scope="col">Inducted</th></tr></thead><tbody>{rows}</tbody></table></div>'
+        )
+    credit = (f'<p class="muted small">Franchise facts as listed on <a href="{esc(source)}" target="_blank" '
+              f'rel="noopener">WNBA.com</a>, checked {esc(facts_checked(root))}.</p>') if source else ''
+    return ('<section class="section" id="franchise"><p class="eyebrow">Franchise</p>'
+            f'<h2>About the {esc(slot["full_name"])}</h2>{"".join(parts)}{credit}</section>')

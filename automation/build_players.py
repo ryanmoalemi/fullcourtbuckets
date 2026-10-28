@@ -2483,10 +2483,12 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         rows.append(
             '<tr>'
             f'<td>{_stat_cell(stats["number"])}</td>'
-            f'<td>{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}'
+            f'<td class="roster-name">{team_extras.headshot_html(root, player["slug"], player["name"])}'
+            f'{links.inline_link(player["name"], "/wnba/"+player["slug"]+"/")}'
             f'{dev_tag if dev else ""}</td>'
             f'<td>{_stat_cell(stats["position"])}</td>'
-            f'<td>{_stat_cell(stats["pts"])}</td>'
+            + ''.join(f'<td>{cell}</td>' for cell in team_extras.bio_cells(official))
+            + f'<td>{_stat_cell(stats["pts"])}</td>'
             f'<td>{_stat_cell(stats["reb"])}</td>'
             f'<td>{_stat_cell(stats["ast"])}</td>'
             '</tr>'
@@ -2495,8 +2497,9 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             leaders.append({'name': player['name'], 'slug': player['slug'], **stats})
     roster = (
         '<div class="table-scroll" role="region" tabindex="0" aria-label="Current roster">'
-        '<table><caption>Current roster. 2026 regular-season per-game averages with this team when a season line is on file. Dev marks a developmental player, as listed on WNBA.com.</caption>'
+        '<table><caption>Current roster. 2026 regular-season per-game averages with this team when a season line is on file. Dev marks a developmental player. Height, age, experience and school or country as listed on WNBA.com.</caption>'
         '<thead><tr><th scope="col">No.</th><th scope="col">Player</th><th scope="col">Pos</th>'
+        '<th scope="col">Ht</th><th scope="col">Age</th><th scope="col">Exp</th><th scope="col">School / country</th>'
         '<th scope="col">PPG</th><th scope="col">RPG</th><th scope="col">APG</th></tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
     )
@@ -2538,6 +2541,8 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
             top[key] = max(scored, key=lambda row: float(row[key]))
     lead = team_extras.lead_html(root, slot, standing, count)
     ranks = team_extras.ranks_html(root, slot)
+    schedule = team_extras.playoff_html(root, slot)
+    franchise = team_extras.franchise_html(root, slot)
     data_day = team_extras.standings_day(root) or team_extras.facts_checked(root)
     faq = team_extras.faq_items(root, slot, standing, top, count)
     faq_section = team_extras.faq_html(faq, data_day)
@@ -2549,7 +2554,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         stories = team_season.stories_section(root, slot)
         import team_coverage
         coverage = team_coverage.section_html(root, slot)
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1>{lead}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{ranks}{stories}{season}{faq_section}{download}{conf}{standings_link}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1>{lead}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{ranks}{schedule}{stories}{season}{franchise}{faq_section}{download}{conf}{standings_link}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[
