@@ -73,3 +73,13 @@ tr.rookie-year th,tr.rookie-year td{background:rgba(255,152,0,.14)}
 #team-coverage .team-coverage-more{margin:0}
 #team-coverage .team-coverage-more summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-weight:700;color:#e4afeb}
 @media(max-width:480px){#team-coverage{padding:16px 0 8px}#team-coverage h2{font-size:22px;margin-bottom:4px}#team-coverage .team-coverage-list li{grid-template-columns:1fr;gap:1px;padding:7px 0}#team-coverage .team-coverage-list a{font-size:16px;line-height:1.25}#team-coverage .team-coverage-list time{font-size:11px}}
+
+/* Team pages: lead, developmental tag, league ranks, FAQ, CC0 download */
+.team-lead{font-size:1.05rem;max-width:62ch}
+.dev-tag{display:inline-block;margin-left:.35em;padding:0 .4em;border-radius:999px;font-size:.7em;font-weight:700;text-decoration:none;border:1px solid currentColor;opacity:.75;vertical-align:middle}
+.team-ranks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;list-style:none;padding:0;margin:0 0 .5rem}
+.team-ranks li{border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:.6rem .75rem}
+.team-ranks .rank-label{display:block;font-size:.8rem;opacity:.75}
+#faq details{border-bottom:1px solid rgba(127,127,127,.3);padding:.5rem 0}
+#faq summary{cursor:pointer;font-weight:600}
+.team-download{margin:.25rem 0}

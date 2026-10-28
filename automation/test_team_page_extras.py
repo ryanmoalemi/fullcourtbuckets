@@ -1,0 +1,49 @@
+import unittest
+from pathlib import Path
+import build_players
+import team_page_extras as tx
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class TeamPageExtrasTests(unittest.TestCase):
+    def test_traded_player_uses_line_with_this_team(self):
+        profile = {'season_stats': [
+            {'season': 2026, 'season_type': 2, 'team': {'id': 1}, 'pts': 5},
+            {'season': 2026, 'season_type': 2, 'team': {'id': 2}, 'pts': 1},
+        ]}
+        self.assertEqual(build_players._season_line_2026(profile, 2)['pts'], 1)
+        self.assertIsNone(build_players._season_line_2026(profile))
+
+    def test_facts_cover_every_team_and_credit_wnba_com(self):
+        facts = tx.load_facts(ROOT)
+        self.assertGreaterEqual(len(facts.get('teams', facts)), 15)
+        self.assertNotIn('ESPN', (ROOT / 'automation/team_page_extras.py').read_text())
+
+    def test_faq_schema_matches_visible_questions(self):
+        items = [('Who leads in points?', 'A, 20.0 per game.')]
+        node = tx.faq_schema(items, 'https://fullcourtbuckets.com/wnba/teams/x/')
+        self.assertEqual(node['@type'], 'FAQPage')
+        self.assertEqual(node['mainEntity'][0]['name'], items[0][0])
+        html = tx.faq_html(items, '2026-10-27')
+        self.assertIn('data-fcb-dynamic="team-faq"', html)
+        self.assertIn('Who leads in points?', html)
+
+    def test_built_team_page_puts_roster_first_and_offers_cc0_csv(self):
+        slot = {'id': 1611661313, 'slug': 'new-york-liberty', 'full_name': 'New York Liberty',
+                'conference': 'Eastern', 'players': [
+                    {'id': 1, 'slug': 'anneli-maley', 'name': 'Anneli Maley'},
+                    {'id': 2, 'slug': 'breanna-stewart', 'name': 'Breanna Stewart'}]}
+        page = build_players.team_page(slot, include_standings=True, menu=[], root=ROOT)
+        body = page[page.find('<main'):]
+        self.assertLess(body.find('id="roster"'), body.find('id="faq"'))
+        self.assertLess(body.find('team-lead'), body.find('id="roster"'))
+        self.assertIn('CC0', body)
+        self.assertIn('Cite this', body)
+        self.assertIn('BreadcrumbList', page)
+        self.assertIn('FAQPage', page)
+        self.assertIn('class="breadcrumbs"', page)
+
+
+if __name__ == '__main__':
+    unittest.main()
