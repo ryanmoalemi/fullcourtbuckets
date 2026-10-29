@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:12:12+00:00",
+ "checked_at": "2026-10-29T17:13:17+00:00",
  "period": 2,
- "clock": "7:11",
+ "clock": "6:40",
  "last_play_period": 2,
- "last_play_clock": "7:11",
+ "last_play_clock": "6:40",
  "away": {
   "abbreviation": "GS",
   "score": 17,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 35,
-  "feed_score": 35
+  "score": 37,
+  "feed_score": 37
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 2,
-   "home": 3
+   "home": 5
   }
  ],
  "players": [],
@@ -1093,7 +1093,7 @@
   {
    "order": 89,
    "period": 2,
-   "clock": "9:14",
+   "clock": "9:16",
    "type": "Defensive Rebound",
    "text": "Kayla Thornton defensive rebound",
    "away_score": 15,
@@ -1377,6 +1377,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 113,
+   "period": 2,
+   "clock": "7:02",
+   "type": "Cutting Layup Shot",
+   "text": "Naz Hillmon makes 2-foot layup (Angel Reese assists)",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 114,
+   "period": 2,
+   "clock": "6:43",
+   "type": "Jump Shot",
+   "text": "Cecilia Zandalasini misses 24-foot three point jumper",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 115,
+   "period": 2,
+   "clock": "6:40",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
