@@ -7,9 +7,9 @@ name: Live play-by-play
 # Schedules only fire from the default branch (master); the job always runs main's scripts.
 on:
   schedule:
-    # Game 6: Thu Oct 29 2026, 9:30 a.m. PT tip = 16:30 UTC. Start 9:00 a.m. PT; 9:45 backup if the first is skipped.
-    - cron: '0 16 29 10 *'
-    - cron: '45 16 29 10 *'
+    # Game 7: Sat Oct 31 2026, 5 p.m. PT tip = 00:00 UTC Nov 1. Start 4:30 p.m. PT; 5:15 backup if the first is skipped.
+    - cron: '30 23 31 10 *'
+    - cron: '15 0 1 11 *'
   workflow_dispatch:
     inputs:
       loop:
