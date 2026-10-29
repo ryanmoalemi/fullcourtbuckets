@@ -5,26 +5,26 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:54:42+00:00",
+ "checked_at": "2026-10-29T16:56:48+00:00",
  "period": 1,
- "clock": "4:38",
+ "clock": "2:55",
  "last_play_period": 1,
- "last_play_clock": "4:38",
+ "last_play_clock": "3:10",
  "away": {
   "abbreviation": "GS",
-  "score": 5,
-  "feed_score": 5
+  "score": 8,
+  "feed_score": 8
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 14,
-  "feed_score": 14
+  "score": 22,
+  "feed_score": 22
  },
  "periods": [
   {
    "period": 1,
-   "away": 5,
-   "home": 14
+   "away": 8,
+   "home": 22
   }
  ],
  "players": [],
@@ -368,7 +368,7 @@
   {
    "order": 29,
    "period": 1,
-   "clock": "5:53",
+   "clock": "5:57",
    "type": "Defensive Rebound",
    "text": "Naz Hillmon defensive rebound",
    "away_score": 5,
@@ -428,7 +428,7 @@
   {
    "order": 34,
    "period": 1,
-   "clock": "5:20",
+   "clock": "5:21",
    "type": "Driving Floating Jump Shot",
    "text": "Allisha Gray blocks Veronica Burton 's 11-foot driving floating jump shot",
    "away_score": 5,
@@ -537,13 +537,145 @@
    "order": 43,
    "period": 1,
    "clock": "4:38",
-   "type": "No Turnover",
-   "text": "Kaila Charles turnover",
+   "type": "Lost Ball Turnover",
+   "text": "Kaila Charles lost ball turnover",
    "away_score": 5,
    "home_score": 14,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 44,
+   "period": 1,
+   "clock": "4:38",
+   "type": "Loose Ball Foul",
+   "text": "Kaila Charles loose ball foul",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 45,
+   "period": 1,
+   "clock": "4:38",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Kaila Charles",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 46,
+   "period": 1,
+   "clock": "4:28",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 4-foot jumper",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 47,
+   "period": 1,
+   "clock": "4:25",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 48,
+   "period": 1,
+   "clock": "4:24",
+   "type": "Jump Shot",
+   "text": "Allisha Gray makes 23-foot three point jumper (Angel Reese assists)",
+   "away_score": 5,
+   "home_score": 17,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 49,
+   "period": 1,
+   "clock": "4:12",
+   "type": "Bad Pass\nTurnover",
+   "text": "Tiffany Hayes bad pass\nturnover (Jordin Canada steals)",
+   "away_score": 5,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 50,
+   "period": 1,
+   "clock": "4:09",
+   "type": "Running Layup Shot",
+   "text": "Jordin Canada makes running layup",
+   "away_score": 5,
+   "home_score": 19,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 51,
+   "period": 1,
+   "clock": "3:49",
+   "type": "Jump Shot",
+   "text": "Gabby Williams makes 23-foot three point jumper (Veronica Burton assists)",
+   "away_score": 8,
+   "home_score": 19,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 52,
+   "period": 1,
+   "clock": "3:31",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard makes 24-foot three pointer",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 53,
+   "period": 1,
+   "clock": "3:13",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 23-foot three point jumper",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 54,
+   "period": 1,
+   "clock": "3:10",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
