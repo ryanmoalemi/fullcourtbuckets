@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:03:25+00:00",
+ "checked_at": "2026-10-29T17:03:58+00:00",
  "period": 1,
- "clock": "3.5",
+ "clock": "0.0",
  "last_play_period": 1,
- "last_play_clock": "3.5",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "GS",
   "score": 15,
@@ -1000,6 +1000,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 82,
+   "period": 1,
+   "clock": "3.5",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Angel Reese",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 83,
+   "period": 1,
+   "clock": "0.5",
+   "type": "Pullup Jump Shot",
+   "text": "Veronica Burton misses 31-foot three point pullup jump shot",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 84,
+   "period": 1,
+   "clock": "0.0",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 85,
+   "period": 1,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 1st Quarter",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
