@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:13:17+00:00",
+ "checked_at": "2026-10-29T17:13:51+00:00",
  "period": 2,
- "clock": "6:40",
+ "clock": "6:08",
  "last_play_period": 2,
- "last_play_clock": "6:40",
+ "last_play_clock": "6:18",
  "away": {
   "abbreviation": "GS",
   "score": 17,
@@ -1413,6 +1413,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 116,
+   "period": 2,
+   "clock": "6:21",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada misses driving layup",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 117,
+   "period": 2,
+   "clock": "6:18",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
