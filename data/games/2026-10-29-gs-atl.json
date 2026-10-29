@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:55:21+00:00",
+ "checked_at": "2026-10-29T17:55:56+00:00",
  "period": 3,
- "clock": "7:09",
+ "clock": "6:55",
  "last_play_period": 3,
- "last_play_clock": "7:09",
+ "last_play_clock": "6:44",
  "away": {
   "abbreviation": "GS",
   "score": 28,
@@ -2502,7 +2502,7 @@
   {
    "order": 206,
    "period": 3,
-   "clock": "7:09",
+   "clock": "7:10",
    "type": "Defensive Rebound",
    "text": "Laeticia Amihere defensive rebound",
    "away_score": 28,
@@ -2510,6 +2510,78 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 207,
+   "period": 3,
+   "clock": "7:09",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 208,
+   "period": 3,
+   "clock": "7:01",
+   "type": "Lost Ball Turnover",
+   "text": "Laeticia Amihere lost ball turnover (Angel Reese steals)",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 209,
+   "period": 3,
+   "clock": "6:55",
+   "type": "Running Layup Shot",
+   "text": "Angel Reese misses running layup",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 210,
+   "period": 3,
+   "clock": "6:51",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 211,
+   "period": 3,
+   "clock": "6:46",
+   "type": "Layup Shot",
+   "text": "Laeticia Amihere misses layup",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 212,
+   "period": 3,
+   "clock": "6:44",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
