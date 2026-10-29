@@ -5,26 +5,26 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:44:25+00:00",
+ "checked_at": "2026-10-29T16:45:30+00:00",
  "period": 1,
- "clock": "8:45",
+ "clock": "7:43",
  "last_play_period": 1,
- "last_play_clock": "8:45",
+ "last_play_clock": "7:43",
  "away": {
   "abbreviation": "GS",
-  "score": 2,
-  "feed_score": 2
+  "score": 4,
+  "feed_score": 4
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 3,
-  "feed_score": 3
+  "score": 6,
+  "feed_score": 6
  },
  "periods": [
   {
    "period": 1,
-   "away": 2,
-   "home": 3
+   "away": 4,
+   "home": 6
   }
  ],
  "players": [],
@@ -69,8 +69,8 @@
    "order": 4,
    "period": 1,
    "clock": "9:19",
-   "type": "Pullup Jump Shot",
-   "text": "Veronica Burton makes 17-foot pullup jump shot",
+   "type": "Step Back Jump Shot",
+   "text": "Veronica Burton makes 17-foot step back jumpshot",
    "away_score": 2,
    "home_score": 0,
    "scoring_play": true,
@@ -100,6 +100,78 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 7,
+   "period": 1,
+   "clock": "8:32",
+   "type": "Driving Floating Jump Shot",
+   "text": "Rhyne Howard blocks Gabby Williams 's 10-foot driving floating jump shot",
+   "away_score": 2,
+   "home_score": 3,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 8,
+   "period": 1,
+   "clock": "8:27",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 2,
+   "home_score": 3,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 9,
+   "period": 1,
+   "clock": "8:20",
+   "type": "Jump Shot",
+   "text": "Naz Hillmon makes 24-foot three point jumper (Angel Reese assists)",
+   "away_score": 2,
+   "home_score": 6,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 10,
+   "period": 1,
+   "clock": "7:56",
+   "type": "Driving Floating Jump Shot",
+   "text": "Tiffany Hayes makes 6-foot driving floating jump shot (Gabby Williams assists)",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 11,
+   "period": 1,
+   "clock": "7:47",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 24-foot three point jumper",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 12,
+   "period": 1,
+   "clock": "7:43",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
