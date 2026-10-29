@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "note": "WNBA Finals schedule. Finished games' results come from data/games and attendance from data/finals-attendance.json; tip, arena and TV for every game live here. Upcoming times from WNBA.com game pages (verified Oct. 27, 2026).",
+  "note": "WNBA Finals schedule. Finished games' results come from data/games and attendance from data/finals-attendance.json; tip, arena and TV for every game live here. Game 7 is locked after the series was tied 3-3 on Oct. 29, 2026. Tip and TV checked against the USA Sports Finals release and the WNBA Finals preview.",
   "best_of": 7,
   "games": [
     {
@@ -26,12 +26,12 @@
       "home": "GS",
       "tv": "USA Network and CNBC",
       "stream": "Peacock",
-      "if_needed": true,
+      "if_needed": false,
       "source": "https://www.wnba.com/news/game-preview-2026-wnba-finals",
       "espn_game_id": "401918311"
     }
   ],
-  "verified": "2026-10-27",
+  "verified": "2026-10-29",
   "history": [
     {
       "game": 1,

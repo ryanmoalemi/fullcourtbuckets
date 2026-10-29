@@ -1,0 +1,29 @@
+Full Court Buckets, 2026 WNBA Finals Game 7 preview data
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+
+series-team-games.csv
+  One row per team per game, Games 1-6.
+  shot_att = FGA + 0.44 * FTA
+  poss = estimated possessions from the play-by-play file (not used in the article tables)
+  pts_off_to_official = points off turnovers on the WNBA.com box score
+  turnovers = team total including team turnovers, counted from the play-by-play and checked against the official box
+  first_half / second_half = sum of that team's quarter scores
+
+series-player-lines.csv
+  One row per player who played, Games 1-6. Plus-minus is the box-score figure.
+  G6 minutes for Zandalasini, Canada and Hillmon differ by 1 from the official box. Other Game 6 totals used here match WNBA.com.
+
+series-margin-games-1-6.csv
+  One row per game. running_atl_margin is the cumulative Atlanta points minus Golden State points.
+
+series-patterns-games-1-6.csv
+  One row per game. yes/no flags say whether the winner had fewer turnovers, more points off turnovers, or more shot attempts, and who led at halftime.
+
+series-player-splits-games-1-6.csv
+  Win lines are games that player's team won. Atlanta wins: games 2, 3, 6. Golden State wins: games 1, 4, 5.
+
+best-of-seven-finals.csv
+  2025 length from the FCB Finals scores file (WNBA.com box scores). 2026 from the FCB game files through Game 6.
+
+Source line: FCB game data, verified against WNBA.com.
+Data through Oct. 29, 2026.

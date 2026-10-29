@@ -202,6 +202,7 @@ def place_notes(blocks: list) -> list:
 SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10px;font:800 24px/1.1 Barlow,sans-serif;'
                    'color:#fff}.article h4.sub-h4{margin:18px 0 6px;font:700 18px/1.25 Barlow,sans-serif;color:#ff9800}</style>')
 BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
+ODD_RE = re.compile(r'^!odd:\s*(.+)$')
 
 
 def ensure_body_photo_files(src: str, webp: str, root: Path | None = None) -> None:
@@ -237,11 +238,36 @@ def body_photo_html(parts: list) -> str:
     )
 
 
+def odds_html(rows: list[str]) -> str:
+    """No. 1 odds bars for the Halloween Game 7 preview. CSS animates the fill."""
+    cards = []
+    for raw in rows:
+        parts = [part.strip() for part in raw.split('|')]
+        name = parts[0] if parts else ''
+        pct = (parts[1] if len(parts) > 1 else '0').rstrip('%')
+        detail = parts[2] if len(parts) > 2 else ''
+        top = len(parts) > 3 and parts[3].lower() == 'top'
+        try:
+            width = max(0.0, min(100.0, float(pct)))
+        except ValueError:
+            width = 0.0
+        cards.append(
+            f'<div class="hw-odd{" hw-odd-top" if top else ""}">'
+            f'<div class="hw-odd-name">{inline(name)}</div>'
+            f'<div class="hw-odd-track"><span class="hw-odd-bar" style="--p:{width:.1f}"></span></div>'
+            f'<div class="hw-odd-pct">{esc(pct)}%</div>'
+            f'<div class="hw-odd-meta">{inline(detail)}</div>'
+            f'</div>'
+        )
+    return '<div class="hw-lottery">' + ''.join(cards) + '</div>'
+
+
 def body_html(markdown: str) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
     bullets: list[str] = []
     table: list[str] = []
+    odds: list[str] = []
 
     def flush_paragraph() -> None:
         if not paragraph:
@@ -256,6 +282,12 @@ def body_html(markdown: str) -> str:
             return
         blocks.append(('ul', list(bullets)))
         bullets.clear()
+
+    def flush_odds() -> None:
+        if not odds:
+            return
+        blocks.append(('odds', list(odds)))
+        odds.clear()
 
     def flush_table() -> None:
         if not table:
@@ -272,9 +304,17 @@ def body_html(markdown: str) -> str:
         if line.strip().startswith('|'):
             flush_paragraph()
             flush_bullets()
+            flush_odds()
             table.append(line.strip())
             continue
         flush_table()
+        odd = ODD_RE.match(line.strip())
+        if odd:
+            flush_paragraph()
+            flush_bullets()
+            odds.append(odd.group(1))
+            continue
+        flush_odds()
         if not line.strip():
             flush_paragraph()
             flush_bullets()
@@ -310,6 +350,7 @@ def body_html(markdown: str) -> str:
     flush_table()
     flush_paragraph()
     flush_bullets()
+    flush_odds()
     blocks = place_notes(blocks)
 
     html_blocks = []
@@ -321,6 +362,9 @@ def body_html(markdown: str) -> str:
             continue
         if kind == 'photo':
             html_blocks.append(body_photo_html(value))
+            continue
+        if kind == 'odds':
+            html_blocks.append(odds_html(value))
             continue
         if kind in ('h3', 'h4'):
             if not any('sub-h-css' in b for b in html_blocks):
@@ -463,14 +507,41 @@ def figure_html(article: dict, meta: dict) -> str:
         str(meta.get('photo_credit_url') or ''),
         str(meta.get('license_url') or ''),
     )
+    layer = ''
+    if str(meta.get('theme') or '') == 'halloween':
+        layer = (
+            '<div class="hw-sky" aria-hidden="true"><span class="hw-fog"></span>'
+            '<span class="hw-embers">' + ('<i></i>' * 14) + '</span>'
+            '<span class="hw-lantern"><span class="hw-stem"></span><span class="hw-face"></span></span>'
+            '</div>'
+        )
     return (
         f'<figure class="lead-photo"><picture><source srcset="{esc(srcset)}" type="image/webp" '
         f'sizes="{SIZES}"></source><img src="{esc(hero)}" alt="{esc(article["imageAlt"])}" '
         f'style="object-position:{esc(focal)}" srcset="{esc(srcset)}" sizes="{SIZES}" '
         f'width="{article["imageHeroWidth"]}" height="{article["imageHeroHeight"]}" '
         f'decoding="async" fetchpriority="high"></picture>'
-        f'<figcaption>{caption}</figcaption></figure>'
+        f'{layer}<figcaption>{caption}</figcaption></figure>'
     )
+
+
+def apply_page_theme(page: str, meta: dict) -> str:
+    """Link a per-article stylesheet and mark the body. Other pages are untouched."""
+    slug = str(meta.get('slug') or '')
+    src = CONTENT / slug / 'page.css'
+    if not src.is_file():
+        return page
+    dest = ROOT / 'news' / slug / 'page.css'
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    css = src.read_text(encoding='utf-8')
+    if not dest.is_file() or dest.read_text(encoding='utf-8') != css:
+        dest.write_text(css, encoding='utf-8')
+    href = f'/news/{slug}/page.css'
+    if href not in page:
+        page = page.replace('</head>', f'<link rel="stylesheet" href="{href}">\n</head>', 1)
+    if str(meta.get('theme') or '') == 'halloween' and 'class="fcb-halloween"' not in page:
+        page = page.replace('<body>', '<body class="fcb-halloween">', 1)
+    return page
 
 
 def archive_note_html(meta: dict) -> str:
@@ -549,7 +620,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         count=1,
         flags=re.S,
     )
-    return page
+    return apply_page_theme(page, meta)
 
 
 def set_title(page: str, title: str, social: str, description: str, article: dict) -> str:

@@ -1,0 +1,386 @@
+/* Game 7 preview only. Linked from this article, not from the rest of the site. */
+
+html body.fcb-halloween {
+  background-color: #100814 !important;
+  background-image:
+    radial-gradient(900px 420px at 12% 18%, rgba(255, 98, 20, 0.22), transparent 62%),
+    radial-gradient(700px 480px at 88% 8%, rgba(92, 28, 160, 0.38), transparent 60%),
+    radial-gradient(800px 500px at 50% 100%, rgba(255, 70, 10, 0.12), transparent 55%) !important;
+  background-size: 140% 140% !important;
+  animation: hw-wash 22s ease-in-out infinite alternate;
+  color: #f6f1e8 !important;
+}
+
+@keyframes hw-wash {
+  from { background-position: 0% 0%; }
+  to { background-position: 80% 30%; }
+}
+
+html body.fcb-halloween .breadcrumbs,
+html body.fcb-halloween .breadcrumbs a {
+  color: #f0d7b0 !important;
+}
+
+html body.fcb-halloween .ticker {
+  background: #1a1024 !important;
+  border-color: #ff7a1a !important;
+  color: #f6f1e8 !important;
+  box-shadow: inset 0 -2px 0 rgba(255, 122, 26, 0.65);
+}
+
+html body.fcb-halloween .ticker .ticker-label {
+  color: #ffb25a !important;
+  animation: hw-flicker 3.2s steps(2, end) infinite;
+}
+
+html body.fcb-halloween .ticker .ticker-text,
+html body.fcb-halloween .ticker a {
+  color: #f6f1e8 !important;
+}
+
+html body.fcb-halloween .article {
+  background:
+    linear-gradient(180deg, rgba(28, 14, 36, 0.96), rgba(16, 8, 20, 0.98)) !important;
+  color: #f6f1e8 !important;
+  border: 1px solid rgba(255, 140, 40, 0.28) !important;
+  box-shadow: 0 0 40px rgba(255, 90, 10, 0.12), 0 18px 50px rgba(0, 0, 0, 0.35) !important;
+}
+
+html body.fcb-halloween .article h1,
+html body.fcb-halloween .article h2,
+html body.fcb-halloween .article h3,
+html body.fcb-halloween main h1,
+html body.fcb-halloween main h2,
+html body.fcb-halloween main h3 {
+  color: #fff6ea !important;
+}
+
+html body.fcb-halloween .article h2.section-title {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+html body.fcb-halloween .article h2.section-title::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #ff6a00, rgba(255, 180, 60, 0.15));
+  box-shadow: 0 0 12px rgba(255, 120, 20, 0.75);
+  animation: hw-flicker 4.5s steps(2, end) infinite;
+}
+
+html body.fcb-halloween .article h4,
+html body.fcb-halloween .article h4.sub-h4 {
+  color: #ffb020 !important;
+  text-shadow: 0 0 12px rgba(255, 140, 30, 0.45);
+}
+
+html body.fcb-halloween .article p,
+html body.fcb-halloween .article li,
+html body.fcb-halloween .article td,
+html body.fcb-halloween .article .lead,
+html body.fcb-halloween main p,
+html body.fcb-halloween main li,
+html body.fcb-halloween main td {
+  color: #f6f1e8 !important;
+}
+
+html body.fcb-halloween .article strong,
+html body.fcb-halloween .article b,
+html body.fcb-halloween main strong {
+  color: #ffe1b0 !important;
+}
+
+html body.fcb-halloween .article a,
+html body.fcb-halloween .article .how-made a,
+html body.fcb-halloween .article-end a,
+html body.fcb-halloween main a:not(.button):not(.site-brand),
+html body.fcb-halloween a.inline-link {
+  color: #ffc56e !important;
+}
+
+html body.fcb-halloween .article a:hover,
+html body.fcb-halloween main a:hover {
+  color: #ffe7c2 !important;
+}
+
+html body.fcb-halloween .article .top-link {
+  background: #241428 !important;
+  border-left: 3px solid #ff7a18 !important;
+  box-shadow: 0 0 16px rgba(255, 120, 20, 0.25);
+}
+
+html body.fcb-halloween .article .top-link a {
+  color: #ffc56e !important;
+}
+
+html body.fcb-halloween .article .byline,
+html body.fcb-halloween .article .byline span,
+html body.fcb-halloween .meta-row,
+html body.fcb-halloween .article-date,
+html body.fcb-halloween .article figcaption,
+html body.fcb-halloween .article .how-made,
+html body.fcb-halloween .article .table-note,
+html body.fcb-halloween .brand-sign,
+html body.fcb-halloween .article .cat {
+  color: #e4d3bc !important;
+}
+
+html body.fcb-halloween .article .table-wrap,
+html body.fcb-halloween .article table {
+  background: #1a1022 !important;
+  color: #f6f1e8 !important;
+}
+
+html body.fcb-halloween .article th,
+html body.fcb-halloween .article thead th {
+  background: #2a160f !important;
+  color: #ffd7a8 !important;
+  border-color: #5a3018 !important;
+  box-shadow: inset 0 -1px 0 rgba(255, 140, 40, 0.45);
+}
+
+html body.fcb-halloween .article tbody td,
+html body.fcb-halloween .article tbody th,
+html body.fcb-halloween .article tbody tr,
+html body.fcb-halloween .article tbody tr:nth-child(even),
+html body.fcb-halloween .article tbody tr:nth-child(even) td {
+  background: #160e1c !important;
+  color: #f6f1e8 !important;
+  border-color: #3a2a38 !important;
+}
+
+html body.fcb-halloween .article tbody tr:nth-child(even) td {
+  background: #211428 !important;
+}
+
+html body.fcb-halloween .article tbody tr:hover td {
+  background: #3a2218 !important;
+}
+
+html body.fcb-halloween .article figure.lead-photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px rgba(255, 140, 40, 0.35), 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+html body.fcb-halloween .hw-sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+html body.fcb-halloween .hw-fog {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: 0;
+  height: 46%;
+  background: linear-gradient(180deg, rgba(18, 6, 24, 0), rgba(70, 20, 90, 0.28) 40%, rgba(255, 110, 20, 0.22));
+  animation: hw-mist 14s ease-in-out infinite alternate;
+}
+
+html body.fcb-halloween .hw-embers {
+  position: absolute;
+  inset: 0;
+}
+
+html body.fcb-halloween .hw-embers i {
+  position: absolute;
+  bottom: 8%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffb15a;
+  box-shadow: 0 0 8px #ff6a00;
+  opacity: 0.85;
+  animation: hw-rise 9s linear infinite;
+}
+
+html body.fcb-halloween .hw-embers i:nth-child(1) { left: 6%; animation-duration: 8s; }
+html body.fcb-halloween .hw-embers i:nth-child(2) { left: 14%; animation-duration: 11s; animation-delay: -2s; width: 3px; height: 3px; }
+html body.fcb-halloween .hw-embers i:nth-child(3) { left: 22%; animation-duration: 7.5s; animation-delay: -4s; }
+html body.fcb-halloween .hw-embers i:nth-child(4) { left: 31%; animation-duration: 10s; animation-delay: -1s; width: 4px; height: 4px; }
+html body.fcb-halloween .hw-embers i:nth-child(5) { left: 40%; animation-duration: 9s; animation-delay: -6s; }
+html body.fcb-halloween .hw-embers i:nth-child(6) { left: 48%; animation-duration: 12s; animation-delay: -3s; width: 3px; height: 3px; }
+html body.fcb-halloween .hw-embers i:nth-child(7) { left: 57%; animation-duration: 8.5s; animation-delay: -5s; }
+html body.fcb-halloween .hw-embers i:nth-child(8) { left: 66%; animation-duration: 10.5s; animation-delay: -2.5s; }
+html body.fcb-halloween .hw-embers i:nth-child(9) { left: 74%; animation-duration: 7s; animation-delay: -4.5s; width: 4px; height: 4px; }
+html body.fcb-halloween .hw-embers i:nth-child(10) { left: 82%; animation-duration: 11.5s; animation-delay: -1.5s; }
+html body.fcb-halloween .hw-embers i:nth-child(11) { left: 90%; animation-duration: 9.5s; animation-delay: -7s; }
+html body.fcb-halloween .hw-embers i:nth-child(12) { left: 96%; animation-duration: 8s; animation-delay: -3.5s; width: 3px; height: 3px; }
+html body.fcb-halloween .hw-embers i:nth-child(13) { left: 18%; animation-duration: 13s; animation-delay: -8s; }
+html body.fcb-halloween .hw-embers i:nth-child(14) { left: 70%; animation-duration: 6.5s; animation-delay: -6.5s; }
+
+html body.fcb-halloween .hw-lantern {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 74px;
+  height: 68px;
+  border-radius: 48% 48% 44% 44%;
+  background:
+    radial-gradient(circle at 50% 42%, transparent 58%, rgba(70, 22, 0, 0.45) 60%, transparent 64%),
+    radial-gradient(circle at 38% 32%, #ffd27a, #ff7a18 48%, #9a2e00 80%);
+  box-shadow: 0 0 18px rgba(255, 120, 20, 0.75), inset 0 -8px 12px rgba(80, 20, 0, 0.35);
+  animation: hw-glow 2.8s ease-in-out infinite;
+}
+
+html body.fcb-halloween .hw-stem {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 8px;
+  height: 14px;
+  margin-left: -4px;
+  background: #2f6b32;
+  border-radius: 4px 4px 2px 2px;
+}
+
+html body.fcb-halloween .hw-face {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: 22px;
+  height: 28px;
+  background:
+    linear-gradient(115deg, transparent 40%, #2a0c00 41% 59%, transparent 60%) 18% 20% / 14px 12px no-repeat,
+    linear-gradient(65deg, transparent 40%, #2a0c00 41% 59%, transparent 60%) 82% 20% / 14px 12px no-repeat,
+    linear-gradient(#2a0c00, #2a0c00) 28% 72% / 6px 5px no-repeat,
+    linear-gradient(#2a0c00, #2a0c00) 50% 82% / 8px 6px no-repeat,
+    linear-gradient(#2a0c00, #2a0c00) 72% 72% / 6px 5px no-repeat;
+  filter: drop-shadow(0 0 4px rgba(255, 200, 80, 0.8));
+}
+
+html body.fcb-halloween .hw-lottery {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 8px;
+  padding: 14px;
+  border: 1px solid rgba(255, 140, 40, 0.4);
+  border-radius: 12px;
+  background: rgba(20, 8, 28, 0.72) !important;
+  box-shadow: 0 0 24px rgba(255, 90, 10, 0.12);
+}
+
+html body.fcb-halloween .hw-odd {
+  display: grid;
+  grid-template-columns: minmax(92px, 148px) 1fr auto;
+  grid-template-areas: "name track pct" "name track meta";
+  gap: 2px 12px;
+  align-items: center;
+}
+
+html body.fcb-halloween .hw-odd-name {
+  grid-area: name;
+  color: #fff6ea !important;
+  font-weight: 700;
+}
+
+html body.fcb-halloween .hw-odd-track {
+  grid-area: track;
+  height: 14px;
+  border-radius: 999px;
+  background: #2a2033 !important;
+  overflow: hidden;
+  align-self: end;
+}
+
+html body.fcb-halloween .hw-odd-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(calc(var(--p) / 100));
+  transform-origin: left center;
+  background: linear-gradient(90deg, #c2410c, #ffb020);
+  animation: hw-fill 1.15s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+html body.fcb-halloween .hw-odd-top .hw-odd-name,
+html body.fcb-halloween .hw-odd-top .hw-odd-pct {
+  color: #ffd27a !important;
+  text-shadow: 0 0 10px rgba(255, 150, 40, 0.75);
+}
+
+html body.fcb-halloween .hw-odd-top .hw-odd-bar {
+  background: linear-gradient(90deg, #ff4d00, #ffe08a);
+  box-shadow: 0 0 14px rgba(255, 140, 30, 0.8);
+  animation: hw-fill 1.15s cubic-bezier(0.2, 0.8, 0.2, 1) both, hw-pulse 2.6s ease-in-out 1.2s infinite;
+}
+
+html body.fcb-halloween .hw-odd-pct {
+  grid-area: pct;
+  color: #ffe1b0 !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  justify-self: end;
+}
+
+html body.fcb-halloween .hw-odd-meta {
+  grid-area: meta;
+  color: #e4d3bc !important;
+  font-size: 12px !important;
+  justify-self: end;
+}
+
+@keyframes hw-rise {
+  from { transform: translate3d(0, 12px, 0); opacity: 0; }
+  15% { opacity: 0.9; }
+  to { transform: translate3d(8px, -220px, 0); opacity: 0; }
+}
+
+@keyframes hw-mist {
+  from { transform: translate3d(-3%, 0, 0); opacity: 0.7; }
+  to { transform: translate3d(3%, -4%, 0); opacity: 1; }
+}
+
+@keyframes hw-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(255, 110, 20, 0.45); filter: brightness(0.92); }
+  50% { box-shadow: 0 0 26px rgba(255, 170, 50, 0.95); filter: brightness(1.08); }
+}
+
+@keyframes hw-flicker {
+  0%, 100% { opacity: 1; }
+  46% { opacity: 0.72; }
+  50% { opacity: 1; }
+  78% { opacity: 0.84; }
+}
+
+@keyframes hw-fill {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(calc(var(--p) / 100)); }
+}
+
+@keyframes hw-pulse {
+  50% { box-shadow: 0 0 20px rgba(255, 190, 70, 0.95); }
+}
+
+@media (max-width: 640px) {
+  html body.fcb-halloween .hw-lantern { width: 52px; height: 48px; top: 8px; right: 8px; }
+  html body.fcb-halloween .hw-embers i:nth-child(n + 9) { display: none; }
+  html body.fcb-halloween .hw-odd {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "name pct" "track track" "meta meta";
+  }
+  html body.fcb-halloween .hw-odd-meta { justify-self: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body.fcb-halloween,
+  html body.fcb-halloween .ticker .ticker-label,
+  html body.fcb-halloween .article h2.section-title::after,
+  html body.fcb-halloween .hw-fog,
+  html body.fcb-halloween .hw-embers i,
+  html body.fcb-halloween .hw-lantern,
+  html body.fcb-halloween .hw-odd-bar,
+  html body.fcb-halloween .hw-odd-top .hw-odd-bar {
+    animation: none !important;
+  }
+  html body.fcb-halloween .hw-odd-bar,
+  html body.fcb-halloween .hw-odd-top .hw-odd-bar {
+    transform: scaleX(calc(var(--p) / 100));
+  }
+}
