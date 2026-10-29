@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:48:54+00:00",
+ "checked_at": "2026-10-29T18:50:29+00:00",
  "period": 4,
- "clock": "1:15",
+ "clock": "52.1",
  "last_play_period": 4,
- "last_play_clock": "1:15",
+ "last_play_clock": "55.9",
  "away": {
   "abbreviation": "GS",
-  "score": 68,
-  "feed_score": 68
+  "score": 69,
+  "feed_score": 69
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 77,
-  "feed_score": 77
+  "score": 80,
+  "feed_score": 80
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 21,
-   "home": 14
+   "away": 22,
+   "home": 17
   }
  ],
  "players": [],
@@ -4391,7 +4391,7 @@
   {
    "order": 363,
    "period": 4,
-   "clock": "1:51",
+   "clock": "1:53",
    "type": "Bad Pass\nTurnover",
    "text": "Angel Reese bad pass\nturnover (Veronica Burton steals)",
    "away_score": 66,
@@ -4403,7 +4403,7 @@
   {
    "order": 364,
    "period": 4,
-   "clock": "1:48",
+   "clock": "1:49",
    "type": "Jump Shot",
    "text": "Veronica Burton misses 23-foot three point jumper",
    "away_score": 66,
@@ -4415,7 +4415,7 @@
   {
    "order": 365,
    "period": 4,
-   "clock": "1:44",
+   "clock": "1:47",
    "type": "Offensive Rebound",
    "text": "Laeticia Amihere offensive rebound",
    "away_score": 66,
@@ -4488,12 +4488,72 @@
    "order": 371,
    "period": 4,
    "clock": "1:15",
-   "type": "No Shot (Default Shot)",
-   "text": "Gabby Williams makes 1-foot shot",
+   "type": "Running Layup Shot",
+   "text": "Gabby Williams makes running layup (Laeticia Amihere assists)",
    "away_score": 68,
    "home_score": 77,
    "scoring_play": true,
    "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 372,
+   "period": 4,
+   "clock": "1:15",
+   "type": "Shooting Foul",
+   "text": "Rhyne Howard shooting foul",
+   "away_score": 68,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 373,
+   "period": 4,
+   "clock": "1:15",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Rhyne Howard",
+   "away_score": 68,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 374,
+   "period": 4,
+   "clock": "1:15",
+   "type": "Free Throw - 1 of 1",
+   "text": "Gabby Williams makes free throw 1 of 1",
+   "away_score": 69,
+   "home_score": 77,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 375,
+   "period": 4,
+   "clock": "56.0",
+   "type": "Jump Shot",
+   "text": "Allisha Gray makes 22-foot three point jumper (Angel Reese assists)",
+   "away_score": 69,
+   "home_score": 80,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 376,
+   "period": 4,
+   "clock": "55.9",
+   "type": "Reset Timeout",
+   "text": "Golden State Valkyries Reset Timeout",
+   "away_score": 69,
+   "home_score": 80,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
