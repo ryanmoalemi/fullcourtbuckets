@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:19:07+00:00",
+ "checked_at": "2026-10-29T17:19:42+00:00",
  "period": 2,
  "clock": "5:12",
  "last_play_period": 2,
- "last_play_clock": "5:12",
+ "last_play_clock": "4:51",
  "away": {
   "abbreviation": "GS",
   "score": 19,
@@ -1593,6 +1593,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 131,
+   "period": 2,
+   "clock": "4:52",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
+   "away_score": 19,
+   "home_score": 39,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 132,
+   "period": 2,
+   "clock": "4:51",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 19,
+   "home_score": 39,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
