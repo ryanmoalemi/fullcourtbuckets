@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:10:47+00:00",
+ "checked_at": "2026-10-29T18:12:55+00:00",
  "period": 3,
- "clock": "1:23",
+ "clock": "18.4",
  "last_play_period": 3,
- "last_play_clock": "1:23",
+ "last_play_clock": "33.1",
  "away": {
   "abbreviation": "GS",
-  "score": 39,
-  "feed_score": 39
+  "score": 44,
+  "feed_score": 44
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 59,
-  "feed_score": 59
+  "score": 62,
+  "feed_score": 62
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 13,
-   "home": 13
+   "away": 18,
+   "home": 16
   }
  ],
  "players": [],
@@ -3218,6 +3218,66 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "ATL"
+  },
+  {
+   "order": 266,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Gabby Williams",
+   "away_score": 39,
+   "home_score": 59,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 267,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Free Throw - 3 of 3",
+   "text": "Allisha Gray makes free throw 3 of 3",
+   "away_score": 39,
+   "home_score": 60,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 268,
+   "period": 3,
+   "clock": "1:06",
+   "type": "Jump Shot",
+   "text": "Kaila Charles makes 22-foot three point jumper (Cecilia Zandalasini assists)",
+   "away_score": 42,
+   "home_score": 60,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 269,
+   "period": 3,
+   "clock": "44.9",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese makes driving layup (Jordin Canada assists)",
+   "away_score": 42,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 270,
+   "period": 3,
+   "clock": "33.1",
+   "type": "Driving Layup Shot",
+   "text": "Cecilia Zandalasini makes driving layup (Veronica Burton assists)",
+   "away_score": 44,
+   "home_score": 62,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
