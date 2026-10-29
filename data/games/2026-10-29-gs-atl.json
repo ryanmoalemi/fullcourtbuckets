@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:54:46+00:00",
+ "checked_at": "2026-10-29T17:55:21+00:00",
  "period": 3,
  "clock": "7:09",
  "last_play_period": 3,
- "last_play_clock": "7:19",
+ "last_play_clock": "7:09",
  "away": {
   "abbreviation": "GS",
   "score": 28,
@@ -2479,13 +2479,37 @@
    "order": 204,
    "period": 3,
    "clock": "7:19",
-   "type": "Free Throw - 2 of 2",
-   "text": "Rhyne Howard makes free throw 2 of 2",
+   "type": "Free Throw - Flagrant 2 of 2",
+   "text": "Rhyne Howard makes free throw flagrant 2 of 2",
    "away_score": 28,
    "home_score": 53,
    "scoring_play": true,
    "score_value": 1,
    "team": "ATL"
+  },
+  {
+   "order": 205,
+   "period": 3,
+   "clock": "7:11",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 206,
+   "period": 3,
+   "clock": "7:09",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
