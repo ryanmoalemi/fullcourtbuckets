@@ -3415,7 +3415,7 @@
         "losses": 14,
         "finish": "4th of 15 in the league",
         "record_source": "https://www.wnba.com/standings?season=2026",
-        "playoffs": "Lost in WNBA Finals",
+        "playoffs": "Reached WNBA Finals",
         "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
       },
       {
@@ -3611,7 +3611,7 @@
         "losses": 12,
         "finish": "2nd of 15 in the league",
         "record_source": "https://www.wnba.com/standings?season=2026",
-        "playoffs": "Lost in WNBA Finals",
+        "playoffs": "Reached WNBA Finals",
         "playoffs_source": "https://www.wnba.com/api/schedule?season=2026&regionId=1"
       },
       {
