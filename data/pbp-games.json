@@ -97,7 +97,8 @@
       },
       "tv": "USA Network, E! and Syfy",
       "stream": "Peacock",
-      "preview": "/news/finals-game-6-preview-valkyries-dream/"
+      "preview": "/news/finals-game-6-preview-valkyries-dream/",
+      "game_json": "data/games/2026-10-29-gs-atl.json"
     }
   }
 }
