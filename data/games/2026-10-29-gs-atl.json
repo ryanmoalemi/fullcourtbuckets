@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:20:23+00:00",
+ "checked_at": "2026-10-29T18:20:57+00:00",
  "period": 4,
- "clock": "8:07",
+ "clock": "7:44",
  "last_play_period": 4,
- "last_play_clock": "8:07",
+ "last_play_clock": "8:03",
  "away": {
   "abbreviation": "GS",
   "score": 49,
@@ -3523,6 +3523,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 291,
+   "period": 4,
+   "clock": "8:03",
+   "type": "Offensive Foul",
+   "text": "Naz Hillmon offensive foul",
+   "away_score": 49,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 292,
+   "period": 4,
+   "clock": "8:03",
+   "type": "Offensive Foul Turnover",
+   "text": "Naz Hillmon offensive foul turnover",
+   "away_score": 49,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
