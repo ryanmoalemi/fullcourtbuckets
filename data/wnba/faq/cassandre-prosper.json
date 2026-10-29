@@ -1,66 +1,102 @@
 {
   "slug": "cassandre-prosper",
   "player_name": "Cassandre Prosper",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Cassandre Prosper's stats / points per game?",
-      "answer": "In the 2026 regular season, Cassandre Prosper averaged 2.1 points, 1.0 rebounds, and 0.4 assists in 37 games for Washington Mystics. Her full season-by-season numbers are on this page.",
+      "question": "Who is Cassandre Prosper's brother?",
+      "answer": "Cassandre Prosper's brother is Olivier-Maxence Prosper, who played at Marquette and plays in the NBA. Her Notre Dame bio says her mother played college basketball at Manhattan College and Concordia University and her father played at Concordia.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fightingirish.com/sports/wbball/roster/player/cassandre-prosper"
+      ],
+      "queries": [
+        {
+          "q": "cassandre prosper brother",
+          "vol": 140
+        },
+        {
+          "q": "cassandre prosper parents",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What are Cassandre Prosper's stats?",
+      "answer": "In the 2026 regular season, Cassandre Prosper averaged 2.1 points, 1.0 rebounds, and 0.4 assists in 38 games for the Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cassandre prosper stats",
-      "approx_monthly_volume": 40
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/cassandre-prosper/"
+      ],
+      "queries": [
+        {
+          "q": "cassandre prosper stats",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where did Cassandre Prosper play college basketball?",
+      "answer": "Cassandre Prosper played four seasons at Notre Dame (97 games, 43 starts) after enrolling early in 2023. As a senior in 2025-26 she averaged 13.6 points and 6.5 rebounds, made All-ACC Second Team and was named ACC Most Improved Player.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643467/cassandre-prosper/bio",
+        "https://fightingirish.com/sports/wbball/roster/player/cassandre-prosper"
+      ],
+      "queries": [
+        {
+          "q": "cassandre prosper notre dame",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "When was Cassandre Prosper drafted?",
+      "answer": "The Washington Mystics took Cassandre Prosper in the second round, 19th overall, in the 2026 WNBA Draft. She played for Canada at the 2024 Paris Olympics.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643467/cassandre-prosper/bio",
+        "https://fightingirish.com/sports/wbball/roster/player/cassandre-prosper"
+      ],
+      "queries": [
+        {
+          "q": "cassandre prosper wnba draft",
+          "vol": 40
+        },
+        {
+          "q": "cassandre prosper wnba",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Cassandre Prosper?",
-      "answer": "Cassandre Prosper is listed at 6' 3\".",
+      "answer": "The WNBA lists Cassandre Prosper at 6 feet 3 inches and 182 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cassandre_Prosper"
+        "https://www.wnba.com/player/1643467/cassandre-prosper/bio"
       ],
-      "google_keyword": "cassandre prosper height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What college did Cassandre Prosper attend?",
-      "answer": "Prosper played college basketball at the Notre Dame Fighting Irish.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cassandre_Prosper"
-      ],
-      "google_keyword": "cassandre prosper uconn",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What position does Cassandre Prosper play?",
-      "answer": "Cassandre Prosper is listed as a G for the Washington Mystics.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cassandre prosper position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Cassandre Prosper's parents?",
-      "answer": "Public profiles share limited verified detail about Cassandre Prosper's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cassandre_Prosper"
-      ],
-      "google_keyword": "cassandre prosper parents",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "cassandre prosper height",
+          "vol": 40
+        }
+      ]
     },
     {
       "question": "How old is Cassandre Prosper?",
-      "answer": "Cassandre Prosper was born June 25, 2005 in Montreal. As of late 2026 that puts her at 21 years old.",
-      "answer_kind": "researched",
+      "answer": "Cassandre Prosper was born June 25, 2005.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cassandre_Prosper"
+        "https://www.wnba.com/player/1643467/cassandre-prosper/bio"
       ],
-      "google_keyword": "cassandre prosper age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2005-06-25"
+      "queries": [
+        {
+          "q": "cassandre prosper age",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

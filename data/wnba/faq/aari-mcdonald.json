@@ -1,158 +1,165 @@
 {
   "slug": "aari-mcdonald",
   "player_name": "Aari McDonald",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Aari McDonald's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Aari McDonald averaged 9.8 points,",
+      "question": "What team does Aari McDonald play for?",
+      "answer": "Aari McDonald plays guard for the Minnesota Lynx, her fourth WNBA team after the Atlanta Dream, Los Angeles Sparks and Indiana Fever. Atlanta drafted her third overall in 2021, and she made the 2021 All-Rookie Team.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1630462/aari-mcdonald/bio",
+        "https://fullcourtbuckets.com/wnba/aari-mcdonald/"
+      ],
+      "queries": [
+        {
+          "q": "aari mcdonald wnba",
+          "vol": 90
+        },
+        {
+          "q": "aari mcdonald current team",
+          "vol": 20
+        },
+        {
+          "q": "aari mcdonald team",
+          "vol": 10
+        },
+        {
+          "q": "what team is aari mcdonald on",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald fever",
+          "vol": 30
+        },
+        {
+          "q": "aari mcdonald indiana fever",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald sparks",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald atlanta dream",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald draft pick",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald draft",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Aari McDonald's stats?",
+      "answer": "In the 2026 regular season, Aari McDonald averaged 7.3 points, 0.7 rebounds, and 2.0 assists in 3 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aari mcdonald stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Aari McDonald dating?",
-      "answer": "As of late 2026, Aari McDonald has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
+        "https://fullcourtbuckets.com/wnba/aari-mcdonald/"
       ],
-      "google_keyword": "aari mcdonald boyfriend",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Aari McDonald make?",
-      "answer": "A precise public salary or net worth figure for Aari McDonald is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aari mcdonald wnba salary",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "aari mcdonald stats",
+          "vol": 50
+        },
+        {
+          "q": "aari mcdonald game log",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Aari McDonald?",
-      "answer": "Aari McDonald is listed at 5' 6\".",
+      "answer": "The WNBA lists Aari McDonald at 5 feet 6 inches and 149 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
+        "https://www.wnba.com/player/1630462/aari-mcdonald/bio"
       ],
-      "google_keyword": "aari mcdonald height",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What did Aari McDonald score in her last game?",
-      "answer": "In her most recent completed game (September 20, 2026 vs. the Connecticut Sun), Aari McDonald had 4.0 points, 0 rebounds, and 0 assists in a 101-89 win.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "is aari mcdonald playing tonight",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Aari McDonald's jersey number?",
-      "answer": "Aari McDonald wears number 4 for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aari mcdonald fever jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Aari McDonald's contract?",
-      "answer": "Contract length and guarantees for Aari McDonald are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "aari mcdonald contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Aari McDonald married?",
-      "answer": "There is no widely reported public record of Aari McDonald being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
-      ],
-      "google_keyword": "aari mcdonald husband",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What team does Aari McDonald play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 4. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aari mcdonald current team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What college did Aari McDonald attend?",
-      "answer": "McDonald played college basketball at the Washington Huskies and the Arizona Wildcats.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
-      ],
-      "google_keyword": "aari mcdonald uconn",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What position does Aari McDonald play?",
-      "answer": "Aari McDonald is listed as a G for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aari mcdonald position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Aari McDonald injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aari mcdonald injury",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "Who are Aari McDonald's parents?",
-      "answer": "Public profiles share limited verified detail about Aari McDonald's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
-      ],
-      "google_keyword": "aari mcdonald family",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Aari McDonald?",
-      "answer": "Aarion Shawnae McDonald is an American professional basketball player for the Minnesota Lynx of the Women's National Basketball Association (WNBA) and for the Breeze of Unrivaled.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
-      ],
-      "google_keyword": "aari mcdonald wiki",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "aari mcdonald height",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How old is Aari McDonald?",
-      "answer": "Aari McDonald was born August 20, 1998 in Fresno. As of late 2026 that puts her at 28 years old.",
-      "answer_kind": "researched",
+      "answer": "Aari McDonald was born August 20, 1998.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
+        "https://www.wnba.com/player/1630462/aari-mcdonald/bio"
       ],
-      "google_keyword": "aari mcdonald age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1998-08-20"
+      "queries": [
+        {
+          "q": "aari mcdonald age",
+          "vol": 30
+        },
+        {
+          "q": "how old is aari mcdonald",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Aari McDonald play college basketball?",
+      "answer": "Aari McDonald started at Washington, then transferred to Arizona, where she was the 2021 Pac-12 Player of the Year, a two-time All-American and the 2020 Ann Meyers Drysdale Award winner. She led Arizona to its first NCAA championship game in 2021.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630462/aari-mcdonald/bio"
+      ],
+      "queries": [
+        {
+          "q": "aari mcdonald arizona",
+          "vol": 20
+        },
+        {
+          "q": "aari mcdonald education",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald washington",
+          "vol": null
+        },
+        {
+          "q": "aari mcdonald transfer",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "Where is Aari McDonald from?",
-      "answer": "Aari McDonald is from Fresno.",
-      "answer_kind": "researched",
+      "answer": "Aari McDonald is from Fresno, California, and played high school basketball at Brookside Christian. Her WNBA bio lists her parents as Andrea and Aaron McDonald.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aari_McDonald"
+        "https://www.wnba.com/player/1630462/aari-mcdonald/bio"
       ],
-      "google_keyword": "where is aari mcdonald from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is aari mcdonald from",
+          "vol": 10
+        },
+        {
+          "q": "where did aari mcdonald come from",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald parents",
+          "vol": 10
+        },
+        {
+          "q": "aari mcdonald family",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

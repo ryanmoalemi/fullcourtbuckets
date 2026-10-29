@@ -1,116 +1,129 @@
 {
   "slug": "angel-mccoughtry",
   "player_name": "Angel McCoughtry",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Angel McCoughtry's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2020), Angel McCoughtry averaged 14.4 points,",
+      "question": "What WNBA teams did Angel McCoughtry play for?",
+      "answer": "Angel McCoughtry played 13 WNBA seasons: with the Atlanta Dream, who drafted her first overall in 2009, then the Las Vegas Aces (2020 and 2021) and the Minnesota Lynx (2022). She was the 2009 Rookie of the Year, a five-time All-Star and won scoring titles in 2012 and 2013.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/201881/angel-mccoughtry/bio",
+        "https://fullcourtbuckets.com/wnba/angel-mccoughtry/"
+      ],
+      "queries": [
+        {
+          "q": "angel mccoughtry wnba",
+          "vol": 70
+        },
+        {
+          "q": "angel mccoughtry atlanta dream",
+          "vol": 20
+        },
+        {
+          "q": "angel mccoughtry lynx",
+          "vol": 10
+        },
+        {
+          "q": "angel mccoughtry biography",
+          "vol": 10
+        },
+        {
+          "q": "angel mccoughtry bio",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Angel McCoughtry's stats?",
+      "answer": "In the 2022 regular season, Angel McCoughtry averaged 6.0 points, 3.0 rebounds, and 1.0 assists in 2 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "angel mccoughtry stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Angel McCoughtry dating?",
-      "answer": "As of late 2026, Angel McCoughtry has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
+        "https://fullcourtbuckets.com/wnba/angel-mccoughtry/"
       ],
-      "google_keyword": "angel mccoughtry partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "angel mccoughtry stats",
+          "vol": 50
+        },
+        {
+          "q": "angel mccoughtry career stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Angel McCoughtry make?",
-      "answer": "A precise public salary or net worth figure for Angel McCoughtry is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "angel mccoughtry net worth",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "How old is Angel McCoughtry?",
-      "answer": "She was born September 10, 1986 in Baltimore. As of late 2026 that puts her at 40 years old.",
+      "question": "What is Angel McCoughtry's career high?",
+      "answer": "Angel McCoughtry's regular-season career high is 39 points, at New York on June 19, 2018. She also holds the WNBA playoff scoring record (42 points, 2010) and the WNBA Finals record (38 points, 2011).",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
+        "https://www.wnba.com/player/201881/angel-mccoughtry/bio"
       ],
-      "google_keyword": "angel mccoughtry age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1986-09-10"
+      "queries": [
+        {
+          "q": "angel mccoughtry career high",
+          "vol": 30
+        },
+        {
+          "q": "angel mccoughtry highest scoring game",
+          "vol": 10
+        },
+        {
+          "q": "angel mccoughtry career high points",
+          "vol": 10
+        },
+        {
+          "q": "angel mccoughtry 40 point games",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Angel McCoughtry's contract?",
-      "answer": "Contract length and guarantees for Angel McCoughtry are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Where did Angel McCoughtry play college basketball?",
+      "answer": "Angel McCoughtry played at Louisville and finished as the school's all-time leader in points (2,779), rebounds (1,261) and steals (481). She led the Cardinals to their first NCAA championship game in 2009, and in 2010 became the first Louisville women's player to have her jersey retired.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://gocards.com/news/2010/11/12/Angel_McCoughtry_s_Jersey_Retired_at_KFC_Yum_Center_s_Opening_Night"
       ],
-      "google_keyword": "angel mccoughtry contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Angel McCoughtry married?",
-      "answer": "There is no widely reported public record of Angel McCoughtry being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
-      ],
-      "google_keyword": "is angel mccoughtry still married",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Angel McCoughtry injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "angel mccoughtry injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Did Angel McCoughtry retire?",
-      "answer": "As of late 2026, Angel McCoughtry is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
-      ],
-      "google_keyword": "is angel mccoughtry retired",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What college did Angel McCoughtry attend?",
-      "answer": "McCoughtry played college basketball at University of Louisville.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
-      ],
-      "google_keyword": "angel mccoughtry louisville",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Angel McCoughtry?",
-      "answer": "Angel Lajuane McCoughtry is an American former professional basketball player who last played for the Minnesota Lynx of the Women's National Basketball Association (WNBA) and a two-time Olympic gold medalist.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
-      ],
-      "google_keyword": "who is angel mccoughtry married to",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "angel mccoughtry louisville",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Angel McCoughtry?",
-      "answer": "Angel McCoughtry is listed at 6' 1\".",
+      "answer": "The WNBA lists Angel McCoughtry at 6 feet 1 inch and 177 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Angel_McCoughtry"
+        "https://www.wnba.com/player/201881/angel-mccoughtry/bio"
       ],
-      "google_keyword": "angel mccoughtry height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "angel mccoughtry height",
+          "vol": 20
+        },
+        {
+          "q": "how tall is angel mccoughtry",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Angel McCoughtry?",
+      "answer": "Angel McCoughtry was born September 10, 1986.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201881/angel-mccoughtry/bio"
+      ],
+      "queries": [
+        {
+          "q": "angel mccoughtry age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

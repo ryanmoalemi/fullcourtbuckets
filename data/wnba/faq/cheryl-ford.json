@@ -1,94 +1,70 @@
 {
   "slug": "cheryl-ford",
   "player_name": "Cheryl Ford",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Cheryl Ford's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2009), Cheryl Ford averaged 8.6 points, 7.4 rebounds, and 0.9 assists in 29 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cheryl ford stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How much does Cheryl Ford make?",
-      "answer": "A precise public salary or net worth figure for Cheryl Ford is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What WNBA team did Cheryl Ford play for?",
+      "answer": "Cheryl Ford played all seven of her WNBA seasons (2003 to 2009) for the Detroit Shock, who drafted her third overall out of Louisiana Tech in 2003. She was the 2003 Rookie of the Year and led the league in total rebounds that season for the champion Shock.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/100843/cheryl-ford/bio",
+        "https://www.wnba.com/news/whm-defining-eras-detroit-shock",
+        "https://fullcourtbuckets.com/wnba/cheryl-ford/"
       ],
-      "google_keyword": "cheryl ford net worth",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "cheryl ford wnba",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "What are Cheryl Ford's stats?",
+      "answer": "In the 2009 regular season, Cheryl Ford averaged 8.6 points, 7.4 rebounds, and 0.9 assists in 29 games for the Detroit Shock.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/cheryl-ford/"
+      ],
+      "queries": [
+        {
+          "q": "cheryl ford stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Cheryl Ford?",
+      "answer": "The WNBA lists Cheryl Ford at 6 feet 3 inches and 195 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100843/cheryl-ford/bio"
+      ],
+      "queries": [
+        {
+          "q": "cheryl ford height",
+          "vol": 10
+        },
+        {
+          "q": "how tall is cheryl ford",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Cheryl Ford?",
-      "answer": "Public profiles list Cheryl Ford as born in 1981. As of late 2026 that puts her around 45 years old.",
+      "answer": "Cheryl Ford was born June 6, 1981.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Cheryl_Ford"
+        "https://www.wnba.com/player/100843/cheryl-ford/bio"
       ],
-      "google_keyword": "cheryl ford age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1981-01-01"
-    },
-    {
-      "question": "Is Cheryl Ford married?",
-      "answer": "There is no widely reported public record of Cheryl Ford being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cheryl_Ford"
-      ],
-      "google_keyword": "cheryl ford husband",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Does Cheryl Ford have kids?",
-      "answer": "There is no widely reported public information that Cheryl Ford has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cheryl_Ford"
-      ],
-      "google_keyword": "cheryl ford son",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Cheryl Ford?",
-      "answer": "Cheryl Ford is an American former professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cheryl_Ford"
-      ],
-      "google_keyword": "cheryl ford",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "What team does Cheryl Ford play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cheryl ford",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "What position does Cheryl Ford play?",
-      "answer": "Cheryl Ford is listed as a Forward for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "cheryl ford",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "What is Cheryl Ford's nationality?",
-      "answer": "Cheryl Ford is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Cheryl_Ford"
-      ],
-      "google_keyword": "cheryl ford",
-      "approx_monthly_volume": 4400
+      "queries": [
+        {
+          "q": "cheryl ford age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

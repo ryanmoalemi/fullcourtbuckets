@@ -1,69 +1,134 @@
 {
   "slug": "tina-thompson",
   "player_name": "Tina Thompson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Tina Thompson's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2013), Tina Thompson averaged 14.1 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tina thompson stats",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Tina Thompson dating?",
-      "answer": "As of late 2026, Tina Thompson has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tina thompson partner",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Tina Thompson make?",
-      "answer": "A precise public salary or net worth figure for Tina Thompson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What WNBA teams did Tina Thompson play for?",
+      "answer": "Tina Thompson played 17 WNBA seasons: 12 with the Houston Comets (1997 to 2008), who made her, out of USC, the first pick of the first WNBA Draft, three with her hometown Los Angeles Sparks (2009 to 2011) and two with the Seattle Storm (2012 and 2013).",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/news/hall-of-famer-tina-thompson-by-the-numbers"
       ],
-      "google_keyword": "tina thompson net worth",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "tina thompson wnba",
+          "vol": 320
+        },
+        {
+          "q": "tina thompson houston comets",
+          "vol": 40
+        },
+        {
+          "q": "tina thompson comets",
+          "vol": 30
+        },
+        {
+          "q": "tina thompson team",
+          "vol": null
+        },
+        {
+          "q": "tina thompson college",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What is Tina Thompson's contract?",
-      "answer": "Contract length and guarantees for Tina Thompson are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "How old is Tina Thompson?",
+      "answer": "Tina Thompson was born February 10, 1975.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100076/tina-thompson/bio"
+      ],
+      "queries": [
+        {
+          "q": "how old is tina thompson",
+          "vol": 70
+        },
+        {
+          "q": "tina thompson age",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How tall is Tina Thompson?",
+      "answer": "The WNBA lists Tina Thompson at 6 feet 2 inches and 178 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100076/tina-thompson/bio"
+      ],
+      "queries": [
+        {
+          "q": "tina thompson height",
+          "vol": 50
+        },
+        {
+          "q": "how tall is tina thompson",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What are Tina Thompson's stats?",
+      "answer": "In the 2013 regular season, Tina Thompson averaged 14.1 points, 5.8 rebounds, and 1.1 assists in 34 games for the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/tina-thompson/"
+      ],
+      "queries": [
+        {
+          "q": "tina thompson stats",
+          "vol": 30
+        },
+        {
+          "q": "tina thompson wnba stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Tina Thompson coach Virginia?",
+      "answer": "Yes. Virginia named Tina Thompson its women's basketball head coach on April 16, 2018. The school dismissed her in March 2022 after four seasons and a 30-63 record.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://virginiasports.com/news/2018/04/16/tina-thompson-named-virginia-women-s-basketball-coach",
+        "https://www.nbcsports.com/college-basketball/news/virginia-fires-womens-hoops-coach-thompson-after-4-seasons"
       ],
-      "google_keyword": "tina thompson contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "tina thompson uva",
+          "vol": 10
+        },
+        {
+          "q": "tina thompson virginia",
+          "vol": 10
+        },
+        {
+          "q": "coach tina thompson",
+          "vol": 10
+        },
+        {
+          "q": "where is tina thompson coaching",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Tina Thompson married?",
-      "answer": "There is no widely reported public record of Tina Thompson being married as of late 2026.",
+      "question": "Is Tina Thompson in the Hall of Fame?",
+      "answer": "Yes. Tina Thompson entered the Naismith Basketball Hall of Fame in 2018. She won the first four WNBA championships with Houston (1997 to 2000), retired as the league's career scoring leader with 7,488 points, made nine All-Star Games and won Olympic gold in 2004 and 2008.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tina thompson husband",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "Does Tina Thompson have kids?",
-      "answer": "There is no widely reported public information that Tina Thompson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tina thompson son",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What team does Tina Thompson play for?",
-      "answer": "Her most recent WNBA team on record is the Houston Comets. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tina thompson teammates",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://www.wnba.com/news/hall-of-famer-tina-thompson-by-the-numbers",
+        "https://www.wnba.com/player/100076/tina-thompson/bio"
+      ],
+      "queries": [
+        {
+          "q": "tina thompson hall of fame",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

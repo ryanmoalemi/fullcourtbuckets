@@ -1,80 +1,117 @@
 {
   "slug": "ashlon-jackson",
   "player_name": "Ashlon Jackson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "How much does Ashlon Jackson make?",
-      "answer": "A precise public salary or net worth figure for Ashlon Jackson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Ashlon Jackson play college basketball?",
+      "answer": "Ashlon Jackson played at Duke, where she finished with 1,272 points and 235 three-pointers, third most in program history. She made the 2026 All-ACC First Team (coaches).",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://goduke.com/sports/womens-basketball/roster/ashlon-jackson/22747"
       ],
-      "google_keyword": "ashlon jackson wnba salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "ashlon jackson duke",
+          "vol": 1000
+        },
+        {
+          "q": "ashlon jackson duke stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How tall is Ashlon Jackson?",
-      "answer": "Ashlon Jackson is listed at 6' 0\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
-      ],
-      "google_keyword": "ashlon jackson height",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who are Ashlon Jackson's parents?",
-      "answer": "Public profiles share limited verified detail about Ashlon Jackson's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "What WNBA team is Ashlon Jackson on?",
+      "answer": "Ashlon Jackson plays for the Connecticut Sun. The Golden State Valkyries drafted her in the second round, 23rd overall, in the 2026 WNBA Draft, and she joined Connecticut as the Sun's first developmental player.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
+        "https://www.wnba.com/player/1643437/ashlon-jackson/bio",
+        "https://www.oursportscentral.com/services/releases/connecticut-sun-finalizes-2026-opening-day-roster/n-6358751"
       ],
-      "google_keyword": "ashlon jackson parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "ashlon jackson wnba",
+          "vol": 590
+        },
+        {
+          "q": "ashlon jackson wnba draft",
+          "vol": 390
+        },
+        {
+          "q": "ashlon jackson draft",
+          "vol": 30
+        },
+        {
+          "q": "ashlon jackson golden state",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Ashlon Jackson attend?",
-      "answer": "Jackson played college basketball at Duke.",
-      "answer_kind": "bio",
+      "question": "What are Ashlon Jackson's stats?",
+      "answer": "In the 2026 regular season, Ashlon Jackson averaged 3.4 points, 1.3 rebounds, and 0.8 assists in 19 games for the Connecticut Sun.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
+        "https://fullcourtbuckets.com/wnba/ashlon-jackson/"
       ],
-      "google_keyword": "ashlon jackson duke",
-      "approx_monthly_volume": 1000
-    },
-    {
-      "question": "Does Ashlon Jackson have kids?",
-      "answer": "There is no widely reported public information that Ashlon Jackson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
-      ],
-      "google_keyword": "ashlon jackson",
-      "approx_monthly_volume": 4400
-    },
-    {
-      "question": "Who is Ashlon Jackson?",
-      "answer": "Ashlon Octavia Jackson is an American professional basketball player for the Connecticut Sun of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
-      ],
-      "google_keyword": "ashlon jackson wikipedia",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "ashlon jackson stats",
+          "vol": 210
+        }
+      ]
     },
     {
       "question": "How old is Ashlon Jackson?",
-      "answer": "Ashlon Jackson was born January 6, 2004. As of late 2026 that puts her at 22 years old.",
+      "answer": "Ashlon Jackson was born January 6, 2004.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643437/ashlon-jackson/bio"
+      ],
+      "queries": [
+        {
+          "q": "ashlon jackson age",
+          "vol": 170
+        },
+        {
+          "q": "ashlon jackson birthday",
+          "vol": 10
+        },
+        {
+          "q": "ashlon jackson duke age",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Ashlon Jackson?",
+      "answer": "The WNBA lists Ashlon Jackson at 6 feet and 170 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643437/ashlon-jackson/bio"
+      ],
+      "queries": [
+        {
+          "q": "ashlon jackson height",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Where is Ashlon Jackson from?",
+      "answer": "Ashlon Jackson is from China, Texas. She was a 2022 McDonald's All-American at Hardin-Jefferson High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashlon_Jackson"
+        "https://goduke.com/sports/womens-basketball/roster/ashlon-jackson/22747"
       ],
-      "google_keyword": "ashlon jackson age",
-      "approx_monthly_volume": 170,
-      "birthdate": "2004-01-06"
+      "queries": [
+        {
+          "q": "where is ashlon jackson from",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 176)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 186)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -566,6 +566,10 @@ class BuildTests(unittest.TestCase):
             'azura-stevens', 'dorka-juhasz', 'holly-winterburn', 'karlie-samuelson', 'leila-lacan',
             'lindsay-whalen', 'maria-conde', 'maya-caldwell', 'shatori-walker-kimbrough', 'shay-ciezki',
         }
+        october_29 = {
+            'stephanie-talbot', 'sylvia-fowles', 'tea-cooper', 'tina-thompson', 'aari-mcdonald',
+            'angel-mccoughtry', 'ashlon-jackson', 'cassandre-prosper', 'cheryl-ford', 'kathryn-westbeld',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -577,11 +581,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_26 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_27 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_28 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_29 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_28:
+            if slug in october_29:
+                expected_source = 'Google search demand via OpenSEO, Oct 29, 2026'
+            elif slug in october_28:
                 expected_source = 'Google search demand via OpenSEO, Oct 28, 2026'
             elif slug in october_27:
                 expected_source = 'Google search demand via OpenSEO, Oct 27, 2026'
@@ -640,7 +647,19 @@ class BuildTests(unittest.TestCase):
             # mostly other people, and the rest are relationships, family, or pay.
             # Oct 28: same; Maria Conde's name searches are mostly other people, and
             # most of the rest for this batch are relationships, family, pay, or injuries.
-            if slug in {'maria-conde'}:
+            # Oct 29: same; most dropped searches are relationships, family, net worth,
+            # pay, or other people who share the name.
+            if slug in {'cheryl-ford'}:
+                minimum = 4
+            elif slug in {'stephanie-talbot'}:
+                minimum = 5
+            elif slug in {'tea-cooper', 'tina-thompson', 'aari-mcdonald', 'angel-mccoughtry', 'ashlon-jackson', 'cassandre-prosper'}:
+                minimum = 6
+            elif slug in {'kathryn-westbeld'}:
+                minimum = 8
+            elif slug in {'sylvia-fowles'}:
+                minimum = 10
+            elif slug in {'maria-conde'}:
                 minimum = 2
             elif slug in {'leila-lacan', 'maya-caldwell'}:
                 minimum = 4

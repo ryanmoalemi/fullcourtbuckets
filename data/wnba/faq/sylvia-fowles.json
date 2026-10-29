@@ -1,154 +1,202 @@
 {
   "slug": "sylvia-fowles",
   "player_name": "Sylvia Fowles",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Sylvia Fowles's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Sylvia Fowles averaged 14.4 points,",
+      "question": "How tall is Sylvia Fowles?",
+      "answer": "The WNBA lists Sylvia Fowles at 6 feet 6 inches and 219 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201480/sylvia-fowles/bio"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles height",
+          "vol": 70
+        },
+        {
+          "q": "how tall is sylvia fowles",
+          "vol": 40
+        },
+        {
+          "q": "sylvia fowles height in feet",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Who did Sylvia Fowles play for in the WNBA?",
+      "answer": "Sylvia Fowles played 15 WNBA seasons, from 2008 to 2022: seven with the Chicago Sky, who drafted her second overall in 2008, and eight with the Minnesota Lynx, who acquired her in a July 2015 trade.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/201480/sylvia-fowles/bio",
+        "https://fullcourtbuckets.com/wnba/sylvia-fowles/"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles wnba",
+          "vol": 70
+        },
+        {
+          "q": "minnesota lynx sylvia fowles",
+          "vol": 20
+        },
+        {
+          "q": "sylvia fowles team",
+          "vol": 10
+        },
+        {
+          "q": "sylvia fowles chicago sky",
+          "vol": 10
+        },
+        {
+          "q": "sylvia fowles draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Sylvia Fowles's stats?",
+      "answer": "In the 2022 regular season, Sylvia Fowles averaged 14.4 points, 9.8 rebounds, and 1.2 assists in 30 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sylvia fowles stats",
-      "approx_monthly_volume": 70
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/sylvia-fowles/"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles stats",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Who is Sylvia Fowles dating?",
-      "answer": "As of late 2026, Sylvia Fowles has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What is Sylvia Fowles doing now?",
+      "answer": "Sylvia Fowles is an assistant coach for the Portland Fire, who added her to their first coaching staff in December 2025 ahead of the expansion team's 2026 debut season.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
+        "https://www.kptv.com/2025/12/22/portland-fire-adds-hall-famer-sylvia-fowles-assistant-head-coach/"
       ],
-      "google_keyword": "sylvia fowles partner",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "sylvia fowles portland fire",
+          "vol": 40
+        },
+        {
+          "q": "what is sylvia fowles doing now",
+          "vol": 20
+        },
+        {
+          "q": "sylvia fowles coach",
+          "vol": 20
+        },
+        {
+          "q": "sylvia fowles now",
+          "vol": 10
+        },
+        {
+          "q": "where is sylvia fowles",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Sylvia Fowles make?",
-      "answer": "A precise public salary or net worth figure for Sylvia Fowles is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Sylvia Fowles play college basketball?",
+      "answer": "Sylvia Fowles played at LSU, leading the Tigers to four straight Final Fours (2005 to 2008). She graduated as LSU's career leader in rebounds, blocks and double-doubles, and LSU retired her No. 34.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wbhof.com/member/sylvia-fowles"
       ],
-      "google_keyword": "sylvia fowles net worth",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "sylvia fowles lsu",
+          "vol": 40
+        },
+        {
+          "q": "sylvia fowles college",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Is Sylvia Fowles in the Hall of Fame?",
+      "answer": "Yes. Sylvia Fowles was enshrined in the Naismith Basketball Hall of Fame and the Women's Basketball Hall of Fame, both with the Class of 2025. She retired in 2022 as the WNBA's all-time leading rebounder.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.hoophall.com/news/naismith-basketball-hall-of-fame-announces-nine-inductees-for-the-class-of-2025",
+        "https://www.wbhof.com/member/sylvia-fowles"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles hall of fame",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Sylvia Fowles?",
-      "answer": "She was born October 6, 1985 in Coconut Grove. As of late 2026 that puts her at 40 years old.",
+      "answer": "Sylvia Fowles was born October 6, 1985.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
+        "https://www.wnba.com/player/201480/sylvia-fowles/bio"
       ],
-      "google_keyword": "sylvia fowles age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1985-10-06"
+      "queries": [
+        {
+          "q": "sylvia fowles age",
+          "vol": 20
+        },
+        {
+          "q": "how old is sylvia fowles",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Sylvia Fowles's contract?",
-      "answer": "Contract length and guarantees for Sylvia Fowles are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "How many WNBA championships did Sylvia Fowles win?",
+      "answer": "Two. Sylvia Fowles won WNBA titles with the Minnesota Lynx in 2015 and 2017 and was Finals MVP both times. She was also the 2017 WNBA MVP and a four-time Defensive Player of the Year (2011, 2013, 2016 and 2021).",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201480/sylvia-fowles/bio"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles championships",
+          "vol": 10
+        },
+        {
+          "q": "sylvia fowles mvp",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many Olympic gold medals does Sylvia Fowles have?",
+      "answer": "Four. Sylvia Fowles won Olympic gold with Team USA in 2008, 2012, 2016 and 2021.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201480/sylvia-fowles/bio"
+      ],
+      "queries": [
+        {
+          "q": "sylvia fowles olympics",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What number did Sylvia Fowles wear?",
+      "answer": "Sylvia Fowles wore No. 34. The Minnesota Lynx retired it in 2023, and LSU retired it in 2017.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wbhof.com/member/sylvia-fowles"
       ],
-      "google_keyword": "sylvia fowles contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Sylvia Fowles married?",
-      "answer": "There is no widely reported public record of Sylvia Fowles being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles wife",
-      "approx_monthly_volume": 390
-    },
-    {
-      "question": "What team does Sylvia Fowles play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. Her listed position is Center.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sylvia fowles team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many MVPs does Sylvia Fowles have?",
-      "answer": "She won the WNBA MVP Award in 2017 and the WNBA Defensive Player of the Year award four times.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles mvp",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many championships does Sylvia Fowles have?",
-      "answer": "She led the Lynx to win the WNBA Championship in 2015 and 2017, and she was named the MVP of the WNBA Finals both times.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles championships",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Sylvia Fowles injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sylvia fowles injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Sylvia Fowles have kids?",
-      "answer": "There is no widely reported public information that Sylvia Fowles has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles daughter",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who are Sylvia Fowles's parents?",
-      "answer": "Public profiles share limited verified detail about Sylvia Fowles's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles family",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Did Sylvia Fowles retire?",
-      "answer": "As of late 2026, Sylvia Fowles is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles retirement",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Sylvia Fowles?",
-      "answer": "Sylvia Shaqueria Fowles is an American professional basketball coach and former player who is an assistant coach for the Portland Fire of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "who is sylvia fowles married to",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Sylvia Fowles attend?",
-      "answer": "Sylvia Fowles played college basketball at Louisiana State University.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sylvia_Fowles"
-      ],
-      "google_keyword": "sylvia fowles lsu",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "sylvia fowles number",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
