@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:28:45+00:00",
+ "checked_at": "2026-10-29T17:29:25+00:00",
  "period": 2,
- "clock": "26.5",
+ "clock": "0.0",
  "last_play_period": 2,
- "last_play_clock": "38.2",
+ "last_play_clock": "2.5",
  "away": {
   "abbreviation": "GS",
   "score": 26,
@@ -2049,6 +2049,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 169,
+   "period": 2,
+   "clock": "26.5",
+   "type": "Lost Ball Turnover",
+   "text": "Kaila Charles lost ball turnover (Jordin Canada steals)",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 170,
+   "period": 2,
+   "clock": "5.3",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 21-foot jumper",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "2.5",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
