@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:54:07+00:00",
+ "checked_at": "2026-10-29T16:54:42+00:00",
  "period": 1,
  "clock": "4:38",
  "last_play_period": 1,
- "last_play_clock": "4:58",
+ "last_play_clock": "4:38",
  "away": {
   "abbreviation": "GS",
   "score": 5,
@@ -344,7 +344,7 @@
   {
    "order": 27,
    "period": 1,
-   "clock": "6:02",
+   "clock": "6:03",
    "type": "Lost Ball Turnover",
    "text": "Angel Reese lost ball turnover (Gabby Williams steals)",
    "away_score": 5,
@@ -381,8 +381,8 @@
    "order": 30,
    "period": 1,
    "clock": "5:50",
-   "type": "Loose Ball Foul",
-   "text": "Tiffany Hayes loose ball foul",
+   "type": "Personal Foul",
+   "text": "Tiffany Hayes personal foul",
    "away_score": 5,
    "home_score": 8,
    "scoring_play": false,
@@ -532,6 +532,18 @@
    "scoring_play": true,
    "score_value": 3,
    "team": "ATL"
+  },
+  {
+   "order": 43,
+   "period": 1,
+   "clock": "4:38",
+   "type": "No Turnover",
+   "text": "Kaila Charles turnover",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
