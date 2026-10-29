@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:11:36+00:00",
+ "checked_at": "2026-10-29T17:12:12+00:00",
  "period": 2,
- "clock": "7:32",
+ "clock": "7:11",
  "last_play_period": 2,
- "last_play_clock": "7:32",
+ "last_play_clock": "7:11",
  "away": {
   "abbreviation": "GS",
-  "score": 15,
-  "feed_score": 15
+  "score": 17,
+  "feed_score": 17
  },
  "home": {
   "abbreviation": "ATL",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 0,
+   "away": 2,
    "home": 3
   }
  ],
@@ -1057,7 +1057,7 @@
   {
    "order": 86,
    "period": 2,
-   "clock": "9:43",
+   "clock": "9:44",
    "type": "Turnaround Jump Shot",
    "text": "Cecilia Zandalasini misses 12-foot turnaround jump shot",
    "away_score": 15,
@@ -1069,7 +1069,7 @@
   {
    "order": 87,
    "period": 2,
-   "clock": "9:40",
+   "clock": "9:43",
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 15,
@@ -1347,8 +1347,32 @@
    "period": 2,
    "clock": "7:32",
    "type": "Substitution",
-   "text": "enters the game for Gabby Williams",
+   "text": "Tiffany Hayes enters the game for Gabby Williams",
    "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 111,
+   "period": 2,
+   "clock": "7:19",
+   "type": "Pullup Jump Shot",
+   "text": "Tiffany Hayes makes 17-foot pullup jump shot (Veronica Burton assists)",
+   "away_score": 17,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 112,
+   "period": 2,
+   "clock": "7:11",
+   "type": "Personal Foul",
+   "text": "Tiffany Hayes personal foul",
+   "away_score": 17,
    "home_score": 35,
    "scoring_play": false,
    "score_value": 0,
