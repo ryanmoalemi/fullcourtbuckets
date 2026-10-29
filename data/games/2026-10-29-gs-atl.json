@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:29:25+00:00",
- "period": 2,
- "clock": "0.0",
- "last_play_period": 2,
- "last_play_clock": "2.5",
+ "checked_at": "2026-10-29T17:46:33+00:00",
+ "period": 3,
+ "clock": "9:23",
+ "last_play_period": 3,
+ "last_play_clock": "9:29",
  "away": {
   "abbreviation": "GS",
   "score": 26,
@@ -30,6 +30,11 @@
    "period": 2,
    "away": 11,
    "home": 14
+  },
+  {
+   "period": 3,
+   "away": 0,
+   "home": 0
   }
  ],
  "players": [],
@@ -1765,7 +1770,7 @@
   {
    "order": 145,
    "period": 2,
-   "clock": "3:21",
+   "clock": "3:23",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 21,
@@ -1789,7 +1794,7 @@
   {
    "order": 147,
    "period": 2,
-   "clock": "2:50",
+   "clock": "2:51",
    "type": "Driving Layup Shot",
    "text": "Kaitlyn Chen misses driving layup",
    "away_score": 21,
@@ -1801,7 +1806,7 @@
   {
    "order": 148,
    "period": 2,
-   "clock": "2:47",
+   "clock": "2:49",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 21,
@@ -1825,7 +1830,7 @@
   {
    "order": 150,
    "period": 2,
-   "clock": "2:40",
+   "clock": "2:43",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 21,
@@ -1838,8 +1843,8 @@
    "order": 151,
    "period": 2,
    "clock": "2:35",
-   "type": "Running Jump Shot",
-   "text": "Gabby Williams misses 25-foot running jump shot",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 25-foot three point jumper",
    "away_score": 21,
    "home_score": 46,
    "scoring_play": false,
@@ -1849,7 +1854,7 @@
   {
    "order": 152,
    "period": 2,
-   "clock": "2:32",
+   "clock": "2:34",
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 21,
@@ -1875,18 +1880,6 @@
    "period": 2,
    "clock": "2:31",
    "type": "Substitution",
-   "text": "Jordin Canada enters the game for",
-   "away_score": 21,
-   "home_score": 46,
-   "scoring_play": false,
-   "score_value": 0,
-   "team": "ATL"
-  },
-  {
-   "order": 155,
-   "period": 2,
-   "clock": "2:31",
-   "type": "Substitution",
    "text": "Laeticia Amihere enters the game for Kiah Stokes",
    "away_score": 21,
    "home_score": 46,
@@ -1895,7 +1888,7 @@
    "team": "GS"
   },
   {
-   "order": 156,
+   "order": 155,
    "period": 2,
    "clock": "2:11",
    "type": "Jump Shot",
@@ -1907,7 +1900,7 @@
    "team": "ATL"
   },
   {
-   "order": 157,
+   "order": 156,
    "period": 2,
    "clock": "2:10",
    "type": "Defensive Rebound",
@@ -1919,7 +1912,7 @@
    "team": "GS"
   },
   {
-   "order": 158,
+   "order": 157,
    "period": 2,
    "clock": "2:31",
    "type": "Substitution",
@@ -1931,11 +1924,11 @@
    "team": "ATL"
   },
   {
-   "order": 159,
+   "order": 158,
    "period": 2,
    "clock": "1:56",
-   "type": "Pullup Jump Shot",
-   "text": "Isobel Borlase blocks Kaitlyn Chen 's 11-foot pullup jump shot",
+   "type": "Driving Floating Jump Shot",
+   "text": "Isobel Borlase blocks Kaitlyn Chen 's 11-foot driving floating jump shot",
    "away_score": 21,
    "home_score": 46,
    "scoring_play": false,
@@ -1943,9 +1936,9 @@
    "team": "GS"
   },
   {
-   "order": 160,
+   "order": 159,
    "period": 2,
-   "clock": "1:52",
+   "clock": "1:55",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 21,
@@ -1955,7 +1948,7 @@
    "team": "ATL"
   },
   {
-   "order": 161,
+   "order": 160,
    "period": 2,
    "clock": "1:46",
    "type": "Driving Layup Shot",
@@ -1967,9 +1960,9 @@
    "team": "ATL"
   },
   {
-   "order": 162,
+   "order": 161,
    "period": 2,
-   "clock": "1:42",
+   "clock": "1:44",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 21,
@@ -1979,7 +1972,7 @@
    "team": "GS"
   },
   {
-   "order": 163,
+   "order": 162,
    "period": 2,
    "clock": "1:35",
    "type": "Pullup Jump Shot",
@@ -1991,9 +1984,9 @@
    "team": "GS"
   },
   {
-   "order": 164,
+   "order": 163,
    "period": 2,
-   "clock": "1:09",
+   "clock": "1:10",
    "type": "Bad Pass\nTurnover",
    "text": "Isobel Borlase bad pass\nturnover (Gabby Williams steals)",
    "away_score": 24,
@@ -2003,7 +1996,7 @@
    "team": "ATL"
   },
   {
-   "order": 165,
+   "order": 164,
    "period": 2,
    "clock": "1:04",
    "type": "Running Layup Shot",
@@ -2015,7 +2008,7 @@
    "team": "GS"
   },
   {
-   "order": 166,
+   "order": 165,
    "period": 2,
    "clock": "50.1",
    "type": "Jump Shot",
@@ -2027,9 +2020,9 @@
    "team": "ATL"
   },
   {
-   "order": 167,
+   "order": 166,
    "period": 2,
-   "clock": "47.1",
+   "clock": "49.1",
    "type": "Offensive Rebound",
    "text": "Jordin Canada offensive rebound",
    "away_score": 26,
@@ -2039,7 +2032,7 @@
    "team": "ATL"
   },
   {
-   "order": 168,
+   "order": 167,
    "period": 2,
    "clock": "38.2",
    "type": "Lost Ball Turnover",
@@ -2051,7 +2044,7 @@
    "team": "ATL"
   },
   {
-   "order": 169,
+   "order": 168,
    "period": 2,
    "clock": "26.5",
    "type": "Lost Ball Turnover",
@@ -2063,7 +2056,7 @@
    "team": "GS"
   },
   {
-   "order": 170,
+   "order": 169,
    "period": 2,
    "clock": "5.3",
    "type": "Jump Shot",
@@ -2075,11 +2068,119 @@
    "team": "ATL"
   },
   {
-   "order": 171,
+   "order": 170,
    "period": 2,
-   "clock": "2.5",
+   "clock": "3.5",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 2nd Quarter",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
+  },
+  {
+   "order": 172,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for DeWanna Bonner",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 173,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Isobel Borlase",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 174,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Kaitlyn Chen",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 175,
+   "period": 3,
+   "clock": "10:00",
+   "type": "Substitution",
+   "text": "Veronica Burton enters the game for Laeticia Amihere",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 176,
+   "period": 3,
+   "clock": "9:51",
+   "type": "Jump Shot",
+   "text": "Allisha Gray blocks Veronica Burton 's 25-foot three point jumper",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 177,
+   "period": 3,
+   "clock": "9:47",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 178,
+   "period": 3,
+   "clock": "9:33",
+   "type": "Driving Floating Jump Shot",
+   "text": "Jordin Canada misses driving floating jump shot",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 179,
+   "period": 3,
+   "clock": "9:29",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
    "away_score": 26,
    "home_score": 46,
    "scoring_play": false,
