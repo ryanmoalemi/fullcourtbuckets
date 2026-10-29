@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:59:54+00:00",
+ "checked_at": "2026-10-29T18:04:39+00:00",
  "period": 3,
- "clock": "4:19",
+ "clock": "3:08",
  "last_play_period": 3,
- "last_play_clock": "4:19",
+ "last_play_clock": "3:19",
  "away": {
   "abbreviation": "GS",
-  "score": 33,
-  "feed_score": 33
+  "score": 35,
+  "feed_score": 35
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 53,
-  "feed_score": 53
+  "score": 56,
+  "feed_score": 56
  },
  "periods": [
   {
@@ -33,8 +33,8 @@
   },
   {
    "period": 3,
-   "away": 7,
-   "home": 7
+   "away": 9,
+   "home": 10
   }
  ],
  "players": [],
@@ -2455,8 +2455,8 @@
    "order": 202,
    "period": 3,
    "clock": "7:19",
-   "type": "Ref-Initiated Review (Supported)",
-   "text": "(07:19) [Golden State Valkyries] REF-INITIATED REVIEW (REPLAY SUPPORTS CALL)",
+   "type": "Ref-Initiated Review (Overturned)",
+   "text": "(07:19) [Golden State Valkyries] REF-INITIATED REVIEW (CALL OVERTURNED)",
    "away_score": 28,
    "home_score": 51,
    "scoring_play": false,
@@ -2706,7 +2706,7 @@
   {
    "order": 223,
    "period": 3,
-   "clock": "5:23",
+   "clock": "5:24",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 30,
@@ -2720,7 +2720,7 @@
    "period": 3,
    "clock": "5:13",
    "type": "Driving Layup Shot",
-   "text": "Allisha Gray blocks Tiffany Hayes 's 2-foot driving layup",
+   "text": "Naz Hillmon blocks Tiffany Hayes's driving layup",
    "away_score": 30,
    "home_score": 53,
    "scoring_play": false,
@@ -2742,7 +2742,7 @@
   {
    "order": 226,
    "period": 3,
-   "clock": "4:56",
+   "clock": "4:58",
    "type": "Lost Ball Turnover",
    "text": "Allisha Gray lost ball turnover (Tiffany Hayes steals)",
    "away_score": 30,
@@ -2767,8 +2767,8 @@
    "order": 228,
    "period": 3,
    "clock": "4:37",
-   "type": "Lost Ball Turnover",
-   "text": "Allisha Gray lost ball turnover (Tiffany Hayes steals)",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Veronica Burton steals)",
    "away_score": 33,
    "home_score": 53,
    "scoring_play": false,
@@ -2795,6 +2795,114 @@
    "text": "Dream Full timeout",
    "away_score": 33,
    "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 231,
+   "period": 3,
+   "clock": "4:19",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 33,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 232,
+   "period": 3,
+   "clock": "4:15",
+   "type": "Driving Layup Shot",
+   "text": "Rhyne Howard makes driving layup",
+   "away_score": 33,
+   "home_score": 55,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 233,
+   "period": 3,
+   "clock": "4:15",
+   "type": "Shooting Foul",
+   "text": "Gabby Williams shooting foul",
+   "away_score": 33,
+   "home_score": 55,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 234,
+   "period": 3,
+   "clock": "4:15",
+   "type": "Free Throw - 1 of 1",
+   "text": "Rhyne Howard makes free throw 1 of 1",
+   "away_score": 33,
+   "home_score": 56,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 235,
+   "period": 3,
+   "clock": "3:58",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams makes driving layup",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 236,
+   "period": 3,
+   "clock": "3:33",
+   "type": "Step Back Jump Shot",
+   "text": "Rhyne Howard misses 20-foot step back jumpshot",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 237,
+   "period": 3,
+   "clock": "3:29",
+   "type": "Defensive Rebound",
+   "text": "Tiffany Hayes defensive rebound",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 238,
+   "period": 3,
+   "clock": "3:19",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 239,
+   "period": 3,
+   "clock": "3:19",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 35,
+   "home_score": 56,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
