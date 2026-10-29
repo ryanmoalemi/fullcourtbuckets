@@ -5,9 +5,9 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:01:10+00:00",
+ "checked_at": "2026-10-29T17:02:17+00:00",
  "period": 1,
- "clock": "33.9",
+ "clock": "19.5",
  "last_play_period": 1,
  "last_play_clock": "33.9",
  "away": {
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 31,
-  "feed_score": 31
+  "score": 32,
+  "feed_score": 32
  },
  "periods": [
   {
    "period": 1,
    "away": 13,
-   "home": 31
+   "home": 32
   }
  ],
  "players": [],
@@ -904,6 +904,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 74,
+   "period": 1,
+   "clock": "33.9",
+   "type": "Free Throw - 1 of 2",
+   "text": "Angel Reese misses free throw 1 of 2",
+   "away_score": 13,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 75,
+   "period": 1,
+   "clock": "33.9",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 13,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 76,
+   "period": 1,
+   "clock": "33.9",
+   "type": "Substitution",
+   "text": "Rhyne Howard enters the game for Jordin Canada",
+   "away_score": 13,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 77,
+   "period": 1,
+   "clock": "33.9",
+   "type": "Free Throw - 2 of 2",
+   "text": "Angel Reese makes free throw 2 of 2",
+   "away_score": 13,
+   "home_score": 32,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
   }
  ]
 }
