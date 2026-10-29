@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:14:34+00:00",
- "period": 3,
- "clock": "0.0",
- "last_play_period": 3,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-29T18:18:16+00:00",
+ "period": 4,
+ "clock": "9:31",
+ "last_play_period": 4,
+ "last_play_clock": "9:31",
  "away": {
   "abbreviation": "GS",
   "score": 47,
@@ -35,6 +35,11 @@
    "period": 3,
    "away": 21,
    "home": 17
+  },
+  {
+   "period": 4,
+   "away": 0,
+   "home": 0
   }
  ],
  "players": [],
@@ -3032,7 +3037,7 @@
    "period": 3,
    "clock": "2:29",
    "type": "Defensive Rebound",
-   "text": "Cecilia Zandalasini defensive rebound",
+   "text": "Laeticia Amihere defensive rebound",
    "away_score": 37,
    "home_score": 56,
    "scoring_play": false,
@@ -3042,9 +3047,9 @@
   {
    "order": 251,
    "period": 3,
-   "clock": "2:10",
+   "clock": "2:11",
    "type": "Jump Shot",
-   "text": "Cecilia Zandalasini misses 25-foot three point jumper",
+   "text": "Veronica Burton misses 25-foot three point jumper",
    "away_score": 37,
    "home_score": 56,
    "scoring_play": false,
@@ -3054,7 +3059,7 @@
   {
    "order": 252,
    "period": 3,
-   "clock": "2:08",
+   "clock": "2:10",
    "type": "Offensive Rebound",
    "text": "Kaila Charles offensive rebound",
    "away_score": 37,
@@ -3078,7 +3083,7 @@
   {
    "order": 254,
    "period": 3,
-   "clock": "2:00",
+   "clock": "2:02",
    "type": "Driving Layup Shot",
    "text": "Cecilia Zandalasini misses driving layup",
    "away_score": 37,
@@ -3090,7 +3095,7 @@
   {
    "order": 255,
    "period": 3,
-   "clock": "1:57",
+   "clock": "2:01",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 37,
@@ -3343,8 +3348,8 @@
    "order": 276,
    "period": 3,
    "clock": "1.2",
-   "type": "No Shot (Default Shot)",
-   "text": "Kaila Charles makes 23-foot shot (Tiffany Hayes assists)",
+   "type": "Jump Shot",
+   "text": "Kaila Charles makes 23-foot three point jumper (Tiffany Hayes assists)",
    "away_score": 47,
    "home_score": 63,
    "scoring_play": true,
@@ -3362,6 +3367,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 278,
+   "period": 4,
+   "clock": "9:35",
+   "type": "No Shot (Default Shot)",
+   "text": "Jordin Canada misses shot",
+   "away_score": 47,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 279,
+   "period": 4,
+   "clock": "9:31",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 47,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
