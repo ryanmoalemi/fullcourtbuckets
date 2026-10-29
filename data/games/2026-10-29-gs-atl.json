@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:08:14+00:00",
+ "checked_at": "2026-10-29T17:08:49+00:00",
  "period": 2,
- "clock": "9:00",
+ "clock": "8:45",
  "last_play_period": 2,
- "last_play_clock": "9:14",
+ "last_play_clock": "9:00",
  "away": {
   "abbreviation": "GS",
   "score": 15,
@@ -757,7 +757,7 @@
   {
    "order": 61,
    "period": 1,
-   "clock": "1:40",
+   "clock": "1:41",
    "type": "Jump Shot",
    "text": "Kayla Thornton misses 24-foot three point jumper",
    "away_score": 10,
@@ -769,7 +769,7 @@
   {
    "order": 62,
    "period": 1,
-   "clock": "1:37",
+   "clock": "1:40",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 10,
@@ -1101,6 +1101,18 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 90,
+   "period": 2,
+   "clock": "9:00",
+   "type": "Personal Foul",
+   "text": "Allisha Gray personal foul",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
