@@ -1,22 +1,8 @@
 {
   "season": 2026,
-  "note": "WNBA Finals schedule. Finished games' results come from data/games and attendance from data/finals-attendance.json; tip, arena and TV for every game live here. Game 7 is locked after the series was tied 3-3 on Oct. 29, 2026. Tip and TV checked against the USA Sports Finals release and the WNBA Finals preview.",
+  "note": "WNBA Finals schedule. Finished games' results come from data/games and attendance from data/finals-attendance.json; tip, arena and TV for every game live here. Game 7 tip and broadcast checked on the WNBA.com game page Oct. 29, 2026.",
   "best_of": 7,
   "games": [
-    {
-      "game": 6,
-      "date": "2026-10-29",
-      "day": "Thursday, Oct. 29",
-      "time": "9:30 a.m. PT (12:30 p.m. ET)",
-      "arena": "State Farm Arena, Atlanta",
-      "home": "ATL",
-      "tv": "USA Network, E! and Syfy",
-      "stream": "Peacock",
-      "if_needed": false,
-      "espn_game_id": "401918310",
-      "source": "https://www.wnba.com/game/1042600306",
-      "source_label": "WNBA.com Game 6 page"
-    },
     {
       "game": 7,
       "date": "2026-10-31",
@@ -24,10 +10,12 @@
       "time": "5 p.m. PT (8 p.m. ET)",
       "arena": "Chase Center, San Francisco",
       "home": "GS",
+      "away": "ATL",
       "tv": "USA Network and CNBC",
       "stream": "Peacock",
       "if_needed": false,
-      "source": "https://www.wnba.com/news/game-preview-2026-wnba-finals",
+      "source": "https://www.wnba.com/game/atl-vs-gsv-1042600307",
+      "source_label": "WNBA.com Game 7 page",
       "espn_game_id": "401918311"
     }
   ],

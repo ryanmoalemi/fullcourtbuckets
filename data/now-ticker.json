@@ -1,9 +1,9 @@
 {
-  "_note": "The one sitewide Now bar. Updated after Game 6 final, Oct 29 2026. Expires at Game 7 tip.",
+  "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 6 recap replaces this; next: Game 7 result). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
   "text": "Final: Dream 80, Valkyries 69 in Finals Game 6. Series tied 3-3. Game 7 is Sat, Oct 31, 5 p.m. PT at Chase Center (TV: USA Network and CNBC. Streaming: Peacock)",
-  "url": "/news/finals-game-7-preview-dream-valkyries/",
+  "url": "/news/valkyries-dream-finals-game-6-recap/",
   "date": "2026-10-29",
-  "expires": "2026-10-31T17:00:00-07:00",
+  "expires": "2026-10-31T23:59:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"
