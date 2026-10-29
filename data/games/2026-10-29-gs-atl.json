@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:10:00+00:00",
+ "checked_at": "2026-10-29T17:11:36+00:00",
  "period": 2,
- "clock": "8:36",
+ "clock": "7:32",
  "last_play_period": 2,
- "last_play_clock": "8:36",
+ "last_play_clock": "7:32",
  "away": {
   "abbreviation": "GS",
   "score": 15,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 32,
-  "feed_score": 32
+  "score": 35,
+  "feed_score": 35
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 0,
-   "home": 0
+   "home": 3
   }
  ],
  "players": [],
@@ -878,8 +878,8 @@
    "order": 71,
    "period": 1,
    "clock": "1:05",
-   "type": "Driving Layup Shot",
-   "text": "Jordin Canada makes driving layup (Angel Reese assists)",
+   "type": "Driving Finger Roll Layup",
+   "text": "Jordin Canada makes 4-foot two point shot (Angel Reese assists)",
    "away_score": 10,
    "home_score": 31,
    "scoring_play": true,
@@ -1161,6 +1161,198 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 95,
+   "period": 2,
+   "clock": "8:36",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Allisha Gray",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 96,
+   "period": 2,
+   "clock": "8:26",
+   "type": "Pullup Bank Jump Shot",
+   "text": "Veronica Burton misses 13-foot two point shot",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 97,
+   "period": 2,
+   "clock": "8:25",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 98,
+   "period": 2,
+   "clock": "8:21",
+   "type": "Layup Shot",
+   "text": "Cecilia Zandalasini misses layup",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 99,
+   "period": 2,
+   "clock": "8:18",
+   "type": "Offensive Rebound",
+   "text": "Cecilia Zandalasini offensive rebound",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 100,
+   "period": 2,
+   "clock": "8:18",
+   "type": "Tip Shot",
+   "text": "Cecilia Zandalasini misses tip shot",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 101,
+   "period": 2,
+   "clock": "8:17",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 102,
+   "period": 2,
+   "clock": "8:12",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 25-foot three point jumper (Naz Hillmon assists)",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 103,
+   "period": 2,
+   "clock": "7:49",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 104,
+   "period": 2,
+   "clock": "7:46",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 105,
+   "period": 2,
+   "clock": "7:41",
+   "type": "Step Back Jump Shot",
+   "text": "Rhyne Howard misses 24-foot three point step back jumpshot",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 106,
+   "period": 2,
+   "clock": "7:38",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 107,
+   "period": 2,
+   "clock": "7:32",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 108,
+   "period": 2,
+   "clock": "7:32",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for Isobel Borlase",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 109,
+   "period": 2,
+   "clock": "7:32",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for DeWanna Bonner",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 110,
+   "period": 2,
+   "clock": "7:32",
+   "type": "Substitution",
+   "text": "enters the game for Gabby Williams",
+   "away_score": 15,
+   "home_score": 35,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
