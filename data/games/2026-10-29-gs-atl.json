@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:24:43+00:00",
+ "checked_at": "2026-10-29T18:25:17+00:00",
  "period": 4,
- "clock": "5:57",
+ "clock": "5:42",
  "last_play_period": 4,
- "last_play_clock": "6:01",
+ "last_play_clock": "5:42",
  "away": {
   "abbreviation": "GS",
   "score": 55,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 71,
-  "feed_score": 71
+  "score": 74,
+  "feed_score": 74
  },
  "periods": [
   {
@@ -39,7 +39,7 @@
   {
    "period": 4,
    "away": 8,
-   "home": 8
+   "home": 11
   }
  ],
  "players": [],
@@ -3756,10 +3756,46 @@
    "order": 310,
    "period": 4,
    "clock": "6:01",
-   "type": "No Shot (Default Shot)",
-   "text": "Gabby Williams misses shot",
+   "type": "Jump Shot",
+   "text": "Gabby Williams misses 23-foot three point jumper",
    "away_score": 55,
    "home_score": 71,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 311,
+   "period": 4,
+   "clock": "5:57",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 55,
+   "home_score": 71,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 312,
+   "period": 4,
+   "clock": "5:43",
+   "type": "No Shot (Default Shot)",
+   "text": "Angel Reese makes 24-foot shot (Allisha Gray assists)",
+   "away_score": 55,
+   "home_score": 74,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 313,
+   "period": 4,
+   "clock": "5:42",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 55,
+   "home_score": 74,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
