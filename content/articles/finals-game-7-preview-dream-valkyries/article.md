@@ -50,7 +50,7 @@ These are the five leading scorers on each side Thursday, not the series leaders
 
 Atlanta made 6 of 8 threes in the first quarter. That matches the 6 threes the Dream made in all of Game 5. Gray and Howard combined to shoot 9 of 13 from three and scored 44 of Atlanta's 80 points. Gray's last basket was a three with 56 seconds left that made the score 80-69.
 
-Golden State led 5-6 before Atlanta scored the next 13 points: a Gray floater, a Reese layup and free throw, a Canada three, a Gray three, and a Canada layup. [Jordin Canada](/wnba/jordin-canada/) had 7 of her 10 points in that first half. [Naz Hillmon](/wnba/naz-hillmon/) scored all 7 of hers before halftime, on 3 of 4 shooting, and finished plus-15, the best plus-minus on the floor. Reese made a three. In this series she has made at least one three in each of Atlanta's three wins and has not made one in any of the three losses.
+Atlanta led 6-5 after a Gabby Williams free throw, then scored the next 13 points: a Gray floater, a Reese layup and free throw, a Canada three, a Gray three, and a Canada layup. [Jordin Canada](/wnba/jordin-canada/) had 7 of her 10 points in that first half. [Naz Hillmon](/wnba/naz-hillmon/) scored all 7 of hers before halftime, on 3 of 4 shooting, and finished plus-15, the best plus-minus on the floor. Reese made a three. In this series she has made at least one three in each of Atlanta's three wins and has not made one in any of the three losses.
 
 Williams scored 4 points before halftime and 22 of her 26 after it. Hayes had the opposite split: 11 of her 15 points came in the first half, and she picked up her fifth foul with 5:01 left in the fourth quarter and Atlanta up 74-57. She did not score after that. [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) had 7 of her 9 points in the first half and finished 3 of 12 from the field. [Kaila Charles](/wnba/kaila-charles/) scored all 6 of her points after halftime. Burton shot 2 of 13, and 0 of 6 from three, with 4 assists and 3 steals in 36 minutes.
 
@@ -71,7 +71,7 @@ The team with more points off turnovers is 6-0. Winners have 118 of those points
 
 Data through Finals Game 6, Oct. 29, 2026. Methods: turnovers are team totals, including team turnovers, counted from the play-by-play and checked against the official box score. Points off turnovers are the official WNBA.com box-score figures. Shot attempts are field-goal attempts plus 0.44 times free-throw attempts. Three of the six halftime leads were by 3 points or fewer (Games 1, 2 and 5). Source: FCB game data, verified against WNBA.com. Free to use and republish (CC0). Download (CC0): [series-patterns-games-1-6.csv](/news/finals-game-7-preview-dream-valkyries/data/series-patterns-games-1-6.csv)
 
-Home teams are 3-3. Each side has won once on the other's floor. Golden State is 2-1 at Chase Center. Golden State won the three lowest-scoring games (combined 132, 129 and 119) and lost the three highest (144, 168 and 149). Atlanta is 3-0 when it scores 79 or more and 0-3 when it scores 64 or fewer. Golden State has not scored more than 71 in any game of the series.
+Home teams are 4-2. Each side has won once on the other's floor. Each team is 2-1 at home. Golden State won the three lowest-scoring games (combined 132, 129 and 119) and lost the three highest (144, 168 and 149). Atlanta is 3-0 when it scores 79 or more and 0-3 when it scores 64 or fewer. Golden State has not scored more than 71 in any game of the series.
 
 ## The first Game 7 of the best-of-seven Finals
 
@@ -124,9 +124,9 @@ Howard's point totals are 16, 21 and 5 in the wins, and 12, 19 and 20 in the los
 
 **37.7 percent, then 18.9.** Atlanta shot 29 of 77 from three in its three wins and 14 of 74 in its three losses. Gray was 8 of 17 from three in the wins and 2 of 16 in the losses, including 5 of 7 on Thursday.
 
-#### Win the second half again
+#### Win the second half
 
-**219-192.** Atlanta has outscored Golden State by 27 points after halftime. Golden State won the second half only in Game 5, 39-33, and won the game. The other five second halves went to Atlanta.
+**219-192.** Atlanta has outscored Golden State by 27 points after halftime. Golden State won the second half in Games 1 (26-25), 5 (39-33) and 6 (43-34). It won Games 1 and 5 but lost Game 6 after trailing 46-26 at halftime. Atlanta won the other three second halves.
 
 ### Golden State Valkyries
 
@@ -134,7 +134,7 @@ Howard's point totals are 16, 21 and 5 in the wins, and 12, 19 and 20 in the los
 
 #### Keep the score low
 
-**3-0 at 132 or fewer, 0-3 at 144 or more.** Golden State won the games that finished 132-119 combined and lost the ones that finished 144, 168 and 149. It has not scored more than 71. Atlanta is 0-3 when it scores 64 or fewer and 3-0 when it scores 79 or more.
+**3-0 at 132 or fewer, 0-3 at 144 or more.** Golden State won the games with combined totals of 132, 129 and 119 points and lost the ones that finished 144, 168 and 149. It has not scored more than 71. Atlanta is 0-3 when it scores 64 or fewer and 3-0 when it scores 79 or more.
 
 #### Make Stokes's minutes count the way they did in the wins
 
