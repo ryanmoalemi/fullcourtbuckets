@@ -42,7 +42,19 @@ Data through Finals Game 6, Oct. 29, 2026. Methods: running margin is Atlanta po
 
 Thursday's quarters were Atlanta 32-14-17-17 and Golden State 15-11-21-22. The Dream led 46-26 at halftime in front of a sellout of 17,099. [Allisha Gray](/wnba/allisha-gray/) scored 23 on 5 of 7 threes. [Rhyne Howard](/wnba/rhyne-howard/) had 21. [Angel Reese](/wnba/angel-reese/) had 15 points, 14 rebounds and 6 turnovers on 5 of 18 shooting. [Gabby Williams](/wnba/gabby-williams/) scored 26 on 8 of 22 for Golden State, and [Tiffany Hayes](/wnba/tiffany-hayes/) had 15.
 
-The WNBA had moved Game 6 to 12:30 p.m. ET at State Farm Arena, which seats more than 17,000, instead of Gateway Center, because the Hawks played in the building that night ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)). Dream ownership later said a midday Thursday "is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)).
+The WNBA had moved Game 6 to 12:30 p.m. ET at State Farm Arena, which seats more than 17,000, instead of Gateway Center, because the Hawks played in the building that night ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)). Dream ownership later said a midday Thursday "is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)). After Game 5, [Veronica Burton](/wnba/veronica-burton/) told Golden State fans, "Call in sick. I recommend it" ([USA Today](https://www.usatoday.com/story/sports/wnba/2026/10/27/valkyries-encourage-fans-to-call-in-sick-for-wnba-finals-game-6/92454900007/), Oct. 27).
+
+## The ten who led the Game 6 box
+
+These are the five leading scorers on each side Thursday, not the series leaders.
+
+Atlanta made 6 of 8 threes in the first quarter. That matches the 6 threes the Dream made in all of Game 5. Gray and Howard combined to shoot 9 of 13 from three and scored 44 of Atlanta's 80 points. Gray's last basket was a three with 56 seconds left. It made the score 80-69.
+
+Golden State led 5-6 before Atlanta scored the next 13 points: a Gray floater, a Reese layup and free throw, a Canada three, a Gray three, and a Canada layup. [Jordin Canada](/wnba/jordin-canada/) had 7 of her 10 points in that first half. [Naz Hillmon](/wnba/naz-hillmon/) scored all 7 of hers before halftime, on 3 of 4 shooting, and finished plus-15, the best plus-minus on the floor. Reese made a three. In this series she has made at least one three in each of Atlanta's three wins and has not made one in any of the three losses.
+
+Williams scored 4 points before halftime and 22 of her 26 after it. Hayes had the other shape: 11 of her 15 points came in the first half, and her fifth foul came at 5:01 of the fourth with Atlanta up 74-57. She did not score after that. [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) had 7 of her 9 points in the first half and finished 3 of 12 from the field. [Kaila Charles](/wnba/kaila-charles/) scored all 6 of her points after halftime. Burton shot 2 of 13, and 0 of 6 from three, with 4 assists and 3 steals in 36 minutes.
+
+Counted from the Game 6 play-by-play in the FCB game file, checked against the official box totals. Game 5's six made threes are the team line in the same file. Source: FCB game data, verified against [WNBA.com](https://www.wnba.com/game/gsv-vs-atl-1042600306/box-score). Free to use and republish (CC0).
 
 ## What has actually decided the six games
 
