@@ -496,6 +496,77 @@ def write_images(article: dict, photo_path: Path, photo: bytes) -> None:
     article['imageHeight'] = article['imageHeroHeight']
 
 
+# Silhouettes for the Game 7 Halloween field. CSS moves them; the page has no animation script.
+_BAT_SVG = (
+    '<svg viewBox="0 0 128 52" aria-hidden="true" focusable="false">'
+    '<path fill="#14060f" d="M64 30c-6-14-22-22-36-16 6 3 8 12 2 16C16 36 4 24 0 10c8 10 18 22 16 32'
+    ' 12-4 24-12 32-20 4 10 12 16 16 16s12-6 16-16c8 8 20 16 32 20-2-10 8-22 16-32-4 14-16 26-30 20'
+    '-6-4-4-13 2-16-14-6-30 2-36 16z"/>'
+    '<circle cx="58" cy="32" r="1.8" fill="#ffe08a"/>'
+    '<circle cx="70" cy="32" r="1.8" fill="#ffe08a"/>'
+    '</svg>'
+)
+_PUMPKIN_SVG = (
+    '<svg viewBox="0 0 64 72" aria-hidden="true" focusable="false">'
+    '<path fill="#2f7d32" d="M34 4c4 1 7 6 5 10-3-1-5-1-7 1 1-4 0-9 2-11z"/>'
+    '<ellipse cx="32" cy="40" rx="13" ry="22" fill="#ff9f1c"/>'
+    '<ellipse cx="21" cy="40" rx="11" ry="20" fill="#f76707"/>'
+    '<ellipse cx="43" cy="40" rx="11" ry="20" fill="#e8590c"/>'
+    '<path fill="#2a0c00" d="M24 34l6 7-6 2zm16 0-6 7 6 2zM28 50c1 2 3 3 4 3s3-1 4-3c0 3-2 6-4 7s-4-4-4-7z"/>'
+    '</svg>'
+)
+
+
+def _is_halloween(meta: dict) -> bool:
+    return str(meta.get('theme') or '') == 'halloween'
+
+
+def halloween_kicker_html() -> str:
+    """Eyebrow above the headline so the moving background reads as Halloween."""
+    icon = f'<span class="hw-kicker-ico" aria-hidden="true">{_PUMPKIN_SVG}</span>'
+    return f'<p class="hw-kicker">{icon}<span>Halloween Finals 2026</span>{icon}</p>'
+
+
+def halloween_orbit_html() -> str:
+    """Short motion band directly above the hero photo. The photo itself is unchanged."""
+    embers = '<span class="hw-embers">' + ('<i></i>' * 8) + '</span>'
+    return (
+        '<div class="hw-orbit" aria-hidden="true"><span class="hw-orbit-fog"></span>'
+        f'{embers}'
+        f'<span class="hw-pumpkin hw-orbit-pumpkin">{_PUMPKIN_SVG}</span>'
+        f'<span class="hw-pumpkin hw-orbit-pumpkin hw-orbit-pumpkin-b">{_PUMPKIN_SVG}</span>'
+        f'<span class="hw-bat hw-orbit-bat"><span class="hw-bat-path">{_BAT_SVG}</span></span>'
+        f'<span class="hw-bat hw-orbit-bat hw-orbit-bat-b"><span class="hw-bat-path">{_BAT_SVG}</span></span>'
+        '</div>'
+    )
+
+
+def halloween_field_html() -> str:
+    """Fixed page background: fog, embers, bats and pumpkins behind the article."""
+    bats = ''.join(
+        f'<span class="hw-bat hw-bat-{i}"><span class="hw-bat-path">{_BAT_SVG}</span></span>'
+        for i in range(1, 8)
+    )
+    pumpkins = ''.join(
+        f'<span class="hw-pumpkin hw-pumpkin-{i}">{_PUMPKIN_SVG}</span>'
+        for i in range(1, 7)
+    )
+    spots = (
+        (4, 11, 1), (11, 15, 4), (18, 9, 2), (27, 13, 7), (35, 10, 3),
+        (44, 16, 6), (52, 12, 2), (61, 14, 8), (69, 9, 5), (77, 13, 1),
+        (85, 11, 6), (93, 15, 3), (8, 18, 9), (48, 8, 4), (72, 17, 7), (22, 12, 5),
+    )
+    embers = ''.join(
+        f'<i style="left:{left}%;animation-duration:{dur}s;animation-delay:-{delay}s"></i>'
+        for left, dur, delay in spots
+    )
+    return (
+        '<div class="hw-field" aria-hidden="true">'
+        '<span class="hw-field-fog"></span><span class="hw-field-fog hw-field-fog-b"></span>'
+        f'<span class="hw-field-embers">{embers}</span>{bats}{pumpkins}</div>'
+    )
+
+
 def figure_html(article: dict, meta: dict) -> str:
     hero = article['imageHero']
     srcset = f'{hero} {article["imageHeroWidth"]}w'
@@ -508,7 +579,13 @@ def figure_html(article: dict, meta: dict) -> str:
         str(meta.get('license_url') or ''),
     )
     layer = ''
-    if str(meta.get('theme') or '') == 'halloween':
+    orbit = ''
+    open_hero = ''
+    close_hero = ''
+    if _is_halloween(meta):
+        orbit = halloween_orbit_html()
+        open_hero = '<div class="hw-hero">'
+        close_hero = '</div>'
         layer = (
             '<div class="hw-sky" aria-hidden="true"><span class="hw-fog"></span>'
             '<span class="hw-embers">' + ('<i></i>' * 14) + '</span>'
@@ -516,12 +593,12 @@ def figure_html(article: dict, meta: dict) -> str:
             '</div>'
         )
     return (
-        f'<figure class="lead-photo"><picture><source srcset="{esc(srcset)}" type="image/webp" '
+        f'<figure class="lead-photo">{orbit}{open_hero}<picture><source srcset="{esc(srcset)}" type="image/webp" '
         f'sizes="{SIZES}"></source><img src="{esc(hero)}" alt="{esc(article["imageAlt"])}" '
         f'style="object-position:{esc(focal)}" srcset="{esc(srcset)}" sizes="{SIZES}" '
         f'width="{article["imageHeroWidth"]}" height="{article["imageHeroHeight"]}" '
         f'decoding="async" fetchpriority="high"></picture>'
-        f'{layer}<figcaption>{caption}</figcaption></figure>'
+        f'{layer}{close_hero}<figcaption>{caption}</figcaption></figure>'
     )
 
 
@@ -539,8 +616,14 @@ def apply_page_theme(page: str, meta: dict) -> str:
     href = f'/news/{slug}/page.css'
     if href not in page:
         page = page.replace('</head>', f'<link rel="stylesheet" href="{href}">\n</head>', 1)
-    if str(meta.get('theme') or '') == 'halloween' and 'class="fcb-halloween"' not in page:
+    if _is_halloween(meta) and 'class="fcb-halloween"' not in page:
         page = page.replace('<body>', '<body class="fcb-halloween">', 1)
+    if _is_halloween(meta) and 'class="hw-field"' not in page:
+        page = page.replace(
+            '<body class="fcb-halloween">',
+            '<body class="fcb-halloween">' + halloween_field_html(),
+            1,
+        )
     return page
 
 
@@ -587,8 +670,10 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     linked = bool(meta.get('photo_credit_url') or meta.get('license_url'))
     sentence = links.HOW_MADE_OTHER if linked else links.HOW_MADE_OTHER_UNLINKED
     how = f'<p class="how-made">{sentence} {links.HOW_MADE_LINK}</p>'
+    kicker = halloween_kicker_html() if _is_halloween(meta) else ''
     article_html = (
         '<article class="article">'
+        f'{kicker}'
         f'<div class="meta-row"><span class="cat">{esc(article["category"])}</span>'
         '<span class="divider"></span><span>Full Court Buckets</span></div>'
         f'<h1>{esc(title)}</h1>'
