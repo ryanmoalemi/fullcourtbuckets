@@ -110,7 +110,7 @@ Howard's point totals are 16, 21 and 5 in the wins, and 12, 19 and 20 in the los
 
 ### Atlanta Dream
 
-!photo: /images/articles/finals-game-7-preview-dream-valkyries/angel-reese.jpg | Angel Reese, in a black Chicago Sky jersey and headband, looking ahead | Photo: John Mac, CC BY-SA 2.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Angel_Reese_Chicago_Sky_(cropped).jpg | https://creativecommons.org/licenses/by-sa/2.0/ | center 15%
+!photo: /images/articles/finals-game-7-preview-dream-valkyries/angel-reese-dream-2026.jpg | Angel Reese of the Atlanta Dream, in a white Dream jersey and headband, drives with the ball against the Minnesota Lynx | Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Angel_Reese_Dream_2_(cropped).jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 2%
 
 #### Score more points off turnovers
 
