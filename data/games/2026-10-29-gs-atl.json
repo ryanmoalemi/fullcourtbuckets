@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:34:20+00:00",
+ "checked_at": "2026-10-29T18:34:55+00:00",
  "period": 4,
- "clock": "4:52",
+ "clock": "4:19",
  "last_play_period": 4,
- "last_play_clock": "5:01",
+ "last_play_clock": "4:34",
  "away": {
   "abbreviation": "GS",
   "score": 57,
@@ -3839,7 +3839,7 @@
   {
    "order": 317,
    "period": 4,
-   "clock": "5:07",
+   "clock": "5:08",
    "type": "Layup Shot",
    "text": "Allisha Gray misses layup",
    "away_score": 57,
@@ -3851,7 +3851,7 @@
   {
    "order": 318,
    "period": 4,
-   "clock": "5:05",
+   "clock": "5:06",
    "type": "Defensive Rebound",
    "text": "Tiffany Hayes defensive rebound",
    "away_score": 57,
@@ -3907,6 +3907,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 323,
+   "period": 4,
+   "clock": "4:52",
+   "type": "Traveling",
+   "text": "Rhyne Howard traveling turnover",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 324,
+   "period": 4,
+   "clock": "4:39",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese blocks Laeticia Amihere 's 2-foot driving layup",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 325,
+   "period": 4,
+   "clock": "4:34",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
