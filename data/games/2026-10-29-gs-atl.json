@@ -5,9 +5,9 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:32:13+00:00",
+ "checked_at": "2026-10-29T18:34:20+00:00",
  "period": 4,
- "clock": "5:01",
+ "clock": "4:52",
  "last_play_period": 4,
  "last_play_clock": "5:01",
  "away": {
@@ -3731,7 +3731,7 @@
   {
    "order": 308,
    "period": 4,
-   "clock": "6:11",
+   "clock": "6:14",
    "type": "Defensive Rebound",
    "text": "Rhyne Howard defensive rebound",
    "away_score": 55,
@@ -3767,7 +3767,7 @@
   {
    "order": 311,
    "period": 4,
-   "clock": "5:57",
+   "clock": "6:00",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 55,
@@ -3890,6 +3890,18 @@
    "clock": "5:01",
    "type": "Full Timeout",
    "text": "Golden State Valkyries Full timeout",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 322,
+   "period": 4,
+   "clock": "5:01",
+   "type": "Substitution",
+   "text": "Cecilia Zandalasini enters the game for Tiffany Hayes",
    "away_score": 57,
    "home_score": 74,
    "scoring_play": false,
