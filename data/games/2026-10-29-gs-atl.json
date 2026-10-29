@@ -5,26 +5,26 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:57:23+00:00",
+ "checked_at": "2026-10-29T16:58:59+00:00",
  "period": 1,
- "clock": "2:53",
+ "clock": "1:37",
  "last_play_period": 1,
- "last_play_clock": "2:55",
+ "last_play_clock": "1:37",
  "away": {
   "abbreviation": "GS",
-  "score": 8,
-  "feed_score": 8
+  "score": 10,
+  "feed_score": 10
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 22,
-  "feed_score": 22
+  "score": 27,
+  "feed_score": 27
  },
  "periods": [
   {
    "period": 1,
-   "away": 8,
-   "home": 22
+   "away": 10,
+   "home": 27
   }
  ],
  "players": [],
@@ -453,8 +453,8 @@
    "order": 36,
    "period": 1,
    "clock": "5:16",
-   "type": "Jump Shot",
-   "text": "Veronica Burton misses 7-foot jumper",
+   "type": "Pullup Jump Shot",
+   "text": "Veronica Burton misses 7-foot pullup jump shot",
    "away_score": 5,
    "home_score": 11,
    "scoring_play": false,
@@ -694,12 +694,84 @@
    "period": 1,
    "clock": "2:55",
    "type": "Substitution",
-   "text": "enters the game for Tiffany Hayes",
+   "text": "Cecilia Zandalasini enters the game for Tiffany Hayes",
    "away_score": 8,
    "home_score": 22,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 57,
+   "period": 1,
+   "clock": "2:51",
+   "type": "Jumpball",
+   "text": "Kiah Stokes vs. Naz Hillmon (Jordin Canada gains possession)",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 58,
+   "period": 1,
+   "clock": "2:47",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 25-foot three point jumper (Jordin Canada assists)",
+   "away_score": 8,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 59,
+   "period": 1,
+   "clock": "2:23",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Cecilia Zandalasini makes 6-foot two point shot (Gabby Williams assists)",
+   "away_score": 10,
+   "home_score": 25,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 60,
+   "period": 1,
+   "clock": "2:01",
+   "type": "Jump Shot",
+   "text": "Naz Hillmon makes 20-foot jumper (Isobel Borlase assists)",
+   "away_score": 10,
+   "home_score": 27,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 61,
+   "period": 1,
+   "clock": "1:40",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton misses 24-foot three point jumper",
+   "away_score": 10,
+   "home_score": 27,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 62,
+   "period": 1,
+   "clock": "1:37",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 10,
+   "home_score": 27,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
