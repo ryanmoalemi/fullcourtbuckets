@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:41:59+00:00",
+ "checked_at": "2026-10-29T18:44:37+00:00",
  "period": 4,
- "clock": "2:36",
+ "clock": "1:56",
  "last_play_period": 4,
- "last_play_clock": "2:58",
+ "last_play_clock": "1:56",
  "away": {
   "abbreviation": "GS",
-  "score": 63,
-  "feed_score": 63
+  "score": 64,
+  "feed_score": 64
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 75,
-  "feed_score": 75
+  "score": 77,
+  "feed_score": 77
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 16,
-   "home": 12
+   "away": 17,
+   "home": 14
   }
  ],
  "players": [],
@@ -4171,6 +4171,186 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "GS"
+  },
+  {
+   "order": 345,
+   "period": 4,
+   "clock": "2:37",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 346,
+   "period": 4,
+   "clock": "2:36",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 347,
+   "period": 4,
+   "clock": "2:36",
+   "type": "Personal Foul",
+   "text": "Angel Reese personal foul",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 348,
+   "period": 4,
+   "clock": "2:36",
+   "type": "Free Throw - 1 of 2",
+   "text": "Laeticia Amihere misses free throw 1 of 2",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 349,
+   "period": 4,
+   "clock": "2:36",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 350,
+   "period": 4,
+   "clock": "2:36",
+   "type": "Free Throw - 2 of 2",
+   "text": "Laeticia Amihere makes free throw 2 of 2",
+   "away_score": 64,
+   "home_score": 75,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 351,
+   "period": 4,
+   "clock": "2:19",
+   "type": "Driving Layup Shot",
+   "text": "Naz Hillmon misses driving layup",
+   "away_score": 64,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 352,
+   "period": 4,
+   "clock": "2:18",
+   "type": "Offensive Rebound",
+   "text": "Rhyne Howard offensive rebound",
+   "away_score": 64,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 353,
+   "period": 4,
+   "clock": "2:18",
+   "type": "Personal Foul",
+   "text": "Cecilia Zandalasini personal foul",
+   "away_score": 64,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 354,
+   "period": 4,
+   "clock": "2:18",
+   "type": "Free Throw - 1 of 2",
+   "text": "Rhyne Howard makes free throw 1 of 2",
+   "away_score": 64,
+   "home_score": 76,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 355,
+   "period": 4,
+   "clock": "2:18",
+   "type": "Free Throw - 2 of 2",
+   "text": "Rhyne Howard makes free throw 2 of 2",
+   "away_score": 64,
+   "home_score": 77,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 356,
+   "period": 4,
+   "clock": "1:57",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams misses driving layup",
+   "away_score": 64,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 357,
+   "period": 4,
+   "clock": "1:56",
+   "type": "Offensive Rebound",
+   "text": "Laeticia Amihere offensive rebound",
+   "away_score": 64,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 358,
+   "period": 4,
+   "clock": "1:56",
+   "type": "Shooting Foul",
+   "text": "Angel Reese shooting foul",
+   "away_score": 64,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 359,
+   "period": 4,
+   "clock": "1:56",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 64,
+   "home_score": 77,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
