@@ -5,9 +5,9 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:51:38+00:00",
+ "checked_at": "2026-10-29T17:54:46+00:00",
  "period": 3,
- "clock": "7:19",
+ "clock": "7:09",
  "last_play_period": 3,
  "last_play_clock": "7:19",
  "away": {
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 51,
-  "feed_score": 51
+  "score": 53,
+  "feed_score": 53
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 2,
-   "home": 5
+   "home": 7
   }
  ],
  "players": [],
@@ -2358,7 +2358,7 @@
   {
    "order": 194,
    "period": 3,
-   "clock": "8:19",
+   "clock": "8:20",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 28,
@@ -2443,8 +2443,8 @@
    "order": 201,
    "period": 3,
    "clock": "7:19",
-   "type": "Shooting Foul",
-   "text": "Veronica Burton shooting foul",
+   "type": "Flagrant Foul Type 1",
+   "text": "Veronica Burton flagrant foul type 1",
    "away_score": 28,
    "home_score": 51,
    "scoring_play": false,
@@ -2455,13 +2455,37 @@
    "order": 202,
    "period": 3,
    "clock": "7:19",
-   "type": "Coach's Challenge (replaycenter)",
-   "text": "(07:19) [Golden State Valkyries] COACH'S CHALLENGE (CALL REPLAYCENTER)",
+   "type": "Ref-Initiated Review (Supported)",
+   "text": "(07:19) [Golden State Valkyries] REF-INITIATED REVIEW (REPLAY SUPPORTS CALL)",
    "away_score": 28,
    "home_score": 51,
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 203,
+   "period": 3,
+   "clock": "7:19",
+   "type": "Free Throw - Flagrant 1 of 2",
+   "text": "Rhyne Howard makes free throw flagrant 1 of 2",
+   "away_score": 28,
+   "home_score": 52,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 204,
+   "period": 3,
+   "clock": "7:19",
+   "type": "Free Throw - 2 of 2",
+   "text": "Rhyne Howard makes free throw 2 of 2",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
   }
  ]
 }
