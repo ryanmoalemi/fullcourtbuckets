@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Dream beat Valkyries 80-69, tying the Finals 3-3 on 13 threes</title>
+      <link>https://fullcourtbuckets.com/news/valkyries-dream-finals-game-6-recap/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/valkyries-dream-finals-game-6-recap/</guid>
+      <pubDate>Thu, 29 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>The Dream beat the Valkyries 80-69 in Game 6 and tied the WNBA Finals 3-3. Atlanta's 13 threes were the most by either team in a game this series.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-6-recap/og-1200.jpg" length="77202" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/valkyries-dream-finals-game-6-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>WNBA 2026 Finals: Valkyries can clinch in Game 6, but road teams in this spot are 2-4</title>
       <link>https://fullcourtbuckets.com/news/finals-game-6-preview-valkyries-dream/</link>
@@ -20,7 +31,7 @@
       <dc:creator>Ryan Moalemi</dc:creator>
       <category>news</category>
       <description>Valkyries vs. Dream Game 6 preview: road teams are 2-4 in Finals closeout games when the home team had already won one, since 2002. Tip time, TV, odds, and original data with CSVs.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-6-preview-valkyries-dream/og-1200.jpg" length="76795" type="image/jpeg"/>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/finals-game-6-preview-valkyries-dream/og-1200.jpg" length="77695" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/finals-game-6-preview-valkyries-dream/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
     <item>
@@ -330,17 +341,6 @@
       <description>With 1:30 left, Canada's step-back three made it 87-77. The Dream beat the Liberty 92-82 to lead 1-0.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/liberty-dream-semis-game-1-recap/og-1200.jpg" length="66127" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/liberty-dream-semis-game-1-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Valkyries Own the Glass, Stun the Aces 71-60 in Semis Game 1</title>
-      <link>https://fullcourtbuckets.com/news/aces-valkyries-semis-game-1-recap/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/aces-valkyries-semis-game-1-recap/</guid>
-      <pubDate>Sun, 04 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>WNBA Playoffs</category>
-      <description>Golden State grabbed 52 rebounds to Vegas's 25 and beat the Aces 71-60 in Game 1. The glass leader did not score.</description>
-      <enclosure url="https://fullcourtbuckets.com/images/articles/aces-valkyries-semis-game-1-recap/og-1200.jpg" length="153463" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/images/articles/aces-valkyries-semis-game-1-recap/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
