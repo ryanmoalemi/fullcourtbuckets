@@ -114,9 +114,74 @@ def ordinal(n: int) -> str:
 ROUNDS = {'WNBA Finals': 'WNBA Finals', 'Semi-Finals': 'Semifinals', 'Second Round': 'Second Round',
           'First Round': 'First Round', 'Playoffs': 'Playoffs', 'Conference Finals': 'Conference Finals'}
 
+# The Finals became a best-of-seven in 2025. Four wins end the series; three do not.
+FINALS_WINS_TO_CLINCH = 4
+BEST_OF_SEVEN_FINALS_FIRST = 2025
+_SERIES_WINS = re.compile(r'([A-Z]{2,3}) wins(?: series)?(?: (\d+)-(\d+))?')
 
-def playoff_results(games: list[dict]) -> dict:
-    """Last series each team played and whether it won it, from the league's seriesText."""
+
+def _series_line(game: dict) -> tuple[int | None, int | None]:
+    """Winner team id and win total from a 'X wins' series line.
+
+    'X leads' and 'Series tied' do not match. A missing total means the feed
+    named a winner without a count.
+    """
+    m = _SERIES_WINS.match(game.get('seriesText') or '')
+    if not m:
+        return None, None
+    winner = next((t['teamId'] for t in (game['homeTeam'], game['awayTeam'])
+                   if t.get('teamTricode') == m.group(1)), None)
+    total = int(m.group(2)) if m.group(2) else None
+    return winner, total
+
+
+def _finals_wins_from_scores(games: list[dict], pair: set) -> dict:
+    """Wins in completed Finals games between this pair, counted from the score."""
+    wins = {tid: 0 for tid in pair}
+    for g in games:
+        if g.get('seasonType') != 'Playoffs' or g.get('gameStatus') != 3:
+            continue
+        if {g['homeTeam']['teamId'], g['awayTeam']['teamId']} != pair:
+            continue
+        if ROUNDS.get(g.get('gameLabel') or '', g.get('gameLabel') or '') != 'WNBA Finals':
+            continue
+        h, a = g['homeTeam'], g['awayTeam']
+        hs, away_score = h.get('score'), a.get('score')
+        if not isinstance(hs, int) or not isinstance(away_score, int) or hs == away_score:
+            continue
+        wins[h['teamId'] if hs > away_score else a['teamId']] += 1
+    return wins
+
+
+def _finals_label(tid: int, won: bool | None, text_wins: int | None, score_wins: dict, year: int | None) -> str:
+    """Won or Lost only when the Finals are over.
+
+    From 2025 the series is best of seven, so a team needs four wins. A series
+    line that says a club 'wins' 3-2 is still a lead, and a line with no winner
+    ('leads', 'tied', or no line) is not a loss. Before 2025 the feed's 'wins'
+    line is the completion signal for a best-of-five or shorter Finals.
+    """
+    if year is not None and year >= BEST_OF_SEVEN_FINALS_FIRST:
+        best = max(score_wins.values()) if score_wins else 0
+        if best >= FINALS_WINS_TO_CLINCH:
+            return 'Won WNBA Finals' if score_wins.get(tid, 0) >= FINALS_WINS_TO_CLINCH else 'Lost in WNBA Finals'
+        if text_wins is not None and text_wins >= FINALS_WINS_TO_CLINCH and won is not None:
+            return 'Won WNBA Finals' if won else 'Lost in WNBA Finals'
+        if won is not None and text_wins is None and best == 0:
+            return 'Won WNBA Finals' if won else 'Lost in WNBA Finals'
+        return 'Reached WNBA Finals'
+    if won is True:
+        return 'Won WNBA Finals'
+    if won is False:
+        return 'Lost in WNBA Finals'
+    return 'Reached WNBA Finals'
+
+
+def playoff_results(games: list[dict], year: int | None = None) -> dict:
+    """Last series each team played, from the league schedule feed.
+
+    Won or Lost in the Finals is written only when that series is complete.
+    """
     po = [g for g in games if g.get('seasonType') == 'Playoffs' and g.get('gameStatus') == 3]
     if not po:
         return {}
@@ -127,17 +192,15 @@ def playoff_results(games: list[dict]) -> dict:
         label = ROUNDS.get(g.get('gameLabel') or '', g.get('gameLabel') or 'Playoffs')
         if label == 'WNBA Finals' and pair != final_pair:
             label = 'Semifinals'  # 1997 feed labels every single-game round as the Finals
-        m = re.match(r'([A-Z]{2,3}) wins', g.get('seriesText') or '')
-        winner = None
-        if m:
-            winner = next((t['teamId'] for t in (g['homeTeam'], g['awayTeam']) if t['teamTricode'] == m.group(1)), None)
+        winner, text_wins = _series_line(g)
         for side in ('homeTeam', 'awayTeam'):
-            tid = side and g[side]['teamId']
-            last[tid] = {'round': label, 'won': (winner == tid) if winner else None}
+            tid = g[side]['teamId']
+            last[tid] = {'round': label, 'won': (winner == tid) if winner else None, 'text_wins': text_wins}
+    score_wins = _finals_wins_from_scores(games, final_pair)
     out = {}
     for tid, r in last.items():
         if r['round'] == 'WNBA Finals':
-            out[tid] = 'Won WNBA Finals' if r['won'] else 'Lost in WNBA Finals'
+            out[tid] = _finals_label(tid, r['won'], r['text_wins'], score_wins, year)
         elif r['won'] is False:
             out[tid] = f'Lost in {r["round"]}'
         else:
@@ -166,7 +229,7 @@ def season_rows(year: int, games: list[dict], cache) -> dict:
         win, lose = (h, a) if h['score'] > a['score'] else (a, h)
         rec[win['teamId']][0] += 1
         rec[lose['teamId']][1] += 1
-    po = playoff_results(games)
+    po = playoff_results(games, year)
     sched = f'https://www.wnba.com/api/schedule?season={year}&regionId=1'
     out = {}
     for tid in set(rec) | set(stand):
@@ -253,7 +316,9 @@ def main() -> int:
         'source': 'WNBA.com standings (2010 on) and the WNBA.com schedule feed (every season)', 'checked_at': now,
         'note': 'W-L and finish from wnba.com/standings when published (2010 on); before 2010 the W-L is '
                 'counted from final regular-season scores in the league schedule feed and the finish is left blank. '
-                'Playoff result from the series line in the same feed.',
+                'Playoff result from the series line in the same feed. From 2025, Finals '
+                'Won/Lost is written only when a team has four wins; an unfinished series '
+                'stays Reached WNBA Finals.',
         'teams': history}, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     (DATA / 'schedule-2026.json').write_text(json.dumps({
         'source': f'https://www.wnba.com/api/schedule?season={SEASON}&regionId=1', 'checked_at': now,
