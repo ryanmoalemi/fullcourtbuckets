@@ -5,9 +5,9 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:05:52+00:00",
+ "checked_at": "2026-10-29T18:06:26+00:00",
  "period": 3,
- "clock": "2:46",
+ "clock": "2:33",
  "last_play_period": 3,
  "last_play_clock": "2:46",
  "away": {
@@ -2863,8 +2863,8 @@
    "order": 236,
    "period": 3,
    "clock": "3:33",
-   "type": "Step Back Jump Shot",
-   "text": "Rhyne Howard misses 20-foot step back jumpshot",
+   "type": "Fade Away Jump Shot",
+   "text": "Rhyne Howard misses 20-foot fade away jump shot",
    "away_score": 35,
    "home_score": 56,
    "scoring_play": false,
@@ -2874,7 +2874,7 @@
   {
    "order": 237,
    "period": 3,
-   "clock": "3:29",
+   "clock": "3:32",
    "type": "Defensive Rebound",
    "text": "Tiffany Hayes defensive rebound",
    "away_score": 35,
@@ -2995,13 +2995,25 @@
    "order": 247,
    "period": 3,
    "clock": "2:46",
-   "type": "No Foul",
-   "text": "Jordin Canada foul",
+   "type": "Loose Ball Foul",
+   "text": "Laeticia Amihere loose ball foul",
    "away_score": 37,
    "home_score": 56,
    "scoring_play": false,
    "score_value": 0,
-   "team": "ATL"
+   "team": "GS"
+  },
+  {
+   "order": 248,
+   "period": 3,
+   "clock": "2:46",
+   "type": "No Turnover",
+   "text": "Laeticia Amihere turnover",
+   "away_score": 37,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
