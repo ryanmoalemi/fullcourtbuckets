@@ -1,86 +1,111 @@
 {
   "slug": "stephanie-talbot",
   "player_name": "Stephanie Talbot",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 29, 2026",
+  "verified_at": "2026-10-29",
   "items": [
     {
-      "question": "What are Stephanie Talbot's stats / points per game?",
-      "answer": "In the 2026 regular season, Stephanie Talbot averaged 3.5 points, 2.6 rebounds, and 1.0 assists in 42 games for Las Vegas Aces. Her full season-by-season numbers are on this page.",
+      "question": "What are Stephanie Talbot's stats?",
+      "answer": "In the 2026 regular season, Stephanie Talbot averaged 4.0 points, 2.6 rebounds, and 1.0 assists in 44 games for the Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "stephanie talbot stats",
-      "approx_monthly_volume": 260
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/stephanie-talbot/"
+      ],
+      "queries": [
+        {
+          "q": "stephanie talbot stats",
+          "vol": 260
+        }
+      ]
     },
     {
-      "question": "Who is Stephanie Talbot dating?",
-      "answer": "As of late 2026, Stephanie Talbot has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What WNBA team does Stephanie Talbot play for?",
+      "answer": "Stephanie Talbot plays forward for the Las Vegas Aces, who signed her on April 12, 2026. Phoenix drafted her 33rd overall in 2014, and she has also played for the Minnesota Lynx, New York Liberty, Seattle Storm, Los Angeles Sparks and Golden State Valkyries.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Stephanie_Talbot"
+        "https://aces.wnba.com/full-bio-stephanie-talbot",
+        "https://www.wnba.com/player/203855/stephanie-talbot/bio"
       ],
-      "google_keyword": "stephanie talbot partner",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How much does Stephanie Talbot make?",
-      "answer": "A precise public salary or net worth figure for Stephanie Talbot is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "stephanie talbot salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "stephanie talbot wnba",
+          "vol": 140
+        },
+        {
+          "q": "stephanie talbot aces",
+          "vol": 20
+        },
+        {
+          "q": "stephanie talbot las vegas aces",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot current teams",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot new york liberty",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot liberty",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot valkyries",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Stephanie Talbot?",
-      "answer": "Stephanie Talbot is listed at 6' 2\".",
+      "answer": "The WNBA lists Stephanie Talbot at 6 feet 2 inches and 192 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Stephanie_Talbot"
+        "https://www.wnba.com/player/203855/stephanie-talbot/bio"
       ],
-      "google_keyword": "stephanie talbot height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "stephanie talbot height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Stephanie Talbot?",
-      "answer": "She was born June 15, 1994 in Katherine. As of late 2026 that puts her at 32 years old.",
+      "answer": "Stephanie Talbot was born June 15, 1994.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Stephanie_Talbot"
+        "https://www.wnba.com/player/203855/stephanie-talbot/bio"
       ],
-      "google_keyword": "stephanie talbot age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1994-06-15"
+      "queries": [
+        {
+          "q": "stephanie talbot age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Stephanie Talbot's contract?",
-      "answer": "Contract length and guarantees for Stephanie Talbot are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Has Stephanie Talbot played in the Olympics?",
+      "answer": "Yes. Stephanie Talbot is a three-time Olympian for Australia (2016, 2020 and 2024) and won bronze with the Opals at the 2024 Paris Olympics. She also won silver at the 2018 FIBA World Cup and bronze at the 2022 World Cup.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://aces.wnba.com/full-bio-stephanie-talbot"
       ],
-      "google_keyword": "stephanie talbot contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Stephanie Talbot married?",
-      "answer": "There is no widely reported public record of Stephanie Talbot being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Stephanie_Talbot"
-      ],
-      "google_keyword": "is stephanie talbot married",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Is Stephanie Talbot injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "stephanie talbot injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "stephanie talbot olympic stats",
+          "vol": 10
+        },
+        {
+          "q": "stephanie talbot olympic stats 2024",
+          "vol": 0
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
