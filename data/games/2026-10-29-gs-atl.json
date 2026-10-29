@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:40:55+00:00",
+ "checked_at": "2026-10-29T18:41:59+00:00",
  "period": 4,
- "clock": "2:58",
+ "clock": "2:36",
  "last_play_period": 4,
- "last_play_clock": "3:08",
+ "last_play_clock": "2:58",
  "away": {
   "abbreviation": "GS",
-  "score": 61,
-  "feed_score": 61
+  "score": 63,
+  "feed_score": 63
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 14,
+   "away": 16,
    "home": 12
   }
  ],
@@ -4127,13 +4127,49 @@
   {
    "order": 341,
    "period": 4,
-   "clock": "3:08",
+   "clock": "3:10",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 61,
    "home_score": 75,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 342,
+   "period": 4,
+   "clock": "2:58",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 61,
+   "home_score": 75,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 343,
+   "period": 4,
+   "clock": "2:58",
+   "type": "Free Throw - 1 of 2",
+   "text": "Gabby Williams makes free throw 1 of 2",
+   "away_score": 62,
+   "home_score": 75,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 344,
+   "period": 4,
+   "clock": "2:58",
+   "type": "Free Throw - 2 of 2",
+   "text": "Gabby Williams makes free throw 2 of 2",
+   "away_score": 63,
+   "home_score": 75,
+   "scoring_play": true,
+   "score_value": 1,
    "team": "GS"
   }
  ]
