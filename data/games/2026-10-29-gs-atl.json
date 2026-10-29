@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:29:58+00:00",
+ "checked_at": "2026-10-29T18:30:32+00:00",
  "period": 4,
- "clock": "5:05",
+ "clock": "5:01",
  "last_play_period": 4,
- "last_play_clock": "5:32",
+ "last_play_clock": "5:01",
  "away": {
   "abbreviation": "GS",
   "score": 57,
@@ -3822,6 +3822,54 @@
    "home_score": 74,
    "scoring_play": true,
    "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 316,
+   "period": 4,
+   "clock": "5:15",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for DeWanna Bonner",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 317,
+   "period": 4,
+   "clock": "5:07",
+   "type": "Layup Shot",
+   "text": "Allisha Gray misses layup",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 318,
+   "period": 4,
+   "clock": "5:05",
+   "type": "Defensive Rebound",
+   "text": "Tiffany Hayes defensive rebound",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 319,
+   "period": 4,
+   "clock": "5:01",
+   "type": "No Turnover",
+   "text": "Gabby Williams turnover",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
