@@ -5,9 +5,9 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:49:56+00:00",
+ "checked_at": "2026-10-29T17:50:31+00:00",
  "period": 3,
- "clock": "7:36",
+ "clock": "7:19",
  "last_play_period": 3,
  "last_play_clock": "7:36",
  "away": {
@@ -2414,6 +2414,18 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 199,
+   "period": 3,
+   "clock": "7:36",
+   "type": "Substitution",
+   "text": "Laeticia Amihere enters the game for Kiah Stokes",
+   "away_score": 28,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
