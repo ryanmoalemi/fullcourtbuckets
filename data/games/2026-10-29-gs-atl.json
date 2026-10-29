@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:03:58+00:00",
- "period": 1,
- "clock": "0.0",
- "last_play_period": 1,
- "last_play_clock": "0.0",
+ "checked_at": "2026-10-29T17:07:40+00:00",
+ "period": 2,
+ "clock": "9:40",
+ "last_play_period": 2,
+ "last_play_clock": "9:40",
  "away": {
   "abbreviation": "GS",
   "score": 15,
@@ -25,6 +25,11 @@
    "period": 1,
    "away": 15,
    "home": 32
+  },
+  {
+   "period": 2,
+   "away": 0,
+   "home": 0
   }
  ],
  "players": [],
@@ -608,7 +613,7 @@
   {
    "order": 49,
    "period": 1,
-   "clock": "4:12",
+   "clock": "4:13",
    "type": "Bad Pass\nTurnover",
    "text": "Tiffany Hayes bad pass\nturnover (Jordin Canada steals)",
    "away_score": 5,
@@ -620,7 +625,7 @@
   {
    "order": 50,
    "period": 1,
-   "clock": "4:09",
+   "clock": "4:10",
    "type": "Running Layup Shot",
    "text": "Jordin Canada makes running layup",
    "away_score": 5,
@@ -656,7 +661,7 @@
   {
    "order": 53,
    "period": 1,
-   "clock": "3:13",
+   "clock": "3:14",
    "type": "Jump Shot",
    "text": "Tiffany Hayes misses 23-foot three point jumper",
    "away_score": 8,
@@ -668,7 +673,7 @@
   {
    "order": 54,
    "period": 1,
-   "clock": "3:10",
+   "clock": "3:13",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 8,
@@ -730,7 +735,7 @@
    "period": 1,
    "clock": "2:23",
    "type": "Driving Floating Bank Jump Shot",
-   "text": "Cecilia Zandalasini makes 6-foot two point shot (Gabby Williams assists)",
+   "text": "Cecilia Zandalasini makes 6-foot two point shot (Kayla Thornton assists)",
    "away_score": 10,
    "home_score": 25,
    "scoring_play": true,
@@ -1028,7 +1033,7 @@
   {
    "order": 84,
    "period": 1,
-   "clock": "0.0",
+   "clock": "0.1",
    "type": "Offensive Rebound",
    "text": "Golden State Valkyries offensive team rebound",
    "away_score": 15,
@@ -1048,6 +1053,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 86,
+   "period": 2,
+   "clock": "9:43",
+   "type": "Turnaround Jump Shot",
+   "text": "Cecilia Zandalasini misses 12-foot turnaround jump shot",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 87,
+   "period": 2,
+   "clock": "9:40",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
