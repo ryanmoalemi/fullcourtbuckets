@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:53:33+00:00",
+ "checked_at": "2026-10-29T16:54:07+00:00",
  "period": 1,
- "clock": "4:56",
+ "clock": "4:38",
  "last_play_period": 1,
- "last_play_clock": "5:16",
+ "last_play_clock": "4:58",
  "away": {
   "abbreviation": "GS",
   "score": 5,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 11,
-  "feed_score": 11
+  "score": 14,
+  "feed_score": 14
  },
  "periods": [
   {
    "period": 1,
    "away": 5,
-   "home": 11
+   "home": 14
   }
  ],
  "players": [],
@@ -308,7 +308,7 @@
   {
    "order": 24,
    "period": 1,
-   "clock": "6:28",
+   "clock": "6:29",
    "type": "Bad Pass\nTurnover",
    "text": "Naz Hillmon bad pass\nturnover (Kiah Stokes steals)",
    "away_score": 5,
@@ -320,7 +320,7 @@
   {
    "order": 25,
    "period": 1,
-   "clock": "6:07",
+   "clock": "6:08",
    "type": "Driving Layup Shot",
    "text": "Veronica Burton misses driving layup",
    "away_score": 5,
@@ -332,7 +332,7 @@
   {
    "order": 26,
    "period": 1,
-   "clock": "6:05",
+   "clock": "6:06",
    "type": "Defensive Rebound",
    "text": "Naz Hillmon defensive rebound",
    "away_score": 5,
@@ -484,6 +484,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 39,
+   "period": 1,
+   "clock": "5:05",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 24-foot three point jumper",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 40,
+   "period": 1,
+   "clock": "5:04",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 41,
+   "period": 1,
+   "clock": "5:04",
+   "type": "Loose Ball Foul",
+   "text": "Kaila Charles loose ball foul",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 42,
+   "period": 1,
+   "clock": "4:58",
+   "type": "Jump Shot",
+   "text": "Jordin Canada makes 24-foot three point jumper (Allisha Gray assists)",
+   "away_score": 5,
+   "home_score": 14,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
   }
  ]
 }
