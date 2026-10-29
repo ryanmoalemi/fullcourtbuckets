@@ -1,26 +1,93 @@
 {
  "schema_version": 1,
- "status": "pre",
+ "status": "live",
  "live": true,
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:10:12+00:00",
- "period": null,
- "clock": "0.0",
- "last_play_period": null,
- "last_play_clock": null,
+ "checked_at": "2026-10-29T16:43:49+00:00",
+ "period": 1,
+ "clock": "8:45",
+ "last_play_period": 1,
+ "last_play_clock": "9:04",
  "away": {
   "abbreviation": "GS",
-  "score": 0,
-  "feed_score": 0
+  "score": 2,
+  "feed_score": 2
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 0,
-  "feed_score": 0
+  "score": 3,
+  "feed_score": 3
  },
- "periods": [],
+ "periods": [
+  {
+   "period": 1,
+   "away": 2,
+   "home": 3
+  }
+ ],
  "players": [],
- "plays": []
+ "plays": [
+  {
+   "order": 1,
+   "period": 1,
+   "clock": "10:00",
+   "type": "Jumpball",
+   "text": "Kiah Stokes vs. Angel Reese (Naz Hillmon gains possession)",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 2,
+   "period": 1,
+   "clock": "9:42",
+   "type": "Driving Floating Jump Shot",
+   "text": "Jordin Canada misses driving floating jump shot",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 3,
+   "period": 1,
+   "clock": "9:40",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 4,
+   "period": 1,
+   "clock": "9:19",
+   "type": "Pullup Jump Shot",
+   "text": "Veronica Burton makes 17-foot pullup jump shot",
+   "away_score": 2,
+   "home_score": 0,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 5,
+   "period": 1,
+   "clock": "9:04",
+   "type": "Jump Shot",
+   "text": "Allisha Gray makes 23-foot three point jumper (Angel Reese assists)",
+   "away_score": 2,
+   "home_score": 3,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  }
+ ]
 }
