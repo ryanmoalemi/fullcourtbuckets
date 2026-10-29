@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:27:09+00:00",
+ "checked_at": "2026-10-29T17:28:45+00:00",
  "period": 2,
- "clock": "1:52",
+ "clock": "26.5",
  "last_play_period": 2,
- "last_play_clock": "1:52",
+ "last_play_clock": "38.2",
  "away": {
   "abbreviation": "GS",
-  "score": 21,
-  "feed_score": 21
+  "score": 26,
+  "feed_score": 26
  },
  "home": {
   "abbreviation": "ATL",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 6,
+   "away": 11,
    "home": 14
   }
  ],
@@ -1717,7 +1717,7 @@
   {
    "order": 141,
    "period": 2,
-   "clock": "3:40",
+   "clock": "3:43",
    "type": "Offensive Rebound",
    "text": "Angel Reese offensive rebound",
    "away_score": 21,
@@ -1741,7 +1741,7 @@
   {
    "order": 143,
    "period": 2,
-   "clock": "3:28",
+   "clock": "3:29",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 21,
@@ -1949,6 +1949,102 @@
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 161,
+   "period": 2,
+   "clock": "1:46",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 162,
+   "period": 2,
+   "clock": "1:42",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 163,
+   "period": 2,
+   "clock": "1:35",
+   "type": "Pullup Jump Shot",
+   "text": "Tiffany Hayes makes 24-foot three pointer (Kaila Charles assists)",
+   "away_score": 24,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 164,
+   "period": 2,
+   "clock": "1:09",
+   "type": "Bad Pass\nTurnover",
+   "text": "Isobel Borlase bad pass\nturnover (Gabby Williams steals)",
+   "away_score": 24,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 165,
+   "period": 2,
+   "clock": "1:04",
+   "type": "Running Layup Shot",
+   "text": "Laeticia Amihere makes running layup (Kaitlyn Chen assists)",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 166,
+   "period": 2,
+   "clock": "50.1",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 23-foot three point jumper",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 167,
+   "period": 2,
+   "clock": "47.1",
+   "type": "Offensive Rebound",
+   "text": "Jordin Canada offensive rebound",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 168,
+   "period": 2,
+   "clock": "38.2",
+   "type": "Lost Ball Turnover",
+   "text": "Angel Reese lost ball turnover (Tiffany Hayes steals)",
+   "away_score": 26,
    "home_score": 46,
    "scoring_play": false,
    "score_value": 0,
