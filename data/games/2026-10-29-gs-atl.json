@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:43:49+00:00",
+ "checked_at": "2026-10-29T16:44:25+00:00",
  "period": 1,
  "clock": "8:45",
  "last_play_period": 1,
- "last_play_clock": "9:04",
+ "last_play_clock": "8:45",
  "away": {
   "abbreviation": "GS",
   "score": 2,
@@ -87,6 +87,18 @@
    "home_score": 3,
    "scoring_play": true,
    "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 6,
+   "period": 1,
+   "clock": "8:45",
+   "type": "Personal Foul",
+   "text": "Angel Reese personal foul",
+   "away_score": 2,
+   "home_score": 3,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "ATL"
   }
  ]
