@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:56:48+00:00",
+ "checked_at": "2026-10-29T16:57:23+00:00",
  "period": 1,
- "clock": "2:55",
+ "clock": "2:53",
  "last_play_period": 1,
- "last_play_clock": "3:10",
+ "last_play_clock": "2:55",
  "away": {
   "abbreviation": "GS",
   "score": 8,
@@ -440,7 +440,7 @@
   {
    "order": 35,
    "period": 1,
-   "clock": "5:16",
+   "clock": "5:20",
    "type": "Offensive Rebound",
    "text": "Veronica Burton offensive rebound",
    "away_score": 5,
@@ -676,6 +676,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 55,
+   "period": 1,
+   "clock": "2:55",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Allisha Gray",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 56,
+   "period": 1,
+   "clock": "2:55",
+   "type": "Substitution",
+   "text": "enters the game for Tiffany Hayes",
+   "away_score": 8,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
