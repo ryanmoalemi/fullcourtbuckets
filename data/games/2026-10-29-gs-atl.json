@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:46:33+00:00",
+ "checked_at": "2026-10-29T17:47:07+00:00",
  "period": 3,
- "clock": "9:23",
+ "clock": "8:31",
  "last_play_period": 3,
- "last_play_clock": "9:29",
+ "last_play_clock": "8:55",
  "away": {
   "abbreviation": "GS",
   "score": 26,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 46,
-  "feed_score": 46
+  "score": 49,
+  "feed_score": 49
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 0,
-   "home": 0
+   "home": 3
   }
  ],
  "players": [],
@@ -2154,7 +2154,7 @@
   {
    "order": 177,
    "period": 3,
-   "clock": "9:47",
+   "clock": "9:50",
    "type": "Defensive Rebound",
    "text": "Jordin Canada defensive rebound",
    "away_score": 26,
@@ -2178,7 +2178,7 @@
   {
    "order": 179,
    "period": 3,
-   "clock": "9:29",
+   "clock": "9:31",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 26,
@@ -2186,6 +2186,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 180,
+   "period": 3,
+   "clock": "9:23",
+   "type": "Offensive Foul",
+   "text": "Gabby Williams offensive foul",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 181,
+   "period": 3,
+   "clock": "9:23",
+   "type": "Offensive Foul Turnover",
+   "text": "Gabby Williams offensive foul turnover",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 182,
+   "period": 3,
+   "clock": "9:02",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 22-foot three point jumper",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 183,
+   "period": 3,
+   "clock": "8:59",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 26,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 184,
+   "period": 3,
+   "clock": "8:55",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard makes 24-foot three point jumper (Naz Hillmon assists)",
+   "away_score": 26,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
   }
  ]
 }
