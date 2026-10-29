@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:55:56+00:00",
+ "checked_at": "2026-10-29T17:57:01+00:00",
  "period": 3,
- "clock": "6:55",
+ "clock": "6:02",
  "last_play_period": 3,
- "last_play_clock": "6:44",
+ "last_play_clock": "6:02",
  "away": {
   "abbreviation": "GS",
-  "score": 28,
-  "feed_score": 28
+  "score": 30,
+  "feed_score": 30
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 2,
+   "away": 4,
    "home": 7
   }
  ],
@@ -2550,7 +2550,7 @@
   {
    "order": 210,
    "period": 3,
-   "clock": "6:51",
+   "clock": "6:54",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 28,
@@ -2578,6 +2578,66 @@
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 213,
+   "period": 3,
+   "clock": "6:35",
+   "type": "Bad Pass\nTurnover",
+   "text": "Naz Hillmon bad pass\nturnover (Gabby Williams steals)",
+   "away_score": 28,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 214,
+   "period": 3,
+   "clock": "6:29",
+   "type": "Running Layup Shot",
+   "text": "Gabby Williams makes running layup",
+   "away_score": 30,
+   "home_score": 53,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 215,
+   "period": 3,
+   "clock": "6:04",
+   "type": "Pullup Jump Shot",
+   "text": "Jordin Canada misses 18-foot pullup jump shot",
+   "away_score": 30,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 216,
+   "period": 3,
+   "clock": "6:02",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 30,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 217,
+   "period": 3,
+   "clock": "6:02",
+   "type": "Personal Foul",
+   "text": "Angel Reese personal foul",
+   "away_score": 30,
    "home_score": 53,
    "scoring_play": false,
    "score_value": 0,
