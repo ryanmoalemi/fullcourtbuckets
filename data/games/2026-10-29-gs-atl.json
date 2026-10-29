@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:08:35+00:00",
+ "checked_at": "2026-10-29T18:09:42+00:00",
  "period": 3,
- "clock": "1:42",
+ "clock": "1:28",
  "last_play_period": 3,
- "last_play_clock": "1:43",
+ "last_play_clock": "1:28",
  "away": {
   "abbreviation": "GS",
   "score": 39,
@@ -3145,6 +3145,18 @@
    "home_score": 58,
    "scoring_play": true,
    "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 260,
+   "period": 3,
+   "clock": "1:28",
+   "type": "Personal Foul",
+   "text": "Laeticia Amihere personal foul",
+   "away_score": 39,
+   "home_score": 58,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
