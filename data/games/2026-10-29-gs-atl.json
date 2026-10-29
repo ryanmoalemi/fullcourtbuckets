@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:48:16+00:00",
+ "checked_at": "2026-10-29T17:49:21+00:00",
  "period": 3,
- "clock": "8:20",
+ "clock": "7:55",
  "last_play_period": 3,
- "last_play_clock": "8:20",
+ "last_play_clock": "7:55",
  "away": {
   "abbreviation": "GS",
   "score": 28,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 49,
-  "feed_score": 49
+  "score": 51,
+  "feed_score": 51
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 2,
-   "home": 3
+   "home": 5
   }
  ],
  "players": [],
@@ -2238,7 +2238,7 @@
   {
    "order": 184,
    "period": 3,
-   "clock": "8:55",
+   "clock": "8:58",
    "type": "Jump Shot",
    "text": "Rhyne Howard makes 24-foot three point jumper (Naz Hillmon assists)",
    "away_score": 26,
@@ -2342,6 +2342,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 193,
+   "period": 3,
+   "clock": "8:20",
+   "type": "Free Throw - 1 of 1",
+   "text": "Tiffany Hayes misses free throw 1 of 1",
+   "away_score": 28,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 194,
+   "period": 3,
+   "clock": "8:18",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 28,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 195,
+   "period": 3,
+   "clock": "8:10",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup",
+   "away_score": 28,
+   "home_score": 51,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 196,
+   "period": 3,
+   "clock": "7:56",
+   "type": "Jump Shot",
+   "text": "Tiffany Hayes misses 24-foot three point jumper",
+   "away_score": 28,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 197,
+   "period": 3,
+   "clock": "7:55",
+   "type": "Defensive Rebound",
+   "text": "Dream defensive team rebound",
+   "away_score": 28,
+   "home_score": 51,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
