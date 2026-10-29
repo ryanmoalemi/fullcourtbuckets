@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:09:42+00:00",
+ "checked_at": "2026-10-29T18:10:47+00:00",
  "period": 3,
- "clock": "1:28",
+ "clock": "1:23",
  "last_play_period": 3,
- "last_play_clock": "1:28",
+ "last_play_clock": "1:23",
  "away": {
   "abbreviation": "GS",
   "score": 39,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 58,
-  "feed_score": 58
+  "score": 59,
+  "feed_score": 59
  },
  "periods": [
   {
@@ -34,7 +34,7 @@
   {
    "period": 3,
    "away": 13,
-   "home": 12
+   "home": 13
   }
  ],
  "players": [],
@@ -3158,6 +3158,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 261,
+   "period": 3,
+   "clock": "1:28",
+   "type": "Substitution",
+   "text": "Kiah Stokes enters the game for Laeticia Amihere",
+   "away_score": 39,
+   "home_score": 58,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 262,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Shooting Foul",
+   "text": "Gabby Williams shooting foul",
+   "away_score": 39,
+   "home_score": 58,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 263,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Free Throw - 1 of 3",
+   "text": "Allisha Gray misses free throw 1 of 3",
+   "away_score": 39,
+   "home_score": 58,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 264,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 39,
+   "home_score": 58,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 265,
+   "period": 3,
+   "clock": "1:23",
+   "type": "Free Throw - 2 of 3",
+   "text": "Allisha Gray makes free throw 2 of 3",
+   "away_score": 39,
+   "home_score": 59,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
   }
  ]
 }
