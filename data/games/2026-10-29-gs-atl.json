@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:21:48+00:00",
+ "checked_at": "2026-10-29T17:22:53+00:00",
  "period": 2,
- "clock": "3:31",
+ "clock": "2:31",
  "last_play_period": 2,
- "last_play_clock": "3:21",
+ "last_play_clock": "2:31",
  "away": {
   "abbreviation": "GS",
   "score": 21,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 44,
-  "feed_score": 44
+  "score": 46,
+  "feed_score": 46
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 6,
-   "home": 12
+   "home": 14
   }
  ],
  "players": [],
@@ -1770,6 +1770,102 @@
    "text": "Isobel Borlase defensive rebound",
    "away_score": 21,
    "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 146,
+   "period": 2,
+   "clock": "3:15",
+   "type": "Pullup Jump Shot",
+   "text": "Isobel Borlase makes 10-foot pullup jump shot",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 147,
+   "period": 2,
+   "clock": "2:50",
+   "type": "Driving Layup Shot",
+   "text": "Kaitlyn Chen misses driving layup",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 148,
+   "period": 2,
+   "clock": "2:47",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 149,
+   "period": 2,
+   "clock": "2:44",
+   "type": "Running Layup Shot",
+   "text": "Gabby Williams blocks Isobel Borlase 's 2-foot running layup",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 150,
+   "period": 2,
+   "clock": "2:40",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 151,
+   "period": 2,
+   "clock": "2:35",
+   "type": "No Shot (Default Shot)",
+   "text": "Gabby Williams misses shot",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 152,
+   "period": 2,
+   "clock": "2:32",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 21,
+   "home_score": 46,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 153,
+   "period": 2,
+   "clock": "2:31",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 21,
+   "home_score": 46,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
