@@ -1,5 +1,5 @@
 ---
-title: "Dream force Game 7 after an 80-69 win, and they are plus-33 in a tied series"
+title: "Dream force Game 7 with 80-69 win, plus-33 margin in tied series"
 seo_title: "Dream force Game 7, plus-33 in a tied series"
 slug: finals-game-7-preview-dream-valkyries
 date: 2026-10-29
@@ -23,11 +23,11 @@ data_table_first: true
 theme: halloween
 ---
 
-The [Atlanta Dream](/wnba/teams/atlanta-dream/) beat the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) 80-69 on Thursday at State Farm Arena, tying the WNBA Finals at 3-3. Atlanta has outscored Golden State by 33 points, 437-404, and Saturday is the first Game 7 since the Finals moved to best-of-seven in 2025.
+The [Atlanta Dream](/wnba/teams/atlanta-dream/) beat the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) 80-69 on Thursday at State Farm Arena to tie the WNBA Finals at 3-3. Atlanta has outscored Golden State by 33 points, 437-404. Saturday's matchup will be the first Game 7 since the Finals moved to a best-of-seven format in 2025.
 
 ## Atlanta is plus-33 in a 3-3 series
 
-Golden State's three wins came by 4, 5 and 9. Atlanta's came by 14, 26 and 11. The series scoring margin is 6 points in the first half (Atlanta 218, Golden State 212) and 27 after halftime (219-192).
+Golden State's three wins came by 4, 5 and 9, while Atlanta's came by 14, 26 and 11. The table below shows how that margin built game by game. The series scoring margin is 6 points in the first half (Atlanta 218, Golden State 212) and 27 after halftime (219-192).
 
 | Game | Date | Site | Winner | Score | Running margin |
 | --- | --- | --- | --- | --- | --- |
@@ -44,21 +44,21 @@ Thursday's quarters were Atlanta 32-14-17-17 and Golden State 15-11-21-22. The D
 
 The WNBA had moved Game 6 to 12:30 p.m. ET at State Farm Arena, which seats more than 17,000, instead of Gateway Center, because the Hawks played in the building that night ([WNBA](https://www.wnba.com/news/2026-wnba-finals-game-6-location-announcement)). Dream ownership later said a midday Thursday "is not what we would have chosen and not what we fought for" ([CBS Sports](https://www.cbssports.com/wnba/news/wnba-finals-game-6-atlanta-dream-owners-state-farm-arena/)). After Game 5, [Veronica Burton](/wnba/veronica-burton/) told Golden State fans, "Call in sick. I recommend it" ([USA Today](https://www.usatoday.com/story/sports/wnba/2026/10/27/valkyries-encourage-fans-to-call-in-sick-for-wnba-finals-game-6/92454900007/), Oct. 27).
 
-## The ten who led the Game 6 box
+## The ten top scorers in Game 6
 
 These are the five leading scorers on each side Thursday, not the series leaders.
 
-Atlanta made 6 of 8 threes in the first quarter. That matches the 6 threes the Dream made in all of Game 5. Gray and Howard combined to shoot 9 of 13 from three and scored 44 of Atlanta's 80 points. Gray's last basket was a three with 56 seconds left. It made the score 80-69.
+Atlanta made 6 of 8 threes in the first quarter. That matches the 6 threes the Dream made in all of Game 5. Gray and Howard combined to shoot 9 of 13 from three and scored 44 of Atlanta's 80 points. Gray's last basket was a three with 56 seconds left that made the score 80-69.
 
 Golden State led 5-6 before Atlanta scored the next 13 points: a Gray floater, a Reese layup and free throw, a Canada three, a Gray three, and a Canada layup. [Jordin Canada](/wnba/jordin-canada/) had 7 of her 10 points in that first half. [Naz Hillmon](/wnba/naz-hillmon/) scored all 7 of hers before halftime, on 3 of 4 shooting, and finished plus-15, the best plus-minus on the floor. Reese made a three. In this series she has made at least one three in each of Atlanta's three wins and has not made one in any of the three losses.
 
-Williams scored 4 points before halftime and 22 of her 26 after it. Hayes had the other shape: 11 of her 15 points came in the first half, and her fifth foul came at 5:01 of the fourth with Atlanta up 74-57. She did not score after that. [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) had 7 of her 9 points in the first half and finished 3 of 12 from the field. [Kaila Charles](/wnba/kaila-charles/) scored all 6 of her points after halftime. Burton shot 2 of 13, and 0 of 6 from three, with 4 assists and 3 steals in 36 minutes.
+Williams scored 4 points before halftime and 22 of her 26 after it. Hayes had the opposite split: 11 of her 15 points came in the first half, and she picked up her fifth foul with 5:01 left in the fourth quarter and Atlanta up 74-57. She did not score after that. [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) had 7 of her 9 points in the first half and finished 3 of 12 from the field. [Kaila Charles](/wnba/kaila-charles/) scored all 6 of her points after halftime. Burton shot 2 of 13, and 0 of 6 from three, with 4 assists and 3 steals in 36 minutes.
 
 Counted from the Game 6 play-by-play in the FCB game file, checked against the official box totals. Game 5's six made threes are the team line in the same file. Source: FCB game data, verified against [WNBA.com](https://www.wnba.com/game/gsv-vs-atl-1042600306/box-score). Free to use and republish (CC0).
 
-## What has actually decided the six games
+## What has decided the six games
 
-The team with more points off turnovers is 6-0. Winners have 118 of those points and losers 54, even though the two teams are tied 86-86 in the raw count. The halftime leader is also 6-0. The team with fewer turnovers is 5-1: Game 6 broke that rule, with Atlanta winning despite 15 turnovers to Golden State's 11. The team with more shot attempts is 4-2. That edge failed in Games 5 and 6.
+The team with more points off turnovers is 6-0. Winners have 118 of those points and losers 54, even though the two teams are tied 86-86 in the raw count. The halftime leader is also 6-0. The team with fewer turnovers is 5-1. Game 6 broke that rule, with Atlanta winning despite committing 15 turnovers to Golden State's 11. The team with more shot attempts is 4-2. That edge failed in Games 5 and 6. The table below summarizes those patterns game by game.
 
 | Game | Winner | Turnovers, ATL-GS | Fewer won? | Points off TO, ATL-GS | More won? | Shot attempts, ATL-GS | Edge won? | Halftime |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ Home teams are 3-3. Each side has won once on the other's floor. Golden State is
 
 ## The first Game 7 of the best-of-seven Finals
 
-The WNBA moved the Finals to a best-of-seven in 2025, replacing best-of-five, with the higher seed hosting Games 1, 2, 5 and 7 ([WNBA](https://www.wnba.com/news/wnba-finals-format-expansion-2025)). In the FCB Finals database, every Finals game since 2002, no series reached a seventh game before this one. The longest series in that file is five games. The 2025 Finals, Las Vegas over Phoenix, ended in four.
+The WNBA moved the Finals to a best-of-seven in 2025, replacing best-of-five, with the higher seed hosting Games 1, 2, 5 and 7 ([WNBA](https://www.wnba.com/news/wnba-finals-format-expansion-2025)). In the FCB Finals database, which includes every Finals game since 2002, no series reached a seventh game before this one. The longest series in that file is five games. The 2025 Finals, Las Vegas over Phoenix, ended in four.
 
 | Season | Series | Games played | Game 7 |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ The WNBA moved the Finals to a best-of-seven in 2025, replacing best-of-five, wi
 
 Data through Finals Game 6, Oct. 29, 2026. Methods: 2025 length and the 2002-2025 game numbers are from the FCB Finals scores file, built from WNBA.com box scores. 2026 Games 1-6 are the FCB game files. Source: [WNBA format release](https://www.wnba.com/news/wnba-finals-format-expansion-2025) and FCB game data, verified against WNBA.com. Free to use and republish (CC0). Download (CC0): [best-of-seven-finals.csv](/news/finals-game-7-preview-dream-valkyries/data/best-of-seven-finals.csv)
 
-Golden State is the higher seed, so Game 7 is at Chase Center. Saturday, Oct. 31, is also Halloween. The basketball is the event. The date is just the calendar.
+Golden State is the higher seed, so Game 7 is at Chase Center on Saturday, Oct. 31, which is also Halloween.
 
 ## Splits inside the tie
 
@@ -104,7 +104,7 @@ Golden State is the higher seed, so Game 7 is at Chase Center. Saturday, Oct. 31
 
 Data through Finals Game 6, Oct. 29, 2026. Methods: a win split is that player's line in games her team won (Atlanta: Games 2, 3 and 6; Golden State: Games 1, 4 and 5). Plus-minus is the sum of the box-score figures. Six games is a small sample. Source: FCB game data, verified against WNBA.com. Free to use and republish (CC0). Download (CC0): [series-player-splits-games-1-6.csv](/news/finals-game-7-preview-dream-valkyries/data/series-player-splits-games-1-6.csv)
 
-Howard's win and loss points are 16, 21 and 5 in the wins, and 12, 19 and 20 in the losses. Williams's are 17, 9 and 26 in the wins, and 14, 15 and 26 in the losses. The plus-minus column is the cleaner split for both.
+Howard's point totals are 16, 21 and 5 in the wins, and 12, 19 and 20 in the losses. Williams's are 17, 9 and 26 in the wins, and 14, 15 and 26 in the losses. For both, the plus-minus column separates wins and losses more clearly.
 
 ## Keys to victory for Game 7
 
@@ -132,7 +132,7 @@ Howard's win and loss points are 16, 21 and 5 in the wins, and 12, 19 and 20 in 
 
 !photo: /images/articles/finals-game-7-preview-dream-valkyries/kiah-stokes.jpg | Kiah Stokes of the Golden State Valkyries jogging in a black Valkyries warmup shirt before a game | Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Kiah_Stokes_2026.jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 25%
 
-#### Keep the score ugly
+#### Keep the score low
 
 **3-0 at 132 or fewer, 0-3 at 144 or more.** Golden State won the games that finished 132-119 combined and lost the ones that finished 144, 168 and 149. It has not scored more than 71. Atlanta is 0-3 when it scores 64 or fewer and 3-0 when it scores 79 or more.
 
@@ -180,7 +180,7 @@ The Indiana Fever announced on Oct. 23 that Amber Cox had departed as chief oper
 
 ## Gray's hand
 
-Gray told the AP, in a story published while Atlanta led the series 2-1, "I am literally playing with eight fingers," and "It's knowing I am not 100% 'Lish,' the one that can hit shots and things like that" ([AP](https://apnews.com/article/gray-dream-hand-ca7cd78a091d37cb1210b4f29391d1a2)). She then scored 23 points on 5 of 7 threes in Game 6. No Game 7 injury report was posted as of Thursday afternoon PT. The league report is here when it is ([WNBA injury report](https://www.wnba.com/wnba-injury-report)).
+Gray told the AP, in a story published while Atlanta led the series 2-1, "I am literally playing with eight fingers," and "It's knowing I am not 100% 'Lish,' the one that can hit shots and things like that" ([AP](https://apnews.com/article/gray-dream-hand-ca7cd78a091d37cb1210b4f29391d1a2)). She then scored 23 points on 5 of 7 threes in Game 6. No Game 7 injury report was posted as of Thursday afternoon PT. The league report will be available here when it is posted ([WNBA injury report](https://www.wnba.com/wnba-injury-report)).
 
 ## Six sellouts, and a building that has been full
 
