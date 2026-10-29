@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:36:10+00:00",
+ "checked_at": "2026-10-29T18:38:16+00:00",
  "period": 4,
- "clock": "3:32",
+ "clock": "3:28",
  "last_play_period": 4,
- "last_play_clock": "3:32",
+ "last_play_clock": "3:28",
  "away": {
   "abbreviation": "GS",
-  "score": 60,
-  "feed_score": 60
+  "score": 61,
+  "feed_score": 61
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 74,
-  "feed_score": 74
+  "score": 75,
+  "feed_score": 75
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 13,
-   "home": 11
+   "away": 14,
+   "home": 12
   }
  ],
  "players": [],
@@ -3959,7 +3959,7 @@
   {
    "order": 327,
    "period": 4,
-   "clock": "4:20",
+   "clock": "4:22",
    "type": "Defensive Rebound",
    "text": "Veronica Burton defensive rebound",
    "away_score": 57,
@@ -3995,7 +3995,7 @@
   {
    "order": 330,
    "period": 4,
-   "clock": "3:38",
+   "clock": "3:39",
    "type": "Pullup Jump Shot",
    "text": "Rhyne Howard misses 21-foot pullup jump shot",
    "away_score": 60,
@@ -4007,7 +4007,7 @@
   {
    "order": 331,
    "period": 4,
-   "clock": "3:36",
+   "clock": "3:38",
    "type": "Defensive Rebound",
    "text": "Gabby Williams defensive rebound",
    "away_score": 60,
@@ -4024,6 +4024,78 @@
    "text": "Rhyne Howard shooting foul",
    "away_score": 60,
    "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 333,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Free Throw - 1 of 2",
+   "text": "Gabby Williams misses free throw 1 of 2",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 334,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 335,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Free Throw - 2 of 2",
+   "text": "Gabby Williams makes free throw 2 of 2",
+   "away_score": 61,
+   "home_score": 74,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 336,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Away from Play Foul",
+   "text": "Veronica Burton away from play foul",
+   "away_score": 61,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 337,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Free Throw - 1 of 1",
+   "text": "Jordin Canada makes free throw 1 of 1",
+   "away_score": 61,
+   "home_score": 75,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 338,
+   "period": 4,
+   "clock": "3:28",
+   "type": "Full Timeout",
+   "text": "Dream Full timeout",
+   "away_score": 61,
+   "home_score": 75,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
