@@ -28,8 +28,8 @@
         "status": "Authenticated",
         "date": "2026-10-12"
       },
-      "current_value": 925,
-      "current_value_source": "last eBay sale, $925 best offer",
+      "current_value": 1087,
+      "current_value_source": "median of 2 eBay Gold /10 sales",
       "value_checked": "2026-10-28",
       "summary": "Rookie card, first on print, autograph, patch.",
       "photo": {
@@ -46,13 +46,19 @@
       },
       "value_comps": [
         {
-          "date": null,
-          "price": 925.0,
-          "venue": "eBay",
-          "url": ""
+          "date": "2026-10-25",
+          "price": 1175,
+          "venue": "eBay (raw, 3/10, 17 bids)",
+          "url": "https://www.ebay.com/itm/366749107457"
+        },
+        {
+          "date": "2026-08-26",
+          "price": 999,
+          "venue": "eBay (4/10)",
+          "url": "https://www.ebay.com/itm/236769605351"
         }
       ],
-      "value_notes": "Raw rookie patch autograph, first on print. Gold parallel, serial 01/10. The last eBay sale was listed at $995 and closed at $925 when a best offer was accepted. The sale date is unknown. Value is that $925 sale.",
+      "value_notes": "Raw rookie patch autograph, first on print. Gold parallel, serial 01/10. Value is the median of two other eBay Gold /10 sales: $1,175 (Oct 25, 2026, raw 3/10, 17 bids) and $999 (Aug 26, 2026, 4/10). Ryan's own purchase is not counted.",
       "photo_note": "Photo of this exact card from the eBay listing Ryan bought it from (seller's photo)."
     },
     {
