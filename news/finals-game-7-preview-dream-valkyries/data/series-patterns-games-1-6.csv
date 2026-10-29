@@ -1,0 +1,7 @@
+game,date,winner,atl_turnovers,gs_turnovers,fewer_turnovers_won,atl_pts_off_to,gs_pts_off_to,more_pts_off_to_won,atl_shot_att,gs_shot_att,shot_attempt_edge_won,halftime_leader,halftime_atl,halftime_gs
+1,2026-10-17,GS,12,10,yes,8,17,yes,73.2,85.0,yes,GS,39,42
+2,2026-10-19,ATL,14,19,yes,24,13,yes,77.4,69.4,yes,ATL,39,37
+3,2026-10-21,ATL,10,17,yes,22,7,yes,81.8,76.5,yes,ATL,46,40
+4,2026-10-24,GS,18,9,yes,8,16,yes,67.6,77.7,yes,GS,26,42
+5,2026-10-26,GS,17,9,yes,6,21,yes,71.2,66.7,no,GS,22,25
+6,2026-10-29,ATL,15,11,no,18,12,yes,69.0,79.2,no,ATL,46,26

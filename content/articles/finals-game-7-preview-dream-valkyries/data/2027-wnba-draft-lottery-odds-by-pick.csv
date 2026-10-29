@@ -1,0 +1,8 @@
+pick_owner,original_team,record_used,win_pct,chances_of_1000,pick_1_pct,pick_2_pct,pick_3_pct,pick_4_pct,pick_5_pct,pick_6_pct,pick_7_pct,top_2_pct,expected_pick
+Houston Comets,Houston,22-66,.250,329,32.9,28.8,38.3,0.0,0.0,0.0,0.0,61.7,2.05
+Toronto Tempo,Toronto,11-33 (2026 only),.250,329,32.9,28.8,29.5,8.8,0.0,0.0,0.0,61.7,2.14
+Washington Mystics (via Chicago Sky swap),Chicago,26-62,.295,161,16.1,18.9,32.3,30.5,2.2,0.0,0.0,35.0,2.84
+Seattle Storm,Seattle,31-57,.352,93,9.3,11.8,0.0,60.7,17.8,0.4,0.0,21.1,3.67
+Portland Fire,Portland,17-27 (2026 only),.386,52,5.2,6.8,0.0,0.0,80.0,7.9,0.1,12.0,4.67
+Los Angeles Sparks (own),Los Angeles,37-51,.420,24,2.4,3.2,0.0,0.0,0.0,91.6,2.8,5.6,5.78
+Los Angeles Sparks (via Phoenix Mercury),Phoenix,43-45,.489,12,1.2,1.6,0.0,0.0,0.0,0.0,97.2,2.8,6.85
