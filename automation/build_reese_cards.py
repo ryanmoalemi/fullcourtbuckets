@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Ryan Moalemi's Angel Reese card page, rendered from data/reese-cards.json.
 
-Live auctions he is bidding on live in data/reese-bids.json. Edit that file
-to add a card, move a bid, or close an auction (status won or lost, plus
-final_price and result). Then run:
+Optional live auctions can go in data/reese-bids.json; with no file the
+bidding section is left off the page. Edit the card data, then run:
 
     python automation/build_reese_cards.py
 
@@ -1037,6 +1036,7 @@ def render_body(data: dict, root: Path | None = None) -> str:
 {_controls(cards)}
 <div class="cards" id="card-grid">{tiles}</div>
 <p id="card-empty" class="lede" hidden>No cards match.</p>
+<p class="price-caption">Prices as of {esc(short_date(as_of))}, PT. Each value is the median of recent verified sold prices for the same card, parallel and grade, from eBay sold listings (via SportsCardsPro) and Fanatics Collect sales history. Open a card to see each sale date and its sold listing.</p>
 </section>
 {render_bids(root) if root is not None else ''}
 {_stats(summary, as_of)}
@@ -1206,6 +1206,7 @@ main{padding:8px 0 72px}
 .panel{margin:28px 0}
 .panel h2,.detail-copy h2{margin:0 0 10px;font:800 clamp(1.8rem,3vw,2.4rem)/1 "Barlow Condensed",sans-serif;letter-spacing:.01em;text-transform:uppercase}
 .lede,.as-of{color:#c9c1b6}
+.price-caption{margin:12px 0 0;color:#9c958b;font-size:13px}
 .as-of{margin:0 0 12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;font-size:13px;color:#f0c36a}
 .stats{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin:0;padding:0}
 .stats li{background:#14121a;border:1px solid #3a3328;padding:14px 12px;min-height:92px}
