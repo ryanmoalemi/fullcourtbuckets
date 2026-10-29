@@ -5,26 +5,26 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:45:30+00:00",
+ "checked_at": "2026-10-29T16:47:07+00:00",
  "period": 1,
- "clock": "7:43",
+ "clock": "6:41",
  "last_play_period": 1,
- "last_play_clock": "7:43",
+ "last_play_clock": "6:41",
  "away": {
   "abbreviation": "GS",
-  "score": 4,
-  "feed_score": 4
+  "score": 5,
+  "feed_score": 5
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 6,
-  "feed_score": 6
+  "score": 8,
+  "feed_score": 8
  },
  "periods": [
   {
    "period": 1,
-   "away": 4,
-   "home": 6
+   "away": 5,
+   "home": 8
   }
  ],
  "players": [],
@@ -116,7 +116,7 @@
   {
    "order": 8,
    "period": 1,
-   "clock": "8:27",
+   "clock": "8:30",
    "type": "Defensive Rebound",
    "text": "Rhyne Howard defensive rebound",
    "away_score": 2,
@@ -169,6 +169,138 @@
    "text": "Kaila Charles defensive rebound",
    "away_score": 4,
    "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 13,
+   "period": 1,
+   "clock": "7:31",
+   "type": "Defensive 3-Seconds Technical",
+   "text": "Naz Hillmon defensive 3-seconds (technical foul)",
+   "away_score": 4,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 14,
+   "period": 1,
+   "clock": "7:31",
+   "type": "Free Throw - Technical",
+   "text": "Gabby Williams makes technical free throw",
+   "away_score": 5,
+   "home_score": 6,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 15,
+   "period": 1,
+   "clock": "7:19",
+   "type": "Driving Layup Shot",
+   "text": "Kaila Charles misses driving layup",
+   "away_score": 5,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 16,
+   "period": 1,
+   "clock": "7:16",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 5,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 17,
+   "period": 1,
+   "clock": "7:16",
+   "type": "Tip Shot",
+   "text": "Kiah Stokes misses tip shot",
+   "away_score": 5,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 18,
+   "period": 1,
+   "clock": "7:15",
+   "type": "Defensive Rebound",
+   "text": "Naz Hillmon defensive rebound",
+   "away_score": 5,
+   "home_score": 6,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 19,
+   "period": 1,
+   "clock": "7:06",
+   "type": "Pullup Jump Shot",
+   "text": "Allisha Gray makes 8-foot pullup jump shot (Naz Hillmon assists)",
+   "away_score": 5,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 20,
+   "period": 1,
+   "clock": "6:42",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Gabby Williams misses two point shot",
+   "away_score": 5,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 21,
+   "period": 1,
+   "clock": "6:41",
+   "type": "Offensive Rebound",
+   "text": "Kiah Stokes offensive rebound",
+   "away_score": 5,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 22,
+   "period": 1,
+   "clock": "6:41",
+   "type": "No Turnover",
+   "text": "Kiah Stokes turnover",
+   "away_score": 5,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 23,
+   "period": 1,
+   "clock": "6:41",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 5,
+   "home_score": 8,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
