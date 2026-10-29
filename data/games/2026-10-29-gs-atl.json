@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:02:17+00:00",
+ "checked_at": "2026-10-29T17:03:25+00:00",
  "period": 1,
- "clock": "19.5",
+ "clock": "3.5",
  "last_play_period": 1,
- "last_play_clock": "33.9",
+ "last_play_clock": "3.5",
  "away": {
   "abbreviation": "GS",
-  "score": 13,
-  "feed_score": 13
+  "score": 15,
+  "feed_score": 15
  },
  "home": {
   "abbreviation": "ATL",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 13,
+   "away": 15,
    "home": 32
   }
  ],
@@ -572,9 +572,9 @@
   {
    "order": 46,
    "period": 1,
-   "clock": "4:28",
-   "type": "Jump Shot",
-   "text": "Angel Reese misses 4-foot jumper",
+   "clock": "4:29",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese misses driving layup",
    "away_score": 5,
    "home_score": 14,
    "scoring_play": false,
@@ -584,7 +584,7 @@
   {
    "order": 47,
    "period": 1,
-   "clock": "4:25",
+   "clock": "4:28",
    "type": "Offensive Rebound",
    "text": "Angel Reese offensive rebound",
    "away_score": 5,
@@ -951,6 +951,54 @@
    "home_score": 32,
    "scoring_play": true,
    "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 78,
+   "period": 1,
+   "clock": "19.5",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 13,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 79,
+   "period": 1,
+   "clock": "19.5",
+   "type": "Free Throw - 1 of 2",
+   "text": "Cecilia Zandalasini makes free throw 1 of 2",
+   "away_score": 14,
+   "home_score": 32,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 80,
+   "period": 1,
+   "clock": "19.5",
+   "type": "Free Throw - 2 of 2",
+   "text": "Cecilia Zandalasini makes free throw 2 of 2",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 81,
+   "period": 1,
+   "clock": "3.5",
+   "type": "Traveling",
+   "text": "Angel Reese traveling turnover",
+   "away_score": 15,
+   "home_score": 32,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "ATL"
   }
  ]
