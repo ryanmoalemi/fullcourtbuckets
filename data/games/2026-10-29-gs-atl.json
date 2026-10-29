@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:35:28+00:00",
+ "checked_at": "2026-10-29T18:36:10+00:00",
  "period": 4,
- "clock": "4:19",
+ "clock": "3:32",
  "last_play_period": 4,
- "last_play_clock": "4:20",
+ "last_play_clock": "3:32",
  "away": {
   "abbreviation": "GS",
-  "score": 57,
-  "feed_score": 57
+  "score": 60,
+  "feed_score": 60
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 10,
+   "away": 13,
    "home": 11
   }
  ],
@@ -3935,7 +3935,7 @@
   {
    "order": 325,
    "period": 4,
-   "clock": "4:34",
+   "clock": "4:36",
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 57,
@@ -3967,6 +3967,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 328,
+   "period": 4,
+   "clock": "4:19",
+   "type": "Personal Foul",
+   "text": "Naz Hillmon personal foul",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 329,
+   "period": 4,
+   "clock": "4:06",
+   "type": "Jump Shot",
+   "text": "Gabby Williams makes 23-foot three point jumper (Laeticia Amihere assists)",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 330,
+   "period": 4,
+   "clock": "3:38",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard misses 21-foot pullup jump shot",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 331,
+   "period": 4,
+   "clock": "3:36",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 332,
+   "period": 4,
+   "clock": "3:32",
+   "type": "Shooting Foul",
+   "text": "Rhyne Howard shooting foul",
+   "away_score": 60,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
