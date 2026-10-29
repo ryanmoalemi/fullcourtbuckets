@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:52:58+00:00",
+ "checked_at": "2026-10-29T16:53:33+00:00",
  "period": 1,
- "clock": "5:20",
+ "clock": "4:56",
  "last_play_period": 1,
- "last_play_clock": "5:41",
+ "last_play_clock": "5:16",
  "away": {
   "abbreviation": "GS",
   "score": 5,
@@ -424,6 +424,66 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "ATL"
+  },
+  {
+   "order": 34,
+   "period": 1,
+   "clock": "5:20",
+   "type": "Driving Floating Jump Shot",
+   "text": "Allisha Gray blocks Veronica Burton 's 11-foot driving floating jump shot",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 35,
+   "period": 1,
+   "clock": "5:16",
+   "type": "Offensive Rebound",
+   "text": "Veronica Burton offensive rebound",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 36,
+   "period": 1,
+   "clock": "5:16",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 7-foot jumper",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 37,
+   "period": 1,
+   "clock": "5:16",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 38,
+   "period": 1,
+   "clock": "5:16",
+   "type": "Shot Clock Turnover",
+   "text": "shot clock turnover",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
