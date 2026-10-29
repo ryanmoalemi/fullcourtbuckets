@@ -56,7 +56,7 @@ Data through the WNBA's Oct. 28, 2026 lottery announcement. Methods: exact proba
 
 Only two picks are drawn. Houston and Toronto each win one of those two draws 61.7% of the time. When neither wins, both fall to the next spots by record, and Houston has the worse record.
 
-Houston and Toronto both finished at .250, so they split the top share at 329 combinations each. The league broke the tie with the first tiebreaker, the 2026 head-to-head series, which Toronto won 2-1. That puts Houston ahead of Toronto when the undrawn picks are handed out, so Houston can do no worse than No. 3 and Toronto can do no worse than No. 4.
+Houston and Toronto both finished at .250, so they split the top share at 329 combinations each. The league broke the tie with the first tiebreaker, the 2026 head-to-head series, which Toronto won 2-1. This gives Houston priority when the undrawn picks are handed out, meaning Houston picks no lower than No. 3 and Toronto picks no lower than No. 4.
 
 The two picks go to Houston and Toronto in either order 32.3% of the time. In 8.8% of lotteries, neither of them lands in the top two.
 
@@ -66,13 +66,13 @@ Six teams hold the seven lottery picks this year. Fourteen numbered balls produc
 
 Most teams' odds use their combined 2025 and 2026 records. [Portland](/wnba/teams/portland-fire/) and [Toronto](/wnba/teams/toronto-tempo/) joined the league in 2026, so the WNBA used only their 2026 records.
 
-Houston's spot comes from the [Connecticut Sun](/wnba/teams/connecticut-sun/). The WNBA and NBA approved the team's sale to Tilman Fertitta and its move to Houston for the 2027 season in May ([WNBA](https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale)). It will play as the Houston Comets at Toyota Center ([Houston Comets](https://houstoncomets.com/press-release)).
+Houston's spot comes from the [Connecticut Sun](/wnba/teams/connecticut-sun/). In May, the WNBA and NBA approved the team's sale to Tilman Fertitta and its move to Houston for the 2027 season ([WNBA](https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale)). It will play as the Houston Comets at Toyota Center ([Houston Comets](https://houstoncomets.com/press-release)).
 
 ## Washington holds Chicago's pick through a swap
 
-The [Washington Mystics](/wnba/teams/washington-mystics/), who made the 2026 playoffs and [played Atlanta in the postseason](/news/dream-mystics-game-1-howard-reese/), hold the third-best odds. Washington got the rights to swap 2027 first-round picks with the [Chicago Sky](/wnba/teams/chicago-sky/) in the Feb. 23, 2025 trade that sent [Ariel Atkins](/wnba/ariel-atkins/) to Chicago. The same deal gave Washington the No. 3 pick in the 2025 draft, which became [Sonia Citron](/wnba/sonia-citron/), and Chicago's 2027 second-rounder ([Mystics](https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft), [Sky](https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins)).
+The [Washington Mystics](/wnba/teams/washington-mystics/), who made the 2026 playoffs and [played Atlanta in the postseason](/news/dream-mystics-game-1-howard-reese/), hold the third-best odds. Washington acquired the right to swap 2027 first-round picks with the [Chicago Sky](/wnba/teams/chicago-sky/) in the Feb. 23, 2025, trade that sent [Ariel Atkins](/wnba/ariel-atkins/) to Chicago. The same deal gave Washington the No. 3 pick in the 2025 draft, which became [Sonia Citron](/wnba/sonia-citron/), and Chicago's 2027 second-rounder ([Mystics](https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft), [Sky](https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins)).
 
-Chicago went 26-62 over the last two seasons, which gives that pick 161 combinations. Washington takes that lottery pick, and Chicago gets Washington's own first-rounder, which falls outside the lottery. The pick has a 35.0% chance to land in the top two and can fall no lower than No. 5.
+Chicago went 26-62 over the last two seasons, earning 161 combinations for its pick. Washington takes that lottery pick, and Chicago gets Washington's non-lottery first-rounder. The pick has a 35.0% chance to land in the top two and can fall no lower than No. 5.
 
 ## Los Angeles has two tickets
 

@@ -1,17 +1,70 @@
 {
   "scorecard": {
-    "overall": 9, "max": 10, "stars": 4.5, "grade": "Ready",
+    "overall": 9,
+    "max": 10,
+    "stars": 4.5,
+    "grade": "Ready",
     "categories": [
-      {"name": "Accuracy", "score": 9, "max": 10, "reason": "Every combination count, record, date and trade term checked against the WNBA, Mystics, Sky, Sparks and Houston Comets releases; matrix exact and matched by a 1M-draw simulation."},
-      {"name": "Information gain", "score": 9, "max": 10, "reason": "Only page with a full pick 1-7 probability matrix from the official combinations; Houston's modal outcome is No. 3; LA's 8.4% at a top-two pick; floors for each team."},
-      {"name": "Effort and replication cost", "score": 8, "max": 10, "reason": "Exact Fraction-based calculation plus simulation, original chart, CC0 CSV."},
-      {"name": "Originality", "score": 9, "max": 10, "reason": "Leads with an original finding instead of restating the league release."},
-      {"name": "Experience and expertise", "score": 8, "max": 10, "reason": "Real byline linked to the author page; methods shown."},
-      {"name": "Main content and layout", "score": 9, "max": 10, "reason": "Two-line lead, table first, chart directly under it, fine print in caption and footer."},
-      {"name": "Transparency", "score": 9, "max": 10, "reason": "Standard how-this-story-was-made note, photo and chart credited, methods and assumption (redraw rule) stated."},
-      {"name": "Writing craft", "score": 8, "max": 10, "reason": "Plain voice, no em dashes, real subheads, in-article links open in new tabs."},
-      {"name": "People-first purpose", "score": 9, "max": 10, "reason": "Answers odds, when and how to watch, how picks were acquired."},
-      {"name": "Human voice", "score": 8, "max": 10, "reason": "Specific numbers throughout; removed 'The result:' setup line and a 'good for' phrase."}
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Every combination count, record, date and trade term checked against the WNBA, Mystics, Sky, Sparks and Houston Comets releases; matrix exact and matched by a 1M-draw simulation."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "Only page with a full pick 1-7 probability matrix from the official combinations; Houston's modal outcome is No. 3; LA's 8.4% at a top-two pick; floors for each team."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Exact Fraction-based calculation plus simulation, original chart, CC0 CSV."
+      },
+      {
+        "name": "Originality",
+        "score": 9,
+        "max": 10,
+        "reason": "Leads with an original finding instead of restating the league release."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 8,
+        "max": 10,
+        "reason": "Real byline linked to the author page; methods shown."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Two-line lead, table first, chart directly under it, fine print in caption and footer."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Standard how-this-story-was-made note, photo and chart credited, methods and assumption (redraw rule) stated."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Plain voice, no em dashes, real subheads, in-article links open in new tabs."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "Answers odds, when and how to watch, how picks were acquired."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific numbers throughout; removed 'The result:' setup line and a 'good for' phrase."
+      }
     ],
     "info_gain": [
       "Pick-by-pick probabilities (No. 1 to No. 7) for all seven lottery picks, not published by the league",
@@ -19,7 +72,10 @@
       "Los Angeles has an 8.4% chance at one or more top-two picks; Houston and Toronto go 1-2 in either order 32.3% of the time",
       "Free CC0 CSV and chart"
     ],
-    "ai_flags": ["'The result:' setup line (merged)", "'good for 161 combinations' (rewritten)"]
+    "ai_flags": [
+      "'The result:' setup line (merged)",
+      "'good for 161 combinations' (rewritten)"
+    ]
   },
   "unique": [
     "Full lottery probability matrix from official combinations",
@@ -28,7 +84,6 @@
   ],
   "unverified": [
     "Pick 2 redraw rule assumed (standard WNBA practice), stated in methods",
-    "Streaming line based on ESPN Unlimited help page, not a lottery-specific ESPN release",
-    "Gemini readability pass failed with HTTP 503 (model overloaded); only GPT pass applied"
+    "Streaming line based on ESPN Unlimited help page, not a lottery-specific ESPN release"
   ]
 }
