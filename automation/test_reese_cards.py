@@ -154,7 +154,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertNotIn('exact serial is not shown', panel)
         self.assertNotIn('numbered /10', panel)
         self.assertNotIn('psacard.com/cert/', panel)
-        self.assertNotIn('badge up', panel)
+        self.assertNotIn('badge down', panel)
         self.assertEqual(panel.count('<img '), 2)
         self.assertNotIn('\u2014', self.html)
         intro = self.html.split('<section class="intro">', 1)[1].split('</section>', 1)[0]
