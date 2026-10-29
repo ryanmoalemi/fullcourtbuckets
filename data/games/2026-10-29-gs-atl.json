@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:04:39+00:00",
+ "checked_at": "2026-10-29T18:05:13+00:00",
  "period": 3,
- "clock": "3:08",
+ "clock": "2:48",
  "last_play_period": 3,
- "last_play_clock": "3:19",
+ "last_play_clock": "2:51",
  "away": {
   "abbreviation": "GS",
-  "score": 35,
-  "feed_score": 35
+  "score": 37,
+  "feed_score": 37
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 9,
+   "away": 11,
    "home": 10
   }
  ],
@@ -2886,7 +2886,7 @@
   {
    "order": 238,
    "period": 3,
-   "clock": "3:19",
+   "clock": "3:20",
    "type": "Jump Shot",
    "text": "Tiffany Hayes misses 24-foot three point jumper",
    "away_score": 35,
@@ -2902,6 +2902,66 @@
    "type": "Defensive Rebound",
    "text": "Dream defensive team rebound",
    "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 240,
+   "period": 3,
+   "clock": "3:19",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for Naz Hillmon",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 241,
+   "period": 3,
+   "clock": "3:08",
+   "type": "Jump Shot",
+   "text": "Angel Reese misses 23-foot three point jumper",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 242,
+   "period": 3,
+   "clock": "3:05",
+   "type": "Defensive Rebound",
+   "text": "Laeticia Amihere defensive rebound",
+   "away_score": 35,
+   "home_score": 56,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 243,
+   "period": 3,
+   "clock": "2:54",
+   "type": "No Shot (Default Shot)",
+   "text": "Veronica Burton makes 1-foot shot",
+   "away_score": 37,
+   "home_score": 56,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 244,
+   "period": 3,
+   "clock": "2:51",
+   "type": "No Turnover",
+   "text": "Angel Reese turnover Veronica Burton",
+   "away_score": 37,
    "home_score": 56,
    "scoring_play": false,
    "score_value": 0,
