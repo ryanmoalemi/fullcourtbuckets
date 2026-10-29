@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:47:42+00:00",
+ "checked_at": "2026-10-29T17:48:16+00:00",
  "period": 3,
- "clock": "8:31",
+ "clock": "8:20",
  "last_play_period": 3,
- "last_play_clock": "8:31",
+ "last_play_clock": "8:20",
  "away": {
   "abbreviation": "GS",
-  "score": 26,
-  "feed_score": 26
+  "score": 28,
+  "feed_score": 28
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 0,
+   "away": 2,
    "home": 3
   }
  ],
@@ -1364,7 +1364,7 @@
    "period": 2,
    "clock": "7:19",
    "type": "Pullup Jump Shot",
-   "text": "Tiffany Hayes makes 17-foot pullup jump shot (Veronica Burton assists)",
+   "text": "Tiffany Hayes makes 17-foot pullup jump shot",
    "away_score": 17,
    "home_score": 35,
    "scoring_play": true,
@@ -2214,7 +2214,7 @@
   {
    "order": 182,
    "period": 3,
-   "clock": "9:02",
+   "clock": "9:03",
    "type": "Jump Shot",
    "text": "Angel Reese misses 22-foot three point jumper",
    "away_score": 26,
@@ -2226,7 +2226,7 @@
   {
    "order": 183,
    "period": 3,
-   "clock": "8:59",
+   "clock": "9:02",
    "type": "Offensive Rebound",
    "text": "Naz Hillmon offensive rebound",
    "away_score": 26,
@@ -2306,6 +2306,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 190,
+   "period": 3,
+   "clock": "8:20",
+   "type": "Layup Driving Reverse",
+   "text": "Tiffany Hayes makes two point shot (Veronica Burton assists)",
+   "away_score": 28,
+   "home_score": 49,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 191,
+   "period": 3,
+   "clock": "8:20",
+   "type": "Shooting Foul",
+   "text": "Angel Reese shooting foul",
+   "away_score": 28,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 192,
+   "period": 3,
+   "clock": "8:20",
+   "type": "Substitution",
+   "text": "Cecilia Zandalasini enters the game for Kaila Charles",
+   "away_score": 28,
+   "home_score": 49,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
