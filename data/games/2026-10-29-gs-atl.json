@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:19:42+00:00",
+ "checked_at": "2026-10-29T17:21:48+00:00",
  "period": 2,
- "clock": "5:12",
+ "clock": "3:31",
  "last_play_period": 2,
- "last_play_clock": "4:51",
+ "last_play_clock": "3:21",
  "away": {
   "abbreviation": "GS",
-  "score": 19,
-  "feed_score": 19
+  "score": 21,
+  "feed_score": 21
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 39,
-  "feed_score": 39
+  "score": 44,
+  "feed_score": 44
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 4,
-   "home": 7
+   "away": 6,
+   "home": 12
   }
  ],
  "players": [],
@@ -1405,7 +1405,7 @@
   {
    "order": 115,
    "period": 2,
-   "clock": "6:40",
+   "clock": "6:42",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 17,
@@ -1418,8 +1418,8 @@
    "order": 116,
    "period": 2,
    "clock": "6:21",
-   "type": "Driving Layup Shot",
-   "text": "Jordin Canada misses driving layup",
+   "type": "Driving Hook Shot",
+   "text": "Jordin Canada misses 5-foot two point shot",
    "away_score": 17,
    "home_score": 37,
    "scoring_play": false,
@@ -1429,7 +1429,7 @@
   {
    "order": 117,
    "period": 2,
-   "clock": "6:18",
+   "clock": "6:20",
    "type": "Defensive Rebound",
    "text": "Laeticia Amihere defensive rebound",
    "away_score": 17,
@@ -1614,6 +1614,162 @@
    "text": "Dream defensive team rebound",
    "away_score": 19,
    "home_score": 39,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 133,
+   "period": 2,
+   "clock": "4:40",
+   "type": "Jump Shot",
+   "text": "Angel Reese makes 22-foot three point jumper (Rhyne Howard assists)",
+   "away_score": 19,
+   "home_score": 42,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 134,
+   "period": 2,
+   "clock": "4:30",
+   "type": "Offensive Foul",
+   "text": "Tiffany Hayes offensive foul",
+   "away_score": 19,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 135,
+   "period": 2,
+   "clock": "4:30",
+   "type": "Offensive Foul Turnover",
+   "text": "Tiffany Hayes offensive foul turnover",
+   "away_score": 19,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 136,
+   "period": 2,
+   "clock": "4:30",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Jordin Canada",
+   "away_score": 19,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 137,
+   "period": 2,
+   "clock": "4:30",
+   "type": "Substitution",
+   "text": "Kaitlyn Chen enters the game for Veronica Burton",
+   "away_score": 19,
+   "home_score": 42,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 138,
+   "period": 2,
+   "clock": "4:21",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard makes 8-foot pullup jump shot",
+   "away_score": 19,
+   "home_score": 44,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 139,
+   "period": 2,
+   "clock": "4:05",
+   "type": "Cutting Layup Shot",
+   "text": "Tiffany Hayes makes 2-foot layup (Kaila Charles assists)",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 140,
+   "period": 2,
+   "clock": "3:45",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard misses 16-foot pullup jump shot",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 141,
+   "period": 2,
+   "clock": "3:40",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 142,
+   "period": 2,
+   "clock": "3:31",
+   "type": "Pullup Jump Shot",
+   "text": "Rhyne Howard misses 35-foot three point pullup jump shot",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 143,
+   "period": 2,
+   "clock": "3:28",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 144,
+   "period": 2,
+   "clock": "3:24",
+   "type": "Running Layup Shot",
+   "text": "Kaila Charles misses running layup",
+   "away_score": 21,
+   "home_score": 44,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 145,
+   "period": 2,
+   "clock": "3:21",
+   "type": "Defensive Rebound",
+   "text": "Isobel Borlase defensive rebound",
+   "away_score": 21,
+   "home_score": 44,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
