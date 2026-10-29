@@ -25,9 +25,9 @@ class ReeseCardMathTests(unittest.TestCase):
         self.assertEqual(summary['up'], 0)
         self.assertEqual(summary['down'], 10)
         self.assertEqual(summary['paid'], Decimal('8634.03'))
-        self.assertEqual(summary['current'], Decimal('5175.25'))
-        self.assertEqual(summary['change'], Decimal('-3458.78'))
-        self.assertEqual(summary['percent'], Decimal('-40.1'))
+        self.assertEqual(summary['current'], Decimal('6195.73'))
+        self.assertEqual(summary['change'], Decimal('-2438.30'))
+        self.assertEqual(summary['percent'], Decimal('-28.2'))
         unknown = summary['unknown']
         self.assertEqual(len(unknown), 1)
         bowman = next(card for card in unknown if card['id'] == 'reese-2023-bowman-u-now-blue-auto')
@@ -70,21 +70,21 @@ class ReeseCardMathTests(unittest.TestCase):
         tiger = next(card for card in data['cards'] if card['id'] == 'reese-2024-prizm-dp-tiger-38')
         self.assertEqual(cards.card_change(tiger), Decimal('-24.44'))
         self.assertEqual(cards.card_percent(tiger), Decimal('-9.8'))
-        self.assertEqual(cards.value_as_of(ROOT), '2026-10-03')
+        self.assertEqual(cards.value_as_of(ROOT), '2026-10-28')
         self.assertEqual(cards.short_date('2026-10-01'), 'Oct 1, 2026')
         self.assertEqual(cards.short_date('2026-10-03'), 'Oct 3, 2026')
         self.assertEqual(cards.long_date('2026-09-24'), 'September 24, 2026')
         self.assertEqual(cards.long_date('2026-09-26'), 'September 26, 2026')
         self.assertEqual(cards.long_date('2026-09-19'), 'September 19, 2026')
         kept = {
-            'reese-2024-25-flawless-royalty-rpa-ar-gold': ('2026-10-02', '2026-10-03'),
-            'reese-2024-prizm-dp-tiger-38': ('2026-09-04', '2026-10-01'),
-            'reese-2024-prizm-dp-black-color-blast-11': ('2026-08-24', '2026-10-01'),
-            'reese-2024-prizm-dp-color-blast-7': ('2026-08-24', '2026-10-01'),
-            'reese-2024-rookie-royalty-kaboom-5': ('2026-08-24', '2026-10-01'),
-            'reese-2024-select-dss-red-auto': ('2026-08-25', '2026-10-01'),
-            'reese-2023-bowman-u-chrome-lava-auto': ('2026-08-24', '2026-10-01'),
-            'reese-2023-bowman-u-now-blue-auto': ('2026-08-24', '2026-10-01'),
+            'reese-2024-25-flawless-royalty-rpa-ar-gold': ('2026-10-02', '2026-10-28'),
+            'reese-2024-prizm-dp-tiger-38': ('2026-09-04', '2026-10-28'),
+            'reese-2024-prizm-dp-black-color-blast-11': ('2026-08-24', '2026-10-28'),
+            'reese-2024-prizm-dp-color-blast-7': ('2026-08-24', '2026-10-28'),
+            'reese-2024-rookie-royalty-kaboom-5': ('2026-08-24', '2026-10-28'),
+            'reese-2024-select-dss-red-auto': ('2026-08-25', '2026-10-28'),
+            'reese-2023-bowman-u-chrome-lava-auto': ('2026-08-24', '2026-10-28'),
+            'reese-2023-bowman-u-now-blue-auto': ('2026-08-24', '2026-10-28'),
         }
         for card in data['cards']:
             if card['id'] not in kept:
@@ -115,13 +115,13 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn("Ryan's collection of Angel Reese cards", self.html)
         self.assertLessEqual(len(cards.PAGE_DESCRIPTION), 155)
         self.assertGreaterEqual(len(cards.PAGE_DESCRIPTION), 110)
-        self.assertIn('Values as of Oct 3, 2026', self.html)
-        self.assertNotIn('Values as of Oct 4, 2026', self.html)
+        self.assertIn('Values as of Oct 28, 2026', self.html)
+        self.assertNotIn('Values as of Oct 3, 2026', self.html)
         self.assertIn('$8,634.03', self.html)
         self.assertIn('$1,084.55', self.html)
-        self.assertIn('$5,175.25', self.html)
-        self.assertIn('-$3,458.78', self.html)
-        self.assertIn('-40.1%', self.html)
+        self.assertIn('$6,195.73', self.html)
+        self.assertIn('-$2,438.30', self.html)
+        self.assertIn('-28.2%', self.html)
         self.assertIn('Value unknown*', self.html)
         self.assertIn('left out of paid, value, and change', self.html)
         self.assertNotIn('not enough sales to price it yet', self.html)
@@ -200,7 +200,6 @@ class ReeseCardPageTests(unittest.TestCase):
         order = [
             '<section class="intro">',
             'id="collection"',
-            'id="bidding"',
             'id="summary"',
             'id="movers"',
             'id="paid-vs-value"',
@@ -208,61 +207,10 @@ class ReeseCardPageTests(unittest.TestCase):
             'id="method"',
             'id="faq"',
         ]
-        bidding = main.split('id="bidding"', 1)[1].split('id="summary"', 1)[0]
-        self.assertIn('Cards I&#x27;m bidding on', bidding)
-        self.assertIn('https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r', bidding)
-        self.assertIn('https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54', bidding)
-        self.assertIn('status-sold">Sold', bidding)
-        self.assertNotIn('status-live', bidding)
-        self.assertNotIn('>TBA<', bidding)
-        self.assertIn('Oct 14–15, 2026', bidding)
-        self.assertIn('datetime="2026-10-15T18:00:00-07:00"', bidding)
-        self.assertIn('datetime="2026-10-17T19:30:00-07:00"', bidding)
-        self.assertIn('Oct 17, 2026, 7:30 p.m. PT', bidding)
-        self.assertIn('$4,500', bidding)
-        self.assertIn('$5,490', bidding)
-        self.assertIn('<dt>Final price</dt><dd>$12,000</dd>', bidding)
-        self.assertIn('<dt>Bids</dt><dd>18</dd>', bidding)
-        self.assertIn('<dt>Final price</dt><dd>$11,856</dd>', bidding)
-        self.assertIn('<dt>Bids</dt><dd>19</dd>', bidding)
-        self.assertNotIn('$1,107', bidding)
-        self.assertNotIn('near the live', bidding)
-        self.assertNotIn('WP***', bidding)
-        self.assertNotIn('ZZ***', bidding)
-        self.assertIn('$4,500 to $6,000', bidding)
-        self.assertIn('$1,000 to $6,900', bidding)
-        self.assertIn('The $1,000 low is an earlier estimate from Oct 9.', bidding)
-        self.assertIn('It does not describe the current bid.', bidding)
-        self.assertIn('Comparable sales', bidding)
-        self.assertIn('No graded Gold /10 sale found', bidding)
-        self.assertIn('two base Kabooms in gem mint', bidding)
-        self.assertIn('The Dream have reached the Finals.', bidding)
-        self.assertNotIn('If the Dream reach the Finals', bidding)
-        self.assertNotIn('<p class="bid-meta">Cert', bidding)
-        self.assertEqual(bidding.count('>146338722<'), 1)
-        self.assertEqual(bidding.count('>139024135<'), 1)
-        self.assertIn('loading="eager"', bidding)
-        self.assertNotIn('Two live auctions', bidding)
-        self.assertNotIn('/news/angel-reese-game-2-stats-liberty-dream-semis/', bidding)
-        self.assertIn('Bids as of 9:00 a.m. PT, Oct 28, 2026</p>\n<div class="bids">', bidding)
-        self.assertIn('Auction ended Oct 14–15, 2026.', bidding)
-        goldin = 'https://goldin.co/item/2024-panini-prizm-wnba-gold-vinyl-prizm-147-angel-reese-rookie-card-1e2x5r'
-        alt = 'https://alt.xyz/itm/19c74115-a39e-4896-927d-a075a4b60a54'
-        self.assertIn(f'<a class="bid-photo-link" href="{goldin}" target="_blank" rel="noopener nofollow"><img ', bidding)
-        self.assertIn(f'<a class="bid-photo-link" href="{alt}" target="_blank" rel="noopener nofollow"><img ', bidding)
-        self.assertIn(f'Image: <a href="{goldin}" target="_blank" rel="noopener nofollow">Goldin</a>', bidding)
-        self.assertIn(f'Image: <a href="{alt}" target="_blank" rel="noopener nofollow">Alt</a>', bidding)
-        self.assertEqual(bidding.count('<p class="bid-take">I&#x27;m bidding on'), 2)
-        self.assertIn('Image: <a href="https://goldin.co/', bidding)
-        self.assertIn('Image: <a href="https://alt.xyz/', bidding)
-        self.assertNotIn('\u2014', bidding)
-        for name in (
-            'bid-goldin-prizm-gold-vinyl-147-psa8.webp',
-            'bid-alt-kaboom-gold-5-psa10.webp',
-        ):
-            photo = ROOT / 'images' / 'reese-cards' / name
-            self.assertTrue(photo.is_file(), name)
-            self.assertLess(photo.stat().st_size, 200_000, name)
+        self.assertNotIn('id="bidding"', main)
+        self.assertNotIn('bidding on', self.html)
+        self.assertNotIn('class="bid"', self.html)
+        self.assertIn('Prices as of Oct 28, 2026, PT.', self.html)
         positions = [main.index(marker) for marker in order]
         self.assertEqual(positions, sorted(positions))
         cards_block = main.split('id="collection"', 1)[1].split('id="summary"', 1)[0]
@@ -288,13 +236,13 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Photo: Fanatics Collect vault scan', gold)
         self.assertIn('#2 Gold / 07/10', gold)
         self.assertIn('Paid <b>$1,688.85</b>', gold)
-        self.assertIn('Value <b>$720.00</b>', gold)
-        self.assertIn('badge down">-$968.85 (-57.4%)', gold)
+        self.assertIn('Value <b>$1,110.00</b>', gold)
+        self.assertIn('badge down">-$578.85 (-34.3%)', gold)
         gold_panel = self.html.split('data-detail="reese-2024-rookie-royalty-contenders-season-ticket-gold-2"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Serial 07/10', gold_panel)
-        self.assertIn('Low confidence: only 1 PSA 10 sale found, and it is this same slab', gold_panel)
+        self.assertIn('Low confidence: only 2 PSA 10 sales found, both of this same slab', gold_panel)
         self.assertIn('Bought September 24, 2026 on Fanatics Collect.', gold_panel)
-        self.assertIn('Value on Oct 3, 2026', gold_panel)
+        self.assertIn('Value on Oct 28, 2026', gold_panel)
         self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', gold_panel)
         self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', gold_panel)
         self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', gold_panel)
@@ -305,13 +253,13 @@ class ReeseCardPageTests(unittest.TestCase):
         kaboom = self.html.split('data-id="reese-2024-rookie-royalty-kaboom-5-2"', 1)[1].split('</button>', 1)[0]
         self.assertIn('#5 Kaboom! (second copy)', kaboom)
         self.assertIn('Paid <b>$1,688.85</b>', kaboom)
-        self.assertIn('Value <b>$975.00</b>', kaboom)
-        self.assertIn('badge down">-$713.85 (-42.3%)', kaboom)
+        self.assertIn('Value <b>$1,290.00</b>', kaboom)
+        self.assertIn('badge down">-$398.85 (-23.6%)', kaboom)
         kaboom_panel = self.html.split('data-detail="reese-2024-rookie-royalty-kaboom-5-2"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Kaboom! (second copy)', kaboom_panel)
         self.assertIn('Second copy of the Kaboom! #5.', kaboom_panel)
         self.assertIn('Bought September 26, 2026 on Fanatics Collect.', kaboom_panel)
-        self.assertIn('Value on Oct 1, 2026', kaboom_panel)
+        self.assertIn('Value on Oct 28, 2026', kaboom_panel)
         self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', kaboom_panel)
         self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', kaboom_panel)
         self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', kaboom_panel)
@@ -322,13 +270,13 @@ class ReeseCardPageTests(unittest.TestCase):
         mojo = self.html.split('data-id="reese-2024-prizm-throwback-mojo-tb-ar"', 1)[1].split('</button>', 1)[0]
         self.assertIn('#TB-AR Mojo /25', mojo)
         self.assertIn('Paid <b>$503.22</b>', mojo)
-        self.assertIn('Value <b>$346.00</b>', mojo)
-        self.assertIn('badge down">-$157.22 (-31.2%)', mojo)
+        self.assertIn('Value <b>$256.98</b>', mojo)
+        self.assertIn('badge down">-$246.24 (-48.9%)', mojo)
         mojo_panel = self.html.split('data-detail="reese-2024-prizm-throwback-mojo-tb-ar"', 1)[1].split('</article>', 1)[0]
         self.assertIn('Numbered /25', mojo_panel)
         self.assertIn('Exact serial is unknown. Still in the Fanatics vault, waiting to ship.', mojo_panel)
         self.assertIn('Bought September 19, 2026 on Fanatics Collect.', mojo_panel)
-        self.assertIn('Value on Oct 3, 2026', mojo_panel)
+        self.assertIn('Value on Oct 28, 2026', mojo_panel)
         self.assertIn('<dt>Hammer</dt><dd>$390.00</dd>', mojo_panel)
         self.assertIn('<dt>Buyer&#x27;s premium</dt><dd>$78.00</dd>', mojo_panel)
         self.assertIn('<dt>Shipping</dt><dd>$7.00</dd>', mojo_panel)
@@ -339,7 +287,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertNotIn('$30.23', mojo_panel)
         self.assertNotIn('$468.00', mojo_panel)
         self.assertNotIn('<dt>Item</dt>', mojo_panel)
-        self.assertIn('Median of the 3 most recent PSA 10 sales on SportsCardsPro', mojo_panel)
+        self.assertIn('Most recent PSA 10 sale titled Mojo on SportsCardsPro', mojo_panel)
         self.assertIn('PSA cert <a href="https://www.psacard.com/cert/117017224"', mojo_panel)
 
     def test_black_color_blast_has_no_back_and_breadcrumbs_stay_in_page(self):
