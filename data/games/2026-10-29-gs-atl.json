@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:51:23+00:00",
+ "checked_at": "2026-10-29T16:52:58+00:00",
  "period": 1,
- "clock": "5:50",
+ "clock": "5:20",
  "last_play_period": 1,
- "last_play_clock": "5:53",
+ "last_play_clock": "5:41",
  "away": {
   "abbreviation": "GS",
   "score": 5,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 8,
-  "feed_score": 8
+  "score": 11,
+  "feed_score": 11
  },
  "periods": [
   {
    "period": 1,
    "away": 5,
-   "home": 8
+   "home": 11
   }
  ],
  "players": [],
@@ -260,7 +260,7 @@
   {
    "order": 20,
    "period": 1,
-   "clock": "6:42",
+   "clock": "6:43",
    "type": "Driving Floating Bank Jump Shot",
    "text": "Gabby Williams misses two point shot",
    "away_score": 5,
@@ -357,8 +357,8 @@
    "order": 28,
    "period": 1,
    "clock": "5:58",
-   "type": "No Shot (Default Shot)",
-   "text": "Veronica Burton misses shot",
+   "type": "Running Layup Shot",
+   "text": "Veronica Burton misses running layup",
    "away_score": 5,
    "home_score": 8,
    "scoring_play": false,
@@ -375,6 +375,54 @@
    "home_score": 8,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 30,
+   "period": 1,
+   "clock": "5:50",
+   "type": "Loose Ball Foul",
+   "text": "Tiffany Hayes loose ball foul",
+   "away_score": 5,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 31,
+   "period": 1,
+   "clock": "5:41",
+   "type": "Driving Layup Shot",
+   "text": "Angel Reese makes driving layup (Allisha Gray assists)",
+   "away_score": 5,
+   "home_score": 10,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 32,
+   "period": 1,
+   "clock": "5:41",
+   "type": "Shooting Foul",
+   "text": "Kiah Stokes shooting foul",
+   "away_score": 5,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 33,
+   "period": 1,
+   "clock": "5:41",
+   "type": "Free Throw - 1 of 1",
+   "text": "Angel Reese makes free throw 1 of 1",
+   "away_score": 5,
+   "home_score": 11,
+   "scoring_play": true,
+   "score_value": 1,
    "team": "ATL"
   }
  ]
