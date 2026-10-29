@@ -353,7 +353,12 @@ def _finals_teams(root) -> dict:
             t = game.get(side) or {}
             if t.get('abbreviation'):
                 names[t['abbreviation']] = t.get('full_name') or t['abbreviation']
-    clubs = {g.get('home') for g in finals.get('games') or [] if g.get('home')}
+    clubs = set()
+    for game in finals.get('games') or []:
+        for key in ('home', 'away'):
+            abbr = game.get(key)
+            if isinstance(abbr, str) and abbr:
+                clubs.add(abbr)
     return {abbr: names.get(abbr, abbr) for abbr in sorted(clubs)}
 
 

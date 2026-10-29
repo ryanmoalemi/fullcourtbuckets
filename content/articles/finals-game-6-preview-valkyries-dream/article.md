@@ -23,7 +23,7 @@ photo_license: "CC BY-SA 4.0"
 focal_y: "center 30%"
 top_link_text: "Follow the play-by-play: Valkyries at Dream, Game 6"
 top_link_url: "/wnba/finals/2026/game-6/play-by-play/"
-ticker: "Finals Game 6 preview: Valkyries at Dream, Thu 9:30 a.m. PT. Golden State leads 3-2."
+ticker: "Dream 80, Valkyries 69 in Game 6. The Finals are tied 3-3."
 data_table_first: true
 ---
 
@@ -225,3 +225,5 @@ Four of five games in this series finished under 147.5 combined points, and Game
 [RealGM](https://basketball.realgm.com/wnba/preview/2026-10-29/Golden-State-at-Atlanta/161835), [NBC Sports](https://www.nbcsports.com/wnba/news/wnba-game-6-finals-moved-to-state-farm-arena-will-be-played-in-early-afternoon), [San Francisco Chronicle](https://www.sfchronicle.com/sports/article/valkyries-even-finals-game-4-road-win-stymie-22492531.php) and [Valkyrie Nation](https://valkyrienation.substack.com/p/early-finals-game-5-preview-atlanta).
 
 Full Court Buckets gathers and verifies its own game data.
+
+This preview was published before the game. For the result, read our [game recap](/news/valkyries-dream-finals-game-6-recap/).

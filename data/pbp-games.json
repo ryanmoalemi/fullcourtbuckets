@@ -98,7 +98,21 @@
       "tv": "USA Network, E! and Syfy",
       "stream": "Peacock",
       "preview": "/news/finals-game-6-preview-valkyries-dream/",
+      "recap": "/news/valkyries-dream-finals-game-6-recap/",
       "game_json": "data/games/2026-10-29-gs-atl.json"
+    },
+    "401918311": {
+      "number": 7,
+      "date": "2026-10-31",
+      "date_text": "Sat Oct 31, 2026",
+      "tip": "Sat Oct 31, 2026, 5 p.m. PT (8 p.m. ET)",
+      "venue": "Chase Center",
+      "series_before": {
+        "GS": 3,
+        "ATL": 3
+      },
+      "tv": "USA Network and CNBC",
+      "stream": "Peacock"
     }
   }
 }
