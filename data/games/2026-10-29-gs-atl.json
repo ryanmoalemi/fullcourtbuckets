@@ -5,20 +5,20 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:18:16+00:00",
+ "checked_at": "2026-10-29T18:20:23+00:00",
  "period": 4,
- "clock": "9:31",
+ "clock": "8:07",
  "last_play_period": 4,
- "last_play_clock": "9:31",
+ "last_play_clock": "8:07",
  "away": {
   "abbreviation": "GS",
-  "score": 47,
-  "feed_score": 47
+  "score": 49,
+  "feed_score": 49
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 63,
-  "feed_score": 63
+  "score": 66,
+  "feed_score": 66
  },
  "periods": [
   {
@@ -38,8 +38,8 @@
   },
   {
    "period": 4,
-   "away": 0,
-   "home": 0
+   "away": 2,
+   "home": 3
   }
  ],
  "players": [],
@@ -3371,9 +3371,9 @@
   {
    "order": 278,
    "period": 4,
-   "clock": "9:35",
-   "type": "No Shot (Default Shot)",
-   "text": "Jordin Canada misses shot",
+   "clock": "9:36",
+   "type": "Pullup Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point pullup jump shot",
    "away_score": 47,
    "home_score": 63,
    "scoring_play": false,
@@ -3383,11 +3383,143 @@
   {
    "order": 279,
    "period": 4,
-   "clock": "9:31",
+   "clock": "9:35",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 47,
    "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 280,
+   "period": 4,
+   "clock": "9:16",
+   "type": "Turnaround Jump Shot",
+   "text": "Cecilia Zandalasini misses 9-foot turnaround jump shot",
+   "away_score": 47,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 281,
+   "period": 4,
+   "clock": "9:13",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 47,
+   "home_score": 63,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 282,
+   "period": 4,
+   "clock": "9:03",
+   "type": "Jump Shot",
+   "text": "Allisha Gray makes 25-foot three point jumper (Rhyne Howard assists)",
+   "away_score": 47,
+   "home_score": 66,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 283,
+   "period": 4,
+   "clock": "8:47",
+   "type": "Driving Layup Shot",
+   "text": "Cecilia Zandalasini misses driving layup",
+   "away_score": 47,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 284,
+   "period": 4,
+   "clock": "8:44",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 47,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 285,
+   "period": 4,
+   "clock": "8:31",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 23-foot three point jumper",
+   "away_score": 47,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 286,
+   "period": 4,
+   "clock": "8:28",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 47,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 287,
+   "period": 4,
+   "clock": "8:18",
+   "type": "Driving Floating Jump Shot",
+   "text": "Tiffany Hayes makes 9-foot driving floating jump shot",
+   "away_score": 49,
+   "home_score": 66,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 288,
+   "period": 4,
+   "clock": "8:07",
+   "type": "Personal Foul",
+   "text": "Kaila Charles personal foul",
+   "away_score": 49,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 289,
+   "period": 4,
+   "clock": "8:07",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Allisha Gray",
+   "away_score": 49,
+   "home_score": 66,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 290,
+   "period": 4,
+   "clock": "8:07",
+   "type": "Substitution",
+   "text": "Gabby Williams enters the game for Cecilia Zandalasini",
+   "away_score": 49,
+   "home_score": 66,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
