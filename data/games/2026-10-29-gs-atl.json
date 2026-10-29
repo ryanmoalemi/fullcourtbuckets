@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T18:25:17+00:00",
+ "checked_at": "2026-10-29T18:29:58+00:00",
  "period": 4,
- "clock": "5:42",
+ "clock": "5:05",
  "last_play_period": 4,
- "last_play_clock": "5:42",
+ "last_play_clock": "5:32",
  "away": {
   "abbreviation": "GS",
-  "score": 55,
-  "feed_score": 55
+  "score": 57,
+  "feed_score": 57
  },
  "home": {
   "abbreviation": "ATL",
@@ -38,7 +38,7 @@
   },
   {
    "period": 4,
-   "away": 8,
+   "away": 10,
    "home": 11
   }
  ],
@@ -3433,7 +3433,7 @@
    "period": 4,
    "clock": "8:47",
    "type": "Driving Layup Shot",
-   "text": "Cecilia Zandalasini misses driving layup",
+   "text": "Allisha Gray blocks Cecilia Zandalasini 's 2-foot driving layup",
    "away_score": 47,
    "home_score": 66,
    "scoring_play": false,
@@ -3443,7 +3443,7 @@
   {
    "order": 284,
    "period": 4,
-   "clock": "8:44",
+   "clock": "8:45",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 47,
@@ -3467,7 +3467,7 @@
   {
    "order": 286,
    "period": 4,
-   "clock": "8:28",
+   "clock": "8:30",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 47,
@@ -3480,8 +3480,8 @@
    "order": 287,
    "period": 4,
    "clock": "8:18",
-   "type": "Driving Floating Jump Shot",
-   "text": "Tiffany Hayes makes 9-foot driving floating jump shot",
+   "type": "Pullup Jump Shot",
+   "text": "Tiffany Hayes makes 9-foot pullup jump shot",
    "away_score": 49,
    "home_score": 66,
    "scoring_play": true,
@@ -3780,8 +3780,8 @@
    "order": 312,
    "period": 4,
    "clock": "5:43",
-   "type": "No Shot (Default Shot)",
-   "text": "Angel Reese makes 24-foot shot (Allisha Gray assists)",
+   "type": "Jump Shot",
+   "text": "Angel Reese makes 24-foot three point jumper (Allisha Gray assists)",
    "away_score": 55,
    "home_score": 74,
    "scoring_play": true,
@@ -3798,6 +3798,30 @@
    "home_score": 74,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 314,
+   "period": 4,
+   "clock": "5:42",
+   "type": "Substitution",
+   "text": "Laeticia Amihere enters the game for Kiah Stokes",
+   "away_score": 55,
+   "home_score": 74,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 315,
+   "period": 4,
+   "clock": "5:32",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams makes driving layup (Veronica Burton assists)",
+   "away_score": 57,
+   "home_score": 74,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "GS"
   }
  ]
