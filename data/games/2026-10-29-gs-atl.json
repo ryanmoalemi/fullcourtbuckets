@@ -5,11 +5,11 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:13:51+00:00",
+ "checked_at": "2026-10-29T17:14:56+00:00",
  "period": 2,
- "clock": "6:08",
+ "clock": "5:52",
  "last_play_period": 2,
- "last_play_clock": "6:18",
+ "last_play_clock": "5:52",
  "away": {
   "abbreviation": "GS",
   "score": 17,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 37,
-  "feed_score": 37
+  "score": 39,
+  "feed_score": 39
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 2,
-   "home": 5
+   "home": 7
   }
  ],
  "players": [],
@@ -1434,6 +1434,66 @@
    "text": "Laeticia Amihere defensive rebound",
    "away_score": 17,
    "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 118,
+   "period": 2,
+   "clock": "6:08",
+   "type": "Substitution",
+   "text": "Gabby Williams enters the game for Kayla Thornton",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 119,
+   "period": 2,
+   "clock": "6:00",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 13-foot pullup jump shot",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 120,
+   "period": 2,
+   "clock": "5:56",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 17,
+   "home_score": 37,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 121,
+   "period": 2,
+   "clock": "5:52",
+   "type": "No Shot (Default Shot)",
+   "text": "Allisha Gray makes 2-foot shot",
+   "away_score": 17,
+   "home_score": 39,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 122,
+   "period": 2,
+   "clock": "5:52",
+   "type": "Full Timeout",
+   "text": "Golden State Valkyries Full timeout",
+   "away_score": 17,
+   "home_score": 39,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
