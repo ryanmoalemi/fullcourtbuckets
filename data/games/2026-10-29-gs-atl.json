@@ -5,26 +5,26 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T16:58:59+00:00",
+ "checked_at": "2026-10-29T17:01:10+00:00",
  "period": 1,
- "clock": "1:37",
+ "clock": "33.9",
  "last_play_period": 1,
- "last_play_clock": "1:37",
+ "last_play_clock": "33.9",
  "away": {
   "abbreviation": "GS",
-  "score": 10,
-  "feed_score": 10
+  "score": 13,
+  "feed_score": 13
  },
  "home": {
   "abbreviation": "ATL",
-  "score": 27,
-  "feed_score": 27
+  "score": 31,
+  "feed_score": 31
  },
  "periods": [
   {
    "period": 1,
-   "away": 10,
-   "home": 27
+   "away": 13,
+   "home": 31
   }
  ],
  "players": [],
@@ -538,7 +538,7 @@
    "period": 1,
    "clock": "4:38",
    "type": "Lost Ball Turnover",
-   "text": "Kaila Charles lost ball turnover",
+   "text": "Kaila Charles lost ball turnover (Naz Hillmon steals)",
    "away_score": 5,
    "home_score": 14,
    "scoring_play": false,
@@ -772,6 +772,138 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 63,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Shooting Foul",
+   "text": "Cecilia Zandalasini shooting foul",
+   "away_score": 10,
+   "home_score": 27,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 64,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Free Throw - 1 of 2",
+   "text": "Isobel Borlase makes free throw 1 of 2",
+   "away_score": 10,
+   "home_score": 28,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 65,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Naz Hillmon",
+   "away_score": 10,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 66,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Substitution",
+   "text": "Allisha Gray enters the game for Rhyne Howard",
+   "away_score": 10,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 67,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Substitution",
+   "text": "Laeticia Amihere enters the game for Kiah Stokes",
+   "away_score": 10,
+   "home_score": 28,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 68,
+   "period": 1,
+   "clock": "1:31",
+   "type": "Free Throw - 2 of 2",
+   "text": "Isobel Borlase makes free throw 2 of 2",
+   "away_score": 10,
+   "home_score": 29,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 69,
+   "period": 1,
+   "clock": "1:16",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams misses 11-foot pullup jump shot",
+   "away_score": 10,
+   "home_score": 29,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 70,
+   "period": 1,
+   "clock": "1:12",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 10,
+   "home_score": 29,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 71,
+   "period": 1,
+   "clock": "1:05",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Angel Reese assists)",
+   "away_score": 10,
+   "home_score": 31,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 72,
+   "period": 1,
+   "clock": "39.7",
+   "type": "Pullup Jump Shot",
+   "text": "Cecilia Zandalasini makes 24-foot three pointer (Kayla Thornton assists)",
+   "away_score": 13,
+   "home_score": 31,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 73,
+   "period": 1,
+   "clock": "33.9",
+   "type": "Shooting Foul",
+   "text": "Laeticia Amihere shooting foul",
+   "away_score": 13,
+   "home_score": 31,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
