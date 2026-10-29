@@ -5,15 +5,15 @@
  "espn_game_id": "401918310",
  "balldontlie_game_id": 1392724,
  "date": "2026-10-29",
- "checked_at": "2026-10-29T17:58:45+00:00",
+ "checked_at": "2026-10-29T17:59:19+00:00",
  "period": 3,
  "clock": "4:48",
  "last_play_period": 3,
- "last_play_clock": "5:10",
+ "last_play_clock": "4:37",
  "away": {
   "abbreviation": "GS",
-  "score": 30,
-  "feed_score": 30
+  "score": 33,
+  "feed_score": 33
  },
  "home": {
   "abbreviation": "ATL",
@@ -33,7 +33,7 @@
   },
   {
    "period": 3,
-   "away": 4,
+   "away": 7,
    "home": 7
   }
  ],
@@ -2734,6 +2734,42 @@
    "type": "Defensive Rebound",
    "text": "DeWanna Bonner defensive rebound",
    "away_score": 30,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 226,
+   "period": 3,
+   "clock": "4:56",
+   "type": "Lost Ball Turnover",
+   "text": "Allisha Gray lost ball turnover (Tiffany Hayes steals)",
+   "away_score": 30,
+   "home_score": 53,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 227,
+   "period": 3,
+   "clock": "4:51",
+   "type": "Running Jump Shot",
+   "text": "Gabby Williams makes 24-foot running jump shot (Cecilia Zandalasini assists)",
+   "away_score": 33,
+   "home_score": 53,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 228,
+   "period": 3,
+   "clock": "4:37",
+   "type": "Lost Ball Turnover",
+   "text": "Allisha Gray lost ball turnover (Tiffany Hayes steals)",
+   "away_score": 33,
    "home_score": 53,
    "scoring_play": false,
    "score_value": 0,
