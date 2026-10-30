@@ -2337,6 +2337,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-29: edges checked at 200% on dark and light backgrounds"
+    },
+    "saylor-poffenbarger": {
+      "author": "MD Comptroller",
+      "file_url": "https://commons.wikimedia.org/wiki/File:University_of_Maryland_Women%27s_Basketball_Practice_Visit_-_11_26_2024_(54166467906)_(cropped).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "lindsay-whalen": {
+      "author": "Lorie Shaul",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lindsay_Whalen_speaking_at_the_post-game_celebration_of_her_retirement_from_the_Minnesota_Lynx_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "renee-montgomery": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Renee_Montgomery.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "erika-de-souza": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Erika_de_Souza_cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "kia-vaughn": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kia_Vaughn_Fenerbah%C3%A7e_Women%27s_Basketball_vs_Mersin_B%C3%BCy%C3%BCk%C5%9Fehir_Belediyesi_(women%27s_basketball)_TWBL_20180121.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "janel-mccarville": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:McCarville_20161011.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "tan-white": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tan_White_5_Izmit_Belediyespor_TWBL_20181229.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "tierra-ruffin-pratt": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tierra_Ruffin-Pratt_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "erin-phillips": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Erin_Phillips_2019_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "nicky-anosike": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nicky_Anosike.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "victoria-vivians": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Victoria_Vivians_2021.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "crystal-dangerfield": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Crystal_Dangerfield_2_Kayseri_Basketbol_SK_TKBSL_20250131_(3).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "sandrine-gruda": {
+      "author": "Chris93",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sandrine_Gruda_2025.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "theresa-plaisance": {
+      "author": "All-Pro Reels from District of Columbia, USA",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Theresa_Plaisance_55_(51410742066)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "latoya-sanders": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:LaToya_Sanders_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "brittney-sykes": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Brittney_Sykes_2022.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "moriah-jefferson": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Moriah_Jefferson_(53031330542)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "kalana-greene": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kalana_Greene.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelsey-griffin": {
+      "author": "Syngenta222",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelsey_Griffin_Nebraska.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "kaleena-mosqueda-lewis": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mosqueda-Lewis_20180912.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
