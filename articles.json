@@ -1,5 +1,33 @@
 [
   {
+    "slug": "houston-comets-logo-wnba-cities-lost-teams",
+    "url": "/news/houston-comets-logo-wnba-cities-lost-teams/",
+    "title": "Houston Comets logo: the cities that won back WNBA teams",
+    "description": "The Houston Comets unveiled their new logo on Oct. 29. Houston is one of 12 markets to lose a WNBA team and one of 4 getting one back by 2029. Free CSV of every move and fold.",
+    "category": "news",
+    "date": "2026-10-30",
+    "imageAlt": "Toyota Center in downtown Houston, the future home of the Houston Comets, seen from its front plaza",
+    "imageCredit": "Photo: Ed Uthman, CC BY 2.0, via Wikimedia Commons",
+    "teams": [
+      "connecticut-sun",
+      "portland-fire"
+    ],
+    "imageFocal": "center 55%",
+    "image": "/images/articles/houston-comets-logo-wnba-cities-lost-teams/hero-1200.webp",
+    "imageSource": "/images/articles/houston-comets-logo-wnba-cities-lost-teams/photo.jpg",
+    "imageHero": "/images/articles/houston-comets-logo-wnba-cities-lost-teams/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/houston-comets-logo-wnba-cities-lost-teams/hero-2x.webp",
+    "imageHero2xWidth": 1920,
+    "imageHero2xHeight": 1080,
+    "imageOg": "/images/articles/houston-comets-logo-wnba-cities-lost-teams/og-1200.jpg",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 630,
+    "imageWidth": 1200,
+    "imageHeight": 675
+  },
+  {
     "slug": "finals-game-7-preview-dream-valkyries",
     "url": "/news/finals-game-7-preview-dream-valkyries/",
     "title": "Dream force Game 7 with 80-69 win, plus-33 margin in tied series",
