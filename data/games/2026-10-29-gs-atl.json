@@ -2,10 +2,8 @@
   "schema_version": 1,
   "source": "balldontlie",
   "fallback": false,
-  "flags": [
-    "crosscheck_mismatch"
-  ],
-  "checked_at": "2026-10-29T18:51:03+00:00",
+  "flags": [],
+  "checked_at": "2026-10-30T01:28:42+00:00",
   "date": "2026-10-29",
   "status": "final",
   "season": 2026,
@@ -141,7 +139,7 @@
       "name": "Cecilia Zandalasini",
       "team": "GS",
       "did_not_play": false,
-      "minutes": "21",
+      "minutes": "22",
       "pts": 9,
       "reb": 1,
       "oreb": 1,
@@ -453,7 +451,7 @@
       "name": "Jordin Canada",
       "team": "ATL",
       "did_not_play": false,
-      "minutes": "33",
+      "minutes": "34",
       "pts": 10,
       "reb": 4,
       "oreb": 1,
@@ -477,7 +475,7 @@
       "name": "Naz Hillmon",
       "team": "ATL",
       "did_not_play": false,
-      "minutes": "29",
+      "minutes": "30",
       "pts": 7,
       "reb": 5,
       "oreb": 1,
@@ -732,25 +730,9 @@
     "source": "espn",
     "espn_game_id": "401918310",
     "compared": true,
-    "matched": false,
+    "matched": true,
     "players_compared": true,
-    "mismatches": [
-      {
-        "field": "player.GS.Cecilia Zandalasini.minutes",
-        "balldontlie": "21",
-        "espn": "22"
-      },
-      {
-        "field": "player.ATL.Jordin Canada.minutes",
-        "balldontlie": "33",
-        "espn": "34"
-      },
-      {
-        "field": "player.ATL.Naz Hillmon.minutes",
-        "balldontlie": "29",
-        "espn": "30"
-      }
-    ],
+    "mismatches": [],
     "unavailable": [],
     "espn_series": {
       "source": "espn",
@@ -770,7 +752,7 @@
         }
       ]
     },
-    "note": "ESPN disagrees with the game file. Resolve every field before review."
+    "note": "Matched ESPN on the final, quarters, team totals, and each player's full box line."
   },
   "plays": [
     {
@@ -5192,7 +5174,7 @@
     {
       "order": 369,
       "period": 4,
-      "clock": "1:34",
+      "clock": "1:37",
       "type": "Defensive Rebound",
       "text": "Naz Hillmon defensive rebound",
       "away_score": 66,
@@ -5300,7 +5282,7 @@
     {
       "order": 378,
       "period": 4,
-      "clock": "50.0",
+      "clock": "52.0",
       "type": "Offensive Rebound",
       "text": "Veronica Burton offensive rebound",
       "away_score": 69,
@@ -5324,7 +5306,7 @@
     {
       "order": 380,
       "period": 4,
-      "clock": "41.8",
+      "clock": "43.8",
       "type": "Defensive Rebound",
       "text": "Jordin Canada defensive rebound",
       "away_score": 69,
@@ -5348,7 +5330,7 @@
     {
       "order": 382,
       "period": 4,
-      "clock": "18.9",
+      "clock": "20.9",
       "type": "Defensive Rebound",
       "text": "Laeticia Amihere defensive rebound",
       "away_score": 69,
@@ -5361,8 +5343,8 @@
       "order": 383,
       "period": 4,
       "clock": "14.4",
-      "type": "Pullup Jump Shot",
-      "text": "Gabby Williams misses 25-foot three point pullup jump shot",
+      "type": "Jump Shot",
+      "text": "Gabby Williams misses 25-foot three point jumper",
       "away_score": 69,
       "home_score": 80,
       "scoring_play": false,
@@ -5372,7 +5354,7 @@
     {
       "order": 384,
       "period": 4,
-      "clock": "10.6",
+      "clock": "12.4",
       "type": "Defensive Rebound",
       "text": "Angel Reese defensive rebound",
       "away_score": 69,

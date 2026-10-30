@@ -412,9 +412,9 @@
       "status": "final",
       "source": "balldontlie",
       "fallback": false,
-      "crosscheck_matched": false,
+      "crosscheck_matched": true,
       "crosscheck_compared": true,
-      "mismatch_count": 3,
+      "mismatch_count": 0,
       "plays": 386,
       "plays_status": "included"
     }
