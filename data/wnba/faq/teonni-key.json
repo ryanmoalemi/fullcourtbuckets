@@ -1,76 +1,125 @@
 {
   "slug": "teonni-key",
   "player_name": "Teonni Key",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 30, 2026",
+  "verified_at": "2026-10-30",
   "items": [
     {
-      "question": "What are Teonni Key's stats / points per game?",
-      "answer": "In the 2026 regular season, Teonni Key averaged 2.0 points, 1.9 rebounds, and 0.5 assists in 37 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "teonni key stats",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How tall is Teonni Key?",
-      "answer": "Teonni Key is listed at 6' 5\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teonni_Key"
-      ],
-      "google_keyword": "teonni key height",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What college did Teonni Key attend?",
-      "answer": "Key played college basketball at the North Carolina Tar Heels and Kentucky Wildcats.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teonni_Key"
-      ],
-      "google_keyword": "teonni key tennessee",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Teonni Key injured?",
-      "answer": "Injury status changes during the season. Check the latest Toronto Tempo reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "teonni key injury",
-      "approx_monthly_volume": 210
-    },
-    {
-      "question": "Who are Teonni Key's parents?",
-      "answer": "Public profiles share limited verified detail about Teonni Key's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Who is Teonni Key's sister?",
+      "answer": "Teonni Key's sister is Tamari Key, who played at Tennessee from 2020 to 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teonni_Key"
+        "https://ukathletics.com/news/2024/04/16/kentucky-womens-basketball-signs-6-4-forward-teonni-key/"
       ],
-      "google_keyword": "teonni key family",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "teonni key sister",
+          "vol": 140
+        },
+        {
+          "q": "teonni key siblings",
+          "vol": 10
+        },
+        {
+          "q": "teonni key family",
+          "vol": 20
+        },
+        {
+          "q": "teonni key tennessee",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Teonni Key?",
-      "answer": "Teonni Key is an American professional basketball player for the Toronto Tempo of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Where did Teonni Key play college basketball?",
+      "answer": "Teonni Key, from Cary, North Carolina, started at North Carolina and transferred to Kentucky as a redshirt junior for 2024-25. She was the No. 9 recruit in the Class of 2021, according to espnW.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teonni_Key"
+        "https://ukathletics.com/news/2024/04/16/kentucky-womens-basketball-signs-6-4-forward-teonni-key/",
+        "https://ukathletics.com/sports/wbball/roster/player/teonni-key/"
       ],
-      "google_keyword": "teonni key wikipedia",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "teonni key kentucky",
+          "vol": 90
+        },
+        {
+          "q": "teonni key unc",
+          "vol": 10
+        },
+        {
+          "q": "teonni key transfer",
+          "vol": 10
+        },
+        {
+          "q": "teonni key recruiting",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Teonni Key?",
-      "answer": "Teonni Key was born July 10, 2003 in Cary. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Teonni Key was born July 10, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teonni_Key"
+        "https://www.wnba.com/player/1643457/teonni-key/bio"
       ],
-      "google_keyword": "teonni key age",
-      "approx_monthly_volume": 50,
-      "birthdate": "2003-07-10"
+      "queries": [
+        {
+          "q": "teonni key age",
+          "vol": 50
+        },
+        {
+          "q": "teonni key birthday",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Teonni Key's stats?",
+      "answer": "In the 2026 regular season, Teonni Key averaged 2.2 points, 2.1 rebounds, and 0.5 assists in 39 games for the Toronto Tempo.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/teonni-key/"
+      ],
+      "queries": [
+        {
+          "q": "teonni key stats",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "How tall is Teonni Key?",
+      "answer": "The WNBA lists Teonni Key at 6 feet 4 inches and 170 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643457/teonni-key/bio"
+      ],
+      "queries": [
+        {
+          "q": "teonni key height",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "When was Teonni Key drafted?",
+      "answer": "The Toronto Tempo drafted Teonni Key in the second round, 22nd overall, in the 2026 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643457/teonni-key/bio"
+      ],
+      "queries": [
+        {
+          "q": "teonni key wnba draft",
+          "vol": 20
+        },
+        {
+          "q": "teonni key wnba",
+          "vol": 30
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,86 +1,93 @@
 {
   "slug": "sug-sutton",
   "player_name": "Sug Sutton",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 30, 2026",
+  "verified_at": "2026-10-30",
   "items": [
     {
-      "question": "What are Sug Sutton's stats / points per game?",
-      "answer": "In the 2026 regular season, Sug Sutton averaged 7.4 points, 1.8 rebounds, and 3.9 assists in 43 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sug sutton stats",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Sug Sutton dating?",
-      "answer": "As of late 2026, Sug Sutton has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who has Sug Sutton played for in the WNBA?",
+      "answer": "Washington drafted Sug Sutton 36th overall in 2020. She has played for the Washington Mystics, the Phoenix Mercury (2023 and 2024), the Portland Fire, who took her in the 2026 expansion draft, and the Dallas Wings, who signed her in June 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sug_Sutton"
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-sug-sutton/n-6375231",
+        "https://www.wnba.com/player/1630134/sug-sutton/bio",
+        "https://fullcourtbuckets.com/wnba/sug-sutton/"
       ],
-      "google_keyword": "sug sutton partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sug sutton wnba",
+          "vol": 110
+        },
+        {
+          "q": "sug sutton phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "sug sutton mystics",
+          "vol": 10
+        },
+        {
+          "q": "sug sutton wnba draft",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "How much does Sug Sutton make?",
-      "answer": "A precise public salary or net worth figure for Sug Sutton is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "How did Sug Sutton play in 2026?",
+      "answer": "In 2026, Sug Sutton averaged 11.3 points and 5.7 assists in three games for the Portland Fire before being waived on May 21. After signing with Dallas on June 14, she averaged 2.3 points and 1.5 assists in 22 games for the Wings.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-sug-sutton/n-6375231",
+        "https://fullcourtbuckets.com/wnba/sug-sutton/"
       ],
-      "google_keyword": "sug sutton salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sug sutton stats",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How tall is Sug Sutton?",
-      "answer": "Sug Sutton is listed at 5' 8\".",
+      "answer": "The WNBA lists Sug Sutton at 5 feet 8 inches and 140 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sug_Sutton"
+        "https://www.wnba.com/player/1630134/sug-sutton/bio"
       ],
-      "google_keyword": "sug sutton height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "sug sutton height",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How old is Sug Sutton?",
-      "answer": "She was born December 17, 1998 in St. Louis. As of late 2026 that puts her at 27 years old.",
+      "answer": "Sug Sutton was born December 17, 1998.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sug_Sutton"
+        "https://www.wnba.com/player/1630134/sug-sutton/bio"
       ],
-      "google_keyword": "sug sutton age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1998-12-17"
+      "queries": [
+        {
+          "q": "sug sutton age",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What is Sug Sutton's contract?",
-      "answer": "Contract length and guarantees for Sug Sutton are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Where did Sug Sutton play college basketball?",
+      "answer": "Sug Sutton, a St. Louis native, played at Texas from 2016 to 2020, averaging 8.3 points and 3.2 assists in 131 games. She made the All-Big 12 Second Team in 2020.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.oursportscentral.com/services/releases/dallas-wings-sign-sug-sutton/n-6375231"
       ],
-      "google_keyword": "sug sutton contract",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Sug Sutton married?",
-      "answer": "There is no widely reported public record of Sug Sutton being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sug_Sutton"
-      ],
-      "google_keyword": "is sug sutton married",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Sug Sutton injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sug sutton injury",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "sug sutton texas basketball",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

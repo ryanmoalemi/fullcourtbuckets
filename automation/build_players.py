@@ -1110,6 +1110,8 @@ SEARCH_FAQ_SLUGS = frozenset({
     'lindsay-whalen', 'maria-conde', 'maya-caldwell', 'shatori-walker-kimbrough', 'shay-ciezki',
     'stephanie-talbot', 'sylvia-fowles', 'tea-cooper', 'tina-thompson', 'aari-mcdonald',
     'angel-mccoughtry', 'ashlon-jackson', 'cassandre-prosper', 'cheryl-ford', 'kathryn-westbeld',
+    'kennedy-burke', 'lauren-jackson', 'mackenzie-holmes', 'miela-sowah', 'noelle-quinn',
+    'seimone-augustus', 'sug-sutton', 'teonni-key', 'aicha-coulibaly', 'anastasiia-olairi-kosu',
 })
 RELATED_SEARCH_HOLD = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
 CURATED_FAQ_SLUGS = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS

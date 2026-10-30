@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 186)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 196)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -570,6 +570,10 @@ class BuildTests(unittest.TestCase):
             'stephanie-talbot', 'sylvia-fowles', 'tea-cooper', 'tina-thompson', 'aari-mcdonald',
             'angel-mccoughtry', 'ashlon-jackson', 'cassandre-prosper', 'cheryl-ford', 'kathryn-westbeld',
         }
+        october_30 = {
+            'kennedy-burke', 'lauren-jackson', 'mackenzie-holmes', 'miela-sowah', 'noelle-quinn',
+            'seimone-augustus', 'sug-sutton', 'teonni-key', 'aicha-coulibaly', 'anastasiia-olairi-kosu',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -582,11 +586,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_27 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_28 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_29 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(october_30 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_29:
+            if slug in october_30:
+                expected_source = 'Google search demand via OpenSEO, Oct 30, 2026'
+            elif slug in october_29:
                 expected_source = 'Google search demand via OpenSEO, Oct 29, 2026'
             elif slug in october_28:
                 expected_source = 'Google search demand via OpenSEO, Oct 28, 2026'
@@ -649,7 +656,19 @@ class BuildTests(unittest.TestCase):
             # most of the rest for this batch are relationships, family, pay, or injuries.
             # Oct 29: same; most dropped searches are relationships, family, net worth,
             # pay, or other people who share the name.
-            if slug in {'cheryl-ford'}:
+            # Oct 30: same; Lauren Jackson's name searches are mostly other people,
+            # and unconfirmed family links (Coulibaly, Kosu) were dropped.
+            if slug in {'anastasiia-olairi-kosu'}:
+                minimum = 2
+            elif slug in {'aicha-coulibaly'}:
+                minimum = 4
+            elif slug in {'kennedy-burke', 'miela-sowah', 'sug-sutton'}:
+                minimum = 5
+            elif slug in {'lauren-jackson', 'mackenzie-holmes', 'noelle-quinn', 'teonni-key'}:
+                minimum = 6
+            elif slug in {'seimone-augustus'}:
+                minimum = 9
+            elif slug in {'cheryl-ford'}:
                 minimum = 4
             elif slug in {'stephanie-talbot'}:
                 minimum = 5
