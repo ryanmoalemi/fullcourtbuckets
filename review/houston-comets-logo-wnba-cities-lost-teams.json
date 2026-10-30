@@ -1,0 +1,39 @@
+{
+  "scorecard": {
+    "overall": 9,
+    "max": 10,
+    "stars": 4.5,
+    "grade": "Ready",
+    "categories": [
+      {"name": "Accuracy", "score": 9, "max": 10, "reason": "Every season, date and title checked against the WNBA history timeline, WNBA champions list, WNBA releases, the 2003 SEC-filed membership agreement and Mohegan's closing release. Logo description attributed to SportsLogos.net, Rockets Wire and SBJ because the team release page is not publicly reachable."},
+      {"name": "Information gain", "score": 9, "max": 10, "reason": "Only page counting all 12 markets that lost a WNBA team with seasons without a team; Houston is the 2nd of 4 returns and the shortest wait (18 seasons); 8 of 29 titles were won in cities that lost teams, 7 of them in cities getting one back; $10M 2003 expansion fee from the SEC filing vs. $300M 2026 sale."},
+      {"name": "Effort and replication cost", "score": 8, "max": 10, "reason": "Two CC0 CSVs (12 markets, 30 franchise stints) built from timeline entries, releases and an SEC exhibit; original timeline chart."},
+      {"name": "Originality", "score": 9, "max": 10, "reason": "Turns a logo-reveal news peg into a league-wide relocation and return dataset nobody else published."},
+      {"name": "Experience and expertise", "score": 8, "max": 10, "reason": "Real byline linked to the author page; methods and column dictionary shown."},
+      {"name": "Main content and layout", "score": 9, "max": 10, "reason": "One-line lead, table first with a Source column per row, chart directly under it, fine print in the caption."},
+      {"name": "Transparency", "score": 9, "max": 10, "reason": "How-we-built-the-data note, licensed and credited hero (CC BY 2.0), CC0 chart, clear note that the fee and sale price are different kinds of deals."},
+      {"name": "Writing craft", "score": 8, "max": 10, "reason": "Sentence-case headline leads with the news and the finding; plain voice, no em dashes, scoped claims."},
+      {"name": "People-first purpose", "score": 9, "max": 10, "reason": "Answers what the logo looks like, why it is the Comets name on the Sun franchise, and which cities are next."},
+      {"name": "Human voice", "score": 8, "max": 10, "reason": "Specific numbers throughout, no setup labels, short paragraphs."}
+    ],
+    "info_gain": [
+      "12 markets have lost a WNBA team since 1997; 4 (Portland 2026, Houston 2027, Cleveland 2028, Detroit 2029) are getting one back",
+      "Houston's 18 seasons without a team are the shortest of the four returns",
+      "8 of the 29 WNBA titles from 1997 to 2025 were won in cities that later lost their team; 7 of those were in Houston and Detroit, which both get teams back",
+      "Orlando/Connecticut/Houston becomes the third WNBA franchise to move twice",
+      "Mohegan's 2003 WNBA expansion fee was $10,000,000 (SEC filing); the 2026 sale brings Mohegan $300 million (30x, before inflation)"
+    ],
+    "ai_flags": []
+  },
+  "unique": [
+    "Every WNBA market that lost a team, with seasons without a team and titles won there (CC0 CSV)",
+    "Full franchise-stint lineage 1997 to 2030 (CC0 CSV)",
+    "2003 expansion fee from SEC exhibit vs. 2026 sale proceeds"
+  ],
+  "unverified": [
+    "Logo design details (star meaning, roundel inspiration, lowercase t) come from Rockets Wire and SportsLogos.net quoting the team announcement; the team's own release page was not reachable",
+    "Torch Creative of Dallas as designer is from Sports Business Journal only",
+    "'History and records will carry forward' is team officials as reported by KPRC 2; houstoncomets.com release page not reachable",
+    "Like count (~9,800) on the @HoustonComets reveal post read from X on Oct. 30 morning and will change"
+  ]
+}
