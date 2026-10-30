@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28",
+  "updated": "2026-10-30",
   "games": [
     {
       "date": "1997-06-21",
@@ -193,14 +193,35 @@
       "attendance_source": "https://www.wnba.com/game/1042600305",
       "attendance_source_date": "2026-10-26",
       "network": "USA Network, CNBC, Peacock",
-      "viewers": null,
-      "viewers_source": "",
-      "viewers_source_date": "",
+      "viewers": 1400000,
+      "viewers_source": "https://pressroom.versantmedia.com/usa-sports/press-releases/champion-will-be-crowned-usa-sports-presents-dream-valkyries-wnba-finals",
+      "viewers_source_date": "2026-10-30",
       "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
       "attendance_note": "sellout",
       "status": "Final: Valkyries 64-55",
       "schedule_source": "https://www.wnba.com/game/1042600305",
-      "schedule_source_date": "2026-10-26"
+      "schedule_source_date": "2026-10-26",
+      "viewers_note": "second-most-watched WNBA Finals Game 5 ever"
+    },
+    {
+      "date": "2026-10-29",
+      "season": 2026,
+      "game": "Finals Game 6",
+      "home": "Atlanta Dream",
+      "away": "Golden State Valkyries",
+      "venue": "State Farm Arena",
+      "attendance": 17099,
+      "attendance_source": "https://www.wnba.com/game/1042600306",
+      "attendance_source_date": "2026-10-29",
+      "network": "USA Network, E!, Syfy, Peacock",
+      "viewers": null,
+      "viewers_source": "",
+      "viewers_source_date": "",
+      "tip_et": "12:30 p.m. ET / 9:30 a.m. PT",
+      "attendance_note": "sellout",
+      "status": "Final: Dream 80-69",
+      "schedule_source": "https://www.wnba.com/game/1042600306",
+      "schedule_source_date": "2026-10-29"
     },
     {
       "date": "2025-05-17",
@@ -553,5 +574,5 @@
     }
   ],
   "updated_time": "10:30 a.m. PT",
-  "finals_intro": "Five games have drawn 88,390 fans. Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million, Game 3 averaged 1.71 million and Game 4 averaged 1.9 million (peak 2.5 million). Game 5 viewership hasn't been released yet. Game 6 tips off Oct. 29 at 12:30 p.m. ET / 9:30 a.m. PT on USA Network, E!, Syfy and Peacock (no CNBC); if needed, Game 7 tips off Oct. 31 at 8 p.m. ET."
+  "finals_intro": "The series is tied 3-3, and six games have drawn 105,489 fans, a WNBA Finals record (passing 92,599 in 2024). Game 1 averaged 2.1 million viewers (peak 3.0 million), Game 2 averaged 1.33 million, Game 3 averaged 1.71 million, Game 4 averaged 1.9 million (peak 2.5 million) and Game 5 averaged 1.4 million on USA Network, CNBC and Peacock, the second-most-watched Finals Game 5 ever. Game 6 viewership hasn't been released yet. Game 7 tips off Oct. 31 at 8 p.m. ET."
 }
