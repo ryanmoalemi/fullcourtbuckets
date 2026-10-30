@@ -1,112 +1,92 @@
 {
   "slug": "kennedy-burke",
   "player_name": "Kennedy Burke",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 30, 2026",
+  "verified_at": "2026-10-30",
   "items": [
     {
-      "question": "What are Kennedy Burke's stats / points per game?",
-      "answer": "In the 2026 regular season, Kennedy Burke averaged 8.8 points, 3.2 rebounds, and 1.4 assists in 37 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "What are Kennedy Burke's stats?",
+      "answer": "In the 2026 regular season, Kennedy Burke averaged 8.8 points, 3.2 rebounds, and 1.4 assists in 37 games for the Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kennedy burke stats",
-      "approx_monthly_volume": 1300
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kennedy-burke/"
+      ],
+      "queries": [
+        {
+          "q": "kennedy burke stats",
+          "vol": 1300
+        },
+        {
+          "q": "kennedy burke game log",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Kennedy Burke dating?",
-      "answer": "As of late 2026, Kennedy Burke has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What WNBA team does Kennedy Burke play for?",
+      "answer": "Kennedy Burke plays for the Connecticut Sun, who signed her to a one-year deal in April 2026 after two seasons with the New York Liberty, where she won the 2024 WNBA title. Dallas drafted her 22nd overall in 2019, and she has also played for the Indiana Fever, Seattle Storm and Washington Mystics.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
+        "https://nypost.com/2026/04/12/sports/libertys-depth-takes-hit-with-two-departures-in-wnba-free-agency/",
+        "https://www.wnba.com/player/1629568/kennedy-burke/bio",
+        "https://fullcourtbuckets.com/wnba/kennedy-burke/"
       ],
-      "google_keyword": "kennedy burke partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kennedy burke wnba",
+          "vol": 70
+        },
+        {
+          "q": "kennedy burke new york liberty",
+          "vol": 10
+        },
+        {
+          "q": "kennedy burke liberty",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Kennedy Burke play college basketball?",
+      "answer": "Kennedy Burke played at UCLA, where she became the fourth player in program history with 1,000 points, 500 rebounds and 100 blocks. The Bruins reached the NCAA Tournament in all four of her seasons, and she made the Pac-12 All-Defensive Team as a senior.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1629568/kennedy-burke/bio"
+      ],
+      "queries": [
+        {
+          "q": "kennedy burke ucla",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Kennedy Burke?",
-      "answer": "Kennedy Burke is listed at 6' 1\".",
+      "answer": "The WNBA lists Kennedy Burke at 6 feet 1 inch and 199 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
+        "https://www.wnba.com/player/1629568/kennedy-burke/bio"
       ],
-      "google_keyword": "kennedy burke height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kennedy burke height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Kennedy Burke?",
-      "answer": "She was born February 14, 1997 in Burbank. As of late 2026 that puts her at 29 years old.",
+      "answer": "Kennedy Burke was born February 14, 1997.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
+        "https://www.wnba.com/player/1629568/kennedy-burke/bio"
       ],
-      "google_keyword": "kennedy burke age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1997-02-14"
-    },
-    {
-      "question": "What is Kennedy Burke's jersey number?",
-      "answer": "Kennedy Burke wears number 25 for the Connecticut Sun.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kennedy burke jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Kennedy Burke's contract?",
-      "answer": "Contract length and guarantees for Kennedy Burke are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "kennedy burke contract",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Is Kennedy Burke married?",
-      "answer": "There is no widely reported public record of Kennedy Burke being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
-      ],
-      "google_keyword": "kennedy burke husband",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "What team does Kennedy Burke play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 25. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kennedy burke team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Kennedy Burke attend?",
-      "answer": "Burke played college basketball at UCLA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
-      ],
-      "google_keyword": "kennedy burke ucla",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Kennedy Burke injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kennedy burke injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Kennedy Burke's parents?",
-      "answer": "Public profiles share limited verified detail about Kennedy Burke's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kennedy_Burke"
-      ],
-      "google_keyword": "kennedy burke parents",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kennedy burke age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

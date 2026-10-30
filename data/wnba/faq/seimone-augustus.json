@@ -1,144 +1,178 @@
 {
   "slug": "seimone-augustus",
   "player_name": "Seimone Augustus",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 30, 2026",
+  "verified_at": "2026-10-30",
   "items": [
     {
-      "question": "What are Seimone Augustus's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2020), Seimone Augustus averaged 5.9 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "seimone augustus stats",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Does Seimone Augustus have a signature shoe?",
-      "answer": "Public search interest ties Seimone Augustus to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "What were Seimone Augustus's WNBA career numbers?",
+      "answer": "Seimone Augustus retired 10th in WNBA career scoring with 6,005 points and a 15.4 points per game average, plus 3.1 rebounds and 2.3 assists per game.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://www.wnba.com/news/4x-wnba-champ-seimone-augustus-enters-retirement-joins-sparks-coaching-staff"
       ],
-      "google_keyword": "seimone augustus shoes",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "seimone augustus stats",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Who is Seimone Augustus dating?",
-      "answer": "As of late 2026, Seimone Augustus has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Where did Seimone Augustus play college basketball?",
+      "answer": "Seimone Augustus played at LSU, leading the Tigers to their first three Final Fours (2004 to 2006) and scoring 2,702 points. She won the Wooden Award twice, and in 2010 her No. 33 became the first LSU women's jersey retired.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://lsusports.net/news/2024/04/6/seimone-augustus-elected-into-naismith-hall-of-fame",
+        "https://lsusports.net/staff/seimone-augustus-coach"
       ],
-      "google_keyword": "seimone augustus girlfriend",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "seimone augustus lsu",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "How much does Seimone Augustus make?",
-      "answer": "A precise public salary or net worth figure for Seimone Augustus is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Does Seimone Augustus have a statue at LSU?",
+      "answer": "Yes. On January 15, 2023, Seimone Augustus became the first LSU female student-athlete honored with a statue, alongside Pete Maravich, Shaquille O'Neal and Bob Pettit in LSU's Plaza of Legacy.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://lsusports.net/news/2024/04/6/seimone-augustus-elected-into-naismith-hall-of-fame",
+        "https://lsusports.net/staff/seimone-augustus-coach"
       ],
-      "google_keyword": "seimone augustus net worth",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "seimone augustus statue",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "How tall is Seimone Augustus?",
+      "answer": "The WNBA lists Seimone Augustus at 6 feet and 174 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/200671/seimone-augustus/bio"
+      ],
+      "queries": [
+        {
+          "q": "seimone augustus height",
+          "vol": 30
+        },
+        {
+          "q": "seimone augustus height and weight",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Seimone Augustus?",
-      "answer": "She was born April 30, 1984 in Baton Rouge. As of late 2026 that puts her at 42 years old.",
+      "answer": "Seimone Augustus was born April 30, 1984, in Baton Rouge, Louisiana.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://www.wnba.com/player/200671/seimone-augustus/bio"
       ],
-      "google_keyword": "seimone augustus age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1984-04-30"
+      "queries": [
+        {
+          "q": "seimone augustus age",
+          "vol": 30
+        },
+        {
+          "q": "how old is seimone augustus",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Seimone Augustus married?",
-      "answer": "There is no widely reported public record of Seimone Augustus being married as of late 2026.",
+      "question": "What WNBA teams did Seimone Augustus play for?",
+      "answer": "Seimone Augustus played 15 WNBA seasons: 2006 to 2019 with the Minnesota Lynx, who drafted her first overall in 2006, and her final season, 2020, with the Los Angeles Sparks. She was the 2006 Rookie of the Year, won four titles with Minnesota (2011, 2013, 2015 and 2017) and was the 2011 Finals MVP.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://www.wnba.com/player/200671/seimone-augustus/bio",
+        "https://lsusports.net/news/2024/04/6/seimone-augustus-elected-into-naismith-hall-of-fame",
+        "https://fullcourtbuckets.com/wnba/seimone-augustus/"
       ],
-      "google_keyword": "seimone augustus wife",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "seimone augustus wnba",
+          "vol": 20
+        },
+        {
+          "q": "seimone augustus lynx",
+          "vol": 20
+        },
+        {
+          "q": "seimone augustus minnesota lynx",
+          "vol": 10
+        },
+        {
+          "q": "seimone augustus sparks",
+          "vol": 10
+        },
+        {
+          "q": "seimone augustus team",
+          "vol": null
+        },
+        {
+          "q": "seimone augustus current teams",
+          "vol": 0
+        },
+        {
+          "q": "seimone augustus rookie season",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What position does Seimone Augustus play?",
-      "answer": "Seimone Augustus is listed as a Guard for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "seimone augustus position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Seimone Augustus injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "seimone augustus injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Seimone Augustus's parents?",
-      "answer": "Public profiles share limited verified detail about Seimone Augustus's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "What is Seimone Augustus doing now?",
+      "answer": "Seimone Augustus is an assistant coach at LSU under Kim Mulkey, who announced her hire on May 20, 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://lsusports.net/staff/seimone-augustus-coach"
       ],
-      "google_keyword": "seimone augustus parents",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "what is seimone augustus doing now",
+          "vol": 10
+        },
+        {
+          "q": "seimone augustus coach",
+          "vol": 10
+        },
+        {
+          "q": "seimone augustus kim mulkey",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Did Seimone Augustus retire?",
-      "answer": "As of late 2026, Seimone Augustus is still listed among WNBA players and has not been widely reported as retired.",
+      "question": "Is Seimone Augustus in the Hall of Fame?",
+      "answer": "Yes. Seimone Augustus was elected to the Women's Basketball Hall of Fame in December 2023 and to the Naismith Basketball Hall of Fame in 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://lsusports.net/news/2024/04/6/seimone-augustus-elected-into-naismith-hall-of-fame"
       ],
-      "google_keyword": "seimone augustus retire",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "seimone augustus hall of fame",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Seimone Augustus?",
-      "answer": "Seimone Delicia Augustus is an American basketball coach and former professional player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
-      ],
-      "google_keyword": "who is seimone augustus wife",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What are Seimone Augustus's college stats?",
-      "answer": "Across her college career at LSU, Seimone Augustus averaged 15.4 points, 3.1 rebounds, and 2.3 assists per game in 391 games.",
+      "question": "How many Olympic gold medals does Seimone Augustus have?",
+      "answer": "Three. Seimone Augustus won Olympic gold with Team USA in 2008, 2012 and 2016.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
+        "https://lsusports.net/news/2024/04/6/seimone-augustus-elected-into-naismith-hall-of-fame"
       ],
-      "google_keyword": "seimone augustus college stats",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "What college did Seimone Augustus attend?",
-      "answer": "Seimone Augustus played college basketball at Louisiana State University.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Seimone_Augustus"
-      ],
-      "google_keyword": "seimone augustus lsu",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What is Seimone Augustus's contract?",
-      "answer": "Contract length and guarantees for Seimone Augustus are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "seimone augustus contract",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "seimone augustus olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
