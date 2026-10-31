@@ -47,7 +47,7 @@ def kind(rel: str) -> str:
         return 'play-by-play'
     if rel.startswith('/wnba/teams/') and rel != '/wnba/teams/':
         return 'team'
-    if re.fullmatch(r'/wnba/[a-z0-9-]+/', rel) and rel not in ('/wnba/teams/', '/wnba/viewership-attendance/'):
+    if re.fullmatch(r'/wnba/[a-z0-9-]+/', rel) and rel not in ('/wnba/teams/', '/wnba/viewership-attendance/', '/wnba/team-revenue/'):
         return 'player'
     return 'hub/data/static'
 

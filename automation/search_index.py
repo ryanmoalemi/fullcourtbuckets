@@ -59,7 +59,7 @@ def _main_region(page: str) -> str:
 def _type_for(url: str, page: str) -> str:
     if url.startswith('/wnba/owners/'):
         return 'Owner'
-    if url.startswith('/wnba/where-to-watch/'):
+    if url.startswith('/wnba/where-to-watch/') or url.startswith('/wnba/team-revenue/'):
         return 'Data'
     if 'tracker' in url:
         return 'Tracker'
