@@ -31,7 +31,8 @@
       "in_forbes_2026": true,
       "in_same_12": false,
       "value_per_revenue_2026": 10.0,
-      "value_per_revenue_2025": null
+      "value_per_revenue_2025": null,
+      "revenue_2025_rank": 1
     },
     {
       "team": "New York Liberty",
@@ -57,7 +58,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 14.0,
-      "value_per_revenue_2025": 16.0
+      "value_per_revenue_2025": 16.0,
+      "revenue_2025_rank": 3
     },
     {
       "team": "Indiana Fever",
@@ -83,7 +85,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 10.0,
-      "value_per_revenue_2025": 11.6
+      "value_per_revenue_2025": 11.6,
+      "revenue_2025_rank": 2
     },
     {
       "team": "Seattle Storm",
@@ -109,7 +112,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.4,
-      "value_per_revenue_2025": 15.7
+      "value_per_revenue_2025": 15.7,
+      "revenue_2025_rank": 9
     },
     {
       "team": "Phoenix Mercury",
@@ -135,7 +139,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.2,
-      "value_per_revenue_2025": 12.0
+      "value_per_revenue_2025": 12.0,
+      "revenue_2025_rank": 8
     },
     {
       "team": "Las Vegas Aces",
@@ -161,7 +166,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 12.4,
-      "value_per_revenue_2025": 14.1
+      "value_per_revenue_2025": 14.1,
+      "revenue_2025_rank": 4
     },
     {
       "team": "Los Angeles Sparks",
@@ -187,7 +193,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 12.5,
-      "value_per_revenue_2025": 14.7
+      "value_per_revenue_2025": 14.7,
+      "revenue_2025_rank": 7
     },
     {
       "team": "Dallas Wings",
@@ -213,7 +220,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 12.1,
-      "value_per_revenue_2025": 16.7
+      "value_per_revenue_2025": 16.7,
+      "revenue_2025_rank": 6
     },
     {
       "team": "Minnesota Lynx",
@@ -239,7 +247,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.2,
-      "value_per_revenue_2025": 14.4
+      "value_per_revenue_2025": 14.4,
+      "revenue_2025_rank": 10
     },
     {
       "team": "Chicago Sky",
@@ -265,7 +274,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 10.3,
-      "value_per_revenue_2025": 15.0
+      "value_per_revenue_2025": 15.0,
+      "revenue_2025_rank": 5
     },
     {
       "team": "Connecticut Sun",
@@ -291,7 +301,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.0,
-      "value_per_revenue_2025": 14.3
+      "value_per_revenue_2025": 14.3,
+      "revenue_2025_rank": 11
     },
     {
       "team": "Washington Mystics",
@@ -317,7 +328,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.6,
-      "value_per_revenue_2025": 15.8
+      "value_per_revenue_2025": 15.8,
+      "revenue_2025_rank": 12
     },
     {
       "team": "Atlanta Dream",
@@ -343,7 +355,8 @@
       "in_forbes_2026": true,
       "in_same_12": true,
       "value_per_revenue_2026": 15.6,
-      "value_per_revenue_2025": 17.3
+      "value_per_revenue_2025": 17.3,
+      "revenue_2025_rank": 13
     }
   ],
   "not_in_source_set": [
