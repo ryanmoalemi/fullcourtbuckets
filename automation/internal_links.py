@@ -633,7 +633,7 @@ def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> s
         return _TICKER_RE.sub('', html, count=1)
     block = (
         f'<div class="ticker" data-item-date="{esc(item["date"])}">'
-        '<div class="shell"><div class="ticker-label">Now</div>'
+        '<div class="shell"><div class="ticker-label">New</div>'
         f'<div class="ticker-text">{esc(item["text"])}</div></div></div>'
     )
     if _TICKER_RE.search(html):
