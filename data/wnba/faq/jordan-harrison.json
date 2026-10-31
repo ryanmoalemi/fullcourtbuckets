@@ -1,58 +1,123 @@
 {
   "slug": "jordan-harrison",
   "player_name": "Jordan Harrison",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "What are Jordan Harrison's stats / points per game?",
-      "answer": "In the 2026 regular season, Jordan Harrison averaged 4.0 points, 0.0 rebounds, and 4.0 assists in 1 games for Portland Fire. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jordan harrison stats",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Does Jordan Harrison have a signature shoe?",
-      "answer": "Jordan Harrison has a public association with Jordan footwear or apparel. A dedicated signature sneaker is not always confirmed in every source.",
+      "question": "Did Jordan Harrison play in the WNBA?",
+      "answer": "Yes. Jordan Harrison played the 2026 season for the Portland Fire, appearing in 16 games with two starts. Portland signed her in April, waived her on May 11, brought her back on a developmental contract on May 21 and converted her to a standard contract on August 9. She announced her retirement from basketball in late September 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+        "https://www.wnba.com/player/1643527/jordan-harrison/bio",
+        "https://www.kptv.com/2026/09/29/portland-fires-jordan-harrison-stepping-away-basketball/",
+        "https://justwomenssports.com/reads/jordan-harrison-portland-fire-rookie-wnba-retirement/"
       ],
-      "google_keyword": "jordan harrison",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "jordan harrison wnba",
+          "vol": 480
+        },
+        {
+          "q": "jordan harrison portland fire",
+          "vol": 110
+        },
+        {
+          "q": "jordan harrison portland",
+          "vol": 20
+        },
+        {
+          "q": "jordan harrison women's basketball",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Jordan Harrison play college basketball?",
+      "answer": "Jordan Harrison played one season at Stephen F. Austin and three at West Virginia. At WVU she was the 2026 Big 12 Defensive Player of the Year and a First-Team All-Big 12 pick, and her 110 steals in one season are the second most in school history.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643527/jordan-harrison/bio"
+      ],
+      "queries": [
+        {
+          "q": "jordan harrison wvu",
+          "vol": 480
+        },
+        {
+          "q": "jordan harrison west virginia",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "What are Jordan Harrison's stats?",
+      "answer": "In the 2026 regular season, Jordan Harrison averaged 5.1 points, 1.8 rebounds, and 4.2 assists in 16 games for the Portland Fire.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jordan-harrison/"
+      ],
+      "queries": [
+        {
+          "q": "jordan harrison stats",
+          "vol": 90
+        }
+      ]
+    },
+    {
+      "question": "Was Jordan Harrison drafted?",
+      "answer": "No. Jordan Harrison went undrafted in 2026 and signed with the Portland Fire during training camp.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643527/jordan-harrison/bio",
+        "https://justwomenssports.com/reads/jordan-harrison-portland-fire-rookie-wnba-retirement/"
+      ],
+      "queries": [
+        {
+          "q": "jordan harrison wnba draft",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "How tall is Jordan Harrison?",
-      "answer": "Jordan Harrison is listed at 5' 6\".",
+      "answer": "The WNBA lists Jordan Harrison at 5 feet 6 inches and 132 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+        "https://www.wnba.com/player/1643527/jordan-harrison/bio"
       ],
-      "google_keyword": "jordan harrison height",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Does Jordan Harrison have kids?",
-      "answer": "There is no widely reported public information that Jordan Harrison has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
-      ],
-      "google_keyword": "jordan harrison",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "jordan harrison height",
+          "vol": 70
+        },
+        {
+          "q": "how tall is jordan harrison",
+          "vol": 50
+        },
+        {
+          "q": "jordan harrison wvu height",
+          "vol": 10
+        },
+        {
+          "q": "jordan harrison wnba height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Jordan Harrison?",
-      "answer": "Jordan Harrison was born April 26, 2004 in Oklahoma City. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Jordan Harrison was born April 26, 2004.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jordan_Harrison_(basketball)"
+        "https://www.wnba.com/player/1643527/jordan-harrison/bio"
       ],
-      "google_keyword": "jordan harrison age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2004-04-26"
+      "queries": [
+        {
+          "q": "jordan harrison wvu age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

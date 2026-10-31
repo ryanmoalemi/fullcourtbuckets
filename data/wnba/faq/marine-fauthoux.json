@@ -1,45 +1,56 @@
 {
   "slug": "marine-fauthoux",
   "player_name": "Marine Fauthoux",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "How tall is Marine Fauthoux?",
-      "answer": "Marine Fauthoux is listed at 5' 9\".",
-      "answer_kind": "bio",
+      "question": "What are Marine Fauthoux's stats?",
+      "answer": "In the 2026 regular season, Marine Fauthoux averaged 4.4 points, 2.0 rebounds, and 1.9 assists in 21 games for the New York Liberty.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marine_Fauthoux"
+        "https://fullcourtbuckets.com/wnba/marine-fauthoux/"
       ],
-      "google_keyword": "marine fauthoux height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "marine fauthoux stats",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "Is Marine Fauthoux married?",
-      "answer": "There is no widely reported public record of Marine Fauthoux being married as of late 2026.",
+      "question": "What WNBA team does Marine Fauthoux play for?",
+      "answer": "Marine Fauthoux plays for the New York Liberty, who drafted her 29th overall in 2021. The French guard developed in France before joining New York as a rookie in 2026, and in August 2026 the Liberty signed her to a multiyear deal.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Marine_Fauthoux"
+        "https://www.wnba.com/player/1630469/marine-fauthoux/bio",
+        "https://abc7ny.com/post/longtime-liberty-player-betnijah-laney-hamilton-waived/19637666/",
+        "https://www.amny.com/sports/liberty-betnijah-laney-hamilton-marine-fauthoux/"
       ],
-      "google_keyword": "marine fauthoux husband",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "marine fauthoux wnba",
+          "vol": 40
+        },
+        {
+          "q": "marine fauthoux liberty",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Marine Fauthoux injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "marine fauthoux injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What are Marine Fauthoux's stats / points per game?",
-      "answer": "In her most recent 7 tracked games, Marine Fauthoux averaged 2.0 points, 0.6 rebounds, and 0.6 assists for New York Liberty. Full game-by-game numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marine fauthoux stats",
-      "approx_monthly_volume": 50
+      "question": "How tall is Marine Fauthoux?",
+      "answer": "The WNBA lists Marine Fauthoux at 5 feet 9 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630469/marine-fauthoux/bio"
+      ],
+      "queries": [
+        {
+          "q": "marine fauthoux height",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
