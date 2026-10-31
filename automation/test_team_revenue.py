@@ -122,13 +122,20 @@ class TeamRevenuePageTests(unittest.TestCase):
         self.assertLess(chart.find('Los Angeles Sparks'), chart.find('Phoenix Mercury'))
         self.assertLess(chart.find('Phoenix Mercury'), chart.find('Seattle Storm'))
         self.assertLess(chart.find('Seattle Storm'), chart.find('Atlanta Dream'))
-        def before(name, back):
+        def row_html(name):
             at = chart.find(name)
             self.assertGreater(at, 0, name)
-            return chart[max(0, at - back):at]
-        golden = before('Golden State Valkyries', 220)
-        atlanta = before('Atlanta Dream', 220)
-        indiana = before('Indiana Fever', 160)
+            start = chart.rfind('<li', 0, at)
+            end = chart.find('</li>', at)
+            return chart[start:end]
+        golden = row_html('Golden State Valkyries')
+        atlanta = row_html('Atlanta Dream')
+        indiana = row_html('Indiana Fever')
+        self.assertEqual(page.count('class="rev-logo"'), 26)
+        for slug in revenue.REVENUE_ORDER:
+            src = revenue.team_hub.VISUALS[slug]['src']
+            self.assertGreaterEqual(page.count(src), 2, slug)
+            self.assertIn(src, golden if slug == 'golden-state-valkyries' else page)
         self.assertIn('is-finals', golden)
         self.assertIn('is-finals', atlanta)
         self.assertNotIn('is-finals', indiana)

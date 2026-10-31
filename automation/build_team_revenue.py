@@ -27,6 +27,7 @@ import internal_links as links
 import search_index
 import seo_meta
 import site_nav
+import team_hub
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = 'data/wnba-team-revenue-2025.json'
@@ -323,6 +324,22 @@ def team_link(team: dict, label: str | None = None) -> str:
     return f'<a href="{esc(team["team_page"])}">{esc(label or team["team"])}</a>'
 
 
+def team_mark(team: dict) -> str:
+    """Circle crop of the licensed team photo already used on the teams hub."""
+    visual = team_hub.VISUALS.get(team['slug']) or {}
+    src = visual.get('src') or ''
+    if src.startswith('/') and (ROOT / src.lstrip('/')).is_file():
+        return (f'<img class="rev-logo" src="{esc(src)}" alt="" width="36" height="36" decoding="async">')
+    return f'<span class="rev-logo rev-logo-fallback" aria-hidden="true">{esc(team["abbr"])}</span>'
+
+
+def team_link_with_mark(team: dict) -> str:
+    return (
+        f'<a class="rev-team" href="{esc(team["team_page"])}">'
+        f'{team_mark(team)}<span>{esc(team["team"])}</span></a>'
+    )
+
+
 def source_link(url: str, label: str) -> str:
     return f'<a href="{esc(url)}">{esc(label)}</a>'
 
@@ -384,7 +401,7 @@ def revenue_chart(teams: list[dict]) -> str:
         parts.append(
             f'<li class="{" ".join(classes)}">'
             f'<span class="rev-rank">{index}</span>'
-            f'<span class="rev-name">{team_link(team)}{tag}</span>'
+            f'<span class="rev-name">{team_link_with_mark(team)}{tag}</span>'
             f'<span class="rev-track" aria-hidden="true"><span class="rev-bar" style="width:{pct:.2f}%">{notch}</span></span>'
             f'<span class="rev-val">{money_short(team["revenue_2025_usd_m"])}</span>'
             '</li>'
@@ -420,7 +437,7 @@ def revenue_table(teams: list[dict]) -> str:
         attr = f' class="{" ".join(classes)}"' if classes else ''
         body.append(
             f'<tr{attr}>'
-            f'<td>{team_link(team)}{tag}</td>'
+            f'<td>{team_link_with_mark(team)}{tag}</td>'
             f'<td class="num">{money_short(team["revenue_2025_usd_m"])}</td>'
             '</tr>'
         )
@@ -779,12 +796,14 @@ html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;marg
 .rev-chart::before{content:"";display:block;height:5px;margin:-18px -16px 14px;background:linear-gradient(90deg,#5b22c9,#b8006f 62%,#c25e00)}
 .rev-chart-note{max-width:68ch;margin:0 0 12px;color:#5a554e!important;font-size:15px;line-height:1.45}
 .rev-rows{list-style:none;margin:0;padding:0}
-.rev-row,.rev-band-label{display:grid;grid-template-columns:2rem minmax(9.5rem,14.5rem) minmax(0,1fr) 4.6rem;gap:8px 12px;align-items:center}
-.rev-row{min-height:48px;padding:3px 6px}
+.rev-row,.rev-band-label{display:grid;grid-template-columns:2rem minmax(12.5rem,17rem) minmax(0,1fr) 4.6rem;gap:8px 12px;align-items:center}
+.rev-row{min-height:48px;padding:4px 6px}
 .rev-rank{color:#5a554e;font:800 15px/1 "Barlow",sans-serif;font-variant-numeric:tabular-nums}
-.rev-name{font-size:16px;line-height:1.25;font-weight:700}
-.rev-name a{text-decoration:none}
-.rev-name a:hover{text-decoration:underline;text-underline-offset:3px}
+.rev-name{display:flex;flex-wrap:wrap;align-items:center;column-gap:8px;row-gap:4px;min-width:0;font-size:16px;line-height:1.25;font-weight:700}
+.rev-team{display:inline-flex;align-items:center;gap:8px;min-width:0;max-width:100%;text-decoration:none}
+.rev-team:hover span{text-decoration:underline;text-underline-offset:3px}
+.rev-logo{display:block;width:36px;height:36px;max-width:36px;flex:0 0 36px;border-radius:50%;object-fit:cover;object-position:center 20%;border:1px solid #e2ddd6;background:#ece8f3}
+.rev-logo-fallback{display:inline-flex;align-items:center;justify-content:center;color:#2a1458;background:#e9e4f5;font:800 11px/1 "Barlow",sans-serif;letter-spacing:.02em}
 .rev-val{color:#2a1458;font:800 18px/1 "Barlow",sans-serif;text-align:right;font-variant-numeric:tabular-nums}
 .rev-track{display:block;height:22px;background:#ece8f3;border-radius:0 4px 4px 0}
 .rev-bar{display:block;position:relative;height:22px;border-radius:0 4px 4px 0;background:#5b22c9;min-width:4px}
@@ -798,7 +817,7 @@ html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;marg
 .is-cluster{background:#f6f1ff}
 .is-cluster-first{box-shadow:inset 0 1px 0 #d8c8ff;border-radius:8px 8px 0 0}
 .is-cluster-last{box-shadow:inset 0 -1px 0 #d8c8ff;border-radius:0 0 8px 8px;margin-bottom:4px}
-.rev-axis-wrap{display:grid;grid-template-columns:2rem minmax(9.5rem,14.5rem) minmax(0,1fr) 4.6rem;gap:8px 12px;padding:6px 6px 10px}
+.rev-axis-wrap{display:grid;grid-template-columns:2rem minmax(12.5rem,17rem) minmax(0,1fr) 4.6rem;gap:8px 12px;padding:6px 6px 10px}
 .rev-axis{grid-column:3;position:relative;height:28px;border-top:1px solid #e2ddd6}
 .rev-axis span{position:absolute;top:8px;transform:translateX(-50%);color:#5a554e;font:600 14px/1 Inter,system-ui,sans-serif;white-space:nowrap}
 .rev-axis span:first-child{transform:none}
@@ -830,6 +849,7 @@ html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;marg
 .audience-table tr.total th,.audience-table tr.total td{font-weight:800}
 .audience-table tr.is-finals td:first-child{box-shadow:inset 3px 0 0 #b8006f}
 .audience-table tr.is-cluster td:first-child{box-shadow:inset 3px 0 0 #c4b6e8}
+.audience-table.revenue-table td:first-child{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
 .cite{margin-top:12px;padding:12px 14px;border-left:3px solid #5b22c9;font-size:16px;line-height:1.5}
 @media(max-width:979px){
 .rev-row,.rev-band-label,.rev-axis-wrap{grid-template-columns:1.6rem minmax(0,1fr) auto}
@@ -852,6 +872,7 @@ h1{font-size:34px}
 .cite-dot{display:none}
 .rev-name,.rev-val{font-size:16px}
 .rev-val{font-size:18px}
+.rev-logo{width:32px;height:32px;max-width:32px;flex-basis:32px}
 .rev-chart-note,.note,.scale-meta{font-size:15px}
 }
 @media(min-width:900px){
