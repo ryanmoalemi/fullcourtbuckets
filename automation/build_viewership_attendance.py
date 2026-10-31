@@ -442,6 +442,8 @@ def source_label(url: str) -> str:
         return 'Nielsen'
     if host.endswith('nbcsports.com'):
         return 'NBC Sports press release'
+    if host.endswith('versantmedia.com'):
+        return 'USA Sports press release'
     if host.endswith('sportsmediawatch.com'):
         return 'Sports Media Watch'
     if host.endswith('sportsbusinessjournal.com'):

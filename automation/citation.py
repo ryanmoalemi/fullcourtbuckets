@@ -184,9 +184,9 @@ FINALS_TRACKER_ROWS = [
      'NBC and Peacock', '1:00 p.m. ET / 10:00 a.m. PT', 'Not released', '1.9 million',
      '2.5 million', 'Final: Valkyries 67, Dream 62'],
     ['5', 'Mon, Oct. 26, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center', 'USA and Peacock',
-     '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', 'Not released', 'Not released', 'Final: Valkyries 64, Dream 55'],
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', '1.4 million', 'Not released', 'Final: Valkyries 64, Dream 55'],
     ['6', 'Thu, Oct. 29, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena', 'USA Network, E!, Syfy and Peacock',
-     '12:30 p.m. ET / 9:30 a.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'Scheduled'],
+     '12:30 p.m. ET / 9:30 a.m. PT', 'Not released', '1.5 million', 'Not released', 'Final: Dream 80, Valkyries 69'],
     ['7', 'Sat, Oct. 31, 2026', 'If necessary: Atlanta Dream at Golden State Valkyries, Chase Center', 'USA and Peacock',
      '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
 ]
