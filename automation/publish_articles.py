@@ -80,9 +80,18 @@ def inline(text: str) -> str:
             f'{esc(label)}</a>'
         )
 
-    parts = re.split(r'(\[[^\]]+\]\([^)]+\))', text)
+    parts = re.split(r'(!\[headshot:[^\]]+\]\(/images/players/[^)\s]+\)|\[[^\]]+\]\([^)]+\))', text)
     out = []
     for part in parts:
+        shot = re.fullmatch(r'!\[headshot:([^\]]+)\]\((/images/players/[^)\s]+)\)', part)
+        if shot:
+            # Circle headshot next to a name in a data table: ![headshot:alt](/images/players/...).
+            out.append(
+                f'<img class="circle-headshot table-headshot" src="{esc(shot.group(2))}" alt="{esc(shot.group(1))}" '
+                'width="32" height="32" loading="lazy" decoding="async" '
+                'style="display:inline-block;width:32px;height:32px;max-width:32px;flex:0 0 32px;border-radius:50%;object-fit:cover;vertical-align:middle;margin-right:8px">'
+            )
+            continue
         match = re.fullmatch(r'\[([^\]]+)\]\(([^)]+)\)', part)
         if match:
             out.append(link(match.group(1), match.group(2)))

@@ -1,5 +1,33 @@
 [
   {
+    "slug": "angel-reese-wnba-finals-rebound-record-data",
+    "url": "/news/angel-reese-wnba-finals-rebound-record-data/",
+    "title": "Angel Reese's 78 Finals rebounds, ranked against every series since 2002",
+    "description": "Angel Reese has 78 rebounds in the 2026 WNBA Finals, 3 more than Sylvia Fowles' 75 in 2017. Fowles had 5 games. Free CSV of every Finals series since 2002.",
+    "category": "news",
+    "date": "2026-10-31",
+    "imageAlt": "Angel Reese of the Atlanta Dream in a white No. 5 road jersey and white headband, driving past two Minnesota Lynx defenders",
+    "imageCredit": "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons",
+    "teams": [
+      "atlanta-dream",
+      "golden-state-valkyries"
+    ],
+    "imageFocal": "center 30%",
+    "image": "/images/articles/angel-reese-wnba-finals-rebound-record-data/hero-1200.webp",
+    "imageSource": "/images/articles/angel-reese-wnba-finals-rebound-record-data/photo.jpg",
+    "imageHero": "/images/articles/angel-reese-wnba-finals-rebound-record-data/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/angel-reese-wnba-finals-rebound-record-data/hero-2x.webp",
+    "imageHero2xWidth": 1600,
+    "imageHero2xHeight": 900,
+    "imageOg": "/images/articles/angel-reese-wnba-finals-rebound-record-data/og-1200.jpg",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 630,
+    "imageWidth": 1200,
+    "imageHeight": 675
+  },
+  {
     "slug": "finals-game-7-preview-dream-valkyries",
     "url": "/news/finals-game-7-preview-dream-valkyries/",
     "title": "WNBA Finals Game 7: Atlanta's shooting vs. Golden State's defense",

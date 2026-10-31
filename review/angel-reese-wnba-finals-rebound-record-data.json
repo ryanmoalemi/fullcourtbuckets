@@ -1,0 +1,91 @@
+{
+  "scorecard": {
+    "overall": 9,
+    "max": 10,
+    "stars": 4.5,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Every rebound, turnover, double-double and game line in the tables was summed from 99 official WNBA.com Finals box scores (2002 through 2026 Game 6) and spot-checked: Reese 78 (12,16,12,9,15,14), Fowles 75 in 5 (13,17,11,14,20), Stokes 60 incl. 16 in Game 4. Stewart 2020 box URL corrected. Fowles Game 5 20 rebounds also matches the WNBA story. Pre-2002 max of 29 per series is from a published-box check, stated as such. No quotes used."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "No ranking SERP result shows a full Finals series leaderboard. Adds: all 527 player-series ranked since 2002, per-game rate context, offensive-board and double-double ranks, 30/15 and 15/10/5 Finals game lists, turnover per-game rank, Game 7 thresholds for Reese and Stokes, two CC0 CSVs."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 9,
+        "max": 10,
+        "reason": "99 box scores parsed into 1,841 player-game rows, every table row linked to per-game official boxes, custom 1600x900 chart, circle headshots."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "Outlets ran 'Reese breaks Fowles record'. FCB's angle is that Fowles still leads per game and what Game 7 would take for each record."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 8,
+        "max": 10,
+        "reason": "Byline Ryan Moalemi linked to author page; data methods spelled out."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Sentence-case H1 leads with the result, matches title. Leaderboard table is the first block after the lead, methods and CSV under it, chart next. Hero above fold on desktop and mobile."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "How this story was made note, CC BY-SA photo credit, chart labels headshots as illustrations, full source list."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Plain, numbers-first sentences, zero em dashes, real subheads, 81 of 81 external links open in a new tab. GPT readability pass applied."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "Answers 'is it a record' in the first sentence and 'what next' before tip; honest data-through date."
+      },
+      {
+        "name": "Human voice (written-by-AI check)",
+        "score": 8,
+        "max": 10,
+        "reason": "No stock phrases or em dashes found. Short, specific sentences tied to games and dates; no tidy summary ending."
+      }
+    ],
+    "info_gain": [
+      "Every WNBA Finals player-series since 2002 ranked by rebounds (527 rows, CC0) with official box links per game",
+      "Per-game view: Fowles 15.0 still tops Reese 13.0; Reese needs 27 in Game 7 to match",
+      "Stokes needs 16 in Game 7 to pass Fowles for second",
+      "Turnovers: Reese's 23 are the most in a Finals series since 2002"
+    ],
+    "ai_flags": []
+  },
+  "unique": [
+    "527-row Finals player-series rebound leaderboard since 2002, CC0",
+    "1,841-row per-game Finals CSV with box score URLs",
+    "Game 7 thresholds for Reese and Stokes",
+    "30/15 and 15/10/5 Finals game lists since 2002"
+  ],
+  "unverified": [
+    "1997 to 2001 Finals not on WNBA.com; 'max 29 in a series' rests on a published-box check, so the record is stated as 'since at least 2002'",
+    "ClutchPoints 'youngest 30-15' claim not used",
+    "No player quotes used (none verified against primary video)",
+    "Headshots missing for Taj McWilliams-Franklin, Erlana Larkins and Deanna Nolan (initials or name only)",
+    "Gemini readability not run: API returned 402 (prepayment credits depleted)",
+    "Numbers change after Game 7 tonight; page needs a post-game refresh"
+  ]
+}
