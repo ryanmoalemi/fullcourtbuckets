@@ -2685,7 +2685,7 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
         ('/wnba/teams/', 'Teams'),
         ('/wnba/where-to-watch/', 'Where to watch WNBA games'),
         ('/wnba/viewership-attendance/', 'WNBA viewership and attendance'),
-        ('/wnba/team-revenue/', 'WNBA team revenue and franchise values'),
+        ('/wnba/team-revenue/', 'WNBA team revenue, ranked'),
     ])
     sections = []
     if main:
