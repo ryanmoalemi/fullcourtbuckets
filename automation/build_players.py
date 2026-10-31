@@ -1746,7 +1746,7 @@ DESCRIPTION_MAX = 155
 TITLE_LIMIT = 70
 # viewership-attendance is an evergreen guide, not a player profile. Leave it out
 # of the orphan-player redirect pass.
-SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'owners', 'where-to-watch', 'finals'})
+SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue', 'owners', 'where-to-watch', 'finals'})
 
 
 def cap_description(text, limit=DESCRIPTION_MAX) -> str:
@@ -2685,6 +2685,7 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
         ('/wnba/teams/', 'Teams'),
         ('/wnba/where-to-watch/', 'Where to watch WNBA games'),
         ('/wnba/viewership-attendance/', 'WNBA viewership and attendance'),
+        ('/wnba/team-revenue/', 'WNBA team revenue and franchise values'),
     ])
     sections = []
     if main:
@@ -3016,6 +3017,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('wnba/owners/index.html', '/wnba/owners/'),
         ('wnba/where-to-watch/index.html', '/wnba/where-to-watch/'),
         ('wnba/viewership-attendance/index.html', '/wnba/viewership-attendance/'),
+        ('wnba/team-revenue/index.html', '/wnba/team-revenue/'),
         ('sitemap/index.html', '/sitemap/'),
         ('wnba/finals/2026/game-1/play-by-play/index.html', '/wnba/finals/2026/game-1/play-by-play/'),
         ('wnba/finals/2026/game-2/play-by-play/index.html', '/wnba/finals/2026/game-2/play-by-play/'),

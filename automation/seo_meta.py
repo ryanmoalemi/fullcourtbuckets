@@ -159,7 +159,7 @@ def family_meta(rel: str, title: str, desc: str):
     m = re.fullmatch(r'/wnba/([a-z0-9-]+)/', rel)
     if m:
         pm = re.match(r'^(.+?)(?: WNBA [Ss]tats.*|: WNBA stats.*| \| Full Court Buckets)$', title)
-        if pm and 'WNBA' in title and m.group(1) not in {'teams', 'owners', 'couples', 'where-to-watch', 'viewership-attendance', 'finals'}:
+        if pm and 'WNBA' in title and m.group(1) not in {'teams', 'owners', 'couples', 'where-to-watch', 'viewership-attendance', 'team-revenue', 'finals'}:
             return player_title(pm.group(1).strip()), player_description(desc)
     return None
 
