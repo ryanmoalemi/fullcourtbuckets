@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Build /wnba/team-revenue/ from data/wnba-team-revenue-2025.json.
 
-The value column is the Forbes May 7, 2026 ranking. The revenue column is the
-Playbook Strategies estimate on the Oct. 31, 2026 Katherine Rowe graphic.
-value_to_revenue_multiple is Forbes value divided by Playbook revenue.
+Displayed multiples use Forbes' May 7, 2026 values divided by Forbes' 2025
+revenue estimates. The same-12 comparison uses the June 6, 2025 Forbes list
+for the 12 franchises that were ranked in both editions. Golden State is
+excluded from those totals.
 """
 from __future__ import annotations
 
@@ -26,11 +27,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = 'data/wnba-team-revenue-2025.json'
 ROUTE = '/wnba/team-revenue/'
 BASE = 'https://fullcourtbuckets.com'
-PAGE_TITLE = 'WNBA team revenue and franchise values for 2026'
-H1 = 'WNBA team revenue and franchise value multiples'
+PAGE_TITLE = 'WNBA Franchise Values in 2026 and 2025 Revenue by Team'
+H1 = 'WNBA franchise values in 2026 and revenue by team'
 DESCRIPTION = (
-    'Playbook estimates 2025 WNBA revenue from $16 million in Atlanta and '
-    'Washington to $78 million in Golden State. Forbes May 2026 values, with FCB multiples.'
+    'Compare 2026 WNBA franchise values and 2025 revenue estimates for 13 teams. '
+    'FCB tracks how revenue and valuations changed for the same 12 franchises.'
 )
 CSV_NAME = 'wnba-team-revenue-2025.csv'
 JSON_NAME = 'wnba-team-revenue-2025.json'
@@ -39,39 +40,32 @@ ADSENSE_TAG = (
     '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
     '?client=ca-pub-6621195315204235" crossorigin="anonymous"></script>'
 )
-FORBES_US = 'https://www.forbes.com/sites/brettknight/2026/05/07/the-wnbas-most-valuable-teams-2026/'
+FORBES_2026 = 'https://www.forbes.com/sites/brettknight/2026/05/07/the-wnbas-most-valuable-teams-2026/'
+FORBES_2025 = 'https://www.forbes.com/sites/brettknight/2025/06/06/the-wnbas-most-valuable-teams-2025/'
 FORBES_MX = 'https://forbes.com.mx/estos-son-los-equipos-mas-valiosos-de-la-wnba-en-2026/'
-PLAYBOOK_POST = 'https://x.com/katherinearowe/status/2116531655661834492'
-PLAYBOOK_REPORT = 'https://www.playbookstrategies.co/reports/wnba-market-intelligence-2026'
 EM_DASH = '\u2014'
 EN_DASH = '\u2013'
+TIMES = '\u00d7'
 REQUIRED = (
-    'team', 'slug', 'abbr', 'market', '2025_revenue_usd_m', 'revenue_source',
-    'revenue_source_url', 'revenue_notes', 'forbes_2025_revenue_usd_m',
-    'playbook_graphic_multiple', 'forbes_2026_value_usd_m', 'forbes_rank',
-    'forbes_source_url', 'forbes_date', 'ownership', 'arena', 'team_page',
+    'team', 'slug', 'abbr', 'market', 'forbes_2026_value_usd_m', 'forbes_2026_rank',
+    'revenue_2025_usd_m', 'forbes_2026_source_url', 'forbes_2026_date',
+    'forbes_2025_source_url', 'forbes_2025_date', 'team_page', 'ownership', 'arena',
 )
 CSV_FIELDS = (
-    'team', 'market', 'team_page', 'in_source_set',
-    '2025_revenue_usd_m', 'revenue_source', 'revenue_source_url', 'revenue_notes',
-    'forbes_2025_revenue_usd_m', 'revenue_conflict',
-    'forbes_2026_value_usd_m', 'forbes_rank', 'forbes_yoy_change_pct',
-    'forbes_source_url', 'forbes_date', 'forbes_table_checked_url',
-    'value_to_revenue_multiple', 'playbook_graphic_multiple',
-    'forbes_value_to_forbes_revenue_multiple',
-    'ownership', 'arena', 'arena_source_url',
-    'attendance_context', 'attendance_context_url',
+    'team', 'market', 'team_page', 'in_forbes_2026', 'in_same_12',
+    'forbes_2026_value_usd_m', 'revenue_2025_usd_m', 'value_per_revenue_2026',
+    'forbes_2025_value_usd_m', 'revenue_2024_usd_m', 'value_per_revenue_2025',
+    'forbes_2026_rank', 'forbes_2025_rank', 'value_change_pct',
+    'forbes_2026_source_url', 'forbes_2026_date',
+    'forbes_2025_source_url', 'forbes_2025_date',
+    'ownership', 'arena', 'notes',
 )
 NAV = (
-    ('revenue', 'Revenue'),
-    ('multiples', 'Multiples'),
-    ('table', 'Full table'),
-    ('by-value', 'By value'),
-    ('by-multiple', 'By multiple'),
-    ('gap', 'Gaps'),
+    ('teams', '13 teams'),
+    ('same-12-teams', 'Same 12 teams'),
+    ('four-teams', 'Four teams at $28 million'),
     ('methods', 'Methods'),
     ('sources', 'Sources'),
-    ('faq', 'FAQ'),
 )
 
 
@@ -79,11 +73,24 @@ def esc(value) -> str:
     return html.escape('' if value is None else str(value), quote=True)
 
 
+def quant(value, places: str) -> Decimal:
+    return Decimal(value).quantize(Decimal(places), rounding=ROUND_HALF_UP)
+
+
 def multiple(value, revenue) -> float:
-    """Forbes value divided by a revenue estimate, half up to one decimal."""
-    return float(
-        (Decimal(value) / Decimal(revenue)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
-    )
+    return float(quant(Decimal(value) / Decimal(revenue), '0.1'))
+
+
+def multiple2(value, revenue) -> float:
+    return float(quant(Decimal(value) / Decimal(revenue), '0.01'))
+
+
+def percent(new, old) -> float:
+    return float(quant((Decimal(new) - Decimal(old)) / Decimal(old) * 100, '0.1'))
+
+
+def whole_percent(new, old) -> int:
+    return int(quant((Decimal(new) - Decimal(old)) / Decimal(old) * 100, '1'))
 
 
 def money(millions) -> str:
@@ -94,8 +101,16 @@ def money_short(millions) -> str:
     return f'${int(millions)}M'
 
 
+def billions(millions) -> str:
+    return f'${Decimal(millions) / Decimal(1000):.3f}B'
+
+
 def mult(value) -> str:
-    return f'{value:.1f}x'
+    return f'{value:.1f}{TIMES}'
+
+
+def mult2(value) -> str:
+    return f'{value:.2f}{TIMES}'
 
 
 def blank(value) -> str:
@@ -106,53 +121,65 @@ def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding='utf-8'))
 
 
+def same_twelve(teams: list[dict]) -> list[dict]:
+    return [team for team in teams if team.get('forbes_2025_value_usd_m') is not None]
+
+
+def summarize(teams: list[dict]) -> dict:
+    twelve = same_twelve(teams)
+    value_2026 = sum(team['forbes_2026_value_usd_m'] for team in teams)
+    revenue_2025 = sum(team['revenue_2025_usd_m'] for team in teams)
+    value_2026_12 = sum(team['forbes_2026_value_usd_m'] for team in twelve)
+    value_2025_12 = sum(team['forbes_2025_value_usd_m'] for team in twelve)
+    revenue_2025_12 = sum(team['revenue_2025_usd_m'] for team in twelve)
+    revenue_2024_12 = sum(team['revenue_2024_usd_m'] for team in twelve)
+    ratio_2025 = multiple2(value_2025_12, revenue_2024_12)
+    ratio_2026 = multiple2(value_2026_12, revenue_2025_12)
+    return {
+        'team_count_2026': len(teams),
+        'team_count_same_12': len(twelve),
+        'forbes_2026_value_sum_usd_m': value_2026,
+        'revenue_2025_sum_usd_m': revenue_2025,
+        'league_multiple': multiple2(value_2026, revenue_2025),
+        'same_12_value_2025_usd_m': value_2025_12,
+        'same_12_value_2026_usd_m': value_2026_12,
+        'same_12_revenue_2024_usd_m': revenue_2024_12,
+        'same_12_revenue_2025_usd_m': revenue_2025_12,
+        'same_12_value_change_pct': percent(value_2026_12, value_2025_12),
+        'same_12_revenue_change_pct': percent(revenue_2025_12, revenue_2024_12),
+        'same_12_multiple_2025': ratio_2025,
+        'same_12_multiple_2026': ratio_2026,
+        'same_12_multiple_change': float(quant(Decimal(str(ratio_2026)) - Decimal(str(ratio_2025)), '0.01')),
+        'same_12_value_gain_usd_m': value_2026_12 - value_2025_12,
+    }
+
+
 def enrich(payload: dict) -> dict:
     teams = []
-    for index, raw in enumerate(payload['teams'], start=1):
+    for raw in payload['teams']:
         team = dict(raw)
-        team['playbook_order'] = index
-        team['in_source_set'] = True
-        team['forbes_table_checked_url'] = FORBES_MX
-        team['value_to_revenue_multiple'] = multiple(
-            team['forbes_2026_value_usd_m'], team['2025_revenue_usd_m']
-        )
-        team['forbes_value_to_forbes_revenue_multiple'] = multiple(
-            team['forbes_2026_value_usd_m'], team['forbes_2025_revenue_usd_m']
-        )
-        team['revenue_conflict'] = team['2025_revenue_usd_m'] != team['forbes_2025_revenue_usd_m']
-        team['graphic_matches_fcb'] = team['playbook_graphic_multiple'] == team['value_to_revenue_multiple']
+        team['in_forbes_2026'] = True
+        team['in_same_12'] = team.get('forbes_2025_value_usd_m') is not None
+        team['value_per_revenue_2026'] = multiple(team['forbes_2026_value_usd_m'], team['revenue_2025_usd_m'])
+        if team['in_same_12']:
+            team['value_per_revenue_2025'] = multiple(team['forbes_2025_value_usd_m'], team['revenue_2024_usd_m'])
+        else:
+            team['value_per_revenue_2025'] = None
         teams.append(team)
-    payload = dict(payload)
-    payload['teams'] = teams
-    payload['fcb_checks'] = checks(teams)
-    return payload
-
-
-def checks(teams: list[dict]) -> dict:
-    values = sum(team['forbes_2026_value_usd_m'] for team in teams)
-    playbook = sum(team['2025_revenue_usd_m'] for team in teams)
-    forbes_rev = sum(team['forbes_2025_revenue_usd_m'] for team in teams)
-    return {
-        'team_count': len(teams),
-        'forbes_value_sum_usd_m': values,
-        'forbes_value_average_usd_m': round(values / len(teams), 1),
-        'playbook_revenue_sum_usd_m': playbook,
-        'forbes_revenue_sum_usd_m': forbes_rev,
-        'league_multiple_on_forbes_revenue': float(
-            (Decimal(values) / Decimal(forbes_rev)).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
-        ),
-        'finals_revenue_ratio': float(
-            (Decimal(78) / Decimal(16)).quantize(Decimal('0.001'), rounding=ROUND_HALF_UP)
-        ),
-    }
+    data = dict(payload)
+    data['teams'] = teams
+    data['fcb_checks'] = summarize(teams)
+    return data
 
 
 def validate(payload: dict) -> None:
     if payload.get('updated') != '2026-10-31':
         raise ValueError('Dataset updated date must be 2026-10-31.')
+    if payload.get('forbes_2026_url') != FORBES_2026 or payload.get('forbes_2025_url') != FORBES_2025:
+        raise ValueError('Forbes source URLs do not match the 2026 and 2025 ranking articles.')
     teams = payload.get('teams') or []
     if len(teams) != 13:
-        raise ValueError('The source set is the 13 teams that played in 2025.')
+        raise ValueError('The 2026 Forbes list has 13 teams.')
     seen = set()
     for team in teams:
         for key in REQUIRED:
@@ -161,308 +188,228 @@ def validate(payload: dict) -> None:
         if team['slug'] in seen:
             raise ValueError(f'Duplicate slug {team["slug"]}.')
         seen.add(team['slug'])
-        if team['forbes_source_url'] != FORBES_US or team['forbes_date'] != '2026-05-07':
+        if team['forbes_2026_source_url'] != FORBES_2026 or team['forbes_2026_date'] != '2026-05-07':
             raise ValueError(f'{team["team"]} is not cited to the May 7, 2026 Forbes article.')
-        if team['revenue_source_url'] != PLAYBOOK_POST:
-            raise ValueError(f'{team["team"]} revenue is not cited to the Playbook graphic.')
+        if team['forbes_2025_source_url'] != FORBES_2025 or team['forbes_2025_date'] != '2025-06-06':
+            raise ValueError(f'{team["team"]} is not cited to the June 6, 2025 Forbes article.')
         if team['forbes_2026_value_usd_m'] in {850, 1000}:
             raise ValueError(f'{team["team"]} uses a Sportico or CNBC value, not the Forbes card.')
-        got = multiple(team['forbes_2026_value_usd_m'], team['2025_revenue_usd_m'])
-        if team.get('value_to_revenue_multiple') not in (None, got):
-            raise ValueError(f'{team["team"]} multiple does not match value divided by Playbook revenue.')
-        forbes_mult = multiple(team['forbes_2026_value_usd_m'], team['forbes_2025_revenue_usd_m'])
-        if team.get('forbes_value_to_forbes_revenue_multiple') not in (None, forbes_mult):
-            raise ValueError(f'{team["team"]} Forbes-on-Forbes multiple does not match.')
-    enriched = enrich({'updated': payload['updated'], 'teams': [dict(t) for t in teams]})
+        got = multiple(team['forbes_2026_value_usd_m'], team['revenue_2025_usd_m'])
+        if team.get('value_per_revenue_2026') not in (None, got):
+            raise ValueError(f'{team["team"]} multiple does not match the 2026 Forbes value divided by 2025 Forbes revenue.')
+        if team.get('forbes_2025_value_usd_m') is None:
+            if team.get('revenue_2024_usd_m') is not None:
+                raise ValueError(f'{team["team"]} has 2024 revenue without a 2025 Forbes value.')
+            continue
+        if team.get('revenue_2024_usd_m') is None or team.get('value_change_pct') is None:
+            raise ValueError(f'{team["team"]} is missing its 2025 Forbes value change or 2024 revenue.')
+        published = team['value_change_pct']
+        calculated = whole_percent(team['forbes_2026_value_usd_m'], team['forbes_2025_value_usd_m'])
+        if published != calculated:
+            raise ValueError(f'{team["team"]} one-year change {published} does not match {calculated}.')
+    enriched = enrich({'updated': payload['updated'], 'forbes_2026_url': FORBES_2026, 'forbes_2025_url': FORBES_2025, 'teams': [dict(t) for t in teams]})
     by_slug = {team['slug']: team for team in enriched['teams']}
     golden = by_slug['golden-state-valkyries']
     atlanta = by_slug['atlanta-dream']
-    washington = by_slug['washington-mystics']
     indiana = by_slug['indiana-fever']
+    washington = by_slug['washington-mystics']
     seattle = by_slug['seattle-storm']
-    if (golden['forbes_2026_value_usd_m'], golden['2025_revenue_usd_m'], golden['value_to_revenue_multiple']) != (780, 78, 10.0):
+    if golden['forbes_2025_value_usd_m'] is not None:
+        raise ValueError('Golden State was not in the 2025 Forbes ranking and cannot be in the same-12 totals.')
+    if (golden['forbes_2026_value_usd_m'], golden['revenue_2025_usd_m'], golden['value_per_revenue_2026']) != (780, 78, 10.0):
         raise ValueError('Golden State must be $780 million, $78 million, and 10.0x.')
-    if (atlanta['forbes_2026_value_usd_m'], atlanta['2025_revenue_usd_m'], atlanta['value_to_revenue_multiple']) != (250, 16, 15.6):
+    if (atlanta['forbes_2026_value_usd_m'], atlanta['revenue_2025_usd_m'], atlanta['value_per_revenue_2026']) != (250, 16, 15.6):
         raise ValueError('Atlanta must be $250 million, $16 million, and 15.6x.')
-    if washington['2025_revenue_usd_m'] != 16 or atlanta['2025_revenue_usd_m'] != 16:
-        raise ValueError('Washington and Atlanta are tied at $16 million on the Playbook column.')
-    if (washington['forbes_2025_revenue_usd_m'], washington['value_to_revenue_multiple'], washington['playbook_graphic_multiple']) != (18, 17.5, 15.6):
-        raise ValueError('Washington conflict is Forbes $18 million, FCB 17.5x, graphic 15.6x.')
-    if (indiana['2025_revenue_usd_m'], indiana['forbes_2025_revenue_usd_m'], indiana['value_to_revenue_multiple'], indiana['playbook_graphic_multiple']) != (56, 58, 10.4, 10.0):
-        raise ValueError('Indiana conflict is Playbook $56 million, Forbes $58 million, FCB 10.4x, graphic 10.0x.')
-    if seattle['playbook_graphic_multiple'] != 15.4 or seattle['value_to_revenue_multiple'] != 15.4:
-        raise ValueError('Seattle is 15.4x on both the graphic read and the FCB calculation.')
-    conflicts = sorted(team['slug'] for team in enriched['teams'] if team['revenue_conflict'])
-    if conflicts != ['indiana-fever', 'washington-mystics']:
-        raise ValueError(f'Revenue conflicts must be Indiana and Washington, not {conflicts}.')
-    summary = enriched['fcb_checks']
-    if summary['forbes_value_sum_usd_m'] != 5385 or summary['forbes_value_average_usd_m'] != 414.2:
-        raise ValueError('Forbes values must sum to $5,385 million and average $414.2 million.')
-    if summary['playbook_revenue_sum_usd_m'] != 426 or summary['forbes_revenue_sum_usd_m'] != 430:
-        raise ValueError('Playbook revenue must sum to $426 million and Forbes revenue to $430 million.')
-    if summary['league_multiple_on_forbes_revenue'] != 12.52:
-        raise ValueError('League value divided by Forbes revenue must be 12.52x before the Forbes 12.5x rounding.')
-    ranks = sorted(team['forbes_rank'] for team in teams)
-    if ranks != list(range(1, 14)):
-        raise ValueError('Forbes ranks must be 1 through 13 with no gaps.')
+    if (indiana['revenue_2025_usd_m'], indiana['value_per_revenue_2026']) != (58, 10.0):
+        raise ValueError('Indiana Forbes revenue is $58 million and the multiple is 10.0x.')
+    if (washington['revenue_2025_usd_m'], washington['value_per_revenue_2026']) != (18, 15.6):
+        raise ValueError('Washington Forbes revenue is $18 million and the multiple is 15.6x.')
+    if (seattle['forbes_2026_value_usd_m'], seattle['revenue_2025_usd_m'], seattle['value_per_revenue_2026']) != (430, 28, 15.4):
+        raise ValueError('Seattle must be $430 million, $28 million, and 15.4x.')
+    checks = enriched['fcb_checks']
+    expected = {
+        'forbes_2026_value_sum_usd_m': 5385,
+        'revenue_2025_sum_usd_m': 430,
+        'league_multiple': 12.52,
+        'same_12_value_2025_usd_m': 3260,
+        'same_12_value_2026_usd_m': 4605,
+        'same_12_revenue_2024_usd_m': 226,
+        'same_12_revenue_2025_usd_m': 352,
+        'same_12_value_change_pct': 41.3,
+        'same_12_revenue_change_pct': 55.8,
+        'same_12_multiple_2025': 14.42,
+        'same_12_multiple_2026': 13.08,
+        'same_12_multiple_change': -1.34,
+        'same_12_value_gain_usd_m': 1345,
+        'team_count_same_12': 12,
+    }
+    for key, value in expected.items():
+        if checks[key] != value:
+            raise ValueError(f'{key} is {checks[key]}, expected {value}.')
     missing = payload.get('not_in_source_set') or []
-    slugs = {row.get('slug') for row in missing}
-    if slugs != {'portland-fire', 'toronto-tempo'}:
-        raise ValueError('Portland and Toronto are the expansion rows, and they stay out of the value table.')
+    if {row.get('slug') for row in missing} != {'portland-fire', 'toronto-tempo'}:
+        raise ValueError('Portland and Toronto are the only expansion rows.')
     for row in missing:
-        if row.get('2025_revenue_usd_m') is not None or row.get('forbes_2026_value_usd_m') is not None:
-            raise ValueError(f'{row.get("team")} is not in the source set and cannot carry a number.')
-        if 'Not in the source set' not in (row.get('reason') or ''):
-            raise ValueError(f'{row.get("team")} needs an explicit not-in-source-set note.')
+        if row.get('forbes_2026_value_usd_m') is not None or row.get('revenue_2025_usd_m') is not None:
+            raise ValueError(f'{row.get("team")} began play in 2026 and cannot carry a 2025 revenue or a Forbes value here.')
+        if 'began play in 2026' not in (row.get('reason') or ''):
+            raise ValueError(f'{row.get("team")} needs a note that it began play in 2026.')
     blob = json.dumps(payload, ensure_ascii=False)
     if EM_DASH in blob or EN_DASH in blob:
         raise ValueError('Dataset copy contains a dash that the style guide does not allow.')
 
 
-def team_link(team: dict) -> str:
-    return f'<a href="{esc(team["team_page"])}">{esc(team["team"])}</a>'
+def team_link(team: dict, label: str | None = None) -> str:
+    return f'<a href="{esc(team["team_page"])}">{esc(label or team["team"])}</a>'
 
 
 def source_link(url: str, label: str) -> str:
-    return f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(label)}</a>'
+    return f'<a href="{esc(url)}">{esc(label)}</a>'
 
 
-def by_revenue(teams: list[dict]) -> list[dict]:
-    return sorted(teams, key=lambda team: (-team['2025_revenue_usd_m'], team['playbook_order']))
+def byline_html() -> str:
+    return links.BYLINE_HTML.replace('>By Ryan Moalemi<', '>Ryan Moalemi, Full Court Buckets<')
 
 
-def by_value(teams: list[dict]) -> list[dict]:
-    return sorted(teams, key=lambda team: team['forbes_rank'])
+def citation_text() -> str:
+    return (
+        'Full Court Buckets, "WNBA franchise values in 2026 and revenue by team," October 31, 2026, '
+        f'{BASE}{ROUTE}. Franchise values and revenue estimates: Brett Knight, "The WNBA\'s Most Valuable Teams 2026," '
+        f'Forbes, May 7, 2026, {FORBES_2026}; and Brett Knight, "The WNBA\'s Most Valuable Teams 2025," '
+        f'Forbes, June 6, 2025, {FORBES_2025}. Multiples and the same-12 comparison: Full Court Buckets calculations. '
+        'Golden State is excluded from both years of the same-12 totals.'
+    )
 
 
-def by_multiple(teams: list[dict]) -> list[dict]:
-    return sorted(teams, key=lambda team: (-team['value_to_revenue_multiple'], team['team']))
-
-
-def tie_ranks(rows: list[dict], key: str) -> list[int]:
-    ranks = []
-    rank = 0
-    last = None
-    for index, row in enumerate(rows, start=1):
-        value = row[key]
-        if value != last:
-            rank = index
-            last = value
-        ranks.append(rank)
-    return ranks
+def action_row() -> str:
+    return (
+        '<div class="data-actions inline">'
+        f'<a class="button primary" href="{CSV_NAME}" download>Download team data</a>'
+        f'<button class="button copy-citation" type="button" data-copy="{esc(citation_text())}">Copy citation</button>'
+        '</div>'
+    )
 
 
 def revenue_bar(teams: list[dict]) -> str:
-    rows = by_revenue(teams)
-    width, row_h, left, right = 640, 28, 148, 64
-    height = 36 + row_h * len(rows)
-    max_rev = 78
+    rows = sorted(teams, key=lambda team: (-team['revenue_2025_usd_m'], team['forbes_2026_rank']))
+    width, row_h, left, right = 640, 28, 52, 72
+    height = 28 + row_h * len(rows)
     plot = width - left - right
     parts = [
         f'<svg class="chart" viewBox="0 0 {width} {height}" role="img" aria-labelledby="revenue-chart-title">',
-        '<title id="revenue-chart-title">2025 WNBA revenue estimates, Playbook Strategies. Golden State $78 million, Atlanta and Washington $16 million.</title>',
+        '<title id="revenue-chart-title">Forbes 2025 WNBA revenue estimates. Golden State $78 million, Atlanta $16 million, Indiana $58 million.</title>',
     ]
     for index, team in enumerate(rows):
-        y = 18 + index * row_h
-        bar = plot * team['2025_revenue_usd_m'] / max_rev
-        color = '#b8006f' if team['finals_2026'] else '#5b22c9'
+        y = 8 + index * row_h
+        bar = plot * team['revenue_2025_usd_m'] / 78
+        color = '#b8006f' if team['slug'] in {'golden-state-valkyries', 'atlanta-dream', 'indiana-fever'} else '#5b22c9'
         parts.append(
-            f'<text x="{left - 8}" y="{y + 16}" text-anchor="end" font-size="13" fill="#151413">{esc(team["abbr"])}</text>'
+            f'<text x="{left - 8}" y="{y + 14}" text-anchor="end" font-size="13" fill="#151413">{esc(team["abbr"])}</text>'
             f'<rect x="{left}" y="{y}" width="{bar:.1f}" height="18" fill="{color}"></rect>'
-            f'<text x="{left + bar + 6:.1f}" y="{y + 14}" font-size="13" fill="#151413">{money_short(team["2025_revenue_usd_m"])}</text>'
+            f'<text x="{left + bar + 6:.1f}" y="{y + 14}" font-size="13" fill="#151413">{money_short(team["revenue_2025_usd_m"])}</text>'
         )
     parts.append('</svg>')
     return ''.join(parts)
 
 
-def scatter(teams: list[dict]) -> str:
-    width, height = 640, 420
-    left, right, top, bottom = 56, 16, 16, 40
-    plot_w = width - left - right
-    plot_h = height - top - bottom
-    max_x, max_y = 90, 900
-
-    def x_of(revenue):
-        return left + plot_w * revenue / max_x
-
-    def y_of(value):
-        return top + plot_h * (1 - value / max_y)
-
-    parts = [
-        f'<svg class="chart scatter" viewBox="0 0 {width} {height}" role="img" aria-labelledby="scatter-title">',
-        '<title id="scatter-title">Forbes 2026 franchise value against Playbook 2025 revenue. Golden State is high revenue and a 10.0x multiple. Atlanta is low revenue and a 15.6x multiple.</title>',
-        f'<line x1="{left}" y1="{top}" x2="{left}" y2="{height - bottom}" stroke="#e2ddd6"></line>',
-        f'<line x1="{left}" y1="{height - bottom}" x2="{width - right}" y2="{height - bottom}" stroke="#e2ddd6"></line>',
-    ]
-    for tick in (0, 20, 40, 60, 80):
-        x = x_of(tick)
-        parts.append(
-            f'<line x1="{x:.1f}" y1="{height - bottom}" x2="{x:.1f}" y2="{height - bottom + 4}" stroke="#e2ddd6"></line>'
-            f'<text x="{x:.1f}" y="{height - 16}" text-anchor="middle" font-size="12" fill="#5a554e">{tick}</text>'
-        )
-    for tick in (0, 200, 400, 600, 800):
-        y = y_of(tick)
-        parts.append(
-            f'<text x="{left - 8}" y="{y + 4:.1f}" text-anchor="end" font-size="12" fill="#5a554e">{tick}</text>'
-        )
-    parts.append(
-        f'<text x="{width / 2:.0f}" y="{height - 2}" text-anchor="middle" font-size="12" fill="#5a554e">2025 revenue, $ millions (Playbook)</text>'
-        f'<text x="16" y="{height / 2:.0f}" text-anchor="middle" font-size="12" fill="#5a554e" transform="rotate(-90 16 {height / 2:.0f})">Forbes 2026 value, $ millions</text>'
-    )
-    for team in teams:
-        x = x_of(team['2025_revenue_usd_m'])
-        y = y_of(team['forbes_2026_value_usd_m'])
-        color = '#b8006f' if team['finals_2026'] else ('#a85400' if team['revenue_conflict'] else '#5b22c9')
-        parts.append(
-            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="5" fill="{color}"><title>{esc(team["team"])}: {money(team["2025_revenue_usd_m"])} revenue, {money(team["forbes_2026_value_usd_m"])} value, {mult(team["value_to_revenue_multiple"])}</title></circle>'
-            f'<text x="{x + 7:.1f}" y="{y + 4:.1f}" font-size="12" fill="#151413">{esc(team["abbr"])}</text>'
-        )
-    parts.append('</svg>')
-    return ''.join(parts)
-
-
-def master_rows(teams: list[dict]) -> str:
+def main_table(teams: list[dict], checks: dict) -> str:
+    rows = sorted(teams, key=lambda team: team['forbes_2026_rank'])
     body = []
-    for team in teams:
-        conflict = ' conflict' if team['revenue_conflict'] else ''
-        finals = ' finals' if team['finals_2026'] else ''
-        yoy = 'n/a' if team['forbes_yoy_change_pct'] is None else f'{team["forbes_yoy_change_pct"]}%'
-        flag = '' if team['graphic_matches_fcb'] else ' <span class="flag">differs</span>'
-        body.append(
-            '<tr class="' + (finals + conflict).strip() + '">'
-            f'<td data-value="{esc(team["team"])}">{team_link(team)}</td>'
-            f'<td data-value="{esc(team["market"])}">{esc(team["market"])}</td>'
-            f'<td class="num" data-value="{team["2025_revenue_usd_m"]}">{money_short(team["2025_revenue_usd_m"])}</td>'
-            f'<td class="num" data-value="{team["forbes_2025_revenue_usd_m"]}">{money_short(team["forbes_2025_revenue_usd_m"])}</td>'
-            f'<td class="num" data-value="{team["forbes_2026_value_usd_m"]}">{money_short(team["forbes_2026_value_usd_m"])}</td>'
-            f'<td class="num" data-value="{team["forbes_rank"]}">{team["forbes_rank"]}</td>'
-            f'<td class="num" data-value="{team["forbes_yoy_change_pct"] if team["forbes_yoy_change_pct"] is not None else -1}">{yoy}</td>'
-            f'<td class="num" data-value="{team["value_to_revenue_multiple"]}">{mult(team["value_to_revenue_multiple"])}</td>'
-            f'<td class="num" data-value="{team["playbook_graphic_multiple"]}">{mult(team["playbook_graphic_multiple"])}{flag}</td>'
-            '</tr>'
-        )
-    return ''.join(body)
-
-
-def compact_table(rows: list[dict], rank_key: str, value_label: str, value_fn) -> str:
-    ranks = tie_ranks(rows, rank_key)
-    body = []
-    for rank, team in zip(ranks, rows):
-        tied = sum(1 for other in rows if other[rank_key] == team[rank_key]) > 1
-        label = f'{rank}' + (' tie' if tied else '')
+    for team in rows:
         body.append(
             '<tr>'
-            f'<td class="num">{esc(label)}</td>'
             f'<td>{team_link(team)}</td>'
-            f'<td class="num">{value_fn(team)}</td>'
             f'<td class="num">{money_short(team["forbes_2026_value_usd_m"])}</td>'
-            f'<td class="num">{money_short(team["2025_revenue_usd_m"])}</td>'
-            f'<td class="num">{mult(team["value_to_revenue_multiple"])}</td>'
+            f'<td class="num">{money_short(team["revenue_2025_usd_m"])}</td>'
+            f'<td class="num">{mult(team["value_per_revenue_2026"])}</td>'
             '</tr>'
         )
+    body.append(
+        '<tr class="total">'
+        '<th scope="row">13 teams combined</th>'
+        f'<td class="num">{billions(checks["forbes_2026_value_sum_usd_m"])}</td>'
+        f'<td class="num">{money_short(checks["revenue_2025_sum_usd_m"])}</td>'
+        f'<td class="num">{mult2(checks["league_multiple"])}</td>'
+        '</tr>'
+    )
     return (
         '<div class="table-wrap wide"><table class="audience-table wide">'
-        f'<thead><tr><th scope="col">Rank</th><th scope="col">Team</th><th scope="col">{esc(value_label)}</th>'
-        '<th scope="col">Forbes value</th><th scope="col">Playbook revenue</th><th scope="col">FCB multiple</th></tr></thead>'
+        '<caption>Forbes franchise values published May 7, 2026, and Forbes revenue estimates for the 2025 season. Value divided by revenue is an FCB calculation, rounded half up to one decimal. The combined multiple uses the sums and is shown to two decimals.</caption>'
+        '<thead><tr><th scope="col">Team</th><th scope="col">2026 franchise value</th>'
+        '<th scope="col">2025 revenue</th><th scope="col">Value ÷ revenue</th></tr></thead>'
         f'<tbody>{"".join(body)}</tbody></table></div>'
     )
 
 
-def faq_items(teams: list[dict]) -> list[dict]:
-    by_slug = {team['slug']: team for team in teams}
-    golden = by_slug['golden-state-valkyries']
-    atlanta = by_slug['atlanta-dream']
-    washington = by_slug['washington-mystics']
+def same_table(checks: dict) -> str:
+    change = checks['same_12_multiple_change']
+    change_label = f'{change:.2f}{TIMES}'
+    return (
+        '<div class="table-wrap wide"><table class="audience-table wide">'
+        '<caption>The 12 franchises Forbes ranked in both 2025 and 2026. Golden State is excluded. Revenue is the prior season on each list: 2024 revenue in the 2025 ranking, and 2025 revenue in the 2026 ranking.</caption>'
+        '<thead><tr><th scope="col">Same 12</th><th scope="col">2025 Forbes</th><th scope="col">2026 Forbes</th><th scope="col">Change</th></tr></thead>'
+        '<tbody>'
+        '<tr><th scope="row">Combined value</th>'
+        f'<td class="num">{billions(checks["same_12_value_2025_usd_m"])}</td>'
+        f'<td class="num">{billions(checks["same_12_value_2026_usd_m"])}</td>'
+        f'<td class="num">+{checks["same_12_value_change_pct"]:.1f}%</td></tr>'
+        '<tr><th scope="row">Prior season revenue</th>'
+        f'<td class="num">{money_short(checks["same_12_revenue_2024_usd_m"])} in 2024</td>'
+        f'<td class="num">{money_short(checks["same_12_revenue_2025_usd_m"])} in 2025</td>'
+        f'<td class="num">+{checks["same_12_revenue_change_pct"]:.1f}%</td></tr>'
+        '<tr><th scope="row">Combined value / revenue</th>'
+        f'<td class="num">{mult2(checks["same_12_multiple_2025"])}</td>'
+        f'<td class="num">{mult2(checks["same_12_multiple_2026"])}</td>'
+        f'<td class="num">{change_label}</td></tr>'
+        '</tbody></table></div>'
+    )
+
+
+def faq_items(checks: dict) -> list[dict]:
     return [
         {
-            'q': 'Which WNBA team had the highest 2025 revenue?',
+            'q': 'How large was the revenue gap in the 2026 WNBA Finals?',
             'a': (
-                f'Playbook Strategies estimates the Golden State Valkyries at {money(golden["2025_revenue_usd_m"])} '
-                'for 2025, excluding playoffs. Forbes prints the same $78 million and calls it a WNBA record.'
+                'Forbes estimated Golden State revenue at $78 million and Atlanta revenue at $16 million for the 2025 season. '
+                'The $62 million difference was larger than Indiana\'s $58 million, the second-highest revenue estimate on the Forbes list.'
             ),
         },
         {
-            'q': 'Which WNBA teams had the lowest 2025 revenue?',
+            'q': 'How does Full Court Buckets calculate the value-to-revenue multiple?',
             'a': (
-                'On the Playbook graphic, the Atlanta Dream and the Washington Mystics are tied at $16 million, '
-                'the lowest estimate. Forbes prints Atlanta at $16 million and Washington at $18 million, so Atlanta '
-                'is alone at the bottom of the Forbes revenue column.'
+                'The displayed multiple is the May 7, 2026 Forbes franchise value divided by the Forbes estimate of 2025 revenue, '
+                'rounded half up to one decimal. Atlanta is 15.6 times. Golden State is 10.0 times. '
+                'The 13-team combined multiple, $5.385 billion divided by $430 million, is 12.52 times.'
             ),
         },
         {
-            'q': 'What is the franchise value multiple on this page?',
+            'q': 'Did franchise values rise faster than revenue?',
             'a': (
-                f'The FCB multiple is the May 7, 2026 Forbes value divided by the Playbook 2025 revenue estimate, '
-                f'rounded half up to one decimal. Atlanta is {mult(atlanta["value_to_revenue_multiple"])}. '
-                f'Golden State is {mult(golden["value_to_revenue_multiple"])}. '
-                f'Washington is {mult(washington["value_to_revenue_multiple"])} on that formula. '
-                'The Playbook graphic prints Washington at 15.6x, which matches Forbes value divided by Forbes revenue ($280 million / $18 million), not by the $16 million in the same graphic.'
+                'Not for the same 12 franchises. Their combined Forbes value rose from $3.260 billion to $4.605 billion, up 41.3%. '
+                'Their prior-season revenue rose from $226 million in 2024 to $352 million in 2025, up 55.8%. '
+                'Value per dollar of revenue fell from 14.42 times to 13.08 times. '
+                'Forbes said the league average rose 52%, from $272 million to $414 million, a comparison that adds Golden State to the list.'
             ),
         },
         {
-            'q': 'Why can a lower-revenue team show a higher multiple?',
+            'q': 'Why is Golden State left out of the same-12 comparison?',
             'a': (
-                'A higher multiple means the valuation is a larger number of times last season\'s estimated revenue. '
-                'It does not mean the business is stronger. Forbes valued the league at 12.5 times average 2025 regular-season revenue and Golden State at about 10 times, and wrote that some bankers were cautious about paying a premium for a new revenue base. '
-                'Buyers can still price a lower-revenue club for growth, a scarce seat, or a move into a larger building. That reading is FCB analysis of the spread, not a claim Forbes or Playbook made about Atlanta or Washington.'
+                'Forbes did not value the Valkyries in the June 6, 2025 ranking. The team was three weeks into its inaugural season. '
+                'The same-12 totals use only franchises that appear in both the 2025 and 2026 Forbes lists.'
             ),
         },
         {
-            'q': 'Do Forbes and Playbook use the same 2025 revenue?',
+            'q': 'Are the Portland Fire and Toronto Tempo included?',
             'a': (
-                'For 11 of the 13 teams, yes. They differ for the Indiana Fever (Playbook $56 million, Forbes $58 million) '
-                'and the Washington Mystics (Playbook $16 million, Forbes $18 million). '
-                'The graphic\'s 10.0x for Indiana and 15.6x for Washington match the Forbes revenue, not the Playbook revenue printed in the same row.'
-            ),
-        },
-        {
-            'q': 'Are the Portland Fire and Toronto Tempo in this dataset?',
-            'a': (
-                'No. Forbes left both out of the May 7, 2026 ranking because they begin play in the 2026 season. '
-                'The Playbook graphic is the 13 teams that played in 2025. Cleveland, Detroit, and Philadelphia, which Forbes said begin play in 2028, 2029, and 2030, are out too. '
-                'A FOX59 table that lists Portland and Toronto, and Golden State at $1 billion, does not match the Forbes cards and is not used.'
-            ),
-        },
-        {
-            'q': 'How current are these figures?',
-            'a': (
-                'Revenue is a 2025 season estimate. Forbes values are from the ranking dated May 7, 2026. '
-                'This page was updated Oct. 31, 2026, during the WNBA Finals. It does not include 2026 season revenue.'
+                'No. Both began play in 2026 and had no 2025 season. Forbes left them out of the May 7, 2026 ranking. '
+                'This page does not assign them a 2025 revenue or a 2026 franchise value.'
             ),
         },
     ]
 
 
 def faq_html(items: list[dict]) -> str:
-    blocks = []
-    for item in items:
-        blocks.append(f'<h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p>')
-    return ''.join(blocks)
-
-
-def faq_jsonld(items: list[dict]) -> dict:
-    return {
-        '@type': 'FAQPage',
-        '@id': BASE + ROUTE + '#faq',
-        'mainEntity': [
-            {
-                '@type': 'Question',
-                'name': item['q'],
-                'acceptedAnswer': {'@type': 'Answer', 'text': item['a']},
-            }
-            for item in items
-        ],
-    }
-
-
-def citation_text() -> str:
-    return (
-        'Full Court Buckets, "WNBA team revenue and franchise value multiples," updated Oct. 31, 2026, '
-        f'{BASE}{ROUTE}. 2025 revenue: Playbook Strategies, WNBA Market Intelligence 2026, graphic posted by '
-        f'Katherine Rowe, Oct. 31, 2026, {PLAYBOOK_POST}. Franchise values: Brett Knight, "The WNBA\'s Most '
-        f'Valuable Teams 2026," Forbes, May 7, 2026, {FORBES_US}. Team cards checked against the Forbes Mexico '
-        f'translation, {FORBES_MX}. Multiples: Full Court Buckets calculation, Forbes value divided by Playbook revenue.'
-    )
+    return ''.join(f'<h3>{esc(item["q"])}</h3><p>{esc(item["a"])}</p>' for item in items)
 
 
 def json_script(payload: dict) -> str:
@@ -470,87 +417,11 @@ def json_script(payload: dict) -> str:
     return f'<script type="application/ld+json">{raw}</script>'
 
 
-def gap_html(teams: list[dict]) -> str:
-    ordered = by_revenue(teams)
-    top, bottom = ordered[:3], ordered[-3:]
-    top_rev = sum(team['2025_revenue_usd_m'] for team in top)
-    bottom_rev = sum(team['2025_revenue_usd_m'] for team in bottom)
-    total = sum(team['2025_revenue_usd_m'] for team in teams)
-    top_share = (Decimal(top_rev) / Decimal(total) * 100).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
-    bottom_share = (Decimal(bottom_rev) / Decimal(total) * 100).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
-    group_ratio = (Decimal(top_rev) / Decimal(bottom_rev)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
-    top_names = ', '.join(team_link(team) for team in top)
-    bottom_names = ', '.join(team_link(team) for team in bottom)
-    return (
-        f'<p>With 13 teams, the closest whole count to a quartile is three. The top three by Playbook revenue are {top_names}. '
-        f'They combine for {money(top_rev)} of the {money(total)} Playbook total, {top_share} percent. '
-        f'The bottom three are {bottom_names}, combining for {money(bottom_rev)}, {bottom_share} percent. '
-        f'The top group is {group_ratio} times the bottom group.</p>'
-        '<p>Game 7 is the cleanest single gap. Golden State at $78 million against Atlanta at $16 million is 4.875 times, nearly 5 times, and a $62 million difference. '
-        'The Forbes values are $780 million and $250 million, 3.12 times, a $530 million difference. '
-        'Washington shares Atlanta\'s $16 million Playbook revenue but not its value. Washington is $280 million, so the FCB multiple is 17.5x, above Atlanta\'s 15.6x. '
-        'On the Forbes revenue column Washington is $18 million, and Atlanta is the only team at $16 million.</p>'
-    )
-
-
-def sources_html(sources: list[dict]) -> str:
-    items = []
-    for source in sources:
-        bits = [f'<strong>{esc(source["publisher"])}.</strong> ']
-        if source.get('author'):
-            bits.append(esc(source['author']) + ', ')
-        bits.append(source_link(source['url'], source['title']))
-        if source.get('date'):
-            bits.append(f' ({esc(source["date"])})')
-        bits.append('. ' + esc(source.get('role') or ''))
-        if source.get('report_url'):
-            bits.append(' Report page: ' + source_link(source['report_url'], 'Playbook Strategies'))
-            bits.append('.')
-        bits.append(' ' + esc(source.get('notes') or ''))
-        items.append('<li>' + ''.join(bits) + '</li>')
-    return '<ul>' + ''.join(items) + '</ul>'
-
-
-def missing_html(rows: list[dict]) -> str:
-    body = []
-    for row in rows:
-        body.append(
-            '<tr>'
-            f'<td><a href="{esc(row["team_page"])}">{esc(row["team"])}</a></td>'
-            f'<td>{esc(row["market"])}</td>'
-            '<td>Not in the source set</td>'
-            f'<td>{esc(row["reason"])}</td>'
-            '</tr>'
-        )
-    return (
-        '<div class="table-wrap wide"><table class="audience-table wide">'
-        '<caption>Expansion teams Forbes and the Playbook graphic did not value on this basis.</caption>'
-        '<thead><tr><th scope="col">Team</th><th scope="col">Market</th><th scope="col">2025 revenue and Forbes 2026 value</th><th scope="col">Why</th></tr></thead>'
-        f'<tbody>{"".join(body)}</tbody></table></div>'
-    )
-
-
-def nav_html() -> str:
-    items = ''.join(f'<li><a href="#{anchor}">{esc(label)}</a></li>' for anchor, label in NAV)
-    options = ''.join(f'<option value="#{anchor}">{esc(label)}</option>' for anchor, label in NAV)
-    cite = esc(citation_text())
-    return (
-        '<div class="data-nav"><nav class="contents-rail" aria-label="On this page"><p class="contents-label">On this page</p>'
-        f'<ul>{items}</ul>'
-        '<div class="data-actions">'
-        f'<a class="button primary" href="{CSV_NAME}" download>Download CSV</a>'
-        f'<a class="button" href="{JSON_NAME}" download>Download JSON</a>'
-        f'<button class="button copy-citation" type="button" data-copy="{cite}">Copy citation</button>'
-        '</div></nav>'
-        f'<div class="on-page-mobile"><label for="on-this-page">On this page</label>'
-        f'<select id="on-this-page"><option value="">On this page</option>{options}</select></div></div>'
-    )
-
-
 def render_page(payload: dict) -> str:
     teams = payload['teams']
-    summary = payload['fcb_checks']
-    items = faq_items(teams)
+    checks = payload['fcb_checks']
+    by_slug = {team['slug']: team for team in teams}
+    items = faq_items(checks)
     graph = {
         '@context': 'https://schema.org',
         '@graph': [
@@ -568,23 +439,35 @@ def render_page(payload: dict) -> str:
             },
             {
                 '@type': 'Dataset',
-                'name': 'WNBA team revenue and franchise value multiples, 2025 revenue and 2026 Forbes values',
-                'description': payload['multiple_definition'],
+                'name': 'WNBA franchise values in 2026 and revenue by team',
+                'description': DESCRIPTION,
                 'url': BASE + ROUTE,
                 'creator': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
-                'license': 'https://creativecommons.org/publicdomain/zero/1.0/',
                 'isAccessibleForFree': True,
-                'temporalCoverage': '2025/2026',
+                'temporalCoverage': '2024/2026',
                 'dateModified': '2026-10-31',
-                'distribution': [
-                    {'@type': 'DataDownload', 'encodingFormat': 'text/csv', 'contentUrl': BASE + ROUTE + CSV_NAME},
-                    {'@type': 'DataDownload', 'encodingFormat': 'application/json', 'contentUrl': BASE + ROUTE + JSON_NAME},
+                'distribution': {
+                    '@type': 'DataDownload',
+                    'encodingFormat': 'text/csv',
+                    'contentUrl': BASE + ROUTE + CSV_NAME,
+                },
+            },
+            {
+                '@type': 'FAQPage',
+                '@id': BASE + ROUTE + '#faq',
+                'mainEntity': [
+                    {'@type': 'Question', 'name': item['q'], 'acceptedAnswer': {'@type': 'Answer', 'text': item['a']}}
+                    for item in items
                 ],
             },
-            faq_jsonld(items),
         ],
     }
-    yoy_note = 'Golden State has no one-year change because Forbes did not rank the team in 2025.'
+    four = [by_slug[slug] for slug in ('seattle-storm', 'phoenix-mercury', 'los-angeles-sparks', 'dallas-wings')]
+    four_links = ', '.join(
+        f'{team_link(team)} {money_short(team["forbes_2026_value_usd_m"])}' for team in four
+    )
+    nav = ''.join(f'<li><a href="#{anchor}">{esc(label)}</a></li>' for anchor, label in NAV)
+    options = ''.join(f'<option value="#{anchor}">{esc(label)}</option>' for anchor, label in NAV)
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -605,13 +488,13 @@ def render_page(payload: dict) -> str:
 <meta property="og:image" content="{BASE}{ROUTE}{OG_NAME}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Golden State $78 million revenue at 10.0 times value. Atlanta $16 million at 15.6 times. Full Court Buckets.">
+<meta property="og:image:alt" content="Golden State $780 million on $78 million of revenue, 10.0 times. Atlanta $250 million on $16 million, 15.6 times.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@fullcourtbucket">
 <meta name="twitter:title" content="{esc(PAGE_TITLE)}">
 <meta name="twitter:description" content="{esc(DESCRIPTION)}">
 <meta name="twitter:image" content="{BASE}{ROUTE}{OG_NAME}">
-<meta name="twitter:image:alt" content="Golden State $78 million revenue at 10.0 times value. Atlanta $16 million at 15.6 times. Full Court Buckets.">
+<meta name="twitter:image:alt" content="Golden State $780 million on $78 million of revenue, 10.0 times. Atlanta $250 million on $16 million, 15.6 times.">
 {GA4_TAG}
 {ADSENSE_TAG}
 <link rel="stylesheet" href="/assets/site-nav.css">
@@ -625,100 +508,60 @@ def render_page(payload: dict) -> str:
 <header></header>
 <main class="page">
 <div class="standings-shell">
-<div class="page-header">
 <p class="eyebrow">WNBA / Data and research</p>
 <h1>{esc(H1)}</h1>
-<div class="byline-row article">{links.BYLINE_HTML}<span class="byline-sep" aria-hidden="true">|</span><time class="article-date" datetime="2026-10-31"><span data-fcb-dynamic="page-updated" data-fcb-source="{DATA_FILE}" data-fcb-updated="2026-10-31">Updated Oct. 31, 2026</span></time></div>
-<p class="answer">Game 7 of the 2026 WNBA Finals pairs Playbook Strategies' highest 2025 revenue estimate with one of its two lowest. The <a href="/wnba/teams/golden-state-valkyries/">Golden State Valkyries</a> are at $78 million. The <a href="/wnba/teams/atlanta-dream/">Atlanta Dream</a> are at $16 million, tied with the <a href="/wnba/teams/washington-mystics/">Washington Mystics</a>. Golden State's estimate is 4.875 times Atlanta's, nearly 5 times. Using <a href="{FORBES_US}">Forbes' May 7, 2026 values</a>, Atlanta's franchise value is 15.6 times that Playbook revenue and Golden State's is 10.0 times.</p>
-<p class="answer">Those FCB multiples use one valuation column, the Forbes cards, and one revenue column, the <a href="{PLAYBOOK_POST}">Oct. 31, 2026 Playbook graphic</a> posted by Katherine Rowe. They match the graphic for 11 of 13 teams. They do not match for Indiana (FCB 10.4x, graphic 10.0x) or Washington (FCB 17.5x, graphic 15.6x). Playbook's revenue for those two teams differs from the revenue Forbes printed, and the graphic's multiples match the Forbes revenue.</p>
-</div>
-<section class="key-stats" aria-label="Key revenue and multiple figures">
-<h2>Key figures</h2>
+<div class="byline-row article">{byline_html()}<span class="byline-sep" aria-hidden="true">|</span><time class="article-date" datetime="2026-10-31">October 31, 2026</time></div>
+<p class="answer">The revenue gap between the two teams in the 2026 WNBA Finals was bigger than the entire <a href="/wnba/teams/indiana-fever/">Indiana Fever</a> business generated on the court and off it during the 2025 regular season. <a href="{FORBES_2026}">Forbes</a> estimated <a href="/wnba/teams/golden-state-valkyries/">Golden State</a>'s revenue at $78 million and <a href="/wnba/teams/atlanta-dream/">Atlanta</a>'s at $16 million. The $62 million difference exceeded Indiana's $58 million, which ranked second in the league.</p>
+<p class="answer">Golden State also led Forbes' 2026 franchise valuations at $780 million, compared with $250 million for Atlanta. That makes the <a href="/wnba/teams/golden-state-valkyries/">Valkyries</a> worth 4.9 times as much as the <a href="/wnba/teams/atlanta-dream/">Dream</a> by revenue, but 3.1 times as much by franchise value. Each dollar of Atlanta revenue corresponded to $15.63 in estimated franchise value, compared with $10.00 for Golden State.</p>
+<section class="key-stats" aria-label="Finals revenue and value gap">
+<h2>Finals gap</h2>
 <ul class="key-list">
-<li class="stat-card"><p class="stat-value">$78M</p><p class="stat-label">Highest 2025 revenue</p><p class="stat-period">Golden State, Playbook and Forbes</p><p class="stat-meta">Excludes playoffs | <a href="{PLAYBOOK_POST}">Katherine Rowe / Playbook</a></p></li>
-<li class="stat-card"><p class="stat-value">$16M</p><p class="stat-label">Lowest Playbook revenue, tied</p><p class="stat-period">Atlanta and Washington</p><p class="stat-meta">Forbes prints Washington at $18M, so Atlanta is alone at $16M on that column</p></li>
-<li class="stat-card"><p class="stat-value">4.9x</p><p class="stat-label">Finals revenue gap</p><p class="stat-period">$78M / $16M = 4.875</p><p class="stat-meta"><a href="/news/finals-game-7-preview-dream-valkyries/">Game 7 preview</a></p></li>
-<li class="stat-card"><p class="stat-value">15.6x</p><p class="stat-label">Atlanta value / Playbook revenue</p><p class="stat-period">Golden State is 10.0x on the same formula</p><p class="stat-meta">$250M / $16M and $780M / $78M</p></li>
+<li class="stat-card"><p class="stat-value">$62M</p><p class="stat-label">Revenue gap, Golden State minus Atlanta</p><p class="stat-meta">Larger than Indiana's entire $58 million</p></li>
+<li class="stat-card"><p class="stat-value">4.9{TIMES}</p><p class="stat-label">Revenue, Valkyries versus Dream</p><p class="stat-meta">$78 million / $16 million</p></li>
+<li class="stat-card"><p class="stat-value">3.1{TIMES}</p><p class="stat-label">Franchise value, Valkyries versus Dream</p><p class="stat-meta">$780 million / $250 million</p></li>
+<li class="stat-card"><p class="stat-value">$15.63</p><p class="stat-label">Atlanta value per revenue dollar</p><p class="stat-meta">Golden State is $10.00</p></li>
 </ul>
 </section>
 <div class="data-layout">
-{nav_html()}
+<div class="data-nav"><nav class="contents-rail" aria-label="On this page"><p class="contents-label">On this page</p><ul>{nav}</ul></nav>
+<div class="on-page-mobile"><label for="on-this-page">On this page</label><select id="on-this-page"><option value="">On this page</option>{options}</select></div></div>
 <div class="data-main">
-<section class="qa" id="revenue">
-<h2>2025 revenue</h2>
-<p class="answer">Playbook's public graphic ranks the 13 teams that played in 2025. The bars below use that column. Pink marks the Finals clubs.</p>
-<figure class="chart-figure">{revenue_bar(teams)}<figcaption>Playbook Strategies 2025 revenue estimates, millions of dollars. Playoffs excluded. Source: <a href="{PLAYBOOK_POST}">Katherine Rowe, Oct. 31, 2026</a>.</figcaption></figure>
+<section class="qa" id="teams">
+<h2>2026 franchise value and 2025 revenue</h2>
+<p class="answer">Pink bars are Golden State, Indiana, and Atlanta: the Finals clubs and the team whose whole 2025 revenue estimate was smaller than the Finals revenue gap.</p>
+<figure class="chart-figure">{revenue_bar(teams)}<figcaption>Forbes estimates of 2025 regular-season revenue, in millions of dollars. Playoff games are excluded, as Forbes states in its methodology.</figcaption></figure>
+{action_row()}
+{main_table(teams, checks)}
+<p class="note">The Portland Fire and the Toronto Tempo began play in 2026 and had no 2025 season. Forbes left both out of the May 7, 2026 ranking, so this table does not give them a revenue or a value. Team pages: <a href="/wnba/teams/portland-fire/">Portland Fire</a> and <a href="/wnba/teams/toronto-tempo/">Toronto Tempo</a>.</p>
 </section>
-<section class="qa" id="multiples">
-<h2>Value against revenue</h2>
-<p class="answer">Each point is a Forbes May 7, 2026 value plotted on the Playbook revenue. Pink is the Finals. Orange is a team whose Playbook revenue differs from Forbes (Indiana and Washington).</p>
-<figure class="chart-figure">{scatter(teams)}<figcaption>Horizontal position is Playbook 2025 revenue. Vertical position is the Forbes 2026 value. The multiple is the slope from the origin to the point.</figcaption></figure>
+<section class="qa" id="same-12-teams">
+<h2>Revenue grew faster than franchise values for the same 12 teams</h2>
+<p>Forbes said the average franchise value rose 52%, from $272 million in the 2025 ranking to $414 million in the 2026 ranking. That average compares a 13-team list with a 12-team list. Golden State, left out in 2025, enters in 2026 at $780 million.</p>
+<p>Matching the 12 franchises that appear in both editions tells a different story. Revenue on those clubs grew faster than the values, so each dollar of revenue corresponded to less estimated franchise value in 2026 than in 2025.</p>
+{same_table(checks)}
+<p>Those 12 gained $1.345 billion in combined value, about $1.35 billion. Because revenue grew faster, value per dollar of revenue fell from {mult2(checks["same_12_multiple_2025"])} to {mult2(checks["same_12_multiple_2026"])}.</p>
+<p class="note">Forbes described the rounded $272 million average as 14.4 times average revenue. The 14.42{TIMES} in this table is the FCB sum: $3.260 billion divided by $226 million. The 13.08{TIMES} is $4.605 billion divided by $352 million. Golden State is in neither year of these totals.</p>
 </section>
-<section class="qa" id="table">
-<h2>Full table</h2>
-<p class="scroll-hint">Swipe to see more.</p>
-<p class="note">Sorted in the order of the Playbook graphic. Click a column heading to resort this table in the browser. "Graphic multiple" is the figure printed on that graphic. "FCB multiple" is Forbes value divided by the Playbook revenue in this row. A "differs" tag means those two are not the same number.</p>
-<div class="table-wrap wide">
-<table class="audience-table wide" id="revenue-table" data-sortable>
-<caption>13 WNBA teams that played in 2025. Revenue in millions of dollars. Values are the Forbes May 7, 2026 cards.</caption>
-<thead><tr>
-<th scope="col"><button type="button" data-sort="0" data-type="text">Team</button></th>
-<th scope="col"><button type="button" data-sort="1" data-type="text">Market</button></th>
-<th scope="col"><button type="button" data-sort="2" data-type="num">Playbook revenue</button></th>
-<th scope="col"><button type="button" data-sort="3" data-type="num">Forbes revenue</button></th>
-<th scope="col"><button type="button" data-sort="4" data-type="num">Forbes value</button></th>
-<th scope="col"><button type="button" data-sort="5" data-type="num">Forbes rank</button></th>
-<th scope="col"><button type="button" data-sort="6" data-type="num">Value change</button></th>
-<th scope="col"><button type="button" data-sort="7" data-type="num">FCB multiple</button></th>
-<th scope="col"><button type="button" data-sort="8" data-type="num">Graphic multiple</button></th>
-</tr></thead>
-<tbody>{master_rows(teams)}</tbody>
-</table>
-</div>
-<p class="note">{esc(yoy_note)} Ownership and arena for each club are in the download. Arena names are the WNBA.com strings in FCB team facts checked Oct. 28, 2026. They are context, not part of the valuation math.</p>
-</section>
-<section class="qa" id="by-value">
-<h2>Ranked by Forbes value</h2>
-{compact_table(by_value(teams), 'forbes_rank', 'Forbes rank', lambda team: str(team['forbes_rank']))}
-<p class="note">The 13 values sum to $5,385 million. Divided by 13, that is ${summary['forbes_value_average_usd_m']} million, in line with the $414 million average Forbes stated, and about $5.4 billion combined. Divided by the $430 million sum of the Forbes revenue cards, the league multiple is {summary['league_multiple_on_forbes_revenue']} times, which rounds to the 12.5 times Forbes stated for average 2025 regular-season revenue.</p>
-</section>
-<section class="qa" id="by-multiple">
-<h2>Ranked by FCB multiple</h2>
-{compact_table(by_multiple(teams), 'value_to_revenue_multiple', 'FCB multiple', lambda team: mult(team['value_to_revenue_multiple']))}
-<p class="note">Washington leads this ranking at 17.5x because the formula uses Playbook's $16 million, not Forbes' $18 million. The graphic prints Washington at 15.6x, the same mark as Atlanta, which is $280 million divided by $18 million.</p>
-</section>
-<section class="qa" id="gap">
-<h2>Where the gap is</h2>
-{gap_html(teams)}
-<p class="note">Related FCB pages: <a href="/wnba/viewership-attendance/">viewership and attendance</a>, <a href="/news/2026-wnba-finals-ratings-tracker/">2026 Finals ratings tracker</a>, <a href="/news/finals-game-7-preview-dream-valkyries/">Game 7 preview</a>, <a href="/news/wnba-finals-2026-schedule-dream-valkyries/">Finals schedule</a>, <a href="/news/wnba-expansion-teams/">expansion teams</a>, <a href="/wnba/owners/">owner index</a>.</p>
-</section>
-<section class="qa" id="reading">
-<h2>Reading the multiple</h2>
-<p>This section is FCB analysis of the spread. It is not a Forbes or Playbook finding about a named team.</p>
-<p>A 15.6x club has not been shown to be a better business than a 10.0x club. The multiple says the May 2026 valuation is that many times the 2025 revenue estimate. Forbes applied about 10 times revenue to Golden State and about 12.5 times average revenue to the league. The article said bankers and investors were cautious about paying a premium for a franchise whose revenue is new, even while calling that revenue real.</p>
-<p>Lower-revenue teams can still print higher multiples when a buyer is pricing growth, scarcity, or a building the club does not fully use yet. Atlanta's home arena on the WNBA.com listing is Gateway Center Arena. Golden State plays at Chase Center. The revenue gap and the multiple gap can describe the same building constraint from opposite sides: a small revenue base, and a price that assumes the base will not stay that small. Connecticut is the sale closest to these cards. Forbes reported an agreement for about $300 million, the same number as the Sun's Forbes value, with plans to move the team to Houston.</p>
-<p>Sportico's separate May 2026 model is not in the value column. It puts Golden State at $850 million, the league average at $427 million, and the 13 teams at $5.55 billion including real estate. Sportico's league revenue estimate for those clubs is $410 million, against $426 million on the Playbook cards and $430 million on the Forbes cards. CNBC's $1 billion Golden State value uses a 15-team set. None of those replace the Forbes cards in this file.</p>
-</section>
-<section class="qa" id="not-included">
-<h2>Not in the source set</h2>
-<p>{esc(payload.get('rejected_note') or '')}</p>
-{missing_html(payload['not_in_source_set'])}
+<section class="qa" id="four-teams">
+<h2>Four teams earned $28 million</h2>
+<p>Forbes estimated the same $28 million of 2025 revenue for four clubs. Their 2026 values still spanned $90 million, from Seattle at $430 million to Dallas at $340 million. Phoenix was $425 million and Los Angeles was $350 million. In this table: {four_links}.</p>
+<p>Indiana and New York diverge the other way. Indiana's $58 million of revenue ranked second, ahead of New York's $43 million, but New York's franchise value was higher, $600 million to $580 million. Indiana's multiple is 10.0{TIMES}. New York's is 14.0{TIMES}.</p>
+<p>Ownership lines on the Forbes cards, and the FCB owner index, are separate from these values. <a href="/wnba/owners/">WNBA owners</a>.</p>
 </section>
 <section class="qa" id="methods">
 <h2>Methods</h2>
-<p>{esc(payload['revenue_definition'])}</p>
-<p>{esc(payload['valuation_definition'])}</p>
-<p>{esc(payload['multiple_definition'])}</p>
-<p>{esc(payload['timing_note'])}</p>
-<p>The English Forbes article did not return the team table to a client without JavaScript on Oct. 31, 2026. Every value, Forbes revenue, one-year change, and owner line was read from the Forbes Mexico translation of the same May 7, 2026 article, which prints the 13 cards and says the text was first published by Forbes US. Grey Journal's Oct. 23, 2026 table matches those cards, including a complete Atlanta row at $250 million, $16 million, and a 32 percent one-year change. Grey Journal conflicts with Playbook on Fever revenue ($58 million vs $56 million) and Mystics revenue ($18 million vs $16 million). It does not conflict with the Forbes prose that names the Fever at $58 million.</p>
-<p>Seattle's graphic multiple is recorded as 15.4x. That is the bar on the Oct. 31, 2026 graphic, and it is also $430 million divided by $28 million. Phoenix and Minnesota print at 15.2x. A short grouping of the same post put Seattle with the 15.2x clubs. This file keeps 15.4x.</p>
-<p>{esc(payload.get('arena_note') or '')}</p>
-<p>The download is the FCB dataset: both revenue columns, the Forbes value, the FCB multiple, and the graphic multiple. License: <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>. Checked Oct. 31, 2026.</p>
-<p class="how-made">How the pages on this site are made: <a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>.</p>
+<p>The 2026 value and the 2025 revenue come from Brett Knight, "The WNBA's Most Valuable Teams 2026," Forbes, May 7, 2026. Revenue figures are Forbes estimates for the 2025 season, rounded to the nearest million. Playoff games are excluded. Values include the economics of a team's arena and exclude the arena real estate. On Oct. 31, 2026 the English article returned a JavaScript shell without the team cards. The 13 cards were read from the Forbes Mexico translation of that article, which says the text was first published by Forbes US. The cards sum to $5,385 million. Divided by 13, that is $414.2 million, in line with the $414 million average Forbes stated, and $5.385 billion combined.</p>
+<p>The prior year comes from Brett Knight, "The WNBA's Most Valuable Teams 2025," Forbes, June 6, 2025. That list values 12 existing franchises and does not value Golden State. Revenue figures are estimates for the 2024 season, rounded to the nearest million, again with playoff games excluded. The 12 values sum to $3,260 million. Divided by 12, that is $271.7 million, which Forbes rounds to the $272 million average it published. The 12 revenue estimates sum to $226 million.</p>
+<p>Full Court Buckets calculated every multiple and the same-12 growth rates. A team multiple is that edition's Forbes value divided by that edition's revenue estimate. The one-decimal multiples use half-up rounding. The combined ratios use the sums, not an average of the team multiples, and are shown to two decimals. The same-12 block drops Golden State from both years. The one-year value changes Forbes printed on the 2026 cards match these 2025 bases after the same half-up rounding to a whole percent.</p>
+<p class="note">Not used in the table: a Playbook Strategies graphic dated Oct. 31, 2026 printed 2025 revenue of $56 million for Indiana and $16 million for Washington. Forbes prints $58 million and $18 million. The Playbook report itself is behind an email gate, so those two figures stay out of this dataset.</p>
+<p class="how-made">How the pages on this site are made: <a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>. Related pages: <a href="/wnba/viewership-attendance/">viewership and attendance</a>, <a href="/news/2026-wnba-finals-ratings-tracker/">2026 Finals ratings tracker</a>, <a href="/news/wnba-expansion-teams/">expansion teams</a>.</p>
 </section>
 <section class="qa" id="sources">
 <h2>Sources</h2>
-{sources_html(payload['sources'])}
+<ul>
+<li>{source_link(FORBES_2026, "The WNBA's Most Valuable Teams 2026")}, Brett Knight, Forbes, May 7, 2026. Values and 2025 revenue. Team cards checked against {source_link(FORBES_MX, "the Forbes Mexico translation")}.</li>
+<li>{source_link(FORBES_2025, "The WNBA's Most Valuable Teams 2025")}, Brett Knight, Forbes, June 6, 2025. Values and 2024 revenue for the same 12 franchises. The published average is $272 million, and Forbes describes that average as 14.4 times average revenue.</li>
+</ul>
 <p class="cite">{esc(citation_text())}</p>
 </section>
 <section class="qa" id="faq">
@@ -744,30 +587,7 @@ document.querySelectorAll('.copy-citation').forEach(function(btn) {{
   }});
 }});
 var jump = document.getElementById('on-this-page');
-if (jump) jump.addEventListener('change', function() {{
-  if (jump.value) location.hash = jump.value;
-}});
-document.querySelectorAll('table[data-sortable] th button').forEach(function(btn) {{
-  btn.addEventListener('click', function() {{
-    var table = btn.closest('table');
-    var body = table.tBodies[0];
-    var index = Number(btn.getAttribute('data-sort'));
-    var type = btn.getAttribute('data-type');
-    var dir = btn.getAttribute('data-dir') === 'asc' ? 'desc' : 'asc';
-    table.querySelectorAll('th button').forEach(function(other) {{ other.removeAttribute('data-dir'); }});
-    btn.setAttribute('data-dir', dir);
-    var rows = Array.prototype.slice.call(body.rows);
-    rows.sort(function(a, b) {{
-      var av = a.cells[index].getAttribute('data-value') || '';
-      var bv = b.cells[index].getAttribute('data-value') || '';
-      if (type === 'num') {{ av = Number(av); bv = Number(bv); }}
-      if (av < bv) return dir === 'asc' ? -1 : 1;
-      if (av > bv) return dir === 'asc' ? 1 : -1;
-      return 0;
-    }});
-    rows.forEach(function(row) {{ body.appendChild(row); }});
-  }});
-}});
+if (jump) jump.addEventListener('change', function() {{ if (jump.value) location.hash = jump.value; }});
 </script>
 </body>
 </html>
@@ -775,6 +595,7 @@ document.querySelectorAll('table[data-sortable] th button').forEach(function(btn
 
 
 EXTRA_CSS = """
+html{scroll-padding-top:120px}
 .page{padding:28px 0 72px}
 .standings-shell{width:min(1100px,calc(100% - 32px));margin:0 auto;min-width:0;max-width:100%}
 .eyebrow{margin:0 0 8px;color:#b8006f;font:800 12px/1.2 Inter,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase}
@@ -786,14 +607,14 @@ h1{margin:0 0 8px;font:800 clamp(32px,4vw,48px)/1.12 "Barlow",sans-serif;letter-
 .key-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
 .stat-card{margin:0;padding:16px;border:1px solid var(--line,#e2ddd6);background:#fff}
 .stat-value{margin:0;font:800 36px/1 "Barlow",sans-serif}
-.stat-label,.stat-period,.stat-meta{margin:6px 0 0;font-size:14px;line-height:1.4}
+.stat-label,.stat-meta{margin:6px 0 0;font-size:14px;line-height:1.4}
 .stat-meta{color:#5a554e}
 .data-layout{margin-top:28px}
 .contents-rail{display:none}
 .contents-label{margin:0 0 8px;font:800 12px/1 "Barlow",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#5a554e}
 .contents-rail ul,.on-page-mobile{margin:0;padding:0;list-style:none}
 .contents-rail a{display:inline-flex;align-items:center;min-height:36px;font-weight:700}
-.data-actions{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:12px}
+.data-actions.inline{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border:1px solid #5b22c9;border-radius:3px;background:#fff;color:#5b22c9;font:700 14px/1 Inter,system-ui,sans-serif;text-decoration:none;cursor:pointer}
 .button.primary{background:#5b22c9;color:#fff}
 .on-page-mobile label{display:block;font-weight:700}
@@ -804,22 +625,16 @@ h1{margin:0 0 8px;font:800 clamp(32px,4vw,48px)/1.12 "Barlow",sans-serif;letter-
 .qa p,.qa li{max-width:68ch;font-size:16px;line-height:1.6}
 .chart-figure{margin:0 0 8px;max-width:720px}
 .chart{display:block;width:100%;height:auto;max-width:100%;background:#fff;border:1px solid var(--line,#e2ddd6);overflow:hidden}
-.chart.scatter{max-height:none}
 figcaption,.note,.how-made{max-width:68ch;color:#5a554e;font-size:14px;line-height:1.55}
 .data-main,.qa{min-width:0;max-width:100%}
 .table-wrap.wide{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
 .audience-table{width:100%;border-collapse:collapse}
 .audience-table th,.audience-table td{padding:10px 8px;border-bottom:1px solid var(--line,#e2ddd6);text-align:left;vertical-align:top}
-.audience-table th button{min-height:44px;padding:0;border:0;background:transparent;font:700 13px/1.3 Inter,system-ui,sans-serif;color:#45413b;cursor:pointer;text-align:left}
-.audience-table .num{text-align:right;font-variant-numeric:tabular-nums}
+.audience-table .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 .audience-table caption{caption-side:bottom;padding-top:8px;text-align:left;color:#5a554e;font-size:13px}
-.flag{color:#a85400;font-size:12px;font-weight:700}
+.audience-table tr.total th,.audience-table tr.total td{font-weight:700}
 .cite{margin-top:12px;padding:12px 14px;border-left:3px solid #5b22c9}
-.scroll-hint{display:none;color:#5a554e}
-@media(max-width:900px){
-.key-list{grid-template-columns:1fr 1fr}
-.scroll-hint{display:block}
-}
+@media(max-width:900px){.key-list{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.key-list{grid-template-columns:1fr}}
 @media(min-width:1100px){
 .data-layout{display:grid;grid-template-columns:180px minmax(0,1fr);column-gap:28px;align-items:start}
@@ -832,17 +647,19 @@ figcaption,.note,.how-made{max-width:68ch;color:#5a554e;font-size:14px;line-heig
 
 def csv_rows(payload: dict) -> list[dict]:
     rows = []
-    for team in payload['teams']:
-        rows.append({key: blank(team.get(key)) for key in CSV_FIELDS})
+    for team in sorted(payload['teams'], key=lambda item: item['forbes_2026_rank']):
+        item = {key: blank(team.get(key)) for key in CSV_FIELDS}
+        item['notes'] = ''
+        rows.append(item)
     for row in payload['not_in_source_set']:
         item = {key: '' for key in CSV_FIELDS}
         item.update({
             'team': row['team'],
             'market': row['market'],
             'team_page': row['team_page'],
-            'in_source_set': False,
-            'revenue_notes': row['reason'],
-            'revenue_source': 'Not in the source set',
+            'in_forbes_2026': False,
+            'in_same_12': False,
+            'notes': row['reason'],
         })
         rows.append(item)
     return rows
@@ -856,11 +673,11 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 
 def write_share_image(path: Path) -> None:
-    if path.is_file():
-        return
     try:
         from PIL import Image, ImageDraw, ImageFont
     except ImportError:
+        if path.is_file():
+            return
         raise ValueError('Share image is missing and Pillow is not installed.')
     image = Image.new('RGB', (1200, 630), '#f7f5f2')
     draw = ImageDraw.Draw(image)
@@ -869,12 +686,12 @@ def write_share_image(path: Path) -> None:
     med = ImageFont.truetype(str(font_dir / 'Inter-Medium.ttf'), 32)
     small = ImageFont.truetype(str(font_dir / 'Inter-Medium.ttf'), 24)
     draw.rectangle((0, 0, 1200, 12), fill='#5b22c9')
-    draw.text((64, 56), 'WNBA revenue and', font=bold, fill='#2a1458')
-    draw.text((64, 124), 'franchise multiples', font=bold, fill='#2a1458')
-    draw.text((64, 230), 'Golden State  $78M   10.0x', font=med, fill='#151413')
-    draw.text((64, 286), 'Atlanta and Washington  $16M', font=med, fill='#151413')
-    draw.text((64, 342), 'Atlanta 15.6x on the Forbes value', font=med, fill='#b8006f')
-    draw.text((64, 540), 'Full Court Buckets. 2025 revenue, May 2026 values.', font=small, fill='#5a554e')
+    draw.text((64, 56), 'WNBA franchise values', font=bold, fill='#2a1458')
+    draw.text((64, 124), 'and 2025 revenue', font=bold, fill='#2a1458')
+    draw.text((64, 230), 'Golden State  $780M on $78M, 10.0x', font=med, fill='#151413')
+    draw.text((64, 286), 'Atlanta  $250M on $16M, 15.6x', font=med, fill='#b8006f')
+    draw.text((64, 360), 'Same 12 teams: revenue grew faster than value', font=med, fill='#151413')
+    draw.text((64, 540), 'Full Court Buckets. Forbes 2025 and 2026 rankings.', font=small, fill='#5a554e')
     path.parent.mkdir(parents=True, exist_ok=True)
     image.save(path, 'PNG')
 
@@ -884,69 +701,23 @@ def update_sitemaps(root: Path) -> None:
     pages = root / 'pages-sitemap.xml'
     text = pages.read_text(encoding='utf-8')
     if f'<loc>{canonical}</loc>' not in text:
-        entry = (
-            '  <url>\n'
-            f'    <loc>{canonical}</loc>\n'
-            '    <lastmod>2026-10-31</lastmod>\n'
-            '  </url>\n'
-        )
+        entry = f'  <url>\n    <loc>{canonical}</loc>\n    <lastmod>2026-10-31</lastmod>\n  </url>\n'
         pages.write_text(text.replace('</urlset>', entry + '</urlset>', 1), encoding='utf-8')
     html_map = root / 'sitemap' / 'index.html'
     page = html_map.read_text(encoding='utf-8')
-    href = f'href="{ROUTE}"'
-    if href not in page:
+    if f'href="{ROUTE}"' not in page:
         marker = '<li><a href="/wnba/viewership-attendance/">WNBA viewership and attendance</a></li>'
         if marker not in page:
             raise ValueError('HTML sitemap is missing the viewership link this page should follow.')
-        insert = marker + '<li><a href="/wnba/team-revenue/">WNBA team revenue and franchise values</a></li>'
+        insert = marker + '<li><a href="/wnba/team-revenue/">WNBA franchise values and revenue</a></li>'
         html_map.write_text(page.replace(marker, insert, 1), encoding='utf-8')
 
 
 def public_payload(payload: dict) -> dict:
-    """Drop builder-only flags from the download without dropping the columns."""
-    data = json.loads(json.dumps(payload))
-    for team in data['teams']:
-        team.pop('playbook_order', None)
-        team.pop('graphic_matches_fcb', None)
-    return data
-
-
-def build(root: Path) -> None:
-    path = root / DATA_FILE
-    payload = load(path)
-    validate(payload)
-    payload = enrich(payload)
-    validate(payload)
-    if EM_DASH in json.dumps(payload) or EN_DASH in json.dumps(payload):
-        raise ValueError('Enriched dataset contains a dash the style guide does not allow.')
-    page_dir = root / 'wnba' / 'team-revenue'
-    page_dir.mkdir(parents=True, exist_ok=True)
-    rendered = render_page(payload)
-    if EM_DASH in rendered or EN_DASH in rendered:
-        raise ValueError('Page copy contains a dash the style guide does not allow.')
-    if 'ESPN data' in rendered or 'per ESPN' in rendered or 'Source: ESPN' in rendered:
-        raise ValueError('Page credits an ESPN stats feed.')
-    rendered = site_nav.install(rendered, ROUTE, site_nav.build_menu(root))
-    rendered = seo_meta.apply_rel(rendered, ROUTE, root)
-    rendered = breadcrumbs.fix(rendered, ROUTE, root)
-    if EM_DASH in rendered or EN_DASH in rendered:
-        raise ValueError('Installed page contains a dash the style guide does not allow.')
-    (page_dir / 'index.html').write_text(rendered, encoding='utf-8')
-    write_csv(page_dir / CSV_NAME, csv_rows(payload))
-    (page_dir / JSON_NAME).write_text(
-        json.dumps(public_payload(payload), indent=2, ensure_ascii=False) + '\n',
-        encoding='utf-8',
-    )
-    write_share_image(page_dir / OG_NAME)
-    # Keep the source file aligned with the calculated multiples.
-    path.write_text(json.dumps(public_payload(payload), indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    update_sitemaps(root)
-    upsert_search(root)
-    print(f'Wrote wnba/team-revenue/index.html from {DATA_FILE}.')
+    return json.loads(json.dumps(payload))
 
 
 def upsert_search(root: Path) -> None:
-    """Add this page to the search index without regenerating every other entry."""
     page = (root / 'wnba' / 'team-revenue' / 'index.html').read_text(encoding='utf-8')
     entry = search_index.page_entry(root, 'wnba/team-revenue/index.html', page, set())
     if not entry:
@@ -960,6 +731,42 @@ def upsert_search(root: Path) -> None:
     text = json.dumps(data, separators=(',', ':'), ensure_ascii=False) + '\n'
     if path.read_text(encoding='utf-8') != text:
         path.write_text(text, encoding='utf-8')
+    used = {item.get('i', '').lstrip('/') for item in data['items']}
+    thumb_dir = root / 'images' / 'search-thumbs'
+    if thumb_dir.is_dir():
+        for old in thumb_dir.glob('*.webp'):
+            rel = old.relative_to(root).as_posix()
+            if rel not in used and old.name.startswith('8329dbc'):
+                old.unlink()
+
+
+def build(root: Path) -> None:
+    path = root / DATA_FILE
+    payload = load(path)
+    validate(payload)
+    payload = enrich(payload)
+    validate(payload)
+    rendered = render_page(payload)
+    if EM_DASH in rendered or EN_DASH in rendered:
+        raise ValueError('Page copy contains a dash the style guide does not allow.')
+    if 'creativecommons' in rendered.lower() or 'CC0' in rendered:
+        raise ValueError('Page applies a blanket CC0 license.')
+    rendered = site_nav.install(rendered, ROUTE, site_nav.build_menu(root))
+    rendered = seo_meta.apply_rel(rendered, ROUTE, root)
+    rendered = breadcrumbs.fix(rendered, ROUTE, root)
+    if EM_DASH in rendered or EN_DASH in rendered:
+        raise ValueError('Installed page contains a dash the style guide does not allow.')
+    page_dir = root / 'wnba' / 'team-revenue'
+    page_dir.mkdir(parents=True, exist_ok=True)
+    (page_dir / 'index.html').write_text(rendered, encoding='utf-8')
+    write_csv(page_dir / CSV_NAME, csv_rows(payload))
+    download = json.dumps(public_payload(payload), indent=2, ensure_ascii=False) + '\n'
+    (page_dir / JSON_NAME).write_text(download, encoding='utf-8')
+    path.write_text(download, encoding='utf-8')
+    write_share_image(page_dir / OG_NAME)
+    update_sitemaps(root)
+    upsert_search(root)
+    print(f'Wrote wnba/team-revenue/index.html from {DATA_FILE}.')
 
 
 def main() -> int:

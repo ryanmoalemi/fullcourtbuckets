@@ -204,8 +204,8 @@
     "description": "Record 2026 WNBA attendance, fans per game, Finals audiences and the most-watched games of the season, each figure with its date and its original source."
   },
   "/wnba/team-revenue/": {
-    "title": "WNBA team revenue and franchise values for 2026",
-    "description": "Playbook estimates 2025 WNBA revenue from $16 million in Atlanta and Washington to $78 million in Golden State. Forbes May 2026 values, with FCB multiples."
+    "title": "WNBA Franchise Values in 2026 and 2025 Revenue by Team",
+    "description": "Compare 2026 WNBA franchise values and 2025 revenue estimates for 13 teams. FCB tracks how revenue and valuations changed for the same 12 franchises."
   },
   "/wnba/where-to-watch/": {
     "title": "Where to watch the 2026 WNBA Finals: bars showing games",
