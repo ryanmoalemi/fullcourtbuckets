@@ -608,7 +608,7 @@ def now_bar_html(now: _dt.datetime | None = None) -> str:
     return (
         f'<div class="ticker fcb-now" data-item-date="{e(data.get("date", ""))}" data-expires="{e(data["expires"])}" '
         f'data-fallback-text="{e(fb["text"])}" data-fallback-url="{e(fb["url"])}">'
-        '<div class="shell ticker-shell"><div class="ticker-label">Now</div>'
+        '<div class="shell ticker-shell"><div class="ticker-label">New</div>'
         f'<div class="ticker-text"><a href="{e(item["url"])}">{e(item["text"])}</a></div></div></div>'
     )
 
