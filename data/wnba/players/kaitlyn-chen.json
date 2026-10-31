@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-10-29T16:38:58+00:00",
-  "stats_updated_at": "2026-10-29T11:28:45+00:00",
+  "checked_at": "2026-10-31T10:46:27+00:00",
+  "stats_updated_at": "2026-10-31T10:46:27+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -170,7 +170,7 @@
     {
       "game_id": 1392724,
       "player_id": 775,
-      "date": "2026-10-29T19:00:00.000Z",
+      "date": "2026-10-29T16:30:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -646,49 +646,9 @@
       "stl": 0.0,
       "blk": 0.0,
       "turnover": 0.0
-    },
-    {
-      "game_id": 25082,
-      "player_id": 775,
-      "date": "2026-09-25T02:00:00.000Z",
-      "season": 2026,
-      "postseason": false,
-      "team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
-      },
-      "home_team": {
-        "id": 12,
-        "full_name": "Los Angeles Sparks",
-        "abbreviation": "LA",
-        "city": "Los Angeles",
-        "name": "Sparks",
-        "conference": "Western Conference"
-      },
-      "visitor_team": {
-        "id": 13,
-        "full_name": "Golden State Valkyries",
-        "abbreviation": "GS",
-        "city": "Golden State",
-        "name": "Valkyries",
-        "conference": "Western Conference"
-      },
-      "home_score": 75,
-      "away_score": 76,
-      "minutes": "21",
-      "pts": 18.0,
-      "ast": 2.0,
-      "reb": 3.0,
-      "stl": 1.0,
-      "blk": 0.0,
-      "turnover": 2.0
     }
   ],
-  "game_log_window_start": "2026-09-24",
+  "game_log_window_start": "2026-09-26",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
