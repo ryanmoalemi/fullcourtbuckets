@@ -1,60 +1,73 @@
 {
   "slug": "katie-smith",
   "player_name": "Katie Smith",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "Who is Katie Smith dating?",
-      "answer": "As of late 2026, Katie Smith has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What WNBA teams did Katie Smith play for?",
+      "answer": "Katie Smith starred for the Minnesota Lynx, where she was the 2001 WNBA scoring champion, then won titles with the Detroit Shock in 2006 and 2008 and was the 2008 Finals MVP. She also played for the Washington Mystics, Seattle Storm and New York Liberty, retired in 2013 and later served on the Lynx coaching staff from 2020 to 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Smith"
+        "https://ohiostatebuckeyes.com/sports/womens-basketball/roster/coaches/katie-smith/2408",
+        "https://www.wnba.com/news/katie-smith-tina-thompson-announced-members-basketball-hall-fame-class-2018",
+        "https://fullcourtbuckets.com/wnba/katie-smith/"
       ],
-      "google_keyword": "katie smith partner",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "katie smith wnba",
+          "vol": 320
+        },
+        {
+          "q": "katie smith minnesota lynx",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Katie Smith make?",
-      "answer": "A precise public salary or net worth figure for Katie Smith is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Did Katie Smith play at Ohio State?",
+      "answer": "Yes. Katie Smith played at Ohio State from 1992 to 1996, scored 2,578 points and was the 1996 Big Ten Player of the Year. She returned to Ohio State as an assistant coach on November 11, 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://ohiostatebuckeyes.com/sports/womens-basketball/roster/coaches/katie-smith/2408",
+        "https://www.wnba.com/news/katie-smith-tina-thompson-announced-members-basketball-hall-fame-class-2018"
       ],
-      "google_keyword": "katie smith net worth",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "katie smith ohio state",
+          "vol": 170
+        }
+      ]
     },
     {
-      "question": "How old is Katie Smith?",
-      "answer": "Public profiles list Katie Smith as born in 1974. As of late 2026 that puts her around 52 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Smith"
-      ],
-      "google_keyword": "katie smith age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1974-01-01"
-    },
-    {
-      "question": "Is Katie Smith married?",
-      "answer": "There is no widely reported public record of Katie Smith being married as of late 2026.",
+      "question": "What were Katie Smith's WNBA career averages?",
+      "answer": "Katie Smith averaged 13.4 points, 2.9 rebounds and 2.6 assists per game over her WNBA career, according to her WNBA.com profile. She was inducted into the Naismith Basketball Hall of Fame in 2018.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Smith"
+        "https://www.wnba.com/player/100404/katie-smith/bio",
+        "https://www.wnba.com/news/katie-smith-tina-thompson-announced-members-basketball-hall-fame-class-2018"
       ],
-      "google_keyword": "katie smith is she married",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "katie smith stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Katie Smith?",
-      "answer": "Katie Smith is an American basketball coach and former player who is an assistant coach for the Ohio State Buckeyes women's basketball team.",
-      "answer_kind": "mixed",
+      "question": "How many Olympic medals did Katie Smith win?",
+      "answer": "Katie Smith won three Olympic gold medals with Team USA, in 2000, 2004 and 2008.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Katie_Smith"
+        "https://ohiostatebuckeyes.com/news/2023/1/10/title-ix-katie-smith",
+        "https://ohiostatebuckeyes.com/sports/womens-basketball/roster/coaches/katie-smith/2408"
       ],
-      "google_keyword": "katie smith bio",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "katie smith olympics",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

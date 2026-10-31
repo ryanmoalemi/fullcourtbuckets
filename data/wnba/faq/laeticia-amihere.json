@@ -1,104 +1,127 @@
 {
   "slug": "laeticia-amihere",
   "player_name": "Laeticia Amihere",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "What are Laeticia Amihere's stats / points per game?",
-      "answer": "In the 2026 regular season, Laeticia Amihere averaged 4.0 points, 3.1 rebounds, and 1.0 assists in 37 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
+      "question": "What are Laeticia Amihere's stats?",
+      "answer": "In the 2026 regular season, Laeticia Amihere averaged 3.9 points, 3.0 rebounds, and 1.0 assists in 39 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "laeticia amihere stats",
-      "approx_monthly_volume": 50
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/laeticia-amihere/"
+      ],
+      "queries": [
+        {
+          "q": "laeticia amihere stats",
+          "vol": 50
+        }
+      ]
     },
     {
-      "question": "How much does Laeticia Amihere make?",
-      "answer": "A precise public salary or net worth figure for Laeticia Amihere is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What WNBA team does Laeticia Amihere play for?",
+      "answer": "Laeticia Amihere plays for the Golden State Valkyries, who signed her on April 16, 2025. She spent her first two WNBA seasons with the Atlanta Dream.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio",
+        "https://fullcourtbuckets.com/wnba/laeticia-amihere/"
       ],
-      "google_keyword": "laeticia amihere salary",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "laeticia amihere valkyries",
+          "vol": 20
+        },
+        {
+          "q": "laeticia amihere wnba",
+          "vol": 10
+        },
+        {
+          "q": "laeticia amihere wnba signing",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Laeticia Amihere?",
-      "answer": "Laeticia Amihere is listed at 6' 3\".",
+      "answer": "The WNBA lists Laeticia Amihere at 6 feet 3 inches and 185 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio"
       ],
-      "google_keyword": "laeticia amihere height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Laeticia Amihere's jersey number?",
-      "answer": "Laeticia Amihere wears number 3 for the Golden State Valkyries.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "laeticia amihere jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Laeticia Amihere's contract?",
-      "answer": "Contract length and guarantees for Laeticia Amihere are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "laeticia amihere contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Laeticia Amihere attend?",
-      "answer": "Amihere played college basketball at the South Carolina Gamecocks.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
-      ],
-      "google_keyword": "laeticia amihere south carolina",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "laeticia amihere height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "When was Laeticia Amihere drafted?",
-      "answer": "She was drafted eighth overall by the Atlanta Dream in the 2023 WNBA draft.",
-      "answer_kind": "researched",
+      "answer": "The Atlanta Dream drafted Laeticia Amihere eighth overall in the first round of the 2023 WNBA Draft.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio"
       ],
-      "google_keyword": "laeticia amihere wnba draft",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "laeticia amihere wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "laeticia amihere draft",
+          "vol": 10
+        },
+        {
+          "q": "laeticia amihere draft pick",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Laeticia Amihere injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "laeticia amihere injury",
-      "approx_monthly_volume": 10
+      "question": "Did Laeticia Amihere play in the Olympics?",
+      "answer": "Yes. Laeticia Amihere played for Canada at the 2020 Tokyo Olympics while still at South Carolina, the first Gamecock women's basketball player to compete in an Olympics during her college career. She also played for Canada at the 2022 FIBA World Cup.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio"
+      ],
+      "queries": [
+        {
+          "q": "laeticia amihere olympics",
+          "vol": 10
+        },
+        {
+          "q": "laeticia amihere team canada",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who are Laeticia Amihere's parents?",
-      "answer": "Public profiles share limited verified detail about Laeticia Amihere's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "Where did Laeticia Amihere play college basketball?",
+      "answer": "Laeticia Amihere played at South Carolina, which reached three NCAA Final Fours during her time there and won the 2022 national championship.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio"
       ],
-      "google_keyword": "laeticia amihere parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "laeticia amihere south carolina",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Laeticia Amihere?",
-      "answer": "Laeticia Amihere was born July 10, 2001 in Mississauga. As of late 2026 that puts her at 25 years old.",
-      "answer_kind": "researched",
+      "answer": "Laeticia Amihere was born July 10, 2001.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Laeticia_Amihere"
+        "https://www.wnba.com/player/1641656/laeticia-amihere/bio"
       ],
-      "google_keyword": "laeticia amihere age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2001-07-10"
+      "queries": [
+        {
+          "q": "laeticia amihere age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

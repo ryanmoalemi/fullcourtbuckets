@@ -1,86 +1,98 @@
 {
   "slug": "indya-nivar",
   "player_name": "Indya Nivar",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "What are Indya Nivar's stats / points per game?",
-      "answer": "In the 2026 regular season, Indya Nivar averaged 0.8 points, 0.8 rebounds, and 0.3 assists in 20 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Indya Nivar's stats?",
+      "answer": "In the 2026 regular season, Indya Nivar averaged 1.0 points, 0.8 rebounds, and 0.3 assists in 23 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "indya nivar stats",
-      "approx_monthly_volume": 70
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/indya-nivar/"
+      ],
+      "queries": [
+        {
+          "q": "indya nivar stats",
+          "vol": 70
+        }
+      ]
+    },
+    {
+      "question": "Where did Indya Nivar play college basketball?",
+      "answer": "Indya Nivar began at Stanford, playing all 35 games as a freshman, then transferred to North Carolina and played all 102 games over three seasons. As a senior in 2025-26 she averaged 10.6 points, 5.2 rebounds, 3.7 assists and 2.7 steals and made the All-ACC Second Team and All-ACC Defensive Team.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643469/indya-nivar/bio"
+      ],
+      "queries": [
+        {
+          "q": "indya nivar unc",
+          "vol": 30
+        },
+        {
+          "q": "indya nivar stanford",
+          "vol": 10
+        },
+        {
+          "q": "indya nivar transfer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What WNBA team does Indya Nivar play for?",
+      "answer": "Indya Nivar plays for the Atlanta Dream, who selected her in the second round of the 2026 WNBA Draft.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643469/indya-nivar/bio"
+      ],
+      "queries": [
+        {
+          "q": "indya nivar wnba",
+          "vol": 30
+        },
+        {
+          "q": "indya nivar atlanta dream",
+          "vol": 20
+        },
+        {
+          "q": "indya nivar draft",
+          "vol": 10
+        },
+        {
+          "q": "indya nivar wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Indya Nivar?",
-      "answer": "Indya Nivar is listed at 5' 10\".",
+      "answer": "The WNBA lists Indya Nivar at 5 feet 10 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Indya_Nivar"
+        "https://www.wnba.com/player/1643469/indya-nivar/bio"
       ],
-      "google_keyword": "indya nivar height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Indya Nivar's contract?",
-      "answer": "Contract length and guarantees for Indya Nivar are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "indya nivar contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Indya Nivar attend?",
-      "answer": "Nivar played college basketball at the Stanford Cardinal and the North Carolina Tar Heels.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Indya_Nivar"
-      ],
-      "google_keyword": "indya nivar stanford",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Indya Nivar's nationality?",
-      "answer": "Indya Nivar is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Indya_Nivar"
-      ],
-      "google_keyword": "indya nivar parents nationality",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Indya Nivar injured?",
-      "answer": "Injury status changes during the season. Check the latest Atlanta Dream reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "indya nivar injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Indya Nivar's parents?",
-      "answer": "Public profiles share limited verified detail about Indya Nivar's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Indya_Nivar"
-      ],
-      "google_keyword": "indya nivar parents",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "indya nivar height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Indya Nivar?",
-      "answer": "Indya Nivar was born January 16, 2004. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Indya Nivar was born January 16, 2004.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Indya_Nivar"
+        "https://www.wnba.com/player/1643469/indya-nivar/bio"
       ],
-      "google_keyword": "indya nivar age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2004-01-16"
+      "queries": [
+        {
+          "q": "indya nivar age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

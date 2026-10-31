@@ -1,120 +1,164 @@
 {
   "slug": "aubrey-griffin",
   "player_name": "Aubrey Griffin",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Oct 31, 2026",
+  "verified_at": "2026-10-31",
   "items": [
     {
-      "question": "What are Aubrey Griffin's stats / points per game?",
-      "answer": "In the 2026 regular season, Aubrey Griffin averaged 0.5 points, 0.3 rebounds, and 0.0 assists in 4 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aubrey griffin stats",
-      "approx_monthly_volume": 20
+      "question": "What WNBA team is Aubrey Griffin on?",
+      "answer": "Aubrey Griffin's most recent WNBA team was the New York Liberty, who signed her to a hardship contract on May 8, 2026. She made her WNBA debut that night and played four games before New York waived her on May 19, 2026. The Minnesota Lynx drafted her in 2025 and signed her to a rookie scale contract in April 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/new-york-liberty-sign-aubrey-griffin-and-julie-vanloo/n-6359075",
+        "https://www.usbasket.com/WNBA/news/991336/Liberty-waives-Aubrey-Griffin",
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-six/n-6348012"
+      ],
+      "queries": [
+        {
+          "q": "aubrey griffin wnba",
+          "vol": 210
+        },
+        {
+          "q": "is aubrey griffin in the wnba",
+          "vol": 40
+        },
+        {
+          "q": "is aubrey griffin still in the wnba",
+          "vol": 40
+        },
+        {
+          "q": "what team is aubrey griffin on",
+          "vol": 30
+        },
+        {
+          "q": "is aubrey griffin still on the lynx",
+          "vol": 20
+        },
+        {
+          "q": "who does aubrey griffin play for",
+          "vol": 10
+        },
+        {
+          "q": "aubrey griffin team",
+          "vol": 10
+        },
+        {
+          "q": "aubrey griffin wnba team",
+          "vol": 10
+        },
+        {
+          "q": "is aubrey griffin still on the minnesota lynx",
+          "vol": 10
+        },
+        {
+          "q": "is aubrey griffin on the lynx",
+          "vol": 10
+        },
+        {
+          "q": "aubrey griffin minnesota",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How tall is Aubrey Griffin?",
-      "answer": "Aubrey Griffin is listed at 6' 1\".",
-      "answer_kind": "bio",
+      "question": "Where did Aubrey Griffin play college basketball?",
+      "answer": "Aubrey Griffin played five seasons at UConn, from 2019 to 2025, averaging 7.8 points and 5.4 rebounds in 126 games. She won the 2025 national championship with the Huskies and tied Rebecca Lobo's UConn record for consecutive made field goals in a game by shooting 11 for 11 on December 8, 2022.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
+        "https://www.oursportscentral.com/services/releases/new-york-liberty-sign-aubrey-griffin-and-julie-vanloo/n-6359075"
       ],
-      "google_keyword": "aubrey griffin height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "aubrey griffin uconn",
+          "vol": 40
+        },
+        {
+          "q": "when did aubrey griffin join uconn",
+          "vol": 10
+        },
+        {
+          "q": "uconn women's basketball aubrey griffin",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Aubrey Griffin?",
-      "answer": "Public profiles list Aubrey Griffin as born in 2001. As of late 2026 that puts her around 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
-      ],
-      "google_keyword": "aubrey griffin age",
-      "approx_monthly_volume": 30,
-      "birthdate": "2001-01-01"
-    },
-    {
-      "question": "Is Aubrey Griffin married?",
-      "answer": "There is no widely reported public record of Aubrey Griffin being married as of late 2026.",
+      "answer": "Aubrey Griffin was born November 6, 2001. She is from Ossining, New York.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
+        "https://www.wnba.com/player/1642826/aubrey-griffin/bio",
+        "https://www.oursportscentral.com/services/releases/new-york-liberty-sign-aubrey-griffin-and-julie-vanloo/n-6359075"
       ],
-      "google_keyword": "aubrey griffin wife",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "aubrey griffin age",
+          "vol": 30
+        },
+        {
+          "q": "how old is aubrey griffin",
+          "vol": 30
+        },
+        {
+          "q": "aubrey griffin birthday",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Aubrey Griffin play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 22. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "what team is aubrey griffin on",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What college did Aubrey Griffin attend?",
-      "answer": "Griffin played college basketball at UConn.",
+      "question": "How tall is Aubrey Griffin?",
+      "answer": "The WNBA lists Aubrey Griffin at 6 feet 1 inch and 160 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
+        "https://www.wnba.com/player/1642826/aubrey-griffin/bio"
       ],
-      "google_keyword": "aubrey griffin uconn",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "aubrey griffin height",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Is Aubrey Griffin injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "aubrey griffin injury",
-      "approx_monthly_volume": 20
+      "question": "What are Aubrey Griffin's stats?",
+      "answer": "In the 2026 regular season, Aubrey Griffin averaged 0.5 points, 0.3 rebounds, and 0.0 assists in 4 games for the New York Liberty.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/aubrey-griffin/"
+      ],
+      "queries": [
+        {
+          "q": "aubrey griffin stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who are Aubrey Griffin's parents?",
-      "answer": "Public profiles share limited verified detail about Aubrey Griffin's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Did Aubrey Griffin get drafted?",
+      "answer": "Yes. The Minnesota Lynx selected Aubrey Griffin in the third round, 37th overall, in the 2025 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
+        "https://www.wnba.com/player/1642826/aubrey-griffin/bio",
+        "https://www.oursportscentral.com/services/releases/new-york-liberty-sign-aubrey-griffin-and-julie-vanloo/n-6359075"
       ],
-      "google_keyword": "aubrey griffin mom",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Aubrey Griffin?",
-      "answer": "Aubrey Griffin is an American professional basketball player who most recently played for the New York Liberty of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
-      ],
-      "google_keyword": "aubrey griffin wikipedia",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Aubrey Griffin's jersey number?",
-      "answer": "Aubrey Griffin wears number 22 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aubrey griffin",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "What position does Aubrey Griffin play?",
-      "answer": "Aubrey Griffin is listed as a F for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "aubrey griffin",
-      "approx_monthly_volume": 3600
-    },
-    {
-      "question": "What is Aubrey Griffin's nationality?",
-      "answer": "Aubrey Griffin is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Aubrey_Griffin"
-      ],
-      "google_keyword": "aubrey griffin",
-      "approx_monthly_volume": 3600
+      "queries": [
+        {
+          "q": "did aubrey griffin get drafted",
+          "vol": 10
+        },
+        {
+          "q": "what team did aubrey griffin get drafted to",
+          "vol": 10
+        },
+        {
+          "q": "aubrey griffin draft",
+          "vol": 10
+        },
+        {
+          "q": "aubrey griffin wnba draft",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
