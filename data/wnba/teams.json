@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-31T11:27:41+00:00",
+  "checked_at": "2026-10-31T16:47:46+00:00",
   "teams": [
     {
       "id": 34,
@@ -16,14 +16,6 @@
       "city": "Team Spoon",
       "name": "TEAM SPOON",
       "conference": null
-    },
-    {
-      "id": 4,
-      "full_name": "Atlanta Dream",
-      "abbreviation": "ATL",
-      "city": "Atlanta",
-      "name": "Dream",
-      "conference": "Eastern Conference"
     },
     {
       "id": 14,
@@ -154,6 +146,30 @@
       "conference": null
     },
     {
+      "id": 32,
+      "full_name": "TBD",
+      "abbreviation": "TBD",
+      "city": "TBD",
+      "name": "TBD",
+      "conference": null
+    },
+    {
+      "id": 33,
+      "full_name": "TBD",
+      "abbreviation": "TBD",
+      "city": "TBD",
+      "name": "TBD",
+      "conference": null
+    },
+    {
+      "id": 4,
+      "full_name": "Atlanta Dream",
+      "abbreviation": "ATL",
+      "city": "Atlanta",
+      "name": "Dream",
+      "conference": "Eastern Conference"
+    },
+    {
       "id": 6,
       "full_name": "Chicago Sky",
       "abbreviation": "CHI",
@@ -170,20 +186,20 @@
       "conference": "Eastern Conference"
     },
     {
-      "id": 32,
-      "full_name": "TBD",
-      "abbreviation": "TBD",
-      "city": "TBD",
-      "name": "TBD",
-      "conference": null
+      "id": 11,
+      "full_name": "Dallas Wings",
+      "abbreviation": "DAL",
+      "city": "Dallas",
+      "name": "Wings",
+      "conference": "Western Conference"
     },
     {
-      "id": 33,
-      "full_name": "TBD",
-      "abbreviation": "TBD",
-      "city": "TBD",
-      "name": "TBD",
-      "conference": null
+      "id": 13,
+      "full_name": "Golden State Valkyries",
+      "abbreviation": "GS",
+      "city": "Golden State",
+      "name": "Valkyries",
+      "conference": "Western Conference"
     },
     {
       "id": 3,
@@ -256,22 +272,6 @@
       "city": "Toronto",
       "name": "Tempo",
       "conference": null
-    },
-    {
-      "id": 11,
-      "full_name": "Dallas Wings",
-      "abbreviation": "DAL",
-      "city": "Dallas",
-      "name": "Wings",
-      "conference": "Western Conference"
-    },
-    {
-      "id": 13,
-      "full_name": "Golden State Valkyries",
-      "abbreviation": "GS",
-      "city": "Golden State",
-      "name": "Valkyries",
-      "conference": "Western Conference"
     },
     {
       "id": 5,
