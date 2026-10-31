@@ -671,6 +671,12 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     social = meta.get('social_title') or title
     description = article.get('description') or ''
     when = links._format_date(article['date'])
+    stamp = article['date']
+    # A date-only `updated` value is the visible byline date. Timestamp notes on other posts stay unused.
+    updated_raw = str(meta.get('updated') or '').strip()
+    if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated_raw):
+        when = 'Updated ' + links._format_date(updated_raw)
+        stamp = updated_raw
     body = body_html(markdown)
     if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
@@ -686,7 +692,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         '<span class="divider"></span><span>Full Court Buckets</span></div>'
         f'<h1>{esc(title)}</h1>'
         f'<div class="byline-row">{links.BYLINE_HTML}'
-        f'<time class="article-date" datetime="{esc(article["date"])}">{esc(when)}</time></div>'
+        f'<time class="article-date" datetime="{esc(stamp)}">{esc(when)}</time></div>'
         f'{archive_note_html(meta)}{top_link_html(meta)}{figure_html(article, meta)}{body}{how}'
         '<p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p>'
         '</article>'
