@@ -219,13 +219,28 @@ def _publish_date(article):
     return dt.date.fromisoformat(raw)
 
 
-def _game_date(article, article_html):
-    """Earliest dated day in the body on or after the publish date.
+def _explicit_game_date(article):
+    """gameDate from articles.json (front matter game_date). None when unset or invalid."""
+    raw = str((article or {}).get('gameDate') or (article or {}).get('game_date') or '').strip()
+    if not raw:
+        return None
+    try:
+        return dt.date.fromisoformat(raw[:10])
+    except ValueError:
+        return None
 
-    A preview is written for a game that has not been played, so that day is
-    the game date. Photo captions from earlier months stay behind the publish
-    date and drop out.
+
+def _game_date(article, article_html):
+    """The day this preview is about.
+
+    An explicit gameDate is the event. An earlier date in the body, such as the
+    previous game, does not count. Without that field, the game date is the
+    earliest dated day in the body on or after the publish date. Photo captions
+    from earlier months stay behind the publish date and drop out.
     """
+    explicit = _explicit_game_date(article)
+    if explicit is not None:
+        return explicit
     publish = _publish_date(article)
     candidates = [day for day in _body_dates(article_html, publish.year) if day >= publish]
     return min(candidates) if candidates else None
@@ -443,3 +458,18 @@ class EditorialStyleTests(unittest.TestCase):
         ]
         from_metadata = check_article(via_metadata, unlinked, today=dt.date(2026, 10, 10))
         self.assertFalse(any('archive note' in problem for problem in from_metadata), from_metadata)
+
+    def test_explicit_game_date_is_the_event_not_an_earlier_body_date(self):
+        """Game 7's preview mentions Game 6 on Oct. 29. The event is Oct. 31."""
+        html = '<article class="article"><p>Data through Oct. 29, 2026. Tip is Oct. 31, 2026.</p></article>'
+        inferred = {'slug': 'sample-preview', 'date': '2026-10-29'}
+        self.assertEqual(_game_date(inferred, html), dt.date(2026, 10, 29))
+        named = dict(inferred, gameDate='2026-10-31')
+        self.assertEqual(_game_date(named, html), dt.date(2026, 10, 31))
+        article = next(item for item in _articles() if item['slug'] == 'finals-game-7-preview-dream-valkyries')
+        page = (ROOT / 'news' / article['slug'] / 'index.html').read_text(encoding='utf-8')
+        self.assertEqual(article.get('gameDate'), '2026-10-31')
+        self.assertEqual(_game_date(article, _article_html(page)), dt.date(2026, 10, 31))
+        on_tip_day = check_article(article, page, today=dt.date(2026, 10, 31))
+        self.assertFalse(any('archive note' in problem for problem in on_tip_day), on_tip_day)
+        self.assertNotIn(ARCHIVE_SENTENCE, _visible(_article_html(page)))

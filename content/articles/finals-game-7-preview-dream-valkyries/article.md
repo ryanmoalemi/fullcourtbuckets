@@ -3,6 +3,7 @@ title: "WNBA Finals Game 7: Atlanta's shooting vs. Golden State's defense"
 seo_title: "Game 7: Atlanta's shooting vs. defense"
 slug: finals-game-7-preview-dream-valkyries
 date: 2026-10-29
+game_date: 2026-10-31
 updated: "2026-10-31 2:25 PT"
 description: "Atlanta is plus-33, 437-404, with the WNBA Finals tied 3-3. Tipoff is 5 p.m. PT on Oct. 31 at Chase Center. TV: USA Network and CNBC. Streaming: Peacock."
 category: news

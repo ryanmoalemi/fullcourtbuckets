@@ -460,6 +460,14 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
         article['gameId'] = str(meta['game_id']).strip()
     if str(meta.get('preview_game_id') or '').strip():  # rail 'Next' links this preview before tip
         article['previewGameId'] = str(meta['preview_game_id']).strip()
+    # The event day for a preview. Body copy can mention an earlier game.
+    game_day = str(meta.get('game_date') or '').strip()[:10]
+    if game_day:
+        try:
+            date.fromisoformat(game_day)
+        except ValueError:
+            raise SystemExit(f'{slug}: game_date {game_day!r} is not YYYY-MM-DD')
+        article['gameDate'] = game_day
     return article
 
 
