@@ -2497,6 +2497,166 @@
       "license_url": "https://creativecommons.org/licenses/by/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-10-30: edges checked at 200% on dark and light backgrounds"
+    },
+    "ivory-latta": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ivory_Latta_cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "katie-douglas": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Katie_Douglas_54.jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "kara-lawson": {
+      "author": "Ailura",
+      "file_url": "https://commons.wikimedia.org/wiki/File:20260904_WBWC_USA_CHN_9768.jpg",
+      "license": "CC BY-SA 3.0 AT",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "candice-wiggins": {
+      "author": "Danny Karwoski",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Candice_Wiggins_at_2_August_2015_game_cropped.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "noelle-quinn": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:NoelleQuinn_Storm_HeadCoach.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "michelle-snow": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Michelle_Snow_WNBA.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "mistie-mccray-bass": {
+      "author": "Caroline Léna Becker",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Mistie_Bass.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "lynetta-kizer": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kizer-20180520.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "shay-murphy": {
+      "author": "Клеткин",
+      "file_url": "https://commons.wikimedia.org/wiki/File:%D0%AD%D1%88%D0%B0%D1%8F_%D0%9C%D1%91%D1%80%D1%84%D0%B8.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "dominique-canty": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Dominique_Canty_WNBA.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelly-miller": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelly_Miller_WNBA.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "shey-peddy": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Shey_Peddy_1_%C3%87anakkale_Belediyespor_20251108_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "sydney-colson": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:2_Sydney_Colson_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "devereaux-peters": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Devereaux_Peters_03.JPG",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "ruth-riley": {
+      "author": "Dave Hogg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ruth_Riley.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "astou-ndour-fall": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Astou_Ndour_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "krystal-thomas": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Thomas-20170914.jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "jordan-hooper": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Hooper-20180512.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "yvonne-turner": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Yvonne_Turner_22_Hungary_20260904_(1).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
+    },
+    "kristy-wallace": {
+      "author": "Hawkeye7",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kristy_Wallace_(1).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-10-31: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
