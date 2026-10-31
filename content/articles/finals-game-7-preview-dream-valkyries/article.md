@@ -129,6 +129,22 @@ Howard's point totals are 16, 21 and 5 in the wins, and 12, 19 and 20 in the los
 
 **219-192.** Atlanta has outscored Golden State by 27 points after halftime. Golden State won the second half in Games 1 (26-25), 5 (39-33) and 6 (43-34). It won Games 1 and 5 but lost Game 6 after trailing 46-26 at halftime. Atlanta won the other three second halves.
 
+#### Get one three from Reese
+
+**16-0.** The Dream are undefeated this season when Angel Reese makes at least one 3-pointer, 9-0 in the regular season and 7-0 in the playoffs after she hit two in Game 6, according to [CBS Sports](https://www.cbssports.com/wnba/news/angel-reese-atlanta-dream-rebuilt-3-point-shot-karl-smesko/) and [High Post Hoops](https://highposthoops.com/angel-reese-s-3-point-shooting-continues-to-be-an-indicator-dream-success). She went 2 of 8 from three on Thursday. The streak is a 2026 Atlanta number, not a career mark, and it follows the shot she rebuilt with coach Karl Smesko after joining the Dream ([CBS Sports](https://www.cbssports.com/wnba/news/angel-reese-atlanta-dream-rebuilt-3-point-shot-karl-smesko/)).
+
+#### Play with pace and space
+
+Golden State's defense is built on contesting shots. A USA Today Sports breakdown on Sports Seriously's TikTok argued Atlanta's answer is to push the pace and spread the floor so the Valkyries have to close out over longer distances instead of loading up on the ball.
+
+#### Bring the joy back
+
+Atlanta's celebrations disappeared in the Game 4 and Game 5 losses and came back in Game 6. The same Sports Seriously breakdown pointed to that energy as part of how the Dream play their best basketball.
+
+#### Play through the contact
+
+Game 7 will be physical. The Dream can't wait on the whistle. The Sports Seriously key was simple: keep playing through the bumps and finish the play.
+
 ### Golden State Valkyries
 
 !photo: /images/articles/finals-game-7-preview-dream-valkyries/kiah-stokes.jpg | Kiah Stokes of the Golden State Valkyries jogging in a black Valkyries warmup shirt before a game | Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Kiah_Stokes_2026.jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 25%
