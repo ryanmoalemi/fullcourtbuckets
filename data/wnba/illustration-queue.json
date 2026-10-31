@@ -303,15 +303,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 404,
-      "slug": "astou-ndour-fall",
-      "player_name": "Astou Ndour-Fall",
-      "listed_active": false,
-      "profile_path": "/wnba/astou-ndour-fall/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 325,
       "slug": "avery-warley-talbert",
       "player_name": "Avery Warley-Talbert",
@@ -425,15 +416,6 @@
       "player_name": "Camille Little",
       "listed_active": false,
       "profile_path": "/wnba/camille-little/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 182,
-      "slug": "candice-wiggins",
-      "player_name": "Candice Wiggins",
-      "listed_active": false,
-      "profile_path": "/wnba/candice-wiggins/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -645,29 +627,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 326,
-      "slug": "devereaux-peters",
-      "player_name": "Devereaux Peters",
-      "listed_active": false,
-      "profile_path": "/wnba/devereaux-peters/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 616,
       "slug": "didi-richards",
       "player_name": "DiDi Richards",
       "listed_active": false,
       "profile_path": "/wnba/didi-richards/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 153,
-      "slug": "dominique-canty",
-      "player_name": "Dominique Canty",
-      "listed_active": false,
-      "profile_path": "/wnba/dominique-canty/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -812,15 +776,6 @@
       "player_name": "Ivana Dojkic",
       "listed_active": false,
       "profile_path": "/wnba/ivana-dojkic/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 109,
-      "slug": "ivory-latta",
-      "player_name": "Ivory Latta",
-      "listed_active": false,
-      "profile_path": "/wnba/ivory-latta/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1059,15 +1014,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 392,
-      "slug": "jordan-hooper",
-      "player_name": "Jordan Hooper",
-      "listed_active": false,
-      "profile_path": "/wnba/jordan-hooper/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 369,
       "slug": "joslyn-tinkle",
       "player_name": "Joslyn Tinkle",
@@ -1122,15 +1068,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 90,
-      "slug": "kara-lawson",
-      "player_name": "Kara Lawson",
-      "listed_active": false,
-      "profile_path": "/wnba/kara-lawson/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 755,
       "slug": "kariata-diaby",
       "player_name": "Kariata Diaby",
@@ -1158,15 +1095,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 68,
-      "slug": "katie-douglas",
-      "player_name": "Katie Douglas",
-      "listed_active": false,
-      "profile_path": "/wnba/katie-douglas/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 289,
       "slug": "kayla-pedersen",
       "player_name": "Kayla Pedersen",
@@ -1190,15 +1118,6 @@
       "player_name": "Kelly Faris",
       "listed_active": false,
       "profile_path": "/wnba/kelly-faris/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 40,
-      "slug": "kelly-miller",
-      "player_name": "Kelly Miller",
-      "listed_active": false,
-      "profile_path": "/wnba/kelly-miller/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1262,24 +1181,6 @@
       "player_name": "Kristine Anigwe",
       "listed_active": false,
       "profile_path": "/wnba/kristine-anigwe/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 656,
-      "slug": "kristy-wallace",
-      "player_name": "Kristy Wallace",
-      "listed_active": false,
-      "profile_path": "/wnba/kristy-wallace/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 280,
-      "slug": "krystal-thomas",
-      "player_name": "Krystal Thomas",
-      "listed_active": false,
-      "profile_path": "/wnba/krystal-thomas/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1415,15 +1316,6 @@
       "player_name": "Lorela Cubaj",
       "listed_active": false,
       "profile_path": "/wnba/lorela-cubaj/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 321,
-      "slug": "lynetta-kizer",
-      "player_name": "Lynetta Kizer",
-      "listed_active": false,
-      "profile_path": "/wnba/lynetta-kizer/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1572,29 +1464,11 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 2,
-      "slug": "michelle-snow",
-      "player_name": "Michelle Snow",
-      "listed_active": false,
-      "profile_path": "/wnba/michelle-snow/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 601,
       "slug": "mikiah-herbert-harrigan",
       "player_name": "Mikiah Herbert Harrigan",
       "listed_active": false,
       "profile_path": "/wnba/mikiah-herbert-harrigan/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 7,
-      "slug": "mistie-mccray-bass",
-      "player_name": "Mistie McCray Bass",
-      "listed_active": false,
-      "profile_path": "/wnba/mistie-mccray-bass/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1716,15 +1590,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 177,
-      "slug": "noelle-quinn",
-      "player_name": "Noelle Quinn",
-      "listed_active": false,
-      "profile_path": "/wnba/noelle-quinn/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 717,
       "slug": "olivia-epoupa",
       "player_name": "Olivia Epoupa",
@@ -1838,15 +1703,6 @@
       "player_name": "Rui Machida",
       "listed_active": false,
       "profile_path": "/wnba/rui-machida/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 78,
-      "slug": "ruth-riley",
-      "player_name": "Ruth Riley",
-      "listed_active": false,
-      "profile_path": "/wnba/ruth-riley/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1968,15 +1824,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 180,
-      "slug": "shay-murphy",
-      "player_name": "Shay Murphy",
-      "listed_active": false,
-      "profile_path": "/wnba/shay-murphy/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 319,
       "slug": "shenise-johnson",
       "player_name": "Shenise Johnson",
@@ -1991,15 +1838,6 @@
       "player_name": "Sheri Sam",
       "listed_active": false,
       "profile_path": "/wnba/sheri-sam/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 577,
-      "slug": "shey-peddy",
-      "player_name": "Shey Peddy",
-      "listed_active": false,
-      "profile_path": "/wnba/shey-peddy/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -2081,15 +1919,6 @@
       "player_name": "Sydney Carter",
       "listed_active": false,
       "profile_path": "/wnba/sydney-carter/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 303,
-      "slug": "sydney-colson",
-      "player_name": "Sydney Colson",
-      "listed_active": false,
-      "profile_path": "/wnba/sydney-colson/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -2297,15 +2126,6 @@
       "player_name": "Yvonne Anderson",
       "listed_active": false,
       "profile_path": "/wnba/yvonne-anderson/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 505,
-      "slug": "yvonne-turner",
-      "player_name": "Yvonne Turner",
-      "listed_active": false,
-      "profile_path": "/wnba/yvonne-turner/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
