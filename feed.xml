@@ -5,13 +5,24 @@
     <link>https://fullcourtbuckets.com/</link>
     <description>Independent WNBA news and analysis</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 12:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 12:00:00 -0700</lastBuildDate>
     <atom:link href="https://fullcourtbuckets.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://fullcourtbuckets.com/logo.png</url>
       <title>Full Court Buckets</title>
       <link>https://fullcourtbuckets.com/</link>
     </image>
+    <item>
+      <title>Angel Reese's 78 Finals rebounds, ranked against every series since 2002</title>
+      <link>https://fullcourtbuckets.com/news/angel-reese-wnba-finals-rebound-record-data/</link>
+      <guid isPermaLink="true">https://fullcourtbuckets.com/news/angel-reese-wnba-finals-rebound-record-data/</guid>
+      <pubDate>Sat, 31 Oct 2026 12:00:00 -0700</pubDate>
+      <dc:creator>Ryan Moalemi</dc:creator>
+      <category>news</category>
+      <description>Angel Reese has 78 rebounds in the 2026 WNBA Finals, 3 more than Sylvia Fowles' 75 in 2017. Fowles had 5 games. Free CSV of every Finals series since 2002.</description>
+      <enclosure url="https://fullcourtbuckets.com/images/articles/angel-reese-wnba-finals-rebound-record-data/og-1200.jpg" length="111315" type="image/jpeg"/>
+      <media:content url="https://fullcourtbuckets.com/images/articles/angel-reese-wnba-finals-rebound-record-data/og-1200.jpg" medium="image" type="image/jpeg"/>
+    </item>
     <item>
       <title>WNBA Finals Game 7: Atlanta's shooting vs. Golden State's defense</title>
       <link>https://fullcourtbuckets.com/news/finals-game-7-preview-dream-valkyries/</link>
@@ -330,17 +341,6 @@
       <description>Three days after winning DPOY, Angel Reese had four steals from four Liberty players in a 92-82 Dream win.</description>
       <enclosure url="https://fullcourtbuckets.com/images/articles/angel-reese-game-1-liberty/og-1200.jpg" length="34995" type="image/jpeg"/>
       <media:content url="https://fullcourtbuckets.com/images/articles/angel-reese-game-1-liberty/og-1200.jpg" medium="image" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>10 women's college basketball cards and what their recorded sales tell us</title>
-      <link>https://fullcourtbuckets.com/news/top-10-womens-college-basketball-cards-to-collect-2026/</link>
-      <guid isPermaLink="true">https://fullcourtbuckets.com/news/top-10-womens-college-basketball-cards-to-collect-2026/</guid>
-      <pubDate>Sun, 04 Oct 2026 12:00:00 -0700</pubDate>
-      <dc:creator>Ryan Moalemi</dc:creator>
-      <category>Collecting</category>
-      <description>Women's college basketball cards to buy before the WNBA. JuJu Watkins' 1/1 sold for $24,404 at Goldin, Sep 26, 2026 PT. Others on this list sold under $30.</description>
-      <enclosure url="https://fullcourtbuckets.com/news/top-10-womens-college-basketball-cards-to-collect-2026/img/og-1200.jpg" length="91365" type="image/jpeg"/>
-      <media:content url="https://fullcourtbuckets.com/news/top-10-womens-college-basketball-cards-to-collect-2026/img/og-1200.jpg" medium="image" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
