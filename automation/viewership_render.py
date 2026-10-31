@@ -1929,7 +1929,8 @@ def csv_rows(payload: dict) -> list[dict]:
             rows.append(_csv_row(
                 f"audience-{row.get('date')}", row.get('date'), row['viewers'], 'viewers',
                 f"{event_type(row)}: {row.get('game')}", row.get('viewers_source') or '',
-                row.get('viewers_source_date') or '', checked, _csv_note(row['viewers']),
+                row.get('viewers_source_date') or '', checked,
+                _csv_note(row['viewers'], str(row.get('viewers_note') or '')),
             ))
         if core.is_number(row.get('peak_viewers')):
             rows.append(_csv_row(
@@ -1941,7 +1942,8 @@ def csv_rows(payload: dict) -> list[dict]:
             rows.append(_csv_row(
                 f"crowd-{row.get('date')}", row.get('date'), row['attendance'], 'fans',
                 row.get('game') or '', row.get('attendance_source') or '',
-                row.get('attendance_source_date') or '', checked, '',
+                row.get('attendance_source_date') or '', checked,
+                str(row.get('attendance_note') or ''),
             ))
     for row in core.home_rows(payload):
         rows.append(_csv_row(
