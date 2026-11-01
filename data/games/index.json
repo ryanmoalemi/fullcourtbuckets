@@ -425,17 +425,17 @@
       "matchup": "atl-at-gs",
       "away": "ATL",
       "home": "GS",
-      "away_score": 30,
-      "home_score": 24,
+      "away_score": 63,
+      "home_score": 68,
       "overtime": false,
-      "status": "live",
-      "source": null,
+      "status": "final",
+      "source": "wnba.com",
       "fallback": false,
       "crosscheck_matched": false,
-      "crosscheck_compared": false,
-      "mismatch_count": 0,
-      "plays": 180,
-      "plays_status": null
+      "crosscheck_compared": true,
+      "mismatch_count": 4,
+      "plays": 440,
+      "plays_status": "included"
     }
   ]
 }
