@@ -5,20 +5,20 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:52:39+00:00",
+ "checked_at": "2026-11-01T00:53:43+00:00",
  "period": 2,
- "clock": "3:14",
+ "clock": "2:58",
  "last_play_period": 2,
- "last_play_clock": "3:14",
+ "last_play_clock": "3:00",
  "away": {
   "abbreviation": "ATL",
-  "score": 23,
-  "feed_score": 23
+  "score": 24,
+  "feed_score": 24
  },
  "home": {
   "abbreviation": "GS",
-  "score": 17,
-  "feed_score": 17
+  "score": 20,
+  "feed_score": 20
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 11,
-   "home": 3
+   "away": 12,
+   "home": 6
   }
  ],
  "players": [],
@@ -1357,7 +1357,7 @@
   {
    "order": 111,
    "period": 2,
-   "clock": "6:26",
+   "clock": "6:27",
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 19,
@@ -1381,7 +1381,7 @@
   {
    "order": 113,
    "period": 2,
-   "clock": "6:17",
+   "clock": "6:18",
    "type": "Defensive Rebound",
    "text": "Kiah Stokes defensive rebound",
    "away_score": 19,
@@ -1826,12 +1826,36 @@
    "order": 150,
    "period": 2,
    "clock": "3:14",
-   "type": "No Foul",
-   "text": "Gabby Williams foul",
+   "type": "Shooting Foul",
+   "text": "Gabby Williams shooting foul",
    "away_score": 23,
    "home_score": 17,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 151,
+   "period": 2,
+   "clock": "3:14",
+   "type": "Free Throw - 1 of 1",
+   "text": "Jordin Canada makes free throw 1 of 1",
+   "away_score": 24,
+   "home_score": 17,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 152,
+   "period": 2,
+   "clock": "3:00",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton makes 24-foot three point jumper (Tiffany Hayes assists)",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 3,
    "team": "GS"
   }
  ]
