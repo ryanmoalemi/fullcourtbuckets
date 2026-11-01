@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:27:23+00:00",
+ "checked_at": "2026-11-01T00:27:57+00:00",
  "period": 1,
  "clock": "3:12",
  "last_play_period": 1,
- "last_play_clock": "3:30",
+ "last_play_clock": "3:01",
  "away": {
   "abbreviation": "ATL",
   "score": 7,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 8,
-  "feed_score": 8
+  "score": 10,
+  "feed_score": 10
  },
  "periods": [
   {
    "period": 1,
    "away": 7,
-   "home": 8
+   "home": 10
   }
  ],
  "players": [],
@@ -453,8 +453,8 @@
    "order": 36,
    "period": 1,
    "clock": "5:27",
-   "type": "Jump Shot",
-   "text": "Allisha Gray misses 25-foot three point jumper",
+   "type": "Step Back Jump Shot",
+   "text": "Allisha Gray misses 25-foot three point step back jumpshot",
    "away_score": 0,
    "home_score": 8,
    "scoring_play": false,
@@ -476,7 +476,7 @@
   {
    "order": 38,
    "period": 1,
-   "clock": "5:03",
+   "clock": "5:02",
    "type": "Step Back Jump Shot",
    "text": "Veronica Burton misses 25-foot three point step back jumpshot",
    "away_score": 0,
@@ -628,6 +628,54 @@
    "scoring_play": true,
    "score_value": 3,
    "team": "ATL"
+  },
+  {
+   "order": 51,
+   "period": 1,
+   "clock": "3:12",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 7,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 52,
+   "period": 1,
+   "clock": "3:12",
+   "type": "Substitution",
+   "text": "Kayla Thornton enters the game for Kiah Stokes",
+   "away_score": 7,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 53,
+   "period": 1,
+   "clock": "3:12",
+   "type": "Substitution",
+   "text": "Naz Hillmon enters the game for Angel Reese",
+   "away_score": 7,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 54,
+   "period": 1,
+   "clock": "3:01",
+   "type": "No Shot (Default Shot)",
+   "text": "Tiffany Hayes makes 3-foot shot (Veronica Burton assists)",
+   "away_score": 7,
+   "home_score": 10,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
