@@ -5,20 +5,20 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:59:01+00:00",
+ "checked_at": "2026-11-01T01:00:10+00:00",
  "period": 2,
- "clock": "2:15",
+ "clock": "50.2",
  "last_play_period": 2,
- "last_play_clock": "2:05",
+ "last_play_clock": "50.2",
  "away": {
   "abbreviation": "ATL",
-  "score": 25,
-  "feed_score": 25
+  "score": 30,
+  "feed_score": 30
  },
  "home": {
   "abbreviation": "GS",
-  "score": 20,
-  "feed_score": 20
+  "score": 24,
+  "feed_score": 24
  },
  "periods": [
   {
@@ -28,8 +28,8 @@
   },
   {
    "period": 2,
-   "away": 13,
-   "home": 6
+   "away": 18,
+   "home": 10
   }
  ],
  "players": [],
@@ -1155,7 +1155,7 @@
    "period": 2,
    "clock": "8:10",
    "type": "Lost Ball Turnover",
-   "text": "Cecilia Zandalasini lost ball turnover (Rhyne Howard steals)",
+   "text": "Veronica Burton lost ball turnover (Rhyne Howard steals)",
    "away_score": 17,
    "home_score": 14,
    "scoring_play": false,
@@ -1993,7 +1993,7 @@
   {
    "order": 164,
    "period": 2,
-   "clock": "2:05",
+   "clock": "2:06",
    "type": "Defensive Rebound",
    "text": "Rhyne Howard defensive rebound",
    "away_score": 25,
@@ -2001,6 +2001,102 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 165,
+   "period": 2,
+   "clock": "1:46",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 23-foot three point jumper",
+   "away_score": 25,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 166,
+   "period": 2,
+   "clock": "1:45",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 25,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 167,
+   "period": 2,
+   "clock": "1:43",
+   "type": "Layup Shot",
+   "text": "Naz Hillmon makes layup",
+   "away_score": 27,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 168,
+   "period": 2,
+   "clock": "1:21",
+   "type": "Driving Layup Shot",
+   "text": "Gabby Williams makes driving layup (Veronica Burton assists)",
+   "away_score": 27,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 169,
+   "period": 2,
+   "clock": "59.0",
+   "type": "Driving Layup Shot",
+   "text": "Kaila Charles blocks Rhyne Howard 's 5-foot driving layup",
+   "away_score": 27,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 170,
+   "period": 2,
+   "clock": "56.2",
+   "type": "Offensive Rebound",
+   "text": "Naz Hillmon offensive rebound",
+   "away_score": 27,
+   "home_score": 22,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 171,
+   "period": 2,
+   "clock": "55.2",
+   "type": "Jump Shot",
+   "text": "Jordin Canada makes 26-foot three point jumper (Naz Hillmon assists)",
+   "away_score": 30,
+   "home_score": 22,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 172,
+   "period": 2,
+   "clock": "50.2",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes makes driving layup (Veronica Burton assists)",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
   }
  ]
 }
