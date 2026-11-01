@@ -88,6 +88,20 @@ class TeamRevenuePageTests(unittest.TestCase):
         self.assertIn('id="ranking"', page)
         self.assertIn('id="same-12-teams"', page)
         self.assertLess(page.find('id="ranking"'), page.find('id="same-12-teams"'))
+        order = [
+            page.find('<h1>'),
+            page.find('class="byline-row'),
+            page.find('class="cite-sticky"'),
+            page.find('class="rev-rows"'),
+            page.find('class="audience-table revenue-table"'),
+            page.find('class="scale-list"'),
+            page.find('class="lede"'),
+            page.find('id="values"'),
+            page.find('id="same-12-teams"'),
+            page.find('id="methods"'),
+        ]
+        self.assertTrue(all(pos >= 0 for pos in order), order)
+        self.assertEqual(order, sorted(order))
         self.assertIn(revenue.LEDE, page)
         self.assertIn('Download the CSV', page)
         self.assertIn('View the Forbes source', page)
