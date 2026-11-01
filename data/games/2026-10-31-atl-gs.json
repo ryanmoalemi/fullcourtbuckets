@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:47:51+00:00",
+ "checked_at": "2026-11-01T00:49:58+00:00",
  "period": 2,
- "clock": "5:24",
+ "clock": "4:47",
  "last_play_period": 2,
- "last_play_clock": "5:24",
+ "last_play_clock": "4:55",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 14,
-  "feed_score": 14
+  "score": 16,
+  "feed_score": 16
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 9,
-   "home": 0
+   "home": 2
   }
  ],
  "players": [],
@@ -1526,8 +1526,8 @@
    "order": 125,
    "period": 2,
    "clock": "5:24",
-   "type": "No Shot (Default Shot)",
-   "text": "Jordin Canada makes 6-foot shot (Allisha Gray assists)",
+   "type": "Layup Shot",
+   "text": "Jordin Canada makes layup (Allisha Gray assists)",
    "away_score": 21,
    "home_score": 14,
    "scoring_play": true,
@@ -1581,6 +1581,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 130,
+   "period": 2,
+   "clock": "5:15",
+   "type": "Driving Floating Jump Shot",
+   "text": "Rhyne Howard misses driving floating jump shot",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 131,
+   "period": 2,
+   "clock": "5:13",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 132,
+   "period": 2,
+   "clock": "4:55",
+   "type": "Shooting Foul",
+   "text": "Allisha Gray shooting foul",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 133,
+   "period": 2,
+   "clock": "4:55",
+   "type": "Free Throw - 1 of 2",
+   "text": "Veronica Burton makes free throw 1 of 2",
+   "away_score": 21,
+   "home_score": 15,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 134,
+   "period": 2,
+   "clock": "4:55",
+   "type": "Free Throw - 2 of 2",
+   "text": "Veronica Burton makes free throw 2 of 2",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
   }
  ]
 }
