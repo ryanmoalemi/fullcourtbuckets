@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:50:31+00:00",
+ "checked_at": "2026-11-01T00:52:06+00:00",
  "period": 2,
- "clock": "4:20",
+ "clock": "3:14",
  "last_play_period": 2,
- "last_play_clock": "4:20",
+ "last_play_clock": "3:38",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -17,8 +17,8 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 16,
-  "feed_score": 16
+  "score": 17,
+  "feed_score": 17
  },
  "periods": [
   {
@@ -29,7 +29,7 @@
   {
    "period": 2,
    "away": 9,
-   "home": 2
+   "home": 3
   }
  ],
  "players": [],
@@ -1237,9 +1237,9 @@
   {
    "order": 101,
    "period": 2,
-   "clock": "7:14",
-   "type": "Driving Floating Jump Shot",
-   "text": "Jordin Canada misses driving floating jump shot",
+   "clock": "7:15",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Jordin Canada misses two point shot",
    "away_score": 17,
    "home_score": 14,
    "scoring_play": false,
@@ -1261,8 +1261,8 @@
   {
    "order": 103,
    "period": 2,
-   "clock": "6:53",
-   "type": "Running Finger Roll Layup",
+   "clock": "6:54",
+   "type": "Driving Finger Roll Layup",
    "text": "Veronica Burton misses two point shot",
    "away_score": 17,
    "home_score": 14,
@@ -1273,7 +1273,7 @@
   {
    "order": 104,
    "period": 2,
-   "clock": "6:51",
+   "clock": "6:52",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 17,
@@ -1682,13 +1682,109 @@
    "order": 138,
    "period": 2,
    "clock": "4:20",
-   "type": "No Foul",
-   "text": "foul",
+   "type": "Shooting Foul",
+   "text": "Angel Reese shooting foul",
    "away_score": 21,
    "home_score": 16,
    "scoring_play": false,
    "score_value": 0,
-   "team": null
+   "team": "ATL"
+  },
+  {
+   "order": 139,
+   "period": 2,
+   "clock": "4:20",
+   "type": "Free Throw - 1 of 2",
+   "text": "Tiffany Hayes misses free throw 1 of 2",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 140,
+   "period": 2,
+   "clock": "4:20",
+   "type": "Offensive Rebound",
+   "text": "Golden State Valkyries offensive team rebound",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 141,
+   "period": 2,
+   "clock": "4:20",
+   "type": "Substitution",
+   "text": "DeWanna Bonner enters the game for Angel Reese",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 142,
+   "period": 2,
+   "clock": "4:20",
+   "type": "Free Throw - 2 of 2",
+   "text": "Tiffany Hayes makes free throw 2 of 2",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "GS"
+  },
+  {
+   "order": 143,
+   "period": 2,
+   "clock": "4:00",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 24-foot three point jumper",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 144,
+   "period": 2,
+   "clock": "3:58",
+   "type": "Defensive Rebound",
+   "text": "Golden State Valkyries defensive team rebound",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 145,
+   "period": 2,
+   "clock": "3:42",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 24-foot three point jumper",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 146,
+   "period": 2,
+   "clock": "3:38",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
