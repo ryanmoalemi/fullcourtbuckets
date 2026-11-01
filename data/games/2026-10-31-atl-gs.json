@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:38:42+00:00",
+ "checked_at": "2026-11-01T00:39:15+00:00",
  "period": 2,
- "clock": "8:33",
+ "clock": "8:12",
  "last_play_period": 2,
- "last_play_clock": "8:34",
+ "last_play_clock": "8:12",
  "away": {
   "abbreviation": "ATL",
   "score": 17,
@@ -901,9 +901,9 @@
   {
    "order": 73,
    "period": 1,
-   "clock": "45.6",
-   "type": "Floating Jump Shot",
-   "text": "Veronica Burton makes 8-foot floating jump shot",
+   "clock": "45.7",
+   "type": "Driving Floating Jump Shot",
+   "text": "Veronica Burton makes 8-foot driving floating jump shot",
    "away_score": 11,
    "home_score": 12,
    "scoring_play": true,
@@ -1137,6 +1137,30 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "ATL"
+  },
+  {
+   "order": 93,
+   "period": 2,
+   "clock": "8:12",
+   "type": "Substitution",
+   "text": "Tiffany Hayes enters the game for Gabby Williams",
+   "away_score": 17,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 94,
+   "period": 2,
+   "clock": "8:12",
+   "type": "Substitution",
+   "text": "enters the game for Cecilia Zandalasini",
+   "away_score": 17,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
