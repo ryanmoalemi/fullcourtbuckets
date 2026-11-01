@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:30:09+00:00",
+ "checked_at": "2026-11-01T00:30:43+00:00",
  "period": 1,
  "clock": "1:07",
  "last_play_period": 1,
- "last_play_clock": "1:10",
+ "last_play_clock": "1:07",
  "away": {
   "abbreviation": "ATL",
   "score": 11,
@@ -536,9 +536,9 @@
   {
    "order": 43,
    "period": 1,
-   "clock": "4:15",
-   "type": "Driving Jump Shot Bank",
-   "text": "Gabby Williams misses 10-foot two point shot",
+   "clock": "4:17",
+   "type": "Driving Floating Bank Jump Shot",
+   "text": "Gabby Williams misses two point shot",
    "away_score": 2,
    "home_score": 8,
    "scoring_play": false,
@@ -873,13 +873,25 @@
    "order": 71,
    "period": 1,
    "clock": "1:10",
-   "type": "No Shot (Default Shot)",
-   "text": "Allisha Gray misses shot",
+   "type": "Jump Shot",
+   "text": "Allisha Gray misses 27-foot three point jumper",
    "away_score": 11,
    "home_score": 10,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 72,
+   "period": 1,
+   "clock": "1:07",
+   "type": "Defensive Rebound",
+   "text": "Golden State Valkyries defensive team rebound",
+   "away_score": 11,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
