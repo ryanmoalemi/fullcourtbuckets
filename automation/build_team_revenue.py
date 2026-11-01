@@ -652,14 +652,8 @@ def render_page(payload: dict) -> str:
 <p class="eyebrow">WNBA / Data and research</p>
 <h1>{esc(H1)}</h1>
 <div class="byline-row article">{byline_html()}<span class="byline-sep" aria-hidden="true">|</span><time class="article-date" datetime="2026-10-31">October 31, 2026</time></div>
-<p class="lede">{esc(LEDE)}</p>
 <section class="rev-hero" id="ranking" aria-labelledby="revenue-chart-title">
 {action_row()}
-<ul class="scale-list" aria-label="Scale of the 2025 revenue estimates">
-<li class="scale-card"><p class="scale-value">Nearly 5{TIMES}</p><p class="scale-label">Golden State versus Atlanta</p><p class="scale-meta">$78 million to $16 million</p></li>
-<li class="scale-card"><p class="scale-value">$28M</p><p class="scale-label">Four teams tied</p><p class="scale-meta">Dallas, Los Angeles, Phoenix, Seattle</p></li>
-<li class="scale-card scale-total"><p class="scale-value">$430M</p><p class="scale-label">Combined</p><p class="scale-meta">All 13 teams Forbes ranked</p></li>
-</ul>
 <div class="rev-stage">
 {revenue_chart(teams)}
 <div class="rev-table-col">
@@ -667,7 +661,13 @@ def render_page(payload: dict) -> str:
 <p class="note"><a href="/wnba/teams/portland-fire/">Portland</a> and <a href="/wnba/teams/toronto-tempo/">Toronto</a> began play in 2026 and fall outside this 2025 revenue dataset.</p>
 </div>
 </div>
+<ul class="scale-list" aria-label="Scale of the 2025 revenue estimates">
+<li class="scale-card"><p class="scale-value">Nearly 5{TIMES}</p><p class="scale-label">Golden State versus Atlanta</p><p class="scale-meta">$78 million to $16 million</p></li>
+<li class="scale-card"><p class="scale-value">$28M</p><p class="scale-label">Four teams tied</p><p class="scale-meta">Dallas, Los Angeles, Phoenix, Seattle</p></li>
+<li class="scale-card scale-total"><p class="scale-value">$430M</p><p class="scale-label">Combined</p><p class="scale-meta">All 13 teams Forbes ranked</p></li>
+</ul>
 </section>
+<p class="lede">{esc(LEDE)}</p>
 <div class="data-layout">
 <div class="data-nav"><nav class="contents-rail" aria-label="On this page"><p class="contents-label">On this page</p><ul>{nav}</ul></nav>
 <div class="on-page-mobile"><label for="on-this-page">On this page</label><select id="on-this-page"><option value="">On this page</option>{options}</select></div></div>
@@ -774,7 +774,7 @@ html{scroll-padding-top:128px}
 .standings-shell{width:min(1180px,calc(100% - 40px));margin:0 auto;min-width:0;max-width:100%}
 h1{margin:0 0 8px;font:800 clamp(36px,5vw,60px)/1.05 "Barlow",sans-serif;letter-spacing:-.6px;max-width:16em}
 .lede,.fold-body p,.fold-body li,.cite,.note,.how-made{overflow-wrap:anywhere}
-.lede{max-width:68ch;margin:0 0 18px;font-size:18px;line-height:1.55}
+.lede{max-width:68ch;margin:22px 0 0;font-size:18px;line-height:1.55}
 html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;margin:10px 0 16px;flex-wrap:wrap;background:transparent!important;border:0!important;box-shadow:none!important}
 .byline-sep{color:#6f6a64}
 .byline-row .article-date{font:600 15px/1.3 Inter,system-ui,sans-serif}
@@ -784,7 +784,7 @@ html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;marg
 .button.primary{background:#5b22c9!important;border:1px solid #5b22c9!important;color:#fff!important}
 .button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible{outline:2px solid #5b22c9;outline-offset:3px}
 .rev-hero{margin:8px 0 8px}
-.scale-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0 0 18px;padding:0;list-style:none}
+.scale-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 0;padding:0;list-style:none}
 .scale-card{margin:0;padding:16px 16px 14px;border:1px solid #e2ddd6;background:#fff;box-shadow:0 1px 3px rgba(40,20,80,.06)}
 .scale-total{border-top:4px solid #b8006f}
 .scale-value{margin:0;font:800 clamp(34px,4vw,52px)/.95 "Barlow",sans-serif;letter-spacing:-.6px;font-variant-numeric:tabular-nums}
