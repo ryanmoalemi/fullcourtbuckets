@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:44:32+00:00",
+ "checked_at": "2026-11-01T00:45:08+00:00",
  "period": 2,
- "clock": "6:26",
+ "clock": "5:56",
  "last_play_period": 2,
- "last_play_clock": "6:39",
+ "last_play_clock": "5:56",
  "away": {
   "abbreviation": "ATL",
   "score": 19,
@@ -1335,12 +1335,72 @@
    "period": 2,
    "clock": "6:39",
    "type": "Substitution",
-   "text": "enters the game for Jordin Canada",
+   "text": "Allisha Gray enters the game for Jordin Canada",
    "away_score": 19,
    "home_score": 14,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 110,
+   "period": 2,
+   "clock": "6:29",
+   "type": "Driving Layup Shot",
+   "text": "Tiffany Hayes misses driving layup",
+   "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 111,
+   "period": 2,
+   "clock": "6:26",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 112,
+   "period": 2,
+   "clock": "6:20",
+   "type": "Jump Shot",
+   "text": "DeWanna Bonner misses 28-foot three point jumper",
+   "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 113,
+   "period": 2,
+   "clock": "6:17",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 114,
+   "period": 2,
+   "clock": "5:56",
+   "type": "No Shot (Default Shot)",
+   "text": "Kaitlyn Chen misses shot",
+   "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
