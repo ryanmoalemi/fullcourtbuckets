@@ -429,12 +429,12 @@
       "home_score": 68,
       "overtime": false,
       "status": "final",
-      "source": "wnba.com",
+      "source": "balldontlie",
       "fallback": false,
       "crosscheck_matched": false,
       "crosscheck_compared": true,
-      "mismatch_count": 4,
-      "plays": 440,
+      "mismatch_count": 2,
+      "plays": 374,
       "plays_status": "included"
     }
   ]
