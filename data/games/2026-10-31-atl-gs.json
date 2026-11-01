@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:16:49+00:00",
+ "checked_at": "2026-11-01T00:17:22+00:00",
  "period": 1,
  "clock": "7:19",
  "last_play_period": 1,
- "last_play_clock": "7:19",
+ "last_play_clock": "7:14",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -225,13 +225,49 @@
    "order": 17,
    "period": 1,
    "clock": "7:19",
-   "type": "No Shot (Default Shot)",
-   "text": "Kiah Stokes blocks Jordin Canada 's 4-foot shot",
+   "type": "Reverse Layup Shot",
+   "text": "Kiah Stokes blocks Jordin Canada 's 4-foot reverse layup",
    "away_score": 0,
    "home_score": 2,
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 18,
+   "period": 1,
+   "clock": "7:19",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 19,
+   "period": 1,
+   "clock": "7:18",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 23-foot three point jumper",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 20,
+   "period": 1,
+   "clock": "7:14",
+   "type": "Defensive Rebound",
+   "text": "Veronica Burton defensive rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
