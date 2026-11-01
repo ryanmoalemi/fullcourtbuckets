@@ -112,7 +112,10 @@
         "ATL": 3
       },
       "tv": "USA Network and CNBC",
-      "stream": "Peacock"
+      "stream": "Peacock",
+      "preview": "/news/finals-game-7-preview-dream-valkyries/",
+      "recap": "/news/dream-valkyries-finals-game-7-recap/",
+      "game_json": "data/games/2026-10-31-atl-gs.json"
     }
   }
 }

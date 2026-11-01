@@ -1,0 +1,17 @@
+2026 WNBA Finals series trend
+Full Court Buckets. Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Game 7, Oct. 31, 2026.
+
+game: Finals game number. The 1-7 row is the series sum, not a single game.
+date: Game date. The 1-7 row is the span of the series.
+site: Arena.
+final_dream, final_valkyries: Points. The 1-7 row is the series point total.
+margin: Absolute final margin. The 1-7 row is Dream points minus Valkyries points (28).
+halftime_dream, halftime_valkyries: Score after two quarters. The 1-7 row counts how many games the halftime leader won (6 of 7) and how many the trailer won (1 of 7).
+halftime_leader_won: yes if the team ahead at halftime won the game.
+pace: Average of the two teams' estimated possessions. Possessions = FGA + 0.44 x FTA - offensive rebounds + turnovers. Player rebounds and player turnovers only. Regulation is 40 minutes, so pace is possessions per 40 minutes. The 1-7 pace is the average of the seven game paces' underlying possessions, (546.84 + 537.60) / 2 / 7 = 77.5.
+dream_fgm, dream_fga, dream_fg3m, dream_fg3a: Dream field goals and threes, makes then attempts.
+valkyries_fgm, valkyries_fga, valkyries_fg3m, valkyries_fg3a: Same for the Valkyries.
+scoring_leader, leader_team, leader_points: Player with the most points in that game. The 1-7 leader_points cell is Gabby Williams' series point total (137), not a single-game high.
+Games 1-6: Full Court Buckets game files, checked against official WNBA.com box scores.
+Game 7: official WNBA.com box score, https://www.wnba.com/game/atl-vs-gsv-1042600307/box-score

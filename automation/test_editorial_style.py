@@ -472,4 +472,7 @@ class EditorialStyleTests(unittest.TestCase):
         self.assertEqual(_game_date(article, _article_html(page)), dt.date(2026, 10, 31))
         on_tip_day = check_article(article, page, today=dt.date(2026, 10, 31))
         self.assertFalse(any('archive note' in problem for problem in on_tip_day), on_tip_day)
-        self.assertNotIn(ARCHIVE_SENTENCE, _visible(_article_html(page)))
+        # The recap is published. The note is required once the game date has passed.
+        self.assertIn(ARCHIVE_SENTENCE, _visible(_article_html(page)))
+        after = check_article(article, page, today=dt.date(2026, 11, 1))
+        self.assertFalse(any('archive note' in problem for problem in after), after)

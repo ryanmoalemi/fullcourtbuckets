@@ -20,7 +20,8 @@ license_url: "https://creativecommons.org/licenses/by-sa/2.0/"
 focal_y: "center 20%"
 top_link_text: "Follow the play-by-play: Dream at Valkyries, Game 7"
 top_link_url: "/wnba/finals/2026/game-7/play-by-play/"
-ticker: "Game 7: Atlanta's shooting vs. Golden State's defense. Sat 5 p.m. PT."
+ticker: "Valkyries 68, Dream 63. Golden State won the Finals 4-3."
+recap_url: "/news/dream-valkyries-finals-game-7-recap/"
 theme: halloween
 ---
 
