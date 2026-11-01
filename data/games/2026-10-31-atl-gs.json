@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:53:43+00:00",
+ "checked_at": "2026-11-01T00:54:17+00:00",
  "period": 2,
- "clock": "2:58",
+ "clock": "2:48",
  "last_play_period": 2,
- "last_play_clock": "3:00",
+ "last_play_clock": "2:48",
  "away": {
   "abbreviation": "ATL",
   "score": 24,
@@ -1394,8 +1394,8 @@
    "order": 114,
    "period": 2,
    "clock": "5:56",
-   "type": "Jump Shot",
-   "text": "Kaitlyn Chen misses 14-foot jumper",
+   "type": "Step Back Jump Shot",
+   "text": "Kaitlyn Chen misses 14-foot step back jumpshot",
    "away_score": 19,
    "home_score": 14,
    "scoring_play": false,
@@ -1856,6 +1856,18 @@
    "home_score": 20,
    "scoring_play": true,
    "score_value": 3,
+   "team": "GS"
+  },
+  {
+   "order": 153,
+   "period": 2,
+   "clock": "2:48",
+   "type": "No Foul",
+   "text": "Tiffany Hayes foul",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
