@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:24:45+00:00",
+ "checked_at": "2026-11-01T00:25:49+00:00",
  "period": 1,
- "clock": "5:00",
+ "clock": "4:05",
  "last_play_period": 1,
- "last_play_clock": "5:00",
+ "last_play_clock": "4:07",
  "away": {
   "abbreviation": "ATL",
-  "score": 0,
-  "feed_score": 0
+  "score": 4,
+  "feed_score": 4
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 0,
+   "away": 4,
    "home": 8
   }
  ],
@@ -495,6 +495,78 @@
    "home_score": 8,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 40,
+   "period": 1,
+   "clock": "4:47",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 24-foot three point jumper",
+   "away_score": 0,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 41,
+   "period": 1,
+   "clock": "4:43",
+   "type": "Offensive Rebound",
+   "text": "Angel Reese offensive rebound",
+   "away_score": 0,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 42,
+   "period": 1,
+   "clock": "4:40",
+   "type": "Layup Running Reverse",
+   "text": "Angel Reese makes two point shot",
+   "away_score": 2,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 43,
+   "period": 1,
+   "clock": "4:15",
+   "type": "Driving Jump Shot Bank",
+   "text": "Gabby Williams misses 9-foot two point shot",
+   "away_score": 2,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 44,
+   "period": 1,
+   "clock": "4:12",
+   "type": "Defensive Rebound",
+   "text": "Allisha Gray defensive rebound",
+   "away_score": 2,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 45,
+   "period": 1,
+   "clock": "4:07",
+   "type": "No Shot (Default Shot)",
+   "text": "Allisha Gray makes 5-foot shot",
+   "away_score": 4,
+   "home_score": 8,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "ATL"
   }
  ]
