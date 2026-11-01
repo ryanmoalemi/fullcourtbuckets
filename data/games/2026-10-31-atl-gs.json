@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:31:16+00:00",
+ "checked_at": "2026-11-01T00:31:49+00:00",
  "period": 1,
  "clock": "26.0",
  "last_play_period": 1,
- "last_play_clock": "45.6",
+ "last_play_clock": "26.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 11,
-  "feed_score": 11
+  "score": 12,
+  "feed_score": 12
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 11,
+   "away": 12,
    "home": 12
   }
  ],
@@ -608,7 +608,7 @@
   {
    "order": 49,
    "period": 1,
-   "clock": "3:39",
+   "clock": "3:40",
    "type": "Defensive Rebound",
    "text": "DeWanna Bonner defensive rebound",
    "away_score": 4,
@@ -904,6 +904,54 @@
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 74,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Shooting Foul",
+   "text": "Veronica Burton shooting foul",
+   "away_score": 11,
+   "home_score": 12,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 75,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Free Throw - 1 of 2",
+   "text": "Naz Hillmon makes free throw 1 of 2",
+   "away_score": 12,
+   "home_score": 12,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 76,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Substitution",
+   "text": "Jordin Canada enters the game for Rhyne Howard",
+   "away_score": 12,
+   "home_score": 12,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 77,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Substitution",
+   "text": "enters the game for Allisha Gray",
+   "away_score": 12,
+   "home_score": 12,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
