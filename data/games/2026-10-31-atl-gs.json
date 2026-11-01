@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:28:30+00:00",
+ "checked_at": "2026-11-01T00:29:34+00:00",
  "period": 1,
- "clock": "2:52",
+ "clock": "1:32",
  "last_play_period": 1,
- "last_play_clock": "2:29",
+ "last_play_clock": "1:46",
  "away": {
   "abbreviation": "ATL",
-  "score": 9,
-  "feed_score": 9
+  "score": 11,
+  "feed_score": 11
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 9,
+   "away": 11,
    "home": 10
   }
  ],
@@ -500,7 +500,7 @@
   {
    "order": 40,
    "period": 1,
-   "clock": "4:47",
+   "clock": "4:46",
    "type": "Jump Shot",
    "text": "Rhyne Howard misses 24-foot three point jumper",
    "away_score": 0,
@@ -708,6 +708,42 @@
    "type": "Defensive Rebound",
    "text": "Rhyne Howard defensive rebound",
    "away_score": 9,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 58,
+   "period": 1,
+   "clock": "2:16",
+   "type": "Turnaround Fade Away Jump Shot",
+   "text": "Rhyne Howard makes 10-foot two point shot",
+   "away_score": 11,
+   "home_score": 10,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 59,
+   "period": 1,
+   "clock": "1:48",
+   "type": "Driving Layup Shot",
+   "text": "Naz Hillmon blocks Kaila Charles 's 3-foot driving layup",
+   "away_score": 11,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 60,
+   "period": 1,
+   "clock": "1:46",
+   "type": "Defensive Rebound",
+   "text": "Jordin Canada defensive rebound",
+   "away_score": 11,
    "home_score": 10,
    "scoring_play": false,
    "score_value": 0,
