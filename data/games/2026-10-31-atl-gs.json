@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:54:50+00:00",
+ "checked_at": "2026-11-01T00:58:27+00:00",
  "period": 2,
- "clock": "2:48",
+ "clock": "2:32",
  "last_play_period": 2,
- "last_play_clock": "2:48",
+ "last_play_clock": "2:29",
  "away": {
   "abbreviation": "ATL",
-  "score": 24,
-  "feed_score": 24
+  "score": 25,
+  "feed_score": 25
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 12,
+   "away": 13,
    "home": 6
   }
  ],
@@ -1881,6 +1881,78 @@
    "scoring_play": false,
    "score_value": 0,
    "team": null
+  },
+  {
+   "order": 155,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Substitution",
+   "text": "Angel Reese enters the game for DeWanna Bonner",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 156,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Free Throw - 1 of 2",
+   "text": "Jordin Canada misses free throw 1 of 2",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 157,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 158,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Free Throw - 2 of 2",
+   "text": "Jordin Canada makes free throw 2 of 2",
+   "away_score": 25,
+   "home_score": 20,
+   "scoring_play": true,
+   "score_value": 1,
+   "team": "ATL"
+  },
+  {
+   "order": 159,
+   "period": 2,
+   "clock": "2:32",
+   "type": "Jump Shot",
+   "text": "Angel Reese blocks Tiffany Hayes 's 7-foot jumper",
+   "away_score": 25,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 160,
+   "period": 2,
+   "clock": "2:29",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 25,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
