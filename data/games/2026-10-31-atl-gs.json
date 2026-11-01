@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T01:01:48+00:00",
+ "checked_at": "2026-11-01T01:02:21+00:00",
  "period": 2,
  "clock": "0.0",
  "last_play_period": 2,
- "last_play_clock": "16.3",
+ "last_play_clock": "0.0",
  "away": {
   "abbreviation": "ATL",
   "score": 30,
@@ -1526,8 +1526,8 @@
    "order": 125,
    "period": 2,
    "clock": "5:24",
-   "type": "Layup Shot",
-   "text": "Jordin Canada makes layup (Allisha Gray assists)",
+   "type": "Floating Jump Shot",
+   "text": "Jordin Canada makes 6-foot floating jump shot (Allisha Gray assists)",
    "away_score": 21,
    "home_score": 14,
    "scoring_play": true,
@@ -1585,7 +1585,7 @@
   {
    "order": 130,
    "period": 2,
-   "clock": "5:15",
+   "clock": "5:16",
    "type": "Driving Floating Jump Shot",
    "text": "Rhyne Howard misses driving floating jump shot",
    "away_score": 21,
@@ -2157,6 +2157,42 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 178,
+   "period": 2,
+   "clock": "0.6",
+   "type": "Pullup Jump Shot",
+   "text": "Gabby Williams blocks Naz Hillmon 's 21-foot pullup jump shot",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 179,
+   "period": 2,
+   "clock": "0.6",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 180,
+   "period": 2,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 2nd Quarter",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
