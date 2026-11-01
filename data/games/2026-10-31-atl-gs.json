@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:30:43+00:00",
+ "checked_at": "2026-11-01T00:31:16+00:00",
  "period": 1,
- "clock": "1:07",
+ "clock": "26.0",
  "last_play_period": 1,
- "last_play_clock": "1:07",
+ "last_play_clock": "45.6",
  "away": {
   "abbreviation": "ATL",
   "score": 11,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 10,
-  "feed_score": 10
+  "score": 12,
+  "feed_score": 12
  },
  "periods": [
   {
    "period": 1,
    "away": 11,
-   "home": 10
+   "home": 12
   }
  ],
  "players": [],
@@ -548,7 +548,7 @@
   {
    "order": 44,
    "period": 1,
-   "clock": "4:12",
+   "clock": "4:14",
    "type": "Defensive Rebound",
    "text": "Allisha Gray defensive rebound",
    "away_score": 2,
@@ -584,7 +584,7 @@
   {
    "order": 47,
    "period": 1,
-   "clock": "3:47",
+   "clock": "3:49",
    "type": "Jumpball",
    "text": "Angel Reese vs. Tiffany Hayes (Veronica Burton gains possession)",
    "away_score": 4,
@@ -891,6 +891,18 @@
    "home_score": 10,
    "scoring_play": false,
    "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 73,
+   "period": 1,
+   "clock": "45.6",
+   "type": "Floating Jump Shot",
+   "text": "Veronica Burton makes 8-foot floating jump shot",
+   "away_score": 11,
+   "home_score": 12,
+   "scoring_play": true,
+   "score_value": 2,
    "team": "GS"
   }
  ]
