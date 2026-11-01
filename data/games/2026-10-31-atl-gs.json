@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:52:06+00:00",
+ "checked_at": "2026-11-01T00:52:39+00:00",
  "period": 2,
  "clock": "3:14",
  "last_play_period": 2,
- "last_play_clock": "3:38",
+ "last_play_clock": "3:14",
  "away": {
   "abbreviation": "ATL",
-  "score": 21,
-  "feed_score": 21
+  "score": 23,
+  "feed_score": 23
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 9,
+   "away": 11,
    "home": 3
   }
  ],
@@ -1785,6 +1785,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 147,
+   "period": 2,
+   "clock": "3:23",
+   "type": "Jump Shot",
+   "text": "Naz Hillmon misses 27-foot three point jumper",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 148,
+   "period": 2,
+   "clock": "3:20",
+   "type": "Offensive Rebound",
+   "text": "Jordin Canada offensive rebound",
+   "away_score": 21,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 149,
+   "period": 2,
+   "clock": "3:14",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup",
+   "away_score": 23,
+   "home_score": 17,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 150,
+   "period": 2,
+   "clock": "3:14",
+   "type": "No Foul",
+   "text": "Gabby Williams foul",
+   "away_score": 23,
+   "home_score": 17,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
