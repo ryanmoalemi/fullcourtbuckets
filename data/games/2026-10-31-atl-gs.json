@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T01:00:10+00:00",
+ "checked_at": "2026-11-01T01:01:14+00:00",
  "period": 2,
- "clock": "50.2",
+ "clock": "32.3",
  "last_play_period": 2,
- "last_play_clock": "50.2",
+ "last_play_clock": "32.3",
  "away": {
   "abbreviation": "ATL",
   "score": 30,
@@ -2096,6 +2096,42 @@
    "home_score": 24,
    "scoring_play": true,
    "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 173,
+   "period": 2,
+   "clock": "43.3",
+   "type": "Substitution",
+   "text": "Isobel Borlase enters the game for Rhyne Howard",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 174,
+   "period": 2,
+   "clock": "34.0",
+   "type": "Cutting Layup Shot",
+   "text": "Allisha Gray misses layup",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 175,
+   "period": 2,
+   "clock": "32.3",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 30,
+   "home_score": 24,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "GS"
   }
  ]
