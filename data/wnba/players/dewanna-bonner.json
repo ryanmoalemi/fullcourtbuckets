@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-01T01:34:32+00:00",
-  "stats_updated_at": "2026-11-01T02:47:48+00:00",
+  "checked_at": "2026-11-01T03:05:18+00:00",
+  "stats_updated_at": "2026-11-01T03:05:18+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -115,9 +115,9 @@
         "conference": "Eastern Conference"
       },
       "games_played": 12,
-      "min": 20.16,
+      "min": 20.17,
       "fgm": 2.58,
-      "fga": 6.41,
+      "fga": 6.42,
       "fg_pct": 40.3,
       "fg3m": 0.75,
       "fg3a": 3.0,
@@ -125,14 +125,14 @@
       "ftm": 1.75,
       "fta": 2.25,
       "ft_pct": 77.8,
-      "oreb": 0.41,
+      "oreb": 0.42,
       "dreb": 3.5,
-      "reb": 3.91,
+      "reb": 3.92,
       "ast": 0.83,
       "stl": 0.83,
-      "blk": 0.16,
-      "turnover": 0.66,
-      "pts": 7.66,
+      "blk": 0.17,
+      "turnover": 0.67,
+      "pts": 7.67,
       "gap_fill": true
     },
     {
@@ -1132,7 +1132,7 @@
     {
       "game_id": 1392731,
       "player_id": 242,
-      "date": "2026-11-01T00:00:00.000Z",
+      "date": "2026-10-31T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
