@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:24:12+00:00",
+ "checked_at": "2026-11-01T00:24:45+00:00",
  "period": 1,
- "clock": "5:25",
+ "clock": "5:00",
  "last_play_period": 1,
- "last_play_clock": "5:25",
+ "last_play_clock": "5:00",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -332,7 +332,7 @@
   {
    "order": 26,
    "period": 1,
-   "clock": "6:13",
+   "clock": "6:17",
    "type": "Offensive Rebound",
    "text": "Kiah Stokes offensive rebound",
    "away_score": 0,
@@ -344,7 +344,7 @@
   {
    "order": 27,
    "period": 1,
-   "clock": "6:13",
+   "clock": "6:15",
    "type": "Layup Shot Putback",
    "text": "Kiah Stokes makes two point shot",
    "away_score": 0,
@@ -472,6 +472,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 38,
+   "period": 1,
+   "clock": "5:03",
+   "type": "Step Back Jump Shot",
+   "text": "Veronica Burton misses 25-foot three point step back jumpshot",
+   "away_score": 0,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 39,
+   "period": 1,
+   "clock": "5:00",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 0,
+   "home_score": 8,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
