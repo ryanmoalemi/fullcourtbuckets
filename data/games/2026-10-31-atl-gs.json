@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:37:38+00:00",
+ "checked_at": "2026-11-01T00:38:42+00:00",
  "period": 2,
- "clock": "9:10",
+ "clock": "8:33",
  "last_play_period": 2,
- "last_play_clock": "9:28",
+ "last_play_clock": "8:34",
  "away": {
   "abbreviation": "ATL",
-  "score": 12,
-  "feed_score": 12
+  "score": 17,
+  "feed_score": 17
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 0,
+   "away": 5,
    "home": 0
   }
  ],
@@ -877,7 +877,7 @@
   {
    "order": 71,
    "period": 1,
-   "clock": "1:10",
+   "clock": "1:09",
    "type": "Jump Shot",
    "text": "Allisha Gray misses 27-foot three point jumper",
    "away_score": 11,
@@ -1077,6 +1077,66 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 88,
+   "period": 2,
+   "clock": "9:10",
+   "type": "Traveling",
+   "text": "Cecilia Zandalasini traveling turnover",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 89,
+   "period": 2,
+   "clock": "9:01",
+   "type": "Jump Shot",
+   "text": "Angel Reese makes 23-foot three point jumper (Rhyne Howard assists)",
+   "away_score": 15,
+   "home_score": 14,
+   "scoring_play": true,
+   "score_value": 3,
+   "team": "ATL"
+  },
+  {
+   "order": 90,
+   "period": 2,
+   "clock": "8:45",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 24-foot three point jumper",
+   "away_score": 15,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 91,
+   "period": 2,
+   "clock": "8:42",
+   "type": "Defensive Rebound",
+   "text": "DeWanna Bonner defensive rebound",
+   "away_score": 15,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 92,
+   "period": 2,
+   "clock": "8:34",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup",
+   "away_score": 17,
+   "home_score": 14,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
   }
  ]
 }
