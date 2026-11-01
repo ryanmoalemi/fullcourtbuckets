@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:49:58+00:00",
+ "checked_at": "2026-11-01T00:50:31+00:00",
  "period": 2,
- "clock": "4:47",
+ "clock": "4:20",
  "last_play_period": 2,
- "last_play_clock": "4:55",
+ "last_play_clock": "4:20",
  "away": {
   "abbreviation": "ATL",
   "score": 21,
@@ -1201,7 +1201,7 @@
   {
    "order": 98,
    "period": 2,
-   "clock": "7:49",
+   "clock": "7:50",
    "type": "Offensive Rebound",
    "text": "Kayla Thornton offensive rebound",
    "away_score": 17,
@@ -1213,7 +1213,7 @@
   {
    "order": 99,
    "period": 2,
-   "clock": "7:39",
+   "clock": "7:40",
    "type": "Turnaround Jump Shot",
    "text": "Veronica Burton misses 8-foot turnaround jump shot",
    "away_score": 17,
@@ -1225,7 +1225,7 @@
   {
    "order": 100,
    "period": 2,
-   "clock": "7:37",
+   "clock": "7:38",
    "type": "Defensive Rebound",
    "text": "Angel Reese defensive rebound",
    "away_score": 17,
@@ -1641,6 +1641,54 @@
    "scoring_play": true,
    "score_value": 1,
    "team": "GS"
+  },
+  {
+   "order": 135,
+   "period": 2,
+   "clock": "4:47",
+   "type": "Traveling",
+   "text": "Angel Reese traveling turnover",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 136,
+   "period": 2,
+   "clock": "4:30",
+   "type": "Jump Shot",
+   "text": "Veronica Burton misses 24-foot three point jumper",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 137,
+   "period": 2,
+   "clock": "4:27",
+   "type": "Offensive Rebound",
+   "text": "Kaila Charles offensive rebound",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 138,
+   "period": 2,
+   "clock": "4:20",
+   "type": "No Foul",
+   "text": "foul",
+   "away_score": 21,
+   "home_score": 16,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
