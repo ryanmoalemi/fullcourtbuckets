@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:17:56+00:00",
+ "checked_at": "2026-11-01T00:18:59+00:00",
  "period": 1,
- "clock": "6:44",
+ "clock": "6:29",
  "last_play_period": 1,
- "last_play_clock": "6:44",
+ "last_play_clock": "6:29",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -176,7 +176,7 @@
   {
    "order": 13,
    "period": 1,
-   "clock": "8:00",
+   "clock": "8:01",
    "type": "Shot Clock Turnover",
    "text": "shot clock turnover",
    "away_score": 0,
@@ -304,6 +304,18 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 24,
+   "period": 1,
+   "clock": "6:29",
+   "type": "Personal Foul",
+   "text": "Rhyne Howard personal foul",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
