@@ -1,15 +1,15 @@
 {
  "schema_version": 1,
- "status": "pre",
+ "status": "live",
  "live": true,
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-10-31T23:36:10+00:00",
- "period": null,
- "clock": "0.0",
- "last_play_period": null,
- "last_play_clock": null,
+ "checked_at": "2026-11-01T00:14:35+00:00",
+ "period": 1,
+ "clock": "8:50",
+ "last_play_period": 1,
+ "last_play_clock": "8:50",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -17,10 +17,137 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 0,
-  "feed_score": 0
+  "score": 2,
+  "feed_score": 2
  },
- "periods": [],
+ "periods": [
+  {
+   "period": 1,
+   "away": 0,
+   "home": 2
+  }
+ ],
  "players": [],
- "plays": []
+ "plays": [
+  {
+   "order": 1,
+   "period": 1,
+   "clock": "10:00",
+   "type": "Jumpball",
+   "text": "Angel Reese vs. Kiah Stokes (Naz Hillmon gains possession)",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 2,
+   "period": 1,
+   "clock": "9:48",
+   "type": "Bad Pass\nTurnover",
+   "text": "Jordin Canada bad pass\nturnover (Tiffany Hayes steals)",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 3,
+   "period": 1,
+   "clock": "9:45",
+   "type": "Lost Ball Turnover",
+   "text": "Tiffany Hayes lost ball turnover (Jordin Canada steals)",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 4,
+   "period": 1,
+   "clock": "9:41",
+   "type": "Layup Shot",
+   "text": "Veronica Burton blocks Allisha Gray 's 4-foot layup",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 5,
+   "period": 1,
+   "clock": "9:37",
+   "type": "Defensive Rebound",
+   "text": "Kaila Charles defensive rebound",
+   "away_score": 0,
+   "home_score": 0,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 6,
+   "period": 1,
+   "clock": "9:18",
+   "type": "Turnaround Jump Shot",
+   "text": "Veronica Burton makes 10-foot turnaround jump shot",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 7,
+   "period": 1,
+   "clock": "9:01",
+   "type": "Layup Shot",
+   "text": "Gabby Williams blocks Angel Reese 's 5-foot layup",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 8,
+   "period": 1,
+   "clock": "9:01",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 9,
+   "period": 1,
+   "clock": "8:53",
+   "type": "Jump Shot",
+   "text": "Rhyne Howard misses 27-foot three point jumper",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 10,
+   "period": 1,
+   "clock": "8:50",
+   "type": "Defensive Rebound",
+   "text": "Gabby Williams defensive rebound",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  }
+ ]
 }
