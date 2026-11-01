@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:31:49+00:00",
+ "checked_at": "2026-11-01T00:32:22+00:00",
  "period": 1,
  "clock": "26.0",
  "last_play_period": 1,
  "last_play_clock": "26.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 12,
-  "feed_score": 12
+  "score": 13,
+  "feed_score": 13
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 12,
+   "away": 13,
    "home": 12
   }
  ],
@@ -668,7 +668,7 @@
   {
    "order": 54,
    "period": 1,
-   "clock": "3:01",
+   "clock": "3:02",
    "type": "Cutting Layup Shot",
    "text": "Tiffany Hayes makes 3-foot layup (Veronica Burton assists)",
    "away_score": 7,
@@ -946,11 +946,23 @@
    "period": 1,
    "clock": "26.0",
    "type": "Substitution",
-   "text": "enters the game for Allisha Gray",
+   "text": "DeWanna Bonner enters the game for Allisha Gray",
    "away_score": 12,
    "home_score": 12,
    "scoring_play": false,
    "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 78,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Free Throw - 2 of 2",
+   "text": "Naz Hillmon makes free throw 2 of 2",
+   "away_score": 13,
+   "home_score": 12,
+   "scoring_play": true,
+   "score_value": 1,
    "team": "ATL"
   }
  ]
