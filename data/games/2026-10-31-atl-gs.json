@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:37:05+00:00",
+ "checked_at": "2026-11-01T00:37:38+00:00",
  "period": 2,
- "clock": "9:28",
+ "clock": "9:10",
  "last_play_period": 2,
- "last_play_clock": "10:00",
+ "last_play_clock": "9:28",
  "away": {
   "abbreviation": "ATL",
   "score": 12,
@@ -829,7 +829,7 @@
   {
    "order": 67,
    "period": 1,
-   "clock": "1:24",
+   "clock": "1:25",
    "type": "Jump Shot",
    "text": "Gabby Williams misses 23-foot three point jumper",
    "away_score": 11,
@@ -841,7 +841,7 @@
   {
    "order": 68,
    "period": 1,
-   "clock": "1:22",
+   "clock": "1:23",
    "type": "Offensive Rebound",
    "text": "Veronica Burton offensive rebound",
    "away_score": 11,
@@ -853,7 +853,7 @@
   {
    "order": 69,
    "period": 1,
-   "clock": "1:15",
+   "clock": "1:16",
    "type": "Turnaround Jump Shot",
    "text": "Cecilia Zandalasini misses 10-foot turnaround jump shot",
    "away_score": 11,
@@ -865,7 +865,7 @@
   {
    "order": 70,
    "period": 1,
-   "clock": "1:13",
+   "clock": "1:14",
    "type": "Defensive Rebound",
    "text": "Isobel Borlase defensive rebound",
    "away_score": 11,
@@ -1029,6 +1029,54 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 84,
+   "period": 2,
+   "clock": "9:41",
+   "type": "Pullup Jump Shot",
+   "text": "Cecilia Zandalasini misses 7-foot pullup jump shot",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 85,
+   "period": 2,
+   "clock": "9:37",
+   "type": "Defensive Rebound",
+   "text": "Angel Reese defensive rebound",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 86,
+   "period": 2,
+   "clock": "9:31",
+   "type": "Jump Shot",
+   "text": "DeWanna Bonner misses 26-foot three point jumper",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 87,
+   "period": 2,
+   "clock": "9:28",
+   "type": "Defensive Rebound",
+   "text": "Kayla Thornton defensive rebound",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
