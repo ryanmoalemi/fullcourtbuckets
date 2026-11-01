@@ -5,26 +5,26 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:32:22+00:00",
+ "checked_at": "2026-11-01T00:33:26+00:00",
  "period": 1,
- "clock": "26.0",
+ "clock": "0.0",
  "last_play_period": 1,
  "last_play_clock": "26.0",
  "away": {
   "abbreviation": "ATL",
-  "score": 13,
-  "feed_score": 13
+  "score": 12,
+  "feed_score": 12
  },
  "home": {
   "abbreviation": "GS",
-  "score": 12,
-  "feed_score": 12
+  "score": 14,
+  "feed_score": 14
  },
  "periods": [
   {
    "period": 1,
-   "away": 13,
-   "home": 12
+   "away": 12,
+   "home": 14
   }
  ],
  "players": [],
@@ -680,9 +680,9 @@
   {
    "order": 55,
    "period": 1,
-   "clock": "2:53",
-   "type": "Driving Layup Shot",
-   "text": "Jordin Canada makes driving layup (Rhyne Howard assists)",
+   "clock": "2:54",
+   "type": "Driving Finger Roll Layup",
+   "text": "Jordin Canada makes 7-foot two point shot (Rhyne Howard assists)",
    "away_score": 9,
    "home_score": 10,
    "scoring_play": true,
@@ -956,13 +956,61 @@
   {
    "order": 78,
    "period": 1,
-   "clock": "26.0",
-   "type": "Free Throw - 2 of 2",
-   "text": "Naz Hillmon makes free throw 2 of 2",
-   "away_score": 13,
-   "home_score": 12,
+   "clock": "4.5",
+   "type": "Jump Shot",
+   "text": "Veronica Burton makes 10-foot jumper",
+   "away_score": 12,
+   "home_score": 14,
    "scoring_play": true,
-   "score_value": 1,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 79,
+   "period": 1,
+   "clock": "0.6",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 43-foot three point jumper",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 80,
+   "period": 1,
+   "clock": "0.6",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 12,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 81,
+   "period": 1,
+   "clock": "0.0",
+   "type": "End Period",
+   "text": "End of the 1st Quarter",
+   "away_score": 13,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
+  },
+  {
+   "order": 82,
+   "period": 1,
+   "clock": "26.0",
+   "type": "Lane Violation Turnover",
+   "text": "Angel Reese lane violation turnover",
+   "away_score": 12,
+   "home_score": 12,
+   "scoring_play": false,
+   "score_value": 0,
    "team": "ATL"
   }
  ]
