@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:15:10+00:00",
+ "checked_at": "2026-11-01T00:15:43+00:00",
  "period": 1,
- "clock": "8:11",
+ "clock": "7:43",
  "last_play_period": 1,
- "last_play_clock": "8:23",
+ "last_play_clock": "7:45",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -80,7 +80,7 @@
   {
    "order": 5,
    "period": 1,
-   "clock": "9:37",
+   "clock": "9:41",
    "type": "Defensive Rebound",
    "text": "Kaila Charles defensive rebound",
    "away_score": 0,
@@ -93,8 +93,8 @@
    "order": 6,
    "period": 1,
    "clock": "9:18",
-   "type": "Turnaround Jump Shot",
-   "text": "Veronica Burton makes 10-foot turnaround jump shot",
+   "type": "Fade Away Jump Shot",
+   "text": "Veronica Burton makes 10-foot fade away jump shot",
    "away_score": 0,
    "home_score": 2,
    "scoring_play": true,
@@ -172,6 +172,30 @@
    "scoring_play": false,
    "score_value": 0,
    "team": "ATL"
+  },
+  {
+   "order": 13,
+   "period": 1,
+   "clock": "8:00",
+   "type": "Shot Clock Turnover",
+   "text": "shot clock turnover",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 14,
+   "period": 1,
+   "clock": "7:45",
+   "type": "No Shot (Default Shot)",
+   "text": "Gabby Williams misses shot",
+   "away_score": 0,
+   "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
   }
  ]
 }
