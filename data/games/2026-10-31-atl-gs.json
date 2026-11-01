@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:46:48+00:00",
+ "checked_at": "2026-11-01T00:47:51+00:00",
  "period": 2,
- "clock": "5:32",
+ "clock": "5:24",
  "last_play_period": 2,
- "last_play_clock": "5:32",
+ "last_play_clock": "5:24",
  "away": {
   "abbreviation": "ATL",
-  "score": 19,
-  "feed_score": 19
+  "score": 21,
+  "feed_score": 21
  },
  "home": {
   "abbreviation": "GS",
@@ -28,7 +28,7 @@
   },
   {
    "period": 2,
-   "away": 7,
+   "away": 9,
    "home": 0
   }
  ],
@@ -1515,8 +1515,68 @@
    "period": 2,
    "clock": "5:32",
    "type": "Substitution",
-   "text": "enters the game for DeWanna Bonner",
+   "text": "Jordin Canada enters the game for DeWanna Bonner",
    "away_score": 19,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 125,
+   "period": 2,
+   "clock": "5:24",
+   "type": "No Shot (Default Shot)",
+   "text": "Jordin Canada makes 6-foot shot (Allisha Gray assists)",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 126,
+   "period": 2,
+   "clock": "5:24",
+   "type": "Shooting Foul",
+   "text": "Kaitlyn Chen shooting foul",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 127,
+   "period": 2,
+   "clock": "5:24",
+   "type": "Substitution",
+   "text": "Veronica Burton enters the game for Kaitlyn Chen",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 128,
+   "period": 2,
+   "clock": "5:24",
+   "type": "Free Throw - 1 of 1",
+   "text": "Jordin Canada misses free throw 1 of 1",
+   "away_score": 21,
+   "home_score": 14,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 129,
+   "period": 2,
+   "clock": "5:24",
+   "type": "Offensive Rebound",
+   "text": "Dream offensive team rebound",
+   "away_score": 21,
    "home_score": 14,
    "scoring_play": false,
    "score_value": 0,
