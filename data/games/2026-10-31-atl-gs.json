@@ -5,7 +5,7 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:54:17+00:00",
+ "checked_at": "2026-11-01T00:54:50+00:00",
  "period": 2,
  "clock": "2:48",
  "last_play_period": 2,
@@ -1429,7 +1429,7 @@
   {
    "order": 117,
    "period": 2,
-   "clock": "5:49",
+   "clock": "5:53",
    "type": "Jumpball",
    "text": "Angel Reese vs. Kiah Stokes (Kaitlyn Chen gains possession)",
    "away_score": 19,
@@ -1862,13 +1862,25 @@
    "order": 153,
    "period": 2,
    "clock": "2:48",
-   "type": "No Foul",
-   "text": "Tiffany Hayes foul",
+   "type": "Shooting Foul",
+   "text": "Tiffany Hayes shooting foul",
    "away_score": 24,
    "home_score": 20,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
+  },
+  {
+   "order": 154,
+   "period": 2,
+   "clock": "2:48",
+   "type": "Official Timeout",
+   "text": "Official timeout",
+   "away_score": 24,
+   "home_score": 20,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": null
   }
  ]
 }
