@@ -5,11 +5,11 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:17:22+00:00",
+ "checked_at": "2026-11-01T00:17:56+00:00",
  "period": 1,
- "clock": "7:19",
+ "clock": "6:44",
  "last_play_period": 1,
- "last_play_clock": "7:14",
+ "last_play_clock": "6:44",
  "away": {
   "abbreviation": "ATL",
   "score": 0,
@@ -17,14 +17,14 @@
  },
  "home": {
   "abbreviation": "GS",
-  "score": 2,
-  "feed_score": 2
+  "score": 4,
+  "feed_score": 4
  },
  "periods": [
   {
    "period": 1,
    "away": 0,
-   "home": 2
+   "home": 4
   }
  ],
  "players": [],
@@ -265,6 +265,42 @@
    "text": "Veronica Burton defensive rebound",
    "away_score": 0,
    "home_score": 2,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 21,
+   "period": 1,
+   "clock": "7:00",
+   "type": "Driving Layup Shot",
+   "text": "Kaila Charles makes driving layup (Gabby Williams assists)",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "GS"
+  },
+  {
+   "order": 22,
+   "period": 1,
+   "clock": "6:46",
+   "type": "Jump Shot",
+   "text": "Jordin Canada misses 24-foot three point jumper",
+   "away_score": 0,
+   "home_score": 4,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
+  },
+  {
+   "order": 23,
+   "period": 1,
+   "clock": "6:44",
+   "type": "Defensive Rebound",
+   "text": "Kiah Stokes defensive rebound",
+   "away_score": 0,
+   "home_score": 4,
    "scoring_play": false,
    "score_value": 0,
    "team": "GS"
