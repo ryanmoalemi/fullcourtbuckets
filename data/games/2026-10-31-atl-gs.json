@@ -5,15 +5,15 @@
  "espn_game_id": "401918311",
  "balldontlie_game_id": 1392731,
  "date": "2026-10-31",
- "checked_at": "2026-11-01T00:27:57+00:00",
+ "checked_at": "2026-11-01T00:28:30+00:00",
  "period": 1,
- "clock": "3:12",
+ "clock": "2:52",
  "last_play_period": 1,
- "last_play_clock": "3:01",
+ "last_play_clock": "2:29",
  "away": {
   "abbreviation": "ATL",
-  "score": 7,
-  "feed_score": 7
+  "score": 9,
+  "feed_score": 9
  },
  "home": {
   "abbreviation": "GS",
@@ -23,7 +23,7 @@
  "periods": [
   {
    "period": 1,
-   "away": 7,
+   "away": 9,
    "home": 10
   }
  ],
@@ -669,13 +669,49 @@
    "order": 54,
    "period": 1,
    "clock": "3:01",
-   "type": "No Shot (Default Shot)",
-   "text": "Tiffany Hayes makes 3-foot shot (Veronica Burton assists)",
+   "type": "Cutting Layup Shot",
+   "text": "Tiffany Hayes makes 3-foot layup (Veronica Burton assists)",
    "away_score": 7,
    "home_score": 10,
    "scoring_play": true,
    "score_value": 2,
    "team": "GS"
+  },
+  {
+   "order": 55,
+   "period": 1,
+   "clock": "2:53",
+   "type": "Driving Layup Shot",
+   "text": "Jordin Canada makes driving layup (Rhyne Howard assists)",
+   "away_score": 9,
+   "home_score": 10,
+   "scoring_play": true,
+   "score_value": 2,
+   "team": "ATL"
+  },
+  {
+   "order": 56,
+   "period": 1,
+   "clock": "2:31",
+   "type": "Jump Shot",
+   "text": "Kayla Thornton misses 23-foot three point jumper",
+   "away_score": 9,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "GS"
+  },
+  {
+   "order": 57,
+   "period": 1,
+   "clock": "2:29",
+   "type": "Defensive Rebound",
+   "text": "Rhyne Howard defensive rebound",
+   "away_score": 9,
+   "home_score": 10,
+   "scoring_play": false,
+   "score_value": 0,
+   "team": "ATL"
   }
  ]
 }
