@@ -1421,7 +1421,7 @@ def tracker_block(payload: dict) -> str:
             source_cell(url),
         ])
     note = (
-        'Games 5, 6 and 7 are if necessary. The Oct. 13, 2026 WNBA release does not list their dates. '
+        'Game 7 viewership has not been released. '
         'Game 3 is at State Farm Arena at 8:00 p.m. ET, which is 5:00 p.m. PT. '
         'Game 4 tips at 1:00 p.m. ET, which is 10:00 a.m. PT, on NBC and Peacock.'
     )

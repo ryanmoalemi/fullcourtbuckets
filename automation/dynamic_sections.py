@@ -497,6 +497,181 @@ def tracker_counts(text: str):
             'avg': int(total / len(known) + 0.5) if known else 0}
 
 
+_CITY = {'ATL': 'Atlanta', 'GSV': 'Golden State'}
+_TRACKER_PAGE = 'https://fullcourtbuckets.com/news/2026-wnba-finals-ratings-tracker/'
+
+
+def _tracker_game_row(row: dict) -> str:
+    """One by-game database row. Score is winner then loser, matching the 2026 rows."""
+    season = str(row['season'])
+    game = str(int(row['game']))
+    away, home = row['away'], row['home']
+    date = str(row['date'])
+    arena = str(row['arena'])
+    att = int(row['attendance'])
+    year, month, day = (int(part) for part in date.split('-'))
+    if row.get('winner') == home:
+        hi, lo = int(row['home_score']), int(row['away_score'])
+    else:
+        hi, lo = int(row['away_score']), int(row['home_score'])
+    ot_n = int(row.get('overtime_periods') or 0)
+    if ot_n == 0:
+        ot_key, ot_v, ot_html, css = 'reg', '0', 'Reg.', ''
+    else:
+        ot_key, ot_v = 'ot', str(ot_n)
+        ot_html = '<span class="bdg otb">OT</span>' if ot_n == 1 else f'{ot_n} OT'
+        css = 'ot'
+    codes = ' '.join(sorted(code.lower() for code in (away, home)))
+    cities = ' '.join(sorted(_CITY[code].lower() for code in (away, home)))
+    src = str(row.get('source_url') or '')
+    rid = f'g{season}-{game}'
+    e = html.escape
+    return (
+        f'<tr id="{rid}" class="{css}" data-s="{e(f"{season} {codes} {arena.lower()} {date} {cities}")}" '
+        f'data-y="{season}" data-g="{game}" data-t="{" ".join(sorted((away, home)))}" data-h="{home}" '
+        f'data-a="{e(arena)}" data-ot="{ot_key}" data-att="{att}" data-date="{date}" '
+        f'data-m="{away} @ {home}" data-src="{e(src)}">'
+        f'<td data-v="{year}"><b>{year}</b><span class="m-g"> G{game}</span></td>'
+        f'<td data-v="{game}">G{game}</td>'
+        f'<td data-v="{date}">{month}/{day}</td>'
+        f'<td>{away} @ <b>{home}</b><span class="m-arena">{e(arena)}</span></td>'
+        f'<td class="arena">{e(arena)}</td>'
+        f'<td class="att num" data-v="{att}">{att:,}</td>'
+        f'<td class="opt num" data-v="{hi}">{hi}\u2013{lo}</td>'
+        f'<td class="opt num" data-v="{int(row["margin"])}">{int(row["margin"])}</td>'
+        f'<td class="opt" data-v="{ot_v}">{ot_html}</td>'
+        f'<td class="act"><a class="src" href="{e(src)}" rel="nofollow">Source</a> '
+        f'<span class="pr-hide"><a class="cl" href="{_TRACKER_PAGE}#{rid}" data-a="{rid}">Copy link</a></span></td></tr>'
+    )
+
+
+def sync_tracker_game_rows(text: str, root: Path) -> str:
+    """Add any 2026 Finals row that is in data/finals-attendance.json but missing from #fdb.
+
+    The by-game table is printed in the HTML. This runs on every dynamic-section
+    rebuild so a later pass cannot leave Game 7 off the table while the data file has it.
+    """
+    if 'id="fdb"' not in text:
+        return text
+    path = root / 'data' / 'finals-attendance.json'
+    try:
+        finals = json.loads(path.read_text(encoding='utf-8'))['finals']
+    except (OSError, json.JSONDecodeError, KeyError):
+        return text
+    table = _DB_TABLE.search(text)
+    if not table:
+        return text
+    block = table.group(0)
+    missing = []
+    for row in finals:
+        if str(row.get('season')) != '2026' or not str(row.get('attendance') or '').isdigit():
+            continue
+        if row.get('away') not in _CITY or row.get('home') not in _CITY:
+            continue
+        rid = f'g{row["season"]}-{int(row["game"])}'
+        if f'id="{rid}"' not in block:
+            missing.append(row)
+    if not missing:
+        return text
+    for row in sorted(missing, key=lambda item: int(item['game'])):
+        block = block.replace('<tbody>', '<tbody>' + _tracker_game_row(row), 1)
+    return text[:table.start()] + block + text[table.end():]
+
+
+def published_attendance_problems(root: Path) -> list[str]:
+    """The page download and the by-game table have to include every sourced 2026 finals game."""
+    problems = []
+    src_path = root / 'data' / 'finals-attendance.json'
+    news = root / 'news' / '2026-wnba-finals-ratings-tracker'
+    try:
+        finals = json.loads(src_path.read_text(encoding='utf-8'))['finals']
+    except (OSError, json.JSONDecodeError, KeyError):
+        return problems
+    try:
+        published = json.loads((news / 'finals-attendance.json').read_text(encoding='utf-8'))['finals']
+    except (OSError, json.JSONDecodeError, KeyError):
+        published = []
+    have = {(str(row.get('season')), str(int(row['game']))) for row in published if str(row.get('game') or '').isdigit()}
+    for row in finals:
+        if str(row.get('season')) != '2026' or not str(row.get('game') or '').isdigit():
+            continue
+        key = (str(row['season']), str(int(row['game'])))
+        if key not in have:
+            problems.append(f'news finals-attendance.json is missing {key[0]} game {key[1]}')
+    page = news / 'index.html'
+    if page.exists():
+        html_text = page.read_text(encoding='utf-8', errors='replace')
+        for row in finals:
+            if str(row.get('season')) != '2026' or not str(row.get('attendance') or '').isdigit():
+                continue
+            rid = f'g{row["season"]}-{int(row["game"])}'
+            if f'id="{rid}"' not in html_text:
+                problems.append(f'by-game table is missing {rid}')
+    for csv_path in (news / 'finals-attendance.csv', root / 'data' / 'finals-attendance-history-official.csv'):
+        try:
+            csv_text = csv_path.read_text(encoding='utf-8')
+        except OSError:
+            problems.append(f'{csv_path.relative_to(root).as_posix()} is missing')
+            continue
+        for row in finals:
+            if str(row.get('season')) != '2026':
+                continue
+            needle = f'{row["season"]},{int(row["game"])},{row["date"]},'
+            if needle not in csv_text:
+                problems.append(f'{csv_path.relative_to(root).as_posix()} is missing {needle}')
+    return problems
+
+
+def publish_attendance_copies(root: Path) -> list[str]:
+    """Keep the downloadable JSON and CSVs equal to data/finals-attendance.json."""
+    src_path = root / 'data' / 'finals-attendance.json'
+    data = json.loads(src_path.read_text(encoding='utf-8'))
+    changed = []
+    news = root / 'news' / '2026-wnba-finals-ratings-tracker'
+    dest_json = news / 'finals-attendance.json'
+    payload = json.dumps(data, indent=2, ensure_ascii=False) + '\n'
+    if not dest_json.exists() or dest_json.read_text(encoding='utf-8') != payload:
+        dest_json.write_text(payload, encoding='utf-8')
+        changed.append(dest_json.relative_to(root).as_posix())
+    for csv_path in (news / 'finals-attendance.csv', root / 'data' / 'finals-attendance-history-official.csv'):
+        if not csv_path.exists():
+            continue
+        original = csv_path.read_bytes()
+        newline = b'\r\n' if b'\r\n' in original else b'\n'
+        text = original.decode('utf-8')
+        extra = []
+        for row in data['finals']:
+            needle = f"{row.get('season')},{int(row['game'])},{row.get('date')},"
+            if needle in text:
+                continue
+            note = str(row.get('note') or '')
+            fields = [
+                str(row.get('season') or ''), str(int(row['game'])), str(row.get('date') or ''),
+                str(row.get('away') or ''), str(row.get('away_score') or ''), str(row.get('home') or ''),
+                str(row.get('home_score') or ''), str(row.get('winner') or ''), str(row.get('margin') or ''),
+                str(row.get('overtime_periods') or ''), str(row.get('arena') or ''), str(row.get('attendance') or ''),
+                str(row.get('sellout_flag') or ''), str(row.get('lead_changes') or ''), str(row.get('times_tied') or ''),
+                str(row.get('source_url') or ''),
+            ]
+            rendered = []
+            for field in fields:
+                if any(ch in field for ch in ',"\n'):
+                    rendered.append('"' + field.replace('"', '""') + '"')
+                else:
+                    rendered.append(field)
+            note_cell = '"' + note.replace('"', '""') + '"' if any(ch in note for ch in ',"\n') else note
+            extra.append(','.join(rendered) + ',' + note_cell)
+        if not extra:
+            continue
+        body = original
+        if not body.endswith(newline):
+            body += newline
+        body += newline.join(line.encode('utf-8') for line in extra) + newline
+        csv_path.write_bytes(body)
+        changed.append(csv_path.relative_to(root).as_posix())
+    return changed
+
+
 def sync_tracker_counts(text: str) -> str:
     c = tracker_counts(text)
     if not c:
@@ -530,7 +705,7 @@ def render_html(text: str, root: Path, s: dict | None) -> str:
         else:
             body = fn(root, s, _attrs(m.group('attrs')))
         return f"<{m.group('tag')}{attrs}>{body}</{m.group('tag')}>{END}"
-    return sync_tracker_counts(SECTION.sub(swap, text))
+    return sync_tracker_counts(sync_tracker_game_rows(SECTION.sub(swap, text), root))
 
 
 def html_files(root: Path):
@@ -576,6 +751,7 @@ def stale_problems(root: Path) -> list[str]:
         for rx in STALE_PATTERNS:
             for hit in sorted(set(rx.findall(scope))):
                 problems.append(f'{rel}: stale wording "{hit}" outside a data-fcb-dynamic section')
+    problems.extend(published_attendance_problems(root))
     return problems
 
 
@@ -591,7 +767,7 @@ def main(argv=None) -> int:
             print(p)
         return 1 if problems else 0
     s = finals_series.series(root)
-    changed = []
+    changed = publish_attendance_copies(root)
     for path in html_files(root):
         text = path.read_text(encoding='utf-8')
         if 'data-fcb-dynamic' not in text:

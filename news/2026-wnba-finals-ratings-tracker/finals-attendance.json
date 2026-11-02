@@ -1883,6 +1883,25 @@
       "times_tied": "0",
       "source_url": "https://www.wnba.com/game/1042600306",
       "note": ""
+    },
+    {
+      "season": "2026",
+      "game": "7",
+      "date": "2026-10-31",
+      "away": "ATL",
+      "away_score": "63",
+      "home": "GSV",
+      "home_score": "68",
+      "winner": "GSV",
+      "margin": "5",
+      "overtime_periods": "0",
+      "arena": "Chase Center",
+      "attendance": "18064",
+      "sellout_flag": "1",
+      "lead_changes": "4",
+      "times_tied": "4",
+      "source_url": "https://www.wnba.com/game/atl-vs-gsv-1042600307",
+      "note": "Attendance, sellout, lead changes and times tied are the figures on the official WNBA.com game page."
     }
   ],
   "playoffs2026": [
