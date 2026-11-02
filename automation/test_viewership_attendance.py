@@ -113,7 +113,9 @@ class ViewershipPageTests(unittest.TestCase):
         for row in re.findall(r'<tr>.*?</tr>', page, flags=re.S):
             if 'CNBC' in row:
                 self.assertIn('USA', row)
-        self.assertIn('if necessary', page)
+        self.assertIn('Game 7 viewership has not been released.', page)
+        self.assertIn('USA/CNBC/Peacock', page)
+        self.assertIn('Final: Valkyries 68-63', page)
         self.assertNotIn('Thu. Oct. 22, 2026', page)
         self.assertIn('397,408', page)
         self.assertIn('Unresolved', page)

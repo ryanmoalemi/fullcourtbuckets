@@ -187,8 +187,9 @@ FINALS_TRACKER_ROWS = [
      '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', '1.4 million', 'Not released', 'Final: Valkyries 64, Dream 55'],
     ['6', 'Thu, Oct. 29, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena', 'USA Network, E!, Syfy and Peacock',
      '12:30 p.m. ET / 9:30 a.m. PT', 'Not released', '1.5 million', 'Not released', 'Final: Dream 80, Valkyries 69'],
-    ['7', 'Sat, Oct. 31, 2026', 'If necessary: Atlanta Dream at Golden State Valkyries, Chase Center', 'USA and Peacock',
-     '8:00 p.m. ET / 5:00 p.m. PT', 'Pending tip-off', 'Pending tip-off', 'Pending tip-off', 'If necessary'],
+    ['7', 'Sat, Oct. 31, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center', 'USA/CNBC/Peacock',
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Not yet released', 'Not yet released', 'Not yet released',
+     'Final: Valkyries 68, Dream 63'],
 ]
 TRACKER_CAPTION = (
     'Games 1-4: date, tip time, and venue from the WNBA release of Oct. 13, 2026. '
@@ -287,7 +288,7 @@ def finals_history_rows(payload: dict) -> list[list[str]]:
     for year in range(2020, 2027):
         row = by_year.get(year)
         if not row:
-            label = 'Pending tip-off' if year == 2026 else FINALS_HISTORY_GAP
+            label = 'Not yet released' if year == 2026 else FINALS_HISTORY_GAP
             rows.append([str(year), label, label, label, label])
             continue
         rows.append([

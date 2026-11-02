@@ -225,6 +225,25 @@
       "viewers_note": "Nielsen panel-only data and digital data from Adobe Analytics. Linear: USA Network, E!, and SYFY. Streaming led by Peacock. Up 4% vs. last year's series-clinching game (LV-PHX Game 4). No peak released. USA Sports also called this the fifth most-watched WNBA Finals game on cable on record, and 1.7 million viewers including the 8 p.m. ET encore on USA Network and CNBC. The 1.5 million average does not include that encore. Secondary: Myles Ehrlich quoting the USA Sports note, https://x.com/MylesEhrlich/status/2116589348288127085"
     },
     {
+      "date": "2026-10-31",
+      "season": 2026,
+      "game": "Finals Game 7",
+      "home": "Golden State Valkyries",
+      "away": "Atlanta Dream",
+      "venue": "Chase Center",
+      "attendance": 18064,
+      "attendance_source": "https://www.wnba.com/game/1042600307",
+      "attendance_source_date": "2026-10-31",
+      "attendance_note": "sellout",
+      "network": "USA/CNBC/Peacock",
+      "viewers": null,
+      "tip_et": "8:00 p.m. ET / 5:00 p.m. PT",
+      "status": "Final: Valkyries 68-63",
+      "schedule_source": "https://www.wnba.com/game/1042600307",
+      "schedule_source_date": "2026-10-31",
+      "viewers_note": "Not yet released. Regulation. Official WNBA.com game page: attendance 18,064, sellout, final score Valkyries 68, Dream 63."
+    },
+    {
       "date": "2025-05-17",
       "season": 2025,
       "game": "Sky at Fever",

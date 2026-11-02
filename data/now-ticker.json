@@ -1,9 +1,9 @@
 {
-  "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Update after each game (the Game 6 recap replaces this; next: Game 7 result). After 'expires' the bar falls back to the evergreen item, in the browser and at build time.",
-  "text": "Halloween Game 7: Dream vs. Valkyries for the title, Sat, Oct 31, 5 p.m. PT at Chase Center. Read the preview (TV: USA Network and CNBC. Streaming: Peacock)",
-  "url": "/news/finals-game-7-preview-dream-valkyries/",
-  "date": "2026-10-31",
-  "expires": "2026-10-31T23:59:00-07:00",
+  "_note": "The one sitewide Now bar. site_nav.ensure_assets/apply_now_bar puts it on every page. Every item needs a verified fact and a live link. Game 7 is final: Valkyries 68, Dream 63. The bar links to the recap until expires, then falls back to the Finals database.",
+  "text": "Game 7 recap: Valkyries 68, Dream 63 at Chase Center. The Golden State Valkyries won the 2026 WNBA Finals, 4-3.",
+  "url": "/news/dream-valkyries-finals-game-7-recap/",
+  "date": "2026-11-02",
+  "expires": "2026-11-16T23:59:00-07:00",
   "fallback": {
     "text": "Every WNBA Finals game since 2002: search the FCB Finals database",
     "url": "/news/2026-wnba-finals-ratings-tracker/#finals-database"

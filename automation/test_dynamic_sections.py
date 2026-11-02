@@ -76,3 +76,29 @@ class TrackerCountTests(unittest.TestCase):
         out = ds.sync_tracker_counts(page)
         for frag in ('dyn-ng">3<', 'dyn-nk">2<', 'id="sg">3<', 'id="sk">2<', 'id="st">400<', 'id="sa">200<'):
             self.assertIn(frag, out)
+
+    def test_game_7_row_is_rebuilt_from_the_attendance_file(self):
+        path = ROOT / 'news' / '2026-wnba-finals-ratings-tracker' / 'index.html'
+        text = path.read_text(encoding='utf-8')
+        self.assertIn('id="g2026-7"', text)
+        self.assertIn('data-att="18064"', text)
+        self.assertIn('data-date="2026-10-31"', text)
+        self.assertIn('ATL @ <b>GSV</b>', text)
+        self.assertIn('68\u201363', text)
+        self.assertIn('Reg.', text)
+        self.assertNotIn('Pending tip-off', text)
+        self.assertNotIn('If necessary', text)
+        stripped = text.replace(ds._tracker_game_row(
+            next(row for row in __import__('json').loads(
+                (ROOT / 'data' / 'finals-attendance.json').read_text(encoding='utf-8'))['finals']
+                if row['season'] == '2026' and str(row['game']) == '7'),
+        ), '')
+        self.assertNotIn('id="g2026-7"', stripped)
+        restored = ds.render_html(stripped, ROOT, ds.finals_series.series(ROOT))
+        self.assertIn('id="g2026-7"', restored)
+        self.assertEqual(ds.published_attendance_problems(ROOT), [])
+        ratings = (ROOT / 'news' / '2026-wnba-finals-ratings-tracker' / 'finals-ratings.csv').read_text(encoding='utf-8')
+        self.assertNotIn('Pending tip-off', ratings)
+        self.assertNotIn('If necessary', ratings)
+        self.assertIn('USA/CNBC/Peacock', ratings)
+        self.assertIn('Not yet released', ratings)
