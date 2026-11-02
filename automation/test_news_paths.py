@@ -39,6 +39,8 @@ def _is_lead_image(image: str) -> bool:
 # this exception. Any other shared file still fails.
 KNOWN_DUPLICATE_PHOTO_PAIRS = {
     frozenset({'aces-valkyries-semis-game-2-recap', 'wings-valkyries-game-3-recap'}),
+    # Same Wikimedia file and the same 16:9 crop as the Game 7 recap.
+    frozenset({'dream-valkyries-finals-game-7-recap', 'gabby-williams-finals-mvp-points-by-quarter'}),
 }
 
 

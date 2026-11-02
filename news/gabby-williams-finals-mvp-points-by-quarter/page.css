@@ -1,0 +1,4 @@
+/* Circle headshots in this article's tables. Same treatment as a team roster row. */
+.article .roster-face{display:inline-block;width:32px;height:32px;max-width:32px;border-radius:50%;object-fit:cover;object-position:center 20%;vertical-align:middle;margin-right:.5rem;background:#e9e9ef}
+.article table caption{caption-side:top;text-align:left;font-weight:700;padding:0 0 8px}
+.article .table-wrap caption{position:sticky;left:0}

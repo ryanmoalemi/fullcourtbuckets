@@ -1,0 +1,48 @@
+Gabby Williams, 2026 WNBA Finals points by quarter
+Full Court Buckets. Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Game 7, Oct. 31, 2026.
+Source for every file: official WNBA.com play-by-play, Games 1-7. Each game's points and field-goal attempts match that game's official WNBA.com box score.
+
+gabby-williams-finals-2026-by-quarter.csv
+One row per Finals game for Gabby Williams. Points in a period are the sum of every made shot (by its point value) and every made free throw credited to her in that period.
+game: Finals game number, 1 through 7.
+date: Game date, YYYY-MM-DD.
+opponent: Atlanta Dream in every game.
+result: W or L, then the Valkyries score and the Dream score.
+q1, q2, q3, q4: Points in that quarter.
+first_half, second_half: q1+q2 and q3+q4.
+total: Points in the game. Equals first_half + second_half.
+first_half_fg, second_half_fg: Field goals made-attempted in that half. Written as makes-attempts.
+first_half_3pt, second_half_3pt: Threes made-attempted in that half.
+first_half_ft, second_half_ft: Free throws made-attempted in that half.
+steals, blocks, plus_minus: Game totals from the official box score.
+source: Official play-by-play URL for that game.
+
+finals-2026-series-halves.csv
+One row per player who scored in the series, 13 players, sorted by second-half points from high to low. The article table shows the seven players with at least 60 points. This file keeps every scorer.
+player: Player name.
+team: GSV (Golden State Valkyries) or ATL (Atlanta Dream).
+points: Series points.
+q1, q2, q3, q4: Series points in that quarter.
+first_half_pts, second_half_pts: Series points before and after halftime.
+second_half_share: second_half_pts divided by points, rounded to the nearest percent.
+first_half_fg, second_half_fg: Series field goals made-attempted in that half.
+
+finals-2026-player-halves.csv
+Full per-player file. 123 rows, one per player per game across Games 1-7. This is the source the two files above are added up from.
+game: Finals game number.
+date: Game date, YYYY-MM-DD.
+game_id: WNBA.com game id (1042600301 through 1042600307).
+team: GSV or ATL.
+player: Player name.
+player_id: WNBA.com player id.
+min: Minutes from the official box score.
+pts: Points in the game.
+q1_pts, q2_pts, q3_pts, q4_pts: Points in that quarter, from the play-by-play.
+h1_pts, h2_pts: First-half and second-half points.
+h1_fgm, h1_fga, h2_fgm, h2_fga: Field goals made and attempted in that half.
+h1_3pm, h1_3pa, h2_3pm, h2_3pa: Threes made and attempted in that half.
+h1_ftm, h1_fta, h2_ftm, h2_fta: Free throws made and attempted in that half.
+reb, ast, stl, blk, tov, pm: Rebounds, assists, steals, blocks, turnovers, and plus-minus for the game.
+fgm, fga: Field goals made and attempted for the game. These match the official box score, as do pts.
+src: Official play-by-play URL for that game.

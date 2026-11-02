@@ -202,7 +202,15 @@ def place_notes(blocks: list) -> list:
 SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10px;font:800 24px/1.1 Barlow,sans-serif;'
                    'color:#fff}.article h4.sub-h4{margin:18px 0 6px;font:700 18px/1.25 Barlow,sans-serif;color:#ff9800}</style>')
 BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
+# !chart: /images/articles/<slug>/chart.png | alt text | caption
+CHART_RE = re.compile(r'!chart:\s*(.+)')
 ODD_RE = re.compile(r'^!odd:\s*(.+)$')
+_PLAYER_CELL_RE = re.compile(r'<a class="inline-link" href="(/wnba/([a-z0-9-]+)/)"')
+_NON_PLAYER_SLUGS = frozenset({
+    'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue',
+    'owners', 'where-to-watch', 'finals',
+})
+_PLAYER_NAMES: list[tuple[str, str]] | None = None
 
 
 def ensure_body_photo_files(src: str, webp: str, root: Path | None = None) -> None:
@@ -262,7 +270,79 @@ def odds_html(rows: list[str]) -> str:
     return '<div class="hw-lottery">' + ''.join(cards) + '</div>'
 
 
-def body_html(markdown: str) -> str:
+def _player_names() -> list[tuple[str, str]]:
+    """Full player names, longest first, so a heading match is the whole name."""
+    global _PLAYER_NAMES
+    if _PLAYER_NAMES is None:
+        rows = []
+        path = ROOT / 'data' / 'wnba' / 'players-index.json'
+        if path.is_file():
+            data = json.loads(path.read_text(encoding='utf-8'))
+            for entry in data.get('players') or []:
+                name = str(entry.get('name') or '').strip()
+                slug = str(entry.get('slug') or '').strip()
+                if name and slug and ' ' in name:
+                    rows.append((name, slug))
+        rows.sort(key=lambda item: len(item[0]), reverse=True)
+        _PLAYER_NAMES = rows
+    return _PLAYER_NAMES
+
+
+def face_html(slug: str) -> str:
+    """Circle headshot used on team roster tables. Empty when no approved photo exists."""
+    if not slug or slug in _NON_PLAYER_SLUGS:
+        return ''
+    import team_page_extras as team_extras
+    src = team_extras.portraits(ROOT).get(slug)
+    if not src:
+        rel = f'/images/players/{slug}/portrait.webp'
+        if (ROOT / rel.lstrip('/')).is_file():
+            src = rel
+    if not src or not (ROOT / str(src).lstrip('/')).is_file():
+        return ''
+    return (
+        f'<img class="roster-face" src="{esc(src)}" alt="" width="40" height="40" '
+        f'loading="lazy" decoding="async">'
+    )
+
+
+def decorate_player_cells(table: str) -> str:
+    """Put the roster headshot immediately before each player-page link in a table."""
+    def repl(match: re.Match) -> str:
+        face = face_html(match.group(2))
+        return (face + match.group(0)) if face else match.group(0)
+    return _PLAYER_CELL_RE.sub(repl, table)
+
+
+def table_caption_for_heading(heading: str) -> str:
+    """Headshot caption when the section names one player and the rows do not."""
+    for name, slug in _player_names():
+        if re.search(r'(?<![A-Za-z])' + re.escape(name) + r'(?![A-Za-z])', heading):
+            face = face_html(slug)
+            return f'<caption>{face}{esc(name)}</caption>' if face else ''
+    return ''
+
+
+def chart_html(parts: list) -> str:
+    """A shareable chart under a data note. class=chart keeps it from being cropped."""
+    src = parts[0] if parts else ''
+    alt = parts[1] if len(parts) > 1 else ''
+    caption = parts[2] if len(parts) > 2 else ''
+    path = ROOT / src.lstrip('/')
+    if not path.is_file():
+        raise SystemExit(f'chart missing: {src}')
+    from PIL import Image
+    with Image.open(path) as im:
+        width, height = im.size
+    cap = f'<figcaption>{inline(caption)}</figcaption>' if caption else ''
+    return (
+        f'<figure class="chart no-crop"><img src="{esc(src)}" alt="{esc(alt)}" '
+        f'width="{width}" height="{height}" loading="lazy" decoding="async" '
+        f'style="width:100%;height:auto">{cap}</figure>'
+    )
+
+
+def body_html(markdown: str, table_headshots: bool = False) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
     bullets: list[str] = []
@@ -336,6 +416,12 @@ def body_html(markdown: str) -> str:
             flush_bullets()
             blocks.append(('photo', [x.strip() for x in photo.group(1).split('|')]))
             continue
+        chart = CHART_RE.fullmatch(line.strip())
+        if chart:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('chart', [x.strip() for x in chart.group(1).split('|')]))
+            continue
         if line.startswith('### ') or line.startswith('#### '):
             flush_paragraph()
             flush_bullets()
@@ -356,12 +442,17 @@ def body_html(markdown: str) -> str:
     html_blocks = []
     first = True
     disclaimer = False
+    last_h2 = ''
     for kind, value in blocks:
         if kind == 'h2':
+            last_h2 = value
             html_blocks.append(f'<h2 class="section-title">{esc(value)}</h2>')
             continue
         if kind == 'photo':
             html_blocks.append(body_photo_html(value))
+            continue
+        if kind == 'chart':
+            html_blocks.append(chart_html(value))
             continue
         if kind == 'odds':
             html_blocks.append(odds_html(value))
@@ -376,7 +467,14 @@ def body_html(markdown: str) -> str:
             html_blocks.append(f'<ul>{items}</ul>')
             continue
         if kind == 'table':
-            html_blocks.append(table_html(value))
+            rendered = table_html(value)
+            if table_headshots:
+                rendered = decorate_player_cells(rendered)
+                if 'roster-face' not in rendered:
+                    caption = table_caption_for_heading(last_h2)
+                    if caption:
+                        rendered = rendered.replace('<table>', '<table>' + caption, 1)
+            html_blocks.append(rendered)
             continue
         if kind == 'note':
             html_blocks.append(
@@ -677,7 +775,8 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated_raw):
         when = 'Updated ' + links._format_date(updated_raw)
         stamp = updated_raw
-    body = body_html(markdown)
+    faces = str(meta.get('table_headshots') or '').strip().lower() in ('true', 'yes', '1')
+    body = body_html(markdown, table_headshots=faces)
     if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
         body = body.replace('<div class="table-wrap">', '<div class="table-wrap" data-fcb-data-table>', 1)

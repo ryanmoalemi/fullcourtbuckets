@@ -324,4 +324,10 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-10-31</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/gabby-williams-finals-mvp-points-by-quarter/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
