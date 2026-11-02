@@ -1,86 +1,87 @@
 {
   "slug": "rebekah-gardner",
   "player_name": "Rebekah Gardner",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "What are Rebekah Gardner's stats / points per game?",
-      "answer": "In the 2026 regular season, Rebekah Gardner averaged 5.1 points, 2.4 rebounds, and 1.2 assists in 41 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "question": "What are Rebekah Gardner's stats?",
+      "answer": "In the 2026 regular season, Rebekah Gardner averaged 5.0 points, 2.4 rebounds, and 1.2 assists in 42 games for the New York Liberty.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rebekah gardner stats",
-      "approx_monthly_volume": 40
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/rebekah-gardner/"
+      ],
+      "queries": [
+        {
+          "q": "rebekah gardner stats",
+          "vol": 90
+        }
+      ]
     },
     {
-      "question": "Who is Rebekah Gardner dating?",
-      "answer": "As of late 2026, Rebekah Gardner has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who has Rebekah Gardner played for in the WNBA?",
+      "answer": "Rebekah Gardner signed with the Chicago Sky in February 2022 and was named to the 2022 WNBA All-Rookie Team. The New York Liberty later acquired her from Chicago, and she now plays for New York.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
+        "https://www.wnba.com/player/203822/rebekah-gardner/bio",
+        "https://liberty.wnba.com/news/new-york-liberty-acquire-rebekah-gardner-from-chicago-sky/"
       ],
-      "google_keyword": "rebekah gardner partner",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "How much does Rebekah Gardner make?",
-      "answer": "A precise public salary or net worth figure for Rebekah Gardner is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "rebekah gardner salary",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Rebekah Gardner?",
-      "answer": "Rebekah Gardner is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
-      ],
-      "google_keyword": "rebekah gardner height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Rebekah Gardner married?",
-      "answer": "There is no widely reported public record of Rebekah Gardner being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
-      ],
-      "google_keyword": "rebekah gardner husband",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What college did Rebekah Gardner attend?",
-      "answer": "Gardner played college basketball at UCLA.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
-      ],
-      "google_keyword": "rebekah gardner ucla",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Rebekah Gardner injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rebekah gardner injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "rebekah gardner wnba",
+          "vol": 40
+        },
+        {
+          "q": "rebekah gardner liberty",
+          "vol": 20
+        },
+        {
+          "q": "rebekah gardner chicago sky",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Rebekah Gardner?",
-      "answer": "Rebekah Gardner was born July 9, 1990 in Palm Springs. As of late 2026 that puts her at 36 years old.",
-      "answer_kind": "researched",
+      "answer": "Rebekah Gardner was born July 9, 1990.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Rebekah_Gardner"
+        "https://www.wnba.com/player/203822/rebekah-gardner/bio"
       ],
-      "google_keyword": "rebekah gardner age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1990-07-09"
+      "queries": [
+        {
+          "q": "rebekah gardner age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Rebekah Gardner?",
+      "answer": "The WNBA lists Rebekah Gardner at 6 feet 1 inch and 130 pounds.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203822/rebekah-gardner/bio"
+      ],
+      "queries": [
+        {
+          "q": "rebekah gardner height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Rebekah Gardner play college basketball?",
+      "answer": "Rebekah Gardner played college basketball at UCLA. She went undrafted and spent about a decade playing overseas in Israel, Turkey, Romania and Spain before reaching the WNBA in 2022.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203822/rebekah-gardner/bio"
+      ],
+      "queries": [
+        {
+          "q": "rebekah gardner ucla",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

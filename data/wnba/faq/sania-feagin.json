@@ -1,112 +1,134 @@
 {
   "slug": "sania-feagin",
   "player_name": "Sania Feagin",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "What are Sania Feagin's stats / points per game?",
-      "answer": "In the 2026 regular season, Sania Feagin averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sania feagin stats",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "How much does Sania Feagin make?",
-      "answer": "A precise public salary or net worth figure for Sania Feagin is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "What WNBA team does Sania Feagin play for?",
+      "answer": "Sania Feagin signed with the Portland Fire on June 24, 2026. The Los Angeles Sparks waived her on June 19, 2026, after she appeared in three games for them that season. She played 16 games for Los Angeles as a rookie in 2025.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
       ],
-      "google_keyword": "sania feagin net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sania feagin wnba",
+          "vol": 90
+        },
+        {
+          "q": "sania feagin la sparks",
+          "vol": 10
+        },
+        {
+          "q": "sania feagin sparks",
+          "vol": 10
+        },
+        {
+          "q": "sania feagin wnba sparks",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Sania Feagin?",
-      "answer": "Sania Feagin is listed at 6' 3\".",
+      "answer": "The WNBA lists Sania Feagin at 6 feet 3 inches.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sania_Feagin"
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
       ],
-      "google_keyword": "sania feagin height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "sania feagin height",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What is Sania Feagin's jersey number?",
-      "answer": "Sania Feagin wears number 1 for the Portland Fire.",
+      "question": "What are Sania Feagin's stats?",
+      "answer": "In the 2026 regular season, Sania Feagin averaged 0.0 points, 0.3 rebounds, and 0.7 assists in 3 games for the Los Angeles Sparks.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sania feagin jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Sania Feagin's contract?",
-      "answer": "Contract length and guarantees for Sania Feagin are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/sania-feagin/"
       ],
-      "google_keyword": "sania feagin contract",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "sania feagin stats",
+          "vol": 30
+        },
+        {
+          "q": "sania feagin wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What position does Sania Feagin play?",
-      "answer": "Sania Feagin is listed as a F for the Portland Fire.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sania feagin position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Sania Feagin injured?",
-      "answer": "Injury status changes during the season. Check the latest Portland Fire reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "sania feagin injury",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "Who are Sania Feagin's parents?",
-      "answer": "Public profiles share limited verified detail about Sania Feagin's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "When was Sania Feagin drafted?",
+      "answer": "The Los Angeles Sparks drafted Sania Feagin in the second round, 21st overall, in the 2025 WNBA Draft.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sania_Feagin"
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
       ],
-      "google_keyword": "sania feagin parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Sania Feagin?",
-      "answer": "Sania Nicole Feagin is an American professional basketball player for the Portland Fire of the Women's National Basketball Association (WNBA) and for the Adelaide Lightning of the Women's National Basketball League (WNBL).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sania_Feagin"
-      ],
-      "google_keyword": "sania feagin wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sania feagin draft",
+          "vol": 10
+        },
+        {
+          "q": "sania feagin wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "sania feagin draft pick",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Sania Feagin?",
-      "answer": "Sania Feagin was born March 15, 2003. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Sania Feagin was born March 15, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sania_Feagin"
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
       ],
-      "google_keyword": "sania feagin age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2003-03-15"
+      "queries": [
+        {
+          "q": "sania feagin age",
+          "vol": 10
+        },
+        {
+          "q": "sania feagin birthday",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Sania Feagin attend?",
-      "answer": "Sania Feagin played college basketball at University of South Carolina.",
-      "answer_kind": "researched",
+      "question": "What position does Sania Feagin play?",
+      "answer": "Sania Feagin is a forward.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sania_Feagin"
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
       ],
-      "google_keyword": "sania feagin south carolina",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sania feagin position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Sania Feagin play college basketball?",
+      "answer": "Sania Feagin played at South Carolina, where she won national championships in 2022 and 2024, made four Final Four trips and was named to the 2025 SEC All-Defensive Team. She also won gold and MVP at the 2024 FIBA 3x3 U23 World Cup with Team USA.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642790/sania-feagin/bio"
+      ],
+      "queries": [
+        {
+          "q": "sania feagin south carolina",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

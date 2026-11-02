@@ -1,151 +1,181 @@
 {
   "slug": "emma-meesseman",
   "player_name": "Emma Meesseman",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "What are Emma Meesseman's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Emma Meesseman averaged 13.4 points,",
+      "question": "What are Emma Meesseman's stats?",
+      "answer": "In the 2025 regular season, Emma Meesseman averaged 13.4 points, 5.1 rebounds, and 3.2 assists in 17 games for the New York Liberty.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emma meesseman stats",
-      "approx_monthly_volume": 390
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/emma-meesseman/"
+      ],
+      "queries": [
+        {
+          "q": "emma meesseman stats",
+          "vol": 390
+        },
+        {
+          "q": "emma meesseman wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman stats per game",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman points per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Emma Meesseman dating?",
-      "answer": "As of late 2026, Emma Meesseman has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who has Emma Meesseman played for in the WNBA?",
+      "answer": "Emma Meesseman has played for the Washington Mystics, Chicago Sky and New York Liberty. Washington drafted her 19th overall in 2013, she made the All-Star team with the Mystics in 2015 and with the Sky in 2022, and she played for the Liberty in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
+        "https://www.wnba.com/player/203416/emma-meesseman/bio",
+        "https://fullcourtbuckets.com/wnba/emma-meesseman/"
       ],
-      "google_keyword": "emma meesseman partner",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "How much does Emma Meesseman make?",
-      "answer": "A precise public salary or net worth figure for Emma Meesseman is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "emma meesseman salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "emma meesseman wnba",
+          "vol": 70
+        },
+        {
+          "q": "emma meesseman liberty",
+          "vol": 20
+        },
+        {
+          "q": "emma meesseman chicago sky",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman mystics",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman wnba team",
+          "vol": 10
+        },
+        {
+          "q": "washington mystics emma meesseman",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman new york liberty",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman ny liberty",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman team",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Emma Meesseman?",
-      "answer": "Emma Meesseman is listed at 6' 4\".",
+      "answer": "The WNBA lists Emma Meesseman at 6 feet 4 inches and 191 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
+        "https://www.wnba.com/player/203416/emma-meesseman/bio"
       ],
-      "google_keyword": "emma meesseman height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "emma meesseman height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Emma Meesseman?",
-      "answer": "She was born May 13, 1993 in Ypres. As of late 2026 that puts her at 33 years old.",
+      "answer": "Emma Meesseman was born May 13, 1993. She is from Belgium.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
+        "https://www.wnba.com/player/203416/emma-meesseman/bio"
       ],
-      "google_keyword": "emma meesseman age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1993-05-13"
+      "queries": [
+        {
+          "q": "emma meesseman age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Emma Meesseman's jersey number?",
-      "answer": "Emma Meesseman wears number 33 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emma meesseman jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Emma Meesseman's contract?",
-      "answer": "Contract length and guarantees for Emma Meesseman are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Did Emma Meesseman win WNBA Finals MVP?",
+      "answer": "Yes. Emma Meesseman was named 2019 WNBA Finals MVP after helping the Washington Mystics win the franchise's first title. She averaged 17.8 points in the series and became the first reserve in WNBA history to win the award.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/news/emma-meesseman-named-wnba-finals-2019-mvp"
       ],
-      "google_keyword": "emma meesseman contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Emma Meesseman married?",
-      "answer": "There is no widely reported public record of Emma Meesseman being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
-      ],
-      "google_keyword": "emma meesseman wife",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What team does Emma Meesseman play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 33. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emma meesseman current team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How many MVPs does Emma Meesseman have?",
-      "answer": "She was named the 2011 FIBA Europe Young Women's Player of the Year and the 2019 WNBA Finals MVP.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
-      ],
-      "google_keyword": "emma meesseman mvp wnba",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How many championships does Emma Meesseman have?",
-      "answer": "She was named the 2011 FIBA Europe Young Women's Player of the Year and the 2019 WNBA Finals MVP.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
-      ],
-      "google_keyword": "emma meesseman wnba championship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "emma meesseman wnba championship",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman mvp wnba",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman wnba finals mvp",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman mvp",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "What position does Emma Meesseman play?",
-      "answer": "Emma Meesseman is listed as a C for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emma meesseman position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Emma Meesseman injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "emma meesseman injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Emma Meesseman's parents?",
-      "answer": "Public profiles share limited verified detail about Emma Meesseman's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
-      ],
-      "google_keyword": "emma meesseman family",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is emma meesseman a free agent?",
-      "answer": "She was born May 13, 1993 in Ypres. As of late 2026 that puts her at 33 years old.",
+      "answer": "The WNBA lists Emma Meesseman as a forward, and she also plays center. Her WNBA bio describes her as a 6-4 center from Belgium.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Emma_Meesseman"
+        "https://www.wnba.com/player/203416/emma-meesseman/bio"
       ],
-      "google_keyword": "is emma meesseman a free agent",
-      "approx_monthly_volume": 10,
-      "birthdate": "1993-05-13"
+      "queries": [
+        {
+          "q": "emma meesseman position",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Emma Meesseman played in the Olympics?",
+      "answer": "Yes. Emma Meesseman played for Belgium at the Tokyo 2020 Olympics and at Paris 2024, where she made the tournament All-Star Five and Belgium finished fourth.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/news/in-depth-with-emma-meesseman-an-epic-cats-roller-coaster"
+      ],
+      "queries": [
+        {
+          "q": "emma meesseman olympics",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Did Emma Meesseman win EuroBasket?",
+      "answer": "Yes. Emma Meesseman led Belgium to its first FIBA Women's EuroBasket title in 2023 and was named the tournament MVP.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fiba.basketball/en/news/womenseurobasket-2023-news-meesseman-takes-tissot-mvp-award-to-lead-tissot-all-star-five-in-ljubljana"
+      ],
+      "queries": [
+        {
+          "q": "emma meesseman eurobasket",
+          "vol": 10
+        },
+        {
+          "q": "emma meesseman 2023",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

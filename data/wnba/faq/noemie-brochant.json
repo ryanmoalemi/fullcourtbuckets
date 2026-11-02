@@ -1,17 +1,36 @@
 {
   "slug": "noemie-brochant",
   "player_name": "Noemie Brochant",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "What are Noemie Brochant's stats / points per game?",
-      "answer": "In the 2026 regular season, Noemie Brochant averaged 6.3 points, 2.0 rebounds, and 1.8 assists in 42 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Noemie Brochant's stats?",
+      "answer": "In the 2026 regular season, Noemie Brochant averaged 6.3 points, 2.1 rebounds, and 1.9 assists in 43 games for the Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "noemie brochant stats",
-      "approx_monthly_volume": 720
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/noemie-brochant/"
+      ],
+      "queries": [
+        {
+          "q": "noemie brochant stats",
+          "vol": 880
+        }
+      ]
+    },
+    {
+      "question": "What WNBA team does Noemie Brochant play for?",
+      "answer": "Noemie Brochant plays for the Phoenix Mercury, where she was a rookie in 2026. The French forward-guard played professionally in France for Toulouse and then Charleville-Mezieres, and she made her senior debut for the French national team in 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643493/noemie-brochant/bio"
+      ],
+      "queries": [
+        {
+          "q": "noemie brochant wnba",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

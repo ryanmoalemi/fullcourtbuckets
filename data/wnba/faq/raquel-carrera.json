@@ -1,35 +1,72 @@
 {
   "slug": "raquel-carrera",
   "player_name": "Raquel Carrera",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "How tall is Raquel Carrera?",
-      "answer": "Raquel Carrera is listed at 6' 3\".",
+      "question": "What WNBA team does Raquel Carrera play for?",
+      "answer": "Raquel Carrera plays for the New York Liberty, where she was a rookie in 2026. The Atlanta Dream drafted her in the second round, 15th overall, in 2021. Before joining the WNBA she played for Valencia in Spain and won three Spanish league titles.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Raquel_Carrera"
+        "https://www.wnba.com/player/1630384/raquel-carrera/bio"
       ],
-      "google_keyword": "raquel carrera height",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "raquel carrera wnba",
+          "vol": 110
+        },
+        {
+          "q": "raquel carrera ny liberty",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Is Raquel Carrera injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "raquel carrera injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What are Raquel Carrera's stats / points per game?",
-      "answer": "In her most recent 7 tracked games, Raquel Carrera averaged 0.0 points, 0.4 rebounds, and 0.0 assists for New York Liberty. Full game-by-game numbers are on this page.",
+      "question": "What are Raquel Carrera's stats?",
+      "answer": "In the 2026 regular season, Raquel Carrera averaged 1.7 points, 1.2 rebounds, and 0.5 assists in 24 games for the New York Liberty.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "raquel carrera stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/raquel-carrera/"
+      ],
+      "queries": [
+        {
+          "q": "raquel carrera stats",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "How tall is Raquel Carrera?",
+      "answer": "The WNBA lists Raquel Carrera at 6 feet 3 inches.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630384/raquel-carrera/bio"
+      ],
+      "queries": [
+        {
+          "q": "raquel carrera height",
+          "vol": 40
+        }
+      ]
+    },
+    {
+      "question": "Does Raquel Carrera play for Spain?",
+      "answer": "Yes. Raquel Carrera is Spanish and plays for the Spain national team. She was named to the All-Star Five at FIBA Women's EuroBasket 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630384/raquel-carrera/bio"
+      ],
+      "queries": [
+        {
+          "q": "raquel carrera spain",
+          "vol": 10
+        },
+        {
+          "q": "raquel carrera eurobasket",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

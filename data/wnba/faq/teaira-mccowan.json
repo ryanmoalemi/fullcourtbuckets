@@ -1,154 +1,112 @@
 {
   "slug": "teaira-mccowan",
   "player_name": "Teaira McCowan",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 2, 2026",
+  "verified_at": "2026-11-02",
   "items": [
     {
-      "question": "What are Teaira McCowan's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Teaira McCowan averaged 5.6 points,",
+      "question": "Which teams has Teaira McCowan played for?",
+      "answer": "Teaira McCowan has played for the Indiana Fever, Dallas Wings and Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "teaira mccowan stats",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/teaira-mccowan/"
+      ],
+      "queries": [
+        {
+          "q": "teaira mccowan wnba",
+          "vol": 70
+        },
+        {
+          "q": "teaira mccowan dallas wings",
+          "vol": 20
+        },
+        {
+          "q": "teaira mccowan team",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Does Teaira McCowan have a signature shoe?",
-      "answer": "Public search interest ties Teaira McCowan to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
-      "answer_kind": "researched",
+      "question": "What are Teaira McCowan's stats?",
+      "answer": "In the 2026 regular season, Teaira McCowan averaged 1.4 points, 2.4 rebounds, and 0.3 assists in 10 games for the Minnesota Lynx.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+        "https://fullcourtbuckets.com/wnba/teaira-mccowan/"
       ],
-      "google_keyword": "teaira mccowan shoe size",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Teaira McCowan dating?",
-      "answer": "As of late 2026, Teaira McCowan has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
-      ],
-      "google_keyword": "teaira mccowan partner",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "How much does Teaira McCowan make?",
-      "answer": "A precise public salary or net worth figure for Teaira McCowan is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "teaira mccowan net worth",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Teaira McCowan?",
-      "answer": "Teaira McCowan is listed at 6' 7\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
-      ],
-      "google_keyword": "teaira mccowan height",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "teaira mccowan stats",
+          "vol": 30
+        },
+        {
+          "q": "teaira mccowan wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "teaira mccowan rebounds per game",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Teaira McCowan?",
-      "answer": "She was born September 28, 1996 in Bryan. As of late 2026 that puts her at 29 years old.",
+      "answer": "Teaira McCowan was born September 28, 1996.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+        "https://www.wnba.com/player/1629479/teaira-mccowan/bio"
       ],
-      "google_keyword": "teaira mccowan age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1996-09-28"
-    },
-    {
-      "question": "What is Teaira McCowan's contract?",
-      "answer": "Contract length and guarantees for Teaira McCowan are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "teaira mccowan contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Teaira McCowan married?",
-      "answer": "There is no widely reported public record of Teaira McCowan being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
-      ],
-      "google_keyword": "teaira mccowan wife",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "What team does Teaira McCowan play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 15. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "teaira mccowan team",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "teaira mccowan age",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "Where is Teaira McCowan from?",
-      "answer": "She is from Bryan.",
+      "answer": "Teaira McCowan is from Brenham, Texas, where she was a Parade All-American at Brenham High School.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+        "https://www.wnba.com/player/1629479/teaira-mccowan/bio"
       ],
-      "google_keyword": "teaira mccowan hometown",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "teaira mccowan hometown",
+          "vol": 10
+        },
+        {
+          "q": "where is teaira mccowan from",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Teaira McCowan?",
-      "answer": "Teaira McCowan is Turkish-American professional basketball player who most recently played for the Minnesota Lynx of the Women's National Basketball Association (WNBA), and for Fenerbahçe of the EuroLeague Women and Turkish Super League.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
-      ],
-      "google_keyword": "teaira mccowan bio",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Teaira McCowan's nationality?",
-      "answer": "Teaira McCowan is American.",
+      "question": "Where did Teaira McCowan play college basketball?",
+      "answer": "Teaira McCowan played at Mississippi State from 2015 to 2019 and helped the Bulldogs reach the national championship game in 2017 and 2018. She is the NCAA Tournament's career rebounding leader with 240, was a two-time national defensive player of the year and was the SEC Player of the Year as a senior.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+        "https://www.wnba.com/player/1629479/teaira-mccowan/bio"
       ],
-      "google_keyword": "teaira mccowan nationality",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "teaira mccowan mississippi state",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Teaira McCowan injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "teaira mccowan injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Teaira McCowan's parents?",
-      "answer": "Public profiles share limited verified detail about Teaira McCowan's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
+      "question": "When was Teaira McCowan drafted?",
+      "answer": "The Indiana Fever drafted Teaira McCowan third overall in the 2019 WNBA Draft, and she made the 2019 All-Rookie Team. Dallas acquired her in a trade before the 2022 season.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
+        "https://www.wnba.com/player/1629479/teaira-mccowan/bio"
       ],
-      "google_keyword": "teaira mccowan parents",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What college did Teaira McCowan attend?",
-      "answer": "Teaira McCowan played college basketball at Mississippi State.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Teaira_McCowan"
-      ],
-      "google_keyword": "teaira mccowan mississippi state",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "teaira mccowan draft",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
