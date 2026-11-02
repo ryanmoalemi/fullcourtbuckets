@@ -1,0 +1,88 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Every number recomputed from official WNBA.com play-by-play and matched to the box score for all players in all 7 games; records attributed to the Valkyries release; quotes from AP and The Athletic as published on WNBA.com."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "First public quarter-by-quarter and half-by-half ledger of Williams' 137 Finals points, plus the series-wide second-half leaderboard (51 fourth-quarter points, 22 more than anyone)."
+      },
+      {
+        "name": "Effort",
+        "score": 8,
+        "max": 10,
+        "reason": "Parsed seven official play-by-play logs (2,700+ events), cross-checked every player total, built two CSVs and a chart."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "Outlets reported the 28-point half; none mapped when she scored across the series or contrasted her split with Reese's."
+      },
+      {
+        "name": "Experience",
+        "score": 6,
+        "max": 10,
+        "reason": "Data-driven desk work; no first-hand reporting from Chase Center."
+      },
+      {
+        "name": "Layout",
+        "score": 8,
+        "max": 10,
+        "reason": "Key finding and data table sit directly under the intro with methods, sources and data-through date; news context below."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Methods, linked per-game sources, CC0 downloads and the standard How this story was made note."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case result-first headline, short sentences, no filler, no em dashes."
+      },
+      {
+        "name": "People-first",
+        "score": 8,
+        "max": 10,
+        "reason": "Answers what fans and reporters search for (Finals MVP stats) with something new and reusable."
+      },
+      {
+        "name": "Human voice",
+        "score": 7,
+        "max": 10,
+        "reason": "Plain, direct copy; real quotes carry the emotion instead of invented reactions."
+      }
+    ],
+    "info_gain": [
+      "Williams scored 85 of 137 Finals points after halftime and 51 in fourth quarters; next best was Rhyne Howard with 29.",
+      "In Games 6 and 7 she scored 50 of her 56 points in the second half.",
+      "Angel Reese had the opposite split: 65 of her 103 points before halftime.",
+      "She made 23 of 24 second-half free throws and shot 34.6% after halftime vs 29.8% before."
+    ],
+    "ai_flags": [
+      "Removed a double 'after' in the GPT-suggested headline",
+      "Reworded an awkward key-finding sentence"
+    ]
+  },
+  "unique": [
+    "Quarter-by-quarter Williams Finals ledger from official play-by-play",
+    "Series-wide first-half vs second-half scoring table for every player with 25+ points"
+  ],
+  "unverified": [
+    "CBS claim that 137 points is a Finals series record (no primary source found; omitted)",
+    "Valkyries release '81% of the team's offense' in Q3 (FCB count is 15 of 21 points; omitted)"
+  ]
+}
