@@ -499,7 +499,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 206)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 216)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -578,6 +578,10 @@ class BuildTests(unittest.TestCase):
             'aubrey-griffin', 'candice-dupree', 'emma-cechova', 'indya-nivar', 'isobel-borlase',
             'jordan-harrison', 'jordan-horston', 'katie-smith', 'laeticia-amihere', 'marine-fauthoux',
         }
+        november_2 = {
+            'noemie-brochant', 'nyadiew-puoch', 'raquel-carrera', 'rebekah-gardner', 'sania-feagin',
+            'taina-mair', 'teaira-mccowan', 'elizabeth-kitley', 'emma-meesseman', 'grace-berger',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -592,11 +596,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_29 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_30 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_31 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_2 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in october_31:
+            if slug in november_2:
+                expected_source = 'Google search demand via OpenSEO, Nov 2, 2026'
+            elif slug in october_31:
                 expected_source = 'Google search demand via OpenSEO, Oct 31, 2026'
             elif slug in october_30:
                 expected_source = 'Google search demand via OpenSEO, Oct 30, 2026'
@@ -667,7 +674,21 @@ class BuildTests(unittest.TestCase):
             # and unconfirmed family links (Coulibaly, Kosu) were dropped.
             # Oct 31: same; Katie Smith's and Jordan Harrison's name searches are
             # mostly other people, and Candice Dupree's are mostly relationships.
-            if slug in {'marine-fauthoux'}:
+            # Nov 2: same; Stephanie Jones was skipped because her name searches are
+            # other people, and most dropped searches here are relationships or family.
+            if slug in {'noemie-brochant'}:
+                minimum = 2
+            elif slug in {'nyadiew-puoch', 'raquel-carrera'}:
+                minimum = 4
+            elif slug in {'rebekah-gardner', 'taina-mair'}:
+                minimum = 5
+            elif slug in {'teaira-mccowan', 'elizabeth-kitley', 'grace-berger'}:
+                minimum = 6
+            elif slug in {'sania-feagin'}:
+                minimum = 7
+            elif slug in {'emma-meesseman'}:
+                minimum = 8
+            elif slug in {'marine-fauthoux'}:
                 minimum = 3
             elif slug in {'emma-cechova', 'katie-smith'}:
                 minimum = 4
