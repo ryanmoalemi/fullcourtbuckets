@@ -1421,12 +1421,14 @@ def tracker_block(payload: dict) -> str:
             source_cell(url),
         ])
     note = (
-        'Game 7 viewership has not been released. '
         'Game 3 is at State Farm Arena at 8:00 p.m. ET, which is 5:00 p.m. PT. '
         'Game 4 tips at 1:00 p.m. ET, which is 10:00 a.m. PT, on NBC and Peacock.'
     )
+    fact = str(payload.get('key_fact') or '').strip()
+    fact_html = f'<p class="note" id="finals-g7-key-fact">{core.esc(fact)}</p>' if fact else ''
     return (
-        '<h3>How many people are watching the 2026 WNBA Finals?</h3>'
+        fact_html
+        + '<h3>How many people are watching the 2026 WNBA Finals?</h3>'
         f'<p class="answer">{core.link_teams(tracker_answer(payload))}</p>'
         + table(
             ['Game', 'Date', 'Venue', 'Network', 'Viewers', 'Source'],

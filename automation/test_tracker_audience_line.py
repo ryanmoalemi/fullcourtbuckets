@@ -18,7 +18,13 @@ class TrackerAudienceLine(unittest.TestCase):
         self.assertIn('usa-sports-delivers-15-million-viewers-valkyries-dream-game-6-thursday', html)
         self.assertIn('Nielsen panel-only data and digital data from Adobe Analytics', html)
         self.assertIn('https://x.com/MylesEhrlich/status/2116589348288127085', html)
+        self.assertIn('id="finals-g7-key-fact"', html)
+        self.assertIn('Game 7 drew a preliminary 3.3M viewers, which', html)
+        self.assertIn('https://x.com/colincsalao/status/2117671746837049433', html)
+        ratings = PAGE.parent / 'finals-ratings.csv'
+        self.assertIn('3.3 million (preliminary)', ratings.read_text(encoding='utf-8'))
         self.assertNotIn('Game 6 not yet released', html)
+        self.assertNotIn('Game 7 not yet released', html)
         self.assertNotIn('espn.com', html[i:i + 2500].lower())
 
 

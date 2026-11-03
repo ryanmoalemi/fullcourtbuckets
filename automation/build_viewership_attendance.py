@@ -460,6 +460,10 @@ def source_label(url: str) -> str:
         return "Just Women's Sports"
     if host.endswith('oursportscentral.com'):
         return 'OurSports Central'
+    if 'x.com/colincsalao/' in url or 'twitter.com/colincsalao/' in url:
+        return 'Colin Salao, Front Office Sports'
+    if host in ('x.com', 'twitter.com'):
+        return 'X'
     if host.endswith('kenn.com'):
         return 'Kenn.com'
     return host
@@ -586,7 +590,10 @@ def build(root: Path) -> None:
     page.parent.mkdir(parents=True, exist_ok=True)
     import site_nav
     import seo_meta
-    page.write_text(seo_meta.apply_rel(site_nav.apply_now_bar(site_nav.ensure_icons(render_page(root, payload))), '/wnba/viewership-attendance/', root), encoding='utf-8')
+    html = seo_meta.apply_rel(site_nav.apply_now_bar(site_nav.ensure_icons(render_page(root, payload))), '/wnba/viewership-attendance/', root)
+    import breadcrumbs
+    html = breadcrumbs.fix(html, '/wnba/viewership-attendance/', root)
+    page.write_text(html, encoding='utf-8')
     write_csv(page.parent / CSV_NAME, csv_rows(payload))
     write_downloads(page.parent, payload)
     stale = page.parent / 'og.jpg'
