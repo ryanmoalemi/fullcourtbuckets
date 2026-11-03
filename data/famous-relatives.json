@@ -1,7 +1,7 @@
 {
  "title": "Famous relatives of WNBA players",
  "page": "/news/wnba-players-famous-relatives/",
- "updated": "2026-10-27",
+ "updated": "2026-11-03",
  "corrections": "hello@fullcourtbuckets.com",
  "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
  "entries": [
@@ -2326,6 +2326,432 @@
     "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
     "source_page": "https://commons.wikimedia.org/wiki/File:Maya_Moore_speaking_at_the_Marshall_Project_in_Washington_DC_(48751715837)_(cropped).jpg"
    }
+  },
+  {
+   "rank": 64,
+   "player": "Kayla Alexander",
+   "player_slug": "kayla-alexander",
+   "relative": "Kyle Alexander",
+   "relative_slug": "kyle-alexander",
+   "relation": "Younger brother",
+   "relation_type": "sibling",
+   "sport": "NBA",
+   "known_for": "Former Tennessee center who signed a two-way contract with the Miami Heat on Jan. 15, 2020, made his NBA debut that Aug. 6 against Milwaukee and was with Miami for its run to the 2020 NBA Finals. He later played for Valencia in Spain's Liga ACB and the EuroLeague in 2022-23.",
+   "extra": "Tennessee's bio calls Kayla his oldest sister and notes she is Syracuse's all-time leading scorer (2,024 points). Their father, Joseph, played at Niagara.",
+   "sources": [
+    {
+     "label": "Tennessee Athletics bio: Kyle Alexander",
+     "url": "https://utsports.com/sports/mens-basketball/roster/kyle-alexander/6743",
+     "kind": "primary"
+    },
+    {
+     "label": "Tokyo 2020 official athlete profile: Kayla Alexander",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1432991-alexander-kayla.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kayla-alexander.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kayla_Alexander_14_Canada_20260311_(3)_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Edward Dallas",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kyle_Alexander.jpg"
+   }
+  },
+  {
+   "rank": 65,
+   "player": "Erin Phillips",
+   "player_slug": "erin-phillips",
+   "relative": "Greg Phillips",
+   "relative_slug": "greg-phillips",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Australian rules football",
+   "known_for": "Won eight SANFL premierships with Port Adelaide, captained the 1992 premiership side and played 343 games for Port Adelaide plus 84 for Collingwood. All-Australian in 1980, he entered the Australian Football Hall of Fame in 2020.",
+   "extra": "With Erin's own induction, Port Adelaide says they became the first father-daughter pair in the Australian Football Hall of Fame.",
+   "sources": [
+    {
+     "label": "SANFL: Greg Phillips inducted into Australian Football Hall of Fame",
+     "url": "https://sanfl.com.au/league/news/greg-phillips-inducted-into-australian-football-hall-of-fame/",
+     "kind": "primary"
+    },
+    {
+     "label": "Port Adelaide FC: Erin Phillips Hall of Fame",
+     "url": "https://www.portadelaidefc.com.au/news/1802765/ep-hof",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/erin-phillips.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Erin_Phillips_2019_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 66,
+   "player": "Alanna Smith",
+   "player_slug": "alanna-smith",
+   "relative": "Jason Smith",
+   "relative_slug": "jason-smith",
+   "relation": "Uncle",
+   "relation_type": "uncle/aunt",
+   "sport": "Basketball (Australia)",
+   "known_for": "Played for Australia's Boomers at the Sydney 2000 and Athens 2004 Olympics and the 2006 World Championships, and won gold at the 2006 Commonwealth Games in Melbourne.",
+   "extra": "Her father, Darren, played 211 games in the NBL, per the Australian Olympic Committee.",
+   "sources": [
+    {
+     "label": "Australian Olympic Committee: Alanna Smith",
+     "url": "https://www.olympics.com.au/olympians/alanna-smith/",
+     "kind": "primary"
+    },
+    {
+     "label": "Tokyo 2020 official athlete profile: Alanna Smith",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1328275-smith-alanna.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/alanna-smith.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Alanna_Smith_11_Australia_20260314_(1).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Jason_Smith_(basketball,_born_1974)_Australia_20260314.jpg"
+   }
+  },
+  {
+   "rank": 67,
+   "player": "Anneli Maley",
+   "player_slug": "anneli-maley",
+   "relative": "Paul Maley",
+   "relative_slug": "paul-maley",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "NBL",
+   "known_for": "NBL champion in 1994 who played 270 games with the Westside Melbourne Saints, North Melbourne Giants, Victoria Titans and Adelaide 36ers.",
+   "extra": "Her brother was drafted by the North Melbourne Football Club, per the Australian Olympic Committee.",
+   "sources": [
+    {
+     "label": "Basketball Australia: Anneli Maley",
+     "url": "https://www.australia.basketball/players/3587838",
+     "kind": "primary"
+    },
+    {
+     "label": "Australian Olympic Committee: Anneli Maley",
+     "url": "https://www.olympics.com.au/olympians/anneli-maley/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/anneli-maley.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Anneli_Maley_2026.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 68,
+   "player": "Iliana Rupert",
+   "player_slug": "iliana-rupert",
+   "relative": "Thierry Rupert",
+   "relative_slug": "thierry-rupert",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball (France)",
+   "known_for": "Played for the French men's national team, including at the 2003 European Championships, and played professionally in France's Ligue Nationale de Basket from 2002 to 2012. He died in 2013 at age 35.",
+   "extra": "Iliana and her brother Rayan both wear No. 12, like their late father.",
+   "sources": [
+    {
+     "label": "WNBA.com 2021 draft prospect profile: Iliana Rupert",
+     "url": "https://www.wnba.com/draft/2021/prospects/135670/iliana-rupert",
+     "kind": "primary"
+    },
+    {
+     "label": "Tokyo 2020 official athlete profile: Iliana Rupert",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1340270-rupert-iliana.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/iliana-rupert.webp",
+    "author": "Zafer",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Iliana_Rupert_12_Fenerbah%C3%A7e_WB_EuroLeague_Women_20251104_(3).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 69,
+   "player": "Kim Mestdagh",
+   "player_slug": "kim-mestdagh",
+   "relative": "Philip Mestdagh",
+   "relative_slug": "philip-mestdagh",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball coach (Belgium)",
+   "known_for": "Head coach of Belgium's women's national team, the Belgian Cats, including at the Tokyo 2020 Olympics, where he coached both of his daughters. He also coached the Blue Cats in Ypres, where Kim started her career.",
+   "extra": "Kim won a WNBA title with the Washington Mystics, per Basketball Belgium.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Kim Mestdagh",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1393440-mestdagh-kim.htm",
+     "kind": "primary"
+    },
+    {
+     "label": "Basketball Belgium: Cat dans le spotlight, Kim Mestdagh",
+     "url": "https://www.basketballbelgium.be/news/cat-dans-le-spotlight-kim-mestdagh/",
+     "kind": "primary"
+    },
+    {
+     "label": "Colorado State Athletics bio: Kim Mestdagh",
+     "url": "https://csurams.com/sports/womens-basketball/roster/mestdagh-kim/1888",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kim-mestdagh.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kim_Mestdagh_in_2019.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Stéphanie Lahaye",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Philip_Mestdagh.jpg"
+   }
+  },
+  {
+   "rank": 70,
+   "player": "Kim Mestdagh",
+   "player_slug": "kim-mestdagh",
+   "relative": "Hanne Mestdagh",
+   "relative_slug": "hanne-mestdagh",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "Basketball (Belgium)",
+   "known_for": "Belgian Cats teammate who won bronze at the 2017 European Championships and played for Belgium at the Tokyo 2020 Olympics.",
+   "extra": "Hanne followed Kim to Colorado State, and they played one season together there.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Hanne Mestdagh",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1393439-mestdagh-hanne.htm",
+     "kind": "primary"
+    },
+    {
+     "label": "Tokyo 2020 official athlete profile: Kim Mestdagh",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1393440-mestdagh-kim.htm",
+     "kind": "primary"
+    },
+    {
+     "label": "Basketball Belgium: Cat dans le spotlight, Kim Mestdagh",
+     "url": "https://www.basketballbelgium.be/news/cat-dans-le-spotlight-kim-mestdagh/",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kim-mestdagh.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kim_Mestdagh_in_2019.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Bas Hendriks",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Hanne_mestdagh-1545682238.jpeg"
+   }
+  },
+  {
+   "rank": 71,
+   "player": "Marine Fauthoux",
+   "player_slug": "marine-fauthoux",
+   "relative": "Frédéric Fauthoux",
+   "relative_slug": "frederic-fauthoux",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball (France)",
+   "known_for": "Named head coach of France's men's national team in September 2024. As a guard he played 47 games for France and won bronze at EuroBasket 2005.",
+   "extra": "He played professionally for Élan Béarnais Pau-Orthez, per Marine's Tokyo 2020 profile.",
+   "sources": [
+    {
+     "label": "FIBA: Fauthoux succeeds Collet as coach of France",
+     "url": "https://www.fiba.basketball/en/events/fiba-eurobasket-2025-qualifiers/news/fauthoux-succeeds-collet-as-coach-of-france",
+     "kind": "primary"
+    },
+    {
+     "label": "French Basketball Federation (Team France Basket): Frédéric Fauthoux named head coach",
+     "url": "https://www.teamfrancebasket.com/voir-actualite/86918",
+     "kind": "primary"
+    },
+    {
+     "label": "Tokyo 2020 official athlete profile: Marine Fauthoux",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1340259-fauthoux-marine.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/marine-fauthoux.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Marine_Fauthoux_2026.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "sanguinez",
+    "license": "CC BY-SA 3.0",
+    "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Frederic_Fauthoux_3.jpg"
+   }
+  },
+  {
+   "rank": 72,
+   "player": "Ana Dabović",
+   "player_slug": "ana-dabovic",
+   "relative": "Milica Dabović",
+   "relative_slug": "milica-dabovic",
+   "relation": "Older sister",
+   "relation_type": "sibling",
+   "sport": "Basketball (Serbia)",
+   "known_for": "Captained Serbia to the 2015 EuroBasket title and won Olympic bronze alongside Ana at Rio 2016.",
+   "extra": "Their father, Milan, has coached basketball, per Ana's Tokyo 2020 profile.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Ana Dabović",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1344241-dabovic-ana.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/ana-dabovic.webp",
+    "author": "Sergeev Pavel",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ana_Dabovi%C4%87_3.JPG"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "basketinside.com",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ana_%26_Milica_Dabovi%C4%87_(Serbian_national_basketball_team).jpg"
+   }
+  },
+  {
+   "rank": 73,
+   "player": "Yvonne Anderson",
+   "player_slug": "yvonne-anderson",
+   "relative": "Mike Anderson",
+   "relative_slug": "mike-anderson",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "College basketball coach",
+   "known_for": "Men's head coach at UAB (2002-06), Missouri (2006-11) and Arkansas (hired in 2011). In his first 16 seasons as a head coach, his teams made nine NCAA Tournaments, including a run to the 2009 Elite Eight.",
+   "extra": "Yvonne played at Texas after starring at Hickman High School in Columbia, Missouri, per Texas Athletics.",
+   "sources": [
+    {
+     "label": "Arkansas Razorbacks bio: Mike Anderson",
+     "url": "https://arkansasrazorbacks.com/coache/mike-anderson/",
+     "kind": "primary"
+    },
+    {
+     "label": "Texas Athletics bio: Yvonne Anderson",
+     "url": "https://texaslonghorns.com/sports/womens-basketball/roster/yvonne-anderson/3098",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/yvonne-anderson.webp",
+    "author": "User:Zafer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Yvonne_Anderson_1_Fenerbah%C3%A7e_WB_TKBSL_20260926_(4)_(cropped).JPG"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Brandonrush",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mike_Anderson_interview.jpg"
+   }
+  },
+  {
+   "rank": 74,
+   "player": "Roneeka Hodges",
+   "player_slug": "roneeka-hodges",
+   "relative": "Doneeka Hodges",
+   "relative_slug": "doneeka-hodges",
+   "relation": "Twin sister",
+   "relation_type": "sibling",
+   "sport": "WNBA",
+   "known_for": "LSU guard who finished second in career games played at LSU (130) and was drafted by the Los Angeles Sparks in the second round. She was already with the Sparks when Roneeka was drafted 15th overall in 2005.",
+   "extra": "They played three seasons together at LSU before Roneeka transferred to Florida State.",
+   "sources": [
+    {
+     "label": "LSU Athletics bio: Doneeka Hodges",
+     "url": "https://lsusports.net/sports/wbball/roster/player/doneeka-hodges",
+     "kind": "primary"
+    },
+    {
+     "label": "Florida State Athletics: Roneeka Hodges selected 15th overall in the WNBA draft",
+     "url": "https://seminoles.com/news/2005/4/16/roneeka-hodges-selected-as-15th-overall-pick-in-the-wnba-draft",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-03",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/roneeka-hodges.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Roneeka_Hodges_2026.jpg"
+   },
+   "photo_relative": null
   }
  ]
 }
