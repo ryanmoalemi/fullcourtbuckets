@@ -1,0 +1,31 @@
+Full Court Buckets, 2027 WNBA free-agency service classes
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+
+wnba-2026-players-by-service-class.csv
+  One row per player in the 2026 regular-season file (data/wnba/seasons/2026.json, season_type 2).
+  games, mpg, ppg, rpg, apg, fg_pct, fg3_pct are the averages stored on that row.
+  points = ppg x games. minutes = mpg x games. Averages are stored to one or two decimals, so the product can sit a fraction of a point off an official total.
+  Check: Kelsey Mitchell is 24.68 points x 44 games = 1,085.92. WNBA.com's season awards story lists 1,086 points and 24.7 per game.
+  seasons = count of regular seasons, 2008 through 2026, with at least one game in the FCB season files.
+  season_years = those seasons. short_seasons = seasons with fewer than 7 games, written as year:games.
+  projected_class uses that season count and CBA Article VI, assuming the contract ends after 2026:
+    UFA = 5 or more seasons (Article VI, Section 9). Unrestricted the day after the moratorium.
+    RFA = 4 seasons (Article VI, Section 5(b)). Restricted only if the prior team sends a qualifying offer from Jan. 30 through Feb. 3, 2027. Otherwise unrestricted.
+    Reserved = 3 or fewer (Article VI, Section 8). Reserved only if the prior team sends a qualifying offer in that same window. Otherwise unrestricted. A player who finished on a developmental contract is also reserved if that offer is made. This file does not identify developmental contracts.
+  A season under 7 games is still counted. Article I withholds a year of service for a 7-day contract, a player-development contract, or replacement contracts covering fewer than 7 regular-season games. A standard contract that reaches the active list counts. The file does not record contract type, so short seasons are marked rather than dropped.
+  in_team_shares = no for the two rows whose team field names two clubs and has no abbreviation (Lexi Held, Aneesah Morrow). They stay in the player file and in the WNBA row of the team file.
+  contract_term is filled only when an official team document states the 2026 term. Napheesa Collier is one-year in the Lynx game notes of June 19, 2026. Blank means this file does not have that document.
+  This is not the league's free-agent list. That list follows qualifying offers in February 2027.
+
+wnba-2026-team-free-agency-shares.csv
+  One row per 2026 club, then a WNBA row.
+  Team shares use only players with a single team abbreviation. Points and minutes are the sums of ppg x games and mpg x games.
+  ufa_point_share is that group's points divided by the team's points, in percent to one decimal.
+  The same split is applied to minutes and to the player count.
+  The WNBA row includes the two combined-team players, so its points are higher than the sum of the team rows.
+  Playoff games are not included.
+
+Source: Full Court Buckets season files, data/wnba/seasons/2008.json through 2026.json.
+Years of service rule: 2026 WNBA-WNBPA collective bargaining agreement, Article I definition of Years of Service, and Article VI.
+https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf
+Data through the end of the 2026 regular season. The Finals ended Oct. 31, 2026. These rows are regular season only.

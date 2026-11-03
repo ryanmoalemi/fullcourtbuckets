@@ -590,7 +590,10 @@ def build(root: Path) -> None:
     page.parent.mkdir(parents=True, exist_ok=True)
     import site_nav
     import seo_meta
-    page.write_text(seo_meta.apply_rel(site_nav.apply_now_bar(site_nav.ensure_icons(render_page(root, payload))), '/wnba/viewership-attendance/', root), encoding='utf-8')
+    html = seo_meta.apply_rel(site_nav.apply_now_bar(site_nav.ensure_icons(render_page(root, payload))), '/wnba/viewership-attendance/', root)
+    import breadcrumbs
+    html = breadcrumbs.fix(html, '/wnba/viewership-attendance/', root)
+    page.write_text(html, encoding='utf-8')
     write_csv(page.parent / CSV_NAME, csv_rows(payload))
     write_downloads(page.parent, payload)
     stale = page.parent / 'og.jpg'

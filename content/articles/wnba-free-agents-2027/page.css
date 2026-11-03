@@ -1,0 +1,4 @@
+/* Circle headshots in this article's tables. Same treatment as a team roster row. */
+.article .roster-face{display:inline-block;width:32px;height:32px;max-width:32px;border-radius:50%;object-fit:cover;object-position:center 18%;vertical-align:middle;margin-right:.45rem;background:#e9e9ef}
+.article thead th[data-sort="asc"]::after{content:" \2191"}
+.article thead th[data-sort="desc"]::after{content:" \2193"}
