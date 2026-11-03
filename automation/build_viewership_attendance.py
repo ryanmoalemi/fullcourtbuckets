@@ -460,6 +460,10 @@ def source_label(url: str) -> str:
         return "Just Women's Sports"
     if host.endswith('oursportscentral.com'):
         return 'OurSports Central'
+    if 'x.com/colincsalao/' in url or 'twitter.com/colincsalao/' in url:
+        return 'Colin Salao, Front Office Sports'
+    if host in ('x.com', 'twitter.com'):
+        return 'X'
     if host.endswith('kenn.com'):
         return 'Kenn.com'
     return host

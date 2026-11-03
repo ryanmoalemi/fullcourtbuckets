@@ -188,7 +188,7 @@ FINALS_TRACKER_ROWS = [
     ['6', 'Thu, Oct. 29, 2026', 'Golden State Valkyries at Atlanta Dream, State Farm Arena', 'USA Network, E!, Syfy and Peacock',
      '12:30 p.m. ET / 9:30 a.m. PT', 'Not released', '1.5 million', 'Not released', 'Final: Dream 80, Valkyries 69'],
     ['7', 'Sat, Oct. 31, 2026', 'Atlanta Dream at Golden State Valkyries, Chase Center', 'USA/CNBC/Peacock',
-     '8:00 p.m. ET / 5:00 p.m. PT', 'Not yet released', 'Not yet released', 'Not yet released',
+     '8:00 p.m. ET / 5:00 p.m. PT', 'Not released', '3.3 million (preliminary)', 'Not released',
      'Final: Valkyries 68, Dream 63'],
 ]
 TRACKER_CAPTION = (
