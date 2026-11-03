@@ -1,0 +1,96 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Season counts and 2026 averages come from FCB season files. Shares are ppg and mpg times games. Mitchell's row is 1,085.9 against 1,086 on the WNBA.com awards story. Collier's one-year deal, the cap, the dates, and the core rule are quoted from the Lynx game notes or the WNBPA CBA PDF. Contract length is left blank where no team document states it. The league's official service ledger is not in the file, and the page says so."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "Every 2026 regular-season player is classified by the CBA years-of-service test, and each team's share of points and minutes is split across that test. CBS has a top 10. Her Hoop Stats has names. Neither publishes this production split or the season-count check on Kuier, Engstler, and Burrell."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "2008-2026 season files, the CBA PDF, team notes, and the league lottery and awards pages, plus a ranked chart, two CSVs, and a data dictionary. Not a hand log of every box score."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The angle is the service-class share of 2026 scoring, with Las Vegas at 96.3% and the league at 56.0%, and an explicit line that this is not yet the February free-agent list."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. Primary documents are linked in the body."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Finding is the H1 and the one-line lead. The team table sits under the lead photo. The player table, dates, and disagreements follow. Fine print is last. Title tag is a shorter form of the same finding."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Standard how-this-story-was-made note, CC0 downloads, data dictionary, photo credit, and the gaps (unsigned contract lengths, short seasons, two unsplit rows, no February list) are on the page."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. In-article links open in a new tab. A few player notes still open on the stat line."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the 2027 class gets the CBA dates, the status rule, every 2026 player's class, and which public labels the season count can and cannot settle."
+      },
+      {
+        "name": "Human voice",
+        "score": 7,
+        "max": 10,
+        "reason": "Specific and cautious. The disagreement section still repeats a stat-line rhythm. No stock AI phrases."
+      }
+    ],
+    "info_gain": [
+      "Team-by-team share of 2026 points and minutes from players with 5 or more, exactly 4, and 3 or fewer seasons",
+      "Every 2026 regular-season player with that season count, 2026 line, and the CBA section that sets the class",
+      "Collier, Young, Mitchell, and Plum cannot be cored in 2027 because Section 7(b) stops at six years of service",
+      "Kuier (4 seasons) matches a restricted label; Engstler (5 seasons, none under 12 games) does not; Burrell's 3-game 2022 season is the swing"
+    ],
+    "ai_flags": [
+      "Broken Wilson sentence ('is the scoring leader' pasted after a full stat line) rewritten",
+      "'1 regular seasons' corrected to 'one regular season' for Astier and Green",
+      "Repeated 'The file has N regular seasons' openings in the rankings section folded into the season lists"
+    ]
+  },
+  "unique": [
+    "Las Vegas got 96.3% of its 2026 points, and 96.0% of its minutes, from players with five or more seasons. League-wide that group scored 56.0% of points and played 54.1% of minutes.",
+    "The player file is the CBA test (Article VI, Sections 5, 8, and 9), not a copy of a published free-agent list. Qualifying offers still decide restricted and reserved status.",
+    "Core eligibility for 2027 is the six-year line in Article VI, Section 7(b). Exhibit 4 does not say which 2027 core spots are already filled."
+  ],
+  "unverified": [
+    "The league's official Years of Service ledger. This file counts regular seasons with at least one game.",
+    "2026 contract length for every player except Napheesa Collier (one-year, Lynx game notes of June 19, 2026). Plum's one-year deal is in the WNBA.com deadline story, not a signing release.",
+    "Which teams already have a player under a core contract that runs into 2027. Exhibit 4 stops after the 2025 season.",
+    "Rebecca Allen's retirement. No league or team release was found, so she stays on the table.",
+    "Whether Zaay Green has already cleared waivers, and whether Rae Burrell's 3-game 2022 season was a standard contract.",
+    "Developmental contracts and players whose deals expired while suspended. They are not in the 2026 regular-season file.",
+    "Lexi Held and Aneesah Morrow, whose rows name two teams and are left out of the team shares.",
+    "Readability pass skipped: OPENAI_API_KEY and GEMINI_API_KEY were not in the environment."
+  ]
+}
