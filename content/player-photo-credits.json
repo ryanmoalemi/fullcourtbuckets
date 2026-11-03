@@ -2817,6 +2817,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-02: edges checked at 200% on dark and light backgrounds"
+    },
+    "robyn-parks": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Robyn_Parks_(54540275312)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "morgan-bertsch": {
+      "author": "John McClellan",
+      "file_url": "https://commons.wikimedia.org/wiki/File:230519_Lynx_Sky_JohnMc62_(cropped)_-_Morgan_Bertsch.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "marianna-tolo": {
+      "author": "Hawkeye7",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Marianna_Tolo_2019.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "meighan-simmons": {
+      "author": "U.S. Department of State",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Meighan_Simmons_2013_(cropped).jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "saniya-chong": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chong2-20180523.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "celine-dumerc": {
+      "author": "Pierre-Selim Huard",
+      "file_url": "https://commons.wikimedia.org/wiki/File:C%C3%A9line_Dumerc_-_Championnes_de_c%C5%93ur_-_8077.jpg",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "jaime-nared": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jaime_Nared_31_Nesibe_Ayd%C4%B1n_TKBSL_20250301_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "rui-machida": {
+      "author": "Shuhei S",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rui_Machida.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "kadi-sissoko": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kadi_Sissoko_(53165024678)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "jasmine-walker": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jasmine_Walker_40_Danilo%27s_Pizza_SK_TKBSL_20250213_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "rachel-jarry": {
+      "author": "Bidgee",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Rachel_Jarry,_2012_(cropped).jpg",
+      "license": "CC BY-SA 3.0 au",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/au/deed.en",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "lorela-cubaj": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lorela_Cubaj_13_Italy_20250624_(1).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "murjanatu-musa": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Murjanatu_Musa_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "mamignan-toure": {
+      "author": "Patroklis",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Migna_Tour%C3%A9.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "yvonne-anderson": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Yvonne_Anderson_1_Fenerbah%C3%A7e_WB_TKBSL_20260926_(4)_(cropped).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "marquesha-davis": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Marquesha_Davis_2_Bota%C5%9F_SK_TKBSL_20251106_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "kariata-diaby": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kariata_Diaby_2025_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "kim-mestdagh": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kim_Mestdagh_(48369789397)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "olivia-epoupa": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Olivia_%C3%89poupa_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "jelena-dubljevic": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jelena_Dubljevi%C4%87_Fenerbah%C3%A7e_Women%27s_Basketball_vs_Galatasaray_Women%27s_Basketball_TWBL_20180408.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
