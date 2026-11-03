@@ -202,7 +202,15 @@ def place_notes(blocks: list) -> list:
 SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10px;font:800 24px/1.1 Barlow,sans-serif;'
                    'color:#fff}.article h4.sub-h4{margin:18px 0 6px;font:700 18px/1.25 Barlow,sans-serif;color:#ff9800}</style>')
 BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
+# !chart: /images/articles/<slug>/chart.png | alt text | caption
+CHART_RE = re.compile(r'!chart:\s*(.+)')
 ODD_RE = re.compile(r'^!odd:\s*(.+)$')
+_PLAYER_CELL_RE = re.compile(r'<a class="inline-link" href="(/wnba/([a-z0-9-]+)/)"')
+_NON_PLAYER_SLUGS = frozenset({
+    'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue',
+    'owners', 'where-to-watch', 'finals',
+})
+_LICENSED_SLUGS: set[str] | None = None
 
 
 def ensure_body_photo_files(src: str, webp: str, root: Path | None = None) -> None:
@@ -238,6 +246,76 @@ def body_photo_html(parts: list) -> str:
     )
 
 
+def licensed_slugs() -> set[str]:
+    """Players with a licensed photograph, not an AI illustration."""
+    global _LICENSED_SLUGS
+    if _LICENSED_SLUGS is None:
+        path = ROOT / 'content' / 'player-photographs.json'
+        try:
+            data = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            data = {}
+        _LICENSED_SLUGS = {str(slug) for slug in (data.get('slugs') or [])}
+    return _LICENSED_SLUGS
+
+
+def face_html(slug: str) -> str:
+    """Circle headshot for a licensed portrait.webp. Empty when the repo has none."""
+    if not slug or slug in _NON_PLAYER_SLUGS or slug not in licensed_slugs():
+        return ''
+    rel = f'/images/players/{slug}/portrait.webp'
+    if not (ROOT / rel.lstrip('/')).is_file():
+        return ''
+    return (
+        f'<img class="roster-face" src="{esc(rel)}" alt="" width="32" height="32" '
+        f'loading="lazy" decoding="async">'
+    )
+
+
+def decorate_player_cells(table: str) -> str:
+    """Put the licensed headshot immediately before each player-page link in a table."""
+    def repl(match: re.Match) -> str:
+        face = face_html(match.group(2))
+        return (face + match.group(0)) if face else match.group(0)
+    return _PLAYER_CELL_RE.sub(repl, table)
+
+
+def chart_html(parts: list) -> str:
+    """A shareable chart. class=chart keeps the crop rules from slicing it."""
+    src = parts[0] if parts else ''
+    alt = parts[1] if len(parts) > 1 else ''
+    caption = parts[2] if len(parts) > 2 else ''
+    path = ROOT / src.lstrip('/')
+    if not path.is_file():
+        raise SystemExit(f'chart missing: {src}')
+    from PIL import Image
+    with Image.open(path) as im:
+        width, height = im.size
+    cap = f'<figcaption>{inline(caption)}</figcaption>' if caption else ''
+    return (
+        f'<figure class="chart no-crop"><img src="{esc(src)}" alt="{esc(alt)}" '
+        f'width="{width}" height="{height}" loading="lazy" decoding="async">'
+        f'{cap}</figure>'
+    )
+
+
+def sort_script() -> str:
+    """Click a header to sort that article table. Numbers sort as numbers."""
+    return (
+        '<script>(function(){document.querySelectorAll(".article table").forEach(function(table){'
+        'var ths=table.querySelectorAll("thead th");ths.forEach(function(th,idx){th.style.cursor="pointer";'
+        'th.title="Sort by this column";th.addEventListener("click",function(){var body=table.tBodies[0];'
+        'if(!body)return;var rows=Array.prototype.slice.call(body.rows);'
+        'var asc=th.getAttribute("data-sort")!=="asc";ths.forEach(function(h){h.removeAttribute("data-sort");});'
+        'th.setAttribute("data-sort",asc?"asc":"desc");rows.sort(function(a,b){'
+        'var at=(a.cells[idx]?a.cells[idx].innerText:"").trim();'
+        'var bt=(b.cells[idx]?b.cells[idx].innerText:"").trim();'
+        'var an=parseFloat(at.replace(/[^0-9.\\-]/g,""));var bn=parseFloat(bt.replace(/[^0-9.\\-]/g,""));'
+        'var c;if(at!==""&&bt!==""&&!isNaN(an)&&!isNaN(bn)&&/[0-9]/.test(at)&&/[0-9]/.test(bt))c=an-bn;'
+        'else c=at.localeCompare(bt);return asc?c:-c;});rows.forEach(function(r){body.appendChild(r);});});});});})();</script>'
+    )
+
+
 def odds_html(rows: list[str]) -> str:
     """No. 1 odds bars for the Halloween Game 7 preview. CSS animates the fill."""
     cards = []
@@ -262,7 +340,7 @@ def odds_html(rows: list[str]) -> str:
     return '<div class="hw-lottery">' + ''.join(cards) + '</div>'
 
 
-def body_html(markdown: str) -> str:
+def body_html(markdown: str, table_headshots: bool = False, sortable: bool = False) -> str:
     blocks: list[str] = []
     paragraph: list[str] = []
     bullets: list[str] = []
@@ -336,6 +414,12 @@ def body_html(markdown: str) -> str:
             flush_bullets()
             blocks.append(('photo', [x.strip() for x in photo.group(1).split('|')]))
             continue
+        chart = CHART_RE.fullmatch(line.strip())
+        if chart:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('chart', [x.strip() for x in chart.group(1).split('|')]))
+            continue
         if line.startswith('### ') or line.startswith('#### '):
             flush_paragraph()
             flush_bullets()
@@ -363,6 +447,9 @@ def body_html(markdown: str) -> str:
         if kind == 'photo':
             html_blocks.append(body_photo_html(value))
             continue
+        if kind == 'chart':
+            html_blocks.append(chart_html(value))
+            continue
         if kind == 'odds':
             html_blocks.append(odds_html(value))
             continue
@@ -376,7 +463,10 @@ def body_html(markdown: str) -> str:
             html_blocks.append(f'<ul>{items}</ul>')
             continue
         if kind == 'table':
-            html_blocks.append(table_html(value))
+            rendered = table_html(value)
+            if table_headshots:
+                rendered = decorate_player_cells(rendered)
+            html_blocks.append(rendered)
             continue
         if kind == 'note':
             html_blocks.append(
@@ -407,7 +497,10 @@ def body_html(markdown: str) -> str:
         if BETTING_RE.search(value) and DISCLAIMER not in markdown and not disclaimer:
             html_blocks.append(f'<p>{esc(DISCLAIMER)}</p>')
             disclaimer = True
-    return '\n'.join(html_blocks)
+    html = '\n'.join(html_blocks)
+    if sortable:
+        html += '\n' + sort_script()
+    return html
 
 
 def focal_for(meta: dict, existing: dict | None) -> str:
@@ -677,7 +770,9 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated_raw):
         when = 'Updated ' + links._format_date(updated_raw)
         stamp = updated_raw
-    body = body_html(markdown)
+    faces = str(meta.get('table_headshots') or '').strip().lower() in ('true', 'yes', '1')
+    sortable = str(meta.get('sortable_tables') or '').strip().lower() in ('true', 'yes', '1')
+    body = body_html(markdown, table_headshots=faces, sortable=sortable)
     if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
         body = body.replace('<div class="table-wrap">', '<div class="table-wrap" data-fcb-data-table>', 1)
