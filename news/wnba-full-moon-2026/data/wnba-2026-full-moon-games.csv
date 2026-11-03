@@ -1,0 +1,355 @@
+date_et,weekday,season,game,away_team,away_score,home_team,home_score,home_win,arena,full_moon_et,within_one_day_et
+2026-05-08,Friday,regular,Regular season,Connecticut Sun,75,New York Liberty,106,yes,Barclays Center,no,no
+2026-05-08,Friday,regular,Regular season,Golden State Valkyries,91,Seattle Storm,80,no,Climate Pledge Arena,no,no
+2026-05-08,Friday,regular,Regular season,Washington Mystics,68,Toronto Tempo,65,no,Coca-Cola Coliseum,no,no
+2026-05-09,Saturday,regular,Regular season,Atlanta Dream,91,Minnesota Lynx,90,no,Target Center,no,no
+2026-05-09,Saturday,regular,Regular season,Chicago Sky,98,Portland Fire,83,no,Moda Center,no,no
+2026-05-09,Saturday,regular,Regular season,Dallas Wings,107,Indiana Fever,104,no,Gainbridge Fieldhouse,no,no
+2026-05-09,Saturday,regular,Regular season,Phoenix Mercury,99,Las Vegas Aces,66,no,T-Mobile Arena,no,no
+2026-05-10,Sunday,regular,Regular season,Seattle Storm,89,Connecticut Sun,82,no,Mohegan Sun Arena,no,no
+2026-05-10,Sunday,regular,Regular season,Phoenix Mercury,79,Golden State Valkyries,95,yes,Chase Center,no,no
+2026-05-10,Sunday,regular,Regular season,Las Vegas Aces,105,Los Angeles Sparks,78,no,Crypto.com Arena,no,no
+2026-05-10,Sunday,regular,Regular season,New York Liberty,98,Washington Mystics,93,no,CareFirst Arena,no,no
+2026-05-12,Tuesday,regular,Regular season,Atlanta Dream,77,Dallas Wings,72,no,College Park Center,no,no
+2026-05-12,Tuesday,regular,Regular season,Minnesota Lynx,88,Phoenix Mercury,84,no,Mortgage Matchup Center,no,no
+2026-05-12,Tuesday,regular,Regular season,New York Liberty,96,Portland Fire,98,yes,Moda Center,no,no
+2026-05-13,Wednesday,regular,Regular season,Chicago Sky,69,Golden State Valkyries,63,no,Chase Center,no,no
+2026-05-13,Wednesday,regular,Regular season,Las Vegas Aces,98,Connecticut Sun,69,no,Mohegan Sun Arena,no,no
+2026-05-13,Wednesday,regular,Regular season,Indiana Fever,87,Los Angeles Sparks,78,no,Crypto.com Arena,no,no
+2026-05-13,Wednesday,regular,Regular season,Seattle Storm,73,Toronto Tempo,86,yes,Coca-Cola Coliseum,no,no
+2026-05-14,Thursday,regular,Regular season,Minnesota Lynx,90,Dallas Wings,86,no,College Park Center,no,no
+2026-05-14,Thursday,regular,Regular season,New York Liberty,100,Portland Fire,82,no,Moda Center,no,no
+2026-05-15,Friday,regular,Regular season,Chicago Sky,83,Phoenix Mercury,91,yes,Mortgage Matchup Center,no,no
+2026-05-15,Friday,regular,Regular season,Las Vegas Aces,101,Connecticut Sun,94,no,Mohegan Sun Arena,no,no
+2026-05-15,Friday,regular,Regular season,Washington Mystics,104,Indiana Fever,102,no,Gainbridge Fieldhouse,no,no
+2026-05-15,Friday,regular,Regular season,Toronto Tempo,95,Los Angeles Sparks,99,yes,Crypto.com Arena,no,no
+2026-05-17,Sunday,regular,Regular season,Las Vegas Aces,85,Atlanta Dream,84,no,State Farm Arena,no,no
+2026-05-17,Sunday,regular,Regular season,Chicago Sky,86,Minnesota Lynx,79,no,Target Center,no,no
+2026-05-17,Sunday,regular,Regular season,Seattle Storm,78,Indiana Fever,89,yes,Gainbridge Fieldhouse,no,no
+2026-05-17,Sunday,regular,Regular season,Toronto Tempo,106,Los Angeles Sparks,96,no,Crypto.com Arena,no,no
+2026-05-18,Monday,regular,Regular season,Connecticut Sun,82,Portland Fire,83,yes,Moda Center,no,no
+2026-05-18,Monday,regular,Regular season,Washington Mystics,69,Dallas Wings,92,yes,College Park Center,no,no
+2026-05-19,Tuesday,regular,Regular season,Toronto Tempo,98,Phoenix Mercury,90,no,Mortgage Matchup Center,no,no
+2026-05-20,Wednesday,regular,Regular season,Dallas Wings,99,Chicago Sky,89,no,Wintrust Arena,no,no
+2026-05-20,Wednesday,regular,Regular season,Connecticut Sun,80,Seattle Storm,78,no,Climate Pledge Arena,no,no
+2026-05-20,Wednesday,regular,Regular season,Portland Fire,73,Indiana Fever,90,yes,Gainbridge Fieldhouse,no,no
+2026-05-21,Thursday,regular,Regular season,Golden State Valkyries,87,New York Liberty,70,no,Barclays Center,no,no
+2026-05-21,Thursday,regular,Regular season,Los Angeles Sparks,97,Phoenix Mercury,88,no,Mortgage Matchup Center,no,no
+2026-05-21,Thursday,regular,Regular season,Toronto Tempo,72,Minnesota Lynx,100,yes,Target Center,no,no
+2026-05-22,Friday,regular,Regular season,Dallas Wings,69,Atlanta Dream,86,yes,Gateway Center Arena @ College Park,no,no
+2026-05-22,Friday,regular,Regular season,Connecticut Sun,59,Seattle Storm,77,yes,Climate Pledge Arena,no,no
+2026-05-22,Friday,regular,Regular season,Golden State Valkyries,82,Indiana Fever,90,yes,Gainbridge Fieldhouse,no,no
+2026-05-23,Saturday,regular,Regular season,Minnesota Lynx,85,Chicago Sky,75,no,Wintrust Arena,no,no
+2026-05-23,Saturday,regular,Regular season,Los Angeles Sparks,101,Las Vegas Aces,95,no,Michelob ULTRA Arena,no,no
+2026-05-23,Saturday,regular,Regular season,Portland Fire,99,Toronto Tempo,80,no,Coca-Cola Coliseum,no,no
+2026-05-24,Sunday,regular,Regular season,Phoenix Mercury,80,Atlanta Dream,82,yes,Gateway Center Arena @ College Park,no,no
+2026-05-24,Sunday,regular,Regular season,Dallas Wings,91,New York Liberty,76,no,Barclays Center,no,no
+2026-05-24,Sunday,regular,Regular season,Washington Mystics,85,Seattle Storm,97,yes,Climate Pledge Arena,no,no
+2026-05-25,Monday,regular,Regular season,Connecticut Sun,70,Golden State Valkyries,97,yes,Chase Center,no,no
+2026-05-25,Monday,regular,Regular season,Portland Fire,81,New York Liberty,74,no,Barclays Center,no,no
+2026-05-27,Wednesday,regular,Regular season,Atlanta Dream,81,Minnesota Lynx,96,yes,Target Center,no,no
+2026-05-27,Wednesday,regular,Regular season,Toronto Tempo,111,Chicago Sky,104,no,Wintrust Arena,no,no
+2026-05-27,Wednesday,regular,Regular season,Connecticut Sun,61,Portland Fire,71,yes,Moda Center,no,no
+2026-05-27,Wednesday,regular,Regular season,Phoenix Mercury,74,New York Liberty,84,yes,Barclays Center,no,no
+2026-05-27,Wednesday,regular,Regular season,Washington Mystics,78,Seattle Storm,64,no,Climate Pledge Arena,no,no
+2026-05-28,Thursday,regular,Regular season,Las Vegas Aces,87,Dallas Wings,95,yes,College Park Center,no,no
+2026-05-28,Thursday,regular,Regular season,Indiana Fever,88,Golden State Valkyries,90,yes,Chase Center,no,no
+2026-05-29,Friday,regular,Regular season,Atlanta Dream,86,Portland Fire,66,no,Moda Center,no,no
+2026-05-29,Friday,regular,Regular season,Minnesota Lynx,79,Chicago Sky,58,no,Wintrust Arena,no,no
+2026-05-29,Friday,regular,Regular season,Los Angeles Sparks,92,Washington Mystics,87,no,CareFirst Arena,no,no
+2026-05-29,Friday,regular,Regular season,Phoenix Mercury,68,New York Liberty,75,yes,Barclays Center,no,no
+2026-05-30,Saturday,regular,Regular season,Los Angeles Sparks,81,Connecticut Sun,84,yes,PeoplesBank Arena,no,yes
+2026-05-30,Saturday,regular,Regular season,Indiana Fever,84,Portland Fire,100,yes,Moda Center,no,yes
+2026-05-30,Saturday,regular,Regular season,Seattle Storm,72,Toronto Tempo,93,yes,Coca-Cola Coliseum,no,yes
+2026-05-31,Sunday,regular,Regular season,Las Vegas Aces,91,Golden State Valkyries,81,no,Chase Center,yes,yes
+2026-06-01,Monday,regular,Regular season,Seattle Storm,56,Dallas Wings,79,yes,College Park Center,no,yes
+2026-06-01,Monday,regular,Regular season,Minnesota Lynx,111,Phoenix Mercury,77,no,Mortgage Matchup Center,no,yes
+2026-06-02,Tuesday,regular,Regular season,Connecticut Sun,75,Atlanta Dream,91,yes,Gateway Center Arena @ College Park,no,no
+2026-06-02,Tuesday,regular,Regular season,Chicago Sky,72,Washington Mystics,90,yes,CareFirst Arena,no,no
+2026-06-02,Tuesday,regular,Regular season,Portland Fire,77,Golden State Valkyries,95,yes,Chase Center,no,no
+2026-06-02,Tuesday,regular,Regular season,Las Vegas Aces,79,Los Angeles Sparks,69,no,Crypto.com Arena,no,no
+2026-06-03,Wednesday,regular,Regular season,Toronto Tempo,82,New York Liberty,97,yes,Barclays Center,no,no
+2026-06-03,Wednesday,regular,Regular season,Phoenix Mercury,72,Seattle Storm,68,no,Climate Pledge Arena,no,no
+2026-06-04,Thursday,regular,Regular season,Atlanta Dream,71,Indiana Fever,83,yes,Gainbridge Fieldhouse,no,no
+2026-06-04,Thursday,regular,Regular season,Golden State Valkyries,84,Minnesota Lynx,87,yes,Target Center,no,no
+2026-06-05,Friday,regular,Regular season,Connecticut Sun,80,Chicago Sky,85,yes,Wintrust Arena,no,no
+2026-06-05,Friday,regular,Regular season,Dallas Wings,104,Los Angeles Sparks,96,no,Crypto.com Arena,no,no
+2026-06-05,Friday,regular,Regular season,Phoenix Mercury,78,Portland Fire,72,no,Moda Center,no,no
+2026-06-06,Saturday,regular,Regular season,Washington Mystics,77,Atlanta Dream,109,yes,Gateway Center Arena @ College Park,no,no
+2026-06-06,Saturday,regular,Regular season,Golden State Valkyries,79,Las Vegas Aces,84,yes,Michelob ULTRA Arena,no,no
+2026-06-06,Saturday,regular,Regular season,Indiana Fever,75,New York Liberty,83,yes,Barclays Center,no,no
+2026-06-06,Saturday,regular,Regular season,Seattle Storm,68,Minnesota Lynx,88,yes,Target Center,no,no
+2026-06-07,Sunday,regular,Regular season,Chicago Sky,68,Toronto Tempo,85,yes,Coca-Cola Coliseum,no,no
+2026-06-07,Sunday,regular,Regular season,Portland Fire,72,Los Angeles Sparks,89,yes,Crypto.com Arena,no,no
+2026-06-08,Monday,regular,Regular season,New York Liberty,89,Connecticut Sun,80,no,Mohegan Sun Arena,no,no
+2026-06-08,Monday,regular,Regular season,Indiana Fever,78,Washington Mystics,76,no,CareFirst Arena,no,no
+2026-06-08,Monday,regular,Regular season,Seattle Storm,91,Las Vegas Aces,101,yes,Michelob ULTRA Arena,no,no
+2026-06-09,Tuesday,regular,Regular season,Atlanta Dream,82,Chicago Sky,75,no,Wintrust Arena,no,no
+2026-06-09,Tuesday,regular,Regular season,Dallas Wings,76,Minnesota Lynx,100,yes,Target Center,no,no
+2026-06-09,Tuesday,regular,Regular season,Phoenix Mercury,81,Golden State Valkyries,87,yes,Chase Center,no,no
+2026-06-10,Wednesday,regular,Regular season,Connecticut Sun,102,Toronto Tempo,106,yes,Coca-Cola Coliseum,no,no
+2026-06-10,Wednesday,regular,Regular season,Los Angeles Sparks,88,Seattle Storm,83,no,Climate Pledge Arena,no,no
+2026-06-11,Thursday,regular,Regular season,New York Liberty,104,Atlanta Dream,90,no,Gateway Center Arena @ College Park,no,no
+2026-06-11,Thursday,regular,Regular season,Chicago Sky,106,Indiana Fever,114,yes,Gainbridge Fieldhouse,no,no
+2026-06-11,Thursday,regular,Regular season,Phoenix Mercury,70,Dallas Wings,85,yes,College Park Center,no,no
+2026-06-11,Thursday,regular,Regular season,Las Vegas Aces,105,Portland Fire,89,no,Moda Center,no,no
+2026-06-12,Friday,regular,Regular season,Golden State Valkyries,76,Seattle Storm,72,no,Climate Pledge Arena,no,no
+2026-06-12,Friday,regular,Regular season,Toronto Tempo,85,Washington Mystics,86,yes,CareFirst Arena,no,no
+2026-06-13,Saturday,regular,Regular season,Indiana Fever,85,Connecticut Sun,75,no,Mohegan Sun Arena,no,no
+2026-06-13,Saturday,regular,Regular season,Dallas Wings,83,Portland Fire,84,yes,Moda Center,no,no
+2026-06-13,Saturday,regular,Regular season,Minnesota Lynx,97,Las Vegas Aces,100,yes,Michelob ULTRA Arena,no,no
+2026-06-13,Saturday,regular,Regular season,Los Angeles Sparks,111,Phoenix Mercury,102,no,Mortgage Matchup Center,no,no
+2026-06-14,Sunday,regular,Regular season,Atlanta Dream,102,Toronto Tempo,77,no,Coca-Cola Coliseum,no,no
+2026-06-14,Sunday,regular,Regular season,Washington Mystics,64,New York Liberty,86,yes,Barclays Center,no,no
+2026-06-15,Monday,regular,Regular season,Las Vegas Aces,66,Dallas Wings,96,yes,College Park Center,no,no
+2026-06-15,Monday,regular,Regular season,Los Angeles Sparks,58,Golden State Valkyries,78,yes,Chase Center,no,no
+2026-06-15,Monday,regular,Regular season,Portland Fire,74,Minnesota Lynx,107,yes,Target Center,no,no
+2026-06-16,Tuesday,regular,Regular season,Toronto Tempo,91,Indiana Fever,113,yes,Gainbridge Fieldhouse,no,no
+2026-06-17,Wednesday,regular,Regular season,New York Liberty,96,Chicago Sky,95,no,Wintrust Arena,no,no
+2026-06-17,Wednesday,regular,Regular season,Washington Mystics,88,Connecticut Sun,81,no,Mohegan Sun Arena,no,no
+2026-06-17,Wednesday,regular,Regular season,Dallas Wings,80,Golden State Valkyries,91,yes,Chase Center,no,no
+2026-06-17,Wednesday,regular,Regular season,Las Vegas Aces,86,Phoenix Mercury,76,no,Mortgage Matchup Center,no,no
+2026-06-17,Wednesday,regular,Regular season,Minnesota Lynx,99,Los Angeles Sparks,83,no,Crypto.com Arena,no,no
+2026-06-17,Wednesday,regular,Regular season,Seattle Storm,89,Portland Fire,94,yes,Moda Center,no,no
+2026-06-18,Thursday,regular,Regular season,Atlanta Dream,108,Indiana Fever,101,no,Gainbridge Fieldhouse,no,no
+2026-06-19,Friday,regular,Regular season,Toronto Tempo,101,Connecticut Sun,97,no,Mohegan Sun Arena,no,no
+2026-06-19,Friday,regular,Regular season,Minnesota Lynx,81,Golden State Valkyries,75,no,Chase Center,no,no
+2026-06-19,Friday,regular,Regular season,Washington Mystics,86,New York Liberty,83,no,Barclays Center,no,no
+2026-06-20,Saturday,regular,Regular season,Indiana Fever,96,Atlanta Dream,113,yes,State Farm Arena,no,no
+2026-06-20,Saturday,regular,Regular season,Chicago Sky,92,Dallas Wings,93,yes,College Park Center,no,no
+2026-06-20,Saturday,regular,Regular season,Seattle Storm,73,Phoenix Mercury,93,yes,Mortgage Matchup Center,no,no
+2026-06-21,Sunday,regular,Regular season,Golden State Valkyries,73,Las Vegas Aces,92,yes,Michelob ULTRA Arena,no,no
+2026-06-21,Sunday,regular,Regular season,New York Liberty,97,Los Angeles Sparks,98,yes,Crypto.com Arena,no,no
+2026-06-21,Sunday,regular,Regular season,Washington Mystics,84,Minnesota Lynx,79,no,Target Center,no,no
+2026-06-22,Monday,regular,Regular season,Toronto Tempo,87,Atlanta Dream,94,yes,State Farm Arena,no,no
+2026-06-22,Monday,regular,Regular season,Chicago Sky,63,Connecticut Sun,92,yes,Mohegan Sun Arena,no,no
+2026-06-22,Monday,regular,Regular season,Dallas Wings,112,Seattle Storm,110,no,Climate Pledge Arena,no,no
+2026-06-22,Monday,regular,Regular season,Phoenix Mercury,77,Indiana Fever,86,yes,Gainbridge Fieldhouse,no,no
+2026-06-23,Tuesday,regular,Regular season,New York Liberty,87,Las Vegas Aces,76,no,Michelob ULTRA Arena,no,no
+2026-06-24,Wednesday,regular,Regular season,Atlanta Dream,66,Golden State Valkyries,77,yes,Chase Center,no,no
+2026-06-24,Wednesday,regular,Regular season,Portland Fire,78,Chicago Sky,101,yes,Wintrust Arena,no,no
+2026-06-24,Wednesday,regular,Regular season,Phoenix Mercury,111,Indiana Fever,109,no,Gainbridge Fieldhouse,no,no
+2026-06-24,Wednesday,regular,Regular season,Minnesota Lynx,78,Washington Mystics,76,no,CareFirst Arena,no,no
+2026-06-25,Thursday,regular,Regular season,Dallas Wings,84,Las Vegas Aces,99,yes,Michelob ULTRA Arena,no,no
+2026-06-25,Thursday,regular,Regular season,Los Angeles Sparks,97,Toronto Tempo,125,yes,Coca-Cola Coliseum,no,no
+2026-06-25,Thursday,regular,Regular season,New York Liberty,88,Seattle Storm,99,yes,Climate Pledge Arena,no,no
+2026-06-26,Friday,regular,Regular season,Atlanta Dream,75,Golden State Valkyries,78,yes,Chase Center,no,no
+2026-06-26,Friday,regular,Regular season,Portland Fire,94,Chicago Sky,124,yes,Wintrust Arena,no,no
+2026-06-26,Friday,regular,Regular season,Washington Mystics,57,Connecticut Sun,68,yes,Mohegan Sun Arena,no,no
+2026-06-27,Saturday,regular,Regular season,Atlanta Dream,90,Seattle Storm,105,yes,Climate Pledge Arena,no,no
+2026-06-27,Saturday,regular,Regular season,Los Angeles Sparks,87,Indiana Fever,111,yes,Gainbridge Fieldhouse,no,no
+2026-06-27,Saturday,regular,Regular season,Phoenix Mercury,89,Toronto Tempo,80,no,Scotiabank Arena,no,no
+2026-06-28,Sunday,regular,Regular season,Las Vegas Aces,107,Chicago Sky,99,no,United Center,no,yes
+2026-06-28,Sunday,regular,Regular season,Minnesota Lynx,85,Dallas Wings,77,no,College Park Center,no,yes
+2026-06-28,Sunday,regular,Regular season,New York Liberty,67,Golden State Valkyries,76,yes,Chase Center,no,yes
+2026-06-28,Sunday,regular,Regular season,Portland Fire,123,Washington Mystics,124,yes,CareFirst Arena,no,yes
+2026-07-02,Thursday,regular,Regular season,Atlanta Dream,76,Washington Mystics,81,yes,CareFirst Arena,no,no
+2026-07-02,Thursday,regular,Regular season,Dallas Wings,86,Connecticut Sun,83,no,PeoplesBank Arena,no,no
+2026-07-02,Thursday,regular,Regular season,Seattle Storm,67,Phoenix Mercury,90,yes,Mortgage Matchup Center,no,no
+2026-07-03,Friday,regular,Regular season,Chicago Sky,90,Las Vegas Aces,98,yes,T-Mobile Arena,no,no
+2026-07-03,Friday,regular,Regular season,Minnesota Lynx,86,New York Liberty,99,yes,Barclays Center,no,no
+2026-07-04,Saturday,regular,Regular season,Golden State Valkyries,88,Atlanta Dream,83,no,Gateway Center Arena @ College Park,no,no
+2026-07-04,Saturday,regular,Regular season,Portland Fire,77,Seattle Storm,72,no,Climate Pledge Arena,no,no
+2026-07-05,Sunday,regular,Regular season,Dallas Wings,89,Toronto Tempo,76,no,Coca-Cola Coliseum,no,no
+2026-07-05,Sunday,regular,Regular season,Indiana Fever,84,Las Vegas Aces,68,no,T-Mobile Arena,no,no
+2026-07-06,Monday,regular,Regular season,Connecticut Sun,90,Minnesota Lynx,89,no,Target Center,no,no
+2026-07-06,Monday,regular,Regular season,Golden State Valkyries,62,Washington Mystics,49,no,CareFirst Arena,no,no
+2026-07-06,Monday,regular,Regular season,Seattle Storm,82,Los Angeles Sparks,64,no,Crypto.com Arena,no,no
+2026-07-07,Tuesday,regular,Regular season,Chicago Sky,77,Phoenix Mercury,66,no,Mortgage Matchup Center,no,no
+2026-07-07,Tuesday,regular,Regular season,Dallas Wings,88,New York Liberty,77,no,Barclays Center,no,no
+2026-07-08,Wednesday,regular,Regular season,Minnesota Lynx,86,Connecticut Sun,80,no,Mohegan Sun Arena,no,no
+2026-07-08,Wednesday,regular,Regular season,Golden State Valkyries,83,Toronto Tempo,75,no,Coca-Cola Coliseum,no,no
+2026-07-08,Wednesday,regular,Regular season,Indiana Fever,92,Los Angeles Sparks,106,yes,Crypto.com Arena,no,no
+2026-07-09,Thursday,regular,Regular season,Seattle Storm,78,Atlanta Dream,89,yes,Gateway Center Arena @ College Park,no,no
+2026-07-09,Thursday,regular,Regular season,Indiana Fever,92,Phoenix Mercury,89,no,Mortgage Matchup Center,no,no
+2026-07-09,Thursday,regular,Regular season,Las Vegas Aces,88,Portland Fire,80,no,Moda Center,no,no
+2026-07-10,Friday,regular,Regular season,Chicago Sky,87,Los Angeles Sparks,102,yes,Crypto.com Arena,no,no
+2026-07-10,Friday,regular,Regular season,Golden State Valkyries,79,Connecticut Sun,64,no,Mohegan Sun Arena,no,no
+2026-07-10,Friday,regular,Regular season,Dallas Wings,108,Toronto Tempo,95,no,Bell Centre,no,no
+2026-07-11,Saturday,regular,Regular season,Portland Fire,102,Atlanta Dream,92,no,Gateway Center Arena @ College Park,no,no
+2026-07-11,Saturday,regular,Regular season,Phoenix Mercury,58,Las Vegas Aces,106,yes,Michelob ULTRA Arena,no,no
+2026-07-11,Saturday,regular,Regular season,New York Liberty,85,Minnesota Lynx,90,yes,Target Center,no,no
+2026-07-12,Sunday,regular,Regular season,Chicago Sky,91,Dallas Wings,96,yes,American Airlines Center,no,no
+2026-07-12,Sunday,regular,Regular season,Indiana Fever,109,Las Vegas Aces,75,no,Michelob ULTRA Arena,no,no
+2026-07-12,Sunday,regular,Regular season,New York Liberty,91,Toronto Tempo,93,yes,Bell Centre,no,no
+2026-07-12,Sunday,regular,Regular season,Seattle Storm,79,Washington Mystics,84,yes,CareFirst Arena,no,no
+2026-07-13,Monday,regular,Regular season,Los Angeles Sparks,92,Atlanta Dream,101,yes,Gateway Center Arena @ College Park,no,no
+2026-07-13,Monday,regular,Regular season,Phoenix Mercury,100,Minnesota Lynx,104,yes,Target Center,no,no
+2026-07-14,Tuesday,regular,Regular season,Portland Fire,87,Connecticut Sun,90,yes,Mohegan Sun Arena,no,no
+2026-07-14,Tuesday,regular,Regular season,Washington Mystics,79,Toronto Tempo,62,no,Coca-Cola Coliseum,no,no
+2026-07-15,Wednesday,regular,Regular season,Seattle Storm,90,Chicago Sky,95,yes,Wintrust Arena,no,no
+2026-07-15,Wednesday,regular,Regular season,Golden State Valkyries,88,Indiana Fever,75,no,Gainbridge Fieldhouse,no,no
+2026-07-15,Wednesday,regular,Regular season,Los Angeles Sparks,87,Minnesota Lynx,96,yes,Target Center,no,no
+2026-07-16,Thursday,regular,Regular season,Portland Fire,75,Washington Mystics,56,no,CareFirst Arena,no,no
+2026-07-17,Friday,regular,Regular season,Atlanta Dream,111,Toronto Tempo,92,no,Coca-Cola Coliseum,no,no
+2026-07-17,Friday,regular,Regular season,Los Angeles Sparks,82,Chicago Sky,96,yes,Wintrust Arena,no,no
+2026-07-17,Friday,regular,Regular season,Connecticut Sun,96,Phoenix Mercury,83,no,Mortgage Matchup Center,no,no
+2026-07-17,Friday,regular,Regular season,Seattle Storm,107,Indiana Fever,110,yes,Gainbridge Fieldhouse,no,no
+2026-07-18,Saturday,regular,Regular season,Washington Mystics,69,Golden State Valkyries,74,yes,Chase Center,no,no
+2026-07-18,Saturday,regular,Regular season,New York Liberty,88,Indiana Fever,108,yes,Gainbridge Fieldhouse,no,no
+2026-07-18,Saturday,regular,Regular season,Portland Fire,93,Minnesota Lynx,101,yes,Target Center,no,no
+2026-07-19,Sunday,regular,Regular season,Chicago Sky,91,Atlanta Dream,93,yes,Gateway Center Arena @ College Park,no,no
+2026-07-19,Sunday,regular,Regular season,Connecticut Sun,63,Phoenix Mercury,72,yes,Mortgage Matchup Center,no,no
+2026-07-19,Sunday,regular,Regular season,Los Angeles Sparks,82,Dallas Wings,90,yes,College Park Center,no,no
+2026-07-20,Monday,regular,Regular season,New York Liberty,99,Dallas Wings,98,no,College Park Center,no,no
+2026-07-20,Monday,regular,Regular season,Washington Mystics,90,Golden State Valkyries,82,no,Chase Center,no,no
+2026-07-20,Monday,regular,Regular season,Las Vegas Aces,109,Toronto Tempo,83,no,Coca-Cola Coliseum,no,no
+2026-07-20,Monday,regular,Regular season,Minnesota Lynx,105,Seattle Storm,102,no,Climate Pledge Arena,no,no
+2026-07-22,Wednesday,regular,Regular season,Chicago Sky,94,New York Liberty,95,yes,Barclays Center,no,no
+2026-07-22,Wednesday,regular,Regular season,Connecticut Sun,88,Indiana Fever,123,yes,Gainbridge Fieldhouse,no,no
+2026-07-22,Wednesday,regular,Regular season,Dallas Wings,101,Portland Fire,97,no,Moda Center,no,no
+2026-07-22,Wednesday,regular,Regular season,Las Vegas Aces,99,Washington Mystics,100,yes,CareFirst Arena,no,no
+2026-07-22,Wednesday,regular,Regular season,Phoenix Mercury,86,Los Angeles Sparks,82,no,Crypto.com Arena,no,no
+2026-07-22,Wednesday,regular,Regular season,Minnesota Lynx,86,Seattle Storm,76,no,Climate Pledge Arena,no,no
+2026-07-28,Tuesday,regular,Regular season,Connecticut Sun,84,Washington Mystics,92,yes,CareFirst Arena,no,yes
+2026-07-28,Tuesday,regular,Regular season,Indiana Fever,105,Seattle Storm,95,no,Climate Pledge Arena,no,yes
+2026-07-28,Tuesday,regular,Regular season,Portland Fire,83,Las Vegas Aces,98,yes,Michelob ULTRA Arena,no,yes
+2026-07-28,Tuesday,regular,Regular season,New York Liberty,113,Los Angeles Sparks,109,no,Crypto.com Arena,no,yes
+2026-07-28,Tuesday,regular,Regular season,Toronto Tempo,93,Minnesota Lynx,100,yes,Target Center,no,yes
+2026-07-29,Wednesday,regular,Regular season,Atlanta Dream,82,Dallas Wings,81,no,College Park Center,yes,yes
+2026-07-29,Wednesday,regular,Regular season,Golden State Valkyries,89,Phoenix Mercury,91,yes,Mortgage Matchup Center,yes,yes
+2026-07-30,Thursday,regular,Regular season,Connecticut Sun,88,Chicago Sky,94,yes,Wintrust Arena,no,yes
+2026-07-30,Thursday,regular,Regular season,New York Liberty,99,Las Vegas Aces,104,yes,Michelob ULTRA Arena,no,yes
+2026-07-30,Thursday,regular,Regular season,Minnesota Lynx,104,Toronto Tempo,72,no,Scotiabank Arena,no,yes
+2026-07-31,Friday,regular,Regular season,Seattle Storm,89,Atlanta Dream,98,yes,Gateway Center Arena @ College Park,no,no
+2026-07-31,Friday,regular,Regular season,Dallas Wings,75,Washington Mystics,81,yes,CareFirst Arena,no,no
+2026-07-31,Friday,regular,Regular season,Indiana Fever,112,Portland Fire,98,no,Moda Center,no,no
+2026-08-01,Saturday,regular,Regular season,Las Vegas Aces,83,Chicago Sky,84,yes,Wintrust Arena,no,no
+2026-08-01,Saturday,regular,Regular season,New York Liberty,94,Phoenix Mercury,92,no,Mortgage Matchup Center,no,no
+2026-08-02,Sunday,regular,Regular season,Connecticut Sun,63,Dallas Wings,83,yes,College Park Center,no,no
+2026-08-02,Sunday,regular,Regular season,Toronto Tempo,79,Golden State Valkyries,96,yes,Chase Center,no,no
+2026-08-02,Sunday,regular,Regular season,Indiana Fever,100,Minnesota Lynx,108,yes,Target Center,no,no
+2026-08-02,Sunday,regular,Regular season,Los Angeles Sparks,106,Portland Fire,101,no,Moda Center,no,no
+2026-08-03,Monday,regular,Regular season,Las Vegas Aces,109,Atlanta Dream,87,no,State Farm Arena,no,no
+2026-08-03,Monday,regular,Regular season,Phoenix Mercury,106,Chicago Sky,101,no,Wintrust Arena,no,no
+2026-08-03,Monday,regular,Regular season,Seattle Storm,83,New York Liberty,95,yes,Barclays Center,no,no
+2026-08-04,Tuesday,regular,Regular season,Toronto Tempo,81,Golden State Valkyries,92,yes,Chase Center,no,no
+2026-08-05,Wednesday,regular,Regular season,Phoenix Mercury,82,Atlanta Dream,96,yes,Gateway Center Arena @ College Park,no,no
+2026-08-05,Wednesday,regular,Regular season,Los Angeles Sparks,88,Chicago Sky,95,yes,Wintrust Arena,no,no
+2026-08-05,Wednesday,regular,Regular season,Dallas Wings,92,Washington Mystics,96,yes,CareFirst Arena,no,no
+2026-08-05,Wednesday,regular,Regular season,Seattle Storm,86,New York Liberty,92,yes,Barclays Center,no,no
+2026-08-06,Thursday,regular,Regular season,Las Vegas Aces,86,Indiana Fever,84,no,Gainbridge Fieldhouse,no,no
+2026-08-06,Thursday,regular,Regular season,Los Angeles Sparks,89,Minnesota Lynx,82,no,Target Center,no,no
+2026-08-06,Thursday,regular,Regular season,Toronto Tempo,83,Portland Fire,97,yes,Moda Center,no,no
+2026-08-07,Friday,regular,Regular season,Atlanta Dream,74,Washington Mystics,79,yes,CareFirst Arena,no,no
+2026-08-07,Friday,regular,Regular season,Phoenix Mercury,72,Connecticut Sun,75,yes,Mohegan Sun Arena,no,no
+2026-08-07,Friday,regular,Regular season,Golden State Valkyries,94,Dallas Wings,76,no,American Airlines Center,no,no
+2026-08-08,Saturday,regular,Regular season,Indiana Fever,90,Chicago Sky,86,no,United Center,no,no
+2026-08-08,Saturday,regular,Regular season,Las Vegas Aces,87,Minnesota Lynx,98,yes,Target Center,no,no
+2026-08-08,Saturday,regular,Regular season,Seattle Storm,93,Portland Fire,100,yes,Moda Center,no,no
+2026-08-09,Sunday,regular,Regular season,Dallas Wings,90,Minnesota Lynx,103,yes,Target Center,no,no
+2026-08-09,Sunday,regular,Regular season,Golden State Valkyries,84,Los Angeles Sparks,78,no,Crypto.com Arena,no,no
+2026-08-09,Sunday,regular,Regular season,Las Vegas Aces,71,New York Liberty,111,yes,Barclays Center,no,no
+2026-08-09,Sunday,regular,Regular season,Phoenix Mercury,75,Washington Mystics,95,yes,CareFirst Arena,no,no
+2026-08-10,Monday,regular,Regular season,Toronto Tempo,95,Atlanta Dream,107,yes,Gateway Center Arena @ College Park,no,no
+2026-08-10,Monday,regular,Regular season,Chicago Sky,88,Seattle Storm,97,yes,Climate Pledge Arena,no,no
+2026-08-11,Tuesday,regular,Regular season,New York Liberty,92,Indiana Fever,106,yes,Gainbridge Fieldhouse,no,no
+2026-08-11,Tuesday,regular,Regular season,Washington Mystics,76,Las Vegas Aces,86,yes,Michelob ULTRA Arena,no,no
+2026-08-11,Tuesday,regular,Regular season,Phoenix Mercury,94,Los Angeles Sparks,87,no,Galen Center,no,no
+2026-08-12,Wednesday,regular,Regular season,Chicago Sky,71,Golden State Valkyries,91,yes,Chase Center,no,no
+2026-08-12,Wednesday,regular,Regular season,Toronto Tempo,88,Dallas Wings,94,yes,College Park Center,no,no
+2026-08-12,Wednesday,regular,Regular season,Minnesota Lynx,85,Portland Fire,81,no,Moda Center,no,no
+2026-08-13,Thursday,regular,Regular season,Atlanta Dream,104,Connecticut Sun,69,no,Mohegan Sun Arena,no,no
+2026-08-13,Thursday,regular,Regular season,Washington Mystics,76,Las Vegas Aces,83,yes,Michelob ULTRA Arena,no,no
+2026-08-13,Thursday,regular,Regular season,Los Angeles Sparks,81,New York Liberty,85,yes,Barclays Center,no,no
+2026-08-14,Friday,regular,Regular season,Dallas Wings,87,Indiana Fever,98,yes,Gainbridge Fieldhouse,no,no
+2026-08-14,Friday,regular,Regular season,Portland Fire,84,Seattle Storm,82,no,Climate Pledge Arena,no,no
+2026-08-15,Saturday,regular,Regular season,New York Liberty,82,Connecticut Sun,75,no,Mohegan Sun Arena,no,no
+2026-08-15,Saturday,regular,Regular season,Minnesota Lynx,92,Las Vegas Aces,87,no,Michelob ULTRA Arena,no,no
+2026-08-15,Saturday,regular,Regular season,Los Angeles Sparks,70,Washington Mystics,80,yes,CareFirst Arena,no,no
+2026-08-16,Sunday,regular,Regular season,Indiana Fever,95,Atlanta Dream,91,no,State Farm Arena,no,no
+2026-08-16,Sunday,regular,Regular season,Chicago Sky,82,Seattle Storm,80,no,Climate Pledge Arena,no,no
+2026-08-16,Sunday,regular,Regular season,Portland Fire,88,Phoenix Mercury,85,no,Mortgage Matchup Center,no,no
+2026-08-17,Monday,regular,Regular season,Dallas Wings,70,Golden State Valkyries,78,yes,Chase Center,no,no
+2026-08-18,Tuesday,regular,Regular season,Atlanta Dream,97,Las Vegas Aces,82,no,Michelob ULTRA Arena,no,no
+2026-08-18,Tuesday,regular,Regular season,New York Liberty,86,Chicago Sky,93,yes,Wintrust Arena,no,no
+2026-08-18,Tuesday,regular,Regular season,Los Angeles Sparks,77,Connecticut Sun,85,yes,TD Garden,no,no
+2026-08-18,Tuesday,regular,Regular season,Indiana Fever,101,Toronto Tempo,95,no,Scotiabank Arena,no,no
+2026-08-19,Wednesday,regular,Regular season,Minnesota Lynx,77,Golden State Valkyries,66,no,Chase Center,no,no
+2026-08-19,Wednesday,regular,Regular season,Toronto Tempo,82,Washington Mystics,93,yes,CareFirst Arena,no,no
+2026-08-20,Thursday,regular,Regular season,Atlanta Dream,124,Los Angeles Sparks,88,no,Crypto.com Arena,no,no
+2026-08-20,Thursday,regular,Regular season,Connecticut Sun,78,Las Vegas Aces,101,yes,Michelob ULTRA Arena,no,no
+2026-08-20,Thursday,regular,Regular season,Indiana Fever,85,Dallas Wings,91,yes,American Airlines Center,no,no
+2026-08-21,Friday,regular,Regular season,Golden State Valkyries,70,Chicago Sky,73,yes,Wintrust Arena,no,no
+2026-08-21,Friday,regular,Regular season,Minnesota Lynx,94,Washington Mystics,84,no,CareFirst Arena,no,no
+2026-08-21,Friday,regular,Regular season,Portland Fire,79,Toronto Tempo,82,yes,Rogers Arena,no,no
+2026-08-22,Saturday,regular,Regular season,Atlanta Dream,99,Phoenix Mercury,89,no,Mortgage Matchup Center,no,no
+2026-08-22,Saturday,regular,Regular season,Connecticut Sun,68,Los Angeles Sparks,77,yes,Crypto.com Arena,no,no
+2026-08-22,Saturday,regular,Regular season,Indiana Fever,102,New York Liberty,109,yes,Barclays Center,no,no
+2026-08-23,Sunday,regular,Regular season,Indiana Fever,113,Chicago Sky,90,no,Wintrust Arena,no,no
+2026-08-23,Sunday,regular,Regular season,Seattle Storm,70,Dallas Wings,92,yes,College Park Center,no,no
+2026-08-23,Sunday,regular,Regular season,Las Vegas Aces,88,Toronto Tempo,78,no,Rogers Arena,no,no
+2026-08-23,Sunday,regular,Regular season,Washington Mystics,105,Portland Fire,100,no,Moda Center,no,no
+2026-08-24,Monday,regular,Regular season,Atlanta Dream,78,Los Angeles Sparks,71,no,Crypto.com Arena,no,no
+2026-08-24,Monday,regular,Regular season,Golden State Valkyries,80,Minnesota Lynx,66,no,Target Center,no,no
+2026-08-25,Tuesday,regular,Regular season,Chicago Sky,81,Connecticut Sun,87,yes,Mohegan Sun Arena,no,no
+2026-08-25,Tuesday,regular,Regular season,Portland Fire,78,Dallas Wings,96,yes,College Park Center,no,no
+2026-08-25,Tuesday,regular,Regular season,Washington Mystics,94,Phoenix Mercury,84,no,Mortgage Matchup Center,no,no
+2026-08-26,Wednesday,regular,Regular season,Golden State Valkyries,89,Connecticut Sun,64,no,Mohegan Sun Arena,no,no
+2026-08-26,Wednesday,regular,Regular season,Toronto Tempo,78,Seattle Storm,90,yes,Climate Pledge Arena,no,no
+2026-08-27,Thursday,regular,Regular season,Golden State Valkyries,79,New York Liberty,60,no,Barclays Center,no,yes
+2026-08-27,Thursday,regular,Regular season,Washington Mystics,80,Phoenix Mercury,73,no,Mortgage Matchup Center,no,yes
+2026-08-28,Friday,regular,Regular season,Portland Fire,101,Atlanta Dream,83,no,Gateway Center Arena @ College Park,yes,yes
+2026-08-28,Friday,regular,Regular season,Connecticut Sun,91,Indiana Fever,111,yes,Gainbridge Fieldhouse,yes,yes
+2026-08-28,Friday,regular,Regular season,Toronto Tempo,73,Las Vegas Aces,93,yes,Michelob ULTRA Arena,yes,yes
+2026-08-28,Friday,regular,Regular season,Washington Mystics,82,Los Angeles Sparks,88,yes,Crypto.com Arena,yes,yes
+2026-08-29,Saturday,regular,Regular season,Chicago Sky,66,New York Liberty,85,yes,Barclays Center,no,yes
+2026-08-29,Saturday,regular,Regular season,Toronto Tempo,69,Phoenix Mercury,101,yes,Mortgage Matchup Center,no,yes
+2026-08-30,Sunday,regular,Regular season,Minnesota Lynx,81,Atlanta Dream,89,yes,Gateway Center Arena @ College Park,no,no
+2026-08-30,Sunday,regular,Regular season,Connecticut Sun,71,Dallas Wings,97,yes,College Park Center,no,no
+2026-08-30,Sunday,regular,Regular season,Golden State Valkyries,86,Portland Fire,69,no,Moda Center,no,no
+2026-08-30,Sunday,regular,Regular season,Los Angeles Sparks,90,Seattle Storm,74,no,Climate Pledge Arena,no,no
+2026-09-17,Thursday,regular,Regular season,Connecticut Sun,59,Atlanta Dream,103,yes,Gateway Center Arena @ College Park,no,no
+2026-09-17,Thursday,regular,Regular season,Washington Mystics,110,Chicago Sky,80,no,Wintrust Arena,no,no
+2026-09-17,Thursday,regular,Regular season,Los Angeles Sparks,77,Dallas Wings,97,yes,College Park Center,no,no
+2026-09-17,Thursday,regular,Regular season,Las Vegas Aces,114,Seattle Storm,77,no,Climate Pledge Arena,no,no
+2026-09-17,Thursday,regular,Regular season,Phoenix Mercury,94,Portland Fire,91,no,Moda Center,no,no
+2026-09-18,Friday,regular,Regular season,Portland Fire,66,Golden State Valkyries,82,yes,Chase Center,no,no
+2026-09-18,Friday,regular,Regular season,Indiana Fever,103,Toronto Tempo,85,no,Coca-Cola Coliseum,no,no
+2026-09-18,Friday,regular,Regular season,New York Liberty,93,Minnesota Lynx,81,no,Target Center,no,no
+2026-09-19,Saturday,regular,Regular season,Chicago Sky,81,Atlanta Dream,106,yes,State Farm Arena,no,no
+2026-09-19,Saturday,regular,Regular season,Phoenix Mercury,82,Dallas Wings,87,yes,College Park Center,no,no
+2026-09-19,Saturday,regular,Regular season,Seattle Storm,57,Golden State Valkyries,70,yes,Chase Center,no,no
+2026-09-20,Sunday,regular,Regular season,Minnesota Lynx,101,Connecticut Sun,89,no,Mohegan Sun Arena,no,no
+2026-09-20,Sunday,regular,Regular season,Washington Mystics,93,Indiana Fever,77,no,Gainbridge Fieldhouse,no,no
+2026-09-20,Sunday,regular,Regular season,Seattle Storm,77,Las Vegas Aces,98,yes,Michelob ULTRA Arena,no,no
+2026-09-20,Sunday,regular,Regular season,Portland Fire,84,Los Angeles Sparks,105,yes,Crypto.com Arena,no,no
+2026-09-20,Sunday,regular,Regular season,New York Liberty,106,Toronto Tempo,69,no,Coca-Cola Coliseum,no,no
+2026-09-21,Monday,regular,Regular season,Atlanta Dream,95,New York Liberty,84,no,Barclays Center,no,no
+2026-09-21,Monday,regular,Regular season,Dallas Wings,86,Phoenix Mercury,87,yes,Mortgage Matchup Center,no,no
+2026-09-22,Tuesday,regular,Regular season,Toronto Tempo,85,Chicago Sky,97,yes,Wintrust Arena,no,no
+2026-09-22,Tuesday,regular,Regular season,Connecticut Sun,69,Washington Mystics,79,yes,CareFirst Arena,no,no
+2026-09-22,Tuesday,regular,Regular season,Golden State Valkyries,82,Portland Fire,90,yes,Moda Center,no,no
+2026-09-22,Tuesday,regular,Regular season,Minnesota Lynx,77,Indiana Fever,96,yes,Gainbridge Fieldhouse,no,no
+2026-09-22,Tuesday,regular,Regular season,Los Angeles Sparks,79,Las Vegas Aces,89,yes,Michelob ULTRA Arena,no,no
+2026-09-23,Wednesday,regular,Regular season,Atlanta Dream,83,New York Liberty,65,no,Barclays Center,no,no
+2026-09-23,Wednesday,regular,Regular season,Dallas Wings,103,Seattle Storm,91,no,Climate Pledge Arena,no,no
+2026-09-24,Thursday,regular,Regular season,Chicago Sky,93,Washington Mystics,101,yes,Capital One Arena,no,no
+2026-09-24,Thursday,regular,Regular season,Toronto Tempo,81,Connecticut Sun,95,yes,Mohegan Sun Arena,no,no
+2026-09-24,Thursday,regular,Regular season,Golden State Valkyries,76,Los Angeles Sparks,75,no,Crypto.com Arena,no,no
+2026-09-24,Thursday,regular,Regular season,Indiana Fever,66,Minnesota Lynx,86,yes,Target Center,no,no
+2026-09-24,Thursday,regular,Regular season,Las Vegas Aces,100,Phoenix Mercury,82,no,Mortgage Matchup Center,no,no
+2026-09-27,Sunday,playoffs,Playoffs: First Round Game 1,Washington Mystics,77,Atlanta Dream,92,yes,State Farm Arena,no,yes
+2026-09-27,Sunday,playoffs,Playoffs: First Round Game 1,Dallas Wings,80,Golden State Valkyries,104,yes,Chase Center,no,yes
+2026-09-27,Sunday,playoffs,Playoffs: First Round Game 1,Indiana Fever,85,Las Vegas Aces,102,yes,Michelob ULTRA Arena,no,yes
+2026-09-27,Sunday,playoffs,Playoffs: First Round Game 1,New York Liberty,91,Minnesota Lynx,75,no,Target Center,no,yes
+2026-09-29,Tuesday,playoffs,Playoffs: First Round Game 2,Las Vegas Aces,89,Indiana Fever,99,yes,Gainbridge Fieldhouse,no,no
+2026-09-29,Tuesday,playoffs,Playoffs: First Round Game 2,Minnesota Lynx,71,New York Liberty,87,yes,Barclays Center,no,no
+2026-09-30,Wednesday,playoffs,Playoffs: First Round Game 2,Atlanta Dream,93,Washington Mystics,75,no,CareFirst Arena,no,no
+2026-09-30,Wednesday,playoffs,Playoffs: First Round Game 2,Golden State Valkyries,100,Dallas Wings,108,yes,College Park Center,no,no
+2026-10-01,Thursday,playoffs,Playoffs: First Round Game 3,Indiana Fever,83,Las Vegas Aces,94,yes,Michelob ULTRA Arena,no,no
+2026-10-02,Friday,playoffs,Playoffs: First Round Game 3,Dallas Wings,73,Golden State Valkyries,77,yes,Chase Center,no,no
+2026-10-04,Sunday,playoffs,Playoffs: Semifinals Game 1,New York Liberty,82,Atlanta Dream,92,yes,State Farm Arena,no,no
+2026-10-04,Sunday,playoffs,Playoffs: Semifinals Game 1,Las Vegas Aces,60,Golden State Valkyries,71,yes,Chase Center,no,no
+2026-10-07,Wednesday,playoffs,Playoffs: Semifinals Game 2,New York Liberty,98,Atlanta Dream,101,yes,State Farm Arena,no,no
+2026-10-07,Wednesday,playoffs,Playoffs: Semifinals Game 2,Las Vegas Aces,81,Golden State Valkyries,83,yes,Chase Center,no,no
+2026-10-09,Friday,playoffs,Playoffs: Semifinals Game 3,Atlanta Dream,85,New York Liberty,83,no,Barclays Center,no,no
+2026-10-09,Friday,playoffs,Playoffs: Semifinals Game 3,Golden State Valkyries,87,Las Vegas Aces,77,no,Michelob ULTRA Arena,no,no
+2026-10-17,Saturday,playoffs,Playoffs: WNBA Finals Game 1,Atlanta Dream,64,Golden State Valkyries,68,yes,Chase Center,no,no
+2026-10-19,Monday,playoffs,Playoffs: WNBA Finals Game 2,Atlanta Dream,79,Golden State Valkyries,65,no,Chase Center,no,no
+2026-10-21,Wednesday,playoffs,Playoffs: WNBA Finals Game 3,Golden State Valkyries,71,Atlanta Dream,97,yes,State Farm Arena,no,no
+2026-10-24,Saturday,playoffs,Playoffs: WNBA Finals Game 4,Golden State Valkyries,67,Atlanta Dream,62,no,State Farm Arena,no,no
+2026-10-26,Monday,playoffs,Playoffs: WNBA Finals Game 5,Atlanta Dream,55,Golden State Valkyries,64,yes,Chase Center,yes,yes
+2026-10-29,Thursday,playoffs,Playoffs: WNBA Finals Game 6,Golden State Valkyries,69,Atlanta Dream,80,yes,State Farm Arena,no,no
+2026-10-31,Saturday,playoffs,Playoffs: WNBA Finals Game 7,Atlanta Dream,63,Golden State Valkyries,68,yes,Chase Center,no,no
+2026-06-30,Tuesday,commissioners_cup,Commissioner's Cup final,Las Vegas Aces,85,New York Liberty,93,yes,Barclays Center,no,yes

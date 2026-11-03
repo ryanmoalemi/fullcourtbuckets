@@ -324,4 +324,10 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-11-03</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/wnba-full-moon-2026/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

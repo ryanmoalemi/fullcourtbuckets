@@ -1,0 +1,91 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "353 regular-season and playoff games from the 2026 team schedule files. 352 finals matched the WNBA.com schedule feed checked Oct. 28, 2026. Finals Games 6 and 7, blank in that feed, are the FCB game files (Dream 80-69, Valkyries 68-63). The Game 7 final matches the WNBA.com box score. Full moons are the U.S. Naval Observatory 2026 table, converted to US Eastern time. Home rate is 5 of 8 versus 190 of 345. Dream is 1-2 versus 37-16, and 2-2 inside one day. Tip times for the eight games come from the same schedule feed."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "The season file had not been cut by full-moon date. The result is the absence of an effect, with the sample size in the same sentence as the rate. The one-day window and the Dream's three games are the checks a reader would run next."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Every team schedule row was paired, scores were checked both ways and against the schedule feed, and the two missing finals were filled from the game files. USNO instants were converted with the Eastern time zone, including the two instants just after midnight. CC0 game, team, and home-rate files plus a data dictionary."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "Own question: does the 2026 full moon show up in the FCB game file? The ritual section is limited to interviews that were opened, not a roundup of recycled superstition lists."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline and author page. No first-hand interview. The ritual quotes are the players' published interviews, each linked."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "Team table is the first thing under the one-line opening. Methods and the data-through date sit in the caption under it. The chart follows. The eight-game receipt and the Dream lines come after. Circle headshots sit on the ritual names."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Eastern-date definition, the Pacific midnight cases, the May 31 afternoon tip, the empty June 29 and Sept. 26 moons, the Cup final left out of the 6-0, and the 4.4 expected home wins are all in the piece. Bustle's edited-and-condensed note is included."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Plain voice, sentence-case headline with the count, no em dashes, no claim that 5 of 8 is a pattern."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "Answers whether the full moon changed 2026 results, says the sample is eight games, and separates that from what players actually said they do before tip."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific about Atlanta's three games and the Aces' 6-0, and it stops there instead of hunting a spooky leftover."
+      }
+    ],
+    "info_gain": [
+      "Every 2026 regular-season and playoff game flagged by Eastern full-moon date and a one-day window",
+      "Home win rate 5 of 8 versus 190 of 345, with 4.4 expected home wins",
+      "Atlanta Dream 1-2 on the dates and 2-2 inside one day, against 37-16 otherwise",
+      "Five player rituals, each from an interview that was opened, none of them about the moon"
+    ],
+    "ai_flags": []
+  },
+  "unique": [
+    "Every 2026 regular-season and playoff game flagged by Eastern full-moon date and a one-day window",
+    "Home win rate 5 of 8 versus 190 of 345, with 4.4 expected home wins",
+    "Atlanta Dream 1-2 on the dates and 2-2 inside one day, against 37-16 otherwise",
+    "Five player rituals, each from an interview that was opened, none of them about the moon"
+  ],
+  "unverified": [
+    "Bustle says each interview was edited and condensed. The quotes are what those pages showed on Nov. 3, 2026, not a transcript.",
+    "The rituals are not a claim that the player did them on a full-moon date.",
+    "Game 7's FCB file has a one-point quarter mismatch with its cross-check. The final, 68-63, matches the WNBA.com box score and is the only Game 7 number used.",
+    "A Pacific-local calendar date would put the Aug. 28 and Oct. 26 instants on the previous evening. Those games are listed on the Eastern date, and the one-day window is the check. No third cut was published.",
+    "Older league-site ritual pages (Kim Smith, Lynetta Kizer, Cierra Burdick) were not used. They were not re-opened in full for this draft.",
+    "The Commissioner's Cup final is in the game CSV and out of the rates. Including it would make the one-day home rate 22 of 34 and the Aces' window 6-1."
+  ]
+}

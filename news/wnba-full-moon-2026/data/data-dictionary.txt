@@ -1,0 +1,48 @@
+2026 WNBA full moon games
+Full Court Buckets. Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Oct. 31, 2026, the last game of the Finals.
+
+Files
+wnba-2026-full-moon-games.csv: one row per game in the 2026 team schedule files. 354 rows. 330 regular season, 23 playoffs, 1 Commissioner's Cup final.
+wnba-2026-full-moon-team-records.csv: one row per team. Counts use regular season and playoffs only. The Cup final is not in these rows.
+wnba-2026-full-moon-home-rates.csv: four league home-win slices. Same regular-season and playoff filter.
+
+Game columns
+date_et: Game date in US Eastern time, from the team schedule file.
+weekday: Weekday of date_et.
+season: regular, playoffs, or commissioners_cup.
+game: Schedule label, such as "Regular season" or "Playoffs: WNBA Finals Game 5".
+away_team, home_team: Full team names.
+away_score, home_score: Final points for that team.
+home_win: yes if the home team won, no if the away team won. No ties.
+arena: Arena on the home team's schedule row.
+full_moon_et: yes if date_et is the US Eastern calendar date of a full moon in the U.S. Naval Observatory table for 2026.
+within_one_day_et: yes if date_et is that Eastern full-moon date, the day before, or the day after. This includes full_moon_et = yes.
+
+The Commissioner's Cup final is June 30, 2026 (New York Liberty 93, Las Vegas Aces 85, Barclays Center). June 29 was a full moon, so within_one_day_et is yes and full_moon_et is no. Team records and home rates leave this row out. Filter season to regular and playoffs before recomputing those rates. Counting every within_one_day_et = yes row, including the Cup, is 34 games, not 33.
+
+Team columns
+team: Full team name.
+full_moon_w, full_moon_l, full_moon_win_pct: Wins, losses, and win percentage on full_moon_et dates. The percentage is blank when the team played zero of those games. Otherwise it is wins divided by decisions, times 100, rounded to one decimal.
+other_w, other_l, other_win_pct: The same for regular-season and playoff games that are not on a full-moon date.
+window_w, window_l, window_win_pct: The same for the within-one-day window, still excluding the Cup final.
+full_moon_games, window_games, other_games, season_games: Decision counts. season_games is regular season plus playoffs.
+
+Home-rate columns
+slice: full_moon_date, other_nights, within_one_day, or outside_one_day.
+home_wins, games, home_win_pct: Home team wins, games, and the rate rounded to one decimal.
+notes: What the slice includes.
+
+Full moon dates inside the 2026 season (May 8 through Oct. 31), Eastern time
+May 31, 4:45 a.m. EDT. June 29, 7:56 p.m. EDT. July 29, 10:36 a.m. EDT. Aug. 28, 12:18 a.m. EDT. Sept. 26, 12:49 p.m. EDT. Oct. 26, 12:12 a.m. EDT.
+June 29 and Sept. 26 had no game. May 1 and Nov. 24 fall outside the season, including one day on either side.
+Aug. 28 at 12:18 a.m. Eastern and Oct. 26 at 12:12 a.m. Eastern were still the previous evening in Pacific time.
+
+Sources
+Team schedule files: wnba/teams/<team>/<team>-schedule-2026.csv.
+Schedule feed check: data/wnba/schedule-2026.json, source https://www.wnba.com/api/schedule?season=2026&regionId=1, checked 2026-10-28. 352 games matched on the final score. Finals Game 6 and Game 7 had no score in that file.
+Game 6 final: data/games/2026-10-29-gs-atl.json. Dream 80, Valkyries 69.
+Game 7 final: data/games/2026-10-31-atl-gs.json. Valkyries 68, Dream 63. The same final is on the WNBA.com box score, https://www.wnba.com/game/atl-vs-gsv-1042600307/box-score.
+Full moons: U.S. Naval Observatory, Dates of Primary Phases of the Moon, 2026, Universal Time. https://aa.usno.navy.mil/calculated/moon/phases?year=2026
+
+Full Court Buckets gathers its own game data and verifies it against official WNBA box scores. Send a correction through https://fullcourtbuckets.com/contact/.

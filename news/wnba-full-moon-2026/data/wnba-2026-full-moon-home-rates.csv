@@ -1,0 +1,5 @@
+slice,home_wins,games,home_win_pct,notes
+full_moon_date,5,8,62.5,Eastern calendar date of a U.S. Naval Observatory full moon
+other_nights,190,345,55.1,Regular season and playoffs not on a full-moon date
+within_one_day,21,33,63.6,The full-moon date plus the day before and the day after
+outside_one_day,174,320,54.4,Regular season and playoffs outside that three-day window
