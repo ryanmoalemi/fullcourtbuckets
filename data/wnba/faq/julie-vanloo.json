@@ -1,104 +1,133 @@
 {
   "slug": "julie-vanloo",
   "player_name": "Julie Vanloo",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Julie Vanloo's stats / points per game?",
-      "answer": "In the 2026 regular season, Julie Vanloo averaged 5.8 points, 2.0 rebounds, and 5.4 assists in 5 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "julie vanloo stats",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Does Julie Vanloo have a signature shoe?",
-      "answer": "Public search interest ties Julie Vanloo to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "What were Julie Vanloo's WNBA averages?",
+      "answer": "Julie Vanloo averaged 7.4 points and 4.3 assists in 40 games for the Washington Mystics as a rookie in 2024. In 2026 she averaged 5.8 points and 5.4 assists in five games for the New York Liberty.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Julie_Vanloo"
+        "https://fullcourtbuckets.com/wnba/julie-vanloo/",
+        "https://sparks.wnba.com/news/sparks-sign-julie-vanloo-to-training-camp-contract"
       ],
-      "google_keyword": "julie vanloo shoes",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "julie vanloo stats",
+          "vol": 90
+        },
+        {
+          "q": "julie vanloo wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "julie vanloo points per game",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Julie Vanloo dating?",
-      "answer": "As of late 2026, Julie Vanloo has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Who has Julie Vanloo played for in the WNBA?",
+      "answer": "Julie Vanloo made her WNBA debut with the Washington Mystics in 2024, appearing in all 40 games and starting 34. The Golden State Valkyries selected her in the expansion draft and waived her after nine games in 2025, and the Los Angeles Sparks signed her three days later. She played for the New York Liberty in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Julie_Vanloo"
+        "https://sparks.wnba.com/news/sparks-sign-julie-vanloo-to-training-camp-contract",
+        "https://fullcourtbuckets.com/wnba/julie-vanloo/"
       ],
-      "google_keyword": "julie vanloo partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Julie Vanloo make?",
-      "answer": "A precise public salary or net worth figure for Julie Vanloo is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "julie vanloo salary",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Julie Vanloo?",
-      "answer": "Julie Vanloo is listed at 5' 8\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Julie_Vanloo"
-      ],
-      "google_keyword": "julie vanloo height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "julie vanloo wnba",
+          "vol": 30
+        },
+        {
+          "q": "julie vanloo sparks",
+          "vol": 10
+        },
+        {
+          "q": "julie vanloo teams",
+          "vol": 10
+        },
+        {
+          "q": "valkyries julie vanloo",
+          "vol": 10
+        },
+        {
+          "q": "valkyries waive julie vanloo",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Julie Vanloo?",
-      "answer": "She was born February 10, 1993 in Ostend. As of late 2026 that puts her at 33 years old.",
+      "answer": "Julie Vanloo was born February 10, 1993, in Ostend, Belgium.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1642210/julie-vanloo/bio",
+        "https://sparks.wnba.com/news/sparks-sign-guard-julie-vanloo"
+      ],
+      "queries": [
+        {
+          "q": "julie vanloo age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Julie Vanloo?",
+      "answer": "The WNBA lists Julie Vanloo at 5 feet 8 inches. She is a guard.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Julie_Vanloo"
+        "https://www.wnba.com/player/1642210/julie-vanloo/bio"
       ],
-      "google_keyword": "julie vanloo age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1993-02-10"
+      "queries": [
+        {
+          "q": "julie vanloo height",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Julie Vanloo's jersey number?",
-      "answer": "Julie Vanloo wears number 53 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "julie vanloo jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Julie Vanloo's contract?",
-      "answer": "Contract length and guarantees for Julie Vanloo are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "Has Julie Vanloo played for Belgium?",
+      "answer": "Yes. Julie Vanloo has played for Belgium's national team, the Belgian Cats, since 2009. She competed at the 2020 and 2024 Olympics and the 2022 World Cup, and she helped Belgium win its first EuroBasket title in 2023 and repeat as champion in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://sparks.wnba.com/news/sparks-sign-guard-julie-vanloo",
+        "https://sparks.wnba.com/news/sparks-sign-julie-vanloo-to-training-camp-contract"
       ],
-      "google_keyword": "julie vanloo contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "julie vanloo belgium",
+          "vol": 10
+        },
+        {
+          "q": "julie vanloo olympics",
+          "vol": 10
+        },
+        {
+          "q": "julie vanloo eurobasket",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Julie Vanloo married?",
-      "answer": "There is no widely reported public record of Julie Vanloo being married as of late 2026.",
+      "question": "Did Julie Vanloo play college basketball?",
+      "answer": "Yes. Julie Vanloo is an Iowa State alumna. She was not drafted and reached the WNBA in 2024 after establishing herself as one of Europe's top guards.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Julie_Vanloo"
+        "https://www.wnba.com/player/1642210/julie-vanloo/bio",
+        "https://sparks.wnba.com/news/sparks-sign-julie-vanloo-to-training-camp-contract"
       ],
-      "google_keyword": "julie vanloo husband",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Julie Vanloo injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "julie vanloo injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "julie vanloo iowa state",
+          "vol": 10
+        },
+        {
+          "q": "julie vanloo draft",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

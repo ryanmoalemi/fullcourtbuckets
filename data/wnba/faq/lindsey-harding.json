@@ -1,88 +1,122 @@
 {
   "slug": "lindsey-harding",
   "player_name": "Lindsey Harding",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Lindsey Harding's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2016), Lindsey Harding averaged 2.4 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "lindsey harding wnba stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Lindsey Harding dating?",
-      "answer": "As of late 2026, Lindsey Harding has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What was Lindsey Harding's WNBA career?",
+      "answer": "The Phoenix Mercury drafted Lindsey Harding first overall in 2007, and she played nine WNBA seasons from 2007 to 2016 for Minnesota, Washington, Atlanta, Los Angeles, New York and Phoenix. She was a 2010 WNBA All-Star and averaged 9.8 points, 4.0 assists and 2.9 rebounds for her career.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
+        "https://nbacoaches.com/lindsey-harding/",
+        "https://goduke.com/news/2024/7/16/womens-basketball-lindsey-harding-joins-lakers-as-assistant-coach",
+        "https://www.wnba.com/player/201046/lindsey-harding/bio"
       ],
-      "google_keyword": "lindsey harding partner",
-      "approx_monthly_volume": 320
+      "queries": [
+        {
+          "q": "lindsey harding wnba",
+          "vol": 110
+        },
+        {
+          "q": "lindsey harding stats",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding wnba stats",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding bio",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "How much does Lindsey Harding make?",
-      "answer": "A precise public salary or net worth figure for Lindsey Harding is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What does Lindsey Harding do now?",
+      "answer": "Lindsey Harding is an assistant coach for the Los Angeles Lakers, a job she started in 2024 on JJ Redick's staff. Before that she was head coach of the Stockton Kings and was named 2023-24 NBA G League Coach of the Year. She also spent four seasons as an assistant and player development coach with the Sacramento Kings and worked for the Philadelphia 76ers.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://nbacoaches.com/lindsey-harding/",
+        "https://goduke.com/news/2024/7/16/womens-basketball-lindsey-harding-joins-lakers-as-assistant-coach"
       ],
-      "google_keyword": "lindsey harding net worth",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "lindsey harding lakers",
+          "vol": 70
+        },
+        {
+          "q": "lindsey harding coach",
+          "vol": 30
+        },
+        {
+          "q": "lindsey harding lakers coach",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding kings",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding sacramento kings",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding stockton kings",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding nba",
+          "vol": 10
+        },
+        {
+          "q": "lindsey harding sixers",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Lindsey Harding play college basketball?",
+      "answer": "Lindsey Harding played at Duke, where she was the 2007 national player of the year and national defensive player of the year. She left as Duke's career assists leader with 579, and Duke retired her No. 10 jersey in 2008.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://goduke.com/news/2024/7/16/womens-basketball-lindsey-harding-joins-lakers-as-assistant-coach"
+      ],
+      "queries": [
+        {
+          "q": "lindsey harding duke",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "How tall is Lindsey Harding?",
+      "answer": "The WNBA lists Lindsey Harding at 5 feet 8 inches and 139 pounds. She played guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201046/lindsey-harding/bio"
+      ],
+      "queries": [
+        {
+          "q": "lindsey harding height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Lindsey Harding?",
-      "answer": "Public profiles list Lindsey Harding as born in 1984. As of late 2026 that puts her around 42 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
-      ],
-      "google_keyword": "lindsey harding age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1984-01-01"
-    },
-    {
-      "question": "Is Lindsey Harding married?",
-      "answer": "There is no widely reported public record of Lindsey Harding being married as of late 2026.",
+      "answer": "Lindsey Harding was born June 12, 1984, in Texas.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
+        "https://www.wnba.com/player/201046/lindsey-harding/bio",
+        "https://nbacoaches.com/lindsey-harding/"
       ],
-      "google_keyword": "lindsey harding husband",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Does Lindsey Harding have kids?",
-      "answer": "There is no widely reported public information that Lindsey Harding has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
-      ],
-      "google_keyword": "lindsey harding son",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who are Lindsey Harding's parents?",
-      "answer": "Public profiles share limited verified detail about Lindsey Harding's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
-      ],
-      "google_keyword": "lindsey harding family",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Lindsey Harding?",
-      "answer": "Lindsey Marcie Harding is an American professional basketball coach and former player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Lindsey_Harding"
-      ],
-      "google_keyword": "who is lindsey harding married to",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "lindsey harding age",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

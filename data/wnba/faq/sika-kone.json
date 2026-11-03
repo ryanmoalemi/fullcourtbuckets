@@ -1,37 +1,37 @@
 {
   "slug": "sika-kone",
   "player_name": "Sika Kone",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Sika Kone's stats / points per game?",
-      "answer": "In the 2026 regular season, Sika Kone averaged 1.9 points, 1.1 rebounds, and 0.2 assists in 34 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
+      "question": "What are Sika Kone's stats?",
+      "answer": "In the 2026 regular season, Sika Kone averaged 1.8 points, 1.0 rebounds, and 0.2 assists in 35 games for the Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sika kone stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How much does Sika Kone make?",
-      "answer": "A precise public salary or net worth figure for Sika Kone is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/sika-kone/"
       ],
-      "google_keyword": "sika kone salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sika kone stats",
+          "vol": 50
+        }
+      ]
     },
     {
       "question": "How tall is Sika Kone?",
-      "answer": "Sika Kone is listed at 6' 3\".",
-      "answer_kind": "bio",
+      "answer": "The WNBA lists Sika Kone at 6 feet 3 inches and 180 pounds. She is a forward from Mali, and the New York Liberty drafted her 29th overall in 2022.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sika_Kon%C3%A9"
+        "https://www.wnba.com/player/1631021/sika-kone/bio",
+        "https://dream.wnba.com/news/atlanta-dream-sign-forward-sika-kone-to-rest-of-season-contract"
       ],
-      "google_keyword": "sika kone height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "sika kone height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
