@@ -1,6 +1,7 @@
 ---
 title: "Las Vegas got 96.3% of its 2026 points from players with five or more seasons"
-seo_title: "Five-year veterans scored 56% of 2026 WNBA points"
+seo_title: "2027 WNBA free agents: 56% of 2026 points could hit the market"
+social_title: "2027 WNBA free agents: 56% of 2026 points could hit the market"
 slug: wnba-free-agents-2027
 date: 2026-11-03
 category: news
