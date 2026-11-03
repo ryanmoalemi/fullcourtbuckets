@@ -1,76 +1,110 @@
 {
   "slug": "iliana-rupert",
   "player_name": "Iliana Rupert",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Iliana Rupert's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Iliana Rupert averaged 9.3 points,",
+      "question": "What are Iliana Rupert's stats?",
+      "answer": "In the 2025 regular season, Iliana Rupert averaged 9.3 points, 3.9 rebounds, and 1.6 assists in 21 games for the Golden State Valkyries.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "iliana rupert stats",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/iliana-rupert/"
+      ],
+      "queries": [
+        {
+          "q": "iliana rupert stats",
+          "vol": 110
+        }
+      ]
     },
     {
-      "question": "Who is Iliana Rupert dating?",
-      "answer": "As of late 2026, Iliana Rupert has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "Which teams has Iliana Rupert played for?",
+      "answer": "Iliana Rupert has played for the Las Vegas Aces, Atlanta Dream and Golden State Valkyries.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Iliana_Rupert"
+        "https://fullcourtbuckets.com/wnba/iliana-rupert/"
       ],
-      "google_keyword": "iliana rupert partner",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "iliana rupert wnba",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "When did Iliana Rupert join the Golden State Valkyries?",
+      "answer": "The Golden State Valkyries selected Iliana Rupert from the Atlanta Dream in their expansion draft. In 2025 she averaged career highs of 9.3 points and 3.9 rebounds for Golden State and scored a career-best 21 points against Indiana.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630387/iliana-rupert/bio"
+      ],
+      "queries": [
+        {
+          "q": "iliana rupert valkyries",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Did Iliana Rupert win a WNBA championship?",
+      "answer": "Yes. Iliana Rupert won the 2022 WNBA championship with the Las Vegas Aces.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630387/iliana-rupert/bio"
+      ],
+      "queries": [
+        {
+          "q": "iliana rupert las vegas",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Iliana Rupert play for France?",
+      "answer": "Yes. Iliana Rupert plays for the French national team. She won Olympic bronze with France at the Tokyo Olympics in 2021 and silver at the Paris 2024 Olympics, and she played for France at FIBA Women's EuroBasket 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1630387/iliana-rupert/bio"
+      ],
+      "queries": [
+        {
+          "q": "iliana rupert france",
+          "vol": 10
+        },
+        {
+          "q": "iliana rupert eurobasket",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Iliana Rupert?",
-      "answer": "Iliana Rupert is listed at 6' 4\".",
+      "answer": "The WNBA lists Iliana Rupert at 6 feet 4 inches and 189 pounds. She plays center.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Iliana_Rupert"
+        "https://www.wnba.com/player/1630387/iliana-rupert/bio"
       ],
-      "google_keyword": "iliana rupert height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "iliana rupert height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Iliana Rupert?",
-      "answer": "She was born July 12, 2001 in Sèvres. As of late 2026 that puts her at 25 years old.",
+      "answer": "Iliana Rupert was born July 12, 2001.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Iliana_Rupert"
+        "https://www.wnba.com/player/1630387/iliana-rupert/bio"
       ],
-      "google_keyword": "iliana rupert age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2001-07-12"
-    },
-    {
-      "question": "What is Iliana Rupert's contract?",
-      "answer": "Contract length and guarantees for Iliana Rupert are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "iliana rupert contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Iliana Rupert married?",
-      "answer": "There is no widely reported public record of Iliana Rupert being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Iliana_Rupert"
-      ],
-      "google_keyword": "iliana rupert husband",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Iliana Rupert injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "iliana rupert injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "iliana rupert age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

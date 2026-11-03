@@ -1,58 +1,71 @@
 {
   "slug": "nell-angloma",
   "player_name": "Nell Angloma",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Nell Angloma's stats / points per game?",
-      "answer": "In the 2026 regular season, Nell Angloma averaged 4.2 points, 1.9 rebounds, and 0.8 assists in 38 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "What are Nell Angloma's stats?",
+      "answer": "In the 2026 regular season, Nell Angloma averaged 4.4 points, 1.9 rebounds, and 0.9 assists in 40 games for the Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "nell angloma stats",
-      "approx_monthly_volume": 90
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/nell-angloma/"
+      ],
+      "queries": [
+        {
+          "q": "nell angloma stats",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How tall is Nell Angloma?",
-      "answer": "Nell Angloma is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Nell_Angloma"
-      ],
-      "google_keyword": "nell angloma height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Nell Angloma's nationality?",
-      "answer": "Nell Angloma is French.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Nell_Angloma"
-      ],
-      "google_keyword": "nell angloma parents nationality",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Nell Angloma's parents?",
-      "answer": "Public profiles share limited verified detail about Nell Angloma's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "The WNBA lists Nell Angloma at 6 feet 1 inch. She is a forward.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nell_Angloma"
+        "https://www.wnba.com/player/1643448/nell-angloma/bio",
+        "https://www.fiba.basketball/en/players/298543-nell-angloma"
       ],
-      "google_keyword": "nell angloma parents",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "nell angloma height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Nell Angloma?",
-      "answer": "Nell Angloma was born June 12, 2006. As of late 2026 that puts her at 20 years old.",
+      "answer": "Nell Angloma was born June 12, 2006.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Nell_Angloma"
+        "https://www.wnba.com/player/1643448/nell-angloma/bio",
+        "https://www.fiba.basketball/en/players/298543-nell-angloma"
       ],
-      "google_keyword": "nell angloma age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2006-06-12"
+      "queries": [
+        {
+          "q": "nell angloma age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "When was Nell Angloma drafted?",
+      "answer": "The Connecticut Sun selected Nell Angloma 12th overall in the 2026 WNBA Draft. The French forward joined Connecticut from BLMA, where she averaged 13.5 points in the EuroCup Women, and she was MVP of the 2024 FIBA U18 Women's EuroBasket.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/n-6347973",
+        "https://www.wnba.com/player/1643448/nell-angloma/bio"
+      ],
+      "queries": [
+        {
+          "q": "nell angloma draft",
+          "vol": 10
+        },
+        {
+          "q": "nell angloma wnba",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

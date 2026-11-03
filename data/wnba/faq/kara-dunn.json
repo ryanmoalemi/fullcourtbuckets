@@ -1,60 +1,100 @@
 {
   "slug": "kara-dunn",
   "player_name": "Kara Dunn",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "How tall is Kara Dunn?",
-      "answer": "Kara Dunn is listed at 5' 11\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Goucher"
-      ],
-      "google_keyword": "kara dunn height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Kara Dunn's parents?",
-      "answer": "Public profiles share limited verified detail about Kara Dunn's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Where did Kara Dunn play college basketball?",
+      "answer": "Kara Dunn played at Georgia Tech, where she made the All-ACC First Team in 2025 and the Second Team in 2024, then transferred to USC for her senior season. At USC in 2025-26 she started all 32 games, averaged 15.2 points and 5.0 rebounds, and made the All-Big Ten Second Team.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Goucher"
+        "https://usctrojans.com/sports/womens-basketball/roster/kara-dunn/17646",
+        "https://www.wnba.com/draft/2026/prospects/258057/kara-dunn"
       ],
-      "google_keyword": "kara dunn parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kara dunn usc",
+          "vol": 170
+        },
+        {
+          "q": "kara dunn georgia tech",
+          "vol": 20
+        },
+        {
+          "q": "kara dunn transfer",
+          "vol": 10
+        },
+        {
+          "q": "kara dunn transfer portal",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Kara Dunn?",
-      "answer": "Kara Goucher is an American long-distance runner, author, television commentator, and podcaster.",
-      "answer_kind": "mixed",
+      "question": "What WNBA team does Kara Dunn play for?",
+      "answer": "Kara Dunn plays for the Phoenix Mercury as a developmental player. She went undrafted in the 2026 WNBA Draft and was a rookie in 2026.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Goucher"
+        "https://www.wnba.com/player/1643454/kara-dunn/bio"
       ],
-      "google_keyword": "kara dunn wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kara dunn wnba",
+          "vol": 110
+        },
+        {
+          "q": "kara dunn wnba draft",
+          "vol": 30
+        },
+        {
+          "q": "kara dunn phoenix mercury",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What are Kara Dunn's stats?",
+      "answer": "In the 2026 regular season, Kara Dunn averaged 6.5 points, 1.5 rebounds, and 0.5 assists in 4 games for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kara-dunn/"
+      ],
+      "queries": [
+        {
+          "q": "kara dunn stats",
+          "vol": 90
+        }
+      ]
     },
     {
       "question": "How old is Kara Dunn?",
-      "answer": "Kara Dunn was born July 9, 1978 in Queens. As of late 2026 that puts her at 48 years old.",
+      "answer": "Kara Dunn was born December 6, 2003, in Dallas, Georgia.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Goucher"
+        "https://www.wnba.com/player/1643454/kara-dunn/bio",
+        "https://www.wnba.com/draft/2026/prospects/258057/kara-dunn"
       ],
-      "google_keyword": "kara dunn age",
-      "approx_monthly_volume": 30,
-      "birthdate": "1978-07-09"
+      "queries": [
+        {
+          "q": "kara dunn age",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "What college did Kara Dunn attend?",
-      "answer": "Kara Dunn played college basketball at University of Colorado.",
-      "answer_kind": "researched",
+      "question": "How tall is Kara Dunn?",
+      "answer": "The WNBA lists Kara Dunn at 5 feet 11 inches. She is a guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kara_Goucher"
+        "https://www.wnba.com/player/1643454/kara-dunn/bio"
       ],
-      "google_keyword": "kara dunn usc",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "kara dunn height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
