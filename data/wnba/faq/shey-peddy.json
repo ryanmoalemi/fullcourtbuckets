@@ -1,94 +1,134 @@
 {
   "slug": "shey-peddy",
   "player_name": "Shey Peddy",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Shey Peddy's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Shey Peddy averaged 5.3 points,",
+      "question": "What was Shey Peddy's highest-scoring WNBA season?",
+      "answer": "Shey Peddy's highest-scoring WNBA season was 2022 with the Phoenix Mercury, when she averaged 9.9 points, 3.8 rebounds and 3.4 assists in 34 games. In 2025 she played 9 games for the Indiana Fever and 6 for the Los Angeles Sparks.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "shey peddy stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Shey Peddy dating?",
-      "answer": "As of late 2026, Shey Peddy has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shey_Peddy"
+        "https://fullcourtbuckets.com/wnba/shey-peddy/"
       ],
-      "google_keyword": "shey peddy partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Shey Peddy make?",
-      "answer": "A precise public salary or net worth figure for Shey Peddy is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "shey peddy net worth",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "How tall is Shey Peddy?",
-      "answer": "Shey Peddy is listed at 5' 7\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shey_Peddy"
-      ],
-      "google_keyword": "shey peddy height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "shey peddy stats",
+          "vol": 20
+        },
+        {
+          "q": "shey peddy game log",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Shey Peddy?",
-      "answer": "She was born October 28, 1988 in Boston. As of late 2026 that puts her at 37 years old.",
+      "answer": "Shey Peddy was born October 28, 1988, in Boston, Massachusetts.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Shey_Peddy"
+        "https://www.wnba.com/player/203035/shey-peddy/bio"
       ],
-      "google_keyword": "shey peddy age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1988-10-28"
+      "queries": [
+        {
+          "q": "shey peddy age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What is Shey Peddy's contract?",
-      "answer": "Contract length and guarantees for Shey Peddy are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "shey peddy contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Shey Peddy married?",
-      "answer": "There is no widely reported public record of Shey Peddy being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Shey_Peddy"
-      ],
-      "google_keyword": "shey peddy wife",
-      "approx_monthly_volume": 140
-    },
-    {
-      "question": "What team does Shey Peddy play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 11. Her listed position is G.",
+      "question": "Which teams has Shey Peddy played for?",
+      "answer": "Shey Peddy has played for the Washington Mystics, Phoenix Mercury, Los Angeles Sparks and Indiana Fever.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "shey peddy team",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/shey-peddy/"
+      ],
+      "queries": [
+        {
+          "q": "shey peddy team",
+          "vol": 10
+        },
+        {
+          "q": "shey peddy phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "shey peddy indiana fever",
+          "vol": 10
+        },
+        {
+          "q": "shey peddy fever",
+          "vol": 10
+        },
+        {
+          "q": "shey peddy washington mystics",
+          "vol": null
+        },
+        {
+          "q": "shey peddy mystics",
+          "vol": null
+        },
+        {
+          "q": "wnba shey peddy",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Shey Peddy injured?",
-      "answer": "Injury status changes during the season. Check the latest Connecticut Sun reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "shey peddy injury",
-      "approx_monthly_volume": 390
+      "question": "How tall is Shey Peddy?",
+      "answer": "The WNBA lists Shey Peddy at 5 feet 7 inches and 145 pounds. She is a guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203035/shey-peddy/bio"
+      ],
+      "queries": [
+        {
+          "q": "shey peddy height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What was Shey Peddy's buzzer beater?",
+      "answer": "Shey Peddy hit a game-winning 3-pointer as time expired for the Phoenix Mercury against the Washington Mystics in Round 1 of the 2020 WNBA Playoffs on September 15, 2020. It gave Phoenix a one-point win, and she finished with 12 points, four rebounds and three steals.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203035/shey-peddy/bio"
+      ],
+      "queries": [
+        {
+          "q": "shey peddy buzzer beater",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Shey Peddy play college basketball?",
+      "answer": "Shey Peddy played two seasons at Wright State and then two at Temple. As a senior at Temple she led her conference in scoring at 17.6 points per game, and the Chicago Sky drafted her 23rd overall in 2012. She made her WNBA debut with Washington in 2019.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203035/shey-peddy/bio"
+      ],
+      "queries": [
+        {
+          "q": "shey peddy temple",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where has Shey Peddy played overseas?",
+      "answer": "Shey Peddy has played professionally in Israel, Austria, Germany and Latvia.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/203035/shey-peddy/bio"
+      ],
+      "queries": [
+        {
+          "q": "shey peddy latvia",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

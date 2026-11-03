@@ -1,104 +1,111 @@
 {
   "slug": "theresa-plaisance",
   "player_name": "Theresa Plaisance",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 3, 2026",
+  "verified_at": "2026-11-03",
   "items": [
     {
-      "question": "What are Theresa Plaisance's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Theresa Plaisance averaged 4.0 points,",
+      "question": "How tall is Theresa Plaisance?",
+      "answer": "The WNBA lists Theresa Plaisance at 6 feet 5 inches and 200 pounds. She plays forward and center.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/203849/theresa-plaisance/bio",
+        "https://www.wnba.com/news/aces-sign-6-5-veteran-free-agent-center-theresa-plaisance"
+      ],
+      "queries": [
+        {
+          "q": "theresa plaisance height",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "Is Theresa Plaisance still in the WNBA?",
+      "answer": "Theresa Plaisance's most recent WNBA regular season was 2022, when she won the WNBA championship with the Las Vegas Aces.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/203849/theresa-plaisance/bio",
+        "https://fullcourtbuckets.com/wnba/theresa-plaisance/"
+      ],
+      "queries": [
+        {
+          "q": "is theresa plaisance still in the wnba",
+          "vol": 50
+        },
+        {
+          "q": "theresa plaisance current team",
+          "vol": 20
+        },
+        {
+          "q": "theresa plaisance team",
+          "vol": 20
+        },
+        {
+          "q": "what team does theresa plaisance play for",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Which teams has Theresa Plaisance played for?",
+      "answer": "Theresa Plaisance has played for the Tulsa Shock, Dallas Wings, Connecticut Sun, Washington Mystics and Las Vegas Aces.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "theresa plaisance stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/theresa-plaisance/"
+      ],
+      "queries": [
+        {
+          "q": "theresa plaisance wnba",
+          "vol": 40
+        },
+        {
+          "q": "dallas wings theresa plaisance",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Theresa Plaisance dating?",
-      "answer": "As of late 2026, Theresa Plaisance has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "What are Theresa Plaisance's stats?",
+      "answer": "In the 2022 regular season, Theresa Plaisance averaged 4.0 points, 2.6 rebounds, and 0.5 assists in 31 games for the Las Vegas Aces.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
+        "https://fullcourtbuckets.com/wnba/theresa-plaisance/"
       ],
-      "google_keyword": "theresa plaisance partner",
-      "approx_monthly_volume": 140
+      "queries": [
+        {
+          "q": "theresa plaisance stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "How much does Theresa Plaisance make?",
-      "answer": "A precise public salary or net worth figure for Theresa Plaisance is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Theresa Plaisance play college basketball?",
+      "answer": "Theresa Plaisance played at LSU from 2010 to 2014. She led the SEC in scoring as a junior and made the coaches' All-SEC First Team as a senior. The Tulsa Shock drafted her in the third round, 27th overall, in 2014.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/203849/theresa-plaisance/bio",
+        "https://www.wnba.com/news/aces-sign-6-5-veteran-free-agent-center-theresa-plaisance"
       ],
-      "google_keyword": "theresa plaisance salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "theresa plaisance lsu",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Theresa Plaisance?",
-      "answer": "Public profiles list Theresa Plaisance as born in 1992. As of late 2026 that puts her around 34 years old.",
+      "answer": "Theresa Plaisance was born May 18, 1992, in New Orleans.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
+        "https://www.wnba.com/player/203849/theresa-plaisance/bio"
       ],
-      "google_keyword": "theresa plaisance age",
-      "approx_monthly_volume": 20,
-      "birthdate": "1992-01-01"
-    },
-    {
-      "question": "Is Theresa Plaisance married?",
-      "answer": "There is no widely reported public record of Theresa Plaisance being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
-      ],
-      "google_keyword": "theresa plaisance wife",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "What team does Theresa Plaisance play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 55. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "theresa plaisance team",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Theresa Plaisance injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "theresa plaisance eye injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Theresa Plaisance's parents?",
-      "answer": "Public profiles share limited verified detail about Theresa Plaisance's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
-      ],
-      "google_keyword": "theresa plaisance mom",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Did Theresa Plaisance retire?",
-      "answer": "As of late 2026, Theresa Plaisance has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
-      ],
-      "google_keyword": "theresa plaisance retired",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "Does Theresa Plaisance have kids?",
-      "answer": "There is no widely reported public information that Theresa Plaisance has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Theresa_Plaisance"
-      ],
-      "google_keyword": "sydney colson and theresa plaisance",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "theresa plaisance age",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
