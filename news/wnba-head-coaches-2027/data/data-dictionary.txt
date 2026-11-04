@@ -3,20 +3,32 @@ WNBA head coaches, data through Nov. 4, 2026. Free to use (CC0).
 wnba-head-coaches.csv
 team: WNBA team.
 head_coach: Name on the WNBA.com team page on Nov. 4, 2026. Blank when that page lists no head coach.
-hire_date: Dateline or publish date of the linked team or WNBA.com release. Portland is Oct. 17, 2025, the date on the Fire news list for the Sarama release.
-seasons_with_team: WNBA regular seasons the coach was that team's head coach. White's row is the current stint, 2025 and 2026, not 2015-16.
-regular_season_w / regular_season_l: Sum of that team's wins and losses on WNBA.com standings for those seasons. Blank when the job is vacant.
+hire_date: Dateline or publish date of the linked team or WNBA.com release. For New York and Los Angeles, the date is the day the job opened. Portland is Oct. 17, 2025, the date on the Fire news list for the Sarama release.
+seasons_with_team: WNBA regular seasons in the current uninterrupted stint. White's row is 2025 and 2026. The Fever hiring release says she also coached Indiana in 2015 and 2016, a 37-31 overall record and a 6-6 playoff record. Those seasons are a previous stint.
+regular_season_w / regular_season_l: Sum of that team's wins and losses on WNBA.com standings for the seasons in the stint. Blank when the job is vacant.
 win_pct: Wins divided by wins plus losses, three decimals.
-playoff_wl_in_this_file: Playoff games confirmed on WNBA.com recaps for this page. A note in the cell means earlier postseasons are omitted, not that the coach was 0-0.
+playoff_w_l_2026: 2026 playoff wins and losses only. Missed means the team played no 2026 playoff game. Blank when the job is vacant.
 status: In place, or vacant since the linked post or release.
 
 liberty-head-coaches.csv
 season: WNBA season.
 coach: Brondello for 2022-2025 from the Toronto Tempo release. DeMarco for 2026 from the Liberty hiring release of Dec. 3, 2025.
-regular_season_w / regular_season_l / win_pct / seed: WNBA.com standings.
-playoff_result: 2026 series from WNBA.com recaps. 2024 title from the Tempo release. Other seasons are not in this file.
+regular_season_w / regular_season_l / win_pct: WNBA.com standings.
+seed: League playoff seed, not a conference place. In 2023 the Liberty were first in the East and the No. 2 seed.
+playoff_result: 2026 series from the WNBA.com bracket. 2025 series from the WNBA.com bracket (Phoenix wins 2-1). 2022, 2023 and 2024 from the Liberty team history page.
+playoff_source: Page used for that playoff result.
+coach_source: Release used for the coach's name.
 
-2026 playoff games used for the cells that include 2026:
+2026 playoff games used for playoff_w_l_2026:
 First round: New York over Minnesota 2-0; Las Vegas over Indiana 2-1; Atlanta over Washington 2-0; Golden State over Dallas 2-1 (Dallas won Game 2, Golden State won the winner-take-all Game 3).
 Semifinals: Atlanta over New York 3-0 (92-82, 101-98 OT, 85-83). Golden State swept Las Vegas.
 Finals: Golden State beat Atlanta in Game 7, 68-63, so the series is 4-3.
+
+Records that follow from those 2026 lines plus the two-season sums in the table:
+Atlanta 60-28 and a 2026 line of 30-14, so 2025 was 30-14.
+Golden State 55-33 and a 2026 line of 32-12, so 2025 was 23-21.
+Connecticut 22-66 and a 2026 line of 11-33, so 2025 was 11-33.
+
+Median: among the 13 coaches still in a job, the middle value is 2 seasons. Vacancies are left out.
+Ten coaches at two seasons or one have 6 times 2 plus 4 times 1, which is 16, against Reeve's 17.
+Seven of the 10 occupied jobs outside Golden State, Portland and Toronto are in a first or second season.
