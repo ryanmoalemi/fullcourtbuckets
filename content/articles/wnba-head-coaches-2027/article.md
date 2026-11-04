@@ -1,6 +1,6 @@
 ---
 title: "Liberty fire Chris DeMarco: only 3 WNBA coaches have lasted more than two seasons"
-seo_title: "WNBA head coaches 2027: only 3 past two seasons"
+seo_title: "2027 WNBA head coaches: only 3 past two seasons"
 slug: wnba-head-coaches-2027
 date: 2026-11-04
 category: news
@@ -72,7 +72,7 @@ On Nov. 3, 2026, the Liberty account posted "Thank you, Coach DeMarco." The grap
 
 The [hiring release](https://liberty.wnba.com/news/four-time-nba-champion-chris-demarco-named-new-york-liberty-head-coach), published Dec. 3, 2025, says the Liberty hired DeMarco, a Golden State Warriors assistant, that day. General manager Jonathan Kolb is the person quoted. Whether the deal ran through 2027 is not in that release.
 
-In 2026 the Liberty went 26-18 and were the No. 8 seed. They beat the No. 1 Lynx, 2-0, in the first round. [WNBA.com's first-round recap](https://www.wnba.com/news/2026-playoffs-first-round-recap) and the [AP recap of Game 2](https://www.wnba.com/game/min-vs-nyl-1042600102) both say New York was the first No. 8 seed to eliminate a No. 1 seed. Atlanta, the No. 4 seed, then swept them. The scores on the WNBA.com recaps are [92-82](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), [101-98 in overtime](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), and [85-83](https://www.wnba.com/news/2026-playoffs-dream-liberty-game-3-recap). Our recaps are [Game 1](/news/liberty-dream-semis-game-1-recap/), [Game 2](/news/liberty-dream-semis-game-2-recap/), and [Game 3](/news/dream-sweep-liberty-game-3-semifinals/). The first-round games against Minnesota are [Game 1](/news/liberty-lynx-game-1-full-recap/) and [Game 2](/news/liberty-lynx-game-2-recap/).
+In 2026 the Liberty went 26-18 and were the No. 8 seed. They beat the No. 1 Lynx, 2-0, in the first round. The [2026 playoff bracket](https://www.wnba.com/playoffs/2026) shows that series as NYL wins 2-0. The [2024 bracket](https://www.wnba.com/playoffs/2024) and the [2025 bracket](https://www.wnba.com/playoffs/2025) show the No. 1 seed winning the 1-vs-8 series. The 2022 bracket page did not open, and the [2023 bracket](https://www.wnba.com/playoffs/2023) lists the winners with both teams marked TBD, so this page does not call New York the first No. 8 seed to beat a No. 1. Atlanta, the No. 4 seed, then swept them. The scores on the WNBA.com recaps are [92-82](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), [101-98 in overtime](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), and [85-83](https://www.wnba.com/news/2026-playoffs-dream-liberty-game-3-recap). Our recaps are [Game 1](/news/liberty-dream-semis-game-1-recap/), [Game 2](/news/liberty-dream-semis-game-2-recap/), and [Game 3](/news/dream-sweep-liberty-game-3-semifinals/). The first-round games against Minnesota are [Game 1](/news/liberty-lynx-game-1-full-recap/) and [Game 2](/news/liberty-lynx-game-2-recap/).
 
 The Game 2 recap says the Liberty did not use their reset to advance the ball on the last play. In that same recap, 4.3 seconds is the clock on Atlanta's free throws after an overthrow by [Sabrina Ionescu](/wnba/sabrina-ionescu/). It is not a separate note that New York was down 3 and still holding a timeout. That version is left out.
 
