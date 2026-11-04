@@ -102,4 +102,5 @@ class TrackerCountTests(unittest.TestCase):
         self.assertNotIn('Pending tip-off', ratings)
         self.assertNotIn('If necessary', ratings)
         self.assertIn('USA/CNBC/Peacock', ratings)
-        self.assertIn('Not yet released', ratings)
+        self.assertIn('1,880,000', ratings)
+        self.assertNotIn('Not yet released', ratings)
