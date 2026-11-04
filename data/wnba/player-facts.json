@@ -1899,5 +1899,785 @@
       "href": "/data/wnba/players/raegan-beers.json",
       "label": "Full Court Buckets season log"
     }
+  ],
+  "aaliyah-nye": [
+    {
+      "text": "Aaliyah Nye has 188 points, 73 rebounds and 29 assists in 64 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aaliyah-nye.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aaliyah Nye has regular-season lines with the Las Vegas Aces, Los Angeles Sparks and Atlanta Dream.",
+      "href": "/data/wnba/players/aaliyah-nye.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aaliyah Nye's highest point total in one regular-season line is 169 points in 44 games for the Las Vegas Aces in 2025.",
+      "href": "/data/wnba/players/aaliyah-nye.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sarah-ashlee-barker": [
+    {
+      "text": "Sarah Ashlee Barker has 383 points, 183 rebounds and 93 assists in 60 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sarah-ashlee-barker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sarah Ashlee Barker has regular-season lines with the Los Angeles Sparks and Portland Fire.",
+      "href": "/data/wnba/players/sarah-ashlee-barker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sarah Ashlee Barker's highest point total in one regular-season line is 278 points in 26 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/sarah-ashlee-barker.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "ezi-magbegor": [
+    {
+      "text": "Ezi Magbegor has 2092 points, 1299 rebounds and 369 assists in 220 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/ezi-magbegor.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Ezi Magbegor has regular-season lines with the Seattle Storm.",
+      "href": "/data/wnba/players/ezi-magbegor.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Ezi Magbegor's highest point total in one regular-season line is 550 points in 40 games for the Seattle Storm in 2023.",
+      "href": "/data/wnba/players/ezi-magbegor.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "zia-cooke": [
+    {
+      "text": "Zia Cooke has 689 points, 137 rebounds and 106 assists in 135 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/zia-cooke.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Zia Cooke has regular-season lines with the Los Angeles Sparks and Seattle Storm.",
+      "href": "/data/wnba/players/zia-cooke.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Zia Cooke's highest point total in one regular-season line is 309 points in 41 games for the Seattle Storm in 2026.",
+      "href": "/data/wnba/players/zia-cooke.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jordan-harrison": [
+    {
+      "text": "Jordan Harrison scored 82 points, 29 rebounds and 67 assists in 16 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/jordan-harrison.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Jordan Harrison in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jordan-harrison.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "alysha-clark": [
+    {
+      "text": "Alysha Clark has 2867 points, 1504 rebounds and 637 assists in 453 games across 14 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/alysha-clark.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Alysha Clark has regular-season lines with the Seattle Storm, Washington Mystics, Las Vegas Aces and Dallas Wings.",
+      "href": "/data/wnba/players/alysha-clark.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Alysha Clark's highest point total in one regular-season line is 297 points in 31 games for the Seattle Storm in 2019.",
+      "href": "/data/wnba/players/alysha-clark.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "li-yueru": [
+    {
+      "text": "Li Yueru has 519 points, 398 rebounds and 68 assists in 118 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/li-yueru.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Li Yueru has regular-season lines with the Chicago Sky, Los Angeles Sparks, Seattle Storm and Dallas Wings.",
+      "href": "/data/wnba/players/li-yueru.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Li Yueru's highest point total in one regular-season line is 193 points in 38 games for the Los Angeles Sparks in 2024.",
+      "href": "/data/wnba/players/li-yueru.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kennedy-burke": [
+    {
+      "text": "Kennedy Burke has 1193 points, 400 rebounds and 191 assists in 203 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kennedy-burke.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kennedy Burke has regular-season lines with the Indiana Fever, Seattle Storm, Washington Mystics, New York Liberty and Connecticut Sun.",
+      "href": "/data/wnba/players/kennedy-burke.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kennedy Burke's highest point total in one regular-season line is 325 points in 37 games for the Connecticut Sun in 2026.",
+      "href": "/data/wnba/players/kennedy-burke.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "marta-suarez": [
+    {
+      "text": "Marta Suarez scored 67 points, 29 rebounds and 8 assists in 19 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/marta-suarez.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Marta Suarez in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/marta-suarez.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "brionna-jones": [
+    {
+      "text": "Brionna Jones has 2840 points, 1385 rebounds and 342 assists in 272 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/brionna-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brionna Jones has regular-season lines with the Connecticut Sun and Atlanta Dream.",
+      "href": "/data/wnba/players/brionna-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brionna Jones's highest point total in one regular-season line is 564 points in 44 games for the Atlanta Dream in 2025.",
+      "href": "/data/wnba/players/brionna-jones.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "chloe-bibby": [
+    {
+      "text": "Chloe Bibby has 111 points, 34 rebounds and 15 assists in 23 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/chloe-bibby.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Chloe Bibby has regular-season lines with the Golden State Valkyries, Indiana Fever, Chicago Sky and Minnesota Lynx.",
+      "href": "/data/wnba/players/chloe-bibby.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Chloe Bibby's highest point total in one regular-season line is 35 points in 9 games for the Indiana Fever in 2025.",
+      "href": "/data/wnba/players/chloe-bibby.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sami-whitcomb": [
+    {
+      "text": "Sami Whitcomb has 2322 points, 762 rebounds and 667 assists in 328 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sami-whitcomb.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sami Whitcomb has regular-season lines with the Seattle Storm, New York Liberty and Phoenix Mercury.",
+      "href": "/data/wnba/players/sami-whitcomb.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sami Whitcomb's highest point total in one regular-season line is 390 points in 43 games for the Phoenix Mercury in 2025.",
+      "href": "/data/wnba/players/sami-whitcomb.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kalani-brown": [
+    {
+      "text": "Kalani Brown has 814 points, 495 rebounds and 108 assists in 142 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kalani-brown.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kalani Brown has regular-season lines with the Los Angeles Sparks, Atlanta Dream, Dallas Wings, Phoenix Mercury and Las Vegas Aces.",
+      "href": "/data/wnba/players/kalani-brown.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kalani Brown's highest point total in one regular-season line is 249 points in 32 games for the Dallas Wings in 2023.",
+      "href": "/data/wnba/players/kalani-brown.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kia-nurse": [
+    {
+      "text": "Kia Nurse has 2425 points, 648 rebounds and 442 assists in 288 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kia-nurse.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kia Nurse has regular-season lines with the New York Liberty, Phoenix Mercury, Seattle Storm, Los Angeles Sparks, Chicago Sky and Toronto Tempo.",
+      "href": "/data/wnba/players/kia-nurse.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kia Nurse's highest point total in one regular-season line is 465 points in 34 games for the New York Liberty in 2019.",
+      "href": "/data/wnba/players/kia-nurse.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lucy-olsen": [
+    {
+      "text": "Lucy Olsen has 220 points, 59 rebounds and 67 assists in 63 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lucy-olsen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lucy Olsen has regular-season lines with the Washington Mystics.",
+      "href": "/data/wnba/players/lucy-olsen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lucy Olsen's highest point total in one regular-season line is 165 points in 41 games for the Washington Mystics in 2025.",
+      "href": "/data/wnba/players/lucy-olsen.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "maddy-siegrist": [
+    {
+      "text": "Maddy Siegrist has 998 points, 371 rebounds and 92 assists in 133 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/maddy-siegrist.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maddy Siegrist has regular-season lines with the Dallas Wings.",
+      "href": "/data/wnba/players/maddy-siegrist.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maddy Siegrist's highest point total in one regular-season line is 330 points in 26 games for the Dallas Wings in 2025.",
+      "href": "/data/wnba/players/maddy-siegrist.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "gianna-kneepkens": [
+    {
+      "text": "Gianna Kneepkens scored 126 points, 50 rebounds and 20 assists in 36 games for the Connecticut Sun in 2026.",
+      "href": "/data/wnba/players/gianna-kneepkens.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Gianna Kneepkens in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/gianna-kneepkens.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "monique-akoa-makani": [
+    {
+      "text": "Monique Akoa Makani has 545 points, 148 rebounds and 178 assists in 71 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/monique-akoa-makani.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Monique Akoa Makani has regular-season lines with the Phoenix Mercury and Los Angeles Sparks.",
+      "href": "/data/wnba/players/monique-akoa-makani.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Monique Akoa Makani's highest point total in one regular-season line is 315 points in 41 games for the Phoenix Mercury in 2025.",
+      "href": "/data/wnba/players/monique-akoa-makani.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "justine-pissott": [
+    {
+      "text": "Justine Pissott scored 38 points, 10 rebounds and 4 assists in 10 games for the Las Vegas Aces in 2026.",
+      "href": "/data/wnba/players/justine-pissott.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Justine Pissott in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/justine-pissott.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "myisha-hines-allen": [
+    {
+      "text": "Myisha Hines-Allen has 2018 points, 1333 rebounds and 553 assists in 278 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/myisha-hines-allen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Myisha Hines-Allen has regular-season lines with the Washington Mystics, Minnesota Lynx, Dallas Wings and Indiana Fever.",
+      "href": "/data/wnba/players/myisha-hines-allen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Myisha Hines-Allen's highest point total in one regular-season line is 374 points in 22 games for the Washington Mystics in 2020.",
+      "href": "/data/wnba/players/myisha-hines-allen.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "haley-jones": [
+    {
+      "text": "Haley Jones has 539 points, 298 rebounds and 249 assists in 118 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/haley-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Haley Jones has regular-season lines with the Atlanta Dream, Phoenix Mercury, Dallas Wings and Portland Fire.",
+      "href": "/data/wnba/players/haley-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Haley Jones's highest point total in one regular-season line is 194 points in 24 games for the Dallas Wings in 2025.",
+      "href": "/data/wnba/players/haley-jones.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "rachel-banham": [
+    {
+      "text": "Rachel Banham has 1970 points, 416 rebounds and 547 assists in 343 games across 12 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/rachel-banham.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rachel Banham has regular-season lines with the Connecticut Sun, Minnesota Lynx and Chicago Sky.",
+      "href": "/data/wnba/players/rachel-banham.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rachel Banham's highest point total in one regular-season line is 396 points in 44 games for the Chicago Sky in 2025.",
+      "href": "/data/wnba/players/rachel-banham.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "maddy-westbeld": [
+    {
+      "text": "Maddy Westbeld has 133 points, 80 rebounds and 29 assists in 36 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/maddy-westbeld.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maddy Westbeld has regular-season lines with the Chicago Sky and Phoenix Mercury.",
+      "href": "/data/wnba/players/maddy-westbeld.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maddy Westbeld's highest point total in one regular-season line is 107 points in 26 games for the Chicago Sky in 2025.",
+      "href": "/data/wnba/players/maddy-westbeld.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "mercedes-russell": [
+    {
+      "text": "Mercedes Russell has 977 points, 795 rebounds and 196 assists in 216 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/mercedes-russell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Mercedes Russell has regular-season lines with the New York Liberty, Seattle Storm, Los Angeles Sparks and Indiana Fever.",
+      "href": "/data/wnba/players/mercedes-russell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Mercedes Russell's highest point total in one regular-season line is 254 points in 34 games for the Seattle Storm in 2019.",
+      "href": "/data/wnba/players/mercedes-russell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "serah-williams": [
+    {
+      "text": "Serah Williams scored 167 points, 106 rebounds and 18 assists in 39 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/serah-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Serah Williams in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/serah-williams.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kaila-charles": [
+    {
+      "text": "Kaila Charles has 749 points, 498 rebounds and 149 assists in 135 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kaila-charles.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kaila Charles has regular-season lines with the Connecticut Sun, Atlanta Dream, Seattle Storm, Dallas Wings and Golden State Valkyries.",
+      "href": "/data/wnba/players/kaila-charles.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kaila Charles's highest point total in one regular-season line is 278 points in 44 games for the Golden State Valkyries in 2026.",
+      "href": "/data/wnba/players/kaila-charles.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "saylor-poffenbarger": [
+    {
+      "text": "Saylor Poffenbarger has 3 points, 10 rebounds and 1 assist in 7 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/saylor-poffenbarger.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Saylor Poffenbarger has regular-season lines with the Phoenix Mercury and Chicago Sky.",
+      "href": "/data/wnba/players/saylor-poffenbarger.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Saylor Poffenbarger's highest point total in one regular-season line is 3 points in 2 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/saylor-poffenbarger.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "mai-yamamoto": [
+    {
+      "text": "Mai Yamamoto scored 71 points, 15 rebounds and 20 assists in 14 games for the Las Vegas Aces in 2026.",
+      "href": "/data/wnba/players/mai-yamamoto.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Mai Yamamoto in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/mai-yamamoto.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "temi-fagbenle": [
+    {
+      "text": "Temi Fagbenle has 793 points, 511 rebounds and 137 assists in 155 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/temi-fagbenle.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Temi Fagbenle has regular-season lines with the Minnesota Lynx, Indiana Fever, Golden State Valkyries and Toronto Tempo.",
+      "href": "/data/wnba/players/temi-fagbenle.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Temi Fagbenle's highest point total in one regular-season line is 288 points in 39 games for the Golden State Valkyries in 2025.",
+      "href": "/data/wnba/players/temi-fagbenle.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "dorka-juhasz": [
+    {
+      "text": "Dorka Juhasz has 466 points, 440 rebounds and 164 assists in 93 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/dorka-juhasz.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dorka Juhasz has regular-season lines with the Minnesota Lynx.",
+      "href": "/data/wnba/players/dorka-juhasz.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dorka Juhasz's highest point total in one regular-season line is 228 points in 38 games for the Minnesota Lynx in 2023.",
+      "href": "/data/wnba/players/dorka-juhasz.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "stefanie-dolson": [
+    {
+      "text": "Stefanie Dolson has 3271 points, 1758 rebounds and 736 assists in 420 games across 13 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/stefanie-dolson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stefanie Dolson has regular-season lines with the Washington Mystics, Chicago Sky, New York Liberty and Seattle Storm.",
+      "href": "/data/wnba/players/stefanie-dolson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stefanie Dolson's highest point total in one regular-season line is 479 points in 33 games for the Chicago Sky in 2017.",
+      "href": "/data/wnba/players/stefanie-dolson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "katie-lou-samuelson": [
+    {
+      "text": "Katie Lou Samuelson has 959 points, 412 rebounds and 223 assists in 170 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/katie-lou-samuelson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Katie Lou Samuelson has regular-season lines with the Chicago Sky, Dallas Wings, Seattle Storm, Los Angeles Sparks and Indiana Fever.",
+      "href": "/data/wnba/players/katie-lou-samuelson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Katie Lou Samuelson's highest point total in one regular-season line is 311 points in 32 games for the Los Angeles Sparks in 2022.",
+      "href": "/data/wnba/players/katie-lou-samuelson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "grace-vanslooten": [
+    {
+      "text": "Grace VanSlooten has 34 points, 12 rebounds and 5 assists in 19 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/grace-vanslooten.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Grace VanSlooten has regular-season lines with the Indiana Fever and Seattle Storm.",
+      "href": "/data/wnba/players/grace-vanslooten.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Grace VanSlooten's highest point total in one regular-season line is 17 points in 15 games for the Indiana Fever in 2026.",
+      "href": "/data/wnba/players/grace-vanslooten.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "brianna-turner": [
+    {
+      "text": "Brianna Turner has 942 points, 1309 rebounds and 277 assists in 253 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/brianna-turner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brianna Turner has regular-season lines with the Phoenix Mercury, Chicago Sky, Indiana Fever and Las Vegas Aces.",
+      "href": "/data/wnba/players/brianna-turner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brianna Turner's highest point total in one regular-season line is 249 points in 32 games for the Phoenix Mercury in 2021.",
+      "href": "/data/wnba/players/brianna-turner.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "angela-dugalic": [
+    {
+      "text": "Angela Dugalic scored 101 points, 84 rebounds and 22 assists in 38 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/angela-dugalic.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Angela Dugalic in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/angela-dugalic.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "stephanie-talbot": [
+    {
+      "text": "Stephanie Talbot has 1195 points, 740 rebounds and 418 assists in 281 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/stephanie-talbot.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stephanie Talbot has regular-season lines with the Phoenix Mercury, Minnesota Lynx, Seattle Storm, Los Angeles Sparks, Golden State Valkyries, New York Liberty and Las Vegas Aces.",
+      "href": "/data/wnba/players/stephanie-talbot.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stephanie Talbot's highest point total in one regular-season line is 176 points in 44 games for the Las Vegas Aces in 2026.",
+      "href": "/data/wnba/players/stephanie-talbot.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jordan-horston": [
+    {
+      "text": "Jordan Horston has 681 points, 481 rebounds and 174 assists in 112 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jordan-horston.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jordan Horston has regular-season lines with the Seattle Storm.",
+      "href": "/data/wnba/players/jordan-horston.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jordan Horston's highest point total in one regular-season line is 266 points in 39 games for the Seattle Storm in 2024.",
+      "href": "/data/wnba/players/jordan-horston.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jovana-nogic": [
+    {
+      "text": "Jovana Nogic scored 166 points, 17 rebounds and 26 assists in 16 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/jovana-nogic.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Jovana Nogic in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jovana-nogic.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kara-dunn": [
+    {
+      "text": "Kara Dunn scored 26 points, 6 rebounds and 2 assists in 4 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/kara-dunn.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Kara Dunn in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kara-dunn.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "teonni-key": [
+    {
+      "text": "Teonni Key scored 84 points, 82 rebounds and 20 assists in 39 games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/teonni-key.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Teonni Key in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/teonni-key.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lexi-held": [
+    {
+      "text": "Lexi Held has 395 points, 80 rebounds and 95 assists in 74 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lexi-held.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lexi Held has regular-season lines with the Phoenix Mercury and Toronto Tempo.",
+      "href": "/data/wnba/players/lexi-held.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lexi Held's highest point total in one regular-season line is 225 points in 42 games for the Toronto Tempo and Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/lexi-held.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "tyasha-harris": [
+    {
+      "text": "Tyasha Harris has 1278 points, 259 rebounds and 520 assists in 211 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/tyasha-harris.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Tyasha Harris has regular-season lines with the Dallas Wings, Connecticut Sun and Indiana Fever.",
+      "href": "/data/wnba/players/tyasha-harris.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Tyasha Harris's highest point total in one regular-season line is 409 points in 39 games for the Connecticut Sun in 2024.",
+      "href": "/data/wnba/players/tyasha-harris.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "aziaha-james": [
+    {
+      "text": "Aziaha James has 521 points, 203 rebounds and 109 assists in 77 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aziaha-james.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aziaha James has regular-season lines with the Dallas Wings.",
+      "href": "/data/wnba/players/aziaha-james.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aziaha James's highest point total in one regular-season line is 285 points in 38 games for the Dallas Wings in 2025.",
+      "href": "/data/wnba/players/aziaha-james.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "aari-mcdonald": [
+    {
+      "text": "Aari McDonald has 1221 points, 279 rebounds and 420 assists in 139 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aari-mcdonald.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aari McDonald has regular-season lines with the Atlanta Dream, Los Angeles Sparks, Indiana Fever and Minnesota Lynx.",
+      "href": "/data/wnba/players/aari-mcdonald.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aari McDonald's highest point total in one regular-season line is 398 points in 36 games for the Atlanta Dream in 2022.",
+      "href": "/data/wnba/players/aari-mcdonald.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kierstan-bell": [
+    {
+      "text": "Kierstan Bell has 375 points, 182 rebounds and 69 assists in 126 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kierstan-bell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kierstan Bell has regular-season lines with the Las Vegas Aces.",
+      "href": "/data/wnba/players/kierstan-bell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kierstan Bell's highest point total in one regular-season line is 146 points in 35 games for the Las Vegas Aces in 2025.",
+      "href": "/data/wnba/players/kierstan-bell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "chance-gray": [
+    {
+      "text": "Chance Gray scored 124 points, 43 rebounds and 41 assists in 40 games for the Los Angeles Sparks in 2026.",
+      "href": "/data/wnba/players/chance-gray.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Chance Gray in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/chance-gray.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "shay-ciezki": [
+    {
+      "text": "Shay Ciezki scored 68 points, 12 rebounds and 13 assists in 8 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/shay-ciezki.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Shay Ciezki in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/shay-ciezki.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "cassandre-prosper": [
+    {
+      "text": "Cassandre Prosper scored 79 points, 38 rebounds and 17 assists in 38 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/cassandre-prosper.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Cassandre Prosper in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/cassandre-prosper.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "nyadiew-puoch": [
+    {
+      "text": "Nyadiew Puoch scored 181 points, 91 rebounds and 32 assists in 42 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/nyadiew-puoch.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Nyadiew Puoch in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/nyadiew-puoch.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "maya-caldwell": [
+    {
+      "text": "Maya Caldwell has 686 points, 325 rebounds and 189 assists in 149 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/maya-caldwell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maya Caldwell has regular-season lines with the Atlanta Dream, Indiana Fever and Minnesota Lynx.",
+      "href": "/data/wnba/players/maya-caldwell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Maya Caldwell's highest point total in one regular-season line is 221 points in 41 games for the Atlanta Dream in 2025.",
+      "href": "/data/wnba/players/maya-caldwell.json",
+      "label": "Full Court Buckets season log"
+    }
   ]
 }
