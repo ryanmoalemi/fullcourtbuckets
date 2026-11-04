@@ -10,20 +10,7 @@ tags:
   - data
 teams:
   - atlanta-dream
-  - chicago-sky
-  - connecticut-sun
-  - dallas-wings
   - golden-state-valkyries
-  - indiana-fever
-  - las-vegas-aces
-  - los-angeles-sparks
-  - minnesota-lynx
-  - new-york-liberty
-  - phoenix-mercury
-  - portland-fire
-  - seattle-storm
-  - toronto-tempo
-  - washington-mystics
 hero_alt: "Napheesa Collier of the Minnesota Lynx in a black Lynx jersey, holding a basketball and looking up against the Indiana Fever"
 photo_credit: "Photo: John McClellan, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:Napheesa_Collier_vs_Indiana_Fever_(August_2,_2026).jpg"

@@ -2977,6 +2977,166 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-03: edges checked at 200% on dark and light backgrounds"
+    },
+    "camille-little": {
+      "author": "BDZ Sports",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Camille_Little.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "matee-ajavon": {
+      "author": "Keith Allison",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Matee_Ajavon_WNBA.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "temeka-johnson": {
+      "author": "Клеткин",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Temeka_Johnson_at_2012_(Dinamo_Kursk).jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "chiney-ogwumike": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Chiney_Ogwumike.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "tianna-hawkins": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Tianna_Hawkins-20170914.jpg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "kara-braxton": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kara_Braxton_84.JPG",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "taj-mcwilliams-franklin": {
+      "author": "Maryland GovPics",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Taj_McWilliams-Franklin_(55521838739).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "roneeka-hodges": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Roneeka_Hodges_2026.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "natalie-achonwa": {
+      "author": "City of Indianapolis",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Natalie_Achonwa_2019.jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelsey-bone": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelsey_Bone_3_ESB_Villeneuve-d%27Ascq_LM_EuroLeague_Women_20241029_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "deanna-nolan": {
+      "author": "Dave Hogg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Deanna_Nolan.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "jamierra-faulkner": {
+      "author": "УГМК",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jamierra_Faulkner.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "jenna-ohea": {
+      "author": "Bidgee",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jenna_O%27Hea_at_day_three_of_the_Opals_camp.jpg",
+      "license": "CC BY-SA 3.0 au",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/au/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "svetlana-abrosimova": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Svetlana_Abrosimova_2012.jpg",
+      "license": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "queen-egbo": {
+      "author": "Alexander Jonesi",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Queen_Egbo.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "jeanette-pohlen-mavunga": {
+      "author": "Shotgun Spratling/Neon Tommy",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jeanette_Pohlen.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "jazmine-jones": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jazmine_Jones_23_Kocaeli_Kad%C4%B1n_Basketbol_20251108_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "maria-kliundikova": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maria_Kliundikova_2025_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "markeisha-gatling": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Markeisha_Gatling_34_Basket_Zaragoza_EuroLeague_Women_20241016_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "destanni-henderson": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Destanni_Henderson.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
     }
   }
 }

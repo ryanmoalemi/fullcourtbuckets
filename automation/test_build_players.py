@@ -939,6 +939,22 @@ class BuildTests(unittest.TestCase):
             'Caitlin Clark has 3 regular seasons: 2024, 2025, and 2026.',
         )
 
+    def test_joined_season_labels_are_not_listed_with_a_second_and(self):
+        root = ROOT.parent
+        cases = {
+            'aneesah-morrow': 'Aneesah Morrow has played for the Connecticut Sun and Toronto Tempo.',
+            'alysha-clark': (
+                'Alysha Clark has played for the Seattle Storm, Washington Mystics, '
+                'Las Vegas Aces and Dallas Wings.'
+            ),
+            'nalyssa-smith': 'NaLyssa Smith has played for the Indiana Fever, Dallas Wings and Las Vegas Aces.',
+        }
+        for slug, expected in cases.items():
+            profile = json.loads((root / 'data/wnba/players' / f'{slug}.json').read_text(encoding='utf-8'))
+            answer = b.teams_faq_answer(profile, b.player_name(profile))
+            self.assertEqual(answer, expected, slug)
+            self.assertNotRegex(answer, r' and .+ and ')
+
     def test_build_publishes_related_searches_not_the_template(self):
         items = [{'question': f'Q{i}?', 'answer': f'There is no widely reported answer {i}.'} for i in range(12)]
         queries = [
