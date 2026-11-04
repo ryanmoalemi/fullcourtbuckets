@@ -3137,6 +3137,126 @@
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "clarissa-dos-santos": {
+      "author": "Luis Astudillo C./Andes",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Clarissa_dos_Santos_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "ewelina-kobryn": {
+      "author": "Jean-Maël Cordier",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ewelina_Kobryn_2015.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "sequoia-holmes": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Sequoia_Holmes_17_Samsun_Canik_Belediyespor_TWBL_20181216.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "bernice-mosby": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Bernice_Mosby_7_Izmit_Belediyespor_TWBL_20181229.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "didi-richards": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:DiDi_Richards_2024a_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "farhiya-abdi": {
+      "author": "Sakhalinio",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Farhiya_Abdi_13_Galatasaray_women%27s_basketball_20190424.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "ji-su-park": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ji-Su_Park_2.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "maite-cazorla": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maite_Cazorla_5_Spain_20260905_(4).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "suzy-batkovic": {
+      "author": "Unknown author",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Townsville_Fire_captain_Suzy_Batkovic,_Townsville_RSL_Stadium,_18_March_2016.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "ana-dabovic": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ana_Dabovi%C4%87_3.JPG",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "elizabeth-kitley": {
+      "author": "SneakinDeacon",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Elizabeth_Kitley_2024_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "ezinne-kalu": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ezinne_Kalu_23_Nigeria_20260905_(2).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "megan-mcconnell": {
+      "author": "John Manard",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Megan_McConnell,_Duquesne_Dukes_1.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "taylor-soule": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Taylor_Soule_(52875637902).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "leigha-brown": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Leigha_Brown_(52757875854)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
