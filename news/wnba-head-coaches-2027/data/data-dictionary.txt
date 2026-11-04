@@ -3,7 +3,7 @@ WNBA head coaches, data through Nov. 4, 2026. Free to use (CC0).
 wnba-head-coaches.csv
 team: WNBA team.
 head_coach: Name on the WNBA.com team page on Nov. 4, 2026. Blank when that page lists no head coach.
-hire_date: Dateline or publish date of the linked team or WNBA.com release. Blank for Portland because no Fire release with a date was opened.
+hire_date: Dateline or publish date of the linked team or WNBA.com release. Portland is Oct. 17, 2025, the date on the Fire news list for the Sarama release.
 seasons_with_team: WNBA regular seasons the coach was that team's head coach. White's row is the current stint, 2025 and 2026, not 2015-16.
 regular_season_w / regular_season_l: Sum of that team's wins and losses on WNBA.com standings for those seasons. Blank when the job is vacant.
 win_pct: Wins divided by wins plus losses, three decimals.
