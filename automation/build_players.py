@@ -2706,6 +2706,43 @@ def page_indexable(text: str) -> bool:
     return True
 
 
+_CANONICAL_RE = re.compile(r'rel="canonical" href="([^"]+)"')
+_SITEMAP_SKIP_DIRS = frozenset({'.git', 'automation', 'data', 'images', 'assets', 'node_modules'})
+# Search and query-filter URLs are not documents. A player alias or noindexed profile fails page_indexable.
+_SITEMAP_SKIP_LOCS = frozenset({'/search/'})
+
+
+def self_canonical(text: str, loc: str) -> bool:
+    match = _CANONICAL_RE.search(text or '')
+    if not match or '?' in match.group(1):
+        return False
+    return match.group(1).rstrip('/') == (BASE + loc).rstrip('/')
+
+
+def _jsonld_day(text: str) -> str:
+    match = re.search(r'"dateModified"\s*:\s*"(\d{4}-\d{2}-\d{2})', text or '')
+    return match.group(1) if match else ''
+
+
+def discover_indexable_pages(root: Path, files: dict, known: set, fallback: str) -> list:
+    """Indexable pages whose canonical is themselves and that the static list has not named yet."""
+    found = []
+    for path in sorted(root.rglob('index.html')):
+        relative = path.relative_to(root).as_posix()
+        if set(Path(relative).parts) & _SITEMAP_SKIP_DIRS:
+            continue
+        if not relative.endswith('/index.html') and relative != 'index.html':
+            continue
+        loc = '/' if relative == 'index.html' else '/' + relative[: -len('index.html')]
+        if loc in known or loc in _SITEMAP_SKIP_LOCS or '?' in loc:
+            continue
+        text = _stored_html(root, files, relative)
+        if not page_indexable(text) or not self_canonical(text, loc):
+            continue
+        found.append((loc, _jsonld_day(text) or fallback))
+    return found
+
+
 def _stored_html(root: Path, files: dict, relative: str) -> str:
     if relative in files:
         return files[relative]
@@ -2824,6 +2861,29 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
     news = link_list(news_pairs)
     if news:
         sections.append(f'<section class="section" id="sitemap-news"><h2>News</h2>{news}</section>')
+
+    pbp_paths = [path for path in page_set if re.fullmatch(r'/wnba/finals/\d{4}/game-\d+/play-by-play/', path)]
+    pbp_paths.sort(key=lambda path: (path.split('/')[3], int(path.split('/')[4].removeprefix('game-'))))
+    if pbp_paths:
+        pairs = [
+            (path, f"{path.split('/')[3]} Finals Game {path.split('/')[4].removeprefix('game-')} play-by-play")
+            for path in pbp_paths
+        ]
+        block = link_list(pairs)
+        if block:
+            sections.append(f'<section class="section" id="sitemap-pbp"><h2>Finals play-by-play</h2>{block}</section>')
+
+    owner_paths = sorted(path for path in page_set if path.startswith('/wnba/owners/') and path.count('/') == 4)
+    if owner_paths:
+        pairs = []
+        for path in owner_paths:
+            text = _stored_html(root, {}, path.strip('/') + '/index.html')
+            match = re.search(r'<h1\b[^>]*>(.*?)</h1>', text, re.S)
+            label = re.sub(r'<[^>]+>', '', match.group(1) if match else '').strip() or path.strip('/').split('/')[-1]
+            pairs.append((path, label))
+        block = link_list(pairs)
+        if block:
+            sections.append(f'<section class="section" id="sitemap-owners"><h2>Owners</h2>{block}</section>')
 
     names = {}
     for entry in player_index.get('players') or []:
@@ -3126,6 +3186,8 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         add_page('wnba/teams/' + slot['slug'] + '/index.html', links.team_href(slot), newest)
     for slug, day in article_dates.items():
         add_page(f'news/{slug}/index.html', f'/news/{slug}/', day or newest)
+    known = {loc for loc, _last in pages} | {loc for loc, _last in players}
+    pages.extend(discover_indexable_pages(root, files, known, newest))
     players.sort()
     pages.sort()
     return players, pages

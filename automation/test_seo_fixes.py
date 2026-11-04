@@ -308,6 +308,14 @@ class PublishedPageTests(unittest.TestCase):
         self.assertIn(f'{BASE}/standings/', page_locs)
         self.assertIn(f'{BASE}/wnba/couples/', page_locs)
         self.assertIn(f'{BASE}/sitemap/', page_locs)
+        self.assertNotIn(f'{BASE}/search/', union)
+        for game in range(1, 8):
+            self.assertIn(f'{BASE}/wnba/finals/2026/game-{game}/play-by-play/', page_locs)
+        for slug in (
+            'joe-lacob', 'joe-tsai', 'larry-gottesdiener', 'larry-tanenbaum', 'lisa-bhathal-merage',
+            'marc-lore', 'mark-davis', 'mark-walter', 'mat-ishbia', 'tilman-fertitta',
+        ):
+            self.assertIn(f'{BASE}/wnba/owners/{slug}/', page_locs)
         self.assertNotIn(f'{BASE}/wnba/couples/', index_text)
         self.assertNotIn(f'{BASE}/wnba/', player_locs)
         child_blobs = {
