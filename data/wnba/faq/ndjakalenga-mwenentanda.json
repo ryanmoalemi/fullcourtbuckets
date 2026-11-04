@@ -1,78 +1,103 @@
 {
   "slug": "ndjakalenga-mwenentanda",
   "player_name": "Ndjakalenga Mwenentanda",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Ndjakalenga Mwenentanda's stats / points per game?",
-      "answer": "In the 2026 regular season, Ndjakalenga Mwenentanda averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Golden State Valkyries. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ndjakalenga mwenentanda stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Ndjakalenga Mwenentanda?",
-      "answer": "Ndjakalenga Mwenentanda is listed at 6' 2\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
-      ],
-      "google_keyword": "ndjakalenga mwenentanda height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Ndjakalenga Mwenentanda's nationality?",
-      "answer": "Ndjakalenga Mwenentanda is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
-      ],
-      "google_keyword": "ndjakalenga mwenentanda parents nationality",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Ndjakalenga Mwenentanda's parents?",
-      "answer": "Public profiles share limited verified detail about Ndjakalenga Mwenentanda's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "How did Ndjakalenga Mwenentanda do as a WNBA rookie?",
+      "answer": "As a rookie in 2026, Ndjakalenga Mwenentanda appeared in seven regular-season games: two for the Los Angeles Sparks, where she averaged 4.5 points and 3.5 rebounds, and five for the Golden State Valkyries.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
+        "https://www.wnba.com/player/1643479/ndjakalenga-mwenentanda/bio",
+        "https://fullcourtbuckets.com/wnba/ndjakalenga-mwenentanda/"
       ],
-      "google_keyword": "ndjakalenga mwenentanda parents",
-      "approx_monthly_volume": 50
-    },
-    {
-      "question": "Who is Ndjakalenga Mwenentanda?",
-      "answer": "Ndjakalenga Mwenentanda is an American professional basketball player for the Los Angeles Sparks of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
-      ],
-      "google_keyword": "ndjakalenga mwenentanda wikipedia",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "ndjakalenga mwenentanda stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How old is Ndjakalenga Mwenentanda?",
-      "answer": "Ndjakalenga Mwenentanda was born November 24, 2003 in Sioux Falls. As of late 2026 that puts her at 22 years old.",
-      "answer_kind": "researched",
+      "answer": "Ndjakalenga Mwenentanda was born November 24, 2003.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
+        "https://www.wnba.com/player/1643479/ndjakalenga-mwenentanda/bio"
       ],
-      "google_keyword": "ndjakalenga mwenentanda age",
-      "approx_monthly_volume": 20,
-      "birthdate": "2003-11-24"
+      "queries": [
+        {
+          "q": "ndjakalenga mwenentanda age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Which WNBA teams has Ndjakalenga Mwenentanda played for?",
+      "answer": "Ndjakalenga Mwenentanda has played for the Los Angeles Sparks and Golden State Valkyries.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ndjakalenga-mwenentanda/"
+      ],
+      "queries": [
+        {
+          "q": "ndjakalenga mwenentanda wnba",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "Where is Ndjakalenga Mwenentanda from?",
-      "answer": "Ndjakalenga Mwenentanda is from Sioux Falls.",
+      "answer": "Ndjakalenga Mwenentanda is from Sioux Falls, South Dakota. She played at Washington High School and was the 2022 Gatorade Player of the Year for South Dakota.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ndjakalenga_Mwenentanda"
+        "https://vucommodores.com/sports/wbball/roster/player/ndjakalenga-mwenentanda",
+        "https://vucommodores.com/news/2025/06/13/dores-add-mwenentanda"
       ],
-      "google_keyword": "where is ndjakalenga mwenentanda from",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "where is ndjakalenga mwenentanda from",
+          "vol": 10
+        },
+        {
+          "q": "ndjakalenga mwenentanda nationality",
+          "vol": 10
+        },
+        {
+          "q": "ndjakalenga mwenentanda origin",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Ndjakalenga Mwenentanda play college basketball?",
+      "answer": "Ndjakalenga Mwenentanda played three seasons at Texas, reaching the 2025 Final Four, then transferred to Vanderbilt for 2025-26. As a graduate student she started all 34 games for Vanderbilt and averaged a career-best 6.9 points.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://vucommodores.com/sports/wbball/roster/player/ndjakalenga-mwenentanda",
+        "https://vucommodores.com/news/2025/06/13/dores-add-mwenentanda"
+      ],
+      "queries": [
+        {
+          "q": "ndjakalenga mwenentanda transfer portal",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Ndjakalenga Mwenentanda?",
+      "answer": "The WNBA lists Ndjakalenga Mwenentanda at 6 feet 2 inches. She plays guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643479/ndjakalenga-mwenentanda/bio"
+      ],
+      "queries": [
+        {
+          "q": "ndjakalenga mwenentanda height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,114 +1,162 @@
 {
   "slug": "allie-quigley",
   "player_name": "Allie Quigley",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Allie Quigley's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Allie Quigley averaged 11.4 points,",
+      "question": "What were Allie Quigley's stats in her last WNBA season?",
+      "answer": "In the 2022 regular season, Allie Quigley averaged 11.4 points, 2.5 rebounds, and 2.9 assists in 34 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "allie quigley stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/allie-quigley/"
+      ],
+      "queries": [
+        {
+          "q": "allie quigley stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Allie Quigley dating?",
-      "answer": "Allie Quigley is married to Courtney Vandersloot.",
+      "question": "How long did Allie Quigley play in the WNBA?",
+      "answer": "Allie Quigley played 14 WNBA seasons for five teams: the Phoenix Mercury, Indiana Fever, San Antonio Silver Stars, Seattle Storm and Chicago Sky. She spent 2013 to 2022 with her hometown Sky and won the 2021 WNBA championship with Chicago.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more"
+        "https://www.wnba.com/player/201516/allie-quigley/bio",
+        "https://chicago.suntimes.com/chicago-sky/2025/06/10/longtime-sky-scoring-star-allie-quigley-makes-retirement-official"
       ],
-      "google_keyword": "allie quigley partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "allie quigley wnba",
+          "vol": 20
+        },
+        {
+          "q": "allie quigley team",
+          "vol": 10
+        },
+        {
+          "q": "chicago sky allie quigley",
+          "vol": 10
+        },
+        {
+          "q": "allie quigley current teams",
+          "vol": null
+        },
+        {
+          "q": "allie quigley dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Allie Quigley make?",
-      "answer": "A precise public salary or net worth figure for Allie Quigley is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Is Allie Quigley retired?",
+      "answer": "Yes. Allie Quigley officially announced her retirement on June 10, 2025, in an essay for The Players' Tribune. She last played in the WNBA in 2022 with the Chicago Sky.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.theplayerstribune.com/allie-quigley-wnba-basketball-retirement",
+        "https://chicago.suntimes.com/chicago-sky/2025/06/10/longtime-sky-scoring-star-allie-quigley-makes-retirement-official"
       ],
-      "google_keyword": "allie quigley net worth",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "allie quigley retired",
+          "vol": 10
+        },
+        {
+          "q": "is allie quigley retired",
+          "vol": 10
+        },
+        {
+          "q": "allie quigley players tribune",
+          "vol": 10
+        },
+        {
+          "q": "what is allie quigley doing now",
+          "vol": 10
+        },
+        {
+          "q": "where is allie quigley",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How many times did Allie Quigley win the 3-point contest?",
+      "answer": "Allie Quigley won the WNBA All-Star 3-Point Contest four times, in 2017, 2018, 2021 and 2022, the most in WNBA history. In 2018 she scored 29 points, a record for an All-Star 3-point competition across the NBA and WNBA.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201516/allie-quigley/bio"
+      ],
+      "queries": [
+        {
+          "q": "allie quigley 3-point contest",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Allie Quigley go to college?",
+      "answer": "Allie Quigley played college basketball at DePaul, where she scored 2,078 career points and averaged a team-leading 19.4 points as a senior. She made the All-Big East second team in 2008.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/201516/allie-quigley/bio"
+      ],
+      "queries": [
+        {
+          "q": "allie quigley depaul",
+          "vol": 10
+        },
+        {
+          "q": "allie quigley college",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Allie Quigley?",
-      "answer": "Public profiles list Allie Quigley as born in 1986. As of late 2026 that puts her around 40 years old.",
+      "answer": "Allie Quigley was born June 20, 1986, and grew up in Joliet, Illinois.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Allie_Quigley"
+        "https://www.wnba.com/player/201516/allie-quigley/bio"
       ],
-      "google_keyword": "allie quigley age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1986-01-01"
+      "queries": [
+        {
+          "q": "allie quigley age",
+          "vol": 10
+        },
+        {
+          "q": "how old is allie quigley",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Allie Quigley's contract?",
-      "answer": "Contract length and guarantees for Allie Quigley are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
+      "question": "How tall is Allie Quigley?",
+      "answer": "The WNBA lists Allie Quigley at 5 feet 10 inches and 142 pounds. She played guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/201516/allie-quigley/bio"
       ],
-      "google_keyword": "allie quigley contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "allie quigley height",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Allie Quigley married?",
-      "answer": "Yes. Allie Quigley is married to Courtney Vandersloot. They married in December 2018.",
-      "answer_kind": "researched",
+      "question": "Did Allie Quigley play for Hungary?",
+      "answer": "Yes. Allie Quigley obtained Hungarian citizenship while playing for Pecs 2010 in Hungary and played for the Hungarian national team in qualifying for the 2013 EuroBasket.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more"
+        "https://www.wnba.com/player/201516/allie-quigley/bio"
       ],
-      "google_keyword": "allie quigley wife",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What team does Allie Quigley play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "allie quigley team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Allie Quigley injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "allie quigley injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Allie Quigley's parents?",
-      "answer": "Public profiles share limited verified detail about Allie Quigley's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allie_Quigley"
-      ],
-      "google_keyword": "allie quigley family",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Did Allie Quigley retire?",
-      "answer": "As of late 2026, Allie Quigley has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allie_Quigley"
-      ],
-      "google_keyword": "allie quigley retired",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Allie Quigley?",
-      "answer": "Alexandria Quigley is an American former professional basketball player who played primarily for the Chicago Sky of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Allie_Quigley"
-      ],
-      "google_keyword": "who is allie quigley married to",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "allie quigley eurobasket",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
