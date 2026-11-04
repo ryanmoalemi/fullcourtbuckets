@@ -3273,6 +3273,62 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "erin-thorn": {
+      "author": "Hegor",
+      "file_url": "https://commons.wikimedia.org/wiki/File:3392-Thorn.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "jolene-anderson": {
+      "author": "FCBQ",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jolene_Anderson_-_Final_34a_Lliga_Catalana_AON_2022_Femenina_(Foto_David_Subirana)_(52401034911)_(cropped).jpg",
+      "license": "Public domain",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelly-faris": {
+      "author": "Sphilbrick",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kelly_Faris_UConn.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "leticia-romero": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Leticia_Romero_10_Valencia_Basket_(women)_EuroLeague_Women_20251104_(2).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "li-meng": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Li_Meng_(53076753510)_(cropped).jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "ticha-penicheiro": {
+      "author": "ELPA TV",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Ticha_Penicheiro_2022_01.png",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "tiffany-mitchell": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:230601_Lynx_Sun_JohnMc45.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
