@@ -1,48 +1,107 @@
 {
   "slug": "juste-jocyte",
   "player_name": "Juste Jocyte",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "How tall is Juste Jocyte?",
-      "answer": "Juste Jocyte is listed at 6' 0\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Just%C4%97_Jocyt%C4%97"
-      ],
-      "google_keyword": "juste jocyte height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Juste Jocyte's contract?",
-      "answer": "Contract length and guarantees for Juste Jocyte are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "When was Juste Jocyte drafted?",
+      "answer": "The Golden State Valkyries selected Juste Jocyte fifth overall in the 2025 WNBA Draft, making her the franchise's first-ever draft pick. She played her rookie WNBA season with Golden State in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1642794/juste-jocyte/bio",
+        "https://fullcourtbuckets.com/wnba/juste-jocyte/"
       ],
-      "google_keyword": "juste jocyte contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "juste jocyte wnba",
+          "vol": 140
+        },
+        {
+          "q": "juste jocyte valkyries",
+          "vol": 70
+        },
+        {
+          "q": "golden state valkyries juste jocyte",
+          "vol": 10
+        },
+        {
+          "q": "juste jocyte draft",
+          "vol": 10
+        },
+        {
+          "q": "juste jocyte wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "juste jocyte wnba debut",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Juste Jocyte injured?",
-      "answer": "Injury status changes during the season. Check the latest Golden State Valkyries reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "juste jocyte injury",
-      "approx_monthly_volume": 20
+      "question": "What are Juste Jocyte's stats?",
+      "answer": "In the 2026 regular season, Juste Jocyte averaged 3.1 points, 0.8 rebounds, and 1.1 assists in 16 games for the Golden State Valkyries.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/juste-jocyte/"
+      ],
+      "queries": [
+        {
+          "q": "juste jocyte stats",
+          "vol": 40
+        },
+        {
+          "q": "juste jocyte wnba stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Juste Jocyte?",
+      "answer": "The WNBA lists Juste Jocyte at 6 feet 0 inches. She plays guard-forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642794/juste-jocyte/bio"
+      ],
+      "queries": [
+        {
+          "q": "juste jocyte height",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Does Juste Jocyte play for Lithuania?",
+      "answer": "Yes. Juste Jocyte debuted for Lithuania at 13 at the 2019 FIBA U16 Women's European Championship, winning silver. At the 2022 FIBA U18 Women's European Championship she won gold and was named MVP after averaging 19.1 points.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642794/juste-jocyte/bio"
+      ],
+      "queries": [
+        {
+          "q": "juste jocyte eurobasket",
+          "vol": 10
+        },
+        {
+          "q": "juste jocyte fiba",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Juste Jocyte?",
-      "answer": "Juste Jocyte was born November 19, 2005 in Washington, D.C.. As of late 2026 that puts her at 20 years old.",
-      "answer_kind": "researched",
+      "answer": "Juste Jocyte was born November 19, 2005.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Just%C4%97_Jocyt%C4%97"
+        "https://www.wnba.com/player/1642794/juste-jocyte/bio"
       ],
-      "google_keyword": "juste jocyte age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2005-11-19"
+      "queries": [
+        {
+          "q": "juste jocyte age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

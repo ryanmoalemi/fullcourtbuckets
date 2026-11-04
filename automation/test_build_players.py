@@ -513,7 +513,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 226)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 236)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -600,6 +600,10 @@ class BuildTests(unittest.TestCase):
             'iliana-rupert', 'jj-quinerly', 'julie-vanloo', 'kara-dunn', 'kiana-williams',
             'lindsey-harding', 'nell-angloma', 'shey-peddy', 'sika-kone', 'theresa-plaisance',
         }
+        november_4 = {
+            'allie-quigley', 'antonia-delaere', 'diamond-deshields', 'frieda-buhner', 'jaylyn-sherrod',
+            'juste-jocyte', 'laura-juskaite', 'ndjakalenga-mwenentanda', 'rebekkah-brunson', 'teja-oblak',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -616,11 +620,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(october_31 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_2 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_3 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_4 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in november_3:
+            if slug in november_4:
+                expected_source = 'Google search demand via OpenSEO, Nov 4, 2026'
+            elif slug in november_3:
                 expected_source = 'Google search demand via OpenSEO, Nov 3, 2026'
             elif slug in november_2:
                 expected_source = 'Google search demand via OpenSEO, Nov 2, 2026'
@@ -697,9 +704,25 @@ class BuildTests(unittest.TestCase):
             # mostly other people, and Candice Dupree's are mostly relationships.
             # Nov 2: same; Stephanie Jones was skipped because her name searches are
             # other people, and most dropped searches here are relationships or family.
+            # Nov 4: same; Jasmine Thomas was skipped because her name searches are
+            # mostly other people, and Frieda Buhner has only three searches.
+            if slug in {'frieda-buhner'}:
+                minimum = 2
+            elif slug in {'laura-juskaite'}:
+                minimum = 3
+            elif slug in {'teja-oblak'}:
+                minimum = 4
+            elif slug in {'antonia-delaere', 'juste-jocyte', 'rebekkah-brunson'}:
+                minimum = 5
+            elif slug in {'diamond-deshields', 'ndjakalenga-mwenentanda'}:
+                minimum = 6
+            elif slug in {'jaylyn-sherrod'}:
+                minimum = 7
+            elif slug in {'allie-quigley'}:
+                minimum = 8
             # Nov 3: same; Jolene Anderson was skipped because her name searches are
             # mostly an actress, and Sika Kone has only three searches, one of them salary.
-            if slug in {'sika-kone'}:
+            elif slug in {'sika-kone'}:
                 minimum = 2
             elif slug in {'kiana-williams'}:
                 minimum = 3

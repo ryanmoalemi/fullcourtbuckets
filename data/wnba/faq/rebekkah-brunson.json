@@ -1,75 +1,95 @@
 {
   "slug": "rebekkah-brunson",
   "player_name": "Rebekkah Brunson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Rebekkah Brunson's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2018), Rebekkah Brunson averaged 7.2 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "rebekkah brunson stats",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Who is Rebekkah Brunson dating?",
-      "answer": "As of late 2026, Rebekkah Brunson has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "rebekkah brunson partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Rebekkah Brunson make?",
-      "answer": "A precise public salary or net worth figure for Rebekkah Brunson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What did Rebekkah Brunson average in her WNBA career?",
+      "answer": "Rebekkah Brunson averaged 9.2 points, 7.4 rebounds and 1.1 assists in 453 regular-season games over 15 WNBA seasons with the Sacramento Monarchs and Minnesota Lynx. She retired as the WNBA's career leader in total rebounds (3,356) and offensive rebounds (1,166).",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://lynx.wnba.com/basketball-operations/rebekkah-lamar-brunson"
       ],
-      "google_keyword": "rebekkah brunson salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "rebekkah brunson stats",
+          "vol": 30
+        },
+        {
+          "q": "rebekkah brunson wnba",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Is Rebekkah Brunson married?",
-      "answer": "There is no widely reported public record of Rebekkah Brunson being married as of late 2026.",
+      "question": "How many championships did Rebekkah Brunson win?",
+      "answer": "Rebekkah Brunson won five WNBA championships, the most by any player in league history: 2005 with the Sacramento Monarchs and 2011, 2013, 2015 and 2017 with the Minnesota Lynx.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "rebekkah brunson and wife",
-      "approx_monthly_volume": 70
+      "sources": [
+        "https://lynx.wnba.com/basketball-operations/rebekkah-lamar-brunson"
+      ],
+      "queries": [
+        {
+          "q": "rebekkah brunson rings",
+          "vol": 20
+        },
+        {
+          "q": "rebekkah brunson championships",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How many championships does Rebekkah Brunson have?",
-      "answer": "Public biographical sources cover Rebekkah Brunson's WNBA title history when she won championships. See her Wikipedia profile for the confirmed list of titles.",
+      "question": "What does Rebekkah Brunson do for the Minnesota Lynx?",
+      "answer": "Rebekkah Brunson is an assistant coach for the Minnesota Lynx. She joined the staff after retiring as a player in February 2020, and the Lynx retired her No. 32 jersey in July 2022.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "rebekkah brunson rings",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://lynx.wnba.com/basketball-operations/rebekkah-lamar-brunson"
+      ],
+      "queries": [
+        {
+          "q": "rebekkah brunson minnesota lynx",
+          "vol": 10
+        },
+        {
+          "q": "rebekkah brunson status",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Rebekkah Brunson injured?",
-      "answer": "Injury status changes during the season. Check the latest Sacramento Monarchs reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "rebekkah brunson injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Did Rebekkah Brunson retire?",
-      "answer": "As of late 2026, Rebekkah Brunson has a public WNBA playing career; check her bio for current status.",
+      "question": "When did Rebekkah Brunson last play in the WNBA?",
+      "answer": "Rebekkah Brunson's last WNBA season was 2018 with the Minnesota Lynx. She announced her retirement in February 2020.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "rebekkah brunson retirement",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://lynx.wnba.com/basketball-operations/rebekkah-lamar-brunson",
+        "https://fullcourtbuckets.com/wnba/rebekkah-brunson/"
+      ],
+      "queries": [
+        {
+          "q": "rebekkah brunson 2019",
+          "vol": null
+        },
+        {
+          "q": "rebekkah brunson 2019 season",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Does Rebekkah Brunson have kids?",
-      "answer": "There is no widely reported public information that Rebekkah Brunson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "rebekkah brunson",
-      "approx_monthly_volume": 2400
+      "question": "How old is Rebekkah Brunson?",
+      "answer": "Rebekkah Brunson was born December 11, 1981, in Washington, D.C.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/100944/rebekkah-brunson/bio"
+      ],
+      "queries": [
+        {
+          "q": "rebekkah brunson age",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

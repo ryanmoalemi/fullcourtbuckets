@@ -1,57 +1,79 @@
 {
   "slug": "antonia-delaere",
   "player_name": "Antonia Delaere",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Antonia Delaere's stats / points per game?",
-      "answer": "In the 2026 regular season, Antonia Delaere averaged 2.9 points, 0.7 rebounds, and 1.1 assists in 37 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
+      "question": "What are Antonia Delaere's stats?",
+      "answer": "In the 2026 regular season, Antonia Delaere averaged 3.0 points, 0.8 rebounds, and 1.1 assists in 39 games for the Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "antonia delaere stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/antonia-delaere/"
+      ],
+      "queries": [
+        {
+          "q": "antonia delaere stats",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Antonia Delaere dating?",
-      "answer": "As of late 2026, Antonia Delaere has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What WNBA team does Antonia Delaere play for?",
+      "answer": "Antonia Delaere plays for the Minnesota Lynx. She went undrafted and joined the WNBA as a rookie in 2026, playing in 39 regular-season games for Minnesota.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Antonia_Delaere"
+        "https://www.wnba.com/player/1643489/antonia-delaere/bio",
+        "https://fullcourtbuckets.com/wnba/antonia-delaere/"
       ],
-      "google_keyword": "antonia delaere partner",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "antonia delaere wnba",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Antonia Delaere make?",
-      "answer": "A precise public salary or net worth figure for Antonia Delaere is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "How did Antonia Delaere play at the Paris Olympics?",
+      "answer": "At the Paris 2024 Olympics, Antonia Delaere averaged 11.3 points, 3.0 rebounds and 4.2 assists for Belgium, which finished fourth. She also played for Belgium at the Tokyo Olympics.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1643489/antonia-delaere/bio"
       ],
-      "google_keyword": "antonia delaere salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "antonia delaere olympic stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Antonia Delaere play for the Belgian Cats?",
+      "answer": "Yes. Antonia Delaere has played for Belgium's senior national team, the Belgian Cats, since debuting at 16 in 2011. She won EuroBasket gold with Belgium in 2023 and 2025 and bronze in 2017 and 2021.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643489/antonia-delaere/bio"
+      ],
+      "queries": [
+        {
+          "q": "antonia delaere belgian cats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Antonia Delaere?",
-      "answer": "Antonia Delaere is listed at 5' 11\".",
+      "answer": "The WNBA lists Antonia Delaere at 5 feet 11 inches and 155 pounds.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Antonia_Delaere"
+        "https://www.wnba.com/player/1643489/antonia-delaere/bio"
       ],
-      "google_keyword": "antonia delaere height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Antonia Delaere's nationality?",
-      "answer": "Antonia Delaere is Belgian.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Antonia_Delaere"
-      ],
-      "google_keyword": "antonia delaere belgian cats",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "antonia delaere height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

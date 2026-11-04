@@ -1,96 +1,123 @@
 {
   "slug": "jaylyn-sherrod",
   "player_name": "Jaylyn Sherrod",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Jaylyn Sherrod's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Jaylyn Sherrod averaged 1.0 points,",
+      "question": "Which WNBA teams has Jaylyn Sherrod played for?",
+      "answer": "Jaylyn Sherrod has played for the New York Liberty, Minnesota Lynx, Atlanta Dream and Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jaylyn sherrod stats",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/jaylyn-sherrod/"
+      ],
+      "queries": [
+        {
+          "q": "jaylyn sherrod wnba",
+          "vol": 50
+        },
+        {
+          "q": "jaylyn sherrod lynx",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Jaylyn Sherrod dating?",
-      "answer": "As of late 2026, Jaylyn Sherrod has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "How did Jaylyn Sherrod play in 2026?",
+      "answer": "In 2026, Jaylyn Sherrod averaged 1.9 points, 0.9 rebounds and 1.1 assists in 13 regular-season games: 10 for the Atlanta Dream and three for the Seattle Storm.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio",
+        "https://fullcourtbuckets.com/wnba/jaylyn-sherrod/"
       ],
-      "google_keyword": "jaylyn sherrod partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "jaylyn sherrod stats",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "How much does Jaylyn Sherrod make?",
-      "answer": "A precise public salary or net worth figure for Jaylyn Sherrod is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "Did Jaylyn Sherrod win a championship with the Liberty?",
+      "answer": "Yes. Jaylyn Sherrod won the 2024 WNBA championship with the New York Liberty as a rookie. The Liberty first signed her to a training camp contract in April 2024.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio"
       ],
-      "google_keyword": "jaylyn sherrod salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "jaylyn sherrod liberty",
+          "vol": 10
+        },
+        {
+          "q": "jaylyn sherrod ny liberty",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Was Jaylyn Sherrod drafted?",
+      "answer": "No. Jaylyn Sherrod went undrafted in 2024 and signed a training camp contract with the New York Liberty on April 16, 2024.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio"
+      ],
+      "queries": [
+        {
+          "q": "jaylyn sherrod draft",
+          "vol": 10
+        },
+        {
+          "q": "jaylyn sherrod wnba draft",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Jaylyn Sherrod play college basketball?",
+      "answer": "Jaylyn Sherrod played at Colorado from 2019 to 2024. She was a two-time All-Pac-12 selection and made the Pac-12 All-Defensive Team three times.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio"
+      ],
+      "queries": [
+        {
+          "q": "jaylyn sherrod colorado",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Jaylyn Sherrod?",
-      "answer": "Jaylyn Sherrod is listed at 5' 7\".",
+      "answer": "The WNBA lists Jaylyn Sherrod at 5 feet 7 inches and 147 pounds. She plays guard.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio"
       ],
-      "google_keyword": "jaylyn sherrod height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What is Jaylyn Sherrod's jersey number?",
-      "answer": "Jaylyn Sherrod wears number 00 for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jaylyn sherrod jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Jaylyn Sherrod's contract?",
-      "answer": "Contract length and guarantees for Jaylyn Sherrod are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "jaylyn sherrod contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Jaylyn Sherrod married?",
-      "answer": "There is no widely reported public record of Jaylyn Sherrod being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
-      ],
-      "google_keyword": "jaylyn sherrod husband",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Jaylyn Sherrod?",
-      "answer": "Jaylyn Sherrod is an American professional basketball player for the Seattle Storm of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
-      ],
-      "google_keyword": "jaylyn sherrod wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "jaylyn sherrod height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Jaylyn Sherrod?",
-      "answer": "Jaylyn Sherrod was born October 21, 2001. As of late 2026 that puts her at 24 years old.",
-      "answer_kind": "researched",
+      "answer": "Jaylyn Sherrod was born October 21, 2001.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaylyn_Sherrod"
+        "https://www.wnba.com/player/1642320/jaylyn-sherrod/bio"
       ],
-      "google_keyword": "jaylyn sherrod birthday",
-      "approx_monthly_volume": 10,
-      "birthdate": "2001-10-21"
+      "queries": [
+        {
+          "q": "jaylyn sherrod age",
+          "vol": 10
+        },
+        {
+          "q": "jaylyn sherrod birthday",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

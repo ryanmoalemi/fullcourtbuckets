@@ -1,27 +1,68 @@
 {
   "slug": "teja-oblak",
   "player_name": "Teja Oblak",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Teja Oblak's stats / points per game?",
-      "answer": "In the 2026 regular season, Teja Oblak averaged 5.6 points, 1.6 rebounds, and 3.2 assists in 29 games for Portland Fire. Her full season-by-season numbers are on this page.",
+      "question": "What are Teja Oblak's stats?",
+      "answer": "In the 2026 regular season, Teja Oblak averaged 5.6 points, 1.6 rebounds, and 3.2 assists in 29 games for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "teja oblak stats",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/teja-oblak/"
+      ],
+      "queries": [
+        {
+          "q": "teja oblak stats",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "When did Teja Oblak join the Portland Fire?",
+      "answer": "Teja Oblak signed with the Portland Fire on April 15, 2026, and played her rookie WNBA season with Portland. Her career highs are 12 points, against Los Angeles on August 2, and 9 assists.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643506/teja-oblak/bio"
+      ],
+      "queries": [
+        {
+          "q": "teja oblak wnba",
+          "vol": 20
+        },
+        {
+          "q": "teja oblak portland fire",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where has Teja Oblak played overseas?",
+      "answer": "Teja Oblak played for USK Praha in the Czech Republic from 2019 to 2026 and joined Galatasaray in Turkey in 2026. She also played for Polkowice, Kosice and Szekszard, and has played for Slovenia at five EuroBasket tournaments from 2017 to 2025.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1643506/teja-oblak/bio"
+      ],
+      "queries": [
+        {
+          "q": "teja oblak galatasaray",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Teja Oblak?",
-      "answer": "Teja Oblak is listed at 5' 8\".",
+      "answer": "The WNBA lists Teja Oblak at 5 feet 8 inches and 149 pounds. She plays guard.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Teja_Oblak"
+        "https://www.wnba.com/player/1643506/teja-oblak/bio"
       ],
-      "google_keyword": "teja oblak height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "teja oblak height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -1,112 +1,141 @@
 {
   "slug": "diamond-deshields",
   "player_name": "Diamond DeShields",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Diamond DeShields's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2024), Diamond DeShields averaged 4.5 points,",
+      "question": "Which WNBA teams has Diamond DeShields played for?",
+      "answer": "Diamond DeShields has played for the Chicago Sky and Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "diamond deshields stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who is Diamond DeShields dating?",
-      "answer": "As of late 2026, Diamond DeShields has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_DeShields"
+        "https://fullcourtbuckets.com/wnba/diamond-deshields/"
       ],
-      "google_keyword": "diamond deshields relationship",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "diamond deshields wnba",
+          "vol": 40
+        },
+        {
+          "q": "diamond deshields team",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Diamond DeShields make?",
-      "answer": "A precise public salary or net worth figure for Diamond DeShields is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "diamond deshields wnba salary",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Diamond DeShields's jersey number?",
-      "answer": "Diamond DeShields wears number 0 for the Chicago Sky.",
+      "question": "What are Diamond DeShields' stats?",
+      "answer": "In the 2024 regular season, Diamond DeShields averaged 4.5 points, 1.4 rebounds, and 1.3 assists in 32 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "diamond deshields jersey",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/diamond-deshields/"
+      ],
+      "queries": [
+        {
+          "q": "diamond deshields stats",
+          "vol": 20
+        },
+        {
+          "q": "diamond deshields game log",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields basketball reference",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Diamond DeShields married?",
-      "answer": "There is no widely reported public record of Diamond DeShields being married as of late 2026.",
+      "question": "Did Diamond DeShields play for the Dallas Wings?",
+      "answer": "No. The Dallas Wings acquired Diamond DeShields in a trade before the 2023 season, but she did not play a game for Dallas. Her WNBA games have come with the Chicago Sky (2018 to 2021 and 2024) and the Phoenix Mercury (2022).",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_DeShields"
+        "https://www.wnba.com/player/1628890/diamond-deshields/bio",
+        "https://fullcourtbuckets.com/wnba/diamond-deshields/"
       ],
-      "google_keyword": "diamond deshields spouse",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "diamond deshields dallas wings",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Diamond DeShields play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 0. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "diamond deshields team",
-      "approx_monthly_volume": 10
+      "question": "Did Diamond DeShields win a WNBA championship?",
+      "answer": "Yes. Diamond DeShields won the 2021 WNBA championship with the Chicago Sky. She was also a 2019 WNBA All-Star and made the All-WNBA Second Team that season.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.wnba.com/player/1628890/diamond-deshields/bio"
+      ],
+      "queries": [
+        {
+          "q": "diamond deshields chicago sky",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields 2021",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Diamond DeShields injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "diamond deshields injury",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Who are Diamond DeShields's parents?",
-      "answer": "She is the daughter of former MLB player Delino DeShields and the younger sister of MLB player Delino DeShields Jr.",
+      "question": "Where did Diamond DeShields play college basketball?",
+      "answer": "Diamond DeShields played her freshman season at North Carolina in 2013-14, when she was ACC Rookie of the Year, then transferred to Tennessee. She made the All-SEC First Team in 2017 and left college to play professionally in Turkey before the Chicago Sky drafted her third overall in 2018.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_DeShields"
+        "https://www.wnba.com/player/1628890/diamond-deshields/bio",
+        "https://www.wnba.com/webview/draft/2018/prospects/75939/diamond-deshields"
       ],
-      "google_keyword": "diamond deshields family",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "diamond deshields tennessee",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields unc",
+          "vol": 10
+        },
+        {
+          "q": "diamond deshields education",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What are Diamond DeShields's college stats?",
-      "answer": "Across her college career at Tennessee, Diamond DeShields averaged 16.5 points, 5.6 rebounds, and 2.8 assists per game.",
-      "answer_kind": "researched",
+      "question": "How tall is Diamond DeShields?",
+      "answer": "The WNBA lists Diamond DeShields at 6 feet 1 inch and 172 pounds. She plays guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://www.sports-reference.com/cbb/players/diamond-deshields-1.html",
-        "https://en.wikipedia.org/wiki/Diamond_DeShields"
+        "https://www.wnba.com/player/1628890/diamond-deshields/bio"
       ],
-      "google_keyword": "diamond deshields college stats",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "diamond deshields height",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Diamond DeShields attend?",
-      "answer": "Diamond DeShields played college basketball at Norcross High School.",
+      "question": "Did Diamond DeShields play in Turkey?",
+      "answer": "Yes. Diamond DeShields played professionally in Turkey before her WNBA career, for Cukurova (CBK Mersin) in 2018. She also played for Famila Schio in Italy in 2021-22.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Diamond_DeShields"
+        "https://www.wnba.com/player/1628890/diamond-deshields/bio",
+        "https://www.wnba.com/webview/draft/2018/prospects/75939/diamond-deshields"
       ],
-      "google_keyword": "diamond deshields tennessee",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Diamond DeShields's contract?",
-      "answer": "Contract length and guarantees for Diamond DeShields are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "diamond deshields contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "diamond deshields turkey",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

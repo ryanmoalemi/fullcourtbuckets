@@ -1,27 +1,51 @@
 {
   "slug": "laura-juskaite",
   "player_name": "Laura Juskaite",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 4, 2026",
+  "verified_at": "2026-11-04",
   "items": [
     {
-      "question": "What are Laura Juskaite's stats / points per game?",
-      "answer": "In the 2026 regular season, Laura Juskaite averaged 10.9 points, 4.2 rebounds, and 1.7 assists in 42 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
+      "question": "What are Laura Juskaite's stats?",
+      "answer": "In the 2026 regular season, Laura Juskaite averaged 11.3 points, 4.2 rebounds, and 1.8 assists in 44 games for the Toronto Tempo.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "laura juskaite stats",
-      "approx_monthly_volume": 2900
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/laura-juskaite/"
+      ],
+      "queries": [
+        {
+          "q": "laura juskaite stats",
+          "vol": 3600
+        }
+      ]
+    },
+    {
+      "question": "What WNBA team does Laura Juskaite play for?",
+      "answer": "Laura Juskaite plays for the Toronto Tempo. The Lithuanian forward went undrafted and played her rookie WNBA season with Toronto in 2026, appearing in 44 regular-season games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.wnba.com/player/1643420/laura-juskaite/bio",
+        "https://fullcourtbuckets.com/wnba/laura-juskaite/"
+      ],
+      "queries": [
+        {
+          "q": "laura juskaite wnba",
+          "vol": 70
+        }
+      ]
     },
     {
       "question": "How tall is Laura Juskaite?",
-      "answer": "Laura Juskaite is listed at 6' 4\".",
+      "answer": "The WNBA lists Laura Juskaite at 6 feet 4 inches and 188 pounds. She plays forward.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Laura_Ju%C5%A1kait%C4%97"
+        "https://www.wnba.com/player/1643420/laura-juskaite/bio"
       ],
-      "google_keyword": "laura juskaite height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "laura juskaite height",
+          "vol": 20
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
