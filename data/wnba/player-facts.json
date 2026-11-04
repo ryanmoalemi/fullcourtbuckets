@@ -8354,5 +8354,661 @@
       "href": "/data/wnba/players/jasmine-dickey.json",
       "label": "Full Court Buckets season log"
     }
+  ],
+  "jasmine-walker": [
+    {
+      "text": "Jasmine Walker has 51 points, 50 rebounds and 8 assists in 34 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jasmine-walker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jasmine Walker has regular-season lines with the Los Angeles Sparks.",
+      "href": "/data/wnba/players/jasmine-walker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jasmine Walker's highest point total in one regular-season line is 51 points in 32 games for the Los Angeles Sparks in 2022.",
+      "href": "/data/wnba/players/jasmine-walker.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jasmine-james": [
+    {
+      "text": "Jasmine James scored 50 points, 22 rebounds and 29 assists in 16 games for the Phoenix Mercury in 2013.",
+      "href": "/data/wnba/players/jasmine-james.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2013 regular season is the only regular-season line for Jasmine James in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jasmine-james.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "rachel-hollivay": [
+    {
+      "text": "Rachel Hollivay has 48 points, 75 rebounds and 4 assists in 39 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/rachel-hollivay.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rachel Hollivay has regular-season lines with the Atlanta Dream.",
+      "href": "/data/wnba/players/rachel-hollivay.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rachel Hollivay's highest point total in one regular-season line is 39 points in 32 games for the Atlanta Dream in 2016.",
+      "href": "/data/wnba/players/rachel-hollivay.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "suzy-batkovic": [
+    {
+      "text": "Suzy Batkovic scored 48 points, 30 rebounds and 4 assists in 20 games for the Seattle Storm in 2009.",
+      "href": "/data/wnba/players/suzy-batkovic.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2009 regular season is the only regular-season line for Suzy Batkovic in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/suzy-batkovic.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "doneeka-lewis": [
+    {
+      "text": "Doneeka Lewis has 47 points, 17 rebounds and 16 assists in 13 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/doneeka-lewis.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Doneeka Lewis has regular-season lines with the Indiana Fever and Tulsa Shock.",
+      "href": "/data/wnba/players/doneeka-lewis.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Doneeka Lewis's highest point total in one regular-season line is 31 points in 5 games for the Tulsa Shock in 2011.",
+      "href": "/data/wnba/players/doneeka-lewis.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kelly-santos": [
+    {
+      "text": "Kelly Santos scored 47 points, 28 rebounds and 5 assists in 22 games for the Seattle Storm in 2008.",
+      "href": "/data/wnba/players/kelly-santos.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2008 regular season is the only regular-season line for Kelly Santos in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kelly-santos.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "rachel-jarry": [
+    {
+      "text": "Rachel Jarry scored 46 points, 19 rebounds and 11 assists in 27 games for the Minnesota Lynx in 2013.",
+      "href": "/data/wnba/players/rachel-jarry.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2013 regular season is the only regular-season line for Rachel Jarry in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/rachel-jarry.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "evgeniia-belyakova": [
+    {
+      "text": "Evgeniia Belyakova scored 44 points, 16 rebounds and 16 assists in 20 games for the Los Angeles Sparks in 2016.",
+      "href": "/data/wnba/players/evgeniia-belyakova.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2016 regular season is the only regular-season line for Evgeniia Belyakova in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/evgeniia-belyakova.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "shanece-mckinney": [
+    {
+      "text": "Shanece McKinney scored 43 points, 34 rebounds and 7 assists in 24 games for the New York Liberty in 2014.",
+      "href": "/data/wnba/players/shanece-mckinney.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2014 regular season is the only regular-season line for Shanece McKinney in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/shanece-mckinney.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lorela-cubaj": [
+    {
+      "text": "Lorela Cubaj has 41 points, 71 rebounds and 19 assists in 42 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lorela-cubaj.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lorela Cubaj has regular-season lines with the New York Liberty and Atlanta Dream.",
+      "href": "/data/wnba/players/lorela-cubaj.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lorela Cubaj's highest point total in one regular-season line is 33 points in 28 games for the Atlanta Dream in 2024.",
+      "href": "/data/wnba/players/lorela-cubaj.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jasmine-hassell": [
+    {
+      "text": "Jasmine Hassell has 40 points, 20 rebounds and 9 assists in 24 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jasmine-hassell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jasmine Hassell has regular-season lines with the Indiana Fever and Seattle Storm.",
+      "href": "/data/wnba/players/jasmine-hassell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jasmine Hassell's highest point total in one regular-season line is 32 points in 18 games for the Indiana Fever in 2013.",
+      "href": "/data/wnba/players/jasmine-hassell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "murjanatu-musa": [
+    {
+      "text": "Murjanatu Musa scored 40 points, 31 rebounds and 7 assists in 12 games for the Phoenix Mercury in 2025.",
+      "href": "/data/wnba/players/murjanatu-musa.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2025 regular season is the only regular-season line for Murjanatu Musa in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/murjanatu-musa.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "ashley-walker": [
+    {
+      "text": "Ashley Walker has 38 points, 42 rebounds and 9 assists in 25 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/ashley-walker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Ashley Walker has regular-season lines with the Seattle Storm, Tulsa Shock, Connecticut Sun and Los Angeles Sparks.",
+      "href": "/data/wnba/players/ashley-walker.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Ashley Walker's highest point total in one regular-season line is 23 points in 13 games for the Seattle Storm in 2009.",
+      "href": "/data/wnba/players/ashley-walker.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "mamignan-toure": [
+    {
+      "text": "Mamignan Toure scored 36 points, 7 rebounds and 9 assists in 18 games for the Connecticut Sun in 2025.",
+      "href": "/data/wnba/players/mamignan-toure.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2025 regular season is the only regular-season line for Mamignan Toure in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/mamignan-toure.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "aisha-sheppard": [
+    {
+      "text": "Aisha Sheppard scored 35 points, 14 rebounds and 7 assists in 23 games for the Las Vegas Aces in 2022.",
+      "href": "/data/wnba/players/aisha-sheppard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2022 regular season is the only regular-season line for Aisha Sheppard in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aisha-sheppard.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "destiny-slocum": [
+    {
+      "text": "Destiny Slocum has 35 points, 23 rebounds and 17 assists in 24 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/destiny-slocum.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Destiny Slocum has regular-season lines with the Las Vegas Aces and Atlanta Dream.",
+      "href": "/data/wnba/players/destiny-slocum.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Destiny Slocum's highest point total in one regular-season line is 21 points in 21 games for the Las Vegas Aces in 2021.",
+      "href": "/data/wnba/players/destiny-slocum.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lindsey-moore": [
+    {
+      "text": "Lindsey Moore has 35 points, 23 rebounds and 38 assists in 35 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lindsey-moore.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lindsey Moore has regular-season lines with the Minnesota Lynx.",
+      "href": "/data/wnba/players/lindsey-moore.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lindsey Moore's highest point total in one regular-season line is 22 points in 23 games for the Minnesota Lynx in 2013.",
+      "href": "/data/wnba/players/lindsey-moore.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "yvonne-anderson": [
+    {
+      "text": "Yvonne Anderson has 35 points, 10 rebounds and 14 assists in 12 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/yvonne-anderson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Yvonne Anderson has regular-season lines with the Connecticut Sun and Minnesota Lynx.",
+      "href": "/data/wnba/players/yvonne-anderson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Yvonne Anderson's highest point total in one regular-season line is 35 points in 11 games for the Connecticut Sun in 2022.",
+      "href": "/data/wnba/players/yvonne-anderson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "brittainey-raven": [
+    {
+      "text": "Brittainey Raven scored 34 points, 21 rebounds and 10 assists in 23 games for the Atlanta Dream in 2010.",
+      "href": "/data/wnba/players/brittainey-raven.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2010 regular season is the only regular-season line for Brittainey Raven in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/brittainey-raven.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "marquesha-davis": [
+    {
+      "text": "Marquesha Davis has 34 points, 17 rebounds and 5 assists in 31 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/marquesha-davis.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Marquesha Davis has regular-season lines with the New York Liberty and Chicago Sky.",
+      "href": "/data/wnba/players/marquesha-davis.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Marquesha Davis's highest point total in one regular-season line is 24 points in 20 games for the New York Liberty in 2024.",
+      "href": "/data/wnba/players/marquesha-davis.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "stephanie-jones": [
+    {
+      "text": "Stephanie Jones has 34 points, 24 rebounds and 6 assists in 23 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/stephanie-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stephanie Jones has regular-season lines with the Connecticut Sun and Washington Mystics.",
+      "href": "/data/wnba/players/stephanie-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Stephanie Jones's highest point total in one regular-season line is 25 points in 18 games for the Connecticut Sun in 2021.",
+      "href": "/data/wnba/players/stephanie-jones.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "gennifer-brandon": [
+    {
+      "text": "Gennifer Brandon scored 29 points, 42 rebounds and 3 assists in 16 games for the Chicago Sky in 2014.",
+      "href": "/data/wnba/players/gennifer-brandon.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2014 regular season is the only regular-season line for Gennifer Brandon in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/gennifer-brandon.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "victaria-saxton": [
+    {
+      "text": "Victaria Saxton has 28 points, 14 rebounds and 0 assists in 24 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/victaria-saxton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Victaria Saxton has regular-season lines with the Indiana Fever.",
+      "href": "/data/wnba/players/victaria-saxton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Victaria Saxton's highest point total in one regular-season line is 20 points in 15 games for the Indiana Fever in 2023.",
+      "href": "/data/wnba/players/victaria-saxton.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kathleen-doyle": [
+    {
+      "text": "Kathleen Doyle scored 27 points, 15 rebounds and 19 assists in 18 games for the Indiana Fever in 2020.",
+      "href": "/data/wnba/players/kathleen-doyle.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2020 regular season is the only regular-season line for Kathleen Doyle in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kathleen-doyle.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kariata-diaby": [
+    {
+      "text": "Kariata Diaby scored 25 points, 13 rebounds and 5 assists in 13 games for the Connecticut Sun in 2025.",
+      "href": "/data/wnba/players/kariata-diaby.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2025 regular season is the only regular-season line for Kariata Diaby in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kariata-diaby.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jelena-dubljevic": [
+    {
+      "text": "Jelena Dubljevic scored 23 points, 14 rebounds and 8 assists in 15 games for the Los Angeles Sparks in 2016.",
+      "href": "/data/wnba/players/jelena-dubljevic.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2016 regular season is the only regular-season line for Jelena Dubljevic in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jelena-dubljevic.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kim-mestdagh": [
+    {
+      "text": "Kim Mestdagh scored 23 points, 5 rebounds and 6 assists in 15 games for the Washington Mystics in 2019.",
+      "href": "/data/wnba/players/kim-mestdagh.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2019 regular season is the only regular-season line for Kim Mestdagh in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kim-mestdagh.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "leticia-romero": [
+    {
+      "text": "Leticia Romero scored 23 points, 17 rebounds and 23 assists in 21 games for the Dallas Wings in 2018.",
+      "href": "/data/wnba/players/leticia-romero.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2018 regular season is the only regular-season line for Leticia Romero in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/leticia-romero.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "leigha-brown": [
+    {
+      "text": "Leigha Brown scored 20 points, 20 rebounds and 10 assists in 25 games for the Connecticut Sun in 2023.",
+      "href": "/data/wnba/players/leigha-brown.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2023 regular season is the only regular-season line for Leigha Brown in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/leigha-brown.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "nikki-greene": [
+    {
+      "text": "Nikki Greene has 20 points, 35 rebounds and 2 assists in 23 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/nikki-greene.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Nikki Greene has regular-season lines with the Los Angeles Sparks and Connecticut Sun.",
+      "href": "/data/wnba/players/nikki-greene.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Nikki Greene's highest point total in one regular-season line is 14 points in 12 games for the Connecticut Sun in 2015.",
+      "href": "/data/wnba/players/nikki-greene.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "amy-atwell": [
+    {
+      "text": "Amy Atwell has 18 points, 8 rebounds and 8 assists in 10 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/amy-atwell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Amy Atwell has regular-season lines with the Los Angeles Sparks and Phoenix Mercury.",
+      "href": "/data/wnba/players/amy-atwell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Amy Atwell's highest point total in one regular-season line is 15 points in 6 games for the Phoenix Mercury in 2024.",
+      "href": "/data/wnba/players/amy-atwell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "quionche-carter": [
+    {
+      "text": "Quionche Carter scored 16 points, 9 rebounds and 7 assists in 13 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/quionche-carter.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Quionche Carter in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/quionche-carter.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "olivia-epoupa": [
+    {
+      "text": "Olivia Epoupa scored 14 points, 19 rebounds and 26 assists in 17 games for the Minnesota Lynx in 2024.",
+      "href": "/data/wnba/players/olivia-epoupa.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2024 regular season is the only regular-season line for Olivia Epoupa in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/olivia-epoupa.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "alex-wilson": [
+    {
+      "text": "Alex Wilson scored 12 points, 7 rebounds and 3 assists in 4 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/alex-wilson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Alex Wilson in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/alex-wilson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "nadia-fingall": [
+    {
+      "text": "Nadia Fingall scored 11 points, 5 rebounds and 2 assists in 10 games for the Golden State Valkyries in 2026.",
+      "href": "/data/wnba/players/nadia-fingall.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Nadia Fingall in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/nadia-fingall.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sam-thomas": [
+    {
+      "text": "Sam Thomas has 10 points, 6 rebounds and 7 assists in 25 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sam-thomas.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sam Thomas has regular-season lines with the Phoenix Mercury.",
+      "href": "/data/wnba/players/sam-thomas.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sam Thomas's highest point total in one regular-season line is 10 points in 24 games for the Phoenix Mercury in 2022.",
+      "href": "/data/wnba/players/sam-thomas.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "taylor-soule": [
+    {
+      "text": "Taylor Soule has 9 points, 9 rebounds and 3 assists in 17 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/taylor-soule.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Taylor Soule has regular-season lines with the Chicago Sky and Minnesota Lynx.",
+      "href": "/data/wnba/players/taylor-soule.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Taylor Soule's highest point total in one regular-season line is 9 points in 15 games for the Chicago Sky in 2023.",
+      "href": "/data/wnba/players/taylor-soule.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "chelsea-dungee": [
+    {
+      "text": "Chelsea Dungee scored 8 points, 3 rebounds and 1 assist in 14 games for the Dallas Wings in 2021.",
+      "href": "/data/wnba/players/chelsea-dungee.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2021 regular season is the only regular-season line for Chelsea Dungee in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/chelsea-dungee.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "emese-hof": [
+    {
+      "text": "Emese Hof scored 7 points, 5 rebounds and 2 assists in 3 games for the Minnesota Lynx in 2026.",
+      "href": "/data/wnba/players/emese-hof.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Emese Hof in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/emese-hof.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "mariella-fasoula": [
+    {
+      "text": "Mariella Fasoula scored 4 points, 3 rebounds and 1 assist in 3 games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/mariella-fasoula.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Mariella Fasoula in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/mariella-fasoula.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "camryn-taylor": [
+    {
+      "text": "Camryn Taylor scored 3 points, 6 rebounds and 1 assist in 6 games for the Minnesota Lynx in 2025.",
+      "href": "/data/wnba/players/camryn-taylor.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2025 regular season is the only regular-season line for Camryn Taylor in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/camryn-taylor.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "ezinne-kalu": [
+    {
+      "text": "Ezinne Kalu scored 3 points, 1 rebound and 0 assists in 1 game for the Atlanta Dream in 2024.",
+      "href": "/data/wnba/players/ezinne-kalu.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2024 regular season is the only regular-season line for Ezinne Kalu in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/ezinne-kalu.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "megan-mcconnell": [
+    {
+      "text": "Megan McConnell scored 3 points, 1 rebound and 3 assists in 1 game for the Phoenix Mercury in 2025.",
+      "href": "/data/wnba/players/megan-mcconnell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2025 regular season is the only regular-season line for Megan McConnell in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/megan-mcconnell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "shae-kelley": [
+    {
+      "text": "Shae Kelley scored 1 point, 3 rebounds and 1 assist in 8 games for the Minnesota Lynx in 2015.",
+      "href": "/data/wnba/players/shae-kelley.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2015 regular season is the only regular-season line for Shae Kelley in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/shae-kelley.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "adaora-elonu": [
+    {
+      "text": "Adaora Elonu scored 0 points, 0 rebounds and 0 assists in 1 game for the Atlanta Dream in 2018.",
+      "href": "/data/wnba/players/adaora-elonu.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2018 regular season is the only regular-season line for Adaora Elonu in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/adaora-elonu.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "caitlin-bickle": [
+    {
+      "text": "Caitlin Bickle scored 0 points, 0 rebounds and 0 assists in 8 games for the Connecticut Sun in 2024.",
+      "href": "/data/wnba/players/caitlin-bickle.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2024 regular season is the only regular-season line for Caitlin Bickle in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/caitlin-bickle.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "joslyn-tinkle": [
+    {
+      "text": "Joslyn Tinkle scored 0 points, 3 rebounds and 0 assists in 6 games for the Seattle Storm in 2013.",
+      "href": "/data/wnba/players/joslyn-tinkle.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2013 regular season is the only regular-season line for Joslyn Tinkle in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/joslyn-tinkle.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "peyton-williams": [
+    {
+      "text": "Peyton Williams scored 0 points, 0 rebounds and 2 assists in 1 game for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/peyton-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Peyton Williams in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/peyton-williams.json",
+      "label": "Full Court Buckets season log"
+    }
   ]
 }
