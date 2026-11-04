@@ -508,6 +508,17 @@ def finals_answer(payload: dict) -> str:
     rows = {row['season']: row for row in core.number_rows(core.league_rows(payload), 'finals_avg_viewers')}
     year_2025 = rows.get(2025)
     year_2024 = rows.get(2024)
+    year_2026 = rows.get(2026)
+    if (
+        year_2026 and year_2026.get('finals_avg_viewers') == 1_880_000 and year_2026.get('finals_games') == 7
+        and year_2025 and year_2025.get('finals_avg_viewers') == 1_500_000 and year_2025.get('finals_games') == 4
+        and year_2024 and year_2024.get('finals_avg_viewers') == 1_600_000
+    ):
+        return (
+            'The 2026 Finals averaged 1.88 million viewers across seven games, the most since 1999. '
+            'The 2024 Finals averaged 1.6 million viewers. '
+            'The 2025 Finals averaged 1.5 million viewers across four games.'
+        )
     if (
         year_2025 and year_2025.get('finals_avg_viewers') == 1_500_000 and year_2025.get('finals_games') == 4
         and year_2024 and year_2024.get('finals_avg_viewers') == 1_600_000
@@ -1284,10 +1295,18 @@ def _team_side_notes(payload: dict, sources: list) -> str:
 def finals_measurement(row: dict) -> str:
     season = row.get('season')
     games = row.get('finals_games')
+    if season == 2026:
+        return (
+            f'{games} games. Total Audience Delivery (Nielsen Big Data + Panel and Adobe Analytics). '
+            'Most-watched Finals since 1999, up 30 percent from 2025.'
+        )
     if season == 2025:
         return f'{games} games. Nielsen Big Data + Panel.'
     if season == 2024:
-        return f'{games} games. 1.57 million before rounding, the most-watched Finals since 1999.'
+        return (
+            f'{games} games. 1.57 million before rounding. '
+            'The 2024 release called this the most-watched Finals since 1999.'
+        )
     if games:
         return f'{games} games.'
     return ''
@@ -1302,7 +1321,11 @@ def finals_section(payload: dict) -> str:
         games = row.get('finals_games')
         sub = f'{games} games' if core.is_number(games) else ''
         points.append((str(row['season']), row['finals_avg_viewers'], sub))
+    has_2026 = any(row.get('season') == 2026 and row.get('finals_avg_viewers') == 1_880_000 for row in rows)
     alt = (
+        'Reported average WNBA Finals audience: 1.88 million in 2026, 1.6 million in 2024 and 1.5 million in 2025. '
+        'The series had seven, five and four games, respectively; measurement methods differ.'
+        if has_2026 else
         'Reported average WNBA Finals audience: 1.6 million in 2024 and 1.5 million in 2025. '
         'The series had five and four games, respectively; measurement methods differ.'
     )
@@ -1332,7 +1355,10 @@ def finals_section(payload: dict) -> str:
         '<section class="qa" id="finals">'
         '<h2>How many people watched the WNBA Finals?</h2>'
         f'<p class="answer">{core.link_teams(finals_answer(payload))}</p>'
-        + (f'<p class="note">{series_line(payload)}{core.esc(payload["finals_intro"])} 2026 Finals audiences are not on this chart; they are in the tracker below.</p>'
+        + (f'<p class="note">{series_line(payload)}{core.esc(payload["finals_intro"])} '
+           + ('The 2026 bar is the official series average. Game-by-game audiences are in the tracker below.</p>'
+              if has_2026 else
+              '2026 Finals audiences are not on this chart; they are in the tracker below.</p>')
            if payload.get('finals_intro') else
            '<p class="note">2026 Finals audiences are not on this chart. Unreported games stay in the tracker below.</p>')
         +         f'{chart_figure(svg, "finals-history.png")}'
@@ -1340,7 +1366,11 @@ def finals_section(payload: dict) -> str:
             ['Year', 'Matchup', 'Games', 'Average viewers', 'Network', 'Measurement', 'Source'],
             body,
             'WNBA Finals viewership by year',
-            caption='Completed Finals series. 2024 had five games and 2025 had four.',
+            caption=(
+                'Completed Finals series. 2026 had seven games, 2024 had five and 2025 had four.'
+                if has_2026 else
+                'Completed Finals series. 2024 had five games and 2025 had four.'
+            ),
             numeric={2, 3},
             mark_latest=True,
         )
@@ -1438,11 +1468,33 @@ def tracker_block(payload: dict) -> str:
             numeric={4},
         )
         + f'<p class="note">{core.esc(note)}</p>'
+        + f'<p class="note">{core.esc(finals_methods_note())}</p>'
         + '<p class="note">The game-by-game ratings hub, with peak audience and a CSV, is the '
         '<a href="/news/2026-wnba-finals-ratings-tracker/">2026 WNBA Finals ratings tracker</a>. '
         'Season-long context is in the '
         '<a href="/news/wnba-finals-2026-audience-growth-dream-valkyries/">Finals audience story</a>.</p>'
         + core.sources_line(sources)
+    )
+
+
+def finals_methods_note() -> str:
+    """Sources for the 2026 Finals rows. Sits under the game table, not above it."""
+    return (
+        'Methods: the series average and the postseason average are the WNBA release of Nov. 4, 2026 '
+        '(https://www.wnba.com/news/2026-wnba-finals-most-watched-since-1999), '
+        'Total Audience Delivery, Nielsen Big Data + Panel and Adobe Analytics. '
+        'Game 5 is 1.43 million from that release. Its network label stays USA Network, CNBC and Peacock. '
+        'Game 6\'s final average is 1.49 million from Sports Media Watch, Nov. 3, 2026 '
+        '(https://www.sportsmediawatch.com/2026/11/wnba-finals-game-7-viewership-among-most-watched-games/). '
+        'Its network label stays USA Network, E!, and SYFY, plus streaming led by Peacock. '
+        'USA Sports on Oct. 31, 2026 reported 1.5 million for that live window, up 4% vs. last year\'s '
+        'series-clinching game, on Nielsen panel-only data and digital data from Adobe Analytics, '
+        'and 1.7 million including the 8 p.m. ET encore '
+        '(https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-15-million-viewers-valkyries-dream-game-6-thursday). '
+        'The 1.49 million does not include the encore. '
+        'Game 7\'s table cell is 3.3 million from USA Sports, Nov. 3, 2026. '
+        'Sports Media Watch reports that audience at 3.28 million, the most-watched WNBA playoff game on record '
+        'and a cable record. The USA Network postgame show averaged 1.0 million and is a separate metric.'
     )
 
 
@@ -2161,7 +2213,11 @@ def write_downloads(directory: Path, payload: dict) -> None:
             'WNBA Finals average audience',
             [(str(row['season']), row['finals_avg_viewers'], f"{row.get('finals_games') or ''} games") for row in finals],
             unit='Average viewers',
-            note='Game counts and measurement differ. 2026 is not plotted.',
+            note=(
+                'Game counts and measurement differ. 2026 is the official series average.'
+                if any(row.get('season') == 2026 and row.get('finals_avg_viewers') == 1_880_000 for row in finals)
+                else 'Game counts and measurement differ. 2026 is not plotted.'
+            ),
         )
     ranking = complete_team_rank(payload)
     if ranking:
