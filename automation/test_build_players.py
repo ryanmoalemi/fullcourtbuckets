@@ -1036,9 +1036,14 @@ class BuildTests(unittest.TestCase):
         other = copy.deepcopy(split['season_stats'][0])
         other['team'] = {'id': 2, 'full_name': 'Other Team'}
         other['pts'] = 99
+        other['games_played'] = 1
         split['season_stats'].append(other)
         combined = b.answer_summary(split)
-        self.assertNotIn('averaged', combined)
+        # 123 points in 10 games plus 99 in 1 game is 222 points in 11 games, 20.2 a game.
+        # The mean of the two averages would be 55.7. The sentence uses the counting totals.
+        self.assertIn('averaged 20.2 points', combined)
+        self.assertIn('in 11 games with the Example Team and the Other Team', combined)
+        self.assertNotIn('55.7', combined)
         self.assertNotIn('99', combined)
         page = b.profile_page(P)
         self.assertIn('</h1><p class="answer-summary">', page)
