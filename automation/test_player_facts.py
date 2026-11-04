@@ -12,7 +12,7 @@ class PlayerFactTests(unittest.TestCase):
     def test_thin_active_notes_are_sourced_and_sit_below_the_table(self):
         data = json.loads((ROOT / 'data/wnba/player-facts.json').read_text(encoding='utf-8'))
         slugs = [key for key in data if not key.startswith('_')]
-        self.assertEqual(len(slugs), 20)
+        self.assertGreaterEqual(len(slugs), 70)
         seen = {}
         for slug in slugs:
             rows = players.player_facts(ROOT, slug)

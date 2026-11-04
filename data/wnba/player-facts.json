@@ -274,5 +274,835 @@
       "href": "/data/wnba/players/taniya-latson.json",
       "label": "Full Court Buckets season log"
     }
+  ],
+  "caitlin-clark": [
+    {
+      "text": "Caitlin Clark has 1874 points, 450 rebounds and 785 assists in 93 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/caitlin-clark.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Caitlin Clark has regular-season lines with the Indiana Fever.",
+      "href": "/data/wnba/players/caitlin-clark.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Caitlin Clark's highest point total in one regular-season line is 891 points in 40 games for the Indiana Fever in 2026.",
+      "href": "/data/wnba/players/caitlin-clark.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "angel-reese": [
+    {
+      "text": "Angel Reese has 1607 points, 1344 rebounds and 293 assists in 107 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/angel-reese.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Angel Reese has regular-season lines with the Chicago Sky and Atlanta Dream.",
+      "href": "/data/wnba/players/angel-reese.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Angel Reese's highest point total in one regular-season line is 705 points in 43 games for the Atlanta Dream in 2026.",
+      "href": "/data/wnba/players/angel-reese.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sophie-cunningham": [
+    {
+      "text": "Sophie Cunningham has 2004 points, 697 rebounds and 350 assists in 255 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sophie-cunningham.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sophie Cunningham has regular-season lines with the Phoenix Mercury and Indiana Fever.",
+      "href": "/data/wnba/players/sophie-cunningham.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sophie Cunningham's highest point total in one regular-season line is 352 points in 28 games for the Phoenix Mercury in 2022.",
+      "href": "/data/wnba/players/sophie-cunningham.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "paige-bueckers": [
+    {
+      "text": "Paige Bueckers has 1570 points, 316 rebounds and 441 assists in 78 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/paige-bueckers.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Paige Bueckers has regular-season lines with the Dallas Wings.",
+      "href": "/data/wnba/players/paige-bueckers.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Paige Bueckers's highest point total in one regular-season line is 878 points in 42 games for the Dallas Wings in 2026.",
+      "href": "/data/wnba/players/paige-bueckers.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lauren-betts": [
+    {
+      "text": "Lauren Betts scored 283 points, 203 rebounds and 51 assists in 44 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/lauren-betts.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Lauren Betts in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lauren-betts.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "aja-wilson": [
+    {
+      "text": "A'ja Wilson has 6792 points, 2878 rebounds and 745 assists in 308 games across 9 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aja-wilson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "A'ja Wilson has regular-season lines with the Las Vegas Aces.",
+      "href": "/data/wnba/players/aja-wilson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "A'ja Wilson's highest point total in one regular-season line is 1073 points in 41 games for the Las Vegas Aces in 2026.",
+      "href": "/data/wnba/players/aja-wilson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "azzi-fudd": [
+    {
+      "text": "Azzi Fudd scored 393 points, 52 rebounds and 55 assists in 30 games for the Dallas Wings in 2026.",
+      "href": "/data/wnba/players/azzi-fudd.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Azzi Fudd in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/azzi-fudd.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jackie-young": [
+    {
+      "text": "Jackie Young has 4226 points, 1191 rebounds and 1322 assists in 286 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jackie-young.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jackie Young has regular-season lines with the Las Vegas Aces.",
+      "href": "/data/wnba/players/jackie-young.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jackie Young's highest point total in one regular-season line is 814 points in 43 games for the Las Vegas Aces in 2026.",
+      "href": "/data/wnba/players/jackie-young.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "brittney-griner": [
+    {
+      "text": "Brittney Griner has 6190 points, 2630 rebounds and 675 assists in 372 games across 13 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/brittney-griner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brittney Griner has regular-season lines with the Phoenix Mercury, Atlanta Dream and Connecticut Sun.",
+      "href": "/data/wnba/players/brittney-griner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Brittney Griner's highest point total in one regular-season line is 697 points in 34 games for the Phoenix Mercury in 2018.",
+      "href": "/data/wnba/players/brittney-griner.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "olivia-miles": [
+    {
+      "text": "Olivia Miles scored 790 points, 186 rebounds and 239 assists in 40 games for the Minnesota Lynx in 2026.",
+      "href": "/data/wnba/players/olivia-miles.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Olivia Miles in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/olivia-miles.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kelsey-mitchell": [
+    {
+      "text": "Kelsey Mitchell has 5899 points, 623 rebounds and 920 assists in 321 games across 9 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kelsey-mitchell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kelsey Mitchell has regular-season lines with the Indiana Fever.",
+      "href": "/data/wnba/players/kelsey-mitchell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kelsey Mitchell's highest point total in one regular-season line is 1086 points in 44 games for the Indiana Fever in 2026.",
+      "href": "/data/wnba/players/kelsey-mitchell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "cameron-brink": [
+    {
+      "text": "Cameron Brink has 505 points, 317 rebounds and 81 assists in 65 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/cameron-brink.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Cameron Brink has regular-season lines with the Los Angeles Sparks.",
+      "href": "/data/wnba/players/cameron-brink.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Cameron Brink's highest point total in one regular-season line is 296 points in 31 games for the Los Angeles Sparks in 2026.",
+      "href": "/data/wnba/players/cameron-brink.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sabrina-ionescu": [
+    {
+      "text": "Sabrina Ionescu has 3482 points, 1111 rebounds and 1213 assists in 212 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sabrina-ionescu.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sabrina Ionescu has regular-season lines with the New York Liberty.",
+      "href": "/data/wnba/players/sabrina-ionescu.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sabrina Ionescu's highest point total in one regular-season line is 693 points in 38 games for the New York Liberty in 2025.",
+      "href": "/data/wnba/players/sabrina-ionescu.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "alyssa-thomas": [
+    {
+      "text": "Alyssa Thomas has 5087 points, 3068 rebounds and 2178 assists in 400 games across 13 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/alyssa-thomas.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Alyssa Thomas has regular-season lines with the Connecticut Sun and Phoenix Mercury.",
+      "href": "/data/wnba/players/alyssa-thomas.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Alyssa Thomas's highest point total in one regular-season line is 619 points in 40 games for the Connecticut Sun in 2023.",
+      "href": "/data/wnba/players/alyssa-thomas.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "napheesa-collier": [
+    {
+      "text": "Napheesa Collier has 3811 points, 1620 rebounds and 612 assists in 209 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/napheesa-collier.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Napheesa Collier has regular-season lines with the Minnesota Lynx.",
+      "href": "/data/wnba/players/napheesa-collier.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Napheesa Collier's highest point total in one regular-season line is 796 points in 37 games for the Minnesota Lynx in 2023.",
+      "href": "/data/wnba/players/napheesa-collier.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "breanna-stewart": [
+    {
+      "text": "Breanna Stewart has 6860 points, 2822 rebounds and 1064 assists in 334 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/breanna-stewart.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Breanna Stewart has regular-season lines with the Seattle Storm and New York Liberty.",
+      "href": "/data/wnba/players/breanna-stewart.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Breanna Stewart's highest point total in one regular-season line is 919 points in 40 games for the New York Liberty in 2023.",
+      "href": "/data/wnba/players/breanna-stewart.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kelsey-plum": [
+    {
+      "text": "Kelsey Plum has 4573 points, 750 rebounds and 1284 assists in 295 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kelsey-plum.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kelsey Plum has regular-season lines with the San Antonio Stars, Las Vegas Aces, Los Angeles Sparks and Phoenix Mercury.",
+      "href": "/data/wnba/players/kelsey-plum.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kelsey Plum's highest point total in one regular-season line is 839 points in 43 games for the Los Angeles Sparks in 2025.",
+      "href": "/data/wnba/players/kelsey-plum.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "courtney-williams": [
+    {
+      "text": "Courtney Williams has 4654 points, 1953 rebounds and 1553 assists in 376 games across 12 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/courtney-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Courtney Williams has regular-season lines with the Connecticut Sun, Phoenix Mercury, Atlanta Dream, Chicago Sky and Minnesota Lynx.",
+      "href": "/data/wnba/players/courtney-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Courtney Williams's highest point total in one regular-season line is 599 points in 44 games for the Minnesota Lynx in 2025.",
+      "href": "/data/wnba/players/courtney-williams.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "gabby-williams": [
+    {
+      "text": "Gabby Williams has 2150 points, 886 rebounds and 633 assists in 230 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/gabby-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Gabby Williams has regular-season lines with the Chicago Sky, Seattle Storm and Golden State Valkyries.",
+      "href": "/data/wnba/players/gabby-williams.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Gabby Williams's highest point total in one regular-season line is 560 points in 39 games for the Golden State Valkyries in 2026.",
+      "href": "/data/wnba/players/gabby-williams.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "aliyah-boston": [
+    {
+      "text": "Aliyah Boston has 2443 points, 1369 rebounds and 497 assists in 164 games across 4 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/aliyah-boston.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aliyah Boston has regular-season lines with the Indiana Fever.",
+      "href": "/data/wnba/players/aliyah-boston.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Aliyah Boston's highest point total in one regular-season line is 660 points in 44 games for the Indiana Fever in 2025.",
+      "href": "/data/wnba/players/aliyah-boston.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "lexie-hull": [
+    {
+      "text": "Lexie Hull has 970 points, 528 rebounds and 195 assists in 178 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/lexie-hull.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lexie Hull has regular-season lines with the Indiana Fever.",
+      "href": "/data/wnba/players/lexie-hull.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Lexie Hull's highest point total in one regular-season line is 317 points in 44 games for the Indiana Fever in 2025.",
+      "href": "/data/wnba/players/lexie-hull.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "marina-mabrey": [
+    {
+      "text": "Marina Mabrey has 3533 points, 916 rebounds and 853 assists in 261 games across 9 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/marina-mabrey.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Marina Mabrey has regular-season lines with the Los Angeles Sparks, Dallas Wings, Chicago Sky, Connecticut Sun and Toronto Tempo.",
+      "href": "/data/wnba/players/marina-mabrey.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Marina Mabrey's highest point total in one regular-season line is 667 points in 32 games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/marina-mabrey.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "chelsea-gray": [
+    {
+      "text": "Chelsea Gray has 4926 points, 1329 rebounds and 2156 assists in 412 games across 12 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/chelsea-gray.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Chelsea Gray has regular-season lines with the Connecticut Sun, Los Angeles Sparks and Las Vegas Aces.",
+      "href": "/data/wnba/players/chelsea-gray.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Chelsea Gray's highest point total in one regular-season line is 610 points in 40 games for the Las Vegas Aces in 2023.",
+      "href": "/data/wnba/players/chelsea-gray.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "dewanna-bonner": [
+    {
+      "text": "DeWanna Bonner has 8242 points, 3457 rebounds and 1241 assists in 577 games across 18 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/dewanna-bonner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "DeWanna Bonner has regular-season lines with the Phoenix Mercury, Connecticut Sun, Indiana Fever and Atlanta Dream.",
+      "href": "/data/wnba/players/dewanna-bonner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "DeWanna Bonner's highest point total in one regular-season line is 697 points in 40 games for the Connecticut Sun in 2023.",
+      "href": "/data/wnba/players/dewanna-bonner.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "shakira-austin": [
+    {
+      "text": "Shakira Austin has 1854 points, 1097 rebounds and 240 assists in 148 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/shakira-austin.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Shakira Austin has regular-season lines with the Washington Mystics.",
+      "href": "/data/wnba/players/shakira-austin.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Shakira Austin's highest point total in one regular-season line is 729 points in 43 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/shakira-austin.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "allisha-gray": [
+    {
+      "text": "Allisha Gray has 4994 points, 1499 rebounds and 846 assists in 344 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/allisha-gray.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Allisha Gray has regular-season lines with the Dallas Wings and Atlanta Dream.",
+      "href": "/data/wnba/players/allisha-gray.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Allisha Gray's highest point total in one regular-season line is 837 points in 44 games for the Atlanta Dream in 2026.",
+      "href": "/data/wnba/players/allisha-gray.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "hailey-van-lith": [
+    {
+      "text": "Hailey Van Lith has 223 points, 66 rebounds and 91 assists in 51 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/hailey-van-lith.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Hailey Van Lith has regular-season lines with the Chicago Sky and Connecticut Sun.",
+      "href": "/data/wnba/players/hailey-van-lith.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Hailey Van Lith's highest point total in one regular-season line is 121 points in 22 games for the Connecticut Sun in 2026.",
+      "href": "/data/wnba/players/hailey-van-lith.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "veronica-burton": [
+    {
+      "text": "Veronica Burton has 1345 points, 519 rebounds and 731 assists in 195 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/veronica-burton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Veronica Burton has regular-season lines with the Dallas Wings, Connecticut Sun and Golden State Valkyries.",
+      "href": "/data/wnba/players/veronica-burton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Veronica Burton's highest point total in one regular-season line is 536 points in 44 games for the Golden State Valkyries in 2026.",
+      "href": "/data/wnba/players/veronica-burton.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sonia-citron": [
+    {
+      "text": "Sonia Citron has 1328 points, 325 rebounds and 281 assists in 84 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/sonia-citron.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sonia Citron has regular-season lines with the Washington Mystics.",
+      "href": "/data/wnba/players/sonia-citron.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Sonia Citron's highest point total in one regular-season line is 671 points in 40 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/sonia-citron.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kayla-mcbride": [
+    {
+      "text": "Kayla McBride has 6164 points, 1313 rebounds and 1039 assists in 418 games across 13 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kayla-mcbride.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kayla McBride has regular-season lines with the San Antonio Stars, Las Vegas Aces and Minnesota Lynx.",
+      "href": "/data/wnba/players/kayla-mcbride.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kayla McBride's highest point total in one regular-season line is 775 points in 44 games for the Minnesota Lynx in 2026.",
+      "href": "/data/wnba/players/kayla-mcbride.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "rhyne-howard": [
+    {
+      "text": "Rhyne Howard has 3092 points, 790 rebounds and 640 assists in 179 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/rhyne-howard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rhyne Howard has regular-season lines with the Atlanta Dream.",
+      "href": "/data/wnba/players/rhyne-howard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rhyne Howard's highest point total in one regular-season line is 763 points in 43 games for the Atlanta Dream in 2026.",
+      "href": "/data/wnba/players/rhyne-howard.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jonquel-jones": [
+    {
+      "text": "Jonquel Jones has 4711 points, 2960 rebounds and 709 assists in 349 games across 10 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jonquel-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jonquel Jones has regular-season lines with the Connecticut Sun and New York Liberty.",
+      "href": "/data/wnba/players/jonquel-jones.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jonquel Jones's highest point total in one regular-season line is 625 points in 43 games for the New York Liberty in 2026.",
+      "href": "/data/wnba/players/jonquel-jones.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "nneka-ogwumike": [
+    {
+      "text": "Nneka Ogwumike has 8049 points, 3659 rebounds and 1029 assists in 479 games across 15 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/nneka-ogwumike.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Nneka Ogwumike has regular-season lines with the Los Angeles Sparks and Seattle Storm.",
+      "href": "/data/wnba/players/nneka-ogwumike.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Nneka Ogwumike's highest point total in one regular-season line is 803 points in 44 games for the Seattle Storm in 2025.",
+      "href": "/data/wnba/players/nneka-ogwumike.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "arike-ogunbowale": [
+    {
+      "text": "Arike Ogunbowale has 5136 points, 856 rebounds and 1034 assists in 268 games across 8 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/arike-ogunbowale.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Arike Ogunbowale has regular-season lines with the Dallas Wings.",
+      "href": "/data/wnba/players/arike-ogunbowale.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Arike Ogunbowale's highest point total in one regular-season line is 849 points in 40 games for the Dallas Wings in 2023.",
+      "href": "/data/wnba/players/arike-ogunbowale.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kamilla-cardoso": [
+    {
+      "text": "Kamilla Cardoso has 1487 points, 966 rebounds and 258 assists in 115 games across 3 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kamilla-cardoso.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kamilla Cardoso has regular-season lines with the Chicago Sky.",
+      "href": "/data/wnba/players/kamilla-cardoso.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kamilla Cardoso's highest point total in one regular-season line is 631 points in 43 games for the Chicago Sky in 2026.",
+      "href": "/data/wnba/players/kamilla-cardoso.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "jessica-shepard": [
+    {
+      "text": "Jessica Shepard has 1462 points, 1279 rebounds and 559 assists in 167 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/jessica-shepard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jessica Shepard has regular-season lines with the Minnesota Lynx and Dallas Wings.",
+      "href": "/data/wnba/players/jessica-shepard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Jessica Shepard's highest point total in one regular-season line is 608 points in 42 games for the Dallas Wings in 2026.",
+      "href": "/data/wnba/players/jessica-shepard.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kahleah-copper": [
+    {
+      "text": "Kahleah Copper has 4942 points, 1287 rebounds and 538 assists in 359 games across 11 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kahleah-copper.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kahleah Copper has regular-season lines with the Washington Mystics, Chicago Sky and Phoenix Mercury.",
+      "href": "/data/wnba/players/kahleah-copper.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kahleah Copper's highest point total in one regular-season line is 859 points in 40 games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/kahleah-copper.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "natasha-howard": [
+    {
+      "text": "Natasha Howard has 5020 points, 2509 rebounds and 706 assists in 424 games across 13 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/natasha-howard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Natasha Howard has regular-season lines with the Indiana Fever, Minnesota Lynx, Seattle Storm, New York Liberty and Dallas Wings.",
+      "href": "/data/wnba/players/natasha-howard.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Natasha Howard's highest point total in one regular-season line is 651 points in 44 games for the Minnesota Lynx in 2026.",
+      "href": "/data/wnba/players/natasha-howard.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "rae-burrell": [
+    {
+      "text": "Rae Burrell has 1167 points, 273 rebounds and 202 assists in 140 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/rae-burrell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rae Burrell has regular-season lines with the Los Angeles Sparks.",
+      "href": "/data/wnba/players/rae-burrell.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Rae Burrell's highest point total in one regular-season line is 626 points in 43 games for the Los Angeles Sparks in 2026.",
+      "href": "/data/wnba/players/rae-burrell.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kiki-iriafen": [
+    {
+      "text": "Kiki Iriafen has 1210 points, 770 rebounds and 131 assists in 85 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kiki-iriafen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kiki Iriafen has regular-season lines with the Washington Mystics.",
+      "href": "/data/wnba/players/kiki-iriafen.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Kiki Iriafen's highest point total in one regular-season line is 626 points in 41 games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/kiki-iriafen.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "skylar-diggins": [
+    {
+      "text": "Skylar Diggins has 5758 points, 1014 rebounds and 1860 assists in 354 games across 12 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/skylar-diggins.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Skylar Diggins has regular-season lines with the Tulsa Shock, Dallas Wings, Phoenix Mercury, Seattle Storm and Chicago Sky.",
+      "href": "/data/wnba/players/skylar-diggins.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Skylar Diggins's highest point total in one regular-season line is 683 points in 34 games for the Tulsa Shock in 2014.",
+      "href": "/data/wnba/players/skylar-diggins.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "dearica-hamby": [
+    {
+      "text": "Dearica Hamby has 4697 points, 2609 rebounds and 788 assists in 408 games across 12 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/dearica-hamby.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dearica Hamby has regular-season lines with the San Antonio Stars, Las Vegas Aces and Los Angeles Sparks.",
+      "href": "/data/wnba/players/dearica-hamby.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dearica Hamby's highest point total in one regular-season line is 811 points in 44 games for the Los Angeles Sparks in 2025.",
+      "href": "/data/wnba/players/dearica-hamby.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "dijonai-carrington": [
+    {
+      "text": "DiJonai Carrington has 1473 points, 605 rebounds and 207 assists in 173 games across 6 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/dijonai-carrington.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "DiJonai Carrington has regular-season lines with the Connecticut Sun, Dallas Wings, Minnesota Lynx and Chicago Sky.",
+      "href": "/data/wnba/players/dijonai-carrington.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "DiJonai Carrington's highest point total in one regular-season line is 496 points in 39 games for the Connecticut Sun in 2024.",
+      "href": "/data/wnba/players/dijonai-carrington.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "bridget-carleton": [
+    {
+      "text": "Bridget Carleton has 1821 points, 805 rebounds and 437 assists in 259 games across 9 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/bridget-carleton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Bridget Carleton has regular-season lines with the Connecticut Sun, Minnesota Lynx and Portland Fire.",
+      "href": "/data/wnba/players/bridget-carleton.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Bridget Carleton's highest point total in one regular-season line is 583 points in 40 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/bridget-carleton.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "dominique-malonga": [
+    {
+      "text": "Dominique Malonga has 923 points, 502 rebounds and 94 assists in 77 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/dominique-malonga.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dominique Malonga has regular-season lines with the Seattle Storm.",
+      "href": "/data/wnba/players/dominique-malonga.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Dominique Malonga's highest point total in one regular-season line is 600 points in 35 games for the Seattle Storm in 2026.",
+      "href": "/data/wnba/players/dominique-malonga.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "kiki-rice": [
+    {
+      "text": "Kiki Rice scored 375 points, 104 rebounds and 98 assists in 28 games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/kiki-rice.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The 2026 regular season is the only regular-season line for Kiki Rice in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/kiki-rice.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "natasha-cloud": [
+    {
+      "text": "Natasha Cloud has 3307 points, 1216 rebounds and 1927 assists in 367 games across 11 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/natasha-cloud.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Natasha Cloud has regular-season lines with the Washington Mystics, Phoenix Mercury, New York Liberty and Chicago Sky.",
+      "href": "/data/wnba/players/natasha-cloud.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Natasha Cloud's highest point total in one regular-season line is 469 points in 37 games for the Washington Mystics in 2023.",
+      "href": "/data/wnba/players/natasha-cloud.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "nalyssa-smith": [
+    {
+      "text": "NaLyssa Smith has 2120 points, 1298 rebounds and 197 assists in 186 games across 5 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/nalyssa-smith.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "NaLyssa Smith has regular-season lines with the Indiana Fever, Dallas Wings and Las Vegas Aces.",
+      "href": "/data/wnba/players/nalyssa-smith.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "NaLyssa Smith's highest point total in one regular-season line is 479 points in 31 games for the Indiana Fever in 2023.",
+      "href": "/data/wnba/players/nalyssa-smith.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "carla-leite": [
+    {
+      "text": "Carla Leite has 894 points, 132 rebounds and 320 assists in 76 games across 2 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/carla-leite.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Carla Leite has regular-season lines with the Golden State Valkyries and Portland Fire.",
+      "href": "/data/wnba/players/carla-leite.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Carla Leite's highest point total in one regular-season line is 626 points in 39 games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/carla-leite.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "satou-sabally": [
+    {
+      "text": "Satou Sabally has 2295 points, 948 rebounds and 476 assists in 149 games across 7 regular-season lines in the Full Court Buckets season log.",
+      "href": "/data/wnba/players/satou-sabally.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Satou Sabally has regular-season lines with the Dallas Wings, Phoenix Mercury and New York Liberty.",
+      "href": "/data/wnba/players/satou-sabally.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "Satou Sabally's highest point total in one regular-season line is 707 points in 38 games for the Dallas Wings in 2023.",
+      "href": "/data/wnba/players/satou-sabally.json",
+      "label": "Full Court Buckets season log"
+    }
   ]
 }
