@@ -216,8 +216,8 @@
     "description": "Ranked 2025 WNBA team revenue for all 13 Forbes clubs, from Golden State at $78 million to Atlanta at $16 million. The combined total is $430 million."
   },
   "/wnba/where-to-watch/": {
-    "title": "Where to watch the 2026 WNBA Finals: bars showing games",
-    "description": "251 bars and restaurants in 74 U.S. and Canadian cities that show WNBA games, from team watch-party lists, venue pages and confirmations. Search by city."
+    "title": "Where to watch WNBA games: bars by city guide",
+    "description": "{wtw_venues} bars in {wtw_cities} U.S. and Canadian cities that show WNBA games, from team watch-party lists, venue pages and staff replies. Search by city."
   },
   "/news/valkyries-dream-finals-game-4-recap/": {
     "title": "Valkyries beat Dream 67-62 to tie the WNBA Finals 2-2",

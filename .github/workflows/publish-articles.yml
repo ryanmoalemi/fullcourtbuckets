@@ -25,6 +25,8 @@ jobs:
         run: |
           python automation/publish_articles.py
           python automation/seo_meta.py
+          # Same guard as the data refresh: do not stamp a stale where-to-watch title.
+          FCB_NO_LOGO_FETCH=1 python automation/build_where_to_watch.py
           python automation/breadcrumbs.py
           python automation/dynamic_sections.py
       - name: Social share images and og/twitter tags
@@ -35,7 +37,7 @@ jobs:
         working-directory: automation
         env:
           PYTHONDONTWRITEBYTECODE: '1'
-        run: python -m unittest test_article_data_notes test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta test_article_rules test_seo_completeness test_dynamic_sections -q
+        run: python -m unittest test_article_data_notes test_editorial_style test_image_focal test_news_lead test_team_coverage test_publish_tables test_seo_meta test_where_to_watch_count test_article_rules test_seo_completeness test_dynamic_sections -q
       - name: Commit generated pages
         run: |
           git add -A -- . ':!**/__pycache__'

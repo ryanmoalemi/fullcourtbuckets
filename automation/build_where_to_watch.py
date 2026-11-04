@@ -409,6 +409,22 @@ def jsonld(s: dict) -> str:
     return '<script type="application/ld+json">' + json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False) + '</script>'
 
 
+def refuse_venue_drop(current: int, new: int, *, what: str = 'where-to-watch venue count') -> None:
+    """Do not publish a shorter bar list over the page that is already on the site.
+
+    The data refresh used to stamp a frozen 251-venue description on top of the
+    current directory. A real removal sets WTW_ALLOW_DROP=1.
+    """
+    if _os.environ.get('WTW_ALLOW_DROP') == '1':
+        return
+    if current and new < current:
+        raise SystemExit(
+            f'{what} would drop from {current} to {new}. '
+            'Refusing to publish the shorter list. '
+            'Set WTW_ALLOW_DROP=1 to remove venues on purpose.'
+        )
+
+
 def write_og_image(s: dict) -> None:
     """1200x630 JPEG share card (X does not reliably render WebP cards)."""
     from PIL import Image, ImageDraw, ImageFont
@@ -433,7 +449,12 @@ def write_og_image(s: dict) -> None:
     d.text((70, 448), 'Search by city. Check before you go.', font=med(32), fill='#5d5952')
     d.text((70, 540), 'fullcourtbuckets.com/wnba/where-to-watch', font=bold(28), fill='#9a5200')
     PAGE_DIR.mkdir(parents=True, exist_ok=True)
-    img.save(PAGE_DIR / OG_NAME, 'JPEG', quality=88, optimize=True, progressive=True)
+    buf = io.BytesIO()
+    img.save(buf, 'JPEG', quality=88, optimize=True, progressive=True)
+    data = buf.getvalue()
+    dest = PAGE_DIR / OG_NAME
+    if not dest.is_file() or dest.read_bytes() != data:
+        dest.write_bytes(data)
 
 
 def shell_parts(s: dict) -> tuple[str, str, str]:
@@ -595,6 +616,9 @@ def fill_missing_logos() -> None:
 def main() -> None:
     fill_missing_logos()
     rows = load()
+    if PAGE_PATH.is_file():
+        current = PAGE_PATH.read_text(encoding='utf-8').count('class="ww-row"')
+        refuse_venue_drop(current, len(rows))
     write_data(rows)
     write_if_changed(PAGE_PATH, render(rows))
     write_og_image(stats(rows))

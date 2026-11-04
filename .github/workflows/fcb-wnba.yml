@@ -109,7 +109,8 @@ jobs:
           (cd automation && python -m unittest -v \
             test_build_players test_wnba_sync test_playoff_boxes test_rollout_player_design \
             test_game_stats test_game_data test_player_hub test_season_teams \
-            test_no_espn_game_stats test_no_api_hrefs test_portraits)
+            test_no_espn_game_stats test_no_api_hrefs test_portraits \
+            test_where_to_watch_count)
           node --check automation/players.js
       - name: Site-wide page tests (reported, never block player stats)
         # Unrelated site tests (nav, SEO meta, ticker, search index...) used to stop the whole
@@ -166,7 +167,10 @@ jobs:
       - name: Social share images and og/twitter tags on every page
         run: |
           # Unique, in-range titles and meta descriptions on every page (data/seo-meta.json + family rules).
+          # Where to watch takes its title and description from data/where-to-watch-bars.csv.
+          # seo_meta.py and the page builder both stop if that file has fewer venues than the page.
           python automation/seo_meta.py
+          FCB_NO_LOGO_FETCH=1 python automation/build_where_to_watch.py
           # Visible breadcrumbs above the H1 + BreadcrumbList JSON-LD + homepage H1 (owner SEO rule).
           python automation/breadcrumbs.py
           # Fill every data-fcb-dynamic section (series status, Finals schedule) from data/games
