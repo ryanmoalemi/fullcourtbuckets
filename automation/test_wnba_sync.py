@@ -233,6 +233,51 @@ class Tests(unittest.TestCase):
         self.assertEqual(stored["college"], "Iowa")
         self.assertEqual(stored["height"], "6' 0\"")
 
+    def test_official_bio_replaces_provider_height_college_and_position(self):
+        stored = s.player({**P, "position": "F", "position_abbreviation": "F",
+                           "height": "6' 1\"", "college": "Florida"})
+        fixed = s.apply_official_bio(stored, {
+            "height": "6' 2\"", "college": "Germany",
+            "position": "G", "position_abbreviation": "G",
+            "note": "checked on WNBA.com",
+        })
+        self.assertEqual(fixed["height"], "6' 2\"")
+        self.assertEqual(fixed["college"], "Germany")
+        self.assertEqual(fixed["position"], "G")
+        self.assertEqual(fixed["position_abbreviation"], "G")
+        self.assertEqual(stored["college"], "Florida")
+        with self.assertRaises(s.SyncError):
+            s.apply_official_bio(stored, {"height": "6-2"})
+        with self.assertRaises(s.SyncError):
+            s.apply_official_bio(stored, {"college": "--"})
+
+    def test_checked_bios_match_known_players_and_survive_sync(self):
+        root = Path(__file__).resolve().parents[1]
+        official = json.loads((root / "data" / "wnba" / "official-bio.json").read_text())
+        known = set(json.loads((root / "data" / "wnba" / "id-map.json").read_text()).values())
+        self.assertEqual(set(official["players"]), {"frieda-buhner", "antonia-delaere"})
+        self.assertTrue(set(official["players"]) <= known)
+        buhner = json.loads((root / "data" / "wnba" / "players" / "frieda-buhner.json").read_text())
+        delaere = json.loads((root / "data" / "wnba" / "players" / "antonia-delaere.json").read_text())
+        self.assertEqual(buhner["player"]["height"], "6' 2\"")
+        self.assertEqual(buhner["player"]["college"], "Germany")
+        self.assertEqual(delaere["player"]["position"], "G")
+        self.assertEqual(delaere["player"]["position_abbreviation"], "G")
+        with tempfile.TemporaryDirectory() as d:
+            temp = Path(d)
+            path = temp / "data" / "wnba" / "official-bio.json"
+            path.parent.mkdir(parents=True)
+            path.write_text(json.dumps({"players": {"example-player": {
+                "height": "6' 2\"", "college": "Germany",
+                "position": "G", "position_abbreviation": "G",
+            }}}), encoding="utf-8")
+            self.assertTrue(s.run(temp, FakeClient(), NOW))
+            output = json.loads((temp / "data" / "wnba" / "players" / "example-player.json").read_text())
+            self.assertEqual(output["player"]["height"], "6' 2\"")
+            self.assertEqual(output["player"]["college"], "Germany")
+            self.assertEqual(output["player"]["position"], "G")
+            self.assertEqual(output["player"]["position_abbreviation"], "G")
+
     def test_placeholder_weight_and_college_are_cleared(self):
         stored = s.player({**P, "weight": "--", "college": "--", "height": "not a height", "jersey_number": "one"})
         self.assertIsNone(stored["weight"])

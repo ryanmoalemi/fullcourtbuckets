@@ -237,6 +237,69 @@ def player(value):
             **normalize_bio(value),
             "team": team(value.get("team"))}
 
+
+OFFICIAL_BIO_PATH = ("data", "wnba", "official-bio.json")
+_OFFICIAL_KEYS = frozenset({"position", "position_abbreviation", "height", "college"})
+_OFFICIAL_META = frozenset({"pages", "note"})
+_POSITIONS = frozenset({"G", "F", "C"})
+
+
+def load_official_bios(root: Path) -> dict:
+    """Slug to WNBA.com fields that replace the provider bio. Empty when the file is absent."""
+    path = Path(root).joinpath(*OFFICIAL_BIO_PATH)
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SyncError("Official WNBA.com bio file is unreadable.") from exc
+    players = data.get("players") if isinstance(data, dict) else None
+    if not isinstance(players, dict):
+        raise SyncError("Official WNBA.com bio file has no players map.")
+    cleaned = {}
+    for slug, fix in players.items():
+        if not isinstance(slug, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
+            raise SyncError("Official WNBA.com bio slug is invalid.")
+        if not isinstance(fix, dict) or not (set(fix) & _OFFICIAL_KEYS):
+            raise SyncError(f"Official WNBA.com bio for {slug} has no fields to apply.")
+        unknown = set(fix) - _OFFICIAL_KEYS - _OFFICIAL_META
+        if unknown:
+            raise SyncError(f"Official WNBA.com bio for {slug} has unknown fields.")
+        cleaned[slug] = fix
+    return cleaned
+
+
+def apply_official_bio(record: dict, fix: dict | None) -> dict:
+    """Copy a player record with checked WNBA.com height, college/country, or position."""
+    if not fix:
+        return record
+    if not isinstance(record, dict):
+        raise SyncError("Invalid player biography.")
+    updated = dict(record)
+    if "position" in fix or "position_abbreviation" in fix:
+        for key in ("position", "position_abbreviation"):
+            if key not in fix:
+                continue
+            text = str(fix[key]).strip()
+            if text not in _POSITIONS:
+                raise SyncError(f"Official position is not G, F, or C: {fix[key]!r}")
+            updated[key] = text
+        if "position" in fix and "position_abbreviation" not in fix:
+            updated["position_abbreviation"] = updated["position"]
+        if "position_abbreviation" in fix and "position" not in fix:
+            updated["position"] = updated["position_abbreviation"]
+    if "height" in fix:
+        text = str(fix["height"]).strip()
+        if not _HEIGHT_RE.fullmatch(text):
+            raise SyncError(f"Official height is not a height: {fix['height']!r}")
+        updated["height"] = text
+    if "college" in fix:
+        school = _school_name(fix["college"])
+        if school is None:
+            raise SyncError(f"Official college or country is empty: {fix['college']!r}")
+        updated["college"] = school
+    return updated
+
 def stable_slug(pid: int, name: str, registry: dict) -> str:
     key = str(pid)
     if key in registry:
@@ -493,6 +556,8 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
     registry = load(data / "id-map.json", {})
     if len(set(registry.values())) != len(registry):
         raise SyncError("Existing identity map contains duplicate URLs.")
+    official_bios = load_official_bios(root)
+    applied_bios = set()
     stamp = now.astimezone(dt.timezone.utc).isoformat(timespec="seconds")
     directory, profiles = [], {}
     old_directory = load(data / "players-index.json", {}).get("players", [])
@@ -503,6 +568,9 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
             continue  # Players entirely outside the 2008+ scope are not newly published.
         name = (p["first_name"] + " " + p["last_name"]).strip()
         slug = stable_slug(pid, name, registry)
+        if slug in official_bios:
+            p = apply_official_bio(p, official_bios[slug])
+            applied_bios.add(slug)
         stats = sorted(by_player[pid], key=lambda r: (-r["season"], r["season_type"], str((r["team"] or {}).get("id"))))
         recent = sorted(logs[pid], key=lambda r: str(r.get("date") or ""), reverse=True)
         before = [
@@ -541,6 +609,9 @@ def run(root: Path, client: Client, now: dt.datetime, force=False, season_team_t
         if changes:
             profile["team_changes"] = changes
         profiles[slug] = profile
+    missing_bios = sorted(set(official_bios) - applied_bios)
+    if missing_bios:
+        print("Official WNBA.com bios not applied (player not in this import): " + ", ".join(missing_bios))
     guard_shrink(old_directory, directory, "published player inventory")
     if not directory:
         raise SyncError("No eligible players; refusing empty publication.")
