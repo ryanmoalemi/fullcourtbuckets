@@ -373,12 +373,65 @@ def action_row() -> str:
     )
 
 
+def compare_form(teams: list[dict]) -> str:
+    """Metric selector and a two-team compare. The URL keeps metric, a and b."""
+    options = []
+    for team in sorted(teams, key=lambda item: item['team']):
+        options.append(
+            f'<option value="{esc(team["slug"])}" data-revenue="{team["revenue_2025_usd_m"]}" '
+            f'data-value="{team["forbes_2026_value_usd_m"]}" data-multiple="{team["value_per_revenue_2026"]}">'
+            f'{esc(team["team"])}</option>'
+        )
+    outside = (
+        '<option value="portland-fire" data-outside="1">Portland Fire</option>'
+        '<option value="toronto-tempo" data-outside="1">Toronto Tempo</option>'
+    )
+    choices = ''.join(options) + outside
+    return (
+        '<form class="rev-compare" id="rev-compare">'
+        '<label>Metric <select id="rev-metric" name="metric">'
+        '<option value="revenue">Revenue</option>'
+        '<option value="valuation">Valuation</option>'
+        '<option value="multiple">Value / revenue multiple</option>'
+        '</select></label>'
+        f'<label>Team <select id="rev-a" name="a"><option value="">Choose a team</option>{choices}</select></label>'
+        f'<label>Compared with <select id="rev-b" name="b"><option value="">Choose a team</option>{choices}</select></label>'
+        '<p id="rev-result" class="note"></p></form>'
+        '<script>(function(){'
+        'var form=document.getElementById("rev-compare"),metric=document.getElementById("rev-metric"),'
+        'a=document.getElementById("rev-a"),b=document.getElementById("rev-b"),out=document.getElementById("rev-result");'
+        'if(!form)return;'
+        'var params=new URLSearchParams(location.search);'
+        '["metric","a","b"].forEach(function(key){var el=form.querySelector("[name="+key+"]");if(el&&params.get(key))el.value=params.get(key);});'
+        'function label(sel){var o=sel.options[sel.selectedIndex];return o?o.text:"";}'
+        'function num(sel,key){var o=sel.options[sel.selectedIndex];if(!o||!o.value)return null;if(o.getAttribute("data-outside")==="1")return "outside";var raw=o.getAttribute("data-"+key);return raw==null?null:Number(raw);}'
+        'function draw(){'
+        'var key=metric.value==="valuation"?"value":metric.value==="multiple"?"multiple":"revenue";'
+        'var left=num(a,key),right=num(b,key),unit=metric.value==="multiple"?" times":" million";'
+        'var q=new URLSearchParams();'
+        'if(metric.value)q.set("metric",metric.value);if(a.value)q.set("a",a.value);if(b.value)q.set("b",b.value);'
+        'var next=q.toString();history.replaceState(null,"",next?("?"+next+location.hash):location.pathname);'
+        'if(!a.value||!b.value){out.textContent="";return;}'
+        'if(left==="outside"||right==="outside"){out.textContent=label(a)+" and "+label(b)+": outside this dataset, not zero.";return;}'
+        'if(left===right){out.textContent=label(a)+" and "+label(b)+" are tied at "+left+unit+". Neither is ahead.";return;}'
+        'out.textContent=label(a)+" "+left+unit+". "+label(b)+" "+right+unit+".";}'
+        'form.addEventListener("change",draw);draw();'
+        '})();</script>'
+    )
+
+
 def revenue_chart(teams: list[dict]) -> str:
     """HTML bars so labels and values stay readable when the viewport shrinks."""
     rows = revenue_ranked(teams)
     parts = []
     cluster_started = False
+    previous = None
+    rank = 0
     for index, team in enumerate(rows, start=1):
+        value = team['revenue_2025_usd_m']
+        if value != previous:
+            rank = index
+            previous = value
         slug = team['slug']
         classes = ['rev-row']
         if slug in FINALS:
@@ -399,11 +452,20 @@ def revenue_chart(teams: list[dict]) -> str:
         if slug == 'golden-state-valkyries':
             notch = '<span class="rev-notch" style="left:20.51%"></span>'
         parts.append(
-            f'<li class="{" ".join(classes)}">'
-            f'<span class="rev-rank">{index}</span>'
+            f'<li class="{" ".join(classes)}" data-metric-row="1">'
+            f'<span class="rev-rank">{rank}</span>'
             f'<span class="rev-name">{team_link_with_mark(team)}{tag}</span>'
             f'<span class="rev-track" aria-hidden="true"><span class="rev-bar" style="width:{pct:.2f}%">{notch}</span></span>'
             f'<span class="rev-val">{money_short(team["revenue_2025_usd_m"])}</span>'
+            '</li>'
+        )
+    for slug, label in (('portland-fire', 'Portland Fire'), ('toronto-tempo', 'Toronto Tempo')):
+        parts.append(
+            '<li class="rev-row is-outside">'
+            '<span class="rev-rank"></span>'
+            f'<span class="rev-name"><a class="rev-team" href="/wnba/teams/{slug}/"><span>{esc(label)}</span></a></span>'
+            '<span class="rev-track" aria-hidden="true"></span>'
+            '<span class="rev-val">Outside this dataset</span>'
             '</li>'
         )
     axis = (
@@ -418,7 +480,8 @@ def revenue_chart(teams: list[dict]) -> str:
     return (
         '<div class="rev-chart">'
         '<p id="revenue-chart-title" class="rev-chart-note">Bars share one scale. Golden State fills the row. '
-        'The white mark on that bar is Atlanta at $16 million, about one fifth of the way across.</p>'
+        'The white mark on that bar is Atlanta at $16 million, about one fifth of the way across. '
+        'Tied teams share one rank and are listed alphabetically. That order is not a ranking.</p>'
         f'<ol class="rev-rows">{"".join(parts)}</ol>'
         f'{axis}'
         '</div>'
@@ -655,6 +718,7 @@ def render_page(payload: dict) -> str:
 <section class="rev-hero" id="ranking" aria-labelledby="revenue-chart-title">
 {action_row()}
 <div class="rev-stage">
+{compare_form(teams)}
 {revenue_chart(teams)}
 <div class="rev-table-col">
 {revenue_table(teams)}

@@ -157,8 +157,12 @@
     "description": "Atlanta faces Golden State in the 2026 WNBA Finals after 51 regular-season games topped 1 million viewers. See the numbers and our audience estimate."
   },
   "/news/wnba-finals-2026-schedule-dream-valkyries/": {
-    "title": "WNBA Finals 2026 schedule: Dream vs. Valkyries, Game 1",
-    "description": "Game 1 of the WNBA Finals is Saturday, Oct. 17, at 12:30 p.m. PT at Chase Center. Full schedule, how both teams swept the semifinals, and more."
+    "title": "2026 WNBA Finals: Valkyries won 4-3 over the Dream",
+    "description": "The Golden State Valkyries won the 2026 WNBA Finals, 4-3 over the Atlanta Dream. Scores for all seven games, plus recaps and play-by-play."
+  },
+  "/wnba/data/": {
+    "title": "WNBA data and research: revenue, attendance, owners",
+    "description": "Full Court Buckets datasets: 2025 team revenue, Finals attendance, WNBA owners, and bars that show the games. Each card lists the update, format and source."
   },
   "/news/wnba-finals-bonus-2026-champions-60000/": {
     "title": "2026 WNBA champions get $60,000 each, up from $22,908",

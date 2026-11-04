@@ -2875,7 +2875,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     ranks = team_extras.ranks_html(root, slot)
     schedule = team_extras.playoff_html(root, slot)
     franchise = team_extras.franchise_html(root, slot)
-    data_day = team_extras.standings_day(root) or team_extras.facts_checked(root)
+    data_day = team_extras.substantive_day(root, name) or team_extras.standings_day(root) or team_extras.facts_checked(root)
     faq = team_extras.faq_items(root, slot, standing, top, count)
     faq_section = team_extras.faq_html(faq, data_day)
     download = team_extras.download_html(slot, route, data_day) if root is not None else ''
@@ -3072,11 +3072,12 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
             if isinstance(team, dict) and team.get('name'):
                 ranks[(str(team.get('conference') or ''), team['name'])] = team.get('conferenceRank') or 99
     grouped = {'Eastern Conference': [], 'Western Conference': [], 'Other': []}
+    conferences = team_hub.standings_conferences(root)
     for slot in linking['by_id'].values():
         href = links.team_href(slot)
         if href not in page_set:
             continue
-        group = team_hub.conference_group(slot.get('conference') or '') or 'Other'
+        group = team_hub.conference_group(team_hub.conference_label(slot, {}, conferences)) or 'Other'
         grouped.setdefault(group, []).append(slot)
     team_html = []
     for group in ('Eastern Conference', 'Western Conference', 'Other'):

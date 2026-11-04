@@ -34,6 +34,7 @@ FEATURED_PLAYERS = (
 
 STYLESHEET = '<link rel="stylesheet" href="/assets/site-nav.css">'
 SCRIPT = '<script src="/assets/site-nav.js" defer></script>'
+SKIP_LINK = '<a class="skip" href="#content">Skip to content</a>'
 NAV_RE = re.compile(r'<nav\b([^>]*)>.*?</nav>', re.S)
 MAIN_NAV_RE = re.compile(r'<nav\b[^>]*aria-label="Main"[^>]*>.*?</nav>', re.S)
 FOOTER_RE = re.compile(r'<footer\b[^>]*>.*?</footer>', re.S)
@@ -197,6 +198,9 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
 
     if exists('/standings/'):
         items.append({'label': 'Standings', 'href': '/standings/'})
+
+    if exists('/wnba/data/'):
+        items.append({'label': 'Data & research', 'href': '/wnba/data/'})
 
     if exists('/about/'):
         children = []
@@ -470,7 +474,21 @@ def ensure_fonts(page_html: str) -> str:
     return page_html.replace('</head>', FONTS_LINK + '</head>', 1)
 
 
+def ensure_skip_link(page_html: str) -> str:
+    """Skip link and a content landmark on every document that uses this shell."""
+    if 'http-equiv="refresh"' in (page_html or '').lower():
+        return page_html
+    if 'class="skip"' not in page_html:
+        match = re.search(r'<body\b[^>]*>', page_html, re.I)
+        if match:
+            page_html = page_html[:match.end()] + SKIP_LINK + page_html[match.end():]
+    if 'id="content"' not in page_html:
+        page_html = re.sub(r'<main\b(?![^>]*\bid=)', '<main id="content"', page_html, count=1, flags=re.I)
+    return page_html
+
+
 def ensure_assets(page_html: str) -> str:
+    page_html = ensure_skip_link(page_html)
     page_html = ensure_fonts(page_html)
     page_html = rss_feed.ensure_link(page_html)
     page_html = ensure_pinterest_verify(page_html)
