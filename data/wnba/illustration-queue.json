@@ -771,15 +771,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 289,
-      "slug": "kayla-pedersen",
-      "player_name": "Kayla Pedersen",
-      "listed_active": false,
-      "profile_path": "/wnba/kayla-pedersen/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 458,
       "slug": "keisha-hampton",
       "player_name": "Keisha Hampton",
@@ -1325,15 +1316,6 @@
       "player_name": "Tayler Hill",
       "listed_active": false,
       "profile_path": "/wnba/tayler-hill/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 586,
-      "slug": "tea-cooper",
-      "player_name": "Te'a Cooper",
-      "listed_active": false,
-      "profile_path": "/wnba/tea-cooper/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
