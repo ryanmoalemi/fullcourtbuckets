@@ -10,6 +10,7 @@ from __future__ import annotations
 import csv
 import datetime as dt
 import html
+import io
 import json
 import re
 import sys
@@ -148,9 +149,80 @@ if(q.value.trim())run();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();'''
 
 
+_STREET_WORDS = (
+    ('boulevard', 'blvd'), ('avenue', 'ave'), ('street', 'st'), ('road', 'rd'),
+    ('drive', 'dr'), ('lane', 'ln'), ('court', 'ct'), ('place', 'pl'), ('parkway', 'pkwy'),
+)
+
+
+def norm_name(value: str) -> str:
+    return ' '.join(re.sub(r'[^a-z0-9]+', ' ', (value or '').lower()).split())
+
+
+def norm_street(value: str) -> str:
+    """One key for the same doorway. Suite B and Ste B match. A different street number does not."""
+    text = (value or '').lower().replace('.', '')
+    text = re.sub(r'\b(suite|ste|unit|apt|number|#)\b', 'ste', text)
+    for long, short in _STREET_WORDS:
+        text = re.sub(rf'\b{long}\b', short, text)
+    text = re.sub(r'\b(blvd|ave|st|rd|dr|ln|ct|pl|pkwy)\s+([a-z])\b', r'\1 ste \2', text)
+    return ' '.join(re.sub(r'[^a-z0-9]+', ' ', text).split())
+
+
+def location_key(row: dict) -> tuple:
+    return (
+        norm_name(row.get('name') or ''),
+        norm_street(row.get('street') or ''),
+        (row.get('city') or '').strip().casefold(),
+        (row.get('state') or '').strip().casefold(),
+    )
+
+
+def _logo_ok(row: dict) -> bool:
+    logo = (row.get('logo') or '').strip()
+    return logo.startswith('/assets/bars/') and (ROOT / logo.lstrip('/')).is_file()
+
+
+def merge_location(group: list[dict]) -> dict:
+    """One row per doorway. Keep a stable id and every filled field, with a staff reply winning verification."""
+    ranked = sorted(group, key=lambda row: (row['id'].startswith('conf-'), row.get('verification_type') != 'staff_reply'))
+    merged = dict(ranked[0])
+    streets = [row.get('street') or '' for row in group if row.get('street')]
+    if streets:
+        merged['street'] = max(streets, key=len)
+        same = next(row for row in group if row.get('street') == merged['street'])
+        if same.get('directions'):
+            merged['directions'] = same['directions']
+    for other in group:
+        for field in ('phone', 'website', 'games_note', 'bar_quote', 'directions'):
+            if not (merged.get(field) or '').strip() and (other.get(field) or '').strip():
+                merged[field] = other[field]
+        if other.get('verification_type') == 'staff_reply':
+            merged['verification_type'] = 'staff_reply'
+            for field in ('verification_date', 'source_name', 'source_url', 'games_note', 'bar_quote'):
+                if (other.get(field) or '').strip():
+                    merged[field] = other[field]
+        if not _logo_ok(merged) and _logo_ok(other):
+            merged['logo'] = other['logo']
+    return merged
+
+
+def dedupe_rows(rows: list[dict]) -> list[dict]:
+    grouped: dict = {}
+    order = []
+    for row in rows:
+        key = location_key(row)
+        if key not in grouped:
+            grouped[key] = []
+            order.append(key)
+        grouped[key].append(row)
+    return [merge_location(grouped[key]) if len(grouped[key]) > 1 else grouped[key][0] for key in order]
+
+
 def load() -> list[dict]:
     with DATA.open(encoding='utf-8', newline='') as fh:
         rows = list(csv.DictReader(fh))
+    rows = dedupe_rows(rows)
     seen = set()
     for r in rows:
         for k in ('id', 'name', 'city', 'state', 'team_market', 'source_url'):
@@ -160,6 +232,16 @@ def load() -> list[dict]:
             raise SystemExit(f'duplicate id {r["id"]}')
         seen.add(r['id'])
     return rows
+
+
+def write_data(rows: list[dict]) -> None:
+    """Write the deduped source CSV so the download matches the page."""
+    fieldnames = list(rows[0].keys()) if rows else []
+    buffer = io.StringIO()
+    writer = csv.DictWriter(buffer, fieldnames=fieldnames, lineterminator='\n')
+    writer.writeheader()
+    writer.writerows(rows)
+    write_if_changed(DATA, buffer.getvalue())
 
 
 def human(day: str) -> str:
@@ -457,6 +539,7 @@ def fill_missing_logos() -> None:
 def main() -> None:
     fill_missing_logos()
     rows = load()
+    write_data(rows)
     write_if_changed(PAGE_PATH, render(rows))
     write_og_image(stats(rows))
     write_if_changed(PAGE_DIR / CSV_NAME, DATA.read_text(encoding='utf-8'))
