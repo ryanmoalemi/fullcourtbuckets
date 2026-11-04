@@ -3265,6 +3265,14 @@
       "license_url": "https://creativecommons.org/licenses/by/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "kayla-pedersen": {
+      "author": "Shotgun Spratling/Neon Tommy",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kayla_Pedersen_shot.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
