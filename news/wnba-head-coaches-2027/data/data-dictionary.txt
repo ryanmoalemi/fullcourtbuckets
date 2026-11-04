@@ -1,22 +1,37 @@
-WNBA head coaches, data through Nov. 4, 2026. Free to use (CC0).
+WNBA head coaching tenure entering the 2027 season
+Full Court Buckets | Snapshot through Nov. 4, 2026
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Story and methodology: https://fullcourtbuckets.com/news/wnba-head-coaches-2027/
+Corrections: hello@fullcourtbuckets.com
 
 wnba-head-coaches.csv
-team: WNBA team.
-head_coach: Name on the WNBA.com team page on Nov. 4, 2026. Blank when that page lists no head coach.
-hire_date: Dateline or publish date of the linked team or WNBA.com release. Portland is Oct. 17, 2025, the date on the Fire news list for the Sarama release.
-seasons_with_team: WNBA regular seasons the coach was that team's head coach. White's row is the current stint, 2025 and 2026, not 2015-16.
-regular_season_w / regular_season_l: Sum of that team's wins and losses on WNBA.com standings for those seasons. Blank when the job is vacant.
-win_pct: Wins divided by wins plus losses, three decimals.
-playoff_wl_in_this_file: Playoff games confirmed on WNBA.com recaps for this page. A note in the cell means earlier postseasons are omitted, not that the coach was 0-0.
-status: In place, or vacant since the linked post or release.
+One row per 2027 franchise, including open jobs. Data-through is the snapshot date, not a confirmation of a 2027 contract.
+team: Franchise name entering 2027.
+team_2026: Name used in the 2026 WNBA standings. Houston played as the Connecticut Sun.
+head_coach: Current incumbent. Blank for vacancies.
+hire_date / hire_source: Date and URL of the public team or WNBA hiring announcement, or the team biography for Reeve. Blank for vacancies.
+first_season: First WNBA regular season of the current uninterrupted stint with the franchise.
+seasons_with_team: Seasons from first_season through 2026, inclusive. Blank for vacancies. Stephanie White's earlier 2015-16 Indiana stint is separate. Rachid Meziane's seasons in Connecticut carry over to Houston.
+regular_season_w / regular_season_l: Team wins and losses summed across the seasons in this stint. These are franchise standings records, including games an acting head coach may have handled.
+win_pct: Team regular-season wins divided by games in the stint, rounded to three decimals.
+playoff_w_2026 / playoff_l_2026: Team wins and losses in the 2026 playoffs. 0 and 0 mean the team missed the playoffs. Blank when no current incumbent exists.
+playoff_wl_in_this_file: Text display of the same 2026 postseason totals. Earlier versions used this column for mixed periods.
+status: In place or vacant as of the snapshot.
+vacancy_date / vacancy_source: Public announcement date and URL marking an open job. Blank for occupied jobs.
+data_through: Snapshot date, YYYY-MM-DD.
 
 liberty-head-coaches.csv
-season: WNBA season.
-coach: Brondello for 2022-2025 from the Toronto Tempo release. DeMarco for 2026 from the Liberty hiring release of Dec. 3, 2025.
-regular_season_w / regular_season_l / win_pct / seed: WNBA.com standings.
-playoff_result: 2026 series from WNBA.com recaps. 2024 title from the Tempo release. Other seasons are not in this file.
+One row per completed season from 2022 through 2026.
+season / coach: Season year and head coach.
+regular_season_w / regular_season_l / win_pct: New York regular-season standings record and winning percentage.
+seed: Overall WNBA playoff seed.
+playoff_result: Final series outcome. The 2026 row also includes the first-round upset.
+coach_source / standings_source / playoff_source: Links for the head coach, season standings and postseason result.
 
-2026 playoff games used for the cells that include 2026:
-First round: New York over Minnesota 2-0; Las Vegas over Indiana 2-1; Atlanta over Washington 2-0; Golden State over Dallas 2-1 (Dallas won Game 2, Golden State won the winner-take-all Game 3).
-Semifinals: Atlanta over New York 3-0 (92-82, 101-98 OT, 85-83). Golden State swept Las Vegas.
-Finals: Golden State beat Atlanta in Game 7, 68-63, so the series is 4-3.
+Reproduce the tenure comparison: Select rows with a head_coach. Sort seasons_with_team ascending and sum the first ten values (1+1+1+1+2+2+2+2+2+2 = 16). Compare with Minnesota (17). The seventh value in the ordered set of 13 is the median (2). For the expansion adjustment, exclude Golden State, Portland and Toronto; seven of the ten remaining incumbents have at most two seasons.
+
+Primary records
+WNBA standings: https://www.wnba.com/standings?season=2026 (change season to the year needed).
+2026 postseason: https://www.wnba.com/playoffs/2026
+WNBA relocation approval: https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale
+Houston coaching decision: GM Morgan Tuck's interview with Danielle Lerner, USA TODAY Sports, Oct. 30, 2026, https://sports.yahoo.com/articles/houston-comets-keep-connecticut-sun-153504318.html
