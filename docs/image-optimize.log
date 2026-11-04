@@ -1,4 +1,4 @@
-files rewritten: 20
+files rewritten: 19
 html files rewritten: 661
 images missing alt: 0
 
@@ -19,9 +19,8 @@ resized images/articles/valkyries-dream-finals-game-5-recap/photo.jpg to (1688, 
 resized images/articles/valkyries-dream-finals-game-6-recap/photo.jpg to (1688, 950) (76800 bytes) + photo.webp
 resized images/articles/wnba-finals-bonus-2026-champions-60000/photo.jpg to (1688, 950) (69580 bytes) + photo.webp
 resized images/articles/wnba-free-agents-2027/photo.jpg to (1688, 950) (57290 bytes) + photo.webp
-fallback dropped images/articles/wnba-head-coaches-2027/photo.jpg; serving photo.webp (26144 bytes)
-resized images/articles/wnba-head-coaches-2027/seasons-chart.png to (1200, 675) (57138 bytes) + seasons-chart.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
 fallback dropped images/social/players/rebekkah-brunson.jpg; serving rebekkah-brunson.webp (17024 bytes)
+resized images/teams/seattle-storm-ezi-magbegor.jpg to (853, 480) (49461 bytes) + seattle-storm-ezi-magbegor.webp
