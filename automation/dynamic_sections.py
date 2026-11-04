@@ -222,7 +222,10 @@ def render_attendance_lead(root: Path, s: dict, attrs: dict) -> str:
             text += (f" Game {s['upcoming'][0]['game']} needs {need:,} to tie the Finals series record of "
                      f"{RECORD_TOTAL:,} ({RECORD_YEAR}) and {need + 1:,} to pass it.")
         elif total > RECORD_TOTAL:
-            text += f" That passes the Finals series record of {RECORD_TOTAL:,} set in {RECORD_YEAR} over {RECORD_GAMES} games."
+            text += (
+                f" That passes the prior record of {RECORD_TOTAL:,}, set in {RECORD_YEAR} "
+                f"over {RECORD_GAMES} games."
+            )
     return f'<strong style="color:#151413 !important">{E(text)}</strong>'
 
 
@@ -434,6 +437,58 @@ def render_tracker_scope_text(root: Path, s: dict, attrs: dict, body: str = '') 
     body = _THROUGH.sub(lambda m: m.group(1) + str(n), body)
     y, mo, d = (int(x) for x in tracker_updated_iso(root, s).split('-'))
     return _APA.sub(lambda m: f'{m.group(1)}{FULL_MONTHS[mo - 1]} {d}{m.group(2)}', body)
+
+
+def finals_archive_totals(root: Path) -> list[dict]:
+    """Series attendance totals from the published Finals CSV. Averages round half up."""
+    import csv
+    path = root / 'news' / '2026-wnba-finals-ratings-tracker' / 'finals-attendance.csv'
+    try:
+        with path.open(encoding='utf-8') as handle:
+            rows = list(csv.DictReader(handle))
+    except OSError:
+        return []
+    grouped = {}
+    for row in rows:
+        year = str(row.get('season') or '')
+        att = str(row.get('attendance') or '').strip()
+        if not year.isdigit() or not att.isdigit():
+            continue
+        bucket = grouped.setdefault(int(year), {'year': int(year), 'games': 0, 'total': 0})
+        bucket['games'] += 1
+        bucket['total'] += int(att)
+    out = []
+    for bucket in grouped.values():
+        bucket['avg'] = int(bucket['total'] / bucket['games'] + 0.5) if bucket['games'] else 0
+        out.append(bucket)
+    return out
+
+
+def archive_record_lead(root: Path) -> str:
+    """One sentence from the Finals CSV. 2026 is the series total; 2024 still leads per game."""
+    rows = finals_archive_totals(root)
+    if not rows:
+        return ''
+    first = min(row['year'] for row in rows)
+    best = max(rows, key=lambda row: (row['total'], row['year']))
+    others = [row for row in rows if row['year'] != best['year']]
+    higher_avg = max(others, key=lambda row: (row['avg'], -row['year'])) if others else None
+    games_word = {4: 'four', 5: 'five', 6: 'six', 7: 'seven'}.get(best['games'], str(best['games']))
+    lead = (
+        f"In FCB's Finals archive since {first}, the {best['year']} series drew a record "
+        f"{best['total']:,} over {games_word} games."
+    )
+    if higher_avg and higher_avg['avg'] > best['avg']:
+        lead += (
+            f" The {higher_avg['year']} Finals averaged more per game: "
+            f"{higher_avg['avg']:,} versus {best['avg']:,}."
+        )
+    return lead
+
+
+def render_tracker_record_line(root: Path, s: dict, attrs: dict) -> str:
+    lead = archive_record_lead(root) or 'Finals attendance totals are in the table below.'
+    return f'{E(lead)} <a href="?y=2024#finals-database">See supporting games</a>'
 
 
 def render_tracker_2026_total(root: Path, s: dict, attrs: dict) -> str:
@@ -694,16 +749,65 @@ def tracker_count_problems(text: str) -> list:
     return [] if sync_tracker_counts(text) == text else ['printed database counts do not match the table rows']
 
 
-def render_html(text: str, root: Path, s: dict | None) -> str:
+def _team_name(root: Path, slug: str) -> str:
+    if not slug:
+        return ''
+    csv_path = root / 'wnba' / 'teams' / slug / f'{slug}-schedule-2026.csv'
+    try:
+        line = csv_path.read_text(encoding='utf-8').splitlines()[1]
+    except (OSError, IndexError):
+        return ''
+    return line.split(',', 1)[0].strip()
+
+
+def _team_section(root: Path, attrs: dict, body: str, kind: str) -> str:
+    """Refill a team schedule table from the schedule and box scores. Keep the old body if the team is unknown."""
+    slug = attrs.get('data-fcb-slug') or ''
+    name = _team_name(root, slug)
+    if not name:
+        return body
+    import team_page_extras as extras
+    slot = {'full_name': name, 'slug': slug}
+    section = extras.playoff_html(root, slot) if kind == 'team-schedule' else extras.schedule_html(root, slot)
+    match = re.search(
+        rf'data-fcb-dynamic="{kind}"[^>]*>(.*)</div>{re.escape(END)}',
+        section,
+        re.S,
+    )
+    return match.group(1) if match else body
+
+
+def render_team_schedule(root: Path, s: dict, attrs: dict, body: str = '') -> str:
+    return _team_section(root, attrs, body, 'team-schedule')
+
+
+def render_team_season_schedule(root: Path, s: dict, attrs: dict, body: str = '') -> str:
+    return _team_section(root, attrs, body, 'team-season-schedule')
+
+
+RENDERERS['tracker-record-line'] = render_tracker_record_line
+RENDERERS['team-schedule'] = render_team_schedule
+RENDERERS['team-season-schedule'] = render_team_season_schedule
+BODY_RENDERERS.update({render_team_schedule, render_team_season_schedule})
+
+
+def render_html(text: str, root: Path, s: dict | None, rel: str = '') -> str:
+    slug_match = re.search(r'wnba/teams/([^/]+)/', rel or '')
+    page_slug = slug_match.group(1) if slug_match else ''
+
     def swap(m: re.Match) -> str:
         fn = RENDERERS.get(m.group('kind'))
         if not fn or not s:
             return m.group(0)
         attrs = _set_attr(m.group('attrs'), 'data-fcb-updated', s['last_day'])
+        parsed = _attrs(m.group('attrs'))
+        if page_slug and 'data-fcb-slug' not in parsed:
+            parsed['data-fcb-slug'] = page_slug
+            attrs = _set_attr(attrs, 'data-fcb-slug', page_slug)
         if fn in BODY_RENDERERS:
-            body = fn(root, s, {}, m.group('body'))
+            body = fn(root, s, parsed, m.group('body'))
         else:
-            body = fn(root, s, _attrs(m.group('attrs')))
+            body = fn(root, s, parsed)
         return f"<{m.group('tag')}{attrs}>{body}</{m.group('tag')}>{END}"
     return sync_tracker_counts(sync_tracker_game_rows(SECTION.sub(swap, text), root))
 
@@ -768,11 +872,13 @@ def main(argv=None) -> int:
         return 1 if problems else 0
     s = finals_series.series(root)
     changed = publish_attendance_copies(root)
+    import team_page_extras as extras
+    changed.extend(extras.refresh_published_schedules(root))
     for path in html_files(root):
         text = path.read_text(encoding='utf-8')
         if 'data-fcb-dynamic' not in text:
             continue
-        new = render_html(text, root, s)
+        new = render_html(text, root, s, path.relative_to(root).as_posix())
         if new != text:
             path.write_text(new, encoding='utf-8')
             changed.append(path.relative_to(root).as_posix())

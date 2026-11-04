@@ -790,7 +790,7 @@ def regular_season_is_final(standings: dict) -> bool:
 def standings_title(standings: dict) -> str:
     year = standings.get('season') or ''
     if regular_season_is_final(standings) and year:
-        return f'Final {year} regular-season standings'
+        return f'Final {year} WNBA standings'
     return 'WNBA Standings'
 
 
@@ -831,7 +831,7 @@ def apply_standings_freshness(text: str, standings: dict) -> str:
                 text = text.replace(old, block, 1)
     title = standings_title(standings)
     text = re.sub(
-        r'<h1>(?:WNBA Standings|Final \d{4} regular-season standings)</h1>',
+        r'<h1>(?:WNBA Standings|Final \d{4} (?:WNBA|regular-season) standings)</h1>',
         f'<h1>{esc(title)}</h1>',
         text,
         count=1,

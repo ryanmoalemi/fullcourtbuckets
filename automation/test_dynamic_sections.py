@@ -19,7 +19,8 @@ class RepoIsCurrent(unittest.TestCase):
         for path in ds.html_files(ROOT):
             text = path.read_text(encoding='utf-8')
             if 'data-fcb-dynamic' in text:
-                self.assertEqual(ds.render_html(text, ROOT, s), text, f'{path} is stale: run dynamic_sections.py')
+                rel = path.relative_to(ROOT).as_posix()
+                self.assertEqual(ds.render_html(text, ROOT, s, rel), text, f'{path} is stale: run dynamic_sections.py')
 
 
 class CheckCatchesStaleness(unittest.TestCase):

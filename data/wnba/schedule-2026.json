@@ -7065,19 +7065,19 @@
       "time_utc": "2026-10-29T16:30:00Z",
       "type": "Playoffs",
       "label": "WNBA Finals Game 6",
-      "status": 1,
+      "status": 3,
       "arena": "State Farm Arena",
       "home": {
         "id": 1611661330,
         "tricode": "ATL",
-        "score": null
+        "score": 80
       },
       "away": {
         "id": 1611661331,
         "tricode": "GSV",
-        "score": null
+        "score": 69
       },
-      "series": "GSV leads 3-2"
+      "series": "Series tied 3-3"
     },
     {
       "game_id": "1042600307",
@@ -7085,19 +7085,19 @@
       "time_utc": "2026-11-01T00:00:00Z",
       "type": "Playoffs",
       "label": "WNBA Finals Game 7",
-      "status": 1,
+      "status": 3,
       "arena": "Chase Center",
       "home": {
         "id": 1611661331,
         "tricode": "GSV",
-        "score": null
+        "score": 68
       },
       "away": {
         "id": 1611661330,
         "tricode": "ATL",
-        "score": null
+        "score": 63
       },
-      "series": "GSV leads 3-2"
+      "series": "Golden State won 4-3"
     }
   ]
 }

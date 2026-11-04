@@ -84,7 +84,7 @@ Watch every possession on the [Game 6 play-by-play page](/wnba/finals/2026/game-
 
 ## The crowd and Game 7
 
-Game 6 drew 17,099, a sellout, matching Games 3 and 4 at State Farm Arena. The [FCB Finals attendance file](/news/2026-wnba-finals-ratings-tracker/) now has 105,489 fans through six games. That is more than the 92,599 at the 2024 Finals, the highest series total in that file from 2002 through 2025. Game 7 has not been played, so the series total is not finished.
+Game 6 drew 17,099, a sellout, matching Games 3 and 4 at State Farm Arena. The [FCB Finals attendance file](/news/2026-wnba-finals-ratings-tracker/) now has 105,489 fans through six games. That is more than the prior record of 92,599 at the 2024 Finals, the highest series total in that file from 2002 through 2025. Game 7 has not been played, so the series total is not finished.
 
 Game 7 is Saturday, Oct. 31, at 5 p.m. PT (8 p.m. ET) at Chase Center in San Francisco, Dream at Valkyries ([WNBA.com game page](https://www.wnba.com/game/atl-vs-gsv-1042600307)). Oct. 31 is Halloween. TV: USA Network and CNBC. Streaming: Peacock.
 

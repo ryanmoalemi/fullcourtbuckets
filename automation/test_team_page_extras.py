@@ -88,7 +88,20 @@ class TeamPagePhaseTwoTests(unittest.TestCase):
     def test_playoff_section_is_dynamic_and_absent_for_non_playoff_team(self):
         dream = tx.playoff_html(ROOT, {'full_name': 'Atlanta Dream', 'slug': 'atlanta-dream'})
         self.assertIn('data-fcb-dynamic="team-schedule"', dream)
+        self.assertEqual(dream.count('<td>2026-10-31</td>'), 1)
+        self.assertNotIn('class="upcoming"', dream)
+        self.assertIn('W 80-69', dream)
+        self.assertIn('L 63-68', dream)
+        self.assertIn('/news/valkyries-dream-finals-game-6-recap/', dream)
+        self.assertIn('/wnba/finals/2026/game-7/play-by-play/', dream)
+        self.assertNotIn('GSV leads 3-2', dream)
         self.assertEqual(tx.playoff_html(ROOT, {'full_name': 'Seattle Storm', 'slug': 'seattle-storm'}), '')
+        gs = tx.schedule_csv(ROOT, {'full_name': 'Golden State Valkyries', 'slug': 'golden-state-valkyries'})
+        self.assertIn('Playoffs: WNBA Finals Game 6,away,Atlanta Dream,L 69-80', gs)
+        self.assertIn('Playoffs: WNBA Finals Game 7,home,Atlanta Dream,W 68-63', gs)
+        self.assertIn('Golden State won 4-3', gs)
+        self.assertEqual(gs.count('1042600307') if '1042600307' in gs else gs.count('WNBA Finals Game 7'), 1)
+        self.assertNotIn('GSV leads 3-2', gs.split('WNBA Finals Game 6')[1])
 
 
 if __name__ == '__main__':

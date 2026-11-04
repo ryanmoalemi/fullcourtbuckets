@@ -117,7 +117,8 @@ class StandingsFeedTests(unittest.TestCase):
             saved = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
             self.assertEqual(len(saved['teams']), 15)
             self.assertEqual(saved['teams'][0]['name'], 'Minnesota Lynx')
-            self.assertIn('Final 2026 regular-season standings', html_text)
+            self.assertIn('Final 2026 WNBA standings', html_text)
+            self.assertNotIn('Final 2026 regular-season standings', html_text)
             import finals_series
             self.assertIn(f'"dateModified": "{max("2026-10-01", finals_series.latest_day())}"', html_text)
             self.assertIn('How do WNBA playoff tiebreakers work?', html_text)
@@ -139,6 +140,25 @@ class StandingsFeedTests(unittest.TestCase):
             self.assertNotIn('October 4, 2026', again)
             kept = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
             self.assertEqual(kept['updatedAt'], '2026-10-01T12:00:00-07:00')
+
+    def test_feed_season_label_yields_to_the_matching_schedule(self):
+        """ESPN's season.year can roll to the next year while the records stay put."""
+        payload = final_2026_payload()
+        payload['season'] = {'year': 2027}
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            data = root / 'data' / 'wnba'
+            data.mkdir(parents=True)
+            schedule = json.loads((ROOT / 'data' / 'wnba' / 'schedule-2026.json').read_text(encoding='utf-8'))
+            (data / 'schedule-2026.json').write_text(json.dumps(schedule), encoding='utf-8')
+            self.assertTrue(standings.build(root, payload=payload, updated_at='2026-10-01T12:00:00-07:00'))
+            saved = json.loads((root / 'api' / 'wnba-standings').read_text(encoding='utf-8'))
+            self.assertEqual(saved['season'], 2026)
+            html_text = (root / 'standings' / 'index.html').read_text(encoding='utf-8')
+            self.assertIn('<h1>Final 2026 WNBA standings</h1>', html_text)
+            self.assertIn('The 2026 regular season on this page is 44 games.', html_text)
+            self.assertIn('Full Court Buckets, 2026 WNBA standings.', html_text)
+            self.assertNotIn('2027', html_text)
 
 
 if __name__ == '__main__':
