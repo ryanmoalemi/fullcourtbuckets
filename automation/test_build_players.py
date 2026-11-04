@@ -89,8 +89,22 @@ class BuildTests(unittest.TestCase):
         p=copy.deepcopy(P);p['season_stats']*=2
         with self.assertRaises(b.BuildError):b.validate(p,p['slug'])
     def test_multiple_stints_not_summed(self):
-        p=copy.deepcopy(P);second=copy.deepcopy(p['season_stats'][0]);second['team']['id']=2;p['season_stats'].append(second)
+        p=copy.deepcopy(P);second=copy.deepcopy(p['season_stats'][0]);second['team']['id']=2;second['team']['full_name']='Other Team';p['season_stats'].append(second)
         self.assertIsNone(b.headline(p))
+        page=b.profile_page(p)
+        self.assertNotIn('No single season line for the latest year', page)
+        self.assertIn('Example Team and Other Team', page)
+        self.assertIn('Combined from team totals', page)
+        self.assertNotIn('fg_pct', page.split('hero-stats', 1)[-1].split('</section>', 1)[0])
+        self.assertIn('12.3', page)
+
+    def test_empty_season_is_not_a_split_line(self):
+        p=copy.deepcopy(P)
+        p['season_stats']=[]
+        page=b.profile_page(p)
+        self.assertIn('No season records on this page yet', page)
+        self.assertNotIn('No single season line for the latest year', page)
+        self.assertNotIn('PER GAME', page)
     def test_archive_not_retirement(self):
         p=copy.deepcopy(P);p['active_in_provider_feed']=False
         result=b.profile_page(p);self.assertIn('Inactive player',result);self.assertNotIn('>Retired<',result);self.assertNotIn('Archive profile',result)

@@ -5,6 +5,7 @@ Python 3.11+, standard library only. No credentials, scraped biographies, or inf
 from __future__ import annotations
 import argparse
 import datetime as dt
+from decimal import Decimal, ROUND_HALF_UP
 import html
 import json
 import math
@@ -288,10 +289,15 @@ def answer_summary(profile, career=True, root=None):
         lead = f'{name} plays in the WNBA.'
     else:
         lead = ''
-    stats = season_sentence(headline(profile))
+    stats = season_sentence(headline(profile)) or combined_season_sentence(profile)
     return ' '.join(part for part in (lead, stats) if part)
 
 def headline(profile):
+    """One stored season line. Split team stints stay separate in the table.
+
+    The hero uses hero_line for a combined counting line. This function does
+    not invent a table row, and it does not average shooting percentages.
+    """
     rows = profile.get('season_stats',[])
     for kind in (2,3):
         selected = [r for r in rows if r['season_type']==kind]
@@ -299,7 +305,6 @@ def headline(profile):
             continue
         year = max(r['season'] for r in selected)
         latest = [r for r in selected if r['season']==year]
-        # No synthetic career averages, no combined aggregate plus team-stint sums.
         if len(latest)==1:
             return latest[0]
         aggregate=[r for r in latest if not (r.get('team') or {}).get('id')]
@@ -307,6 +312,164 @@ def headline(profile):
             return aggregate[0]
         return None
     return None
+
+
+def _latest_rows(profile):
+    """Team lines for the newest season of the first competition that has any."""
+    rows = [row for row in profile.get('season_stats') or [] if isinstance(row, dict)]
+    for kind in (2, 3):
+        selected = [row for row in rows if row.get('season_type') == kind]
+        if not selected:
+            continue
+        year = max(row['season'] for row in selected)
+        latest = [row for row in selected if row.get('season') == year]
+        return latest
+    return []
+
+
+def _counting_shown(rows, key: str):
+    """One-decimal average from summed counting totals. None if any total is missing."""
+    total = 0
+    games = 0
+    for row in rows:
+        played = row.get('games_played')
+        part = per_game.counting_total(row.get(key), played)
+        if part is None:
+            return None
+        if isinstance(played, bool) or not isinstance(played, (int, float)):
+            return None
+        games += int(played)
+        total += part
+    if games <= 0:
+        return None
+    shown = (Decimal(total) / Decimal(games)).quantize(Decimal('0.1'), rounding=ROUND_HALF_UP)
+    return games, f'{shown:.1f}'
+
+
+def _stint_label(rows) -> str:
+    names = []
+    for row in rows:
+        name = tname(row.get('team'))
+        if name and name != 'Team not listed' and name not in names:
+            names.append(name)
+    if len(rows) > 1 and len(names) <= 1:
+        return f'{len(rows)} teams'
+    if len(names) == 1:
+        return names[0]
+    if len(names) == 2:
+        return f'{names[0]} and {names[1]}'
+    if names:
+        return ', '.join(names[:-1]) + ' and ' + names[-1]
+    return f'{len(rows)} teams'
+
+
+def hero_line(profile):
+    """Hero numbers for the latest season.
+
+    combined: points, rebounds and assists from summed counting totals.
+    Percentages are left off. They are not averaged.
+    stints: games played with each team when a counting total cannot be recovered.
+    empty: no season line at all. That is not the split-team case.
+    single: the one stored line.
+    """
+    latest = _latest_rows(profile)
+    if not latest:
+        return {'kind': 'empty'}
+    year = latest[0].get('season')
+    kind = latest[0].get('season_type')
+    competition = 'playoffs' if kind == 3 else 'regular season'
+    if len(latest) == 1:
+        return {'kind': 'single', 'row': latest[0], 'year': year, 'competition': competition}
+    shown = {}
+    games = None
+    for key in ('pts', 'reb', 'ast'):
+        recovered = _counting_shown(latest, key)
+        if recovered is None:
+            bits = []
+            for row in latest:
+                played = plain_games(row.get('games_played'))
+                label = tname(row.get('team'))
+                bits.append(f'{label}, {played} GP' if played else label)
+            return {
+                'kind': 'stints',
+                'year': year,
+                'competition': competition,
+                'bits': bits,
+            }
+        games, shown[key] = recovered
+    return {
+        'kind': 'combined',
+        'year': year,
+        'competition': competition,
+        'games': games,
+        'pts': shown['pts'],
+        'reb': shown['reb'],
+        'ast': shown['ast'],
+        'teams': _stint_label(latest),
+    }
+
+
+def hero_note(profile) -> str:
+    line = hero_line(profile)
+    kind = line['kind']
+    if kind == 'empty':
+        return 'No season records on this page yet'
+    if kind == 'single':
+        row = line['row']
+        competition = 'regular season' if row.get('season_type') == 2 else 'playoffs'
+        return f'{row["season"]} · {competition}'
+    if kind == 'stints':
+        return f'{line["year"]} · {line["competition"]}'
+    return f'{line["year"]} · {line["competition"]} · {line["teams"]}'
+
+
+def hero_context(profile) -> str:
+    line = hero_line(profile)
+    if line['kind'] == 'empty':
+        return 'A missing line is not shown as zero.'
+    if line['kind'] == 'stints':
+        return '. '.join(line['bits']) + '.'
+    if line['kind'] == 'combined':
+        return 'Combined from team totals. Shooting percentages are not averaged.'
+    return 'Per-game averages'
+
+
+def hero_metrics_html(profile) -> str:
+    line = hero_line(profile)
+    if line['kind'] == 'single':
+        row = line['row']
+        cells = ''.join(
+            f'<div class="metric"><strong>{row_average(row, key)}</strong><span>{label}<small>PER GAME</small></span></div>'
+            for key, label in (('pts', 'POINTS'), ('ast', 'ASSISTS'), ('reb', 'REBOUNDS'))
+        )
+    elif line['kind'] == 'combined':
+        cells = ''.join(
+            f'<div class="metric"><strong>{esc(line[key])}</strong><span>{label}<small>PER GAME</small></span></div>'
+            for key, label in (('pts', 'POINTS'), ('ast', 'ASSISTS'), ('reb', 'REBOUNDS'))
+        )
+    else:
+        cells = ''
+    return (
+        f'<div class="hero-stats">{cells}'
+        f'<div class="stat-context"><b>{esc(hero_note(profile))}</b><span>{esc(hero_context(profile))}</span></div></div>'
+    )
+
+
+def combined_season_sentence(profile) -> str:
+    """Plain sentence for a combined latest season. Empty unless the totals add up."""
+    line = hero_line(profile)
+    if line['kind'] != 'combined':
+        return ''
+    label = 'playoffs' if line['competition'] == 'playoffs' else 'season'
+    teams = line['teams']
+    if str(teams).endswith('teams'):
+        where = f'across {teams}'
+    else:
+        where = 'with the ' + str(teams).replace(' and ', ' and the ')
+    return (
+        f'In the {line["year"]} {label} she averaged {line["pts"]} points, '
+        f'{line["reb"]} rebounds and {line["ast"]} assists in {line["games"]} games {where}.'
+    )
 
 def validate(profile, slug):
     if not SLUG.fullmatch(slug) or profile.get('slug')!=slug:
@@ -1041,6 +1204,88 @@ def stat_notes_html(slug, root=None) -> str:
     except (OSError, ValueError, AttributeError):
         return ''
     return ''.join(f'<p class="finals-record">{note}</p>' for note in notes if isinstance(note, str) and note.strip())
+
+
+_WNBA_PLAYER_URL = re.compile(r'https://www\.wnba\.com/player/\d+/[a-z0-9-]+')
+_WNBA_URLS: dict[str, dict[str, str]] = {}
+
+
+def _stored_wnba_urls(root) -> dict[str, str]:
+    """Official league player pages already stored in this repo, keyed by slug."""
+    key = str(Path(root).resolve())
+    if key in _WNBA_URLS:
+        return _WNBA_URLS[key]
+    found: dict[str, str] = {}
+
+    def take(slug: str, url: str) -> None:
+        slug = (slug or '').strip().strip('/')
+        url = _WNBA_PLAYER_URL.search(url or '')
+        if not slug or not url:
+            return
+        clean = re.sub(r'/(?:bio|profile)$', '', url.group(0))
+        found.setdefault(slug, clean)
+
+    base = Path(root)
+    for folder in (base / 'data' / 'wnba' / 'faq', base / 'data' / 'wnba' / 'career-sources'):
+        if not folder.is_dir():
+            continue
+        for path in folder.glob('*.json'):
+            try:
+                text = path.read_text(encoding='utf-8')
+            except OSError:
+                continue
+            for match in _WNBA_PLAYER_URL.finditer(text):
+                take(path.stem, match.group(0))
+    draft = base / 'data' / 'wnba' / 'player-draft.json'
+    index_path = base / 'data' / 'wnba' / 'players-index.json'
+    if draft.is_file() and index_path.is_file():
+        try:
+            players = json.loads(draft.read_text(encoding='utf-8')).get('players') or {}
+            index = json.loads(index_path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            players, index = {}, {}
+        by_name = {}
+        for entry in index.get('players') or []:
+            name = str(entry.get('name') or '').strip().casefold()
+            slug = str(entry.get('slug') or '')
+            if name and slug and name not in by_name:
+                by_name[name] = slug
+        for row in players.values():
+            if not isinstance(row, dict):
+                continue
+            slug = by_name.get(str(row.get('player') or '').strip().casefold())
+            if slug and row.get('source'):
+                take(slug, str(row.get('source')))
+    _WNBA_URLS[key] = found
+    return found
+
+
+def official_career_url(profile, root=None) -> str:
+    """League player page when this repo already stored one. Empty otherwise."""
+    if root is None or not isinstance(profile, dict):
+        return ''
+    slug = str(profile.get('slug') or '')
+    if not slug:
+        return ''
+    return _stored_wnba_urls(root).get(slug, '')
+
+
+def coverage_note_html(profile, root=None) -> str:
+    """Say the page starts in 2008 when the checked career started earlier.
+
+    The link is an official WNBA.com player page already stored for this slug.
+    The season rows are not labeled a career total.
+    """
+    if not verified_pre2008_career(profile, root):
+        return ''
+    href = official_career_url(profile, root)
+    link = ''
+    if href:
+        link = f' <a href="{esc(href)}" target="_blank" rel="noopener">Official career record</a>.'
+    return (
+        '<p class="muted small coverage-note">FCB season data begins in 2008.'
+        f'{link} These rows are not a career total.</p>'
+    )
 
 
 def partial_record_html(profile, root=None) -> str:
@@ -2109,7 +2354,8 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         )
         statshtml = (
             f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>'
-            f'{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p></section>'
+            f'{controls}{coverage_note_html(profile, root)}{tablehtml}'
+            f'<p id="stats-empty" class="muted" hidden>No records for this selection.</p></section>'
         )
     else:
         statshtml = ''
@@ -2220,8 +2466,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     state='Listed active' if active else 'Inactive player'
     position={'G':'Guard','F':'Forward','C':'Center'}.get(fields.get('position'),fields.get('position',''))
     number=fields.get('jersey_number','')
-    note=(f'{row["season"]} · '+('regular season' if row['season_type']==2 else 'playoffs')) if row else 'No single season line for the latest year'
-    metrics=''.join(f'<div class="metric"><strong>{row_average(row, k)}</strong><span>{label}<small>PER GAME</small></span></div>' for k,label in [('pts','POINTS'),('ast','ASSISTS'),('reb','REBOUNDS')])
+    metrics = hero_metrics_html(profile)
     meta=' / '.join(esc(x) for x in [('#'+number) if number else '',position,tname(team) if team else ''] if x)
     gap = season_cross_check(profile, root)
     record_label = 'Verified seasons' if gap['missing'] or gap['games'] else 'Records available'
@@ -2237,6 +2482,9 @@ def profile_page(profile, root=None, linking=None, menu=None):
         intro=f'{name}: WNBA player statistics and available season records from 2008 onward.'
     if row:
         intro=f'{name} averaged {row_average(row, "pts")} points, {row_average(row, "reb")} rebounds and {row_average(row, "ast")} assists in {row["games_played"]} games in the {row["season"]} '+('regular season.' if row['season_type']==2 else 'playoffs.') if all(isinstance(row.get(k),(int,float)) for k in ('pts','reb','ast','games_played')) else intro
+    combined = combined_season_sentence(profile)
+    if combined and combined not in intro:
+        intro = f'{intro} {combined}'.strip()
     overview=f'<p>{esc(intro)}</p>'
     if team:
         team_label=links.linked_team_name(tname(team), linking, budget)
@@ -2264,7 +2512,8 @@ def profile_page(profile, root=None, linking=None, menu=None):
         opts=''.join(f'<option value="{y}">{y}</option>' for y in sorted(years,reverse=True))
         controls=f'<div class="filters js-only"><div class="segmented" role="group" aria-label="Competition">{radios}<button type="button" data-kind="all" aria-pressed="true">Both</button></div><label>Season <select id="season-filter"><option value="all">All seasons</option>{opts}</select></label></div>'
     partial = partial_record_html(profile, root)
-    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p>{stat_notes_html(slug, root)}</section>' if tablehtml else ''
+    coverage = coverage_note_html(profile, root)
+    statshtml=f'<section class="section" id="stats"><p class="eyebrow">The numbers</p><h2>Season-by-season stats</h2>{controls}{coverage}{tablehtml}<p id="stats-empty" class="muted" hidden>No records for this selection.</p><p class="muted small">Statistics since 2008. Each season stays with the team she played for that year. These figures are season averages, not a full career total.</p>{stat_notes_html(slug, root)}</section>' if tablehtml else ''
     all_teams=[]
     for r in sorted(stats,key=lambda r:-r['season']):
         item=(r['season'],tname(r.get('team')))
@@ -2298,7 +2547,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     if timeline: nav_links.append('<a href="#teams">Teams</a>')
     nav_links.append('<a href="#sources">Sources</a>')
     nav=''.join(nav_links)
-    hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span> <b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1>{summary_html}{updated_html}<p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div><div class="hero-stats">{metrics}<div class="stat-context"><b>{esc(note)}</b><span>Per-game averages</span></div></div></section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
+    hero=f'''<div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/wnba/">Players</a><span>/</span><span>{esc(name)}</span></div><section class="hero" aria-labelledby="player-name"><div class="hero-main"><div class="hero-copy"><div class="hero-kicker"><span class="status">{state}</span><span>WNBA PLAYER PROFILE</span></div><h1 id="player-name"><span>{esc(p.get('first_name'))}</span> <b class="gradient">{esc(p.get('last_name') or p.get('first_name'))}</b></h1>{summary_html}{updated_html}<p class="hero-meta">{meta}</p><div class="actions">{('<a class="button" href="#stats">View stats <span>→</span></a>' if stats else '<a class="button" href="#overview">Player overview →</a>')}<button type="button" id="share" class="text-button js-only">Share ↑</button><span id="share-status" role="status"></span></div></div><div class="hero-art" aria-hidden="true"><span class="ghost-number">{esc(number or 'FCB')}</span><div class="number-card"><span>{esc(p.get('last_name') or name)}</span><strong class="gradient">{esc(number or 'FCB')}</strong></div><small>FULL COURT BUCKETS · PLAYER ARCHIVE</small></div></div>{metrics}</section><nav class="section-nav" aria-label="On this page">{nav}</nav>'''
     faq_html, faq_entity = faq_section(profile, root)
     numbers_note = 'No season records are listed on this page yet. A missing number is shown as a dash and is not turned into zero.' if not stats else 'Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.'
     archive_line = 'Season records are not on this page yet.' if not stats else 'Explore the available records from 2008 onward.'
