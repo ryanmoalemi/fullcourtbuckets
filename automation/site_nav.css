@@ -281,5 +281,11 @@ html body .article .table-wrap,html body .article .fcb-table-wrap{position:relat
 html body .article .table-wrap table,html body .article .fcb-table-wrap table{background:transparent!important}
 html body .article .table-wrap td,html body .article .table-wrap th{white-space:nowrap}
 html body .article .table-wrap td:last-child,html body .article .table-wrap th:last-child{white-space:normal}
-html body .article .table-scroll-hint{display:none;font-size:12px;color:#6b665e;margin:0 0 4px;text-align:right}
+html body .table-scroll-hint{display:none;font-size:12px;color:#6b665e;margin:0 0 4px;text-align:right}
 html body .article .table-scroll-hint.is-on{display:block}
+/* Phone data tables: sticky first column, and a scroll hint on .table-scroll. Desktop layout stays as it is. */
+@media (max-width:900px){
+html body .table-scroll-hint.is-on{display:block}
+html body .article .table-wrap th:first-child,html body .article .table-wrap td:first-child,html body .article .fcb-table-wrap th:first-child,html body .article .fcb-table-wrap td:first-child{position:sticky;left:0;z-index:2;background:#fff}
+html body .article .table-wrap thead th:first-child,html body .article .fcb-table-wrap thead th:first-child{z-index:3}
+}
