@@ -442,10 +442,21 @@ def evidence_cell(r: dict) -> str:
     return src_link(r['controlling_owner_source_url']) + tag
 
 
-def governor_cell(r: dict) -> str:
-    if r['governor'] == 'not yet sourced':
-        return 'Not yet sourced'
-    return esc(r['governor']) + (' ' + src_link(r['governor_source_url']) if r.get('governor_source_url') else '')
+def governor_sourced(r: dict) -> bool:
+    text = str(r.get('governor') or '').strip()
+    return bool(text) and text.casefold() != 'not yet sourced'
+
+
+def governor_detail(r: dict) -> str:
+    """Sourced governor only, with the check date and the document."""
+    if not governor_sourced(r):
+        return ''
+    as_of = human_date(r.get('last_verified_at') or DATA_THROUGH)
+    source = src_link(r['governor_source_url']) if r.get('governor_source_url') else ''
+    extra = f' As of {esc(as_of)}.'
+    if source:
+        extra += ' ' + source
+    return esc(r['governor']) + extra
 
 
 def initials(name: str) -> str:
@@ -487,10 +498,10 @@ def ownership_section(data: dict) -> str:
         ev = evidence_cell(r)
         flt = 'shared' if r['nba_relationship_current'].startswith('shared') else 'other'
         rows.append((r['team_id'], flt, [
-            team_link(r['team']), owner_cell(data, r), governor_cell(r),
+            team_link(r['team']), owner_cell(data, r),
             esc(nba_short(r['nba_relationship_current'])), esc(first_effective(data, r['team'])), f'<span class="ow-ev">{ev}</span>',
         ]))
-    t = table(['Team', 'Controlling owner/group', 'Team governor', f'NBA relationship ({human_date(DATA_THROUGH)})', 'Effective since', 'Evidence'], rows)
+    t = table(['Team', 'Controlling owner/group', f'NBA relationship ({human_date(DATA_THROUGH)})', 'Effective since', 'Evidence'], rows)
     return filter_box('ownership', 'ownership', [('shared', 'Shares control with an NBA team'), ('other', 'No NBA shared control')], t, 'ownership.csv')
 
 
@@ -681,6 +692,7 @@ def profiles(data: dict) -> str:
         f_txt = '; '.join(f'<a href="#{esc(p["project_id"])}">{esc(p["project_name"])}</a> ({esc(p["delivery_status"])})' for p in fac) or 'None announced'
         ev = evidence_cell(o)
         page = f'<a href="/wnba/teams/{slug}/">{esc(team)} team page</a>' if team in TEAM_SLUGS else ''
+        governor = f'<dt>Governor</dt><dd>{governor_detail(o)}</dd>' if governor_sourced(o) else ''
         out.append(
             f'<section class="ow-profile" id="{esc(slug)}"><details class="ow-collapse" open><summary><h3>{esc(o["team"])}</h3>'
             f'<span class="ow-sum">{esc(o["controlling_owner"])}</span></summary><dl>'
@@ -688,7 +700,7 @@ def profiles(data: dict) -> str:
             f'<dt>What the source says</dt><dd>{esc(o["owner_claim_as_described"])}{(" " + esc(o["owner_claim_note"])) if o["owner_claim_note"] else ""}</dd>'
             f'<dt>Current practice arrangement</dt><dd>{esc(o["practice_arrangement"])}</dd>'
             f'<dt>Documented entities</dt><dd>{ent_txt}</dd>'
-            f'<dt>Governor</dt><dd>{governor_cell(o)}</dd>'
+            f'{governor}'
             f'<dt>Public investors</dt><dd>{named} (<a href="?investors_q={esc(team.lower())}#investors">filter</a>)</dd>'
             f'<dt>NBA relationship</dt><dd>{esc(nba_short(o["nba_relationship_current"]))}</dd>'
             f'<dt>Valuation estimates</dt><dd>{v_txt}</dd>'
@@ -794,7 +806,8 @@ def body(data: dict, s: dict) -> str:
         'They measure purchasing power, not returns.</li>'
         '<li><strong>Valuations:</strong> CNBC (May 4, 2026) and Sportico (May 1, 2026) estimates, each credited to its publisher.</li>'
         + coverage_li
-        + f'<li><strong>Governors:</strong> {s["governors_sourced"]} of {s["teams"]} sourced ({esc(", ".join(gov_teams))}); the rest are not yet sourced.</li>'
+        + f'<li><strong>Governors:</strong> {s["governors_sourced"]} of {s["teams"]} sourced ({esc(", ".join(gov_teams))}). '
+        'That name is in the team profile, with the check date and the source. The ownership table leaves the column out because the other rows were not yet sourced.</li>'
         '<li><strong>Not yet sourced:</strong> defunct franchises and the transactions listed as known gaps.</li></ul>'
         + photo_credits(data)
         + coverage_table(data)
@@ -885,7 +898,10 @@ def shell_parts() -> tuple[str, str, str]:
         f'\n<meta name="twitter:title" content="{esc(H1)}">\n<meta name="twitter:description" content="{esc(DESCRIPTION)}">'
     )
     head = head.replace(f'<title>{esc(TITLE)}</title>', f'<title>{esc(TITLE)}</title>{meta}', 1)
-    body_start = shell.index('<main class="page">')
+    main_tag = re.search(r'<main\b[^>]*>', shell)
+    if not main_tag:
+        raise SystemExit('Owners shell is missing <main>.')
+    body_start = main_tag.start()
     top = shell[head_end:body_start]
     main_end = shell.index('</main>')
     bottom = shell[main_end + len('</main>'):]
@@ -900,7 +916,7 @@ def render(data: dict, s: dict) -> str:
     head, top, bottom = shell_parts()
     head += f'<style id="{STYLE_ID}">{PAGE_CSS}</style>{jsonld(data)}'
     main = (
-        '<main class="page"><div class="standings-shell"><div class="page-header">'
+        '<main id="content" class="page"><div class="standings-shell"><div class="page-header">'
         '<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/wnba/">WNBA</a> › <span>Owners</span></nav>'
         '<p class="eyebrow">WNBA / Data &amp; research</p>'
         f'<h1>{esc(H1)}</h1>'

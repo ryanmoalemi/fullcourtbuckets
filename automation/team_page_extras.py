@@ -101,6 +101,17 @@ def dynamic(tag: str, kind: str, source: str, updated: str, body: str, attrs: st
     )
 
 
+def substantive_day(root, team_name: str) -> str:
+    """Latest day this team page's record or schedule actually describes."""
+    days = [day for day in (standings_day(root), facts_checked(root)) if day]
+    if root is not None and team_name:
+        for row in team_schedule(root, team_name):
+            day = str((row or {}).get('date') or '')[:10]
+            if len(day) == 10 and day[4] == '-' and day[7] == '-':
+                days.append(day)
+    return max(days) if days else ''
+
+
 def standings_day(root) -> str:
     if root is None:
         return ''
@@ -460,6 +471,7 @@ def playoff_html(root, slot: dict) -> str:
             f'<td>{esc(game.get("time") or "")}</td><td>{esc(game.get("tv") or "")}</td></tr>'
         )
     last = max([g.get('date') or '' for g, *_ in played] + [''])
+    checked = f'<p class="muted small">Source check: results through {esc(last)}.</p>' if last else ''
     table = (
         '<div class="table-scroll" role="region" tabindex="0" aria-label="2026 playoff games">'
         '<table><caption>2026 playoff results and upcoming games. Scores from the site\'s committed box scores; '
@@ -468,7 +480,7 @@ def playoff_html(root, slot: dict) -> str:
         '<th scope="col">Links or TV</th></tr></thead>'
         f'<tbody>{"".join(rows)}</tbody></table></div>'
     )
-    body = dynamic('div', 'team-schedule', 'data/games data/finals-schedule.json', last, table)
+    body = dynamic('div', 'team-schedule', 'data/games data/finals-schedule.json', last, checked + table)
     return ('<section class="section" id="schedule"><p class="eyebrow">2026 postseason</p>'
             f'<h2>Playoff results and schedule</h2>{body}</section>')
 
@@ -786,6 +798,8 @@ def team_schedule(root, team: str) -> list[dict]:
 
 
 def schedule_html(root, slot: dict) -> str:
+    if root is None:
+        return ''
     games = team_schedule(root, slot['full_name'])
     if not games:
         return ''

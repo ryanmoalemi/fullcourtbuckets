@@ -36,10 +36,10 @@ PUBLISHED = '2026-10-20'
 import os as _os
 from zoneinfo import ZoneInfo as _ZI
 DATA_THROUGH = _os.environ.get('WTW_DATA_THROUGH') or dt.datetime.now(_ZI('America/Los_Angeles')).date().isoformat()
-# Temporary Finals headline (Oct 2026). To revert after the Finals, set FINALS_HEADLINE = None.
-FINALS_HEADLINE = 'Where to Watch the 2026 WNBA Finals: Bars That Show the Games'
-H1 = FINALS_HEADLINE or 'Where to Watch WNBA Games: Bars That Show the Games'
-TITLE = FINALS_HEADLINE or 'Where to watch WNBA games: bars that show the games | Full Court Buckets'
+# Evergreen directory. The Finals headline was retired after the series.
+FINALS_HEADLINE = None
+H1 = 'Where to watch WNBA games: bars by city'
+TITLE = 'Where to watch WNBA games: bars by city guide'
 NAV_LABEL = 'Where to watch WNBA games'
 CONTACT = 'ryan@fullcourtbuckets.com'
 NOTICE = ('These venues have advertised or confirmed WNBA screenings, but may not show every game. Contact the venue '
@@ -53,9 +53,15 @@ TEAM_COLORS = {
     'Chicago Sky': '#2b6cb0', 'Washington Mystics': '#0c2340', 'Las Vegas Aces': '#5a5a5a',
     'Dallas Wings': '#1d6fb8', 'Connecticut Sun': '#c4511f', 'Portland Fire': '#b3261e',
 }
-STATES = {'CA': 'California', 'NY': 'New York', 'IN': 'Indiana', 'WA': 'Washington', 'GA': 'Georgia',
-          'MN': 'Minnesota', 'CO': 'Colorado', 'AZ': 'Arizona', 'ON': 'Ontario', 'FL': 'Florida', 'IL': 'Illinois',
-          'DC': 'District of Columbia', 'OR': 'Oregon', 'TX': 'Texas', 'NV': 'Nevada', 'CT': 'Connecticut'}
+STATES = {
+    'AL': 'Alabama', 'AZ': 'Arizona', 'CA': 'California', 'CO': 'Colorado', 'CT': 'Connecticut',
+    'DC': 'District of Columbia', 'FL': 'Florida', 'GA': 'Georgia', 'IA': 'Iowa', 'IL': 'Illinois',
+    'IN': 'Indiana', 'KY': 'Kentucky', 'LA': 'Louisiana', 'MA': 'Massachusetts', 'MD': 'Maryland',
+    'MI': 'Michigan', 'MN': 'Minnesota', 'MO': 'Missouri', 'NC': 'North Carolina', 'NE': 'Nebraska',
+    'NJ': 'New Jersey', 'NV': 'Nevada', 'NY': 'New York', 'OH': 'Ohio', 'ON': 'Ontario',
+    'OR': 'Oregon', 'PA': 'Pennsylvania', 'TN': 'Tennessee', 'TX': 'Texas', 'VA': 'Virginia',
+    'WA': 'Washington', 'WI': 'Wisconsin', 'England': 'England',
+}
 NO_TEAM = 'No local team'
 esc = html.escape
 
@@ -128,6 +134,9 @@ var rows=[].slice.call(document.querySelectorAll('.ww-row')),items=[],timer=null
 rows.forEach(function(r,i){var n=r.querySelector('.ww-name'),l=r.querySelector('.ww-loc');r._i=i;r._n=n?n.textContent:'';r._l=l?l.textContent:'';
 items.push({t:r._n,w:r._l,k:r.dataset.team||'',b:r.dataset.q||'',_r:i});});
 var idx=FS.createIndex(items);
+var city=document.getElementById('ww-city'),team=document.getElementById('ww-team'),check=document.getElementById('ww-check');
+function filtersOk(r){return (!city||!city.value||r.dataset.place===city.value)&&(!team||!team.value||r.dataset.team===team.value)&&(!check||!check.value||r.dataset.check===check.value);}
+function share(){var p=new URLSearchParams();if(q.value.trim())p.set('q',q.value.trim());if(city&&city.value)p.set('city',city.value);if(team&&team.value)p.set('team',team.value);if(check&&check.value)p.set('check',check.value);var s=p.toString();history.replaceState(null,'',s?(location.pathname+'?'+s):location.pathname);}
 function vis(){return rows.filter(function(r){return !r.hidden&&!r.closest('[hidden]');});}
 function setActive(i){var v=vis();rows.forEach(function(r){r.classList.remove('is-active');});if(!v.length){active=-1;return;}
 if(i<0)i=v.length-1;if(i>=v.length)i=0;active=i;v[i].classList.add('is-active');v[i].scrollIntoView({block:'nearest'});}
@@ -135,17 +144,23 @@ function run(){var query=q.value.trim(),n=0,score={},terms=[];active=-1;dym.hidd
 if(query){var out=idx.search(query),res=out.results,clean=res.filter(function(x){return !x.hits.some(function(h){return h[2]==='f';});});
 if(clean.length)res=clean;terms=out.terms;res.forEach(function(x){score[x.doc.item._r]=x.score;});
 if(out.suggestion&&FS.fold(out.suggestion)!==FS.fold(query)){var a=dym.querySelector('a');a.textContent=out.suggestion;dym.hidden=false;}}
-rows.forEach(function(r){var ok=!query||r._i in score;r.hidden=!ok;if(ok)n++;r.classList.remove('is-active');
+rows.forEach(function(r){var ok=(!query||r._i in score)&&filtersOk(r);r.hidden=!ok;if(ok)n++;r.classList.remove('is-active');
 var nm=r.querySelector('.ww-name'),lc=r.querySelector('.ww-loc');if(nm)FS.highlight(nm,r._n,ok?terms:[]);if(lc)FS.highlight(lc,r._l,ok?terms:[]);});
 document.querySelectorAll('.ww-city ul,.ww-city ol').forEach(function(u){var rs=[].slice.call(u.children).filter(function(x){return x.classList.contains('ww-row');});
 rs.sort(function(x,y){return query?((score[y._i]||0)-(score[x._i]||0))||x._i-y._i:x._i-y._i;});rs.forEach(function(x){u.appendChild(x);});});
 document.querySelectorAll('.ww-city,.ww-state').forEach(function(d){d.hidden=!d.querySelector('.ww-row:not([hidden])');});
-c.textContent=query?(n+' of '+rows.length+' venues match \u201c'+query+'\u201d'):('Showing all '+n+' venues');c.classList.toggle('is-on',!!query);e.style.display=n?'none':'block';if(!n&&query)e.textContent='No venues match \u201c'+query+'\u201d. Try a city, neighborhood or bar name, or clear the search.';}
+c.textContent=query?(n+' of '+rows.length+' venues match \u201c'+query+'\u201d'):('Showing '+n+' venues');c.classList.toggle('is-on',!!query||(city&&city.value)||(team&&team.value)||(check&&check.value));e.style.display=n?'none':'block';if(!n)e.textContent='No venues match. Try a city, team or bar name, or clear the filters.';share();}
 function soon(){clearTimeout(timer);timer=setTimeout(run,60);}['input','keyup','compositionend','change','search'].forEach(function(k){q.addEventListener(k,soon);});
 q.addEventListener('keydown',function(ev){if(ev.key==='ArrowDown'){ev.preventDefault();setActive(active+1);}else if(ev.key==='ArrowUp'){ev.preventDefault();setActive(active-1);}
 else if(ev.key==='Escape'){ev.preventDefault();q.value='';run();}else if(ev.key==='Enter'){ev.preventDefault();var v=vis(),r=v[active<0?0:active];if(r){var l=r.querySelector('a');r.scrollIntoView({block:'center'});if(l)l.focus({preventScroll:true});}}});
 dym.querySelector('a').addEventListener('click',function(ev){ev.preventDefault();q.value=this.textContent;run();q.focus();});
-if(q.value.trim())run();}
+var start=new URLSearchParams(location.search);
+if(start.get('q'))q.value=start.get('q');
+if(city&&start.get('city'))city.value=start.get('city');
+if(team&&start.get('team'))team.value=start.get('team');
+if(check&&start.get('check'))check.value=start.get('check');
+[city,team,check].forEach(function(el){if(el)el.addEventListener('change',run);});
+if(q.value.trim()||(city&&city.value)||(team&&team.value)||(check&&check.value))run();}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();})();'''
 
 
@@ -272,15 +287,25 @@ def tag_text(r: dict) -> str:
     return note[:1].upper() + note[1:] if wants_to_show(r) else 'Shows WNBA games'
 
 
+def event_only(r: dict) -> bool:
+    """A confirmation that names a Finals or single-game party, not the season."""
+    note = (r.get('games_note') or '').casefold()
+    if not note or 'every' in note:
+        return False
+    return any(token in note for token in ('finals', 'watch party', 'game 7', 'game 1', 'playoff'))
+
+
 def verification(r: dict) -> str:
+    suffix = ' Event-only confirmation.' if event_only(r) else ''
     if r.get('verification_type') == 'staff_reply':
         note = (r.get('games_note') or '').strip()
         if wants_to_show(r):
-            return f'Staff replied on {human(r["verification_date"])}. {esc(note[:1].upper() + note[1:])}.'
+            return f'Staff replied on {human(r["verification_date"])}. {esc(note[:1].upper() + note[1:])}.{suffix}'
         line = f'Confirmed with staff on {human(r["verification_date"])}'
-        return f'{line}. Shows {esc(note)}.' if note else line
+        text = f'{line}. Shows {esc(note)}.' if note else line
+        return text + suffix
     return (f'Source: <a href="{esc(r["source_url"])}" rel="nofollow noopener" target="_blank">{esc(r["source_name"])}</a>'
-            f' (accessed {human(r["verification_date"])})')
+            f' (accessed {human(r["verification_date"])})') + suffix
 
 
 def quote_html(r: dict) -> str:
@@ -311,8 +336,12 @@ def row_html(r: dict) -> str:
         btns.append(f'<a class="btn" href="tel:{tel(r["phone"])}">Call</a>')
     area = ', '.join(x for x in (r['street'], r['city'], r['state']) if x)
     team = '' if r['team_market'] == NO_TEAM else f'<p class="ww-team">Team market: {esc(r["team_market"])}</p>'
-    hay = ' '.join([r['name'], r['street'], r['city'], r['state'], STATES.get(r['state'], ''), r['team_market']]).lower()
-    return (f'<li class="ww-row" data-team="{esc(r["team_market"])}" data-q="{esc(hay)}">'
+    state_name = STATES.get(r['state'], r['state'])
+    check = 'event' if event_only(r) else ('staff' if r.get('verification_type') == 'staff_reply' else 'source')
+    hay = ' '.join([r['name'], r['street'], r['city'], r['state'], state_name, r['team_market']]).lower()
+    place = f'{r["city"]}|{state_name}'
+    return (f'<li class="ww-row" data-team="{esc(r["team_market"])}" data-place="{esc(place)}" '
+            f'data-state="{esc(state_name)}" data-check="{check}" data-q="{esc(hay)}">'
             + logo_html(r, color) +
             f'<div class="ww-body"><p class="ww-name">{esc(r["name"])}</p><p class="ww-loc">{esc(area)}</p>{team}'
             f'<p class="ww-tag">{esc(tag_text(r))}</p><p class="ww-ver">{verification(r)}</p>{quote_html(r)}'
@@ -343,8 +372,11 @@ def stats(rows: list[dict]) -> dict:
 
 
 def description(s: dict) -> str:
-    return (f'{s["venues"]} bars and restaurants in {s["cities"]} U.S. and Canadian cities that show WNBA games, '
-            'from official team watch-party lists, venue pages and venue confirmations. Search by city.')
+    text = (f'{s["venues"]} bars in {s["cities"]} U.S. and Canadian cities that show WNBA games, '
+            'from team watch-party lists, venue pages and staff replies. Search by city.')
+    if len(text) > 160:
+        raise SystemExit(f'Where-to-watch description is {len(text)} characters.')
+    return text
 
 
 FAQ = [
@@ -429,11 +461,32 @@ def shell_parts(s: dict) -> tuple[str, str, str]:
             f'\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{esc(H1)}">'
             f'\n<meta name="twitter:description" content="{d}">\n<meta name="twitter:image" content="{OG_URL}">')
     head = head.replace(f'<title>{esc(TITLE)}</title>', f'<title>{esc(TITLE)}</title>{meta}', 1)
-    body_start = shell.index('<main class="page">')
+    main_tag = re.search(r'<main\b[^>]*>', shell)
+    if not main_tag:
+        raise SystemExit('Where-to-watch shell is missing <main>.')
+    body_start = main_tag.start()
     top = shell[head_end:body_start]
     bottom = shell[shell.index('</main>') + len('</main>'):]
     bottom = re.sub(r'<script>\s*\(function \(\) \{.*?</script>', '', bottom, flags=re.S)
     return head, top, bottom
+
+
+def filter_selects(rows: list[dict]) -> str:
+    places = sorted({(r['city'], STATES.get(r['state'], r['state'])) for r in rows})
+    city_opts = ''.join(
+        f'<option value="{esc(city)}|{esc(state)}">{esc(city)}, {esc(state)}</option>'
+        for city, state in places
+    )
+    teams = sorted({r['team_market'] for r in rows if r['team_market'] != NO_TEAM})
+    team_opts = ''.join(f'<option value="{esc(team)}">{esc(team)}</option>' for team in teams)
+    return (
+        f'<label class="ww-sr" for="ww-city">City</label><select id="ww-city"><option value="">All cities</option>{city_opts}</select>'
+        f'<label class="ww-sr" for="ww-team">Team</label><select id="ww-team"><option value="">All teams</option>{team_opts}</select>'
+        '<label class="ww-sr" for="ww-check">Verification</label><select id="ww-check">'
+        '<option value="">Any confirmation</option><option value="staff">Confirmed with staff</option>'
+        '<option value="source">From a source page</option><option value="event">Event-only confirmation</option>'
+        '</select>'
+    )
 
 
 def render(rows: list[dict]) -> str:
@@ -446,7 +499,7 @@ def render(rows: list[dict]) -> str:
         opts += f'<option value="{NO_TEAM}">Other cities, no local team ({others})</option>'
     faq = ''.join(f'<h3>{esc(q)}</h3><p>{a}</p>' for q, a in FAQ)
     main = (
-        '<main class="page ww-page"><div class="standings-shell ww-wrap"><div class="page-header">'
+        '<main id="content" class="page ww-page"><div class="standings-shell ww-wrap"><div class="page-header">'
         '<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/wnba/">WNBA</a> › <span>Where to watch</span></nav>'
         '<p class="eyebrow">WNBA / Data &amp; research</p>'
         f'<h1>{esc(H1)}</h1>'
@@ -458,7 +511,10 @@ def render(rows: list[dict]) -> str:
         f'<div class="ww-notice ww-notice-top" role="note"><strong>Check before you go:</strong> {NOTICE}</div>'
         '<p class="ww-notice-short"><strong>Check before you go:</strong> call ahead to confirm your game. <a href="#check-before-you-go">Details</a></p>'
         '<div class="ww-controls" data-fcb-data-table><label class="ww-sr" for="ww-q">Search venues</label>'
-        '<input id="ww-q" type="search" placeholder="Search bars, neighborhoods or cities..." autocomplete="off"><p class="ss-dym ww-dym" id="ww-dym" hidden>Did you mean <a href="#"></a>?</p>'
+        '<input id="ww-q" type="search" placeholder="Search bars, neighborhoods or cities..." autocomplete="off">'
+        f'{filter_selects(rows)}'
+        f'<a class="ww-dl" href="{PATH}{CSV_NAME}" download>Download CSV</a>'
+        '<p class="ss-dym ww-dym" id="ww-dym" hidden>Did you mean <a href="#"></a>?</p>'
         f'<span class="ww-count" id="ww-c" aria-live="polite">Showing {s["venues"]} venues</span></div>'
         f'<div class="ww-dir" id="ww-dir">{directory(rows)}'
         '<p class="ww-empty" id="ww-e">No venues match. Try a city, neighborhood or bar name, or clear the search.</p>'

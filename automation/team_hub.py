@@ -275,11 +275,36 @@ def conference_group(label: str) -> str:
     return ''
 
 
-def conference_label(slot: dict, extra: dict) -> str:
+def standings_conferences(root: Path) -> dict[str, str]:
+    """Full conference name from the season standings table, keyed by team name."""
+    path = root / 'api' / 'wnba-standings'
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding='utf-8-sig'))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    found = {}
+    for team in data.get('teams') or []:
+        if not isinstance(team, dict):
+            continue
+        name = team_names.public_name(str(team.get('name') or '').strip())
+        group = conference_group(str(team.get('conference') or ''))
+        if name and group and name not in found:
+            found[name] = group
+    return found
+
+
+def conference_label(slot: dict, extra: dict, standings: dict | None = None) -> str:
+    """Conference from the team record, then the season standings table."""
     stored = str(slot.get('conference') or '').strip()
-    if stored:
-        return stored
-    return str((extra or {}).get('conference') or '').strip()
+    if conference_group(stored):
+        return conference_group(stored)
+    saved = (standings or {}).get(slot.get('full_name') or '')
+    if saved:
+        return saved
+    fallback = str((extra or {}).get('conference') or '').strip()
+    return conference_group(fallback) or fallback
 
 
 def record_line(slot: dict, extra: dict, records: dict[str, str], standings_date: str) -> str:
@@ -360,12 +385,12 @@ def _card(slot: dict, city: str, facts: list[str]) -> str:
     )
 
 
-def grouped(slots: list[dict], extras: dict, records: dict[str, str], standings_date: str, cities: dict[int, str]):
+def grouped(slots: list[dict], extras: dict, records: dict[str, str], standings_date: str, cities: dict[int, str], standings: dict | None = None):
     buckets = {name: [] for name in GROUP_ORDER}
     loose = []
     for slot in slots:
         extra = extras.get(slot['slug']) or {}
-        label = conference_label(slot, extra)
+        label = conference_label(slot, extra, standings)
         group = conference_group(label)
         entry = {
             'slot': slot,
@@ -392,10 +417,11 @@ def hub_parts(root: Path, linking: dict) -> tuple[str, dict, str, str]:
     slots = sorted(linking['by_id'].values(), key=lambda slot: slot['full_name'].casefold())
     extras = expansion_facts(root)
     records, standings_date = standings_index(root)
+    conferences = standings_conferences(root)
     cities = cities_by_id(root)
     sections = []
     listed = []
-    for heading, rows in grouped(slots, extras, records, standings_date, cities):
+    for heading, rows in grouped(slots, extras, records, standings_date, cities, conferences):
         cards = ''.join(_card(row['slot'], row['city'], row['facts']) for row in rows)
         title = f'<h2>{esc(heading)}</h2>' if heading else ''
         sections.append(f'<section class="team-group">{title}<ul class="team-grid">{cards}</ul></section>')
