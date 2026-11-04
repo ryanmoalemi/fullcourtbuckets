@@ -1,6 +1,6 @@
-season,coach,regular_season_w,regular_season_l,win_pct,seed,playoff_result,coach_source
-2026,Chris DeMarco,26,18,.591,No. 8,Beat Minnesota 2-0 then lost to Atlanta 0-3,https://liberty.wnba.com/news/four-time-nba-champion-chris-demarco-named-new-york-liberty-head-coach
-2025,Sandy Brondello,27,17,.614,"No. 5, East",Not in this file,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach
-2024,Sandy Brondello,32,8,.800,"No. 1, East",Won the WNBA title per the Tempo release,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach
-2023,Sandy Brondello,32,8,.800,"No. 2, East",Not in this file,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach
-2022,Sandy Brondello,16,20,.444,"No. 7, East",Not in this file,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach
+season,coach,regular_season_w,regular_season_l,win_pct,seed,playoff_result,coach_source,playoff_source,standings_source
+2026,Chris DeMarco,26,18,.591,No. 8,Beat Minnesota 2-0 in the first round. Lost 3-0 to Atlanta in the semifinals.,https://liberty.wnba.com/news/four-time-nba-champion-chris-demarco-named-new-york-liberty-head-coach,https://www.wnba.com/playoffs/2026,https://www.wnba.com/standings?season=2026
+2025,Sandy Brondello,27,17,.614,No. 5,Lost 2-1 to Phoenix in the first round.,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach,https://www.wnba.com/playoffs/2025,https://www.wnba.com/standings?season=2025
+2024,Sandy Brondello,32,8,.800,No. 1,Beat Minnesota 3-2 in the Finals.,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach,https://www.wnba.com/playoffs/2024,https://www.wnba.com/standings?season=2024
+2023,Sandy Brondello,32,8,.800,No. 2,Lost 3-1 to Las Vegas in the Finals.,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach,https://www.wnba.com/playoffs/2023,https://www.wnba.com/standings?season=2023
+2022,Sandy Brondello,16,20,.444,No. 7,Lost 2-1 to Chicago in the first round.,https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach,https://www.wnba.com/game/chi-vs-nyl-1042200113,https://www.wnba.com/standings?season=2022

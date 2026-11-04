@@ -1,10 +1,10 @@
 ---
-title: "Liberty fire Chris DeMarco: only 3 WNBA coaches have lasted more than two seasons"
-seo_title: "2027 WNBA head coaches: only 3 past two seasons"
+title: "Cheryl Reeve has 17 seasons with the Lynx. Ten WNBA coaches have 16 combined"
+seo_title: "2027 WNBA head coaches ranked by tenure, led by Cheryl Reeve"
 slug: wnba-head-coaches-2027
 date: 2026-11-04
 category: news
-description: "Only 3 of 15 WNBA head coaches have lasted more than two seasons. New York and Los Angeles are vacant. Reeve, Hammon and Tibbetts are those three."
+description: "Cheryl Reeve has 17 seasons in Minnesota. Ten WNBA head coaches have 16 combined with their current teams. Full Court Buckets tracks all 15 jobs entering 2027."
 tags:
   - coaches
   - data
@@ -19,73 +19,91 @@ photo_credit: "Photo: John McClellan, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:Chris_DeMarco_(cropped).jpg"
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 focal_y: "center 30%"
-ticker: "Only 3 of 15 WNBA head coaches have lasted more than two seasons."
+ticker: "Cheryl Reeve has more seasons with the Lynx than 10 WNBA coaches have with their teams combined."
 data_table_first: true
 sortable_tables: true
 ---
 
-The [New York Liberty](/wnba/teams/new-york-liberty/) will not keep Chris DeMarco. Only 3 of 15 WNBA teams still have a head coach who has lasted more than two seasons.
+Chris DeMarco swept Cheryl Reeve’s top-seeded [Minnesota Lynx](/wnba/teams/minnesota-lynx/) in September. Five weeks later, the [New York Liberty](/wnba/teams/new-york-liberty/) fired him after one season. Of the 13 coaches still in place, ten have spent just one or two seasons with their current franchise.
 
-## Every WNBA head coach, Nov. 4, 2026
+## How the WNBA’s 15 coaching jobs break down
 
-Cheryl Reeve, [Becky Hammon](/wnba/becky-hammon/) and Nate Tibbetts are the three. New York and Los Angeles have no head coach on their WNBA.com team pages.
+Only three of the WNBA’s 15 franchises have a coach who has finished a third season on the job. Reeve has 17 in Minnesota, [Becky Hammon](/wnba/becky-hammon/) has five in Las Vegas and Nate Tibbetts has three in Phoenix.
 
-| Team | Head coach | Hire date | Seasons | Regular season | Win % | Playoff W-L | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| [Minnesota Lynx](/wnba/teams/minnesota-lynx/) | Cheryl Reeve | [Dec. 8, 2009](https://lynx.wnba.com/basketball-operations/cheryl-reeve) | 17 | 397-201 | .664 | 2026: 0-2. Earlier seasons are not in this file. | In place |
-| [Las Vegas Aces](/wnba/teams/las-vegas-aces/) | [Becky Hammon](/wnba/becky-hammon/) | [Dec. 31, 2021](https://www.wnba.com/news/las-vegas-announces-franchise-legend-becky-hammon-as-teams-head-coach) | 5 | 148-56 | .725 | 2026: 2-4. Earlier seasons are not in this file. | In place |
-| [Phoenix Mercury](/wnba/teams/phoenix-mercury/) | Nate Tibbetts | [Oct. 18, 2023](https://mercury.wnba.com/news/phoenix-mercury-name-nate-tibbetts-head-coach) | 3 | 62-66 | .484 | 2026: missed. 2024 and 2025 are not in this file. | In place |
-| [Atlanta Dream](/wnba/teams/atlanta-dream/) | Karl Smesko | [Nov. 13, 2024](https://www.wnba.com/news/atlanta-dream-hire-karl-smesko-as-head-coach) | 2 | 60-28 | .682 | 2026: 8-4. 2025 is not in this file. | In place |
-| [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) | Natalie Nakase | [Oct. 10, 2024](https://valkyries.wnba.com/news/golden-state-valkyries-announce-natalie-nakase-as-head-coach-20241010) | 2 | 55-33 | .625 | 2026: 9-4. 2025 is not in this file. | In place |
-| [Indiana Fever](/wnba/teams/indiana-fever/) | Stephanie White | [Nov. 1, 2024](https://www.wnba.com/news/indiana-fever-hire-stephanie-white-as-head-coach) | 2 | 52-36 | .591 | 2026: 1-2. 2025 is not in this file. | In place |
-| [Washington Mystics](/wnba/teams/washington-mystics/) | Sydney Johnson | [Dec. 23, 2024](https://www.wnba.com/news/washington-mystics-announce-new-leadership) | 2 | 44-44 | .500 | 0-2 | In place |
-| [Chicago Sky](/wnba/teams/chicago-sky/) | Tyler Marsh | [Nov. 3, 2024](https://www.wnba.com/news/chicago-sky-name-tyler-marsh-as-head-coach) | 2 | 26-62 | .295 | 0-0 | In place |
-| [Connecticut Sun](/wnba/teams/connecticut-sun/) | Rachid Meziane | [Dec. 4, 2024](https://www.wnba.com/news/rachid-meziane-named-connecticut-sun-head-coach) | 2 | 22-66 | .250 | 0-0 | In place |
-| [Dallas Wings](/wnba/teams/dallas-wings/) | Jose Fernandez | [Oct. 27, 2025](https://wings.wnba.com/news/jose-fernandez-named-head-coach) | 1 | 27-17 | .614 | 1-2 | In place |
-| [Toronto Tempo](/wnba/teams/toronto-tempo/) | Sandy Brondello | [Nov. 4, 2025](https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach) | 1 | 11-33 | .250 | 0-0 | In place |
-| [Portland Fire](/wnba/teams/portland-fire/) | Alex Sarama | [Oct. 17, 2025](https://fire.wnba.com/news/portland-fire-names-alex-sarama-as-head-coach) | 1 | 17-27 | .386 | 0-0 | In place |
-| [Seattle Storm](/wnba/teams/seattle-storm/) | Sonia Raman | [Oct. 28, 2025](https://storm.wnba.com/news/coach-sonia-raman) | 1 | 8-36 | .182 | 0-0 | In place |
-| [New York Liberty](/wnba/teams/new-york-liberty/) | Vacant | [Nov. 3, 2026](https://x.com/nyliberty/status/2117607590326644854) | 0 |  |  |  | Vacant since Nov. 3, 2026 |
-| [Los Angeles Sparks](/wnba/teams/los-angeles-sparks/) | Vacant | [Sept. 25, 2026](https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts) | 0 |  |  |  | Vacant since Sept. 25, 2026 |
+| Seasons with current franchise | Coaches | Combined seasons |
+| --- | --- | --- |
+| 17 | 1 | 17 |
+| 5 | 1 | 5 |
+| 3 | 1 | 3 |
+| 2 | 6 | 12 |
+| 1 | 4 | 4 |
 
-Source: hire dates are the dateline or publish date on the linked team or WNBA.com release. Regular-season wins and losses are that team's line on the [WNBA.com standings](https://www.wnba.com/standings) for each season in the stint. Data through Nov. 4, 2026. Methods: one season is one WNBA regular season the coach was that team's head coach. White's row is her current stint only. The Fever release says she also coached Indiana in 2015 and 2016, at 37-31 with a 6-6 playoff record, and that stretch is not in the row. A playoff rank of 9 or worse is zero playoff games. In 2026 the standings page marks ranks 1 through 8 as in and 9 through 15 as out, and the 2025 ranks are read the same way. A playoff cell that names only 2026 does not include earlier postseasons. No current row is an interim. The current coach is the name on the WNBA.com team page on Nov. 4, 2026. Liberty and the Sparks have no name there. The data is free to use and republish (CC0). Download (CC0): [head coaches (CSV)](/news/wnba-head-coaches-2027/data/wnba-head-coaches.csv).
+Source: Full Court Buckets count from team hiring announcements. Data through Nov. 4, 2026. Methods: Counts cover the 13 filled jobs. New York and Los Angeles account for the other two. Download (CC0): [All 15 franchises](/news/wnba-head-coaches-2027/data/wnba-head-coaches.csv).
 
-!chart: /images/articles/wnba-head-coaches-2027/seasons-chart.png | Bar chart of WNBA seasons with the current team. Cheryl Reeve has 17, Becky Hammon 5, Nate Tibbetts 3. Six coaches have 2. Four have 1. New York and Los Angeles are vacant. | Seasons with the current team. Orange bars are more than two seasons. Free to use and republish (CC0).
+## New York fired the coach who swept the No. 1 seed
 
-## Liberty head coaches, 2022 through 2026
+DeMarco’s Liberty won the [Commissioner’s Cup](https://www.wnba.com/game/lva-vs-nyl-1052600001), finished 26-18 and entered the playoffs as the No. 8 seed. Then they beat Minnesota twice. New York became the “first No. 8 seed to eliminate a No. 1 seed” in WNBA history, according to the [AP game report published by the league](https://www.wnba.com/news/2026-playoffs-lynx-liberty-game-2-recap). Atlanta swept New York in the semifinals, winning Game 2 in overtime and Game 3 by two points. [2026 playoff results](https://www.wnba.com/playoffs/2026).
 
-Sandy Brondello coached 2025 and Chris DeMarco coached 2026, so the next hire is the third Liberty coach in three seasons. Brondello coached the team from 2022 through 2025, the [Toronto Tempo release](https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach) says, and that release calls her a 2024 WNBA champion. The job is open for 2027.
+DeMarco told reporters after the loss that he expected to return. On Nov. 3, ESPN’s [Alexa Philippou reported his dismissal](https://www.espn.com/wnba/story/_/id/50368306/sources-new-york-liberty-not-retaining-coach-chris-demarco), and the [Liberty thanked him publicly](https://x.com/nyliberty/status/2117607590326644854). The next hire will be New York’s third head coach in three seasons. Sandy Brondello won the franchise’s first title in 2024 and was gone a year later. DeMarco took the team one round further than Brondello did in her final season.
 
-| Season | Coach | Regular season | Seed | Playoff result |
+## Both Finals coaches were in their second season
+
+Atlanta’s Karl Smesko and Golden State’s Natalie Nakase were hired 34 days apart in the fall of 2024. Smesko’s Dream went 30-14 in each of his first two seasons. Nakase’s Valkyries went from 23 wins to 32, then beat Atlanta 68-63 in Game 7 for the championship. With Golden State down 2-1 in the Finals, Nakase put Kaila Charles and Tiffany Hayes in the starting lineup. Hayes scored 11 in the deciding game. [2025 standings](https://www.wnba.com/standings?season=2025) · [2026 standings](https://www.wnba.com/standings?season=2026) · [Game 7 report](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap).
+
+Expansion explains some of the short tenures. Golden State started play in 2025, and Portland and Toronto debuted in 2026. None of their coaches could have reached a third season. Set those three franchises aside and seven of the ten remaining occupied jobs still belong to coaches with two seasons or fewer. [WNBA expansion dates](https://www.wnba.com/news/wnba-expansion-cleveland-detroit-philadelphia).
+
+## Los Angeles has the other opening
+
+The Sparks and Liberty are hiring from different positions. New York reached the semifinals. Los Angeles missed the playoffs in both seasons under Lynne Roberts, slipping from 21-23 in 2025 to 16-28 in 2026. The [Sparks dismissed Roberts on Sept. 25](https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts), the day after their season ended.
+
+## Every WNBA head coach entering 2027
+
+Reeve first coached the Lynx in 2010. She finished her 17th season with 397 regular-season wins and her [fifth Coach of the Year award](https://www.wnba.com/news/reeve-named-2026-coach-of-the-year). That puts 12 seasons between Reeve and the next coach on the list, Hammon.
+
+| Franchise | Head coach | First season | Seasons | Team W-L during stint | 2026 playoff W-L |
+| --- | --- | --- | --- | --- | --- |
+| [Minnesota Lynx](/wnba/teams/minnesota-lynx/) | Cheryl Reeve | [2010](https://lynx.wnba.com/basketball-operations/cheryl-reeve) | 17 | 397-201 | 0-2 |
+| [Las Vegas Aces](/wnba/teams/las-vegas-aces/) | Becky Hammon | [2022](https://www.wnba.com/news/las-vegas-announces-franchise-legend-becky-hammon-as-teams-head-coach) | 5 | 148-56 | 2-4 |
+| [Phoenix Mercury](/wnba/teams/phoenix-mercury/) | Nate Tibbetts | [2024](https://mercury.wnba.com/news/phoenix-mercury-name-nate-tibbetts-head-coach) | 3 | 62-66 | Missed playoffs |
+| [Atlanta Dream](/wnba/teams/atlanta-dream/) | Karl Smesko | [2025](https://www.wnba.com/news/atlanta-dream-hire-karl-smesko-as-head-coach) | 2 | 60-28 | 8-4 |
+| [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) | Natalie Nakase | [2025](https://valkyries.wnba.com/news/golden-state-valkyries-announce-natalie-nakase-as-head-coach-20241010) | 2 | 55-33 | 9-4 |
+| [Indiana Fever](/wnba/teams/indiana-fever/) | Stephanie White | [2025](https://www.wnba.com/news/indiana-fever-hire-stephanie-white-as-head-coach) | 2 | 52-36 | 1-2 |
+| [Washington Mystics](/wnba/teams/washington-mystics/) | Sydney Johnson | [2025](https://www.wnba.com/news/washington-mystics-announce-new-leadership) | 2 | 44-44 | 0-2 |
+| [Chicago Sky](/wnba/teams/chicago-sky/) | Tyler Marsh | [2025](https://www.wnba.com/news/chicago-sky-name-tyler-marsh-as-head-coach) | 2 | 26-62 | Missed playoffs |
+| Houston Comets | Rachid Meziane | [2025](https://www.wnba.com/news/rachid-meziane-named-connecticut-sun-head-coach) | 2 | 22-66 | Missed playoffs |
+| [Dallas Wings](/wnba/teams/dallas-wings/) | Jose Fernandez | [2026](https://wings.wnba.com/news/jose-fernandez-named-head-coach) | 1 | 27-17 | 1-2 |
+| [Toronto Tempo](/wnba/teams/toronto-tempo/) | Sandy Brondello | [2026](https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach) | 1 | 11-33 | Missed playoffs |
+| [Portland Fire](/wnba/teams/portland-fire/) | Alex Sarama | [2026](https://fire.wnba.com/news/portland-fire-names-alex-sarama-as-head-coach) | 1 | 17-27 | Missed playoffs |
+| [Seattle Storm](/wnba/teams/seattle-storm/) | Sonia Raman | [2026](https://storm.wnba.com/news/coach-sonia-raman) | 1 | 8-36 | Missed playoffs |
+| [New York Liberty](/wnba/teams/new-york-liberty/) | [Vacant](https://x.com/nyliberty/status/2117607590326644854) |  |  |  |  |
+| [Los Angeles Sparks](/wnba/teams/los-angeles-sparks/) | [Vacant](https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts) |  |  |  |  |
+
+Source: Team hiring announcements, [WNBA standings](https://www.wnba.com/standings?season=2026) and the [2026 playoff bracket](https://www.wnba.com/playoffs/2026). Data through Nov. 4, 2026. Methods: Regular-season records cover the current stint. The playoff column covers 2026 only. Download (CC0): [Coaching data](/news/wnba-head-coaches-2027/data/wnba-head-coaches.csv).
+
+Houston’s row follows the franchise from Connecticut. Both seasons credited to Rachid Meziane were with the Sun. Comets general manager Morgan Tuck told [USA TODAY Sports](https://sports.yahoo.com/articles/houston-comets-keep-connecticut-sun-153504318.html) that she plans to keep him when the team moves to Houston for 2027. [WNBA relocation announcement](https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale).
+
+The chart shows the full distribution, from Reeve’s 17 seasons to the four coaches who just finished their first.
+
+!chart: /images/articles/wnba-head-coaches-2027/seasons-chart.png | Seasons in the current stint through 2026. Reeve has 17, Hammon five and Tibbetts three. The other ten coaches have one or two each. | Franchises shown under their 2026 names. [Download the chart (PNG)](/images/articles/wnba-head-coaches-2027/seasons-chart.png). Free to use and republish (CC0).
+
+## New York’s five-season coaching record
+
+Brondello took New York to consecutive Finals with identical 32-8 regular-season records. The first ended in a four-game loss to Las Vegas. The second ended with a Game 5 win over Minnesota and the Liberty’s first title.
+
+| Season | Head coach | Record | WNBA seed | Playoff result |
 | --- | --- | --- | --- | --- |
-| 2026 | Chris DeMarco | 26-18 (.591) | No. 8 | Beat Minnesota 2-0, then lost to Atlanta 0-3 |
-| 2025 | Sandy Brondello | 27-17 (.614) | No. 5, East | Not in this file |
-| 2024 | Sandy Brondello | 32-8 (.800) | No. 1, East | Won the WNBA title, per the Tempo release |
-| 2023 | Sandy Brondello | 32-8 (.800) | No. 2, East | Not in this file |
-| 2022 | Sandy Brondello | 16-20 (.444) | No. 7, East | Not in this file |
+| 2026 | Chris DeMarco | 26-18 | No. 8 | [Beat Minnesota 2-0 in the first round. Lost 3-0 to Atlanta in the semifinals](https://www.wnba.com/playoffs/2026) |
+| 2025 | Sandy Brondello | 27-17 | No. 5 | [Lost 2-1 to Phoenix in the first round](https://www.wnba.com/playoffs/2025) |
+| 2024 | Sandy Brondello | 32-8 | No. 1 | [Beat Minnesota 3-2 in the Finals](https://www.wnba.com/playoffs/2024) |
+| 2023 | Sandy Brondello | 32-8 | No. 2 | [Lost 3-1 to Las Vegas in the Finals](https://www.wnba.com/playoffs/2023) |
+| 2022 | Sandy Brondello | 16-20 | No. 7 | [Lost 2-1 to Chicago in the first round](https://www.wnba.com/game/chi-vs-nyl-1042200113) |
 
-Source: regular-season lines and seeds are the [WNBA.com standings](https://www.wnba.com/standings). The coach for 2022 through 2025 is the Tempo release. DeMarco's season is the [Liberty hiring release](https://liberty.wnba.com/news/four-time-nba-champion-chris-demarco-named-new-york-liberty-head-coach) of Dec. 3, 2025. Data through Nov. 4, 2026. Methods: 2026 playoff games are the series on WNBA.com recaps linked below. The 2024 title is the Tempo release's description of Brondello, not a box score on this page. Earlier Liberty postseasons, and any coach before 2022, are not in this file. The data is free to use and republish (CC0). Download (CC0): [Liberty coaches (CSV)](/news/wnba-head-coaches-2027/data/liberty-head-coaches.csv).
+Source: [Liberty franchise history](https://liberty.wnba.com/team-history/our-history) and the WNBA series results linked above. Data through Nov. 4, 2026. Methods: Seeds are leaguewide. Records exclude the playoffs. Download (CC0): [Liberty results](/news/wnba-head-coaches-2027/data/liberty-head-coaches.csv).
 
-## What the Liberty said
+## How Full Court Buckets counted tenure
 
-On Nov. 3, 2026, the Liberty account posted "Thank you, Coach DeMarco." The graphic reads "THANK YOU" and "CHRIS DEMARCO." It does not add a paragraph. The post is [here](https://x.com/nyliberty/status/2117607590326644854). The same morning, [Alexa Philippou of ESPN](https://www.espn.com/wnba/story/_/id/50368306/sources-new-york-liberty-not-retaining-coach-chris-demarco) reported that sources said the team will not retain him. That story's publish time is 1:03 p.m. UTC, which is 5:03 a.m. Pacific. The Liberty news index opened for this story had no matching written release, and the team staff page still listed him. The WNBA.com team page does not.
+One season means one WNBA regular season as head coach in the current, uninterrupted stint with the franchise. Stephanie White’s count starts with her 2025 return to Indiana. Her [2015 and 2016 Fever seasons](https://www.wnba.com/news/indiana-fever-hire-stephanie-white-as-head-coach) belong to a separate stint. Team records come from the standings for each season in the stint and can include games coached by an acting head coach.
 
-The [hiring release](https://liberty.wnba.com/news/four-time-nba-champion-chris-demarco-named-new-york-liberty-head-coach), published Dec. 3, 2025, says the Liberty hired DeMarco, a Golden State Warriors assistant, that day. General manager Jonathan Kolb is the person quoted. Whether the deal ran through 2027 is not in that release.
+The median among the 13 coaches in place on Nov. 4 was two seasons. Vacant positions are listed separately. The [data dictionary](/news/wnba-head-coaches-2027/data/data-dictionary.txt) defines every field in both downloads. The data and chart are [free to use and republish (CC0)](https://creativecommons.org/publicdomain/zero/1.0/). Send corrections to [Full Court Buckets](/contact/).
 
-In 2026 the Liberty went 26-18 and were the No. 8 seed. They beat the No. 1 Lynx, 2-0, in the first round. The [2026 playoff bracket](https://www.wnba.com/playoffs/2026) shows that series as NYL wins 2-0. The [2024 bracket](https://www.wnba.com/playoffs/2024) and the [2025 bracket](https://www.wnba.com/playoffs/2025) show the No. 1 seed winning the 1-vs-8 series. The 2022 bracket page did not open, and the [2023 bracket](https://www.wnba.com/playoffs/2023) lists the winners with both teams marked TBD, so this page does not call New York the first No. 8 seed to beat a No. 1. Atlanta, the No. 4 seed, then swept them. The scores on the WNBA.com recaps are [92-82](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), [101-98 in overtime](https://www.wnba.com/news/2026-playoffs-liberty-dream-game-2-recap), and [85-83](https://www.wnba.com/news/2026-playoffs-dream-liberty-game-3-recap). Our recaps are [Game 1](/news/liberty-dream-semis-game-1-recap/), [Game 2](/news/liberty-dream-semis-game-2-recap/), and [Game 3](/news/dream-sweep-liberty-game-3-semifinals/). The first-round games against Minnesota are [Game 1](/news/liberty-lynx-game-1-full-recap/) and [Game 2](/news/liberty-lynx-game-2-recap/).
-
-The Game 2 recap says the Liberty did not use their reset to advance the ball on the last play. In that same recap, 4.3 seconds is the clock on Atlanta's free throws after an overthrow by [Sabrina Ionescu](/wnba/sabrina-ionescu/). It is not a separate note that New York was down 3 and still holding a timeout. That version is left out.
-
-On June 30, 2026, New York beat Las Vegas 93-85 in the Commissioner's Cup final at Barclays Center, on the [WNBA.com game page](https://www.wnba.com/game/lva-vs-nyl-1052600001). DeMarco was the head coach. The [WNBA.com history page](https://www.wnba.com/news/commissioners-cup-history-2026) names the winning teams from 2021 through 2025 and does not name the coaches, so this page does not say he is the first cup-winning coach not to return.
-
-[Breanna Stewart](/wnba/breanna-stewart/), [Sabrina Ionescu](/wnba/sabrina-ionescu/) and [Jonquel Jones](/wnba/jonquel-jones/) are on the roster page. What they said about the coaching change, and which contracts run into 2027 or 2028, is not in a team transcript or team release opened for this story. [Satou Sabally](/wnba/satou-sabally/) and [Leonie Fiebich](/wnba/leonie-fiebich/) are in the same gap. The offseason roster piece is [five moves after the sweep](/news/liberty-offseason-five-gm-moves/). The service-time file is [2027 free agents](/news/wnba-free-agents-2027/). The league table is the [standings](/standings/).
-
-## The other opening
-
-The [Sparks](/wnba/teams/los-angeles-sparks/) parted ways with Lynne Roberts on Sept. 25, 2026, effective that day. Special advisor Farhan Zaidi's quote on the [release](https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts) thanks her through "our last game last night." The [hiring story](https://www.wnba.com/news/los-angeles-sparks-name-lynne-roberts-head-coach), dated Nov. 20, 2024, says the team announced it Tuesday, which was Nov. 19. Her two seasons were 21-23 in 2025 and 16-28 in 2026, 37-51, .420. The playoff ranks were 9 and 12, so both seasons are outside the eight-team field used above.
-
-Eight hires had a first season in 2025: Nakase (Oct. 10, 2024), White (Nov. 1), Marsh (Nov. 3), Smesko (Nov. 13), Roberts (Nov. 19), Meziane (Dec. 4), Johnson (Dec. 23) and [Chris Koclanes](https://www.wnba.com/news/dallas-wings-name-chris-koclanes-head-coach) in Dallas (Dec. 23, 2024). Koclanes was not the 2026 coach. Fernandez's Oct. 27, 2025 release names Fernandez as the next Wings coach.
-
-Five 2026 hires have a date on a release opened for this page: Sarama (Oct. 17, 2025), Fernandez (Oct. 27, 2025), Raman (Oct. 28, 2025), Brondello (Nov. 4, 2025) and DeMarco (Dec. 3, 2025). The Fire release is [Portland Fire Names Alex Sarama As Head Coach](https://fire.wnba.com/news/portland-fire-names-alex-sarama-as-head-coach), dated Oct. 17, 2025 on the team's news list.
-
-Nakase's Valkyries won the 2026 title. The [AP recap of Game 7](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap) says Golden State beat Atlanta 68-63. Our recap is [Game 7](/news/dream-valkyries-finals-game-7-recap/).
+Updated Nov. 4, 2026, at 1:10 pm PT. An earlier table labeled New York’s leaguewide playoff seeds as Eastern Conference seeds. This version also identifies Houston as the relocating franchise and uses the same 2026 playoff window for every coach.
