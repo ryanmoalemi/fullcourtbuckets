@@ -3257,6 +3257,14 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "tea-cooper": {
+      "author": "Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Te%27a_Cooper.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
