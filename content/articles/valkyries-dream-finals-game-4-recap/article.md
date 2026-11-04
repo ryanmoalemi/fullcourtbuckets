@@ -58,7 +58,7 @@ Watch every possession on the [Game 4 play-by-play page](/wnba/finals/2026/game-
 
 The team with fewer turnovers has won all four games, and so has the team leading at halftime. Atlanta has won its two games by a combined 40 points. Golden State has won its two by a combined 9.
 
-Game 4 drew 17,099 at State Farm Arena, a sellout. That brings the 2026 Finals to 70,326 fans through four games, according to the [FCB Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/). The record is 92,599, set in 2024, so this series needs 22,273 more to tie it. Chase Center drew 18,064 for Game 1.
+Game 4 drew 17,099 at State Farm Arena, a sellout. That brings the 2026 Finals to 70,326 fans through four games, according to the [FCB Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/). The prior record is 92,599, set in 2024, so this series needs 22,273 more to tie it. Chase Center drew 18,064 for Game 1.
 
 ## What's next
 

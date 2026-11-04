@@ -156,7 +156,7 @@ Data through Finals Game 5, Oct. 26, 2026. Methods: counts from FCB's play-by-pl
 
 ## Attendance record watch
 
-The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on Thursday would pass the 2024 Finals record of 92,599, the most since 2002, and State Farm Arena seats more than 17,000. Our [Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/) has every game, and the data is free to reuse under CC0.
+The 2026 Finals have drawn 88,390 fans through five games. A crowd of 4,210 on Thursday would pass the prior record of 92,599, set by the 2024 Finals, the most since 2002 before this series, and State Farm Arena seats more than 17,000. Our [Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/) has every game, and the data is free to reuse under CC0.
 
 ## Where the trophy would be raised
 

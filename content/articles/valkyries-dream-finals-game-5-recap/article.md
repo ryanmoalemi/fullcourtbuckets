@@ -122,7 +122,7 @@ Before the game, Reese arrived at Chase Center in a black "Protect Black Women" 
 
 The team with fewer turnovers has won all five games, and so has the team leading at halftime. Atlanta has won its two games by a combined 40 points. Golden State has won its three by a combined 18. The Valkyries, in their second season, went 32-12 as the No. 2 seed.
 
-Game 5 drew 18,064 at Chase Center, a sellout. That brings the 2026 Finals to 88,390 fans through five games, according to the [FCB Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/). The record is 92,599, set in 2024. A Game 6 crowd of 4,209 would tie it and 4,210 would break it. State Farm Arena drew sellouts of 17,099 for Games 3 and 4.
+Game 5 drew 18,064 at Chase Center, a sellout. That brings the 2026 Finals to 88,390 fans through five games, according to the [FCB Finals attendance tracker](/news/2026-wnba-finals-ratings-tracker/). The prior record is 92,599, set in 2024. A Game 6 crowd of 4,209 would tie it and 4,210 would break it. State Farm Arena drew sellouts of 17,099 for Games 3 and 4.
 
 ## What's next
 

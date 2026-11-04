@@ -189,6 +189,70 @@ def parse_standings(payload: dict, updated_at: str) -> dict:
     }
 
 
+def season_year_from_schedule(root: Path, teams: list) -> int | None:
+    """Year of the schedule file whose regular-season records match this table.
+
+    The standings feed's season.year rolls forward after the season ends while the
+    win-loss table stays on the season that was just played. The schedule dataset
+    is the record of which year those games were.
+    """
+    wanted = {}
+    for team in teams:
+        name = str(team.get('name') or '').strip()
+        wins, losses = team.get('wins'), team.get('losses')
+        if not name or isinstance(wins, bool) or isinstance(losses, bool):
+            return None
+        if not isinstance(wins, int) or not isinstance(losses, int):
+            return None
+        wanted[name] = (wins, losses)
+    if len(wanted) < 12:
+        return None
+    data = Path(root) / 'data' / 'wnba'
+    if not data.is_dir():
+        return None
+    matched = []
+    for path in sorted(data.glob('schedule-*.json')):
+        year_text = path.stem.rsplit('-', 1)[-1]
+        if not year_text.isdigit():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding='utf-8'))
+        except (OSError, json.JSONDecodeError):
+            continue
+        names = {int(key): value for key, value in (payload.get('teams') or {}).items()}
+        records = {name: [0, 0] for name in wanted}
+        seen = 0
+        for game in payload.get('games') or []:
+            if game.get('type') != 'Regular Season':
+                continue
+            home, away = game.get('home') or {}, game.get('away') or {}
+            if not isinstance(home.get('score'), int) or not isinstance(away.get('score'), int):
+                continue
+            home_name, away_name = names.get(home.get('id')), names.get(away.get('id'))
+            if home_name not in records or away_name not in records:
+                continue
+            seen += 1
+            if home['score'] > away['score']:
+                records[home_name][0] += 1
+                records[away_name][1] += 1
+            elif away['score'] > home['score']:
+                records[away_name][0] += 1
+                records[home_name][1] += 1
+        if seen and all(tuple(records[name]) == wanted[name] for name in wanted):
+            matched.append(int(year_text))
+    return matched[-1] if matched else None
+
+
+def with_dataset_season(root: Path, table: dict) -> dict:
+    """Use the schedule year when the feed's season label does not match the records."""
+    year = season_year_from_schedule(root, table.get('teams') or [])
+    if not year or year == table.get('season'):
+        return table
+    updated = dict(table)
+    updated['season'] = year
+    return updated
+
+
 def standings_hash(table: dict) -> str:
     """Hash of the table a reader sees. The updatedAt stamp is not part of the data."""
     payload = {'season': table.get('season'), 'teams': table.get('teams')}
@@ -498,6 +562,7 @@ def series_coverage_html(root: Path) -> str:
 
 
 def render_page(root: Path, table: dict) -> str:
+    table = with_dataset_season(root, table)
     hrefs = team_hrefs(root)
     menu = site_nav.build_menu(root)
     nav = site_nav.render(menu, ROUTE)
@@ -518,7 +583,7 @@ def render_page(root: Path, table: dict) -> str:
     west = ''.join(_row(team, hrefs.get(team['name'], ''), False) for team in by_conference('Western'))
     css = (Path(__file__).with_name('standings.css')).read_text(encoding='utf-8')
     description = (
-        f'Final {year} WNBA regular-season standings for all {len(teams)} teams: wins, losses, winning percentage, '
+        f'{heading} for all {len(teams)} teams: wins, losses, winning percentage, '
         'games back, home and road records and playoff seeds, plus the live WNBA Finals series status.'
         if links.regular_season_is_final(table) else
         f'{year} WNBA standings for all {len(teams)} teams: wins, losses, winning percentage, '
@@ -563,13 +628,15 @@ def render_page(root: Path, table: dict) -> str:
         },
     })
     schema = json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')
-    cite = citation.standings_quick_cite(leader['name'], leader['wins'], leader['losses'], len(teams), games_sentence)
+    cite = citation.standings_quick_cite(
+        leader['name'], leader['wins'], leader['losses'], len(teams), games_sentence, year,
+    )
     table_embed = citation.embed_block(
         'final-2026-standings',
         citation.embed_snippet(BASE + ROUTE, 'final-2026-standings'),
         'standings-2026.csv',
     )
-    tie_block = citation.standings_tie_block(teams)
+    tie_block = citation.standings_tie_block(teams, year)
     conf_head = '<tr><th>RK</th><th>TEAM</th><th>W</th><th>L</th><th>PCT</th><th>GB</th></tr>'
     page_html = f'''<!doctype html>
 <html lang="en">
@@ -683,7 +750,7 @@ def build(root: Path, payload: dict | None = None, updated_at: str | None = None
             payload = fetch_standings()
         if not updated_at:
             updated_at = dt.datetime.now(ZoneInfo('America/Los_Angeles')).isoformat(timespec='seconds')
-        table = parse_standings(payload, updated_at)
+        table = with_dataset_season(root, parse_standings(payload, updated_at))
         if data_path.is_file():
             try:
                 previous = json.loads(data_path.read_text(encoding='utf-8-sig'))

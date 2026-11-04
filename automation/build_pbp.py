@@ -185,7 +185,11 @@ def build(game_id, game_json=None, today=None, live=False):
     bline = f'<p class="note broadcast-line"><b>Where to watch:</b> TV: {E(g["tv"])}. Streaming: {E(g["stream"])}.</p>'
     def series_text(w):
         lead = max(w, key=w.get); lo = min(w, key=w.get)
-        return 'Series tied ' + f"{w[lead]}-{w[lo]}" if w[lead] == w[lo] else f"{NAME[lead]} lead {w[lead]}-{w[lo]}"
+        if w[lead] == w[lo]:
+            return 'Series tied ' + f"{w[lead]}-{w[lo]}"
+        # Four wins ends a best-of-seven. A finished series did not "lead."
+        verb = 'won' if w[lead] >= 4 else 'lead'
+        return f"{NAME[lead]} {verb} {w[lead]}-{w[lo]}"
     if d is None:
         desc = f"Play-by-play for Game {n} of the 2026 WNBA Finals, {'Valkyries at Dream' if 'State Farm' in g['venue'] else 'Dream at Valkyries'}, {g['tip']}, {g['venue']}. {LIVE_NOTE}"
         head, bo, byline, foot = shell_parts(title, desc, path, g['date'])

@@ -826,7 +826,7 @@ def standings_tie_groups(teams: list) -> list[tuple]:
     return ties
 
 
-def standings_tie_block(teams: list) -> str:
+def standings_tie_block(teams: list, year=None) -> str:
     rows = []
     for (wins, losses), group in standings_tie_groups(teams):
         names = ', '.join(str(team.get('name') or '') for team in group)
@@ -838,7 +838,7 @@ def standings_tie_block(teams: list) -> str:
     if not rows:
         rows.append(['None', 'No shared record on this page', 'Not applicable'])
     return (
-        '<h2 id="standings-tie-log">Tied records in the 2026 standings</h2>\n'
+        f'<h2 id="standings-tie-log">Tied records in the {esc(year) if year else "current"} standings</h2>\n'
         + data_table(
             ['Record', 'Teams, in the order kept on this page', 'Tiebreaker step that separated them'],
             rows,
@@ -858,9 +858,10 @@ def standings_tie_block(teams: list) -> str:
     )
 
 
-def standings_quick_cite(leader: str, wins, losses, count: int, games_sentence: str) -> str:
+def standings_quick_cite(leader: str, wins, losses, count: int, games_sentence: str, year=None) -> str:
+    label = f'{year} WNBA standings' if year else 'WNBA standings'
     citation = (
-        f'Full Court Buckets, 2026 WNBA standings.\n{STANDINGS_URL}\n'
+        f'Full Court Buckets, {label}.\n{STANDINGS_URL}\n'
         f'The {leader} lead the WNBA standings at {wins}-{losses}. '
         f'{count} teams are listed. {games_sentence}'
     )

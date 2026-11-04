@@ -341,6 +341,36 @@ def _recaps(slot: dict) -> list:
         return []
 
 
+def _pbp_index(root) -> dict:
+    """Feed game id -> published recap and play-by-play paths."""
+    found = {}
+    try:
+        pages = json.loads((Path(root) / 'data' / 'fcb-game-pages.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        pages = {}
+    for espn_id, href in pages.items():
+        if isinstance(href, str):
+            found[str(espn_id)] = {'pbp': href, 'recap': ''}
+    try:
+        conf = json.loads((Path(root) / 'data' / 'pbp-games.json').read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        conf = {}
+    for espn_id, game in (conf.get('games') or {}).items():
+        number = game.get('number')
+        pbp = f'/wnba/finals/2026/game-{number}/play-by-play/' if number else ''
+        if pbp and not (Path(root) / pbp.strip('/') / 'index.html').is_file():
+            pbp = ''
+        recap = game.get('recap') or ''
+        if recap and not (Path(root) / recap.strip('/') / 'index.html').is_file():
+            recap = ''
+        slot = found.setdefault(str(espn_id), {'pbp': '', 'recap': ''})
+        if pbp:
+            slot['pbp'] = pbp
+        if recap:
+            slot['recap'] = recap
+    return found
+
+
 def _finals_teams(root) -> dict:
     """Abbreviation to full name for the clubs in data/finals-schedule.json."""
     try:
@@ -378,16 +408,25 @@ def playoff_html(root, slot: dict) -> str:
         if not isinstance(mine.get('score'), int) or not isinstance(other.get('score'), int):
             continue
         played.append((game, mine, other, mine is home))
-    try:
-        pbp = json.loads((Path(root) / 'data' / 'fcb-game-pages.json').read_text(encoding='utf-8'))
-    except (OSError, json.JSONDecodeError):
-        pbp = {}
+    pbp = _pbp_index(root)
     try:
         finals = json.loads((Path(root) / 'data' / 'finals-schedule.json').read_text(encoding='utf-8'))
     except (OSError, json.JSONDecodeError):
         finals = {}
     clubs = _finals_teams(root)
-    upcoming = [g for g in finals.get('games') or [] if abbr and abbr in clubs]
+    played_ids = {str(game.get('espn_game_id') or '') for game, *_rest in played}
+    played_dates = {str(game.get('date') or '') for game, *_rest in played}
+    try:
+        import finals_series
+        champion = bool((finals_series.series(root) or {}).get('champion'))
+    except Exception:
+        champion = False
+    upcoming = [] if champion else [
+        g for g in finals.get('games') or []
+        if abbr and abbr in (g.get('home'), g.get('away'))
+        and str(g.get('espn_game_id') or '') not in played_ids
+        and str(g.get('date') or '') not in played_dates
+    ]
     if not played and not upcoming:
         return ''
     recaps = {score: (href, label) for href, label, score in _recaps(slot)}
@@ -398,10 +437,12 @@ def playoff_html(root, slot: dict) -> str:
         alt = f'{other["score"]}-{mine["score"]}'
         ot = ' (OT)' if game.get('overtime') else ''
         extra = []
+        linked = pbp.get(str(game.get('espn_game_id') or ''), {})
         recap = recaps.get(score) or recaps.get(alt)
-        if recap:
-            extra.append(f'<a class="inline-link" href="{esc(recap[0])}">Recap</a>')
-        page = pbp.get(str(game.get('espn_game_id') or ''))
+        recap_href = (recap[0] if recap else '') or linked.get('recap') or ''
+        if recap_href:
+            extra.append(f'<a class="inline-link" href="{esc(recap_href)}">Recap</a>')
+        page = linked.get('pbp') or ''
         if page:
             extra.append(f'<a class="inline-link" href="{esc(page)}">Play-by-play</a>')
         rows.append(
@@ -605,25 +646,142 @@ def _team_id(root, team: str):
     return None
 
 
+def _box_scores(root) -> dict:
+    """Final box scores keyed by (date, home full name, away full name)."""
+    found = {}
+    for game in _games(root):
+        home, away = game.get('home') or {}, game.get('away') or {}
+        if not isinstance(home.get('score'), int) or not isinstance(away.get('score'), int):
+            continue
+        key = (str(game.get('date') or ''), home.get('full_name') or '', away.get('full_name') or '')
+        if all(key):
+            found[key] = game
+    return found
+
+
+def _finals_links(root) -> dict:
+    """Date -> recap and play-by-play for Finals games we have published."""
+    found = {}
+    path = Path(root) / 'data' / 'pbp-games.json'
+    try:
+        conf = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return found
+    for game in (conf.get('games') or {}).values():
+        number = game.get('number')
+        pbp = f'/wnba/finals/2026/game-{number}/play-by-play/' if number else ''
+        if pbp and not (Path(root) / pbp.strip('/') / 'index.html').is_file():
+            pbp = ''
+        recap = game.get('recap') or ''
+        if recap and not (Path(root) / recap.strip('/') / 'index.html').is_file():
+            recap = ''
+        if game.get('date'):
+            found[game['date']] = {'recap': recap, 'pbp': pbp}
+    return found
+
+
+def _place_name(full_name: str) -> str:
+    parts = str(full_name or '').split()
+    return ' '.join(parts[:-1]) if len(parts) > 1 else str(full_name or '')
+
+
+def _apply_box_scores(root, games: list, names: dict) -> None:
+    """Fill missing scores from data/games and recompute Finals series lines.
+
+    One row per game id. A scheduled row and a completed box for the same id
+    stay one game. Series text after a clinching win names the winner.
+    """
+    boxes = _box_scores(root)
+    links = _finals_links(root)
+    try:
+        best_of = int(json.loads((Path(root) / 'data' / 'finals-schedule.json').read_text(encoding='utf-8')).get('best_of') or 7)
+    except (OSError, json.JSONDecodeError, TypeError, ValueError):
+        best_of = 7
+    need = best_of // 2 + 1
+    finals = []
+    for game in games:
+        home, away = game.get('home') or {}, game.get('away') or {}
+        home_name = names.get(home.get('id')) or ''
+        away_name = names.get(away.get('id')) or ''
+        box = boxes.get((str(game.get('date') or ''), home_name, away_name))
+        if box and not isinstance(home.get('score'), int):
+            home['score'] = box['home']['score']
+            away['score'] = box['away']['score']
+            game['status'] = 3
+        game['_recap'] = links.get(game.get('date') or '', {}).get('recap') or ''
+        game['_pbp'] = links.get(game.get('date') or '', {}).get('pbp') or ''
+        label = str(game.get('label') or '')
+        if game.get('type') == 'Playoffs' and label.startswith('WNBA Finals'):
+            finals.append(game)
+    wins = {}
+    for game in finals:
+        home, away = game['home'], game['away']
+        if not isinstance(home.get('score'), int) or not isinstance(away.get('score'), int):
+            continue
+        if home['score'] == away['score']:
+            continue
+        winner = home if home['score'] > away['score'] else away
+        loser = away if winner is home else home
+        wins[winner['id']] = wins.get(winner['id'], 0) + 1
+        wins.setdefault(loser['id'], wins.get(loser['id'], 0))
+        leader, trailer = (winner, loser) if wins[winner['id']] >= wins[loser['id']] else (loser, winner)
+        high, low = wins[leader['id']], wins[trailer['id']]
+        if high >= need and high != low:
+            game['series'] = f'{_place_name(names.get(winner["id"]) or "")} won {wins[winner["id"]]}-{wins[loser["id"]]}'
+        elif high == low:
+            game['series'] = f'Series tied {high}-{low}'
+        else:
+            game['series'] = f'{leader.get("tricode") or ""} leads {high}-{low}'
+
+
 def team_schedule(root, team: str) -> list[dict]:
     data = _load(root, 'schedule-2026.json')
     tid = _team_id(root, team)
     names = {int(k): v for k, v in (data.get('teams') or {}).items()}
-    out = []
-    for g in data.get('games') or []:
-        if tid not in (g['home']['id'], g['away']['id']):
+    raw = []
+    seen = set()
+    for game in data.get('games') or []:
+        if tid not in (game['home']['id'], game['away']['id']):
             continue
-        home = g['home']['id'] == tid
-        mine, other = (g['home'], g['away']) if home else (g['away'], g['home'])
+        game_id = str(game.get('game_id') or '')
+        if game_id and game_id in seen:
+            continue
+        if game_id:
+            seen.add(game_id)
+        raw.append({
+            'game_id': game_id,
+            'date': game.get('date') or '',
+            'type': game.get('type') or '',
+            'label': game.get('label') or '',
+            'status': game.get('status'),
+            'arena': game.get('arena') or '',
+            'series': game.get('series') or '',
+            'home': dict(game.get('home') or {}),
+            'away': dict(game.get('away') or {}),
+        })
+    _apply_box_scores(root, raw, names)
+    out = []
+    for game in raw:
+        home = game['home']['id'] == tid
+        mine, other = (game['home'], game['away']) if home else (game['away'], game['home'])
         result = ''
         if isinstance(mine.get('score'), int) and isinstance(other.get('score'), int) and (mine['score'] or other['score']):
             result = f'{"W" if mine["score"] > other["score"] else "L"} {mine["score"]}-{other["score"]}'
-        kind = {'Regular Season': 'Regular season', 'Comm Cup': "Commissioner's Cup final"}.get(g['type'], g['type'])
-        if g['type'] == 'Playoffs' and g.get('label'):
-            kind = f'Playoffs: {g["label"]}'
-        out.append({'date': g.get('date') or '', 'type': kind, 'home': home,
-                    'opponent': names.get(other['id']) or other.get('tricode') or '',
-                    'result': result, 'arena': g.get('arena') or '', 'series': g.get('series') or ''})
+        kind = {'Regular Season': 'Regular season', 'Comm Cup': "Commissioner's Cup final"}.get(game['type'], game['type'])
+        if game['type'] == 'Playoffs' and game.get('label'):
+            kind = f'Playoffs: {game["label"]}'
+        out.append({
+            'game_id': game['game_id'],
+            'date': game.get('date') or '',
+            'type': kind,
+            'home': home,
+            'opponent': names.get(other['id']) or other.get('tricode') or '',
+            'result': result,
+            'arena': game.get('arena') or '',
+            'series': game.get('series') or '',
+            'recap': game.get('_recap') or '',
+            'pbp': game.get('_pbp') or '',
+        })
     return out
 
 
@@ -635,10 +793,15 @@ def schedule_html(root, slot: dict) -> str:
     updated = str(_load(root, 'schedule-2026.json').get('checked_at') or '')[:10]
     rows, w, l = [], 0, 0
     for g in games:
-        score = g['result'][2:]
+        score = g['result'][2:] if g['result'][:2] in ('W ', 'L ') else ''
         alt = '-'.join(reversed(score.split('-'))) if score else ''
-        recap = recaps.get(score) or recaps.get(alt) if score else None
-        link = f'<a class="inline-link" href="{esc(recap)}">Recap</a>' if recap else ''
+        recap = g.get('recap') or (recaps.get(score) or recaps.get(alt) if score else '')
+        links = []
+        if recap:
+            links.append(f'<a class="inline-link" href="{esc(recap)}">Recap</a>')
+        if g.get('pbp'):
+            links.append(f'<a class="inline-link" href="{esc(g["pbp"])}">Play-by-play</a>')
+        link = ' · '.join(links)
         if g['type'] == 'Regular season' and g['result']:
             w += g['result'].startswith('W')
             l += g['result'].startswith('L')
@@ -667,6 +830,23 @@ def history_csv(root, slot: dict) -> str:
                          r.get('losses') if r.get('losses') is not None else '', r.get('finish') or '', r.get('playoffs') or '',
                          r.get('record_source') or '', r.get('finish_source') or (r.get('record_source') if r.get('finish') else '') or ''))
     return buffer.getvalue()
+
+
+def refresh_published_schedules(root) -> list[str]:
+    """Rewrite team schedule CSVs from the schedule file plus final box scores."""
+    changed = []
+    for path in sorted(Path(root).glob('wnba/teams/*/*-schedule-2026.csv')):
+        try:
+            lines = path.read_text(encoding='utf-8').splitlines()
+            team = lines[1].split(',', 1)[0]
+        except (OSError, IndexError):
+            continue
+        fresh = schedule_csv(root, {'full_name': team, 'slug': path.parent.name})
+        current = path.read_text(encoding='utf-8').replace('\r\n', '\n')
+        if fresh != current:
+            path.write_text(fresh, encoding='utf-8')
+            changed.append(path.relative_to(root).as_posix())
+    return changed
 
 
 def schedule_csv(root, slot: dict) -> str:
