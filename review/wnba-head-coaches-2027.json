@@ -1,0 +1,98 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Hire dates are the dateline or publish time on the linked team or WNBA.com release. Regular-season records are summed from the WNBA.com standings pages for 2010 through 2026. The current name is the WNBA.com team page on Nov. 4, 2026, which lists no head coach for New York or Los Angeles. 2026 playoff series are the WNBA.com recaps named on the page. Cells that do not cover a full stint say so. The headline count, 3 of 15, is Reeve (17), Hammon (5) and Tibbetts (3)."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "One table puts every current job, the release date, the seasons in the stint, and the standings sum in one place, then counts who has lasted more than two seasons. The Liberty season table is limited to years a release names the coach."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Each hire was opened on a team or WNBA.com page, and 17 seasons of standings were summed. The page also has a chart, two CSVs and a data dictionary. It is not a hand log of every playoff game since 2010."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The cut is seasons with the current team, not a coaching-carousel roundup. Vacancies are rows, not missing teams. White's earlier Fever stint is kept out of her row."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. The releases and standings pages are linked from the table."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "The H1 is the finding. The 15-team table sits under a one-line lead and the photo. The Liberty table and the short narrative follow. Gaps are labeled in the cells. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "House how-this-story-was-made note, CC0 downloads, photo credit, and the cells that say a number is not in the file. The Liberty graphic is quoted only as the words on it."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. In-article links open in a new tab. The methods note is long because the definitions have to sit with the table."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the coaching list gets every team, the two openings, and the Liberty series scores that WNBA.com recaps state."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates and scores, and the page says when a number was left out. No stock phrases. The methods note is a ledger, which is the point of the table."
+      }
+    ],
+    "info_gain": [
+      "All 15 jobs on Nov. 4, 2026, with the release date, seasons in the current stint, and the WNBA.com regular-season sum",
+      "Only Reeve (17), Hammon (5) and Tibbetts (3) are past two seasons. New York and Los Angeles are vacant",
+      "Eight hires whose first season was 2025, and four dated hires whose first season was 2026",
+      "Liberty seasons from 2022 through 2026 tied to the Tempo release and the DeMarco hiring release, plus the 2026 series scores on WNBA.com"
+    ],
+    "ai_flags": [
+      "A draft sentence called DeMarco the third Liberty coach in three seasons. He coached 2026, after Brondello in 2025, so the next hire is the third. That sentence was rewritten before this score."
+    ]
+  },
+  "unique": [
+    "3 of 15 current head coaches have lasted more than two seasons: Cheryl Reeve 17 (397-201), Becky Hammon 5 (148-56), Nate Tibbetts 3 (62-66).",
+    "The Liberty post on Nov. 3, 2026 says \"Thank you, Coach DeMarco.\" The graphic reads THANK YOU and CHRIS DEMARCO. The WNBA.com team page lists no head coach.",
+    "2026 playoff series used here: New York over Minnesota 2-0, Las Vegas over Indiana 2-1, Atlanta over Washington 2-0, Golden State over Dallas 2-1, Atlanta over New York 3-0, Golden State swept Las Vegas, Golden State beat Atlanta in Game 7, 68-63."
+  ],
+  "unverified": [
+    "Alex Sarama's announcement date. The WNBA.com team page lists him as Portland's head coach. No Fire release with a date was opened, so he is not in the dated hire count.",
+    "Whether Sarama coached every 2026 regular-season game. The 17-27 line is the team's WNBA.com record.",
+    "Playoff series before 2026 for Reeve, Hammon, Tibbetts, Smesko, Nakase and White. Those cells name the 2026 games only.",
+    "Liberty playoff results for 2022, 2023 and 2025. The 2024 title is the Tempo release's description of Brondello, not a box score on this page.",
+    "Walt Hopkins in 2020 and 2021, and the year Jonathan Kolb became general manager. No Liberty release for those years was opened, so those rows are not in the table.",
+    "Whether the 2025 playoff field was exactly ranks 1 through 8. This page reads rank 9 or worse as out, which is how the 2026 standings page marks those rows.",
+    "Player quotes from Ionescu, Jones and Stewart, and the years left on Stewart, Ionescu, Jones, Sabally and Fiebich. No team transcript or team release was opened.",
+    "Whether DeMarco was under contract for 2027. The Dec. 3, 2025 hiring release does not say so, and the AP story did not open.",
+    "A reset-timeout account that has the Liberty down 3 with 4.3 seconds left. The WNBA.com AP recap of Game 2 says they did not use the reset on the last play, and it uses 4.3 seconds for Atlanta's free throws after an overthrow.",
+    "Whether every previous Commissioner's Cup-winning coach returned the next season. The WNBA.com history page names the winning teams for 2021 through 2025 and does not name the coaches. The 2026 final, Liberty 93, Aces 85, is on the WNBA.com game page.",
+    "A written Liberty release on liberty.wnba.com/news. The news index opened for this story did not show one. The staff directory still listed DeMarco.",
+    "Whether the 2026 Liberty were the first No. 8 seed to beat a No. 1. The 2024 and 2025 WNBA.com brackets show the No. 1 seed winning that series, and the 2026 bracket shows New York winning it 2-0. The 2022 bracket page did not open, and the 2023 bracket lists winners with both teams marked TBD."
+  ]
+}

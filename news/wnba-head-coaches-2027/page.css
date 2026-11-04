@@ -1,0 +1,5 @@
+/* Initials when the repo has no licensed coach headshot. */
+.article .coach-initials{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#2a2830;color:#f5f3ef;font:700 11px/1 Inter,sans-serif;margin:0 .45rem 0 0;vertical-align:middle}
+.article .coach-vacant{background:#141218;color:#a5a19b}
+.article thead th[data-sort="asc"]::after{content:" \2191"}
+.article thead th[data-sort="desc"]::after{content:" \2193"}

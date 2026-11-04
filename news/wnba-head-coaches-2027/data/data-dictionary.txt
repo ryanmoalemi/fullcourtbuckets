@@ -1,0 +1,22 @@
+WNBA head coaches, data through Nov. 4, 2026. Free to use (CC0).
+
+wnba-head-coaches.csv
+team: WNBA team.
+head_coach: Name on the WNBA.com team page on Nov. 4, 2026. Blank when that page lists no head coach.
+hire_date: Dateline or publish date of the linked team or WNBA.com release. Blank for Portland because no Fire release with a date was opened.
+seasons_with_team: WNBA regular seasons the coach was that team's head coach. White's row is the current stint, 2025 and 2026, not 2015-16.
+regular_season_w / regular_season_l: Sum of that team's wins and losses on WNBA.com standings for those seasons. Blank when the job is vacant.
+win_pct: Wins divided by wins plus losses, three decimals.
+playoff_wl_in_this_file: Playoff games confirmed on WNBA.com recaps for this page. A note in the cell means earlier postseasons are omitted, not that the coach was 0-0.
+status: In place, or vacant since the linked post or release.
+
+liberty-head-coaches.csv
+season: WNBA season.
+coach: Brondello for 2022-2025 from the Toronto Tempo release. DeMarco for 2026 from the Liberty hiring release of Dec. 3, 2025.
+regular_season_w / regular_season_l / win_pct / seed: WNBA.com standings.
+playoff_result: 2026 series from WNBA.com recaps. 2024 title from the Tempo release. Other seasons are not in this file.
+
+2026 playoff games used for the cells that include 2026:
+First round: New York over Minnesota 2-0; Las Vegas over Indiana 2-1; Atlanta over Washington 2-0; Golden State over Dallas 2-1 (Dallas won Game 2, Golden State won the winner-take-all Game 3).
+Semifinals: Atlanta over New York 3-0 (92-82, 101-98 OT, 85-83). Golden State swept Las Vegas.
+Finals: Golden State beat Atlanta in Game 7, 68-63, so the series is 4-3.
