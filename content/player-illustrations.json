@@ -10609,6 +10609,32 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 586,
+      "slug": "tea-cooper",
+      "player_name": "Te'a Cooper",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/tea-cooper/portrait.webp",
+      "width": 800,
+      "height": 800,
+      "asset_sha256": "81c190664221564e72133a9812b8741d10da7ae37f58fadf7e4bdf8b50def4d6",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 800,
+        "height": 800,
+        "source_width": 800,
+        "source_height": 800,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
