@@ -564,15 +564,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 141,
-      "slug": "erin-thorn",
-      "player_name": "Erin Thorn",
-      "listed_active": false,
-      "profile_path": "/wnba/erin-thorn/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 470,
       "slug": "evgeniia-belyakova",
       "player_name": "Evgeniia Belyakova",
@@ -717,15 +708,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 118,
-      "slug": "jolene-anderson",
-      "player_name": "Jolene Anderson",
-      "listed_active": false,
-      "profile_path": "/wnba/jolene-anderson/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 369,
       "slug": "joslyn-tinkle",
       "player_name": "Joslyn Tinkle",
@@ -776,15 +758,6 @@
       "player_name": "Keisha Hampton",
       "listed_active": false,
       "profile_path": "/wnba/keisha-hampton/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 360,
-      "slug": "kelly-faris",
-      "player_name": "Kelly Faris",
-      "listed_active": false,
-      "profile_path": "/wnba/kelly-faris/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -866,24 +839,6 @@
       "player_name": "Leaonna Odom",
       "listed_active": false,
       "profile_path": "/wnba/leaonna-odom/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 549,
-      "slug": "leticia-romero",
-      "player_name": "Leticia Romero",
-      "listed_active": false,
-      "profile_path": "/wnba/leticia-romero/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 679,
-      "slug": "li-meng",
-      "player_name": "Li Meng",
-      "listed_active": false,
-      "profile_path": "/wnba/li-meng/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
@@ -1320,15 +1275,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 89,
-      "slug": "ticha-penicheiro",
-      "player_name": "Ticha Penicheiro",
-      "listed_active": false,
-      "profile_path": "/wnba/ticha-penicheiro/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 396,
       "slug": "tiffany-bias",
       "player_name": "Tiffany Bias",
@@ -1343,15 +1289,6 @@
       "player_name": "Tiffany Jackson-Jones",
       "listed_active": false,
       "profile_path": "/wnba/tiffany-jackson-jones/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 453,
-      "slug": "tiffany-mitchell",
-      "player_name": "Tiffany Mitchell",
-      "listed_active": false,
-      "profile_path": "/wnba/tiffany-mitchell/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
