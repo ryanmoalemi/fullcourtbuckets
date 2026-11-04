@@ -8,7 +8,7 @@ wnba-2026-players-by-service-class.csv
   Check: Kelsey Mitchell is 24.68 points x 44 games = 1,085.92. WNBA.com's season awards story lists 1,086 points and 24.7 per game.
   seasons = count of regular seasons, 2008 through 2026, with at least one game in the FCB season files.
   season_years = those seasons. short_seasons = seasons with fewer than 7 games, written as year:games.
-  projected_class uses that season count and CBA Article VI, assuming the contract ends after 2026:
+  projected_class is the column "Class if contract ends". It uses that season count and CBA Article VI, assuming the contract ends after 2026:
     UFA = 5 or more seasons (Article VI, Section 9). Unrestricted the day after the moratorium.
     RFA = 4 seasons (Article VI, Section 5(b)). Restricted only if the prior team sends a qualifying offer from Jan. 30 through Feb. 3, 2027. Otherwise unrestricted.
     Reserved = 3 or fewer (Article VI, Section 8). Reserved only if the prior team sends a qualifying offer in that same window. Otherwise unrestricted. A player who finished on a developmental contract is also reserved if that offer is made. This file does not identify developmental contracts.
@@ -20,7 +20,7 @@ wnba-2026-players-by-service-class.csv
 wnba-2026-team-free-agency-shares.csv
   One row per 2026 club, then a WNBA row.
   Team shares use only players with a single team abbreviation. Points and minutes are the sums of ppg x games and mpg x games.
-  ufa_point_share is that group's points divided by the team's points, in percent to one decimal.
+  ufa_point_share is the share of 2026 points scored by players with 5+ seasons: that group's points divided by the team's points, in percent to one decimal.
   The same split is applied to minutes and to the player count.
   The WNBA row includes the two combined-team players, so its points are higher than the sum of the team rows.
   Playoff games are not included.

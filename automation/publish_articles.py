@@ -500,7 +500,46 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
     html = '\n'.join(html_blocks)
     if sortable:
         html += '\n' + sort_script()
-    return html
+    return rewrite_player_hrefs(html)
+
+
+_PLAYER_HREF_RE = re.compile(r'(href=")/wnba/([a-z0-9-]+)/(")')
+_PLAYER_ALIAS: dict[str, str] | None = None
+
+
+def player_alias_map() -> dict[str, str]:
+    """Archive slug -> canonical slug, from the duplicate player id map."""
+    global _PLAYER_ALIAS
+    if _PLAYER_ALIAS is not None:
+        return _PLAYER_ALIAS
+    from build_players import DUPLICATE_PLAYER_IDS
+    index_path = ROOT / 'data' / 'wnba' / 'players-index.json'
+    found: dict[str, str] = {}
+    if index_path.is_file():
+        index = json.loads(index_path.read_text(encoding='utf-8'))
+        for entry in index.get('players') or []:
+            target = DUPLICATE_PLAYER_IDS.get(entry.get('id'))
+            slug = str(entry.get('slug') or '')
+            if target and slug and target != slug:
+                found[slug] = str(target)
+    _PLAYER_ALIAS = found
+    return found
+
+
+def rewrite_player_hrefs(html: str) -> str:
+    """Story links resolve by player id. An alias slug goes to the canonical profile."""
+    aliases = player_alias_map()
+    if not aliases:
+        return html
+
+    def repl(match: re.Match) -> str:
+        slug = match.group(2)
+        target = aliases.get(slug)
+        if not target:
+            return match.group(0)
+        return f'{match.group(1)}/wnba/{target}/{match.group(3)}'
+
+    return _PLAYER_HREF_RE.sub(repl, html)
 
 
 def focal_for(meta: dict, existing: dict | None) -> str:

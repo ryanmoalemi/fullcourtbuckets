@@ -24,11 +24,11 @@ sortable_tables: true
 
 The [Las Vegas Aces](/wnba/teams/las-vegas-aces/) got 96.3% of their 2026 regular-season points from players with five or more seasons in Full Court Buckets' file, and that group scored 56.0% of all WNBA points. Five seasons is the CBA line for unrestricted free agency once a contract ends.
 
-## Share of 2026 points by years of service
+## Share of 2026 points scored by players with 5+ seasons
 
 Las Vegas also got 96.0% of its minutes from that five-season group. League-wide, the four-season group scored 6.9% of the points and the three-or-fewer group scored 37.1%.
 
-| Team | Players | 5+ players | 5+ points | 5+ minutes | 4-year players | 4-year points | 0-3 players | 0-3 points |
+| Team | Players | 5+ players | Share of 2026 points scored by players with 5+ seasons | 5+ minutes | 4-year players | 4-year points | 0-3 players | 0-3 points |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [Las Vegas Aces](/wnba/teams/las-vegas-aces/) | 15 | 12 | 96.3% | 96.0% | 0 | 0.0% | 3 | 3.7% |
 | [Los Angeles Sparks](/wnba/teams/los-angeles-sparks/) | 20 | 8 | 81.5% | 76.4% | 0 | 0.0% | 12 | 18.5% |
@@ -47,15 +47,15 @@ Las Vegas also got 96.0% of its minutes from that five-season group. League-wide
 | [Connecticut Sun](/wnba/teams/connecticut-sun/) | 14 | 3 | 27.7% | 24.4% | 1 | 13.0% | 10 | 59.4% |
 | WNBA | 235 | 94 | 56.0% | 54.1% | 15 | 6.9% | 126 | 37.1% |
 
-Source: Full Court Buckets regular-season file for 2026 (ppg and mpg multiplied by games). Data through the end of the 2026 regular season. The Finals ended Oct. 31, 2026, and these rows leave out the playoffs. Methods: a player is in the 5+ group when the 2008-2026 season files show at least five regular seasons with a game. Four seasons is the restricted group. Three or fewer is the reserved group. The WNBA row includes every player. Team rows leave out Lexi Held (Toronto and Phoenix on one row, 225.1 points) and Aneesah Morrow (Connecticut and Toronto, 295.9 points) because the file does not split their games. Shares can move by a fraction of a point because averages are stored to one or two decimals. Rounded shares can miss 100 by a tenth. Kelsey Mitchell's row is 24.68 points times 44 games, or 1,085.9, against 1,086 points on the [WNBA.com season awards story](https://www.wnba.com/news/2026-eos-awards-lookahead-all-wnba-first-team). The class is the CBA result if the contract ends after 2026. It is not the league's February list. The data is free to use and republish (CC0). Download (CC0): [team shares (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-team-free-agency-shares.csv). [Player file (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv). [Data dictionary](/news/wnba-free-agents-2027/data/data-dictionary.txt).
+Source: Full Court Buckets regular-season file for 2026 (ppg and mpg multiplied by games). Data through the end of the 2026 regular season. The Finals ended Oct. 31, 2026, and these rows leave out the playoffs. Methods: a player is in the 5+ group when the 2008-2026 season files show at least five regular seasons with a game. Four seasons is the restricted group. Three or fewer is the reserved group. The WNBA row includes every player. Team rows leave out Lexi Held (Toronto and Phoenix on one row, 225.1 points) and Aneesah Morrow (Connecticut and Toronto, 295.9 points) because the file does not split their games. Shares can move by a fraction of a point because averages are stored to one or two decimals. Rounded shares can miss 100 by a tenth. Kelsey Mitchell's row is 24.68 points times 44 games, or 1,085.9, against 1,086 points on the [WNBA.com season awards story](https://www.wnba.com/news/2026-eos-awards-lookahead-all-wnba-first-team). Class if contract ends is the CBA result if the contract ends after 2026. It is not the league's February list. The data is free to use and republish (CC0). Download (CC0): [team shares (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-team-free-agency-shares.csv). [Player file (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv). [Data dictionary](/news/wnba-free-agents-2027/data/data-dictionary.txt).
 
-!chart: /images/articles/wnba-free-agents-2027/team-points-chart.png | Stacked bar chart of each WNBA team's share of 2026 regular-season points from players with five or more seasons, four seasons, and three or fewer. Las Vegas is 96.3% from the five-season group. The league is 56.0%. | Share of 2026 points by years of service. Free to use and republish (CC0).
+!chart: /images/articles/wnba-free-agents-2027/team-points-chart.png | Stacked bar chart of each WNBA team's share of 2026 regular-season points from players with five or more seasons, four seasons, and three or fewer. Las Vegas is 96.3% from the five-season group. The league is 56.0%. | Share of 2026 points scored by players with 5+ seasons. Free to use and republish (CC0).
 
 ## Every 2026 player, by the CBA test
 
-The class is what [Article VI](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf) assigns if the contract has ended. Restricted and reserved players get that status only if the old team sends a qualifying offer from Jan. 30 through Feb. 3, 2027. If it does not, they are unrestricted. The league has not published the 2027 list. Click a column heading to sort.
+Class if contract ends is what [Article VI](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf) assigns if the contract has ended. Restricted and reserved players get that status only if the old team sends a qualifying offer from Jan. 30 through Feb. 3, 2027. If it does not, they are unrestricted. The league has not published the 2027 list. Click a column heading to sort.
 
-| Player | 2026 team | Class | Seasons | G | MPG | PPG | RPG | APG | FG% | 3P% |
+| Player | 2026 team | Class if contract ends | Seasons | G | MPG | PPG | RPG | APG | FG% | 3P% |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | [Kelsey Mitchell](/wnba/kelsey-mitchell/) | Fever | UFA | 9 | 44 | 32.5 | 24.7 | 1.7 | 2.8 | 50.9 | 45.0 |
 | [A'ja Wilson](/wnba/aja-wilson/) | Aces | UFA | 9 | 41 | 32.0 | 26.2 | 9.4 | 3.2 | 52.7 | 40.4 |
@@ -194,7 +194,6 @@ The class is what [Article VI](https://www.wnbpa.com/_files/ugd/8121a3_675911316
 | [Te-Hina Paopao](/wnba/te-hina-paopao/) | Dream | Reserved | 2 | 35 | 11.6 | 3.7 | 0.8 | 1.4 | 35.4 | 35.7 |
 | [Gianna Kneepkens](/wnba/gianna-kneepkens/) | Sun | Reserved | 1 | 36 | 10.2 | 3.5 | 1.4 | 0.6 | 37.9 | 22.0 |
 | [Chance Gray](/wnba/chance-gray/) | Sparks | Reserved | 1 | 40 | 11.5 | 3.1 | 1.1 | 1.0 | 37.3 | 35.9 |
-| [Alicia Florez](/wnba/alicia-florez/) | Mystics | Reserved | 1 | 35 | 12.1 | 3.5 | 1.4 | 1.9 | 36.9 | 20.0 |
 | [Raven Johnson](/wnba/raven-johnson/) | Fever | Reserved | 1 | 39 | 10.9 | 3.1 | 1.7 | 1.2 | 40.8 | 23.4 |
 | [Alicia Florez](/wnba/alicia-florez-245094/) | Mystics | Reserved | 1 | 35 | 12.1 | 3.5 | 1.4 | 1.9 | 36.9 | 20.0 |
 | [Hailey Van Lith](/wnba/hailey-van-lith/) | Sun | Reserved | 2 | 22 | 15.9 | 5.5 | 1.6 | 2.1 | 42.5 | 32.4 |
@@ -313,7 +312,7 @@ The class is what [Article VI](https://www.wnbpa.com/_files/ugd/8121a3_675911316
 | [Sania Feagin](/wnba/sania-feagin/) | Sparks | Reserved | 2* | 3 | 3.3 | 0.0 | 0.3 | 0.7 | 0.0 | 0.0 |
 | [Ndjakalenga Mwenentanda](/wnba/ndjakalenga-mwenentanda/) | Valkyries | Reserved | 1 | 5 | 2.6 | 0.0 | 0.4 | 0.4 | 0.0 | 0.0 |
 
-Source: the same 2026 regular-season file, plus season files back to 2008 for the season count. Data through the end of the 2026 regular season. Methods: Class is UFA at five or more seasons (CBA Article VI, Section 9), RFA at four (Section 5(b), only if the team sends a qualifying offer), and Reserved at three or fewer (Section 8, only if the team sends a qualifying offer). An asterisk means one of those seasons had fewer than seven games. Article I does not credit a year for a 7-day contract, a developmental contract, or replacement contracts covering fewer than seven games. A standard contract that reaches the active list does count. The file does not record contract type, so those seasons are counted and marked. The data is free to use and republish (CC0). Download (CC0): [every 2026 player (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv).
+Source: the same 2026 regular-season file, plus season files back to 2008 for the season count. Data through the end of the 2026 regular season. Methods: Class if contract ends is UFA at five or more seasons (CBA Article VI, Section 9), RFA at four (Section 5(b), only if the team sends a qualifying offer), and Reserved at three or fewer (Section 8, only if the team sends a qualifying offer). An asterisk means one of those seasons had fewer than seven games. Article I does not credit a year for a 7-day contract, a developmental contract, or replacement contracts covering fewer than seven games. A standard contract that reaches the active list does count. The file does not record contract type, so those seasons are counted and marked. The data is free to use and republish (CC0). Download (CC0): [every 2026 player (CSV)](/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv).
 
 ## Key dates
 
