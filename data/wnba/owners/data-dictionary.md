@@ -1,6 +1,7 @@
 # Data dictionary: FCB WNBA ownership dataset (v3)
 
-Data version: v3 · Data through: Oct 19, 2026 (PT) · License: CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Free to use and republish.
+Data version: v3 · Data through: Nov 4, 2026 (PT) · License: CC0 (https://creativecommons.org/publicdomain/zero/1.0/). Free to use and republish.
+Nov 4, 2026: Cleveland's announced franchise is the Cleveland Sirens. Rock Entertainment Group's Aug. 4, 2026 release names the team and says it is owned and operated by Rock Entertainment Group and Chairman Dan Gilbert. Other rows were not rechecked that day. CPI target remains the January–September 2026 average.
 Source of truth: the CSVs in `data/wnba/owners/`. `automation/build_owners.py` generates every count, table and finding on the page from them; nothing on the page is typed in by hand.
 Corrections, media and data questions: ryan@fullcourtbuckets.com (general: hello@fullcourtbuckets.com).
 
@@ -62,5 +63,5 @@ valuation_id · team · publisher · published_date · amount_usd_m · currency 
 ## owner_photos.csv: controlling-owner photos (one row per named controlling owner of an active team)
 photo_id · person · team_id · image_path (self-hosted 96x96 face crop) · display (photo / initials) · source_url (Wikimedia Commons file page) · title · author · license · license_url · identity_basis (Wikidata item whose image property names the file) · crop · retrieved. Photos are not covered by FCB's CC0 dedication; each keeps its own license. Initials are used where no openly licensed, face-visible photo was matched to the person.
 
-## sources.csv: source index (78 rows) · 7 fields
+## sources.csv: source index (79 rows) · 7 fields
 source_id · url · issuer · source_type · used_in · access_status (paywalled sources are flagged) · archive_url (empty: archive.org snapshots not yet captured).
