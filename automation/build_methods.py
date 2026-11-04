@@ -20,10 +20,10 @@ ADSENSE_TAG = (
 
 REL = 'methods/index.html'
 ROUTE = '/methods/'
-TITLE = 'How we calculate | Full Court Buckets'
+TITLE = 'How we calculate WNBA stats | Full Court Buckets'
 DESCRIPTION = (
-    'How Full Court Buckets calculates player averages, standings order, team history, '
-    'revenue multiples, inflation-adjusted fees, and viewership and attendance figures.'
+    'Methods for Full Court Buckets player averages, standings order, team history, '
+    'revenue multiples, inflation-adjusted fees, and viewership.'
 )
 
 BODY = '''
