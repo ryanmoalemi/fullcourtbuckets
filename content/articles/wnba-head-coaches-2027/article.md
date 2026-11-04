@@ -25,7 +25,7 @@ data_table_first: true
 sortable_tables: true
 ---
 
-The [New York Liberty](/wnba/teams/new-york-liberty/) will not keep Chris DeMarco. Only 3 of 15 WNBA head coaches have lasted more than two seasons with their current team. Cheryl Reeve has 17 with the Lynx. The six coaches with two seasons and the four with one have 16 seasons combined.
+The [New York Liberty](/wnba/teams/new-york-liberty/) will not keep Chris DeMarco. Only 3 of 15 WNBA head coaches have lasted more than two seasons with their current team. Cheryl Reeve has 17 with the Lynx. The six coaches with two seasons and the four with one have 16 seasons combined. Open-job day counts are in the [2027 WNBA coaching tracker](/wnba/coaching-tracker/).
 
 ## Every WNBA head coach, Nov. 4, 2026
 

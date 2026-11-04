@@ -2710,7 +2710,7 @@ LEGACY_PLAYER_SLUGS = (
 # viewership-attendance is an evergreen guide. Counting it as a player made the
 # updater require a /players/viewership-attendance/ redirect and fail the suite
 # on 0b40a3d (Oct. 13, 2026).
-WNBA_NON_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue', 'owners', 'where-to-watch', 'finals'})
+WNBA_NON_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue', 'owners', 'where-to-watch', 'finals', 'coaching-tracker'})
 
 
 def permanent_redirect(target: str) -> str:
