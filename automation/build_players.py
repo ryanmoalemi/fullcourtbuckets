@@ -403,6 +403,12 @@ def game_display(game):
     }
 
 
+def career_high_note(slug: str) -> str:
+    """Recap link under the game log. Empty unless our logs and an FCB recap agree."""
+    import career_high_recap
+    return career_high_recap.note_html(slug)
+
+
 def game_table(profile, include_note=True):
     games=profile.get('recent_completed_games',[])
     if not games:
@@ -2170,7 +2176,7 @@ def archive_record_page(profile, root=None, linking=None, menu=None):
         f'</div>{art}</div>{hero_stats}</section>{nav}'
     )
     career = career_summary.section_html(profile, root) if use_career else ''
-    column = f'{career}{statshtml}{partial}{games}{history}{couple}'
+    column = f'{career}{statshtml}{partial}{games}{career_high_note(slug)}{history}{couple}'
     if aside:
         body = hero + f'<div class="content-grid"><div>{column}</div>{aside}</div>'
     else:
@@ -2300,7 +2306,7 @@ def profile_page(profile, root=None, linking=None, menu=None):
     notes = player_facts_html(root, slug)
     overview_html=f'<section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}{notes}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>'
     archive=f'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>{esc(archive_line)}</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
-    body=hero+f'<div class="content-grid"><div>{statshtml}{partial}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
+    body=hero+f'<div class="content-grid"><div>{statshtml}{partial}{ai_disclosure_html()}{game_table(profile)}{career_high_note(slug)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
     route=f'/wnba/{slug}/'
     title = player_title(name)
     webpage={'@type':'WebPage','name':title,'url':BASE+route,'about':{'@id':BASE+route+'#player'}}
@@ -2650,7 +2656,19 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
     faq_node = team_extras.faq_schema(faq, BASE+route)
     if faq_node:
         structured['@graph'].append(faq_node)
-    return document(seo_meta.team_title(name), seo_meta.team_description(team_description(slot, standing)), route, body, structured, include_standings, menu)
+    import jsonld_schema
+    team_desc = seo_meta.team_description(team_description(slot, standing))
+    structured['@graph'].append(jsonld_schema.dataset_node(
+        name,
+        team_desc,
+        BASE + route,
+        [
+            BASE + route + team_extras.csv_name(slot),
+            BASE + route + team_extras.history_csv_name(slot),
+            BASE + route + team_extras.schedule_csv_name(slot),
+        ],
+    ))
+    return document(seo_meta.team_title(name), team_desc, route, body, structured, include_standings, menu)
 
 def teams_hub_page(root, linking, include_standings=True, menu=None):
     body, structured, title, description = team_hub.hub_parts(root, linking)
@@ -2840,6 +2858,7 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
         link_list([
             ('/about/', 'About'),
             ('/how-we-make-full-court-buckets/', 'How we make Full Court Buckets'),
+            ('/methods/', 'How we calculate'),
         ])
         + '<h3>Authors</h3>'
         + link_list([
@@ -3070,6 +3089,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('index.html', '/'),
         ('about/index.html', '/about/'),
         ('how-we-make-full-court-buckets/index.html', '/how-we-make-full-court-buckets/'),
+        ('methods/index.html', '/methods/'),
         ('contact/index.html', '/contact/'),
         ('privacy/index.html', '/privacy/'),
         ('terms/index.html', '/terms/'),

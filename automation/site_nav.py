@@ -45,6 +45,7 @@ FOOTER_HTML = (
     '<a href="/standings/">Standings</a>'
     '<a href="/about/">About</a>'
     '<a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>'
+    '<a href="/methods/">How we calculate</a>'
     '<a href="/contact/">Contact</a>'
     '<a href="/privacy/">Privacy Policy</a>'
     '<a href="/terms/">Terms of Use</a>'
@@ -113,6 +114,7 @@ def planned_paths(root: Path, index: dict, linking: dict) -> set[str]:
         'standings/index.html',
         'about/index.html',
         'how-we-make-full-court-buckets/index.html',
+        'methods/index.html',
         'contact/index.html',
         'privacy/index.html',
         'terms/index.html',
@@ -198,6 +200,8 @@ def build_menu(root: Path, planned: set[str] | None = None) -> list[dict]:
 
     if exists('/about/'):
         children = []
+        if exists('/methods/'):
+            children.append({'label': 'How we calculate', 'href': '/methods/'})
         if exists('/contact/'):
             children.append({'label': 'Contact', 'href': '/contact/'})
         items.append({'label': 'About', 'href': '/about/', 'children': children})

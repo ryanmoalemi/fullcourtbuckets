@@ -1460,6 +1460,8 @@ def methodology() -> str:
         'the cell is labeled unresolved and the printed figure stays next to its source.</li>'
         '<li><strong>No guessing.</strong> A blank cell is not zero. '
         'Spot an error? Email <a href="mailto:hello@fullcourtbuckets.com">Ryan</a>.</li>'
+        '<li><strong>Same rules, one page.</strong> '
+        '<a href="/methods/">How we calculate</a> collects the methods used on FCB data pages.</li>'
         '</ul></section>'
     )
 
@@ -1766,6 +1768,13 @@ def render_page(root: Path, payload: dict) -> str:
             '@id': core.BASE + core.ROUTE + '#faq',
             'mainEntity': questions,
         })
+    import jsonld_schema
+    structured['@graph'].append(jsonld_schema.dataset_node(
+        core.PAGE_TITLE,
+        core.DESCRIPTION,
+        core.BASE + core.ROUTE,
+        [core.BASE + core.ROUTE + core.CSV_NAME],
+    ))
     schema = json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')
     css = (Path(__file__).with_name('standings.css')).read_text(encoding='utf-8') + core.EXTRA_CSS + core.links.BYLINE_CSS
     lead = core.link_teams(core.lead_sentence(payload))

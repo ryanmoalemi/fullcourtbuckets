@@ -1465,7 +1465,10 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
         description = cap_meta(article.get('description') or '', 160)
         if description:
             node['description'] = description
-        modified = str(article.get('dateModified') or '').strip()
+        published = str(article.get('date') or node.get('datePublished') or '').strip()
+        if published and not str(node.get('datePublished') or '').strip():
+            node['datePublished'] = published
+        modified = str(article.get('dateModified') or node.get('dateModified') or published).strip()
         if modified:
             node['dateModified'] = modified
         return _jsonld(data)
@@ -1483,6 +1486,7 @@ def _upsert_article_schema(html: str, article: dict, absolute: str) -> str:
             'url': absolute,
             'mainEntityOfPage': {'@type': 'WebPage', '@id': absolute},
             'datePublished': article.get('date') or '',
+            'dateModified': article.get('dateModified') or article.get('date') or '',
             'author': article_author(),
             'publisher': {
                 '@type': 'Organization',

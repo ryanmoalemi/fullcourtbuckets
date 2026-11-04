@@ -36,6 +36,7 @@ HOME_H1 = 'WNBA news, stats, scores and play-by-play'
 FINALS_HUB = '/news/wnba-finals-2026-schedule-dream-valkyries/'
 LABELS = {
     '/news/': 'News', '/wnba/': 'WNBA', '/wnba/teams/': 'Teams', '/standings/': 'Standings',
+    '/methods/': 'How we calculate',
     '/authors/': 'Authors', '/sitemap/': 'Site map', '/search/': 'Search',
 }
 CSS = ('.breadcrumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px;'
