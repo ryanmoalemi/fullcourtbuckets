@@ -16,7 +16,7 @@ teams:
   - las-vegas-aces
   - phoenix-mercury
 hero_alt: "Chris DeMarco, then the New York Liberty head coach, in a black sweater with a Liberty logo, at Target Center on July 11, 2026"
-photo_credit: "Photo: John McClellan, CC BY-SA 4.0, via Wikimedia Commons"
+photo_credit: "Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:Chris_DeMarco_(cropped).jpg"
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 focal_y: "center 30%"
