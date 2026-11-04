@@ -610,14 +610,34 @@ def _team_list(names: list[str]) -> str:
     return 'the ' + ', '.join(names[:-1]) + ' and ' + names[-1]
 
 
+def _club_parts(label: str) -> list[str]:
+    """Clubs inside one season label, in the order they were joined.
+
+    A season that adds two stints is stored as "Sun and Tempo". Treating that
+    whole string as one club, then joining it with "and", reads
+    "the Sun and Sun and Tempo".
+    """
+    text = str(label or '').strip()
+    if not text or text == 'Team not listed':
+        return []
+    if ', and ' in text:
+        head, last = text.rsplit(', and ', 1)
+        parts = [part.strip() for part in head.split(', ')] + [last.strip()]
+    elif ' and ' in text:
+        parts = [part.strip() for part in text.split(' and ')]
+    else:
+        parts = [text]
+    return [part for part in parts if part]
+
+
 def teams_faq_answer(profile, name: str) -> str:
     """Teams in first-appearance order. Never mention the stats table."""
     names = []
     rows = [row for row in profile.get('season_stats') or [] if isinstance(row, dict) and row.get('season_type') == 2]
     for row in sorted(rows, key=lambda item: item.get('season') or 0):
-        team = tname(row.get('team'))
-        if team and team != 'Team not listed' and team not in names:
-            names.append(team)
+        for team in _club_parts(tname(row.get('team'))):
+            if team not in names:
+                names.append(team)
     if not names:
         return ''
     sentence = f'{name} has played for {_team_list(names)}.'
@@ -964,6 +984,47 @@ def season_cross_check(profile, root=None) -> dict:
         'checked': True,
         'team_years': team_years,
     }
+
+
+def player_facts(root, slug: str) -> list[dict]:
+    """Hand-checked notes in data/wnba/player-facts.json. Empty when none are stored."""
+    if root is None or not slug:
+        return []
+    path = Path(root) / 'data' / 'wnba' / 'player-facts.json'
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return []
+    rows = data.get(slug) if isinstance(data, dict) else None
+    if not isinstance(rows, list):
+        return []
+    clean = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        text = str(row.get('text') or '').strip()
+        href = str(row.get('href') or '').strip()
+        label = str(row.get('label') or '').strip()
+        if text and href and label:
+            clean.append({'text': text, 'href': href, 'label': label})
+    return clean
+
+
+def player_facts_html(root, slug: str) -> str:
+    """Sourced notes under the overview, which sits below the stats table."""
+    rows = player_facts(root, slug)
+    if not rows:
+        return ''
+    items = []
+    for row in rows:
+        href = row['href']
+        external = href.startswith('http://') or href.startswith('https://')
+        extra = ' target="_blank" rel="noopener"' if external else ''
+        items.append(
+            f'<li>{esc(row["text"])} '
+            f'<a href="{esc(href)}"{extra}>{esc(row["label"])}</a>.</li>'
+        )
+    return '<h3>Career notes</h3><ul class="career-notes">' + ''.join(items) + '</ul>'
 
 
 def stat_notes_html(slug, root=None) -> str:
@@ -2236,7 +2297,8 @@ def profile_page(profile, root=None, linking=None, menu=None):
     numbers_note = 'No season records are listed on this page yet. A missing number is shown as a dash and is not turned into zero.' if not stats else 'Numbers on this page start in 2008. Regular-season and playoff statistics are listed separately. Season averages are not turned into a career total. A missing number is shown as a dash and is not turned into zero.'
     archive_line = 'Season records are not on this page yet.' if not stats else 'Explore the available records from 2008 onward.'
     sources=f'''<details class="sources section" id="sources"><summary>About these numbers</summary><p>Season statistics and recent games are listed on this page. Player ID: {p['id']}.</p><p>Last updated {esc(checked)}. A later game may not be on the page yet.</p>{last_game}<p>{numbers_note}</p><p>Height, college and similar details appear only when they are clear. Not appearing on a current roster is not the same as retirement. A new team listed here is not labeled as a trade or a signing.</p><p>This profile does not include news stories or a list of trades and signings. The number artwork is a design element, not a player photograph.</p><a href="/data/wnba/players/{slug}.json">View player data</a></details>'''
-    overview_html=f'<section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>'
+    notes = player_facts_html(root, slug)
+    overview_html=f'<section class="section" id="overview"><p class="eyebrow">Player overview</p><h2>{esc(name)}</h2>{overview}{notes}<div class="overview-strip"><div><b>{len(set(r["season"] for r in regular))}</b><span>Regular seasons on record</span></div><div><b>{esc(span)}</b><span>Available statistical years</span></div></div></section>'
     archive=f'<section class="archive-band"><div><p class="eyebrow">Full Court Buckets · Player archive</p><h2>WNBA players. Past and present.</h2><p>{esc(archive_line)}</p></div><a class="button" href="/wnba/">Browse players →</a></section>'
     body=hero+f'<div class="content-grid"><div>{statshtml}{partial}{ai_disclosure_html()}{game_table(profile)}{teammates}{overview_html}{history}</div><aside><section class="side-card"><p class="eyebrow">The essentials</p><h2>Player details</h2><dl>{detail_html}</dl></section><section class="freshness"><p class="eyebrow">Page status</p><h3>Last updated</h3><p>{esc(checked)}.</p>{last_game}<p class="small">Refreshed through the season, then less often once the season ends.</p></section><a class="button wide" href="/wnba/">Explore WNBA players →</a></aside></div>'+(faq_html or '')+sources+archive
     route=f'/wnba/{slug}/'

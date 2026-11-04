@@ -1,0 +1,278 @@
+{
+  "_note": "Sourced notes for thin active player pages. Counting totals are recovered from Full Court Buckets season logs. College and draft lines cite a league, team, or school release. The builder prints them in the overview, below the stats table.",
+  "michelle-onyiah": [
+    {
+      "text": "In two 2026 regular-season games for the Indiana Fever, Michelle Onyiah scored 4 points and grabbed 5 rebounds.",
+      "href": "/data/wnba/players/michelle-onyiah.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "California announced on July 31, 2026 that she signed a developmental contract with the Indiana Fever after graduating following the 2024-25 season.",
+      "href": "https://calbears.com/news/2026/7/31/womens-basketball-michelle-onyiah-signs-with-the-indiana-fever",
+      "label": "Cal Athletics"
+    },
+    {
+      "text": "Cal's 2024-25 roster bio lists her as a center who finished fifth in Golden Bears career blocks with 143.",
+      "href": "https://calbears.com/sports/womens-basketball/roster/ugonne-michelle-onyiah/24049",
+      "label": "Cal roster bio"
+    }
+  ],
+  "ornella-bankole": [
+    {
+      "text": "Ornella Bankole scored 48 points and grabbed 32 rebounds in 14 regular-season games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/ornella-bankole.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also handed out 15 assists in those 14 games.",
+      "href": "/data/wnba/players/ornella-bankole.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The Toronto Tempo roster lists her country as France.",
+      "href": "https://tempo.wnba.com/roster",
+      "label": "Toronto Tempo roster"
+    }
+  ],
+  "morgan-maly": [
+    {
+      "text": "Morgan Maly scored 25 points and grabbed 14 rebounds in five 2026 regular-season games for the Chicago Sky.",
+      "href": "/data/wnba/players/morgan-maly.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The WNBA lists Aug. 18, 2026 as the day she signed a player development contract with the Chicago Sky.",
+      "href": "https://www.wnba.com/draft/2026/teams/chicago-sky",
+      "label": "WNBA draft page"
+    },
+    {
+      "text": "Creighton says she closed her career as the Bluejays' leader with 333 made three-pointers and second in program points with 2,072.",
+      "href": "https://gocreighton.com/news/2025/4/16/womens-basketball-morgan-maly-earns-second-consecutive-csc-academic-all-america-honor",
+      "label": "Creighton Athletics"
+    }
+  ],
+  "tonie-morgan": [
+    {
+      "text": "Tonie Morgan scored 68 points and handed out 32 assists in 12 regular-season games for the Los Angeles Sparks in 2026.",
+      "href": "/data/wnba/players/tonie-morgan.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The Chicago Sky announced they selected her with the No. 32 overall pick in the 2026 WNBA Draft.",
+      "href": "https://sky.wnba.com/news/chicago-sky-select-tonie-morgan-with-no-32-overall-pick-in-2026-wnba-draft",
+      "label": "Chicago Sky"
+    },
+    {
+      "text": "Kentucky announced the Sparks signed her to a standard contract on Aug. 15, 2026, after a development contract.",
+      "href": "https://ukathletics.com/news/2026/07/17/la-sparks-sign-tonie-morgan-to-development-player-contract/",
+      "label": "UK Athletics"
+    }
+  ],
+  "eliska-joklova": [
+    {
+      "text": "Eliska Joklova scored 36 points and handed out 23 assists in 21 regular-season games for the Minnesota Lynx in 2026.",
+      "href": "/data/wnba/players/eliska-joklova.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also grabbed 21 rebounds in those 21 games.",
+      "href": "/data/wnba/players/eliska-joklova.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "alicia-florez-245094": [
+    {
+      "text": "Alicia Florez scored 121 points and handed out 68 assists in 35 regular-season games for the Washington Mystics in 2026.",
+      "href": "/data/wnba/players/alicia-florez-245094.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also grabbed 48 rebounds in those 35 games.",
+      "href": "/data/wnba/players/alicia-florez-245094.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "frieda-buhner": [
+    {
+      "text": "Frieda Buhner scored 244 points and grabbed 81 rebounds in 39 regular-season games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/frieda-buhner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also handed out 29 assists in those 39 games.",
+      "href": "/data/wnba/players/frieda-buhner.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The WNBA's 2026 Portland draft page lists her as the 17th overall pick, a forward from Germany.",
+      "href": "https://www.wnba.com/draft/2026/teams/portland-fire",
+      "label": "WNBA draft page"
+    }
+  ],
+  "bree-hall": [
+    {
+      "text": "Bree Hall has 19 regular-season points in nine games in the file: three games with the Golden State Valkyries in 2025, one with the Indiana Fever in 2025, and five with the Fever in 2026.",
+      "href": "/data/wnba/players/bree-hall.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "South Carolina announced the Indiana Fever selected her with the eighth pick of the second round, 20th overall, in the 2025 WNBA Draft.",
+      "href": "https://gamecocksonline.com/news/2025/04/14/three-gamecocks-taken-in-2025-wnba-draft/",
+      "label": "South Carolina Athletics"
+    },
+    {
+      "text": "The same South Carolina release says she played 147 games, the most of any four-year player in program history, and won national championships in 2022 and 2024.",
+      "href": "https://gamecocksonline.com/news/2025/04/14/three-gamecocks-taken-in-2025-wnba-draft/",
+      "label": "South Carolina Athletics"
+    }
+  ],
+  "anastasiia-olairi-kosu": [
+    {
+      "text": "Anastasiia Olairi Kosu has 143 points and 74 rebounds in 51 regular-season games, all with the Minnesota Lynx, across 2025 and 2026.",
+      "href": "/data/wnba/players/anastasiia-olairi-kosu.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "2026 was her higher scoring year in the file: 108 points in 30 games, against 35 points in 21 games in 2025.",
+      "href": "/data/wnba/players/anastasiia-olairi-kosu.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "laura-juskaite": [
+    {
+      "text": "Laura Juskaite scored 495 points, grabbed 186 rebounds and handed out 77 assists in 44 regular-season games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/laura-juskaite.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The Toronto Tempo roster lists her country as Lithuania.",
+      "href": "https://tempo.wnba.com/roster",
+      "label": "Toronto Tempo roster"
+    },
+    {
+      "text": "The WNBA's Toronto team page lists her with 60 steals, the team high for 2026.",
+      "href": "https://www.wnba.com/team/1611661332/toronto-tempo",
+      "label": "WNBA team page"
+    }
+  ],
+  "teja-oblak": [
+    {
+      "text": "Teja Oblak scored 161 points and handed out 92 assists in 29 regular-season games for the Portland Fire in 2026.",
+      "href": "/data/wnba/players/teja-oblak.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also grabbed 46 rebounds in those 29 games.",
+      "href": "/data/wnba/players/teja-oblak.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "luisa-geiselsoder": [
+    {
+      "text": "Luisa Geiselsoder has 286 points and 188 rebounds in 49 regular-season games in the file, 28 with the Dallas Wings in 2025 and 21 with the Portland Fire in 2026.",
+      "href": "/data/wnba/players/luisa-geiselsoder.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The WNBA expansion draft release says Portland took her from Dallas with the fifth pick of the first round, and lists her country as Germany.",
+      "href": "https://www.wnba.com/webview/news/wnba-expansion-draft-2026-results",
+      "label": "WNBA expansion draft release"
+    }
+  ],
+  "costanza-verona": [
+    {
+      "text": "Costanza Verona played one regular-season game for the Dallas Wings in 2026 and scored 4 points with 2 assists.",
+      "href": "/data/wnba/players/costanza-verona.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She did not record a rebound in that game.",
+      "href": "/data/wnba/players/costanza-verona.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "sika-kone": [
+    {
+      "text": "Sika Kone has 268 points and 170 rebounds in 101 regular-season games in the file, with seasons for the Chicago Sky, Washington Mystics, Minnesota Lynx and Atlanta Dream.",
+      "href": "/data/wnba/players/sika-kone.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "WNBA.com's Liberty draft history lists her as the 29th overall pick in 2022, a third-round selection.",
+      "href": "https://www.wnba.com/wnba-draft-history-new-york-liberty",
+      "label": "WNBA draft history"
+    }
+  ],
+  "noemie-brochant": [
+    {
+      "text": "Noemie Brochant scored 273 points and grabbed 89 rebounds in 43 regular-season games for the Phoenix Mercury in 2026.",
+      "href": "/data/wnba/players/noemie-brochant.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She also handed out 80 assists in those 43 games.",
+      "href": "/data/wnba/players/noemie-brochant.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "maria-conde": [
+    {
+      "text": "Maria Conde scored 298 points, grabbed 158 rebounds and handed out 89 assists in 35 regular-season games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/maria-conde.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The WNBA expansion draft release says Toronto selected her from the Golden State Valkyries in the second round, and lists Florida State and Spain.",
+      "href": "https://www.wnba.com/webview/news/wnba-expansion-draft-2026-results",
+      "label": "WNBA expansion draft release"
+    }
+  ],
+  "zaay-green": [
+    {
+      "text": "Zaay Green scored 15 points and grabbed 7 rebounds in seven regular-season games for the Toronto Tempo in 2026.",
+      "href": "/data/wnba/players/zaay-green.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She handed out 1 assist in those seven games.",
+      "href": "/data/wnba/players/zaay-green.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "valeriane-ayayi": [
+    {
+      "text": "Valeriane Ayayi has 257 points and 126 rebounds in 51 regular-season games in the file.",
+      "href": "/data/wnba/players/valeriane-ayayi.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The file has a 2015 row with the San Antonio Stars, 37 points in 16 games, and a 2026 row with the Phoenix Mercury, 220 points in 35 games, and no regular-season row for the years between.",
+      "href": "/data/wnba/players/valeriane-ayayi.json",
+      "label": "Full Court Buckets season log"
+    }
+  ],
+  "charisma-osborne": [
+    {
+      "text": "Charisma Osborne has 31 regular-season points in five games in the file: two games with the Phoenix Mercury in 2024 and three with the Portland Fire in 2026.",
+      "href": "/data/wnba/players/charisma-osborne.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "The WNBA's Portland draft page lists a Sept. 15, 2026 transaction: she signed a player development contract with the Fire.",
+      "href": "https://www.wnba.com/draft/2026/teams/portland-fire",
+      "label": "WNBA draft page"
+    }
+  ],
+  "taniya-latson": [
+    {
+      "text": "Ta'Niya Latson scored 59 points in 19 regular-season games in 2026, 18 points in 10 games for the Los Angeles Sparks and 41 points in 9 games for the Las Vegas Aces.",
+      "href": "/data/wnba/players/taniya-latson.json",
+      "label": "Full Court Buckets season log"
+    },
+    {
+      "text": "She grabbed 15 rebounds and handed out 7 assists across those 19 games.",
+      "href": "/data/wnba/players/taniya-latson.json",
+      "label": "Full Court Buckets season log"
+    }
+  ]
+}
