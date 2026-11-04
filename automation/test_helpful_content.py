@@ -124,7 +124,7 @@ class HelpfulContentTests(unittest.TestCase):
         article = next(item for item in articles if item['slug'] == slug)
         self.assertTrue(article.get('authorWrote'))
         self.assertEqual(article['date'], '2026-10-04')
-        self.assertEqual(article['dateModified'], '2026-10-09')
+        self.assertEqual(article['dateModified'], '2026-11-04')
         self.assertIn(links.HOW_MADE_RYAN, html)
         self.assertNotIn('drafted with AI tools', html)
         self.assertIn('Published October 4, 2026', html)
@@ -139,7 +139,7 @@ class HelpfulContentTests(unittest.TestCase):
             if node is not None:
                 break
         self.assertEqual(node['datePublished'], '2026-10-04')
-        self.assertEqual(node['dateModified'], '2026-10-09')
+        self.assertEqual(node['dateModified'], '2026-11-04')
         self.assertEqual(node['author']['url'], links.AUTHOR_URL)
 
     def test_duplicate_game_one_redirects_to_the_full_recap(self):

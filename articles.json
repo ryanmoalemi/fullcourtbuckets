@@ -386,8 +386,8 @@
   {
     "slug": "wnba-finals-bonus-2026-champions-60000",
     "url": "/news/wnba-finals-bonus-2026-champions-60000/",
-    "title": "Valkyries or Dream players will each get $60,000 for the 2026 WNBA title, up from $22,908",
-    "description": "Each eligible player on the 2026 WNBA champion gets a $60,000 bonus, up from $22,908 in 2025. The runner-up gets $20,000 each and the Finals MVP gets $30,000, up from $5,000.",
+    "title": "Eligible Valkyries players are in line for $60,000 each after the 2026 title",
+    "description": "Eligible Valkyries players are in line for $60,000 each after the 2026 title, up from $22,908. Finals MVP Gabby Williams is in line for $30,000 more.",
     "category": "news",
     "date": "2026-10-18",
     "image": "/images/articles/wnba-finals-bonus-2026-champions-60000/hero-1200.webp",
@@ -403,13 +403,14 @@
     "imageHeroWidth": 1200,
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/wnba-finals-bonus-2026-champions-60000/hero-2x.webp",
-    "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945,
+    "imageHero2xWidth": 2400,
+    "imageHero2xHeight": 1350,
     "imageOg": "/images/articles/wnba-finals-bonus-2026-champions-60000/og-1200.jpg",
     "imageOgWidth": 1200,
     "imageOgHeight": 630,
     "imageWidth": 1200,
-    "imageHeight": 675
+    "imageHeight": 675,
+    "dateModified": "2026-11-04"
   },
   {
     "slug": "dream-valkyries-finals-game-1-recap",
@@ -466,7 +467,8 @@
     "imageHero2xHeight": 945,
     "imageOg": "/images/articles/valkyries-wnba-finals-performers/og-1200.jpg",
     "imageOgWidth": 1200,
-    "imageOgHeight": 630
+    "imageOgHeight": 630,
+    "dateModified": "2026-11-04"
   },
   {
     "slug": "wnba-finals-2026-schedule-dream-valkyries",
@@ -574,7 +576,8 @@
     "imageHeroHeight": 675,
     "imageHero2x": "/images/articles/liberty-offseason-five-gm-moves/hero-2x.webp",
     "imageHero2xWidth": 1680,
-    "imageHero2xHeight": 945
+    "imageHero2xHeight": 945,
+    "dateModified": "2026-11-04"
   },
   {
     "slug": "wnba-finals-2026-audience-growth-dream-valkyries",
@@ -902,7 +905,7 @@
     "date": "2026-10-04",
     "image": "/news/top-10-womens-college-basketball-cards-to-collect-2026/img/watkins-superfractor-1-1-psa10.webp",
     "imageAlt": "JuJu Watkins 2024-25 Bowman University Chrome Prospects SuperFractor Autographs number 37, serial 1 of 1, PSA 10, certification 123955080",
-    "dateModified": "2026-10-09",
+    "dateModified": "2026-11-04",
     "authorWrote": true,
     "imageWidth": 1688,
     "imageHeight": 950,

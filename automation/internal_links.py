@@ -2946,8 +2946,16 @@ def sync_news_sitemap(text: str, articles: list) -> str:
         old = f'{BASE}/{slug}/'
         new = article_absolute(article)
         text = re.sub(rf'(<loc>\s*){re.escape(old)}(\s*</loc>)', rf'\1{new}\2', text)
+        modified = str(article.get('dateModified') or '').strip()
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', modified) and new in text:
+            text = re.sub(
+                rf'(<loc>\s*{re.escape(new)}\s*</loc>\s*<lastmod>)(\d{{4}}-\d{{2}}-\d{{2}})(</lastmod>)',
+                lambda match, day=modified: match.group(1) + day + match.group(3) if match.group(2) < day else match.group(0),
+                text,
+                count=1,
+            )
         if new not in text:
-            lastmod = str(article.get('date') or '2026-09-29')
+            lastmod = modified if re.fullmatch(r'\d{4}-\d{2}-\d{2}', modified) else str(article.get('date') or '2026-09-29')
             block = (
                 '  <url>\n'
                 f'    <loc>{new}</loc>\n'

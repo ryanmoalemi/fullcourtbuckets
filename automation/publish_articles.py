@@ -600,6 +600,10 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
         except ValueError:
             raise SystemExit(f'{slug}: game_date {game_day!r} is not YYYY-MM-DD')
         article['gameDate'] = game_day
+    # dateModified follows a real edit date. The publish date stays datePublished.
+    updated = str(meta.get('updated') or '').strip()
+    if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated):
+        article['dateModified'] = updated
     return article
 
 
@@ -889,7 +893,7 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
         'description': description,
         'image': [og_image],
         'datePublished': article['date'],
-        'dateModified': article['date'],
+        'dateModified': article.get('dateModified') or article['date'],
         'author': {
             '@type': 'Person',
             'name': 'Ryan Moalemi',

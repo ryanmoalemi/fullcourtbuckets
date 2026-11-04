@@ -38,7 +38,7 @@ PAGE_DIR = ROOT / 'wnba' / 'owners'
 PAGE_PATH = PAGE_DIR / 'index.html'
 SHELL_PAGE = ROOT / 'wnba' / 'viewership-attendance' / 'index.html'
 PUBLISHED = '2026-10-19'
-DATA_THROUGH = '2026-10-19'
+DATA_THROUGH = '2026-11-04'
 DATASET_VERSION = 'v3'
 LICENSE_URL = citation.CC0
 CONTACT = 'ryan@fullcourtbuckets.com'
@@ -237,7 +237,7 @@ def source_label(url: str, kind: str = '') -> str:
         return 'Sportico report (reposted by team)'
     if host.endswith('wnba.com') or host.endswith('nba.com'):
         return 'League release' if host in ('wnba.com', 'nba.com') else 'Team release'
-    if host in ('mohegangaming.com', 'monumentalsports.com', 'bkse.com'):
+    if host in ('mohegangaming.com', 'monumentalsports.com', 'bkse.com', 'rockeg.com'):
         return 'Owner release'
     names = {
         'apnews.com': 'AP report', 'sportico.com': 'Sportico', 'cnbc.com': 'CNBC', 'forbes.com': 'Forbes',
@@ -764,7 +764,9 @@ def body(data: dict, s: dict) -> str:
     missing = [f"{r['team']}: {r['controlling_owner_evidence']}" for r in active(data) if r['controlling_owner_evidence'] != 'sourced']
     miss_txt = f' (not yet primary-sourced for control: {"; ".join(missing)})' if missing else ''
     p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
-             + '<p class="ow-small">Future teams (not in active counts): Cleveland 2028, Detroit 2029, Philadelphia 2030. See <a href="#future">future teams</a>.</p></section>')
+             + '<p class="ow-small">Future teams (not in active counts): '
+             + ', '.join(esc(r['team']) for r in data['ownership'] if str(r['scope']).startswith('future'))
+             + '. See <a href="#future">future teams</a>.</p></section>')
     p.append('<section class="ow-section" id="investors"><h2 class="section-title">Publicly disclosed investors</h2>'
              '<p>Governor and executive titles never create an ownership row. Parent-company percentages are never converted into franchise percentages. '
              '"Former pro athlete" means the person played professionally; tags overlap and are never added together.</p>' + investor_section(data) + '</section>')
@@ -960,7 +962,8 @@ def write_downloads(data: dict, s: dict) -> None:
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as z:
         for name, raw in sorted(files.items()):
-            info = zipfile.ZipInfo(name, date_time=(2026, 10, 19, 0, 0, 0))
+            year, month, day = (int(part) for part in DATA_THROUGH.split('-'))
+            info = zipfile.ZipInfo(name, date_time=(year, month, day, 0, 0, 0))
             info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, raw)
     write_if_changed(PAGE_DIR / ZIP_NAME, buf.getvalue())
@@ -970,6 +973,14 @@ def update_sitemap() -> None:
     path = ROOT / 'pages-sitemap.xml'
     text = path.read_text(encoding='utf-8')
     if f'<loc>{CANONICAL}</loc>' in text:
+        bumped = re.sub(
+            rf'(<loc>{re.escape(CANONICAL)}</loc>\s*<lastmod>)\d{{4}}-\d{{2}}-\d{{2}}(</lastmod>)',
+            rf'\g<1>{DATA_THROUGH}\2',
+            text,
+            count=1,
+        )
+        if bumped != text:
+            path.write_text(bumped, encoding='utf-8')
         return
     entry = (f'  <url>\n    <loc>{CANONICAL}</loc>\n    <lastmod>{DATA_THROUGH}</lastmod>\n'
              '    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n')
@@ -986,8 +997,14 @@ def main() -> None:
     validate(data)
     profiles_mod.build(data)
     s = stats(data)
-    write_if_changed(PAGE_PATH, render(data, s))
+    import social_meta
+    page = social_meta.social_block(
+        render(data, s), social_meta.default_image_url(), social_meta.DEFAULT_ALT,
+        social_meta.W, social_meta.H,
+    )
+    write_if_changed(PAGE_PATH, page)
     write_downloads(data, s)
+    update_sitemap()
     print(f'{s["teams"]} teams, {s["relationships"]} investor relationships, {s["ledger_rows"]} ledger rows, {s["projects"]} facility projects')
 
 

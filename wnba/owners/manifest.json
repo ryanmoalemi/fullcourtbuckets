@@ -1,11 +1,11 @@
 {
  "version": "v3",
- "data_through": "2026-10-19",
+ "data_through": "2026-11-04",
  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
  "files": {
   "data-dictionary.md": {
-   "sha256": "b4e1b59174aac2733d92f8f2211b79bfcde450a315de1875b893bc5fcfaf0a45",
-   "bytes": 9227
+   "sha256": "a957916106fad4a9dc677119e2adc2990d38cbb0c9c11c999293127e71f46261",
+   "bytes": 9544
   },
   "entities.csv": {
    "sha256": "66fc6d2ab1bbb24825d0e38e4d12a380e6d4286bf01de9167feea562ab740cb5",
@@ -20,36 +20,36 @@
    "bytes": 5571
   },
   "findings.json": {
-   "sha256": "22c65c8f6aecb3b403b5013c10b22c677ea3c157977d25351a868937b8f639ad",
+   "sha256": "f7a10e051d05b46e2c498d6f83d926567eb80468445c5aa0c79e01c45411f95e",
    "bytes": 712
   },
   "investors.csv": {
-   "sha256": "c0280d653e77009510eb39ccfb7fdd7ba8ebd51d47feb915d41ce488a96922d1",
-   "bytes": 35480
+   "sha256": "660551f2ab21cea82ed0563ac1d3170a6f1f498f03df870d258c4c6e22ef816d",
+   "bytes": 35770
   },
   "owner_photos.csv": {
    "sha256": "e7d794a8a055f28b979a1ff24ac63810d77b5fd988d262c572a94f6d47077087",
    "bytes": 5412
   },
   "ownership.csv": {
-   "sha256": "b28b843462acff399216005b5ae70b872c66016bfe1ce68b41e772fe08bb01d5",
-   "bytes": 8353
+   "sha256": "610fe74a8133d9abb763b71cefc8b80ca19521487ff46e09b8bfa660e6dee2ea",
+   "bytes": 8407
   },
   "sources.csv": {
-   "sha256": "a958fcc5433983e326863c1b8ecaafcab5f07623cb73ee150e4c5e8cd830a3d8",
-   "bytes": 14433
+   "sha256": "b8269b04352ce28b94078c81fc88ddbf42eeb426a7d80b21ee0bc6c93cd7b6f9",
+   "bytes": 14647
   },
   "transactions.csv": {
-   "sha256": "ca818b8244da937f58cab2b7977a1dd7230280960e0048ad63cf6849658d9e95",
-   "bytes": 11679
+   "sha256": "2ed4786617ac2af894f8ec3efd16e80030437ca49f549e70884077ebb1f8dea8",
+   "bytes": 11686
   },
   "valuations.csv": {
    "sha256": "3f5e57b99049b54e66170678b2967cb96ddcc78a8ac4b859fda0382400e808c2",
    "bytes": 13044
   },
   "wnba-owners.json": {
-   "sha256": "4bb05035ad5ffe6f0023d5b17558439275016bfa8a0576e98aafb9f6f9eec092",
-   "bytes": 232931
+   "sha256": "47f66025046a14e00eeece719c5551a83f3b9954ae34b72224afa4f91f4f807f",
+   "bytes": 233643
   }
  },
  "records": {
@@ -60,7 +60,7 @@
   "facility_projects": 11,
   "facility_financials": 18,
   "valuations": 53,
-  "sources": 80,
+  "sources": 81,
   "owner_photos": 22
  }
 }
