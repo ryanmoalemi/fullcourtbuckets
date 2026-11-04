@@ -18,6 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'automation'))
 
+import bref_player_links  # noqa: E402
 import internal_links as links  # noqa: E402
 import news_heroes  # noqa: E402
 import rss_feed  # noqa: E402
@@ -500,7 +501,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
     html = '\n'.join(html_blocks)
     if sortable:
         html += '\n' + sort_script()
-    return rewrite_player_hrefs(html)
+    return bref_player_links.link_html(rewrite_player_hrefs(html))
 
 
 _PLAYER_HREF_RE = re.compile(r'(href=")/wnba/([a-z0-9-]+)/(")')
@@ -1176,6 +1177,8 @@ def main() -> None:
     for folder in folders:
         articles = publish_folder(folder, articles)
     save_articles(articles)
+    # Page HTML is what content:encoded reads, so the feed is written after every story.
+    write_if_changed(ROOT / 'feed.xml', rss_feed.feed_document(ROOT))
 
 
 if __name__ == '__main__':
