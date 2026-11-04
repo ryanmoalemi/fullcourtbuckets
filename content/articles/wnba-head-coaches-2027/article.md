@@ -43,7 +43,7 @@ Cheryl Reeve, [Becky Hammon](/wnba/becky-hammon/) and Nate Tibbetts are the thre
 | [Connecticut Sun](/wnba/teams/connecticut-sun/) | Rachid Meziane | [Dec. 4, 2024](https://www.wnba.com/news/rachid-meziane-named-connecticut-sun-head-coach) | 2 | 22-66 | .250 | 0-0 | In place |
 | [Dallas Wings](/wnba/teams/dallas-wings/) | Jose Fernandez | [Oct. 27, 2025](https://wings.wnba.com/news/jose-fernandez-named-head-coach) | 1 | 27-17 | .614 | 1-2 | In place |
 | [Toronto Tempo](/wnba/teams/toronto-tempo/) | Sandy Brondello | [Nov. 4, 2025](https://tempo.wnba.com/news/toronto-tempo-name-sandy-brondello-as-inaugural-head-coach) | 1 | 11-33 | .250 | 0-0 | In place |
-| [Portland Fire](/wnba/teams/portland-fire/) | Alex Sarama | Not in this file | 1 | 17-27 | .386 | 0-0 | In place |
+| [Portland Fire](/wnba/teams/portland-fire/) | Alex Sarama | [Oct. 17, 2025](https://fire.wnba.com/news/portland-fire-names-alex-sarama-as-head-coach) | 1 | 17-27 | .386 | 0-0 | In place |
 | [Seattle Storm](/wnba/teams/seattle-storm/) | Sonia Raman | [Oct. 28, 2025](https://storm.wnba.com/news/coach-sonia-raman) | 1 | 8-36 | .182 | 0-0 | In place |
 | [New York Liberty](/wnba/teams/new-york-liberty/) | Vacant | [Nov. 3, 2026](https://x.com/nyliberty/status/2117607590326644854) | 0 |  |  |  | Vacant since Nov. 3, 2026 |
 | [Los Angeles Sparks](/wnba/teams/los-angeles-sparks/) | Vacant | [Sept. 25, 2026](https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts) | 0 |  |  |  | Vacant since Sept. 25, 2026 |
@@ -86,6 +86,6 @@ The [Sparks](/wnba/teams/los-angeles-sparks/) parted ways with Lynne Roberts on 
 
 Eight hires had a first season in 2025: Nakase (Oct. 10, 2024), White (Nov. 1), Marsh (Nov. 3), Smesko (Nov. 13), Roberts (Nov. 19), Meziane (Dec. 4), Johnson (Dec. 23) and [Chris Koclanes](https://www.wnba.com/news/dallas-wings-name-chris-koclanes-head-coach) in Dallas (Dec. 23, 2024). Koclanes was not the 2026 coach. Fernandez's Oct. 27, 2025 release names Fernandez as the next Wings coach.
 
-Four 2026 hires have a date on a release opened for this page: Fernandez (Oct. 27, 2025), Raman (Oct. 28, 2025), Brondello (Nov. 4, 2025) and DeMarco (Dec. 3, 2025). Portland lists Alex Sarama as head coach, and he is on the 2026 row, but the announcement date was not on a Fire release this page could open.
+Five 2026 hires have a date on a release opened for this page: Sarama (Oct. 17, 2025), Fernandez (Oct. 27, 2025), Raman (Oct. 28, 2025), Brondello (Nov. 4, 2025) and DeMarco (Dec. 3, 2025). The Fire release is [Portland Fire Names Alex Sarama As Head Coach](https://fire.wnba.com/news/portland-fire-names-alex-sarama-as-head-coach), dated Oct. 17, 2025 on the team's news list.
 
 Nakase's Valkyries won the 2026 title. The [AP recap of Game 7](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap) says Golden State beat Atlanta 68-63. Our recap is [Game 7](/news/dream-valkyries-finals-game-7-recap/).

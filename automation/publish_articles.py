@@ -879,6 +879,17 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
     meta('twitter:title', social, 'name')
     meta('twitter:description', description, 'name')
     meta('twitter:image', og_image, 'name')
+    alt = str(article.get('imageAlt') or '').strip()
+    if alt:
+        meta('twitter:image:alt', alt, 'name')
+        if re.search(r'<meta property="og:image:alt"', page):
+            meta('og:image:alt', alt, 'property')
+        else:
+            page = page.replace(
+                '<meta name="twitter:image:alt"',
+                f'<meta property="og:image:alt" content="{esc(alt)}"><meta name="twitter:image:alt"',
+                1,
+            )
     meta('article:published_time', article['date'], 'property')
     page = re.sub(
         r'(<link rel="canonical" href=").*?(">)',
