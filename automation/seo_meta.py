@@ -173,8 +173,26 @@ def _count_entries(rel_path: str):
     return count
 
 
+def _wtw_stat(key: str):
+    """Live where-to-watch counts. The refresh must not keep a frozen venue total."""
+    def value(root: Path) -> int:
+        import build_where_to_watch as watch
+        data = root / 'data' / 'where-to-watch-bars.csv'
+        saved = watch.DATA
+        try:
+            if data.is_file():
+                watch.DATA = data
+            rows = watch.load()
+        finally:
+            watch.DATA = saved
+        return watch.stats(rows)[key]
+    return value
+
+
 TOKENS = {
     'famous_relatives': _count_entries('data/famous-relatives.json'),
+    'wtw_venues': _wtw_stat('venues'),
+    'wtw_cities': _wtw_stat('cities'),
 }
 TOKEN_RE = re.compile(r'\{(' + '|'.join(TOKENS) + r')\}')
 
@@ -214,13 +232,46 @@ def pages(root: Path = ROOT):
         yield p, '/' + rel.as_posix().removesuffix('index.html'), text
 
 
-def apply_text(text: str, rel: str, overrides: dict) -> str:
+def where_to_watch_meta(root: Path = ROOT) -> tuple[str, str]:
+    """Title and description from the current bar file, not a saved Finals headline."""
+    import build_where_to_watch as watch
+    data = root / 'data' / 'where-to-watch-bars.csv'
+    saved = watch.DATA
+    try:
+        if data.is_file():
+            watch.DATA = data
+        rows = watch.load()
+    finally:
+        watch.DATA = saved
+    summary = watch.stats(rows)
+    return watch.TITLE, watch.description(summary)
+
+
+def guard_where_to_watch(root: Path = ROOT) -> None:
+    """Fail the refresh when the bar file has fewer venues than the published page."""
+    import build_where_to_watch as watch
+    page = root / 'wnba' / 'where-to-watch' / 'index.html'
+    if not page.is_file():
+        return
+    html = page.read_text(encoding='utf-8', errors='replace')
+    current = html.count('class="ww-row"')
+    _title, description = where_to_watch_meta(root)
+    advertised = re.search(r'(\d+) bars', description)
+    watch.refuse_venue_drop(current, int(fill_tokens('{wtw_venues}', root)))
+    if advertised:
+        watch.refuse_venue_drop(current, int(advertised.group(1)), what='where-to-watch description')
+
+
+def apply_text(text: str, rel: str, overrides: dict, root: Path = ROOT) -> str:
     tm = TITLE_RE.search(text)
     dm = DESC_RE.search(text)
     title = _plain(tm.group(1)) if tm else ''
     desc = _plain(dm.group(2)) if dm else ''
-    o = overrides.get(rel)
-    if o:
+    if rel == '/wnba/where-to-watch/':
+        # The CSV is the source. A frozen seo-meta.json line used to put the old
+        # Finals title and "251 bars" back on this page at every data refresh.
+        new_t, new_d = where_to_watch_meta(root)
+    elif (o := overrides.get(rel)):
         new_t, new_d = o.get('title', title), o.get('description', desc)
     else:
         fam = family_meta(rel, title, desc)
@@ -291,10 +342,11 @@ def audit(root: Path = ROOT) -> list[str]:
 
 
 def run(root: Path = ROOT) -> int:
+    guard_where_to_watch(root)
     overrides = load_overrides(root)
     changed = 0
     for p, rel, text in pages(root):
-        new = apply_text(text, rel, overrides)
+        new = apply_text(text, rel, overrides, root)
         if new != text:
             p.write_text(new, encoding='utf-8')
             changed += 1
@@ -305,14 +357,14 @@ def apply_rel(text: str, rel: str, root: Path = ROOT) -> str:
     """For page builders: apply overrides/family rules to one rendered page before writing."""
     if rel in FROZEN or REDIRECT_RE.search(text):
         return text
-    return apply_text(text, rel, load_overrides(root))
+    return apply_text(text, rel, load_overrides(root), root)
 
 
 def apply_file(path: Path, root: Path = ROOT) -> None:
     """For builders that write one page outside the main build (live play-by-play)."""
     rel = '/' + path.relative_to(root).as_posix().removesuffix('index.html')
     text = path.read_text(encoding='utf-8')
-    new = apply_text(text, rel, load_overrides(root))
+    new = apply_text(text, rel, load_overrides(root), root)
     if new != text:
         path.write_text(new, encoding='utf-8')
 
