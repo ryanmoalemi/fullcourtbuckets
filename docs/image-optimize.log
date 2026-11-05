@@ -1,4 +1,4 @@
-files rewritten: 6
+files rewritten: 8
 html files rewritten: 662
 images missing alt: 0
 
@@ -11,3 +11,5 @@ KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/ho
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
 fallback dropped images/social/players/rebekkah-brunson.jpg; serving rebekkah-brunson.webp (17024 bytes)
+resized wnba/owners/joe-tsai/joe-tsai.jpg to (96, 96) (5173 bytes) + joe-tsai.webp
+resized wnba/owners/mark-davis/mark-davis.jpg to (96, 96) (3462 bytes) + mark-davis.webp
