@@ -255,7 +255,7 @@ class Tests(unittest.TestCase):
         root = Path(__file__).resolve().parents[1]
         official = json.loads((root / "data" / "wnba" / "official-bio.json").read_text())
         known = set(json.loads((root / "data" / "wnba" / "id-map.json").read_text()).values())
-        self.assertEqual(set(official["players"]), {"frieda-buhner", "antonia-delaere"})
+        self.assertEqual(set(official["players"]), {"frieda-buhner", "antonia-delaere", "aaliyah-nye"})
         self.assertTrue(set(official["players"]) <= known)
         buhner = json.loads((root / "data" / "wnba" / "players" / "frieda-buhner.json").read_text())
         delaere = json.loads((root / "data" / "wnba" / "players" / "antonia-delaere.json").read_text())
@@ -263,6 +263,8 @@ class Tests(unittest.TestCase):
         self.assertEqual(buhner["player"]["college"], "Germany")
         self.assertEqual(delaere["player"]["position"], "G")
         self.assertEqual(delaere["player"]["position_abbreviation"], "G")
+        nye = json.loads((root / "data" / "wnba" / "players" / "aaliyah-nye.json").read_text())
+        self.assertEqual(nye["player"]["jersey_number"], "13")
         with tempfile.TemporaryDirectory() as d:
             temp = Path(d)
             path = temp / "data" / "wnba" / "official-bio.json"

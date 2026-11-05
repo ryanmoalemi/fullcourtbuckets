@@ -220,11 +220,11 @@
     },
     "nneka-ogwumike": {
       "author": "John Mac",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Nneka_Ogwumike_2024_(cropped).jpg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nneka_Ogwumike_(53062759824).jpg",
       "license": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
-      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+      "qa": "pass 2026-11-05: Sparks uniform, July 20, 2023 Lynx at Sparks. Edges checked at 200% on dark and light backgrounds. Replaces the 2024 Seattle Storm file."
     },
     "natasha-howard": {
       "author": "Zafer",

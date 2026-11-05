@@ -179,6 +179,24 @@ def ranks_html(root, slot: dict) -> str:
     )
 
 
+# WNBA.com still prints Lynne Roberts in the Sparks background field, but the
+# coaches list has no head coach. The team parted ways with her on Sept. 25, 2026
+# (https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts).
+# A later name in team-facts replaces this vacancy.
+VACANT_HEAD_COACH = {
+    'Los Angeles Sparks': 'Lynne Roberts',
+}
+COACHING_TRACKER = '/wnba/coaching-tracker/'
+
+
+def head_coach_vacant(name: str, facts: dict) -> bool:
+    departed = VACANT_HEAD_COACH.get(name)
+    if not departed:
+        return False
+    current = str(facts.get('head_coach') or '').strip()
+    return current in ('', departed)
+
+
 def faq_items(root, slot: dict, standing: dict | None, leaders: dict, count: int) -> list[tuple[str, str]]:
     """Questions answered only from data on this page."""
     name = slot['full_name']
@@ -193,7 +211,9 @@ def faq_items(root, slot: dict, standing: dict | None, leaders: dict, count: int
         row = leaders.get(key)
         if row:
             items.append((f'Who led the {name} in {label} in 2026?', f'{row["name"]} led the {name} with {row[key]} {label} per game in the 2026 regular season.'))
-    if facts.get('head_coach'):
+    if head_coach_vacant(name, facts):
+        items.append((f'Who is the {name} head coach?', f'The {name} head coach job is vacant.'))
+    elif facts.get('head_coach'):
         items.append((f'Who is the {name} head coach?', f'{facts["head_coach"]} is the head coach of the {name}, according to WNBA.com.'))
     if facts.get('arena'):
         items.append((f'Where do the {name} play home games?', f'WNBA.com lists {str(facts["arena"]).strip()} as the {name} home arena.'))
@@ -207,6 +227,7 @@ def faq_html(items: list[tuple[str, str]], updated: str) -> str:
     rows = ''.join(
         f'<details class="team-faq-item"><summary>{esc(q)}</summary><p>{esc(a)}'
         + (' <a href="/wnba/where-to-watch/">Where to watch WNBA games</a>.' if 'where-to-watch' in a else '')
+        + (f' <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>.' if a.endswith('head coach job is vacant.') else '')
         + '</p></details>'
         for q, a in items
     )
@@ -503,7 +524,11 @@ def franchise_html(root, slot: dict) -> str:
             cap_html = (f' (capacity {label}, per <a href="{esc(cap_src["source"])}" target="_blank" '
                         f'rel="noopener">{esc(cap_src["source_name"])}</a>)')
         items.append(('Arena', esc(arena) + cap_html))
-    for key, label in (('head_coach', 'Head coach'), ('general_manager', 'General manager'), ('owner', 'Owner')):
+    if head_coach_vacant(slot['full_name'], facts):
+        items.append(('Head coach', f'Vacant. <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>'))
+    elif facts.get('head_coach'):
+        items.append(('Head coach', esc(str(facts['head_coach']).strip())))
+    for key, label in (('general_manager', 'General manager'), ('owner', 'Owner')):
         if facts.get(key):
             items.append((label, esc(str(facts[key]).strip())))
     titles = [str(t.get('year')) for t in facts.get('championships') or [] if t.get('year')]
@@ -537,8 +562,13 @@ def franchise_html(root, slot: dict) -> str:
         )
     if cap and cap_src.get('override'):
         parts.append(f'<p class="muted small">{esc(cap_src["override"])}</p>')
-    credit = (f'<p class="muted small">Franchise facts as listed on <a href="{esc(source)}" target="_blank" '
-              f'rel="noopener">WNBA.com</a>, checked {esc(facts_checked(root))}.</p>') if source else ''
+    if source and head_coach_vacant(slot['full_name'], facts):
+        credit = (f'<p class="muted small">Head coach status is on the <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>. '
+                  f'Other franchise facts as listed on <a href="{esc(source)}" target="_blank" rel="noopener">WNBA.com</a>, '
+                  f'checked {esc(facts_checked(root))}.</p>')
+    else:
+        credit = (f'<p class="muted small">Franchise facts as listed on <a href="{esc(source)}" target="_blank" '
+                  f'rel="noopener">WNBA.com</a>, checked {esc(facts_checked(root))}.</p>') if source else ''
     return ('<section class="section" id="franchise"><p class="eyebrow">Franchise</p>'
             f'<h2>About the {esc(slot["full_name"])}</h2>{"".join(parts)}{credit}</section>')
 

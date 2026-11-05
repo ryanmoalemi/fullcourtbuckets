@@ -1,5 +1,5 @@
 {
-  "checked": "2026-11-04",
+  "checked": "2026-11-05",
   "source": "WNBA.com player pages. These fields replace the provider feed when the two disagree, so a later import keeps the checked values.",
   "players": {
     "frieda-buhner": {
@@ -9,6 +9,13 @@
         "https://www.wnba.com/player/1643494/frieda-buhner"
       ],
       "note": "WNBA.com lists College / Country as Germany and height as 6-2."
+    },
+    "aaliyah-nye": {
+      "jersey_number": "13",
+      "pages": [
+        "https://www.wnba.com/team/1611661320/los-angeles-sparks"
+      ],
+      "note": "WNBA.com Sparks roster lists Aaliyah Nye at 13. Emma Cannon is 32. Checked Nov. 5, 2026."
     },
     "antonia-delaere": {
       "position": "G",

@@ -38,7 +38,10 @@ def parse(text: str, team_id: int) -> dict | None:
     if not team.get('city'):
         return None
     bg = team.get('background') or {}
-    head = [c.get('displayName') for c in team.get('coaches') or [] if c.get('type') == 'Head Coach']
+    coaches = team.get('coaches') or []
+    head = [c.get('displayName') for c in coaches if c.get('type') == 'Head Coach']
+    # A staff list with no head coach means the job is open. The background
+    # HEADCOACH string can stay behind after a firing (Sparks, Lynne Roberts).
     leaders = team.get('franchiseLeaders') or {}
     full = f"{team['city']} {team['name']}"
     return {
@@ -50,7 +53,7 @@ def parse(text: str, team_id: int) -> dict | None:
         'arena_capacity': _clean(bg.get('ARENACAPACITY')),
         'owner': _clean(team.get('owner') or bg.get('OWNER')),
         'general_manager': _clean(team.get('generalManager') or bg.get('GENERALMANAGER')),
-        'head_coach': _clean(head[0] if head else bg.get('HEADCOACH')),
+        'head_coach': _clean(head[0] if head else None if coaches else bg.get('HEADCOACH')),
         'official_site': _clean((team.get('links') or {}).get('team')),
         'ranks': {
             key: {'value': _clean(team.get(key)), 'rank': _clean(team.get(key + 'Rank'))}

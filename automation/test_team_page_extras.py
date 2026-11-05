@@ -60,6 +60,41 @@ class TeamPagePhaseTwoTests(unittest.TestCase):
         self.assertEqual(tx.bio_cells({'height': '6-4', 'age': 30, 'experience': 'R', 'school': '  ', 'country': 'Australia'}),
                          ['6-4', '30', 'Rookie', 'Australia'])
 
+    def test_sparks_head_coach_job_is_vacant(self):
+        slot = {'full_name': 'Los Angeles Sparks', 'slug': 'los-angeles-sparks'}
+        html = tx.franchise_html(ROOT, slot)
+        self.assertIn('>Vacant. <a href="/wnba/coaching-tracker/">WNBA coaching tracker</a>', html)
+        self.assertNotIn('Lynne Roberts', html)
+        self.assertIn('Other franchise facts as listed on', html)
+        items = tx.faq_items(ROOT, slot, None, {}, 14)
+        answer = dict(items)['Who is the Los Angeles Sparks head coach?']
+        self.assertEqual(answer, 'The Los Angeles Sparks head coach job is vacant.')
+        faq = tx.faq_html(items, '2026-11-05')
+        self.assertIn('href="/wnba/coaching-tracker/"', faq)
+        self.assertNotIn('Lynne Roberts', faq)
+
+    def test_staff_list_without_a_head_coach_drops_a_stale_background_name(self):
+        import json
+        import fetch_team_facts as facts
+        def page(coaches, background):
+            payload = {'props': {'pageProps': {'team': {
+                'city': 'Los Angeles', 'name': 'Sparks',
+                'coaches': coaches, 'background': background,
+            }}}}
+            return '<script id="__NEXT_DATA__">' + json.dumps(payload) + '</script>'
+        stale = facts.parse(page(
+            [{'displayName': 'Ebony Hoffman', 'type': 'Assistant Coach'}],
+            {'HEADCOACH': 'Lynne Roberts'},
+        ), 1)
+        self.assertIsNone(stale['head_coach'])
+        named = facts.parse(page(
+            [{'displayName': 'Becky Hammon', 'type': 'Head Coach'}],
+            {'HEADCOACH': 'Becky Hammon'},
+        ), 1)
+        self.assertEqual(named['head_coach'], 'Becky Hammon')
+        fallback = facts.parse(page([], {'HEADCOACH': 'Sandy Brondello'}), 1)
+        self.assertEqual(fallback['head_coach'], 'Sandy Brondello')
+
     def test_franchise_section_credits_wnba_com_and_cites_capacity_source(self):
         html = tx.franchise_html(ROOT, {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'})
         self.assertIn('WNBA.com', html)
