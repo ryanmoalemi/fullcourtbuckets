@@ -30,8 +30,8 @@ class VenueDedupeTests(unittest.TestCase):
         heroics = next(item for item in rows if item['id'] == 'ia-dsm-heroics')
         self.assertEqual(heroics['verification_type'], 'staff_reply')
         self.assertIn('Ste 101', heroics['street'])
-        self.assertEqual(watch.stats(rows)['venues'], 388)
-        self.assertEqual(watch.stats(rows)['confirmed'], 292)
+        self.assertEqual(watch.stats(rows)['venues'], 389)
+        self.assertEqual(watch.stats(rows)['confirmed'], 293)
 
     def test_a_real_second_branch_stays_separate(self):
         merged = watch.dedupe_rows([
