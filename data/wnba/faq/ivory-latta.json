@@ -1,67 +1,141 @@
 {
   "slug": "ivory-latta",
   "player_name": "Ivory Latta",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 5, 2026",
+  "verified_at": "2026-11-05",
   "items": [
     {
-      "question": "What are Ivory Latta's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2017), Ivory Latta averaged 8.0 points,",
+      "question": "Which WNBA teams has Ivory Latta played for?",
+      "answer": "Ivory Latta has played for the Atlanta Dream, Tulsa Shock and Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ivory latta stats",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ivory-latta/"
+      ],
+      "queries": [
+        {
+          "q": "ivory latta wnba",
+          "vol": 90
+        },
+        {
+          "q": "who does ivory latta play for",
+          "vol": 10
+        },
+        {
+          "q": "what team does ivory latta play for",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Ivory Latta dating?",
-      "answer": "As of late 2026, Ivory Latta has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "ivory latta partner",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "How much does Ivory Latta make?",
-      "answer": "A precise public salary or net worth figure for Ivory Latta is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Ivory Latta play college basketball?",
+      "answer": "Ivory Latta played at North Carolina (UNC). The Detroit Shock selected her 11th overall in the 2007 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/ivory-latta/",
+        "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html"
       ],
-      "google_keyword": "ivory latta net worth",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "ivory latta unc",
+          "vol": 50
+        },
+        {
+          "q": "ivory latta north carolina",
+          "vol": 10
+        },
+        {
+          "q": "ivory latta education",
+          "vol": null
+        },
+        {
+          "q": "ivory latta high school",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Ivory Latta married?",
-      "answer": "There is no widely reported public record of Ivory Latta being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "ivory latta wife",
-      "approx_monthly_volume": 140
+      "question": "What are Ivory Latta's stats?",
+      "answer": "In the 2017 regular season, Ivory Latta averaged 8.0 points, 0.8 rebounds, and 1.7 assists in 34 games for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ivory-latta/"
+      ],
+      "queries": [
+        {
+          "q": "ivory latta stats",
+          "vol": 40
+        },
+        {
+          "q": "ivory latta college stats",
+          "vol": null
+        },
+        {
+          "q": "ivory latta unc stats",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who are Ivory Latta's parents?",
-      "answer": "Public profiles share limited verified detail about Ivory Latta's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "ivory latta family",
-      "approx_monthly_volume": 10
+      "question": "How tall is Ivory Latta?",
+      "answer": "Basketball-Reference lists Ivory Latta at 5 feet 6 inches. She played guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html"
+      ],
+      "queries": [
+        {
+          "q": "ivory latta height",
+          "vol": 20
+        },
+        {
+          "q": "how tall is ivory latta",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Did Ivory Latta retire?",
-      "answer": "As of late 2026, Ivory Latta has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "ivory latta retired",
-      "approx_monthly_volume": 10
+      "question": "How old is Ivory Latta?",
+      "answer": "Ivory Latta was born September 25, 1984, in McConnells, South Carolina.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/l/lattaiv01w.html"
+      ],
+      "queries": [
+        {
+          "q": "ivory latta age",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "Who is Ivory Latta?",
-      "answer": "Ivory Latta is a professional basketball player for the Atlanta Dream.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "who is ivory latta married to",
-      "approx_monthly_volume": 10
+      "question": "How long did Ivory Latta play in the WNBA?",
+      "answer": "Ivory Latta played 11 WNBA seasons, from 2007 to 2017.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ivory-latta/"
+      ],
+      "queries": [
+        {
+          "q": "ivory latta retired",
+          "vol": 10
+        },
+        {
+          "q": "where is ivory latta",
+          "vol": 10
+        },
+        {
+          "q": "ivory latta 2018",
+          "vol": null
+        },
+        {
+          "q": "ivory latta wnba 2018",
+          "vol": null
+        },
+        {
+          "q": "ivory latta 2020",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

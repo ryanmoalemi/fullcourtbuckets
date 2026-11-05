@@ -1,76 +1,92 @@
 {
   "slug": "briann-january",
   "player_name": "Briann January",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 5, 2026",
+  "verified_at": "2026-11-05",
   "items": [
     {
-      "question": "What are Briann January's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Briann January averaged 3.7 points,",
+      "question": "Which WNBA teams has Briann January played for?",
+      "answer": "Briann January has played for the Indiana Fever, Phoenix Mercury, Connecticut Sun and Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "briann january stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/briann-january/"
+      ],
+      "queries": [
+        {
+          "q": "briann january wnba",
+          "vol": 30
+        },
+        {
+          "q": "briann january fever",
+          "vol": 10
+        },
+        {
+          "q": "briann january connecticut sun",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Briann January dating?",
-      "answer": "As of late 2026, Briann January has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What are Briann January's stats?",
+      "answer": "In the 2022 regular season, Briann January averaged 3.7 points, 1.0 rebounds, and 2.4 assists in 36 games for the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/briann-january/"
+      ],
+      "queries": [
+        {
+          "q": "briann january stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Did Briann January win a WNBA championship?",
+      "answer": "Yes. Briann January won the 2012 WNBA championship with the Indiana Fever. She was also a 2014 WNBA All-Star.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/j/januabr01w.html",
         "https://en.wikipedia.org/wiki/Briann_January"
       ],
-      "google_keyword": "briann january partner",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "briann january fever",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Briann January make?",
-      "answer": "A precise public salary or net worth figure for Briann January is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Briann January play college basketball?",
+      "answer": "Briann January played at Arizona State. The Indiana Fever selected her sixth overall in the 2009 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/briann-january/",
+        "https://www.basketball-reference.com/wnba/players/j/januabr01w.html"
       ],
-      "google_keyword": "briann january net worth",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Briann January married?",
-      "answer": "There is no widely reported public record of Briann January being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Briann_January"
-      ],
-      "google_keyword": "briann january wife",
-      "approx_monthly_volume": 260
-    },
-    {
-      "question": "Is Briann January injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "briann january injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Briann January's parents?",
-      "answer": "Public profiles share limited verified detail about Briann January's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Briann_January"
-      ],
-      "google_keyword": "briann january parents",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "briann january arizona state",
+          "vol": null
+        },
+        {
+          "q": "briann january asu",
+          "vol": null
+        }
+      ]
     },
     {
       "question": "How old is Briann January?",
-      "answer": "Public profiles list Briann January as born in 1987. As of late 2026 that puts her around 39 years old.",
+      "answer": "Briann January was born January 11, 1987, in Spokane, Washington.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Briann_January"
+        "https://www.basketball-reference.com/wnba/players/j/januabr01w.html"
       ],
-      "google_keyword": "briann january engaged",
-      "approx_monthly_volume": 0,
-      "birthdate": "1987-01-01"
+      "queries": [
+        {
+          "q": "briann january age",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
