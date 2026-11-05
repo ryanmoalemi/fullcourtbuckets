@@ -120,7 +120,7 @@ Source: clubs and the 48 names are the [Nov. 4, 2026 Unrivaled release](https://
 
 Tempo has two pairs. [Marina Mabrey](/wnba/marina-mabrey/) and [Temi Fágbénlé](/wnba/temi-fagbenle/) are on Lunar Owls. [Kiki Rice](/wnba/kiki-rice/) and [Isabelle Harrison](/wnba/isabelle-harrison/) are on Mist. [Brittney Sykes](/wnba/brittney-sykes/) is on Rose. [Aneesah Morrow](/wnba/aneesah-morrow/) is on Vinyl.
 
-Three [Atlanta Dream](/wnba/teams/atlanta-dream/) players are on Vinyl: [Allisha Gray](/wnba/allisha-gray/), [Rhyne Howard](/wnba/rhyne-howard/) and [Jordin Canada](/wnba/jordin-canada/). [Naz Hillmon](/wnba/naz-hillmon/) is the Dream player on Hive. Hive also has [Cameron Brink](/wnba/cameron-brink/) and [Rae Burrell](/wnba/rae-burrell/), the two Sparks players on these rosters.
+Three [Atlanta Dream](/wnba/teams/atlanta-dream/) players are on Vinyl: [Allisha Gray](/wnba/allisha-gray/), [Rhyne Howard](/wnba/rhyne-howard/) and [Jordin Canada](/wnba/jordin-canada/). [Naz Hillmon](/wnba/naz-hillmon/) is the Dream player on Hive. Hive also has [Cameron Brink](/wnba/cameron-brink/) and [Rae Burrell](/wnba/rae-burrell/), the two Sparks players on Hive. [Dearica Hamby](/wnba/dearica-hamby/) is the Sparks player on Vinyl.
 
 [Sporting News](https://www.sportingnews.com/us/wnba/news/gabby-williams-four-other-valkyries-discover-unrivaled-fate-rosters-revealed/766bdbb2dbd934d7b3035f8f) wrote that the 48 players were assigned to six teams. The Nov. 4 release lists eight clubs, six players each. The same Sporting News headline is right about the Valkyries: Gabby Williams and four teammates.
 

@@ -20,7 +20,7 @@
    "bytes": 5571
   },
   "findings.json": {
-   "sha256": "f7a10e051d05b46e2c498d6f83d926567eb80468445c5aa0c79e01c45411f95e",
+   "sha256": "8b02cd311a3eb47dd1a15b51c12d0f62fb9ed2283ed6b74704aa204734fd249f",
    "bytes": 712
   },
   "investors.csv": {
@@ -28,8 +28,8 @@
    "bytes": 35770
   },
   "owner_photos.csv": {
-   "sha256": "e7d794a8a055f28b979a1ff24ac63810d77b5fd988d262c572a94f6d47077087",
-   "bytes": 5412
+   "sha256": "31ca99c194e775952706b554b712d798aabf23205c20ddb9471cbea68c2e4464",
+   "bytes": 6001
   },
   "ownership.csv": {
    "sha256": "610fe74a8133d9abb763b71cefc8b80ca19521487ff46e09b8bfa660e6dee2ea",
@@ -48,8 +48,8 @@
    "bytes": 13044
   },
   "wnba-owners.json": {
-   "sha256": "47f66025046a14e00eeece719c5551a83f3b9954ae34b72224afa4f91f4f807f",
-   "bytes": 233643
+   "sha256": "75a160ad8ec60cfd7bcde299c36d8b1621d9c31235b17fbc714b524f665ef516",
+   "bytes": 234230
   }
  },
  "records": {

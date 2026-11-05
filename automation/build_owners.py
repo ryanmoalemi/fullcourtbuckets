@@ -487,7 +487,7 @@ def photo_credits(data: dict) -> str:
         + (f'<a href="{esc(x["license_url"])}" target="_blank" rel="noopener">{esc(x["license"])}</a>' if x['license_url'] else esc(x['license']))
         for x in rows)
     return (f'<p><strong>Owner photos:</strong> {len(rows)} owners shown with openly licensed photos from Wikimedia Commons, '
-            'matched to the person through Wikidata, cropped to the face and resized by FCB (changes made). '
+            'matched to the person through Wikidata or the Commons file description, cropped to the face and resized by FCB (changes made). '
             f'{n_init} owners without a licensable photo are shown with initials. Credits: {items}. '
             'Details per photo are in owner_photos.csv.</p>')
 

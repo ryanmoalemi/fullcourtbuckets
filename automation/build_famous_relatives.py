@@ -296,6 +296,14 @@ TABLE_ONLY_RELATIVE_PHOTOS = {
                       'license_url': 'https://creativecommons.org/licenses/by/2.0', 'source_page': 'https://commons.wikimedia.org/wiki/File:Antonio_Davis.jpg'},
     'joe-salavea': {'author': 'Office of U.S. Congressman Eni Faleomavaega of American Samoa', 'license': 'Public domain',
                     'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Joe_Salave%27a.jpg'},
+    'mark-alarie': {'author': 'The Chronicle (Duke University)', 'license': 'Public domain',
+                    'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Mark_Alarie_color,_Duke_Chronicle_1985-11-21_(cropped).jpg'},
+    'wayne-tinkle': {'author': 'Bill Bryan', 'license': 'CC BY-SA 2.0',
+                     'license_url': 'https://creativecommons.org/licenses/by-sa/2.0', 'source_page': 'https://commons.wikimedia.org/wiki/File:Wayne_Tinkle.jpg'},
+    'darren-carrington': {'author': 'James L. Gaines (State Archives of Florida)', 'license': 'Public domain',
+                          'license_url': None, 'source_page': 'https://commons.wikimedia.org/wiki/File:Jacksonville_Jaguars_Darren_Carrington_(cropped).jpg'},
+    'penny-taylor': {'author': 'Hugh Peterswald', 'license': 'CC BY-SA 4.0',
+                     'license_url': 'https://creativecommons.org/licenses/by-sa/4.0', 'source_page': 'https://commons.wikimedia.org/wiki/File:Australian_Olympic_Team_Uniforms_for_Rio_2016_(Penny_Taylor).JPG'},
 }
 
 

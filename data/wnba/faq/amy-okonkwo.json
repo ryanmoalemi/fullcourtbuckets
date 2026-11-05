@@ -1,86 +1,96 @@
 {
   "slug": "amy-okonkwo",
   "player_name": "Amy Okonkwo",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 5, 2026",
+  "verified_at": "2026-11-05",
   "items": [
     {
-      "question": "What are Amy Okonkwo's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Amy Okonkwo averaged 11.0 points,",
+      "question": "What are Amy Okonkwo's stats?",
+      "answer": "Amy Okonkwo's latest season is listed by team, not as one combined average.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "amy okonkwo stats",
-      "approx_monthly_volume": 40
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/amy-okonkwo/"
+      ],
+      "queries": [
+        {
+          "q": "amy okonkwo stats",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "How much does Amy Okonkwo make?",
-      "answer": "A precise public salary or net worth figure for Amy Okonkwo is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "What WNBA team does Amy Okonkwo play for?",
+      "answer": "Amy Okonkwo plays for the Portland Fire. In 2026 she appeared in five regular-season games across the Portland Fire and Atlanta Dream, and she also has a 2025 regular-season line with the Dallas Wings.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/amy-okonkwo/"
       ],
-      "google_keyword": "amy okonkwo net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "amy okonkwo wnba",
+          "vol": 30
+        }
+      ]
     },
     {
       "question": "How tall is Amy Okonkwo?",
-      "answer": "Amy Okonkwo is listed at 6' 2\".",
-      "answer_kind": "bio",
+      "answer": "Full Court Buckets lists Amy Okonkwo at 6 feet 2 inches. She plays forward.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
+        "https://fullcourtbuckets.com/wnba/amy-okonkwo/"
       ],
-      "google_keyword": "amy okonkwo height",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is Amy Okonkwo married?",
-      "answer": "There is no widely reported public record of Amy Okonkwo being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
-      ],
-      "google_keyword": "amy okonkwo husband",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "amy okonkwo height",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "What position does Amy Okonkwo play?",
-      "answer": "Amy Okonkwo is listed as a F for the Portland Fire.",
+      "answer": "Amy Okonkwo is listed as a forward. She wears No. 8 for the Portland Fire.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "amy okonkwo position",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/amy-okonkwo/"
+      ],
+      "queries": [
+        {
+          "q": "amy okonkwo position",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who are Amy Okonkwo's parents?",
-      "answer": "Public profiles share limited verified detail about Amy Okonkwo's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Does Amy Okonkwo play for Nigeria?",
+      "answer": "Yes. Amy Okonkwo was born in Fontana, California, and represents Nigeria internationally. She played for Nigeria at the Tokyo Olympics.",
       "answer_kind": "researched",
       "sources": [
         "https://en.wikipedia.org/wiki/Amy_Okonkwo"
       ],
-      "google_keyword": "amy okonkwo parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Amy Okonkwo?",
-      "answer": "Amy Nnenna Okonkwo is an American-Nigerian professional basketball player for the Portland Fire of the WNBA and Beşiktaş of the Turkish Super League.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Amy_Okonkwo"
-      ],
-      "google_keyword": "amy okonkwo biography",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "amy okonkwo biography",
+          "vol": 0
+        },
+        {
+          "q": "amy okonkwo stats olympics",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Amy Okonkwo?",
-      "answer": "Amy Okonkwo was born August 26, 1996 in Fontana. As of late 2026 that puts her at 30 years old.",
+      "answer": "Amy Okonkwo was born August 26, 1996, in Fontana, California.",
       "answer_kind": "researched",
       "sources": [
         "https://en.wikipedia.org/wiki/Amy_Okonkwo"
       ],
-      "google_keyword": "amy okonkwo age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1996-08-26"
+      "queries": [
+        {
+          "q": "amy okonkwo age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
