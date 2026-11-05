@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-05T02:27:25+00:00",
-  "stats_updated_at": "2026-11-04T09:05:43+00:00",
+  "checked_at": "2026-11-05T12:34:36+00:00",
+  "stats_updated_at": "2026-11-05T12:34:36+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -81,24 +81,24 @@
         "conference": "Eastern Conference"
       },
       "games_played": 5,
-      "min": 25.4,
-      "fgm": 2.8,
-      "fga": 6.4,
-      "fg_pct": 43.8,
-      "fg3m": 0.8,
+      "min": 26.2,
+      "fgm": 2.6,
+      "fga": 6.6,
+      "fg_pct": 39.4,
+      "fg3m": 0.6,
       "fg3a": 1.4,
-      "fg3_pct": 57.1,
+      "fg3_pct": 42.9,
       "ftm": 0.0,
       "fta": 0.0,
       "ft_pct": null,
-      "oreb": 1.2,
-      "dreb": 4.4,
-      "reb": 5.6,
-      "ast": 3.0,
-      "stl": 1.0,
+      "oreb": 1.4,
+      "dreb": 3.6,
+      "reb": 5.0,
+      "ast": 2.6,
+      "stl": 1.2,
       "blk": 0.0,
-      "turnover": 2.8,
-      "pts": 6.4,
+      "turnover": 2.6,
+      "pts": 5.8,
       "gap_fill": true
     }
   ],
@@ -226,7 +226,7 @@
     {
       "game_id": 1392671,
       "player_id": 66925,
-      "date": "2026-09-30T00:30:00.000Z",
+      "date": "2026-09-29T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -249,9 +249,9 @@
         "id": 7,
         "full_name": "Minnesota Lynx",
         "abbreviation": "MIN",
-        "city": "Minnesota",
+        "city": null,
         "name": "Lynx",
-        "conference": "Western Conference"
+        "conference": null
       },
       "home_score": 87,
       "away_score": 71,
@@ -281,9 +281,9 @@
         "id": 7,
         "full_name": "Minnesota Lynx",
         "abbreviation": "MIN",
-        "city": "Minnesota",
+        "city": null,
         "name": "Lynx",
-        "conference": "Western Conference"
+        "conference": null
       },
       "visitor_team": {
         "id": 1,
@@ -304,7 +304,7 @@
       "turnover": 4.0
     }
   ],
-  "game_log_window_start": "2026-09-30",
+  "game_log_window_start": "2026-10-01",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
