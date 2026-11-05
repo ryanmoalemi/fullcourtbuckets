@@ -1,65 +1,136 @@
 {
   "slug": "kristi-toliver",
   "player_name": "Kristi Toliver",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 5, 2026",
+  "verified_at": "2026-11-05",
   "items": [
     {
-      "question": "What are Kristi Toliver's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), Kristi Toliver averaged 13.0 points,",
+      "question": "Where did Kristi Toliver play college basketball?",
+      "answer": "Kristi Toliver played at Maryland, where she won the 2006 NCAA title. The Chicago Sky drafted her third overall in 2009.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kristi-toliver/",
+        "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kristi toliver maryland",
+          "vol": 30
+        },
+        {
+          "q": "kristi toliver college",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Which WNBA teams has Kristi Toliver played for?",
+      "answer": "Kristi Toliver has played for the Chicago Sky, Los Angeles Sparks and Washington Mystics.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kristi toliver stats",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kristi-toliver/"
+      ],
+      "queries": [
+        {
+          "q": "kristi toliver wnba",
+          "vol": 20
+        },
+        {
+          "q": "kristi toliver sparks",
+          "vol": 10
+        },
+        {
+          "q": "kristi toliver mystics",
+          "vol": 10
+        },
+        {
+          "q": "kristi toliver team",
+          "vol": null
+        },
+        {
+          "q": "kristi toliver phoenix mercury",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Kristi Toliver dating?",
-      "answer": "As of late 2026, Kristi Toliver has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What are Kristi Toliver's stats?",
+      "answer": "In the 2023 regular season, Kristi Toliver averaged 3.6 points, 0.7 rebounds, and 0.7 assists in 11 games for the Washington Mystics.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kristi-toliver/"
+      ],
+      "queries": [
+        {
+          "q": "kristi toliver stats",
+          "vol": 10
+        },
+        {
+          "q": "kristi toliver basketball reference",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "How tall is Kristi Toliver?",
+      "answer": "Basketball-Reference lists Kristi Toliver at 5 feet 7 inches. She played guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kristi toliver height",
+          "vol": 10
+        },
+        {
+          "q": "how tall is kristi toliver",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Kristi Toliver win a WNBA championship?",
+      "answer": "Yes. Kristi Toliver won WNBA titles with the Los Angeles Sparks in 2016 and the Washington Mystics in 2019. She was a three-time WNBA All-Star.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html",
         "https://en.wikipedia.org/wiki/Kristi_Toliver"
       ],
-      "google_keyword": "kristi toliver partner",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "kristi toliver biography",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "How much does Kristi Toliver make?",
-      "answer": "A precise public salary or net worth figure for Kristi Toliver is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
+      "question": "How long did Kristi Toliver play in the WNBA?",
+      "answer": "Kristi Toliver played 14 regular seasons: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, and 2023.",
+      "answer_kind": "stats",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/kristi-toliver/"
       ],
-      "google_keyword": "kristi toliver net worth",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kristi toliver retired",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Kristi Toliver married?",
-      "answer": "There is no widely reported public record of Kristi Toliver being married as of late 2026.",
-      "answer_kind": "researched",
+      "question": "How old is Kristi Toliver?",
+      "answer": "Kristi Toliver was born January 27, 1987, in Harrisonburg, Virginia.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Kristi_Toliver"
+        "https://www.basketball-reference.com/wnba/players/t/tolivkr01w.html"
       ],
-      "google_keyword": "kristi toliver wife",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "Is Kristi Toliver injured?",
-      "answer": "Injury status changes during the season. Check the latest Chicago Sky reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "kristi toliver injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Kristi Toliver's parents?",
-      "answer": "Public profiles share limited verified detail about Kristi Toliver's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kristi_Toliver"
-      ],
-      "google_keyword": "kristi toliver parents",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kristi toliver age",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

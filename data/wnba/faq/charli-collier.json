@@ -1,72 +1,135 @@
 {
   "slug": "charli-collier",
   "player_name": "Charli Collier",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 5, 2026",
+  "verified_at": "2026-11-05",
   "items": [
     {
-      "question": "What are Charli Collier's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Charli Collier averaged 3.4 points, 3.6 rebounds, and 0.2 assists in 28 games for Dallas Wings. Her full season-by-season numbers are on this page.",
+      "question": "What WNBA team did Charli Collier play for?",
+      "answer": "Charli Collier has played for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "charli collier stats",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "What is Charli Collier's jersey number?",
-      "answer": "Charli Collier wears number 35 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "charli collier jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Charli Collier?",
-      "answer": "Charli Elionne Collier is an American professional basketball player for İstanbul Gençlik SK of the Turkish Super League.",
-      "answer_kind": "mixed",
       "sources": [
+        "https://fullcourtbuckets.com/wnba/charli-collier/"
+      ],
+      "queries": [
+        {
+          "q": "charli collier wnba",
+          "vol": 50
+        },
+        {
+          "q": "charli collier wings",
+          "vol": 10
+        },
+        {
+          "q": "charli collier dallas wings",
+          "vol": 10
+        },
+        {
+          "q": "is charli collier still in the wnba",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Charli Collier's stats?",
+      "answer": "In the 2022 regular season, Charli Collier averaged 2.0 points, 0.6 rebounds, and 0.1 assists in 17 games for the Dallas Wings.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/charli-collier/"
+      ],
+      "queries": [
+        {
+          "q": "charli collier stats",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "Is Charli Collier related to Napheesa Collier?",
+      "answer": "No. Charli Collier (Texas, 2021 No. 1 pick) and Napheesa Collier (UConn, Minnesota Lynx) are not related.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/charli-collier/",
         "https://en.wikipedia.org/wiki/Charli_Collier"
       ],
-      "google_keyword": "charli collier",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "is charli collier related to napheesa collier",
+          "vol": 20
+        },
+        {
+          "q": "charli collier napheesa collier",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What team does Charli Collier play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 35. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "charli collier",
-      "approx_monthly_volume": 1900
+      "question": "When was Charli Collier drafted?",
+      "answer": "The Dallas Wings selected Charli Collier first overall in the 2021 WNBA Draft out of Texas. She played two WNBA seasons with Dallas in 2021 and 2022.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/charli-collier/",
+        "https://www.basketball-reference.com/wnba/players/c/collich01w.html"
+      ],
+      "queries": [
+        {
+          "q": "charli collier draft",
+          "vol": 10
+        },
+        {
+          "q": "charli collier wnba draft",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What position does Charli Collier play?",
-      "answer": "Charli Collier is listed as a Forward for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "charli collier",
-      "approx_monthly_volume": 1900
+      "question": "Where did Charli Collier play college basketball?",
+      "answer": "Charli Collier played at Texas, where she was a second-team All-American. She did not play at UConn.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/charli-collier/",
+        "https://www.basketball-reference.com/wnba/players/c/collich01w.html"
+      ],
+      "queries": [
+        {
+          "q": "charli collier texas",
+          "vol": 10
+        },
+        {
+          "q": "charli collier texas basketball",
+          "vol": null
+        },
+        {
+          "q": "charli collier ut",
+          "vol": null
+        },
+        {
+          "q": "charli collier uconn",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How old is Charli Collier?",
-      "answer": "Public profiles list Charli Collier as born in 1999. As of late 2026 that puts her around 27 years old.",
+      "question": "How tall is Charli Collier?",
+      "answer": "Basketball-Reference lists Charli Collier at 6 feet 5 inches. She played forward-center.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Charli_Collier"
+        "https://www.basketball-reference.com/wnba/players/c/collich01w.html"
       ],
-      "google_keyword": "charli collier",
-      "approx_monthly_volume": 1900,
-      "birthdate": "1999-01-01"
-    },
-    {
-      "question": "What is Charli Collier's nationality?",
-      "answer": "Charli Collier is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Charli_Collier"
-      ],
-      "google_keyword": "charli collier",
-      "approx_monthly_volume": 1900
+      "queries": [
+        {
+          "q": "charli collier height",
+          "vol": 10
+        },
+        {
+          "q": "charli collier weight",
+          "vol": null
+        },
+        {
+          "q": "charli collier height weight",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
