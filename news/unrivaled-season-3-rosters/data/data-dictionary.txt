@@ -1,0 +1,52 @@
+Full Court Buckets, Unrivaled Season 3 rosters
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Nov. 5, 2026.
+
+unrivaled-season-3-players.csv
+  One row per player named in Unrivaled's Nov. 4, 2026 roster release.
+  unrivaled_club: the 2027 club (Unrivaled's third season, tipping off Jan. 8, 2027).
+  position: Guard, Wing, or Forward, the label on that club's roster page at unrivaled.basketball.
+  wnba_team_2026: the team on the WNBA.com roster page for that club on Nov. 5, 2026.
+  wnba_honors_2026: 2026 WNBA honors only. Blank if none of the honors below apply.
+    Champion: the player is on the Golden State Valkyries 2026 roster page, and the WNBA.com Game 7 blog says Golden State won the 2026 title.
+    Finals MVP: Gabby Williams, WNBA.com Game 7 blog.
+    All-Star: July 2 starters, July 7 reserves, or the July 22 replacement (Kahleah Copper, for the injured Kelsey Plum). Plum was selected and is still marked All-Star.
+    All-WNBA first / second: WNBA.com video titles dated Oct. 24, 2026. The Dream's Oct. 24 release also names Reese and Howard to the second team.
+    ROY: Olivia Miles, unanimous, WNBA.com release of Sept. 28, 2026 (74 of 74 votes).
+  unrivaled_club_2026: the club whose 2026 player-stats page lists the most games for that player. This is Unrivaled's second season. Blank if the player is on none of the eight 2026 stats pages.
+  games_2026: games on that 2026 stats page. Blank if none.
+  other_2026_club: a second 2026 stats page, with the game count. Courtney Williams has 4 games on Breeze besides 10 on Vinyl. Aziaha James has 1 game on Lunar Owls besides 2 on Hive.
+  college: the College field on the WNBA.com roster page. Aaliyah Edwards' college is the one on the Phantom roster page at unrivaled.basketball, because the Sun roster table does not list a college. Blank if the roster page has no college (Marine Johannès, Dominique Malonga, Li Yueru).
+  fcb_player_page: the Full Court Buckets player page.
+
+unrivaled-season-3-by-wnba-team.csv
+  One row per WNBA team that has at least one player on the Nov. 4 release.
+  players: count of those 48.
+  unrivaled_clubs: 2027 clubs, with a count when more than one player from that WNBA team is on the club.
+  player_names: the 48, in release order within the counts above.
+
+Not in this file
+  Protected, drafted, or player-pool status. The Nov. 4 release does not label rows that way.
+  Season 1 (2025) club. The 2026 column is season 2 only.
+  The release's figures for multiyear deals, combined All-Star selections, and top-10 draft picks. They are the league's sentence, not a recount.
+  WNBA season statistics.
+
+Sources
+  https://www.unrivaled.basketball/news/unrivaled-announces-2027-club-rosters-j51bz0hxvcux
+  Club roster pages and 2026 stats pages: https://www.unrivaled.basketball/breeze and /breeze/stats, and the same paths for hive, laces, lunar-owls, mist, phantom, rose, vinyl.
+  https://www.unrivaled.basketball/phantom/roster (Aaliyah Edwards, Connecticut)
+  WNBA.com team roster pages on Nov. 5, 2026, including https://valkyries.wnba.com/roster
+  https://www.wnba.com/news/all-star-starters-2026
+  https://www.wnba.com/news/all-star-reserves-2026
+  https://www.wnba.com/news/kahleah-copper-named-2026-all-star-game-replacement
+  https://www.wnba.com/watch/video/2026-all-wnba-first-team-highlights
+  https://www.wnba.com/news/player/1642784/paige-bueckers
+  https://dream.wnba.com/news/angel-reese-and-rhyne-howard-named-to-2026-all-wnba-second-team
+  https://www.wnba.com/news/miles-named-2026-rookie-of-the-year
+  https://www.wnba.com/news/live-updates-2026-wnba-finals-game-7
+  https://www.wnba.com/news/wilson-named-2026-most-valuable-player
+  https://www.wnba.com/news/rapid-reactions-trade-deadline-2026
+  https://www.unrivaled.basketball/game/jx1ocoygd5a4/recap
+  https://www.unrivaled.basketball/schedule
+  https://www.unrivaled.basketball/news/unrivaled-to-open-season-three-in-boston-on-january-8-6ic6iuiz7d5k
+  https://www.unrivaled.basketball/news/unrivaled-announces-first-ever-los-angeles-tour-stop-on-season-threes-opening-night-ihtnxr8jg4kc

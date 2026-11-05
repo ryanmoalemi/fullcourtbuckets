@@ -1,0 +1,100 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "The 48 names, eight clubs and six-player rows are the Nov. 4, 2026 Unrivaled release, checked against the club roster pages. 2026 WNBA teams and colleges are the WNBA.com team roster pages on Nov. 5, 2026, except Aaliyah Edwards' college, which is the Phantom roster page. All-Star, Rookie of the Year, Finals MVP, MVP and the title are WNBA.com releases or the Game 7 blog. All-WNBA first and second teams are the Oct. 24 WNBA.com video titles, with the Dream release confirming Reese and Howard. The 2026 Unrivaled club is the stats page with the most games. The page states both the league's 'four 2026 WNBA champions' and the five Valkyries on the roster page."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "One file puts club, WNBA team, 2026 honors, 2026 Unrivaled club and college on the same row. Counts that are not in the release: Wings and Tempo at 6, the five Valkyries on five clubs, 20 of 48 on the same 2026 club, three Dream teammates on Vinyl, and Sporting News assigning 48 players to six teams."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Eight 2027 roster pages, eight 2026 stats pages, 15 WNBA roster pages, the award releases and the schedule page were opened. The page has a chart, two CSVs and a data dictionary."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The cut is which WNBA team sent players, and who stayed on a 2026 club, rather than a club-by-club rewrite of the release."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. The release, roster pages and award pages are linked from the table notes."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "The H1 is the finding. The 48-player table sits under a short lead and the chart. Team counts, continuity and the absences follow. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "House how-this-story-was-made note, CC0 downloads, and a lead image labeled as a Full Court Buckets chart. The league's half-returning line and the four-champion line are quoted as the release, next to this page's counts."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. In-article links open in a new tab. The methods note is long because the column definitions sit with the table."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the rosters gets every player, the WNBA team, the honors, and the arenas that are actually on the schedule page. Matchups that were not posted are not invented."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates, scores and names. The lines flagged below were rewritten before this score. The methods note is a ledger, which is the point of the table."
+      }
+    ],
+    "info_gain": [
+      "48 players with Unrivaled club, Unrivaled position, Nov. 5 WNBA team, 2026 honors, 2026 Unrivaled club and college",
+      "Dallas Wings and Toronto Tempo have 6 players each. The champion Valkyries have 5, on five clubs. Every WNBA team has at least one",
+      "20 of 48 are on the club where they played the most 2026 games. Twelve changed clubs. Sixteen have no 2026 games on the stats pages",
+      "Vinyl has three Atlanta Dream teammates. The Nov. 4 release says four 2026 WNBA champions. The Valkyries roster page lists five of the 48",
+      "Sporting News wrote that 48 players were assigned to six teams. The release lists eight clubs"
+    ],
+    "ai_flags": [
+      "A draft sentence said 'Six players a club.' It was rewritten to 'Each club has six players.'",
+      "A draft called Brink and Burrell 'the two Sparks players in the file.' It now says they are the two Sparks players on Hive. Dearica Hamby is the Sparks player on Vinyl.",
+      "A draft ended the continuity section with 'This page does not recount the deals.' That sentence was cut. The 20 are described as the players whose 2026 stats page matches their current club.",
+      "A draft said Hodges' additions were 'the three in that sentence.' It now names McBride, Li and Edwards as the players she welcomes.",
+      "A draft said the 2026 club was 'not a season-one roster.' It now says the 2026 club is the club on the 2026 stats pages."
+    ]
+  },
+  "unique": [
+    "Wings and Tempo each have 6 of the 48. The Valkyries have 5, one each on Breeze, Laces, Mist, Phantom and Rose.",
+    "20 of 48 played the most 2026 games for the club they are on now. Lunar Owls, Mist, Phantom and Rose kept 3. Breeze, Hive, Laces and Vinyl kept 2.",
+    "Mist beat Phantom 80-74 on March 4, 2026. Stewart scored 32 and was Championship MVP. Gray scored 12 in that game and is on Vinyl. Plum scored 40 and is back with Phantom.",
+    "Sporting News, Nov. 4, 2026: 'Forty-eight players were assigned to six teams.' Unrivaled's release lists eight clubs."
+  ],
+  "unverified": [
+    "Which of the 16 players with no 2026 games played for the same club in 2025. The Nov. 4 release says half the league is returning to a club from season one or two. This page counts 2026 games only.",
+    "The release's 'over 75 percent' on multiyear deals, '80 combined WNBA All-Star selections' and '30 top-10 draft picks.' The release states them. They were not recounted.",
+    "Protected, drafted, or player-pool labels. The Nov. 4 release does not mark rows that way. A reported pool of Kaila Charles, Brittney Griner, Gabriela Jaquez, Raven Johnson, Ta'Niya Latson and Olivia Nelson-Ododa is not on the release. Griner is named only as a 2026 Vinyl stats-page player who is not one of the 48.",
+    "Whether Kate Martin is injured. The Oct. 28 update says the contract ended by agreement. The roster-reveal page also lists her under out for the season.",
+    "The specific injuries for Rickea Jackson and Ezi Magbegor. The Oct. 28 reveal announcement says they are out for 2027 because of injury and does not name the injury.",
+    "Club matchups. The schedule page on Nov. 5 had dates and arenas and blank opponents. The release says matchups come out Nov. 6.",
+    "An AP story's 'Tuesday night' timing. The page did not open. The official show page says Wednesday, Nov. 4.",
+    "Season statistics beyond the figures quoted from a WNBA.com or Unrivaled page in the story."
+  ]
+}
