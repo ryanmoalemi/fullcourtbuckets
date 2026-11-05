@@ -279,7 +279,7 @@ def _split_sentence(name: str, standing: dict, variant: int = 0) -> str:
         f'Beside the record, the {name} had {listed}.',
         f'For the {name}, the splits were {listed}.',
         f'The rest of the {name} record shows {listed}.',
-        f'Recent form for the {name} includes {listed}.',
+        f'The {name} closed the regular season with {listed}.',
         f'The {name} went {listed}.',
         f'Those {name} splits were {listed}.',
         f'Home and road results for the {name} were {listed}.',
@@ -291,11 +291,11 @@ def _split_sentence(name: str, standing: dict, variant: int = 0) -> str:
     return _pick(frames, variant)
 
 
-def _record_core(name: str, standing: dict, conference: str) -> str:
+def _record_core(name: str, standing: dict, conference: str, verb: str = 'are') -> str:
     wins = standing.get('wins')
     losses = standing.get('losses')
     rank = standing.get('conferenceRank')
-    bits = [f'the {name} are {wins}-{losses}']
+    bits = [f'the {name} {verb} {wins}-{losses}']
     if isinstance(rank, int) and not isinstance(rank, bool) and conference:
         bits.append(f'{_ordinal(rank)} in the {conference}')
     back = str(standing.get('gamesBack') or '').strip()
@@ -312,6 +312,10 @@ def _record_core(name: str, standing: dict, conference: str) -> str:
 def _record_sentence(name: str, standing: dict, conference: str, variant: int = 0) -> str:
     core = _record_core(name, standing, conference)
     cap = core[:1].upper() + core[1:]
+    # The 2026 regular season is complete (every team played 44 games). These
+    # three frames used to speak in the present, including "heading into October".
+    final = _record_core(name, standing, conference, verb='finished')
+    final_cap = final[:1].upper() + final[1:]
     frames = (
         f'As the 2026 regular season ended, {core}.',
         f'{cap} on October 1, 2026.',
@@ -320,13 +324,13 @@ def _record_sentence(name: str, standing: dict, conference: str, variant: int = 
         f'At the end of the 2026 regular season, {core}.',
         f'{cap} for the 2026 season.',
         f'By October 1, 2026, {core}.',
-        f'{cap} heading into October 2026.',
+        f'{final_cap} when the 2026 regular season ended.',
         f'Through the 2026 regular season, {core}.',
         f'Entering October 2026, {core}.',
         f'{cap} at the close of the regular season.',
-        f'In year one, {core}.',
+        f'In year one, {final}.',
         f'Over the 2026 regular season, {core}.',
-        f'{cap} in its first WNBA season.',
+        f'{final_cap} in its first WNBA season.',
         f'{cap} with the regular season complete.',
     )
     return _pick(frames, variant)

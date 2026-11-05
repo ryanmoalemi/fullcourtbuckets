@@ -239,7 +239,7 @@ def player(value):
 
 
 OFFICIAL_BIO_PATH = ("data", "wnba", "official-bio.json")
-_OFFICIAL_KEYS = frozenset({"position", "position_abbreviation", "height", "college"})
+_OFFICIAL_KEYS = frozenset({"position", "position_abbreviation", "height", "college", "jersey_number"})
 _OFFICIAL_META = frozenset({"pages", "note"})
 _POSITIONS = frozenset({"G", "F", "C"})
 
@@ -298,6 +298,11 @@ def apply_official_bio(record: dict, fix: dict | None) -> dict:
         if school is None:
             raise SyncError(f"Official college or country is empty: {fix['college']!r}")
         updated["college"] = school
+    if "jersey_number" in fix:
+        text = str(fix["jersey_number"]).strip()
+        if not re.fullmatch(r"\d{1,2}", text):
+            raise SyncError(f"Official jersey number is not a number: {fix['jersey_number']!r}")
+        updated["jersey_number"] = text
     return updated
 
 def stable_slug(pid: int, name: str, registry: dict) -> str:

@@ -508,6 +508,18 @@ class TeamSummaryTests(unittest.TestCase):
             news = _section(page, 'team-news')
             self.assertIn('Latest stories', news, slot['slug'])
             self.assertNotIn('target="_blank"', news, slot['slug'])
+        finals = {
+            'los-angeles-sparks': ('finished 16-28', '17 games back', 'when the 2026 regular season ended'),
+            'portland-fire': ('finished 17-27', '16 games back', 'In year one'),
+            'toronto-tempo': ('finished 11-33', '22 games back', 'in its first WNBA season'),
+        }
+        for slug, bits in finals.items():
+            page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
+            summary = _plain(_section(page, 'season-2026'))
+            self.assertNotIn('heading into October', summary, slug)
+            self.assertNotRegex(summary, r'\bare \d+-\d+', slug)
+            for bit in bits:
+                self.assertIn(bit, summary, slug)
         for slug in ('chicago-sky', 'connecticut-sun', 'phoenix-mercury', 'seattle-storm', 'los-angeles-sparks'):
             page = (ROOT / 'wnba' / 'teams' / slug / 'index.html').read_text(encoding='utf-8')
             self.assertIn('latest league stories', _section(page, 'team-news'), slug)
