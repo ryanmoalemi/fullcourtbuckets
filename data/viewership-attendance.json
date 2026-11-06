@@ -1,5 +1,6 @@
 {
-  "updated": "2026-11-04",
+  "updated": "2026-11-06",
+  "updated_time": "11:26 a.m. PT",
   "games": [
     {
       "date": "1997-06-21",
@@ -93,6 +94,22 @@
       "peak_viewers": 3820000,
       "peak_viewers_source": "https://www.nbcsports.com/pressbox/press-releases/fever-sky-on-sunday-night-basketball-on-nbc-and-peacock-is-the-most-watched-wnba-regular-season-game-since-opening-weekend-of-leagues-inaugural-1997-season",
       "peak_viewers_source_date": "2026-08-26"
+    },
+    {
+      "date": "2026-07-08",
+      "season": 2026,
+      "game": "Indiana Fever vs. Los Angeles Sparks",
+      "home": "",
+      "away": "",
+      "venue": "",
+      "attendance": null,
+      "attendance_source": "",
+      "attendance_source_date": "",
+      "network": "USA Network",
+      "viewers": 1040000,
+      "viewers_source": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million",
+      "viewers_source_date": "2026-11-03",
+      "viewers_note": "USA Sports regular-season window. The release calls it the most-watched late-night regular-season game in WNBA history."
     },
     {
       "date": "2026-10-17",
@@ -529,9 +546,20 @@
       "network": "USA Network",
       "avg_viewers": 543000,
       "chart": false,
-      "scope": "Partial. The figure was reported before the final week of the season.",
+      "scope": "Partial average reported before the final week of the season. The full-season average is the 48-game USA Network row.",
       "source": "https://frontofficesports.com/article/wnba-continues-attendance-viewership-growth/",
       "source_date": "2026-09-25"
+    },
+    {
+      "season": 2026,
+      "network": "USA Network",
+      "metric_id": "tv-2026-usa-network-regular-season",
+      "avg_viewers": 525000,
+      "games": 48,
+      "scope": "Full regular season, 48 games, up 25% vs. the 2025 regular-season cable average",
+      "measurement": "",
+      "source": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million",
+      "source_date": "2026-11-03"
     },
     {
       "season": 2026,
@@ -565,6 +593,42 @@
       "source_date": "2026-10-13",
       "checked_at": "2026-10-15",
       "notes": "Peak viewers. Kept separate from the average. A peak is the highest minute, not the average."
+    },
+    {
+      "metric_id": "playoff-2026-nbcu-average",
+      "period": "2026",
+      "value": 1720000,
+      "unit": "viewers",
+      "scope": "NBCUniversal 2026 playoff average, 3 games, average viewers, NBCUniversal",
+      "network": "NBCUniversal",
+      "source_url": "https://www.sportsmediawatch.com/2026/11/wnba-playoffs-most-watched-since-inaugural-season/",
+      "source_date": "2026-11-04",
+      "checked_at": "2026-11-06",
+      "notes": "Sports Media Watch company average across 3 playoff games. Average audience only."
+    },
+    {
+      "metric_id": "playoff-2026-usa-sports-average",
+      "period": "2026",
+      "value": 1600000,
+      "unit": "viewers",
+      "scope": "USA Sports 2026 playoff average, 8 games, average viewers, USA Sports",
+      "network": "USA Sports",
+      "source_url": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million",
+      "source_date": "2026-11-03",
+      "checked_at": "2026-11-06",
+      "notes": "USA Sports network average across its eight playoff games, first round and Finals. The release calls it the highest WNBA playoff average for any network with at least four games. Separate from the league postseason average."
+    },
+    {
+      "metric_id": "playoff-2026-prime-average",
+      "period": "2026",
+      "value": 943000,
+      "unit": "viewers",
+      "scope": "Prime Video 2026 playoff average, 2 games, average viewers, Prime Video",
+      "network": "Prime Video",
+      "source_url": "https://www.sportsmediawatch.com/2026/11/wnba-playoffs-most-watched-since-inaugural-season/",
+      "source_date": "2026-11-04",
+      "checked_at": "2026-11-06",
+      "notes": "Sports Media Watch company average across 2 playoff games. Average audience only."
     },
     {
       "metric_id": "finals-2026-g2-usa-sports-avg",
@@ -664,6 +728,30 @@
       "source_date": "2026-11-03",
       "checked_at": "2026-11-04",
       "notes": "Sports Media Watch, Nov. 3, 2026. USA Network's hour-long postgame show averaged 1.0 million viewers. Not included in the Game 7 audience."
+    },
+    {
+      "metric_id": "network-2026-usa-share",
+      "period": "2026",
+      "value": 20,
+      "unit": "percent",
+      "scope": "Share of WNBA consumption this season, the highest share by an individual network. A share, not an audience.",
+      "network": "USA Network",
+      "source_url": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million",
+      "source_date": "2026-11-03",
+      "checked_at": "2026-11-06",
+      "notes": "USA Network share of 2026 WNBA consumption. A share, not an audience."
+    },
+    {
+      "metric_id": "network-2026-usa-sports-million-broadcasts",
+      "period": "2026",
+      "value": 12,
+      "unit": "broadcasts",
+      "scope": "Regular-season and playoff game broadcasts that averaged at least 1 million viewers. A count, not an audience.",
+      "network": "USA Sports",
+      "source_url": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million",
+      "source_date": "2026-11-03",
+      "checked_at": "2026-11-06",
+      "notes": "Count of USA Sports regular-season and playoff game broadcasts that averaged at least 1 million viewers."
     }
   ],
   "key_fact": "the 2026 Finals averaged 1.88M viewers, the most since 1999.",

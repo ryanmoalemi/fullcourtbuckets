@@ -658,7 +658,12 @@ def _playoff_metrics(payload: dict) -> list[dict]:
 
 
 def _metric_kind(metric: dict) -> str:
+    unit = str(metric.get('unit') or '')
     metric_id = str(metric.get('metric_id') or '')
+    if unit == 'percent' or metric_id.endswith('-share'):
+        return 'Share'
+    if unit == 'broadcasts' or metric_id.endswith('-count'):
+        return 'Count'
     if metric_id.endswith('-peak'):
         return 'Peak'
     if metric_id.endswith('-average'):
@@ -675,8 +680,11 @@ def _metric_label(metric: dict) -> str:
 
 
 def _metric_network(metric: dict) -> str:
+    named = str(metric.get('network') or '').strip()
+    if named:
+        return named
     tail = str(metric.get('scope') or '').rsplit(',', 1)[-1].strip()
-    if tail in {'ESPN', 'ABC', 'CBS', 'NBC', 'Ion', 'USA Network', 'Peacock'}:
+    if tail in {'ESPN', 'ABC', 'CBS', 'NBC', 'Ion', 'USA Network', 'Peacock', 'Prime Video', 'NBCUniversal', 'USA Sports'}:
         return tail
     return ''
 
@@ -735,16 +743,67 @@ def _playoff_table(payload: dict, sources: list) -> str:
             source_cell(metric.get('source_url') or ''),
         ])
         sources.append((metric.get('source_url') or '', metric.get('source_date') or ''))
+    note = ''
+    if any(metric.get('metric_id') == 'playoff-2026-usa-sports-average' for metric in metrics):
+        note = (
+            '<p class="note">USA Sports averaged 1.6 million across its 8 playoff games. '
+            'The release calls that the highest WNBA playoff average for any network with at least four games. '
+            'The WNBA postseason average is the league row.</p>'
+        )
     return (
         '<h3>2026 playoff viewership</h3>'
         '<p class="answer">Average viewers and peak viewers are separate. '
+        'A network row is that network\'s own average. '
         'The first-round figure is the published 10-game average.</p>'
         + table(
             ['Game', 'Date', 'Metric', 'Viewers', 'Network', 'Source'],
             body,
             '2026 playoff viewership',
-            caption='2026 playoff viewership. Average and peak stay on their own rows.',
+            caption='2026 playoff viewership. Average and peak stay on their own rows. Network rows are that network\'s games.',
             numeric={3},
+        )
+        + note
+    )
+
+
+def _format_metric_value(metric: dict) -> str:
+    unit = str(metric.get('unit') or '')
+    value = metric['value']
+    if unit == 'percent':
+        return f'{value}%'
+    if unit == 'broadcasts':
+        return f'{value}'
+    return core.format_number(value)
+
+
+def _network_metric_table(payload: dict, sources: list) -> str:
+    """Shares and counts stay off the viewers tables."""
+    metrics = [
+        metric for metric in payload.get('metrics') or []
+        if str(metric.get('unit') or '') in {'percent', 'broadcasts'} and core.is_number(metric.get('value'))
+    ]
+    if not metrics:
+        return ''
+    body = []
+    for metric in metrics:
+        body.append([
+            core.esc(_metric_network(metric)),
+            core.esc(_metric_kind(metric)),
+            core.esc(_format_metric_value(metric)),
+            core.esc(metric.get('scope') or ''),
+            source_cell(metric.get('source_url') or ''),
+        ])
+        sources.append((metric.get('source_url') or '', metric.get('source_date') or ''))
+    return (
+        '<h3>Network shares and counts</h3>'
+        '<p class="answer">A share is the portion of viewing. A count is how many broadcasts cleared a line. '
+        'Neither figure is an average audience.</p>'
+        + table(
+            ['Network', 'Metric', 'Value', 'Scope', 'Source'],
+            body,
+            'Network shares and counts',
+            caption='Shares and counts. Not average audiences.',
+            numeric={2},
         )
     )
 
@@ -827,6 +886,11 @@ def viewership_section(payload: dict) -> str:
     note = ''
     if any(row.get('season') == 2026 and 'Peacock' in str(row.get('network') or '') for row in rows):
         note = "NBC's 2026 numbers count TV plus Peacock streaming. Older numbers are TV only. This is a selected list, not a complete ranking."
+    if any(row.get('date') == '2026-07-08' and row.get('viewers') == 1_040_000 for row in rows):
+        note = (
+            f'{note} USA Sports reports Indiana Fever vs. Los Angeles Sparks on July 8, 2026, '
+            'at 1.04 million, as the most-watched late-night regular-season game.'
+        ).strip()
     games_table = table(
         ['Game', 'Date', 'Event', 'Viewers', 'Network', 'Source'],
         body,
@@ -874,6 +938,12 @@ def viewership_section(payload: dict) -> str:
                 numeric={2, 3},
             )
             + _other_broadcast_table(payload, season, sources)
+            + (
+                '<p class="note">The 525,000 USA Network average is the full 48-game regular season. '
+                'The 543,000 figure is an earlier partial average, reported before the final week.</p>'
+                if any(row.get('avg_viewers') == 525_000 and row.get('games') == 48 for row in network_rows)
+                else ''
+            )
         )
     espn_rows = espn_regular_season(payload)
     espn_html = ''
@@ -934,7 +1004,7 @@ def viewership_section(payload: dict) -> str:
         f'<h2>{core.esc(core.QUESTION)}</h2>'
         f'<p class="answer">{core.link_teams(watched_answer(payload))}</p>'
         '<h3>What are the most-watched WNBA games?</h3>'
-        f'{games_table}{note_html}{_peak_table(payload, sources)}{_playoff_table(payload, sources)}'
+        f'{games_table}{note_html}{_peak_table(payload, sources)}{_playoff_table(payload, sources)}{_network_metric_table(payload, sources)}'
         f'{network_html}{espn_html}'
         f'{core.sources_line(sources)}'
         '</section>'
@@ -2030,7 +2100,8 @@ def csv_rows(payload: dict) -> list[dict]:
     for row in _broadcasts(payload):
         games_note = f"{row.get('games')} games" if core.is_number(row.get('games')) else 'Game count not stated.'
         rows.append(_csv_row(
-            f"tv-{row.get('season')}-{row.get('network')}", row.get('season'), row['avg_viewers'], 'viewers',
+            str(row.get('metric_id') or f"tv-{row.get('season')}-{row.get('network')}"),
+            row.get('season'), row['avg_viewers'], 'viewers',
             row.get('scope') or row.get('network') or '', row.get('source') or '',
             row.get('source_date') or '', checked,
             _csv_note(row['avg_viewers'], f"{games_note}. {row.get('measurement') or ''}".strip()),

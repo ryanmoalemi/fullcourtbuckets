@@ -190,8 +190,13 @@ class ViewershipPageTests(unittest.TestCase):
         self.assertIn('3.82 million', page)
         self.assertIn('15,116', page)
         self.assertNotIn('nearly 7,000', page)
-        self.assertNotIn('20%', page)
-        self.assertNotIn('5%', page)
+        self.assertEqual(page.count('20%'), 1)
+        self.assertIn('>20%<', page)
+        self.assertIn('Share of WNBA consumption this season', page)
+        self.assertEqual(page.count('25%'), 1)
+        self.assertIn('up 25% vs. the 2025 regular-season cable average', page)
+        self.assertNotIn('5%', page.replace('25%', ''))
+        self.assertNotIn('20%', page.replace('>20%<', ''))
         self.assertNotIn('balldontlie', page.lower())
         self.assertLessEqual(len(re.search(r'name="description" content="([^"]*)"', page).group(1)), 155)
         nav = re.search(r'<nav class="site-nav".*?</nav>', page, re.S).group(0)
@@ -261,6 +266,39 @@ class ViewershipPageTests(unittest.TestCase):
         html_text = viewership.render_page(ROOT, payload)
         self.assertIn('team-ranking.png', html_text)
         self.assertIn('9,091', html_text)
+
+    def test_confirmed_network_figures(self):
+        page = self.page
+        csv_text = (ROOT / 'wnba' / 'viewership-attendance' / 'viewership-attendance.csv').read_text(encoding='utf-8')
+        self.assertIn('Updated Nov. 6, 2026, 11:26 a.m. PT', page)
+        self.assertIn('1.72 million', page)
+        self.assertIn('943,000', page)
+        self.assertIn('525,000', page)
+        self.assertIn('543,000', page)
+        self.assertIn('1.04 million', page)
+        self.assertIn('July 8, 2026', page)
+        self.assertIn('Indiana Fever', page)
+        self.assertIn('Los Angeles Sparks', page)
+        self.assertIn('NBCUniversal', page)
+        self.assertIn('USA Sports', page)
+        self.assertIn('>Share<', page)
+        self.assertIn('>Count<', page)
+        self.assertIn('at least 1 million viewers', page)
+        self.assertIn('at least four games', page)
+        self.assertNotIn('ESPN 2026 playoff average', page)
+        self.assertNotIn('2.3 million', page)
+        self.assertNotIn('\u2014', page)
+        for row in (
+            'playoff-2026-nbcu-average,2026,1720000,viewers',
+            'playoff-2026-usa-sports-average,2026,1600000,viewers',
+            'playoff-2026-prime-average,2026,943000,viewers',
+            'tv-2026-usa-network-regular-season,2026,525000,viewers',
+            'audience-2026-07-08,2026-07-08,1040000,viewers',
+            'network-2026-usa-share,2026,20,percent',
+            'network-2026-usa-sports-million-broadcasts,2026,12,broadcasts',
+        ):
+            self.assertIn(row, csv_text)
+        self.assertEqual(csv_text.count('tv-2026-USA Network,'), 1)
 
 
 if __name__ == '__main__':
