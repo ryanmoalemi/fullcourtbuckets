@@ -1,0 +1,102 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Names, order, ceremony date, and the career lines are the Hall induction page checked Nov. 6, 2026, and the UConn Athletics release of Nov. 5, 2026. The ninth UConn inductee is a count of that release's eight names plus Taurasi. Reeve's 380th regular-season win on July 8, 2026, and her 397, are the WNBA.com Coach of the Year release of Sept. 28, 2026, set next to the Hall page's 379-289. Conflicts with USA TODAY and Sportsnet are quoted as those outlets' sentences and are not used as the page's figures. Four UConn role words are marked Player without a role word on a release this page opened. The dictionary says so."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "Three files a wire story does not have: the six in Hall-page order with a category basis, the nine UConn inductees with years and which four have a Full Court Buckets page, and the three WNBA-team rows with Thibault's 379 next to Reeve's 380 and 397. The page also records Theatre versus Theater, the Hall-page order versus USA TODAY's order, and that Marciniak's sentence is not on the induction page."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "The Hall page, four UConn releases, the WNBA.com Coach of the Year release, USA TODAY, Sportsnet, NBC Connecticut, Basketball Australia, and the Sport Australia member page were opened. A 2021 WNBA.com feature was opened only to check the scoring-title and All-WNBA lines. The page has a chart, three CSVs, and a data dictionary."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The cut is the UConn count and the places the write-ups disagree, not a rewrite of the induction page. The WNBA table is limited to inductees whose Hall-page bullets name a team."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. The releases are linked from the table notes."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 9,
+        "max": 10,
+        "reason": "The H1 is the finding. The class table sits under a one-line lead and the chart hero. The UConn table, the timeline, and the WNBA-team table follow. Gaps are labeled. No placeholders."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "House how-this-story-was-made note, CC0 downloads, and a lead image labeled as a Full Court Buckets chart. Sentences this page does not use are named in the disagreement section."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. In-article links open in a new tab. The methods notes are long because the column definitions sit with the tables."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the class gets six rows, the UConn years, the WNBA team ties, and a list of claims the other stories add that this page could not confirm on the Hall page or the UConn release."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates and the pages they come from. No stock phrases. The disagreement section is a ledger, which is the point of the cross-check."
+      }
+    ],
+    "info_gain": [
+      "Six inductees in Hall-page order, with a category basis. USA TODAY puts Molly Bolin Kazmer second. This table does not.",
+      "Taurasi is the ninth UConn inductee. The Nov. 5, 2026 release names Geno Auriemma (2006), Rebecca Lobo (2010), Jennifer Rizzotti (2013), Kara Wolters (2017), Chris Dailey (2018), Swin Cash (2021), Maya Moore (2024), and Sue Bird (2025).",
+      "Thibault retired at 379-289 on the Hall page. WNBA.com says Cheryl Reeve's 380th regular-season win, on July 8, 2026, made her the regular-season wins leader, and she finished that season at 397.",
+      "UConn says 10 first-team and 4 second-team All-WNBA selections and 11 All-Star teams. USA TODAY says 14 All-WNBA selections. Ten plus four is 14. The Hall page says 11 All-Star teams and does not list All-WNBA.",
+      "The Hall page spells Tennessee Theatre. The UConn release spells Tennessee Theater. Marciniak's statement is in USA TODAY and Sportsnet. It is not on the induction page checked Nov. 6."
+    ],
+    "ai_flags": [
+      "A draft would have used USA TODAY's five scoring titles as a current career total. The Hall page and the UConn release do not list them. A 2021 WNBA.com feature lists five, at 9,174 points. The story quotes both and does not use five.",
+      "A draft would have used Sportsnet's World Cup silvers in 2018 and 2022. The Hall page says silver in 2018 and bronze in 2022. The story uses the Hall page.",
+      "A draft would have used USA TODAY's 1975-1981 for Judith Holland. The Hall page says 1975-1980 as director, then senior associate athletic director from 1980 to 1996. The story uses the Hall page.",
+      "Machine Gun Molly is attributed to USA TODAY. The Hall page uses Molly Bolin Kazmer and does not use the nickname.",
+      "Rizzotti, Wolters, Cash, and Moore are marked Player. No release opened for this page prints a role word for them. The table note and the data dictionary say that."
+    ]
+  },
+  "unique": [
+    "Taurasi is the ninth person from UConn on the Nov. 5, 2026 athletics release. The eight already in are Auriemma 2006, Lobo 2010, Rizzotti 2013, Wolters 2017, Dailey 2018, Cash 2021, Moore 2024, Bird 2025.",
+    "Hall-page order is Taurasi, Brondello, Thibault, Kantner, Bolin Kazmer, Holland. USA TODAY puts Bolin Kazmer second.",
+    "Thibault's Hall-page retirement record is 379-289. The Sept. 28, 2026 WNBA.com release says Reeve became the regular-season wins leader with her 380th win on July 8, 2026, and finished at 397.",
+    "The induction page spells Tennessee Theatre and does not include Michelle Marciniak's statement. USA TODAY and Sportsnet carry the statement. UConn spells the building Tennessee Theater."
+  ],
+  "unverified": [
+    "Five WNBA scoring titles as a total through the 2024 season. USA TODAY says five. The 2021 WNBA.com feature lists 2006 and 2008-2011 and gives 9,174 points. No 2026 official list of scoring titles was opened.",
+    "All-time leadership in 3-pointers made and free throws made as of Nov. 2026. USA TODAY says she leads both. The Hall page and the UConn release do not. The 2021 feature listed her first at that feature's totals.",
+    "USA TODAY lines not on the Hall page: 247 NBA games for Dee Kantner, 11 years as WNBA supervisor, FIBA world championships in 1994 and 1998, a 2024 Olympic assistant role for Mike Thibault, a 2026 FIBA World Cup quarterfinal for Belgium, and a pair of national titles for Ann Meyers.",
+    "Sportsnet lines not on the Hall page: World Cup silver in 2022, coaching in the WNBA since 2005, 14 seasons as a head coach, and a 12-season playoff streak broken in 2026.",
+    "The Sport Australia announcement day. Basketball Australia's story is dated Oct. 21, 2026. Sportsnet's story is dated Oct. 20, 2026. The member page says inducted in 2026. The gala date on the Basketball Australia story is Nov. 24, 2026. This page does not pick one announcement date.",
+    "X posts from @UConnWBB, Maggie Vanoni, and Basketball Australia. Each URL returned HTTP 403. Like counts are not in the story.",
+    "A Hall category word for Jennifer Rizzotti, Kara Wolters, Swin Cash, and Maya Moore. They are marked Player. See the data dictionary.",
+    "The year of the World Championship bronze. The UConn release says one bronze and does not name the year. The Hall page names three gold years and does not mention a bronze.",
+    "An older WNBA.com page's Rookie of the Year year. A search snippet listed 2005. That page was not opened. The Hall page and the UConn release say 2004. This page uses 2004.",
+    "The 2026 Tempo win-loss record. It was not re-opened on the standings page. The story points to the Nov. 4 coaching count and does not restate the number."
+  ]
+}

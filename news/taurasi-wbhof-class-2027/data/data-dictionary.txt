@@ -1,0 +1,57 @@
+Full Court Buckets, Women's Basketball Hall of Fame Class of 2027
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Nov. 6, 2026 (Pacific).
+
+wbhof-class-2027.csv
+  One row per person named on the Women's Basketball Hall of Fame induction page.
+  Order is the order on that page: Taurasi, Brondello, Thibault, Kantner, Bolin Kazmer, Holland.
+  USA TODAY's Nov. 5, 2026 story uses a different order. It puts Bolin Kazmer second.
+  category: the job the Hall page's bullets describe.
+    Player: Taurasi and Bolin Kazmer. The page lists playing records and does not print the word Player.
+    Coach: Brondello and Thibault. The page lists head-coaching records.
+    Official: Kantner. The page lists an officiating record. USA TODAY calls her a referee.
+    Contributor: Holland. USA TODAY says she will enter as a contributor. The Hall page does not print that word.
+  known_for: one line from the Hall page, except Holland's category word, which is USA TODAY's.
+  primary_source_url: https://www.wbhof.com/induction
+  fcb_page: the Full Court Buckets player page. Blank if the site has no page.
+
+uconn-wbhof.csv
+  Nine rows. Eight names and years are the sentence in the UConn Athletics release of Nov. 5, 2026. Taurasi is the ninth, the subject of that release. The count of nine is this file's count of that sentence.
+  induction_year: the year in parentheses on that release.
+  role: Head coach, Associate head coach, or Player.
+    Head coach: Geno Auriemma, on the UConn release of June 11, 2018.
+    Player, with the word on a release: Rebecca Lobo, "the first player from the program," UConn release of July 25, 2009. Sue Bird, "a member of the UConn women's basketball team from 1998-02," UConn release of June 15, 2025. Diana Taurasi, playing career on the Nov. 5, 2026 release.
+    Associate head coach: Chris Dailey, on the June 11, 2018 release. That release also says she and Mickie DeMoss were the first assistant coaches in the Hall. It labels DeMoss "contributor - assistant coach" and does not put a category word on Dailey.
+    Player, without a role word on a release opened for this page: Jennifer Rizzotti, Kara Wolters, Swin Cash, Maya Moore. The Nov. 5, 2026 release lists them and does not print a role. They are marked Player because the 2009 release calls Lobo the program's first player and the 2018 release places Rizzotti and Wolters on that list, ahead of associate head coach Chris Dailey. Cash and Moore are on the same Nov. 5 list. This file does not have the Hall's category word for those four.
+  uconn_line: a college line only when a release opened for this page prints it. Taurasi's line is the Nov. 5, 2026 release. Bird's line is the June 15, 2025 release. Blank for the other seven. Blank is not a zero.
+  fcb_page: /wnba/swin-cash/, /wnba/maya-moore/, /wnba/sue-bird/, /wnba/diana-taurasi/. Blank if the site has no page.
+  list_source_url: the Nov. 5, 2026 release for every row, because that is the list being counted.
+
+wbhof-class-2027-wnba-ties.csv
+  The three inductees whose Hall-page bullets name a WNBA team. Kantner was WNBA Supervisor of Officials. Bolin Kazmer and Holland have no WNBA team on the page. They are not rows here.
+  record_line: the Hall page, plus the Sept. 28, 2026 WNBA.com Coach of the Year release where that release names the same award or the wins record.
+  The Thibault row puts 379-289 next to Cheryl Reeve's 380th regular-season win on July 8, 2026, and her 397 at the end of the 2026 regular season. Both numbers are on the pages named in source_urls. This file does not add playoff wins to either total.
+  fcb_pages: team and player pages on this site. Semicolon-separated.
+
+Not in these files
+  Five WNBA scoring titles. USA TODAY says five. The Hall page and the UConn release do not. A 2021 WNBA.com feature lists five (2006 and 2008-2011) and 9,174 career points, so it is not a total through 2024.
+  All-time leadership in 3-pointers made or free throws made. USA TODAY says she leads both. The Hall page and the UConn release do not. The 2021 feature listed her first in both, at that feature's totals.
+  A 14th All-Star team, or an All-WNBA team after the 10 first-team and 4 second-team selections on the UConn release. USA TODAY's "14" All-WNBA selections is 10 plus 4. The Hall page says 11 All-Star teams and does not list All-WNBA.
+  Sport Australia Hall of Fame announcement day. Basketball Australia's story is dated Oct. 21, 2026, and says the class was announced that day at Melbourne Park. Sportsnet's story is dated Oct. 20, 2026, and says the Tempo announced it that day. The Sport Australia member page says inducted in 2026. The gala date, Nov. 24, 2026, is on the Basketball Australia story.
+  X posts. The UConnWBB, Maggie Vanoni and Basketball Australia posts did not open (HTTP 403). Like counts are not in this file.
+  USA TODAY details that are not on the Hall page: 247 NBA games for Kantner, 11 years as WNBA supervisor, FIBA world championships in 1994 and 1998, a 2024 Olympic assistant role for Thibault, a 2026 FIBA World Cup quarterfinal for Belgium, a pair of national titles for Ann Meyers, and Holland as director from 1975 to 1981. The Hall page says 1975-1980 for the director job.
+  Sportsnet's "pair of FIBA World Cup silver medals in 2018 and 2022." The Hall page says silver in 2018 and bronze in 2022.
+
+Sources
+  https://www.wbhof.com/induction
+  https://uconnhuskies.com/news/2026/11/5/womens-basketball-diana-taurasi-named-2027-womens-basketball-hall-of-fame-inductee
+  https://uconnhuskies.com/news/2009/7/25/Former_UConn_standout_Rebecca_Lobo_Named_to_2010_Women_s_Basketball_Hall_of_Fame_Enshrinement_Class
+  https://uconnhuskies.com/news/2018/6/11/dailey_inducted_into_women_s_basketball_hall_of_fame
+  https://uconnhuskies.com/news/2025/6/15/womens-basketball-sue-bird-inducted-into-womens-basketball-hall-of-fame
+  https://www.wnba.com/news/reeve-named-2026-coach-of-the-year
+  https://www.usatoday.com/story/sports/wnba/2026/11/05/womens-basketball-hall-fame-class-2027-diana-taurasi-sandy-brondello/92625686007/
+  https://www.sportsnet.ca/wnba/article/taurasi-tempos-brondello-headline-womens-basketball-hall-of-fame-class/
+  https://www.nbcconnecticut.com/news/local/uconn-legend-diana-taurasi-to-be-inducted-into-womens-basketball-hall-of-fame/3792866/
+  https://www.australia.basketball/news/4596412/brondello-alcott-to-be-inducted-into-sport-australia-hall-of-fame
+  https://sahof.org.au/hall-of-fame-member/sandy-brondello/
+  https://www.wnba.com/news/diana-taurasi-25-numbers-to-know-about-the-goat
