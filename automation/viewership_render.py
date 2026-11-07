@@ -770,10 +770,60 @@ def _format_metric_value(metric: dict) -> str:
     unit = str(metric.get('unit') or '')
     value = metric['value']
     if unit == 'percent':
-        return f'{value}%'
-    if unit == 'broadcasts':
-        return f'{value}'
-    return core.format_number(value)
+        shown = f'{value}%'
+    elif unit in {'broadcasts', 'telecasts'}:
+        shown = f'{value}'
+    else:
+        shown = core.format_number(value)
+    qualifier = str(metric.get('qualifier') or '').strip()
+    if qualifier:
+        shown = f'{qualifier[:1].upper()}{qualifier[1:]} {shown}'
+    return shown
+
+
+def _regular_season_metrics(payload: dict) -> list[dict]:
+    rows = []
+    for metric in payload.get('metrics') or []:
+        metric_id = str(metric.get('metric_id') or '')
+        if metric_id.startswith('rs-2026-') and core.is_number(metric.get('value')):
+            rows.append(metric)
+    return rows
+
+
+def _regular_season_table(payload: dict, sources: list) -> str:
+    """League regular-season audience, reach, and telecast counts. Reach stays off the viewers column."""
+    metrics = _regular_season_metrics(payload)
+    if not metrics:
+        return ''
+    body = []
+    dates = []
+    for metric in metrics:
+        body.append([
+            core.esc(str(metric.get('label') or metric.get('scope') or '')),
+            core.esc(_format_metric_value(metric)),
+            core.esc(metric.get('scope') or ''),
+            source_cell(metric.get('source_url') or ''),
+        ])
+        sources.append((metric.get('source_url') or '', metric.get('source_date') or ''))
+        if metric.get('source_date'):
+            dates.append(str(metric['source_date']))
+    through = core.format_source_date(max(dates)) if dates else ''
+    note = (
+        f'Data through {through}. Methods: each row is the figure in its linked report. '
+        'Reach is unique viewers, not an average audience. A telecast count is how many telecasts cleared a line.'
+    )
+    return (
+        '<h3>2026 regular-season national audience</h3>'
+        '<p class="answer">Average audience, reach, and telecast counts are separate. Reach is unique viewers.</p>'
+        + table(
+            ['Figure', 'Value', 'Scope', 'Source'],
+            body,
+            '2026 regular-season national audience',
+            caption='2026 regular season. Average audience, reach, and telecast counts are separate rows.',
+            numeric={1},
+        )
+        + f'<p class="note">{core.esc(note)}</p>'
+    )
 
 
 def _network_metric_table(payload: dict, sources: list) -> str:
@@ -1004,7 +1054,7 @@ def viewership_section(payload: dict) -> str:
         f'<h2>{core.esc(core.QUESTION)}</h2>'
         f'<p class="answer">{core.link_teams(watched_answer(payload))}</p>'
         '<h3>What are the most-watched WNBA games?</h3>'
-        f'{games_table}{note_html}{_peak_table(payload, sources)}{_playoff_table(payload, sources)}{_network_metric_table(payload, sources)}'
+        f'{games_table}{note_html}{_regular_season_table(payload, sources)}{_peak_table(payload, sources)}{_playoff_table(payload, sources)}{_network_metric_table(payload, sources)}'
         f'{network_html}{espn_html}'
         f'{core.sources_line(sources)}'
         '</section>'
