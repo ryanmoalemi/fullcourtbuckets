@@ -1,65 +1,130 @@
 {
   "slug": "liatu-king",
   "player_name": "Liatu King",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
-      "question": "What are Liatu King's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Liatu King averaged 3.0 points,",
+      "question": "Is Liatu King deaf?",
+      "answer": "Liatu King's parents are deaf. Her Notre Dame bio says she learned American Sign Language at nine months old because of that, and she was a member of the American Sign Language Honor Society.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fightingirish.com/sports/wbball/roster/player/liatu-king",
+        "https://en.wikipedia.org/wiki/Liatu_King"
+      ],
+      "queries": [
+        {
+          "q": "is liatu king deaf",
+          "vol": 50
+        },
+        {
+          "q": "liatu king deaf",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What WNBA team does Liatu King play for?",
+      "answer": "Liatu King has played for the Dallas Wings, Los Angeles Sparks and Minnesota Lynx.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "liatu king stats",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/liatu-king/"
+      ],
+      "queries": [
+        {
+          "q": "liatu king wnba",
+          "vol": 40
+        },
+        {
+          "q": "liatu king lynx",
+          "vol": 20
+        },
+        {
+          "q": "liatu king sparks",
+          "vol": 10
+        },
+        {
+          "q": "liatu king la sparks",
+          "vol": 10
+        },
+        {
+          "q": "liatu king dallas wings",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What are Liatu King's stats?",
+      "answer": "In the 2026 regular season, Liatu King averaged 3.5 points, 2.3 rebounds, and 0.2 assists in 12 games for the Minnesota Lynx.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/liatu-king/"
+      ],
+      "queries": [
+        {
+          "q": "liatu king stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Liatu King play college basketball?",
+      "answer": "Liatu King played four seasons at Pittsburgh, then transferred to Notre Dame for 2024-25.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/liatu-king/",
+        "https://en.wikipedia.org/wiki/Liatu_King",
+        "https://fightingirish.com/sports/wbball/roster/player/liatu-king"
+      ],
+      "queries": [
+        {
+          "q": "liatu king pitt",
+          "vol": 10
+        },
+        {
+          "q": "liatu king notre dame",
+          "vol": 10
+        },
+        {
+          "q": "liatu king transfer",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Liatu King drafted?",
+      "answer": "The Los Angeles Sparks selected Liatu King in the third round, 28th overall, in the 2025 WNBA Draft. She later appeared with Dallas and Minnesota.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sparks.wnba.com/news/sparks-select-sarah-ashlee-barker-sania-feagin-and-liatu-king-in-2025-wnba-draft",
+        "https://www.wnba.com/player/1642820/liatu-king",
+        "https://fullcourtbuckets.com/wnba/liatu-king/"
+      ],
+      "queries": [
+        {
+          "q": "liatu king draft",
+          "vol": 10
+        },
+        {
+          "q": "liatu king wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Liatu King?",
-      "answer": "Liatu King is listed at 5' 11\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Liatu_King"
-      ],
-      "google_keyword": "liatu king height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Liatu King injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "liatu king injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Liatu King's parents?",
-      "answer": "Public profiles share limited verified detail about Liatu King's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "answer": "Full Court Buckets lists Liatu King at 5 feet 11 inches. She played for the Minnesota Lynx in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Liatu_King"
+        "https://fullcourtbuckets.com/wnba/liatu-king/",
+        "https://www.wnba.com/player/1642820/liatu-king"
       ],
-      "google_keyword": "liatu king parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Liatu King?",
-      "answer": "Liatu King is an American professional basketball player for the Minnesota Lynx of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Liatu_King"
-      ],
-      "google_keyword": "liatu king wikipedia",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Liatu King attend?",
-      "answer": "Liatu King played college basketball at the Pittsburgh Panthers and Notre Dame Fighting Irish.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Liatu_King"
-      ],
-      "google_keyword": "liatu king notre dame",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "liatu king height",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

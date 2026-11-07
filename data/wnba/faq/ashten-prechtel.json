@@ -1,50 +1,125 @@
 {
   "slug": "ashten-prechtel",
   "player_name": "Ashten Prechtel",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
+      "question": "What WNBA team does Ashten Prechtel play for?",
+      "answer": "Ashten Prechtel has played for the Golden State Valkyries.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ashten-prechtel/"
+      ],
+      "queries": [
+        {
+          "q": "ashten prechtel wnba",
+          "vol": 50
+        }
+      ]
+    },
+    {
+      "question": "What are Ashten Prechtel's stats?",
+      "answer": "In the 2026 regular season, Ashten Prechtel averaged 1.8 points, 1.8 rebounds, and 0.5 assists in 6 games for the Golden State Valkyries.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ashten-prechtel/"
+      ],
+      "queries": [
+        {
+          "q": "ashten prechtel stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
       "question": "How tall is Ashten Prechtel?",
-      "answer": "Ashten Prechtel is listed at 6' 5\".",
-      "answer_kind": "bio",
+      "answer": "Full Court Buckets lists Ashten Prechtel at 6 feet 5 inches. She played for the Golden State Valkyries in 2026.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashten_Prechtel"
+        "https://fullcourtbuckets.com/wnba/ashten-prechtel/"
       ],
-      "google_keyword": "ashten prechtel height",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "ashten prechtel height",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What college did Ashten Prechtel attend?",
-      "answer": "Prechtel played college basketball at Stanford.",
-      "answer_kind": "bio",
+      "question": "Where did Ashten Prechtel play college basketball?",
+      "answer": "Ashten Prechtel played at Stanford from 2019 to 2023 and won the 2021 NCAA title with the Cardinal.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashten_Prechtel"
+        "https://fullcourtbuckets.com/wnba/ashten-prechtel/",
+        "https://en.wikipedia.org/wiki/Ashten_Prechtel",
+        "https://www.wnba.com/player/1641695/ashten-prechtel/profile"
       ],
-      "google_keyword": "ashten prechtel stanford",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "ashten prechtel stanford",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who is Ashten Prechtel?",
-      "answer": "Ashten Layne Prechtel is an American professional basketball player for the Golden State Valkyries of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "When was Ashten Prechtel drafted?",
+      "answer": "The Connecticut Sun selected Ashten Prechtel in the third round, 34th overall, in the 2023 WNBA Draft. She later signed with the Golden State Valkyries in 2026.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ashten_Prechtel"
+        "https://en.wikipedia.org/wiki/Ashten_Prechtel",
+        "https://www.wnba.com/player/1641695/ashten-prechtel/profile"
       ],
-      "google_keyword": "ashten prechtel wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "ashten prechtel wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Ashten Prechtel?",
-      "answer": "Ashten Prechtel was born May 11, 2001. As of late 2026 that puts her at 25 years old.",
+      "answer": "Ashten Prechtel was born May 11, 2001.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.wnba.com/player/1641695/ashten-prechtel/profile",
         "https://en.wikipedia.org/wiki/Ashten_Prechtel"
       ],
-      "google_keyword": "ashten prechtel age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2001-05-11"
+      "queries": [
+        {
+          "q": "ashten prechtel age",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Ashten Prechtel go to high school?",
+      "answer": "Ashten Prechtel played high school basketball at Discovery Canyon in Colorado Springs, Colorado.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Ashten_Prechtel",
+        "https://gazette.com/2018/11/19/discovery-canyons-ashten-prechtel-inks-deal-with-stanford-f51bfaac-e955-11e8-b10b-73602ea4e733/"
+      ],
+      "queries": [
+        {
+          "q": "ashten prechtel high school",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Is Ashten Prechtel related to Keith Van Horn?",
+      "answer": "No. Keith Van Horn, a former NBA player, was Ashten Prechtel's club coach with Colorado Premier Basketball Club before she went to Stanford.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gazette.com/2018/11/19/discovery-canyons-ashten-prechtel-inks-deal-with-stanford-f51bfaac-e955-11e8-b10b-73602ea4e733/"
+      ],
+      "queries": [
+        {
+          "q": "ashten prechtel keith van horn",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

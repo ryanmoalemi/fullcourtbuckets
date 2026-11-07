@@ -1,38 +1,85 @@
 {
   "slug": "valeriane-ayayi",
   "player_name": "Valeriane Ayayi",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
-      "question": "What are Valeriane Ayayi's stats / points per game?",
-      "answer": "In the 2026 regular season, Valeriane Ayayi averaged 6.4 points, 2.8 rebounds, and 1.2 assists in 34 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
+      "question": "What are Valeriane Ayayi's stats?",
+      "answer": "In the 2026 regular season, Valeriane Ayayi averaged 6.3 points, 2.8 rebounds, and 1.3 assists in 35 games for the Phoenix Mercury.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "valeriane ayayi stats",
-      "approx_monthly_volume": 480
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/valeriane-ayayi/"
+      ],
+      "queries": [
+        {
+          "q": "valeriane ayayi stats",
+          "vol": 480
+        }
+      ]
     },
     {
-      "question": "How tall is Valeriane Ayayi?",
-      "answer": "Valeriane Ayayi is listed at 6' 1\".",
-      "answer_kind": "bio",
+      "question": "What WNBA team does Valeriane Ayayi play for?",
+      "answer": "Valeriane Ayayi has played for the San Antonio Stars and Phoenix Mercury.",
+      "answer_kind": "stats",
       "sources": [
-        "https://en.wikipedia.org/wiki/Val%C3%A9riane_Ayayi"
+        "https://fullcourtbuckets.com/wnba/valeriane-ayayi/"
       ],
-      "google_keyword": "valeriane ayayi height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "valeriane ayayi wnba",
+          "vol": 50
+        },
+        {
+          "q": "valeriane ayayi phoenix mercury",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Valeriane Ayayi?",
-      "answer": "Valeriane Ayayi was born April 29, 1994 in Bordeaux. As of late 2026 that puts her at 32 years old.",
+      "answer": "Valeriane Ayayi was born April 29, 1994, in Bordeaux, France.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/a/ayayiva01w.html",
+        "https://www.wnba.com/player/204468/valeriane-ayayi/profile"
+      ],
+      "queries": [
+        {
+          "q": "valeriane ayayi age",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How tall is Valeriane Ayayi?",
+      "answer": "Full Court Buckets lists Valeriane Ayayi at 6 feet 1 inch. She plays forward for the Phoenix Mercury.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/valeriane-ayayi/"
+      ],
+      "queries": [
+        {
+          "q": "valeriane ayayi height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Has Valeriane Ayayi played in the Olympics?",
+      "answer": "Yes. Valeriane Ayayi has represented France at three Olympics, winning bronze at Tokyo 2020 and silver at Paris 2024.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Val%C3%A9riane_Ayayi"
+        "https://www.olympedia.org/athletes/130100",
+        "https://en.wikipedia.org/wiki/Val%C3%A9riane_Ayayi",
+        "https://www.wnba.com/player/204468/valeriane-ayayi/profile"
       ],
-      "google_keyword": "valeriane ayayi age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1994-04-29"
+      "queries": [
+        {
+          "q": "valeriane ayayi olympic stats",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
