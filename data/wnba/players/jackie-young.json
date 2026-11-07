@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-07T00:10:05+00:00",
-  "stats_updated_at": "2026-11-04T09:05:43+00:00",
+  "checked_at": "2026-11-07T12:31:46+00:00",
+  "stats_updated_at": "2026-11-07T12:31:46+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -81,24 +81,24 @@
         "conference": "Western Conference"
       },
       "games_played": 6,
-      "min": 36.83,
-      "fgm": 5.5,
-      "fga": 14.5,
-      "fg_pct": 37.9,
-      "fg3m": 3.0,
-      "fg3a": 6.83,
-      "fg3_pct": 43.9,
-      "ftm": 7.0,
-      "fta": 7.33,
-      "ft_pct": 95.5,
-      "oreb": 0.67,
-      "dreb": 3.0,
-      "reb": 3.67,
-      "ast": 6.67,
+      "min": 37.5,
+      "fgm": 5.17,
+      "fga": 13.5,
+      "fg_pct": 38.3,
+      "fg3m": 2.67,
+      "fg3a": 6.17,
+      "fg3_pct": 43.2,
+      "ftm": 5.83,
+      "fta": 6.17,
+      "ft_pct": 94.6,
+      "oreb": 0.33,
+      "dreb": 4.0,
+      "reb": 4.33,
+      "ast": 7.0,
       "stl": 1.67,
       "blk": 0.0,
       "turnover": 2.17,
-      "pts": 21.0,
+      "pts": 18.83,
       "gap_fill": true
     },
     {
@@ -674,7 +674,7 @@
     {
       "game_id": 1392676,
       "player_id": 570,
-      "date": "2026-10-02T01:00:00.000Z",
+      "date": "2026-10-01T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -697,9 +697,9 @@
         "id": 3,
         "full_name": "Indiana Fever",
         "abbreviation": "IND",
-        "city": "Indiana",
+        "city": null,
         "name": "Fever",
-        "conference": "Eastern Conference"
+        "conference": null
       },
       "home_score": 94,
       "away_score": 83,
@@ -729,9 +729,9 @@
         "id": 3,
         "full_name": "Indiana Fever",
         "abbreviation": "IND",
-        "city": "Indiana",
+        "city": null,
         "name": "Fever",
-        "conference": "Eastern Conference"
+        "conference": null
       },
       "visitor_team": {
         "id": 8,
@@ -777,9 +777,9 @@
         "id": 3,
         "full_name": "Indiana Fever",
         "abbreviation": "IND",
-        "city": "Indiana",
+        "city": null,
         "name": "Fever",
-        "conference": "Eastern Conference"
+        "conference": null
       },
       "home_score": 102,
       "away_score": 85,
@@ -792,7 +792,7 @@
       "turnover": 6.0
     }
   ],
-  "game_log_window_start": "2026-10-02",
+  "game_log_window_start": "2026-10-03",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
