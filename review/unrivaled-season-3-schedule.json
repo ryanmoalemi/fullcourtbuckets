@@ -1,0 +1,99 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "All 56 club games, times, buildings, and the three 1-on-1 nights are the Nov. 7, 2026 schedule page, with 1-on-1 tips from the Nov. 6 release. The 6-and-2 tour split and the 14-game double round-robin were counted from that page. Home arenas are the WNBA.com team pages opened Nov. 7. Burton, Bueckers, and Copper hometowns are USA Basketball, Team USA, and the WNBA.com bio. The Inquirer 9:30 p.m. second game in Philadelphia is the release and the schedule page at 9:00."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "The release does not print a club-by-club road count. This page does: Breeze 6 tour cities, Rose 2, everyone else 4, and every club still at 14 games. It also lists who is scheduled in her WNBA city and seven who are not. The tour page still saying TBD, and Boston and Detroit still at 7:30 there, is not in the release."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "The schedule HTML was parsed game by game. The Nov. 6 release, the tour page, five city announcements, the Season 2 numbers release, four WNBA.com team pages, and three bios were opened. The page has a chart, four CSVs, and a data dictionary."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The cut is the road load against a balanced 14-game schedule, plus the homecoming and absence lists, rather than a city-by-city rewrite of the release."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. The release, the schedule page, the bios, and the team pages are linked from the table notes."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The H1 is the finding. The club table and the chart sit under a one-line lead. The full schedule, the homecoming table, and the absence table follow. Storylines are below the tables. The game table is long because it is the schedule."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "House how-this-story-was-made note, CC0 downloads, and a lead image labeled as a Full Court Buckets chart. TV TBD and the HBO Max mark are the schedule page. TNT and truTV are attributed to the September and October announcements, not assigned to a game."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. In-article links open in a new tab. A draft clock said pm.m. and a draft tour-page sentence was garbled. Both were fixed before this score."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the schedule gets every game, the local time, Eastern time, the building, and the current TV label. Matchups that are not on the page are not invented. The 1-on-1 bracket is left blank."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates, names, and the 9:00 versus 9:30 Philadelphia correction. The methods notes are ledgers, which is the point of the tables."
+      }
+    ],
+    "info_gain": [
+      "Breeze is in six tour cities. Rose is in two. The other six clubs are in four. Every club plays 14 games, and every pairing is scheduled twice.",
+      "Fifteen homecoming rows from bios, the Nov. 6 release, and WNBA.com home arenas. Seven players are on a WNBA team in a tour city and are not scheduled there.",
+      "The tour page on Nov. 7 still said TBD vs TBD. Boston and Detroit on that page were still 7:30 and 9:00 p.m. ET. The schedule page says 7:00 and 8:30.",
+      "The Inquirer put Philadelphia's second game at 9:30 p.m. The release and the schedule page say 9:00.",
+      "Season 2's own release names two tour stops, Philadelphia 21,490 and Brooklyn 18,261. Season 3 has eight cities."
+    ],
+    "ai_flags": [
+      "A draft time formatter wrote 7:00 pm.m. It was fixed to 7:00 p.m. before publish.",
+      "A draft sentence about the tour page mixed the schedule page and the tour page. It now says the tour page still had 7:30 and 9:00 for Boston and Detroit, and the schedule page has 7:00 and 8:30.",
+      "A draft said four hometown lines were not on the homecoming table. Miles is on that table for Target Center. The sentence now says the New Jersey, Long Island, and New York hometowns are not rows.",
+      "A draft methods line said the club order came from the release. The order is the tour-game count. The methods line now says one row per club."
+    ]
+  },
+  "unique": [
+    "Breeze plays six tour cities and 6 road games. Rose plays two cities and 2 road games. Both play 14 games. Rose has 11 dated Miami games. Breeze has 7.",
+    "No club misses the tour. The schedule is a 56-game double round-robin.",
+    "Kayla McBride is a Lynx player whose club, Phantom, is not in Minneapolis. Marine Johannès and Satou Sabally are Liberty players whose club, Laces, is not in Brooklyn.",
+    "The Philadelphia Inquirer, Nov. 6, 2026, put the second game at 9:30 p.m. Unrivaled's release and schedule page say 9:00 p.m. ET."
+  ],
+  "unverified": [
+    "Which TNT or truTV window each game uses. The Nov. 7 schedule page says TV TBD and shows an HBO Max mark. The September and October announcements named TNT, truTV, and HBO Max for those tour nights and said the time could change.",
+    "Sephora Arena's current capacity. The Nov. 13, 2024 announcement described a building capacity of 850. The March 10, 2026 release says capacity was increased and does not print a new number.",
+    "The 1-on-1 bracket and the March 5 assignment of games to the two session windows.",
+    "A home club. The schedule page styles the second club as home. The Nov. 6 release does not name one. This page does not add one.",
+    "Mabrey, Taylor, and Citron hometowns beyond the Nov. 6 release's words. They are not homecoming rows.",
+    "A bio that says Natasha Cloud is from Philadelphia, as opposed to the release. The 2025 Liberty trade note calls her a Pennsylvania native. The row cites the Nov. 6 release.",
+    "Quotes from Alex Bazzell in the LA Times and from Luke Cooper in the Detroit Free Press. They are not in the Nov. 6 release. They are not used.",
+    "A Nov. 6 story from AP, the Boston Globe, the San Francisco Chronicle, the Star Tribune, the Houston Chronicle, The Athletic, or Her Hoop Stats. Searches did not turn up a distinct story to add a verified fact from."
+  ]
+}

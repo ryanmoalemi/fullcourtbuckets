@@ -1,0 +1,83 @@
+Full Court Buckets, Unrivaled Season 3 schedule
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Data through Nov. 7, 2026.
+
+unrivaled-season-3-games.csv
+  One row per card on the Unrivaled schedule page checked Nov. 7, 2026, plus the three 1-on-1 nights.
+  date: the night, YYYY-MM-DD.
+  weekday: the weekday on that card.
+  tip_local: the venue clock. "Not set" on March 5, when the page says the tip is set closer to the night.
+  local_zone: ET, CT, or PT. Eastern buildings use ET for both clocks.
+  tip_et: Eastern time. The 1-on-1 tips are the Nov. 6 Unrivaled release, because those three cards do not print a tip.
+  venue, city, state: as labeled on the schedule page. Los Angeles' card city is Inglewood. The arena page lists Sephora Arena at 7321 NW 75th St., Medley, Fla. The schedule page labels that city Miami.
+  event: the card title.
+  kind: tour, miami, flex, or 1-on-1.
+  round: 1-on-1 round name from the Nov. 6 release. Blank for club games.
+  tour_stop: yes only for the eight road nights.
+  club_1, club_2: the schedule page order, first club then second club. The page styles the second club as home. The Nov. 6 release does not name a home club. This file does not add one.
+  tv: "TV TBD" on every night, the label on the schedule page.
+  streaming: the schedule page shows an HBO Max mark on every night. It does not assign TNT or truTV to a game. The Sept. 8, Sept. 17, Sept. 21, Sept. 28, and Oct. 1 tour announcements said those nights would be simulcast on TNT, truTV, and HBO Max, with the time subject to change.
+  game_url: the game page linked from the schedule card. Blank for the 1-on-1 nights.
+  ticket_url: the ticket link on that card. March 5 has two, one per session, separated by " | ".
+
+  March 5 session windows on the schedule page, not assigned to a club: 1:00 and 2:30 p.m. ET, and 7:30 and 9:00 p.m. ET.
+
+unrivaled-season-3-by-club.csv
+  One row per club.
+  tour_stop_games: games at the eight road arenas.
+  tour_cities: those cities, in schedule order. Los Angeles is the Intuit Dome stop.
+  tour_city_count: the count of those cities.
+  miami_games_with_a_tip_time: Sephora Arena games with a tip on the card.
+  march_5_flex_games: the March 5 game. Every club has one.
+  miami_games_including_flex: the two Miami columns added.
+  games: 14 for every club. Tour games, dated Miami games, and the flex game.
+
+  The 56 club games are a double round-robin. Each of the 28 pairings appears twice. The three 1-on-1 nights are not in this file.
+
+unrivaled-season-3-homecoming.csv
+  One row per player per tour stop where the tie is a bio, the Nov. 6 release, or a WNBA home arena.
+  tie: the reason for the row.
+  wnba_team_2026: the team on the Season 3 rosters file.
+  A hometown row uses a bio that names the town, or the Nov. 6 release when the table says so.
+  An arena row uses the WNBA.com team page checked Nov. 7, 2026.
+  Brink has two rows. Hive plays San Francisco and Los Angeles.
+  Mabrey, Taylor, and Citron are named as natives in the Nov. 6 release and are not in this file. A bio naming the town was not opened. Miles is in this file for Target Center, not for New Jersey.
+
+unrivaled-season-3-not-on-that-night.csv
+  Players on a 2026 WNBA team whose home arena is in a tour city, whose club is not scheduled at that stop.
+  Arenas, WNBA.com team pages checked Nov. 7, 2026: Valkyries, Chase Center. Lynx, Target Center. Liberty, Barclays Center. Sparks, Crypto.com Arena.
+  The Los Angeles tour stop is Intuit Dome, not Crypto.com Arena. Hamby is in this file because Vinyl is not on that stop.
+  Burton is also in the homecoming file, for Boston. She is here because Mist is not in San Francisco.
+  Players whose 2026 team has no tour city are not in this file.
+
+Not in these files
+  A home club. The schedule page's home style is described above and is not a column.
+  TNT or truTV for a single game. The current schedule page says TV TBD.
+  Sephora Arena's current capacity. The Nov. 13, 2024 announcement described a building capacity of 850. The March 10, 2026 release says capacity was increased and does not print a new number. The arena page checked Nov. 7 does not print one.
+  The 1-on-1 bracket. The schedule page says it is still to be announced.
+  Season statistics.
+
+Sources
+  https://www.unrivaled.basketball/schedule
+  https://www.unrivaled.basketball/news/unrivaled-reveals-season-three-matchups-and-clubs-competing-in-tour-stops-ftugcxnvnpa7
+  https://www.unrivaled.basketball/tours/2027/bus
+  https://www.unrivaled.basketball/arena
+  https://www.unrivaled.basketball/news/unrivaled-to-open-season-three-in-boston-on-january-8-6ic6iuiz7d5k
+  https://www.unrivaled.basketball/news/unrivaled-to-host-season-three-games-in-minneapolis-on-january-24-l5f3ucvvj17s
+  https://www.unrivaled.basketball/news/unrivaled-to-play-first-ever-games-in-houston-as-part-of-expanded-touring-model-for-season-three-ovup1c33s8bq
+  https://www.unrivaled.basketball/news/unrivaled-to-play-first-ever-games-in-san-francisco-during-season-three-opening-weekend-35x1jcjq37qx
+  https://www.unrivaled.basketball/news/unrivaled-announces-first-ever-los-angeles-tour-stop-on-season-threes-opening-night-ihtnxr8jg4kc
+  https://www.unrivaled.basketball/news/bleacher-report-hosts-unrivaled-club-roster-reveal-live-on-br-app-and-youtube-with-watch-parties-in-every-tour-city-y41g0l974v3w
+  https://www.unrivaled.basketball/news/unrivaled-numbers-in-season-2-2xxhf3n3q35f
+  https://www.unrivaled.basketball/news/unrivaled-partners-with-mediapro-north-america-to-create-one-stop-shop-in-miami-for-inaugural-season-u3ftygiv5ohh
+  https://www.unrivaled.basketball/game/jx1ocoygd5a4/recap
+  https://www.usab.com/players/veronica-burton
+  https://www.teamusa.com/profiles/paige-bueckers-1077636
+  https://www.wnba.com/player/1627674/kahleah-copper/bio
+  https://www.wnba.com/news/ole-miss-shakira-austin-kentuckys-rhyne-howard-and-baylors-nalyssa-smith-headline-prospects-to-attend-wnba-draft-2022-presented-by-state-farm
+  https://www.wnba.com/team/1611661331
+  https://www.wnba.com/team/1611661324
+  https://www.wnba.com/team/1611661313
+  https://www.wnba.com/team/1611661320
+  https://valkyries.wnba.com/roster
+  Rosters file: /news/unrivaled-season-3-rosters/data/unrivaled-season-3-players.csv

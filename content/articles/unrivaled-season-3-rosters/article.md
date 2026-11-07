@@ -160,27 +160,9 @@ Four players are marked rookies on a WNBA roster page: Miles, Rice, [Flau'jae Jo
 
 Who might be a free agent after 2026 is in [2027 free agents](/news/wnba-free-agents-2027/).
 
-## Arenas on the schedule
+## Schedule
 
-The [schedule page](https://www.unrivaled.basketball/schedule) on Nov. 5 listed dates and buildings. The club names were blank. The Nov. 4 release says the matchups come out Nov. 6.
-
-| Arena | City | First date listed |
-| --- | --- | --- |
-| TD Garden | Boston | Jan. 8, 2027 |
-| Intuit Dome | Inglewood | Jan. 8, 2027 |
-| Little Caesars Arena | Detroit | Jan. 11, 2027 |
-| Chase Center | San Francisco | Jan. 11, 2027 |
-| Sephora Arena | Miami | Jan. 19, 2027 |
-| Barclays Center | Brooklyn | Jan. 22, 2027 |
-| Target Center | Minneapolis | Jan. 24, 2027 |
-| Toyota Center | Houston | Feb. 12, 2027 |
-| Xfinity Mobile Arena | Philadelphia | Feb. 15, 2027 |
-
-Source: the Unrivaled schedule page, checked Nov. 5, 2026. The last date on that page is March 5, 2027, at Sephora Arena. Data through Nov. 5, 2026. Methods: one row per arena, the first date the page lists for it.
-
-The Sept. 8 [Boston announcement](https://www.unrivaled.basketball/news/unrivaled-to-open-season-three-in-boston-on-january-8-6ic6iuiz7d5k) and the Oct. 1 [Los Angeles announcement](https://www.unrivaled.basketball/news/unrivaled-announces-first-ever-los-angeles-tour-stop-on-season-threes-opening-night-ihtnxr8jg4kc) both put the games on TNT, truTV and HBO Max.
-
-TV: TNT and truTV. Stream: HBO Max.
+The schedule page on Nov. 5 listed dates and buildings. The club names were blank. Unrivaled posted the matchups on Nov. 6. The game-by-game file, the tour-city counts, and the homecoming list are on the [Season 3 schedule](/news/unrivaled-season-3-schedule/). Breeze is in six of the eight tour cities. Rose is in two.
 
 ## How the rows were counted
 
