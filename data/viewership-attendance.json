@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-06",
-  "updated_time": "11:26 a.m. PT",
+  "updated": "2026-11-07",
+  "updated_time": "10:45 a.m. PT",
   "games": [
     {
       "date": "1997-06-21",
@@ -752,6 +752,60 @@
       "source_date": "2026-11-03",
       "checked_at": "2026-11-06",
       "notes": "Count of USA Sports regular-season and playoff game broadcasts that averaged at least 1 million viewers."
+    },
+    {
+      "metric_id": "rs-2026-average-audience",
+      "period": "2026",
+      "label": "Average audience",
+      "value": 731000,
+      "unit": "viewers",
+      "scope": "2026 regular-season average audience. Most-watched WNBA regular season since 2000.",
+      "source_url": "https://www.sportsmediawatch.com/2026/11/wnba-playoffs-most-watched-since-inaugural-season/",
+      "source_date": "2026-11-04",
+      "checked_at": "2026-11-07",
+      "notes": "Sports Media Watch, Nov. 4, 2026. Average of 731,000. Most-watched WNBA regular season since 2000."
+    },
+    {
+      "metric_id": "rs-2026-reach",
+      "period": "2026",
+      "label": "Reach",
+      "value": 90000000,
+      "reach": 90000000,
+      "qualifier": "more than",
+      "unit": "unique viewers",
+      "scope": "2026 regular-season unique viewers across all national networks. A record. Not an average audience.",
+      "source_url": "https://www.wnba.com/news/wnba-season-30-record-growth",
+      "source_date": "2026-10-14",
+      "checked_at": "2026-11-07",
+      "notes": "More than 90 million unique viewers. Stored in reach, separate from average audience. A record."
+    },
+    {
+      "metric_id": "rs-2026-telecasts-1m",
+      "period": "2026",
+      "label": "Telecasts at 1 million",
+      "value": 51,
+      "prior": 19,
+      "prior_season": 2025,
+      "unit": "telecasts",
+      "scope": "2026 regular-season telecasts that averaged at least 1 million viewers. The most in WNBA history, up from 19 in 2025.",
+      "source_url": "https://www.wnba.com/news/wnba-season-30-record-growth",
+      "source_date": "2026-10-14",
+      "checked_at": "2026-11-07",
+      "notes": "Count, not an audience. The most in WNBA history, up from 19 in 2025."
+    },
+    {
+      "metric_id": "rs-2026-telecasts-2m",
+      "period": "2026",
+      "label": "Telecasts over 2 million",
+      "value": 9,
+      "prior": 4,
+      "prior_season": 2025,
+      "unit": "telecasts",
+      "scope": "2026 regular-season telecasts that averaged more than 2 million viewers. A league record, up from 4 in 2025.",
+      "source_url": "https://www.wnba.com/news/wnba-season-30-record-growth",
+      "source_date": "2026-10-14",
+      "checked_at": "2026-11-07",
+      "notes": "Count, not an audience. A league record, up from 4 in 2025. The release says more than 2 million viewers."
     }
   ],
   "key_fact": "the 2026 Finals averaged 1.88M viewers, the most since 1999.",

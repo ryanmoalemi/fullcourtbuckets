@@ -394,6 +394,25 @@ def _validate_metrics(metrics) -> None:
             raise ValueError(f'Metric row {index + 1} needs a source date.')
         if not valid_day(row.get('checked_at')):
             raise ValueError(f'Metric row {index + 1} needs a checked date.')
+        _validate_metric_reach(index, row)
+        if row.get('prior') is not None and not is_number(row.get('prior')):
+            raise ValueError(f'Metric row {index + 1} has a prior figure that is not a whole number.')
+        if row.get('prior_season') is not None and not is_number(row.get('prior_season')):
+            raise ValueError(f'Metric row {index + 1} has a prior season that is not a whole number.')
+
+
+def _validate_metric_reach(index: int, row: dict) -> None:
+    """Reach is its own field. It is never stored as an average audience."""
+    unit = str(row.get('unit') or '')
+    reach = row.get('reach', None)
+    if reach is None and unit != 'unique viewers':
+        return
+    if not is_number(reach):
+        raise ValueError(f'Metric row {index + 1} needs a reach figure.')
+    if unit == 'viewers':
+        raise ValueError(f'Metric row {index + 1} stores reach as an average audience.')
+    if row.get('value') != reach:
+        raise ValueError(f'Metric row {index + 1} reach does not match its value.')
 
 
 def format_number(value: int) -> str:

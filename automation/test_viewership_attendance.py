@@ -73,6 +73,23 @@ class ViewershipValidationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'number but no source'):
             viewership.validate(payload)
 
+    def test_reach_is_not_an_average_audience(self):
+        payload = _payload()
+        payload['metrics'].append({
+            'metric_id': 'rs-bad-reach',
+            'period': '2026',
+            'value': 90000000,
+            'reach': 90000000,
+            'unit': 'viewers',
+            'scope': 'reach stored as viewers',
+            'source_url': 'https://www.wnba.com/news/wnba-season-30-record-growth',
+            'source_date': '2026-10-14',
+            'checked_at': '2026-11-07',
+            'notes': '',
+        })
+        with self.assertRaisesRegex(ValueError, 'average audience'):
+            viewership.validate(payload)
+
 
 class ViewershipPageTests(unittest.TestCase):
     @classmethod
@@ -270,7 +287,7 @@ class ViewershipPageTests(unittest.TestCase):
     def test_confirmed_network_figures(self):
         page = self.page
         csv_text = (ROOT / 'wnba' / 'viewership-attendance' / 'viewership-attendance.csv').read_text(encoding='utf-8')
-        self.assertIn('Updated Nov. 6, 2026, 11:26 a.m. PT', page)
+        self.assertIn('Updated Nov. 7, 2026, 10:45 a.m. PT', page)
         self.assertIn('1.72 million', page)
         self.assertIn('943,000', page)
         self.assertIn('525,000', page)
@@ -296,8 +313,21 @@ class ViewershipPageTests(unittest.TestCase):
             'audience-2026-07-08,2026-07-08,1040000,viewers',
             'network-2026-usa-share,2026,20,percent',
             'network-2026-usa-sports-million-broadcasts,2026,12,broadcasts',
+            'rs-2026-average-audience,2026,731000,viewers',
+            'rs-2026-reach,2026,90000000,unique viewers',
+            'rs-2026-telecasts-1m,2026,51,telecasts',
+            'rs-2026-telecasts-2m,2026,9,telecasts',
         ):
             self.assertIn(row, csv_text)
+        self.assertIn('731,000', page)
+        self.assertIn('More than 90 million', page)
+        self.assertIn('up from 19 in 2025', page)
+        self.assertIn('up from 4 in 2025', page)
+        self.assertIn('https://www.wnba.com/news/wnba-season-30-record-growth', page)
+        self.assertNotIn('across all national windows', page)
+        reach = next(row for row in json.loads((ROOT / 'data' / 'viewership-attendance.json').read_text(encoding='utf-8'))['metrics'] if row['metric_id'] == 'rs-2026-reach')
+        self.assertEqual(reach['reach'], 90000000)
+        self.assertNotEqual(reach['unit'], 'viewers')
         self.assertEqual(csv_text.count('tv-2026-USA Network,'), 1)
 
 
