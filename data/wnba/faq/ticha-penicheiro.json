@@ -1,84 +1,122 @@
 {
   "slug": "ticha-penicheiro",
   "player_name": "Ticha Penicheiro",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
-      "question": "What are Ticha Penicheiro's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2011), Ticha Penicheiro averaged 6.0 points, 2.8 rebounds, and 4.8 assists in 34 games for Chicago Sky. Her full season-by-season numbers are on this page.",
+      "question": "What are Ticha Penicheiro's stats?",
+      "answer": "In the 2012 regular season, Ticha Penicheiro averaged 1.7 points, 1.3 rebounds, and 2.1 assists in 19 games for the Chicago Sky.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ticha penicheiro stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ticha-penicheiro/"
+      ],
+      "queries": [
+        {
+          "q": "ticha penicheiro stats",
+          "vol": 30
+        }
+      ]
     },
     {
-      "question": "Who is Ticha Penicheiro dating?",
-      "answer": "As of late 2026, Ticha Penicheiro has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Which WNBA teams has Ticha Penicheiro played for?",
+      "answer": "Ticha Penicheiro has played for the Sacramento Monarchs, Los Angeles Sparks and Chicago Sky.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/ticha-penicheiro/"
+      ],
+      "queries": [
+        {
+          "q": "ticha penicheiro wnba",
+          "vol": 20
+        },
+        {
+          "q": "ticha penicheiro team",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Where did Ticha Penicheiro play college basketball?",
+      "answer": "Ticha Penicheiro played at Old Dominion, where she won the Wade Trophy in 1998. The Sacramento Monarchs selected her second overall in the 1998 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
+        "https://fullcourtbuckets.com/wnba/ticha-penicheiro/",
+        "https://www.wbhof.com/member/ticha-penicheiro",
         "https://en.wikipedia.org/wiki/Ticha_Penicheiro"
       ],
-      "google_keyword": "ticha penicheiro partner",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "ticha penicheiro odu",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Ticha Penicheiro make?",
-      "answer": "A precise public salary or net worth figure for Ticha Penicheiro is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Is Ticha Penicheiro in the Hall of Fame?",
+      "answer": "Yes. Ticha Penicheiro was inducted into the Women's Basketball Hall of Fame in 2019 and the FIBA Hall of Fame in 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://en.wikipedia.org/wiki/Ticha_Penicheiro",
+        "https://www.wbhof.com/member/ticha-penicheiro",
+        "https://about.fiba.basketball/en/fiba-hall-of-fame/hall-of-famers/ticha-penicheiro"
       ],
-      "google_keyword": "ticha penicheiro net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "ticha penicheiro hall of fame",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Does Ticha Penicheiro hold the WNBA assist record?",
+      "answer": "Ticha Penicheiro retired in 2012 as the WNBA's all-time assists leader with 2,599 regular-season assists. Sue Bird later passed that total, and Penicheiro led the league in assists seven times.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/p/penicti01w.html",
+        "https://en.wikipedia.org/wiki/Ticha_Penicheiro",
+        "https://www.wbhof.com/member/ticha-penicheiro"
+      ],
+      "queries": [
+        {
+          "q": "ticha penicheiro assist record",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Ticha Penicheiro?",
+      "answer": "Basketball-Reference and the FIBA Hall of Fame list Ticha Penicheiro at 5 feet 11 inches. She played point guard.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/p/penicti01w.html",
+        "https://about.fiba.basketball/en/fiba-hall-of-fame/hall-of-famers/ticha-penicheiro"
+      ],
+      "queries": [
+        {
+          "q": "ticha penicheiro height",
+          "vol": 10
+        },
+        {
+          "q": "ticha penicheiro altura",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Ticha Penicheiro?",
-      "answer": "Public profiles list Ticha Penicheiro as born in 1974. As of late 2026 that puts her around 52 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ticha_Penicheiro"
-      ],
-      "google_keyword": "ticha penicheiro age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1974-01-01"
-    },
-    {
-      "question": "Is Ticha Penicheiro married?",
-      "answer": "There is no widely reported public record of Ticha Penicheiro being married as of late 2026.",
+      "answer": "Ticha Penicheiro was born September 18, 1974, in Figueira da Foz, Portugal.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/p/penicti01w.html",
         "https://en.wikipedia.org/wiki/Ticha_Penicheiro"
       ],
-      "google_keyword": "ticha penicheiro wife",
-      "approx_monthly_volume": 90
-    },
-    {
-      "question": "Who is Ticha Penicheiro?",
-      "answer": "Patrícia \"Ticha\" Nunes Penicheiro OIH is a Portuguese sports agent and former basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Ticha_Penicheiro"
-      ],
-      "google_keyword": "ticha penicheiro",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What team does Ticha Penicheiro play for?",
-      "answer": "Her most recent WNBA team on record is the Sacramento Monarchs. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ticha penicheiro",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What position does Ticha Penicheiro play?",
-      "answer": "Ticha Penicheiro is listed as a Guard for the Sacramento Monarchs.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ticha penicheiro",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "ticha penicheiro age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

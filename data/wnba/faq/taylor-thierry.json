@@ -1,86 +1,106 @@
 {
   "slug": "taylor-thierry",
   "player_name": "Taylor Thierry",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
-      "question": "What are Taylor Thierry's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Taylor Thierry averaged 0.4 points,",
+      "question": "What WNBA team does Taylor Thierry play for?",
+      "answer": "Taylor Thierry has played for the Atlanta Dream and Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "taylor thierry stats",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/taylor-thierry/"
+      ],
+      "queries": [
+        {
+          "q": "taylor thierry wnba",
+          "vol": 70
+        },
+        {
+          "q": "taylor thierry atlanta dream",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "What are Taylor Thierry's stats?",
+      "answer": "In the 2026 regular season, Taylor Thierry averaged 1.9 points, 1.7 rebounds, and 0.5 assists in 17 games for the Seattle Storm.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/taylor-thierry/"
+      ],
+      "queries": [
+        {
+          "q": "taylor thierry stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Where did Taylor Thierry play college basketball?",
+      "answer": "Taylor Thierry played college basketball at Ohio State from 2021 to 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/taylor-thierry/",
+        "https://www.basketball-reference.com/wnba/players/t/thierta01w.html",
+        "https://www.wnba.com/player/1642814/taylor-thierry/profile"
+      ],
+      "queries": [
+        {
+          "q": "taylor thierry ohio state",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "When was Taylor Thierry drafted?",
+      "answer": "The Atlanta Dream selected Taylor Thierry in the third round, 36th overall, in the 2025 WNBA Draft. She played her rookie season with Atlanta and joined the Seattle Storm in 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/t/thierta01w.html",
+        "https://www.wnba.com/player/1642814/taylor-thierry/profile",
+        "https://fullcourtbuckets.com/wnba/taylor-thierry/"
+      ],
+      "queries": [
+        {
+          "q": "taylor thierry wnba draft",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Taylor Thierry?",
-      "answer": "Taylor Thierry is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Taylor_Thierry"
-      ],
-      "google_keyword": "taylor thierry height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Taylor Thierry's contract?",
-      "answer": "Contract length and guarantees for Taylor Thierry are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "answer": "Full Court Buckets lists Taylor Thierry at 6 feet 1 inch. She played for the Seattle Storm in 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/taylor-thierry/",
+        "https://www.basketball-reference.com/wnba/players/t/thierta01w.html"
       ],
-      "google_keyword": "taylor thierry contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Taylor Thierry attend?",
-      "answer": "Thierry played college basketball at Ohio State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Taylor_Thierry"
-      ],
-      "google_keyword": "taylor thierry ohio state",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Taylor Thierry injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "taylor thierry injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Taylor Thierry's parents?",
-      "answer": "Public profiles share limited verified detail about Taylor Thierry's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Taylor_Thierry"
-      ],
-      "google_keyword": "taylor thierry parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Taylor Thierry?",
-      "answer": "Taylor Thierry is an American professional basketball player for the Seattle Storm of the WNBA.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Taylor_Thierry"
-      ],
-      "google_keyword": "taylor thierry wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "taylor thierry height",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Taylor Thierry?",
-      "answer": "Taylor Thierry was born January 8, 2003. As of late 2026 that puts her at 23 years old.",
-      "answer_kind": "researched",
+      "answer": "Taylor Thierry was born January 8, 2003, in Cleveland, Ohio.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Taylor_Thierry"
+        "https://www.basketball-reference.com/wnba/players/t/thierta01w.html",
+        "https://www.wnba.com/player/1642814/taylor-thierry/profile"
       ],
-      "google_keyword": "taylor thierry birthday",
-      "approx_monthly_volume": 10,
-      "birthdate": "2003-01-08"
+      "queries": [
+        {
+          "q": "taylor thierry age",
+          "vol": 10
+        },
+        {
+          "q": "taylor thierry birthday",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

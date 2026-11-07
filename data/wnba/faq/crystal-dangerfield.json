@@ -1,113 +1,141 @@
 {
   "slug": "crystal-dangerfield",
   "player_name": "Crystal Dangerfield",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-06",
   "items": [
     {
-      "question": "What are Crystal Dangerfield's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2023), Crystal Dangerfield averaged 8.2 points,",
+      "question": "How did Crystal Dangerfield play as a WNBA rookie?",
+      "answer": "In 2020 with the Minnesota Lynx, Crystal Dangerfield averaged 16.2 points, 2.0 rebounds and 3.6 assists in 21 games and won WNBA Rookie of the Year. Full Court Buckets also has regular-season lines for her through 2024 with Minnesota, Indiana, New York, Dallas, Atlanta and Los Angeles.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/crystal-dangerfield/",
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
+      ],
+      "queries": [
+        {
+          "q": "crystal dangerfield stats",
+          "vol": 40
+        },
+        {
+          "q": "crystal dangerfield wnba stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Which WNBA teams has Crystal Dangerfield played for?",
+      "answer": "Crystal Dangerfield has played for the Minnesota Lynx, New York Liberty, Indiana Fever, Dallas Wings, Los Angeles Sparks and Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "crystal dangerfield stats",
-      "approx_monthly_volume": 30
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/crystal-dangerfield/"
+      ],
+      "queries": [
+        {
+          "q": "crystal dangerfield wnba",
+          "vol": 30
+        },
+        {
+          "q": "crystal dangerfield current team",
+          "vol": 10
+        },
+        {
+          "q": "who does crystal dangerfield play for",
+          "vol": 10
+        },
+        {
+          "q": "crystal dangerfield team",
+          "vol": 10
+        },
+        {
+          "q": "crystal dangerfield liberty",
+          "vol": 10
+        },
+        {
+          "q": "crystal dangerfield lynx",
+          "vol": 10
+        },
+        {
+          "q": "crystal dangerfield minnesota lynx",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Crystal Dangerfield dating?",
-      "answer": "As of late 2026, Crystal Dangerfield has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
+      "question": "How tall is Crystal Dangerfield?",
+      "answer": "Basketball-Reference lists Crystal Dangerfield at 5 feet 5 inches. She plays guard.",
+      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
       ],
-      "google_keyword": "crystal dangerfield partner",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "crystal dangerfield height",
+          "vol": 20
+        },
+        {
+          "q": "how tall is crystal dangerfield",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Crystal Dangerfield make?",
-      "answer": "A precise public salary or net worth figure for Crystal Dangerfield is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Crystal Dangerfield play college basketball?",
+      "answer": "Crystal Dangerfield played at UConn. The Minnesota Lynx selected her 16th overall in the 2020 WNBA Draft.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/crystal-dangerfield/",
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
       ],
-      "google_keyword": "crystal dangerfield net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "crystal dangerfield uconn",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Crystal Dangerfield?",
-      "answer": "She was born May 11, 1998 in Murfreesboro. As of late 2026 that puts her at 28 years old.",
+      "answer": "Crystal Dangerfield was born May 11, 1998, in Murfreesboro, Tennessee.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
       ],
-      "google_keyword": "crystal dangerfield age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1998-05-11"
+      "queries": [
+        {
+          "q": "crystal dangerfield age",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Crystal Dangerfield's jersey number?",
-      "answer": "Crystal Dangerfield wears number 2 for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "crystal dangerfield jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Crystal Dangerfield married?",
-      "answer": "There is no widely reported public record of Crystal Dangerfield being married as of late 2026.",
+      "question": "Did Crystal Dangerfield win Rookie of the Year?",
+      "answer": "Yes. Crystal Dangerfield won the 2020 WNBA Rookie of the Year award after averaging 16.2 points per game for the Minnesota Lynx.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html",
+        "https://fullcourtbuckets.com/wnba/crystal-dangerfield/"
       ],
-      "google_keyword": "crystal dangerfield wife",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "crystal dangerfield rookie of the year",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What team does Crystal Dangerfield play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 2. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "crystal dangerfield current team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Crystal Dangerfield attend?",
-      "answer": "Dangerfield played college basketball at University of Connecticut.",
+      "question": "Where did Crystal Dangerfield go to high school?",
+      "answer": "Crystal Dangerfield played high school basketball at Blackman High School in Murfreesboro, Tennessee.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
+        "https://www.basketball-reference.com/wnba/players/d/dangecr01w.html"
       ],
-      "google_keyword": "crystal dangerfield uconn",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Crystal Dangerfield injured?",
-      "answer": "Injury status changes during the season. Check the latest Minnesota Lynx reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "crystal dangerfield injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Crystal Dangerfield's parents?",
-      "answer": "Public profiles share limited verified detail about Crystal Dangerfield's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
-      ],
-      "google_keyword": "crystal dangerfield parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What are Crystal Dangerfield's college stats?",
-      "answer": "Across her college career at UConn, Crystal Dangerfield averaged 11.0 points, 2.8 rebounds, and 4.5 assists per game.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.sports-reference.com/cbb/players/crystal-dangerfield-1.html",
-        "https://en.wikipedia.org/wiki/Crystal_Dangerfield"
-      ],
-      "google_keyword": "crystal dangerfield college stats",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "crystal dangerfield high school",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

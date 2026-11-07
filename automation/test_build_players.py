@@ -513,7 +513,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 246)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 256)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -608,6 +608,10 @@ class BuildTests(unittest.TestCase):
             'tonie-morgan', 'amy-okonkwo', 'bria-hartley', 'briann-january', 'cappie-pondexter',
             'charli-collier', 'ivory-latta', 'kristi-toliver', 'shyanne-sellers', 'tamera-young',
         }
+        november_6 = {
+            'taylor-thierry', 'valeriane-ayayi', 'ashten-prechtel', 'crystal-dangerfield', 'didi-richards',
+            'liatu-king', 'maria-kliundikova', 'rayah-marshall', 'shoni-schimmel', 'ticha-penicheiro',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -626,11 +630,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(november_3 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_4 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_5 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_6 <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in november_5:
+            if slug in november_6:
+                expected_source = 'Google search demand via OpenSEO, Nov 6, 2026'
+            elif slug in november_5:
                 expected_source = 'Google search demand via OpenSEO, Nov 5, 2026'
             elif slug in november_4:
                 expected_source = 'Google search demand via OpenSEO, Nov 4, 2026'
@@ -714,7 +721,21 @@ class BuildTests(unittest.TestCase):
             # Nov 4: same; Jasmine Thomas was skipped because her name searches are
             # mostly other people, and Frieda Buhner has only three searches.
             # Nov 5: alexis jones and ashley walker skipped (mostly other people).
-            if slug in {'tonie-morgan'}:
+            # Nov 6: kathleen doyle, megan walker and peyton williams deferred (name
+            # searches mostly other people); Maria Kliundikova has few non-personal searches.
+            if slug in {'maria-kliundikova'}:
+                minimum = 4
+            elif slug in {'valeriane-ayayi'}:
+                minimum = 5
+            elif slug in {'taylor-thierry', 'liatu-king'}:
+                minimum = 6
+            elif slug in {'crystal-dangerfield', 'didi-richards', 'ticha-penicheiro'}:
+                minimum = 7
+            elif slug in {'ashten-prechtel', 'rayah-marshall'}:
+                minimum = 8
+            elif slug in {'shoni-schimmel'}:
+                minimum = 9
+            elif slug in {'tonie-morgan'}:
                 minimum = 4
             elif slug in {'briann-january'}:
                 minimum = 5
