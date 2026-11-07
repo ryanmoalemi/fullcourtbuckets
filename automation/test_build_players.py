@@ -513,7 +513,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 256)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 266)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -612,6 +612,12 @@ class BuildTests(unittest.TestCase):
             'taylor-thierry', 'valeriane-ayayi', 'ashten-prechtel', 'crystal-dangerfield', 'didi-richards',
             'liatu-king', 'maria-kliundikova', 'rayah-marshall', 'shoni-schimmel', 'ticha-penicheiro',
         }
+        # Nov 7 batch: kathleen-doyle, megan-walker and peyton-williams reuse the Nov 6 pull.
+        november_7_reused = {'kathleen-doyle', 'megan-walker', 'peyton-williams'}
+        november_7 = {
+            'alana-beard', 'celeste-taylor', 'costanza-verona', 'courtney-paris', 'jaelyn-brown',
+            'kyara-linskens', 'lindsay-allen',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -631,11 +637,14 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(november_4 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_5 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_6 <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_7 | november_7_reused <= b.SEARCH_FAQ_SLUGS)
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
             faq = json.loads(faq_path.read_text(encoding='utf-8'))
             self.assertEqual(faq['slug'], slug)
-            if slug in november_6:
+            if slug in november_7:
+                expected_source = 'Google search demand via OpenSEO, Nov 7, 2026'
+            elif slug in november_6 or slug in november_7_reused:
                 expected_source = 'Google search demand via OpenSEO, Nov 6, 2026'
             elif slug in november_5:
                 expected_source = 'Google search demand via OpenSEO, Nov 5, 2026'
@@ -723,7 +732,24 @@ class BuildTests(unittest.TestCase):
             # Nov 5: alexis jones and ashley walker skipped (mostly other people).
             # Nov 6: kathleen doyle, megan walker and peyton williams deferred (name
             # searches mostly other people); Maria Kliundikova has few non-personal searches.
-            if slug in {'maria-kliundikova'}:
+            # Nov 7: kathleen doyle, megan walker and peyton williams reused (only their
+            # player searches kept; most of their name searches are other people). Lindsay
+            # Allen's name searches are mostly other people too.
+            if slug in {'kathleen-doyle'}:
+                minimum = 2
+            elif slug in {'costanza-verona', 'jaelyn-brown'}:
+                minimum = 3
+            elif slug in {'peyton-williams', 'courtney-paris', 'lindsay-allen'}:
+                minimum = 4
+            elif slug in {'kyara-linskens'}:
+                minimum = 6
+            elif slug in {'megan-walker'}:
+                minimum = 7
+            elif slug in {'celeste-taylor'}:
+                minimum = 8
+            elif slug in {'alana-beard'}:
+                minimum = 9
+            elif slug in {'maria-kliundikova'}:
                 minimum = 4
             elif slug in {'valeriane-ayayi'}:
                 minimum = 5

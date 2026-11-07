@@ -1,110 +1,128 @@
 {
   "slug": "megan-walker",
   "player_name": "Megan Walker",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-07",
   "items": [
     {
-      "question": "What are Megan Walker's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Megan Walker averaged 4.5 points, 1.3 rebounds, and 0.9 assists in 29 games for New York Liberty. Her full season-by-season numbers are on this page.",
+      "question": "Which WNBA teams has Megan Walker played for?",
+      "answer": "Megan Walker has played for the New York Liberty, Phoenix Mercury and Atlanta Dream.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "megan walker uconn stats",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/megan-walker/"
+      ],
+      "queries": [
+        {
+          "q": "megan walker wnba",
+          "vol": 40
+        },
+        {
+          "q": "megan walker phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "megan walker atlanta dream",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Megan Walker make?",
-      "answer": "A precise public salary or net worth figure for Megan Walker is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where did Megan Walker play college basketball?",
+      "answer": "Megan Walker played at UConn and was a first-team All-American by the AP and USBWA in 2020.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html",
+        "https://en.wikipedia.org/wiki/Megan_Walker"
       ],
-      "google_keyword": "megan walker salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "uconn megan walker",
+          "vol": 30
+        }
+      ]
+    },
+    {
+      "question": "What are Megan Walker's stats?",
+      "answer": "In the 2022 regular season, Megan Walker averaged 3.3 points, 0.8 rebounds, and 0.4 assists in 12 games for the Atlanta Dream.",
+      "answer_kind": "stats",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/megan-walker/"
+      ],
+      "queries": [
+        {
+          "q": "megan walker stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Megan Walker?",
-      "answer": "Public profiles list Megan Walker as born in 1998. As of late 2026 that puts her around 28 years old.",
+      "answer": "Megan Walker was born November 23, 1998, in Chesterfield, Virginia.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Megan_Walker"
+        "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html"
       ],
-      "google_keyword": "megan walker age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1998-01-01"
+      "queries": [
+        {
+          "q": "megan walker age",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Megan Walker attend?",
-      "answer": "Walker played college basketball at the UConn Huskies.",
+      "question": "Where did Megan Walker go to high school?",
+      "answer": "Megan Walker played high school basketball at Monacan High School in Richmond, Virginia.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Megan_Walker"
+        "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html"
       ],
-      "google_keyword": "uconn megan walker",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "megan walker high school",
+          "vol": null
+        },
+        {
+          "q": "megan walker monacan",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Megan Walker injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "megan walker injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Megan Walker's parents?",
-      "answer": "Public profiles share limited verified detail about Megan Walker's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "When was Megan Walker drafted?",
+      "answer": "The New York Liberty selected Megan Walker ninth overall in the 2020 WNBA Draft after she declared following the 2019-20 season at UConn.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html",
         "https://en.wikipedia.org/wiki/Megan_Walker"
       ],
-      "google_keyword": "megan walker parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "megan walker draft",
+          "vol": null
+        },
+        {
+          "q": "megan walker wnba draft",
+          "vol": null
+        },
+        {
+          "q": "megan walker declares for draft",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Megan Walker?",
-      "answer": "Megan Kayla Walker is an American professional basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Megan_Walker"
-      ],
-      "google_keyword": "megan walker",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What team does Megan Walker play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 3. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "megan walker",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What is Megan Walker's jersey number?",
-      "answer": "Megan Walker wears number 3 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "megan walker",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What position does Megan Walker play?",
-      "answer": "Megan Walker is listed as a Forward for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "megan walker",
-      "approx_monthly_volume": 1600
-    },
-    {
-      "question": "What is Megan Walker's nationality?",
-      "answer": "Megan Walker is American.",
+      "question": "How tall is Megan Walker?",
+      "answer": "Basketball-Reference lists Megan Walker at 6 feet 1 inch. She played forward.",
       "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Megan_Walker"
+        "https://www.basketball-reference.com/wnba/players/w/walkeme01w.html"
       ],
-      "google_keyword": "megan walker",
-      "approx_monthly_volume": 1600
+      "queries": [
+        {
+          "q": "megan walker height",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

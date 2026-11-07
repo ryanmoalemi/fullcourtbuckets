@@ -1,65 +1,76 @@
 {
   "slug": "peyton-williams",
   "player_name": "Peyton Williams",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 6, 2026",
+  "verified_at": "2026-11-07",
   "items": [
     {
-      "question": "Who is Peyton Williams?",
-      "answer": "Peyton Williams is a professional basketball player for the Phoenix Mercury.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
+      "question": "How did Peyton Williams reach the WNBA?",
+      "answer": "Peyton Williams signed a training camp contract with the Portland Fire in April 2026. The Fire waived her on May 1, and the Phoenix Mercury claimed her two days later. She made her WNBA debut with Phoenix.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oregonlive.com/portland-fire/2026/05/portland-fire-waive-former-kansas-state-forward.html",
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-claim-peyton-williams/n-6357046",
+        "https://fullcourtbuckets.com/wnba/peyton-williams/"
+      ],
+      "queries": [
+        {
+          "q": "peyton williams wnba",
+          "vol": 110
+        },
+        {
+          "q": "peyton williams phoenix mercury",
+          "vol": 10
+        },
+        {
+          "q": "peyton williams portland fire",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Peyton Williams play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 22. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What are Peyton Williams's stats / points per game?",
-      "answer": "In the 2026 regular season, Peyton Williams averaged 0.0 points, 0.0 rebounds, and 2.0 assists in 1 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What is Peyton Williams's jersey number?",
-      "answer": "Peyton Williams wears number 22 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "What position does Peyton Williams play?",
-      "answer": "Peyton Williams is listed as a F for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
+      "question": "How many WNBA games has Peyton Williams played?",
+      "answer": "Peyton Williams has played one WNBA regular-season game, for the Phoenix Mercury in 2026. She had 2 assists and did not score.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/peyton-williams/",
+        "https://www.basketball-reference.com/wnba/players/w/willipe01w.html"
+      ],
+      "queries": [
+        {
+          "q": "peyton williams stats",
+          "vol": 20
+        }
+      ]
     },
     {
       "question": "How tall is Peyton Williams?",
-      "answer": "Peyton Williams is listed at 6' 4\".",
-      "answer_kind": "bio",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
+      "answer": "Full Court Buckets and the Phoenix Mercury list Peyton Williams at 6 feet 4 inches. Her position is forward.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/peyton-williams/",
+        "https://www.oursportscentral.com/services/releases/phoenix-mercury-claim-peyton-williams/n-6357046"
+      ],
+      "queries": [
+        {
+          "q": "peyton williams height",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What college did Peyton Williams attend?",
-      "answer": "Williams played college basketball at Kansas State.",
-      "answer_kind": "bio",
-      "sources": [],
-      "google_keyword": "peyton williams wnba",
-      "approx_monthly_volume": 110
+      "question": "Has Peyton Williams played for USA Basketball?",
+      "answer": "Yes. Peyton Williams won a silver medal with the United States at the 2019 Pan American Games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Peyton_Williams"
+      ],
+      "queries": [
+        {
+          "q": "peyton williams usa basketball",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
