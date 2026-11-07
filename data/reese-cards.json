@@ -1,6 +1,6 @@
 {
   "owner": "Ryan Moalemi",
-  "updated": "2026-10-28",
+  "updated": "2026-11-06",
   "notes": "Purchase price = order total. The detail lists the lines stored for that purchase (item or hammer, buyer's premium, shipping, tax, and fees). Certs verified in Ryan's PSA collection on 2026-09-30. current_value = median of recent comparable sold prices (see value_comps); 'unknown' where no verified sale was found. include_in_paid true keeps an unpriced card in the paid total while value and change still leave it out.",
   "cards": [
     {
@@ -30,7 +30,7 @@
       },
       "current_value": 1087,
       "current_value_source": "median of 2 eBay Gold /10 sales",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "summary": "Rookie card, first on print, autograph, patch.",
       "photo": {
         "front": {
@@ -82,7 +82,7 @@
       "ebay_item_id": null,
       "current_value": 1290,
       "current_value_source": "Median of the 5 most recent PSA 10 sales in the Fanatics Collect 'Sales History' on a PSA 10 listing page (May 24 to Oct 18, 2026). Sale dates were converted from UTC to PT.",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "summary": "Second copy of the Kaboom! #5. Cert 139128313.",
       "photo_credit": "Photo: Fanatics Collect vault scan",
       "photo": {
@@ -153,7 +153,7 @@
       "ebay_item_id": null,
       "current_value": 1110,
       "current_value_source": "Median of the 2 known PSA 10 sales of this same slab on Fanatics Collect: $720 (Aug 23, 2026) and $1,500 (Sep 25, 2026, Ryan's own purchase).",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "summary": "Rookie autograph, Gold parallel, serial 07/10.",
       "photo_credit": "Photo: Fanatics Collect vault scan",
       "photo": {
@@ -208,7 +208,7 @@
       "ebay_item_id": null,
       "current_value": 256.98,
       "current_value_source": "Most recent PSA 10 sale titled Mojo on SportsCardsPro (eBay, Jul 27, 2026). Green Pulsar sales are left out because they are a different parallel.",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "summary": "Exact serial is unknown. Still in the Fanatics vault, waiting to ship.",
       "photo_credit": "Photo: Fanatics Collect vault scan",
       "photo": {
@@ -254,7 +254,7 @@
       "ebay_item_id": "187464231452",
       "current_value": 225.0,
       "current_value_source": "Single exact comp: eBay best-offer-accepted price (list $1,000) reported by SportsCardsPro PSA 10 tab. Value = that one sale (median of 1).",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2024-prizm-dp-tiger-38-front.webp",
@@ -298,7 +298,7 @@
       "ebay_item_id": "147426061509",
       "current_value": 350.0,
       "current_value_source": "Median of the 5 most recent PSA 10 sales on eBay (Jul 22 to Oct 20, 2026).",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2024-prizm-dp-black-color-blast-11-front.webp",
@@ -361,7 +361,7 @@
       "ebay_item_id": "188635231023",
       "current_value": 250.0,
       "current_value_source": "Median of the 5 most recent PSA 10 sales on eBay (Aug 25 to Oct 20, 2026).",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2024-prizm-dp-color-blast-7-front.webp",
@@ -429,7 +429,7 @@
       "ebay_item_id": "267764432888",
       "current_value": 1290,
       "current_value_source": "Median of the 5 most recent PSA 10 sales in the Fanatics Collect 'Sales History' on a PSA 10 listing page (May 24 to Oct 18, 2026). Sale dates were converted from UTC to PT.",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2024-rookie-royalty-kaboom-5-front.webp",
@@ -497,7 +497,7 @@
       "ebay_item_id": "287531284645",
       "current_value": 272.5,
       "current_value_source": "Median of the 4 PSA 10 sales found (eBay via SportsCardsPro plus Fanatics Collect listing sales history, May 6 to Oct 25, 2026).",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2024-select-dss-red-auto-front.webp",
@@ -559,7 +559,7 @@
       "ebay_item_id": "318767072043",
       "current_value": 226.25,
       "current_value_source": "Median of the 2 PSA 10 sales in the last 12 months (2026-03-07 $202.50, 2026-01-17 $250). The 2024 sale is listed but not used.",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2023-bowman-u-chrome-lava-auto-front.webp",
@@ -615,7 +615,7 @@
       "ebay_item_id": "406748726250",
       "current_value": "unknown",
       "current_value_source": "No verified sold comp found for this exact card number, parallel and grade.",
-      "value_checked": "2026-10-28",
+      "value_checked": "2026-11-06",
       "photo": {
         "front": {
           "src": "/images/reese-cards/reese-2023-bowman-u-now-blue-auto-front.webp",

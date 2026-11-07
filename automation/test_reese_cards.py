@@ -70,21 +70,21 @@ class ReeseCardMathTests(unittest.TestCase):
         tiger = next(card for card in data['cards'] if card['id'] == 'reese-2024-prizm-dp-tiger-38')
         self.assertEqual(cards.card_change(tiger), Decimal('-24.44'))
         self.assertEqual(cards.card_percent(tiger), Decimal('-9.8'))
-        self.assertEqual(cards.value_as_of(ROOT), '2026-10-28')
+        self.assertEqual(cards.value_as_of(ROOT), '2026-11-06')
         self.assertEqual(cards.short_date('2026-10-01'), 'Oct 1, 2026')
         self.assertEqual(cards.short_date('2026-10-03'), 'Oct 3, 2026')
         self.assertEqual(cards.long_date('2026-09-24'), 'September 24, 2026')
         self.assertEqual(cards.long_date('2026-09-26'), 'September 26, 2026')
         self.assertEqual(cards.long_date('2026-09-19'), 'September 19, 2026')
         kept = {
-            'reese-2024-25-flawless-royalty-rpa-ar-gold': ('2026-10-02', '2026-10-28'),
-            'reese-2024-prizm-dp-tiger-38': ('2026-09-04', '2026-10-28'),
-            'reese-2024-prizm-dp-black-color-blast-11': ('2026-08-24', '2026-10-28'),
-            'reese-2024-prizm-dp-color-blast-7': ('2026-08-24', '2026-10-28'),
-            'reese-2024-rookie-royalty-kaboom-5': ('2026-08-24', '2026-10-28'),
-            'reese-2024-select-dss-red-auto': ('2026-08-25', '2026-10-28'),
-            'reese-2023-bowman-u-chrome-lava-auto': ('2026-08-24', '2026-10-28'),
-            'reese-2023-bowman-u-now-blue-auto': ('2026-08-24', '2026-10-28'),
+            'reese-2024-25-flawless-royalty-rpa-ar-gold': ('2026-10-02', '2026-11-06'),
+            'reese-2024-prizm-dp-tiger-38': ('2026-09-04', '2026-11-06'),
+            'reese-2024-prizm-dp-black-color-blast-11': ('2026-08-24', '2026-11-06'),
+            'reese-2024-prizm-dp-color-blast-7': ('2026-08-24', '2026-11-06'),
+            'reese-2024-rookie-royalty-kaboom-5': ('2026-08-24', '2026-11-06'),
+            'reese-2024-select-dss-red-auto': ('2026-08-25', '2026-11-06'),
+            'reese-2023-bowman-u-chrome-lava-auto': ('2026-08-24', '2026-11-06'),
+            'reese-2023-bowman-u-now-blue-auto': ('2026-08-24', '2026-11-06'),
         }
         for card in data['cards']:
             if card['id'] not in kept:
@@ -115,7 +115,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn("Ryan's collection of Angel Reese cards", self.html)
         self.assertLessEqual(len(cards.PAGE_DESCRIPTION), 155)
         self.assertGreaterEqual(len(cards.PAGE_DESCRIPTION), 110)
-        self.assertIn('Values as of Oct 28, 2026', self.html)
+        self.assertIn('Values as of Nov 6, 2026', self.html)
         self.assertNotIn('Values as of Oct 3, 2026', self.html)
         self.assertIn('$8,634.03', self.html)
         self.assertIn('$1,084.55', self.html)
@@ -174,7 +174,7 @@ class ReeseCardPageTests(unittest.TestCase):
             r'</h1>\s*<div class="byline-row">\s*<a class="byline" href="/authors/ryan-moalemi/">',
         )
         self.assertIn('>By Ryan Moalemi</span>', self.html)
-        self.assertIn('<time class="article-date" datetime="2026-10-28">October 28, 2026</time>', self.html)
+        self.assertIn('<time class="article-date" datetime="2026-11-06">November 6, 2026</time>', self.html)
         self.assertNotIn('transcendent talent', self.html)
         self.assertNotIn('got into sports writing', self.html)
         self.assertIn('height:min(56vh,640px)', self.html)
@@ -210,7 +210,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertNotIn('id="bidding"', main)
         self.assertNotIn('bidding on', self.html)
         self.assertNotIn('class="bid"', self.html)
-        self.assertIn('Prices as of Oct 28, 2026, PT.', self.html)
+        self.assertIn('Prices as of Nov 6, 2026, PT.', self.html)
         positions = [main.index(marker) for marker in order]
         self.assertEqual(positions, sorted(positions))
         cards_block = main.split('id="collection"', 1)[1].split('id="summary"', 1)[0]
@@ -242,7 +242,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Serial 07/10', gold_panel)
         self.assertIn('Low confidence: only 2 PSA 10 sales found, both of this same slab', gold_panel)
         self.assertIn('Bought September 24, 2026 on Fanatics Collect.', gold_panel)
-        self.assertIn('Value on Oct 28, 2026', gold_panel)
+        self.assertIn('Value on Nov 6, 2026', gold_panel)
         self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', gold_panel)
         self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', gold_panel)
         self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', gold_panel)
@@ -259,7 +259,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Kaboom! (second copy)', kaboom_panel)
         self.assertIn('Second copy of the Kaboom! #5.', kaboom_panel)
         self.assertIn('Bought September 26, 2026 on Fanatics Collect.', kaboom_panel)
-        self.assertIn('Value on Oct 28, 2026', kaboom_panel)
+        self.assertIn('Value on Nov 6, 2026', kaboom_panel)
         self.assertIn('<dt>Item</dt><dd>$1,500.00</dd>', kaboom_panel)
         self.assertIn('<dt>Shipping</dt><dd>$25.00</dd>', kaboom_panel)
         self.assertIn('<dt>Tax</dt><dd>$116.25</dd>', kaboom_panel)
@@ -276,7 +276,7 @@ class ReeseCardPageTests(unittest.TestCase):
         self.assertIn('Numbered /25', mojo_panel)
         self.assertIn('Exact serial is unknown. Still in the Fanatics vault, waiting to ship.', mojo_panel)
         self.assertIn('Bought September 19, 2026 on Fanatics Collect.', mojo_panel)
-        self.assertIn('Value on Oct 28, 2026', mojo_panel)
+        self.assertIn('Value on Nov 6, 2026', mojo_panel)
         self.assertIn('<dt>Hammer</dt><dd>$390.00</dd>', mojo_panel)
         self.assertIn('<dt>Buyer&#x27;s premium</dt><dd>$78.00</dd>', mojo_panel)
         self.assertIn('<dt>Shipping</dt><dd>$7.00</dd>', mojo_panel)
