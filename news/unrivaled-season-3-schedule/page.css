@@ -1,0 +1,2 @@
+.article thead th[data-sort="asc"]::after{content:" \2191"}
+.article thead th[data-sort="desc"]::after{content:" \2193"}
