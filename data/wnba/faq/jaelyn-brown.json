@@ -1,92 +1,67 @@
 {
   "slug": "jaelyn-brown",
   "player_name": "Jaelyn Brown",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 7, 2026",
+  "verified_at": "2026-11-07",
   "items": [
     {
-      "question": "What are Jaelyn Brown's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Jaelyn Brown averaged 3.7 points, 1.2 rebounds, and 0.1 assists in 10 games for Connecticut Sun. Her full season-by-season numbers are on this page.",
+      "question": "Which WNBA teams has Jaelyn Brown played for?",
+      "answer": "Jaelyn Brown has played for the Dallas Wings and Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jaelyn brown stats",
-      "approx_monthly_volume": 70
-    },
-    {
-      "question": "Is Jaelyn Brown injured?",
-      "answer": "Injury status changes during the season. Check the latest Seattle Storm reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "jaelyn brown dallas wings injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Jaelyn Brown?",
-      "answer": "Jaelyn Brown is an American professional basketball player who is currently a free agent.",
-      "answer_kind": "mixed",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaelyn_Brown"
+        "https://fullcourtbuckets.com/wnba/jaelyn-brown/"
       ],
-      "google_keyword": "jaelyn brown wnba wikipedia",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "jaelyn brown wnba",
+          "vol": 70
+        },
+        {
+          "q": "jaelyn brown dallas wings",
+          "vol": 10
+        },
+        {
+          "q": "jaelyn brown wings",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Jaelyn Brown play for?",
-      "answer": "Her most recent WNBA team on record is the Seattle Storm. Her listed position is G.",
+      "question": "What are Jaelyn Brown's stats?",
+      "answer": "In the 2025 regular season, Jaelyn Brown averaged 3.7 points, 1.2 rebounds, and 0.1 assists in 10 games for the Connecticut Sun.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "What position does Jaelyn Brown play?",
-      "answer": "Jaelyn Brown is listed as a G for the Seattle Storm.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "How tall is Jaelyn Brown?",
-      "answer": "Jaelyn Brown is listed at 6' 1\".",
-      "answer_kind": "bio",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaelyn_Brown"
+        "https://fullcourtbuckets.com/wnba/jaelyn-brown/"
       ],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "jaelyn brown stats",
+          "vol": 70
+        },
+        {
+          "q": "jaelyn brown wnba stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How old is Jaelyn Brown?",
-      "answer": "Public profiles list Jaelyn Brown as born in 1998. As of late 2026 that puts her around 28 years old.",
-      "answer_kind": "bio",
+      "question": "Did Jaelyn Brown play for the Indiana Fever?",
+      "answer": "Dallas traded Jaelyn Brown to the Indiana Fever in February 2025, but the Fever waived her that May before the regular season. She then signed with Connecticut.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Jaelyn_Brown"
+        "https://en.wikipedia.org/wiki/Jaelyn_Brown",
+        "https://fullcourtbuckets.com/wnba/jaelyn-brown/"
       ],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300,
-      "birthdate": "1998-01-01"
-    },
-    {
-      "question": "What college did Jaelyn Brown attend?",
-      "answer": "Brown played college basketball at California.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jaelyn_Brown"
-      ],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "What is Jaelyn Brown's nationality?",
-      "answer": "Jaelyn Brown is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Jaelyn_Brown"
-      ],
-      "google_keyword": "jaelyn brown",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "jaelyn brown fever",
+          "vol": 10
+        },
+        {
+          "q": "jaelyn brown indiana fever",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

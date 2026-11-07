@@ -1,37 +1,83 @@
 {
   "slug": "courtney-paris",
   "player_name": "Courtney Paris",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 7, 2026",
+  "verified_at": "2026-11-07",
   "items": [
     {
-      "question": "What are Courtney Paris's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), Courtney Paris averaged 0.5 points,",
+      "question": "Which WNBA teams did Courtney Paris play for?",
+      "answer": "Courtney Paris has played for the Sacramento Monarchs, Atlanta Dream, Tulsa Shock, Dallas Wings and Seattle Storm.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "courtney paris stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Courtney Paris make?",
-      "answer": "A precise public salary or net worth figure for Courtney Paris is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
-      "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/courtney-paris/"
       ],
-      "google_keyword": "courtney paris salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "courtney paris wnba",
+          "vol": 70
+        },
+        {
+          "q": "courtney paris seattle storm",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Courtney Paris married?",
-      "answer": "There is no widely reported public record of Courtney Paris being married as of late 2026.",
+      "question": "Where did Courtney Paris play college basketball?",
+      "answer": "Courtney Paris played at Oklahoma, where she averaged 21.4 points and 15.3 rebounds and set the NCAA record with 112 straight double-doubles.",
       "answer_kind": "researched",
       "sources": [
+        "https://en.wikipedia.org/wiki/Courtney_Paris",
+        "https://www.basketball-reference.com/wnba/players/p/parisco01w.html"
+      ],
+      "queries": [
+        {
+          "q": "courtney paris oklahoma",
+          "vol": 40
+        },
+        {
+          "q": "ou courtney paris",
+          "vol": null
+        },
+        {
+          "q": "courtney paris college stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "What were Courtney Paris' WNBA career averages?",
+      "answer": "Courtney Paris averaged 4.7 points and 5.4 rebounds in 297 WNBA regular-season games from 2009 to 2019. She led the league in rebounding in 2014 (10.2 per game) and 2015 (9.3) with Tulsa.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/courtney-paris/",
+        "https://www.basketball-reference.com/wnba/players/p/parisco01w.html"
+      ],
+      "queries": [
+        {
+          "q": "courtney paris stats",
+          "vol": 10
+        },
+        {
+          "q": "courtney paris wnba stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Did Courtney Paris play for the Chicago Sky?",
+      "answer": "No. The Chicago Sky took Courtney Paris fourth in the December 2009 dispersal draft, but waived her in May 2010 before she played a regular-season game for them.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/p/parisco01w.html",
         "https://en.wikipedia.org/wiki/Courtney_Paris"
       ],
-      "google_keyword": "courtney paris husband",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "courtney paris chicago sky",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

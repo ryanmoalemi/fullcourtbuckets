@@ -1,25 +1,52 @@
 {
   "slug": "costanza-verona",
   "player_name": "Costanza Verona",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 7, 2026",
+  "verified_at": "2026-11-07",
   "items": [
     {
-      "question": "What position does Costanza Verona play?",
-      "answer": "Costanza Verona is listed as a G for the Dallas Wings.",
+      "question": "What WNBA team does Costanza Verona play for?",
+      "answer": "Costanza Verona has played for the Dallas Wings.",
       "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "costanza verona position",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/costanza-verona/"
+      ],
+      "queries": [
+        {
+          "q": "costanza verona dallas wings",
+          "vol": 20
+        }
+      ]
     },
     {
-      "question": "What are Costanza Verona's stats / points per game?",
-      "answer": "In her most recent 1 tracked games, Costanza Verona averaged 0.0 points, 0.0 rebounds, and 0.0 assists for Dallas Wings. Full game-by-game numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "costanza verona stats",
-      "approx_monthly_volume": 10
+      "question": "How many WNBA games has Costanza Verona played?",
+      "answer": "Costanza Verona has played one WNBA regular-season game, for the Dallas Wings in 2026. She scored 4 points with 2 assists.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/costanza-verona/",
+        "https://www.basketball-reference.com/wnba/players/v/veronco01w.html"
+      ],
+      "queries": [
+        {
+          "q": "costanza verona stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "What position does Costanza Verona play?",
+      "answer": "Costanza Verona is a guard. Full Court Buckets lists her at 5 feet 6 inches.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/costanza-verona/",
+        "https://www.basketball-reference.com/wnba/players/v/veronco01w.html"
+      ],
+      "queries": [
+        {
+          "q": "costanza verona position",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

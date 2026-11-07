@@ -1436,6 +1436,8 @@ SEARCH_FAQ_SLUGS = frozenset({
     'charli-collier', 'ivory-latta', 'kristi-toliver', 'shyanne-sellers', 'tamera-young',
     'taylor-thierry', 'valeriane-ayayi', 'ashten-prechtel', 'crystal-dangerfield', 'didi-richards',
     'liatu-king', 'maria-kliundikova', 'rayah-marshall', 'shoni-schimmel', 'ticha-penicheiro',
+    'kathleen-doyle', 'megan-walker', 'peyton-williams', 'alana-beard', 'celeste-taylor',
+    'costanza-verona', 'courtney-paris', 'jaelyn-brown', 'kyara-linskens', 'lindsay-allen',
 })
 RELATED_SEARCH_HOLD = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
 CURATED_FAQ_SLUGS = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
