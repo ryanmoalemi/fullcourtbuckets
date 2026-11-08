@@ -306,8 +306,15 @@ def body_photo_html(parts: list) -> str:
     focal = parts[5] if len(parts) > 5 and parts[5] else 'center 20%'
     webp = src.rsplit('.', 1)[0] + '.webp'
     ensure_body_photo_files(src, webp)
+    small = src.rsplit('.', 1)[0] + '-1200.webp'
+    if (ROOT / small.lstrip('/')).is_file():
+        srcset = f'{esc(small)} 1200w, {esc(webp)} 1600w'
+        sizes = ' sizes="(max-width: 900px) calc(94vw - 40px), 842px"'
+    else:
+        srcset = esc(webp)
+        sizes = ''
     return (
-        f'<figure class="inline-photo body-photo"><picture><source srcset="{esc(webp)}" type="image/webp">'
+        f'<figure class="inline-photo body-photo"><picture><source srcset="{srcset}" type="image/webp"{sizes}>'
         f'<img src="{esc(src)}" alt="{esc(alt)}" width="1600" height="900" loading="lazy" decoding="async" '
         f'style="object-position:{esc(focal)}"></picture>'
         f'<figcaption>{caption_html(credit, credit_url, license_url)}</figcaption></figure>'
@@ -657,15 +664,18 @@ def focal_for(meta: dict, existing: dict | None) -> str:
 
 
 def caption_html(credit: str, credit_url: str, license_url: str) -> str:
-    match = re.fullmatch(r'Photo: (.+), (.+), via Wikimedia Commons', credit.strip())
+    text = credit.strip()
+    match = re.search(r'Photo: (.+), (.+), via Wikimedia Commons\s*$', text)
     if match and credit_url and license_url:
         author, license_name = match.group(1), match.group(2)
-        return (
+        linked = (
             'Photo: '
             f'<a class="inline-link" href="{esc(credit_url)}" target="_blank" rel="noopener">{esc(author)}</a>, '
             f'<a class="inline-link" href="{esc(license_url)}" target="_blank" rel="noopener">{esc(license_name)}</a>, via '
             f'<a class="inline-link" href="{esc(credit_url)}" target="_blank" rel="noopener">Wikimedia Commons</a>'
         )
+        prefix = text[:match.start()].strip()
+        return f'{esc(prefix)} {linked}' if prefix else linked
     return esc(credit)
 
 
