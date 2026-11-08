@@ -117,7 +117,7 @@ Class if contract ends is what [Article VI](https://www.wnbpa.com/_files/ugd/812
 | [Leila Lacan](/wnba/leila-lacan/) | Sun | Reserved | 2 | 30 | 28.0 | 11.4 | 1.9 | 4.4 | 42.2 | 32.4 |
 | [Kayla Thornton](/wnba/kayla-thornton/) | Valkyries | UFA | 11 | 44 | 24.3 | 7.7 | 4.5 | 0.7 | 36.1 | 34.7 |
 | [Azura Stevens](/wnba/azura-stevens/) | Sky | UFA | 9 | 32 | 24.5 | 10.6 | 6.4 | 2.1 | 42.6 | 25.5 |
-| [Jewell Loyd](/wnba/jewell-loyd/) | Aces | UFA | 12 | 42 | 25.9 | 8.1 | 2.3 | 1.4 | 36.5 | 33.6 |
+| [Jewell Loyd](/wnba/jewell-loyd/) | Aces | UFA | 12 | 42 | 25.9 | 8.0 | 2.3 | 1.4 | 36.5 | 33.6 |
 | [Sophie Cunningham](/wnba/sophie-cunningham/) | Fever | UFA | 8 | 43 | 22.2 | 7.9 | 2.3 | 1.2 | 46.0 | 41.9 |
 | [Marine Johannes](/wnba/marine-johannes/) | Liberty | UFA | 5 | 41 | 20.1 | 8.2 | 2.0 | 2.4 | 40.6 | 37.9 |
 | [Olivia Nelson-Ododa](/wnba/olivia-nelson-ododa/) | Sun | UFA | 5 | 33 | 21.2 | 10.1 | 5.9 | 1.6 | 57.6 | 0.0 |

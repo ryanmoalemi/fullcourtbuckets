@@ -172,11 +172,11 @@
     },
     "jewell-loyd": {
       "author": "John Mac",
-      "file_url": "https://commons.wikimedia.org/wiki/File:Jewell_Loyd_2025.jpg",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jewell_Loyd_2024.jpg",
       "license": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
-      "changes": "cropped, background removed",
-      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+      "changes": "circle crop",
+      "qa": "pass 2026-11-08: Storm game uniform, May 17 2024 at Target Center; head and jersey inside the circle"
     },
     "breanna-stewart": {
       "author": "Zafer",

@@ -293,6 +293,6 @@ For corrections to an input or calculation, [contact Full Court Buckets](/contac
 - [Kelly Krauskopf to step down as Indiana Fever team president](https://fever.wnba.com/news/kelly-krauskopf-to-step-down-as-indiana-fever-team-president), Pacers Sports & Entertainment release, October 23, 2026.
 - [Pacers Sports & Entertainment announces departure of Amber Cox](https://fever.wnba.com/news/pacers-sports-entertainment-announces-departure-of-amber-cox-indiana-fever-coo-and-gm), Fever team release, October 23, 2026.
 
-**Update, November 8, 2026 (UTC):** Added the unchanged $7 million cap, moved the break-even caps above the team sections, and replaced the open Aces lineup spots and the generic playoff paths with contracted players and sourced 2026 games. Wilson's salary is still 20 percent of the cap.
+**Update, November 7, 2026, 10:34 p.m. PT:** Added the unchanged $7 million cap, moved the break-even caps above the team sections, and replaced the open Aces lineup spots and the generic playoff paths with contracted players and sourced 2026 games. Wilson's salary is still 20 percent of the cap.
 
 **Update, November 7, 2026, 11:50 p.m. PT:** Added section anchors, the 2027 free-agency calendar, the October 23 Fever front-office announcements, and the first-year supermax gap in the opening summary. The byline date is the November 7 Pacific publish time.
