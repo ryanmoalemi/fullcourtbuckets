@@ -1,0 +1,108 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 9,
+        "max": 10,
+        "reason": "Retained facts checked against signed CBA, full HHS contract cells, WNBA releases and BBR. All 22 original URLs audited; unavailable sources replaced rather than treated as verification."
+      },
+      {
+        "name": "Information gain",
+        "score": 7,
+        "max": 10,
+        "reason": "Eight replicated budgets, 21 player inputs and eight salary-clearing scenarios expose Wilson floating salary and the Loyd-only shortfall. Representative search-result comparison completed; exact top-ten Google result extraction unavailable."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "Signed agreement read by section, public contract HTML archived, player inputs summed and all scenario arithmetic asserted in a reproducible script."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "Independent conditional roster comparison, not destination reporting. Separates retention of contracted players from retention of championship rotation."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 8,
+        "max": 10,
+        "reason": "Real FCB byline and author link, explicit cap method and public evidence. No invented expert identity or firsthand reporting."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "Title and H1 match, direct-answer intro, original cap table near opening, downloadable inputs and explanatory notes. Manuscript QA only; rendered site checks remain deployment work."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Visible AI disclosure, data-through date, source snapshot timing, explicit model assumptions and verified source list distinguish facts, calculations and hypothetical judgments."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "No em dashes or promotional cliches, source-linked key figures, HTML source anchors explicitly open in new tabs. Concrete trade-offs replace unsupported certainty."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "Readers get the roster answer and reusable dataset without treating a ceiling as a forecast, a budget as a legal ruling or speculation as reporting."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific financial and lineup choices in plain language, with inflated adjectives and formulaic guarantees removed. No AI detector used."
+      }
+    ],
+    "info_gain": [
+      "Eight modeled roster budgets account for Wilson's floating 20-percent salary and every slot to twelve.",
+      "Loyd-only salary removal still leaves a shortfall in the Wilson-Young-Mitchell maximum build.",
+      "Player-level salary inputs and no-incoming-salary trade scenarios are downloadable and reproducible."
+    ],
+    "ai_flags": [
+      {
+        "old": "system-altering guard",
+        "new": "Concrete scoring totals and role discussion without label."
+      },
+      {
+        "old": "league's most lethal interior-perimeter two-man game",
+        "new": "an appealing pick-and-roll option"
+      },
+      {
+        "old": "financially painless",
+        "new": "Exact surplus plus replacement-value caveat."
+      },
+      {
+        "old": "perilously thin",
+        "new": "would require a separate plan for frontcourt minutes"
+      },
+      {
+        "old": "five-out spacing punishes switch-heavy schemes",
+        "new": "Spacing depends on whether opponents respect each player's shot."
+      }
+    ]
+  },
+  "unique": [
+    "Eight modeled roster budgets account for Wilson's floating 20-percent salary and every slot to twelve.",
+    "Loyd-only salary removal still leaves a shortfall in the Wilson-Young-Mitchell maximum build.",
+    "Player-level salary inputs and no-incoming-salary trade scenarios are downloadable and reproducible."
+  ],
+  "unverified": [
+    "No unresolved factual claim retained. Actual 2027 cap, offers, preferences, trade partners and future player availability are unknown and explicitly hypothetical.",
+    "Rendered desktop/mobile layout, deployed CSV downloads, final publication date and Article/Dataset schema remain implementation checks.",
+    "Google returned an access shell for the exact top-ten query; representative web-search competitor context was used, not represented as an extracted Google top ten."
+  ],
+  "status": "Final manuscript editorial review. Ready for human review and implementation; not published."
+}
