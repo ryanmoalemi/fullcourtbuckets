@@ -494,7 +494,18 @@
 if(!isNaN(exp)&&Date.now()>=exp){var a=bar.querySelector('.ticker-text a');if(a){a.textContent=bar.getAttribute('data-fallback-text');a.setAttribute('href',bar.getAttribute('data-fallback-url'));}}})();
 /* Sitewide data tables: label each cell from its header. A headshot in every row is dropped. */
 (function(){
-  function plain(el){return (el.textContent||'').replace(/\s+/g,' ').trim();}
+  function plain(el){
+    var pl=el.querySelector('.pl');
+    if(pl) return (pl.textContent||'').replace(/\s+/g,' ').trim();
+    var btn=el.querySelector('button');
+    if(btn){
+      var t='';
+      for(var n=btn.firstChild;n;n=n.nextSibling){ if(n.nodeType===3) t+=n.textContent; }
+      t=t.replace(/\s+/g,' ').trim();
+      if(t) return t;
+    }
+    return (el.textContent||'').replace(/\s+/g,' ').trim();
+  }
   function headers(table){
     var thead=table.tHead,row,cells,i,th;
     if(thead&&thead.rows.length){
