@@ -132,7 +132,33 @@ def cell_classes(index: int, label: str, cell: str) -> str:
     return f' class="{" ".join(classes)}"' if classes else ''
 
 
-def table_html(rows: list[str]) -> str:
+def heading_slug(text: str) -> str:
+    plain = re.sub(r'\*\*([^*]+)\*\*', r'\1', text)
+    plain = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', plain)
+    plain = plain.lower()
+    plain = re.sub(r'[^a-z0-9]+', '-', plain).strip('-')
+    return plain or 'section'
+
+
+def unique_id(base: str, used: set[str]) -> str:
+    slug = base or 'section'
+    candidate = slug
+    number = 2
+    while candidate in used:
+        candidate = f'{slug}-{number}'
+        number += 1
+    used.add(candidate)
+    return candidate
+
+
+def heading_anchor(slug: str) -> str:
+    return (
+        f'<a class="heading-anchor" href="#{esc(slug)}" aria-label="Link to this section">'
+        '<span aria-hidden="true">#</span></a>'
+    )
+
+
+def table_html(rows: list[str], table_id: str = '') -> str:
     """Render a pipe table (header row, --- separator, body rows) as a scrollable table."""
     header = table_cells(rows[0])
     body = [table_cells(row) for row in rows[2:]]
@@ -148,8 +174,10 @@ def table_html(rows: list[str]) -> str:
             attrs += cell_classes(index, label, cell)
             tds.append(f'<td{attrs}>{inline(cell)}</td>')
         body_rows.append('<tr>' + ''.join(tds) + '</tr>')
+    id_attr = f' id="{esc(table_id)}"' if table_id else ''
+    link = heading_anchor(table_id) if table_id else ''
     return (
-        '<div class="table-wrap"><table>'
+        f'<div class="table-wrap"{id_attr}>{link}<table>'
         f'<thead><tr>{head_html}</tr></thead>'
         f'<tbody>{"".join(body_rows)}</tbody>'
         '</table></div>'
@@ -415,18 +443,32 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
         blocks.append(('odds', list(odds)))
         odds.clear()
 
+    pending_table_id = ''
+
     def flush_table() -> None:
+        nonlocal pending_table_id
         if not table:
             return
+        table_id = pending_table_id
+        pending_table_id = ''
         if len(table) >= 2 and TABLE_SEPARATOR_RE.match(table[1].strip()):
-            blocks.append(('table', list(table)))
+            blocks.append(('table', (list(table), table_id)))
         else:
             # Not a real table (no separator row): keep the text as a paragraph.
             paragraph.extend(table)
             flush_paragraph()
         table.clear()
 
+    table_id_re = re.compile(r'^\{#([a-z][a-z0-9-]*)\}$')
     for line in markdown.splitlines():
+        id_line = table_id_re.fullmatch(line.strip())
+        if id_line:
+            flush_paragraph()
+            flush_bullets()
+            flush_odds()
+            flush_table()
+            pending_table_id = id_line.group(1)
+            continue
         if line.strip().startswith('|'):
             flush_paragraph()
             flush_bullets()
@@ -454,6 +496,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
         if line.startswith('## '):
             flush_paragraph()
             flush_bullets()
+            pending_table_id = ''
             blocks.append(('h2', line[3:].strip()))
             continue
         photo = BODY_PHOTO_RE.fullmatch(line.strip())
@@ -478,6 +521,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             flush_paragraph()
             bullets.append(line[2:].strip())
             continue
+        pending_table_id = ''
         paragraph.append(line.strip())
     flush_table()
     flush_paragraph()
@@ -488,15 +532,20 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
     html_blocks = []
     first = True
     disclaimer = False
+    used_ids: set[str] = set()
     for kind, value in blocks:
         anchor = ''
+        explicit_id = ''
         if kind in ('h2', 'h3', 'h4'):
             match = re.search(r'\s+\{#([a-z][a-z0-9-]*)\}$', value)
             if match:
-                anchor = f' id="{match.group(1)}"'
+                explicit_id = match.group(1)
                 value = value[:match.start()]
         if kind == 'h2':
-            html_blocks.append(f'<h2 class="section-title"{anchor}>{esc(value)}</h2>')
+            slug = unique_id(explicit_id or heading_slug(value), used_ids)
+            html_blocks.append(
+                f'<h2 class="section-title" id="{esc(slug)}">{esc(value)}{heading_anchor(slug)}</h2>'
+            )
             continue
         if kind == 'photo':
             html_blocks.append(body_photo_html(value))
@@ -508,6 +557,9 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             html_blocks.append(odds_html(value))
             continue
         if kind in ('h3', 'h4'):
+            if explicit_id:
+                used_ids.add(explicit_id)
+                anchor = f' id="{esc(explicit_id)}"'
             if not any('sub-h-css' in b for b in html_blocks):
                 html_blocks.append(SUB_HEADING_CSS)
             html_blocks.append(f'<{kind} class="sub-{kind}"{anchor}>{inline(value)}</{kind}>')
@@ -517,7 +569,9 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             html_blocks.append(f'<ul>{items}</ul>')
             continue
         if kind == 'table':
-            rendered = table_html(value)
+            rows, table_id = value
+            table_id = unique_id(table_id or 'data-table', used_ids)
+            rendered = table_html(rows, table_id)
             if table_headshots:
                 rendered = decorate_player_cells(rendered)
                 rendered = drop_repeated_faces(rendered)
@@ -870,18 +924,30 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     social = meta.get('social_title') or title
     description = article.get('description') or ''
     when = links._format_date(article['date'])
-    stamp = article['date']
-    # A date-only `updated` value is the visible byline date. Timestamp notes on other posts stay unused.
+    stamp = links.published_iso(article['date'])
+    # A date-only `updated` value replaces the visible byline date. A timestamp is
+    # shown beside it as Updated, in Pacific time, and does not replace datePublished.
     updated_raw = str(meta.get('updated') or '').strip()
+    updated_bit = ''
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated_raw):
         when = 'Updated ' + links._format_date(updated_raw)
         stamp = updated_raw
+    elif re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})', updated_raw):
+        updated_bit = (
+            f'<time class="article-updated" datetime="{esc(links.published_iso(updated_raw))}">'
+            f'Updated {esc(links._format_date(updated_raw))}</time>'
+        )
     faces = str(meta.get('table_headshots') or '').strip().lower() in ('true', 'yes', '1')
     sortable = str(meta.get('sortable_tables') or '').strip().lower() in ('true', 'yes', '1')
     body = body_html(markdown, table_headshots=faces, sortable=sortable)
     if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
-        body = body.replace('<div class="table-wrap">', '<div class="table-wrap" data-fcb-data-table>', 1)
+        body = re.sub(
+            r'<div class="table-wrap"',
+            '<div class="table-wrap" data-fcb-data-table',
+            body,
+            count=1,
+        )
     linked = bool(meta.get('photo_credit_url') or meta.get('license_url'))
     sentence = (esc(article['editorialDisclosure']) if article.get('editorialDisclosure')
                 else links.HOW_MADE_OTHER if linked else links.HOW_MADE_OTHER_UNLINKED)
@@ -894,7 +960,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         '<span class="divider"></span><span>Full Court Buckets</span></div>'
         f'<h1>{esc(title)}</h1>'
         f'<div class="byline-row">{links.BYLINE_HTML}'
-        f'<time class="article-date" datetime="{esc(stamp)}">{esc(when)}</time></div>'
+        f'<time class="article-date" datetime="{esc(stamp)}">{esc(when)}</time>{updated_bit}</div>'
         f'{archive_note_html(meta)}{top_link_html(meta)}{figure_html(article, meta)}{body}{how}'
         '<p class="brand-sign">Full Court Buckets &middot; WNBA News. Analysis. Commentary.</p>'
         '</article>'
@@ -954,13 +1020,13 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
                 f'<meta property="og:image:alt" content="{esc(alt)}"><meta name="twitter:image:alt"',
                 1,
             )
-    meta('article:published_time', article['date'], 'property')
+    meta('article:published_time', links.published_iso(article['date']), 'property')
     if article.get('dateModified'):
         if 'property="article:modified_time"' in page:
-            meta('article:modified_time', article['dateModified'], 'property')
+            meta('article:modified_time', links.published_iso(article['dateModified']), 'property')
         else:
             page = page.replace('</head>', '<meta property="article:modified_time" content="'
-                                + esc(article['dateModified']) + '"></head>', 1)
+                                + esc(links.published_iso(article['dateModified'])) + '"></head>', 1)
     page = re.sub(
         r'(<link rel="canonical" href=").*?(">)',
         lambda match: match.group(1) + esc(canonical) + match.group(2),
@@ -973,8 +1039,8 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
         'headline': social,
         'description': description,
         'image': [og_image],
-        'datePublished': article['date'],
-        'dateModified': article.get('dateModified') or article['date'],
+        'datePublished': links.published_iso(article['date']),
+        'dateModified': links.published_iso(article.get('dateModified') or article['date']),
         'author': links.article_author(),
         'publisher': {
             '@type': 'Organization',

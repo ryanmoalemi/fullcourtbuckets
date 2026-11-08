@@ -585,3 +585,47 @@ if(!isNaN(exp)&&Date.now()>=exp){var a=bar.querySelector('.ticker-text a');if(a)
 /* Wide article tables: show a visible scroll cue when columns are off screen. Cards replace that cue under 640px. */
 (function(){function mark(){var narrow=window.matchMedia('(max-width:640px)').matches;var w=document.querySelectorAll('.article .table-wrap,.article .fcb-table-wrap,.table-scroll');for(var i=0;i<w.length;i++){var el=w[i],h=el.previousElementSibling;if(narrow){if(h&&h.classList&&h.classList.contains('table-scroll-hint'))h.classList.remove('is-on');el.classList.remove('is-scrollable');continue;}if(h&&h.classList&&h.classList.contains('scroll-hint'))continue;if(!h||!h.classList||!h.classList.contains('table-scroll-hint')){h=document.createElement('p');h.className='table-scroll-hint';h.setAttribute('aria-hidden','true');h.textContent='Scroll for more columns \u2192';el.parentNode.insertBefore(h,el);}var on=el.scrollWidth>el.clientWidth+2;el.classList.toggle('is-scrollable',on);h.classList.toggle('is-on',on&&el.scrollLeft+el.clientWidth<el.scrollWidth-2);(function(el,h){if(el._fcbHint)return;el._fcbHint=1;el.addEventListener('scroll',function(){if(window.matchMedia('(max-width:640px)').matches){h.classList.remove('is-on');return;}h.classList.toggle('is-on',el.scrollLeft+el.clientWidth<el.scrollWidth-2);},{passive:true});})(el,h);}}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mark);else mark();window.addEventListener('resize',mark);})();
+/* Stable section and table links for articles that were published before the template emitted them. Existing ids stay. */
+(function(){
+  function slug(text){
+    return String(text||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')||'section';
+  }
+  function unique(base){
+    var id=base, n=2;
+    while(document.getElementById(id)){ id=base+'-'+n; n+=1; }
+    return id;
+  }
+  function icon(id){
+    var link=document.createElement('a');
+    link.className='heading-anchor';
+    link.href='#'+id;
+    link.setAttribute('aria-label','Link to this section');
+    var mark=document.createElement('span');
+    mark.setAttribute('aria-hidden','true');
+    mark.textContent='#';
+    link.appendChild(mark);
+    return link;
+  }
+  function add(){
+    var heads=document.querySelectorAll('.article h2');
+    for(var i=0;i<heads.length;i++){
+      var h=heads[i];
+      if(!h.id) h.id=unique(slug(h.textContent));
+      if(!h.querySelector('.heading-anchor')) h.appendChild(icon(h.id));
+    }
+    var wraps=document.querySelectorAll('.article .table-wrap');
+    for(var t=0;t<wraps.length;t++){
+      var wrap=wraps[t];
+      if(!wrap.id){
+        var heading=wrap.closest('.article') && wrap.parentElement;
+        var label='data-table';
+        var th=wrap.querySelector('th');
+        if(th && th.textContent) label=slug(th.textContent);
+        wrap.id=unique(label);
+      }
+      if(!wrap.querySelector('.heading-anchor')) wrap.insertBefore(icon(wrap.id), wrap.firstChild);
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded', add);
+  else add();
+})();
