@@ -1,5 +1,35 @@
 [
   {
+    "slug": "kelsey-mitchell-2027-free-agency-cap",
+    "url": "/news/kelsey-mitchell-2027-free-agency-cap/",
+    "title": "Kelsey Mitchell 2027: cap paths for three WNBA teams",
+    "description": "Compare Kelsey Mitchell's 2027 fits with Golden State, Las Vegas and Atlanta using sourced salary data, roster scenarios and downloadable cap calculations.",
+    "category": "Analysis",
+    "date": "2026-11-08",
+    "imageAlt": "Kelsey Mitchell in a red Indiana Fever jersey, number 0, dribbling during a game and looking to her right",
+    "imageCredit": "Photo: John Mac, CC BY-SA 2.0, via Wikimedia Commons",
+    "teams": [
+      "golden-state-valkyries",
+      "las-vegas-aces",
+      "atlanta-dream",
+      "indiana-fever"
+    ],
+    "imageFocal": "center 22%",
+    "image": "/images/articles/kelsey-mitchell-2027-free-agency-cap/hero-1200.webp",
+    "imageSource": "/images/articles/kelsey-mitchell-2027-free-agency-cap/photo.jpg",
+    "imageHero": "/images/articles/kelsey-mitchell-2027-free-agency-cap/hero-1200.webp",
+    "imageHeroWidth": 1200,
+    "imageHeroHeight": 675,
+    "imageHero2x": "/images/articles/kelsey-mitchell-2027-free-agency-cap/hero-2x.webp",
+    "imageHero2xWidth": 2400,
+    "imageHero2xHeight": 1350,
+    "imageOg": "/images/articles/kelsey-mitchell-2027-free-agency-cap/og-1200.jpg",
+    "imageOgWidth": 1200,
+    "imageOgHeight": 630,
+    "imageWidth": 1200,
+    "imageHeight": 675
+  },
+  {
     "slug": "taurasi-wbhof-class-2027",
     "url": "/news/taurasi-wbhof-class-2027/",
     "title": "Diana Taurasi headlines Women's Basketball Hall of Fame Class of 2027",
