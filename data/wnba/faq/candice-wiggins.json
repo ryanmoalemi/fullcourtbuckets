@@ -1,57 +1,85 @@
 {
   "slug": "candice-wiggins",
   "player_name": "Candice Wiggins",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "What are Candice Wiggins's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2015), Candice Wiggins averaged 2.8 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "candice wiggins stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Candice Wiggins dating?",
-      "answer": "As of late 2026, Candice Wiggins has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Which WNBA teams did Candice Wiggins play for?",
+      "answer": "Candice Wiggins played eight WNBA seasons, from 2008 to 2015, for the Minnesota Lynx, Tulsa Shock, Los Angeles Sparks and New York Liberty. The Lynx drafted her third overall in 2008, and she won the 2011 WNBA championship with Minnesota.",
       "answer_kind": "researched",
       "sources": [
+        "https://fullcourtbuckets.com/wnba/candice-wiggins/",
+        "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html",
         "https://en.wikipedia.org/wiki/Candice_Wiggins"
       ],
-      "google_keyword": "candice wiggins partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "candice wiggins wnba",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "How much does Candice Wiggins make?",
-      "answer": "A precise public salary or net worth figure for Candice Wiggins is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What were Candice Wiggins' WNBA career averages?",
+      "answer": "Candice Wiggins averaged 8.6 points, 2.4 rebounds and 1.9 assists in 221 WNBA regular-season games. As a rookie in 2008 she averaged 15.7 points off the bench and won WNBA Sixth Woman of the Year.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "candice wiggins net worth",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Candice Wiggins married?",
-      "answer": "There is no widely reported public record of Candice Wiggins being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
+        "https://fullcourtbuckets.com/wnba/candice-wiggins/",
+        "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html",
         "https://en.wikipedia.org/wiki/Candice_Wiggins"
       ],
-      "google_keyword": "candice wiggins husband",
-      "approx_monthly_volume": 110
+      "queries": [
+        {
+          "q": "candice wiggins stats",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Did Candice Wiggins retire?",
-      "answer": "As of late 2026, Candice Wiggins has a public WNBA playing career; check her bio for current status.",
+      "question": "Where did Candice Wiggins play college basketball?",
+      "answer": "Candice Wiggins played at Stanford and finished as the school's all-time leading scorer with 2,629 points. In 2008 she passed Lisa Leslie as the Pac-10's career scoring leader and won the Wade Trophy as the national player of the year.",
       "answer_kind": "researched",
       "sources": [
+        "https://gostanford.com/news/2016/2/29/210760119.aspx",
+        "https://gostanford.com/news/2008/03/2/wiggins-becomes-pac-10-scoring-leader-in-win-against-wsu",
+        "https://gostanford.com/news/2008/04/05/candice-wiggins-named-state-farm-wade-trophy-player-of-the-year"
+      ],
+      "queries": [
+        {
+          "q": "candice wiggins stanford",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How tall is Candice Wiggins?",
+      "answer": "Basketball-Reference lists Candice Wiggins at 5 feet 11 inches. She played guard.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html"
+      ],
+      "queries": [
+        {
+          "q": "candice wiggins height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Candice Wiggins go to high school?",
+      "answer": "Candice Wiggins played at La Jolla Country Day School in La Jolla, California, and was a McDonald's All-American as a senior.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/wiggica01w.html",
         "https://en.wikipedia.org/wiki/Candice_Wiggins"
       ],
-      "google_keyword": "why did candice wiggins retire",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "candice wiggins high school",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
