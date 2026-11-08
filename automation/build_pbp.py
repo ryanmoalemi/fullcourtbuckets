@@ -16,6 +16,7 @@ import site_nav  # noqa: E402
 import social_meta  # noqa: E402
 import seo_meta  # noqa: E402
 import breadcrumbs  # noqa: E402
+import internal_links as links  # noqa: E402
 
 E = html.escape
 CONF = ROOT / 'data/pbp-games.json'
@@ -120,7 +121,7 @@ def shell_parts(title, desc, path, date):
     url = BASE + path
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Dataset", "name": title, "description": desc, "url": url, "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-         "creator": {"@type": "Organization", "name": "Full Court Buckets", "url": BASE + "/"}, "author": {"@type": "Person", "name": "Ryan Moalemi", "url": BASE + "/authors/ryan-moalemi/"},
+         "creator": {"@type": "Organization", "name": "Full Court Buckets", "url": BASE + "/"}, "author": links.article_author(),
          "dateModified": date, "isAccessibleForFree": True},
         {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
          {"@type": "ListItem", "position": 2, "name": "WNBA", "item": BASE + "/wnba/"}, {"@type": "ListItem", "position": 3, "name": title, "item": url}]}]}

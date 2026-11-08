@@ -47,6 +47,19 @@ AUTHOR_TIKTOK_HTML = (
     '<p>Full Court Buckets on TikTok: '
     f'<a href="{TIKTOK_URL}" target="_blank" rel="noopener me">@fullcourtbuckets</a>.</p>'
 )
+AUTHOR_LINKEDIN = 'https://www.linkedin.com/in/ryan-moalemi-552654446/'
+AUTHOR_SAME_AS = (
+    AUTHOR_LINKEDIN,
+    'https://lnk.bio/ryanmoalemi',
+    'https://app.qwoted.com/sources/ryan-moalemi',
+    'https://www.sourcebottle.com/profile/19170/Ryan-Moalemi',
+)
+AUTHOR_PROFILE_LINKS = (
+    ('LinkedIn', AUTHOR_SAME_AS[0]),
+    ('Lnk.Bio', AUTHOR_SAME_AS[1]),
+    ('Qwoted', AUTHOR_SAME_AS[2]),
+    ('SourceBottle', AUTHOR_SAME_AS[3]),
+)
 
 MAX_PLAYER_LINKS = 8
 AMBIGUOUS_NICKNAMES = {
@@ -1590,7 +1603,21 @@ def ensure_box_score(html_text: str, article: dict) -> str:
 
 def article_author() -> dict:
     """Person credited on every news post. Publisher stays the organization."""
-    return {'@type': 'Person', 'name': AUTHOR_NAME, 'url': AUTHOR_URL}
+    return {
+        '@type': 'Person',
+        'name': AUTHOR_NAME,
+        'url': AUTHOR_URL,
+        'sameAs': list(AUTHOR_SAME_AS),
+    }
+
+
+def author_links_html() -> str:
+    """Public profiles, same tab treatment as the TikTok identity link."""
+    links = ' | '.join(
+        f'<a href="{esc(url)}" target="_blank" rel="noopener me">{esc(label)}</a>'
+        for label, url in AUTHOR_PROFILE_LINKS
+    )
+    return f'<p class="author-links">{links}</p>'
 
 
 def author_person() -> dict:
@@ -1603,6 +1630,7 @@ def author_person() -> dict:
         'image': AUTHOR_IMAGE_URL,
         'jobTitle': 'Editor',
         'description': AUTHOR_DESCRIPTION,
+        'sameAs': list(AUTHOR_SAME_AS),
         'worksFor': {
             '@type': 'Organization',
             'name': 'Full Court Buckets',
@@ -2224,9 +2252,7 @@ def _author_bio_html() -> str:
     patch of the published HTML does not survive render_author_page.
     """
     import citation
-    parts = [
-        '<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi when the profile URL is available. -->',
-    ]
+    parts = []
     for sentence in AUTHOR_BIO:
         text = esc(sentence).replace(
             'Angel Reese',
@@ -2235,6 +2261,7 @@ def _author_bio_html() -> str:
         parts.append(f'<p>{text}</p>')
     parts.append(citation.media_line_html())
     parts.append(f'<p><a href="{HOW_PAGE}">{AUTHOR_HOW_LABEL}</a></p>')
+    parts.append(author_links_html())
     return '\n'.join(parts)
 
 
@@ -2296,7 +2323,8 @@ main{{padding:28px 0 72px}}
 h1{{margin:18px 0 8px;font:800 56px/1 Barlow,sans-serif;letter-spacing:-1px}}
 h2{{margin:28px 0 8px;font:800 32px/1.1 Barlow,sans-serif}}
 .bio p{{margin:0 0 14px;color:#e8e3df;max-width:40rem}}
-.bio a{{color:#ff9800;text-decoration:underline}}
+.bio a,.author-links a{{color:#ff9800;text-decoration:underline}}
+.author-links{{margin:0 0 14px;color:#e8e3df;max-width:40rem}}
 .author-photo{{width:160px;height:160px;border-radius:50%;object-fit:cover;margin:12px 0 18px;border:1px solid #2b2930;background:#111}}
 .breadcrumbs{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;color:#a29f99;font-size:13px;font-weight:600}}
 .breadcrumbs a{{color:#d4d0ca;text-decoration:underline}}

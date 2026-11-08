@@ -13,6 +13,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 import build_viewership_attendance as core
+import internal_links as links
 
 _FONT_DIR = Path(__file__).resolve().parents[1] / 'assets' / 'fonts'
 FONT_BOLD = str(_FONT_DIR / 'Inter-Bold.ttf')
@@ -1856,7 +1857,7 @@ def render_page(root: Path, payload: dict) -> str:
                 'description': core.DESCRIPTION,
                 'datePublished': '2026-10-13',
                 'dateModified': payload['updated'],
-                'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': core.BASE + '/authors/ryan-moalemi/'},
+                'author': links.article_author(),
                 'isPartOf': {'@type': 'WebSite', 'name': 'Full Court Buckets', 'url': core.BASE + '/'},
             },
             {
@@ -1866,7 +1867,7 @@ def render_page(root: Path, payload: dict) -> str:
                 'description': core.DESCRIPTION,
                 'datePublished': '2026-10-13',
                 'dateModified': payload['updated'],
-                'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': core.BASE + '/authors/ryan-moalemi/'},
+                'author': links.article_author(),
                 'publisher': {
                     '@type': 'Organization',
                     'name': 'Full Court Buckets',

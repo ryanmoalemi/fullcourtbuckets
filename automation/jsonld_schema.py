@@ -12,11 +12,13 @@ from html import unescape
 
 BASE = 'https://fullcourtbuckets.com'
 CC0 = 'https://creativecommons.org/publicdomain/zero/1.0/'
-AUTHOR = {
-    '@type': 'Person',
-    'name': 'Ryan Moalemi',
-    'url': BASE + '/authors/ryan-moalemi/',
-}
+def person_author() -> dict:
+    """Same Person node news pages and the author profile use, including sameAs."""
+    import internal_links as links
+    return links.article_author()
+
+
+AUTHOR = person_author()
 
 JSONLD_RE = re.compile(
     r'(<script\b[^>]*type="application/ld\+json"[^>]*>)(.*?)(</script>)',

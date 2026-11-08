@@ -975,11 +975,7 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
         'image': [og_image],
         'datePublished': article['date'],
         'dateModified': article.get('dateModified') or article['date'],
-        'author': {
-            '@type': 'Person',
-            'name': 'Ryan Moalemi',
-            'url': 'https://fullcourtbuckets.com/authors/ryan-moalemi/',
-        },
+        'author': links.article_author(),
         'publisher': {
             '@type': 'Organization',
             'name': 'Full Court Buckets',

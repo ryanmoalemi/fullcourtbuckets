@@ -853,7 +853,7 @@ def jsonld(data: dict) -> str:
     article = {
         '@context': 'https://schema.org', '@type': 'Article', 'headline': H1, 'description': DESCRIPTION,
         'url': CANONICAL, 'mainEntityOfPage': CANONICAL, 'datePublished': PUBLISHED, 'dateModified': DATA_THROUGH,
-        'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': SITE + '/authors/ryan-moalemi/'},
+        'author': links.article_author(),
         'publisher': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': SITE + '/'},
     }
     crumbs = {
