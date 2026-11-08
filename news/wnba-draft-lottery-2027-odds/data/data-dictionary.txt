@@ -1,0 +1,28 @@
+wnba-draft-lottery-2027-odds-by-pick.csv
+pick_owner: Club that will make the pick if that ticket is drawn. Houston is the franchise the Oct. 28, 2026 release calls Houston, previously the Connecticut Sun.
+record_team: Club whose record the release uses for that ticket.
+record: Wins-losses printed in the Oct. 28, 2026 WNBA release.
+games: Wins plus losses in that record. 44 is one 2026 season. 88 is 2025 plus 2026.
+win_pct: Wins divided by games, four decimals. The release prints .250 only for the Houston-Toronto tie.
+how_acquired: Trade or expansion note from the lottery release and the Feb. 23, 2025 team releases.
+combinations_of_1000: Combinations the release assigns for the No. 1 pick. The seven rows sum to 1000.
+pick_1_pct through pick_7_pct: Percent chance of landing on that pick, one decimal. Computed by Full Court Buckets from the combinations. WNBA.com does not publish these for picks 2-7.
+most_likely_pick: Pick number with the largest share before rounding.
+expected_pick: Sum of pick number times probability, four decimals, before the one-decimal rounding.
+top_2_pct: pick_1_pct plus pick_2_pct at one decimal.
+
+Pick 2 assumes a repeat of the No. 1 team's combination is discarded and the balls are drawn again. The Oct. 28, 2026 release says the balls go back in and the process is repeated. It does not print that discard rule.
+Picks 3-7 are the remaining teams in the release's order: Houston, Toronto, Washington (Chicago's record), Seattle, Portland, Los Angeles own, Los Angeles from Phoenix. Houston is ahead of Toronto because the release says Houston was 1-2 against Toronto, the first tiebreaker, and cannot fall past third.
+
+wnba-draft-lottery-history.csv
+One row per draft year from 2002 through 2026. 2027 is the 26th lottery and had not been drawn as of Nov. 8, 2026.
+best_odds_team_won: yes, no, or not stated. "yes" only when a WNBA.com page says the winner had the most chances, says the drawing followed the odds, or says the results matched the order of chances.
+in_the_16: yes for the 16 drafts used in the 10-of-16 count. no when the odds slot is not stated on a page opened for this file.
+source_url: the WNBA.com page for that row. Empty when no results page was opened.
+note: what that page does and does not say.
+
+The 10 yes years are 2009, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024, 2026.
+The 6 no years are 2005, 2006, 2007, 2019, 2022, 2025.
+
+Data through Nov. 8, 2026.
+Free to use and republish (CC0). https://creativecommons.org/publicdomain/zero/1.0/

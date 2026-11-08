@@ -412,4 +412,10 @@
     <loc>https://fullcourtbuckets.com/wnba/where-to-watch/</loc>
     <lastmod>2026-11-08</lastmod>
   </url>
+  <url>
+    <loc>https://fullcourtbuckets.com/news/wnba-draft-lottery-2027-odds/</loc>
+    <lastmod>2026-11-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

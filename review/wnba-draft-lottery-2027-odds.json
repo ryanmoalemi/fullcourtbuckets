@@ -1,0 +1,98 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 8,
+        "max": 10,
+        "reason": "Combination counts, records, the Nov. 15 window, the Atkins swap, and the Plum trade are the Oct. 28, 2026 WNBA release plus the Feb. 23, 2025 team releases. Pick 2-7 percentages are computed from those counts. The same-team redraw is stated as an assumption because the release does not print it. The 10-of-16 count uses only WNBA.com pages that state whether the team with the most combinations won. Nine draft years stay out of that count. Watkins's birth date and senior listing are the USC roster page. Eligibility is the CBA text, and the page does not say she will be drafted."
+      },
+      {
+        "name": "Information gain",
+        "score": 9,
+        "max": 10,
+        "reason": "WNBA.com publishes combinations for the No. 1 pick only. This page is the pick-by-pick matrix, including the floors (Houston cannot fall past third, the Phoenix ticket is seventh unless it is drawn). The 10-of-16 history count is not on the league's lottery release."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "The 2027 release, both trade releases, the sale release, the timeline, and the 2015-2026 results pages were opened. Two CSVs, a data dictionary, and a chart sit on the page. 2011 and 2012 still have no results page in the file."
+      },
+      {
+        "name": "Originality",
+        "score": 9,
+        "max": 10,
+        "reason": "The cut is the full probability of every slot, plus which odds position actually won the No. 1 pick in the lotteries WNBA.com documents. It is not a rewrite of the Oct. 28 odds table."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview. The release, the trade releases, the CBA section, and the USC roster are linked from the page."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "The H1 is the finding. The seven-row odds table sits under a one-line lead and the photo. The history table follows. Mobile uses the site's stacked cards. The chart is 16:9. Gaps are labeled in the history cells."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "House how-this-story-was-made note, CC0 downloads, a data dictionary, a photo credit, and an explicit line that WNBA.com does not publish the pick 2-7 matrix. The redraw rule and the blank history years are on the page."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline, plain sentences, no em dashes. The methods note is long because the drawing rule and the tiebreaker have to sit with the table."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 9,
+        "max": 10,
+        "reason": "A reader who wants the date, the watch line, the odds for every slot, how the tie works, where the traded picks came from, and whether the league has named a prospect gets those answers from the release and the CBA, with the gaps labeled."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates and the pages that disagree with themselves, including the 2025 results page's two Washington records. No stock phrases. The methods note is a ledger."
+      }
+    ],
+    "info_gain": [
+      "Full pick 1-7 probabilities from the league's 1,000 combinations, which WNBA.com does not publish",
+      "Houston's most likely result is No. 3 at 38.3 percent. Toronto's most likely result is No. 1 at 32.9 percent",
+      "The team with the most combinations won the No. 1 pick in 10 of 16 lotteries where a WNBA.com page states the answer",
+      "The Feb. 23, 2025 documents call the Chicago pick a swap. The lottery release assigns the 161 combinations to Washington"
+    ],
+    "ai_flags": [
+      "A draft sentence said Toronto's most likely pick was No. 3. The exact shares are 32.9 percent at No. 1 and 29.5 percent at No. 3. The sentence was corrected before this score.",
+      "A draft sentence treated Houston's entire 38.3 percent at No. 3 as the case where neither Houston nor Toronto is drawn. That case is 8.8 percent. The 38.3 percent is every outcome in which Houston is not one of the two drawn picks."
+    ]
+  },
+  "unique": [
+    "Houston 38.3 percent at No. 3, 32.9 percent at No. 1, and 0 percent at picks 4 through 7.",
+    "The best-odds team won 10 of 16 documented lotteries: 2009, 2015, 2016, 2017, 2018, 2020, 2021, 2023, 2024, and 2026.",
+    "Los Angeles's two tickets together are 36 combinations, 3.6 percent, at No. 1. They are separate rows, not 3.6 percent each."
+  ],
+  "unverified": [
+    "What the drawing does if the No. 1 team's combination is drawn again for pick 2. The Oct. 28 release says the balls go back in. This file discards that combination. WNBA.com does not publish a matrix to check the percentages against.",
+    "A U.S. streaming app. The release says ESPN in the U.S. and TSN in Canada. It does not name a second U.S. stream.",
+    "2011 and 2012 lottery winners and odds. No results release was opened, so those rows are blank.",
+    "Combination counts for 2002, 2003, 2004, 2008, 2013, and 2014, and whether 2010's 428 combinations were the most. The timeline does not say.",
+    "The 2007 combination count. The timeline says Phoenix had the smallest odds and does not print the number.",
+    "The 2015 combination count. The 2026 results release says that drawing matched the order of chances. The count is not on the pages opened.",
+    "A date on the 2019 results release. The dateline is Secaucus, N.J., with no day.",
+    "Whether JuJu Watkins will be in the April 12, 2027 draft. USC lists her as a senior born July 15, 2005 who redshirted 2025-26. The CBA still requires no remaining college eligibility or a written renunciation. Neither document is on this page.",
+    "The Houston Comets name inside the May 13, 2026 sale release. That release says the Sun relocate to Houston and does not name the club. The WNBA.com menu lists a 2027 Houston Comets team.",
+    "Which of the two Washington records on the 2025 results page is right: the prose says 33-47 and the table says 33-43. Both give 104 chances. Dallas's 227 and Los Angeles's 442 are in both places.",
+    "Readability pass skipped: OPENAI_API_KEY and GEMINI_API_KEY were not in the environment."
+  ]
+}
