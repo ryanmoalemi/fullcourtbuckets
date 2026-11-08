@@ -316,9 +316,32 @@ def ensure_footer_hubs(text: str) -> str:
     return text[:match.start()] + block + text[match.end():]
 
 
+PT = ZoneInfo('America/Los_Angeles')
+
+
+def published_iso(iso: str) -> str:
+    """Date-only values stay as written. A timestamp is the same instant in Pacific time.
+
+    A date-only article date is the calendar day the story was published, not UTC
+    midnight. Only a timezone-aware timestamp is converted, so a late-evening
+    Pacific publish does not display as the next UTC day.
+    """
+    raw = str(iso).strip()
+    if 'T' not in raw:
+        return raw
+    parsed = dt.datetime.fromisoformat(raw.replace('Z', '+00:00'))
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=PT)
+    return parsed.astimezone(PT).isoformat(timespec='seconds')
+
+
 def _format_date(iso: str) -> str:
-    year, month, day = (int(part) for part in str(iso).split('-')[:3])
-    when = dt.date(year, month, day)
+    raw = str(iso).strip()
+    if 'T' in raw:
+        when = dt.date.fromisoformat(published_iso(raw)[:10])
+    else:
+        year, month, day = (int(part) for part in raw.split('-')[:3])
+        when = dt.date(year, month, day)
     return f'{when.strftime("%B")} {when.day}, {when.year}'
 
 

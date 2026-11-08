@@ -6,10 +6,18 @@ import internal_links as links
 
 class ArticlePublicationMetadata(unittest.TestCase):
     def test_explicit_section_links_stay_in_the_same_tab(self):
-        rendered=pub.body_html('## Cap test {#cap-test}\n\n[See cap test](#cap-test)')
-        self.assertIn('<h2 class="section-title" id="cap-test">Cap test</h2>',rendered)
+        rendered=pub.body_html('## Cap test {#cap-test}\n\n[See cap test](#cap-test)\n\n{#cap-table}\n\n| Team | Balance |\n| --- | ---: |\n| Golden State | $1 |\n')
+        self.assertIn('id="cap-test"', rendered)
+        self.assertIn('>Cap test<a class="heading-anchor" href="#cap-test"', rendered)
+        self.assertIn('id="cap-table"', rendered)
         self.assertIn('href="#cap-test">See cap test</a>',rendered)
         self.assertNotIn('target="_blank"',rendered)
+
+    def test_timestamps_display_in_pacific_time(self):
+        self.assertEqual(links._format_date('2026-11-08'), 'November 8, 2026')
+        self.assertEqual(links._format_date('2026-11-08T06:05:38Z'), 'November 7, 2026')
+        self.assertEqual(links.published_iso('2026-11-08'), '2026-11-08')
+        self.assertEqual(links.published_iso('2026-11-08T06:05:38Z'), '2026-11-07T22:05:38-08:00')
 
     def test_article_specific_disclosure_survives_shared_preparation(self):
         record={'editorialDisclosure':'Research & calculations checked against linked sources.'}

@@ -315,3 +315,8 @@ html body table.fcb-cards td.is-balance + td.is-balance,html body table.fcb-card
 html body table.fcb-cards td.is-balance.is-shortfall,html body table.fcb-cards th.is-balance.is-shortfall{color:#9b1c1c!important;background:#fdecea!important}
 html body table.fcb-cards td.is-shortfall::after,html body table.fcb-cards th.is-shortfall::after{content:" shortfall";color:#9b1c1c;font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 }
+/* Section and table anchors. Hidden until hover or keyboard focus. Touch screens keep them tappable. */
+html body .article .heading-anchor{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0 0 0 .1rem;vertical-align:middle;color:#5c574f;text-decoration:none;opacity:0;font:700 18px/1 Barlow,sans-serif}
+html body .article h2:hover>.heading-anchor,html body .article h2:focus-within>.heading-anchor,html body .article .heading-anchor:focus{opacity:1}
+html body .article .table-wrap>.heading-anchor{position:absolute;z-index:3;top:0;right:0;margin:0;background:#fff}
+@media (hover:none){html body .article .heading-anchor{opacity:.75}}

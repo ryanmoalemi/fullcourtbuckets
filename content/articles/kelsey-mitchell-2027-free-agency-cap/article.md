@@ -2,7 +2,7 @@
 title: "Kelsey Mitchell's 2027 free agency: three teams, three paths to the Finals"
 seo_title: "Kelsey Mitchell 2027: Aces, Valkyries and Dream Finals paths"
 slug: kelsey-mitchell-2027-free-agency-cap
-date: 2026-11-08
+date: 2026-11-07T22:05:38-08:00
 description: "How the Aces, Valkyries and Dream could sign Kelsey Mitchell, what each would sacrifice, and how their proposed lineups could reach the WNBA Finals."
 category: Analysis
 tags:
@@ -22,15 +22,17 @@ focal_y: "center 22%"
 ticker: "Three contenders, three roster choices: Kelsey Mitchell and the path to the Finals."
 data_table_first: true
 table_headshots: true
-updated: "2026-11-08T07:20:00+00:00"
+updated: "2026-11-07T23:50:00-08:00"
 editorial_disclosure: "AI assisted research and editing. Full Court Buckets is responsible for the published analysis. Sources and calculation methods are provided above."
 ---
 
-**At an unchanged $7 million cap, Golden State could add [Kelsey Mitchell](/wnba/kelsey-mitchell/) and have $45,672 left above minimum roster charges. That cushion is $800,972 at the $7.91 million ceiling. Las Vegas fits her at a lower cap if Jackie Young leaves.**
+**At an unchanged $7 million cap, Golden State could add [Kelsey Mitchell](/wnba/kelsey-mitchell/) and have $45,672 left above minimum roster charges. That cushion is $800,972 at the $7.91 million ceiling. Las Vegas fits her at a lower cap if Jackie Young leaves. Indiana's first-year supermax is $210,000 above an outside team's standard maximum at $7 million, and $237,300 above it at $7.91 million.**
 
 ## What each team could afford {#cap-comparison}
 
 Here is what signing Mitchell would leave at three caps, after minimum charges to reach 12 players:
+
+{#cap-table}
 
 | Team and scenario | Balance at a $7.00M cap | Balance at a $7.50M cap | Balance at a $7.91M cap |
 | --- | ---: | ---: | ---: |
@@ -47,6 +49,8 @@ A positive balance is money left for an upgrade above those minimums. A negative
 
 A salary-clearing move can work under one cap and fail under another. These are the cap levels at which each proposed roster first fits, including minimum-cost replacements.
 
+{#break-even-table}
+
 | Proposed roster | Break-even cap | Inside the $6.09M to $7.91M range? |
 | --- | ---: | --- |
 | Las Vegas signs Mitchell; Young leaves | $6,839,998 | Yes |
@@ -62,6 +66,8 @@ A salary-clearing move can work under one cap and fail under another. These are 
 Source: FCB calculations from the same contract inputs and the signed CBA. Data through November 7, 2026 (PST). Methods: the smallest whole-dollar cap at which the scenario formula is no longer negative. Seventeen percent of the cap is cap times 17, divided by 100 in whole dollars. Twenty percent is the cap divided by 5 in whole dollars. Each open spot, including a replacement for a departed player, costs $288,600. Download (CC0): [Break-even caps](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-break-even-caps.csv)
 
 Golden State is still the preferred basketball fit, because the seven contracted players include an All-Defensive core. The budget result is separate. Las Vegas without Young first fits at $6,839,998, which is below Golden State's $6,944,973. At an unchanged $7 million cap, that Las Vegas roster also has more left over: $100,800, against Golden State's $45,672.
+
+The signed agreement lets a team send qualifying offers from January 30 through February 3, opens negotiations on February 4, and allows new contracts to be signed starting February 16, the day after the 2026-season moratorium ends ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf)). On October 23, 2026, Pacers Sports & Entertainment announced that Kelly Krauskopf will step down as Fever president and that general manager Amber Cox is departing, effective immediately ([Krauskopf](https://fever.wnba.com/news/kelly-krauskopf-to-step-down-as-indiana-fever-team-president); [Cox](https://fever.wnba.com/news/pacers-sports-entertainment-announces-departure-of-amber-cox-indiana-fever-coo-and-gm)).
 
 ## Why Mitchell changes the conversation
 
@@ -123,7 +129,7 @@ Wilson and Mitchell would give Becky Hammon a compelling pairing. A defense resp
 
 The Aces' problem is deciding who remains around them.
 
-Wilson's listed future salary floats at 20% of the cap. The $1.47 million displayed in the salary table is not the figure used here. She accounts for $1,400,000 at a $7 million cap, $1,500,000 at $7.50 million, and $1,582,000 at $7.91 million ([contract sources](#sources)).
+Wilson's listed future salary floats at 20% of the cap. The $1.47 million displayed in the salary table is not the figure used here. She accounts for $1,400,000 at a $7 million cap, $1,500,000 at $7.50 million, and $1,582,000 at $7.91 million ([contract sources](#sources)). Wilson's salary is modeled at 20% of the cap, the supermax, so it scales up as the cap rises, which is why a Loyd-only trade first fits at $8,067,903, above the $7.91 million ceiling, while clearing room under that ceiling requires moving both Loyd and Evans and first fits at $7,811,161.
 
 The other four listed commitments total $2,577,600: [Chelsea Gray](/wnba/chelsea-gray/), [Jewell Loyd](/wnba/jewell-loyd/), [Dana Evans](/wnba/dana-evans/) and Janiah Barker. Young is a free agent.
 
@@ -235,6 +241,8 @@ The $7 million column is the 2026 cap, carried forward with no change. Article V
 
 These are the rules this model uses, and where they are in the signed agreement:
 
+{#cba-rules}
+
 | Rule in this model | Where it is |
 | --- | --- |
 | The standard maximum for a salary-cap year is 17 percent of that year's cap | Article V, Section 8(b) |
@@ -276,5 +284,9 @@ For corrections to an input or calculation, [contact Full Court Buckets](/contac
 - [Golden State All-Defensive selections](https://valkyries.wnba.com/news/williams-named-to-wnba-all-defensive-first-team-burton-stokes-named-to-wnba-all-defensive-second-team-20261015), Valkyries team release, October 15, 2026.
 - [Fever backcourt season release, republished by OurSports Central](https://www.oursportscentral.com/services/releases/fevers-backcourt-duo-of-clark-mitchell-honored-for-historic-offensive-season/n-6424164), October 24, 2026. Source for 96 of Clark's 333 assists going to Mitchell. The directly linked Fever page exposed only its title in this review, so the accessible republication was checked for the full text.
 - [Atlanta acquires Reese](https://dream.wnba.com/news/two-time-wnba-all-star-angel-reese-joins-atlanta-dream), Dream team release, April 6, 2026. Draft consideration in the Chicago trade.
+- [Kelly Krauskopf to step down as Indiana Fever team president](https://fever.wnba.com/news/kelly-krauskopf-to-step-down-as-indiana-fever-team-president), Pacers Sports & Entertainment release, October 23, 2026.
+- [Pacers Sports & Entertainment announces departure of Amber Cox](https://fever.wnba.com/news/pacers-sports-entertainment-announces-departure-of-amber-cox-indiana-fever-coo-and-gm), Fever team release, October 23, 2026.
 
 **Update, November 8, 2026 (UTC):** Added the unchanged $7 million cap, moved the break-even caps above the team sections, and replaced the open Aces lineup spots and the generic playoff paths with contracted players and sourced 2026 games. Wilson's salary is still 20 percent of the cap.
+
+**Update, November 7, 2026, 11:50 p.m. PT:** Added section anchors, the 2027 free-agency calendar, the October 23 Fever front-office announcements, and the first-year supermax gap in the opening summary. The byline date is the November 7 Pacific publish time.
