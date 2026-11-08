@@ -110,21 +110,66 @@ def table_cells(line: str) -> list[str]:
     return [cell.strip() for cell in row.split('|')]
 
 
+def column_label(cell: str) -> str:
+    """Visible header text, without markdown, for the mobile card label."""
+    plain = re.sub(r'\*\*([^*]+)\*\*', r'\1', cell)
+    plain = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', plain)
+    return re.sub(r'\s+', ' ', plain).strip()
+
+
+def cell_classes(index: int, label: str, cell: str) -> str:
+    """Balance columns stay prominent. A leading minus is a shortfall, not a new number."""
+    if index == 0:
+        return ''
+    plain = column_label(cell)
+    classes = []
+    if re.search(r'\bbalance\b', label, re.I):
+        classes.append('is-balance')
+    if re.match(r'^-\$?[\d,]', plain):
+        classes.append('is-shortfall')
+    return f' class="{" ".join(classes)}"' if classes else ''
+
+
 def table_html(rows: list[str]) -> str:
     """Render a pipe table (header row, --- separator, body rows) as a scrollable table."""
     header = table_cells(rows[0])
     body = [table_cells(row) for row in rows[2:]]
+    labels = [column_label(cell) for cell in header]
     head_html = ''.join(f'<th scope="col">{inline(cell)}</th>' for cell in header)
     body_rows = []
     for cells in body:
         cells = (cells + [''] * len(header))[:len(header)]
-        body_rows.append('<tr>' + ''.join(f'<td>{inline(cell)}</td>' for cell in cells) + '</tr>')
+        tds = []
+        for index, cell in enumerate(cells):
+            label = labels[index] if index < len(labels) else ''
+            attrs = f' data-label="{esc(label)}"' if label else ''
+            attrs += cell_classes(index, label, cell)
+            tds.append(f'<td{attrs}>{inline(cell)}</td>')
+        body_rows.append('<tr>' + ''.join(tds) + '</tr>')
     return (
         '<div class="table-wrap"><table>'
         f'<thead><tr>{head_html}</tr></thead>'
         f'<tbody>{"".join(body_rows)}</tbody>'
         '</table></div>'
     )
+
+
+_FACE_IMG_RE = re.compile(r'<img class="roster-face" src="([^"]+)"[^>]*>')
+
+
+def drop_repeated_faces(table: str) -> str:
+    """A headshot in every row (Mitchell on each scenario) is clutter. One-row faces stay."""
+    rows = re.findall(r'<tr>(.*?)</tr>', table, re.S)
+    body = rows[1:]
+    if len(body) < 2:
+        return table
+    per_row = [set(_FACE_IMG_RE.findall(row)) for row in body]
+    common = set(per_row[0])
+    for row_faces in per_row[1:]:
+        common &= row_faces
+    for src in common:
+        table = re.sub(rf'<img class="roster-face" src="{re.escape(src)}"[^>]*>', '', table)
+    return table
 
 
 # Data notes (Ryan, Oct. 27, 2026): "Data through / Methods / Source / Download"
@@ -467,6 +512,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             rendered = table_html(value)
             if table_headshots:
                 rendered = decorate_player_cells(rendered)
+                rendered = drop_repeated_faces(rendered)
             html_blocks.append(rendered)
             continue
         if kind == 'note':

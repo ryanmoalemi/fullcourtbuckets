@@ -110,6 +110,11 @@ class MobileTableTests(unittest.TestCase):
         before = css.split('Phone data tables', 1)[0]
         self.assertNotIn('.article .table-wrap th:first-child{position:sticky', before)
         self.assertEqual(css, site_nav.CSS_TEXT)
+        self.assertIn('@media (max-width:640px)', css)
+        self.assertIn('td.is-balance', css)
+        self.assertIn('content:" shortfall"', css)
+        self.assertIn('data-label', js)
+        self.assertIn('roster-face', js)
 
 
 class MethodsPageTests(unittest.TestCase):
