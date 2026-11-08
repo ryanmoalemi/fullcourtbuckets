@@ -73,6 +73,8 @@ The signed agreement lets a team send qualifying offers from January 30 through 
 
 Mitchell averaged 24.7 points in 2026 while shooting 50.9% from the field, 45.0% from three and 85.1% at the line. Her 1,086 regular-season points established a WNBA record ([Mitchell statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html); [WNBA records](https://pr.nba.com/wnba-2026-season-records/)).
 
+!photo: /images/articles/kelsey-mitchell-2027-free-agency-cap/kelsey-mitchell-defense-2024.jpg | Kelsey Mitchell in a red Indiana Fever jersey, number 0, in a defensive stance during a game | Kelsey Mitchell defends in the Fever's game against the Minnesota Lynx at Target Center on July 14, 2024. Photo: John Mac, CC BY-SA 2.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:Kelsey_Mitchell_2024a.jpg | https://creativecommons.org/licenses/by-sa/2.0/ | center 30%
+
 Her scoring is not confined to one area. FCB's calculation from her season totals assigns 492 points to two-point baskets, 405 to threes and 189 to free throws. Her effective field-goal percentage was 60.0%, reflecting the additional value of her made threes ([Mitchell statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html)).
 
 For a contender, the practical appeal is having another player whose defender must stay engaged. Mitchell could attack space created by a teammate, occupy a defender away from the main action, or take responsibility when a possession runs short of time.
@@ -86,6 +88,8 @@ The best fit would offer more than a second famous scorer. It would offer passin
 ## Golden State: give a championship defense more ways to score {#golden-state}
 
 Golden State won 32 games and the 2026 championship. Basketball-Reference's possession estimates ranked it first defensively and seventh offensively. Adding an elite scorer would address the less dominant side of an already successful team ([team statistics](#sources); [WNBA playoffs](https://www.wnba.com/playoffs/2026)).
+
+!photo: /images/articles/kelsey-mitchell-2027-free-agency-cap/gabby-williams-valkyries-2026.jpg | Gabby Williams of the Golden State Valkyries in a black number 1 jersey, hands on her hips | Gabby Williams of the Golden State Valkyries during a game against the Minnesota Lynx at Target Center on August 24, 2026. Photo: John Mac, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:260824_Lynx_Valkries_JohnMc300_(55486705669).jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 25%
 
 The contracted personnel are a major part of the appeal. [Gabby Williams](/wnba/gabby-williams/), [Veronica Burton](/wnba/veronica-burton/) and [Kiah Stokes](/wnba/kiah-stokes/) earned 2026 All-Defensive honors. All three appear on Golden State's 2027 contract list, alongside [Janelle Salaün](/wnba/janelle-salaun/), [Kaila Charles](/wnba/kaila-charles/), [Iliana Rupert](/wnba/iliana-rupert/) and [Justė Jocytė](/wnba/juste-jocyte/) ([contract sources](#sources); [All-Defensive selections](https://valkyries.wnba.com/news/williams-named-to-wnba-all-defensive-first-team-burton-stokes-named-to-wnba-all-defensive-second-team-20261015)).
 
@@ -126,6 +130,8 @@ Mitchell could be a second high-volume scorer so a closeout game does not rest o
 ## Las Vegas: adding Mitchell is easier than keeping Young, too {#las-vegas}
 
 Wilson and Mitchell would give Becky Hammon a compelling pairing. A defense responding aggressively to Mitchell's shooting could open space for Wilson. A defense concentrating on Wilson could give Mitchell cleaner opportunities on the perimeter.
+
+!photo: /images/articles/kelsey-mitchell-2027-free-agency-cap/aja-wilson-aces-2026.jpg | A'ja Wilson of the Las Vegas Aces in a red number 22 jersey, holding the ball over Napheesa Collier | A'ja Wilson of the Las Vegas Aces shoots over Napheesa Collier of the Minnesota Lynx on August 8, 2026. Photo: John McClellan, CC BY-SA 4.0, via Wikimedia Commons | https://commons.wikimedia.org/wiki/File:A%27ja_Wilson_vs._Napheesa_Collier_of_the_Minnesota_Lynx_(August_8,_2026).jpg | https://creativecommons.org/licenses/by-sa/4.0/ | center 15%
 
 The Aces' problem is deciding who remains around them.
 
