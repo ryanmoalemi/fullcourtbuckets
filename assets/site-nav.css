@@ -121,7 +121,7 @@ html body .player-card>.small,html body .number-card>span,html body .text-button
 /* links */
 html body main a:not(.button):not(.site-brand),html body .article a,html body .breadcrumbs a,html body .rail-more a,html body .sources a,html body a.inline-link,
 html body .article .how-made a,html body .article-end a,html body .team-news-item,html body #team-coverage .team-coverage-list a,html body #team-coverage .team-coverage-more summary,
-html body .fcb-csv,html body .fcb-anchor,html body .media-contact a,html body .team-photo figcaption a,html body .career-photo figcaption a,html body .season-summary a,html body .career-copy a{color:var(--link)!important}
+html body .fcb-csv,html body .media-contact a,html body .team-photo figcaption a,html body .career-photo figcaption a,html body .season-summary a,html body .career-copy a{color:var(--link)!important}
 html body main a:hover,html body .article a:hover{color:#b8006f!important}
 html body .article .byline,html body main .byline{color:#2a2622!important}
 html body .article-players a{background:#f6f1ff!important;color:#5b22c9!important;border-color:#d8c8ff!important}
@@ -315,8 +315,3 @@ html body table.fcb-cards td.is-balance + td.is-balance,html body table.fcb-card
 html body table.fcb-cards td.is-balance.is-shortfall,html body table.fcb-cards th.is-balance.is-shortfall{color:#9b1c1c!important;background:#fdecea!important}
 html body table.fcb-cards td.is-shortfall::after,html body table.fcb-cards th.is-shortfall::after{content:" shortfall";color:#9b1c1c;font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 }
-/* Section and table anchors. Hidden until hover or keyboard focus. Touch screens keep them tappable. */
-html body .article .heading-anchor{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;margin:0 0 0 .1rem;vertical-align:middle;color:#5c574f;text-decoration:none;opacity:0;font:700 18px/1 Barlow,sans-serif}
-html body .article h2:hover>.heading-anchor,html body .article h2:focus-within>.heading-anchor,html body .article .heading-anchor:focus{opacity:1}
-html body .article .table-wrap>.heading-anchor{position:absolute;z-index:3;top:0;right:0;margin:0;background:#fff}
-@media (hover:none){html body .article .heading-anchor{opacity:.75}}

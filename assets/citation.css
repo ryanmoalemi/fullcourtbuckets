@@ -93,22 +93,6 @@
   font-weight: 700;
 }
 
-.fcb-anchor {
-  margin-right: 6px;
-  color: #ff9800;
-  font-weight: 700;
-  text-decoration: none;
-  opacity: 0;
-}
-
-h2:hover > .fcb-anchor,
-h3:hover > .fcb-anchor,
-h2:focus-within > .fcb-anchor,
-h3:focus-within > .fcb-anchor,
-.fcb-anchor:focus {
-  opacity: 1;
-}
-
 .fcb-table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -212,10 +196,6 @@ h3:focus-within > .fcb-anchor,
 }
 
 @media (max-width: 900px) {
-  .fcb-anchor {
-    opacity: .8;
-  }
-
   .fcb-quick-cite {
     padding: 12px;
   }

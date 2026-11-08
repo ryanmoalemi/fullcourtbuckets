@@ -151,13 +151,6 @@ def unique_id(base: str, used: set[str]) -> str:
     return candidate
 
 
-def heading_anchor(slug: str) -> str:
-    return (
-        f'<a class="heading-anchor" href="#{esc(slug)}" aria-label="Link to this section">'
-        '<span aria-hidden="true">#</span></a>'
-    )
-
-
 def table_html(rows: list[str], table_id: str = '') -> str:
     """Render a pipe table (header row, --- separator, body rows) as a scrollable table."""
     header = table_cells(rows[0])
@@ -175,9 +168,8 @@ def table_html(rows: list[str], table_id: str = '') -> str:
             tds.append(f'<td{attrs}>{inline(cell)}</td>')
         body_rows.append('<tr>' + ''.join(tds) + '</tr>')
     id_attr = f' id="{esc(table_id)}"' if table_id else ''
-    link = heading_anchor(table_id) if table_id else ''
     return (
-        f'<div class="table-wrap"{id_attr}>{link}<table>'
+        f'<div class="table-wrap"{id_attr}><table>'
         f'<thead><tr>{head_html}</tr></thead>'
         f'<tbody>{"".join(body_rows)}</tbody>'
         '</table></div>'
@@ -544,7 +536,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
         if kind == 'h2':
             slug = unique_id(explicit_id or heading_slug(value), used_ids)
             html_blocks.append(
-                f'<h2 class="section-title" id="{esc(slug)}">{esc(value)}{heading_anchor(slug)}</h2>'
+                f'<h2 class="section-title" id="{esc(slug)}">{esc(value)}</h2>'
             )
             continue
         if kind == 'photo':

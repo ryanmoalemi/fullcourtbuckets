@@ -895,9 +895,15 @@ def _norm_heading(text: str) -> str:
     return ' '.join(text.split()).lower()
 
 
+_VISIBLE_HEADING_ANCHOR_RE = re.compile(
+    r'<a\b(?=[^>]*\bclass="[^"]*\b(?:fcb-anchor|heading-anchor)\b)[^>]*>\s*(?:<span\b[^>]*>\s*#\s*</span>|#)\s*</a>',
+    re.I,
+)
+
+
 def add_heading_anchors(html_text: str, forced: dict | None = None, players: list | None = None,
                         start: str = '<article', end: str = '<footer') -> str:
-    """Add a hover # link on each h2 and h3 in the page body. Keep an id that already exists."""
+    """Give each h2 and h3 in the page body a stable id. Keep an id that already exists. No visible # link."""
     forced = forced or {}
     players = players or []
     begin = html_text.find(start)
@@ -911,9 +917,7 @@ def add_heading_anchors(html_text: str, forced: dict | None = None, players: lis
     def repl(match: re.Match) -> str:
         tag = match.group(1)
         attrs = match.group(2) or ''
-        inner = match.group(3)
-        if 'fcb-anchor' in inner:
-            return match.group(0)
+        inner = _VISIBLE_HEADING_ANCHOR_RE.sub('', match.group(3))
         plain = re.sub(r'<[^>]+>', '', inner)
         key = _norm_heading(plain)
         wanted = forced.get(key)
@@ -938,8 +942,7 @@ def add_heading_anchors(html_text: str, forced: dict | None = None, players: lis
                 suffix += 1
             used.add(ident)
             attrs = f'{attrs} id="{ident}"'
-        link = f'<a class="fcb-anchor" href="#{ident}" aria-label="Link to this section">#</a>'
-        return f'<{tag}{attrs}>{link}{inner}</{tag}>'
+        return f'<{tag}{attrs}>{inner}</{tag}>'
 
     region = pattern.sub(repl, region)
     return html_text[:begin] + region + html_text[finish:]

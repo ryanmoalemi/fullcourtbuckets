@@ -8,7 +8,9 @@ class ArticlePublicationMetadata(unittest.TestCase):
     def test_explicit_section_links_stay_in_the_same_tab(self):
         rendered=pub.body_html('## Cap test {#cap-test}\n\n[See cap test](#cap-test)\n\n{#cap-table}\n\n| Team | Balance |\n| --- | ---: |\n| Golden State | $1 |\n')
         self.assertIn('id="cap-test"', rendered)
-        self.assertIn('>Cap test<a class="heading-anchor" href="#cap-test"', rendered)
+        self.assertIn('>Cap test</h2>', rendered)
+        self.assertNotIn('heading-anchor', rendered)
+        self.assertNotIn('fcb-anchor', rendered)
         self.assertIn('id="cap-table"', rendered)
         self.assertIn('href="#cap-test">See cap test</a>',rendered)
         self.assertNotIn('target="_blank"',rendered)
