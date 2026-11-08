@@ -7,7 +7,9 @@ class TableTest(unittest.TestCase):
     def test_pipe_table(self):
         md = 'Intro.\n\n| Bonus | 2026 |\n|---|---:|\n| **Champion** | [$60,000](/x/) |\n| MVP | $30,000 |\n\nAfter.'
         out = pa.body_html(md)
-        self.assertIn('<div class="table-wrap" id="data-table"><a class="heading-anchor" href="#data-table"', out)
+        self.assertIn('<div class="table-wrap" id="data-table"><table>', out)
+        self.assertNotIn('heading-anchor', out)
+        self.assertNotIn('fcb-anchor', out)
         self.assertIn('<th scope="col">Bonus</th>', out)
         self.assertIn('<td data-label="Bonus"><strong>Champion</strong></td>', out)
         self.assertIn('<td data-label="2026"><a class="inline-link" href="/x/"', out)
