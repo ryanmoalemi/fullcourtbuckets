@@ -638,7 +638,7 @@ def render_page(payload: dict) -> str:
                 'description': DESCRIPTION,
                 'datePublished': '2026-10-31',
                 'dateModified': '2026-10-31',
-                'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': BASE + '/authors/ryan-moalemi/'},
+                'author': links.article_author(),
                 'isPartOf': {'@type': 'WebSite', 'name': 'Full Court Buckets', 'url': BASE + '/'},
             },
             {

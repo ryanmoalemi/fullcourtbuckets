@@ -394,7 +394,7 @@ def jsonld(s: dict) -> str:
     graph = [
         {'@type': 'WebPage', '@id': CANONICAL, 'url': CANONICAL, 'name': H1, 'description': description(s),
          'datePublished': PUBLISHED, 'dateModified': DATA_THROUGH,
-         'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': 'https://fullcourtbuckets.com/authors/ryan-moalemi/'},
+         'author': links.article_author(),
          'publisher': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': 'https://fullcourtbuckets.com/'}},
         {'@type': 'Dataset', 'name': 'Full Court Buckets: where to watch WNBA games', 'url': CANONICAL,
          'description': description(s), 'license': 'https://creativecommons.org/publicdomain/zero/1.0/',

@@ -14,6 +14,7 @@ AUTHOR = {
     '@type': 'Person',
     'name': 'Ryan Moalemi',
     'url': 'https://fullcourtbuckets.com/authors/ryan-moalemi/',
+    'sameAs': list(links.AUTHOR_SAME_AS),
 }
 
 
@@ -80,7 +81,12 @@ class AuthorPageTests(unittest.TestCase):
         self.assertNotIn('href="/wnba/angel-reese/" target="_blank"', page)
         self.assertIn('positive effect the league is having on women', page)
         self.assertIn('thoughtfully and fairly', page)
-        self.assertIn('<!-- TODO: add a LinkedIn sameAs link for Ryan Moalemi', page)
+        self.assertIn('class="author-links"', page)
+        self.assertIn('href="https://www.linkedin.com/in/ryan-moalemi-552654446/" target="_blank" rel="noopener me">LinkedIn</a>', page)
+        self.assertIn('href="https://lnk.bio/ryanmoalemi" target="_blank" rel="noopener me">Lnk.Bio</a>', page)
+        self.assertIn('href="https://app.qwoted.com/sources/ryan-moalemi" target="_blank" rel="noopener me">Qwoted</a>', page)
+        self.assertIn('href="https://www.sourcebottle.com/profile/19170/Ryan-Moalemi" target="_blank" rel="noopener me">SourceBottle</a>', page)
+        self.assertNotIn('TODO: add a LinkedIn sameAs link', page)
         bio_end = page.find('inspires more people to become fans.')
         tiktok_at = page.find('href="https://www.tiktok.com/@fullcourtbuckets" target="_blank" rel="noopener me"')
         self.assertGreater(bio_end, 0)
@@ -122,7 +128,7 @@ class AuthorPageTests(unittest.TestCase):
         self.assertEqual(profile['jobTitle'], 'Editor')
         self.assertIn('since 2001', profile['description'])
         self.assertIn('Full Court Buckets', profile['worksFor']['name'])
-        self.assertNotIn('sameAs', profile)
+        self.assertEqual(profile['sameAs'], list(links.AUTHOR_SAME_AS))
         ordered = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
         stories = page.split('<h2>Stories</h2>', 1)[1].split('</ol>', 1)[0]
         positions = []
@@ -245,5 +251,7 @@ class AuthorPageTests(unittest.TestCase):
             self.assertIn('thoughtfully and fairly', page)
             self.assertIn(links.AUTHOR_HOW_LABEL, page)
             self.assertIn(links.AUTHOR_TIKTOK_HTML, page)
-            self.assertNotIn('sameAs', links.author_person())
+            self.assertEqual(links.author_person()['sameAs'], list(links.AUTHOR_SAME_AS))
+            self.assertEqual(links.article_author()['sameAs'], list(links.AUTHOR_SAME_AS))
+            self.assertIn('class="author-links"', page)
             self.assertNotIn('\u2014', page)

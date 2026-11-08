@@ -742,7 +742,7 @@ def _schema(data: dict, summary: dict, as_of: str, faq_entities: list[dict]) -> 
             'description': PAGE_DESCRIPTION,
             'url': canonical,
             'dateModified': as_of,
-            'author': {'@type': 'Person', 'name': 'Ryan Moalemi', 'url': links.AUTHOR_URL},
+            'author': links.article_author(),
             'about': {'@type': 'Person', 'name': 'Angel Reese', 'url': BASE + '/wnba/angel-reese/'},
         },
         crumbs,
