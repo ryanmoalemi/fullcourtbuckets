@@ -1,51 +1,115 @@
 {
   "slug": "tanisha-wright",
   "player_name": "Tanisha Wright",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "What are Tanisha Wright's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), Tanisha Wright averaged 4.7 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tanisha wright stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Tanisha Wright dating?",
-      "answer": "As of late 2026, Tanisha Wright has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tanisha wright partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Tanisha Wright make?",
-      "answer": "A precise public salary or net worth figure for Tanisha Wright is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Is Tanisha Wright the Penn State coach?",
+      "answer": "Yes. Penn State named Tanisha Wright head coach of its women's basketball team on March 19, 2026. She played for Penn State from 2001 to 2005 and is the program's seventh head coach.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach",
+        "https://www.reuters.com/sports/reports-penn-state-hiring-tanisha-wright-coach--flm-2026-03-19/"
       ],
-      "google_keyword": "tanisha wright salary",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "tanisha wright penn state",
+          "vol": 70
+        },
+        {
+          "q": "tanisha wright coach",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Is Tanisha Wright married?",
-      "answer": "There is no widely reported public record of Tanisha Wright being married as of late 2026.",
+      "question": "Which WNBA teams did Tanisha Wright play for?",
+      "answer": "Tanisha Wright played 14 WNBA seasons, from 2005 to 2019: 10 with the Seattle Storm, three with the New York Liberty and one with the Minnesota Lynx. She won the 2010 WNBA championship with Seattle.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tanisha wright spouse",
-      "approx_monthly_volume": 50
+      "sources": [
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach",
+        "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html",
+        "https://fullcourtbuckets.com/wnba/tanisha-wright/"
+      ],
+      "queries": [
+        {
+          "q": "tanisha wright wnba",
+          "vol": 40
+        }
+      ]
     },
     {
-      "question": "Who are Tanisha Wright's parents?",
-      "answer": "Public profiles share limited verified detail about Tanisha Wright's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Did Tanisha Wright coach the Chicago Sky?",
+      "answer": "Yes. Tanisha Wright was an assistant coach for the Chicago Sky in 2025 before Penn State hired her as head coach.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "tanisha wright family",
-      "approx_monthly_volume": 20
+      "sources": [
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach",
+        "https://www.reuters.com/sports/reports-penn-state-hiring-tanisha-wright-coach--flm-2026-03-19/"
+      ],
+      "queries": [
+        {
+          "q": "tanisha wright chicago sky",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "How did Tanisha Wright do as Atlanta Dream coach?",
+      "answer": "Tanisha Wright was head coach of the Atlanta Dream from 2022 through 2024. She was named AP Coach of the Year in 2022 and led Atlanta to back-to-back playoff appearances in 2023 and 2024. The Dream parted ways with her in October 2024.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach",
+        "https://en.wikipedia.org/wiki/Tanisha_Wright"
+      ],
+      "queries": [
+        {
+          "q": "atlanta dream coach tanisha wright",
+          "vol": 10
+        },
+        {
+          "q": "tanisha wright atlanta dream",
+          "vol": 10
+        },
+        {
+          "q": "tanisha wright coaching record",
+          "vol": 10
+        },
+        {
+          "q": "dream fires coach tanisha wright",
+          "vol": 0
+        }
+      ]
+    },
+    {
+      "question": "What were Tanisha Wright's WNBA career averages?",
+      "answer": "Tanisha Wright averaged 7.3 points, 2.6 rebounds and 3.1 assists in 457 WNBA regular-season games. She made the WNBA All-Defensive First Team five times with Seattle.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html",
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach"
+      ],
+      "queries": [
+        {
+          "q": "tanisha wright stats",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Tanisha Wright?",
+      "answer": "Tanisha Wright was born November 29, 1983. She grew up in West Mifflin, Pennsylvania.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/wrighta01w.html",
+        "https://gopsusports.com/news/2026/03/19/alumna-tanisha-wright-named-lady-lion-basketball-coach"
+      ],
+      "queries": [
+        {
+          "q": "tanisha wright age",
+          "vol": 10
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

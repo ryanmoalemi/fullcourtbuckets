@@ -1,93 +1,172 @@
 {
   "slug": "victoria-vivians",
   "player_name": "Victoria Vivians",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "What are Victoria Vivians's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2024), Victoria Vivians averaged 3.1 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "victoria vivians stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Victoria Vivians dating?",
-      "answer": "As of late 2026, Victoria Vivians has not widely publicized a confirmed dating relationship in major profiles.",
-      "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "victoria vivians partner",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Victoria Vivians make?",
-      "answer": "A precise public salary or net worth figure for Victoria Vivians is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where has Victoria Vivians played in the WNBA?",
+      "answer": "The Indiana Fever drafted Victoria Vivians eighth overall in 2018, and she played five seasons for Indiana (2018 and 2020 to 2023). She played the 2024 season with the Seattle Storm.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/victoria-vivians/",
+        "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html"
       ],
-      "google_keyword": "victoria vivians net worth",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "victoria vivians indiana fever",
+          "vol": 50
+        },
+        {
+          "q": "victoria vivians wnba",
+          "vol": 20
+        },
+        {
+          "q": "victoria vivians wnba draft",
+          "vol": 10
+        },
+        {
+          "q": "victoria vivians draft",
+          "vol": 10
+        },
+        {
+          "q": "victoria vivians seattle storm",
+          "vol": 10
+        },
+        {
+          "q": "victoria vivians fever",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What is Victoria Vivians's jersey number?",
-      "answer": "Victoria Vivians wears number 35 for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "victoria vivians indiana fever jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Victoria Vivians's contract?",
-      "answer": "Contract length and guarantees for Victoria Vivians are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
+      "question": "What did Victoria Vivians do at Mississippi State?",
+      "answer": "Victoria Vivians scored 2,527 points at Mississippi State from 2014 to 2018, second in program history, and helped the Bulldogs reach the NCAA championship game in 2017 and 2018. She was an AP First Team All-American in 2018.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://hailstate.com/news/2024/6/17/victoria-vivians-to-join-womens-basketball-staff",
+        "https://en.wikipedia.org/wiki/Victoria_Vivians"
       ],
-      "google_keyword": "victoria vivians wnba contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "victoria vivians mississippi state",
+          "vol": 20
+        },
+        {
+          "q": "victoria vivians mississippi state stats",
+          "vol": 10
+        },
+        {
+          "q": "victoria vivians college stats",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Victoria Vivians married?",
-      "answer": "There is no widely reported public record of Victoria Vivians being married as of late 2026.",
+      "question": "What is Victoria Vivians doing now?",
+      "answer": "Victoria Vivians is an assistant coach for Texas women's basketball, starting with the 2026-27 season. She was previously an assistant coach and director of scouting at Mississippi State. Her last WNBA season was 2024 with Seattle.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "victoria vivians wife",
-      "approx_monthly_volume": 70
+      "sources": [
+        "https://texaslonghorns.com/news/2026/8/4/womens-basketball-womens-basketball-announces-victoria-vivians-as-assistant-coach",
+        "https://hailstate.com/news/2024/6/17/victoria-vivians-to-join-womens-basketball-staff",
+        "https://fullcourtbuckets.com/wnba/victoria-vivians/"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians current team",
+          "vol": 10
+        },
+        {
+          "q": "who does victoria vivians play for",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What team does Victoria Vivians play for?",
-      "answer": "Her most recent WNBA team on record is the Indiana Fever. She wears No. 35. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "victoria vivians current team",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Victoria Vivians?",
-      "answer": "Victoria Vivians is a professional basketball player for the Indiana Fever.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "who is victoria vivians engaged to",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Victoria Vivians injured?",
-      "answer": "Injury status changes during the season. Check the latest Indiana Fever reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "victoria vivians injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Victoria Vivians's parents?",
-      "answer": "Public profiles share limited verified detail about Victoria Vivians's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "What were Victoria Vivians' WNBA career averages?",
+      "answer": "Victoria Vivians averaged 6.6 points, 3.0 rebounds and 1.4 assists in 179 WNBA regular-season games from 2018 to 2024. Her best season was 2022 with Indiana, at 9.8 points per game.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "victoria vivians family",
-      "approx_monthly_volume": 10
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/victoria-vivians/",
+        "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians stats",
+          "vol": 10
+        },
+        {
+          "q": "victoria vivians wnba stats",
+          "vol": null
+        },
+        {
+          "q": "victoria vivians indiana fever stats",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "How tall is Victoria Vivians?",
+      "answer": "Basketball-Reference lists Victoria Vivians at 6 feet 1 inch. Her position is guard-forward.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "How old is Victoria Vivians?",
+      "answer": "Victoria Vivians was born November 17, 1994.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html",
+        "https://en.wikipedia.org/wiki/Victoria_Vivians"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians age",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Victoria Vivians go to high school?",
+      "answer": "Victoria Vivians played at Scott Central High School in Forest, Mississippi, and was a two-time Mississippi Miss Basketball.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/v/viviavi01w.html",
+        "https://hailstate.com/news/2024/6/17/victoria-vivians-to-join-womens-basketball-staff"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians high school",
+          "vol": null
+        }
+      ]
+    },
+    {
+      "question": "Was Victoria Vivians homecoming queen?",
+      "answer": "Yes. Victoria Vivians was crowned Mississippi State's Homecoming Queen in 2017.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://hailstate.com/news/2024/6/17/victoria-vivians-to-join-womens-basketball-staff",
+        "https://en.wikipedia.org/wiki/Victoria_Vivians"
+      ],
+      "queries": [
+        {
+          "q": "victoria vivians homecoming queen",
+          "vol": null
+        },
+        {
+          "q": "victoria vivians homecoming",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

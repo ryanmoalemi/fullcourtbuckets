@@ -1,94 +1,150 @@
 {
   "slug": "ruth-riley",
   "player_name": "Ruth Riley",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "What are Ruth Riley's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2013), Ruth Riley averaged 2.0 points, 0.5 rebounds, and 0.3 assists in 4 games for Atlanta Dream. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ruth riley stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Ruth Riley make?",
-      "answer": "A precise public salary or net worth figure for Ruth Riley is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What does Ruth Riley do for the Miami Heat?",
+      "answer": "Ruth Riley, who now goes by Ruth Hunter, is the Miami Heat's Senior Director of Team Development, a role the Heat announced in August 2022. She first joined the Heat as a broadcast analyst.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.nba.com/heat/bio/ruth-riley-hunter",
+        "https://www.nba.com/heat/news/ruth-hunter-named-senior-director-of-team-development"
       ],
-      "google_keyword": "ruth riley net worth",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "ruth riley hunter",
+          "vol": 260
+        },
+        {
+          "q": "ruth riley miami heat",
+          "vol": 20
+        },
+        {
+          "q": "ruth riley hunter miami heat",
+          "vol": 10
+        },
+        {
+          "q": "ruth riley heat",
+          "vol": null
+        },
+        {
+          "q": "ruth riley nba",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Is Ruth Riley married?",
-      "answer": "There is no widely reported public record of Ruth Riley being married as of late 2026.",
+      "question": "Which WNBA teams did Ruth Riley play for?",
+      "answer": "Ruth Riley played 13 WNBA seasons, from 2001 to 2013, for the Miami Sol, Detroit Shock, San Antonio Silver Stars, Chicago Sky and Atlanta Dream. She won WNBA championships with Detroit in 2003 and 2006 and was the 2003 WNBA Finals MVP.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Ruth_Riley"
+        "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html",
+        "https://www.nba.com/heat/bio/ruth-riley-hunter",
+        "https://fullcourtbuckets.com/wnba/ruth-riley/"
       ],
-      "google_keyword": "ruth riley husband",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "ruth riley wnba",
+          "vol": 110
+        },
+        {
+          "q": "ruth riley dates joined",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "Who are Ruth Riley's parents?",
-      "answer": "Public profiles share limited verified detail about Ruth Riley's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "How tall is Ruth Riley?",
+      "answer": "Basketball-Reference lists Ruth Riley at 6 feet 5 inches; other listings have her at 6 feet 4 inches. She played center.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html",
         "https://en.wikipedia.org/wiki/Ruth_Riley"
       ],
-      "google_keyword": "ruth riley parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "ruth riley height",
+          "vol": 50
+        },
+        {
+          "q": "how tall is ruth riley",
+          "vol": 30
+        },
+        {
+          "q": "ruth riley hunter height",
+          "vol": 10
+        },
+        {
+          "q": "ruth riley tall",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "Who is Ruth Riley?",
-      "answer": "Ruth Ellen Riley Hunter is an American former professional basketball player, playing most recently for the Atlanta Dream in the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Where did Ruth Riley play college basketball?",
+      "answer": "Ruth Riley played at Notre Dame. As a senior in 2001 she led the Fighting Irish to the NCAA championship, was named Most Outstanding Player of the Final Four and won the Naismith Player of the Year award.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.nba.com/heat/bio/ruth-riley-hunter",
         "https://en.wikipedia.org/wiki/Ruth_Riley"
       ],
-      "google_keyword": "ruth riley",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "ruth riley notre dame",
+          "vol": 40
+        },
+        {
+          "q": "ruth riley college stats",
+          "vol": null
+        }
+      ]
     },
     {
-      "question": "What team does Ruth Riley play for?",
-      "answer": "Her most recent WNBA team on record is the Las Vegas Aces. Her listed position is Center.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ruth riley",
-      "approx_monthly_volume": 1300
-    },
-    {
-      "question": "What position does Ruth Riley play?",
-      "answer": "Ruth Riley is listed as a Center for the Las Vegas Aces.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "ruth riley",
-      "approx_monthly_volume": 1300
+      "question": "What were Ruth Riley's career averages?",
+      "answer": "Ruth Riley averaged 6.3 points, 4.1 rebounds and 1.2 assists in 387 WNBA regular-season games from 2001 to 2013. Her best scoring season was 2004, at 11.1 points per game for Detroit.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html",
+        "https://www.nba.com/heat/bio/ruth-riley-hunter"
+      ],
+      "queries": [
+        {
+          "q": "ruth riley stats",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How old is Ruth Riley?",
-      "answer": "Public profiles list Ruth Riley as born in 1979. As of late 2026 that puts her around 47 years old.",
-      "answer_kind": "bio",
+      "answer": "Ruth Riley was born August 28, 1979, in Ransom, Kansas.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/r/rileyru01w.html",
         "https://en.wikipedia.org/wiki/Ruth_Riley"
       ],
-      "google_keyword": "ruth riley",
-      "approx_monthly_volume": 1300,
-      "birthdate": "1979-01-01"
+      "queries": [
+        {
+          "q": "ruth riley age",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "What is Ruth Riley's nationality?",
-      "answer": "Ruth Riley is American.",
-      "answer_kind": "bio",
+      "question": "Is Ruth Riley in the Hall of Fame?",
+      "answer": "Yes. Ruth Riley was inducted into the Women's Basketball Hall of Fame in 2019.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.nba.com/heat/bio/ruth-riley-hunter",
         "https://en.wikipedia.org/wiki/Ruth_Riley"
       ],
-      "google_keyword": "ruth riley",
-      "approx_monthly_volume": 1300
+      "queries": [
+        {
+          "q": "ruth riley hall of fame",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

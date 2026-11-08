@@ -1,57 +1,88 @@
 {
   "slug": "kitija-laksa",
   "player_name": "Kitija Laksa",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "What are Kitija Laksa's stats / points per game?",
-      "answer": "In the 2026 regular season, Kitija Laksa averaged 5.9 points, 1.2 rebounds, and 0.6 assists in 33 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "kitija laksa stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Kitija Laksa dating?",
-      "answer": "As of late 2026, Kitija Laksa has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "How did Kitija Laksa reach the WNBA?",
+      "answer": "Kitija Laksa made her WNBA debut with the Phoenix Mercury on May 21, 2025, five years after the Seattle Storm drafted her 11th overall. She played 33 games for Phoenix in 2025 and signed with the Dallas Wings in August 2026.",
       "answer_kind": "researched",
       "sources": [
+        "https://fullcourtbuckets.com/wnba/kitija-laksa/",
+        "https://www.basketball-reference.com/wnba/players/l/laksaki01w.html",
         "https://en.wikipedia.org/wiki/Kitija_Laksa"
       ],
-      "google_keyword": "kitija laksa partner",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "kitija laksa wnba",
+          "vol": 20
+        },
+        {
+          "q": "kitija laksa mercury",
+          "vol": 10
+        }
+      ]
     },
     {
-      "question": "How much does Kitija Laksa make?",
-      "answer": "A precise public salary or net worth figure for Kitija Laksa is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What are Kitija Laksa's WNBA career averages?",
+      "answer": "Kitija Laksa has averaged 5.6 points and 1.3 rebounds in 37 WNBA regular-season games. In 2025 with Phoenix, she averaged 5.9 points in 33 games.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://fullcourtbuckets.com/wnba/kitija-laksa/",
+        "https://www.basketball-reference.com/wnba/players/l/laksaki01w.html"
       ],
-      "google_keyword": "kitija laksa salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "kitija laksa stats",
+          "vol": 20
+        }
+      ]
+    },
+    {
+      "question": "Does Kitija Laksa play for Latvia?",
+      "answer": "Yes. Kitija Laksa plays for Latvia's national team. She averaged 9.6 points at EuroBasket Women 2017 and 15.7 points at EuroBasket Women 2023.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fiba.basketball/en/history/297-fiba-womens-eurobasket/9446/players/191538-kitija-laksa",
+        "https://www.fiba.basketball/en/history/297-fiba-womens-eurobasket/208490/players/191538-kitija-laksa"
+      ],
+      "queries": [
+        {
+          "q": "kitija laksa eurobasket",
+          "vol": 10
+        }
+      ]
     },
     {
       "question": "How tall is Kitija Laksa?",
-      "answer": "Kitija Laksa is listed at 6' 1\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Kitija_Laksa"
-      ],
-      "google_keyword": "kitija laksa height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Kitija Laksa married?",
-      "answer": "There is no widely reported public record of Kitija Laksa being married as of late 2026.",
+      "answer": "Full Court Buckets lists Kitija Laksa at 6 feet 1 inch. She plays guard.",
       "answer_kind": "researched",
       "sources": [
+        "https://fullcourtbuckets.com/wnba/kitija-laksa/",
+        "https://www.basketball-reference.com/wnba/players/l/laksaki01w.html"
+      ],
+      "queries": [
+        {
+          "q": "kitija laksa height",
+          "vol": 10
+        }
+      ]
+    },
+    {
+      "question": "Where did Kitija Laksa play college basketball?",
+      "answer": "Kitija Laksa played at South Florida. A knee injury in November 2018 ended her senior season.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/kitija-laksa/",
         "https://en.wikipedia.org/wiki/Kitija_Laksa"
       ],
-      "google_keyword": "kitija laksa husband",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "kitija laksa usf",
+          "vol": null
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
