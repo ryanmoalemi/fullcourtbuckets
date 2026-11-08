@@ -1,17 +1,63 @@
 {
   "slug": "roneeka-hodges",
   "player_name": "Roneeka Hodges",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "Is Roneeka Hodges married?",
-      "answer": "There is no widely reported public record of Roneeka Hodges being married as of late 2026.",
+      "question": "Who does Roneeka Hodges coach?",
+      "answer": "Roneeka Hodges is head coach of Phantom BC in Unrivaled, the 3-on-3 league. Before that she was a WNBA assistant coach with the New York Liberty (2022 to 2024), where she won the 2024 WNBA title, and with the Connecticut Sun, who hired her in January 2025.",
       "answer_kind": "researched",
-      "sources": [],
-      "google_keyword": "roneeka hodges wife",
-      "approx_monthly_volume": 110
+      "sources": [
+        "https://www.unrivaled.basketball/phantom",
+        "https://sun.wnba.com/news/connecticut-sun-welcomes-roneeka-hodges-as-assistant-coach",
+        "https://liberty.wnba.com/news/new-york-liberty-finalize-2022-coaching-staff/",
+        "https://en.wikipedia.org/wiki/Roneeka_Hodges"
+      ],
+      "queries": [
+        {
+          "q": "roneeka hodges unrivaled",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "roneeka hodges coach",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        },
+        {
+          "q": "roneeka hodges head coach",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        },
+        {
+          "q": "roneeka hodges wnba coach",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        },
+        {
+          "q": "roneeka hodges connecticut sun",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        }
+      ]
+    },
+    {
+      "question": "Which WNBA teams did Roneeka Hodges play for?",
+      "answer": "Roneeka Hodges played 11 WNBA seasons, from 2005 to 2015, for the Houston Comets, Minnesota Lynx, San Antonio Silver Stars, Indiana Fever, Tulsa Shock and Atlanta Dream. Houston drafted her 15th overall in 2005 out of Florida State, and she averaged 6.0 points in 320 regular-season games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/h/hodgero01w.html",
+        "https://en.wikipedia.org/wiki/Roneeka_Hodges",
+        "https://fullcourtbuckets.com/wnba/roneeka-hodges/"
+      ],
+      "queries": [
+        {
+          "q": "roneeka hodges basketball",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

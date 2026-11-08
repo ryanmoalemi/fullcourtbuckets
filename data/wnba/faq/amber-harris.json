@@ -1,64 +1,67 @@
 {
   "slug": "amber-harris",
   "player_name": "Amber Harris",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 8, 2026",
+  "verified_at": "2026-11-08",
   "items": [
     {
-      "question": "Who is Amber Harris?",
-      "answer": "Amber Harris is an American professional basketball player.",
-      "answer_kind": "mixed",
+      "question": "Did Amber Harris play in the WNBA?",
+      "answer": "Yes. The Minnesota Lynx drafted Amber Harris fourth overall in 2011 out of Xavier. She played five WNBA seasons, with Minnesota from 2011 to 2013 and the Chicago Sky in 2017 and 2018, averaging 2.7 points and 1.8 rebounds in 112 regular-season games. She won WNBA titles with the Lynx in 2011 and 2013.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Amber_Harris"
+        "https://www.basketball-reference.com/wnba/players/h/harriam01w.html",
+        "https://en.wikipedia.org/wiki/Amber_Harris",
+        "https://fullcourtbuckets.com/wnba/amber-harris/"
       ],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "amber harris wnba",
+          "vol": 30,
+          "source": "openseo"
+        },
+        {
+          "q": "amber harris basketball",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What team does Amber Harris play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What are Amber Harris's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2017), Amber Harris averaged 1.6 points, 1.6 rebounds, and 0.2 assists in 27 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What position does Amber Harris play?",
-      "answer": "Amber Harris is listed as a Forward for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How old is Amber Harris?",
-      "answer": "Public profiles list Amber Harris as born in 1988. As of late 2026 that puts her around 38 years old.",
-      "answer_kind": "bio",
+      "question": "Did Amber Harris play for the Chicago Sky?",
+      "answer": "Yes. Amber Harris played 28 regular-season games for the Chicago Sky over the 2017 and 2018 seasons, averaging 1.5 points and 1.5 rebounds.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Amber_Harris"
+        "https://www.basketball-reference.com/wnba/players/h/harriam01w.html",
+        "https://fullcourtbuckets.com/wnba/amber-harris/"
       ],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880,
-      "birthdate": "1988-01-01"
+      "queries": [
+        {
+          "q": "amber harris chicago sky",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is Amber Harris's nationality?",
-      "answer": "Amber Harris is American.",
-      "answer_kind": "bio",
+      "question": "Where did Amber Harris play college basketball?",
+      "answer": "Amber Harris played at Xavier from 2006 to 2011, with a redshirt year in 2008-09. She averaged 16.6 points and 9.2 rebounds over 133 games, was Atlantic 10 Player of the Year in 2010 and 2011, and was an AP second-team All-American in 2011.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Amber_Harris"
+        "https://en.wikipedia.org/wiki/Amber_Harris",
+        "https://www.basketball-reference.com/wnba/players/h/harriam01w.html"
       ],
-      "google_keyword": "amber harris",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "amber harris xavier",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        },
+        {
+          "q": "amber harris xavier university",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-08)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
