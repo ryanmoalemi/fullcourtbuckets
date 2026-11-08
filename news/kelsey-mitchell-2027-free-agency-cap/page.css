@@ -1,2 +1,8 @@
 /* Circle headshots in this article's tables. Same treatment as a team roster row. */
 .article .roster-face{display:inline-block;width:32px;height:32px;max-width:32px;border-radius:50%;object-fit:cover;object-position:center 18%;vertical-align:middle;margin-right:.45rem;background:#e9e9ef}
+/* Desktop: the whole table stays in the column. Phones use the site card layout under 640px. */
+@media (min-width:641px){
+html body .article .table-wrap{overflow-x:visible}
+html body .article .table-wrap table{width:100%;table-layout:fixed}
+html body .article .table-wrap td,html body .article .table-wrap th,html body .article .table-wrap thead th,html body .article .table-wrap thead th:last-child{white-space:normal;overflow-wrap:anywhere}
+}

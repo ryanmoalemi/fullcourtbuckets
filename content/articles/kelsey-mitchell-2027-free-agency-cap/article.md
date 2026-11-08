@@ -22,34 +22,46 @@ focal_y: "center 22%"
 ticker: "Three contenders, three roster choices: Kelsey Mitchell and the path to the Finals."
 data_table_first: true
 table_headshots: true
-updated: "2026-11-08T06:30:21+00:00"
+updated: "2026-11-08T07:20:00+00:00"
 editorial_disclosure: "AI assisted research and editing. Full Court Buckets is responsible for the published analysis. Sources and calculation methods are provided above."
 ---
 
-**[Kelsey Mitchell](/wnba/kelsey-mitchell/) could join Golden State's championship defense with $800,972 left above minimum roster charges at the highest permitted 2027 cap. Las Vegas and Atlanta face different choices about who stays. Here is how all three could build a Finals team around her.**
+**At an unchanged $7 million cap, Golden State could add [Kelsey Mitchell](/wnba/kelsey-mitchell/) and have $45,672 left above minimum roster charges. That cushion is $800,972 at the $7.91 million ceiling. Las Vegas fits her at a lower cap if Jackie Young leaves.**
 
 ## What each team could afford {#cap-comparison}
 
-| Team and scenario | Balance at a $7.50M cap | Balance at a $7.91M cap |
-| --- | ---: | ---: |
-| Golden State signs Mitchell | $460,672 | $800,972 |
-| Las Vegas signs Mitchell; Young leaves | $415,800 | $674,100 |
-| Las Vegas signs Mitchell; Young returns at 20% of cap | -$795,600 | -$619,300 |
-| Atlanta signs Mitchell; keeps nine listed contracts | -$533,030 | -$192,730 |
+Here is what signing Mitchell would leave at three caps, after minimum charges to reach 12 players:
 
-Source: FCB calculations from the Her Hoop Stats WNBA Salary Cap Database and the signed CBA. Data through November 7, 2026 (PST). Mitchell is modeled at 17% of the cap. Remaining regular-roster positions cost $288,600 each until the team reaches 12 players. Wilson's salary changes with the cap. A positive balance is available for upgrades above the budgeted minimums ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf); [contract sources](#sources)).
+| Team and scenario | Balance at a $7.00M cap | Balance at a $7.50M cap | Balance at a $7.91M cap |
+| --- | ---: | ---: | ---: |
+| Golden State signs Mitchell | $45,672 | $460,672 | $800,972 |
+| Las Vegas signs Mitchell; Young leaves | $100,800 | $415,800 | $674,100 |
+| Las Vegas signs Mitchell; Young returns at 20% of cap | -$1,010,600 | -$795,600 | -$619,300 |
+| Atlanta signs Mitchell; keeps nine listed contracts | -$948,030 | -$533,030 | -$192,730 |
 
-FCB's original calculations are **free to use and republish (CC0)**. [Scenario CSV](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-cap-scenarios.csv), [player salary inputs](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-salary-inputs.csv), [trade scenarios](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-trade-scenarios.csv) and [break-even caps](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-break-even-caps.csv). Contract inputs are attributed to Her Hoop Stats; the CC0 dedication covers FCB's original calculations, not rights in third-party material.
+Source: FCB calculations from Her Hoop Stats 2027 contract columns and the signed CBA. Data through November 7, 2026 (PST). Methods: Mitchell at 17 percent of the cap, Wilson at 20 percent for Las Vegas, and a $288,600 charge on each open spot through 12 players. The columns are a $7 million unchanged cap, a $7.50 million sensitivity case, and the $7.91 million ceiling. Download (CC0): [Scenario CSV](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-cap-scenarios.csv)
 
-The $7.91 million case is a ceiling, not an announced cap. The agreement permits a 2027 cap from $6.09 million to $7.91 million. The $7.50 million case is a sensitivity test, not a forecast or the lowest possible outcome ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf)).
+A positive balance is money left for an upgrade above those minimums. A negative balance is the shortfall in this veteran-filled model. [Player salary inputs](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-salary-inputs.csv) and [trade scenarios](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-trade-scenarios.csv) use the same contracts.
 
-Golden State could add Mitchell's scoring to a championship defense. Las Vegas could pair her with [A'ja Wilson](/wnba/aja-wilson/), but keeping [Jackie Young](/wnba/jackie-young/) would require a much tighter roster. Atlanta could give its Finals team another perimeter threat, with the price measured in either Mitchell's salary or a departing contributor.
+## Where each roster first fits {#break-even-caps}
 
-This is scenario analysis, not a report of offers, negotiations or Mitchell's preferences. The lineups are hypothetical. Contract inputs were checked November 7, 2026 (PST).
+A salary-clearing move can work under one cap and fail under another. These are the cap levels at which each proposed roster first fits, including minimum-cost replacements.
 
-Jump to [Golden State](#golden-state), [Las Vegas](#las-vegas), [Atlanta](#atlanta), [break-even caps](#break-even-caps) or [methodology](#methodology).
+| Proposed roster | Break-even cap | Inside the $6.09M to $7.91M range? |
+| --- | ---: | --- |
+| Las Vegas signs Mitchell; Young leaves | $6,839,998 | Yes |
+| Golden State signs Mitchell; keeps seven contracts | $6,944,973 | Yes |
+| Atlanta signs Mitchell; trades Jones for no salary | $7,254,975 | Yes |
+| Atlanta signs Mitchell; trades Hillmon for no salary | $7,465,819 | Yes |
+| Atlanta signs Mitchell; trades Canada for no salary | $7,706,782 | Yes |
+| Las Vegas keeps Young at 20%, signs Mitchell, trades Loyd and Evans for no salary | $7,811,161 | Yes |
+| Las Vegas keeps Young at 20%, signs Mitchell, trades only Loyd for no salary | $8,067,903 | No |
+| Atlanta signs Mitchell; keeps nine contracts | $8,142,204 | No |
+| Las Vegas keeps Young at 20% and signs Mitchell; no trade | $9,350,231 | No |
 
-The strongest overall fit in this comparison is Golden State, because its acquisition path preserves an identifiable defensive foundation. That is an assessment of fit and retained personnel, not a prediction of Mitchell's choice or a claim that the Valkyries have the only workable budget.
+Source: FCB calculations from the same contract inputs and the signed CBA. Data through November 7, 2026 (PST). Methods: the smallest whole-dollar cap at which the scenario formula is no longer negative. Seventeen percent of the cap is cap times 17, divided by 100 in whole dollars. Twenty percent is the cap divided by 5 in whole dollars. Each open spot, including a replacement for a departed player, costs $288,600. Download (CC0): [Break-even caps](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-break-even-caps.csv)
+
+Golden State is still the preferred basketball fit, because the seven contracted players include an All-Defensive core. The budget result is separate. Las Vegas without Young first fits at $6,839,998, which is below Golden State's $6,944,973. At an unchanged $7 million cap, that Las Vegas roster also has more left over: $100,800, against Golden State's $45,672.
 
 ## Why Mitchell changes the conversation
 
@@ -58,8 +70,6 @@ Mitchell averaged 24.7 points in 2026 while shooting 50.9% from the field, 45.0%
 Her scoring is not confined to one area. FCB's calculation from her season totals assigns 492 points to two-point baskets, 405 to threes and 189 to free throws. Her effective field-goal percentage was 60.0%, reflecting the additional value of her made threes ([Mitchell statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html)).
 
 For a contender, the practical appeal is having another player whose defender must stay engaged. Mitchell could attack space created by a teammate, occupy a defender away from the main action, or take responsibility when a possession runs short of time.
-
-The receiving team still has to create good opportunities.
 
 An Indiana Fever release credits [Caitlin Clark](/wnba/caitlin-clark/) with 96 assists to Mitchell out of 333 total assists, or 28.8%. That describes where Clark's assists went. It does not tell us what percentage of Mitchell's scoring depends on Clark or what would disappear if she left ([Fever release](https://www.oursportscentral.com/services/releases/fevers-backcourt-duo-of-clark-mitchell-honored-for-historic-offensive-season/n-6424164)).
 
@@ -93,21 +103,17 @@ It would also have to rebound. A lineup that improves shot creation but surrende
 
 The model keeps the seven listed contracts, not every member of the championship rotation. [Tiffany Hayes](/wnba/tiffany-hayes/) and [Kayla Thornton](/wnba/kayla-thornton/) are unrestricted free agents; [Cecilia Zandalasini](/wnba/cecilia-zandalasini/) is restricted. Their returns would need to be funded from the remaining budget ([contract sources](#sources)).
 
-At the upper cap, four minimum positions plus an additional $800,972 provide real choices. The Valkyries could spend more heavily on a familiar veteran, distribute the extra money across several roles, or prioritize a particular playoff need.
+Four minimum positions are already in the model. The money above them is $45,672 at an unchanged $7 million cap, $460,672 at $7.50 million, and $800,972 at $7.91 million. Putting the entire surplus into one open spot, and leaving the other three at $288,600, would pay $334,272, $749,272, or $1,089,572 for that one player. At the unchanged cap, that is a modest raise over the minimum, not another star.
 
 They could not assume that every unsigned contributor returns at a convenient price.
 
 The roster question is therefore whether Golden State can add Mitchell while retaining enough bench passing, shooting and size to support different closing lineups.
 
-### How Golden State gets back to the Finals
+### What Game 7 showed
 
-The Valkyries would not need Mitchell to reinvent their defense. They would need her to help prevent the offense from becoming predictable against opponents that stop transition chances and deny the first action.
+Golden State won the championship, 68-63, and trailed 30-24 at halftime ([Game 7 recap](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap)). [Gabby Williams](/wnba/gabby-williams/) scored 30 of those 68 points. [Veronica Burton](/wnba/veronica-burton/), the organizer who is under contract for 2027, was 3-for-13 from the field and 0-for-5 from three, with 10 points and 5 assists. [Kiah Stokes](/wnba/kiah-stokes/) had 13 rebounds. [Tiffany Hayes](/wnba/tiffany-hayes/) scored 11 and is not one of the seven contracts in this model ([Game 7 box score](https://www.basketball-reference.com/wnba/boxscores/202610310GSV.html)). The team shot 24-for-64, including 5-for-20 from three ([WNBA box score](https://www.wnba.com/game/atl-vs-gsv-1042600307/box-score)).
 
-Against a defense that switches, she could attack the resulting matchup. Against a defense that sends two players toward her, the next pass would become the important one. Against a team that crowds the lane, her shooting could give Williams and Burton more useful space.
-
-The Finals condition is a better half-court offense with most of the defensive structure still intact.
-
-The warning sign would be a team that gains individual scoring but loses too much in rebounding, ball movement or defensive coordination.
+Mitchell could be a second high-volume scorer so a closeout game does not rest on one player's second half. She would not have supplied Burton's five assists or Stokes's 13 rebounds in that game. Hayes's 11 points are also outside the contracted seven. One Game 7 does not prove the offense fails without another scorer. It shows where the points came from.
 
 **FCB assessment:** Golden State offers the clearest role for Mitchell with the fewest required changes to the contracted defensive foundation.
 
@@ -117,53 +123,37 @@ Wilson and Mitchell would give Becky Hammon a compelling pairing. A defense resp
 
 The Aces' problem is deciding who remains around them.
 
-Wilson's listed future salary floats at 20% of the cap. The $1.47 million displayed in the salary table is therefore not the correct figure at either cap level tested here. At $7.91 million, Wilson would account for $1.582 million ([contract sources](#sources)).
+Wilson's listed future salary floats at 20% of the cap. The $1.47 million displayed in the salary table is not the figure used here. She accounts for $1,400,000 at a $7 million cap, $1,500,000 at $7.50 million, and $1,582,000 at $7.91 million ([contract sources](#sources)).
 
-The Aces' other four listed commitments total $2,577,600: [Chelsea Gray](/wnba/chelsea-gray/), [Jewell Loyd](/wnba/jewell-loyd/), [Dana Evans](/wnba/dana-evans/) and Janiah Barker. Young is a free agent.
+The other four listed commitments total $2,577,600: [Chelsea Gray](/wnba/chelsea-gray/), [Jewell Loyd](/wnba/jewell-loyd/), [Dana Evans](/wnba/dana-evans/) and Janiah Barker. Young is a free agent.
 
 ### If Young leaves
 
-Las Vegas could sign Mitchell at 17% of the cap, retain the five listed players, and budget six minimum positions with $674,100 available for upgrades at the upper cap.
+Las Vegas could sign Mitchell at 17% of the cap, keep those five contracts, and budget six minimum positions. The money left above the minimums is $100,800 at an unchanged $7 million cap, $415,800 at $7.50 million, and $674,100 at $7.91 million.
 
-A proposed closing structure would be Gray, Mitchell, a defensive wing, a complementary forward and Wilson. The unspecified positions are roster jobs the Aces would still have to fill.
+Loyd and Barker are the contracted players who can fill the wing and forward minutes next to Gray, Mitchell and Wilson. Loyd is already paid $840,000. Basketball-Reference lists her as a guard who started 3 of 42 games in 2026 and averaged 8.0 points in 25.9 minutes, so the in-model answer is that she comes off the bench, as she did, or starts if the coaches change that role. She is a scorer. The contract list does not include another player hired to guard a perimeter star. ([Aces 2026](https://www.basketball-reference.com/wnba/teams/LVA/2026.html)). Barker is the only other contracted frontcourt player besides Wilson, at the $288,600 minimum. The same page lists her as a forward, and its per-game table does not include her, so this model does not treat her as a proven rotation forward. She can take those minutes or sit if an open spot is upgraded. Evans, at $399,000, is the other contracted guard who can spell Gray. Basketball-Reference lists her in 14 games.
 
-Gray could organize the initial action, Mitchell could attack off a screen or relocation, and Wilson could become the interior target. Staggering Wilson and Mitchell would also give Las Vegas a way to keep a major scoring threat on the court while one rests.
+The surplus pays one of the six open spots above the minimum. It does not raise Barker's existing contract. Spending all of it on one open spot, and leaving the other five at $288,600, would pay $389,400 at a $7 million cap, $704,400 at $7.50 million, or $962,700 at $7.91 million. At the unchanged cap, that is not another maximum salary. This comparison does not name a free agent the Aces have not signed.
 
-The cost is Young's departure. Her 2026 averages included 18.9 points, 6.8 assists and 4.4 rebounds. Mitchell's scoring does not replace that entire combination ([team statistics](#sources)).
-
-Las Vegas would need to recover enough size, passing and perimeter defense through its remaining roster choices. Otherwise, opponents could pressure Gray, force Mitchell to initiate more often, and make Wilson cover too many defensive mistakes.
+Gray could still organize the first action, Mitchell could attack off a screen, and Wilson could be the interior target. The cost is Young's departure. Her 2026 averages included 18.9 points, 6.8 assists and 4.4 rebounds. Mitchell's scoring does not replace that combination ([team statistics](#sources)).
 
 ### If Young stays
 
-A proposed group of Gray, Mitchell, Young, a complementary forward and Wilson is more complete in terms of creation. Young would provide another ball handler and an additional option for demanding perimeter assignments.
+Gray, Mitchell, Young and Wilson would be four closing pieces, with Young as another ball handler. The fifth spot is already on the sheet: Loyd on the wing, with Barker off the bench, or Barker in the forward minutes and Loyd off the bench in the role she played in 2026. There is no upgrade money in that version. The shortfall is $1,010,600 at $7 million, $795,600 at $7.50 million, and $619,300 at $7.91 million. Wilson and Young at 20% each, plus Mitchell at 17%, use 57% of the cap before the other contracts and the minimums.
 
-It is also more expensive.
+Moving Loyd's $840,000 salary for no returning salary saves $551,400 after a replacement charge. The Aces would still be short by $459,200 at $7 million, $244,200 at $7.50 million, and $67,900 at $7.91 million. Also moving Evans's $399,000 salary saves another $110,400 after a second replacement. That double move leaves $42,500 only at the $7.91 million cap, with seven minimum spots. It is still short by $348,800 at $7 million and $133,800 at $7.50 million ([contract sources](#sources); FCB calculations).
 
-At the upper cap, Wilson and Young at 20% each plus Mitchell at 17% would use 57% of the budget. Retaining the other existing contracts and filling the remaining roster at veteran minimum cap charges leaves a $619,300 shortfall.
+That is a budget construction, not a reported plan or evidence of a trade partner. Once Loyd is gone, Barker is the remaining contracted forward next to Wilson. The $42,500 at the ceiling is the only leftover in the Young-retained path, and it exists only at that ceiling.
 
-Moving Loyd's $840,000 salary for no returning salary creates $551,400 of net savings after budgeting a replacement. The Aces would still be $67,900 short.
+The $67,900 gap after a Loyd-only move at $7.91 million could also be closed by an equivalent cut in the combined modeled salaries of Young and Mitchell. That does not mean either would accept it.
 
-A further conditional move illustrates how narrow the path becomes. If Las Vegas also moved Evans's $399,000 salary for no incoming salary, the additional savings after another minimum replacement would be $110,400. The model would then have $42,500 left at $7.91 million, with seven minimum roster positions ([contract sources](#sources); FCB calculations).
+### What the semifinal opener showed
 
-That is a possible budget construction, not a reported plan or evidence of available trade partners. At a $7.50 million cap, the same two departures would still leave a $133,800 shortfall.
+Las Vegas scored 60 points on 33.9% shooting in Game 1 at Golden State, and Golden State won the rebounding battle 52-25. The AP recap on WNBA.com called 60 the Aces' lowest point total of the season. Becky Hammon said, "We lost the game on the boards, no question about that." The same recap says Jewell Loyd left early in the third quarter with a left leg injury ([Game 1 recap](https://www.wnba.com/news/2026-playoffs-aces-valkyries-game-1-recap)). Basketball-Reference has Loyd at 0-for-2 and 0 points in 16:34, and Young at 11 points on 4-for-15 ([Game 1 box score](https://www.basketball-reference.com/wnba/boxscores/202610040GSV.html)).
 
-This version asks the Aces to replace two contracted guards while filling most of the roster at minimum cost. The fifth closing player would have to come from that constrained pool or the remaining contracted personnel.
+Mitchell could be another scorer on a night when a perimeter player is out and the shot is not falling. She does not fix a 25-52 rebounding gap. Young was on the floor for that game and still shot 4-for-15, so the cold night was not only Loyd's absence. One game does not settle the series. Golden State won the next two as well ([WNBA playoffs](https://www.wnba.com/playoffs/2026)).
 
-### The smallest cap concession that changes the upper-cap result
-
-After the hypothetical Loyd-only move, the remaining $67,900 gap could also be closed by an equivalent reduction in the combined modeled salaries of Young and Mitchell.
-
-That does not mean either would accept it. It does show the difference between saying a specific maximum-salary construction fails and saying the partnership itself is impossible.
-
-### How Las Vegas reaches the Finals
-
-With Young retained, the strongest route would combine several creators with the Wilson-Mitchell screening game, then defend well enough on the perimeter that Wilson is not responsible for fixing every breakdown.
-
-Without Young, the route depends more on whether the replacement wings can defend and make the next pass.
-
-The Aces would also need a useful lineup when an opponent puts two defenders on Mitchell or denies the pass to Wilson. Collecting scorers is not enough if the possession stops when the first option is removed.
-
-**FCB assessment:** The star pairing is attractive in both versions. The Young-retained version has the more complete basketball case, but its remaining roster is much harder to finance.
+**FCB assessment:** The star pairing is attractive in both versions. The Young-retained version has the more complete basketball case, but it does not fit at any cap tested here without moving more salary. The Young-leaves version fits even below $7 million, with Loyd and Barker as the contracted wing and forward, and a limited pile of money for one upgrade.
 
 ## Atlanta: another scorer comes with a continuity decision {#atlanta}
 
@@ -173,7 +163,7 @@ Adding Mitchell would give that group another defender to occupy and another pla
 
 The challenge is preserving enough of the existing structure.
 
-Atlanta has $6,180,830 committed to nine listed players. At the upper cap, adding Mitchell at the standard maximum and two veteran minimum positions produces a $192,730 shortfall ([contract sources](#sources)).
+Atlanta has $6,180,830 committed to nine listed players. Adding Mitchell at the standard maximum and two veteran minimums leaves a shortfall of $948,030 at $7 million, $533,030 at $7.50 million, and $192,730 at $7.91 million ([contract sources](#sources)).
 
 Three possible routes produce three different teams.
 
@@ -199,49 +189,25 @@ Atlanta would need a dependable answer for advancing the ball against pressure, 
 
 The risk is an offense with more scoring names but less reliable organization.
 
-Financially, the Canada route is also more sensitive to the final cap. It fits the upper-cap case but remains $171,630 short at $7.50 million.
-
-### Keep all nine and pay Mitchell less
-
-At the upper cap, Atlanta could allocate $1,151,970 to Mitchell after retaining the nine listed players and budgeting two veteran minimum positions.
-
-That is $192,730 below the modeled new-team maximum and $430,030 below Indiana's modeled supermax.
-
-At $7.50 million, the same construction leaves $741,970 for Mitchell. The final cap would therefore substantially change the size of the requested concession.
-
-There is no verified reporting here that she would accept either amount.
-
-Keeping the nine listed players also would not mean retaining every Finals contributor. [DeWanna Bonner](/wnba/dewanna-bonner/) is among the unsigned players outside that total ([contract sources](#sources)).
-
-### When the trade routes actually start to fit {#break-even-caps}
-
-The two cap examples conceal a useful distinction: each move has its own break-even point.
-
-| Hypothetical construction | Approximate break-even cap | Within the $7.91M ceiling? |
-| --- | ---: | --- |
-| Atlanta signs Mitchell; trades Jones for no salary | $7,254,976 | Yes |
-| Atlanta signs Mitchell; trades Hillmon for no salary | $7,465,820 | Yes |
-| Atlanta signs Mitchell; trades Canada for no salary | $7,706,784 | Yes |
-| Las Vegas keeps Young at 20%, signs Mitchell, and trades Loyd plus Evans for no salary | $7,811,163 | Yes, near the ceiling |
-| Las Vegas keeps Young at 20%, signs Mitchell, and trades only Loyd for no salary | $8,067,907 | No |
-
-Source: FCB calculations from the CBA and Her Hoop Stats contract inputs, checked November 7, 2026 (PST). Thresholds are rounded up to the nearest whole dollar. All cases include replacement positions at the stated veteran minimum cap charge. These are modeled budget thresholds, not certifications that every transaction is available or satisfies every league requirement. [Download break-even calculations (CC0)](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-break-even-caps.csv).
-
-The table gives the Atlanta choices more meaning. A Jones move would leave the widest modeled cushion, but it also changes the frontcourt. A Canada move requires a higher cap and changes the organization of the offense.
-
-Neither is automatically the better basketball decision.
+Moving Canada for no incoming salary fits at $7.91 million, with $168,670 left, and misses at the two lower caps: short $586,630 at $7 million and $171,630 at $7.50 million. Trading Jones or Hillmon for no salary also misses at an unchanged $7 million cap, by $211,630 and $386,630. The [break-even table](#break-even-caps) puts the Jones move first among the Atlanta trades, at $7,254,975. That is still above $7 million. None of those one-player moves is a reported discussion.
 
 Atlanta also traded its own 2027 and 2028 first-round picks to Chicago in the Reese deal. That reduces one source of near-term trade capital without preventing the Dream from making other moves ([Reese trade](https://dream.wnba.com/news/two-time-wnba-all-star-angel-reese-joins-atlanta-dream)).
 
-### How Atlanta returns to the Finals
+### Keep all nine and pay Mitchell less
 
-The strongest version gives Mitchell a clear scoring role while retaining reliable initiation and enough frontcourt support to survive different matchups.
+Keeping the nine listed players and two veteran minimums would leave $241,970 for Mitchell at $7 million, $741,970 at $7.50 million, and $1,151,970 at $7.91 million.
 
-If Atlanta keeps Canada, the question becomes whether its smaller closing group can defend and rebound. If Canada leaves, the question becomes whether the remaining guards can organize against playoff pressure. If Mitchell takes less, the question becomes how much of the broader rotation the remaining money can preserve.
+At the ceiling, $1,151,970 is $192,730 below the modeled new-team maximum and $430,030 below Indiana's modeled supermax. At an unchanged $7 million cap, $241,970 is $948,030 below the $1,190,000 standard maximum and $1,158,030 below Indiana's $1,400,000 supermax. There is no verified reporting here that she would accept a discount.
 
-The Dream would reach the Finals again by adding another offensive answer without losing too many of the possessions, rebounds and defensive options that made the existing team successful.
+Keeping the nine listed players also would not mean retaining every Finals contributor. [DeWanna Bonner](/wnba/dewanna-bonner/) is among the unsigned players outside that total ([contract sources](#sources)).
 
-**FCB assessment:** Atlanta has a credible path, but its front office must evaluate Mitchell alongside the specific player and role being surrendered.
+### What Game 7 showed
+
+[Rhyne Howard](/wnba/rhyne-howard/) played 37:37 in the 63-68 loss and scored 6 points on 3-for-14 shooting, including 0-for-7 from three. She also had 3 steals. [Jordin Canada](/wnba/jordin-canada/) scored 18 points with 5 assists, and [Allisha Gray](/wnba/allisha-gray/) scored 16 ([Game 7 box score](https://www.basketball-reference.com/wnba/boxscores/202610310GSV.html)). Atlanta shot 6-for-30 from three ([WNBA box score](https://www.wnba.com/game/atl-vs-gsv-1042600307/box-score)).
+
+Mitchell could be another perimeter scorer on a night Howard's shot is not there. She would not replace Canada's 5 assists, and Howard's 3 steals would still have to come from someone. Mitchell's own three-game series against Las Vegas was 18-for-55 ([Mitchell statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html)). One closeout game does not mean Howard would shoot 3-for-14 again. Paying Mitchell the standard maximum may also mean moving Canada or a frontcourt player, which is the cap problem above.
+
+**FCB assessment:** Atlanta has a credible path only after a salary concession or a higher cap. The front office has to weigh Mitchell against the specific player that concession removes. At an unchanged $7 million cap, even trading Jones, Hillmon, or Canada for no salary does not clear the max.
 
 ## Indiana still sets the financial benchmark
 
@@ -249,54 +215,50 @@ Mitchell's outside options must be compared with what she already has: an establ
 
 Beginning in 2027, the signed agreement limits new core designations to players with six or fewer years of service. Mitchell has completed nine seasons, so Indiana cannot use a new core designation to keep her off the market ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf); [Mitchell statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html)).
 
-The signed agreement allows the relevant Indiana supermax at 20% of the cap, compared with 17% for a new-team signing. At the upper cap, the first-year difference is $237,300. An agreed sign-and-trade cannot provide a first-year salary above the standard maximum ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf)).
+The signed agreement allows the relevant Indiana supermax at 20% of the cap, compared with 17% for a new-team signing. The first-year difference is $210,000 at a $7 million cap, $225,000 at $7.50 million, and $237,300 at $7.91 million. An agreed sign-and-trade cannot provide a first-year salary above the standard maximum ([CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf)).
 
 That advantage does not determine her decision. It does mean that a new team needs a persuasive explanation of the role, roster and competitive opportunity it is offering.
 
-Golden State can point to a contracted defensive core and a clear need for additional scoring. Las Vegas can point to Wilson, with the rest of its case depending heavily on Young and the salaries it clears. Atlanta can point to a team that came within one game of a championship, but must identify who would still be there after Mitchell signs.
-
-The most useful question is not which proposed starting lineup looks best on a graphic. It is which complete roster can keep creating good possessions after a playoff opponent takes away the first option.
+Golden State can point to a contracted defensive core and to Game 7, when Williams scored 30 of 68. Las Vegas can point to Wilson, with the Young decision deciding whether the roster fits. Atlanta can point to a team that reached Game 7, and to Howard's 3-for-14 in that game, but it has to say who leaves if Mitchell is paid the maximum.
 
 ## Methodology {#methodology}
 
-The comparison uses the 2027 contract columns of the Her Hoop Stats WNBA Salary Cap Database, checked November 7, 2026. Those team sheets displayed October 1 updates. The underlying inputs are publicly reported contract data, not league-certified future rosters.
+The comparison uses the 2027 contract columns of the Her Hoop Stats WNBA Salary Cap Database, checked November 7, 2026 (PST). Those team sheets displayed October 1 updates. The inputs are a snapshot of those public records, not league-certified future rosters and not a report of offers, negotiations, or Mitchell's preferences. The lineups are hypothetical.
 
-The model retains every listed contract and applicable option in the relevant scenario. Unsigned players are excluded unless specifically added. Mitchell receives 17% of the assumed cap. Young receives 20% only in the explicitly labeled retention scenarios.
+The model retains every listed contract and applicable option in the relevant scenario, including unprotected contracts. Unsigned free agents and unsigned draft rights are excluded unless a scenario adds them. Developmental contracts do not fill any of the 12 regular spots. Mitchell's salary is 17 percent of the assumed cap, in whole dollars: cap times 17, divided by 100, with the remainder dropped. Young is 20 percent, cap divided by 5 in whole dollars, only in the labeled retention scenarios. Wilson uses that same 20 percent rule. Las Vegas's other four contracts total $2,577,600.
 
-Wilson is treated separately because her future salary floats at 20% of the cap. Las Vegas's fixed commitments excluding Wilson total $2,577,600. Her salary is added as 0.20 times the assumed cap.
+Each open regular-roster spot costs $288,600 until the roster reaches 12. That figure is the 2027 minimum cap charge for a player with one to three years of service. It is not the cash minimum for every veteran. At the three caps in the first table, 17 percent and 20 percent land on whole dollars, so this whole-dollar formula matches an exact percentage. The break-even search uses the same formula at every dollar in between. A continuous 17 percent and 20 percent, rounded up to the next dollar, is $1 to $4 higher on these nine rosters. The break-even file keeps that continuous figure in the column continuous_round_up_cap. The number in the article is the smallest whole-dollar cap at which the whole-dollar formula is no longer negative. At that cap, the modeled room is $0.
 
-Remaining regular-roster positions receive a $288,600 veteran minimum cap charge until the roster reaches 12. This is a cap charge, not the minimum cash salary for every veteran. The CBA provides different minimum pay by service time and minimum-contract cap treatment. Rookie contracts can have different costs.
+Trade examples assume the recipient takes the entire outgoing salary, nothing comes back, and each vacated spot is filled at $288,600. For Loyd, the net savings are $840,000 minus $288,600, or $551,400. For Loyd and Evans together, the outgoing salary is $1,239,000 and the replacement charge is $577,200.
 
-The two tested caps are $7.50 million and $7.91 million. The latter follows from the CBA's $7 million 2026 cap and maximum 13% increase. Neither figure is presented as an announced 2027 cap.
+The $7 million column is the 2026 cap, carried forward with no change. Article VII, Section 1(a) sets that cap at $7,000,000 and limits the 2027 move, up or down, to 13 percent. The permitted 2027 range is therefore $6,090,000 to $7,910,000. The $7.91 million column is that ceiling, not an announced cap. The $7.50 million column is an FCB sensitivity case, not a league projection and not the floor.
 
-Base formula:
-Balance = cap - retained existing cap hits - Mitchell salary - any added Young salary - remaining positions times $288,600.
+These are the rules this model uses, and where they are in the signed agreement:
 
-Trade examples assume the recipient absorbs the entire outgoing salary, no salary returns, and the vacated regular-roster position is filled at the modeled minimum charge. Each additional outgoing player requires another replacement.
+| Rule in this model | Where it is |
+| --- | --- |
+| The standard maximum for a salary-cap year is 17 percent of that year's cap | Article V, Section 8(b) |
+| The supermax for a salary-cap year is 20 percent of that year's cap | Article V, Section 8(a) |
+| A qualifying veteran free agent with five or more years of service can sign the supermax with her prior team | Article V, Section 8(c) |
+| A new contract that the parties agree to trade within 48 hours cannot set a first-season base salary above the standard maximum | Article V, Section 3(f) |
+| Beginning with the 2027 season, only a player with six or fewer years of service may receive a core designation in the designation window | Article VI, Section 7(b) |
+| The 2026 salary cap is $7,000,000, and the 2027 cap cannot rise or fall by more than 13 percent | Article VII, Section 1(a) |
+| Each team must keep 12 players on its roster | Article XXXIII, Section 4 |
+| 2027 minimum base salary is $280,800 with zero years of service, $288,600 with one to three, $296,400 with four to six, $304,200 with seven to nine, and $312,000 with 10 or more | Article V, Section 7(a) |
+| A minimum contract for a player with four or more years of service counts against the cap at the one-to-three-year minimum | Article I, definition of Salary |
+| Before the regular season, a team with fewer than 11 players in its team salary is charged the one-to-three-year minimum for each missing player, up to 11 | Article VII, Section 2(d) |
 
-Threshold formulas:
-Atlanta single-player departure:
-C = ($6,180,830 - outgoing salary + 3 times $288,600) / 0.83.
+Article VII, Section 2(d) stops that automatic charge at 11. This model also prices a 12th player at $288,600 because Article XXXIII, Section 4 requires 12 roster players. That 12th charge is a modeling choice about the player the team still has to sign, not a claim that Section 2(d) bills an empty 12th spot.
 
-Las Vegas with Wilson and Young at 20% each, Mitchell at 17%, and Loyd departing:
-C = ($2,577,600 - $840,000 + 6 times $288,600) / 0.43.
-
-Las Vegas with those same three star salaries and both Loyd and Evans departing:
-C = ($2,577,600 - $840,000 - $399,000 + 7 times $288,600) / 0.43.
-
-Break-even values are rounded up to whole dollars. At a threshold, there is essentially no room for additional roster upgrades.
-
-The models exclude additional dead money, trade bonuses, unannounced extensions, incremental draft costs and other new transaction charges. They do not establish willing trade partners, player availability, player consent where applicable, or salary acceptance. Different rookies, veterans, discounts or transactions can change the results.
-
-Team efficiency rankings use Basketball-Reference consistently. Tactical passages describe proposed applications and matchup questions; they are not measured outcomes for these hypothetical lineups. No championship probabilities or 2027 win forecasts are assigned.
+The model adds no new dead money, trade bonus, unannounced extension, or other transaction charge. It does not establish a willing trade partner, player consent, or a salary a player would accept. A different mix of rookies and veterans would change the budget. Team efficiency rankings use Basketball-Reference's possession estimates, which differ from the league's. No championship probabilities or 2027 win forecasts are assigned.
 
 
 
 ## Data dictionary and reuse
 
-The scenario CSV contains the assumed cap, retained contract total, Wilson and Mitchell salaries, any added Young salary, minimum charge and open positions, modeled payroll and remaining balance. The salary-input file identifies each player, source and whether a salary is fixed or tied to the cap.
+The scenario CSV contains one row per team scenario and cap, including the $7 million cap. It reports the retained contract total, Wilson and Mitchell salaries, any added Young salary, the minimum charge, open positions, modeled payroll, and remaining balance. The salary-input file identifies each player, the source, and the cap hit at $7 million, $7.50 million, and $7.91 million. Wilson is the only player whose hit changes with the cap.
 
-The trade file reports the total outgoing salary, total replacement charge, net savings and resulting balance. In the Loyd-plus-Evans rows, the replacement charge covers two positions. The break-even file reports retained fixed commitments, cap-share salaries, minimum positions, the threshold rounded up to a dollar and whether it falls within the permitted ceiling. All dollar values are nominal U.S. dollars; positive balances are remaining room and negative balances are shortfalls.
+The trade file reports outgoing salary, replacement charge, net savings, and the resulting balance at each of the three caps. In the Loyd-plus-Evans rows, the replacement charge covers two positions. The break-even file reports retained fixed commitments, the cap-share percentage, minimum positions, the whole-dollar break-even, the room at that cap, the continuous round-up for comparison, and whether the break-even sits inside $6,090,000 to $7,910,000. All dollar values are nominal U.S. dollars. A positive balance is room. A negative balance is a shortfall.
 
 FCB's original calculations are **free to use and republish (CC0)**. [Scenario CSV](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-cap-scenarios.csv), [player salary inputs](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-salary-inputs.csv), [trade scenarios](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-trade-scenarios.csv) and [break-even caps](/news/kelsey-mitchell-2027-free-agency-cap/data/mitchell-2027-break-even-caps.csv). Contract inputs are attributed to Her Hoop Stats; the CC0 dedication covers FCB's original calculations, not rights in third-party material.
 
@@ -304,14 +266,15 @@ For corrections to an input or calculation, [contact Full Court Buckets](/contac
 
 ## Sources {#sources}
 
-- [Signed 2026 WNBA-WNBPA Collective Bargaining Agreement](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf), hosted by the WNBPA. CBA provisions identified above.
+- [Signed 2026 WNBA-WNBPA Collective Bargaining Agreement](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf), hosted by the WNBPA. The rule-to-source table in the methodology gives the article and section for each cap rule used here.
 - [Golden State's salary cap sheet](https://herhoopstats.com/salary-cap-sheet/wnba/team/2026/golden-state-valkyries-11efb2ba-e2c6-f520-8806-9a93b15b3fec/), [Las Vegas's salary cap sheet](https://herhoopstats.com/salary-cap-sheet/wnba/team/2026/las-vegas-aces-11eaecc7-3575-e2fe-b611-2362f5011b0b/) and [Atlanta's salary cap sheet](https://herhoopstats.com/salary-cap-sheet/wnba/team/2026/atlanta-dream-11eaecc7-356c-1364-b611-2362f5011b0b/), Her Hoop Stats. The 2027 columns supply the contract inputs; Wilson's contract-cell note identifies the floating salary.
 - [Mitchell's season and playoff statistics](https://www.basketball-reference.com/wnba/players/m/mitchke01w.html), Basketball-Reference; cross-checked against Her Hoop Stats' [regular-season](https://herhoopstats.com/stats/wnba/player/2026/reg/kelsey-mitchell-stats-11eaecc7-3f02-2418-b611-2362f5011b0b/) and [playoff](https://herhoopstats.com/stats/wnba/player/2026/pst/kelsey-mitchell-stats-11eaecc7-3f02-2418-b611-2362f5011b0b/) pages.
 - [WNBA's 30th-season record release](https://www.wnba.com/news/wnba-season-30-record-growth), October 14, 2026; also [NBA Communications' official version](https://pr.nba.com/wnba-2026-season-records/). Confirms Mitchell's 1,086-point record.
-- [2026 WNBA playoff bracket and format](https://www.wnba.com/playoffs/2026) and [Finals Game 7 recap](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap), WNBA. Series results, seeding and championship score.
+- [2026 WNBA playoff bracket and format](https://www.wnba.com/playoffs/2026) and [Finals Game 7 recap](https://www.wnba.com/news/2026-finals-valkyries-dream-game-7-recap), WNBA. Series results, seeding, the 68-63 final, and the 30-24 halftime. [Game 7 box score](https://www.wnba.com/game/atl-vs-gsv-1042600307/box-score), WNBA, for team shooting. [Game 7 player lines](https://www.basketball-reference.com/wnba/boxscores/202610310GSV.html), Basketball-Reference.
+- [Semifinals Game 1 recap, Aces at Valkyries](https://www.wnba.com/news/2026-playoffs-aces-valkyries-game-1-recap), AP, published by WNBA.com. The 71-60 final, 33.9 percent shooting, the 52-25 rebounding margin, Hammon's boards quote, the season-low description, and Loyd's left leg injury. [Game 1 player lines](https://www.basketball-reference.com/wnba/boxscores/202610040GSV.html), Basketball-Reference.
 - [Golden State's 2026 season](https://www.basketball-reference.com/wnba/teams/GSV/2026.html), [Las Vegas's 2026 season](https://www.basketball-reference.com/wnba/teams/LVA/2026.html) and [Atlanta's 2026 season](https://www.basketball-reference.com/wnba/teams/ATL/2026.html), Basketball-Reference. Records, ratings and regular-season player averages.
 - [Golden State All-Defensive selections](https://valkyries.wnba.com/news/williams-named-to-wnba-all-defensive-first-team-burton-stokes-named-to-wnba-all-defensive-second-team-20261015), Valkyries team release, October 15, 2026.
 - [Fever backcourt season release, republished by OurSports Central](https://www.oursportscentral.com/services/releases/fevers-backcourt-duo-of-clark-mitchell-honored-for-historic-offensive-season/n-6424164), October 24, 2026. Source for 96 of Clark's 333 assists going to Mitchell. The directly linked Fever page exposed only its title in this review, so the accessible republication was checked for the full text.
 - [Atlanta acquires Reese](https://dream.wnba.com/news/two-time-wnba-all-star-angel-reese-joins-atlanta-dream), Dream team release, April 6, 2026. Draft consideration in the Chicago trade.
 
-**Update, November 8, 2026 (UTC):** Expanded the Finals scenarios and added five break-even cap calculations and the two-player Las Vegas departure scenario. The existing Wilson percentage-based salary treatment is unchanged.
+**Update, November 8, 2026 (UTC):** Added the unchanged $7 million cap, moved the break-even caps above the team sections, and replaced the open Aces lineup spots and the generic playoff paths with contracted players and sourced 2026 games. Wilson's salary is still 20 percent of the cap.
