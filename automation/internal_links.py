@@ -2401,6 +2401,9 @@ def outbound_source_links(html_text: str) -> list[str]:
 
 def how_made_sentence(html_text: str, article: dict | None) -> str:
     """Name sources only when this page links them above the disclosure."""
+    disclosure = str((article or {}).get('editorialDisclosure') or '').strip()
+    if disclosure:
+        return html.escape(disclosure)
     linked = bool(outbound_source_links(html_text))
     if (article or {}).get('authorWrote'):
         return HOW_MADE_RYAN if linked else HOW_MADE_RYAN_UNLINKED

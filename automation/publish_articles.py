@@ -7,7 +7,7 @@ listings the last recap was added to. Running it again changes nothing.
 """
 from __future__ import annotations
 
-from datetime import date
+from datetime import date, datetime
 import html
 import json
 import re
@@ -75,6 +75,8 @@ def parse_front_matter(text: str) -> tuple[dict, str]:
 
 def inline(text: str) -> str:
     def link(label: str, href: str) -> str:
+        if href.startswith('#'):
+            return f'<a class="inline-link" href="{esc(href)}">{esc(label)}</a>'
         return (
             f'<a class="inline-link" href="{esc(href)}" target="_blank" '
             f'rel="{"nofollow noopener" if BETTING_HOST_RE.search(href) else "noopener"}">'
@@ -487,8 +489,14 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
     first = True
     disclaimer = False
     for kind, value in blocks:
+        anchor = ''
+        if kind in ('h2', 'h3', 'h4'):
+            match = re.search(r'\s+\{#([a-z][a-z0-9-]*)\}$', value)
+            if match:
+                anchor = f' id="{match.group(1)}"'
+                value = value[:match.start()]
         if kind == 'h2':
-            html_blocks.append(f'<h2 class="section-title">{esc(value)}</h2>')
+            html_blocks.append(f'<h2 class="section-title"{anchor}>{esc(value)}</h2>')
             continue
         if kind == 'photo':
             html_blocks.append(body_photo_html(value))
@@ -502,7 +510,7 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
         if kind in ('h3', 'h4'):
             if not any('sub-h-css' in b for b in html_blocks):
                 html_blocks.append(SUB_HEADING_CSS)
-            html_blocks.append(f'<{kind} class="sub-{kind}">{inline(value)}</{kind}>')
+            html_blocks.append(f'<{kind} class="sub-{kind}"{anchor}>{inline(value)}</{kind}>')
             continue
         if kind == 'ul':
             items = ''.join(f'<li>{inline(item)}</li>' for item in value)
@@ -651,6 +659,14 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
     updated = str(meta.get('updated') or '').strip()
     if re.fullmatch(r'\d{4}-\d{2}-\d{2}', updated):
         article['dateModified'] = updated
+    elif re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})', updated):
+        parsed = datetime.fromisoformat(updated.replace('Z', '+00:00'))
+        if parsed.tzinfo is None:
+            raise ValueError('updated timestamp must include a timezone')
+        article['dateModified'] = updated
+    disclosure = str(meta.get('editorial_disclosure') or '').strip()
+    if disclosure:
+        article['editorialDisclosure'] = disclosure
     return article
 
 
@@ -867,7 +883,8 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
         body = body.replace('<div class="table-wrap">', '<div class="table-wrap" data-fcb-data-table>', 1)
     linked = bool(meta.get('photo_credit_url') or meta.get('license_url'))
-    sentence = links.HOW_MADE_OTHER if linked else links.HOW_MADE_OTHER_UNLINKED
+    sentence = (esc(article['editorialDisclosure']) if article.get('editorialDisclosure')
+                else links.HOW_MADE_OTHER if linked else links.HOW_MADE_OTHER_UNLINKED)
     how = f'<p class="how-made">{sentence} {links.HOW_MADE_LINK}</p>'
     kicker = halloween_kicker_html() if _is_halloween(meta) else ''
     article_html = (
@@ -938,6 +955,12 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
                 1,
             )
     meta('article:published_time', article['date'], 'property')
+    if article.get('dateModified'):
+        if 'property="article:modified_time"' in page:
+            meta('article:modified_time', article['dateModified'], 'property')
+        else:
+            page = page.replace('</head>', '<meta property="article:modified_time" content="'
+                                + esc(article['dateModified']) + '"></head>', 1)
     page = re.sub(
         r'(<link rel="canonical" href=").*?(">)',
         lambda match: match.group(1) + esc(canonical) + match.group(2),
