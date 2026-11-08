@@ -8,7 +8,8 @@ class TableTest(unittest.TestCase):
         md = 'Intro.\n\n| Bonus | 2026 |\n|---|---:|\n| **Champion** | [$60,000](/x/) |\n| MVP | $30,000 |\n\nAfter.'
         out = pa.body_html(md)
         self.assertIn('<div class="table-wrap"><table><thead><tr><th scope="col">Bonus</th>', out)
-        self.assertIn('<tbody><tr><td><strong>Champion</strong></td><td><a class="inline-link" href="/x/"', out)
+        self.assertIn('<td data-label="Bonus"><strong>Champion</strong></td>', out)
+        self.assertIn('<td data-label="2026"><a class="inline-link" href="/x/"', out)
         self.assertEqual(out.count('<tr>'), 3)
         self.assertIn('<p>After.</p>', out)
 
