@@ -1440,6 +1440,7 @@ SEARCH_FAQ_SLUGS = frozenset({
     'costanza-verona', 'courtney-paris', 'jaelyn-brown', 'kyara-linskens', 'lindsay-allen',
     'ruth-riley', 'sevgi-uzun', 'shannon-bobbitt', 'candice-wiggins', 'destanni-henderson',
     'kitija-laksa', 'moriah-jefferson', 'tanisha-wright', 'victoria-vivians', 'asia-taylor',
+    'roneeka-hodges', 'amber-harris',
 })
 RELATED_SEARCH_HOLD = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
 CURATED_FAQ_SLUGS = frozenset({'aja-wilson'}) | SEARCH_FAQ_SLUGS
