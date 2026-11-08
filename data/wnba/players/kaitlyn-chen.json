@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-08T07:24:46+00:00",
-  "stats_updated_at": "2026-11-06T12:35:04+00:00",
+  "checked_at": "2026-11-08T08:18:52+00:00",
+  "stats_updated_at": "2026-11-08T08:18:52+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -81,24 +81,24 @@
         "conference": "Western Conference"
       },
       "games_played": 13,
-      "min": 10.15,
-      "fgm": 1.62,
-      "fga": 4.46,
-      "fg_pct": 36.2,
+      "min": 9.31,
+      "fgm": 1.38,
+      "fga": 4.31,
+      "fg_pct": 32.1,
       "fg3m": 0.46,
       "fg3a": 0.92,
       "fg3_pct": 50.0,
-      "ftm": 0.31,
-      "fta": 0.31,
+      "ftm": 0.15,
+      "fta": 0.15,
       "ft_pct": 100.0,
-      "oreb": 0.31,
-      "dreb": 0.54,
-      "reb": 0.85,
-      "ast": 1.15,
+      "oreb": 0.38,
+      "dreb": 0.62,
+      "reb": 1.0,
+      "ast": 0.92,
       "stl": 0.0,
       "blk": 0.08,
-      "turnover": 0.46,
-      "pts": 4.0,
+      "turnover": 0.38,
+      "pts": 3.38,
       "gap_fill": true
     },
     {
@@ -570,7 +570,7 @@
     {
       "game_id": 1392678,
       "player_id": 775,
-      "date": "2026-10-03T01:00:00.000Z",
+      "date": "2026-10-02T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -593,9 +593,9 @@
         "id": 11,
         "full_name": "Dallas Wings",
         "abbreviation": "DAL",
-        "city": "Dallas",
+        "city": null,
         "name": "Wings",
-        "conference": "Western Conference"
+        "conference": null
       },
       "home_score": 77,
       "away_score": 73,
@@ -625,9 +625,9 @@
         "id": 11,
         "full_name": "Dallas Wings",
         "abbreviation": "DAL",
-        "city": "Dallas",
+        "city": null,
         "name": "Wings",
-        "conference": "Western Conference"
+        "conference": null
       },
       "visitor_team": {
         "id": 13,
@@ -673,9 +673,9 @@
         "id": 11,
         "full_name": "Dallas Wings",
         "abbreviation": "DAL",
-        "city": "Dallas",
+        "city": null,
         "name": "Wings",
-        "conference": "Western Conference"
+        "conference": null
       },
       "home_score": 104,
       "away_score": 80,
@@ -688,7 +688,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-10-03",
+  "game_log_window_start": "2026-10-04",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
