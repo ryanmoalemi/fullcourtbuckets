@@ -29,6 +29,22 @@ class FcbCardTests(unittest.TestCase):
         self.assertIn('class="card-credit"', html)
         self.assertIn('class="section-note table-note"', html)
 
+    def test_stat_paragraph_becomes_a_card_without_dropping_the_claim(self):
+        sample = (
+            '<p><a class="inline-link" href="/wnba/awak-kuier/" target="_blank" rel="noopener">Awak Kuier</a> '
+            'played 41 games at 6.3 points, 3.9 rebounds and 1.1 assists per game '
+            '(18.6 minutes, 50.8% from the field, 39.0% from three). '
+            'The file has 4 regular seasons with at least one game (2021, 2022, 2023, 2026).</p>'
+        )
+        html = fcb_card.wrap_player_stat_cards(sample)
+        self.assertIn('class="fcb-card"', html)
+        self.assertIn('>6.3</b>', html)
+        self.assertIn('>3.9</b>', html)
+        self.assertIn('>1.1</b>', html)
+        self.assertIn('>41</b>', html)
+        self.assertIn('18.6 minutes, 50.8% from the field, 39.0% from three.', html)
+        self.assertIn('The file has 4 regular seasons with at least one game (2021, 2022, 2023, 2026).', html)
+
     def test_lottery_page_uses_the_card(self):
         page = (ROOT / 'wnba' / 'draft-lottery-2027' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('class="fcb-card need-card"', page)
