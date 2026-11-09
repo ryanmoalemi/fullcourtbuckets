@@ -1,0 +1,44 @@
+UConn 39-point club and Sarah Strong scoring files
+Data through Nov. 8, 2026
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+
+Files
+- uconn-39-point-club.csv: one row per UConn women's game of 39 or more points in this file.
+- sarah-strong-2026-27-games.csv: Strong's three games this season, from the official final boxes.
+- sarah-strong-career-seasons.csv: one row per Strong season.
+
+What is in the club file
+The 2025-26 UConn women's media guide most-points list (https://uconnhuskies.com/documents/2025/11/1/2025-26_Media_Guide.pdf) is the starting list. That list's 39-or-more rows are Sales 46, Moore 41, Moore 40, Samuelson 40, Bascom 39, Abrosimova 39, Collier 39.
+Two games are added because the most-points list does not print them:
+- Paige Bueckers, 40, March 29, 2025, vs. Oklahoma. The same guide's NCAA individual records list the 40. The UConn box score confirms it.
+- Sarah Strong, 39, Nov. 8, 2026, vs. Iowa. The official final box confirms it.
+Rank is competition rank on this file: ties share a number and the next number skips. The guide prints the 39-point games as No. 5 because it does not include Bueckers. With her 40 included, those 39s are No. 6.
+This file does not re-score every UConn game after the guide. The Nov. 7, 2026 game notes say the last 30-point UConn game before Iowa was Azzi Fudd's 34 vs. Syracuse on March 23, 2026. That line does not prove there was no other 39-point game earlier in 2025-26.
+
+Column definitions, club file
+rank: competition rank in this file.
+player, points, date, opponent: the game.
+opponent_ap_rank: filled only when a UConn release or the game notes state an AP rank. Iowa is 10 from the preseason AP poll printed in the Nov. 7, 2026 notes and used in the Nov. 8 recap. A blank is not a claim that the opponent was unranked.
+site, result, uconn_points, opponent_points: from the box score when one was read. Blank when the guide line does not give them and no box was read.
+fg, fga, fg3, fga3, ft, fta, minutes: from the box. Blank when the box was not read or a figure on a fax was not clear.
+on_2025_26_guide_most_points_list: yes or no.
+guide_printed_rank: the number printed next to that points total on the guide's most-points list. Blank when the game is not on that list.
+marked_nov_8_2026: yes only for Strong vs. Iowa.
+shooting_source: where the shooting line came from.
+
+Abrosimova: the 1998-99 box image shows 14-for-17 and 4 threes made. The guide also lists 14 field goals made in that game. Three-point attempts and the free-throw line on the fax were not clear, so those cells are blank. Four threes and 14 field goals need 7 made free throws to reach 39. That 7 is not printed here because the free-throw column on the fax was not clear.
+
+Sales: the Dec. 21, 1997 box shows 18-for-27, 6-for-7 from three, 4-for-6 at the line, 46 points. The guide's separate field-goal record lists 18 makes against Stanford on Dec. 12, 1997. No Dec. 12 Stanford box was found in the 1997-98 PDF. This file does not add a second game for Dec. 12.
+
+Samuelson: field-goal attempts are blank. The UConn game page lists 12 field goals made, 10 threes, and 6 free throws made. The guide lists the threes as 10-for-10.
+
+Bascom: shooting and the final score are blank. The archived box PDFs on UConn's site start with 1994-95.
+
+Strong season file
+One row per game. Minutes and shooting are the official final box, not the rounded minute column in the game notes. Michigan rebounds are 8 from the box. The Nov. 5 recap says nine.
+
+Career file
+2024-25 and 2025-26 are the career block in the Nov. 7, 2026 game notes (through Nov. 6). 2026-27 is the combined statistics PDF dated as of Nov. 8, 2026, which includes the Iowa game. Points by season: 657 + 699 + 71 = 1,427 in 81 games. The notes' running total through Nov. 6 was 1,388 in 80 games. 1,388 + 39 = 1,427.
+The notes say 31 career games of 20 or more points through Nov. 6, and none yet in 2026-27. Iowa is a 32nd game of 20 or more. The notes do not list each 25-point game, so this file does not invent that list. The previous career high in those notes is 29, twice, last vs. Ohio State on Nov. 16, 2025. This page did not reopen that box.
+
+Strong's Nov. 8 line on the official box: 37:19, 15-for-26, 5-for-10 from three, 4-for-5 at the line, 10 rebounds, 3 assists, 3 turnovers, 0 steals, 2 blocks, 39 points.

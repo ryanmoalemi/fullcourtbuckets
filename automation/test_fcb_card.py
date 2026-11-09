@@ -67,6 +67,25 @@ class FcbCardTests(unittest.TestCase):
         self.assertIn('id="juju-watkins"', cards)
         self.assertIn('$20,003', cards)
 
+    def test_card_line_uses_the_shared_classes(self):
+        import publish_articles
+        md = (
+            'Lead.\n\n'
+            '!card: Sarah Strong | Junior forward | 39=PTS | 15-26=FG | 10=REB | '
+            'Career high on the [official box](https://uconnhuskies.com/). | '
+            'Box: UConn, Nov. 8, 2026. | \n'
+            '!note: Tiles are the official final box. One note for the section.\n'
+        )
+        html = publish_articles.body_html(md)
+        self.assertIn('class="fcb-card"', html)
+        self.assertIn('class="stat-tiles"', html)
+        self.assertIn('>39</b><span>PTS</span>', html)
+        self.assertIn('class="av"', html)
+        self.assertIn('class="card-credit"', html)
+        self.assertIn('class="section-note table-note"', html)
+        self.assertNotIn('<article', html)
+        self.assertNotIn('</article>', html)
+
     def test_story_cards_do_not_close_the_article(self):
         import publish_articles
         page = (
