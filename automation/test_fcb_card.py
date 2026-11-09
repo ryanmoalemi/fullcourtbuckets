@@ -24,6 +24,7 @@ class FcbCardTests(unittest.TestCase):
             + fcb_card.section_note('Methods sit here once.')
         )
         self.assertIn('class="fcb-card prospect"', html)
+        self.assertNotIn('</article>', html)
         self.assertIn('class="stat-tiles"', html)
         self.assertIn('class="stat-tile"', html)
         self.assertIn('class="card-credit"', html)
