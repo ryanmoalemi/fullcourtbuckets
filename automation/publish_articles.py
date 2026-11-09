@@ -151,6 +151,41 @@ def unique_id(base: str, used: set[str]) -> str:
     return candidate
 
 
+def cap_scenario_cards(rows: list[str]) -> str:
+    """One card per cap scenario, using the same dollar amounts as the table."""
+    import fcb_card
+    labels = ('$7.00M cap', '$7.50M cap', '$7.91M cap')
+    cards = []
+    for cells in (table_cells(row) for row in rows[2:]):
+        tiles = ''.join(
+            fcb_card.stat_tile(esc(cell), label) for cell, label in zip(cells[1:4], labels)
+        )
+        cards.append(
+            f'<article class="fcb-card"><div class="card-body"><h3>{inline(cells[0])}</h3>'
+            f'<div class="stat-tiles tiles-3">{tiles}</div></div></article>'
+        )
+    return f'<div id="cap-cards">{"".join(cards)}</div>'
+
+
+def scoring_tiles(value: str) -> str:
+    """Tiles for Mitchell's season line. Empty when the sentence is a different claim."""
+    import fcb_card
+    match = re.search(
+        r'averaged ([\d.]+) points.*?([\d.]+)% from the field, ([\d.]+)% from three and ([\d.]+)% at the line',
+        value,
+    )
+    if not match:
+        return ''
+    pts, fg, threes, ft = match.groups()
+    tiles = (
+        fcb_card.stat_tile(pts, 'PTS/G')
+        + fcb_card.stat_tile(f'{fg}%', 'FG%')
+        + fcb_card.stat_tile(f'{threes}%', '3P%')
+        + fcb_card.stat_tile(f'{ft}%', 'FT%')
+    )
+    return f'<div class="stat-tiles">{tiles}</div>'
+
+
 def table_html(rows: list[str], table_id: str = '') -> str:
     """Render a pipe table (header row, --- separator, body rows) as a scrollable table."""
     header = table_cells(rows[0])
@@ -574,6 +609,8 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             if table_headshots:
                 rendered = decorate_player_cells(rendered)
                 rendered = drop_repeated_faces(rendered)
+            if table_id == 'cap-table':
+                html_blocks.append(cap_scenario_cards(rows))
             html_blocks.append(rendered)
             continue
         if kind == 'note':
@@ -601,6 +638,9 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             html_blocks.append(f'<p class="broadcast-line" style="{BROADCAST_STYLE}">{inline(value)}</p>')
             continue
         html_blocks.append(f'<p{" class=\"lead\"" if first else ""}>{inline(value)}</p>')
+        tiles = scoring_tiles(value)
+        if tiles:
+            html_blocks.append(tiles)
         first = False
         if BETTING_RE.search(value) and DISCLAIMER not in markdown and not disclaimer:
             html_blocks.append(f'<p>{esc(DISCLAIMER)}</p>')
