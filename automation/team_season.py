@@ -463,7 +463,11 @@ def _coverage_line(slug: str, variant: int = 0) -> str:
     return f'{_pick(labels, variant)}: {links_html}.'
 
 
-PHOTO_FOCAL = {'portland-fire': 'center center', 'golden-state-valkyries': 'center 30%'}
+PHOTO_FOCAL = {
+    'portland-fire': 'center center',
+    'toronto-tempo': 'center 75%',
+    'golden-state-valkyries': 'center 30%',
+}
 
 
 def photo_html(slug: str) -> str:
@@ -480,7 +484,7 @@ def photo_html(slug: str) -> str:
     return (
         f'<figure class="team-photo"><img src="{esc(spec["src"])}" alt="{esc(spec["alt"])}" '
         f'width="{int(spec["width"])}" height="{int(spec["height"])}" style="object-position:{focal}" '
-        f'decoding="async" loading="lazy"><figcaption>{caption}</figcaption></figure>'
+        f'decoding="async" loading="lazy"><figcaption class="card-credit">{caption}</figcaption></figure>'
     )
 
 
@@ -513,15 +517,39 @@ def summary_paragraphs(root: Path, slot: dict, standing: dict | None) -> str:
     return f'<p class="season-summary">{body}</p>'
 
 
+def season_tiles(standing: dict, conference: str) -> str:
+    """The same record numbers the summary sentence uses, as tiles."""
+    import fcb_card
+    tiles = [fcb_card.stat_tile(f'{standing["wins"]}-{standing["losses"]}', 'Record')]
+    rank = standing.get('conferenceRank')
+    if isinstance(rank, int) and not isinstance(rank, bool) and conference:
+        short = conference.replace(' Conference', '')
+        tiles.append(fcb_card.stat_tile(_ordinal(rank), esc(short)))
+    back = str(standing.get('gamesBack') or '').strip()
+    if back and back not in {'0', '0.0', '0.00'}:
+        tiles.append(fcb_card.stat_tile(esc(back), 'Games back'))
+    home = str(standing.get('home') or '').strip()
+    if home:
+        tiles.append(fcb_card.stat_tile(esc(home), 'Home'))
+    return fcb_card.stat_tiles(''.join(tiles))
+
+
 def season_section(root: Path, slot: dict, standing: dict | None) -> str:
     summary = summary_paragraphs(root, slot, standing)
     photo = photo_html(slot['slug'])
     if not summary and not photo:
         return ''
+    tiles = ''
+    if standing and isinstance(standing.get('wins'), int) and not isinstance(standing.get('wins'), bool):
+        conference = str(slot.get('conference') or '').strip()
+        if conference and not conference.endswith('Conference'):
+            conference = f'{conference} Conference'
+        tiles = season_tiles(standing, conference)
     return (
         f'<!-- {SEASON_MARK} -->'
-        f'<section class="section" id="season-2026"><p class="eyebrow">2026 season</p>'
-        f'<h2>Season summary</h2>{photo}{summary}</section>'
+        f'<section class="section fcb-card" id="season-2026"><div class="card-body">'
+        f'<p class="eyebrow">2026 season</p>'
+        f'<h2>Season summary</h2>{photo}{tiles}{summary}</div></section>'
         f'<!-- /{SEASON_MARK} -->'
     )
 
