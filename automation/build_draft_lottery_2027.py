@@ -172,6 +172,100 @@ PROSPECTS = [
     },
 ]
 
+# Wikimedia Commons files, CC BY or CC BY-SA. S'Mya Nichols has no such file.
+PROSPECT_PHOTOS = {
+    'JuJu Watkins': {
+        'src': '/images/articles/wnba-draft-lottery-2027/juju-watkins.webp',
+        'alt': 'JuJu Watkins smiling, seated in a gray T-shirt',
+        'author': 'All-Pro Reels',
+        'page': 'https://commons.wikimedia.org/wiki/File:JuJu_Watkins_2025.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    'Madison Booker': {
+        'src': '/images/articles/wnba-draft-lottery-2027/madison-booker.webp',
+        'alt': 'Madison Booker in a Texas jersey',
+        'author': 'Gamecock Central',
+        'page': 'https://commons.wikimedia.org/wiki/File:Madison_Booker.jpg',
+        'license': 'CC BY 2.0',
+        'license_href': 'https://creativecommons.org/licenses/by/2.0/',
+    },
+    'Hannah Hidalgo': {
+        'src': '/images/articles/wnba-draft-lottery-2027/hannah-hidalgo.webp',
+        'alt': 'Hannah Hidalgo in a Notre Dame jersey',
+        'author': 'Hameltion',
+        'page': 'https://commons.wikimedia.org/wiki/File:UNC_vs_ND_(Jan_2025)_21_(cropped).jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    'Mikaylah Williams': {
+        'src': '/images/articles/wnba-draft-lottery-2027/mikaylah-williams.webp',
+        'alt': 'Mikaylah Williams in an LSU jersey',
+        'author': 'CCS Pictures',
+        'page': 'https://commons.wikimedia.org/wiki/File:Mikaylah_Williams_2025.jpg',
+        'license': 'CC BY-SA 2.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    'MiLaysia Fulwiley': {
+        'src': '/images/articles/wnba-draft-lottery-2027/milaysia-fulwiley.webp',
+        'alt': 'MiLaysia Fulwiley in a basketball jersey',
+        'author': 'Gamecock Central',
+        'page': 'https://commons.wikimedia.org/wiki/File:MiLaysia_Fulwiley_(cropped).jpg',
+        'license': 'CC BY-SA 2.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    'Audi Crooks': {
+        'src': '/images/articles/wnba-draft-lottery-2027/audi-crooks.webp',
+        'alt': 'Audi Crooks in an Iowa State jersey, number 55',
+        'author': 'Jar-Lar',
+        'page': 'https://commons.wikimedia.org/wiki/File:WBB-IowaState-CentralCollege-2024.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    'Oluchi Okananwa': {
+        'src': '/images/articles/wnba-draft-lottery-2027/oluchi-okananwa.webp',
+        'alt': 'Oluchi Okananwa',
+        'author': 'Hameltion',
+        'page': 'https://commons.wikimedia.org/wiki/File:Oluchi_Okananwa.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    'Ashlyn Watkins': {
+        'src': '/images/articles/wnba-draft-lottery-2027/ashlyn-watkins.webp',
+        'alt': 'Ashlyn Watkins',
+        'author': 'Gamecock Central',
+        'page': 'https://commons.wikimedia.org/wiki/File:Ashlyn_Watkins_(cropped).jpg',
+        'license': 'CC BY 2.0',
+        'license_href': 'https://creativecommons.org/licenses/by/2.0/',
+    },
+    'Clara Strack': {
+        'src': '/images/articles/wnba-draft-lottery-2027/clara-strack.webp',
+        'alt': 'Clara Strack shooting in a Kentucky jersey',
+        'author': 'CCS Pictures',
+        'page': 'https://commons.wikimedia.org/wiki/File:Clara_Strack.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+}
+HERO = {
+    'src': '/images/articles/wnba-draft-lottery-2027/hero-1200.webp',
+    'alt': 'JuJu Watkins smiling, seated in front of a blue curtain',
+    'author': 'All-Pro Reels',
+    'page': 'https://commons.wikimedia.org/wiki/File:JuJu_Watkins_2025.jpg',
+    'license': 'CC BY-SA 4.0',
+    'license_href': 'https://creativecommons.org/licenses/by-sa/4.0/',
+    'width': 1200,
+    'height': 675,
+}
+TEAM_MARK = {
+    'HOU': 'connecticut-sun',
+    'TOR': 'toronto-tempo',
+    'WAS': 'washington-mystics',
+    'SEA': 'seattle-storm',
+    'POR': 'portland-fire',
+    'LAL': 'los-angeles-sparks',
+}
+
 
 def e(value) -> str:
     return html.escape(str(value), quote=True)
@@ -412,6 +506,15 @@ CLASS_WORDS = {
 }
 
 
+def photo_credit(spec: dict) -> str:
+    return (
+        'Photo: '
+        f'<a class="inline-link" href="{e(spec["page"])}" target="_blank" rel="noopener">{e(spec["author"])}</a>, '
+        f'<a class="inline-link" href="{e(spec["license_href"])}" target="_blank" rel="noopener">{e(spec["license"])}</a>, via '
+        f'<a class="inline-link" href="{e(spec["page"])}" target="_blank" rel="noopener">Wikimedia Commons</a>'
+    )
+
+
 def _leader_line(player: dict) -> str:
     bits = [f"{int(round(player['minutes'])):,} minutes", f"{int(round(player['points'])):,} points"]
     if player['age'] is not None:
@@ -449,6 +552,7 @@ def needs_html(cards: list[dict]) -> str:
         leaders = ''.join(f'<li>{_leader_line(player)}</li>' for player in card['leaders'])
         title = slot['team']
         extra = ''
+        import team_hub
         if slot['id'] == 'HOU':
             extra = (
                 '<p>These minutes are the 2026 Connecticut Sun. The club plays 2027 as the Houston Comets. '
@@ -464,14 +568,22 @@ def needs_html(cards: list[dict]) -> str:
                 '<p>The lottery pick is Chicago\'s. This card is the Mystics roster that would make the selection, '
                 'not the 2026 Chicago roster.</p>'
             )
+        mark = team_hub.VISUALS.get(TEAM_MARK.get(slot['id'], ''))
+        photo = ''
+        if mark:
+            photo = (
+                f'<img class="face" src="{e(mark["src"])}" alt="{e(mark["alt"])}" '
+                f'width="72" height="72" loading="lazy" decoding="async">'
+            )
+            extra += f'<p class="photo-credit">{photo_credit(mark)}</p>'
         blocks.append(
-            f'<article class="need-card"><h3><a href="{e(slot["href"])}">{e(title)}</a></h3>'
+            f'<article class="need-card">{photo}<div><h3><a href="{e(slot["href"])}">{e(title)}</a></h3>'
             f'{extra}'
             f'<p>{card["players"]} player rows and {card["minutes"]:,} minutes in the 2026 regular-season file. '
             f'Positions: {pos}.</p>'
             f'<p>{age}</p>'
             f'<p>If those contracts end, the free-agency file classes the minutes logged for this club as {classes}.</p>'
-            f'<ol class="leaders">{leaders}</ol></article>'
+            f'<ol class="leaders">{leaders}</ol></div></article>'
         )
     return '<div class="need-grid">' + ''.join(blocks) + '</div>'
 
@@ -482,9 +594,20 @@ def prospects_html() -> str:
         full = prospect['full']
         early = prospect['early']
         note = f' {e(prospect["note"])}' if prospect['note'] else ''
+        photo = PROSPECT_PHOTOS.get(prospect['name'])
+        if photo:
+            face = (
+                f'<img class="face" src="{e(photo["src"])}" alt="{e(photo["alt"])}" '
+                f'width="480" height="480" loading="lazy" decoding="async">'
+            )
+            credit = f'<p class="photo-credit">{photo_credit(photo)}</p>'
+        else:
+            face = f'<span class="av" aria-hidden="true">{e(prospect["initials"])}</span>'
+            credit = '<p class="photo-credit">No freely licensed photo was found, so this card uses initials.</p>'
         cards.append(
-            f'<article class="prospect"><span class="av" aria-hidden="true">{e(prospect["initials"])}</span>'
+            f'<article class="prospect">{face}'
             f'<div><h3>{prospect["board"]}. {e(prospect["name"])}</h3>'
+            f'{credit}'
             f'<p>{e(prospect["pos"])}, {e(prospect["height"])}, {e(prospect["school"])}. '
             f'Ultimate Big Board rank {prospect["board"]}, {e(prospect["mocks"])} mocks.</p>'
             f'<p>{e(full["season"])} at {e(full["school"])}: {full["g"]} games, {e(full["pts"])} points, '
@@ -512,7 +635,7 @@ def odds_table(rows: list[dict]) -> str:
         cells.append(f'<td data-label="Top 2">{pct(row["top2"], 1)}%</td>')
         body.append('<tr>' + ''.join(cells) + '</tr>')
     return (
-        '<div data-fcb-data-table><table class="fcb-cards lot-odds">'
+        '<div class="table-wrap" data-fcb-data-table><table class="fcb-cards fcb-data-table">'
         '<thead><tr><th scope="col">Slot</th><th scope="col">Record</th>'
         f'<th scope="col">Chances</th>{head}<th scope="col">Top 2</th></tr></thead>'
         f'<tbody>{"".join(body)}</tbody></table></div>'
@@ -572,7 +695,7 @@ def faq_html(pairs: list[tuple[str, str]]) -> str:
     blocks = []
     for question, answer in pairs:
         blocks.append(f'<h3>{e(question)}</h3><p>{e(answer)}</p>')
-    return '<section id="faq"><h2>Questions</h2>' + ''.join(blocks) + '</section>'
+    return '<section id="faq"><h2 class="section-title">Questions</h2>' + ''.join(blocks) + '</section>'
 
 
 def faq_jsonld(pairs: list[tuple[str, str]]) -> str:
@@ -762,7 +885,7 @@ def live_html() -> str:
         label = 'Not drawn yet' if number <= 7 else 'to be confirmed'
         items.append(f'<li>Pick {number}: {label}</li>')
     return (
-        '<section id="live-results"><h2>Live results</h2>'
+        '<section id="live-results"><h2 class="section-title">Live results</h2>'
         '<p id="live-status">The drawing has not been entered. Picks 8 through 15 stay to be confirmed.</p>'
         f'<ol id="live-order">{"".join(items)}</ol>'
         '<p class="table-note">This list reads <a href="/data/wnba-draft-lottery-2027-results.json">wnba-draft-lottery-2027-results.json</a>. '
@@ -775,19 +898,26 @@ def live_html() -> str:
 def page(rows: list[dict], cards: list[dict]) -> str:
     pairs = faq_pairs(rows)
     la_top = team_top_two()
+    hero_figure = (
+        '<figure class="lead-photo">'
+        f'<img src="{e(HERO["src"])}" alt="{e(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}" '
+        'decoding="async" fetchpriority="high">'
+        f'<figcaption>{photo_credit(HERO)}</figcaption></figure>'
+    )
     hero = (
-        '<p class="lot-hero">Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
+        hero_figure
+        + '<p class="lead">Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
         'on ESPN after UConn vs. Louisville and on TSN in Canada. This is the lottery, not the April 12, 2027 draft, '
         'and not the April 3, 2026 expansion draft. Data through Oct. 28, 2026.</p>'
-        '<section id="simulator"><h2>Lottery simulator</h2>'
-        '<p class="lot-sim-note">One draw is random. The 10,000-draw button uses seed 20261115.</p>'
+        '<section id="simulator"><h2 class="section-title">Lottery simulator</h2>'
+        '<p>One draw is random. The 10,000-draw button uses seed 20261115.</p>'
         '<div class="lot-actions">'
-        '<button type="button" id="draw-one">One draw</button>'
-        '<button type="button" id="draw-many">10,000 draws</button>'
-        '<button type="button" id="draw-reset">Reset</button>'
+        '<button type="button" class="button primary" id="draw-one">One draw</button>'
+        '<button type="button" class="button" id="draw-many">10,000 draws</button>'
+        '<button type="button" class="button" id="draw-reset">Reset</button>'
         '</div><p id="draw-summary">No draw yet.</p><div id="draw-board"></div></section>'
-        '<h2 id="probabilities">Chance of every pick</h2>'
-        '<p class="lot-key">Houston and Toronto each hold 329 of 1,000 combinations.</p>'
+        '<h2 class="section-title" id="probabilities">Chance of every pick</h2>'
+        '<p>Houston and Toronto each hold 329 of 1,000 combinations.</p>'
     )
     methods = (
         '<p class="table-note">Source: <a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">WNBA release, Oct. 28, 2026</a>. '
@@ -797,14 +927,15 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         'Free to use and republish (CC0). '
         '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>.</p>'
     )
-    body = f'''<main id="content" class="lot-wrap">
-<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <a href="/wnba/">WNBA</a> › <span>2027 Draft Lottery</span></nav>
+    body = f'''<main id="content" class="shell article-wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/">WNBA</a><span aria-hidden="true">/</span><span>2027 Draft Lottery</span></nav>
+<article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div>
 <h1>{e(TITLE)}</h1>
-<div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><span class="byline-sep" aria-hidden="true">|</span><time class="article-date" datetime="{PUBLISHED}">Nov. 9, 2026</time></div>
+<div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><time class="article-date" datetime="{PUBLISHED}">November 9, 2026</time></div>
 {hero}
 {odds_table(rows)}
 {methods}
-<section id="how"><h2>How the drawing works</h2>
+<section id="how"><h2 class="section-title">How the drawing works</h2>
 <p>The league puts 14 balls, numbered 1 through 14, in the machine and draws four. That is 1,001 combinations. One combination is left unassigned, so 1,000 are in play. The slot that owns the combination gets pick 1. The four balls go back in, and the same draw sets pick 2. If the machine hits the unassigned combination, or a combination owned by the slot that already won, it draws again.</p>
 <p>Picks 3 through 7 are not drawn. They follow the pre-lottery order among the five slots still waiting. That order, worst record first, is Houston, Toronto, Washington (Chicago's pick), Seattle, Portland, Los Angeles (own pick), Los Angeles (Phoenix's pick).</p>
 <p>Five of the records are two seasons added together, 2025 and 2026: Chicago 26-62, Houston 22-66, Los Angeles 37-51, Phoenix 43-45, and Seattle 31-57. Portland and Toronto were expansion teams in 2026, so their odds use 2026 only: Portland 17-27 and Toronto 11-33. Houston and Toronto both land at .250, so each receives 329 combinations.</p>
@@ -816,19 +947,19 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <p>Houston is the relocated Connecticut Sun. The <a href="https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale" target="_blank" rel="noopener">May 13, 2026 sale release</a> says the club stays in Connecticut for 2026 and moves to Houston for 2027, under Tilman J. Fertitta. The team URL on this site is still <a href="/wnba/teams/connecticut-sun/">/wnba/teams/connecticut-sun/</a>.</p>
 <p>Bethany Donaphin, head of league operations, reveals the result on ESPN. Ernst &amp; Young oversees the drawing. The presentation name on the release is State Street Investment Management SPY. ESPN is airing the lottery for the 15th year in a row.</p>
 </section>
-<section id="needs"><h2>What the 2026 rosters look like</h2>
+<section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
 <p>Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Age is the Oct. 28, 2026 WNBA.com roster snapshot in that same team file, weighted by those minutes. The class is the one on the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a>: what the file assigns if the contract has ended. It is not the league's February list. A restricted or reserved tag still needs a qualifying offer.</p>
 {needs_html(cards)}
 </section>
-<section id="prospects"><h2>Early prospect board</h2>
-<p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft. Every counting line is from the linked Sports-Reference page, read Nov. 9, 2026. The 2026-27 lines are one or two games. No headshot is used: the repo does not have a licensed photo of these players, so each card is initials.</p>
+<section id="prospects"><h2 class="section-title">Early prospect board</h2>
+<p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft. Every counting line is from the linked Sports-Reference page, read Nov. 9, 2026. The 2026-27 lines are one or two games. Headshots are Wikimedia Commons photos credited on each card. S'Mya Nichols has no freely licensed photo, so her card uses initials.</p>
 {prospects_html()}
 </section>
 {live_html()}
-<section id="playoff-records"><h2>2026 records behind picks 8 through 15</h2>
+<section id="playoff-records"><h2 class="section-title">2026 records behind picks 8 through 15</h2>
 <p>The eight clubs in the top eight of the <a href="/standings/">2026 standings</a> finished the regular season, in the WNBA schedule file, at Minnesota 33-11, Golden State 32-12, Las Vegas 31-13, Atlanta 30-14, Washington 28-16, Indiana 28-16, Dallas 27-17, and New York 26-18. Those are records, not pick numbers. Washington and Indiana are tied, and the lottery release does not publish the rest of round 1.</p>
 </section>
-<section id="related"><h2>Related pages</h2>
+<section id="related"><h2 class="section-title">Related pages</h2>
 <ul>
 <li><a href="/news/wnba-free-agents-2027/">2027 free agents</a></li>
 <li><a href="/news/wnba-expansion-teams/">Portland and Toronto expansion</a></li>
@@ -841,7 +972,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 </ul>
 </section>
 {faq_html(pairs)}
-<section id="sources"><h2>Sources</h2>
+<section id="sources"><h2 class="section-title">Sources</h2>
 <ul>
 <li><a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">WNBA Draft Lottery 2027 release, Oct. 28, 2026</a></li>
 <li><a href="https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale" target="_blank" rel="noopener">WNBA and NBA approve the Sun sale, May 13, 2026</a></li>
@@ -857,7 +988,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 </ul>
 </section>
 <p class="how-made">How this page was made: <a href="/authors/ryan-moalemi/">Ryan Moalemi</a> writes Full Court Buckets pages, sometimes with AI assistance. The pick probabilities are enumerated from the league release. Roster minutes come from the site's 2026 player file. College lines are the Sports-Reference pages linked above. <a href="/how-we-make-full-court-buckets/">How we make Full Court Buckets</a>.</p>
-</main>
+</article></main>
 {sim_script()}
 '''
     social = (
@@ -866,52 +997,54 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'<meta property="og:url" content="{BASE}{ROUTE}">'
         '<meta property="og:type" content="article">'
         '<meta property="og:site_name" content="Full Court Buckets">'
-        '<meta property="og:image" content="https://fullcourtbuckets.com/images/social/fcb-default.jpg?v=17b4bd5a5980">'
-        '<meta property="og:image:width" content="1200">'
-        '<meta property="og:image:height" content="630">'
-        '<meta property="og:image:alt" content="Full Court Buckets">'
+        f'<meta property="og:image" content="{BASE}{HERO["src"]}">'
+        f'<meta property="og:image:width" content="{HERO["width"]}">'
+        f'<meta property="og:image:height" content="{HERO["height"]}">'
+        f'<meta property="og:image:alt" content="{e(HERO["alt"])}">'
         '<meta name="twitter:card" content="summary_large_image">'
         '<meta name="twitter:site" content="@fullcourtbucket">'
         f'<meta name="twitter:title" content="{e(TITLE)}">'
         f'<meta name="twitter:description" content="{e(DESCRIPTION)}">'
-        '<meta name="twitter:image" content="https://fullcourtbuckets.com/images/social/fcb-default.jpg?v=17b4bd5a5980">'
-        '<meta name="twitter:image:alt" content="Full Court Buckets">'
+        f'<meta name="twitter:image" content="{BASE}{HERO["src"]}">'
+        f'<meta name="twitter:image:alt" content="{e(HERO["alt"])}">'
     )
     style = '''<style>
-.lot-wrap{max-width:880px;margin:0 auto;padding:20px 16px 72px}
-.lot-wrap h1{font:800 34px/1.15 Barlow,sans-serif;margin:8px 0 0;max-width:18em}
-.byline-row{display:flex;align-items:center;gap:10px;margin:12px 0 16px;flex-wrap:wrap}
-.byline-row .byline{display:inline-flex;align-items:center;gap:10px;color:#5b22c9;font-weight:700;text-decoration:none}
-.byline-row img{width:40px;height:40px;border-radius:50%;object-fit:cover}
-.byline-sep{color:#6b665e}
-.lot-hero,.lot-key,.lot-sim-note{max-width:65ch;font-size:18px;line-height:1.5}
-.lot-wrap h2{font:800 28px/1.2 Barlow,sans-serif;margin:28px 0 8px}
-.lot-wrap h3{font:800 20px/1.3 Barlow,sans-serif;margin:18px 0 6px}
-.lot-wrap p,.lot-wrap li{font-size:16px;line-height:1.55}
+.shell{width:min(1240px,94vw);margin:auto}
+.article-wrap{padding:32px 0 80px}
+.article{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line,#e2ddd6);padding:28px;box-shadow:0 1px 3px rgba(40,20,80,.06)}
+.meta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;color:#5a554e;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.cat{color:#a85400}
+.divider{width:1px;height:12px;background:#e2ddd6}
+.article h1{margin:0 0 12px;font:800 clamp(36px,5vw,62px)/.98 Barlow,sans-serif;letter-spacing:-1.6px}
+.article h2.section-title{margin:30px 0 12px;font:800 30px/1.05 Barlow,sans-serif;letter-spacing:-.6px}
+.article h3{margin:18px 0 8px;font:800 22px/1.2 Barlow,sans-serif}
+.article p{margin:0 0 22px;font-size:17px;line-height:1.8}
+.article ul,.article ol{margin:0 0 22px;padding-left:22px;font-size:17px;line-height:1.75}
+.article li{margin:0 0 8px}
+.article .byline{display:flex;align-items:center;gap:10px;margin:0;font:600 15px/1.3 Inter,system-ui,sans-serif;text-decoration:none}
+.article .byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover}
+.article .byline-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 10px}
+.article .article-date{font:600 13px/1.3 Inter,system-ui,sans-serif}
+.article figure.lead-photo{margin:0 0 8px;width:100%}
+.article figure.lead-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 30%}
+.article figure.lead-photo figcaption,.photo-credit{margin-top:4px;font-size:12px;line-height:1.35}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:3px;font:700 15px/1 Inter,system-ui,sans-serif;cursor:pointer;background:#fff}
+.button.primary{background:#5b22c9;border:1px solid #5b22c9;color:#fff}
 .lot-actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
-.lot-actions button{min-height:44px;padding:0 14px;border:0;border-radius:4px;background:#2a1458;color:#fff;font:700 15px/1 Inter,sans-serif;cursor:pointer}
 .lot-actions button:disabled{opacity:.45;cursor:default}
 .pick-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e6e1d8}
 .pick-no{width:1.4em;font:800 18px/1 Barlow,sans-serif}
-.av{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 11px/1 Barlow,sans-serif;flex:none}
-.need-grid,.prospect-list{display:grid;gap:12px}
-.need-card,.prospect{border:1px solid #e6e1d8;border-radius:10px;background:#fff;padding:14px}
-.prospect{display:flex;gap:12px;align-items:flex-start}
-.leaders{margin:8px 0 0;padding-left:1.2em}
-.lot-odds{width:100%;border-collapse:collapse;background:#fff}
-.lot-odds th,.lot-odds td{padding:8px;border-bottom:1px solid #e6e1d8;text-align:right}
-.lot-odds th:first-child,.lot-odds td:first-child,.lot-odds tbody th{text-align:left}
-.how-made{color:#5a554e;font-size:14px}
-@media (max-width:800px){
-.lot-wrap{padding:16px 12px 56px}
-.lot-wrap h1{font-size:28px}
-html body .lot-wrap table.lot-odds{display:block!important;width:100%!important}
-html body .lot-wrap table.lot-odds thead{display:none!important}
-html body .lot-wrap table.lot-odds tbody,.lot-wrap table.lot-odds tr{display:block!important}
-html body .lot-wrap table.lot-odds tr{margin:0 0 12px;padding:12px;border:1px solid #e6e1d8;border-radius:10px;background:#fff}
-html body .lot-wrap table.lot-odds td,.lot-wrap table.lot-odds tbody th{display:block!important;text-align:left!important;border:0;border-bottom:1px solid #f3efe8;padding:7px 0;white-space:normal!important}
-html body .lot-wrap table.lot-odds tbody th{font:800 18px/1.25 Barlow,sans-serif;border-bottom:1px solid #eee8e0}
-html body .lot-wrap table.lot-odds td[data-label]::before{content:attr(data-label);display:block;color:#6b665e;font:600 13px/1.3 Inter,sans-serif}
+.face{width:72px;height:72px;max-width:72px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none}
+.av{width:72px;height:72px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif;flex:none}
+.need-grid,.prospect-list{display:grid;gap:18px}
+.need-card,.prospect{display:flex;gap:12px;align-items:flex-start}
+.article .how-made{margin:22px 0 0;font-size:13px;line-height:1.55}
+@media(max-width:900px){
+.article-wrap{padding-top:8px}
+.article{padding:22px 18px 28px;padding-top:12px}
+.article h1{font-size:26px;line-height:1.05;letter-spacing:-.4px;margin-bottom:6px}
+.meta-row{margin-bottom:6px}
+.article .byline{font-size:14px}
 }
 </style>'''
     author = {
