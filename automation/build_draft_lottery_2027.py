@@ -18,12 +18,14 @@ from fractions import Fraction
 from pathlib import Path
 
 import analytics
+import internal_links
 import site_nav
+import team_hub
 
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE = '/wnba/draft-lottery-2027/'
 BASE = 'https://fullcourtbuckets.com'
-TITLE = '2027 WNBA Draft Lottery Odds, Simulator, and Live Results (Nov 15)'
+TITLE = '2027 WNBA Draft Lottery Odds, Simulator and Live Results (Nov 15)'
 DESCRIPTION = (
     'Official 2027 WNBA Draft Lottery odds, full pick probabilities for picks 1-7, '
     'team needs, live results, and a free CSV. Drawing: Nov. 15, 2026.'
@@ -552,7 +554,6 @@ def needs_html(cards: list[dict]) -> str:
         leaders = ''.join(f'<li>{_leader_line(player)}</li>' for player in card['leaders'])
         title = slot['team']
         extra = ''
-        import team_hub
         if slot['id'] == 'HOU':
             extra = (
                 '<p>These minutes are the 2026 Connecticut Sun. The club plays 2027 as the Houston Comets. '
@@ -572,8 +573,8 @@ def needs_html(cards: list[dict]) -> str:
         photo = ''
         if mark:
             photo = (
-                f'<img class="face" src="{e(mark["src"])}" alt="{e(mark["alt"])}" '
-                f'width="72" height="72" loading="lazy" decoding="async">'
+                f'<img class="team-shot" src="{e(mark["src"])}" alt="{e(mark["alt"])}" '
+                f'width="160" height="90" loading="lazy" decoding="async">'
             )
             extra += f'<p class="photo-credit">{photo_credit(mark)}</p>'
         blocks.append(
@@ -620,6 +621,55 @@ def prospects_html() -> str:
     return '<div class="prospect-list">' + ''.join(cards) + '</div>'
 
 
+def _slot_mark(slot: dict) -> dict | None:
+    key = TEAM_MARK.get(slot['id'])
+    if not key and slot['id'].startswith('LAL'):
+        key = TEAM_MARK['LAL']
+    return team_hub.VISUALS.get(key or '')
+
+
+def odds_cards(rows: list[dict]) -> str:
+    """Phone cards: identity, two headline odds, and one bar. Zeros stay in the label only."""
+    cards = []
+    for row in rows:
+        slot = row['slot']
+        mark = _slot_mark(slot)
+        if mark:
+            avatar = (
+                f'<img class="lot-avatar" src="{e(mark["src"])}" alt="" '
+                f'width="64" height="64" loading="lazy" decoding="async">'
+            )
+        else:
+            avatar = f'<span class="lot-avatar lot-initials" aria-hidden="true">{e(slot["circle"][:3])}</span>'
+        legend_bits = []
+        segments = []
+        spoken = [f'{slot["label"]}, record {slot["record"]}']
+        for index, prob in enumerate(row['probs'], start=1):
+            shown = pct(prob, 1)
+            spoken.append(f'Pick {index} {shown}%')
+            if shown == '0.0':
+                continue
+            legend_bits.append(f'<span>#{index} {shown}</span>')
+            grow = float(prob)
+            segments.append(
+                f'<span class="lot-p{index}" style="flex:{grow:.6f} {grow:.6f} 0"></span>'
+            )
+        spoken.append(f'Top 2 {pct(row["top2"], 1)}%')
+        cards.append(
+            '<article class="lot-card">'
+            f'<div class="lot-id">{avatar}'
+            f'<a href="{e(slot["href"])}">{e(slot["label"])}</a>'
+            f'<span class="lot-rec">{e(slot["record"])}</span></div>'
+            f'<p class="lot-stats"><span>Top 2: {pct(row["top2"], 1)}%</span>'
+            f'<span>No. 1: {pct(row["probs"][0], 1)}%</span></p>'
+            f'<div class="lot-bar" role="img" aria-label="{e(". ".join(spoken))}">'
+            f'{"".join(segments)}</div>'
+            f'<p class="lot-legend">{"".join(legend_bits)}</p>'
+            '</article>'
+        )
+    return '<div class="lot-odds-cards">' + ''.join(cards) + '</div>'
+
+
 def odds_table(rows: list[dict]) -> str:
     head = ''.join(f'<th scope="col">Pick {k}</th>' for k in range(1, 8))
     body = []
@@ -634,12 +684,13 @@ def odds_table(rows: list[dict]) -> str:
             cells.append(f'<td data-label="Pick {index}">{pct(prob, 1)}%</td>')
         cells.append(f'<td data-label="Top 2">{pct(row["top2"], 1)}%</td>')
         body.append('<tr>' + ''.join(cells) + '</tr>')
-    return (
+    table = (
         '<div class="table-wrap" data-fcb-data-table><table class="fcb-cards fcb-data-table">'
         '<thead><tr><th scope="col">Slot</th><th scope="col">Record</th>'
         f'<th scope="col">Chances</th>{head}<th scope="col">Top 2</th></tr></thead>'
         f'<tbody>{"".join(body)}</tbody></table></div>'
     )
+    return f'<div class="lot-odds">{table}{odds_cards(rows)}</div>'
 
 
 def faq_pairs(rows: list[dict]) -> list[tuple[str, str]]:
@@ -888,7 +939,7 @@ def live_html() -> str:
         '<section id="live-results"><h2 class="section-title">Live results</h2>'
         '<p id="live-status">The drawing has not been entered. Picks 8 through 15 stay to be confirmed.</p>'
         f'<ol id="live-order">{"".join(items)}</ol>'
-        '<p class="table-note">This list reads <a href="/data/wnba-draft-lottery-2027-results.json">wnba-draft-lottery-2027-results.json</a>. '
+        '<p class="table-note">This list reads the results file on this site, data/wnba-draft-lottery-2027-results.json. '
         'On Nov. 15, set status to final and fill picks 1 through 7. The simulator then locks to that order. '
         'Picks 8 through 15 are to be confirmed: the Oct. 28 release does not publish them, Indiana and Washington both finished 28-16, '
         'and the 2025 Atkins deal was announced as swap rights rather than a finished draft order.</p></section>'
@@ -899,10 +950,11 @@ def page(rows: list[dict], cards: list[dict]) -> str:
     pairs = faq_pairs(rows)
     la_top = team_top_two()
     hero_figure = (
-        '<figure class="lead-photo">'
-        f'<img src="{e(HERO["src"])}" alt="{e(HERO["alt"])}" width="{HERO["width"]}" height="{HERO["height"]}" '
-        'decoding="async" fetchpriority="high">'
-        f'<figcaption>{photo_credit(HERO)}</figcaption></figure>'
+        '<figure class="lead-photo"><picture>'
+        f'<source srcset="{e(HERO["src"])} 1200w" type="image/webp" sizes="(max-width: 900px) calc(94vw - 40px), 842px">'
+        f'<img src="{e(HERO["src"])}" alt="{e(HERO["alt"])}" style="object-position:center 30%" '
+        f'width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">'
+        f'</picture><figcaption>{photo_credit(HERO)}</figcaption></figure>'
     )
     hero = (
         hero_figure
@@ -979,9 +1031,9 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <li><a href="https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft" target="_blank" rel="noopener">Mystics on the Ariel Atkins trade, Feb. 23, 2025</a></li>
 <li><a href="https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins" target="_blank" rel="noopener">League release on the Sky and Ariel Atkins, Feb. 23, 2025</a></li>
 <li><a href="https://www.wnba.com/news/rapid-reactions-trade-deadline-2026" target="_blank" rel="noopener">League trade-deadline note on Kelsey Plum, 2026</a></li>
-<li><a href="/data/wnba/schedule-2026.json">2026 WNBA schedule file on this site</a>, taken from the league schedule, for the three Sun-Tempo games and the 2026 records</li>
+<li>The 2026 WNBA schedule file on this site, taken from the league schedule, for the three Sun-Tempo games and the 2026 records</li>
 <li><a href="/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv">2026 players by service class (CSV)</a></li>
-<li><a href="/data/wnba/team-facts.json">WNBA.com roster snapshot, checked Oct. 28, 2026</a>, for ages</li>
+<li>WNBA.com roster snapshot saved on this site, checked Oct. 28, 2026, for ages</li>
 <li>Sports-Reference player pages linked on each prospect card</li>
 <li><a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board, 2027 WNBA consensus, snapshot Oct. 29, 2026</a></li>
 <li><a href="/news/wnba-expansion-teams/">Expansion draft, April 3, 2026</a></li>
@@ -1011,7 +1063,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
     style = '''<style>
 .shell{width:min(1240px,94vw);margin:auto}
 .article-wrap{padding:32px 0 80px}
-.article{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line,#e2ddd6);padding:28px;box-shadow:0 1px 3px rgba(40,20,80,.06)}
+.article{box-sizing:border-box;max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line,#e2ddd6);padding:28px;box-shadow:0 1px 3px rgba(40,20,80,.06)}
 .meta-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;color:#5a554e;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
 .cat{color:#a85400}
 .divider{width:1px;height:12px;background:#e2ddd6}
@@ -1025,9 +1077,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .article .byline img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover}
 .article .byline-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:0 0 10px}
 .article .article-date{font:600 13px/1.3 Inter,system-ui,sans-serif}
-.article figure.lead-photo{margin:0 0 8px;width:100%}
-.article figure.lead-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 30%}
-.article figure.lead-photo figcaption,.photo-credit{margin-top:4px;font-size:12px;line-height:1.35}
+.photo-credit{margin-top:4px;font-size:12px;line-height:1.35}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 14px;border-radius:3px;font:700 15px/1 Inter,system-ui,sans-serif;cursor:pointer;background:#fff}
 .button.primary{background:#5b22c9;border:1px solid #5b22c9;color:#fff}
 .lot-actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
@@ -1035,6 +1085,20 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .pick-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e6e1d8}
 .pick-no{width:1.4em;font:800 18px/1 Barlow,sans-serif}
 .face{width:72px;height:72px;max-width:72px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none}
+.team-shot{width:144px;max-width:42%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 20%;flex:none;border-radius:4px}
+.lot-odds-cards{display:none}
+.lot-card{display:flex;flex-direction:column;gap:7px;padding:12px 10px;border:1px solid #e6e1d8;border-radius:8px;background:#fff}
+.lot-id{display:flex;align-items:center;gap:8px;min-width:0;min-height:28px}
+.lot-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;object-position:center 18%;flex:none}
+.lot-initials{display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 9px/1 Barlow,sans-serif}
+.lot-id a{min-height:0;font:800 14px/1.15 Barlow,sans-serif;color:#2a1458;text-decoration:none}
+.lot-rec{margin-left:auto;flex:none;font:600 12px/1 Inter,system-ui,sans-serif;color:#6b665e}
+.article .lot-card p{margin:0}
+.article .lot-stats{display:flex;gap:16px;font:800 20px/1.1 Barlow,sans-serif;color:#2a1458}
+.lot-bar{display:flex;height:14px;border-radius:99px;overflow:hidden;background:#f6f1ff}
+.lot-bar span{display:block;height:100%;min-width:0}
+.lot-p1{background:#4c1d95}.lot-p2{background:#5b22c9}.lot-p3{background:#7c4fe0}.lot-p4{background:#9a78ea}.lot-p5{background:#b59cf2}.lot-p6{background:#d0c0f7}.lot-p7{background:#e6dcfb}
+.article .lot-legend{display:flex;flex-wrap:wrap;gap:2px 10px;font:600 12px/1.25 Inter,system-ui,sans-serif;color:#3d3832}
 .av{width:72px;height:72px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif;flex:none}
 .need-grid,.prospect-list{display:grid;gap:18px}
 .need-card,.prospect{display:flex;gap:12px;align-items:flex-start}
@@ -1046,7 +1110,11 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .meta-row{margin-bottom:6px}
 .article .byline{font-size:14px}
 }
-</style>'''
+@media(max-width:640px){
+html body .lot-odds .table-wrap{display:none!important}
+html body .lot-odds .lot-odds-cards{display:grid;gap:8px}
+}
+''' + internal_links.LEAD_CSS + '</style>'
     author = {
         '@context': 'https://schema.org', '@type': 'Article',
         'headline': TITLE, 'description': DESCRIPTION,
@@ -1061,14 +1129,15 @@ def page(rows: list[dict], cards: list[dict]) -> str:
     doc = (
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        f'<title>{e(TITLE)}</title>'
+        + social
+        + f'<title>{e(TITLE)}</title>'
         f'<meta name="description" content="{e(DESCRIPTION)}">'
         '<meta name="author" content="Ryan Moalemi">'
         '<meta name="robots" content="index, follow">'
         f'<link rel="canonical" href="{BASE}{ROUTE}">'
         '<meta name="theme-color" content="#ffffff">'
         '<link rel="icon" href="/favicon.svg">'
-        + social + style
+        + style
         + faq_jsonld(pairs) + dataset_jsonld() + breadcrumb_jsonld()
         + '<script type="application/ld+json">' + json.dumps(author) + '</script>'
         + analytics.GA4_TAG
