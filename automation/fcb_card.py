@@ -108,7 +108,8 @@ def _card(slug: str, name: str, tiles: str, extra: str, body: str) -> str:
         + tiles
         + extra_html
         + f'<p>{body}</p>'
-        + '</div></article>'
+        + '</div>'
+        + card_close()
     )
 
 
