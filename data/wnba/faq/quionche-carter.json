@@ -1,82 +1,41 @@
 {
   "slug": "quionche-carter",
   "player_name": "Quionche Carter",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 9, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "Who is Quionche Carter?",
-      "answer": "Quionche Collianna Laneshay Carter is an American professional basketball player for the Phoenix Mercury of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Where did Quionche Carter play college basketball?",
+      "answer": "Quionche Carter played four seasons at Walsh, where she set the program record with 2,116 career points and was twice the Great Midwest Athletic Conference Player of the Year. She then transferred to Florida Gulf Coast in 2022.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sha_Carter"
+        "https://en.wikipedia.org/wiki/Quionche_Carter",
+        "https://fullcourtbuckets.com/wnba/quionche-carter/"
       ],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "quionche carter basketball",
+          "vol": 30,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What team does Quionche Carter play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 20. Her listed position is G.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What are Quionche Carter's stats / points per game?",
-      "answer": "In the 2026 regular season, Quionche Carter averaged 1.0 points, 1.0 rebounds, and 0.5 assists in 2 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Quionche Carter's jersey number?",
-      "answer": "Quionche Carter wears number 20 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What position does Quionche Carter play?",
-      "answer": "Quionche Carter is listed as a G for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How tall is Quionche Carter?",
-      "answer": "Quionche Carter is listed at 6' 0\".",
-      "answer_kind": "bio",
+      "question": "Did Quionche Carter play for the Phoenix Mercury?",
+      "answer": "Yes. The Phoenix Mercury signed Quionche Carter in April 2026, and she made their opening-day roster. She played 13 regular-season games for Phoenix in 2026, averaging 1.2 points.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sha_Carter"
+        "https://arizonasports.com/wnba/phoenix-mercury/kahleah-copper-sign",
+        "https://en.wikipedia.org/wiki/Quionche_Carter",
+        "https://fullcourtbuckets.com/wnba/quionche-carter/"
       ],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How old is Quionche Carter?",
-      "answer": "Public profiles list Quionche Carter as born in 2000. As of late 2026 that puts her around 26 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sha_Carter"
-      ],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880,
-      "birthdate": "2000-01-01"
-    },
-    {
-      "question": "What is Quionche Carter's nationality?",
-      "answer": "Quionche Carter is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sha_Carter"
-      ],
-      "google_keyword": "quionche carter",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "quionche carter mercury",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-09)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

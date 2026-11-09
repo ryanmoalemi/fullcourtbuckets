@@ -1,92 +1,79 @@
 {
   "slug": "camryn-taylor",
   "player_name": "Camryn Taylor",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 8, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "What are Camryn Taylor's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Camryn Taylor averaged 0.5 points, 1.0 rebounds, and 0.2 assists in 6 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "camryn taylor stats",
-      "approx_monthly_volume": 10
+      "question": "Did Camryn Taylor play in the WNBA?",
+      "answer": "Yes. Camryn Taylor played for the Minnesota Lynx in 2025. She signed three straight seven-day contracts in August, then a rest-of-season contract on September 1, 2025, and played six regular-season games.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://kstp.com/minnesota-sports/lynx-sign-camryn-taylor-for-rest-of-season/",
+        "https://en.wikipedia.org/wiki/Camryn_Taylor",
+        "https://fullcourtbuckets.com/wnba/camryn-taylor/"
+      ],
+      "queries": [
+        {
+          "q": "camryn taylor wnba",
+          "vol": 20,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "What did Camryn Taylor average in the WNBA?",
+      "answer": "Camryn Taylor averaged 0.5 points and 1.0 rebounds in six regular-season games for the Minnesota Lynx in 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://fullcourtbuckets.com/wnba/camryn-taylor/",
+        "https://www.basketball-reference.com/wnba/players/t/tayloca01w.html"
+      ],
+      "queries": [
+        {
+          "q": "camryn taylor stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How tall is Camryn Taylor?",
-      "answer": "Camryn Taylor is listed at 6' 2\".",
-      "answer_kind": "bio",
+      "answer": "Full Court Buckets and the Lynx signing report list Camryn Taylor at 6 feet 2 inches; Basketball-Reference lists her at 6 feet 1 inch. She plays forward.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Camryn_Taylor"
+        "https://fullcourtbuckets.com/wnba/camryn-taylor/",
+        "https://kstp.com/minnesota-sports/lynx-sign-camryn-taylor-for-rest-of-season/",
+        "https://www.basketball-reference.com/wnba/players/t/tayloca01w.html"
       ],
-      "google_keyword": "camryn taylor height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "camryn taylor height",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Camryn Taylor?",
-      "answer": "Camryn Nichole Taylor is an American professional basketball player who most recently played for the Minnesota Lynx of the Women's National Basketball Association (WNBA).",
-      "answer_kind": "mixed",
+      "question": "Where did Camryn Taylor play college basketball?",
+      "answer": "Camryn Taylor started at Marquette (2019 to 2021), then transferred to Virginia, where she played through the 2023-24 season. She was second-team All-ACC in 2022-23 after leading the Cavaliers in scoring and rebounding.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Camryn_Taylor"
+        "https://en.wikipedia.org/wiki/Camryn_Taylor",
+        "https://www.basketball-reference.com/wnba/players/t/tayloca01w.html"
       ],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What team does Camryn Taylor play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 20. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Camryn Taylor's jersey number?",
-      "answer": "Camryn Taylor wears number 20 for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What position does Camryn Taylor play?",
-      "answer": "Camryn Taylor is listed as a F for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How old is Camryn Taylor?",
-      "answer": "Public profiles list Camryn Taylor as born in 2001. As of late 2026 that puts her around 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Camryn_Taylor"
-      ],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880,
-      "birthdate": "2001-01-01"
-    },
-    {
-      "question": "What college did Camryn Taylor attend?",
-      "answer": "Taylor played college basketball at Virginia.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Camryn_Taylor"
-      ],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Camryn Taylor's nationality?",
-      "answer": "Camryn Taylor is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Camryn_Taylor"
-      ],
-      "google_keyword": "camryn taylor",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "camryn taylor uva",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "camryn taylor transfer",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

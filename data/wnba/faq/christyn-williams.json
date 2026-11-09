@@ -1,106 +1,167 @@
 {
   "slug": "christyn-williams",
   "player_name": "Christyn Williams",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 9, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "What are Christyn Williams's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Christyn Williams averaged 4.3 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "christyn williams uconn stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Christyn Williams make?",
-      "answer": "A precise public salary or net worth figure for Christyn Williams is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Where has Christyn Williams played in the WNBA?",
+      "answer": "The Washington Mystics drafted Christyn Williams in 2022, but she missed that season after knee surgery. She signed a hardship contract with the Phoenix Mercury late in 2023 without playing, then made her WNBA debut with the Dallas Wings in August 2025. Dallas signed her again in August 2026.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://en.wikipedia.org/wiki/Christyn_Williams",
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
+        "https://fullcourtbuckets.com/wnba/christyn-williams/"
       ],
-      "google_keyword": "christyn williams net worth",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How tall is Christyn Williams?",
-      "answer": "Christyn Williams is listed at 5' 11\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Christyn_Williams"
-      ],
-      "google_keyword": "christyn williams height",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Christyn Williams's contract?",
-      "answer": "Contract length and guarantees for Christyn Williams are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "christyn williams wnba contract",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Christyn Williams married?",
-      "answer": "There is no widely reported public record of Christyn Williams being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Christyn_Williams"
-      ],
-      "google_keyword": "christyn williams wife",
-      "approx_monthly_volume": 40
-    },
-    {
-      "question": "What college did Christyn Williams attend?",
-      "answer": "Williams played college basketball at UConn.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Christyn_Williams"
-      ],
-      "google_keyword": "christyn williams uconn injury",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "christyn williams wnba",
+          "vol": 50,
+          "source": "openseo"
+        },
+        {
+          "q": "washington mystics christyn williams",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "dallas wings sign christyn williams",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "christyn williams wnba 2023",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "christyn williams current teams",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "is christyn williams still in the wnba",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "When was Christyn Williams drafted?",
-      "answer": "She was drafted by the Washington Mystics.",
+      "answer": "The Washington Mystics took Christyn Williams in the second round, 14th overall, of the 2022 WNBA Draft out of UConn.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Christyn_Williams"
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
+        "https://uconnhuskies.com/news/2022/4/10/womens-basketball-uconn-trio-set-for-2022-wnba-draft"
       ],
-      "google_keyword": "christyn williams wnba draft",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "christyn williams wnba draft",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "christyn williams draft",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Is Christyn Williams injured?",
-      "answer": "Injury status changes during the season. Check the latest Dallas Wings reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "christyn williams injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Christyn Williams's parents?",
-      "answer": "Public profiles share limited verified detail about Christyn Williams's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "How did Christyn Williams do at UConn?",
+      "answer": "Christyn Williams started for four seasons at UConn (2018-19 to 2021-22), averaging 11.7, 14.6, 16.3 and 14.2 points. As a senior she won the Ann Meyers Drysdale Award as the nation's top shooting guard, the first Husky to win it.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Christyn_Williams"
+        "https://en.wikipedia.org/wiki/Christyn_Williams",
+        "https://uconnhuskies.com/sports/womens-basketball/roster/christyn-williams/11745"
       ],
-      "google_keyword": "christyn williams parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "christyn williams uconn stats",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "uconn christyn williams",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Christyn Williams go to high school?",
+      "answer": "Christyn Williams played at Central Arkansas Christian in North Little Rock, Arkansas. As a senior in 2018 she was the Naismith and Gatorade National Player of the Year and the McDonald's All-American Game MVP.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Christyn_Williams",
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
+        "https://uconnhuskies.com/sports/womens-basketball/roster/christyn-williams/11745"
+      ],
+      "queries": [
+        {
+          "q": "christyn williams high school",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "christyn williams recruiting",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "christyn williams uconn recruit",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "What are Christyn Williams's WNBA career averages?",
+      "answer": "Christyn Williams averaged 2.6 points in seven WNBA regular-season games for Dallas over 2025 and 2026, including 4.3 points in four games in 2025.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
+        "https://fullcourtbuckets.com/wnba/christyn-williams/"
+      ],
+      "queries": [
+        {
+          "q": "christyn williams stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Christyn Williams?",
-      "answer": "Christyn Williams was born May 20, 2000 in Little Rock. As of late 2026 that puts her at 26 years old.",
+      "answer": "Christyn Williams was born May 20, 2000, in Little Rock, Arkansas.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
         "https://en.wikipedia.org/wiki/Christyn_Williams"
       ],
-      "google_keyword": "christyn williams age",
-      "approx_monthly_volume": 10,
-      "birthdate": "2000-05-20"
+      "queries": [
+        {
+          "q": "christyn williams age",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "How tall is Christyn Williams?",
+      "answer": "Christyn Williams is listed at 5 feet 11 inches. She plays guard.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/willich01w.html",
+        "https://fullcourtbuckets.com/wnba/christyn-williams/"
+      ],
+      "queries": [
+        {
+          "q": "christyn williams height",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

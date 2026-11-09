@@ -1,37 +1,25 @@
 {
   "slug": "karima-christmas-kelly",
   "player_name": "Karima Christmas-Kelly",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 9, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "Is Karima Christmas-Kelly married?",
-      "answer": "There is no widely reported public record of Karima Christmas-Kelly being married as of late 2026.",
+      "question": "What does Karima Christmas-Kelly do for the Indiana Fever?",
+      "answer": "Karima Christmas-Kelly is an assistant coach for the Indiana Fever. She joined the staff in 2023 and stayed on under head coach Stephanie White. As a player she won the 2012 WNBA title with the Fever.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Karima_Christmas-Kelly"
+        "https://fever.wnba.com/news/indiana-fever-adds-austin-kelly-to-coaching-staff-karima-christmas-kelly-returns-as-assistant-coach",
+        "https://www.indystar.com/story/sports/basketball/wnba/fever/2024/11/26/indiana-fever-coach-stephanie-white-hires-married-couple-as-assistant-coaches/76597464007/",
+        "https://fever.wnba.com/roster"
       ],
-      "google_keyword": "karima christmas kelly husband",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Karima Christmas-Kelly injured?",
-      "answer": "Injury status changes during the season. Check the latest Washington Mystics reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "karima christmas kelly injury",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Karima Christmas-Kelly have kids?",
-      "answer": "There is no widely reported public information that Karima Christmas-Kelly has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Karima_Christmas-Kelly"
-      ],
-      "google_keyword": "karima christmas-kelly son",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "karima christmas kelly indiana fever",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-09)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
