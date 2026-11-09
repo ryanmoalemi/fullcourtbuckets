@@ -942,6 +942,9 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     faces = str(meta.get('table_headshots') or '').strip().lower() in ('true', 'yes', '1')
     sortable = str(meta.get('sortable_tables') or '').strip().lower() in ('true', 'yes', '1')
     body = body_html(markdown, table_headshots=faces, sortable=sortable)
+    if str(meta.get('summary_cards') or '').strip().lower() in ('true', 'yes', '1'):
+        import fcb_card
+        body = fcb_card.wrap_player_stat_cards(body)
     if str(meta.get('data_table_first') or '').strip().lower() in ('true', 'yes', '1'):
         # Ryan's news exception: headline, byline, 16:9 lead photo, one-line opening, then this table.
         body = re.sub(

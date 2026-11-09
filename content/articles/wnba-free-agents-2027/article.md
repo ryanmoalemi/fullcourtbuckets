@@ -20,6 +20,7 @@ ticker: "Five or more seasons: 56.0% of 2026 points. Las Vegas: 96.3%."
 data_table_first: true
 table_headshots: true
 sortable_tables: true
+summary_cards: true
 ---
 
 The [Las Vegas Aces](/wnba/teams/las-vegas-aces/) got 96.3% of their 2026 regular-season points from players with five or more seasons in Full Court Buckets' file, and that group scored 56.0% of all WNBA points. Five seasons is the CBA line for unrestricted free agency once a contract ends.
