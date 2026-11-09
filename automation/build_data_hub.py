@@ -58,6 +58,12 @@ def cards() -> str:
             f'Updated {watch_day}. CSV.',
             'Bars and restaurants that show WNBA games, from team watch-party pages, venue pages and written staff replies.',
         ),
+        (
+            '/wnba/draft-lottery-2027/',
+            '2027 draft lottery',
+            'Updated 2026-11-09. CSV.',
+            'Exact chance each 2027 lottery slot lands picks 1 through 7, from the Oct. 28, 2026 league release.',
+        ),
     ]
     items = []
     for href, title, meta, scope in rows:

@@ -1,0 +1,98 @@
+{
+  "status": "pending",
+  "updated": null,
+  "source": "",
+  "note": "After the Nov. 15, 2026 drawing, set status to final, set updated to the date, name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) and team. Leave picks 8-15 as to be confirmed until a league draft order names them. A final file locks the simulator to this order.",
+  "picks": [
+    {
+      "pick": 1,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 2,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 3,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 4,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 5,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 6,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 7,
+      "slot": null,
+      "team": null,
+      "label": "Not drawn yet"
+    },
+    {
+      "pick": 8,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 9,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 10,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 11,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 12,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 13,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 14,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    },
+    {
+      "pick": 15,
+      "slot": null,
+      "team": null,
+      "label": "to be confirmed"
+    }
+  ]
+}

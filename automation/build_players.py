@@ -2073,7 +2073,7 @@ DESCRIPTION_MAX = 155
 TITLE_LIMIT = 70
 # viewership-attendance is an evergreen guide, not a player profile. Leave it out
 # of the orphan-player redirect pass.
-SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue', 'owners', 'where-to-watch', 'finals', 'coaching-tracker'})
+SKIP_PLAYER_DIRS = frozenset({'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue', 'owners', 'where-to-watch', 'finals', 'coaching-tracker', 'draft-lottery-2027'})
 
 
 def cap_description(text, limit=DESCRIPTION_MAX) -> str:
@@ -3067,6 +3067,7 @@ def _sitemap_sections(root: Path, linking: dict, articles: list, player_rows: li
         ('/wnba/where-to-watch/', 'Where to watch WNBA games'),
         ('/wnba/viewership-attendance/', 'WNBA viewership and attendance'),
         ('/wnba/team-revenue/', 'WNBA team revenue, ranked'),
+        ('/wnba/draft-lottery-2027/', '2027 WNBA Draft Lottery'),
     ])
     sections = []
     if main:
@@ -3425,6 +3426,7 @@ def sitemap_rows(root: Path, files: dict, linking: dict, indexable_players: list
         ('wnba/where-to-watch/index.html', '/wnba/where-to-watch/'),
         ('wnba/viewership-attendance/index.html', '/wnba/viewership-attendance/'),
         ('wnba/team-revenue/index.html', '/wnba/team-revenue/'),
+        ('wnba/draft-lottery-2027/index.html', '/wnba/draft-lottery-2027/'),
         ('sitemap/index.html', '/sitemap/'),
         ('wnba/finals/2026/game-1/play-by-play/index.html', '/wnba/finals/2026/game-1/play-by-play/'),
         ('wnba/finals/2026/game-2/play-by-play/index.html', '/wnba/finals/2026/game-2/play-by-play/'),
