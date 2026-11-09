@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import shutil
 import subprocess
 import unittest
@@ -185,6 +186,108 @@ process.stdout.write(out.join('\n'));
         article = (ROOT / 'news' / 'wnba-free-agents-2027' / 'index.html').read_text(encoding='utf-8')
         self.assertIn('href="/wnba/draft-lottery-2027/"', article)
         self.assertIn('/wnba/draft-lottery-2027/', (ROOT / 'content' / 'articles' / 'wnba-free-agents-2027' / 'article.md').read_text(encoding='utf-8'))
+
+    def test_json_files_are_not_linked(self):
+        self.assertIsNone(re.search(r'<a\b[^>]*href="[^"]+\.json"', self.html))
+        self.assertIn("fetch('/data/wnba-draft-lottery-2027-results.json'", self.html)
+
+    def test_hero_uses_the_shared_16_9_lead_class(self):
+        """Article heroes render 16:9 through figure.lead-photo, the class news posts use."""
+        self.assertLess(self.html.index('class="byline"'), self.html.index('class="lead-photo"'))
+        self.assertIn('.article figure.lead-photo img', self.html)
+        self.assertIn('.article figure.card.lead.lead-photo img', self.html)
+        self.assertIn('aspect-ratio:16/9', self.html)
+        self.assertIn('object-fit:cover', self.html)
+        figure = re.search(r'<figure class="lead-photo">.*?</figure>', self.html, re.S)
+        self.assertIsNotNone(figure)
+        img = re.search(r'<img\b[^>]*>', figure.group(0)).group(0)
+        self.assertIn('object-position:', img)
+        self.assertIn('fetchpriority="high"', img)
+        self.assertNotIn('loading=', img)
+        width = int(re.search(r'width="(\d+)"', img).group(1))
+        height = int(re.search(r'height="(\d+)"', img).group(1))
+        self.assertLess(img.index('width="'), img.index('height="'))
+        self.assertAlmostEqual(width / height, 16 / 9, places=2)
+        from PIL import Image
+        with Image.open(ROOT / img.split('src="', 1)[1].split('"', 1)[0].lstrip('/')) as im:
+            self.assertAlmostEqual(im.size[0] / im.size[1], 16 / 9, places=2)
+        self.assertIn('class="team-shot"', self.html)
+        self.assertIn('aspect-ratio:16/9', self.html.split('.team-shot{', 1)[1][:120])
+        self.assertIn('class="face"', self.html)
+
+    def test_phone_odds_cards_drop_zero_rows(self):
+        cards = re.findall(r'<article class="lot-card">.*?</article>', self.html, re.S)
+        self.assertEqual(len(cards), 7)
+        for card in cards:
+            legend = re.search(r'class="lot-legend">(.*?)</p>', card).group(1)
+            self.assertNotIn('>0.0<', legend)
+            self.assertNotRegex(legend, r'#\d+ 0\.0')
+            self.assertRegex(legend, r'#1 \d')
+            label = re.search(r'aria-label="([^"]+)"', card).group(1)
+            for pick in range(1, 8):
+                self.assertIn(f'Pick {pick} ', label)
+            self.assertIn('Top 2:', card)
+            self.assertIn('No. 1:', card)
+            self.assertIn('class="lot-avatar"', card)
+        self.assertIn('class="fcb-cards fcb-data-table"', self.html)
+        self.assertIn('@media(max-width:640px)', self.html)
+        self.assertIn('.lot-odds .table-wrap{display:none', self.html)
+
+
+class LotteryRender(unittest.TestCase):
+    def test_hero_and_phone_cards_measure_16_9_and_short(self):
+        try:
+            from playwright.sync_api import sync_playwright
+        except ImportError:
+            self.skipTest('playwright not installed')
+        import functools
+        import http.server
+        import threading
+        chrome = shutil.which('google-chrome') or shutil.which('chromium')
+        if not chrome:
+            self.skipTest('no chrome')
+        handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(ROOT))
+        handler.log_message = lambda *a: None
+        srv = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
+        threading.Thread(target=srv.serve_forever, daemon=True).start()
+        base = f'http://127.0.0.1:{srv.server_address[1]}'
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(executable_path=chrome, args=['--no-sandbox'])
+                desktop = browser.new_page(viewport={'width': 1280, 'height': 900})
+                desktop.goto(base + '/wnba/draft-lottery-2027/', wait_until='load')
+                hero = desktop.locator('figure.lead-photo img').bounding_box()
+                self.assertAlmostEqual(hero['width'] / hero['height'], 16 / 9, places=2)
+                self.assertTrue(desktop.locator('.lot-odds .table-wrap').is_visible())
+                self.assertFalse(desktop.locator('.lot-odds-cards').is_visible())
+                phone = browser.new_page(viewport={'width': 390, 'height': 844})
+                phone.goto(base + '/wnba/draft-lottery-2027/', wait_until='load')
+                hero = phone.locator('figure.lead-photo img').bounding_box()
+                self.assertAlmostEqual(hero['width'] / hero['height'], 16 / 9, places=2)
+                self.assertFalse(phone.locator('.lot-odds .table-wrap').is_visible())
+                heights = phone.locator('.lot-card').evaluate_all(
+                    'els => els.map(el => el.getBoundingClientRect().height)'
+                )
+                self.assertEqual(len(heights), 7)
+                for height in heights:
+                    self.assertGreaterEqual(height, 120, heights)
+                    self.assertLessEqual(height, 160, heights)
+                shots = phone.locator('.team-shot').evaluate_all(
+                    'els => els.map(el => { const b = el.getBoundingClientRect(); return b.width / b.height; })'
+                )
+                self.assertGreaterEqual(len(shots), 6)
+                for ratio in shots:
+                    self.assertAlmostEqual(ratio, 16 / 9, places=2)
+                faces = phone.locator('.prospect .face').evaluate_all(
+                    'els => els.map(el => getComputedStyle(el).borderRadius)'
+                )
+                self.assertTrue(faces)
+                self.assertTrue(all(radius == '50%' for radius in faces))
+                overflow = phone.evaluate('document.documentElement.scrollWidth - document.documentElement.clientWidth')
+                self.assertLessEqual(overflow, 1)
+                browser.close()
+        finally:
+            srv.shutdown()
 
 
 if __name__ == '__main__':
