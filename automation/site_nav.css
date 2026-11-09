@@ -315,3 +315,17 @@ html body table.fcb-cards td.is-balance + td.is-balance,html body table.fcb-card
 html body table.fcb-cards td.is-balance.is-shortfall,html body table.fcb-cards th.is-balance.is-shortfall{color:#9b1c1c!important;background:#fdecea!important}
 html body table.fcb-cards td.is-shortfall::after,html body table.fcb-cards th.is-shortfall::after{content:" shortfall";color:#9b1c1c;font:700 11px/1 Inter,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 }
+/* Summary cards for one team or one player. docs/style-guide.md. Article photos stay 16:9; headshots stay circles. */
+html body .fcb-card{border:1px solid #e6e1d8;border-radius:8px;overflow:hidden;background:#fff;margin:0 0 16px}
+html body .fcb-card .card-body,html body .fcb-card .need-body{padding:10px 12px 12px}
+html body .card-head,html body .fcb-card .need-head{display:flex;align-items:center;gap:8px;margin:0 0 8px;min-width:0}
+html body .card-title,html body .fcb-card .need-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;min-width:0}
+html body .fcb-card .face,html body .fcb-card .av,html body .card-head img{width:40px;height:40px;max-width:40px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none}
+html body .fcb-card h3,html body .card-head h3{margin:0;font:800 20px/1.15 Barlow,sans-serif;color:#2a1458}
+html body .stat-tiles,html body .need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
+html body .stat-tile,html body .need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
+html body .stat-tile b,html body .need-tile b{font:800 16px/1.1 Barlow,sans-serif;color:#2a1458}
+html body .stat-tile span,html body .need-tile span{font:600 11px/1.25 Inter,system-ui,sans-serif;color:#5a554e}
+html body .card-credit,html body .section-note{margin:0 0 8px;font-size:12px;line-height:1.45;color:#5a554e}
+html body .fcb-card p{margin:0 0 8px;font-size:15px;line-height:1.45;color:#151413}
+html body .fcb-card .card-credit,html body .fcb-card .early-line,html body .fcb-card .sr-link{font-size:12px;line-height:1.35;color:#5a554e}

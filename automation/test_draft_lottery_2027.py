@@ -212,8 +212,10 @@ process.stdout.write(out.join('\n'));
         with Image.open(ROOT / img.split('src="', 1)[1].split('"', 1)[0].lstrip('/')) as im:
             self.assertAlmostEqual(im.size[0] / im.size[1], 16 / 9, places=2)
         self.assertEqual(len(re.findall(r'<figure class="lead-photo">', self.html)), 7)
-        self.assertEqual(len(re.findall(r'<article class="need-card">', self.html)), 6)
-        self.assertEqual(len(re.findall(r'<article class="need-card prospect">', self.html)), 10)
+        self.assertEqual(len(re.findall(r'<article class="fcb-card need-card">', self.html)), 6)
+        self.assertEqual(len(re.findall(r'<article class="fcb-card need-card prospect">', self.html)), 10)
+        self.assertIn('class="stat-tiles need-tiles"', self.html)
+        self.assertIn('class="section-note table-note"', self.html)
         self.assertIn('Nichols has no freely licensed photo', self.html)
         self.assertNotIn('Ultimate Big Board rank', self.html)
         self.assertNotIn('class="team-shot"', self.html)
