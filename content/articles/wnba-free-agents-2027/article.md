@@ -328,7 +328,7 @@ The dates below are the ones in the CBA text. The lottery date is from the leagu
 
 The 2026 salary cap is $7 million, Article VII, Section 1(a) of the same [CBA](https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf). What clubs take in at the gate and on sponsorships is a different ledger, on FCB's [team revenue](/wnba/team-revenue/) page. The 2026 season ended Oct. 31, when the [Golden State Valkyries](/wnba/teams/golden-state-valkyries/) beat the [Atlanta Dream](/wnba/teams/atlanta-dream/) 68-63 in Game 7. The [game recap](/news/dream-valkyries-finals-game-7-recap/) has the series.
 
-Houston, Los Angeles, Portland, Seattle, Toronto and Washington are in the Nov. 15 drawing. The release says Phoenix had traded its first-round pick to Los Angeles, and Chicago had traded its first-round pick to Washington.
+Houston, Los Angeles, Portland, Seattle, Toronto and Washington are in the [Nov. 15 drawing](/wnba/draft-lottery-2027/). The release says Phoenix had traded its first-round pick to Los Angeles, and Chicago had traded its first-round pick to Washington.
 
 ## Where the public lists disagree
 
