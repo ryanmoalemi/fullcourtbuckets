@@ -96,7 +96,9 @@ class DataTableFirst(unittest.TestCase):
             html = path.read_text(encoding='utf-8', errors='ignore')
             if 'data-fcb-data-table' not in html:
                 continue
-            news = path.relative_to(ROOT).parts[0] == 'news' and str(path.relative_to(ROOT)) not in REQUIRED
+            rel = str(path.relative_to(ROOT))
+            # The lottery hub uses the article lead (16:9 photo, then one line) above its table.
+            news = (rel.split('/')[0] == 'news' and rel not in REQUIRED) or rel == 'wnba/draft-lottery-2027/index.html'
             gap = gap_between_byline_and_table(html, news=news)
             if gap:
                 bad.append(f'{path.relative_to(ROOT)}: {gap}')

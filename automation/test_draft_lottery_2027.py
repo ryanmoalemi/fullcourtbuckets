@@ -72,7 +72,12 @@ class LotteryPage(unittest.TestCase):
         self.assertIn('class="byline"', self.html)
         self.assertLess(self.html.index('<h1'), self.html.index('class="byline"'))
         self.assertLess(self.html.index('class="breadcrumbs"'), self.html.index('<h1'))
-        self.assertEqual(gap_between_byline_and_table(self.html), '')
+        self.assertEqual(gap_between_byline_and_table(self.html, news=True), '')
+        self.assertIn('class="meta-row"', self.html)
+        self.assertIn('class="lead-photo"', self.html)
+        self.assertIn('class="button primary"', self.html)
+        self.assertIn('class="shell article-wrap"', self.html)
+        self.assertNotIn('background:#2a1458', self.html)
         self.assertIn('draft-lottery-2027', build_players.SKIP_PLAYER_DIRS)
 
     def test_rules_and_sources_are_on_the_page(self):
