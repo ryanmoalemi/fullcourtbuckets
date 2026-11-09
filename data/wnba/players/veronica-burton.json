@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-08T18:55:46+00:00",
-  "stats_updated_at": "2026-11-08T08:18:52+00:00",
+  "checked_at": "2026-11-09T08:49:35+00:00",
+  "stats_updated_at": "2026-11-09T08:49:35+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -81,24 +81,24 @@
         "conference": "Western Conference"
       },
       "games_played": 13,
-      "min": 32.15,
+      "min": 31.31,
       "fgm": 3.31,
-      "fga": 10.77,
-      "fg_pct": 30.7,
-      "fg3m": 1.15,
-      "fg3a": 4.46,
-      "fg3_pct": 25.9,
-      "ftm": 2.46,
-      "fta": 3.15,
-      "ft_pct": 78.0,
-      "oreb": 1.38,
+      "fga": 10.69,
+      "fg_pct": 30.9,
+      "fg3m": 1.08,
+      "fg3a": 4.23,
+      "fg3_pct": 25.5,
+      "ftm": 2.62,
+      "fta": 3.31,
+      "ft_pct": 79.1,
+      "oreb": 1.46,
       "dreb": 3.31,
-      "reb": 4.69,
-      "ast": 4.38,
+      "reb": 4.77,
+      "ast": 4.15,
       "stl": 1.23,
-      "blk": 0.92,
-      "turnover": 1.23,
-      "pts": 10.23,
+      "blk": 0.85,
+      "turnover": 1.15,
+      "pts": 10.31,
       "gap_fill": true
     },
     {
@@ -722,7 +722,7 @@
     {
       "game_id": 1392680,
       "player_id": 659,
-      "date": "2026-10-04T20:00:00.000Z",
+      "date": "2026-10-04T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -880,7 +880,7 @@
       "turnover": 0.0
     }
   ],
-  "game_log_window_start": "2026-10-04",
+  "game_log_window_start": "2026-10-05",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
