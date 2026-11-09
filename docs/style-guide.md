@@ -79,6 +79,19 @@ The seven standing rules (verify outside numbers, original data hooks only where
 - Wide tables scroll sideways inside the column on phones with edge shadows and a visible "Scroll for more columns →" hint (`assets/site-nav.css`, `assets/site-nav.js`). No column may be hidden without that cue.
 - Enforced by `automation/test_article_data_notes.py`.
 
+## Team and player summary cards (Ryan, Nov 9, 2026)
+
+A block about one team or one player uses the shared card, not a side thumbnail plus a paragraph of stats. The classes are in `automation/site_nav.css` (copied to `/assets/site-nav.css` on every page). `automation/fcb_card.py` builds the markup.
+
+- `article.fcb-card` is one card. A 16:9 photo, when the card has one, is `figure.lead-photo` or `figure.body-photo` across the top of the card. It is never a tall portrait and never a tiny float. Headshots stay circles (`.face` or `.av` for initials).
+- `.card-head` or `.need-head` is the circle, the name, and a short identity line (position, height, school, or record) on one row. The row may wrap when the name is long. It does not clip.
+- `.card-credit` is the photo credit: small, muted, directly under the photo.
+- `.stat-tiles` is a row of `.stat-tile` cells. Each tile is a bold value and a short label (three or four tiles). Do not invent a number to fill a tile.
+- One or two short sentences can sit under the tiles. Methods, sources, and licensing go once in `.section-note` (also `.table-note`) at the end of the section, not repeated on every card.
+- No em dashes. No visible heading anchors. No horizontal scroll. On a phone the tiles stay in the card; they do not become a wide table.
+
+Future posts should use these classes for any per-team or per-player block. The lottery page (`automation/build_draft_lottery_2027.py`) is the reference.
+
 ## Keys to victory and other list-style sections (Ryan, Oct 27, 2026)
 - Give each group its own H3 (`### Atlanta Dream`, `### Golden State Valkyries`), then each item its own H4 with a short, scannable label (`#### Push the pace`, `#### Hold Atlanta to 64 or fewer`).
 - Under each H4, write one or two sentences with the stat that backs it. Don't repeat the label as the first words.

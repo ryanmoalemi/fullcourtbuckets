@@ -570,7 +570,7 @@ def _player_row(player: dict) -> str:
 
 def _position_bar(positions: list[dict]) -> str:
     if not positions:
-        return '<div class="need-tile"><b>n/a</b><span>Minutes</span></div>'
+        return '<div class="stat-tile need-tile"><b>n/a</b><span>Minutes</span></div>'
     segments = []
     spoken = []
     caption = []
@@ -583,7 +583,7 @@ def _position_bar(positions: list[dict]) -> str:
             f'<span class="pos-{e(row["position"])}" style="flex:{grow:.4f} {grow:.4f} 0"></span>'
         )
     return (
-        '<div class="need-tile need-tile-bar">'
+        '<div class="stat-tile need-tile need-tile-bar">'
         f'<span class="pos-bar" role="img" aria-label="{e(", ".join(spoken))} of minutes">'
         f'{"".join(segments)}</span>'
         f'<span>{e(" · ".join(caption))}</span></div>'
@@ -648,14 +648,14 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         ufa_count = ufa['players'] if ufa else 0
         players = ''.join(_player_row(player) for player in card['leaders'])
         blocks.append(
-            '<article class="need-card">'
+            '<article class="fcb-card need-card">'
             f'{photo}<div class="need-body">'
             f'<div class="need-head">{avatar}<h3><a href="{e(slot["href"])}">{e(slot["team"])}</a></h3></div>'
-            '<div class="need-tiles">'
-            f'<div class="need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
-            f'<div class="need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
+            '<div class="stat-tiles need-tiles">'
+            f'<div class="stat-tile need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
+            f'<div class="stat-tile need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
             f'{_position_bar(card["positions"])}'
-            f'<div class="need-tile"><b>{ufa_count}</b><span>Unrestricted</span></div>'
+            f'<div class="stat-tile need-tile"><b>{ufa_count}</b><span>Unrestricted</span></div>'
             '</div>'
             f'<p class="need-take">{e(_takeaway(card, phoenix_top2))}</p>'
             f'<ul class="need-players">{players}</ul>'
@@ -706,7 +706,7 @@ def prospects_html() -> str:
             f"{early['pts']} points, {early['reb']} rebounds, {early['ast']} assists."
         )
         cards.append(
-            '<article class="need-card prospect">'
+            '<article class="fcb-card need-card prospect">'
             '<div class="need-body">'
             '<div class="need-head">'
             f'{face}'
@@ -715,14 +715,14 @@ def prospects_html() -> str:
             f'<span class="need-id">{e(prospect["pos"])}, {e(prospect["height"])}, {e(prospect["school"])}</span>'
             '</div></div>'
             f'{credit}'
-            '<div class="need-tiles">'
-            f'<div class="need-tile"><b>{prospect["board"]}</b><span>Big Board</span></div>'
-            f'<div class="need-tile"><b>{e(_mocks_short(prospect["mocks"]))}</b><span>Mocks</span></div>'
-            '<div class="need-tile line-tile">'
+            '<div class="stat-tiles need-tiles">'
+            f'<div class="stat-tile need-tile"><b>{prospect["board"]}</b><span>Big Board</span></div>'
+            f'<div class="stat-tile need-tile"><b>{e(_mocks_short(prospect["mocks"]))}</b><span>Mocks</span></div>'
+            '<div class="stat-tile need-tile line-tile">'
             f'<b>{e(full["pts"])} · {e(full["reb"])} · {e(full["ast"])}</b>'
             '<span>PTS · REB · AST</span>'
             '</div>'
-            f'<div class="need-tile"><b>{e(full["fg"])}</b><span>FG%</span></div>'
+            f'<div class="stat-tile need-tile"><b>{e(full["fg"])}</b><span>FG%</span></div>'
             '</div>'
             f'<p class="early-line">{e(season_line)}</p>'
             f'<p class="early-line">{e(early_line)}</p>'
@@ -1113,12 +1113,12 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
 <p>Each card is the 2026 roster tied to that lottery pick.</p>
 {needs_html(cards, rows)}
-<p class="table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. Unrestricted is the count of player rows the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a> marks UFA if the contract ends. Restricted and reserved rows still need a qualifying offer. That file is not the league's February list. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
+<p class="section-note table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. Unrestricted is the count of player rows the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a> marks UFA if the contract ends. Restricted and reserved rows still need a qualifying offer. That file is not the league's February list. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
 </section>
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
 <p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft.</p>
 {prospects_html()}
-<p class="table-note">{e(prospect_section_note())}</p>
+<p class="section-note table-note">{e(prospect_section_note())}</p>
 </section>
 {live_html()}
 <section id="playoff-records"><h2 class="section-title">2026 records behind picks 8 through 15</h2>
