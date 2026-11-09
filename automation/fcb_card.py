@@ -72,11 +72,11 @@ def card_open(extra: str = '') -> str:
     classes = 'fcb-card'
     if extra:
         classes += ' ' + extra.strip()
-    return f'<article class="{classes}">'
+    return f'<div class="{classes}">'
 
 
 def card_close() -> str:
-    return '</article>'
+    return '</div>'
 
 
 def stat_tile(value: str, label: str, extra: str = '') -> str:

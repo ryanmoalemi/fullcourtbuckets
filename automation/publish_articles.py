@@ -161,8 +161,8 @@ def cap_scenario_cards(rows: list[str]) -> str:
             fcb_card.stat_tile(esc(cell), label) for cell, label in zip(cells[1:4], labels)
         )
         cards.append(
-            f'<article class="fcb-card"><div class="card-body"><h3>{inline(cells[0])}</h3>'
-            f'<div class="stat-tiles tiles-3">{tiles}</div></div></article>'
+            f'<div class="fcb-card"><div class="card-body"><h3>{inline(cells[0])}</h3>'
+            f'<div class="stat-tiles tiles-3">{tiles}</div></div></div>'
         )
     return f'<div id="cap-cards">{"".join(cards)}</div>'
 
@@ -930,6 +930,33 @@ def apply_page_theme(page: str, meta: dict) -> str:
     return page
 
 
+def replace_article(page: str, article_html: str) -> str:
+    """Replace the story article, including one that contains nested article tags.
+
+    A non-greedy search stops at the first card's closing tag and leaves a
+    second copy of the story after it.
+    """
+    start = page.find('<article class="article">')
+    if start < 0:
+        return page
+    depth = 0
+    i = start
+    while i < len(page):
+        next_open = page.find('<article', i)
+        next_close = page.find('</article>', i)
+        if next_close < 0:
+            return page
+        if next_open != -1 and next_open < next_close:
+            depth += 1
+            i = next_open + len('<article')
+            continue
+        depth -= 1
+        i = next_close + len('</article>')
+        if depth == 0:
+            return page[:start] + article_html + page[i:]
+    return page
+
+
 def archive_note_html(meta: dict) -> str:
     """Preview archive note under the byline once the game is played (front matter recap_url).
 
@@ -1011,7 +1038,7 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
         '</article>'
     )
     article_html = links.glue_headline_scores(article_html)
-    page = re.sub(r'<article class="article">.*?</article>', article_html, page, count=1, flags=re.S)
+    page = replace_article(page, article_html)
     page = links.ensure_article_end(page, ROOT, article, articles)
     page = set_title(page, str(meta.get('seo_title') or title), social, description, article)
     ticker = str(meta.get('ticker') or '').strip()

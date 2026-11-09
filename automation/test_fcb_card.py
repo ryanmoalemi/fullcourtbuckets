@@ -65,3 +65,23 @@ class FcbCardTests(unittest.TestCase):
         self.assertIn('>$24,404</b>', cards)
         self.assertIn('id="juju-watkins"', cards)
         self.assertIn('$20,003', cards)
+
+    def test_story_cards_do_not_close_the_article(self):
+        import publish_articles
+        page = (
+            '<article class="article"><p>Old.</p>'
+            '<article class="fcb-card"><p>Card</p></article>'
+            '<p>Still the story.</p></article><footer>Keep</footer>'
+        )
+        fresh = '<article class="article"><div class="fcb-card"><p>New</p></div></article>'
+        updated = publish_articles.replace_article(page, fresh)
+        self.assertEqual(updated, fresh + '<footer>Keep</footer>')
+        for rel in (
+            'news/wnba-free-agents-2027/index.html',
+            'news/kelsey-mitchell-2027-free-agency-cap/index.html',
+            'news/angel-reese-always-this-good-data/index.html',
+        ):
+            html = (ROOT / rel).read_text(encoding='utf-8')
+            self.assertEqual(html.count('<article'), 1, rel)
+            self.assertEqual(html.count('</article>'), 1, rel)
+            self.assertNotIn('<article class="fcb-card"', html, rel)
