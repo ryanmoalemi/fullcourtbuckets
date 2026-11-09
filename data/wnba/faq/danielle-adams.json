@@ -1,19 +1,47 @@
 {
   "slug": "danielle-adams",
   "player_name": "Danielle Adams",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 9, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "How much does Danielle Adams make?",
-      "answer": "A precise public salary or net worth figure for Danielle Adams is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Did Danielle Adams play in the WNBA?",
+      "answer": "Yes. The San Antonio Silver Stars drafted Danielle Adams 20th overall in 2011, and she made the All-Star team as a rookie. She played five seasons for San Antonio (2011 to 2015) and one for the Connecticut Sun (2017), averaging 10.5 points in 174 regular-season games.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/a/adamsda01w.html",
+        "https://en.wikipedia.org/wiki/Danielle_Adams",
+        "https://fullcourtbuckets.com/wnba/danielle-adams/"
       ],
-      "google_keyword": "danielle adams salary",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "danielle adams wnba",
+          "vol": 30,
+          "source": "openseo"
+        },
+        {
+          "q": "danielle adams basketball player",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-09)"
+        }
+      ]
+    },
+    {
+      "question": "Where did Danielle Adams play college basketball?",
+      "answer": "Danielle Adams played two seasons at Jefferson College, then two at Texas A&M. She scored 30 points in the 2011 NCAA title game win over Notre Dame and was named the tournament's Most Outstanding Player.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Danielle_Adams",
+        "https://12thman.com/news/2011/04/5/adams-leads-aggies-to-first-ever-national-championship",
+        "https://www.basketball-reference.com/wnba/players/a/adamsda01w.html"
+      ],
+      "queries": [
+        {
+          "q": "danielle adams basketball",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-09)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
