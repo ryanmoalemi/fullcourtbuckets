@@ -664,34 +664,70 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
     return '<div class="need-grid">' + ''.join(blocks) + '</div>'
 
 
+def _mocks_short(mocks: str) -> str:
+    left, _, right = mocks.partition(' of ')
+    if left.isdigit() and right.isdigit():
+        return f'{left}/{right}'
+    return mocks
+
+
+def prospect_section_note() -> str:
+    notes = [f'{item["name"]}: {item["note"]}' for item in PROSPECTS if item['note']]
+    return (
+        'Every counting line is from the linked Sports-Reference page, read Nov. 9, 2026. '
+        'The 2026-27 lines are one or two games. Headshots are Wikimedia Commons photos credited on each card. '
+        "S'Mya Nichols has no freely licensed photo, so her card uses initials. "
+        + ' '.join(notes)
+    )
+
+
 def prospects_html() -> str:
     cards = []
     for prospect in PROSPECTS:
         full = prospect['full']
         early = prospect['early']
-        note = f' {e(prospect["note"])}' if prospect['note'] else ''
         photo = PROSPECT_PHOTOS.get(prospect['name'])
         if photo:
             face = (
-                f'<img class="face" src="{e(photo["src"])}" alt="{e(photo["alt"])}" '
-                f'width="480" height="480" loading="lazy" decoding="async">'
+                f'<img class="face" src="{e(photo["src"])}" alt="" '
+                f'width="80" height="80" loading="lazy" decoding="async">'
             )
-            credit = f'<p class="photo-credit">{photo_credit(photo)}</p>'
+            credit = f'<p class="card-credit">{photo_credit(photo)}</p>'
         else:
             face = f'<span class="av" aria-hidden="true">{e(prospect["initials"])}</span>'
-            credit = '<p class="photo-credit">No freely licensed photo was found, so this card uses initials.</p>'
+            credit = ''
+        games = '1 game' if early['g'] == 1 else f"{early['g']} games"
+        season_line = (
+            f"{full['season']} at {full['school']}, {full['g']} games: "
+            f"{full['stl']} steals, {full['blk']} blocks."
+        )
+        early_line = (
+            f"2026-27 at {early['school']}, {games} posted by Nov. 9, 2026: "
+            f"{early['pts']} points, {early['reb']} rebounds, {early['ast']} assists."
+        )
         cards.append(
-            f'<article class="prospect">{face}'
-            f'<div><h3>{prospect["board"]}. {e(prospect["name"])}</h3>'
+            '<article class="need-card prospect">'
+            '<div class="need-body">'
+            '<div class="need-head">'
+            f'{face}'
+            '<div class="need-title">'
+            f'<h3>{prospect["board"]}. {e(prospect["name"])}</h3>'
+            f'<span class="need-id">{e(prospect["pos"])}, {e(prospect["height"])}, {e(prospect["school"])}</span>'
+            '</div></div>'
             f'{credit}'
-            f'<p>{e(prospect["pos"])}, {e(prospect["height"])}, {e(prospect["school"])}. '
-            f'Ultimate Big Board rank {prospect["board"]}, {e(prospect["mocks"])} mocks.</p>'
-            f'<p>{e(full["season"])} at {e(full["school"])}: {full["g"]} games, {e(full["pts"])} points, '
-            f'{e(full["reb"])} rebounds, {e(full["ast"])} assists, {e(full["stl"])} steals, {e(full["blk"])} blocks, '
-            f'{e(full["fg"])} from the field. '
-            f'<a href="{e(prospect["sr"])}" target="_blank" rel="noopener">Sports-Reference</a>.</p>'
-            f'<p>2026-27 at {e(early["school"])}, {early["g"]} game{"s" if early["g"] != 1 else ""} posted by Nov. 9, 2026: '
-            f'{e(early["pts"])} points, {e(early["reb"])} rebounds, {e(early["ast"])} assists.{note}</p></div></article>'
+            '<div class="need-tiles">'
+            f'<div class="need-tile"><b>{prospect["board"]}</b><span>Big Board</span></div>'
+            f'<div class="need-tile"><b>{e(_mocks_short(prospect["mocks"]))}</b><span>Mocks</span></div>'
+            '<div class="need-tile line-tile">'
+            f'<b>{e(full["pts"])} · {e(full["reb"])} · {e(full["ast"])}</b>'
+            '<span>PTS · REB · AST</span>'
+            '</div>'
+            f'<div class="need-tile"><b>{e(full["fg"])}</b><span>FG%</span></div>'
+            '</div>'
+            f'<p class="early-line">{e(season_line)}</p>'
+            f'<p class="early-line">{e(early_line)}</p>'
+            f'<p class="sr-link"><a href="{e(prospect["sr"])}" target="_blank" rel="noopener">Sports-Reference</a></p>'
+            '</div></article>'
         )
     return '<div class="prospect-list">' + ''.join(cards) + '</div>'
 
@@ -1080,8 +1116,9 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <p class="table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. Unrestricted is the count of player rows the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a> marks UFA if the contract ends. Restricted and reserved rows still need a qualifying offer. That file is not the league's February list. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
 </section>
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
-<p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft. Every counting line is from the linked Sports-Reference page, read Nov. 9, 2026. The 2026-27 lines are one or two games. Headshots are Wikimedia Commons photos credited on each card. S'Mya Nichols has no freely licensed photo, so her card uses initials.</p>
+<p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft.</p>
 {prospects_html()}
+<p class="table-note">{e(prospect_section_note())}</p>
 </section>
 {live_html()}
 <section id="playoff-records"><h2 class="section-title">2026 records behind picks 8 through 15</h2>
@@ -1176,7 +1213,14 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .article .lot-legend{display:flex;flex-wrap:wrap;gap:2px 10px;font:600 12px/1.25 Inter,system-ui,sans-serif;color:#3d3832}
 .av{width:72px;height:72px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif;flex:none}
 .need-grid,.prospect-list{display:grid;gap:16px}
-.prospect{display:flex;gap:12px;align-items:flex-start}
+.prospect .need-head{margin-bottom:4px}
+.prospect .face,.prospect .av{width:40px;height:40px;max-width:40px;font-size:12px}
+.need-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;min-width:0}
+.prospect .need-head h3{font-size:18px}
+.need-id{font:600 13px/1.2 Inter,system-ui,sans-serif;color:#5a554e}
+.article .card-credit,.article .early-line,.article .sr-link{margin:0 0 8px;font-size:12px;line-height:1.35;color:#5a554e}
+.article .sr-link{margin-bottom:0}
+.line-tile b{font-size:13px;letter-spacing:-.2px}
 .need-card{border:1px solid #e6e1d8;border-radius:8px;overflow:hidden;background:#fff}
 .need-card figure.lead-photo{margin:0}
 .need-card figure.lead-photo figcaption{padding:4px 12px 0}
