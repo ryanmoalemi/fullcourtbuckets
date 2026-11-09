@@ -517,74 +517,149 @@ def photo_credit(spec: dict) -> str:
     )
 
 
-def _leader_line(player: dict) -> str:
-    bits = [f"{int(round(player['minutes'])):,} minutes", f"{int(round(player['points'])):,} points"]
-    if player['age'] is not None:
-        bits.append(f"age {int(player['age'])} on the Oct. 28 roster snapshot")
-    if player['klass']:
-        bits.append(CLASS_WORDS.get(player['klass'], player['klass']))
-    name = player['name']
+_PHOTO_SRC: dict[str, str] | None = None
+POS_WORD = {'G': 'Guard', 'F': 'Forward', 'C': 'Center'}
+
+
+def _photograph_src(slug: str) -> str:
+    global _PHOTO_SRC
+    if _PHOTO_SRC is None:
+        found = {}
+        path = ROOT / 'content' / 'player-illustrations.json'
+        if path.is_file():
+            data = json.loads(path.read_text(encoding='utf-8'))
+            for row in data.get('portraits') or []:
+                src = str(row.get('src') or '')
+                if row.get('approved') and row.get('kind') == 'photograph' and src.startswith('/'):
+                    found[row['slug']] = src
+        _PHOTO_SRC = found
+    return _PHOTO_SRC.get(slug, '')
+
+
+def _initials(name: str) -> str:
+    parts = [part for part in name.split() if part[:1].isalpha()]
+    if not parts:
+        return '?'
+    return (parts[0][0] + (parts[-1][0] if len(parts) > 1 else '')).upper()
+
+
+def _player_face(player: dict) -> str:
+    src = _photograph_src(player['slug']) if player['slug'] else ''
+    if src:
+        return (
+            f'<img class="face" src="{e(src)}" alt="" width="80" height="80" '
+            'loading="lazy" decoding="async">'
+        )
+    return f'<span class="av" aria-hidden="true">{e(_initials(player["name"]))}</span>'
+
+
+def _player_row(player: dict) -> str:
+    name = e(player['name'])
     if player['slug']:
-        name = f'<a href="/wnba/{e(player["slug"])}/">{e(player["name"])}</a>'
+        name = f'<a href="/wnba/{e(player["slug"])}/">{name}</a>'
+    bits = [player['position'] or 'Other']
+    if player['klass']:
+        bits.append(player['klass'])
+    bits.append(f"{int(round(player['minutes'])):,} minutes")
+    bits.append(f"{int(round(player['points'])):,} points")
+    return (
+        f'<li>{_player_face(player)}<div class="need-who">{name}'
+        f'<span class="need-meta">{e(" · ".join(bits))}</span></div></li>'
+    )
+
+
+def _position_bar(positions: list[dict]) -> str:
+    if not positions:
+        return '<div class="need-tile"><b>n/a</b><span>Minutes</span></div>'
+    segments = []
+    spoken = []
+    caption = []
+    for row in positions:
+        word = POS_WORD.get(row['position'], row['position'])
+        spoken.append(f"{word} {row['share']}%")
+        caption.append(f"{row['position']} {row['share']}")
+        grow = float(row['share'])
+        segments.append(
+            f'<span class="pos-{e(row["position"])}" style="flex:{grow:.4f} {grow:.4f} 0"></span>'
+        )
+    return (
+        '<div class="need-tile need-tile-bar">'
+        f'<span class="pos-bar" role="img" aria-label="{e(", ".join(spoken))} of minutes">'
+        f'{"".join(segments)}</span>'
+        f'<span>{e(" · ".join(caption))}</span></div>'
+    )
+
+
+def _takeaway(card: dict, phoenix_top2: str) -> str:
+    slot = card['slot']
+    lead = card['positions'][0] if card['positions'] else None
+    if lead:
+        word = {'G': 'Guards', 'F': 'Forwards', 'C': 'Centers'}.get(lead['position'], lead['position'])
+        first = f"{word} logged {lead['share']}% of these minutes."
     else:
-        name = e(name)
-    return f'{name}, {e(player["position"])}, {e("; ".join(bits))}'
+        first = 'The player file has no position tags for these minutes.'
+    ufa = next((row for row in card['classes'] if row['name'] == 'UFA'), None)
+    count = ufa['players'] if ufa else 0
+    if count == 1:
+        second = '1 player row is unrestricted if the contract ends.'
+    elif count:
+        second = f'{count} player rows are unrestricted if the contract ends.'
+    else:
+        second = 'The free-agency file lists no unrestricted row for this club.'
+    extra = ''
+    if slot['id'] == 'HOU':
+        extra = ' These minutes are the 2026 Connecticut Sun. The club plays 2027 as the Houston Comets.'
+    elif slot['id'] == 'WAS':
+        extra = " The lottery pick is Chicago's. This card is the Mystics roster that would make the selection."
+    elif slot['id'] == 'LAL':
+        extra = (
+            ' Both Los Angeles lottery slots use this roster. '
+            f"Phoenix's pick has a {phoenix_top2}% chance at a top-two selection."
+        )
+    return first + ' ' + second + extra
 
 
-def needs_html(cards: list[dict]) -> str:
+def needs_html(cards: list[dict], rows: list[dict]) -> str:
+    by_id = {row['slot']['id']: row for row in rows}
+    phoenix_top2 = pct(by_id['LAL-PHX']['top2'], 1)
     blocks = []
     for card in cards:
         slot = card['slot']
-        pos = ', '.join(
-            f"{e(row['position'])} {row['share']}% ({row['minutes']:,} minutes)"
-            for row in card['positions']
-        ) or 'No position tags in the file.'
-        if card['age']:
-            age = (
-                f"Minute-weighted age is {card['age']} on the Oct. 28, 2026 WNBA.com roster snapshot "
-                f"saved in the team file, covering {card['age_coverage']}% of these minutes."
+        mark = _slot_mark(slot)
+        if mark:
+            focal = {'TOR': 'center 75%', 'POR': 'center 40%'}.get(slot['id'], 'center 20%')
+            photo = (
+                '<figure class="lead-photo">'
+                f'<img src="{e(mark["src"])}" alt="{e(mark["alt"])}" style="object-position:{focal}" '
+                'width="1200" height="675" decoding="async" loading="lazy">'
+                f'<figcaption>{photo_credit(mark)}</figcaption></figure>'
+            )
+            avatar = (
+                f'<img class="lot-avatar" src="{e(mark["src"])}" alt="" style="object-position:{focal}" '
+                'width="64" height="64" loading="lazy" decoding="async">'
             )
         else:
-            age = 'The Oct. 28, 2026 roster snapshot has no age that matches these minutes.'
-        classes = ', '.join(
-            f"{row['share']}% {e(CLASS_WORDS.get(row['name'], row['name']))} "
-            f"({row['minutes']:,} minutes, {row['players']} player {'row' if row['players'] == 1 else 'rows'})"
-            for row in card['classes']
-        ) or 'No matching rows in the free-agency file.'
-        leaders = ''.join(f'<li>{_leader_line(player)}</li>' for player in card['leaders'])
-        title = slot['team']
-        extra = ''
-        if slot['id'] == 'HOU':
-            extra = (
-                '<p>These minutes are the 2026 Connecticut Sun. The club plays 2027 as the Houston Comets. '
-                'The team page is still <a href="/wnba/teams/connecticut-sun/">Connecticut Sun</a>.</p>'
-            )
-        elif slot['id'] == 'LAL':
-            extra = (
-                '<p>Both Los Angeles lottery slots use this same 2026 roster. '
-                'The Phoenix pick is a second selection, not a second club.</p>'
-            )
-        elif slot['id'] == 'WAS':
-            extra = (
-                '<p>The lottery pick is Chicago\'s. This card is the Mystics roster that would make the selection, '
-                'not the 2026 Chicago roster.</p>'
-            )
-        mark = team_hub.VISUALS.get(TEAM_MARK.get(slot['id'], ''))
-        photo = ''
-        if mark:
-            photo = (
-                f'<img class="team-shot" src="{e(mark["src"])}" alt="{e(mark["alt"])}" '
-                f'width="160" height="90" loading="lazy" decoding="async">'
-            )
-            extra += f'<p class="photo-credit">{photo_credit(mark)}</p>'
+            photo = ''
+            avatar = f'<span class="lot-avatar lot-initials" aria-hidden="true">{e(slot["circle"][:3])}</span>'
+        top2 = pct(by_id[slot['id']]['top2'], 1)
+        top_label = 'Top 2, own' if slot['id'] == 'LAL' else 'Top 2'
+        age = card['age'] or 'n/a'
+        ufa = next((row for row in card['classes'] if row['name'] == 'UFA'), None)
+        ufa_count = ufa['players'] if ufa else 0
+        players = ''.join(_player_row(player) for player in card['leaders'])
         blocks.append(
-            f'<article class="need-card">{photo}<div><h3><a href="{e(slot["href"])}">{e(title)}</a></h3>'
-            f'{extra}'
-            f'<p>{card["players"]} player rows and {card["minutes"]:,} minutes in the 2026 regular-season file. '
-            f'Positions: {pos}.</p>'
-            f'<p>{age}</p>'
-            f'<p>If those contracts end, the free-agency file classes the minutes logged for this club as {classes}.</p>'
-            f'<ol class="leaders">{leaders}</ol></div></article>'
+            '<article class="need-card">'
+            f'{photo}<div class="need-body">'
+            f'<div class="need-head">{avatar}<h3><a href="{e(slot["href"])}">{e(slot["team"])}</a></h3></div>'
+            '<div class="need-tiles">'
+            f'<div class="need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
+            f'<div class="need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
+            f'{_position_bar(card["positions"])}'
+            f'<div class="need-tile"><b>{ufa_count}</b><span>Unrestricted</span></div>'
+            '</div>'
+            f'<p class="need-take">{e(_takeaway(card, phoenix_top2))}</p>'
+            f'<ul class="need-players">{players}</ul>'
+            '</div></article>'
         )
     return '<div class="need-grid">' + ''.join(blocks) + '</div>'
 
@@ -1000,8 +1075,9 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <p>Bethany Donaphin, head of league operations, reveals the result on ESPN. Ernst &amp; Young oversees the drawing. The presentation name on the release is State Street Investment Management SPY. ESPN is airing the lottery for the 15th year in a row.</p>
 </section>
 <section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
-<p>Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Age is the Oct. 28, 2026 WNBA.com roster snapshot in that same team file, weighted by those minutes. The class is the one on the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a>: what the file assigns if the contract has ended. It is not the league's February list. A restricted or reserved tag still needs a qualifying offer.</p>
-{needs_html(cards)}
+<p>Each card is the 2026 roster tied to that lottery pick.</p>
+{needs_html(cards, rows)}
+<p class="table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. Unrestricted is the count of player rows the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a> marks UFA if the contract ends. Restricted and reserved rows still need a qualifying offer. That file is not the league's February list. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
 </section>
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
 <p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft. Every counting line is from the linked Sports-Reference page, read Nov. 9, 2026. The 2026-27 lines are one or two games. Headshots are Wikimedia Commons photos credited on each card. S'Mya Nichols has no freely licensed photo, so her card uses initials.</p>
@@ -1085,7 +1161,6 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .pick-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e6e1d8}
 .pick-no{width:1.4em;font:800 18px/1 Barlow,sans-serif}
 .face{width:72px;height:72px;max-width:72px;border-radius:50%;object-fit:cover;object-position:center 20%;flex:none}
-.team-shot{width:144px;max-width:42%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center 20%;flex:none;border-radius:4px}
 .lot-odds-cards{display:none}
 .lot-card{display:flex;flex-direction:column;gap:7px;padding:12px 10px;border:1px solid #e6e1d8;border-radius:8px;background:#fff}
 .lot-id{display:flex;align-items:center;gap:8px;min-width:0;min-height:28px}
@@ -1100,8 +1175,30 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .lot-p1{background:#4c1d95}.lot-p2{background:#5b22c9}.lot-p3{background:#7c4fe0}.lot-p4{background:#9a78ea}.lot-p5{background:#b59cf2}.lot-p6{background:#d0c0f7}.lot-p7{background:#e6dcfb}
 .article .lot-legend{display:flex;flex-wrap:wrap;gap:2px 10px;font:600 12px/1.25 Inter,system-ui,sans-serif;color:#3d3832}
 .av{width:72px;height:72px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif;flex:none}
-.need-grid,.prospect-list{display:grid;gap:18px}
-.need-card,.prospect{display:flex;gap:12px;align-items:flex-start}
+.need-grid,.prospect-list{display:grid;gap:16px}
+.prospect{display:flex;gap:12px;align-items:flex-start}
+.need-card{border:1px solid #e6e1d8;border-radius:8px;overflow:hidden;background:#fff}
+.need-card figure.lead-photo{margin:0}
+.need-card figure.lead-photo figcaption{padding:4px 12px 0}
+.need-body{padding:10px 12px 12px}
+.need-head{display:flex;align-items:center;gap:8px;margin:0 0 8px}
+.need-head .lot-avatar{width:32px;height:32px}
+.need-head h3{margin:0;font:800 20px/1.15 Barlow,sans-serif}
+.need-head a{color:#2a1458;text-decoration:none}
+.need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
+.need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
+.need-tile b{font:800 16px/1.1 Barlow,sans-serif;color:#2a1458}
+.need-tile span{font:600 11px/1.25 Inter,system-ui,sans-serif;color:#5a554e}
+.pos-bar{display:flex;width:100%;height:8px;border-radius:99px;overflow:hidden;background:#efe8ff}
+.pos-bar span{display:block;height:100%;min-width:0}
+.pos-G{background:#4c1d95}.pos-F{background:#7c4fe0}.pos-C{background:#d0c0f7}.pos-Other{background:#9a78ea}
+.article .need-card p{margin:0 0 8px;font-size:15px;line-height:1.45}
+.article .need-players{list-style:none;margin:0;padding:0}
+.article .need-players li{display:flex;align-items:center;gap:8px;margin:0;padding:6px 0;border-top:1px solid #f3efe8;font-size:14px;line-height:1.3}
+.need-players .face,.need-players .av{width:36px;height:36px;max-width:36px;font-size:11px}
+.need-who{min-width:0}
+.need-who a{font-weight:700;color:#2a1458;text-decoration:none}
+.need-meta{display:block;color:#5a554e;font-size:12px;line-height:1.3}
 .article .how-made{margin:22px 0 0;font-size:13px;line-height:1.55}
 @media(max-width:900px){
 .article-wrap{padding-top:8px}

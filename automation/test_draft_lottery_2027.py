@@ -211,8 +211,10 @@ process.stdout.write(out.join('\n'));
         from PIL import Image
         with Image.open(ROOT / img.split('src="', 1)[1].split('"', 1)[0].lstrip('/')) as im:
             self.assertAlmostEqual(im.size[0] / im.size[1], 16 / 9, places=2)
-        self.assertIn('class="team-shot"', self.html)
-        self.assertIn('aspect-ratio:16/9', self.html.split('.team-shot{', 1)[1][:120])
+        self.assertEqual(len(re.findall(r'<figure class="lead-photo">', self.html)), 7)
+        self.assertEqual(len(re.findall(r'<article class="need-card">', self.html)), 6)
+        self.assertNotIn('class="team-shot"', self.html)
+        self.assertNotIn('Minute-weighted age is', self.html)
         self.assertIn('class="face"', self.html)
 
     def test_phone_odds_cards_drop_zero_rows(self):
@@ -256,13 +258,13 @@ class LotteryRender(unittest.TestCase):
                 browser = p.chromium.launch(executable_path=chrome, args=['--no-sandbox'])
                 desktop = browser.new_page(viewport={'width': 1280, 'height': 900})
                 desktop.goto(base + '/wnba/draft-lottery-2027/', wait_until='load')
-                hero = desktop.locator('figure.lead-photo img').bounding_box()
+                hero = desktop.locator('article.article > figure.lead-photo img').bounding_box()
                 self.assertAlmostEqual(hero['width'] / hero['height'], 16 / 9, places=2)
                 self.assertTrue(desktop.locator('.lot-odds .table-wrap').is_visible())
                 self.assertFalse(desktop.locator('.lot-odds-cards').is_visible())
                 phone = browser.new_page(viewport={'width': 390, 'height': 844})
                 phone.goto(base + '/wnba/draft-lottery-2027/', wait_until='load')
-                hero = phone.locator('figure.lead-photo img').bounding_box()
+                hero = phone.locator('article.article > figure.lead-photo img').bounding_box()
                 self.assertAlmostEqual(hero['width'] / hero['height'], 16 / 9, places=2)
                 self.assertFalse(phone.locator('.lot-odds .table-wrap').is_visible())
                 heights = phone.locator('.lot-card').evaluate_all(
@@ -272,10 +274,10 @@ class LotteryRender(unittest.TestCase):
                 for height in heights:
                     self.assertGreaterEqual(height, 120, heights)
                     self.assertLessEqual(height, 160, heights)
-                shots = phone.locator('.team-shot').evaluate_all(
+                shots = phone.locator('.need-card figure.lead-photo img').evaluate_all(
                     'els => els.map(el => { const b = el.getBoundingClientRect(); return b.width / b.height; })'
                 )
-                self.assertGreaterEqual(len(shots), 6)
+                self.assertEqual(len(shots), 6)
                 for ratio in shots:
                     self.assertAlmostEqual(ratio, 16 / 9, places=2)
                 faces = phone.locator('.prospect .face').evaluate_all(
