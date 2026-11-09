@@ -50,3 +50,18 @@ class FcbCardTests(unittest.TestCase):
         self.assertIn('class="fcb-card need-card"', page)
         self.assertIn('class="stat-tiles need-tiles"', page)
         self.assertIn('class="section-note table-note"', page)
+
+    def test_data_posts_keep_their_numbers_on_cards(self):
+        reese = (ROOT / 'news/angel-reese-always-this-good-data/index.html').read_text(encoding='utf-8')
+        self.assertIn('>16.4</b>', reese)
+        self.assertIn('>12.1</b>', reese)
+        self.assertIn('521 rebounds', reese)
+        mitchell = (ROOT / 'news/kelsey-mitchell-2027-free-agency-cap/index.html').read_text(encoding='utf-8')
+        self.assertIn('>$45,672</b>', mitchell)
+        self.assertIn('>-$1,010,600</b>', mitchell)
+        self.assertIn('averaged 24.7 points', mitchell)
+        self.assertIn('id="cap-table"', mitchell)
+        cards = (ROOT / 'news/top-10-womens-college-basketball-cards-to-collect-2026/index.html').read_text(encoding='utf-8')
+        self.assertIn('>$24,404</b>', cards)
+        self.assertIn('id="juju-watkins"', cards)
+        self.assertIn('$20,003', cards)
