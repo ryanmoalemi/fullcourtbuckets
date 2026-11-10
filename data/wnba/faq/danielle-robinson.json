@@ -1,65 +1,75 @@
 {
   "slug": "danielle-robinson",
   "player_name": "Danielle Robinson",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Danielle Robinson's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2023), Danielle Robinson averaged 5.8 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "danielle robinson stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Danielle Robinson make?",
-      "answer": "A precise public salary or net worth figure for Danielle Robinson is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Which WNBA teams did Danielle Robinson play for?",
+      "answer": "The San Antonio Silver Stars drafted Danielle Robinson sixth overall in 2011. She played for San Antonio (2011 to 2015), Phoenix (2017), Minnesota (2018 and 2019), Las Vegas (2020), Indiana (2021 and 2022) and Atlanta (2023). She was a three-time All-Star, led the league in assists in 2013 and made the All-WNBA Second Team in 2014.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://sparks.wnba.com/news/sparks-name-danielle-robinson-assistant-coach",
+        "https://www.basketball-reference.com/wnba/players/r/robinda01w.html",
+        "https://en.wikipedia.org/wiki/Danielle_Robinson",
+        "https://fullcourtbuckets.com/wnba/danielle-robinson/"
       ],
-      "google_keyword": "danielle robinson wnba salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "danielle robinson wnba",
+          "vol": 30,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Is Danielle Robinson married?",
-      "answer": "There is no widely reported public record of Danielle Robinson being married as of late 2026.",
+      "question": "What were Danielle Robinson's career averages?",
+      "answer": "Danielle Robinson averaged 8.8 points, 4.1 assists and 2.8 rebounds in 359 WNBA regular-season games from 2011 to 2023.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/r/robinda01w.html",
+        "https://fullcourtbuckets.com/wnba/danielle-robinson/"
+      ],
+      "queries": [
+        {
+          "q": "danielle robinson stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Danielle Robinson play college basketball?",
+      "answer": "Danielle Robinson played four seasons at Oklahoma, from 2007 to 2011, before San Antonio drafted her sixth overall.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Danielle_Robinson",
+        "https://www.basketball-reference.com/wnba/players/r/robinda01w.html"
+      ],
+      "queries": [
+        {
+          "q": "danielle robinson oklahoma",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Is Danielle Robinson a basketball coach?",
+      "answer": "After retiring as a player in January 2025, Danielle Robinson joined the Los Angeles Sparks as Manager of Basketball Integration and Scout Support and was promoted to assistant coach that April. For 2026, the Sparks listed her in the Manager of Basketball Integration role.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sparks.wnba.com/news/sparks-name-danielle-robinson-assistant-coach",
+        "https://sparks.wnba.com/news/la-sparks-finalize-coaching-staff-for-2026-season",
         "https://en.wikipedia.org/wiki/Danielle_Robinson"
       ],
-      "google_keyword": "danielle robinson wife",
-      "approx_monthly_volume": 30
-    },
-    {
-      "question": "Is Danielle Robinson injured?",
-      "answer": "Injury status changes during the season. Check the latest Las Vegas Aces reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "danielle robinson injury",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Did Danielle Robinson retire?",
-      "answer": "As of late 2026, Danielle Robinson has a public WNBA playing career; check her bio for current status.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Danielle_Robinson"
-      ],
-      "google_keyword": "wnba danielle robinson retirement",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Danielle Robinson have kids?",
-      "answer": "There is no widely reported public information that Danielle Robinson has children as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Danielle_Robinson"
-      ],
-      "google_keyword": "danielle robinson",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "danielle robinson basketball coach",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

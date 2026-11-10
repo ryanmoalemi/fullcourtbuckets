@@ -1,102 +1,90 @@
 {
   "slug": "morgan-tuck",
   "player_name": "Morgan Tuck",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Morgan Tuck's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2020), Morgan Tuck averaged 2.0 points, 1.0 rebounds, and 1.0 assists in 1 games for Seattle Storm. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "morgan tuck stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Morgan Tuck dating?",
-      "answer": "As of late 2026, Morgan Tuck has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What does Morgan Tuck do for the Connecticut Sun?",
+      "answer": "Morgan Tuck is the franchise's general manager. She is keeping the job as the Sun move to Houston and become the Houston Comets for the 2027 season.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Morgan_Tuck"
+        "https://sports.yahoo.com/articles/uconn-alum-morgan-tuck-relocate-145556494.html",
+        "https://www.theixsports.com/features/morgan-tuck-isnt-starting-over-in-houston-shes-continuing-a-vision/",
+        "https://roundtable.io/sports/wnba/news/morgan-tuck-to-remain-gm-as-connecticut-sun-become-houston-comets"
       ],
-      "google_keyword": "morgan tuck partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "morgan tuck connecticut sun",
+          "vol": 40,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "How much does Morgan Tuck make?",
-      "answer": "A precise public salary or net worth figure for Morgan Tuck is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Which WNBA teams did Morgan Tuck play for?",
+      "answer": "The Connecticut Sun drafted Morgan Tuck third overall in 2016, and she played four seasons for them (2016 to 2019). She won the 2020 WNBA title with the Seattle Storm, then announced her retirement as a player in March 2021.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/t/tuckmo01w.html",
+        "https://en.wikipedia.org/wiki/Morgan_Tuck",
+        "https://roundtable.io/sports/wnba/news/morgan-tuck-to-remain-gm-as-connecticut-sun-become-houston-comets",
+        "https://fullcourtbuckets.com/wnba/morgan-tuck/"
       ],
-      "google_keyword": "morgan tuck net worth",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "morgan tuck wnba",
+          "vol": 40,
+          "source": "openseo"
+        },
+        {
+          "q": "morgan tuck seattle storm",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "morgan tuck retires",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Is Morgan Tuck married?",
-      "answer": "There is no widely reported public record of Morgan Tuck being married as of late 2026.",
+      "question": "Did Morgan Tuck win championships at UConn?",
+      "answer": "Yes. Morgan Tuck won four straight NCAA titles at UConn, from 2013 to 2016.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Morgan_Tuck"
+        "https://en.wikipedia.org/wiki/Morgan_Tuck",
+        "https://roundtable.io/sports/wnba/news/morgan-tuck-to-remain-gm-as-connecticut-sun-become-houston-comets"
       ],
-      "google_keyword": "morgan tuck husband",
-      "approx_monthly_volume": 90
+      "queries": [
+        {
+          "q": "morgan tuck uconn",
+          "vol": 30,
+          "source": "openseo"
+        },
+        {
+          "q": "morgan tuck college stats",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Morgan Tuck?",
-      "answer": "Morgan Tuck is an American former professional basketball player who is currently the general manager of the Connecticut Sun.",
-      "answer_kind": "mixed",
+      "question": "What were Morgan Tuck's WNBA career averages?",
+      "answer": "Morgan Tuck averaged 5.1 points and 2.2 rebounds in 125 WNBA regular-season games from 2016 to 2020.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Morgan_Tuck"
+        "https://www.basketball-reference.com/wnba/players/t/tuckmo01w.html",
+        "https://fullcourtbuckets.com/wnba/morgan-tuck/"
       ],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What team does Morgan Tuck play for?",
-      "answer": "Her most recent WNBA team on record is the Connecticut Sun. She wears No. 33. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What is Morgan Tuck's jersey number?",
-      "answer": "Morgan Tuck wears number 33 for the Connecticut Sun.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What position does Morgan Tuck play?",
-      "answer": "Morgan Tuck is listed as a Forward for the Connecticut Sun.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "How old is Morgan Tuck?",
-      "answer": "Public profiles list Morgan Tuck as born in 1994. As of late 2026 that puts her around 32 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Morgan_Tuck"
-      ],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720,
-      "birthdate": "1994-01-01"
-    },
-    {
-      "question": "What is Morgan Tuck's nationality?",
-      "answer": "Morgan Tuck is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Morgan_Tuck"
-      ],
-      "google_keyword": "morgan tuck",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "morgan tuck stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
