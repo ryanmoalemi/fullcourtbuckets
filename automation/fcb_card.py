@@ -86,8 +86,11 @@ def stat_tile(value: str, label: str, extra: str = '') -> str:
     return f'<div class="{classes}"><b>{value}</b><span>{label}</span></div>'
 
 
-def stat_tiles(inner: str) -> str:
-    return f'<div class="stat-tiles">{inner}</div>'
+def stat_tiles(inner: str, extra: str = '') -> str:
+    classes = 'stat-tiles'
+    if extra:
+        classes += ' ' + extra.strip()
+    return f'<div class="{classes}">{inner}</div>'
 
 
 def card_credit(inner: str) -> str:

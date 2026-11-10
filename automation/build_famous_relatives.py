@@ -3,7 +3,9 @@
 
 A standalone builder, modeled on build_couples.py. It reuses the news-article
 chrome (byline, lead photo, article end, listings) through publish_articles and
-internal_links without changing either one. Adding a pair means adding one row
+internal_links without changing either one. Each relative is one compact card
+(circle photo, fact tiles, the checked sentences, source labels). The hero
+stays the shared 16:9 lead photo. Adding a pair means adding one row
 to the data file, putting its photos in images/relatives/, and running:
 
     python automation/build_famous_relatives.py
@@ -26,8 +28,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'automation'))
 
+import fcb_card  # noqa: E402
 import internal_links as links  # noqa: E402
 import publish_articles as pa  # noqa: E402
+import seo_meta  # noqa: E402
 import team_coverage  # noqa: E402
 
 SLUG = 'wnba-players-famous-relatives'
@@ -89,12 +93,12 @@ PAGE_CSS = (
     '.fr-table th[aria-sort="descending"] button:after{content:"\\25BC";font-size:10px}'
     '.fr-table td{vertical-align:top}'
     '.fr-table td.fr-src{white-space:normal;min-width:140px}'
-    '.fr-kind{display:inline-block;margin-left:4px;font-size:11px;line-height:1;padding:2px 5px;border:1px solid #d6d1c8;border-radius:3px;color:#6b665e;text-transform:uppercase;letter-spacing:.03em;vertical-align:1px}'
+    '.fr-kind{display:inline-block;margin-left:4px;font-size:12px;line-height:1;padding:2px 5px;border:1px solid #d6d1c8;border-radius:3px;color:#6b665e;text-transform:uppercase;letter-spacing:.03em;vertical-align:1px}'
     '.fr-dot{color:#9a958c}'
     '.fr-who{display:inline-flex;align-items:center;gap:8px}'
     '.fr-table .fr-head{flex:0 0 32px;width:32px!important;height:32px!important;max-width:none!important;margin:0!important;border-radius:50%;object-fit:cover;background:#ece8e1;border:1px solid #e0dbd2}'
     '.fr-init{display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#5b4a8a;box-sizing:border-box}'
-    '@media (max-width:600px){.fr-table .fr-head{flex-basis:26px;width:26px!important;height:26px!important}.fr-init{font-size:10px}}'
+    '@media (max-width:600px){.fr-table .fr-head{flex-basis:26px;width:26px!important;height:26px!important}.fr-init{font-size:12px}}'
     '.fr-counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:0 0 18px}'
     '.fr-counts table{width:100%}'
     '.fr-sources{font-size:13px;color:#a29f99;margin:6px 0 0}'
@@ -103,6 +107,23 @@ PAGE_CSS = (
     '.fr-download{display:inline-block;margin:4px 0 12px;padding:10px 14px;border:1px solid #ff9800;'
     'color:#f5f3ef;font-weight:800;text-decoration:none}'
     '.fr-faq h3{margin:18px 0 6px;font:800 20px/1.2 Barlow,sans-serif}'
+    'html body .article .fcb-card .need-id{font:600 13px/1.2 Inter,system-ui,sans-serif;color:#5a554e}'
+    'html body .article .fcb-card .card-head{flex-wrap:wrap}'
+    'html body .article .fcb-card h3{overflow-wrap:anywhere}'
+    'html body .article .fr-cards .stat-tile span{font-size:12px;line-height:1.3}'
+    'html body .article .fcb-card .stat-tile b{color:#2a1458!important}'
+    'html body .article .fcb-card .card-credit{color:#5a554e!important}'
+    'html body .article .fr-cards .section-note{color:#5a554e!important;font-size:12px;line-height:1.45}'
+)
+# One note under the cards. Per-card source labels and photo credits stay on the card.
+CARD_NOTE = (
+    'Each card is one relative. Tiles show the relative, the relation, and the sport or field. '
+    'The sentences under the tiles are the checked facts for that pair. '
+    'A source link is a primary record (an official team, league, school, Olympic, hall of fame and government page) '
+    'unless the label says (report). A report is a news report used only where no primary record was found. '
+    'The photo credit names the author and the Wikimedia Commons license. '
+    'A second circle is the relative when a freely licensed photo is on file. '
+    'Initials mean no freely licensed photo was found. Table headshots use the same photos.'
 )
 SORT_JS = (
     "(function(){var t=document.getElementById('fr-table');if(!t)return;"
@@ -331,35 +352,6 @@ def credit(photo: dict) -> str:
     return f'{esc(photo["author"])}, {lic_html}, via {ext("Wikimedia Commons", photo["source_page"])}'
 
 
-def figure(src: str, alt: str, caption: str) -> str:
-    return (
-        '<figure class="body-photo"><picture>'
-        f'<source srcset="{esc(src)}" type="image/webp">'
-        f'<img src="{esc(src)}" alt="{esc(alt)}" style="object-position:center 20%" width="1600" height="900" decoding="async" loading="lazy">'
-        f'</picture><figcaption>{caption}</figcaption></figure>'
-    )
-
-
-def entry_figure(e: dict) -> str:
-    pp, rp = e.get('photo_player'), e.get('photo_relative')
-    if pp and rp:
-        src = f'/images/relatives/{e["player_slug"]}--{e["relative_slug"]}.webp'
-        if not (ROOT / src.lstrip('/')).is_file():
-            raise SystemExit(f'missing composite {src}')
-        alt = f'{e["player"]}, left, and {e["relative"]}'
-        cap = f'{esc(e["player"])} (left) and {esc(e["relative"].rstrip("."))}. Photos: {credit(pp)}; {credit(rp)}.'
-        return figure(src, alt, cap)
-    return ''
-
-
-def player_figure(e: dict) -> str:
-    pp = e.get('photo_player')
-    if not pp:
-        return ''
-    src = pp['file']
-    return figure(src, e['player'], f'{esc(e["player"])}. Photo: {credit(pp)}.')
-
-
 def table_html(entries: list[dict]) -> str:
     heads = ('#', 'WNBA player', '2026 team', 'Relative', 'Relation', 'Sport', 'Sources')
     head = ''.join(f'<th scope="col"><button type="button">{esc(h)}</button></th>' for h in heads)
@@ -426,36 +418,121 @@ def faq_items(entries: list[dict], s: dict, updated: str) -> list[tuple[str, str
     return [i for i in items if i]
 
 
+def _face(src: str) -> str:
+    return (
+        f'<img class="face" src="{esc(src)}" alt="" width="80" height="80" '
+        'loading="lazy" decoding="async">'
+    )
+
+
+def _portrait_photo(slug: str) -> tuple[str, dict] | None:
+    """A free-license player headshot already on the site, when this page has no photo of her."""
+    path = ROOT / 'content' / 'player-photo-credits.json'
+    try:
+        credit = json.loads(path.read_text(encoding='utf-8')).get('credits', {}).get(slug)
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(credit, dict):
+        return None
+    lic = str(credit.get('license') or '')
+    author = str(credit.get('author') or '')
+    source = str(credit.get('file_url') or '')
+    if not author or not source.startswith('https://') or re.search(r'\b(ND|NC)\b', lic):
+        return None
+    src = f'/images/players/{slug}/portrait.webp'
+    if not (ROOT / src.lstrip('/')).is_file():
+        return None
+    return src, {
+        'author': author,
+        'license': lic,
+        'license_url': credit.get('license_url'),
+        'source_page': source,
+    }
+
+
+def player_avatar(e: dict) -> tuple[str, dict | None]:
+    """Circle from this page's licensed photo, then an existing site headshot, then initials."""
+    photo = e.get('photo_player')
+    head = f'/images/relatives/heads/{e["player_slug"]}.webp'
+    if photo and (ROOT / head.lstrip('/')).is_file():
+        return _face(head), photo
+    if photo and photo.get('file') and (ROOT / str(photo['file']).lstrip('/')).is_file():
+        return _face(photo['file']), photo
+    portrait = _portrait_photo(e['player_slug'])
+    if portrait:
+        src, record = portrait
+        return _face(src), record
+    return f'<span class="av" aria-hidden="true">{esc(initials(e["player"]))}</span>', None
+
+
+def relative_avatar(e: dict) -> tuple[str, dict | None]:
+    """A second circle only when the relative already has a free photo on file."""
+    photo = relative_photo(e)
+    if not photo:
+        return '', None
+    head = f'/images/relatives/heads/relatives/{e["relative_slug"]}.webp'
+    if (ROOT / head.lstrip('/')).is_file():
+        return _face(head), photo
+    if photo.get('file') and (ROOT / str(photo['file']).lstrip('/')).is_file():
+        return _face(photo['file']), photo
+    return '', None
+
+
+def photo_credit_line(player_photo: dict | None, relative_photo_record: dict | None) -> str:
+    parts = [credit(photo) for photo in (player_photo, relative_photo_record) if photo]
+    if not parts:
+        return ''
+    label = 'Photo' if len(parts) == 1 else 'Photos'
+    return fcb_card.card_credit(f'{label}: {"; ".join(parts)}.')
+
+
+def entry_card(e: dict) -> str:
+    """One relative as a compact card. Facts, source labels and photo credits stay verbatim."""
+    face, player_photo = player_avatar(e)
+    relative_face, relative_record = relative_avatar(e)
+    tiles = fcb_card.stat_tiles(
+        fcb_card.stat_tile(relative_name_html(e), 'Relative')
+        + fcb_card.stat_tile(esc(e['relation']), 'Relation')
+        + fcb_card.stat_tile(esc(e['sport']), 'Sport/field'),
+        'tiles-3',
+    )
+    facts = f'<p>{esc(e["known_for"])}</p>'
+    if e.get('extra'):
+        facts += f'<p>{esc(e["extra"])}</p>'
+    return (
+        fcb_card.card_open()
+        + '<div class="card-body">'
+        + '<div class="card-head">'
+        + face
+        + relative_face
+        + '<div class="card-title">'
+        + f'<h3>{player_link(e)}</h3>'
+        + f'<span class="need-id">{team_html(e)}</span>'
+        + '</div></div>'
+        + photo_credit_line(player_photo, relative_record)
+        + tiles
+        + facts
+        + fcb_card.card_credit(f'Sources: {sources_html(e)}')
+        + '</div>'
+        + fcb_card.card_close()
+    )
+
+
 def entries_html(entries: list[dict]) -> str:
     groups = OrderedDict()
     for e in entries:
         groups.setdefault(e['player_slug'], []).append(e)
-    out = []
+    out = ['<div class="fr-cards">']
     for slug, es in groups.items():
         e0 = es[0]
         names = [e['relative'] for e in es]
         joined = names[0] if len(names) == 1 else ', '.join(names[:-1]) + ' and ' + names[-1]
         heading = f'{e0["player"]} and {joined}' if len(names) == 1 else f'{e0["player"]}: {joined}'
         out.append(f'<h2 class="section-title" id="{esc(slug)}">{esc(heading)}</h2>')
-        team = f', {team_html(e0)}' if e0['_team'] else ''
-        out.append(f'<p class="fr-sources">{player_link(e0)}{team}</p>')
-        shown_player = False
         for e in es:
-            fig = '' if e['rank'] == 1 else entry_figure(e)
-            if e['rank'] == 1:
-                shown_player = True
-            if not fig and not shown_player:
-                fig = player_figure(e)
-                shown_player = bool(fig)
-            elif fig:
-                shown_player = True
-            if fig:
-                out.append(fig)
-            text = f'<strong>{esc(e["relative"])}, {esc(e["relation"].lower())}.</strong> {esc(e["known_for"])}'
-            if e.get('extra'):
-                text += ' ' + esc(e['extra'])
-            out.append(f'<p>{text}</p>')
-            out.append(f'<p class="fr-sources">Sources: {sources_html(e)}</p>')
+            out.append(entry_card(e))
+    out.append(fcb_card.section_note(CARD_NOTE))
+    out.append('</div>')
     return '\n'.join(out)
 
 
@@ -569,7 +646,7 @@ def body(doc: dict, entries: list[dict], s: dict) -> str:
     parts.append(f'<p>Spot an error or know a relative we missed? Email <a href="mailto:{esc(doc["corrections"])}">{esc(doc["corrections"])}</a> with a link to an official record. Each fix is dated.</p>')
     parts.append('<h2 class="section-title">Sources</h2>')
     parts.append(all_sources(entries))
-    parts.append('<p>Photos are from Wikimedia Commons under the license named in each caption. A pair shows only the player when we found no freely licensed photo of the relative.</p>')
+    parts.append('<p>Photos are from Wikimedia Commons under the license named on each card. A second circle appears only when a freely licensed photo of the relative is on file.</p>')
     return '\n'.join(parts), faq
 
 
@@ -736,7 +813,8 @@ def main() -> None:
     page = render(doc, entries, s, article, articles)
     pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     # Run the same pass the nightly news build runs, so tonight's rebuild is a no-op.
-    page = links.prepare_article_page(ROOT, article, articles)
+    # seo_meta puts the {famous_relatives} title back after set_title.
+    page = seo_meta.apply_rel(links.prepare_article_page(ROOT, article, articles), f'/news/{SLUG}/')
     pa.write_if_changed(PAGE_PATH, __import__("site_nav").apply_now_bar(page))
     pa.write_if_changed(CSV_PATH, write_csv(entries))
     pa.write_if_changed(ROOT / SLUG / 'index.html', pa.redirect_html(SLUG))

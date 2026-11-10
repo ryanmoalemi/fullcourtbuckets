@@ -46,6 +46,20 @@ class FamousRelativesCount(unittest.TestCase):
             for num in re.findall(r'\b(\d+) (?:famous relatives|WNBA players(?:\x27|&#x27;))', str(article.get(key, ''))):
                 self.assertEqual(int(num), n, key)
 
+    def test_each_relative_is_a_compact_card(self):
+        html = (ROOT / PAGE.strip('/') / 'index.html').read_text(encoding='utf-8')
+        self.assertEqual(html.count('class="fcb-card"'), count())
+        self.assertEqual(len(re.findall(r'<figure\b[^>]*\blead-photo\b', html)), 1)
+        self.assertNotIn('class="body-photo"', html)
+        self.assertNotIn('kelsey-plum--darren-waller', html)
+        self.assertIn('class="stat-tiles tiles-3"', html)
+        self.assertIn('class="section-note table-note"', html)
+        self.assertIn('ABC News report, April 23, 2024 (report)', html)
+        self.assertIn('Las Vegas Review-Journal report, March 12, 2024 (report)', html)
+        self.assertIn("gtag('config','G-ZJK92LK3XT')", html)
+        cards = html.split('<div class="fr-cards">', 1)[1].split('</div>\n<h2 class="section-title" id="faq">', 1)[0]
+        self.assertNotIn('\u2014', cards)
+
 
 if __name__ == '__main__':
     unittest.main()
