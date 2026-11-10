@@ -11,10 +11,11 @@ tags:
   - data
 teams:
   - golden-state-valkyries
-hero_alt: "Bar chart of the 12 lowest estimated first-season minute totals for top-5 WNBA draft picks in the Full Court Buckets log. Juste Jocyte is third, at 129.6 minutes, behind Chelsea Dungee and Sabrina Ionescu."
-photo_credit: "Chart: Full Court Buckets. Estimated first-season minutes for top-5 picks. Free to use and republish (CC0)."
-license_url: "https://creativecommons.org/publicdomain/zero/1.0/"
-focal_y: "center"
+hero_alt: "Juste Jocyte in a white Lithuania jersey, number 4, during a game."
+photo_credit: "Photo: Zafer, CC BY 4.0, via Wikimedia Commons"
+photo_credit_url: "https://commons.wikimedia.org/wiki/File:Just%C4%97_Jocyt%C4%97_4_Lithuania_20250627_(3).jpg"
+license_url: "https://creativecommons.org/licenses/by/4.0/"
+focal_y: "8"
 ticker: "Jocyte told BasketNews she does not really want to return. Her first season was 16 games at 8.1 minutes."
 data_table_first: true
 table_headshots: true
@@ -44,6 +45,8 @@ These are the 12 lowest estimated totals. Jocyte is third. [Chelsea Dungee](/wnb
 
 Source: draft order is the WNBA.com page for that year, checked Nov. 10, 2026. Minutes are the Full Court Buckets regular-season log. Data through Nov. 10, 2026. Methods: first season is the earliest regular season with a game, including a player who sat out the draft year. Estimated minutes are the stored minutes-per-game figure times games, rounded to one decimal. They are not a sum of box-score seconds. Jocyte is 8.1 times 16, or 129.6. Stories that say 129 are rounding that product. She is fourth on minutes per game, behind Dungee (4.6), Samuelson (7.7) and Sabally (7.9). Ionescu's 80.1 minutes came in 3 games at 26.7 per game. Seven top-5 picks have no line in the log, so this is not a ranking of every pick. The data is free to use and republish (CC0). Download (CC0): [full ranking (CSV)](/news/juste-jocyte-does-not-want-to-return-valkyries/data/top5-first-wnba-season-minutes-2008-2026.csv). [Picks with no FCB line (CSV)](/news/juste-jocyte-does-not-want-to-return-valkyries/data/top5-picks-not-in-fcb-log.csv). [Data dictionary](/news/juste-jocyte-does-not-want-to-return-valkyries/data/data-dictionary.txt).
 
+!chart: /images/articles/juste-jocyte-does-not-want-to-return-valkyries/first-season-minutes.png | Bar chart of the 12 lowest estimated first-season minute totals for top-5 WNBA draft picks in the Full Court Buckets log. Juste Jocyte is third, at 129.6 minutes, behind Chelsea Dungee and Sabrina Ionescu. | Chart: Full Court Buckets. Estimated first-season minutes for top-5 picks. Free to use and republish (CC0).
+
 Dungee played fewer minutes per game. Ionescu played a three-game season. Jocyte's 16 games at 8.1 minutes are a different shape from both.
 
 ## The 2025 top five in 2026
@@ -60,7 +63,7 @@ Dungee played fewer minutes per game. Ionescu played a three-game season. Jocyte
 
 Source: regular-season lines are the Full Court Buckets 2026 log. Data through Nov. 10, 2026. Methods: regular season only. Playoffs are not in these averages. All-Star status is the [July 2, 2026 starters release](https://www.wnba.com/news/all-star-starters-2026) and the [reserves release](https://www.wnba.com/news/all-star-reserves-2026). Jocyte is not named on either page. Bueckers is listed as a starter and as a second All-Star selection. Citron and Iriafen are reserves and second selections. Malonga is a reserve and a first selection. The in-season averages in those releases are not the final lines in this table. The data is free to use and republish (CC0). Download (CC0): [2025 class file (CSV)](/news/juste-jocyte-does-not-want-to-return-valkyries/data/2025-draft-top5-2026-season.csv).
 
-Headshots in the tables are the licensed photos already on the player pages. Credits are on those pages.
+!note: Headshots in the tables are the licensed photos already on the player pages. Credits are on those pages.
 
 ## What she told Lithuanian outlets
 
