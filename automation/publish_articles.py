@@ -307,6 +307,10 @@ SUB_HEADING_CSS = ('<style class="sub-h-css">.article h3.sub-h3{margin:26px 0 10
 BODY_PHOTO_RE = re.compile(r'!photo:\s*(.+)')
 # !chart: /images/articles/<slug>/chart.png | alt text | caption
 CHART_RE = re.compile(r'!chart:\s*(.+)')
+# !card: Name | identity | 39=PTS | 15-26=FG | takeaway | credit | wnba-slug
+# !note: one methods line, rendered as .section-note and not moved by place_notes
+CARD_RE = re.compile(r'!card:\s*(.+)')
+SNOTE_RE = re.compile(r'!note:\s*(.+)')
 ODD_RE = re.compile(r'^!odd:\s*(.+)$')
 _PLAYER_CELL_RE = re.compile(r'<a class="inline-link" href="(/wnba/([a-z0-9-]+)/)"')
 _NON_PLAYER_SLUGS = frozenset({
@@ -388,6 +392,45 @@ def decorate_player_cells(table: str) -> str:
         face = face_html(match.group(2))
         return (face + match.group(0)) if face else match.group(0)
     return _PLAYER_CELL_RE.sub(repl, table)
+
+
+def player_card_html(parts: list) -> str:
+    """One compact player card. Tiles are value=LABEL. Slug is optional and last."""
+    import fcb_card
+    name = parts[0] if parts else ''
+    identity = parts[1] if len(parts) > 1 else ''
+    tiles_raw = []
+    rest = []
+    for part in parts[2:]:
+        if '=' in part and not rest:
+            value, label = part.split('=', 1)
+            tiles_raw.append((value.strip(), label.strip()))
+        else:
+            rest.append(part)
+    takeaway = rest[0] if rest else ''
+    credit = rest[1] if len(rest) > 1 else ''
+    slug = rest[2].strip() if len(rest) > 2 else ''
+    tiles = ''.join(fcb_card.stat_tile(esc(value), esc(label)) for value, label in tiles_raw)
+    if slug:
+        face = fcb_card._face(slug, name)
+        title = f'<h3><a href="/wnba/{esc(slug)}/">{esc(name)}</a></h3>'
+    else:
+        face = f'<span class="av" aria-hidden="true">{esc(fcb_card._initials(name))}</span>'
+        title = f'<h3>{esc(name)}</h3>'
+    ident = f'<p class="early-line">{esc(identity)}</p>' if identity else ''
+    body = f'<p>{inline(takeaway)}</p>' if takeaway else ''
+    cred = fcb_card.card_credit(inline(credit)) if credit else ''
+    tile_html = fcb_card.stat_tiles(tiles) if tiles else ''
+    return (
+        fcb_card.card_open()
+        + '<div class="card-body">'
+        + f'<div class="card-head">{face}<div class="card-title">{title}{ident}</div></div>'
+        + tile_html
+        + body
+        + cred
+        + '</div>'
+        + fcb_card.card_close()
+    )
 
 
 def chart_html(parts: list) -> str:
@@ -545,6 +588,18 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             flush_bullets()
             blocks.append(('chart', [x.strip() for x in chart.group(1).split('|')]))
             continue
+        card = CARD_RE.fullmatch(line.strip())
+        if card:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('card', [x.strip() for x in card.group(1).split('|')]))
+            continue
+        snote = SNOTE_RE.fullmatch(line.strip())
+        if snote:
+            flush_paragraph()
+            flush_bullets()
+            blocks.append(('snote', snote.group(1).strip()))
+            continue
         if line.startswith('### ') or line.startswith('#### '):
             flush_paragraph()
             flush_bullets()
@@ -586,6 +641,13 @@ def body_html(markdown: str, table_headshots: bool = False, sortable: bool = Fal
             continue
         if kind == 'chart':
             html_blocks.append(chart_html(value))
+            continue
+        if kind == 'card':
+            html_blocks.append(player_card_html(value))
+            continue
+        if kind == 'snote':
+            import fcb_card
+            html_blocks.append(fcb_card.section_note(inline(value)))
             continue
         if kind == 'odds':
             html_blocks.append(odds_html(value))
