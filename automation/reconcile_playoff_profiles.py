@@ -9,6 +9,7 @@ touches anything except season_stats and recent_completed_games.
 """
 from __future__ import annotations
 
+import datetime as dt
 import json
 import sys
 from pathlib import Path
@@ -40,6 +41,7 @@ def reconcile(root: Path = ROOT) -> list[str]:
         playoff_boxes.reconcile_player(pid, stats, recent, games)
         if json.dumps([stats, recent], sort_keys=True) == before:
             continue
+        profile["stats_updated_at"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
         indent = 2 if text.startswith("{\n") else None
         out = json.dumps(profile, ensure_ascii=False, indent=indent)
         if text.endswith("\n"):

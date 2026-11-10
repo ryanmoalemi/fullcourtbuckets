@@ -1,9 +1,9 @@
 ---
 title: "Juste Jocyte tells BasketNews she does not want to return to the Valkyries"
-seo_title: "Jocyte says she does not want to return to the Valkyries"
+seo_title: "Jocyte does not want to return"
 slug: juste-jocyte-does-not-want-to-return-valkyries
 date: 2026-11-10
-description: "BasketNews and LRT quote Juste Jocyte saying she does not really want to return to Golden State. Her first WNBA season was 16 games at 8.1 minutes, third-lowest estimated total in the FCB log of top-5 picks since 2008."
+description: "BasketNews and LRT quote Jocyte saying she does not want to return to the Valkyries. Her first WNBA season was 16 games at 8.1 minutes."
 category: News
 tags:
   - golden-state-valkyries

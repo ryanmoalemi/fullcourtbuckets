@@ -1,92 +1,96 @@
 {
   "slug": "sam-thomas",
   "player_name": "Sam Thomas",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Sam Thomas's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2022), Sam Thomas averaged 1.5 points, 0.0 rebounds, and 0.0 assists in 2 games for Phoenix Mercury. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sam thomas wnba stats",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "What team does Sam Thomas play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. She wears No. 14. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "wnba all-rookie team 2022 sam thomas",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Sam Thomas?",
-      "answer": "Sam Thomas is an American professional basketball player.",
-      "answer_kind": "mixed",
+      "question": "Was Sam Thomas on the WNBA All-Rookie Team?",
+      "answer": "Sam Thomas made the Associated Press WNBA All-Rookie Team in 2022, her rookie year with the Phoenix Mercury. She was not on the league's official 2022 All-Rookie Team, which was Rhyne Howard, Shakira Austin, NaLyssa Smith, Queen Egbo and Rebekah Gardner.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)"
+        "https://tucson.com/sports/arizonawildcats/basketball/article_9a9aadca-1d96-11ed-91ed-4346240c7981.html",
+        "https://www.azdesertswarm.com/basketball/2023/9/3/23857975/arizona-womens-basketball-sam-thomas-fan-favorite-retires-wnba-mercury",
+        "https://www.wnba.com/history-all-rookie-teams"
       ],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "sam thomas all-rookie team",
+          "vol": 170,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is Sam Thomas's jersey number?",
-      "answer": "Sam Thomas wears number 14 for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
+      "question": "Did Sam Thomas play in the WNBA?",
+      "answer": "Yes. Sam Thomas went undrafted in 2022 but made the Phoenix Mercury roster and played 24 regular-season games as a rookie. She played one more game for Phoenix early in 2023, and she announced her retirement in September 2023.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.azdesertswarm.com/basketball/2023/9/3/23857975/arizona-womens-basketball-sam-thomas-fan-favorite-retires-wnba-mercury",
+        "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html",
+        "https://fullcourtbuckets.com/wnba/sam-thomas/"
+      ],
+      "queries": [
+        {
+          "q": "sam thomas wnba",
+          "vol": 140,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What position does Sam Thomas play?",
-      "answer": "Sam Thomas is listed as a Forward for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
+      "question": "What did Sam Thomas average in the WNBA?",
+      "answer": "Sam Thomas averaged 0.4 points and 0.2 rebounds in 25 WNBA regular-season games for the Phoenix Mercury in 2022 and 2023.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html",
+        "https://fullcourtbuckets.com/wnba/sam-thomas/"
+      ],
+      "queries": [
+        {
+          "q": "sam thomas stats",
+          "vol": 40,
+          "source": "openseo"
+        },
+        {
+          "q": "sam thomas wnba stats",
+          "vol": 20,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Sam Thomas play college basketball?",
+      "answer": "Sam Thomas played five seasons at Arizona (2017 to 2022) and started every game of her career there. She left as the program leader in games played (154), won the 2021 Elite 90 Award at the Final Four and made the Pac-12 All-Defensive Team three times.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.azdesertswarm.com/basketball/2023/9/3/23857975/arizona-womens-basketball-sam-thomas-fan-favorite-retires-wnba-mercury",
+        "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)",
+        "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html"
+      ],
+      "queries": [
+        {
+          "q": "sam thomas arizona",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Sam Thomas?",
-      "answer": "Public profiles list Sam Thomas as born in 1999. As of late 2026 that puts her around 27 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)"
-      ],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170,
-      "birthdate": "1999-01-01"
-    },
-    {
-      "question": "What college did Sam Thomas attend?",
-      "answer": "Thomas played college basketball at Arizona.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)"
-      ],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "When was Sam Thomas drafted?",
-      "answer": "She was undrafted in the 2022 WNBA draft, but made the Phoenix Mercury roster in 2022.",
+      "answer": "Sam Thomas was born June 14, 1999, in Las Vegas, Nevada.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/t/thomasa01w.html",
         "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)"
       ],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
-    },
-    {
-      "question": "What is Sam Thomas's nationality?",
-      "answer": "Sam Thomas is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Sam_Thomas_(basketball)"
-      ],
-      "google_keyword": "sam thomas wnba",
-      "approx_monthly_volume": 170
+      "queries": [
+        {
+          "q": "sam thomas age",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

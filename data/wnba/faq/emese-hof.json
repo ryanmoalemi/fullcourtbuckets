@@ -1,82 +1,78 @@
 {
   "slug": "emese-hof",
   "player_name": "Emese Hof",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Emese Hof's stats / points per game?",
-      "answer": "In the 2026 regular season, Emese Hof averaged 2.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emese hof stats",
-      "approx_monthly_volume": 10
+      "question": "Did Emese Hof play in the WNBA?",
+      "answer": "Yes. The Minnesota Lynx signed Emese Hof, a Dutch forward who played college basketball at Miami, to a player development contract on May 2, 2026. She played three regular-season games, and the Lynx released her on May 28, 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-emese-hof/n-6356456",
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-release-emese-hof/n-6367746",
+        "https://www.basketball-reference.com/wnba/players/h/hofem01w.html"
+      ],
+      "queries": [
+        {
+          "q": "emese hof wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "emese hof lynx",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
+    },
+    {
+      "question": "What did Emese Hof average in the WNBA?",
+      "answer": "Emese Hof averaged 2.3 points and 1.7 rebounds in 7.0 minutes over three regular-season games for the Minnesota Lynx in 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/h/hofem01w.html",
+        "https://fullcourtbuckets.com/wnba/emese-hof/"
+      ],
+      "queries": [
+        {
+          "q": "emese hof stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How tall is Emese Hof?",
-      "answer": "Emese Hof is listed at 6' 3\".",
-      "answer_kind": "bio",
+      "answer": "Emese Hof is listed at 6 feet 3 inches.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Emese_Hof"
+        "https://www.oursportscentral.com/services/releases/minnesota-lynx-sign-forward-emese-hof/n-6356456",
+        "https://www.basketball-reference.com/wnba/players/h/hofem01w.html"
       ],
-      "google_keyword": "emese hof height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "emese hof height",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Emese Hof?",
-      "answer": "Public profiles list Emese Hof as born in 1996. As of late 2026 that puts her around 30 years old.",
-      "answer_kind": "bio",
+      "answer": "Emese Hof was born May 29, 1996, in Utrecht, Netherlands.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/h/hofem01w.html",
         "https://en.wikipedia.org/wiki/Emese_Hof"
       ],
-      "google_keyword": "emese hof age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1996-01-01"
-    },
-    {
-      "question": "Who is Emese Hof?",
-      "answer": "Emese Eva Hof is a Dutch female basketball player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emese_Hof"
-      ],
-      "google_keyword": "emese hof wikipedia",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What team does Emese Hof play for?",
-      "answer": "Her most recent WNBA team on record is the Minnesota Lynx. She wears No. 25. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emese hof",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What is Emese Hof's jersey number?",
-      "answer": "Emese Hof wears number 25 for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emese hof",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What position does Emese Hof play?",
-      "answer": "Emese Hof is listed as a C for the Minnesota Lynx.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "emese hof",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What college did Emese Hof attend?",
-      "answer": "Hof played college basketball at Miami.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Emese_Hof"
-      ],
-      "google_keyword": "emese hof",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "emese hof age",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

@@ -231,6 +231,36 @@ class PlayoffBoxTests(unittest.TestCase):
         boxes.reconcile_player(7, stats, recent, [extra])
         self.assertEqual(stats[0]["games_played"], 2)
 
+    def test_a_complete_log_rewrites_averages_that_do_not_add_up(self):
+        # Five logged games total 88 points. The stored line says 14.8, which is 74.
+        stats = [season_row(5, 14.8)]
+        recent = [logged("2026-10-0%d" % number, 800 + number, 16 if number < 5 else 24) for number in range(1, 6)]
+        # 16*4 + 24 = 88. The season row's other counting cells still match season_row's defaults
+        # except points, so the rewrite has to follow the boxes for every counting column.
+        finals = [
+            game("2026-10-0%d" % number, 800 + number, EX, OT, [player_line("Example Player", 7, "EX", 16 if number < 5 else 24)])
+            for number in range(1, 6)
+        ]
+        boxes.reconcile_player(7, stats, recent, finals)
+        self.assertEqual(stats[0]["games_played"], 5)
+        self.assertEqual(per_game.counting_total(stats[0]["pts"], 5), 88)
+        self.assertEqual(per_game.shown_average(stats[0]["pts"], 5), "17.6")
+        self.assertEqual(per_game.counting_total(stats[0]["reb"], 5), 20)
+        again = json.loads(json.dumps(stats))
+        boxes.reconcile_player(7, stats, recent, finals)
+        self.assertEqual(stats, again)
+
+    def test_a_matching_line_does_not_fill_empty_rebound_splits(self):
+        stats = [season_row(1, 10.0)]
+        stats[0]["oreb"] = None
+        stats[0]["dreb"] = None
+        recent = [logged("2026-10-01", 901, 10)]
+        played = game("2026-10-01", 901, EX, OT, [player_line("Example Player", 7, "EX", 10)])
+        boxes.reconcile_player(7, stats, recent, [played])
+        self.assertIsNone(stats[0]["oreb"])
+        self.assertIsNone(stats[0]["dreb"])
+        self.assertEqual(stats[0]["pts"], 10.0)
+
     def test_a_line_ahead_of_its_log_is_not_counted_twice(self):
         stats = [season_row(2, 13.0)]
         recent = [logged("2026-10-01", 401, 10)]

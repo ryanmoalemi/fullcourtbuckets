@@ -123,7 +123,25 @@ class PortraitTests(unittest.TestCase):
         self.assertIn('Portrait is a photograph.', page)
         self.assertNotIn('The number artwork is a design element, not a player photograph.', page)
         self.assertIn('class="player-illustration"', figure)
+        self.assertNotIn('class="card-credit"', figure)
         self.assertIn('"caption": "Caitlin Clark"', page)
+    def test_old_jersey_caption_uses_card_credit_and_keeps_the_portrait_class(self):
+        record = dict(RECORD, kind='photograph')
+        record.pop('mask')
+        (self.root/'content').mkdir()
+        (self.root/'content/player-photo-credits.json').write_text(json.dumps({'credits': {'caitlin-clark': {
+            'author': 'Zafer', 'license': 'CC BY 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by/4.0/',
+            'file_url': 'https://commons.wikimedia.org/wiki/File:Example.jpg',
+            'changes': 'cropped, background removed',
+            'shown_year': 2025, 'shown_team': 'Los Angeles Sparks'}}}))
+        page = portraits.render(PAGE, PROFILE, record, self.root)
+        figure = portraits.APPLIED.search(page).group()
+        self.assertIn('<img class="player-illustration"', figure)
+        self.assertIn('<p class="card-credit">2025, Los Angeles Sparks</p>', figure)
+        self.assertNotIn('<figcaption', figure)
+        self.assertIn('html body .portrait-art .card-credit{', page)
+        self.assertIn('.portrait-art:has(.card-credit) .portrait-crop{bottom:34px}', page)
     def test_inactive_page_credit_goes_in_sources_not_on_the_photo(self):
         record = dict(RECORD, kind='photograph')
         record.pop('mask')

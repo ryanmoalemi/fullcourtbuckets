@@ -1,71 +1,100 @@
 {
   "slug": "mariella-fasoula",
   "player_name": "Mariella Fasoula",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Mariella Fasoula's stats / points per game?",
-      "answer": "In the 2026 regular season, Mariella Fasoula averaged 0.0 points, 1.0 rebounds, and 0.0 assists in 1 games for Toronto Tempo. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mariella fasoula stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Mariella Fasoula?",
-      "answer": "Mariella Fasoula is a Greek basketball player for Athinaikos of the Greek Basketball League.",
-      "answer_kind": "mixed",
+      "question": "Did Mariella Fasoula play in the WNBA?",
+      "answer": "Yes. Mariella Fasoula, a Greek center, was in training camp with the Golden State Valkyries in 2026 until they waived her on May 2. The Toronto Tempo then signed her to a developmental contract, and she played three regular-season games for Toronto.",
+      "answer_kind": "researched",
       "sources": [
+        "https://valkyries.wnba.com/news/olden-state-valkyries-waive-mariella-fasoula-ashlon-jackson-ndjakalenga-mwenentanda-cate-reese-miela-sowah-and-marta-suarez-20260502",
+        "https://tempo.wnba.com/news/toronto-tempo-sign-mariella-fasoula-to-developmental-contract",
+        "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html",
         "https://en.wikipedia.org/wiki/Mariella_Fasoula"
       ],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "mariella fasoula wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "mariella fasoula valkyries",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What team does Mariella Fasoula play for?",
-      "answer": "Her most recent WNBA team on record is the Toronto Tempo. She wears No. 34. Her listed position is C.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
+      "question": "What did Mariella Fasoula average in the WNBA?",
+      "answer": "Mariella Fasoula averaged 1.3 points and 1.0 rebounds in three regular-season games for the Toronto Tempo in 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html",
+        "https://fullcourtbuckets.com/wnba/mariella-fasoula/"
+      ],
+      "queries": [
+        {
+          "q": "mariella fasoula stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is Mariella Fasoula's jersey number?",
-      "answer": "Mariella Fasoula wears number 34 for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
-    },
-    {
-      "question": "What position does Mariella Fasoula play?",
-      "answer": "Mariella Fasoula is listed as a C for the Toronto Tempo.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
+      "question": "Where did Mariella Fasoula play college basketball?",
+      "answer": "Mariella Fasoula started at Boston College (2015 to 2017), then transferred to Vanderbilt, where she played from 2018 to 2020.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Mariella_Fasoula",
+        "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html"
+      ],
+      "queries": [
+        {
+          "q": "mariella fasoula vanderbilt",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "mariella fasoula transfer",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How tall is Mariella Fasoula?",
-      "answer": "Mariella Fasoula is listed at 6' 5\".",
-      "answer_kind": "bio",
+      "answer": "Mariella Fasoula is listed at 6 feet 4 inches. She plays center.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html",
         "https://en.wikipedia.org/wiki/Mariella_Fasoula"
       ],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "mariella fasoula height",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
     },
     {
-      "question": "What college did Mariella Fasoula attend?",
-      "answer": "Fasoula played college basketball at Vanderbilt.",
-      "answer_kind": "bio",
+      "question": "How old is Mariella Fasoula?",
+      "answer": "Mariella Fasoula was born September 2, 1997, in Marousi, Greece.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fasouma01w.html",
         "https://en.wikipedia.org/wiki/Mariella_Fasoula"
       ],
-      "google_keyword": "mariella fasoula",
-      "approx_monthly_volume": 720
+      "queries": [
+        {
+          "q": "mariella fasoula age",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

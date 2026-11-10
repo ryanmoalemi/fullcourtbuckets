@@ -1,7 +1,7 @@
 {
  "title": "Famous relatives of WNBA players",
  "page": "/news/wnba-players-famous-relatives/",
- "updated": "2026-11-03",
+ "updated": "2026-11-10",
  "corrections": "hello@fullcourtbuckets.com",
  "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
  "entries": [
@@ -2750,6 +2750,325 @@
     "license": "CC BY-SA 4.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
     "source_page": "https://commons.wikimedia.org/wiki/File:Roneeka_Hodges_2026.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 75,
+   "player": "Kelsey Plum",
+   "player_slug": "kelsey-plum",
+   "relative": "Darren Waller",
+   "relative_slug": "darren-waller",
+   "relation": "Former husband",
+   "relation_type": "spouse",
+   "sport": "NFL",
+   "known_for": "Pro Bowl tight end (2020) who joined the Carolina Panthers in August 2026. He retired before the 2024 season, then came back in 2025 and played nine games for the Miami Dolphins.",
+   "extra": "They married on March 4, 2023, days before the Las Vegas Raiders traded him to the New York Giants. They filed a joint petition for divorce in Clark County, Nevada, on April 23, 2024, ABC News reported.",
+   "sources": [
+    {
+     "label": "Giants.com: Giants acquire TE Darren Waller via trade with Raiders, March 15, 2023",
+     "url": "https://www.giants.com/news/darren-waller-trade-details-las-vegas-raiders-nfl-free-agency-2023",
+     "kind": "primary"
+    },
+    {
+     "label": "Panthers.com: Panthers add Darren Waller, Aug. 17, 2026",
+     "url": "https://www.panthers.com/news/panthers-add-darren-waller-make-corresponding-roster-moves",
+     "kind": "primary"
+    },
+    {
+     "label": "ABC News report, April 23, 2024",
+     "url": "https://abcnews.com/GMA/Culture/kelsey-plum-darren-waller-file-divorce-after-1/story?id=109545803",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kelsey-plum.webp",
+    "author": "Lorie Shaull from St Paul, United States",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kelsey_Plum_2019_(cropped).jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Jeffrey Beall",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Darren_Waller_2019.JPG"
+   }
+  },
+  {
+   "rank": 76,
+   "player": "Sabrina Ionescu",
+   "player_slug": "sabrina-ionescu",
+   "relative": "Hroniss Grasu",
+   "relative_slug": "hroniss-grasu",
+   "relation": "Husband",
+   "relation_type": "spouse",
+   "sport": "NFL",
+   "known_for": "Four-year starting center at Oregon, a first-team All-American as a junior and a senior and a two-time Rimington Trophy finalist. The Chicago Bears took him in the third round of the 2015 NFL draft, and he played nine NFL seasons.",
+   "extra": "Oregon inducted him into its Athletics Hall of Fame in 2025. They married in March 2024, while he was a Raiders free agent, the Las Vegas Review-Journal reported.",
+   "sources": [
+    {
+     "label": "Oregon Athletics Hall of Fame: Hroniss Grasu (2025)",
+     "url": "https://goducks.com/honors/hall-of-fame/hroniss-grasu/1263",
+     "kind": "primary"
+    },
+    {
+     "label": "Oregon Athletics bio: Hroniss Grasu",
+     "url": "https://goducks.com/sports/football/roster/hroniss-grasu/4891",
+     "kind": "primary"
+    },
+    {
+     "label": "Las Vegas Review-Journal report, March 12, 2024",
+     "url": "https://www.reviewjournal.com/sports/raiders/raiders-free-agent-marries-wnba-star-3015758/",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/sabrina-ionescu.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sabrina_Ionescu_2024.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 77,
+   "player": "Napheesa Collier",
+   "player_slug": "napheesa-collier",
+   "relative": "Gershon Collier",
+   "relative_slug": "gershon-collier",
+   "relation": "Grandfather",
+   "relation_type": "grandparent",
+   "sport": "Diplomacy",
+   "known_for": "Lawyer who helped negotiate Sierra Leone's independence from Great Britain in 1961, then became Sierra Leone's ambassador to the United Nations and to the United States.",
+   "extra": "Her father, Gamal, played rugby at Buckingham University in England.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Napheesa Collier",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1312838-collier-napheesa.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/napheesa-collier.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Napheesa_Collier_2_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 78,
+   "player": "Chelsea Gray",
+   "player_slug": "chelsea-gray",
+   "relative": "Alexis Gray-Lawson",
+   "relative_slug": "alexis-gray-lawson",
+   "relation": "Cousin",
+   "relation_type": "cousin",
+   "sport": "WNBA",
+   "known_for": "Cal's career leader in games played (143, all starts) and three-pointers made (211), and the first Cal player named Pac-10 Freshman of the Year. The Washington Mystics drafted her in the third round in 2010.",
+   "extra": "Cal inducted her into its Athletics Hall of Fame in 2024.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Chelsea Gray",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1312766-gray-chelsea.htm",
+     "kind": "primary"
+    },
+    {
+     "label": "Cal Athletics Hall of Fame: Alexis Gray-Lawson (2024)",
+     "url": "https://calbears.com/honors/california-athletics-hall-of-fame/alexis-gray-lawson/1370",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/chelsea-gray.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Chelsea_Gray_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 79,
+   "player": "Kia Nurse",
+   "player_slug": "kia-nurse",
+   "relative": "Richard Nurse",
+   "relative_slug": "richard-nurse",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "CFL",
+   "known_for": "Played in the Canadian Football League for the Hamilton Tiger-Cats.",
+   "extra": "Her mother, Cathy, played basketball at McMaster University.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Kia Nurse",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1433003-nurse-kia.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/kia-nurse.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Kia_Nurse_2025_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 80,
+   "player": "Sonja Petrovic",
+   "player_slug": "sonja-petrovic",
+   "relative": "Miloš Vasić",
+   "relative_slug": "milos-vasic",
+   "relation": "Husband",
+   "relation_type": "spouse",
+   "sport": "Rowing",
+   "known_for": "Serbian rower who has competed at three Olympics: 10th in the men's four at London 2012, 10th in the men's pair at Rio 2016 and fifth in the men's pair at Tokyo 2020.",
+   "extra": "Both competed at Tokyo 2020, where she played for Serbia's fourth-place basketball team under her married name, Sonja Vasić.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Sonja Vasić",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1344389-vasic-sonja.htm",
+     "kind": "primary"
+    },
+    {
+     "label": "Serbian Rowing Federation: Serbian rowers at the Olympic Games",
+     "url": "https://www.serbian-rowing.org.rs/info.php?r=52",
+     "kind": "primary"
+    },
+    {
+     "label": "World Rowing athlete profile: Milos Vasic",
+     "url": "https://worldrowing.com/athlete/32347",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": null,
+   "photo_relative": null
+  },
+  {
+   "rank": 81,
+   "player": "Sonja Petrovic",
+   "player_slug": "sonja-petrovic",
+   "relative": "Radoslav Petrović",
+   "relative_slug": "radoslav-petrovic",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball (referee)",
+   "known_for": "Basketball referee who worked the 1984 Olympic Games in Los Angeles. He was later general secretary of Yugoslavia's basketball federation and a FIBA official.",
+   "extra": null,
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Sonja Vasić",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1344389-vasic-sonja.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": null,
+   "photo_relative": null
+  },
+  {
+   "rank": 82,
+   "player": "Emma Meesseman",
+   "player_slug": "emma-meesseman",
+   "relative": "Sonja Tankrey",
+   "relative_slug": "sonja-tankrey",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "Basketball (Belgium)",
+   "known_for": "Named Belgium's Female Basketball Player of the Year in 1983.",
+   "extra": "Emma was the 2019 WNBA Finals MVP with the Washington Mystics.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Emma Meesseman",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1393438-meesseman-emma.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/emma-meesseman.webp",
+    "author": "Zafer",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Emma_Meesseman_20261010.JPG"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 83,
+   "player": "Ji-Su Park",
+   "player_slug": "ji-su-park",
+   "relative": "Park Sang-kwan",
+   "relative_slug": "park-sang-kwan",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball (South Korea)",
+   "known_for": "Played in the Korean Basketball League (KBL).",
+   "extra": "Her mother, Lee Soo-kyung, played volleyball and was called up to South Korea's national youth team. Her brother, Park Jun-hyeok, has played in South Korea's V-League.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Park Ji Su",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1333829-park-ji-su.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/ji-su-park.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ji-Su_Park_2_(cropped).jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 84,
+   "player": "Sandrine Gruda",
+   "player_slug": "sandrine-gruda",
+   "relative": "Ulysse Gruda",
+   "relative_slug": "ulysse-gruda",
+   "relation": "Father",
+   "relation_type": "parent",
+   "sport": "Basketball (France)",
+   "known_for": "Represented France in basketball.",
+   "extra": "Her Tokyo 2020 profile says he encouraged her to take up the sport. She won bronze with France at those Games.",
+   "sources": [
+    {
+     "label": "Tokyo 2020 official athlete profile: Sandrine Gruda",
+     "url": "https://stacy.olympics.com/tokyo-2020/olympic-games/en/results/basketball/athlete-profile-n1340269-gruda-sandrine.htm",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-10",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/sandrine-gruda.webp",
+    "author": "Chris93",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Sandrine_Gruda_2025.jpg"
    },
    "photo_relative": null
   }
