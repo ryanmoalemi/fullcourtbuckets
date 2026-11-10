@@ -597,51 +597,71 @@ def install_tree(root: Path, menu: list[dict], skip: set[str]) -> dict[str, str]
     return updates
 
 
-# ---- Sitewide Now bar: one shared value from data/now-ticker.json ----
-import datetime as _dt
-import html as _html
-import json as _json
-
-NOW_PATH = Path(__file__).resolve().parents[1] / 'data' / 'now-ticker.json'
+# ---- Sitewide New bar: newest published article in articles.json ----
+_REPO = Path(__file__).resolve().parents[1]
 NOW_RE = re.compile(r'<div class="ticker\b[^>]*>.*?</div></div></div>', re.S)
+_BAR_CACHE: dict = {'token': None, 'item': None, 'html': ''}
+
+
+def _catalog_token() -> tuple | None:
+    path = _REPO / 'articles.json'
+    try:
+        stat = path.stat()
+    except OSError:
+        return None
+    return (stat.st_mtime_ns, stat.st_size)
 
 
 def load_now() -> dict:
-    return _json.loads(NOW_PATH.read_text(encoding='utf-8'))
+    """The article the New bar is showing. Derived, never hand-edited."""
+    return now_item()
 
 
-def now_item(now: _dt.datetime | None = None) -> dict:
-    """The current item, or the evergreen fallback once it has expired."""
-    data = load_now()
-    moment = now or _dt.datetime.now(_dt.timezone.utc)
-    if moment >= _dt.datetime.fromisoformat(data['expires']):
-        fb = dict(data['fallback'])
-        fb.setdefault('date', data.get('date', ''))
-        fb['expired'] = True
-        return fb
-    return data
+def now_item(now=None) -> dict:
+    """Newest published article. `now` does not expire or replace it."""
+    del now
+    token = _catalog_token()
+    if _BAR_CACHE['token'] == token and _BAR_CACHE['item'] is not None:
+        return _BAR_CACHE['item']
+    path = _REPO / 'articles.json'
+    articles = links.load_articles(_REPO) if path.is_file() else []
+    item = links.latest_published_article(articles, _REPO) or links.EMPTY_TICKER
+    _BAR_CACHE['token'] = token
+    _BAR_CACHE['item'] = item
+    _BAR_CACHE['html'] = links.ticker_bar_html(item)
+    return item
 
 
-def now_bar_html(now: _dt.datetime | None = None) -> str:
-    data = load_now()
-    item = now_item(now)
-    e = lambda v: _html.escape(str(v), quote=True)
-    fb = data['fallback']
-    return (
-        f'<div class="ticker fcb-now" data-item-date="{e(data.get("date", ""))}" data-expires="{e(data["expires"])}" '
-        f'data-fallback-text="{e(fb["text"])}" data-fallback-url="{e(fb["url"])}">'
-        '<div class="shell ticker-shell"><div class="ticker-label">New</div>'
-        f'<div class="ticker-text"><a href="{e(item["url"])}">{e(item["text"])}</a></div></div></div>'
-    )
+def now_bar_html(now=None) -> str:
+    now_item(now)
+    return _BAR_CACHE['html']
 
 
-def apply_now_bar(page_html: str, now: _dt.datetime | None = None) -> str:
+def apply_now_bar(page_html: str, now=None, bar_html: str | None = None) -> str:
     """Remove any page-specific ticker and put the shared one right after the site header."""
     if 'site-header' not in page_html:
         return page_html
+    block = bar_html if bar_html is not None else now_bar_html(now)
     stripped = NOW_RE.sub('', page_html)
     end = stripped.find('</header>', stripped.find('site-header'))
     if end < 0:
         return page_html
     end += len('</header>')
-    return stripped[:end] + now_bar_html(now) + stripped[end:]
+    return stripped[:end] + block + stripped[end:]
+
+
+def refresh_now_bars(root: Path | None = None) -> int:
+    """Write the current New bar onto every page that uses the site header."""
+    root = root or _REPO
+    block = now_bar_html()
+    changed = 0
+    for path in iter_html(root):
+        original = path.read_text(encoding='utf-8')
+        if 'site-header' not in original:
+            continue
+        updated = apply_now_bar(original, bar_html=block)
+        if updated == original:
+            continue
+        path.write_text(updated, encoding='utf-8')
+        changed += 1
+    return changed

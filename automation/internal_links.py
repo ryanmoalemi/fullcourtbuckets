@@ -527,138 +527,193 @@ def _ensure_all_news(text: str) -> str:
     return text
 
 
-TICKER_MAX_AGE = dt.timedelta(hours=48)
 _TICKER_RE = re.compile(r'<div class="ticker\b[^>]*>.*?</div></div></div>', re.S)
-_WEEKDAYS = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
-_MONTHS = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
-
-
-def _article_day(article: dict) -> str:
-    return str(article.get('date') or '')[:10]
-
-
-def _noon(day: dt.date) -> dt.datetime:
-    return dt.datetime(day.year, day.month, day.day, 12, 0, tzinfo=ZoneInfo('America/Los_Angeles'))
-
-
-def _is_game_result(article: dict) -> bool:
-    if str(article.get('espnGameId') or '').strip():
-        return True
-    return bool(re.search(r'\b\d{2,3}\s*-\s*\d{2,3}\b', str(article.get('title') or '')))
-
-
-def _short_club(name: str) -> str:
-    parts = name.split()
-    return parts[-1] if parts else name
-
-
-def _pt_clock(tip: str) -> str:
-    match = re.search(r'(\d{1,2}:\d{2})\s*([ap])\.?m\.?\s*PT', tip, re.I)
-    if not match:
-        return ''
-    hour, minute = match.group(1).split(':')
-    suffix = 'AM' if match.group(2).lower() == 'a' else 'PM'
-    return f'{int(hour)}:{minute} {suffix} PT'
-
-
-def _slash_network(network: str) -> str:
-    return network.replace(' and ', '/').replace(', ', '/')
-
-
-def _schedule_items() -> list[dict]:
-    """Upcoming Finals games from the shared tracker rows."""
-    import citation
-
-    items = []
-    for row in citation.FINALS_TRACKER_ROWS:
-        game, date_text, matchup, network, tip = row[:5]
-        status = row[-1]
-        if status != 'Scheduled':
-            continue
-        found = re.search(r'([A-Z][a-z]{2})\.?\s+(\d{1,2}),\s+(\d{4})', date_text)
-        teams = matchup.split(',', 1)[0]
-        clock = _pt_clock(tip)
-        if not found or ' at ' not in teams or not clock:
-            continue
-        month = _MONTHS.index(found.group(1)) + 1
-        day = dt.date(int(found.group(3)), month, int(found.group(2)))
-        hour_text, suffix = clock.split(' ')[0], clock.split(' ')[1]
-        hour, minute = (int(part) for part in hour_text.split(':'))
-        if suffix == 'PM' and hour != 12:
-            hour += 12
-        if suffix == 'AM' and hour == 12:
-            hour = 0
-        moment = dt.datetime(day.year, day.month, day.day, hour, minute, tzinfo=ZoneInfo('America/Los_Angeles'))
-        away, home = teams.split(' at ', 1)
-        text = (
-            f'WNBA Finals Game {game}: {_short_club(away)} at {_short_club(home)}, '
-            f'{_WEEKDAYS[day.weekday()]} {_MONTHS[day.month - 1]} {day.day}, {clock}, {_slash_network(network)}'
-        )
-        text = FINALS_TICKER_TEXT.get(str(game), text)
-        items.append({'date': day.isoformat(), 'moment': moment, 'text': text, 'kind': 'schedule'})
-    return items
-
-
-# Hand-written Now lines for Finals games, matching the article tickers (absolute dates, series status).
-FINALS_TICKER_TEXT = {
-    '2': 'WNBA Finals Game 2: Dream at Valkyries, Mon Oct 19, 2026, 5 p.m. PT, Chase Center. Valkyries lead 1-0.',
+_PACIFIC = ZoneInfo('America/Los_Angeles')
+_HIDDEN_STATUS = {'draft', 'unpublished', 'unlisted'}
+_NOINDEX_RE = re.compile(
+    r'<meta\b[^>]*name=["\']robots["\'][^>]*content=["\'][^"\']*noindex'
+    r'|<meta\b[^>]*content=["\'][^"\']*noindex[^"\']*["\'][^>]*name=["\']robots["\']',
+    re.I,
+)
+# Shown only when the published catalog is empty. Never a hand-written story.
+EMPTY_TICKER = {
+    'slug': '',
+    'url': '/news/',
+    'date': '',
+    'text': 'WNBA news and analysis.',
+    'title': 'WNBA news and analysis.',
+    'description': '',
+    'kind': 'news',
+    'moment': None,
 }
-# A scheduled game stays the Now line until about three hours after tip-off, then the next game takes over.
-GAME_WINDOW = dt.timedelta(hours=3)
 
 
-def _next_finals_item(now: dt.datetime) -> dict | None:
-    fresh = [item for item in _schedule_items() if item['moment'] >= now - GAME_WINDOW]
-    fresh.sort(key=lambda item: item['moment'])
-    return fresh[0] if fresh else None
-
-
-def _article_ticker(article: dict) -> dict | None:
-    raw = _article_day(article)
+def _publish_moment(value) -> dt.datetime | None:
+    """Publish instant. A date-only value is midnight Pacific on that day."""
+    text = str(value or '').strip()
+    if not text:
+        return None
     try:
-        day = dt.date.fromisoformat(raw)
+        if 'T' in text or text.endswith('Z'):
+            moment = dt.datetime.fromisoformat(text.replace('Z', '+00:00'))
+            if moment.tzinfo is None:
+                moment = moment.replace(tzinfo=_PACIFIC)
+            return moment
+        day = dt.date.fromisoformat(text[:10])
     except ValueError:
         return None
+    return dt.datetime(day.year, day.month, day.day, tzinfo=_PACIFIC)
+
+
+def _flag_hides(value) -> bool:
+    if value is True:
+        return True
+    return str(value or '').strip().lower() in {'true', 'yes', '1'}
+
+
+def _record_hides(article: dict) -> bool:
+    """Drafts, unpublished rows, and noindex flags never take the New bar."""
+    if _flag_hides(article.get('draft')) or _flag_hides(article.get('noindex')):
+        return True
+    if str(article.get('status') or '').strip().lower() in _HIDDEN_STATUS:
+        return True
+    published = article.get('published')
+    if published is False or str(published or '').strip().lower() in {'false', 'no', '0'}:
+        return True
+    if 'noindex' in str(article.get('robots') or '').lower():
+        return True
+    return False
+
+
+def _front_matter_hides(path: Path) -> bool:
+    if not path.is_file():
+        return False
+    text = path.read_text(encoding='utf-8')
+    if not text.startswith('---'):
+        return False
+    end = text.find('\n---', 3)
+    block = text[3:end if end != -1 else 4000]
+    flags: dict[str, str] = {}
+    for line in block.splitlines():
+        if not line or line[0] in ' \t-' or ':' not in line:
+            continue
+        key, _, raw = line.partition(':')
+        flags[key.strip().lower()] = raw.strip().strip('"').strip("'")
+    record = {
+        'draft': flags.get('draft', ''),
+        'status': flags.get('status', ''),
+        'published': flags.get('published', ''),
+        'robots': flags.get('robots', ''),
+        'noindex': flags.get('noindex', ''),
+    }
+    return _record_hides(record)
+
+
+def _head_is_noindex(path: Path) -> bool:
+    if not path.is_file():
+        return True
+    with path.open(encoding='utf-8', errors='ignore') as handle:
+        chunk: list[str] = []
+        size = 0
+        for line in handle:
+            chunk.append(line)
+            size += len(line)
+            if '</head>' in line.lower() or size > 20000:
+                break
+    head = ''.join(chunk).split('</head>', 1)[0]
+    return _NOINDEX_RE.search(head) is not None
+
+
+def _news_page_hides(root: Path, slug: str, url: str) -> bool:
+    if slug:
+        page = root / 'news' / slug / 'index.html'
+    else:
+        page = file_for_url(root, url)
+        if page is None:
+            return True
+    if _head_is_noindex(page):
+        return True
+    if slug and _front_matter_hides(root / 'content' / 'articles' / slug / 'article.md'):
+        return True
+    return False
+
+
+def ticker_copy(article: dict) -> str:
+    """Headline, then the card dek, in the one line the New bar shows."""
     title = re.sub(r'\s+', ' ', str(article.get('title') or '')).strip()
-    if not title:
-        return None
-    return {'date': raw, 'moment': _noon(day), 'text': title, 'kind': 'article'}
+    dek = re.sub(r'\s+', ' ', str(article.get('description') or '')).strip()
+    if not dek or dek.casefold() == title.casefold() or dek.casefold() in title.casefold():
+        return title
+    if title.endswith(('.', '!', '?')):
+        return f'{title} {dek}'
+    return f'{title}. {dek}'
+
+
+def latest_published_article(articles: list, root: Path | None = None) -> dict | None:
+    """Newest published story in the news catalog.
+
+    Publish date wins. A clock time on that date beats a date-only value.
+    The same instant then prefers dateModified, then the earlier catalog row.
+    The publisher inserts a new story ahead of equal dates, so that row is the
+    last one merged. Drafts, unpublished rows, and noindex pages are skipped.
+    """
+    best = None
+    best_key = None
+    for index, article in enumerate(articles or []):
+        if not isinstance(article, dict) or _record_hides(article):
+            continue
+        moment = _publish_moment(article.get('date'))
+        if moment is None:
+            continue
+        title = re.sub(r'\s+', ' ', str(article.get('title') or '')).strip()
+        if not title:
+            continue
+        slug = str(article.get('slug') or '').strip().strip('/')
+        url = f'/news/{slug}/' if ARTICLE_SLUG.fullmatch(slug) else ''
+        if not url:
+            raw = str(article.get('url') or '').split('?', 1)[0].split('#', 1)[0]
+            leaf = raw.strip('/').split('/')[-1] if raw.startswith('/news/') else ''
+            if ARTICLE_SLUG.fullmatch(leaf):
+                slug = leaf
+                url = raw if raw.endswith('/') else raw + '/'
+        if not url:
+            continue
+        if root is not None and _news_page_hides(root, slug, url):
+            continue
+        modified = _publish_moment(article.get('dateModified')) or dt.datetime.min.replace(tzinfo=dt.timezone.utc)
+        key = (moment, modified, -index)
+        if best_key is not None and key <= best_key:
+            continue
+        best_key = key
+        best = {
+            'slug': slug,
+            'url': url,
+            'date': moment.astimezone(_PACIFIC).date().isoformat(),
+            'moment': moment,
+            'text': ticker_copy(article),
+            'title': title,
+            'description': re.sub(r'\s+', ' ', str(article.get('description') or '')).strip(),
+            'kind': 'article',
+        }
+    return best
 
 
 def choose_ticker(articles: list, now: dt.datetime | None = None) -> dict | None:
-    """Newest game result, or the next Finals game when no result is newer.
+    """Latest published article. The clock does not hide it or swap in a game."""
+    del now
+    return latest_published_article(articles)
 
-    The line is hidden when that item is more than 48 hours old.
-    """
-    moment = now or dt.datetime.now(ZoneInfo('America/Los_Angeles'))
-    if moment.tzinfo is None:
-        moment = moment.replace(tzinfo=ZoneInfo('America/Los_Angeles'))
-    ordered = [article for article in articles or [] if isinstance(article, dict) and _article_day(article)]
-    ordered.sort(key=_article_day, reverse=True)
-    if not ordered:
-        return None
-    newest = ordered[0]
-    schedule = _next_finals_item(moment)
-    result = _article_ticker(newest) if _is_game_result(newest) else None
-    result_fresh = result is not None and result['moment'] >= moment - TICKER_MAX_AGE
-    game_day = schedule is not None and schedule['date'] <= moment.date().isoformat()
-    # The next game takes over on game day; before that a fresh result stays up.
-    if schedule and (result is None or game_day or not result_fresh):
-        item = schedule
-    elif result:
-        item = result
-    else:
-        item = _article_ticker(newest)
-    if item is None or item['moment'] < moment - TICKER_MAX_AGE:
-        return None
-    if item['date'] < _article_day(newest):
-        item = dict(item)
-        item['date'] = _article_day(newest)
-    return item
+
+def ticker_bar_html(item: dict) -> str:
+    return (
+        f'<div class="ticker fcb-now" data-item-date="{esc(item.get("date") or "")}">'
+        '<div class="shell ticker-shell"><div class="ticker-label">New</div>'
+        f'<div class="ticker-text"><a href="{esc(item["url"])}">{esc(item["text"])}</a></div></div></div>'
+    )
 
 
 def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> str:
-    """The Now line is one shared sitewide value (data/now-ticker.json); see site_nav.apply_now_bar."""
+    """Shared New bar. Pages with the site header use the catalog on disk."""
     import site_nav
     if 'site-header' in html:
         return site_nav.apply_now_bar(html)
@@ -667,11 +722,7 @@ def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> s
     item = choose_ticker(articles, now)
     if item is None:
         return _TICKER_RE.sub('', html, count=1)
-    block = (
-        f'<div class="ticker" data-item-date="{esc(item["date"])}">'
-        '<div class="shell"><div class="ticker-label">New</div>'
-        f'<div class="ticker-text">{esc(item["text"])}</div></div></div>'
-    )
+    block = ticker_bar_html(item)
     if _TICKER_RE.search(html):
         first = True
 

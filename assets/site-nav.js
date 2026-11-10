@@ -489,9 +489,6 @@
   window.FCBSearch = { load: load, search: function (q) { return search(q); }, stem: stem, fold: fold,
     createIndex: createIndex, highlight: highlight };
 })();
-/* Now bar staleness guard: after data-expires, show the evergreen fallback link. */
-(function(){var bar=document.querySelector('.fcb-now');if(!bar)return;var exp=Date.parse(bar.getAttribute('data-expires')||'');
-if(!isNaN(exp)&&Date.now()>=exp){var a=bar.querySelector('.ticker-text a');if(a){a.textContent=bar.getAttribute('data-fallback-text');a.setAttribute('href',bar.getAttribute('data-fallback-url'));}}})();
 /* Sitewide data tables: label each cell from its header. A headshot in every row is dropped. */
 (function(){
   function plain(el){
