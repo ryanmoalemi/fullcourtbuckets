@@ -64,7 +64,9 @@
       "license": "CC BY-SA 4.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
-      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds",
+      "shown_year": 2025,
+      "shown_team": "Los Angeles Sparks"
     },
     "kelsey-mitchell": {
       "author": "John Mac",
@@ -136,7 +138,9 @@
       "license": "CC BY-SA 2.0",
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
-      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds"
+      "qa": "pass 2026-10-22: edges checked at 200% on dark and light backgrounds",
+      "shown_year": 2025,
+      "shown_team": "Phoenix Mercury"
     },
     "brittney-griner": {
       "author": "Lorie Shaull",
