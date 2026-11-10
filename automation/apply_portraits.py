@@ -27,6 +27,8 @@ CSS = '''
 .has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
 .has-player-portrait .hero-copy{padding-top:30px;padding-bottom:30px}
 .has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:block;opacity:1;pointer-events:auto;background:transparent;min-height:0;min-width:0;padding:0;overflow:hidden;isolation:isolate}
+.portrait-art:has(.card-credit) .portrait-crop{bottom:34px}
+html body .portrait-art .card-credit{position:absolute;left:0;right:0;bottom:6px;z-index:4;margin:0;padding:0 8px;font-size:12px;line-height:1.35;color:var(--muted);text-align:center;background:transparent}
 @media(min-width:781px){.has-player-portrait .portrait-art:has(.player-illustration){min-height:570px}}
 .has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{z-index:0;pointer-events:none}
 .portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
@@ -97,6 +99,25 @@ def photo_credit(root: Path, slug: str):
     return credit
 
 
+def jersey_caption(credit: dict) -> str:
+    """Year and team shown in the photo, when that jersey is not the player's current club.
+
+    The shared card-credit class stays small and muted. The portrait image keeps its classes.
+    """
+    if not isinstance(credit, dict):
+        return ''
+    year = credit.get('shown_year')
+    team = credit.get('shown_team')
+    if isinstance(year, bool) or not isinstance(year, int) or not 1996 <= year <= 2100:
+        return ''
+    if not isinstance(team, str):
+        return ''
+    team = team.strip()
+    if not team or len(team) > 40 or not re.fullmatch(r"[A-Za-z0-9 .'-]+", team):
+        return ''
+    return f'<p class="card-credit">{year}, {esc(team)}</p>'
+
+
 def credit_html(credit: dict) -> str:
     lic = esc(credit['license'])
     if credit.get('license_url'):
@@ -142,6 +163,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
     caption = name if photo else 'AI-generated illustration · Full Court Buckets'
     alt = name if photo else f'{name} illustrated portrait'
     aria = name if photo else 'Player illustration'
+    jersey = jersey_caption(photo_credit(root, slug)) if photo else ''
     figure = (
         '<!-- FCB:approved-portrait:start -->'
         f'<figure class="hero-art portrait-art" aria-label="{esc(aria)}">' + backdrop +
@@ -149,7 +171,7 @@ def render(page: str, profile: dict, record: dict, root: Path) -> str:
         f'<img class="player-illustration" src="{esc(src)}" '
         f'alt="{esc(alt)}" width="{width}" height="{height}"'
         f'{mask_style} fetchpriority="high" decoding="async">'
-        '</div></figure><!-- FCB:approved-portrait:end -->'
+        f'</div>{jersey}</figure><!-- FCB:approved-portrait:end -->'
     )
     if APPLIED.search(page):
         page, count = APPLIED.subn(lambda _: figure, page)

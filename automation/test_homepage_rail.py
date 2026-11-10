@@ -249,64 +249,44 @@ class HomepageRailTests(unittest.TestCase):
         kept = links.apply_homepage(page, articles, None)
         self.assertIn('Given to You Straight', kept)
 
-    def test_ticker_uses_the_finals_schedule_when_no_result_is_newer(self):
+    def test_ticker_is_the_newest_article_not_a_scheduled_game(self):
         now = dt.datetime(2026, 10, 15, 12, 0, tzinfo=PT)
         articles = [
-            {'slug': '2026-wnba-finals-ratings-tracker', 'title': 'Four games are set', 'date': '2026-10-14'},
-            {
-                'slug': 'aces-valkyries-semis-game-2-recap',
-                'title': 'Burton from 28. Valkyries 83, Aces 81.',
-                'date': '2026-10-07',
-                'espnGameId': '401918298',
-            },
+            {'slug': 'older-note', 'title': 'Older note', 'description': 'Old dek.', 'date': '2026-10-14', 'url': '/news/older-note/'},
+            {'slug': 'newer-note', 'title': 'Newer note', 'description': 'New dek.', 'date': '2026-11-09', 'url': '/news/newer-note/'},
         ]
-        # Pin the schedule to the day before Game 1 (the shared tracker rows now carry finals).
-        import citation
-        from unittest import mock
-        game1 = list(citation.FINALS_TRACKER_ROWS[0][:5]) + ['Pending tip-off'] * 3 + ['Scheduled']
-        with mock.patch.object(citation, 'FINALS_TRACKER_ROWS', [game1]):
-            item = links.choose_ticker(articles, now)
-        self.assertEqual(
-            item['text'],
-            'WNBA Finals Game 1: Dream at Valkyries, Sat Oct 17, 12:30 PM PT, NBC/Peacock',
-        )
-        self.assertGreaterEqual(item['date'], articles[0]['date'])
-
-    def test_ticker_uses_a_newer_game_result(self):
-        now = dt.datetime(2026, 10, 18, 18, 0, tzinfo=PT)
-        articles = [{
-            'slug': 'finals-game-1-recap',
-            'title': 'Dream beat Valkyries 90-80',
-            'date': '2026-10-18',
-            'espnGameId': '401918305',
-        }]
         item = links.choose_ticker(articles, now)
-        self.assertEqual(item['text'], 'Dream beat Valkyries 90-80')
-        self.assertEqual(item['date'], '2026-10-18')
+        self.assertEqual(item['url'], '/news/newer-note/')
+        self.assertEqual(item['text'], 'Newer note. New dek.')
+        self.assertNotIn('Finals', item['text'])
 
-    def test_ticker_hides_when_the_newest_item_is_older_than_48_hours(self):
-        # After the Finals schedule ends, so no scheduled game can stand in for the old recap.
+    def test_ticker_keeps_an_article_older_than_48_hours(self):
         now = dt.datetime(2026, 11, 10, 15, 0, tzinfo=PT)
         articles = [{
             'slug': 'old-recap',
             'title': 'Burton from 28. Valkyries 83, Aces 81.',
+            'description': 'A semifinal recap.',
             'date': '2026-10-07',
-            'espnGameId': '401918298',
+            'url': '/news/old-recap/',
         }]
-        self.assertIsNone(links.choose_ticker(articles, now))
+        item = links.choose_ticker(articles, now)
+        self.assertEqual(item['slug'], 'old-recap')
+        self.assertEqual(item['date'], '2026-10-07')
+        self.assertIn('Burton from 28', item['text'])
 
-    def test_published_ticker_is_not_older_than_the_newest_article(self):
+    def test_published_ticker_is_the_newest_article(self):
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
-        newest = max(article['date'] for article in articles)
+        item = links.latest_published_article(articles, ROOT)
+        self.assertIsNotNone(item)
         match = re.search(r'<div class="ticker[^"]*"[^>]*data-item-date="(\d{4}-\d{2}-\d{2})"', home)
         self.assertIsNotNone(match)
-        self.assertGreaterEqual(match.group(1), newest)
-        self.assertNotIn('Burton from 28', home)
-        # The Now line is the shared data/now-ticker.json item; match it instead of one past game.
-        now_item = json.loads((ROOT / 'data' / 'now-ticker.json').read_text(encoding='utf-8'))
-        self.assertIn(html.escape(now_item['text'], quote=False), home)
-        self.assertNotIn('tonight', home.split('class="ticker', 1)[1].split('</div></div></div>', 1)[0].lower())
+        self.assertEqual(match.group(1), item['date'])
+        bar = home.split('class="ticker', 1)[1].split('</div></div></div>', 1)[0]
+        self.assertIn(html.escape(item['text'], quote=True), bar)
+        self.assertIn(f'href="{item["url"]}"', bar)
+        self.assertNotIn('tonight', bar.lower())
+        self.assertNotIn('Game 7 recap:', bar)
         featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
         self.assertIn('class="article-card" id="featured-story"', featured)
         self.assertIn('class="article-visual"', featured)

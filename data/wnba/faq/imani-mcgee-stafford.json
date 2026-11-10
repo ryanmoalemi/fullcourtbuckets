@@ -1,102 +1,111 @@
 {
   "slug": "imani-mcgee-stafford",
   "player_name": "Imani McGee-Stafford",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 9, 2026",
+  "verified_at": "2026-11-09",
   "items": [
     {
-      "question": "What are Imani McGee-Stafford's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), Imani McGee-Stafford averaged 3.9 points, 3.8 rebounds, and 0.6 assists in 29 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "imani mcgee-stafford stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Imani McGee-Stafford make?",
-      "answer": "A precise public salary or net worth figure for Imani McGee-Stafford is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What are Imani McGee-Stafford's WNBA career averages?",
+      "answer": "Imani McGee-Stafford averaged 4.4 points and 4.2 rebounds in 121 WNBA regular-season games from 2016 to 2019. Her best season was her 2016 rookie year with Chicago, at 6.7 points and 5.6 rebounds.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html",
+        "https://fullcourtbuckets.com/wnba/imani-mcgee-stafford/"
       ],
-      "google_keyword": "imani mcgee stafford net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "imani mcgee-stafford stats",
+          "vol": 30,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Is Imani McGee-Stafford married?",
-      "answer": "There is no widely reported public record of Imani McGee-Stafford being married as of late 2026.",
+      "question": "How tall is Imani McGee-Stafford?",
+      "answer": "Basketball-Reference lists Imani McGee-Stafford at 6 feet 7 inches; FIBA lists her at 6 feet 6 inches. She plays center.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Imani_McGee-Stafford"
+        "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html",
+        "https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/teams/puerto-rico/182081-imani-mcgee-stafford"
       ],
-      "google_keyword": "imani mcgee-stafford husband",
-      "approx_monthly_volume": 30
+      "queries": [
+        {
+          "q": "imani mcgee-stafford height",
+          "vol": 20,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Imani McGee-Stafford?",
-      "answer": "Imani Trishawn McGee-Stafford is an American professional basketball player.",
-      "answer_kind": "mixed",
+      "question": "Does Imani McGee-Stafford play for Puerto Rico?",
+      "answer": "Yes. Imani McGee-Stafford played for Puerto Rico at the 2026 FIBA Women's World Cup, averaging 17.0 points and 12.0 rebounds in four games.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.fiba.basketball/en/events/fiba-womens-basketball-world-cup-2026/teams/puerto-rico/182081-imani-mcgee-stafford",
         "https://en.wikipedia.org/wiki/Imani_McGee-Stafford"
       ],
-      "google_keyword": "who is imani mcgee-stafford father",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "imani mcgee stafford puerto rico",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What team does Imani McGee-Stafford play for?",
-      "answer": "Her most recent WNBA team on record is the Chicago Sky. She wears No. 34. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What is Imani McGee-Stafford's jersey number?",
-      "answer": "Imani McGee-Stafford wears number 34 for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "What position does Imani McGee-Stafford play?",
-      "answer": "Imani McGee-Stafford is listed as a Forward for the Chicago Sky.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880
-    },
-    {
-      "question": "How old is Imani McGee-Stafford?",
-      "answer": "Public profiles list Imani McGee-Stafford as born in 1994. As of late 2026 that puts her around 32 years old.",
-      "answer_kind": "bio",
+      "question": "Which WNBA teams did Imani McGee-Stafford play for?",
+      "answer": "The Chicago Sky drafted Imani McGee-Stafford 10th overall in 2016, and she made the All-Rookie Team. Chicago traded her to the Atlanta Dream in 2017, and she played for the Dallas Wings in 2019.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Imani_McGee-Stafford"
+        "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html",
+        "https://en.wikipedia.org/wiki/Imani_McGee-Stafford",
+        "https://fullcourtbuckets.com/wnba/imani-mcgee-stafford/"
       ],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880,
-      "birthdate": "1994-01-01"
+      "queries": [
+        {
+          "q": "imani mcgee-stafford wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "imani mcgee stafford team",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What college did Imani McGee-Stafford attend?",
-      "answer": "McGee-Stafford played college basketball at University of Texas at Austin.",
-      "answer_kind": "bio",
+      "question": "Where did Imani McGee-Stafford play college basketball?",
+      "answer": "Imani McGee-Stafford played at Texas. In 2015 she received the Honda Inspiration Award.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Imani_McGee-Stafford"
+        "https://en.wikipedia.org/wiki/Imani_McGee-Stafford",
+        "https://www.basketball-reference.com/wnba/players/b/boyetim01w.html"
       ],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "imani mcgee-stafford texas",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is Imani McGee-Stafford's nationality?",
-      "answer": "Imani McGee-Stafford is American.",
-      "answer_kind": "bio",
+      "question": "Did Imani McGee-Stafford go to law school?",
+      "answer": "Yes. In March 2020 she said she would sit out the next two WNBA seasons to attend Southwestern Law School in Los Angeles.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.cbsnews.com/texas/news/dallas-wings-center-imani-mcgee-stafford-stepping-away-to-attend-law-school/",
+        "https://www.forbes.com/sites/brendonkleen/2020/03/30/dallas-wings-forward-imani-mcgee-stafford-sit-out-two-wnba-seasons-law-school/",
         "https://en.wikipedia.org/wiki/Imani_McGee-Stafford"
       ],
-      "google_keyword": "imani mcgee-stafford",
-      "approx_monthly_volume": 880
+      "queries": [
+        {
+          "q": "imani mcgee stafford law school",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

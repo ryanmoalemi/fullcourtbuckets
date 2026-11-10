@@ -1,108 +1,146 @@
 {
   "slug": "natalie-achonwa",
   "player_name": "Natalie Achonwa",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "What are Natalie Achonwa's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Natalie Achonwa averaged 4.0 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "natalie achonwa stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Natalie Achonwa dating?",
-      "answer": "As of late 2026, Natalie Achonwa has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "What is Natalie Achonwa doing now?",
+      "answer": "Natalie Achonwa is an assistant coach for the Seattle Storm. The Storm hired her for the 2026 season after two seasons at Michigan, where she was an assistant coach and then general manager and assistant coach.",
       "answer_kind": "researched",
       "sources": [
+        "https://storm.wnba.com/news/seattle-storm-finalizes-2026-coaching-staff",
         "https://en.wikipedia.org/wiki/Natalie_Achonwa"
       ],
-      "google_keyword": "natalie achonwa partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "natalie achonwa retired",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "natalie achonwa michigan",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "natalie achonwa bio",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "natalie achonwa biography",
+          "vol": 0,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "How much does Natalie Achonwa make?",
-      "answer": "A precise public salary or net worth figure for Natalie Achonwa is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Which WNBA teams did Natalie Achonwa play for?",
+      "answer": "The Indiana Fever drafted Natalie Achonwa ninth overall in 2014. She played for Indiana from 2015 to 2020 and for the Minnesota Lynx in 2021 and 2022.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/a/achonna01w.html",
+        "https://storm.wnba.com/news/seattle-storm-finalizes-2026-coaching-staff",
+        "https://fullcourtbuckets.com/wnba/natalie-achonwa/"
       ],
-      "google_keyword": "natalie achonwa net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "natalie achonwa wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "indiana fever natalie achonwa",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "What were Natalie Achonwa's WNBA career averages?",
+      "answer": "Natalie Achonwa averaged 7.1 points and 4.2 rebounds in 211 WNBA regular-season games from 2015 to 2022.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/a/achonna01w.html",
+        "https://fullcourtbuckets.com/wnba/natalie-achonwa/"
+      ],
+      "queries": [
+        {
+          "q": "natalie achonwa stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Natalie Achonwa play college basketball?",
+      "answer": "Natalie Achonwa played four seasons at Notre Dame, from 2010 to 2014.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://en.wikipedia.org/wiki/Natalie_Achonwa",
+        "https://www.basketball-reference.com/wnba/players/a/achonna01w.html"
+      ],
+      "queries": [
+        {
+          "q": "natalie achonwa notre dame",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "How tall is Natalie Achonwa?",
+      "answer": "Natalie Achonwa is listed at 6 feet 3 inches. She played forward.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/a/achonna01w.html",
+        "https://en.wikipedia.org/wiki/Natalie_Achonwa"
+      ],
+      "queries": [
+        {
+          "q": "natalie achonwa height",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Natalie Achonwa?",
-      "answer": "She was born November 22, 1992 in Toronto. As of late 2026 that puts her at 33 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natalie_Achonwa"
-      ],
-      "google_keyword": "natalie achonwa age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1992-11-22"
-    },
-    {
-      "question": "Is Natalie Achonwa married?",
-      "answer": "There is no widely reported public record of Natalie Achonwa being married as of late 2026.",
+      "answer": "Natalie Achonwa was born November 22, 1992.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/a/achonna01w.html",
         "https://en.wikipedia.org/wiki/Natalie_Achonwa"
       ],
-      "google_keyword": "natalie achonwa husband",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "natalie achonwa age",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Does Natalie Achonwa have kids?",
-      "answer": "There is no widely reported public information that Natalie Achonwa has children as of late 2026.",
+      "question": "Is Natalie Achonwa an Olympian?",
+      "answer": "Yes. Natalie Achonwa played for Canada at four Olympics: 2012, 2016, 2020 and 2024.",
       "answer_kind": "researched",
       "sources": [
+        "https://storm.wnba.com/news/seattle-storm-finalizes-2026-coaching-staff",
         "https://en.wikipedia.org/wiki/Natalie_Achonwa"
       ],
-      "google_keyword": "natalie achonwa son",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Natalie Achonwa's parents?",
-      "answer": "Public profiles share limited verified detail about Natalie Achonwa's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natalie_Achonwa"
-      ],
-      "google_keyword": "natalie achonwa parents",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Did Natalie Achonwa retire?",
-      "answer": "As of late 2026, Natalie Achonwa is still listed among WNBA players and has not been widely reported as retired.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natalie_Achonwa"
-      ],
-      "google_keyword": "natalie achonwa retired",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What college did Natalie Achonwa attend?",
-      "answer": "Natalie Achonwa played college basketball at University of Notre Dame.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Natalie_Achonwa"
-      ],
-      "google_keyword": "natalie achonwa notre dame",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Natalie Achonwa's contract?",
-      "answer": "Contract length and guarantees for Natalie Achonwa are not always published in full. When available, single-season salary figures appear on public WNBA salary databases.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "natalie achonwa contract",
-      "approx_monthly_volume": 0
+      "queries": [
+        {
+          "q": "natalie achonwa olympic stats",
+          "vol": 0,
+          "source": "openseo"
+        },
+        {
+          "q": "natalie achonwa accomplishments",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

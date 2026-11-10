@@ -1,0 +1,96 @@
+{
+  "scorecard": {
+    "overall": 8,
+    "max": 10,
+    "stars": 4,
+    "grade": "Ready",
+    "categories": [
+      {
+        "name": "Accuracy",
+        "score": 8,
+        "max": 10,
+        "reason": "Quotes used in the story are translations of the BasketNews.lt text that loads without the BN+ paywall (Nov. 8, 2026) and the full LRT.lt interview (Nov. 9, 2026). Paywalled GM sentences are attributed to Kenzo Fukuda and ClutchPoints, not reprinted as verified quotes. Playoff minutes are the WNBA.com box scores: 3:06 on Sept. 27 and 1:59 on Oct. 21. Regular-season 16 games and 8.1 minutes are the FCB log, matched to the WNBA.com and Valkyries roster averages of 3.1, 0.8 and 1.1. Estimated minute totals are products of one-decimal averages, labeled as such. Seven top-5 picks have no FCB line, so the rank is not a complete league ranking."
+      },
+      {
+        "name": "Information gain",
+        "score": 8,
+        "max": 10,
+        "reason": "A downloadable ranking of first WNBA seasons for top-5 picks from 2008 through 2026, plus the 2025 class 2026 lines and All-Star status from the WNBA.com releases. The page separates 16 regular-season games from 18 total appearances, 129.6 estimated minutes from a rounded 129, and 5:05 of playoff time from a flat five minutes or two Finals minutes."
+      },
+      {
+        "name": "Effort and replication cost",
+        "score": 8,
+        "max": 10,
+        "reason": "WNBA.com draft pages for 2008-2026, all 13 Valkyries playoff box scores, the signed CBA sections on the rookie scale, prioritization and public trade requests, the April 9, 2026 expansion release, and the Lithuanian interviews were opened. The CSV is built from the FCB season log."
+      },
+      {
+        "name": "Originality",
+        "score": 8,
+        "max": 10,
+        "reason": "The minutes file and the 2025-class comparison are not in the English write-ups. The story does not claim she has the fewest minutes. Dungee and Ionescu are lower on the estimated total, and three players are lower on minutes per game."
+      },
+      {
+        "name": "Experience and expertise",
+        "score": 7,
+        "max": 10,
+        "reason": "Real byline linked to the author page. No interview by this site. Translations are labeled as translations. Contract dollars are withheld because the contract document was not opened."
+      },
+      {
+        "name": "Main content and layout",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case H1, chart hero, one-line lead, ranking table first, 2025 class table with licensed headshots, CSV downloads, and the rules section below the data."
+      },
+      {
+        "name": "Transparency",
+        "score": 9,
+        "max": 10,
+        "reason": "Paywall, translation, missing players, the difference between a reserved label and a contract that has not ended, and the absence of a team statement are all on the page. CC0 on the files. House how-this-story-was-made note."
+      },
+      {
+        "name": "Writing craft",
+        "score": 8,
+        "max": 10,
+        "reason": "Sentence-case headline. Source notes are long because the column definitions sit with the tables. No em dashes."
+      },
+      {
+        "name": "People-first purpose",
+        "score": 8,
+        "max": 10,
+        "reason": "A reader gets what she said, which interview said it, what the minutes show, and what the CBA sections actually cover. English trade-request lines that the opened interviews do not support are marked as those outlets' claims."
+      },
+      {
+        "name": "Human voice",
+        "score": 8,
+        "max": 10,
+        "reason": "Specific dates and the pages they come from. The disagreement section is a ledger of 16 versus 18 games and 129 versus 129.6."
+      }
+    ],
+    "info_gain": [
+      "In the FCB log, Jocyte's first WNBA season is 16 games at 8.1 minutes, an estimated 129.6 minutes, third-lowest among top-5 picks since 2008 who have a line. Chelsea Dungee (64.4) and Sabrina Ionescu (80.1, in 3 games) are lower. She is fourth on minutes per game.",
+      "Official playoff box scores: 3:06 and 3 points on Sept. 27, and 1:59, 0 points and 1 assist on Oct. 21. Combined 5:05. She is not on the other 11 Valkyries playoff box scores.",
+      "The four players drafted ahead of her in 2025 were 2026 All-Stars. She was not. She is the only one of the five whose first WNBA season was not the draft year."
+    ],
+    "ai_flags": [
+      "A draft would have called 129 minutes a counted total. The log stores 8.1 minutes per game. 16 times 8.1 is 129.6. The story uses 129.6 and says it is not a box-score sum.",
+      "A draft would have quoted the ClutchPoints English rendering of the paywalled BasketNews sentences as her words. Those sentences were not on the free page. The story attributes them to ClutchPoints and Fukuda.",
+      "A draft would have said she asked for a trade. The LRT interview says a trade is possible and that she is not in a hurry.",
+      "A draft would have applied the 2026 protect-five rule to a 2028 Cleveland expansion draft. The April 9, 2026 release says Cleveland begins play in 2028. No 2028 protection number was found."
+    ]
+  },
+  "unique": [
+    "Third-lowest estimated first-season minute total in the FCB log of top-5 picks, 2008-2026, at 129.6. Not the lowest. Fourth on minutes per game at 8.1.",
+    "Playoff time on WNBA.com box scores is 3:06 plus 1:59, not five flat minutes and not two Finals minutes only.",
+    "BasketNews headline and the free text, plus a separate LRT interview, are the quotes. The GM conversation is behind the BasketNews paywall."
+  ],
+  "unverified": [
+    "Kenzo Fukuda post impression and like counts. Not used.",
+    "The paywalled remainder of the Nov. 8 BasketNews interview, including any sentence that names Ohemaa Nyanin.",
+    "The paywalled remainder of the Nov. 10 15min interview.",
+    "A Reddit thread titled Juste Jocyte and possible friction with GSV. Not found in the search used for this page.",
+    "A Previously story. Not opened.",
+    "Her contract document, so no salary figure.",
+    "First-season minutes for Jayne Appel, Evelyn Akhator, Nia Coffey, Lauren Cox, Kysre Gondrezick, Stephanie Soares and Lou Lopez Sénéchal. They are listed as absent from the log.",
+    "A Valkyries or Jocyte statement after the interviews, beyond the pages checked and ClutchPoints' report that the team had not immediately replied."
+  ]
+}

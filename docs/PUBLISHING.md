@@ -31,7 +31,6 @@ photo_credit: "Photo: Jane Photographer, CC BY-SA 4.0, via Wikimedia Commons"
 photo_credit_url: "https://commons.wikimedia.org/wiki/File:Example.jpg"
 license_url: "https://creativecommons.org/licenses/by-sa/4.0/"
 focal_y: 20
-ticker: "Optional one-line score for the bar under the header."
 ---
 
 The first paragraph is the lead. Link a [team](/wnba/teams/atlanta-dream/) or a [player](/wnba/angel-reese/) in the markdown. Do not add links the sentence did not already have.
@@ -66,7 +65,7 @@ Tables use GitHub-style pipe rows: a header row, a separator row of `---` cells,
 
 The table renders as `<div class="table-wrap"><table>` with a `<thead>` and `<tbody>`, using the article table styles already in the template. The wrapper scrolls sideways on narrow phones. Lines that start with `|` but have no separator row stay a plain paragraph.
 
-`ticker` is the optional “Now” line under the header. Set it when the story has a score. If you leave it out, a new page says “WNBA news, analysis and commentary.” Editing a page that already has a line leaves that line in place.
+The New bar under the header is not set in this file. On every publish it links to the newest published article in `articles.json`, the same list the news index, the feed, and the sitemap use. The line is that article's headline and its short description. Drafts, unpublished posts, and noindex pages are skipped. A `ticker` line in older front matter does not change the bar.
 
 ## What the action updates
 

@@ -1,6 +1,6 @@
 ---
 title: "Sarah Strong scores career-high 39 as UConn beats Iowa: where it ranks in UConn history"
-seo_title: "Sarah Strong's 39 and where it ranks at UConn"
+seo_title: "Sarah Strong's 39 and its UConn rank"
 slug: sarah-strong-39-points-uconn-record
 date: 2026-11-09
 category: news

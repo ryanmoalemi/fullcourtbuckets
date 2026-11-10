@@ -1045,8 +1045,7 @@ def top_link_html(meta: dict) -> str:
 def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str:
     slug = article['slug']
     dest = ROOT / 'news' / slug / 'index.html'
-    existed = dest.is_file()
-    if existed:
+    if dest.is_file():
         page = dest.read_text(encoding='utf-8')
     else:
         page = SHELL_PAGE.read_text(encoding='utf-8')
@@ -1103,17 +1102,6 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     page = replace_article(page, article_html)
     page = links.ensure_article_end(page, ROOT, article, articles)
     page = set_title(page, str(meta.get('seo_title') or title), social, description, article)
-    ticker = str(meta.get('ticker') or '').strip()
-    if ticker or not existed:
-        # A new story must not keep the shell page's score in the Now bar.
-        ticker_text = ticker or 'WNBA news, analysis and commentary.'
-        page = re.sub(
-            r'(<div class="ticker-text">)(.*?)(</div>)',
-            lambda match: match.group(1) + esc(ticker_text) + match.group(3),
-            page,
-            count=1,
-            flags=re.S,
-        )
     page = re.sub(
         r'(<nav class="breadcrumbs"[^>]*>.*)(<span>)(.*?)(</span></nav>)',
         lambda match: match.group(1) + match.group(2) + esc(title) + match.group(4),
@@ -1235,23 +1223,42 @@ def save_articles(articles: list) -> None:
     write_if_changed(ROOT / 'articles.json', text)
 
 
+_NEWS_ITEM_RE = re.compile(r'<li><a class="news-item" href="[^"]+">.*?</li>', re.S)
+_NEWS_TIME_RE = re.compile(r'<time datetime="([^"]*)"')
+
+
+def _news_insert_at(text: str, list_at: int, new_date: str) -> int:
+    """Index where a story belongs in a newest-first news list."""
+    for match in _NEWS_ITEM_RE.finditer(text, list_at):
+        stamp = _NEWS_TIME_RE.search(match.group(0))
+        other = stamp.group(1) if stamp else ''
+        if other <= new_date:
+            return match.start()
+    end = text.find('</ol>', list_at)
+    if end < 0:
+        raise SystemExit('news list is not closed')
+    return end
+
+
 def prepend_news_list(path: Path, item_html: str, article: dict) -> None:
     text = path.read_text(encoding='utf-8')
     href = links.article_href(article)
-    if href in text.split('class="news-list">', 1)[-1][:8000] and f'href="{href}"' in text:
-        marker = 'class="news-list">'
-        # Already listed. Replace the existing item when the card changed.
-        pattern = re.compile(
-            r'<li><a class="news-item" href="' + re.escape(href) + r'">.*?</li>',
-            re.S,
-        )
-        updated = pattern.sub(lambda _: item_html, text, count=1)
-        write_if_changed(path, updated)
+    pattern = re.compile(
+        r'<li><a class="news-item" href="' + re.escape(href) + r'">.*?</li>',
+        re.S,
+    )
+    if pattern.search(text):
+        # Already listed, including below the first screen of cards. Keep its place.
+        write_if_changed(path, pattern.sub(lambda _: item_html, text, count=1))
         return
     marker = 'class="news-list">'
     if marker not in text:
         raise SystemExit(f'news list missing in {path}')
-    text = text.replace(marker, marker + item_html, 1)
+    list_at = text.find(marker) + len(marker)
+    insert_at = _news_insert_at(text, list_at, str(article.get('date') or ''))
+    placed = text[:insert_at] + item_html + text[insert_at:]
+    # Cards before the new one, so the schema list uses the same slot.
+    slot = len(_NEWS_ITEM_RE.findall(text[list_at:insert_at]))
 
     def bump(match: re.Match) -> str:
         raw = match.group(1)
@@ -1269,7 +1276,7 @@ def prepend_news_list(path: Path, item_html: str, article: dict) -> None:
                     elements = list(main.get('itemListElement') or [])
                     url = links.article_absolute(article)
                     if not any(isinstance(el, dict) and el.get('url') == url for el in elements):
-                        elements.insert(0, {
+                        elements.insert(min(slot, len(elements)), {
                             '@type': 'ListItem',
                             'position': 1,
                             'url': url,
@@ -1292,7 +1299,12 @@ def prepend_news_list(path: Path, item_html: str, article: dict) -> None:
             return match.group(0)
         return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False) + '</script>'
 
-    text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', bump, text, flags=re.S)
+    text = re.sub(
+        r'<script type="application/ld\+json">(.*?)</script>',
+        bump,
+        placed,
+        flags=re.S,
+    )
     write_if_changed(path, text)
 
 
@@ -1444,6 +1456,8 @@ def main() -> None:
     save_articles(articles)
     # Page HTML is what content:encoded reads, so the feed is written after every story.
     write_if_changed(ROOT / 'feed.xml', rss_feed.feed_document(ROOT))
+    # articles.json is saved above, so every page picks up the newest story.
+    site_nav.refresh_now_bars(ROOT)
 
 
 if __name__ == '__main__':

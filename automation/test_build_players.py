@@ -513,7 +513,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 278)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 298)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -626,6 +626,23 @@ class BuildTests(unittest.TestCase):
         # Nov 8b: Hodges and Harris backfill. Low-volume player searches count.
         # Family, relationship, salary, net worth, and other-person queries dropped.
         november_8b = {'roneeka-hodges', 'amber-harris'}
+        # Nov 9 batch: camryn taylor reuses her Nov 8 pull. Low-volume player searches
+        # count, plus Google autocomplete where OpenSEO had too few player searches.
+        november_9 = {
+            'christyn-williams', 'imani-mcgee-stafford', 'jihyun-park', 'kristy-wallace',
+            'michelle-campbell',
+        }
+        november_9_autocomplete = {
+            'danielle-adams', 'janel-mccarville', 'karima-christmas-kelly', 'quionche-carter',
+        }
+        november_9_reused = {'camryn-taylor'}
+        # Nov 10 batch: low-volume player searches count, plus Google autocomplete where
+        # OpenSEO had too few player searches. Alex Montgomery and Allison Hightower
+        # name searches are mostly other people, so one player FAQ each.
+        november_10 = {'sam-thomas', 'morgan-tuck', 'natalie-achonwa', 'alex-montgomery', 'allison-hightower'}
+        november_10_autocomplete = {
+            'danielle-robinson', 'delisha-milton-jones', 'emese-hof', 'mariella-fasoula', 'nicole-powell',
+        }
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -648,6 +665,8 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(november_7 | november_7_reused <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_8 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_8b <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_9 | november_9_autocomplete | november_9_reused <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_10 | november_10_autocomplete <= b.SEARCH_FAQ_SLUGS)
         exact_counts = {'roneeka-hodges': 2, 'amber-harris': 3}
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
@@ -655,7 +674,17 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(faq['slug'], slug)
             if slug in exact_counts:
                 self.assertEqual(len(faq['items']), exact_counts[slug], slug)
-            if slug in november_8b:
+            if slug in november_10:
+                expected_source = 'Google search demand via OpenSEO, Nov 10, 2026'
+            elif slug in november_10_autocomplete:
+                expected_source = 'Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026'
+            elif slug in november_9:
+                expected_source = 'Google search demand via OpenSEO, Nov 9, 2026'
+            elif slug in november_9_autocomplete:
+                expected_source = 'Google search demand via OpenSEO + Google autocomplete, Nov 9, 2026'
+            elif slug in november_9_reused:
+                expected_source = 'Google search demand via OpenSEO, Nov 8, 2026'
+            elif slug in november_8b:
                 expected_source = 'Google search demand via OpenSEO + Google autocomplete, Nov 8, 2026'
             elif slug in november_8:
                 expected_source = 'Google search demand via OpenSEO, Nov 8, 2026'
@@ -757,7 +786,36 @@ class BuildTests(unittest.TestCase):
             # Nov 8b: roneeka hodges and amber harris backfilled. Low-volume player
             # searches count. Family, relationship, salary, net worth, the Omaha case,
             # and other-person queries were dropped, so Hodges stops at 2 and Harris at 3.
-            if slug in {'asia-taylor', 'roneeka-hodges'}:
+            # Nov 9: most of these players' name searches are other people (Danielle
+            # Adams, Michelle Campbell) or relationships and family (Karima
+            # Christmas-Kelly, Janel McCarville), so only the player searches remain.
+            # Nov 10: Alex Montgomery and Allison Hightower name searches are mostly
+            # other people (Allison Hightower is also a House of the Dragon character).
+            if slug in {'alex-montgomery', 'allison-hightower'}:
+                minimum = 1
+            elif slug in {'nicole-powell'}:
+                minimum = 3
+            elif slug in {'danielle-robinson', 'emese-hof', 'morgan-tuck'}:
+                minimum = 4
+            elif slug in {'sam-thomas', 'delisha-milton-jones', 'mariella-fasoula'}:
+                minimum = 5
+            elif slug in {'natalie-achonwa'}:
+                minimum = 7
+            elif slug in {'karima-christmas-kelly', 'michelle-campbell'}:
+                minimum = 1
+            elif slug in {'danielle-adams', 'quionche-carter'}:
+                minimum = 2
+            elif slug in {'jihyun-park'}:
+                minimum = 3
+            elif slug in {'camryn-taylor'}:
+                minimum = 4
+            elif slug in {'janel-mccarville'}:
+                minimum = 5
+            elif slug in {'imani-mcgee-stafford', 'kristy-wallace'}:
+                minimum = 6
+            elif slug in {'christyn-williams'}:
+                minimum = 7
+            elif slug in {'asia-taylor', 'roneeka-hodges'}:
                 minimum = 2
             elif slug == 'amber-harris':
                 minimum = 3
