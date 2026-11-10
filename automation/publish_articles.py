@@ -440,7 +440,13 @@ def chart_html(parts: list) -> str:
     caption = parts[2] if len(parts) > 2 else ''
     path = ROOT / src.lstrip('/')
     if not path.is_file():
-        raise SystemExit(f'chart missing: {src}')
+        # Image optimization drops a PNG once the WebP sibling is the file that ships.
+        webp = path.with_suffix('.webp')
+        if path.suffix.lower() != '.webp' and webp.is_file():
+            path = webp
+            src = '/' + webp.relative_to(ROOT).as_posix()
+        else:
+            raise SystemExit(f'chart missing: {src}')
     from PIL import Image
     with Image.open(path) as im:
         width, height = im.size
