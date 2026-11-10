@@ -983,8 +983,7 @@ def top_link_html(meta: dict) -> str:
 def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str:
     slug = article['slug']
     dest = ROOT / 'news' / slug / 'index.html'
-    existed = dest.is_file()
-    if existed:
+    if dest.is_file():
         page = dest.read_text(encoding='utf-8')
     else:
         page = SHELL_PAGE.read_text(encoding='utf-8')
@@ -1041,17 +1040,6 @@ def render_page(meta: dict, markdown: str, article: dict, articles: list) -> str
     page = replace_article(page, article_html)
     page = links.ensure_article_end(page, ROOT, article, articles)
     page = set_title(page, str(meta.get('seo_title') or title), social, description, article)
-    ticker = str(meta.get('ticker') or '').strip()
-    if ticker or not existed:
-        # A new story must not keep the shell page's score in the Now bar.
-        ticker_text = ticker or 'WNBA news, analysis and commentary.'
-        page = re.sub(
-            r'(<div class="ticker-text">)(.*?)(</div>)',
-            lambda match: match.group(1) + esc(ticker_text) + match.group(3),
-            page,
-            count=1,
-            flags=re.S,
-        )
     page = re.sub(
         r'(<nav class="breadcrumbs"[^>]*>.*)(<span>)(.*?)(</span></nav>)',
         lambda match: match.group(1) + match.group(2) + esc(title) + match.group(4),
@@ -1382,6 +1370,8 @@ def main() -> None:
     save_articles(articles)
     # Page HTML is what content:encoded reads, so the feed is written after every story.
     write_if_changed(ROOT / 'feed.xml', rss_feed.feed_document(ROOT))
+    # articles.json is saved above, so every page picks up the newest story.
+    site_nav.refresh_now_bars(ROOT)
 
 
 if __name__ == '__main__':
