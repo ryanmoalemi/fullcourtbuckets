@@ -23,6 +23,8 @@
 .has-player-portrait .hero-main{grid-template-columns:55% 45%;min-height:0}
 .has-player-portrait .hero-copy{padding-top:30px;padding-bottom:30px}
 .has-player-portrait .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:block;opacity:1;pointer-events:auto;background:transparent;min-height:0;min-width:0;padding:0;overflow:hidden;isolation:isolate}
+.portrait-art:has(.card-credit) .portrait-crop{bottom:34px}
+html body .portrait-art .card-credit{position:absolute;left:0;right:0;bottom:6px;z-index:4;margin:0;padding:0 8px;font-size:12px;line-height:1.35;color:var(--muted);text-align:center;background:transparent}
 @media(min-width:781px){.has-player-portrait .portrait-art:has(.player-illustration){min-height:570px}}
 .has-player-portrait .portrait-art:before,.has-player-portrait .portrait-art:after{z-index:0;pointer-events:none}
 .portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}
@@ -63,6 +65,8 @@
 .fcb-player-compact .hero-main{grid-template-columns:55% 45%;min-height:0}
 .fcb-player-compact .hero-copy{padding-top:30px;padding-bottom:30px}
 .fcb-player-compact .hero-art.portrait-art{position:relative;inset:auto;margin:0;display:block;opacity:1;pointer-events:auto;background:transparent;min-height:0;min-width:0;padding:0;overflow:hidden;isolation:isolate}
+.portrait-art:has(.card-credit) .portrait-crop{bottom:34px}
+html body .portrait-art .card-credit{position:absolute;left:0;right:0;bottom:6px;z-index:4;margin:0;padding:0 8px;font-size:12px;line-height:1.35;color:var(--muted);text-align:center;background:transparent}
 @media(min-width:781px){.fcb-player-compact .portrait-art:has(.player-illustration){min-height:570px}}
 .fcb-player-compact .portrait-art:before,.fcb-player-compact .portrait-art:after{z-index:0;pointer-events:none}
 .portrait-art .portrait-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none}

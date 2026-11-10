@@ -5,8 +5,8 @@
   "profiles_awaiting_illustrations": 153,
   "illustration_generation_started": false,
   "automatic_paid_generation_enabled": false,
-  "data_snapshot_checked_at": "2026-11-10T12:32:38+00:00",
+  "data_snapshot_checked_at": "2026-11-10T17:35:43+00:00",
   "approved_layout_source": "/wnba/caitlin-clark/",
-  "approved_css_sha256": "725b6dc7c4b176145d82aac6afffe14c799983f2b5d95a17397cb177436ae1ad",
+  "approved_css_sha256": "cbb6888bd59282b37c98c17b0db51c54688f4ecdefd5cff06450ce0751846314",
   "scope": "All current player pages; design only. No statistics or player identities changed."
 }
