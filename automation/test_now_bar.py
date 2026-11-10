@@ -1,9 +1,11 @@
 """The New bar matches the newest published article on every page."""
 import re
+import tempfile
 import unittest
 from pathlib import Path
 
 import internal_links as links
+import publish_articles as publisher
 import site_nav
 from link_graph import file_for_url, iter_html
 
@@ -88,6 +90,32 @@ class NowBarTests(unittest.TestCase):
         ]
         item = links.latest_published_article(articles, ROOT)
         self.assertEqual(item['slug'], 'kelsey-mitchell-2027-free-agency-cap')
+
+    def test_republish_does_not_move_an_older_story_ahead_of_the_newest(self):
+        page = Path(tempfile.mkdtemp()) / 'index.html'
+        page.write_text(
+            '<ol class="news-list">'
+            '<li><a class="news-item" href="/news/newest/">'
+            '<time datetime="2026-11-07">Nov 7</time><h2>Newest</h2></a></li>'
+            '<li><a class="news-item" href="/news/older-story/">'
+            '<time datetime="2026-10-18">Oct 18</time><h2>Older</h2></a></li>'
+            '</ol>',
+            encoding='utf-8',
+        )
+        card = (
+            '<li><a class="news-item" href="/news/older-story/">'
+            '<time datetime="2026-10-18">Oct 18</time><h2>Older updated</h2></a></li>'
+        )
+        publisher.prepend_news_list(page, card, {
+            'slug': 'older-story',
+            'title': 'Older updated',
+            'date': '2026-10-18',
+            'description': 'Still older.',
+        })
+        text = page.read_text(encoding='utf-8')
+        self.assertLess(text.find('/news/newest/'), text.find('/news/older-story/'))
+        self.assertIn('Older updated', text)
+        self.assertEqual(text.count('href="/news/older-story/"'), 1)
 
     def test_every_page_has_the_shared_bar(self):
         expected = site_nav.now_bar_html()
