@@ -1,0 +1,56 @@
+Top-5 first WNBA season minutes, drafts 2008-2026
+Built Nov. 10, 2026 from the Full Court Buckets season log.
+season-teams.json checked_at: 2026-10-10T19:05:05Z
+
+Universe
+Every No. 1 through No. 5 pick in the WNBA Draft from 2008 through 2026.
+Names and order are the WNBA.com draft page for that year.
+2008-2014: the numbered results in the page description at wnba.com/draft/<year>.
+2015: the FIRST ROUND RESULTS list on wnba.com/draft/2015.
+2016-2026: the pick order on wnba.com/draft/<year>/board.
+2012 No. 1 is printed "Nnemkadi Ogwumike" on the 2012 page. The FCB log name is Nneka Ogwumike.
+2015 No. 5 is printed "Cheyenne Parker." The FCB log name is Cheyenne Parker-Tyus.
+2019 No. 2 is printed "Asia Durr." The FCB log name is AD Durr.
+2025 No. 5 is printed "Justė Jocytė." The FCB log name is Juste Jocyte.
+2026 No. 3 is printed "Awa Fam Thiam." The FCB log name is Awa Fam.
+
+First season
+The earliest regular-season line (season_type 2) with at least one game.
+A player drafted in one year and first appearing later is kept.
+Her first season is the year she played, not the draft year.
+seasons_after_draft is first_season minus draft_year. Zero means she played in the draft year.
+
+Minutes
+The log stores minutes per game to one decimal, not a minute total.
+estimated_minutes is that per-game figure times games, summed across teams if the first season has more than one stint, then rounded to one decimal.
+It is not a sum of official box-score minutes.
+A one-decimal average can move the product by a few minutes.
+Ranks that are close can change if the underlying seconds differ.
+Jocyte's 129.6 is 8.1 times 16. Stories that say 129 minutes are rounding that product.
+This file does not use 129.
+
+mpg and ppg
+Weighted from the same per-game figures times games, then rounded to one decimal.
+They match the stored per-game number when the first season is one stint.
+
+Not in the log
+Seven top-5 picks have no regular-season line in this file:
+2010 No. 5 Jayne Appel, 2017 No. 3 Evelyn Akhator, 2017 No. 5 Nia Coffey,
+2020 No. 3 Lauren Cox, 2021 No. 4 Kysre Gondrezick,
+2023 No. 4 Stephanie Soares, 2023 No. 5 Lou Lopez Sénéchal.
+They are in top5-picks-not-in-fcb-log.csv.
+The rank is among the 88 picks who have a line. It is not a rank of every top-5 pick.
+
+2025 class, 2026 season
+2025-draft-top5-2026-season.csv is the 2026 regular season only.
+Playoffs are not in those averages.
+All-Star status is the July 2, 2026 starters release and the reserves release on WNBA.com.
+Jocyte is not named on either page.
+
+Playoff minutes for Jocyte are not in these CSVs.
+Official WNBA.com box scores: 3:06 on Sept. 27, 2026 (First Round Game 1) and 1:59 on Oct. 21, 2026 (Finals Game 3).
+
+License
+These three files are Full Court Buckets data.
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+Corrections: the story page.
