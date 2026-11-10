@@ -118,6 +118,9 @@ class PhotoSlotTests(unittest.TestCase):
                         pg.goto(base + path, wait_until='load')
                         for src, bw, bh in pg.evaluate(js, sel):
                             r = bw / bh
+                            # One-page trial: the Jocyte lead displays at half height (32:9). The file stays 16:9.
+                            if 'juste-jocyte-does-not-want-to-return-valkyries/hero-' in src and 3.2 <= r <= 3.8:
+                                continue
                             if not 1.70 <= r <= 1.85:
                                 bad.append(f'{path} @{w}: {src} renders {bw:.0f}x{bh:.0f} ({r:.2f}:1)')
                 b.close()
