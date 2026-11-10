@@ -1,19 +1,69 @@
 {
   "slug": "nicole-powell",
   "player_name": "Nicole Powell",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "Is Nicole Powell married?",
-      "answer": "There is no widely reported public record of Nicole Powell being married as of late 2026.",
+      "question": "Which WNBA teams did Nicole Powell play for?",
+      "answer": "The Charlotte Sting drafted Nicole Powell third overall in 2004. She played 11 WNBA seasons, for Charlotte (2004), Sacramento (2005 to 2009), the New York Liberty (2010 to 2012), Tulsa (2013) and Seattle (2014). With Sacramento she won the 2005 WNBA title and the 2005 Most Improved Player award, and she averaged 9.5 points in 360 career games.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/p/powelni01w.html",
+        "https://en.wikipedia.org/wiki/Nicole_Powell",
+        "https://fullcourtbuckets.com/wnba/nicole-powell/"
+      ],
+      "queries": [
+        {
+          "q": "nicole powell wnba",
+          "vol": 90,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Is Nicole Powell a basketball coach?",
+      "answer": "Nicole Powell was an assistant at Gonzaga and Oregon, then head coach at Grand Canyon from 2017 and at UC Riverside from March 2020. She left UC Riverside during the 2022-23 season.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gohighlanders.com/sports/womens-basketball/roster/coaches/nicole-powell/1028",
+        "https://www.pressenterprise.com/2024/10/02/inland-college-notes-brad-langston-gets-five-year-deal-to-coach-uc-riverside-womens-basketball/",
         "https://en.wikipedia.org/wiki/Nicole_Powell"
       ],
-      "google_keyword": "nicole powell wife",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "nicole powell gcu",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "nicole powell uc riverside",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "nicole powell basketball coach",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
+    },
+    {
+      "question": "Where did Nicole Powell play college basketball?",
+      "answer": "Nicole Powell played at Stanford from 2000 to 2004 and was a three-time All-American there.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gohighlanders.com/sports/womens-basketball/roster/coaches/nicole-powell/1028",
+        "https://en.wikipedia.org/wiki/Nicole_Powell",
+        "https://www.basketball-reference.com/wnba/players/p/powelni01w.html"
+      ],
+      "queries": [
+        {
+          "q": "nicole powell stanford",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

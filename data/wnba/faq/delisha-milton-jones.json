@@ -1,29 +1,109 @@
 {
   "slug": "delisha-milton-jones",
   "player_name": "DeLisha Milton-Jones",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026",
+  "verified_at": "2026-11-10",
   "items": [
     {
-      "question": "How much does DeLisha Milton-Jones make?",
-      "answer": "A precise public salary or net worth figure for DeLisha Milton-Jones is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Is DeLisha Milton-Jones a coach?",
+      "answer": "Yes. DeLisha Milton-Jones is the head coach at Old Dominion, which hired her on April 17, 2020; 2026-27 is her seventh season in Norfolk. She was previously head coach at Pepperdine and an assistant at Syracuse.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
-      ],
-      "google_keyword": "delisha milton-jones salary",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Is DeLisha Milton-Jones married?",
-      "answer": "There is no widely reported public record of DeLisha Milton-Jones being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
+        "https://odusports.com/sports/womens-basketball/roster/season/2026-27/staff/delisha-milton-jones",
         "https://en.wikipedia.org/wiki/DeLisha_Milton-Jones"
       ],
-      "google_keyword": "delisha milton jones husband",
-      "approx_monthly_volume": 40
+      "queries": [
+        {
+          "q": "delisha milton jones pepperdine",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "delisha milton-jones old dominion",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "delisha milton-jones syracuse",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "delisha milton-jones coach",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Which WNBA teams did DeLisha Milton-Jones play for?",
+      "answer": "DeLisha Milton-Jones played for the Los Angeles Sparks (1999 to 2004 and 2008 to 2012), the Washington Mystics (2005 to 2007), San Antonio (2013), the New York Liberty (2013 and 2014) and the Atlanta Dream (2014 and 2015). She won WNBA titles with the Sparks in 2001 and 2002.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/miltode01w.html",
+        "https://en.wikipedia.org/wiki/DeLisha_Milton-Jones",
+        "https://fullcourtbuckets.com/wnba/delisha-milton-jones/"
+      ],
+      "queries": [
+        {
+          "q": "delisha milton-jones wnba",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "delisha milton jones sparks",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
+    },
+    {
+      "question": "Did the Sparks retire DeLisha Milton-Jones's jersey?",
+      "answer": "Yes. The Los Angeles Sparks retired her No. 8 jersey in a halftime ceremony on July 28, 2026.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://sparks.wnba.com/news/sparks-retiring-delisha-milton-jones-no-8-jersey",
+        "https://www.latimes.com/sports/sparks/story/2026-07-28/los-angeles-sparks-new-york-liberty-wnba-game-recap",
+        "https://odusports.com/sports/womens-basketball/roster/season/2026-27/staff/delisha-milton-jones"
+      ],
+      "queries": [
+        {
+          "q": "delisha milton-jones jersey retirement",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
+    },
+    {
+      "question": "What were DeLisha Milton-Jones's career averages?",
+      "answer": "DeLisha Milton-Jones averaged 11.2 points and 5.2 rebounds in 499 WNBA regular-season games from 1999 to 2015.",
+      "answer_kind": "bio",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/miltode01w.html"
+      ],
+      "queries": [
+        {
+          "q": "delisha milton-jones stats",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
+    },
+    {
+      "question": "How tall is DeLisha Milton-Jones?",
+      "answer": "DeLisha Milton-Jones is listed at 6 feet 1 inch. She played forward.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/miltode01w.html",
+        "https://en.wikipedia.org/wiki/DeLisha_Milton-Jones"
+      ],
+      "queries": [
+        {
+          "q": "delisha milton jones height",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-10)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
