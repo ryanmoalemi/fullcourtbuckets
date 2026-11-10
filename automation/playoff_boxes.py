@@ -317,6 +317,96 @@ def _apply_log_counting(row: dict, counting: dict) -> None:
             row[field] = float(counting[field])
 
 
+# Columns the game log and the season table both show. A mismatch here is the
+# page disagreeing with itself. Offensive and defensive rebounds are not on the log.
+LOG_COLUMNS = ("min", "pts", "reb", "ast", "stl", "blk", "turnover")
+
+
+def _paired_boxes(played_log: list, appearances: list) -> list[dict] | None:
+    """Box lines for these log rows, in log order. None when the two lists are not the same games."""
+    if len(played_log) != len(appearances):
+        return None
+    used = set()
+    paired = []
+    for game in played_log:
+        match = None
+        for index, (document, player) in enumerate(appearances):
+            if index in used or not same_game(game, document):
+                continue
+            match = player
+            used.add(index)
+            break
+        if match is None:
+            return None
+        paired.append(match)
+    if len(used) != len(appearances):
+        return None
+    return paired
+
+
+def _box_sums(players: list[dict]) -> dict:
+    sums = {}
+    counted = [box_counting(player) for player in players]
+    for field in COUNTING:
+        total = 0
+        for item in counted:
+            value = item.get(field)
+            if value is None:
+                total = None
+                break
+            total += int(value)
+        sums[field] = total
+    return sums
+
+
+def realign_logged_line(row: dict, logged: list, appearances: list) -> bool:
+    """Rewrite a playoff line whose games are exactly the log, when those totals disagree.
+
+    The log and the completed boxes have to name the same games, and that count has
+    to be the line's games played. Counting totals that do not recover from the
+    stored average are replaced with the box totals. A line that already adds up
+    is left alone, including empty offensive and defensive rebound cells the log
+    does not show. Returns True when a stored average changes.
+    """
+    games_played = row.get("games_played")
+    if isinstance(games_played, bool) or not isinstance(games_played, int) or games_played <= 0:
+        return False
+    played_log = [game for game in logged if _played_stat(game)]
+    if len(played_log) != games_played:
+        return False
+    players = _paired_boxes(played_log, appearances)
+    if players is None:
+        return False
+    sums = _box_sums(players)
+    visible = []
+    for field in LOG_COLUMNS:
+        total = sums.get(field)
+        if total is None:
+            continue
+        current = row.get(field)
+        implied = per_game.counting_total(current, games_played) if current is not None else None
+        if implied != total:
+            visible.append(field)
+    if not visible:
+        return False
+    if any(field != "min" for field in visible):
+        rewrite = [field for field in COUNTING if sums.get(field) is not None]
+        for made_key, attempt_key, _pct_key in PERCENTAGES:
+            if (made_key in rewrite) != (attempt_key in rewrite):
+                rewrite = [field for field in rewrite if field not in (made_key, attempt_key)]
+    else:
+        rewrite = ["min"]
+    changed = False
+    for field in rewrite:
+        updated = store_average(sums[field], games_played)
+        if row.get(field) != updated:
+            row[field] = updated
+            changed = True
+    if any(field != "min" for field in visible):
+        _refresh_percentages(row)
+    return changed
+
+
 def _upsert_log(recent: list, player_id: int, document: dict, player: dict, counting: dict, known: list[dict]) -> None:
     for item in recent:
         if isinstance(item, dict) and same_game(item, document):
@@ -423,6 +513,13 @@ def reconcile_player(player_id: int, stats: list, recent: list, games: list[dict
                 _upsert_log(recent, player_id, document, player, counting, known)
             for document, player in log_only:
                 _upsert_log(recent, player_id, document, player, box_counting(player), known)
+            changes = True
+        logged_now = [
+            game for game in recent
+            if isinstance(game, dict) and game.get("postseason") is True and game.get("season") == season
+            and (_abbr(game.get("team")) == abbr or (_abbr(game.get("team")) == "" and len(grouped) == 1))
+        ]
+        if realign_logged_line(row, logged_now, appearances):
             changes = True
     if changes:
         recent.sort(key=lambda game: str(game.get("date") or ""), reverse=True)
