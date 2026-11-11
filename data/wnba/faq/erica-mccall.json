@@ -1,82 +1,69 @@
 {
   "slug": "erica-mccall",
   "player_name": "Erica McCall",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What college did Erica McCall attend?",
-      "answer": "McCall played college basketball at Stanford University.",
-      "answer_kind": "bio",
+      "question": "Which WNBA teams did Erica McCall play for?",
+      "answer": "The Indiana Fever drafted Erica McCall 17th overall in 2017. She played for Indiana (2017 to 2019), Atlanta and Minnesota (2020) and the Washington Mystics (2021).",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mccaler01w.html",
+        "https://en.wikipedia.org/wiki/Erica_McCall",
+        "https://fullcourtbuckets.com/wnba/erica-mccall/"
+      ],
+      "queries": [
+        {
+          "q": "erica mccall wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "erica mccall indiana fever",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Erica McCall play college basketball?",
+      "answer": "Erica McCall played at Stanford from 2013 to 2017. She made the All-Pac-12 team twice and helped the Cardinal reach two Final Fours. She returned to Stanford as an assistant coach in July 2023.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://gostanford.com/news/2023/07/10/mccall-back-as-assistant",
+        "https://gostanford.com/news/2025/10/21/alumni-support-womens-basketball-ahead-of-2025-26-season",
+        "https://gostanford.com/staff/erica-mccall",
         "https://en.wikipedia.org/wiki/Erica_McCall"
       ],
-      "google_keyword": "erica mccall stanford",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "erica mccall stanford",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Erica McCall?",
-      "answer": "Erica Angelyn McCall is an American professional basketball player.",
-      "answer_kind": "mixed",
+      "question": "What did Erica McCall average in the WNBA?",
+      "answer": "Erica McCall averaged 2.9 points and 2.8 rebounds in 122 WNBA regular-season games from 2017 to 2021.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Erica_McCall"
+        "https://www.basketball-reference.com/wnba/players/m/mccaler01w.html",
+        "https://fullcourtbuckets.com/wnba/erica-mccall/"
       ],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Erica McCall play for?",
-      "answer": "Her most recent WNBA team on record is the Indiana Fever. She wears No. 22. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What are Erica McCall's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Erica McCall averaged 4.1 points, 4.3 rebounds, and 0.6 assists in 23 games for Washington Mystics. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What is Erica McCall's jersey number?",
-      "answer": "Erica McCall wears number 22 for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What position does Erica McCall play?",
-      "answer": "Erica McCall is listed as a Forward for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Erica McCall?",
-      "answer": "Public profiles list Erica McCall as born in 1995. As of late 2026 that puts her around 31 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Erica_McCall"
-      ],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590,
-      "birthdate": "1995-01-01"
-    },
-    {
-      "question": "What is Erica McCall's nationality?",
-      "answer": "Erica McCall is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Erica_McCall"
-      ],
-      "google_keyword": "erica mccall",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "erica mccall stats",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "erica mccall wnba stats",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

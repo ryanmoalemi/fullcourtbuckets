@@ -513,7 +513,7 @@ class BuildTests(unittest.TestCase):
 
     def test_search_faqs_are_one_curated_section(self):
         root = ROOT.parent
-        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 298)
+        self.assertEqual(len(b.SEARCH_FAQ_SLUGS), 308)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.CURATED_FAQ_SLUGS)
         self.assertTrue(b.SEARCH_FAQ_SLUGS <= b.RELATED_SEARCH_HOLD)
         october_9 = {
@@ -643,6 +643,14 @@ class BuildTests(unittest.TestCase):
         november_10_autocomplete = {
             'danielle-robinson', 'delisha-milton-jones', 'emese-hof', 'mariella-fasoula', 'nicole-powell',
         }
+        # Nov 11 batch: same low-volume rule. Tan White's OpenSEO pull returned no
+        # searches about her (all "tan and white" colors and dogs), so her questions
+        # come from Google autocomplete only.
+        november_11 = {
+            'dulcy-fankam-mendjiadeu', 'erica-mccall', 'latoya-sanders', 'marquesha-davis', 'chelsea-dungee',
+            'crystal-bradford',
+        }
+        november_11_autocomplete = {'carolyn-swords', 'deanna-nolan', 'li-meng', 'tan-white'}
         self.assertTrue(october_13 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_19 <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(october_20 <= b.SEARCH_FAQ_SLUGS)
@@ -667,6 +675,7 @@ class BuildTests(unittest.TestCase):
         self.assertTrue(november_8b <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_9 | november_9_autocomplete | november_9_reused <= b.SEARCH_FAQ_SLUGS)
         self.assertTrue(november_10 | november_10_autocomplete <= b.SEARCH_FAQ_SLUGS)
+        self.assertTrue(november_11 | november_11_autocomplete <= b.SEARCH_FAQ_SLUGS)
         exact_counts = {'roneeka-hodges': 2, 'amber-harris': 3}
         for slug in sorted(b.SEARCH_FAQ_SLUGS):
             faq_path = root / 'data/wnba/faq' / f'{slug}.json'
@@ -674,7 +683,11 @@ class BuildTests(unittest.TestCase):
             self.assertEqual(faq['slug'], slug)
             if slug in exact_counts:
                 self.assertEqual(len(faq['items']), exact_counts[slug], slug)
-            if slug in november_10:
+            if slug in november_11:
+                expected_source = 'Google search demand via OpenSEO, Nov 11, 2026'
+            elif slug in november_11_autocomplete:
+                expected_source = 'Google search demand via OpenSEO + Google autocomplete, Nov 11, 2026'
+            elif slug in november_10:
                 expected_source = 'Google search demand via OpenSEO, Nov 10, 2026'
             elif slug in november_10_autocomplete:
                 expected_source = 'Google search demand via OpenSEO + Google autocomplete, Nov 10, 2026'
@@ -791,7 +804,16 @@ class BuildTests(unittest.TestCase):
             # Christmas-Kelly, Janel McCarville), so only the player searches remain.
             # Nov 10: Alex Montgomery and Allison Hightower name searches are mostly
             # other people (Allison Hightower is also a House of the Dragon character).
-            if slug in {'alex-montgomery', 'allison-hightower'}:
+            # Nov 11: Deanna Nolan's dunk and height searches were dropped (no solid
+            # source / sources disagree); Tan White's questions come from autocomplete.
+            if slug in {'deanna-nolan', 'dulcy-fankam-mendjiadeu', 'erica-mccall', 'latoya-sanders',
+                        'tan-white', 'crystal-bradford'}:
+                minimum = 3
+            elif slug in {'carolyn-swords', 'li-meng', 'marquesha-davis'}:
+                minimum = 4
+            elif slug in {'chelsea-dungee'}:
+                minimum = 6
+            elif slug in {'alex-montgomery', 'allison-hightower'}:
                 minimum = 1
             elif slug in {'nicole-powell'}:
                 minimum = 3

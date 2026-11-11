@@ -1,84 +1,58 @@
 {
   "slug": "deanna-nolan",
   "player_name": "Deanna Nolan",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Deanna Nolan's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2009), Deanna Nolan averaged 16.9 points, 4.3 rebounds, and 3.5 assists in 33 games for New York Liberty. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "deanna nolan stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Deanna Nolan make?",
-      "answer": "A precise public salary or net worth figure for Deanna Nolan is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Which WNBA team did Deanna Nolan play for?",
+      "answer": "Deanna Nolan played her whole WNBA career with the Detroit Shock, who drafted her sixth overall in 2001 out of Georgia. In nine seasons (2001 to 2009) she won three WNBA titles, in 2003, 2006 and 2008, and was the 2006 WNBA Finals MVP. In 2016 she was named to the WNBA Top 20@20 team.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/n/nolande01w.html",
+        "https://en.wikipedia.org/wiki/Deanna_Nolan",
+        "https://michigansportshof.org/inductee/deanna-nolan/",
+        "https://www.wnba.com/news/whm-defining-eras-detroit-shock"
       ],
-      "google_keyword": "deanna nolan net worth",
-      "approx_monthly_volume": 20
+      "queries": [
+        {
+          "q": "deanna nolan wnba",
+          "vol": 30,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Is Deanna Nolan married?",
-      "answer": "There is no widely reported public record of Deanna Nolan being married as of late 2026.",
+      "question": "What did Deanna Nolan average in the WNBA?",
+      "answer": "Deanna Nolan averaged 13.6 points, 3.8 rebounds and 3.2 assists in 293 WNBA regular-season games, all for Detroit. In 48 playoff games she averaged 18.1 points.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Deanna_Nolan"
+        "https://www.basketball-reference.com/wnba/players/n/nolande01w.html",
+        "https://michigansportshof.org/inductee/deanna-nolan/"
       ],
-      "google_keyword": "deanna nolan wife",
-      "approx_monthly_volume": 50
+      "queries": [
+        {
+          "q": "deanna nolan stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Deanna Nolan?",
-      "answer": "Deanna Nicole \"Tweety\" Nolan is a retired American-Russian professional basketball player for UMMC Ekaterinburg of the Russian Premier League as well as the Russia women's national basketball team.",
-      "answer_kind": "mixed",
+      "question": "Is Deanna Nolan in a hall of fame?",
+      "answer": "Deanna Nolan was inducted into the Michigan Sports Hall of Fame in 2024. She grew up in Flint, where she led Flint Northern to back-to-back state titles and was named Michigan's Miss Basketball.",
+      "answer_kind": "researched",
       "sources": [
+        "https://michigansportshof.org/inductee/deanna-nolan/",
         "https://en.wikipedia.org/wiki/Deanna_Nolan"
       ],
-      "google_keyword": "deanna nolan basketball",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Deanna Nolan play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "deanna nolan basketball",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What position does Deanna Nolan play?",
-      "answer": "Deanna Nolan is listed as a Guard for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "deanna nolan basketball",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Deanna Nolan?",
-      "answer": "Public profiles list Deanna Nolan as born in 1979. As of late 2026 that puts her around 47 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Deanna_Nolan"
-      ],
-      "google_keyword": "deanna nolan basketball",
-      "approx_monthly_volume": 590,
-      "birthdate": "1979-01-01"
-    },
-    {
-      "question": "What is Deanna Nolan's nationality?",
-      "answer": "Deanna Nolan is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Deanna_Nolan"
-      ],
-      "google_keyword": "deanna nolan basketball",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "deanna nolan hall of fame",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

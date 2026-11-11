@@ -1,58 +1,84 @@
 {
   "slug": "li-meng",
   "player_name": "Li Meng",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Li Meng's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2023), Li Meng averaged 5.6 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "li meng stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Li Meng make?",
-      "answer": "A precise public salary or net worth figure for Li Meng is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "Did Li Meng play in the WNBA?",
+      "answer": "Yes. Li Meng played one WNBA season, 2023, for the Washington Mystics and made the 2023 WNBA All-Rookie Team.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.wnba.com/history-all-rookie-teams",
+        "https://www.basketball-reference.com/wnba/players/m/mengli01w.html",
+        "https://en.wikipedia.org/wiki/Li_Meng_(basketball)",
+        "https://fullcourtbuckets.com/wnba/li-meng/"
       ],
-      "google_keyword": "li meng salary",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "li meng wnba",
+          "vol": 50,
+          "source": "openseo"
+        },
+        {
+          "q": "is li meng still in wnba",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "What did Li Meng average in the WNBA?",
+      "answer": "In 34 regular-season games for Washington in 2023, Li Meng averaged 5.6 points, 1.1 rebounds and 1.0 assists and made 36.4 percent of her 3-pointers.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mengli01w.html",
+        "https://fullcourtbuckets.com/wnba/li-meng/"
+      ],
+      "queries": [
+        {
+          "q": "li meng stats",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "li meng basketball stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Li Meng?",
-      "answer": "She was born January 2, 1995 in Shenyang. As of late 2026 that puts her at 31 years old.",
-      "answer_kind": "bio",
+      "answer": "Li Meng was born January 2, 1995, in Shenyang, China.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/m/mengli01w.html",
         "https://en.wikipedia.org/wiki/Li_Meng_(basketball)"
       ],
-      "google_keyword": "li meng age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1995-01-02"
-    },
-    {
-      "question": "What is Li Meng's nationality?",
-      "answer": "Li Meng is Chinese.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Li_Meng_(basketball)"
-      ],
-      "google_keyword": "li meng chinese basketball",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "li meng age",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How tall is Li Meng?",
-      "answer": "Li Meng is listed at 5' 11\".",
-      "answer_kind": "bio",
+      "answer": "Li Meng is listed at 6 feet tall. She plays guard.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Li_Meng_%28basketball%29"
+        "https://www.basketball-reference.com/wnba/players/m/mengli01w.html",
+        "https://en.wikipedia.org/wiki/Li_Meng_(basketball)"
       ],
-      "google_keyword": "li meng height",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "li meng basketball height",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

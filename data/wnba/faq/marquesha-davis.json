@@ -1,120 +1,104 @@
 {
   "slug": "marquesha-davis",
   "player_name": "Marquesha Davis",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Marquesha Davis's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2025), Marquesha Davis averaged 0.9 points, 0.6 rebounds, and 0.1 assists in 9 games for Chicago Sky. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marquesha davis stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "How much does Marquesha Davis make?",
-      "answer": "Spotrac lists Marquesha Davis's most recent published WNBA cash earnings around $36,178 in 2025. That is the larger 2025 New York retained cash segment; she also had a short Chicago seven-day deal. Endorsements are separate from team salary.",
+      "question": "Which WNBA teams did Marquesha Davis play for?",
+      "answer": "The New York Liberty drafted Marquesha Davis 11th overall in 2024, and she was part of the Liberty team that won the 2024 WNBA title. New York waived her on July 13, 2025, and the Chicago Sky signed her to a seven-day hardship contract on July 22, 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/player/_/id/90261/marquesha-davis"
+        "https://www.basketball-reference.com/wnba/players/d/davisma05w.html",
+        "https://en.wikipedia.org/wiki/Marquesha_Davis",
+        "https://chicago.suntimes.com/chicago-sky/2025/07/22/sky-sign-second-year-guard-marquesha-davis-to-seven-day-hardship-contract",
+        "https://www.si.com/wnba/sky/news/chicago-sky-sign-former-new-york-liberty-marquesha-davis"
       ],
-      "google_keyword": "marquesha davis net worth",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marquesha davis wnba",
+          "vol": 40,
+          "source": "openseo"
+        },
+        {
+          "q": "ny liberty marquesha davis",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "marquesha davis liberty",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "marquesha davis chicago sky",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is Marquesha Davis's jersey number?",
-      "answer": "Marquesha Davis wears number 1 for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marquesha davis jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Marquesha Davis's contract?",
-      "answer": "Public salary databases list Marquesha Davis's most recent published WNBA cash near $36,178 in 2025. Full contract length and guarantees can differ from that single-season figure.",
+      "question": "What did Marquesha Davis average in the WNBA?",
+      "answer": "Marquesha Davis averaged 1.1 points in 31 WNBA regular-season games for New York and Chicago in 2024 and 2025.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/player/_/id/90261/marquesha-davis"
+        "https://www.basketball-reference.com/wnba/players/d/davisma05w.html",
+        "https://fullcourtbuckets.com/wnba/marquesha-davis/"
       ],
-      "google_keyword": "marquesha davis contract",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marquesha davis stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What position does Marquesha Davis play?",
-      "answer": "Marquesha Davis is listed as a Guard for the New York Liberty.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marquesha davis position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Marquesha Davis injured?",
-      "answer": "Injury status changes during the season. Check the latest New York Liberty reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "marquesha davis injury",
-      "approx_monthly_volume": 20
-    },
-    {
-      "question": "Who are Marquesha Davis's parents?",
-      "answer": "Public profiles share limited verified detail about Marquesha Davis's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "Where did Marquesha Davis play college basketball?",
+      "answer": "Marquesha Davis started at Arkansas and then transferred to Ole Miss, where she played until the Liberty drafted her in 2024.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/davisma05w.html",
         "https://en.wikipedia.org/wiki/Marquesha_Davis"
       ],
-      "google_keyword": "marquesha davis parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "marquesha davis ole miss",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "marquesha davis arkansas",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "marquesha davis transfer",
+          "vol": 0,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Marquesha Davis?",
-      "answer": "Marquesha Dra'shawn Davis is an American professional basketball player for Botaş SK of the Turkish Super League.",
-      "answer_kind": "mixed",
+      "question": "How tall is Marquesha Davis?",
+      "answer": "Marquesha Davis is listed at 6 feet tall. She plays guard.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/davisma05w.html",
         "https://en.wikipedia.org/wiki/Marquesha_Davis"
       ],
-      "google_keyword": "marquesha davis",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Marquesha Davis play for?",
-      "answer": "Her most recent WNBA team on record is the New York Liberty. She wears No. 1. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "marquesha davis",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Marquesha Davis?",
-      "answer": "Public profiles list Marquesha Davis as born in 2001. As of late 2026 that puts her around 25 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marquesha_Davis"
-      ],
-      "google_keyword": "marquesha davis",
-      "approx_monthly_volume": 590,
-      "birthdate": "2001-01-01"
-    },
-    {
-      "question": "What college did Marquesha Davis attend?",
-      "answer": "Davis played college basketball at the Arkansas Razorbacks and Ole Miss Rebels.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marquesha_Davis"
-      ],
-      "google_keyword": "marquesha davis",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What is Marquesha Davis's nationality?",
-      "answer": "Marquesha Davis is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Marquesha_Davis"
-      ],
-      "google_keyword": "marquesha davis",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "marquesha davis height",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "marquesha davis position",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

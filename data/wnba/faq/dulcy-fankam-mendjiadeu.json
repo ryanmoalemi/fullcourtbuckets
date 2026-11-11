@@ -1,92 +1,59 @@
 {
   "slug": "dulcy-fankam-mendjiadeu",
   "player_name": "Dulcy Fankam Mendjiadeu",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Dulcy Fankam Mendjiadeu's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2023), Dulcy Fankam Mendjiadeu averaged 3.9 points, 4.4 rebounds, and 0.4 assists in 34 games for Seattle Storm. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dulcy fankam mendjiadeu stats",
-      "approx_monthly_volume": 10
+      "question": "Which WNBA teams did Dulcy Fankam Mendjiadeu play for?",
+      "answer": "The Seattle Storm drafted Dulcy Fankam Mendjiadeu 21st overall in 2023 out of South Florida, and she played 41 regular-season games for Seattle in 2023 and 2024. She joined the Dallas Wings on a development contract in 2026, and the Wings released her on June 2, 2026, before she played a regular-season game for them.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fankadu01w.html",
+        "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu",
+        "https://www.oursportscentral.com/services/releases/dallas-wings-release-dulcy-fankam-mendjiadeu/n-6369927",
+        "https://www.sbnation.com/womens-sports/1116883/wnba-roster-cuts-alex-wilson-dulcy-fankam-mendjiadeu",
+        "https://fullcourtbuckets.com/wnba/dulcy-fankam-mendjiadeu/"
+      ],
+      "queries": [
+        {
+          "q": "dulcy fankam mendjiadeu wnba",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "What did Dulcy Fankam Mendjiadeu average in the WNBA?",
+      "answer": "Dulcy Fankam Mendjiadeu averaged 3.4 points and 3.9 rebounds in 41 WNBA regular-season games for Seattle. As a rookie in 2023 she played 34 games, started 21 and averaged 3.9 points and 4.4 rebounds.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fankadu01w.html",
+        "https://fullcourtbuckets.com/wnba/dulcy-fankam-mendjiadeu/"
+      ],
+      "queries": [
+        {
+          "q": "dulcy fankam mendjiadeu stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "What position does Dulcy Fankam Mendjiadeu play?",
-      "answer": "Dulcy Fankam Mendjiadeu is listed as a F for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dulcy fankam mendjiadeu position",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who is Dulcy Fankam Mendjiadeu?",
-      "answer": "Dulcy Fankam Mendjiadeu is a Cameroonian professional basketball player for the Dallas Wings of the WNBA.",
-      "answer_kind": "mixed",
+      "answer": "Dulcy Fankam Mendjiadeu is a forward-center. She was born in Nkongsamba, Cameroon.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/f/fankadu01w.html",
         "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu"
       ],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Dulcy Fankam Mendjiadeu play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 12. Her listed position is F.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What is Dulcy Fankam Mendjiadeu's jersey number?",
-      "answer": "Dulcy Fankam Mendjiadeu wears number 12 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How tall is Dulcy Fankam Mendjiadeu?",
-      "answer": "Dulcy Fankam Mendjiadeu is listed at 6' 3\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu"
-      ],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Dulcy Fankam Mendjiadeu?",
-      "answer": "Public profiles list Dulcy Fankam Mendjiadeu as born in 1999. As of late 2026 that puts her around 27 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu"
-      ],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590,
-      "birthdate": "1999-01-01"
-    },
-    {
-      "question": "What college did Dulcy Fankam Mendjiadeu attend?",
-      "answer": "Mendjiadeu played college basketball at South Florida.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu"
-      ],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What is Dulcy Fankam Mendjiadeu's nationality?",
-      "answer": "Dulcy Fankam Mendjiadeu is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Dulcy_Fankam_Mendjiadeu"
-      ],
-      "google_keyword": "dulcy fankam mendjiadeu",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "dulcy fankam mendjiadeu position",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

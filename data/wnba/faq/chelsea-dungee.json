@@ -1,92 +1,152 @@
 {
   "slug": "chelsea-dungee",
   "player_name": "Chelsea Dungee",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Chelsea Dungee's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2021), Chelsea Dungee averaged 0.0 points, 0.0 rebounds, and 0.0 assists in 1 games for Dallas Wings. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea dungee stats",
-      "approx_monthly_volume": 10
+      "question": "What does Chelsea Dungee do now?",
+      "answer": "Chelsea Dungee, now listed as Chelsea Dungee-Artberry, coaches at Alabama as director of player development and recruiting operations and assistant coach. She returned for her second season with the Crimson Tide in 2026-27 after earlier assistant jobs at Troy and Tulsa.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://rolltide.com/news/2026/5/1/womens-basketball-pauline-love-finalizes-staff-with-alex-stewart-and-chelsea-dungee-artberry",
+        "https://en.wikipedia.org/wiki/Chelsea_Dungee"
+      ],
+      "queries": [
+        {
+          "q": "who does chelsea dungee play for",
+          "vol": null,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee-artberry",
+          "vol": 40,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee bio",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did Chelsea Dungee play college basketball?",
+      "answer": "Chelsea Dungee played one season at Oklahoma, then transferred to Arkansas, where she played from 2018 to 2021 and was an All-American as a senior.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://rolltide.com/news/2026/5/1/womens-basketball-pauline-love-finalizes-staff-with-alex-stewart-and-chelsea-dungee-artberry",
+        "https://en.wikipedia.org/wiki/Chelsea_Dungee",
+        "https://www.basketball-reference.com/wnba/players/d/dungech01w.html"
+      ],
+      "queries": [
+        {
+          "q": "chelsea dungee arkansas",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee oklahoma",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee all-american",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Did Chelsea Dungee play in the WNBA?",
+      "answer": "Yes. The Dallas Wings drafted Chelsea Dungee fifth overall in 2021. She played 14 regular-season games for Dallas that season and averaged 0.6 points.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/dungech01w.html",
+        "https://en.wikipedia.org/wiki/Chelsea_Dungee",
+        "https://rolltide.com/news/2026/5/1/womens-basketball-pauline-love-finalizes-staff-with-alex-stewart-and-chelsea-dungee-artberry",
+        "https://fullcourtbuckets.com/wnba/chelsea-dungee/"
+      ],
+      "queries": [
+        {
+          "q": "chelsea dungee wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee stats",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee wnba stats",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
       "question": "How old is Chelsea Dungee?",
-      "answer": "Public profiles list Chelsea Dungee as born in 1997. As of late 2026 that puts her around 29 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Dungee"
-      ],
-      "google_keyword": "chelsea dungee age",
-      "approx_monthly_volume": 10,
-      "birthdate": "1997-01-01"
-    },
-    {
-      "question": "What is Chelsea Dungee's jersey number?",
-      "answer": "Chelsea Dungee wears number 33 for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea dungee jersey",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Chelsea Dungee married?",
-      "answer": "There is no widely reported public record of Chelsea Dungee being married as of late 2026.",
+      "answer": "Chelsea Dungee was born May 11, 1997.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/dungech01w.html",
         "https://en.wikipedia.org/wiki/Chelsea_Dungee"
       ],
-      "google_keyword": "chelsea dungee husband",
-      "approx_monthly_volume": 70
+      "queries": [
+        {
+          "q": "chelsea dungee age",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee birthday",
+          "vol": 0,
+          "source": "openseo"
+        },
+        {
+          "q": "when was chelsea dungee born",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "Who is Chelsea Dungee?",
-      "answer": "Chelsea Dungee is an American basketball player who is an assistant coach for the Alabama Crimson Tide women's basketball team.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Dungee"
-      ],
-      "google_keyword": "chelsea dungee bio",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "What is Chelsea Dungee's nationality?",
-      "answer": "Chelsea Dungee is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Chelsea_Dungee"
-      ],
-      "google_keyword": "chelsea dungee nationality",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Who are Chelsea Dungee's parents?",
-      "answer": "Public profiles share limited verified detail about Chelsea Dungee's family beyond basic biographical notes. See the cited source for what is confirmed.",
+      "question": "How tall is Chelsea Dungee?",
+      "answer": "Chelsea Dungee is listed at 5 feet 10 inches and 165 pounds. She played guard.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/dungech01w.html",
         "https://en.wikipedia.org/wiki/Chelsea_Dungee"
       ],
-      "google_keyword": "chelsea dungee dad",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "chelsea dungee height",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "chelsea dungee height and weight",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What team does Chelsea Dungee play for?",
-      "answer": "Her most recent WNBA team on record is the Dallas Wings. She wears No. 33. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea dungee",
-      "approx_monthly_volume": 480
-    },
-    {
-      "question": "What position does Chelsea Dungee play?",
-      "answer": "Chelsea Dungee is listed as a Guard for the Dallas Wings.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "chelsea dungee",
-      "approx_monthly_volume": 480
+      "question": "Where did Chelsea Dungee go to high school?",
+      "answer": "Chelsea Dungee played at Preston High School and Sapulpa High School, both in Oklahoma.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.basketball-reference.com/wnba/players/d/dungech01w.html",
+        "https://en.wikipedia.org/wiki/Chelsea_Dungee"
+      ],
+      "queries": [
+        {
+          "q": "chelsea dungee high school",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
