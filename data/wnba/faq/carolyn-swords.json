@@ -1,67 +1,90 @@
 {
   "slug": "carolyn-swords",
   "player_name": "Carolyn Swords",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "What are Carolyn Swords's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2020), Carolyn Swords averaged 2.9 points,",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "carolyn swords stats",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Does Carolyn Swords have a signature shoe?",
-      "answer": "Public search interest ties Carolyn Swords to signature or performance basketball shoes, though a dedicated signature model is not always confirmed in every source.",
+      "question": "How tall is Carolyn Swords?",
+      "answer": "Carolyn Swords is 6 feet 6 inches tall. She played center.",
       "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/s/swordca01w.html",
+        "https://en.wikipedia.org/wiki/Carolyn_Swords",
+        "https://www.wnba.com/news/carolyn-swords-announces-retirement-joins-aces-front-office-as-marketing-specialist"
+      ],
+      "queries": [
+        {
+          "q": "carolyn swords height",
+          "vol": 70,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Was Carolyn Swords on The Floor?",
+      "answer": "Yes. Carolyn Swords, introduced as a former WNBA pro, competed on Fox's game show The Floor, hosted by Rob Lowe, in 2026. Her category was Basketball Players.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://www.fox.com/watch/clip/fmc-6zdu4xpfo9og4mbi/jonathan-vs-wnba-pro-carolyn-slam-dunk-for-me",
         "https://en.wikipedia.org/wiki/Carolyn_Swords"
       ],
-      "google_keyword": "carolyn swords shoe size",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "carolyn swords the floor",
+          "vol": 30,
+          "source": "openseo"
+        },
+        {
+          "q": "carolyn swords rob lowe",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     },
     {
-      "question": "Who is Carolyn Swords dating?",
-      "answer": "As of late 2026, Carolyn Swords has not widely publicized a confirmed dating relationship in major profiles.",
+      "question": "Which WNBA teams did Carolyn Swords play for?",
+      "answer": "The Chicago Sky drafted Carolyn Swords 15th overall in 2011 out of Boston College. She played for Chicago (2011 to 2013), the New York Liberty (2015 and 2016), the Seattle Storm (2017) and the Las Vegas Aces (2018 to 2020).",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Carolyn_Swords"
+        "https://www.basketball-reference.com/wnba/players/s/swordca01w.html",
+        "https://en.wikipedia.org/wiki/Carolyn_Swords",
+        "https://www.wnba.com/news/carolyn-swords-announces-retirement-joins-aces-front-office-as-marketing-specialist",
+        "https://fullcourtbuckets.com/wnba/carolyn-swords/"
       ],
-      "google_keyword": "carolyn swords partner",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "las vegas aces carolyn swords",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "carolyn swords wnba",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        },
+        {
+          "q": "carolyn swords boston college",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     },
     {
-      "question": "How much does Carolyn Swords make?",
-      "answer": "A precise public salary or net worth figure for Carolyn Swords is not consistently published. WNBA team salaries are often listed on salary databases such as Spotrac when available.",
+      "question": "What did Carolyn Swords average in the WNBA?",
+      "answer": "Carolyn Swords averaged 3.7 points and 3.3 rebounds in 250 WNBA regular-season games from 2011 to 2020.",
       "answer_kind": "researched",
       "sources": [
-        "https://www.spotrac.com/wnba/"
+        "https://www.basketball-reference.com/wnba/players/s/swordca01w.html",
+        "https://fullcourtbuckets.com/wnba/carolyn-swords/"
       ],
-      "google_keyword": "carolyn swords net worth",
-      "approx_monthly_volume": 10
-    },
-    {
-      "question": "Is Carolyn Swords married?",
-      "answer": "There is no widely reported public record of Carolyn Swords being married as of late 2026.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Carolyn_Swords"
-      ],
-      "google_keyword": "carolyn swords married",
-      "approx_monthly_volume": 110
-    },
-    {
-      "question": "Who are Carolyn Swords's parents?",
-      "answer": "Public profiles share limited verified detail about Carolyn Swords's family beyond basic biographical notes. See the cited source for what is confirmed.",
-      "answer_kind": "researched",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Carolyn_Swords"
-      ],
-      "google_keyword": "carolyn swords parents",
-      "approx_monthly_volume": 10
+      "queries": [
+        {
+          "q": "carolyn swords stats",
+          "vol": 10,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

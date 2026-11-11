@@ -1,82 +1,66 @@
 {
   "slug": "latoya-sanders",
   "player_name": "LaToya Sanders",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "Is LaToya Sanders injured?",
-      "answer": "Injury status changes during the season. Check the latest Phoenix Mercury reports and her recent game log on this page for whether she is available.",
-      "answer_kind": "mixed",
-      "sources": [],
-      "google_keyword": "latoya sanders injury",
-      "approx_monthly_volume": 0
-    },
-    {
-      "question": "Who is LaToya Sanders?",
-      "answer": "LaToya Antoinette Sanders, also known as Lara Sanders in Turkey, is an American-Turkish professional basketball coach and former player.",
-      "answer_kind": "mixed",
-      "sources": [
-        "https://en.wikipedia.org/wiki/LaToya_Sanders"
-      ],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does LaToya Sanders play for?",
-      "answer": "Her most recent WNBA team on record is the Phoenix Mercury. Her listed position is Forward.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What are LaToya Sanders's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2019), LaToya Sanders averaged 6.1 points, 5.5 rebounds, and 1.9 assists in 34 games for Los Angeles Sparks. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What position does LaToya Sanders play?",
-      "answer": "LaToya Sanders is listed as a Forward for the Phoenix Mercury.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is LaToya Sanders?",
-      "answer": "Public profiles list LaToya Sanders as born in 1986. As of late 2026 that puts her around 40 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/LaToya_Sanders"
-      ],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590,
-      "birthdate": "1986-01-01"
-    },
-    {
-      "question": "When was LaToya Sanders drafted?",
-      "answer": "Sanders played college basketball at the University of North Carolina before getting drafted by the Phoenix Mercury in the 2008 WNBA draft.",
+      "question": "Does LaToya Sanders coach the Atlanta Dream?",
+      "answer": "Yes. The Atlanta Dream hired LaToya Sanders as an assistant coach on January 6, 2025, and she is on the Dream's 2026 coaching staff. She came from the Washington Mystics, where she was most recently associate head coach.",
       "answer_kind": "researched",
       "sources": [
+        "https://dream.wnba.com/news/atlanta-dream-announce-additions-to-coaching-staff-and-front-office",
+        "https://dream.wnba.com/roster",
+        "https://andscape.com/features/latoya-sanders-atlanta-dream-coach-wnba-finals-championship/",
         "https://en.wikipedia.org/wiki/LaToya_Sanders"
       ],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "latoya sanders atlanta dream",
+          "vol": 40,
+          "source": "openseo"
+        }
+      ]
     },
     {
-      "question": "What is LaToya Sanders's nationality?",
-      "answer": "LaToya Sanders is American.",
-      "answer_kind": "bio",
+      "question": "Which WNBA teams did LaToya Sanders play for?",
+      "answer": "The Phoenix Mercury drafted LaToya Sanders 13th overall in 2008. She played for Phoenix (2008), Minnesota (2009), Los Angeles (2011) and the Washington Mystics, for whom she played four seasons between 2015 and 2019 and won the 2019 WNBA title. She averaged 5.7 points and 4.5 rebounds in 155 regular-season games.",
+      "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/LaToya_Sanders"
+        "https://www.basketball-reference.com/wnba/players/p/pringla01w.html",
+        "https://en.wikipedia.org/wiki/LaToya_Sanders",
+        "https://dream.wnba.com/news/atlanta-dream-announce-additions-to-coaching-staff-and-front-office",
+        "https://fullcourtbuckets.com/wnba/latoya-sanders/"
       ],
-      "google_keyword": "latoya sanders",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "latoya sanders wnba",
+          "vol": 10,
+          "source": "openseo"
+        },
+        {
+          "q": "washington mystics latoya sanders",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
+    },
+    {
+      "question": "Where did LaToya Sanders play college basketball?",
+      "answer": "LaToya Sanders played at North Carolina from 2004 to 2008 and was the 2008 ACC Defensive Player of the Year.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://dream.wnba.com/news/atlanta-dream-announce-additions-to-coaching-staff-and-front-office",
+        "https://en.wikipedia.org/wiki/LaToya_Sanders",
+        "https://www.basketball-reference.com/wnba/players/p/pringla01w.html"
+      ],
+      "queries": [
+        {
+          "q": "latoya sanders unc",
+          "vol": null,
+          "source": "openseo"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }

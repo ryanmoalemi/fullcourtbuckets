@@ -1,104 +1,66 @@
 {
   "slug": "tan-white",
   "player_name": "Tan White",
-  "source": "OpenSEO Google keyword demand + verified public facts + Full Court Buckets stats",
-  "verified_at": "2026-09-23",
+  "source": "Google search demand via OpenSEO + Google autocomplete, Nov 11, 2026",
+  "verified_at": "2026-11-11",
   "items": [
     {
-      "question": "Who is Tan White?",
-      "answer": "LaTanya Chantella White is a professional basketball player.",
-      "answer_kind": "mixed",
+      "question": "Which WNBA teams did Tan White play for?",
+      "answer": "The Indiana Fever drafted Tan White second overall in 2005, and she made the 2005 WNBA All-Rookie Team. She played for Indiana (2005 to 2008), the Connecticut Sun (2009 to 2013) and the Minnesota Lynx (2014), averaging 8.1 points in 320 regular-season games.",
+      "answer_kind": "researched",
       "sources": [
+        "https://www.basketball-reference.com/wnba/players/w/whiteta01w.html",
+        "https://en.wikipedia.org/wiki/Tan_White",
+        "https://www.wnba.com/history-all-rookie-teams",
+        "https://hailstate.com/honors/hall-of-fame/tan-white/76",
+        "https://fullcourtbuckets.com/wnba/tan-white/"
+      ],
+      "queries": [
+        {
+          "q": "tan white wnba",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        },
+        {
+          "q": "tan white basketball player",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
+    },
+    {
+      "question": "Where did Tan White play college basketball?",
+      "answer": "Tan White played at Mississippi State from 2001 to 2005. As a senior she led the nation in scoring, earned Kodak All-America honors and won the Frances Pomeroy Naismith Award. Mississippi State inducted her into its sports hall of fame in 2016.",
+      "answer_kind": "researched",
+      "sources": [
+        "https://hailstate.com/honors/hall-of-fame/tan-white/76",
+        "https://hailstate.com/sports/2016/5/25/932863",
         "https://en.wikipedia.org/wiki/Tan_White"
       ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What team does Tan White play for?",
-      "answer": "Her most recent WNBA team on record is the Indiana Fever. Her listed position is Guard.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What are Tan White's stats / points per game?",
-      "answer": "In her most recent WNBA season on record (2014), Tan White averaged 4.9 points, 1.8 rebounds, and 1.1 assists in 34 games for Minnesota Lynx. Her full season-by-season numbers are on this page.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What position does Tan White play?",
-      "answer": "Tan White is listed as a Guard for the Indiana Fever.",
-      "answer_kind": "stats",
-      "sources": [],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How tall is Tan White?",
-      "answer": "Tan White is listed at 5' 7\".",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
-      ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "How old is Tan White?",
-      "answer": "She was born September 27, 1982 in Tupelo, Mississippi. As of late 2026 that puts her at 43 years old.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
-      ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590,
-      "birthdate": "1982-09-27"
-    },
-    {
-      "question": "What college did Tan White attend?",
-      "answer": "White played college basketball at Mississippi State.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
-      ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "tan white college",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     },
     {
       "question": "Where is Tan White from?",
-      "answer": "She is from Tupelo, Mississippi.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
-      ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "When was Tan White drafted?",
-      "answer": "She played college basketball at Mississippi State and was drafted second overall by the Indiana Fever in the 2005 WNBA draft.",
+      "answer": "Tan White is from Tupelo, Mississippi. She was born there on September 27, 1982, and played at Tupelo High School.",
       "answer_kind": "researched",
       "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
+        "https://www.basketball-reference.com/wnba/players/w/whiteta01w.html",
+        "https://en.wikipedia.org/wiki/Tan_White",
+        "https://hailstate.com/honors/hall-of-fame/tan-white/76"
       ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
-    },
-    {
-      "question": "What is Tan White's nationality?",
-      "answer": "Tan White is American.",
-      "answer_kind": "bio",
-      "sources": [
-        "https://en.wikipedia.org/wiki/Tan_White"
-      ],
-      "google_keyword": "tan white",
-      "approx_monthly_volume": 590
+      "queries": [
+        {
+          "q": "tan white tupelo",
+          "vol": null,
+          "source": "google autocomplete (verified 2026-11-11)"
+        }
+      ]
     }
-  ],
-  "notes": "Reader-facing sports copy only."
+  ]
 }
