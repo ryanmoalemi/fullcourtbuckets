@@ -83,6 +83,20 @@ PAGE_CSS = """
 .faq-item h3{font-size:22px;margin:0 0 6px}
 .credits li{margin:0 0 8px;color:var(--muted);font-size:13px}
 .credits a,.method a,.faq a,.lede a{color:#e4afeb;text-decoration:underline;text-underline-offset:3px}
+.former{padding-top:8px;border-top:1px solid var(--line);margin:22px 0 0}
+#former-couples>h2{margin:8px 0 6px}
+#former-couples>p{color:#57524d;font-size:13px;line-height:1.5;margin:0 0 12px;max-width:42rem}
+#former-couples .split-card{display:flex;gap:14px;align-items:flex-start;border:1px dashed #a9a39c;background:#ecebe8;color:#3d3a37;padding:12px;margin:0 0 12px;scroll-margin-top:96px}
+#former-couples .pair{min-height:52px;flex:0 0 auto}
+#former-couples .bubble{width:52px;height:52px;border:2px solid #ecebe8;filter:grayscale(1);opacity:.85}
+#former-couples .bubble.initials{font-size:17px}
+#former-couples .bubble+.bubble{margin-left:-12px}
+#former-couples .split-card>div{min-width:0}
+#former-couples .split-badge{display:inline-block;background:#dcd9d4;border:1px solid #8f8982;color:#3d3a37;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1.3;padding:2px 8px}
+#former-couples h3{font-size:22px;line-height:1.15;margin:6px 0 4px;color:#4a4643;overflow-wrap:break-word}
+#former-couples h3 a{color:#4a4643;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#8f8982}
+#former-couples .split-line{margin:0;color:#3d3a37;font-size:13px;line-height:1.5}
+#former-couples .split-line a{color:#5b3d8f;text-decoration:underline;text-underline-offset:3px}
 @media(min-width:800px){
   .bubble{width:96px;height:96px}
   .bubble.initials{font-size:30px}
@@ -112,6 +126,16 @@ def load_couples(root: Path = ROOT) -> list[dict]:
     if not isinstance(couples, list) or not couples:
         raise SystemExit('data/wnba_couples.json has no couples.')
     return couples
+
+
+def load_former_couples(root: Path = ROOT) -> list[dict]:
+    """Couples who confirmed a split on record. Each has status Split and a split source."""
+    path = root / 'data' / 'wnba_couples.json'
+    if not path.is_file():
+        return []
+    data = json.loads(path.read_text(encoding='utf-8'))
+    former = data.get('former_couples') or []
+    return [couple for couple in former if couple.get('status') == 'Split' and couple.get('split_src')]
 
 
 def load_slugs(root: Path = ROOT) -> dict[str, str]:
@@ -164,6 +188,19 @@ def note_html(couple: dict, partner: str, partner_slug: str | None) -> str:
     )
 
 
+def split_note_html(couple: dict, partner: str, partner_slug: str | None) -> str:
+    """One line for a player page: who they split from, when it was said, and the source."""
+    who = person_link(partner, partner_slug)
+    href = f"/wnba/couples/#{couple_anchor(couple)}"
+    text = sentence(str(couple.get('split_text') or '').strip())
+    source = esc(couple.get('split_source') or 'Source')
+    return (
+        f'<p class="relationship-note">Split from {who}. {esc(text)} '
+        f'<a href="{esc(couple["split_src"])}" target="_blank" rel="noopener">{source}</a>. '
+        f'<a href="{esc(href)}">Couples page</a>.</p>'
+    )
+
+
 def note_for_slug(root, slug: str) -> str:
     root = Path(root)
     path = root / 'data' / 'wnba_couples.json'
@@ -171,6 +208,13 @@ def note_for_slug(root, slug: str) -> str:
         return ''
     slugs = load_slugs(root)
     notes = []
+    for couple in load_former_couples(root):
+        slug_a = slugs.get(couple['a'])
+        slug_b = slugs.get(couple['b'])
+        if slug == slug_a:
+            notes.append(split_note_html(couple, couple['b'], slug_b))
+        elif slug == slug_b:
+            notes.append(split_note_html(couple, couple['a'], slug_a))
     for couple in load_couples(root):
         slug_a = slugs.get(couple['a'])
         slug_b = slugs.get(couple['b'])
@@ -699,6 +743,50 @@ def render_card(card: dict) -> str:
     )
 
 
+def build_split_cards(former: list[dict], photos: dict[str, dict]) -> list[dict]:
+    slugs = load_slugs()
+    return [
+        {
+            'a': couple['a'],
+            'b': couple['b'],
+            'status': 'Split',
+            'anchor': couple_anchor(couple),
+            'slug_a': slugs.get(couple['a']),
+            'slug_b': slugs.get(couple['b']),
+            'photo_a': photos.get(couple['a']),
+            'photo_b': photos.get(couple['b']),
+            'b_note': str(couple.get('b_note') or '').strip(),
+            'split_text': sentence(str(couple.get('split_text') or '').strip()),
+            'split_src': couple['split_src'],
+            'split_source': str(couple.get('split_source') or 'Source').strip(),
+        }
+        for couple in former
+    ]
+
+
+def render_split_card(card: dict) -> str:
+    return (
+        f'<article class="split-card" id="{esc(card["anchor"])}">'
+        f'<div class="pair">{bubble(card["a"], card["photo_a"])}{bubble(card["b"], card["photo_b"])}</div>'
+        f'<div><span class="split-badge">Split</span>'
+        f'<h3>{person_link(card["a"], card["slug_a"])} and {person_link(card["b"], card["slug_b"])}</h3>'
+        f'<p class="split-line">{esc(card["split_text"])} Source: '
+        f'<a href="{esc(card["split_src"])}" target="_blank" rel="noopener">{esc(card["split_source"])}</a>.</p>'
+        '</div></article>'
+    )
+
+
+def render_former(split_cards: list[dict]) -> str:
+    if not split_cards:
+        return ''
+    return (
+        '<section class="former" id="former-couples"><h2>Former couples</h2>'
+        '<p>Splits the players confirmed on record, with the report behind each one.</p>'
+        + ''.join(render_split_card(card) for card in split_cards)
+        + '</section>'
+    )
+
+
 def render_credits(cards: list[dict]) -> str:
     rows = []
     seen = set()
@@ -729,7 +817,7 @@ def schema(cards: list[dict], items: list[tuple[str, str]]) -> str:
         {
             '@type': 'Article',
             'headline': 'WNBA couples',
-            'description': 'Confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out.',
+            'description': 'Confirmed WNBA relationships, with a source for each fact. Confirmed splits are marked; rumors are left out.',
             'dateModified': '2026-11-11',
             'datePublished': '2026-09-29',
             'inLanguage': 'en',
@@ -776,7 +864,8 @@ def schema(cards: list[dict], items: list[tuple[str, str]]) -> str:
     return payload.replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
 
 
-def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
+def render_page(cards: list[dict], items: list[tuple[str, str]], split_cards: list[dict] | None = None) -> str:
+    split_cards = split_cards or []
     PAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
     if not PAGE_PATH.is_file():
         PAGE_PATH.write_text('<!doctype html><html></html>', encoding='utf-8')
@@ -787,17 +876,18 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
         '<a href="/wnba/">Players</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
         '<p class="lede">Publicly reported relationships involving current and former WNBA players. Each entry links to the report behind it; the date of that report matters when reading a relationship status.</p>'
-        '<p class="correction">Updated November 11, 2026: Paige Bueckers and Azzi Fudd said on November 6 that they are no longer together, so they are off this list. Gabby Williams confirmed Marine Johannes is her partner in an ELLE interview published November 10. Cameron Brink is engaged to Ben Felter.</p></section>'
+        '<p class="correction">Updated November 11, 2026: Paige Bueckers and Azzi Fudd said on November 6 that they are no longer together, so they are listed under <a href="#former-couples">Former couples</a>. Gabby Williams confirmed Marine Johannes is her partner in an ELLE interview published November 10. Cameron Brink is engaged to Ben Felter.</p></section>'
         + ''.join(render_card(card) for card in cards)
+        + render_former(split_cards)
         + render_faq(items)
-        + '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. Splits and rumors are left out.</p>'
+        + '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. A split is listed under Former couples only when the players confirmed it on record. Rumors are left out.</p>'
         + '<section class="method" id="method"><h2>About these entries</h2>'
         '<p>This page includes relationships described publicly by the people involved or by the linked reporting. Older reports may not reflect a current status. Photos and credits remain as displayed.</p></section>'
         + f'<p class="checked">Last checked {CHECKED}.</p>'
-        + render_credits(cards)
+        + render_credits(cards + split_cards)
     )
     title = 'WNBA Couples | Full Court Buckets'
-    description = 'Confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out.'
+    description = 'Confirmed WNBA relationships, with a source for each fact. Confirmed splits are marked; rumors are left out.'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
 {GA4_TAG}
 {ADSENSE_TAG}
@@ -808,7 +898,7 @@ def patch_players(root: Path = ROOT) -> list[str]:
     slugs = load_slugs(root)
     touched = []
     seen = set()
-    for couple in load_couples(root):
+    for couple in load_former_couples(root) + load_couples(root):
         for slug in (slugs.get(couple['a']), slugs.get(couple['b'])):
             if not slug or slug in seen:
                 continue
@@ -920,14 +1010,20 @@ def collect_sources(couples: list[dict]) -> list[str]:
 
 def main() -> None:
     couples = load_couples()
+    former = load_former_couples()
     live: dict[str, bool] = {}
     for url in collect_sources(couples):
         ok = source_resolves(url, live)
         print(('Source OK ' if ok else 'Source DEAD ') + url)
-    photos, photo_drops = prepare_photos(couples)
+    for couple in former:
+        ok = source_resolves(couple['split_src'], live)
+        print(('Source OK ' if ok else 'Source DEAD ') + couple['split_src'])
+    former = [couple for couple in former if live.get(couple['split_src'])]
+    photos, photo_drops = prepare_photos(couples + former)
     cards, chip_drops = build_cards(couples, photos, live)
+    split_cards = build_split_cards(former, photos)
     items = faq_items(cards)
-    PAGE_PATH.write_text(render_page(cards, items), encoding='utf-8')
+    PAGE_PATH.write_text(render_page(cards, items, split_cards), encoding='utf-8')
     players = patch_players()
     patch_hub()
     patch_sitemaps()
