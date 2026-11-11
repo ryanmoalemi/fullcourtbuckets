@@ -1,4 +1,4 @@
-files rewritten: 6
+files rewritten: 9
 html files rewritten: 668
 images missing alt: 0
 
@@ -7,6 +7,9 @@ resized favicon-16.png to (16, 16) (925 bytes) + favicon-16.webp
 resized favicon-32.png to (32, 32) (2363 bytes) + favicon-32.webp
 resized icon-192.png to (192, 192) (23660 bytes) + icon-192.webp
 resized icon-512.png to (512, 512) (84970 bytes) + icon-512.webp
+resized images/couples/cameron-brink.jpg to (135, 192) (8097 bytes) + cameron-brink.webp
+resized images/couples/gabby-williams.jpg to (133, 192) (7932 bytes) + gabby-williams.webp
+resized images/couples/marine-johannes.jpg to (150, 192) (8399 bytes) + marine-johannes.webp
 KEPT images/players/aja-wilson-portrait-v1.webp: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/aja-wilson-portrait-v1.webp'
 KEPT images/players/angel-reese-portrait-v1.avif: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.avif'
 KEPT images/players/angel-reese-portrait-v1.png: cannot identify image file '/home/runner/work/fullcourtbuckets/fullcourtbuckets/images/players/angel-reese-portrait-v1.png'
