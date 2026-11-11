@@ -201,7 +201,7 @@
   },
   "/wnba/couples/": {
     "title": "WNBA couples: confirmed relationships, with sources",
-    "description": "A list of confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out, and every couple listed is backed by a cited report."
+    "description": "Confirmed WNBA relationships, with a source for each fact. Confirmed splits are marked, rumors are left out, and every couple is backed by a cited report."
   },
   "/wnba/teams/": {
     "title": "WNBA teams: all 15 rosters for 2026 | Full Court Buckets",

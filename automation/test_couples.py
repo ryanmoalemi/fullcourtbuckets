@@ -37,6 +37,37 @@ class CouplesPageTests(unittest.TestCase):
             self.assertIn('href="http', block)
             self.assertNotIn('href=""', block)
 
+    def test_split_couple_is_marked_not_listed_as_current(self):
+        body = main_text()
+        former = body.split('id="former-couples"', 1)[1].split('</section>', 1)[0]
+        self.assertLess(body.find('class="couple-card"'), body.find('id="former-couples"'))
+        self.assertLess(body.find('id="former-couples"'), body.find('id="faq"'))
+        self.assertIn('id="paige-bueckers-azzi-fudd"', former)
+        self.assertIn('<span class="split-badge">Split</span>', former)
+        self.assertIn('/images/couples/paige-bueckers.jpg', former)
+        self.assertIn('/images/couples/azzi-fudd.jpg', former)
+        self.assertIn('usatoday.com/story/sports/wnba/2026/11/06/', former)
+        self.assertNotIn('espn.com', former)
+        before = body.split('id="former-couples"', 1)[0]
+        self.assertNotIn('id="paige-bueckers-azzi-fudd"', before)
+        former_data = build_couples.load_former_couples(ROOT)
+        self.assertEqual([(c['a'], c['b'], c['status']) for c in former_data],
+                         [('Paige Bueckers', 'Azzi Fudd', 'Split')])
+        self.assertNotIn('paige-bueckers', build_couples.couples_by_slug(ROOT))
+        css = build_couples.PAGE_CSS.split('.former{', 1)[1]
+        for size in re.findall(r'font-size:(\d+)px', css):
+            self.assertGreaterEqual(int(size), 12)
+
+    def test_split_players_link_to_the_former_card(self):
+        for slug, partner in (('paige-bueckers', 'Azzi Fudd'), ('azzi-fudd', 'Paige Bueckers')):
+            note = build_couples.note_for_slug(ROOT, slug)
+            self.assertIn(f'Split from <a href="/wnba/', note)
+            self.assertIn(partner, note)
+            self.assertIn('/wnba/couples/#paige-bueckers-azzi-fudd', note)
+            self.assertNotIn('Dating', note)
+            page = (ROOT / 'wnba' / slug / 'index.html').read_text(encoding='utf-8')
+            self.assertIn(note, page)
+
     def test_player_note_links_to_the_card(self):
         note = build_couples.note_for_slug(ROOT, 'breanna-stewart')
         self.assertIn('/wnba/couples/#breanna-stewart-marta-xargay-casademont', note)
