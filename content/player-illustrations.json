@@ -10844,6 +10844,58 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 266905,
+      "slug": "kamila-borkowska",
+      "player_name": "Kamila Borkowska",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/kamila-borkowska/portrait.webp",
+      "width": 800,
+      "height": 800,
+      "asset_sha256": "3511061b532fd9231c1adc92ff9b57a1b263f829550de85e0f733dcfe32664b2",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 800,
+        "height": 800,
+        "source_width": 800,
+        "source_height": 800,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 67157,
+      "slug": "marta-suarez",
+      "player_name": "Marta Suarez",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/marta-suarez/portrait.webp",
+      "width": 800,
+      "height": 800,
+      "asset_sha256": "4965e5423c2d04267d8d6596413b7967de914f99c07babedf3acf59c65ae3d3d",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 800,
+        "height": 800,
+        "source_width": 800,
+        "source_height": 800,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
