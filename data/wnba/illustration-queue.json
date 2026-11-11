@@ -24,15 +24,6 @@
       "reference_and_likeness_review_required": true
     },
     {
-      "player_id": 266905,
-      "slug": "kamila-borkowska",
-      "player_name": "Kamila Borkowska",
-      "listed_active": true,
-      "profile_path": "/wnba/kamila-borkowska/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
       "player_id": 67096,
       "slug": "kara-dunn",
       "player_name": "Kara Dunn",
@@ -47,15 +38,6 @@
       "player_name": "Madina Okot",
       "listed_active": true,
       "profile_path": "/wnba/madina-okot/",
-      "state": "awaiting_illustration",
-      "reference_and_likeness_review_required": true
-    },
-    {
-      "player_id": 67157,
-      "slug": "marta-suarez",
-      "player_name": "Marta Suarez",
-      "listed_active": true,
-      "profile_path": "/wnba/marta-suarez/",
       "state": "awaiting_illustration",
       "reference_and_likeness_review_required": true
     },
