@@ -1,4 +1,4 @@
-files rewritten: 26
+files rewritten: 23
 html files rewritten: 668
 images missing alt: 0
 
@@ -14,14 +14,11 @@ resized images/articles/finals-game-6-preview-valkyries-dream/photo.jpg to (1688
 fallback dropped images/articles/finals-game-6-preview-valkyries-dream/state-farm-arena.jpg; serving state-farm-arena.webp (191832 bytes)
 fallback dropped images/articles/finals-game-6-preview-valkyries-dream/veronica-burton.jpg; serving veronica-burton.webp (62276 bytes)
 resized images/articles/finals-game-7-preview-dream-valkyries/photo.jpg to (1688, 950) (69580 bytes) + photo.webp
-fallback dropped images/articles/juste-jocyte-does-not-want-to-return-valkyries/first-season-minutes.png; serving first-season-minutes.webp (47896 bytes)
-fallback dropped images/articles/juste-jocyte-does-not-want-to-return-valkyries/photo.jpg; serving photo.webp (47828 bytes)
+resized images/articles/juste-jocyte-does-not-want-to-return-valkyries/photo.jpg to (1688, 950) (43213 bytes) + photo.webp
 fallback dropped images/articles/kelsey-mitchell-2027-free-agency-cap/aja-wilson-aces-2026.jpg; serving aja-wilson-aces-2026.webp (96976 bytes)
 fallback dropped images/articles/kelsey-mitchell-2027-free-agency-cap/gabby-williams-valkyries-2026.jpg; serving gabby-williams-valkyries-2026.webp (58250 bytes)
 fallback dropped images/articles/kelsey-mitchell-2027-free-agency-cap/kelsey-mitchell-defense-2024.jpg; serving kelsey-mitchell-defense-2024.webp (100388 bytes)
 resized images/articles/kelsey-mitchell-2027-free-agency-cap/photo.jpg to (1688, 950) (82195 bytes) + photo.webp
-fallback dropped images/articles/sarah-strong-39-points-uconn-record/photo.jpg; serving photo.webp (42026 bytes)
-resized images/articles/sarah-strong-39-points-uconn-record/strong-season.png to (1600, 900) (61950 bytes) + strong-season.webp
 resized images/articles/valkyries-dream-finals-game-4-recap/photo.jpg to (1688, 950) (91152 bytes) + photo.webp
 resized images/articles/valkyries-dream-finals-game-5-recap/photo.jpg to (1688, 949) (71378 bytes) + photo.webp
 resized images/articles/valkyries-dream-finals-game-6-recap/photo.jpg to (1688, 950) (76800 bytes) + photo.webp
