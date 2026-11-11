@@ -3349,6 +3349,22 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "nyadiew-puoch": {
+      "author": "John Mac",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Nyadiew_Puoch_2026_(cropped).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "maggie-lucas": {
+      "author": "Chris93",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Maggie_Lucas_-_applause.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
