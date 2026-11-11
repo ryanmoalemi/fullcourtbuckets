@@ -489,8 +489,12 @@
   window.FCBSearch = { load: load, search: function (q) { return search(q); }, stem: stem, fold: fold,
     createIndex: createIndex, highlight: highlight };
 })();
-/* Sitewide data tables: label each cell from its header. A headshot in every row is dropped. */
+/* Sitewide data tables. Under 640px each row becomes one compact ranked row: rank, headshot and name, and the key figure
+   on the first line, the other fields in small type underneath. Desktop keeps the real table. A header row only shows
+   on phones when it really sorts the table, as a "Sort by" bar. */
 (function(){
+  var RANK=/^(#|no\.?|rk|rank)$/i;
+  var KEY=[/balance/i,/^est\.? ?min(utes)?$/i,/^(pts|ppg|points)$/i,/^(pct|win ?%|win pct)$/i,/^(w-l|record)$/i,/attendance$/i,/viewers|audience/i,/revenue|valuation|^value$/i,/^result/i,/^days open$/i];
   function plain(el){
     var pl=el.querySelector('.pl');
     if(pl) return (pl.textContent||'').replace(/\s+/g,' ').trim();
@@ -504,9 +508,9 @@
     return (el.textContent||'').replace(/\s+/g,' ').trim();
   }
   function headers(table){
-    var thead=table.tHead,row,cells,i,th;
+    var thead=table.tHead,row,cells,i;
     if(thead&&thead.rows.length){
-      row=thead.rows[0];cells=row.cells;
+      row=thead.rows[thead.rows.length-1];cells=row.cells;
       if(cells.length) return {row:row, cells:cells, thead:true};
     }
     row=table.rows[0];
@@ -525,21 +529,49 @@
     return false;
   }
   function bodyRows(table, head){
-    var rows=[], body=table.tBodies[0], list=body?body.rows:table.rows, i;
-    for(i=0;i<list.length;i++) if(list[i]!==head.row) rows.push(list[i]);
+    var rows=[], i, b, list;
+    for(b=0;b<table.tBodies.length;b++){
+      list=table.tBodies[b].rows;
+      for(i=0;i<list.length;i++) if(list[i]!==head.row) rows.push(list[i]);
+    }
+    if(!table.tBodies.length){
+      list=table.rows;
+      for(i=0;i<list.length;i++) if(list[i]!==head.row) rows.push(list[i]);
+    }
     return rows;
+  }
+  function numeric(text){ return /^[-+]?[$\u20ac\u00a3]?[0-9][0-9,.]*(%|[MBK]|\u00d7|x)?$/.test(text); }
+  function pickKey(labels, rows, skip){
+    var p,c;
+    for(p=0;p<KEY.length;p++) for(c=0;c<labels.length;c++) if(!skip[c]&&KEY[p].test(labels[c])) return c;
+    for(c=labels.length-1;c>=0;c--){
+      if(skip[c]) continue;
+      var seen=0,num=0;
+      for(var r=0;r<rows.length&&seen<20;r++){
+        var cell=rows[r].cells[c]; if(!cell) continue;
+        var t=plain(cell); if(!t) continue;
+        seen++; if(numeric(t)) num++;
+      }
+      if(seen&&num/seen>=0.6) return c;
+    }
+    return -1;
+  }
+  function mark(cell, role){
+    var roles=['fcb-r-rank','fcb-r-name','fcb-r-key','fcb-r-more'];
+    for(var i=0;i<roles.length;i++) if(roles[i]!==role) cell.classList.remove(roles[i]);
+    cell.classList.add(role);
   }
   function prep(){
     var tables=document.querySelectorAll('table');
     for(var t=0;t<tables.length;t++){
       var table=tables[t];
-      if(table.closest('svg')) continue;
+      if(table.closest('svg')||table.hasAttribute('data-fcb-keep-table')) continue;
       var head=headers(table);
       if(!head) continue;
       var rows=bodyRows(table, head);
       if(!rows.length) continue;
-      table.classList.add('fcb-stack');
-      if(sortable(head.cells)) table.classList.add('fcb-stack-sort');
+      var labels=[];
+      for(var h=0;h<head.cells.length;h++) labels.push(plain(head.cells[h]));
       if(!head.thead) head.row.classList.add('fcb-stack-head');
       if(rows.length>1){
         var counts={};
@@ -560,13 +592,28 @@
       }
       for(var r2=0;r2<rows.length;r2++){
         var cells=rows[r2].cells;
-        for(var c=0;c<cells.length&&c<head.cells.length;c++){
-          var label=plain(head.cells[c]);
+        for(var c=0;c<cells.length&&c<labels.length;c++){
+          var label=labels[c];
           if(label&&cells[c].getAttribute('data-label')!==label) cells[c].setAttribute('data-label', label);
           if(c>0&&/\bbalance\b/i.test(label)) cells[c].classList.add('is-balance');
           else cells[c].classList.remove('is-balance');
           if(c>0&&/^-/.test(plain(cells[c]))) cells[c].classList.add('is-shortfall');
           else if(c>0) cells[c].classList.remove('is-shortfall');
+        }
+      }
+      table.classList.add('fcb-stack');
+      if(sortable(head.cells)) table.classList.add('fcb-stack-sort');
+      var skip={}, rank=-1, name=-1, key;
+      if(RANK.test(labels[0])){ rank=0; skip[0]=1; }
+      for(var n=0;n<labels.length;n++){ if(!skip[n]){ name=n; skip[n]=1; break; } }
+      key=pickKey(labels, rows, skip);
+      for(var r3=0;r3<rows.length;r3++){
+        var row=rows[r3].cells;
+        if(row.length===1){ mark(row[0],'fcb-r-name'); continue; }
+        for(var k=0;k<row.length;k++){
+          mark(row[k], k===rank?'fcb-r-rank':k===name?'fcb-r-name':k===key?'fcb-r-key':'fcb-r-more');
+          if(k!==rank&&k!==name&&k!==key&&!plain(row[k])&&!row[k].querySelector('img,a,svg')) row[k].classList.add('fcb-r-empty');
+          else row[k].classList.remove('fcb-r-empty');
         }
       }
     }
@@ -576,7 +623,9 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',prep);
   else prep();
   if(window.MutationObserver&&document.body){
-    new MutationObserver(function(){schedule();}).observe(document.body,{childList:true,subtree:true});
+    new MutationObserver(function(list){
+      for(var i=0;i<list.length;i++){ if(list[i].type==='childList'){ schedule(); return; } }
+    }).observe(document.body,{childList:true,subtree:true});
   }
 })();
 /* Wide article tables: show a visible scroll cue when columns are off screen. Cards replace that cue under 640px. */
