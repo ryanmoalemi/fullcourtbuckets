@@ -182,11 +182,25 @@ def ranks_html(root, slot: dict) -> str:
 # WNBA.com still prints Lynne Roberts in the Sparks background field, but the
 # coaches list has no head coach. The team parted ways with her on Sept. 25, 2026
 # (https://sparks.wnba.com/news/los-angeles-sparks-part-ways-with-head-coach-lynne-roberts).
+# Liberty's coaches list was empty on Nov. 11, 2026, after the Nov. 3 firing
+# (https://apnews.com/article/liberty-demarco-fired-a12a4cd0f5459d1b5a5499b3c86a59fa).
 # A later name in team-facts replaces this vacancy.
 VACANT_HEAD_COACH = {
     'Los Angeles Sparks': 'Lynne Roberts',
+    'New York Liberty': 'Chris DeMarco',
 }
 COACHING_TRACKER = '/wnba/coaching-tracker/'
+# WNBA.com still names the departed general manager. The link is the team release.
+GM_OVERRIDE = {
+    'Indiana Fever': (
+        'Amber Cox',
+        'Vacant. <a href="https://fever.wnba.com/news/pacers-sports-entertainment-announces-departure-of-amber-cox-indiana-fever-coo-and-gm" target="_blank" rel="noopener">Fever release, Oct. 23, 2026</a>',
+    ),
+    'Los Angeles Sparks': (
+        'Reagan Pebley',
+        '<a href="https://sparks.wnba.com/news/los-angeles-sparks-name-ariana-andonian-general-manager" target="_blank" rel="noopener">Ariana Andonian</a>, named Sept. 4, 2026',
+    ),
+}
 
 
 def head_coach_vacant(name: str, facts: dict) -> bool:
@@ -195,6 +209,18 @@ def head_coach_vacant(name: str, facts: dict) -> bool:
         return False
     current = str(facts.get('head_coach') or '').strip()
     return current in ('', departed)
+
+
+def gm_override(name: str, facts: dict) -> str:
+    """Team-release general manager line when WNBA.com still names the old GM."""
+    row = GM_OVERRIDE.get(name)
+    if not row:
+        return ''
+    departed, line = row
+    current = str(facts.get('general_manager') or '').strip()
+    if current in ('', departed):
+        return line
+    return ''
 
 
 def faq_items(root, slot: dict, standing: dict | None, leaders: dict, count: int) -> list[tuple[str, str]]:
@@ -528,8 +554,11 @@ def franchise_html(root, slot: dict) -> str:
         items.append(('Head coach', f'Vacant. <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>'))
     elif facts.get('head_coach'):
         items.append(('Head coach', esc(str(facts['head_coach']).strip())))
+    gm_line = gm_override(slot['full_name'], facts)
     for key, label in (('general_manager', 'General manager'), ('owner', 'Owner')):
-        if facts.get(key):
+        if key == 'general_manager' and gm_line:
+            items.append((label, gm_line))
+        elif facts.get(key):
             items.append((label, esc(str(facts[key]).strip())))
     titles = [str(t.get('year')) for t in facts.get('championships') or [] if t.get('year')]
     items.append(('WNBA championships', esc(', '.join(titles)) if titles else 'None'))
@@ -562,8 +591,14 @@ def franchise_html(root, slot: dict) -> str:
         )
     if cap and cap_src.get('override'):
         parts.append(f'<p class="muted small">{esc(cap_src["override"])}</p>')
+    gm_note = ' The general manager line follows the linked team release.' if gm_line else ''
     if source and head_coach_vacant(slot['full_name'], facts):
-        credit = (f'<p class="muted small">Head coach status is on the <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>. '
+        credit = (f'<p class="muted small">Head coach status is on the <a href="{COACHING_TRACKER}">WNBA coaching tracker</a>.'
+                  f'{gm_note} '
+                  f'Other franchise facts as listed on <a href="{esc(source)}" target="_blank" rel="noopener">WNBA.com</a>, '
+                  f'checked {esc(facts_checked(root))}.</p>')
+    elif source and gm_line:
+        credit = (f'<p class="muted small">The general manager line follows the linked team release. '
                   f'Other franchise facts as listed on <a href="{esc(source)}" target="_blank" rel="noopener">WNBA.com</a>, '
                   f'checked {esc(facts_checked(root))}.</p>')
     else:

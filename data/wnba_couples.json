@@ -1,5 +1,5 @@
 {
-  "last_checked": "2026-09-29",
+  "last_checked": "2026-11-11",
   "couples": [
     {
       "a": "Breanna Stewart",
@@ -74,25 +74,6 @@
       "kids_src": "https://www.eonline.com/news/1430862/wnba-relationships-paige-bueckers-azzi-fudd-more",
       "photo_a": "https://commons.wikimedia.org/wiki/File:2_Alyssa_Thomas_(cropped).jpg|Lorie Shaull|CC BY-SA 4.0",
       "photo_b": "https://commons.wikimedia.org/wiki/File:DeWanna_Bonner_2024.jpg|John Mac|CC BY-SA 2.0"
-    },
-    {
-      "a": "Paige Bueckers",
-      "b": "Azzi Fudd",
-      "both_wnba": true,
-      "b_note": "Dallas Wings teammates",
-      "status": "Dating",
-      "met": "As teenagers at a USA Basketball camp, then UConn teammates",
-      "met_src": "https://people.com/couples-playing-in-the-wnba-11969761",
-      "since": "Went public July 2025 (Bueckers named Fudd as her girlfriend in a WAG Talk interview)",
-      "since_src": "https://www.eonline.com/news/1420044/paige-bueckers-confirms-azzi-fudd-relationship",
-      "wedding": "",
-      "wedding_src": "",
-      "kids": "",
-      "kids_src": "",
-      "extra": "Both spoke about the relationship in the 2026 docuseries The Dynasty: UConn Huskies",
-      "extra_src": "https://www.espn.com/wnba/story/_/id/49660963/paige-bueckers-azzi-fudd-dallas-wings-relationship-comments-dynasty-uconn-huskies",
-      "photo_a": "https://commons.wikimedia.org/wiki/File:Paige_Bueckers_2025_4_(cropped).jpg|John Mac|CC BY-SA 4.0",
-      "photo_b": "https://commons.wikimedia.org/wiki/File:Azzi_Fudd_Wings_1_(cropped).jpg|John Mac|CC BY-SA 4.0"
     },
     {
       "a": "A'ja Wilson",
@@ -265,6 +246,48 @@
       "kids_src": "",
       "photo_a": "https://commons.wikimedia.org/wiki/File:260615_Lynx_Fire_JohnMc061_(55338371670)_(cropped).jpg|John Mac|CC BY-SA 4.0",
       "photo_b": null
+    },
+    {
+      "a": "Gabby Williams",
+      "b": "Marine Johannes",
+      "both_wnba": true,
+      "b_note": "New York Liberty guard",
+      "status": "Dating",
+      "met": "",
+      "met_src": "",
+      "since": "",
+      "since_src": "",
+      "engaged": "",
+      "engaged_src": "",
+      "wedding": "",
+      "wedding_src": "",
+      "kids": "",
+      "kids_src": "",
+      "extra": "In an ELLE interview published November 10, 2026, Williams described Johannes as her partner and said they are not going to hide who they are.",
+      "extra_src": "https://www.elle.com/culture/career-politics/a74378757/gabby-williams-wnba-championship-finals-mvp-valkyries-interview-2026/",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Gabby_Williams_(cropped).jpg|Lorie Shaull|CC BY-SA 4.0",
+      "photo_b": "https://commons.wikimedia.org/wiki/File:Marine_Johannes_2025_(cropped).jpg|John Mac|CC BY-SA 4.0"
+    },
+    {
+      "a": "Cameron Brink",
+      "b": "Ben Felter",
+      "both_wnba": false,
+    "b_note": "Former Stanford rower",
+    "status": "Engaged",
+    "met": "Felter, a former Stanford rower, emailed Brink while she played basketball there.",
+    "met_src": "https://www.usmagazine.com/entertainment/news/wnba-star-cameron-brink-teases-her-upcoming-wedding-dress/",
+    "since": "March 2021",
+    "since_src": "https://www.usmagazine.com/entertainment/news/wnba-star-cameron-brink-teases-her-upcoming-wedding-dress/",
+    "engaged": "September 2024 at the Shangri-La Paris Hotel. On November 5, 2026, Brink told Us Weekly she is getting married.",
+    "engaged_src": "https://www.usmagazine.com/entertainment/news/wnba-star-cameron-brink-teases-her-upcoming-wedding-dress/",
+      "wedding": "",
+      "wedding_src": "",
+      "kids": "",
+      "kids_src": "",
+    "extra": "",
+    "extra_src": "",
+      "photo_a": "https://commons.wikimedia.org/wiki/File:Cameron_Brink_Sparks_(cropped).jpg|John Mac|CC BY-SA 2.0",
+      "photo_b": ""
     }
   ],
   "excluded": {
@@ -288,6 +311,11 @@
         "DiJonai Carrington & NaLyssa Smith",
         "Broke up (per Autostraddle)",
         "https://www.autostraddle.com/wnba-and-womens-basketball-lesbian-couples/"
+      ],
+      [
+        "Paige Bueckers & Azzi Fudd",
+        "They said on Nov. 6, 2026, on Fudd Around and Find Out, that they are no longer together and had split more than a year earlier.",
+        "https://www.usatoday.com/story/sports/wnba/2026/11/06/paige-bueckers-relationship-with-azzi-fudd-ended-before-they-became-wings-teammates/92645337007/"
       ]
     ],
     "unconfirmed_or_unclear": [
@@ -300,11 +328,6 @@
         "DiJonai Carrington & Jackie Young",
         "Described as 'allegedly' dating; no on-record confirmation",
         "https://www.autostraddle.com/every-gay-player-in-the-wnba/"
-      ],
-      [
-        "Gabby Williams & Marine Johannes",
-        "Seen together; never confirmed on record",
-        "https://www.autostraddle.com/wnba-and-womens-basketball-lesbian-couples/"
       ],
       [
         "Natasha Cloud & Isabelle Harrison",

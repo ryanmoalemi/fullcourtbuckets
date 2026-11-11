@@ -18,9 +18,11 @@ class CouplesPageTests(unittest.TestCase):
     def test_page_uses_only_confirmed_couples(self):
         html = PAGE.read_text(encoding='utf-8')
         body = main_text()
-        self.assertEqual(body.count('class="couple-card"'), 15)
+        self.assertEqual(body.count('class="couple-card"'), 16)
         self.assertEqual(body.count('<h1>'), 1)
-        self.assertIn('Last checked September 29, 2026', body)
+        self.assertIn('Last checked November 11, 2026', body)
+        self.assertIn('they are no longer together', body)
+        self.assertNotIn('Paige Bueckers and Azzi Fudd are dating', body)
         self.assertIn('Both have played in the WNBA', body)
         self.assertLess(body.find('Both have played in the WNBA'), body.find('A&#x27;ja Wilson'))
         for kind in ('Article', 'ItemList', 'BreadcrumbList', 'FAQPage'):

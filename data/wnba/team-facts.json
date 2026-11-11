@@ -1,7 +1,7 @@
 {
   "source": "WNBA.com team pages (official league site)",
-  "checked_at": "2026-10-28T00:21:03+00:00",
-  "note": "Copied as published. Empty fields stay null and are left blank on the site.",
+  "checked_at": "2026-11-11T18:00:00+00:00",
+  "note": "Copied as published. Empty fields stay null and are left blank on the site. Rechecked Nov. 11, 2026: Liberty head coach list was empty and the Commissioner's Cup list added 2026; Golden State championships added 2026 against Atlanta.",
   "teams": {
     "New York Liberty": {
       "wnba_team_id": 1611661313,
@@ -12,7 +12,7 @@
       "arena_capacity": null,
       "owner": "Joe Tsai & Clare Wu Tsai",
       "general_manager": "Jonathan Kolb",
-      "head_coach": "Chris DeMarco",
+      "head_coach": null,
       "official_site": "https://liberty.wnba.com/",
       "ranks": {
         "ppg": {
@@ -39,7 +39,8 @@
         }
       ],
       "commissioners_cup": [
-        2023
+        2023,
+        2026
       ],
       "hall_of_fame": [
         {
@@ -2845,7 +2846,12 @@
           "rank": 1
         }
       },
-      "championships": [],
+      "championships": [
+        {
+          "year": 2026,
+          "opponent": "Atlanta Dream"
+        }
+      ],
       "commissioners_cup": [],
       "hall_of_fame": [],
       "franchise_leaders": {

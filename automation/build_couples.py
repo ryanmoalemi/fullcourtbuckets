@@ -25,7 +25,7 @@ PAGE_URL = '/wnba/couples/'
 DATA_PATH = ROOT / 'data' / 'wnba_couples.json'
 PAGE_PATH = ROOT / 'wnba' / 'couples' / 'index.html'
 PHOTO_DIR = ROOT / 'images' / 'couples'
-CHECKED = 'September 29, 2026'
+CHECKED = 'November 11, 2026'
 UA = 'FullCourtBuckets/1.0 (https://fullcourtbuckets.com/wnba/couples/; source and photo check)'
 BROWSER_UA = (
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
@@ -599,11 +599,18 @@ def faq_items(cards: list[dict]) -> list[tuple[str, str]]:
         return ', '.join(names[:-1]) + ', and ' + names[-1]
 
     paige = pair('Paige Bueckers', 'Azzi Fudd')
-    paige_bits = ['Yes. Paige Bueckers and Azzi Fudd are dating.']
-    if paige and chip_text(paige, 'Together since'):
-        paige_bits.append('They went public in July 2025, when Bueckers named Fudd as her girlfriend in a WAG Talk interview.')
-    if paige and chip_text(paige, 'Note'):
-        paige_bits.append('Both spoke about the relationship in the 2026 docuseries The Dynasty: UConn Huskies.')
+    if paige:
+        paige_bits = ['Yes. Paige Bueckers and Azzi Fudd are dating.']
+        if chip_text(paige, 'Together since'):
+            paige_bits.append('They went public in July 2025, when Bueckers named Fudd as her girlfriend in a WAG Talk interview.')
+        if chip_text(paige, 'Note'):
+            paige_bits.append('Both spoke about the relationship in the 2026 docuseries The Dynasty: UConn Huskies.')
+    else:
+        paige_bits = [
+            'No. Paige Bueckers and Azzi Fudd said on November 6, 2026 that they are no longer together.',
+            'On the podcast Fudd Around and Find Out, Bueckers said the split was more than a year earlier, before Fudd was drafted.',
+            'They said they remain friends and teammates.',
+        ]
 
     aja = pair("A'ja Wilson", 'Bam Adebayo')
     aja_bits = ["Yes. A'ja Wilson and Bam Adebayo are dating."]
@@ -723,7 +730,7 @@ def schema(cards: list[dict], items: list[tuple[str, str]]) -> str:
             '@type': 'Article',
             'headline': 'WNBA couples',
             'description': 'Confirmed WNBA relationships, with a source for each fact. Splits and rumors are left out.',
-            'dateModified': '2026-09-29',
+            'dateModified': '2026-11-11',
             'datePublished': '2026-09-29',
             'inLanguage': 'en',
             'author': {'@type': 'Organization', 'name': 'Full Court Buckets'},
@@ -779,7 +786,8 @@ def render_page(cards: list[dict], items: list[tuple[str, str]]) -> str:
         '<div class="breadcrumbs"><a href="/">Home</a><span>/</span>'
         '<a href="/wnba/">Players</a><span>/</span><span>Couples</span></div>'
         '<section class="couples-intro"><p class="eyebrow">Full Court Buckets</p><h1>WNBA couples</h1>'
-        '<p class="lede">Publicly reported relationships involving current and former WNBA players. Each entry links to the report behind it; the date of that report matters when reading a relationship status.</p></section>'
+        '<p class="lede">Publicly reported relationships involving current and former WNBA players. Each entry links to the report behind it; the date of that report matters when reading a relationship status.</p>'
+        '<p class="correction">Updated November 11, 2026: Paige Bueckers and Azzi Fudd said on November 6 that they are no longer together, so they are off this list. Gabby Williams confirmed Marine Johannes is her partner in an ELLE interview published November 10. Cameron Brink is engaged to Ben Felter.</p></section>'
         + ''.join(render_card(card) for card in cards)
         + render_faq(items)
         + '<p class="rules">A relationship is included only when the players have confirmed it, or a major outlet reported it and quoted them. Splits and rumors are left out.</p>'
@@ -864,7 +872,7 @@ def patch_sitemaps(root: Path = ROOT) -> None:
     block = (
         '  <url>\n'
         f'    <loc>{BASE}{PAGE_URL}</loc>\n'
-        '    <lastmod>2026-09-29</lastmod>\n'
+        '    <lastmod>2026-11-11</lastmod>\n'
         '    <changefreq>weekly</changefreq>\n'
         '    <priority>0.7</priority>\n'
         '  </url>\n'
