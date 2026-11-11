@@ -72,6 +72,33 @@ class TeamPagePhaseTwoTests(unittest.TestCase):
         faq = tx.faq_html(items, '2026-11-05')
         self.assertIn('href="/wnba/coaching-tracker/"', faq)
         self.assertNotIn('Lynne Roberts', faq)
+        self.assertIn('Ariana Andonian', html)
+        self.assertNotIn('Reagan Pebley', html)
+
+    def test_liberty_head_coach_job_is_vacant_and_cup_includes_2026(self):
+        slot = {'full_name': 'New York Liberty', 'slug': 'new-york-liberty'}
+        html = tx.franchise_html(ROOT, slot)
+        self.assertIn('>Vacant. <a href="/wnba/coaching-tracker/">WNBA coaching tracker</a>', html)
+        self.assertNotIn('Chris DeMarco', html)
+        self.assertIn("Commissioner's Cup", html)
+        self.assertIn('>2023, 2026<', html)
+        self.assertIn('>2024<', html)
+        items = tx.faq_items(ROOT, slot, None, {}, 15)
+        self.assertEqual(
+            dict(items)['Who is the New York Liberty head coach?'],
+            'The New York Liberty head coach job is vacant.',
+        )
+
+    def test_valkyries_list_the_2026_championship(self):
+        html = tx.franchise_html(ROOT, {'full_name': 'Golden State Valkyries', 'slug': 'golden-state-valkyries'})
+        self.assertIn('>2026<', html)
+        self.assertNotIn('>None<', html)
+
+    def test_fever_general_manager_follows_the_october_release(self):
+        html = tx.franchise_html(ROOT, {'full_name': 'Indiana Fever', 'slug': 'indiana-fever'})
+        self.assertIn('fever.wnba.com/news/pacers-sports-entertainment-announces-departure-of-amber-cox', html)
+        self.assertNotIn('>Amber Cox<', html)
+        self.assertIn('Stephanie White', html)
 
     def test_staff_list_without_a_head_coach_drops_a_stale_background_name(self):
         import json
