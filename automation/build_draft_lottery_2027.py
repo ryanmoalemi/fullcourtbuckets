@@ -1010,7 +1010,7 @@ SIM_JS = r"""
       return '<li>Pick ' + pick.pick + ': ' + text + '</li>';
     }).join('');
     if (data.status !== 'final') {
-      liveStatus.textContent = 'The drawing has not been entered. Picks 8 through 15 stay to be confirmed.';
+      liveStatus.textContent = 'The drawing has not taken place yet. Picks 8 through 15 stay to be confirmed.';
       return;
     }
     var byId = {};
@@ -1048,10 +1048,10 @@ def live_html() -> str:
         items.append(f'<li>Pick {number}: {label}</li>')
     return (
         '<section id="live-results"><h2 class="section-title">Live results</h2>'
-        '<p id="live-status">The drawing has not been entered. Picks 8 through 15 stay to be confirmed.</p>'
+        '<p id="live-status">The drawing has not taken place yet. Picks 8 through 15 stay to be confirmed.</p>'
         f'<ol id="live-order">{"".join(items)}</ol>'
-        '<p class="table-note">This list reads the results file on this site, data/wnba-draft-lottery-2027-results.json. '
-        'On Nov. 15, set status to final and fill picks 1 through 7. The simulator then locks to that order. '
+        '<p class="table-note">The lottery is drawn Nov. 15, 2026. Picks 1 through 7 appear here once the league announces the order, '
+        'and the simulator then locks to that order. '
         'Picks 8 through 15 are to be confirmed: the Oct. 28 release does not publish them, Indiana and Washington both finished 28-16, '
         'and the 2025 Atkins deal was announced as swap rights rather than a finished draft order.</p></section>'
     )

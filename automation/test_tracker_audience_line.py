@@ -23,7 +23,7 @@ class TrackerAudienceLine(unittest.TestCase):
         self.assertIn('Nielsen panel-only data and digital data from Adobe Analytics', html)
         self.assertIn('https://x.com/MylesEhrlich/status/2116589348288127085', html)
         self.assertIn('id="finals-g7-key-fact"', html)
-        self.assertIn('the 2026 Finals averaged 1.88M viewers, the most since 1999', html)
+        self.assertIn('The 2026 Finals averaged 1.88M viewers, the most since 1999', html)
         self.assertIn('Game 7 drew 3.3 million viewers on USA Network and CNBC, plus streaming led by Peacock', html)
         self.assertIn('https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-delivers-most-watched-wnba-playoff-game-ever-33-million', html)
         self.assertNotIn('preliminary', html.lower())
