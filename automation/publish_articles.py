@@ -807,6 +807,12 @@ def record_for(meta: dict, folder: Path, existing: dict | None) -> dict:
         'teams': list(meta.get('teams') or []),
         'imageFocal': focal_for(meta, existing),
     })
+    og_alt = str(meta.get('og_alt') or '').strip()
+    if og_alt:
+        # Social file can be the chart while the lead photo keeps imageAlt.
+        article['ogAlt'] = og_alt
+    else:
+        article.pop('ogAlt', None)
     if str(meta.get('game_id') or '').strip():  # links score rows to this recap; no ESPN box-score line
         article['gameId'] = str(meta['game_id']).strip()
     if str(meta.get('preview_game_id') or '').strip():  # rail 'Next' links this preview before tip
@@ -1137,7 +1143,7 @@ def set_title(page: str, title: str, social: str, description: str, article: dic
     meta('twitter:title', social, 'name')
     meta('twitter:description', description, 'name')
     meta('twitter:image', og_image, 'name')
-    alt = str(article.get('imageAlt') or '').strip()
+    alt = str(article.get('ogAlt') or article.get('imageAlt') or '').strip()
     if alt:
         meta('twitter:image:alt', alt, 'name')
         if re.search(r'<meta property="og:image:alt"', page):

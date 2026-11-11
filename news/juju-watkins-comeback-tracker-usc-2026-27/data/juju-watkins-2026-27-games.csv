@@ -1,0 +1,4 @@
+season,game_in_season,date,opponent,site,location,home_away_neutral,result,usc_pts,opp_pts,attendance,minutes,pts,reb,ast,stl,blk,to,pf,orb,drb,fg,fg_made,fg_att,fg3,fg3_made,fg3_att,ft,ft_made,ft_att,pts_per_40
+2026-27,1,2026-11-02,UNLV,T-Mobile Arena,"Las Vegas, NV",neutral,W,100,68,2031,25,21,5,2,2,1,0,2,3,2,9-22,9,22,0-5,0,5,3-4,3,4,33.6
+2026-27,2,2026-11-08,Utah State,Galen Center,"Los Angeles, CA",home,W,118,40,7807,27,32,16,6,5,1,3,2,4,12,10-19,10,19,4-7,4,7,8-9,8,9,47.4
+2026-27,3,2026-11-10,College of Charleston,Galen Center,"Los Angeles, CA",home,W,105,44,3870,23,20,4,6,4,1,0,0,1,3,7-13,7,13,2-6,2,6,4-4,4,4,34.8

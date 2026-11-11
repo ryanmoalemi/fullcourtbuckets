@@ -1,0 +1,52 @@
+JuJu Watkins comeback tracker
+Data through Nov. 10, 2026
+Free to use and republish (CC0): https://creativecommons.org/publicdomain/zero/1.0/
+
+Files
+- juju-watkins-season-rates.csv and the seasons array in juju-watkins-comeback-tracker.json: one row per season on USC's official cumulative sheet, plus one combined row for 2023-24 and 2024-25.
+- juju-watkins-2026-27-games.csv: one row per Watkins game in 2026-27.
+- juju-watkins-first-three-games.csv: the first three games of 2023-24, of 2024-25, and of 2026-27. Nine rows.
+- juju-watkins-comeback-tracker.json: the same rows, plus the combined pre-injury totals.
+
+What per 40 means
+pts_per_40 = points / minutes * 40, rounded half up to one decimal.
+It uses the minute figure on the source, which is a whole number on these USC sheets and boxes. It is not points per game, and it is not a per-possession rate.
+The single-season mpg and ppg cells are the figures printed on the cumulative sheet. The combined row is calculated on this page because the sheet does not print one: minutes and points are added, then divided by games or by minutes.
+
+Where the numbers come from
+2026-27 season line: USC cumulative PDF dated as of Nov. 10, 2026.
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/stats/wbball/2026/pdf/cume.pdf
+2024-25 season line: USC cumulative PDF dated as of Mar. 31, 2025.
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/stats/wbball/2024/pdf/cume.pdf
+2023-24 season line: USC cumulative PDF dated as of Apr. 1, 2024.
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/stats/wbball/2023/pdf/cume.pdf
+2025-26: the cumulative PDF dated as of Mar. 30, 2026 has no Watkins line. There is no 2025-26 row in these files.
+https://s3.us-east-2.amazonaws.com/sidearm.nextgen.sites/usctrojans.com/stats/wbball/2025/pdf/cume.pdf
+
+2026-27 game lines are the USC box scores, not the recap prose when they disagree.
+Nov. 2, 2026, UNLV: https://usctrojans.com/sports/womens-basketball/stats/2026-27/unlv/boxscore/35529
+Nov. 8, 2026, Utah State: https://usctrojans.com/sports/womens-basketball/stats/2026-27/utah-state/boxscore/35624
+Nov. 10, 2026, College of Charleston: https://usctrojans.com/sports/womens-basketball/stats/2026/col-of-charleston/boxscore/35625
+The box minute column is 25, 27, and 23. Those add to the sheet's 75. Points 21, 32, and 20 add to the sheet's 73.
+
+Earlier games are the USC box for her line. The team result is the line on that season's cumulative PDF, and the opponent total on the box matches it.
+2024-25: Ole Miss https://usctrojans.com/sports/womens-basketball/stats/2024-25/ole-miss/boxscore/34180
+Cal Poly https://usctrojans.com/sports/womens-basketball/stats/2024-25/cal-poly/boxscore/34181
+CSUN https://usctrojans.com/sports/womens-basketball/stats/2024-25/csun/boxscore/34182
+2023-24: Ohio State https://usctrojans.com/sports/womens-basketball/stats/2023-24/ohio-state/boxscore/33357
+FGCU https://usctrojans.com/sports/womens-basketball/stats/2023-24/florida-gulf-coast/boxscore/33359
+Le Moyne https://usctrojans.com/sports/womens-basketball/stats/2023-24/le-moyne/boxscore/33360
+Ohio State's box page did not print an attendance figure. That cell is blank. A 0 on the cumulative sheet is not treated as a counted crowd.
+
+Column notes
+orb and drb are the two sides of the box column labeled orb-drb. reb is the box rebound total. 4-12 on Nov. 8 is 4 offensive and 12 defensive, and 4+12=16.
+attendance is the box "Attendance" line.
+home_away_neutral is from the site on the box: T-Mobile Arena and Adidas Arena are neutral, Galen Center is home.
+The 22nd career 30-point game and Cheryl Miller's program record of 25 are USC's count in the Nov. 8, 2026 recap. This file does not recount those games.
+
+How to add the next game
+1. Add one row to juju-watkins-2026-27-games.csv and to the games array from the official USC box.
+2. Replace the 2026-27 season row with the next USC cumulative PDF, and recompute pts_per_40 from that sheet's points and minutes.
+3. If the new game is still inside the first three, update the 2026-27 rows in juju-watkins-first-three-games.csv. Later games stay in the season file only.
+4. Redraw images/articles/juju-watkins-comeback-tracker-usc-2026-27/per-40.webp from the new per-40 figures. The share image is the 1200x630 file saved over og-1200.jpg after publish, because a fresh hero build writes a crop of the lead photo into that filename.
+5. Change the data-through date on the page and in this file.
