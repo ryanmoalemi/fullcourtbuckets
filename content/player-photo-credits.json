@@ -3333,6 +3333,22 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-04: edges checked at 200% on dark and light backgrounds"
+    },
+    "kamila-borkowska": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kamila_Borkowska_11_Valencia_Basket_(women)_EuroLeague_Women_20261103_(6).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "marta-suarez": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Marta_Su%C3%A1rez_16_Valencia_Basket_(women)_EuroLeague_Women_20261103_(1)_(cropped).JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
