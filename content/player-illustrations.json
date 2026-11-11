@@ -10896,6 +10896,58 @@
       },
       "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
       "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 61828,
+      "slug": "nyadiew-puoch",
+      "player_name": "Nyadiew Puoch",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/nyadiew-puoch/portrait.webp",
+      "width": 800,
+      "height": 800,
+      "asset_sha256": "5027f9c03f291c425a1740007de3539037801a1298b9f19c69720c0ef04f4ebc",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 800,
+        "height": 800,
+        "source_width": 800,
+        "source_height": 800,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
+    },
+    {
+      "player_id": 386,
+      "slug": "maggie-lucas",
+      "player_name": "Maggie Lucas",
+      "approved": true,
+      "kind": "photograph",
+      "src": "/images/players/maggie-lucas/portrait.webp",
+      "width": 800,
+      "height": 800,
+      "asset_sha256": "ecc6b848c8c2f658820d310d7f1a72df70b3f998576e26e4be44e039a61a4132",
+      "quality_standard": "fcb-portrait-640x650-v2",
+      "managed_by": "approved-player-folder-v1",
+      "original_bytes_preserved": true,
+      "export_settings": {
+        "format": "WEBP",
+        "width": 800,
+        "height": 800,
+        "source_width": 800,
+        "source_height": 800,
+        "upscaled": false,
+        "original_bytes_preserved": true,
+        "reencoded": false
+      },
+      "source": "Owner-approved studio photograph in the player publishing folder. Transparent background. Publishing bytes kept without a later resize.",
+      "display": "Existing compact desktop/mobile template. Real player photograph; names and statistics remain HTML. No square card or visible caption."
     }
   ]
 }
