@@ -25,25 +25,26 @@
 .lede{font-size:16px;line-height:1.5;margin:0 0 12px}
 .rules{margin:0 0 12px;padding:2px 0 2px 14px;border-left:2px solid var(--purple);color:var(--muted)}
 .checked{font-size:12px;color:var(--muted);margin:0 0 22px}
-.couple-card{border:1px solid var(--line);background:linear-gradient(160deg,#1c1522,#111015);padding:16px 16px 14px;margin:0 0 14px;scroll-margin-top:96px}
+.couple-card{border:1px solid #e2ddd6;border-top:4px solid #ff4bb1;background:#fff;color:#151413;padding:16px 16px 14px;margin:0 0 14px;scroll-margin-top:96px;box-shadow:0 1px 3px rgba(40,20,80,.06)}
 .pair{display:flex;align-items:center;min-height:76px}
-.bubble{width:76px;height:76px;border-radius:50%;overflow:hidden;flex:0 0 auto;position:relative;z-index:1;border:3px solid #141319;background:#241c2c}
+.bubble{width:76px;height:76px;border-radius:50%;overflow:hidden;flex:0 0 auto;position:relative;z-index:1;border:3px solid #fff;background:#ece8f3;box-shadow:0 0 0 1px #e2ddd6}
 .bubble img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 18%}
 .bubble.initials{display:grid;place-items:center;font:700 24px/1 var(--display);letter-spacing:.04em;color:#f6f2f8;background:linear-gradient(145deg,#3c284c,#19141f)}
-.heart{width:26px;height:26px;margin-left:-14px;margin-right:-14px;border-radius:50%;background:#ff4bb1;display:grid;place-items:center;position:relative;z-index:3;flex:0 0 auto;border:2px solid #0b0b10}
+.heart{width:26px;height:26px;margin-left:-14px;margin-right:-14px;border-radius:50%;background:#e0218a;display:grid;place-items:center;position:relative;z-index:3;flex:0 0 auto;border:2px solid #fff}
 .pair .bubble:last-child{z-index:2}
-.badge{display:inline-block;margin:10px 0 0;background:#ff4bb118;border:1px solid #7d3b624d;color:#ff91cd;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px}
-.couple-card h2{font-size:clamp(28px,8vw,42px);margin:8px 0;overflow-wrap:break-word}
-.couple-card h2 a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c678c555}
-.role{color:var(--muted);font-size:13px;line-height:1.45;margin:0}
+.badge{display:inline-block;margin:10px 0 0;background:#fff0f6;border:1px solid #f3b4d3;color:#9d1460;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px}
+.couple-card h2{font-size:clamp(28px,8vw,42px);margin:8px 0;overflow-wrap:break-word;color:#5a554e}
+html body main .couple-card h2 a,html body main .couple-card h2 a:visited{color:#2a1458;text-decoration:underline;text-underline-offset:3px;text-decoration-color:#c9b8ef}
+.role{color:#4a4540;font-size:14px;line-height:1.45;margin:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:12px 0 0}
-.chips a{flex:1 1 148px;min-width:0;min-height:44px;display:flex;flex-direction:column;justify-content:center;border:1px solid #5a4c61;background:#17121e;padding:8px 10px;overflow-wrap:break-word}
-.chips a span{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--pink)}
+html body main .chips a,html body main .chips a:visited{flex:1 1 148px;min-width:0;min-height:44px;display:flex;flex-direction:column;justify-content:center;border:1px solid #e2ddd6;border-radius:6px;background:#faf8ff;color:#151413;padding:8px 10px;overflow-wrap:break-word;font-size:14px;line-height:1.35;text-decoration:none}
+html body main .chips a:hover{border-color:#5b22c9;background:#f3eeff}
+.chips a span{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9d1460;margin:0 0 2px}
 .method,.faq,.credits{padding-top:8px;border-top:1px solid var(--line);margin-top:22px}
 .faq-item{padding:10px 0;border-bottom:1px solid var(--line)}
 .faq-item h3{font-size:22px;margin:0 0 6px}
 .credits li{margin:0 0 8px;color:var(--muted);font-size:13px}
-.credits a,.method a,.faq a,.lede a{color:#e4afeb;text-decoration:underline;text-underline-offset:3px}
+.credits a,.method a,.faq a,.lede a{color:#5b22c9;text-decoration:underline;text-underline-offset:3px}
 .former{padding-top:8px;border-top:1px solid var(--line);margin:22px 0 0}
 #former-couples>h2{margin:8px 0 6px}
 #former-couples>p{color:#57524d;font-size:13px;line-height:1.5;margin:0 0 12px;max-width:42rem}
