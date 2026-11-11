@@ -2287,7 +2287,14 @@ def order_news_lead(html: str, article: dict | None = None) -> str:
     if note:
         rest = rest[note.end():]
     table_end = _data_table_end(rest)
-    if table_end is not None:
+    # This news story keeps the lead under the byline, then the opening and the table.
+    # Other data-table-first pages still put the table first.
+    slug = str((meta or {}).get('slug') or '') if isinstance(meta, dict) else ''
+    keep_lead_under_title = (
+        slug == 'juste-jocyte-does-not-want-to-return-valkyries'
+        or 'juste-jocyte-does-not-want-to-return-valkyries/hero-' in figure
+    )
+    if table_end is not None and not keep_lead_under_title:
         # Data pages: the table comes straight after the byline; the lead photo follows it.
         article = article[:h1 + len('</h1>')] + row + note_html + rest[:table_end] + figure + rest[table_end:]
     else:
