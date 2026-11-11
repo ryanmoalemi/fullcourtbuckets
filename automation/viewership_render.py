@@ -474,14 +474,23 @@ def stat_cards(payload: dict) -> list[dict]:
             'scope': '25 games, Big Data + Panel', 'url': espn['source'],
             'date': espn.get('source_date') or '',
         })
-    finals = league_season(payload, 2025)
-    if (
-        finals and finals.get('finals_avg_viewers') == 1_500_000 and finals.get('finals_games') == 4
-        and core.is_source_url(finals.get('finals_viewers_source'))
-    ):
+    # Newest completed Finals with a sourced series average, so the card never lags the tables below.
+    finals = None
+    for year in sorted({row.get('season') for row in core.league_rows(payload) if isinstance(row.get('season'), int)}, reverse=True):
+        row = league_season(payload, year)
+        if (
+            row and core.is_number(row.get('finals_avg_viewers')) and core.is_number(row.get('finals_games'))
+            and core.is_source_url(row.get('finals_viewers_source'))
+        ):
+            finals = row
+            break
+    if finals:
+        viewers = finals['finals_avg_viewers'] / 1_000_000
+        value = f'{viewers:.2f}'.rstrip('0').rstrip('.') + 'M'
+        scope = f'{finals["finals_games"]}-game series average'
         cards.append({
-            'value': '1.5M', 'metric': 'Average Finals audience', 'period': '2025 completed series',
-            'scope': '4 games, ABC and ESPN', 'url': finals['finals_viewers_source'],
+            'value': value, 'metric': 'Average Finals audience', 'period': f'{finals["season"]} Finals',
+            'scope': scope, 'url': finals['finals_viewers_source'],
             'date': finals.get('finals_viewers_source_date') or '',
         })
     return cards
