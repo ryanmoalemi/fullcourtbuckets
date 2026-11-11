@@ -538,9 +538,9 @@
       if(!head) continue;
       var rows=bodyRows(table, head);
       if(!rows.length) continue;
-      table.classList.add('fcb-cards');
-      if(sortable(head.cells)) table.classList.add('fcb-cards-sort');
-      if(!head.thead) head.row.classList.add('fcb-card-head');
+      table.classList.add('fcb-stack');
+      if(sortable(head.cells)) table.classList.add('fcb-stack-sort');
+      if(!head.thead) head.row.classList.add('fcb-stack-head');
       if(rows.length>1){
         var counts={};
         for(var r=0;r<rows.length;r++){

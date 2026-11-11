@@ -389,14 +389,14 @@ def compare_form(teams: list[dict]) -> str:
     choices = ''.join(options) + outside
     return (
         '<form class="rev-compare" id="rev-compare">'
-        '<label>Metric <select id="rev-metric" name="metric">'
+        '<label class="rev-field">Chart shows <select id="rev-metric" name="metric">'
         '<option value="revenue">Revenue</option>'
         '<option value="valuation">Valuation</option>'
         '<option value="multiple">Value / revenue multiple</option>'
         '</select></label>'
-        f'<label>Team <select id="rev-a" name="a"><option value="">Choose a team</option>{choices}</select></label>'
-        f'<label>Compared with <select id="rev-b" name="b"><option value="">Choose a team</option>{choices}</select></label>'
-        '<p id="rev-result" class="note"></p></form>'
+        f'<label class="rev-field">Compare a team <select id="rev-a" name="a"><option value="">Choose a team</option>{choices}</select></label>'
+        f'<label class="rev-field">with <select id="rev-b" name="b"><option value="">Choose a team</option>{choices}</select></label>'
+        '<p id="rev-result" class="rev-result" aria-live="polite"></p></form>'
         '<script>(function(){'
         'var form=document.getElementById("rev-compare"),metric=document.getElementById("rev-metric"),'
         'a=document.getElementById("rev-a"),b=document.getElementById("rev-b"),out=document.getElementById("rev-result");'
@@ -415,7 +415,30 @@ def compare_form(teams: list[dict]) -> str:
         'if(left==="outside"||right==="outside"){out.textContent=label(a)+" and "+label(b)+": outside this dataset, not zero.";return;}'
         'if(left===right){out.textContent=label(a)+" and "+label(b)+" are tied at "+left+unit+". Neither is ahead.";return;}'
         'out.textContent=label(a)+" "+left+unit+". "+label(b)+" "+right+unit+".";}'
-        'form.addEventListener("change",draw);draw();'
+        'function boot(){'
+        'var list=document.querySelector(".rev-rows"),heading=document.getElementById("rev-chart-heading"),'
+        'note=document.getElementById("revenue-chart-title"),axis=document.querySelector(".rev-axis");'
+        'var orig=list?Array.prototype.slice.call(list.children):[],origAxis=axis?axis.innerHTML:"",origNote=note?note.textContent:"",'
+        'origBars=orig.map(function(li){var b=li.querySelector(".rev-bar");return b?b.style.width:"";}),'
+        'origVals=orig.map(function(li){var v=li.querySelector(".rev-val");return v?v.textContent:"";}),'
+        'origRanks=orig.map(function(li){var r=li.querySelector(".rev-rank");return r?r.textContent:"";});'
+        'function fmt(k,v){return k==="multiple"?v.toFixed(1)+"\u00d7":"$"+v+"M";}'
+        'function chart(){if(!list)return;var m=metric.value||"revenue";list.setAttribute("data-metric",m);'
+        'if(heading)heading.textContent=heading.getAttribute("data-"+m)||heading.textContent;'
+        'if(m==="revenue"){orig.forEach(function(li,i){list.appendChild(li);var b=li.querySelector(".rev-bar");if(b)b.style.width=origBars[i];'
+        'var v=li.querySelector(".rev-val");if(v)v.textContent=origVals[i];var r=li.querySelector(".rev-rank");if(r)r.textContent=origRanks[i];});'
+        'if(axis)axis.innerHTML=origAxis;if(note)note.textContent=origNote;return;}'
+        'var k=m==="valuation"?"value":"multiple";'
+        'var rows=orig.filter(function(li){return li.hasAttribute("data-"+k);});'
+        'rows.sort(function(x,y){return Number(y.getAttribute("data-"+k))-Number(x.getAttribute("data-"+k))||x.getAttribute("data-team").localeCompare(y.getAttribute("data-team"));});'
+        'var max=Number(rows[0].getAttribute("data-"+k)),prev=null,rank=0;'
+        'rows.forEach(function(li,i){var v=Number(li.getAttribute("data-"+k));if(v!==prev){rank=i+1;prev=v;}list.appendChild(li);'
+        'li.querySelector(".rev-bar").style.width=(v/max*100).toFixed(2)+"%";li.querySelector(".rev-val").textContent=fmt(k,v);li.querySelector(".rev-rank").textContent=rank;});'
+        'orig.forEach(function(li){if(!li.hasAttribute("data-"+k))list.appendChild(li);});'
+        'if(note)note.textContent=note.getAttribute("data-"+m)||origNote;'
+        'if(axis){var h="";[0,.25,.5,.75,1].forEach(function(f,i){var v=max*f;h+="<span style=\\"left:"+(f*100)+"%\\">"+(k==="multiple"?(i?v.toFixed(1)+"\u00d7":"0"):"$"+Math.round(v)+"M")+"</span>";});axis.innerHTML=h;}}'
+        'form.addEventListener("change",function(){draw();chart();});draw();chart();}'
+        'if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();'
         '})();</script>'
     )
 
@@ -452,7 +475,9 @@ def revenue_chart(teams: list[dict]) -> str:
         if slug == 'golden-state-valkyries':
             notch = '<span class="rev-notch" style="left:20.51%"></span>'
         parts.append(
-            f'<li class="{" ".join(classes)}" data-metric-row="1">'
+            f'<li class="{" ".join(classes)}" data-metric-row="1" data-team="{esc(team["team"])}" '
+            f'data-revenue="{team["revenue_2025_usd_m"]}" data-value="{team["forbes_2026_value_usd_m"]}" '
+            f'data-multiple="{team["value_per_revenue_2026"]}">'
             f'<span class="rev-rank">{rank}</span>'
             f'<span class="rev-name">{team_link_with_mark(team)}{tag}</span>'
             f'<span class="rev-track" aria-hidden="true"><span class="rev-bar" style="width:{pct:.2f}%">{notch}</span></span>'
@@ -477,9 +502,27 @@ def revenue_chart(teams: list[dict]) -> str:
         '<span style="left:100%">$78M</span>'
         '</div></div>'
     )
+    by_value = sorted(rows, key=lambda t: (-t['forbes_2026_value_usd_m'], t['team']))
+    by_multiple = sorted(rows, key=lambda t: (-t['value_per_revenue_2026'], t['team']))
+    top_m, low_m = by_multiple[0]['value_per_revenue_2026'], by_multiple[-1]['value_per_revenue_2026']
+    top_names = ' and '.join(t['team'] for t in by_multiple if t['value_per_revenue_2026'] == top_m)
+    low_names = ' and '.join(t['team'] for t in by_multiple if t['value_per_revenue_2026'] == low_m)
+    value_note = (
+        f'Bars share one scale. {by_value[0]["team"]} fills the row at {money_short(by_value[0]["forbes_2026_value_usd_m"])}. '
+        f'{by_value[-1]["team"]} is last at {money_short(by_value[-1]["forbes_2026_value_usd_m"])}. '
+        'Values are Forbes estimates published May 7, 2026.'
+    )
+    multiple_note = (
+        f'Each team\'s 2026 Forbes value divided by its 2025 Forbes revenue. {top_names} are highest at '
+        f'{mult(top_m)}. {low_names} are lowest at {mult(low_m)}. Full Court Buckets calculated these ratios.'
+    )
     return (
         '<div class="rev-chart">'
-        '<p id="revenue-chart-title" class="rev-chart-note">Bars share one scale. Golden State fills the row. '
+        '<h2 class="rev-chart-title" id="rev-chart-heading" data-revenue="2025 revenue by team (Forbes estimates)" '
+        'data-valuation="2026 franchise value by team (Forbes estimates)" '
+        'data-multiple="2026 value per dollar of 2025 revenue">2025 revenue by team (Forbes estimates)</h2>'
+        f'<p id="revenue-chart-title" class="rev-chart-note" data-valuation="{esc(value_note)}" data-multiple="{esc(multiple_note)}">'
+        'Bars share one scale. Golden State fills the row. '
         'The white mark on that bar is Atlanta at $16 million, about one fifth of the way across. '
         'Tied teams share one rank and are listed alphabetically. That order is not a ranking.</p>'
         f'<ol class="rev-rows">{"".join(parts)}</ol>'
@@ -855,7 +898,16 @@ html body .byline-row.article{display:flex;align-items:center;gap:10px 12px;marg
 .scale-total .scale-value{color:#b8006f!important}
 .scale-label{margin:8px 0 0;font-size:16px;line-height:1.3;font-weight:700}
 .scale-meta{margin:4px 0 0;font-size:15px;line-height:1.35}
+.page{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
 .rev-stage{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+.rev-compare{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 16px;margin:0;padding:12px 14px;border:1px solid #e2ddd6;background:#fff}
+.rev-field{display:flex;flex-direction:column;gap:6px;min-width:0;flex:1 1 200px;font:700 13px/1.2 Inter,system-ui,sans-serif;color:#2a2622}
+.rev-field select{min-height:44px;padding:0 34px 0 12px;border:1px solid #c9c2b8;border-radius:6px;background:#fff;color:#151413;font:600 16px/1.2 Inter,system-ui,sans-serif}
+.rev-result{flex:1 1 100%;margin:0;font:600 15px/1.4 Inter,system-ui,sans-serif;color:#2a1458}
+.rev-result:empty{display:none}
+.rev-chart-title{margin:0 0 6px;font:800 clamp(20px,2.4vw,26px)/1.15 "Barlow",sans-serif;letter-spacing:-.2px;color:#151413}
+.rev-rows[data-metric="valuation"] .rev-band-label,.rev-rows[data-metric="multiple"] .rev-band-label,.rev-rows[data-metric="valuation"] .rev-notch,.rev-rows[data-metric="multiple"] .rev-notch{display:none}
+.rev-rows[data-metric="valuation"] .is-cluster,.rev-rows[data-metric="multiple"] .is-cluster{background:transparent;box-shadow:none;border-radius:0;margin-bottom:0}
 .rev-chart{position:relative;min-width:0;padding:18px 16px 8px;border:1px solid #e2ddd6;background:#fff;box-shadow:0 1px 3px rgba(40,20,80,.06);overflow:hidden}
 .rev-chart::before{content:"";display:block;height:5px;margin:-18px -16px 14px;background:linear-gradient(90deg,#5b22c9,#b8006f 62%,#c25e00)}
 .rev-chart-note{max-width:68ch;margin:0 0 12px;color:#5a554e!important;font-size:15px;line-height:1.45}
@@ -946,7 +998,10 @@ h1{font-size:34px}
 .fold:not([open])>.fold-body{display:block}
 }
 @media(min-width:980px){
-.rev-stage{grid-template-columns:minmax(0,1.6fr) minmax(280px,.72fr);gap:28px}
+.rev-stage{grid-template-columns:minmax(0,1.6fr) minmax(280px,.72fr);gap:18px 28px}
+.rev-compare{grid-column:1 / -1}
+.rev-chart{grid-column:1}
+.rev-table-col{grid-column:2}
 }
 @media(min-width:1100px){
 .data-layout{display:grid;grid-template-columns:180px minmax(0,1fr);column-gap:28px;align-items:start}

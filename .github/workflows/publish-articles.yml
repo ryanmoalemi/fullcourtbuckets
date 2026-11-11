@@ -24,6 +24,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE: '1'
         run: |
           python automation/publish_articles.py
+          python automation/build_data_hub.py
           python automation/seo_meta.py
           # Same guard as the data refresh: do not stamp a stale where-to-watch title.
           FCB_NO_LOGO_FETCH=1 python automation/build_where_to_watch.py

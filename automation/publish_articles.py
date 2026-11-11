@@ -315,7 +315,7 @@ ODD_RE = re.compile(r'^!odd:\s*(.+)$')
 _PLAYER_CELL_RE = re.compile(r'<a class="inline-link" href="(/wnba/([a-z0-9-]+)/)"')
 _NON_PLAYER_SLUGS = frozenset({
     'teams', 'assets', 'couples', 'viewership-attendance', 'team-revenue',
-    'owners', 'where-to-watch', 'finals',
+    'owners', 'where-to-watch', 'finals', 'data',
 })
 _LICENSED_SLUGS: set[str] | None = None
 

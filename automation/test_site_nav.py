@@ -237,7 +237,7 @@ class SiteNavTests(unittest.TestCase):
         labels = [item['label'] for item in menu]
         self.assertEqual(
             labels,
-            ['Home', 'News', 'Playoffs', 'Players', 'Teams', 'Standings', 'About'],
+            ['Home', 'News', 'Playoffs', 'Players', 'Teams', 'Standings', 'Data & research', 'About'],
         )
         playoffs = next(item for item in menu if item['label'] == 'Playoffs')
         self.assertTrue(playoffs.get('highlight'))

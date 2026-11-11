@@ -169,6 +169,7 @@ jobs:
           # Unique, in-range titles and meta descriptions on every page (data/seo-meta.json + family rules).
           # Where to watch takes its title and description from data/where-to-watch-bars.csv.
           # seo_meta.py and the page builder both stop if that file has fewer venues than the page.
+          python automation/build_data_hub.py
           python automation/seo_meta.py
           FCB_NO_LOGO_FETCH=1 python automation/build_where_to_watch.py
           # Visible breadcrumbs above the H1 + BreadcrumbList JSON-LD + homepage H1 (owner SEO rule).
