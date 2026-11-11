@@ -3365,6 +3365,158 @@
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
       "changes": "cropped, background removed",
       "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "eliska-joklova": {
+      "author": "Zafer",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Eli%C5%A1ka_Hamzov%C3%A1_10_Czechia_20250625_(4).jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "ad-durr": {
+      "author": "johnmac612",
+      "file_url": "https://commons.wikimedia.org/wiki/File:230523_Lynx_Dreaml_JohnMc67.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "cheryl-ford": {
+      "author": "Dave Hogg from Royal Oak, MI, USA",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Cheryl_and_Plenette_(633882629).jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "courtney-paris": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Paris-20180912.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "evgeniia-belyakova": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Evgeniya_Belyakova_68.JPG",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "jacki-gemelos": {
+      "author": "Neon Tommy",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jacki_Gemelos_in_2011.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "jasmine-hassell": {
+      "author": "Chris93",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jasmine_Hassel_-_Katia_Clanet.JPG",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "jennie-simms": {
+      "author": "Kobi Gideon",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jennie_Simms_in_Drive_in_Arena,_March_2022_(KBG_GPO1601)_(cropped).jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "jennifer-hamson": {
+      "author": "Sergeev Pavel",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Jennifer_Hamson_66.jpg",
+      "license": "CC0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "kaela-davis": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Davis2-20180523.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "keisha-hampton": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Keisha_Hampton_20161011.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "kelly-santos": {
+      "author": "Legnar19",
+      "file_url": "https://commons.wikimedia.org/wiki/File:KELLYSANTOS.jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "kristen-mann": {
+      "author": "Hegor",
+      "file_url": "https://commons.wikimedia.org/wiki/File:3406-Mann.jpg",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "linnae-harper": {
+      "author": "Lorie Shaull",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Linnae_Harper_(23)_handles_the_ball_around_Sydney_Colson_(51).jpg",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "marie-guelich": {
+      "author": "Ailura",
+      "file_url": "https://commons.wikimedia.org/wiki/File:20260905_WBWC_GER_JPN_3528.jpg",
+      "license": "CC BY-SA 3.0 AT",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "megan-walker": {
+      "author": "David Beasley",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Megan_Walker.jpg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "mikiah-herbert-harrigan": {
+      "author": "Katie Dugan, GamecockCentral",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Kiki_Herber_Harrigan.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "sancho-lyttle": {
+      "author": "SusanLesch",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Lyttle6-20180601.jpg",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
+    },
+    "victaria-saxton": {
+      "author": "Katie Dugan, Gamecock Central",
+      "file_url": "https://commons.wikimedia.org/wiki/File:Victaria_Saxton.jpg",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "changes": "cropped, background removed",
+      "qa": "pass 2026-11-11: edges checked at 200% on dark and light backgrounds"
     }
   }
 }
