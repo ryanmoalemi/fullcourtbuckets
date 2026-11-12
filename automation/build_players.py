@@ -2888,6 +2888,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         if scored:
             top[key] = max(scored, key=lambda row: float(row[key]))
     lead = team_extras.lead_html(root, slot, standing, count)
+    key_fact = team_extras.key_fact_html(slot)
     ranks = team_extras.ranks_html(root, slot)
     schedule = team_extras.playoff_html(root, slot)
     franchise = team_extras.franchise_html(root, slot)
@@ -2909,7 +2910,7 @@ def team_page(slot, include_standings=True, menu=None, stories='', root=None):
         stories = team_season.stories_section(root, slot)
         import team_coverage
         coverage = team_coverage.section_html(root, slot)
-    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1>{lead}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{ranks}{schedule}{season_schedule}{history}{stories}{season}{franchise}{faq_section}{download}{conf}{standings_link}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
+    body=f'''<div class="breadcrumbs"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/teams/">Teams</a><span aria-hidden="true">/</span><span>{esc(name)}</span></div><section class="directory-header"><p class="eyebrow">WNBA team</p><h1>{esc(name)}</h1>{lead}{key_fact}</section><section class="section" id="roster"><p class="eyebrow">Current roster</p><h2>Players</h2>{roster}</section>{leader_html}{ranks}{schedule}{season_schedule}{history}{stories}{season}{franchise}{faq_section}{download}{conf}{standings_link}<p>{links.inline_link('All teams', '/wnba/teams/')}</p><p>{links.inline_link('All players', '/wnba/')}</p>{coverage}'''
     structured={'@context':'https://schema.org','@graph':[
         {'@type':'SportsTeam','name':name,'url':BASE+route,'sport':'Basketball'},
         {'@type':'BreadcrumbList','itemListElement':[

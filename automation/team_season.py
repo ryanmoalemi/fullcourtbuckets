@@ -641,5 +641,7 @@ def patch_team_html(page: str, root: Path, slot: dict, standing: dict | None) ->
             raise ValueError(f'{slot.get("slug")} is missing the All teams link')
         paragraph = page.rfind('<p>', 0, marker)
         page = page[:paragraph] + stories + page[paragraph:]
+    import team_page_extras as team_extras
+    page = team_extras.apply_key_fact(page, slot)
     import team_coverage
     return team_coverage.apply_html(page, root, slot)

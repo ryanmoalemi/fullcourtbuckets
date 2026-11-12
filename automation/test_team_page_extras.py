@@ -45,6 +45,31 @@ class TeamPageExtrasTests(unittest.TestCase):
         self.assertIn('class="breadcrumbs"', page)
 
 
+    def test_sun_header_notes_the_houston_move(self):
+        fact = tx.key_fact_html({'slug': 'connecticut-sun'})
+        self.assertIn('Houston Comets', fact)
+        self.assertIn(tx.SUN_SALE_URL, fact)
+        self.assertNotIn('\u2014', fact)
+        self.assertEqual(tx.key_fact_html({'slug': 'new-york-liberty'}), '')
+        stub = (
+            '<main><section class="directory-header"><h1>Connecticut Sun</h1>'
+            '<p class="team-lead">Lead.</p></section>'
+            '<section id="roster"></section></main>'
+        )
+        updated = tx.apply_key_fact(stub, {'slug': 'connecticut-sun'})
+        self.assertIn('class="team-key-fact"', updated)
+        self.assertLess(updated.find('team-key-fact'), updated.find('id="roster"'))
+        self.assertEqual(updated.count('class="team-key-fact"'), 1)
+        self.assertEqual(tx.apply_key_fact(updated, {'slug': 'connecticut-sun'}).count('class="team-key-fact"'), 1)
+        published = (ROOT / 'wnba' / 'teams' / 'connecticut-sun' / 'index.html').read_text(encoding='utf-8')
+        start = published.find('<section class="directory-header">')
+        end = published.find('</section>', start)
+        header = published[start:end]
+        self.assertIn('class="team-key-fact"', header)
+        self.assertIn(tx.SUN_SALE_URL, header)
+        self.assertLess(published.find('team-key-fact'), published.find('id="roster"'))
+        self.assertNotIn('\u2014', header)
+
 class TeamPagePhaseTwoTests(unittest.TestCase):
     def test_fallback_avatar_uses_initials(self):
         html = tx.headshot_html(ROOT, 'no-such-player-slug', 'Matilde Villa')
