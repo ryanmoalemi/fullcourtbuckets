@@ -103,6 +103,14 @@ class LotteryPage(unittest.TestCase):
             self.assertIn(needle, self.html)
         self.assertNotIn('href="/wnba/teams/houston', self.html)
 
+
+    def test_houston_links_name_the_connecticut_sun(self):
+        self.assertIn('href="/wnba/teams/connecticut-sun/">Houston (formerly Connecticut Sun)</a>', self.html)
+        self.assertIn('href="/wnba/teams/connecticut-sun/">Houston Comets (formerly Connecticut Sun)</a>', self.html)
+        self.assertGreaterEqual(self.html.count('>Houston (formerly Connecticut Sun)<'), 2)
+        self.assertNotIn('href="/wnba/teams/connecticut-sun/">Houston</a>', self.html)
+        self.assertNotIn('href="/wnba/teams/connecticut-sun/">Houston Comets</a>', self.html)
+
     def test_results_file_can_lock_the_simulator(self):
         data = json.loads(RESULTS.read_text(encoding='utf-8'))
         self.assertEqual(data['status'], 'pending')

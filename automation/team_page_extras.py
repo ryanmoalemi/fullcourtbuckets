@@ -148,6 +148,34 @@ def lead_html(root, slot: dict, standing: dict | None, count: int) -> str:
     return dynamic('p', 'team-status', 'api/wnba-standings', standings_day(root), esc(sentence), ' class="team-lead"')
 
 
+
+SUN_SALE_URL = 'https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale'
+_KEY_FACT_RE = re.compile(r'<p class="team-key-fact">.*?</p>', re.S)
+
+
+def key_fact_html(slot: dict) -> str:
+    """One-line franchise fact under the lead. Empty for teams that do not need one."""
+    if (slot or {}).get('slug') != 'connecticut-sun':
+        return ''
+    return (
+        '<p class="team-key-fact">The franchise plays as the Houston Comets starting in 2027, per the '
+        f'<a href="{esc(SUN_SALE_URL)}" target="_blank" rel="noopener">WNBA and NBA sale approval of May 13, 2026</a>.</p>'
+    )
+
+
+def apply_key_fact(page: str, slot: dict) -> str:
+    """Keep the key fact inside the directory header, just after the lead."""
+    fact = key_fact_html(slot)
+    page = _KEY_FACT_RE.sub('', page)
+    if not fact:
+        return page
+    start = page.find('<section class="directory-header">')
+    end = page.find('</section>', start)
+    if start < 0 or end < 0:
+        raise ValueError(f'{slot.get("slug")} is missing a directory header')
+    return page[:end] + fact + page[end:]
+
+
 RANK_LABELS = (('ppg', 'Points'), ('rpg', 'Rebounds'), ('apg', 'Assists'), ('oppg', 'Points allowed'))
 
 

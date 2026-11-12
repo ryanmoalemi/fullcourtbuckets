@@ -41,8 +41,8 @@ TOTAL = 1000
 # over Toronto, so Houston is first and cannot land past pick 3.
 SLOTS = [
     {
-        'id': 'HOU', 'circle': 'HOU', 'team': 'Houston Comets', 'short': 'Houston',
-        'label': 'Houston', 'href': '/wnba/teams/connecticut-sun/',
+        'id': 'HOU', 'circle': 'HOU', 'team': 'Houston Comets (formerly Connecticut Sun)', 'short': 'Houston',
+        'label': 'Houston (formerly Connecticut Sun)', 'href': '/wnba/teams/connecticut-sun/',
         'chances': 329, 'record': '22-66', 'record_scope': '2025 and 2026',
         'original': 'Houston', 'facts': 'Connecticut Sun',
     },
@@ -1203,7 +1203,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .lot-id{display:flex;align-items:center;gap:8px;min-width:0;min-height:28px}
 .lot-avatar{width:28px;height:28px;border-radius:50%;object-fit:cover;object-position:center 18%;flex:none}
 .lot-initials{display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 9px/1 Barlow,sans-serif}
-.lot-id a{min-height:0;font:800 14px/1.15 Barlow,sans-serif;color:#2a1458;text-decoration:none}
+.lot-id a{min-height:0;flex:1 1 auto;min-width:0;font:800 14px/1.15 Barlow,sans-serif;color:#2a1458;text-decoration:none}
 .lot-rec{margin-left:auto;flex:none;font:600 12px/1 Inter,system-ui,sans-serif;color:#6b665e}
 .article .lot-card p{margin:0}
 .article .lot-stats{display:flex;gap:16px;font:800 20px/1.1 Barlow,sans-serif;color:#2a1458}
@@ -1227,7 +1227,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .need-body{padding:10px 12px 12px}
 .need-head{display:flex;align-items:center;gap:8px;margin:0 0 8px}
 .need-head .lot-avatar{width:32px;height:32px}
-.need-head h3{margin:0;font:800 20px/1.15 Barlow,sans-serif}
+.need-head h3{margin:0;min-width:0;font:800 20px/1.15 Barlow,sans-serif}
 .need-head a{color:#2a1458;text-decoration:none}
 .need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
 .need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
