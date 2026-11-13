@@ -1144,7 +1144,10 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'</picture><figcaption>{photo_credit(HERO)}</figcaption></figure>'
     )
     stakes = (
-        '<p class="lead">The Connecticut Sun played their last season in Connecticut in 2026 '
+        '<p class="lead">The 2027 WNBA Draft Lottery is Sunday, Nov. 15, 2026, from 4:30 to 5:00 p.m. PT '
+        '(7:30 to 8:00 p.m. ET) on ESPN, after UConn vs. Louisville, and on TSN in Canada. '
+        'The draft itself is Monday, April 12, 2027.</p>'
+        '<p>The Connecticut Sun played their last season in Connecticut in 2026 '
         'and will enter 2027 as the Houston Comets, after the WNBA and NBA approved the sale '
         'and relocation on May 13, 2026. Toronto just finished an 11-33 expansion debut. '
         'The top of this draft is expected to turn on JuJu Watkins, the USC guard who is '
@@ -1177,9 +1180,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f"P(second | first) = remaining chances / (1,000 minus the winner's chances). "
         f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
         "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
-        'The drawing is Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
-        'on ESPN after UConn vs. Louisville and on TSN in Canada. This is the lottery, not the April 12, 2027 draft, '
-        'and not the April 3, 2026 expansion draft.</p>'
+        'This is the lottery, not the April 12, 2027 draft, and not the April 3, 2026 expansion draft.</p>'
         f'<p class="table-note" id="methods-footnote">Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
         f'and the two orders together = {pct(both_orders, 1)}%.</p>'
     )
