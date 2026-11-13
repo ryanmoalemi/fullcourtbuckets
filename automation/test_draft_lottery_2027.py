@@ -262,6 +262,48 @@ process.stdout.write(out.join('\n'));
         self.assertIn('href="/news/wnba-free-agents-2027/"', self.html)
         self.assertNotIn('/data/wnba-2026-players-by-service-class.csv', self.html)
 
+    def test_key_findings_summary_and_page_order(self):
+        html = self.html
+        self.assertIn(
+            "Houston and Toronto each have a 61.7% top-two chance. "
+            "Houston can't fall below No. 3, while Toronto drops to No. 4 8.8% of the time. "
+            "Washington (from Chicago) has a 35.0% top-two chance and a 67.3% top-three chance.",
+            html,
+        )
+        self.assertIn('id="lottery-summary"', html)
+        self.assertIn('>61.7%</td><td data-label="Top three">100.0%</td>', html)
+        self.assertIn('>61.7%</td><td data-label="Top three">91.2%</td><td data-label="Exactly No. 2 or No. 3">58.3%</td><td data-label="Worst pick">No. 4</td>', html)
+        self.assertIn('>35.0%</td><td data-label="Top three">67.3%</td><td data-label="Exactly No. 2 or No. 3">51.2%</td><td data-label="Worst pick">No. 5</td>', html)
+        self.assertIn('>21.1%</td><td data-label="Top three">21.1%</td><td data-label="Exactly No. 2 or No. 3">11.8%</td><td data-label="Worst pick">No. 6</td>', html)
+        self.assertIn('>12.0%</td><td data-label="Top three">12.0%</td><td data-label="Exactly No. 2 or No. 3">6.8%</td><td data-label="Worst pick">No. 7</td>', html)
+        self.assertIn('>5.6%</td><td data-label="Top three">5.6%</td><td data-label="Exactly No. 2 or No. 3">3.2%</td><td data-label="Worst pick">No. 7</td>', html)
+        self.assertIn('>2.8%</td><td data-label="Top three">2.8%</td><td data-label="Exactly No. 2 or No. 3">1.6%</td><td data-label="Worst pick">No. 7</td>', html)
+        self.assertIn("Calculations: Full Court Buckets, using the WNBA's published lottery allocations and drawing rules.", html)
+        self.assertIn('329/1000 x 329/671 = 16.1313%', html)
+        self.assertIn('the two orders together = 32.3%', html)
+        self.assertIn("FCB's calculated odds dataset is available under CC0", html)
+        self.assertIn('mailto:ryan@fullcourtbuckets.com', html)
+        self.assertIn('The seven lottery slots are held by six teams.', html)
+        self.assertIn('>Lottery results</h2>', html)
+        self.assertIn('Results will appear here after the Nov. 15, 2026 drawing.', html)
+        self.assertIn('id="prelottery-odds"', html)
+        self.assertIn("fetch('/data/wnba-draft-lottery-2027-results.json'", html)
+        self.assertIn("data.status !== 'final'", html)
+        self.assertLess(html.index('class="lead"'), html.index('id="lottery-summary"'))
+        self.assertLess(html.index('id="lottery-summary"'), html.index('id="prelottery-odds"'))
+        self.assertLess(html.index('id="prelottery-odds"'), html.index('id="calculations"'))
+        self.assertLess(html.index('id="calculations"'), html.index('id="how"'))
+        self.assertLess(html.index('id="how"'), html.index('id="simulator"'))
+        self.assertLess(html.index('id="simulator"'), html.index('id="prospects"'))
+        self.assertLess(html.index('id="prospects"'), html.index('id="live-results"'))
+        self.assertLess(html.index('id="live-results"'), html.index('id="faq"'))
+        # The Nov. 15 live-results routine writes the JSON; this page must keep reading it.
+        self.assertTrue((ROOT / 'data' / 'wnba-draft-lottery-2027-outcomes.csv').is_file())
+        with (ROOT / 'data' / 'wnba-draft-lottery-2027-outcomes.csv').open(encoding='utf-8') as handle:
+            rows = list(__import__('csv').DictReader(handle))
+        self.assertEqual(len(rows), 42)
+        self.assertEqual(sum(Fraction(row['probability_fraction']) for row in rows), 1)
+
     def test_phone_odds_cards_drop_zero_rows(self):
         cards = re.findall(r'<article class="lot-card">.*?</article>', self.html, re.S)
         self.assertEqual(len(cards), 7)
