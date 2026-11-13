@@ -604,28 +604,35 @@ _BAR_CACHE: dict = {'token': None, 'item': None, 'html': ''}
 
 
 def _catalog_token() -> tuple | None:
-    path = _REPO / 'articles.json'
-    try:
-        stat = path.stat()
-    except OSError:
-        return None
-    return (stat.st_mtime_ns, stat.st_size)
+    parts = []
+    for path in (_REPO / 'articles.json', _REPO / 'content' / 'new-bar-pin.json'):
+        try:
+            stat = path.stat()
+        except OSError:
+            parts.append(None)
+        else:
+            parts.append((stat.st_mtime_ns, stat.st_size))
+    return tuple(parts)
 
 
 def load_now() -> dict:
-    """The article the New bar is showing. Derived, never hand-edited."""
+    """The article the New bar is showing. A pin file overrides the catalog."""
     return now_item()
 
 
 def now_item(now=None) -> dict:
-    """Newest published article. `now` does not expire or replace it."""
+    """Pinned story, or the newest published article if no pin is set."""
     del now
     token = _catalog_token()
     if _BAR_CACHE['token'] == token and _BAR_CACHE['item'] is not None:
         return _BAR_CACHE['item']
     path = _REPO / 'articles.json'
-    articles = links.load_articles(_REPO) if path.is_file() else []
-    item = links.latest_published_article(articles, _REPO) or links.EMPTY_TICKER
+    pin = links.load_new_bar_pin(_REPO)
+    if pin:
+        item = links.ticker_item_from_article(pin)
+    else:
+        articles = links.load_articles(_REPO) if path.is_file() else []
+        item = links.latest_published_article(articles, _REPO) or links.EMPTY_TICKER
     _BAR_CACHE['token'] = token
     _BAR_CACHE['item'] = item
     _BAR_CACHE['html'] = links.ticker_bar_html(item)

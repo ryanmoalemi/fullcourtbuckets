@@ -3576,7 +3576,7 @@ def build(root: Path):
         if 'Full Court Buckets' not in original:
             raise BuildError('Homepage safety check failed; not changing navigation.')
         text=site_nav.install(
-            links.apply_homepage(original, links.load_articles(root), homepage_rail.load_rail(root, original)),
+            links.apply_homepage(original, links.load_articles(root), homepage_rail.load_rail(root, original), pin=links.load_new_bar_pin(root)),
             '/',
             menu,
         )
@@ -3716,6 +3716,7 @@ def refresh_published_news(root: Path | None = None) -> int:
                 homepage_text,
                 links.load_articles(root),
                 homepage_rail.load_rail(root, homepage_text),
+                pin=links.load_new_bar_pin(root),
             ),
             '/',
             menu,

@@ -23,25 +23,48 @@ class NowBarTests(unittest.TestCase):
         articles = links.load_articles(ROOT)
         item = links.latest_published_article(articles, ROOT)
         self.assertIsNotNone(item)
-        data = site_nav.load_now()
-        self.assertEqual(data['url'], item['url'])
-        self.assertEqual(data['text'], item['text'])
-        self.assertEqual(data['date'], item['date'])
-        self.assertNotIn('tonight', data['text'].lower())
-        self.assertNotIn('\u2014', data['text'])
-        self.assertNotIn(GAME7, data['text'])
-        self.assertTrue(_exists(data['url']), data['url'])
-        self.assertIn(item['title'], data['text'])
-        if item['description'] and item['description'].casefold() not in item['title'].casefold():
-            self.assertIn(item['description'], data['text'])
-        bar = site_nav.now_bar_html()
-        self.assertNotIn('data-expires', bar)
-        self.assertNotIn('data-fallback', bar)
-        self.assertIn(f'href="{item["url"]}"', bar)
         news = (ROOT / 'news' / 'index.html').read_text(encoding='utf-8')
         first = re.search(r'<a class="news-item" href="([^"]+)"', news)
         self.assertIsNotNone(first)
         self.assertEqual(first.group(1), item['url'])
+        pin = links.load_new_bar_pin(ROOT)
+        data = site_nav.load_now()
+        bar = site_nav.now_bar_html()
+        if pin:
+            self.assertEqual(data['url'], pin['url'])
+            self.assertEqual(data['text'], pin['text'])
+            self.assertIn(f'href="{pin["url"]}"', bar)
+            self.assertIn('2027 WNBA Draft Lottery odds', data['text'])
+        else:
+            self.assertEqual(data['url'], item['url'])
+            self.assertEqual(data['text'], item['text'])
+            self.assertEqual(data['date'], item['date'])
+            self.assertIn(item['title'], data['text'])
+            if item['description'] and item['description'].casefold() not in item['title'].casefold():
+                self.assertIn(item['description'], data['text'])
+            self.assertIn(f'href="{item["url"]}"', bar)
+        self.assertNotIn('tonight', data['text'].lower())
+        self.assertNotIn('\u2014', data['text'])
+        self.assertNotIn(GAME7, data['text'])
+        self.assertTrue(_exists(data['url']), data['url'])
+        self.assertNotIn('data-expires', bar)
+        self.assertNotIn('data-fallback', bar)
+
+    def test_pin_file_overrides_the_newest_article(self):
+        pin = links.load_new_bar_pin(ROOT)
+        self.assertIsNotNone(pin)
+        self.assertEqual(pin['url'], '/wnba/draft-lottery-2027/')
+        self.assertEqual(pin['title'], '2027 WNBA Draft Lottery odds')
+        item = links.ticker_item_from_article(pin)
+        self.assertEqual(item['text'], '2027 WNBA Draft Lottery odds')
+        self.assertEqual(site_nav.load_now()['url'], '/wnba/draft-lottery-2027/')
+        disabled = dict(pin)
+        # load_new_bar_pin should ignore enabled: false
+        import json, tempfile
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / 'content').mkdir()
+        (tmp / 'content' / 'new-bar-pin.json').write_text(json.dumps({'enabled': False, 'url': '/wnba/draft-lottery-2027/', 'title': 'X'}), encoding='utf-8')
+        self.assertIsNone(links.load_new_bar_pin(tmp))
 
     def test_same_day_clock_time_beats_a_date_only_value(self):
         articles = [

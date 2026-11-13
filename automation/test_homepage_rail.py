@@ -277,7 +277,8 @@ class HomepageRailTests(unittest.TestCase):
     def test_published_ticker_is_the_newest_article(self):
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         articles = json.loads((ROOT / 'articles.json').read_text(encoding='utf-8'))
-        item = links.latest_published_article(articles, ROOT)
+        pin = links.load_new_bar_pin(ROOT)
+        item = links.ticker_item_from_article(pin) if pin else links.latest_published_article(articles, ROOT)
         self.assertIsNotNone(item)
         match = re.search(r'<div class="ticker[^"]*"[^>]*data-item-date="(\d{4}-\d{2}-\d{2})"', home)
         self.assertIsNotNone(match)
@@ -285,10 +286,16 @@ class HomepageRailTests(unittest.TestCase):
         bar = home.split('class="ticker', 1)[1].split('</div></div></div>', 1)[0]
         self.assertIn(html.escape(item['text'], quote=True), bar)
         self.assertIn(f'href="{item["url"]}"', bar)
+        if pin:
+            self.assertEqual(item['url'], '/wnba/draft-lottery-2027/')
+            self.assertIn('href="/wnba/draft-lottery-2027/"', featured if False else bar)
         self.assertNotIn('tonight', bar.lower())
         self.assertNotIn('Game 7 recap:', bar)
         featured = home.split('id="latest"', 1)[1].split('id="home-rail"', 1)[0]
         self.assertIn('class="article-card" id="featured-story"', featured)
+        if links.load_new_bar_pin(ROOT):
+            self.assertIn('href="/wnba/draft-lottery-2027/"', featured)
+            self.assertIn('2027 WNBA Draft Lottery odds', featured)
         self.assertIn('class="article-visual"', featured)
         self.assertIn('class="article-copy"', featured)
         self.assertNotIn('feature-credit', featured)

@@ -751,7 +751,7 @@ def main() -> None:
     insert_listing('news/index.html', '<ol class="news-list">', card)
     insert_listing('authors/ryan-moalemi/index.html', '<h2>Stories</h2>\n<ol class="news-list">', card)
     home = ROOT / 'index.html'
-    home.write_text(links.apply_homepage(home.read_text(encoding='utf-8'), articles), encoding='utf-8')
+    home.write_text(links.apply_homepage(home.read_text(encoding='utf-8'), articles, pin=links.load_new_bar_pin(ROOT)), encoding='utf-8')
     sitemap = ROOT / 'pages-sitemap.xml'
     sitemap.write_text(links.sync_news_sitemap(sitemap.read_text(encoding='utf-8'), articles), encoding='utf-8')
     (ROOT / 'search-index.json').write_text(site_nav.search_index_document(ROOT), encoding='utf-8')
