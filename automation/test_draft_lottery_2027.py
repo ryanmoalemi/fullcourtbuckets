@@ -49,6 +49,20 @@ class LotteryMath(unittest.TestCase):
                 shown = Fraction(row[f'pick_{index + 1}_fraction'])
                 self.assertEqual(shown, self.table[row['slot_id']][index])
         self.assertEqual(rows[0]['method'], 'exact enumeration of 42 ordered pairs')
+        expected = {
+            'HOU': '2.0537',
+            'TOR': '2.1417',
+            'WAS': '2.8381',
+            'SEA': '3.6730',
+            'POR': '4.6679',
+            'LAL': '5.7788',
+            'LAL-PHX': '6.8467',
+        }
+        for row in rows:
+            slot = row['slot_id']
+            computed = lottery.dec(sum(Fraction(k + 1) * self.table[slot][k] for k in range(7)), 4)
+            self.assertEqual(row['expected_pick'], computed, slot)
+            self.assertEqual(row['expected_pick'], expected[slot], slot)
 
 
 class LotteryPage(unittest.TestCase):
@@ -229,6 +243,24 @@ process.stdout.write(out.join('\n'));
         self.assertNotIn('class="team-shot"', self.html)
         self.assertNotIn('Minute-weighted age is', self.html)
         self.assertIn('class="face"', self.html)
+
+    def test_expected_pick_correction_and_no_free_agent_badges(self):
+        self.assertIn(
+            "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged.",
+            self.html,
+        )
+        self.assertIn('"dateModified": "2026-11-12"', self.html)
+        self.assertIn('"datePublished": "2026-11-09"', self.html)
+        self.assertNotIn('\u2014', self.html)
+        self.assertNotIn('>Unrestricted<', self.html)
+        self.assertNotIn('unrestricted if the contract ends', self.html)
+        self.assertNotIn('marks UFA', self.html)
+        self.assertNotIn('player rows are unrestricted', self.html)
+        for meta in re.findall(r'class="need-meta">([^<]+)', self.html):
+            self.assertNotRegex(meta, r'\b(UFA|RFA|Reserved)\b', meta)
+        # The page still links the free-agency article, but does not use that file for badges.
+        self.assertIn('href="/news/wnba-free-agents-2027/"', self.html)
+        self.assertNotIn('/data/wnba-2026-players-by-service-class.csv', self.html)
 
     def test_phone_odds_cards_drop_zero_rows(self):
         cards = re.findall(r'<article class="lot-card">.*?</article>', self.html, re.S)

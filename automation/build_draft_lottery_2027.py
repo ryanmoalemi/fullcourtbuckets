@@ -31,6 +31,7 @@ DESCRIPTION = (
     'team needs, live results, and a free CSV. Drawing: Nov. 15, 2026.'
 )
 PUBLISHED = '2026-11-09'
+MODIFIED = '2026-11-12'
 CSV_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-odds.csv'
 RESULTS_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-results.json'
 PAGE_PATH = ROOT / 'wnba' / 'draft-lottery-2027' / 'index.html'
@@ -279,6 +280,13 @@ def pct(fr: Fraction, places: int) -> str:
     return format(val.quantize(quant, rounding=ROUND_HALF_UP), f'.{places}f')
 
 
+def dec(fr: Fraction, places: int) -> str:
+    """Format a fraction as a decimal, rounding only at the end. Not a percentage."""
+    quant = Decimal('1').scaleb(-places)
+    val = Decimal(fr.numerator) / Decimal(fr.denominator)
+    return format(val.quantize(quant, rounding=ROUND_HALF_UP), f'.{places}f')
+
+
 def pair_probability(first: str, second: str) -> Fraction:
     return Fraction(CHANCES[first], TOTAL) * Fraction(CHANCES[second], TOTAL - CHANCES[first])
 
@@ -353,7 +361,7 @@ def write_csv(rows: list[dict]) -> None:
             cells += [pct(prob, 6) for prob in row['probs']]
             cells += [f'{prob.numerator}/{prob.denominator}' for prob in row['probs']]
             cells += [pct(row['top2'], 6), f"{row['top2'].numerator}/{row['top2'].denominator}"]
-            cells += [pct(row['expected'], 4), 'exact enumeration of 42 ordered pairs']
+            cells += [dec(row['expected'], 4), 'exact enumeration of 42 ordered pairs']
             writer.writerow(cells)
 
 
@@ -396,26 +404,17 @@ def _norm(name: str) -> str:
 
 
 def team_needs() -> list[dict]:
-    """2026 regular-season minutes from the player file, classes from the free-agency CSV."""
+    """2026 regular-season minutes from the player file, ages from the roster snapshot."""
     facts = json.loads((ROOT / 'data' / 'wnba' / 'team-facts.json').read_text(encoding='utf-8'))
     ages = {}
     for slot in SLOTS:
         block = facts['teams'].get(slot['facts']) or {}
         for person, info in (block.get('roster') or {}).items():
             ages[(slot['facts'], _norm(person))] = info.get('age')
-    classes = {}
-    with (ROOT / 'news' / 'wnba-free-agents-2027' / 'data' / 'wnba-2026-players-by-service-class.csv').open(encoding='utf-8') as handle:
-        for row in csv.DictReader(handle):
-            classes[(row['slug'], row['team_abbr'])] = row
-    abbr = {
-        'Connecticut Sun': 'CON', 'Toronto Tempo': 'TOR', 'Washington Mystics': 'WSH',
-        'Seattle Storm': 'SEA', 'Portland Fire': 'POR', 'Los Angeles Sparks': 'LA',
-    }
     buckets: dict[str, dict] = {}
     for slot in SLOTS:
         buckets[slot['id']] = {
             'slot': slot, 'positions': {}, 'players': [], 'minutes': 0.0, 'age_minutes': 0.0, 'age_sum': 0.0,
-            'classes': {},
         }
     by_facts = {slot['facts']: slot['id'] for slot in SLOTS}
     # Two LA slots share one roster. Attach minutes to LAL only, then copy the card.
@@ -429,11 +428,10 @@ def team_needs() -> list[dict]:
             if season.get('season') != 2026 or season.get('season_type') != 2:
                 continue
             team = season.get('team') or {}
-            code = abbr.get(team.get('full_name') or '')
             slot_id = by_facts.get(team.get('full_name') or '')
             if slot_id == 'LAL-PHX':
                 slot_id = 'LAL'
-            if not slot_id or not code:
+            if not slot_id:
                 continue
             games = float(season.get('games_played') or 0)
             minutes = float(season.get('min') or 0) * games
@@ -447,16 +445,10 @@ def team_needs() -> list[dict]:
             if isinstance(age, (int, float)):
                 bucket['age_minutes'] += minutes
                 bucket['age_sum'] += minutes * float(age)
-            fa = classes.get((slug, code)) or {}
             bucket['players'].append({
                 'name': name, 'slug': slug, 'position': position, 'minutes': minutes,
                 'points': points, 'age': age if isinstance(age, (int, float)) else None,
-                'klass': fa.get('projected_class') or '',
             })
-            if fa:
-                cell = bucket['classes'].setdefault(fa['projected_class'], {'minutes': 0.0, 'players': 0})
-                cell['minutes'] += float(fa['minutes'] or 0)
-                cell['players'] += 1
     cards = []
     for slot in SLOTS:
         source_id = 'LAL' if slot['id'] == 'LAL-PHX' else slot['id']
@@ -476,18 +468,6 @@ def team_needs() -> list[dict]:
             age = bucket['age_sum'] / bucket['age_minutes']
             coverage = 100 * bucket['age_minutes'] / bucket['minutes']
         leaders = sorted(bucket['players'], key=lambda item: -item['minutes'])[:4]
-        class_minutes = sum(cell['minutes'] for cell in bucket['classes'].values()) or 1
-        class_rows = []
-        for name in ('UFA', 'RFA', 'Reserved'):
-            cell = bucket['classes'].get(name)
-            if not cell:
-                continue
-            class_rows.append({
-                'name': name,
-                'minutes': int(round(cell['minutes'])),
-                'players': cell['players'],
-                'share': f"{100 * cell['minutes'] / class_minutes:.1f}",
-            })
         cards.append({
             'slot': slot,
             'minutes': int(round(bucket['minutes'])),
@@ -495,17 +475,9 @@ def team_needs() -> list[dict]:
             'positions': positions,
             'age': None if age is None else f'{age:.1f}',
             'age_coverage': f'{coverage:.0f}',
-            'classes': class_rows,
             'leaders': leaders,
         })
     return cards
-
-
-CLASS_WORDS = {
-    'UFA': 'unrestricted if the contract ends',
-    'RFA': 'restricted if a qualifying offer is sent',
-    'Reserved': 'reserved if a qualifying offer is sent',
-}
 
 
 def photo_credit(spec: dict) -> str:
@@ -558,8 +530,6 @@ def _player_row(player: dict) -> str:
     if player['slug']:
         name = f'<a href="/wnba/{e(player["slug"])}/">{name}</a>'
     bits = [player['position'] or 'Other']
-    if player['klass']:
-        bits.append(player['klass'])
     bits.append(f"{int(round(player['minutes'])):,} minutes")
     bits.append(f"{int(round(player['points'])):,} points")
     return (
@@ -598,14 +568,6 @@ def _takeaway(card: dict, phoenix_top2: str) -> str:
         first = f"{word} logged {lead['share']}% of these minutes."
     else:
         first = 'The player file has no position tags for these minutes.'
-    ufa = next((row for row in card['classes'] if row['name'] == 'UFA'), None)
-    count = ufa['players'] if ufa else 0
-    if count == 1:
-        second = '1 player row is unrestricted if the contract ends.'
-    elif count:
-        second = f'{count} player rows are unrestricted if the contract ends.'
-    else:
-        second = 'The free-agency file lists no unrestricted row for this club.'
     extra = ''
     if slot['id'] == 'HOU':
         extra = ' These minutes are the 2026 Connecticut Sun. The club plays 2027 as the Houston Comets.'
@@ -616,7 +578,7 @@ def _takeaway(card: dict, phoenix_top2: str) -> str:
             ' Both Los Angeles lottery slots use this roster. '
             f"Phoenix's pick has a {phoenix_top2}% chance at a top-two selection."
         )
-    return first + ' ' + second + extra
+    return first + extra
 
 
 def needs_html(cards: list[dict], rows: list[dict]) -> str:
@@ -644,8 +606,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         top2 = pct(by_id[slot['id']]['top2'], 1)
         top_label = 'Top 2, own' if slot['id'] == 'LAL' else 'Top 2'
         age = card['age'] or 'n/a'
-        ufa = next((row for row in card['classes'] if row['name'] == 'UFA'), None)
-        ufa_count = ufa['players'] if ufa else 0
         players = ''.join(_player_row(player) for player in card['leaders'])
         blocks.append(
             '<article class="fcb-card need-card">'
@@ -655,7 +615,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
             f'<div class="stat-tile need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
             f'<div class="stat-tile need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
             f'{_position_bar(card["positions"])}'
-            f'<div class="stat-tile need-tile"><b>{ufa_count}</b><span>Unrestricted</span></div>'
             '</div>'
             f'<p class="need-take">{e(_takeaway(card, phoenix_top2))}</p>'
             f'<ul class="need-players">{players}</ul>'
@@ -885,7 +844,7 @@ def dataset_jsonld() -> str:
         'creator': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
         'license': 'https://creativecommons.org/publicdomain/zero/1.0/',
         'isAccessibleForFree': True,
-        'dateModified': PUBLISHED,
+        'dateModified': MODIFIED,
         'isBasedOn': 'https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15',
         'distribution': [{
             '@type': 'DataDownload',
@@ -1087,6 +1046,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         'Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
         f'P(second | first) = remaining chances / (1,000 minus the winner\'s chances). '
         f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
+        "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
         'Free to use and republish (CC0). '
         '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>.</p>'
     )
@@ -1113,7 +1073,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
 <p>Each card is the 2026 roster tied to that lottery pick.</p>
 {needs_html(cards, rows)}
-<p class="section-note table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. Unrestricted is the count of player rows the <a href="/news/wnba-free-agents-2027/">2027 free-agency page</a> marks UFA if the contract ends. Restricted and reserved rows still need a qualifying offer. That file is not the league's February list. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
+<p class="section-note table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
 </section>
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
 <p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft.</p>
@@ -1145,7 +1105,6 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <li><a href="https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins" target="_blank" rel="noopener">League release on the Sky and Ariel Atkins, Feb. 23, 2025</a></li>
 <li><a href="https://www.wnba.com/news/rapid-reactions-trade-deadline-2026" target="_blank" rel="noopener">League trade-deadline note on Kelsey Plum, 2026</a></li>
 <li>The 2026 WNBA schedule file on this site, taken from the league schedule, for the three Sun-Tempo games and the 2026 records</li>
-<li><a href="/news/wnba-free-agents-2027/data/wnba-2026-players-by-service-class.csv">2026 players by service class (CSV)</a></li>
 <li>WNBA.com roster snapshot saved on this site, checked Oct. 28, 2026, for ages</li>
 <li>Sports-Reference player pages linked on each prospect card</li>
 <li><a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board, 2027 WNBA consensus, snapshot Oct. 29, 2026</a></li>
@@ -1230,6 +1189,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .need-head h3{margin:0;min-width:0;font:800 20px/1.15 Barlow,sans-serif}
 .need-head a{color:#2a1458;text-decoration:none}
 .need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
+.need-card:not(.prospect) .need-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
 .need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
 .need-tile b{font:800 16px/1.1 Barlow,sans-serif;color:#2a1458}
 .need-tile span{font:600 11px/1.25 Inter,system-ui,sans-serif;color:#5a554e}
@@ -1260,7 +1220,7 @@ html body .lot-odds .lot-odds-cards{display:grid;gap:8px}
         '@context': 'https://schema.org', '@type': 'Article',
         'headline': TITLE, 'description': DESCRIPTION,
         'url': BASE + ROUTE, 'mainEntityOfPage': BASE + ROUTE,
-        'datePublished': PUBLISHED, 'dateModified': PUBLISHED,
+        'datePublished': PUBLISHED, 'dateModified': MODIFIED,
         'author': {
             '@type': 'Person', 'name': 'Ryan Moalemi',
             'url': BASE + '/authors/ryan-moalemi/',
