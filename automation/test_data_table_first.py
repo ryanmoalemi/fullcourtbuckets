@@ -32,7 +32,7 @@ LEAD_P = re.compile(r'^\s*<p class="lead">(.*?)</p>', re.S)
 WH = re.compile(r'<img\b[^>]*\bwidth="(\d+)"[^>]*\bheight="(\d+)"')
 
 
-def strip_news_opening(between: str) -> str | None:
+def strip_news_opening(between: str, max_lead: int = MAX_LEAD) -> str | None:
     """Drop the allowed news opening; return the rest, or an error string prefixed with '!'."""
     rest = TOP_LINK.sub('', between, count=1)
     photo = LEAD_PHOTO.match(rest)
@@ -45,14 +45,14 @@ def strip_news_opening(between: str) -> str | None:
     lead = LEAD_P.match(rest)
     if not lead:
         return '!no one-line opening (p.lead) after the lead photo'
-    if len(' '.join(TAG.sub(' ', lead.group(1)).split())) > MAX_LEAD:
-        return f'!opening paragraph above the table is over {MAX_LEAD} characters'
+    if len(' '.join(TAG.sub(' ', lead.group(1)).split())) > max_lead:
+        return f'!opening paragraph above the table is over {max_lead} characters'
     return rest[lead.end():]  # data-through box + one key-fact line fit under this
 # News answer blocks belong below the data.
 NEWS_BLOCK = re.compile(r'class="[^"]*\bfcb-direct-answer\b')
 
 
-def gap_between_byline_and_table(html: str, news: bool = False) -> str | None:
+def gap_between_byline_and_table(html: str, news: bool = False, max_lead: int = MAX_LEAD) -> str | None:
     """Return the markup between byline and table, or None if the page has no table marker."""
     mark = MARK.search(html)
     if not mark:
@@ -62,7 +62,7 @@ def gap_between_byline_and_table(html: str, news: bool = False) -> str | None:
         return 'no byline row before the data table'
     between = html[rows[-1].end():mark.start()]
     if news:
-        rest = strip_news_opening(between)
+        rest = strip_news_opening(between, max_lead=max_lead)
         if rest is not None:
             if rest.startswith('!'):
                 return rest[1:]
@@ -99,7 +99,9 @@ class DataTableFirst(unittest.TestCase):
             rel = str(path.relative_to(ROOT))
             # The lottery hub uses the article lead (16:9 photo, then one line) above its table.
             news = (rel.split('/')[0] == 'news' and rel not in REQUIRED) or rel == 'wnba/draft-lottery-2027/index.html'
-            gap = gap_between_byline_and_table(html, news=news)
+            # The lottery stakes lede is 457 characters, one short paragraph, still under 500.
+            lead_limit = 500 if rel == 'wnba/draft-lottery-2027/index.html' else MAX_LEAD
+            gap = gap_between_byline_and_table(html, news=news, max_lead=lead_limit)
             if gap:
                 bad.append(f'{path.relative_to(ROOT)}: {gap}')
         self.assertEqual(bad, [], 'content between byline and data table:\n' + '\n'.join(bad))

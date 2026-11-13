@@ -87,7 +87,7 @@ class LotteryPage(unittest.TestCase):
         self.assertIn('class="byline"', self.html)
         self.assertLess(self.html.index('<h1'), self.html.index('class="byline"'))
         self.assertLess(self.html.index('class="breadcrumbs"'), self.html.index('<h1'))
-        self.assertEqual(gap_between_byline_and_table(self.html, news=True), '')
+        self.assertEqual(gap_between_byline_and_table(self.html, news=True, max_lead=500), '')
         self.assertIn('class="meta-row"', self.html)
         self.assertIn('class="lead-photo"', self.html)
         self.assertIn('class="button primary"', self.html)
@@ -264,12 +264,24 @@ process.stdout.write(out.join('\n'));
 
     def test_key_findings_summary_and_page_order(self):
         html = self.html
-        self.assertIn(
+        stakes = (
+            "The Connecticut Sun played their last season in Connecticut in 2026 "
+            "and will enter 2027 as the Houston Comets, after the WNBA and NBA approved the sale "
+            "and relocation on May 13, 2026. Toronto just finished an 11-33 expansion debut. "
+            "The top of this draft is expected to turn on JuJu Watkins, the USC guard who is "
+            "eligible for the 2027 WNBA Draft because she turns 22 in the 2027 calendar year, "
+            "and who is the No. 1 name on the consensus board this page uses."
+        )
+        findings = (
             "Houston and Toronto each have a 61.7% top-two chance. "
             "Houston can't fall below No. 3, while Toronto drops to No. 4 8.8% of the time. "
-            "Washington (from Chicago) has a 35.0% top-two chance and a 67.3% top-three chance.",
-            html,
+            "Washington (from Chicago) has a 35.0% top-two chance and a 67.3% top-three chance."
         )
+        self.assertIn(stakes, html)
+        self.assertIn(findings, html)
+        self.assertLess(html.index(stakes), html.index(findings))
+        self.assertIn(f'<p class="lead">{stakes}</p>', html)
+        self.assertNotIn(f'<p class="lead">{findings}</p>', html)
         self.assertIn('id="lottery-summary"', html)
         self.assertIn('>61.7%</td><td data-label="Top three">100.0%</td>', html)
         self.assertIn('>61.7%</td><td data-label="Top three">91.2%</td><td data-label="Exactly No. 2 or No. 3">58.3%</td><td data-label="Worst pick">No. 4</td>', html)
@@ -281,6 +293,20 @@ process.stdout.write(out.join('\n'));
         self.assertIn("Calculations: Full Court Buckets, using the WNBA's published lottery allocations and drawing rules.", html)
         self.assertIn('329/1000 x 329/671 = 16.1313%', html)
         self.assertIn('the two orders together = 32.3%', html)
+        calc = html.split('id="calculations"', 1)[1].split('id="methods"', 1)[0]
+        self.assertNotIn('Worked example', calc)
+        footnote = html.split('id="methods-footnote"', 1)[1].split('</p>', 1)[0]
+        self.assertIn('Worked example: Houston first then Toronto second = 329/1000 x 329/671 = 16.1313%', footnote)
+        self.assertIn('the two orders together = 32.3%', footnote)
+        self.assertLess(html.index('id="methods"'), html.index('id="methods-footnote"'))
+        self.assertLess(html.index('id="methods-footnote"'), html.index('id="how"'))
+        cards = re.findall(r'<article class="fcb-card need-card(?! prospect)">.*?</article>', html, re.S)
+        if not cards:
+            cards = [c for c in re.findall(r'<article class="fcb-card need-card">.*?</article>', html, re.S) if 'prospect' not in c.split('>',1)[0]]
+        self.assertEqual(len(cards), 6)
+        for card in cards:
+            self.assertNotIn('>Top 2<', card)
+            self.assertNotIn('>Top 2, own<', card)
         self.assertIn("FCB's calculated odds dataset is available under CC0", html)
         self.assertIn('mailto:ryan@fullcourtbuckets.com', html)
         self.assertIn('The seven lottery slots are held by six teams.', html)

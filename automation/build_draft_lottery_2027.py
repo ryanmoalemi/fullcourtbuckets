@@ -709,8 +709,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         else:
             photo = ''
             avatar = f'<span class="lot-avatar lot-initials" aria-hidden="true">{e(slot["circle"][:3])}</span>'
-        top2 = pct(by_id[slot['id']]['top2'], 1)
-        top_label = 'Top 2, own' if slot['id'] == 'LAL' else 'Top 2'
         age = card['age'] or 'n/a'
         players = ''.join(_player_row(player) for player in card['leaders'])
         blocks.append(
@@ -718,7 +716,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
             f'{photo}<div class="need-body">'
             f'<div class="need-head">{avatar}<h3><a href="{e(slot["href"])}">{e(slot["team"])}</a></h3></div>'
             '<div class="stat-tiles need-tiles">'
-            f'<div class="stat-tile need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
             f'<div class="stat-tile need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
             f'{_position_bar(card["positions"])}'
             '</div>'
@@ -1146,16 +1143,22 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">'
         f'</picture><figcaption>{photo_credit(HERO)}</figcaption></figure>'
     )
+    stakes = (
+        '<p class="lead">The Connecticut Sun played their last season in Connecticut in 2026 '
+        'and will enter 2027 as the Houston Comets, after the WNBA and NBA approved the sale '
+        'and relocation on May 13, 2026. Toronto just finished an 11-33 expansion debut. '
+        'The top of this draft is expected to turn on JuJu Watkins, the USC guard who is '
+        'eligible for the 2027 WNBA Draft because she turns 22 in the 2027 calendar year, '
+        'and who is the No. 1 name on the consensus board this page uses.</p>'
+    )
     findings = (
-        f'<p class="lead">Houston and Toronto each have a {pct(hou["top2"], 1)}% top-two chance. '
+        f'<p>Houston and Toronto each have a {pct(hou["top2"], 1)}% top-two chance. '
         f"Houston can't fall below No. 3, while Toronto drops to No. 4 {pct(tor['probs'][3], 1)}% of the time. "
         f'Washington (from Chicago) has a {pct(was["top2"], 1)}% top-two chance and a {pct(top_n(was["probs"], 3), 1)}% top-three chance.</p>'
     )
     credit = (
         '<p class="table-note" id="calculations">'
         "Calculations: Full Court Buckets, using the WNBA's published lottery allocations and drawing rules. "
-        f'Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
-        f'and the two orders together = {pct(both_orders, 1)}%. '
         f'Source: <a href="{OFFICIAL_RELEASE}" target="_blank" rel="noopener">WNBA release, Oct. 28, 2026</a>. '
         "FCB's calculated odds dataset is available under CC0. Free to use and republish (CC0). "
         '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>. '
@@ -1170,13 +1173,15 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         "<p>The seven lottery slots are held by six teams. Los Angeles holds its own slot and Phoenix's.</p>"
     )
     methods = (
-        '<p class="table-note">Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
+        '<p class="table-note" id="methods">Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
         f"P(second | first) = remaining chances / (1,000 minus the winner's chances). "
         f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
         "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
         'The drawing is Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
         'on ESPN after UConn vs. Louisville and on TSN in Canada. This is the lottery, not the April 12, 2027 draft, '
         'and not the April 3, 2026 expansion draft.</p>'
+        f'<p class="table-note" id="methods-footnote">Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
+        f'and the two orders together = {pct(both_orders, 1)}%.</p>'
     )
     simulator = (
         '<section id="simulator"><h2 class="section-title">Lottery simulator</h2>'
@@ -1193,6 +1198,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <h1>{e(TITLE)}</h1>
 <div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><time class="article-date" datetime="{PUBLISHED}">November 9, 2026</time></div>
 {hero_figure}
+{stakes}
 {findings}
 <h2 class="section-title" id="probabilities">Chance of every pick</h2>
 {summary_table(rows)}
@@ -1334,7 +1340,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .need-head h3{margin:0;min-width:0;font:800 20px/1.15 Barlow,sans-serif}
 .need-head a{color:#2a1458;text-decoration:none}
 .need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
-.need-card:not(.prospect) .need-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+.need-card:not(.prospect) .need-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
 .need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
 .need-tile b{font:800 16px/1.1 Barlow,sans-serif;color:#2a1458}
 .need-tile span{font:600 11px/1.25 Inter,system-ui,sans-serif;color:#5a554e}
