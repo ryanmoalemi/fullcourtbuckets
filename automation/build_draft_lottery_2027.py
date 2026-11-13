@@ -33,7 +33,9 @@ DESCRIPTION = (
 PUBLISHED = '2026-11-09'
 MODIFIED = '2026-11-12'
 CSV_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-odds.csv'
+OUTCOMES_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-outcomes.csv'
 RESULTS_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-results.json'
+OFFICIAL_RELEASE = 'https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15'
 PAGE_PATH = ROOT / 'wnba' / 'draft-lottery-2027' / 'index.html'
 SEED = 20261115
 TOTAL = 1000
@@ -363,6 +365,76 @@ def write_csv(rows: list[dict]) -> None:
             cells += [pct(row['top2'], 6), f"{row['top2'].numerator}/{row['top2'].denominator}"]
             cells += [dec(row['expected'], 4), 'exact enumeration of 42 ordered pairs']
             writer.writerow(cells)
+
+
+def write_outcomes_csv() -> None:
+    """One row for each of the 42 first-and-second pick orders, with exact weights."""
+    header = [
+        'first', 'second', 'probability_fraction', 'probability_pct',
+        'pick_1', 'pick_2', 'pick_3', 'pick_4', 'pick_5', 'pick_6', 'pick_7',
+    ]
+    rows = []
+    total = Fraction(0)
+    for first in ORDER:
+        for second in ORDER:
+            if first == second:
+                continue
+            weight = pair_probability(first, second)
+            total += weight
+            assigned = assignment(first, second)
+            rows.append([
+                first, second,
+                f'{weight.numerator}/{weight.denominator}',
+                pct(weight, 6),
+                *[assigned[k] for k in range(1, 8)],
+            ])
+    if len(rows) != 42 or total != 1:
+        raise SystemExit('outcomes CSV must enumerate 42 orders that sum to 1')
+    OUTCOMES_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with OUTCOMES_PATH.open('w', encoding='utf-8', newline='') as handle:
+        writer = csv.writer(handle)
+        writer.writerow(header)
+        writer.writerows(rows)
+
+
+def top_n(probs: list[Fraction], n: int) -> Fraction:
+    return sum(probs[:n], Fraction(0))
+
+
+def exact_second_or_third(probs: list[Fraction]) -> Fraction:
+    return probs[1] + probs[2]
+
+
+def worst_pick(probs: list[Fraction]) -> int:
+    return max(index + 1 for index, prob in enumerate(probs) if prob > 0)
+
+
+def hou_then_tor() -> Fraction:
+    return Fraction(CHANCES['HOU'], TOTAL) * Fraction(CHANCES['TOR'], TOTAL - CHANCES['HOU'])
+
+
+def summary_table(rows: list[dict]) -> str:
+    body = []
+    for row in rows:
+        slot = row['slot']
+        probs = row['probs']
+        body.append(
+            '<tr>'
+            f'<th scope="row"><a href="{e(slot["href"])}">{e(slot["label"])}</a></th>'
+            f'<td data-label="Top two">{pct(top_n(probs, 2), 1)}%</td>'
+            f'<td data-label="Top three">{pct(top_n(probs, 3), 1)}%</td>'
+            f'<td data-label="Exactly No. 2 or No. 3">{pct(exact_second_or_third(probs), 1)}%</td>'
+            f'<td data-label="Worst pick">No. {worst_pick(probs)}</td>'
+            '</tr>'
+        )
+    return (
+        '<div class="table-wrap summary-wrap" data-fcb-data-table>'
+        '<table class="fcb-cards fcb-data-table" id="lottery-summary">'
+        '<thead><tr><th scope="col">Slot</th><th scope="col">Top two</th>'
+        '<th scope="col">Top three</th><th scope="col">Exactly No. 2 or No. 3</th>'
+        '<th scope="col">Worst pick</th></tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table></div>'
+    )
 
 
 def default_results() -> dict:
@@ -755,7 +827,7 @@ def odds_table(rows: list[dict]) -> str:
         cells.append(f'<td data-label="Top 2">{pct(row["top2"], 1)}%</td>')
         body.append('<tr>' + ''.join(cells) + '</tr>')
     table = (
-        '<div class="table-wrap" data-fcb-data-table><table class="fcb-cards fcb-data-table">'
+        '<div class="table-wrap"><table class="fcb-cards fcb-data-table" id="prelottery-odds">'
         '<thead><tr><th scope="col">Slot</th><th scope="col">Record</th>'
         f'<th scope="col">Chances</th>{head}<th scope="col">Top 2</th></tr></thead>'
         f'<tbody>{"".join(body)}</tbody></table></div>'
@@ -1006,8 +1078,8 @@ def live_html() -> str:
         label = 'Not drawn yet' if number <= 7 else 'to be confirmed'
         items.append(f'<li>Pick {number}: {label}</li>')
     return (
-        '<section id="live-results"><h2 class="section-title">Live results</h2>'
-        '<p id="live-status">The drawing has not taken place yet. Picks 8 through 15 stay to be confirmed.</p>'
+        '<section id="live-results"><h2 class="section-title">Lottery results</h2>'
+        '<p id="live-status">Results will appear here after the Nov. 15, 2026 drawing. Picks 8 through 15 stay to be confirmed.</p>'
         f'<ol id="live-order">{"".join(items)}</ol>'
         '<p class="table-note">The lottery is drawn Nov. 15, 2026. Picks 1 through 7 appear here once the league announces the order, '
         'and the simulator then locks to that order. '
@@ -1019,6 +1091,11 @@ def live_html() -> str:
 def page(rows: list[dict], cards: list[dict]) -> str:
     pairs = faq_pairs(rows)
     la_top = team_top_two()
+    hou = next(row for row in rows if row['slot']['id'] == 'HOU')
+    tor = next(row for row in rows if row['slot']['id'] == 'TOR')
+    was = next(row for row in rows if row['slot']['id'] == 'WAS')
+    first_then_second = hou_then_tor()
+    both_orders = first_then_second * 2
     hero_figure = (
         '<figure class="lead-photo"><picture>'
         f'<source srcset="{e(HERO["src"])} 1200w" type="image/webp" sizes="(max-width: 900px) calc(94vw - 40px), 842px">'
@@ -1026,11 +1103,39 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">'
         f'</picture><figcaption>{photo_credit(HERO)}</figcaption></figure>'
     )
-    hero = (
-        hero_figure
-        + '<p class="lead">Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
+    findings = (
+        f'<p class="lead">Houston and Toronto each have a {pct(hou["top2"], 1)}% top-two chance. '
+        f"Houston can't fall below No. 3, while Toronto drops to No. 4 {pct(tor['probs'][3], 1)}% of the time. "
+        f'Washington (from Chicago) has a {pct(was["top2"], 1)}% top-two chance and a {pct(top_n(was["probs"], 3), 1)}% top-three chance.</p>'
+    )
+    credit = (
+        '<p class="table-note" id="calculations">'
+        "Calculations: Full Court Buckets, using the WNBA's published lottery allocations and drawing rules. "
+        f'Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
+        f'and the two orders together = {pct(both_orders, 1)}%. '
+        f'Source: <a href="{OFFICIAL_RELEASE}" target="_blank" rel="noopener">WNBA release, Oct. 28, 2026</a>. '
+        "FCB's calculated odds dataset is available under CC0. Free to use and republish (CC0). "
+        '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>. '
+        '<a href="/data/wnba-draft-lottery-2027-outcomes.csv">42 weighted outcomes (CSV, CC0)</a>. '
+        'Data questions or corrections: <a href="mailto:ryan@fullcourtbuckets.com">ryan@fullcourtbuckets.com</a>.</p>'
+    )
+    difference = (
+        f'<p>Houston and Toronto each hold {CHANCES["HOU"]} of {TOTAL} combinations, so they have the same chance at picks 1 and 2. '
+        f'The difference is the floor. Houston cannot fall below No. 3. Toronto can fall to No. 4, and does so {pct(tor["probs"][3], 1)}% of the time.</p>'
+    )
+    slots_note = (
+        "<p>The seven lottery slots are held by six teams. Los Angeles holds its own slot and Phoenix's.</p>"
+    )
+    methods = (
+        '<p class="table-note">Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
+        f"P(second | first) = remaining chances / (1,000 minus the winner's chances). "
+        f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
+        "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
+        'The drawing is Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
         'on ESPN after UConn vs. Louisville and on TSN in Canada. This is the lottery, not the April 12, 2027 draft, '
-        'and not the April 3, 2026 expansion draft. Data through Oct. 28, 2026.</p>'
+        'and not the April 3, 2026 expansion draft.</p>'
+    )
+    simulator = (
         '<section id="simulator"><h2 class="section-title">Lottery simulator</h2>'
         '<p>One draw is random. The 10,000-draw button uses seed 20261115.</p>'
         '<div class="lot-actions">'
@@ -1038,43 +1143,34 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         '<button type="button" class="button" id="draw-many">10,000 draws</button>'
         '<button type="button" class="button" id="draw-reset">Reset</button>'
         '</div><p id="draw-summary">No draw yet.</p><div id="draw-board"></div></section>'
-        '<h2 class="section-title" id="probabilities">Chance of every pick</h2>'
-        '<p>Houston and Toronto each hold 329 of 1,000 combinations.</p>'
-    )
-    methods = (
-        '<p class="table-note">Source: <a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">WNBA release, Oct. 28, 2026</a>. '
-        'Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
-        f'P(second | first) = remaining chances / (1,000 minus the winner\'s chances). '
-        f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
-        "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
-        'Free to use and republish (CC0). '
-        '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>.</p>'
     )
     body = f'''<main id="content" class="shell article-wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/">WNBA</a><span aria-hidden="true">/</span><span>2027 Draft Lottery</span></nav>
 <article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div>
 <h1>{e(TITLE)}</h1>
 <div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><time class="article-date" datetime="{PUBLISHED}">November 9, 2026</time></div>
-{hero}
+{hero_figure}
+{findings}
+<h2 class="section-title" id="probabilities">Chance of every pick</h2>
+{summary_table(rows)}
 {odds_table(rows)}
+{credit}
+{difference}
+{slots_note}
 {methods}
 <section id="how"><h2 class="section-title">How the drawing works</h2>
 <p>The league puts 14 balls, numbered 1 through 14, in the machine and draws four. That is 1,001 combinations. One combination is left unassigned, so 1,000 are in play. The slot that owns the combination gets pick 1. The four balls go back in, and the same draw sets pick 2. If the machine hits the unassigned combination, or a combination owned by the slot that already won, it draws again.</p>
 <p>Picks 3 through 7 are not drawn. They follow the pre-lottery order among the five slots still waiting. That order, worst record first, is Houston, Toronto, Washington (Chicago's pick), Seattle, Portland, Los Angeles (own pick), Los Angeles (Phoenix's pick).</p>
 <p>Five of the records are two seasons added together, 2025 and 2026: Chicago 26-62, Houston 22-66, Los Angeles 37-51, Phoenix 43-45, and Seattle 31-57. Portland and Toronto were expansion teams in 2026, so their odds use 2026 only: Portland 17-27 and Toronto 11-33. Houston and Toronto both land at .250, so each receives 329 combinations.</p>
 <h3>The tie</h3>
-<p>The release uses the 2026 head-to-head as the first tiebreaker. Houston, then the Connecticut Sun, went 1-2 against Toronto. The three games are in the site schedule file, which was taken from the WNBA schedule: Toronto 106, Connecticut 102 on June 10; Toronto 101, Connecticut 97 on June 19; Connecticut 95, Toronto 81 on Sept. 24. Houston therefore sits ahead of Toronto. Houston's latest possible pick is No. 3. Toronto's latest possible pick is No. 4.</p>
+<p>The <a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">Oct. 28, 2026 league release</a> uses the 2026 head-to-head as the first tiebreaker. Houston, then the Connecticut Sun, went 1-2 against Toronto. The three games are in the site schedule file, which was taken from the WNBA schedule: Toronto 106, Connecticut 102 on June 10; Toronto 101, Connecticut 97 on June 19; Connecticut 95, Toronto 81 on Sept. 24. Houston therefore sits ahead of Toronto. Houston's latest possible pick is No. 3. Toronto's latest possible pick is No. 4. Those floors also follow the drawing rules in that release: Houston cannot land past No. 3, and Toronto cannot land past No. 4.</p>
 <h3>The traded picks</h3>
 <p>Washington holds Chicago's pick. The Oct. 28 footnote says Chicago traded its own 2027 first-round pick to Washington for Ariel Atkins on Feb. 23, 2025. The team releases that day describe the first-round piece as the right to swap Washington's own 2027 first with Chicago's own 2027 first, plus Chicago's 2027 second-round pick. Those are the <a href="https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft" target="_blank" rel="noopener">Mystics release</a> and the <a href="https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins" target="_blank" rel="noopener">league release on the Sky deal</a>. This page follows the Oct. 28 lottery assignment for the combinations. It does not assign Washington's own first-rounder.</p>
 <p>Los Angeles holds Phoenix's pick. The <a href="https://www.wnba.com/news/rapid-reactions-trade-deadline-2026" target="_blank" rel="noopener">league's trade-deadline note</a> says Los Angeles sent Kelsey Plum to Phoenix for Monique Akoa Makani, a 2027 first-round pick, and a 2028 second-round pick. The lottery footnote dates that deal Aug. 2, 2026.</p>
 <p>Houston is the relocated Connecticut Sun. The <a href="https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale" target="_blank" rel="noopener">May 13, 2026 sale release</a> says the club stays in Connecticut for 2026 and moves to Houston for 2027, under Tilman J. Fertitta. The team URL on this site is still <a href="/wnba/teams/connecticut-sun/">/wnba/teams/connecticut-sun/</a>.</p>
 <p>Bethany Donaphin, head of league operations, reveals the result on ESPN. Ernst &amp; Young oversees the drawing. The presentation name on the release is State Street Investment Management SPY. ESPN is airing the lottery for the 15th year in a row.</p>
 </section>
-<section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
-<p>Each card is the 2026 roster tied to that lottery pick.</p>
-{needs_html(cards, rows)}
-<p class="section-note table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
-</section>
+{simulator}
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
 <p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft.</p>
 {prospects_html()}
@@ -1083,6 +1179,11 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 {live_html()}
 <section id="playoff-records"><h2 class="section-title">2026 records behind picks 8 through 15</h2>
 <p>The eight clubs in the top eight of the <a href="/standings/">2026 standings</a> finished the regular season, in the WNBA schedule file, at Minnesota 33-11, Golden State 32-12, Las Vegas 31-13, Atlanta 30-14, Washington 28-16, Indiana 28-16, Dallas 27-17, and New York 26-18. Those are records, not pick numbers. Washington and Indiana are tied, and the lottery release does not publish the rest of round 1.</p>
+</section>
+<section id="needs"><h2 class="section-title">What the 2026 rosters look like</h2>
+<p>Each card is the 2026 roster tied to that lottery pick.</p>
+{needs_html(cards, rows)}
+<p class="section-note table-note">Minutes are 2026 regular-season per-game averages times games played, from the player file checked Nov. 8, 2026. Weighted age is the Oct. 28, 2026 WNBA.com roster snapshot in that file, weighted by those minutes. The bar splits the same minutes by position. The four names on each card are the highest minute totals. Headshots are approved player photographs already on this site. A name with initials has no approved photograph.</p>
 </section>
 <section id="related"><h2 class="section-title">Related pages</h2>
 <ul>
@@ -1100,6 +1201,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <section id="sources"><h2 class="section-title">Sources</h2>
 <ul>
 <li><a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">WNBA Draft Lottery 2027 release, Oct. 28, 2026</a></li>
+<li><a href="/data/wnba-draft-lottery-2027-outcomes.csv">42 weighted lottery outcomes (CSV, CC0)</a></li>
 <li><a href="https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale" target="_blank" rel="noopener">WNBA and NBA approve the Sun sale, May 13, 2026</a></li>
 <li><a href="https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft" target="_blank" rel="noopener">Mystics on the Ariel Atkins trade, Feb. 23, 2025</a></li>
 <li><a href="https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins" target="_blank" rel="noopener">League release on the Sky and Ariel Atkins, Feb. 23, 2025</a></li>
@@ -1261,6 +1363,7 @@ def main() -> None:
     table = pick_probabilities()
     rows = matrix_rows(table)
     write_csv(rows)
+    write_outcomes_csv()
     write_results()
     cards = team_needs()
     html_out = page(rows, cards)
