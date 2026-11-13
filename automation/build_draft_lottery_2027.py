@@ -25,7 +25,7 @@ import team_hub
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE = '/wnba/draft-lottery-2027/'
 BASE = 'https://fullcourtbuckets.com'
-TITLE = '2027 WNBA Draft Lottery Odds, Simulator and Live Results (Nov 15)'
+TITLE = '2027 WNBA Draft Lottery Odds and Simulator (Drawing Nov 15)'
 DESCRIPTION = (
     'Official 2027 WNBA Draft Lottery odds, full pick probabilities for picks 1-7, '
     'team needs, live results, and a free CSV. Drawing: Nov. 15, 2026.'
@@ -270,6 +270,37 @@ TEAM_MARK = {
     'POR': 'portland-fire',
     'LAL': 'los-angeles-sparks',
 }
+# Lottery card photos for teams whose hub image is a former player, a
+# different city, or a venue. These stay on this page if the hub photos change.
+TEAM_CARD_VISUALS = {
+    'HOU': {
+        'src': '/images/articles/wnba-draft-lottery-2027/brittney-griner-1200.webp',
+        'alt': 'Brittney Griner clapping in a Connecticut Sun jersey during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:260706_Lynx_Sun_JohnMc164.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+    'TOR': {
+        'src': '/images/articles/wnba-draft-lottery-2027/marina-mabrey-1200.webp',
+        'alt': 'Marina Mabrey in a Toronto Tempo jersey during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:Marina_Mabrey_Tempo.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+    'POR': {
+        'src': '/images/articles/wnba-draft-lottery-2027/emily-engstler-1200.webp',
+        'alt': 'Emily Engstler of the Portland Fire dribbling during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:Emily_Engstler_Fire.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+}
 
 
 def e(value) -> str:
@@ -452,7 +483,10 @@ def default_results() -> dict:
             'After the Nov. 15, 2026 drawing, set status to final, set updated to the date, '
             'name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) '
             'and team. Leave picks 8-15 as to be confirmed until a league draft order names them. '
-            'A final file locks the simulator to this order.'
+            'A final file locks the simulator to this order. To update the page title after the '
+            'drawing, set title to the post-drawing headline. When status is final, the page '
+            'reads that title and updates the h1, document title, og:title, and twitter:title '
+            'without a rebuild.'
         ),
         'picks': picks,
     }
@@ -661,7 +695,7 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         slot = card['slot']
         mark = _slot_mark(slot)
         if mark:
-            focal = {'TOR': 'center 75%', 'POR': 'center 40%'}.get(slot['id'], 'center 20%')
+            focal = mark.get('focal') or {'TOR': 'center 75%', 'POR': 'center 40%'}.get(slot['id'], 'center 20%')
             photo = (
                 '<figure class="lead-photo">'
                 f'<img src="{e(mark["src"])}" alt="{e(mark["alt"])}" style="object-position:{focal}" '
@@ -675,8 +709,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         else:
             photo = ''
             avatar = f'<span class="lot-avatar lot-initials" aria-hidden="true">{e(slot["circle"][:3])}</span>'
-        top2 = pct(by_id[slot['id']]['top2'], 1)
-        top_label = 'Top 2, own' if slot['id'] == 'LAL' else 'Top 2'
         age = card['age'] or 'n/a'
         players = ''.join(_player_row(player) for player in card['leaders'])
         blocks.append(
@@ -684,7 +716,6 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
             f'{photo}<div class="need-body">'
             f'<div class="need-head">{avatar}<h3><a href="{e(slot["href"])}">{e(slot["team"])}</a></h3></div>'
             '<div class="stat-tiles need-tiles">'
-            f'<div class="stat-tile need-tile"><b>{top2}%</b><span>{top_label}</span></div>'
             f'<div class="stat-tile need-tile"><b>{e(age)}</b><span>Weighted age</span></div>'
             f'{_position_bar(card["positions"])}'
             '</div>'
@@ -764,6 +795,8 @@ def prospects_html() -> str:
 
 
 def _slot_mark(slot: dict) -> dict | None:
+    if slot['id'] in TEAM_CARD_VISUALS:
+        return TEAM_CARD_VISUALS[slot['id']]
     key = TEAM_MARK.get(slot['id'])
     if not key and slot['id'].startswith('LAL'):
         key = TEAM_MARK['LAL']
@@ -1053,6 +1086,13 @@ SIM_JS = r"""
       order.push(byId[found.slot]);
     }
     liveStatus.textContent = 'Published result' + (data.updated ? ', updated ' + data.updated : '') + '.';
+    if (data.title) {
+      var heading = document.querySelector('.article h1') || document.querySelector('h1');
+      if (heading) heading.textContent = data.title;
+      document.title = data.title;
+      var tags = document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]');
+      for (var i = 0; i < tags.length; i++) tags[i].setAttribute('content', data.title);
+    }
     lock(order, data.source || '');
   }
   fetch('/data/wnba-draft-lottery-2027-results.json', {cache: 'no-store'})
@@ -1103,16 +1143,22 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'width="{HERO["width"]}" height="{HERO["height"]}" decoding="async" fetchpriority="high">'
         f'</picture><figcaption>{photo_credit(HERO)}</figcaption></figure>'
     )
+    stakes = (
+        '<p class="lead">The Connecticut Sun played their last season in Connecticut in 2026 '
+        'and will enter 2027 as the Houston Comets, after the WNBA and NBA approved the sale '
+        'and relocation on May 13, 2026. Toronto just finished an 11-33 expansion debut. '
+        'The top of this draft is expected to turn on JuJu Watkins, the USC guard who is '
+        'eligible for the 2027 WNBA Draft because she turns 22 in the 2027 calendar year, '
+        'and who is the No. 1 name on the consensus board this page uses.</p>'
+    )
     findings = (
-        f'<p class="lead">Houston and Toronto each have a {pct(hou["top2"], 1)}% top-two chance. '
+        f'<p>Houston and Toronto each have a {pct(hou["top2"], 1)}% top-two chance. '
         f"Houston can't fall below No. 3, while Toronto drops to No. 4 {pct(tor['probs'][3], 1)}% of the time. "
         f'Washington (from Chicago) has a {pct(was["top2"], 1)}% top-two chance and a {pct(top_n(was["probs"], 3), 1)}% top-three chance.</p>'
     )
     credit = (
         '<p class="table-note" id="calculations">'
         "Calculations: Full Court Buckets, using the WNBA's published lottery allocations and drawing rules. "
-        f'Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
-        f'and the two orders together = {pct(both_orders, 1)}%. '
         f'Source: <a href="{OFFICIAL_RELEASE}" target="_blank" rel="noopener">WNBA release, Oct. 28, 2026</a>. '
         "FCB's calculated odds dataset is available under CC0. Free to use and republish (CC0). "
         '<a href="/data/wnba-draft-lottery-2027-odds.csv">Download CSV (CC0)</a>. '
@@ -1127,13 +1173,15 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         "<p>The seven lottery slots are held by six teams. Los Angeles holds its own slot and Phoenix's.</p>"
     )
     methods = (
-        '<p class="table-note">Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
+        '<p class="table-note" id="methods">Data through Oct. 28, 2026. Methods: exact enumeration of the 42 orders for picks 1 and 2. '
         f"P(second | first) = remaining chances / (1,000 minus the winner's chances). "
         f'Los Angeles, counting both picks, has an {pct(la_top, 1)}% chance that at least one of them is in the top two. '
         "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged. "
         'The drawing is Sunday, Nov. 15, 2026, 4:30 to 5:00 p.m. PT (7:30 to 8:00 p.m. ET), '
         'on ESPN after UConn vs. Louisville and on TSN in Canada. This is the lottery, not the April 12, 2027 draft, '
         'and not the April 3, 2026 expansion draft.</p>'
+        f'<p class="table-note" id="methods-footnote">Worked example: Houston first then Toronto second = {CHANCES["HOU"]}/{TOTAL} x {CHANCES["TOR"]}/{TOTAL - CHANCES["HOU"]} = {pct(first_then_second, 4)}%, '
+        f'and the two orders together = {pct(both_orders, 1)}%.</p>'
     )
     simulator = (
         '<section id="simulator"><h2 class="section-title">Lottery simulator</h2>'
@@ -1150,6 +1198,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <h1>{e(TITLE)}</h1>
 <div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><time class="article-date" datetime="{PUBLISHED}">November 9, 2026</time></div>
 {hero_figure}
+{stakes}
 {findings}
 <h2 class="section-title" id="probabilities">Chance of every pick</h2>
 {summary_table(rows)}
@@ -1291,7 +1340,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .need-head h3{margin:0;min-width:0;font:800 20px/1.15 Barlow,sans-serif}
 .need-head a{color:#2a1458;text-decoration:none}
 .need-tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 8px}
-.need-card:not(.prospect) .need-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}
+.need-card:not(.prospect) .need-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
 .need-tile{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-height:52px;padding:6px 4px;border-radius:6px;background:#f6f1ff;text-align:center}
 .need-tile b{font:800 16px/1.1 Barlow,sans-serif;color:#2a1458}
 .need-tile span{font:600 11px/1.25 Inter,system-ui,sans-serif;color:#5a554e}
