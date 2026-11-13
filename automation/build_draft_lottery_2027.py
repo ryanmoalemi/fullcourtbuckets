@@ -1026,10 +1026,24 @@ SIM_JS = r"""
     }
     return [first, second].concat(rest);
   }
+  function esc(value) {
+    return String(value)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+  function avatar(slot) {
+    if (slot.photo && slot.photo.src) {
+      var style = slot.photo.focal ? ' style="object-position:' + esc(slot.photo.focal) + '"' : '';
+      return '<img class="av" src="' + esc(slot.photo.src) + '" alt="" width="72" height="72" loading="lazy" decoding="async"' + style + '>';
+    }
+    return '<span class="av" aria-hidden="true">' + esc(slot.circle) + '</span>';
+  }
   function row(pickNo, slot) {
     return '<div class="pick-row"><span class="pick-no">' + pickNo + '</span>' +
-      '<span class="av" aria-hidden="true">' + slot.circle + '</span>' +
-      '<span class="pick-name">' + slot.label + '</span></div>';
+      avatar(slot) +
+      '<span class="pick-name">' + esc(slot.label) + '</span></div>';
   }
   function show(order, text) {
     summary.textContent = text;
@@ -1039,17 +1053,32 @@ SIM_JS = r"""
     var next = lcg((Math.floor(Math.random() * 0x7fffffff) ^ Date.now()) >>> 0);
     show(draw(next), 'One draw.');
   }
+  function fmtCount(n) {
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function pct1(n) {
+    return (Math.round((n / 10000) * 1000) / 10).toFixed(1);
+  }
   function manyDraw() {
     var next = lcg(SEED);
-    var counts = {};
-    var bestKey = '', bestN = 0, best = null;
+    var pick1 = {};
+    SLOTS.forEach(function (slot) { pick1[slot.id] = 0; });
+    var counts = {}, bestN = 0, best = null;
     for (var n = 0; n < 10000; n++) {
       var order = draw(next);
+      pick1[order[0].id]++;
       var key = order.map(function (slot) { return slot.id; }).join(',');
       counts[key] = (counts[key] || 0) + 1;
-      if (counts[key] > bestN) { bestN = counts[key]; bestKey = key; best = order; }
+      if (counts[key] > bestN) { bestN = counts[key]; best = order; }
     }
-    show(best, 'Most common order in 10,000 draws with seed ' + SEED + '. It came up ' + bestN + ' times.');
+    var hou = SLOTS.filter(function (slot) { return slot.id === 'HOU'; })[0];
+    var houN = pick1.HOU;
+    var torN = pick1.TOR;
+    show(best,
+      'In these 10,000 draws, Houston was first ' + fmtCount(houN) + ' times (' + pct1(houN) +
+      '%) and Toronto ' + fmtCount(torN) + ' times (' + pct1(torN) +
+      '%), in line with the ' + hou.p1 + '% pick-1 odds in the table. The board below is the most common full order, which came up ' +
+      fmtCount(bestN) + ' times.');
   }
   function clearBoard() {
     summary.textContent = 'No draw yet.';
@@ -1105,10 +1134,23 @@ SIM_JS = r"""
 
 
 def sim_script() -> str:
-    payload = [
-        {'id': slot['id'], 'label': slot['label'], 'circle': slot['circle'], 'chances': slot['chances']}
-        for slot in SLOTS
-    ]
+    table = pick_probabilities()
+    payload = []
+    for slot in SLOTS:
+        item = {
+            'id': slot['id'],
+            'label': slot['label'],
+            'circle': slot['circle'],
+            'chances': slot['chances'],
+            'p1': pct(table[slot['id']][0], 1),
+        }
+        mark = _slot_mark(slot)
+        if mark and mark.get('src'):
+            item['photo'] = {
+                'src': mark['src'],
+                'focal': mark.get('focal') or '',
+            }
+        payload.append(item)
     return SIM_JS.replace('__SLOTS__', json.dumps(payload)).replace('__SEED__', str(SEED))
 
 
@@ -1186,7 +1228,8 @@ def page(rows: list[dict], cards: list[dict]) -> str:
     )
     simulator = (
         '<section id="simulator"><h2 class="section-title">Lottery simulator</h2>'
-        '<p>One draw is random. The 10,000-draw button uses seed 20261115.</p>'
+        '<p>This simulator lets you see how a lottery drawing can come out, including cases where Houston or Toronto miss the top two. '
+        'One draw is random; the 10,000-draw button always starts from the same seed, 20261115, so everyone sees the same totals, which you can compare with the exact odds in the table above.</p>'
         '<div class="lot-actions">'
         '<button type="button" class="button primary" id="draw-one">One draw</button>'
         '<button type="button" class="button" id="draw-many">10,000 draws</button>'
@@ -1324,6 +1367,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .lot-p1{background:#4c1d95}.lot-p2{background:#5b22c9}.lot-p3{background:#7c4fe0}.lot-p4{background:#9a78ea}.lot-p5{background:#b59cf2}.lot-p6{background:#d0c0f7}.lot-p7{background:#e6dcfb}
 .article .lot-legend{display:flex;flex-wrap:wrap;gap:2px 10px;font:600 12px/1.25 Inter,system-ui,sans-serif;color:#3d3832}
 .av{width:72px;height:72px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif;flex:none}
+.pick-row img.av{object-fit:cover;object-position:center 18%;background:none;display:block}
 .need-grid,.prospect-list{display:grid;gap:16px}
 .prospect .need-head{margin-bottom:4px}
 .prospect .face,.prospect .av{width:40px;height:40px;max-width:40px;font-size:12px}
