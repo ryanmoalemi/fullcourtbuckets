@@ -102,7 +102,8 @@ class NewsPathTests(unittest.TestCase):
 
     def test_featured_story_has_a_lead_image(self):
         articles = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
-        featured = articles[0]
+        pin = links.load_new_bar_pin(ROOT)
+        featured = pin if pin else articles[0]
         image = str(featured.get('image') or '').strip()
         alt = str(featured.get('imageAlt') or '').strip()
         self.assertTrue(_is_lead_image(image), featured.get('slug'))
@@ -135,14 +136,15 @@ class NewsPathTests(unittest.TestCase):
             self.assertTrue(_is_lead_image(lead), article.get('slug'))
             self.assertTrue((ROOT / lead.lstrip('/')).is_file(), article.get('slug'))
         older = home.split('id="older-stories"', 1)[1].split('<!-- fcb-stories:end -->', 1)[0]
-        shown = articles[1:1 + links.MORE_STORY_LIMIT]
+        start = 0 if pin else 1
+        shown = articles[start:start + links.MORE_STORY_LIMIT]
         self.assertIn('class="all-news" href="/news/">All news</a>', home)
         self.assertLess(home.find('id="site-hubs"'), home.find('id="more-stories"'))
         self.assertGreaterEqual(older.count('article-card is-compact'), 1)
         for article in shown:
             card = older.split(f'href="{links.article_href(article)}"', 1)[1].split('</a>', 1)[0]
             self.assertIn(f'src="{article["image"]}"', card, article['slug'])
-        for article in articles[1 + links.MORE_STORY_LIMIT:]:
+        for article in articles[start + links.MORE_STORY_LIMIT:]:
             self.assertNotIn(f'href="{links.article_href(article)}"', older, article['slug'])
         bare = dict(featured)
         bare['image'] = ''

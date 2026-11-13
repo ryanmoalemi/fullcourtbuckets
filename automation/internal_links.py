@@ -649,6 +649,78 @@ def ticker_copy(article: dict) -> str:
     return f'{title}. {dek}'
 
 
+
+def load_new_bar_pin(root: Path | None = None) -> dict | None:
+    """Optional New bar and homepage pin.
+
+    To unpin: delete content/new-bar-pin.json, or set enabled to false, then
+    rebuild the New bar and homepage so later auto-rebuilds do not put it back.
+    """
+    root = root or Path(__file__).resolve().parents[1]
+    path = root / 'content' / 'new-bar-pin.json'
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if not isinstance(data, dict):
+        return None
+    enabled = data.get('enabled', True)
+    if enabled is False or str(enabled).strip().lower() in {'false', 'no', '0'}:
+        return None
+    url = str(data.get('url') or '').split('?', 1)[0].split('#', 1)[0].strip()
+    title = re.sub(r'\s+', ' ', str(data.get('title') or '')).strip()
+    if not url.startswith('/') or not title:
+        return None
+    if not url.endswith('/'):
+        url += '/'
+    description = re.sub(r'\s+', ' ', str(data.get('description') or '')).strip()
+    pin_text = re.sub(r'\s+', ' ', str(data.get('text') or '')).strip()
+    article = {
+        'slug': str(data.get('slug') or '').strip(),
+        'url': url,
+        'title': title,
+        'description': description,
+        'text': pin_text or title,
+        'date': str(data.get('date') or '').strip(),
+        'category': str(data.get('category') or 'WNBA').strip() or 'WNBA',
+        'image': str(data.get('image') or '').strip(),
+        'imageAlt': str(data.get('imageAlt') or title).strip(),
+        'imageWidth': data.get('imageWidth') or 1200,
+        'imageHeight': data.get('imageHeight') or 675,
+    }
+    if data.get('imageFocal'):
+        article['imageFocal'] = data['imageFocal']
+    return article
+
+
+def ticker_item_from_article(article: dict) -> dict:
+    """New bar payload from a catalog row or a pin."""
+    moment = _publish_moment(article.get('date'))
+    date = ''
+    if moment is not None:
+        date = moment.astimezone(_PACIFIC).date().isoformat()
+    elif str(article.get('date') or '').strip():
+        date = str(article.get('date')).strip()[:10]
+    title = re.sub(r'\s+', ' ', str(article.get('title') or '')).strip()
+    description = re.sub(r'\s+', ' ', str(article.get('description') or '')).strip()
+    text = re.sub(r'\s+', ' ', str(article.get('text') or '')).strip() or ticker_copy(article)
+    url = str(article.get('url') or '').strip()
+    if not url:
+        url = article_href(article)
+    return {
+        'slug': str(article.get('slug') or '').strip(),
+        'url': url,
+        'date': date,
+        'moment': moment,
+        'text': text,
+        'title': title,
+        'description': description,
+        'kind': 'pin' if article.get('text') or (url and not url.startswith('/news/')) else 'article',
+    }
+
+
 def latest_published_article(articles: list, root: Path | None = None) -> dict | None:
     """Newest published story in the news catalog.
 
@@ -739,7 +811,7 @@ def apply_ticker(html: str, articles: list, now: dt.datetime | None = None) -> s
     return html
 
 
-def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> str:
+def apply_homepage(text: str, articles: list, rail_html: str | None = None, pin: dict | None = None) -> str:
     """Crawlable story and hub links. Leaves the small test homepage untouched."""
     text = ensure_site_organization_same_as(text)
     if 'id="latest"' not in text or 'id="older-stories"' not in text:
@@ -748,6 +820,9 @@ def apply_homepage(text: str, articles: list, rail_html: str | None = None) -> s
     text = _place_hubs(text)
     text = _ensure_all_news(text)
     ordered = sorted(articles, key=lambda article: article.get('date') or '', reverse=True)
+    if pin:
+        pin_url = str(pin.get('url') or article_href(pin)).rstrip('/') + '/'
+        ordered = [pin] + [article for article in ordered if article_href(article).rstrip('/') + '/' != pin_url]
     if ordered:
         featured = ordered[0]
         text = re.sub(
@@ -1296,7 +1371,10 @@ def article_slug(article: dict) -> str:
 
 
 def article_href(article: dict) -> str:
-    """Public path for a post. The slug is unchanged; the category is always /news/."""
+    """Public path for a post. An explicit site path wins; otherwise /news/{slug}/."""
+    raw = str((article or {}).get('url') or '').split('?', 1)[0].split('#', 1)[0].strip()
+    if raw.startswith('/'):
+        return raw if raw.endswith('/') else raw + '/'
     return f'/news/{article_slug(article)}/'
 
 
