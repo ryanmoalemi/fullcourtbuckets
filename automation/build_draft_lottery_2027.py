@@ -1295,6 +1295,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 .article h2.section-title{margin:30px 0 12px;font:800 30px/1.05 Barlow,sans-serif;letter-spacing:-.6px}
 .article h3{margin:18px 0 8px;font:800 22px/1.2 Barlow,sans-serif}
 .article p{margin:0 0 22px;font-size:17px;line-height:1.8}
+.article .lead{font-size:18px}
 .article ul,.article ol{margin:0 0 22px;padding-left:22px;font-size:17px;line-height:1.75}
 .article li{margin:0 0 8px}
 .article .byline{display:flex;align-items:center;gap:10px;margin:0;font:600 15px/1.3 Inter,system-ui,sans-serif;text-decoration:none}
