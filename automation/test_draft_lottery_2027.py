@@ -249,7 +249,7 @@ process.stdout.write(out.join('\n'));
             "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged.",
             self.html,
         )
-        self.assertIn('"dateModified": "2026-11-12"', self.html)
+        self.assertIn('"dateModified": "2026-11-13"', self.html)
         self.assertIn('"datePublished": "2026-11-09"', self.html)
         self.assertNotIn('\u2014', self.html)
         self.assertNotIn('>Unrestricted<', self.html)
@@ -435,6 +435,23 @@ class LotteryRender(unittest.TestCase):
         finally:
             srv.shutdown()
 
+
+
+class LotteryHistory(unittest.TestCase):
+    def test_history_count_csv_and_placement(self):
+        wins, total = lottery.history_counts()
+        self.assertEqual((wins, total), (14, 23))
+        rows = list(csv.DictReader((ROOT / 'data' / 'wnba-draft-lottery-history.csv').open(encoding='utf-8')))
+        self.assertEqual([int(r['draft_year']) for r in rows], list(range(2004, 2027)))
+        self.assertEqual(sum(r['best_odds_team_won'] == 'yes' for r in rows), wins)
+        for row in rows:
+            self.assertTrue(row['sources'].startswith('https://'), row['draft_year'])
+        html = PAGE.read_text(encoding='utf-8')
+        self.assertIn(lottery.history_finding(), html)
+        self.assertIn('href="/data/wnba-draft-lottery-history.csv"', html)
+        self.assertLess(html.index('id="simulator"'), html.index('id="history"'))
+        self.assertLess(html.index('id="prelottery-odds"'), html.index('id="lottery-history"'))
+        self.assertNotIn('\u2014', html)
 
 if __name__ == '__main__':
     unittest.main()
