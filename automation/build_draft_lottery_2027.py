@@ -31,10 +31,11 @@ DESCRIPTION = (
     'team needs, live results, and a free CSV. Drawing: Nov. 15, 2026.'
 )
 PUBLISHED = '2026-11-09'
-MODIFIED = '2026-11-12'
+MODIFIED = '2026-11-13'
 CSV_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-odds.csv'
 OUTCOMES_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-outcomes.csv'
 RESULTS_PATH = ROOT / 'data' / 'wnba-draft-lottery-2027-results.json'
+HISTORY_PATH = ROOT / 'data' / 'wnba-draft-lottery-history.csv'
 OFFICIAL_RELEASE = 'https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15'
 PAGE_PATH = ROOT / 'wnba' / 'draft-lottery-2027' / 'index.html'
 SEED = 20261115
@@ -955,6 +956,10 @@ def dataset_jsonld() -> str:
             '@type': 'DataDownload',
             'encodingFormat': 'text/csv',
             'contentUrl': BASE + '/data/wnba-draft-lottery-2027-odds.csv',
+        }, {
+            '@type': 'DataDownload',
+            'encodingFormat': 'text/csv',
+            'contentUrl': BASE + '/data/wnba-draft-lottery-history.csv',
         }],
     }
     return '<script type="application/ld+json">' + json.dumps(payload) + '</script>'
@@ -1154,6 +1159,172 @@ def sim_script() -> str:
     return SIM_JS.replace('__SLOTS__', json.dumps(payload)).replace('__SEED__', str(SEED))
 
 
+# Past lotteries, 2004 through 2026 drafts. Each row was checked on Nov. 13, 2026
+# against a league or team release (WNBA.com, or the release reprinted on
+# OurSports Central), the WNBA.com timeline, or a newspaper report of the drawing.
+# 2002 and 2003 are left out: no page opened for this table prints the full
+# field of chances for those two drawings.
+# chance: the best-odds team's chance at No. 1. won_chance: the winner's chance.
+# Chances are out of 1,000 except 2004, where the source prints 41 percent.
+_OSC = 'https://www.oursportscentral.com/services/releases/'
+_TIMELINE = 'https://www.wnba.com/news/wnba-history-timeline-2012'
+LOTTERY_HISTORY = [
+    {'draft': 2004, 'date': '2003-12-03', 'best': 'Phoenix Mercury', 'chance': '41%', 'winner': 'Phoenix Mercury', 'won_chance': '41%', 'best_won': 'yes',
+     'note': 'Phoenix had the worst 2003 record and the best chance.',
+     'sources': ['https://www.latimes.com/archives/la-xpm-2003-dec-04-sp-wnba4-story.html', _TIMELINE]},
+    {'draft': 2005, 'date': '2004-12-01', 'best': 'San Antonio Silver Stars', 'chance': 420, 'winner': 'Charlotte Sting', 'won_chance': 97, 'best_won': 'no',
+     'note': 'Charlotte had the fourth-best chance of five.',
+     'sources': [_OSC + 'wnba-draft-lottery-december-1/n-3105527', _TIMELINE]},
+    {'draft': 2006, 'date': '2005-10-24', 'best': 'Charlotte Sting', 'chance': 420, 'winner': 'Minnesota Lynx', 'won_chance': 167, 'best_won': 'no',
+     'note': 'Minnesota had the third-best chance of five.',
+     'sources': [_OSC + 'sting-have-best-odds-in-wnba-draft-lottery/n-3232695', _OSC + 'minnesota-lynx-win-top-pick-in-2006-wnba-draft/n-3233866']},
+    {'draft': 2007, 'date': '2006-10-26', 'best': 'Chicago Sky', 'chance': 410, 'winner': 'Phoenix Mercury', 'won_chance': 25, 'best_won': 'no',
+     'note': 'Phoenix had the smallest chance of six.',
+     'sources': [_OSC + 'phoenix-mercury-win-top-pick-in-2007-wnba-draft/n-3389718', _OSC + 'charlotte-has-third-most-chances-for-top-pick/n-3388814']},
+    {'draft': 2008, 'date': '2007-10-23', 'best': 'Los Angeles Sparks', 'chance': 341, 'winner': 'Los Angeles Sparks', 'won_chance': 341, 'best_won': 'yes',
+     'note': 'Los Angeles and Minnesota tied at 10-24; Los Angeles won the tiebreaker, 341 to 340.',
+     'sources': [_OSC + 'wnba-to-hold-draft-lottery-tuesday-october-23/n-3550142', _TIMELINE]},
+    {'draft': 2009, 'date': '2008-12-09', 'best': 'Atlanta Dream', 'chance': 420, 'winner': 'Atlanta Dream', 'won_chance': 420, 'best_won': 'yes',
+     'note': 'The timeline says the drawing went exactly according to the odds.',
+     'sources': [_TIMELINE]},
+    {'draft': 2010, 'date': '2009-11-05', 'best': 'Minnesota Lynx', 'chance': 428, 'winner': 'Minnesota Lynx', 'won_chance': 428, 'best_won': 'yes',
+     'note': "Minnesota's 428 is its own 167 plus New York's 261. Sacramento had 420.",
+     'sources': [_OSC + 'minnesota-lynx-win-top-pick-in-2010-wnba-draft/n-3925397', _TIMELINE]},
+    {'draft': 2011, 'date': '2010-11-02', 'best': 'Tulsa Shock', 'chance': 442, 'winner': 'Minnesota Lynx', 'won_chance': 380, 'best_won': 'no',
+     'note': "Minnesota's 380 includes combinations from Connecticut's pick.",
+     'sources': ['https://web.archive.org/web/2010/http://www.wnba.com/news/draft_lottery_100930.html', _OSC + 'minnesota-lynx-win-2011-wnba-draft-lottery/n-4110749']},
+    {'draft': 2012, 'date': '2011-11', 'best': 'Tulsa Shock', 'chance': 442, 'winner': 'Los Angeles Sparks', 'won_chance': 104, 'best_won': 'no',
+     'note': 'Los Angeles had the smallest chance of four. The sources checked give the month, not the day.',
+     'sources': ['https://windycitytimes.com/2011/11/13/chicago-sky-draws-no-2-overall-pick-for-2012-wnba-draft/', _OSC + 'chicago-phoenix-tulsa-washington-to-vie-for-top-pick-in-wnba-draft/n-4491896']},
+    {'draft': 2013, 'date': '2012-09-26', 'best': 'Washington Mystics', 'chance': 442, 'winner': 'Phoenix Mercury', 'won_chance': 276, 'best_won': 'no',
+     'note': 'Phoenix had the second-best chance.',
+     'sources': [_OSC + 'mercury-wins-first-pick/n-4492643']},
+    {'draft': 2014, 'date': '2013-12-10', 'best': 'Connecticut Sun', 'chance': 442, 'winner': 'Connecticut Sun', 'won_chance': 442, 'best_won': 'yes',
+     'note': '',
+     'sources': [_OSC + 'connecticut-sun-wins-top-pick-in-2014-wnba-draft-lottery/n-4714870']},
+    {'draft': 2015, 'date': '2014-08-21', 'best': 'Seattle Storm and Tulsa Shock (tied)', 'chance': 359, 'winner': 'Seattle Storm', 'won_chance': 359, 'best_won': 'yes',
+     'note': 'Seattle and Tulsa tied for the most chances. Counted as yes: a team with the most chances won.',
+     'sources': [_OSC + 'seattle-storm-wins-top-pick-for-2015-wnba-draft/n-4860977', 'https://www.wnba.com/news/seattle-storm-wins-top-pick-for-2016-wnba-draft-presented-by-state-farm']},
+    {'draft': 2016, 'date': '2015-09-24', 'best': 'Seattle Storm', 'chance': 442, 'winner': 'Seattle Storm', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/seattle-storm-wins-top-pick-for-2016-wnba-draft-presented-by-state-farm']},
+    {'draft': 2017, 'date': '2016-09-28', 'best': 'San Antonio Stars', 'chance': 442, 'winner': 'San Antonio Stars', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/stars-win-top-pick-2017-wnba-draft']},
+    {'draft': 2018, 'date': '2017-11-13', 'best': 'Las Vegas', 'chance': 442, 'winner': 'Las Vegas', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/las-vegas-wins-top-pick-2018-wnba-draft-presented-state-farm']},
+    {'draft': 2019, 'date': '', 'best': 'Indiana Fever', 'chance': 442, 'winner': 'Las Vegas Aces', 'won_chance': 276, 'best_won': 'no',
+     'note': 'The results release has no date on its dateline.',
+     'sources': ['https://www.wnba.com/news/wnba-draft-lottery-2019-presented-by-state-farm-results']},
+    {'draft': 2020, 'date': '2019-09-17', 'best': 'New York Liberty', 'chance': 442, 'winner': 'New York Liberty', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/new-york-liberty-wins-top-pick-in-2020-wnba-draft-presented-by-state-farm']},
+    {'draft': 2021, 'date': '2020-12-04', 'best': 'New York Liberty', 'chance': 442, 'winner': 'New York Liberty', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/new-york-liberty-wins-top-pick-in-2021-wnba-draft-presented-by-state-farm']},
+    {'draft': 2022, 'date': '2021-12-19', 'best': 'Indiana Fever', 'chance': 442, 'winner': 'Washington Mystics', 'won_chance': 178, 'best_won': 'no', 'note': '',
+     'sources': ['https://www.wnba.com/news/washington-mystics-win-top-pick-in-2022-wnba-draft-presented-by-state-farm']},
+    {'draft': 2023, 'date': '2022-11-11', 'best': 'Indiana Fever', 'chance': 442, 'winner': 'Indiana Fever', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/indiana-fever-win-top-pick-in-2023-wnba-draft-presented-by-state-farm']},
+    {'draft': 2024, 'date': '2023-12-10', 'best': 'Indiana Fever', 'chance': 442, 'winner': 'Indiana Fever', 'won_chance': 442, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/wnba-draft-lottery-2024-results']},
+    {'draft': 2025, 'date': '2024-11-17', 'best': 'Los Angeles Sparks', 'chance': 442, 'winner': 'Dallas Wings', 'won_chance': 227, 'best_won': 'no',
+     'note': 'Dallas and Chicago each had 227.',
+     'sources': ['https://www.wnba.com/news/2025-wnba-draft-lottery-results']},
+    {'draft': 2026, 'date': '2025-11-23', 'best': 'Dallas Wings', 'chance': 420, 'winner': 'Dallas Wings', 'won_chance': 420, 'best_won': 'yes', 'note': '',
+     'sources': ['https://www.wnba.com/news/wnba-draft-lottery-2026-results']},
+]
+
+
+def _chance_label(value) -> str:
+    if isinstance(value, str):
+        return value
+    return f'{pct(Fraction(value, TOTAL), 1)}%'
+
+
+def history_counts() -> tuple[int, int]:
+    wins = sum(1 for row in LOTTERY_HISTORY if row['best_won'] == 'yes')
+    return wins, len(LOTTERY_HISTORY)
+
+
+def history_finding() -> str:
+    wins, total = history_counts()
+    first = LOTTERY_HISTORY[0]['draft']
+    last = LOTTERY_HISTORY[-1]['draft']
+    return (
+        f'Key finding: the team with the best odds won the No. 1 pick in {wins} of the {total} '
+        f'WNBA draft lotteries from the {first} draft through the {last} draft.'
+    )
+
+
+def write_history_csv() -> None:
+    fields = ['draft_year', 'lottery_date', 'best_odds_team', 'best_odds_chances_of_1000', 'best_odds_pct',
+              'no1_winner', 'winner_chances_of_1000', 'winner_pct', 'best_odds_team_won', 'note', 'sources']
+    with HISTORY_PATH.open('w', newline='', encoding='utf-8') as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
+        for row in LOTTERY_HISTORY:
+            writer.writerow({
+                'draft_year': row['draft'],
+                'lottery_date': row['date'],
+                'best_odds_team': row['best'],
+                'best_odds_chances_of_1000': '' if isinstance(row['chance'], str) else row['chance'],
+                'best_odds_pct': _chance_label(row['chance']),
+                'no1_winner': row['winner'],
+                'winner_chances_of_1000': '' if isinstance(row['won_chance'], str) else row['won_chance'],
+                'winner_pct': _chance_label(row['won_chance']),
+                'best_odds_team_won': row['best_won'],
+                'note': row['note'],
+                'sources': ' '.join(row['sources']),
+            })
+
+
+_HISTORY_SHORT = {
+    'Seattle Storm and Tulsa Shock (tied)': 'Seattle, Tulsa (tied)',
+    'San Antonio Silver Stars': 'San Antonio', 'San Antonio Stars': 'San Antonio',
+    'Los Angeles Sparks': 'Los Angeles', 'New York Liberty': 'New York', 'Las Vegas Aces': 'Las Vegas', 'Las Vegas': 'Las Vegas',
+}
+
+
+def _history_short(team: str) -> str:
+    # Table cells use the city, like the odds tables above; the CSV keeps full names.
+    return _HISTORY_SHORT.get(team, team.rsplit(' ', 1)[0] if ' ' in team else team)
+
+
+def history_html() -> str:
+    body = []
+    for row in LOTTERY_HISTORY:
+        won = _history_short(row['winner'])
+        if row['best_won'] == 'no':
+            won = f'{won} ({_chance_label(row["won_chance"])})'
+        body.append(
+            '<tr>'
+            f'<th scope="row">{row["draft"]}</th>'
+            f'<td data-label="Best odds">{e(_history_short(row["best"]))}</td>'
+            f'<td data-label="Its chance">{e(_chance_label(row["chance"]))}</td>'
+            f'<td data-label="Won No. 1">{e(won)}</td>'
+            '</tr>'
+        )
+    table = (
+        '<div class="table-wrap summary-wrap" data-fcb-data-table>'
+        '<table class="fcb-cards fcb-data-table" id="lottery-history">'
+        '<thead><tr><th scope="col">Draft</th><th scope="col">Best odds</th>'
+        '<th scope="col">Its chance</th><th scope="col">Won No. 1</th></tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table></div>'
+    )
+    return (
+        '<section id="history"><h2 class="section-title">Lottery history: did the best odds win?</h2>'
+        f'<p>{e(history_finding())}</p>'
+        f'{table}'
+        '<p class="table-note" id="history-note">Data through the Nov. 23, 2025 drawing for the 2026 draft. '
+        'Chance is the share of the 1,000 combinations for No. 1; 2004 is the 41 percent printed in the source. '
+        "When a team lost, the winner's chance is in parentheses. 2008 Los Angeles won a tiebreaker for the best odds, 341 to 340. "
+        "2010 Minnesota's 428 includes New York's combinations. 2015 Seattle was tied with Tulsa for the best odds and is counted as a yes. "
+        '2002 and 2003 are left out because no source checked for this table prints the full field of chances for those drawings. '
+        'Sources: WNBA.com lottery results releases (2016 through 2026 drafts) and the WNBA.com history timeline; league and team releases '
+        'for 2005 through 2015, most reprinted on OurSports Central, plus an archived WNBA.com release for 2011; the Los Angeles Times (2004) and Windy City Times (2012). '
+        'Every row links its sources in the CSV. '
+        '<a href="/data/wnba-draft-lottery-history.csv">Download lottery history (CSV, CC0)</a>.</p>'
+        '</section>'
+    )
+
+
 def live_html() -> str:
     items = []
     for number in range(1, 16):
@@ -1264,6 +1435,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <p>Bethany Donaphin, head of league operations, reveals the result on ESPN. Ernst &amp; Young oversees the drawing. The presentation name on the release is State Street Investment Management SPY. ESPN is airing the lottery for the 15th year in a row.</p>
 </section>
 {simulator}
+{history_html()}
 <section id="prospects"><h2 class="section-title">Early prospect board</h2>
 <p>Order is the <a href="https://ultimatebigboard.com/wnba/2027/big-board/" target="_blank" rel="noopener">Ultimate Big Board</a> snapshot calculated Oct. 29, 2026. It is a consensus of mocks, not a draft.</p>
 {prospects_html()}
@@ -1295,6 +1467,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 <ul>
 <li><a href="https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15" target="_blank" rel="noopener">WNBA Draft Lottery 2027 release, Oct. 28, 2026</a></li>
 <li><a href="/data/wnba-draft-lottery-2027-outcomes.csv">42 weighted lottery outcomes (CSV, CC0)</a></li>
+<li><a href="/data/wnba-draft-lottery-history.csv">Lottery history, 2004 through 2026 drafts, with a source link for each row (CSV, CC0)</a></li>
 <li><a href="https://www.wnba.com/news/wnba-nba-approve-connecticut-sun-sale" target="_blank" rel="noopener">WNBA and NBA approve the Sun sale, May 13, 2026</a></li>
 <li><a href="https://mystics.wnba.com/news/washington-mystics-acquire-third-overall-picki-in-the-wnba-draft" target="_blank" rel="noopener">Mystics on the Ariel Atkins trade, Feb. 23, 2025</a></li>
 <li><a href="https://www.wnba.com/news/chicago-sky-acquire-ariel-atkins" target="_blank" rel="noopener">League release on the Sky and Ariel Atkins, Feb. 23, 2025</a></li>
@@ -1460,6 +1633,7 @@ def main() -> None:
     write_csv(rows)
     write_outcomes_csv()
     write_results()
+    write_history_csv()
     cards = team_needs()
     html_out = page(rows, cards)
     PAGE_PATH.parent.mkdir(parents=True, exist_ok=True)
