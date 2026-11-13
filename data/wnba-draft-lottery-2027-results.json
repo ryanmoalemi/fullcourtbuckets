@@ -2,7 +2,7 @@
   "status": "pending",
   "updated": null,
   "source": "",
-  "note": "After the Nov. 15, 2026 drawing, set status to final, set updated to the date, name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) and team. Leave picks 8-15 as to be confirmed until a league draft order names them. A final file locks the simulator to this order.",
+  "note": "After the Nov. 15, 2026 drawing, set status to final, set updated to the date, name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) and team. Leave picks 8-15 as to be confirmed until a league draft order names them. A final file locks the simulator to this order. To update the page title after the drawing, set title to the post-drawing headline. When status is final, the page reads that title and updates the h1, document title, og:title, and twitter:title without a rebuild.",
   "picks": [
     {
       "pick": 1,

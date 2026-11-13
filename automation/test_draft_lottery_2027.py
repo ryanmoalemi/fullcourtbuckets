@@ -304,6 +304,37 @@ process.stdout.write(out.join('\n'));
         self.assertEqual(len(rows), 42)
         self.assertEqual(sum(Fraction(row['probability_fraction']) for row in rows), 1)
 
+    def test_pre_drawing_title_and_current_roster_card_photos(self):
+        self.assertEqual(
+            lottery.TITLE,
+            '2027 WNBA Draft Lottery Odds and Simulator (Drawing Nov 15)',
+        )
+        self.assertNotIn('Live Results', lottery.TITLE)
+        self.assertIn(f'<h1>{lottery.TITLE}</h1>', self.html)
+        self.assertIn(f'<title>{lottery.TITLE}</title>', self.html)
+        self.assertIn(f'<meta property="og:title" content="{lottery.TITLE}">', self.html)
+        self.assertIn(f'<meta name="twitter:title" content="{lottery.TITLE}">', self.html)
+        self.assertIn("if (data.title)", self.html)
+        self.assertIn("document.title = data.title", self.html)
+        self.assertIn('meta[property="og:title"]', self.html)
+        note = json.loads(RESULTS.read_text(encoding='utf-8'))['note']
+        self.assertIn('set title to the post-drawing headline', note)
+        self.assertIn('/images/articles/wnba-draft-lottery-2027/brittney-griner-1200.webp', self.html)
+        self.assertIn('/images/articles/wnba-draft-lottery-2027/marina-mabrey-1200.webp', self.html)
+        self.assertIn('/images/articles/wnba-draft-lottery-2027/emily-engstler-1200.webp', self.html)
+        self.assertNotIn('/images/teams/connecticut-sun.jpg', self.html)
+        self.assertNotIn('tempo-aces-vancouver.webp', self.html)
+        self.assertNotIn('moda-center.webp', self.html)
+        self.assertNotIn('Jasmine Thomas of the Connecticut Sun', self.html)
+        for name in (
+            'brittney-griner-1200.webp',
+            'marina-mabrey-1200.webp',
+            'emily-engstler-1200.webp',
+        ):
+            path = ROOT / 'images' / 'articles' / 'wnba-draft-lottery-2027' / name
+            self.assertTrue(path.is_file(), name)
+            self.assertGreater(path.stat().st_size, 10000, name)
+
     def test_phone_odds_cards_drop_zero_rows(self):
         cards = re.findall(r'<article class="lot-card">.*?</article>', self.html, re.S)
         self.assertEqual(len(cards), 7)

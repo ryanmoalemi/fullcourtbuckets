@@ -25,7 +25,7 @@ import team_hub
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE = '/wnba/draft-lottery-2027/'
 BASE = 'https://fullcourtbuckets.com'
-TITLE = '2027 WNBA Draft Lottery Odds, Simulator and Live Results (Nov 15)'
+TITLE = '2027 WNBA Draft Lottery Odds and Simulator (Drawing Nov 15)'
 DESCRIPTION = (
     'Official 2027 WNBA Draft Lottery odds, full pick probabilities for picks 1-7, '
     'team needs, live results, and a free CSV. Drawing: Nov. 15, 2026.'
@@ -270,6 +270,37 @@ TEAM_MARK = {
     'POR': 'portland-fire',
     'LAL': 'los-angeles-sparks',
 }
+# Lottery card photos for teams whose hub image is a former player, a
+# different city, or a venue. These stay on this page if the hub photos change.
+TEAM_CARD_VISUALS = {
+    'HOU': {
+        'src': '/images/articles/wnba-draft-lottery-2027/brittney-griner-1200.webp',
+        'alt': 'Brittney Griner clapping in a Connecticut Sun jersey during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:260706_Lynx_Sun_JohnMc164.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+    'TOR': {
+        'src': '/images/articles/wnba-draft-lottery-2027/marina-mabrey-1200.webp',
+        'alt': 'Marina Mabrey in a Toronto Tempo jersey during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:Marina_Mabrey_Tempo.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+    'POR': {
+        'src': '/images/articles/wnba-draft-lottery-2027/emily-engstler-1200.webp',
+        'alt': 'Emily Engstler of the Portland Fire dribbling during a July 2026 game',
+        'author': 'John McClellan',
+        'page': 'https://commons.wikimedia.org/wiki/File:Emily_Engstler_Fire.jpg',
+        'license': 'CC BY-SA 4.0',
+        'license_href': 'https://creativecommons.org/licenses/by-sa/4.0',
+        'focal': 'center 20%',
+    },
+}
 
 
 def e(value) -> str:
@@ -452,7 +483,10 @@ def default_results() -> dict:
             'After the Nov. 15, 2026 drawing, set status to final, set updated to the date, '
             'name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) '
             'and team. Leave picks 8-15 as to be confirmed until a league draft order names them. '
-            'A final file locks the simulator to this order.'
+            'A final file locks the simulator to this order. To update the page title after the '
+            'drawing, set title to the post-drawing headline. When status is final, the page '
+            'reads that title and updates the h1, document title, og:title, and twitter:title '
+            'without a rebuild.'
         ),
         'picks': picks,
     }
@@ -661,7 +695,7 @@ def needs_html(cards: list[dict], rows: list[dict]) -> str:
         slot = card['slot']
         mark = _slot_mark(slot)
         if mark:
-            focal = {'TOR': 'center 75%', 'POR': 'center 40%'}.get(slot['id'], 'center 20%')
+            focal = mark.get('focal') or {'TOR': 'center 75%', 'POR': 'center 40%'}.get(slot['id'], 'center 20%')
             photo = (
                 '<figure class="lead-photo">'
                 f'<img src="{e(mark["src"])}" alt="{e(mark["alt"])}" style="object-position:{focal}" '
@@ -764,6 +798,8 @@ def prospects_html() -> str:
 
 
 def _slot_mark(slot: dict) -> dict | None:
+    if slot['id'] in TEAM_CARD_VISUALS:
+        return TEAM_CARD_VISUALS[slot['id']]
     key = TEAM_MARK.get(slot['id'])
     if not key and slot['id'].startswith('LAL'):
         key = TEAM_MARK['LAL']
@@ -1053,6 +1089,13 @@ SIM_JS = r"""
       order.push(byId[found.slot]);
     }
     liveStatus.textContent = 'Published result' + (data.updated ? ', updated ' + data.updated : '') + '.';
+    if (data.title) {
+      var heading = document.querySelector('.article h1') || document.querySelector('h1');
+      if (heading) heading.textContent = data.title;
+      document.title = data.title;
+      var tags = document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]');
+      for (var i = 0; i < tags.length; i++) tags[i].setAttribute('content', data.title);
+    }
     lock(order, data.source || '');
   }
   fetch('/data/wnba-draft-lottery-2027-results.json', {cache: 'no-store'})
