@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-14T12:32:52+00:00",
-  "stats_updated_at": "2026-11-10T17:21:25+00:00",
+  "checked_at": "2026-11-15T12:31:05+00:00",
+  "stats_updated_at": "2026-11-15T12:31:05+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -593,24 +593,25 @@
         "conference": "Western Conference"
       },
       "games_played": 34,
-      "min": 31.15,
-      "fgm": 6.12,
-      "fga": 14.21,
+      "min": 31.1,
+      "fgm": 6.1,
+      "fga": 14.2,
       "fg_pct": 43.1,
-      "fg3m": 1.59,
-      "fg3a": 4.12,
+      "fg3m": 1.6,
+      "fg3a": 4.1,
       "fg3_pct": 38.6,
-      "ftm": 3.88,
+      "ftm": 3.9,
       "fta": 4.5,
       "ft_pct": 86.3,
-      "oreb": null,
-      "dreb": null,
-      "reb": 3.18,
-      "ast": 3.44,
-      "stl": 1.26,
-      "blk": 0.35,
+      "oreb": 0.9,
+      "dreb": 2.2,
+      "reb": 3.2,
+      "ast": 3.4,
+      "stl": 1.3,
+      "blk": 0.4,
       "turnover": 2.5,
-      "pts": 17.71
+      "pts": 17.7,
+      "gap_fill": true
     },
     {
       "player_id": 437,
@@ -625,24 +626,25 @@
         "conference": "Western Conference"
       },
       "games_played": 1,
-      "min": 31.0,
-      "fgm": 4.0,
-      "fga": 14.0,
+      "min": 31,
+      "fgm": 4,
+      "fga": 14,
       "fg_pct": 28.6,
-      "fg3m": 2.0,
-      "fg3a": 6.0,
+      "fg3m": 2,
+      "fg3a": 6,
       "fg3_pct": 33.3,
-      "ftm": 7.0,
-      "fta": 7.0,
-      "ft_pct": 100.0,
-      "oreb": null,
-      "dreb": null,
-      "reb": 5.0,
-      "ast": 1.0,
-      "stl": 3.0,
-      "blk": 0.0,
-      "turnover": 2.0,
-      "pts": 17.0
+      "ftm": 7,
+      "fta": 7,
+      "ft_pct": 100,
+      "oreb": 1,
+      "dreb": 4,
+      "reb": 5,
+      "ast": 1,
+      "stl": 3,
+      "blk": 0,
+      "turnover": 2,
+      "pts": 17,
+      "gap_fill": true
     },
     {
       "player_id": 437,
@@ -748,7 +750,7 @@
     {
       "game_id": 1392696,
       "player_id": 437,
-      "date": "2026-10-10T01:30:00.000Z",
+      "date": "2026-10-09T19:00:00.000Z",
       "season": 2026,
       "postseason": true,
       "team": {
@@ -771,9 +773,9 @@
         "id": 13,
         "full_name": "Golden State Valkyries",
         "abbreviation": "GS",
-        "city": "Golden State",
+        "city": null,
         "name": "Valkyries",
-        "conference": "Western Conference"
+        "conference": null
       },
       "home_score": 77,
       "away_score": 87,
@@ -803,9 +805,9 @@
         "id": 13,
         "full_name": "Golden State Valkyries",
         "abbreviation": "GS",
-        "city": "Golden State",
+        "city": null,
         "name": "Valkyries",
-        "conference": "Western Conference"
+        "conference": null
       },
       "visitor_team": {
         "id": 8,
@@ -946,7 +948,7 @@
       "turnover": 1.0
     }
   ],
-  "game_log_window_start": "2026-10-10",
+  "game_log_window_start": "2026-10-11",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",
