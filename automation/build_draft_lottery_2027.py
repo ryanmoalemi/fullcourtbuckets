@@ -504,6 +504,122 @@ def write_results() -> None:
     RESULTS_PATH.write_text(json.dumps(default_results(), indent=2) + '\n', encoding='utf-8')
 
 
+def load_results() -> dict:
+    if not RESULTS_PATH.is_file():
+        return {}
+    try:
+        data = json.loads(RESULTS_PATH.read_text(encoding='utf-8'))
+    except json.JSONDecodeError:
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def final_lottery_picks(data: dict | None = None) -> list[dict]:
+    """Picks 1-7 when the results file is final and those slots are filled."""
+    data = load_results() if data is None else data
+    if data.get('status') != 'final':
+        return []
+    filled = []
+    for pick in data.get('picks') or []:
+        number = pick.get('pick')
+        if number in range(1, 8) and (pick.get('team') or pick.get('label')):
+            filled.append(pick)
+    if len(filled) < 7:
+        return []
+    return sorted(filled, key=lambda item: item['pick'])
+
+
+def page_title(data: dict | None = None) -> str:
+    data = load_results() if data is None else data
+    title = (data.get('title') or '').strip() if final_lottery_picks(data) else ''
+    return title or TITLE
+
+
+def _brief_team(pick: dict) -> str:
+    name = (pick.get('team') or pick.get('label') or '').strip()
+    # Keep distinguishing notes such as (from Chicago); drop the relocation aside.
+    name = name.replace(' (formerly Connecticut Sun)', '')
+    return name
+
+
+def page_description(data: dict | None = None) -> str:
+    data = load_results() if data is None else data
+    picks = final_lottery_picks(data)
+    if len(picks) < 7:
+        return DESCRIPTION
+    first = _brief_team(picks[0])
+    second = _brief_team(picks[1])
+    names = [_brief_team(pick) for pick in picks]
+    top_seven = ', '.join(names[:-1]) + ', and ' + names[-1]
+    return (
+        f'{first} won the 2027 WNBA Draft Lottery and gets the No. 1 pick. '
+        f'{second} got No. 2. The top seven are {top_seven}.'
+    )
+
+
+def page_modified(data: dict | None = None) -> str:
+    data = load_results() if data is None else data
+    if not final_lottery_picks(data):
+        return MODIFIED
+    text = str(data.get('updated') or '').strip()
+    if len(text) == 10 and text[4] == '-' and text[7] == '-':
+        return text
+    months = {
+        'jan': 1, 'january': 1, 'feb': 2, 'february': 2, 'mar': 3, 'march': 3,
+        'apr': 4, 'april': 4, 'may': 5, 'jun': 6, 'june': 6, 'jul': 7, 'july': 7,
+        'aug': 8, 'august': 8, 'sep': 9, 'sept': 9, 'september': 9,
+        'oct': 10, 'october': 10, 'nov': 11, 'november': 11, 'dec': 12, 'december': 12,
+    }
+    parts = text.replace(',', ' ').replace('.', ' ').split()
+    if len(parts) >= 3 and parts[0].lower() in months and parts[1].isdigit() and parts[2].isdigit():
+        month = months[parts[0].lower()]
+        return f'{int(parts[2]):04d}-{month:02d}-{int(parts[1]):02d}'
+    return '2026-11-15'
+
+
+def official_results_html(data: dict | None = None) -> str:
+    data = load_results() if data is None else data
+    picks = final_lottery_picks(data)
+    if not picks:
+        return ''
+    by_id = {slot['id']: slot for slot in SLOTS}
+    body = []
+    for pick in picks:
+        name = (pick.get('label') or pick.get('team') or 'to be confirmed').strip()
+        slot = by_id.get(pick.get('slot'))
+        if slot:
+            team = f'<a href="{e(slot["href"])}">{e(name)}</a>'
+        else:
+            team = e(name)
+        body.append(
+            '<tr>'
+            f'<th scope="row">No. {int(pick["pick"])}</th>'
+            f'<td data-label="Team">{team}</td>'
+            '</tr>'
+        )
+    source = str(data.get('source') or '').strip()
+    updated = str(data.get('updated') or '').strip()
+    label = 'WNBA'
+    if updated:
+        label = f'WNBA, {updated}'
+    if source:
+        note = (
+            f'<p class="table-note">Source: <a href="{e(source)}" target="_blank" rel="noopener">'
+            f'{e(label)}</a>.</p>'
+        )
+    else:
+        note = f'<p class="table-note">Source: {e(label)}.</p>'
+    return (
+        '<section id="official-results"><h2 class="section-title">Official results</h2>'
+        '<div class="table-wrap summary-wrap" data-fcb-data-table>'
+        '<table class="fcb-cards fcb-data-table" id="lottery-official-results">'
+        '<thead><tr><th scope="col">Pick</th><th scope="col">Team</th></tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table></div>'
+        f'{note}'
+        '</section>'
+    )
+
+
 def _norm(name: str) -> str:
     text = unicodedata.normalize('NFKD', name)
     text = ''.join(char for char in text if not unicodedata.combining(char))
@@ -937,7 +1053,7 @@ def faq_jsonld(pairs: list[tuple[str, str]]) -> str:
     return '<script type="application/ld+json">' + json.dumps(payload, ensure_ascii=False) + '</script>'
 
 
-def dataset_jsonld() -> str:
+def dataset_jsonld(modified: str | None = None) -> str:
     payload = {
         '@context': 'https://schema.org',
         '@type': 'Dataset',
@@ -950,7 +1066,7 @@ def dataset_jsonld() -> str:
         'creator': {'@type': 'Organization', 'name': 'Full Court Buckets', 'url': BASE + '/'},
         'license': 'https://creativecommons.org/publicdomain/zero/1.0/',
         'isAccessibleForFree': True,
-        'dateModified': MODIFIED,
+        'dateModified': modified or MODIFIED,
         'isBasedOn': 'https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15',
         'distribution': [{
             '@type': 'DataDownload',
@@ -1090,7 +1206,7 @@ SIM_JS = r"""
     board.innerHTML = '';
   }
   function lock(order, source) {
-    show(order, 'Locked to the published result' + (source ? ' (' + source + ')' : '') + '.');
+    show(order, 'Locked to the published result.');
     one.disabled = true;
     many.disabled = true;
     reset.disabled = true;
@@ -1325,14 +1441,29 @@ def history_html() -> str:
     )
 
 
-def live_html() -> str:
+def live_html(data: dict | None = None) -> str:
+    data = load_results() if data is None else data
+    by_pick = {item.get('pick'): item for item in (data.get('picks') or [])}
+    final = bool(final_lottery_picks(data))
     items = []
     for number in range(1, 16):
-        label = 'Not drawn yet' if number <= 7 else 'to be confirmed'
-        items.append(f'<li>Pick {number}: {label}</li>')
+        pick = by_pick.get(number) or {}
+        if number <= 7:
+            if final:
+                label = pick.get('team') or pick.get('label') or 'Not drawn yet'
+            else:
+                label = pick.get('label') or 'Not drawn yet'
+        else:
+            label = pick.get('label') or 'to be confirmed'
+        items.append(f'<li>Pick {number}: {e(label)}</li>')
+    if final:
+        updated = str(data.get('updated') or '').strip()
+        status = 'Published result' + (f', updated {updated}' if updated else '') + '.'
+    else:
+        status = 'Results will appear here after the Nov. 15, 2026 drawing. Picks 8 through 15 stay to be confirmed.'
     return (
         '<section id="live-results"><h2 class="section-title">Lottery results</h2>'
-        '<p id="live-status">Results will appear here after the Nov. 15, 2026 drawing. Picks 8 through 15 stay to be confirmed.</p>'
+        f'<p id="live-status">{e(status)}</p>'
         f'<ol id="live-order">{"".join(items)}</ol>'
         '<p class="table-note">The lottery is drawn Nov. 15, 2026. Picks 1 through 7 appear here once the league announces the order, '
         'and the simulator then locks to that order. '
@@ -1342,6 +1473,11 @@ def live_html() -> str:
 
 
 def page(rows: list[dict], cards: list[dict]) -> str:
+    results = load_results()
+    title = page_title(results)
+    description = page_description(results)
+    modified = page_modified(results)
+    official = official_results_html(results)
     pairs = faq_pairs(rows)
     la_top = team_top_two()
     hou = next(row for row in rows if row['slot']['id'] == 'HOU')
@@ -1410,10 +1546,11 @@ def page(rows: list[dict], cards: list[dict]) -> str:
     body = f'''<main id="content" class="shell article-wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/wnba/">WNBA</a><span aria-hidden="true">/</span><span>2027 Draft Lottery</span></nav>
 <article class="article"><div class="meta-row"><span class="cat">WNBA</span><span class="divider"></span><span>Full Court Buckets</span></div>
-<h1>{e(TITLE)}</h1>
+<h1>{e(title)}</h1>
 <div class="byline-row"><a class="byline" href="/authors/ryan-moalemi/"><picture><source srcset="/images/authors/ryan-moalemi-photo-byline.webp" type="image/webp"><img src="/images/authors/ryan-moalemi-photo-byline.jpg?v=d51e90ea6c01" alt="Ryan Moalemi" width="80" height="80" decoding="async" loading="lazy"></picture><span>By Ryan Moalemi</span></a><time class="article-date" datetime="{PUBLISHED}">November 9, 2026</time></div>
 {hero_figure}
 {stakes}
+{official}
 {findings}
 <h2 class="section-title" id="probabilities">Chance of every pick</h2>
 {summary_table(rows)}
@@ -1441,7 +1578,7 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 {prospects_html()}
 <p class="section-note table-note">{e(prospect_section_note())}</p>
 </section>
-{live_html()}
+{live_html(results)}
 <section id="playoff-records"><h2 class="section-title">2026 records behind picks 8 through 15</h2>
 <p>The eight clubs in the top eight of the <a href="/standings/">2026 standings</a> finished the regular season, in the WNBA schedule file, at Minnesota 33-11, Golden State 32-12, Las Vegas 31-13, Atlanta 30-14, Washington 28-16, Indiana 28-16, Dallas 27-17, and New York 26-18. Those are records, not pick numbers. Washington and Indiana are tied, and the lottery release does not publish the rest of round 1.</p>
 </section>
@@ -1484,8 +1621,8 @@ def page(rows: list[dict], cards: list[dict]) -> str:
 {sim_script()}
 '''
     social = (
-        f'<meta property="og:title" content="{e(TITLE)}">'
-        f'<meta property="og:description" content="{e(DESCRIPTION)}">'
+        f'<meta property="og:title" content="{e(title)}">'
+        f'<meta property="og:description" content="{e(description)}">'
         f'<meta property="og:url" content="{BASE}{ROUTE}">'
         '<meta property="og:type" content="article">'
         '<meta property="og:site_name" content="Full Court Buckets">'
@@ -1495,8 +1632,8 @@ def page(rows: list[dict], cards: list[dict]) -> str:
         f'<meta property="og:image:alt" content="{e(HERO["alt"])}">'
         '<meta name="twitter:card" content="summary_large_image">'
         '<meta name="twitter:site" content="@fullcourtbucket">'
-        f'<meta name="twitter:title" content="{e(TITLE)}">'
-        f'<meta name="twitter:description" content="{e(DESCRIPTION)}">'
+        f'<meta name="twitter:title" content="{e(title)}">'
+        f'<meta name="twitter:description" content="{e(description)}">'
         f'<meta name="twitter:image" content="{BASE}{HERO["src"]}">'
         f'<meta name="twitter:image:alt" content="{e(HERO["alt"])}">'
     )
@@ -1588,9 +1725,9 @@ html body .lot-odds .lot-odds-cards{display:grid;gap:8px}
 ''' + internal_links.LEAD_CSS + '</style>'
     author = {
         '@context': 'https://schema.org', '@type': 'Article',
-        'headline': TITLE, 'description': DESCRIPTION,
+        'headline': title, 'description': description,
         'url': BASE + ROUTE, 'mainEntityOfPage': BASE + ROUTE,
-        'datePublished': PUBLISHED, 'dateModified': MODIFIED,
+        'datePublished': PUBLISHED, 'dateModified': modified,
         'author': {
             '@type': 'Person', 'name': 'Ryan Moalemi',
             'url': BASE + '/authors/ryan-moalemi/',
@@ -1601,15 +1738,15 @@ html body .lot-odds .lot-odds-cards{display:grid;gap:8px}
         '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'
         + social
-        + f'<title>{e(TITLE)}</title>'
-        f'<meta name="description" content="{e(DESCRIPTION)}">'
+        + f'<title>{e(title)}</title>'
+        f'<meta name="description" content="{e(description)}">'
         '<meta name="author" content="Ryan Moalemi">'
         '<meta name="robots" content="index, follow">'
         f'<link rel="canonical" href="{BASE}{ROUTE}">'
         '<meta name="theme-color" content="#ffffff">'
         '<link rel="icon" href="/favicon.svg">'
         + style
-        + faq_jsonld(pairs) + dataset_jsonld() + breadcrumb_jsonld()
+        + faq_jsonld(pairs) + dataset_jsonld(modified) + breadcrumb_jsonld()
         + '<script type="application/ld+json">' + json.dumps(author) + '</script>'
         + analytics.GA4_TAG
         + '</head><body>'
