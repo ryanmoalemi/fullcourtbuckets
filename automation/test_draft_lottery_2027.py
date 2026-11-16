@@ -127,9 +127,31 @@ class LotteryPage(unittest.TestCase):
 
     def test_results_file_can_lock_the_simulator(self):
         data = json.loads(RESULTS.read_text(encoding='utf-8'))
-        self.assertEqual(data['status'], 'pending')
+        self.assertEqual(data['status'], 'final')
+        self.assertEqual(data['title'], 'Toronto Tempo wins the 2027 WNBA Draft Lottery')
+        self.assertTrue(str(data.get('source') or '').startswith('https://'))
+        self.assertTrue(data.get('updated'))
         self.assertEqual([pick['pick'] for pick in data['picks']], list(range(1, 16)))
+        expected = {
+            1: 'TOR',
+            2: 'HOU',
+            3: 'WAS',
+            4: 'SEA',
+            5: 'POR',
+            6: 'LAL',
+            7: 'LAL-PHX',
+        }
+        by_pick = {pick['pick']: pick for pick in data['picks']}
+        for number, slot in expected.items():
+            self.assertEqual(by_pick[number]['slot'], slot)
+            self.assertTrue(by_pick[number]['team'])
+        self.assertEqual(sorted(expected.values()), sorted(expected[n] for n in expected))
+        self.assertEqual(
+            sorted(pick['slot'] for pick in data['picks'] if pick['pick'] <= 7),
+            sorted(expected.values()),
+        )
         self.assertTrue(all(pick['label'] == 'to be confirmed' for pick in data['picks'] if pick['pick'] > 7))
+        self.assertTrue(all(pick['slot'] is None and pick['team'] is None for pick in data['picks'] if pick['pick'] > 7))
         self.assertIn('status !== \'final\'', self.html)
 
     def test_seeded_draws_match_javascript(self):

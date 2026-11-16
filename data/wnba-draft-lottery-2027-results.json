@@ -1,50 +1,51 @@
 {
-  "status": "pending",
-  "updated": null,
-  "source": "",
-  "note": "After the Nov. 15, 2026 drawing, set status to final, set updated to the date, name the source, and fill picks 1-7 with slot (HOU, TOR, WAS, SEA, POR, LAL, LAL-PHX) and team. Leave picks 8-15 as to be confirmed until a league draft order names them. A final file locks the simulator to this order. To update the page title after the drawing, set title to the post-drawing headline. When status is final, the page reads that title and updates the h1, document title, og:title, and twitter:title without a rebuild.",
+  "status": "final",
+  "updated": "Nov. 15, 2026",
+  "source": "https://x.com/WNBA/status/2122132333860110584",
+  "title": "Toronto Tempo wins the 2027 WNBA Draft Lottery",
+  "note": "Locked after the Nov. 15, 2026 drawing. Picks 1-7 are the official lottery order from the WNBA, confirmed by Annie Costabile. Picks 8-15 stay to be confirmed until a league draft order names them. A final file locks the simulator to this order. To update the page title after the drawing, set title to the post-drawing headline. When status is final, the page reads that title and updates the h1, document title, og:title, and twitter:title without a rebuild.",
   "picks": [
     {
       "pick": 1,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "TOR",
+      "team": "Toronto Tempo",
+      "label": "Toronto Tempo"
     },
     {
       "pick": 2,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "HOU",
+      "team": "Houston Comets (formerly Connecticut Sun)",
+      "label": "Houston Comets (formerly Connecticut Sun)"
     },
     {
       "pick": 3,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "WAS",
+      "team": "Washington Mystics (from Chicago)",
+      "label": "Washington Mystics (from Chicago)"
     },
     {
       "pick": 4,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "SEA",
+      "team": "Seattle Storm",
+      "label": "Seattle Storm"
     },
     {
       "pick": 5,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "POR",
+      "team": "Portland Fire",
+      "label": "Portland Fire"
     },
     {
       "pick": 6,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "LAL",
+      "team": "Los Angeles Sparks (own pick)",
+      "label": "Los Angeles Sparks (own pick)"
     },
     {
       "pick": 7,
-      "slot": null,
-      "team": null,
-      "label": "Not drawn yet"
+      "slot": "LAL-PHX",
+      "team": "Los Angeles Sparks (from Phoenix)",
+      "label": "Los Angeles Sparks (from Phoenix)"
     },
     {
       "pick": 8,
