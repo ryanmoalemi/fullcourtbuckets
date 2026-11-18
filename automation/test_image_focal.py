@@ -30,7 +30,10 @@ class ImageFocalTests(unittest.TestCase):
         self.assertIn('object-position:center 20%', hub)
         self.assertIn('object-position:center 20%', author)
         ordered = sorted(_articles(), key=lambda article: article.get('date') or '', reverse=True)
-        on_home = {article['slug'] for article in ordered[:1 + links.MORE_STORY_LIMIT]}
+        # A pinned homepage feature occupies the featured slot, so only
+        # MORE_STORY_LIMIT catalog articles appear on the homepage.
+        featured_slots = 0 if links.load_new_bar_pin(ROOT) else 1
+        on_home = {article['slug'] for article in ordered[:featured_slots + links.MORE_STORY_LIMIT]}
         for article in _articles():
             slug = article['slug']
             raw = str(article.get('imageFocal') or '').strip()
