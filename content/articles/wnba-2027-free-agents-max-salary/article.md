@@ -1,6 +1,6 @@
 ---
 title: "Every 2027 WNBA free agent: what she made and the most she can get under the new CBA"
-seo_title: "2027 WNBA free agents: 2026 pay and 2027 max salaries"
+seo_title: "2027 WNBA free agents: 2026 pay, 2027 max"
 slug: wnba-2027-free-agents-max-salary
 date: 2026-11-18
 category: news
