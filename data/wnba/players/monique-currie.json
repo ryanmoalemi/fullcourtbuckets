@@ -2,8 +2,8 @@
   "schema_version": 1,
   "provider": "Full Court Buckets",
   "source": "Full Court Buckets gathers its own game data and verifies it.",
-  "checked_at": "2026-11-13T12:34:50+00:00",
-  "stats_updated_at": "2026-11-08T08:18:52+00:00",
+  "checked_at": "2026-11-18T12:36:20+00:00",
+  "stats_updated_at": "2026-11-15T12:31:05+00:00",
   "coverage_start": 2008,
   "career_totals_complete": false,
   "player": {
@@ -172,24 +172,25 @@
         "conference": "Western Conference"
       },
       "games_played": 5,
-      "min": 16.0,
+      "min": 16,
       "fgm": 1.6,
-      "fga": 5.0,
-      "fg_pct": 32.0,
-      "fg3m": 1.0,
+      "fga": 5,
+      "fg_pct": 32,
+      "fg3m": 1,
       "fg3a": 2.2,
       "fg3_pct": 45.5,
       "ftm": 0.4,
       "fta": 0.4,
-      "ft_pct": 100.0,
-      "oreb": null,
-      "dreb": null,
+      "ft_pct": 100,
+      "oreb": 0.6,
+      "dreb": 2.6,
       "reb": 3.2,
       "ast": 2.2,
       "stl": 0.6,
       "blk": 0.4,
       "turnover": 1.2,
-      "pts": 4.6
+      "pts": 4.6,
+      "gap_fill": true
     },
     {
       "player_id": 54,
@@ -645,7 +646,7 @@
     }
   ],
   "recent_completed_games": [],
-  "game_log_window_start": "2026-10-09",
+  "game_log_window_start": "2026-10-14",
   "notes": [
     "Statistics from 2008 onward; not complete all-time career totals.",
     "Season figures are provider per-game averages; shooting percentages are on a 0-100 scale.",

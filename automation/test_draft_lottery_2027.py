@@ -71,8 +71,8 @@ class LotteryPage(unittest.TestCase):
 
     def test_seo_copy_and_schema(self):
         self.assertEqual(self.html.count('<h1'), 1)
-        self.assertIn(f'<title>{lottery.TITLE}</title>', self.html)
-        self.assertIn(lottery.DESCRIPTION, self.html)
+        self.assertIn(f'<title>{lottery.page_title()}</title>', self.html)
+        self.assertIn(lottery.page_description(), self.html)
         self.assertGreaterEqual(len(lottery.DESCRIPTION), 140)
         self.assertLessEqual(len(lottery.DESCRIPTION), 160)
         self.assertIn('rel="canonical" href="https://fullcourtbuckets.com/wnba/draft-lottery-2027/"', self.html)
@@ -110,7 +110,7 @@ class LotteryPage(unittest.TestCase):
             'connecticut-sun/',
             'JuJu Watkins',
             'to be confirmed',
-            'seed 20261115',
+            'seed, 20261115',
             'https://www.wnba.com/news/wnba-draft-lottery-2027-sunday-november-15',
             'https://www.sports-reference.com/cbb/players/juju-watkins-1.html',
         ):
@@ -127,9 +127,31 @@ class LotteryPage(unittest.TestCase):
 
     def test_results_file_can_lock_the_simulator(self):
         data = json.loads(RESULTS.read_text(encoding='utf-8'))
-        self.assertEqual(data['status'], 'pending')
+        self.assertEqual(data['status'], 'final')
+        self.assertEqual(data['title'], 'Toronto Tempo wins the 2027 WNBA Draft Lottery')
+        self.assertTrue(str(data.get('source') or '').startswith('https://'))
+        self.assertTrue(data.get('updated'))
         self.assertEqual([pick['pick'] for pick in data['picks']], list(range(1, 16)))
+        expected = {
+            1: 'TOR',
+            2: 'HOU',
+            3: 'WAS',
+            4: 'SEA',
+            5: 'POR',
+            6: 'LAL',
+            7: 'LAL-PHX',
+        }
+        by_pick = {pick['pick']: pick for pick in data['picks']}
+        for number, slot in expected.items():
+            self.assertEqual(by_pick[number]['slot'], slot)
+            self.assertTrue(by_pick[number]['team'])
+        self.assertEqual(sorted(expected.values()), sorted(expected[n] for n in expected))
+        self.assertEqual(
+            sorted(pick['slot'] for pick in data['picks'] if pick['pick'] <= 7),
+            sorted(expected.values()),
+        )
         self.assertTrue(all(pick['label'] == 'to be confirmed' for pick in data['picks'] if pick['pick'] > 7))
+        self.assertTrue(all(pick['slot'] is None and pick['team'] is None for pick in data['picks'] if pick['pick'] > 7))
         self.assertIn('status !== \'final\'', self.html)
 
     def test_seeded_draws_match_javascript(self):
@@ -249,7 +271,8 @@ process.stdout.write(out.join('\n'));
             "Corrected the CSV's expected-pick column on Nov. 12, 2026; pick probabilities unchanged.",
             self.html,
         )
-        self.assertIn('"dateModified": "2026-11-12"', self.html)
+        self.assertIn(f'"dateModified": "{lottery.page_modified()}"', self.html)
+        self.assertEqual(lottery.page_modified(), '2026-11-15')
         self.assertIn('"datePublished": "2026-11-09"', self.html)
         self.assertNotIn('\u2014', self.html)
         self.assertNotIn('>Unrestricted<', self.html)
@@ -277,10 +300,17 @@ process.stdout.write(out.join('\n'));
             "Houston can't fall below No. 3, while Toronto drops to No. 4 8.8% of the time. "
             "Washington (from Chicago) has a 35.0% top-two chance and a 67.3% top-three chance."
         )
+        lead = (
+            "The 2027 WNBA Draft Lottery is Sunday, Nov. 15, 2026, from 4:30 to 5:00 p.m. PT "
+            "(7:30 to 8:00 p.m. ET) on ESPN, after UConn vs. Louisville, and on TSN in Canada. "
+            "The draft itself is Monday, April 12, 2027."
+        )
         self.assertIn(stakes, html)
         self.assertIn(findings, html)
+        self.assertLess(html.index(lead), html.index(stakes))
         self.assertLess(html.index(stakes), html.index(findings))
-        self.assertIn(f'<p class="lead">{stakes}</p>', html)
+        self.assertIn(f'<p class="lead">{lead}</p>', html)
+        self.assertNotIn(f'<p class="lead">{stakes}</p>', html)
         self.assertNotIn(f'<p class="lead">{findings}</p>', html)
         self.assertIn('id="lottery-summary"', html)
         self.assertIn('>61.7%</td><td data-label="Top three">100.0%</td>', html)
@@ -311,7 +341,12 @@ process.stdout.write(out.join('\n'));
         self.assertIn('mailto:ryan@fullcourtbuckets.com', html)
         self.assertIn('The seven lottery slots are held by six teams.', html)
         self.assertIn('>Lottery results</h2>', html)
-        self.assertIn('Results will appear here after the Nov. 15, 2026 drawing.', html)
+        self.assertIn('Published result, updated Nov. 15, 2026.', html)
+        self.assertIn('>Official results</h2>', html)
+        self.assertIn('id="lottery-official-results"', html)
+        self.assertIn('id="official-results"', html)
+        self.assertLess(html.index('class="lead"'), html.index('id="official-results"'))
+        self.assertLess(html.index('id="official-results"'), html.index('id="lottery-summary"'))
         self.assertIn('id="prelottery-odds"', html)
         self.assertIn("fetch('/data/wnba-draft-lottery-2027-results.json'", html)
         self.assertIn("data.status !== 'final'", html)
@@ -330,16 +365,84 @@ process.stdout.write(out.join('\n'));
         self.assertEqual(len(rows), 42)
         self.assertEqual(sum(Fraction(row['probability_fraction']) for row in rows), 1)
 
+    def test_final_results_are_written_into_static_html(self):
+        data = json.loads(RESULTS.read_text(encoding='utf-8'))
+        title = lottery.page_title(data)
+        description = lottery.page_description(data)
+        self.assertEqual(data['status'], 'final')
+        self.assertEqual(title, 'Toronto Tempo wins the 2027 WNBA Draft Lottery')
+        self.assertIn('Toronto Tempo won the 2027 WNBA Draft Lottery and gets the No. 1 pick.', description)
+        self.assertIn('Houston Comets got No. 2.', description)
+        self.assertIn('Washington Mystics (from Chicago)', description)
+        self.assertIn('Los Angeles Sparks (from Phoenix)', description)
+        self.assertNotIn('\u2014', title)
+        self.assertNotIn('\u2014', description)
+        self.assertIn(f'<title>{title}</title>', self.html)
+        self.assertIn(f'<h1>{title}</h1>', self.html)
+        self.assertIn(f'<meta property="og:title" content="{title}">', self.html)
+        self.assertIn(f'<meta name="twitter:title" content="{title}">', self.html)
+        self.assertIn(f'<meta name="description" content="{description}">', self.html)
+        self.assertIn(f'<meta property="og:description" content="{description}">', self.html)
+        self.assertIn(f'<meta name="twitter:description" content="{description}">', self.html)
+        self.assertIn('"headline": "Toronto Tempo wins the 2027 WNBA Draft Lottery"', self.html)
+        self.assertIn('"dateModified": "2026-11-15"', self.html)
+        self.assertIn('>Official results</h2>', self.html)
+        self.assertIn('id="lottery-official-results"', self.html)
+        self.assertIn('>No. 1</th><td data-label="Team"><a href="/wnba/teams/toronto-tempo/">Toronto Tempo</a></td>', self.html)
+        self.assertIn('>No. 2</th><td data-label="Team"><a href="/wnba/teams/connecticut-sun/">Houston Comets (formerly Connecticut Sun)</a></td>', self.html)
+        self.assertIn('Washington Mystics (from Chicago)', self.html)
+        self.assertIn('Los Angeles Sparks (from Phoenix)', self.html)
+        self.assertIn(f'href="{data["source"]}"', self.html)
+        source_note = self.html.split('id="official-results"', 1)[1].split('</section>', 1)[0]
+        self.assertIn('Source:', source_note)
+        self.assertIn(data['source'], source_note)
+        self.assertNotIn('espn.com', source_note.lower())
+        self.assertNotIn('>ESPN<', source_note)
+        self.assertNotIn('href="#', source_note)
+        self.assertIn('class="table-wrap summary-wrap" data-fcb-data-table', source_note)
+        self.assertIn('class="fcb-cards fcb-data-table"', source_note)
+        # The client-side lock still reads the results file and freezes the simulator.
+        self.assertIn("fetch('/data/wnba-draft-lottery-2027-results.json'", self.html)
+        self.assertIn("data.status !== 'final'", self.html)
+        self.assertIn("document.title = data.title", self.html)
+        self.assertIn("lock(order, data.source || '')", self.html)
+
+    def test_pending_results_keep_pre_draw_copy(self):
+        original = lottery.RESULTS_PATH
+        pending_path = ROOT / 'data' / 'wnba-draft-lottery-2027-results.pending-test.json'
+        pending_path.write_text(json.dumps(lottery.default_results(), indent=2) + '\n', encoding='utf-8')
+        lottery.RESULTS_PATH = pending_path
+        try:
+            html = lottery.page(lottery.matrix_rows(lottery.pick_probabilities()), [])
+            self.assertEqual(lottery.page_title(), lottery.TITLE)
+            self.assertEqual(lottery.page_description(), lottery.DESCRIPTION)
+            self.assertEqual(lottery.page_modified(), lottery.MODIFIED)
+            self.assertEqual(lottery.official_results_html(), '')
+            self.assertIn(f'<title>{lottery.TITLE}</title>', html)
+            self.assertIn(f'<h1>{lottery.TITLE}</h1>', html)
+            self.assertIn(f'<meta property="og:title" content="{lottery.TITLE}">', html)
+            self.assertIn(f'<meta name="twitter:title" content="{lottery.TITLE}">', html)
+            self.assertIn(lottery.DESCRIPTION, html)
+            self.assertIn('Results will appear here after the Nov. 15, 2026 drawing.', html)
+            self.assertNotIn('>Official results</h2>', html)
+            self.assertNotIn('id="lottery-official-results"', html)
+            self.assertIn("fetch('/data/wnba-draft-lottery-2027-results.json'", html)
+            self.assertIn("document.title = data.title", html)
+        finally:
+            lottery.RESULTS_PATH = original
+            pending_path.unlink(missing_ok=True)
+
     def test_pre_drawing_title_and_current_roster_card_photos(self):
+
         self.assertEqual(
             lottery.TITLE,
             '2027 WNBA Draft Lottery Odds and Simulator (Drawing Nov 15)',
         )
         self.assertNotIn('Live Results', lottery.TITLE)
-        self.assertIn(f'<h1>{lottery.TITLE}</h1>', self.html)
-        self.assertIn(f'<title>{lottery.TITLE}</title>', self.html)
-        self.assertIn(f'<meta property="og:title" content="{lottery.TITLE}">', self.html)
-        self.assertIn(f'<meta name="twitter:title" content="{lottery.TITLE}">', self.html)
+        self.assertIn(f'<h1>{lottery.page_title()}</h1>', self.html)
+        self.assertIn(f'<title>{lottery.page_title()}</title>', self.html)
+        self.assertIn(f'<meta property="og:title" content="{lottery.page_title()}">', self.html)
+        self.assertIn(f'<meta name="twitter:title" content="{lottery.page_title()}">', self.html)
         self.assertIn("if (data.title)", self.html)
         self.assertIn("document.title = data.title", self.html)
         self.assertIn('meta[property="og:title"]', self.html)
@@ -435,6 +538,23 @@ class LotteryRender(unittest.TestCase):
         finally:
             srv.shutdown()
 
+
+
+class LotteryHistory(unittest.TestCase):
+    def test_history_count_csv_and_placement(self):
+        wins, total = lottery.history_counts()
+        self.assertEqual((wins, total), (14, 23))
+        rows = list(csv.DictReader((ROOT / 'data' / 'wnba-draft-lottery-history.csv').open(encoding='utf-8')))
+        self.assertEqual([int(r['draft_year']) for r in rows], list(range(2004, 2027)))
+        self.assertEqual(sum(r['best_odds_team_won'] == 'yes' for r in rows), wins)
+        for row in rows:
+            self.assertTrue(row['sources'].startswith('https://'), row['draft_year'])
+        html = PAGE.read_text(encoding='utf-8')
+        self.assertIn(lottery.history_finding(), html)
+        self.assertIn('href="/data/wnba-draft-lottery-history.csv"', html)
+        self.assertLess(html.index('id="simulator"'), html.index('id="history"'))
+        self.assertLess(html.index('id="prelottery-odds"'), html.index('id="lottery-history"'))
+        self.assertNotIn('\u2014', html)
 
 if __name__ == '__main__':
     unittest.main()
