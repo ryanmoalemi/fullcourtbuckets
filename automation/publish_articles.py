@@ -1349,21 +1349,8 @@ def prepend_news_list(path: Path, item_html: str, article: dict) -> None:
 def update_homepage(articles: list) -> None:
     path = ROOT / 'index.html'
     text = path.read_text(encoding='utf-8')
-    featured = links._story_card(articles[0]).replace(
-        '<a class="article-card"',
-        '<a class="article-card" id="featured-story"',
-        1,
-    )
-    text = re.sub(
-        r'<a class="article-card" id="featured-story" href=".*?">.*?</a>',
-        lambda _: featured,
-        text,
-        count=1,
-        flags=re.S,
-    )
-    text = links._replace_marker(text, 'fcb-stories', links._more_story_cards(articles))
-    # Keep the homepage Now line in step with the newest story, as the nightly build does.
-    text = links.apply_ticker(text, articles)
+    # Honor content/new-bar-pin.json so a new article does not replace a pinned feature.
+    text = links.apply_homepage(text, articles, pin=links.load_new_bar_pin(ROOT))
     write_if_changed(path, text)
 
 
