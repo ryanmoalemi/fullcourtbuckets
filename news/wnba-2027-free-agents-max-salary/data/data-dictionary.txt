@@ -1,0 +1,44 @@
+Full Court Buckets: 2027 WNBA unrestricted free agents, 2026 pay and 2027 maximum salaries
+Data through Nov. 18, 2026. Free to use and republish (CC0). https://creativecommons.org/publicdomain/zero/1.0/
+Page: https://fullcourtbuckets.com/news/wnba-2027-free-agents-max-salary/
+
+FILE: wnba-2027-unrestricted-free-agents.csv (one row per player on the public 2027 unrestricted free agent list, 31 rows)
+player: player name.
+player_page: Full Court Buckets player page.
+pos: position as listed by Spotrac.
+age: age in whole years as listed by Spotrac on Nov. 18, 2026.
+years_experience_listed: years of experience as listed by Spotrac. Not the same as CBA years of service.
+team_2026: team at the end of the 2026 regular season.
+teams_2026: every team she played for in the 2026 regular season (Full Court Buckets game data).
+teams_2025: every team she played for in the 2025 regular season in Full Court Buckets game data. Blank = no team label in the 2025 file or no 2025 games; see supermax_path_reason.
+pay_2026_aav: 2026 average annual value in US dollars as listed by Spotrac. Eight veterans are listed at $277,500, below the CBA's 2026 minimum for 4+ years; published as listed.
+pct_of_2026_cap: pay_2026_aav divided by the 2026 salary cap of $7,000,000 (CBA Article VII, Section 1), times 100.
+gp_2026, ppg_2026, rpg_2026, apg_2026, mpg_2026: 2026 regular-season games, points, rebounds, assists and minutes per game. Full Court Buckets' own game data, verified against official box scores. Traded players are combined.
+supermax_path_with_2026_team: Yes, No or Unclear. Full Court Buckets' reading of CBA Article V, Section 8(c) and Article I (Qualifying Veteran Free Agent): 5+ years of service, under contract for both 2025 and 2026, and either with the same team both seasons or moved only by assignment (trade or waiver claim). Not a league ruling.
+supermax_path_reason: the fact behind that call.
+core_designation_possible: Possible if listed years are 6 or fewer. From 2027, only players with six or fewer years of service can be designated Core Players (CBA Article VI, Section 7(b)). A Core Player re-signing with her prior team can also receive the supermax.
+max_2027_with_2026_team: most her 2026 team can pay in 2027, first-year salary, at the highest cap the CBA allows ($7,910,000): supermax $1,582,000 (20%) if Yes, otherwise standard max $1,344,700 (17%).
+max_2027_with_other_team: most any other team can pay in 2027 at that cap: $1,344,700.
+raise_if_she_re_signs_at_max: max_2027_with_2026_team minus pay_2026_aav.
+change_if_she_leaves_at_max: max_2027_with_other_team minus pay_2026_aav.
+minimum_2027_estimate: CBA 2027 minimum salary for her listed years (Article V, Section 7): 1-3 = $288,600; 4-6 = $296,400; 7-9 = $304,200; 10+ = $312,000. Estimate, because listed years may differ from CBA years of service.
+status: retirement or other note.
+
+FILE: wnba-2027-max-salary-by-cap.csv (first-year maximums at the lowest, unchanged and highest 2027 caps)
+cap_2027: 2027 salary cap. The CBA limits it to 13% above or below the 2026 cap of $7,000,000, so $6,090,000 to $7,910,000.
+cap_case: which case the row is.
+supermax_20pct: cap divided by 5, whole dollars.
+standard_max_17pct: cap times 17 divided by 100, whole dollars.
+supermax_minus_standard: the gap between re-signing and leaving at the maximum.
+collier_mitchell_2026_pay: $1,400,000 each (Spotrac).
+change_if_she_re_signs_at_supermax, change_if_she_leaves_at_standard_max: change from $1,400,000.
+
+SOURCES
+Spotrac 2027 WNBA free agents (list, 2026 pay, age, years): https://www.spotrac.com/wnba/free-agents/available/_/year/2027 (checked Nov. 18, 2026)
+2026 WNBA-WNBPA CBA (WNBPA copy): https://www.wnbpa.com/_files/ugd/8121a3_675911316ca142178932adc1e56519ac.pdf
+Plum trade, Aug. 2, 2026: https://www.wnba.com/news/rapid-reactions-trade-deadline-2026
+Laney-Hamilton waiver award, Aug. 8, 2026: https://www.wnba.com/draft/2026/teams/washington-mystics
+Ogwumike retirement announcement, Aug. 19, 2026: https://www.wnba.com/news/nneka-ogwumike-announces-wnba-retirement
+Game stats: Full Court Buckets game data, verified against official box scores.
+
+Refresh: when the league announces the 2027 cap, and as players sign starting Feb. 16, 2027.
