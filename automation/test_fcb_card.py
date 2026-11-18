@@ -78,7 +78,7 @@ class FcbCardTests(unittest.TestCase):
         )
         html = publish_articles.body_html(md)
         self.assertIn('class="fcb-card"', html)
-        self.assertIn('class="stat-tiles"', html)
+        self.assertIn('class="stat-tiles tiles-3"', html)
         self.assertIn('>39</b><span>PTS</span>', html)
         self.assertIn('class="av"', html)
         self.assertIn('class="card-credit"', html)
@@ -105,3 +105,50 @@ class FcbCardTests(unittest.TestCase):
             self.assertEqual(html.count('<article'), 1, rel)
             self.assertEqual(html.count('</article>'), 1, rel)
             self.assertNotIn('<article class="fcb-card"', html, rel)
+
+    def test_open_wraps_cards_in_a_named_grid(self):
+        import publish_articles
+        md = (
+            'Lead.\n\n'
+            '!open: ufa-card-grid\n'
+            '!card: Napheesa Collier | F, Minnesota Lynx, 30, 7 yrs | '
+            '$1,400,000=2026 pay | $1,582,000=2027 with team | $1,344,700=2027 elsewhere | '
+            ' |  | napheesa-collier\n'
+            '!close:\n'
+            '!note: Age and years of experience are as listed by Spotrac.\n'
+        )
+        html = publish_articles.body_html(md)
+        self.assertIn('<div class="ufa-card-grid">', html)
+        self.assertIn('class="fcb-card"', html)
+        self.assertIn('class="stat-tiles tiles-3"', html)
+        self.assertIn('/wnba/napheesa-collier/', html)
+        self.assertTrue(html.index('<div class="ufa-card-grid">') < html.index('class="fcb-card"'))
+        self.assertTrue(html.index('class="fcb-card"') < html.index('</div>'))
+        self.assertIn('class="section-note table-note"', html)
+        self.assertNotIn('—', html)
+        self.assertNotIn('–', html)
+
+    def test_card_can_use_a_licensed_article_headshot(self):
+        import publish_articles
+        from pathlib import Path
+        root = Path(publish_articles.ROOT)
+        rel = 'images/articles/wnba-2027-free-agents-max-salary/heads/test-face.webp'
+        path = root / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        created = False
+        if not path.is_file():
+            path.write_bytes(b'RIFF\x00\x00\x00\x00WEBP')
+            created = True
+        try:
+            md = (
+                '!card: Test Player | G | $1=2026 pay | $2=2027 with team | '
+                ' |  | test-player | /' + rel + '\n'
+            )
+            html = publish_articles.body_html(md)
+            self.assertIn('src="/' + rel + '"', html)
+            self.assertIn('width="200"', html)
+            self.assertIn('height="200"', html)
+            self.assertIn('loading="lazy"', html)
+        finally:
+            if created and path.is_file():
+                path.unlink()

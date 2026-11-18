@@ -28,6 +28,46 @@ sortable_tables: true
 
 [Napheesa Collier](/wnba/napheesa-collier/) and [Kelsey Mitchell](/wnba/kelsey-mitchell/) each made $1,400,000 in 2026, the most in the 2027 unrestricted class. Re-signing can pay either up to $1,582,000 in 2027. Any other team is capped at $1,344,700, a $237,300 gap per season.
 
+## The 31 unrestricted free agents {#ufa-cards}
+
+Each card shows her 2026 team, 2026 pay, and the most she can make in 2027 if she re-signs or signs elsewhere. Here's every unrestricted free agent, ordered by 2026 pay:
+
+!open: ufa-card-grid
+!card: Napheesa Collier | F, Minnesota Lynx, 30, 7 yrs | $1,400,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | napheesa-collier | /images/articles/wnba-2027-free-agents-max-salary/heads/napheesa-collier.webp
+!card: Kelsey Mitchell | G, Indiana Fever, 31, 8 yrs | $1,400,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | kelsey-mitchell | /images/articles/wnba-2027-free-agents-max-salary/heads/kelsey-mitchell.webp
+!card: Brittney Griner | C, Connecticut Sun, 36, 12 yrs | $1,190,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | brittney-griner | /images/articles/wnba-2027-free-agents-max-salary/heads/brittney-griner.webp
+!card: Jackie Young | G, Las Vegas Aces, 29, 7 yrs | $1,190,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | jackie-young
+!card: Temi Fagbenle | C, Toronto Tempo, 34, 4 yrs | $1,000,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | temi-fagbenle | /images/articles/wnba-2027-free-agents-max-salary/heads/temi-fagbenle.webp
+!card: Kennedy Burke | G, Connecticut Sun, 29, 6 yrs | $1,000,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | kennedy-burke
+!card: Kelsey Plum | G, Phoenix Mercury, 32, 8 yrs | $999,999=2026 pay | $1,582,000=Team max | $1,344,700=Other max | Traded to Phoenix on Aug. 2, which kept her supermax path. |  | kelsey-plum
+!card: Nneka Ogwumike | F, Los Angeles Sparks (retiring), 36, 14 yrs | $950,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max | Announced she would retire after the 2026 season. |  | nneka-ogwumike | /images/articles/wnba-2027-free-agents-max-salary/heads/nneka-ogwumike.webp
+!card: Stefanie Dolson | C, Seattle Storm, 34, 12 yrs | $750,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | stefanie-dolson
+!card: Kayla Thornton | F, Golden State Valkyries, 34, 10 yrs | $750,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | kayla-thornton
+!card: Sophie Cunningham | G, Indiana Fever, 30, 6 yrs | $665,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | sophie-cunningham | /images/articles/wnba-2027-free-agents-max-salary/heads/sophie-cunningham.webp
+!card: DiJonai Carrington | G, Chicago Sky, 28, 5 yrs | $650,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | dijonai-carrington
+!card: Tiffany Hayes | G, Golden State Valkyries, 37, 12 yrs | $600,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | tiffany-hayes
+!card: Natasha Cloud | G, Chicago Sky, 34, 9 yrs | $555,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | natasha-cloud | /images/articles/wnba-2027-free-agents-max-salary/heads/natasha-cloud.webp
+!card: Awak Kuier | C, Dallas Wings, 25, 3 yrs | $525,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | awak-kuier
+!card: Rachel Banham | G, Chicago Sky, 33, 10 yrs | $425,000=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | rachel-banham
+!card: Tyasha Harris | G, Indiana Fever, 28, 5 yrs | $400,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | tyasha-harris | /images/articles/wnba-2027-free-agents-max-salary/heads/tyasha-harris.webp
+!card: Isabelle Harrison | F, Toronto Tempo, 33, 8 yrs | $400,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | isabelle-harrison | /images/articles/wnba-2027-free-agents-max-salary/heads/isabelle-harrison.webp
+!card: Betnijah Laney-Hamilton | G, Washington Mystics, 33, 10 yrs | $400,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max | Supermax path is unclear after a waiver claim. |  | betnijah-laney-hamilton
+!card: Stephanie Talbot | F, Las Vegas Aces, 32, 7 yrs | $392,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | stephanie-talbot
+!card: Karlie Samuelson | G, Portland Fire, 31, 7 yrs | $360,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | karlie-samuelson
+!card: Rebecca Allen | G, New York Liberty, 34, 10 yrs | $350,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | rebecca-allen | /images/articles/wnba-2027-free-agents-max-salary/heads/rebecca-allen.webp
+!card: Myisha Hines-Allen | F, Indiana Fever, 30, 7 yrs | $315,000=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | myisha-hines-allen
+!card: Kierstan Bell | G, Las Vegas Aces, 26, 4 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | kierstan-bell
+!card: Cheyenne Parker-Tyus | F, Las Vegas Aces, 34, 11 yrs | $277,500=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | cheyenne-parker-tyus
+!card: Emma Cannon | F, Los Angeles Sparks, 37, 7 yrs | $277,500=2026 pay | $1,582,000=Team max | $1,344,700=Other max |  |  | emma-cannon | /images/articles/wnba-2027-free-agents-max-salary/heads/emma-cannon.webp
+!card: Odyssey Sims | G, Dallas Wings, 34, 11 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | odyssey-sims
+!card: DeWanna Bonner | F, Atlanta Dream, 39, 16 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | dewanna-bonner
+!card: Brianna Turner | F, Las Vegas Aces, 30, 7 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | brianna-turner
+!card: Alysha Clark | F, Dallas Wings, 39, 12 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | alysha-clark
+!card: Shatori Walker-Kimbrough | G, Atlanta Dream, 31, 8 yrs | $277,500=2026 pay | $1,344,700=Team max | $1,344,700=Other max |  |  | shatori-walker-kimbrough
+!close:
+
+!note: Photos of Collier, Mitchell, Griner, Fagbenle, Ogwumike, Cunningham, Cloud, Harris, Harrison, Allen and Cannon: John McClellan (John Mac), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), via Wikimedia Commons, cropped. The other 20 headshots are the licensed photos already on each player's Full Court Buckets page, also via Wikimedia Commons: Lorie Shaull (CC BY-SA 2.0 or 4.0) for Young, Dolson, Thornton, Banham, Sims, Bonner, Turner and Walker-Kimbrough; John Mac (CC BY-SA 2.0 or 4.0) for Plum, Carrington, Laney-Hamilton, Samuelson, Hines-Allen, Parker-Tyus and Clark; Zafer (CC BY 4.0 or CC BY-SA 4.0) for Burke, Kuier and Talbot; Sphilbrick (CC BY-SA 3.0) for Hayes; Alexander Jonesi (CC BY-SA 2.0) for Bell. Age and years of experience are as listed by [Spotrac's 2027 free agent list](https://www.spotrac.com/wnba/free-agents/available/_/year/2027).
+
 ## All 31 unrestricted free agents, 2026 pay and 2027 ceilings {#ufa-table}
 
 Thirty-one players are listed as 2027 unrestricted free agents. Only 10 have a clear path to the supermax with their 2026 team. For the other 21, the most any team can pay is the same $1,344,700, unless a Core Player designation or an unclear case changes that. Click a column header to sort. Here is every player, ordered by 2026 pay:

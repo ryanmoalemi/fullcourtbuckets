@@ -2,3 +2,23 @@
 .article .roster-face{display:inline-block;width:32px;height:32px;max-width:32px;border-radius:50%;object-fit:cover;object-position:center 18%;vertical-align:middle;margin-right:.45rem;background:#e9e9ef}
 .article thead th[data-sort="asc"]::after{content:" \2191"}
 .article thead th[data-sort="desc"]::after{content:" \2193"}
+/* Compact 31-player grid. Reuses shared .fcb-card classes from /assets/site-nav.css. */
+/* Phones: tight one-column list so $1,344,700 stays on one line. Two columns from 600px. */
+html body .article .ufa-card-grid{display:grid;grid-template-columns:1fr;gap:8px;margin:0 0 12px}
+@media (min-width:600px){
+html body .article .ufa-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+}
+@media (min-width:900px){
+html body .article .ufa-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+}
+html body .article .ufa-card-grid .fcb-card{margin:0}
+html body .article .ufa-card-grid .card-body{padding:8px 10px 10px}
+html body .article .ufa-card-grid h3{font-size:16px;line-height:1.2;overflow-wrap:anywhere}
+html body .article .ufa-card-grid .early-line{font-size:12px;margin:0;overflow-wrap:anywhere}
+html body .article .ufa-card-grid .stat-tile{min-height:44px;padding:5px 3px}
+html body .article .ufa-card-grid .stat-tile b{font-size:12px;overflow-wrap:anywhere}
+html body .article .ufa-card-grid .stat-tile span{font-size:12px}
+html body .article .ufa-card-grid .face,
+html body .article .ufa-card-grid .av{width:56px;height:56px;max-width:56px}
+html body .article .ufa-card-grid .av{display:inline-flex;align-items:center;justify-content:center;background:#efe6ff;color:#2a1458;font:800 13px/1 Barlow,sans-serif}
+html body .article .ufa-card-grid p{font-size:12px;line-height:1.35;margin:0 0 6px;overflow-wrap:anywhere}
