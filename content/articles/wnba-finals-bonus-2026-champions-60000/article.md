@@ -1,10 +1,10 @@
 ---
 title: "Eligible Valkyries players are in line for $60,000 each after the 2026 title"
-seo_title: "2026 champions are in line for $60,000"
+seo_title: "2026 WNBA Finals bonus: $60,000 for eligible champions"
 slug: wnba-finals-bonus-2026-champions-60000
 date: 2026-10-18
 updated: 2026-11-04
-description: "Eligible Valkyries players are in line for $60,000 each after the 2026 title, up from $22,908. Finals MVP Gabby Williams is in line for $30,000 more."
+description: "The Valkyries are in line for a $60,000 Finals bonus, up from $22,908 in 2025. The Dream is in line for $20,000 each, and Finals MVP Gabby Williams $30,000."
 category: news
 tags:
   - finals

@@ -33,10 +33,11 @@ DATA_FILE = 'data/viewership-attendance.json'
 ROUTE = '/wnba/viewership-attendance/'
 BASE = 'https://fullcourtbuckets.com'
 PAGE_TITLE = 'WNBA Viewership & Attendance Statistics 2026'
+TITLE = '2026 WNBA viewership, attendance and Finals audiences'
 QUESTION = 'How many people watch the WNBA?'
 DESCRIPTION = (
-    'Record 2026 WNBA attendance, fans per game, Finals audiences, and the '
-    'most-watched games, each figure with its date and source.'
+    'The WNBA drew a record 3.79 million regular-season fans in 2026, 11,474 per game, '
+    'and a 1.88 million average Finals audience, each figure with its source.'
 )
 ADSENSE_TAG = (
     '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'

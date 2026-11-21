@@ -1,9 +1,10 @@
 ---
 title: "Valkyries beat Dream 64-55 in the lowest-scoring WNBA Finals game since 2002"
+seo_title: "Game 5 recap: Valkyries 64, Dream 55, lowest scoring since 2002"
 slug: valkyries-dream-finals-game-5-recap
 date: 2026-10-26
 category: news
-description: "The Valkyries beat the Dream 64-55, the lowest-scoring Finals game since at least 2002, for a 3-2 lead despite being outscored by 22 in the series."
+description: "The Valkyries beat the Dream 64-55 in Game 5 of the 2026 WNBA Finals, the lowest-scoring Finals game since 2002, and took a 3-2 series lead."
 tags:
   - finals
   - recap

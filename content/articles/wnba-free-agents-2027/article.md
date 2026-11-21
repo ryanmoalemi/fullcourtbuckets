@@ -1,10 +1,10 @@
 ---
 title: "Las Vegas got 96.3% of its 2026 points from players with five or more seasons"
-seo_title: "2027 WNBA free agents: 56% of 2026 points could hit the market"
+seo_title: "2027 WNBA free agents: 56% of 2026 points could move"
 slug: wnba-free-agents-2027
 date: 2026-11-03
 category: news
-description: "Las Vegas got 96.3% of its 2026 points from players with five or more seasons, the unrestricted group if the deal ends. That group scored 56.0% of WNBA points."
+description: "If a contract ends, players with five or more seasons are unrestricted 2027 free agents. That group scored 56.0% of 2026 points, including 96.3% for Las Vegas."
 tags:
   - free agency
   - data
