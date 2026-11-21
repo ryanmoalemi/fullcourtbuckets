@@ -1927,7 +1927,7 @@ def render_page(root: Path, payload: dict) -> str:
 {core.GA4_TAG}
 {core.ADSENSE_TAG}
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{core.esc(core.PAGE_TITLE)} | Full Court Buckets</title>
+<title>{core.esc(core.TITLE)}</title>
 <meta name="description" content="{core.esc(core.DESCRIPTION)}">
 <meta name="author" content="Ryan Moalemi">
 <meta name="robots" content="index, follow">

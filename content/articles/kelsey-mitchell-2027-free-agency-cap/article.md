@@ -1,9 +1,9 @@
 ---
 title: "Kelsey Mitchell's 2027 free agency: three teams, three paths to the Finals"
-seo_title: "Kelsey Mitchell 2027: Aces, Valkyries and Dream Finals paths"
+seo_title: "Kelsey Mitchell 2027 free agency: Aces, Valkyries, Dream"
 slug: kelsey-mitchell-2027-free-agency-cap
 date: 2026-11-07T22:05:38-08:00
-description: "How the Aces, Valkyries and Dream could sign Kelsey Mitchell, what each would sacrifice, and how their proposed lineups could reach the WNBA Finals."
+description: "How the Aces, Valkyries and Dream could sign Kelsey Mitchell in 2027 free agency, and how the cap math looks at $7 million and the $7.91 million ceiling."
 category: Analysis
 tags:
   - free agency
