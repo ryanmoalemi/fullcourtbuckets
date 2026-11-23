@@ -4,8 +4,8 @@
  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
  "files": {
   "data-dictionary.md": {
-   "sha256": "a957916106fad4a9dc677119e2adc2990d38cbb0c9c11c999293127e71f46261",
-   "bytes": 9544
+   "sha256": "d9251847a7c75cd0ba7a3ca3224f0b9de12eaa847eae54cafa129dfaac4bb345",
+   "bytes": 10259
   },
   "entities.csv": {
    "sha256": "66fc6d2ab1bbb24825d0e38e4d12a380e6d4286bf01de9167feea562ab740cb5",
@@ -20,7 +20,7 @@
    "bytes": 5571
   },
   "findings.json": {
-   "sha256": "8b02cd311a3eb47dd1a15b51c12d0f62fb9ed2283ed6b74704aa204734fd249f",
+   "sha256": "96fdd130c469b01540e16d02d09f72fff92a7c79854ce0993ad511df92e7e7e3",
    "bytes": 712
   },
   "investors.csv": {
@@ -30,6 +30,10 @@
   "owner_photos.csv": {
    "sha256": "31ca99c194e775952706b554b712d798aabf23205c20ddb9471cbea68c2e4464",
    "bytes": 6001
+  },
+  "owners-year-price.csv": {
+   "sha256": "a06f9e6d9cc0cd8175e43f698862cebd861f0104360b7af0a045ab0a1be04cc5",
+   "bytes": 1487
   },
   "ownership.csv": {
    "sha256": "610fe74a8133d9abb763b71cefc8b80ca19521487ff46e09b8bfa660e6dee2ea",

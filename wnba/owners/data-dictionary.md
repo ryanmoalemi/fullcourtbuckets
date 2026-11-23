@@ -18,6 +18,10 @@ Corrections, media and data questions: ryan@fullcourtbuckets.com (general: hello
 team_id · team · scope (active / future) · team_page (existing FCB slug) · controlling_owner · controlling_owner_source_url · controlling_owner_evidence · governor (sourced for 1 of 15 active teams as of Oct 19, 2026: Los Angeles Sparks; "not yet sourced" elsewhere) · governor_source_url · nba_relationship_current · nba_relationship_at_2026_05_04 (the snapshot used for valuation comparisons) · facility_project_ids · last_verified_at.
 NBA relationship values: shared controlling ownership (evidence) · other affiliation (e.g., minority/parent role) · no qualifying shared-control relationship identified · unclear.
 
+
+## owners-year-price.csv: current owner, year acquired and price paid (15 rows, active teams only) · 5 fields
+team_id (matches ownership.csv) · team · owners (current controlling owner or group, as on the ownership table) · year_acquired (date that owner acquired the team, or the award date for an expansion club; precision follows the source) · price_paid (consideration for that deal only, not a current franchise value). "Not disclosed" is used when no WNBA-only price was established, including bundled NBA sales and disputed figures. Reported amounts are labeled as reported. Compiled November 23, 2026 from the owners register (data through November 4, 2026) and the sources cited in the sales table.
+
 ## investors.csv: publicly disclosed ownership and investor register (62 rows) · 22 fields
 | Field | Definition |
 |---|---|

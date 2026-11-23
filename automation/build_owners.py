@@ -755,6 +755,44 @@ def faq(data: dict, s: dict) -> list[tuple[str, str]]:
     return items
 
 
+
+def load_year_price() -> list[dict]:
+    path = DATA_DIR / 'owners-year-price.csv'
+    with path.open(encoding='utf-8') as handle:
+        rows = list(csv.DictReader(handle))
+    ids = [r['team_id'] for r in rows]
+    if len(ids) != len(set(ids)) or not all(ids):
+        raise SystemExit('owners-year-price: IDs must be unique and present')
+    return rows
+
+
+def acquisition_section(rows: list[dict]) -> str:
+    """Short direct-answer table: current owner, year acquired, price paid."""
+    table_rows = []
+    for r in rows:
+        table_rows.append((r['team_id'] + '-acquired', '', [
+            team_link(r['team']), esc(r['owners']), esc(r['year_acquired']), esc(r['price_paid']),
+        ]))
+    t = table(['Team', 'Owner or group', 'Year acquired', 'Price paid'], table_rows)
+    return (
+        '<div class="ow-tab" data-ow-table="year-price" data-fcb-data-table>'
+        f'{t}'
+        '<p class="ow-small">Three awarded future teams are not in this table: Cleveland (2028, Dan Gilbert), '
+        'Detroit (2029, Tom Gores) and Philadelphia (2030, Josh Harris and David Blitzer). The expansion fee for each '
+        'has been reported at $250 million. The league release names the owners but not the fee.</p>'
+        '<p class="ow-small">For how these franchises make money, see <a href="/wnba/team-revenue/">WNBA team revenue</a>. '
+        'Owner timelines for <a href="/wnba/owners/mark-davis/">Mark Davis</a> and '
+        '<a href="/wnba/owners/mark-walter/">Mark Walter</a>.</p>'
+        '<p class="ow-small">Data through November 4, 2026, checked November 23, 2026. Methods: one row per active team, '
+        "using the current controlling owner from Full Court Buckets' owners register (dataset v3). Year is when that owner "
+        'acquired the team or, for expansion clubs, when the franchise was awarded. Price is the consideration for that deal '
+        'only, not a current franchise value. "Not disclosed" means no WNBA-only price was established from available sources, '
+        'including bundled NBA sales and disputed figures. Reported amounts are labeled as reported. Free to use and republish (CC0). '
+        '<a href="owners-year-price.csv" download>Download CSV (CC0)</a>.</p>'
+        '</div>'
+    )
+
+
 def body(data: dict, s: dict) -> str:
     p = []
     # Ryan's rule (academic data-publication norms): only supporting material sits above the first table:
@@ -763,6 +801,9 @@ def body(data: dict, s: dict) -> str:
     p.append(f'<p class="ow-intro">Controlling owners, investors, sales and facility projects for all {s["teams"]} WNBA teams, each linked to its source.</p>')
     missing = [f"{r['team']}: {r['controlling_owner_evidence']}" for r in active(data) if r['controlling_owner_evidence'] != 'sourced']
     miss_txt = f' (not yet primary-sourced for control: {"; ".join(missing)})' if missing else ''
+    p.append('<section class="ow-section" id="year-price"><h2 class="section-title">WNBA owners, year acquired and price paid</h2>'
+             '<p>Here is who controls each of the 15 WNBA teams, when that owner or group acquired the franchise, and the price when it has been disclosed or reliably reported.</p>'
+             + acquisition_section(load_year_price()) + '</section>')
     p.append('<section class="ow-section" id="ownership"><h2 class="section-title">Who owns every WNBA team</h2>' + ownership_section(data)
              + '<p class="ow-small">Future teams (not in active counts): '
              + ', '.join(esc(r['team']) for r in data['ownership'] if str(r['scope']).startswith('future'))
@@ -778,7 +819,7 @@ def body(data: dict, s: dict) -> str:
         '</div>'
     )
     p.append('<p class="ow-detail">One detail from the filings: the Mohegan Tribe\'s 2003 purchase of the Sun was $2 million in cash plus an $8 million note to the league, according to its SEC registration statement.</p>')
-    p.append('<nav class="ow-local" aria-label="On this page"><a href="#ownership">Ownership</a><a href="#investors">Investors</a>'
+    p.append('<nav class="ow-local" aria-label="On this page"><a href="#year-price">Year and price</a><a href="#ownership">Ownership</a><a href="#investors">Investors</a>'
              '<a href="#transactions">Transactions</a><a href="#facilities">Facilities</a><a href="#methods">Methods</a></nav>')
     p.append('<section class="ow-section" id="findings"><h2 class="section-title">What FCB\'s research shows</h2>' + findings(data, s) + '</section>')
     p.append('<section class="ow-section" id="transactions"><h2 class="section-title">Franchise sales and expansion fees</h2>' + transactions_section(data) + '</section>')
@@ -949,6 +990,7 @@ def write_downloads(data: dict, s: dict) -> None:
     for name in COLLECTIONS:
         files[f'{name}.csv'] = (DATA_DIR / f'{name}.csv').read_bytes()
     files['data-dictionary.md'] = (DATA_DIR / 'data-dictionary.md').read_bytes()
+    files['owners-year-price.csv'] = (DATA_DIR / 'owners-year-price.csv').read_bytes()
     payload = {'dataset': 'Full Court Buckets WNBA ownership dataset', 'version': DATASET_VERSION, 'data_through': DATA_THROUGH,
                'license': LICENSE_URL, 'url': CANONICAL, 'collections': data}
     files['findings.json'] = (json.dumps(findings_record(data, s), indent=1) + '\n').encode('utf-8')

@@ -28,6 +28,37 @@ sortable_tables: true
 
 [Napheesa Collier](/wnba/napheesa-collier/) and [Kelsey Mitchell](/wnba/kelsey-mitchell/) each made $1,400,000 in 2026, the most in the 2027 unrestricted class. Re-signing can pay either up to $1,582,000 in 2027. Any other team is capped at $1,344,700, a $237,300 gap per season.
 
+## Who has max cap space for 2027 {#cap-space}
+
+The 2027 salary cap is not yet set. Article VII, Section 1(a) of the CBA sets the 2026 cap at $7 million and limits the 2027 move, up or down, to 13 percent, so the permitted range is $6.09 million to $7.91 million. The room figures below are projections at that $7.91 million ceiling, not an announced cap. A standard maximum contract at that ceiling is $1,344,700 (17 percent of cap).
+
+{#cap-space-table}
+
+| Team | Committed 2027 salary | Projected room at $7.91M ceiling | Max slots at that ceiling |
+| --- | ---: | ---: | ---: |
+| Connecticut Sun (Houston Comets from 2027) | $2,672,989 | $5,237,011 | 3 |
+| Portland Fire | $3,341,140 | $4,568,860 | 2 |
+| Phoenix Mercury | $3,448,600 | $4,461,400 | 2 |
+| Seattle Storm | $3,734,069 | $4,175,931 | 2 |
+| Toronto Tempo | $3,837,580 | $4,072,420 | 2 |
+| Las Vegas Aces | $4,047,600 | $3,862,400 | 1 |
+| Minnesota Lynx | $4,392,340 | $3,517,660 | 1 |
+| Indiana Fever | $4,565,394 | $3,344,606 | 1 |
+| Golden State Valkyries | $4,609,928 | $3,300,072 | 1 |
+| Los Angeles Sparks | $4,615,601 | $3,294,399 | 2 |
+| Dallas Wings | $4,937,046 | $2,972,954 | 1 |
+| Washington Mystics | $5,150,357 | $2,759,643 | 1 |
+| Chicago Sky | $5,197,624 | $2,712,376 | 1 |
+| New York Liberty | $5,224,516 | $2,685,484 | 0 |
+| Atlanta Dream | $6,180,830 | $1,729,170 | 0 |
+
+Projected room is the $7.91 million ceiling minus each team's listed 2027 salary. Max slots are how many standard-max contracts fit at that ceiling after a $288,600 charge (the 2027 minimum for a player with one to three years of service) is applied to every remaining regular roster spot through 12. Unsigned free agents, reserved players without a listed 2027 salary, and unsigned draft rights are not counted.
+
+How that room plays out for one of the class's top players is in [Kelsey Mitchell's 2027 free agency](/news/kelsey-mitchell-2027-free-agency-cap/). Open coaching jobs are tracked separately on the [2027 coaching tracker](/wnba/coaching-tracker/).
+
+Data through Nov. 23, 2026. Methods: listed 2027 salary and player counts are the 2027 contract-column totals on each team's [Her Hoop Stats WNBA Salary Cap Database](https://herhoopstats.com/salary-cap-sheet/wnba/summary/2026/) sheet, checked November 23, 2026. Those totals are a public snapshot, not a league-certified future roster. The $7 million unchanged cap, the same max-slot formula, and each team's player count are in the CSV. This table will be refreshed when the league announces the 2027 cap. Free to use and republish (CC0). Download (CC0): [cap space CSV](/news/wnba-2027-free-agents-max-salary/data/wnba-2027-cap-space.csv).
+
+
 ## The 31 unrestricted free agents {#ufa-cards}
 
 Each card shows her 2026 team, 2026 pay, and the most she can make in 2027 if she re-signs or signs elsewhere. Here's every unrestricted free agent, ordered by 2026 pay:
