@@ -42,7 +42,8 @@ class OwnersPageTests(unittest.TestCase):
         self.assertIn('class="ow-meta"', above)
         self.assertIn('class="ow-intro"', above)
         self.assertNotIn('class="ow-answer"', above)
-        self.assertIn('id="ownership"', above)
+        self.assertIn('id="year-price"', above)
+        self.assertGreater(main.find('id="ownership"'), main.find('<table'))
         intro = re.sub(r'<[^>]+>', '', re.search(r'<p class="ow-intro">(.*?)</p>', above, re.S).group(1))
         self.assertLessEqual(len(intro), 160, intro)
         for banned in ('<ul', '<ol', '<li', 'ow-finding', 'id="findings"', 'ow-local', 'Mohegan', '<figure', '<img src="/images/articles'):
@@ -167,9 +168,31 @@ class OwnersPageTests(unittest.TestCase):
         row = [x for x in dtf.BYLINE_ROW.finditer(self.html) if x.end() <= m.start()][-1]
         between = self.html[row.end():m.start()]
         text = ' '.join(dtf.TAG.sub(' ', between).split())
-        self.assertLessEqual(len(text), 300, text)
+        # Ryan approved (Nov. 23, 2026) a first table after the dek, with a one-sentence intro.
+        # The existing ow-meta and ow-intro lines remain, so the old 300-character cap is tight.
+        self.assertLessEqual(len(text), 500, text)
         self.assertNotIn('ow-answer', between)
         self.assertNotIn('Ownership reviewed', between)
+        self.assertIn('year-price', between)
+
+    def test_year_price_table_is_first_and_matches_csv(self):
+        self.assertIn('id="year-price"', self.html)
+        first = self.html.split('data-fcb-data-table', 1)[1]
+        self.assertIn('data-ow-table="year-price"', self.html.split('data-fcb-data-table', 1)[0][-80:] + first[:80])
+        body = first[first.find('<tbody>'):first.find('</tbody>')]
+        self.assertEqual(body.count('<tr'), 15)
+        csv_path = ROOT / 'wnba' / 'owners' / 'owners-year-price.csv'
+        self.assertTrue(csv_path.is_file())
+        self.assertIn('href="owners-year-price.csv"', self.html)
+        self.assertIn('/wnba/team-revenue/', self.html)
+        self.assertIn('/wnba/owners/mark-davis/', self.html)
+        self.assertIn('/wnba/owners/mark-walter/', self.html)
+        # Future-team note sits with the first table, not above it.
+        above = self.html.split('</time></div>', 1)[1]
+        above = above[:above.find('<table')]
+        self.assertNotIn('Cleveland', above)
+        self.assertIn('Cleveland (2028, Dan Gilbert)', self.html)
+
 
 
 if __name__ == '__main__':
