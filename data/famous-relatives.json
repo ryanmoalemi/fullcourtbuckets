@@ -1,7 +1,7 @@
 {
  "title": "Famous relatives of WNBA players",
  "page": "/news/wnba-players-famous-relatives/",
- "updated": "2026-11-10",
+ "updated": "2026-11-24",
  "corrections": "hello@fullcourtbuckets.com",
  "notes": "One row per WNBA player and relative pair. Team comes from FCB player data at build time. Every row links its sources; kind=report marks a news report used where no primary record exists.",
  "entries": [
@@ -820,7 +820,7 @@
    "relation": "Older brother",
    "relation_type": "sibling",
    "sport": "NFL",
-   "known_for": "NFL running back from Wisconsin. The Houston Texans signed him off the Las Vegas Raiders practice squad on Sept. 29, 2026.",
+   "known_for": "NFL running back from Wisconsin. The Houston Texans signed him off the Las Vegas Raiders practice squad on Sept. 29, 2026. They waived him on Nov. 13 and signed him back to their practice squad the next day.",
    "extra": null,
    "sources": [
     {
@@ -831,6 +831,16 @@
     {
      "label": "Houston Texans transactions, Sept. 29, 2026",
      "url": "https://www.houstontexans.com/news/houston-texans-transactions-9-29-2026",
+     "kind": "primary"
+    },
+    {
+     "label": "Houston Texans transactions, Nov. 13, 2026",
+     "url": "https://www.houstontexans.com/news/houston-texans-transactions-11-13-2026",
+     "kind": "primary"
+    },
+    {
+     "label": "Houston Texans transactions, Nov. 14, 2026",
+     "url": "https://www.houstontexans.com/news/houston-texans-transactions-11-14-2026",
      "kind": "primary"
     }
    ],
@@ -1664,7 +1674,7 @@
    "relation": "Father",
    "relation_type": "parent",
    "sport": "College basketball (coach)",
-   "known_for": "Men's head coach at Montana for eight seasons, then at Oregon State from May 2014 until February 2026, where his teams won the 2021 Pac-12 Tournament and reached the Elite Eight. He played at Montana and then 10 years of pro ball in Europe.",
+   "known_for": "Men's head coach at Montana for eight seasons, then at Oregon State from May 2014 until February 2026, where his teams won the 2021 Pac-12 Tournament and reached the Elite Eight. He played at Montana and then 10 years of pro ball in Europe. He joined USA Network as a Pac-12 men's basketball analyst for the 2026-27 season.",
    "extra": "Her brother, Tres, became Oregon State's all-time leading scorer with 2,233 points, per the school.",
    "sources": [
     {
@@ -1680,6 +1690,11 @@
     {
      "label": "Oregon State Athletics release: leadership change in men's basketball, Feb. 26, 2026",
      "url": "https://osubeavers.com/news/2026/2/26/mens-basketball-oregon-state-announces-leadership-change-in-mens-basketball-program",
+     "kind": "primary"
+    },
+    {
+     "label": "USA Sports release: commentators for the 2026-27 college basketball season, Nov. 4, 2026",
+     "url": "https://pressroom.versantmedia.com/usa-sports/press-releases/usa-sports-announces-commentators-2026-27-college-basketball-season",
      "kind": "primary"
     }
    ],
@@ -3069,6 +3084,139 @@
     "license": "CC BY 4.0",
     "license_url": "https://creativecommons.org/licenses/by/4.0",
     "source_page": "https://commons.wikimedia.org/wiki/File:Sandrine_Gruda_2025.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 85,
+   "player": "Brittney Griner",
+   "player_slug": "brittney-griner",
+   "relative": "Glory Johnson",
+   "relative_slug": "glory-johnson",
+   "relation": "Former wife",
+   "relation_type": "spouse",
+   "sport": "WNBA",
+   "known_for": "Two-time WNBA All-Star forward (2013 and 2014) from Tennessee, taken fourth overall by the Tulsa Shock in the 2012 draft.",
+   "extra": "They married on May 8, 2015, the Los Angeles Times reported, a week before the WNBA suspended each of them for seven games over an April 22 altercation at their home. A judge finalized their divorce in June 2016, TMZ Sports reported.",
+   "sources": [
+    {
+     "label": "WNBA.com: Dallas Wings re-sign All-Star forward Glory Johnson, Feb. 22, 2016",
+     "url": "https://www.wnba.com/news/dall-wings-re-sign-all-star-forward-glory-johnson",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA President Laurel J. Richie statement on Brittney Griner and Glory Johnson, May 15, 2015",
+     "url": "https://www.wnba.com/news/wnba-president-laurel-j-richie-statement-regarding-brittney-griner-and-glory-johnson-incident",
+     "kind": "primary"
+    },
+    {
+     "label": "Los Angeles Times report, May 15, 2015",
+     "url": "https://www.latimes.com/sports/sportsnow/la-sp-sn-brittney-griner-glory-johnson-suspended-wnba-20150515-story.html",
+     "kind": "report"
+    },
+    {
+     "label": "TMZ Sports report, June 27, 2016",
+     "url": "https://www.tmz.com/2016/06/27/brittney-griner-divorce-glory-johnson-final/",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-11-24",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/brittney-griner.webp",
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Brittney_Griner_3.jpg"
+   },
+   "photo_relative": {
+    "file": null,
+    "author": "Lorie Shaull",
+    "license": "CC BY-SA 2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Glory_Johnson_Dallas_Wings.jpg"
+   }
+  },
+  {
+   "rank": 86,
+   "player": "Azzi Fudd",
+   "player_slug": "azzi-fudd",
+   "relative": "Katie Fudd (Katie Smrcka-Duffy)",
+   "relative_slug": "katie-fudd",
+   "relation": "Mother",
+   "relation_type": "parent",
+   "sport": "Basketball",
+   "known_for": "Georgetown's first WNBA draft pick, taken 62nd overall by the Sacramento Monarchs in 2001. She scored 2,072 college points at N.C. State and Georgetown and was a three-time second-team All-Big East pick.",
+   "extra": "The Big East named her to its 2026 class of Legends in March, and the next month the Dallas Wings drafted Azzi first overall. Azzi is named in honor of Jennifer Azzi, per UConn.",
+   "sources": [
+    {
+     "label": "UConn Athletics bio: Azzi Fudd",
+     "url": "https://uconnhuskies.com/sports/womens-basketball/roster/azzi-fudd/14968",
+     "kind": "primary"
+    },
+    {
+     "label": "Big East Conference: 2026 Big East Legends",
+     "url": "https://www.bigeast.com/sports/2026/3/3/2026Legends.aspx",
+     "kind": "primary"
+    },
+    {
+     "label": "Georgetown Athletics release: Smrcka-Duffy selected by Sacramento in the WNBA draft, April 20, 2001",
+     "url": "https://guhoyas.com/news/2001/5/9/Georgetown_s_Smrcka_Duffy_Selected_by_Sacramento_in_the_WNBA_Draft",
+     "kind": "primary"
+    },
+    {
+     "label": "WNBA.com: 2001 WNBA draft",
+     "url": "https://www.wnba.com/draft/2001",
+     "kind": "primary"
+    }
+   ],
+   "date_added": "2026-11-24",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/azzi-fudd.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Azzi_Fudd_Wings_1.jpg"
+   },
+   "photo_relative": null
+  },
+  {
+   "rank": 87,
+   "player": "Marina Mabrey",
+   "player_slug": "marina-mabrey",
+   "relative": "Dara Mabrey",
+   "relative_slug": "dara-mabrey",
+   "relation": "Younger sister",
+   "relation_type": "sibling",
+   "sport": "Basketball",
+   "known_for": "Guard who made 301 career three-pointers at Virginia Tech and Notre Dame. The Toronto Tempo signed her to a training camp contract, then waived her on April 30, 2026, after their first preseason game.",
+   "extra": "With their older sister Michaela, they were the first group of three sisters to play at Notre Dame, per the school. Marina finished her Notre Dame career with a program-record 274 three-pointers, per Dara's 2022-23 bio.",
+   "sources": [
+    {
+     "label": "Notre Dame Athletics bio: Dara Mabrey",
+     "url": "https://fightingirish.com/sports/wbball/roster/player/dara-mabrey",
+     "kind": "primary"
+    },
+    {
+     "label": "Toronto Tempo release: Tempo waive Dara Mabrey, Maddison Rocci and Kristy Wallace, April 30, 2026",
+     "url": "https://tempo.wnba.com/news/tempo-waive-dara-mabrey-maddison-rocci-and-kristy-wallace",
+     "kind": "primary"
+    },
+    {
+     "label": "Sportsnet report, April 15, 2026",
+     "url": "https://www.sportsnet.ca/wnba/article/tempo-sign-guard-dara-mabrey-sister-of-marina-mabrey-to-training-camp-deal/",
+     "kind": "report"
+    }
+   ],
+   "date_added": "2026-11-24",
+   "origin": "added",
+   "photo_player": {
+    "file": "/images/relatives/marina-mabrey.webp",
+    "author": "John Mac",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Marina_Mabrey_Tempo.jpg"
    },
    "photo_relative": null
   }
